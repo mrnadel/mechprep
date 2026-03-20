@@ -18,6 +18,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { useSidebar, useProgress } from '@/store/useStore';
+import { useSubscription } from '@/hooks/useSubscription';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -41,6 +42,7 @@ export default function Sidebar() {
   const pathname = usePathname();
   const { sidebarOpen, toggleSidebar } = useSidebar();
   const progress = useProgress();
+  const { tier, isTrialing, isProUser } = useSubscription();
 
   return (
     <>
@@ -111,7 +113,7 @@ export default function Sidebar() {
         </nav>
 
         {/* Upgrade CTA for free users */}
-        {sidebarOpen && (
+        {sidebarOpen && !isProUser && (
           <div className="px-2 pb-2 shrink-0">
             <Link
               href="/pricing"
@@ -136,8 +138,15 @@ export default function Sidebar() {
                 <p className="text-sm font-medium text-surface-900 truncate">{progress.displayName}</p>
                 <div className="flex items-center gap-1.5">
                   <p className="text-xs text-surface-500">Level {progress.currentLevel} · {progress.totalXp} XP</p>
-                  <span className="text-[10px] font-semibold bg-surface-100 text-surface-500 px-1.5 py-0.5 rounded-full">
-                    FREE
+                  <span className={cn(
+                    'text-[10px] font-semibold px-1.5 py-0.5 rounded-full',
+                    isProUser
+                      ? 'bg-primary-100 text-primary-700'
+                      : isTrialing
+                        ? 'bg-amber-100 text-amber-700'
+                        : 'bg-surface-100 text-surface-500'
+                  )}>
+                    {isProUser && !isTrialing ? 'PRO' : isTrialing ? 'TRIAL' : 'FREE'}
                   </span>
                 </div>
               </div>

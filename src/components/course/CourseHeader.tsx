@@ -16,6 +16,7 @@ export function CourseHeader() {
   const { data: session, status } = useSession();
   const progress = useCourseStore((s) => s.progress);
   const [popover, setPopover] = useState<PopoverType>(null);
+  const { tier, isTrialing, trialDaysLeft, isProUser } = useSubscription();
 
   const userName = session?.user?.name || progress.displayName || 'Engineer';
   const userImage = session?.user?.image;
@@ -53,14 +54,14 @@ export function CourseHeader() {
             <h1 className="text-lg font-bold text-surface-900 tracking-tight select-none">
               MechPrep
             </h1>
-            {MOCK_TIER === 'pro' && (
+            {isProUser && !isTrialing && (
               <span className="bg-primary-100 text-primary-700 text-[10px] font-bold px-1.5 py-0.5 rounded-full">
                 PRO
               </span>
             )}
-            {MOCK_TIER === 'trial' && (
+            {isTrialing && (
               <span className="bg-amber-100 text-amber-700 text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-                TRIAL &middot; {MOCK_TRIAL_DAYS_LEFT}d
+                TRIAL &middot; {trialDaysLeft}d
               </span>
             )}
           </div>
@@ -91,7 +92,7 @@ export function CourseHeader() {
           )}
 
           {/* Upgrade CTA for free users */}
-          {MOCK_TIER === 'free' && status === 'authenticated' && (
+          {tier === 'free' && !isTrialing && status === 'authenticated' && (
             <Link
               href="/pricing"
               className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-amber-50 text-amber-600 text-xs font-semibold transition-transform active:scale-95"

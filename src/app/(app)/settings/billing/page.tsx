@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowLeft, CreditCard, Calendar, Check, X, ExternalLink } from 'lucide-react';
+import { ArrowLeft, CreditCard, Calendar, Check, X, ExternalLink, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { TIERS, FEATURES, formatPrice, type Feature } from '@/lib/pricing';
-import type { SubscriptionTier } from '@/lib/subscription';
+import { useSubscription } from '@/hooks/useSubscription';
 import { cn } from '@/lib/utils';
 
 const FEATURE_LABELS: Record<Feature, string> = {
@@ -21,20 +21,37 @@ const FEATURE_LABELS: Record<Feature, string> = {
   [FEATURES.BULK_LICENSING]: 'Bulk licensing',
 };
 
-// Simulated current plan data — in production this comes from the API/Stripe
-const MOCK_SUBSCRIPTION = {
-  tier: 'free' as SubscriptionTier,
-  status: 'active' as const,
-  billingInterval: null as 'month' | 'year' | null,
-  currentPeriodEnd: null as string | null,
-  amount: 0,
-};
-
 export default function BillingSettingsPage() {
-  const [subscription] = useState(MOCK_SUBSCRIPTION);
+  const { tier, status, isProUser, isTrialing, trialDaysLeft, cancelAtPeriodEnd, currentPeriodEnd, isLoading } = useSubscription();
+  const [portalLoading, setPortalLoading] = useState(false);
 
-  const tierDef = TIERS[subscription.tier];
-  const isPaid = subscription.tier !== 'free';
+  const tierDef = TIERS[tier];
+  const isPaid = tier !== 'free';
+
+  const handleManageSubscription = async () => {
+    setPortalLoading(true);
+    try {
+      const res = await fetch('/api/stripe/create-portal', { method: 'POST' });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    } catch {
+      // Silently fail
+    } finally {
+      setPortalLoading(false);
+    }
+  };
+
+  const statusLabel = isTrialing
+    ? `Trial (${trialDaysLeft}d left)`
+    : cancelAtPeriodEnd
+      ? 'Cancels at period end'
+      : status === 'past_due'
+        ? 'Past due'
+        : isPaid
+          ? 'Active'
+          : 'Free';
 
   return (
     <div className="pb-8">
@@ -62,11 +79,13 @@ export default function BillingSettingsPage() {
             </div>
             <div className={cn(
               'px-3 py-1 rounded-full text-xs font-semibold',
-              subscription.tier === 'free'
+              tier === 'free'
                 ? 'bg-gray-100 text-gray-600'
-                : 'bg-primary-100 text-primary-700'
+                : isTrialing
+                  ? 'bg-amber-100 text-amber-700'
+                  : 'bg-primary-100 text-primary-700'
             )}>
-              {subscription.tier === 'free' ? 'Free' : 'Active'}
+              {statusLabel}
             </div>
           </div>
 
@@ -75,20 +94,22 @@ export default function BillingSettingsPage() {
               <div className="bg-gray-50 rounded-xl p-3">
                 <div className="flex items-center gap-1.5 mb-1">
                   <CreditCard className="w-3.5 h-3.5 text-gray-400" />
-                  <span className="text-xs text-gray-500">Amount</span>
+                  <span className="text-xs text-gray-500">Plan</span>
                 </div>
                 <p className="text-sm font-semibold text-gray-900">
-                  {formatPrice(subscription.amount)}/{subscription.billingInterval === 'year' ? 'yr' : 'mo'}
+                  {tierDef.name}
                 </p>
               </div>
               <div className="bg-gray-50 rounded-xl p-3">
                 <div className="flex items-center gap-1.5 mb-1">
                   <Calendar className="w-3.5 h-3.5 text-gray-400" />
-                  <span className="text-xs text-gray-500">Next billing</span>
+                  <span className="text-xs text-gray-500">
+                    {cancelAtPeriodEnd ? 'Access until' : 'Next billing'}
+                  </span>
                 </div>
                 <p className="text-sm font-semibold text-gray-900">
-                  {subscription.currentPeriodEnd
-                    ? new Date(subscription.currentPeriodEnd).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                  {currentPeriodEnd
+                    ? new Date(currentPeriodEnd).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
                     : '--'
                   }
                 </p>
@@ -97,8 +118,16 @@ export default function BillingSettingsPage() {
           )}
 
           {isPaid ? (
-            <button className="w-full py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-sm transition-colors flex items-center justify-center gap-2">
-              <ExternalLink className="w-4 h-4" />
+            <button
+              onClick={handleManageSubscription}
+              disabled={portalLoading}
+              className="w-full py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-sm transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+            >
+              {portalLoading ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : (
+                <ExternalLink className="w-4 h-4" />
+              )}
               Manage Subscription
             </button>
           ) : (
@@ -145,14 +174,17 @@ export default function BillingSettingsPage() {
           </div>
         )}
 
-        {/* Billing history placeholder */}
+        {/* Billing history */}
         {isPaid && (
           <div className="bg-white rounded-2xl border border-gray-200 p-5">
             <h3 className="text-sm font-bold text-gray-900 mb-3">Billing History</h3>
             <p className="text-sm text-gray-400">
               View and download invoices from the Stripe Customer Portal.
             </p>
-            <button className="mt-3 text-sm text-primary-600 font-medium hover:text-primary-700 transition-colors flex items-center gap-1">
+            <button
+              onClick={handleManageSubscription}
+              className="mt-3 text-sm text-primary-600 font-medium hover:text-primary-700 transition-colors flex items-center gap-1"
+            >
               <ExternalLink className="w-3.5 h-3.5" />
               Open Customer Portal
             </button>

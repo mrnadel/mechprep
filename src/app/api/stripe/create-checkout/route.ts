@@ -5,11 +5,20 @@ import { db } from '@/lib/db';
 import { users, subscriptions } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { STRIPE_PRICES, PRO_TRIAL_DAYS } from '@/lib/pricing';
+import { rateLimit, RATE_LIMITS } from '@/lib/rate-limit';
 
 export async function POST(request: NextRequest) {
   const userId = await getAuthUserId();
   if (!userId) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  const rl = rateLimit(`checkout:${userId}`, RATE_LIMITS.api);
+  if (!rl.success) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429, headers: { 'Retry-After': Math.ceil((rl.resetAt.getTime() - Date.now()) / 1000).toString() } }
+    );
   }
 
   const { priceId } = (await request.json()) as { priceId?: string };

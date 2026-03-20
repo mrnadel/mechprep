@@ -4,10 +4,20 @@ import Stripe from 'stripe';
 import { stripe } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { subscriptions, paymentHistory } from '@/lib/db/schema';
+import { rateLimit, RATE_LIMITS } from '@/lib/rate-limit';
 
 export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
+  const ip = request.headers.get('x-forwarded-for') ?? 'unknown';
+  const rl = rateLimit(`webhook:${ip}`, RATE_LIMITS.webhook);
+  if (!rl.success) {
+    return NextResponse.json(
+      { error: 'Too many requests' },
+      { status: 429, headers: { 'Retry-After': Math.ceil((rl.resetAt.getTime() - Date.now()) / 1000).toString() } }
+    );
+  }
+
   const body = await request.text();
   const signature = request.headers.get('stripe-signature');
 

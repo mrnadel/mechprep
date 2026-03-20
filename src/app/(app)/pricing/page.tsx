@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Check, X, Sparkles, HelpCircle, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Check, X, Sparkles, HelpCircle, ChevronDown, Loader2 } from 'lucide-react';
 import Link from 'next/link';
-import { TIERS, FEATURES, formatPrice, getYearlySavingsPercent, type Feature } from '@/lib/pricing';
+import { TIERS, FEATURES, STRIPE_PRICES, formatPrice, getYearlySavingsPercent, type Feature } from '@/lib/pricing';
+import { useSubscription } from '@/hooks/useSubscription';
 import type { SubscriptionTier } from '@/lib/subscription';
 import { cn } from '@/lib/utils';
 
