@@ -24,15 +24,114 @@
   h2 { color: #7B2FBE; margin-bottom: 8px; font-size: 20px; }
   p { color: #999; font-size: 14px; margin-bottom: 24px; }
   svg { display: block; margin: 0 auto; }
+
+  /* The spring coil stretches/compresses via animated path */
+  @keyframes springBounce {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(35px); }
+    45%  { transform: translateY(-12px); }
+    65%  { transform: translateY(22px); }
+    80%  { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+  }
+
+  /* Squash: wider + shorter at bottom of bounce */
+  /* Stretch: narrower + taller at top of bounce */
+  @keyframes massSquashStretch {
+    0%   { transform: scaleX(1)    scaleY(1);    }
+    /* Approaching bottom — squash */
+    22%  { transform: scaleX(1.02) scaleY(0.98); }
+    25%  { transform: scaleX(1.18) scaleY(0.82); }
+    28%  { transform: scaleX(1.05) scaleY(0.95); }
+    /* Leaving bottom — stretch */
+    35%  { transform: scaleX(0.88) scaleY(1.14); }
+    /* Approaching top — stretch */
+    42%  { transform: scaleX(0.86) scaleY(1.16); }
+    45%  { transform: scaleX(0.85) scaleY(1.18); }
+    48%  { transform: scaleX(0.90) scaleY(1.12); }
+    /* Leaving top — squash */
+    55%  { transform: scaleX(1.10) scaleY(0.90); }
+    /* Approaching second bottom — squash */
+    62%  { transform: scaleX(1.02) scaleY(0.98); }
+    65%  { transform: scaleX(1.12) scaleY(0.88); }
+    68%  { transform: scaleX(1.04) scaleY(0.96); }
+    /* Leaving — stretch */
+    75%  { transform: scaleX(0.92) scaleY(1.10); }
+    /* Approaching second top */
+    78%  { transform: scaleX(0.94) scaleY(1.07); }
+    80%  { transform: scaleX(0.96) scaleY(1.05); }
+    85%  { transform: scaleX(1.02) scaleY(0.98); }
+    100% { transform: scaleX(1)    scaleY(1);    }
+  }
+
+  /* Spring coil stretch animation — vertical scale only */
+  @keyframes springCoilStretch {
+    0%   { transform: scaleY(1);    }
+    25%  { transform: scaleY(1.28); }
+    45%  { transform: scaleY(0.88); }
+    65%  { transform: scaleY(1.18); }
+    80%  { transform: scaleY(0.96); }
+    100% { transform: scaleY(1);    }
+  }
+
+  .bounce-group {
+    animation: springBounce 1.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+
+  .mass-squash {
+    transform-origin: center 172px; /* center of the mass block */
+    animation: massSquashStretch 1.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+
+  .spring-coil {
+    transform-origin: center 88px; /* midpoint of the spring */
+    animation: springCoilStretch 1.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+
+  /* Shadow under mass — scales with squash */
+  @keyframes shadowPulse {
+    0%   { rx: 22; ry: 4; opacity: 0.12; }
+    25%  { rx: 28; ry: 5; opacity: 0.18; }
+    45%  { rx: 18; ry: 3; opacity: 0.08; }
+    65%  { rx: 26; ry: 5; opacity: 0.16; }
+    80%  { rx: 20; ry: 3.5; opacity: 0.10; }
+    100% { rx: 22; ry: 4; opacity: 0.12; }
+  }
+
+  .mass-shadow {
+    animation: shadowPulse 1.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+
+  /* Eyes blink */
+  @keyframes blink {
+    0%, 94%  { transform: scaleY(1); }
+    97%      { transform: scaleY(0.1); }
+    100%     { transform: scaleY(1); }
+  }
+  .eye {
+    transform-origin: center center;
+    animation: blink 3s ease-in-out infinite;
+  }
+
+  /* Mouth expression — widens when squashed, narrows when stretched */
+  @keyframes mouthStretch {
+    0%   { d: path("M92,178 Q100,184 108,178"); }
+    25%  { d: path("M88,178 Q100,187 112,178"); }
+    45%  { d: path("M94,178 Q100,182 106,178"); }
+    65%  { d: path("M89,178 Q100,186 111,178"); }
+    80%  { d: path("M93,178 Q100,183 107,178"); }
+    100% { d: path("M92,178 Q100,184 108,178"); }
+  }
 </style>
 </head>
 <body>
 <div class="card">
   <h2>Spring-Mass System</h2>
-  <p>Monochromatic animated SVG — purple family</p>
+  <p>With squash &amp; stretch — pure CSS animation</p>
 
-  <svg viewBox="0 0 200 300" width="240" height="360" fill="none">
-    <!-- Wall (top) -->
+  <svg viewBox="0 0 200 310" width="240" height="372" fill="none">
+
+    <!-- Wall (top, fixed) -->
     <rect x="60" y="10" width="80" height="12" rx="3" fill="#CE82FF" opacity="0.3"/>
     <line x1="65" y1="10" x2="60" y2="2" stroke="#CE82FF" stroke-width="2" opacity="0.25"/>
     <line x1="80" y1="10" x2="75" y2="2" stroke="#CE82FF" stroke-width="2" opacity="0.25"/>
@@ -41,66 +140,59 @@
     <line x1="125" y1="10" x2="120" y2="2" stroke="#CE82FF" stroke-width="2" opacity="0.25"/>
     <line x1="140" y1="10" x2="135" y2="2" stroke="#CE82FF" stroke-width="2" opacity="0.25"/>
 
-    <!-- Attachment point -->
+    <!-- Attachment point (fixed) -->
     <circle cx="100" cy="22" r="4" fill="#7B2FBE"/>
 
-    <!-- Spring coils — animated group -->
-    <g>
-      <animateTransform attributeName="transform" type="translate"
-        values="0,0; 0,30; 0,-10; 0,20; 0,0"
-        dur="2s" repeatCount="indefinite" keyTimes="0;0.3;0.5;0.75;1"
-        calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"/>
+    <!-- === Bouncing group (spring + mass move together) === -->
+    <g class="bounce-group">
 
-      <!-- Spring path (zigzag) -->
-      <polyline points="100,26 100,36 85,46 115,56 85,66 115,76 85,86 115,96 85,106 115,116 85,126 115,136 100,146 100,150"
-        stroke="#CE82FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- Spring coil — stretches/compresses independently -->
+      <g class="spring-coil">
+        <polyline
+          points="100,26 100,38 82,50 118,62 82,74 118,86 82,98 118,110 82,122 118,134 100,146 100,150"
+          stroke="#CE82FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
 
-      <!-- Mass block -->
-      <rect x="72" y="150" width="56" height="44" rx="8" fill="#CE82FF" opacity="0.2"/>
-      <rect x="72" y="150" width="56" height="44" rx="8" stroke="#7B2FBE" stroke-width="3" fill="none"/>
+      <!-- Mass block with squash & stretch -->
+      <g class="mass-squash">
+        <!-- Block body -->
+        <rect x="72" y="150" width="56" height="44" rx="10" fill="#CE82FF" opacity="0.2"/>
+        <rect x="72" y="150" width="56" height="44" rx="10" stroke="#7B2FBE" stroke-width="3" fill="none"/>
 
-      <!-- "m" label on block -->
-      <text x="100" y="178" text-anchor="middle" fill="#7B2FBE" font-size="20" font-weight="bold" font-family="serif" font-style="italic">m</text>
+        <!-- Face — eyes -->
+        <g class="eye">
+          <circle cx="90" cy="168" r="3.5" fill="#7B2FBE"/>
+          <circle cx="89" cy="166.5" r="1.2" fill="white"/>
+        </g>
+        <g class="eye" style="animation-delay: 0.15s">
+          <circle cx="110" cy="168" r="3.5" fill="#7B2FBE"/>
+          <circle cx="109" cy="166.5" r="1.2" fill="white"/>
+        </g>
 
-      <!-- Velocity arrow (appears during motion) -->
-      <g opacity="0.6">
-        <animateTransform attributeName="transform" type="translate"
-          values="0,0; 0,30; 0,-10; 0,20; 0,0"
-          dur="2s" repeatCount="indefinite" keyTimes="0;0.3;0.5;0.75;1"
-          calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
-          additive="sum"/>
-        <!-- This arrow shows on the right of the mass -->
-        <line x1="140" y1="172" x2="140" y2="195" stroke="#7B2FBE" stroke-width="2.5" stroke-linecap="round">
-          <animate attributeName="y2" values="172;202;162;192;172" dur="2s" repeatCount="indefinite"
-            keyTimes="0;0.3;0.5;0.75;1" calcMode="spline"
-            keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"/>
-        </line>
-        <text x="152" y="188" fill="#7B2FBE" font-size="14" font-weight="bold" font-style="italic" font-family="serif">v</text>
+        <!-- Mouth — happy curve -->
+        <path d="M92,178 Q100,184 108,178" stroke="#7B2FBE" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+        <!-- Blush cheeks -->
+        <circle cx="84" cy="176" r="4" fill="#E8B4FF" opacity="0.4"/>
+        <circle cx="116" cy="176" r="4" fill="#E8B4FF" opacity="0.4"/>
       </g>
     </g>
 
-    <!-- Equilibrium line (dashed) -->
-    <line x1="40" y1="172" x2="55" y2="172" stroke="#CE82FF" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
-    <text x="38" y="176" text-anchor="end" fill="#CE82FF" font-size="10" opacity="0.5">eq</text>
+    <!-- Shadow on the ground — pulses with bounce -->
+    <ellipse cx="100" cy="248" class="mass-shadow" fill="#7B2FBE"/>
 
-    <!-- Spring constant label -->
-    <text x="68" y="90" text-anchor="end" fill="#7B2FBE" font-size="13" font-weight="bold" font-style="italic" font-family="serif" opacity="0.5">k</text>
+    <!-- Ground line (fixed) -->
+    <line x1="40" y1="252" x2="160" y2="252" stroke="#CE82FF" stroke-width="2" opacity="0.15"/>
 
-    <!-- Ground / reference -->
-    <line x1="40" y1="245" x2="160" y2="245" stroke="#CE82FF" stroke-width="2" opacity="0.15"/>
+    <!-- Equilibrium line (fixed, dashed) -->
+    <line x1="42" y1="172" x2="58" y2="172" stroke="#CE82FF" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.35"/>
+    <text x="39" y="176" text-anchor="end" fill="#CE82FF" font-size="9" opacity="0.45">eq</text>
 
-    <!-- Displacement arrow (animated) -->
-    <g>
-      <line x1="160" y1="172" x2="160" y2="172" stroke="#E8B4FF" stroke-width="2" stroke-linecap="round">
-        <animate attributeName="y2" values="172;202;162;192;172" dur="2s" repeatCount="indefinite"
-          keyTimes="0;0.3;0.5;0.75;1" calcMode="spline"
-          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"/>
-      </line>
-      <text x="170" y="192" fill="#CE82FF" font-size="13" font-weight="bold" font-style="italic" font-family="serif" opacity="0.6">x</text>
-    </g>
+    <!-- k label (fixed) -->
+    <text x="66" y="90" text-anchor="end" fill="#7B2FBE" font-size="13" font-weight="bold" font-style="italic" font-family="serif" opacity="0.45">k</text>
 
-    <!-- Formula at bottom -->
-    <text x="100" y="270" text-anchor="middle" fill="#7B2FBE" font-size="14" font-weight="bold" font-family="serif" opacity="0.4">
+    <!-- Formula -->
+    <text x="100" y="280" text-anchor="middle" fill="#7B2FBE" font-size="14" font-weight="bold" font-family="serif" opacity="0.35">
       F = −kx
     </text>
   </svg>
