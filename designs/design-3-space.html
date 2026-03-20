@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechPrep — Space Mission</title>
+<style>
+  /* ── Reset & Base ──────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-deep:    #06081a;
+    --bg-card:    #0d1033;
+    --bg-card-hover: #141850;
+    --navy:       #0f1445;
+    --purple:     #2d1b69;
+    --nebula:     #1a0f3c;
+    --accent:     #f59e0b;
+    --accent-dim: #b37209;
+    --orange:     #fb923c;
+    --blue:       #3B82F6;
+    --violet:     #8B5CF6;
+    --amber:      #F59E0B;
+    --green:      #34d399;
+    --red:        #ef4444;
+    --white:      #f1f5f9;
+    --white-dim:  #94a3b8;
+    --glow-blue:  rgba(59,130,246,.35);
+    --glow-violet:rgba(139,92,246,.35);
+    --glow-amber: rgba(245,158,11,.25);
+    --radius:     14px;
+    --radius-sm:  10px;
+    --transition: .3s cubic-bezier(.4,0,.2,1);
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg-deep);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* ── Starfield (pure CSS) ──────────────────────────────── */
+  .starfield {
+    position: fixed; inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    animation: twinkle linear infinite alternate;
+  }
+
+  @keyframes twinkle {
+    0%   { opacity: .15; transform: scale(.8); }
+    100% { opacity: 1;   transform: scale(1.2); }
+  }
+
+  /* Floating nebula blobs */
+  .nebula {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: .12;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .nebula-1 { width: 500px; height: 500px; background: #6d28d9; top: -120px; left: -100px; animation: drift1 25s ease-in-out infinite alternate; }
+  .nebula-2 { width: 400px; height: 400px; background: #2563eb; bottom: -80px; right: -80px; animation: drift2 30s ease-in-out infinite alternate; }
+  .nebula-3 { width: 300px; height: 300px; background: #f59e0b; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: drift3 20s ease-in-out infinite alternate; opacity: .06; }
+
+  @keyframes drift1 { 0%{transform:translate(0,0)} 100%{transform:translate(60px,80px)} }
+  @keyframes drift2 { 0%{transform:translate(0,0)} 100%{transform:translate(-50px,-60px)} }
+  @keyframes drift3 { 0%{transform:translate(-50%,-50%) scale(1)} 100%{transform:translate(-40%,-60%) scale(1.3)} }
+
+  /* ── Layout container ──────────────────────────────────── */
+  .app-shell {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 0 100px;
+    min-height: 100vh;
+  }
+
+  /* ── Header ────────────────────────────────────────────── */
+  .header {
+    position: sticky; top: 0; z-index: 50;
+    background: linear-gradient(180deg, rgba(6,8,26,.97) 60%, rgba(6,8,26,0));
+    padding: 16px 20px 28px;
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .logo {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 1.3rem; font-weight: 800;
+    letter-spacing: -.5px;
+    background: linear-gradient(135deg, var(--orange), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+  }
+  .logo svg { flex-shrink: 0; }
+
+  .header-stats {
+    display: flex; align-items: center; gap: 14px;
+    margin-left: auto;
+    font-size: .82rem; font-weight: 600;
+  }
+
+  .stat {
+    display: flex; align-items: center; gap: 4px;
+    background: rgba(255,255,255,.06);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .stat-streak { color: #fb923c; }
+  .stat-xp { color: #60a5fa; }
+
+  .avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--violet));
+    display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; font-weight: 700;
+    border: 2px solid var(--accent);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .avatar:hover { transform: scale(1.08); box-shadow: 0 0 14px var(--glow-amber); }
+
+  /* ── Mission Banner ────────────────────────────────────── */
+  .mission-banner {
+    margin: 0 20px 24px;
+    padding: 20px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, #1e1060 0%, #0f1445 60%, #0a2540 100%);
+    border: 1px solid rgba(139,92,246,.2);
+    position: relative;
+    overflow: hidden;
+  }
+  .mission-banner::before {
+    content: '';
+    position: absolute; top: -30px; right: -30px;
+    width: 120px; height: 120px;
+    background: radial-gradient(circle, rgba(245,158,11,.15), transparent 70%);
+    border-radius: 50%;
+  }
+  .mission-banner-label {
+    font-size: .7rem; font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .mission-banner-title {
+    font-size: 1.15rem; font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .mission-banner-sub {
+    font-size: .8rem;
+    color: var(--white-dim);
+  }
+  .mission-banner-progress {
+    margin-top: 14px;
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  /* Orbit ring progress */
+  .orbit-ring {
+    width: 52px; height: 52px;
+    position: relative; flex-shrink: 0;
+  }
+  .orbit-ring svg { transform: rotate(-90deg); }
+  .orbit-ring-bg { fill: none; stroke: rgba(255,255,255,.08); stroke-width: 4; }
+  .orbit-ring-fg { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 1s ease; }
+  .orbit-ring-text {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .7rem; font-weight: 800; color: var(--accent);
+  }
+
+  .mission-progress-info { font-size: .78rem; color: var(--white-dim); line-height: 1.5; }
+  .mission-progress-info strong { color: var(--white); }
+
+  /* ── Unit Card ─────────────────────────────────────────── */
+  .unit-card {
+    margin: 0 20px 18px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.06);
+    transition: var(--transition);
+  }
+  .unit-card:hover { border-color: rgba(255,255,255,.12); }
+  .unit-card.locked { opacity: .55; }
+  .unit-card.locked .unit-header { cursor: default; }
+
+  .unit-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    transition: background var(--transition);
+  }
+  .unit-header:hover { background: rgba(255,255,255,.03); }
+
+  .unit-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    opacity: .08;
+    pointer-events: none;
+  }
+  .unit-card[data-color="blue"] .unit-header::before  { background: linear-gradient(135deg, #3B82F6, transparent 60%); }
+  .unit-card[data-color="violet"] .unit-header::before { background: linear-gradient(135deg, #8B5CF6, transparent 60%); }
+  .unit-card[data-color="amber"] .unit-header::before  { background: linear-gradient(135deg, #F59E0B, transparent 60%); }
+
+  .unit-planet {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    font-size: 1.4rem;
+  }
+  .unit-card[data-color="blue"]   .unit-planet { background: linear-gradient(135deg, #1e40af, #3B82F6); box-shadow: 0 0 20px var(--glow-blue); }
+  .unit-card[data-color="violet"] .unit-planet { background: linear-gradient(135deg, #5b21b6, #8B5CF6); box-shadow: 0 0 20px var(--glow-violet); }
+  .unit-card[data-color="amber"]  .unit-planet { background: linear-gradient(135deg, #92400e, #F59E0B); box-shadow: 0 0 20px var(--glow-amber); }
+
+  /* Orbit ring around planet */
+  .unit-planet::after {
+    content: '';
+    position: absolute;
+    width: 62px; height: 18px;
+    border: 2px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+    animation: orbit-spin 6s linear infinite;
+  }
+  .unit-card.locked .unit-planet::after { display: none; }
+
+  @keyframes orbit-spin { 0%{transform:rotateX(65deg) rotateZ(0deg)} 100%{transform:rotateX(65deg) rotateZ(360deg)} }
+
+  .unit-info { flex: 1; min-width: 0; position: relative; z-index: 1; }
+  .unit-num { font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 2px; }
+  .unit-card[data-color="blue"]   .unit-num { color: #60a5fa; }
+  .unit-card[data-color="violet"] .unit-num { color: #a78bfa; }
+  .unit-card[data-color="amber"]  .unit-num { color: #fbbf24; }
+  .unit-name { font-size: 1rem; font-weight: 700; line-height: 1.3; }
+  .unit-meta { font-size: .75rem; color: var(--white-dim); margin-top: 4px; display: flex; align-items: center; gap: 8px; }
+
+  .unit-progress-bar {
+    flex: 1; height: 4px;
+    background: rgba(255,255,255,.08);
+    border-radius: 4px; overflow: hidden;
+  }
+  .unit-progress-fill { height: 100%; border-radius: 4px; transition: width .8s ease; }
+  .unit-card[data-color="blue"]   .unit-progress-fill { background: linear-gradient(90deg, #3B82F6, #60a5fa); }
+  .unit-card[data-color="violet"] .unit-progress-fill { background: linear-gradient(90deg, #8B5CF6, #a78bfa); }
+  .unit-card[data-color="amber"]  .unit-progress-fill { background: linear-gradient(90deg, #F59E0B, #fbbf24); }
+
+  .unit-chevron {
+    position: relative; z-index: 1;
+    transition: transform var(--transition);
+    color: var(--white-dim);
+    flex-shrink: 0;
+  }
+  .unit-card.expanded .unit-chevron { transform: rotate(180deg); }
+
+  .unit-lock-badge {
+    position: relative; z-index: 1;
+    font-size: .65rem; font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255,255,255,.06);
+    color: var(--white-dim);
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex; align-items: center; gap: 4px;
+    flex-shrink: 0;
+  }
+
+  /* ── Lessons Panel ─────────────────────────────────────── */
+  .lessons-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .45s cubic-bezier(.4,0,.2,1);
+    background: rgba(0,0,0,.25);
+  }
+  .unit-card.expanded .lessons-panel { max-height: 1200px; }
+
+  .lessons-list { padding: 6px 14px 14px; }
+
+  .lesson-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 13px 14px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 4px;
+    transition: background var(--transition);
+    position: relative;
+    cursor: pointer;
+  }
+  .lesson-item:hover { background: rgba(255,255,255,.04); }
+  .lesson-item:last-child { margin-bottom: 0; }
+
+  /* Connector line between lessons */
+  .lesson-item::before {
+    content: '';
+    position: absolute;
+    left: 31px; top: -4px;
+    width: 2px; height: calc(100% + 4px);
+    background: rgba(255,255,255,.06);
+  }
+  .lesson-item:first-child::before { top: 50%; height: 50%; }
+  .lesson-item:last-child::before  { height: 50%; }
+
+  .lesson-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; font-weight: 700;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    border: 2px solid rgba(255,255,255,.1);
+    background: var(--bg-card);
+    transition: var(--transition);
+  }
+
+  .lesson-item.completed .lesson-icon {
+    border-color: var(--green);
+    background: rgba(52,211,153,.12);
+    color: var(--green);
+  }
+
+  .lesson-item.next .lesson-icon {
+    border-color: var(--accent);
+    background: rgba(245,158,11,.15);
+    color: var(--accent);
+    box-shadow: 0 0 12px rgba(245,158,11,.3);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(245,158,11,.2); }
+    50%      { box-shadow: 0 0 22px rgba(245,158,11,.45); }
+  }
+
+  .lesson-item.future .lesson-icon {
+    border-color: rgba(255,255,255,.1);
+    color: var(--white-dim);
+  }
+
+  .lesson-details { flex: 1; min-width: 0; }
+  .lesson-title { font-size: .85rem; font-weight: 600; line-height: 1.35; }
+  .lesson-item.future .lesson-title { color: var(--white-dim); }
+  .lesson-sub { font-size: .72rem; color: var(--white-dim); margin-top: 2px; display: flex; align-items: center; gap: 6px; }
+
+  .lesson-badge {
+    font-size: .6rem; font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .badge-complete {
+    background: rgba(52,211,153,.12);
+    color: var(--green);
+    border: 1px solid rgba(52,211,153,.25);
+  }
+  .badge-next {
+    background: rgba(245,158,11,.15);
+    color: var(--accent);
+    border: 1px solid rgba(245,158,11,.3);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Stamp overlay for completed lessons */
+  .stamp {
+    position: absolute;
+    top: 50%; right: 12px;
+    transform: translateY(-50%) rotate(-8deg);
+    font-size: .5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 4px;
+    padding: 2px 6px;
+    opacity: .35;
+    pointer-events: none;
+  }
+
+  /* ── Next Mission CTA ──────────────────────────────────── */
+  .next-mission-label {
+    display: flex; align-items: center; gap: 6px;
+    font-size: .65rem; font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 2px;
+  }
+  .next-mission-label svg { animation: rocket-bob 1.5s ease-in-out infinite; }
+  @keyframes rocket-bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }
+
+  /* ── XP chip ───────────────────────────────────────────── */
+  .xp-chip {
+    font-size: .65rem; font-weight: 700;
+    color: #60a5fa;
+    display: inline-flex; align-items: center; gap: 2px;
+  }
+
+  /* ── Fuel Cell indicator ───────────────────────────────── */
+  .fuel-label { font-size: .65rem; color: var(--white-dim); }
+  .fuel-value { color: #60a5fa; font-weight: 700; }
+
+  /* ── Shooting stars ────────────────────────────────────── */
+  .shooting-star {
+    position: fixed;
+    width: 80px; height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,.7), transparent);
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    animation: shoot linear infinite;
+  }
+  .shooting-star:nth-child(1) { top: 15%; left: -80px; animation-duration: 4s; animation-delay: 1s; }
+  .shooting-star:nth-child(2) { top: 45%; left: -80px; animation-duration: 3.5s; animation-delay: 5s; }
+  .shooting-star:nth-child(3) { top: 75%; left: -80px; animation-duration: 5s; animation-delay: 9s; }
+
+  @keyframes shoot {
+    0%   { transform: translateX(0) rotate(-15deg); opacity: 0; }
+    5%   { opacity: 1; }
+    60%  { opacity: 1; }
+    100% { transform: translateX(calc(100vw + 160px)) rotate(-15deg); opacity: 0; }
+  }
+
+  /* ── Scrollbar styling ─────────────────────────────────── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 4px; }
+
+  /* ── Bottom navigation bar ─────────────────────────────── */
+  .bottom-nav {
+    position: fixed; bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%; max-width: 480px;
+    background: rgba(6,8,26,.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255,255,255,.06);
+    display: flex; align-items: center; justify-content: space-around;
+    padding: 10px 0 calc(10px + env(safe-area-inset-bottom, 0px));
+    z-index: 60;
+  }
+  .nav-item {
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    font-size: .62rem; font-weight: 600;
+    color: var(--white-dim);
+    cursor: pointer;
+    padding: 4px 14px;
+    border-radius: 10px;
+    transition: var(--transition);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-item:hover { color: var(--white); }
+  .nav-item.active { color: var(--accent); }
+  .nav-item svg { width: 22px; height: 22px; }
+
+  /* ── Tooltip on hover for lesson items (desktop) ─────── */
+  @media (hover: hover) {
+    .lesson-item.completed:hover .stamp { opacity: .7; }
+  }
+
+  /* ── Subtle page-load animation ────────────────────────── */
+  .app-shell { animation: fadeUp .6s ease-out both; }
+  @keyframes fadeUp { 0%{opacity:0; transform:translateY(20px)} 100%{opacity:1; transform:translateY(0)} }
+
+  .unit-card:nth-child(1) { animation: fadeUp .6s .1s ease-out both; }
+  .unit-card:nth-child(2) { animation: fadeUp .6s .2s ease-out both; }
+  .unit-card:nth-child(3) { animation: fadeUp .6s .3s ease-out both; }
+</style>
+</head>
+<body>
+
+<!-- ── Starfield ────────────────────────────────────────── -->
+<div class="starfield" id="starfield"></div>
+
+<!-- Nebula blobs -->
+<div class="nebula nebula-1"></div>
+<div class="nebula nebula-2"></div>
+<div class="nebula nebula-3"></div>
+
+<!-- Shooting stars -->
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+
+<!-- ── App Shell ────────────────────────────────────────── -->
+<div class="app-shell">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2C12 2 8 6 8 12C8 15 9 17 10 19L12 22L14 19C15 17 16 15 16 12C16 6 12 2 12 2Z" fill="#F59E0B"/>
+        <path d="M10 19L7 20L8 16" fill="#FB923C" opacity=".7"/>
+        <path d="M14 19L17 20L16 16" fill="#FB923C" opacity=".7"/>
+        <circle cx="12" cy="11" r="2" fill="#06081a"/>
+        <path d="M6 14C6 14 4 13 3 14C2 15 3 17 3 17L8 15" fill="#FB923C" opacity=".5"/>
+        <path d="M18 14C18 14 20 13 21 14C22 15 21 17 21 17L16 15" fill="#FB923C" opacity=".5"/>
+      </svg>
+      MechPrep
+    </div>
+    <div class="header-stats">
+      <div class="stat stat-streak" title="Days in Orbit">
+        <span>&#128293;</span> <span>5</span>
+      </div>
+      <div class="stat stat-xp" title="Fuel Cells Collected">
+        <span>&#9889;</span> <span>1,240</span>
+      </div>
+    </div>
+    <div class="avatar" title="Commander Profile">N</div>
+  </header>
+
+  <!-- Mission Banner -->
+  <div class="mission-banner">
+    <div class="mission-banner-label">&#127759; Mission Progress</div>
+    <div class="mission-banner-title">Mechanical Engineering Prep</div>
+    <div class="mission-banner-sub">3 space stations &middot; 24 mission objectives</div>
+    <div class="mission-banner-progress">
+      <div class="orbit-ring">
+        <svg width="52" height="52" viewBox="0 0 52 52">
+          <circle class="orbit-ring-bg" cx="26" cy="26" r="22"/>
+          <circle class="orbit-ring-fg" cx="26" cy="26" r="22"
+                  stroke-dasharray="138.23"
+                  stroke-dashoffset="97.76"/>
+          <!-- 7/24 ~ 29% => offset = 138.23 * (1 - .29) = 97.76 -->
+        </svg>
+        <div class="orbit-ring-text">29%</div>
+      </div>
+      <div class="mission-progress-info">
+        <strong>7 of 24</strong> objectives complete<br>
+        <span class="fuel-label">Fuel cells: <span class="fuel-value">1,240 / 4,800</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── UNIT 1: Statics & Equilibrium ─────────────────── -->
+  <div class="unit-card expanded" data-color="blue" data-unit="1">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-planet">
+        <!-- Planet icon -->
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="8" fill="#3B82F6" opacity=".3"/>
+          <circle cx="12" cy="12" r="5" fill="#60a5fa"/>
+          <ellipse cx="12" cy="12" rx="11" ry="3" stroke="#93c5fd" stroke-width=".8" fill="none" opacity=".5"/>
+        </svg>
+      </div>
+      <div class="unit-info">
+        <div class="unit-num">Space Station 1</div>
+        <div class="unit-name">Statics &amp; Equilibrium</div>
+        <div class="unit-meta">
+          <span>5 / 8 objectives</span>
+          <div class="unit-progress-bar">
+            <div class="unit-progress-fill" style="width:62.5%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-chevron">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="lessons-panel">
+      <div class="lessons-list">
+        <!-- Lesson 1 — completed -->
+        <div class="lesson-item completed">
+          <div class="lesson-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5L6.5 12L13 4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lesson-details">
+            <div class="lesson-title">Free Body Diagrams</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+          <span class="lesson-badge badge-complete">Mission Complete</span>
+          <div class="stamp">Mission<br>Complete</div>
+        </div>
+
+        <!-- Lesson 2 — completed -->
+        <div class="lesson-item completed">
+          <div class="lesson-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5L6.5 12L13 4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lesson-details">
+            <div class="lesson-title">Force Vectors &amp; Components</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+          <span class="lesson-badge badge-complete">Mission Complete</span>
+          <div class="stamp">Mission<br>Complete</div>
+        </div>
+
+        <!-- Lesson 3 — completed -->
+        <div class="lesson-item completed">
+          <div class="lesson-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5L6.5 12L13 4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lesson-details">
+            <div class="lesson-title">Equilibrium of Particles</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+          <span class="lesson-badge badge-complete">Mission Complete</span>
+          <div class="stamp">Mission<br>Complete</div>
+        </div>
+
+        <!-- Lesson 4 — completed -->
+        <div class="lesson-item completed">
+          <div class="lesson-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5L6.5 12L13 4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lesson-details">
+            <div class="lesson-title">Moment of a Force</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+          <span class="lesson-badge badge-complete">Mission Complete</span>
+          <div class="stamp">Mission<br>Complete</div>
+        </div>
+
+        <!-- Lesson 5 — completed -->
+        <div class="lesson-item completed">
+          <div class="lesson-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5L6.5 12L13 4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lesson-details">
+            <div class="lesson-title">Support Reactions &amp; Constraints</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+          <span class="lesson-badge badge-complete">Mission Complete</span>
+          <div class="stamp">Mission<br>Complete</div>
+        </div>
+
+        <!-- Lesson 6 — NEXT -->
+        <div class="lesson-item next">
+          <div class="lesson-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2L8 14M8 2L12 6M8 2L4 6" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lesson-details">
+            <div class="next-mission-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C12 2 9 6 9 12C9 15 10 17 11 19L12 21L13 19C14 17 15 15 15 12C15 6 12 2 12 2Z" fill="#F59E0B"/>
+                <path d="M11 19L9 20L10 17" fill="#FB923C" opacity=".7"/>
+                <path d="M13 19L15 20L14 17" fill="#FB923C" opacity=".7"/>
+              </svg>
+              Next Mission
+            </div>
+            <div class="lesson-title">Truss Analysis Methods</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+              <span>&middot; ~8 min</span>
+            </div>
+          </div>
+          <span class="lesson-badge badge-next">Launch</span>
+        </div>
+
+        <!-- Lesson 7 — future -->
+        <div class="lesson-item future">
+          <div class="lesson-icon">7</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Frame &amp; Machine Analysis</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 8 — future -->
+        <div class="lesson-item future">
+          <div class="lesson-icon">8</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Friction &amp; Equilibrium Problems</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── UNIT 2: Dynamics & Motion ─────────────────────── -->
+  <div class="unit-card" data-color="violet" data-unit="2">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-planet">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="8" fill="#8B5CF6" opacity=".3"/>
+          <circle cx="12" cy="12" r="5" fill="#a78bfa"/>
+          <path d="M7 9.5C9 8 15 8 17 9.5" stroke="#c4b5fd" stroke-width=".8" opacity=".6"/>
+          <path d="M6.5 12C8 13.5 16 13.5 17.5 12" stroke="#c4b5fd" stroke-width=".8" opacity=".4"/>
+        </svg>
+      </div>
+      <div class="unit-info">
+        <div class="unit-num">Space Station 2</div>
+        <div class="unit-name">Dynamics &amp; Motion</div>
+        <div class="unit-meta">
+          <span>2 / 7 objectives</span>
+          <div class="unit-progress-bar">
+            <div class="unit-progress-fill" style="width:28.6%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-chevron">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="lessons-panel">
+      <div class="lessons-list">
+        <!-- Lesson 1 — completed -->
+        <div class="lesson-item completed">
+          <div class="lesson-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5L6.5 12L13 4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lesson-details">
+            <div class="lesson-title">Kinematics of Particles</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+          <span class="lesson-badge badge-complete">Mission Complete</span>
+          <div class="stamp">Mission<br>Complete</div>
+        </div>
+
+        <!-- Lesson 2 — completed -->
+        <div class="lesson-item completed">
+          <div class="lesson-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8.5L6.5 12L13 4" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="lesson-details">
+            <div class="lesson-title">Newton's Laws &amp; Equations of Motion</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+          <span class="lesson-badge badge-complete">Mission Complete</span>
+          <div class="stamp">Mission<br>Complete</div>
+        </div>
+
+        <!-- Lesson 3 — future -->
+        <div class="lesson-item future">
+          <div class="lesson-icon">3</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Work &amp; Energy Methods</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 4 — future -->
+        <div class="lesson-item future">
+          <div class="lesson-icon">4</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Impulse &amp; Momentum</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 5 — future -->
+        <div class="lesson-item future">
+          <div class="lesson-icon">5</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Rigid Body Kinematics</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 6 — future -->
+        <div class="lesson-item future">
+          <div class="lesson-icon">6</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Rigid Body Kinetics</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 7 — future -->
+        <div class="lesson-item future">
+          <div class="lesson-icon">7</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Vibrations &amp; Harmonic Motion</div>
+            <div class="lesson-sub">
+              <span class="xp-chip">&#9889; 200 FC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── UNIT 3: Strength of Materials (Locked) ────────── -->
+  <div class="unit-card locked" data-color="amber" data-unit="3">
+    <div class="unit-header">
+      <div class="unit-planet">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="8" fill="#F59E0B" opacity=".2"/>
+          <circle cx="12" cy="12" r="5" fill="#fbbf24" opacity=".5"/>
+          <path d="M9 10L12 7L15 10" stroke="#fde68a" stroke-width=".8" opacity=".5"/>
+          <path d="M9 14L12 17L15 14" stroke="#fde68a" stroke-width=".8" opacity=".5"/>
+        </svg>
+      </div>
+      <div class="unit-info">
+        <div class="unit-num">Space Station 3</div>
+        <div class="unit-name">Strength of Materials</div>
+        <div class="unit-meta">
+          <span>0 / 9 objectives</span>
+          <div class="unit-progress-bar">
+            <div class="unit-progress-fill" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="unit-lock-badge">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 1a4 4 0 00-4 4v2H3a1 1 0 00-1 1v6a1 1 0 001 1h10a1 1 0 001-1V8a1 1 0 00-1-1h-1V5a4 4 0 00-4-4zm2.5 6h-5V5a2.5 2.5 0 015 0v2z"/>
+        </svg>
+        Locked
+      </div>
+    </div>
+
+    <div class="lessons-panel">
+      <div class="lessons-list">
+        <div class="lesson-item future">
+          <div class="lesson-icon">1</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Stress &amp; Strain Fundamentals</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+        <div class="lesson-item future">
+          <div class="lesson-icon">2</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Axial Loading &amp; Deformation</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+        <div class="lesson-item future">
+          <div class="lesson-icon">3</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Torsion of Circular Shafts</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+        <div class="lesson-item future">
+          <div class="lesson-icon">4</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Bending Stresses in Beams</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+        <div class="lesson-item future">
+          <div class="lesson-icon">5</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Shear Stresses in Beams</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+        <div class="lesson-item future">
+          <div class="lesson-icon">6</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Beam Deflection Methods</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+        <div class="lesson-item future">
+          <div class="lesson-icon">7</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Combined Loading &amp; Mohr's Circle</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+        <div class="lesson-item future">
+          <div class="lesson-icon">8</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Column Buckling &amp; Stability</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+        <div class="lesson-item future">
+          <div class="lesson-icon">9</div>
+          <div class="lesson-details">
+            <div class="lesson-title">Fatigue &amp; Failure Theories</div>
+            <div class="lesson-sub"><span class="xp-chip">&#9889; 200 FC</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /app-shell -->
+
+<!-- ── Bottom Navigation ─────────────────────────────────── -->
+<nav class="bottom-nav">
+  <a class="nav-item active" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+    </svg>
+    Missions
+  </a>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+    </svg>
+    Review
+  </a>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+    </svg>
+    Stats
+  </a>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+    </svg>
+    Profile
+  </a>
+</nav>
+
+<script>
+  // ── Generate CSS stars ──────────────────────────────────
+  (function generateStars() {
+    const field = document.getElementById('starfield');
+    const count = 120;
+    for (let i = 0; i < count; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      star.style.width  = size + 'px';
+      star.style.height = size + 'px';
+      star.style.left   = Math.random() * 100 + '%';
+      star.style.top    = Math.random() * 100 + '%';
+      star.style.animationDuration = (Math.random() * 3 + 1.5) + 's';
+      star.style.animationDelay    = (Math.random() * 4) + 's';
+      star.style.opacity = Math.random() * 0.5 + 0.15;
+      field.appendChild(star);
+    }
+  })();
+
+  // ── Toggle unit expand/collapse ─────────────────────────
+  function toggleUnit(headerEl) {
+    const card = headerEl.closest('.unit-card');
+    if (card.classList.contains('locked')) return;
+    card.classList.toggle('expanded');
+  }
+</script>
+</body>
+</html>

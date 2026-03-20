@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechPrep — Engineering Blueprint</title>
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @font-face {
+    font-family: 'BlueprintMono';
+    src: local('Consolas'), local('Monaco'), local('Courier New');
+  }
+
+  :root {
+    --bp-bg:        #0a1628;
+    --bp-bg-light:  #0f2040;
+    --bp-grid:      rgba(60,140,220,0.07);
+    --bp-grid-bold: rgba(60,140,220,0.13);
+    --bp-line:      #1e4976;
+    --bp-cyan:      #00d4ff;
+    --bp-cyan-dim:  rgba(0,212,255,0.35);
+    --bp-white:     #e0eef8;
+    --bp-white-dim: rgba(224,238,248,0.55);
+    --bp-gold:      #fbbf24;
+    --bp-green:     #34d399;
+    --bp-red:       #f87171;
+    --bp-locked:    #334155;
+    --unit1:        #3B82F6;
+    --unit2:        #8B5CF6;
+    --unit3:        #F59E0B;
+    --radius:       3px;
+    --font:         'Consolas', 'Monaco', 'Courier New', monospace;
+    --transition:   0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  html { font-size: 15px; }
+  body {
+    font-family: var(--font);
+    background: var(--bp-bg);
+    color: var(--bp-white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* Blueprint grid */
+    background-image:
+      linear-gradient(var(--bp-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--bp-grid) 1px, transparent 1px),
+      linear-gradient(var(--bp-grid-bold) 1px, transparent 1px),
+      linear-gradient(90deg, var(--bp-grid-bold) 1px, transparent 1px);
+    background-size:
+      20px 20px,
+      20px 20px,
+      100px 100px,
+      100px 100px;
+    background-position: -1px -1px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== APP SHELL ===== */
+  .app {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  /* Decorative corner datum marks */
+  .app::before, .app::after {
+    content: '';
+    position: fixed;
+    width: 30px; height: 30px;
+    border: 1px solid var(--bp-cyan-dim);
+    pointer-events: none;
+    z-index: 1000;
+  }
+  .app::before { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+  .app::after  { top: 8px; right: 8px; border-left: none; border-bottom: none; }
+
+  /* ===== HEADER ===== */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(180deg, var(--bp-bg) 60%, transparent);
+    padding: 14px 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--bp-line);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 16px; right: 16px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--bp-cyan-dim), transparent);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+  }
+  .logo svg { width: 28px; height: 28px; }
+  .logo-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--bp-cyan), #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .header-spacer { flex: 1; }
+
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--bp-line);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .stat-pill .icon { font-size: 0.85rem; }
+  .stat-pill.streak .val { color: #fb923c; }
+  .stat-pill.xp .val     { color: var(--bp-cyan); }
+
+  .avatar {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: 2px solid var(--bp-cyan);
+    background: var(--bp-bg-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(0,212,255,0.25);
+  }
+
+  /* ===== REVISION TRACKER (top bar) ===== */
+  .revision-tracker {
+    margin: 18px 16px 6px;
+    padding: 10px 14px;
+    border: 1px dashed var(--bp-line);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+  .revision-tracker::before {
+    content: 'REV TRACKER';
+    position: absolute;
+    top: -8px; left: 12px;
+    background: var(--bp-bg);
+    padding: 0 6px;
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    color: var(--bp-cyan-dim);
+  }
+  .rev-label {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: var(--bp-white-dim);
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .rev-bar-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  .rev-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--unit1), var(--bp-cyan));
+    width: 29%;
+    transition: width 1s ease;
+    position: relative;
+  }
+  .rev-bar-fill::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 20px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
+    animation: barShine 2s infinite;
+  }
+  @keyframes barShine {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  .rev-pct {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--bp-cyan);
+    flex-shrink: 0;
+    min-width: 32px;
+    text-align: right;
+  }
+
+  /* ===== SECTION TITLE / DATUM ===== */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 16px 4px;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bp-white-dim);
+  }
+  .section-title::before,
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--bp-line);
+  }
+  .datum-ref {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px; height: 16px;
+    border: 1px solid var(--bp-cyan-dim);
+    border-radius: 50%;
+    font-size: 0.5rem;
+    color: var(--bp-cyan-dim);
+    margin-left: 4px;
+  }
+
+  /* ===== UNIT CARD (Schematic Section) ===== */
+  .unit-card {
+    margin: 14px 16px;
+    border: 1px solid var(--bp-line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+  .unit-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--unit-color);
+    z-index: 2;
+  }
+  .unit-card.locked {
+    opacity: 0.55;
+    border-style: dashed;
+  }
+  .unit-card.locked .unit-header { cursor: default; }
+  .unit-card:not(.locked):hover {
+    border-color: var(--unit-color);
+    box-shadow: 0 0 20px rgba(0,212,255,0.08);
+  }
+
+  /* Corner notch decoration */
+  .unit-card::after {
+    content: '';
+    position: absolute;
+    top: 3px; right: 0;
+    width: 18px; height: 18px;
+    border-bottom: 1px solid var(--bp-line);
+    border-left: 1px solid var(--bp-line);
+    background: var(--bp-bg);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    z-index: 1;
+  }
+
+  .unit-header {
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    background: rgba(255,255,255,0.015);
+    transition: background var(--transition);
+  }
+  .unit-header:hover { background: rgba(255,255,255,0.03); }
+
+  .unit-icon-wrap {
+    width: 42px; height: 42px;
+    border: 1.5px solid var(--unit-color);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    background: rgba(0,0,0,0.3);
+  }
+  .unit-icon-wrap svg { width: 22px; height: 22px; }
+  .unit-icon-wrap .unit-num {
+    position: absolute;
+    bottom: -5px; right: -5px;
+    width: 16px; height: 16px;
+    background: var(--unit-color);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: var(--bp-bg);
+  }
+
+  .unit-info { flex: 1; min-width: 0; }
+  .unit-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    color: var(--bp-white);
+  }
+  .unit-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.65rem;
+    color: var(--bp-white-dim);
+    letter-spacing: 0.5px;
+  }
+  .unit-meta .dot {
+    width: 3px; height: 3px;
+    background: var(--bp-line);
+    border-radius: 50%;
+  }
+
+  /* Mini progress bar in header */
+  .unit-progress-mini {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .unit-prog-track {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .unit-prog-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--unit-color);
+    transition: width 0.6s ease;
+  }
+  .unit-prog-text {
+    font-size: 0.6rem;
+    color: var(--bp-white-dim);
+    flex-shrink: 0;
+  }
+
+  /* Chevron */
+  .unit-chevron {
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: transform var(--transition);
+  }
+  .unit-card.open .unit-chevron { transform: rotate(180deg); }
+  .unit-chevron svg { width: 14px; height: 14px; stroke: var(--bp-white-dim); }
+
+  /* Lock badge */
+  .lock-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.6rem;
+    color: var(--bp-locked);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--bp-locked);
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin-top: 4px;
+  }
+  .lock-badge svg { width: 11px; height: 11px; }
+
+  /* ===== LESSONS PANEL ===== */
+  .lessons-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1);
+    background: rgba(0,0,0,0.15);
+  }
+  .unit-card.open .lessons-panel {
+    max-height: 800px;
+  }
+  .lessons-inner {
+    padding: 4px 0 10px;
+  }
+
+  /* Connector line (vertical) */
+  .lessons-inner {
+    position: relative;
+  }
+  .lessons-inner::before {
+    content: '';
+    position: absolute;
+    left: 36px;
+    top: 0;
+    bottom: 10px;
+    width: 1px;
+    background: repeating-linear-gradient(
+      180deg,
+      var(--bp-line) 0, var(--bp-line) 4px,
+      transparent 4px, transparent 8px
+    );
+  }
+
+  /* ===== LESSON ITEM (Spec Block) ===== */
+  .lesson {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px 9px 16px;
+    position: relative;
+    cursor: pointer;
+    transition: background var(--transition);
+  }
+  .lesson:hover { background: rgba(255,255,255,0.025); }
+
+  /* Node on the connector line */
+  .lesson-node {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid var(--bp-line);
+    background: var(--bp-bg);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    transition: all var(--transition);
+  }
+  .lesson.completed .lesson-node {
+    border-color: var(--bp-green);
+    background: rgba(52,211,153,0.12);
+  }
+  .lesson.completed .lesson-node svg { stroke: var(--bp-green); }
+  .lesson.current .lesson-node {
+    border-color: var(--bp-cyan);
+    box-shadow: 0 0 10px rgba(0,212,255,0.4), 0 0 20px rgba(0,212,255,0.15);
+    animation: nodePulse 2s infinite;
+  }
+  @keyframes nodePulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(0,212,255,0.4), 0 0 20px rgba(0,212,255,0.15); }
+    50%      { box-shadow: 0 0 14px rgba(0,212,255,0.6), 0 0 28px rgba(0,212,255,0.25); }
+  }
+  .lesson.locked-lesson .lesson-node {
+    border-color: var(--bp-locked);
+    opacity: 0.5;
+  }
+
+  .lesson-node svg { width: 11px; height: 11px; stroke: var(--bp-white-dim); stroke-width: 2.5; fill: none; }
+
+  /* Spec block body */
+  .lesson-body {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: var(--radius);
+    padding: 8px 11px;
+    background: rgba(255,255,255,0.015);
+    position: relative;
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+  .lesson.current .lesson-body {
+    border-color: var(--bp-cyan-dim);
+    box-shadow: inset 0 0 15px rgba(0,212,255,0.04);
+    background: rgba(0,212,255,0.03);
+  }
+  .lesson.completed .lesson-body {
+    border-color: rgba(52,211,153,0.15);
+  }
+  .lesson.locked-lesson .lesson-body {
+    opacity: 0.4;
+  }
+
+  /* Dimension-line style left tick */
+  .lesson-body::before {
+    content: '';
+    position: absolute;
+    left: -7px; top: 50%;
+    width: 6px; height: 1px;
+    background: var(--bp-line);
+  }
+
+  .lesson-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
+  }
+  .lesson.current .lesson-title { color: var(--bp-cyan); }
+
+  .lesson-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.6rem;
+    color: var(--bp-white-dim);
+  }
+
+  /* Stars as engineering stamps */
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+  .star {
+    width: 14px; height: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .star svg { width: 12px; height: 12px; }
+  .star.earned svg { fill: var(--bp-gold); stroke: var(--bp-gold); }
+  .star.empty svg { fill: none; stroke: var(--bp-locked); }
+
+  .xp-badge {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--bp-cyan-dim);
+    font-weight: 600;
+    font-size: 0.58rem;
+    letter-spacing: 0.5px;
+  }
+  .xp-badge .plus { color: var(--bp-cyan); }
+
+  /* Current lesson label */
+  .current-tag {
+    font-size: 0.5rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--bp-cyan);
+    background: rgba(0,212,255,0.08);
+    border: 1px solid rgba(0,212,255,0.2);
+    border-radius: 2px;
+    padding: 1px 6px;
+    margin-left: auto;
+    animation: tagBlink 2.5s infinite;
+  }
+  @keyframes tagBlink {
+    0%, 80%, 100% { opacity: 1; }
+    90% { opacity: 0.5; }
+  }
+
+  /* ===== DRAWING TITLE BLOCK (footer) ===== */
+  .title-block {
+    margin: 30px 16px 10px;
+    border: 1px solid var(--bp-line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .title-block-row {
+    display: flex;
+    border-bottom: 1px solid var(--bp-line);
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    color: var(--bp-white-dim);
+  }
+  .title-block-row:last-child { border-bottom: none; }
+  .title-block-cell {
+    padding: 5px 10px;
+    border-right: 1px solid var(--bp-line);
+    flex: 1;
+  }
+  .title-block-cell:last-child { border-right: none; }
+  .title-block-cell .label {
+    text-transform: uppercase;
+    font-size: 0.45rem;
+    color: var(--bp-cyan-dim);
+    margin-bottom: 1px;
+  }
+  .title-block-cell .value {
+    color: var(--bp-white);
+    font-weight: 600;
+  }
+
+  /* ===== DECORATIVE SVG OVERLAYS ===== */
+  .deco-crosshair {
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.12;
+    z-index: 0;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  .unit-card {
+    animation: fadeSlideIn 0.5s ease both;
+  }
+  .unit-card:nth-child(1) { animation-delay: 0.1s; }
+  .unit-card:nth-child(2) { animation-delay: 0.25s; }
+  .unit-card:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .lesson {
+    animation: lessonFadeIn 0.3s ease both;
+  }
+  .lesson:nth-child(1) { animation-delay: 0.05s; }
+  .lesson:nth-child(2) { animation-delay: 0.10s; }
+  .lesson:nth-child(3) { animation-delay: 0.15s; }
+  .lesson:nth-child(4) { animation-delay: 0.20s; }
+  .lesson:nth-child(5) { animation-delay: 0.25s; }
+
+  @keyframes lessonFadeIn {
+    from { opacity: 0; transform: translateX(-8px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--bp-line); border-radius: 2px; }
+
+  /* ===== TOOLTIP ===== */
+  .tooltip {
+    position: fixed;
+    background: #162a4a;
+    border: 1px solid var(--bp-cyan-dim);
+    color: var(--bp-white);
+    font-family: var(--font);
+    font-size: 0.65rem;
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 200;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .tooltip.show { opacity: 1; }
+
+  /* ===== START LESSON BUTTON ===== */
+  .start-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0 16px 0 48px;
+    padding: 10px;
+    border: 1.5px solid var(--bp-cyan);
+    border-radius: var(--radius);
+    background: rgba(0,212,255,0.06);
+    color: var(--bp-cyan);
+    font-family: var(--font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--transition);
+    margin-bottom: 8px;
+  }
+  .start-btn:hover {
+    background: rgba(0,212,255,0.14);
+    box-shadow: 0 0 20px rgba(0,212,255,0.15);
+  }
+  .start-btn svg { width: 14px; height: 14px; }
+</style>
+</head>
+<body>
+
+<!-- Decorative crosshairs -->
+<svg class="deco-crosshair" style="top:15%;left:5%;width:60px;height:60px" viewBox="0 0 60 60">
+  <line x1="30" y1="0" x2="30" y2="60" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="0" y1="30" x2="60" y2="30" stroke="#00d4ff" stroke-width="0.5"/>
+  <circle cx="30" cy="30" r="12" fill="none" stroke="#00d4ff" stroke-width="0.5"/>
+  <circle cx="30" cy="30" r="4" fill="none" stroke="#00d4ff" stroke-width="0.5"/>
+</svg>
+<svg class="deco-crosshair" style="bottom:10%;right:3%;width:50px;height:50px" viewBox="0 0 60 60">
+  <line x1="30" y1="0" x2="30" y2="60" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="0" y1="30" x2="60" y2="30" stroke="#00d4ff" stroke-width="0.5"/>
+  <circle cx="30" cy="30" r="10" fill="none" stroke="#00d4ff" stroke-width="0.5"/>
+</svg>
+
+<!-- Tooltip element -->
+<div class="tooltip" id="tooltip"></div>
+
+<div class="app">
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="logo">
+      <!-- Gear / compass SVG -->
+      <svg viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="5" stroke="#00d4ff" stroke-width="1.5"/>
+        <circle cx="14" cy="14" r="11" stroke="#00d4ff" stroke-width="1" stroke-dasharray="3 2"/>
+        <line x1="14" y1="1" x2="14" y2="5" stroke="#00d4ff" stroke-width="1.5"/>
+        <line x1="14" y1="23" x2="14" y2="27" stroke="#00d4ff" stroke-width="1.5"/>
+        <line x1="1" y1="14" x2="5" y2="14" stroke="#00d4ff" stroke-width="1.5"/>
+        <line x1="23" y1="14" x2="27" y2="14" stroke="#00d4ff" stroke-width="1.5"/>
+        <line x1="4.8" y1="4.8" x2="7.6" y2="7.6" stroke="#00d4ff" stroke-width="1"/>
+        <line x1="20.4" y1="20.4" x2="23.2" y2="23.2" stroke="#00d4ff" stroke-width="1"/>
+        <line x1="23.2" y1="4.8" x2="20.4" y2="7.6" stroke="#00d4ff" stroke-width="1"/>
+        <line x1="7.6" y1="20.4" x2="4.8" y2="23.2" stroke="#00d4ff" stroke-width="1"/>
+      </svg>
+      <span class="logo-text">MechPrep</span>
+    </div>
+    <div class="header-spacer"></div>
+    <div class="stat-pill streak">
+      <span class="icon">&#x1F525;</span>
+      <span class="val">5</span>
+    </div>
+    <div class="stat-pill xp">
+      <span class="icon">&#x1F4CE;</span>
+      <span class="val">1,240</span>
+    </div>
+    <div class="avatar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="1.5">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ===== REVISION TRACKER ===== -->
+  <div class="revision-tracker">
+    <span class="rev-label">Overall</span>
+    <div class="rev-bar-track">
+      <div class="rev-bar-fill" style="width:29%"></div>
+    </div>
+    <span class="rev-pct">29%</span>
+  </div>
+
+  <!-- ===== SECTION TITLE ===== -->
+  <div class="section-title">
+    <span>Schematic Sections</span>
+    <span class="datum-ref">A</span>
+  </div>
+
+  <!-- ===== UNIT 1: Statics & Equilibrium ===== -->
+  <div class="unit-card open" style="--unit-color: var(--unit1);" data-unit="1">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5">
+          <path d="M12 2L2 22h20L12 2z"/>
+          <line x1="12" y1="10" x2="12" y2="15"/>
+          <circle cx="12" cy="18" r="0.5" fill="#3B82F6"/>
+        </svg>
+        <span class="unit-num">1</span>
+      </div>
+      <div class="unit-info">
+        <div class="unit-name">Statics &amp; Equilibrium</div>
+        <div class="unit-meta">
+          <span>8 lessons</span>
+          <span class="dot"></span>
+          <span>5 completed</span>
+        </div>
+        <div class="unit-progress-mini">
+          <div class="unit-prog-track">
+            <div class="unit-prog-fill" style="width:62.5%"></div>
+          </div>
+          <span class="unit-prog-text">5/8</span>
+        </div>
+      </div>
+      <div class="unit-chevron">
+        <svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round">
+          <polyline points="5,7 10,13 15,7"/>
+        </svg>
+      </div>
+    </div>
+    <div class="lessons-panel">
+      <div class="lessons-inner">
+
+        <!-- Lesson 1 - completed -->
+        <div class="lesson completed">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16"><polyline points="3,8 7,12 13,4"/></svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Free Body Diagrams</div>
+            <div class="lesson-footer">
+              <div class="stars">
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+              </div>
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 2 - completed -->
+        <div class="lesson completed">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16"><polyline points="3,8 7,12 13,4"/></svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Equilibrium Equations</div>
+            <div class="lesson-footer">
+              <div class="stars">
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star empty"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+              </div>
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 3 - completed -->
+        <div class="lesson completed">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16"><polyline points="3,8 7,12 13,4"/></svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Trusses &amp; Frames</div>
+            <div class="lesson-footer">
+              <div class="stars">
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+              </div>
+              <div class="xp-badge"><span class="plus">+</span>20 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 4 - completed -->
+        <div class="lesson completed">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16"><polyline points="3,8 7,12 13,4"/></svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Friction &amp; Slip</div>
+            <div class="lesson-footer">
+              <div class="stars">
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star empty"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star empty"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+              </div>
+              <div class="xp-badge"><span class="plus">+</span>10 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 5 - completed -->
+        <div class="lesson completed">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16"><polyline points="3,8 7,12 13,4"/></svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Centroids &amp; Centers of Gravity</div>
+            <div class="lesson-footer">
+              <div class="stars">
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star empty"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+              </div>
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 6 - CURRENT -->
+        <div class="lesson current">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="3" fill="#00d4ff" stroke="none"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Moment of Inertia</div>
+            <div class="lesson-footer">
+              <div class="stars">
+                <span class="star empty"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star empty"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star empty"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+              </div>
+              <div class="xp-badge"><span class="plus">+</span>20 XP</div>
+              <span class="current-tag">Continue</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Start button for current lesson -->
+        <div style="padding: 4px 0;">
+          <button class="start-btn" onclick="flashStart(this)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="4,2 14,8 4,14" fill="currentColor" stroke="none"/>
+            </svg>
+            Start Lesson
+          </button>
+        </div>
+
+        <!-- Lesson 7 - locked -->
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Internal Forces &amp; Shear</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson 8 - locked -->
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Virtual Work Principle</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>20 XP</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== UNIT 2: Dynamics & Motion ===== -->
+  <div class="unit-card" style="--unit-color: var(--unit2);" data-unit="2">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 12L17 7" stroke-linecap="round"/>
+          <path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>
+        </svg>
+        <span class="unit-num">2</span>
+      </div>
+      <div class="unit-info">
+        <div class="unit-name">Dynamics &amp; Motion</div>
+        <div class="unit-meta">
+          <span>7 lessons</span>
+          <span class="dot"></span>
+          <span>2 completed</span>
+        </div>
+        <div class="unit-progress-mini">
+          <div class="unit-prog-track">
+            <div class="unit-prog-fill" style="width:28.5%"></div>
+          </div>
+          <span class="unit-prog-text">2/7</span>
+        </div>
+      </div>
+      <div class="unit-chevron">
+        <svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round">
+          <polyline points="5,7 10,13 15,7"/>
+        </svg>
+      </div>
+    </div>
+    <div class="lessons-panel">
+      <div class="lessons-inner">
+
+        <div class="lesson completed">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16"><polyline points="3,8 7,12 13,4"/></svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Kinematics of Particles</div>
+            <div class="lesson-footer">
+              <div class="stars">
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+              </div>
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson completed">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16"><polyline points="3,8 7,12 13,4"/></svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Newton's Laws Applied</div>
+            <div class="lesson-footer">
+              <div class="stars">
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star earned"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+                <span class="star empty"><svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,12.5 3,16 4.5,10.5 0,6.5 6,6"/></svg></span>
+              </div>
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Work &amp; Energy Methods</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>20 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Impulse &amp; Momentum</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Rigid Body Rotation</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>10 XP</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== UNIT 3: Strength of Materials (LOCKED) ===== -->
+  <div class="unit-card locked" style="--unit-color: var(--unit3);" data-unit="3">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.5">
+          <rect x="4" y="4" width="16" height="16" rx="2"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="12" y1="4" x2="12" y2="20"/>
+          <path d="M7 7l10 10M17 7L7 17" stroke-width="0.7" opacity="0.5"/>
+        </svg>
+        <span class="unit-num">3</span>
+      </div>
+      <div class="unit-info">
+        <div class="unit-name">Strength of Materials</div>
+        <div class="unit-meta">
+          <span>9 lessons</span>
+          <span class="dot"></span>
+          <span>0 completed</span>
+        </div>
+        <div class="unit-progress-mini">
+          <div class="unit-prog-track">
+            <div class="unit-prog-fill" style="width:0%"></div>
+          </div>
+          <span class="unit-prog-text">0/9</span>
+        </div>
+        <div class="lock-badge">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="4" y="7" width="8" height="6" rx="1"/>
+            <path d="M6 7V5a2 2 0 014 0v2"/>
+          </svg>
+          Complete Unit 2 to unlock
+        </div>
+      </div>
+      <div class="unit-chevron">
+        <svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round">
+          <polyline points="5,7 10,13 15,7"/>
+        </svg>
+      </div>
+    </div>
+    <div class="lessons-panel">
+      <div class="lessons-inner">
+
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Stress &amp; Strain Basics</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Axial Loading &amp; Deformation</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Bending Moments &amp; Shear</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>20 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Torsion of Shafts</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>15 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson locked-lesson">
+          <div class="lesson-node">
+            <svg viewBox="0 0 16 16" stroke-width="1.5">
+              <rect x="4" y="7" width="8" height="6" rx="1"/>
+              <path d="M6 7V5a2 2 0 014 0v2"/>
+            </svg>
+          </div>
+          <div class="lesson-body">
+            <div class="lesson-title">Column Buckling (Euler)</div>
+            <div class="lesson-footer">
+              <div class="xp-badge"><span class="plus">+</span>20 XP</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DRAWING TITLE BLOCK ===== -->
+  <div class="title-block">
+    <div class="title-block-row">
+      <div class="title-block-cell" style="flex:2;">
+        <div class="label">Project</div>
+        <div class="value">MechPrep Interview Course</div>
+      </div>
+      <div class="title-block-cell">
+        <div class="label">Rev</div>
+        <div class="value">v2.4</div>
+      </div>
+    </div>
+    <div class="title-block-row">
+      <div class="title-block-cell">
+        <div class="label">Drawn By</div>
+        <div class="value">MechPrep AI</div>
+      </div>
+      <div class="title-block-cell">
+        <div class="label">Date</div>
+        <div class="value">2026-03-20</div>
+      </div>
+      <div class="title-block-cell">
+        <div class="label">Scale</div>
+        <div class="value">1:1</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.app -->
+
+<script>
+  // ===== TOGGLE UNITS =====
+  function toggleUnit(headerEl) {
+    const card = headerEl.closest('.unit-card');
+    // Allow locked units to expand/collapse to preview content
+    card.classList.toggle('open');
+  }
+
+  // ===== FLASH START BUTTON =====
+  function flashStart(btn) {
+    btn.style.background = 'rgba(0,212,255,0.25)';
+    btn.style.boxShadow = '0 0 30px rgba(0,212,255,0.3)';
+    btn.textContent = '  LOADING...';
+    setTimeout(() => {
+      btn.style.background = '';
+      btn.style.boxShadow = '';
+      btn.innerHTML = `
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px">
+          <polygon points="4,2 14,8 4,14" fill="currentColor" stroke="none"/>
+        </svg>
+        Start Lesson
+      `;
+    }, 1200);
+  }
+
+  // ===== SMOOTH SCROLL TO CURRENT LESSON ON LOAD =====
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const current = document.querySelector('.lesson.current');
+      if (current) {
+        current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 600);
+  });
+
+  // ===== LESSON HOVER TOOLTIP =====
+  const tooltip = document.getElementById('tooltip');
+  const lessonTips = {
+    'Free Body Diagrams': 'Draw & analyze forces on isolated bodies',
+    'Equilibrium Equations': 'Sum of forces & moments equals zero',
+    'Trusses & Frames': 'Method of joints & sections',
+    'Friction & Slip': 'Static & kinetic friction problems',
+    'Centroids & Centers of Gravity': 'Composite area centroid methods',
+    'Moment of Inertia': 'Second moment of area calculations',
+    'Internal Forces & Shear': 'SFD & BMD construction',
+    'Virtual Work Principle': 'Energy methods for equilibrium',
+    'Kinematics of Particles': 'Position, velocity, acceleration',
+    'Newton\'s Laws Applied': 'F=ma in engineering contexts',
+    'Work & Energy Methods': 'Conservation of energy problems',
+    'Impulse & Momentum': 'Impact & collision analysis',
+    'Rigid Body Rotation': 'Angular kinematics & kinetics',
+    'Stress & Strain Basics': 'Normal & shear stress fundamentals',
+    'Axial Loading & Deformation': 'Hooke\'s law & elongation',
+    'Bending Moments & Shear': 'Beam bending stress distribution',
+    'Torsion of Shafts': 'Shear stress in circular sections',
+    'Column Buckling (Euler)': 'Critical load & slenderness ratio'
+  };
+
+  document.querySelectorAll('.lesson-body').forEach(body => {
+    const title = body.querySelector('.lesson-title').textContent;
+    const tip = lessonTips[title];
+    if (!tip) return;
+
+    body.addEventListener('mouseenter', (e) => {
+      tooltip.textContent = tip;
+      tooltip.classList.add('show');
+    });
+    body.addEventListener('mousemove', (e) => {
+      tooltip.style.left = (e.clientX + 12) + 'px';
+      tooltip.style.top = (e.clientY - 30) + 'px';
+    });
+    body.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('show');
+    });
+  });
+</script>
+
+</body>
+</html>

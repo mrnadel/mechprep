@@ -11,9 +11,9 @@ import type {
 // --------------- Stripe Price IDs ---------------
 
 export const STRIPE_PRICES = {
-  PRO_MONTHLY: process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID ?? '',
-  PRO_YEARLY: process.env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PRICE_ID ?? '',
-  TEAM_MONTHLY: process.env.NEXT_PUBLIC_STRIPE_TEAM_MONTHLY_PRICE_ID ?? '',
+  PRO_MONTHLY: process.env.STRIPE_PRO_MONTHLY_PRICE_ID ?? '',
+  PRO_YEARLY: process.env.STRIPE_PRO_YEARLY_PRICE_ID ?? '',
+  TEAM_MONTHLY: process.env.STRIPE_TEAM_MONTHLY_PRICE_ID ?? '',
 } as const;
 
 // --------------- Features ---------------

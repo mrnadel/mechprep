@@ -41,7 +41,7 @@ export const progressSyncSchema = z.object({
     currentStreak: z.number().int().min(0),
     longestStreak: z.number().int().min(0),
     lastActiveDate: z.string(),
-    completedLessons: z.record(z.unknown()).optional(),
+    completedLessons: z.record(z.string(), z.unknown()).optional(),
     currentLevel: z.number().int().min(1).optional(),
     achievementsUnlocked: z.array(z.string()).optional(),
     dailyChallengesCompleted: z.number().int().min(0).optional(),
@@ -59,6 +59,7 @@ export const progressSyncSchema = z.object({
           averageConfidence: z.number().min(0).max(1),
           lastAttempted: z.string(),
           subtopicBreakdown: z.record(
+            z.string(),
             z.object({
               attempted: z.number().int().min(0),
               correct: z.number().int().min(0),
@@ -84,7 +85,7 @@ export const progressSyncSchema = z.object({
 });
 
 // Helper to extract the first validation error message
-export function getValidationError(result: z.SafeParseReturnType<unknown, unknown>): string | null {
+export function getValidationError(result: { success: false; error: { issues: Array<{ message: string }> } } | { success: true }): string | null {
   if (result.success) return null;
-  return result.error.errors[0]?.message ?? 'Invalid input';
+  return result.error.issues[0]?.message ?? 'Invalid input';
 }

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>MechPrep — Metro Transit Map</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --blue: #0055B8;
+    --blue-light: #E8F0FE;
+    --blue-glow: rgba(0, 85, 184, 0.25);
+    --purple: #8B2FC9;
+    --purple-light: #F3E8FF;
+    --purple-glow: rgba(139, 47, 201, 0.25);
+    --amber: #D4880F;
+    --amber-light: #FFF8E1;
+    --amber-glow: rgba(212, 136, 15, 0.25);
+    --gray-50: #FAFAFA;
+    --gray-100: #F5F5F5;
+    --gray-200: #E5E5E5;
+    --gray-300: #D4D4D4;
+    --gray-400: #A3A3A3;
+    --gray-500: #737373;
+    --gray-600: #525252;
+    --gray-700: #404040;
+    --gray-800: #262626;
+    --gray-900: #171717;
+    --white: #FFFFFF;
+    --line-width: 6px;
+    --station-size: 18px;
+    --station-size-lg: 22px;
+  }
+
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--white);
+    color: var(--gray-900);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .app-container {
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    background: var(--white);
+  }
+
+  /* ── Header ── */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 16px 20px;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    background: var(--gray-900);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-mark svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo-text {
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    color: var(--gray-900);
+  }
+
+  .header-stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gray-700);
+  }
+
+  .stat-icon {
+    font-size: 16px;
+  }
+
+  .avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0;
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--gray-200);
+  }
+
+  /* ── Journey Summary ── */
+  .journey-summary {
+    margin: 20px 20px 8px;
+    padding: 16px 18px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .journey-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--gray-400);
+    margin-bottom: 4px;
+  }
+
+  .journey-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--gray-900);
+    letter-spacing: -0.3px;
+  }
+
+  .journey-value span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-400);
+    margin-left: 2px;
+  }
+
+  .journey-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--gray-200);
+  }
+
+  .journey-col {
+    text-align: center;
+    flex: 1;
+  }
+
+  /* ── Transit Map ── */
+  .map-container {
+    padding: 16px 0 100px;
+  }
+
+  /* ── Line Card ── */
+  .line-card {
+    margin: 0 20px 6px;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    border: 1px solid var(--gray-200);
+  }
+
+  .line-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .line-card.expanded {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .line-header {
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    background: var(--white);
+    user-select: none;
+  }
+
+  .line-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--white);
+    flex-shrink: 0;
+    letter-spacing: -0.3px;
+  }
+
+  .line-badge.blue { background: var(--blue); }
+  .line-badge.purple { background: var(--purple); }
+  .line-badge.amber { background: var(--amber); }
+  .line-badge.locked { background: var(--gray-300); }
+
+  .line-info { flex: 1; min-width: 0; }
+
+  .line-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--gray-900);
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .line-card.locked .line-name {
+    color: var(--gray-400);
+  }
+
+  .line-progress-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-400);
+  }
+
+  .line-progress-text strong {
+    font-weight: 700;
+    color: var(--gray-600);
+  }
+
+  .line-card.locked .line-progress-text strong {
+    color: var(--gray-400);
+  }
+
+  .line-chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: var(--gray-300);
+  }
+
+  .line-card.expanded .line-chevron {
+    transform: rotate(180deg);
+  }
+
+  .line-progress-bar {
+    height: 3px;
+    background: var(--gray-100);
+    margin: 0 18px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .line-progress-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .line-progress-fill.blue { background: var(--blue); }
+  .line-progress-fill.purple { background: var(--purple); }
+  .line-progress-fill.amber { background: var(--amber); }
+
+  /* ── Stations (Expanded) ── */
+  .stations-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .line-card.expanded .stations-container {
+    max-height: 2000px;
+  }
+
+  .stations-list {
+    padding: 12px 18px 18px 18px;
+  }
+
+  .station-row {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    min-height: 52px;
+  }
+
+  .station-track {
+    width: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  /* The vertical line connecting stations */
+  .station-track::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: var(--line-width);
+    border-radius: 3px;
+  }
+
+  .station-row:first-child .station-track::before {
+    top: 50%;
+  }
+
+  .station-row:last-child .station-track::before {
+    bottom: 50%;
+  }
+
+  .station-row.blue .station-track::before { background: var(--blue); }
+  .station-row.purple .station-track::before { background: var(--purple); }
+  .station-row.amber .station-track::before { background: var(--gray-300); }
+  .station-row.locked .station-track::before { background: var(--gray-200); }
+
+  /* Station dot */
+  .station-dot {
+    width: var(--station-size);
+    height: var(--station-size);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    margin-top: 16px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    border: 3px solid var(--gray-300);
+    background: var(--white);
+  }
+
+  .station-row:hover .station-dot {
+    transform: scale(1.15);
+  }
+
+  .station-dot.completed {
+    border: none;
+  }
+
+  .station-dot.completed.blue { background: var(--blue); }
+  .station-dot.completed.purple { background: var(--purple); }
+
+  .station-dot.completed::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 50%;
+  }
+
+  .station-dot.current {
+    width: var(--station-size-lg);
+    height: var(--station-size-lg);
+    margin-top: 14px;
+    border-width: 3px;
+    animation: pulse-station 2s ease-in-out infinite;
+  }
+
+  .station-dot.current.blue {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px var(--blue-glow);
+  }
+
+  .station-dot.current.purple {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 4px var(--purple-glow);
+  }
+
+  .station-dot.locked {
+    border-color: var(--gray-200);
+    background: var(--gray-50);
+  }
+
+  @keyframes pulse-station {
+    0%, 100% { box-shadow: 0 0 0 4px var(--blue-glow); }
+    50% { box-shadow: 0 0 0 10px transparent; }
+  }
+
+  .station-dot.current.purple {
+    animation-name: pulse-station-purple;
+  }
+
+  @keyframes pulse-station-purple {
+    0%, 100% { box-shadow: 0 0 0 4px var(--purple-glow); }
+    50% { box-shadow: 0 0 0 10px transparent; }
+  }
+
+  /* Station info */
+  .station-info {
+    padding: 12px 0 12px 12px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .station-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--gray-800);
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+
+  .station-row.locked .station-name {
+    color: var(--gray-400);
+  }
+
+  .station-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--gray-400);
+    font-weight: 500;
+  }
+
+  .station-stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .star-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gray-200);
+  }
+
+  .star-dot.earned.blue { background: var(--blue); }
+  .star-dot.earned.purple { background: var(--purple); }
+
+  .station-duration {
+    font-size: 11px;
+    color: var(--gray-400);
+    font-weight: 500;
+  }
+
+  .station-lock-icon {
+    width: 12px;
+    height: 12px;
+    color: var(--gray-300);
+  }
+
+  /* ── Transfer Point ── */
+  .transfer-point {
+    margin: 0 20px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .transfer-line {
+    height: 1px;
+    flex: 1;
+    background: var(--gray-200);
+  }
+
+  .transfer-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px dashed var(--gray-300);
+    background: var(--white);
+  }
+
+  .transfer-icon {
+    width: 14px;
+    height: 14px;
+    color: var(--gray-400);
+  }
+
+  .transfer-text {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gray-400);
+  }
+
+  .transfer-dots {
+    display: flex;
+    gap: 3px;
+  }
+
+  .transfer-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  /* ── Bottom Nav ── */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    display: flex;
+    padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+    z-index: 100;
+  }
+
+  .nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    color: var(--gray-400);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-item.active {
+    color: var(--gray-900);
+  }
+
+  .nav-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  /* ── Tooltip / Station Detail ── */
+  .station-detail-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 200;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .station-detail-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .station-detail-card {
+    width: 100%;
+    max-width: 480px;
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    padding: 24px 24px max(24px, env(safe-area-inset-bottom));
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .station-detail-overlay.visible .station-detail-card {
+    transform: translateY(0);
+  }
+
+  .detail-handle {
+    width: 36px;
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: 2px;
+    margin: 0 auto 18px;
+  }
+
+  .detail-line-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 6px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .detail-line-indicator.blue {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  .detail-line-indicator.purple {
+    background: var(--purple-light);
+    color: var(--purple);
+  }
+
+  .detail-line-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .detail-line-dot.blue { background: var(--blue); }
+  .detail-line-dot.purple { background: var(--purple); }
+
+  .detail-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+  }
+
+  .detail-description {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .detail-stats {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .detail-stat {
+    flex: 1;
+    padding: 12px;
+    background: var(--gray-50);
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .detail-stat-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 2px;
+  }
+
+  .detail-stat-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--gray-400);
+  }
+
+  .detail-cta {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    cursor: pointer;
+    letter-spacing: -0.2px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .detail-cta:active {
+    transform: scale(0.98);
+  }
+
+  .detail-cta.blue { background: var(--blue); }
+  .detail-cta.purple { background: var(--purple); }
+
+  /* ── Accessibility ── */
+  @media (prefers-reduced-motion: reduce) {
+    .station-dot.current { animation: none; }
+    * { transition-duration: 0.01ms !important; }
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 0; }
+</style>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div class="logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <line x1="12" y1="8" x2="12" y2="16"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+        </div>
+        <span class="logo-text">MechPrep</span>
+      </div>
+      <div class="header-stats">
+        <div class="stat">
+          <span class="stat-icon">&#x1F525;</span>
+          <span>5</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">&#x1F687;</span>
+          <span>1,240</span>
+        </div>
+        <div class="avatar">MN</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Journey Summary -->
+  <div class="journey-summary">
+    <div class="journey-col">
+      <div class="journey-label">Distance</div>
+      <div class="journey-value">1,240 <span>xp</span></div>
+    </div>
+    <div class="journey-divider"></div>
+    <div class="journey-col">
+      <div class="journey-label">Journeys</div>
+      <div class="journey-value">5 <span>days</span></div>
+    </div>
+    <div class="journey-divider"></div>
+    <div class="journey-col">
+      <div class="journey-label">Stops Left</div>
+      <div class="journey-value">17 <span>total</span></div>
+    </div>
+  </div>
+
+  <!-- Transit Map -->
+  <div class="map-container">
+
+    <!-- ===== BLUE LINE ===== -->
+    <div class="line-card expanded" data-line="blue" onclick="toggleLine(this)">
+      <div class="line-header">
+        <div class="line-badge blue">BL</div>
+        <div class="line-info">
+          <div class="line-name">Statics &amp; Equilibrium</div>
+          <div class="line-progress-text"><strong>5 / 8</strong> stations &middot; 3 stops to terminus</div>
+        </div>
+        <svg class="line-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="line-progress-bar"><div class="line-progress-fill blue" style="width: 62.5%"></div></div>
+      <div class="stations-container">
+        <div class="stations-list" id="blue-stations"></div>
+      </div>
+    </div>
+
+    <!-- Transfer Point: Blue → Purple -->
+    <div class="transfer-point">
+      <div class="transfer-line"></div>
+      <div class="transfer-badge">
+        <svg class="transfer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+        <span class="transfer-text">Transfer</span>
+        <div class="transfer-dots">
+          <div class="transfer-dot" style="background: var(--blue)"></div>
+          <div class="transfer-dot" style="background: var(--purple)"></div>
+        </div>
+      </div>
+      <div class="transfer-line"></div>
+    </div>
+
+    <!-- ===== PURPLE LINE ===== -->
+    <div class="line-card" data-line="purple" onclick="toggleLine(this)">
+      <div class="line-header">
+        <div class="line-badge purple">PL</div>
+        <div class="line-info">
+          <div class="line-name">Dynamics &amp; Motion</div>
+          <div class="line-progress-text"><strong>2 / 7</strong> stations &middot; 5 stops to terminus</div>
+        </div>
+        <svg class="line-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="line-progress-bar"><div class="line-progress-fill purple" style="width: 28.6%"></div></div>
+      <div class="stations-container">
+        <div class="stations-list" id="purple-stations"></div>
+      </div>
+    </div>
+
+    <!-- Transfer Point: Purple → Amber -->
+    <div class="transfer-point">
+      <div class="transfer-line"></div>
+      <div class="transfer-badge">
+        <svg class="transfer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+        <span class="transfer-text">Transfer</span>
+        <div class="transfer-dots">
+          <div class="transfer-dot" style="background: var(--purple)"></div>
+          <div class="transfer-dot" style="background: var(--amber)"></div>
+        </div>
+      </div>
+      <div class="transfer-line"></div>
+    </div>
+
+    <!-- ===== AMBER LINE ===== -->
+    <div class="line-card locked" data-line="amber" onclick="toggleLine(this)">
+      <div class="line-header">
+        <div class="line-badge locked">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <div class="line-info">
+          <div class="line-name">Strength of Materials</div>
+          <div class="line-progress-text"><strong>0 / 9</strong> stations &middot; Locked</div>
+        </div>
+        <svg class="line-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="line-progress-bar"><div class="line-progress-fill amber" style="width: 0%"></div></div>
+      <div class="stations-container">
+        <div class="stations-list" id="amber-stations"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Station Detail Overlay -->
+<div class="station-detail-overlay" id="stationOverlay" onclick="closeDetail(event)">
+  <div class="station-detail-card" onclick="event.stopPropagation()">
+    <div class="detail-handle"></div>
+    <div class="detail-line-indicator blue" id="detailLineIndicator">
+      <div class="detail-line-dot blue"></div>
+      <span>Blue Line</span>
+    </div>
+    <div class="detail-title" id="detailTitle">Station Name</div>
+    <div class="detail-description" id="detailDescription">Description of this station's content.</div>
+    <div class="detail-stats">
+      <div class="detail-stat">
+        <div class="detail-stat-value" id="detailXP">+80</div>
+        <div class="detail-stat-label">XP Reward</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value" id="detailDuration">5 min</div>
+        <div class="detail-stat-label">Duration</div>
+      </div>
+      <div class="detail-stat">
+        <div class="detail-stat-value" id="detailQuestions">6</div>
+        <div class="detail-stat-label">Questions</div>
+      </div>
+    </div>
+    <button class="detail-cta blue" id="detailCta" onclick="closeDetail(event, true)">Continue Journey</button>
+  </div>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a class="nav-item active" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <span class="nav-label">Map</span>
+  </a>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 10.33 9.33 11 8.5 11h-5C2.67 11 2 10.33 2 9.5S2.67 8 3.5 8h5c.83 0 1.5.67 1.5 1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+    <span class="nav-label">Practice</span>
+  </a>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    <span class="nav-label">Stats</span>
+  </a>
+  <a class="nav-item" href="#">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <span class="nav-label">Profile</span>
+  </a>
+</nav>
+
+<script>
+// ── Data ──
+const lines = {
+  blue: {
+    name: "Statics & Equilibrium",
+    label: "Blue Line",
+    color: "blue",
+    stations: [
+      { name: "Free-Body Diagrams", status: "completed", stars: 3, xp: 80, duration: "4 min", questions: 5, desc: "Master the art of isolating bodies and drawing all external forces acting on a system." },
+      { name: "Force Vectors & Components", status: "completed", stars: 3, xp: 90, duration: "5 min", questions: 6, desc: "Decompose forces into x and y components using trigonometry and vector addition." },
+      { name: "Moment of a Force", status: "completed", stars: 2, xp: 100, duration: "6 min", questions: 7, desc: "Calculate moments about a point, understand the cross product, and apply Varignon's theorem." },
+      { name: "Equilibrium of Particles", status: "completed", stars: 3, xp: 80, duration: "5 min", questions: 5, desc: "Apply equilibrium equations to concurrent force systems and solve for unknowns." },
+      { name: "Equilibrium of Rigid Bodies", status: "completed", stars: 2, xp: 110, duration: "7 min", questions: 8, desc: "Solve for reactions in beams and frames using the three equations of equilibrium." },
+      { name: "Trusses: Method of Joints", status: "current", stars: 0, xp: 100, duration: "6 min", questions: 7, desc: "Analyze planar trusses by applying equilibrium at each joint to find member forces." },
+      { name: "Trusses: Method of Sections", status: "locked", stars: 0, xp: 100, duration: "6 min", questions: 6, desc: "Cut through a truss and apply equilibrium to a section to solve specific member forces." },
+      { name: "Friction & Applications", status: "locked", stars: 0, xp: 120, duration: "8 min", questions: 8, desc: "Understand static and kinetic friction, wedges, belts, and impending motion problems." }
+    ]
+  },
+  purple: {
+    name: "Dynamics & Motion",
+    label: "Purple Line",
+    color: "purple",
+    stations: [
+      { name: "Kinematics of Particles", status: "completed", stars: 3, xp: 90, duration: "5 min", questions: 6, desc: "Describe motion using position, velocity, and acceleration in rectilinear and curvilinear coordinates." },
+      { name: "Newton's Laws & Equations of Motion", status: "completed", stars: 2, xp: 100, duration: "6 min", questions: 7, desc: "Apply F=ma to particles, handle normal-tangential and radial-transverse components." },
+      { name: "Work-Energy Theorem", status: "current", stars: 0, xp: 110, duration: "7 min", questions: 8, desc: "Relate net work done on a body to its change in kinetic energy for powerful problem solving." },
+      { name: "Impulse & Momentum", status: "locked", stars: 0, xp: 100, duration: "6 min", questions: 7, desc: "Apply the impulse-momentum theorem and conservation of linear momentum to collisions." },
+      { name: "Kinematics of Rigid Bodies", status: "locked", stars: 0, xp: 120, duration: "8 min", questions: 8, desc: "Analyze translation, rotation about a fixed axis, and general planar motion." },
+      { name: "Kinetics of Rigid Bodies", status: "locked", stars: 0, xp: 130, duration: "9 min", questions: 9, desc: "Apply Newton's second law to rigid bodies — translation, rotation, and general motion." },
+      { name: "Vibrations & Harmonics", status: "locked", stars: 0, xp: 120, duration: "8 min", questions: 7, desc: "Analyze free and forced vibrations, natural frequency, damping, and resonance." }
+    ]
+  },
+  amber: {
+    name: "Strength of Materials",
+    label: "Amber Line",
+    color: "amber",
+    stations: [
+      { name: "Stress & Strain Fundamentals", status: "locked", stars: 0, xp: 90, duration: "5 min", questions: 6, desc: "Define normal and shear stress, engineering strain, and stress-strain diagrams." },
+      { name: "Axial Loading", status: "locked", stars: 0, xp: 100, duration: "6 min", questions: 7, desc: "Calculate deformation in bars under axial loads, statically indeterminate problems." },
+      { name: "Torsion of Shafts", status: "locked", stars: 0, xp: 110, duration: "7 min", questions: 7, desc: "Apply the torsion formula to circular shafts, calculate angle of twist and shear stress." },
+      { name: "Bending of Beams", status: "locked", stars: 0, xp: 120, duration: "8 min", questions: 8, desc: "Draw shear and moment diagrams, apply the flexure formula for bending stress." },
+      { name: "Shear in Beams", status: "locked", stars: 0, xp: 110, duration: "7 min", questions: 7, desc: "Calculate transverse shear stress distribution using the shear formula." },
+      { name: "Combined Loading", status: "locked", stars: 0, xp: 130, duration: "9 min", questions: 9, desc: "Superpose stresses from axial, bending, torsion, and shear on structural members." },
+      { name: "Stress Transformation & Mohr's Circle", status: "locked", stars: 0, xp: 140, duration: "10 min", questions: 10, desc: "Transform stress states, find principal stresses, and construct Mohr's circle." },
+      { name: "Deflection of Beams", status: "locked", stars: 0, xp: 120, duration: "8 min", questions: 8, desc: "Use double integration and superposition to find beam deflections and slopes." },
+      { name: "Column Buckling", status: "locked", stars: 0, xp: 130, duration: "9 min", questions: 8, desc: "Apply Euler's formula, understand effective length, and analyze column stability." }
+    ]
+  }
+};
+
+// ── Render Stations ──
+function renderStations() {
+  Object.entries(lines).forEach(([lineKey, line]) => {
+    const container = document.getElementById(lineKey + '-stations');
+    if (!container) return;
+    container.innerHTML = '';
+
+    line.stations.forEach((station, i) => {
+      const isLocked = station.status === 'locked';
+      const isCurrent = station.status === 'current';
+      const isCompleted = station.status === 'completed';
+      const isLineLocked = lineKey === 'amber';
+
+      const colorClass = isLineLocked ? 'locked' : line.color;
+      const dotColorClass = isLineLocked || isLocked ? '' : line.color;
+
+      const row = document.createElement('div');
+      row.className = `station-row ${colorClass}`;
+      if (!isLineLocked && !isLocked) {
+        row.style.cursor = 'pointer';
+        row.onclick = (e) => {
+          e.stopPropagation();
+          showDetail(lineKey, i);
+        };
+      }
+
+      // Stars HTML
+      let starsHtml = '';
+      if (isCompleted && station.stars > 0) {
+        starsHtml = '<div class="station-stars">';
+        for (let s = 0; s < 3; s++) {
+          starsHtml += `<div class="star-dot ${s < station.stars ? 'earned ' + line.color : ''}"></div>`;
+        }
+        starsHtml += '</div>';
+      }
+
+      // Meta text
+      let metaText = '';
+      if (isCompleted) {
+        metaText = `${starsHtml}<span class="station-duration">${station.duration} &middot; +${station.xp} xp</span>`;
+      } else if (isCurrent) {
+        metaText = `<span class="station-duration">Next stop &middot; ${station.duration}</span>`;
+      } else if (isLocked) {
+        metaText = `<svg class="station-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="station-duration">${station.duration}</span>`;
+      }
+
+      // Dot class
+      let dotClass = 'station-dot';
+      if (isCompleted) dotClass += ` completed ${line.color}`;
+      else if (isCurrent) dotClass += ` current ${line.color}`;
+      else dotClass += ' locked';
+
+      row.innerHTML = `
+        <div class="station-track">
+          <div class="${dotClass}"></div>
+        </div>
+        <div class="station-info">
+          <div class="station-name">${station.name}</div>
+          <div class="station-meta">${metaText}</div>
+        </div>
+      `;
+
+      container.appendChild(row);
+    });
+  });
+}
+
+// ── Toggle Line Expand/Collapse ──
+function toggleLine(card) {
+  // Don't collapse if clicking on a station row
+  const wasExpanded = card.classList.contains('expanded');
+
+  // Collapse all
+  document.querySelectorAll('.line-card').forEach(c => c.classList.remove('expanded'));
+
+  // Toggle this one
+  if (!wasExpanded) {
+    card.classList.add('expanded');
+  }
+}
+
+// ── Station Detail ──
+function showDetail(lineKey, stationIndex) {
+  const line = lines[lineKey];
+  const station = line.stations[stationIndex];
+  const overlay = document.getElementById('stationOverlay');
+
+  document.getElementById('detailTitle').textContent = station.name;
+  document.getElementById('detailDescription').textContent = station.desc;
+  document.getElementById('detailXP').textContent = '+' + station.xp;
+  document.getElementById('detailDuration').textContent = station.duration;
+  document.getElementById('detailQuestions').textContent = station.questions;
+
+  // Line indicator
+  const indicator = document.getElementById('detailLineIndicator');
+  indicator.className = 'detail-line-indicator ' + line.color;
+  indicator.innerHTML = `<div class="detail-line-dot ${line.color}"></div><span>${line.label}</span>`;
+
+  // CTA
+  const cta = document.getElementById('detailCta');
+  cta.className = 'detail-cta ' + line.color;
+  if (station.status === 'completed') {
+    cta.textContent = 'Review Station';
+  } else if (station.status === 'current') {
+    cta.textContent = 'Start Lesson';
+  } else {
+    cta.textContent = 'Locked';
+    cta.style.opacity = '0.5';
+  }
+  if (station.status !== 'locked') {
+    cta.style.opacity = '1';
+  }
+
+  overlay.classList.add('visible');
+}
+
+function closeDetail(event, isCta) {
+  if (isCta || event.target === document.getElementById('stationOverlay')) {
+    document.getElementById('stationOverlay').classList.remove('visible');
+  }
+}
+
+// ── Init ──
+renderStations();
+</script>
+
+</body>
+</html>

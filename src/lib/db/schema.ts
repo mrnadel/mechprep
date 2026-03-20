@@ -5,6 +5,7 @@ import {
   integer,
   jsonb,
   real,
+  boolean,
   primaryKey,
   uniqueIndex,
 } from 'drizzle-orm/pg-core';
@@ -154,4 +155,46 @@ export const courseProgress = pgTable('course_progress', {
     .default({}),
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
   updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+});
+
+// ─── Subscription tables ──────────────────────────────────────
+
+export const subscriptions = pgTable('subscriptions', {
+  id: text('id')
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  userId: text('user_id')
+    .notNull()
+    .references(() => users.id, { onDelete: 'cascade' })
+    .unique(),
+  tier: text('tier').notNull().default('free'),           // 'free' | 'pro' | 'team'
+  status: text('status').notNull().default('active'),     // SubscriptionStatus
+  stripeCustomerId: text('stripe_customer_id'),
+  stripeSubscriptionId: text('stripe_subscription_id').unique(),
+  stripePriceId: text('stripe_price_id'),
+  billingInterval: text('billing_interval'),              // 'month' | 'year'
+  currentPeriodStart: text('current_period_start'),
+  currentPeriodEnd: text('current_period_end'),
+  trialStart: text('trial_start'),
+  trialEnd: text('trial_end'),
+  cancelAtPeriodEnd: boolean('cancel_at_period_end').default(false).notNull(),
+  teamId: text('team_id'),
+  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+});
+
+export const paymentHistory = pgTable('payment_history', {
+  id: text('id')
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  userId: text('user_id')
+    .notNull()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  stripeInvoiceId: text('stripe_invoice_id').unique(),
+  stripePaymentIntentId: text('stripe_payment_intent_id'),
+  amountCents: integer('amount_cents').notNull(),
+  currency: text('currency').notNull().default('usd'),
+  status: text('status').notNull(),                       // 'succeeded' | 'failed' | 'pending'
+  description: text('description'),
+  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
 });
