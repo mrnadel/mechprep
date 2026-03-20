@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Check, Lock, Sparkles, Loader2 } from 'lucide-react';
-import { TIERS, STRIPE_PRICES, formatPrice, getYearlySavingsPercent, PRO_TRIAL_DAYS } from '@/lib/pricing';
+import { X, Check, Lock, Bell, CheckCircle2, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface UpgradeModalProps {
@@ -13,35 +12,42 @@ interface UpgradeModalProps {
 }
 
 export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
-  const [billingInterval, setBillingInterval] = useState<'month' | 'year'>('month');
+  const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
-  const savings = getYearlySavingsPercent('pro');
-  const pro = TIERS.pro;
-  const price = billingInterval === 'year'
-    ? Math.round(pro.priceYearly / 12)
-    : pro.priceMonthly;
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleCheckout = async () => {
+  const handleSubmit = async () => {
+    if (!email.trim()) return;
     setLoading(true);
+    setError('');
     try {
-      const priceId = billingInterval === 'year'
-        ? STRIPE_PRICES.PRO_YEARLY
-        : STRIPE_PRICES.PRO_MONTHLY;
-
-      const res = await fetch('/api/stripe/create-checkout', {
+      const res = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ priceId }),
+        body: JSON.stringify({ email: email.trim() }),
       });
       const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
+      if (!res.ok) {
+        setError(data.error || 'Something went wrong');
+      } else {
+        setSubmitted(true);
       }
     } catch {
-      // Silently fail
+      setError('Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleClose = () => {
+    onClose();
+    // Reset state after animation completes
+    setTimeout(() => {
+      setEmail('');
+      setSubmitted(false);
+      setError('');
+    }, 300);
   };
 
   return (
@@ -57,7 +63,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
           {/* Backdrop */}
           <motion.div
             className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-            onClick={onClose}
+            onClick={handleClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -73,7 +79,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
           >
             {/* Close button */}
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="absolute top-3 right-3 p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10"
               aria-label="Close"
             >
@@ -88,90 +94,87 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
                   {reason || 'This feature requires Pro'}
                 </span>
               </div>
-              <h3 className="text-xl font-bold">Upgrade to MechPrep Pro</h3>
+              <h3 className="text-xl font-bold">MechPrep Pro</h3>
               <p className="text-sm text-primary-100 mt-1">
-                Unlock your full potential with unlimited access
+                Launching soon -- get notified for early access pricing
               </p>
             </div>
 
-            {/* Benefits */}
+            {/* Content */}
             <div className="px-5 py-4">
-              <ul className="space-y-2.5 mb-5">
-                {[
-                  'All 10 course units unlocked',
-                  'Unlimited daily practice',
-                  'Detailed explanations for every question',
-                  'Full analytics & progress tracking',
-                  'Interview readiness score',
-                  'Weekly streak freeze',
-                ].map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-2.5 text-sm text-gray-700">
-                    <Check className="w-4 h-4 text-green-500 shrink-0" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Billing toggle */}
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <button
-                  onClick={() => setBillingInterval('month')}
-                  className={cn(
-                    'text-xs font-medium px-3 py-1.5 rounded-full transition-colors',
-                    billingInterval === 'month'
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'text-gray-400 hover:text-gray-600'
-                  )}
+              {submitted ? (
+                <motion.div
+                  className="text-center py-4"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  Monthly
-                </button>
-                <button
-                  onClick={() => setBillingInterval('year')}
-                  className={cn(
-                    'text-xs font-medium px-3 py-1.5 rounded-full transition-colors',
-                    billingInterval === 'year'
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'text-gray-400 hover:text-gray-600'
-                  )}
-                >
-                  Yearly
-                  {savings > 0 && (
-                    <span className="ml-1 text-green-600">-{savings}%</span>
-                  )}
-                </button>
-              </div>
-
-              {/* Price */}
-              <div className="text-center mb-4">
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl font-bold text-gray-900">
-                    {formatPrice(price)}
-                  </span>
-                  <span className="text-sm text-gray-400">/mo</span>
-                </div>
-                {billingInterval === 'year' && (
-                  <p className="text-xs text-gray-400 mt-0.5">
-                    {formatPrice(pro.priceYearly)}/year billed annually
+                  <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <CheckCircle2 className="w-7 h-7 text-green-600" />
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">
+                    You&apos;re on the list!
+                  </h4>
+                  <p className="text-sm text-gray-500 mb-4">
+                    We&apos;ll notify you when Pro launches with early access pricing.
                   </p>
-                )}
-              </div>
+                  <button
+                    onClick={handleClose}
+                    className="w-full py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-sm transition-colors"
+                  >
+                    Got it
+                  </button>
+                </motion.div>
+              ) : (
+                <>
+                  {/* Benefits */}
+                  <ul className="space-y-2.5 mb-5">
+                    {[
+                      'All 10 course units unlocked',
+                      'Unlimited daily practice',
+                      'Detailed explanations for every question',
+                      'Full analytics & progress tracking',
+                      'Interview readiness score',
+                      'Weekly streak freeze',
+                    ].map((benefit) => (
+                      <li key={benefit} className="flex items-center gap-2.5 text-sm text-gray-700">
+                        <Check className="w-4 h-4 text-green-500 shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
 
-              {/* CTA */}
-              <button
-                onClick={handleCheckout}
-                disabled={loading}
-                className="w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold text-sm transition-colors shadow-md shadow-primary-200 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50"
-              >
-                {loading ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                ) : (
-                  <Sparkles className="w-4 h-4" />
-                )}
-                Start {PRO_TRIAL_DAYS}-Day Free Trial
-              </button>
-              <p className="text-xs text-gray-400 text-center mt-2">
-                No credit card required
-              </p>
+                  {/* Email input */}
+                  <div className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="your@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
+                      className={cn(
+                        'w-full px-4 py-2.5 rounded-xl border text-sm transition-colors outline-none focus:ring-2 focus:ring-primary-200',
+                        error ? 'border-red-300' : 'border-gray-200 focus:border-primary-400'
+                      )}
+                    />
+                    {error && (
+                      <p className="text-xs text-red-500">{error}</p>
+                    )}
+                    <button
+                      onClick={handleSubmit}
+                      disabled={loading || !email.trim()}
+                      className="w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold text-sm transition-colors shadow-md shadow-primary-200 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50"
+                    >
+                      {loading ? (
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <Bell className="w-4 h-4" />
+                      )}
+                      Notify me when Pro launches
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
         </motion.div>
