@@ -2,7 +2,7 @@
 
 import { useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Target, Zap, Trophy, Crown, ChevronRight } from 'lucide-react';
+import { Star, Target, Zap, Trophy, ChevronRight } from 'lucide-react';
 import { useCourseStore } from '@/store/useCourseStore';
 import { getLessonById } from '@/data/course';
 
@@ -17,20 +17,19 @@ export default function ResultScreen() {
       const x = Math.sin(i * 127.1 + 311.7) * 43758.5453;
       return x - Math.floor(x);
     };
-    const shapes = ['circle', 'square', 'triangle'] as const;
-    return Array.from({ length: 36 }, (_, i) => ({
+    return Array.from({ length: 28 }, (_, i) => ({
       left: hash(i) * 100,
-      delay: hash(i + 50) * 2.5,
-      size: 5 + hash(i + 100) * 9,
-      duration: 2.5 + hash(i + 150) * 2,
-      shape: shapes[Math.floor(hash(i + 200) * 3)],
+      delay: hash(i + 50) * 2,
+      size: 6 + hash(i + 100) * 8,
+      duration: 2.8 + hash(i + 150) * 2,
       color: [
         '#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1',
-        '#96CEB4', '#FFEAA7', '#DDA0DD', '#FF9FF3',
-        '#54A0FF', '#5F27CD',
+        '#58CC02', '#FFEAA7', '#DDA0DD', '#FF9FF3',
+        '#54A0FF', '#FF9600',
       ][Math.floor(hash(i + 300) * 10)],
       rotation: hash(i + 400) * 360,
-      drift: (hash(i + 500) - 0.5) * 80,
+      drift: (hash(i + 500) - 0.5) * 60,
+      isCircle: hash(i + 600) > 0.5,
     }));
   }, []);
 
@@ -58,28 +57,36 @@ export default function ResultScreen() {
   const lessonInfo = getLessonById(lessonResult.lessonId);
   const unitColor = lessonInfo?.unit.color ?? '#10B981';
 
-  // Derive a darker shade for the gradient
-  const darkenHex = (hex: string, factor: number) => {
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
-    return `rgb(${Math.round(r * factor)}, ${Math.round(g * factor)}, ${Math.round(b * factor)})`;
+  // Lighter tint of unitColor for backgrounds
+  const hexToRgb = (hex: string) => ({
+    r: parseInt(hex.slice(1, 3), 16),
+    g: parseInt(hex.slice(3, 5), 16),
+    b: parseInt(hex.slice(5, 7), 16),
+  });
+  const rgb = hexToRgb(unitColor);
+  const tintBg = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.06)`;
+  const tintBorder = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.15)`;
+  const tintMid = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.10)`;
+
+  // Darken for button bottom shadow
+  const darken = (hex: string, f: number) => {
+    const { r, g, b } = hexToRgb(hex);
+    return `rgb(${Math.round(r * f)}, ${Math.round(g * f)}, ${Math.round(b * f)})`;
   };
 
-  const darkBg = darkenHex(unitColor, 0.15);
-  const midBg = darkenHex(unitColor, 0.25);
-
   const getMessage = () => {
-    if (lessonResult.stars === 3) return 'Perfect Score!';
-    if (lessonResult.stars === 2) return 'Great Work!';
+    if (lessonResult.stars === 3) return 'Perfect!';
+    if (lessonResult.stars === 2) return 'Great job!';
     return 'Lesson Complete!';
   };
 
-  const getSubMessage = () => {
-    if (lessonResult.stars === 3) return 'Flawless performance';
-    if (lessonResult.stars === 2) return 'Almost perfect';
-    return 'You finished the lesson';
+  const getAccuracyStyle = () => {
+    if (lessonResult.accuracy >= 90) return { color: '#58CC02', bg: '#E8FFE0', border: '#B8E6A0' };
+    if (lessonResult.accuracy >= 70) return { color: '#FF9600', bg: '#FFF4E0', border: '#FFE0A0' };
+    return { color: '#FF4B4B', bg: '#FFE0E0', border: '#FFB0B0' };
   };
+
+  const accuracyStyle = getAccuracyStyle();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -90,11 +97,11 @@ export default function ResultScreen() {
   } as const;
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 28 },
+    hidden: { opacity: 0, y: 24 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'spring' as const, stiffness: 200, damping: 20 },
+      transition: { type: 'spring' as const, stiffness: 220, damping: 20 },
     },
   } as const;
 
@@ -105,33 +112,20 @@ export default function ResultScreen() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.4 }}
+        transition={{ duration: 0.3 }}
         className="fixed inset-0 z-50 flex flex-col overflow-hidden"
         style={{
-          background: `linear-gradient(170deg, ${darkBg} 0%, ${midBg} 35%, ${darkenHex(unitColor, 0.3)} 100%)`,
+          background: '#FAFAFA',
           paddingTop: 'env(safe-area-inset-top, 0px)',
           paddingBottom: 'env(safe-area-inset-bottom, 0px)',
         }}
       >
-        {/* Radial glow behind the stars area */}
+        {/* Subtle dot pattern (matches LessonView) */}
         <div
-          className="absolute pointer-events-none"
+          className="absolute inset-0 pointer-events-none opacity-[0.03]"
           style={{
-            top: '15%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '140%',
-            height: '50%',
-            background: `radial-gradient(ellipse at center, ${unitColor}30 0%, transparent 65%)`,
-          }}
-        />
-
-        {/* Subtle grid pattern */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.04]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px',
+            backgroundImage: `radial-gradient(${unitColor} 1px, transparent 1px)`,
+            backgroundSize: '24px 24px',
           }}
         />
 
@@ -145,26 +139,23 @@ export default function ResultScreen() {
                 left: `${p.left}%`,
                 top: -20,
                 width: p.size,
-                height: p.shape === 'triangle' ? 0 : p.size,
-                backgroundColor: p.shape === 'triangle' ? 'transparent' : p.color,
-                borderRadius: p.shape === 'circle' ? '50%' : p.shape === 'square' ? '2px' : 0,
-                borderLeft: p.shape === 'triangle' ? `${p.size / 2}px solid transparent` : undefined,
-                borderRight: p.shape === 'triangle' ? `${p.size / 2}px solid transparent` : undefined,
-                borderBottom: p.shape === 'triangle' ? `${p.size}px solid ${p.color}` : undefined,
+                height: p.size,
+                backgroundColor: p.color,
+                borderRadius: p.isCircle ? '50%' : '2px',
               }}
               initial={{ y: -30, rotate: 0, opacity: 0 }}
               animate={{
                 y: ['0vh', '110vh'],
                 x: [0, p.drift],
                 rotate: [0, p.rotation],
-                opacity: [0, 1, 1, 0],
+                opacity: [0, 0.7, 0.7, 0],
               }}
               transition={{
                 delay: p.delay,
                 duration: p.duration,
                 ease: 'linear',
                 repeat: Infinity,
-                repeatDelay: 1.5,
+                repeatDelay: 2,
               }}
             />
           ))}
@@ -172,54 +163,53 @@ export default function ResultScreen() {
 
         {/* Main content */}
         <motion.div
-          className="flex-1 flex flex-col items-center justify-center px-6 relative"
+          className="flex-1 flex flex-col items-center justify-center px-5 relative"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {/* Crown / Trophy icon */}
+          {/* Trophy icon */}
           <motion.div
             variants={itemVariants}
-            className="mb-4"
+            className="mb-3"
           >
             <motion.div
-              className="w-20 h-20 rounded-full flex items-center justify-center"
+              className="flex items-center justify-center"
               style={{
-                background: `linear-gradient(135deg, ${unitColor}, ${darkenHex(unitColor, 0.7)})`,
-                boxShadow: `0 0 40px ${unitColor}50, 0 0 80px ${unitColor}25`,
+                width: 80,
+                height: 80,
+                borderRadius: 20,
+                background: `linear-gradient(135deg, ${tintBg} 0%, ${tintMid} 100%)`,
+                border: `2px solid ${tintBorder}`,
               }}
-              initial={{ scale: 0, rotate: -20 }}
+              initial={{ scale: 0, rotate: -15 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ type: 'spring', stiffness: 180, damping: 12, delay: 0.15 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 12, delay: 0.15 }}
             >
-              {lessonResult.stars === 3 ? (
-                <Crown className="w-10 h-10 text-white drop-shadow-lg" />
-              ) : (
-                <Trophy className="w-10 h-10 text-white drop-shadow-lg" />
-              )}
+              <Trophy style={{ width: 40, height: 40, color: unitColor }} />
             </motion.div>
           </motion.div>
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-3xl font-extrabold text-white mb-1 text-center tracking-tight"
-            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
+            style={{ fontSize: 28, fontWeight: 800, color: '#3C3C3C', marginBottom: 2, textAlign: 'center' }}
           >
             {getMessage()}
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-sm text-white/60 mb-6 text-center font-medium"
+            style={{ fontSize: 14, fontWeight: 700, color: '#AFAFAF', marginBottom: 20, textAlign: 'center' }}
           >
-            {getSubMessage()}
+            {lessonResult.unitTitle} &mdash; {lessonResult.lessonTitle}
           </motion.p>
 
           {/* Stars */}
           <motion.div
             variants={itemVariants}
-            className="flex items-end gap-2 mb-8"
+            className="flex items-end"
+            style={{ gap: 8, marginBottom: 28 }}
           >
             {[1, 2, 3].map((starNum) => {
               const earned = starNum <= lessonResult.stars;
@@ -227,38 +217,27 @@ export default function ResultScreen() {
               return (
                 <motion.div
                   key={starNum}
-                  className="relative"
-                  initial={{ scale: 0, rotate: -60, y: 20 }}
+                  initial={{ scale: 0, rotate: -45 }}
                   animate={{
-                    scale: earned ? 1 : 0.55,
+                    scale: earned ? 1 : 0.6,
                     rotate: 0,
-                    y: isMiddle && earned ? -8 : 0,
+                    y: isMiddle && earned ? -6 : 0,
                   }}
                   transition={{
                     type: 'spring',
-                    stiffness: 280,
+                    stiffness: 300,
                     damping: 14,
-                    delay: 0.5 + starNum * 0.18,
+                    delay: 0.45 + starNum * 0.18,
                   }}
                 >
-                  {/* Glow behind earned stars */}
-                  {earned && (
-                    <div
-                      className="absolute inset-0 blur-xl rounded-full"
-                      style={{
-                        background: '#FFD700',
-                        opacity: 0.4,
-                        transform: 'scale(1.5)',
-                      }}
-                    />
-                  )}
                   <Star
-                    className={`relative ${isMiddle ? 'w-16 h-16' : 'w-12 h-12'}`}
                     style={{
-                      color: earned ? '#FFD700' : 'rgba(255,255,255,0.15)',
-                      fill: earned ? '#FFD700' : 'rgba(255,255,255,0.08)',
+                      width: isMiddle ? 56 : 44,
+                      height: isMiddle ? 56 : 44,
+                      color: earned ? '#FFD700' : '#E5E5E5',
+                      fill: earned ? '#FFD700' : '#E5E5E5',
                       filter: earned
-                        ? 'drop-shadow(0 2px 8px rgba(255,215,0,0.5))'
+                        ? 'drop-shadow(0 3px 6px rgba(255,215,0,0.35))'
                         : 'none',
                     }}
                   />
@@ -267,115 +246,119 @@ export default function ResultScreen() {
             })}
           </motion.div>
 
-          {/* Stats card — frosted glass */}
+          {/* Stats card */}
           <motion.div
             variants={itemVariants}
-            className="w-full max-w-sm rounded-3xl p-5 space-y-3"
+            className="w-full max-w-sm"
             style={{
-              background: 'rgba(255,255,255,0.1)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)',
-              border: '1px solid rgba(255,255,255,0.15)',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
+              background: 'white',
+              borderRadius: 16,
+              border: '2px solid #E5E5E5',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+              padding: 20,
             }}
           >
-            {/* Lesson info */}
-            <div className="text-center pb-2 border-b border-white/10">
-              <p className="text-xs text-white/40 font-semibold uppercase tracking-wider">
-                {lessonResult.unitTitle}
-              </p>
-              <p className="text-sm text-white/70 font-medium mt-0.5">
-                {lessonResult.lessonTitle}
-              </p>
-            </div>
-
-            {/* Accuracy */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2.5 text-white/60">
-                <Target className="w-4.5 h-4.5" />
-                <span className="text-sm font-semibold">Accuracy</span>
+            {/* Accuracy row */}
+            <div className="flex items-center justify-between" style={{ marginBottom: 14 }}>
+              <div className="flex items-center" style={{ gap: 10 }}>
+                <div
+                  className="flex items-center justify-center"
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 10,
+                    background: accuracyStyle.bg,
+                    border: `1.5px solid ${accuracyStyle.border}`,
+                  }}
+                >
+                  <Target style={{ width: 18, height: 18, color: accuracyStyle.color }} />
+                </div>
+                <div>
+                  <p style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF' }}>Accuracy</p>
+                  <p style={{ fontSize: 22, fontWeight: 800, color: accuracyStyle.color, lineHeight: 1 }}>
+                    {lessonResult.accuracy}%
+                  </p>
+                </div>
               </div>
-              <span
-                className="text-2xl font-extrabold"
-                style={{
-                  color:
-                    lessonResult.accuracy >= 90
-                      ? '#4ADE80'
-                      : lessonResult.accuracy >= 70
-                        ? '#FBBF24'
-                        : '#FB7185',
-                }}
-              >
-                {lessonResult.accuracy}%
-              </span>
-            </div>
-
-            {/* Questions breakdown */}
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-white/40 font-medium">Questions</span>
-              <span className="text-sm font-bold text-white/80">
-                {lessonResult.correctAnswers} / {lessonResult.totalQuestions} correct
-              </span>
+              <div style={{ textAlign: 'right' }}>
+                <p style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF' }}>Questions</p>
+                <p style={{ fontSize: 16, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2 }}>
+                  {lessonResult.correctAnswers}/{lessonResult.totalQuestions}
+                </p>
+              </div>
             </div>
 
             {/* Divider */}
-            <div className="border-t border-white/10" />
+            <div style={{ height: 1.5, background: '#F0F0F0', borderRadius: 1, marginBottom: 14 }} />
 
             {/* XP earned */}
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-white/60">
-                <Zap className="w-4.5 h-4.5" />
-                <span className="text-sm font-semibold">XP earned</span>
+              <div className="flex items-center" style={{ gap: 10 }}>
+                <div
+                  className="flex items-center justify-center"
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 10,
+                    background: tintBg,
+                    border: `1.5px solid ${tintBorder}`,
+                  }}
+                >
+                  <Zap style={{ width: 18, height: 18, color: unitColor }} />
+                </div>
+                <p style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF' }}>XP Earned</p>
               </div>
-              <motion.span
-                className="text-2xl font-extrabold"
-                style={{
-                  color: unitColor,
-                  filter: `drop-shadow(0 0 8px ${unitColor}60)`,
-                }}
+              <motion.p
+                style={{ fontSize: 22, fontWeight: 800, color: unitColor, lineHeight: 1 }}
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 250, damping: 15, delay: 0.8 }}
               >
                 +{lessonResult.xpEarned}
-              </motion.span>
+              </motion.p>
             </div>
 
             {/* Achievement badges */}
             {(lessonResult.isNewBest || lessonResult.isFirstCompletion) && (
               <>
-                <div className="border-t border-white/10" />
-                <div className="space-y-2">
+                <div style={{ height: 1.5, background: '#F0F0F0', borderRadius: 1, margin: '14px 0' }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {lessonResult.isNewBest && (
                     <motion.div
-                      initial={{ opacity: 0, x: -12 }}
+                      initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 1 }}
-                      className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5"
+                      className="flex items-center"
                       style={{
-                        background: 'rgba(255,215,0,0.12)',
-                        border: '1px solid rgba(255,215,0,0.25)',
+                        gap: 10,
+                        padding: '10px 12px',
+                        borderRadius: 12,
+                        background: '#FFF4E0',
+                        border: '1.5px solid #FFE0A0',
                       }}
                     >
-                      <Trophy className="w-4.5 h-4.5 text-yellow-400" />
-                      <span className="text-sm font-bold text-yellow-300">
+                      <Trophy style={{ width: 18, height: 18, color: '#FF9600' }} />
+                      <span style={{ fontSize: 13, fontWeight: 800, color: '#CC7A00' }}>
                         New personal best!
                       </span>
                     </motion.div>
                   )}
                   {lessonResult.isFirstCompletion && (
                     <motion.div
-                      initial={{ opacity: 0, x: -12 }}
+                      initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 1.1 }}
-                      className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5"
+                      className="flex items-center"
                       style={{
-                        background: 'rgba(96,165,250,0.12)',
-                        border: '1px solid rgba(96,165,250,0.25)',
+                        gap: 10,
+                        padding: '10px 12px',
+                        borderRadius: 12,
+                        background: '#E0F0FF',
+                        border: '1.5px solid #A0D0FF',
                       }}
                     >
-                      <Target className="w-4.5 h-4.5 text-blue-400" />
-                      <span className="text-sm font-bold text-blue-300">
+                      <Target style={{ width: 18, height: 18, color: '#2196F3' }} />
+                      <span style={{ fontSize: 13, fontWeight: 800, color: '#1565C0' }}>
                         First time completing!
                       </span>
                     </motion.div>
@@ -386,29 +369,36 @@ export default function ResultScreen() {
           </motion.div>
         </motion.div>
 
-        {/* Continue button */}
+        {/* Continue button — Duolingo-style with bottom shadow */}
         <motion.div
-          className="px-6 pb-6"
-          style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 24px)' }}
-          initial={{ opacity: 0, y: 30 }}
+          style={{
+            padding: '0 20px',
+            paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 24px)',
+          }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, type: 'spring', stiffness: 200, damping: 20 }}
+          transition={{ delay: 1.1, type: 'spring', stiffness: 200, damping: 20 }}
         >
           <motion.button
             onClick={dismissResult}
-            className="w-full rounded-2xl py-5 px-6 font-extrabold text-lg min-h-[60px] flex items-center justify-center gap-2"
+            className="w-full flex items-center justify-center transition-all active:scale-[0.97]"
             style={{
-              background: `linear-gradient(135deg, ${unitColor}, ${darkenHex(unitColor, 0.8)})`,
+              padding: '16px 24px',
+              borderRadius: 16,
+              background: unitColor,
               color: 'white',
-              boxShadow: `0 4px 20px ${unitColor}40, 0 0 40px ${unitColor}20, inset 0 1px 0 rgba(255,255,255,0.2)`,
-              border: '1px solid rgba(255,255,255,0.15)',
+              fontSize: 17,
+              fontWeight: 800,
+              border: 'none',
+              boxShadow: `0 4px 0 ${darken(unitColor, 0.7)}`,
+              gap: 6,
+              minHeight: 58,
             }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ y: 2, boxShadow: `0 2px 0 ${darken(unitColor, 0.7)}` }}
           >
             Continue
-            <ChevronRight className="w-5 h-5" />
-            <span className="text-xs opacity-60 font-semibold ml-0.5">↵</span>
+            <ChevronRight style={{ width: 20, height: 20 }} />
+            <span style={{ fontSize: 11, opacity: 0.6, fontWeight: 700, marginLeft: 2 }}>↵</span>
           </motion.button>
         </motion.div>
       </motion.div>
