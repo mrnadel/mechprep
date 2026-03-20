@@ -8,318 +8,307 @@ import { course } from '@/data/course';
 import { useCourseStore } from '@/store/useCourseStore';
 import { UnitHeader } from './UnitHeader';
 import { LessonNode } from './LessonNode';
-import { UnitIllustration } from './UnitIllustrations';
-
-/**
- * Connector dots between lesson nodes on the winding path.
- */
-function PathConnector({ color, locked }: { color: string; locked: boolean }) {
-  return (
-    <div className="flex flex-col items-center gap-1 py-1" aria-hidden="true">
-      {[0, 1, 2].map((i) => (
-        <div
-          key={i}
-          className="rounded-full"
-          style={{
-            width: 4,
-            height: 4,
-            backgroundColor: locked ? '#CBD5E1' : color,
-            opacity: locked ? 0.3 : 0.4,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
 
 export function CourseMap() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const currentLessonRef = useRef<HTMLDivElement>(null);
+  const currentUnitRef = useRef<HTMLDivElement>(null);
   const { progress, startLesson, isLessonUnlocked } = useCourseStore();
   const { status } = useSession();
   const router = useRouter();
   const isGuest = status !== 'authenticated';
-  const [jumpConfirm, setJumpConfirm] = useState<{ unitIndex: number; lessonIndex: number } | null>(null);
+  const [jumpConfirm, setJumpConfirm] = useState<{
+    unitIndex: number;
+    lessonIndex: number;
+  } | null>(null);
 
-  // Determine lesson state helper
+  // Determine lesson state
   const getLessonState = useCallback(
-    (unitIndex: number, lessonIndex: number): 'completed' | 'current' | 'locked' => {
+    (
+      unitIndex: number,
+      lessonIndex: number
+    ): 'completed' | 'current' | 'locked' => {
       const lessonId = course[unitIndex]?.lessons[lessonIndex]?.id;
       if (!lessonId) return 'locked';
 
-      // Guests can only access unit 1 (index 0)
       if (isGuest && unitIndex > 0) return 'locked';
 
-      if (progress.completedLessons[lessonId]) {
-        return 'completed';
-      }
-      if (isLessonUnlocked(unitIndex, lessonIndex)) {
-        return 'current';
-      }
+      if (progress.completedLessons[lessonId]) return 'completed';
+      if (isLessonUnlocked(unitIndex, lessonIndex)) return 'current';
       return 'locked';
     },
     [progress.completedLessons, isLessonUnlocked, isGuest]
   );
 
-  // Find the first "current" (incomplete but unlocked) lesson for auto-scroll
-  const findFirstCurrentLesson = useCallback((): { unitIndex: number; lessonIndex: number } | null => {
+  // Find the unit containing the first current lesson
+  const findActiveUnitIndex = useCallback((): number => {
     for (let ui = 0; ui < course.length; ui++) {
       for (let li = 0; li < course[ui].lessons.length; li++) {
-        if (getLessonState(ui, li) === 'current') {
-          return { unitIndex: ui, lessonIndex: li };
-        }
+        if (getLessonState(ui, li) === 'current') return ui;
       }
     }
-    return null;
+    return 0;
   }, [getLessonState]);
 
-  // Auto-scroll to the current lesson on mount
+  const activeUnitIndex = findActiveUnitIndex();
+
+  // Track expanded units — auto-expand the active unit
+  const [expandedUnits, setExpandedUnits] = useState<Set<number>>(
+    new Set([activeUnitIndex])
+  );
+
+  const toggleUnit = (index: number) => {
+    setExpandedUnits((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) {
+        next.delete(index);
+      } else {
+        next.add(index);
+      }
+      return next;
+    });
+  };
+
+  // Auto-scroll to the active unit on mount
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentLessonRef.current && scrollRef.current) {
+      if (currentUnitRef.current && scrollRef.current) {
         const container = scrollRef.current;
-        const element = currentLessonRef.current;
+        const element = currentUnitRef.current;
         const containerRect = container.getBoundingClientRect();
         const elementRect = element.getBoundingClientRect();
 
-        const scrollTarget =
+        const offset =
           container.scrollTop +
           (elementRect.top - containerRect.top) -
-          containerRect.height / 2 +
-          elementRect.height / 2;
+          containerRect.height * 0.15;
 
         container.scrollTo({
-          top: Math.max(0, scrollTarget),
+          top: Math.max(0, offset),
           behavior: 'smooth',
         });
       }
-    }, 300);
-
+    }, 350);
     return () => clearTimeout(timer);
   }, []);
-
-  const firstCurrent = findFirstCurrentLesson();
-
-  // Calculate the sinusoidal x-offset for a lesson in the winding path
-  const getXOffset = (lessonIndex: number): number => {
-    return Math.sin(lessonIndex * 1.2) * 50;
-  };
 
   return (
     <div
       ref={scrollRef}
       className="flex-1 overflow-y-auto"
       style={{
-        paddingTop: 8,
+        paddingTop: 12,
         paddingBottom: 120,
         scrollBehavior: 'smooth',
         WebkitOverflowScrolling: 'touch',
       }}
     >
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-lg mx-auto space-y-3">
         {course.map((unit, unitIndex) => {
-          // Count completed lessons in this unit
           const completedInUnit = unit.lessons.filter(
-            (lesson) => progress.completedLessons[lesson.id]
+            (l) => progress.completedLessons[l.id]
           ).length;
+          const isExpanded = expandedUnits.has(unitIndex);
+          const isActive = unitIndex === activeUnitIndex;
+          const isGuestLocked = isGuest && unitIndex > 0;
 
           return (
-            <div key={unit.id}>
-              {/* Unit header banner */}
+            <div
+              key={unit.id}
+              ref={isActive ? currentUnitRef : undefined}
+            >
               <UnitHeader
                 unit={unit}
                 unitIndex={unitIndex}
                 completedInUnit={completedInUnit}
                 totalInUnit={unit.lessons.length}
+                isExpanded={isExpanded}
+                onToggle={() => toggleUnit(unitIndex)}
               />
 
-              {/* Unit illustration at the top */}
-              <div className="flex justify-center py-2" aria-hidden="true">
-                <UnitIllustration
-                  unitIndex={unitIndex}
-                  color={unit.color}
-                  className="w-48 h-auto opacity-80"
-                />
-              </div>
+              {/* Expandable lesson list */}
+              <AnimatePresence initial={false}>
+                {isExpanded && (
+                  <motion.div
+                    key={`lessons-${unitIndex}`}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
+                    <div className="mx-4 mt-1 mb-2 px-1 space-y-1">
+                      {unit.lessons.map((lesson, lessonIndex) => {
+                        const state = getLessonState(unitIndex, lessonIndex);
+                        const lessonProgress =
+                          progress.completedLessons[lesson.id];
 
-              {/* Lesson nodes in winding path */}
-              <div className="flex flex-col items-center px-4">
-                {unit.lessons.map((lesson, lessonIndex) => {
-                  const state = getLessonState(unitIndex, lessonIndex);
-                  const isCurrent =
-                    firstCurrent?.unitIndex === unitIndex &&
-                    firstCurrent?.lessonIndex === lessonIndex;
-                  const xOffset = getXOffset(lessonIndex);
-                  const lessonProgress = progress.completedLessons[lesson.id];
-
-                  // Determine connector state: locked if the NEXT lesson is locked
-                  const isLastInUnit = lessonIndex === unit.lessons.length - 1;
-                  const nextLessonLocked = !isLastInUnit
-                    ? getLessonState(unitIndex, lessonIndex + 1) === 'locked'
-                    : false;
-
-                  // Show a smaller illustration every 3 lessons as a visual break
-                  const showMidIllustration = lessonIndex > 0 && lessonIndex % 3 === 0;
-
-                  return (
-                    <div key={lesson.id}>
-                      {/* Mid-lesson illustration break */}
-                      {showMidIllustration && (
-                        <div className="flex justify-center py-3" aria-hidden="true">
-                          <UnitIllustration
-                            unitIndex={unitIndex}
-                            color={unit.color}
-                            className="w-32 h-auto opacity-50"
+                        return (
+                          <LessonNode
+                            key={lesson.id}
+                            lesson={lesson}
+                            unitColor={unit.color}
+                            state={state}
+                            stars={lessonProgress?.stars}
+                            index={lessonIndex}
+                            onClick={() => {
+                              if (state === 'locked') {
+                                setJumpConfirm({ unitIndex, lessonIndex });
+                              } else {
+                                startLesson(unitIndex, lessonIndex);
+                              }
+                            }}
                           />
+                        );
+                      })}
+
+                      {/* Guest lock banner for units 2+ */}
+                      {isGuestLocked && (
+                        <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 mt-2">
+                          <span className="text-lg">&#x1F512;</span>
+                          <div className="flex-1">
+                            <p className="text-xs font-semibold text-gray-700">
+                              Sign up to unlock this unit
+                            </p>
+                            <p className="text-[11px] text-gray-400">
+                              Free account &middot; saves your progress
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => router.push('/register')}
+                            className="px-3 py-1.5 rounded-lg bg-[#58CC02] text-white text-xs font-bold"
+                          >
+                            Sign Up
+                          </button>
                         </div>
                       )}
-
-                      {/* Lesson node with sinusoidal offset */}
-                      <div
-                        ref={isCurrent ? currentLessonRef : undefined}
-                        style={{
-                          transform: `translateX(${xOffset}px)`,
-                          transition: 'transform 0.3s ease-out',
-                        }}
-                      >
-                        <LessonNode
-                          lesson={lesson}
-                          unitColor={unit.color}
-                          state={state}
-                          stars={lessonProgress?.stars}
-                          onClick={() => {
-                            if (state === 'locked') {
-                              setJumpConfirm({ unitIndex, lessonIndex });
-                            } else {
-                              startLesson(unitIndex, lessonIndex);
-                            }
-                          }}
-                        />
-                      </div>
-
-                      {/* Connector between lessons (not after the last lesson in unit) */}
-                      {!isLastInUnit && (
-                        <PathConnector
-                          color={unit.color}
-                          locked={nextLessonLocked}
-                        />
-                      )}
                     </div>
-                  );
-                })}
-              </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           );
         })}
 
-        {/* End-of-course marker */}
-        <div className="flex flex-col items-center py-10">
-          <div
-            className="flex items-center justify-center rounded-full bg-accent-500 text-white text-2xl"
-            style={{ width: 56, height: 56 }}
-          >
+        {/* Course completion */}
+        <div className="flex flex-col items-center py-8 px-4">
+          <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-xl mb-3">
             &#x1F3C6;
           </div>
-          <p className="mt-3 text-sm font-semibold text-surface-700">
+          <p className="text-sm font-semibold text-gray-700">
             Course Complete!
           </p>
-          <p className="text-xs text-surface-400 mt-0.5">
+          <p className="text-xs text-gray-400 mt-0.5">
             You&apos;re ready for your interview
           </p>
         </div>
       </div>
 
-      {/* Jump-to-lesson confirmation popup */}
+      {/* Jump / sign-up modal */}
       <AnimatePresence>
-        {jumpConfirm && (() => {
-          const unit = course[jumpConfirm.unitIndex];
-          const lesson = unit.lessons[jumpConfirm.lessonIndex];
-          return (
-            <motion.div
-              key="jump-overlay"
-              className="fixed inset-0 z-50 flex items-end justify-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setJumpConfirm(null)}
-            >
-              <div className="absolute inset-0 bg-black/40" />
+        {jumpConfirm &&
+          (() => {
+            const unit = course[jumpConfirm.unitIndex];
+            const lesson = unit.lessons[jumpConfirm.lessonIndex];
+            return (
               <motion.div
-                className="relative w-full max-w-lg bg-white rounded-t-2xl p-5 pb-8"
-                initial={{ y: '100%' }}
-                animate={{ y: 0 }}
-                exit={{ y: '100%' }}
-                transition={{ type: 'spring' as const, damping: 25, stiffness: 300 }}
-                onClick={(e) => e.stopPropagation()}
+                key="jump-overlay"
+                className="fixed inset-0 z-50 flex items-end justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setJumpConfirm(null)}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className="flex items-center justify-center rounded-full text-white text-xl"
-                    style={{ width: 48, height: 48, backgroundColor: unit.color }}
-                  >
-                    {lesson.icon}
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium text-surface-400">
-                      {unit.title}
-                    </p>
-                    <p className="text-base font-bold text-surface-900">
-                      {lesson.title}
-                    </p>
-                  </div>
-                </div>
-                {isGuest && jumpConfirm.unitIndex > 0 ? (
-                  <>
-                    <p className="text-sm text-surface-500 mb-5">
-                      Create a free account to unlock all units and save your progress across devices! &#x1F680;
-                    </p>
-                    <div className="flex gap-3">
-                      <button
-                        className="flex-1 py-3 rounded-xl text-sm font-semibold text-surface-600 bg-surface-100 active:bg-surface-200 transition-colors"
-                        onClick={() => setJumpConfirm(null)}
-                      >
-                        Maybe later
-                      </button>
-                      <button
-                        className="flex-1 py-3 rounded-xl text-sm font-semibold text-white bg-[#58CC02] active:bg-[#4CAD02] transition-colors shadow-[0_3px_0_#46a302]"
-                        onClick={() => {
-                          setJumpConfirm(null);
-                          router.push('/register');
-                        }}
-                      >
-                        Sign Up Free
-                      </button>
+                <div className="absolute inset-0 bg-black/40" />
+                <motion.div
+                  className="relative w-full max-w-lg bg-white rounded-t-2xl p-5 pb-8"
+                  initial={{ y: '100%' }}
+                  animate={{ y: 0 }}
+                  exit={{ y: '100%' }}
+                  transition={{
+                    type: 'spring' as const,
+                    damping: 25,
+                    stiffness: 300,
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div
+                      className="flex items-center justify-center rounded-xl text-white text-xl"
+                      style={{
+                        width: 48,
+                        height: 48,
+                        backgroundColor: unit.color,
+                      }}
+                    >
+                      {lesson.icon}
                     </div>
-                  </>
-                ) : (
-                  <>
-                    <p className="text-sm text-surface-500 mb-5">
-                      Jump ahead to this lesson? You can always go back and complete earlier lessons later.
-                    </p>
-                    <div className="flex gap-3">
-                      <button
-                        className="flex-1 py-3 rounded-xl text-sm font-semibold text-surface-600 bg-surface-100 active:bg-surface-200 transition-colors"
-                        onClick={() => setJumpConfirm(null)}
-                      >
-                        Cancel
-                      </button>
-                      <button
-                        className="flex-1 py-3 rounded-xl text-sm font-semibold text-white active:opacity-90 transition-opacity"
-                        style={{ backgroundColor: unit.color }}
-                        onClick={() => {
-                          startLesson(jumpConfirm.unitIndex, jumpConfirm.lessonIndex);
-                          setJumpConfirm(null);
-                        }}
-                      >
-                        Jump to Lesson
-                      </button>
+                    <div>
+                      <p className="text-xs font-medium text-gray-400">
+                        {unit.title}
+                      </p>
+                      <p className="text-base font-bold text-gray-900">
+                        {lesson.title}
+                      </p>
                     </div>
-                  </>
-                )}
+                  </div>
+
+                  {isGuest && jumpConfirm.unitIndex > 0 ? (
+                    <>
+                      <p className="text-sm text-gray-500 mb-5">
+                        Create a free account to unlock all units and save
+                        your progress across devices!
+                      </p>
+                      <div className="flex gap-3">
+                        <button
+                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-gray-600 bg-gray-100 active:bg-gray-200 transition-colors"
+                          onClick={() => setJumpConfirm(null)}
+                        >
+                          Maybe later
+                        </button>
+                        <button
+                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-white bg-[#58CC02] active:bg-[#4CAD02] transition-colors"
+                          onClick={() => {
+                            setJumpConfirm(null);
+                            router.push('/register');
+                          }}
+                        >
+                          Sign Up Free
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-sm text-gray-500 mb-5">
+                        Jump ahead to this lesson? You can always go back
+                        and complete earlier ones later.
+                      </p>
+                      <div className="flex gap-3">
+                        <button
+                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-gray-600 bg-gray-100 active:bg-gray-200 transition-colors"
+                          onClick={() => setJumpConfirm(null)}
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-white active:opacity-90 transition-opacity"
+                          style={{ backgroundColor: unit.color }}
+                          onClick={() => {
+                            startLesson(
+                              jumpConfirm.unitIndex,
+                              jumpConfirm.lessonIndex
+                            );
+                            setJumpConfirm(null);
+                          }}
+                        >
+                          Jump to Lesson
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </motion.div>
               </motion.div>
-            </motion.div>
-          );
-        })()}
+            );
+          })()}
       </AnimatePresence>
     </div>
   );

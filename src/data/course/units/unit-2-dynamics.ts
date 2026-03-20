@@ -139,7 +139,7 @@ export const unit2: Unit = {
           type: 'multiple-choice',
           question: 'A highway exit ramp with radius 80 m is unbanked. The posted speed limit gives a comfortable margin on dry pavement (mu_s = 0.8). After an ice storm reduces friction to mu_s = 0.2, what should you reason about the safe speed?',
           options: [
-            'Safe speed drops by half — since mu_s = v^2/(rg), halving mu from 0.8 to 0.2 reduces v by a factor of sqrt(4) = 2, from about 25 m/s to 12.5 m/s',
+            'Safe speed drops by half — since v = sqrt(mu_s*r*g), cutting mu by 4x (from 0.8 to 0.2) reduces v by sqrt(4) = 2, from about 25 m/s to 12.5 m/s',
             'Safe speed drops by 75% in proportion to friction — from 25 m/s to about 6 m/s',
             'Safe speed is unchanged because the car mass cancels out of the equation',
             'Safe speed drops slightly — from 25 m/s to about 20 m/s, since friction has minimal effect on curves',

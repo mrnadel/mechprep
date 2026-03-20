@@ -294,7 +294,7 @@ export const unit3: Unit = {
           type: 'multiple-choice',
           question: 'A motor nameplate says 10 kW at 3000 rpm. For a new application, you need to run at 1500 rpm but still need 10 kW. What happens to the required torque and shaft diameter?',
           options: [
-            'Torque doubles (T = P/omega), so the shaft must be larger — since tau = Tc/J and J scales with d^4, the diameter increase is modest (about 19% larger)',
+            'Torque doubles (T = P/omega), so the shaft must be larger — since tau = 16T/(pi*d^3), d scales as T^(1/3), meaning about 26% larger diameter to maintain the same stress',
             'Torque stays the same because power is unchanged, so the shaft size is unchanged',
             'Torque doubles and the shaft diameter must also double',
             'Torque halves because lower speed means lower forces on the shaft',
