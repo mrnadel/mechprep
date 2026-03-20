@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
 import type { Unit } from '@/data/course/types';
+import type { UnitTheme } from '@/lib/unitThemes';
 import { UnitIllustration } from './UnitIllustrations';
 
 interface UnitHeaderProps {
@@ -11,7 +11,10 @@ interface UnitHeaderProps {
   completedInUnit: number;
   totalInUnit: number;
   isExpanded: boolean;
+  isLocked?: boolean;
+  lockMessage?: string;
   onToggle: () => void;
+  theme: UnitTheme;
 }
 
 export function UnitHeader({
@@ -20,91 +23,181 @@ export function UnitHeader({
   completedInUnit,
   totalInUnit,
   isExpanded,
+  isLocked,
+  lockMessage,
   onToggle,
+  theme,
 }: UnitHeaderProps) {
   const progressPercent =
     totalInUnit > 0 ? (completedInUnit / totalInUnit) * 100 : 0;
-  const isComplete = completedInUnit === totalInUnit;
 
   return (
-    <button
-      className="w-full text-left"
-      onClick={onToggle}
-      aria-expanded={isExpanded}
-    >
+    <div>
+      {/* Header row */}
       <div
-        className="mx-4 rounded-2xl overflow-hidden transition-shadow"
+        className="flex items-center select-none"
         style={{
-          background: `linear-gradient(135deg, ${unit.color}08, ${unit.color}04)`,
-          border: `1px solid ${unit.color}20`,
-          boxShadow: isExpanded ? `0 4px 12px ${unit.color}12` : 'none',
+          padding: '20px 20px 16px',
+          cursor: 'pointer',
+          WebkitTapHighlightColor: 'transparent',
+        }}
+        onClick={onToggle}
+        role="button"
+        tabIndex={0}
+        aria-expanded={!isLocked ? isExpanded : undefined}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onToggle();
+          }
         }}
       >
-        <div className="flex items-center gap-3 px-4 py-3.5">
-          {/* Unit illustration (small) */}
-          <div className="flex-shrink-0" style={{ width: 52, height: 40 }}>
-            <UnitIllustration
-              unitIndex={unitIndex}
-              color={unit.color}
-              className="w-full h-full opacity-70"
-            />
-          </div>
-
-          {/* Title + meta */}
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2">
-              <span
-                className="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded"
-                style={{
-                  backgroundColor: `${unit.color}12`,
-                  color: unit.color,
-                }}
-              >
-                Unit {unitIndex + 1}
-              </span>
-              {isComplete && (
-                <span className="text-[10px] font-bold text-green-600 bg-green-50 px-1.5 py-0.5 rounded">
-                  DONE
-                </span>
-              )}
-            </div>
-            <h2 className="text-sm font-bold text-gray-900 leading-snug mt-1 truncate">
-              {unit.title}
-            </h2>
-
-            {/* Progress bar */}
-            <div className="mt-2 flex items-center gap-2">
-              <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                <motion.div
-                  className="h-full rounded-full"
-                  style={{ backgroundColor: unit.color }}
-                  initial={{ width: 0 }}
-                  animate={{ width: `${progressPercent}%` }}
-                  transition={{ duration: 0.6, ease: 'easeOut' }}
-                />
-              </div>
-              <span
-                className="text-[10px] font-semibold tabular-nums"
-                style={{ color: unit.color }}
-              >
-                {completedInUnit}/{totalInUnit}
-              </span>
-            </div>
-          </div>
-
-          {/* Chevron */}
-          <motion.div
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.2 }}
-            className="flex-shrink-0"
+        {/* Text */}
+        <div className="flex-1 min-w-0">
+          <div
+            style={{
+              fontSize: 11,
+              fontWeight: 800,
+              textTransform: 'uppercase',
+              letterSpacing: 1.2,
+              marginBottom: 4,
+              color: theme.dark,
+              opacity: 0.7,
+            }}
           >
-            <ChevronDown
-              className="w-5 h-5"
-              style={{ color: `${unit.color}80` }}
-            />
-          </motion.div>
+            Unit {unitIndex + 1}
+          </div>
+          <div
+            style={{
+              fontSize: 19,
+              fontWeight: 800,
+              lineHeight: 1.2,
+              color: theme.dark,
+            }}
+          >
+            {unit.title}
+          </div>
+          {isLocked ? (
+            <div
+              className="inline-flex items-center"
+              style={{
+                gap: 5,
+                fontSize: 11,
+                fontWeight: 800,
+                textTransform: 'uppercase',
+                letterSpacing: 0.8,
+                padding: '4px 10px',
+                borderRadius: 8,
+                background: 'rgba(0,0,0,0.06)',
+                marginTop: 6,
+                color: theme.dark,
+              }}
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="11" width="14" height="10" rx="2" fill={theme.dark} />
+                <path
+                  d="M8 11V7a4 4 0 118 0v4"
+                  stroke={theme.dark}
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+              {lockMessage || 'Complete previous unit to unlock'}
+            </div>
+          ) : (
+            <div
+              style={{
+                fontSize: 12.5,
+                fontWeight: 700,
+                color: theme.mid,
+                opacity: 0.6,
+                marginTop: 3,
+              }}
+            >
+              {completedInUnit} of {totalInUnit} lessons complete
+            </div>
+          )}
+        </div>
+
+        {/* Illustration */}
+        <div
+          className="flex-shrink-0"
+          style={{ width: 80, height: 80, marginLeft: 12 }}
+        >
+          <UnitIllustration
+            unitIndex={unitIndex}
+            color={theme.color}
+            className="w-full h-full"
+          />
         </div>
       </div>
-    </button>
+
+      {/* Chevron */}
+      {!isLocked && (
+        <div
+          className="flex justify-end"
+          style={{ padding: '0 20px', marginTop: -12, marginBottom: 4 }}
+        >
+          <motion.div
+            className="flex items-center justify-center"
+            style={{
+              width: 32,
+              height: 32,
+              borderRadius: '50%',
+              background: 'rgba(255,255,255,0.6)',
+            }}
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 6l4 4 4-4"
+                stroke={theme.dark}
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Progress bar */}
+      <div
+        className="flex items-center"
+        style={{ padding: '0 20px 16px', gap: 10 }}
+      >
+        <div
+          className="flex-1 overflow-hidden"
+          style={{
+            height: 10,
+            borderRadius: 5,
+            background: 'rgba(255,255,255,0.5)',
+          }}
+        >
+          <motion.div
+            style={{
+              height: '100%',
+              borderRadius: 5,
+              backgroundColor: theme.color,
+            }}
+            initial={{ width: 0 }}
+            animate={{ width: `${progressPercent}%` }}
+            transition={{ duration: 0.6, ease: [0.34, 1.56, 0.64, 1] }}
+          />
+        </div>
+        <div
+          style={{
+            fontSize: 12,
+            fontWeight: 800,
+            color: theme.dark,
+            opacity: 0.7,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {completedInUnit}/{totalInUnit}
+        </div>
+      </div>
+    </div>
   );
 }

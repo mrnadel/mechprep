@@ -4,10 +4,11 @@ import { useEffect, useRef, useCallback, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { Lock, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { course } from '@/data/course';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useSubscription } from '@/hooks/useSubscription';
+import { getUnitTheme } from '@/lib/unitThemes';
 import { UpgradeModal } from '@/components/ui/UpgradeModal';
 import { UnitHeader } from './UnitHeader';
 import { LessonNode } from './LessonNode';
@@ -26,11 +27,9 @@ export function CourseMap() {
     lessonIndex: number;
   } | null>(null);
 
-  // Free registered users can only access unit 1
   const isFreeLocked = (unitIndex: number) =>
     !isGuest && !isProUser && unitIndex > 0;
 
-  // Determine lesson state
   const getLessonState = useCallback(
     (
       unitIndex: number,
@@ -49,7 +48,6 @@ export function CourseMap() {
     [progress.completedLessons, isLessonUnlocked, isGuest, isProUser] // eslint-disable-line react-hooks/exhaustive-deps
   );
 
-  // Find the unit containing the first current lesson
   const findActiveUnitIndex = useCallback((): number => {
     for (let ui = 0; ui < course.length; ui++) {
       for (let li = 0; li < course[ui].lessons.length; li++) {
@@ -61,7 +59,6 @@ export function CourseMap() {
 
   const activeUnitIndex = findActiveUnitIndex();
 
-  // Track expanded units — auto-expand the active unit
   const [expandedUnits, setExpandedUnits] = useState<Set<number>>(
     new Set([activeUnitIndex])
   );
@@ -78,7 +75,6 @@ export function CourseMap() {
     });
   };
 
-  // Auto-scroll to the active unit on mount
   useEffect(() => {
     const timer = setTimeout(() => {
       if (currentUnitRef.current && scrollRef.current) {
@@ -106,14 +102,18 @@ export function CourseMap() {
       ref={scrollRef}
       className="flex-1 overflow-y-auto"
       style={{
-        paddingTop: 12,
-        paddingBottom: 120,
+        paddingBottom: 40,
         scrollBehavior: 'smooth',
         WebkitOverflowScrolling: 'touch',
       }}
     >
-      <div className="max-w-lg mx-auto space-y-3">
+      {/* Units container */}
+      <div
+        className="flex flex-col"
+        style={{ padding: '12px 16px', gap: 16 }}
+      >
         {course.map((unit, unitIndex) => {
+          const theme = getUnitTheme(unitIndex);
           const completedInUnit = unit.lessons.filter(
             (l) => progress.completedLessons[l.id]
           ).length;
@@ -121,33 +121,64 @@ export function CourseMap() {
           const isActive = unitIndex === activeUnitIndex;
           const isGuestLocked = isGuest && unitIndex > 0;
           const isProLocked = isFreeLocked(unitIndex);
+          const isUnitLocked = isGuestLocked || isProLocked;
 
           return (
             <div
               key={unit.id}
               ref={isActive ? currentUnitRef : undefined}
+              style={{
+                borderRadius: 24,
+                overflow: 'hidden',
+                backgroundColor: theme.bg,
+                transition: 'box-shadow 0.3s ease',
+                animation: 'unitSlideUp 0.5s ease backwards',
+                animationDelay: `${Math.min(unitIndex * 0.1, 0.5)}s`,
+              }}
             >
               <UnitHeader
                 unit={unit}
                 unitIndex={unitIndex}
                 completedInUnit={completedInUnit}
                 totalInUnit={unit.lessons.length}
-                isExpanded={isExpanded}
-                onToggle={() => toggleUnit(unitIndex)}
+                isExpanded={isExpanded && !isUnitLocked}
+                isLocked={isUnitLocked}
+                lockMessage={
+                  isGuestLocked
+                    ? 'Sign up to unlock'
+                    : isProLocked
+                      ? 'Upgrade to Pro to unlock'
+                      : undefined
+                }
+                onToggle={() => {
+                  if (isGuestLocked) {
+                    router.push('/register');
+                    return;
+                  }
+                  if (isProLocked) {
+                    setShowUpgradeModal(true);
+                    return;
+                  }
+                  toggleUnit(unitIndex);
+                }}
+                theme={theme}
               />
 
               {/* Expandable lesson list */}
               <AnimatePresence initial={false}>
-                {isExpanded && (
+                {isExpanded && !isUnitLocked && (
                   <motion.div
                     key={`lessons-${unitIndex}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25, ease: 'easeInOut' }}
+                    transition={{ duration: 0.35, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <div className="mx-4 mt-1 mb-2 px-1 space-y-1">
+                    <div
+                      className="flex flex-col"
+                      style={{ padding: '4px 16px 20px', gap: 8 }}
+                    >
                       {unit.lessons.map((lesson, lessonIndex) => {
                         const state = getLessonState(unitIndex, lessonIndex);
                         const lessonProgress =
@@ -157,7 +188,7 @@ export function CourseMap() {
                           <LessonNode
                             key={lesson.id}
                             lesson={lesson}
-                            unitColor={unit.color}
+                            unitColor={theme.color}
                             state={state}
                             stars={lessonProgress?.stars}
                             index={lessonIndex}
@@ -168,52 +199,10 @@ export function CourseMap() {
                                 startLesson(unitIndex, lessonIndex);
                               }
                             }}
+                            theme={theme}
                           />
                         );
                       })}
-
-                      {/* Guest lock banner for units 2+ */}
-                      {isGuestLocked && (
-                        <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 mt-2">
-                          <span className="text-lg">&#x1F512;</span>
-                          <div className="flex-1">
-                            <p className="text-xs font-semibold text-gray-700">
-                              Sign up to unlock this unit
-                            </p>
-                            <p className="text-[11px] text-gray-400">
-                              Free account &middot; saves your progress
-                            </p>
-                          </div>
-                          <button
-                            onClick={() => router.push('/register')}
-                            className="px-3 py-1.5 rounded-lg bg-[#58CC02] text-white text-xs font-bold"
-                          >
-                            Sign Up
-                          </button>
-                        </div>
-                      )}
-
-                      {/* Pro lock banner for free registered users */}
-                      {isProLocked && !isGuestLocked && (
-                        <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-50 border border-primary-100 mt-2">
-                          <Lock className="w-4 h-4 text-primary-500" />
-                          <div className="flex-1">
-                            <p className="text-xs font-semibold text-gray-700">
-                              Upgrade to unlock all units
-                            </p>
-                            <p className="text-[11px] text-gray-400">
-                              Pro &middot; unlimited access to all 10 units
-                            </p>
-                          </div>
-                          <button
-                            onClick={() => setShowUpgradeModal(true)}
-                            className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-600 text-white text-xs font-bold"
-                          >
-                            <Sparkles className="w-3 h-3" />
-                            Upgrade
-                          </button>
-                        </div>
-                      )}
                     </div>
                   </motion.div>
                 )}
@@ -222,15 +211,35 @@ export function CourseMap() {
           );
         })}
 
-        {/* Course completion */}
-        <div className="flex flex-col items-center py-8 px-4">
-          <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-xl mb-3">
-            &#x1F3C6;
+        {/* Course completion marker */}
+        <div
+          className="flex flex-col items-center"
+          style={{ padding: '32px 16px' }}
+        >
+          <div
+            className="flex items-center justify-center"
+            style={{
+              width: 48,
+              height: 48,
+              borderRadius: 16,
+              background: '#FFF5D4',
+              fontSize: 24,
+              marginBottom: 12,
+            }}
+          >
+            🏆
           </div>
-          <p className="text-sm font-semibold text-gray-700">
+          <p style={{ fontSize: 15, fontWeight: 800, color: '#3C3C3C' }}>
             Course Complete!
           </p>
-          <p className="text-xs text-gray-400 mt-0.5">
+          <p
+            style={{
+              fontSize: 13,
+              fontWeight: 700,
+              color: '#AFAFAF',
+              marginTop: 2,
+            }}
+          >
             You&apos;re ready for your interview
           </p>
         </div>
@@ -242,6 +251,7 @@ export function CourseMap() {
           (() => {
             const unit = course[jumpConfirm.unitIndex];
             const lesson = unit.lessons[jumpConfirm.lessonIndex];
+            const theme = getUnitTheme(jumpConfirm.unitIndex);
             return (
               <motion.div
                 key="jump-overlay"
@@ -253,7 +263,12 @@ export function CourseMap() {
               >
                 <div className="absolute inset-0 bg-black/40" />
                 <motion.div
-                  className="relative w-full max-w-lg bg-white rounded-t-2xl p-5 pb-8"
+                  className="relative w-full bg-white"
+                  style={{
+                    maxWidth: 480,
+                    borderRadius: '24px 24px 0 0',
+                    padding: '20px 20px 32px',
+                  }}
                   initial={{ y: '100%' }}
                   animate={{ y: 0 }}
                   exit={{ y: '100%' }}
@@ -264,22 +279,40 @@ export function CourseMap() {
                   }}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="flex items-center"
+                    style={{ gap: 12, marginBottom: 12 }}
+                  >
                     <div
-                      className="flex items-center justify-center rounded-xl text-white text-xl"
+                      className="flex items-center justify-center"
                       style={{
                         width: 48,
                         height: 48,
-                        backgroundColor: unit.color,
+                        borderRadius: 16,
+                        backgroundColor: theme.bg,
+                        color: theme.dark,
+                        fontSize: 20,
                       }}
                     >
                       {lesson.icon}
                     </div>
                     <div>
-                      <p className="text-xs font-medium text-gray-400">
+                      <p
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 700,
+                          color: '#AFAFAF',
+                        }}
+                      >
                         {unit.title}
                       </p>
-                      <p className="text-base font-bold text-gray-900">
+                      <p
+                        style={{
+                          fontSize: 16,
+                          fontWeight: 800,
+                          color: '#3C3C3C',
+                        }}
+                      >
                         {lesson.title}
                       </p>
                     </div>
@@ -287,19 +320,47 @@ export function CourseMap() {
 
                   {isGuest && jumpConfirm.unitIndex > 0 ? (
                     <>
-                      <p className="text-sm text-gray-500 mb-5">
-                        Create a free account to unlock all units and save
-                        your progress across devices!
+                      <p
+                        style={{
+                          fontSize: 14,
+                          color: '#AFAFAF',
+                          fontWeight: 600,
+                          marginBottom: 20,
+                        }}
+                      >
+                        Create a free account to unlock all units and save your
+                        progress across devices!
                       </p>
-                      <div className="flex gap-3">
+                      <div className="flex" style={{ gap: 12 }}>
                         <button
-                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-gray-600 bg-gray-100 active:bg-gray-200 transition-colors"
+                          className="flex-1 active:scale-[0.98] transition-transform"
+                          style={{
+                            padding: '14px 0',
+                            borderRadius: 16,
+                            fontSize: 14,
+                            fontWeight: 800,
+                            color: '#AFAFAF',
+                            background: '#F5F5F5',
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
                           onClick={() => setJumpConfirm(null)}
                         >
                           Maybe later
                         </button>
                         <button
-                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-white bg-[#58CC02] active:bg-[#4CAD02] transition-colors"
+                          className="flex-1 active:scale-[0.98] transition-transform"
+                          style={{
+                            padding: '14px 0',
+                            borderRadius: 16,
+                            fontSize: 14,
+                            fontWeight: 800,
+                            color: '#FFFFFF',
+                            background: '#58CC02',
+                            boxShadow: '0 4px 0 #46A302',
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
                           onClick={() => {
                             setJumpConfirm(null);
                             router.push('/register');
@@ -311,45 +372,101 @@ export function CourseMap() {
                     </>
                   ) : isFreeLocked(jumpConfirm.unitIndex) ? (
                     <>
-                      <p className="text-sm text-gray-500 mb-5">
-                        This unit requires a Pro subscription. Upgrade to
-                        unlock all 10 units and unlimited practice.
+                      <p
+                        style={{
+                          fontSize: 14,
+                          color: '#AFAFAF',
+                          fontWeight: 600,
+                          marginBottom: 20,
+                        }}
+                      >
+                        This unit requires a Pro subscription. Upgrade to unlock
+                        all 10 units and unlimited practice.
                       </p>
-                      <div className="flex gap-3">
+                      <div className="flex" style={{ gap: 12 }}>
                         <button
-                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-gray-600 bg-gray-100 active:bg-gray-200 transition-colors"
+                          className="flex-1 active:scale-[0.98] transition-transform"
+                          style={{
+                            padding: '14px 0',
+                            borderRadius: 16,
+                            fontSize: 14,
+                            fontWeight: 800,
+                            color: '#AFAFAF',
+                            background: '#F5F5F5',
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
                           onClick={() => setJumpConfirm(null)}
                         >
                           Maybe later
                         </button>
                         <button
-                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-white bg-primary-600 active:bg-primary-700 transition-colors flex items-center justify-center gap-2"
+                          className="flex-1 flex items-center justify-center active:scale-[0.98] transition-transform"
+                          style={{
+                            gap: 6,
+                            padding: '14px 0',
+                            borderRadius: 16,
+                            fontSize: 14,
+                            fontWeight: 800,
+                            color: '#FFFFFF',
+                            background: theme.color,
+                            boxShadow: `0 4px 0 ${theme.dark}`,
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
                           onClick={() => {
                             setJumpConfirm(null);
                             setShowUpgradeModal(true);
                           }}
                         >
-                          <Sparkles className="w-4 h-4" />
+                          <Sparkles style={{ width: 16, height: 16 }} />
                           Upgrade to Pro
                         </button>
                       </div>
                     </>
                   ) : (
                     <>
-                      <p className="text-sm text-gray-500 mb-5">
-                        Jump ahead to this lesson? You can always go back
-                        and complete earlier ones later.
+                      <p
+                        style={{
+                          fontSize: 14,
+                          color: '#AFAFAF',
+                          fontWeight: 600,
+                          marginBottom: 20,
+                        }}
+                      >
+                        Jump ahead to this lesson? You can always go back and
+                        complete earlier ones later.
                       </p>
-                      <div className="flex gap-3">
+                      <div className="flex" style={{ gap: 12 }}>
                         <button
-                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-gray-600 bg-gray-100 active:bg-gray-200 transition-colors"
+                          className="flex-1 active:scale-[0.98] transition-transform"
+                          style={{
+                            padding: '14px 0',
+                            borderRadius: 16,
+                            fontSize: 14,
+                            fontWeight: 800,
+                            color: '#AFAFAF',
+                            background: '#F5F5F5',
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
                           onClick={() => setJumpConfirm(null)}
                         >
                           Cancel
                         </button>
                         <button
-                          className="flex-1 py-3 rounded-xl text-sm font-semibold text-white active:opacity-90 transition-opacity"
-                          style={{ backgroundColor: unit.color }}
+                          className="flex-1 active:scale-[0.98] transition-transform"
+                          style={{
+                            padding: '14px 0',
+                            borderRadius: 16,
+                            fontSize: 14,
+                            fontWeight: 800,
+                            color: '#FFFFFF',
+                            background: theme.color,
+                            boxShadow: `0 4px 0 ${theme.dark}`,
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
                           onClick={() => {
                             startLesson(
                               jumpConfirm.unitIndex,

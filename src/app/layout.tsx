@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Nunito, JetBrains_Mono } from 'next/font/google';
 import { AuthSessionProvider } from '@/components/providers/SessionProvider';
 import './globals.css';
 
-const inter = Inter({
+const nunito = Nunito({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-nunito',
+  weight: ['600', '700', '800', '900'],
   display: 'swap',
 });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${nunito.variable} ${jetbrainsMono.variable}`}>
       <body className="min-h-screen">
         <AuthSessionProvider>{children}</AuthSessionProvider>
       </body>

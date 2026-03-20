@@ -28,7 +28,7 @@
   --color-surface-900: #0F172A;
   --color-surface-950: #020617;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
@@ -39,7 +39,7 @@
 
   body {
     @apply text-surface-900 antialiased;
-    background-color: #F7F5F0;
+    background-color: #FAFAFA;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
@@ -274,7 +274,7 @@
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -305,12 +305,28 @@
   background: #94A3B8;
 }
 
+/* Duolingo-style unit card entrance */
+@keyframes unitSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* GO button pulse animation */
+@keyframes goPulse {
+  0%, 100% { box-shadow: 0 4px 0 var(--go-shadow-color), 0 0 0 0 transparent; }
+  50% { box-shadow: 0 4px 0 var(--go-shadow-color), 0 0 0 6px var(--go-glow-color); }
+}
+
+.go-btn-pulse {
+  animation: goPulse 2.5s ease-in-out infinite;
+}
+
 /* Lesson overlay — full-screen view for active lessons */
 .lesson-overlay {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background: #F7F5F0;
+  background: #FAFAFA;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
