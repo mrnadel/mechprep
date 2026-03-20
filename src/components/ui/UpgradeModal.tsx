@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Check, Lock, Sparkles } from 'lucide-react';
-import { TIERS, formatPrice, getYearlySavingsPercent, PRO_TRIAL_DAYS } from '@/lib/pricing';
+import { X, Check, Lock, Sparkles, Loader2 } from 'lucide-react';
+import { TIERS, STRIPE_PRICES, formatPrice, getYearlySavingsPercent, PRO_TRIAL_DAYS } from '@/lib/pricing';
 import { cn } from '@/lib/utils';
 
 interface UpgradeModalProps {
@@ -14,11 +14,35 @@ interface UpgradeModalProps {
 
 export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
   const [billingInterval, setBillingInterval] = useState<'month' | 'year'>('month');
+  const [loading, setLoading] = useState(false);
   const savings = getYearlySavingsPercent('pro');
   const pro = TIERS.pro;
   const price = billingInterval === 'year'
     ? Math.round(pro.priceYearly / 12)
     : pro.priceMonthly;
+
+  const handleCheckout = async () => {
+    setLoading(true);
+    try {
+      const priceId = billingInterval === 'year'
+        ? STRIPE_PRICES.PRO_YEARLY
+        : STRIPE_PRICES.PRO_MONTHLY;
+
+      const res = await fetch('/api/stripe/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ priceId }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    } catch {
+      // Silently fail
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -133,8 +157,16 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
               </div>
 
               {/* CTA */}
-              <button className="w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold text-sm transition-colors shadow-md shadow-primary-200 active:scale-[0.98] flex items-center justify-center gap-2">
-                <Sparkles className="w-4 h-4" />
+              <button
+                onClick={handleCheckout}
+                disabled={loading}
+                className="w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold text-sm transition-colors shadow-md shadow-primary-200 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50"
+              >
+                {loading ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Sparkles className="w-4 h-4" />
+                )}
                 Start {PRO_TRIAL_DAYS}-Day Free Trial
               </button>
               <p className="text-xs text-gray-400 text-center mt-2">
