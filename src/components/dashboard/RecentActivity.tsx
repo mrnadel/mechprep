@@ -54,9 +54,9 @@ export default function RecentActivity() {
                   ))}
                 </div>
                 <div className="flex items-center gap-3 mt-1 text-xs text-surface-500">
-                  <span>{accuracy}% accuracy</span>
+                  <span>{`${accuracy}% accuracy`}</span>
                   <span>·</span>
-                  <span>{session.questionsCorrect}/{session.questionsAttempted} correct</span>
+                  <span>{`${session.questionsCorrect}/${session.questionsAttempted} correct`}</span>
                   <span>·</span>
                   <span className="flex items-center gap-1">
                     <Zap className="w-3 h-3" /> +{session.xpEarned} XP

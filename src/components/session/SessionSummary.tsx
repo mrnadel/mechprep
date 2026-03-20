@@ -62,7 +62,7 @@ export default function SessionSummary({ summary }: Props) {
       {summary.newAchievements.length > 0 && (
         <div className="card p-5 mb-6 border-amber-200 bg-amber-50">
           <h3 className="font-semibold text-amber-800 mb-2 flex items-center gap-2">
-            <Trophy className="w-4 h-4" /> New Achievement{summary.newAchievements.length > 1 ? 's' : ''}!
+            <Trophy className="w-4 h-4" /> {summary.newAchievements.length > 1 ? 'New Achievements!' : 'New Achievement!'}
           </h3>
           <div className="space-y-2">
             {summary.newAchievements.map(id => {

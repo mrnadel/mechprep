@@ -19,13 +19,13 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'A U-tube manometer connects two pressure taps on a pipe. The manometer fluid is mercury (SG = 13.6) and the pipe fluid is water. If the mercury column height difference is 250 mm, what is the pressure difference between the taps?',
           options: [
+            '24.5 kPa',
             '30.9 kPa',
             '33.4 kPa',
-            '31.0 kPa',
-            '24.5 kPa'
+            '38.2 kPa'
           ],
-          correctIndex: 2,
-          explanation: 'ΔP = (ρ_mercury − ρ_water) × g × Δh = (13600 − 1000) × 9.81 × 0.25 = 12600 × 9.81 × 0.25 = 30,901 Pa ≈ 31.0 kPa. The differential manometer equation accounts for both the manometer fluid and the process fluid densities.',
+          correctIndex: 1,
+          explanation: 'ΔP = (ρ_mercury − ρ_water) × g × Δh = (13,600 − 1,000) × 9.81 × 0.25 = 12,600 × 9.81 × 0.25 = 30,901 Pa ≈ 30.9 kPa. The differential manometer equation accounts for both the manometer fluid and the process fluid densities.',
           hint: 'Use the differential manometer equation: ΔP = (ρ_m − ρ_f) × g × h.'
         },
         {
@@ -298,7 +298,7 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'A pump delivers 0.05 m³/s at 30 m head and runs at 1450 RPM. What is the specific speed (N_s) in SI units, and what type of pump is most suitable?',
           options: [
-            'N_s ≈ 15 — Radial (centrifugal) pump',
+            'N_s ≈ 25 — Radial (centrifugal) pump',
             'N_s ≈ 25 — Mixed-flow pump',
             'N_s ≈ 80 — Axial-flow pump',
             'N_s ≈ 50 — Mixed-flow pump'

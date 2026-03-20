@@ -32,7 +32,7 @@ export default function ProgressPage() {
       <div>
         <h1 className="text-2xl font-bold text-surface-900 flex items-center gap-3">
           <BarChart3 className="w-7 h-7 text-primary-500" />
-          Progress & Analytics
+          Progress &amp; Analytics
         </h1>
         <p className="text-surface-500 mt-1">Track your improvement and identify areas to focus on.</p>
       </div>
@@ -120,7 +120,7 @@ export default function ProgressPage() {
                     />
                   </div>
                   <span className="text-xs text-surface-400 shrink-0 w-20 text-right">
-                    {correct}/{attempted} correct
+                    {`${correct}/${attempted} correct`}
                   </span>
                 </div>
               </div>

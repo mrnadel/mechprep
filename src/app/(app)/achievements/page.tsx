@@ -30,7 +30,7 @@ export default function AchievementsPage() {
             Achievements
           </h1>
           <p className="text-surface-500 mt-1">
-            {unlockedCount} of {achievements.length} unlocked
+            {`${unlockedCount} of ${achievements.length} unlocked`}
           </p>
         </div>
         <div className="text-right">

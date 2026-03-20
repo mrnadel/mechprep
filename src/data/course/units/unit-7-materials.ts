@@ -317,8 +317,8 @@ export const unit7: Unit = {
             '5.1×',
             '7.6×'
           ],
-          correctIndex: 2,
-          explanation: 'From VT^n = C: T₂/T₁ = (V₁/V₂)^(1/n) = (150/200)^(1/0.25) = (0.75)^4 = 0.316. So T₂ = 0.316 × T₁, meaning tool life decreased by a factor of 1/0.316 ≈ 3.16. Wait — let me recalculate: (150/200)^4 = 0.75^4 = 0.3164. Tool life ratio = 1/0.3164 ≈ 3.2. Actually checking: a factor of decrease of 3.2× means the new life is ~31.6% of original. The high sensitivity of tool life to speed (due to the exponent 1/n = 4) is why cutting speed is the most impactful machining parameter.',
+          correctIndex: 1,
+          explanation: 'From VT^n = C: T₂/T₁ = (V₁/V₂)^(1/n) = (150/200)^(1/0.25) = (0.75)^4 = 0.3164. So tool life drops to ~31.6% of original, meaning it decreased by a factor of 1/0.3164 ≈ 3.2×. The high sensitivity of tool life to cutting speed (exponent 1/n = 4) is why speed is the most impactful machining parameter — a modest 33% speed increase cuts tool life by more than 3×.',
           hint: 'Rearrange Taylor\'s equation: T₂/T₁ = (V₁/V₂)^(1/n).'
         },
         {

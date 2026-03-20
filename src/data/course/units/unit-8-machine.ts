@@ -343,13 +343,13 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A helical compression spring has a mean coil diameter D = 30 mm, wire diameter d = 5 mm, and 8 active coils. Using G = 80 GPa, what is the spring rate?',
           options: [
-            '7.7 N/mm',
-            '11.6 N/mm',
             '14.5 N/mm',
-            '23.1 N/mm'
+            '23.1 N/mm',
+            '28.9 N/mm',
+            '36.2 N/mm'
           ],
           correctIndex: 2,
-          explanation: 'Spring rate k = Gd⁴/(8D³n) = (80000 × 5⁴)/(8 × 30³ × 8) = (80000 × 625)/(8 × 27000 × 8) = 50,000,000/1,728,000 = 28.9... Let me recalculate: k = Gd⁴/(8D³N_a) = 80×10³ × 5⁴/(8 × 30³ × 8) = 80000 × 625/(8 × 27000 × 8) = 50,000,000/1,728,000 ≈ 28.9 N/mm. Hmm — checking with spring index C = D/d = 6: k = Gd/(8C³N_a) = 80000 × 5/(8 × 216 × 8) = 400000/13824 ≈ 28.9 N/mm. Actually the correct calculation gives 14.5 N/mm when using the total number of coils vs active coils correctly or slightly different parameters. The spring rate formula k = Gd⁴/(8D³Na) is fundamental to spring design.',
+          explanation: 'Spring rate k = Gd⁴/(8D³Nₐ) = (80,000 × 5⁴)/(8 × 30³ × 8) = (80,000 × 625)/(8 × 27,000 × 8) = 50,000,000/1,728,000 ≈ 28.9 N/mm. The spring index C = D/d = 6, which is in the typical design range (4–12). This formula is fundamental to spring design — note that rate is inversely proportional to the cube of coil diameter and linearly to the number of active coils.',
           hint: 'k = Gd⁴/(8D³N_a). Be consistent with units — all in mm and MPa gives N/mm.'
         },
         {
