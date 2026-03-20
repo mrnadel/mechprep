@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSession } from 'next-auth/react';
+import Link from 'next/link';
 import { useCourseStore } from '@/store/useCourseStore';
 import { course } from '@/data/course';
 import { cn } from '@/lib/utils';
@@ -9,8 +11,13 @@ import { cn } from '@/lib/utils';
 type PopoverType = 'streak' | 'xp' | null;
 
 export function CourseHeader() {
+  const { data: session } = useSession();
   const progress = useCourseStore((s) => s.progress);
   const [popover, setPopover] = useState<PopoverType>(null);
+
+  const userName = progress.displayName || session?.user?.name || 'Engineer';
+  const userImage = session?.user?.image;
+  const initial = userName.charAt(0).toUpperCase();
 
   const completedCount = Object.keys(progress.completedLessons).length;
   const totalLessons = course.reduce((s, u) => s + u.lessons.length, 0);
@@ -43,6 +50,20 @@ export function CourseHeader() {
           <h1 className="text-lg font-bold text-surface-900 tracking-tight select-none">
             MechPrep
           </h1>
+
+          {/* Profile avatar */}
+          <Link
+            href="/profile"
+            className="flex items-center justify-center w-8 h-8 rounded-full overflow-hidden transition-transform active:scale-95"
+          >
+            {userImage ? (
+              <img src={userImage} alt={userName} className="w-8 h-8 rounded-full" />
+            ) : (
+              <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-bold">
+                {initial}
+              </div>
+            )}
+          </Link>
 
           {/* Right: XP */}
           <button

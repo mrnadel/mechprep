@@ -1,7 +1,7 @@
 'use client';
 
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { persist, subscribeWithSelector } from 'zustand/middleware';
 import { useShallow } from 'zustand/react/shallow';
 import type { Question, TopicId, Difficulty, UserProgress, SessionRecord, TopicProgress } from '@/data/types';
 import { seedProgress } from '@/data/seed-progress';
@@ -246,6 +246,7 @@ function updateTopicProgress(existing: TopicProgress[], questionTopicId: TopicId
 }
 
 export const useStore = create<AppState>()(
+  subscribeWithSelector(
   persist(
     (set, get) => ({
       progress: seedProgress,
@@ -465,7 +466,7 @@ export const useStore = create<AppState>()(
         };
       },
     }
-  )
+  ))
 );
 
 // --- Selectors for performance ---

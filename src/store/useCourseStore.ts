@@ -1,7 +1,7 @@
 'use client';
 
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { persist, subscribeWithSelector } from 'zustand/middleware';
 import { course } from '@/data/course';
 import type { CourseProgress, ActiveLesson, LessonResult } from '@/data/course/types';
 
@@ -68,6 +68,7 @@ function getPreviousLessonId(unitIndex: number, lessonIndex: number): string | n
 }
 
 export const useCourseStore = create<CourseState>()(
+  subscribeWithSelector(
   persist(
     (set, get) => ({
       progress: getDefaultProgress(),
@@ -251,5 +252,5 @@ export const useCourseStore = create<CourseState>()(
         };
       },
     }
-  )
+  ))
 );
