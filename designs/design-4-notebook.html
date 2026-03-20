@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechPrep — Engineering Lab Notebook</title>
+<style>
+  /* ── RESET & BASE ─────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:wght@600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+  :root {
+    --cream: #F5F0E1;
+    --paper: #F9F4E8;
+    --paper-dark: #EDE7D4;
+    --ink: #2C1810;
+    --ink-light: #5C4033;
+    --ink-faint: #8B7355;
+    --red: #C41E3A;
+    --red-light: #E8485A;
+    --blue: #1B4F9E;
+    --blue-light: #3B6FBE;
+    --pencil: #4A4A4A;
+    --rule-line: #C8BFA8;
+    --margin-line: #D4A0A0;
+    --tab-shadow: rgba(44, 24, 16, 0.15);
+    --coffee: rgba(139, 90, 43, 0.08);
+  }
+
+  body {
+    font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+    background: #D4C9B0;
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 12px 8px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NOTEBOOK SHELL ───────────────────────────────────── */
+  .notebook {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+    background: var(--paper);
+    position: relative;
+    border-radius: 2px 8px 8px 2px;
+    box-shadow:
+      -4px 0 0 #8B7355,
+      -6px 0 0 #A0926F,
+      -8px 0 0 #B5A882,
+      4px 4px 20px rgba(0,0,0,0.25),
+      inset 0 0 80px rgba(139, 115, 85, 0.05);
+    overflow: hidden;
+  }
+
+  /* Spiral binding holes */
+  .notebook::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 36px;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 34px,
+      var(--paper-dark) 34px,
+      var(--paper-dark) 36px,
+      transparent 36px,
+      transparent 44px,
+      #A09080 44px,
+      #A09080 48px,
+      transparent 48px,
+      transparent 56px
+    );
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  /* Ruled lines background */
+  .ruled-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 31px,
+        var(--rule-line) 31px,
+        var(--rule-line) 32px
+      );
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Red margin line */
+  .margin-line {
+    position: absolute;
+    left: 52px;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background: var(--margin-line);
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* ── COFFEE RING STAIN ────────────────────────────────── */
+  .coffee-ring {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 8px solid var(--coffee);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .coffee-ring-1 {
+    top: 180px;
+    right: 20px;
+    transform: rotate(-12deg);
+    border-width: 6px 10px 8px 5px;
+    background: radial-gradient(ellipse at center, rgba(139,90,43,0.03) 0%, transparent 70%);
+  }
+  .coffee-ring-2 {
+    bottom: 300px;
+    left: 15px;
+    width: 70px;
+    height: 70px;
+    transform: rotate(8deg);
+    border-width: 5px 7px 9px 4px;
+    opacity: 0.35;
+    background: radial-gradient(ellipse at center, rgba(139,90,43,0.02) 0%, transparent 70%);
+  }
+
+  /* ── PAPER CLIP ───────────────────────────────────────── */
+  .paper-clip {
+    position: absolute;
+    top: -8px;
+    right: 50px;
+    z-index: 10;
+    width: 30px;
+    height: 70px;
+    pointer-events: none;
+  }
+
+  /* ── HEADER ───────────────────────────────────────────── */
+  .header {
+    position: relative;
+    z-index: 3;
+    padding: 24px 20px 16px 60px;
+    border-bottom: 2px solid var(--rule-line);
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .logo {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--ink);
+    letter-spacing: -0.5px;
+    position: relative;
+  }
+  .logo::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--ink);
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  .header-stats {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .stat {
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink-light);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .stat-streak { color: var(--red); }
+  .stat-xp { color: var(--blue); }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--ink-light);
+    background: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .avatar:hover { transform: scale(1.1); }
+
+  .header-subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 15px;
+    color: var(--ink-faint);
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  /* ── DATE annotation ──────────────────────────────────── */
+  .date-annotation {
+    font-family: 'Caveat', cursive;
+    font-size: 13px;
+    color: var(--blue);
+    text-align: right;
+    padding: 4px 20px 0;
+    position: relative;
+    z-index: 3;
+    opacity: 0.7;
+  }
+
+  /* ── TAB NAVIGATION ───────────────────────────────────── */
+  .tabs-container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 8px;
+    gap: 0;
+    margin-top: 8px;
+  }
+
+  .tab {
+    font-family: 'Caveat', cursive;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 14px 6px;
+    border: 2px solid transparent;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    top: 2px;
+    background: var(--paper-dark);
+    color: var(--ink-faint);
+    white-space: nowrap;
+    user-select: none;
+  }
+  .tab:hover:not(.tab-active) {
+    background: var(--cream);
+    color: var(--ink-light);
+  }
+  .tab-active {
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--rule-line);
+    z-index: 6;
+    box-shadow: 0 -2px 4px var(--tab-shadow);
+  }
+
+  .tab-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+
+  .tab-divider {
+    position: relative;
+    z-index: 5;
+    height: 2px;
+    background: var(--rule-line);
+    margin: 0 8px;
+  }
+
+  /* ── CONTENT AREA ─────────────────────────────────────── */
+  .content-area {
+    position: relative;
+    z-index: 3;
+    padding: 12px 16px 30px 60px;
+    min-height: 500px;
+  }
+
+  /* ── UNIT PANEL ───────────────────────────────────────── */
+  .unit-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+  .unit-panel.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .unit-header {
+    margin-bottom: 16px;
+  }
+
+  .unit-title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 4px;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1.5px;
+  }
+
+  .unit-subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 15px;
+    color: var(--ink-faint);
+  }
+
+  /* ── PROGRESS THERMOMETER ─────────────────────────────── */
+  .thermometer {
+    margin: 16px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .thermo-body {
+    flex: 1;
+    height: 20px;
+    position: relative;
+  }
+
+  .thermo-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .thermo-label {
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink-light);
+    min-width: 40px;
+    text-align: right;
+  }
+
+  /* ── LESSON ITEMS ─────────────────────────────────────── */
+  .lesson-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .lesson-item {
+    position: relative;
+    padding: 10px 12px 10px 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .lesson-item:hover {
+    background: rgba(139, 115, 85, 0.06);
+  }
+
+  /* Sketchy border via SVG background */
+  .lesson-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1.5px solid var(--rule-line);
+    border-radius: 4px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* Checkbox area */
+  .lesson-check {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+  }
+
+  .lesson-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .lesson-title {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .lesson-xp {
+    font-family: 'Caveat', cursive;
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin-top: 1px;
+  }
+
+  .lesson-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+
+  /* ── COMPLETED STATE ──────────────────────────────────── */
+  .lesson-completed .lesson-title {
+    color: var(--ink-faint);
+    text-decoration: line-through;
+    text-decoration-color: var(--ink-faint);
+    text-decoration-thickness: 1px;
+  }
+
+  .lesson-completed::before {
+    border-color: transparent;
+    opacity: 0;
+  }
+
+  /* ── GRADED STAMP ─────────────────────────────────────── */
+  .graded-stamp {
+    display: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 10px;
+    color: var(--red);
+    border: 2px solid var(--red);
+    border-radius: 3px;
+    padding: 1px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: rotate(-6deg);
+    opacity: 0.7;
+    white-space: nowrap;
+  }
+  .lesson-completed .graded-stamp { display: block; }
+
+  /* ── CURRENT LESSON ───────────────────────────────────── */
+  .lesson-current {
+    background: rgba(27, 79, 158, 0.04);
+  }
+  .lesson-current::before {
+    border-color: var(--blue-light);
+    border-width: 2px;
+    opacity: 0.6;
+    border-style: dashed;
+  }
+
+  .current-arrow {
+    display: none;
+    font-family: 'Caveat', cursive;
+    font-size: 13px;
+    color: var(--blue);
+    font-weight: 700;
+    white-space: nowrap;
+    animation: nudge 1.5s ease-in-out infinite;
+  }
+  .lesson-current .current-arrow { display: flex; align-items: center; gap: 2px; }
+
+  @keyframes nudge {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+  }
+
+  /* ── LOCKED STATE ─────────────────────────────────────── */
+  .lesson-locked {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  .lesson-locked .lesson-title {
+    color: var(--ink-faint);
+  }
+  .lesson-locked::before {
+    border-style: dotted;
+    border-color: var(--ink-faint);
+    opacity: 0.3;
+  }
+
+  /* ── STARS ─────────────────────────────────────────────── */
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+  .star-svg { width: 16px; height: 16px; }
+
+  /* ── STICKY NOTE ──────────────────────────────────────── */
+  .sticky-note {
+    position: relative;
+    background: #FFF9C4;
+    padding: 12px 14px;
+    margin: 20px 0 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 15px;
+    color: var(--ink-light);
+    line-height: 1.4;
+    transform: rotate(-1.2deg);
+    box-shadow: 2px 3px 8px rgba(0,0,0,0.1);
+    z-index: 4;
+  }
+  .sticky-note::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 40px;
+    height: 10px;
+    background: rgba(200, 191, 168, 0.5);
+    border-radius: 0 0 2px 2px;
+    transform: translateY(-5px);
+  }
+  .sticky-note-blue {
+    background: #DBEAFE;
+    transform: rotate(0.8deg);
+  }
+  .sticky-note-blue::before { background: rgba(168, 185, 210, 0.5); }
+
+  /* ── MARGIN ANNOTATIONS ───────────────────────────────── */
+  .margin-note {
+    position: absolute;
+    left: -2px;
+    font-family: 'Caveat', cursive;
+    font-size: 11px;
+    color: var(--red);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 2;
+    letter-spacing: 1px;
+  }
+
+  /* ── DOODLE DECORATIONS ───────────────────────────────── */
+  .doodle {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.12;
+  }
+
+  /* ── LOCKED UNIT OVERLAY ──────────────────────────────── */
+  .locked-overlay {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .locked-overlay svg {
+    margin-bottom: 16px;
+    opacity: 0.4;
+  }
+  .locked-text {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: var(--ink-faint);
+  }
+  .locked-subtext {
+    font-family: 'Caveat', cursive;
+    font-size: 15px;
+    color: var(--ink-faint);
+    opacity: 0.6;
+    margin-top: 6px;
+  }
+
+  /* ── FOOTER ───────────────────────────────────────────── */
+  .notebook-footer {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 20px 16px 24px;
+    font-family: 'Caveat', cursive;
+    font-size: 13px;
+    color: var(--ink-faint);
+    opacity: 0.5;
+    border-top: 1px dashed var(--rule-line);
+    margin: 0 20px;
+  }
+
+  /* ── SCROLL ───────────────────────────────────────────── */
+  .notebook::-webkit-scrollbar { width: 6px; }
+  .notebook::-webkit-scrollbar-track { background: transparent; }
+  .notebook::-webkit-scrollbar-thumb { background: var(--rule-line); border-radius: 3px; }
+
+  /* ── CLICK RIPPLE ─────────────────────────────────────── */
+  .ink-splash {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
+    animation: splash 0.6s ease forwards;
+  }
+  @keyframes splash {
+    0% { transform: scale(1); opacity: 0.4; }
+    100% { transform: scale(20); opacity: 0; }
+  }
+
+  /* ── RESPONSIVE ───────────────────────────────────────── */
+  @media (max-width: 500px) {
+    body { padding: 0; }
+    .notebook {
+      border-radius: 0;
+      box-shadow: none;
+      min-height: 100vh;
+    }
+    .notebook::before { width: 28px; }
+    .content-area { padding-left: 48px; padding-right: 12px; }
+    .header { padding-left: 48px; }
+    .margin-line { left: 40px; }
+    .tab { font-size: 12px; padding: 6px 10px 5px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="notebook">
+  <!-- Background textures -->
+  <div class="ruled-bg"></div>
+  <div class="margin-line"></div>
+
+  <!-- Coffee ring stains -->
+  <div class="coffee-ring coffee-ring-1"></div>
+  <div class="coffee-ring coffee-ring-2"></div>
+
+  <!-- Paper clip SVG -->
+  <svg class="paper-clip" viewBox="0 0 30 70" fill="none">
+    <path d="M10 65 L10 12 Q10 4 18 4 Q26 4 26 12 L26 50 Q26 56 20 56 Q14 56 14 50 L14 18"
+          stroke="#A0A0A0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M10 65 L10 12 Q10 4 18 4 Q26 4 26 12 L26 50 Q26 56 20 56 Q14 56 14 50 L14 18"
+          stroke="#C0C0C0" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-dasharray="0" opacity="0.5"/>
+  </svg>
+
+  <!-- Doodle: small gear in corner -->
+  <svg class="doodle" style="bottom: 60px; right: 15px; width: 50px; height: 50px;" viewBox="0 0 50 50">
+    <path d="M25 10 L27 15 L32 13 L30 18 L35 20 L30 22 L32 27 L27 25 L25 30 L23 25 L18 27 L20 22 L15 20 L20 18 L18 13 L23 15 Z"
+          stroke="#2C1810" stroke-width="1.5" fill="none"/>
+    <circle cx="25" cy="20" r="4" stroke="#2C1810" stroke-width="1" fill="none"/>
+  </svg>
+
+  <!-- Doodle: spring sketch -->
+  <svg class="doodle" style="bottom: 180px; left: 8px; width: 30px; height: 80px;" viewBox="0 0 30 80">
+    <path d="M15 5 Q25 15 5 20 Q25 25 5 30 Q25 35 5 40 Q25 45 5 50 Q25 55 5 60 Q25 65 15 75"
+          stroke="#2C1810" stroke-width="1.2" fill="none"/>
+  </svg>
+
+  <!-- ════════ HEADER ════════ -->
+  <header class="header">
+    <div class="header-top">
+      <div class="logo">MechPrep</div>
+      <div class="header-stats">
+        <span class="stat stat-streak" title="Day streak">&#x1F525; 5</span>
+        <span class="stat stat-xp" title="Experience points">&#x270F;&#xFE0F; 1,240</span>
+        <div class="avatar" title="Profile">NM</div>
+      </div>
+    </div>
+    <div class="header-subtitle">Your personal engineering interview notebook</div>
+  </header>
+
+  <div class="date-annotation">March 20, 2026 &mdash; page 42</div>
+
+  <!-- ════════ TABS ════════ -->
+  <nav class="tabs-container">
+    <button class="tab tab-active" data-unit="1" onclick="switchUnit(1)">
+      <span class="tab-dot" style="background:#B45309;"></span>Ch.1
+    </button>
+    <button class="tab" data-unit="2" onclick="switchUnit(2)">
+      <span class="tab-dot" style="background:#1D4ED8;"></span>Ch.2
+    </button>
+    <button class="tab" data-unit="3" onclick="switchUnit(3)">
+      <span class="tab-dot" style="background:#6B7280;"></span>Ch.3
+    </button>
+  </nav>
+  <div class="tab-divider"></div>
+
+  <!-- ════════ CONTENT ════════ -->
+  <main class="content-area">
+
+    <!-- ──── UNIT 1: Statics & Equilibrium ──── -->
+    <section class="unit-panel active" id="unit-1">
+      <div class="margin-note" style="top: 30px;">IMPORTANT!</div>
+
+      <div class="unit-header">
+        <div class="unit-title" style="text-decoration-color: #B45309;">Statics &amp; Equilibrium</div>
+        <div class="unit-subtitle">Chapter 1 &bull; 8 lessons &bull; The foundation of all analysis</div>
+      </div>
+
+      <!-- Thermometer -->
+      <div class="thermometer">
+        <svg class="thermo-body" viewBox="0 0 300 24" preserveAspectRatio="none">
+          <!-- Sketchy outer border -->
+          <path d="M4 4 Q2 2 8 2 L290 3 Q298 2 296 6 L297 18 Q298 22 290 21 L8 22 Q2 22 4 18 Z"
+                stroke="#5C4033" stroke-width="1.5" fill="none" opacity="0.5"/>
+          <!-- Fill -->
+          <rect x="6" y="5" width="0" height="14" rx="2" fill="#B45309" opacity="0.6" class="thermo-fill" data-percent="62.5"/>
+          <!-- Tick marks -->
+          <line x1="75" y1="2" x2="75" y2="6" stroke="#8B7355" stroke-width="0.8" opacity="0.4"/>
+          <line x1="150" y1="2" x2="150" y2="6" stroke="#8B7355" stroke-width="0.8" opacity="0.4"/>
+          <line x1="225" y1="2" x2="225" y2="6" stroke="#8B7355" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+        <span class="thermo-label" style="color:#B45309;">5/8</span>
+      </div>
+
+      <ul class="lesson-list">
+        <li class="lesson-item lesson-completed" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <path d="M6 13 L10 17 L18 7" stroke="#2C6B10" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Free Body Diagrams</div>
+            <div class="lesson-xp">+20 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="stars">
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+            </div>
+            <div class="graded-stamp">A+</div>
+          </div>
+        </li>
+
+        <li class="lesson-item lesson-completed" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <path d="M6 13 L10 17 L18 7" stroke="#2C6B10" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Equilibrium Conditions (2D)</div>
+            <div class="lesson-xp">+25 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="stars">
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="none" stroke="#B45309" stroke-width="0.8" opacity="0.4"/></svg>
+            </div>
+            <div class="graded-stamp">A</div>
+          </div>
+        </li>
+
+        <li class="lesson-item lesson-completed" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <path d="M6 13 L10 17 L18 7" stroke="#2C6B10" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Support Reactions &amp; Constraints</div>
+            <div class="lesson-xp">+25 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="stars">
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+            </div>
+            <div class="graded-stamp">A+</div>
+          </div>
+        </li>
+
+        <li class="lesson-item lesson-completed" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <path d="M6 13 L10 17 L18 7" stroke="#2C6B10" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Trusses: Method of Joints</div>
+            <div class="lesson-xp">+30 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="stars">
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="none" stroke="#B45309" stroke-width="0.8" opacity="0.4"/></svg>
+            </div>
+            <div class="graded-stamp">B+</div>
+          </div>
+        </li>
+
+        <li class="lesson-item lesson-completed" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <path d="M6 13 L10 17 L18 7" stroke="#2C6B10" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Trusses: Method of Sections</div>
+            <div class="lesson-xp">+30 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="stars">
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#B45309" stroke="#B45309" stroke-width="0.8"/></svg>
+            </div>
+            <div class="graded-stamp">A</div>
+          </div>
+        </li>
+
+        <!-- CURRENT LESSON -->
+        <li class="lesson-item lesson-current" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#1D4ED8" stroke-width="1.8" fill="none" opacity="0.5" stroke-dasharray="3 2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Friction: Static &amp; Kinetic</div>
+            <div class="lesson-xp">+30 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="current-arrow">
+              <svg width="14" height="14" viewBox="0 0 14 14" style="margin-right:2px;">
+                <path d="M2 11 L5 2 L6 8 L12 5" stroke="#1B4F9E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 3 L12 5 L9 6" stroke="#1B4F9E" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              </svg>
+              next &rarr;
+            </div>
+          </div>
+        </li>
+
+        <li class="lesson-item" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.3"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Centroids &amp; Centers of Mass</div>
+            <div class="lesson-xp">+35 XP</div>
+          </div>
+          <div class="lesson-right"></div>
+        </li>
+
+        <li class="lesson-item" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.3"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Moments of Inertia</div>
+            <div class="lesson-xp">+35 XP</div>
+          </div>
+          <div class="lesson-right"></div>
+        </li>
+      </ul>
+
+      <div class="sticky-note">
+        <strong>Note to self:</strong> Review the parallel axis theorem before attempting Moments of Inertia. See Meriam & Kraige Ch.5.
+      </div>
+    </section>
+
+    <!-- ──── UNIT 2: Dynamics & Motion ──── -->
+    <section class="unit-panel" id="unit-2">
+      <div class="margin-note" style="top: 50px;">Review!</div>
+
+      <div class="unit-header">
+        <div class="unit-title" style="text-decoration-color: #1D4ED8;">Dynamics &amp; Motion</div>
+        <div class="unit-subtitle">Chapter 2 &bull; 7 lessons &bull; Things start moving!</div>
+      </div>
+
+      <!-- Thermometer -->
+      <div class="thermometer">
+        <svg class="thermo-body" viewBox="0 0 300 24" preserveAspectRatio="none">
+          <path d="M4 4 Q2 2 8 2 L290 3 Q298 2 296 6 L297 18 Q298 22 290 21 L8 22 Q2 22 4 18 Z"
+                stroke="#5C4033" stroke-width="1.5" fill="none" opacity="0.5"/>
+          <rect x="6" y="5" width="0" height="14" rx="2" fill="#1D4ED8" opacity="0.6" class="thermo-fill" data-percent="28.6"/>
+          <line x1="75" y1="2" x2="75" y2="6" stroke="#8B7355" stroke-width="0.8" opacity="0.4"/>
+          <line x1="150" y1="2" x2="150" y2="6" stroke="#8B7355" stroke-width="0.8" opacity="0.4"/>
+          <line x1="225" y1="2" x2="225" y2="6" stroke="#8B7355" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+        <span class="thermo-label" style="color:#1D4ED8;">2/7</span>
+      </div>
+
+      <ul class="lesson-list">
+        <li class="lesson-item lesson-completed" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <path d="M6 13 L10 17 L18 7" stroke="#2C6B10" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Kinematics of Particles</div>
+            <div class="lesson-xp">+25 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="stars">
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#1D4ED8" stroke="#1D4ED8" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#1D4ED8" stroke="#1D4ED8" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="none" stroke="#1D4ED8" stroke-width="0.8" opacity="0.4"/></svg>
+            </div>
+            <div class="graded-stamp">A</div>
+          </div>
+        </li>
+
+        <li class="lesson-item lesson-completed" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <path d="M6 13 L10 17 L18 7" stroke="#2C6B10" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Newton's Laws Applied</div>
+            <div class="lesson-xp">+25 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="stars">
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#1D4ED8" stroke="#1D4ED8" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#1D4ED8" stroke="#1D4ED8" stroke-width="0.8"/></svg>
+              <svg class="star-svg" viewBox="0 0 20 20"><path d="M10 2 L12.5 7.5 L18 8 L14 12 L15 18 L10 15 L5 18 L6 12 L2 8 L7.5 7.5 Z" fill="#1D4ED8" stroke="#1D4ED8" stroke-width="0.8"/></svg>
+            </div>
+            <div class="graded-stamp">A+</div>
+          </div>
+        </li>
+
+        <!-- CURRENT LESSON -->
+        <li class="lesson-item lesson-current" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#1D4ED8" stroke-width="1.8" fill="none" opacity="0.5" stroke-dasharray="3 2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Work &amp; Energy Methods</div>
+            <div class="lesson-xp">+30 XP</div>
+          </div>
+          <div class="lesson-right">
+            <div class="current-arrow">
+              <svg width="14" height="14" viewBox="0 0 14 14" style="margin-right:2px;">
+                <path d="M2 11 L5 2 L6 8 L12 5" stroke="#1B4F9E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 3 L12 5 L9 6" stroke="#1B4F9E" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              </svg>
+              next &rarr;
+            </div>
+          </div>
+        </li>
+
+        <li class="lesson-item" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.3"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Impulse &amp; Momentum</div>
+            <div class="lesson-xp">+30 XP</div>
+          </div>
+          <div class="lesson-right"></div>
+        </li>
+
+        <li class="lesson-item" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.3"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Rigid Body Kinematics</div>
+            <div class="lesson-xp">+35 XP</div>
+          </div>
+          <div class="lesson-right"></div>
+        </li>
+
+        <li class="lesson-item" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.3"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Rigid Body Kinetics</div>
+            <div class="lesson-xp">+35 XP</div>
+          </div>
+          <div class="lesson-right"></div>
+        </li>
+
+        <li class="lesson-item" onclick="ripple(event)">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.3"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Vibrations: Free &amp; Forced</div>
+            <div class="lesson-xp">+40 XP</div>
+          </div>
+          <div class="lesson-right"></div>
+        </li>
+      </ul>
+
+      <div class="sticky-note sticky-note-blue">
+        <strong>Interview tip:</strong> Energy methods are the fastest way to solve dynamics problems under time pressure. Practice conservation of energy shortcuts!
+      </div>
+    </section>
+
+    <!-- ──── UNIT 3: Strength of Materials (Locked) ──── -->
+    <section class="unit-panel" id="unit-3">
+      <div class="unit-header">
+        <div class="unit-title" style="text-decoration-color: #6B7280; opacity: 0.5;">Strength of Materials</div>
+        <div class="unit-subtitle" style="opacity: 0.5;">Chapter 3 &bull; 9 lessons &bull; Complete Ch.1 &amp; Ch.2 to unlock</div>
+      </div>
+
+      <div class="locked-overlay">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <!-- Hand-drawn lock -->
+          <path d="M20 28 Q18 28 18 30 L17 52 Q17 56 21 56 L43 56 Q47 56 47 52 L46 30 Q46 28 44 28 Z"
+                stroke="#6B7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M24 28 L24 20 Q24 10 32 10 Q40 10 40 20 L40 28"
+                stroke="#6B7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="32" cy="40" r="4" stroke="#6B7280" stroke-width="2" fill="none"/>
+          <line x1="32" y1="44" x2="32" y2="49" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="locked-text">This chapter is locked</div>
+        <div class="locked-subtext">Complete Statics &amp; Dynamics first</div>
+      </div>
+
+      <ul class="lesson-list">
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Stress &amp; Strain Basics</div>
+            <div class="lesson-xp">+25 XP</div>
+          </div>
+        </li>
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Axial Loading &amp; Deformation</div>
+            <div class="lesson-xp">+25 XP</div>
+          </div>
+        </li>
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Torsion of Circular Shafts</div>
+            <div class="lesson-xp">+30 XP</div>
+          </div>
+        </li>
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Beam Bending: SFD &amp; BMD</div>
+            <div class="lesson-xp">+35 XP</div>
+          </div>
+        </li>
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Bending Stress Distribution</div>
+            <div class="lesson-xp">+35 XP</div>
+          </div>
+        </li>
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Transverse Shear Stress</div>
+            <div class="lesson-xp">+35 XP</div>
+          </div>
+        </li>
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Combined Loading &amp; Mohr's Circle</div>
+            <div class="lesson-xp">+40 XP</div>
+          </div>
+        </li>
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Beam Deflection Methods</div>
+            <div class="lesson-xp">+40 XP</div>
+          </div>
+        </li>
+        <li class="lesson-item lesson-locked">
+          <svg class="lesson-check" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#8B7355" stroke-width="1" fill="none" opacity="0.2"/>
+          </svg>
+          <div class="lesson-info">
+            <div class="lesson-title">Column Buckling &amp; Stability</div>
+            <div class="lesson-xp">+45 XP</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sticky-note" style="transform: rotate(0.5deg);">
+        <strong>Reminder:</strong> This is the most asked-about topic in ME interviews. Worth spending extra time here when it unlocks!
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="notebook-footer">
+    page 42 of many &bull; keep going, you've got this
+  </footer>
+</div>
+
+<script>
+  // ──── Tab switching ────
+  function switchUnit(num) {
+    // Update tabs
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('tab-active'));
+    document.querySelector(`.tab[data-unit="${num}"]`).classList.add('tab-active');
+
+    // Update panels
+    document.querySelectorAll('.unit-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById(`unit-${num}`).classList.add('active');
+
+    // Animate thermometer for the visible panel
+    setTimeout(animateThermometers, 50);
+  }
+
+  // ──── Thermometer animation ────
+  function animateThermometers() {
+    document.querySelectorAll('.unit-panel.active .thermo-fill').forEach(fill => {
+      const pct = parseFloat(fill.dataset.percent);
+      const maxW = 288; // inner width
+      const targetW = (pct / 100) * maxW;
+      fill.setAttribute('width', '0');
+
+      let start = null;
+      const duration = 600;
+      function step(ts) {
+        if (!start) start = ts;
+        const progress = Math.min((ts - start) / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        fill.setAttribute('width', String(eased * targetW));
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  // ──── Ink ripple on click ────
+  function ripple(e) {
+    const item = e.currentTarget;
+    if (item.classList.contains('lesson-locked')) return;
+
+    const rect = item.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const splash = document.createElement('div');
+    splash.className = 'ink-splash';
+    splash.style.left = x + 'px';
+    splash.style.top = y + 'px';
+    item.style.position = 'relative';
+    item.appendChild(splash);
+
+    setTimeout(() => splash.remove(), 600);
+  }
+
+  // ──── Initialize on load ────
+  window.addEventListener('DOMContentLoaded', () => {
+    // Small delay for a nice entrance
+    setTimeout(animateThermometers, 300);
+
+    // Stagger lesson items entrance
+    document.querySelectorAll('.unit-panel.active .lesson-item').forEach((item, i) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(8px)';
+      item.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+      setTimeout(() => {
+        item.style.opacity = '';
+        item.style.transform = '';
+      }, 150 + i * 60);
+    });
+  });
+
+  // Animate lessons when switching tabs
+  const origSwitch = switchUnit;
+  switchUnit = function(num) {
+    origSwitch(num);
+    setTimeout(() => {
+      document.querySelectorAll(`#unit-${num} .lesson-item`).forEach((item, i) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(8px)';
+        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        setTimeout(() => {
+          item.style.opacity = '';
+          item.style.transform = '';
+        }, 80 + i * 50);
+      });
+    }, 10);
+  };
+</script>
+</body>
+</html>

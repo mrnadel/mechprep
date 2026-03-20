@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>MechPrep — RPG Skill Tree</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --bg:#0f1117;
+    --bg2:#181b24;
+    --bg3:#1e2130;
+    --ember:#f97316;
+    --ember-dim:#b45309;
+    --arcane:#7c3aed;
+    --arcane-blue:#3b82f6;
+    --gold:#fbbf24;
+    --gold-dim:#92700c;
+    --text:#e2e8f0;
+    --text-dim:#64748b;
+    --branch-statics:#3B82F6;
+    --branch-dynamics:#8B5CF6;
+    --branch-strength:#F59E0B;
+    --card-bg:rgba(30,33,48,0.85);
+    --border-rune:rgba(251,191,36,0.15);
+  }
+
+  html{font-size:16px}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* ── Particle canvas ── */
+  #particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+
+  /* ── App wrapper ── */
+  .app{
+    position:relative;z-index:1;
+    max-width:480px;margin:0 auto;
+    min-height:100vh;
+    background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 40%,var(--bg) 100%);
+    border-left:1px solid var(--border-rune);
+    border-right:1px solid var(--border-rune);
+    overflow:hidden;
+  }
+
+  /* ── Rune border overlay ── */
+  .app::before{
+    content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+    background:
+      repeating-linear-gradient(0deg,transparent,transparent 98px,rgba(251,191,36,0.04) 98px,rgba(251,191,36,0.04) 100px),
+      repeating-linear-gradient(90deg,transparent,transparent 98px,rgba(251,191,36,0.04) 98px,rgba(251,191,36,0.04) 100px);
+    pointer-events:none;z-index:0;
+  }
+
+  /* ── Header ── */
+  .header{
+    position:relative;z-index:2;
+    padding:16px 16px 12px;
+    background:linear-gradient(180deg,rgba(15,17,23,0.98) 0%,rgba(15,17,23,0.8) 100%);
+    border-bottom:1px solid var(--border-rune);
+  }
+  .header-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+
+  .avatar{
+    width:48px;height:48px;border-radius:50%;
+    border:2px solid var(--gold);
+    background:linear-gradient(135deg,var(--arcane),var(--arcane-blue));
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;position:relative;flex-shrink:0;
+    box-shadow:0 0 12px rgba(251,191,36,0.3);
+  }
+  .avatar-level{
+    position:absolute;bottom:-4px;right:-4px;
+    background:linear-gradient(135deg,var(--gold),var(--ember));
+    color:#0f1117;font-size:10px;font-weight:900;
+    width:22px;height:22px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    border:2px solid var(--bg);
+    font-family:'Cinzel',serif;
+  }
+
+  .header-info{flex:1;min-width:0}
+  .header-title{
+    font-family:'Cinzel',serif;font-weight:900;font-size:22px;
+    background:linear-gradient(90deg,var(--gold),var(--ember),var(--gold));
+    background-size:200% 100%;
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;
+    animation:shimmer 3s ease-in-out infinite;
+    letter-spacing:2px;line-height:1.2;
+  }
+  @keyframes shimmer{
+    0%,100%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+  }
+  .header-subtitle{font-size:11px;color:var(--text-dim);margin-top:2px;letter-spacing:0.5px}
+
+  .header-stats{display:flex;align-items:center;gap:6px;flex-shrink:0}
+  .streak-badge{
+    display:flex;align-items:center;gap:3px;
+    background:linear-gradient(135deg,rgba(249,115,22,0.2),rgba(249,115,22,0.05));
+    border:1px solid rgba(249,115,22,0.3);
+    border-radius:20px;padding:4px 10px;
+    font-size:13px;font-weight:700;color:var(--ember);
+    animation:pulse-glow 2s ease-in-out infinite;
+  }
+  @keyframes pulse-glow{
+    0%,100%{box-shadow:0 0 8px rgba(249,115,22,0.2)}
+    50%{box-shadow:0 0 16px rgba(249,115,22,0.4)}
+  }
+
+  /* XP Bar */
+  .xp-section{position:relative;z-index:2;margin-top:4px}
+  .xp-label{display:flex;justify-content:space-between;font-size:10px;color:var(--text-dim);margin-bottom:4px;padding:0 2px}
+  .xp-label span:last-child{color:var(--gold);font-weight:600}
+  .xp-bar-bg{
+    height:10px;border-radius:5px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(251,191,36,0.12);
+    overflow:hidden;position:relative;
+  }
+  .xp-bar-fill{
+    height:100%;border-radius:5px;
+    background:linear-gradient(90deg,var(--ember-dim),var(--gold),var(--ember));
+    background-size:200% 100%;
+    animation:xp-flow 2s linear infinite;
+    width:62%;transition:width 0.8s ease;
+    position:relative;
+  }
+  .xp-bar-fill::after{
+    content:'';position:absolute;top:0;right:0;bottom:0;left:0;
+    background:linear-gradient(90deg,transparent 60%,rgba(255,255,255,0.3) 80%,transparent 100%);
+    animation:xp-shine 2s ease-in-out infinite;
+  }
+  @keyframes xp-flow{0%{background-position:200% 0}100%{background-position:0% 0}}
+  @keyframes xp-shine{0%,100%{opacity:0}50%{opacity:1}}
+
+  /* ── Section Title ── */
+  .section-title{
+    position:relative;z-index:2;
+    text-align:center;padding:20px 16px 8px;
+    font-family:'Cinzel',serif;font-size:14px;font-weight:700;
+    color:var(--text-dim);letter-spacing:3px;text-transform:uppercase;
+  }
+  .section-title::before,.section-title::after{
+    content:'';position:absolute;top:50%;height:1px;width:60px;
+    background:linear-gradient(90deg,transparent,var(--border-rune),transparent);
+  }
+  .section-title::before{right:calc(50% + 80px)}
+  .section-title::after{left:calc(50% + 80px)}
+
+  /* ── Skill Branches ── */
+  .branches{position:relative;z-index:2;padding:8px 12px 24px}
+
+  .branch{
+    margin-bottom:16px;
+    border:1px solid var(--border-rune);
+    border-radius:16px;
+    background:var(--card-bg);
+    overflow:hidden;
+    transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+    cursor:pointer;
+    backdrop-filter:blur(8px);
+  }
+  .branch:hover{border-color:rgba(251,191,36,0.3)}
+  .branch.active{border-color:rgba(251,191,36,0.4)}
+
+  .branch-header{
+    padding:16px;display:flex;align-items:center;gap:12px;
+    position:relative;
+  }
+  .branch-header::after{
+    content:'';position:absolute;bottom:0;left:16px;right:16px;
+    height:1px;background:linear-gradient(90deg,transparent,var(--border-rune),transparent);
+  }
+
+  .branch-icon{
+    width:44px;height:44px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;flex-shrink:0;position:relative;
+  }
+  .branch-icon::before{
+    content:'';position:absolute;inset:-2px;border-radius:14px;
+    border:1px solid transparent;
+    background:linear-gradient(135deg,rgba(255,255,255,0.1),transparent) border-box;
+    -webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;
+  }
+
+  .branch-info{flex:1;min-width:0}
+  .branch-name{
+    font-family:'Cinzel',serif;font-weight:700;font-size:15px;
+    color:var(--text);letter-spacing:0.5px;
+  }
+  .branch-meta{display:flex;align-items:center;gap:8px;margin-top:4px;font-size:11px;color:var(--text-dim)}
+  .branch-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-dim)}
+
+  .branch-progress{
+    width:40px;height:40px;position:relative;flex-shrink:0;
+  }
+  .branch-progress svg{transform:rotate(-90deg)}
+  .branch-progress-text{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-size:11px;font-weight:700;font-family:'Cinzel',serif;
+  }
+
+  .branch-expand{
+    font-size:18px;color:var(--text-dim);transition:transform 0.3s;flex-shrink:0;
+  }
+  .branch.active .branch-expand{transform:rotate(180deg)}
+
+  /* ── Skill Tree (expanded content) ── */
+  .skill-tree{
+    max-height:0;overflow:hidden;
+    transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+  .branch.active .skill-tree{max-height:2000px}
+
+  .tree-container{padding:16px 8px 20px;position:relative}
+
+  /* SVG connection lines */
+  .tree-svg{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+
+  .skill-nodes{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:0}
+
+  .skill-row{
+    display:flex;justify-content:center;align-items:center;
+    width:100%;position:relative;
+    margin-bottom:8px;
+  }
+
+  .skill-node{
+    position:relative;
+    width:72px;height:72px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .skill-node:hover{transform:scale(1.1)}
+
+  .hex-outer{position:absolute;inset:0}
+  .hex-inner{
+    position:absolute;inset:4px;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    z-index:1;
+  }
+  .hex-icon{font-size:18px;line-height:1}
+  .hex-rank{font-size:8px;margin-top:1px;font-weight:700}
+
+  .skill-label{
+    position:absolute;top:100%;left:50%;transform:translateX(-50%);
+    margin-top:2px;
+    font-size:8px;font-weight:600;color:var(--text-dim);
+    white-space:nowrap;text-align:center;
+    letter-spacing:0.3px;
+    max-width:80px;overflow:hidden;text-overflow:ellipsis;
+  }
+
+  /* Node states */
+  .skill-node.mastered .hex-rank{color:var(--gold)}
+  .skill-node.current{animation:node-pulse 2s ease-in-out infinite}
+  @keyframes node-pulse{
+    0%,100%{filter:drop-shadow(0 0 4px rgba(251,191,36,0.3))}
+    50%{filter:drop-shadow(0 0 12px rgba(251,191,36,0.6))}
+  }
+  .skill-node.locked{opacity:0.4;cursor:default}
+  .skill-node.locked:hover{transform:none}
+
+  /* ── Node Detail Tooltip ── */
+  .node-detail{
+    display:none;
+    position:fixed;z-index:100;
+    background:linear-gradient(135deg,rgba(30,33,48,0.98),rgba(15,17,23,0.98));
+    border:1px solid var(--border-rune);
+    border-radius:12px;padding:14px 16px;
+    min-width:200px;max-width:260px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.6);
+    backdrop-filter:blur(12px);
+  }
+  .node-detail.show{display:block}
+  .node-detail-title{
+    font-family:'Cinzel',serif;font-weight:700;font-size:13px;
+    margin-bottom:6px;
+  }
+  .node-detail-desc{font-size:11px;color:var(--text-dim);margin-bottom:8px;line-height:1.4}
+  .node-detail-stats{display:flex;gap:12px;font-size:10px}
+  .node-detail-stat{display:flex;align-items:center;gap:4px}
+  .node-detail-stat .label{color:var(--text-dim)}
+  .node-detail-stat .value{font-weight:700;color:var(--gold)}
+
+  /* ── Bottom Nav ── */
+  .bottom-nav{
+    position:sticky;bottom:0;z-index:10;
+    background:linear-gradient(180deg,transparent,var(--bg) 20%);
+    padding:12px 16px 16px;
+    display:flex;justify-content:space-around;
+  }
+  .nav-item{
+    display:flex;flex-direction:column;align-items:center;gap:4px;
+    font-size:10px;color:var(--text-dim);cursor:pointer;
+    transition:color 0.2s;position:relative;
+  }
+  .nav-item.active{color:var(--gold)}
+  .nav-item.active::before{
+    content:'';position:absolute;top:-8px;
+    width:24px;height:2px;border-radius:1px;
+    background:var(--gold);
+  }
+  .nav-icon{font-size:20px}
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar{width:4px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:rgba(251,191,36,0.2);border-radius:2px}
+
+  /* ── Locked branch overlay ── */
+  .branch.locked-branch{opacity:0.65}
+  .branch.locked-branch .branch-header{cursor:pointer}
+  .lock-overlay{
+    display:none;position:absolute;inset:0;
+    background:rgba(15,17,23,0.5);
+    border-radius:16px;z-index:5;
+    align-items:center;justify-content:center;
+    font-size:28px;
+    backdrop-filter:blur(1px);
+  }
+  .branch.locked-branch .lock-overlay{display:flex}
+
+  /* ── Ambient background runes ── */
+  .rune-bg{
+    position:fixed;top:0;left:0;width:100%;height:100%;
+    z-index:0;pointer-events:none;opacity:0.03;
+  }
+</style>
+</head>
+<body>
+
+<!-- Particle Canvas -->
+<canvas id="particles"></canvas>
+
+<!-- Background rune SVG -->
+<svg class="rune-bg" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="runePattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="50" cy="50" r="30" fill="none" stroke="#fbbf24" stroke-width="0.5"/>
+      <polygon points="50,20 65,40 65,60 50,80 35,60 35,40" fill="none" stroke="#fbbf24" stroke-width="0.3"/>
+      <line x1="20" y1="50" x2="80" y2="50" stroke="#fbbf24" stroke-width="0.2"/>
+      <line x1="50" y1="20" x2="50" y2="80" stroke="#fbbf24" stroke-width="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#runePattern)"/>
+</svg>
+
+<div class="app" id="app">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <div class="header-top">
+      <div class="avatar">
+        <span>&#9876;</span>
+        <div class="avatar-level">12</div>
+      </div>
+      <div class="header-info">
+        <div class="header-title">MechPrep</div>
+        <div class="header-subtitle">Mechanical Engineer &middot; Skill Tree</div>
+      </div>
+      <div class="header-stats">
+        <div class="streak-badge">&#128293;&times;5</div>
+      </div>
+    </div>
+    <div class="xp-section">
+      <div class="xp-label">
+        <span>EXPERIENCE</span>
+        <span>1,240 / 2,000 XP</span>
+      </div>
+      <div class="xp-bar-bg">
+        <div class="xp-bar-fill" id="xpFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Skill Branches</div>
+
+  <!-- ── BRANCHES ── -->
+  <div class="branches" id="branches">
+
+    <!-- ═══ BRANCH 1: Statics ═══ -->
+    <div class="branch" data-branch="statics" onclick="toggleBranch(this)">
+      <div class="branch-header">
+        <div class="branch-icon" style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(59,130,246,0.05))">
+          &#9878;
+        </div>
+        <div class="branch-info">
+          <div class="branch-name" style="color:#93c5fd">Statics &amp; Equilibrium</div>
+          <div class="branch-meta">
+            <span>5 / 8 mastered</span>
+            <span class="dot"></span>
+            <span>480 XP earned</span>
+          </div>
+        </div>
+        <div class="branch-progress">
+          <svg width="40" height="40" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="16" fill="none" stroke="rgba(59,130,246,0.15)" stroke-width="3"/>
+            <circle cx="20" cy="20" r="16" fill="none" stroke="#3B82F6" stroke-width="3"
+              stroke-dasharray="100.53" stroke-dashoffset="37.7" stroke-linecap="round"/>
+          </svg>
+          <div class="branch-progress-text" style="color:#93c5fd">63%</div>
+        </div>
+        <div class="branch-expand">&#9662;</div>
+      </div>
+
+      <div class="skill-tree">
+        <div class="tree-container" id="statics-tree">
+          <svg class="tree-svg" id="statics-svg"></svg>
+          <div class="skill-nodes" id="statics-nodes"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ BRANCH 2: Dynamics ═══ -->
+    <div class="branch" data-branch="dynamics" onclick="toggleBranch(this)">
+      <div class="branch-header">
+        <div class="branch-icon" style="background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(139,92,246,0.05))">
+          &#9881;
+        </div>
+        <div class="branch-info">
+          <div class="branch-name" style="color:#c4b5fd">Dynamics &amp; Motion</div>
+          <div class="branch-meta">
+            <span>2 / 7 mastered</span>
+            <span class="dot"></span>
+            <span>160 XP earned</span>
+          </div>
+        </div>
+        <div class="branch-progress">
+          <svg width="40" height="40" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="16" fill="none" stroke="rgba(139,92,246,0.15)" stroke-width="3"/>
+            <circle cx="20" cy="20" r="16" fill="none" stroke="#8B5CF6" stroke-width="3"
+              stroke-dasharray="100.53" stroke-dashoffset="71.8" stroke-linecap="round"/>
+          </svg>
+          <div class="branch-progress-text" style="color:#c4b5fd">29%</div>
+        </div>
+        <div class="branch-expand">&#9662;</div>
+      </div>
+
+      <div class="skill-tree">
+        <div class="tree-container" id="dynamics-tree">
+          <svg class="tree-svg" id="dynamics-svg"></svg>
+          <div class="skill-nodes" id="dynamics-nodes"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ BRANCH 3: Strength of Materials ═══ -->
+    <div class="branch locked-branch" data-branch="strength" onclick="toggleBranch(this)">
+      <div class="lock-overlay">&#128274;</div>
+      <div class="branch-header">
+        <div class="branch-icon" style="background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(245,158,11,0.05))">
+          &#128296;
+        </div>
+        <div class="branch-info">
+          <div class="branch-name" style="color:#fcd34d">Strength of Materials</div>
+          <div class="branch-meta">
+            <span>0 / 9 mastered</span>
+            <span class="dot"></span>
+            <span>Locked</span>
+          </div>
+        </div>
+        <div class="branch-progress">
+          <svg width="40" height="40" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="16" fill="none" stroke="rgba(245,158,11,0.1)" stroke-width="3"/>
+          </svg>
+          <div class="branch-progress-text" style="color:#fcd34d">0%</div>
+        </div>
+        <div class="branch-expand">&#9662;</div>
+      </div>
+
+      <div class="skill-tree">
+        <div class="tree-container" id="strength-tree">
+          <svg class="tree-svg" id="strength-svg"></svg>
+          <div class="skill-nodes" id="strength-nodes"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── BOTTOM NAV ── -->
+  <div class="bottom-nav">
+    <div class="nav-item active">
+      <span class="nav-icon">&#127795;</span>
+      <span>Skill Tree</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">&#9876;</span>
+      <span>Quests</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">&#127942;</span>
+      <span>Arena</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">&#128100;</span>
+      <span>Profile</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Node Detail Tooltip -->
+<div class="node-detail" id="nodeDetail">
+  <div class="node-detail-title" id="ndTitle"></div>
+  <div class="node-detail-desc" id="ndDesc"></div>
+  <div class="node-detail-stats">
+    <div class="node-detail-stat"><span class="label">XP:</span><span class="value" id="ndXP"></span></div>
+    <div class="node-detail-stat"><span class="label">Rank:</span><span class="value" id="ndRank"></span></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════
+//  DATA
+// ══════════════════════════════════════
+const branchData = {
+  statics: {
+    color: '#3B82F6',
+    glowColor: 'rgba(59,130,246,0.5)',
+    dimColor: 'rgba(59,130,246,0.12)',
+    skills: [
+      { id:'s1', name:'Free Body Diagrams',   icon:'&#9998;',  state:'mastered', rank:'gold',   xp:80,  desc:'Isolate bodies and identify all forces acting on them.' },
+      { id:'s2', name:'Force Vectors',         icon:'&#10140;', state:'mastered', rank:'gold',   xp:80,  desc:'Resolve forces into components, addition of vector quantities.' },
+      { id:'s3', name:'Moment of a Force',     icon:'&#8635;',  state:'mastered', rank:'silver', xp:100, desc:'Calculate moments about a point, couple moments.' },
+      { id:'s4', name:'2D Equilibrium',        icon:'&#9878;',  state:'mastered', rank:'gold',   xp:100, desc:'Apply equilibrium equations to 2D rigid bodies.' },
+      { id:'s5', name:'3D Equilibrium',        icon:'&#127760;',state:'mastered', rank:'silver', xp:120, desc:'Extend equilibrium analysis to three dimensions.' },
+      { id:'s6', name:'Trusses',               icon:'&#9650;',  state:'current',  rank:'none',   xp:120, desc:'Method of joints and sections for truss analysis.' },
+      { id:'s7', name:'Frames & Machines',     icon:'&#9881;',  state:'available',rank:'none',   xp:140, desc:'Multi-force member analysis in frames.' },
+      { id:'s8', name:'Distributed Loads',     icon:'&#9604;',  state:'locked',   rank:'none',   xp:140, desc:'Equivalent concentrated forces from distributed loads.' },
+    ],
+    layout: [[0],[1,2],[3],[4,5],[6],[7]]
+  },
+  dynamics: {
+    color: '#8B5CF6',
+    glowColor: 'rgba(139,92,246,0.5)',
+    dimColor: 'rgba(139,92,246,0.12)',
+    skills: [
+      { id:'d1', name:'Kinematics',           icon:'&#10548;', state:'mastered', rank:'gold',   xp:80,  desc:'Describe motion without reference to forces.' },
+      { id:'d2', name:"Newton's Laws",        icon:'&#9889;',  state:'mastered', rank:'silver', xp:80,  desc:'Apply fundamental laws of classical mechanics.' },
+      { id:'d3', name:'Work & Energy',        icon:'&#9889;',  state:'current',  rank:'none',   xp:100, desc:'Work-energy theorem, conservation of energy.' },
+      { id:'d4', name:'Impulse & Momentum',   icon:'&#128165;',state:'available',rank:'none',   xp:100, desc:'Linear impulse-momentum, conservation of momentum.' },
+      { id:'d5', name:'Rigid Body Kinematics',icon:'&#128260;',state:'locked',   rank:'none',   xp:120, desc:'Rotation, translation, and general planar motion.' },
+      { id:'d6', name:'Rigid Body Kinetics',  icon:'&#9881;',  state:'locked',   rank:'none',   xp:140, desc:'Force, mass, and acceleration of rigid bodies.' },
+      { id:'d7', name:'Vibrations Intro',     icon:'&#12336;', state:'locked',   rank:'none',   xp:140, desc:'Free and forced vibration of single DOF systems.' },
+    ],
+    layout: [[0],[1],[2,3],[4],[5,6]]
+  },
+  strength: {
+    color: '#F59E0B',
+    glowColor: 'rgba(245,158,11,0.5)',
+    dimColor: 'rgba(245,158,11,0.12)',
+    skills: [
+      { id:'m1', name:'Stress & Strain',       icon:'&#8596;',  state:'locked', rank:'none', xp:80,  desc:'Normal and shear stress, engineering strain.' },
+      { id:'m2', name:'Axial Loading',          icon:'&#8597;',  state:'locked', rank:'none', xp:80,  desc:'Deformation of axially loaded members.' },
+      { id:'m3', name:'Torsion',                icon:'&#128260;',state:'locked', rank:'none', xp:100, desc:'Shear stress and angle of twist in shafts.' },
+      { id:'m4', name:'Beam Bending',           icon:'&#128208;',state:'locked', rank:'none', xp:100, desc:'Flexure formula, bending stress distribution.' },
+      { id:'m5', name:'Shear in Beams',         icon:'&#10006;', state:'locked', rank:'none', xp:120, desc:'Transverse shear stress in beams.' },
+      { id:'m6', name:'Beam Deflection',        icon:'&#8681;',  state:'locked', rank:'none', xp:120, desc:'Integration and superposition methods.' },
+      { id:'m7', name:'Combined Loading',       icon:'&#10010;', state:'locked', rank:'none', xp:140, desc:'Superposition of axial, torsion, and bending.' },
+      { id:'m8', name:"Mohr's Circle",          icon:'&#9711;',  state:'locked', rank:'none', xp:140, desc:'Stress transformation graphical method.' },
+      { id:'m9', name:'Buckling',               icon:'&#8607;',  state:'locked', rank:'none', xp:160, desc:"Euler's formula, column stability analysis." },
+    ],
+    layout: [[0],[1,2],[3],[4,5],[6],[7,8]]
+  }
+};
+
+// ══════════════════════════════════════
+//  HEX SVG GENERATOR
+// ══════════════════════════════════════
+function hexPath(cx, cy, r) {
+  const pts = [];
+  for (let i = 0; i < 6; i++) {
+    const angle = (Math.PI / 3) * i - Math.PI / 6;
+    pts.push(`${cx + r * Math.cos(angle)},${cy + r * Math.sin(angle)}`);
+  }
+  return `M${pts.join('L')}Z`;
+}
+
+function createHexSVG(size, state, color, glowColor, dimColor) {
+  const s = size;
+  const r = s / 2 - 2;
+  const cx = s / 2, cy = s / 2;
+
+  let fillColor, strokeColor, strokeW, filterStr = '';
+  if (state === 'mastered') {
+    fillColor = color + '22';
+    strokeColor = color;
+    strokeW = 2;
+    filterStr = `filter="drop-shadow(0 0 6px ${glowColor})"`;
+  } else if (state === 'current') {
+    fillColor = 'rgba(251,191,36,0.1)';
+    strokeColor = '#fbbf24';
+    strokeW = 2.5;
+    filterStr = `filter="drop-shadow(0 0 8px rgba(251,191,36,0.5))"`;
+  } else if (state === 'available') {
+    fillColor = dimColor;
+    strokeColor = color + '66';
+    strokeW = 1.5;
+  } else {
+    fillColor = 'rgba(255,255,255,0.03)';
+    strokeColor = 'rgba(255,255,255,0.1)';
+    strokeW = 1;
+  }
+
+  return `<svg width="${s}" height="${s}" viewBox="0 0 ${s} ${s}" ${filterStr}>
+    <path d="${hexPath(cx, cy, r)}" fill="${fillColor}" stroke="${strokeColor}" stroke-width="${strokeW}"/>
+    ${state === 'mastered' ? `<path d="${hexPath(cx, cy, r - 5)}" fill="none" stroke="${color}33" stroke-width="0.5"/>` : ''}
+  </svg>`;
+}
+
+function rankIcon(rank) {
+  if (rank === 'gold') return '<span style="color:#fbbf24;font-size:10px">&#9733;</span>';
+  if (rank === 'silver') return '<span style="color:#94a3b8;font-size:10px">&#9733;</span>';
+  if (rank === 'bronze') return '<span style="color:#d97706;font-size:10px">&#9733;</span>';
+  return '';
+}
+
+// ══════════════════════════════════════
+//  RENDER SKILL TREE
+// ══════════════════════════════════════
+function renderTree(branchKey) {
+  const data = branchData[branchKey];
+  const nodesEl = document.getElementById(branchKey + '-nodes');
+  const svgEl = document.getElementById(branchKey + '-svg');
+  nodesEl.innerHTML = '';
+
+  const nodeSize = 72;
+  const rowGap = 56;
+  const colGap = 88;
+  const nodePositions = {};
+
+  data.layout.forEach((rowIndices, rowIdx) => {
+    const rowDiv = document.createElement('div');
+    rowDiv.className = 'skill-row';
+    rowDiv.style.marginBottom = rowIdx < data.layout.length - 1 ? rowGap + 'px' : '0';
+
+    const totalWidth = rowIndices.length * nodeSize + (rowIndices.length - 1) * (colGap - nodeSize);
+
+    rowIndices.forEach((skillIdx, colIdx) => {
+      const skill = data.skills[skillIdx];
+      const nodeDiv = document.createElement('div');
+      nodeDiv.className = `skill-node ${skill.state}`;
+      nodeDiv.style.margin = `0 ${(colGap - nodeSize) / 2}px`;
+      nodeDiv.setAttribute('data-skill', JSON.stringify(skill));
+      nodeDiv.setAttribute('data-branch-key', branchKey);
+
+      nodeDiv.innerHTML = `
+        <div class="hex-outer">${createHexSVG(nodeSize, skill.state, data.color, data.glowColor, data.dimColor)}</div>
+        <div class="hex-inner">
+          <span class="hex-icon">${skill.icon}</span>
+          <span class="hex-rank">${rankIcon(skill.rank)}</span>
+        </div>
+        <div class="skill-label">${skill.name}</div>
+      `;
+
+      nodeDiv.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showNodeDetail(skill, e, data.color);
+      });
+
+      rowDiv.appendChild(nodeDiv);
+
+      const x = colIdx * colGap + nodeSize / 2 + (480 - totalWidth) / 2 - 20;
+      const y = rowIdx * (nodeSize + rowGap) + nodeSize / 2 + 16;
+      nodePositions[skillIdx] = { x, y };
+    });
+
+    nodesEl.appendChild(rowDiv);
+  });
+
+  // Draw connection lines
+  setTimeout(() => drawConnections(branchKey, data, nodePositions), 50);
+}
+
+function drawConnections(branchKey, data, nodePositions) {
+  const svgEl = document.getElementById(branchKey + '-svg');
+  const container = document.getElementById(branchKey + '-tree');
+  const nodesEl = document.getElementById(branchKey + '-nodes');
+  const h = nodesEl.offsetHeight + 40;
+  svgEl.setAttribute('viewBox', `0 0 450 ${h}`);
+  svgEl.style.height = h + 'px';
+  svgEl.innerHTML = '';
+
+  // Calculate actual node positions from DOM
+  const nodeEls = nodesEl.querySelectorAll('.skill-node');
+  const positions = [];
+  const containerRect = container.getBoundingClientRect();
+
+  nodeEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    positions.push({
+      x: rect.left - containerRect.left + rect.width / 2,
+      y: rect.top - containerRect.top + rect.height / 2
+    });
+  });
+
+  // Build connection pairs from layout adjacency
+  const layout = data.layout;
+  const flatIndex = [];
+  layout.forEach(row => row.forEach(idx => flatIndex.push(idx)));
+
+  for (let r = 0; r < layout.length - 1; r++) {
+    const fromRow = layout[r];
+    const toRow = layout[r + 1];
+    fromRow.forEach(fromIdx => {
+      toRow.forEach(toIdx => {
+        const fi = flatIndex.indexOf(fromIdx);
+        const ti = flatIndex.indexOf(toIdx);
+        if (fi >= 0 && ti >= 0 && positions[fi] && positions[ti]) {
+          const fromSkill = data.skills[fromIdx];
+          const toSkill = data.skills[toIdx];
+          let lineColor = data.color;
+          let opacity = 0.15;
+
+          if (fromSkill.state === 'mastered' && toSkill.state === 'mastered') {
+            opacity = 0.6;
+          } else if (fromSkill.state === 'mastered' && (toSkill.state === 'current' || toSkill.state === 'available')) {
+            opacity = 0.35;
+          }
+
+          if (toSkill.state === 'current') {
+            lineColor = '#fbbf24';
+            opacity = 0.5;
+          }
+
+          const x1 = positions[fi].x, y1 = positions[fi].y;
+          const x2 = positions[ti].x, y2 = positions[ti].y;
+          const mx = (x1 + x2) / 2;
+
+          const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          line.setAttribute('d', `M${x1},${y1 + 30} C${x1},${y1 + 50} ${x2},${y2 - 50} ${x2},${y2 - 30}`);
+          line.setAttribute('fill', 'none');
+          line.setAttribute('stroke', lineColor);
+          line.setAttribute('stroke-opacity', opacity);
+          line.setAttribute('stroke-width', '2');
+          line.setAttribute('stroke-linecap', 'round');
+
+          if (fromSkill.state === 'mastered' && toSkill.state === 'current') {
+            line.setAttribute('stroke-dasharray', '6,4');
+            line.innerHTML = `<animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.5s" repeatCount="indefinite"/>`;
+          }
+
+          svgEl.appendChild(line);
+
+          // Glow line for mastered connections
+          if (fromSkill.state === 'mastered' && toSkill.state === 'mastered') {
+            const glow = line.cloneNode(true);
+            glow.setAttribute('stroke-width', '6');
+            glow.setAttribute('stroke-opacity', '0.1');
+            glow.innerHTML = '';
+            svgEl.insertBefore(glow, svgEl.firstChild);
+          }
+        }
+      });
+    });
+  }
+}
+
+// ══════════════════════════════════════
+//  NODE DETAIL POPUP
+// ══════════════════════════════════════
+function showNodeDetail(skill, event, color) {
+  const detail = document.getElementById('nodeDetail');
+  const ndTitle = document.getElementById('ndTitle');
+  const ndDesc = document.getElementById('ndDesc');
+  const ndXP = document.getElementById('ndXP');
+  const ndRank = document.getElementById('ndRank');
+
+  ndTitle.textContent = skill.name;
+  ndTitle.style.color = skill.state === 'locked' ? '#64748b' : color;
+  ndDesc.textContent = skill.desc;
+  ndXP.textContent = skill.xp + ' XP';
+  ndRank.textContent = skill.rank === 'none' ? (skill.state === 'locked' ? 'Locked' : 'Unranked') : skill.rank.charAt(0).toUpperCase() + skill.rank.slice(1);
+
+  detail.style.borderColor = skill.state === 'locked' ? 'rgba(255,255,255,0.08)' : color + '44';
+
+  // Position near click
+  const rect = event.target.closest('.skill-node').getBoundingClientRect();
+  let top = rect.bottom + 8;
+  let left = rect.left + rect.width / 2 - 120;
+
+  if (left < 8) left = 8;
+  if (left + 240 > window.innerWidth) left = window.innerWidth - 248;
+  if (top + 120 > window.innerHeight) top = rect.top - 120;
+
+  detail.style.top = top + 'px';
+  detail.style.left = left + 'px';
+  detail.classList.add('show');
+
+  setTimeout(() => {
+    document.addEventListener('click', hideNodeDetail, { once: true });
+  }, 10);
+}
+
+function hideNodeDetail() {
+  document.getElementById('nodeDetail').classList.remove('show');
+}
+
+// ══════════════════════════════════════
+//  BRANCH TOGGLE
+// ══════════════════════════════════════
+function toggleBranch(el) {
+  const isActive = el.classList.contains('active');
+
+  // Close all branches
+  document.querySelectorAll('.branch').forEach(b => b.classList.remove('active'));
+
+  if (!isActive) {
+    el.classList.add('active');
+    const key = el.getAttribute('data-branch');
+    // Render tree nodes when opening
+    setTimeout(() => renderTree(key), 50);
+  }
+}
+
+// ══════════════════════════════════════
+//  PARTICLE SYSTEM
+// ══════════════════════════════════════
+(function initParticles() {
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let w, h, particles = [];
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  class Particle {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = Math.random() * w;
+      this.y = h + 10;
+      this.vx = (Math.random() - 0.5) * 0.3;
+      this.vy = -(Math.random() * 0.8 + 0.3);
+      this.life = Math.random() * 200 + 100;
+      this.maxLife = this.life;
+      this.size = Math.random() * 2 + 0.5;
+      const colors = ['#f97316', '#fbbf24', '#7c3aed', '#3b82f6'];
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.vx += (Math.random() - 0.5) * 0.02;
+      this.life--;
+      if (this.life <= 0) this.reset();
+    }
+    draw() {
+      const alpha = Math.min(this.life / this.maxLife, (this.maxLife - this.life) / 30) * 0.4;
+      ctx.globalAlpha = Math.max(0, alpha);
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+
+      // glow
+      ctx.globalAlpha = Math.max(0, alpha * 0.3);
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  for (let i = 0; i < 40; i++) {
+    const p = new Particle();
+    p.y = Math.random() * h;
+    p.life = Math.random() * p.maxLife;
+    particles.push(p);
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+    particles.forEach(p => { p.update(); p.draw(); });
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+// ══════════════════════════════════════
+//  XP BAR ANIMATION
+// ══════════════════════════════════════
+(function animateXP() {
+  const fill = document.getElementById('xpFill');
+  fill.style.width = '0%';
+  setTimeout(() => { fill.style.width = '62%'; }, 300);
+})();
+
+// ══════════════════════════════════════
+//  AUTO-OPEN FIRST BRANCH
+// ══════════════════════════════════════
+setTimeout(() => {
+  const first = document.querySelector('.branch[data-branch="statics"]');
+  if (first) {
+    first.classList.add('active');
+    setTimeout(() => renderTree('statics'), 100);
+  }
+}, 500);
+</script>
+</body>
+</html>

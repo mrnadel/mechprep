@@ -14,6 +14,8 @@ import {
   Trophy,
   ChevronLeft,
   Target,
+  CreditCard,
+  Sparkles,
 } from 'lucide-react';
 import { useSidebar, useProgress } from '@/store/useStore';
 import { cn } from '@/lib/utils';
@@ -27,6 +29,7 @@ const navItems = [
   { href: '/practice/real-world', label: 'Real-World Systems', icon: Wrench },
   { href: '/practice/weak-areas', label: 'Weak Areas', icon: AlertTriangle },
   { divider: true } as const,
+  { href: '/pricing', label: 'Pricing', icon: CreditCard },
   { href: '/progress', label: 'Progress & Analytics', icon: BarChart3 },
   { href: '/skills', label: 'Skill Map', icon: Target },
   { href: '/achievements', label: 'Achievements', icon: Trophy },
@@ -107,6 +110,19 @@ export default function Sidebar() {
           })}
         </nav>
 
+        {/* Upgrade CTA for free users */}
+        {sidebarOpen && (
+          <div className="px-2 pb-2 shrink-0">
+            <Link
+              href="/pricing"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-white font-semibold text-sm transition-all shadow-sm active:scale-[0.98]"
+            >
+              <Sparkles className="w-4 h-4" />
+              Upgrade to Pro
+            </Link>
+          </div>
+        )}
+
         {/* User Stats Footer */}
         {sidebarOpen && (
           <div className="p-4 border-t border-surface-200 shrink-0">
@@ -118,7 +134,12 @@ export default function Sidebar() {
               </div>
               <div className="min-w-0">
                 <p className="text-sm font-medium text-surface-900 truncate">{progress.displayName}</p>
-                <p className="text-xs text-surface-500">Level {progress.currentLevel} · {progress.totalXp} XP</p>
+                <div className="flex items-center gap-1.5">
+                  <p className="text-xs text-surface-500">Level {progress.currentLevel} · {progress.totalXp} XP</p>
+                  <span className="text-[10px] font-semibold bg-surface-100 text-surface-500 px-1.5 py-0.5 rounded-full">
+                    FREE
+                  </span>
+                </div>
               </div>
             </div>
           </div>

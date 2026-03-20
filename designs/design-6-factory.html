@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechPrep — Factory Assembly Line</title>
+<style>
+  /* ── RESET & BASE ─────────────────────────────────── */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --charcoal:#1E1E1E;
+    --charcoal-light:#2A2A2A;
+    --steel:#3A3A3A;
+    --steel-light:#4A4A4A;
+    --steel-lighter:#5A5A5A;
+    --safety-yellow:#EAB308;
+    --safety-yellow-dim:#B8900A;
+    --qc-green:#22C55E;
+    --qc-green-dark:#16A34A;
+    --danger-red:#EF4444;
+    --metal-highlight:#6B6B6B;
+    --metal-shine:#8A8A8A;
+    --text-primary:#F0F0F0;
+    --text-secondary:#A0A0A0;
+    --text-dim:#707070;
+    --conveyor-dark:#2C2C2C;
+    --conveyor-light:#383838;
+    --rivet:#555;
+    --rivet-shine:#777;
+  }
+
+  @font-face{
+    font-family:'Industrial';
+    src:local('Impact'),local('Arial Black'),local('Helvetica');
+  }
+
+  body{
+    font-family:'Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif;
+    background:var(--charcoal);
+    color:var(--text-primary);
+    min-height:100vh;
+    overflow-x:hidden;
+    /* subtle noise texture via repeating gradient */
+    background-image:
+      repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.008) 2px,rgba(255,255,255,.008) 4px),
+      repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,.008) 2px,rgba(255,255,255,.008) 4px);
+  }
+
+  /* ── CONTAINER ────────────────────────────────────── */
+  .app-container{
+    max-width:480px;
+    margin:0 auto;
+    min-height:100vh;
+    position:relative;
+    background:
+      linear-gradient(180deg,#1a1a1a 0%,var(--charcoal) 4%,var(--charcoal) 100%);
+    box-shadow: -2px 0 20px rgba(0,0,0,.5), 2px 0 20px rgba(0,0,0,.5);
+  }
+
+  /* ── WARNING STRIPE (top border) ──────────────────── */
+  .warning-stripe{
+    height:8px;
+    background:repeating-linear-gradient(
+      -45deg,
+      var(--safety-yellow),var(--safety-yellow) 10px,
+      var(--charcoal) 10px,var(--charcoal) 20px
+    );
+  }
+
+  /* ── HEADER ───────────────────────────────────────── */
+  .header{
+    background:
+      linear-gradient(180deg,#252525 0%,var(--charcoal-light) 100%);
+    border-bottom:2px solid var(--steel);
+    padding:14px 16px 12px;
+    position:relative;
+  }
+  .header::after{
+    content:'';
+    position:absolute;
+    bottom:-4px;left:0;right:0;
+    height:4px;
+    background:linear-gradient(180deg,rgba(0,0,0,.3),transparent);
+  }
+
+  .header-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .logo-group{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo-gear{
+    animation:spin-slow 8s linear infinite;
+  }
+  @keyframes spin-slow{
+    to{transform:rotate(360deg)}
+  }
+  .logo-text{
+    font-family:Impact,'Arial Black',sans-serif;
+    font-size:26px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    background:linear-gradient(180deg,#F5F5F5 0%,#AAAAAA 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    text-shadow:none;
+  }
+
+  .stats-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .stat-badge{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    background:var(--steel);
+    border:1px solid var(--steel-light);
+    border-radius:6px;
+    padding:4px 10px;
+    font-size:13px;
+    font-weight:700;
+    color:var(--text-primary);
+  }
+  .stat-badge .icon{font-size:15px}
+  .stat-badge.streak .icon{color:#EF6C00}
+  .stat-badge.xp .icon{color:var(--safety-yellow)}
+
+  .avatar{
+    width:36px;height:36px;
+    border-radius:50%;
+    border:2px solid var(--safety-yellow);
+    background:var(--steel);
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 0 8px rgba(234,179,8,.3);
+    transition:box-shadow .2s;
+  }
+  .avatar:hover{box-shadow:0 0 14px rgba(234,179,8,.5)}
+
+  /* ── GAUGE / OVERALL PROGRESS ─────────────────────── */
+  .gauge-section{
+    padding:20px 16px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .gauge-label{
+    font-family:Impact,'Arial Black',sans-serif;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--safety-yellow);
+    margin-bottom:10px;
+  }
+  .gauge-container{
+    position:relative;
+    width:200px;height:110px;
+    overflow:hidden;
+  }
+  .gauge-bg,.gauge-fill{
+    position:absolute;
+    width:200px;height:200px;
+    border-radius:50%;
+    bottom:0;left:0;
+  }
+  .gauge-bg{
+    border:14px solid var(--steel);
+    clip-path:polygon(0 0,100% 0,100% 50%,0 50%);
+  }
+  .gauge-fill{
+    border:14px solid transparent;
+    border-top:14px solid var(--qc-green);
+    border-right:14px solid var(--qc-green);
+    clip-path:polygon(0 0,100% 0,100% 50%,0 50%);
+    transform:rotate(-90deg);
+    transform-origin:center center;
+    transition:transform 1.5s cubic-bezier(.4,0,.2,1);
+  }
+  .gauge-center{
+    position:absolute;
+    bottom:0;left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+  }
+  .gauge-percent{
+    font-family:Impact,'Arial Black',sans-serif;
+    font-size:34px;
+    color:var(--text-primary);
+    line-height:1;
+  }
+  .gauge-subtext{
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--text-secondary);
+  }
+
+  /* ── PRODUCTION LINE (Unit) ───────────────────────── */
+  .production-lines{
+    padding:6px 12px 30px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .production-line{
+    background:
+      linear-gradient(180deg,var(--charcoal-light) 0%,#222 100%);
+    border:1px solid var(--steel);
+    border-radius:10px;
+    overflow:hidden;
+    transition:box-shadow .3s;
+  }
+  .production-line:hover{
+    box-shadow:0 2px 16px rgba(0,0,0,.4);
+  }
+  .production-line.locked{
+    opacity:.7;
+  }
+
+  /* Conveyor belt header */
+  .line-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 14px 12px;
+    cursor:pointer;
+    user-select:none;
+    position:relative;
+    background:
+      linear-gradient(180deg,rgba(255,255,255,.03) 0%,transparent 100%);
+    border-bottom:1px solid var(--steel);
+  }
+  .line-header:active{background:rgba(255,255,255,.04)}
+
+  /* Rivet decorations */
+  .rivet{
+    width:10px;height:10px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,var(--rivet-shine),var(--rivet) 60%,#333 100%);
+    box-shadow:inset 0 1px 1px rgba(255,255,255,.15),0 1px 2px rgba(0,0,0,.5);
+    flex-shrink:0;
+  }
+
+  .line-info{flex:1;min-width:0}
+  .line-number{
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--safety-yellow-dim);
+    font-weight:700;
+  }
+  .line-name{
+    font-family:Impact,'Arial Black',sans-serif;
+    font-size:17px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--text-primary);
+    line-height:1.2;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .line-locked-label{
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--danger-red);
+    font-weight:700;
+  }
+
+  /* Mini progress bar in header */
+  .line-progress-bar{
+    height:6px;
+    background:var(--steel);
+    border-radius:3px;
+    margin-top:6px;
+    overflow:hidden;
+    position:relative;
+  }
+  .line-progress-fill{
+    height:100%;
+    border-radius:3px;
+    transition:width 1s ease;
+  }
+  .line-progress-fill.active{
+    background:linear-gradient(90deg,var(--qc-green),#4ADE80);
+    box-shadow:0 0 6px rgba(34,197,94,.4);
+  }
+  .line-progress-fill.locked{
+    background:var(--steel-light);
+  }
+
+  .line-stats{
+    display:flex;align-items:center;gap:6px;
+    margin-top:4px;
+    font-size:11px;
+    color:var(--text-secondary);
+  }
+  .line-stats span{
+    background:var(--steel);
+    padding:1px 6px;
+    border-radius:3px;
+    font-size:10px;
+  }
+
+  .expand-arrow{
+    width:20px;height:20px;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .3s ease;
+    color:var(--text-secondary);
+    flex-shrink:0;
+  }
+  .production-line.open .expand-arrow{
+    transform:rotate(180deg);
+  }
+
+  /* ── CONVEYOR BELT (lesson list container) ─────────── */
+  .conveyor-belt{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .45s cubic-bezier(.4,0,.2,1);
+    background:var(--charcoal);
+  }
+  .production-line.open .conveyor-belt{
+    max-height:1200px;
+  }
+
+  /* Conveyor animation strip */
+  .conveyor-strip{
+    height:12px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--conveyor-dark) 0px,var(--conveyor-dark) 18px,
+        var(--conveyor-light) 18px,var(--conveyor-light) 36px
+      );
+    background-size:36px 12px;
+    animation:conveyorMove 1.5s linear infinite;
+    border-top:1px solid var(--steel);
+    border-bottom:1px solid var(--steel);
+    position:relative;
+  }
+  .conveyor-strip::before,.conveyor-strip::after{
+    content:'';position:absolute;top:2px;
+    width:8px;height:8px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,var(--rivet-shine),var(--rivet));
+    box-shadow:inset 0 1px 1px rgba(255,255,255,.15);
+  }
+  .conveyor-strip::before{left:6px}
+  .conveyor-strip::after{right:6px}
+  @keyframes conveyorMove{
+    to{background-position:36px 0}
+  }
+
+  .lessons-grid{
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  /* ── WORK ORDER CARD (Lesson) ─────────────────────── */
+  .work-order{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid var(--steel);
+    background:
+      linear-gradient(135deg,var(--charcoal-light) 0%,#262626 100%);
+    position:relative;
+    overflow:hidden;
+    transition:transform .15s,box-shadow .15s,border-color .2s;
+    cursor:pointer;
+  }
+  .work-order:hover:not(.locked-card){
+    transform:translateY(-1px);
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+    border-color:var(--steel-lighter);
+  }
+  .work-order.locked-card{
+    cursor:not-allowed;
+    opacity:.5;
+  }
+  .work-order.locked-card *{
+    pointer-events:none;
+  }
+
+  /* Corner rivets on cards */
+  .work-order::before{
+    content:'';
+    position:absolute;top:4px;left:4px;
+    width:5px;height:5px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,var(--rivet-shine),var(--rivet));
+  }
+  .work-order::after{
+    content:'';
+    position:absolute;top:4px;right:4px;
+    width:5px;height:5px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,var(--rivet-shine),var(--rivet));
+  }
+
+  .wo-number{
+    width:32px;height:32px;
+    border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:Impact,'Arial Black',sans-serif;
+    font-size:15px;
+    flex-shrink:0;
+    position:relative;
+  }
+  .wo-number.completed{
+    background:var(--qc-green-dark);
+    color:#fff;
+    box-shadow:0 0 8px rgba(34,197,94,.25);
+  }
+  .wo-number.in-progress{
+    background:var(--safety-yellow);
+    color:var(--charcoal);
+    animation:pulse-glow 2s ease-in-out infinite;
+  }
+  @keyframes pulse-glow{
+    0%,100%{box-shadow:0 0 4px rgba(234,179,8,.3)}
+    50%{box-shadow:0 0 14px rgba(234,179,8,.6)}
+  }
+  .wo-number.queued{
+    background:var(--steel);
+    color:var(--text-dim);
+  }
+  .wo-number.locked{
+    background:var(--steel);
+    color:var(--text-dim);
+  }
+
+  .wo-details{flex:1;min-width:0}
+  .wo-title{
+    font-size:13px;
+    font-weight:600;
+    color:var(--text-primary);
+    line-height:1.2;
+  }
+  .work-order.locked-card .wo-title{
+    color:var(--text-dim);
+  }
+  .wo-meta{
+    display:flex;align-items:center;gap:8px;
+    margin-top:3px;
+    font-size:10px;
+    color:var(--text-secondary);
+  }
+
+  /* Stars — Quality Rating */
+  .stars{
+    display:flex;gap:1px;
+    font-size:12px;
+    line-height:1;
+  }
+  .star-filled{color:var(--safety-yellow)}
+  .star-empty{color:var(--steel-light)}
+
+  .xp-badge{
+    font-size:10px;
+    font-weight:700;
+    color:var(--safety-yellow-dim);
+  }
+
+  /* ── STAMPS ───────────────────────────────────────── */
+  .stamp{
+    font-family:Impact,'Arial Black',sans-serif;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:3px;
+    border:2px solid;
+    transform:rotate(-4deg);
+    flex-shrink:0;
+    line-height:1;
+    white-space:nowrap;
+  }
+  .stamp-passed{
+    color:var(--qc-green);
+    border-color:var(--qc-green);
+    background:rgba(34,197,94,.08);
+  }
+  .stamp-progress{
+    color:var(--safety-yellow);
+    border-color:var(--safety-yellow);
+    background:rgba(234,179,8,.08);
+    animation:stamp-blink 2.5s ease infinite;
+  }
+  @keyframes stamp-blink{
+    0%,100%{opacity:1}50%{opacity:.6}
+  }
+  .stamp-queued{
+    color:var(--text-dim);
+    border-color:var(--text-dim);
+    background:rgba(112,112,112,.08);
+  }
+  .stamp-locked{
+    color:var(--steel-light);
+    border-color:var(--steel-light);
+    background:transparent;
+    font-size:8px;
+  }
+
+  /* ── BOTTOM CONVEYOR STRIP ────────────────────────── */
+  .bottom-strip{
+    margin-top:6px;
+  }
+
+  /* ── FOOTER ───────────────────────────────────────── */
+  .footer{
+    text-align:center;
+    padding:16px;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--text-dim);
+  }
+  .footer-stripe{
+    height:6px;
+    background:repeating-linear-gradient(
+      -45deg,
+      var(--safety-yellow),var(--safety-yellow) 8px,
+      var(--charcoal) 8px,var(--charcoal) 16px
+    );
+    margin-bottom:12px;
+  }
+
+  /* ── UTILITY ANIMATIONS ───────────────────────────── */
+  @keyframes fadeInUp{
+    from{opacity:0;transform:translateY(12px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+  .animate-in{
+    animation:fadeInUp .4s ease both;
+  }
+  .delay-1{animation-delay:.1s}
+  .delay-2{animation-delay:.2s}
+  .delay-3{animation-delay:.3s}
+
+  /* ── SVG INLINE HELPERS ───────────────────────────── */
+  .inline-svg{
+    display:inline-block;
+    vertical-align:middle;
+  }
+
+  /* ── SCROLL ───────────────────────────────────────── */
+  .app-container{
+    overflow-y:auto;
+    max-height:100vh;
+    scrollbar-width:thin;
+    scrollbar-color:var(--steel) var(--charcoal);
+  }
+  .app-container::-webkit-scrollbar{width:6px}
+  .app-container::-webkit-scrollbar-track{background:var(--charcoal)}
+  .app-container::-webkit-scrollbar-thumb{background:var(--steel);border-radius:3px}
+
+  /* ── DAILY PRODUCTION REPORT (mini banner) ────────── */
+  .daily-banner{
+    margin:0 12px;
+    padding:10px 14px;
+    background:
+      linear-gradient(135deg,rgba(234,179,8,.06) 0%,rgba(234,179,8,.02) 100%);
+    border:1px solid rgba(234,179,8,.2);
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .daily-icon{
+    width:36px;height:36px;
+    border-radius:50%;
+    background:rgba(234,179,8,.12);
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;
+  }
+  .daily-text{flex:1}
+  .daily-title{
+    font-size:11px;
+    font-weight:700;
+    color:var(--safety-yellow);
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .daily-sub{
+    font-size:11px;
+    color:var(--text-secondary);
+    margin-top:1px;
+  }
+  .daily-btn{
+    padding:5px 12px;
+    background:var(--safety-yellow);
+    color:var(--charcoal);
+    border:none;
+    border-radius:5px;
+    font-weight:800;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:background .2s;
+  }
+  .daily-btn:hover{background:#D4A006}
+
+  /* ── LINE INDICATOR DOT ───────────────────────────── */
+  .status-dot{
+    width:8px;height:8px;border-radius:50%;flex-shrink:0;
+  }
+  .status-dot.active{
+    background:var(--qc-green);
+    box-shadow:0 0 6px rgba(34,197,94,.5);
+    animation:dot-pulse 2s ease infinite;
+  }
+  .status-dot.idle{
+    background:var(--steel-light);
+  }
+  .status-dot.locked{
+    background:var(--danger-red);
+    opacity:.5;
+  }
+  @keyframes dot-pulse{
+    0%,100%{box-shadow:0 0 4px rgba(34,197,94,.3)}
+    50%{box-shadow:0 0 10px rgba(34,197,94,.6)}
+  }
+</style>
+</head>
+<body>
+<div class="app-container" id="app">
+
+  <!-- Warning Stripe -->
+  <div class="warning-stripe"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <div class="header-top">
+      <div class="logo-group">
+        <!-- Gear SVG -->
+        <svg class="logo-gear" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M16 10a6 6 0 100 12 6 6 0 000-12zm0 9.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z" fill="#EAB308"/>
+          <path d="M30 14h-2.1a12 12 0 00-1.2-2.9l1.5-1.5-2.8-2.8-1.5 1.5A12 12 0 0021 7.1V5h-4v2.1a12 12 0 00-2.9 1.2L12.6 6.8 9.8 9.6l1.5 1.5A12 12 0 0010.1 14H8v4h2.1a12 12 0 001.2 2.9l-1.5 1.5 2.8 2.8 1.5-1.5a12 12 0 002.9 1.2V27h4v-2.1a12 12 0 002.9-1.2l1.5 1.5 2.8-2.8-1.5-1.5a12 12 0 001.2-2.9H30v-4z" fill="#EAB308" opacity=".6"/>
+          <circle cx="16" cy="16" r="3" fill="#1E1E1E"/>
+        </svg>
+        <span class="logo-text">MechPrep</span>
+      </div>
+      <div class="stats-row">
+        <div class="stat-badge streak">
+          <span class="icon">&#128293;</span>
+          <span>5</span>
+        </div>
+        <div class="stat-badge xp">
+          <svg width="14" height="14" viewBox="0 0 32 32" style="margin-right:1px">
+            <path d="M16 4a12 12 0 100 24 12 12 0 000-24zm0 20a8 8 0 110-16 8 8 0 010 16z" fill="#EAB308"/>
+            <circle cx="16" cy="16" r="4" fill="#EAB308" opacity=".5"/>
+          </svg>
+          <span>1,240</span>
+        </div>
+        <div class="avatar" title="Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#A0A0A0">
+            <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ PRODUCTION GAUGE ═══ -->
+  <section class="gauge-section animate-in">
+    <div class="gauge-label">&#9881; Overall Production Output</div>
+    <div class="gauge-container" id="gaugeContainer">
+      <svg width="200" height="110" viewBox="0 0 200 110" style="position:absolute;bottom:0;left:0">
+        <!-- Background arc -->
+        <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#3A3A3A" stroke-width="14" stroke-linecap="round"/>
+        <!-- Tick marks -->
+        <line x1="26" y1="82" x2="34" y2="86" stroke="#555" stroke-width="1.5"/>
+        <line x1="40" y1="55" x2="48" y2="61" stroke="#555" stroke-width="1.5"/>
+        <line x1="66" y1="34" x2="72" y2="41" stroke="#555" stroke-width="1.5"/>
+        <line x1="97" y1="22" x2="97" y2="30" stroke="#555" stroke-width="1.5"/>
+        <line x1="128" y1="34" x2="122" y2="41" stroke="#555" stroke-width="1.5"/>
+        <line x1="154" y1="55" x2="146" y2="61" stroke="#555" stroke-width="1.5"/>
+        <line x1="168" y1="82" x2="160" y2="86" stroke="#555" stroke-width="1.5"/>
+        <!-- Fill arc (animated via JS) -->
+        <path id="gaugeFill" d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#22C55E" stroke-width="14" stroke-linecap="round"
+              stroke-dasharray="251.2" stroke-dashoffset="251.2"
+              style="transition:stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) .3s"/>
+        <!-- Needle -->
+        <g id="gaugeNeedle" style="transform-origin:100px 100px;transform:rotate(-90deg);transition:transform 1.8s cubic-bezier(.4,0,.2,1) .3s">
+          <line x1="100" y1="100" x2="100" y2="34" stroke="#EAB308" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="6" fill="#2A2A2A" stroke="#EAB308" stroke-width="2"/>
+        </g>
+      </svg>
+      <div class="gauge-center">
+        <div class="gauge-percent" id="gaugeText">0%</div>
+        <div class="gauge-subtext">Complete</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DAILY PRODUCTION REPORT ═══ -->
+  <section class="daily-banner animate-in delay-1" style="margin-bottom:14px">
+    <div class="daily-icon">&#128736;&#65039;</div>
+    <div class="daily-text">
+      <div class="daily-title">Daily Work Order</div>
+      <div class="daily-sub">Complete 3 lessons to earn bonus XP</div>
+    </div>
+    <button class="daily-btn">Go</button>
+  </section>
+
+  <!-- ═══ PRODUCTION LINES ═══ -->
+  <section class="production-lines">
+
+    <!-- ── LINE 1: Statics & Equilibrium ── -->
+    <div class="production-line open animate-in delay-1" data-line="1">
+      <div class="line-header" onclick="toggleLine(this)">
+        <div class="rivet"></div>
+        <div class="status-dot active"></div>
+        <div class="line-info">
+          <div class="line-number">Production Line 01</div>
+          <div class="line-name">Statics &amp; Equilibrium</div>
+          <div class="line-progress-bar">
+            <div class="line-progress-fill active" style="width:62.5%"></div>
+          </div>
+          <div class="line-stats">
+            <span>5 / 8 Complete</span>
+            <span>&#9733; 520 XP</span>
+          </div>
+        </div>
+        <div class="expand-arrow">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4 6l4 4 4-4"/>
+          </svg>
+        </div>
+        <div class="rivet"></div>
+      </div>
+
+      <div class="conveyor-belt">
+        <div class="conveyor-strip"></div>
+        <div class="lessons-grid">
+
+          <!-- WO 1 — Completed -->
+          <div class="work-order" onclick="cardTap(this)">
+            <div class="wo-number completed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M6.5 11.5L3 8l1.1-1.1 2.4 2.4L12 4l1.1 1.1z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Free Body Diagrams</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span></div>
+                <span class="xp-badge">+80 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-passed">Passed</div>
+          </div>
+
+          <!-- WO 2 — Completed -->
+          <div class="work-order" onclick="cardTap(this)">
+            <div class="wo-number completed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M6.5 11.5L3 8l1.1-1.1 2.4 2.4L12 4l1.1 1.1z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Force Vectors &amp; Components</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span></div>
+                <span class="xp-badge">+80 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-passed">Passed</div>
+          </div>
+
+          <!-- WO 3 — Completed -->
+          <div class="work-order" onclick="cardTap(this)">
+            <div class="wo-number completed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M6.5 11.5L3 8l1.1-1.1 2.4 2.4L12 4l1.1 1.1z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Moment of a Force</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+80 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-passed">Passed</div>
+          </div>
+
+          <!-- WO 4 — Completed -->
+          <div class="work-order" onclick="cardTap(this)">
+            <div class="wo-number completed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M6.5 11.5L3 8l1.1-1.1 2.4 2.4L12 4l1.1 1.1z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">2D Equilibrium Conditions</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span></div>
+                <span class="xp-badge">+100 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-passed">Passed</div>
+          </div>
+
+          <!-- WO 5 — Completed -->
+          <div class="work-order" onclick="cardTap(this)">
+            <div class="wo-number completed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M6.5 11.5L3 8l1.1-1.1 2.4 2.4L12 4l1.1 1.1z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Trusses: Method of Joints</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+100 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-passed">Passed</div>
+          </div>
+
+          <!-- WO 6 — In Progress -->
+          <div class="work-order" onclick="cardTap(this)" style="border-color:rgba(234,179,8,.35)">
+            <div class="wo-number in-progress">6</div>
+            <div class="wo-details">
+              <div class="wo-title">Trusses: Method of Sections</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+100 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-progress">In Prog</div>
+          </div>
+
+          <!-- WO 7 — Queued -->
+          <div class="work-order">
+            <div class="wo-number queued">7</div>
+            <div class="wo-details">
+              <div class="wo-title">Friction &amp; Applications</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+80 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-queued">Queued</div>
+          </div>
+
+          <!-- WO 8 — Queued -->
+          <div class="work-order">
+            <div class="wo-number queued">8</div>
+            <div class="wo-details">
+              <div class="wo-title">Centroids &amp; Center of Gravity</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+120 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-queued">Queued</div>
+          </div>
+
+        </div>
+        <div class="conveyor-strip bottom-strip"></div>
+      </div>
+    </div>
+
+    <!-- ── LINE 2: Dynamics & Motion ── -->
+    <div class="production-line animate-in delay-2" data-line="2">
+      <div class="line-header" onclick="toggleLine(this)">
+        <div class="rivet"></div>
+        <div class="status-dot active"></div>
+        <div class="line-info">
+          <div class="line-number">Production Line 02</div>
+          <div class="line-name">Dynamics &amp; Motion</div>
+          <div class="line-progress-bar">
+            <div class="line-progress-fill active" style="width:28.6%"></div>
+          </div>
+          <div class="line-stats">
+            <span>2 / 7 Complete</span>
+            <span>&#9733; 180 XP</span>
+          </div>
+        </div>
+        <div class="expand-arrow">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4 6l4 4 4-4"/>
+          </svg>
+        </div>
+        <div class="rivet"></div>
+      </div>
+
+      <div class="conveyor-belt">
+        <div class="conveyor-strip"></div>
+        <div class="lessons-grid">
+
+          <!-- WO 1 — Completed -->
+          <div class="work-order" onclick="cardTap(this)">
+            <div class="wo-number completed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M6.5 11.5L3 8l1.1-1.1 2.4 2.4L12 4l1.1 1.1z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Kinematics of Particles</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span></div>
+                <span class="xp-badge">+80 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-passed">Passed</div>
+          </div>
+
+          <!-- WO 2 — Completed -->
+          <div class="work-order" onclick="cardTap(this)">
+            <div class="wo-number completed">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M6.5 11.5L3 8l1.1-1.1 2.4 2.4L12 4l1.1 1.1z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Newton's Laws Review</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-filled">&#9733;</span><span class="star-filled">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+100 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-passed">Passed</div>
+          </div>
+
+          <!-- WO 3 — In Progress -->
+          <div class="work-order" onclick="cardTap(this)" style="border-color:rgba(234,179,8,.35)">
+            <div class="wo-number in-progress">3</div>
+            <div class="wo-details">
+              <div class="wo-title">Work &amp; Energy Methods</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+100 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-progress">In Prog</div>
+          </div>
+
+          <!-- WO 4 — Queued -->
+          <div class="work-order">
+            <div class="wo-number queued">4</div>
+            <div class="wo-details">
+              <div class="wo-title">Impulse &amp; Momentum</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+100 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-queued">Queued</div>
+          </div>
+
+          <!-- WO 5 — Queued -->
+          <div class="work-order">
+            <div class="wo-number queued">5</div>
+            <div class="wo-details">
+              <div class="wo-title">Rigid Body Kinematics</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+120 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-queued">Queued</div>
+          </div>
+
+          <!-- WO 6 — Queued -->
+          <div class="work-order">
+            <div class="wo-number queued">6</div>
+            <div class="wo-details">
+              <div class="wo-title">Rotating Reference Frames</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+120 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-queued">Queued</div>
+          </div>
+
+          <!-- WO 7 — Queued -->
+          <div class="work-order">
+            <div class="wo-number queued">7</div>
+            <div class="wo-details">
+              <div class="wo-title">Vibrations: Free &amp; Forced</div>
+              <div class="wo-meta">
+                <div class="stars"><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span><span class="star-empty">&#9733;</span></div>
+                <span class="xp-badge">+140 XP</span>
+              </div>
+            </div>
+            <div class="stamp stamp-queued">Queued</div>
+          </div>
+
+        </div>
+        <div class="conveyor-strip bottom-strip"></div>
+      </div>
+    </div>
+
+    <!-- ── LINE 3: Strength of Materials (LOCKED) ── -->
+    <div class="production-line locked animate-in delay-3" data-line="3">
+      <div class="line-header" onclick="toggleLine(this)">
+        <div class="rivet"></div>
+        <div class="status-dot locked"></div>
+        <div class="line-info">
+          <div class="line-number">Production Line 03</div>
+          <div class="line-name">Strength of Materials</div>
+          <div class="line-locked-label">
+            <svg width="10" height="10" viewBox="0 0 16 16" fill="#EF4444" style="vertical-align:-1px;margin-right:2px">
+              <path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/>
+            </svg>
+            Complete Line 01 to Unlock
+          </div>
+          <div class="line-progress-bar">
+            <div class="line-progress-fill locked" style="width:0%"></div>
+          </div>
+          <div class="line-stats">
+            <span>0 / 9 Complete</span>
+            <span>&#9733; 0 XP</span>
+          </div>
+        </div>
+        <div class="expand-arrow">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4 6l4 4 4-4"/>
+          </svg>
+        </div>
+        <div class="rivet"></div>
+      </div>
+
+      <div class="conveyor-belt">
+        <div class="conveyor-strip" style="animation:none;opacity:.4"></div>
+        <div class="lessons-grid">
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Stress &amp; Strain Basics</div>
+              <div class="wo-meta"><span class="xp-badge">+80 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Axial Loading &amp; Deformation</div>
+              <div class="wo-meta"><span class="xp-badge">+80 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Torsion of Shafts</div>
+              <div class="wo-meta"><span class="xp-badge">+100 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Shear &amp; Moment Diagrams</div>
+              <div class="wo-meta"><span class="xp-badge">+100 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Beam Bending &amp; Flexure</div>
+              <div class="wo-meta"><span class="xp-badge">+120 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Deflection of Beams</div>
+              <div class="wo-meta"><span class="xp-badge">+120 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Combined Loading</div>
+              <div class="wo-meta"><span class="xp-badge">+120 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Mohr's Circle for Stress</div>
+              <div class="wo-meta"><span class="xp-badge">+140 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+          <div class="work-order locked-card">
+            <div class="wo-number locked">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="#555"><path d="M12 7h-1V5a3 3 0 00-6 0v2H4a1 1 0 00-1 1v6a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1zM7 5a1 1 0 012 0v2H7V5z"/></svg>
+            </div>
+            <div class="wo-details">
+              <div class="wo-title">Column Buckling &amp; Stability</div>
+              <div class="wo-meta"><span class="xp-badge">+140 XP</span></div>
+            </div>
+            <div class="stamp stamp-locked">Locked</div>
+          </div>
+
+        </div>
+        <div class="conveyor-strip bottom-strip" style="animation:none;opacity:.4"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer-stripe"></div>
+  <footer class="footer">
+    <svg width="16" height="16" viewBox="0 0 32 32" fill="#555" style="vertical-align:-2px;margin-right:4px">
+      <path d="M16 4a12 12 0 100 24 12 12 0 000-24zm0 20a8 8 0 110-16 8 8 0 010 16z"/>
+      <circle cx="16" cy="16" r="4" fill="#555" opacity=".5"/>
+    </svg>
+    MechPrep Factory &mdash; Build Your Knowledge
+  </footer>
+
+</div>
+
+<script>
+/* ── Toggle Production Lines ─────────────────────── */
+function toggleLine(headerEl){
+  const line = headerEl.closest('.production-line');
+  line.classList.toggle('open');
+}
+
+/* ── Card Tap Feedback ───────────────────────────── */
+function cardTap(card){
+  if(card.classList.contains('locked-card')) return;
+  card.style.transform = 'scale(.97)';
+  card.style.transition = 'transform .1s';
+  setTimeout(()=>{
+    card.style.transform = '';
+    card.style.transition = 'transform .15s, box-shadow .15s, border-color .2s';
+  },120);
+}
+
+/* ── Animate Gauge on Load ───────────────────────── */
+document.addEventListener('DOMContentLoaded',()=>{
+  const totalLessons = 24; // 8+7+9
+  const completed = 7;     // 5+2+0
+  const pct = completed / totalLessons;
+  const arcLength = 251.2;
+
+  // Animate after a brief delay
+  setTimeout(()=>{
+    // Fill arc
+    const fill = document.getElementById('gaugeFill');
+    fill.setAttribute('stroke-dashoffset', arcLength * (1 - pct));
+
+    // Needle: -90deg = 0%, +90deg = 100%
+    const needleDeg = -90 + (pct * 180);
+    const needle = document.getElementById('gaugeNeedle');
+    needle.style.transform = 'rotate(' + needleDeg + 'deg)';
+
+    // Counter
+    const textEl = document.getElementById('gaugeText');
+    animateCounter(textEl, 0, Math.round(pct * 100), 1600);
+  }, 400);
+});
+
+function animateCounter(el, from, to, duration){
+  const start = performance.now();
+  function tick(now){
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // ease-out
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(from + (to - from) * eased);
+    el.textContent = current + '%';
+    if(progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+</script>
+</body>
+</html>

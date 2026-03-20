@@ -7,8 +7,13 @@ import Link from 'next/link';
 import { useCourseStore } from '@/store/useCourseStore';
 import { course } from '@/data/course';
 import { cn } from '@/lib/utils';
+import { Sparkles } from 'lucide-react';
 
 type PopoverType = 'streak' | 'xp' | null;
+
+// TODO: Replace with real subscription state from API/store
+const MOCK_TIER: 'free' | 'pro' | 'trial' = 'free';
+const MOCK_TRIAL_DAYS_LEFT = 0;
 
 export function CourseHeader() {
   const { data: session } = useSession();
@@ -46,10 +51,22 @@ export function CourseHeader() {
             <span>{progress.currentStreak}</span>
           </button>
 
-          {/* Center: App name */}
-          <h1 className="text-lg font-bold text-surface-900 tracking-tight select-none">
-            MechPrep
-          </h1>
+          {/* Center: App name + tier badge */}
+          <div className="flex items-center gap-2">
+            <h1 className="text-lg font-bold text-surface-900 tracking-tight select-none">
+              MechPrep
+            </h1>
+            {MOCK_TIER === 'pro' && (
+              <span className="bg-primary-100 text-primary-700 text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                PRO
+              </span>
+            )}
+            {MOCK_TIER === 'trial' && (
+              <span className="bg-amber-100 text-amber-700 text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                TRIAL &middot; {MOCK_TRIAL_DAYS_LEFT}d
+              </span>
+            )}
+          </div>
 
           {/* Profile avatar or Sign Up */}
           {session ? (
@@ -71,6 +88,17 @@ export function CourseHeader() {
               className="px-3 py-1.5 rounded-full bg-[#58CC02] text-white text-xs font-bold transition-transform active:scale-95"
             >
               Sign Up
+            </Link>
+          )}
+
+          {/* Upgrade CTA for free users */}
+          {MOCK_TIER === 'free' && session && (
+            <Link
+              href="/pricing"
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-amber-50 text-amber-600 text-xs font-semibold transition-transform active:scale-95"
+            >
+              <Sparkles className="w-3 h-3" />
+              <span>Pro</span>
             </Link>
           )}
 

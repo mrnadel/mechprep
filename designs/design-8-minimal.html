@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechPrep — Minimal Card Stack</title>
+<style>
+  /* ── Reset & Base ─────────────────────────────────── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #FAFAF9;
+    --card: #FFFFFF;
+    --text: #1A1A1A;
+    --text-secondary: #6B6B6B;
+    --text-tertiary: #A3A3A3;
+    --border: #E8E8E6;
+    --green: #22C55E;
+    --green-bg: #F0FDF4;
+    --blue: #3B82F6;
+    --purple: #8B5CF6;
+    --amber: #F59E0B;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+    --radius: 14px;
+    --radius-sm: 10px;
+    --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  /* ── Shell ─────────────────────────────────────────── */
+  .shell {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+
+  /* ── Header ────────────────────────────────────────── */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250, 250, 249, 0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 16px 0 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text);
+  }
+
+  .header-stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: color var(--transition);
+  }
+
+  .stat:hover { color: var(--text); }
+
+  .stat .emoji { font-size: 16px; }
+
+  .stat-value { font-variant-numeric: tabular-nums; }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4F46E5;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  .avatar:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  }
+
+  /* ── Greeting ──────────────────────────────────────── */
+  .greeting {
+    margin-bottom: 32px;
+  }
+
+  .greeting h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .greeting p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  /* ── Summary Bar ───────────────────────────────────── */
+  .summary-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .summary-card {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  .summary-card:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .summary-card .num {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+
+  .summary-card .label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+  }
+
+  /* ── Unit Card ─────────────────────────────────────── */
+  .unit-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .unit-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .unit-card.is-locked {
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .unit-card.is-locked .unit-header { cursor: default; }
+
+  .unit-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: background var(--transition);
+    position: relative;
+  }
+
+  .unit-header:hover { background: rgba(0,0,0,0.015); }
+  .unit-header:active { background: rgba(0,0,0,0.03); }
+
+  .unit-accent {
+    width: 4px;
+    height: 44px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .unit-info { flex: 1; min-width: 0; }
+
+  .unit-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-tertiary);
+    margin-bottom: 3px;
+  }
+
+  .unit-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+  }
+
+  .unit-meta {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+  }
+
+  /* Progress ring */
+  .progress-ring-wrap {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .progress-ring-wrap svg {
+    transform: rotate(-90deg);
+    width: 44px;
+    height: 44px;
+  }
+
+  .progress-ring-bg {
+    fill: none;
+    stroke: var(--border);
+    stroke-width: 3;
+  }
+
+  .progress-ring-fg {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .progress-ring-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+
+  /* Chevron */
+  .unit-chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--text-tertiary);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .unit-card.is-open .unit-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Lessons container */
+  .unit-lessons {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .unit-lessons-inner {
+    padding: 0 20px 16px;
+  }
+
+  .lessons-divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 12px;
+  }
+
+  /* ── Lesson Row ────────────────────────────────────── */
+  .lesson-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    cursor: pointer;
+    position: relative;
+  }
+
+  .lesson-row:hover {
+    background: rgba(0,0,0,0.02);
+  }
+
+  .lesson-row:active {
+    transform: scale(0.99);
+  }
+
+  .lesson-row.is-current {
+    background: var(--card);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    transform: translateX(2px);
+  }
+
+  .lesson-row.is-current:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .lesson-row.is-locked {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .lesson-row.is-locked:hover { background: transparent; }
+
+  /* Lesson accent */
+  .lesson-accent {
+    width: 3px;
+    height: 28px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity var(--transition);
+  }
+
+  .lesson-row:hover .lesson-accent,
+  .lesson-row.is-current .lesson-accent { opacity: 1; }
+
+  .lesson-row.is-complete .lesson-accent { opacity: 0.3; }
+
+  /* Lesson status icon */
+  .lesson-status {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .check-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .check-circle svg { width: 13px; height: 13px; }
+
+  .lesson-number {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    transition: border-color var(--transition), color var(--transition);
+  }
+
+  .lesson-row.is-current .lesson-number {
+    border-color: currentColor;
+    color: var(--text-secondary);
+  }
+
+  .lock-icon {
+    color: var(--text-tertiary);
+  }
+
+  .lock-icon svg { width: 14px; height: 14px; }
+
+  /* Lesson content */
+  .lesson-content { flex: 1; min-width: 0; }
+
+  .lesson-title {
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    line-height: 1.3;
+    transition: color var(--transition);
+  }
+
+  .lesson-row.is-complete .lesson-title {
+    text-decoration: line-through;
+    text-decoration-color: var(--text-tertiary);
+    text-decoration-thickness: 1.5px;
+    color: var(--text-secondary);
+  }
+
+  .lesson-subtitle {
+    font-size: 12.5px;
+    color: var(--text-tertiary);
+    margin-top: 1px;
+  }
+
+  /* Lesson right side */
+  .lesson-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  /* Progress dots */
+  .progress-dots {
+    display: flex;
+    gap: 4px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: background var(--transition), transform var(--transition);
+  }
+
+  .dot.filled {
+    background: var(--green);
+  }
+
+  .lesson-xp {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lesson-row.is-complete .lesson-xp { color: var(--green); }
+
+  /* Continue button */
+  .continue-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    font-family: var(--font);
+    cursor: pointer;
+    transition: all var(--transition);
+    color: white;
+    margin-top: 4px;
+  }
+
+  .continue-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .continue-btn:active {
+    transform: translateY(0);
+  }
+
+  .continue-btn .arrow {
+    transition: transform var(--transition);
+    font-size: 14px;
+  }
+
+  .continue-btn:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  /* ── Locked Unit Overlay ───────────────────────────── */
+  .locked-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .locked-overlay .lock-big {
+    font-size: 28px;
+    margin-bottom: 8px;
+    opacity: 0.6;
+  }
+
+  .locked-overlay p {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+  }
+
+  /* ── Footer Microcopy ──────────────────────────────── */
+  .footer-copy {
+    text-align: center;
+    padding: 32px 20px 0;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+  }
+
+  /* ── Animations ────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .unit-card {
+    animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+
+  .unit-card:nth-child(1) { animation-delay: 0.05s; }
+  .unit-card:nth-child(2) { animation-delay: 0.12s; }
+  .unit-card:nth-child(3) { animation-delay: 0.19s; }
+
+  .lesson-row {
+    animation: fadeUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+
+  /* Stagger lesson animations — set via JS */
+
+  /* ── Scrollbar ─────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
+
+  /* ── Tooltip ───────────────────────────────────────── */
+  .tooltip {
+    position: fixed;
+    padding: 6px 12px;
+    background: var(--text);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 1000;
+    white-space: nowrap;
+  }
+
+  .tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- Tooltip element -->
+<div class="tooltip" id="tooltip"></div>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-inner">
+    <div class="logo">MechPrep</div>
+    <div class="header-stats">
+      <div class="stat" data-tip="5-day streak! Keep it up.">
+        <span class="emoji">&#x1F525;</span>
+        <span class="stat-value">5</span>
+      </div>
+      <div class="stat" data-tip="1,240 XP earned so far">
+        <span class="stat-value">1,240</span>
+        <span style="font-weight:500;color:var(--text-tertiary);">XP</span>
+      </div>
+      <div class="avatar" data-tip="Your profile">N</div>
+    </div>
+  </div>
+</div>
+
+<div class="shell">
+
+  <!-- Greeting -->
+  <div class="greeting" style="animation: fadeUp 0.5s cubic-bezier(0.4,0,0.2,1) both;">
+    <h1>Good evening, Nadav</h1>
+    <p>You're 29% through your prep. Solid momentum.</p>
+  </div>
+
+  <!-- Summary -->
+  <div class="summary-bar" style="animation: fadeUp 0.5s cubic-bezier(0.4,0,0.2,1) 0.08s both;">
+    <div class="summary-card">
+      <div class="num">7<span style="font-size:14px;color:var(--text-tertiary);font-weight:600;">/24</span></div>
+      <div class="label">Lessons</div>
+    </div>
+    <div class="summary-card">
+      <div class="num" style="color:var(--green);">29<span style="font-size:14px;">%</span></div>
+      <div class="label">Complete</div>
+    </div>
+    <div class="summary-card">
+      <div class="num">1.2<span style="font-size:14px;color:var(--text-tertiary);font-weight:600;">k</span></div>
+      <div class="label">Total XP</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ UNIT 1 ═══════════ -->
+  <div class="unit-card is-open" data-unit="1">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-accent" style="background: var(--blue);"></div>
+      <div class="unit-info">
+        <div class="unit-label">Unit 1</div>
+        <div class="unit-title">Statics &amp; Equilibrium</div>
+        <div class="unit-meta">5 of 8 lessons &middot; 620 XP</div>
+      </div>
+      <div class="progress-ring-wrap">
+        <svg viewBox="0 0 44 44">
+          <circle class="progress-ring-bg" cx="22" cy="22" r="18"/>
+          <circle class="progress-ring-fg" cx="22" cy="22" r="18"
+            style="stroke:var(--blue); stroke-dasharray:113.1; stroke-dashoffset:42.4;"/>
+        </svg>
+        <div class="progress-ring-text">63%</div>
+      </div>
+      <svg class="unit-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="5 8 10 13 15 8"/>
+      </svg>
+    </div>
+    <div class="unit-lessons" id="lessons-1">
+      <div class="unit-lessons-inner">
+        <div class="lessons-divider"></div>
+
+        <!-- Lesson 1 — Complete -->
+        <div class="lesson-row is-complete" style="animation-delay:0.05s">
+          <div class="lesson-accent" style="background:var(--blue);"></div>
+          <div class="lesson-status">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3.5 8.5 6.5 11.5 12.5 5.5"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Free Body Diagrams</div>
+            <div class="lesson-subtitle">Draw &amp; analyze force diagrams</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+            <div class="lesson-xp">+80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 2 — Complete -->
+        <div class="lesson-row is-complete" style="animation-delay:0.08s">
+          <div class="lesson-accent" style="background:var(--blue);"></div>
+          <div class="lesson-status">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3.5 8.5 6.5 11.5 12.5 5.5"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Equilibrium of Particles</div>
+            <div class="lesson-subtitle">2D &amp; 3D force balance</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+            <div class="lesson-xp">+80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 3 — Complete -->
+        <div class="lesson-row is-complete" style="animation-delay:0.11s">
+          <div class="lesson-accent" style="background:var(--blue);"></div>
+          <div class="lesson-status">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3.5 8.5 6.5 11.5 12.5 5.5"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Moment of a Force</div>
+            <div class="lesson-subtitle">Torque, cross products &amp; couples</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+            <div class="lesson-xp">+80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 4 — Complete -->
+        <div class="lesson-row is-complete" style="animation-delay:0.14s">
+          <div class="lesson-accent" style="background:var(--blue);"></div>
+          <div class="lesson-status">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3.5 8.5 6.5 11.5 12.5 5.5"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Support Reactions</div>
+            <div class="lesson-subtitle">Pins, rollers &amp; fixed supports</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+            <div class="lesson-xp">+80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 5 — Complete -->
+        <div class="lesson-row is-complete" style="animation-delay:0.17s">
+          <div class="lesson-accent" style="background:var(--blue);"></div>
+          <div class="lesson-status">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3.5 8.5 6.5 11.5 12.5 5.5"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Truss Analysis</div>
+            <div class="lesson-subtitle">Method of joints &amp; sections</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+            <div class="lesson-xp">+80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 6 — CURRENT -->
+        <div class="lesson-row is-current" style="animation-delay:0.20s">
+          <div class="lesson-accent" style="background:var(--blue); opacity:1;"></div>
+          <div class="lesson-status">
+            <div class="lesson-number" style="border-color:var(--blue);color:var(--blue);">6</div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Friction Forces</div>
+            <div class="lesson-subtitle">Static &amp; kinetic friction problems</div>
+            <button class="continue-btn" style="background:var(--blue);" onclick="event.stopPropagation();">
+              Continue <span class="arrow">&rarr;</span>
+            </button>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="lesson-xp">40 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 7 — Locked -->
+        <div class="lesson-row is-locked" style="animation-delay:0.23s">
+          <div class="lesson-accent" style="background:var(--blue);"></div>
+          <div class="lesson-status">
+            <div class="lock-icon">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11.5 7V5a3.5 3.5 0 10-7 0v2A1.5 1.5 0 003 8.5v4A1.5 1.5 0 004.5 14h7a1.5 1.5 0 001.5-1.5v-4A1.5 1.5 0 0011.5 7zM6 5a2 2 0 114 0v2H6V5z"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Centroids &amp; Centers of Gravity</div>
+            <div class="lesson-subtitle">Composite shapes &amp; integration</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="lesson-xp">80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 8 — Locked -->
+        <div class="lesson-row is-locked" style="animation-delay:0.26s">
+          <div class="lesson-accent" style="background:var(--blue);"></div>
+          <div class="lesson-status">
+            <div class="lock-icon">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11.5 7V5a3.5 3.5 0 10-7 0v2A1.5 1.5 0 003 8.5v4A1.5 1.5 0 004.5 14h7a1.5 1.5 0 001.5-1.5v-4A1.5 1.5 0 0011.5 7zM6 5a2 2 0 114 0v2H6V5z"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Moments of Inertia</div>
+            <div class="lesson-subtitle">Area &amp; mass moments</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="lesson-xp">80 XP</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ UNIT 2 ═══════════ -->
+  <div class="unit-card" data-unit="2">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-accent" style="background: var(--purple);"></div>
+      <div class="unit-info">
+        <div class="unit-label">Unit 2</div>
+        <div class="unit-title">Dynamics &amp; Motion</div>
+        <div class="unit-meta">2 of 7 lessons &middot; 320 XP</div>
+      </div>
+      <div class="progress-ring-wrap">
+        <svg viewBox="0 0 44 44">
+          <circle class="progress-ring-bg" cx="22" cy="22" r="18"/>
+          <circle class="progress-ring-fg" cx="22" cy="22" r="18"
+            style="stroke:var(--purple); stroke-dasharray:113.1; stroke-dashoffset:80.8;"/>
+        </svg>
+        <div class="progress-ring-text">29%</div>
+      </div>
+      <svg class="unit-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="5 8 10 13 15 8"/>
+      </svg>
+    </div>
+    <div class="unit-lessons" id="lessons-2">
+      <div class="unit-lessons-inner">
+        <div class="lessons-divider"></div>
+
+        <!-- Lesson 1 — Complete -->
+        <div class="lesson-row is-complete" style="animation-delay:0.05s">
+          <div class="lesson-accent" style="background:var(--purple);"></div>
+          <div class="lesson-status">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3.5 8.5 6.5 11.5 12.5 5.5"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Kinematics of Particles</div>
+            <div class="lesson-subtitle">Position, velocity &amp; acceleration</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+            <div class="lesson-xp">+80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 2 — Complete -->
+        <div class="lesson-row is-complete" style="animation-delay:0.08s">
+          <div class="lesson-accent" style="background:var(--purple);"></div>
+          <div class="lesson-status">
+            <div class="check-circle">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3.5 8.5 6.5 11.5 12.5 5.5"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Newton's Laws Applied</div>
+            <div class="lesson-subtitle">Equations of motion for particles</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+            <div class="lesson-xp">+80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 3 — Current -->
+        <div class="lesson-row is-current" style="animation-delay:0.11s">
+          <div class="lesson-accent" style="background:var(--purple); opacity:1;"></div>
+          <div class="lesson-status">
+            <div class="lesson-number" style="border-color:var(--purple);color:var(--purple);">3</div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Work &amp; Energy Methods</div>
+            <div class="lesson-subtitle">KE, PE &amp; conservation</div>
+            <button class="continue-btn" style="background:var(--purple);" onclick="event.stopPropagation();">
+              Start <span class="arrow">&rarr;</span>
+            </button>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="lesson-xp">80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 4 — Locked -->
+        <div class="lesson-row is-locked" style="animation-delay:0.14s">
+          <div class="lesson-accent" style="background:var(--purple);"></div>
+          <div class="lesson-status">
+            <div class="lock-icon">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11.5 7V5a3.5 3.5 0 10-7 0v2A1.5 1.5 0 003 8.5v4A1.5 1.5 0 004.5 14h7a1.5 1.5 0 001.5-1.5v-4A1.5 1.5 0 0011.5 7zM6 5a2 2 0 114 0v2H6V5z"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Impulse &amp; Momentum</div>
+            <div class="lesson-subtitle">Linear momentum &amp; collisions</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="lesson-xp">80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 5 — Locked -->
+        <div class="lesson-row is-locked" style="animation-delay:0.17s">
+          <div class="lesson-accent" style="background:var(--purple);"></div>
+          <div class="lesson-status">
+            <div class="lock-icon">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11.5 7V5a3.5 3.5 0 10-7 0v2A1.5 1.5 0 003 8.5v4A1.5 1.5 0 004.5 14h7a1.5 1.5 0 001.5-1.5v-4A1.5 1.5 0 0011.5 7zM6 5a2 2 0 114 0v2H6V5z"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Rigid Body Kinematics</div>
+            <div class="lesson-subtitle">Rotation, translation &amp; general motion</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="lesson-xp">80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 6 — Locked -->
+        <div class="lesson-row is-locked" style="animation-delay:0.20s">
+          <div class="lesson-accent" style="background:var(--purple);"></div>
+          <div class="lesson-status">
+            <div class="lock-icon">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11.5 7V5a3.5 3.5 0 10-7 0v2A1.5 1.5 0 003 8.5v4A1.5 1.5 0 004.5 14h7a1.5 1.5 0 001.5-1.5v-4A1.5 1.5 0 0011.5 7zM6 5a2 2 0 114 0v2H6V5z"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Rigid Body Kinetics</div>
+            <div class="lesson-subtitle">Force, mass &amp; acceleration for bodies</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="lesson-xp">80 XP</div>
+          </div>
+        </div>
+
+        <!-- Lesson 7 — Locked -->
+        <div class="lesson-row is-locked" style="animation-delay:0.23s">
+          <div class="lesson-accent" style="background:var(--purple);"></div>
+          <div class="lesson-status">
+            <div class="lock-icon">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11.5 7V5a3.5 3.5 0 10-7 0v2A1.5 1.5 0 003 8.5v4A1.5 1.5 0 004.5 14h7a1.5 1.5 0 001.5-1.5v-4A1.5 1.5 0 0011.5 7zM6 5a2 2 0 114 0v2H6V5z"/></svg>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="lesson-title">Vibrations Intro</div>
+            <div class="lesson-subtitle">Free &amp; forced vibrations</div>
+          </div>
+          <div class="lesson-right">
+            <div class="progress-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <div class="lesson-xp">80 XP</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ UNIT 3 (Locked) ═══════════ -->
+  <div class="unit-card is-locked" data-unit="3">
+    <div class="unit-header">
+      <div class="unit-accent" style="background: var(--amber);"></div>
+      <div class="unit-info">
+        <div class="unit-label">Unit 3</div>
+        <div class="unit-title">Strength of Materials</div>
+        <div class="unit-meta">0 of 9 lessons &middot; Locked</div>
+      </div>
+      <div class="progress-ring-wrap">
+        <svg viewBox="0 0 44 44">
+          <circle class="progress-ring-bg" cx="22" cy="22" r="18"/>
+          <circle class="progress-ring-fg" cx="22" cy="22" r="18"
+            style="stroke:var(--amber); stroke-dasharray:113.1; stroke-dashoffset:113.1;"/>
+        </svg>
+        <div class="progress-ring-text">0%</div>
+      </div>
+      <svg class="unit-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4;">
+        <polyline points="5 8 10 13 15 8"/>
+      </svg>
+    </div>
+    <div class="locked-overlay">
+      <div class="lock-big">&#x1F512;</div>
+      <p>Complete Dynamics &amp; Motion to unlock</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-copy" style="animation: fadeUp 0.5s cubic-bezier(0.4,0,0.2,1) 0.3s both;">
+    Keep showing up. Consistency beats intensity.
+  </div>
+
+</div>
+
+<script>
+  // ── Expand / Collapse ───────────────────────────────
+  function toggleUnit(headerEl) {
+    const card = headerEl.closest('.unit-card');
+    if (card.classList.contains('is-locked')) return;
+
+    const lessonsWrap = card.querySelector('.unit-lessons');
+    const inner = lessonsWrap.querySelector('.unit-lessons-inner');
+    const isOpen = card.classList.contains('is-open');
+
+    if (isOpen) {
+      // Collapse
+      lessonsWrap.style.maxHeight = inner.scrollHeight + 'px';
+      // Force reflow
+      lessonsWrap.offsetHeight;
+      lessonsWrap.style.maxHeight = '0px';
+      card.classList.remove('is-open');
+    } else {
+      // Expand
+      lessonsWrap.style.maxHeight = inner.scrollHeight + 'px';
+      card.classList.add('is-open');
+      // After transition, set to auto for dynamic content
+      const handler = () => {
+        if (card.classList.contains('is-open')) {
+          lessonsWrap.style.maxHeight = 'none';
+        }
+        lessonsWrap.removeEventListener('transitionend', handler);
+      };
+      lessonsWrap.addEventListener('transitionend', handler);
+    }
+  }
+
+  // ── Initialize open units ───────────────────────────
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.unit-card.is-open').forEach(card => {
+      const lessonsWrap = card.querySelector('.unit-lessons');
+      if (lessonsWrap) {
+        lessonsWrap.style.maxHeight = 'none';
+      }
+    });
+  });
+
+  // ── Tooltip System ──────────────────────────────────
+  const tooltip = document.getElementById('tooltip');
+  let tooltipTimeout;
+
+  document.querySelectorAll('[data-tip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+      clearTimeout(tooltipTimeout);
+      tooltip.textContent = el.dataset.tip;
+      tooltip.classList.add('show');
+
+      const rect = el.getBoundingClientRect();
+      tooltip.style.left = rect.left + rect.width / 2 - tooltip.offsetWidth / 2 + 'px';
+      tooltip.style.top = rect.bottom + 8 + 'px';
+    });
+
+    el.addEventListener('mouseleave', () => {
+      tooltipTimeout = setTimeout(() => {
+        tooltip.classList.remove('show');
+      }, 100);
+    });
+  });
+
+  // ── Dot hover micro-interaction ─────────────────────
+  document.querySelectorAll('.dot.filled').forEach(dot => {
+    dot.addEventListener('mouseenter', () => {
+      dot.style.transform = 'scale(1.5)';
+    });
+    dot.addEventListener('mouseleave', () => {
+      dot.style.transform = 'scale(1)';
+    });
+  });
+
+  // ── Lesson row tap feedback ─────────────────────────
+  document.querySelectorAll('.lesson-row:not(.is-locked)').forEach(row => {
+    row.addEventListener('click', () => {
+      if (row.classList.contains('is-complete')) {
+        // Flash a subtle highlight
+        row.style.background = 'rgba(34,197,94,0.06)';
+        setTimeout(() => { row.style.background = ''; }, 300);
+      }
+    });
+  });
+
+  // ── Continue button ripple ──────────────────────────
+  document.querySelectorAll('.continue-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.style.transform = 'scale(0.96)';
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 150);
+    });
+  });
+</script>
+</body>
+</html>
