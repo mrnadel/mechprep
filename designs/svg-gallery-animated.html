@@ -745,18 +745,53 @@
 <!-- ====== 17. PV Diagram — Thermo ====== -->
 <div class="card" data-name="PV Diagram" data-cat="Thermo">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <line x1="15" y1="65" x2="72" y2="65" class="s-stroke-d" stroke-width="2" stroke-linecap="round"/>
-  <line x1="15" y1="65" x2="15" y2="10" class="s-stroke-d" stroke-width="2" stroke-linecap="round"/>
-  <text x="44" y="76" text-anchor="middle" font-size="8" class="s-fill-d" font-weight="bold">V</text>
-  <text x="8" y="38" text-anchor="middle" font-size="8" class="s-fill-d" font-weight="bold">P</text>
-  <path d="M25,22 Q50,18 60,35 Q55,55 35,58 Q20,50 25,22" class="s-fill-l" opacity="0.1"/>
-  <path d="M25,22 Q50,18 60,35 Q55,55 35,58 Q20,50 25,22" class="s-stroke" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <circle r="4.5" class="s-fill-d">
-    <animateMotion dur="4s" repeatCount="indefinite" path="M25,22 Q50,18 60,35 Q55,55 35,58 Q20,50 25,22"/>
+  <!-- Axes -->
+  <line x1="15" y1="65" x2="72" y2="65" class="s-stroke-d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="15" y1="65" x2="15" y2="8" class="s-stroke-d" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="72,63.5 72,66.5 74,65" class="s-fill-d" opacity="0.4"/>
+  <polygon points="13.5,8 16.5,8 15,6" class="s-fill-d" opacity="0.4"/>
+  <text x="44" y="76" text-anchor="middle" font-size="7" class="s-fill-d" opacity="0.4" font-weight="bold" font-style="italic">V</text>
+  <text x="8" y="38" text-anchor="middle" font-size="7" class="s-fill-d" opacity="0.4" font-weight="bold" font-style="italic">P</text>
+  <!-- Work area (W_net = enclosed area, pulsing) -->
+  <path d="M58,55 Q38,48 24,28 L24,14 Q42,18 58,32 Z" class="s-fill" opacity="0.06">
+    <animate attributeName="opacity" values="0.04;0.12;0.04" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <!-- Otto cycle: 1→2 isentropic compression -->
+  <path d="M58,55 Q38,48 24,28" class="s-stroke" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- 2→3 constant volume heat addition -->
+  <line x1="24" y1="28" x2="24" y2="14" class="s-stroke" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- 3→4 isentropic expansion -->
+  <path d="M24,14 Q42,18 58,32" class="s-stroke" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- 4→1 constant volume heat rejection -->
+  <line x1="58" y1="32" x2="58" y2="55" class="s-stroke" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Direction arrows (clockwise = heat engine) -->
+  <polygon points="37,43 39,41 40,45" class="s-fill-d" opacity="0.3"/>
+  <polygon points="22.5,21 24,18 25.5,21" class="s-fill-d" opacity="0.3"/>
+  <polygon points="42,22 39,20 40,24" class="s-fill-d" opacity="0.3"/>
+  <polygon points="56.5,45 58,48 59.5,45" class="s-fill-d" opacity="0.3"/>
+  <!-- State point labels -->
+  <text x="62" y="59" font-size="6" class="s-fill-d" opacity="0.35" font-weight="bold">1</text>
+  <text x="18" y="32" font-size="6" class="s-fill-d" opacity="0.35" font-weight="bold">2</text>
+  <text x="18" y="13" font-size="6" class="s-fill-d" opacity="0.35" font-weight="bold">3</text>
+  <text x="62" y="35" font-size="6" class="s-fill-d" opacity="0.35" font-weight="bold">4</text>
+  <!-- Work label -->
+  <text x="39" y="41" text-anchor="middle" font-size="5" class="s-fill-d" opacity="0.15" font-style="italic">W</text>
+  <!-- Tracing dot -->
+  <circle r="4" class="s-fill-d">
+    <animateMotion dur="5s" repeatCount="indefinite"
+      path="M58,55 Q38,48 24,28 L24,14 Q42,18 58,32 L58,55"
+      keyPoints="0;0.35;0.46;0.81;1" keyTimes="0;0.30;0.40;0.72;1" calcMode="linear"/>
   </circle>
-  <circle r="2" fill="#fff" opacity="0.6">
-    <animateMotion dur="4s" repeatCount="indefinite" path="M25,22 Q50,18 60,35 Q55,55 35,58 Q20,50 25,22"/>
+  <circle r="1.5" fill="white" opacity="0.5">
+    <animateMotion dur="5s" repeatCount="indefinite"
+      path="M58,55 Q38,48 24,28 L24,14 Q42,18 58,32 L58,55"
+      keyPoints="0;0.35;0.46;0.81;1" keyTimes="0;0.30;0.40;0.72;1" calcMode="linear"/>
   </circle>
+  <!-- State dots (appear as tracer passes) -->
+  <circle cx="58" cy="55" r="2" class="s-fill-d" opacity="0.15"/>
+  <circle cx="24" cy="28" r="2" class="s-fill-d" opacity="0.15"/>
+  <circle cx="24" cy="14" r="2" class="s-fill-d" opacity="0.15"/>
+  <circle cx="58" cy="32" r="2" class="s-fill-d" opacity="0.15"/>
 </svg></div>
 <div class="card-label">PV Diagram</div>
 </div>
