@@ -177,6 +177,33 @@
   .s-stroke{stroke:var(--c-500)}
   .s-stroke-d{stroke:var(--c-700)}
   .s-stroke-l{stroke:var(--c-300)}
+  /* Stroke weight slider */
+  .weight-bar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:12px 24px 0;
+  }
+  .weight-bar label{
+    font-size:13px;
+    font-weight:700;
+    color:#999;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    white-space:nowrap;
+  }
+  .weight-bar input[type=range]{
+    width:180px;
+    accent-color:var(--c-500);
+    cursor:pointer;
+  }
+  .weight-bar .weight-val{
+    font-size:13px;
+    font-weight:600;
+    color:#777;
+    min-width:32px;
+  }
 </style>
 </head>
 <body>
@@ -198,6 +225,12 @@
   <div class="swatch" data-theme="custom" title="Custom color">
     <input type="color" class="custom-picker" value="#58CC02">
   </div>
+</div>
+
+<div class="weight-bar">
+  <label>Stroke:</label>
+  <input type="range" id="strokeSlider" min="0.4" max="2.5" step="0.05" value="1">
+  <span class="weight-val" id="strokeVal">1.0×</span>
 </div>
 
 <div class="tabs">
@@ -9386,6 +9419,45 @@ lightbox.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') lightbox.classList.remove('open');
 });
+
+// ===== Global stroke-weight slider =====
+(function(){
+  const slider = document.getElementById('strokeSlider');
+  const valLabel = document.getElementById('strokeVal');
+  // Collect every element inside .grid SVGs that has a stroke-width attribute
+  const els = document.querySelectorAll('.grid svg [stroke-width]');
+  // Also collect SVG <line>, <path>, <rect>, <circle>, <ellipse>, <polygon> that may
+  // inherit stroke-width from parent or have it inline — store originals
+  const originals = new Map();
+  els.forEach(el => {
+    originals.set(el, parseFloat(el.getAttribute('stroke-width')));
+  });
+
+  function applyScale(scale) {
+    originals.forEach((origW, el) => {
+      el.setAttribute('stroke-width', (origW * scale).toFixed(2));
+    });
+    valLabel.textContent = scale.toFixed(1) + '×';
+  }
+
+  slider.addEventListener('input', () => applyScale(parseFloat(slider.value)));
+
+  // Also re-apply scale when lightbox opens so the enlarged SVG matches
+  const origLbClick = null;
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      // After lightbox content is set, scale strokes inside it too
+      requestAnimationFrame(() => {
+        const scale = parseFloat(slider.value);
+        document.querySelectorAll('#lbContent svg [stroke-width]').forEach(el => {
+          const orig = parseFloat(el.getAttribute('stroke-width'));
+          el.setAttribute('stroke-width', (orig * scale / scale).toFixed(2));
+          // lightbox SVG is cloned from already-scaled source, so it's already correct
+        });
+      });
+    });
+  });
+})();
 </script>
 
 </body>
