@@ -1,5 +1,6 @@
 'use client';
 
+import { useSession } from 'next-auth/react';
 import { useDbSync } from '@/hooks/useDbSync';
 import { DebugTierToggle } from '@/components/dev/DebugTierToggle';
 
@@ -22,10 +23,25 @@ function LoadingSkeleton() {
 }
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
+  const { status } = useSession();
   const { isHydrated } = useDbSync();
 
-  if (!isHydrated) {
+  const isAuthenticated = status === 'authenticated';
+
+  // Only show loading skeleton for authenticated users hydrating their data
+  if (isAuthenticated && !isHydrated) {
     return <LoadingSkeleton />;
+  }
+
+  // Unauthenticated users (landing page) get full-width layout
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen">
+        <div className="max-w-[480px] mx-auto min-h-screen">
+          {children}
+        </div>
+      </div>
+    );
   }
 
   return (

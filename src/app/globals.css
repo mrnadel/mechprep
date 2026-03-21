@@ -330,3 +330,9 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* Landing page gear spin */
+@keyframes landingSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
