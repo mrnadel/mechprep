@@ -220,5 +220,56 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // Sync engagement data if provided
+  if (body.engagement) {
+    const { gems, leagueTier, streakFreezes, streakMilestones, newGemTransactions } = body.engagement;
+
+    // Update userProgress engagement columns
+    await db.update(userProgress).set({
+      gemsBalance: gems?.balance,
+      gemsTotalEarned: gems?.totalEarned,
+      streakFreezes: streakFreezes,
+      streakMilestones: streakMilestones,
+    }).where(eq(userProgress.userId, userId));
+
+    // Batch insert new gem transactions
+    if (newGemTransactions?.length) {
+      await db.insert(gemTransactions).values(
+        newGemTransactions.map((t: { amount: number; source: string }) => ({
+          userId,
+          amount: t.amount,
+          source: t.source,
+        }))
+      );
+    }
+
+    // Upsert league state
+    if (leagueTier !== undefined && body.engagement.weekStart !== undefined) {
+      const existingLeague = await db
+        .select({ id: leagueState.id })
+        .from(leagueState)
+        .where(eq(leagueState.userId, userId))
+        .limit(1);
+
+      const leagueData = {
+        userId,
+        tier: leagueTier,
+        weeklyXp: body.engagement.weeklyXp ?? 0,
+        weekStart: body.engagement.weekStart,
+        competitors: body.engagement.competitors ?? [],
+        updatedAt: new Date(),
+      };
+
+      if (existingLeague.length > 0) {
+        await db
+          .update(leagueState)
+          .set(leagueData)
+          .where(eq(leagueState.userId, userId));
+      } else {
+        await db.insert(leagueState).values(leagueData);
+      }
+    }
+  }
+
   return NextResponse.json({ ok: true });
 }
