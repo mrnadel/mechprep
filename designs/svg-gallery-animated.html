@@ -1972,42 +1972,42 @@
 <!-- ====== 37. Four-Bar Linkage — Dynamics ====== -->
 <div class="card" data-name="Four-Bar Linkage" data-cat="Dynamics">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <!-- Ground link (fixed) -->
-  <line x1="16" y1="58" x2="64" y2="58" class="s-stroke-d" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Ground hatching -->
-  <line x1="20" y1="58" x2="17" y2="62" class="s-stroke-d" stroke-width="0.5" opacity="0.1"/>
-  <line x1="30" y1="58" x2="27" y2="62" class="s-stroke-d" stroke-width="0.5" opacity="0.1"/>
-  <line x1="50" y1="58" x2="47" y2="62" class="s-stroke-d" stroke-width="0.5" opacity="0.1"/>
-  <line x1="60" y1="58" x2="57" y2="62" class="s-stroke-d" stroke-width="0.5" opacity="0.1"/>
+  <!-- Ground link -->
+  <line x1="20" y1="58" x2="60" y2="58" class="s-stroke-d" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="24" y1="58" x2="21" y2="62" class="s-stroke-d" stroke-width="0.5" opacity="0.1"/>
+  <line x1="40" y1="58" x2="37" y2="62" class="s-stroke-d" stroke-width="0.5" opacity="0.1"/>
+  <line x1="56" y1="58" x2="53" y2="62" class="s-stroke-d" stroke-width="0.5" opacity="0.1"/>
   <!-- Fixed pivots -->
-  <circle cx="16" cy="58" r="3" class="s-fill-d" opacity="0.4"/>
-  <circle cx="64" cy="58" r="3" class="s-fill-d" opacity="0.4"/>
-  <!-- Crank (input link, rotating) -->
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="0,16,58;360,16,58" dur="3s" repeatCount="indefinite"/>
-    <line x1="16" y1="58" x2="16" y2="38" class="s-stroke" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="16" cy="38" r="2.5" class="s-fill-d" opacity="0.5"/>
-  </g>
-  <!-- Coupler + Rocker (animated positions) -->
-  <line class="s-stroke" stroke-width="3" stroke-linecap="round">
-    <animate attributeName="x1" values="16;-4;16;36;16" dur="3s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="y1" values="38;58;78;58;38" dur="3s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="x2" values="52;40;52;64;52" dur="3s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="y2" values="30;38;50;42;30" dur="3s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
+  <circle cx="20" cy="58" r="3" class="s-fill-d" opacity="0.4"/>
+  <circle cx="60" cy="58" r="3" class="s-fill-d" opacity="0.4"/>
+  <!-- Crank (A→B, 9 keyframes over full rotation) -->
+  <line x1="20" y1="58" class="s-stroke" stroke-width="3" stroke-linecap="round">
+    <animate attributeName="x2" values="20;29.9;34;29.9;20;10.1;6;10.1;20" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="44;48.1;58;67.9;72;67.9;58;48.1;44" dur="3s" repeatCount="indefinite"/>
   </line>
-  <line class="s-stroke-l" stroke-width="3" stroke-linecap="round">
-    <animate attributeName="x1" values="52;40;52;64;52" dur="3s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="y1" values="30;38;50;42;30" dur="3s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="x2" values="64;64;64;64;64" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="y2" values="58;58;58;58;58" dur="3s" repeatCount="indefinite"/>
+  <!-- Coupler (B→C) -->
+  <line class="s-stroke" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+    <animate attributeName="x1" values="20;29.9;34;29.9;20;10.1;6;10.1;20" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y1" values="44;48.1;58;67.9;72;67.9;58;48.1;44" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="51.5;58.7;54.2;42.4;36.7;35.2;36.4;42.1;51.5" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="31.3;30;30.6;36.3;42.4;45;42.9;36.5;31.3" dur="3s" repeatCount="indefinite"/>
   </line>
-  <!-- Moving joints -->
-  <circle r="2.5" class="s-fill-d" opacity="0.5">
-    <animate attributeName="cx" values="52;40;52;64;52" dur="3s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="cy" values="30;38;50;42;30" dur="3s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
+  <!-- Rocker (C→D) -->
+  <line x2="60" y2="58" class="s-stroke-l" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="x1" values="51.5;58.7;54.2;42.4;36.7;35.2;36.4;42.1;51.5" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y1" values="31.3;30;30.6;36.3;42.4;45;42.9;36.5;31.3" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <!-- Joint B (crank end) -->
+  <circle r="2.5" class="s-fill-d" opacity="0.4">
+    <animate attributeName="cx" values="20;29.9;34;29.9;20;10.1;6;10.1;20" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="44;48.1;58;67.9;72;67.9;58;48.1;44" dur="3s" repeatCount="indefinite"/>
   </circle>
-  <!-- Coupler point trace (dashed) -->
-  <text x="40" y="74" text-anchor="middle" font-size="4.5" class="s-fill-d" opacity="0.2" font-style="italic">4-bar linkage</text>
+  <!-- Joint C (coupler-rocker) -->
+  <circle r="2.5" class="s-fill-d" opacity="0.4">
+    <animate attributeName="cx" values="51.5;58.7;54.2;42.4;36.7;35.2;36.4;42.1;51.5" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="31.3;30;30.6;36.3;42.4;45;42.9;36.5;31.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="40" y="76" text-anchor="middle" font-size="4.5" class="s-fill-d" opacity="0.2" font-style="italic">4-bar linkage</text>
 </svg></div>
 <div class="card-label">Four-Bar Linkage</div>
 </div>
@@ -2219,37 +2219,40 @@
 <!-- ====== 43. Worm Gear — Machine Design ====== -->
 <div class="card" data-name="Worm Gear" data-cat="Machine Design">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <!-- Worm (horizontal screw, rotating) -->
+  <!-- Worm shaft (horizontal cylinder) -->
+  <rect x="8" y="20" width="64" height="12" rx="6" class="s-fill" opacity="0.08"/>
+  <rect x="8" y="20" width="64" height="12" rx="6" class="s-stroke-d" stroke-width="1.5" fill="none"/>
+  <!-- Worm thread (scrolling animation) -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" values="0,40,28;360,40,28" dur="1.5s" repeatCount="indefinite"/>
-    <ellipse cx="40" cy="28" rx="28" ry="8" class="s-fill" opacity="0.08"/>
-    <ellipse cx="40" cy="28" rx="28" ry="8" class="s-stroke" stroke-width="1.5" fill="none"/>
-    <!-- Thread lines -->
-    <line x1="18" y1="22" x2="24" y2="34" class="s-stroke-l" stroke-width="1.2" opacity="0.3"/>
-    <line x1="30" y1="22" x2="36" y2="34" class="s-stroke-l" stroke-width="1.2" opacity="0.3"/>
-    <line x1="42" y1="22" x2="48" y2="34" class="s-stroke-l" stroke-width="1.2" opacity="0.3"/>
-    <line x1="54" y1="22" x2="60" y2="34" class="s-stroke-l" stroke-width="1.2" opacity="0.3"/>
+    <line x1="16" y1="20" x2="22" y2="32" class="s-stroke-l" stroke-width="1.5" opacity="0.3"/>
+    <line x1="28" y1="20" x2="34" y2="32" class="s-stroke-l" stroke-width="1.5" opacity="0.3"/>
+    <line x1="40" y1="20" x2="46" y2="32" class="s-stroke-l" stroke-width="1.5" opacity="0.3"/>
+    <line x1="52" y1="20" x2="58" y2="32" class="s-stroke-l" stroke-width="1.5" opacity="0.3"/>
+    <line x1="64" y1="20" x2="70" y2="32" class="s-stroke-l" stroke-width="1.5" opacity="0.3"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;-12,0" dur="0.8s" repeatCount="indefinite"/>
   </g>
-  <!-- Worm wheel (large gear, slow rotation) -->
+  <!-- Worm wheel (below, slow rotation) -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" values="0,40,58;-36,40,58" dur="1.5s" repeatCount="indefinite"/>
-    <circle cx="40" cy="58" r="18" class="s-fill" opacity="0.08"/>
-    <circle cx="40" cy="58" r="18" class="s-stroke" stroke-width="2" fill="none"/>
-    <circle cx="40" cy="58" r="13" class="s-stroke-l" stroke-width="0.8" fill="none" opacity="0.15"/>
-    <!-- Tooth markers -->
-    <circle cx="40" cy="40" r="1.5" class="s-fill-d" opacity="0.3"/>
-    <circle cx="54" cy="46" r="1.5" class="s-fill-d" opacity="0.3"/>
-    <circle cx="58" cy="58" r="1.5" class="s-fill-d" opacity="0.3"/>
-    <circle cx="54" cy="70" r="1.5" class="s-fill-d" opacity="0.3"/>
-    <circle cx="40" cy="76" r="1.5" class="s-fill-d" opacity="0.3"/>
-    <circle cx="26" cy="70" r="1.5" class="s-fill-d" opacity="0.3"/>
-    <circle cx="22" cy="58" r="1.5" class="s-fill-d" opacity="0.3"/>
-    <circle cx="26" cy="46" r="1.5" class="s-fill-d" opacity="0.3"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,40,56;-36,40,56" dur="0.8s" repeatCount="indefinite"/>
+    <circle cx="40" cy="56" r="18" class="s-fill" opacity="0.06"/>
+    <circle cx="40" cy="56" r="18" class="s-stroke" stroke-width="2" fill="none"/>
+    <circle cx="40" cy="56" r="13" class="s-stroke-l" stroke-width="0.8" fill="none" opacity="0.12"/>
+    <!-- Teeth -->
+    <circle cx="40" cy="38" r="1.8" class="s-fill-d" opacity="0.3"/>
+    <circle cx="52.7" cy="43.3" r="1.8" class="s-fill-d" opacity="0.25"/>
+    <circle cx="58" cy="56" r="1.8" class="s-fill-d" opacity="0.25"/>
+    <circle cx="52.7" cy="68.7" r="1.8" class="s-fill-d" opacity="0.25"/>
+    <circle cx="40" cy="74" r="1.8" class="s-fill-d" opacity="0.25"/>
+    <circle cx="27.3" cy="68.7" r="1.8" class="s-fill-d" opacity="0.25"/>
+    <circle cx="22" cy="56" r="1.8" class="s-fill-d" opacity="0.25"/>
+    <circle cx="27.3" cy="43.3" r="1.8" class="s-fill-d" opacity="0.25"/>
   </g>
-  <!-- Worm wheel hub -->
-  <circle cx="40" cy="58" r="4" class="s-fill-d"/>
-  <circle cx="40" cy="58" r="1.5" fill="white" opacity="0.3"/>
-  <!-- High ratio label -->
+  <circle cx="40" cy="56" r="4" class="s-fill-d"/>
+  <circle cx="40" cy="56" r="1.5" fill="white" opacity="0.25"/>
+  <!-- Input/output arrows -->
+  <polygon points="74,25 78,26 74,27" class="s-fill-d" opacity="0.2"/>
+  <path d="M22,68 A14,14 0 0,0 26,72" class="s-stroke-l" stroke-width="0.7" fill="none" opacity="0.15"/>
+  <polygon points="25,71 28,74 24,73" class="s-fill-l" opacity="0.15"/>
   <text x="40" y="10" text-anchor="middle" font-size="4" class="s-fill-d" opacity="0.2" font-style="italic">high ratio</text>
 </svg></div>
 <div class="card-label">Worm Gear</div>
@@ -2302,40 +2305,41 @@
 <!-- ====== 45. Crank-Slider — Dynamics ====== -->
 <div class="card" data-name="Crank-Slider" data-cat="Dynamics">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <!-- Slider guide -->
-  <line x1="20" y1="38" x2="76" y2="38" class="s-stroke-d" stroke-width="1" opacity="0.15"/>
-  <line x1="20" y1="42" x2="76" y2="42" class="s-stroke-d" stroke-width="1" opacity="0.15"/>
-  <!-- Crank (rotating) -->
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="0,20,40;360,20,40" dur="2s" repeatCount="indefinite"/>
-    <line x1="20" y1="40" x2="20" y2="26" class="s-stroke" stroke-width="2.5" stroke-linecap="round"/>
-    <circle cx="20" cy="26" r="2.5" class="s-fill-d" opacity="0.5"/>
-  </g>
+  <!-- Slider guide rails -->
+  <line x1="30" y1="36" x2="76" y2="36" class="s-stroke-d" stroke-width="1" opacity="0.12"/>
+  <line x1="30" y1="44" x2="76" y2="44" class="s-stroke-d" stroke-width="1" opacity="0.12"/>
+  <!-- Crank (rotating, r=16 at center 18,40) -->
+  <line x1="18" y1="40" class="s-stroke" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="x2" values="18;29.3;34;29.3;18;6.7;2;6.7;18" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="24;28.7;40;51.3;56;51.3;40;28.7;24" dur="2s" repeatCount="indefinite"/>
+  </line>
   <!-- Crank center -->
-  <circle cx="20" cy="40" r="3" class="s-fill-d"/>
-  <circle cx="20" cy="40" r="1.2" fill="white" opacity="0.3"/>
-  <!-- Connecting rod (animated) -->
-  <line class="s-stroke" stroke-width="2.5" stroke-linecap="round">
-    <animate attributeName="x1" values="20;6;20;34;20" dur="2s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="y1" values="26;40;54;40;26" dur="2s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="x2" values="56;42;56;70;56" dur="2s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="y2" values="40;40;40;40;40" dur="2s" repeatCount="indefinite"/>
+  <circle cx="18" cy="40" r="3" class="s-fill-d"/>
+  <circle cx="18" cy="40" r="1.2" fill="white" opacity="0.3"/>
+  <!-- Connecting rod (B→S, 9 keyframes) -->
+  <line class="s-stroke" stroke-width="2" stroke-linecap="round" opacity="0.7">
+    <animate attributeName="x1" values="18;29.3;34;29.3;18;6.7;2;6.7;18" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="y1" values="24;28.7;40;51.3;56;51.3;40;28.7;24" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="50.2;63.5;70;63.5;50.2;40.9;38;40.9;50.2" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="40;40;40;40;40;40;40;40;40" dur="2s" repeatCount="indefinite"/>
   </line>
   <!-- Slider piston -->
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0,0;-14,0;0,0;14,0;0,0" dur="2s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <rect x="50" y="34" width="14" height="12" rx="3" class="s-fill" opacity="0.2"/>
-    <rect x="50" y="34" width="14" height="12" rx="3" class="s-stroke-d" stroke-width="1.5" fill="none"/>
-    <circle cx="56" cy="40" r="2" class="s-fill-d" opacity="0.4"/>
-  </g>
-  <!-- Wrist pin (moving with connecting rod end) -->
+  <rect y="34" width="14" height="12" rx="3" class="s-fill" opacity="0.18">
+    <animate attributeName="x" values="44.2;57.5;64;57.5;44.2;34.9;32;34.9;44.2" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect y="34" width="14" height="12" rx="3" class="s-stroke-d" stroke-width="1.5" fill="none">
+    <animate attributeName="x" values="44.2;57.5;64;57.5;44.2;34.9;32;34.9;44.2" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Wrist pin (crank end) -->
   <circle r="2" class="s-fill-d" opacity="0.4">
-    <animate attributeName="cx" values="20;6;20;34;20" dur="2s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
-    <animate attributeName="cy" values="26;40;54;40;26" dur="2s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;1"/>
+    <animate attributeName="cx" values="18;29.3;34;29.3;18;6.7;2;6.7;18" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="24;28.7;40;51.3;56;51.3;40;28.7;24" dur="2s" repeatCount="indefinite"/>
   </circle>
-  <!-- Rotation indicator -->
-  <path d="M26,30 A8,8 0 0,1 28,36" class="s-stroke-l" stroke-width="0.7" fill="none" opacity="0.15"/>
-  <polygon points="27,35 30,37 26,37" class="s-fill-l" opacity="0.15"/>
+  <!-- Slider pin -->
+  <circle r="2" class="s-fill-d" opacity="0.3">
+    <animate attributeName="cx" values="50.2;63.5;70;63.5;50.2;40.9;38;40.9;50.2" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="40;40;40;40;40;40;40;40;40" dur="2s" repeatCount="indefinite"/>
+  </circle>
   <text x="40" y="72" text-anchor="middle" font-size="4.5" class="s-fill-d" opacity="0.2" font-style="italic">reciprocating</text>
 </svg></div>
 <div class="card-label">Crank-Slider</div>

@@ -2,14 +2,14 @@
 
 import { useState, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { useCourseStore } from '@/store/useCourseStore';
 import { course } from '@/data/course';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, User, LogOut } from 'lucide-react';
 import { useSubscription } from '@/hooks/useSubscription';
 
-type PopoverType = 'streak' | 'xp' | null;
+type PopoverType = 'streak' | 'xp' | 'menu' | null;
 
 function getGreeting(): string {
   const hour = new Date().getHours();
@@ -159,14 +159,17 @@ export function CourseHeader() {
               </Link>
             )}
 
-            {/* Avatar / Sign Up */}
+            {/* Avatar / Menu */}
             {status === 'loading' ? (
               <div
                 className="animate-pulse"
                 style={{ width: 34, height: 34, borderRadius: '50%', background: '#E5E5E5' }}
               />
             ) : session ? (
-              <Link href="/profile" className="transition-transform active:scale-95">
+              <button
+                onClick={() => togglePopover('menu')}
+                className="transition-transform active:scale-95"
+              >
                 {userImage ? (
                   <img
                     src={userImage}
@@ -175,7 +178,7 @@ export function CourseHeader() {
                       width: 34,
                       height: 34,
                       borderRadius: '50%',
-                      border: '2.5px solid #E5E5E5',
+                      border: popover === 'menu' ? '2.5px solid #58CC02' : '2.5px solid #E5E5E5',
                     }}
                   />
                 ) : (
@@ -186,7 +189,7 @@ export function CourseHeader() {
                       height: 34,
                       borderRadius: '50%',
                       background: 'linear-gradient(135deg, #89E219 0%, #58CC02 100%)',
-                      border: '2.5px solid #E5E5E5',
+                      border: popover === 'menu' ? '2.5px solid #58CC02' : '2.5px solid #E5E5E5',
                       color: 'white',
                       fontSize: 14,
                       fontWeight: 800,
@@ -195,7 +198,7 @@ export function CourseHeader() {
                     {initial}
                   </div>
                 )}
-              </Link>
+              </button>
             ) : (
               <Link
                 href="/register"
