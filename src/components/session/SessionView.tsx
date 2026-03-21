@@ -7,10 +7,12 @@ import QuestionCard from '../question/QuestionCard';
 import SessionSummary from './SessionSummary';
 import { X, Clock, Zap } from 'lucide-react';
 import { cn, formatDuration } from '@/lib/utils';
+import { useMasteryStore } from '@/store/useMasteryStore';
 
 export default function SessionView() {
   const { session, sessionSummary } = useSession();
   const { answerQuestion, nextQuestion, completeSession, abandonSession } = useSessionActions();
+  const addMasteryEvent = useMasteryStore((s) => s.addEvent);
 
   // Mobile back button abandons session
   useBackHandler(!!session && !sessionSummary, abandonSession);
@@ -49,6 +51,14 @@ export default function SessionView() {
 
   const handleAnswer = (correct: boolean, confidence?: number, timeSpent?: number) => {
     answerQuestion(currentQuestion.id, correct, confidence, timeSpent);
+    addMasteryEvent({
+      questionId: currentQuestion.id,
+      topicId: currentQuestion.topic,
+      subtopic: currentQuestion.subtopic,
+      difficulty: currentQuestion.difficulty,
+      correct,
+      source: 'practice',
+    });
   };
 
   const handleNext = () => {

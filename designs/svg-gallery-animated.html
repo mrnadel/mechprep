@@ -7279,6 +7279,479 @@
 <div class="card-label">Hydraulic Ram</div>
 </div>
 
+<!-- ====== 157. Conjugate Beam — Statics ====== -->
+<div class="card" data-name="Conjugate Beam" data-cat="Statics">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Real beam (top) -->
+  <line x1="8" y1="18" x2="72" y2="18" stroke-width="1.4" class="s-stroke"/>
+  <polygon points="8,18 5,24 11,24" stroke-width="0.5" class="s-stroke" fill="none"/>
+  <polygon points="72,18 69,24 75,24" stroke-width="0.5" class="s-stroke" fill="none"/>
+  <!-- Load on real beam -->
+  <line x1="40" y1="8" x2="40" y2="18" stroke-width="0.6" class="s-stroke"/>
+  <polygon points="38.5,16 41.5,16 40,18" class="s-fill"/>
+  <text x="40" y="6" font-size="3" class="s-fill" text-anchor="middle">P</text>
+  <!-- Real deflection (dashed) -->
+  <path d="M8,18 Q40,26 72,18" stroke-width="0.5" class="s-stroke-l" fill="none" stroke-dasharray="2,1" opacity="0.4">
+    <animate attributeName="d" values="M8,18 Q40,20 72,18;M8,18 Q40,26 72,18;M8,18 Q40,20 72,18" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <!-- Separator -->
+  <text x="40" y="34" font-size="3" class="s-fill-d" opacity="0.3" text-anchor="middle">⟹ conjugate</text>
+  <!-- Conjugate beam (bottom) -->
+  <line x1="8" y1="44" x2="72" y2="44" stroke-width="1" class="s-stroke" opacity="0.6"/>
+  <!-- M/EI loading (triangular distributed) -->
+  <path d="M8,44 L40,38 L72,44" stroke-width="0.5" class="s-stroke-l" fill="none" opacity="0.5"/>
+  <g class="s-stroke-l" stroke-width="0.3" opacity="0.3">
+    <line x1="16" y1="44" x2="16" y2="43.2"/><line x1="24" y1="44" x2="24" y2="41.8"/>
+    <line x1="32" y1="44" x2="32" y2="39.8"/><line x1="40" y1="44" x2="40" y2="38"/>
+    <line x1="48" y1="44" x2="48" y2="39.8"/><line x1="56" y1="44" x2="56" y2="41.8"/>
+    <line x1="64" y1="44" x2="64" y2="43.2"/>
+  </g>
+  <text x="40" y="36" font-size="2.5" class="s-fill-l" opacity="0.4" text-anchor="middle">M/EI</text>
+  <!-- Conjugate supports (fixed ends become free, etc.) -->
+  <circle cx="8" cy="44" r="1.5" stroke-width="0.4" class="s-stroke" fill="none" opacity="0.4"/>
+  <circle cx="72" cy="44" r="1.5" stroke-width="0.4" class="s-stroke" fill="none" opacity="0.4"/>
+  <!-- Result -->
+  <text x="40" y="56" font-size="2.8" class="s-fill" opacity="0.4" text-anchor="middle">V̄ = θ, M̄ = δ</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">deflection method</text>
+</svg></div>
+<div class="card-label">Conjugate Beam</div>
+</div>
+
+<!-- ====== 158. Labyrinth Seal — Machine Design ====== -->
+<div class="card" data-name="Labyrinth Seal" data-cat="Machine Design">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Shaft -->
+  <rect x="4" y="36" width="72" height="8" rx="1" stroke-width="0.7" class="s-stroke s-fill" fill-opacity="0.04"/>
+  <!-- Housing (top) -->
+  <rect x="14" y="10" width="52" height="16" rx="1" stroke-width="0.7" class="s-stroke" fill="none"/>
+  <rect x="14" y="10" width="52" height="16" class="s-fill" opacity="0.03"/>
+  <!-- Housing (bottom) -->
+  <rect x="14" y="54" width="52" height="16" rx="1" stroke-width="0.7" class="s-stroke" fill="none"/>
+  <rect x="14" y="54" width="52" height="16" class="s-fill" opacity="0.03"/>
+  <!-- Labyrinth teeth (top, from housing downward) -->
+  <g class="s-stroke" stroke-width="0.6">
+    <rect x="18" y="26" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="26" y="26" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="34" y="26" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="42" y="26" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="50" y="26" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="58" y="26" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+  </g>
+  <!-- Labyrinth teeth (bottom, from housing upward) -->
+  <g class="s-stroke" stroke-width="0.6">
+    <rect x="18" y="44" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="26" y="44" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="34" y="44" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="42" y="44" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="50" y="44" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+    <rect x="58" y="44" width="2" height="10" rx="0.3" class="s-fill" fill-opacity="0.06"/>
+  </g>
+  <!-- Pressure gradient (high to low) -->
+  <text x="8" y="42" font-size="3" class="s-fill" opacity="0.4" text-anchor="middle">P_H</text>
+  <text x="72" y="42" font-size="3" class="s-fill-d" opacity="0.4" text-anchor="middle">P_L</text>
+  <!-- Leakage flow particles (tortuous path) -->
+  <circle r="0.8" class="s-fill-l" opacity="0.5">
+    <animate attributeName="cx" values="16;22;22;30;30;38;38;46;46;54;54;62;62;68" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="34;34;32;32;34;34;32;32;34;34;32;32;34;34" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="0.8" class="s-fill-l" opacity="0.5">
+    <animate attributeName="cx" values="16;22;22;30;30;38;38;46;46;54;54;62;62;68" dur="4s" repeatCount="indefinite" begin="2s"/>
+    <animate attributeName="cy" values="46;46;48;48;46;46;48;48;46;46;48;48;46;46" dur="4s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  <!-- Clearance gap label -->
+  <line x1="62" y1="36" x2="62" y2="26" stroke-width="0.2" class="s-stroke-d" opacity="0.25"/>
+  <text x="66" y="32" font-size="2" class="s-fill-d" opacity="0.3">gap</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">non-contact seal</text>
+</svg></div>
+<div class="card-label">Labyrinth Seal</div>
+</div>
+
+<!-- ====== 159. D'Alembert Principle — Dynamics ====== -->
+<div class="card" data-name="D'Alembert Principle" data-cat="Dynamics">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Block on surface -->
+  <rect x="26" y="32" width="20" height="16" rx="2" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.05"/>
+  <text x="36" y="42" font-size="3.5" class="s-fill" text-anchor="middle" opacity="0.5">m</text>
+  <!-- Surface -->
+  <line x1="4" y1="48" x2="76" y2="48" stroke-width="0.6" class="s-stroke" opacity="0.3"/>
+  <g class="s-stroke" stroke-width="0.3" opacity="0.15">
+    <line x1="8" y1="48" x2="5" y2="52"/><line x1="16" y1="48" x2="13" y2="52"/>
+    <line x1="24" y1="48" x2="21" y2="52"/><line x1="32" y1="48" x2="29" y2="52"/>
+    <line x1="40" y1="48" x2="37" y2="52"/><line x1="48" y1="48" x2="45" y2="52"/>
+    <line x1="56" y1="48" x2="53" y2="52"/><line x1="64" y1="48" x2="61" y2="52"/>
+    <line x1="72" y1="48" x2="69" y2="52"/>
+  </g>
+  <!-- Applied force F (right) -->
+  <g opacity="0.6">
+    <line x1="46" y1="40" x2="62" y2="40" stroke-width="0.8" class="s-stroke"/>
+    <polygon points="62,38.5 62,41.5 65,40" class="s-fill"/>
+    <text x="54" y="37" font-size="3.5" class="s-fill">F</text>
+  </g>
+  <!-- Inertia force -ma (left, dashed) -->
+  <g opacity="0.5">
+    <line x1="26" y1="40" x2="12" y2="40" stroke-width="0.8" class="s-stroke-l" stroke-dasharray="2,1"/>
+    <polygon points="12,38.5 12,41.5 9,40" class="s-fill-l"/>
+    <text x="18" y="37" font-size="3" class="s-fill-l">−ma</text>
+  </g>
+  <!-- Acceleration arrow (below) -->
+  <g opacity="0.4">
+    <line x1="36" y1="56" x2="50" y2="56" stroke-width="0.5" class="s-stroke-d"/>
+    <polygon points="50,54.8 50,57.2 52,56" class="s-fill-d"/>
+    <text x="43" y="62" font-size="3" class="s-fill-d" text-anchor="middle">a</text>
+  </g>
+  <!-- Block sliding animation -->
+  <rect x="26" y="32" width="20" height="16" rx="2" stroke-width="0" fill="none">
+    <animate attributeName="x" values="24;30;24" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Equilibrium equation -->
+  <text x="40" y="20" font-size="3.5" class="s-fill" opacity="0.5" text-anchor="middle">ΣF + (−ma) = 0</text>
+  <text x="40" y="14" font-size="2.5" class="s-fill-d" opacity="0.3" text-anchor="middle">dynamic → static</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">inertia force method</text>
+</svg></div>
+<div class="card-label">D'Alembert Principle</div>
+</div>
+
+<!-- ====== 160. Brazed Joint — Materials ====== -->
+<div class="card" data-name="Brazed Joint" data-cat="Materials">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Part A (top) -->
+  <rect x="10" y="14" width="60" height="18" rx="1" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.04"/>
+  <!-- Part B (bottom) -->
+  <rect x="10" y="42" width="60" height="18" rx="1" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.04"/>
+  <!-- Braze filler gap -->
+  <rect x="10" y="32" width="60" height="10" rx="0.5" class="s-fill-l" opacity="0.12"/>
+  <line x1="10" y1="32" x2="70" y2="32" stroke-width="0.4" class="s-stroke-l" opacity="0.4"/>
+  <line x1="10" y1="42" x2="70" y2="42" stroke-width="0.4" class="s-stroke-l" opacity="0.4"/>
+  <!-- Filler metal flowing by capillary action -->
+  <rect x="10" y="34" width="0" height="6" class="s-fill-l" opacity="0.2">
+    <animate attributeName="width" values="0;60;60" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Capillary arrows -->
+  <g opacity="0.3">
+    <line x1="14" y1="37" x2="20" y2="37" stroke-width="0.4" class="s-stroke-d">
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="20,35.8 20,38.2 22,37" class="s-fill-d">
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="4s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  <!-- Torch/heat source (left) -->
+  <g transform="translate(2,34)">
+    <path d="M0,3 Q4,0 6,3 Q4,6 0,3" stroke-width="0.4" class="s-stroke-l" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="1s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <!-- Gap dimension -->
+  <line x1="74" y1="32" x2="74" y2="42" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <line x1="72" y1="32" x2="76" y2="32" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <line x1="72" y1="42" x2="76" y2="42" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <text x="78" y="38" font-size="2.5" class="s-fill-d" opacity="0.35">gap</text>
+  <!-- Labels -->
+  <text x="40" y="24" font-size="3" class="s-fill-d" opacity="0.3" text-anchor="middle">base metal</text>
+  <text x="40" y="54" font-size="3" class="s-fill-d" opacity="0.3" text-anchor="middle">base metal</text>
+  <text x="40" y="39" font-size="2.5" class="s-fill-l" opacity="0.4" text-anchor="middle">filler</text>
+  <!-- Temperature indicator -->
+  <text x="40" y="10" font-size="3" class="s-fill" opacity="0.4" text-anchor="middle">T &gt; 450°C</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">capillary bonding</text>
+</svg></div>
+<div class="card-label">Brazed Joint</div>
+</div>
+
+<!-- ====== 161. Log Mean Temp — Thermo ====== -->
+<div class="card" data-name="Log Mean Temp" data-cat="Thermo">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Axes -->
+  <line x1="10" y1="64" x2="10" y2="8" stroke-width="0.5" class="s-stroke"/>
+  <line x1="10" y1="64" x2="74" y2="64" stroke-width="0.5" class="s-stroke"/>
+  <text x="6" y="10" font-size="3" class="s-fill" text-anchor="middle">T</text>
+  <text x="74" y="70" font-size="3" class="s-fill" text-anchor="middle">x</text>
+  <!-- Hot fluid (decreasing) -->
+  <path d="M14,16 Q44,22 70,30" stroke-width="0.8" class="s-stroke-l" fill="none"/>
+  <text x="72" y="28" font-size="2.5" class="s-fill-l" opacity="0.5">T_h</text>
+  <!-- Cold fluid (increasing — counterflow) -->
+  <path d="M14,48 Q44,42 70,34" stroke-width="0.8" class="s-stroke" fill="none"/>
+  <text x="72" y="38" font-size="2.5" class="s-fill" opacity="0.5">T_c</text>
+  <!-- ΔT₁ (left) -->
+  <line x1="14" y1="16" x2="14" y2="48" stroke-width="0.4" class="s-stroke-d" opacity="0.35"/>
+  <text x="8" y="34" font-size="2.5" class="s-fill-d" opacity="0.4">ΔT₁</text>
+  <!-- ΔT₂ (right) -->
+  <line x1="70" y1="30" x2="70" y2="34" stroke-width="0.4" class="s-stroke-d" opacity="0.35"/>
+  <text x="66" y="34" font-size="2.5" class="s-fill-d" opacity="0.4">ΔT₂</text>
+  <!-- Shaded area between curves -->
+  <path d="M14,16 Q44,22 70,30 L70,34 Q44,42 14,48 Z" class="s-fill" opacity="0.05"/>
+  <!-- Animated heat transfer arrow -->
+  <g opacity="0.3">
+    <line x1="40" y1="22" x2="40" y2="42" stroke-width="0.5" class="s-stroke-d"/>
+    <polygon points="38.5,42 41.5,42 40,44" class="s-fill-d"/>
+    <text x="44" y="34" font-size="2.5" class="s-fill-d">Q</text>
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite"/>
+  </g>
+  <!-- LMTD formula -->
+  <text x="42" y="56" font-size="2.8" class="s-fill" opacity="0.4" text-anchor="middle">LMTD = (ΔT₁−ΔT₂)/ln(ΔT₁/ΔT₂)</text>
+  <text x="42" y="62" font-size="2.8" class="s-fill" opacity="0.4" text-anchor="middle">Q = UA·LMTD</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">counterflow HX</text>
+</svg></div>
+<div class="card-label">Log Mean Temp</div>
+</div>
+
+<!-- ====== 162. Wobble Plate — Machine Design ====== -->
+<div class="card" data-name="Wobble Plate" data-cat="Machine Design">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Central shaft -->
+  <rect x="38" y="6" width="4" height="68" rx="1" stroke-width="0.5" class="s-stroke s-fill" fill-opacity="0.05"/>
+  <!-- Wobble plate (tilted ellipse) -->
+  <ellipse cx="40" cy="40" rx="24" ry="8" stroke-width="0.8" class="s-stroke" fill="none">
+    <animateTransform attributeName="transform" type="rotate" values="0,40,40;5,40,40;0,40,40;-5,40,40;0,40,40" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="40" cy="40" rx="24" ry="8" class="s-fill" opacity="0.04">
+    <animateTransform attributeName="transform" type="rotate" values="0,40,40;5,40,40;0,40,40;-5,40,40;0,40,40" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Follower pins (top) -->
+  <g>
+    <rect x="16" y="22" width="3" height="10" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none">
+      <animate attributeName="y" values="24;20;24" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="30" y="20" width="3" height="10" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none">
+      <animate attributeName="y" values="22;18;22" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+    <rect x="47" y="20" width="3" height="10" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none">
+      <animate attributeName="y" values="18;22;18" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="61" y="22" width="3" height="10" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none">
+      <animate attributeName="y" values="20;24;20" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+  </g>
+  <!-- Follower pins (bottom, mirror) -->
+  <g>
+    <rect x="16" y="48" width="3" height="10" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none">
+      <animate attributeName="y" values="46;50;46" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="30" y="50" width="3" height="10" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none">
+      <animate attributeName="y" values="48;52;48" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+    <rect x="47" y="50" width="3" height="10" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none">
+      <animate attributeName="y" values="52;48;52" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="61" y="48" width="3" height="10" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none">
+      <animate attributeName="y" values="50;46;50" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+  </g>
+  <!-- Rotation arrow -->
+  <path d="M34,14 A8,4 0 0,1 46,14" stroke-width="0.4" class="s-stroke-d" opacity="0.3" fill="none"/>
+  <polygon points="46,13 46,15 48,14" class="s-fill-d" opacity="0.3"/>
+  <text x="40" y="10" font-size="2.5" class="s-fill-d" opacity="0.35" text-anchor="middle">ω</text>
+  <!-- Tilt angle -->
+  <text x="68" y="42" font-size="2.5" class="s-fill-d" opacity="0.35">α</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">axial piston drive</text>
+</svg></div>
+<div class="card-label">Wobble Plate</div>
+</div>
+
+<!-- ====== 163. Buckling Modes — Statics ====== -->
+<div class="card" data-name="Buckling Modes" data-cat="Statics">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Mode 1 (n=1, single half-wave) -->
+  <g transform="translate(10,0)">
+    <line x1="4" y1="8" x2="4" y2="72" stroke-width="0.3" class="s-stroke-d" opacity="0.15" stroke-dasharray="1,1"/>
+    <path d="M4,8 Q14,40 4,72" stroke-width="0.8" class="s-stroke" fill="none">
+      <animate attributeName="d" values="M4,8 Q6,40 4,72;M4,8 Q14,40 4,72;M4,8 Q6,40 4,72" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <rect x="0" y="4" width="8" height="4" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none"/>
+    <rect x="0" y="72" width="8" height="4" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none"/>
+    <text x="4" y="80" font-size="2.5" class="s-fill" opacity="0.4" text-anchor="middle">n=1</text>
+  </g>
+  <!-- Mode 2 (n=2, full S-wave) -->
+  <g transform="translate(30,0)">
+    <line x1="4" y1="8" x2="4" y2="72" stroke-width="0.3" class="s-stroke-d" opacity="0.15" stroke-dasharray="1,1"/>
+    <path d="M4,8 Q12,26 4,40 Q-4,54 4,72" stroke-width="0.8" class="s-stroke" fill="none">
+      <animate attributeName="d" values="M4,8 Q6,26 4,40 Q2,54 4,72;M4,8 Q12,26 4,40 Q-4,54 4,72;M4,8 Q6,26 4,40 Q2,54 4,72" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <rect x="0" y="4" width="8" height="4" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none"/>
+    <rect x="0" y="72" width="8" height="4" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none"/>
+    <text x="4" y="80" font-size="2.5" class="s-fill" opacity="0.4" text-anchor="middle">n=2</text>
+  </g>
+  <!-- Mode 3 (n=3, 1.5 waves) -->
+  <g transform="translate(50,0)">
+    <line x1="4" y1="8" x2="4" y2="72" stroke-width="0.3" class="s-stroke-d" opacity="0.15" stroke-dasharray="1,1"/>
+    <path d="M4,8 Q10,20 4,30 Q-2,40 4,50 Q10,60 4,72" stroke-width="0.8" class="s-stroke" fill="none">
+      <animate attributeName="d" values="M4,8 Q6,20 4,30 Q2,40 4,50 Q6,60 4,72;M4,8 Q10,20 4,30 Q-2,40 4,50 Q10,60 4,72;M4,8 Q6,20 4,30 Q2,40 4,50 Q6,60 4,72" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <rect x="0" y="4" width="8" height="4" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none"/>
+    <rect x="0" y="72" width="8" height="4" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none"/>
+    <text x="4" y="80" font-size="2.5" class="s-fill" opacity="0.4" text-anchor="middle">n=3</text>
+  </g>
+  <!-- P_cr labels -->
+  <text x="14" y="4" font-size="2.5" class="s-fill" opacity="0.4" text-anchor="middle">P_cr</text>
+  <text x="34" y="4" font-size="2.5" class="s-fill" opacity="0.4" text-anchor="middle">4P_cr</text>
+  <text x="54" y="4" font-size="2.5" class="s-fill" opacity="0.4" text-anchor="middle">9P_cr</text>
+  <!-- Load arrows -->
+  <g opacity="0.35" class="s-stroke">
+    <line x1="14" y1="0" x2="14" y2="4" stroke-width="0.4"/>
+    <line x1="34" y1="0" x2="34" y2="4" stroke-width="0.4"/>
+    <line x1="54" y1="0" x2="54" y2="4" stroke-width="0.4"/>
+  </g>
+  <!-- Formula -->
+  <text x="70" y="42" font-size="3" class="s-fill" opacity="0.35" text-anchor="middle" transform="rotate(90,70,42)">P_n = n²P_cr</text>
+</svg></div>
+<div class="card-label">Buckling Modes</div>
+</div>
+
+<!-- ====== 164. Grashof Number — Thermo ====== -->
+<div class="card" data-name="Grashof Number" data-cat="Thermo">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Hot vertical plate -->
+  <rect x="10" y="10" width="6" height="56" rx="1" stroke-width="0.8" class="s-stroke s-fill-l" fill-opacity="0.1"/>
+  <text x="13" y="8" font-size="2.5" class="s-fill" opacity="0.5" text-anchor="middle">T_s</text>
+  <!-- Ambient -->
+  <text x="68" y="8" font-size="2.5" class="s-fill-d" opacity="0.4">T∞</text>
+  <!-- Natural convection plume -->
+  <g class="s-stroke-l" stroke-width="0.4" opacity="0.3">
+    <path d="M16,60 Q20,56 18,50 Q22,44 20,38 Q24,32 22,26 Q26,20 24,14 Q28,8 26,4" fill="none">
+      <animateTransform attributeName="transform" type="translate" values="0,2;0,-2;0,2" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M16,62 Q24,58 22,52 Q28,46 26,40 Q30,34 28,28 Q32,22 30,16 Q34,10 32,6" fill="none">
+      <animateTransform attributeName="transform" type="translate" values="0,2;0,-2;0,2" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+    </path>
+    <path d="M16,64 Q28,60 26,54 Q34,48 32,42 Q38,36 36,30 Q40,24 38,18 Q42,12 40,8" fill="none">
+      <animateTransform attributeName="transform" type="translate" values="0,2;0,-2;0,2" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+    </path>
+  </g>
+  <!-- Rising particles -->
+  <circle r="0.8" class="s-fill-l" opacity="0.4">
+    <animate attributeName="cx" values="18;22;24;28" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="64;44;24;4" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.3;0.1;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="0.8" class="s-fill-l" opacity="0.4">
+    <animate attributeName="cx" values="18;24;28;34" dur="3s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="cy" values="64;44;24;4" dur="3s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="opacity" values="0.5;0.3;0.1;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <!-- Boundary layer growth -->
+  <path d="M16,66 Q16,40 24,14" stroke-width="0.5" class="s-stroke-d" fill="none" opacity="0.25" stroke-dasharray="2,1"/>
+  <text x="28" y="40" font-size="2.5" class="s-fill-d" opacity="0.35">δ</text>
+  <!-- Buoyancy vs viscosity -->
+  <g opacity="0.35">
+    <text x="52" y="30" font-size="2.5" class="s-fill-d" text-anchor="middle">buoyancy</text>
+    <line x1="42" y1="32" x2="62" y2="32" stroke-width="0.3" class="s-stroke-d"/>
+    <text x="52" y="40" font-size="2.5" class="s-fill-d" text-anchor="middle">viscous</text>
+  </g>
+  <!-- Formula -->
+  <text x="52" y="54" font-size="3" class="s-fill" opacity="0.4" text-anchor="middle">Gr = gβΔTL³/ν²</text>
+  <!-- Length L -->
+  <line x1="6" y1="10" x2="6" y2="66" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <line x1="4" y1="10" x2="8" y2="10" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <line x1="4" y1="66" x2="8" y2="66" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <text x="3" y="40" font-size="2.5" class="s-fill-d" opacity="0.35">L</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">natural convection</text>
+</svg></div>
+<div class="card-label">Grashof Number</div>
+</div>
+
+<!-- ====== 165. Overrunning Clutch — Machine Design ====== -->
+<div class="card" data-name="Overrunning Clutch" data-cat="Machine Design">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Outer race -->
+  <circle cx="40" cy="40" r="26" stroke-width="1" class="s-stroke" fill="none"/>
+  <!-- Inner race -->
+  <circle cx="40" cy="40" r="14" stroke-width="0.8" class="s-stroke" fill="none"/>
+  <circle cx="40" cy="40" r="6" stroke-width="0.5" class="s-stroke s-fill" fill-opacity="0.06"/>
+  <!-- Sprags/rollers in wedge pockets -->
+  <g>
+    <ellipse cx="40" cy="20" rx="3" ry="5" stroke-width="0.5" class="s-stroke s-fill-l" fill-opacity="0.1" transform="rotate(10,40,20)"/>
+    <ellipse cx="54.1" cy="23.9" rx="3" ry="5" stroke-width="0.5" class="s-stroke s-fill-l" fill-opacity="0.1" transform="rotate(55,54.1,23.9)"/>
+    <ellipse cx="60" cy="40" rx="3" ry="5" stroke-width="0.5" class="s-stroke s-fill-l" fill-opacity="0.1" transform="rotate(100,60,40)"/>
+    <ellipse cx="54.1" cy="56.1" rx="3" ry="5" stroke-width="0.5" class="s-stroke s-fill-l" fill-opacity="0.1" transform="rotate(145,54.1,56.1)"/>
+    <ellipse cx="40" cy="60" rx="3" ry="5" stroke-width="0.5" class="s-stroke s-fill-l" fill-opacity="0.1" transform="rotate(190,40,60)"/>
+    <ellipse cx="25.9" cy="56.1" rx="3" ry="5" stroke-width="0.5" class="s-stroke s-fill-l" fill-opacity="0.1" transform="rotate(235,25.9,56.1)"/>
+    <ellipse cx="20" cy="40" rx="3" ry="5" stroke-width="0.5" class="s-stroke s-fill-l" fill-opacity="0.1" transform="rotate(280,20,40)"/>
+    <ellipse cx="25.9" cy="23.9" rx="3" ry="5" stroke-width="0.5" class="s-stroke s-fill-l" fill-opacity="0.1" transform="rotate(325,25.9,23.9)"/>
+  </g>
+  <!-- Drive direction arrow (CW locks) -->
+  <path d="M30,10 A14,14 0 0,1 50,10" stroke-width="0.5" class="s-stroke" opacity="0.4" fill="none"/>
+  <polygon points="50,9 50,11 53,10" class="s-fill" opacity="0.4"/>
+  <text x="40" y="8" font-size="2.5" class="s-fill" opacity="0.5" text-anchor="middle">drive</text>
+  <!-- Freewheel direction (CCW) -->
+  <path d="M50,70 A14,14 0 0,1 30,70" stroke-width="0.5" class="s-stroke-d" opacity="0.3" fill="none" stroke-dasharray="2,1"/>
+  <polygon points="30,69 30,71 27,70" class="s-fill-d" opacity="0.3"/>
+  <text x="40" y="74" font-size="2.5" class="s-fill-d" opacity="0.35" text-anchor="middle">freewheel</text>
+  <!-- Inner rotation indicator -->
+  <g>
+    <line x1="40" y1="40" x2="40" y2="34" stroke-width="0.4" class="s-stroke-d" opacity="0.3"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/>
+  </g>
+  <text x="40" y="42" font-size="2.5" class="s-fill" opacity="0.3" text-anchor="middle">sprag</text>
+</svg></div>
+<div class="card-label">Overrunning Clutch</div>
+</div>
+
+<!-- ====== 166. Karman Vortex — Fluids ====== -->
+<div class="card" data-name="Karman Vortex" data-cat="Fluids">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Cylinder (bluff body) -->
+  <circle cx="18" cy="40" r="6" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.05"/>
+  <!-- Free stream flow -->
+  <g opacity="0.3" class="s-stroke" stroke-width="0.3">
+    <line x1="2" y1="28" x2="12" y2="28"/><line x1="2" y1="34" x2="12" y2="34"/>
+    <line x1="2" y1="40" x2="12" y2="40"/><line x1="2" y1="46" x2="12" y2="46"/>
+    <line x1="2" y1="52" x2="12" y2="52"/>
+  </g>
+  <g opacity="0.3" class="s-fill">
+    <polygon points="12,27 12,29 14,28"/><polygon points="12,33 12,35 14,34"/>
+    <polygon points="12,39 12,41 14,40"/><polygon points="12,45 12,47 14,46"/>
+    <polygon points="12,51 12,53 14,52"/>
+  </g>
+  <!-- Vortex street (alternating top and bottom) -->
+  <!-- Top row vortices -->
+  <g opacity="0.25">
+    <circle cx="32" cy="34" r="4" stroke-width="0.5" class="s-stroke-l" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="0,32,34;360,32,34" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="48" cy="34" r="4" stroke-width="0.5" class="s-stroke-l" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="0,48,34;360,48,34" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="64" cy="34" r="4" stroke-width="0.5" class="s-stroke-l" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="0,64,34;360,64,34" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Bottom row vortices (offset) -->
+  <g opacity="0.25">
+    <circle cx="40" cy="46" r="4" stroke-width="0.5" class="s-stroke-l" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="360,40,46;0,40,46" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="56" cy="46" r="4" stroke-width="0.5" class="s-stroke-l" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="360,56,46;0,56,46" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="72" cy="46" r="4" stroke-width="0.5" class="s-stroke-l" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="360,72,46;0,72,46" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- Rotation indicators inside vortices -->
+  <g class="s-fill" opacity="0.15">
+    <circle cx="32" cy="32" r="0.6"/><circle cx="48" cy="32" r="0.6"/><circle cx="64" cy="32" r="0.6"/>
+    <circle cx="40" cy="48" r="0.6"/><circle cx="56" cy="48" r="0.6"/><circle cx="72" cy="48" r="0.6"/>
+  </g>
+  <!-- Shed animation (growing from cylinder) -->
+  <circle r="2" stroke-width="0.3" class="s-stroke-l" fill="none" opacity="0">
+    <animate attributeName="cx" values="24;34;44" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="36;34;34" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="1;3;4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.2;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="2" stroke-width="0.3" class="s-stroke-l" fill="none" opacity="0">
+    <animate attributeName="cx" values="24;34;44" dur="2s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="cy" values="44;46;46" dur="2s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="r" values="1;3;4" dur="2s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="opacity" values="0.4;0.2;0" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <!-- Strouhal label -->
+  <text x="40" y="20" font-size="3" class="s-fill" opacity="0.4" text-anchor="middle">St = fD/V</text>
+  <text x="6" y="38" font-size="2.5" class="s-fill-d" opacity="0.35">V</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">vortex shedding</text>
+</svg></div>
+<div class="card-label">Karman Vortex</div>
+</div>
+
 </div><!-- end grid -->
 
 <!-- LIGHTBOX MODAL -->
