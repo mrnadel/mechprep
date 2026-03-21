@@ -7752,6 +7752,426 @@
 <div class="card-label">Karman Vortex</div>
 </div>
 
+<!-- ====== 167. Reciprocating Compressor — Thermo ====== -->
+<div class="card" data-name="Reciprocating Compressor" data-cat="Thermo">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Cylinder -->
+  <rect x="20" y="10" width="28" height="44" rx="2" stroke-width="0.8" class="s-stroke" fill="none"/>
+  <!-- Piston -->
+  <rect x="22" y="38" width="24" height="6" rx="1" stroke-width="0.7" class="s-stroke s-fill" fill-opacity="0.08">
+    <animate attributeName="y" values="38;20;38" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Piston rod -->
+  <rect x="32" y="44" width="4" height="18" rx="0.5" stroke-width="0.5" class="s-stroke" fill="none">
+    <animate attributeName="y" values="44;26;44" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Crank mechanism (bottom) -->
+  <circle cx="34" cy="66" r="2" stroke-width="0.5" class="s-stroke s-fill" fill-opacity="0.1"/>
+  <g>
+    <line x1="34" y1="66" x2="34" y2="58" stroke-width="0.7" class="s-stroke"/>
+    <circle cx="34" cy="58" r="1" class="s-fill" opacity="0.3"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,34,66;360,34,66" dur="2s" repeatCount="indefinite"/>
+  </g>
+  <!-- Gas compression (shrinking volume) -->
+  <rect x="22" y="11" width="24" height="27" class="s-fill-l" opacity="0.06">
+    <animate attributeName="height" values="27;9;27" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Inlet valve (top left) -->
+  <rect x="22" y="8" width="8" height="3" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none"/>
+  <text x="26" y="6" font-size="2" class="s-fill-d" opacity="0.4" text-anchor="middle">in</text>
+  <!-- Outlet valve (top right) -->
+  <rect x="38" y="8" width="8" height="3" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none"/>
+  <text x="42" y="6" font-size="2" class="s-fill-d" opacity="0.4" text-anchor="middle">out</text>
+  <!-- Pressure indicator -->
+  <g opacity="0.35">
+    <circle cx="60" cy="20" r="7" stroke-width="0.4" class="s-stroke" fill="none"/>
+    <line x1="60" y1="20" x2="63" y2="17" stroke-width="0.4" class="s-stroke">
+      <animateTransform attributeName="transform" type="rotate" values="0,60,20;-60,60,20;0,60,20" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <text x="60" y="30" font-size="2.5" class="s-fill-d" text-anchor="middle">P</text>
+  </g>
+  <!-- Discharge particles -->
+  <circle r="0.7" class="s-fill-l" opacity="0.4">
+    <animate attributeName="cx" values="42;50;60" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="9;6;4" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.2;0" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">positive displacement</text>
+</svg></div>
+<div class="card-label">Reciprocating Compressor</div>
+</div>
+
+<!-- ====== 168. Elastic Modulus — Materials ====== -->
+<div class="card" data-name="Elastic Modulus" data-cat="Materials">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Axes -->
+  <line x1="12" y1="66" x2="12" y2="8" stroke-width="0.6" class="s-stroke"/>
+  <line x1="12" y1="66" x2="74" y2="66" stroke-width="0.6" class="s-stroke"/>
+  <text x="7" y="10" font-size="3.5" class="s-fill" text-anchor="middle">σ</text>
+  <text x="74" y="72" font-size="3.5" class="s-fill" text-anchor="middle">ε</text>
+  <!-- Steel (steep slope) -->
+  <line x1="12" y1="66" x2="34" y2="14" stroke-width="0.8" class="s-stroke" opacity="0.7"/>
+  <text x="20" y="30" font-size="2.5" class="s-fill" opacity="0.5" transform="rotate(-67,20,30)">steel</text>
+  <!-- Aluminum (medium slope) -->
+  <line x1="12" y1="66" x2="48" y2="18" stroke-width="0.8" class="s-stroke-l" opacity="0.6"/>
+  <text x="36" y="34" font-size="2.5" class="s-fill-l" opacity="0.5" transform="rotate(-56,36,34)">aluminum</text>
+  <!-- Polymer (gentle slope) -->
+  <line x1="12" y1="66" x2="68" y2="30" stroke-width="0.8" class="s-stroke-d" opacity="0.4"/>
+  <text x="52" y="44" font-size="2.5" class="s-fill-d" opacity="0.4" transform="rotate(-40,52,44)">polymer</text>
+  <!-- E slope indicator on steel -->
+  <line x1="16" y1="58" x2="26" y2="58" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <line x1="26" y1="58" x2="26" y2="38" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <text x="28" y="50" font-size="2.5" class="s-fill-d" opacity="0.35">E</text>
+  <!-- Animated loading dot -->
+  <circle r="2" class="s-fill" opacity="0.5">
+    <animate attributeName="cx" values="12;34;12" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="66;14;66" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Values -->
+  <text x="60" y="10" font-size="2.5" class="s-fill" opacity="0.35">E_steel ≈ 200 GPa</text>
+  <text x="60" y="16" font-size="2.5" class="s-fill-l" opacity="0.35">E_Al ≈ 70 GPa</text>
+  <!-- Formula -->
+  <text x="50" y="62" font-size="3.5" class="s-fill" opacity="0.4" text-anchor="middle">E = σ/ε</text>
+</svg></div>
+<div class="card-label">Elastic Modulus</div>
+</div>
+
+<!-- ====== 169. Prandtl Number — Thermo ====== -->
+<div class="card" data-name="Prandtl Number" data-cat="Thermo">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Wall -->
+  <rect x="6" y="8" width="6" height="64" rx="1" stroke-width="0.7" class="s-stroke s-fill-l" fill-opacity="0.08"/>
+  <!-- Velocity boundary layer (wider) -->
+  <path d="M12,72 Q40,70 50,40 Q40,10 12,8" stroke-width="0.7" class="s-stroke" fill="none" opacity="0.5"/>
+  <text x="42" y="24" font-size="2.5" class="s-fill" opacity="0.45">δ_v</text>
+  <!-- Thermal boundary layer (Pr > 1: thinner) -->
+  <path d="M12,68 Q30,66 36,40 Q30,14 12,12" stroke-width="0.7" class="s-stroke-l" fill="none" opacity="0.5" stroke-dasharray="2,1"/>
+  <text x="30" y="20" font-size="2.5" class="s-fill-l" opacity="0.45">δ_t</text>
+  <!-- Velocity profile arrows -->
+  <g class="s-stroke" stroke-width="0.3" opacity="0.25">
+    <line x1="12" y1="20" x2="22" y2="20"/><polygon points="22,19 22,21 24,20" class="s-fill"/>
+    <line x1="12" y1="30" x2="34" y2="30"/><polygon points="34,29 34,31 36,30" class="s-fill"/>
+    <line x1="12" y1="40" x2="42" y2="40"/><polygon points="42,39 42,41 44,40" class="s-fill"/>
+    <line x1="12" y1="50" x2="34" y2="50"/><polygon points="34,49 34,51 36,50" class="s-fill"/>
+    <line x1="12" y1="60" x2="22" y2="60"/><polygon points="22,59 22,61 24,60" class="s-fill"/>
+  </g>
+  <!-- Pr comparison -->
+  <g opacity="0.4">
+    <text x="56" y="30" font-size="2.5" class="s-fill" text-anchor="middle">Pr &gt; 1: δ_v &gt; δ_t</text>
+    <text x="56" y="38" font-size="2.5" class="s-fill-d" text-anchor="middle">(oils, water)</text>
+    <text x="56" y="50" font-size="2.5" class="s-fill" text-anchor="middle">Pr &lt; 1: δ_v &lt; δ_t</text>
+    <text x="56" y="58" font-size="2.5" class="s-fill-d" text-anchor="middle">(liquid metals)</text>
+  </g>
+  <!-- Pulsing boundary layers -->
+  <path d="M12,72 Q40,70 50,40 Q40,10 12,8" stroke-width="0.3" class="s-stroke" fill="none" opacity="0.1">
+    <animate attributeName="opacity" values="0.05;0.2;0.05" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <!-- Formula -->
+  <text x="56" y="72" font-size="3.5" class="s-fill" opacity="0.45" text-anchor="middle">Pr = ν/α = c_pμ/k</text>
+</svg></div>
+<div class="card-label">Prandtl Number</div>
+</div>
+
+<!-- ====== 170. Turnbuckle — Machine Design ====== -->
+<div class="card" data-name="Turnbuckle" data-cat="Machine Design">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Left rod -->
+  <rect x="2" y="38" width="22" height="4" rx="0.5" stroke-width="0.6" class="s-stroke s-fill" fill-opacity="0.05"/>
+  <!-- Right rod -->
+  <rect x="56" y="38" width="22" height="4" rx="0.5" stroke-width="0.6" class="s-stroke s-fill" fill-opacity="0.05"/>
+  <!-- Left eye/hook -->
+  <circle cx="6" cy="40" r="3" stroke-width="0.5" class="s-stroke" fill="none"/>
+  <circle cx="6" cy="40" r="1" class="s-fill" opacity="0.2"/>
+  <!-- Right eye/hook -->
+  <circle cx="74" cy="40" r="3" stroke-width="0.5" class="s-stroke" fill="none"/>
+  <circle cx="74" cy="40" r="1" class="s-fill" opacity="0.2"/>
+  <!-- Barrel body -->
+  <rect x="24" y="32" width="32" height="16" rx="4" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.04"/>
+  <!-- Thread indication (left half = left-hand, right half = right-hand) -->
+  <g class="s-stroke" stroke-width="0.3" opacity="0.3">
+    <path d="M26,36 L30,38 L26,40 L30,42 L26,44" fill="none"/>
+    <path d="M54,36 L50,38 L54,40 L50,42 L54,44" fill="none"/>
+  </g>
+  <!-- Center divider -->
+  <line x1="40" y1="33" x2="40" y2="47" stroke-width="0.3" class="s-stroke-d" opacity="0.2" stroke-dasharray="1,1"/>
+  <text x="32" y="30" font-size="2" class="s-fill-d" opacity="0.35">LH</text>
+  <text x="46" y="30" font-size="2" class="s-fill-d" opacity="0.35">RH</text>
+  <!-- Rotation arrow (barrel turns) -->
+  <path d="M34,26 A8,4 0 0,1 46,26" stroke-width="0.4" class="s-stroke-d" opacity="0.35" fill="none"/>
+  <polygon points="46,25 46,27 48,26" class="s-fill-d" opacity="0.35"/>
+  <!-- Tension arrows (rods pull inward) -->
+  <g opacity="0.4">
+    <line x1="12" y1="40" x2="22" y2="40" stroke-width="0.5" class="s-stroke">
+      <animate attributeName="x1" values="14;10;14" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="22,38.5 22,41.5 24,40" class="s-fill"/>
+    <line x1="68" y1="40" x2="58" y2="40" stroke-width="0.5" class="s-stroke">
+      <animate attributeName="x1" values="66;70;66" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="58,38.5 58,41.5 56,40" class="s-fill"/>
+  </g>
+  <!-- Length change indicator -->
+  <line x1="24" y1="54" x2="56" y2="54" stroke-width="0.3" class="s-stroke-d" opacity="0.3">
+    <animate attributeName="x1" values="26;22;26" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="54;58;54" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <text x="40" y="60" font-size="3" class="s-fill-d" opacity="0.35" text-anchor="middle">adjustable length</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">tension adjuster</text>
+</svg></div>
+<div class="card-label">Turnbuckle</div>
+</div>
+
+<!-- ====== 171. Stagnation Point — Fluids ====== -->
+<div class="card" data-name="Stagnation Point" data-cat="Fluids">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Body (airfoil-like) -->
+  <path d="M30,40 Q30,28 50,28 Q70,28 70,40 Q70,52 50,52 Q30,52 30,40" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.04"/>
+  <!-- Streamlines approaching -->
+  <g class="s-stroke" stroke-width="0.4" opacity="0.3">
+    <path d="M4,30 L22,30 Q28,32 28,36" fill="none"/>
+    <path d="M4,36 L20,36 Q26,38 28,40" fill="none"/>
+    <path d="M4,40 L28,40" fill="none"/>
+    <path d="M4,44 L20,44 Q26,42 28,40" fill="none"/>
+    <path d="M4,50 L22,50 Q28,48 28,44" fill="none"/>
+  </g>
+  <!-- Streamlines over body -->
+  <g class="s-stroke" stroke-width="0.3" opacity="0.2">
+    <path d="M28,36 Q40,24 60,26 Q74,28 76,34" fill="none"/>
+    <path d="M28,44 Q40,56 60,54 Q74,52 76,46" fill="none"/>
+  </g>
+  <!-- Stagnation point (bright dot) -->
+  <circle cx="30" cy="40" r="2.5" class="s-fill-l" opacity="0.3">
+    <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="30" cy="40" r="1" class="s-fill"/>
+  <text x="22" y="36" font-size="2.5" class="s-fill-l" opacity="0.5">S</text>
+  <!-- V=0 label -->
+  <text x="20" y="48" font-size="2.5" class="s-fill" opacity="0.4">V=0</text>
+  <!-- Pressure maximum -->
+  <text x="20" y="54" font-size="2.5" class="s-fill" opacity="0.4">P=P_max</text>
+  <!-- Free stream -->
+  <g opacity="0.4">
+    <line x1="6" y1="16" x2="16" y2="16" stroke-width="0.5" class="s-stroke"/>
+    <polygon points="16,14.5 16,17.5 19,16" class="s-fill"/>
+    <text x="12" y="14" font-size="2.5" class="s-fill">V∞</text>
+  </g>
+  <!-- Approaching flow particles -->
+  <circle r="0.8" class="s-fill-l" opacity="0.5">
+    <animate attributeName="cx" values="4;20;28" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="40;40;40" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.4;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Bernoulli -->
+  <text x="54" y="66" font-size="2.8" class="s-fill" opacity="0.4" text-anchor="middle">P₀ = P + ½ρV²</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">total pressure</text>
+</svg></div>
+<div class="card-label">Stagnation Point</div>
+</div>
+
+<!-- ====== 172. Flexural Rigidity — Statics ====== -->
+<div class="card" data-name="Flexural Rigidity" data-cat="Statics">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Beam 1 (stiff — small deflection) -->
+  <path d="M8,22 Q40,26 72,22" stroke-width="1.2" class="s-stroke" fill="none">
+    <animate attributeName="d" values="M8,22 Q40,23 72,22;M8,22 Q40,28 72,22;M8,22 Q40,23 72,22" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="8,22 5,26 11,26" stroke-width="0.4" class="s-stroke" fill="none"/>
+  <polygon points="72,22 69,26 75,26" stroke-width="0.4" class="s-stroke" fill="none"/>
+  <text x="76" y="22" font-size="2.5" class="s-fill" opacity="0.5">EI large</text>
+  <!-- Load on beam 1 -->
+  <line x1="40" y1="14" x2="40" y2="22" stroke-width="0.4" class="s-stroke" opacity="0.4"/>
+  <polygon points="38.8,20 41.2,20 40,22" class="s-fill" opacity="0.4"/>
+  <!-- Beam 2 (flexible — large deflection) -->
+  <path d="M8,46 Q40,56 72,46" stroke-width="1.2" class="s-stroke-l" fill="none">
+    <animate attributeName="d" values="M8,46 Q40,48 72,46;M8,46 Q40,60 72,46;M8,46 Q40,48 72,46" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="8,46 5,50 11,50" stroke-width="0.4" class="s-stroke" fill="none"/>
+  <polygon points="72,46 69,50 75,50" stroke-width="0.4" class="s-stroke" fill="none"/>
+  <text x="76" y="46" font-size="2.5" class="s-fill-l" opacity="0.5">EI small</text>
+  <!-- Load on beam 2 -->
+  <line x1="40" y1="38" x2="40" y2="46" stroke-width="0.4" class="s-stroke" opacity="0.4"/>
+  <polygon points="38.8,44 41.2,44 40,46" class="s-fill" opacity="0.4"/>
+  <!-- Deflection labels -->
+  <text x="42" y="28" font-size="2.5" class="s-fill-d" opacity="0.35">δ₁ small</text>
+  <text x="42" y="56" font-size="2.5" class="s-fill-l" opacity="0.35">δ₂ large</text>
+  <!-- Same P label -->
+  <text x="40" y="36" font-size="2.5" class="s-fill" opacity="0.4" text-anchor="middle">same P</text>
+  <!-- Formula -->
+  <text x="40" y="70" font-size="3.5" class="s-fill" opacity="0.45" text-anchor="middle">δ ∝ 1/EI</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">bending stiffness</text>
+</svg></div>
+<div class="card-label">Flexural Rigidity</div>
+</div>
+
+<!-- ====== 173. Scotch Yoke Detail — Dynamics ====== -->
+<div class="card" data-name="Quick Return" data-cat="Dynamics">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Frame -->
+  <line x1="4" y1="72" x2="76" y2="72" stroke-width="0.5" class="s-stroke" opacity="0.2"/>
+  <!-- Crank pivot (fixed) -->
+  <circle cx="24" cy="50" r="2" stroke-width="0.5" class="s-stroke s-fill" fill-opacity="0.1"/>
+  <line x1="24" y1="52" x2="24" y2="72" stroke-width="0.5" class="s-stroke" opacity="0.3"/>
+  <!-- Crank arm (rotating) -->
+  <g>
+    <line x1="24" y1="50" x2="36" y2="38" stroke-width="1" class="s-stroke"/>
+    <circle cx="36" cy="38" r="1.5" class="s-fill" opacity="0.35"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,24,50;360,24,50" dur="3s" repeatCount="indefinite"/>
+  </g>
+  <!-- Slotted lever pivot (fixed, upper) -->
+  <circle cx="24" cy="18" r="2" stroke-width="0.5" class="s-stroke s-fill" fill-opacity="0.1"/>
+  <!-- Slotted lever (pivots at top, slides over crank pin) -->
+  <line x1="24" y1="18" x2="60" y2="50" stroke-width="1" class="s-stroke-l" opacity="0.6">
+    <animate attributeName="x2" values="60;46;60" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="44;56;44" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <!-- Ram (horizontal slider) -->
+  <rect x="50" y="46" width="16" height="8" rx="1.5" stroke-width="0.7" class="s-stroke s-fill" fill-opacity="0.05">
+    <animate attributeName="x" values="52;40;52" dur="3s" repeatCount="indefinite" keyTimes="0;0.6;1"/>
+  </rect>
+  <!-- Ram guide rails -->
+  <line x1="36" y1="46" x2="72" y2="46" stroke-width="0.3" class="s-stroke" opacity="0.2"/>
+  <line x1="36" y1="54" x2="72" y2="54" stroke-width="0.3" class="s-stroke" opacity="0.2"/>
+  <!-- Speed labels -->
+  <text x="60" y="42" font-size="2.5" class="s-fill-d" opacity="0.35">slow cut →</text>
+  <text x="60" y="62" font-size="2.5" class="s-fill-l" opacity="0.35">← fast return</text>
+  <!-- Time ratio indicator -->
+  <text x="40" y="10" font-size="3" class="s-fill" opacity="0.4" text-anchor="middle">t_cut / t_return &gt; 1</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">Whitworth mechanism</text>
+</svg></div>
+<div class="card-label">Quick Return</div>
+</div>
+
+<!-- ====== 174. Galvanic Corrosion — Materials ====== -->
+<div class="card" data-name="Galvanic Corrosion" data-cat="Materials">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Electrolyte (water) -->
+  <rect x="8" y="30" width="64" height="32" rx="2" class="s-fill-l" opacity="0.06"/>
+  <path d="M8,30 Q20,28 40,30 Q60,32 72,30" stroke-width="0.4" class="s-stroke-l" opacity="0.3" fill="none"/>
+  <!-- Anode (less noble metal — corroding) -->
+  <rect x="14" y="22" width="20" height="36" rx="1" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.05"/>
+  <text x="24" y="42" font-size="3" class="s-fill" text-anchor="middle" opacity="0.5">Fe</text>
+  <text x="24" y="18" font-size="2.5" class="s-fill-d" opacity="0.4" text-anchor="middle">anode</text>
+  <!-- Cathode (noble metal — protected) -->
+  <rect x="46" y="22" width="20" height="36" rx="1" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.05"/>
+  <text x="56" y="42" font-size="3" class="s-fill" text-anchor="middle" opacity="0.5">Cu</text>
+  <text x="56" y="18" font-size="2.5" class="s-fill-d" opacity="0.4" text-anchor="middle">cathode</text>
+  <!-- Corrosion pitting on anode surface -->
+  <g opacity="0.3">
+    <circle cx="34" cy="36" r="1" class="s-fill-l">
+      <animate attributeName="r" values="0.5;1.5;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="34" cy="44" r="0.8" class="s-fill-l">
+      <animate attributeName="r" values="0.3;1.2;0.3" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="34" cy="50" r="0.6" class="s-fill-l">
+      <animate attributeName="r" values="0.2;1;0.2" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+  </g>
+  <!-- Electron flow (through external circuit) -->
+  <path d="M34,22 L34,14 L46,14 L46,22" stroke-width="0.5" class="s-stroke-d" opacity="0.4" fill="none"/>
+  <polygon points="44,22 48,22 46,24" class="s-fill-d" opacity="0.4"/>
+  <text x="40" y="12" font-size="2.5" class="s-fill-d" opacity="0.35" text-anchor="middle">e⁻ →</text>
+  <!-- Ion flow (in electrolyte) -->
+  <circle r="0.8" class="s-fill-l" opacity="0.4">
+    <animate attributeName="cx" values="34;40;46" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="40;42;40" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="40" y="52" font-size="2.5" class="s-fill-l" opacity="0.3" text-anchor="middle">Fe²⁺</text>
+  <!-- Galvanic series note -->
+  <text x="40" y="66" font-size="2.5" class="s-fill" opacity="0.35" text-anchor="middle">ΔE_potential → current</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">dissimilar metals</text>
+</svg></div>
+<div class="card-label">Galvanic Corrosion</div>
+</div>
+
+<!-- ====== 175. Mechanical Seal — Machine Design ====== -->
+<div class="card" data-name="Mechanical Seal" data-cat="Machine Design">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Housing -->
+  <rect x="8" y="10" width="20" height="60" rx="1" stroke-width="0.7" class="s-stroke" fill="none"/>
+  <rect x="8" y="10" width="20" height="60" class="s-fill" opacity="0.03"/>
+  <!-- Shaft -->
+  <rect x="34" y="8" width="12" height="64" rx="1" stroke-width="0.6" class="s-stroke s-fill" fill-opacity="0.03"/>
+  <!-- Rotating face (on shaft) -->
+  <rect x="28" y="34" width="8" height="12" rx="0.5" stroke-width="0.7" class="s-stroke-l s-fill-l" fill-opacity="0.12"/>
+  <!-- Stationary face (on housing) -->
+  <rect x="24" y="34" width="4" height="12" rx="0.5" stroke-width="0.7" class="s-stroke s-fill" fill-opacity="0.08"/>
+  <!-- Spring (pushing faces together) -->
+  <path d="M46,36 L50,37 L46,38 L50,39 L46,40 L50,41 L46,42 L50,43 L46,44" stroke-width="0.4" class="s-stroke" fill="none" opacity="0.4"/>
+  <!-- Spring retainer -->
+  <rect x="50" y="34" width="3" height="12" rx="0.5" stroke-width="0.4" class="s-stroke" fill="none" opacity="0.4"/>
+  <!-- Seal face contact line -->
+  <line x1="28" y1="35" x2="28" y2="45" stroke-width="0.4" class="s-stroke-l" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <!-- Fluid side -->
+  <rect x="9" y="32" width="15" height="16" class="s-fill-l" opacity="0.06"/>
+  <text x="16" y="42" font-size="2.5" class="s-fill-l" opacity="0.4" text-anchor="middle">fluid</text>
+  <!-- Atmosphere side -->
+  <text x="60" y="42" font-size="2.5" class="s-fill-d" opacity="0.35" text-anchor="middle">atm</text>
+  <!-- Shaft rotation -->
+  <g>
+    <line x1="40" y1="40" x2="40" y2="34" stroke-width="0.3" class="s-stroke-d" opacity="0.2"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/>
+  </g>
+  <!-- O-ring secondaries -->
+  <ellipse cx="32" cy="34" rx="1.5" ry="1" stroke-width="0.3" class="s-stroke" fill="none" opacity="0.3"/>
+  <ellipse cx="50" cy="40" rx="1" ry="1.5" stroke-width="0.3" class="s-stroke" fill="none" opacity="0.3"/>
+  <!-- Labels -->
+  <text x="26" y="28" font-size="2" class="s-fill-d" opacity="0.35" text-anchor="middle">stationary</text>
+  <text x="36" y="28" font-size="2" class="s-fill-l" opacity="0.35" text-anchor="middle">rotating</text>
+  <!-- Leakage film -->
+  <text x="28" y="52" font-size="2" class="s-fill-d" opacity="0.3" text-anchor="middle">thin film</text>
+  <text x="40" y="76" text-anchor="middle" font-size="3.5" class="s-fill-d" opacity="0.15" font-style="italic">face contact seal</text>
+</svg></div>
+<div class="card-label">Mechanical Seal</div>
+</div>
+
+<!-- ====== 176. Work-Energy Theorem — Dynamics ====== -->
+<div class="card" data-name="Work-Energy Theorem" data-cat="Dynamics">
+<div class="card-top"><svg viewBox="0 0 80 80" fill="none">
+  <!-- Surface -->
+  <line x1="4" y1="50" x2="76" y2="50" stroke-width="0.5" class="s-stroke" opacity="0.3"/>
+  <!-- Block -->
+  <rect x="16" y="36" width="14" height="14" rx="2" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.05">
+    <animate attributeName="x" values="16;50;16" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="23" y="46" font-size="3" class="s-fill" text-anchor="middle" opacity="0.4">m</text>
+  <!-- Force arrow -->
+  <g>
+    <line x1="30" y1="43" x2="42" y2="43" stroke-width="0.7" class="s-stroke">
+      <animate attributeName="x1" values="30;64;30" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="42;76;42" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="42,41.5 42,44.5 45,43" class="s-fill">
+      <animate attributeName="points" values="42,41.5 42,44.5 45,43;76,41.5 76,44.5 79,43;42,41.5 42,44.5 45,43" dur="4s" repeatCount="indefinite"/>
+    </polygon>
+    <text font-size="3" class="s-fill" opacity="0.5">
+      <animate attributeName="x" values="36;70;36" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="40;40;40" dur="4s" repeatCount="indefinite"/>
+      F
+    </text>
+  </g>
+  <!-- Displacement -->
+  <line x1="16" y1="56" x2="50" y2="56" stroke-width="0.4" class="s-stroke-d" opacity="0.3"/>
+  <line x1="16" y1="54" x2="16" y2="58" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <line x1="50" y1="54" x2="50" y2="58" stroke-width="0.3" class="s-stroke-d" opacity="0.3"/>
+  <text x="33" y="62" font-size="3" class="s-fill-d" opacity="0.4" text-anchor="middle">d</text>
+  <!-- Velocity labels -->
+  <text x="16" y="32" font-size="2.5" class="s-fill-d" opacity="0.35" text-anchor="middle">v₁</text>
+  <text x="56" y="32" font-size="2.5" class="s-fill-d" opacity="0.35" text-anchor="middle">v₂</text>
+  <!-- KE bars -->
+  <rect x="10" y="18" width="6" height="10" rx="0.5" class="s-fill" opacity="0.1"/>
+  <text x="13" y="16" font-size="2" class="s-fill-d" opacity="0.35" text-anchor="middle">KE₁</text>
+  <rect x="52" y="12" width="6" height="16" rx="0.5" class="s-fill-l" opacity="0.12"/>
+  <text x="55" y="10" font-size="2" class="s-fill-d" opacity="0.35" text-anchor="middle">KE₂</text>
+  <!-- Formula -->
+  <text x="40" y="72" font-size="3.5" class="s-fill" opacity="0.45" text-anchor="middle">W = ΔKE = ½m(v₂²−v₁²)</text>
+</svg></div>
+<div class="card-label">Work-Energy Theorem</div>
+</div>
+
 </div><!-- end grid -->
 
 <!-- LIGHTBOX MODAL -->

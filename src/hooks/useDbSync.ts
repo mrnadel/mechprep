@@ -22,10 +22,12 @@ export function useDbSync() {
 
     async function hydrate() {
       try {
-        const [progressRes, courseRes, feedbackRes] = await Promise.all([
+        const [progressRes, courseRes, feedbackRes, contentCourseRes, contentQuestionsRes] = await Promise.all([
           fetch('/api/progress'),
           fetch('/api/course-progress'),
           fetch('/api/content-feedback'),
+          fetch('/api/content/course'),
+          fetch('/api/content/questions'),
         ]);
 
         if (cancelled) return;
@@ -48,6 +50,20 @@ export function useDbSync() {
           const data = await feedbackRes.json();
           if (data.flags) {
             useFeedbackStore.getState().hydrateFlags(data.flags);
+          }
+        }
+
+        if (contentCourseRes.ok) {
+          const data = await contentCourseRes.json();
+          if (data.course?.length) {
+            useCourseStore.getState().setCourseData(data.course);
+          }
+        }
+
+        if (contentQuestionsRes.ok) {
+          const data = await contentQuestionsRes.json();
+          if (data.questions?.length) {
+            useStore.setState({ questions: data.questions });
           }
         }
       } catch (error) {

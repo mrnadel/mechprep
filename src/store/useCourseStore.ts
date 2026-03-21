@@ -8,8 +8,12 @@ import type { CourseProgress, ActiveLesson, LessonResult, Unit } from '@/data/co
 
 interface CourseState {
   progress: CourseProgress;
+  courseData: Unit[];
   activeLesson: ActiveLesson | null;
   lessonResult: LessonResult | null;
+
+  // Actions — Content
+  setCourseData: (data: Unit[]) => void;
 
   // Actions
   startLesson: (unitIndex: number, lessonIndex: number) => void;
@@ -59,15 +63,15 @@ function calculateStars(accuracy: number): number {
  * Given a flat linear index, return the previous lesson's ID.
  * Unit 0, Lesson 0 has no predecessor.
  */
-function getPreviousLessonId(unitIndex: number, lessonIndex: number): string | null {
+function getPreviousLessonId(courseData: Unit[], unitIndex: number, lessonIndex: number): string | null {
   if (unitIndex === 0 && lessonIndex === 0) return null;
 
   if (lessonIndex > 0) {
-    return course[unitIndex].lessons[lessonIndex - 1].id;
+    return courseData[unitIndex].lessons[lessonIndex - 1].id;
   }
 
   // First lesson of a unit -> last lesson of previous unit
-  const prevUnit = course[unitIndex - 1];
+  const prevUnit = courseData[unitIndex - 1];
   return prevUnit.lessons[prevUnit.lessons.length - 1].id;
 }
 
@@ -76,11 +80,14 @@ export const useCourseStore = create<CourseState>()(
   persist(
     (set, get) => ({
       progress: getDefaultProgress(),
+      courseData: course as Unit[],
       activeLesson: null,
       lessonResult: null,
 
+      setCourseData: (data: Unit[]) => set({ courseData: data }),
+
       startLesson: (unitIndex: number, lessonIndex: number) => {
-        const unit = course[unitIndex];
+        const unit = get().courseData[unitIndex];
         const lesson = unit.lessons[lessonIndex];
         const allIds = lesson.questions.map((q) => q.id);
         const shuffled = shuffleArray(allIds);
@@ -140,7 +147,7 @@ export const useCourseStore = create<CourseState>()(
         if (!state.activeLesson) return;
 
         const { unitIndex, lessonIndex, answers, sessionQuestionIds } = state.activeLesson;
-        const unit = course[unitIndex];
+        const unit = get().courseData[unitIndex];
         const lesson = unit.lessons[lessonIndex];
 
         const totalQuestions = sessionQuestionIds.length;
@@ -228,7 +235,7 @@ export const useCourseStore = create<CourseState>()(
         let count = 0;
         const today = getTodayString();
 
-        for (const unit of course) {
+        for (const unit of get().courseData) {
           for (const lesson of unit.lessons) {
             if (count >= lessonCount) break;
             completedLessons[lesson.id] = {
@@ -257,7 +264,7 @@ export const useCourseStore = create<CourseState>()(
         // First lesson is always unlocked
         if (unitIndex === 0 && lessonIndex === 0) return true;
 
-        const prevLessonId = getPreviousLessonId(unitIndex, lessonIndex);
+        const prevLessonId = getPreviousLessonId(get().courseData, unitIndex, lessonIndex);
         if (!prevLessonId) return true;
 
         const { progress } = get();
