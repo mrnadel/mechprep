@@ -228,3 +228,47 @@ export const dailyUsage = pgTable(
     uniqueIndex('daily_usage_user_date_idx').on(table.userId, table.date),
   ]
 );
+
+// ─── Content Feedback ───────────────────────────────────────
+
+export const contentFeedback = pgTable(
+  'content_feedback',
+  {
+    id: text('id')
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    contentType: text('content_type').notNull(),
+    contentId: text('content_id').notNull(),
+    reason: text('reason').notNull(),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+    updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('content_feedback_user_content_idx').on(
+      table.userId,
+      table.contentType,
+      table.contentId
+    ),
+  ]
+);
+
+export const contentFeedbackDismissals = pgTable(
+  'content_feedback_dismissals',
+  {
+    id: text('id')
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    contentType: text('content_type').notNull(),
+    contentId: text('content_id').notNull(),
+    dismissedAt: timestamp('dismissed_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('content_feedback_dismissal_idx').on(
+      table.contentType,
+      table.contentId
+    ),
+  ]
+);
