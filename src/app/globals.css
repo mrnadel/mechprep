@@ -344,23 +344,18 @@
 .golden-node::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    115deg,
-    transparent 40%,
-    rgba(255, 255, 255, 0.45) 48%,
-    rgba(255, 255, 255, 0.55) 50%,
-    rgba(255, 255, 255, 0.45) 52%,
-    transparent 60%
-  );
+  top: -30%;
+  left: 38%;
+  width: 18%;
+  height: 160%;
+  background: rgba(255, 255, 255, 0.45);
+  transform: rotate(25deg);
   pointer-events: none;
-  border-radius: inherit;
 }
 
 /* Golden icon container on the course map */
 .golden-icon-box {
   background: #FFD54F;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 /* Badge shimmer for in-lesson golden tag */
@@ -373,17 +368,13 @@
 .golden-badge-shimmer::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    115deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.4) 48%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 0.4) 52%,
-    transparent 65%
-  );
+  top: -30%;
+  left: 35%;
+  width: 20%;
+  height: 160%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(25deg);
   pointer-events: none;
-  border-radius: inherit;
 }
 
 /* Golden result header */
@@ -395,15 +386,12 @@
 .golden-result-header::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    140deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.35) 46%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 0.35) 54%,
-    transparent 70%
-  );
+  top: -30%;
+  left: 40%;
+  width: 15%;
+  height: 160%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: rotate(25deg);
   pointer-events: none;
 }
 
@@ -422,15 +410,12 @@
 .golden-achievement::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    115deg,
-    transparent 40%,
-    rgba(255, 255, 255, 0.4) 48%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 0.4) 52%,
-    transparent 60%
-  );
+  top: -30%;
+  left: 38%;
+  width: 18%;
+  height: 160%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(25deg);
   pointer-events: none;
   border-radius: inherit;
 }
@@ -446,17 +431,13 @@
 .golden-btn::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    115deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.2) 46%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0.2) 54%,
-    transparent 65%
-  );
+  top: -30%;
+  left: 35%;
+  width: 20%;
+  height: 160%;
+  background: rgba(255, 255, 255, 0.22);
+  transform: rotate(25deg);
   pointer-events: none;
-  border-radius: inherit;
 }
 
 /* Golden star on course map */
@@ -467,5 +448,4 @@
 /* Golden dots on map */
 .golden-dot {
   background: #FFC107;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.4);
 }
