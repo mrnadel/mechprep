@@ -7,6 +7,7 @@ import {
   topicProgress,
   sessionHistory,
   dailyUsage,
+  masteryEvents,
 } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 
@@ -32,6 +33,7 @@ export async function DELETE(request: NextRequest) {
     db.delete(dailyUsage).where(eq(dailyUsage.userId, userId)),
     db.delete(userProgress).where(eq(userProgress.userId, userId)),
     db.delete(courseProgress).where(eq(courseProgress.userId, userId)),
+    db.delete(masteryEvents).where(eq(masteryEvents.userId, userId)),
   ]);
 
   return NextResponse.json({ ok: true });
