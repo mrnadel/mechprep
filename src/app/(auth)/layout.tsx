@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
-      <div className="max-w-[480px] mx-auto min-h-screen flex flex-col px-6 pt-4 pb-8">
+    <div className="min-h-screen bg-[#FAFAFA] flex flex-col items-center">
+      <div className="w-full max-w-sm mx-auto flex flex-col min-h-screen px-6 pt-4 pb-8">
         {/* Back */}
         <Link
           href="/"
@@ -15,14 +15,8 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         </Link>
 
         {/* Logo */}
-        <div className="flex flex-col items-center mt-8 mb-10">
-          <div
-            className="w-20 h-20 bg-white rounded-[20px] flex items-center justify-center mb-4"
-            style={{ boxShadow: '0 2px 16px rgba(0,0,0,0.06)' }}
-          >
-            <span className="text-4xl leading-none">&#x2699;&#xFE0F;</span>
-          </div>
-          <h1 className="text-xl font-black text-surface-900">MechReady</h1>
+        <div className="flex flex-col items-center mt-10 sm:mt-16 mb-10">
+          <span className="text-2xl font-black text-surface-900 tracking-tight">MechReady</span>
         </div>
 
         {/* Page content */}
