@@ -1202,7 +1202,8 @@ export const unit8: Unit = {
           id: 'u8-L4-Q6',
           type: 'fill-blank',
           question: 'The initial tension applied to a bolt during tightening, before any external load is applied, is called ___.',
-          acceptedAnswers: ['preload', 'Preload', 'pre-load', 'Pre-load', 'clamping force', 'Clamping force', 'pretension', 'Pretension'],
+          blanks: ['preload'],
+          wordBank: ['preload', 'proof load', 'torque', 'clamping', 'yield force'],
           explanation: 'Preload (also called pretension or initial clamping force) is the tension in the bolt created during tightening. It compresses the clamped members, creating a friction force that resists joint separation and slip. Proper preload is critical: too low allows joint separation or slip under load, too high risks bolt yield. The preload is controlled during assembly by torque, angle-of-turn, or bolt stretch measurement. For critical joints, ultrasonic bolt stretch measurement provides ±1% accuracy.',
           hint: 'This is the force in the bolt when it is tightened, before any external service loads are applied.'
         },
@@ -1324,7 +1325,8 @@ export const unit8: Unit = {
           id: 'u8-L4-Q16',
           type: 'fill-blank',
           question: 'The property class marking "10.9" on a metric bolt means the minimum tensile strength is _____ MPa.',
-          acceptedAnswers: ['1040', '1000', '1040 MPa', '1000 MPa'],
+          blanks: ['1040'],
+          wordBank: ['1040', '800', '900', '1200', '640'],
           explanation: 'In the ISO metric bolt property class system, the number before the decimal point × 100 gives the minimum ultimate tensile strength in MPa. The decimal point number × the first number × 100 gives the minimum yield strength (or proof strength). For class 10.9: UTS = 10 × 100 = 1000 MPa (some references state 1040 MPa per ISO 898-1), and yield = 0.9 × 1000 = 900 MPa. Common classes: 4.6 (400 MPa UTS, mild steel), 8.8 (800 MPa UTS, medium carbon steel), 10.9 (1000-1040 MPa UTS, alloy steel), 12.9 (1200-1220 MPa UTS, alloy steel). Higher classes provide more strength but are more susceptible to hydrogen embrittlement and stress corrosion cracking.',
           hint: 'The first number × 100 gives UTS in MPa. The decimal digit gives the yield/UTS ratio.'
         },
@@ -1396,7 +1398,8 @@ export const unit8: Unit = {
           id: 'u8-L4-Q22',
           type: 'fill-blank',
           question: 'The ratio T/(F*d) in the torque-tension relationship T = K*F*d, where T is torque, F is bolt preload, and d is nominal diameter, is called the nut factor or torque coefficient, denoted by _____.',
-          acceptedAnswers: ['K', 'k', 'nut factor', 'Nut factor', 'torque coefficient'],
+          blanks: ['K'],
+          wordBank: ['K', 'C', 'f', 'mu', 'n'],
           explanation: 'The nut factor K (also called torque coefficient) in T = K × F × d encompasses all friction effects in the bolted joint: thread friction, bearing surface friction, and thread geometry. Typical values: K = 0.20 for dry, as-received steel bolts; K = 0.15 for lubricated bolts; K = 0.10 for heavily lubricated (anti-seize compound) or waxed bolts. The K factor has a significant uncertainty (typically ±25-30%), which is why torque control alone gives ±25-30% preload accuracy. For critical applications, direct tension measurement (ultrasonic, DTI washers, or load cells) is preferred.',
           hint: 'This dimensionless coefficient relates applied torque to achieved preload and bolt diameter.'
         },
@@ -1490,7 +1493,8 @@ export const unit8: Unit = {
           id: 'u8-L4-Q30',
           type: 'fill-blank',
           question: 'A welded joint where the weld metal is deposited in a groove between the edges of the plates being joined, providing full penetration through the plate thickness, is called a _____ weld.',
-          acceptedAnswers: ['butt', 'Butt', 'groove', 'Groove', 'butt joint', 'groove weld'],
+          blanks: ['butt'],
+          wordBank: ['butt', 'fillet', 'plug', 'slot', 'seam'],
           explanation: 'A butt (groove) weld joins two plates edge-to-edge, with the weld metal filling a prepared groove (V, J, U, or bevel shape) between the plate edges. When executed with complete joint penetration (CJP), the weld cross-section equals the base plate thickness, making it as strong as the base metal — a 100% joint efficient connection. Butt welds require edge preparation (beveling/grooving), careful fit-up, and typically need backgouging or backing bars to ensure root fusion. They are inspected by radiographic (RT) or ultrasonic (UT) testing to verify full penetration. Butt welds are mandatory for pressure vessels, pipelines, and fatigue-critical structural connections where full-strength joints are required.',
           hint: 'This weld type fills a groove between plate edges and achieves full-thickness penetration.'
         }
@@ -1571,7 +1575,8 @@ export const unit8: Unit = {
           id: 'u8-L5-Q6',
           type: 'fill-blank',
           question: 'An O-ring seals at low pressure through its initial compression (squeeze), but at higher pressures it is pushed against the groove walls by the system pressure itself. This pressure-assisted sealing behavior is called ___-energizing.',
-          acceptedAnswers: ['self', 'Self', 'pressure', 'Pressure', 'self-energizing', 'Self-energizing'],
+          blanks: ['self'],
+          wordBank: ['self', 'spring', 'hydraulic', 'gas', 'force'],
           explanation: 'O-rings are self-energizing (or pressure-energizing) seals. At low/zero pressure, sealing depends on the initial squeeze (10-30% compression) that creates contact stress against the mating surfaces. As system pressure rises, it acts on the upstream side of the O-ring, pushing it more firmly against the downstream groove wall and the mating surface, increasing the contact stress proportionally to the pressure. This is why O-rings can seal higher pressures than their initial squeeze alone would suggest. However, above ~10 MPa, the O-ring can extrude into the clearance gap between mating parts, requiring backup rings (anti-extrusion rings) to support the O-ring.',
           hint: 'The system pressure itself assists the sealing action by pushing the O-ring against the groove surfaces more firmly.'
         },
@@ -1643,7 +1648,8 @@ export const unit8: Unit = {
           id: 'u8-L5-Q12',
           type: 'fill-blank',
           question: 'The product of the contact pressure (P) and sliding velocity (V) at a seal or bearing interface, which governs wear rate and heat generation, is called the _____ value.',
-          acceptedAnswers: ['PV', 'pv', 'P*V', 'PV limit', 'pv limit'],
+          blanks: ['PV'],
+          wordBank: ['PV', 'FN', 'HV', 'CV', 'KV'],
           explanation: 'The PV (pressure-velocity) value is a fundamental parameter for sliding contact surfaces (seals, plain bearings, bushings). Heat generation at the interface is proportional to friction force times velocity = mu × P × A × V, and since mu is roughly constant for a given material pair, the PV product determines the frictional heat flux. Each material combination has a maximum allowable PV value — exceeding it causes excessive temperature rise, accelerated wear, or seizure. For example: PTFE (dry) PV limit ≈ 0.1 MPa·m/s, filled PTFE ≈ 0.35 MPa·m/s, bronze ≈ 1.0 MPa·m/s, carbon-graphite ≈ 0.5 MPa·m/s. The PV limit is used for seal selection (lip seals, mechanical seal faces) and bushing/plain bearing material selection.',
           hint: 'This two-letter abbreviation multiplies pressure by velocity and governs heat generation at a sliding interface.'
         },
@@ -1715,7 +1721,8 @@ export const unit8: Unit = {
           id: 'u8-L5-Q18',
           type: 'fill-blank',
           question: 'The correction factor applied to the simple torsion shear stress formula for helical springs to account for curvature and direct shear effects is called the _____ factor.',
-          acceptedAnswers: ['Wahl', 'wahl', 'WAHL', 'Wahl correction', 'wahl correction'],
+          blanks: ['Wahl'],
+          wordBank: ['Wahl', 'Goodman', 'Soderberg', 'Bergstrasser', 'Johnson'],
           explanation: 'The Wahl factor (K_w), developed by A.M. Wahl, corrects the nominal torsion shear stress (tau = 8FD/(pi*d^3)) to account for: (1) curvature effect — the inner coil surface has shorter fibers that are more highly stressed, and (2) direct (transverse) shear stress — which adds to the torsional shear. K_w = (4C-1)/(4C-4) + 0.615/C, where C = D/d is the spring index. The corrected stress is tau = K_w × 8FD/(pi*d^3). For C = 4 (tight coil): K_w ≈ 1.40; for C = 10 (loose coil): K_w ≈ 1.14. The Wahl factor must be used for fatigue analysis; for static analysis, the simpler Bergstrasser factor or even the uncorrected formula may suffice.',
           hint: 'This correction factor is named after the engineer who derived it and is essential for accurate spring stress calculation.'
         },
@@ -1859,7 +1866,8 @@ export const unit8: Unit = {
           id: 'u8-L5-Q30',
           type: 'fill-blank',
           question: 'The seal type where two precision-lapped flat surfaces (one rotating, one stationary) maintain contact under spring and hydraulic pressure to prevent leakage in pump applications is called a _____ seal.',
-          acceptedAnswers: ['mechanical', 'Mechanical', 'mechanical face', 'Mechanical face', 'face', 'Face'],
+          blanks: ['mechanical'],
+          wordBank: ['mechanical', 'labyrinth', 'lip', 'packing', 'carbon'],
           explanation: 'Mechanical (face) seals are the standard sealing technology for centrifugal pumps, compressors, and other rotating equipment handling liquids. The seal consists of two flat faces lapped to optical flatness (within 2-3 helium light bands): one rotates with the shaft and the other is stationary in the housing. A spring (or bellows) maintains face contact. During operation, a thin fluid film (0.25-1 micrometer) develops between the faces, providing lubrication while minimizing leakage. Face material pairs are selected for the application: carbon vs. SiC (general purpose), SiC vs. SiC (abrasive fluids), tungsten carbide vs. carbon (high pressure). API 682 is the governing standard for mechanical seals in the petroleum and chemical industries.',
           hint: 'Two flat, precision-lapped surfaces — one rotating, one stationary — with a thin lubricating film between them.'
         }

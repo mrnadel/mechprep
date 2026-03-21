@@ -89,7 +89,8 @@ export const unit9: Unit = {
           id: 'u9-L1-Q6',
           type: 'fill-blank',
           question: 'The minimum intended difference in size between mating parts in a clearance fit is called the ___.',
-          acceptedAnswers: ['allowance', 'Allowance', 'minimum clearance', 'Minimum clearance'],
+          blanks: ['allowance'],
+          wordBank: ['allowance', 'tolerance', 'deviation', 'clearance', 'variance'],
           explanation: 'Allowance is the minimum clearance (in a clearance fit) or maximum interference (in an interference fit) between mating parts. For a clearance fit, allowance = minimum hole size − maximum shaft size, and it must be positive. It represents the tightest possible fit condition. Tolerance is the permissible variation in a single dimension, while allowance describes the designed gap or interference between two mating parts.',
           hint: 'This is the tightest possible fit between mating parts — the designed minimum gap.'
         },
