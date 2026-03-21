@@ -980,24 +980,72 @@
 <!-- ====== 23. Hydraulic Press — Fluids ====== -->
 <div class="card" data-name="Hydraulic Press" data-cat="Fluids">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <rect x="8" y="46" width="64" height="18" rx="6" class="s-fill" opacity="0.1"/>
-  <rect x="8" y="46" width="64" height="18" rx="6" class="s-stroke-d" stroke-width="2" fill="none"/>
-  <rect x="11" y="50" width="58" height="12" rx="3" class="s-fill-l" opacity="0.15"/>
-  <rect x="15" y="28" width="14" height="20" rx="4" class="s-stroke-d" stroke-width="2" fill="none"/>
+  <!-- Passage fluid (always filled) -->
+  <rect x="15" y="57" width="52" height="6" rx="2" class="s-fill-l" opacity="0.15"/>
+  <!-- Left cylinder fluid (drops when piston pushes) -->
+  <rect x="17" y="38" width="10" height="19" rx="1" class="s-fill-l" opacity="0.13">
+    <animate attributeName="y" values="38;48;38" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+    <animate attributeName="height" values="19;9;19" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+  </rect>
+  <!-- Right cylinder fluid (rises when pressure transmits) -->
+  <rect x="49" y="28" width="16" height="29" rx="1" class="s-fill-l" opacity="0.13">
+    <animate attributeName="y" values="28;24;28" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+    <animate attributeName="height" values="29;33;29" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+  </rect>
+  <!-- Bottom passage walls -->
+  <rect x="14" y="56" width="54" height="8" rx="3" class="s-stroke-d" stroke-width="2" fill="none"/>
+  <!-- Left (small) cylinder walls -->
+  <line x1="16" y1="26" x2="16" y2="58" class="s-stroke-d" stroke-width="2" stroke-linecap="round"/>
+  <line x1="28" y1="26" x2="28" y2="58" class="s-stroke-d" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right (large) cylinder walls -->
+  <line x1="48" y1="18" x2="48" y2="58" class="s-stroke-d" stroke-width="2" stroke-linecap="round"/>
+  <line x1="66" y1="18" x2="66" y2="58" class="s-stroke-d" stroke-width="2" stroke-linecap="round"/>
+  <!-- Small piston (pushes down — input force) -->
   <g>
     <animateTransform attributeName="transform" type="translate" values="0,0;0,10;0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
-    <rect x="17" y="28" width="10" height="8" rx="4" class="s-fill" opacity="0.4"/>
-    <rect x="19" y="20" width="6" height="10" rx="3" class="s-fill-d" opacity="0.4"/>
-    <circle cx="22" cy="18" r="3" class="s-fill-d" opacity="0.3"/>
+    <!-- Piston head -->
+    <rect x="17" y="32" width="10" height="6" rx="2" class="s-fill" opacity="0.45"/>
+    <rect x="17" y="32" width="10" height="6" rx="2" class="s-stroke-d" stroke-width="1.5" fill="none"/>
+    <!-- Piston ring -->
+    <line x1="17.5" y1="35" x2="26.5" y2="35" stroke="white" stroke-width="0.6" opacity="0.4"/>
+    <!-- Rod -->
+    <rect x="19.5" y="22" width="5" height="12" rx="2.5" class="s-fill-d" opacity="0.35"/>
+    <!-- Input force arrow -->
+    <line x1="22" y1="12" x2="22" y2="19" class="s-stroke-d" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+    <polygon points="20,18 22,22 24,18" class="s-fill-d" opacity="0.4"/>
   </g>
-  <rect x="47" y="20" width="22" height="28" rx="5" class="s-stroke-d" stroke-width="2" fill="none"/>
+  <!-- Large piston (pushes up — output force) -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
-    <rect x="49" y="22" width="18" height="10" rx="5" class="s-fill" opacity="0.35"/>
-    <rect x="53" y="12" width="10" height="12" rx="5" class="s-fill-d" opacity="0.25"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+    <!-- Piston head -->
+    <rect x="49" y="22" width="16" height="6" rx="2" class="s-fill" opacity="0.4"/>
+    <rect x="49" y="22" width="16" height="6" rx="2" class="s-stroke-d" stroke-width="1.5" fill="none"/>
+    <!-- Piston ring -->
+    <line x1="49.5" y1="25" x2="64.5" y2="25" stroke="white" stroke-width="0.6" opacity="0.4"/>
+    <!-- Rod -->
+    <rect x="53" y="14" width="8" height="10" rx="3" class="s-fill-d" opacity="0.3"/>
+    <!-- Load block -->
+    <rect x="50" y="8" width="14" height="6" rx="2" class="s-fill" opacity="0.18"/>
+    <rect x="50" y="8" width="14" height="6" rx="2" class="s-stroke-d" stroke-width="1.2" fill="none"/>
+    <!-- Output force arrow -->
+    <polygon points="55,6 57,2 59,6" class="s-fill-d" opacity="0.4"/>
   </g>
-  <text x="22" y="14" text-anchor="middle" font-size="7" class="s-fill-d" opacity="0.4" font-weight="bold">f</text>
-  <text x="58" y="8" text-anchor="middle" font-size="8" class="s-fill-d" opacity="0.4" font-weight="bold">F</text>
+  <!-- Pressure arrows inside fluid -->
+  <path d="M21,50 L21,47 L19.5,47 L22,44 L24.5,47 L23,47 L23,50 Z" class="s-fill-d" opacity="0.1">
+    <animate attributeName="opacity" values="0.08;0.25;0.08" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+  </path>
+  <path d="M35,61 L38,61 L38,59.5 L41,60.5 L38,61.5 L38,60 L35,60 Z" class="s-fill-d" opacity="0.1">
+    <animate attributeName="opacity" values="0.05;0.2;0.05" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+  </path>
+  <path d="M56,42 L56,39 L54.5,39 L57,36 L59.5,39 L58,39 L58,42 Z" class="s-fill-d" opacity="0.1">
+    <animate attributeName="opacity" values="0.05;0.22;0.05" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+  </path>
+  <!-- Force labels -->
+  <text x="22" y="9" text-anchor="middle" font-size="7" class="s-fill-d" opacity="0.4" font-weight="bold" font-style="italic">f</text>
+  <text x="64" y="5" text-anchor="middle" font-size="8" class="s-fill-d" opacity="0.45" font-weight="bold" font-style="italic">F</text>
+  <!-- Area labels -->
+  <text x="22" y="72" text-anchor="middle" font-size="5" class="s-fill-d" opacity="0.2" font-style="italic">a</text>
+  <text x="57" y="72" text-anchor="middle" font-size="5" class="s-fill-d" opacity="0.2" font-style="italic">A</text>
 </svg></div>
 <div class="card-label">Hydraulic Press</div>
 </div>

@@ -379,6 +379,33 @@ export default function ProfilePage() {
     }
   }, [updateSession]);
 
+  const handleResetProgress = useCallback(async () => {
+    if (resetConfirmText !== 'RESET MY PROGRESS') return;
+    setResetStep(3);
+    setResetError('');
+    try {
+      const res = await fetch('/api/user/reset-progress', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ confirmation: 'RESET MY PROGRESS' }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || 'Failed to reset');
+      }
+      // Clear local stores
+      useStore.getState().resetProgress();
+      useCourseStore.setState({ progress: { displayName: displayName, totalXp: 0, currentStreak: 0, longestStreak: 0, lastActiveDate: '', completedLessons: {} } });
+      setResetStep(0);
+      setResetConfirmText('');
+      // Reload page to reflect clean state
+      window.location.reload();
+    } catch (err: any) {
+      setResetError(err.message || 'Something went wrong');
+      setResetStep(2);
+    }
+  }, [resetConfirmText, displayName]);
+
   const handleRemoveAvatar = useCallback(async () => {
     setAvatarUploading(true);
     setAvatarError('');
@@ -738,6 +765,120 @@ export default function ProfilePage() {
             </div>
             <span className="text-sm font-bold text-red-400 group-hover:text-red-500 transition-colors">Log Out</span>
           </button>
+        </motion.div>
+
+        {/* ─── Danger Zone ───────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.1 }}
+        >
+          <h3 className="text-base font-extrabold text-gray-900 mb-3">Danger Zone</h3>
+          <div className="bg-white rounded-2xl border border-red-100 shadow-sm overflow-hidden">
+            <button
+              onClick={() => { setResetStep(resetStep === 0 ? 1 : 0); setResetConfirmText(''); setResetError(''); }}
+              className="flex items-center gap-3 w-full px-4 py-3.5 hover:bg-red-50/50 transition-colors"
+            >
+              <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center">
+                <RotateCcw className="w-4 h-4 text-red-400" />
+              </div>
+              <div className="text-left">
+                <span className="text-sm font-bold text-gray-700 block">Reset All Progress</span>
+                <span className="text-[11px] text-gray-400">Erase XP, streaks, lessons, achievements — everything</span>
+              </div>
+              <ChevronRight className={`w-4 h-4 text-gray-300 ml-auto transition-transform ${resetStep > 0 ? 'rotate-90' : ''}`} />
+            </button>
+
+            <AnimatePresence>
+              {resetStep >= 1 && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-4 pb-4 border-t border-red-50 pt-4 space-y-3">
+                    {/* Step 1: Warning */}
+                    {resetStep === 1 && (
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
+                        <div className="flex gap-3 p-3 bg-red-50 rounded-xl">
+                          <AlertTriangle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                          <div className="text-xs text-red-700 space-y-1">
+                            <p className="font-bold">This action is permanent and cannot be undone.</p>
+                            <p>All your progress will be permanently deleted:</p>
+                            <ul className="list-disc pl-4 space-y-0.5 text-red-600">
+                              <li>All XP and level progress</li>
+                              <li>Streak history</li>
+                              <li>All completed lessons and courses</li>
+                              <li>Topic mastery data</li>
+                              <li>Achievements</li>
+                              <li>Session history</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => setResetStep(2)}
+                            className="flex-1 py-2.5 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl text-sm transition-colors"
+                          >
+                            I understand, continue
+                          </button>
+                          <button
+                            onClick={() => { setResetStep(0); setResetConfirmText(''); }}
+                            className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold rounded-xl text-sm transition-colors"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {/* Step 2: Type confirmation */}
+                    {resetStep === 2 && (
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
+                        {resetError && <p className="text-red-500 text-xs font-semibold">{resetError}</p>}
+                        <p className="text-xs text-gray-500">
+                          Type <span className="font-mono font-bold text-red-500 bg-red-50 px-1.5 py-0.5 rounded">RESET MY PROGRESS</span> to confirm:
+                        </p>
+                        <input
+                          type="text"
+                          value={resetConfirmText}
+                          onChange={(e) => setResetConfirmText(e.target.value)}
+                          placeholder="Type here..."
+                          autoFocus
+                          className="w-full px-3 py-2.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-sm font-mono focus:outline-none focus:border-red-400 transition-all"
+                        />
+                        <div className="flex gap-2">
+                          <button
+                            onClick={handleResetProgress}
+                            disabled={resetConfirmText !== 'RESET MY PROGRESS'}
+                            className="flex-1 py-2.5 bg-red-500 hover:bg-red-600 disabled:bg-gray-200 disabled:text-gray-400 text-white font-bold rounded-xl text-sm transition-colors"
+                          >
+                            Permanently Reset Everything
+                          </button>
+                          <button
+                            onClick={() => { setResetStep(0); setResetConfirmText(''); setResetError(''); }}
+                            className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold rounded-xl text-sm transition-colors"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {/* Step 3: Processing */}
+                    {resetStep === 3 && (
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-center gap-2 py-4">
+                        <Loader2 className="w-5 h-5 text-red-400 animate-spin" />
+                        <span className="text-sm font-bold text-gray-500">Resetting all progress...</span>
+                      </motion.div>
+                    )}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </motion.div>
       </div>
     </div>
