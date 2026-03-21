@@ -1280,50 +1280,76 @@
 <!-- ====== 28. Tensile Specimen — Materials ====== -->
 <div class="card" data-name="Tensile Specimen" data-cat="Materials">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <path class="s-stroke-d" stroke-width="2" fill="none">
-    <animate attributeName="d" dur="5s" repeatCount="indefinite"
-      values="M20,28 Q30,28 34,32 L34,48 Q30,52 20,52 Z;M16,28 Q28,28 34,34 L34,46 Q28,52 16,52 Z;M12,28 Q26,28 33,36 L33,44 Q26,52 12,52 Z;M12,28 Q26,28 33,36 L33,44 Q26,52 12,52 Z;M20,28 Q30,28 34,32 L34,48 Q30,52 20,52 Z"
-      keyTimes="0;0.3;0.7;0.85;1"/>
-  </path>
+  <!-- Left half — grip + shoulder + gauge end -->
   <path class="s-fill" opacity="0.12">
-    <animate attributeName="d" dur="5s" repeatCount="indefinite"
-      values="M20,28 Q30,28 34,32 L34,48 Q30,52 20,52 Z;M16,28 Q28,28 34,34 L34,46 Q28,52 16,52 Z;M12,28 Q26,28 33,36 L33,44 Q26,52 12,52 Z;M12,28 Q26,28 33,36 L33,44 Q26,52 12,52 Z;M20,28 Q30,28 34,32 L34,48 Q30,52 20,52 Z"
-      keyTimes="0;0.3;0.7;0.85;1"/>
+    <animate attributeName="d" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"
+      values="M10,32 L18,32 Q24,32 26,35 L26,45 Q24,48 18,48 L10,48 Z;M6,32 L14,32 Q20,32 22,36 L22,44 Q20,48 14,48 L6,48 Z;M2,32 L10,32 Q16,32 18,38 L18,42 Q16,48 10,48 L2,48 Z;M0,32 L8,32 Q14,32 16,39 L16,41 Q14,48 8,48 L0,48 Z;M0,32 L8,32 Q14,32 16,39 L16,41 Q14,48 8,48 L0,48 Z;M10,32 L18,32 Q24,32 26,35 L26,45 Q24,48 18,48 L10,48 Z"/>
   </path>
   <path class="s-stroke-d" stroke-width="2" fill="none">
-    <animate attributeName="d" dur="5s" repeatCount="indefinite"
-      values="M60,28 Q50,28 46,32 L46,48 Q50,52 60,52 Z;M64,28 Q52,28 46,34 L46,46 Q52,52 64,52 Z;M68,28 Q54,28 47,36 L47,44 Q54,52 68,52 Z;M68,28 Q54,28 47,36 L47,44 Q54,52 68,52 Z;M60,28 Q50,28 46,32 L46,48 Q50,52 60,52 Z"
-      keyTimes="0;0.3;0.7;0.85;1"/>
+    <animate attributeName="d" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"
+      values="M10,32 L18,32 Q24,32 26,35 L26,45 Q24,48 18,48 L10,48 Z;M6,32 L14,32 Q20,32 22,36 L22,44 Q20,48 14,48 L6,48 Z;M2,32 L10,32 Q16,32 18,38 L18,42 Q16,48 10,48 L2,48 Z;M0,32 L8,32 Q14,32 16,39 L16,41 Q14,48 8,48 L0,48 Z;M0,32 L8,32 Q14,32 16,39 L16,41 Q14,48 8,48 L0,48 Z;M10,32 L18,32 Q24,32 26,35 L26,45 Q24,48 18,48 L10,48 Z"/>
   </path>
+  <!-- Right half (mirror) -->
   <path class="s-fill" opacity="0.12">
-    <animate attributeName="d" dur="5s" repeatCount="indefinite"
-      values="M60,28 Q50,28 46,32 L46,48 Q50,52 60,52 Z;M64,28 Q52,28 46,34 L46,46 Q52,52 64,52 Z;M68,28 Q54,28 47,36 L47,44 Q54,52 68,52 Z;M68,28 Q54,28 47,36 L47,44 Q54,52 68,52 Z;M60,28 Q50,28 46,32 L46,48 Q50,52 60,52 Z"
-      keyTimes="0;0.3;0.7;0.85;1"/>
+    <animate attributeName="d" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"
+      values="M70,32 L62,32 Q56,32 54,35 L54,45 Q56,48 62,48 L70,48 Z;M74,32 L66,32 Q60,32 58,36 L58,44 Q60,48 66,48 L74,48 Z;M78,32 L70,32 Q64,32 62,38 L62,42 Q64,48 70,48 L78,48 Z;M80,32 L72,32 Q66,32 64,39 L64,41 Q66,48 72,48 L80,48 Z;M80,32 L72,32 Q66,32 64,39 L64,41 Q66,48 72,48 L80,48 Z;M70,32 L62,32 Q56,32 54,35 L54,45 Q56,48 62,48 L70,48 Z"/>
   </path>
-  <rect y="36" height="8" rx="2" class="s-fill" opacity="0.1">
-    <animate attributeName="width" values="12;8;4;4;12" dur="5s" repeatCount="indefinite" keyTimes="0;0.3;0.7;0.85;1"/>
-    <animate attributeName="x" values="34;36;38;38;34" dur="5s" repeatCount="indefinite" keyTimes="0;0.3;0.7;0.85;1"/>
-  </rect>
+  <path class="s-stroke-d" stroke-width="2" fill="none">
+    <animate attributeName="d" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"
+      values="M70,32 L62,32 Q56,32 54,35 L54,45 Q56,48 62,48 L70,48 Z;M74,32 L66,32 Q60,32 58,36 L58,44 Q60,48 66,48 L74,48 Z;M78,32 L70,32 Q64,32 62,38 L62,42 Q64,48 70,48 L78,48 Z;M80,32 L72,32 Q66,32 64,39 L64,41 Q66,48 72,48 L80,48 Z;M80,32 L72,32 Q66,32 64,39 L64,41 Q66,48 72,48 L80,48 Z;M70,32 L62,32 Q56,32 54,35 L54,45 Q56,48 62,48 L70,48 Z"/>
+  </path>
+  <!-- Gauge section (necks then fractures) -->
+  <path class="s-fill" opacity="0.1">
+    <animate attributeName="d" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"
+      values="M26,35 Q40,35 54,35 L54,45 Q40,45 26,45 Z;M22,36 Q40,36 58,36 L58,44 Q40,44 22,44 Z;M18,38 Q40,40 62,38 L62,42 Q40,40 18,42 Z;M16,39 Q28,40 40,40 L40,40 Q52,40 64,39 Z;M16,39 Q28,40 40,40 L40,40 Q52,40 64,39 Z;M26,35 Q40,35 54,35 L54,45 Q40,45 26,45 Z"/>
+  </path>
+  <path class="s-stroke-d" stroke-width="1.5" fill="none" opacity="0.5">
+    <animate attributeName="d" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"
+      values="M26,35 Q40,35 54,35 L54,45 Q40,45 26,45 Z;M22,36 Q40,36 58,36 L58,44 Q40,44 22,44 Z;M18,38 Q40,40 62,38 L62,42 Q40,40 18,42 Z;M16,39 Q28,40 40,40 L40,40 Q52,40 64,39 Z;M16,39 Q28,40 40,40 L40,40 Q52,40 64,39 Z;M26,35 Q40,35 54,35 L54,45 Q40,45 26,45 Z"/>
+    <animate attributeName="opacity" values="0.5;0.5;0.5;0;0;0.5" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+  </path>
+  <!-- Necking stress concentration zone -->
+  <ellipse cx="40" cy="40" rx="8" ry="5" class="s-fill-d" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.1;0.18;0;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+    <animate attributeName="ry" values="5;5;3;1;1;5" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+  </ellipse>
+  <!-- Gauge length marks (spread apart during test) -->
+  <line y1="30" y2="33" class="s-stroke-d" stroke-width="0.8" opacity="0.25">
+    <animate attributeName="x1" values="32;28;22;20;20;32" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+    <animate attributeName="x2" values="32;28;22;20;20;32" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+  </line>
+  <line y1="30" y2="33" class="s-stroke-d" stroke-width="0.8" opacity="0.25">
+    <animate attributeName="x1" values="48;52;58;60;60;48" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+    <animate attributeName="x2" values="48;52;58;60;60;48" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+  </line>
+  <!-- Gauge length bracket -->
+  <line y1="30" y2="30" class="s-stroke-d" stroke-width="0.5" opacity="0.15">
+    <animate attributeName="x1" values="32;28;22;20;20;32" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+    <animate attributeName="x2" values="48;52;58;60;60;48" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+  </line>
+  <text x="40" y="28" text-anchor="middle" font-size="4.5" class="s-fill-d" opacity="0.2" font-style="italic">L₀</text>
+  <!-- Fracture flash (X mark) -->
   <g opacity="0">
-    <animate attributeName="opacity" values="0;0;0;1;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.78;0.82;0.85;0.92"/>
-    <circle cx="40" cy="40" r="6" class="s-fill" opacity="0.3"/>
-    <line x1="36" y1="36" x2="31" y2="29" class="s-stroke" stroke-width="2" stroke-linecap="round"/>
-    <line x1="44" y1="36" x2="49" y2="29" class="s-stroke" stroke-width="2" stroke-linecap="round"/>
-    <line x1="38" y1="44" x2="33" y2="51" class="s-stroke" stroke-width="2" stroke-linecap="round"/>
-    <line x1="42" y1="44" x2="47" y2="51" class="s-stroke" stroke-width="2" stroke-linecap="round"/>
+    <animate attributeName="opacity" values="0;0;0;0.7;0;0" dur="5s" repeatCount="indefinite" keyTimes="0;0.68;0.71;0.73;0.8;1"/>
+    <line x1="37" y1="36" x2="43" y2="44" class="s-stroke-d" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="43" y1="36" x2="37" y2="44" class="s-stroke-d" stroke-width="2.5" stroke-linecap="round"/>
   </g>
-  <circle cx="8" cy="40" r="4" class="s-fill-d" opacity="0.2">
-    <animate attributeName="cx" values="8;4;8" dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
-  </circle>
+  <!-- Force arrows (pull apart) -->
   <polygon class="s-fill-d" opacity="0.4">
-    <animate attributeName="points" values="12,40 7,37 7,43;7,40 2,37 2,43;12,40 7,37 7,43" dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
+    <animate attributeName="points" values="14,40 9,37 9,43;8,40 3,37 3,43;2,40 -3,37 -3,43;0,40 -5,37 -5,43;0,40 -5,37 -5,43;14,40 9,37 9,43" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
   </polygon>
-  <circle cx="72" cy="40" r="4" class="s-fill-d" opacity="0.2">
-    <animate attributeName="cx" values="72;76;72" dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
-  </circle>
   <polygon class="s-fill-d" opacity="0.4">
-    <animate attributeName="points" values="68,40 73,37 73,43;73,40 78,37 78,43;68,40 73,37 73,43" dur="5s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
+    <animate attributeName="points" values="66,40 71,37 71,43;72,40 77,37 77,43;78,40 83,37 83,43;80,40 85,37 85,43;80,40 85,37 85,43;66,40 71,37 71,43" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
   </polygon>
+  <!-- F labels near arrows -->
+  <text y="57" text-anchor="middle" font-size="6" class="s-fill-d" opacity="0.3" font-weight="bold" font-style="italic">
+    <animate attributeName="x" values="10;5;0;0;0;10" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+    F
+  </text>
+  <text y="57" text-anchor="middle" font-size="6" class="s-fill-d" opacity="0.3" font-weight="bold" font-style="italic">
+    <animate attributeName="x" values="70;75;80;80;80;70" dur="5s" repeatCount="indefinite" keyTimes="0;0.25;0.6;0.72;0.82;1"/>
+    F
+  </text>
 </svg></div>
 <div class="card-label">Tensile Specimen</div>
 </div>

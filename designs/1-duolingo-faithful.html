@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechReady - The free, fun, and effective way to prep for mechanical engineering interviews!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --green:#58CC02;
+    --green-dark:#46a302;
+    --green-shadow:#3d8e01;
+    --blue:#1CB0F6;
+    --blue-dark:#1899d6;
+    --blue-shadow:#1780b8;
+    --red:#FF4B4B;
+    --orange:#FF9600;
+    --purple:#CE82FF;
+    --white:#FFFFFF;
+    --snow:#F7F7F7;
+    --swan:#E5E5E5;
+    --hare:#AFAFAF;
+    --wolf:#777777;
+    --night:#3C3C3C;
+    --ink:#4B4B4B;
+    --eel:#1A1A1A;
+  }
+
+  html{font-size:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+  body{
+    font-family:'Nunito',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.4;
+    overflow-x:hidden;
+  }
+
+  /* ===== NAV ===== */
+  .nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:var(--white);
+    border-bottom:2px solid var(--swan);
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .nav-inner{
+    width:100%;
+    max-width:980px;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .wordmark{
+    font-size:1.65rem;
+    font-weight:800;
+    color:var(--green);
+    letter-spacing:-0.5px;
+    text-decoration:none;
+    text-transform:uppercase;
+  }
+
+  .nav-login{
+    font-size:0.9rem;
+    font-weight:700;
+    color:var(--blue);
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+    padding:10px 16px;
+    border:2px solid var(--swan);
+    border-radius:12px;
+    transition:background 0.15s;
+  }
+
+  .nav-login:hover{
+    background:var(--snow);
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    text-align:center;
+    padding:80px 24px 60px;
+    max-width:720px;
+    margin:0 auto;
+  }
+
+  .hero-icon{
+    width:180px;
+    height:180px;
+    margin:0 auto 32px;
+  }
+
+  /* Gear / wrench illustration via SVG */
+  .hero-icon svg{
+    width:100%;
+    height:100%;
+  }
+
+  .hero h1{
+    font-size:2rem;
+    font-weight:800;
+    color:var(--eel);
+    line-height:1.2;
+    margin-bottom:16px;
+  }
+
+  .hero p{
+    font-size:1.1rem;
+    font-weight:600;
+    color:var(--wolf);
+    margin-bottom:40px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .btn-cta{
+    display:inline-block;
+    background:var(--green);
+    color:var(--white);
+    font-family:'Nunito',sans-serif;
+    font-size:1rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+    text-decoration:none;
+    padding:13px 64px;
+    border-radius:16px;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 4px 0 var(--green-shadow);
+    transition:filter 0.1s, transform 0.1s;
+    position:relative;
+    top:0;
+  }
+
+  .btn-cta:hover{
+    filter:brightness(1.05);
+  }
+
+  .btn-cta:active{
+    top:4px;
+    box-shadow:0 0 0 var(--green-shadow);
+  }
+
+  .btn-secondary{
+    display:inline-block;
+    margin-top:14px;
+    font-size:0.9rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+    text-decoration:none;
+    padding:13px 40px;
+    border-radius:16px;
+    border:2px solid var(--swan);
+    color:var(--blue);
+    background:var(--white);
+    cursor:pointer;
+    box-shadow:0 4px 0 var(--swan);
+    transition:filter 0.1s, transform 0.1s;
+    position:relative;
+    top:0;
+  }
+
+  .btn-secondary:hover{
+    background:var(--snow);
+  }
+
+  .btn-secondary:active{
+    top:4px;
+    box-shadow:0 0 0 var(--swan);
+  }
+
+  /* ===== DIVIDER ===== */
+  .divider{
+    border:none;
+    border-top:2px solid var(--swan);
+    margin:0;
+  }
+
+  /* ===== STATS BAR ===== */
+  .stats-bar{
+    background:var(--white);
+    padding:48px 24px;
+  }
+
+  .stats-inner{
+    max-width:800px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+  }
+
+  .stat{
+    text-align:center;
+  }
+
+  .stat-number{
+    font-size:2rem;
+    font-weight:800;
+    color:var(--green);
+  }
+
+  .stat-label{
+    font-size:0.85rem;
+    font-weight:700;
+    color:var(--wolf);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin-top:4px;
+  }
+
+  /* ===== PITCH SECTION ===== */
+  .pitch{
+    padding:64px 24px;
+    text-align:center;
+    background:var(--white);
+  }
+
+  .pitch h2{
+    font-size:1.75rem;
+    font-weight:800;
+    color:var(--eel);
+    margin-bottom:12px;
+  }
+
+  .pitch>p{
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--wolf);
+    max-width:520px;
+    margin:0 auto 48px;
+  }
+
+  .features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+    max-width:860px;
+    margin:0 auto;
+  }
+
+  .feature{
+    text-align:center;
+    padding:24px 16px;
+  }
+
+  .feature-icon{
+    width:64px;
+    height:64px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 16px;
+  }
+
+  .feature-icon svg{
+    width:32px;
+    height:32px;
+  }
+
+  .feature h3{
+    font-size:1.05rem;
+    font-weight:800;
+    color:var(--eel);
+    margin-bottom:8px;
+  }
+
+  .feature p{
+    font-size:0.9rem;
+    font-weight:600;
+    color:var(--wolf);
+    line-height:1.45;
+  }
+
+  /* ===== UNITS SECTION ===== */
+  .units-section{
+    background:var(--snow);
+    padding:64px 24px;
+    text-align:center;
+  }
+
+  .units-section h2{
+    font-size:1.75rem;
+    font-weight:800;
+    color:var(--eel);
+    margin-bottom:12px;
+  }
+
+  .units-section>p{
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--wolf);
+    max-width:480px;
+    margin:0 auto 48px;
+  }
+
+  .units-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    max-width:640px;
+    margin:0 auto;
+  }
+
+  .unit-card{
+    background:var(--white);
+    border:2px solid var(--swan);
+    border-radius:16px;
+    padding:20px 16px;
+    text-align:left;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    transition:border-color 0.15s;
+  }
+
+  .unit-card:hover{
+    border-color:var(--hare);
+  }
+
+  .unit-num{
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0.85rem;
+    font-weight:800;
+    color:var(--white);
+    flex-shrink:0;
+  }
+
+  .unit-card:nth-child(1) .unit-num{background:var(--green)}
+  .unit-card:nth-child(2) .unit-num{background:var(--blue)}
+  .unit-card:nth-child(3) .unit-num{background:var(--orange)}
+  .unit-card:nth-child(4) .unit-num{background:var(--red)}
+  .unit-card:nth-child(5) .unit-num{background:var(--purple)}
+  .unit-card:nth-child(6) .unit-num{background:var(--green)}
+  .unit-card:nth-child(7) .unit-num{background:var(--blue)}
+  .unit-card:nth-child(8) .unit-num{background:var(--orange)}
+  .unit-card:nth-child(9) .unit-num{background:var(--red)}
+  .unit-card:nth-child(10) .unit-num{background:var(--purple)}
+
+  .unit-info h4{
+    font-size:0.95rem;
+    font-weight:800;
+    color:var(--eel);
+    margin-bottom:2px;
+  }
+
+  .unit-info span{
+    font-size:0.78rem;
+    font-weight:700;
+    color:var(--hare);
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+  }
+
+  /* ===== QUESTION TYPES ===== */
+  .qtypes{
+    padding:64px 24px;
+    text-align:center;
+    background:var(--white);
+  }
+
+  .qtypes h2{
+    font-size:1.75rem;
+    font-weight:800;
+    color:var(--eel);
+    margin-bottom:12px;
+  }
+
+  .qtypes>p{
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--wolf);
+    max-width:480px;
+    margin:0 auto 48px;
+  }
+
+  .qtypes-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    max-width:700px;
+    margin:0 auto;
+  }
+
+  .qtype-tag{
+    background:var(--snow);
+    border:2px solid var(--swan);
+    border-radius:12px;
+    padding:10px 18px;
+    font-size:0.85rem;
+    font-weight:700;
+    color:var(--ink);
+  }
+
+  /* ===== BOTTOM CTA ===== */
+  .bottom-cta{
+    background:var(--green);
+    padding:64px 24px;
+    text-align:center;
+  }
+
+  .bottom-cta h2{
+    font-size:1.75rem;
+    font-weight:800;
+    color:var(--white);
+    margin-bottom:12px;
+  }
+
+  .bottom-cta p{
+    font-size:1.05rem;
+    font-weight:600;
+    color:rgba(255,255,255,0.85);
+    max-width:420px;
+    margin:0 auto 32px;
+  }
+
+  .btn-white{
+    display:inline-block;
+    background:var(--white);
+    color:var(--green);
+    font-family:'Nunito',sans-serif;
+    font-size:1rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+    text-decoration:none;
+    padding:13px 64px;
+    border-radius:16px;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 4px 0 rgba(0,0,0,0.15);
+    transition:filter 0.1s, transform 0.1s;
+    position:relative;
+    top:0;
+  }
+
+  .btn-white:hover{
+    filter:brightness(0.97);
+  }
+
+  .btn-white:active{
+    top:4px;
+    box-shadow:0 0 0 rgba(0,0,0,0.15);
+  }
+
+  /* ===== FOOTER ===== */
+  .footer{
+    background:var(--eel);
+    padding:40px 24px;
+    text-align:center;
+  }
+
+  .footer-inner{
+    max-width:800px;
+    margin:0 auto;
+  }
+
+  .footer-brand{
+    font-size:1.3rem;
+    font-weight:800;
+    color:var(--green);
+    text-transform:uppercase;
+    letter-spacing:-0.3px;
+    margin-bottom:16px;
+  }
+
+  .footer-links{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+  }
+
+  .footer-links a{
+    font-size:0.82rem;
+    font-weight:700;
+    color:var(--hare);
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+  }
+
+  .footer-links a:hover{
+    color:var(--white);
+  }
+
+  .footer-copy{
+    font-size:0.78rem;
+    font-weight:600;
+    color:var(--wolf);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:768px){
+    .hero{
+      padding:56px 20px 48px;
+    }
+
+    .hero-icon{
+      width:140px;
+      height:140px;
+      margin-bottom:24px;
+    }
+
+    .hero h1{
+      font-size:1.6rem;
+    }
+
+    .hero p{
+      font-size:1rem;
+    }
+
+    .features{
+      grid-template-columns:1fr;
+      gap:8px;
+      max-width:400px;
+    }
+
+    .feature{
+      padding:20px 16px;
+    }
+
+    .units-grid{
+      grid-template-columns:1fr;
+      max-width:400px;
+    }
+
+    .stats-inner{
+      gap:32px;
+    }
+
+    .stat-number{
+      font-size:1.6rem;
+    }
+
+    .btn-cta, .btn-white{
+      padding:13px 48px;
+      font-size:0.95rem;
+    }
+
+    .pitch h2, .units-section h2, .qtypes h2, .bottom-cta h2{
+      font-size:1.45rem;
+    }
+  }
+
+  @media(max-width:420px){
+    .stats-inner{
+      gap:20px;
+    }
+
+    .hero h1{
+      font-size:1.4rem;
+    }
+
+    .footer-links{
+      gap:16px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="wordmark">MechReady</a>
+    <a href="/login" class="nav-login">Log in</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-icon">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Gear body -->
+      <path d="M90 30 L100 30 L103 15 L110 14 L117 27 L126 22 L124 7 L131 9 L133 24 L143 23 L145 8 L151 12 L148 27 L156 31 L167 20 L171 26 L160 35 L165 43 L180 40 L180 48 L166 47 L168 57 L180 63 L178 70 L165 66 L163 76 L176 83 L172 89 L159 85 L154 93 L165 103 L160 108 L149 99 L142 106 L150 117 L144 121 L136 111 L127 115 L131 128 L125 130 L120 118 L110 119 L110 133 L103 133 L102 119 L92 118 L88 131 L82 130 L85 116 L76 112 L68 122 L63 118 L71 108 L64 100 L53 109 L49 104 L59 94 L54 85 L40 89 L38 82 L51 77 L49 67 L35 64 L36 57 L50 58 L52 48 L38 42 L41 36 L55 40 L60 32 L50 22 L55 17 L65 27 L73 22 L69 9 L76 7 L79 22 L88 24 L90 10 L97 11 L96 26 Z" fill="#58CC02"/>
+      <!-- Gear inner circle -->
+      <circle cx="109" cy="70" r="28" fill="#FFFFFF"/>
+      <circle cx="109" cy="70" r="20" fill="#46a302" opacity="0.2"/>
+      <!-- Wrench overlay -->
+      <path d="M48 128 L72 104 C72 104 80 108 84 104 L88 100 C92 96 88 88 88 88 L112 64" stroke="#4B4B4B" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <path d="M44 160 L36 152 C33 149 33 144 36 141 L56 121 L68 133 L48 153 C45 156 40 156 37 153 Z" fill="#4B4B4B"/>
+      <rect x="56" y="117" width="16" height="20" rx="2" transform="rotate(-45 64 127)" fill="#777777"/>
+    </svg>
+  </div>
+  <h1>The free, fun, and effective way to prep for mechanical engineering interviews</h1>
+  <p>Bite-sized lessons. Real interview questions. Master 10 core topics and land the job you want.</p>
+  <div>
+    <a href="/register" class="btn-cta">Get started</a>
+  </div>
+  <div>
+    <a href="/login" class="btn-secondary">I already have an account</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- STATS -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-number">200+</div>
+      <div class="stat-label">Questions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">10</div>
+      <div class="stat-label">Units</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">12</div>
+      <div class="stat-label">Question Types</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Free</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FEATURES -->
+<section class="pitch">
+  <h2>Learning that actually works</h2>
+  <p>MechReady uses proven methods from language learning to make technical interview prep stick.</p>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon" style="background:#E6F9D4">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 4L20 12L28 13.5L22 19.5L23.5 28L16 24L8.5 28L10 19.5L4 13.5L12 12L16 4Z" fill="#58CC02"/></svg>
+      </div>
+      <h3>Bite-sized lessons</h3>
+      <p>Each question is a focused exercise. No long lectures, no filler. Just the concepts interviewers actually test.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon" style="background:#DDF4FF">
+        <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#1CB0F6" stroke-width="2.5" fill="none"/><path d="M4 12H28" stroke="#1CB0F6" stroke-width="2.5"/><circle cx="9" cy="9" r="1.5" fill="#1CB0F6"/><circle cx="14" cy="9" r="1.5" fill="#1CB0F6"/><path d="M10 19L14 23L22 15" stroke="#1CB0F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>12 question types</h3>
+      <p>Multiple choice, calculations, diagrams, fill-in-the-blank, and more. Just like a real interview, but with instant feedback.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon" style="background:#FFF0D4">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M16 4V17" stroke="#FF9600" stroke-width="2.5" stroke-linecap="round"/><path d="M16 17L24 22" stroke="#FF9600" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="17" r="12" stroke="#FF9600" stroke-width="2.5" fill="none"/></svg>
+      </div>
+      <h3>Track your progress</h3>
+      <p>See exactly which topics you've mastered and where you need more practice. Stay motivated with streaks and XP.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- UNITS -->
+<section class="units-section">
+  <h2>Your learning path</h2>
+  <p>10 units covering every topic that comes up in mechanical engineering interviews.</p>
+  <div class="units-grid">
+    <div class="unit-card">
+      <div class="unit-num">1</div>
+      <div class="unit-info">
+        <h4>Statics</h4>
+        <span>20 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">2</div>
+      <div class="unit-info">
+        <h4>Dynamics</h4>
+        <span>20 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">3</div>
+      <div class="unit-info">
+        <h4>Strength of Materials</h4>
+        <span>25 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">4</div>
+      <div class="unit-info">
+        <h4>Thermodynamics</h4>
+        <span>25 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">5</div>
+      <div class="unit-info">
+        <h4>Heat Transfer</h4>
+        <span>20 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">6</div>
+      <div class="unit-info">
+        <h4>Fluid Mechanics</h4>
+        <span>25 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">7</div>
+      <div class="unit-info">
+        <h4>Materials Science</h4>
+        <span>20 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">8</div>
+      <div class="unit-info">
+        <h4>Machine Elements</h4>
+        <span>20 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">9</div>
+      <div class="unit-info">
+        <h4>GD&T</h4>
+        <span>15 questions</span>
+      </div>
+    </div>
+    <div class="unit-card">
+      <div class="unit-num">10</div>
+      <div class="unit-info">
+        <h4>Interview Prep</h4>
+        <span>15 questions</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUESTION TYPES -->
+<section class="qtypes">
+  <h2>Variety keeps you sharp</h2>
+  <p>12 question formats so you're ready for anything an interviewer throws at you.</p>
+  <div class="qtypes-grid">
+    <div class="qtype-tag">Multiple Choice</div>
+    <div class="qtype-tag">Numerical Input</div>
+    <div class="qtype-tag">True / False</div>
+    <div class="qtype-tag">Fill in the Blank</div>
+    <div class="qtype-tag">Matching Pairs</div>
+    <div class="qtype-tag">Order the Steps</div>
+    <div class="qtype-tag">Diagram Labeling</div>
+    <div class="qtype-tag">Select All That Apply</div>
+    <div class="qtype-tag">Unit Conversion</div>
+    <div class="qtype-tag">Free-Body Diagram</div>
+    <div class="qtype-tag">Equation Builder</div>
+    <div class="qtype-tag">Scenario Analysis</div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>Ready to ace your interview?</h2>
+  <p>Join MechReady today. It's free, it's fun, and it works.</p>
+  <a href="/register" class="btn-white">Get started</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">MechReady</div>
+    <div class="footer-links">
+      <a href="/about">About</a>
+      <a href="/register">Sign up</a>
+      <a href="/login">Log in</a>
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+    <div class="footer-copy">MechReady is a free practice tool for mechanical engineering interview preparation.</div>
+  </div>
+</footer>
+
+</body>
+</html>
