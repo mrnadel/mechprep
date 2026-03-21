@@ -6,10 +6,16 @@ export interface CourseQuestion {
   id: string;
   type: QuestionType;
   question: string;
+  // Multiple-choice
   options?: string[];
   correctIndex?: number;
+  // True-false
   correctAnswer?: boolean;
-  acceptedAnswers?: string[];
+  // Fill-blank (Duolingo word-bank style)
+  blanks?: string[];       // correct answer for each _____ in order
+  wordBank?: string[];     // all word choices (correct + distractors), shuffled at render
+  acceptedAnswers?: string[]; // legacy fallback
+  // Common
   explanation: string;
   hint?: string;
   diagram?: string;

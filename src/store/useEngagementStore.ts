@@ -121,6 +121,7 @@ interface EngagementActions {
   activateDoubleXp: (duration: number) => void;
   addGems: (amount: number, source: string) => void;
   completeComebackQuest: () => void;
+  debugSetFromCourse: (data: { gems: number; leagueXp: number }) => void;
 }
 
 type EngagementStore = EngagementState & EngagementActions;
@@ -559,6 +560,21 @@ export const useEngagementStore = create<EngagementStore>()(
             };
           });
         },
+
+        // === Action 17: debugSetFromCourse ===
+        debugSetFromCourse: (data) => {
+          set((state) => ({
+            gems: {
+              ...state.gems,
+              balance: data.gems,
+              totalEarned: data.gems,
+            },
+            league: {
+              ...state.league,
+              weeklyXp: data.leagueXp,
+            },
+          }));
+        },
       }),
       {
         name: 'mechready-engagement',
@@ -582,6 +598,7 @@ export const useEngagementStore = create<EngagementStore>()(
             activateDoubleXp: _14,
             addGems: _15,
             completeComebackQuest: _16,
+            debugSetFromCourse: _17,
             ...stateOnly
           } = state;
           return stateOnly;

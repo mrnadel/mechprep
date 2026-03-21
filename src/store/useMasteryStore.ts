@@ -13,6 +13,7 @@ interface MasteryState {
 
   addEvent: (event: Omit<AnswerEvent, 'id' | 'answeredAt'>) => void;
   clearEvents: () => void;
+  debugSetEvents: (events: AnswerEvent[]) => void;
   getTopicEvents: (topicId: TopicId) => AnswerEvent[];
   syncToServer: () => Promise<void>;
   hydrateFromServer: () => Promise<void>;
@@ -45,6 +46,8 @@ export const useMasteryStore = create<MasteryState>()(
       },
 
       clearEvents: () => set({ events: [], lastSyncedIndex: 0 }),
+
+      debugSetEvents: (events) => set({ events, lastSyncedIndex: 0 }),
 
       getTopicEvents: (topicId) =>
         get().events.filter((e) => e.topicId === topicId),

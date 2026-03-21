@@ -3,8 +3,14 @@
 import { create } from 'zustand';
 import { persist, subscribeWithSelector } from 'zustand/middleware';
 import { course } from '@/data/course';
+import { topics } from '@/data/topics';
 import { shuffleArray } from '@/lib/utils';
+import { useMasteryStore } from '@/store/useMasteryStore';
+import { useStore } from '@/store/useStore';
+import { useEngagementStore } from '@/store/useEngagementStore';
 import type { CourseProgress, ActiveLesson, LessonResult, Unit } from '@/data/course/types';
+import type { AnswerEvent } from '@/data/mastery';
+import type { TopicId } from '@/data/types';
 
 interface CourseState {
   progress: CourseProgress;
@@ -229,15 +235,20 @@ export const useCourseStore = create<CourseState>()(
       },
 
       debugSetProgress: (lessonCount: number) => {
-        // Build completedLessons for the first N lessons in course order
         const completedLessons: Record<string, { stars: number; bestAccuracy: number; attempts: number; lastAttempted: string }> = {};
         let xp = 0;
         let count = 0;
         const today = getTodayString();
+        const courseData = get().courseData;
 
-        for (const unit of get().courseData) {
+        // Track per-topic question counts for downstream stores
+        const topicCounts: Record<string, { attempted: number; correct: number }> = {};
+        const masteryEvents: AnswerEvent[] = [];
+
+        for (const unit of courseData) {
           for (const lesson of unit.lessons) {
             if (count >= lessonCount) break;
+
             completedLessons[lesson.id] = {
               stars: 3,
               bestAccuracy: 95,
@@ -245,18 +256,104 @@ export const useCourseStore = create<CourseState>()(
               lastAttempted: today,
             };
             xp += lesson.xpReward * 3;
+
+            // Generate per-question data for mastery & skills
+            if (unit.topicId) {
+              if (!topicCounts[unit.topicId]) {
+                topicCounts[unit.topicId] = { attempted: 0, correct: 0 };
+              }
+
+              for (let i = 0; i < lesson.questions.length; i++) {
+                const q = lesson.questions[i];
+                const correct = (i % 20) !== 19; // ~95% accuracy
+
+                topicCounts[unit.topicId].attempted += 1;
+                if (correct) topicCounts[unit.topicId].correct += 1;
+
+                masteryEvents.push({
+                  id: `debug-${q.id}`,
+                  questionId: q.id,
+                  topicId: unit.topicId as TopicId,
+                  difficulty: 'intermediate',
+                  correct,
+                  source: 'course',
+                  answeredAt: new Date().toISOString(),
+                });
+              }
+            }
+
             count++;
           }
           if (count >= lessonCount) break;
         }
 
+        // Build topic progress with subtopic distribution
+        const topicProgress = Object.entries(topicCounts).map(([topicId, counts]) => {
+          const topic = topics.find(t => t.id === topicId);
+          const subtopicBreakdown: Record<string, { attempted: number; correct: number }> = {};
+
+          if (topic && topic.subtopics.length > 0) {
+            const n = topic.subtopics.length;
+            const perSub = Math.floor(counts.attempted / n);
+            const perSubCorrect = Math.floor(counts.correct / n);
+            let remainderAttempted = counts.attempted - perSub * n;
+            let remainderCorrect = counts.correct - perSubCorrect * n;
+
+            for (const sub of topic.subtopics) {
+              const extra = remainderAttempted > 0 ? 1 : 0;
+              const extraCorrect = remainderCorrect > 0 ? 1 : 0;
+              subtopicBreakdown[sub.name] = {
+                attempted: perSub + extra,
+                correct: perSubCorrect + extraCorrect,
+              };
+              remainderAttempted -= extra;
+              remainderCorrect -= extraCorrect;
+            }
+          }
+
+          return {
+            topicId: topicId as TopicId,
+            questionsAttempted: counts.attempted,
+            questionsCorrect: counts.correct,
+            averageConfidence: 0,
+            lastAttempted: today,
+            subtopicBreakdown,
+          };
+        });
+
+        const totalQuestions = Object.values(topicCounts).reduce((sum, c) => sum + c.attempted, 0);
+        const totalCorrect = Object.values(topicCounts).reduce((sum, c) => sum + c.correct, 0);
+        const gemsEarned = lessonCount * 10;
+        const streak = lessonCount > 0 ? Math.min(Math.ceil(lessonCount / 2), 14) : 0;
+
+        // 1. Update course progress
         set({
           progress: {
             ...get().progress,
             totalXp: xp,
             completedLessons,
             lastActiveDate: lessonCount > 0 ? today : '',
+            currentStreak: streak,
+            longestStreak: Math.max(get().progress.longestStreak, streak),
           },
+        });
+
+        // 2. Sync mastery events
+        useMasteryStore.getState().debugSetEvents(masteryEvents);
+
+        // 3. Sync main store (skills, achievements, level)
+        useStore.getState().debugSetFromCourse({
+          topicProgress,
+          totalQuestions,
+          totalCorrect,
+          totalXp: xp,
+          streak,
+        });
+
+        // 4. Sync engagement (gems, league XP)
+        useEngagementStore.getState().debugSetFromCourse({
+          gems: gemsEarned,
+          leagueXp: xp,
         });
       },
 

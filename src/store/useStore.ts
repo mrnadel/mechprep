@@ -67,6 +67,13 @@ interface AppState {
   // Actions — Progress
   resetProgress: () => void;
   loadSeedData: () => void;
+  debugSetFromCourse: (data: {
+    topicProgress: TopicProgress[];
+    totalQuestions: number;
+    totalCorrect: number;
+    totalXp: number;
+    streak: number;
+  }) => void;
 
   // Actions — UI
   toggleSidebar: () => void;
@@ -431,6 +438,41 @@ export const useStore = create<AppState>()(
 
       loadSeedData: () => {
         set({ progress: seedProgress });
+      },
+
+      debugSetFromCourse: (data) => {
+        const progress = get().progress;
+        const newProgress: UserProgress = {
+          ...progress,
+          topicProgress: data.topicProgress,
+          totalQuestionsAttempted: data.totalQuestions,
+          totalQuestionsCorrect: data.totalCorrect,
+          totalXp: data.totalXp,
+          currentLevel: updateLevel(data.totalXp),
+          currentStreak: data.streak,
+          longestStreak: Math.max(progress.longestStreak, data.streak),
+          lastActiveDate: data.totalQuestions > 0 ? getTodayString() : '',
+          weakAreas: [],
+          strongAreas: data.topicProgress
+            .filter(t => t.questionsAttempted >= 5 && (t.questionsCorrect / t.questionsAttempted) >= 0.8)
+            .map(t => t.topicId),
+        };
+
+        // Check achievements
+        const newAchievements = checkNewAchievements(newProgress);
+        newProgress.achievementsUnlocked = [...new Set([...progress.achievementsUnlocked, ...newAchievements])];
+
+        // Award achievement XP
+        const achievementXp = newAchievements.reduce((sum, id) => {
+          const achievement = allAchievements.find(a => a.id === id);
+          return sum + (achievement?.xpReward ?? 0);
+        }, 0);
+        if (achievementXp > 0) {
+          newProgress.totalXp += achievementXp;
+          newProgress.currentLevel = updateLevel(newProgress.totalXp);
+        }
+
+        set({ progress: newProgress });
       },
 
       toggleSidebar: () => {
