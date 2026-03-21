@@ -6,6 +6,7 @@ export const unit4: Unit = {
   description: 'Laws of thermodynamics, properties, cycles, and energy systems for mechanical engineers.',
   color: '#F59E0B',
   icon: '🔥',
+  topicId: 'thermodynamics',
   lessons: [
     {
       id: 'u4-L1',

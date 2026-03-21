@@ -6,6 +6,7 @@ export const unit6: Unit = {
   description: 'Fluid properties, pipe flow, pumps, and dimensional analysis for mechanical engineering applications.',
   color: '#06B6D4',
   icon: '🌊',
+  topicId: 'fluid-mechanics',
   lessons: [
     {
       id: 'u6-L1',

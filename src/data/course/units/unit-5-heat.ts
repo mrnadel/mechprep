@@ -6,6 +6,7 @@ export const unit5: Unit = {
   description: 'Conduction, convection, radiation, heat exchangers, and extended surfaces for thermal design.',
   color: '#EF4444',
   icon: '🌡️',
+  topicId: 'heat-transfer',
   lessons: [
     {
       id: 'u5-L1',

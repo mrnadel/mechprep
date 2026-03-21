@@ -6,6 +6,7 @@ export const unit3: Unit = {
   description: 'Stress, strain, bending, torsion, combined loading, and failure theories for structural design.',
   color: '#8B5CF6',
   icon: '💪',
+  topicId: 'strength-of-materials',
   lessons: [
     {
       id: 'u3-L1',

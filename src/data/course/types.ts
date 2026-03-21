@@ -1,3 +1,5 @@
+import type { TopicId } from '../types';
+
 export type QuestionType = 'multiple-choice' | 'true-false' | 'fill-blank';
 
 export interface CourseQuestion {
@@ -28,6 +30,7 @@ export interface Unit {
   description: string;
   color: string;
   icon: string;
+  topicId?: TopicId;
   lessons: Lesson[];
 }
 

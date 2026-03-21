@@ -6,6 +6,7 @@ export const unit1: Unit = {
   description: 'Forces, moments, trusses, friction, and centroids — the foundation of mechanical analysis.',
   color: '#10B981',
   icon: '⚖️',
+  topicId: 'engineering-mechanics',
   lessons: [
     {
       id: 'u1-L1',

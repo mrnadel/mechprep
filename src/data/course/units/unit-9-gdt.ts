@@ -6,6 +6,7 @@ export const unit9: Unit = {
   description: 'Geometric dimensioning and tolerancing, datum systems, tolerance stack-ups, surface finish, and metrology.',
   color: '#EC4899',
   icon: '📏',
+  topicId: 'design-tolerancing',
   lessons: [
     {
       id: 'u9-L1',

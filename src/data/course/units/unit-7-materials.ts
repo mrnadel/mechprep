@@ -6,6 +6,7 @@ export const unit7: Unit = {
   description: 'Material properties, phase diagrams, heat treatment, casting, forming, machining, and modern manufacturing processes.',
   color: '#F97316',
   icon: '🏭',
+  topicId: 'materials-engineering',
   lessons: [
     {
       id: 'u7-L1',

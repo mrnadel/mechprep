@@ -6,6 +6,7 @@ export const unit2: Unit = {
   description: 'Motion, forces, energy, momentum, and rotational dynamics for particles and rigid bodies.',
   color: '#3B82F6',
   icon: '🚀',
+  topicId: 'engineering-mechanics',
   lessons: [
     {
       id: 'u2-L1',
