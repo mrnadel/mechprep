@@ -5,11 +5,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
 import { getLessonById } from '@/data/course';
 import { getUnitTheme } from '@/lib/unitThemes';
+import { useBackHandler } from '@/hooks/useBackHandler';
 
 export { ResultScreen };
 export default function ResultScreen() {
   const lessonResult = useCourseStore((s) => s.lessonResult);
   const dismissResult = useCourseStore((s) => s.dismissResult);
+
+  // Mobile back button dismisses result
+  useBackHandler(!!lessonResult, dismissResult);
 
   useEffect(() => {
     if (!lessonResult) return;

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
 import { course } from '@/data/course';
 import { getUnitTheme } from '@/lib/unitThemes';
+import { useBackHandler } from '@/hooks/useBackHandler';
 import LessonProgressBar from './LessonProgressBar';
 import QuestionCard from './QuestionCard';
 import type { QuestionCardHandle } from './QuestionCard';
@@ -18,6 +19,9 @@ export default function LessonView() {
   const nextQuestion = useCourseStore((s) => s.nextQuestion);
   const completeLesson = useCourseStore((s) => s.completeLesson);
   const exitLesson = useCourseStore((s) => s.exitLesson);
+
+  // Mobile back button closes lesson
+  useBackHandler(!!activeLesson && !lessonResult, exitLesson);
 
   const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [hasSelection, setHasSelection] = useState(false);
