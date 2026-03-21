@@ -3,6 +3,7 @@
 import type { Question } from '@/data/types';
 import { cn } from '@/lib/utils';
 import { CheckCircle, XCircle, Lightbulb, Target, Globe, ArrowRight, AlertCircle } from 'lucide-react';
+import FlagButton from './FlagButton';
 
 interface Props {
   question: Question;
@@ -78,6 +79,9 @@ export default function FeedbackPanel({ question, isCorrect, onNext }: Props) {
           </div>
         )}
       </div>
+
+      {/* Flag Button */}
+      <FlagButton contentType="question" contentId={question.id} />
 
       {/* Next Button */}
       <button onClick={onNext} className="btn-primary w-full" autoFocus>
