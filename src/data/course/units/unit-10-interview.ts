@@ -855,10 +855,10 @@ export const unit10: Unit = {
         {
           id: 'u10-L3-Q6',
           type: 'fill-blank',
-          question: 'The material selection charts that plot one material property against another (e.g., strength vs. density), enabling systematic material comparison, are called _____ charts.',
-          blanks: ['Ashby'],
-          wordBank: ['Ashby', 'Moody', 'Pareto', 'Pugh', 'Taguchi'],
-          explanation: 'Ashby charts (developed by Prof. Mike Ashby at Cambridge University) plot material property pairs on log-log scales, with materials grouped by family (metals, polymers, ceramics, composites). Guideline slopes on these charts represent material indices for specific design objectives. The CES EduPack software implements these charts with a database of thousands of materials.',
+          question: 'The material selection charts that plot one material property against another (e.g., _____ vs. density) on log-log scales, enabling systematic material comparison, are called _____ charts.',
+          blanks: ['strength', 'Ashby'],
+          wordBank: ['strength', 'Ashby', 'hardness', 'Moody', 'Pareto', 'Pugh'],
+          explanation: 'Ashby charts (developed by Prof. Mike Ashby at Cambridge University) plot material property pairs (such as strength vs. density, or modulus vs. cost) on log-log scales, with materials grouped by family (metals, polymers, ceramics, composites). Guideline slopes on these charts represent material indices for specific design objectives.',
           hint: 'Named after the Cambridge professor who developed this systematic approach to material selection.'
         },
         {
@@ -1043,9 +1043,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L3-Q21',
           type: 'fill-blank',
-          question: 'The design methodology that minimizes the total number of parts by combining functions into fewer components, reducing assembly time and cost, is called Design for _____ (DFA).',
-          blanks: ['Assembly'],
-          wordBank: ['Assembly', 'Manufacturing', 'Reliability', 'Testing', 'Sustainability'],
+          question: 'The design methodology that minimizes the total number of _____ by combining functions into fewer components, reducing _____ time and cost, is called Design for Assembly (DFA).',
+          blanks: ['parts', 'assembly'],
+          wordBank: ['parts', 'assembly', 'tools', 'inspection', 'features', 'testing'],
           explanation: 'Design for Assembly (DFA) is the systematic method of reducing part count and simplifying assembly operations. The Boothroyd-Dewhurst DFA method asks three questions for each part: (1) Does it move relative to adjacent parts? (2) Must it be a different material? (3) Must it be separate for assembly or service? If all answers are "no," the part can potentially be eliminated by combining it with an adjacent part. Successful DFA typically reduces part count by 40-60% and assembly time by 50-70%.',
           hint: 'This design methodology focuses on reducing part count and simplifying the assembly process.'
         },
@@ -2007,9 +2007,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L6-Q6',
           type: 'fill-blank',
-          question: 'In project scheduling, the longest sequence of dependent tasks that determines the minimum project duration is called the _____ path.',
-          blanks: ['critical'],
-          wordBank: ['critical', 'baseline', 'optimal', 'parallel', 'milestone'],
+          question: 'In project scheduling, the longest sequence of _____ tasks that determines the minimum project duration is called the _____ path.',
+          blanks: ['dependent', 'critical'],
+          wordBank: ['dependent', 'critical', 'parallel', 'baseline', 'optional', 'sequential'],
           explanation: 'The critical path is the longest chain of dependent activities; any delay on a critical-path task directly delays the project. Tasks not on the critical path have float (slack). CPM analysis helps identify which tasks to prioritize and where to allocate resources. In engineering projects, the critical path often runs through long-lead procurement items, qualification testing, or regulatory approvals.',
           hint: 'This scheduling concept identifies which chain of tasks determines the minimum total project duration.'
         },
@@ -2300,7 +2300,8 @@ export const unit10: Unit = {
           id: 'u10-L6-Q30',
           type: 'fill-blank',
           question: 'The standard methodology for systematically identifying potential hazards in a chemical or process plant by examining deviations from normal operating conditions using guide words (No, More, Less, Part of, As well as, Reverse, Other than) is called a _____ study.',
-          acceptedAnswers: ['HAZOP', 'hazop', 'Hazop', 'HazOp'],
+          blanks: ['HAZOP'],
+          wordBank: ['HAZOP', 'FMEA', 'LOPA', 'HACCP', 'SWIFT'],
           explanation: 'HAZOP (Hazard and Operability) study is a structured technique for identifying hazards and operability problems in process plants. A multidisciplinary team systematically applies guide words to each process parameter (flow, temperature, pressure, level, composition) at each node in the process flow diagram. Example: "No Flow" in a cooling water line → overheating → reactor runaway. For each deviation, the team identifies: causes, consequences, existing safeguards, and recommended actions. HAZOP is required by many regulatory frameworks (OSHA PSM, Seveso Directive) for high-hazard chemical processes. It was developed by ICI in the 1960s and is now standard practice worldwide.',
           hint: 'This structured hazard identification technique uses guide words applied to process parameters at each node.'
         }
