@@ -27,6 +27,8 @@ import {
   Camera,
   Trash2,
   Loader2,
+  AlertTriangle,
+  RotateCcw,
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -253,6 +255,11 @@ export default function ProfilePage() {
   const [avatarUploading, setAvatarUploading] = useState(false);
   const [avatarError, setAvatarError] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Reset progress state — 3-step confirmation
+  const [resetStep, setResetStep] = useState(0); // 0=hidden, 1=warning, 2=type confirm, 3=processing
+  const [resetConfirmText, setResetConfirmText] = useState('');
+  const [resetError, setResetError] = useState('');
 
   useEffect(() => {
     fetch('/api/user/profile')
