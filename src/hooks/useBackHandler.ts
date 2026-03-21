@@ -3,26 +3,26 @@ import { useEffect, useRef } from 'react';
 /**
  * Pushes a history entry when `active` becomes true,
  * and calls `onBack` when the user presses the browser/mobile back button.
- * Cleans up the extra history entry if the overlay is dismissed by other means.
  */
 export function useBackHandler(active: boolean, onBack: () => void) {
-  const pushed = useRef(false);
   const onBackRef = useRef(onBack);
   onBackRef.current = onBack;
+  const hasPushed = useRef(false);
 
   useEffect(() => {
     if (!active) {
-      pushed.current = false;
+      hasPushed.current = false;
       return;
     }
 
-    // Push a sentinel state so pressing back fires popstate instead of navigating away
-    window.history.pushState({ overlay: true }, '');
-    pushed.current = true;
+    // Guard against React strict-mode double-mount pushing twice
+    if (!hasPushed.current) {
+      hasPushed.current = true;
+      window.history.pushState({ overlay: true }, '');
+    }
 
     const handlePopState = () => {
-      // The user pressed back — close the overlay
-      pushed.current = false;
+      hasPushed.current = false;
       onBackRef.current();
     };
 
@@ -30,11 +30,7 @@ export function useBackHandler(active: boolean, onBack: () => void) {
 
     return () => {
       window.removeEventListener('popstate', handlePopState);
-      // If the overlay was dismissed via UI (not back button), pop the extra history entry
-      if (pushed.current) {
-        pushed.current = false;
-        window.history.back();
-      }
     };
+    // Only re-run when active changes, not when onBack reference changes
   }, [active]);
 }
