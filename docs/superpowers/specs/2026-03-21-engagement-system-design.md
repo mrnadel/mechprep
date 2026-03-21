@@ -356,7 +356,8 @@ Re-engage users who've been away for 3+ days. Reduce the psychological barrier o
 interface ComebackState {
   isInComebackFlow: boolean
   comebackQuestsCompleted: number
-  lastSessionDate: string
+  // No lastSessionDate here — reads from existing useStore.userProgress.lastActiveDate
+  // to avoid duplicating state across stores
   daysAway: number
 }
 ```
@@ -441,72 +442,113 @@ interface EngagementState {
 }
 ```
 
+### Resolving the Dual-Store Architecture
+
+The existing app has two independent stores that track XP and streaks:
+- `useStore` (`mechready-storage`) — used by practice sessions, tracks `totalXp`, `currentStreak`, `lastActiveDate`
+- `useCourseStore` (`mechready-course`) — used by course lessons, tracks its own `totalXp`, `currentStreak`, `lastActiveDate`
+
+**Decision: `useStore` is the canonical source for XP, streaks, and level.**
+
+The engagement store reads XP and streak data exclusively from `useStore`. Course lesson completions already call into `useStore` to award XP. If there are code paths in `useCourseStore` that independently modify XP/streak without going through `useStore`, those must be refactored to delegate to `useStore` as part of this work.
+
+**League XP** aggregates from `useStore.userProgress.totalXp` only.
+**Streak checks** read from `useStore.userProgress.currentStreak` and `useStore.userProgress.lastActiveDate` only.
+
 ### Integration Points
 
 The engagement store must be updated from existing flows:
 
-1. **After lesson completion** (`LessonView` / `ResultScreen`):
+1. **After lesson completion** (`ResultScreen`):
+   - `ResultScreen` consumes from both `useCourseStore` (lesson result, unit progress, lesson position for continuation hooks) and `useEngagementStore` (quest progress, league rank, double XP state)
    - Call `updateQuestProgress('lessons_completed', 1)`
-   - Call `updateLeagueXp(xpEarned)`
-   - Show continuation hooks
+   - Call `updateLeagueXp(xpEarned)` — where `xpEarned` comes from `useStore`
+   - Show continuation hooks using: `useCourseStore` unit/lesson position + `useEngagementStore` quest/league/XP proximity data
    - Check/offer double XP
 
 2. **After session completion** (`SessionSummary`):
    - Call `updateQuestProgress('sessions_completed', 1)`
    - Call `updateQuestProgress('questions_correct', correctCount)`
+   - Call `updateLeagueXp(xpEarned)`
    - Update accuracy-based quests
+   - Show continuation hooks (same multi-store pattern as ResultScreen)
 
 3. **On dashboard load** (`page.tsx`):
    - Call `initDailyQuests()` (handles reset detection)
    - Call `initWeeklyQuests()` (handles reset detection)
-   - Call `checkComebackFlow()`
+   - Call `checkComebackFlow()` — reads `lastActiveDate` from `useStore`
    - Simulate league competitor XP for elapsed time
    - Render nudge cards
 
 4. **On app load** (layout or provider):
-   - Check streak freeze consumption for missed days
-   - Check streak repair window
+   - Read `lastActiveDate` from `useStore` to detect missed days
+   - If missed day detected and `streakEnhancements.freezesOwned > 0`: consume freeze, preserve streak in `useStore`
+   - Check streak repair window (if streak broke and within repair calendar window)
 
 ### Database Schema Additions
 
-```sql
--- Gems ledger
-CREATE TABLE gem_transactions (
-  id UUID PRIMARY KEY,
-  user_id UUID REFERENCES users(id),
-  amount INTEGER NOT NULL,
-  source VARCHAR(50) NOT NULL,
-  created_at TIMESTAMP DEFAULT NOW()
-);
+All schema changes use Drizzle ORM definitions (consistent with existing `src/lib/db/schema.ts` which uses `text()` for IDs, not UUID):
 
--- Quest progress (for server-side validation)
-CREATE TABLE quest_progress (
-  id UUID PRIMARY KEY,
-  user_id UUID REFERENCES users(id),
-  quest_date DATE NOT NULL,
-  quest_type VARCHAR(10) NOT NULL, -- 'daily' | 'weekly'
-  quests JSONB NOT NULL,
-  chest_claimed BOOLEAN DEFAULT FALSE,
-  created_at TIMESTAMP DEFAULT NOW()
-);
+```typescript
+// Add to src/lib/db/schema.ts
 
--- League state
-CREATE TABLE league_state (
-  id UUID PRIMARY KEY,
-  user_id UUID REFERENCES users(id),
-  tier INTEGER DEFAULT 1,
-  weekly_xp INTEGER DEFAULT 0,
-  week_start DATE NOT NULL,
-  competitors JSONB NOT NULL,
-  updated_at TIMESTAMP DEFAULT NOW()
-);
+// Gems ledger
+export const gemTransactions = pgTable('gem_transactions', {
+  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+  userId: text('user_id').references(() => users.id).notNull(),
+  amount: integer('amount').notNull(),
+  source: text('source').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+})
 
--- Streak enhancements
-ALTER TABLE user_progress ADD COLUMN streak_freezes INTEGER DEFAULT 0;
-ALTER TABLE user_progress ADD COLUMN gems_balance INTEGER DEFAULT 0;
-ALTER TABLE user_progress ADD COLUMN gems_total_earned INTEGER DEFAULT 0;
-ALTER TABLE user_progress ADD COLUMN streak_milestones JSONB DEFAULT '[]';
+// Quest progress (server-side sync)
+export const questProgress = pgTable('quest_progress', {
+  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+  userId: text('user_id').references(() => users.id).notNull(),
+  questDate: text('quest_date').notNull(), // ISO date string
+  questType: text('quest_type').notNull(), // 'daily' | 'weekly'
+  quests: jsonb('quests').notNull(),
+  chestClaimed: boolean('chest_claimed').default(false),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+})
+
+// League state
+export const leagueState = pgTable('league_state', {
+  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+  userId: text('user_id').references(() => users.id).notNull(),
+  tier: integer('tier').default(1),
+  weeklyXp: integer('weekly_xp').default(0),
+  weekStart: text('week_start').notNull(),
+  competitors: jsonb('competitors').notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+})
+
+// Add columns to existing userProgress table:
+// streakFreezes: integer('streak_freezes').default(0)
+// gemsBalance: integer('gems_balance').default(0)
+// gemsTotalEarned: integer('gems_total_earned').default(0)
+// streakMilestones: jsonb('streak_milestones').default([])
 ```
+
+### Migration Strategy for Existing Users
+
+When the engagement system is deployed, existing users will have localStorage data in `mechready-storage` and `mechready-course` but no `mechready-engagement` key. On first load of the new version:
+
+1. **Gems:** Initialize `balance: 0`, `totalEarned: 0`. No retroactive gem awards — gems start fresh.
+2. **Quests:** Generate fresh daily/weekly quests as if it's a new day.
+3. **League:** Place user in Bronze league, generate competitors, start fresh week.
+4. **Streak enhancements:** `freezesOwned: 0`, no milestones reached. Existing streak value is read from `useStore` and respected — but past milestones (e.g., user already has a 45-day streak) are NOT retroactively awarded gems. Only future milestones trigger rewards.
+5. **Comeback:** Not triggered on first load of new version (even if user was away), since it would be confusing alongside new feature discovery.
+6. **Double XP:** Not active.
+
+This is handled by the Zustand `persist` middleware's default values — when the `mechready-engagement` key doesn't exist, the store initializes with defaults and runs `initDailyQuests()` / `initWeeklyQuests()` on first dashboard load.
+
+### Insufficient Gems Handling
+
+When a user attempts to purchase an item with insufficient gem balance:
+- The buy button is **disabled** when `gems.balance < item.cost`
+- Button shows grayed-out state with tooltip: "Need X more gems"
+- No error toast needed — the disabled state prevents the action
 
 ---
 
