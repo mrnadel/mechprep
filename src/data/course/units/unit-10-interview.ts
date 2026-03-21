@@ -151,7 +151,8 @@ export const unit10: Unit = {
           id: 'u10-L1-Q11',
           type: 'fill-blank',
           question: 'When performing estimation problems in interviews, the technique of breaking a large unknown into smaller, more estimable pieces is called a _____ problem (named after the physicist who popularized this approach).',
-          acceptedAnswers: ['Fermi', 'fermi'],
+          blanks: ['Fermi'],
+          wordBank: ['Fermi', 'Newton', 'Euler', 'Boltzmann', 'Gauss'],
           explanation: 'Fermi problems are named after Enrico Fermi, who was famous for making rapid order-of-magnitude estimates. The method involves decomposing a seemingly impossible question into smaller sub-problems that can each be estimated with reasonable accuracy. The errors in individual estimates tend to cancel, giving a final answer within an order of magnitude. Classic examples: "How many piano tuners in Chicago?" or "How many golf balls fit in a school bus?" Interviewers use these to assess structured thinking.',
           hint: 'This Italian-American physicist was famous for his ability to make quick, accurate estimates.'
         },
@@ -261,9 +262,10 @@ export const unit10: Unit = {
         {
           id: 'u10-L1-Q20',
           type: 'fill-blank',
-          question: 'The dimensionless number that characterizes the ratio of inertial forces to viscous forces in fluid flow, determining whether flow is laminar or turbulent, is the _____ number.',
-          acceptedAnswers: ['Reynolds', 'reynolds', 'Re'],
-          explanation: 'The Reynolds number Re = rho*V*D/mu (or V*D/nu) is the most important dimensionless number in fluid mechanics. For pipe flow: Re < 2300 is laminar, Re > 4000 is turbulent, and 2300-4000 is the transition zone. Typical values: blood flow in arteries Re ~ 300 (laminar), water in household pipes Re ~ 10,000-50,000 (turbulent), air around a car at highway speed Re ~ 3,000,000. Knowing how to quickly estimate Re helps determine which flow regime applies and which correlations to use.',
+          question: 'The dimensionless number that characterizes the ratio of _____ forces to viscous forces in fluid flow, determining whether flow is laminar or turbulent, is the _____ number.',
+          blanks: ['inertial', 'Reynolds'],
+          wordBank: ['inertial', 'Reynolds', 'pressure', 'Nusselt', 'gravitational', 'Mach'],
+          explanation: 'The Reynolds number Re = rho*V*D/mu (or V*D/nu) is the most important dimensionless number in fluid mechanics, characterizing the ratio of inertial to viscous forces. For pipe flow: Re < 2300 is laminar, Re > 4000 is turbulent, and 2300-4000 is the transition zone. Knowing how to quickly estimate Re helps determine which flow regime applies and which correlations to use.',
           hint: 'This number compares inertial to viscous forces and determines laminar vs. turbulent flow.'
         },
         {
@@ -337,7 +339,8 @@ export const unit10: Unit = {
           id: 'u10-L1-Q26',
           type: 'fill-blank',
           question: 'In estimation, when you want to check whether your answer is reasonable, you compare it against known reference values. This practice is commonly called a _____ check.',
-          acceptedAnswers: ['sanity', 'Sanity', 'reality', 'Reality', 'reasonableness'],
+          blanks: ['sanity'],
+          wordBank: ['sanity', 'parity', 'quality', 'tolerance', 'baseline'],
           explanation: 'Sanity checking is the practice of comparing your calculated result against known physical quantities, published data, or personal experience to verify it is reasonable. For example, if you calculate that a car engine produces 5000 kW, you should immediately recognize this exceeds even a Formula 1 engine (~750 kW) and is closer to a locomotive. Effective sanity checks require a library of memorized anchor values for common engineering quantities.',
           hint: 'This type of check verifies your answer makes physical sense by comparing to known values.'
         },
@@ -470,8 +473,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L2-Q6',
           type: 'fill-blank',
-          question: 'The failure analysis technique of asking "why?" repeatedly (typically five times) to drill down from symptoms to the fundamental root cause is called the ___ Whys method.',
-          acceptedAnswers: ['5', 'five', 'Five', '5 Whys'],
+          question: 'The failure analysis technique of asking "why?" repeatedly (typically five times) to drill down from symptoms to the fundamental root cause is called the _____ Whys method.',
+          blanks: ['5'],
+          wordBank: ['5', '3', '7', '10', '8'],
           explanation: 'The 5 Whys method (developed by Sakichi Toyoda, used at Toyota) involves asking "Why?" iteratively to peel back layers of symptoms and reach the true root cause. Example: Bearing failed -> Why? Insufficient lubrication -> Why? Grease port blocked -> Why? No preventive maintenance schedule -> Why? No PM program for auxiliary equipment -> Root cause: gap in maintenance management system. The "5" is a guideline, not a rule — some problems need 3 iterations, others 7.',
           hint: 'This Toyota-originated method uses repeated questioning to find the root cause.'
         },
@@ -560,7 +564,8 @@ export const unit10: Unit = {
           id: 'u10-L2-Q13',
           type: 'fill-blank',
           question: 'The type of corrosion that occurs in narrow gaps or under deposits where oxygen is depleted, creating a differential aeration cell, is called _____ corrosion.',
-          acceptedAnswers: ['crevice', 'Crevice'],
+          blanks: ['crevice'],
+          wordBank: ['crevice', 'pitting', 'galvanic', 'stress', 'intergranular'],
           explanation: 'Crevice corrosion occurs in confined spaces (under gaskets, lap joints, bolt heads, biofilm deposits) where stagnant solution depletes dissolved oxygen. The crevice becomes anodic (corrodes), while the freely exposed surface acts as the cathode. It is particularly aggressive in stainless steels because the passive film cannot reform without oxygen. Prevention: eliminate crevices in design (use butt welds instead of lap joints), use sealants, select more crevice-resistant alloys (higher Mo content, e.g., 316 vs. 304), or apply cathodic protection.',
           hint: 'This corrosion occurs in tight gaps where oxygen cannot reach, such as under gaskets or bolt heads.'
         },
@@ -655,9 +660,10 @@ export const unit10: Unit = {
         {
           id: 'u10-L2-Q21',
           type: 'fill-blank',
-          question: 'The failure analysis tool that systematically evaluates each potential failure mode in a design by rating its Severity, Occurrence, and Detection is called a _____ (abbreviated FMEA).',
-          acceptedAnswers: ['Failure Mode and Effects Analysis', 'Failure Modes and Effects Analysis', 'failure mode and effects analysis', 'failure modes and effects analysis', 'FMEA'],
-          explanation: 'FMEA is a proactive risk assessment tool that identifies potential failure modes, assesses their impact (Severity), likelihood (Occurrence), and ability to be caught before reaching the customer (Detection). The traditional Risk Priority Number (RPN = S*O*D) has been supplemented by the AIAG-VDA Action Priority (AP) approach. DFMEA (Design) and PFMEA (Process) address different lifecycle stages. FMEA should be a living document updated throughout the product lifecycle.',
+          question: 'The failure analysis tool that systematically evaluates each potential failure mode in a design by rating its _____, Occurrence, and _____ is called FMEA.',
+          blanks: ['Severity', 'Detection'],
+          wordBank: ['Severity', 'Detection', 'Frequency', 'Duration', 'Probability', 'Cost'],
+          explanation: 'FMEA (Failure Mode and Effects Analysis) is a proactive risk assessment tool that identifies potential failure modes, assesses their impact (Severity), likelihood (Occurrence), and ability to be caught before reaching the customer (Detection). The traditional Risk Priority Number (RPN = S*O*D) has been supplemented by the AIAG-VDA Action Priority (AP) approach. DFMEA (Design) and PFMEA (Process) address different lifecycle stages.',
           hint: 'This structured risk assessment tool rates each failure mode on three scales: Severity, Occurrence, Detection.'
         },
         {
@@ -766,7 +772,8 @@ export const unit10: Unit = {
           id: 'u10-L2-Q30',
           type: 'fill-blank',
           question: 'The corrosion mechanism where flowing fluid removes the protective oxide or passive layer faster than it can reform, exposing bare metal to continued attack, is called _____-corrosion.',
-          acceptedAnswers: ['erosion', 'Erosion', 'flow-accelerated', 'Flow-accelerated'],
+          blanks: ['erosion'],
+          wordBank: ['erosion', 'fatigue', 'cavitation', 'abrasion', 'fretting'],
           explanation: 'Erosion-corrosion (also called flow-accelerated corrosion or FAC) occurs when fluid velocity is high enough to mechanically remove protective surface films. It is characterized by smooth, directional wear patterns (grooves, horseshoe-shaped pits) following the flow direction. Common locations: pipe elbows, tees, downstream of valves, and pump impellers. It is particularly aggressive in carbon steel carrying wet steam or high-velocity water at 100-250°C. Prevention: use erosion-resistant materials (stainless steel, chrome-moly steel), reduce velocity, eliminate turbulence sources, or increase chromium content (>1% Cr dramatically reduces FAC).',
           hint: 'This mechanism combines mechanical removal of protective films by fluid flow with chemical attack on the exposed metal.'
         }
@@ -848,8 +855,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L3-Q6',
           type: 'fill-blank',
-          question: 'The material selection charts that plot one material property against another (e.g., strength vs. density), enabling systematic material comparison, are called ___ charts.',
-          acceptedAnswers: ['Ashby', 'ashby', 'Ashby material', 'Cambridge'],
+          question: 'The material selection charts that plot one material property against another (e.g., strength vs. density), enabling systematic material comparison, are called _____ charts.',
+          blanks: ['Ashby'],
+          wordBank: ['Ashby', 'Moody', 'Pareto', 'Pugh', 'Taguchi'],
           explanation: 'Ashby charts (developed by Prof. Mike Ashby at Cambridge University) plot material property pairs on log-log scales, with materials grouped by family (metals, polymers, ceramics, composites). Guideline slopes on these charts represent material indices for specific design objectives. The CES EduPack software implements these charts with a database of thousands of materials.',
           hint: 'Named after the Cambridge professor who developed this systematic approach to material selection.'
         },
@@ -959,9 +967,10 @@ export const unit10: Unit = {
         {
           id: 'u10-L3-Q15',
           type: 'fill-blank',
-          question: 'The manufacturing principle that states "the cost of finding and fixing a defect increases by roughly 10x at each stage of production (design → fabrication → assembly → field)" is known as the Rule of _____.',
-          acceptedAnswers: ['10', 'Ten', 'ten', 'Tens', 'tens', '10s'],
-          explanation: 'The Rule of 10 (or 1-10-100 rule) states that finding and fixing a problem costs 1x during design, 10x during manufacturing, 100x after assembly, and 1000x after delivery to the customer. This is why design reviews, DFM analysis, and FMEA during the design phase provide such high return on investment. A $100 design change to add a fillet or relax a tolerance can prevent a $100,000 field recall. This principle drives the front-loading of engineering effort in modern product development.',
+          question: 'The manufacturing principle that states "the cost of finding and fixing a defect increases by roughly _____ at each stage of production (design → fabrication → assembly → field)" is known as the Rule of _____.',
+          blanks: ['10x', '10'],
+          wordBank: ['10x', '10', '2x', '100', '5x', '50'],
+          explanation: 'The Rule of 10 (or 1-10-100 rule) states that finding and fixing a problem costs 1x during design, 10x during manufacturing, 100x after assembly, and 1000x after delivery to the customer. This is why design reviews, DFM analysis, and FMEA during the design phase provide such high return on investment. A $100 design change can prevent a $100,000 field recall.',
           hint: 'Each stage of production increases the cost of fixing a defect by what multiplication factor?'
         },
         {
@@ -1035,7 +1044,8 @@ export const unit10: Unit = {
           id: 'u10-L3-Q21',
           type: 'fill-blank',
           question: 'The design methodology that minimizes the total number of parts by combining functions into fewer components, reducing assembly time and cost, is called Design for _____ (DFA).',
-          acceptedAnswers: ['Assembly', 'assembly'],
+          blanks: ['Assembly'],
+          wordBank: ['Assembly', 'Manufacturing', 'Reliability', 'Testing', 'Sustainability'],
           explanation: 'Design for Assembly (DFA) is the systematic method of reducing part count and simplifying assembly operations. The Boothroyd-Dewhurst DFA method asks three questions for each part: (1) Does it move relative to adjacent parts? (2) Must it be a different material? (3) Must it be separate for assembly or service? If all answers are "no," the part can potentially be eliminated by combining it with an adjacent part. Successful DFA typically reduces part count by 40-60% and assembly time by 50-70%.',
           hint: 'This design methodology focuses on reducing part count and simplifying the assembly process.'
         },
@@ -1145,7 +1155,8 @@ export const unit10: Unit = {
           id: 'u10-L3-Q30',
           type: 'fill-blank',
           question: 'The design methodology where a cross-functional team systematically reviews a process step-by-step to identify potential failure modes, their effects, and their causes, rating each by severity, occurrence, and detection, is called Process _____ (PFMEA).',
-          acceptedAnswers: ['FMEA', 'Failure Mode and Effects Analysis', 'Failure Modes and Effects Analysis'],
+          blanks: ['FMEA'],
+          wordBank: ['FMEA', 'HAZOP', 'DFMA', 'APQP', 'PPAP'],
           explanation: 'Process FMEA (PFMEA) analyzes manufacturing and assembly processes to identify potential process failures, their effects on the product, and the process controls to detect or prevent them. Unlike Design FMEA (DFMEA) which focuses on design weaknesses, PFMEA focuses on how the manufacturing process can go wrong. Each failure mode is rated on Severity (impact on customer), Occurrence (process capability), and Detection (ability of inspection/controls to catch it). PFMEA is required by IATF 16949 for automotive and is standard practice in regulated industries.',
           hint: 'This process-focused risk analysis tool is the manufacturing counterpart to Design FMEA.'
         }
@@ -1227,8 +1238,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L4-Q6',
           type: 'fill-blank',
-          question: 'The process of progressively refining the FEA mesh and verifying that results stabilize is called a mesh ___ study.',
-          acceptedAnswers: ['convergence', 'Convergence', 'refinement', 'sensitivity', 'independence'],
+          question: 'The process of progressively refining the FEA mesh and verifying that results stabilize is called a mesh _____ study.',
+          blanks: ['convergence'],
+          wordBank: ['convergence', 'distortion', 'validation', 'calibration', 'optimization'],
           explanation: 'A mesh convergence (or mesh independence/sensitivity) study is a mandatory part of any credible FEA analysis. It demonstrates that the numerical discretization is fine enough to capture the physical behavior accurately. Without it, results could be mesh-dependent artifacts. Best practice: plot the key result vs. element count or characteristic element size, and show asymptotic convergence.',
           hint: 'This study proves that making the mesh finer does not significantly change the answer.'
         },
@@ -1340,7 +1352,8 @@ export const unit10: Unit = {
           id: 'u10-L4-Q15',
           type: 'fill-blank',
           question: 'The FEA technique of using a refined detailed model of a local region, with boundary conditions interpolated from a coarser global model, is called _____.',
-          acceptedAnswers: ['submodeling', 'Submodeling', 'sub-modeling', 'Sub-modeling', 'global-local', 'Global-local'],
+          blanks: ['submodeling'],
+          wordBank: ['submodeling', 'superposition', 'homogenization', 'partitioning', 'condensation'],
           explanation: 'Submodeling (also called global-local analysis or the cut-boundary technique) is a two-step analysis approach. The global model captures overall structural behavior with a coarse mesh. The submodel uses a refined mesh in the region of interest, with displacements from the global model interpolated onto the submodel cut boundaries. This approach provides detailed stress results at a fraction of the computational cost of a uniformly fine global model. It is valid when the submodel boundary is far enough from stress gradients (Saint-Venant\'s principle).',
           hint: 'This technique uses a coarse global model to drive the boundary conditions of a refined local model.'
         },
@@ -1414,7 +1427,8 @@ export const unit10: Unit = {
           id: 'u10-L4-Q21',
           type: 'fill-blank',
           question: 'The von Mises stress criterion used in FEA post-processing is based on the _____ energy theory of failure, which predicts yielding when the distortional energy reaches a critical value.',
-          acceptedAnswers: ['distortion', 'Distortion', 'distortional', 'Distortional', 'shear', 'maximum distortion'],
+          blanks: ['distortion'],
+          wordBank: ['distortion', 'strain', 'potential', 'kinetic', 'fracture'],
           explanation: 'The von Mises (distortion energy) criterion states that yielding occurs when the distortional strain energy per unit volume equals that at yielding in a simple tensile test. The von Mises stress combines all stress components into a single equivalent scalar: sigma_VM = sqrt(0.5*((s1-s2)^2 + (s2-s3)^2 + (s3-s1)^2)). It is the default failure criterion for ductile metals in FEA. For brittle materials, maximum principal stress (Rankine) criterion is more appropriate. For pressure-dependent materials (soil, concrete), Mohr-Coulomb or Drucker-Prager criteria are used.',
           hint: 'Von Mises stress is based on the energy associated with shape change (distortion), not volume change.'
         },
@@ -1510,7 +1524,8 @@ export const unit10: Unit = {
           id: 'u10-L4-Q29',
           type: 'fill-blank',
           question: 'The FEA modeling technique that connects a finely-meshed region to a coarsely-meshed region, allowing mesh density transitions, uses _____ constraints (also called multi-point constraints or MPCs).',
-          acceptedAnswers: ['tie', 'Tie', 'coupling', 'Coupling', 'tied', 'Tied', 'MPC'],
+          blanks: ['tie'],
+          wordBank: ['tie', 'rigid', 'spring', 'contact', 'beam'],
           explanation: 'Tie (coupling) constraints connect dissimilar meshes by enforcing displacement compatibility between the fine and coarse mesh surfaces. The fine-mesh (slave) surface nodes are constrained to follow the coarse-mesh (master) surface via interpolation. This avoids the need for matched node-to-node mesh at the interface and allows local mesh refinement without transition elements. Limitations: slight stress smoothing at the interface, and the coarse side may not capture all deformation from the fine side. Place the tie interface far from stress concentrations for best accuracy.',
           hint: 'These constraints enforce displacement compatibility between non-matching meshes at a surface interface.'
         },
@@ -1606,8 +1621,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L5-Q6',
           type: 'fill-blank',
-          question: 'The engineering practice of evaluating a design to ensure it can be economically manufactured with available processes is called Design for ___ (abbreviated DFM).',
-          acceptedAnswers: ['Manufacturing', 'manufacturing', 'Manufacturability', 'manufacturability', 'Manufacture'],
+          question: 'The engineering practice of evaluating a design to ensure it can be economically manufactured with available processes is called Design for _____ (abbreviated DFM).',
+          blanks: ['Manufacturing'],
+          wordBank: ['Manufacturing', 'Maintenance', 'Mobility', 'Measurement', 'Modularity'],
           explanation: 'Design for Manufacturing (DFM) ensures that part designs are compatible with the intended manufacturing processes at acceptable cost and quality. Key DFM principles: standard tooling sizes, avoiding features requiring special setups, uniform wall thickness for casting/molding, and tolerances no tighter than necessary. DFM is most effective when applied early in design.',
           hint: 'This DFM practice ensures designs can be produced efficiently and economically.'
         },
@@ -1695,9 +1711,10 @@ export const unit10: Unit = {
         {
           id: 'u10-L5-Q13',
           type: 'fill-blank',
-          question: 'The pressure at which a centrifugal pump risks forming vapor bubbles and losing performance due to insufficient suction pressure is related to the _____ (abbreviated NPSH) specification.',
-          acceptedAnswers: ['Net Positive Suction Head', 'net positive suction head', 'NPSH'],
-          explanation: 'Net Positive Suction Head (NPSH) is the difference between the absolute pressure at the pump suction and the vapor pressure of the fluid. NPSH_available (system-dependent) must exceed NPSH_required (pump-dependent) by a margin (typically 0.5-1.0 m or more). When NPSH_A < NPSH_R, the fluid pressure drops below vapor pressure inside the pump, forming vapor bubbles (cavitation). These bubbles collapse violently on the impeller, causing noise, vibration, performance loss, and erosion damage. Increasing NPSH: raise the liquid level above the pump, reduce suction line friction, lower fluid temperature, or pressurize the supply tank.',
+          question: 'The pressure at which a centrifugal pump risks forming vapor bubbles and losing performance due to insufficient _____ pressure is related to the _____ (abbreviated NPSH) specification.',
+          blanks: ['suction', 'Net Positive Suction Head'],
+          wordBank: ['suction', 'Net Positive Suction Head', 'discharge', 'Net Hydraulic Power Rating', 'inlet'],
+          explanation: 'Net Positive Suction Head (NPSH) is the difference between the absolute pressure at the pump suction and the vapor pressure of the fluid. NPSH_available (system-dependent) must exceed NPSH_required (pump-dependent) by a margin. When NPSH_A < NPSH_R, the fluid pressure drops below vapor pressure inside the pump, forming vapor bubbles (cavitation). Increasing NPSH: raise the liquid level above the pump, reduce suction line friction, lower fluid temperature, or pressurize the supply tank.',
           hint: 'This pump specification ensures enough suction pressure to prevent cavitation.'
         },
         {
@@ -1794,7 +1811,8 @@ export const unit10: Unit = {
           id: 'u10-L5-Q21',
           type: 'fill-blank',
           question: 'The concept of building prototypes to test and iterate quickly, accepting that early prototypes will be imperfect, is central to the _____ prototyping philosophy used in modern product development.',
-          acceptedAnswers: ['rapid', 'Rapid', 'iterative', 'Iterative', 'agile', 'Agile'],
+          blanks: ['rapid'],
+          wordBank: ['rapid', 'virtual', 'functional', 'precision', 'sequential'],
           explanation: 'Rapid prototyping (enabled by 3D printing, CNC machining, and laser cutting) allows engineers to quickly build physical models to test form, fit, and function. The philosophy: build a rough prototype quickly, test it, learn from failures, iterate, and repeat. This is faster and cheaper than trying to perfect a design on paper before building. Technologies like FDM, SLA, SLS, and CNC allow prototype turnaround in days rather than weeks. The key principle: "fail fast, fail cheap" — finding problems early with inexpensive prototypes is far better than discovering them in expensive production tooling.',
           hint: 'This prototyping philosophy emphasizes speed and iteration over perfection in early design stages.'
         },
@@ -1906,7 +1924,8 @@ export const unit10: Unit = {
           id: 'u10-L5-Q30',
           type: 'fill-blank',
           question: 'The engineering methodology of identifying the minimum set of tests needed to cover all performance requirements while minimizing test time and cost is called a Design of _____ (DOE) approach.',
-          acceptedAnswers: ['Experiments', 'experiments', 'Experiment'],
+          blanks: ['Experiments'],
+          wordBank: ['Experiments', 'Excellence', 'Elements', 'Evaluations', 'Environments'],
           explanation: 'Design of Experiments (DOE) is a statistical methodology for planning experiments that efficiently identifies the effects of multiple factors on a response variable. Instead of testing one variable at a time (OVAT), DOE varies multiple factors simultaneously in a structured matrix (full factorial, fractional factorial, Taguchi, response surface). Benefits: (1) Fewer tests needed — a 2^4 factorial explores 4 factors in 16 tests, not 4 x (multiple levels) OVAT tests. (2) Identifies factor interactions that OVAT misses. (3) Builds a mathematical response model for optimization. DOE is essential for product and process optimization in manufacturing.',
           hint: 'This statistical methodology uses structured test matrices to efficiently evaluate multiple factors simultaneously.'
         }
@@ -1988,8 +2007,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L6-Q6',
           type: 'fill-blank',
-          question: 'In project scheduling, the longest sequence of dependent tasks that determines the minimum project duration is called the ___ path.',
-          acceptedAnswers: ['critical', 'Critical'],
+          question: 'In project scheduling, the longest sequence of dependent tasks that determines the minimum project duration is called the _____ path.',
+          blanks: ['critical'],
+          wordBank: ['critical', 'baseline', 'optimal', 'parallel', 'milestone'],
           explanation: 'The critical path is the longest chain of dependent activities; any delay on a critical-path task directly delays the project. Tasks not on the critical path have float (slack). CPM analysis helps identify which tasks to prioritize and where to allocate resources. In engineering projects, the critical path often runs through long-lead procurement items, qualification testing, or regulatory approvals.',
           hint: 'This scheduling concept identifies which chain of tasks determines the minimum total project duration.'
         },
@@ -2099,8 +2119,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L6-Q15',
           type: 'fill-blank',
-          question: 'The ASME standard that defines the rules for dimensioning and tolerancing on engineering drawings, including geometric controls, datum references, and feature control frames, is ASME Y14.___ (provide the sub-number).',
-          acceptedAnswers: ['5', '5M'],
+          question: 'The ASME standard that defines the rules for dimensioning and tolerancing on engineering drawings, including geometric controls, datum references, and feature control frames, is ASME Y14._____ (provide the sub-number).',
+          blanks: ['5'],
+          wordBank: ['5', '1', '8', '34', '100'],
           explanation: 'ASME Y14.5 (current edition 2018) is the US standard for GD&T. It defines 14 geometric characteristic symbols (flatness, straightness, circularity, cylindricity, profile of line/surface, perpendicularity, angularity, parallelism, position, concentricity, symmetry, circular runout, total runout), datum reference frames, material condition modifiers (MMC, LMC, RFS), and the rules governing their application. The ISO equivalent is ISO 1101 and related GPS (Geometrical Product Specifications) standards. Differences exist between ASME and ISO GD&T, particularly in datum establishment and default material condition modifiers.',
           hint: 'This Y14 sub-standard defines geometric dimensioning and tolerancing. What number completes Y14.___?'
         },
@@ -2160,7 +2181,8 @@ export const unit10: Unit = {
           id: 'u10-L6-Q20',
           type: 'fill-blank',
           question: 'The documented procedure that establishes how, when, and by whom engineering drawings and specifications are controlled, revised, and distributed to ensure only current versions are used is called _____ control.',
-          acceptedAnswers: ['document', 'Document', 'configuration', 'Configuration', 'revision', 'Revision'],
+          blanks: ['document'],
+          wordBank: ['document', 'process', 'quality', 'version', 'release'],
           explanation: 'Document control (ISO 9001 Clause 7.5) ensures that: (1) Only current, approved documents are available at points of use. (2) Obsolete documents are removed to prevent unintended use. (3) Changes are reviewed and approved by authorized personnel. (4) Revision history is maintained. (5) External documents (customer drawings, standards) are identified and controlled. In engineering, this includes drawings, specifications, work instructions, inspection procedures, and test plans. Poor document control is one of the most common audit findings and causes of quality escapes — using an old drawing revision in production can produce nonconforming parts.',
           hint: 'This quality system process ensures only current, approved versions of documents are used in production.'
         },
@@ -2217,8 +2239,9 @@ export const unit10: Unit = {
         {
           id: 'u10-L6-Q25',
           type: 'fill-blank',
-          question: 'The standard that specifies requirements for welding procedure qualification, including WPS, PQR, and welder performance qualification, in structural steel applications in the US is AWS D1.___.',
-          acceptedAnswers: ['1', '1 Structural Welding Code'],
+          question: 'The standard that specifies requirements for welding procedure qualification, including WPS, PQR, and welder performance qualification, in structural steel applications in the US is AWS D1._____.',
+          blanks: ['1'],
+          wordBank: ['1', '2', '5', '6', '8'],
           explanation: 'AWS D1.1 (Structural Welding Code — Steel) is the primary US standard for welded steel structures. It requires: (1) Welding Procedure Specification (WPS) — the documented recipe for each weld (process, filler metal, preheat, interpass temperature, position, technique). (2) Procedure Qualification Record (PQR) — test results proving the WPS produces acceptable welds (tensile, bend, macro tests). (3) Welder Performance Qualification (WPQ) — testing that each welder can execute the WPS and produce sound welds. Other AWS D1 codes: D1.2 (aluminum), D1.3 (sheet steel), D1.5 (bridge welding), D1.6 (stainless steel). ASME Section IX covers welding qualification for pressure vessels and piping.',
           hint: 'This AWS standard for structural steel welding is D1 followed by a number. What is the sub-number for steel?'
         },

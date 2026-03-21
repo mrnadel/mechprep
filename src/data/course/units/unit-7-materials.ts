@@ -81,8 +81,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L1-Q6',
           type: 'fill-blank',
-          question: 'A shaft broke unexpectedly in service. The fracture surface shows smooth, curved "beach marks" radiating from an origin point, with a small rough area of final fracture. This pattern is characteristic of ___ failure.',
-          acceptedAnswers: ['fatigue', 'Fatigue', 'fatigue crack', 'cyclic'],
+          question: 'A shaft broke unexpectedly in service. The fracture surface shows smooth, curved "beach marks" radiating from an origin point, with a small rough area of final fracture. This pattern is characteristic of _____ failure.',
+          blanks: ['fatigue'],
+          wordBank: ['fatigue', 'creep', 'corrosion', 'buckling', 'yielding'],
           explanation: 'Beach marks (also called clamshell marks or arrest lines) are the hallmark of fatigue failure. They represent the position of the crack front at different stages of growth, caused by variations in loading or environmental conditions. The crack initiates at a stress concentration (notch, keyway, surface defect), propagates slowly through most of the cross-section (smooth region), and final fracture occurs suddenly when the remaining cross-section can no longer carry the load (rough area). Identifying this pattern is critical in failure analysis — it tells you the failure was caused by cyclic loading, not a single overload event.',
           hint: 'The smooth, progressively spreading region with curved markings and a small rough final fracture zone is a textbook signature of which failure mode?'
                 },
@@ -167,8 +168,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L1-Q13',
           type: 'fill-blank',
-          question: "The Brinell hardness test uses a hardened steel or tungsten carbide ball pressed into the surface under heavy load. The hardness number is calculated from the load divided by the curved surface area of the ___.",
-          acceptedAnswers: ["indentation", "Indentation", "indent", "impression", "Impression"],
+          question: "The Brinell hardness test uses a hardened steel or tungsten carbide ball pressed into the surface under heavy load. The hardness number is calculated from the load divided by the curved surface area of the _____.",
+          blanks: ['indentation'],
+          wordBank: ['indentation', 'specimen', 'penetrator', 'deformation', 'contact'],
           explanation: "Brinell hardness HB = 2P / (πD(D - √(D² - d²))), where P is the applied load, D is the ball diameter, and d is the diameter of the indentation. The denominator represents the curved surface area of the spherical impression. Brinell is excellent for cast irons and forgings because the large indentation averages out microstructural variations.",
           hint: "The Brinell number uses the curved surface area of the mark left by the ball."
         },
@@ -289,9 +291,10 @@ export const unit7: Unit = {
         {
           id: 'u7-L1-Q23',
           type: 'fill-blank',
-          question: "In a tensile test, the 0.2% offset method is used to determine the yield strength of materials that do not exhibit a clear yield point. A line is drawn parallel to the elastic region, offset by ___% strain.",
-          acceptedAnswers: ["0.2", "0.2%"],
-          explanation: "Many materials (aluminum alloys, austenitic stainless steels) transition gradually from elastic to plastic behavior without a distinct yield point. The 0.2% offset method draws a line from 0.2% strain (0.002 mm/mm) parallel to the initial linear portion of the curve. Where this line intersects the curve defines the proof stress.",
+          question: "In a tensile test, the _____ offset method is used to determine the _____ strength of materials that do not exhibit a clear yield point. A line is drawn parallel to the elastic region, offset by a specific strain value.",
+          blanks: ['0.2%', 'yield'],
+          wordBank: ['0.2%', 'yield', '0.5%', 'tensile', 'fracture', '1.0%'],
+          explanation: "Many materials (aluminum alloys, austenitic stainless steels) transition gradually from elastic to plastic behavior without a distinct yield point. The 0.2% offset method draws a line from 0.2% strain (0.002 mm/mm) parallel to the initial linear portion of the curve. Where this line intersects the curve defines the proof stress (yield strength).",
           hint: "This is a standard method defined in ASTM E8 for determining proof stress."
         },
         {
@@ -369,8 +372,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L1-Q30',
           type: 'fill-blank',
-          question: "In fracture mechanics, the critical value of stress intensity factor at which a crack propagates unstably under plane strain conditions is called K___ (the plane-strain fracture toughness).",
-          acceptedAnswers: ["IC", "Ic", "ic", "KIC"],
+          question: "In fracture mechanics, the critical value of stress intensity factor at which a crack propagates unstably under plane strain conditions is called K_____ (the plane-strain fracture toughness).",
+          blanks: ['IC'],
+          wordBank: ['IC', 'IIC', 'max', 'eff', 'th'],
           explanation: "K_IC (plane-strain fracture toughness) is a material property defining the critical stress intensity factor for unstable crack propagation under Mode I (opening) loading in plane strain. It is measured per ASTM E399. Typical values: mild steel ~50 MPa√m, aluminum 7075-T6 ~29 MPa√m, glass ~0.7 MPa√m.",
           hint: "The subscript combines the loading mode (I = opening) and the condition (C = critical)."
         }
@@ -450,8 +454,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L2-Q6',
           type: 'fill-blank',
-          question: 'When tempering a quenched steel at progressively higher temperatures, toughness increases but hardness decreases. However, there is a range around 250-350°C that should be avoided for certain alloy steels because it causes a phenomenon called temper ___.',
-          acceptedAnswers: ['embrittlement', 'Embrittlement', 'brittleness', 'Brittleness'],
+          question: 'When tempering a quenched steel at progressively higher temperatures, toughness increases but hardness decreases. However, there is a range around 250-350°C that should be avoided for certain alloy steels because it causes a phenomenon called temper _____.',
+          blanks: ['embrittlement'],
+          wordBank: ['embrittlement', 'softening', 'recrystallization', 'sensitization', 'spheroidization'],
           explanation: 'Temper embrittlement is a loss of toughness (with no corresponding change in hardness) that occurs when certain steels are tempered in the 250-350°C range (Type I / TME) or slowly cooled through 375-575°C (Type II). It is caused by the segregation of impurity elements (P, Sn, Sb, As) to prior austenite grain boundaries, weakening them. This is a critical practical consideration — heat treaters must either avoid these temperature ranges or cool quickly through them. Adding Mo to steel (e.g., 4140 vs 4130) significantly reduces susceptibility.',
           hint: 'This phenomenon makes the steel less tough despite adequate hardness, and is linked to specific tempering temperature ranges.'
                 },
@@ -536,8 +541,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L2-Q13',
           type: 'fill-blank',
-          question: "In the Fe-C phase diagram, alloys containing more than 2.14 wt% carbon are classified as cast ___, not steels.",
-          acceptedAnswers: ["iron", "Iron", "irons", "Irons"],
+          question: "In the Fe-C phase diagram, alloys containing more than _____ wt% carbon are classified as cast _____, not steels.",
+          blanks: ['2.14', 'iron'],
+          wordBank: ['2.14', 'iron', '0.8', 'steel', '4.3', 'bronze'],
           explanation: "The 2.14 wt% C boundary separates steels (<2.14% C) from cast irons (2.14-6.67% C). This is the maximum carbon solubility in austenite. Cast irons (gray, ductile, white, malleable) contain enough carbon to form a eutectic reaction at 1147°C, producing lower melting temperatures and excellent castability.",
           hint: "The 2.14% carbon boundary separates two major families of ferrous alloys."
         },
@@ -658,8 +664,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L2-Q23',
           type: 'fill-blank',
-          question: "Austempering is an isothermal heat treatment where steel is quenched to a temperature above Ms (typically 250-400°C) and held to form ___, which provides an excellent combination of strength and toughness.",
-          acceptedAnswers: ["bainite", "Bainite", "lower bainite"],
+          question: "Austempering is an isothermal heat treatment where steel is quenched to a temperature above Ms (typically 250-400°C) and held to form _____, which provides an excellent combination of strength and toughness.",
+          blanks: ['bainite'],
+          wordBank: ['bainite', 'martensite', 'pearlite', 'ferrite', 'austenite'],
           explanation: "Austempering involves quenching into a salt bath at 250-400°C and holding until transformation is complete, producing bainite. Compared to conventional quench-and-temper (martensite then tempered), austempering produces less distortion (no volume change from martensite transformation), less residual stress, and often superior toughness at equivalent hardness. It is widely used for ductile iron (ADI — Austempered Ductile Iron), springs, clips, and fasteners.",
           hint: "This microstructure forms isothermally between the pearlite and martensite temperature ranges."
         },
@@ -738,9 +745,10 @@ export const unit7: Unit = {
         {
           id: 'u7-L2-Q30',
           type: 'fill-blank',
-          question: "The iron-carbon phase diagram shows that the eutectic reaction occurs at 4.3 wt% C and 1147°C, where liquid transforms simultaneously into austenite and cementite. This eutectic mixture is called ___.",
-          acceptedAnswers: ["ledeburite", "Ledeburite"],
-          explanation: "Ledeburite is the eutectic mixture of austenite and cementite formed at 4.3% C and 1147°C. Below 727°C, the austenite in ledeburite transforms to pearlite, producing \"transformed ledeburite.\" Ledeburite is characteristic of white cast irons and is very hard and brittle. Understanding this eutectic is important for cast iron metallurgy and for distinguishing white cast iron from gray cast iron (which forms graphite instead of cementite).",
+          question: "The iron-carbon phase diagram shows that the _____ reaction occurs at 4.3 wt% C and 1147°C, where liquid transforms simultaneously into austenite and cementite. This mixture is called _____.",
+          blanks: ['eutectic', 'ledeburite'],
+          wordBank: ['eutectic', 'ledeburite', 'eutectoid', 'pearlite', 'peritectic', 'cementite'],
+          explanation: "Ledeburite is the eutectic mixture of austenite and cementite formed at 4.3% C and 1147°C. The eutectic reaction transforms liquid into two solid phases simultaneously. Below 727°C, the austenite in ledeburite transforms to pearlite, producing \"transformed ledeburite.\" Ledeburite is characteristic of white cast irons and is very hard and brittle.",
           hint: "This eutectic mixture is named after the German city Lederitz, and it is found in white cast iron."
         }
       ]
@@ -819,8 +827,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L3-Q6',
           type: 'fill-blank',
-          question: 'In sand casting design, vertical surfaces on the pattern must have a slight taper (typically 1-3°) to allow the pattern to be withdrawn from the sand mold without damaging the cavity. This taper is called the ___ angle.',
-          acceptedAnswers: ['draft', 'Draft', 'taper', 'Taper', 'draw'],
+          question: 'In sand casting design, vertical surfaces on the pattern must have a slight taper (typically 1-3°) to allow the pattern to be withdrawn from the sand mold without damaging the cavity. This taper is called the _____ angle.',
+          blanks: ['draft'],
+          wordBank: ['draft', 'parting', 'relief', 'clearance', 'rake'],
           explanation: 'Draft angles are essential for pattern withdrawal from the sand mold. Without draft, the pattern would drag against the mold walls during removal, collapsing the cavity. Typical values are 1-3° for external surfaces and 2-5° for internal surfaces (which grip the pattern more tightly). This same principle applies to injection molding and die casting. Designers must account for draft in the part geometry — zero-draft designs require special (and expensive) tooling solutions.',
           hint: 'This taper prevents the mold cavity from being damaged when the pattern is pulled straight up out of the sand.'
                 },
@@ -905,9 +914,10 @@ export const unit7: Unit = {
         {
           id: 'u7-L3-Q13',
           type: 'fill-blank',
-          question: "In the rolling process, the maximum possible reduction per pass is limited by the friction between the rolls and the workpiece. The maximum draft (reduction in thickness) equals μ² × R, where μ is the coefficient of friction and R is the roll ___.",
-          acceptedAnswers: ["radius", "Radius"],
-          explanation: "The bite condition in rolling requires that the horizontal component of friction force exceeds the horizontal component of the normal force, otherwise the rolls cannot pull the workpiece in. This gives maximum draft Δh_max = μ²R. Larger rolls (larger R) and rougher surfaces (larger μ) allow greater reductions per pass. In hot rolling, μ ≈ 0.4-0.5 (oxide layer); in cold rolling, μ ≈ 0.05-0.1 (with lubricant). This is why hot rolling uses rough rolls and cold rolling requires multiple passes with small reductions.",
+          question: "In the rolling process, the maximum possible reduction per pass is limited by the _____ between the rolls and the workpiece. The maximum draft (reduction in thickness) equals μ² × R, where μ is the coefficient of friction and R is the roll _____.",
+          blanks: ['friction', 'radius'],
+          wordBank: ['friction', 'radius', 'pressure', 'diameter', 'speed', 'torque'],
+          explanation: "The bite condition in rolling requires that the horizontal component of friction force exceeds the horizontal component of the normal force, otherwise the rolls cannot pull the workpiece in. This gives maximum draft Δh_max = μ²R. Larger rolls (larger R) and rougher surfaces (larger μ) allow greater reductions per pass. In hot rolling, μ is 0.4-0.5 (oxide layer); in cold rolling, μ is 0.05-0.1 (with lubricant). This is why hot rolling uses rough rolls and cold rolling requires multiple passes with small reductions.",
           hint: "The formula for maximum draft depends on friction coefficient and the size of the rolls."
         },
         {
@@ -1027,8 +1037,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L3-Q23',
           type: 'fill-blank',
-          question: "In metal casting, the total shrinkage has three components: liquid contraction, solidification shrinkage, and solid-state ___.",
-          acceptedAnswers: ["contraction", "Contraction", "shrinkage", "Shrinkage", "cooling contraction"],
+          question: "In metal casting, the total shrinkage has three components: liquid contraction, solidification shrinkage, and solid-state _____.",
+          blanks: ['contraction'],
+          wordBank: ['contraction', 'expansion', 'distortion', 'oxidation', 'porosity'],
           explanation: "Total casting shrinkage occurs in three stages: (1) Liquid contraction — the liquid metal contracts as it cools from pouring temperature to the solidification temperature (compensated by the gating system). (2) Solidification shrinkage — the volume decrease as liquid transforms to solid (most metals shrink 4-7%; compensated by risers). (3) Solid-state contraction — the solid casting contracts as it cools from solidification temperature to room temperature (compensated by pattern allowances, typically 1-2%). Understanding all three is essential for defect-free castings.",
           hint: "After the metal solidifies, it continues to shrink as it cools to room temperature."
         },
@@ -1107,9 +1118,10 @@ export const unit7: Unit = {
         {
           id: 'u7-L3-Q30',
           type: 'fill-blank',
-          question: "In forging, the excess material that squeezes out between the die halves into a thin fin around the parting line is called ___.",
-          acceptedAnswers: ["flash", "Flash", "flashing", "Flashing"],
-          explanation: "Flash is the thin fin of excess metal forced out between the die halves in closed-die (impression-die) forging. The flash land (thin gap between dies) creates high resistance to flow, forcing metal to fill the die cavity completely before escaping. After forging, the flash is trimmed off in a separate trimming die. Flashless (precision) forging eliminates flash by using exactly measured billets and fully enclosed dies, but requires tighter process control. Typical flash thickness is 1.5-4 mm.",
+          question: "In forging, the excess material that squeezes out between the die halves into a thin fin around the _____ line is called _____.",
+          blanks: ['parting', 'flash'],
+          wordBank: ['parting', 'flash', 'shear', 'burr', 'trim', 'draft'],
+          explanation: "Flash is the thin fin of excess metal forced out between the die halves in closed-die (impression-die) forging at the parting line. The flash land (thin gap between dies) creates high resistance to flow, forcing metal to fill the die cavity completely before escaping. After forging, the flash is trimmed off in a separate trimming die. Flashless (precision) forging eliminates flash by using exactly measured billets and fully enclosed dies, but requires tighter process control.",
           hint: "This thin fin of excess material around the parting line must be removed after forging."
         }
       ]
@@ -1188,8 +1200,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L4-Q6',
           type: 'fill-blank',
-          question: 'The theoretical surface roughness in turning is primarily controlled by the feed rate (f) and the tool ___ radius.',
-          acceptedAnswers: ['nose', 'Nose', 'tip', 'Tip', 'corner', 'Corner'],
+          question: 'The theoretical surface roughness in turning is primarily controlled by the feed rate (f) and the tool _____ radius.',
+          blanks: ['nose'],
+          wordBank: ['nose', 'flank', 'shank', 'relief', 'rake'],
           explanation: 'The theoretical arithmetic average roughness in turning is approximately Ra ≈ f²/(32 × r), where f is the feed per revolution and r is the tool nose radius. A larger nose radius or smaller feed produces a better finish. This is why finishing passes use small feeds (0.05–0.15 mm/rev) and tools with large nose radii (0.8–1.6 mm). In practice, actual roughness is affected by BUE, vibration, and material properties.',
           hint: 'The formula is Ra ≈ f²/(32r). What is r?'
                 },
@@ -1274,9 +1287,10 @@ export const unit7: Unit = {
         {
           id: 'u7-L4-Q13',
           type: 'fill-blank',
-          question: "In CNC programming, G02 commands the tool to move in a ___ (clockwise/counterclockwise) circular arc.",
-          acceptedAnswers: ["clockwise", "Clockwise", "CW", "cw"],
-          explanation: "G02 = clockwise circular interpolation. G03 = counterclockwise circular interpolation. The direction is defined looking down the Z-axis (from spindle toward workpiece) for milling, or looking from the tailstock toward the spindle for turning. A G02/G03 block requires the endpoint coordinates (X, Y or Z) and either the arc center coordinates (I, J, K as incremental from start point) or the radius (R). Using I, J, K is preferred for arcs greater than 180° because the R format is ambiguous.",
+          question: "In CNC programming, G02 commands the tool to move in a _____ circular arc, while G03 commands a _____ circular arc.",
+          blanks: ['clockwise', 'counterclockwise'],
+          wordBank: ['clockwise', 'counterclockwise', 'linear', 'helical', 'rapid'],
+          explanation: "G02 = clockwise circular interpolation. G03 = counterclockwise circular interpolation. The direction is defined looking down the Z-axis (from spindle toward workpiece) for milling, or looking from the tailstock toward the spindle for turning. A G02/G03 block requires the endpoint coordinates and either the arc center coordinates (I, J, K as incremental from start point) or the radius (R).",
           hint: "G02 and G03 are the two circular interpolation commands. One is CW, the other CCW."
         },
         {
@@ -1396,8 +1410,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L4-Q23',
           type: 'fill-blank',
-          question: "The material removal rate (MRR) in turning is calculated as MRR = V × f × d, where V is cutting speed, f is feed rate (mm/rev), and d is the depth of ___.",
-          acceptedAnswers: ["cut", "Cut", "cutting", "Cutting"],
+          question: "The material removal rate (MRR) in turning is calculated as MRR = V × f × d, where V is cutting speed, f is feed rate (mm/rev), and d is the depth of _____.",
+          blanks: ['cut'],
+          wordBank: ['cut', 'pass', 'bore', 'thread', 'groove'],
           explanation: "MRR = V × f × d (mm³/min) where V = cutting speed (mm/min), f = feed per revolution (mm/rev), d = depth of cut (mm). For unit consistency, V = πDN (mm/min). MRR determines the production rate and, combined with specific cutting energy, determines the required machine power: P = MRR × specific cutting energy (kc). For roughing, maximizing MRR is the primary goal, subject to machine power, tool strength, and workpiece rigidity constraints.",
           hint: "This is the radial engagement of the tool — how deep it cuts into the workpiece."
         },
@@ -1476,8 +1491,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L4-Q30',
           type: 'fill-blank',
-          question: "In CNC turning, the G96 command activates constant ___ speed mode, which automatically adjusts RPM as the diameter changes during facing operations.",
-          acceptedAnswers: ["surface", "Surface", "cutting", "Cutting"],
+          question: "In CNC turning, the G96 command activates constant _____ speed mode, which automatically adjusts RPM as the diameter changes during facing operations.",
+          blanks: ['surface'],
+          wordBank: ['surface', 'spindle', 'feed', 'angular', 'linear'],
           explanation: "G96 S___ activates Constant Surface Speed (CSS) mode, where the controller continuously adjusts RPM to maintain the programmed surface speed (in m/min or ft/min) as the cutting diameter changes. This is essential for facing operations where the tool moves from the outside diameter toward the center. Without CSS (using G97 constant RPM), the surface speed would drop toward center, causing poor finish and BUE. G50 S___ sets a maximum RPM limit to prevent dangerously high speeds at very small diameters.",
           hint: "V = πDN. To keep V constant while D changes, the controller must vary N."
         }
@@ -1557,8 +1573,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L5-Q6',
           type: 'fill-blank',
-          question: 'In injection molding, uneven wall thickness causes one side to cool and shrink faster than the other, pulling the part surface inward and creating a cosmetic defect called a ___ mark.',
-          acceptedAnswers: ['sink', 'Sink', 'shrink', 'Shrink'],
+          question: 'In injection molding, uneven wall thickness causes one side to cool and shrink faster than the other, pulling the part surface inward and creating a cosmetic defect called a _____ mark.',
+          blanks: ['sink'],
+          wordBank: ['sink', 'weld', 'flow', 'burn', 'knit'],
           explanation: 'Sink marks are depressions on the surface of injection-molded parts caused by differential shrinkage. Thick sections cool more slowly than thin sections, and as the interior solidifies and shrinks, it pulls the already-solidified outer skin inward. They are especially common opposite ribs and bosses. Design rules to prevent sink marks: keep wall thickness uniform, limit rib thickness to 50-60% of the adjacent wall, and core out thick sections. If thick sections are unavoidable, gas-assist injection molding can hollow out the interior to prevent sinking.',
           hint: 'This common injection molding defect appears as a depression on the surface, typically opposite thick features like ribs or bosses.'
                 },
@@ -1643,8 +1660,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L5-Q13',
           type: 'fill-blank',
-          question: "In injection molding, the point where molten plastic enters the mold cavity is called the ___.",
-          acceptedAnswers: ["gate", "Gate"],
+          question: "In injection molding, the point where molten plastic enters the mold cavity is called the _____.",
+          blanks: ['gate'],
+          wordBank: ['gate', 'sprue', 'runner', 'nozzle', 'vent'],
           explanation: "The gate is the small opening connecting the runner to the mold cavity. Gate types include: edge gate (simple, at parting line), submarine/tunnel gate (auto-degating below parting line), pin-point gate (3-plate molds), fan gate (wide, uniform flow for flat parts), and hot-tip/valve gate (hot runner, no cold runner waste). Gate location affects filling pattern, weld line positions, cosmetics (gate vestige), and packing pressure. The gate should be placed at the thickest section to enable proper packing and minimize shrinkage.",
           hint: "This is the entry point for plastic into the cavity — it controls the flow into the part."
         },
@@ -1765,9 +1783,10 @@ export const unit7: Unit = {
         {
           id: 'u7-L5-Q23',
           type: 'fill-blank',
-          question: "In injection molding, the cosmetic defect that appears as thin, dark, meandering lines on the part surface — caused by trapped gases burning at the end of fill — is called a ___ mark.",
-          acceptedAnswers: ["burn", "Burn", "gas burn", "Gas burn", "diesel"],
-          explanation: "Burn marks (also called gas burns or dieseling) occur when air or gas trapped in the mold cavity is compressed by the advancing melt front. If the gas cannot escape through vents or the parting line, it heats up adiabatically (diesel effect) and burns the plastic, leaving brown/black marks. Solutions: add or clean mold vents at the last-to-fill locations, reduce injection speed (less gas compression), lower melt temperature, or redesign the gate location to change the flow pattern so air vents more effectively.",
+          question: "In injection molding, the cosmetic defect that appears as thin, dark, meandering lines on the part surface — caused by trapped gases _____ at the end of fill — is called a _____ mark.",
+          blanks: ['burning', 'burn'],
+          wordBank: ['burning', 'burn', 'escaping', 'sink', 'compressing', 'weld'],
+          explanation: "Burn marks (also called gas burns or dieseling) occur when air or gas trapped in the mold cavity is compressed by the advancing melt front. If the gas cannot escape through vents or the parting line, it heats up adiabatically (diesel effect) and burns the plastic, leaving brown/black marks. Solutions: add or clean mold vents at the last-to-fill locations, reduce injection speed, lower melt temperature, or redesign the gate location to change the flow pattern.",
           hint: "Trapped gas compresses and heats up (like a diesel engine) and burns the plastic at the end of fill."
         },
         {
@@ -1845,8 +1864,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L5-Q30',
           type: 'fill-blank',
-          question: "In sheet metal fabrication, the process of cutting a flat pattern from a sheet using a punch and die set is called ___ (also known as stamping or die cutting).",
-          acceptedAnswers: ["blanking", "Blanking", "punching", "Punching"],
+          question: "In sheet metal fabrication, the process of cutting a flat pattern from a sheet using a punch and die set is called _____ (also known as stamping or die cutting).",
+          blanks: ['blanking'],
+          wordBank: ['blanking', 'shearing', 'notching', 'piercing', 'trimming'],
           explanation: "Blanking is a shearing process where the desired shape (the blank) is cut from the sheet — the blank is the product and the remaining sheet is scrap. In contrast, punching (piercing) removes material to create holes — the removed piece is scrap. Both use the same principle (punch pushes material through a die with controlled clearance), but they differ in which piece is the product. Clearance between punch and die is typically 5-10% of sheet thickness per side. Proper clearance produces clean cuts; excessive clearance causes burrs and rough edges.",
           hint: "This shearing operation produces a flat part (the \"blank\") cut out of sheet metal."
         }
@@ -1926,9 +1946,10 @@ export const unit7: Unit = {
         {
           id: 'u7-L6-Q6',
           type: 'fill-blank',
-          question: 'You need to join an aluminum bracket to a steel frame. Fusion welding is not feasible because of brittle intermetallic compounds forming at the interface. The most practical mechanical joining method for this dissimilar-metal joint in a production environment is ___ fastening (using bolts or rivets with insulating bushings to prevent galvanic corrosion).',
-          acceptedAnswers: ['mechanical', 'Mechanical', 'bolted', 'Bolted', 'riveted', 'Riveted', 'fastened'],
-          explanation: 'Joining aluminum to steel is a classic dissimilar-metal problem. Fusion welding creates brittle Fe-Al intermetallics that crack easily. Friction stir welding can work but requires specialized equipment. Adhesive bonding is an option but has peel strength concerns. In practice, mechanical fastening (bolts, rivets, or clinching) is most common because it is well-understood, inspectable, and allows for thermal expansion differences. The critical consideration is galvanic corrosion — aluminum (anodic) will corrode preferentially when in contact with steel (cathodic) in the presence of an electrolyte. Insulating bushings, coatings, or sealants must separate the metals. Stainless steel fasteners in aluminum require the same galvanic isolation.',
+          question: 'You need to join an aluminum bracket to a steel frame. Fusion welding is not feasible because of brittle _____ compounds forming at the interface. The most practical joining method for this dissimilar-metal joint is _____ fastening (using bolts or rivets with insulating bushings to prevent galvanic corrosion).',
+          blanks: ['intermetallic', 'mechanical'],
+          wordBank: ['intermetallic', 'mechanical', 'eutectic', 'adhesive', 'galvanic', 'thermal'],
+          explanation: 'Joining aluminum to steel is a classic dissimilar-metal problem. Fusion welding creates brittle Fe-Al intermetallic compounds that crack easily. In practice, mechanical fastening (bolts, rivets, or clinching) is most common because it is well-understood, inspectable, and allows for thermal expansion differences. The critical consideration is galvanic corrosion — aluminum (anodic) will corrode preferentially when in contact with steel (cathodic) in the presence of an electrolyte. Insulating bushings, coatings, or sealants must separate the metals.',
           hint: 'Fusion welding creates brittle intermetallics. What is the most straightforward alternative joining method for production, keeping galvanic corrosion in mind?'
                 },
         {
@@ -2012,8 +2033,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L6-Q13',
           type: 'fill-blank',
-          question: "In arc welding, the measure of energy input per unit length of weld is called heat ___, typically expressed in kJ/mm.",
-          acceptedAnswers: ["input", "Input"],
+          question: "In arc welding, the measure of energy input per unit length of weld is called heat _____, typically expressed in kJ/mm.",
+          blanks: ['input'],
+          wordBank: ['input', 'flux', 'transfer', 'output', 'dissipation'],
           explanation: "Heat input HI = (V × I × 60) / (S × 1000) in kJ/mm, where V = arc voltage, I = welding current, and S = travel speed (mm/min). Heat input controls: HAZ width, cooling rate (and thus microstructure), residual stress, and distortion. Too low → incomplete fusion, fast cooling, hard HAZ. Too high → wide HAZ, coarse grain, slow cooling (soft but low-toughness), excessive distortion. Welding procedure specifications (WPS) define acceptable heat input ranges. Most structural codes limit maximum heat input for toughness-sensitive applications.",
           hint: "This welding parameter is calculated from voltage, current, and travel speed — expressed in energy per length units."
         },
@@ -2134,9 +2156,10 @@ export const unit7: Unit = {
         {
           id: 'u7-L6-Q23',
           type: 'fill-blank',
-          question: "The effective load-carrying dimension of a fillet weld is the ___ of the weld, equal to 0.707 times the leg size for an equal-leg fillet.",
-          acceptedAnswers: ["throat", "Throat", "effective throat"],
-          explanation: "The throat is the shortest distance from the root of the fillet to the face (hypotenuse). For an equal-leg fillet with leg size w, the throat a = w × cos(45°) = 0.707w. All fillet weld strength calculations use the throat dimension, not the leg size: τ = F/(a × L). Some processes (SAW, deep-penetration GMAW) achieve penetration beyond the theoretical throat, and codes may allow credit for this \"effective throat\" increase. The throat must be maintained along the full weld length — insufficient throat reduces capacity proportionally.",
+          question: "The effective load-carrying dimension of a fillet weld is the _____ of the weld, equal to 0.707 times the _____ size for an equal-leg fillet.",
+          blanks: ['throat', 'leg'],
+          wordBank: ['throat', 'leg', 'root', 'face', 'toe', 'bead'],
+          explanation: "The throat is the shortest distance from the root of the fillet to the face (hypotenuse). For an equal-leg fillet with leg size w, the throat a = w × cos(45°) = 0.707w. All fillet weld strength calculations use the throat dimension, not the leg size: τ = F/(a × L). The throat must be maintained along the full weld length — insufficient throat reduces capacity proportionally.",
           hint: "In the triangular cross-section of a fillet weld, the shortest distance from root to face is the critical load-carrying dimension."
         },
         {
@@ -2214,8 +2237,9 @@ export const unit7: Unit = {
         {
           id: 'u7-L6-Q30',
           type: 'fill-blank',
-          question: "When a fillet weld is loaded in shear parallel to the weld axis (longitudinal loading), the failure plane passes through the weld ___, which is the minimum cross-sectional dimension of the weld.",
-          acceptedAnswers: ["throat", "Throat"],
+          question: "When a fillet weld is loaded in shear parallel to the weld axis (longitudinal loading), the failure plane passes through the weld _____, which is the minimum cross-sectional dimension of the weld.",
+          blanks: ['throat'],
+          wordBank: ['throat', 'root', 'toe', 'face', 'leg'],
           explanation: "Under any loading direction, fillet weld failure occurs through the throat — the weakest cross-section. For longitudinal shear (load parallel to weld axis), the shear stress τ = F/(a × L) where a = throat = 0.707 × leg for equal-leg fillets, and L = weld length. AWS D1.1 allows fillet welds to be designed for shear on the effective throat regardless of the direction of loading, using the weld metal shear strength (0.6 × FEXX for LRFD, 0.3 × FEXX for ASD). This simplification works because the throat is always the controlling dimension.",
           hint: "The minimum dimension through a fillet weld cross-section is the critical plane for failure."
         }
