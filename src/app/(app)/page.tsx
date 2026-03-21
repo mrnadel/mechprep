@@ -7,9 +7,7 @@ import { CourseMap } from '@/components/course/CourseMap';
 import { LessonView } from '@/components/lesson/LessonView';
 import { ResultScreen } from '@/components/lesson/ResultScreen';
 import { LandingPage } from '@/components/landing/LandingPage';
-import { QuestBoard } from '@/components/engagement/QuestBoard';
-import { NudgeCards } from '@/components/engagement/NudgeCards';
-import { LeagueCard } from '@/components/engagement/LeagueCard';
+import { EngagementBar } from '@/components/engagement/EngagementBar';
 import { WelcomeBack } from '@/components/engagement/WelcomeBack';
 import { LeaguePromotion } from '@/components/engagement/LeaguePromotion';
 import { StreakFreeze } from '@/components/engagement/StreakFreeze';
@@ -30,7 +28,6 @@ export default function HomePage() {
   const [shownMilestone, setShownMilestone] = useState<number | null>(null);
 
   const unclaimedMilestone = useMemo(() => {
-    // Find the highest milestone the user has crossed but hasn't been shown yet
     for (let i = streakMilestones.length - 1; i >= 0; i--) {
       const m = streakMilestones[i];
       if (currentStreak >= m.days && !milestonesReached.includes(m.days)) {
@@ -48,9 +45,7 @@ export default function HomePage() {
 
   const handleMilestoneClose = () => {
     if (unclaimedMilestone) {
-      // Award milestone gems
       addGems(unclaimedMilestone.gems, `streak_milestone_${unclaimedMilestone.days}`);
-      // Mark milestone as reached
       useEngagementStore.setState((s) => ({
         streak: {
           ...s.streak,
@@ -69,7 +64,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Overlays - only render when needed */}
+      {/* Overlays */}
       <WelcomeBack />
       <LeaguePromotion />
       <StreakFreeze />
@@ -77,21 +72,14 @@ export default function HomePage() {
         <StreakMilestone milestone={unclaimedMilestone} onClose={handleMilestoneClose} />
       )}
 
-      {/* Existing */}
+      {/* Header */}
       <CourseHeader />
 
-      {/* Engagement widgets */}
-      <NudgeCards />
-      <QuestBoard />
+      {/* Quick-nav buttons: Quests · League · Skills */}
+      <EngagementBar />
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
-          <CourseMap />
-        </div>
-        <div>
-          <LeagueCard />
-        </div>
-      </div>
+      {/* Course map */}
+      <CourseMap />
 
       {activeLesson && <LessonView />}
       {lessonResult && <ResultScreen />}

@@ -2,10 +2,9 @@
 
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
-import { LeagueBoard } from '@/components/engagement/LeagueBoard';
-import { LeaguePromotion } from '@/components/engagement/LeaguePromotion';
+import { QuestBoard } from '@/components/engagement/QuestBoard';
 
-export default function LeaguePage() {
+export default function QuestsPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#FAFAFA' }}>
       {/* Header */}
@@ -28,19 +27,18 @@ export default function LeaguePage() {
           </Link>
           <div>
             <h1 style={{ fontSize: 20, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2 }}>
-              League
+              Quests
             </h1>
             <p style={{ fontSize: 12, fontWeight: 600, color: '#AFAFAF', marginTop: 1 }}>
-              Compete with other engineers
+              Complete quests for XP & gems
             </p>
           </div>
         </div>
       </header>
 
-      {/* League content */}
+      {/* Quest Board */}
       <div style={{ padding: '16px 20px 32px' }}>
-        <LeagueBoard />
-        <LeaguePromotion />
+        <QuestBoard />
       </div>
     </div>
   );
