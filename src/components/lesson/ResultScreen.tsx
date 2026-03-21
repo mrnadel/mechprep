@@ -145,10 +145,10 @@ export default function ResultScreen() {
               height: 72,
               borderRadius: 24,
               background: isGolden
-                ? '#FFB300'
+                ? '#CC9400'
                 : accentColor,
               boxShadow: isGolden
-                ? '0 6px 0 #C8860B'
+                ? '0 6px 0 #996E00'
                 : `0 6px 0 ${accentDark}`,
               fontSize: 36,
               marginBottom: 16,
