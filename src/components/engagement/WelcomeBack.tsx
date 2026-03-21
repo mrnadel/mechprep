@@ -2,17 +2,22 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useComeback, useStreakEnhancements } from '@/store/useEngagementStore';
+import { useEngagementStore, useComeback, useStreakEnhancements } from '@/store/useEngagementStore';
 import { comebackQuests } from '@/data/quests';
 
 export function WelcomeBack() {
   const comeback = useComeback();
   const streak = useStreakEnhancements();
-  const [dismissed, setDismissed] = useState(false);
   const [showRepair, setShowRepair] = useState(false);
 
+  const dismiss = () => {
+    useEngagementStore.setState((s) => ({
+      comeback: { ...s.comeback, isInComebackFlow: false },
+    }));
+  };
+
   // Only show when in comeback flow and no comeback quests done yet
-  if (!comeback.isInComebackFlow || comeback.comebackQuestsCompleted !== 0 || dismissed) {
+  if (!comeback.isInComebackFlow || comeback.comebackQuestsCompleted !== 0) {
     return null;
   }
 
@@ -105,7 +110,7 @@ export function WelcomeBack() {
 
           {/* Let's Go button */}
           <button
-            onClick={() => setDismissed(true)}
+            onClick={dismiss}
             className="w-full py-3 rounded-xl text-sm font-extrabold text-white transition-opacity"
             style={{ background: '#4F46E5', border: 'none', cursor: 'pointer' }}
           >

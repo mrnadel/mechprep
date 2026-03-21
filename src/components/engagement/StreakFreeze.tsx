@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import {
+  useEngagementStore,
   useStreakEnhancements,
   useGems,
   useEngagementActions,
@@ -17,11 +17,20 @@ export function StreakFreeze() {
   const gems = useGems();
   const { repairStreak } = useEngagementActions();
 
-  const [freezeBannerDismissed, setFreezeBannerDismissed] = useState(false);
-  const [repairModalDismissed, setRepairModalDismissed] = useState(false);
+  const dismissFreezeBanner = () => {
+    useEngagementStore.setState((s) => ({
+      streak: { ...s.streak, freezeUsedToday: false },
+    }));
+  };
+
+  const dismissRepairModal = () => {
+    useEngagementStore.setState((s) => ({
+      streak: { ...s.streak, repairAvailable: false },
+    }));
+  };
 
   // --- Mode 1: Freeze notification banner ---
-  if (streak.freezeUsedToday && !freezeBannerDismissed) {
+  if (streak.freezeUsedToday) {
     return (
       <motion.div
         initial={{ opacity: 0, y: -8 }}
@@ -34,7 +43,7 @@ export function StreakFreeze() {
           🧊 Your streak freeze saved your streak yesterday!
         </span>
         <button
-          onClick={() => setFreezeBannerDismissed(true)}
+          onClick={dismissFreezeBanner}
           className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full transition-colors"
           style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: '#3B82F6' }}
           aria-label="Dismiss"
@@ -46,7 +55,7 @@ export function StreakFreeze() {
   }
 
   // --- Mode 2: Repair modal ---
-  if (streak.repairAvailable && !repairModalDismissed) {
+  if (streak.repairAvailable) {
     const canAfford = gems.balance >= REPAIR_COST;
     const gemsNeeded = REPAIR_COST - gems.balance;
 
@@ -66,7 +75,7 @@ export function StreakFreeze() {
             lastActiveDate: yesterdayStr,
           },
         }));
-        setRepairModalDismissed(true);
+        dismissRepairModal();
       }
     };
 
@@ -135,7 +144,7 @@ export function StreakFreeze() {
 
             {/* Skip button */}
             <button
-              onClick={() => setRepairModalDismissed(true)}
+              onClick={dismissRepairModal}
               className="w-full py-2.5 rounded-xl text-sm font-semibold text-gray-500 transition-colors"
               style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
             >
