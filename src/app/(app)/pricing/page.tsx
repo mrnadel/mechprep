@@ -66,6 +66,7 @@ const FAQ_ITEMS = [
 const tierOrder: SubscriptionTier[] = ['free', 'pro', 'team'];
 
 export default function PricingPage() {
+  const router = useRouter();
   const [billingInterval, setBillingInterval] = useState<'month' | 'year'>('month');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
@@ -109,12 +110,12 @@ export default function PricingPage() {
       {/* Header */}
       <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="flex items-center h-14 px-4">
-          <Link
-            href="/"
+          <button
+            onClick={() => router.back()}
             className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors"
           >
             <ArrowLeft className="w-5 h-5 text-gray-700" />
-          </Link>
+          </button>
           <h1 className="text-lg font-bold text-gray-900 ml-2">Pricing</h1>
         </div>
       </div>

@@ -37,9 +37,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen">
-        <div className="max-w-[480px] mx-auto min-h-screen">
-          {children}
-        </div>
+        {children}
       </div>
     );
   }

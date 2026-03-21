@@ -20,9 +20,6 @@ export default function LessonView() {
   const completeLesson = useCourseStore((s) => s.completeLesson);
   const exitLesson = useCourseStore((s) => s.exitLesson);
 
-  // Mobile back button closes lesson
-  useBackHandler(!!activeLesson && !lessonResult, exitLesson);
-
   const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [hasSelection, setHasSelection] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
@@ -112,6 +109,9 @@ export default function LessonView() {
     }
     setShowExitConfirm(true);
   }, [activeLesson, exitLesson]);
+
+  // Mobile back button triggers same exit flow (with confirmation if answers exist)
+  useBackHandler(!!activeLesson && !lessonResult, handleExitClick);
 
   const handleConfirmExit = useCallback(() => {
     setShowExitConfirm(false);

@@ -5,6 +5,7 @@ import type { SessionSummary as SessionSummaryType } from '@/store/useStore';
 import { Trophy, Target, Clock, Zap, Star, ArrowRight, Home, RotateCcw } from 'lucide-react';
 import { cn, formatDuration } from '@/lib/utils';
 import { useSessionActions } from '@/store/useStore';
+import { useBackHandler } from '@/hooks/useBackHandler';
 import { achievements } from '@/data/achievements';
 
 interface Props {
@@ -12,7 +13,10 @@ interface Props {
 }
 
 export default function SessionSummary({ summary }: Props) {
-  const { startSession } = useSessionActions();
+  const { startSession, abandonSession } = useSessionActions();
+
+  // Mobile back button dismisses summary and returns to practice page
+  useBackHandler(true, abandonSession);
 
   const getGrade = (accuracy: number) => {
     if (accuracy >= 90) return { label: 'Outstanding', color: 'text-emerald-600', bg: 'bg-emerald-50' };

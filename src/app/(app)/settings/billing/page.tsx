@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ArrowLeft, Check, X, Sparkles, Loader2, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { TIERS, FEATURES, PADDLE_PRICES, type Feature } from '@/lib/pricing';
 import { useSubscription } from '@/hooks/useSubscription';
@@ -24,6 +25,7 @@ const FEATURE_LABELS: Record<Feature, string> = {
 };
 
 export default function BillingSettingsPage() {
+  const router = useRouter();
   const { tier, isProUser, cancelAtPeriodEnd, currentPeriodEnd } = useSubscription();
   const { data: session } = useSession();
   const [checkoutLoading, setCheckoutLoading] = useState(false);
@@ -81,12 +83,12 @@ export default function BillingSettingsPage() {
       {/* Header */}
       <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="flex items-center h-14 px-4">
-          <Link
-            href="/profile"
+          <button
+            onClick={() => router.back()}
             className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors"
           >
             <ArrowLeft className="w-5 h-5 text-gray-700" />
-          </Link>
+          </button>
           <h1 className="text-lg font-bold text-gray-900 ml-2">Billing</h1>
         </div>
       </div>
