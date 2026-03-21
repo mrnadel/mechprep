@@ -199,12 +199,17 @@ export default function LessonView() {
 
       if (!isCurrentAnswered) {
         const key = e.key.toLowerCase();
-        if (key === '1' && questionRef.current?.questionType === 'true-false') {
-          questionRef.current?.selectBool(true);
-        } else if (key === '2' && questionRef.current?.questionType === 'true-false') {
-          questionRef.current?.selectBool(false);
-        } else if (['1', '2', '3', '4'].includes(key)) {
-          questionRef.current?.selectOption(parseInt(key) - 1);
+        const qType = questionRef.current?.questionType;
+
+        if (['1', '2', '3', '4'].includes(key)) {
+          const idx = parseInt(key) - 1;
+          if (qType === 'true-false') {
+            // 1 = True, 2 = False
+            if (idx === 0) questionRef.current?.selectBool(true);
+            else if (idx === 1) questionRef.current?.selectBool(false);
+          } else {
+            questionRef.current?.selectOption(idx);
+          }
         } else if (['a', 'b', 'c', 'd'].includes(key)) {
           questionRef.current?.selectOption(key.charCodeAt(0) - 97);
         } else if (key === 't') {
