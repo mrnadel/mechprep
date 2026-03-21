@@ -119,14 +119,14 @@ export function CourseHeader() {
                 gap: 4,
                 fontWeight: 800,
                 fontSize: 15,
-                color: popover === 'streak' ? '#FF9600' : '#3C3C3C',
+                color: popover === 'streak' ? '#2563EB' : '#3C3C3C',
                 padding: '4px 10px',
                 borderRadius: 12,
-                background: popover === 'streak' ? '#FFF4E0' : 'transparent',
+                background: popover === 'streak' ? '#EFF6FF' : 'transparent',
               }}
               onClick={() => togglePopover('streak')}
             >
-              <span style={{ fontSize: 18 }}>🔥</span>
+              <span style={{ fontSize: 18 }}>⚙️</span>
               <span>{progress.currentStreak}</span>
             </button>
 
@@ -422,14 +422,14 @@ export function CourseHeader() {
                           boxShadow: '0 4px 12px rgba(255,150,0,0.3)',
                         }}
                       >
-                        🔥
+                        ⚙️
                       </div>
                       <div>
                         <h3 style={{ fontSize: 16, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2 }}>
                           Practice Streak
                         </h3>
                         <p style={{ fontSize: 12, fontWeight: 600, color: '#AFAFAF', marginTop: 1 }}>
-                          {progress.currentStreak > 0 ? "You're on fire!" : 'Start your streak today!'}
+                          {progress.currentStreak > 0 ? 'Keep the momentum!' : 'Start your streak today!'}
                         </p>
                       </div>
                     </div>
@@ -510,7 +510,7 @@ export function CourseHeader() {
                                   boxShadow: isActive ? '0 2px 6px rgba(255,150,0,0.3)' : 'none',
                                 }}
                               >
-                                {isActive ? '🔥' : day.label}
+                                {isActive ? '⚙️' : day.label}
                               </div>
                             </div>
                           );
