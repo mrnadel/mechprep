@@ -20,10 +20,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A shaft broke at a keyway location. The fracture surface shows smooth beach marks radiating from the keyway corner, with a small rough final fracture zone. What does this tell you about the failure, and what design change would you recommend?',
           options: [
-            'The shaft was overloaded in a single event. Recommend increasing the shaft diameter to handle higher static loads.',
+            'The shaft was overloaded in a single event. Recommend increasing the shaft diameter to handle higher static loads. This interpretation would lead to incorrect predictions when applied to the specific conditions described here.',
             'Fatigue failure initiated at the stress concentration from the keyway corner. Recommend increasing the keyway fillet radius, using a sled-runner end keyway, or switching to a spline connection to distribute load more evenly.',
-            'The key was too loose, causing the shaft to twist and shear at the keyway. Recommend using a tighter-fitting key with an interference fit.',
-            'Corrosion weakened the shaft at the keyway. Recommend switching to stainless steel or adding a protective coating.'
+            'The key was too loose, causing the shaft to twist and shear at the keyway. Recommend using a tighter-fitting key with an interference fit. This reasoning is valid only for a narrow range of idealized conditions.',
+            'Corrosion weakened the shaft at the keyway. Recommend switching to stainless steel or adding a protective coating. Experimental data from standardized tests consistently shows a different relationship between these variables.'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="40" r="24" fill="#58CC02" opacity="0.08"/> <circle cx="40" cy="40" r="24" stroke="#58CC02" stroke-width="2.5" fill="none"/> <circle cx="40" cy="40" r="18" fill="#58CC02" opacity="0.04"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> <rect x="34" y="16" width="12" height="10" rx="4" fill="#3B8700" opacity="0.35"/> <rect x="35" y="17" width="10" height="8" rx="3" fill="#A5E86C" opacity="0.25"/> <line x1="40" y1="20" x2="40" y2="64" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <line x1="24" y1="40" x2="56" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <circle cx="40" cy="21" r="2" fill="#3B8700" opacity="0.5"/> </g> <circle cx="40" cy="40" r="6" fill="#FAFAFA"/> <circle cx="40" cy="40" r="6" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="40" cy="40" r="3" fill="#3B8700" opacity="0.3"/> <path d="M68,30 Q74,40 68,50" stroke="#A5E86C" stroke-width="1.5" fill="none" opacity="0.25"> <animate attributeName="opacity" values="0.1;0.35;0.1" dur="1.5s" repeatCount="indefinite"/> </path> <polygon points="68,50 71,47 65,47" fill="#A5E86C" opacity="0.25"/> </svg>',
@@ -35,10 +35,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'You are designing a shaft that must transmit 50 kW at 1500 RPM with a combined bending moment. Using the distortion energy theory, the minimum diameter calculates to 38 mm. What practical considerations would make you select a larger standard diameter?',
           options: [
-            'No adjustment needed — 38 mm is the answer from the formula, so use 38 mm',
+            'No adjustment needed — 38 mm is the answer from the formula, so use 38 mm — however, standard engineering analysis methods and field experience both point to a different conclusion',
             'Round up to 40 mm for standard sizing. Additionally, account for keyway stress concentration (adds 25-50% to required size), bearing bore availability, manufacturing tolerances, and potential future load increases.',
-            'Double it to 76 mm — always use a safety factor of 2.0 on calculated shaft diameter',
-            'Only round up to the nearest mm (39 mm) — going larger wastes material and adds weight'
+            'Double it to 76 mm — always use a safety factor of 2.0 on calculated shaft diameter, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'Only round up to the nearest mm (39 mm) — going larger wastes material and adds weight — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="40" r="24" fill="#58CC02" opacity="0.08"/> <circle cx="40" cy="40" r="24" stroke="#58CC02" stroke-width="2.5" fill="none"/> <circle cx="40" cy="40" r="18" fill="#58CC02" opacity="0.04"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> <rect x="34" y="16" width="12" height="10" rx="4" fill="#3B8700" opacity="0.35"/> <rect x="35" y="17" width="10" height="8" rx="3" fill="#A5E86C" opacity="0.25"/> <line x1="40" y1="20" x2="40" y2="64" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <line x1="24" y1="40" x2="56" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <circle cx="40" cy="21" r="2" fill="#3B8700" opacity="0.5"/> </g> <circle cx="40" cy="40" r="6" fill="#FAFAFA"/> <circle cx="40" cy="40" r="6" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="40" cy="40" r="3" fill="#3B8700" opacity="0.3"/> <path d="M68,30 Q74,40 68,50" stroke="#A5E86C" stroke-width="1.5" fill="none" opacity="0.25"> <animate attributeName="opacity" values="0.1;0.35;0.1" dur="1.5s" repeatCount="indefinite"/> </path> <polygon points="68,50 71,47 65,47" fill="#A5E86C" opacity="0.25"/> </svg>',
@@ -58,10 +58,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'In the ASME shaft design code, the shock/fatigue factor for bending (K_b) is always set higher than the factor for torsion (K_t) for the same loading condition. Why is bending treated as more severe than torsion in a rotating shaft?',
           options: [
-            'Bending forces are always larger than torsional forces in real machines',
+            'Bending forces are always larger than torsional forces in real machines — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
             'In a rotating shaft, a fixed bending load creates fully reversed stress (tension-compression each revolution), while torsion from a steady power source creates constant (non-reversed) shear stress',
-            'Bending causes axial deflection that damages bearings, while torsion only causes angular twist that is less harmful',
-            'The bending factor is arbitrary — older codes used equal factors, and modern codes should too'
+            'Bending causes axial deflection that damages bearings, while torsion only causes angular twist that is less harmful — a simplified model that neglects the most significant physical variable',
+            'The bending factor is arbitrary — older codes used equal factors, and modern codes should too, though experimental data shows this correlation breaks down at extreme operating conditions'
           ],
           correctIndex: 1,
           explanation: 'This is a key insight in shaft design. Consider a horizontal shaft with a gear load pushing downward at midspan: the top fiber is in tension and the bottom in compression. As the shaft rotates 180°, those fibers swap — the previously tensioned fiber is now compressed. So a constant (static) bending load creates fully reversed cyclic stress in a rotating shaft, which is the most damaging fatigue condition (R = -1). Torsion from a steady motor, however, produces constant shear stress — not cyclic. That is why K_b = 1.5 even for "no shock" (to account for the fully reversed nature), while K_t = 1.0 for the same condition. If the torque also fluctuates (e.g., reciprocating compressor), K_t increases accordingly.',
@@ -72,10 +72,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A centrifuge operates at 12,000 RPM but its first critical speed is calculated at 8,000 RPM. The operations team is worried about running above the critical speed. Is this design safe, and what must be ensured during operation?',
           options: [
-            'This is unsafe — no shaft should ever operate above its first critical speed. Redesign the shaft to raise the critical speed above 12,000 RPM.',
+            'This is unsafe — no shaft should ever operate above its first critical speed. Redesign the shaft to raise the critical speed above 12,000 RPM. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described.',
             'This is safe in principle — supercritical operation is routine in turbomachinery and centrifuges. The shaft self-centers above the critical speed. However, it must pass through the critical speed quickly during startup/shutdown, and adequate damping must be provided.',
-            'This is only safe if the shaft is perfectly balanced — even 1 gram of imbalance will cause immediate failure at any supercritical speed',
-            'This is safe because the critical speed only matters at exactly 8,000 RPM — at higher speeds the vibration stops entirely on its own'
+            'This is only safe if the shaft is perfectly balanced — even 1 gram of imbalance will cause immediate failure at any supercritical speed — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
+            'This is safe because the critical speed only matters at exactly 8,000 RPM — at higher speeds the vibration stops entirely on its own — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause'
           ],
           correctIndex: 1,
           explanation: 'Supercritical operation (above the first critical speed) is completely routine in many high-speed machines: gas turbines, dental drills, centrifuges, and turbochargers all operate between the first and second critical speeds. At speeds above the critical, the shaft undergoes a phase inversion — the center of mass moves inside the geometric center, and the shaft effectively self-centers. The dangerous moment is passing THROUGH the critical speed during startup and shutdown, where resonance amplifies vibration. Solutions: (1) accelerate quickly through the critical speed range, (2) provide damping (squeeze-film dampers, elastomeric bearing mounts), (3) ensure adequate bearing clearance for the transient vibration, and (4) maintain good balance (though perfect balance is not required). The design should ensure the operating speed is at least 20% above the critical speed to avoid resonance.',
@@ -123,10 +123,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the primary advantage of using an involute spline connection instead of a single key for transmitting torque from a gear to a shaft?',
           options: [
-            'Splines are cheaper to manufacture than keyways',
+            'Splines are cheaper to manufacture than keyways, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
             'Splines distribute torque uniformly around the shaft circumference, eliminating the stress concentration of a single keyway and allowing higher torque capacity for the same shaft size',
-            'Splines allow the gear to slide axially on the shaft, which single keys cannot do',
-            'Splines create a permanent joint that cannot be disassembled, which is more reliable'
+            'Splines allow the gear to slide axially on the shaft, which single keys cannot do, which would require additional verification through destructive testing of representative samples',
+            'Splines create a permanent joint that cannot be disassembled, which is more reliable, provided the test specimen geometry conforms to the requirements specified in the standard'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Outer spline (hub, static) --> <circle cx="40" cy="40" r="26" stroke="#3B8700" stroke-width="2" fill="none" opacity="0.25"/> <!-- Inner spline teeth (static ring showing spline profile) --> <path d="M40,16 L43,18 L43,24 L40,26 L37,24 L37,18 Z" fill="#58CC02" opacity="0.15"/> <path d="M56.5,22.5 L58,25.5 L54.5,30 L51,30 L49.5,27 L53,22.5 Z" fill="#58CC02" opacity="0.15"/> <path d="M64,40 L62,43 L56,43 L54,40 L56,37 L62,37 Z" fill="#58CC02" opacity="0.15"/> <path d="M56.5,57.5 L53,62 L49.5,53 L51,50 L54.5,50 L58,54.5 Z" fill="#58CC02" opacity="0.15"/> <path d="M40,64 L37,62 L37,56 L40,54 L43,56 L43,62 Z" fill="#58CC02" opacity="0.15"/> <path d="M23.5,57.5 L22,54.5 L25.5,50 L29,50 L30.5,53 L27,57.5 Z" fill="#58CC02" opacity="0.15"/> <path d="M16,40 L18,37 L24,37 L26,40 L24,43 L18,43 Z" fill="#58CC02" opacity="0.15"/> <path d="M23.5,22.5 L27,18 L30.5,27 L29,30 L25.5,30 L22,25.5 Z" fill="#58CC02" opacity="0.15"/> <!-- Shaft (rotating inside the spline) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> <circle cx="40" cy="40" r="14" fill="#58CC02" opacity="0.08"/> <circle cx="40" cy="40" r="14" stroke="#58CC02" stroke-width="2" fill="none"/> <line x1="40" y1="26" x2="40" y2="54" stroke="#3B8700" stroke-width="1" opacity="0.15"/> <line x1="26" y1="40" x2="54" y2="40" stroke="#3B8700" stroke-width="1" opacity="0.15"/> </g> <circle cx="40" cy="40" r="4" fill="#3B8700"/> <circle cx="40" cy="40" r="1.5" fill="white" opacity="0.2"/> <text x="40" y="76" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.18" font-style="italic">torque + axial slide</text> </svg>',
@@ -255,10 +255,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the main purpose of a shaft shoulder (step change in diameter)?',
           options: [
-            'To increase the overall strength of the shaft by adding material',
+            'To increase the overall strength of the shaft by adding material — typically a minor contributing factor',
             'To provide an axial locating surface for bearings, gears, and other components, preventing them from sliding along the shaft',
-            'To reduce the weight of the shaft by removing material from non-critical sections',
-            'To increase the critical speed by changing the mass distribution'
+            'To reduce the weight of the shaft by removing material from non-critical sections — only under very specific loading conditions',
+            'To increase the critical speed by changing the mass distribution, which does not account for the microstructural changes occurring at these conditions'
           ],
           correctIndex: 1,
           explanation: 'Shaft shoulders provide a positive axial locating surface for components like bearings and gears. The component is pushed against the shoulder during assembly, providing a precise axial position and resisting axial loads in one direction. The other direction is typically constrained by a retaining ring, locknut, or press fit. While shoulders create stress concentrations, they are essential for reliable component location. Good design practice includes generous fillet radii at the shoulder to minimize stress concentration, and ensuring the shoulder height is adequate to support the component (typically at least the bearing chamfer dimension).',
@@ -269,10 +269,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A shaft deflects 0.8 mm under a gear mounted at midspan. The gear manufacturer specifies a maximum shaft deflection of 0.5 mm at the gear location. What is the most weight-efficient solution?',
           options: [
-            'Increase the shaft diameter uniformly along its entire length',
+            'Increase the shaft diameter uniformly along its entire length, assuming no environmental degradation occurs',
             'Increase the shaft diameter only in the region near the gear, or reduce the bearing span, or add a third support bearing near the gear',
-            'Switch to a higher-strength material (e.g., from AISI 1045 to AISI 4340)',
-            'Reduce the gear module to decrease the tangential force'
+            'Switch to a higher-strength material (e.g., from AISI 1045 to AISI 4340), but the predominant failure mechanism under these conditions is fundamentally different',
+            'Reduce the gear module to decrease the tangential force, assuming uniform property distribution through the thickness without any processing-induced gradients'
           ],
           correctIndex: 1,
           explanation: 'Shaft deflection is a stiffness problem, not a strength problem. Deflection depends on EI (modulus times moment of inertia) and span length. Since E is nearly the same for all steels (~200 GPa), switching to a higher-strength steel does not reduce deflection. The most weight-efficient approaches are: (1) increase diameter locally where deflection is greatest — moment of inertia scales as d^4, so a small increase has large effect, (2) reduce the span between bearings — deflection scales as L^3, making this very effective, (3) add a support bearing near the gear to reduce effective span. Increasing diameter uniformly wastes material in sections that are already stiff enough.',
@@ -329,10 +329,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the effect of a press-fit (interference fit) hub on the fatigue life of a shaft?',
           options: [
-            'It improves fatigue life by adding support material around the shaft',
-            'It has no effect on fatigue life since the hub is a separate component',
+            'It improves fatigue life by adding support material around the shaft — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
+            'It has no effect on fatigue life since the hub is a separate component — however, standard engineering analysis methods and field experience both point to a different conclusion',
             'It reduces fatigue life because fretting corrosion at the interface creates surface damage and acts as a fatigue crack initiator, with an effective Kf of 2 to 5',
-            'It improves fatigue life by creating beneficial compressive residual stresses'
+            'It improves fatigue life by creating beneficial compressive residual stresses, which is valid only when the applied stress remains well below the proportional limit of the material'
           ],
           correctIndex: 2,
           explanation: 'Press-fit hubs are a significant but often overlooked source of fatigue failure in shafts. The interface between the shaft and hub experiences micro-slip under cyclic bending loads, causing fretting corrosion — small oxide particles are generated that act as abrasive agents, damaging the surface and creating micro-cracks. The effective fatigue stress concentration factor for a press-fit can be 2 to 5, which is as severe as or worse than a keyway. Remedies include: (1) shot peening the shaft surface before assembly to introduce compressive residual stress, (2) using a lubricant or anti-fretting compound at the interface, (3) increasing the fillet radius at the edge of the hub, and (4) using a relief groove to move the stress concentration away from the high-bending-stress zone.',
@@ -365,10 +365,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A shaft experiences fully reversed bending (sigma_a = 200 MPa, sigma_m = 0) and steady torsion (tau_a = 0, tau_m = 80 MPa). Using the DE-Goodman criterion, what are the equivalent alternating and mean stresses?',
           options: [
-            'sigma_a\' = 200 MPa, sigma_m\' = 80 MPa',
+            'sigma_a\' = 200 MPa, sigma_m\' = 80 MPa — a secondary effect only',
             'sigma_a\' = 200 MPa, sigma_m\' = 138.6 MPa (= sqrt(3) * 80)',
-            'sigma_a\' = 215 MPa, sigma_m\' = 80 MPa',
-            'sigma_a\' = 280 MPa, sigma_m\' = 0 MPa'
+            'sigma_a\' = 215 MPa, sigma_m\' = 80 MPa, independent of strain rate',
+            'sigma_a\' = 280 MPa, sigma_m\' = 0 MPa, regardless of specimen size'
           ],
           correctIndex: 1,
           explanation: 'The distortion energy (DE) theory converts shear stress to equivalent normal stress by multiplying by sqrt(3). For the DE-Goodman criterion: the equivalent alternating stress sigma_a\' = sqrt(sigma_a^2 + 3*tau_a^2) = sqrt(200^2 + 0) = 200 MPa. The equivalent mean stress sigma_m\' = sqrt(sigma_m^2 + 3*tau_m^2) = sqrt(0 + 3*80^2) = sqrt(19200) = 138.6 MPa. These are then plotted on the Goodman diagram (sigma_a\' vs sigma_m\') to check the safety factor. This approach correctly accounts for the different fatigue effects of alternating bending and steady torsion.',
@@ -412,10 +412,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'When would you choose a deep groove ball bearing over a tapered roller bearing, and vice versa? Consider a conveyor pulley shaft (heavy radial load, minimal axial load, low speed) vs. an electric motor shaft (moderate load, high speed, small axial loads).',
           options: [
-            'Use tapered roller bearings for both — they are superior in every way and the cost difference is negligible',
-            'Use deep groove ball bearings for both — their lower friction makes them universally preferred',
+            'Use tapered roller bearings for both — they are superior in every way and the cost difference is negligible, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'Use deep groove ball bearings for both — their lower friction makes them universally preferred, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
             'Conveyor pulley: tapered roller (handles heavy radial loads, accommodates mounting misalignment). Motor shaft: deep groove ball (lower friction at high speed, handles the moderate radial + small axial load in a single bearing, simpler mounting).',
-            'The choice depends only on the catalog life calculation — whichever bearing gives longer L10 life at the required size is correct'
+            'The choice depends only on the catalog life calculation — whichever bearing gives longer L10 life at the required size is correct, though experimental data shows this correlation breaks down at extreme operating conditions'
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Outer race --> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.05"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="3" fill="none" opacity="0.3"/> <!-- Outer raceway groove (where balls contact) --> <circle cx="40" cy="40" r="23.5" stroke="#A5E86C" stroke-width="3" fill="none" opacity="0.06"/> <!-- Inner race --> <circle cx="40" cy="40" r="12.5" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="12.5" stroke="#3B8700" stroke-width="3" fill="none"/> <!-- Inner raceway groove --> <circle cx="40" cy="40" r="13.5" stroke="#A5E86C" stroke-width="2" fill="none" opacity="0.06"/> <!-- Inner race crosshairs (shaft rotation indicator) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <line x1="40" y1="28" x2="40" y2="52" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> <line x1="28" y1="40" x2="52" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> </g> <!-- Shaft bore --> <circle cx="40" cy="40" r="5" fill="#3B8700" opacity="0.25"/> <circle cx="40" cy="40" r="2" fill="white" opacity="0.12"/> <!-- Ball cage + balls (cage speed ≈ half shaft speed) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="4s" repeatCount="indefinite"/> <!-- Cage retainer ring --> <circle cx="40" cy="40" r="18" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="4,10" fill="none" opacity="0.2"/> <!-- Ball 0° --> <circle cx="58" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="56.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 45° --> <circle cx="52.7" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 90° --> <circle cx="40" cy="22" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="22" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="20.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 135° --> <circle cx="27.3" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 180° --> <circle cx="22" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="22" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="20.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 225° --> <circle cx="27.3" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="51.2" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 270° --> <circle cx="40" cy="58" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="58" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="56.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 315° --> <circle cx="52.7" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="51.2" r="1.5" fill="white" opacity="0.3"/> </g> </svg>',
@@ -435,10 +435,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A plain (journal) bearing in a large pump is showing intermittent high temperatures and occasional metal-to-metal contact noise at startup, but runs smoothly at full speed. Using the Stribeck curve concept, explain what is happening and propose a solution.',
           options: [
-            'The bearing clearance is too large, causing the shaft to rattle at all speeds. Solution: replace with a tighter-clearance bearing.',
+            'The bearing clearance is too large, causing the shaft to rattle at all speeds. Solution: replace with a tighter-clearance bearing. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described.',
             'At low startup speeds, the bearing operates in boundary/mixed lubrication (metal contact, high friction) because there is not enough speed to build a full hydrodynamic film. At full speed, the film develops and contact ceases. Solution: install a hydrostatic jacking pump that pressurizes the bearing at startup, or use a bearing material with better boundary lubrication properties.',
-            'The lubricant viscosity is too high, causing overheating at startup when flow is restricted. Solution: switch to a lower-viscosity oil.',
-            'The shaft is misaligned and contacts the bearing only during startup acceleration. Solution: realign the shaft.'
+            'The lubricant viscosity is too high, causing overheating at startup when flow is restricted. Solution: switch to a lower-viscosity oil. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. Under the conditions specified, this explanation addresses only a secondary effect rather than the root cause.',
+            'The shaft is misaligned and contacts the bearing only during startup acceleration. Solution: realign the shaft. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. The governing physical mechanism is well-established in the literature and differs from the explanation given.'
           ],
           correctIndex: 1,
           explanation: 'This is a classic Stribeck curve problem. Hydrodynamic bearings require relative motion between shaft and bearing to drag lubricant into the converging wedge and build pressure. At zero or low speed (startup/shutdown), there is insufficient velocity to generate a full fluid film — the bearing operates in the boundary or mixed lubrication regime where metal-to-metal contact occurs. Solutions: (1) hydrostatic lift (jacking oil) — an external pump pressurizes the bearing oil film before the shaft starts rotating, lifting it off the bearing surface. This is standard practice for large turbomachinery. (2) Use bearing materials with good boundary lubrication properties (Babbitt, which has embedded soft phases that smear under contact). (3) Slow-roll the shaft before applying load. (4) Use a lower-viscosity oil at startup temperature to improve initial film formation — though this is counterintuitive, as the operating temperature viscosity must still be adequate.',
@@ -449,10 +449,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A bearing in a gearbox failed prematurely. Inspection reveals spalling (flaking) on the inner raceway that is concentrated in a narrow band around the circumference. The outer race looks normal. What does this wear pattern tell you about the root cause?',
           options: [
-            'Normal fatigue wear from exceeding L10 life — the bearing simply needs to be replaced with a higher-rated one',
-            'Contaminated lubricant — abrasive particles caused accelerated surface damage on the inner race',
+            'Normal fatigue wear from exceeding L10 life — the bearing simply needs to be replaced with a higher-rated one — which misidentifies the root cause of the observed engineering behavior',
+            'Contaminated lubricant — abrasive particles caused accelerated surface damage on the inner race — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
             'Misalignment — the load is concentrated on a narrow band instead of being distributed across the full raceway width, indicating the shaft or housing is tilted relative to the bearing axis',
-            'Electrical discharge damage (fluting) — stray currents passed through the bearing, arcing across the lubricant film'
+            'Electrical discharge damage (fluting) — stray currents passed through the bearing, arcing across the lubricant film — though this factor is secondary to the actual governing mechanism'
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Outer race --> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.05"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="3" fill="none" opacity="0.3"/> <!-- Outer raceway groove (where balls contact) --> <circle cx="40" cy="40" r="23.5" stroke="#A5E86C" stroke-width="3" fill="none" opacity="0.06"/> <!-- Inner race --> <circle cx="40" cy="40" r="12.5" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="12.5" stroke="#3B8700" stroke-width="3" fill="none"/> <!-- Inner raceway groove --> <circle cx="40" cy="40" r="13.5" stroke="#A5E86C" stroke-width="2" fill="none" opacity="0.06"/> <!-- Inner race crosshairs (shaft rotation indicator) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <line x1="40" y1="28" x2="40" y2="52" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> <line x1="28" y1="40" x2="52" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> </g> <!-- Shaft bore --> <circle cx="40" cy="40" r="5" fill="#3B8700" opacity="0.25"/> <circle cx="40" cy="40" r="2" fill="white" opacity="0.12"/> <!-- Ball cage + balls (cage speed ≈ half shaft speed) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="4s" repeatCount="indefinite"/> <!-- Cage retainer ring --> <circle cx="40" cy="40" r="18" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="4,10" fill="none" opacity="0.2"/> <!-- Ball 0° --> <circle cx="58" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="56.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 45° --> <circle cx="52.7" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 90° --> <circle cx="40" cy="22" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="22" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="20.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 135° --> <circle cx="27.3" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 180° --> <circle cx="22" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="22" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="20.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 225° --> <circle cx="27.3" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="51.2" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 270° --> <circle cx="40" cy="58" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="58" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="56.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 315° --> <circle cx="52.7" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="51.2" r="1.5" fill="white" opacity="0.3"/> </g> </svg>',
@@ -509,10 +509,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A self-aligning ball bearing is installed in a fan unit where the shaft deflects under load. What property of this bearing makes it suitable for this application?',
           options: [
-            'It has a higher load capacity than standard deep groove bearings',
+            'It has a higher load capacity than standard deep groove bearings — this reasoning applies only under idealized conditions not found in service',
             'It can accommodate angular misalignment of 2-3 degrees between the inner and outer races without damage, because the outer raceway is spherical',
-            'It has lower friction than any other bearing type',
-            'It can handle high axial loads in both directions'
+            'It has lower friction than any other bearing type, provided the test specimen geometry conforms to the requirements specified in the standard',
+            'It can handle high axial loads in both directions, but the predominant failure mechanism under these conditions is fundamentally different'
           ],
           correctIndex: 1,
           explanation: 'Self-aligning ball bearings have a spherical (concave) outer raceway that allows the inner ring assembly to tilt 2-3 degrees relative to the outer ring. This accommodates shaft deflection, mounting misalignment, and housing distortion without inducing edge loading or reducing bearing life. They are ideal for applications with long shafts, flexible structures, or split pillow-block housings where perfect alignment is difficult to maintain. The trade-off is lower load capacity than comparably sized deep groove or cylindrical roller bearings, because the spherical outer raceway provides less conformity to the balls than a gothic-arch groove.',
@@ -523,10 +523,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'An angular contact ball bearing has a contact angle of 25 degrees. What is the primary advantage of this design over a standard deep groove ball bearing?',
           options: [
-            'It has lower friction for the same load',
+            'It has lower friction for the same load — however, standard engineering analysis methods and field experience both point to a different conclusion',
             'It can handle higher combined axial and radial loads, because the inclined contact angle directs the load through the balls at an angle that efficiently supports both components',
-            'It is cheaper to manufacture than deep groove bearings',
-            'It does not require any preload and can be installed with clearance'
+            'It is cheaper to manufacture than deep groove bearings, provided the test specimen geometry conforms to the requirements specified in the standard',
+            'It does not require any preload and can be installed with clearance, which does not account for the microstructural changes occurring at these conditions'
           ],
           correctIndex: 1,
           explanation: 'The contact angle (typically 15-40 degrees) allows angular contact bearings to support significant axial loads in one direction alongside radial loads. The higher the contact angle, the greater the axial capacity relative to radial capacity. They are widely used in machine tool spindles, pumps, and gearboxes where combined loading exists. Angular contact bearings must be used in pairs (face-to-face, back-to-back, or tandem) because a single bearing can only handle axial load in one direction. They also require preload to ensure proper ball-race contact, which eliminates internal clearance and increases stiffness — critical for precision applications.',
@@ -574,7 +574,7 @@ export const unit8: Unit = {
           question: 'What is the minimum film thickness parameter (lambda ratio) and what values indicate safe hydrodynamic lubrication?',
           options: [
             'Lambda = h_min/R_a_combined. Lambda > 3 means full-film lubrication with no asperity contact',
-            'Lambda = viscosity/pressure. Lambda > 1 means adequate lubrication',
+            'Lambda = viscosity/pressure. Lambda > 1 means adequate lubrication — which contradicts established test results',
             'Lambda = oil flow rate/bearing clearance. Lambda > 10 means safe operation',
             'Lambda = shaft speed/critical speed. Lambda > 0.5 means safe operation'
           ],
@@ -596,10 +596,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A bearing catalog shows two bearings of the same bore size: 6208 (deep groove ball) with C = 29.5 kN, and NU208 (cylindrical roller) with C = 41 kN. For a purely radial load of 8 kN at 1500 RPM, which bearing gives longer life?',
           options: [
-            '6208 ball bearing because ball bearings always last longer',
+            '6208 ball bearing because ball bearings always last longer, assuming uniform property distribution through the thickness without any processing-induced gradients',
             'NU208 roller bearing: L10 = (41/8)^(10/3) = 218 million rev vs. 6208: L10 = (29.5/8)^3 = 50.1 million rev — the roller bearing lasts over 4 times longer',
-            'Both give the same life because they have the same bore size',
-            '6208 ball bearing: L10 = (29.5/8)^3 = 50.1 million rev vs. NU208: L10 = (41/8)^3 = 134 million rev'
+            'Both give the same life because they have the same bore size — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
+            '6208 ball bearing: L10 = (29.5/8)^3 = 50.1 million rev vs. NU208: L10 = (41/8)^3 = 134 million rev — an incomplete explanation that overlooks the dominant contributing factor'
           ],
           correctIndex: 1,
           explanation: 'The roller bearing has both a higher C rating and a higher life exponent (10/3 vs. 3), giving it a dramatically longer life for purely radial loads. 6208: L10 = (29.5/8)^3 = 3.6875^3 = 50.1 million rev. NU208: L10 = (41/8)^(10/3) = 5.125^3.333 = 218 million rev. The roller bearing life is 4.3 times longer. The key insight is that cylindrical roller bearings excel at pure radial loads because of their line contact (higher C rating per unit size) and the more favorable life exponent. However, the NU type cannot handle axial loads, so if any axial load exists, additional consideration is needed.',
@@ -610,10 +610,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the difference between face-to-face (DF) and back-to-back (DB) arrangements for paired angular contact bearings?',
           options: [
-            'No difference — both arrangements perform identically',
+            'No difference — both arrangements perform identically, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
             'DB (back-to-back) provides a wider effective bearing span and better moment load resistance, while DF (face-to-face) has a narrower effective span but accommodates misalignment better',
-            'DF is used for high-speed applications and DB for low-speed applications',
-            'DB handles only radial loads while DF handles only axial loads'
+            'DF is used for high-speed applications and DB for low-speed applications — this reasoning applies only under idealized conditions not found in service',
+            'DB handles only radial loads while DF handles only axial loads — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms'
           ],
           correctIndex: 1,
           explanation: 'In back-to-back (DB) mounting, the contact lines diverge outward, creating a wider effective bearing span than the physical distance between bearings. This gives better resistance to moment (tilting) loads and greater shaft rigidity. DB is preferred for stiff shafts, machine tool spindles, and applications where moment loads exist. In face-to-face (DF) mounting, the contact lines converge inward, creating a narrower effective span. This makes the arrangement less rigid but more tolerant of misalignment and thermal expansion of the shaft. DF is preferred when alignment is uncertain or thermal growth is expected. Both arrangements handle axial loads in both directions and can be preloaded.',
@@ -633,9 +633,9 @@ export const unit8: Unit = {
           question: 'A hydrodynamic journal bearing operates with a Sommerfeld number of 0.15. Using the Raimondi-Boyd charts, the eccentricity ratio is found to be 0.6. What does an eccentricity ratio of 0.6 mean physically?',
           options: [
             'The shaft center is displaced 60% of the radial clearance from the bearing center, leaving a minimum film thickness equal to 40% of the radial clearance',
-            'The bearing is 60% worn',
-            'The shaft is rotating at 60% of the maximum speed',
-            'The oil fills 60% of the bearing clearance'
+            'The bearing is 60% worn, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'The shaft is rotating at 60% of the maximum speed — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
+            'The oil fills 60% of the bearing clearance — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice'
           ],
           correctIndex: 0,
           explanation: 'The eccentricity ratio epsilon = e/c, where e is the displacement of the shaft center from the bearing center, and c is the radial clearance. Epsilon = 0.6 means the shaft has moved 60% of the clearance toward the bearing wall. The minimum film thickness h_min = c(1 - epsilon) = 0.4c — only 40% of the radial clearance remains at the thinnest point. As epsilon approaches 1.0, the shaft approaches metal-to-metal contact. A typical design target is epsilon = 0.5-0.7, balancing load capacity (higher epsilon = more load capacity) against minimum film thickness safety margin (lower epsilon = more film). The attitude angle (angle from the load line to the minimum film position) decreases as epsilon increases.',
@@ -646,10 +646,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the primary failure mode that determines the L10 life rating of rolling element bearings?',
           options: [
-            'Abrasive wear of the rolling elements',
+            'Abrasive wear of the rolling elements — an oversimplification of the real process',
             'Subsurface-initiated fatigue spalling of the raceways',
-            'Cage failure and roller jamming',
-            'Lubricant breakdown and overheating'
+            'Cage failure and roller jamming, though the effect is secondary in most cases',
+            'Lubricant breakdown and overheating — which contradicts established test results'
           ],
           correctIndex: 1,
           explanation: 'The L10 life formula is based on subsurface-initiated rolling contact fatigue. Cyclic Hertzian contact stress creates a zone of maximum shear stress below the raceway surface (at about 0.5 times the contact half-width). Over millions of stress cycles, fatigue cracks initiate at subsurface inclusions or defects and propagate to the surface, releasing a particle and creating a spall (pit). The L10 = (C/P)^p formula is derived from this fatigue mechanism using Weibull statistics. Other failure modes (wear, contamination, lubrication failure, overload) cause premature failure before reaching the calculated L10 life — these are addressed by the adjusted life factors (a2 for material and a3 for lubrication/contamination) in modern rating life equations.',
@@ -669,10 +669,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What advantage does an oil mist lubrication system provide over conventional oil bath or grease lubrication for high-speed bearings?',
           options: [
-            'Higher load capacity due to thicker oil film',
+            'Higher load capacity due to thicker oil film — which misidentifies the root cause of the observed engineering behavior',
             'Minimal friction and heat generation because only a fine mist reaches the bearing, reducing oil churning losses, plus the air flow provides cooling',
-            'Lower initial cost than grease lubrication',
-            'Eliminates the need for bearing seals entirely'
+            'Lower initial cost than grease lubrication, which does not account for the microstructural changes occurring at these conditions',
+            'Eliminates the need for bearing seals entirely — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here'
           ],
           correctIndex: 1,
           explanation: 'Oil mist lubrication delivers a fine aerosol of oil droplets suspended in air to the bearing. Advantages: (1) minimal oil quantity reduces churning friction and heat at high speeds — critical when ndm values exceed grease limits, (2) the air carrier provides cooling, (3) the slight positive pressure prevents contaminant ingress, (4) continuous fresh oil supply (no degradation like static grease), and (5) centralized system can feed multiple bearings. It is widely used in refineries and chemical plants for process pump bearings. Limitations: environmental concerns about oil mist emissions (requires proper venting/collection), more complex than grease, and the mist may not provide adequate film thickness for heavily loaded bearings.',
@@ -691,10 +691,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A thrust ball bearing (type 51206) is specified for supporting an axial load on a vertical shaft. What is the key design limitation of thrust ball bearings?',
           options: [
-            'They cannot handle any radial load — they are purely axial load bearings and will fail if any radial load is applied',
+            'They cannot handle any radial load — they are purely axial load bearings and will fail if any radial load is applied, based on simplified assumptions about loading',
             'They have a speed limitation due to centrifugal forces on the balls — at high speeds, the balls are pushed outward, causing edge loading and overheating, limiting their use to moderate speeds',
-            'They can only be used in vertical shaft orientations',
-            'They require oil lubrication and cannot use grease'
+            'They can only be used in vertical shaft orientations, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
+            'They require oil lubrication and cannot use grease, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome'
           ],
           correctIndex: 1,
           explanation: 'Thrust ball bearings handle axial loads well but have a significant speed limitation. At higher speeds, centrifugal force pushes the balls outward against the cage, and gyroscopic moments cause the balls to spin unevenly, creating edge loading on the raceways. This generates heat and accelerates wear. The limiting speed for thrust ball bearings is typically 30-50% lower than for a comparable radial bearing. For high-speed thrust applications, angular contact bearings in back-to-back pairs or tilting-pad thrust bearings are preferred. Also, thrust ball bearings handle zero radial load — any radial load must be carried by a separate radial bearing.',
@@ -719,10 +719,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is "false brinelling" in a rolling element bearing, and when does it occur?',
           options: [
-            'Static overloading that creates permanent dents in the raceway — it occurs when the bearing is dropped during installation',
+            'Static overloading that creates permanent dents in the raceway — it occurs when the bearing is dropped during installation, though experimental data shows this correlation breaks down at extreme operating conditions',
             'Wear marks on the raceway caused by small oscillating movements of a stationary bearing under vibration — it occurs in bearings that do not rotate but are subjected to external vibration, such as during transport or in standby equipment',
-            'Corrosion pits that resemble brinell marks — it occurs in humid storage environments',
-            'Fatigue spalling that occurs at the location of maximum Hertzian stress'
+            'Corrosion pits that resemble brinell marks — it occurs in humid storage environments, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
+            'Fatigue spalling that occurs at the location of maximum Hertzian stress, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service'
           ],
           correctIndex: 1,
           explanation: 'False brinelling occurs when a non-rotating bearing is subjected to vibration (e.g., equipment in standby, bearings during transport, or wind-excited idle machinery). The vibration causes small oscillating movements of the rolling elements, wearing away the lubricant film and creating shallow depressions (wear marks) in the raceway at each ball/roller position. These marks resemble true brinelling (static overload dents) but are caused by fretting wear. Prevention: (1) use vibration-isolating mounts during transport, (2) periodically rotate idle equipment shafts, (3) use anti-fretting greases with EP additives, (4) isolate standby equipment from vibrating neighbors.',
@@ -741,10 +741,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What does the "C0" (basic static load rating) of a bearing represent, and when is it the governing design criterion instead of C (dynamic rating)?',
           options: [
-            'C0 is the maximum load a bearing can carry at zero speed — it is never used for rotating bearings',
+            'C0 is the maximum load a bearing can carry at zero speed — it is never used for rotating bearings, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'C0 is the static load that produces a permanent deformation of 0.0001d (0.01% of rolling element diameter) at the most heavily loaded contact. It governs design when the bearing is stationary under load, oscillates through small angles, rotates very slowly (<10 RPM), or experiences shock loads',
-            'C0 is the load at which the bearing seizes due to insufficient clearance',
-            'C0 is the load capacity at 0°C temperature'
+            'C0 is the load at which the bearing seizes due to insufficient clearance, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism, which limits its practical applicability',
+            'C0 is the load capacity at 0°C temperature, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism, provided the boundary conditions are satisfied'
           ],
           correctIndex: 1,
           explanation: 'The basic static load rating C0 is the static load that produces a combined permanent deformation of the rolling element and raceway equal to 0.0001 times the rolling element diameter at the most heavily loaded contact point. This small deformation is considered the threshold above which bearing operation becomes noisy and rough. C0 governs design when: (1) the bearing is stationary under load (e.g., swivel joints, support bearings), (2) slow oscillation without full rotation (<10 RPM), (3) impact or shock loads occur during operation, and (4) the bearing must function as a precise locating element. The safety factor s0 = C0/P0 should be at least 1.0 for normal applications and up to 2.0 or more for shock-loaded or precision applications.',
@@ -788,10 +788,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'Gears in a gearbox are showing pitting on the tooth flanks after 6 months of service. The gears were designed for a 5-year life. What are the possible causes, and how would you investigate?',
           options: [
-            'The gear teeth are too thin — pitting is caused by bending stress exceeding the material strength. Solution: redesign with a larger module.',
+            'The gear teeth are too thin — pitting is caused by bending stress exceeding the material strength. Solution: redesign with a larger module. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. This only applies at low loads.',
             'Pitting is surface contact fatigue caused by Hertzian stress exceeding the surface endurance limit. Investigate: lubricant quality/viscosity, actual vs. design loads, gear alignment (uneven face loading), surface hardness, and whether the gear material/heat treatment matches the contact stress requirements.',
-            'Pitting is caused by abrasive wear from contaminated oil. The only investigation needed is an oil sample analysis — if the oil is clean, the gears are fine.',
-            'Pitting always occurs on new gears during break-in and is not a concern. The pits will smooth out over time as the surfaces conform.'
+            'Pitting is caused by abrasive wear from contaminated oil. The only investigation needed is an oil sample analysis — if the oil is clean, the gears are fine. While this factor does play a role, it is not the primary driver of the behavior described in this scenario.',
+            'Pitting always occurs on new gears during break-in and is not a concern. The pits will smooth out over time as the surfaces conform. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. Standard tests disprove this.'
           ],
           correctIndex: 1,
           explanation: 'Pitting is surface fatigue failure driven by cyclic Hertzian (contact) stress. Subsurface cracks initiate at the depth of maximum shear stress and propagate to the surface, releasing particles and creating pits. Investigation checklist: (1) Check lubricant — wrong viscosity or degraded oil reduces film thickness, increasing metal-to-metal contact stress. (2) Verify actual loading — is the gearbox seeing higher loads than designed for (overloads, shock loads)? (3) Check tooth contact pattern — misalignment concentrates load on one end of the tooth, dramatically increasing local contact stress. (4) Verify surface hardness — case-hardened gears resist pitting better than through-hardened. (5) Initial pitting (micropitting during break-in) is normal and may arrest — but progressive pitting that grows over months indicates a design or application problem. The AGMA contact stress formula (based on Hertz theory) is used to design against pitting, and it depends on load, geometry, alignment, and surface conditions.',
@@ -811,10 +811,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'You are selecting gears for a speed reducer. You can choose between spur gears and helical gears. Both can achieve the required ratio. What are the trade-offs, and when would you prefer each type?',
           options: [
-            'Spur gears are always preferred — they are simpler, cheaper, and have no disadvantages compared to helical gears',
-            'Helical gears are always preferred — they are quieter and stronger in every way, making spur gears obsolete',
+            'Spur gears are always preferred — they are simpler, cheaper, and have no disadvantages compared to helical gears, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
+            'Helical gears are always preferred — they are quieter and stronger in every way, making spur gears obsolete, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'Helical gears: quieter, smoother (gradual tooth engagement), higher load capacity for same size, but they generate axial thrust loads requiring thrust bearings. Spur gears: no axial thrust, simpler bearing arrangements, easier to manufacture, preferred when noise is not critical or axial space is limited.',
-            'The only difference is noise — choose helical for quiet environments and spur for industrial settings. Load capacity is identical.'
+            'The only difference is noise — choose helical for quiet environments and spur for industrial settings. Load capacity is identical. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. Standard tests disprove this.'
           ],
           correctIndex: 2,
           explanation: 'The spur vs. helical decision involves several trade-offs. Helical gears mesh gradually (the contact line sweeps across the tooth face), producing smoother, quieter operation and distributing load over a larger contact area, increasing bending and contact strength for the same module and face width. However, the helix angle creates an axial force component (F_axial = F_tangential × tan(helix angle)) that must be reacted by thrust bearings, adding complexity and cost. Herringbone (double-helical) gears cancel the thrust but are expensive to manufacture. Spur gears engage abruptly (entire tooth face contacts simultaneously), creating more noise and vibration, but generate no axial thrust and are simpler/cheaper to produce. In practice: spur gears dominate in low-speed, open gearing, and cost-sensitive applications; helical gears are standard in enclosed gearboxes where noise, vibration, and compact size matter.',
@@ -848,10 +848,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'Using the Lewis beam strength equation, a spur gear tooth is modeled as a cantilever beam. The bending stress at the root is sigma = Wt / (b * m * Y), where Y is the Lewis form factor. What does the Lewis form factor depend on?',
           options: [
-            'Only the gear material and hardness',
-            'Only the module and face width',
+            'Only the gear material and hardness — a secondary effect only',
+            'Only the module and face width, prior to any post-processing',
             'The number of teeth (which determines the tooth shape/geometry at the root)',
-            'The rotational speed and power transmitted'
+            'The rotational speed and power transmitted, which limits its practical applicability'
           ],
           correctIndex: 2,
           explanation: 'The Lewis form factor Y depends on the number of teeth because the tooth profile geometry changes with tooth count. A gear with fewer teeth has a thinner, more pointed tooth root (undercutting becomes more severe below 17 teeth for 20-degree pressure angle), resulting in a lower Y value and higher bending stress. A gear with more teeth has a wider, stronger root cross-section and higher Y. Standard Y values are tabulated: for 20-degree full-depth teeth, Y ranges from about 0.245 (12 teeth) to 0.485 (rack/infinite teeth). The form factor also depends on the pressure angle — higher pressure angles generally give stronger tooth roots.',
@@ -899,10 +899,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the contact ratio in spur gearing, and why is a value greater than 1.0 essential?',
           options: [
-            'Contact ratio is the ratio of tooth contact area to total tooth surface area. Values above 1.0 mean more than half the tooth is in contact.',
+            'Contact ratio is the ratio of tooth contact area to total tooth surface area. Values above 1.0 mean more than half the tooth is in contact. This explanation confuses cause and effect in the underlying process.',
             'Contact ratio is the ratio of the length of the path of contact to the base pitch. A value above 1.0 ensures that at least one pair of teeth is always in mesh, providing continuous power transmission without gaps.',
-            'Contact ratio is the ratio of the pinion speed to the gear speed. Values above 1.0 mean speed increase rather than reduction.',
-            'Contact ratio is the percentage of the gear face width in contact. Values above 1.0 mean full face contact is maintained.'
+            'Contact ratio is the ratio of the pinion speed to the gear speed. Values above 1.0 mean speed increase rather than reduction. However, this does not apply to the conditions described here.',
+            'Contact ratio is the percentage of the gear face width in contact. Values above 1.0 mean full face contact is maintained. The actual controlling parameter is not captured by this explanation.'
           ],
           correctIndex: 1,
           explanation: 'The contact ratio (CR) equals the length of the arc of action divided by the circular pitch (or equivalently, the length of the path of contact divided by the base pitch). If CR < 1.0, there would be moments when no teeth are in contact, causing loss of power transmission and severe impact. Typical spur gear pairs have CR = 1.2 to 1.8. Higher contact ratios are achieved by: increasing the number of teeth, using a lower pressure angle (20 degrees gives higher CR than 25 degrees), or using a larger addendum. Helical gears add an axial contact ratio (face contact ratio), giving total contact ratios of 2.0 or higher, which is why they run more smoothly.',
@@ -913,10 +913,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What are the three force components acting on a helical gear tooth, and how does the helix angle affect them?',
           options: [
-            'Only tangential and radial — helical gears have no additional forces compared to spur gears',
+            'Only tangential and radial — helical gears have no additional forces compared to spur gears, provided the test specimen geometry conforms to the requirements specified in the standard',
             'Tangential (Wt = 2T/d), radial (Wr = Wt*tan(phi)/cos(psi)), and axial (Wa = Wt*tan(psi)) — the helix angle psi introduces an axial thrust force and modifies the radial force',
-            'Tangential, gravitational, and centrifugal',
-            'Tangential, radial, and frictional'
+            'Tangential, gravitational, and centrifugal, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
+            'Tangential, radial, and frictional, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications'
           ],
           correctIndex: 1,
           explanation: 'Helical gear teeth are inclined at a helix angle psi to the gear axis, creating three force components: (1) Tangential force Wt = 2T/d (same as spur gears, determines power transmission), (2) Radial force Wr = Wt × tan(phi_n)/cos(psi) (directed toward the gear center, modified by the helix angle), (3) Axial (thrust) force Wa = Wt × tan(psi) (along the shaft axis, unique to helical gears). The axial force increases with helix angle — a 20-degree helix creates Wa = 0.364 × Wt. This thrust must be supported by thrust bearings. Higher helix angles give smoother operation and higher load capacity but create larger axial forces. Typical helix angles are 15-30 degrees.',
@@ -937,9 +937,9 @@ export const unit8: Unit = {
           question: 'In the AGMA gear design methodology, the two primary failure modes checked are:',
           options: [
             'Bending fatigue at the tooth root (using the Lewis/AGMA bending stress formula) and surface contact fatigue on the tooth flanks (using the AGMA/Hertzian contact stress formula)',
-            'Tooth shear failure and bearing overload',
-            'Abrasive wear and corrosion',
-            'Thermal distortion and vibration resonance'
+            'Tooth shear failure and bearing overload, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
+            'Abrasive wear and corrosion, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved',
+            'Thermal distortion and vibration resonance, assuming uniform property distribution through the thickness without any processing-induced gradients'
           ],
           correctIndex: 0,
           explanation: 'AGMA gear rating requires checking two independent failure modes: (1) Bending stress at the tooth root — the tooth acts as a cantilever beam, and the maximum tensile stress occurs at the root fillet. If this exceeds the bending fatigue strength, the tooth breaks off (catastrophic failure). AGMA modifies the basic Lewis equation with factors for dynamic load, overload, size, load distribution, and rim thickness. (2) Contact stress on the tooth flanks — Hertzian stress from the rolling/sliding contact causes subsurface fatigue and pitting. AGMA adapts the Hertz contact equation with application, dynamic, size, load distribution, and surface condition factors. Both criteria must be satisfied — the gear must be designed so that neither bending nor contact stress exceeds the allowable limits. Typically, harder materials (case-hardened) are more likely to be contact-stress limited, while softer materials are bending-stress limited.',
@@ -950,9 +950,9 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A worm gear reducer has a worm lead angle of 5 degrees. If the coefficient of friction is 0.08, will the gear set be self-locking?',
           options: [
-            'No — the lead angle must be zero for self-locking',
+            'No — the lead angle must be zero for self-locking — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
             'Yes — self-locking occurs when the lead angle is less than the friction angle. Friction angle = arctan(0.08) = 4.57 degrees. Since 5 degrees > 4.57 degrees, it is NOT self-locking.',
-            'Yes — self-locking always occurs when the lead angle is less than 10 degrees',
+            'Yes — self-locking always occurs when the lead angle is less than 10 degrees, which does not account for the microstructural changes occurring at these conditions',
             'No — the lead angle (5 degrees) is greater than the friction angle (arctan(0.08) = 4.57 degrees), so the gear can back-drive. The worm set is NOT self-locking.'
           ],
           correctIndex: 3,
@@ -987,10 +987,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'When designing gears for a speed reducer, the pinion is typically made harder than the gear. Why?',
           options: [
-            'The pinion costs less to harden because it is smaller',
+            'The pinion costs less to harden because it is smaller — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
             'The pinion makes more contact cycles than the gear (because it rotates faster and has fewer teeth), so it needs higher surface hardness to achieve equal pitting life on both members',
-            'The pinion is always the input gear, and input gears must be harder by code',
-            'Making the pinion harder reduces gear noise'
+            'The pinion is always the input gear, and input gears must be harder by code, but industry experience indicates this factor plays only a minor role in the overall performance',
+            'Making the pinion harder reduces gear noise, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response'
           ],
           correctIndex: 1,
           explanation: 'In a speed reducer, the pinion (smaller gear) rotates faster than the gear (larger gear) by the gear ratio. Each pinion tooth contacts a mating tooth more frequently — a pinion with 20 teeth driving a gear with 80 teeth means each pinion tooth meshes 4 times for every one time each gear tooth meshes. For equal pitting life on both members, the pinion surface must endure more contact cycles, requiring higher hardness. Common practice: case-hardened pinion (58-62 HRC) with a through-hardened gear (300-350 HB). Making the pinion harder also helps with break-in — the harder pinion burnishes the softer gear surface, improving the contact pattern over time.',
@@ -1009,10 +1009,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A gear set is producing excessive noise during operation. Which design modifications can reduce gear noise?',
           options: [
-            'Increase the module (larger teeth) and reduce the face width',
+            'Increase the module (larger teeth) and reduce the face width — which misidentifies the root cause of the observed engineering behavior',
             'Switch from spur to helical gears, increase the contact ratio, improve tooth surface finish, and apply profile modifications (tip relief and root relief)',
-            'Use a lower-viscosity lubricant to reduce churning noise',
-            'Increase the operating speed to move past resonant frequencies'
+            'Use a lower-viscosity lubricant to reduce churning noise — though this factor is secondary to the actual governing mechanism',
+            'Increase the operating speed to move past resonant frequencies — an approximation that loses accuracy outside a narrow parameter range'
           ],
           correctIndex: 1,
           explanation: 'Gear noise is caused by transmission error — the deviation from perfect conjugate (constant velocity ratio) motion. Noise reduction strategies: (1) Helical gears instead of spur — gradual engagement reduces impact excitation. (2) Higher contact ratio — more teeth sharing the load smooths the transmission. (3) Better surface finish — reduces micro-level excitation. (4) Profile modification — tip relief and root relief prevent corner loading at the entry and exit of mesh, which is a primary source of excitation. (5) Accurate manufacturing — reducing pitch errors, runout, and tooth spacing errors. (6) Proper load distribution across the face width — crowning or lead modification prevents edge loading. AGMA quality grades (Q6-Q14) specify manufacturing accuracy levels, with higher grades producing quieter gears.',
@@ -1024,9 +1024,9 @@ export const unit8: Unit = {
           question: 'What is the fundamental difference between a standard gear train and a planetary (epicyclic) gear train in terms of shaft arrangement?',
           options: [
             'Standard gear trains use parallel shafts with external meshing only; planetary gear trains have coaxial (concentric) input and output shafts with both internal and external meshing',
-            'Standard gear trains use larger gears; planetary gear trains use smaller gears',
-            'Standard gear trains can only reduce speed; planetary gear trains can only increase speed',
-            'There is no fundamental difference — they are different names for the same thing'
+            'Standard gear trains use larger gears; planetary gear trains use smaller gears, assuming the material remains in the linear elastic regime throughout the loading cycle',
+            'Standard gear trains can only reduce speed; planetary gear trains can only increase speed — this reasoning applies only under idealized conditions not found in service',
+            'There is no fundamental difference — they are different names for the same thing, assuming uniform property distribution through the thickness without any processing-induced gradients'
           ],
           correctIndex: 0,
           explanation: 'In a standard gear train, each gear rotates on its own fixed axis, and shafts are parallel but offset. In a planetary gear train, the sun gear and ring gear share the same axis (coaxial), and planet gears orbit around this axis while also spinning on their own axes. This coaxial arrangement makes planetary gears compact and allows inline input/output shafts. The internal meshing (planet-to-ring) distributes load across multiple planets (typically 3-5), increasing torque capacity for a given size. Planetary gear sets also offer multiple ratio configurations by fixing different elements: fix ring = speed reduction, fix sun = speed reduction (different ratio), fix carrier = direction reversal.',
@@ -1037,10 +1037,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'The AGMA dynamic factor (Kv) accounts for what effect in gear design?',
           options: [
-            'The effect of material density on gear weight',
+            'The effect of material density on gear weight, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
             'Internal dynamic loads generated by gear tooth errors, profile errors, and elastic deformation during meshing, which increase the effective tooth load above the static transmitted load',
-            'The dynamic viscosity of the lubricant',
-            'The effect of gear inertia during startup and shutdown'
+            'The dynamic viscosity of the lubricant, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
+            'The effect of gear inertia during startup and shutdown — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause'
           ],
           correctIndex: 1,
           explanation: 'The AGMA dynamic factor Kv accounts for the additional loads generated within the gear mesh due to imperfect tooth geometry. As teeth engage and disengage, manufacturing errors (pitch error, profile error, spacing error) and elastic tooth deflections cause deviations from the ideal conjugate motion, creating dynamic forces that add to the static transmitted load. Kv depends on: (1) pitch line velocity — higher speed magnifies dynamic effects, (2) manufacturing accuracy (AGMA quality number) — more precise gears have lower dynamic loads, and (3) gear geometry (module, helix angle). Kv ranges from about 1.05 (very precise, low speed) to 2.0+ (poor quality, high speed). It multiplies the tangential force in both bending and contact stress calculations.',
@@ -1096,10 +1096,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'Profile shift (addendum modification) is applied to gears for several reasons. Which of the following is the PRIMARY reason for applying positive profile shift to a small pinion?',
           options: [
-            'To make the gear cheaper to manufacture',
+            'To make the gear cheaper to manufacture, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
             'To avoid undercutting of the tooth root when the pinion has fewer teeth than the minimum (e.g., fewer than 17 teeth for 20-degree pressure angle), and to strengthen the tooth root',
-            'To increase the gear ratio beyond what the tooth count allows',
-            'To reduce gear noise at high speeds'
+            'To increase the gear ratio beyond what the tooth count allows — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
+            'To reduce gear noise at high speeds — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here'
           ],
           correctIndex: 1,
           explanation: 'Positive profile shift moves the cutting tool outward from the gear blank center, producing a thicker tooth root that avoids undercutting and increases bending strength. This allows using pinions with fewer teeth than the theoretical minimum without undercutting (e.g., 12-14 teeth instead of 17 for 20-degree PA). Additional benefits: (1) balances the bending strength between pinion and gear, (2) adjusts the center distance, (3) improves the specific sliding ratio distribution. Negative profile shift on the mating gear maintains the proper center distance. The sum of profile shift coefficients (x1 + x2) can be zero (standard center distance) or positive (extended center distance). Profile shift does not change the base pitch or velocity ratio.',
@@ -1118,10 +1118,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A gear tooth breaks off at the root after several years of service. The fracture surface shows fatigue beach marks originating from the root fillet on the tension side. What is the AGMA failure mode classification, and what design parameter governs this failure?',
           options: [
-            'Surface durability failure governed by Hertzian contact stress (sigma_H)',
+            'Surface durability failure governed by Hertzian contact stress (sigma_H), which does not account for the microstructural changes occurring at these conditions',
             'Bending fatigue failure governed by the bending stress at the tooth root (sigma_b), which must be below the allowable bending stress (S_at/SF)',
-            'Scoring failure governed by flash temperature',
-            'Wear failure governed by sliding velocity'
+            'Scoring failure governed by flash temperature, provided the test specimen geometry conforms to the requirements specified in the standard',
+            'Wear failure governed by sliding velocity, which does not account for the microstructural changes occurring at these conditions'
           ],
           correctIndex: 1,
           explanation: 'Tooth breakage at the root with fatigue beach marks is classic bending fatigue failure. The tooth root fillet is the critical location because it is the region of maximum bending stress and a geometric stress concentration. AGMA bending stress: sigma_b = Wt × Ko × Kv × Ks × Km × KB / (b × m × J), where J is the geometry factor (similar to Lewis Y but more comprehensive). This stress must satisfy: sigma_b ≤ S_at / (SF × K_T × K_R), where S_at is the allowable bending stress (from material tables), SF is the safety factor, K_T is the temperature factor, and K_R is the reliability factor. Prevention: increase the module (larger teeth), use higher-strength material, improve root fillet geometry, or reduce load.',
@@ -1165,10 +1165,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A technician tightened flanged bolts to the specified torque, but the gasket leaked under pressure. Upon investigation, the bolts were found to have variable preloads (some 30% below target, others 20% above). The torque wrench was calibrated correctly. What is the most likely cause of the preload scatter?',
           options: [
-            'The torque wrench is inaccurate despite calibration — switch to a more expensive digital torque wrench',
+            'The torque wrench is inaccurate despite calibration — switch to a more expensive digital torque wrench, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
             'Friction variation — torque-controlled tightening depends heavily on thread and bearing surface friction (which consumes 80-90% of applied torque), and differences in lubrication, surface finish, or thread condition between bolts caused widely varying preloads at the same torque',
-            'The bolts are different grades — some are 8.8 and others are 10.9, causing different stretch at the same torque',
-            'The flange is warped, preventing the bolts from clamping evenly'
+            'The bolts are different grades — some are 8.8 and others are 10.9, causing different stretch at the same torque, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved',
+            'The flange is warped, preventing the bolts from clamping evenly, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism, which limits its practical applicability'
           ],
           correctIndex: 1,
           explanation: 'This is a fundamental limitation of torque-controlled tightening. Only 10-20% of applied torque actually produces bolt stretch (preload); the remaining 80-90% is consumed by friction under the bolt head (~40%) and in the threads (~40%). The nut factor K in T = K × F × d varies from 0.15 (lubricated) to 0.25+ (dry/rusty), creating ±25-30% preload uncertainty even with a perfectly calibrated wrench. Causes of friction variation: inconsistent lubrication (one bolt oiled, another dry), varying thread condition (plating, rust, damage), debris under the bolt head, and re-used vs. new washers. Solutions for critical joints: (1) consistent lubrication on all fasteners, (2) angle-of-turn method (less friction-sensitive), (3) direct bolt stretch measurement with ultrasonics (±1% accuracy), or (4) tension-indicating washers (DTIs). This is why the specification should say "torque to X with threads lubricated per Y" rather than just "torque to X."',
@@ -1202,10 +1202,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'You need to join an aluminum panel to a steel frame in a vehicle body. Welding is not feasible (dissimilar metals, thin aluminum), and bolting adds weight and creates stress concentrations. You are considering adhesive bonding. What are the key design considerations and limitations?',
           options: [
-            'Adhesive bonding is always inferior to mechanical fastening — it should only be used for non-structural applications',
+            'Adhesive bonding is always inferior to mechanical fastening — it should only be used for non-structural applications, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
             'Design the joint for shear loading (lap joints), maximize bond area, avoid peel loads at edges, add fillets to reduce edge stress, and consider that adhesives degrade with temperature, moisture, and UV — plus they offer no visual indication of bond quality without NDT',
-            'Simply apply adhesive to the mating surfaces and clamp them together — modern structural adhesives are stronger than the base metals in all loading conditions',
-            'Adhesive bonding cannot join dissimilar metals — the different thermal expansion rates will always break the bond during thermal cycling'
+            'Simply apply adhesive to the mating surfaces and clamp them together — modern structural adhesives are stronger than the base metals in all loading conditions — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here',
+            'Adhesive bonding cannot join dissimilar metals — the different thermal expansion rates will always break the bond during thermal cycling — however, standard engineering analysis methods and field experience both point to a different conclusion'
           ],
           correctIndex: 1,
           explanation: 'Adhesive bonding is increasingly used in automotive (reducing weight 30-40% vs. spot welding) and aerospace. Key design rules: (1) Design for shear, not peel — adhesives are strong in shear (20-40 MPa) but very weak in peel (<5 kN/m). Lap joints, scarf joints, and doubled configurations maximize shear area. (2) Surface preparation is critical — degrease, abrade, and prime both surfaces. Aluminum needs chromate conversion or anodizing for durable bonds. (3) Thermal expansion mismatch between aluminum (23 μm/m/°C) and steel (12 μm/m/°C) creates shear stress in the bond during temperature changes — use flexible adhesives or keep bond lengths short to limit the differential strain. (4) Environmental durability — moisture and heat degrade most adhesives over time. Verify long-term performance with accelerated aging tests. (5) Inspection difficulty — adhesive bonds cannot be visually inspected for quality. Ultrasonic or tap testing checks for disbonds but cannot measure bond strength.',
@@ -1239,10 +1239,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'Why are hardened washers (such as SAE grade 8 flat washers) used under bolt heads in structural connections?',
           options: [
-            'They make the joint look more professional',
+            'They make the joint look more professional, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'They distribute the bolt head load over a larger area to prevent embedding into softer materials, provide a consistent friction surface for reliable torque-tension relationship, and protect the joint surface from damage during tightening',
-            'They act as springs to maintain preload during thermal cycling',
-            'They are only used to fill gaps when the bolt is too long'
+            'They act as springs to maintain preload during thermal cycling, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
+            'They are only used to fill gaps when the bolt is too long, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process'
           ],
           correctIndex: 1,
           explanation: 'Hardened washers serve multiple critical functions: (1) Load distribution — they spread the bolt head (or nut) bearing force over a larger area, preventing the fastener from digging into softer materials (aluminum, wood, or even mild steel under high preloads). This is especially important for oversized holes. (2) Consistent friction — a flat, hardened washer surface provides a repeatable bearing surface friction, improving the torque-tension relationship (less preload scatter). Without a washer, the bolt head rotates against the rough, variable joint surface. (3) Surface protection — prevents the bolt head from galling or damaging the joint surface during tightening. (4) For slotted holes, washers prevent the nut from pulling through. In structural steel (AISC/ASTM specifications), hardened washers are required under the turned element (the nut or bolt head that rotates during tightening).',
@@ -1275,10 +1275,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the difference between a slip-critical (friction-type) bolted connection and a bearing-type bolted connection?',
           options: [
-            'They are the same — just different terminology used by different codes',
+            'They are the same — just different terminology used by different codes, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'In slip-critical connections, the load is transferred by friction between the faying surfaces (maintained by bolt preload), and no slip is permitted. In bearing-type connections, the bolts bear against the hole walls to transfer load, and some slip is acceptable.',
-            'Slip-critical uses higher-grade bolts; bearing-type uses standard bolts',
-            'Slip-critical is for static loads; bearing-type is for dynamic loads'
+            'Slip-critical uses higher-grade bolts; bearing-type uses standard bolts, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'Slip-critical is for static loads; bearing-type is for dynamic loads, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism'
           ],
           correctIndex: 1,
           explanation: 'Slip-critical connections rely on the friction between the clamped surfaces (faying surfaces) to transfer the shear load. The bolt preload creates the clamping force, and the product of clamping force times friction coefficient is the slip resistance. These connections are required where: (1) fatigue loading exists (slip would cause fretting), (2) slip would be unacceptable (e.g., connections using oversize or slotted holes), or (3) the connection is subject to load reversal. Surface preparation (clean mill scale or blast-cleaned) is critical to ensure adequate friction. Bearing-type connections are designed so the bolt shank contacts the hole wall — load is transferred by bearing and shear. They are simpler but allow some slip during initial loading and are not suitable for fatigue applications.',
@@ -1289,10 +1289,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the purpose of a gasket factor "m" in the ASME Boiler and Pressure Vessel Code flange design methodology?',
           options: [
-            'It is the gasket material modulus of elasticity',
-            'It is the maintenance factor for how often the gasket should be replaced',
+            'It is the gasket material modulus of elasticity, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'It is the maintenance factor for how often the gasket should be replaced, though this interpretation oversimplifies the actual mechanism involved',
             'It is the ratio of residual gasket stress to internal pressure needed to maintain the seal — higher m values require more bolt load to seal against a given pressure',
-            'It is the maximum allowable gasket compression'
+            'It is the maximum allowable gasket compression, though experimental data shows this correlation breaks down at extreme operating conditions'
           ],
           correctIndex: 2,
           explanation: 'The gasket factor m (from ASME BPVC, Appendix 2) represents the ratio of the gasket stress to the contained pressure needed to maintain a leak-tight seal during operation. For example, m = 2.0 means the gasket must be compressed to at least 2 times the internal pressure to maintain a seal. Higher m values mean the gasket requires more bolt preload. Typical values: rubber with fabric (m = 1.25), compressed fiber (m = 2.5-3.5), spiral-wound metallic (m = 3.0), solid metal flat (m = 5.5-6.5). The companion parameter "y" is the minimum gasket seating stress needed to initially conform the gasket to the flange surface (applied during bolting with no pressure). Both m and y must be satisfied for a proper flange/gasket design.',
@@ -1311,10 +1311,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'The bolt stiffness (k_b) depends on several factors. For a bolt with unthreaded shank length L_s, threaded length in the grip L_t, tensile stress area A_t, and nominal area A_d, what is the equivalent bolt stiffness?',
           options: [
-            'k_b = E*A_d / (L_s + L_t)',
+            'k_b = E*A_d / (L_s + L_t), which does not account for the microstructural changes occurring at these conditions',
             'k_b = 1 / (L_s/(E*A_d) + L_t/(E*A_t)) — the bolt acts as two springs in series: the unthreaded shank and the threaded portion',
-            'k_b = E*(A_d + A_t) / (L_s + L_t)',
-            'k_b = E*A_t / L_t (only the threaded portion matters)'
+            'k_b = E*(A_d + A_t) / (L_s + L_t) — which misidentifies the root cause of the observed engineering behavior',
+            'k_b = E*A_t / L_t (only the threaded portion matters), provided the test specimen geometry conforms to the requirements specified in the standard'
           ],
           correctIndex: 1,
           explanation: 'The bolt is modeled as two springs in series: (1) the unthreaded shank with stiffness k_d = E*A_d/L_s, and (2) the threaded portion within the grip with stiffness k_t = E*A_t/L_t. For springs in series: 1/k_b = 1/k_d + 1/k_t = L_s/(E*A_d) + L_t/(E*A_t). So k_b = E*A_d*A_t / (A_t*L_s + A_d*L_t). The threaded portion is the weaker section (A_t < A_d), so it dominates the bolt compliance. This is why longer bolts with more stretch are actually better for fatigue — a longer, more compliant bolt has a lower stiffness ratio C, and the bolt sees a smaller fraction of the external load fluctuation.',
@@ -1325,10 +1325,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the main advantage of a butt weld over a fillet weld for joining two plates in tension?',
           options: [
-            'Butt welds are cheaper and faster to produce',
+            'Butt welds are cheaper and faster to produce, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
             'A complete joint penetration (CJP) butt weld has the full cross-section of the base metal available to carry load, making it as strong as the base metal. Fillet welds carry load through the reduced throat area at an angle.',
-            'Butt welds do not require any edge preparation',
-            'Butt welds never have residual stresses'
+            'Butt welds do not require any edge preparation, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'Butt welds never have residual stresses, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome'
           ],
           correctIndex: 1,
           explanation: 'A complete joint penetration (CJP) butt weld fuses the full thickness of the base metal, so the weld cross-section equals the base metal cross-section. If properly executed (with correct filler metal and procedure), it is considered 100% joint efficient — as strong as the base metal. Fillet welds, by contrast, carry load through the throat (0.707 × leg size), which is smaller than the connected plate thickness, and the load path is through shear in the weld metal. However, butt welds require edge preparation (V-groove, J-groove, or U-groove), proper fit-up, often backing bars, and inspection (radiography or ultrasonic testing) to verify full penetration. They are specified for critical joints (pressure vessels, fatigue-loaded structures) where full-strength joints are required.',
@@ -1348,10 +1348,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A gasketed flange joint is being designed. The bolt load must satisfy two conditions: the seating condition (with no internal pressure) and the operating condition (with internal pressure). Which condition typically requires more bolt load?',
           options: [
-            'The seating condition always requires more bolt load',
-            'The operating condition always requires more bolt load',
+            'The seating condition always requires more bolt load, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
+            'The operating condition always requires more bolt load, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
             'It depends on the gasket type and internal pressure — soft gaskets (low m, low y) are often governed by operating condition, while hard gaskets (high y) may be governed by seating condition',
-            'Both conditions always require exactly the same bolt load'
+            'Both conditions always require exactly the same bolt load, though this reasoning neglects the dominant physical mechanism that actually controls the behavior'
           ],
           correctIndex: 2,
           explanation: 'The ASME BPVC flange design checks two conditions: (1) Seating condition (W_m2): the bolt load must compress the gasket to its minimum seating stress y over the gasket area. No pressure is present. W_m2 = pi × b × G × y, where b is the effective gasket width and G is the gasket diameter. (2) Operating condition (W_m1): the bolt load must resist the hydrostatic end force from internal pressure AND maintain a residual gasket stress of m × P. W_m1 = H + H_p = (pi/4)*G^2*P + 2*pi*b*G*m*P. For soft gaskets like rubber (low y, low m), the operating condition usually governs. For hard metallic gaskets (high y), the initial seating stress needed to conform the gasket to the flange surface can be very high, making the seating condition govern.',
@@ -1362,10 +1362,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the Junker test, and what does it evaluate?',
           options: [
-            'A test for bolt tensile strength under impact loading',
+            'A test for bolt tensile strength under impact loading, though experimental data shows this correlation breaks down at extreme operating conditions',
             'A vibration test that applies transverse (side-to-side) motion to a bolted joint to evaluate the resistance of different locking methods against self-loosening',
-            'A test for gasket creep under high temperature',
-            'A non-destructive test for weld defects'
+            'A test for gasket creep under high temperature, assuming the material remains in the linear elastic regime throughout the loading cycle',
+            'A non-destructive test for weld defects, assuming uniform property distribution through the thickness without any processing-induced gradients'
           ],
           correctIndex: 1,
           explanation: 'The Junker test (DIN 65151, NAS 3350) applies controlled transverse vibration (perpendicular to the bolt axis) to a bolted joint while monitoring the clamping force over thousands of cycles. This simulates the primary cause of bolt loosening in service — relative sliding between the bolt head (or nut) and the joint surface under transverse loading. The test reveals: (1) how quickly different locking methods lose preload, (2) the relative effectiveness of various anti-loosening devices. Results typically show: properly preloaded bolts without locking features lose preload rapidly; split lock washers provide minimal improvement; nylon insert locknuts, adhesive thread-locking, and wedge-locking systems maintain preload effectively.',
@@ -1384,10 +1384,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A welded joint in a steel structure is subject to fatigue loading. The weld has been classified as a Category C detail per AWS/AISC. What does the fatigue category primarily depend on?',
           options: [
-            'The welding process (MIG, TIG, stick) used',
-            'The color of the welding electrode',
+            'The welding process (MIG, TIG, stick) used — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
+            'The color of the welding electrode, which is valid only when the applied stress remains well below the proportional limit of the material',
             'The joint geometry and type of weld detail — the shape of the stress concentration at the weld determines the fatigue category, not the weld quality or material strength',
-            'Only the base metal strength — higher-strength steel always gives better weld fatigue performance'
+            'Only the base metal strength — higher-strength steel always gives better weld fatigue performance — not supported by standard testing protocols'
           ],
           correctIndex: 2,
           explanation: 'Fatigue performance of welded joints is governed by the detail category (A through E/E\'), which is determined by the joint geometry and the resulting stress concentration. The key insight: fatigue strength of welded joints is virtually independent of base metal strength. A high-strength steel (S_y = 700 MPa) has the same fatigue category rating as mild steel (S_y = 250 MPa) for the same weld detail. This is because fatigue cracks initiate at microscopic defects (undercut, slag, geometric stress concentrations) at the weld toe or root, and these defects exist regardless of base metal strength. The weld process and quality affect whether defects are present, but the detail category reflects the inherent geometric stress concentration of the joint configuration. This is why weld fatigue design differs fundamentally from base metal fatigue design.',
@@ -1398,10 +1398,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What thread type is preferred for bolts in high-pressure applications (e.g., pressure vessels and hydraulic cylinders)?',
           options: [
-            'Coarse thread — it is stronger because it has more cross-sectional area',
+            'Coarse thread — it is stronger because it has more cross-sectional area — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
             'Fine thread — it has a larger tensile stress area, lower helix angle (more self-locking tendency), and less reduction in fatigue strength from the thread root stress concentration',
-            'Acme thread — it has a stronger trapezoidal shape',
-            'Square thread — it produces no radial force on the nut'
+            'Acme thread — it has a stronger trapezoidal shape, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
+            'Square thread — it produces no radial force on the nut, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome'
           ],
           correctIndex: 1,
           explanation: 'Fine-pitch threads are preferred in high-pressure and fatigue-critical applications because: (1) larger tensile stress area (A_t) — the smaller thread depth leaves more core material, increasing strength by 5-10% over coarse thread of the same nominal diameter, (2) lower helix angle — this increases the self-locking tendency, reducing the risk of loosening under vibration, (3) shallower thread root — less severe stress concentration compared to the deeper coarse thread root, improving fatigue performance, (4) finer thread engagement adjustment for precise preload control. Trade-offs: fine threads are more susceptible to damage (galling, cross-threading), require more care during assembly, and have lower tolerance for corrosion or thread damage. Coarse threads are preferred for general construction where assembly speed and robustness matter more than precision.',
@@ -1421,10 +1421,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'In a welded structure, what is the most common location for fatigue crack initiation?',
           options: [
-            'At the center of the weld bead, where the metal is hottest during welding',
+            'At the center of the weld bead, where the metal is hottest during welding, though corrosion effects can modify this outcome',
             'At the weld toe — the geometric transition between the weld face and the base metal, which creates a sharp stress concentration',
-            'In the base metal far from the weld, where residual stresses are highest',
-            'At the midpoint of the weld length'
+            'In the base metal far from the weld, where residual stresses are highest — which misidentifies the root cause of the observed engineering behavior',
+            'At the midpoint of the weld length — this reasoning applies only under idealized conditions not found in service'
           ],
           correctIndex: 1,
           explanation: 'The weld toe is the most common fatigue crack initiation site in welded joints. Three factors combine to make it critical: (1) geometric stress concentration — the angle where the weld face meets the base metal surface creates a notch-like stress raiser (Kt = 2-4 depending on the toe angle and radius), (2) tensile residual stress — welding creates tensile residual stress near yield magnitude at the toe, eliminating the beneficial effect of compressive stress cycles, and (3) microstructural changes — the heat-affected zone (HAZ) may have unfavorable microstructure. Fatigue improvement methods target the toe: (1) toe grinding to remove the notch and create a smooth transition, (2) TIG dressing to remelt the toe region, (3) peening (hammer or ultrasonic) to introduce compressive residual stress, and (4) post-weld heat treatment to relieve tensile residual stress.',
@@ -1443,10 +1443,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the purpose of using a Belleville (conical disc) washer stack under a bolt head?',
           options: [
-            'To increase the bolt preload beyond what the torque wrench can achieve',
+            'To increase the bolt preload beyond what the torque wrench can achieve, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
             'To maintain bolt preload when the joint experiences thermal expansion/contraction, creep, or embedment relaxation — the spring action of the washer stack compensates for small changes in grip length',
-            'To reduce the required torque for tightening',
-            'To prevent the bolt from being overtightened'
+            'To reduce the required torque for tightening, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
+            'To prevent the bolt from being overtightened, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Top plate --> <rect x="10" y="24" width="60" height="12" rx="2" fill="#58CC02" opacity="0.1"/> <rect x="10" y="24" width="60" height="12" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none"/> <!-- Bottom plate --> <rect x="10" y="36" width="60" height="12" rx="2" fill="#58CC02" opacity="0.1"/> <rect x="10" y="36" width="60" height="12" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none"/> <!-- Bolt shaft (through both plates) --> <rect x="38" y="16" width="4" height="38" rx="1" fill="#3B8700" opacity="0.25"/> <rect x="38" y="16" width="4" height="38" rx="1" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.3"/> <!-- Bolt head (hex, top) --> <rect x="34" y="12" width="12" height="6" rx="2" fill="#58CC02" opacity="0.2"/> <rect x="34" y="12" width="12" height="6" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none"/> <!-- Nut (hex, bottom) --> <rect x="34" y="52" width="12" height="6" rx="2" fill="#58CC02" opacity="0.2"/> <rect x="34" y="52" width="12" height="6" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none"/> <!-- Washer (top) --> <rect x="36" y="18" width="8" height="2" rx="1" fill="#A5E86C" opacity="0.15"/> <!-- Washer (bottom) --> <rect x="36" y="50" width="8" height="2" rx="1" fill="#A5E86C" opacity="0.15"/> <!-- Thread marks on bolt shaft --> <line x1="38.5" y1="44" x2="41.5" y2="43" stroke="#A5E86C" stroke-width="0.5" opacity="0.15"/> <line x1="38.5" y1="46" x2="41.5" y2="45" stroke="#A5E86C" stroke-width="0.5" opacity="0.15"/> <line x1="38.5" y1="48" x2="41.5" y2="47" stroke="#A5E86C" stroke-width="0.5" opacity="0.15"/> <!-- Preload/clamping force arrows (pulsing) --> <g> <animate attributeName="opacity" values="0.15;0.3;0.15" dur="2s" repeatCount="indefinite"/> <!-- Bolt tension (upward on bolt) --> <line x1="40" y1="22" x2="40" y2="16" stroke="#3B8700" stroke-width="1"/> <polygon points="38.5,17 40,14 41.5,17" fill="#3B8700"/> <!-- Bolt tension (downward on bolt) --> <line x1="40" y1="48" x2="40" y2="54" stroke="#3B8700" stroke-width="1"/> <polygon points="38.5,53 40,56 41.5,53" fill="#3B8700"/> <!-- Clamping compression (plates pushed together) --> <polygon points="24,22 26,19 28,22" fill="#58CC02" opacity="0.5"/> <polygon points="24,48 26,51 28,48" fill="#58CC02" opacity="0.5"/> <polygon points="52,22 54,19 56,22" fill="#58CC02" opacity="0.5"/> <polygon points="52,48 54,51 56,48" fill="#58CC02" opacity="0.5"/> </g> <!-- Labels --> <text x="22" y="10" font-size="4" fill="#3B8700" opacity="0.15" font-style="italic">F_preload</text> <text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">clamping force</text> </svg>',
@@ -1458,10 +1458,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A lap joint with two 10 mm thick plates is connected by a single row of 5 bolts (M12, A_t = 84.3 mm²) in single shear. What is the bolt shear capacity if the allowable shear stress is 160 MPa?',
           options: [
-            '13.5 kN per bolt',
+            '13.5 kN per bolt, valid only for isotropic material behavior',
             '67.4 kN total for all 5 bolts',
             '134.9 kN total for all 5 bolts',
-            '84.3 kN per bolt'
+            '84.3 kN per bolt — not the primary mechanism here'
           ],
           correctIndex: 1,
           explanation: 'Each bolt in single shear has one shear plane. Shear capacity per bolt = tau_allow × A = 160 × 84.3 = 13,488 N ≈ 13.5 kN. Total capacity for 5 bolts = 5 × 13.5 = 67.4 kN. Note: for bearing-type connections, the shear area is typically the nominal bolt area (A_d = pi*12^2/4 = 113.1 mm²) if the shear plane passes through the unthreaded shank, giving higher capacity. If threads are in the shear plane, the tensile stress area (A_t) is used. In double shear (two shear planes per bolt), the capacity doubles. Additionally, bearing failure of the plate (bolt crushing into the hole) must also be checked: F_bearing = sigma_b × d × t per bolt.',
@@ -1472,10 +1472,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is "hydrogen embrittlement" in bolted joints, and which bolt grades are most susceptible?',
           options: [
-            'Corrosion caused by water — all bolt grades are equally affected',
+            'Corrosion caused by water — all bolt grades are equally affected, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism — an approximation that loses accuracy outside a narrow parameter range',
             'A form of stress corrosion cracking where hydrogen atoms diffuse into the high-strength steel, reducing its ductility and causing sudden brittle fracture. High-strength bolts (class 10.9 and 12.9, or SAE Grade 8) are most susceptible, especially when electroplated (zinc/cadmium plating generates hydrogen during the plating process).',
-            'Galvanic corrosion between dissimilar metals in the joint',
-            'Fatigue failure accelerated by humidity — only low-strength bolts are affected'
+            'Galvanic corrosion between dissimilar metals in the joint, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism, but industry experience indicates this factor plays only a minor role in the overall performance',
+            'Fatigue failure accelerated by humidity — only low-strength bolts are affected, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism — a simplified model that neglects the most significant physical variable'
           ],
           correctIndex: 1,
           explanation: 'Hydrogen embrittlement (HE) is a delayed failure mode where hydrogen atoms (from electroplating, cathodic protection, pickling, or corrosive environments) diffuse into the bolt steel and concentrate at high-stress locations (thread roots, under the head). The hydrogen reduces the material ductility and fracture toughness, and the bolt can fracture suddenly hours to days after installation — often well below its rated load. Susceptibility increases with: (1) hardness — bolts above HRC 39 (class 10.9 and above) are very susceptible, (2) stress level — higher preload increases risk, (3) hydrogen source — electroplating is a major source (mandatory post-plating baking at 190°C for 4+ hours to drive out hydrogen). Prevention: avoid electroplating high-strength bolts when possible (use mechanical zinc plating instead), specify baking procedures, use hot-dip galvanizing instead of electroplating for grades 8.8 and above.',
@@ -1494,10 +1494,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the angle-of-turn tightening method, and why is it more accurate than pure torque control for achieving bolt preload?',
           options: [
-            'The bolt is tightened by counting the number of turns from hand-tight — this method is only used for non-critical joints',
+            'The bolt is tightened by counting the number of turns from hand-tight — this method is only used for non-critical joints, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
             'The bolt is first snugged to a threshold torque, then turned through a specified additional angle. This method is more accurate because the preload is determined by bolt elongation (directly related to turn angle), which is less sensitive to friction variation than torque-based methods.',
-            'The bolt is tightened until the wrench handle is at a specific angle — this ensures the mechanic does not over-tighten',
-            'This method involves measuring the bolt head angle with a protractor — it is slower and less accurate than torque control'
+            'The bolt is tightened until the wrench handle is at a specific angle — this ensures the mechanic does not over-tighten, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
+            'This method involves measuring the bolt head angle with a protractor — it is slower and less accurate than torque control, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications'
           ],
           correctIndex: 1,
           explanation: 'The angle-of-turn (or turn-of-nut) method works in two steps: (1) snug the bolt to a specified threshold torque (to take up clearance and seat the joint), then (2) turn the nut an additional specified angle (e.g., 90 degrees, 180 degrees). The angle beyond snug directly controls bolt elongation: delta = (angle/360) × pitch. Since preload = k_b × delta, the preload depends on bolt stiffness and elongation — not on friction. This gives ±5-10% preload accuracy compared to ±25-30% for pure torque control. The method is specified in AISC and RCSC standards for structural steel connections. Limitations: requires a well-defined snug-tight condition, and accuracy depends on consistent bolt/joint stiffness.',
@@ -1541,10 +1541,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A compression spring in a valve assembly keeps breaking after a few months. The fracture always occurs on the inner surface of the coil, roughly at the same location. The spring index (D/d) is 4.5. What is the likely cause, and what would you change?',
           options: [
-            'The spring material is defective — replace the supplier and use the same design',
+            'The spring material is defective — replace the supplier and use the same design, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'The spring index is too low (tightly wound), causing a high Wahl correction factor that amplifies stress on the inner coil surface. The spring is failing in fatigue at the highest-stress location. Increase the spring index to 6-8 by increasing coil diameter or decreasing wire diameter.',
-            'The spring is corroding at that location because moisture collects on the inner surface. Solution: use a corrosion-resistant material.',
-            'The spring is bottoming out (going solid) during operation, causing impact loads. Solution: add more clearance or a travel stop.'
+            'The spring is corroding at that location because moisture collects on the inner surface. Solution: use a corrosion-resistant material. The governing physical mechanism is well-established in the literature and differs from the explanation given.',
+            'The spring is bottoming out (going solid) during operation, causing impact loads. Solution: add more clearance or a travel stop. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described.'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="26" y="4" width="28" height="6" rx="3" fill="#58CC02" opacity="0.15"/> <circle cx="40" cy="12" r="3" fill="#3B8700"/> <polyline stroke="#58CC02" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"> <animate attributeName="points" dur="2.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" values=" 40,14 40,17 28,21 52,25 28,29 52,33 28,37 52,41 28,45 52,49 28,53 52,57 40,61 40,64; 40,14 40,18 28,24 52,30 28,36 52,42 28,48 52,54 28,60 52,66 28,72 52,78 40,82 40,84; 40,14 40,17 28,21 52,25 28,29 52,33 28,37 52,41 28,45 52,49 28,53 52,57 40,61 40,64 "/> </polyline> <g> <animateTransform attributeName="transform" type="translate" values="0,0;0,20;0,0" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/> <rect x="26" y="64" width="28" height="6" rx="3" fill="#58CC02" opacity="0.15"/> <rect x="26" y="64" width="28" height="6" rx="3" stroke="#3B8700" stroke-width="1.5" fill="none"/> </g> <text x="22" y="42" font-size="8" fill="#3B8700" font-style="italic" opacity="0.35">k</text> </svg>',
@@ -1564,10 +1564,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A lip seal on a rotating shaft is leaking oil after 18 months of service. The shaft surface under the seal shows a polished wear groove. What are the possible causes, and how would you prevent this on the replacement?',
           options: [
-            'The seal was installed backward — lip seals only work in one direction. Simply install the new seal correctly.',
+            'The seal was installed backward — lip seals only work in one direction. Simply install the new seal correctly. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. The primary mechanism is fundamentally different from this description.',
             'The shaft surface roughness was either too rough (abraded the lip) or too smooth (no micro-texture to retain oil film), or the shaft is not hard enough (minimum 45 HRC under the seal). Solutions: ensure shaft hardness ≥45 HRC, surface finish 0.2-0.5 μm Ra, install a wear sleeve if the groove is deep, and verify the seal lip spring tension.',
-            'The oil viscosity was too low, causing it to pass through the seal regardless of seal condition. Solution: use thicker oil.',
-            'Lip seals have a fixed life and always wear out — 18 months is normal. Just replace the seal on a regular schedule.'
+            'The oil viscosity was too low, causing it to pass through the seal regardless of seal condition. Solution: use thicker oil. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. The actual controlling parameter is not captured by this explanation.',
+            'Lip seals have a fixed life and always wear out — 18 months is normal. Just replace the seal on a regular schedule. Careful analysis reveals that the dominant effect operates through a different mechanism than the one described. In practice, the dominant factor operates through a different mechanism entirely.'
           ],
           correctIndex: 1,
           explanation: 'Lip seal wear grooves are a common maintenance issue. Root causes: (1) Shaft hardness too low — a shaft below 45 HRC (30 HRC is typical for unhardened steel) allows the seal lip to wear a groove into the shaft surface. The groove then becomes a leak path the new seal cannot seal against. (2) Surface finish — too rough (>0.8 μm Ra) rapidly wears the lip; too smooth (<0.1 μm Ra) does not retain a micro-oil film, causing dry running and wear. The sweet spot is 0.2-0.5 μm Ra. (3) Shaft runout — excessive radial runout (>0.15 mm TIR) forces the lip to flex more than designed, accelerating wear. (4) Contamination — dirt entering between lip and shaft acts as an abrasive. Solutions: (1) if the groove is <0.25 mm deep, install the new seal at a slightly different axial position to contact unworn shaft. (2) For deeper grooves, install a hardened wear sleeve (press-fit thin-wall tube) over the shaft. (3) Ensure replacement shaft meets hardness and finish specifications.',
@@ -1578,10 +1578,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'You are selecting a seal for a centrifugal pump handling hot (90°C) chemical process fluid at 1.5 MPa. The pump runs continuously at 3000 RPM. Walk through the seal selection logic.',
           options: [
-            'A standard nitrile rubber lip seal — it is the simplest and cheapest option for any rotating shaft',
+            'A standard nitrile rubber lip seal — it is the simplest and cheapest option for any rotating shaft, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
             'A mechanical face seal with chemically resistant face materials (SiC/SiC or SiC/carbon) and fluoroelastomer secondary seals — it handles the pressure, temperature, speed, and chemical exposure that would destroy elastomeric contact seals',
-            'An O-ring in a groove — O-rings are universal seals that work at any pressure and temperature',
-            'A labyrinth seal — non-contact seals last forever because there is no wear'
+            'An O-ring in a groove — O-rings are universal seals that work at any pressure and temperature, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
+            'A labyrinth seal — non-contact seals last forever because there is no wear, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables'
           ],
           correctIndex: 1,
           explanation: 'This application eliminates most seal types. Lip seals: cannot handle 1.5 MPa continuous pressure (max ~0.05 MPa without special backing). Nitrile rubber degrades above 100°C and cannot resist many chemicals. O-rings: would extrude at 1.5 MPa at this gap and temperature without backup rings, and cannot handle the rotary motion at 3000 RPM. Labyrinth seals: are non-contacting and allow leakage by design — unacceptable for a chemical process fluid. Mechanical face seals are the industry standard for pumps because: (1) spring-loaded flat faces maintain sealing under pressure and thermal changes, (2) hard face materials (SiC, tungsten carbide) resist chemical attack and wear, (3) the fluid film between faces provides lubrication, limiting wear and heat generation, (4) secondary seals (O-rings, bellows) can be selected for the specific chemical environment. The API 682 standard governs mechanical seal selection for the process industry.',
@@ -1638,10 +1638,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is "spring surge" and why is it a concern in high-speed applications?',
           options: [
-            'Spring surge is the increase in spring rate under high loads',
+            'Spring surge is the increase in spring rate under high loads, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'Spring surge is a resonance phenomenon where a compression wave travels back and forth along the coils — if the operating frequency is near the spring natural frequency, the coils can clash together, causing high impact stress and early failure',
-            'Spring surge is the tendency of a spring to buckle under high compression',
-            'Spring surge is the increase in free length due to thermal expansion at high temperatures'
+            'Spring surge is the tendency of a spring to buckle under high compression, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
+            'Spring surge is the increase in free length due to thermal expansion at high temperatures, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome'
           ],
           correctIndex: 1,
           explanation: 'Spring surge occurs when a helical spring is excited at or near its natural frequency. A compression wave propagates along the coils, and at resonance, the coil spacing oscillates — some coils compress together (clash) while others open up. This creates impact stresses far above the design stress and causes rapid fatigue failure. The natural frequency of a helical spring is approximately: f_n = (d/(2*pi*D^2*N_a)) × sqrt(G*g/(32*rho)). For reliable operation, the spring natural frequency should be at least 15-20 times the operating frequency (some references specify 13× minimum). If surge cannot be avoided by frequency separation, friction dampers (nested springs with different pitch, or a plastic liner) can suppress the resonance.',
@@ -1652,10 +1652,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the difference between "closed and ground" and "closed and unground" spring ends for helical compression springs?',
           options: [
-            'There is no functional difference — grinding is only cosmetic',
+            'There is no functional difference — grinding is only cosmetic, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'Closed and ground ends have the last coil bent flat and the end face is ground perpendicular to the spring axis, providing a flat bearing surface for even load distribution. Unground ends are bent flat but not machined, resulting in a slightly tilted load application.',
-            'Ground ends are for extension springs; unground ends are for compression springs',
-            'Ground ends have fewer active coils, making the spring stiffer'
+            'Ground ends are for extension springs; unground ends are for compression springs, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'Ground ends have fewer active coils, making the spring stiffer, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism'
           ],
           correctIndex: 1,
           explanation: 'Spring end conditions affect both the spring geometry and the load application. Closed and ground: the end coils are coiled tight (closed), and the end face is ground flat and perpendicular to the spring axis. This provides a uniform bearing surface, ensuring the load is applied concentrically and the spring compresses straight without side-loading. Used for precision applications and springs in guides or bores. Closed and unground: end coils are closed but not ground — the end is slightly tilted, which can cause eccentric loading and sideways force. Acceptable for non-critical applications. The end condition also determines the number of inactive coils (dead coils): closed and ground = 2 dead coils, closed unground = 2 dead coils, open = 0 dead coils. Total coils = active coils + dead coils.',
@@ -1675,10 +1675,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A compression spring has a free length of 120 mm and a mean coil diameter of 20 mm. The spring buckles during operation. What is the likely cause and solution?',
           options: [
-            'The spring material is too soft — use a higher-grade spring wire',
+            'The spring material is too soft — use a higher-grade spring wire, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
             'The free length to mean diameter ratio (L_f/D = 6) is too high — springs with L_f/D > 4 are prone to buckling. Solutions: use a spring guide (rod inside or tube outside), reduce free length, or increase the coil diameter.',
-            'The wire diameter is too large — use thinner wire',
-            'The number of coils is too few — add more coils to stiffen the spring'
+            'The wire diameter is too large — use thinner wire, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'The number of coils is too few — add more coils to stiffen the spring, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response'
           ],
           correctIndex: 1,
           explanation: 'Helical compression springs can buckle like columns when the slenderness ratio (free length / mean coil diameter) is too high. The critical ratio depends on the end conditions: for springs with both ends fixed (flat and parallel), buckling occurs when L_f/D > 4-5 for steel springs (exact threshold depends on the deflection as a fraction of free length). At L_f/D = 6, this spring is in the buckling-prone zone. Solutions: (1) use a spring guide — a rod through the center or a tube around the outside constrains lateral deflection and prevents buckling, (2) redesign with a larger coil diameter to reduce L_f/D, (3) split into two shorter springs in series, or (4) change to a drawbar/guide arrangement. The spring rate does not change with a guide, but the guide introduces friction that may affect performance.',
@@ -1689,10 +1689,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the key difference between a single-acting mechanical seal and a double mechanical seal in pump applications?',
           options: [
-            'Single seals use one spring; double seals use two springs',
+            'Single seals use one spring; double seals use two springs, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism, based on simplified assumptions about loading',
             'A single seal has one pair of sealing faces and the process fluid lubricates the faces. A double seal has two pairs of faces with a barrier/buffer fluid between them — providing two levels of containment and preventing process fluid from reaching the atmosphere, critical for hazardous fluids.',
-            'Single seals work at low pressure; double seals work at high pressure',
-            'There is no difference in containment — double seals just last twice as long'
+            'Single seals work at low pressure; double seals work at high pressure, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism, though corrosion effects can modify this outcome',
+            'There is no difference in containment — double seals just last twice as long, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism, assuming homogeneous material throughout the section'
           ],
           correctIndex: 1,
           explanation: 'Single mechanical seals have one sealing interface between a rotating face (on the shaft) and a stationary face (in the gland). The process fluid acts as the face lubricant and can leak (at a controlled, minimal rate) to atmosphere. Suitable for non-hazardous fluids. Double mechanical seals have two sets of faces arranged in tandem or face-to-face, with a barrier (pressurized) or buffer (unpressurized) fluid circulating between them. Benefits: (1) zero process fluid emissions to atmosphere (required for toxic, flammable, or carcinogenic fluids), (2) the barrier/buffer fluid lubricates and cools both seal faces, (3) provides backup sealing if one seal fails. API 682 defines seal arrangements: Arrangement 1 (single), Arrangement 2 (dual unpressurized/tandem), Arrangement 3 (dual pressurized/double). Arrangement 3 with pressurized barrier fluid is the highest level of containment.',
@@ -1711,10 +1711,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A leaf spring in a vehicle suspension has 8 leaves, each 75 mm wide and 8 mm thick, with a span of 1200 mm. What is the primary stress distribution in each leaf?',
           options: [
-            'Pure torsion — the leaves twist under load',
-            'Pure tension — the leaves are stretched by the vehicle weight',
+            'Pure torsion — the leaves twist under load — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
+            'Pure tension — the leaves are stretched by the vehicle weight — however, standard engineering analysis methods and field experience both point to a different conclusion',
             'Bending stress — each leaf acts as a beam, with the stress varying linearly from zero at the neutral axis to maximum tension on the bottom surface and maximum compression on the top surface',
-            'Uniform compressive stress through the leaf thickness'
+            'Uniform compressive stress through the leaf thickness — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here'
           ],
           correctIndex: 2,
           explanation: 'Leaf springs are essentially stacked beam springs. Each leaf bends under the applied load, with the classic bending stress distribution: sigma = My/I, varying linearly from compression on the concave side to tension on the convex side. The multi-leaf design distributes the bending moment across multiple leaves, reducing the stress in each one. For a graduated multi-leaf spring (leaves of different lengths), the design approximates a beam of uniform strength — each section has just enough leaves to carry the local bending moment. The interleaf friction provides damping but also causes hysteresis in the load-deflection curve.',
@@ -1725,10 +1725,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is compression set in elastomeric seals, and why is it a critical property?',
           options: [
-            'Compression set is the maximum force needed to compress the seal',
+            'Compression set is the maximum force needed to compress the seal, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'Compression set is the permanent deformation remaining after an elastomeric seal has been compressed for a period of time at elevated temperature — high compression set means the seal loses its elastic recovery and can no longer maintain sealing contact',
-            'Compression set is the initial deflection when the seal is first installed',
-            'Compression set is the rate at which the seal compresses under constant load'
+            'Compression set is the initial deflection when the seal is first installed, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'Compression set is the rate at which the seal compresses under constant load, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism'
           ],
           correctIndex: 1,
           explanation: 'Compression set is measured as the percentage of original deflection that is not recovered after the seal is released from a compressed state (typically after 22 hours at a specified temperature, per ASTM D395). A compression set of 0% means full recovery; 100% means no recovery (permanently deformed). As elastomers age (especially at elevated temperatures), the polymer chains rearrange and the material "forgets" its original shape — it takes a permanent set in the compressed configuration. When this happens in a seal groove, the O-ring no longer presses firmly against the sealing surfaces, and leakage occurs. Good seal materials have low compression set: fluoroelastomer (FKM) < 20% at 200°C, nitrile (NBR) < 25% at 100°C. High compression set is the primary aging failure mode for static O-ring seals.',
@@ -1770,10 +1770,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'An extension spring has hooks at both ends. Where is the most likely failure location, and why?',
           options: [
-            'At the center of the spring body, where the stress is highest',
+            'At the center of the spring body, where the stress is highest, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
             'At the hooks (end loops) — the bend radius at the hook transition creates a stress concentration that combines with the coil stress, making the hooks the weakest point of the spring',
-            'At the point where the spring contacts its anchor',
-            'Extension springs fail randomly along their length'
+            'At the point where the spring contacts its anchor — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
+            'Extension springs fail randomly along their length — however, standard engineering analysis methods and field experience both point to a different conclusion'
           ],
           correctIndex: 1,
           explanation: 'Extension spring hooks are the most common failure point because: (1) the hook is formed by bending the wire into a loop or hook shape, introducing a stress concentration at the bend radius (Kt = 1.5-3.0 depending on hook geometry), (2) the hook experiences both bending and torsion as the spring stretches, (3) the hook wire cannot be shot-peened effectively (limited access), so surface compressive residual stress improvement is not practical. The stress at the hook can be 1.5-2 times higher than in the body coils. To improve hook life: (1) use generous hook bend radii, (2) design hook stress to be below the endurance limit, (3) consider machine hooks (formed from the coil wire) rather than cross-over center hooks, (4) in critical applications, use a threaded insert end fitting instead of a wire hook.',
@@ -1798,10 +1798,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'Shot peening is commonly applied to springs. What does it do, and how does it improve fatigue life?',
           options: [
-            'It smooths the surface to reduce friction',
+            'It smooths the surface to reduce friction, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'It introduces a layer of compressive residual stress on the wire surface by bombarding it with small steel shot — this compressive layer opposes the tensile stress from loading, effectively raising the fatigue strength by 20-40%',
-            'It hardens the core of the wire by cold working',
-            'It removes surface defects by chipping away damaged material'
+            'It hardens the core of the wire by cold working, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'It removes surface defects by chipping away damaged material, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process'
           ],
           correctIndex: 1,
           explanation: 'Shot peening is a cold working process where the spring wire surface is bombarded with small hardened steel or glass beads at high velocity. Each impact creates a small dimple and plastically deforms the surface layer, creating a compressive residual stress to a depth of 0.1-0.3 mm. Since fatigue cracks initiate at the surface in tension, the compressive layer must be overcome before the surface sees net tension, effectively increasing the fatigue strength by 20-40%. For springs, shot peening is most effective on the inner coil surface (where maximum stress occurs) — specialized techniques ensure the shot reaches this area. Additional benefits: (1) the dimpled surface retains lubricant, (2) small surface defects are masked by the compressive stress. Shot peening intensity is measured in Almen strips and must be controlled to avoid over-peening (which can damage the surface).',
@@ -1820,10 +1820,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A mechanical face seal is leaking excessively. Inspection reveals circumferential scoring marks on one of the seal faces. What is the most likely cause?',
           options: [
-            'The seal was installed upside down',
+            'The seal was installed upside down, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
             'Particulate contamination in the process fluid — hard particles entered between the seal faces, scratched the lapped surface, and created leak paths across the sealing dam',
-            'The seal spring force is too high',
-            'The shaft speed is too low for hydrodynamic lift'
+            'The seal spring force is too high, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'The shaft speed is too low for hydrodynamic lift — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms'
           ],
           correctIndex: 1,
           explanation: 'Circumferential scoring on mechanical seal faces is the hallmark of particle contamination. Mechanical seals operate with extremely flat faces (lapped to within 1-2 helium light bands, or 0.3-0.6 micrometers). Even small hard particles (sand, scale, crystallized product) that enter the interface will score the faces, creating radial leak paths across the sealing dam. Prevention: (1) install a cyclone separator or filter upstream of the seal, (2) use a flush system (API Plan 32) to supply clean fluid to the seal faces, (3) for abrasive services, use hard face materials on both faces (SiC/SiC instead of SiC/carbon), (4) use a double seal with clean barrier fluid. Diagnosis: examine the scoring pattern — random scratches suggest random particle events; continuous grooves suggest embedded particles or a damaged mating face.',
@@ -1835,9 +1835,9 @@ export const unit8: Unit = {
           question: 'What is the difference between backup rings and anti-extrusion rings in O-ring seal design?',
           options: [
             'They are different names for the same component — a hard ring installed on the low-pressure side of the O-ring to prevent the elastomer from being forced (extruded) into the clearance gap under high pressure',
-            'Backup rings prevent the O-ring from moving; anti-extrusion rings prevent chemical attack',
-            'Backup rings are used with static seals only; anti-extrusion rings are for dynamic seals',
-            'They serve completely different functions — backup rings center the O-ring while anti-extrusion rings prevent wear'
+            'Backup rings prevent the O-ring from moving; anti-extrusion rings prevent chemical attack, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'Backup rings are used with static seals only; anti-extrusion rings are for dynamic seals, but industry experience indicates this factor plays only a minor role in the overall performance',
+            'They serve completely different functions — backup rings center the O-ring while anti-extrusion rings prevent wear — this reasoning applies only under idealized conditions not found in service'
           ],
           correctIndex: 0,
           explanation: 'Backup rings and anti-extrusion rings are indeed the same component with two names. They are rigid or semi-rigid rings (typically PTFE, nylon, or PEEK) installed in the O-ring groove on the low-pressure (downstream) side. Their purpose: at high pressures (>3.5 MPa for static, >7 MPa for dynamic seals, depending on clearance), the O-ring can be forced into the gap between mating parts, causing it to nibble (small pieces torn from the surface) and eventually fail. The backup ring bridges the extrusion gap, supporting the O-ring and preventing it from being pushed into it. For very high pressures or bidirectional pressure, two backup rings are used (one on each side of the O-ring). The maximum pressure without backup rings depends on the clearance gap, O-ring hardness, and temperature.',
@@ -1848,10 +1848,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A Belleville (disc) spring has a unique load-deflection characteristic compared to helical springs. What is it?',
           options: [
-            'Belleville springs have a perfectly linear load-deflection curve',
+            'Belleville springs have a perfectly linear load-deflection curve — however, standard engineering analysis methods and field experience both point to a different conclusion',
             'By selecting the ratio of free height (h) to thickness (t), the load-deflection curve can be made linear (h/t ≈ 0.4), regressive/constant-force (h/t ≈ 1.41), or even negative rate (snap-through, h/t > 1.41)',
-            'Belleville springs always have a progressive (increasing rate) characteristic',
-            'Belleville springs can only deflect to flat and then stop'
+            'Belleville springs always have a progressive (increasing rate) characteristic — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here',
+            'Belleville springs can only deflect to flat and then stop, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process'
           ],
           correctIndex: 1,
           explanation: 'Belleville (conical disc) springs have a unique nonlinear characteristic controlled by the h/t ratio (free cone height to material thickness): (1) h/t < 0.4: approximately linear, like a helical spring, (2) h/t ≈ 1.0: the load increases to a peak then decreases — constant-force region near the peak, (3) h/t ≈ sqrt(2) ≈ 1.41: the load reaches a maximum and then decreases to zero at flat — the spring provides nearly constant force over a range of deflection, (4) h/t > 1.41: the curve goes negative — the spring snaps through to an inverted position (bistable behavior). Stacking in parallel (nested same orientation) multiplies the load; stacking in series (alternating orientation) multiplies the deflection. This versatility makes Belleville springs ideal for overload protection, thermal compensation in bolted joints, and constant-force applications.',
@@ -1870,10 +1870,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A hydraulic cylinder uses a piston seal and a rod seal. Why is the rod seal more prone to failure than the piston seal?',
           options: [
-            'The rod seal sees higher pressure',
+            'The rod seal sees higher pressure, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism, but the predominant failure mechanism under these conditions is fundamentally different',
             'The rod seal is exposed to the external environment (dust, moisture, temperature extremes) while the piston seal operates in the controlled, lubricated environment inside the cylinder. Additionally, the rod seal must scrape contaminants off the retracting rod to prevent them from entering the cylinder.',
-            'The rod seal has a smaller diameter and therefore higher stress',
-            'The rod is harder than the cylinder bore, causing more wear'
+            'The rod seal has a smaller diameter and therefore higher stress, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism — valid for textbook problems but misleading for real-world applications',
+            'The rod is harder than the cylinder bore, causing more wear, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism — which misidentifies the root cause of the observed engineering behavior'
           ],
           correctIndex: 1,
           explanation: 'The rod seal (mounted in the cylinder head) seals the reciprocating rod as it extends and retracts. It is the most failure-prone seal in a hydraulic cylinder because: (1) environmental exposure — the rod passes through the external environment, picking up dust, dirt, moisture, and other contaminants on its surface, (2) the rod seal must wipe these contaminants off the retracting rod to prevent them from entering the cylinder and damaging internal seals, (3) exposure to temperature extremes (sunlight, cold weather), UV degradation, and chemical splash, (4) the rod surface finish degrades over time from scoring, corrosion, or stone impact (on mobile equipment). The piston seal, by contrast, operates inside the cylinder in a clean, lubricated, temperature-controlled environment. Rod seal protection is provided by wiper seals (scraper seals) installed outboard of the main rod seal to remove gross contamination.',

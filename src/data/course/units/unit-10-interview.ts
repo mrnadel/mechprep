@@ -19,10 +19,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer asks you to estimate the power needed to keep a car at highway speed. What is the structured approach they are looking for?',
           options: [
-            'Look up the engine horsepower from the car\'s spec sheet and report that number',
-            'Guess "about 100 kW" since that is a typical engine rating',
+            'Look up the engine horsepower from the car\'s spec sheet and report that number, though this reasoning neglects the dominant physical mechanism that actually controls the behavior',
+            'Guess "about 100 kW" since that is a typical engine rating — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
             'Break the problem into contributors (aerodynamic drag, rolling resistance, drivetrain losses), estimate each using known physics, sum them, and state your assumptions clearly',
-            'Calculate only aerodynamic drag since it dominates at highway speed — the other terms are negligible'
+            'Calculate only aerodynamic drag since it dominates at highway speed — the other terms are negligible, assuming homogeneous material throughout the section'
           ],
           correctIndex: 2,
           explanation: 'Interviewers want to see structured decomposition, not a single formula. The key steps: (1) Identify all contributors — aero drag (~8-10 kW at 100 km/h for a typical car), rolling resistance (~4 kW), and drivetrain losses (~15%). (2) State assumptions (Cd, frontal area, mass, Crr) and note where you got them. (3) Compute each term. (4) Sum and sanity-check against known values (a car at 100 km/h needs roughly 15-20 kW at the engine). Showing you know to include ALL contributors and can reason about their relative magnitudes is more valuable than getting a precise number.',
@@ -56,9 +56,9 @@ export const unit10: Unit = {
           question: 'An interviewer asks: "You need a quick estimate — will this steel shelf bracket vibrate noticeably?" Without doing a full calculation, what key factors determine whether vibration is a concern?',
           options: [
             'Compare the excitation frequency to the bracket\'s natural frequency; if they are close, resonance amplifies vibration; thin, long brackets with heavy loads have low natural frequencies',
-            'Only the weight of the load on the shelf matters — heavier loads always vibrate more',
-            'Vibration only matters for rotating equipment — a shelf bracket cannot vibrate noticeably',
-            'Just make the bracket thicker — that always eliminates vibration regardless of the excitation source'
+            'Only the weight of the load on the shelf matters — heavier loads always vibrate more, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'Vibration only matters for rotating equipment — a shelf bracket cannot vibrate noticeably — which misidentifies the root cause of the observed engineering behavior',
+            'Just make the bracket thicker — that always eliminates vibration regardless of the excitation source, though experimental data shows this correlation breaks down at extreme operating conditions'
 
           ],
           correctIndex: 0,
@@ -71,9 +71,9 @@ export const unit10: Unit = {
           question: 'An interviewer asks: "How many ball bearings fit inside this room?" What is the best estimation approach?',
           options: [
             'Calculate room volume, divide by sphere volume, then multiply by a packing fraction (~0.64 for random packing)',
-            'Calculate exact room volume divided by sphere volume, no adjustments',
-            'Count how many bearings fit along each edge and multiply the three numbers',
-            'Estimate it as "millions" without any calculation'
+            'Calculate exact room volume divided by sphere volume, no adjustments, particularly at elevated loads',
+            'Count how many bearings fit along each edge and multiply the three numbers, under standard conditions',
+            'Estimate it as "millions" without any calculation, which limits its practical applicability'
 
           ],
           correctIndex: 0,
@@ -85,10 +85,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are asked to sanity-check a colleague\'s calculation that a small electric motor produces 500 N*m of torque. The motor is about the size of a coffee can (roughly 100 mm diameter, 150 mm long). Is this plausible?',
           options: [
-            'Yes, modern motors are very powerful for their size',
+            'Yes, modern motors are very powerful for their size, assuming the material remains in the linear elastic regime throughout the loading cycle',
             'No — a motor that size typically produces 1-10 N*m continuously; 500 N*m would require a much larger motor or a gearbox; the calculation likely has a unit error',
-            'It depends entirely on the voltage — at high enough voltage any motor can produce 500 N*m',
-            'Cannot be determined without knowing the exact motor model number'
+            'It depends entirely on the voltage — at high enough voltage any motor can produce 500 N*m, which limits its practical applicability',
+            'Cannot be determined without knowing the exact motor model number, though this interpretation oversimplifies the actual mechanism involved'
           ],
           correctIndex: 1,
           explanation: 'Engineering sanity-checking means having calibrated intuition for physical quantities. A coffee-can-sized motor (NEMA 34 / ~90 mm frame) typically produces 1-5 N*m continuously, maybe 10-15 N*m peak. 500 N*m requires an industrial servo the size of a small barrel, or a small motor with a ~100:1 gear reduction. The most common error: confusing N*mm with N*m (factor of 1000) or forgetting a gearbox ratio. In interviews, demonstrating that you can "smell" a wrong answer — that you have physical intuition for magnitudes — is extremely valuable. Always ask yourself: "Does this number make physical sense?"',
@@ -123,9 +123,9 @@ export const unit10: Unit = {
           question: 'An interviewer asks you to estimate the force required to shear a 10 mm diameter mild steel bolt. Which is the best approach?',
           options: [
             'Use the shear strength (~60% of UTS for steel): F = 0.6 * UTS * pi * d^2 / 4, giving approximately 23 kN for a Grade 8.8 bolt',
-            'Use the tensile strength directly: F = UTS * pi * d^2 / 4',
-            'The force equals the torque divided by the bolt diameter',
-            'Shear cannot occur in bolts because they are loaded in tension'
+            'Use the tensile strength directly: F = UTS * pi * d^2 / 4 — a plausible but incorrect interpretation of the underlying physics',
+            'The force equals the torque divided by the bolt diameter — an approximation that loses accuracy outside a narrow parameter range',
+            'Shear cannot occur in bolts because they are loaded in tension, without considering time-dependent effects'
 
           ],
           correctIndex: 0,
@@ -199,7 +199,7 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You need to estimate whether a 5 mm fillet weld around the perimeter of a 50x50 mm square tube can support a 20 kN tensile load. Is this weld adequate?',
           options: [
-            'No — fillet welds cannot carry tensile loads',
+            'No — fillet welds cannot carry tensile loads, across the full gauge length',
             'No — square tubes require full-penetration butt welds only',
             'Cannot determine without knowing the electrode classification',
             'Yes — the weld throat area times allowable stress exceeds 20 kN significantly'
@@ -276,7 +276,7 @@ export const unit10: Unit = {
           question: 'An interviewer asks: "Estimate the cooling time for a solid aluminum cylinder (50 mm diameter) quenched in water from 500°C." Which characteristic time scale should you use?',
           options: [
             'The conduction time scale: t ~ rho*cp*R^2/k, which gives about 1-2 seconds for aluminum',
-            'The radiation time scale based on Stefan-Boltzmann law',
+            'The radiation time scale based on Stefan-Boltzmann law, verified against reference specimens of known properties',
             'The cylinder will cool instantly because aluminum has high conductivity',
             'Cooling time equals the mass divided by the heat transfer coefficient'
           ],
@@ -313,9 +313,9 @@ export const unit10: Unit = {
           question: 'An interviewer gives you a Fermi problem: "How much does the Eiffel Tower weigh?" How should you approach this estimate?',
           options: [
             'Estimate the volume of steel structure (approximate as a tapered lattice, ~25% fill of the bounding pyramid), calculate total steel volume, multiply by density',
-            'Look up the answer — Fermi problems are really memory tests',
-            'Multiply the height by the base area and the density of steel',
-            'Estimate based on the number of rivets used in construction'
+            'Look up the answer — Fermi problems are really memory tests, which is valid only when the applied stress remains well below the proportional limit of the material',
+            'Multiply the height by the base area and the density of steel, which is valid only when the applied stress remains well below the proportional limit of the material',
+            'Estimate based on the number of rivets used in construction, though this reasoning neglects the dominant physical mechanism that actually controls the behavior'
 
           ],
           correctIndex: 0,
@@ -374,9 +374,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer asks: "If I double the rotational speed of a centrifugal pump, what happens to the flow rate, head, and power?" What scaling laws apply?',
           options: [
-            'All three double (linear relationship)',
+            'All three double (linear relationship), without considering time-dependent effects',
             'Flow doubles, head quadruples, power increases 8x — these are the pump affinity laws',
-            'Flow doubles, head stays the same, power doubles',
+            'Flow doubles, head stays the same, power doubles, which limits its practical applicability',
             'All three quadruple because of the V^2 term in the energy equation'
           ],
           correctIndex: 1,
@@ -413,9 +413,9 @@ export const unit10: Unit = {
           question: 'A rotating shaft fracture surface shows a smooth, flat region with beach marks (concentric arc lines) covering 80% of the cross-section, and a rough, granular final fracture zone covering 20%. What does this indicate?',
           options: [
             'Fatigue failure under relatively low stress; look for a stress concentrator at the origin such as a keyway, sharp fillet, or corrosion pit',
-            'Sudden overload failure under high stress — the part was undersized for the load',
-            'Hydrogen embrittlement — the smooth region is the embrittled zone',
-            'Stress corrosion cracking — the beach marks indicate cyclic environmental exposure'
+            'Sudden overload failure under high stress — the part was undersized for the load, but this applies only under ideal conditions',
+            'Hydrogen embrittlement — the smooth region is the embrittled zone, though corrosion effects can modify this outcome',
+            'Stress corrosion cracking — the beach marks indicate cyclic environmental exposure — this reasoning applies only under idealized conditions not found in service'
 
           ],
           correctIndex: 0,
@@ -428,10 +428,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A stainless steel pipe carrying chloride-containing water at 80°C develops branching cracks after 2 years of service with no significant wall thinning. What is the most likely failure mechanism?',
           options: [
-            'General corrosion — switch to a thicker pipe wall',
-            'Fatigue cracking from pressure cycles — reduce operating pressure',
+            'General corrosion — switch to a thicker pipe wall, which does not account for the microstructural changes occurring at these conditions',
+            'Fatigue cracking from pressure cycles — reduce operating pressure, but this applies only to a narrow range of material compositions and temperatures',
             'Stress corrosion cracking (SCC) — three required factors are present: susceptible austenitic SS, chloride environment, and tensile stress',
-            'Erosion-corrosion from high flow velocity — reduce flow rate'
+            'Erosion-corrosion from high flow velocity — reduce flow rate, which is valid only when the applied stress remains well below the proportional limit of the material'
           ],
           correctIndex: 2,
           explanation: 'Stress corrosion cracking requires three simultaneous conditions: susceptible material (austenitic stainless steel), aggressive environment (chloride ions at elevated temperature), and tensile stress (residual or applied). Chloride-induced SCC in austenitic stainless steels is characteristically transgranular with a branching crack morphology. The absence of wall thinning rules out general corrosion and erosion. Prevention strategies address one or more of the three legs: material change (duplex SS like 2205 has much higher SCC resistance), environment change (reduce chloride concentration, lower temperature), or stress reduction (stress-relieve welds).',
@@ -451,9 +451,9 @@ export const unit10: Unit = {
           question: 'Walk me through how you would approach debugging a product that fails intermittently in the field but works fine in the lab.',
           options: [
             'Replicate field conditions in the lab (temperature, humidity, vibration, duty cycle); investigate differences systematically; check for thermal cycling effects and connector fretting',
-            'The field failures are user error — provide better training documentation',
-            'Increase the safety factor by 50% and ship the updated design',
-            'Add more sensors to the product and wait for more field data before acting'
+            'The field failures are user error — provide better training documentation — this reasoning applies only under idealized conditions not found in service',
+            'Increase the safety factor by 50% and ship the updated design — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
+            'Add more sensors to the product and wait for more field data before acting, which does not account for the microstructural changes occurring at these conditions'
 
           ],
           correctIndex: 0,
@@ -488,10 +488,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A steel component operating at 550°C slowly deforms over several years under constant load, eventually rupturing. The fracture surface shows intergranular cracking with voids along grain boundaries. What failure mechanism is this?',
           options: [
-            'Fatigue failure from cyclic thermal loading',
+            'Fatigue failure from cyclic thermal loading, independent of strain rate',
             'Creep rupture — time-dependent deformation at elevated temperature under sustained stress',
-            'Brittle fracture from a manufacturing defect',
-            'Hydrogen embrittlement from the high-temperature environment'
+            'Brittle fracture from a manufacturing defect — a secondary effect only',
+            'Hydrogen embrittlement from the high-temperature environment, not the surface layer'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes --> <line x1="12" y1="65" x2="74" y2="65" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <line x1="12" y1="65" x2="12" y2="8" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <polygon points="74,63.5 74,66.5 76,65" fill="#3B8700" opacity="0.4"/> <polygon points="10.5,8 13.5,8 12,6" fill="#3B8700" opacity="0.4"/> <text x="44" y="76" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.3" font-style="italic">time</text> <text x="6" y="36" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.3" font-style="italic">ε</text> <!-- Creep curve: instantaneous → primary → secondary (steady) → tertiary → rupture --> <path d="M12,58 L14,42 Q18,36 24,34 L46,28 Q56,24 62,18 L66,12" stroke="#58CC02" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"> <animate attributeName="stroke-dashoffset" values="100;0;0;100" keyTimes="0;0.55;0.82;1" dur="6s" repeatCount="indefinite"/> </path> <!-- Region separators (dashed verticals) --> <line x1="18" y1="36" x2="18" y2="65" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="1.5,2.5" opacity="0"> <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.1;0.15;0.82;1" dur="6s" repeatCount="indefinite"/> </line> <line x1="50" y1="26" x2="50" y2="65" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="1.5,2.5" opacity="0"> <animate attributeName="opacity" values="0;0;0.15;0.15;0" keyTimes="0;0.38;0.42;0.82;1" dur="6s" repeatCount="indefinite"/> </line> <!-- Region labels --> <text x="12" y="72" font-size="3" fill="#3B8700" opacity="0"> <animate attributeName="opacity" values="0;0;0.2;0.2;0" keyTimes="0;0.06;0.1;0.82;1" dur="6s" repeatCount="indefinite"/>I</text> <text x="32" y="72" text-anchor="middle" font-size="3" fill="#3B8700" opacity="0"> <animate attributeName="opacity" values="0;0;0.2;0.2;0" keyTimes="0;0.18;0.22;0.82;1" dur="6s" repeatCount="indefinite"/>II (steady)</text> <text x="58" y="72" text-anchor="middle" font-size="3" fill="#3B8700" opacity="0"> <animate attributeName="opacity" values="0;0;0.2;0.2;0" keyTimes="0;0.42;0.46;0.82;1" dur="6s" repeatCount="indefinite"/>III</text> <!-- Rupture X --> <g opacity="0"> <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.5;0.55;0.82;1" dur="6s" repeatCount="indefinite"/> <line x1="63" y1="9" x2="69" y2="15" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="69" y1="9" x2="63" y2="15" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> </g> <!-- Tracing dot --> <circle r="3" fill="#3B8700"> <animateMotion dur="6s" repeatCount="indefinite" path="M12,58 L14,42 Q18,36 24,34 L46,28 Q56,24 62,18 L66,12" keyPoints="0;1;1;0" keyTimes="0;0.55;0.82;1" calcMode="linear"/> <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.55;0.56;1" dur="6s" repeatCount="indefinite"/> </circle> </svg>',
@@ -504,9 +504,9 @@ export const unit10: Unit = {
           question: 'A hardened steel gear tooth fractures suddenly during normal operation. The fracture surface is flat, shiny, and shows a chevron pattern pointing back toward the tooth root. There are no beach marks. What type of failure is this?',
           options: [
             'Brittle overload fracture — the chevron pattern indicates fast fracture from a single load event',
-            'Fatigue failure with a very short crack propagation phase',
-            'Wear-induced failure from insufficient lubrication',
-            'Thermal shock cracking from rapid temperature change'
+            'Fatigue failure with a very short crack propagation phase, at ambient temperature only',
+            'Wear-induced failure from insufficient lubrication, within the elastic regime only',
+            'Thermal shock cracking from rapid temperature change — a plausible but incorrect interpretation of the underlying physics'
 
           ],
           correctIndex: 0,
@@ -527,9 +527,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A welded steel structure fails after 5 years in an outdoor marine environment. Cracks initiated at the weld toe. What combination of factors most likely caused this failure?',
           options: [
-            'Pure mechanical overload from wind loading exceeding the design limit',
-            'Creep failure from sustained loading at ambient temperature',
-            'Manufacturing defect in the base metal that was present from day one',
+            'Pure mechanical overload from wind loading exceeding the design limit — a plausible but incorrect interpretation of the underlying physics',
+            'Creep failure from sustained loading at ambient temperature, which does not account for the microstructural changes occurring at these conditions',
+            'Manufacturing defect in the base metal that was present from day one — which misidentifies the root cause of the observed engineering behavior',
             'Corrosion fatigue: cyclic loading (wind, waves, thermal) combined with the marine environment accelerated crack growth at the high-stress weld toe'
 
           ],
@@ -542,10 +542,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'During failure investigation of a plastic component, you observe crazing (fine surface cracks) near the failure origin. The component was in contact with a cleaning solvent. What mechanism does this suggest?',
           options: [
-            'UV degradation from sunlight exposure',
-            'Thermal degradation from overheating during molding',
+            'UV degradation from sunlight exposure, assuming homogeneous material throughout the section',
+            'Thermal degradation from overheating during molding, valid only for isotropic material behavior',
             'Environmental stress cracking (ESC) — the solvent weakened the polymer under residual or applied stress',
-            'Normal fatigue failure unrelated to the solvent'
+            'Normal fatigue failure unrelated to the solvent — valid for textbook problems but misleading for real-world applications'
           ],
           correctIndex: 2,
           explanation: 'Environmental stress cracking (ESC) is the most common cause of plastic component failure. It occurs when a stressed polymer is exposed to a chemical agent that is not aggressive enough to dissolve it but weakens the molecular bonds enough to allow crack initiation and growth. Crazing is the precursor to ESC cracking. Common triggers: cleaning solvents, adhesives, lubricants, and even human skin oils. The residual stresses from injection molding (especially near gates and weld lines) provide the stress component. Prevention: material compatibility testing, stress relief annealing, or selecting ESC-resistant polymers.',
@@ -557,9 +557,9 @@ export const unit10: Unit = {
           question: 'You are asked to determine whether a failed bolt broke due to overload or fatigue. Which feature on the fracture surface best distinguishes the two?',
           options: [
             'Overload shows significant necking and cup-cone shape (ductile) or chevrons (brittle), while fatigue shows beach marks, ratchet marks at the origin, and a distinct smooth-to-rough transition',
-            'The color of the fracture surface — fatigue is always dark, overload is bright',
-            'Fatigue fractures always occur at the head, overload always at the threads',
-            'There is no way to distinguish them without chemical analysis'
+            'The color of the fracture surface — fatigue is always dark, overload is bright — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here',
+            'Fatigue fractures always occur at the head, overload always at the threads, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
+            'There is no way to distinguish them without chemical analysis — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause'
 
           ],
           correctIndex: 0,
@@ -580,9 +580,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A carbon steel pipe carrying hot steam develops a longitudinal crack along its length. Metallographic examination shows graphitization (iron carbide decomposed into iron and graphite) in the affected zone. What caused this?',
           options: [
-            'Excessive pressure caused the pipe to split along its length',
-            'External corrosion thinned the wall until it could no longer hold pressure',
-            'Poor welding technique introduced a longitudinal defect during fabrication',
+            'Excessive pressure caused the pipe to split along its length, provided the test specimen geometry conforms to the requirements specified in the standard',
+            'External corrosion thinned the wall until it could no longer hold pressure, for geometries within standard proportions',
+            'Poor welding technique introduced a longitudinal defect during fabrication, without considering time-dependent effects',
             'Long-term high-temperature exposure caused microstructural degradation (graphitization), weakening the steel and allowing crack propagation'
 
           ],
@@ -603,10 +603,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A rubber O-ring seal fails after 3 years in a hydraulic system operating at 120°C. The rubber is hard, brittle, and has lost elasticity. What caused the seal failure?',
           options: [
-            'Chemical attack from the hydraulic fluid dissolving the rubber',
-            'Mechanical wear from pressure cycles abrading the seal surface',
+            'Chemical attack from the hydraulic fluid dissolving the rubber, but industry experience indicates this factor plays only a minor role in the overall performance',
+            'Mechanical wear from pressure cycles abrading the seal surface, which would require additional verification through destructive testing of representative samples',
             'Thermal aging/degradation — prolonged high temperature caused crosslink changes, leading to hardening and loss of elasticity (compression set)',
-            'Extrusion failure from excessive system pressure'
+            'Extrusion failure from excessive system pressure, assuming the material remains in the linear elastic regime throughout the loading cycle'
           ],
           correctIndex: 2,
           explanation: 'Elastomer thermal aging is a time-temperature dependent process. At elevated temperatures, rubber undergoes chemical changes: additional crosslinking (hardening), chain scission (softening), or oxidation. NBR (nitrile rubber), common in hydraulic seals, has a maximum continuous service temperature of about 100-120°C. At 120°C, accelerated aging causes permanent compression set (the seal no longer springs back), hardening, and eventual cracking. The Arrhenius rate law applies: every 10°C increase roughly doubles the degradation rate. Fix: use FKM (Viton) seals rated to 200°C for this application.',
@@ -617,10 +617,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'In failure analysis, what is the primary purpose of performing a Scanning Electron Microscope (SEM) examination of the fracture surface?',
           options: [
-            'To determine the chemical composition of the failed material',
-            'To measure the hardness of the fracture surface accurately',
+            'To determine the chemical composition of the failed material — which contradicts established test results',
+            'To measure the hardness of the fracture surface accurately, but this applies only under ideal conditions',
             'To identify microscopic fracture features (striations, dimples, cleavage, intergranular facets) that reveal the failure mechanism',
-            'To measure the exact crack length for stress intensity calculations'
+            'To measure the exact crack length for stress intensity calculations, which limits its practical applicability'
           ],
           correctIndex: 2,
           explanation: 'SEM fractography reveals microscopic features that identify the failure mechanism: fatigue striations (each marking one load cycle), ductile dimples (microvoid coalescence from overload), cleavage facets (brittle fracture along crystallographic planes), and intergranular facets (creep, temper embrittlement, or SCC). While SEM with EDS (Energy Dispersive Spectroscopy) can also provide chemical composition, the primary fractographic purpose is mechanism identification. Optical microscopy cannot resolve features below ~1 micron, making SEM essential for detailed failure analysis.',
@@ -639,9 +639,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A pump shaft shows spiral 45-degree fracture lines on its surface. What type of loading caused this failure?',
           options: [
-            'Pure bending — spiral lines indicate reversed bending',
+            'Pure bending — spiral lines indicate reversed bending, though corrosion effects can modify this outcome',
             'Combined bending and torsion — the spiral indicates multi-axial loading exclusively',
-            'Pure axial compression — the shaft buckled in a spiral pattern',
+            'Pure axial compression — the shaft buckled in a spiral pattern, without considering time-dependent effects',
             'Pure torsion — the 45-degree spiral follows the plane of maximum tensile stress under torsional loading'
 
           ],
@@ -654,10 +654,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An aluminum alloy aircraft component is found to have cracks during routine NDT inspection. The cracks are branching, intergranular, and oriented perpendicular to the rolling direction. The alloy is a high-strength 7xxx series. What is the likely mechanism?',
           options: [
-            'Fatigue cracking from flight cycle loads',
+            'Fatigue cracking from flight cycle loads, which is rarely the dominant factor in practice',
             'Stress corrosion cracking (SCC) in the short-transverse direction of the high-strength Al-Zn-Mg-Cu alloy',
-            'Creep damage from sustained loading at altitude temperatures',
-            'Manufacturing defect from the rolling process'
+            'Creep damage from sustained loading at altitude temperatures — an approximation that loses accuracy outside a narrow parameter range',
+            'Manufacturing defect from the rolling process — an oversimplification of the real process'
           ],
           correctIndex: 1,
           explanation: '7xxx series aluminum alloys (Al-Zn-Mg-Cu) in peak-aged tempers (T6) are highly susceptible to SCC in the short-transverse (ST) direction. Grain boundary precipitates and the elongated grain structure from rolling create a preferential path for intergranular SCC. The SCC occurs under sustained tensile stress (residual stresses from machining or assembly) in the presence of moisture. This is why aerospace uses overaged tempers (T73, T76) that sacrifice some strength for dramatically improved SCC resistance. Orientation of stresses relative to grain flow is critical in design.',
@@ -678,9 +678,9 @@ export const unit10: Unit = {
           question: 'During investigation of a failed stainless steel heat exchanger tube, you find pitting concentrated on the waterside surface. The pits are deep relative to their width. What environmental factor most likely triggered the pitting?',
           options: [
             'Stagnant conditions with chloride-containing water that broke down the passive film locally',
-            'High water velocity causing erosion-corrosion',
+            'High water velocity causing erosion-corrosion, particularly at elevated loads',
             'Elevated pH (alkaline conditions) dissolving the chromium oxide layer',
-            'Galvanic coupling with the tube sheet material'
+            'Galvanic coupling with the tube sheet material, across the full gauge length'
 
           ],
           correctIndex: 0,
@@ -692,10 +692,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A cast iron component broke cleanly with no visible deformation. The fracture surface appears dark gray and granular. What can you conclude about the material and failure mode?',
           options: [
-            'The component was ductile iron that failed by fatigue',
+            'The component was ductile iron that failed by fatigue — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
             'The dark gray granular surface indicates a brittle fracture through graphite flakes in gray cast iron, which has near-zero ductility and fractures without warning',
-            'The dark color indicates high-temperature oxidation damage',
-            'The granular texture indicates intergranular corrosion'
+            'The dark color indicates high-temperature oxidation damage — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
+            'The granular texture indicates intergranular corrosion — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause'
           ],
           correctIndex: 1,
           explanation: 'Gray cast iron contains graphite in flake form, which acts as stress concentrators and crack propagation paths. The fracture surface appears gray because of the exposed graphite. Gray iron has very low ductility (<1% elongation) and fractures in a brittle manner without visible deformation. The granular texture comes from the brittle fracture following graphite flakes and pearlite/ferrite colonies. In contrast, ductile (nodular) iron would show more deformation and a lighter-colored fracture surface. This is why gray iron is not used for impact-loaded or safety-critical structural applications.',
@@ -714,10 +714,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You receive a failed spring from the field. It broke into two pieces. How do you determine whether it failed by fatigue or by overload (single event)?',
           options: [
-            'If the spring was in service for more than a year, it must be fatigue',
+            'If the spring was in service for more than a year, it must be fatigue, assuming the material remains in the linear elastic regime throughout the loading cycle',
             'Examine the fracture surfaces for beach marks or a flat-to-rough transition (fatigue) versus shear lips and necking (ductile overload) or a flat granular surface (brittle overload)',
-            'Measure the spring rate — if it is within spec, it was overload; if degraded, it was fatigue',
-            'Chemical analysis of the wire will reveal the failure mode'
+            'Measure the spring rate — if it is within spec, it was overload; if degraded, it was fatigue — which misidentifies the root cause of the observed engineering behavior',
+            'Chemical analysis of the wire will reveal the failure mode, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="26" y="4" width="28" height="6" rx="3" fill="#58CC02" opacity="0.15"/> <circle cx="40" cy="12" r="3" fill="#3B8700"/> <polyline stroke="#58CC02" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"> <animate attributeName="points" dur="2.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" values=" 40,14 40,17 28,21 52,25 28,29 52,33 28,37 52,41 28,45 52,49 28,53 52,57 40,61 40,64; 40,14 40,18 28,24 52,30 28,36 52,42 28,48 52,54 28,60 52,66 28,72 52,78 40,82 40,84; 40,14 40,17 28,21 52,25 28,29 52,33 28,37 52,41 28,45 52,49 28,53 52,57 40,61 40,64 "/> </polyline> <g> <animateTransform attributeName="transform" type="translate" values="0,0;0,20;0,0" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/> <rect x="26" y="64" width="28" height="6" rx="3" fill="#58CC02" opacity="0.15"/> <rect x="26" y="64" width="28" height="6" rx="3" stroke="#3B8700" stroke-width="1.5" fill="none"/> </g> <text x="22" y="42" font-size="8" fill="#3B8700" font-style="italic" opacity="0.35">k</text> </svg>',
@@ -729,9 +729,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A newly installed gearbox produces metallic particles in the oil during the first 100 hours of operation, then particle generation drops significantly. Is this a failure?',
           options: [
-            'Yes — any metallic particles indicate destructive wear requiring immediate shutdown',
-            'No — metallic particles in oil are normal throughout the entire service life',
-            'Yes — the gears are undersized and wearing out rapidly',
+            'Yes — any metallic particles indicate destructive wear requiring immediate shutdown, without considering time-dependent effects',
+            'No — metallic particles in oil are normal throughout the entire service life — an oversimplification of the real process',
+            'Yes — the gears are undersized and wearing out rapidly, assuming uniform property distribution through the thickness without any processing-induced gradients',
             'No — this is likely normal break-in (running-in) wear where surface asperities are smoothed out, which decreases as surfaces conform'
 
           ],
@@ -752,10 +752,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A steel bridge component shows uniform wall thickness reduction of about 15% after 20 years of service. No cracking is present. What is the degradation mechanism and how should it be managed?',
           options: [
-            'Fatigue damage — replace the component immediately',
+            'Fatigue damage — replace the component immediately, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved',
             'General (uniform) corrosion — calculate the remaining wall thickness against the minimum required, estimate the remaining life using the measured corrosion rate, and schedule replacement accordingly',
-            'Erosion from wind loading — add aerodynamic fairings',
-            'Creep deformation — bridge steels do not experience this at ambient temperature'
+            'Erosion from wind loading — add aerodynamic fairings, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
+            'Creep deformation — bridge steels do not experience this at ambient temperature, which is valid only when the applied stress remains well below the proportional limit of the material'
           ],
           correctIndex: 1,
           explanation: 'Uniform corrosion causes gradual, even wall thickness reduction. Management approach: (1) Measure current thickness by UT (ultrasonic testing) at multiple locations. (2) Calculate corrosion rate: 15% loss over 20 years. (3) Determine minimum allowable thickness from structural calculations. (4) Calculate remaining life: (current thickness - minimum) / corrosion rate. (5) Schedule repair or replacement with adequate lead time. Also evaluate whether improved coatings or cathodic protection could extend life. This fitness-for-service assessment follows API 579 / BS 7910 methodologies.',
@@ -766,10 +766,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When performing a failure analysis, which of the following steps should be done FIRST, before any destructive testing?',
           options: [
-            'Cut the failed part to examine the cross-section microstructure',
-            'Perform hardness testing on the fracture surface to check material strength',
+            'Cut the failed part to examine the cross-section microstructure — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
+            'Perform hardness testing on the fracture surface to check material strength, which is rarely the dominant factor in practice',
             'Photograph and document everything, preserve the fracture surfaces, and record the as-found condition including surrounding components and environment',
-            'Clean the fracture surfaces with solvent to get a better view'
+            'Clean the fracture surfaces with solvent to get a better view — a plausible but incorrect interpretation of the underlying physics'
           ],
           correctIndex: 2,
           explanation: 'Documentation and preservation must always come first. Once you cut, clean, or test destructively, evidence is permanently lost. Proper first steps: (1) Photograph the failed part in situ (as-found). (2) Document surrounding conditions (temperature, corrosion products, fluid contamination, loading configuration). (3) Protect fracture surfaces (do NOT touch, clean, or fit them together — this damages microscopic features). (4) Label and catalog all pieces. (5) Collect service records, maintenance history, and loading data. Only after thorough documentation should you proceed to non-destructive testing (NDT), then destructive testing (metallography, SEM, chemical analysis).',
@@ -798,10 +798,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer says: "I need to select a material for a lightweight stiff beam. Steel has E = 200 GPa and density 7850 kg/m^3. Aluminum has E = 70 GPa and density 2700 kg/m^3. Which is better for a bending beam?" What is the correct reasoning?',
           options: [
-            'Steel — it has 3x the stiffness of aluminum, so less material is needed',
-            'Aluminum — it is lighter and stiffness does not matter for beams',
+            'Steel — it has 3x the stiffness of aluminum, so less material is needed — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here',
+            'Aluminum — it is lighter and stiffness does not matter for beams, though experimental data shows this correlation breaks down at extreme operating conditions',
             'For a beam in bending, the material index is E^(1/2)/rho; aluminum has a slight advantage (3.10 vs 1.80), but increasing beam depth matters more because I scales with h^3',
-            'They are identical because E/rho is the same for both metals'
+            'They are identical because E/rho is the same for both metals, but the predominant failure mechanism under these conditions is fundamentally different'
           ],
           correctIndex: 2,
           explanation: 'For minimum-weight design, the correct material index depends on the loading mode. Tension/compression: E/rho (steel and aluminum are nearly equal at ~25.5). Beam bending: E^(1/2)/rho (aluminum wins: sqrt(70)/2.7 = 3.10 vs sqrt(200)/7.85 = 1.80). Plate bending: E^(1/3)/rho (aluminum wins more). But the deeper insight is that for bending, increasing beam depth (h) is far more effective than changing material, because I = bh^3/12. This is why I-beams are deep and thin, not short and thick.',
@@ -812,10 +812,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A Pugh matrix is used for concept selection. What is its key advantage over other decision methods?',
           options: [
-            'It provides exact numerical optimization of design parameters',
+            'It provides exact numerical optimization of design parameters, which limits its practical applicability',
             'It enables systematic comparison of multiple design concepts against weighted criteria relative to a baseline (datum) design',
-            'It eliminates the need for engineering judgment in design selection',
-            'It automatically generates the optimal design solution'
+            'It eliminates the need for engineering judgment in design selection — typically a minor contributing factor',
+            'It automatically generates the optimal design solution — though this factor is secondary to the actual governing mechanism'
           ],
           correctIndex: 1,
           explanation: 'The Pugh matrix compares design concepts against a reference (datum) design using criteria scored as better (+), same (S), or worse (-). Advantages: it forces explicit evaluation of each concept against multiple criteria, identifies the strongest concepts, and often reveals hybrid solutions by combining the best features of top-ranked concepts. It does not eliminate judgment — the criteria selection and weighting still require engineering experience.',
@@ -835,9 +835,9 @@ export const unit10: Unit = {
           question: 'An interviewer asks: "You need to reduce the cost of a machined part by 30%. Walk me through your approach." Which response demonstrates the best engineering thinking?',
           options: [
             'Systematically analyze material cost, tolerance relaxation on non-critical features, machining setup reduction, and potential process change such as casting plus finish machining',
-            'Reduce all tolerances by 30% to decrease machining time proportionally',
-            'Use cheaper material — this is always the biggest cost driver',
-            'Switch to 3D printing — additive manufacturing is always cheaper than machining'
+            'Reduce all tolerances by 30% to decrease machining time proportionally — an incomplete explanation that overlooks the dominant contributing factor',
+            'Use cheaper material — this is always the biggest cost driver — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
+            'Switch to 3D printing — additive manufacturing is always cheaper than machining, but this applies only to a narrow range of material compositions and temperatures'
 
           ],
           correctIndex: 0,
@@ -850,9 +850,9 @@ export const unit10: Unit = {
           question: 'You are designing a consumer product bracket. Production volume is 50,000 units/year. How do you approach material and process selection among sheet metal, die casting, and injection-molded plastic?',
           options: [
             'Evaluate each option against functional requirements, then compare unit cost at volume, lead time, and secondary operations; the answer depends on specific performance needs',
-            'Always choose the strongest material — die cast aluminum guarantees structural performance',
-            'Always choose the cheapest material — injection-molded plastic is the obvious answer',
-            'Pick whatever the previous product version used — changing materials is too risky'
+            'Always choose the strongest material — die cast aluminum guarantees structural performance, which is valid only when the applied stress remains well below the proportional limit of the material',
+            'Always choose the cheapest material — injection-molded plastic is the obvious answer — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
+            'Pick whatever the previous product version used — changing materials is too risky — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause'
 
           ],
           correctIndex: 0,
@@ -873,9 +873,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When selecting between a bolted joint and a welded joint for a structural connection, which factor most favors bolting over welding?',
           options: [
-            'Bolts are always stronger than welds of equivalent size',
-            'Bolted joints eliminate the need for stress analysis',
-            'Bolts are always cheaper than welding regardless of production volume',
+            'Bolts are always stronger than welds of equivalent size, verified against reference specimens of known properties',
+            'Bolted joints eliminate the need for stress analysis, though corrosion effects can modify this outcome',
+            'Bolts are always cheaper than welding regardless of production volume, under standard conditions',
             'Bolted joints allow disassembly for maintenance, inspection, and field repair without specialized equipment'
 
           ],
@@ -888,10 +888,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An Ashby chart shows that CFRP composites have higher specific strength (strength/density) than steel. Why is CFRP not used for all structural applications?',
           options: [
-            'CFRP actually has lower strength than steel in all loading modes',
+            'CFRP actually has lower strength than steel in all loading modes — though this factor is secondary to the actual governing mechanism',
             'Cost is much higher, properties are anisotropic, joints are challenging, impact tolerance is lower, recycling is difficult, and temperature range is limited',
-            'CFRP cannot be manufactured in large sizes',
-            'CFRP degrades within a few years regardless of environment'
+            'CFRP cannot be manufactured in large sizes, but the predominant failure mechanism under these conditions is fundamentally different',
+            'CFRP degrades within a few years regardless of environment, but this applies only to a narrow range of material compositions and temperatures'
           ],
           correctIndex: 1,
           explanation: 'CFRP has excellent specific properties but significant trade-offs: (1) Cost is 10-50x steel per kg. (2) Properties are highly anisotropic — strong along fibers, weak transverse. (3) Joining is challenging — no welding, adhesive bonds or mechanical fasteners with careful washer design. (4) Low impact tolerance — delamination from minor impacts. (5) Temperature limited to ~180°C for most epoxy matrices. (6) Recycling is economically difficult. (7) Requires specialized manufacturing (autoclave curing). These trade-offs make CFRP optimal for aerospace, racing, and high-end sporting goods, but uneconomical for most structural applications.',
@@ -910,9 +910,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are designing a gear and must choose between through-hardened steel and case-hardened (carburized) steel. What is the key trade-off?',
           options: [
-            'Through-hardened is always superior because the entire gear is uniformly strong',
-            'Through-hardened gears never require any heat treatment',
-            'Case-hardened steel is only used for decorative applications',
+            'Through-hardened is always superior because the entire gear is uniformly strong — though this factor is secondary to the actual governing mechanism',
+            'Through-hardened gears never require any heat treatment — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
+            'Case-hardened steel is only used for decorative applications — an incomplete explanation that overlooks the dominant contributing factor',
             'Case-hardened provides a hard, wear-resistant surface with a tough, shock-absorbing core — ideal for gears that need both surface hardness and impact resistance'
 
           ],
@@ -927,9 +927,9 @@ export const unit10: Unit = {
           question: 'An interviewer asks: "Should we use a casting or a machined-from-billet approach for this aluminum housing?" The production volume is 200 units/year. What is the best analysis?',
           options: [
             'At 200 units/year, machining from billet likely wins because casting tooling cost ($15-50K) amortized over few parts makes per-unit tooling cost high, whereas CNC programming cost is low; evaluate the break-even volume',
-            'Always machine from billet — it produces better quality',
-            'Always cast — it uses less material than machining from billet',
-            'The decision depends only on the part weight — lighter parts should be machined'
+            'Always machine from billet — it produces better quality, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
+            'Always cast — it uses less material than machining from billet, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'The decision depends only on the part weight — lighter parts should be machined — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause'
 
           ],
           correctIndex: 0,
@@ -949,10 +949,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'In designing a heat exchanger, what is the primary trade-off when increasing the number of tubes or fins?',
           options: [
-            'More tubes always improve performance with no downside',
+            'More tubes always improve performance with no downside, without considering time-dependent effects',
             'More surface area increases heat transfer but also increases pressure drop, pumping cost, weight, and manufacturing complexity',
-            'Adding fins reduces heat transfer because they block airflow',
-            'The number of tubes has no effect on heat transfer rate'
+            'Adding fins reduces heat transfer because they block airflow, without considering time-dependent effects',
+            'The number of tubes has no effect on heat transfer rate — an approximation that loses accuracy outside a narrow parameter range'
           ],
           correctIndex: 1,
           explanation: 'Heat exchanger design involves a fundamental trade-off: more surface area (tubes, fins) increases heat transfer capacity (Q = U*A*LMTD) but also increases pressure drop (higher pumping/fan power), weight, size, and cost. The designer must optimize the total cost of ownership: capital cost (heat exchanger) + operating cost (pumping energy) + maintenance cost. Fin efficiency decreases with fin length (temperature drops along the fin), so there is a diminishing return. The optimal design balances thermal performance against these constraints.',
@@ -963,10 +963,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are selecting a bearing for a high-speed, lightly loaded spindle application. What type of bearing is most appropriate?',
           options: [
-            'Tapered roller bearing — it can handle both radial and axial loads',
-            'Spherical roller bearing — it can accommodate misalignment',
+            'Tapered roller bearing — it can handle both radial and axial loads, valid only for isotropic material behavior',
+            'Spherical roller bearing — it can accommodate misalignment, though this interpretation oversimplifies the actual mechanism involved',
             'Angular contact ball bearing — it has low friction at high speed, handles combined loads, and can be preloaded for spindle stiffness',
-            'Needle roller bearing — it has the smallest radial profile'
+            'Needle roller bearing — it has the smallest radial profile — which misidentifies the root cause of the observed engineering behavior'
           ],
           correctIndex: 2,
           explanation: 'For high-speed spindle applications, angular contact ball bearings are the standard choice because: (1) Ball contact has lower friction than roller contact at high speeds, generating less heat. (2) Angular contact geometry handles both radial and axial loads. (3) They can be preloaded (back-to-back or face-to-face pairs) to eliminate play and increase stiffness — critical for precision spindles. (4) Ceramic (Si3N4) balls further improve speed capability by reducing centrifugal forces and friction. Roller bearings are preferred for heavy loads but their higher friction limits speed.',
@@ -986,10 +986,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When designing a snap-fit feature for a plastic enclosure, what is the critical design trade-off?',
           options: [
-            'Snap-fits have no design trade-offs — they always replace screws',
+            'Snap-fits have no design trade-offs — they always replace screws, which would require additional verification through destructive testing of representative samples',
             'The deflection must be large enough for secure engagement but small enough to avoid exceeding the material strain limit, which is typically 2-5% for unfilled polymers',
-            'Snap-fits can only be used with flexible materials like rubber',
-            'The only consideration is the ejection angle for the injection mold'
+            'Snap-fits can only be used with flexible materials like rubber — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
+            'The only consideration is the ejection angle for the injection mold, provided the test specimen geometry conforms to the requirements specified in the standard'
           ],
           correctIndex: 1,
           explanation: 'Snap-fit design balances engagement force, retention force, and material strain. The cantilever snap-fit strain is approximately epsilon = 1.5*t*y/L^2 (where t is beam thickness, y is deflection, L is length). Most unfilled polymers can tolerate 2-5% strain during assembly (momentary). Too much deflection causes permanent deformation or fracture. Too little creates a weak connection. Additional trade-offs: reusability (smooth ramp allows repeated opening), tooling complexity (undercuts may require side actions), and creep (polymers relax under sustained deflection, reducing retention over time).',
@@ -1001,9 +1001,9 @@ export const unit10: Unit = {
           question: 'An interviewer presents two design options for a pressure vessel: Option A uses 10 mm thick carbon steel, Option B uses 6 mm thick stainless steel. Both meet the pressure requirement. Which factors should drive the decision?',
           options: [
             'Evaluate total cost (material + fabrication + coating/maintenance), corrosion allowance needs, weight constraints, process fluid compatibility, and lifecycle cost including inspection and downtime',
-            'Always choose carbon steel because it is cheaper per kilogram',
-            'Always choose the thinner option because it uses less material',
-            'Choose based solely on which material has higher yield strength'
+            'Always choose carbon steel because it is cheaper per kilogram, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
+            'Always choose the thinner option because it uses less material — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
+            'Choose based solely on which material has higher yield strength, but industry experience indicates this factor plays only a minor role in the overall performance'
 
           ],
           correctIndex: 0,
@@ -1024,9 +1024,9 @@ export const unit10: Unit = {
           question: 'You must choose between a permanent mold (gravity die) casting and a sand casting for an aluminum component. What is the primary trade-off?',
           options: [
             'Permanent mold casting gives better surface finish, tighter tolerances, and finer grain structure but has higher tooling cost and is limited in part complexity compared to sand casting',
-            'Sand casting always costs less regardless of production volume',
-            'Permanent mold always produces better parts regardless of geometry',
-            'The two processes produce identical results and are fully interchangeable'
+            'Sand casting always costs less regardless of production volume, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'Permanent mold always produces better parts regardless of geometry, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'The two processes produce identical results and are fully interchangeable, which does not account for the microstructural changes occurring at these conditions'
 
           ],
           correctIndex: 0,
@@ -1038,9 +1038,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'In topology optimization, what is the typical workflow and the key limitation that engineers must address before manufacturing the result?',
           options: [
-            'Topology optimization produces manufacturing-ready designs that can be directly fabricated',
-            'It only works for 2D planar problems and cannot handle 3D geometries',
-            'Topology optimization is only used for aesthetic design, not structural applications',
+            'Topology optimization produces manufacturing-ready designs that can be directly fabricated, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
+            'It only works for 2D planar problems and cannot handle 3D geometries, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'Topology optimization is only used for aesthetic design, not structural applications — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
             'The software defines loads and constraints, then iteratively removes material from low-stress regions; the result must be interpreted and redesigned for manufacturability since organic shapes may not be directly castable or machinable'
 
           ],
@@ -1062,10 +1062,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When designing a shaft coupling, what is the primary trade-off between a rigid coupling and a flexible coupling?',
           options: [
-            'Rigid couplings are always preferred because they transmit more torque',
-            'Flexible couplings are always preferred because they are easier to install',
+            'Rigid couplings are always preferred because they transmit more torque, which is valid only when the applied stress remains well below the proportional limit of the material',
+            'Flexible couplings are always preferred because they are easier to install — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
             'Rigid couplings transmit torque without loss but require precise alignment; flexible couplings accommodate misalignment and dampen vibration but introduce compliance and may limit torque capacity',
-            'There is no meaningful difference between rigid and flexible couplings'
+            'There is no meaningful difference between rigid and flexible couplings — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause'
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Left shaft --> <rect x="2" y="36" width="24" height="8" rx="4" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.25"/> <!-- Right shaft --> <rect x="54" y="36" width="24" height="8" rx="4" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.25"/> <!-- Left flange (rotating) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,30,40;360,30,40" dur="2s" repeatCount="indefinite"/> <circle cx="30" cy="40" r="16" fill="#58CC02" opacity="0.08"/> <circle cx="30" cy="40" r="16" stroke="#58CC02" stroke-width="2" fill="none"/> <!-- Bolt holes --> <circle cx="30" cy="27" r="2.5" fill="#3B8700" opacity="0.25"/> <circle cx="43" cy="40" r="2.5" fill="#3B8700" opacity="0.25"/> <circle cx="30" cy="53" r="2.5" fill="#3B8700" opacity="0.25"/> <circle cx="17" cy="40" r="2.5" fill="#3B8700" opacity="0.25"/> </g> <circle cx="30" cy="40" r="4" fill="#3B8700"/> <!-- Right flange (rotating together) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,50,40;360,50,40" dur="2s" repeatCount="indefinite"/> <circle cx="50" cy="40" r="16" fill="#58CC02" opacity="0.06"/> <circle cx="50" cy="40" r="16" stroke="#A5E86C" stroke-width="2" fill="none" opacity="0.3"/> <!-- Bolt holes (matching) --> <circle cx="50" cy="27" r="2.5" fill="#58CC02" opacity="0.2"/> <circle cx="63" cy="40" r="2.5" fill="#58CC02" opacity="0.2"/> <circle cx="50" cy="53" r="2.5" fill="#58CC02" opacity="0.2"/> <circle cx="37" cy="40" r="2.5" fill="#58CC02" opacity="0.2"/> </g> <circle cx="50" cy="40" r="4" fill="#3B8700" opacity="0.6"/> <!-- Center connection line --> <line x1="38" y1="40" x2="42" y2="40" stroke="#3B8700" stroke-width="2" stroke-linecap="round" opacity="0.3"/> <text x="40" y="72" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.18" font-style="italic">flange coupling</text> </svg>',
@@ -1085,9 +1085,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer asks about the trade-offs of using adhesive bonding vs. mechanical fasteners for joining sheet metal parts. What is the most complete analysis?',
           options: [
-            'Adhesives are always weaker than mechanical fasteners and should only be used for non-structural applications',
-            'Mechanical fasteners always produce superior joint quality',
-            'The only difference is cost — adhesives are always cheaper than fasteners',
+            'Adhesives are always weaker than mechanical fasteners and should only be used for non-structural applications, provided the test specimen geometry conforms to the requirements specified in the standard',
+            'Mechanical fasteners always produce superior joint quality — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
+            'The only difference is cost — adhesives are always cheaper than fasteners, provided the test specimen geometry conforms to the requirements specified in the standard',
             'Adhesives distribute stress over a large area, add no weight, and seal the joint, but are sensitive to surface preparation, temperature, peel/cleavage loading, and do not allow easy disassembly'
 
           ],
@@ -1100,10 +1100,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When choosing between a gear drive and a belt drive for a power transmission application, what factors favor the belt drive?',
           options: [
-            'Belt drives are more efficient than gear drives in all applications',
+            'Belt drives are more efficient than gear drives in all applications, assuming uniform property distribution through the thickness without any processing-induced gradients',
             'Belt drives provide shock absorption, accommodate larger shaft distances, are quieter, and cost less, but have lower efficiency, limited ratio range, and require periodic tension adjustment',
-            'Belt drives can transmit higher torques than gear drives',
-            'Belt drives require no maintenance whatsoever'
+            'Belt drives can transmit higher torques than gear drives — however, standard engineering analysis methods and field experience both point to a different conclusion',
+            'Belt drives require no maintenance whatsoever — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <g> <animateTransform attributeName="transform" type="rotate" values="0,22,40;360,22,40" dur="2s" repeatCount="indefinite"/> <circle cx="22" cy="40" r="14" fill="#58CC02" opacity="0.1"/> <circle cx="22" cy="40" r="14" stroke="#58CC02" stroke-width="2.5" fill="none"/> <line x1="22" y1="26" x2="22" y2="54" stroke="#3B8700" stroke-width="1" opacity="0.25"/> <line x1="8" y1="40" x2="36" y2="40" stroke="#3B8700" stroke-width="1" opacity="0.25"/> </g> <circle cx="22" cy="40" r="4" fill="#3B8700"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,58,40;360,58,40" dur="2s" repeatCount="indefinite"/> <circle cx="58" cy="40" r="11" fill="#58CC02" opacity="0.1"/> <circle cx="58" cy="40" r="11" stroke="#58CC02" stroke-width="2.5" fill="none"/> <line x1="58" y1="29" x2="58" y2="51" stroke="#3B8700" stroke-width="1" opacity="0.25"/> <line x1="47" y1="40" x2="69" y2="40" stroke="#3B8700" stroke-width="1" opacity="0.25"/> </g> <circle cx="58" cy="40" r="3.5" fill="#3B8700"/> <line x1="22" y1="26" x2="58" y2="29" stroke="#3B8700" stroke-width="3" opacity="0.35" stroke-linecap="round"/> <line x1="22" y1="54" x2="58" y2="51" stroke="#3B8700" stroke-width="3" opacity="0.35" stroke-linecap="round"/> <circle r="2.5" fill="#3B8700" opacity="0.5"> <animateMotion dur="2s" repeatCount="indefinite" path="M22,26 L58,29"/> </circle> <circle r="2.5" fill="#3B8700" opacity="0.5"> <animateMotion dur="2s" repeatCount="indefinite" path="M22,26 L58,29" begin="0.5s"/> </circle> <circle r="2.5" fill="#3B8700" opacity="0.5"> <animateMotion dur="2s" repeatCount="indefinite" path="M58,51 L22,54"/> </circle> <circle r="2.5" fill="#3B8700" opacity="0.5"> <animateMotion dur="2s" repeatCount="indefinite" path="M58,51 L22,54" begin="0.5s"/> </circle> </svg>',
@@ -1115,10 +1115,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'In lightweight design, the concept of "buy-to-fly ratio" in aerospace manufacturing refers to what trade-off?',
           options: [
-            'The ratio of purchased parts to custom-made parts in an aircraft',
+            'The ratio of purchased parts to custom-made parts in an aircraft, assuming uniform property distribution through the thickness without any processing-induced gradients',
             'The ratio of raw material weight purchased to the weight of the finished part that actually flies — high ratios mean significant material waste from machining',
-            'The ratio of fuel cost to ticket revenue per flight',
-            'The ratio of design time to manufacturing time for each component'
+            'The ratio of fuel cost to ticket revenue per flight — however, standard engineering analysis methods and field experience both point to a different conclusion',
+            'The ratio of design time to manufacturing time for each component — however, standard engineering analysis methods and field experience both point to a different conclusion'
           ],
           correctIndex: 1,
           explanation: 'Buy-to-fly ratio = weight of raw material / weight of finished part. In aerospace machining, this ratio can be 10:1 to 20:1, meaning 90-95% of the purchased material becomes chips (waste). For a 10 kg structural component machined from a 150 kg billet, the buy-to-fly ratio is 15:1. This drives interest in near-net-shape manufacturing: forgings (3-5:1), castings (2-4:1), and additive manufacturing (1.5-2:1). The trade-off: near-net-shape processes have higher tooling costs or slower production rates but dramatically reduce material waste for expensive aerospace alloys (titanium at $30-100/kg).',
@@ -1137,10 +1137,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are comparing aluminum 6061-T6 and aluminum 7075-T6 for a structural application. What is the key trade-off?',
           options: [
-            '7075 is superior in every way and should always replace 6061',
-            '6061 and 7075 have identical properties — the choice does not matter',
+            '7075 is superior in every way and should always replace 6061, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
+            '6061 and 7075 have identical properties — the choice does not matter — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
             '7075-T6 has higher strength (UTS 570 vs 310 MPa) but lower corrosion resistance, worse weldability, higher cost, and greater stress corrosion cracking susceptibility compared to 6061-T6',
-            '6061 is stronger than 7075 but heavier'
+            '6061 is stronger than 7075 but heavier — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms'
           ],
           correctIndex: 2,
           explanation: '7075-T6 (Al-Zn-Mg-Cu) is nearly twice as strong as 6061-T6 (Al-Mg-Si) but with significant trade-offs: poorer corrosion resistance (requires anodizing or cladding), not readily weldable (loses temper properties in HAZ), susceptibility to SCC in the short-transverse direction, higher cost, and fewer available product forms. 6061-T6 is the workhorse alloy: good strength, excellent corrosion resistance, weldable (with proper filler), widely available, and economical. For most applications, 6061 is sufficient; 7075 is reserved for high-stress applications where weight is critical (aerospace, bicycle frames, rock-climbing equipment).',
@@ -1151,9 +1151,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When designing a product for both performance and serviceability, which design principle should guide the location of wear parts?',
           options: [
-            'Wear parts should be permanently attached to minimize assembly tolerance stack-up',
-            'Wear parts should be integrated into the main structure for maximum rigidity',
-            'Wear parts are unnecessary if the right material is selected initially',
+            'Wear parts should be permanently attached to minimize assembly tolerance stack-up — a plausible but incorrect interpretation of the underlying physics',
+            'Wear parts should be integrated into the main structure for maximum rigidity — this reasoning applies only under idealized conditions not found in service',
+            'Wear parts are unnecessary if the right material is selected initially — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
             'Wear parts should be separate, easily accessible replaceable components that protect more expensive assemblies and can be changed without special tools or extensive disassembly'
 
           ],
@@ -1184,10 +1184,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'In an FEA stress analysis, you observe that the maximum stress at a sharp re-entrant corner keeps increasing as you refine the mesh. What is your response?',
           options: [
-            'The stress is extremely high and increasing — the part will definitely fail there',
-            'The model has diverged and all results are invalid — start over with different settings',
+            'The stress is extremely high and increasing — the part will definitely fail there — which misidentifies the root cause of the observed engineering behavior',
+            'The model has diverged and all results are invalid — start over with different settings, though this reasoning neglects the dominant physical mechanism that actually controls the behavior',
             'The sharp corner creates a stress singularity where theoretical elastic stress is infinite; add a fillet radius to get a convergent result, or evaluate stress slightly away from the corner',
-            'Just use the stress from the coarsest mesh — that is the most conservative answer'
+            'Just use the stress from the coarsest mesh — that is the most conservative answer — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms'
           ],
           correctIndex: 2,
           explanation: 'Sharp re-entrant corners create stress singularities where the theoretical elastic stress is mathematically infinite. As the mesh is refined, FEA increasingly captures this singularity and the peak stress grows without bound — it never converges. This does NOT mean the real part will fail there, because: (1) real parts have small fillet radii, not infinitely sharp corners, (2) local plasticity limits the actual stress, and (3) the stress drops rapidly away from the singularity. The engineering response: add the actual fillet radius, evaluate stress at a distance from the corner, or use sub-modeling.',
@@ -1198,10 +1198,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are modeling a bolted joint in FEA. Which approach is most appropriate for structural-level analysis where you need stress distribution in the joined parts?',
           options: [
-            'Model every thread of every bolt with fine mesh for maximum accuracy',
+            'Model every thread of every bolt with fine mesh for maximum accuracy, excluding contributions from residual stresses',
             'Use beam elements or rigid connectors with appropriate preload, connected to flanges via contact or coupling constraints',
-            'Ignore the bolts entirely and model the joint as a continuous body',
-            'Apply a fixed boundary condition at all bolt hole locations'
+            'Ignore the bolts entirely and model the joint as a continuous body, across the full gauge length',
+            'Apply a fixed boundary condition at all bolt hole locations, based on simplified assumptions about loading'
           ],
           correctIndex: 1,
           explanation: 'Modeling individual bolt threads is computationally expensive and unnecessary for structural analysis. Beam elements or connector elements (with preload) accurately capture load transfer and stiffness while keeping model size manageable. They connect to flange surfaces via coupling constraints. Ignoring bolts loses the preload and clamping effects. Fixed BCs at bolt holes overconstrain the model. Detailed thread modeling is only justified for bolt fatigue or thread failure studies.',
@@ -1221,9 +1221,9 @@ export const unit10: Unit = {
           question: 'A colleague shows you an FEA result of a bracket with a maximum von Mises stress of 350 MPa in 6061-T6 aluminum (yield = 276 MPa). They conclude the bracket will fail. Is their conclusion correct?',
           options: [
             'First check WHERE the 350 MPa occurs: if at a singularity the value is an artifact; if at a real fillet, check if local yielding is acceptable; also verify boundary conditions and mesh convergence',
-            'Yes — stress exceeds yield, so the bracket will definitely break',
-            'No — von Mises stress is not relevant for aluminum, use maximum principal stress',
-            'Yes — any FEA stress above yield means immediate failure in all cases'
+            'Yes — stress exceeds yield, so the bracket will definitely break, assuming uniform property distribution through the thickness without any processing-induced gradients',
+            'No — von Mises stress is not relevant for aluminum, use maximum principal stress — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
+            'Yes — any FEA stress above yield means immediate failure in all cases — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here'
 
           ],
           correctIndex: 0,
@@ -1235,9 +1235,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'After running an FEA analysis, you check the reaction forces at the boundary conditions. They sum to 450 N, but the total applied load is 500 N. What does this indicate?',
           options: [
-            'The analysis is correct — a 10% imbalance is normal and acceptable',
-            'This is expected due to stress stiffening effects in the material model',
-            'The missing 50 N was absorbed by material damping in the analysis',
+            'The analysis is correct — a 10% imbalance is normal and acceptable, when assessed under quasi-static test conditions',
+            'This is expected due to stress stiffening effects in the material model — typically a minor contributing factor',
+            'The missing 50 N was absorbed by material damping in the analysis, without considering time-dependent effects',
             'There is a force equilibrium error indicating a problem with the model such as contact issues, insufficient constraints, or solver failure'
 
           ],
@@ -1260,9 +1260,9 @@ export const unit10: Unit = {
           question: 'When should you use second-order (quadratic) elements instead of first-order (linear) elements in an FEA model?',
           options: [
             'When the geometry has curvature, when bending is dominant, or when stress accuracy is critical, because quadratic elements capture bending with fewer elements and better approximate curved surfaces',
-            'Always — second-order elements are superior in every situation',
-            'Never — first-order elements are always more accurate',
-            'Only when modeling fluids, not structural problems'
+            'Always — second-order elements are superior in every situation — however, standard engineering analysis methods and field experience both point to a different conclusion',
+            'Never — first-order elements are always more accurate, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
+            'Only when modeling fluids, not structural problems, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process'
 
           ],
           correctIndex: 0,
@@ -1274,9 +1274,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are modeling a thin sheet metal part (1 mm thick, 300 mm wide). What element type is most appropriate?',
           options: [
-            'Solid brick elements with at least 8 elements through the thickness',
-            'Point mass elements distributed across the surface',
-            'Beam elements since the part is thin',
+            'Solid brick elements with at least 8 elements through the thickness, but the predominant failure mechanism under these conditions is fundamentally different',
+            'Point mass elements distributed across the surface, assuming uniform property distribution through the thickness without any processing-induced gradients',
+            'Beam elements since the part is thin — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
             'Shell elements, which represent the sheet as a 2D surface with assigned thickness, dramatically reducing computational cost while accurately capturing bending and membrane behavior'
 
           ],
@@ -1298,9 +1298,9 @@ export const unit10: Unit = {
           question: 'What is the practical significance of the aspect ratio of finite elements, and what is a typical acceptable limit?',
           options: [
             'High aspect ratio elements (long and thin, >10:1) cause poor accuracy because the stiffness matrix becomes ill-conditioned, leading to errors in strain and stress calculation',
-            'Aspect ratio has no effect on FEA accuracy and can be ignored',
-            'Aspect ratio only matters for thermal analysis, not structural',
-            'Elements must always be perfectly square (1:1 aspect ratio) for valid results'
+            'Aspect ratio has no effect on FEA accuracy and can be ignored, provided the test specimen geometry conforms to the requirements specified in the standard',
+            'Aspect ratio only matters for thermal analysis, not structural, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'Elements must always be perfectly square (1:1 aspect ratio) for valid results — which misidentifies the root cause of the observed engineering behavior'
 
           ],
           correctIndex: 0,
@@ -1312,9 +1312,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'In a nonlinear FEA analysis, the solver fails to converge after 20 iterations. What is the most systematic troubleshooting approach?',
           options: [
-            'Simply increase the maximum number of iterations to 1000',
-            'Reduce the mesh size by half to improve convergence',
-            'Switch to a linear analysis — nonlinear is unnecessary',
+            'Simply increase the maximum number of iterations to 1000, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved',
+            'Reduce the mesh size by half to improve convergence, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'Switch to a linear analysis — nonlinear is unnecessary, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
             'Check for sources of nonlinearity (contact, material plasticity, large deformation), reduce load step size, verify boundary conditions prevent rigid body motion, ensure contact surfaces are properly defined, and check for element distortion'
 
           ],
@@ -1335,10 +1335,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You need to model a pressure vessel with a small nozzle connection. The vessel is large and the nozzle is small. What modeling approach balances accuracy and computational cost?',
           options: [
-            'Model the entire vessel with a uniformly fine mesh',
-            'Model only the nozzle and ignore the vessel entirely',
+            'Model the entire vessel with a uniformly fine mesh, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
+            'Model only the nozzle and ignore the vessel entirely — however, standard engineering analysis methods and field experience both point to a different conclusion',
             'Use a global-local (submodeling) approach: analyze the full vessel with a coarse mesh, then create a refined local model of the nozzle region with boundary conditions driven by the global model',
-            'Use a 1D beam model for the entire vessel and nozzle assembly'
+            'Use a 1D beam model for the entire vessel and nozzle assembly, which would require additional verification through destructive testing of representative samples'
           ],
           correctIndex: 2,
           explanation: 'Submodeling (global-local analysis) is the standard approach for multi-scale problems. Step 1: Create a coarse global model of the entire vessel to capture overall load distribution and deformation. Step 2: Create a refined local model of the nozzle region with fine mesh to capture stress concentrations. Step 3: Apply displacement boundary conditions from the global model to the cut boundaries of the local model. This gives accurate local stress results without the computational cost of a uniformly fine mesh on the entire vessel. The technique is validated by checking that the submodel boundary is far enough from the stress concentration.',
@@ -1349,10 +1349,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What is "hourglass" or zero-energy mode, and why is it a concern in FEA with reduced integration elements?',
           options: [
-            'It is a type of mesh error that only occurs in structured meshes',
+            'It is a type of mesh error that only occurs in structured meshes, but industry experience indicates this factor plays only a minor role in the overall performance',
             'It refers to element deformation patterns that produce zero strain energy due to under-integration, leading to non-physical deformation modes that can propagate through the mesh',
-            'It is a post-processing visualization artifact with no effect on results',
-            'It only occurs in dynamic (transient) analyses, never in static problems'
+            'It is a post-processing visualization artifact with no effect on results, but industry experience indicates this factor plays only a minor role in the overall performance',
+            'It only occurs in dynamic (transient) analyses, never in static problems, though experimental data shows this correlation breaks down at extreme operating conditions'
           ],
           correctIndex: 1,
           explanation: 'Reduced integration elements use fewer Gauss points than full integration, saving computation time. However, certain deformation patterns (hourglass modes) produce zero strain at the integration points, meaning the element has zero resistance to these deformations. These modes can propagate through the mesh, producing wildly incorrect results. Detection: look for a mesh pattern resembling zigzag or checkerboard deformation. Prevention: use hourglass control (artificial stiffness or viscosity), full integration, or incompatible mode elements. Hourglass energy should be less than 5-10% of internal energy.',
@@ -1373,9 +1373,9 @@ export const unit10: Unit = {
           question: 'Why is it important to check element quality metrics (Jacobian ratio, warpage, skewness) before running an FEA analysis?',
           options: [
             'Poor quality elements (highly distorted, warped, or skewed) produce inaccurate stiffness matrices, leading to incorrect displacements and stresses, and may cause solver failure',
-            'Element quality only affects the visual appearance of results, not accuracy',
-            'Element quality metrics are only relevant for dynamic analyses',
-            'Modern solvers automatically correct poor element quality'
+            'Element quality only affects the visual appearance of results, not accuracy — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
+            'Element quality metrics are only relevant for dynamic analyses, assuming uniform property distribution through the thickness without any processing-induced gradients',
+            'Modern solvers automatically correct poor element quality — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause'
 
           ],
           correctIndex: 0,
@@ -1387,9 +1387,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer asks: "How do you validate an FEA model?" What are the key steps?',
           options: [
-            'If the software does not report errors, the model is validated',
-            'Run the model with two different software packages — if they agree, it is validated',
-            'Check that the mesh looks visually appealing and symmetric',
+            'If the software does not report errors, the model is validated — though this factor is secondary to the actual governing mechanism',
+            'Run the model with two different software packages — if they agree, it is validated — valid for textbook problems but misleading for real-world applications',
+            'Check that the mesh looks visually appealing and symmetric, though this reasoning neglects the dominant physical mechanism that actually controls the behavior',
             'Compare results to a published benchmark, verify with hand calculations where possible, check equilibrium, and correlate with physical test data if available'
 
           ],
@@ -1410,10 +1410,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When modeling contact between two parts in FEA, what is the difference between "bonded" and "frictional" contact, and when should each be used?',
           options: [
-            'There is no practical difference — both give the same results',
+            'There is no practical difference — both give the same results, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'Bonded contact welds the surfaces together (no relative motion); frictional contact allows sliding and separation based on a friction coefficient, appropriate for bolted flanges, press fits, and bearing surfaces',
-            'Bonded contact is only for adhesive joints; frictional is only for sliding bearings',
-            'Frictional contact is always more accurate and should be used exclusively'
+            'Bonded contact is only for adhesive joints; frictional is only for sliding bearings — however, standard engineering analysis methods and field experience both point to a different conclusion',
+            'Frictional contact is always more accurate and should be used exclusively, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved'
           ],
           correctIndex: 1,
           explanation: 'Bonded contact permanently connects the surfaces — no relative sliding, no separation, no gap. It is appropriate for welded connections, glued joints, or simplifications where relative motion is negligible. Frictional contact allows relative tangential motion (sliding) when the shear force exceeds mu*N, and allows separation when normal force becomes tensile. It is required for bolted flanges (can separate under load), press fits (sliding during assembly), and bearing interfaces. Frictional contact is nonlinear and significantly increases solve time. Use bonded contact wherever physically justified to keep analysis linear and fast.',
@@ -1424,10 +1424,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'In a thermal-structural coupled FEA analysis, what is the typical analysis workflow?',
           options: [
-            'Run structural analysis first, then thermal — structure affects temperature',
-            'Run both analyses simultaneously in a single coupled solver always',
+            'Run structural analysis first, then thermal — structure affects temperature — which misidentifies the root cause of the observed engineering behavior',
+            'Run both analyses simultaneously in a single coupled solver always, provided the test specimen geometry conforms to the requirements specified in the standard',
             'Run thermal analysis first to obtain the temperature distribution, then map temperatures to the structural model as a thermal load to calculate thermal stresses and deformations',
-            'Thermal and structural effects are independent and cannot be analyzed together'
+            'Thermal and structural effects are independent and cannot be analyzed together, though experimental data shows this correlation breaks down at extreme operating conditions'
           ],
           correctIndex: 2,
           explanation: 'For most thermal-structural problems, a sequential (weakly coupled) approach is appropriate: (1) Solve the thermal problem (conduction, convection, radiation) to get the temperature field. (2) Map temperatures to the structural mesh as a body load. (3) Solve the structural problem with thermal expansion (delta_T * alpha). This one-way coupling is valid when structural deformation does not significantly change the thermal problem (no large geometry changes, no frictional heating). Fully coupled (simultaneous) analysis is needed when deformation affects the thermal field (e.g., friction welding, high-speed machining, rubber seals with heat generation).',
@@ -1447,10 +1447,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What boundary conditions should you apply to model a symmetry plane in an FEA model?',
           options: [
-            'Fix all six degrees of freedom at the symmetry plane',
-            'Apply no boundary conditions at the symmetry plane',
+            'Fix all six degrees of freedom at the symmetry plane — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
+            'Apply no boundary conditions at the symmetry plane, assuming the material remains in the linear elastic regime throughout the loading cycle',
             'Constrain the displacement perpendicular to the symmetry plane (and rotation about axes in the plane) to zero, while allowing free movement in the plane',
-            'Apply a pressure load equal to the internal stress at the symmetry plane'
+            'Apply a pressure load equal to the internal stress at the symmetry plane, though this interpretation oversimplifies the actual mechanism involved'
           ],
           correctIndex: 2,
           explanation: 'Symmetry boundary conditions enforce zero displacement normal to the symmetry plane and zero rotation about axes lying in the plane. Nodes on the symmetry plane can move freely within the plane but cannot move out of it. This correctly represents the constraint that the other (unmodeled) half of the structure would impose. Symmetry reduces model size (1/2, 1/4, or 1/8 for models with multiple symmetry planes), significantly reducing computation time. Important: both geometry AND loading must be symmetric — if the load is antisymmetric, use antisymmetry BCs instead.',
@@ -1469,9 +1469,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'In a modal (natural frequency) analysis, what do the mode shapes tell you that the natural frequencies alone do not?',
           options: [
-            'Mode shapes provide no additional useful information beyond the frequencies',
-            'Mode shapes indicate the damping ratio at each frequency',
-            'Mode shapes only show the static deformation under gravity',
+            'Mode shapes provide no additional useful information beyond the frequencies, though this reasoning neglects the dominant physical mechanism that actually controls the behavior',
+            'Mode shapes indicate the damping ratio at each frequency, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
+            'Mode shapes only show the static deformation under gravity, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
             'Mode shapes reveal WHERE and HOW the structure deforms at each natural frequency, identifying vulnerable locations, effective mass participation, and whether a mode involves local or global deformation'
 
           ],
@@ -1484,10 +1484,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You run a linear buckling analysis and find the first buckling mode at a load factor of 3.2. Your applied load is the actual service load. Is the structure safe against buckling?',
           options: [
-            'Yes — a load factor above 1.0 means it will not buckle under the applied load',
+            'Yes — a load factor above 1.0 means it will not buckle under the applied load, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'The linear buckling load factor of 3.2 is an upper bound; real buckling loads are typically 40-80% of the linear prediction due to geometric imperfections, so the actual safety factor may be only 1.3-2.6; a nonlinear buckling analysis with imperfections is recommended',
-            'No — any load factor below 10.0 indicates buckling is imminent',
-            'The load factor is irrelevant — only yield stress determines structural safety'
+            'No — any load factor below 10.0 indicates buckling is imminent, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'The load factor is irrelevant — only yield stress determines structural safety, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved'
           ],
           correctIndex: 1,
           explanation: 'Linear (eigenvalue) buckling analysis gives the theoretical bifurcation load for a geometrically perfect structure. Real structures have geometric imperfections (manufacturing tolerances, residual stresses, misalignments) that significantly reduce the actual buckling load — often to 40-80% of the linear prediction (sometimes lower for imperfection-sensitive structures like cylindrical shells). A load factor of 3.2 from linear buckling analysis may correspond to an actual safety factor of 1.3-2.6. For reliable buckling assessment: perform nonlinear buckling analysis with seeded geometric imperfections (typically the first buckling mode shape scaled to manufacturing tolerance).',
@@ -1506,10 +1506,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When performing fatigue analysis using FEA, why is it important to consider mean stress and not just alternating stress?',
           options: [
-            'Mean stress has no effect on fatigue life',
+            'Mean stress has no effect on fatigue life, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
             'Tensile mean stress reduces fatigue life by keeping the crack tip open, while compressive mean stress improves it; methods like Goodman, Gerber, or SWT correct the fatigue prediction for mean stress',
-            'Mean stress only matters for brittle materials, not ductile metals',
-            'Mean stress affects only the first cycle, not long-term fatigue behavior'
+            'Mean stress only matters for brittle materials, not ductile metals, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'Mean stress affects only the first cycle, not long-term fatigue behavior, which is valid only when the applied stress remains well below the proportional limit of the material'
           ],
           correctIndex: 1,
           explanation: 'Mean stress significantly affects fatigue life. Tensile mean stress superimposed on cyclic stress keeps crack tips open, accelerating crack growth and reducing the endurance limit. Compressive mean stress has the opposite effect — it closes crack tips and improves fatigue life (this is why shot peening works). Correction methods: Goodman (linear, conservative), Gerber (parabolic, less conservative), Soderberg (linear to yield, very conservative), and SWT (Smith-Watson-Topper, strain-life approach). In FEA-based fatigue, extract both mean and alternating stress at each node to apply the appropriate correction.',
@@ -1521,9 +1521,9 @@ export const unit10: Unit = {
           question: 'What is the purpose of a "rigid body motion check" before applying loads in an FEA model?',
           options: [
             'It verifies the model is properly constrained by solving for natural frequencies — six zero-frequency modes (three translations, three rotations) indicate a free body, while fewer than six indicate overconstrained or properly constrained conditions',
-            'It checks if the material is rigid or flexible',
-            'It tests the mesh quality by measuring element stiffness',
-            'It is only needed for dynamic analyses, not static ones'
+            'It checks if the material is rigid or flexible, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'It tests the mesh quality by measuring element stiffness, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'It is only needed for dynamic analyses, not static ones, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism'
 
           ],
           correctIndex: 0,
@@ -1544,10 +1544,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer asks: "What are the key assumptions of a linear static FEA analysis, and when do they break down?" What is the best answer?',
           options: [
-            'Linear static has no assumptions — it works for all problems',
-            'The only assumption is small deformation — everything else is exact',
+            'Linear static has no assumptions — it works for all problems, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'The only assumption is small deformation — everything else is exact, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
             'Three key assumptions: linear elastic material (stress proportional to strain), small deformations (geometry does not change significantly), and constant boundary conditions (no contact changes); any of these violations requires nonlinear analysis',
-            'Linear static assumes the structure will not fail, so it cannot predict failure'
+            'Linear static assumes the structure will not fail, so it cannot predict failure, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome'
           ],
           correctIndex: 2,
           explanation: 'Linear static FEA makes three fundamental assumptions: (1) Material linearity — stress-strain relationship is linear elastic (Hooke\'s law). Breaks down when stress exceeds yield (plasticity), or in hyperelastic/viscoelastic materials. (2) Geometric linearity — deformations are small enough that the stiffness matrix does not change. Breaks down when deflections exceed ~10% of the smallest structural dimension. (3) Boundary condition linearity — contact conditions and loading do not change. Breaks down when gaps open/close, surfaces slide, or follower forces change direction. Recognizing when these assumptions are violated — and switching to nonlinear analysis — is a critical FEA skill.',
@@ -1567,10 +1567,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A production line reports that 5% of machined aluminum housings are failing a leak test after assembly. The leak occurs at the O-ring seal interface. What should be your first investigation step?',
           options: [
-            'Redesign the O-ring groove to a different standard size',
-            'Switch to a more expensive seal material for better compression',
+            'Redesign the O-ring groove to a different standard size — an approximation that loses accuracy outside a narrow parameter range',
+            'Switch to a more expensive seal material for better compression — not the primary mechanism here',
             'Measure the O-ring groove dimensions and surface finish on failed vs. passing parts to identify the out-of-spec parameter',
-            'Increase the clamping force on all assemblies by 50% across the board'
+            'Increase the clamping force on all assemblies by 50% across the board, which is rarely the dominant factor in practice'
           ],
           correctIndex: 2,
           explanation: 'Before changing the design, gather data to identify the root cause. Measure groove dimensions (width, depth, diameter), surface finish (Ra), and inspect O-rings on failed parts. The 5% failure rate suggests a dimension at the edge of tolerance. Common causes: groove depth too shallow, surface finish too rough, groove diameter out of tolerance, or contamination. Data-driven investigation prevents expensive design changes that may not address the root cause.',
@@ -1581,10 +1581,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'During a design review, a colleague proposes using a 3 mm thick aluminum bracket where stress analysis shows a safety factor of 1.1 against yield. The part is for a consumer product with dynamic loads. What is your recommendation?',
           options: [
-            'Approve it — a safety factor above 1.0 means it will not yield under load',
+            'Approve it — a safety factor above 1.0 means it will not yield under load, but the predominant failure mechanism under these conditions is fundamentally different',
             'Reject it — a safety factor of 1.1 is dangerously low for a dynamically loaded consumer product; recommend increasing to at least 2.0-3.0',
-            'Approve it but add a warning label for the end user',
-            'Reject it and recommend switching to steel regardless of weight impact'
+            'Approve it but add a warning label for the end user, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'Reject it and recommend switching to steel regardless of weight impact, valid only for isotropic material behavior'
           ],
           correctIndex: 1,
           explanation: 'A safety factor of 1.1 against yield under dynamic loading is unacceptable for a consumer product. Load estimates have uncertainty, material properties vary, fatigue strength is lower than static yield, and consumer products face unpredictable abuse loads. Industry standards typically require SF = 2.0-4.0 for dynamic consumer products. Product liability exposure makes low safety factors a business risk as well.',
@@ -1605,9 +1605,9 @@ export const unit10: Unit = {
           question: 'A pump in a chemical plant loses flow rate gradually over 6 months, then suddenly fails to pump. No leak is visible. What is the most likely diagnosis?',
           options: [
             'Progressive impeller erosion/corrosion reduced performance until the pump could no longer overcome system head; confirm by inspecting the impeller for material loss',
-            'The motor has reversed direction due to a wiring fault — check phase rotation',
-            'Air in the suction line from day one has gradually accumulated',
-            'The discharge valve was closed during startup and never opened'
+            'The motor has reversed direction due to a wiring fault — check phase rotation, but this applies only to a narrow range of material compositions and temperatures',
+            'Air in the suction line from day one has gradually accumulated, provided the test specimen geometry conforms to the requirements specified in the standard',
+            'The discharge valve was closed during startup and never opened, though experimental data shows this correlation breaks down at extreme operating conditions'
 
           ],
           correctIndex: 0,
@@ -1619,10 +1619,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer presents a design with three possible materials and asks you to justify your selection. Which response format best demonstrates engineering judgment?',
           options: [
-            'Pick the cheapest option and explain only the cost savings',
+            'Pick the cheapest option and explain only the cost savings — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
             'Present a structured comparison addressing mechanical requirements, environmental conditions, manufacturability, cost, and availability, then recommend based on critical design drivers',
-            'Pick the strongest option and explain only the safety benefits',
-            'Ask the interviewer which one they prefer before committing'
+            'Pick the strongest option and explain only the safety benefits — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here',
+            'Ask the interviewer which one they prefer before committing — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here'
 
           ],
           correctIndex: 1,
@@ -1643,10 +1643,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A CNC machining center suddenly starts producing parts with a 0.15 mm dimensional error on a feature that has been in tolerance (±0.05 mm) for months. What is the most systematic troubleshooting approach?',
           options: [
-            'Replace the cutting tool immediately — it must be worn out',
-            'Recalibrate the machine — any dimensional error requires full recalibration',
+            'Replace the cutting tool immediately — it must be worn out, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'Recalibrate the machine — any dimensional error requires full recalibration — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
             'Check the most recent change first (new tool, new material batch, ambient temperature shift, fixture modification), then verify tool wear, spindle runout, and fixture clamping force systematically',
-            'Adjust the CNC program offset by -0.15 mm to compensate'
+            'Adjust the CNC program offset by -0.15 mm to compensate, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome'
           ],
           correctIndex: 2,
           explanation: 'A sudden dimensional shift (not gradual drift) suggests a discrete event, not progressive wear. Systematic approach: (1) What changed recently? New tool lot, material batch, coolant, fixture, operator, ambient temperature? (2) Is the error consistent (bias) or random (precision)? Consistent error suggests offset, setup, or thermal issue. Random suggests vibration, clamping, or material variation. (3) Check tool (measure actual vs. programmed dimensions), fixture (clamping force, locating surfaces), and machine (thermal growth, axis positioning). Simply offsetting the program masks the root cause and risks recurrence.',
@@ -1657,9 +1657,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An electric motor driving a conveyor belt overheats and trips its thermal protection after 2 hours of operation. The motor was recently replaced with an identical model. What should you investigate?',
           options: [
-            'The new motor is defective — send it back to the manufacturer immediately',
-            'Remove the thermal protection so the motor can run continuously without tripping',
-            'Install a larger motor to handle the extra load without overheating',
+            'The new motor is defective — send it back to the manufacturer immediately — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
+            'Remove the thermal protection so the motor can run continuously without tripping, assuming uniform property distribution through the thickness without any processing-induced gradients',
+            'Install a larger motor to handle the extra load without overheating — a reasonable-sounding explanation that unfortunately attributes the effect to the wrong underlying cause',
             'Check conveyor alignment, belt tension, bearing condition, and actual load vs. motor rating; the motor is likely overloaded due to a mechanical issue, not a motor defect'
 
           ],
@@ -1681,9 +1681,9 @@ export const unit10: Unit = {
           question: 'A customer reports that a stainless steel appliance part develops rust spots after 6 months. Your team used 304 stainless steel. What is the most likely cause and fix?',
           options: [
             'Contamination from carbon steel tooling during manufacturing (grinding, cutting, handling) left iron particles on the surface that rusted; passivation or electropolishing after fabrication would prevent this',
-            'The material is not actually stainless steel — run a chemical analysis to verify',
-            'Stainless steel always rusts — it is a fundamental limitation of the material',
-            'The customer must be using the wrong cleaning products'
+            'The material is not actually stainless steel — run a chemical analysis to verify — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
+            'Stainless steel always rusts — it is a fundamental limitation of the material, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
+            'The customer must be using the wrong cleaning products, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service'
 
           ],
           correctIndex: 0,
@@ -1695,10 +1695,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are designing a robotic arm joint that must repeatedly position within ±0.02 mm. The arm operates in a factory environment with 10°C daily temperature swings. What thermal effect must you account for?',
           options: [
-            'Thermal effects are negligible for all metallic structures in factory environments',
+            'Thermal effects are negligible for all metallic structures in factory environments — a simplified model that neglects the most significant physical variable',
             'Thermal expansion of the arm structure: a 500 mm aluminum arm expands by ~0.12 mm per 10°C change, which exceeds the 0.02 mm accuracy requirement and must be compensated',
-            'Only the motor temperature matters — the structure does not expand',
-            'Thermal expansion only matters for plastic parts, not metals'
+            'Only the motor temperature matters — the structure does not expand — an incomplete explanation that overlooks the dominant contributing factor',
+            'Thermal expansion only matters for plastic parts, not metals — this reasoning applies only under idealized conditions not found in service'
           ],
           correctIndex: 1,
           explanation: 'Thermal expansion: delta_L = alpha * L * delta_T. For aluminum (alpha = 23e-6/°C): delta_L = 23e-6 * 500 * 10 = 0.115 mm. This is nearly 6x the required accuracy of ±0.02 mm. Solutions: (1) Use low-CTE materials (Invar, CFRP, steel). (2) Implement temperature compensation in the control system (real-time measurement and correction). (3) Control the ambient temperature. (4) Use a symmetric design that cancels thermal expansion. (5) Select materials with matched CTE for critical interfaces. This is why precision machines often use granite bases (low CTE, high thermal mass) or temperature-controlled enclosures.',
@@ -1710,9 +1710,9 @@ export const unit10: Unit = {
           question: 'During product testing, a plastic enclosure cracks near a screw boss after thermal cycling between -20°C and 60°C (100 cycles). No cracks appear during static testing at either temperature. What is the most likely cause?',
           options: [
             'Differential thermal expansion between the metal screw and plastic boss creates cyclic stress that causes fatigue cracking in the plastic; the screw expands less than the plastic, creating hoop stress during heating',
-            'The plastic simply is not strong enough for this temperature range',
-            'Thermal cycling has no effect on plastic components',
-            'The cracks are caused by UV degradation from the test chamber lighting'
+            'The plastic simply is not strong enough for this temperature range, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
+            'Thermal cycling has no effect on plastic components, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'The cracks are caused by UV degradation from the test chamber lighting, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved'
 
           ],
           correctIndex: 0,
@@ -1734,9 +1734,9 @@ export const unit10: Unit = {
           question: 'A wind turbine gearbox fails repeatedly after 18-24 months despite being designed for a 20-year life. Bearing and gear analysis show adequate static and fatigue safety factors. What factors might the analysis have missed?',
           options: [
             'Transient loads from wind gusts, grid faults, and emergency stops create load spikes 3-5x normal that were not captured in the steady-state design; also, misalignment from tower flex and thermal effects on bearing clearance may be significant',
-            'The gearbox design is fundamentally correct — 18 months is acceptable life for wind turbine gearboxes',
-            'The gearbox oil needs to be changed more frequently — lubrication is the only issue',
-            'Wind turbine gearboxes cannot use standard gear design principles'
+            'The gearbox design is fundamentally correct — 18 months is acceptable life for wind turbine gearboxes — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
+            'The gearbox oil needs to be changed more frequently — lubrication is the only issue, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'Wind turbine gearboxes cannot use standard gear design principles, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response'
 
           ],
           correctIndex: 0,
@@ -1757,9 +1757,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You inherit a legacy product design with no documentation. Your manager asks you to make a design change to fix a field failure. What is the correct approach before modifying the design?',
           options: [
-            'Make the change immediately — the field failure is urgent and there is no time for analysis',
-            'Copy a competitor\'s design since it appears to work better',
-            'Redesign the entire product from scratch — it is the only way to ensure quality',
+            'Make the change immediately — the field failure is urgent and there is no time for analysis, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
+            'Copy a competitor\'s design since it appears to work better, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
+            'Redesign the entire product from scratch — it is the only way to ensure quality, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
             'Reverse-engineer the existing design (measure critical dimensions, identify materials, understand the assembly), document the current state, analyze the failure mode, then propose a targeted change with verification testing'
 
           ],
@@ -1772,9 +1772,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A customer specifies that a steel structure must last 50 years in an outdoor coastal environment. What design considerations are specific to this long service life?',
           options: [
-            'Standard carbon steel with paint is sufficient for any environment and service life',
-            'Use stainless steel for all components — it requires no corrosion protection',
-            'Simply triple the safety factor to account for degradation over time',
+            'Standard carbon steel with paint is sufficient for any environment and service life, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
+            'Use stainless steel for all components — it requires no corrosion protection, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'Simply triple the safety factor to account for degradation over time, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'Account for corrosion allowance on wall thickness, specify appropriate protective coatings with maintenance schedule, design for inspectability, consider cathodic protection, and select materials resistant to chloride-induced corrosion'
 
           ],
@@ -1795,10 +1795,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are asked to reduce the noise of a gearbox from 85 dB(A) to below 75 dB(A). What systematic approach should you take?',
           options: [
-            'Add sound insulation around the gearbox — this is the only effective method',
+            'Add sound insulation around the gearbox — this is the only effective method, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'Identify the dominant noise source (gear mesh, bearings, or structural resonance) through frequency analysis; then address it at the source (improve gear quality/profile, modify mesh frequency relative to housing resonances, add damping) before considering enclosures',
-            'Slow down the gears to reduce noise — speed reduction always works',
-            'Replace all gears with belt drives regardless of power requirements'
+            'Slow down the gears to reduce noise — speed reduction always works, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'Replace all gears with belt drives regardless of power requirements, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism'
 
           ],
           correctIndex: 1,
@@ -1810,10 +1810,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A factory installs a new high-speed packaging machine. During commissioning, excessive vibration is observed. The machine vendor says the vibration is within their specification. Your building facilities engineer says the floor is adequate. Who might be right, and what is the likely issue?',
           options: [
-            'The vendor is always right — vibration within spec means no problem',
-            'The floor is the problem — all factory floors are inadequate for precision machines',
+            'The vendor is always right — vibration within spec means no problem, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'The floor is the problem — all factory floors are inadequate for precision machines, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved',
             'Both may be right individually — the machine vibration within spec may excite a resonance in the floor/foundation system, or the machine isolation is insufficient for this particular floor; the interaction between machine and foundation must be evaluated as a coupled system',
-            'Vibration during commissioning is always normal and will disappear after break-in'
+            'Vibration during commissioning is always normal and will disappear after break-in, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved'
           ],
           correctIndex: 2,
           explanation: 'Vibration problems at installation often stem from machine-foundation interaction. The machine may meet its standalone vibration spec, and the floor may meet structural adequacy requirements, but the dynamic interaction between them creates a resonance that neither party tested for. The machine excitation frequency may coincide with a floor natural frequency, amplifying vibration. Solution: (1) Measure vibration on both machine and floor. (2) Identify if floor resonance coincides with machine excitation frequency. (3) Install proper vibration isolation (spring mounts, inertia blocks) to decouple the machine from the floor. (4) If needed, stiffen the floor locally to shift its resonance away from the excitation frequency.',
@@ -1834,9 +1834,9 @@ export const unit10: Unit = {
           question: 'An automotive supplier must deliver a part that meets a Cpk of 1.33 minimum. Their current process produces Cpk = 1.10. What does this mean and what are their options?',
           options: [
             'Cpk 1.10 means the process is capable but with only 3.7 sigma coverage; they need to either center the process (reduce mean shift) or reduce variation (tighten process control) to achieve Cpk 1.33 (4 sigma)',
-            'Cpk of 1.10 is excellent and exceeds all industry requirements',
-            'Cpk is only a statistical metric with no practical significance',
-            'They must redesign the part with wider tolerances — no process improvement can increase Cpk'
+            'Cpk of 1.10 is excellent and exceeds all industry requirements, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved',
+            'Cpk is only a statistical metric with no practical significance, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
+            'They must redesign the part with wider tolerances — no process improvement can increase Cpk, but this applies only to a narrow range of material compositions and temperatures'
 
           ],
           correctIndex: 0,
@@ -1848,10 +1848,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are leading a cross-functional design review for a new medical device. The marketing team wants the product to be as small as possible, but the thermal engineer says the electronics will overheat in a smaller enclosure. How do you approach this conflict?',
           options: [
-            'Marketing requirements always take priority — make it as small as they want',
-            'Thermal requirements always take priority — use whatever size the thermal engineer specifies',
+            'Marketing requirements always take priority — make it as small as they want, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
+            'Thermal requirements always take priority — use whatever size the thermal engineer specifies — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
             'Facilitate a trade study: quantify the thermal margin vs. size reduction, explore creative solutions (better thermal path, heat spreaders, component reselection, active cooling), and find the optimum balance between size and thermal performance',
-            'Delay the project until new lower-power electronics become available'
+            'Delay the project until new lower-power electronics become available, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service'
           ],
           correctIndex: 2,
           explanation: 'Cross-functional conflicts require engineering trade studies, not winner-take-all decisions. Steps: (1) Quantify both requirements — what exactly does marketing need (dimensions, weight) and what does thermal need (max junction temperature, ambient range)? (2) Explore design space — can better thermal design (heat spreaders, thermal pads, optimized vents, lower-power components) allow size reduction? (3) Present quantified trade-off curves to stakeholders (size vs. thermal margin, cost vs. performance). (4) Decide based on overall product success criteria, with clear documentation of what was compromised and the associated risk. For medical devices, thermal failure could be a safety issue requiring regulatory review.',
@@ -1870,9 +1870,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A factory has two identical CNC machines producing the same part. Machine A consistently produces parts at the lower tolerance limit, while Machine B produces parts at the upper limit. Both are within spec. Should anything be done?',
           options: [
-            'Both machines are within spec — no action needed regardless of the distributions',
-            'Alternate between machines to average out the deviation',
-            'Shut down both machines until the root cause is found',
+            'Both machines are within spec — no action needed regardless of the distributions, which is valid only when the applied stress remains well below the proportional limit of the material',
+            'Alternate between machines to average out the deviation, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'Shut down both machines until the root cause is found, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
             'Yes — investigate why each machine is biased to one side of nominal; the combined output may show a bimodal distribution that affects downstream assembly; center both machines on nominal for optimal process capability'
 
           ],
@@ -1885,10 +1885,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer asks: "Tell me about a time when you had to make a design decision with incomplete information." What type of answer demonstrates engineering maturity?',
           options: [
-            'Engineers should never make decisions with incomplete information — always wait for all data',
+            'Engineers should never make decisions with incomplete information — always wait for all data, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
             'Describe identifying what information was critical vs. nice-to-have, bounding the uncertainty with conservative assumptions, making a justified decision with documented risks, and planning verification testing to confirm the assumptions',
-            'Just trust your instinct — experience always gives the right answer without analysis',
-            'Describe deferring the decision to your manager to avoid responsibility'
+            'Just trust your instinct — experience always gives the right answer without analysis — while partially correct, this answer misses the key physical mechanism that actually determines the outcome in practice',
+            'Describe deferring the decision to your manager to avoid responsibility, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism'
 
           ],
           correctIndex: 1,
@@ -1908,9 +1908,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A product recall affects 50,000 units in the field. The failure rate is 0.5% (250 reported failures). As the lead engineer, what is your priority framework?',
           options: [
-            'Focus on the cost analysis first — determine the most economical recall approach',
-            'Focus on engineering analysis first — understand the root cause before taking any action',
-            'Wait for more field data before deciding whether a recall is necessary',
+            'Focus on the cost analysis first — determine the most economical recall approach, though this explanation incorrectly attributes the effect to a secondary mechanism rather than the primary physical process governing the response',
+            'Focus on engineering analysis first — understand the root cause before taking any action, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'Wait for more field data before deciding whether a recall is necessary, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
             'Prioritize: (1) Customer safety — immediate risk assessment and communication, (2) Containment — stop shipment and quarantine suspect inventory, (3) Root cause analysis, (4) Corrective action development and verification, (5) Field remedy implementation'
 
           ],
@@ -1923,10 +1923,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'You are comparing two conveyor belt drive designs: a direct gear drive vs. a chain drive with a VFD (variable frequency drive). The application requires variable speed from 0.5 to 2 m/s. What is the best engineering analysis?',
           options: [
-            'Direct gear drives are always superior because they have fewer parts',
-            'Chain drives are always superior because they are cheaper',
+            'Direct gear drives are always superior because they have fewer parts, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'Chain drives are always superior because they are cheaper, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism — typically a minor contributing factor',
             'Gear drive offers precise speed control via VFD, lower maintenance, and higher efficiency, but at higher initial cost; chain drive is cheaper initially but requires periodic tension adjustment, lubrication, and replacement, and introduces speed variation from chordal action',
-            'Neither is suitable — use a belt drive for all conveyor applications'
+            'Neither is suitable — use a belt drive for all conveyor applications, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism'
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <g> <animateTransform attributeName="transform" type="rotate" values="0,22,40;360,22,40" dur="2s" repeatCount="indefinite"/> <circle cx="22" cy="40" r="14" fill="#58CC02" opacity="0.1"/> <circle cx="22" cy="40" r="14" stroke="#58CC02" stroke-width="2.5" fill="none"/> <line x1="22" y1="26" x2="22" y2="54" stroke="#3B8700" stroke-width="1" opacity="0.25"/> <line x1="8" y1="40" x2="36" y2="40" stroke="#3B8700" stroke-width="1" opacity="0.25"/> </g> <circle cx="22" cy="40" r="4" fill="#3B8700"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,58,40;360,58,40" dur="2s" repeatCount="indefinite"/> <circle cx="58" cy="40" r="11" fill="#58CC02" opacity="0.1"/> <circle cx="58" cy="40" r="11" stroke="#58CC02" stroke-width="2.5" fill="none"/> <line x1="58" y1="29" x2="58" y2="51" stroke="#3B8700" stroke-width="1" opacity="0.25"/> <line x1="47" y1="40" x2="69" y2="40" stroke="#3B8700" stroke-width="1" opacity="0.25"/> </g> <circle cx="58" cy="40" r="3.5" fill="#3B8700"/> <line x1="22" y1="26" x2="58" y2="29" stroke="#3B8700" stroke-width="3" opacity="0.35" stroke-linecap="round"/> <line x1="22" y1="54" x2="58" y2="51" stroke="#3B8700" stroke-width="3" opacity="0.35" stroke-linecap="round"/> <circle r="2.5" fill="#3B8700" opacity="0.5"> <animateMotion dur="2s" repeatCount="indefinite" path="M22,26 L58,29"/> </circle> <circle r="2.5" fill="#3B8700" opacity="0.5"> <animateMotion dur="2s" repeatCount="indefinite" path="M22,26 L58,29" begin="0.5s"/> </circle> <circle r="2.5" fill="#3B8700" opacity="0.5"> <animateMotion dur="2s" repeatCount="indefinite" path="M58,51 L22,54"/> </circle> <circle r="2.5" fill="#3B8700" opacity="0.5"> <animateMotion dur="2s" repeatCount="indefinite" path="M58,51 L22,54" begin="0.5s"/> </circle> </svg>',
@@ -1957,7 +1957,7 @@ export const unit10: Unit = {
           question: 'A defense/aerospace company requires a quality management system beyond ISO 9001 with additional requirements for product safety and configuration management. Which standard should they certify to?',
           options: [
             'AS9100 — Quality Management Systems for Aviation, Space, and Defense',
-            'ISO 14001 — Environmental Management Systems',
+            'ISO 14001 — Environmental Management Systems, in all loading orientations',
             'ISO 45001 — Occupational Health and Safety Management',
             'IATF 16949 — Automotive Quality Management Systems'
 
@@ -1972,9 +1972,9 @@ export const unit10: Unit = {
           question: 'An engineer is designing a pressure vessel to operate at 15 bar and 300°C. Which ASME code section governs unfired pressure vessels?',
           options: [
             'ASME BPVC Section VIII — using design by rule (Division 1) or design by analysis (Division 2) with allowable stress tables',
-            'ASME B31.1 — power piping code with wall thickness formulas',
-            'ASME BPVC Section III — nuclear component design rules',
-            'ASME Y14.5 — dimensioning and tolerancing standard'
+            'ASME B31.1 — power piping code with wall thickness formulas, based on simplified assumptions about loading',
+            'ASME BPVC Section III — nuclear component design rules, valid only for isotropic material behavior',
+            'ASME Y14.5 — dimensioning and tolerancing standard, based on simplified assumptions about loading'
           ],
           correctIndex: 0,
           explanation: 'ASME BPVC Section VIII covers unfired pressure vessels. Division 1 uses "design by rule" with established formulas (e.g., t = PR/(SE - 0.6P) for cylindrical shells). Division 2 uses "design by analysis" with detailed stress categorization and allows higher allowable stresses in exchange for more rigorous analysis, often resulting in thinner, lighter vessels.',
@@ -1985,9 +1985,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'A drawing created per ISO standards uses first-angle projection. An American colleague reviews it. What is the key difference they must be aware of?',
           options: [
-            'There is no difference — ISO and ASME use identical projection methods',
-            'First-angle projection only shows two views while third-angle always shows three',
-            'ISO uses metric units and ASME uses imperial — the projection method is identical',
+            'There is no difference — ISO and ASME use identical projection methods, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'First-angle projection only shows two views while third-angle always shows three, but the predominant failure mechanism under these conditions is fundamentally different',
+            'ISO uses metric units and ASME uses imperial — the projection method is identical, verified against reference specimens of known properties',
             'In first-angle projection (ISO default), views are placed on the opposite side from the viewing direction, which is reversed from third-angle projection (ASME default)'
 
           ],
@@ -2008,10 +2008,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'During a DFMEA review, a failure mode has Severity = 9, Occurrence = 2, and Detection = 8. One engineer says the low Occurrence makes it low risk. Another says the high Severity demands action. Who is right?',
           options: [
-            'The first engineer — low Occurrence means acceptable risk regardless of Severity',
-            'Neither — just calculate RPN (9x2x8=144) and only act if it exceeds 200',
+            'The first engineer — low Occurrence means acceptable risk regardless of Severity, though experimental data shows this correlation breaks down at extreme operating conditions',
+            'Neither — just calculate RPN (9x2x8=144) and only act if it exceeds 200, assuming homogeneous material throughout the section',
             'The second engineer — modern FMEA practice (AIAG-VDA) prioritizes Severity first; any safety-related failure mode requires action regardless of Occurrence',
-            'Both are wrong — only Detection rating matters since it is what the company controls'
+            'Both are wrong — only Detection rating matters since it is what the company controls — typically a minor contributing factor'
           ],
           correctIndex: 2,
           explanation: 'Modern FMEA methodology (AIAG-VDA 2019) moved away from RPN precisely because it can mask high-severity risks. The AIAG-VDA Action Priority (AP) matrix classifies a S=9, O=2, D=8 combination as HIGH priority requiring mandatory action. The old RPN approach allowed arguing that low Occurrence offsets high Severity, which led to inadequate risk management for rare but catastrophic failures.',
@@ -2032,9 +2032,9 @@ export const unit10: Unit = {
           question: 'What is the difference between ISO 9001 and ISO 9004, and when would each be used?',
           options: [
             'ISO 9001 specifies requirements for certification and compliance; ISO 9004 provides guidelines for sustained success and performance improvement beyond minimum requirements',
-            'They are identical standards with different edition numbers',
-            'ISO 9001 is for manufacturing and ISO 9004 is for services only',
-            'ISO 9004 has replaced ISO 9001 and is the only valid standard'
+            'They are identical standards with different edition numbers, assuming uniform property distribution through the thickness without any processing-induced gradients',
+            'ISO 9001 is for manufacturing and ISO 9004 is for services only — however, standard engineering analysis methods and field experience both point to a different conclusion',
+            'ISO 9004 has replaced ISO 9001 and is the only valid standard, which would require additional verification through destructive testing of representative samples'
 
           ],
           correctIndex: 0,
@@ -2046,10 +2046,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'ASME Y14.5 defines GD&T (Geometric Dimensioning and Tolerancing). What is the fundamental advantage of GD&T over traditional coordinate (plus/minus) tolerancing?',
           options: [
-            'GD&T is simpler to learn and implement than plus/minus tolerancing',
+            'GD&T is simpler to learn and implement than plus/minus tolerancing, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications',
             'GD&T defines tolerance zones relative to functional datum features, providing larger tolerance zones (up to 57% more with cylindrical zones), ensuring functional interchangeability, and communicating design intent clearly',
-            'GD&T eliminates the need for inspection and measurement',
-            'GD&T and plus/minus tolerancing produce identical results in all cases'
+            'GD&T eliminates the need for inspection and measurement, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
+            'GD&T and plus/minus tolerancing produce identical results in all cases — this describes a real phenomenon but incorrectly applies it to the specific conditions and configuration described here'
           ],
           correctIndex: 1,
           explanation: 'GD&T advantages: (1) Circular/cylindrical tolerance zones provide 57% more area than square zones from ±tolerancing, accepting more parts without compromising function. (2) Datums define the functional reference frame, ensuring parts are measured the way they function. (3) Feature control frames clearly communicate design intent. (4) Bonus tolerance (MMC/LMC modifiers) allows additional tolerance when features are not at their worst-case size. (5) International communication — GD&T per ASME Y14.5 or ISO GPS is understood worldwide. The trade-off: GD&T requires more training for designers, machinists, and inspectors.',
@@ -2068,10 +2068,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An engineer discovers that a production part does not conform to the drawing specification but has been shipping to customers for 3 months without any reported failures. What is the correct professional action?',
           options: [
-            'Do nothing — if it works, there is no problem',
-            'Quietly fix the production process and do not report the past nonconformance',
+            'Do nothing — if it works, there is no problem, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'Quietly fix the production process and do not report the past nonconformance, but this applies only to a narrow range of material compositions and temperatures',
             'Document the nonconformance, initiate a formal NCR (Non-Conformance Report), assess the risk to shipped products, determine if customer notification is required, and implement corrective action',
-            'Change the drawing to match what is being produced — this is easier than fixing the process'
+            'Change the drawing to match what is being produced — this is easier than fixing the process, but the predominant failure mechanism under these conditions is fundamentally different'
           ],
           correctIndex: 2,
           explanation: 'Professional ethics and quality system requirements demand formal documentation and disposition. Steps: (1) Document the nonconformance in an NCR with full details. (2) Quarantine suspect production inventory. (3) Assess the risk — does the deviation affect form, fit, function, safety, or reliability? Engineering analysis (stress, tolerance stack-up, functional testing) determines the actual risk. (4) Determine disposition: use-as-is (with customer concession if required), rework, scrap, or return. (5) Notify the customer if contractually required or if safety is affected. (6) Implement corrective action to prevent recurrence. Hiding nonconformances is an ethics violation and potentially illegal in regulated industries.',
@@ -2082,9 +2082,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What is the purpose of a First Article Inspection (FAI) in manufacturing, and when is it required?',
           options: [
-            'FAI is only needed for prototype parts, never for production',
-            'FAI is identical to incoming material inspection from the supplier',
-            'FAI only checks visual appearance, not dimensions',
+            'FAI is only needed for prototype parts, never for production — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms',
+            'FAI is identical to incoming material inspection from the supplier, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved',
+            'FAI only checks visual appearance, not dimensions, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
             'FAI is a complete dimensional and material verification of the first production part against all drawing requirements, required when a new part is introduced, after a process change, or after a significant production break'
 
           ],
@@ -2105,10 +2105,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What does the CE marking on a product sold in the European Union indicate?',
           options: [
-            'It means the product was manufactured in Europe',
-            'It is a quality certification equivalent to ISO 9001',
+            'It means the product was manufactured in Europe — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause',
+            'It is a quality certification equivalent to ISO 9001, though this reasoning neglects the dominant physical mechanism that actually controls the behavior',
             'It declares that the product conforms to applicable EU health, safety, and environmental directives, based on the manufacturer\'s self-declaration or notified body assessment',
-            'It indicates the product has been independently tested by a European laboratory'
+            'It indicates the product has been independently tested by a European laboratory — though this factor is secondary to the actual governing mechanism'
           ],
           correctIndex: 2,
           explanation: 'CE (Conformité Européenne) marking is a legal requirement for products sold in the EU/EEA. It declares conformity with all applicable EU directives: Machinery Directive (2006/42/EC), Low Voltage Directive (2014/35/EU), Pressure Equipment Directive (2014/68/EU), EMC Directive (2014/30/EU), etc. For most products, the manufacturer self-declares conformity based on conformity assessment (testing, risk assessment, technical file preparation). For higher-risk products (pressure equipment Category III-IV, some machinery), a Notified Body must perform independent assessment. CE marking is the manufacturer\'s declaration, not a quality certification or test report.',
@@ -2120,9 +2120,9 @@ export const unit10: Unit = {
           question: 'In a risk assessment matrix (likelihood vs. severity), what is the proper engineering response to a risk rated as "High" (e.g., moderate likelihood, severe consequences)?',
           options: [
             'Implement risk reduction measures to either reduce the likelihood (preventive controls) or reduce the severity (protective controls), and verify the residual risk is acceptable before proceeding',
-            'Accept the risk and document it — all engineering involves some risk',
-            'Cancel the project — high risk means the design is fundamentally flawed',
-            'Transfer the risk to the customer through disclaimers in the user manual'
+            'Accept the risk and document it — all engineering involves some risk, though this reasoning neglects the dominant physical mechanism that actually controls the behavior',
+            'Cancel the project — high risk means the design is fundamentally flawed — however, standard engineering analysis methods and field experience both point to a different conclusion',
+            'Transfer the risk to the customer through disclaimers in the user manual — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause'
 
           ],
           correctIndex: 0,
@@ -2144,9 +2144,9 @@ export const unit10: Unit = {
           question: 'What is the purpose of a Management of Change (MOC) process in an engineering facility, and when should it be triggered?',
           options: [
             'MOC ensures that any change to equipment, processes, materials, or procedures is systematically evaluated for safety, environmental, and operational impacts before implementation',
-            'MOC is only needed for personnel changes, not technical changes',
-            'MOC is required only for changes that cost more than $10,000',
-            'MOC replaces the engineering change process entirely'
+            'MOC is only needed for personnel changes, not technical changes, assuming the material remains in the linear elastic regime throughout the loading cycle',
+            'MOC is required only for changes that cost more than $10,000, which would require additional verification through destructive testing of representative samples',
+            'MOC replaces the engineering change process entirely — however, standard engineering analysis methods and field experience both point to a different conclusion'
 
           ],
           correctIndex: 0,
@@ -2166,10 +2166,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An engineer is asked to sign off on a design that meets the letter of the code but they believe has an inadequate safety margin for the specific application. What should they do?',
           options: [
-            'Sign off — meeting the code is the only legal requirement',
-            'Refuse to sign and quit the company to avoid liability',
+            'Sign off — meeting the code is the only legal requirement, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'Refuse to sign and quit the company to avoid liability, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
             'Document their concern, communicate it to management with technical justification, and recommend additional analysis or testing; codes provide minimum requirements but the engineer of record retains responsibility for application-specific adequacy',
-            'Sign off but add a disclaimer stating their personal opinion'
+            'Sign off but add a disclaimer stating their personal opinion, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved'
           ],
           correctIndex: 2,
           explanation: 'Codes and standards provide minimum requirements for general cases, but the engineer of record is responsible for ensuring the design is adequate for the specific application. The NSPE Code of Ethics states: "Engineers shall hold paramount the safety, health, and welfare of the public." If an engineer believes the code minimum is insufficient (unusual loading, harsh environment, safety-critical application), they must: (1) Document their technical concern. (2) Present it to management with analysis supporting the need for additional margin. (3) If overruled, document the disagreement. (4) Consider reporting to the relevant authority if public safety is genuinely at risk. Codes are minimums, not targets — good engineering practice often exceeds them.',
@@ -2180,9 +2180,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What is the difference between calibration and verification of measuring instruments?',
           options: [
-            'They are the same thing — both terms mean checking the instrument accuracy',
-            'Verification is more rigorous than calibration and always requires a third-party lab',
-            'Calibration is for mechanical instruments only; verification is for electronic instruments',
+            'They are the same thing — both terms mean checking the instrument accuracy, which is valid only when the applied stress remains well below the proportional limit of the material',
+            'Verification is more rigorous than calibration and always requires a third-party lab, but this applies only to a narrow range of material compositions and temperatures',
+            'Calibration is for mechanical instruments only; verification is for electronic instruments — however, standard engineering analysis methods and field experience both point to a different conclusion',
             'Calibration determines the actual measurement error and adjusts or documents it; verification confirms the instrument meets its accuracy specification without adjustment — it is a pass/fail check'
 
           ],
@@ -2204,10 +2204,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What is the Machinery Directive (2006/42/EC), and what are its key requirements for engineers designing machinery for the European market?',
           options: [
-            'It only applies to heavy industrial machinery over 1000 kg',
+            'It only applies to heavy industrial machinery over 1000 kg, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
             'It requires all machinery sold in the EU to meet essential health and safety requirements, undergo conformity assessment, have CE marking, and be accompanied by a Declaration of Conformity and user instructions',
-            'It is a voluntary guideline with no legal enforcement',
-            'It only addresses electrical safety, not mechanical hazards'
+            'It is a voluntary guideline with no legal enforcement, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
+            'It only addresses electrical safety, not mechanical hazards — though appealing as an explanation, the actual response is governed by a different set of physical parameters and mechanisms'
           ],
           correctIndex: 1,
           explanation: 'The Machinery Directive is a mandatory EU regulation covering all machinery (with some exclusions). Key requirements: (1) Risk assessment per ISO 12100 methodology (hazard identification, risk estimation, risk reduction). (2) Meet Essential Health and Safety Requirements (EHSR) in Annex I. (3) Apply harmonized standards (EN ISO 13849 for safety controls, EN 60204 for electrical, EN ISO 14120 for guards). (4) Prepare a Technical File (design documentation, risk assessment, test reports). (5) Declaration of Conformity signed by the manufacturer. (6) CE marking. (7) Operating instructions in the official language(s) of the destination country. Non-compliance can result in market access denial, product recall, and legal liability.',
@@ -2226,10 +2226,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What is the purpose of PPAP (Production Part Approval Process) in the automotive industry?',
           options: [
-            'PPAP is a maintenance scheduling tool for production equipment',
+            'PPAP is a maintenance scheduling tool for production equipment, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process',
             'PPAP is the process by which suppliers demonstrate that their production process can consistently produce parts meeting all customer requirements, submitting documented evidence before production begins',
-            'PPAP only applies to prototype parts, not production parts',
-            'PPAP is identical to ISO 9001 certification and replaces it'
+            'PPAP only applies to prototype parts, not production parts, but experimental observations under controlled laboratory conditions consistently show a different relationship between these variables',
+            'PPAP is identical to ISO 9001 certification and replaces it, but this reasoning applies only to a specific subset of conditions and cannot be generalized to the broader range of engineering applications'
           ],
           correctIndex: 1,
           explanation: 'PPAP (per AIAG) is a standardized process requiring automotive suppliers to submit documented evidence that they can consistently produce parts meeting all specifications. The 18 PPAP elements include: design records, engineering change documents, DFMEA, process flow diagram, PFMEA, control plan, MSA (measurement system analysis), dimensional results, material/performance test results, initial process study (Cpk), qualified laboratory documentation, appearance approval, sample production parts, master sample, checking aids, customer-specific requirements, Part Submission Warrant (PSW), and bulk material requirements. PPAP level (1-5) determines which elements must be submitted vs. retained.',
@@ -2240,10 +2240,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An engineer working on a government contract discovers a potential conflict of interest because their spouse works for a competing company. What is the correct professional response?',
           options: [
-            'Ignore it — personal relationships are private and do not affect professional work',
+            'Ignore it — personal relationships are private and do not affect professional work — which contradicts established test results',
             'Immediately disclose the potential conflict to their supervisor and the contracting authority, and recuse themselves from decisions where the conflict applies',
-            'Only disclose if someone asks directly about conflicts of interest',
-            'Resign from the project immediately without explaining why'
+            'Only disclose if someone asks directly about conflicts of interest — however, standard engineering analysis methods and field experience both point to a different conclusion',
+            'Resign from the project immediately without explaining why — a frequently cited but technically inaccurate claim that confuses the secondary effects with the primary cause'
           ],
           correctIndex: 1,
           explanation: 'Professional engineering codes of ethics (NSPE, ASME) require disclosure of all potential conflicts of interest. For government contracts, the Federal Acquisition Regulation (FAR) has specific conflict of interest provisions. The engineer must: (1) Promptly disclose the relationship to their supervisor and the contracting officer. (2) Document the disclosure in writing. (3) Recuse themselves from decisions or access to information that could create an actual conflict. (4) Follow any organizational ethics policies. Failure to disclose can result in professional sanctions, contract termination, and legal penalties. The standard is avoiding even the appearance of a conflict, not just actual impropriety.',
@@ -2263,9 +2263,9 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What is the relationship between IATF 16949 and ISO 9001 for automotive suppliers?',
           options: [
-            'IATF 16949 is completely independent from ISO 9001 with its own structure',
-            'IATF 16949 only covers tier-1 suppliers, not tier-2 or below',
-            'ISO 9001 is more stringent than IATF 16949 for automotive applications',
+            'IATF 16949 is completely independent from ISO 9001 with its own structure, within the elastic regime only',
+            'IATF 16949 only covers tier-1 suppliers, not tier-2 or below — only under very specific loading conditions',
+            'ISO 9001 is more stringent than IATF 16949 for automotive applications, but this applies only to a narrow range of material compositions and temperatures',
             'IATF 16949 incorporates all ISO 9001 requirements and adds automotive-specific requirements such as APQP, PPAP, MSA, SPC, and FMEA'
 
           ],
@@ -2286,10 +2286,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'What is the purpose of ISO 31000, and how does it differ from industry-specific risk standards?',
           options: [
-            'ISO 31000 is a product safety testing standard with specific pass/fail criteria',
+            'ISO 31000 is a product safety testing standard with specific pass/fail criteria, assuming idealized boundary conditions that rarely exist in actual field installations where constraint and loading complexity affect the outcome',
             'ISO 31000 provides a universal framework and principles for risk management applicable to any type of risk in any organization, without prescribing specific risk assessment methods or acceptance criteria like industry standards do',
-            'ISO 31000 only applies to financial risks in banking institutions',
-            'ISO 31000 replaces all industry-specific risk standards and is the only valid approach'
+            'ISO 31000 only applies to financial risks in banking institutions, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'ISO 31000 replaces all industry-specific risk standards and is the only valid approach, though careful analysis of the governing equations reveals a fundamentally different dependence on the key material and geometric parameters involved'
           ],
           correctIndex: 1,
           explanation: 'ISO 31000 (Risk Management — Principles, Framework, and Process) provides a generic, high-level framework that any organization can adapt. It defines principles (integrated, structured, inclusive), a framework (leadership, integration, design, implementation, evaluation, improvement), and a process (communication, scope, assessment, treatment, monitoring, recording). Unlike industry-specific standards (ISO 14971 for medical devices, ISO 12100 for machinery safety, API 580 for risk-based inspection), ISO 31000 does not prescribe specific tools (FMEA, FTA, HAZOP) or acceptance criteria. Organizations use ISO 31000 as the overarching framework and industry standards for specific risk assessment methodologies.',
@@ -2300,10 +2300,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'When an engineering project falls behind schedule, what is the difference between "crashing" and "fast-tracking" as schedule recovery techniques?',
           options: [
-            'They are the same technique with different names',
+            'They are the same technique with different names, which would only hold true if the material properties remained constant throughout the temperature range and loading history encountered in service',
             'Crashing adds resources (overtime, additional staff) to critical path tasks to reduce their duration; fast-tracking performs normally sequential tasks in parallel to reduce total schedule, accepting increased risk of rework',
-            'Crashing reduces scope while fast-tracking reduces quality',
-            'Crashing is only used in construction and fast-tracking is only for software projects'
+            'Crashing reduces scope while fast-tracking reduces quality, provided all secondary effects including environmental exposure, residual stress state, and prior deformation history are negligible compared to the primary mechanism',
+            'Crashing is only used in construction and fast-tracking is only for software projects, which oversimplifies the underlying physics by neglecting the interaction between thermal activation and mechanical driving forces in this process'
           ],
           correctIndex: 1,
           explanation: 'Crashing: add resources to shorten critical path tasks. Example: assign two engineers instead of one, authorize overtime, hire subcontractors. Trade-off: increased cost, diminishing returns (adding people to a late project can make it later — Brooks\'s Law). Fast-tracking: overlap tasks that were planned sequentially. Example: begin tooling fabrication before design is fully finalized; start integration testing before all modules are complete. Trade-off: increased risk of rework if upstream tasks change outputs, coordination complexity, potential quality issues. Both techniques target only critical path tasks — compressing non-critical tasks does not help the overall schedule.',
