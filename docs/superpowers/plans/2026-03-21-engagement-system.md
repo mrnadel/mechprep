@@ -303,10 +303,20 @@ Run: `cd "C:/Users/mrnad/OneDrive/Desktop/Mechanical Practice" && npx tsc --noEm
 
 (If TypeScript strict mode flags issues, fix them. This file has no imports so should compile cleanly.)
 
-- [ ] **Step 3: Commit**
+- [ ] **Step 3: Re-export from src/data/types.ts**
+
+Add to the bottom of `src/data/types.ts`:
+```typescript
+// Engagement system types
+export * from './engagement-types'
+```
+
+This ensures existing import patterns (`import { ... } from '@/data/types'`) work for engagement types too.
+
+- [ ] **Step 4: Commit**
 
 ```bash
-git add src/data/engagement-types.ts
+git add src/data/engagement-types.ts src/data/types.ts
 git commit -m "feat: add engagement system type definitions and constants"
 ```
 
@@ -1066,10 +1076,33 @@ git commit -m "feat: add league simulator with seeded PRNG and deterministic XP 
 
 ---
 
-## Task 6: Nudge Engine Library
+## Task 6: Nudge Engine Library & Nudge Card Data
 
 **Files:**
+- Create: `src/data/nudge-cards.ts`
 - Create: `src/lib/nudge-engine.ts`
+
+The `nudge-cards.ts` file contains the priority configuration and card template definitions. The `nudge-engine.ts` file contains the pure logic for selecting and ranking cards.
+
+- [ ] **Step 0: Create nudge card data file**
+
+```typescript
+// src/data/nudge-cards.ts
+import { NudgeType } from './engagement-types'
+
+// Priority map (lower = higher priority)
+export const nudgePriority: Record<NudgeType, number> = {
+  streak_warning: 1,
+  quest_proximity: 2,
+  league_alert: 3,
+  course_progress: 4,
+  achievement_proximity: 5,
+  neglected_topic: 6,
+}
+
+export const MAX_NUDGE_CARDS = 3
+export const STREAK_WARNING_HOUR = 18 // Show after 6pm
+```
 
 Pure functions for computing which nudge cards and continuation hooks to display.
 
@@ -1355,8 +1388,10 @@ Create `src/store/useEngagementStore.ts` with the full store implementation. The
    - `checkComebackFlow()` — read lastActiveDate from useStore, compute daysAway, set isInComebackFlow
    - `dismissNudge(type)` — store dismissal with today's date
    - `activateDoubleXp()` — set expiry timestamp
-   - `addGems(amount, source)` — add gems, create transaction, prune old transactions
+   - `addGems(amount, source)` — add gems, create transaction, prune old transactions (max 100 client-side)
    - `completeComebackQuest()` — increment comebackQuestsCompleted
+   - `recordStreakBreak(previousStreakValue)` — set `streak.lastStreakBreakDate = today`, `streak.lastStreakValueBeforeBreak = previousStreakValue`, `streak.repairAvailable = true` (called by engagement-init when streak breaks)
+   - `activateDoubleXp(duration)` — set expiry timestamp; accepts duration param to support both free (10min) and shop (30min) durations
 
 4. Use persist middleware with:
    - `name: 'mechready-engagement'`
@@ -1704,17 +1739,7 @@ Add imports and render new components. The updated structure should be:
 {lessonResult && <ResultScreen />}  {/* Existing */}
 ```
 
-Add a `useEffect` that calls engagement store initialization on mount:
-```typescript
-const { initDailyQuests, initWeeklyQuests, checkComebackFlow, simulateLeagueWeek } = useEngagementActions()
-
-useEffect(() => {
-  initDailyQuests()
-  initWeeklyQuests()
-  checkComebackFlow()
-  simulateLeagueWeek()
-}, [])
-```
+**DO NOT** add initialization `useEffect` calls here. All initialization (`initDailyQuests`, `initWeeklyQuests`, `checkComebackFlow`, `simulateLeagueWeek`) is handled by `useEngagementInit()` in Task 19, which runs at the app layout level. Adding them here too would cause double-initialization. The dashboard page only renders components — the init hook in the layout ensures data is ready before the page renders.
 
 - [ ] **Step 3: Verify the page renders**
 
@@ -1867,19 +1892,49 @@ Read `src/components/session/SessionSummary.tsx` (109 lines).
 
 Add a `useEffect` that fires on mount with the session summary data:
 ```typescript
+const { updateQuestProgress, updateLeagueXp } = useEngagementActions()
+
 useEffect(() => {
+  // Core tracking
   updateQuestProgress('sessions_completed', 1)
   updateQuestProgress('questions_correct', summary.questionsCorrect)
   updateLeagueXp(summary.xpEarned)
+  updateQuestProgress('xp_earned', summary.xpEarned)
+
+  // Accuracy-based
   if (summary.accuracy >= 80) {
     updateQuestProgress('accuracy_above_threshold', 1)
   }
   if (summary.accuracy === 100 && summary.questionsAttempted >= 3) {
     updateQuestProgress('perfect_sessions', 1)
   }
-  updateQuestProgress('xp_earned', summary.xpEarned)
+
+  // Topic tracking — session summary includes topics practiced
+  // The session's topic(s) can be derived from session type + questions
+  updateQuestProgress('topics_practiced', 1)
+
+  // Stale topic check — same pattern as ResultScreen:
+  // check topicProgress[topic].lastAttempted vs STALE_TOPIC_DAYS
+  // if stale: updateQuestProgress('stale_topic_practiced', 1)
+
+  // Daily challenge tracking
+  if (summary.type === 'daily-challenge') {
+    updateQuestProgress('daily_challenges_completed', 1)
+  }
+
+  // Fast answers — count questions answered correctly in < 30 seconds
+  // Read from session data (summary includes per-question timing if available)
+  // For each fast correct answer: updateQuestProgress('fast_answers', 1)
+
+  // Streak days — read current streak from useStore
+  const currentStreak = useStore.getState().progress.currentStreak
+  if (currentStreak > 0) {
+    updateQuestProgress('streak_days', currentStreak)
+  }
 }, [])
 ```
+
+**Note on `fast_answers`:** The existing `useStore` tracks `xpPerQuestion` per answer in `ActiveSession.xpPerQuestion` (line 25 of useStore.ts). Time-per-question is not currently tracked. To support `fast_answers`, the `answerQuestion` action in `useStore` must be modified to record answer timestamps. The engineer should add `answerTimestamps: number[]` to `ActiveSession` and push `Date.now()` on each answer.
 
 Add `<ContinuationHooks />` between the action buttons and the stats section, or below the action buttons as a "One more?" section.
 
@@ -2018,7 +2073,45 @@ git commit -m "feat: add engagement database schema (gems, quests, league tables
 
 ---
 
-## Task 21: Final Build Verification
+## Task 21: API Route Sync
+
+**Files:**
+- Modify: `src/app/api/progress/route.ts`
+
+- [ ] **Step 1: Read current progress API route**
+
+Read `src/app/api/progress/route.ts` to understand the existing sync pattern.
+
+- [ ] **Step 2: Add engagement data sync**
+
+Extend the existing POST handler to accept and persist engagement data alongside the existing progress data. The route should:
+
+1. Accept optional engagement fields in the request body:
+   - `gems: { balance, totalEarned }` — sync gem state
+   - `leagueTier: number` — sync league tier
+   - `streakFreezes: number` — sync freeze count
+   - `streakMilestones: number[]` — sync reached milestones
+
+2. Write to the new database tables:
+   - Update `userProgress` columns: `gemsBalance`, `gemsTotalEarned`, `streakFreezes`, `streakMilestones`
+   - Upsert `leagueState` row for the user
+
+3. For gem transactions: batch-insert new transactions to `gemTransactions` table (the client sends only new transactions since last sync)
+
+4. For quest progress: the client sends completed quest IDs; the server stores them in `questProgress` for history/analytics
+
+Follow the existing pattern in the route for auth checks, error handling, and response format.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add src/app/api/progress/route.ts
+git commit -m "feat: add engagement data sync to progress API route"
+```
+
+---
+
+## Task 22: Final Build Verification
 
 - [ ] **Step 1: Run full build**
 
@@ -2051,12 +2144,12 @@ git commit -m "fix: resolve build errors and finalize engagement system integrat
 ## Dependency Order
 
 ```
-Task 1 (types)
+Task 1 (types + re-export)
   ├→ Task 2 (quest data)
   ├→ Task 3 (league/shop/streak data)
   ├→ Task 4 (quest engine) ──────┐
   ├→ Task 5 (league simulator) ──┤
-  └→ Task 6 (nudge engine) ──────┤
+  └→ Task 6 (nudge data+engine) ─┤
                                   ▼
                           Task 7 (engagement store)
                                   │
@@ -2068,17 +2161,21 @@ Task 1 (types)
               │                   │                   │
               └───────────────────┼───────────────────┘
                                   ▼
-                    Task 15 (dashboard integration)
-                    Task 16 (topbar/sidebar)
-                    Task 17 (ResultScreen)
-                    Task 18 (SessionSummary)
-                    Task 19 (streak freeze init)
-                    Task 20 (database schema)
+                    Task 19 (engagement-init) ← MUST run first in this group
                                   │
+                    ┌─────────────┼─────────────┐
+                    ▼             ▼             ▼
+          Task 15 (dashboard)  Task 16    Task 17 (ResultScreen)
+          Task 18 (SessionSummary)        Task 20 (schema)
+                    Task 21 (API sync)
+                    │             │             │
+                    └─────────────┼─────────────┘
                                   ▼
-                    Task 21 (build verification)
+                    Task 22 (build verification)
 ```
 
 Tasks 2-6 can run in parallel after Task 1.
 Tasks 8-14 can run in parallel after Task 7.
-Tasks 15-20 can run in parallel after Tasks 8-14.
+**Task 19 must run before Tasks 15-18** (dashboard must not duplicate init calls).
+Tasks 15-18, 20-21 can run in parallel after Task 19.
+Task 22 runs last.
