@@ -100,7 +100,7 @@ export function LessonNode({
         WebkitTapHighlightColor: 'transparent',
       }}
       onClick={onClick}
-      whileHover={state !== 'locked' ? { scale: 1.015, backgroundColor: 'rgba(255,255,255,0.95)' } : undefined}
+      whileHover={state !== 'locked' ? { scale: 1.015, ...((state === 'completed' && golden) ? {} : { backgroundColor: 'rgba(255,255,255,0.95)' }) } : undefined}
       whileTap={state !== 'locked' ? { scale: 0.97, y: 2, boxShadow: `0 1px 0 ${theme.dark}22, 0 0px 2px rgba(0,0,0,0.04)` } : undefined}
       initial={{ opacity: 0, x: -8 }}
       animate={{ opacity: state === 'locked' ? 0.45 : 1, x: 0 }}
