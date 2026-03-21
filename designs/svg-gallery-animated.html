@@ -565,30 +565,52 @@
 <!-- ====== 10. Projectile — Dynamics ====== -->
 <div class="card" data-name="Projectile" data-cat="Dynamics">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <rect x="4" y="66" width="72" height="5" rx="2.5" class="s-fill" opacity="0.08"/>
-  <path d="M10,65 Q40,5 70,65" class="s-stroke-l" stroke-width="1.5" stroke-dasharray="3,4" opacity="0.3" fill="none"/>
+  <!-- Ground -->
+  <rect x="4" y="66" width="72" height="4" rx="2" class="s-fill" opacity="0.06"/>
+  <!-- Range indicator (R) -->
+  <line x1="10" y1="72" x2="70" y2="72" class="s-stroke-d" stroke-width="0.6" opacity="0.15"/>
+  <line x1="10" y1="70" x2="10" y2="74" class="s-stroke-d" stroke-width="0.6" opacity="0.15"/>
+  <line x1="70" y1="70" x2="70" y2="74" class="s-stroke-d" stroke-width="0.6" opacity="0.15"/>
+  <text x="40" y="78" text-anchor="middle" font-size="5" class="s-fill-d" opacity="0.2" font-style="italic">R</text>
+  <!-- Max height indicator (H) -->
+  <line x1="40" y1="35" x2="40" y2="65" class="s-stroke-d" stroke-width="0.6" stroke-dasharray="1.5,2.5" opacity="0.15"/>
+  <text x="43" y="50" font-size="5" class="s-fill-d" opacity="0.2" font-style="italic">H</text>
+  <!-- Trajectory path (dashed parabola) -->
+  <path d="M10,65 Q40,5 70,65" class="s-stroke-l" stroke-width="1.5" stroke-dasharray="3,4" opacity="0.25" fill="none"/>
+  <!-- Trail ghost projectiles (positions corrected to lie ON the Bezier curve) -->
+  <circle cx="19" cy="50" r="2.5" class="s-fill-l" opacity="0">
+    <animate attributeName="opacity" values="0;0.3;0" dur="3s" repeatCount="indefinite" begin="0.3s"/>
+  </circle>
+  <circle cx="28" cy="40" r="2.5" class="s-fill-l" opacity="0">
+    <animate attributeName="opacity" values="0;0.3;0" dur="3s" repeatCount="indefinite" begin="0.6s"/>
+  </circle>
+  <circle cx="40" cy="35" r="2.5" class="s-fill-l" opacity="0">
+    <animate attributeName="opacity" values="0;0.3;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="52" cy="40" r="2.5" class="s-fill-l" opacity="0">
+    <animate attributeName="opacity" values="0;0.3;0" dur="3s" repeatCount="indefinite" begin="1.4s"/>
+  </circle>
+  <circle cx="61" cy="50" r="2.5" class="s-fill-l" opacity="0">
+    <animate attributeName="opacity" values="0;0.3;0" dur="3s" repeatCount="indefinite" begin="1.8s"/>
+  </circle>
+  <!-- Projectile -->
   <g>
     <animateMotion dur="3s" repeatCount="indefinite" path="M10,65 Q40,5 70,65" rotate="auto"/>
-    <circle r="6" class="s-fill" opacity="0.35"/>
-    <circle r="6" class="s-stroke-d" stroke-width="2" fill="none"/>
-    <circle r="2.5" class="s-fill-d" opacity="0.5"/>
+    <circle r="5" class="s-fill" opacity="0.3"/>
+    <circle r="5" class="s-stroke-d" stroke-width="2" fill="none"/>
+    <circle r="2" class="s-fill-d" opacity="0.5"/>
   </g>
-  <circle cx="18" cy="50" r="3" class="s-fill-l" opacity="0">
-    <animate attributeName="opacity" values="0;0.4;0" dur="3s" repeatCount="indefinite" begin="0.3s"/>
-  </circle>
-  <circle cx="28" cy="32" r="3" class="s-fill-l" opacity="0">
-    <animate attributeName="opacity" values="0;0.4;0" dur="3s" repeatCount="indefinite" begin="0.6s"/>
-  </circle>
-  <circle cx="40" cy="18" r="3" class="s-fill-l" opacity="0">
-    <animate attributeName="opacity" values="0;0.4;0" dur="3s" repeatCount="indefinite" begin="1s"/>
-  </circle>
-  <circle cx="52" cy="32" r="3" class="s-fill-l" opacity="0">
-    <animate attributeName="opacity" values="0;0.4;0" dur="3s" repeatCount="indefinite" begin="1.4s"/>
-  </circle>
-  <circle cx="62" cy="50" r="3" class="s-fill-l" opacity="0">
-    <animate attributeName="opacity" values="0;0.4;0" dur="3s" repeatCount="indefinite" begin="1.8s"/>
-  </circle>
-  <text x="10" y="75" font-size="6" class="s-fill-d" opacity="0.4">v&#x2080;</text>
+  <!-- Launch angle arc (θ₀) -->
+  <path d="M19,65 A9,9 0 0,0 14,57" class="s-stroke-d" stroke-width="0.8" fill="none" opacity="0.2"/>
+  <text x="20" y="59" font-size="4.5" class="s-fill-d" opacity="0.2" font-style="italic">θ₀</text>
+  <!-- Initial velocity vector (v₀) -->
+  <line x1="10" y1="65" x2="16" y2="53" class="s-stroke-d" stroke-width="1.2" stroke-linecap="round" opacity="0.3"/>
+  <polygon points="14.5,55 16,51 18,55" class="s-fill-d" opacity="0.3"/>
+  <text x="11" y="50" font-size="5" class="s-fill-d" opacity="0.25" font-style="italic">v₀</text>
+  <!-- Gravity indicator -->
+  <line x1="74" y1="12" x2="74" y2="20" class="s-stroke-d" stroke-width="1" stroke-linecap="round" opacity="0.2"/>
+  <polygon points="72.5,19 74,22 75.5,19" class="s-fill-d" opacity="0.2"/>
+  <text x="74" y="10" text-anchor="middle" font-size="5" class="s-fill-d" opacity="0.2" font-style="italic">g</text>
 </svg></div>
 <div class="card-label">Projectile</div>
 </div>
