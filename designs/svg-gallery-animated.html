@@ -1533,35 +1533,71 @@
 <!-- ====== 30. Lathe — Materials ====== -->
 <div class="card" data-name="Lathe" data-cat="Materials">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <rect x="6" y="58" width="68" height="8" rx="4" class="s-fill" opacity="0.12"/>
-  <rect x="6" y="58" width="68" height="8" rx="4" class="s-stroke-d" stroke-width="1.5" fill="none"/>
-  <rect x="6" y="30" width="16" height="28" rx="5" class="s-fill" opacity="0.1"/>
-  <rect x="6" y="30" width="16" height="28" rx="5" class="s-stroke-d" stroke-width="2" fill="none"/>
+  <!-- Bed (ways) -->
+  <rect x="4" y="58" width="72" height="8" rx="3" class="s-fill" opacity="0.1"/>
+  <rect x="4" y="58" width="72" height="8" rx="3" class="s-stroke-d" stroke-width="1.5" fill="none"/>
+  <!-- Way grooves on bed -->
+  <line x1="6" y1="60.5" x2="74" y2="60.5" class="s-stroke-d" stroke-width="0.4" opacity="0.08"/>
+  <line x1="6" y1="63.5" x2="74" y2="63.5" class="s-stroke-d" stroke-width="0.4" opacity="0.08"/>
+  <!-- Headstock housing -->
+  <rect x="4" y="28" width="18" height="30" rx="4" class="s-fill" opacity="0.1"/>
+  <rect x="4" y="28" width="18" height="30" rx="4" class="s-stroke-d" stroke-width="2" fill="none"/>
+  <!-- 3-jaw chuck (rotating) -->
   <g>
-    <animateTransform attributeName="transform" type="rotate" values="0,22,44;360,22,44" dur="1s" repeatCount="indefinite"/>
-    <circle cx="22" cy="44" r="10" class="s-fill" opacity="0.12"/>
-    <circle cx="22" cy="44" r="10" class="s-stroke" stroke-width="2" fill="none"/>
-    <line x1="22" y1="34" x2="22" y2="54" class="s-stroke-l" stroke-width="1.5" opacity="0.4"/>
-    <line x1="12" y1="44" x2="32" y2="44" class="s-stroke-l" stroke-width="1.5" opacity="0.4"/>
+    <animateTransform attributeName="transform" type="rotate" values="0,22,44;360,22,44" dur="0.8s" repeatCount="indefinite"/>
+    <circle cx="22" cy="44" r="12" class="s-fill" opacity="0.1"/>
+    <circle cx="22" cy="44" r="12" class="s-stroke" stroke-width="2" fill="none"/>
+    <!-- 3 jaw marks at 120° intervals -->
+    <line x1="22" y1="32.5" x2="22" y2="36" class="s-stroke-d" stroke-width="3" stroke-linecap="round" opacity="0.25"/>
+    <line x1="12.1" y1="49.8" x2="15.2" y2="48" class="s-stroke-d" stroke-width="3" stroke-linecap="round" opacity="0.25"/>
+    <line x1="31.9" y1="49.8" x2="28.8" y2="48" class="s-stroke-d" stroke-width="3" stroke-linecap="round" opacity="0.25"/>
+    <!-- Scroll ring -->
+    <circle cx="22" cy="44" r="7" class="s-stroke-l" stroke-width="0.8" fill="none" opacity="0.15"/>
   </g>
-  <rect x="22" y="38" width="36" height="12" rx="6" class="s-fill" opacity="0.15"/>
-  <rect x="22" y="38" width="36" height="12" rx="6" class="s-stroke-d" stroke-width="1.5" fill="none"/>
-  <circle cx="52" cy="36" r="4" class="s-fill-d" opacity="0.5"/>
-  <rect x="49" y="26" width="6" height="10" rx="3" class="s-fill-d" opacity="0.3"/>
+  <!-- Chuck center -->
+  <circle cx="22" cy="44" r="3" class="s-fill-d" opacity="0.3"/>
+  <!-- Workpiece (cylindrical bar stock) -->
+  <rect x="22" y="37" width="38" height="14" rx="1" class="s-fill" opacity="0.16"/>
+  <rect x="22" y="37" width="38" height="14" rx="1" class="s-stroke-d" stroke-width="1.5" fill="none"/>
+  <!-- Cylindrical highlight (3D cylinder feel) -->
+  <rect x="22" y="38" width="38" height="3" rx="1" class="s-fill-l" opacity="0.12"/>
+  <!-- Machined groove at tool contact -->
+  <rect x="48" y="36" width="2" height="16" rx="1" class="s-fill-d" opacity="0.12"/>
+  <!-- Tool post holder -->
+  <rect x="46" y="24" width="8" height="13" rx="2" class="s-fill-d" opacity="0.25"/>
+  <rect x="46" y="24" width="8" height="13" rx="2" class="s-stroke-d" stroke-width="1" fill="none" opacity="0.4"/>
+  <!-- Cutting tool tip (triangular insert) -->
+  <polygon points="49,37 51,34 49,31" class="s-fill-d" opacity="0.5"/>
+  <!-- Chips (fan of particles flying from cut) -->
   <circle r="1.2" class="s-fill">
-    <animateMotion dur="0.6s" repeatCount="indefinite" path="M52,36 L60,26"/>
-    <animate attributeName="opacity" values="0.6;0" dur="0.6s" repeatCount="indefinite"/>
+    <animateMotion dur="0.5s" repeatCount="indefinite" path="M50,35 L56,22"/>
+    <animate attributeName="opacity" values="0.6;0" dur="0.5s" repeatCount="indefinite"/>
   </circle>
-  <circle r="1" class="s-fill-l">
-    <animateMotion dur="0.5s" repeatCount="indefinite" path="M52,36 L58,24" begin="0.15s"/>
-    <animate attributeName="opacity" values="0.5;0" dur="0.5s" begin="0.15s" repeatCount="indefinite"/>
+  <circle r="0.9" class="s-fill-l">
+    <animateMotion dur="0.42s" repeatCount="indefinite" path="M50,35 L54,20" begin="0.08s"/>
+    <animate attributeName="opacity" values="0.5;0" dur="0.42s" begin="0.08s" repeatCount="indefinite"/>
   </circle>
   <circle r="1.1" class="s-fill-d">
-    <animateMotion dur="0.55s" repeatCount="indefinite" path="M52,36 L62,28" begin="0.3s"/>
-    <animate attributeName="opacity" values="0.4;0" dur="0.55s" begin="0.3s" repeatCount="indefinite"/>
+    <animateMotion dur="0.55s" repeatCount="indefinite" path="M50,35 L60,26" begin="0.18s"/>
+    <animate attributeName="opacity" values="0.45;0" dur="0.55s" begin="0.18s" repeatCount="indefinite"/>
   </circle>
-  <rect x="58" y="34" width="12" height="18" rx="5" class="s-fill" opacity="0.1"/>
-  <rect x="58" y="34" width="12" height="18" rx="5" class="s-stroke-d" stroke-width="1.5" fill="none"/>
+  <circle r="0.8" class="s-fill">
+    <animateMotion dur="0.48s" repeatCount="indefinite" path="M50,35 L62,30" begin="0.3s"/>
+    <animate attributeName="opacity" values="0.4;0" dur="0.48s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="1" class="s-fill-l">
+    <animateMotion dur="0.38s" repeatCount="indefinite" path="M50,35 L52,18" begin="0.22s"/>
+    <animate attributeName="opacity" values="0.5;0" dur="0.38s" begin="0.22s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Tailstock -->
+  <rect x="60" y="32" width="14" height="26" rx="4" class="s-fill" opacity="0.08"/>
+  <rect x="60" y="32" width="14" height="26" rx="4" class="s-stroke-d" stroke-width="1.5" fill="none"/>
+  <!-- Tailstock live center (point into workpiece) -->
+  <polygon points="60,44 56,42 56,46" class="s-fill-d" opacity="0.3"/>
+  <line x1="60" y1="44" x2="56" y2="44" class="s-stroke-d" stroke-width="1" opacity="0.2"/>
+  <!-- Rotation direction indicator -->
+  <path d="M30,30 A9,9 0 0,1 34,34" class="s-stroke-l" stroke-width="0.8" fill="none" opacity="0.2"/>
+  <polygon points="33,32.5 35.5,35 31.5,35" class="s-fill-l" opacity="0.2"/>
 </svg></div>
 <div class="card-label">Lathe</div>
 </div>
