@@ -5,46 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MechReady Mascot Gallery</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: system-ui, -apple-system, sans-serif; background: #FAFAFA; padding: 40px 20px; }
-  h1 { text-align: center; font-size: 28px; font-weight: 900; color: #3C3C3C; margin-bottom: 6px; }
-  h1 span { color: #58CC02; }
-  p.sub { text-align: center; color: #AFAFAF; font-size: 14px; font-weight: 600; margin-bottom: 40px; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px; max-width: 1100px; margin: 0 auto;
-  }
-  .card {
-    background: white; border-radius: 20px; padding: 28px 20px 20px; text-align: center;
-    border: 2px solid #EBEBEB; cursor: pointer; transition: all 0.2s ease;
-    display: flex; flex-direction: column; align-items: center; gap: 16px;
-  }
-  .card:hover { border-color: #58CC02; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(88,204,2,0.12); }
-  .num { font-size: 11px; font-weight: 800; color: #C0C0C0; letter-spacing: 1px; }
-  .label { font-size: 14px; font-weight: 800; color: #3C3C3C; }
-  .desc { font-size: 11px; font-weight: 600; color: #AFAFAF; line-height: 1.4; }
-  .sizes { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
-  .sizes span { font-size: 9px; color: #CCC; font-weight: 700; }
-  .mock-header {
-    max-width: 400px; margin: 0 auto 40px; background: white; border-radius: 16px;
-    border: 2px solid #EBEBEB; padding: 12px 16px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .mock-header .right { display: flex; align-items: center; gap: 8px; }
-  .mock-header .stat { font-size: 13px; font-weight: 800; color: #3C3C3C; }
-  .mock-header .avatar { width: 30px; height: 30px; border-radius: 50%; background: #E5E5E5; }
-  #header-preview { display: flex; align-items: center; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,sans-serif;background:#FAFAFA;padding:40px 20px}
+  h1{text-align:center;font-size:28px;font-weight:900;color:#3C3C3C;margin-bottom:6px}
+  h1 span{color:#58CC02}
+  p.sub{text-align:center;color:#AFAFAF;font-size:14px;font-weight:600;margin-bottom:40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;max-width:1200px;margin:0 auto}
+  .card{background:white;border-radius:20px;padding:24px 16px 16px;text-align:center;border:2px solid #EBEBEB;cursor:pointer;transition:all .2s ease;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .card:hover{border-color:#58CC02;transform:translateY(-3px);box-shadow:0 8px 24px rgba(88,204,2,.12)}
+  .num{font-size:11px;font-weight:800;color:#C0C0C0;letter-spacing:1px}
+  .label{font-size:15px;font-weight:800;color:#3C3C3C}
+  .desc{font-size:11px;font-weight:600;color:#AFAFAF;line-height:1.4}
+  .sizes{display:flex;align-items:center;gap:10px;margin-top:4px}
+  .sizes span{font-size:9px;color:#CCC;font-weight:700}
+  .mock-header{max-width:400px;margin:0 auto 40px;background:white;border-radius:16px;border:2px solid #EBEBEB;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+  .mock-header .right{display:flex;align-items:center;gap:8px}
+  .mock-header .stat{font-size:13px;font-weight:800;color:#3C3C3C}
+  .mock-header .avatar{width:30px;height:30px;border-radius:50%;background:#E5E5E5}
+  #header-preview{display:flex;align-items:center}
 </style>
 </head>
 <body>
-
 <h1><span>Mech</span>Ready Mascot</h1>
 <p class="sub">20 artist takes on a cute hydraulic arm — click to preview in header</p>
-
 <div class="mock-header">
-  <div id="header-preview" style="width:32px;height:32px;">
-    <svg width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="10" fill="#E5E5E5"/><text x="16" y="17" text-anchor="middle" dominant-baseline="central" fill="#AAA" font-size="11" font-weight="800">?</text></svg>
+  <div id="header-preview" style="width:32px;height:38px">
+    <svg width="32" height="38" viewBox="0 0 200 240"><rect width="200" height="240" rx="20" fill="#E5E5E5"/><text x="100" y="125" text-anchor="middle" dominant-baseline="central" fill="#AAA" font-size="40" font-weight="800">?</text></svg>
   </div>
   <div class="right">
     <span style="font-size:15px">&#9889;</span><span class="stat">3</span>
@@ -52,791 +38,457 @@
     <div class="avatar"></div>
   </div>
 </div>
-
 <div class="grid">
 
-  <!-- #1: Bubbly Duo — fat rounded pill shapes, Duolingo-style -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#1</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <rect x="18" y="62" width="44" height="14" rx="7" fill="#58CC02"/>
-      <rect x="33" y="48" width="14" height="18" rx="7" fill="#46A302"/>
-      <rect x="28" y="24" width="18" height="30" rx="9" fill="#62D916"/>
-      <rect x="30" y="4" width="14" height="26" rx="7" fill="#58CC02"/>
-      <circle cx="37" cy="46" r="6" fill="#FFB020"/>
-      <circle cx="37" cy="10" r="5" fill="#FFB020"/>
-      <path d="M30 2 Q28 -2 26 2 M37 0 Q37 -3 37 0 M44 2 Q46 -2 48 2" stroke="#58CC02" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="33" cy="32" r="4" fill="white"/>
-      <circle cx="45" cy="32" r="4" fill="white"/>
-      <circle cx="34.5" cy="33" r="2" fill="#3C3C3C"/>
-      <circle cx="46.5" cy="33" r="2" fill="#3C3C3C"/>
-      <circle cx="35" cy="33.5" r="0.7" fill="white"/>
-      <circle cx="47" cy="33.5" r="0.7" fill="white"/>
-      <path d="M34 39 Q39 44 44 39" stroke="#3C3C3C" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <ellipse cx="29" cy="38" rx="3" ry="1.5" fill="#FF6B8A" opacity="0.35"/>
-      <ellipse cx="49" cy="38" rx="3" ry="1.5" fill="#FF6B8A" opacity="0.35"/>
-    </svg>
-    <div class="label">Bubbly</div>
-    <div class="desc">Fat rounded pills, Duolingo-vibe</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect x="18" y="62" width="44" height="14" rx="7" fill="#58CC02"/><rect x="33" y="48" width="14" height="18" rx="7" fill="#46A302"/><rect x="28" y="24" width="18" height="30" rx="9" fill="#62D916"/><rect x="30" y="4" width="14" height="26" rx="7" fill="#58CC02"/><circle cx="37" cy="46" r="6" fill="#FFB020"/><circle cx="37" cy="10" r="5" fill="#FFB020"/><path d="M30 2 Q28 -2 26 2 M37 0 Q37 -3 37 0 M44 2 Q46 -2 48 2" stroke="#58CC02" stroke-width="2.5" stroke-linecap="round"/><circle cx="33" cy="32" r="4" fill="white"/><circle cx="45" cy="32" r="4" fill="white"/><circle cx="34.5" cy="33" r="2" fill="#3C3C3C"/><circle cx="46.5" cy="33" r="2" fill="#3C3C3C"/><path d="M34 39 Q39 44 44 39" stroke="#3C3C3C" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="29" cy="38" rx="3" ry="1.5" fill="#FF6B8A" opacity="0.35"/><ellipse cx="49" cy="38" rx="3" ry="1.5" fill="#FF6B8A" opacity="0.35"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect x="18" y="62" width="44" height="14" rx="7" fill="#58CC02"/><rect x="33" y="48" width="14" height="18" rx="7" fill="#46A302"/><rect x="28" y="24" width="18" height="30" rx="9" fill="#62D916"/><rect x="30" y="4" width="14" height="26" rx="7" fill="#58CC02"/><circle cx="37" cy="46" r="6" fill="#FFB020"/><circle cx="37" cy="10" r="5" fill="#FFB020"/><circle cx="33" cy="32" r="4" fill="white"/><circle cx="45" cy="32" r="4" fill="white"/><circle cx="34.5" cy="33" r="2" fill="#3C3C3C"/><circle cx="46.5" cy="33" r="2" fill="#3C3C3C"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #1 Duo Green — classic L-bend -->
+<div class="card" onclick="pick(this)">
+<div class="num">#1</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="50" y="218" width="56" height="22" rx="8" fill="#3D9402"/>
+<rect x="62" y="198" width="32" height="24" rx="6" fill="#46A302"/>
+<rect x="82" y="15" width="34" height="80" rx="17" fill="#62D916" transform="rotate(122,99,95)"/>
+<g transform="translate(167,138) rotate(122)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#46A302"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#58CC02"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#58CC02"/></g>
+<rect x="59" y="93" width="38" height="112" rx="19" fill="#58CC02" transform="rotate(12,78,205)"/>
+<circle cx="99" cy="95" r="16" fill="#62D916"/><circle cx="99" cy="95" r="8" fill="#3D9402"/>
+<circle cx="78" cy="205" r="14" fill="#46A302"/><circle cx="78" cy="205" r="7" fill="#3D9402"/>
+<circle cx="167" cy="138" r="9" fill="#62D916"/><circle cx="167" cy="138" r="4.5" fill="#3D9402"/>
+</svg>
+<div class="label">Duo</div>
+<div class="desc">Classic Duolingo green, standard crane pose</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="50" y="218" width="56" height="22" rx="8" fill="#3D9402"/><rect x="62" y="198" width="32" height="24" rx="6" fill="#46A302"/><rect x="82" y="15" width="34" height="80" rx="17" fill="#62D916" transform="rotate(122,99,95)"/><rect x="59" y="93" width="38" height="112" rx="19" fill="#58CC02" transform="rotate(12,78,205)"/><circle cx="99" cy="95" r="16" fill="#62D916"/><circle cx="99" cy="95" r="8" fill="#3D9402"/><circle cx="78" cy="205" r="14" fill="#46A302"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="50" y="218" width="56" height="22" rx="8" fill="#3D9402"/><rect x="82" y="15" width="34" height="80" rx="17" fill="#62D916" transform="rotate(122,99,95)"/><rect x="59" y="93" width="38" height="112" rx="19" fill="#58CC02" transform="rotate(12,78,205)"/><circle cx="99" cy="95" r="16" fill="#62D916"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #2: Single-stroke — one continuous line, minimal -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#2</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <path d="M16 72 h48 M20 72 v-8 h40 v8 M36 64 v-14 M44 64 v-14 M36 50 h8 M34 50 L28 30 M46 50 L52 30 M28 30 h24 M30 30 L26 14 M50 30 L54 14 M26 14 h6 M50 14 h6 M24 12 L28 6 M56 12 L52 6 M28 6 h24" stroke="#58CC02" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <!-- face -->
-      <circle cx="35" cy="38" r="2.5" fill="#58CC02"/>
-      <circle cx="45" cy="38" r="2.5" fill="#58CC02"/>
-      <path d="M36 43 Q40 46 44 43" stroke="#58CC02" stroke-width="2" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="label">Line Art</div>
-    <div class="desc">Single-weight continuous stroke</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><path d="M16 72 h48 M20 72 v-8 h40 v8 M36 64 v-14 M44 64 v-14 M36 50 h8 M34 50 L28 30 M46 50 L52 30 M28 30 h24 M30 30 L26 14 M50 30 L54 14 M26 14 h6 M50 14 h6 M24 12 L28 6 M56 12 L52 6 M28 6 h24" stroke="#58CC02" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="35" cy="38" r="2.5" fill="#58CC02"/><circle cx="45" cy="38" r="2.5" fill="#58CC02"/><path d="M36 43 Q40 46 44 43" stroke="#58CC02" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><path d="M16 72 h48 M20 72 v-8 h40 v8 M36 64 v-14 M44 64 v-14 M36 50 h8 M34 50 L28 30 M46 50 L52 30 M28 30 h24 M30 30 L26 14 M50 30 L54 14 M26 14 h6 M50 14 h6 M24 12 L28 6 M56 12 L52 6 M28 6 h24" stroke="#58CC02" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="35" cy="38" r="2.5" fill="#58CC02"/><circle cx="45" cy="38" r="2.5" fill="#58CC02"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #2 Ocean — reaching up-right -->
+<div class="card" onclick="pick(this)">
+<div class="num">#2</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="54" y="218" width="56" height="22" rx="8" fill="#1565C0"/>
+<rect x="66" y="198" width="32" height="24" rx="6" fill="#1976D2"/>
+<rect x="72" y="14" width="32" height="76" rx="16" fill="#42A5F5" transform="rotate(62,88,90)"/>
+<g transform="translate(155,54) rotate(62)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#1976D2"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#2196F3"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#2196F3"/></g>
+<rect x="64" y="90" width="36" height="115" rx="18" fill="#2196F3" transform="rotate(3,82,205)"/>
+<circle cx="88" cy="90" r="16" fill="#42A5F5"/><circle cx="88" cy="90" r="8" fill="#1565C0"/>
+<circle cx="82" cy="205" r="14" fill="#1976D2"/><circle cx="82" cy="205" r="7" fill="#1565C0"/>
+<circle cx="155" cy="54" r="9" fill="#42A5F5"/><circle cx="155" cy="54" r="4.5" fill="#1565C0"/>
+</svg>
+<div class="label">Ocean</div>
+<div class="desc">Cool blue, arm reaching skyward</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="54" y="218" width="56" height="22" rx="8" fill="#1565C0"/><rect x="66" y="198" width="32" height="24" rx="6" fill="#1976D2"/><rect x="72" y="14" width="32" height="76" rx="16" fill="#42A5F5" transform="rotate(62,88,90)"/><rect x="64" y="90" width="36" height="115" rx="18" fill="#2196F3" transform="rotate(3,82,205)"/><circle cx="88" cy="90" r="16" fill="#42A5F5"/><circle cx="88" cy="90" r="8" fill="#1565C0"/><circle cx="82" cy="205" r="14" fill="#1976D2"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="54" y="218" width="56" height="22" rx="8" fill="#1565C0"/><rect x="72" y="14" width="32" height="76" rx="16" fill="#42A5F5" transform="rotate(62,88,90)"/><rect x="64" y="90" width="36" height="115" rx="18" fill="#2196F3" transform="rotate(3,82,205)"/><circle cx="88" cy="90" r="16" fill="#42A5F5"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #3: Geometric / low-poly triangles -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#3</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- base trapezoid -->
-      <polygon points="14,76 66,76 58,64 22,64" fill="#46A302"/>
-      <!-- pillar -->
-      <polygon points="34,64 46,64 44,48 36,48" fill="#3D9402"/>
-      <!-- lower arm -->
-      <polygon points="30,48 50,48 46,28 34,28" fill="#58CC02"/>
-      <polygon points="30,48 40,48 38,28 34,28" fill="#62D916"/>
-      <!-- upper arm -->
-      <polygon points="32,28 48,28 44,10 36,10" fill="#62D916"/>
-      <polygon points="32,28 40,28 38,10 36,10" fill="#6EE018"/>
-      <!-- claw -->
-      <polygon points="30,10 36,10 32,2" fill="#FFB020"/>
-      <polygon points="50,10 44,10 48,2" fill="#FF8C00"/>
-      <!-- joint diamonds -->
-      <polygon points="40,52 44,48 40,44 36,48" fill="#FFB020"/>
-      <polygon points="40,32 44,28 40,24 36,28" fill="#FFB020"/>
-      <!-- faceted eyes -->
-      <polygon points="35,38 38,35 41,38 38,41" fill="white"/>
-      <polygon points="42,38 45,35 48,38 45,41" fill="white"/>
-      <circle cx="38" cy="38" r="1.5" fill="#3C3C3C"/>
-      <circle cx="45" cy="38" r="1.5" fill="#3C3C3C"/>
-      <polygon points="37,44 40,42 43,44 40,46" fill="#3C3C3C" opacity="0.6"/>
-    </svg>
-    <div class="label">Low Poly</div>
-    <div class="desc">Faceted triangular geometry</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><polygon points="14,76 66,76 58,64 22,64" fill="#46A302"/><polygon points="34,64 46,64 44,48 36,48" fill="#3D9402"/><polygon points="30,48 50,48 46,28 34,28" fill="#58CC02"/><polygon points="32,28 48,28 44,10 36,10" fill="#62D916"/><polygon points="30,10 36,10 32,2" fill="#FFB020"/><polygon points="50,10 44,10 48,2" fill="#FF8C00"/><polygon points="40,52 44,48 40,44 36,48" fill="#FFB020"/><polygon points="40,32 44,28 40,24 36,28" fill="#FFB020"/><polygon points="35,38 38,35 41,38 38,41" fill="white"/><polygon points="42,38 45,35 48,38 45,41" fill="white"/><circle cx="38" cy="38" r="1.5" fill="#3C3C3C"/><circle cx="45" cy="38" r="1.5" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><polygon points="14,76 66,76 58,64 22,64" fill="#46A302"/><polygon points="34,64 46,64 44,48 36,48" fill="#3D9402"/><polygon points="30,48 50,48 46,28 34,28" fill="#58CC02"/><polygon points="32,28 48,28 44,10 36,10" fill="#62D916"/><polygon points="30,10 36,10 32,2" fill="#FFB020"/><polygon points="50,10 44,10 48,2" fill="#FF8C00"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #3 Ember — extended far right -->
+<div class="card" onclick="pick(this)">
+<div class="num">#3</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="24" y="218" width="56" height="22" rx="8" fill="#BF360C"/>
+<rect x="36" y="198" width="32" height="24" rx="6" fill="#E55100"/>
+<rect x="50" y="-4" width="34" height="105" rx="17" fill="#FF8A5C" transform="rotate(88,67,101)"/>
+<g transform="translate(172,97) rotate(88)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#E55100"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#FF6B35"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#FF6B35"/></g>
+<rect x="32" y="100" width="40" height="105" rx="20" fill="#FF6B35" transform="rotate(8,52,205)"/>
+<circle cx="67" cy="101" r="16" fill="#FF8A5C"/><circle cx="67" cy="101" r="8" fill="#BF360C"/>
+<circle cx="52" cy="205" r="14" fill="#E55100"/><circle cx="52" cy="205" r="7" fill="#BF360C"/>
+<circle cx="172" cy="97" r="9" fill="#FF8A5C"/><circle cx="172" cy="97" r="4.5" fill="#BF360C"/>
+</svg>
+<div class="label">Ember</div>
+<div class="desc">Warm orange, long horizontal reach</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="24" y="218" width="56" height="22" rx="8" fill="#BF360C"/><rect x="36" y="198" width="32" height="24" rx="6" fill="#E55100"/><rect x="50" y="-4" width="34" height="105" rx="17" fill="#FF8A5C" transform="rotate(88,67,101)"/><rect x="32" y="100" width="40" height="105" rx="20" fill="#FF6B35" transform="rotate(8,52,205)"/><circle cx="67" cy="101" r="16" fill="#FF8A5C"/><circle cx="67" cy="101" r="8" fill="#BF360C"/><circle cx="52" cy="205" r="14" fill="#E55100"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="24" y="218" width="56" height="22" rx="8" fill="#BF360C"/><rect x="50" y="-4" width="34" height="105" rx="17" fill="#FF8A5C" transform="rotate(88,67,101)"/><rect x="32" y="100" width="40" height="105" rx="20" fill="#FF6B35" transform="rotate(8,52,205)"/><circle cx="67" cy="101" r="16" fill="#FF8A5C"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #4: Blob / organic amorphous -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#4</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- blobby base -->
-      <path d="M12 70 Q12 62 24 62 Q40 58 56 62 Q68 62 68 70 Q68 78 40 78 Q12 78 12 70Z" fill="#58CC02"/>
-      <!-- blobby pillar -->
-      <path d="M32 62 Q30 50 34 46 Q38 42 46 46 Q50 50 48 62Z" fill="#46A302"/>
-      <!-- blobby lower arm -->
-      <path d="M28 48 Q22 36 26 26 Q30 20 38 20 Q46 20 50 26 Q54 36 48 48Z" fill="#62D916"/>
-      <!-- blobby upper arm -->
-      <path d="M30 24 Q26 14 30 8 Q34 2 40 2 Q46 2 50 8 Q54 14 50 24Z" fill="#58CC02"/>
-      <!-- blobby claw -->
-      <path d="M32 6 Q28 -2 24 4 Q28 2 30 6Z" fill="#FFB020"/>
-      <path d="M48 6 Q52 -2 56 4 Q52 2 50 6Z" fill="#FFB020"/>
-      <!-- joint blobs -->
-      <circle cx="38" cy="46" r="6" fill="#FFB020" opacity="0.8"/>
-      <circle cx="40" cy="22" r="5" fill="#FFB020" opacity="0.8"/>
-      <!-- squishy face -->
-      <ellipse cx="34" cy="34" rx="4" ry="4.5" fill="white"/>
-      <ellipse cx="46" cy="34" rx="4" ry="4.5" fill="white"/>
-      <circle cx="35" cy="35" r="2.2" fill="#3C3C3C"/>
-      <circle cx="47" cy="35" r="2.2" fill="#3C3C3C"/>
-      <circle cx="35.8" cy="34" r="0.8" fill="white"/>
-      <circle cx="47.8" cy="34" r="0.8" fill="white"/>
-      <path d="M36 40 Q40 45 44 40" stroke="#3C3C3C" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <ellipse cx="28" cy="38" rx="3.5" ry="2" fill="#FF6B8A" opacity="0.3"/>
-      <ellipse cx="52" cy="38" rx="3.5" ry="2" fill="#FF6B8A" opacity="0.3"/>
-    </svg>
-    <div class="label">Blobby</div>
-    <div class="desc">Organic squishy amoeba style</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><path d="M12 70 Q12 62 24 62 Q40 58 56 62 Q68 62 68 70 Q68 78 40 78 Q12 78 12 70Z" fill="#58CC02"/><path d="M32 62 Q30 50 34 46 Q38 42 46 46 Q50 50 48 62Z" fill="#46A302"/><path d="M28 48 Q22 36 26 26 Q30 20 38 20 Q46 20 50 26 Q54 36 48 48Z" fill="#62D916"/><path d="M30 24 Q26 14 30 8 Q34 2 40 2 Q46 2 50 8 Q54 14 50 24Z" fill="#58CC02"/><circle cx="38" cy="46" r="6" fill="#FFB020" opacity="0.8"/><ellipse cx="34" cy="34" rx="4" ry="4.5" fill="white"/><ellipse cx="46" cy="34" rx="4" ry="4.5" fill="white"/><circle cx="35" cy="35" r="2.2" fill="#3C3C3C"/><circle cx="47" cy="35" r="2.2" fill="#3C3C3C"/><path d="M36 40 Q40 45 44 40" stroke="#3C3C3C" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><path d="M12 70 Q12 62 24 62 Q40 58 56 62 Q68 62 68 70 Q68 78 40 78 Q12 78 12 70Z" fill="#58CC02"/><path d="M28 48 Q22 36 26 26 Q30 20 38 20 Q46 20 50 26 Q54 36 48 48Z" fill="#62D916"/><path d="M30 24 Q26 14 30 8 Q34 2 40 2 Q46 2 50 8 Q54 14 50 24Z" fill="#58CC02"/><ellipse cx="34" cy="34" rx="4" ry="4.5" fill="white"/><ellipse cx="46" cy="34" rx="4" ry="4.5" fill="white"/><circle cx="35" cy="35" r="2.2" fill="#3C3C3C"/><circle cx="47" cy="35" r="2.2" fill="#3C3C3C"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #4 Grape — curling back left -->
+<div class="card" onclick="pick(this)">
+<div class="num">#4</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="62" y="218" width="56" height="22" rx="8" fill="#6A1B9A"/>
+<rect x="74" y="198" width="32" height="24" rx="6" fill="#7B1FA2"/>
+<rect x="103" y="36" width="30" height="65" rx="15" fill="#BA68C8" transform="rotate(-38,118,101)"/>
+<g transform="translate(78,50) rotate(-38)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#7B1FA2"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#9C27B0"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#9C27B0"/></g>
+<rect x="72" y="97" width="36" height="108" rx="18" fill="#9C27B0" transform="rotate(15,90,205)"/>
+<circle cx="118" cy="101" r="16" fill="#BA68C8"/><circle cx="118" cy="101" r="8" fill="#6A1B9A"/>
+<circle cx="90" cy="205" r="14" fill="#7B1FA2"/><circle cx="90" cy="205" r="7" fill="#6A1B9A"/>
+<circle cx="78" cy="50" r="9" fill="#BA68C8"/><circle cx="78" cy="50" r="4.5" fill="#6A1B9A"/>
+</svg>
+<div class="label">Grape</div>
+<div class="desc">Royal purple, arm curling back</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="62" y="218" width="56" height="22" rx="8" fill="#6A1B9A"/><rect x="74" y="198" width="32" height="24" rx="6" fill="#7B1FA2"/><rect x="103" y="36" width="30" height="65" rx="15" fill="#BA68C8" transform="rotate(-38,118,101)"/><rect x="72" y="97" width="36" height="108" rx="18" fill="#9C27B0" transform="rotate(15,90,205)"/><circle cx="118" cy="101" r="16" fill="#BA68C8"/><circle cx="118" cy="101" r="8" fill="#6A1B9A"/><circle cx="90" cy="205" r="14" fill="#7B1FA2"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="62" y="218" width="56" height="22" rx="8" fill="#6A1B9A"/><rect x="103" y="36" width="30" height="65" rx="15" fill="#BA68C8" transform="rotate(-38,118,101)"/><rect x="72" y="97" width="36" height="108" rx="18" fill="#9C27B0" transform="rotate(15,90,205)"/><circle cx="118" cy="101" r="16" fill="#BA68C8"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #5: Blueprint / technical drawing -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#5</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <rect width="80" height="80" rx="6" fill="#1A3A5C"/>
-      <!-- grid -->
-      <line x1="0" y1="20" x2="80" y2="20" stroke="#2A5A8C" stroke-width="0.5"/>
-      <line x1="0" y1="40" x2="80" y2="40" stroke="#2A5A8C" stroke-width="0.5"/>
-      <line x1="0" y1="60" x2="80" y2="60" stroke="#2A5A8C" stroke-width="0.5"/>
-      <line x1="20" y1="0" x2="20" y2="80" stroke="#2A5A8C" stroke-width="0.5"/>
-      <line x1="40" y1="0" x2="40" y2="80" stroke="#2A5A8C" stroke-width="0.5"/>
-      <line x1="60" y1="0" x2="60" y2="80" stroke="#2A5A8C" stroke-width="0.5"/>
-      <!-- arm drawing -->
-      <rect x="20" y="64" width="40" height="8" rx="2" stroke="white" stroke-width="1.2" fill="none"/>
-      <rect x="35" y="52" width="10" height="14" rx="2" stroke="white" stroke-width="1.2" fill="none"/>
-      <rect x="32" y="30" width="16" height="24" rx="3" stroke="white" stroke-width="1.2" fill="none"/>
-      <rect x="34" y="10" width="12" height="24" rx="3" stroke="white" stroke-width="1.2" fill="none"/>
-      <circle cx="40" cy="52" r="4" stroke="white" stroke-width="1.2" fill="none"/>
-      <line x1="38" y1="52" x2="42" y2="52" stroke="white" stroke-width="0.8"/>
-      <line x1="40" y1="50" x2="40" y2="54" stroke="white" stroke-width="0.8"/>
-      <circle cx="40" cy="30" r="3.5" stroke="white" stroke-width="1.2" fill="none"/>
-      <!-- claw -->
-      <path d="M34 10 L30 4 M46 10 L50 4" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-      <!-- dimension lines -->
-      <line x1="14" y1="64" x2="14" y2="72" stroke="#6AB4FF" stroke-width="0.8"/>
-      <line x1="12" y1="64" x2="16" y2="64" stroke="#6AB4FF" stroke-width="0.8"/>
-      <line x1="12" y1="72" x2="16" y2="72" stroke="#6AB4FF" stroke-width="0.8"/>
-      <text x="10" y="69" font-size="5" fill="#6AB4FF" text-anchor="middle">8</text>
-      <!-- cute eyes -->
-      <circle cx="37" cy="40" r="2" fill="white"/>
-      <circle cx="45" cy="40" r="2" fill="white"/>
-      <circle cx="37.5" cy="40.5" r="0.8" fill="#6AB4FF"/>
-      <circle cx="45.5" cy="40.5" r="0.8" fill="#6AB4FF"/>
-      <path d="M38 44 Q41 46 44 44" stroke="white" stroke-width="1" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="label">Blueprint</div>
-    <div class="desc">Engineering technical drawing</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect width="80" height="80" rx="6" fill="#1A3A5C"/><rect x="20" y="64" width="40" height="8" rx="2" stroke="white" stroke-width="1.2" fill="none"/><rect x="35" y="52" width="10" height="14" rx="2" stroke="white" stroke-width="1.2" fill="none"/><rect x="32" y="30" width="16" height="24" rx="3" stroke="white" stroke-width="1.2" fill="none"/><rect x="34" y="10" width="12" height="24" rx="3" stroke="white" stroke-width="1.2" fill="none"/><circle cx="40" cy="52" r="4" stroke="white" stroke-width="1.2" fill="none"/><circle cx="40" cy="30" r="3.5" stroke="white" stroke-width="1.2" fill="none"/><path d="M34 10 L30 4 M46 10 L50 4" stroke="white" stroke-width="1.2" stroke-linecap="round"/><circle cx="37" cy="40" r="2" fill="white"/><circle cx="45" cy="40" r="2" fill="white"/><circle cx="37.5" cy="40.5" r="0.8" fill="#6AB4FF"/><circle cx="45.5" cy="40.5" r="0.8" fill="#6AB4FF"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect width="80" height="80" rx="6" fill="#1A3A5C"/><rect x="20" y="64" width="40" height="8" rx="2" stroke="white" stroke-width="1.5" fill="none"/><rect x="32" y="30" width="16" height="24" rx="3" stroke="white" stroke-width="1.5" fill="none"/><rect x="34" y="10" width="12" height="24" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="37" cy="40" r="2" fill="white"/><circle cx="45" cy="40" r="2" fill="white"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #5 Cherry — straight up, chunky -->
+<div class="card" onclick="pick(this)">
+<div class="num">#5</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="52" y="218" width="56" height="22" rx="8" fill="#B71C1C"/>
+<rect x="64" y="198" width="32" height="24" rx="6" fill="#C62828"/>
+<rect x="62" y="20" width="36" height="77" rx="18" fill="#EF5350" transform="rotate(63,80,97)"/>
+<g transform="translate(149,62) rotate(63)"><path d="M-5,0L-3.5,-10L3.5,-10L5,0Z" fill="#C62828"/><path d="M-4,-10L-10,-26L-6,-26L-1,-12Z" fill="#E53935"/><path d="M4,-10L10,-26L6,-26L1,-12Z" fill="#E53935"/></g>
+<rect x="59" y="97" width="42" height="108" rx="21" fill="#E53935" transform="rotate(0,80,205)"/>
+<circle cx="80" cy="97" r="18" fill="#EF5350"/><circle cx="80" cy="97" r="9" fill="#B71C1C"/>
+<circle cx="80" cy="205" r="15" fill="#C62828"/><circle cx="80" cy="205" r="7.5" fill="#B71C1C"/>
+<circle cx="149" cy="62" r="10" fill="#EF5350"/><circle cx="149" cy="62" r="5" fill="#B71C1C"/>
+</svg>
+<div class="label">Cherry</div>
+<div class="desc">Bold red, extra chunky straight-up stance</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="52" y="218" width="56" height="22" rx="8" fill="#B71C1C"/><rect x="64" y="198" width="32" height="24" rx="6" fill="#C62828"/><rect x="62" y="20" width="36" height="77" rx="18" fill="#EF5350" transform="rotate(63,80,97)"/><rect x="59" y="97" width="42" height="108" rx="21" fill="#E53935" transform="rotate(0,80,205)"/><circle cx="80" cy="97" r="18" fill="#EF5350"/><circle cx="80" cy="97" r="9" fill="#B71C1C"/><circle cx="80" cy="205" r="15" fill="#C62828"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="52" y="218" width="56" height="22" rx="8" fill="#B71C1C"/><rect x="62" y="20" width="36" height="77" rx="18" fill="#EF5350" transform="rotate(63,80,97)"/><rect x="59" y="97" width="42" height="108" rx="21" fill="#E53935"/><circle cx="80" cy="97" r="18" fill="#EF5350"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #6: Isometric 3D blocks -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#6</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- isometric base block -->
-      <polygon points="40,68 12,54 40,50 68,54" fill="#62D916"/>
-      <polygon points="12,54 12,62 40,76 40,68" fill="#46A302"/>
-      <polygon points="68,54 68,62 40,76 40,68" fill="#58CC02"/>
-      <!-- pillar block -->
-      <polygon points="40,50 32,46 40,42 48,46" fill="#62D916"/>
-      <polygon points="32,46 32,50 40,54 40,50" fill="#3D9402"/>
-      <polygon points="48,46 48,50 40,54 40,50" fill="#46A302"/>
-      <!-- lower arm block -->
-      <polygon points="40,42 28,36 40,28 52,36" fill="#6EE018"/>
-      <polygon points="28,36 28,42 40,48 40,42" fill="#46A302"/>
-      <polygon points="52,36 52,42 40,48 40,42" fill="#58CC02"/>
-      <!-- upper arm block -->
-      <polygon points="40,28 30,22 40,14 50,22" fill="#7AF030"/>
-      <polygon points="30,22 30,28 40,34 40,28" fill="#58CC02"/>
-      <polygon points="50,22 50,28 40,34 40,28" fill="#62D916"/>
-      <!-- claw top -->
-      <polygon points="34,14 28,10 34,6 40,10" fill="#FFB020"/>
-      <polygon points="46,14 40,10 46,6 52,10" fill="#FF8C00"/>
-      <!-- face on front face -->
-      <circle cx="36" cy="38" r="2" fill="white"/>
-      <circle cx="44" cy="38" r="2" fill="white"/>
-      <circle cx="36.5" cy="38.5" r="1" fill="#3C3C3C"/>
-      <circle cx="44.5" cy="38.5" r="1" fill="#3C3C3C"/>
-      <path d="M37 41 Q40 43 43 41" stroke="#3C3C3C" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="label">Isometric</div>
-    <div class="desc">Faux-3D isometric blocks</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><polygon points="40,68 12,54 40,50 68,54" fill="#62D916"/><polygon points="12,54 12,62 40,76 40,68" fill="#46A302"/><polygon points="68,54 68,62 40,76 40,68" fill="#58CC02"/><polygon points="40,42 28,36 40,28 52,36" fill="#6EE018"/><polygon points="28,36 28,42 40,48 40,42" fill="#46A302"/><polygon points="52,36 52,42 40,48 40,42" fill="#58CC02"/><polygon points="40,28 30,22 40,14 50,22" fill="#7AF030"/><polygon points="30,22 30,28 40,34 40,28" fill="#58CC02"/><polygon points="50,22 50,28 40,34 40,28" fill="#62D916"/><polygon points="34,14 28,10 34,6 40,10" fill="#FFB020"/><polygon points="46,14 40,10 46,6 52,10" fill="#FF8C00"/><circle cx="36" cy="38" r="2" fill="white"/><circle cx="44" cy="38" r="2" fill="white"/><circle cx="36.5" cy="38.5" r="1" fill="#3C3C3C"/><circle cx="44.5" cy="38.5" r="1" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><polygon points="40,68 12,54 40,50 68,54" fill="#62D916"/><polygon points="12,54 12,62 40,76 40,68" fill="#46A302"/><polygon points="68,54 68,62 40,76 40,68" fill="#58CC02"/><polygon points="40,42 28,36 40,28 52,36" fill="#6EE018"/><polygon points="28,36 28,42 40,48 40,42" fill="#46A302"/><polygon points="40,28 30,22 40,14 50,22" fill="#7AF030"/><polygon points="30,22 30,28 40,34 40,28" fill="#58CC02"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #6 Jade — teal, hanging down-right -->
+<div class="card" onclick="pick(this)">
+<div class="num">#6</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="37" y="218" width="56" height="22" rx="8" fill="#004D40"/>
+<rect x="49" y="198" width="32" height="24" rx="6" fill="#00695C"/>
+<rect x="81" y="6" width="32" height="88" rx="16" fill="#26A69A" transform="rotate(122,97,94)"/>
+<g transform="translate(172,141) rotate(122)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#00695C"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#00897B"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#00897B"/></g>
+<rect x="47" y="90" width="35" height="115" rx="18" fill="#00897B" transform="rotate(16,65,205)"/>
+<circle cx="97" cy="94" r="16" fill="#26A69A"/><circle cx="97" cy="94" r="8" fill="#004D40"/>
+<circle cx="65" cy="205" r="14" fill="#00695C"/><circle cx="65" cy="205" r="7" fill="#004D40"/>
+<circle cx="172" cy="141" r="9" fill="#26A69A"/><circle cx="172" cy="141" r="4.5" fill="#004D40"/>
+</svg>
+<div class="label">Jade</div>
+<div class="desc">Rich teal, drooping crane pose</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="37" y="218" width="56" height="22" rx="8" fill="#004D40"/><rect x="49" y="198" width="32" height="24" rx="6" fill="#00695C"/><rect x="81" y="6" width="32" height="88" rx="16" fill="#26A69A" transform="rotate(122,97,94)"/><rect x="47" y="90" width="35" height="115" rx="18" fill="#00897B" transform="rotate(16,65,205)"/><circle cx="97" cy="94" r="16" fill="#26A69A"/><circle cx="97" cy="94" r="8" fill="#004D40"/><circle cx="65" cy="205" r="14" fill="#00695C"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="37" y="218" width="56" height="22" rx="8" fill="#004D40"/><rect x="81" y="6" width="32" height="88" rx="16" fill="#26A69A" transform="rotate(122,97,94)"/><rect x="47" y="90" width="35" height="115" rx="18" fill="#00897B" transform="rotate(16,65,205)"/><circle cx="97" cy="94" r="16" fill="#26A69A"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #7: Thick sticker outline -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#7</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- white border outline (sticker effect) -->
-      <rect x="16" y="64" width="48" height="10" rx="5" fill="white" stroke="#3C3C3C" stroke-width="3"/>
-      <rect x="34" y="48" width="12" height="20" rx="5" fill="white" stroke="#3C3C3C" stroke-width="3"/>
-      <rect x="28" y="24" width="20" height="28" rx="8" fill="white" stroke="#3C3C3C" stroke-width="3"/>
-      <rect x="32" y="6" width="14" height="24" rx="6" fill="white" stroke="#3C3C3C" stroke-width="3"/>
-      <!-- fills -->
-      <rect x="18" y="66" width="44" height="6" rx="3" fill="#58CC02"/>
-      <rect x="36" y="50" width="8" height="16" rx="3" fill="#46A302"/>
-      <rect x="30" y="26" width="16" height="24" rx="6" fill="#62D916"/>
-      <rect x="34" y="8" width="10" height="20" rx="4" fill="#58CC02"/>
-      <!-- joint bolts -->
-      <circle cx="40" cy="48" r="5" fill="white" stroke="#3C3C3C" stroke-width="2.5"/>
-      <circle cx="40" cy="48" r="2" fill="#FFB020"/>
-      <circle cx="40" cy="26" r="4.5" fill="white" stroke="#3C3C3C" stroke-width="2.5"/>
-      <circle cx="40" cy="26" r="2" fill="#FFB020"/>
-      <!-- claw -->
-      <path d="M34 8 L28 2 M46 8 L52 2" stroke="#3C3C3C" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="28" cy="2" r="2.5" fill="#FFB020" stroke="#3C3C3C" stroke-width="2"/>
-      <circle cx="52" cy="2" r="2.5" fill="#FFB020" stroke="#3C3C3C" stroke-width="2"/>
-      <!-- eyes -->
-      <circle cx="35" cy="36" r="3.5" fill="white" stroke="#3C3C3C" stroke-width="2"/>
-      <circle cx="47" cy="36" r="3.5" fill="white" stroke="#3C3C3C" stroke-width="2"/>
-      <circle cx="36" cy="37" r="1.8" fill="#3C3C3C"/>
-      <circle cx="48" cy="37" r="1.8" fill="#3C3C3C"/>
-      <path d="M37 42 Q41 45 45 42" stroke="#3C3C3C" stroke-width="2" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="label">Sticker</div>
-    <div class="desc">Bold outlined sticker-pack feel</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect x="16" y="64" width="48" height="10" rx="5" fill="#58CC02" stroke="#3C3C3C" stroke-width="3"/><rect x="34" y="48" width="12" height="20" rx="5" fill="#46A302" stroke="#3C3C3C" stroke-width="3"/><rect x="28" y="24" width="20" height="28" rx="8" fill="#62D916" stroke="#3C3C3C" stroke-width="3"/><rect x="32" y="6" width="14" height="24" rx="6" fill="#58CC02" stroke="#3C3C3C" stroke-width="3"/><circle cx="40" cy="48" r="4" fill="#FFB020" stroke="#3C3C3C" stroke-width="2"/><circle cx="40" cy="26" r="3.5" fill="#FFB020" stroke="#3C3C3C" stroke-width="2"/><circle cx="35" cy="36" r="3" fill="white" stroke="#3C3C3C" stroke-width="2"/><circle cx="47" cy="36" r="3" fill="white" stroke="#3C3C3C" stroke-width="2"/><circle cx="36" cy="37" r="1.5" fill="#3C3C3C"/><circle cx="48" cy="37" r="1.5" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect x="16" y="64" width="48" height="10" rx="5" fill="#58CC02" stroke="#3C3C3C" stroke-width="3"/><rect x="28" y="24" width="20" height="28" rx="8" fill="#62D916" stroke="#3C3C3C" stroke-width="3"/><rect x="32" y="6" width="14" height="24" rx="6" fill="#58CC02" stroke="#3C3C3C" stroke-width="3"/><circle cx="35" cy="36" r="3" fill="white"/><circle cx="47" cy="36" r="3" fill="white"/><circle cx="36" cy="37" r="1.5" fill="#3C3C3C"/><circle cx="48" cy="37" r="1.5" fill="#3C3C3C"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #7 Honey — amber, thick, flexing up -->
+<div class="card" onclick="pick(this)">
+<div class="num">#7</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="47" y="218" width="56" height="22" rx="8" fill="#E65100"/>
+<rect x="59" y="198" width="32" height="24" rx="6" fill="#FF8F00"/>
+<rect x="88" y="31" width="38" height="74" rx="19" fill="#FFCA28" transform="rotate(44,107,105)"/>
+<g transform="translate(158,52) rotate(44)"><path d="M-5,0L-3.5,-10L3.5,-10L5,0Z" fill="#FF8F00"/><path d="M-4,-10L-10,-26L-6,-26L-1,-12Z" fill="#FFB300"/><path d="M4,-10L10,-26L6,-26L1,-12Z" fill="#FFB300"/></g>
+<rect x="53" y="100" width="44" height="105" rx="22" fill="#FFB300" transform="rotate(18,75,205)"/>
+<circle cx="107" cy="105" r="18" fill="#FFCA28"/><circle cx="107" cy="105" r="9" fill="#E65100"/>
+<circle cx="75" cy="205" r="16" fill="#FF8F00"/><circle cx="75" cy="205" r="8" fill="#E65100"/>
+<circle cx="158" cy="52" r="10" fill="#FFCA28"/><circle cx="158" cy="52" r="5" fill="#E65100"/>
+</svg>
+<div class="label">Honey</div>
+<div class="desc">Amber gold, extra thicc, flexing up</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="47" y="218" width="56" height="22" rx="8" fill="#E65100"/><rect x="59" y="198" width="32" height="24" rx="6" fill="#FF8F00"/><rect x="88" y="31" width="38" height="74" rx="19" fill="#FFCA28" transform="rotate(44,107,105)"/><rect x="53" y="100" width="44" height="105" rx="22" fill="#FFB300" transform="rotate(18,75,205)"/><circle cx="107" cy="105" r="18" fill="#FFCA28"/><circle cx="107" cy="105" r="9" fill="#E65100"/><circle cx="75" cy="205" r="16" fill="#FF8F00"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="47" y="218" width="56" height="22" rx="8" fill="#E65100"/><rect x="88" y="31" width="38" height="74" rx="19" fill="#FFCA28" transform="rotate(44,107,105)"/><rect x="53" y="100" width="44" height="105" rx="22" fill="#FFB300" transform="rotate(18,75,205)"/><circle cx="107" cy="105" r="18" fill="#FFCA28"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #8: Pixel art / 8-bit -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#8</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- 4px grid pixel art -->
-      <!-- base -->
-      <rect x="12" y="68" width="56" height="8" fill="#58CC02"/>
-      <!-- pillar -->
-      <rect x="36" y="56" width="8" height="12" fill="#46A302"/>
-      <!-- body -->
-      <rect x="28" y="36" width="24" height="20" fill="#62D916"/>
-      <rect x="28" y="36" width="12" height="20" fill="#6EE018"/>
-      <!-- arm -->
-      <rect x="32" y="16" width="16" height="20" fill="#58CC02"/>
-      <rect x="32" y="16" width="8" height="20" fill="#62D916"/>
-      <!-- joints -->
-      <rect x="32" y="32" width="16" height="8" fill="#FFB020"/>
-      <rect x="36" y="12" width="8" height="8" fill="#FFB020"/>
-      <!-- claw prongs -->
-      <rect x="28" y="4" width="8" height="12" fill="#FF8C00"/>
-      <rect x="44" y="4" width="8" height="12" fill="#FF8C00"/>
-      <rect x="32" y="8" width="16" height="4" fill="#FFB020"/>
-      <!-- pixel eyes -->
-      <rect x="32" y="40" width="8" height="8" fill="white"/>
-      <rect x="44" y="40" width="8" height="8" fill="white"/>
-      <rect x="36" y="44" width="4" height="4" fill="#3C3C3C"/>
-      <rect x="48" y="44" width="4" height="4" fill="#3C3C3C"/>
-      <!-- pixel mouth -->
-      <rect x="36" y="52" width="12" height="4" fill="#3C3C3C"/>
-    </svg>
-    <div class="label">Pixel</div>
-    <div class="desc">Retro 8-bit game sprite</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect x="12" y="68" width="56" height="8" fill="#58CC02"/><rect x="36" y="56" width="8" height="12" fill="#46A302"/><rect x="28" y="36" width="24" height="20" fill="#62D916"/><rect x="32" y="16" width="16" height="20" fill="#58CC02"/><rect x="32" y="32" width="16" height="8" fill="#FFB020"/><rect x="28" y="4" width="8" height="12" fill="#FF8C00"/><rect x="44" y="4" width="8" height="12" fill="#FF8C00"/><rect x="32" y="40" width="8" height="8" fill="white"/><rect x="44" y="40" width="8" height="8" fill="white"/><rect x="36" y="44" width="4" height="4" fill="#3C3C3C"/><rect x="48" y="44" width="4" height="4" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect x="12" y="68" width="56" height="8" fill="#58CC02"/><rect x="28" y="36" width="24" height="20" fill="#62D916"/><rect x="32" y="16" width="16" height="20" fill="#58CC02"/><rect x="28" y="4" width="8" height="12" fill="#FF8C00"/><rect x="44" y="4" width="8" height="12" fill="#FF8C00"/><rect x="32" y="40" width="8" height="8" fill="white"/><rect x="44" y="40" width="8" height="8" fill="white"/><rect x="36" y="44" width="4" height="4" fill="#3C3C3C"/><rect x="48" y="44" width="4" height="4" fill="#3C3C3C"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #8 Midnight — navy, reaching back-left -->
+<div class="card" onclick="pick(this)">
+<div class="num">#8</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="64" y="218" width="56" height="22" rx="8" fill="#1A237E"/>
+<rect x="76" y="198" width="32" height="24" rx="6" fill="#283593"/>
+<rect x="87" y="25" width="30" height="70" rx="15" fill="#5C6BC0" transform="rotate(-55,102,95)"/>
+<g transform="translate(45,55) rotate(-55)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#283593"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#3F51B5"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#3F51B5"/></g>
+<rect x="75" y="95" width="34" height="110" rx="17" fill="#3F51B5" transform="rotate(5,92,205)"/>
+<circle cx="102" cy="95" r="15" fill="#5C6BC0"/><circle cx="102" cy="95" r="7.5" fill="#1A237E"/>
+<circle cx="92" cy="205" r="14" fill="#283593"/><circle cx="92" cy="205" r="7" fill="#1A237E"/>
+<circle cx="45" cy="55" r="9" fill="#5C6BC0"/><circle cx="45" cy="55" r="4.5" fill="#1A237E"/>
+</svg>
+<div class="label">Midnight</div>
+<div class="desc">Deep navy, dramatic back-reach</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="64" y="218" width="56" height="22" rx="8" fill="#1A237E"/><rect x="76" y="198" width="32" height="24" rx="6" fill="#283593"/><rect x="87" y="25" width="30" height="70" rx="15" fill="#5C6BC0" transform="rotate(-55,102,95)"/><rect x="75" y="95" width="34" height="110" rx="17" fill="#3F51B5" transform="rotate(5,92,205)"/><circle cx="102" cy="95" r="15" fill="#5C6BC0"/><circle cx="102" cy="95" r="7.5" fill="#1A237E"/><circle cx="92" cy="205" r="14" fill="#283593"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="64" y="218" width="56" height="22" rx="8" fill="#1A237E"/><rect x="87" y="25" width="30" height="70" rx="15" fill="#5C6BC0" transform="rotate(-55,102,95)"/><rect x="75" y="95" width="34" height="110" rx="17" fill="#3F51B5" transform="rotate(5,92,205)"/><circle cx="102" cy="95" r="15" fill="#5C6BC0"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #9: Neon glow on dark -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#9</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <defs>
-        <filter id="glow9"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <rect width="80" height="80" rx="8" fill="#1A1A2E"/>
-      <g filter="url(#glow9)">
-        <rect x="18" y="64" width="44" height="8" rx="4" stroke="#58CC02" stroke-width="2" fill="none"/>
-        <rect x="34" y="50" width="12" height="18" rx="4" stroke="#58CC02" stroke-width="2" fill="none"/>
-        <rect x="28" y="26" width="20" height="28" rx="6" stroke="#62D916" stroke-width="2" fill="none"/>
-        <rect x="32" y="8" width="14" height="22" rx="5" stroke="#58CC02" stroke-width="2" fill="none"/>
-        <circle cx="40" cy="50" r="5" stroke="#FFB020" stroke-width="2" fill="none"/>
-        <circle cx="40" cy="28" r="4" stroke="#FFB020" stroke-width="2" fill="none"/>
-        <path d="M32 8 L26 2 M48 8 L54 2" stroke="#FF6B8A" stroke-width="2" stroke-linecap="round"/>
-        <!-- face -->
-        <circle cx="35" cy="38" r="3" stroke="#00FFFF" stroke-width="1.5" fill="none"/>
-        <circle cx="49" cy="38" r="3" stroke="#00FFFF" stroke-width="1.5" fill="none"/>
-        <circle cx="35.5" cy="38.5" r="1" fill="#00FFFF"/>
-        <circle cx="49.5" cy="38.5" r="1" fill="#00FFFF"/>
-        <path d="M36 44 Q42 48 48 44" stroke="#FF6B8A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      </g>
-    </svg>
-    <div class="label">Neon</div>
-    <div class="desc">Glowing neon on dark backdrop</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><defs><filter id="glow9s"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="80" height="80" rx="8" fill="#1A1A2E"/><g filter="url(#glow9s)"><rect x="18" y="64" width="44" height="8" rx="4" stroke="#58CC02" stroke-width="2" fill="none"/><rect x="28" y="26" width="20" height="28" rx="6" stroke="#62D916" stroke-width="2" fill="none"/><rect x="32" y="8" width="14" height="22" rx="5" stroke="#58CC02" stroke-width="2" fill="none"/><circle cx="35" cy="38" r="3" stroke="#00FFFF" stroke-width="1.5" fill="none"/><circle cx="49" cy="38" r="3" stroke="#00FFFF" stroke-width="1.5" fill="none"/><circle cx="35.5" cy="38.5" r="1" fill="#00FFFF"/><circle cx="49.5" cy="38.5" r="1" fill="#00FFFF"/></g></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect width="80" height="80" rx="8" fill="#1A1A2E"/><rect x="18" y="64" width="44" height="8" rx="4" stroke="#58CC02" stroke-width="2.5" fill="none"/><rect x="28" y="26" width="20" height="28" rx="6" stroke="#62D916" stroke-width="2.5" fill="none"/><rect x="32" y="8" width="14" height="22" rx="5" stroke="#58CC02" stroke-width="2.5" fill="none"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #9 Bubblegum — pink, reaching right -->
+<div class="card" onclick="pick(this)">
+<div class="num">#9</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="40" y="218" width="56" height="22" rx="8" fill="#880E4F"/>
+<rect x="52" y="198" width="32" height="24" rx="6" fill="#C2185B"/>
+<rect x="69" y="19" width="32" height="88" rx="16" fill="#F48FB1" transform="rotate(59,85,107)"/>
+<g transform="translate(160,62) rotate(59)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#C2185B"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#EC407A"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#EC407A"/></g>
+<rect x="49" y="105" width="38" height="100" rx="19" fill="#EC407A" transform="rotate(10,68,205)"/>
+<circle cx="85" cy="107" r="16" fill="#F48FB1"/><circle cx="85" cy="107" r="8" fill="#880E4F"/>
+<circle cx="68" cy="205" r="14" fill="#C2185B"/><circle cx="68" cy="205" r="7" fill="#880E4F"/>
+<circle cx="160" cy="62" r="9" fill="#F48FB1"/><circle cx="160" cy="62" r="4.5" fill="#880E4F"/>
+</svg>
+<div class="label">Bubblegum</div>
+<div class="desc">Hot pink, energetic diagonal reach</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="40" y="218" width="56" height="22" rx="8" fill="#880E4F"/><rect x="52" y="198" width="32" height="24" rx="6" fill="#C2185B"/><rect x="69" y="19" width="32" height="88" rx="16" fill="#F48FB1" transform="rotate(59,85,107)"/><rect x="49" y="105" width="38" height="100" rx="19" fill="#EC407A" transform="rotate(10,68,205)"/><circle cx="85" cy="107" r="16" fill="#F48FB1"/><circle cx="85" cy="107" r="8" fill="#880E4F"/><circle cx="68" cy="205" r="14" fill="#C2185B"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="40" y="218" width="56" height="22" rx="8" fill="#880E4F"/><rect x="69" y="19" width="32" height="88" rx="16" fill="#F48FB1" transform="rotate(59,85,107)"/><rect x="49" y="105" width="38" height="100" rx="19" fill="#EC407A" transform="rotate(10,68,205)"/><circle cx="85" cy="107" r="16" fill="#F48FB1"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #10: Chibi / big-head mascot -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#10</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- tiny base & legs -->
-      <rect x="26" y="70" width="28" height="6" rx="3" fill="#46A302"/>
-      <rect x="34" y="62" width="5" height="10" rx="2" fill="#58CC02"/>
-      <rect x="41" y="62" width="5" height="10" rx="2" fill="#58CC02"/>
-      <!-- enormous head taking up most of the space -->
-      <ellipse cx="40" cy="34" rx="26" ry="28" fill="#62D916"/>
-      <ellipse cx="40" cy="36" rx="24" ry="25" fill="#58CC02"/>
-      <!-- claw antenna -->
-      <line x1="30" y1="10" x2="24" y2="2" stroke="#46A302" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="50" y1="10" x2="56" y2="2" stroke="#46A302" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="24" cy="2" r="3" fill="#FFB020"/>
-      <circle cx="56" cy="2" r="3" fill="#FFB020"/>
-      <!-- huge eyes -->
-      <ellipse cx="32" cy="32" rx="8" ry="9" fill="white"/>
-      <ellipse cx="50" cy="32" rx="8" ry="9" fill="white"/>
-      <circle cx="34" cy="34" r="5" fill="#3C3C3C"/>
-      <circle cx="52" cy="34" r="5" fill="#3C3C3C"/>
-      <circle cx="36" cy="32" r="2" fill="white"/>
-      <circle cx="54" cy="32" r="2" fill="white"/>
-      <!-- joint circle on forehead -->
-      <circle cx="40" cy="20" r="4" fill="#FFB020"/>
-      <circle cx="40" cy="20" r="2" fill="#FF8C00"/>
-      <!-- tiny happy mouth -->
-      <path d="M36 44 Q40 50 44 44" stroke="#3C3C3C" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <ellipse cx="26" cy="42" rx="4" ry="2" fill="#FF6B8A" opacity="0.3"/>
-      <ellipse cx="54" cy="42" rx="4" ry="2" fill="#FF6B8A" opacity="0.3"/>
-    </svg>
-    <div class="label">Chibi</div>
-    <div class="desc">Enormous head, tiny body</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect x="26" y="70" width="28" height="6" rx="3" fill="#46A302"/><rect x="34" y="62" width="5" height="10" rx="2" fill="#58CC02"/><rect x="41" y="62" width="5" height="10" rx="2" fill="#58CC02"/><ellipse cx="40" cy="34" rx="26" ry="28" fill="#62D916"/><ellipse cx="40" cy="36" rx="24" ry="25" fill="#58CC02"/><circle cx="24" cy="2" r="3" fill="#FFB020"/><circle cx="56" cy="2" r="3" fill="#FFB020"/><line x1="30" y1="10" x2="24" y2="2" stroke="#46A302" stroke-width="2.5" stroke-linecap="round"/><line x1="50" y1="10" x2="56" y2="2" stroke="#46A302" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="32" cy="32" rx="8" ry="9" fill="white"/><ellipse cx="50" cy="32" rx="8" ry="9" fill="white"/><circle cx="34" cy="34" r="5" fill="#3C3C3C"/><circle cx="52" cy="34" r="5" fill="#3C3C3C"/><circle cx="36" cy="32" r="2" fill="white"/><circle cx="54" cy="32" r="2" fill="white"/><path d="M36 44 Q40 50 44 44" stroke="#3C3C3C" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><ellipse cx="40" cy="36" rx="24" ry="25" fill="#58CC02"/><ellipse cx="32" cy="32" rx="8" ry="9" fill="white"/><ellipse cx="50" cy="32" rx="8" ry="9" fill="white"/><circle cx="34" cy="34" r="5" fill="#3C3C3C"/><circle cx="52" cy="34" r="5" fill="#3C3C3C"/><circle cx="36" cy="32" r="2" fill="white"/><circle cx="54" cy="32" r="2" fill="white"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #10 Olive — classic with olive tones -->
+<div class="card" onclick="pick(this)">
+<div class="num">#10</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="57" y="218" width="56" height="22" rx="8" fill="#33691E"/>
+<rect x="69" y="198" width="32" height="24" rx="6" fill="#558B2F"/>
+<rect x="93" y="13" width="34" height="77" rx="17" fill="#9CCC65" transform="rotate(117,110,90)"/>
+<g transform="translate(179,125) rotate(117)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#558B2F"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#7CB342"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#7CB342"/></g>
+<rect x="67" y="87" width="36" height="118" rx="18" fill="#7CB342" transform="rotate(12,85,205)"/>
+<circle cx="110" cy="90" r="16" fill="#9CCC65"/><circle cx="110" cy="90" r="8" fill="#33691E"/>
+<circle cx="85" cy="205" r="14" fill="#558B2F"/><circle cx="85" cy="205" r="7" fill="#33691E"/>
+<circle cx="179" cy="125" r="9" fill="#9CCC65"/><circle cx="179" cy="125" r="4.5" fill="#33691E"/>
+</svg>
+<div class="label">Olive</div>
+<div class="desc">Earthy olive, sweeping down-right</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="57" y="218" width="56" height="22" rx="8" fill="#33691E"/><rect x="69" y="198" width="32" height="24" rx="6" fill="#558B2F"/><rect x="93" y="13" width="34" height="77" rx="17" fill="#9CCC65" transform="rotate(117,110,90)"/><rect x="67" y="87" width="36" height="118" rx="18" fill="#7CB342" transform="rotate(12,85,205)"/><circle cx="110" cy="90" r="16" fill="#9CCC65"/><circle cx="110" cy="90" r="8" fill="#33691E"/><circle cx="85" cy="205" r="14" fill="#558B2F"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="57" y="218" width="56" height="22" rx="8" fill="#33691E"/><rect x="93" y="13" width="34" height="77" rx="17" fill="#9CCC65" transform="rotate(117,110,90)"/><rect x="67" y="87" width="36" height="118" rx="18" fill="#7CB342" transform="rotate(12,85,205)"/><circle cx="110" cy="90" r="16" fill="#9CCC65"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #11: Badge / emblem circle -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#11</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <circle cx="40" cy="40" r="36" fill="#58CC02"/>
-      <circle cx="40" cy="40" r="32" fill="#46A302"/>
-      <circle cx="40" cy="40" r="28" fill="#58CC02"/>
-      <!-- arm silhouette centered -->
-      <rect x="32" y="52" width="16" height="6" rx="3" fill="white" opacity="0.3"/>
-      <rect x="36" y="44" width="8" height="10" rx="3" fill="white" opacity="0.3"/>
-      <rect x="34" y="28" width="12" height="18" rx="4" fill="white"/>
-      <rect x="36" y="14" width="8" height="18" rx="4" fill="white"/>
-      <circle cx="40" cy="44" r="4" fill="#FFB020"/>
-      <circle cx="40" cy="28" r="3.5" fill="#FFB020"/>
-      <path d="M36 14 L32 8 M44 14 L48 8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-      <!-- face -->
-      <circle cx="37" cy="36" r="2" fill="#58CC02"/>
-      <circle cx="44" cy="36" r="2" fill="#58CC02"/>
-      <circle cx="37.3" cy="36.3" r="0.8" fill="white"/>
-      <circle cx="44.3" cy="36.3" r="0.8" fill="white"/>
-      <path d="M38 40 Q40.5 42 43 40" stroke="#46A302" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- ring text path -->
-      <circle cx="40" cy="40" r="34" fill="none" stroke="white" stroke-width="1" opacity="0.3" stroke-dasharray="3 3"/>
-    </svg>
-    <div class="label">Badge</div>
-    <div class="desc">Circular emblem / seal design</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#58CC02"/><circle cx="40" cy="40" r="32" fill="#46A302"/><circle cx="40" cy="40" r="28" fill="#58CC02"/><rect x="34" y="28" width="12" height="18" rx="4" fill="white"/><rect x="36" y="14" width="8" height="18" rx="4" fill="white"/><circle cx="40" cy="44" r="4" fill="#FFB020"/><circle cx="40" cy="28" r="3.5" fill="#FFB020"/><path d="M36 14 L32 8 M44 14 L48 8" stroke="white" stroke-width="2.5" stroke-linecap="round"/><circle cx="37" cy="36" r="2" fill="#58CC02"/><circle cx="44" cy="36" r="2" fill="#58CC02"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#58CC02"/><circle cx="40" cy="40" r="28" fill="#58CC02"/><rect x="34" y="28" width="12" height="18" rx="4" fill="white"/><rect x="36" y="14" width="8" height="18" rx="4" fill="white"/><circle cx="37" cy="36" r="2" fill="#58CC02"/><circle cx="44" cy="36" r="2" fill="#58CC02"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #11 Aqua — cyan, diagonal up-right -->
+<div class="card" onclick="pick(this)">
+<div class="num">#11</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="30" y="218" width="56" height="22" rx="8" fill="#006064"/>
+<rect x="42" y="198" width="32" height="24" rx="6" fill="#0097A7"/>
+<rect x="54" y="12" width="30" height="86" rx="15" fill="#4DD0E1" transform="rotate(75,69,98)"/>
+<g transform="translate(152,76) rotate(75)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#0097A7"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#00BCD4"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#00BCD4"/></g>
+<rect x="40" y="97" width="35" height="108" rx="18" fill="#00BCD4" transform="rotate(6,58,205)"/>
+<circle cx="69" cy="98" r="15" fill="#4DD0E1"/><circle cx="69" cy="98" r="7.5" fill="#006064"/>
+<circle cx="58" cy="205" r="14" fill="#0097A7"/><circle cx="58" cy="205" r="7" fill="#006064"/>
+<circle cx="152" cy="76" r="9" fill="#4DD0E1"/><circle cx="152" cy="76" r="4.5" fill="#006064"/>
+</svg>
+<div class="label">Aqua</div>
+<div class="desc">Bright cyan, sleek angular pose</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="30" y="218" width="56" height="22" rx="8" fill="#006064"/><rect x="42" y="198" width="32" height="24" rx="6" fill="#0097A7"/><rect x="54" y="12" width="30" height="86" rx="15" fill="#4DD0E1" transform="rotate(75,69,98)"/><rect x="40" y="97" width="35" height="108" rx="18" fill="#00BCD4" transform="rotate(6,58,205)"/><circle cx="69" cy="98" r="15" fill="#4DD0E1"/><circle cx="69" cy="98" r="7.5" fill="#006064"/><circle cx="58" cy="205" r="14" fill="#0097A7"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="30" y="218" width="56" height="22" rx="8" fill="#006064"/><rect x="54" y="12" width="30" height="86" rx="15" fill="#4DD0E1" transform="rotate(75,69,98)"/><rect x="40" y="97" width="35" height="108" rx="18" fill="#00BCD4" transform="rotate(6,58,205)"/><circle cx="69" cy="98" r="15" fill="#4DD0E1"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #12: Silhouette / negative space -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#12</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <rect width="80" height="80" rx="12" fill="#58CC02"/>
-      <!-- cut-out silhouette in lighter green -->
-      <rect x="16" y="62" width="48" height="10" rx="5" fill="#46A302"/>
-      <rect x="34" y="46" width="12" height="20" rx="5" fill="#46A302"/>
-      <path d="M28 46 Q28 26 40 22 Q52 26 52 46Z" fill="#46A302"/>
-      <path d="M32 22 Q32 8 40 4 Q48 8 48 22Z" fill="#46A302"/>
-      <!-- claw cutout -->
-      <path d="M34 8 L28 0 h4 l8 6 8-6 h4 l-6 8" fill="#46A302"/>
-      <!-- eyes punched through as white -->
-      <circle cx="35" cy="34" r="4" fill="white"/>
-      <circle cx="47" cy="34" r="4" fill="white"/>
-      <circle cx="36" cy="35" r="2" fill="#3C3C3C"/>
-      <circle cx="48" cy="35" r="2" fill="#3C3C3C"/>
-      <!-- smile -->
-      <path d="M36 40 Q41 45 46 40" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="label">Cutout</div>
-    <div class="desc">Negative-space silhouette</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect width="80" height="80" rx="12" fill="#58CC02"/><rect x="16" y="62" width="48" height="10" rx="5" fill="#46A302"/><rect x="34" y="46" width="12" height="20" rx="5" fill="#46A302"/><path d="M28 46 Q28 26 40 22 Q52 26 52 46Z" fill="#46A302"/><path d="M32 22 Q32 8 40 4 Q48 8 48 22Z" fill="#46A302"/><path d="M34 8 L28 0 h4 l8 6 8-6 h4 l-6 8" fill="#46A302"/><circle cx="35" cy="34" r="4" fill="white"/><circle cx="47" cy="34" r="4" fill="white"/><circle cx="36" cy="35" r="2" fill="#3C3C3C"/><circle cx="48" cy="35" r="2" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect width="80" height="80" rx="12" fill="#58CC02"/><path d="M28 46 Q28 26 40 22 Q52 26 52 46Z" fill="#46A302"/><path d="M32 22 Q32 8 40 4 Q48 8 48 22Z" fill="#46A302"/><circle cx="35" cy="34" r="4" fill="white"/><circle cx="47" cy="34" r="4" fill="white"/><circle cx="36" cy="35" r="2" fill="#3C3C3C"/><circle cx="48" cy="35" r="2" fill="#3C3C3C"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #12 Cocoa — warm brown, drooping -->
+<div class="card" onclick="pick(this)">
+<div class="num">#12</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="50" y="218" width="56" height="22" rx="8" fill="#4E342E"/>
+<rect x="62" y="198" width="32" height="24" rx="6" fill="#6D4C41"/>
+<rect x="97" y="29" width="36" height="75" rx="18" fill="#A1887F" transform="rotate(130,115,104)"/>
+<g transform="translate(173,152) rotate(130)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#6D4C41"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#8D6E63"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#8D6E63"/></g>
+<rect x="57" y="97" width="42" height="108" rx="21" fill="#8D6E63" transform="rotate(20,78,205)"/>
+<circle cx="115" cy="104" r="17" fill="#A1887F"/><circle cx="115" cy="104" r="8.5" fill="#4E342E"/>
+<circle cx="78" cy="205" r="15" fill="#6D4C41"/><circle cx="78" cy="205" r="7.5" fill="#4E342E"/>
+<circle cx="173" cy="152" r="10" fill="#A1887F"/><circle cx="173" cy="152" r="5" fill="#4E342E"/>
+</svg>
+<div class="label">Cocoa</div>
+<div class="desc">Warm chocolate brown, heavy hang</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="50" y="218" width="56" height="22" rx="8" fill="#4E342E"/><rect x="62" y="198" width="32" height="24" rx="6" fill="#6D4C41"/><rect x="97" y="29" width="36" height="75" rx="18" fill="#A1887F" transform="rotate(130,115,104)"/><rect x="57" y="97" width="42" height="108" rx="21" fill="#8D6E63" transform="rotate(20,78,205)"/><circle cx="115" cy="104" r="17" fill="#A1887F"/><circle cx="115" cy="104" r="8.5" fill="#4E342E"/><circle cx="78" cy="205" r="15" fill="#6D4C41"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="50" y="218" width="56" height="22" rx="8" fill="#4E342E"/><rect x="97" y="29" width="36" height="75" rx="18" fill="#A1887F" transform="rotate(130,115,104)"/><rect x="57" y="97" width="42" height="108" rx="21" fill="#8D6E63" transform="rotate(20,78,205)"/><circle cx="115" cy="104" r="17" fill="#A1887F"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #13: Sketchy / hand-drawn -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#13</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- hand-drawn wobbly style using imperfect curves -->
-      <!-- base -->
-      <path d="M14 74 Q16 66 22 66 Q40 64 58 66 Q64 66 66 74 Q64 76 40 78 Q16 76 14 74Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2"/>
-      <!-- pillar -->
-      <path d="M34 66 Q33 56 35 50 Q37 48 43 48 Q46 50 46 56 Q47 62 46 66Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2"/>
-      <!-- body -->
-      <path d="M26 50 Q24 34 28 28 Q32 24 40 24 Q48 24 52 28 Q56 34 54 50Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2"/>
-      <!-- upper arm -->
-      <path d="M32 26 Q30 16 32 10 Q34 6 40 6 Q46 6 48 10 Q50 16 48 26Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2"/>
-      <!-- claw scribbles -->
-      <path d="M34 8 Q30 2 26 4" stroke="#FFB020" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <path d="M46 8 Q50 2 54 4" stroke="#FFB020" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <!-- joints -->
-      <circle cx="40" cy="48" r="5" fill="none" stroke="#FFB020" stroke-width="2"/>
-      <circle cx="40" cy="26" r="4.5" fill="none" stroke="#FFB020" stroke-width="2"/>
-      <!-- sketchy eyes -->
-      <ellipse cx="34" cy="36" rx="4" ry="5" fill="none" stroke="#3C3C3C" stroke-width="1.8"/>
-      <ellipse cx="48" cy="36" rx="4" ry="5" fill="none" stroke="#3C3C3C" stroke-width="1.8"/>
-      <circle cx="35" cy="37" r="2" fill="#3C3C3C"/>
-      <circle cx="49" cy="37" r="2" fill="#3C3C3C"/>
-      <!-- scribbly smile -->
-      <path d="M36 44 Q38 48 40 46 Q42 48 44 44" stroke="#3C3C3C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <!-- stray marks -->
-      <path d="M60 30 l3 2" stroke="#58CC02" stroke-width="1" stroke-linecap="round"/>
-      <path d="M18 28 l-2 3" stroke="#58CC02" stroke-width="1" stroke-linecap="round"/>
-    </svg>
-    <div class="label">Sketchy</div>
-    <div class="desc">Wobbly hand-drawn pencil lines</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><path d="M14 74 Q16 66 22 66 Q40 64 58 66 Q64 66 66 74 Q64 76 40 78 Q16 76 14 74Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2"/><path d="M26 50 Q24 34 28 28 Q32 24 40 24 Q48 24 52 28 Q56 34 54 50Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2"/><path d="M32 26 Q30 16 32 10 Q34 6 40 6 Q46 6 48 10 Q50 16 48 26Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2"/><path d="M34 8 Q30 2 26 4" stroke="#FFB020" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M46 8 Q50 2 54 4" stroke="#FFB020" stroke-width="2.5" stroke-linecap="round" fill="none"/><ellipse cx="34" cy="36" rx="4" ry="5" fill="none" stroke="#3C3C3C" stroke-width="1.8"/><ellipse cx="48" cy="36" rx="4" ry="5" fill="none" stroke="#3C3C3C" stroke-width="1.8"/><circle cx="35" cy="37" r="2" fill="#3C3C3C"/><circle cx="49" cy="37" r="2" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><path d="M26 50 Q24 34 28 28 Q32 24 40 24 Q48 24 52 28 Q56 34 54 50Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2.5"/><path d="M32 26 Q30 16 32 10 Q34 6 40 6 Q46 6 48 10 Q50 16 48 26Z" fill="#E8F5E0" stroke="#58CC02" stroke-width="2.5"/><circle cx="35" cy="37" r="2.5" fill="#3C3C3C"/><circle cx="49" cy="37" r="2.5" fill="#3C3C3C"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #13 Dusk — indigo, reaching up-right -->
+<div class="card" onclick="pick(this)">
+<div class="num">#13</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="44" y="218" width="56" height="22" rx="8" fill="#283593"/>
+<rect x="56" y="198" width="32" height="24" rx="6" fill="#3949AB"/>
+<rect x="70" y="9" width="30" height="87" rx="15" fill="#7986CB" transform="rotate(57,85,96)"/>
+<g transform="translate(158,49) rotate(57)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#3949AB"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#5C6BC0"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#5C6BC0"/></g>
+<rect x="55" y="95" width="34" height="110" rx="17" fill="#5C6BC0" transform="rotate(7,72,205)"/>
+<circle cx="85" cy="96" r="15" fill="#7986CB"/><circle cx="85" cy="96" r="7.5" fill="#283593"/>
+<circle cx="72" cy="205" r="14" fill="#3949AB"/><circle cx="72" cy="205" r="7" fill="#283593"/>
+<circle cx="158" cy="49" r="9" fill="#7986CB"/><circle cx="158" cy="49" r="4.5" fill="#283593"/>
+</svg>
+<div class="label">Dusk</div>
+<div class="desc">Soft indigo, elegant upward reach</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="44" y="218" width="56" height="22" rx="8" fill="#283593"/><rect x="56" y="198" width="32" height="24" rx="6" fill="#3949AB"/><rect x="70" y="9" width="30" height="87" rx="15" fill="#7986CB" transform="rotate(57,85,96)"/><rect x="55" y="95" width="34" height="110" rx="17" fill="#5C6BC0" transform="rotate(7,72,205)"/><circle cx="85" cy="96" r="15" fill="#7986CB"/><circle cx="85" cy="96" r="7.5" fill="#283593"/><circle cx="72" cy="205" r="14" fill="#3949AB"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="44" y="218" width="56" height="22" rx="8" fill="#283593"/><rect x="70" y="9" width="30" height="87" rx="15" fill="#7986CB" transform="rotate(57,85,96)"/><rect x="55" y="95" width="34" height="110" rx="17" fill="#5C6BC0" transform="rotate(7,72,205)"/><circle cx="85" cy="96" r="15" fill="#7986CB"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #14: Art Deco / ornate -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#14</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- deco frame -->
-      <rect x="4" y="4" width="72" height="72" rx="4" stroke="#FFD700" stroke-width="2" fill="none"/>
-      <rect x="8" y="8" width="64" height="64" rx="2" stroke="#FFD700" stroke-width="1" fill="none"/>
-      <!-- symmetrical deco arm -->
-      <rect x="24" y="60" width="32" height="8" rx="0" fill="#58CC02"/>
-      <rect x="24" y="60" width="32" height="2" fill="#FFD700" opacity="0.5"/>
-      <rect x="36" y="48" width="8" height="14" fill="#46A302"/>
-      <!-- deco body with stepped shoulders -->
-      <path d="M28 48 h24 v-6 h-4 v-18 h4 v-6 h-24 v6 h4 v18 h-4 z" fill="#58CC02"/>
-      <rect x="32" y="18" width="16" height="2" fill="#FFD700" opacity="0.5"/>
-      <!-- deco upper column -->
-      <rect x="34" y="10" width="12" height="10" fill="#62D916"/>
-      <rect x="34" y="10" width="12" height="2" fill="#FFD700" opacity="0.5"/>
-      <!-- fan claw -->
-      <path d="M34 10 L30 4 h4 l6 4 6-4 h4 l-4 6" fill="#FFB020"/>
-      <path d="M36 8 L40 4 L44 8" stroke="#FFD700" stroke-width="1" fill="none"/>
-      <!-- deco eyes -->
-      <path d="M32 34 L36 30 L40 34 L36 38Z" fill="white"/>
-      <path d="M44 34 L48 30 L52 34 L48 38Z" fill="white"/>
-      <circle cx="36" cy="34" r="1.5" fill="#3C3C3C"/>
-      <circle cx="48" cy="34" r="1.5" fill="#3C3C3C"/>
-      <!-- deco smile -->
-      <path d="M36 42 h8" stroke="#3C3C3C" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="36" y1="42" x2="34" y2="40" stroke="#3C3C3C" stroke-width="1"/>
-      <line x1="44" y1="42" x2="46" y2="40" stroke="#3C3C3C" stroke-width="1"/>
-      <!-- corner fans -->
-      <path d="M4 4 Q10 10 4 16" stroke="#FFD700" stroke-width="1" fill="none"/>
-      <path d="M76 4 Q70 10 76 16" stroke="#FFD700" stroke-width="1" fill="none"/>
-      <path d="M4 76 Q10 70 4 64" stroke="#FFD700" stroke-width="1" fill="none"/>
-      <path d="M76 76 Q70 70 76 64" stroke="#FFD700" stroke-width="1" fill="none"/>
-    </svg>
-    <div class="label">Art Deco</div>
-    <div class="desc">Symmetrical golden ornamental</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect x="4" y="4" width="72" height="72" rx="4" stroke="#FFD700" stroke-width="2" fill="none"/><rect x="24" y="60" width="32" height="8" fill="#58CC02"/><path d="M28 48 h24 v-6 h-4 v-18 h4 v-6 h-24 v6 h4 v18 h-4 z" fill="#58CC02"/><rect x="34" y="10" width="12" height="10" fill="#62D916"/><path d="M34 10 L30 4 h4 l6 4 6-4 h4 l-4 6" fill="#FFB020"/><path d="M32 34 L36 30 L40 34 L36 38Z" fill="white"/><path d="M44 34 L48 30 L52 34 L48 38Z" fill="white"/><circle cx="36" cy="34" r="1.5" fill="#3C3C3C"/><circle cx="48" cy="34" r="1.5" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect x="4" y="4" width="72" height="72" rx="4" stroke="#FFD700" stroke-width="3" fill="none"/><path d="M28 48 h24 v-6 h-4 v-18 h4 v-6 h-24 v6 h4 v18 h-4 z" fill="#58CC02"/><rect x="34" y="10" width="12" height="10" fill="#62D916"/><path d="M34 10 L30 4 h4 l6 4 6-4 h4 l-4 6" fill="#FFB020"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #14 Citrus — lime, curling back -->
+<div class="card" onclick="pick(this)">
+<div class="num">#14</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="60" y="218" width="56" height="22" rx="8" fill="#827717"/>
+<rect x="72" y="198" width="32" height="24" rx="6" fill="#9E9D24"/>
+<rect x="94" y="37" width="34" height="71" rx="17" fill="#D4E157" transform="rotate(-46,111,108)"/>
+<g transform="translate(60,59) rotate(-46)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#9E9D24"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#C0CA33"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#C0CA33"/></g>
+<rect x="68" y="105" width="40" height="100" rx="20" fill="#C0CA33" transform="rotate(13,88,205)"/>
+<circle cx="111" cy="108" r="16" fill="#D4E157"/><circle cx="111" cy="108" r="8" fill="#827717"/>
+<circle cx="88" cy="205" r="14" fill="#9E9D24"/><circle cx="88" cy="205" r="7" fill="#827717"/>
+<circle cx="60" cy="59" r="9" fill="#D4E157"/><circle cx="60" cy="59" r="4.5" fill="#827717"/>
+</svg>
+<div class="label">Citrus</div>
+<div class="desc">Zesty lime-yellow, scooping back</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="60" y="218" width="56" height="22" rx="8" fill="#827717"/><rect x="72" y="198" width="32" height="24" rx="6" fill="#9E9D24"/><rect x="94" y="37" width="34" height="71" rx="17" fill="#D4E157" transform="rotate(-46,111,108)"/><rect x="68" y="105" width="40" height="100" rx="20" fill="#C0CA33" transform="rotate(13,88,205)"/><circle cx="111" cy="108" r="16" fill="#D4E157"/><circle cx="111" cy="108" r="8" fill="#827717"/><circle cx="88" cy="205" r="14" fill="#9E9D24"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="60" y="218" width="56" height="22" rx="8" fill="#827717"/><rect x="94" y="37" width="34" height="71" rx="17" fill="#D4E157" transform="rotate(-46,111,108)"/><rect x="68" y="105" width="40" height="100" rx="20" fill="#C0CA33" transform="rotate(13,88,205)"/><circle cx="111" cy="108" r="16" fill="#D4E157"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #15: Gradient / modern app icon -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#15</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <defs>
-        <linearGradient id="g15a" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7AF030"/><stop offset="100%" stop-color="#46A302"/></linearGradient>
-        <linearGradient id="g15b" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFD700"/><stop offset="100%" stop-color="#FF8C00"/></linearGradient>
-        <radialGradient id="g15c" cx="0.3" cy="0.3"><stop offset="0%" stop-color="white"/><stop offset="100%" stop-color="#E0E0E0"/></radialGradient>
-      </defs>
-      <rect width="80" height="80" rx="18" fill="url(#g15a)"/>
-      <!-- smooth arm shape -->
-      <rect x="20" y="58" width="40" height="12" rx="6" fill="white" opacity="0.2"/>
-      <rect x="34" y="44" width="12" height="18" rx="6" fill="white" opacity="0.2"/>
-      <rect x="28" y="22" width="24" height="26" rx="10" fill="white" opacity="0.25"/>
-      <rect x="32" y="6" width="16" height="22" rx="8" fill="white" opacity="0.3"/>
-      <!-- joints -->
-      <circle cx="40" cy="44" r="5" fill="url(#g15b)"/>
-      <circle cx="40" cy="24" r="4.5" fill="url(#g15b)"/>
-      <!-- claw -->
-      <path d="M34 8 Q28 0 24 4" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
-      <path d="M46 8 Q52 0 56 4" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8"/>
-      <!-- face -->
-      <circle cx="34" cy="32" r="4" fill="url(#g15c)"/>
-      <circle cx="48" cy="32" r="4" fill="url(#g15c)"/>
-      <circle cx="35" cy="33" r="2" fill="#3C3C3C"/>
-      <circle cx="49" cy="33" r="2" fill="#3C3C3C"/>
-      <circle cx="35.8" cy="32" r="0.8" fill="white"/>
-      <circle cx="49.8" cy="32" r="0.8" fill="white"/>
-      <path d="M36 38 Q41 43 46 38" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="label">Gradient</div>
-    <div class="desc">Smooth modern app-icon style</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><defs><linearGradient id="g15as" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7AF030"/><stop offset="100%" stop-color="#46A302"/></linearGradient></defs><rect width="80" height="80" rx="18" fill="url(#g15as)"/><rect x="28" y="22" width="24" height="26" rx="10" fill="white" opacity="0.25"/><rect x="32" y="6" width="16" height="22" rx="8" fill="white" opacity="0.3"/><circle cx="40" cy="44" r="5" fill="#FFB020"/><circle cx="40" cy="24" r="4.5" fill="#FFB020"/><circle cx="34" cy="32" r="4" fill="white"/><circle cx="48" cy="32" r="4" fill="white"/><circle cx="35" cy="33" r="2" fill="#3C3C3C"/><circle cx="49" cy="33" r="2" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><defs><linearGradient id="g15as2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7AF030"/><stop offset="100%" stop-color="#46A302"/></linearGradient></defs><rect width="80" height="80" rx="18" fill="url(#g15as2)"/><rect x="28" y="22" width="24" height="26" rx="10" fill="white" opacity="0.25"/><rect x="32" y="6" width="16" height="22" rx="8" fill="white" opacity="0.3"/><circle cx="34" cy="32" r="4" fill="white"/><circle cx="48" cy="32" r="4" fill="white"/><circle cx="35" cy="33" r="2" fill="#3C3C3C"/><circle cx="49" cy="33" r="2" fill="#3C3C3C"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #15 Magma — deep orange, sweeping right -->
+<div class="card" onclick="pick(this)">
+<div class="num">#15</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="34" y="218" width="56" height="22" rx="8" fill="#BF360C"/>
+<rect x="46" y="198" width="32" height="24" rx="6" fill="#E64A19"/>
+<rect x="72" y="15" width="33" height="81" rx="16" fill="#FF8A65" transform="rotate(101,89,96)"/>
+<g transform="translate(169,112) rotate(101)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#E64A19"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#FF5722"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#FF5722"/></g>
+<rect x="43" y="93" width="38" height="112" rx="19" fill="#FF5722" transform="rotate(14,62,205)"/>
+<circle cx="89" cy="96" r="16" fill="#FF8A65"/><circle cx="89" cy="96" r="8" fill="#BF360C"/>
+<circle cx="62" cy="205" r="14" fill="#E64A19"/><circle cx="62" cy="205" r="7" fill="#BF360C"/>
+<circle cx="169" cy="112" r="9" fill="#FF8A65"/><circle cx="169" cy="112" r="4.5" fill="#BF360C"/>
+</svg>
+<div class="label">Magma</div>
+<div class="desc">Deep orange, wide sweeping motion</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="34" y="218" width="56" height="22" rx="8" fill="#BF360C"/><rect x="46" y="198" width="32" height="24" rx="6" fill="#E64A19"/><rect x="72" y="15" width="33" height="81" rx="16" fill="#FF8A65" transform="rotate(101,89,96)"/><rect x="43" y="93" width="38" height="112" rx="19" fill="#FF5722" transform="rotate(14,62,205)"/><circle cx="89" cy="96" r="16" fill="#FF8A65"/><circle cx="89" cy="96" r="8" fill="#BF360C"/><circle cx="62" cy="205" r="14" fill="#E64A19"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="34" y="218" width="56" height="22" rx="8" fill="#BF360C"/><rect x="72" y="15" width="33" height="81" rx="16" fill="#FF8A65" transform="rotate(101,89,96)"/><rect x="43" y="93" width="38" height="112" rx="19" fill="#FF5722" transform="rotate(14,62,205)"/><circle cx="89" cy="96" r="16" fill="#FF8A65"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #16: Flat / minimal Scandinavian -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#16</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- ultra-simple flat shapes, muted palette -->
-      <rect x="22" y="66" width="36" height="6" rx="3" fill="#58CC02"/>
-      <rect x="37" y="56" width="6" height="12" fill="#58CC02"/>
-      <rect x="34" y="32" width="12" height="26" rx="2" fill="#58CC02"/>
-      <rect x="36" y="14" width="8" height="22" rx="2" fill="#62D916"/>
-      <!-- minimal claw: just two dots -->
-      <circle cx="34" cy="10" r="3" fill="#FFB020"/>
-      <circle cx="46" cy="10" r="3" fill="#FFB020"/>
-      <!-- face: just dots, nothing else -->
-      <circle cx="37" cy="42" r="2" fill="white"/>
-      <circle cx="45" cy="42" r="2" fill="white"/>
-      <circle cx="37.5" cy="42" r="0.8" fill="#3C3C3C"/>
-      <circle cx="45.5" cy="42" r="0.8" fill="#3C3C3C"/>
-    </svg>
-    <div class="label">Minimal</div>
-    <div class="desc">Scandinavian clean, no fluff</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect x="22" y="66" width="36" height="6" rx="3" fill="#58CC02"/><rect x="37" y="56" width="6" height="12" fill="#58CC02"/><rect x="34" y="32" width="12" height="26" rx="2" fill="#58CC02"/><rect x="36" y="14" width="8" height="22" rx="2" fill="#62D916"/><circle cx="34" cy="10" r="3" fill="#FFB020"/><circle cx="46" cy="10" r="3" fill="#FFB020"/><circle cx="37" cy="42" r="2" fill="white"/><circle cx="45" cy="42" r="2" fill="white"/><circle cx="37.5" cy="42" r="0.8" fill="#3C3C3C"/><circle cx="45.5" cy="42" r="0.8" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect x="34" y="32" width="12" height="26" rx="2" fill="#58CC02"/><rect x="36" y="14" width="8" height="22" rx="2" fill="#62D916"/><circle cx="34" cy="10" r="3" fill="#FFB020"/><circle cx="46" cy="10" r="3" fill="#FFB020"/><circle cx="37" cy="42" r="2" fill="white"/><circle cx="45" cy="42" r="2" fill="white"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #16 Chrome — steel blue-gray, flexing up -->
+<div class="card" onclick="pick(this)">
+<div class="num">#16</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="52" y="218" width="56" height="22" rx="8" fill="#263238"/>
+<rect x="64" y="198" width="32" height="24" rx="6" fill="#455A64"/>
+<rect x="95" y="30" width="34" height="76" rx="17" fill="#78909C" transform="rotate(48,112,106)"/>
+<g transform="translate(169,55) rotate(48)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#455A64"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#607D8B"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#607D8B"/></g>
+<rect x="61" y="101" width="38" height="104" rx="19" fill="#607D8B" transform="rotate(18,80,205)"/>
+<circle cx="112" cy="106" r="16" fill="#78909C"/><circle cx="112" cy="106" r="8" fill="#263238"/>
+<circle cx="80" cy="205" r="14" fill="#455A64"/><circle cx="80" cy="205" r="7" fill="#263238"/>
+<circle cx="169" cy="55" r="9" fill="#78909C"/><circle cx="169" cy="55" r="4.5" fill="#263238"/>
+</svg>
+<div class="label">Chrome</div>
+<div class="desc">Cool steel gray, industrial chic</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="52" y="218" width="56" height="22" rx="8" fill="#263238"/><rect x="64" y="198" width="32" height="24" rx="6" fill="#455A64"/><rect x="95" y="30" width="34" height="76" rx="17" fill="#78909C" transform="rotate(48,112,106)"/><rect x="61" y="101" width="38" height="104" rx="19" fill="#607D8B" transform="rotate(18,80,205)"/><circle cx="112" cy="106" r="16" fill="#78909C"/><circle cx="112" cy="106" r="8" fill="#263238"/><circle cx="80" cy="205" r="14" fill="#455A64"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="52" y="218" width="56" height="22" rx="8" fill="#263238"/><rect x="95" y="30" width="34" height="76" rx="17" fill="#78909C" transform="rotate(48,112,106)"/><rect x="61" y="101" width="38" height="104" rx="19" fill="#607D8B" transform="rotate(18,80,205)"/><circle cx="112" cy="106" r="16" fill="#78909C"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #17: Mechanical / industrial detailed -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#17</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- heavy industrial base with rivets -->
-      <rect x="10" y="64" width="60" height="12" rx="2" fill="#6B7B8D"/>
-      <rect x="10" y="64" width="60" height="3" fill="#7D8E9F"/>
-      <circle cx="16" cy="70" r="2" fill="#556677"/><circle cx="24" cy="70" r="2" fill="#556677"/>
-      <circle cx="56" cy="70" r="2" fill="#556677"/><circle cx="64" cy="70" r="2" fill="#556677"/>
-      <!-- hydraulic cylinder (pillar) -->
-      <rect x="34" y="48" width="12" height="18" rx="2" fill="#8899AA"/>
-      <rect x="36" y="50" width="8" height="14" rx="1" fill="#6B7B8D"/>
-      <line x1="36" y1="52" x2="44" y2="52" stroke="#556677" stroke-width="1"/>
-      <line x1="36" y1="56" x2="44" y2="56" stroke="#556677" stroke-width="1"/>
-      <!-- lower arm with panel lines -->
-      <rect x="26" y="28" width="28" height="22" rx="4" fill="#58CC02"/>
-      <line x1="28" y1="34" x2="52" y2="34" stroke="#46A302" stroke-width="1"/>
-      <line x1="28" y1="40" x2="52" y2="40" stroke="#46A302" stroke-width="1"/>
-      <!-- upper arm -->
-      <rect x="30" y="10" width="20" height="22" rx="4" fill="#62D916"/>
-      <line x1="32" y1="16" x2="48" y2="16" stroke="#58CC02" stroke-width="1"/>
-      <!-- hex bolt joints -->
-      <circle cx="40" cy="48" r="6" fill="#8899AA"/>
-      <path d="M40 43 L44.5 45.5 L44.5 50.5 L40 53 L35.5 50.5 L35.5 45.5Z" fill="#6B7B8D" stroke="#556677" stroke-width="1"/>
-      <circle cx="40" cy="48" r="2" fill="#FFB020"/>
-      <circle cx="40" cy="28" r="5.5" fill="#8899AA"/>
-      <path d="M40 23.5 L44 25.5 L44 30.5 L40 32.5 L36 30.5 L36 25.5Z" fill="#6B7B8D" stroke="#556677" stroke-width="1"/>
-      <circle cx="40" cy="28" r="2" fill="#FFB020"/>
-      <!-- claw with hydraulic lines -->
-      <path d="M32 12 L26 4 M48 12 L54 4" stroke="#8899AA" stroke-width="3" stroke-linecap="round"/>
-      <path d="M30 14 L24 6 M50 14 L56 6" stroke="#6B7B8D" stroke-width="1.5" stroke-linecap="round"/>
-      <!-- face -->
-      <rect x="32" y="34" width="6" height="5" rx="1" fill="white"/>
-      <rect x="42" y="34" width="6" height="5" rx="1" fill="white"/>
-      <rect x="34" y="36" width="2" height="2" fill="#3C3C3C"/>
-      <rect x="44" y="36" width="2" height="2" fill="#3C3C3C"/>
-      <rect x="36" y="42" width="8" height="2" rx="1" fill="#3C3C3C"/>
-    </svg>
-    <div class="label">Industrial</div>
-    <div class="desc">Heavy rivets, panel lines, bolts</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><rect x="10" y="64" width="60" height="12" rx="2" fill="#6B7B8D"/><rect x="34" y="48" width="12" height="18" rx="2" fill="#8899AA"/><rect x="26" y="28" width="28" height="22" rx="4" fill="#58CC02"/><rect x="30" y="10" width="20" height="22" rx="4" fill="#62D916"/><circle cx="40" cy="48" r="5" fill="#6B7B8D"/><circle cx="40" cy="48" r="2" fill="#FFB020"/><circle cx="40" cy="28" r="4.5" fill="#6B7B8D"/><circle cx="40" cy="28" r="2" fill="#FFB020"/><path d="M32 12 L26 4 M48 12 L54 4" stroke="#8899AA" stroke-width="3" stroke-linecap="round"/><rect x="32" y="34" width="6" height="5" rx="1" fill="white"/><rect x="42" y="34" width="6" height="5" rx="1" fill="white"/><rect x="34" y="36" width="2" height="2" fill="#3C3C3C"/><rect x="44" y="36" width="2" height="2" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect x="10" y="64" width="60" height="12" rx="2" fill="#6B7B8D"/><rect x="26" y="28" width="28" height="22" rx="4" fill="#58CC02"/><rect x="30" y="10" width="20" height="22" rx="4" fill="#62D916"/><circle cx="40" cy="48" r="4" fill="#FFB020"/><circle cx="40" cy="28" r="3.5" fill="#FFB020"/><rect x="32" y="34" width="6" height="5" rx="1" fill="white"/><rect x="42" y="34" width="6" height="5" rx="1" fill="white"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #17 Fern — leaf green, sweeping hang -->
+<div class="card" onclick="pick(this)">
+<div class="num">#17</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="40" y="218" width="56" height="22" rx="8" fill="#2E7D32"/>
+<rect x="52" y="198" width="32" height="24" rx="6" fill="#43A047"/>
+<rect x="69" y="10" width="32" height="88" rx="16" fill="#81C784" transform="rotate(110,85,98)"/>
+<g transform="translate(168,128) rotate(110)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#43A047"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#66BB6A"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#66BB6A"/></g>
+<rect x="50" y="97" width="36" height="108" rx="18" fill="#66BB6A" transform="rotate(9,68,205)"/>
+<circle cx="85" cy="98" r="16" fill="#81C784"/><circle cx="85" cy="98" r="8" fill="#2E7D32"/>
+<circle cx="68" cy="205" r="14" fill="#43A047"/><circle cx="68" cy="205" r="7" fill="#2E7D32"/>
+<circle cx="168" cy="128" r="9" fill="#81C784"/><circle cx="168" cy="128" r="4.5" fill="#2E7D32"/>
+</svg>
+<div class="label">Fern</div>
+<div class="desc">Fresh leaf green, smooth arc swing</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="40" y="218" width="56" height="22" rx="8" fill="#2E7D32"/><rect x="52" y="198" width="32" height="24" rx="6" fill="#43A047"/><rect x="69" y="10" width="32" height="88" rx="16" fill="#81C784" transform="rotate(110,85,98)"/><rect x="50" y="97" width="36" height="108" rx="18" fill="#66BB6A" transform="rotate(9,68,205)"/><circle cx="85" cy="98" r="16" fill="#81C784"/><circle cx="85" cy="98" r="8" fill="#2E7D32"/><circle cx="68" cy="205" r="14" fill="#43A047"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="40" y="218" width="56" height="22" rx="8" fill="#2E7D32"/><rect x="69" y="10" width="32" height="88" rx="16" fill="#81C784" transform="rotate(110,85,98)"/><rect x="50" y="97" width="36" height="108" rx="18" fill="#66BB6A" transform="rotate(9,68,205)"/><circle cx="85" cy="98" r="16" fill="#81C784"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #18: Watercolor / soft pastel -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#18</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <defs>
-        <filter id="wc"><feGaussianBlur stdDeviation="1.2"/></filter>
-      </defs>
-      <!-- soft blotchy shapes -->
-      <ellipse cx="40" cy="70" rx="28" ry="6" fill="#58CC02" opacity="0.4" filter="url(#wc)"/>
-      <ellipse cx="40" cy="68" rx="24" ry="5" fill="#58CC02" opacity="0.5"/>
-      <ellipse cx="40" cy="54" rx="8" ry="10" fill="#46A302" opacity="0.5" filter="url(#wc)"/>
-      <ellipse cx="40" cy="38" rx="14" ry="16" fill="#62D916" opacity="0.5" filter="url(#wc)"/>
-      <ellipse cx="40" cy="36" rx="12" ry="14" fill="#58CC02" opacity="0.6"/>
-      <ellipse cx="40" cy="18" rx="10" ry="14" fill="#62D916" opacity="0.5" filter="url(#wc)"/>
-      <ellipse cx="40" cy="16" rx="8" ry="12" fill="#7AF030" opacity="0.5"/>
-      <!-- watercolor joints -->
-      <circle cx="40" cy="48" r="5" fill="#FFB020" opacity="0.6" filter="url(#wc)"/>
-      <circle cx="40" cy="26" r="4.5" fill="#FFB020" opacity="0.6" filter="url(#wc)"/>
-      <!-- soft claw blobs -->
-      <circle cx="30" cy="6" r="4" fill="#FFB020" opacity="0.5" filter="url(#wc)"/>
-      <circle cx="50" cy="6" r="4" fill="#FF8C00" opacity="0.5" filter="url(#wc)"/>
-      <!-- face with soft edges -->
-      <circle cx="34" cy="34" r="4" fill="white" opacity="0.8"/>
-      <circle cx="46" cy="34" r="4" fill="white" opacity="0.8"/>
-      <circle cx="35" cy="35" r="2" fill="#3C3C3C" opacity="0.7"/>
-      <circle cx="47" cy="35" r="2" fill="#3C3C3C" opacity="0.7"/>
-      <path d="M36 40 Q40 44 44 40" stroke="#3C3C3C" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-      <ellipse cx="30" cy="38" rx="3" ry="1.5" fill="#FF6B8A" opacity="0.25"/>
-      <ellipse cx="50" cy="38" rx="3" ry="1.5" fill="#FF6B8A" opacity="0.25"/>
-    </svg>
-    <div class="label">Watercolor</div>
-    <div class="desc">Soft blurry pastel washes</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><defs><filter id="wcs"><feGaussianBlur stdDeviation="1"/></filter></defs><ellipse cx="40" cy="68" rx="24" ry="5" fill="#58CC02" opacity="0.5"/><ellipse cx="40" cy="38" rx="14" ry="16" fill="#62D916" opacity="0.5" filter="url(#wcs)"/><ellipse cx="40" cy="36" rx="12" ry="14" fill="#58CC02" opacity="0.6"/><ellipse cx="40" cy="16" rx="8" ry="12" fill="#7AF030" opacity="0.5"/><circle cx="30" cy="6" r="4" fill="#FFB020" opacity="0.5"/><circle cx="50" cy="6" r="4" fill="#FF8C00" opacity="0.5"/><circle cx="34" cy="34" r="4" fill="white" opacity="0.8"/><circle cx="46" cy="34" r="4" fill="white" opacity="0.8"/><circle cx="35" cy="35" r="2" fill="#3C3C3C" opacity="0.7"/><circle cx="47" cy="35" r="2" fill="#3C3C3C" opacity="0.7"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><ellipse cx="40" cy="36" rx="12" ry="14" fill="#58CC02" opacity="0.6"/><ellipse cx="40" cy="16" rx="8" ry="12" fill="#7AF030" opacity="0.5"/><circle cx="34" cy="34" r="4" fill="white" opacity="0.8"/><circle cx="46" cy="34" r="4" fill="white" opacity="0.8"/><circle cx="35" cy="35" r="2.5" fill="#3C3C3C" opacity="0.7"/><circle cx="47" cy="35" r="2.5" fill="#3C3C3C" opacity="0.7"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #18 Blush — rose pink, arm straight up -->
+<div class="card" onclick="pick(this)">
+<div class="num">#18</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="54" y="218" width="56" height="22" rx="8" fill="#AD1457"/>
+<rect x="66" y="198" width="32" height="24" rx="6" fill="#E91E63"/>
+<rect x="94" y="42" width="30" height="61" rx="15" fill="#F8BBD0" transform="rotate(-1,109,103)"/>
+<g transform="translate(108,42) rotate(-1)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#E91E63"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#F06292"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#F06292"/></g>
+<rect x="64" y="99" width="36" height="106" rx="18" fill="#F06292" transform="rotate(15,82,205)"/>
+<circle cx="109" cy="103" r="15" fill="#F8BBD0"/><circle cx="109" cy="103" r="7.5" fill="#AD1457"/>
+<circle cx="82" cy="205" r="14" fill="#E91E63"/><circle cx="82" cy="205" r="7" fill="#AD1457"/>
+<circle cx="108" cy="42" r="9" fill="#F8BBD0"/><circle cx="108" cy="42" r="4.5" fill="#AD1457"/>
+</svg>
+<div class="label">Blush</div>
+<div class="desc">Soft rose, arm pointing straight up</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="54" y="218" width="56" height="22" rx="8" fill="#AD1457"/><rect x="66" y="198" width="32" height="24" rx="6" fill="#E91E63"/><rect x="94" y="42" width="30" height="61" rx="15" fill="#F8BBD0" transform="rotate(-1,109,103)"/><rect x="64" y="99" width="36" height="106" rx="18" fill="#F06292" transform="rotate(15,82,205)"/><circle cx="109" cy="103" r="15" fill="#F8BBD0"/><circle cx="109" cy="103" r="7.5" fill="#AD1457"/><circle cx="82" cy="205" r="14" fill="#E91E63"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="54" y="218" width="56" height="22" rx="8" fill="#AD1457"/><rect x="94" y="42" width="30" height="61" rx="15" fill="#F8BBD0" transform="rotate(-1,109,103)"/><rect x="64" y="99" width="36" height="106" rx="18" fill="#F06292" transform="rotate(15,82,205)"/><circle cx="109" cy="103" r="15" fill="#F8BBD0"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #19: Emoji-circle style -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#19</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <!-- big yellow-green circle -->
-      <circle cx="40" cy="40" r="36" fill="#58CC02"/>
-      <circle cx="40" cy="40" r="34" fill="#62D916"/>
-      <!-- arm shape built into circle as if it IS the face -->
-      <!-- claw "horns" -->
-      <path d="M26 14 L22 6" stroke="#46A302" stroke-width="4" stroke-linecap="round"/>
-      <path d="M54 14 L58 6" stroke="#46A302" stroke-width="4" stroke-linecap="round"/>
-      <circle cx="22" cy="6" r="3" fill="#FFB020"/>
-      <circle cx="58" cy="6" r="3" fill="#FFB020"/>
-      <!-- joint band across middle like a belt -->
-      <rect x="10" y="46" width="60" height="6" rx="3" fill="#FFB020" opacity="0.6"/>
-      <circle cx="40" cy="49" r="3" fill="#FF8C00"/>
-      <!-- big expressive eyes -->
-      <ellipse cx="30" cy="32" rx="7" ry="8" fill="white"/>
-      <ellipse cx="52" cy="32" rx="7" ry="8" fill="white"/>
-      <circle cx="32" cy="34" r="4.5" fill="#3C3C3C"/>
-      <circle cx="54" cy="34" r="4.5" fill="#3C3C3C"/>
-      <circle cx="33.5" cy="32.5" r="1.8" fill="white"/>
-      <circle cx="55.5" cy="32.5" r="1.8" fill="white"/>
-      <!-- wide grin -->
-      <path d="M28 56 Q40 68 52 56" stroke="#46A302" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M30 57 Q40 64 50 57" fill="#46A302"/>
-    </svg>
-    <div class="label">Emoji</div>
-    <div class="desc">Circle-face emoji with arm features</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#58CC02"/><circle cx="40" cy="40" r="34" fill="#62D916"/><path d="M26 14 L22 6" stroke="#46A302" stroke-width="4" stroke-linecap="round"/><path d="M54 14 L58 6" stroke="#46A302" stroke-width="4" stroke-linecap="round"/><circle cx="22" cy="6" r="3" fill="#FFB020"/><circle cx="58" cy="6" r="3" fill="#FFB020"/><ellipse cx="30" cy="32" rx="7" ry="8" fill="white"/><ellipse cx="52" cy="32" rx="7" ry="8" fill="white"/><circle cx="32" cy="34" r="4.5" fill="#3C3C3C"/><circle cx="54" cy="34" r="4.5" fill="#3C3C3C"/><circle cx="33.5" cy="32.5" r="1.8" fill="white"/><circle cx="55.5" cy="32.5" r="1.8" fill="white"/><path d="M28 56 Q40 68 52 56" stroke="#46A302" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="34" fill="#62D916"/><circle cx="22" cy="6" r="3" fill="#FFB020"/><circle cx="58" cy="6" r="3" fill="#FFB020"/><ellipse cx="30" cy="32" rx="7" ry="8" fill="white"/><ellipse cx="52" cy="32" rx="7" ry="8" fill="white"/><circle cx="32" cy="34" r="4.5" fill="#3C3C3C"/><circle cx="54" cy="34" r="4.5" fill="#3C3C3C"/><circle cx="33.5" cy="32.5" r="1.8" fill="white"/><circle cx="55.5" cy="32.5" r="1.8" fill="white"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #19 Lagoon — turquoise, long reach up-right -->
+<div class="card" onclick="pick(this)">
+<div class="num">#19</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="27" y="218" width="56" height="22" rx="8" fill="#00838F"/>
+<rect x="39" y="198" width="32" height="24" rx="6" fill="#00ACC1"/>
+<rect x="59" y="0" width="30" height="97" rx="15" fill="#4DD0E1" transform="rotate(62,74,97)"/>
+<g transform="translate(160,52) rotate(62)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#00ACC1"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#26C6DA"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#26C6DA"/></g>
+<rect x="37" y="95" width="36" height="110" rx="18" fill="#26C6DA" transform="rotate(10,55,205)"/>
+<circle cx="74" cy="97" r="15" fill="#4DD0E1"/><circle cx="74" cy="97" r="7.5" fill="#00838F"/>
+<circle cx="55" cy="205" r="14" fill="#00ACC1"/><circle cx="55" cy="205" r="7" fill="#00838F"/>
+<circle cx="160" cy="52" r="9" fill="#4DD0E1"/><circle cx="160" cy="52" r="4.5" fill="#00838F"/>
+</svg>
+<div class="label">Lagoon</div>
+<div class="desc">Tropical turquoise, long elegant reach</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="27" y="218" width="56" height="22" rx="8" fill="#00838F"/><rect x="39" y="198" width="32" height="24" rx="6" fill="#00ACC1"/><rect x="59" y="0" width="30" height="97" rx="15" fill="#4DD0E1" transform="rotate(62,74,97)"/><rect x="37" y="95" width="36" height="110" rx="18" fill="#26C6DA" transform="rotate(10,55,205)"/><circle cx="74" cy="97" r="15" fill="#4DD0E1"/><circle cx="74" cy="97" r="7.5" fill="#00838F"/><circle cx="55" cy="205" r="14" fill="#00ACC1"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="27" y="218" width="56" height="22" rx="8" fill="#00838F"/><rect x="59" y="0" width="30" height="97" rx="15" fill="#4DD0E1" transform="rotate(62,74,97)"/><rect x="37" y="95" width="36" height="110" rx="18" fill="#26C6DA" transform="rotate(10,55,205)"/><circle cx="74" cy="97" r="15" fill="#4DD0E1"/></svg>
+<span>24</span>
+</div></div>
 
-  <!-- #20: Mascot with shadow / 3D depth -->
-  <div class="card" onclick="pick(this)">
-    <div class="num">#20</div>
-    <svg class="icon" width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <defs>
-        <filter id="sh20"><feDropShadow dx="2" dy="3" stdDeviation="1.5" flood-opacity="0.2"/></filter>
-      </defs>
-      <!-- ground shadow -->
-      <ellipse cx="42" cy="74" rx="22" ry="4" fill="#3C3C3C" opacity="0.12"/>
-      <!-- base with depth -->
-      <g filter="url(#sh20)">
-        <rect x="16" y="62" width="44" height="12" rx="6" fill="#46A302"/>
-        <rect x="16" y="62" width="44" height="6" rx="4" fill="#58CC02"/>
-      </g>
-      <!-- pillar with depth -->
-      <g filter="url(#sh20)">
-        <rect x="34" y="46" width="10" height="20" rx="4" fill="#3D9402"/>
-        <rect x="34" y="46" width="8" height="18" rx="3" fill="#46A302"/>
-      </g>
-      <!-- body with depth -->
-      <g filter="url(#sh20)">
-        <rect x="26" y="24" width="22" height="26" rx="8" fill="#46A302"/>
-        <rect x="24" y="22" width="22" height="26" rx="8" fill="#58CC02"/>
-      </g>
-      <!-- upper arm with depth -->
-      <g filter="url(#sh20)">
-        <rect x="32" y="6" width="14" height="22" rx="6" fill="#58CC02"/>
-        <rect x="30" y="4" width="14" height="22" rx="6" fill="#62D916"/>
-      </g>
-      <!-- joint highlights -->
-      <circle cx="38" cy="46" r="5" fill="#FFB020"/>
-      <circle cx="37" cy="45" r="3" fill="#FFD700" opacity="0.5"/>
-      <circle cx="38" cy="24" r="4.5" fill="#FFB020"/>
-      <circle cx="37" cy="23" r="2.5" fill="#FFD700" opacity="0.5"/>
-      <!-- claw with depth -->
-      <path d="M32 8 L26 0" stroke="#62D916" stroke-width="3.5" stroke-linecap="round"/>
-      <path d="M42 8 L48 0" stroke="#62D916" stroke-width="3.5" stroke-linecap="round"/>
-      <circle cx="26" cy="0" r="2.5" fill="#FFB020"/>
-      <circle cx="48" cy="0" r="2.5" fill="#FFB020"/>
-      <!-- face with highlight -->
-      <circle cx="32" cy="32" r="3.5" fill="white"/>
-      <circle cx="43" cy="32" r="3.5" fill="white"/>
-      <circle cx="33" cy="33" r="1.8" fill="#3C3C3C"/>
-      <circle cx="44" cy="33" r="1.8" fill="#3C3C3C"/>
-      <circle cx="33.8" cy="31.8" r="0.7" fill="white"/>
-      <circle cx="44.8" cy="31.8" r="0.7" fill="white"/>
-      <path d="M34 38 Q38 42 42 38" stroke="#3C3C3C" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <ellipse cx="28" cy="36" rx="3" ry="1.5" fill="#FF6B8A" opacity="0.3"/>
-      <ellipse cx="48" cy="36" rx="3" ry="1.5" fill="#FF6B8A" opacity="0.3"/>
-    </svg>
-    <div class="label">3D Depth</div>
-    <div class="desc">Drop-shadow layered depth</div>
-    <div class="sizes">
-      <svg width="32" height="32" viewBox="0 0 80 80" fill="none"><defs><filter id="sh20s"><feDropShadow dx="1.5" dy="2" stdDeviation="1" flood-opacity="0.2"/></filter></defs><ellipse cx="42" cy="74" rx="22" ry="4" fill="#3C3C3C" opacity="0.12"/><g filter="url(#sh20s)"><rect x="16" y="62" width="44" height="10" rx="5" fill="#58CC02"/></g><g filter="url(#sh20s)"><rect x="24" y="22" width="22" height="26" rx="8" fill="#58CC02"/></g><g filter="url(#sh20s)"><rect x="30" y="4" width="14" height="22" rx="6" fill="#62D916"/></g><circle cx="38" cy="46" r="5" fill="#FFB020"/><circle cx="38" cy="24" r="4.5" fill="#FFB020"/><path d="M32 8 L26 0" stroke="#62D916" stroke-width="3.5" stroke-linecap="round"/><path d="M42 8 L48 0" stroke="#62D916" stroke-width="3.5" stroke-linecap="round"/><circle cx="26" cy="0" r="2.5" fill="#FFB020"/><circle cx="48" cy="0" r="2.5" fill="#FFB020"/><circle cx="32" cy="32" r="3.5" fill="white"/><circle cx="43" cy="32" r="3.5" fill="white"/><circle cx="33" cy="33" r="1.8" fill="#3C3C3C"/><circle cx="44" cy="33" r="1.8" fill="#3C3C3C"/></svg>
-      <span>32</span>
-      <svg width="24" height="24" viewBox="0 0 80 80" fill="none"><rect x="24" y="22" width="22" height="26" rx="8" fill="#58CC02"/><rect x="30" y="4" width="14" height="22" rx="6" fill="#62D916"/><circle cx="38" cy="46" r="4" fill="#FFB020"/><circle cx="38" cy="24" r="3.5" fill="#FFB020"/><circle cx="32" cy="32" r="3.5" fill="white"/><circle cx="43" cy="32" r="3.5" fill="white"/><circle cx="33" cy="33" r="1.8" fill="#3C3C3C"/><circle cx="44" cy="33" r="1.8" fill="#3C3C3C"/></svg>
-      <span>24</span>
-    </div>
-  </div>
+<!-- #20 Storm — slate gray, horizontal sweep -->
+<div class="card" onclick="pick(this)">
+<div class="num">#20</div>
+<svg class="icon" width="160" height="192" viewBox="0 0 200 240" fill="none">
+<rect x="50" y="218" width="56" height="22" rx="8" fill="#37474F"/>
+<rect x="62" y="198" width="32" height="24" rx="6" fill="#546E7A"/>
+<rect x="82" y="17" width="36" height="75" rx="18" fill="#90A4AE" transform="rotate(96,100,92)"/>
+<g transform="translate(175,100) rotate(96)"><path d="M-4,0L-3,-9L3,-9L4,0Z" fill="#546E7A"/><path d="M-3,-9L-9,-24L-5,-24L-1,-11Z" fill="#78909C"/><path d="M3,-9L9,-24L5,-24L1,-11Z" fill="#78909C"/></g>
+<rect x="58" y="90" width="40" height="115" rx="20" fill="#78909C" transform="rotate(11,78,205)"/>
+<circle cx="100" cy="92" r="16" fill="#90A4AE"/><circle cx="100" cy="92" r="8" fill="#37474F"/>
+<circle cx="78" cy="205" r="14" fill="#546E7A"/><circle cx="78" cy="205" r="7" fill="#37474F"/>
+<circle cx="175" cy="100" r="9" fill="#90A4AE"/><circle cx="175" cy="100" r="4.5" fill="#37474F"/>
+</svg>
+<div class="label">Storm</div>
+<div class="desc">Cool slate, nearly horizontal sweep</div>
+<div class="sizes">
+<svg width="32" height="38" viewBox="0 0 200 240" fill="none"><rect x="50" y="218" width="56" height="22" rx="8" fill="#37474F"/><rect x="62" y="198" width="32" height="24" rx="6" fill="#546E7A"/><rect x="82" y="17" width="36" height="75" rx="18" fill="#90A4AE" transform="rotate(96,100,92)"/><rect x="58" y="90" width="40" height="115" rx="20" fill="#78909C" transform="rotate(11,78,205)"/><circle cx="100" cy="92" r="16" fill="#90A4AE"/><circle cx="100" cy="92" r="8" fill="#37474F"/><circle cx="78" cy="205" r="14" fill="#546E7A"/></svg>
+<span>32</span>
+<svg width="24" height="29" viewBox="0 0 200 240" fill="none"><rect x="50" y="218" width="56" height="22" rx="8" fill="#37474F"/><rect x="82" y="17" width="36" height="75" rx="18" fill="#90A4AE" transform="rotate(96,100,92)"/><rect x="58" y="90" width="40" height="115" rx="20" fill="#78909C" transform="rotate(11,78,205)"/><circle cx="100" cy="92" r="16" fill="#90A4AE"/></svg>
+<span>24</span>
+</div></div>
 
 </div>
-
 <script>
-function pick(card) {
-  document.querySelectorAll('.card').forEach(c => c.style.borderColor = '#EBEBEB');
-  card.style.borderColor = '#58CC02';
-  const sizes = card.querySelector('.sizes');
-  const svg32 = sizes ? sizes.querySelector('svg') : null;
-  if (svg32) {
-    document.getElementById('header-preview').innerHTML = svg32.outerHTML;
-  }
+function pick(card){
+  document.querySelectorAll('.card').forEach(c=>c.style.borderColor='#EBEBEB');
+  card.style.borderColor='#58CC02';
+  const s=card.querySelector('.sizes');
+  const v=s?s.querySelector('svg'):null;
+  if(v)document.getElementById('header-preview').innerHTML=v.outerHTML;
 }
 </script>
-
 </body>
 </html>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Footer from '@/components/layout/Footer';
 
 /* ── SVG Illustrations ── */
 
@@ -340,6 +341,7 @@ export function LandingPage() {
         </div>
       </section>
 
+      <Footer />
     </div>
   );
 }

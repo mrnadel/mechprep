@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Nunito, JetBrains_Mono } from 'next/font/google';
 import { AuthSessionProvider } from '@/components/providers/SessionProvider';
+import CookieConsent from '@/components/ui/CookieConsent';
 import './globals.css';
 
 const nunito = Nunito({
@@ -19,6 +20,27 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'MechReady — Mechanical Engineering Interview Training',
   description: 'Sharpen your mechanical engineering skills with gamified, interview-focused practice. Adaptive questions, real-world mechanisms, and smart feedback.',
+  metadataBase: new URL('https://mechready.com'),
+  icons: {
+    icon: '/favicon.svg',
+  },
+  manifest: '/manifest.json',
+  openGraph: {
+    title: 'MechReady — Mechanical Engineering Interview Training',
+    description: 'Sharpen your mechanical engineering skills with gamified, interview-focused practice. 1,700+ questions across 10 core ME topics.',
+    url: 'https://mechready.com',
+    siteName: 'MechReady',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'MechReady — ME Interview Training',
+    description: 'Gamified mechanical engineering interview prep. 1,700+ questions, adaptive practice, and smart feedback.',
+  },
+  other: {
+    'theme-color': '#4F46E5',
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +51,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${nunito.variable} ${jetbrainsMono.variable}`}>
       <body className="min-h-screen">
-        <AuthSessionProvider>{children}</AuthSessionProvider>
+        <AuthSessionProvider>
+          {children}
+          <CookieConsent />
+        </AuthSessionProvider>
       </body>
     </html>
   );
