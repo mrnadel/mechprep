@@ -414,28 +414,57 @@
 <!-- ====== 6. Cantilever Beam — Statics ====== -->
 <div class="card" data-name="Cantilever Beam" data-cat="Statics">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <rect x="4" y="22" width="10" height="38" rx="4" class="s-fill" opacity="0.15"/>
-  <rect x="4" y="22" width="10" height="38" rx="4" class="s-stroke-d" stroke-width="1.5" fill="none" opacity="0.3"/>
-  <rect x="4" y="63" width="72" height="4" rx="2" class="s-fill" opacity="0.06"/>
-  <path class="s-stroke" stroke-width="4" fill="none" stroke-linecap="round">
+  <!-- Fixed wall support -->
+  <rect x="4" y="20" width="10" height="40" rx="2" class="s-fill" opacity="0.1"/>
+  <rect x="4" y="20" width="10" height="40" rx="2" class="s-stroke-d" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <!-- Wall hatching (fixed support convention) -->
+  <line x1="5" y1="25" x2="13" y2="20" class="s-stroke-d" stroke-width="0.6" opacity="0.12"/>
+  <line x1="5" y1="31" x2="13" y2="25" class="s-stroke-d" stroke-width="0.6" opacity="0.12"/>
+  <line x1="5" y1="37" x2="13" y2="31" class="s-stroke-d" stroke-width="0.6" opacity="0.12"/>
+  <line x1="5" y1="43" x2="13" y2="37" class="s-stroke-d" stroke-width="0.6" opacity="0.12"/>
+  <line x1="5" y1="49" x2="13" y2="43" class="s-stroke-d" stroke-width="0.6" opacity="0.12"/>
+  <line x1="5" y1="55" x2="13" y2="49" class="s-stroke-d" stroke-width="0.6" opacity="0.12"/>
+  <line x1="9" y1="60" x2="13" y2="55" class="s-stroke-d" stroke-width="0.6" opacity="0.12"/>
+  <!-- Ground -->
+  <rect x="4" y="63" width="72" height="3" rx="1.5" class="s-fill" opacity="0.04"/>
+  <!-- Original position reference (dashed, appears when deflected) -->
+  <line x1="14" y1="40" x2="70" y2="40" class="s-stroke-l" stroke-width="0.7" stroke-dasharray="3,4" opacity="0">
+    <animate attributeName="opacity" values="0;0.2;0.1;0" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.4;0.7;1"/>
+  </line>
+  <!-- Beam body (visible thickness, bends) -->
+  <path class="s-fill" opacity="0.12">
     <animate attributeName="d" dur="2.5s" repeatCount="indefinite" calcMode="spline"
-      keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1"
-      keyTimes="0;0.4;0.7;1"
-      values="
-        M14,40 Q42,40 70,40;
-        M14,40 Q42,46 70,56;
-        M14,40 Q42,37 70,35;
-        M14,40 Q42,40 70,40
-      "/>
+      keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;0.7;1"
+      values="M14,37 Q42,37 70,37 L70,43 Q42,43 14,43 Z;M14,37 Q42,43 70,53 L70,59 Q42,49 14,43 Z;M14,37 Q42,35 70,33 L70,39 Q42,41 14,43 Z;M14,37 Q42,37 70,37 L70,43 Q42,43 14,43 Z"/>
   </path>
+  <!-- Beam centerline (neutral axis) -->
+  <path class="s-stroke" stroke-width="3" fill="none" stroke-linecap="round">
+    <animate attributeName="d" dur="2.5s" repeatCount="indefinite" calcMode="spline"
+      keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;0.7;1"
+      values="M14,40 Q42,40 70,40;M14,40 Q42,46 70,56;M14,40 Q42,37 70,35;M14,40 Q42,40 70,40"/>
+  </path>
+  <!-- Deflection indicator δ (appears during max deflection) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0.35;0.15;0" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.4;0.7;1"/>
+    <line x1="73" y1="40" x2="73" y2="56" class="s-stroke-d" stroke-width="0.8" stroke-dasharray="1.5,2"/>
+    <polygon points="71.5,54 73,57 74.5,54" class="s-fill-d" opacity="0.6"/>
+    <text x="76" y="50" font-size="5.5" class="s-fill-d" font-style="italic">δ</text>
+  </g>
+  <!-- Reaction moment at wall (curved arrow, appears under load) -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0.3;0.15;0" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.4;0.7;1"/>
+    <path d="M18,34 A6,6 0 0,1 18,46" class="s-stroke-d" stroke-width="1" fill="none"/>
+    <polygon points="16.5,45 18,48 19.5,45" class="s-fill-d"/>
+    <text x="23" y="42" font-size="5" class="s-fill-d" font-style="italic">M</text>
+  </g>
+  <!-- Applied load F (animated with beam tip) -->
   <g>
     <animateTransform attributeName="transform" type="translate" dur="2.5s" repeatCount="indefinite"
       calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;0.7;1"
-      values="0,0;0,14;0,-4;0,0"/>
-    <line x1="70" y1="26" x2="70" y2="38" class="s-stroke-d" stroke-width="2.5" stroke-linecap="round"/>
-    <circle cx="70" cy="24" r="4" class="s-fill-d" opacity="0.3"/>
-    <polygon points="67,38 70,44 73,38" class="s-fill-d"/>
-    <text x="70" y="20" text-anchor="middle" font-size="9" class="s-fill-d" font-weight="bold">F</text>
+      values="0,0;0,16;0,-5;0,0"/>
+    <line x1="70" y1="26" x2="70" y2="36" class="s-stroke-d" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <polygon points="68,35 70,40 72,35" class="s-fill-d" opacity="0.5"/>
+    <text x="70" y="22" text-anchor="middle" font-size="8" class="s-fill-d" opacity="0.4" font-weight="bold" font-style="italic">F</text>
   </g>
 </svg></div>
 <div class="card-label">Cantilever Beam</div>
