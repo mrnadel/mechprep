@@ -29,6 +29,7 @@ import {
   Loader2,
 } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ─── Image compression ──────────────────────────────────────
@@ -232,6 +233,7 @@ function AchievementBadge({
 // PROFILE PAGE
 // ═══════════════════════════════════════════════════════════
 export default function ProfilePage() {
+  const router = useRouter();
   const { data: session, update: updateSession } = useSession();
   const progress = useStore((s) => s.progress);
   const courseProgress = useCourseStore((s) => s.progress);
@@ -393,9 +395,9 @@ export default function ProfilePage() {
       {/* ─── Sticky Header ───────────────────────────────── */}
       <div className="sticky top-0 z-30 bg-white/90 backdrop-blur-xl border-b border-gray-100">
         <div className="flex items-center h-14 px-4">
-          <Link href="/" className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors">
+          <button onClick={() => router.back()} className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors">
             <ArrowLeft className="w-5 h-5 text-gray-600" />
-          </Link>
+          </button>
           <h1 className="text-lg font-extrabold text-gray-900 ml-2">Profile</h1>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Check, X, Sparkles, HelpCircle, ChevronDown, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { TIERS, FEATURES, PADDLE_PRICES, formatPrice, getYearlySavingsPercent, type Feature } from '@/lib/pricing';
 import { useSubscription } from '@/hooks/useSubscription';

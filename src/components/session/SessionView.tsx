@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSession, useSessionActions } from '@/store/useStore';
+import { useBackHandler } from '@/hooks/useBackHandler';
 import QuestionCard from '../question/QuestionCard';
 import SessionSummary from './SessionSummary';
 import { X, Clock, Zap } from 'lucide-react';
@@ -10,6 +11,10 @@ import { cn, formatDuration } from '@/lib/utils';
 export default function SessionView() {
   const { session, sessionSummary } = useSession();
   const { answerQuestion, nextQuestion, completeSession, abandonSession } = useSessionActions();
+
+  // Mobile back button abandons session
+  useBackHandler(!!session && !sessionSummary, abandonSession);
+
   const [elapsed, setElapsed] = useState(0);
   const startTime = session?.startTime;
 
