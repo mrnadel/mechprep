@@ -7,6 +7,8 @@ import { useEffect, useRef } from 'react';
  */
 export function useBackHandler(active: boolean, onBack: () => void) {
   const pushed = useRef(false);
+  const onBackRef = useRef(onBack);
+  onBackRef.current = onBack;
 
   useEffect(() => {
     if (!active) {
@@ -18,10 +20,10 @@ export function useBackHandler(active: boolean, onBack: () => void) {
     window.history.pushState({ overlay: true }, '');
     pushed.current = true;
 
-    const handlePopState = (e: PopStateEvent) => {
+    const handlePopState = () => {
       // The user pressed back — close the overlay
       pushed.current = false;
-      onBack();
+      onBackRef.current();
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -34,5 +36,5 @@ export function useBackHandler(active: boolean, onBack: () => void) {
         window.history.back();
       }
     };
-  }, [active, onBack]);
+  }, [active]);
 }
