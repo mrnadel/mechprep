@@ -585,30 +585,57 @@
 <!-- ====== 13. Piston-Cylinder — Thermo ====== -->
 <div class="card" data-name="Piston-Cylinder" data-cat="Thermo">
 <div class="card-top"><svg viewBox="0 0 80 80" fill="none">
-  <rect x="18" y="10" width="44" height="50" rx="6" class="s-fill" opacity="0.08"/>
-  <rect x="18" y="10" width="44" height="50" rx="6" class="s-stroke-d" stroke-width="2" fill="none"/>
+  <!-- Cylinder body -->
+  <rect x="18" y="10" width="44" height="52" rx="4" class="s-fill" opacity="0.06"/>
+  <rect x="18" y="10" width="44" height="52" rx="4" class="s-stroke-d" stroke-width="2.5" fill="none"/>
+  <!-- Wall thickness lines -->
+  <line x1="21" y1="14" x2="21" y2="58" class="s-stroke-l" stroke-width="0.5" opacity="0.2"/>
+  <line x1="59" y1="14" x2="59" y2="58" class="s-stroke-l" stroke-width="0.5" opacity="0.2"/>
+  <!-- Gas — properly synced with piston movement -->
+  <rect x="21" y="32" width="38" height="28" rx="2" class="s-fill-l" opacity="0.15">
+    <animate attributeName="y" values="32;16;32" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+    <animate attributeName="height" values="28;44;28" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+    <animate attributeName="opacity" values="0.18;0.07;0.18" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+  </rect>
+  <!-- Piston assembly -->
   <g>
     <animateTransform attributeName="transform" type="translate" values="0,0;0,-16;0,0" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
-    <rect x="21" y="22" width="38" height="10" rx="5" class="s-fill" opacity="0.45"/>
-    <rect x="21" y="22" width="38" height="10" rx="5" class="s-stroke-d" stroke-width="1.5" fill="none"/>
-    <rect x="37" y="12" width="6" height="10" rx="3" class="s-fill-d" opacity="0.5"/>
-    <circle cx="40" cy="10" r="3.5" class="s-fill-d" opacity="0.4"/>
+    <!-- Piston head -->
+    <rect x="22" y="23" width="36" height="9" rx="3" class="s-fill" opacity="0.5"/>
+    <rect x="22" y="23" width="36" height="9" rx="3" class="s-stroke-d" stroke-width="1.5" fill="none"/>
+    <!-- Piston rings -->
+    <line x1="23" y1="25.5" x2="57" y2="25.5" stroke="white" stroke-width="0.8" opacity="0.5"/>
+    <line x1="23" y1="28.5" x2="57" y2="28.5" stroke="white" stroke-width="0.8" opacity="0.5"/>
+    <!-- Wrist pin -->
+    <circle cx="40" cy="27" r="1.8" class="s-fill-d" opacity="0.5"/>
+    <!-- Connecting rod -->
+    <rect x="37" y="11" width="6" height="12" rx="3" class="s-fill-d" opacity="0.4"/>
+    <rect x="37" y="11" width="6" height="12" rx="3" class="s-stroke-d" stroke-width="1" fill="none" opacity="0.4"/>
+    <!-- Crosshead guide -->
+    <rect x="33" y="5" width="14" height="7" rx="3" class="s-fill" opacity="0.3"/>
+    <rect x="33" y="5" width="14" height="7" rx="3" class="s-stroke-d" stroke-width="1.2" fill="none"/>
+    <circle cx="40" cy="8.5" r="2" class="s-fill-d" opacity="0.45"/>
   </g>
-  <rect x="21" y="32" width="38" height="26" rx="3" class="s-fill-l" opacity="0.15">
-    <animate attributeName="height" values="26;42;26" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
-  </rect>
-  <g>
-    <ellipse cx="34" cy="66" rx="5" ry="7" class="s-fill" opacity="0.4">
-      <animate attributeName="ry" values="7;9;5;7" dur="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="rx" values="5;3.5;6;5" dur="0.6s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="46" cy="66" rx="4" ry="6" class="s-fill-l" opacity="0.3">
-      <animate attributeName="ry" values="6;8;4;6" dur="0.5s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="40" cy="67" rx="3.5" ry="5" class="s-fill-d" opacity="0.35">
-      <animate attributeName="ry" values="5;7;3;5" dur="0.7s" repeatCount="indefinite"/>
-    </ellipse>
-  </g>
+  <!-- Flames (path-based, flickering) -->
+  <path d="M30,74 Q31,69 33,65 Q32,70 34,74 Z" class="s-fill" opacity="0.5">
+    <animate attributeName="d" values="M30,74 Q31,69 33,65 Q32,70 34,74 Z;M30,74 Q30,67 32,63 Q33,69 34,74 Z;M30,74 Q31,69 33,65 Q32,70 34,74 Z" dur="0.4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M35,74 Q37,67 39,62 Q38,68 40,74 Z" class="s-fill-d" opacity="0.45">
+    <animate attributeName="d" values="M35,74 Q37,67 39,62 Q38,68 40,74 Z;M35,74 Q38,65 40,61 Q39,69 40,74 Z;M35,74 Q37,67 39,62 Q38,68 40,74 Z" dur="0.35s" repeatCount="indefinite"/>
+  </path>
+  <path d="M40,74 Q42,66 44,62 Q43,68 45,74 Z" class="s-fill" opacity="0.55">
+    <animate attributeName="d" values="M40,74 Q42,66 44,62 Q43,68 45,74 Z;M40,74 Q43,64 45,61 Q44,69 45,74 Z;M40,74 Q42,66 44,62 Q43,68 45,74 Z" dur="0.45s" repeatCount="indefinite"/>
+  </path>
+  <path d="M46,74 Q47,69 49,65 Q48,70 50,74 Z" class="s-fill-l" opacity="0.4">
+    <animate attributeName="d" values="M46,74 Q47,69 49,65 Q48,70 50,74 Z;M46,74 Q48,67 50,64 Q49,71 50,74 Z;M46,74 Q47,69 49,65 Q48,70 50,74 Z" dur="0.3s" repeatCount="indefinite"/>
+  </path>
+  <!-- Heat arrows rising into cylinder -->
+  <path d="M33,68 L33,65 L31,65 L34,62 L37,65 L35,65 L35,68 Z" class="s-fill-d" opacity="0.15">
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="0.6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M45,68 L45,65 L43,65 L46,62 L49,65 L47,65 L47,68 Z" class="s-fill-d" opacity="0.15">
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="0.5s" repeatCount="indefinite"/>
+  </path>
 </svg></div>
 <div class="card-label">Piston-Cylinder</div>
 </div>
