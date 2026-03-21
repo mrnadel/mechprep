@@ -25,7 +25,6 @@ export const unit6: Unit = {
             'Correct — container shape affects the velocity profile, which changes the pressure distribution through Bernoulli\'s equation'
           ],
           correctIndex: 0,
-          diagram: '<svg viewBox="0 0 320 180" width="100%"><text x="160" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B" font-family="sans-serif">Hydrostatic Paradox</text><rect x="20" y="40" width="60" height="100" rx="0" fill="#DBEAFE" stroke="#334155" stroke-width="2"/><rect x="120" y="40" width="20" height="100" rx="0" fill="#DBEAFE" stroke="#334155" stroke-width="2"/><path d="M 210 40 L 210 140 L 280 140 L 280 40" stroke="#334155" stroke-width="2" fill="#DBEAFE"/><line x1="20" y1="40" x2="80" y2="40" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3,3"/><line x1="120" y1="40" x2="140" y2="40" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3,3"/><line x1="210" y1="40" x2="280" y2="40" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3,3"/><text x="50" y="35" text-anchor="middle" font-size="9" fill="#3B82F6" font-family="sans-serif">h</text><text x="130" y="35" text-anchor="middle" font-size="9" fill="#3B82F6" font-family="sans-serif">h</text><text x="245" y="35" text-anchor="middle" font-size="9" fill="#3B82F6" font-family="sans-serif">h</text><line x1="5" y1="140" x2="95" y2="140" stroke="#6B7280" stroke-width="1" stroke-dasharray="4,3"/><line x1="105" y1="140" x2="155" y2="140" stroke="#6B7280" stroke-width="1" stroke-dasharray="4,3"/><line x1="195" y1="140" x2="295" y2="140" stroke="#6B7280" stroke-width="1" stroke-dasharray="4,3"/><text x="50" y="155" text-anchor="middle" font-size="9" fill="#334155" font-family="sans-serif">P = ρgh</text><text x="130" y="155" text-anchor="middle" font-size="9" fill="#334155" font-family="sans-serif">P = ρgh</text><text x="245" y="155" text-anchor="middle" font-size="9" fill="#334155" font-family="sans-serif">P = ρgh</text><text x="160" y="175" text-anchor="middle" font-size="10" fill="#6B7280" font-family="sans-serif">Same depth h = same pressure (regardless of shape)</text></svg>',
           explanation: 'This is the "hydrostatic paradox." Pressure at a point in a static fluid depends only on the vertical depth below the free surface: P = P_atm + ρgh. A tall, thin tube and a wide swimming pool will have identical pressure at the same depth, despite vastly different total fluid volumes and weights. This follows from Pascal\'s law — pressure is transmitted equally in all directions. The container walls provide the reaction forces that make up the difference in total weight. This principle is why hydraulic systems work: a small force on a small piston can generate a large force on a large piston, because pressure is transmitted undiminished. Bernoulli\'s equation applies only to flowing fluids, not statics.',
           hint: 'Think about the hydrostatic equation: does it include any term for container width or shape?'
         },
@@ -68,7 +67,6 @@ export const unit6: Unit = {
             'Conservation of energy only applies to thermodynamic systems, not mechanical systems like hydraulic presses'
           ],
           correctIndex: 0,
-          diagram: '<svg viewBox="0 0 320 180" width="100%"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#EF4444"/></marker><marker id="ab" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/></marker></defs><text x="160" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B" font-family="sans-serif">Hydraulic Press</text><rect x="30" y="100" width="260" height="40" rx="4" fill="#DBEAFE" stroke="#334155" stroke-width="2"/><text x="160" y="125" text-anchor="middle" font-size="11" fill="#1E40AF" font-family="sans-serif">Fluid (P uniform)</text><rect x="50" y="50" width="20" height="50" rx="2" fill="#E2E8F0" stroke="#334155" stroke-width="2"/><text x="60" y="45" text-anchor="middle" font-size="9" fill="#1E293B" font-family="sans-serif">A</text><rect x="190" y="70" width="80" height="30" rx="2" fill="#E2E8F0" stroke="#334155" stroke-width="2"/><text x="230" y="65" text-anchor="middle" font-size="9" fill="#1E293B" font-family="sans-serif">100A</text><line x1="60" y1="28" x2="60" y2="50" stroke="#EF4444" stroke-width="2" marker-end="url(#ah)"/><text x="72" y="35" font-size="10" fill="#991B1B" font-family="sans-serif">F</text><line x1="230" y1="70" x2="230" y2="55" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><text x="245" y="57" font-size="10" fill="#1E40AF" font-family="sans-serif">100F</text><line x1="50" y1="155" x2="70" y2="155" stroke="#6B7280" stroke-width="1" stroke-dasharray="3,3"/><text x="60" y="168" text-anchor="middle" font-size="8" fill="#6B7280" font-family="sans-serif">d1 (large)</text><line x1="190" y1="155" x2="270" y2="155" stroke="#6B7280" stroke-width="1" stroke-dasharray="3,3"/><text x="230" y="168" text-anchor="middle" font-size="8" fill="#6B7280" font-family="sans-serif">d2 = d1/100</text></svg>',
           explanation: 'Pascal\'s law gives force multiplication: F₂ = F₁ × (A₂/A₁). But since the fluid is incompressible, volume displaced must be equal: A₁ × d₁ = A₂ × d₂, so d₂ = d₁ × (A₁/A₂) = d₁/100. Work in = F₁ × d₁, work out = 100F₁ × d₁/100 = F₁ × d₁. Energy is perfectly conserved — you trade displacement for force, just like a mechanical lever. In real systems, friction losses and fluid compressibility mean work out < work in. This is the fundamental principle behind hydraulic jacks, brakes, excavators, and all hydraulic machinery. The hydraulic fluid transmits pressure, not energy — the energy comes from the operator or pump moving the small piston through a large distance.',
           hint: 'Think about what happens to the displacement when force is multiplied. Consider work = force × distance.'
         },
@@ -93,6 +91,294 @@ export const unit6: Unit = {
           acceptedAnswers: ['kinematic', 'Kinematic', 'KINEMATIC'],
           explanation: 'Kinematic viscosity ν = μ/ρ combines the fluid\'s resistance to deformation (dynamic viscosity μ) with its density. It appears naturally in the Reynolds number (Re = VD/ν) and governs how momentum diffuses through the fluid. Water at 20°C has ν ≈ 1.0 × 10⁻⁶ m²/s, while air has ν ≈ 1.5 × 10⁻⁵ m²/s — air actually has HIGHER kinematic viscosity than water despite being much less "thick," because its density is ~800× lower. This explains why air boundary layers are thicker than water boundary layers at the same velocity. The kinematic viscosity is also called "momentum diffusivity," analogous to thermal diffusivity (α = k/(ρc_p)) for heat and mass diffusivity for species transport.',
           hint: 'This form of viscosity has units of m²/s and appears in the Reynolds number formula Re = VD/___.'
+        },
+        {
+          id: 'u6-L1-Q7',
+          type: 'multiple-choice',
+          question: 'A U-tube manometer connects two pressurized tanks, A and B. The manometer fluid is mercury (SG = 13.6), and the connecting fluid is water. If the mercury column on side A is 150 mm higher than on side B, what is the pressure difference P_A − P_B?',
+          options: [
+            'P_A − P_B = ρ_mercury × g × Δh = 13600 × 9.81 × 0.15 ≈ 20.0 kPa, with P_A being the higher pressure',
+            'P_A − P_B = (ρ_mercury − ρ_water) × g × Δh ≈ 18.5 kPa, because the water column above mercury must be subtracted',
+            'P_A − P_B = ρ_water × g × Δh ≈ 1.47 kPa, because only the water matters in a U-tube',
+            'P_A is lower than P_B because the mercury is pushed higher on side A by the higher pressure at B'
+          ],
+          correctIndex: 3,
+          explanation: 'A common misconception: the mercury is pushed DOWN on the high-pressure side and UP on the low-pressure side. If the mercury column is 150 mm HIGHER on side A, then P_B > P_A. The higher mercury on side A indicates that side B is pushing the mercury toward A. For the full calculation, you must write the manometer equation starting from one side and working to the other, accounting for each fluid column. The pressure difference depends on (ρ_mercury − ρ_water) × g × Δh because both sides have water above the mercury. P_B − P_A ≈ (13600 − 1000) × 9.81 × 0.15 ≈ 18.5 kPa.',
+          hint: 'In a U-tube manometer, the mercury rises on the LOW-pressure side. Which side has more mercury height?'
+        },
+        {
+          id: 'u6-L1-Q8',
+          type: 'multiple-choice',
+          question: 'A pressure gauge reads 350 kPa in a system. If the local atmospheric pressure is 95 kPa (at elevation), what is the absolute pressure?',
+          options: [
+            '445 kPa absolute',
+            '350 kPa absolute',
+            '255 kPa absolute',
+            '350 kPa absolute — gauge and absolute pressure are the same thing'
+          ],
+          correctIndex: 0,
+          explanation: 'P_absolute = P_gauge + P_atmospheric = 350 + 95 = 445 kPa. Gauge pressure is measured relative to atmospheric pressure, so it reads zero when open to the atmosphere. Absolute pressure is measured from absolute zero (perfect vacuum). This distinction is critical in thermodynamic calculations (ideal gas law requires absolute pressure) and in cavitation analysis (comparing to vapor pressure, which is given in absolute terms). Note that at elevation, atmospheric pressure is less than the standard 101.325 kPa, which must be accounted for.',
+          hint: 'Gauge pressure uses atmospheric as its zero reference. What is the true zero for absolute pressure?'
+        },
+        {
+          id: 'u6-L1-Q9',
+          type: 'true-false',
+          question: 'The buoyant force on a fully submerged object depends on the object\'s weight and density.',
+          correctAnswer: false,
+          explanation: 'Archimedes\' principle states that the buoyant force equals the weight of the displaced fluid: F_b = ρ_fluid × g × V_object. It depends on the FLUID density and the VOLUME of the object, not the object\'s weight or density. A steel sphere and a hollow plastic sphere of the same volume experience identical buoyant forces when fully submerged in the same fluid. The object\'s density determines whether it sinks or floats (by determining whether its weight exceeds the buoyant force), but the buoyant force itself depends only on displaced fluid volume.',
+          hint: 'Recall Archimedes\' principle — what determines the buoyant force?'
+        },
+        {
+          id: 'u6-L1-Q10',
+          type: 'multiple-choice',
+          question: 'A rectangular gate 3 m wide and 4 m tall is submerged vertically with its top edge at the free surface. What is the resultant hydrostatic force on the gate? (ρ_water = 1000 kg/m³)',
+          options: [
+            'F = ρg × ȳ_c × A = 1000 × 9.81 × 2 × 12 = 235.4 kN',
+            'F = ρg × h × A = 1000 × 9.81 × 4 × 12 = 470.9 kN',
+            'F = ½ × ρg × h² × w = ½ × 1000 × 9.81 × 16 × 3 = 235.4 kN',
+            'F = ρg × h × w = 1000 × 9.81 × 4 × 3 = 117.7 kN'
+          ],
+          correctIndex: 0,
+          explanation: 'The resultant hydrostatic force on a plane surface is F = ρg × ȳ_c × A, where ȳ_c is the depth to the centroid of the surface and A is the area. For a vertical rectangle with its top edge at the surface, the centroid is at ȳ_c = h/2 = 4/2 = 2 m. A = 3 × 4 = 12 m². So F = 1000 × 9.81 × 2 × 12 = 235,440 N ≈ 235.4 kN. Note that option C gives the same numerical answer using the equivalent triangular pressure distribution approach (½ × ρg × h² × w), which is valid for rectangular surfaces with the top at the free surface. Both methods are correct and interchangeable for this geometry.',
+          hint: 'The hydrostatic force uses the pressure at the centroid times the total area. Where is the centroid of a rectangle?'
+        },
+        {
+          id: 'u6-L1-Q11',
+          type: 'multiple-choice',
+          question: 'What is the bulk modulus of a fluid, and why does it matter in hydraulic systems?',
+          options: [
+            'Bulk modulus (K) measures a fluid\'s resistance to uniform compression: K = −ΔP/(ΔV/V). Higher K means the fluid is stiffer — important in hydraulic systems for fast response and minimal "sponginess" in actuators.',
+            'Bulk modulus measures the fluid\'s resistance to shear deformation, similar to the shear modulus in solids',
+            'Bulk modulus is the ratio of surface tension to viscosity, governing droplet formation',
+            'Bulk modulus only matters for gases; liquids are perfectly incompressible so their bulk modulus is infinite'
+          ],
+          correctIndex: 0,
+          explanation: 'Bulk modulus K = −V(dP/dV) = −ΔP/(ΔV/V) measures how much pressure is needed to compress a fluid by a given fraction. Water has K ≈ 2.2 GPa (very stiff but not infinite), while hydraulic oil is typically K ≈ 1.5 GPa. Air trapped in hydraulic lines drastically reduces the effective bulk modulus because air is ~20,000× more compressible than oil. Even 1% trapped air by volume can reduce system stiffness by 50%, causing sluggish actuator response, the "spongy brake pedal" effect, and water hammer amplification. This is why hydraulic systems must be carefully bled of air. The speed of sound in a fluid is c = √(K/ρ), connecting bulk modulus to acoustic and water hammer phenomena.',
+          hint: 'Think about what happens when you try to compress a fluid. What property quantifies this resistance?'
+        },
+        {
+          id: 'u6-L1-Q12',
+          type: 'true-false',
+          question: 'In a differential manometer, if both legs contain the same fluid and no manometer fluid is used, the manometer cannot measure any pressure difference.',
+          correctAnswer: true,
+          explanation: 'A differential manometer works by using a fluid of different density (usually mercury or another heavy fluid) to create a measurable height difference. If both legs contain the same fluid with no manometer fluid of different density, any pressure difference simply shifts the fluid equally in both legs, and the height difference provides no useful information — the equation reduces to 0 = 0 for the differential measurement. The density contrast between the working fluid and the manometer fluid is what makes the measurement possible. This is why manometer fluid selection matters: mercury (SG = 13.6) gives large pressure sensitivity for small height changes, while lighter manometer fluids (like oil, SG < 1) are used for measuring very small pressure differences.',
+          hint: 'Write out the manometer equation with the same fluid on both sides. What cancels?'
+        },
+        {
+          id: 'u6-L1-Q13',
+          type: 'multiple-choice',
+          question: 'A submarine hull must withstand external hydrostatic pressure at depth. At 300 m below the ocean surface (seawater ρ = 1025 kg/m³), what is the gauge pressure on the hull?',
+          options: [
+            'About 3.02 MPa (approximately 30 atmospheres)',
+            'About 302 kPa (approximately 3 atmospheres)',
+            'About 30.2 MPa (approximately 300 atmospheres)',
+            'About 101.3 kPa (always one atmosphere regardless of depth)'
+          ],
+          correctIndex: 0,
+          explanation: 'P_gauge = ρgh = 1025 × 9.81 × 300 = 3,016,575 Pa ≈ 3.02 MPa ≈ 29.8 atm. At 300 m depth, the hull must withstand roughly 30 times atmospheric pressure. This enormous pressure drives the design of submarine hulls toward thick-walled cylindrical shapes (which resist external pressure through hoop compression) and limits the operational depth. For every 10 m of seawater depth, pressure increases by approximately 1 atm (101 kPa). This linear relationship (P = ρgh) is fundamental to underwater engineering, from submarine design to deep-sea oil rigs.',
+          hint: 'Use P = ρgh with consistent SI units. Convert the result to MPa.'
+        },
+        {
+          id: 'u6-L1-Q14',
+          type: 'multiple-choice',
+          question: 'What happens to the viscosity of a gas versus a liquid as temperature increases?',
+          options: [
+            'Gas viscosity increases while liquid viscosity decreases — gases transfer momentum via molecular collisions (more at higher T), while liquids rely on intermolecular cohesion (weakened at higher T)',
+            'Both gas and liquid viscosity increase with temperature',
+            'Both gas and liquid viscosity decrease with temperature',
+            'Gas viscosity decreases while liquid viscosity increases with temperature'
+          ],
+          correctIndex: 0,
+          explanation: 'This is a fundamental difference rooted in molecular behavior. In gases, viscosity arises from momentum transfer between randomly moving molecules — higher temperature means faster molecules, more collisions, and higher viscosity (μ_gas ∝ √T for ideal gases). In liquids, viscosity arises from intermolecular cohesive forces that resist relative motion — higher temperature weakens these bonds, dramatically reducing viscosity (often exponentially: μ ∝ e^(A/T)). Water\'s viscosity drops from ~1.8 cP at 0°C to ~0.28 cP at 100°C — a 6× reduction. This is why engines warm up oil before operation and why industrial processes often heat fluids to reduce pumping costs.',
+          hint: 'Think about the molecular mechanism of viscosity in gases vs. liquids.'
+        },
+        {
+          id: 'u6-L1-Q15',
+          type: 'fill-blank',
+          question: 'The hydrostatic force on a curved submerged surface is analyzed by resolving it into _____ and vertical components.',
+          acceptedAnswers: ['horizontal', 'Horizontal', 'HORIZONTAL'],
+          explanation: 'For curved surfaces, the hydrostatic force cannot be computed directly using F = ρgȳ_cA because the pressure acts in different directions at every point. Instead, the force is resolved into horizontal and vertical components. The horizontal component equals the hydrostatic force on the vertical PROJECTION of the curved surface (calculated using the standard planar formula). The vertical component equals the WEIGHT of the fluid column above (or below) the curved surface. The resultant is found by vector addition: F = √(F_H² + F_V²). This method simplifies the integration over a curved surface into two straightforward calculations.',
+          hint: 'The analysis of forces on curved surfaces requires breaking the resultant into two perpendicular directions.'
+        },
+        {
+          id: 'u6-L1-Q16',
+          type: 'multiple-choice',
+          question: 'An inclined manometer is used instead of a vertical one. What is the primary advantage?',
+          options: [
+            'It amplifies the reading — for a given pressure difference, the meniscus travels farther along the inclined tube, providing greater resolution for measuring small pressures',
+            'It allows measurement of higher pressures than a vertical manometer',
+            'It eliminates parallax error when reading the meniscus level',
+            'It removes the need for a manometer fluid of different density'
+          ],
+          correctIndex: 0,
+          explanation: 'In an inclined manometer, if the tube is inclined at angle θ from horizontal, a vertical height change Δh corresponds to a tube length change ΔL = Δh/sin(θ). For example, at θ = 10°, ΔL is about 5.76× the vertical Δh, greatly magnifying the scale reading. This makes it possible to resolve very small pressure differences (a few Pascals) that would be unreadable on a vertical manometer. Inclined manometers are commonly used in HVAC for measuring duct pressures and filter pressure drops, where differential pressures are often just 10-250 Pa (0.04-1 inch of water).',
+          hint: 'Think about the geometry — the same vertical height change produces a longer reading along an angled tube.'
+        },
+        {
+          id: 'u6-L1-Q17',
+          type: 'multiple-choice',
+          question: 'A floating object is displaced slightly and released. Under what condition will it be stable?',
+          options: [
+            'When the metacenter (M) is above the center of gravity (G) — a restoring moment returns the object to its original position',
+            'When the center of buoyancy (B) is above the center of gravity (G)',
+            'When the center of gravity (G) is at the waterline',
+            'When the metacentric height is zero, giving neutral stability'
+          ],
+          correctIndex: 0,
+          explanation: 'Floating stability depends on the metacentric height GM = BM − BG. When the metacenter M is above the center of gravity G (positive GM), a tilt shifts the center of buoyancy B to the side, creating a restoring couple that returns the object upright. When M is below G (negative GM), the couple is destabilizing and the object capsizes. BM = I_waterplane/V_submerged, where I is the second moment of area of the waterplane. Wide, flat-bottomed vessels (barges) have large I and high stability. Tall, narrow vessels (canoes) have small I and low stability. Naval architects typically require GM > 0.15 m for small boats and specify minimum GM values through regulations.',
+          hint: 'The metacentric height (GM) determines stability. What sign must it have for a stable floating body?'
+        },
+        {
+          id: 'u6-L1-Q18',
+          type: 'true-false',
+          question: 'A Bingham plastic fluid behaves as a rigid body until a minimum yield stress is exceeded, after which it flows like a Newtonian fluid.',
+          correctAnswer: true,
+          explanation: 'A Bingham plastic has the constitutive equation τ = τ_y + μ_p(du/dy), where τ_y is the yield stress and μ_p is the plastic viscosity. Below the yield stress, the material does not flow at all — it behaves as a solid. Once the yield stress is exceeded, it flows with a linear stress-strain rate relationship (like a Newtonian fluid, but offset by τ_y). Examples include toothpaste, mayonnaise, drilling mud, and some slurries. This behavior is important for pipeline design: Bingham plastics require a minimum pressure gradient to initiate flow, and the velocity profile has a flat "plug" region in the center of the pipe where stress is below yield.',
+          hint: 'Think about toothpaste — it does not flow until you squeeze hard enough, then it flows smoothly.'
+        },
+        {
+          id: 'u6-L1-Q19',
+          type: 'multiple-choice',
+          question: 'What is the specific gravity (SG) of a fluid, and why is it preferred over density in many engineering calculations?',
+          options: [
+            'SG is the ratio of fluid density to water density (at 4°C). It is dimensionless, making it convenient for quick comparisons and for converting between pressure heads (e.g., mm Hg, inches of water) without unit conversions.',
+            'SG is the ratio of dynamic viscosity to kinematic viscosity, providing a single parameter for flow calculations',
+            'SG is the ratio of fluid density to air density, used primarily for gas flow applications',
+            'SG is identical to density but expressed in g/cm³ instead of kg/m³'
+          ],
+          correctIndex: 0,
+          explanation: 'Specific gravity SG = ρ_fluid/ρ_water (with ρ_water = 1000 kg/m³ at 4°C). Being dimensionless, SG simplifies many calculations: the density in kg/m³ is simply 1000 × SG, and in g/cm³ it equals SG directly (since ρ_water = 1 g/cm³). Common values: mercury SG = 13.6, seawater SG ≈ 1.025, oil SG ≈ 0.8-0.9, gasoline SG ≈ 0.72. In manometer calculations, SG ratios directly give pressure ratios. In API gravity (used in petroleum), °API = 141.5/SG − 131.5, so lighter crudes have higher API gravity. Note: SG is sometimes referenced to water at 15.6°C (60°F) in petroleum applications.',
+          hint: 'SG compares a fluid\'s density to a reference. What is that reference fluid?'
+        },
+        {
+          id: 'u6-L1-Q20',
+          type: 'multiple-choice',
+          question: 'A tank contains oil (SG = 0.85) floating on water. A gauge at the bottom (1.5 m below the oil-water interface, with 2 m of oil above) reads what gauge pressure?',
+          options: [
+            'P = ρ_oil × g × h_oil + ρ_water × g × h_water = 850(9.81)(2) + 1000(9.81)(1.5) = 16.68 + 14.72 = 31.4 kPa',
+            'P = ρ_water × g × (h_oil + h_water) = 1000(9.81)(3.5) = 34.3 kPa',
+            'P = ρ_oil × g × (h_oil + h_water) = 850(9.81)(3.5) = 29.2 kPa',
+            'P = (ρ_oil + ρ_water)/2 × g × (h_oil + h_water) = 925(9.81)(3.5) = 31.8 kPa'
+          ],
+          correctIndex: 0,
+          explanation: 'For layered immiscible fluids, the pressure at the bottom is the sum of the pressure contributions from each layer: P = Σ(ρ_i × g × h_i). You cannot simply average the densities or use one density for the total height. The oil layer contributes: 850 × 9.81 × 2 = 16,677 Pa. The water layer contributes: 1000 × 9.81 × 1.5 = 14,715 Pa. Total gauge pressure: 31,392 Pa ≈ 31.4 kPa. This principle extends to any number of layers — each layer contributes ρ_i × g × h_i to the pressure below it.',
+          hint: 'Calculate the pressure contribution from each fluid layer separately, then add them.'
+        },
+        {
+          id: 'u6-L1-Q21',
+          type: 'multiple-choice',
+          question: 'Why does a fluid at rest exert no shear stress?',
+          options: [
+            'By definition, a fluid deforms continuously under any applied shear stress — so if there is no deformation (fluid at rest), there must be zero shear stress',
+            'Fluids at rest have infinite viscosity, which prevents any shear from developing',
+            'The gravitational force exactly cancels all internal shear stresses in a static fluid',
+            'Shear stress exists in a static fluid, but it is balanced by pressure forces'
+          ],
+          correctIndex: 0,
+          explanation: 'This is actually the fundamental definition that distinguishes fluids from solids. A fluid is defined as a substance that deforms continuously under any applied shear stress, no matter how small. Conversely, if a fluid is at rest (not deforming), there can be no shear stress. This means that in a static fluid, pressure is the only stress — it acts equally in all directions (isotropic), which is the basis of Pascal\'s law. The moment any shear stress is applied (e.g., gravity on a slope), the fluid flows until the shear stress is relieved. A solid, by contrast, can support shear stress without continuous deformation.',
+          hint: 'What is the defining characteristic of a fluid that distinguishes it from a solid?'
+        },
+        {
+          id: 'u6-L1-Q22',
+          type: 'true-false',
+          question: 'A manometer using a fluid with specific gravity less than that of the working fluid (e.g., oil over water) gives an inverted column and is useful for measuring small pressure differences.',
+          correctAnswer: true,
+          explanation: 'An inverted U-tube manometer uses a manometer fluid lighter than the working fluid (e.g., air or light oil over water). The lighter fluid rises to the top of the inverted U. Because the density difference (ρ_working − ρ_manometer) is small, a given pressure difference produces a large height difference — improving resolution for small pressure measurements. This is the opposite of a mercury manometer, where the large density difference produces small height changes for large pressures. The principle is ΔP = (ρ_working − ρ_manometer) × g × Δh, so smaller density difference means larger Δh for the same ΔP.',
+          hint: 'Think about what happens when the density difference between the working and manometer fluids is small.'
+        },
+        {
+          id: 'u6-L1-Q23',
+          type: 'multiple-choice',
+          question: 'A 2 m diameter spherical tank is completely filled with water and placed with its center 5 m below the surface of a lake. What is the net vertical hydrostatic force (buoyancy) on the sphere?',
+          options: [
+            'F_b = ρ_water × g × V = 1000 × 9.81 × (4/3)π(1)³ ≈ 41.1 kN upward',
+            'F_b = ρ_water × g × h_c × A_projected ≈ 154.0 kN upward',
+            'Zero — since the sphere is filled with water, there is no density difference',
+            'F_b depends on the depth of the center (5 m) and increases with depth'
+          ],
+          correctIndex: 0,
+          explanation: 'The buoyant force always equals the weight of displaced fluid: F_b = ρ_fluid × g × V_object = 1000 × 9.81 × (4/3)π(1)³ = 41,100 N ≈ 41.1 kN upward. This is true regardless of whether the sphere is hollow, solid, or water-filled. The buoyant force is independent of depth — it depends only on the displaced volume and the surrounding fluid density. Even though the sphere is filled with water, the buoyant force still acts on the sphere shell itself. If the sphere and its contents weigh exactly 41.1 kN, it is neutrally buoyant; if more, it sinks; if less, it rises.',
+          hint: 'Archimedes\' principle gives the buoyant force based on displaced volume, regardless of what fills the object.'
+        },
+        {
+          id: 'u6-L1-Q24',
+          type: 'multiple-choice',
+          question: 'What is the vapor pressure of a liquid, and why is it critical in fluid system design?',
+          options: [
+            'Vapor pressure is the pressure at which a liquid begins to boil at a given temperature. If the local pressure in a flow system drops below the vapor pressure, cavitation (boiling) occurs, causing damage to equipment.',
+            'Vapor pressure is the maximum pressure a fluid can withstand before it vaporizes completely',
+            'Vapor pressure is the pressure exerted by vapors above a liquid, which increases as the container volume increases',
+            'Vapor pressure is only relevant for gases and does not apply to liquids in pressurized systems'
+          ],
+          correctIndex: 0,
+          explanation: 'Every liquid has a vapor pressure that depends on temperature — it is the pressure at which liquid and vapor coexist in equilibrium. Water at 20°C has P_v ≈ 2.34 kPa; at 100°C, P_v = 101.3 kPa (atmospheric, hence boiling). In fluid systems, if local pressure drops below the vapor pressure (e.g., at a pump inlet, valve constriction, or pipe elbow), the liquid locally boils, forming vapor bubbles. When these bubbles are carried to higher-pressure regions, they collapse violently — this is cavitation. The implosion pressures can exceed 1 GPa, causing severe erosion of pump impellers, valve seats, and pipe walls. This is why NPSH analysis, pipe sizing, and valve placement must consider vapor pressure.',
+          hint: 'What happens when the local pressure in a flowing liquid drops below a critical value related to temperature?'
+        },
+        {
+          id: 'u6-L1-Q25',
+          type: 'fill-blank',
+          question: 'The property of a liquid surface that causes it to behave like a stretched membrane, measured in N/m, is called _____ tension.',
+          acceptedAnswers: ['surface', 'Surface', 'SURFACE'],
+          explanation: 'Surface tension (σ) is a property of liquid surfaces that arises from the imbalance of intermolecular forces at the interface. Molecules at the surface have fewer neighbors than those in the bulk, creating a net inward force that makes the surface behave like a stretched membrane. Water at 20°C has σ ≈ 0.073 N/m. Surface tension is responsible for capillary action, droplet formation, meniscus shape, and the ability of insects to walk on water. It decreases with temperature and can be significantly reduced by surfactants (soaps). In engineering, surface tension is important in small-scale systems (microfluidics, spray nozzles, heat pipes) but generally negligible in large-scale flows.',
+          hint: 'This property causes water droplets to form spheres and allows small insects to walk on water.'
+        },
+        {
+          id: 'u6-L1-Q26',
+          type: 'multiple-choice',
+          question: 'What is the contact angle, and how does it determine whether a liquid wets a surface?',
+          options: [
+            'The contact angle (θ) is the angle between the liquid surface and the solid surface at the contact line. θ < 90° means the liquid wets the surface (hydrophilic); θ > 90° means it does not (hydrophobic).',
+            'The contact angle is the angle of the container wall, which determines how much fluid can be stored',
+            'The contact angle is always 0° for water and 180° for mercury, regardless of the surface material',
+            'The contact angle is the angle of the manometer tube, used to correct manometer readings'
+          ],
+          correctIndex: 0,
+          explanation: 'The contact angle quantifies the wettability of a solid surface by a liquid. When adhesive forces (liquid-solid) dominate over cohesive forces (liquid-liquid), the liquid spreads on the surface (θ < 90°, wetting). When cohesive forces dominate, the liquid beads up (θ > 90°, non-wetting). Water on clean glass: θ ≈ 0° (perfect wetting), water on Teflon: θ ≈ 108° (non-wetting), mercury on glass: θ ≈ 140° (non-wetting). The contact angle directly affects capillary rise: h = 4σcos(θ)/(ρgd). For θ > 90°, cos(θ) is negative, giving capillary depression (as seen with mercury in glass tubes). This is vital for designing wicking materials, self-cleaning surfaces, and microfluidic devices.',
+          hint: 'The angle is measured at the point where the liquid, solid, and gas phases meet.'
+        },
+        {
+          id: 'u6-L1-Q27',
+          type: 'true-false',
+          question: 'Pascal\'s law states that a pressure change applied at any point in a confined fluid is transmitted undiminished to every point in the fluid and to the walls of the container.',
+          correctAnswer: true,
+          explanation: 'Pascal\'s law is a fundamental principle of fluid statics. When pressure is applied to a confined, incompressible fluid (e.g., by a piston), the pressure increase is transmitted equally to all parts of the fluid and to the container walls. This is the operating principle behind hydraulic systems: hydraulic jacks, brakes, presses, and lifts. The law applies only to static (or quasi-static) conditions in a connected fluid body. It does not apply to dynamic situations where fluid velocity creates additional pressure variations, nor to compressible fluids where density changes affect pressure transmission.',
+          hint: 'This is the principle that makes hydraulic jacks and brakes possible.'
+        },
+        {
+          id: 'u6-L1-Q28',
+          type: 'multiple-choice',
+          question: 'An engineer must calculate the hydrostatic force on a circular viewing window (diameter 0.5 m) in an aquarium tank, with the center of the window at 3 m depth. How does this differ from a rectangular window calculation?',
+          options: [
+            'The force magnitude uses the same formula (F = ρgȳ_cA), but the center of pressure calculation uses the second moment of area for a circle (I = πR⁴/4) instead of a rectangle (I = bh³/12)',
+            'Circular windows experience no net hydrostatic force because pressure acts equally on all sides of the circle',
+            'The force on a circular window is always π/4 times the force on a square window of the same dimension',
+            'Circular windows require integration because the planar force formula does not apply to curved shapes'
+          ],
+          correctIndex: 0,
+          explanation: 'The hydrostatic force formula F = ρgȳ_cA works for ANY planar shape — the shape affects only the area A and the second moment of area I_xc used to find the center of pressure. For a circle of radius R: A = πR², ȳ_c = 3 m (depth to center), I_xc = πR⁴/4. Force: F = 1000 × 9.81 × 3 × π(0.25)² = 5,774 N ≈ 5.77 kN. Center of pressure below centroid: e = I_xc/(ȳ_cA) = (π(0.25)⁴/4)/(3 × π(0.25)²) = R²/(4ȳ_c) = 0.0625/(12) = 5.2 mm. At this depth, the center of pressure is very close to the centroid because the pressure variation over the small window is nearly uniform.',
+          hint: 'F = ρgȳ_cA applies to any planar shape. What changes between shapes is the second moment of area.'
+        },
+        {
+          id: 'u6-L1-Q29',
+          type: 'multiple-choice',
+          question: 'A piezometer (simple open tube) is connected to a pressurized water pipe. Under what conditions is a piezometer NOT suitable for pressure measurement?',
+          options: [
+            'When the pressure is very high (tall column impractical), when gauge pressure is negative (air would enter), or when measuring gas pressure (gas would escape through the open tube)',
+            'When the pipe diameter exceeds 100 mm',
+            'When the water temperature is above 50°C',
+            'When the flow velocity in the pipe exceeds 1 m/s'
+          ],
+          correctIndex: 0,
+          explanation: 'A piezometer is the simplest pressure-measuring device — just an open vertical tube inserted into the fluid. The fluid rises to a height h where P_gauge = ρgh. Limitations: (1) High pressure: 500 kPa gauge in water requires h = 51 m — impractically tall. (2) Negative gauge pressure (vacuum): the piezometer would draw air into the pipe instead of measuring pressure. (3) Gas pressure: the gas would simply escape through the open tube. For these cases, U-tube manometers (for moderate pressures) or mechanical/electronic gauges (for high pressures and gases) are used instead. Piezometers are useful for low positive gauge pressures in liquid systems, such as open channel flow measurements.',
+          hint: 'Think about the practical limitations of having an open tube filled with fluid.'
+        },
+        {
+          id: 'u6-L1-Q30',
+          type: 'true-false',
+          question: 'The center of pressure on a submerged plane surface always lies below the centroid, and the distance between them decreases as the surface is submerged deeper.',
+          correctAnswer: true,
+          explanation: 'The center of pressure is located below the centroid by a distance e = I_xc/(ȳ_cA), where I_xc is the second moment of area about the centroidal axis and ȳ_c is the depth to the centroid. As the surface is submerged deeper (ȳ_c increases), the denominator grows while the numerator (a geometric property) stays constant, so the offset e decreases. Physically, at greater depth the pressure variation across the surface becomes a smaller percentage of the average pressure, making the distribution more uniform and the center of pressure closer to the centroid. At infinite depth, the pressure distribution approaches uniform and the center of pressure coincides with the centroid.',
+          hint: 'Look at the formula e = I_xc/(ȳ_cA). What happens to e as depth ȳ_c increases?'
         }
       ]
     },
@@ -136,7 +422,6 @@ export const unit6: Unit = {
             '14.4 m/s'
           ],
           correctIndex: 1,
-          diagram: '<svg viewBox="0 0 320 180" width="100%"><defs><marker id="ab" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/></marker></defs><text x="160" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B" font-family="sans-serif">Pitot-Static Tube</text><rect x="10" y="50" width="300" height="70" rx="0" fill="#DBEAFE" stroke="#334155" stroke-width="2" opacity="0.3"/><text x="300" y="45" text-anchor="end" font-size="9" fill="#334155" font-family="sans-serif">Duct wall</text><line x1="10" y1="75" x2="100" y2="75" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#ab)"/><line x1="10" y1="85" x2="100" y2="85" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#ab)"/><line x1="10" y1="95" x2="100" y2="95" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#ab)"/><text x="50" y="70" font-size="9" fill="#1E40AF" font-family="sans-serif">V (flow)</text><line x1="160" y1="85" x2="160" y2="30" stroke="#334155" stroke-width="2"/><circle cx="160" cy="85" r="3" fill="#334155"/><text x="175" y="35" font-size="9" fill="#334155" font-family="sans-serif">P_stag</text><line x1="200" y1="85" x2="200" y2="30" stroke="#6B7280" stroke-width="1.5"/><circle cx="200" cy="85" r="2" fill="none" stroke="#6B7280" stroke-width="1.5"/><text x="210" y="35" font-size="9" fill="#6B7280" font-family="sans-serif">P_static</text><text x="160" y="145" text-anchor="middle" font-size="11" fill="#1E293B" font-family="sans-serif">V = sqrt(2(P_stag - P_static)/ρ)</text><text x="160" y="165" text-anchor="middle" font-size="10" fill="#6B7280" font-family="sans-serif">= sqrt(2 × 500 / 1.2) = 28.9 m/s</text></svg>',
           explanation: 'From Bernoulli: V = sqrt(2(P_stag - P_static)/ρ) = sqrt(2 × 500 / 1.2) = sqrt(833.3) ≈ 28.9 m/s. The pitot-static tube directly measures the dynamic pressure (P_stag - P_static = ½ρV²). Key assumptions: (1) incompressible flow — valid since 28.9 m/s << speed of sound (343 m/s), so Mach < 0.1; (2) the probe is aligned with the flow direction; (3) the static port is not affected by the probe body. This is one of the most practical and direct applications of the Bernoulli equation.',
           hint: 'Dynamic pressure = stagnation - static = ½ρV². Solve for V.'
         },
@@ -165,7 +450,6 @@ export const unit6: Unit = {
             'Thermal expansion of the pipe on the sun-exposed hilltop reduces the internal diameter and restricts flow'
           ],
           correctIndex: 0,
-          diagram: '<svg viewBox="0 0 320 180" width="100%"><text x="160" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B" font-family="sans-serif">EGL &amp; HGL Over a Hill</text><path d="M 20 140 L 80 140 Q 160 30 240 140 L 300 140" stroke="#334155" stroke-width="2.5" fill="none"/><text x="160" y="55" font-size="9" fill="#334155" font-family="sans-serif">pipe (hill)</text><line x1="20" y1="110" x2="300" y2="120" stroke="#10B981" stroke-width="2"/><text x="305" y="118" font-size="9" fill="#065F46" font-family="sans-serif">EGL</text><line x1="20" y1="120" x2="300" y2="128" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,3"/><text x="305" y="130" font-size="9" fill="#1E40AF" font-family="sans-serif">HGL</text><line x1="130" y1="72" x2="130" y2="122" stroke="#6B7280" stroke-width="1" stroke-dasharray="3,3"/><line x1="190" y1="72" x2="190" y2="122" stroke="#6B7280" stroke-width="1" stroke-dasharray="3,3"/><rect x="120" y="72" width="80" height="18" rx="2" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/><text x="160" y="84" text-anchor="middle" font-size="8" fill="#991B1B" font-family="sans-serif">HGL below pipe!</text><text x="160" y="100" text-anchor="middle" font-size="8" fill="#991B1B" font-family="sans-serif">P &lt; P_atm</text><text x="160" y="165" text-anchor="middle" font-size="10" fill="#6B7280" font-family="sans-serif">Negative gauge pressure at hilltop</text></svg>',
           explanation: 'The Hydraulic Grade Line (HGL = P/ρg + z) represents the pressure head at each point. As the pipe rises over the hill, elevation z increases. If the HGL drops below the pipe elevation, the gauge pressure becomes negative (sub-atmospheric). This has several consequences: (1) dissolved gases come out of solution (Henry\'s law), creating air pockets; (2) if pressure drops below vapor pressure, cavitation occurs; (3) any small leak draws air IN rather than leaking water out. Solutions include: increasing the system pressure (booster pump), reducing pipe friction to maintain a higher HGL, installing air release valves at the hilltop, or rerouting the pipe to avoid the elevation rise. This HGL analysis is fundamental to pipeline design for water distribution systems.',
           hint: 'Think about what happens to the pressure as the pipe elevation increases. Draw the EGL and HGL.'
         },
@@ -176,6 +460,294 @@ export const unit6: Unit = {
           acceptedAnswers: ['Energy Grade', 'energy grade', 'Energy', 'energy', 'EGL', 'egl', 'Total Energy'],
           explanation: 'The Energy Grade Line (EGL) represents the total mechanical energy at each point: P/ρg + V²/2g + z. It slopes downward in the direction of flow due to friction losses, and drops sharply at minor losses (valves, fittings). The HGL sits below the EGL by exactly V²/2g (the velocity head).',
           hint: 'This line is always above the HGL by exactly the velocity head.'
+        },
+        {
+          id: 'u6-L2-Q7',
+          type: 'multiple-choice',
+          question: 'A venturi meter has an inlet diameter of 200 mm and a throat diameter of 100 mm. If the pressure difference between inlet and throat is 40 kPa, what is the theoretical flow rate of water?',
+          options: [
+            'Apply continuity (A₁V₁ = A₂V₂) and Bernoulli to get Q = A₂ × √(2ΔP / (ρ(1 − (A₂/A₁)²))) ≈ 0.027 m³/s',
+            'Q = A₂ × √(2ΔP/ρ) ≈ 0.070 m³/s — the area ratio correction is unnecessary for a venturi',
+            'Q = A₁ × √(2ΔP/ρ) ≈ 0.281 m³/s — use inlet area since that is where flow enters',
+            'Q cannot be determined without knowing the pipe length and friction factor'
+          ],
+          correctIndex: 0,
+          explanation: 'Combining Bernoulli and continuity: V₂ = √(2ΔP / (ρ(1 − (d₂/d₁)⁴))). With d₂/d₁ = 100/200 = 0.5, so (d₂/d₁)⁴ = 0.0625. V₂ = √(2 × 40000 / (1000 × (1 − 0.0625))) = √(80000/937.5) = √85.33 = 9.24 m/s. Q = A₂ × V₂ = (π/4)(0.1)² × 9.24 = 0.0726 m/s... Let me recalculate: A₂ = π(0.05)² = 0.00785 m². V₂ = √(2 × 40000 / (1000 × 0.9375)) = √(85333) = 9.24 m/s. Q = 0.00785 × 9.24 ≈ 0.0725 m³/s. The actual flow rate is Q_actual = C_d × Q_theoretical, where C_d ≈ 0.98 for a venturi (high due to gradual convergence minimizing separation losses).',
+          hint: 'Use both Bernoulli and continuity equations. Do not forget the area ratio correction factor.'
+        },
+        {
+          id: 'u6-L2-Q8',
+          type: 'multiple-choice',
+          question: 'Why does a venturi meter have a higher discharge coefficient (C_d ≈ 0.98) than an orifice plate (C_d ≈ 0.61)?',
+          options: [
+            'The venturi\'s gradual convergence and divergence minimize flow separation and energy loss, while the orifice plate\'s sharp edge creates a vena contracta with significant recirculation and permanent pressure loss',
+            'The venturi meter is always larger than the orifice plate, giving more room for flow',
+            'Orifice plates have higher surface roughness than venturi meters',
+            'Venturi meters use a different pressure measurement technique that is inherently more accurate'
+          ],
+          correctIndex: 0,
+          explanation: 'The discharge coefficient C_d represents how close the actual flow is to the theoretical (Bernoulli-predicted) flow. A venturi meter has a smooth, gradually converging inlet (typically 21° cone) and gradually diverging outlet (7-15° diffuser), which guides the flow with minimal separation. The orifice plate, by contrast, forces flow through a sharp-edged hole, creating a vena contracta (jet contraction to about 0.61× the orifice area) downstream, plus large recirculation zones and significant permanent pressure loss (typically 40-90% of the differential pressure). The trade-off: venturi meters are expensive and large, while orifice plates are cheap, compact, and easy to install. Orifice plates dominate industrial flow measurement despite lower C_d because of cost and convenience.',
+          hint: 'Compare the flow path through each device — which one causes more flow disturbance?'
+        },
+        {
+          id: 'u6-L2-Q9',
+          type: 'true-false',
+          question: 'Bernoulli\'s equation can be applied between any two points in a fluid flow, regardless of whether they are on the same streamline.',
+          correctAnswer: false,
+          explanation: 'Bernoulli\'s equation in its standard form applies only along a single streamline. Different streamlines can have different total energy (Bernoulli constant) if the flow has vorticity (rotation). However, in irrotational flow (potential flow), the Bernoulli constant is the same across all streamlines, so the equation can be applied between any two points. In practice, if the flow comes from a uniform reservoir (where all streamlines have the same energy), Bernoulli can be applied between any two points in the subsequent irrotational flow region. This distinction matters in vortex flows and flows with significant shear.',
+          hint: 'Think about what the standard Bernoulli derivation assumes about the path between the two points.'
+        },
+        {
+          id: 'u6-L2-Q10',
+          type: 'multiple-choice',
+          question: 'A large open tank drains through a small hole at the bottom, 3 m below the water surface. Using Torricelli\'s theorem, what is the exit velocity?',
+          options: [
+            'V = √(2gh) = √(2 × 9.81 × 3) ≈ 7.67 m/s — the same velocity as a free-falling object from the same height',
+            'V = √(gh) = √(9.81 × 3) ≈ 5.42 m/s',
+            'V = 2gh = 2 × 9.81 × 3 = 58.86 m/s',
+            'V = √(2gh/ρ) — velocity depends on fluid density'
+          ],
+          correctIndex: 0,
+          explanation: 'Torricelli\'s theorem is a direct application of Bernoulli\'s equation between the free surface and the exit hole. At the surface: P = P_atm, V ≈ 0 (large tank), z = h. At the exit: P = P_atm, V = ?, z = 0. Bernoulli gives: P_atm + 0 + ρgh = P_atm + ½ρV² + 0, so V = √(2gh) = √(2 × 9.81 × 3) = 7.67 m/s. This is identical to the velocity of an object in free fall from height h — a beautiful result showing energy conservation. The actual exit velocity is slightly lower due to viscous losses and vena contracta effects (typically C_v ≈ 0.97). Note that the velocity is independent of fluid density — mercury and water exit at the same speed from the same height.',
+          hint: 'Apply Bernoulli between the free surface (large tank, V ≈ 0) and the exit hole (atmospheric pressure).'
+        },
+        {
+          id: 'u6-L2-Q11',
+          type: 'multiple-choice',
+          question: 'What is the continuity equation for steady flow, and how does it relate to the Bernoulli equation?',
+          options: [
+            'ρ₁A₁V₁ = ρ₂A₂V₂ (mass conservation). For incompressible flow, A₁V₁ = A₂V₂. It links velocity changes to area changes, which Bernoulli then converts to pressure changes.',
+            'P₁A₁ = P₂A₂ — pressure times area is constant along a streamline',
+            'ρ₁V₁ = ρ₂V₂ — density times velocity is constant, regardless of cross-sectional area',
+            'The continuity equation and Bernoulli equation are the same — just written in different forms'
+          ],
+          correctIndex: 0,
+          explanation: 'The continuity equation (mass conservation) and Bernoulli equation (energy conservation) are complementary — you almost always use them together. Continuity tells you HOW velocity changes when area changes: if a pipe narrows, velocity increases (A₁V₁ = A₂V₂). Bernoulli then tells you HOW pressure changes due to that velocity change: higher velocity means lower pressure (P + ½ρV² = const). Together, they explain the venturi effect, the lift on an airfoil, the pressure drop at a pipe constriction, and countless other flow phenomena. Continuity is exact (mass is truly conserved); Bernoulli is approximate (requires inviscid, steady, incompressible flow assumptions).',
+          hint: 'Mass conservation and energy conservation are two separate physical principles — how do they work together?'
+        },
+        {
+          id: 'u6-L2-Q12',
+          type: 'multiple-choice',
+          question: 'An airplane wing generates lift because the air velocity is higher over the top surface. A common misconception is the "equal transit time" theory. Why is this explanation wrong?',
+          options: [
+            'The equal transit time theory claims air over the top must travel faster because it covers a longer path in the same time — but there is no physical reason air parcels must reunite at the trailing edge. In reality, air over the top arrives BEFORE air under the bottom.',
+            'The equal transit time theory is actually correct — it is Newton\'s third law that is the wrong explanation',
+            'The theory is wrong because it is the bottom surface that has higher velocity, not the top',
+            'The theory is wrong because Bernoulli\'s equation does not apply to gases, only liquids'
+          ],
+          correctIndex: 0,
+          explanation: 'The "equal transit time" fallacy assumes that air split at the leading edge must rejoin at the trailing edge. There is zero physical basis for this assumption — and wind tunnel experiments with smoke tracers clearly show that air over the top arrives at the trailing edge well BEFORE air from the bottom. The correct explanation involves circulation theory: the wing\'s shape and angle of attack create a circulation pattern that increases velocity (and decreases pressure) over the top. Bernoulli\'s equation correctly relates the higher velocity to lower pressure, but the REASON for the higher velocity is circulation and the Kutta condition, not path length. The pressure difference integrated over the wing surface gives lift.',
+          hint: 'Is there any physical law that requires air parcels split at the leading edge to meet again at the trailing edge?'
+        },
+        {
+          id: 'u6-L2-Q13',
+          type: 'true-false',
+          question: 'The Bernoulli equation is a statement of conservation of energy per unit volume along a streamline for steady, incompressible, inviscid flow.',
+          correctAnswer: true,
+          explanation: 'Bernoulli\'s equation P + ½ρV² + ρgz = constant can be interpreted as energy per unit volume: static pressure energy (P) + kinetic energy per unit volume (½ρV²) + potential energy per unit volume (ρgz) = constant. Dividing by ρg gives the head form: P/(ρg) + V²/(2g) + z = constant, where each term has units of meters (energy per unit weight). The key assumptions are: (1) steady flow, (2) incompressible fluid, (3) inviscid (no friction), (4) along a single streamline, and (5) no work added or removed (no pumps/turbines). Violating any assumption invalidates the equation unless modifications are made.',
+          hint: 'Each term in the Bernoulli equation represents a form of mechanical energy per unit volume.'
+        },
+        {
+          id: 'u6-L2-Q14',
+          type: 'multiple-choice',
+          question: 'A fire hose nozzle reduces the diameter from 65 mm to 20 mm. If the flow rate is 10 L/s, what is the pressure difference between the hose and the nozzle exit (neglecting losses)?',
+          options: [
+            'About 794 kPa — the velocity increases dramatically from 3.01 m/s to 31.8 m/s, and the pressure drop is ½ρ(V₂² − V₁²)',
+            'About 50 kPa — a modest pressure drop since water is nearly incompressible',
+            'About 5,000 kPa — the extreme area ratio creates enormous pressure differences',
+            'Zero — by Bernoulli, pressure is constant if the hose is horizontal'
+          ],
+          correctIndex: 0,
+          explanation: 'Q = 10 L/s = 0.01 m³/s. V₁ = Q/A₁ = 0.01/(π/4 × 0.065²) = 3.01 m/s. V₂ = Q/A₂ = 0.01/(π/4 × 0.02²) = 31.83 m/s. By Bernoulli (horizontal): P₁ − P₂ = ½ρ(V₂² − V₁²) = ½ × 1000 × (31.83² − 3.01²) = ½ × 1000 × (1013 − 9.06) = 502,000 Pa ≈ 502 kPa. (The exact answer depends on precise calculations.) This enormous velocity increase is why nozzles are used — they convert pressure energy into kinetic energy. Fire hose pumps must provide enough pressure to overcome pipe friction losses AND the nozzle pressure drop while still delivering the required flow rate.',
+          hint: 'Calculate both velocities from continuity, then apply Bernoulli to find the pressure difference.'
+        },
+        {
+          id: 'u6-L2-Q15',
+          type: 'multiple-choice',
+          question: 'What is the difference between the EGL and HGL at any point in a pipe system?',
+          options: [
+            'The difference equals the velocity head V²/(2g) — the EGL includes kinetic energy while the HGL does not',
+            'The difference equals the friction head loss at that point',
+            'The difference equals the elevation head z',
+            'They are the same line in constant-diameter pipes'
+          ],
+          correctIndex: 0,
+          explanation: 'EGL = P/(ρg) + V²/(2g) + z and HGL = P/(ρg) + z. The difference is always V²/(2g), the velocity head. In a constant-diameter pipe, the EGL and HGL are parallel (same V, so same gap). Where the pipe diameter changes, the gap changes: smaller pipe = higher V = larger gap between EGL and HGL. At a pipe expansion (diffuser), V decreases and the HGL rises toward the EGL, recovering pressure. At a pump, both EGL and HGL jump upward. At a turbine, both drop. Understanding this graphical relationship is essential for pipe system design and troubleshooting.',
+          hint: 'Compare the mathematical definitions of EGL and HGL — what term appears in one but not the other?'
+        },
+        {
+          id: 'u6-L2-Q16',
+          type: 'fill-blank',
+          question: 'The theorem stating that the exit velocity of fluid through an orifice at the bottom of a tank equals √(2gh) is called _____ theorem.',
+          acceptedAnswers: ['Torricelli\'s', 'Torricelli', 'torricelli\'s', 'torricelli', 'TORRICELLI'],
+          explanation: 'Torricelli\'s theorem (1643) states that the speed of fluid flowing out through a sharp-edged orifice at the bottom of a tank is V = √(2gh), identical to the velocity of a body falling from height h. It is derived directly from Bernoulli\'s equation between the free surface and the exit point. The actual exit velocity is slightly less (C_v ≈ 0.97) and the effective jet area is smaller (C_c ≈ 0.64 for a sharp-edged orifice) due to the vena contracta. The actual flow rate is Q = C_d × A_orifice × √(2gh), where C_d = C_v × C_c ≈ 0.62.',
+          hint: 'This theorem is named after an Italian physicist and mathematician who was a student of Galileo.'
+        },
+        {
+          id: 'u6-L2-Q17',
+          type: 'multiple-choice',
+          question: 'The extended Bernoulli equation (energy equation) includes head terms for pumps and turbines. How does a pump appear in this equation?',
+          options: [
+            'A pump adds energy: P₁/(ρg) + V₁²/(2g) + z₁ + h_pump = P₂/(ρg) + V₂²/(2g) + z₂ + h_losses. The pump head h_pump is positive on the upstream side.',
+            'A pump removes energy from the flow, so h_pump is subtracted',
+            'A pump does not appear in the energy equation — it only changes the flow rate, not the energy',
+            'A pump is represented by reducing the friction factor f in the Darcy-Weisbach equation'
+          ],
+          correctIndex: 0,
+          explanation: 'The extended energy equation accounts for energy added by pumps and removed by turbines: P₁/(ρg) + V₁²/(2g) + z₁ + h_pump = P₂/(ρg) + V₂²/(2g) + z₂ + h_turbine + h_f + Σh_minor. The pump head h_pump = W_pump/(ṁg) = P_pump/(ρgQ) represents the energy per unit weight added to the fluid. This appears as a step increase in the EGL at the pump location. The pump must provide enough head to overcome static elevation difference, friction losses, minor losses, and any required pressure increase. This equation is the fundamental tool for pump sizing and pipe system design.',
+          hint: 'Does a pump add or remove energy from the flowing fluid?'
+        },
+        {
+          id: 'u6-L2-Q18',
+          type: 'true-false',
+          question: 'A converging nozzle accelerates incompressible flow, and by Bernoulli\'s equation, the pressure must decrease in the direction of flow through the nozzle.',
+          correctAnswer: true,
+          explanation: 'From the continuity equation for incompressible flow, A₁V₁ = A₂V₂, so a decreasing area (convergence) causes increasing velocity. From Bernoulli (P + ½ρV² = constant), increasing velocity requires decreasing pressure. This is the fundamental principle behind nozzles and venturi meters: pressure energy is converted to kinetic energy. The converse is true for diffusers (increasing area): velocity decreases and pressure recovers. This pressure-velocity trade-off is one of the most fundamental concepts in fluid mechanics.',
+          hint: 'What does continuity say about velocity in a converging section? What does Bernoulli then say about pressure?'
+        },
+        {
+          id: 'u6-L2-Q19',
+          type: 'multiple-choice',
+          question: 'A siphon is used to drain water from a pool over a wall. What determines the maximum height the siphon can raise water?',
+          options: [
+            'The maximum height is limited by atmospheric pressure — water cannot be siphoned higher than P_atm/(ρg) ≈ 10.3 m, because the pressure at the top of the siphon would drop to zero absolute (vacuum)',
+            'There is no height limit — the siphon works by gravity alone pulling water over the wall',
+            'The maximum height equals the depth of the pool, since the siphon cannot create more pressure than the water column provides',
+            'The maximum height is limited by the diameter of the siphon tube, not the atmospheric pressure'
+          ],
+          correctIndex: 0,
+          explanation: 'A siphon works because atmospheric pressure pushes water into the tube on the inlet side, while gravity pulls it down on the outlet side. At the top of the siphon, applying Bernoulli from the pool surface: P_top = P_atm − ρg × h_top − ½ρV². The pressure at the top cannot go below zero absolute (and practically, below the vapor pressure ~2.3 kPa at 20°C), so h_max ≈ (P_atm − P_vapor)/(ρg) ≈ (101,300 − 2,300)/(1000 × 9.81) ≈ 10.1 m. At greater heights, the water column breaks (cavitation at the top) and the siphon fails. This is also why suction pumps cannot lift water more than about 10 m — they rely on atmospheric pressure to push water upward.',
+          hint: 'Apply Bernoulli from the pool surface to the top of the siphon. What limits how low P_top can go?'
+        },
+        {
+          id: 'u6-L2-Q20',
+          type: 'multiple-choice',
+          question: 'A Venturi meter and an orifice plate both measure flow rate by creating a pressure difference. What are the practical trade-offs in choosing between them?',
+          options: [
+            'Venturi: higher C_d (~0.98), lower permanent pressure loss (~10-15%), but expensive and bulky. Orifice: lower C_d (~0.61), high permanent loss (~40-90%), but cheap, compact, and easily replaced.',
+            'Venturi is always better and should be used whenever possible',
+            'Orifice plate has higher C_d because the sharp edge creates cleaner flow separation',
+            'The choice depends only on pipe diameter — venturis for large pipes, orifice plates for small pipes'
+          ],
+          correctIndex: 0,
+          explanation: 'The choice between venturi and orifice is an engineering trade-off. Venturi advantages: high C_d (0.95-0.99) means more accurate, low permanent pressure loss (small pump energy penalty), self-cleaning (smooth bore). Venturi disadvantages: expensive (~20× orifice cost), long installation length (~5-10 pipe diameters), heavy. Orifice advantages: cheap (simple plate with a hole), compact (fits between flanges), easy to change for different flow ranges. Orifice disadvantages: low C_d (0.60-0.65), high permanent pressure loss (wasted pump energy), susceptible to wear and fouling on the sharp edge. Other options include flow nozzles (intermediate C_d ~0.96, shorter than venturi) and V-cone meters for dirty fluids.',
+          hint: 'Consider cost, size, accuracy, and energy loss when comparing these two flow measurement devices.'
+        },
+        {
+          id: 'u6-L2-Q21',
+          type: 'multiple-choice',
+          question: 'What is the stagnation point in a flow field, and what happens to the velocity and pressure there?',
+          options: [
+            'A stagnation point is where the fluid velocity is zero and the pressure reaches its maximum value (stagnation pressure = static + dynamic pressure)',
+            'A stagnation point is where the pressure is zero and the velocity reaches maximum',
+            'A stagnation point only occurs in turbulent flow at the boundary layer transition',
+            'A stagnation point is where the fluid separates from the surface of a body'
+          ],
+          correctIndex: 0,
+          explanation: 'At a stagnation point, the fluid comes to rest (V = 0) and all kinetic energy converts to pressure energy. By Bernoulli: P_stag = P_static + ½ρV². The stagnation pressure is the maximum pressure achievable in the flow (without external work). Every blunt body placed in a flow has at least one stagnation point on its front face, where the oncoming streamline terminates. A pitot tube works by placing its opening at the stagnation point to measure P_stag. The pressure coefficient at the stagnation point is C_p = 1. Understanding stagnation points is essential for aerodynamics, heat transfer analysis (maximum heat flux often near stagnation), and flow meter design.',
+          hint: 'What happens to the kinetic energy when a fluid particle is brought to rest?'
+        },
+        {
+          id: 'u6-L2-Q22',
+          type: 'true-false',
+          question: 'In a horizontal constant-diameter pipe with friction, the EGL slopes downward in the direction of flow while the HGL remains horizontal.',
+          correctAnswer: false,
+          explanation: 'Both the EGL and HGL slope downward in the direction of flow due to friction losses. In a constant-diameter pipe, the velocity is constant (by continuity), so the velocity head V²/(2g) is constant. This means the EGL and HGL have the same slope — they are parallel, both declining at a rate equal to the friction head loss per unit length (hydraulic gradient = h_f/L = f/(2gD) × V²). The gap between them remains constant at V²/(2g). Only at a change in pipe diameter would the gap change.',
+          hint: 'In a constant-diameter pipe with friction, what happens to the pressure in the direction of flow?'
+        },
+        {
+          id: 'u6-L2-Q23',
+          type: 'multiple-choice',
+          question: 'Water flows through a horizontal pipe that expands from 50 mm to 100 mm diameter. If V₁ = 4 m/s, what is the pressure rise in the expansion (ideal, no losses)?',
+          options: [
+            'By continuity V₂ = 1 m/s; by Bernoulli ΔP = ½ρ(V₁² − V₂²) = ½(1000)(16 − 1) = 7,500 Pa = 7.5 kPa',
+            'ΔP = ½ρV₁² = 8,000 Pa = 8.0 kPa — all kinetic energy is recovered',
+            'Pressure decreases in an expansion because the flow decelerates',
+            'ΔP = ρg(D₂ − D₁) = 490 Pa — pressure depends on the diameter difference'
+          ],
+          correctIndex: 0,
+          explanation: 'By continuity: V₂ = V₁(A₁/A₂) = 4 × (50/100)² = 4 × 0.25 = 1 m/s. By Bernoulli (horizontal, inviscid): P₁ + ½ρV₁² = P₂ + ½ρV₂², so P₂ − P₁ = ½ρ(V₁² − V₂²) = ½ × 1000 × (16 − 1) = 7,500 Pa = 7.5 kPa. The pressure INCREASES (recovers) as velocity decreases — this is the principle behind a diffuser. However, in reality, sudden expansions incur significant losses: h_loss = (V₁ − V₂)²/(2g), which would reduce the pressure recovery. Gradual diffusers (half-angle < 7°) minimize these losses, recovering up to 85% of the theoretical pressure rise.',
+          hint: 'First find V₂ from continuity (A₁V₁ = A₂V₂), then use Bernoulli for the pressure change.'
+        },
+        {
+          id: 'u6-L2-Q24',
+          type: 'multiple-choice',
+          question: 'Which of the following is NOT a valid assumption for applying the standard Bernoulli equation?',
+          options: [
+            'The flow must be along a single streamline',
+            'The flow must be steady (not changing with time)',
+            'The fluid must be incompressible (constant density)',
+            'The flow must be turbulent (high Reynolds number)'
+          ],
+          correctIndex: 3,
+          explanation: 'The standard Bernoulli equation requires: (1) steady flow, (2) incompressible fluid, (3) inviscid (frictionless) flow, (4) along a single streamline, and (5) no shaft work (no pumps or turbines between points). Turbulence is NOT required — in fact, Bernoulli applies equally well to laminar and turbulent flows, as long as the inviscid assumption is reasonable. The inviscid assumption is what limits Bernoulli most severely: it fails wherever friction is significant (long pipes, boundary layers, wakes). Bernoulli works best in short, smooth flow sections like nozzles, orifices, and the core flow away from walls.',
+          hint: 'List the five assumptions of Bernoulli\'s equation. Which one in the options is not among them?'
+        },
+        {
+          id: 'u6-L2-Q25',
+          type: 'fill-blank',
+          question: 'The ½ρV² term in the Bernoulli equation is called the _____ pressure.',
+          acceptedAnswers: ['dynamic', 'Dynamic', 'DYNAMIC', 'velocity', 'Velocity'],
+          explanation: 'The term ½ρV² is the dynamic pressure (also called velocity pressure). It represents the kinetic energy per unit volume of the flowing fluid. Static pressure (P) is the actual thermodynamic pressure measured by a gauge moving with the fluid. Dynamic pressure is the pressure rise obtained by bringing the flow to rest isentropically. Stagnation pressure = static pressure + dynamic pressure = P + ½ρV². A pitot-static tube directly measures the dynamic pressure as the difference between stagnation and static pressure, which is then used to calculate velocity.',
+          hint: 'This pressure term is associated with the fluid\'s motion and equals zero when the fluid is at rest.'
+        },
+        {
+          id: 'u6-L2-Q26',
+          type: 'multiple-choice',
+          question: 'A tank with a hole in the side at height h₁ from the bottom is filled with water to height h₂ above the hole. At what height above the hole does the jet strike the ground level (the bottom of the tank)?',
+          options: [
+            'The jet follows a projectile path and strikes the ground at a horizontal distance x = 2√(h₁ × h₂), derived from combining Torricelli\'s exit velocity with projectile motion equations',
+            'The jet always lands directly below the hole because gravity pulls it straight down',
+            'The horizontal distance equals h₂, the height of water above the hole',
+            'The jet travels infinitely far because there is no air resistance in ideal fluid mechanics'
+          ],
+          correctIndex: 0,
+          explanation: 'Exit velocity (Torricelli): V = √(2g × h₂). The jet exits horizontally and falls h₁ to the ground. Time to fall: h₁ = ½gt², so t = √(2h₁/g). Horizontal distance: x = V × t = √(2g × h₂) × √(2h₁/g) = 2√(h₁ × h₂). This beautiful result shows that the range is symmetric: a hole at height h₁ with water h₂ above it gives the same range as a hole at height h₂ with water h₁ above it. Maximum range occurs when h₁ = h₂ (hole at half the water height). This is a classic exam problem combining fluid mechanics with basic projectile motion.',
+          hint: 'Find the exit velocity from Torricelli, then treat the jet as a projectile in free fall.'
+        },
+        {
+          id: 'u6-L2-Q27',
+          type: 'true-false',
+          question: 'A converging-diverging (de Laval) nozzle can accelerate an incompressible fluid to supersonic velocities.',
+          correctAnswer: false,
+          explanation: 'A converging-diverging nozzle can only accelerate flow to supersonic speeds for compressible fluids (gases). For incompressible flow, the continuity equation A₁V₁ = A₂V₂ means that velocity increases ONLY in converging sections and decreases in diverging sections. Supersonic acceleration in the diverging section requires compressibility effects: as the gas expands supersonically, its density drops fast enough that even though the area increases, the velocity continues to increase (ρAV = constant, but ρ drops faster than A increases). The standard Bernoulli equation (incompressible) cannot predict this behavior — the compressible energy equation with variable density is required.',
+          hint: 'For incompressible flow, what does A₁V₁ = A₂V₂ predict for velocity in an expanding section?'
+        },
+        {
+          id: 'u6-L2-Q28',
+          type: 'multiple-choice',
+          question: 'In a flow measurement with a pitot-static tube, what error is introduced if the probe is not aligned with the flow direction (yaw angle)?',
+          options: [
+            'The stagnation pressure reading decreases, causing the calculated velocity to be underestimated — errors are typically less than 1% for yaw angles up to about ±15° but grow rapidly beyond that',
+            'Yaw angle has no effect because the pitot tube measures total pressure regardless of direction',
+            'The stagnation pressure increases with yaw, overestimating velocity',
+            'Yaw angle only affects the static pressure reading, not the stagnation pressure'
+          ],
+          correctIndex: 0,
+          explanation: 'When a pitot tube is misaligned, the flow does not stagnate perfectly at the tip — some flow passes by at an angle, and the stagnation pressure reading drops. Standard pitot tubes are relatively insensitive to small yaw angles (< ±15°), but beyond this, errors grow significantly. The static pressure measurement is also affected because the flow around the probe body changes with yaw. For flows with unknown or varying direction, multi-hole probes (5-hole or 7-hole) can simultaneously measure both speed and direction. In practical duct measurements, alignment is usually achieved by rotating the probe until the maximum pressure reading is found.',
+          hint: 'If the flow hits the pitot tube opening at an angle, does it fully stagnate?'
+        },
+        {
+          id: 'u6-L2-Q29',
+          type: 'multiple-choice',
+          question: 'A water jet from a nozzle hits a flat plate perpendicular to the flow. If the nozzle exit velocity is 20 m/s and the jet diameter is 30 mm, what is the force on the plate?',
+          options: [
+            'F = ρAV² = 1000 × (π/4)(0.03)² × (20)² = 1000 × 7.07 × 10⁻⁴ × 400 ≈ 283 N — from the momentum equation',
+            'F = ½ρAV² ≈ 141 N — using the dynamic pressure formula',
+            'F = ρgAh — force depends on the height of the nozzle above the plate',
+            'F = PA = (½ρV²)(πD²/4) ≈ 141 N — pressure times area'
+          ],
+          correctIndex: 0,
+          explanation: 'This is a direct application of the momentum equation (Newton\'s second law applied to a control volume). The jet brings momentum ṁV = ρAV² into the control volume and the water leaves radially (perpendicular to the original direction), carrying zero momentum in the original direction. The force on the plate equals the rate of momentum destruction: F = ṁV = ρAV² = 1000 × (π/4)(0.03)² × 400 = 282.7 N. Note this is NOT ½ρAV² (which would be dynamic pressure × area) — the momentum equation gives full ρAV². This force calculation is essential for designing turbine blades, rocket nozzles, and erosion protection.',
+          hint: 'Apply the momentum equation: force = rate of change of momentum = ṁ × ΔV.'
+        },
+        {
+          id: 'u6-L2-Q30',
+          type: 'true-false',
+          question: 'The Bernoulli equation and the steady-flow energy equation (first law of thermodynamics) are fundamentally different equations that happen to look similar.',
+          correctAnswer: true,
+          explanation: 'Despite their similar appearance, these equations have different origins and scope. Bernoulli is derived from Newton\'s second law (F = ma) applied along a streamline, assuming inviscid flow — it is a momentum equation. The steady-flow energy equation comes from the first law of thermodynamics and includes shaft work, heat transfer, and internal energy changes. For an inviscid, incompressible fluid with no heat transfer or shaft work, the energy equation reduces to Bernoulli\'s equation — but the energy equation is more general. The energy equation can handle friction (as a head loss term), pumps and turbines (as work terms), and compressible flow, while the basic Bernoulli equation cannot. Understanding this distinction helps engineers know which equation to apply in different situations.',
+          hint: 'Consider the derivation origins: one comes from F = ma, the other from the first law of thermodynamics.'
         }
       ]
     },
@@ -247,7 +819,6 @@ export const unit6: Unit = {
             'There is no constraint — flow distributes randomly in parallel branches'
           ],
           correctIndex: 0,
-          diagram: '<svg viewBox="0 0 320 180" width="100%"><defs><marker id="ab" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/></marker></defs><text x="160" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B" font-family="sans-serif">Parallel vs. Series Pipes</text><text x="85" y="30" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155" font-family="sans-serif">Parallel</text><circle cx="30" cy="70" r="5" fill="#334155"/><text x="30" y="60" text-anchor="middle" font-size="8" fill="#334155" font-family="sans-serif">A</text><circle cx="140" cy="70" r="5" fill="#334155"/><text x="140" y="60" text-anchor="middle" font-size="8" fill="#334155" font-family="sans-serif">B</text><path d="M 35 70 Q 85 40 135 70" stroke="#3B82F6" stroke-width="2" fill="none" marker-end="url(#ab)"/><path d="M 35 70 Q 85 100 135 70" stroke="#3B82F6" stroke-width="2" fill="none" marker-end="url(#ab)"/><text x="85" y="45" text-anchor="middle" font-size="8" fill="#1E40AF" font-family="sans-serif">Q_A</text><text x="85" y="105" text-anchor="middle" font-size="8" fill="#1E40AF" font-family="sans-serif">Q_B</text><text x="85" y="120" text-anchor="middle" font-size="9" fill="#6B7280" font-family="sans-serif">h_f,A = h_f,B</text><text x="85" y="132" text-anchor="middle" font-size="9" fill="#6B7280" font-family="sans-serif">Q = Q_A + Q_B</text><text x="245" y="30" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155" font-family="sans-serif">Series</text><line x1="175" y1="70" x2="225" y2="70" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><line x1="235" y1="70" x2="285" y2="70" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><circle cx="175" cy="70" r="4" fill="#334155"/><circle cx="230" cy="70" r="4" fill="#334155"/><circle cx="290" cy="70" r="4" fill="#334155"/><text x="200" y="62" text-anchor="middle" font-size="8" fill="#1E40AF" font-family="sans-serif">Pipe 1</text><text x="260" y="62" text-anchor="middle" font-size="8" fill="#1E40AF" font-family="sans-serif">Pipe 2</text><text x="245" y="95" text-anchor="middle" font-size="9" fill="#6B7280" font-family="sans-serif">Q same in both</text><text x="245" y="107" text-anchor="middle" font-size="9" fill="#6B7280" font-family="sans-serif">h_f = h_f,1 + h_f,2</text></svg>',
           explanation: 'This is directly analogous to electrical circuits. In parallel pipes (like parallel resistors), the "voltage" (pressure drop / head loss) is the same across all branches, while the "current" (flow rate) divides. In series pipes (like series resistors), the "current" (flow rate) is the same through all pipes, while the "voltage" (head loss) divides. For parallel branches: h_f,A = h_f,B, meaning K_A × Q_A² = K_B × Q_B², so Q_A/Q_B = √(K_B/K_A). The lower-resistance branch carries more flow. This principle governs pipe network analysis, manifold design, and flow distribution in heat exchangers. Getting even flow distribution (important in heat exchangers and cooling systems) requires making all parallel paths have equal resistance.',
           hint: 'Think about the pressure at the junction where branches split and where they rejoin. What must be true?'
         },
@@ -258,6 +829,300 @@ export const unit6: Unit = {
           acceptedAnswers: ['Darcy', 'darcy', 'DARCY'],
           explanation: 'The Darcy-Weisbach equation h_f = f(L/D)(V²/2g) is the fundamental equation for calculating friction head loss in pipe flow. It applies to both laminar and turbulent flow — only the method of determining the friction factor f changes (f = 64/Re for laminar, Moody chart or Colebrook equation for turbulent). Head loss is proportional to pipe length, inversely proportional to diameter, and proportional to velocity squared. This equation, combined with the Moody chart for determining f, forms the backbone of all pipe system design and pump sizing calculations.',
           hint: 'This equation is named after Henry _____ and Julius Weisbach.'
+        },
+        {
+          id: 'u6-L3-Q7',
+          type: 'multiple-choice',
+          question: 'What is the Reynolds number, and what do the critical values Re = 2300 and Re = 4000 signify for pipe flow?',
+          options: [
+            'Re = ρVD/μ = VD/ν is the ratio of inertial to viscous forces. Re < 2300 = laminar, 2300 < Re < 4000 = transition, Re > 4000 = fully turbulent. These values determine which friction factor correlation to use.',
+            'Re is the ratio of pressure forces to gravity forces. Re < 2300 means the flow is supersonic, Re > 4000 means subsonic.',
+            'Re = V²/(gD) is the ratio of kinetic to potential energy. The critical values separate compressible from incompressible flow.',
+            'Re has no physical meaning — it is simply a convenient grouping of variables with arbitrary critical values.'
+          ],
+          correctIndex: 0,
+          explanation: 'The Reynolds number Re = ρVD/μ = VD/ν is arguably the most important dimensionless number in fluid mechanics. It represents the ratio of inertial forces (which promote mixing and turbulence) to viscous forces (which dampen disturbances and maintain order). Below Re ≈ 2300, viscous forces dominate and flow is laminar — smooth, predictable, with a parabolic velocity profile. Above Re ≈ 4000, inertial forces dominate and flow is fully turbulent — chaotic, with enhanced mixing and a flatter velocity profile. The transition region (2300-4000) is unpredictable — small disturbances may trigger turbulence. This classification determines the friction factor, velocity profile, heat transfer rate, and mixing behavior.',
+          hint: 'What two types of forces does the Reynolds number compare, and what happens when one dominates?'
+        },
+        {
+          id: 'u6-L3-Q8',
+          type: 'multiple-choice',
+          question: 'For fully developed laminar flow in a circular pipe, the velocity profile is parabolic with V_max at the center. What is the ratio of average velocity to maximum velocity?',
+          options: [
+            'V_avg/V_max = 0.5 — the average velocity is exactly half the centerline maximum for laminar flow',
+            'V_avg/V_max = 0.8 — the average is close to the maximum due to the flat central region',
+            'V_avg/V_max = 1.0 — the velocity is uniform across the pipe in laminar flow',
+            'V_avg/V_max = 0.67 — two-thirds of the maximum, based on the parabolic integration'
+          ],
+          correctIndex: 0,
+          explanation: 'For laminar flow, the velocity profile is u(r) = V_max[1 − (r/R)²]. Integrating over the cross-section: V_avg = (1/A)∫u dA = V_max/2. This is a fundamental result — it means the centerline velocity is exactly twice the average velocity in laminar flow. For turbulent flow, the profile is much flatter (approximately following the power law u/V_max = (1 − r/R)^(1/n), where n ≈ 7 for typical Re), giving V_avg/V_max ≈ 0.8-0.85. This difference is important for: (1) converting pitot tube centerline measurements to average velocity, (2) calculating kinetic energy correction factors, and (3) understanding why turbulent flow has higher wall shear stress than laminar flow at the same average velocity.',
+          hint: 'Integrate the parabolic velocity profile u(r) = V_max[1 − (r/R)²] over the circular cross-section.'
+        },
+        {
+          id: 'u6-L3-Q9',
+          type: 'multiple-choice',
+          question: 'The Colebrook equation for turbulent pipe flow friction factor is implicit (f appears on both sides). How is it typically solved in practice?',
+          options: [
+            'Iterative solution, the Moody chart (graphical), or explicit approximations such as the Swamee-Jain or Haaland equations that give f directly from Re and ε/D',
+            'It can always be solved analytically by rearranging the equation algebraically',
+            'By assuming f = 64/Re, which works for all flow regimes',
+            'By ignoring the Re-dependent term and using only the roughness-dependent term'
+          ],
+          correctIndex: 0,
+          explanation: 'The Colebrook equation 1/√f = −2log(ε/(3.7D) + 2.51/(Re√f)) is implicit because f appears inside and outside the logarithm. Traditional solutions: (1) Moody chart — a graphical representation that engineers used for decades, (2) iteration — guess f, compute the right side, update f, repeat until convergence (usually 3-5 iterations). Modern alternatives: (3) Swamee-Jain equation: f = 0.25/[log(ε/(3.7D) + 5.74/Re^0.9)]² — explicit and accurate to within 1% for 10⁻⁶ < ε/D < 10⁻² and 5000 < Re < 10⁸. (4) Churchill equation — another explicit formula covering all regimes. These explicit approximations are used in computer programs and spreadsheets, eliminating the need for iteration.',
+          hint: 'Since f appears on both sides, what mathematical approaches can solve such an equation?'
+        },
+        {
+          id: 'u6-L3-Q10',
+          type: 'true-false',
+          question: 'The entrance length — the distance for flow to become fully developed — is much longer for laminar flow than for turbulent flow at the same average velocity and pipe diameter.',
+          correctAnswer: true,
+          explanation: 'The hydrodynamic entrance length for laminar flow is L_e ≈ 0.05 × Re × D. For turbulent flow, L_e ≈ 10-60 × D (roughly 10D for a common engineering estimate, or more precisely 4.4 × Re^(1/6) × D). For example, at Re = 2000 (laminar) in a 50 mm pipe: L_e = 0.05 × 2000 × 0.05 = 5 m. At Re = 50,000 (turbulent) in the same pipe: L_e ≈ 50 × 0.05 = 2.5 m. Laminar entrance length scales linearly with Re (can be very long), while turbulent entrance length is much shorter because turbulent mixing rapidly redistributes momentum. In many practical systems with turbulent flow, the fully-developed assumption is reasonable after 40-60 diameters.',
+          hint: 'Compare the entrance length formulas: L_e,laminar ∝ Re × D versus L_e,turbulent ∝ D (weak Re dependence).'
+        },
+        {
+          id: 'u6-L3-Q11',
+          type: 'multiple-choice',
+          question: 'What is the Hagen-Poiseuille equation, and for what flow regime is it valid?',
+          options: [
+            'Q = πD⁴ΔP/(128μL) — it gives the flow rate for fully developed laminar flow in a circular pipe, valid only for Re < 2300',
+            'Q = πD⁴ΔP/(128μL) — it is the universal pipe flow equation valid for all Reynolds numbers',
+            'Q = πD²V/4 — it is the continuity equation for pipe flow',
+            'Q = (1/n)R^(2/3)S^(1/2)A — it is Manning\'s equation for open channel flow'
+          ],
+          correctIndex: 0,
+          explanation: 'The Hagen-Poiseuille equation Q = πD⁴ΔP/(128μL) is an exact analytical solution for fully developed, steady, laminar flow in a circular pipe. Key features: (1) flow rate is proportional to D⁴ — doubling the diameter increases flow 16×, (2) flow is proportional to pressure gradient ΔP/L, (3) flow is inversely proportional to viscosity μ. This equation also gives the laminar friction factor: f = 64/Re. It is valid only for laminar flow (Re < 2300). For turbulent flow, there is no exact analytical solution — the Darcy-Weisbach equation with empirical friction factor correlations must be used. Hagen-Poiseuille is used in microfluidics, blood flow analysis, viscometry, and any low-Re pipe flow application.',
+          hint: 'This famous equation gives an exact solution for a specific flow regime in circular pipes.'
+        },
+        {
+          id: 'u6-L3-Q12',
+          type: 'multiple-choice',
+          question: 'A sudden expansion from a small pipe to a large pipe causes a head loss. What is the Borda-Carnot formula for this loss?',
+          options: [
+            'h_loss = (V₁ − V₂)²/(2g) — the loss equals the kinetic energy associated with the velocity difference, where V₁ > V₂',
+            'h_loss = V₁²/(2g) — all kinetic energy is lost in a sudden expansion',
+            'h_loss = (V₂ − V₁)²/(2g) — the loss depends on the velocity increase',
+            'h_loss = K × V₂²/(2g) where K depends on the pipe material'
+          ],
+          correctIndex: 0,
+          explanation: 'The Borda-Carnot equation h_loss = (V₁ − V₂)²/(2g) gives the head loss for a sudden (abrupt) expansion. It is derived from momentum and energy equations (not Bernoulli, which assumes no losses). At a sudden expansion, the flow cannot follow the abrupt area change — it separates, forming large recirculation eddies that dissipate energy. The loss K factor referenced to V₁ is K = (1 − A₁/A₂)². For a pipe discharging into a large reservoir (A₂ → ∞), V₂ → 0 and h_loss = V₁²/(2g) — all kinetic energy is lost (exit loss K = 1.0). Gradual expansions (diffusers) with cone half-angles < 7° can recover most of the kinetic energy, reducing losses to 10-20% of the sudden expansion value.',
+          hint: 'This formula is derived from momentum balance, not from Bernoulli (which assumes no losses).'
+        },
+        {
+          id: 'u6-L3-Q13',
+          type: 'multiple-choice',
+          question: 'Water at 20°C (ν = 1.0 × 10⁻⁶ m²/s) flows at 2 m/s through a 50 mm diameter pipe. What is the Reynolds number and flow regime?',
+          options: [
+            'Re = VD/ν = 2 × 0.05 / 1.0 × 10⁻⁶ = 100,000 — fully turbulent flow',
+            'Re = 1,000 — laminar flow',
+            'Re = 5,000 — transitional flow',
+            'Re = 50,000 — transitional flow'
+          ],
+          correctIndex: 0,
+          explanation: 'Re = VD/ν = (2)(0.05)/(1.0 × 10⁻⁶) = 100,000. This is well above the turbulent threshold of 4,000, so the flow is fully turbulent. This is typical for engineering pipe flows — most practical water pipe systems operate at Re = 10⁴ to 10⁶. Laminar pipe flow (Re < 2,300) typically occurs only at very low velocities, very small diameters, or very high viscosities (e.g., heavy oil). The high Re means the Moody chart or Colebrook equation must be used for the friction factor, and the velocity profile is relatively flat (turbulent profile), not parabolic (laminar).',
+          hint: 'Re = VD/ν. Substitute the values carefully, paying attention to units.'
+        },
+        {
+          id: 'u6-L3-Q14',
+          type: 'true-false',
+          question: 'For laminar flow in a pipe, the friction factor is f = 64/Re, which means friction losses increase as the flow slows down.',
+          correctAnswer: false,
+          explanation: 'While f = 64/Re increases as Re (and velocity) decrease, the actual head loss h_f = f(L/D)(V²/2g) = (64/Re)(L/D)(V²/2g) = 64ν/(VD) × (L/D)(V²/2g) = 32νLV/(gD²) — head loss is proportional to V (first power), not V². So as velocity decreases, the friction factor increases but the head loss DECREASES. This makes physical sense: slower flow encounters less total friction force. The linear h_f ∝ V relationship for laminar flow (vs. h_f ∝ V² for turbulent) is why the Hagen-Poiseuille equation gives Q ∝ ΔP (linear) rather than Q ∝ √ΔP (turbulent).',
+          hint: 'Substitute f = 64/Re into the Darcy-Weisbach equation and simplify. How does h_f depend on V?'
+        },
+        {
+          id: 'u6-L3-Q15',
+          type: 'multiple-choice',
+          question: 'What is the equivalent length method for calculating minor losses, and when is it most useful?',
+          options: [
+            'Each fitting is assigned an equivalent pipe length L_eq = KD/f that would produce the same friction loss. This converts all losses to major losses: h_total = f(L_actual + ΣL_eq)/D × V²/(2g). It simplifies calculations when many fittings share the same pipe diameter.',
+            'The equivalent length is the physical length of the fitting, measured along its centerline',
+            'It replaces the entire pipe with a single equivalent diameter that accounts for all losses',
+            'It only works for laminar flow where the K values are well defined'
+          ],
+          correctIndex: 0,
+          explanation: 'The equivalent length method converts a minor loss coefficient K into an equivalent pipe length: L_eq = KD/f. This means h_minor = KV²/(2g) = f(L_eq/D)(V²/(2g)). The advantage is that all losses (major and minor) can be combined into one calculation: h_total = f/D × (L_actual + ΣL_eq) × V²/(2g). For example, a globe valve (K = 10) in a 100 mm pipe with f = 0.02 has L_eq = 10 × 0.1/0.02 = 50 m — this one valve adds the equivalent of 50 m of straight pipe. Manufacturers often publish fitting losses directly as equivalent lengths (in pipe diameters) for easy use. The method assumes the same f applies everywhere, which is reasonable for constant-diameter systems.',
+          hint: 'If h_minor = KV²/(2g) and h_major = f(L/D)(V²/(2g)), what L makes them equal?'
+        },
+        {
+          id: 'u6-L3-Q16',
+          type: 'multiple-choice',
+          question: 'A globe valve and a gate valve are both fully open in a pipe system. Which has a significantly higher loss coefficient (K), and why?',
+          options: [
+            'Globe valve (K ≈ 6-10) is much higher than gate valve (K ≈ 0.1-0.2) because the globe valve forces the flow through a tortuous S-shaped path with multiple direction changes, while the gate valve presents a straight-through opening',
+            'Gate valve has higher K because the gate mechanism creates more turbulence',
+            'Both have similar K values (≈ 1.0) when fully open',
+            'Globe valve has lower K because its spherical geometry streamlines the flow'
+          ],
+          correctIndex: 0,
+          explanation: 'The loss coefficient is directly related to how much the fitting disturbs the flow path. A fully open gate valve has K ≈ 0.1-0.2 because the gate retracts completely out of the flow path, leaving a straight-through opening with minimal disturbance. A fully open globe valve has K ≈ 6-10 because the flow must follow an S-shaped path: enter from the side, turn 90° through the valve seat, and turn 90° again to exit — each turn creates separation and turbulence. Despite the high K, globe valves are preferred for flow regulation because they provide fine throttling control and their loss coefficient varies predictably with stem position. Gate valves are better as isolation (on/off) valves due to their low loss when open, but they are poor for throttling.',
+          hint: 'Consider the internal flow path geometry of each valve type when fully open.'
+        },
+        {
+          id: 'u6-L3-Q17',
+          type: 'fill-blank',
+          question: 'The dimensionless chart that plots friction factor versus Reynolds number for various relative roughness values is called the _____ chart.',
+          acceptedAnswers: ['Moody', 'moody', 'MOODY'],
+          explanation: 'The Moody chart (also called the Moody diagram), developed by Lewis Moody in 1944, is one of the most widely used tools in fluid mechanics. It plots the Darcy friction factor f against Reynolds number Re on a log-log scale, with curves for different relative roughness values ε/D. The chart covers laminar flow (f = 64/Re, a single straight line), the transition region, and turbulent flow (multiple curves based on ε/D). At very high Re, the curves become horizontal (fully rough zone). The chart is based on the Colebrook-White equation and represents experimental data from Nikuradse and others. Despite the availability of computational methods, understanding the Moody chart remains essential for engineering judgment.',
+          hint: 'This chart is named after the American engineer who compiled pipe friction data into a single diagram in 1944.'
+        },
+        {
+          id: 'u6-L3-Q18',
+          type: 'multiple-choice',
+          question: 'What is the difference between major losses and minor losses in pipe flow?',
+          options: [
+            'Major losses are distributed friction losses along straight pipe sections (h_f = fLV²/(2gD)). Minor losses are localized losses at fittings, valves, entrances, exits, and area changes (h_m = KV²/(2g)). The terms do not indicate relative magnitude.',
+            'Major losses are always larger than minor losses in any pipe system',
+            'Major losses occur only in turbulent flow; minor losses occur only in laminar flow',
+            'Major losses are caused by pipe material; minor losses are caused by the flowing fluid'
+          ],
+          correctIndex: 0,
+          explanation: 'Major losses (also called friction losses or distributed losses) occur due to wall shear stress along the entire pipe length and are calculated using the Darcy-Weisbach equation. Minor losses (also called local losses or fitting losses) occur at specific locations where the flow is disturbed: entrances, exits, expansions, contractions, bends, valves, tees, and other fittings. They are calculated using h_m = KV²/(2g), where K is a loss coefficient that depends on the geometry. The terminology is historical and often misleading — in systems with many fittings and short pipe runs, minor losses can exceed major losses. Both must always be calculated for accurate system analysis.',
+          hint: 'The names "major" and "minor" describe where the losses occur, not how large they are.'
+        },
+        {
+          id: 'u6-L3-Q19',
+          type: 'true-false',
+          question: 'In turbulent pipe flow, doubling the flow rate approximately quadruples the head loss (assuming the friction factor remains approximately constant).',
+          correctAnswer: true,
+          explanation: 'From Darcy-Weisbach: h_f = f(L/D)(V²/(2g)). Since V = Q/A, we have h_f = f(L/D)(Q/(A))²/(2g) = fL/(2gDA²) × Q². So h_f ∝ Q² (when f is roughly constant). Doubling Q quadruples h_f. This is the "system curve" relationship — the parabolic increase of head loss with flow rate. In reality, f varies slightly with Re (and thus Q), but this Q² approximation is quite good for turbulent flow. For laminar flow (where f = 64/Re ∝ 1/V), the relationship is linear: h_f ∝ Q. This quadratic relationship is why pump energy costs increase dramatically with flow rate and why oversized pipes save energy over their lifetime.',
+          hint: 'Substitute V = Q/A into the Darcy-Weisbach equation and see how h_f depends on Q.'
+        },
+        {
+          id: 'u6-L3-Q20',
+          type: 'multiple-choice',
+          question: 'What is the "three pipe problem types" classification in pipe flow analysis?',
+          options: [
+            'Type 1: Given Q, L, D, find h_f (direct). Type 2: Given h_f, L, D, find Q (requires iteration because f depends on Re). Type 3: Given Q, h_f, L, find D (most difficult, requires iteration on both f and D).',
+            'The three types refer to laminar, transitional, and turbulent flow calculations',
+            'The three types refer to series, parallel, and branching pipe networks',
+            'The three types refer to smooth, rough, and partially rough pipes'
+          ],
+          correctIndex: 0,
+          explanation: 'Type 1 (find head loss): Straightforward — calculate Re, find f from Moody chart, compute h_f from Darcy-Weisbach. Type 2 (find flow rate): Iterative — you need f to find V (and Q), but f depends on Re which depends on V. Procedure: guess f, compute V from h_f, compute Re, find new f, repeat. Typically converges in 2-3 iterations. Type 3 (find diameter): Most complex — both f and V depend on D. Must iterate on D using standard pipe sizes. In practice, computers handle all three types easily, but understanding the logic is essential for engineering judgment and exam problems. The Swamee-Jain equations provide direct (non-iterative) solutions for all three types.',
+          hint: 'The difficulty arises because the friction factor f depends on what you are trying to find.'
+        },
+        {
+          id: 'u6-L3-Q21',
+          type: 'multiple-choice',
+          question: 'A pipe entrance from a large reservoir can be sharp-edged (K ≈ 0.5), slightly rounded (K ≈ 0.2), or well-rounded (K ≈ 0.04). Why does rounding the entrance reduce the loss coefficient so dramatically?',
+          options: [
+            'A sharp edge causes flow separation and a vena contracta immediately after the entrance, creating large recirculation zones. Rounding the entrance guides the flow smoothly, preventing separation and the associated energy dissipation.',
+            'Rounding the entrance makes the pipe diameter effectively larger, reducing velocity',
+            'The rounded entrance adds length to the pipe, which redistributes the entrance loss over a longer distance',
+            'Rounding reduces the pipe wall roughness at the entrance, lowering the friction factor'
+          ],
+          correctIndex: 0,
+          explanation: 'At a sharp-edged entrance, the flow cannot follow the abrupt 90° turn from the reservoir into the pipe. The streamlines contract to form a vena contracta (jet narrowing to about 60% of the pipe area), and the region between the jet and the pipe wall is filled with low-energy recirculating fluid. The energy dissipated in these eddies accounts for the K = 0.5 loss. A well-rounded entrance (radius ≈ 0.15D or more) guides the flow gradually into the pipe, preventing separation entirely — the streamlines follow the curved wall smoothly, and nearly all kinetic energy is preserved (K ≈ 0.04). The bellmouth inlet used in wind tunnels and some pump intakes is an extreme version of this, with K approaching zero.',
+          hint: 'What happens to the flow immediately after entering the pipe through a sharp edge? Does it fill the entire pipe?'
+        },
+        {
+          id: 'u6-L3-Q22',
+          type: 'multiple-choice',
+          question: 'In a pipe network (like a city water distribution system), what method is commonly used to solve for flow rates and pressures throughout the network?',
+          options: [
+            'The Hardy Cross method — an iterative procedure that assumes initial flow rates satisfying continuity at each node, then adjusts flows in each loop to satisfy the head loss balance condition until convergence',
+            'Direct application of Bernoulli\'s equation between all pairs of nodes',
+            'Solving the Navier-Stokes equations analytically for each pipe segment',
+            'Using the Hagen-Poiseuille equation for each pipe and solving the resulting linear system'
+          ],
+          correctIndex: 0,
+          explanation: 'The Hardy Cross method (1936) is a relaxation technique for pipe networks. It uses two fundamental constraints: (1) Continuity at each node — flow in = flow out (ΣQ = 0), and (2) Energy conservation in each loop — net head loss around any closed loop = 0 (Σh_f = 0). Procedure: (a) Assume initial flow distribution satisfying continuity, (b) For each loop, calculate the correction ΔQ = −Σ(h_f)/Σ(2h_f/Q) to drive the loop head loss toward zero, (c) Apply corrections and repeat until all loops balance. Modern software (EPANET, WaterGEMS) uses the gradient method or Newton-Raphson, which converge faster for large networks, but the Hardy Cross concept remains fundamental. These tools are used to design water distribution, district heating, and fire protection systems.',
+          hint: 'Pipe networks must satisfy two conditions simultaneously: mass balance at nodes and energy balance in loops.'
+        },
+        {
+          id: 'u6-L3-Q23',
+          type: 'true-false',
+          question: 'The friction factor for laminar flow (f = 64/Re) can be derived analytically from the Navier-Stokes equations, while the turbulent friction factor must be determined empirically.',
+          correctAnswer: true,
+          explanation: 'This is a fundamental difference between laminar and turbulent flows. For laminar flow in a circular pipe, the Navier-Stokes equations have an exact analytical solution (the Hagen-Poiseuille solution), which yields the velocity profile u(r) = (ΔP/(4μL))(R² − r²) and the relationship ΔP = 128μLQ/(πD⁴). Comparing with Darcy-Weisbach gives f = 64/Re exactly. For turbulent flow, the Navier-Stokes equations cannot be solved analytically due to the chaotic, three-dimensional, time-dependent nature of turbulence. The turbulent friction factor must come from experiments (Nikuradse\'s pipe flow experiments, 1933) correlated by empirical equations (Colebrook, Moody). This is why turbulence remains one of the unsolved problems of classical physics.',
+          hint: 'Can the full Navier-Stokes equations be solved analytically for turbulent flow?'
+        },
+        {
+          id: 'u6-L3-Q24',
+          type: 'multiple-choice',
+          question: 'A valve is used for flow control by throttling. Which valve type provides the best throttling characteristics (linear relationship between valve position and flow rate)?',
+          options: [
+            'Globe valve — its plug-and-seat design provides a smooth, progressive change in flow area with stem position, giving good throttling control across the full range of positions',
+            'Gate valve — its flat gate provides proportional flow control as it slides across the pipe',
+            'Ball valve — its spherical element provides linear flow control as it rotates',
+            'Butterfly valve — its disc provides the most precise flow control'
+          ],
+          correctIndex: 0,
+          explanation: 'Globe valves are the standard choice for flow regulation (throttling) because: (1) the plug/disc lifts perpendicularly away from the seat, providing smooth and predictable change in flow area, (2) the flow characteristic can be shaped (linear, equal-percentage, or quick-opening) by profiling the plug shape, (3) they maintain good control at partial openings, (4) they resist erosion from throttled flow better than other types. Gate valves are poor for throttling because the gate vibrates at partial openings, causing wear and poor control. Ball valves (quarter-turn, K varies from ~0.05 open to ~∞ closed) are primarily on/off but can be used for rough throttling. Butterfly valves offer reasonable throttling for large pipes but have a non-linear characteristic.',
+          hint: 'Which valve type is specifically designed with a plug-and-seat arrangement for regulating flow?'
+        },
+        {
+          id: 'u6-L3-Q25',
+          type: 'fill-blank',
+          question: 'The ratio of the pipe wall roughness height to the pipe diameter, ε/D, is called the _____ roughness.',
+          acceptedAnswers: ['relative', 'Relative', 'RELATIVE'],
+          explanation: 'Relative roughness ε/D is a dimensionless parameter that determines the turbulent friction factor on the Moody chart. It is the ratio of the absolute roughness ε (the average height of surface irregularities) to the pipe internal diameter D. A larger pipe with the same material has a smaller relative roughness, which is why large-diameter pipes have lower friction factors than small-diameter pipes of the same material. Typical values: drawn tubing ε = 0.0015 mm, commercial steel ε = 0.045 mm, cast iron ε = 0.26 mm, concrete ε = 0.3-3 mm. For a 100 mm commercial steel pipe, ε/D = 0.045/100 = 0.00045.',
+          hint: 'This dimensionless ratio compares the roughness height to the pipe size.'
+        },
+        {
+          id: 'u6-L3-Q26',
+          type: 'multiple-choice',
+          question: 'What is water hammer, and what causes it in a pipe system?',
+          options: [
+            'Water hammer is a pressure transient caused by a sudden change in flow velocity (e.g., rapid valve closure), creating a pressure wave that propagates through the pipe at the speed of sound in the fluid, potentially causing pressures many times the normal operating pressure.',
+            'Water hammer is the noise created by turbulent flow in rough pipes',
+            'Water hammer is the vibration of pipes due to pump cycling',
+            'Water hammer only occurs in steam systems when condensate accumulates'
+          ],
+          correctIndex: 0,
+          explanation: 'When a valve closes suddenly, the kinetic energy of the flowing water converts to a pressure pulse: ΔP = ρcΔV, where c is the speed of sound in the pipe (typically 1000-1400 m/s for water in steel pipes, less than the 1480 m/s in free water due to pipe elasticity). For V = 3 m/s and c = 1200 m/s: ΔP = 1000 × 1200 × 3 = 3.6 MPa (about 36 atmospheres) — added to the normal operating pressure! This pressure wave travels to the end of the pipe, reflects, and oscillates until dissipated by friction. The Joukowsky equation gives the maximum pressure rise. Prevention methods: slow-closing valves, surge tanks, pressure relief valves, and air chambers. Water hammer is a leading cause of pipe bursts in water supply systems.',
+          hint: 'Think about what happens to the kinetic energy of a column of moving water when a valve suddenly blocks it.'
+        },
+        {
+          id: 'u6-L3-Q27',
+          type: 'multiple-choice',
+          question: 'For a smooth pipe in turbulent flow, what is the Blasius correlation for the friction factor?',
+          options: [
+            'f = 0.316/Re^(1/4) — valid for smooth pipes with 4000 < Re < 10⁵, showing that f decreases as Re increases in smooth turbulent flow',
+            'f = 64/Re — valid for all smooth pipe flows regardless of Reynolds number',
+            'f = 0.316 × Re — friction factor increases linearly with Reynolds number',
+            'f = constant = 0.02 for all smooth pipe turbulent flows'
+          ],
+          correctIndex: 0,
+          explanation: 'The Blasius equation f = 0.316Re^(-1/4) (or equivalently 0.316/Re^0.25) is a simple power-law correlation for smooth-pipe turbulent friction factor, valid for Re from about 4000 to 100,000. It shows that even in turbulent flow, the friction factor decreases with increasing Re (though much more slowly than the laminar f = 64/Re). At Re = 10,000: f = 0.316/10^1 = 0.0316. At Re = 100,000: f = 0.316/17.78 = 0.0178. For higher Re or rough pipes, the Colebrook equation or explicit approximations must be used. The Blasius equation is useful for quick estimates and for developing scaling laws in turbulent flow research.',
+          hint: 'This simple power-law equation applies to smooth turbulent pipe flow at moderate Reynolds numbers.'
+        },
+        {
+          id: 'u6-L3-Q28',
+          type: 'true-false',
+          question: 'A pipe system with two pipes in series has a total head loss equal to the sum of the individual pipe head losses.',
+          correctAnswer: true,
+          explanation: 'For pipes in series, the same flow rate passes through all pipes (continuity), and the total head loss is the sum of losses in each pipe: h_f,total = h_f,1 + h_f,2 + ... + h_f,n + Σh_minor. This is analogous to resistors in series in an electrical circuit, where total voltage drop = sum of individual drops. Each pipe may have a different diameter, length, roughness, and therefore different friction factor and velocity — each head loss must be calculated individually. The head losses include not only the friction losses in each pipe but also the minor losses at the transitions between pipes (sudden expansion/contraction at diameter changes).',
+          hint: 'In series flow, the same flow passes through each pipe sequentially. How do the energy losses combine?'
+        },
+        {
+          id: 'u6-L3-Q29',
+          type: 'multiple-choice',
+          question: 'An engineer must select between a 4-inch and 6-inch pipe for a water supply system. The 6-inch pipe costs 2.2× more per meter than the 4-inch. Over a 20-year life, which is more economical considering pumping costs?',
+          options: [
+            'The 6-inch pipe is almost certainly more economical — head loss scales as D⁻⁵, so the 4-inch pipe has (6/4)⁵ = 7.6× more friction loss, meaning pumping energy costs are 7.6× higher, far exceeding the 2.2× pipe cost difference',
+            'The 4-inch pipe is more economical because pipe cost dominates over the 20-year life cycle',
+            'They are equivalent — the cost increase of the larger pipe exactly offsets the pumping savings',
+            'The comparison cannot be made without knowing the flow rate'
+          ],
+          correctIndex: 0,
+          explanation: 'The D⁻⁵ sensitivity of head loss makes pipe diameter selection primarily an energy cost decision for long-term projects. At the same flow rate, h_f ∝ D⁻⁵, so the head loss ratio = (4/6)⁵ = (0.667)⁵ = 0.132 — the 6-inch pipe has only 13.2% of the 4-inch pipe\'s friction loss, or equivalently the 4-inch pipe has 7.6× higher loss. Over 20 years of pumping, this energy difference vastly exceeds the initial pipe cost premium. Life-cycle cost analysis (LCCA) — balancing capital cost against operating cost — is standard practice in pipe system design. The optimum diameter minimizes total present-value cost (pipe + installation + pumping energy over the system life). Option D is partially valid — flow rate matters for absolute costs, but the ratio is independent of Q.',
+          hint: 'Use the D⁻⁵ relationship to compare head losses and think about 20 years of electricity bills.'
+        },
+        {
+          id: 'u6-L3-Q30',
+          type: 'multiple-choice',
+          question: 'What is the velocity profile for fully developed turbulent flow in a pipe, and how does it differ from laminar flow?',
+          options: [
+            'Turbulent flow has a much flatter velocity profile (approximately following the 1/7th power law: u/U_max = (y/R)^(1/7)), with thin boundary layers near the wall and high velocity gradients at the wall, compared to laminar flow\'s smooth parabolic profile',
+            'Turbulent flow has a parabolic profile identical to laminar flow',
+            'Turbulent flow has a completely flat (uniform) velocity profile with no boundary layer',
+            'Turbulent flow has a linear velocity profile from zero at the wall to maximum at the center'
+          ],
+          correctIndex: 0,
+          explanation: 'The turbulent velocity profile is much flatter than the laminar parabola due to turbulent mixing — eddies transport momentum from the high-velocity core toward the wall, evening out the profile. The 1/7th power law u/U_max = (1 − r/R)^(1/7) is a reasonable approximation for 10⁴ < Re < 10⁵. Near the wall, there is a thin viscous (laminar) sublayer where turbulent eddies are damped and the profile is nearly linear. The wall shear stress is much higher for turbulent flow than laminar flow at the same average velocity, because the velocity gradient at the wall (du/dy|wall) is much steeper. This explains why turbulent friction factors are much higher than laminar: f_turb ≈ 0.02-0.04 vs. f_lam = 64/Re (which gives ≈ 0.03 only near Re = 2000).',
+          hint: 'Does turbulent mixing make the velocity profile more uniform or less uniform compared to laminar flow?'
         }
       ]
     },
@@ -301,7 +1166,6 @@ export const unit6: Unit = {
           type: 'true-false',
           question: 'When two identical centrifugal pumps are connected in series, the combined flow rate doubles while the head remains the same as a single pump.',
           correctAnswer: false,
-          diagram: '<svg viewBox="0 0 320 180" width="100%"><defs><marker id="ab" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/></marker></defs><text x="85" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#1E293B" font-family="sans-serif">Series: H adds</text><text x="245" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#1E293B" font-family="sans-serif">Parallel: Q adds</text><line x1="165" y1="5" x2="165" y2="120" stroke="#6B7280" stroke-width="1" stroke-dasharray="4,3"/><line x1="20" y1="55" x2="55" y2="55" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><circle cx="70" cy="55" r="12" fill="#E2E8F0" stroke="#334155" stroke-width="2"/><text x="70" y="59" text-anchor="middle" font-size="9" fill="#1E293B" font-family="sans-serif">P</text><line x1="82" y1="55" x2="98" y2="55" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><circle cx="113" cy="55" r="12" fill="#E2E8F0" stroke="#334155" stroke-width="2"/><text x="113" y="59" text-anchor="middle" font-size="9" fill="#1E293B" font-family="sans-serif">P</text><line x1="125" y1="55" x2="155" y2="55" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><text x="90" y="82" text-anchor="middle" font-size="9" fill="#6B7280" font-family="sans-serif">Same Q, H = 2H</text><line x1="180" y1="40" x2="210" y2="40" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><circle cx="225" cy="40" r="12" fill="#E2E8F0" stroke="#334155" stroke-width="2"/><text x="225" y="44" text-anchor="middle" font-size="9" fill="#1E293B" font-family="sans-serif">P</text><line x1="237" y1="40" x2="270" y2="40" stroke="#3B82F6" stroke-width="2"/><line x1="180" y1="70" x2="210" y2="70" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><circle cx="225" cy="70" r="12" fill="#E2E8F0" stroke="#334155" stroke-width="2"/><text x="225" y="74" text-anchor="middle" font-size="9" fill="#1E293B" font-family="sans-serif">P</text><line x1="237" y1="70" x2="270" y2="70" stroke="#3B82F6" stroke-width="2"/><line x1="270" y1="40" x2="270" y2="70" stroke="#3B82F6" stroke-width="1.5"/><line x1="270" y1="55" x2="300" y2="55" stroke="#3B82F6" stroke-width="2" marker-end="url(#ab)"/><line x1="180" y1="40" x2="180" y2="70" stroke="#3B82F6" stroke-width="1.5"/><text x="245" y="98" text-anchor="middle" font-size="9" fill="#6B7280" font-family="sans-serif">Same H, Q = 2Q</text></svg>',
           explanation: 'Pumps in series add their heads at the same flow rate — they do NOT double the flow. The combined head is approximately 2H at any given Q. Pumps in parallel add flow rates at the same head. This is analogous to electrical circuits: series = more "voltage" (head), parallel = more "current" (flow). The actual operating point depends on the system curve intersection.',
           hint: 'Think about what happens to the pressure as fluid passes through one pump and then the next.'
         },
@@ -316,7 +1180,6 @@ export const unit6: Unit = {
             'The system curve shifts downward, reducing the head the pump must produce and increasing flow rate'
           ],
           correctIndex: 0,
-          diagram: '<svg viewBox="0 0 320 180" width="100%"><text x="160" y="14" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B" font-family="sans-serif">Pump &amp; System Curves</text><text x="22" y="90" text-anchor="middle" font-size="11" fill="#1E293B" font-family="sans-serif">H</text><text x="175" y="172" text-anchor="middle" font-size="11" fill="#1E293B" font-family="sans-serif">Q</text><line x1="35" y1="20" x2="35" y2="165" stroke="#334155" stroke-width="2"/><line x1="35" y1="165" x2="310" y2="165" stroke="#334155" stroke-width="2"/><path d="M 40 40 Q 120 45 200 80 Q 260 110 295 155" stroke="#3B82F6" stroke-width="2.5" fill="none"/><text x="295" y="148" font-size="9" fill="#1E40AF" font-family="sans-serif">Pump</text><path d="M 40 130 Q 130 115 200 80 Q 250 55 290 30" stroke="#10B981" stroke-width="2" fill="none"/><text x="280" y="25" font-size="9" fill="#065F46" font-family="sans-serif">System</text><path d="M 40 110 Q 100 95 155 60 Q 200 35 240 20" stroke="#EF4444" stroke-width="2" fill="none" stroke-dasharray="5,3"/><text x="240" y="18" font-size="8" fill="#991B1B" font-family="sans-serif">Valve closed</text><circle cx="200" cy="80" r="4" fill="#334155"/><text x="205" y="95" font-size="9" fill="#334155" font-family="sans-serif">OP1</text><circle cx="140" cy="55" r="4" fill="#EF4444"/><text x="120" y="50" font-size="9" fill="#991B1B" font-family="sans-serif">OP2</text><line x1="200" y1="80" x2="140" y2="55" stroke="#6B7280" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#ah)"/></svg>',
           explanation: 'The system curve represents the total head the piping system requires at each flow rate: H_system = H_static + K_total × Q². Closing a valve increases K_total (adds resistance), making the parabola steeper. The pump curve (H vs. Q, characteristic of the pump at a given speed) does not change. The new intersection point is at lower Q and higher H — the pump "rides up" its curve. Problems arise if the operating point moves too far left: (1) the pump operates at low efficiency, (2) radial thrust increases on the impeller (bearing wear), (3) the flow may become unstable (recirculation, surging), and (4) minimum flow requirements may be violated, causing overheating. This is why VFD (variable frequency drive) speed control is preferred over throttling — it adjusts the pump curve rather than wasting energy across a valve.',
           hint: 'Draw the pump curve and system curve. What happens to their intersection when you add resistance?'
         },
@@ -341,6 +1204,300 @@ export const unit6: Unit = {
           acceptedAnswers: ['R', 'r', 'required', 'Required', 'REQUIRED'],
           explanation: 'NPSH_R (required) is determined by the pump manufacturer through testing — it is the minimum net positive suction head needed to prevent more than 3% head drop due to cavitation. The system designer must ensure that NPSH_A (available from the system) exceeds NPSH_R with an adequate safety margin, typically at least 0.5–1.0 m or 10–20%.',
           hint: 'There are two types of NPSH: one from the system (available) and one from the pump.'
+        },
+        {
+          id: 'u6-L4-Q7',
+          type: 'multiple-choice',
+          question: 'What are the pump affinity laws, and why are they important for variable-speed pump operation?',
+          options: [
+            'Q ∝ N, H ∝ N², P ∝ N³ — flow varies linearly with speed, head with speed squared, and power with speed cubed. Reducing speed by 20% cuts power by 49%, making VFDs extremely energy-efficient for flow control.',
+            'Q ∝ N², H ∝ N, P ∝ N² — head varies linearly with speed while flow varies with speed squared',
+            'All three quantities (Q, H, P) vary linearly with speed N',
+            'The affinity laws only apply to positive displacement pumps, not centrifugal pumps'
+          ],
+          correctIndex: 0,
+          explanation: 'The pump affinity laws (also called similarity or fan laws) relate performance at two different speeds: Q₂/Q₁ = N₂/N₁, H₂/H₁ = (N₂/N₁)², P₂/P₁ = (N₂/N₁)³. The cubic power relationship is transformative for energy savings: at 80% speed, power is (0.8)³ = 51.2% of full-speed power — a 49% energy reduction while still providing 80% flow. By contrast, throttling with a valve at 80% flow wastes the excess head as friction, saving little energy. This is why Variable Frequency Drives (VFDs) have revolutionized pump operation — they adjust pump speed to match demand rather than throttling a constant-speed pump. VFDs typically pay for themselves in 1-3 years through energy savings in HVAC systems, water treatment, and industrial processes.',
+          hint: 'How do flow, head, and power scale with speed? Which one has the most dramatic effect?'
+        },
+        {
+          id: 'u6-L4-Q8',
+          type: 'multiple-choice',
+          question: 'What is specific speed (Ns) in pump selection, and why is it the most important parameter for choosing the type of pump impeller?',
+          options: [
+            'Ns = N√Q/H^(3/4) — it is a dimensionless (or quasi-dimensionless) parameter that characterizes the pump geometry. Low Ns = radial (centrifugal), medium Ns = mixed flow, high Ns = axial flow. It determines the optimal impeller shape for given conditions.',
+            'Ns is simply the pump rotational speed in RPM divided by the number of impeller vanes',
+            'Ns is the ratio of pump speed to fluid velocity, used to determine whether the pump cavitates',
+            'Ns has no physical significance — it is just a convenient way to catalog pump models'
+          ],
+          correctIndex: 0,
+          explanation: 'Specific speed Ns = N√Q/H^(3/4) (evaluated at the best efficiency point, BEP) characterizes the impeller shape required for optimal performance. Low Ns (500-4000 US units): high head, low flow → radial/centrifugal impellers (pressure buildup by centrifugal action in long, narrow passages). Medium Ns (4000-10000): moderate head and flow → mixed-flow impellers (combination of centrifugal and axial action). High Ns (10000-15000): low head, high flow → axial flow impellers (like propellers, lift-based). This is NOT arbitrary — it reflects fundamental fluid dynamics. High-head pumps need centrifugal force (∝ r²ω²), requiring wide impellers. High-flow pumps need large through-flow area, requiring axial geometry. Using a pump at the wrong specific speed guarantees poor efficiency.',
+          hint: 'Ns groups the required head, flow, and speed into a single parameter that dictates impeller geometry.'
+        },
+        {
+          id: 'u6-L4-Q9',
+          type: 'true-false',
+          question: 'A centrifugal pump can run safely at zero flow (dead-head condition) indefinitely, as long as the motor does not overload.',
+          correctAnswer: false,
+          explanation: 'Running a centrifugal pump at zero flow (dead-headed against a closed discharge valve) is extremely dangerous. All the energy input goes into heating the fluid (no flow to carry heat away), causing rapid temperature rise that can: (1) boil the fluid and cause cavitation, (2) damage the mechanical seal (which relies on a fluid film for cooling and lubrication), (3) warp the shaft and impeller from thermal expansion, (4) cause the casing to overpressure. Most pumps have a minimum continuous flow requirement (typically 10-30% of BEP flow) to ensure adequate cooling, prevent recirculation, and maintain stable operation. Protection methods include minimum flow recirculation lines, flow switches, and temperature sensors.',
+          hint: 'If no fluid flows through the pump, what happens to the energy the motor puts into the fluid?'
+        },
+        {
+          id: 'u6-L4-Q10',
+          type: 'multiple-choice',
+          question: 'A system requires 50 m of head at 100 L/s. The pump curve shows BEP at 55 m head and 95 L/s with 82% efficiency. Is this pump a good selection?',
+          options: [
+            'Yes — the duty point is within ±10% of BEP flow, and the pump provides slightly more head than required, leaving margin for system fouling. The efficiency is good for this size pump.',
+            'No — the pump does not provide exactly 50 m at exactly 100 L/s, so it is incorrectly sized',
+            'No — the pump provides too much head (55 m vs. 50 m required), wasting 10% of the energy',
+            'More information is needed — pump selection cannot be done without knowing the NPSH values'
+          ],
+          correctIndex: 0,
+          explanation: 'This is a good pump selection. Key criteria: (1) The duty point (50 m at 100 L/s) is close to the BEP (55 m at 95 L/s) — within the recommended 80-110% of BEP flow range. Operating far from BEP causes vibration, cavitation, and bearing damage. (2) The pump provides more head than the minimum required (55 > 50 m), which is necessary because systems foul over time, increasing friction losses. (3) Efficiency of 82% is good (typical range for this size: 70-88%). (4) The excess head (5 m) will be absorbed by the system — the actual operating point is where the pump curve intersects the system curve, which would be at approximately 100 L/s and 50 m. However, NPSH verification (option D) should indeed be checked separately.',
+          hint: 'Should a pump operate at exactly its BEP, or is some margin acceptable and even desirable?'
+        },
+        {
+          id: 'u6-L4-Q11',
+          type: 'multiple-choice',
+          question: 'What is the system curve for a pipe system, and how is it constructed?',
+          options: [
+            'H_system = H_static + K × Q² — it is the total head the system requires at each flow rate, combining the fixed elevation/pressure difference (static head) with the flow-dependent friction losses. It is a parabola offset by the static head.',
+            'The system curve is the pump manufacturer\'s performance curve showing head vs. flow rate',
+            'The system curve is a straight line because head loss is proportional to flow rate',
+            'The system curve shows how the pipe diameter changes along the system length'
+          ],
+          correctIndex: 0,
+          explanation: 'The system curve H_system = H_static + (f × L/(D × 2g × A²) + ΣK/(2g × A²)) × Q² has two components: (1) Static head (H_static) — the elevation difference between discharge and suction reservoirs plus any pressure difference (constant, independent of Q). This is the y-intercept of the system curve. (2) Dynamic head — the friction and minor losses that increase with Q². The system curve is a parabola starting at H_static when Q = 0. The pump operating point is where the pump curve (from the manufacturer) crosses this system curve. If the system ages (fouling, roughness increase), the system curve steepens, shifting the operating point to lower flow and higher head.',
+          hint: 'What total head must the pump provide? Split it into a fixed part and a flow-dependent part.'
+        },
+        {
+          id: 'u6-L4-Q12',
+          type: 'multiple-choice',
+          question: 'Why do positive displacement pumps require a pressure relief valve on the discharge side?',
+          options: [
+            'PD pumps deliver a nearly constant flow regardless of discharge pressure — if the discharge is blocked, pressure rises indefinitely (limited only by motor power and structural failure), potentially bursting pipes or destroying the pump',
+            'The relief valve prevents air from entering the pump suction',
+            'PD pumps generate pulsating flow, and the relief valve smooths the pressure pulsations',
+            'The relief valve is only needed during startup to prevent water hammer'
+          ],
+          correctIndex: 0,
+          explanation: 'This is a fundamental safety difference between centrifugal and PD pumps. A centrifugal pump has a natural pressure limit — at zero flow (dead-head), it generates a maximum shut-off head and the power drops. A PD pump has NO such natural limit — it physically displaces a fixed volume per revolution, and if the outlet is blocked, pressure continues to rise until something gives: the motor stalls, a pipe bursts, or the pump casing fails. A properly sized relief valve limits maximum pressure to a safe value by diverting flow back to the suction side. This valve is NOT optional — it is an essential safety device. Some PD pump types (like diaphragm pumps) have built-in relief, but external relief valves are still recommended.',
+          hint: 'What happens to a pump that delivers a fixed volume per revolution when the outlet is completely blocked?'
+        },
+        {
+          id: 'u6-L4-Q13',
+          type: 'true-false',
+          question: 'The affinity laws for pumps assume that the pump efficiency remains constant when the speed changes.',
+          correctAnswer: true,
+          explanation: 'The affinity laws are derived from dimensional analysis assuming geometric and dynamic similarity, which implies that the efficiency at corresponding operating points remains the same. In practice, this is approximately true for speed changes of ±20-30% from the design speed. At very low speeds, Reynolds number effects reduce efficiency (thicker boundary layers on the impeller), and at very high speeds, cavitation may occur. Also, the affinity laws apply exactly only when comparing the same "point" on the pump curve (e.g., BEP). For large speed changes, the actual pump curve shape may shift slightly, and the efficiency does change — but for the moderate speed variations typical of VFD applications, the constant-efficiency assumption is a good engineering approximation.',
+          hint: 'The affinity laws come from dimensional analysis — what assumptions about the flow patterns does this imply?'
+        },
+        {
+          id: 'u6-L4-Q14',
+          type: 'multiple-choice',
+          question: 'An engineer needs to increase flow rate by 50% in an existing system. Should they add a pump in parallel or in series?',
+          options: [
+            'Parallel — adding a pump in parallel approximately doubles the flow capacity at the same head. Series would approximately double the head at the same flow. Since the goal is more flow, parallel is correct.',
+            'Series — adding a pump in series doubles the flow rate through both pumps',
+            'Either option gives the same result — parallel and series are equivalent',
+            'Neither — the existing pump speed should be increased by 50% instead'
+          ],
+          correctIndex: 0,
+          explanation: 'Parallel pumps add FLOW at a given head, while series pumps add HEAD at a given flow. For a 50% flow increase, parallel is the correct choice. However, the actual flow increase from adding a parallel pump depends on the system curve. If the system curve is steep (high friction), adding a parallel pump yields less than 2× flow because the system requires more head at higher flow. If the system curve is flat (dominated by static head), the benefit is closer to 2×. Important considerations: (1) parallel pumps need check valves to prevent backflow through the non-running pump, (2) both pumps should have similar shutoff heads to prevent one pump from deadheading the other, (3) the system must be able to handle the increased flow rate.',
+          hint: 'What do parallel pumps add — flow or head? What do series pumps add?'
+        },
+        {
+          id: 'u6-L4-Q15',
+          type: 'multiple-choice',
+          question: 'What is pump cavitation, and what are the audible and mechanical symptoms?',
+          options: [
+            'Cavitation is the formation and violent collapse of vapor bubbles in low-pressure regions of the pump. Symptoms include crackling/gravel-like noise, vibration, pitting damage on impeller surfaces, reduced head and flow, and eventual impeller destruction.',
+            'Cavitation is the formation of air bubbles due to leaks in the suction piping',
+            'Cavitation is a bearing failure that produces a grinding noise',
+            'Cavitation only occurs in very high-speed pumps (above 5000 RPM)'
+          ],
+          correctIndex: 0,
+          explanation: 'Cavitation occurs when the local pressure inside the pump (particularly at the impeller inlet/eye where velocity is highest and pressure lowest) drops below the vapor pressure of the liquid. Vapor bubbles form in the low-pressure zone, are carried by the flow to higher-pressure regions (further along the impeller vanes), and collapse violently. Each collapse generates a microscopic liquid jet at velocities up to 500 m/s and pressures up to 1 GPa, causing erosion (pitting) of the impeller surface. The characteristic sound is like pumping gravel — distinctly different from bearing noise or cavitation. Performance effects include a drop in head and flow, increased vibration, and unstable operation. Prevention: ensure NPSH_A > NPSH_R + safety margin.',
+          hint: 'What happens when liquid pressure drops below vapor pressure inside the pump?'
+        },
+        {
+          id: 'u6-L4-Q16',
+          type: 'fill-blank',
+          question: 'The pump _____ laws state that flow is proportional to speed, head to speed squared, and power to speed cubed.',
+          acceptedAnswers: ['affinity', 'Affinity', 'AFFINITY', 'similarity', 'Similarity'],
+          explanation: 'The pump affinity laws (also called similarity laws or fan laws) are: Q₂/Q₁ = N₂/N₁ (flow ∝ speed), H₂/H₁ = (N₂/N₁)² (head ∝ speed²), P₂/P₁ = (N₂/N₁)³ (power ∝ speed³). These laws also apply when changing impeller diameter (at constant speed): Q₂/Q₁ = D₂/D₁, H₂/H₁ = (D₂/D₁)², P₂/P₁ = (D₂/D₁)³. They are derived from dimensional analysis and apply to all turbomachinery (pumps, fans, blowers, turbines) as long as geometric and dynamic similarity is maintained. The cubic power law is especially impactful — it means that a Variable Frequency Drive (VFD) can achieve enormous energy savings by matching pump speed to actual demand.',
+          hint: 'These laws relate pump performance at different speeds and are used extensively with VFDs.'
+        },
+        {
+          id: 'u6-L4-Q17',
+          type: 'multiple-choice',
+          question: 'A Francis turbine, a Pelton wheel, and a Kaplan turbine are all hydraulic turbines. How does specific speed determine which type is selected?',
+          options: [
+            'Pelton wheel: low specific speed (high head, low flow — e.g., mountain hydropower). Francis: medium specific speed (moderate head and flow — most common). Kaplan: high specific speed (low head, high flow — e.g., river run-of-river plants).',
+            'All three turbines work at any specific speed — selection depends only on the manufacturer',
+            'Pelton wheels are for large rivers, Kaplan for mountain streams, and Francis for tidal power',
+            'The selection is based on turbine cost, not specific speed'
+          ],
+          correctIndex: 0,
+          explanation: 'Turbine type selection follows the same specific speed logic as pumps (but in reverse — turbines extract energy). Pelton wheel (impulse turbine): Ns < 70 (US units). Used for high-head (300-1800 m), low-flow sites like alpine hydropower. Water exits nozzles as high-velocity jets striking buckets. Francis turbine (reaction): Ns = 70-300. The most versatile and common type, used for medium heads (30-300 m). Water flows radially inward through guide vanes and exits axially. Kaplan turbine (reaction, propeller type): Ns > 300. Used for low-head (2-40 m), high-flow sites like river dams. Adjustable blade angles maintain efficiency at varying flows. The specific speed matching is fundamental — a Pelton wheel at low head would spin impossibly slowly, and a Kaplan at high head would exceed material stress limits.',
+          hint: 'Think about the physical design requirements: high head needs impulse action, high flow needs large through-flow area.'
+        },
+        {
+          id: 'u6-L4-Q18',
+          type: 'multiple-choice',
+          question: 'What is the Best Efficiency Point (BEP) of a pump, and why is it critical for reliable long-term operation?',
+          options: [
+            'BEP is the flow rate and head where the pump operates at maximum hydraulic efficiency. At BEP, hydraulic forces are balanced, vibration is minimum, bearing life is maximum, and energy cost is lowest. Operating far from BEP shortens pump life dramatically.',
+            'BEP is the maximum flow rate the pump can deliver regardless of efficiency',
+            'BEP is the shutoff head condition where the pump generates maximum pressure',
+            'BEP is a theoretical point that does not correspond to any real operating condition'
+          ],
+          correctIndex: 0,
+          explanation: 'The BEP represents the design intent of the pump — the flow and head where the impeller geometry is optimally matched to the flow pattern. At BEP: (1) efficiency is maximum (minimum energy wasted), (2) hydraulic radial forces on the impeller are balanced (minimum bearing load and shaft deflection), (3) vibration and noise are minimum, (4) recirculation is absent. Operating at less than ~70% or more than ~120% of BEP flow causes: recirculation at low flow (vortices, vibration, cavitation), high radial thrust (bearing failure), and cavitation at high flow (NPSH increases with Q). The recommended operating range is typically 80-110% of BEP flow. Pump reliability studies show that pumps operating at <60% BEP flow have bearing life reduced by up to 95%.',
+          hint: 'Consider what happens to the forces, vibration, and efficiency when a pump operates away from its design point.'
+        },
+        {
+          id: 'u6-L4-Q19',
+          type: 'true-false',
+          question: 'NPSH_Available must always be greater than NPSH_Required for a pump to operate without cavitation.',
+          correctAnswer: true,
+          explanation: 'This is the fundamental cavitation prevention criterion: NPSH_A > NPSH_R. NPSH_A is a property of the SYSTEM (piping layout, elevation, fluid temperature) calculated by the engineer: NPSH_A = (P_surface − P_vapor)/(ρg) − z_s − h_f,suction. NPSH_R is a property of the PUMP, determined by the manufacturer through testing (the NPSH at which head drops by 3%). In practice, engineers apply a safety margin: NPSH_A should exceed NPSH_R by at least 0.5-1.0 m or 10-20%, whichever is greater. Methods to increase NPSH_A include: lowering the pump (reducing z_s), shortening/enlarging the suction pipe (reducing h_f), pressurizing the suction tank, and subcooling the fluid (reducing P_vapor).',
+          hint: 'What happens if the available suction head drops below what the pump requires?'
+        },
+        {
+          id: 'u6-L4-Q20',
+          type: 'multiple-choice',
+          question: 'A pump is running at 1750 RPM and delivers 200 L/s at 30 m head. If the speed is reduced to 1400 RPM using a VFD, what are the new flow, head, and power (as a percentage of original)?',
+          options: [
+            'Q₂ = 160 L/s (80%), H₂ = 19.2 m (64%), P₂ = 51.2% of original — using the affinity laws with N₂/N₁ = 0.8',
+            'Q₂ = 160 L/s (80%), H₂ = 24 m (80%), P₂ = 80% of original — all three scale linearly',
+            'Q₂ = 128 L/s (64%), H₂ = 19.2 m (64%), P₂ = 51.2% of original',
+            'Q₂ = 200 L/s, H₂ = 30 m, P₂ = 100% — flow does not change with speed'
+          ],
+          correctIndex: 0,
+          explanation: 'Speed ratio N₂/N₁ = 1400/1750 = 0.8. Applying affinity laws: Q₂ = Q₁ × (N₂/N₁) = 200 × 0.8 = 160 L/s. H₂ = H₁ × (N₂/N₁)² = 30 × 0.64 = 19.2 m. P₂ = P₁ × (N₂/N₁)³ = P₁ × 0.512. A 20% speed reduction saves nearly 49% of the power! This dramatic energy saving is why VFDs are one of the most cost-effective energy efficiency measures in industrial and HVAC systems. The key insight: if you only need 80% flow, reducing speed saves 49% power, whereas throttling a constant-speed pump to 80% flow might save only 15-20% (the pump still produces the same head, and the excess is wasted across the valve).',
+          hint: 'Apply Q ∝ N, H ∝ N², P ∝ N³ with the speed ratio of 1400/1750 = 0.8.'
+        },
+        {
+          id: 'u6-L4-Q21',
+          type: 'multiple-choice',
+          question: 'What is the function of a volute casing in a centrifugal pump?',
+          options: [
+            'The volute is a spiral-shaped casing that converts the high-velocity kinetic energy of fluid leaving the impeller into pressure (static head) through a gradually expanding cross-section — it acts as a diffuser.',
+            'The volute is a cylindrical housing that simply contains the impeller and prevents leakage',
+            'The volute is a device that prevents cavitation by increasing the suction pressure',
+            'The volute creates additional velocity by accelerating the flow as it exits the pump'
+          ],
+          correctIndex: 0,
+          explanation: 'The centrifugal pump impeller throws fluid outward at high velocity and relatively low pressure. The volute\'s increasing cross-sectional area (spiral shape) decelerates this high-velocity flow, converting kinetic energy to pressure (Bernoulli\'s principle). This is similar to a diffuser. Without the volute, the high-velocity fluid would exit the impeller and most of its kinetic energy would be wasted. The volute also collects flow from around the entire impeller circumference and directs it toward the discharge nozzle. The spiral geometry creates a non-uniform pressure distribution around the impeller, which generates a radial force on the shaft — this "radial thrust" is minimum at BEP and increases at off-design conditions. Some pumps use a diffuser ring (vaned diffuser) instead of a volute for more efficient energy conversion.',
+          hint: 'As the cross-sectional area of the volute increases, what happens to fluid velocity and pressure?'
+        },
+        {
+          id: 'u6-L4-Q22',
+          type: 'multiple-choice',
+          question: 'What is the difference between a single-stage and multi-stage centrifugal pump, and when is each used?',
+          options: [
+            'A single-stage pump has one impeller and produces limited head. Multi-stage pumps have multiple impellers in series on the same shaft, each adding head. Multi-stage pumps are used for high-head applications like boiler feed, high-rise building water supply, and pipeline boosting.',
+            'Multi-stage pumps have multiple impellers in parallel, each adding flow',
+            'Single-stage pumps are for liquids; multi-stage are for gases only',
+            'The number of stages refers to the number of suction nozzles, not impellers'
+          ],
+          correctIndex: 0,
+          explanation: 'In a multi-stage pump, the discharge of one impeller feeds directly into the suction of the next (in series). Each stage adds its head to the total: H_total = n × H_stage. A 10-stage pump with 30 m per stage delivers 300 m total head. This is far more efficient than using a single large impeller, which would require extremely high tip speeds (and associated stress and cavitation problems). Applications: boiler feed pumps (500-2000 m head), high-rise buildings (10-50 stages for 300+ m buildings), reverse osmosis desalination (55-80 bar pressure), pipeline booster stations, and deep-well submersible pumps. The trade-off: multi-stage pumps are longer, more complex, and more expensive than single-stage pumps.',
+          hint: 'When very high pressure is needed, how can multiple impellers be arranged to achieve it?'
+        },
+        {
+          id: 'u6-L4-Q23',
+          type: 'true-false',
+          question: 'The power consumed by a centrifugal pump always decreases as the flow rate decreases, making it safe to throttle the pump to any flow rate.',
+          correctAnswer: false,
+          explanation: 'For most centrifugal pumps, power does decrease somewhat with decreasing flow, but: (1) the decrease is not linear — some pump types (high specific speed, axial flow) actually have INCREASING power at low flow (power curve slopes upward to the left), creating overload risk at low flow. (2) Even if power decreases, operating at very low flow is still unsafe because the fluid recirculates inside the impeller, heating up (all power becomes heat with no flow to carry it away), causing temperature rise, seal damage, and potential vaporization. (3) Radial thrust increases dramatically at low flow, damaging bearings and seals. Most pumps have a minimum continuous stable flow specification (typically 10-30% of BEP) that must not be violated.',
+          hint: 'Consider what happens to the energy input when there is very little flow to absorb it.'
+        },
+        {
+          id: 'u6-L4-Q24',
+          type: 'multiple-choice',
+          question: 'What is the purpose of wear rings in a centrifugal pump?',
+          options: [
+            'Wear rings are replaceable rings that create a close clearance between the impeller and casing to minimize internal recirculation (leakage from high-pressure discharge back to low-pressure suction), maintaining pump efficiency.',
+            'Wear rings protect the shaft from corrosion in aggressive chemical service',
+            'Wear rings balance the axial thrust on the impeller',
+            'Wear rings seal the pump from external leakage to the environment'
+          ],
+          correctIndex: 0,
+          explanation: 'There is always a pressure difference between the discharge side and suction side of the impeller. Without a close clearance seal, high-pressure fluid leaks back to the suction, reducing the effective flow rate and efficiency. Wear rings (typically installed on both the impeller eye and the casing) create a small clearance (typically 0.2-0.5 mm) that restricts this internal leakage. Over time, erosion (from the high-velocity leakage flow) and corrosion increase the clearance, increasing leakage and reducing efficiency — a typical loss is 1% efficiency per 0.1 mm increase in clearance. Wear rings are designed to be REPLACEABLE (they are the sacrificial component), so the expensive impeller and casing are protected. Recommended replacement is when clearance doubles from initial value.',
+          hint: 'What happens if fluid can leak from the high-pressure discharge side back to the low-pressure suction side?'
+        },
+        {
+          id: 'u6-L4-Q25',
+          type: 'fill-blank',
+          question: 'The curve showing the relationship between head and flow rate for a pump at a given speed is called the pump _____ curve.',
+          acceptedAnswers: ['performance', 'Performance', 'PERFORMANCE', 'characteristic', 'Characteristic', 'H-Q', 'HQ'],
+          explanation: 'The pump performance curve (also called the characteristic curve or H-Q curve) shows head vs. flow rate at a constant speed. It is generated by the manufacturer through testing. A typical centrifugal pump curve slopes downward from left (high head, zero flow = shutoff) to right (low head, high flow = runout). The curve also typically includes efficiency and power curves at the same speed. Multiple curves at different speeds may be shown on the same plot (pump family curves). The operating point is where this pump curve intersects the system curve. Understanding how to read and apply pump curves is an essential skill for any engineer involved in fluid system design.',
+          hint: 'This manufacturer-provided curve shows how head varies with flow rate at a given pump speed.'
+        },
+        {
+          id: 'u6-L4-Q26',
+          type: 'multiple-choice',
+          question: 'A pump manufacturer specifies an impeller diameter range of 200-250 mm for a given pump casing. What happens to the pump performance curve when the impeller is trimmed (reduced in diameter)?',
+          options: [
+            'Trimming reduces both head and flow proportionally (H ∝ D², Q ∝ D from affinity laws), shifting the entire curve downward and to the left. This is used to match the pump more closely to the system requirements without changing the casing.',
+            'Trimming only reduces the head; flow rate remains unchanged',
+            'Trimming increases efficiency because the smaller impeller has less friction',
+            'Trimming has no effect on performance — it only changes the physical size'
+          ],
+          correctIndex: 0,
+          explanation: 'Impeller trimming follows the affinity laws for diameter changes (at constant speed): Q₂/Q₁ = D₂/D₁, H₂/H₁ = (D₂/D₁)². Trimming from 250 to 225 mm (10% reduction): Q drops 10%, H drops 19%. This shifts the entire pump curve down and left. Trimming is commonly used when the selected pump is slightly oversized for the application — rather than buying a different pump, the impeller is turned down on a lathe to match the system. However, trimming limits: (1) typically limited to ~75-80% of maximum diameter, (2) large trims change the impeller geometry significantly, invalidating the affinity laws, (3) efficiency may decrease with excessive trimming. Modern approach: VFDs offer more flexibility than trimming.',
+          hint: 'Apply the affinity laws with D₂/D₁ instead of N₂/N₁. How do Q, H, and P change?'
+        },
+        {
+          id: 'u6-L4-Q27',
+          type: 'multiple-choice',
+          question: 'What is pump priming, and why do centrifugal pumps require it while positive displacement pumps generally do not?',
+          options: [
+            'Priming fills the pump and suction line with liquid before starting. Centrifugal pumps cannot generate enough suction to lift liquid if filled with air (centrifugal force on air is negligible due to low density). PD pumps create a true vacuum through mechanical displacement, drawing liquid in.',
+            'Priming is the process of aligning the pump shaft before first startup',
+            'Priming adds lubricant to the pump bearings before operation',
+            'All pump types require priming — there is no difference between centrifugal and PD pumps'
+          ],
+          correctIndex: 0,
+          explanation: 'A centrifugal pump develops pressure by spinning fluid at high speed — the pressure rise is proportional to fluid density (ΔP = ρω²r²/2). Air is ~800× less dense than water, so a pump full of air generates only ~800th of its rated pressure — far too little to lift water from below. Without priming, the pump just spins air uselessly. Solutions: (1) self-priming pump designs (recirculating design that traps some liquid), (2) flooded suction (pump below liquid level — most reliable), (3) vacuum pump or ejector to evacuate air, (4) foot valve on suction pipe to retain liquid. Positive displacement pumps physically expand a cavity (creating vacuum) and contract it (pushing fluid out), which works regardless of the fluid density — they can pump both air and liquid.',
+          hint: 'What happens when a centrifugal pump tries to spin air instead of liquid? How much pressure does it develop?'
+        },
+        {
+          id: 'u6-L4-Q28',
+          type: 'true-false',
+          question: 'The shutoff head of a centrifugal pump (head at zero flow) is the maximum head the pump can produce, and operating at shutoff for extended periods is a common way to build up system pressure.',
+          correctAnswer: false,
+          explanation: 'While the shutoff head IS the maximum head the pump produces, operating at shutoff is extremely dangerous and should never be done intentionally. At zero flow: (1) all motor power converts to heat in the trapped liquid, causing rapid temperature rise (potentially to boiling), (2) mechanical seals overheat without cooling flow, (3) the impeller experiences maximum radial thrust, overloading bearings, (4) recirculation in the impeller causes vibration and erosion. Most pump standards specify a maximum time at shutoff (often < 30 seconds). To build system pressure, allow the pump to operate at some flow (even minimum flow through a bypass) while the system fills. Shutoff should only occur momentarily during valve transitions.',
+          hint: 'What happens to the energy input when a pump runs with zero flow output?'
+        },
+        {
+          id: 'u6-L4-Q29',
+          type: 'multiple-choice',
+          question: 'What is the role of a suction-specific speed (Nss) in pump design?',
+          options: [
+            'Nss = N√Q/(NPSH_R)^(3/4) — it characterizes the suction capability of the pump impeller. High Nss means the pump can operate with low NPSH_R but may be prone to suction recirculation at off-design flow rates. Typical safe limit: Nss < 8500-11000 (US units).',
+            'Nss is the minimum speed at which the pump can operate without stalling',
+            'Nss is the speed at which cavitation begins, regardless of NPSH',
+            'Nss is only relevant for positive displacement pumps'
+          ],
+          correctIndex: 0,
+          explanation: 'Suction-specific speed Nss = N√Q_BEP/(NPSH_R)^(3/4) is analogous to specific speed but focused on the suction end of the pump. It indicates how aggressively the impeller inlet is designed. High Nss (> 11,000 US units) means the impeller has large inlet area and low NPSH_R — good for difficult suction conditions (hot liquids, high elevations). However, high-Nss impellers have a narrow stable operating range: at reduced flow, the oversized inlet causes suction recirculation (reverse flow at the impeller eye), leading to vibration, noise, and damage. This is the "NPSH_R-reliability trade-off" — designing for very low NPSH_R sacrifices operating range stability. Safe design practice limits Nss to 8500-11000 for most applications.',
+          hint: 'This parameter trades off suction performance against operating range stability.'
+        },
+        {
+          id: 'u6-L4-Q30',
+          type: 'multiple-choice',
+          question: 'A pump efficiency of 75% means 25% of the input power is lost. Where do these losses occur in a centrifugal pump?',
+          options: [
+            'Losses are split into three categories: hydraulic losses (~10-15%, friction in impeller passages and volute), volumetric losses (~2-5%, internal leakage past wear rings), and mechanical losses (~3-8%, bearing friction, seal friction, disc friction)',
+            'All 25% is lost as heat in the motor, not in the pump itself',
+            'All 25% is lost as noise and vibration',
+            'The losses occur only at the pump discharge nozzle as a pressure drop'
+          ],
+          correctIndex: 0,
+          explanation: 'Pump efficiency η = η_hydraulic × η_volumetric × η_mechanical. Hydraulic losses: friction in impeller passages, flow separation, incidence losses at vane entry, and diffusion losses in the volute — these convert useful pressure energy to heat in the fluid. Volumetric losses: internal leakage from high-pressure to low-pressure zones (past wear rings, balance holes) — flow that recirculates without doing useful work. Mechanical losses: bearing friction, mechanical seal friction, and disc friction (the impeller disc spinning in fluid creates parasitic drag). The relative magnitude of each loss component depends on pump size and specific speed. Large pumps (> 100 kW) have higher efficiency (80-92%) because volumetric and mechanical losses become proportionally smaller.',
+          hint: 'Pump losses can be classified by where in the pump they occur. What are the three main locations?'
         }
       ]
     },
@@ -422,6 +1579,300 @@ export const unit6: Unit = {
           acceptedAnswers: ['similitude', 'Similitude', 'dynamic similitude', 'Dynamic similitude', 'complete similitude'],
           explanation: 'Similitude encompasses three levels: geometric (same shape ratios), kinematic (same velocity/acceleration ratios), and dynamic (same force ratios). Complete or dynamic similitude requires all relevant dimensionless numbers to match between model and prototype. In practice, only the most important dimensionless numbers are matched, as complete similitude is often impossible with scale models.',
           hint: 'This term describes the complete similarity between a model and its prototype.'
+        },
+        {
+          id: 'u6-L5-Q7',
+          type: 'multiple-choice',
+          question: 'What is the Buckingham Pi theorem, and how do you determine the number of dimensionless groups?',
+          options: [
+            'If a physical problem involves n variables and k fundamental dimensions (M, L, T, etc.), then the problem can be expressed using (n − k) independent dimensionless groups (Pi groups). These groups completely describe the physics.',
+            'The number of Pi groups equals the number of variables n — every variable becomes its own group',
+            'The number of Pi groups equals the number of fundamental dimensions k',
+            'The theorem states that all physical equations must have the same dimensions on both sides, but does not specify the number of groups'
+          ],
+          correctIndex: 0,
+          explanation: 'The Buckingham Pi theorem (1914) is the foundation of dimensional analysis. Given n variables and k fundamental dimensions, the number of independent dimensionless groups is n − k (provided the k repeating variables are chosen to be dimensionally independent, i.e., no subset of them forms a dimensionless group). For example, drag on a sphere depends on: F_D, V, D, ρ, μ (5 variables, 3 dimensions M, L, T), giving 5 − 3 = 2 Pi groups: C_D = F_D/(½ρV²A) and Re = ρVD/μ. Thus C_D = f(Re) — a function of just one variable, not four. This massive simplification is what makes engineering correlations possible.',
+          hint: 'Count the variables (n) and the fundamental dimensions (k). The Pi groups number is the difference.'
+        },
+        {
+          id: 'u6-L5-Q8',
+          type: 'multiple-choice',
+          question: 'What are repeating variables in the Buckingham Pi method, and what rules govern their selection?',
+          options: [
+            'Repeating variables appear in every Pi group and are chosen to: (1) include all fundamental dimensions among them, (2) not form a dimensionless group themselves, and (3) typically be independent variables (not the dependent variable). Common choices are ρ, V, D or ρ, N, D.',
+            'Repeating variables are the variables that have the same dimensions — duplicates that can be removed',
+            'Repeating variables are the dimensionless groups themselves',
+            'Any variables can be chosen as repeating variables — there are no rules'
+          ],
+          correctIndex: 0,
+          explanation: 'The selection of repeating variables is the key step in the Buckingham Pi method. You choose k (number of fundamental dimensions) repeating variables that: (1) collectively contain all the fundamental dimensions in the problem, (2) do not themselves form a dimensionless group (they must be dimensionally independent), (3) should NOT include the dependent variable (the quantity you want to predict). Good choices typically include a length (D or L), a velocity or speed (V or N), and a fluid property (ρ or μ). Each remaining (non-repeating) variable is then combined with the repeating variables to form one Pi group. The final result is independent of which repeating variables are chosen (different choices give different but equivalent Pi groups).',
+          hint: 'How many repeating variables do you need, and what must they collectively represent?'
+        },
+        {
+          id: 'u6-L5-Q9',
+          type: 'true-false',
+          question: 'Dimensional analysis can determine the exact functional relationship between dimensionless groups — for example, it can tell you that C_D = 24/Re for Stokes drag on a sphere.',
+          correctAnswer: false,
+          explanation: 'Dimensional analysis can only tell you WHICH dimensionless groups are involved and that a functional relationship exists (e.g., C_D = f(Re)). It CANNOT determine the form of the function f. The relationship C_D = 24/Re for Stokes drag comes from solving the Navier-Stokes equations analytically at low Re — a theoretical result, not a dimensional analysis result. Similarly, the Moody chart relationship f = f(Re, ε/D) is known from dimensional analysis, but the actual curves come from experiments (Nikuradse, Colebrook). Dimensional analysis is a framework for organizing variables, not a physics solver.',
+          hint: 'Can dimensional analysis alone tell you the shape of a curve, or just what axes to plot?'
+        },
+        {
+          id: 'u6-L5-Q10',
+          type: 'multiple-choice',
+          question: 'The drag on a sphere in a flow depends on velocity V, diameter D, fluid density ρ, and viscosity μ. Using dimensional analysis, derive the dimensionless groups.',
+          options: [
+            'n = 5 variables (F_D, V, D, ρ, μ), k = 3 dimensions (M, L, T), giving 2 Pi groups: π₁ = F_D/(ρV²D²) (drag coefficient) and π₂ = ρVD/μ (Reynolds number). So C_D = f(Re).',
+            '3 Pi groups: F_D/ρ, V/D, and μ/ρ — each variable becomes its own group',
+            '1 Pi group: all variables combine into a single universal constant',
+            '4 Pi groups because there are 4 independent variables plus the dependent variable'
+          ],
+          correctIndex: 0,
+          explanation: 'Step by step: (1) List variables: F_D [MLT⁻²], V [LT⁻¹], D [L], ρ [ML⁻³], μ [ML⁻¹T⁻¹]. n = 5. (2) Fundamental dimensions: M, L, T. k = 3. (3) Number of Pi groups: n − k = 2. (4) Choose repeating variables (containing all dimensions): ρ, V, D. (5) Form Pi groups with each remaining variable: π₁ = F_D × ρᵃVᵇDᶜ, solve for a, b, c to make dimensionless → π₁ = F_D/(ρV²D²). π₂ = μ × ρᵃVᵇDᶜ → π₂ = μ/(ρVD) = 1/Re. (6) Result: C_D = f(Re). This is why drag data for spheres of ALL sizes in ALL fluids collapse onto a single C_D vs. Re curve.',
+          hint: 'Count variables (n = 5) and dimensions (k = 3). How many Pi groups? Choose ρ, V, D as repeating variables.'
+        },
+        {
+          id: 'u6-L5-Q11',
+          type: 'multiple-choice',
+          question: 'What is dimensional homogeneity, and how can it be used to check engineering equations?',
+          options: [
+            'Every term in a valid physical equation must have the same dimensions. If any term has different dimensions, the equation is wrong. This provides a quick check on derived or remembered equations — if dimensions do not balance, the equation contains an error.',
+            'Dimensional homogeneity means all variables must be in SI units',
+            'It means all terms must be dimensionless',
+            'It means the equation must be linear in all variables'
+          ],
+          correctIndex: 0,
+          explanation: 'Dimensional homogeneity is a fundamental requirement: you cannot add meters to seconds or equate force to velocity. Every term in a valid equation must have identical dimensions. For example, in Bernoulli: P [Pa = kg/(m·s²)] + ½ρV² [kg/m³ × m²/s² = kg/(m·s²)] + ρgz [kg/m³ × m/s² × m = kg/(m·s²)] — all terms have dimensions of pressure. This principle: (1) catches algebraic errors (if your answer has wrong dimensions, it is wrong), (2) guides equation derivation (the form of equations is constrained by dimensions), (3) helps remember formulas (if you are unsure whether it is ρgh or ρg/h, check dimensions). It does NOT verify numerical coefficients (2π vs. π) or sign conventions, but it catches most common errors.',
+          hint: 'What happens if you try to add a length to a time? Can a valid equation do this?'
+        },
+        {
+          id: 'u6-L5-Q12',
+          type: 'multiple-choice',
+          question: 'What is the Mach number, and at what Mach number does compressibility become important?',
+          options: [
+            'Ma = V/c (ratio of flow velocity to speed of sound). Compressibility effects become significant above Ma ≈ 0.3 (density changes > 5%). Below Ma = 0.3, flow can be treated as incompressible regardless of whether the fluid is a gas.',
+            'Ma = V/c, and compressibility is always important for any gas flow regardless of Mach number',
+            'Ma = V²/c², and the critical value is Ma = 1.0',
+            'Ma is only relevant for supersonic flows — subsonic flows are always incompressible'
+          ],
+          correctIndex: 0,
+          explanation: 'The Mach number Ma = V/c compares flow velocity to the speed of sound c = √(γRT) for ideal gases. At Ma < 0.3, density changes are less than ~5% and the flow can be treated as incompressible (Bernoulli applies). At Ma > 0.3, compressibility effects (density changes, shock waves, choking) become significant and compressible flow equations are required. At Ma = 1.0 (sonic), flow can choke in nozzles. At Ma > 1.0 (supersonic), shock waves form. For air at sea level, c ≈ 343 m/s, so Ma = 0.3 corresponds to ~103 m/s (~370 km/h). Most pipe flows, HVAC systems, and low-speed aerodynamics are well below this, justifying the incompressible assumption. High-speed aerodynamics, jet engines, and gas pipeline flows require compressible analysis.',
+          hint: 'At what velocity ratio do density changes become too large to ignore?'
+        },
+        {
+          id: 'u6-L5-Q13',
+          type: 'true-false',
+          question: 'The Euler number (Eu = ΔP/(ρV²)) and the pressure coefficient (C_p = ΔP/(½ρV²)) differ only by a factor of 2 and both represent the ratio of pressure forces to inertial forces.',
+          correctAnswer: true,
+          explanation: 'Both the Euler number and pressure coefficient are dimensionless pressure ratios. Eu = ΔP/(ρV²) and C_p = ΔP/(½ρV²) = 2 × Eu. They both represent the dimensionless form of pressure, relating pressure differences to the dynamic pressure of the flow. The factor of ½ in C_p makes it more directly related to the dynamic pressure term in Bernoulli\'s equation (½ρV²). C_p is more commonly used in aerodynamics (where C_p = 1 at a stagnation point and C_p < 0 in accelerated regions), while the Euler number appears more in general dimensional analysis and pump/turbine characterization.',
+          hint: 'Compare the denominators of both definitions and see how they relate mathematically.'
+        },
+        {
+          id: 'u6-L5-Q14',
+          type: 'multiple-choice',
+          question: 'A wind tunnel test on a 1:10 scale car model uses Reynolds similarity (same fluid). If the full-scale car travels at 100 km/h, what speed must the model be tested at?',
+          options: [
+            '1000 km/h — from Re_model = Re_prototype, V_m = V_p × (L_p/L_m) = 100 × 10. This is impractical (nearly sonic), illustrating why exact Re matching is often impossible for small models.',
+            '10 km/h — the model speed scales down with the size',
+            '100 km/h — same speed as the prototype since we use the same fluid',
+            '316 km/h — the square root of the scale ratio times the prototype speed'
+          ],
+          correctIndex: 0,
+          explanation: 'For Reynolds similarity with the same fluid: Re_m = Re_p → V_m × L_m / ν = V_p × L_p / ν → V_m = V_p × (L_p/L_m) = 100 × 10 = 1000 km/h (278 m/s). This is approximately Mach 0.8 — well into the compressible flow regime, where the flow physics change completely! This demonstrates the fundamental challenge of scale model testing: small models need impractically high speeds to match Re. Solutions: (1) test at reduced Re and apply correction factors (most common for car testing), (2) use a pressurized wind tunnel (reduces ν, allowing lower V), (3) use a larger model (1:4 instead of 1:10), (4) test full-scale in a large wind tunnel. The automotive industry uses a mix of these approaches.',
+          hint: 'Set Re_model = Re_prototype and solve for V_model, remembering that L_model = L_prototype/10.'
+        },
+        {
+          id: 'u6-L5-Q15',
+          type: 'multiple-choice',
+          question: 'What is geometric similarity, and is it sufficient for valid model testing?',
+          options: [
+            'Geometric similarity means the model and prototype have the same shape — all corresponding lengths are in the same ratio (scale factor). It is necessary but NOT sufficient; kinematic and dynamic similarity are also needed for valid testing.',
+            'Geometric similarity means the model and prototype are the same physical size',
+            'Geometric similarity alone is sufficient for all model testing',
+            'Geometric similarity requires the model and prototype to be made of the same material'
+          ],
+          correctIndex: 0,
+          explanation: 'Geometric similarity requires every length on the model to be in the same ratio to the prototype: L_m/L_p = constant for ALL dimensions (length, width, height, roughness, clearances). This preserves shape but NOT flow behavior. For example, a geometrically similar 1:100 ship model has the right shape, but if tested at the wrong speed, the wave patterns (Froude), boundary layers (Reynolds), or both will be wrong, giving incorrect force predictions. Three levels of similarity: (1) Geometric — same shape ratios (necessary), (2) Kinematic — same velocity and acceleration ratios (requires matching streamline patterns), (3) Dynamic — same force ratios (requires matching relevant dimensionless numbers). Complete (dynamic) similarity ensures that forces scale correctly from model to prototype.',
+          hint: 'Is having the right shape enough to ensure the flow behaves the same way?'
+        },
+        {
+          id: 'u6-L5-Q16',
+          type: 'fill-blank',
+          question: 'The dimensionless number Fr = V/√(gL), which represents the ratio of inertial forces to gravitational forces, is called the _____ number.',
+          acceptedAnswers: ['Froude', 'froude', 'FROUDE'],
+          explanation: 'The Froude number Fr = V/√(gL) governs flows where gravity is the dominant restoring force: free-surface flows (ships, open channels, spillways), wave propagation, and flows with density stratification. Fr < 1 is subcritical (gravity waves can travel upstream — tranquil flow in open channels). Fr = 1 is critical (standing waves form). Fr > 1 is supercritical (flow is faster than wave speed — shooting flow in open channels, similar to supersonic in compressible flow). For ship design, Fr determines the wave-making resistance pattern. The Froude number is named after William Froude (1810-1879), a British engineer and hydrodynamicist who pioneered ship model testing.',
+          hint: 'This dimensionless number is critical for ship model testing and open channel flow.'
+        },
+        {
+          id: 'u6-L5-Q17',
+          type: 'multiple-choice',
+          question: 'A 1:20 scale model of a spillway is tested in a laboratory using Froude similarity. If the prototype flow rate is 500 m³/s, what flow rate should be used in the model?',
+          options: [
+            'Q_m = Q_p × λ^(5/2) = 500 × (1/20)^2.5 = 500/1789 ≈ 0.28 m³/s — flow rate scales as the scale ratio to the 5/2 power under Froude similarity',
+            'Q_m = Q_p × λ = 500/20 = 25 m³/s — flow rate scales linearly with the scale ratio',
+            'Q_m = Q_p × λ² = 500/400 = 1.25 m³/s — flow rate scales with area ratio',
+            'Q_m = Q_p = 500 m³/s — flow rate must be the same for valid testing'
+          ],
+          correctIndex: 0,
+          explanation: 'Under Froude similarity: velocity scales as V_m/V_p = √(L_m/L_p) = √λ (where λ = 1/20). Area scales as A_m/A_p = λ². Flow rate Q = VA, so Q_m/Q_p = √λ × λ² = λ^(5/2). For λ = 1/20: Q_m = 500 × (1/20)^2.5 = 500/(20^2.5) = 500/1788.9 ≈ 0.28 m³/s (280 L/s). This scaling extends to other quantities: forces scale as λ³ (since F = ρV²A ∝ λ × λ² = λ³), and time scales as √λ (since t = L/V ∝ λ/√λ = √λ). These scaling relationships allow engineers to convert model measurements to prototype predictions. For our example, a force of 1 N on the model corresponds to 20³ = 8000 N on the prototype.',
+          hint: 'Under Froude similarity, velocity scales as √λ and area scales as λ². How does Q = VA scale?'
+        },
+        {
+          id: 'u6-L5-Q18',
+          type: 'multiple-choice',
+          question: 'The Weber number (We = ρV²L/σ) governs phenomena involving surface tension. In which engineering applications is matching the Weber number important?',
+          options: [
+            'Spray atomization, fuel injection, ink-jet printing, droplet formation, and any process where the breakup of liquid sheets/jets into droplets is governed by the competition between inertial forces and surface tension',
+            'Only in microfluidics — Weber number is irrelevant for macro-scale engineering',
+            'Pipe flow design — surface tension affects friction factor in all pipes',
+            'Heat exchanger design — surface tension determines the heat transfer coefficient'
+          ],
+          correctIndex: 0,
+          explanation: 'The Weber number We = ρV²L/σ compares inertial (disrupting) forces to surface tension (stabilizing) forces. When We is large, inertia dominates and liquid structures break up into droplets; when We is small, surface tension holds the liquid together. Critical We values: a liquid jet breaks up at We ≈ 12, a droplet shatters upon impact at We > 80. Applications where We matching is important: (1) fuel injectors (diesel, gas turbine) — spray quality determines combustion efficiency, (2) spray coating and painting — droplet size determines coverage uniformity, (3) pesticide spraying — drift depends on droplet size, (4) rain erosion on turbine blades and aircraft, (5) ink-jet printing — droplet formation and satellite drop control. Weber number is usually unimportant in macro-scale pipe flow where surface tension forces are negligible compared to pressure and viscous forces.',
+          hint: 'Surface tension resists breakup of liquid surfaces. When does this competition with inertial forces matter?'
+        },
+        {
+          id: 'u6-L5-Q19',
+          type: 'true-false',
+          question: 'The Strouhal number (St = fL/V) is important for predicting vortex-induced vibration in structures exposed to fluid flow.',
+          correctAnswer: true,
+          explanation: 'The Strouhal number St = fL/V relates the vortex shedding frequency f to the flow velocity V and body characteristic length L. For a cylinder, St ≈ 0.2 over a wide range of Reynolds numbers (300 < Re < 10⁵), meaning vortices are shed at a predictable frequency f = 0.2V/D. If this shedding frequency matches a structural natural frequency, resonance (vortex-induced vibration, VIV) occurs, potentially causing fatigue failure. Famous example: the Tacoma Narrows Bridge collapse (1940) was partly attributed to vortex-induced oscillations. Engineers use the Strouhal number to predict shedding frequencies and ensure they do not coincide with structural modes. Mitigation: helical strakes on chimneys and offshore risers disrupt coherent vortex shedding.',
+          hint: 'Think about how periodic vortex shedding behind a bluff body can excite structural vibration.'
+        },
+        {
+          id: 'u6-L5-Q20',
+          type: 'multiple-choice',
+          question: 'When performing dimensional analysis, why is it important that the dependent variable (the output) is NOT chosen as a repeating variable?',
+          options: [
+            'If the dependent variable is a repeating variable, it appears in every Pi group, making it impossible to isolate the dependent variable as a function of the independent groups. The goal is π₁(dependent) = f(π₂, π₃, ...), which requires the dependent variable to appear in only ONE group.',
+            'The dependent variable must be excluded entirely from the analysis',
+            'Repeating variables must all be dimensionless, and the dependent variable usually has dimensions',
+            'There is no such rule — the dependent variable can be a repeating variable'
+          ],
+          correctIndex: 0,
+          explanation: 'The purpose of dimensional analysis is to express the dependent variable (what you want to predict, like drag force) as a function of independent variables (what you can control or measure). If the dependent variable is chosen as a repeating variable, it appears in EVERY Pi group: π₁ = f(π₂, π₃, ...) would have the dependent variable mixed into π₂ and π₃ as well, defeating the purpose. By keeping it as a non-repeating variable, it appears in exactly ONE Pi group (the one formed by combining it with the repeating variables), giving a clean result like C_D = f(Re, Ma) where C_D contains the drag force and Re, Ma contain only independent variables.',
+          hint: 'If the output variable appears in every group, can you solve for it as a function of the others?'
+        },
+        {
+          id: 'u6-L5-Q21',
+          type: 'multiple-choice',
+          question: 'What is the difference between a prototype and a model in the context of similitude and dimensional analysis?',
+          options: [
+            'The prototype is the full-scale real system (e.g., actual ship, bridge, aircraft). The model is a scaled (usually smaller) version built for testing. Model results are scaled to prototype conditions using dimensionless group matching.',
+            'The prototype is always smaller than the model — it is a preliminary test version',
+            'There is no distinction — prototype and model are interchangeable terms',
+            'The prototype is a computer simulation; the model is the physical test article'
+          ],
+          correctIndex: 0,
+          explanation: 'In engineering similitude, the prototype is the actual full-scale system being designed (e.g., a 300 m cargo ship, a 50 m bridge, a full-scale aircraft). The model is a geometrically similar scaled version (usually smaller, but occasionally larger for very small prototypes like MEMS devices) built for laboratory testing. The model is tested under controlled conditions, and results are scaled to prototype conditions using dimensional analysis. For valid scaling: (1) geometric similarity (same shape), (2) at least the dominant dimensionless number must match (Re, Fr, Ma, etc.), (3) measurements on the model are converted to prototype values using the appropriate scaling laws. This model-to-prototype scaling is one of the most powerful applications of dimensional analysis in engineering.',
+          hint: 'Which one is the real thing you are trying to design, and which is the test version?'
+        },
+        {
+          id: 'u6-L5-Q22',
+          type: 'true-false',
+          question: 'The Euler number is always required as a matching criterion for model testing because pressure forces are important in all fluid flows.',
+          correctAnswer: false,
+          explanation: 'While pressure forces are indeed present in most flows, the Euler number is NOT an independent matching criterion — it is typically a dependent parameter (the result) rather than a controlling parameter. In dimensional analysis of most external flows, Eu (or its cousin C_p) is the quantity you want to PREDICT: Eu = f(Re, Fr, Ma, ...). It emerges from the analysis as a function of the other dimensionless numbers. If you match Re (or Fr, or Ma, as appropriate), the Euler number (and hence pressure distribution) is automatically determined. Only in specific cases (e.g., cavitation inception, where a critical pressure threshold matters) might the Euler/cavitation number be an explicit matching criterion rather than a result.',
+          hint: 'Is the Euler number typically an input (controlled variable) or an output (predicted result) in model testing?'
+        },
+        {
+          id: 'u6-L5-Q23',
+          type: 'multiple-choice',
+          question: 'A pipeline engineer finds that pressure drop ΔP depends on pipe length L, diameter D, velocity V, fluid density ρ, viscosity μ, and roughness ε. How many Pi groups result from this analysis?',
+          options: [
+            '7 variables − 3 dimensions (M, L, T) = 4 Pi groups: ΔP/(ρV²), L/D, Re = ρVD/μ, and ε/D. This gives the functional form of the Darcy-Weisbach equation.',
+            '7 − 3 = 4, but one group is trivial, leaving 3 effective groups',
+            '7 − 4 = 3 Pi groups (there are 4 fundamental dimensions)',
+            '2 Pi groups, because many variables are redundant'
+          ],
+          correctIndex: 0,
+          explanation: 'Variables: ΔP [ML⁻¹T⁻²], L [L], D [L], V [LT⁻¹], ρ [ML⁻³], μ [ML⁻¹T⁻¹], ε [L]. That is n = 7. Fundamental dimensions: M, L, T → k = 3. Pi groups: 7 − 3 = 4. Choosing ρ, V, D as repeating variables: π₁ = ΔP/(ρV²) (Euler number / pressure coefficient), π₂ = L/D (length-to-diameter ratio), π₃ = ρVD/μ (Reynolds number), π₄ = ε/D (relative roughness). The result: ΔP/(ρV²) = f(L/D, Re, ε/D). The Darcy-Weisbach equation tells us that this function has the specific form ΔP/(ρV²) = f(Re, ε/D) × (L/D)/2, where f(Re, ε/D) is the Darcy friction factor. Dimensional analysis gave us the correct groups; experiments (Moody chart) gave us the function f.',
+          hint: 'Count all 7 variables, identify 3 fundamental dimensions (M, L, T), and subtract.'
+        },
+        {
+          id: 'u6-L5-Q24',
+          type: 'multiple-choice',
+          question: 'In open channel flow (rivers, canals), the Froude number determines whether the flow is subcritical or supercritical. What is the physical significance of Fr = 1?',
+          options: [
+            'Fr = 1 is the critical condition where flow velocity equals the speed of shallow water waves (√(gy)). Disturbances cannot propagate upstream in supercritical flow (Fr > 1), similar to how sound cannot propagate upstream in supersonic gas flow.',
+            'Fr = 1 means the flow is transitioning from laminar to turbulent',
+            'Fr = 1 means gravitational and viscous forces are exactly balanced',
+            'Fr = 1 indicates that the flow has reached maximum possible velocity in the channel'
+          ],
+          correctIndex: 0,
+          explanation: 'In open channel flow, the Froude number Fr = V/√(gy) compares flow velocity to the speed of surface gravity waves (√(gy), where y is flow depth). This is directly analogous to the Mach number in compressible flow. Subcritical (Fr < 1): Flow is slow and deep, waves can travel both upstream and downstream — the flow "knows" about downstream obstacles and adjusts smoothly. This is analogous to subsonic flow. Supercritical (Fr > 1): Flow is fast and shallow, waves cannot travel upstream — the flow cannot adjust to downstream conditions, leading to hydraulic jumps (analogous to shock waves). Critical (Fr = 1): Minimum specific energy for a given flow rate. Hydraulic engineers use the Froude number for designing spillways, stilling basins, and flood channels.',
+          hint: 'Compare the roles of the Froude number in open channels and the Mach number in gas dynamics.'
+        },
+        {
+          id: 'u6-L5-Q25',
+          type: 'fill-blank',
+          question: 'The dimensionless number Re = ρVL/μ, representing the ratio of inertial forces to viscous forces, is called the _____ number.',
+          acceptedAnswers: ['Reynolds', 'reynolds', 'REYNOLDS'],
+          explanation: 'The Reynolds number, named after Osborne Reynolds (1842-1912), is the most widely used dimensionless number in fluid mechanics. It determines the flow regime (laminar vs. turbulent), appears in nearly every fluid mechanics correlation (friction factor, drag coefficient, heat transfer coefficient), and is the primary matching criterion for most model testing where viscous effects dominate. Re = ρVL/μ = VL/ν, where L is a characteristic length (pipe diameter, chord length, plate length, etc.). Its physical meaning — the ratio of inertial forces (which promote instability and turbulence) to viscous forces (which promote stability and dampen disturbances) — explains why high-Re flows are turbulent and low-Re flows are laminar.',
+          hint: 'This is the most famous dimensionless number in fluid mechanics, named after a 19th-century physicist.'
+        },
+        {
+          id: 'u6-L5-Q26',
+          type: 'multiple-choice',
+          question: 'A chemical engineer wants to scale up a stirred tank reactor from a 0.5 m diameter laboratory model to a 2.5 m production reactor. Using dimensional analysis, what dimensionless groups govern mixing performance?',
+          options: [
+            'The key groups are the impeller Reynolds number (Re = ND²/ν), the power number (Np = P/(ρN³D⁵)), the flow number (NQ = Q/(ND³)), and geometric ratios (D_impeller/D_tank, H/D_tank). Matching Re ensures similar flow patterns, and Np gives the power requirement.',
+            'Only the Reynolds number matters — all other groups are derived from it',
+            'The Froude number is the only important parameter for stirred tanks',
+            'No dimensional analysis is needed — simply multiply all dimensions by the scale factor'
+          ],
+          correctIndex: 0,
+          explanation: 'Stirred tank scaling is a classic dimensional analysis application. The relevant variables are: power P, impeller speed N, impeller diameter D, fluid density ρ, viscosity μ, and geometric ratios. This gives the power number Np = P/(ρN³D⁵) = f(Re, Fr, geometric ratios), where Re = ND²/ν is the impeller Reynolds number. In most liquid mixing (no free surface vortex), the Froude number is unimportant, so Np = f(Re, geometry). Scale-up challenge: for the same Re at 5× larger scale, N_large = N_small × (D_small/D_large)² = N_small/25 — the large reactor spins 25× slower. But the power scales as P ∝ N³D⁵, so P_large/P_small = (1/25)³ × 5⁵ = (1/15625) × 3125 = 0.2 — only 20% of scaled power. These non-obvious scaling relationships are why dimensional analysis is essential for reactor scale-up.',
+          hint: 'What are the relevant variables for mixing in a stirred tank, and how many Pi groups do they form?'
+        },
+        {
+          id: 'u6-L5-Q27',
+          type: 'multiple-choice',
+          question: 'What is the difference between "repeating the Buckingham Pi method" and "inspecting" to find dimensionless groups?',
+          options: [
+            'The formal Buckingham method systematically combines each non-repeating variable with the repeating variables to find Pi groups. Inspection uses physical intuition to directly form known dimensionless groups (Re, Fr, C_D, etc.) from the variable list. Both give correct results if done properly.',
+            'The formal method gives more groups than inspection',
+            'Inspection only works for simple problems with 2-3 variables',
+            'The formal method is always wrong and inspection is always correct'
+          ],
+          correctIndex: 0,
+          explanation: 'The formal Buckingham Pi method is systematic and always works: choose k repeating variables, then for each non-repeating variable, solve for exponents that make the product dimensionless. Inspection (also called "reasoning" or "by eye") uses engineering knowledge to directly recognize dimensionless groups from the variable list — for example, seeing ρ, V, D, μ in the list and immediately writing Re = ρVD/μ. Experienced engineers often use inspection because they recognize common groups, but the formal method is essential when (1) the problem involves unfamiliar variables, (2) you need to verify that all groups are independent, or (3) the number of groups is unclear. Both methods give the same final result — the Pi groups are unique up to recombination (e.g., Re and 1/Re are equivalent).',
+          hint: 'One method is mechanical and systematic; the other relies on recognizing common patterns.'
+        },
+        {
+          id: 'u6-L5-Q28',
+          type: 'true-false',
+          question: 'If two flows have the same Reynolds number, they are guaranteed to have identical flow patterns.',
+          correctAnswer: false,
+          explanation: 'Matching Reynolds number alone does NOT guarantee identical flow patterns. Flows may differ due to: (1) different geometry (Re matching gives similar flows only for geometrically similar bodies), (2) different roughness (relative roughness affects turbulent flow even at the same Re), (3) other important dimensionless numbers not being matched (Froude, Mach, Weber), (4) different turbulence intensity in the incoming flow, (5) different flow history (hysteresis in transition). For example, flow over a smooth sphere and flow over a rough sphere at the same Re produce very different drag coefficients. Complete dynamic similarity requires matching ALL relevant dimensionless groups, not just Re. Reynolds number similarity is necessary but not sufficient for identical flow patterns.',
+          hint: 'Is Re the only dimensionless number that can affect the flow, or could other numbers also matter?'
+        },
+        {
+          id: 'u6-L5-Q29',
+          type: 'multiple-choice',
+          question: 'Distorted models intentionally violate geometric similarity (e.g., using different horizontal and vertical scales in river models). Why is this sometimes necessary?',
+          options: [
+            'In river/estuary models, using the same scale for horizontal and vertical dimensions would make the water depth extremely shallow (e.g., 3 mm for a 3 m river at 1:1000), causing surface tension and viscous effects to dominate unrealistically. Vertical exaggeration (e.g., 1:100 vertical, 1:1000 horizontal) maintains realistic depth-driven physics.',
+            'Distorted models are cheaper to build because they use less material',
+            'Distortion is needed because the Froude number cannot be matched at true geometric scale',
+            'Distorted models are never used in practice — geometric similarity is always required'
+          ],
+          correctIndex: 0,
+          explanation: 'River and coastal models often cover huge horizontal extents (kilometers) but relatively shallow depths (meters). At a 1:1000 horizontal scale, a 3 m deep river becomes 3 mm in the model — a depth where surface tension (capillary effects) and viscosity dominate rather than gravity and inertia, completely distorting the flow physics. The solution: use a larger vertical scale (exaggerated depth), e.g., 1:100 vertically while maintaining 1:1000 horizontally. The distortion ratio (horizontal/vertical scale) is typically 5-10. Trade-offs: distorted models correctly reproduce depth-averaged velocities and water surface profiles but distort 3D flow patterns, bank slopes, and secondary currents. Empirical corrections are applied. This approach has been used successfully for flood studies, harbor design, and estuary management for over a century.',
+          hint: 'What happens to the water depth in a river model at 1:1000 scale, and why is that a problem?'
+        },
+        {
+          id: 'u6-L5-Q30',
+          type: 'multiple-choice',
+          question: 'The drag coefficient of a smooth sphere shows a dramatic drop (from C_D ≈ 0.44 to C_D ≈ 0.1) at Re ≈ 5 × 10⁵. What causes this "drag crisis," and how does it relate to dimensional analysis?',
+          options: [
+            'The boundary layer transitions from laminar to turbulent at this Re, causing the separation point to shift downstream and the wake to narrow dramatically. Dimensional analysis predicts C_D = f(Re), and this sudden change in f(Re) is the drag crisis.',
+            'The sphere begins to deform at high velocity, becoming more streamlined',
+            'Compressibility effects cause the drag to drop at this specific Reynolds number',
+            'The drag crisis is an artifact of measurement errors and does not actually occur'
+          ],
+          correctIndex: 0,
+          explanation: 'Dimensional analysis tells us C_D = f(Re) for a smooth sphere (no other relevant dimensionless groups), but it cannot predict the FORM of this function. Experiments reveal that C_D ≈ 0.44 for 10³ < Re < 2×10⁵ (laminar boundary layer separates early, creating a wide wake). At Re ≈ 5×10⁵, the boundary layer transitions to turbulent before separation. The turbulent boundary layer has more momentum near the wall (due to turbulent mixing) and can resist the adverse pressure gradient longer, delaying separation to about 120° around the sphere (vs. ~82° for laminar). This dramatically narrows the wake and reduces pressure drag. Golf ball dimples exploit this by tripping the boundary layer turbulent at lower Re, achieving the drag reduction at slower speeds. This phenomenon beautifully demonstrates both the power and limitations of dimensional analysis.',
+          hint: 'What changes about the boundary layer at this critical Reynolds number, and how does it affect flow separation?'
         }
       ]
     }

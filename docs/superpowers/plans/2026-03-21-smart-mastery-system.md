@@ -707,7 +707,7 @@ Replace the existing `topicStats` useMemo (lines 289-302) with computed mastery:
 
   // AFTER:
   const masteryEvents = useMasteryStore((s) => s.events);
-  const topicIds = topics.map((t) => t.id);
+  const topicIds = useMemo(() => topics.map((t) => t.id), []);
   const masteryScores = useMemo(
     () => computeAllMastery(masteryEvents, topicIds),
     [masteryEvents, topicIds]
@@ -720,7 +720,7 @@ Replace the existing `topicStats` useMemo (lines 289-302) with computed mastery:
         return {
           ...topic,
           mastery: ms?.score ?? 0,
-          level: ms?.level ?? 'not-started',
+          level: ms?.level ?? ('not-started' as const),
           eventCount: ms?.eventCount ?? 0,
           lastPracticed: ms?.lastPracticed ?? null,
         };
@@ -729,53 +729,163 @@ Replace the existing `topicStats` useMemo (lines 289-302) with computed mastery:
   );
 ```
 
-- [ ] **Step 3: Update TopicBar component rendering**
+- [ ] **Step 3: Replace TopicBar component and its call site**
 
-Find the `TopicBar` component or the topic rendering section in the profile page. Update it to use the new mastery data:
+Add this helper function near the top of the file (after the `compressImage` function, around line 70):
 
-Replace any references to `stat.accuracy` and `stat.attempted` with the new fields. The bar should show:
-- `stat.mastery` as the percentage (0–100)
-- `stat.level` for the label color/text
-- `stat.lastPracticed` for "Last practiced X days ago"
-
-The mastery level colors:
-```typescript
-const masteryColors = {
-  'strong': 'bg-emerald-500',
-  'developing': 'bg-amber-500',
-  'needs-work': 'bg-red-400',
-  'not-started': 'bg-surface-200',
-};
-
-const masteryLabels = {
-  'strong': 'Strong',
-  'developing': 'Developing',
-  'needs-work': 'Needs Work',
-  'not-started': 'Not Started',
-};
-```
-
-For the bar display, replace the old accuracy bar text:
-```typescript
-// BEFORE:
-{stat.attempted > 0 ? `${stat.accuracy}% accuracy · ${stat.attempted} questions` : '—'}
-
-// AFTER:
-{stat.eventCount > 0
-  ? `${stat.mastery}% mastery · ${masteryLabels[stat.level]}${stat.lastPracticed ? ` · Last: ${formatDaysAgo(stat.lastPracticed)}` : ''}`
-  : 'Not started'}
-```
-
-Add this helper at the top of the file (near the compression constants):
 ```typescript
 function formatDaysAgo(dateStr: string): string {
   const days = Math.floor(
-    (Date.now() - new Date(dateStr).getTime()) / (1000 * 60 * 60 * 24)
+    (Date.now() - new Date(dateStr + 'T12:00:00').getTime()) / (1000 * 60 * 60 * 24)
   );
   if (days === 0) return 'today';
   if (days === 1) return 'yesterday';
   return `${days}d ago`;
 }
+
+const MASTERY_COLORS: Record<string, string> = {
+  strong: '#10B981',
+  developing: '#F59E0B',
+  'needs-work': '#EF4444',
+  'not-started': '#94A3B8',
+};
+```
+
+Replace the entire `TopicBar` component (lines 159-202):
+
+```typescript
+// BEFORE (lines 159-202):
+function TopicBar({
+  name,
+  icon,
+  color,
+  accuracy,
+  attempted,
+  delay,
+}: {
+  name: string;
+  icon: string;
+  color: string;
+  accuracy: number;
+  attempted: number;
+  delay: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -12 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.4, delay }}
+      className="group"
+    >
+      <div className="flex items-center justify-between mb-1.5">
+        <div className="flex items-center gap-2">
+          <span className="text-sm">{icon}</span>
+          <span className="text-sm font-semibold text-gray-700">{name}</span>
+        </div>
+        <span className="text-xs font-bold tabular-nums" style={{ color: attempted > 0 ? color : '#94A3B8' }}>
+          {attempted > 0 ? `${accuracy}%` : '—'}
+        </span>
+      </div>
+      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full rounded-full"
+          style={{ background: `linear-gradient(90deg, ${color}, ${color}CC)` }}
+          initial={{ width: 0 }}
+          animate={{ width: attempted > 0 ? `${accuracy}%` : '0%' }}
+          transition={{ duration: 0.8, delay: delay + 0.2, ease: 'easeOut' }}
+        />
+      </div>
+    </motion.div>
+  );
+}
+
+// AFTER:
+function TopicBar({
+  name,
+  icon,
+  color,
+  mastery,
+  level,
+  eventCount,
+  lastPracticed,
+  delay,
+}: {
+  name: string;
+  icon: string;
+  color: string;
+  mastery: number;
+  level: string;
+  eventCount: number;
+  lastPracticed: string | null;
+  delay: number;
+}) {
+  const barColor = eventCount > 0 ? MASTERY_COLORS[level] ?? color : '#E5E7EB';
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -12 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.4, delay }}
+      className="group"
+    >
+      <div className="flex items-center justify-between mb-1.5">
+        <div className="flex items-center gap-2">
+          <span className="text-sm">{icon}</span>
+          <span className="text-sm font-semibold text-gray-700">{name}</span>
+        </div>
+        <span className="text-xs font-bold tabular-nums" style={{ color: eventCount > 0 ? barColor : '#94A3B8' }}>
+          {eventCount > 0 ? `${mastery}%` : '—'}
+        </span>
+      </div>
+      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full rounded-full"
+          style={{ background: `linear-gradient(90deg, ${barColor}, ${barColor}CC)` }}
+          initial={{ width: 0 }}
+          animate={{ width: eventCount > 0 ? `${mastery}%` : '0%' }}
+          transition={{ duration: 0.8, delay: delay + 0.2, ease: 'easeOut' }}
+        />
+      </div>
+      {eventCount > 0 && (
+        <p className="text-[10px] font-semibold text-gray-400 mt-0.5">
+          {level === 'strong' ? 'Strong' : level === 'developing' ? 'Developing' : 'Needs Work'}
+          {lastPracticed ? ` · ${formatDaysAgo(lastPracticed)}` : ''}
+        </p>
+      )}
+    </motion.div>
+  );
+}
+```
+
+Update the call site (lines 653-662):
+
+```typescript
+// BEFORE:
+{topicStats.map((topic, i) => (
+  <TopicBar
+    key={topic.id}
+    name={topic.name}
+    icon={topic.icon}
+    color={topic.color}
+    accuracy={topic.accuracy}
+    attempted={topic.attempted}
+    delay={0.7 + i * 0.05}
+  />
+))}
+
+// AFTER:
+{topicStats.map((topic, i) => (
+  <TopicBar
+    key={topic.id}
+    name={topic.name}
+    icon={topic.icon}
+    color={topic.color}
+    mastery={topic.mastery}
+    level={topic.level}
+    eventCount={topic.eventCount}
+    lastPracticed={topic.lastPracticed}
+    delay={0.7 + i * 0.05}
+  />
+))}
 ```
 
 - [ ] **Step 4: Also clear mastery store on reset progress**
@@ -806,7 +916,119 @@ git commit -m "feat: replace basic mastery with smart computed mastery on profil
 
 ---
 
-## Task 10: Final Build Verification & Integration Test
+## Task 10: Sync Mastery Events to Database
+
+**Files:**
+- Modify: `src/store/useMasteryStore.ts`
+- Modify: `src/components/session/SessionView.tsx`
+- Modify: `src/components/lesson/LessonView.tsx`
+- Modify: `src/app/(app)/profile/page.tsx`
+
+- [ ] **Step 1: Add sync actions to mastery store**
+
+In `src/store/useMasteryStore.ts`, add sync methods to the interface and implementation:
+
+```typescript
+// Add to MasteryState interface:
+  syncToServer: () => Promise<void>;
+  hydrateFromServer: () => Promise<void>;
+
+// Add implementations inside the persist callback, after clearEvents:
+
+      syncToServer: async () => {
+        const { events, lastSyncedIndex } = get();
+        const unsynced = events.slice(lastSyncedIndex);
+        if (unsynced.length === 0) return;
+
+        try {
+          const res = await fetch('/api/mastery', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ events: unsynced }),
+          });
+          if (res.ok) {
+            set({ lastSyncedIndex: get().events.length });
+          }
+        } catch {
+          // Silent fail — will retry on next sync
+        }
+      },
+
+      hydrateFromServer: async () => {
+        try {
+          const res = await fetch('/api/mastery');
+          if (!res.ok) return;
+          const { events: serverEvents } = await res.json();
+          if (!serverEvents || serverEvents.length === 0) return;
+
+          set((state) => {
+            const localIds = new Set(state.events.map((e) => e.id));
+            const newEvents = serverEvents.filter(
+              (e: AnswerEvent) => !localIds.has(e.id)
+            );
+            return {
+              events: [...state.events, ...newEvents],
+            };
+          });
+        } catch {
+          // Silent fail
+        }
+      },
+```
+
+- [ ] **Step 2: Trigger sync after session completion**
+
+In `src/components/session/SessionView.tsx`, the `SessionSummary` component is rendered after `completeSession()`. Add a sync call when the summary appears. After the existing `useEffect` for elapsed time (around line 30), add:
+
+```typescript
+  // Sync mastery events to server when session completes
+  const syncMastery = useMasteryStore((s) => s.syncToServer);
+  useEffect(() => {
+    if (sessionSummary) {
+      syncMastery();
+    }
+  }, [sessionSummary, syncMastery]);
+```
+
+- [ ] **Step 3: Trigger sync after lesson completion**
+
+In `src/components/lesson/LessonView.tsx`, the `ResultScreen` is shown when `lessonResult` is set. Add a sync call. After the mastery store hook (added in Task 5), add:
+
+```typescript
+  const syncMastery = useMasteryStore((s) => s.syncToServer);
+  useEffect(() => {
+    if (lessonResult) {
+      syncMastery();
+    }
+  }, [lessonResult, syncMastery]);
+```
+
+- [ ] **Step 4: Hydrate mastery on profile page load**
+
+In `src/app/(app)/profile/page.tsx`, add hydration on mount. After the mastery store subscription (the `masteryEvents` line), add:
+
+```typescript
+  const hydrateFromServer = useMasteryStore((s) => s.hydrateFromServer);
+  useEffect(() => {
+    hydrateFromServer();
+  }, [hydrateFromServer]);
+```
+
+- [ ] **Step 5: Verify no TypeScript errors**
+
+Run: `npx tsc --noEmit --pretty 2>&1 | head -20`
+Expected: No errors
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add src/store/useMasteryStore.ts src/components/session/SessionView.tsx src/components/lesson/LessonView.tsx src/app/(app)/profile/page.tsx
+git commit -m "feat: add mastery event sync to database"
+```
+
+---
+
+## Task 11: Final Build Verification & Integration Test
 
 - [ ] **Step 1: Run full build**
 

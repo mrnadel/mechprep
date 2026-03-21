@@ -1,5 +1,6 @@
 'use client';
 
+import { useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLeague, useEngagementStore } from '@/store/useEngagementStore';
 import { leagueTiers } from '@/data/league';
@@ -7,14 +8,11 @@ import { LEAGUE_GEM_REWARD_PROMOTION } from '@/data/league';
 
 export function LeaguePromotion() {
   const league = useLeague();
-  const setResultSeen = useEngagementStore((s) => {
-    // We update resultSeen directly via the store
-    return () => {
-      useEngagementStore.setState((state) => ({
-        league: { ...state.league, resultSeen: true },
-      }));
-    };
-  });
+  const setResultSeen = useCallback(() => {
+    useEngagementStore.setState((state) => ({
+      league: { ...state.league, resultSeen: true },
+    }));
+  }, []);
 
   const shouldShow = league.lastWeekResult !== null && !league.resultSeen;
 
