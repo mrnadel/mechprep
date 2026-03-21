@@ -103,10 +103,46 @@ export function CourseHeader() {
         style={{ borderBottom: '2px solid #E5E5E5', padding: '12px 20px' }}
       >
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div style={{ fontSize: 24, fontWeight: 900, letterSpacing: -0.5 }}>
+          {/* Logo – full text on sm+, compact icon on mobile */}
+          <div className="hidden sm:block" style={{ fontSize: 24, fontWeight: 900, letterSpacing: -0.5 }}>
             <span style={{ color: '#58CC02' }}>Mech</span>
             <span style={{ color: '#3C3C3C' }}>Ready</span>
+          </div>
+          <div
+            className="flex sm:hidden items-center justify-center"
+            style={{
+              width: 32,
+              height: 32,
+              borderRadius: 10,
+              background: 'linear-gradient(135deg, #6BD913 0%, #58CC02 100%)',
+              boxShadow: '0 2px 0 #46A302',
+              flexShrink: 0,
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              {/* Gear shape */}
+              <path
+                d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                fill="white"
+              />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"
+                fill="rgba(255,255,255,0.5)"
+              />
+              {/* Bold M */}
+              <text
+                x="12"
+                y="13.5"
+                textAnchor="middle"
+                dominantBaseline="central"
+                fill="white"
+                fontSize="9"
+                fontWeight="900"
+                fontFamily="system-ui, sans-serif"
+              >
+                M
+              </text>
+            </svg>
           </div>
 
           {/* Stats */}
