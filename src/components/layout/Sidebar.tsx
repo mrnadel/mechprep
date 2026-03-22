@@ -19,10 +19,12 @@ import {
   Crown,
   ShoppingBag,
   Swords,
+  Users,
 } from 'lucide-react';
 import { useSidebar, useProgress } from '@/store/useStore';
 import { useSubscription } from '@/hooks/useSubscription';
 import { cn } from '@/lib/utils';
+import FriendsBadge from '@/components/friends/FriendsBadge';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
@@ -34,6 +36,7 @@ const navItems = [
   { href: '/practice/weak-areas', label: 'Weak Areas', icon: AlertTriangle, pro: true },
   { href: '/quests', label: 'Quests', icon: Swords },
   { href: '/league', label: 'League', icon: Crown },
+  { href: '/friends', label: 'Friends', icon: Users },
   { divider: true } as const,
   { href: '/shop', label: 'Gem Shop', icon: ShoppingBag },
   { href: '/pricing', label: 'Pricing', icon: CreditCard },
@@ -113,7 +116,10 @@ export default function Sidebar() {
                     : 'text-surface-600 hover:bg-surface-100 hover:text-surface-900'
                 )}
               >
-                <Icon className={cn('w-5 h-5 shrink-0', isActive ? 'text-primary-600' : 'text-surface-400')} />
+                <span className="relative shrink-0">
+                  <Icon className={cn('w-5 h-5', isActive ? 'text-primary-600' : 'text-surface-400')} />
+                  {item.href === '/friends' && <FriendsBadge />}
+                </span>
                 {sidebarOpen && (
                   <span className="flex-1 flex items-center justify-between">
                     <span>{item.label}</span>
