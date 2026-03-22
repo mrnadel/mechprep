@@ -43,24 +43,28 @@ export function UnitHeader({
   const displayMid = isAllGolden ? GOLD_MID : theme.mid;
 
   return (
-    <div>
+    <div
+      className="select-none"
+      style={{
+        cursor: 'pointer',
+        WebkitTapHighlightColor: 'transparent',
+      }}
+      onClick={onToggle}
+      role="button"
+      tabIndex={0}
+      aria-expanded={!isLocked ? isExpanded : undefined}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onToggle();
+        }
+      }}
+    >
       {/* Header row */}
       <div
-        className="flex items-center select-none"
+        className="flex items-center"
         style={{
           padding: '20px 20px 16px',
-          cursor: 'pointer',
-          WebkitTapHighlightColor: 'transparent',
-        }}
-        onClick={onToggle}
-        role="button"
-        tabIndex={0}
-        aria-expanded={!isLocked ? isExpanded : undefined}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            onToggle();
-          }
         }}
       >
         {/* Text */}
