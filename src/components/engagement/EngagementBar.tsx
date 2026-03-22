@@ -182,8 +182,8 @@ export function EngagementBar() {
   const debugBtn = 'text-[10px] font-bold px-2 py-1 rounded-lg transition-colors';
 
   return (
-    <div style={{ padding: '12px 20px 0' }}>
-      <div className="flex" style={{ gap: 8 }}>
+    <div className="px-4 sm:px-5 pt-3">
+      <div className="flex" style={{ gap: 6 }}>
         {/* Quests button */}
         <div className="flex-1 relative" ref={popoverRef}>
           <button
@@ -191,7 +191,7 @@ export function EngagementBar() {
             className="w-full flex items-center justify-center transition-all active:scale-95"
             style={{
               gap: 6,
-              padding: '10px 8px',
+              padding: '12px 8px',
               borderRadius: 14,
               background: questsOpen ? '#FFF3D6' : '#FFF9E8',
               border: `1.5px solid ${questsOpen ? '#F59E0B' : '#FFE4B8'}`,
@@ -230,7 +230,6 @@ export function EngagementBar() {
                 transition={{ duration: 0.18, ease: 'easeOut' }}
                 className="absolute left-0 top-full mt-2 z-50 bg-white rounded-2xl border border-gray-200 overflow-y-auto overflow-x-hidden"
                 style={{
-                  minWidth: 300,
                   width: 'calc(100vw - 40px)',
                   maxWidth: 380,
                   maxHeight: 'calc(100vh - 160px)',

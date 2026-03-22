@@ -99,8 +99,8 @@ export function CourseHeader() {
       {/* Header */}
       <header
         ref={headerRef}
-        className="sticky top-0 z-30 bg-white"
-        style={{ borderBottom: '2px solid #E5E5E5', padding: '12px 20px' }}
+        className="sticky top-0 z-30 bg-white px-4 sm:px-5 py-3"
+        style={{ borderBottom: '2px solid #E5E5E5' }}
       >
         <div className="flex items-center justify-between">
           {/* Logo – full text on sm+, compact icon on mobile */}
@@ -156,7 +156,7 @@ export function CourseHeader() {
                 fontWeight: 800,
                 fontSize: 15,
                 color: popover === 'streak' ? '#D97706' : '#3C3C3C',
-                padding: '4px 10px',
+                padding: '8px 10px',
                 borderRadius: 12,
                 background: popover === 'streak' ? '#FFFBEB' : 'transparent',
               }}
@@ -175,7 +175,7 @@ export function CourseHeader() {
                 fontWeight: 800,
                 fontSize: 15,
                 color: popover === 'xp' ? '#7B2FBE' : '#3C3C3C',
-                padding: '4px 10px',
+                padding: '8px 10px',
                 borderRadius: 12,
                 background: popover === 'xp' ? '#F3E6FF' : 'transparent',
               }}
