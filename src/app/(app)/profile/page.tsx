@@ -291,7 +291,7 @@ export default function ProfilePage() {
   const { data: session, update: updateSession } = useSession();
   const progress = useStore((s) => s.progress);
   const courseProgress = useCourseStore((s) => s.progress);
-  const { isProUser } = useSubscription();
+  const { isProUser, hasFetched: subFetched } = useSubscription();
 
   const [hasPassword, setHasPassword] = useState<boolean | null>(null);
   const [editingName, setEditingName] = useState(false);
@@ -649,7 +649,7 @@ export default function ProfilePage() {
                   <Crown className="w-3 h-3" />
                   {levelInfo.current.title}
                 </span>
-                {isProUser && <ProBadge />}
+                {subFetched && isProUser && <ProBadge />}
                 {joinedDate && (
                   <span className="text-xs text-white/30">
                     Joined {new Date(joinedDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}

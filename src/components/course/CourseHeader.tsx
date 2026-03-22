@@ -34,7 +34,7 @@ export function CourseHeader() {
   const { data: session, status } = useSession();
   const progress = useCourseStore((s) => s.progress);
   const [popover, setPopover] = useState<PopoverType>(null);
-  const { tier, isProUser } = useSubscription();
+  const { tier, isProUser, hasFetched } = useSubscription();
 
   const headerRef = useRef<HTMLElement>(null);
   const streakBtnRef = useRef<HTMLButtonElement>(null);
@@ -186,7 +186,7 @@ export function CourseHeader() {
             </button>
 
             {/* Upgrade CTA for free registered users */}
-            {tier === 'free' && status === 'authenticated' && (
+            {hasFetched && tier === 'free' && status === 'authenticated' && (
               <Link
                 href="/pricing"
                 className="flex items-center transition-transform active:scale-95"
@@ -248,7 +248,7 @@ export function CourseHeader() {
                     {initial}
                   </div>
                 )}
-                {isProUser && (
+                {hasFetched && isProUser && (
                   <div
                     style={{
                       position: 'absolute',
@@ -419,7 +419,7 @@ export function CourseHeader() {
                         <span style={{ fontSize: 14, fontWeight: 700, color: '#3C3C3C' }}>Profile</span>
                       </Link>
 
-                      {tier === 'free' && (
+                      {hasFetched && tier === 'free' && (
                         <Link
                           href="/pricing"
                           onClick={closePopover}

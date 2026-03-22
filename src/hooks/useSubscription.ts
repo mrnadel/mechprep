@@ -121,6 +121,7 @@ export function useSubscription() {
     tier: activeTier,
     status: store.status,
     isLoading: store.isLoading,
+    hasFetched: store.hasFetched,
     isProUser,
     isTrialing,
     trialDaysLeft,

@@ -10,9 +10,9 @@ interface DailyLimitBannerProps {
 }
 
 export function DailyLimitBanner({ questionsUsedToday = 0 }: DailyLimitBannerProps) {
-  const { isProUser, isLoading } = useSubscription();
+  const { isProUser, isLoading, hasFetched } = useSubscription();
 
-  if (isLoading || isProUser) return null;
+  if (isLoading || !hasFetched || isProUser) return null;
 
   const limit = LIMITS.free.dailyQuestions;
   const remaining = Math.max(0, limit - questionsUsedToday);

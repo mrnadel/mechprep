@@ -16,7 +16,7 @@ export default function TopBar() {
   const progress = useProgress();
   const { toggleSidebar } = useSidebar();
   const league = useLeague();
-  const { isProUser } = useSubscription();
+  const { isProUser, hasFetched } = useSubscription();
   const { data: session } = useSession();
   const image = session?.user?.image;
   const displayName = session?.user?.name || progress.displayName || 'Engineer';
@@ -125,7 +125,7 @@ export default function TopBar() {
                 </div>
               )}
             </div>
-            {isProUser && (
+            {hasFetched && isProUser && (
               <div
                 className="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full flex items-center justify-center border-2 border-white"
                 style={{
