@@ -11,7 +11,7 @@ import {
   buildPerformance,
 } from '@/lib/practice-algorithm';
 import type { TopicId } from '@/data/types';
-import { Brain, ChevronLeft } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
 
 export default function SmartPracticePage() {
@@ -62,7 +62,7 @@ export default function SmartPracticePage() {
     return (
       <div className="max-w-2xl mx-auto text-center px-4 py-12">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-surface-100 mb-4">
-          <Brain className="w-8 h-8 text-surface-400" />
+          <span style={{ fontSize: 32, opacity: 0.4 }}>🧠</span>
         </div>
         <h1 className="text-xl font-bold text-surface-900 mb-2">No Questions Available</h1>
         <p className="text-surface-500 mb-6">
@@ -83,8 +83,11 @@ export default function SmartPracticePage() {
 
   return (
     <div className="max-w-2xl mx-auto text-center px-4 py-12">
-      <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-violet-50 mb-4">
-        <Brain className="w-8 h-8 text-violet-500" />
+      <div
+        className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4"
+        style={{ background: '#EDEAFF' }}
+      >
+        <span style={{ fontSize: 32 }}>🧠</span>
       </div>
       <h1 className="text-xl font-bold text-surface-900 mb-2">Smart Practice</h1>
       <p className="text-surface-500 mb-6">
