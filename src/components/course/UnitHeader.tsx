@@ -72,18 +72,18 @@ export function UnitHeader({
               textTransform: 'uppercase',
               letterSpacing: 1.2,
               marginBottom: 4,
-              color: displayDark,
-              opacity: 0.7,
+              color: isAllGolden ? 'rgba(255,255,255,0.75)' : displayDark,
+              opacity: isAllGolden ? 1 : 0.7,
             }}
           >
-            {isAllGolden ? '\uD83D\uDC51 ' : ''}Unit {unitIndex + 1}
+            Unit {unitIndex + 1}
           </div>
           <div
             style={{
               fontSize: 19,
               fontWeight: 800,
               lineHeight: 1.2,
-              color: displayDark,
+              color: isAllGolden ? '#FFFFFF' : displayDark,
             }}
           >
             {unit.title}
@@ -120,8 +120,8 @@ export function UnitHeader({
               style={{
                 fontSize: 12.5,
                 fontWeight: 700,
-                color: displayMid,
-                opacity: 0.6,
+                color: isAllGolden ? '#FFFFFF' : displayMid,
+                opacity: isAllGolden ? 0.85 : 0.6,
                 marginTop: 3,
               }}
             >
@@ -164,7 +164,7 @@ export function UnitHeader({
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
               d="M4 6l4 4 4-4"
-              stroke={displayDark}
+              stroke={isAllGolden ? '#FFFFFF' : displayDark}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -190,7 +190,7 @@ export function UnitHeader({
             style={{
               height: '100%',
               borderRadius: 5,
-              backgroundColor: displayColor,
+              backgroundColor: isAllGolden ? '#FFFFFF' : displayColor,
             }}
             initial={{ width: 0 }}
             animate={{ width: `${progressPercent}%` }}
@@ -201,8 +201,8 @@ export function UnitHeader({
           style={{
             fontSize: 12,
             fontWeight: 800,
-            color: displayDark,
-            opacity: 0.7,
+            color: isAllGolden ? 'rgba(255,255,255,0.8)' : displayDark,
+            opacity: isAllGolden ? 1 : 0.7,
             whiteSpace: 'nowrap',
           }}
         >
