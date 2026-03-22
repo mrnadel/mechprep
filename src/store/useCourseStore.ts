@@ -23,6 +23,7 @@ interface CourseState {
   activeLesson: ActiveLesson | null;
   lessonResult: LessonResult | null;
   chapterJustCompleted: ChapterCompletion | null;
+  courseJustCompleted: boolean;
 
   // Actions — Content
   setCourseData: (data: Unit[]) => void;
@@ -35,6 +36,7 @@ interface CourseState {
   exitLesson: () => void;
   dismissResult: () => void;
   dismissChapterCompletion: () => void;
+  dismissCourseCompletion: () => void;
 
   // Debug
   debugSetProgress: (lessonCount: number) => void;
@@ -97,6 +99,7 @@ export const useCourseStore = create<CourseState>()(
       activeLesson: null,
       lessonResult: null,
       chapterJustCompleted: null,
+      courseJustCompleted: false,
 
       setCourseData: (data: Unit[]) => set({ courseData: data }),
 
@@ -273,10 +276,20 @@ export const useCourseStore = create<CourseState>()(
           chapterJustCompleted = { unitIndex, isGolden: true };
         }
 
+        // Detect full course completion: all lessons across all units done
+        let courseJustCompleted = false;
+        if (chapterJustCompleted) {
+          const allCourseData = get().courseData;
+          courseJustCompleted = allCourseData.every((u) =>
+            u.lessons.every((l) => l.id in newCompletedLessons)
+          );
+        }
+
         set({
           activeLesson: null,
           lessonResult: result,
           chapterJustCompleted,
+          courseJustCompleted: courseJustCompleted || state.courseJustCompleted,
           progress: {
             ...state.progress,
             totalXp: newTotalXp,
@@ -298,6 +311,10 @@ export const useCourseStore = create<CourseState>()(
 
       dismissChapterCompletion: () => {
         set({ chapterJustCompleted: null });
+      },
+
+      dismissCourseCompletion: () => {
+        set({ courseJustCompleted: false });
       },
 
       debugSetProgress: (lessonCount: number) => {
