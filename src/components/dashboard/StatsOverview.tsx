@@ -19,7 +19,7 @@ export default function StatsOverview() {
     {
       label: 'Current Streak',
       value: `${progress.currentStreak} days`,
-      emoji: '🔥',
+      emoji: '⚡',
       bg: 'bg-orange-50',
     },
     {

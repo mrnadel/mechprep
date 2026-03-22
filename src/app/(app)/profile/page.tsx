@@ -690,7 +690,7 @@ export default function ProfilePage() {
       <div className="px-4 -mt-5 relative z-10">
         <div className="flex gap-2.5">
           <HeroStat emoji="⭐" value={totalXp} label="Total XP" bg="#FFFBEB" border="#FDE68A" valueColor="#B45309" delay={0.2} />
-          <HeroStat emoji="🔥" value={currentStreak} label="Day Streak" bg="#FFF7ED" border="#FED7AA" valueColor="#C2410C" delay={0.3} />
+          <HeroStat emoji="⚡" value={currentStreak} label="Day Streak" bg="#FFF7ED" border="#FED7AA" valueColor="#C2410C" delay={0.3} />
           <HeroStat emoji="🎯" value={accuracy} label="Accuracy" bg="#F0FDF4" border="#BBF7D0" valueColor="#15803D" delay={0.4} />
         </div>
       </div>

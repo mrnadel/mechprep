@@ -55,7 +55,7 @@ export default function TopBar() {
             )}
             aria-label={`${progress.currentStreak} day streak`}
           >
-            <span className="text-base leading-none" aria-hidden="true">🔥</span>
+            <span className="text-base leading-none" aria-hidden="true">⚡</span>
             <span>{progress.currentStreak}</span>
           </div>
 
@@ -91,7 +91,7 @@ export default function TopBar() {
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-50 text-primary-600 text-sm font-medium"
               aria-label={`Level ${progress.currentLevel}`}
             >
-              <span className="text-base leading-none" aria-hidden="true">⚡</span>
+              <span className="text-base leading-none" aria-hidden="true">{currentLevel.icon}</span>
               <span>Lv. {progress.currentLevel}</span>
             </div>
             {nextLevel && (
