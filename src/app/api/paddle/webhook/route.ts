@@ -9,7 +9,7 @@ import {
   type TransactionNotification,
 } from '@paddle/paddle-node-sdk';
 import { db } from '@/lib/db';
-import { subscriptions, paymentHistory } from '@/lib/db/schema';
+import { users, subscriptions, paymentHistory } from '@/lib/db/schema';
 import { rateLimit, RATE_LIMITS } from '@/lib/rate-limit';
 
 export const runtime = 'nodejs';
@@ -204,12 +204,30 @@ async function handleTransactionCompleted(txn: TransactionNotification) {
 async function getUserIdByCustomer(
   paddleCustomerId: string,
 ): Promise<string | null> {
+  // First try to find by paddleCustomerId in subscriptions
   const [row] = await db
     .select({ userId: subscriptions.userId })
     .from(subscriptions)
     .where(eq(subscriptions.paddleCustomerId, paddleCustomerId))
     .limit(1);
-  return row?.userId ?? null;
+  if (row) return row.userId;
+
+  // If not found, look up the Paddle customer's email and match to our users
+  try {
+    const customer = await paddle.customers.get(paddleCustomerId);
+    if (customer?.email) {
+      const [user] = await db
+        .select({ id: users.id })
+        .from(users)
+        .where(eq(users.email, customer.email))
+        .limit(1);
+      return user?.id ?? null;
+    }
+  } catch (err) {
+    console.error('Failed to look up Paddle customer:', err);
+  }
+
+  return null;
 }
 
 async function upsertSubscription(
