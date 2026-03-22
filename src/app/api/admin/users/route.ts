@@ -86,3 +86,26 @@ export async function PATCH(req: NextRequest) {
 
   return NextResponse.json({ success: true, tier });
 }
+
+// DELETE: Remove a user and all related data
+export async function DELETE(req: NextRequest) {
+  const adminId = await getAuthUserId();
+  if (!adminId || adminId !== ADMIN_USER_ID) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
+  const { userId } = await req.json();
+  if (!userId || typeof userId !== 'string') {
+    return NextResponse.json({ error: 'Invalid userId' }, { status: 400 });
+  }
+
+  // Prevent deleting yourself
+  if (userId === adminId) {
+    return NextResponse.json({ error: 'Cannot delete your own account' }, { status: 400 });
+  }
+
+  // All related tables have onDelete: 'cascade'
+  await db.delete(users).where(eq(users.id, userId));
+
+  return NextResponse.json({ success: true });
+}

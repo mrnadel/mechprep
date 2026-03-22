@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useSession } from 'next-auth/react';
+import { Search, ChevronUp, ChevronDown, Trash2, X } from 'lucide-react';
 
 interface AdminUser {
   id: string;
@@ -15,10 +16,8 @@ interface AdminUser {
   tier: string;
 }
 
-const TIER_STYLES: Record<string, { background: string; color: string }> = {
-  free: { background: '#E5E5E5', color: '#555' },
-  pro: { background: '#E8F5E9', color: '#2E7D32' },
-};
+type SortKey = 'name' | 'email' | 'tier' | 'totalXp' | 'currentStreak' | 'totalQuestionsAttempted' | 'joinedDate' | 'lastActiveDate';
+type SortDir = 'asc' | 'desc';
 
 function formatDate(value: string | null): string {
   if (!value) return '-';
@@ -34,6 +33,12 @@ export default function AdminUsersPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [updating, setUpdating] = useState<string | null>(null);
+  const [search, setSearch] = useState('');
+  const [sortKey, setSortKey] = useState<SortKey>('joinedDate');
+  const [sortDir, setSortDir] = useState<SortDir>('desc');
+  const [deleteTarget, setDeleteTarget] = useState<AdminUser | null>(null);
+  const [deleting, setDeleting] = useState(false);
+  const [confirmText, setConfirmText] = useState('');
 
   const toggleTier = async (userId: string, currentTier: string) => {
     const newTier = currentTier === 'pro' ? 'free' : 'pro';
@@ -56,9 +61,99 @@ export default function AdminUsersPage() {
     }
   };
 
+  const deleteUser = async () => {
+    if (!deleteTarget) return;
+    setDeleting(true);
+    try {
+      const res = await fetch('/api/admin/users', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: deleteTarget.id }),
+      });
+      if (res.ok) {
+        setUsers((prev) => prev.filter((u) => u.id !== deleteTarget.id));
+        setTotal((t) => t - 1);
+        setDeleteTarget(null);
+        setConfirmText('');
+      } else {
+        const data = await res.json();
+        alert(data.error || 'Failed to delete user');
+      }
+    } catch {
+      alert('Failed to delete user');
+    } finally {
+      setDeleting(false);
+    }
+  };
+
+  const handleSort = (key: SortKey) => {
+    if (sortKey === key) {
+      setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
+    } else {
+      setSortKey(key);
+      setSortDir(key === 'name' || key === 'email' ? 'asc' : 'desc');
+    }
+  };
+
+  const filtered = useMemo(() => {
+    const q = search.toLowerCase().trim();
+    if (!q) return users;
+    return users.filter(
+      (u) =>
+        (u.name?.toLowerCase().includes(q)) ||
+        (u.email?.toLowerCase().includes(q)) ||
+        u.tier.toLowerCase().includes(q)
+    );
+  }, [users, search]);
+
+  const sorted = useMemo(() => {
+    return [...filtered].sort((a, b) => {
+      let aVal: string | number = '';
+      let bVal: string | number = '';
+
+      switch (sortKey) {
+        case 'name':
+          aVal = (a.name || '').toLowerCase();
+          bVal = (b.name || '').toLowerCase();
+          break;
+        case 'email':
+          aVal = (a.email || '').toLowerCase();
+          bVal = (b.email || '').toLowerCase();
+          break;
+        case 'tier':
+          aVal = a.tier;
+          bVal = b.tier;
+          break;
+        case 'totalXp':
+          aVal = a.totalXp;
+          bVal = b.totalXp;
+          break;
+        case 'currentStreak':
+          aVal = a.currentStreak;
+          bVal = b.currentStreak;
+          break;
+        case 'totalQuestionsAttempted':
+          aVal = a.totalQuestionsAttempted;
+          bVal = b.totalQuestionsAttempted;
+          break;
+        case 'joinedDate':
+          aVal = a.joinedDate ? new Date(a.joinedDate).getTime() : 0;
+          bVal = b.joinedDate ? new Date(b.joinedDate).getTime() : 0;
+          break;
+        case 'lastActiveDate':
+          aVal = a.lastActiveDate ? new Date(a.lastActiveDate).getTime() : 0;
+          bVal = b.lastActiveDate ? new Date(b.lastActiveDate).getTime() : 0;
+          break;
+      }
+
+      if (aVal < bVal) return sortDir === 'asc' ? -1 : 1;
+      if (aVal > bVal) return sortDir === 'asc' ? 1 : -1;
+      return 0;
+    });
+  }, [filtered, sortKey, sortDir]);
+
   useEffect(() => {
     if (status !== 'authenticated') return;
-
     async function fetchUsers() {
       setLoading(true);
       setError(null);
@@ -77,110 +172,216 @@ export default function AdminUsersPage() {
         setLoading(false);
       }
     }
-
     fetchUsers();
   }, [status]);
 
-  if (status === 'loading') return <p style={{ padding: 40 }}>Loading...</p>;
-  if (status !== 'authenticated') return <p style={{ padding: 40 }}>Not authenticated</p>;
+  if (status === 'loading') return <p className="p-10 text-gray-500">Loading...</p>;
+  if (status !== 'authenticated') return <p className="p-10 text-gray-500">Not authenticated</p>;
+
+  const SortIcon = ({ col }: { col: SortKey }) => {
+    if (sortKey !== col) return <ChevronDown className="w-3 h-3 text-gray-300" />;
+    return sortDir === 'asc'
+      ? <ChevronUp className="w-3 h-3 text-gray-700" />
+      : <ChevronDown className="w-3 h-3 text-gray-700" />;
+  };
+
+  const columns: { key: SortKey; label: string; className?: string }[] = [
+    { key: 'name', label: 'User' },
+    { key: 'tier', label: 'Tier', className: 'w-20' },
+    { key: 'totalXp', label: 'XP', className: 'w-20 text-right' },
+    { key: 'currentStreak', label: 'Streak', className: 'w-20 text-right' },
+    { key: 'totalQuestionsAttempted', label: 'Qs', className: 'w-16 text-right' },
+    { key: 'joinedDate', label: 'Joined', className: 'w-28' },
+    { key: 'lastActiveDate', label: 'Last Active', className: 'w-28' },
+  ];
 
   return (
-    <div style={{ fontFamily: 'system-ui' }}>
-      <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 8 }}>Users</h1>
-      <p style={{ fontSize: 14, color: '#666', marginBottom: 24 }}>
+    <div>
+      <h1 className="text-2xl font-extrabold text-gray-900 mb-1">Users</h1>
+      <p className="text-sm text-gray-500 mb-5">
         {loading ? 'Loading...' : `${total} registered user${total === 1 ? '' : 's'}`}
+        {search && !loading && ` · ${sorted.length} match${sorted.length === 1 ? '' : 'es'}`}
       </p>
 
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {/* Search */}
+      <div className="relative mb-4">
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+        <input
+          type="text"
+          placeholder="Search by name, email, or tier..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+        />
+      </div>
 
-      {!loading && !error && users.length === 0 && (
-        <p style={{ color: '#999', fontSize: 14 }}>No users found.</p>
+      {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+
+      {!loading && !error && sorted.length === 0 && (
+        <p className="text-gray-400 text-sm py-8 text-center">
+          {search ? 'No users match your search.' : 'No users found.'}
+        </p>
       )}
 
-      {!loading && !error && users.length > 0 && (
-        <div>
-          {users.map((user) => {
-            const tierStyle = TIER_STYLES[user.tier] || TIER_STYLES.free;
-            return (
-              <div
-                key={user.id}
-                style={{
-                  background: 'white',
-                  borderRadius: 12,
-                  border: '1px solid #E5E5E5',
-                  padding: 16,
-                  marginBottom: 12,
-                }}
-              >
-                {/* Name + tier badge + toggle */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-                  <span style={{ fontSize: 15, fontWeight: 700, flex: 1 }}>
-                    {user.name || user.email || '-'}
-                  </span>
-                  <span
-                    style={{
-                      fontSize: 11,
-                      fontWeight: 700,
-                      padding: '2px 8px',
-                      borderRadius: 6,
-                      background: tierStyle.background,
-                      color: tierStyle.color,
-                      textTransform: 'capitalize',
-                    }}
+      {!loading && !error && sorted.length > 0 && (
+        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-100">
+                  {columns.map((col) => (
+                    <th
+                      key={col.key}
+                      onClick={() => handleSort(col.key)}
+                      className={`px-3 py-2.5 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider cursor-pointer hover:text-gray-700 select-none whitespace-nowrap ${col.className || ''}`}
+                    >
+                      <span className="inline-flex items-center gap-1">
+                        {col.label}
+                        <SortIcon col={col.key} />
+                      </span>
+                    </th>
+                  ))}
+                  <th className="w-28 px-3 py-2.5 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {sorted.map((user) => (
+                  <tr
+                    key={user.id}
+                    className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors"
                   >
-                    {user.tier}
-                  </span>
-                  <button
-                    onClick={() => toggleTier(user.id, user.tier)}
-                    disabled={updating === user.id}
-                    style={{
-                      fontSize: 11,
-                      fontWeight: 700,
-                      padding: '4px 10px',
-                      borderRadius: 6,
-                      border: 'none',
-                      cursor: updating === user.id ? 'wait' : 'pointer',
-                      background: user.tier === 'pro' ? '#FFEBEE' : '#E8F5E9',
-                      color: user.tier === 'pro' ? '#C62828' : '#2E7D32',
-                      opacity: updating === user.id ? 0.5 : 1,
-                    }}
-                  >
-                    {updating === user.id
-                      ? '...'
-                      : user.tier === 'pro'
-                        ? 'Revoke Pro'
-                        : 'Grant Pro'}
-                  </button>
-                </div>
+                    {/* User (name + email) */}
+                    <td className="px-3 py-2.5">
+                      <div className="font-semibold text-gray-900 truncate max-w-[200px]">
+                        {user.name || '-'}
+                      </div>
+                      <div className="text-xs text-gray-400 truncate max-w-[200px]">
+                        {user.email || '-'}
+                      </div>
+                    </td>
+                    {/* Tier */}
+                    <td className="px-3 py-2.5">
+                      <span
+                        className={`inline-block text-[11px] font-bold px-2 py-0.5 rounded-md capitalize ${
+                          user.tier === 'pro'
+                            ? 'bg-green-100 text-green-700'
+                            : 'bg-gray-100 text-gray-500'
+                        }`}
+                      >
+                        {user.tier}
+                      </span>
+                    </td>
+                    {/* XP */}
+                    <td className="px-3 py-2.5 text-right font-medium text-gray-700">
+                      {user.totalXp.toLocaleString()}
+                    </td>
+                    {/* Streak */}
+                    <td className="px-3 py-2.5 text-right font-medium text-gray-700">
+                      {user.currentStreak}
+                    </td>
+                    {/* Questions */}
+                    <td className="px-3 py-2.5 text-right font-medium text-gray-700">
+                      {user.totalQuestionsAttempted}
+                    </td>
+                    {/* Joined */}
+                    <td className="px-3 py-2.5 text-gray-500 whitespace-nowrap">
+                      {formatDate(user.joinedDate)}
+                    </td>
+                    {/* Last Active */}
+                    <td className="px-3 py-2.5 text-gray-500 whitespace-nowrap">
+                      {formatDate(user.lastActiveDate)}
+                    </td>
+                    {/* Actions */}
+                    <td className="px-3 py-2.5">
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          onClick={() => toggleTier(user.id, user.tier)}
+                          disabled={updating === user.id}
+                          className={`text-[11px] font-bold px-2.5 py-1 rounded-lg transition-colors disabled:opacity-50 ${
+                            user.tier === 'pro'
+                              ? 'bg-red-50 text-red-600 hover:bg-red-100'
+                              : 'bg-green-50 text-green-600 hover:bg-green-100'
+                          }`}
+                        >
+                          {updating === user.id
+                            ? '...'
+                            : user.tier === 'pro'
+                              ? 'Revoke'
+                              : 'Grant'}
+                        </button>
+                        <button
+                          onClick={() => { setDeleteTarget(user); setConfirmText(''); }}
+                          className="p-1.5 rounded-lg text-gray-300 hover:text-red-500 hover:bg-red-50 transition-colors"
+                          title="Delete user"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
-                {/* Email */}
-                <div style={{ fontSize: 13, color: '#888', marginBottom: 12 }}>
-                  {user.email || '-'}
-                </div>
-
-                {/* Stats row */}
-                <div style={{ display: 'flex', gap: 24, marginBottom: 12 }}>
-                  <div>
-                    <div style={{ fontSize: 11, color: '#999', fontWeight: 600, marginBottom: 2 }}>XP</div>
-                    <div style={{ fontSize: 15, fontWeight: 700 }}>{user.totalXp.toLocaleString()}</div>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: 11, color: '#999', fontWeight: 600, marginBottom: 2 }}>Streak</div>
-                    <div style={{ fontSize: 15, fontWeight: 700 }}>{user.currentStreak}</div>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: 11, color: '#999', fontWeight: 600, marginBottom: 2 }}>Questions</div>
-                    <div style={{ fontSize: 15, fontWeight: 700 }}>{user.totalQuestionsAttempted}</div>
-                  </div>
-                </div>
-
-                {/* Last active */}
-                <div style={{ fontSize: 12, color: '#999' }}>
-                  Last active: {formatDate(user.lastActiveDate)}
-                </div>
+      {/* Delete Confirmation Modal */}
+      {deleteTarget && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 p-6">
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <h3 className="text-lg font-bold text-gray-900">Delete User</h3>
+                <p className="text-sm text-gray-500 mt-1">This action cannot be undone.</p>
               </div>
-            );
-          })}
+              <button
+                onClick={() => { setDeleteTarget(null); setConfirmText(''); }}
+                className="p-1 rounded-lg hover:bg-gray-100"
+              >
+                <X className="w-5 h-5 text-gray-400" />
+              </button>
+            </div>
+
+            <div className="bg-red-50 rounded-xl p-4 mb-4">
+              <p className="text-sm text-red-800">
+                You are about to permanently delete <strong>{deleteTarget.name || deleteTarget.email}</strong> and
+                all their data including progress, subscriptions, and payment history.
+              </p>
+            </div>
+
+            <div className="mb-4">
+              <label className="text-sm font-medium text-gray-700 mb-1.5 block">
+                Type <span className="font-mono bg-gray-100 px-1.5 py-0.5 rounded text-red-600">DELETE</span> to confirm
+              </label>
+              <input
+                type="text"
+                value={confirmText}
+                onChange={(e) => setConfirmText(e.target.value)}
+                placeholder="DELETE"
+                className="w-full px-3 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                autoFocus
+              />
+            </div>
+
+            <div className="flex gap-3">
+              <button
+                onClick={() => { setDeleteTarget(null); setConfirmText(''); }}
+                className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={deleteUser}
+                disabled={confirmText !== 'DELETE' || deleting}
+                className="flex-1 px-4 py-2.5 rounded-xl bg-red-600 text-white text-sm font-semibold hover:bg-red-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {deleting ? 'Deleting...' : 'Delete User'}
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
