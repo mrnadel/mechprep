@@ -18,32 +18,24 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          MechReady (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) offers paid
-          subscription plans through our payment processor, Paddle. This Refund Policy
-          explains when and how you may request a refund for your MechReady Pro subscription.
-        </p>
-        <p>
-          By purchasing a subscription, you agree to this Refund Policy.
+          MechReady is operated by Yanay Nadel (&quot;we,&quot; &quot;us,&quot; or
+          &quot;our&quot;). We offer paid subscription plans through our Merchant of Record,
+          Paddle. This Refund Policy explains when and how you may request a refund for your
+          MechReady Pro subscription.
         </p>
       </>
     ),
   },
   {
-    id: 'eligibility',
-    title: '2. Refund Eligibility',
+    id: 'refund-guarantee',
+    title: '2. 14-Day Money-Back Guarantee',
     content: (
       <>
         <p>
-          We offer a <strong>14-day money-back guarantee</strong> on all new Pro subscriptions.
-          If you are not satisfied with MechReady Pro, you may request a full refund within 14
-          days of your initial purchase date.
+          We offer a <strong>14-day money-back guarantee</strong> on all Pro subscriptions. If
+          you are not satisfied with MechReady Pro for any reason, you may request a full
+          refund within 14 days of your purchase date. No questions asked.
         </p>
-        <p>To be eligible for a refund:</p>
-        <ul>
-          <li>The request must be made within 14 days of the original purchase date.</li>
-          <li>The request must be for a first-time subscription purchase (not a renewal).</li>
-          <li>The account must not have been suspended or terminated for a violation of our Terms of Service.</li>
-        </ul>
       </>
     ),
   },
@@ -58,9 +50,8 @@ const sections: Section[] = [
           to avoid being charged.
         </p>
         <p>
-          Refunds for renewal charges are handled on a case-by-case basis. If you forgot to
-          cancel and have not used the Service since the renewal, please contact us within 7
-          days of the renewal charge and we will do our best to accommodate your request.
+          If you are charged for a renewal, you may request a full refund within 14 days of
+          the renewal charge.
         </p>
       </>
     ),
@@ -86,10 +77,9 @@ const sections: Section[] = [
         <ul>
           <li>Your account email address.</li>
           <li>The date of purchase.</li>
-          <li>The reason for your refund request.</li>
         </ul>
         <p>
-          We aim to respond to all refund requests within 2 business days.
+          We aim to process all refund requests within 2 business days.
         </p>
       </>
     ),
@@ -100,16 +90,15 @@ const sections: Section[] = [
     content: (
       <>
         <p>
-          Approved refunds will be processed through Paddle, our payment processor. The refund
-          will be credited to the original payment method used for the purchase.
+          Refunds are processed through Paddle, our Merchant of Record. The refund will be
+          credited to the original payment method used for the purchase.
         </p>
         <p>
           Please allow up to <strong>5-10 business days</strong> for the refund to appear on
           your statement, depending on your bank or payment provider.
         </p>
         <p>
-          Upon receiving a refund, your Pro subscription will be immediately downgraded to the
-          Free plan.
+          Upon receiving a refund, your Pro subscription will be downgraded to the Free plan.
         </p>
       </>
     ),
@@ -125,11 +114,11 @@ const sections: Section[] = [
         <ul>
           <li>
             <strong>Cancellation:</strong> Stops future billing. You keep Pro access until the
-            end of your current billing period. No refund is issued.
+            end of your current billing period.
           </li>
           <li>
-            <strong>Refund:</strong> Returns the payment and immediately downgrades your
-            account to the Free plan.
+            <strong>Refund:</strong> Returns the payment and downgrades your account to the
+            Free plan.
           </li>
         </ul>
         <p>
@@ -146,36 +135,20 @@ const sections: Section[] = [
     ),
   },
   {
-    id: 'exceptions',
-    title: '7. Non-Refundable Items',
-    content: (
-      <>
-        <p>The following are not eligible for refunds:</p>
-        <ul>
-          <li>Partial billing periods after cancellation.</li>
-          <li>Accounts terminated for violation of our Terms of Service.</li>
-          <li>Virtual currency (Gems) earned or spent within the platform.</li>
-          <li>Requests made more than 14 days after the initial purchase date (unless covered by Section 3).</li>
-        </ul>
-      </>
-    ),
-  },
-  {
     id: 'changes',
-    title: '8. Changes to This Policy',
+    title: '7. Changes to This Policy',
     content: (
       <>
         <p>
           We may update this Refund Policy from time to time. When we make changes, we will
-          update the &quot;Last updated&quot; date at the top of this page. Your continued use
-          of the Service after any changes constitutes your acceptance of the updated policy.
+          update the &quot;Last updated&quot; date at the top of this page.
         </p>
       </>
     ),
   },
   {
     id: 'contact',
-    title: '9. Contact Us',
+    title: '8. Contact Us',
     content: (
       <>
         <p>
@@ -228,8 +201,8 @@ export default function RefundPolicyPage() {
         {/* Introduction */}
         <div className="bg-white rounded-2xl border border-gray-200 p-5 mb-6">
           <p className="text-sm text-gray-600 leading-relaxed">
-            We want you to be completely satisfied with MechReady. This policy outlines our
-            approach to refunds for paid subscriptions.
+            We want you to be completely satisfied with MechReady. If you are not happy with
+            your purchase, you can request a full refund within 14 days. No questions asked.
           </p>
         </div>
 
