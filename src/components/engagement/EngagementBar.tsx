@@ -14,7 +14,8 @@ import {
 import { leagueTiers } from '@/data/league';
 import { getUserRank } from '@/lib/league-simulator';
 import { dailyChestReward, weeklyChestReward } from '@/data/quests';
-import { addDebugDayOffset } from '@/lib/quest-engine';
+import { addDebugDayOffset, resetDebugDayOffset } from '@/lib/quest-engine';
+import { useStore } from '@/store/useStore';
 import { QuestCard } from './QuestCard';
 import { ChestAnimation } from './ChestAnimation';
 
