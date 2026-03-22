@@ -1,6 +1,7 @@
 'use client';
 
 import useSWR from 'swr';
+import { motion } from 'framer-motion';
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
@@ -13,10 +14,13 @@ export default function FriendsBadge() {
   if (count === 0) return null;
 
   return (
-    <span
+    <motion.span
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ type: 'spring', stiffness: 500, damping: 20 }}
       className="absolute -top-1 -right-1 min-w-[18px] h-[18px] rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center px-1"
     >
       {count > 9 ? '9+' : count}
-    </span>
+    </motion.span>
   );
 }
