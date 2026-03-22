@@ -316,6 +316,30 @@ export default function LessonView() {
             color={activeLesson.isGolden ? '#FFB800' : unitColor}
           />
 
+          {/* Debug: skip to end */}
+          {process.env.NODE_ENV === 'development' && (
+            <button
+              onClick={completeLesson}
+              title="Debug: skip lesson"
+              className="flex-shrink-0 transition-transform active:scale-90"
+              style={{
+                width: 28,
+                height: 28,
+                borderRadius: 8,
+                background: '#FEE2E2',
+                border: '1px solid #FECACA',
+                cursor: 'pointer',
+                fontSize: 12,
+                lineHeight: 1,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              ⏭
+            </button>
+          )}
+
           <motion.div
             className="flex-shrink-0 flex items-center"
             style={{

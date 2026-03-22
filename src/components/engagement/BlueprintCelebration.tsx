@@ -19,21 +19,17 @@ function AnimatedPath({
   strokeWidth = 1.5,
   delay,
   color,
-  golden,
 }: {
   d: string;
   strokeWidth?: number;
   delay: number;
   color: string;
-  golden: boolean;
 }) {
-  const stroke = golden ? '#FFB800' : color;
-
   return (
     <motion.path
       d={d}
       fill="none"
-      stroke={stroke}
+      stroke={color}
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -49,12 +45,11 @@ function AnimatedPath({
 
 /** Animated dimension line */
 function DimensionLine({
-  x1, y1, x2, y2, label, delay, color, golden,
+  x1, y1, x2, y2, label, delay, color,
 }: {
   x1: number; y1: number; x2: number; y2: number;
-  label: string; delay: number; color: string; golden: boolean;
+  label: string; delay: number; color: string;
 }) {
-  const stroke = golden ? '#FFB800' : color;
   const isVertical = Math.abs(x2 - x1) < Math.abs(y2 - y1);
 
   return (
@@ -63,37 +58,34 @@ function DimensionLine({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4, delay }}
     >
-      {/* Extension lines */}
       <line
         x1={x1} y1={y1} x2={x2} y2={y2}
-        stroke={stroke}
+        stroke={color}
         strokeWidth={0.8}
         strokeDasharray="4 3"
-        opacity={0.7}
+        opacity={0.5}
       />
-      {/* End ticks */}
       {isVertical ? (
         <>
-          <line x1={x1 - 4} y1={y1} x2={x1 + 4} y2={y1} stroke={stroke} strokeWidth={1} />
-          <line x1={x2 - 4} y1={y2} x2={x2 + 4} y2={y2} stroke={stroke} strokeWidth={1} />
+          <line x1={x1 - 4} y1={y1} x2={x1 + 4} y2={y1} stroke={color} strokeWidth={1} />
+          <line x1={x2 - 4} y1={y2} x2={x2 + 4} y2={y2} stroke={color} strokeWidth={1} />
         </>
       ) : (
         <>
-          <line x1={x1} y1={y1 - 4} x2={x1} y2={y1 + 4} stroke={stroke} strokeWidth={1} />
-          <line x1={x2} y1={y2 - 4} x2={x2} y2={y2 + 4} stroke={stroke} strokeWidth={1} />
+          <line x1={x1} y1={y1 - 4} x2={x1} y2={y1 + 4} stroke={color} strokeWidth={1} />
+          <line x1={x2} y1={y2 - 4} x2={x2} y2={y2 + 4} stroke={color} strokeWidth={1} />
         </>
       )}
-      {/* Label */}
       <motion.text
         x={(x1 + x2) / 2}
         y={(y1 + y2) / 2 + (isVertical ? 0 : -8)}
         textAnchor="middle"
         dominantBaseline={isVertical ? 'middle' : 'auto'}
         dx={isVertical ? -14 : 0}
-        fill={stroke}
+        fill={color}
         fontSize={11}
         fontWeight={700}
-        fontFamily="monospace"
+        fontFamily="var(--font-jetbrains), monospace"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, delay: delay + 0.3 }}
@@ -111,7 +103,6 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
   const courseData = useCourseStore((s) => s.courseData);
   const progress = useCourseStore((s) => s.progress);
 
-  // Compute chapter stats
   const chapterStats = useMemo(() => {
     const unit = courseData[unitIndex];
     if (!unit) return { lessons: 0, accuracy: 0, totalXp: 0 };
@@ -137,7 +128,6 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
 
   useBackHandler(true, onDismiss);
 
-  // Phase transitions
   const totalDrawTime = blueprint.paths.length * 0.22 + 0.8;
   useEffect(() => {
     const t1 = setTimeout(() => setPhase('stamp'), (totalDrawTime + 0.5) * 1000);
@@ -145,7 +135,6 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [totalDrawTime]);
 
-  // Allow dismiss after stats phase
   const [canDismiss, setCanDismiss] = useState(false);
   useEffect(() => {
     const t = setTimeout(() => setCanDismiss(true), (totalDrawTime + 2.5) * 1000);
@@ -156,7 +145,6 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
     if (canDismiss) onDismiss();
   }, [canDismiss, onDismiss]);
 
-  // Keyboard dismiss
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if ((e.key === 'Enter' || e.key === ' ') && canDismiss) {
@@ -168,10 +156,11 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
     return () => window.removeEventListener('keydown', handleKey);
   }, [canDismiss, onDismiss]);
 
-  const lineColor = isGolden ? '#FFB800' : '#88BBDD';
-  const bgColor = isGolden ? '#1A1400' : '#0A1628';
-  const gridColor = isGolden ? 'rgba(255,184,0,0.06)' : 'rgba(100,160,220,0.08)';
-  const gridColorStrong = isGolden ? 'rgba(255,184,0,0.12)' : 'rgba(100,160,220,0.15)';
+  // Use unit's theme color for the drawing, golden overrides
+  const drawColor = isGolden ? '#CC9400' : theme.dark;
+  const dimColor = isGolden ? '#B8860B' : theme.mid;
+  const accentColor = isGolden ? '#FFB800' : theme.color;
+  const accentBg = isGolden ? '#FFF8E1' : theme.bg;
 
   return (
     <AnimatePresence>
@@ -182,63 +171,56 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
         onClick={handleDismiss}
-        className="fixed inset-0 z-[60] flex flex-col items-center justify-center"
+        className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-[#FAFAFA]"
         style={{
-          background: bgColor,
           cursor: canDismiss ? 'pointer' : 'default',
           paddingTop: 'env(safe-area-inset-top, 0px)',
           paddingBottom: 'env(safe-area-inset-bottom, 0px)',
         }}
       >
-        {/* Blueprint grid pattern */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage: `
-              linear-gradient(${gridColor} 1px, transparent 1px),
-              linear-gradient(90deg, ${gridColor} 1px, transparent 1px),
-              linear-gradient(${gridColorStrong} 1px, transparent 1px),
-              linear-gradient(90deg, ${gridColorStrong} 1px, transparent 1px)
-            `,
-            backgroundSize: '20px 20px, 20px 20px, 100px 100px, 100px 100px',
-          }}
-        />
+        {/* Confetti burst on stamp */}
+        {(phase === 'stamp' || phase === 'stats') && (
+          <div className="fixed inset-0 pointer-events-none z-[5]">
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+                key={`confetti-${i}`}
+                initial={{ opacity: 1, y: '45vh', x: '50vw', scale: 0 }}
+                animate={{
+                  opacity: [1, 1, 0],
+                  y: `${10 + Math.random() * 60}vh`,
+                  x: `${10 + Math.random() * 80}vw`,
+                  scale: [0, 1, 0.6],
+                  rotate: Math.random() * 720 - 360,
+                }}
+                transition={{ duration: 1.5 + Math.random(), ease: 'easeOut' }}
+                style={{
+                  position: 'absolute',
+                  width: 8 + Math.random() * 6,
+                  height: 8 + Math.random() * 6,
+                  borderRadius: i % 3 === 0 ? '50%' : i % 3 === 1 ? '2px' : '0',
+                  background: [accentColor, theme.color, '#58CC02', '#FF9600', '#1CB0F6', '#CE82FF'][i % 6],
+                }}
+              />
+            ))}
+          </div>
+        )}
 
-        {/* Title block */}
+        {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative z-10 text-center"
-          style={{ marginBottom: 12 }}
+          className="relative z-10 text-center mb-4"
         >
-          <div
-            style={{
-              fontSize: 11,
-              fontWeight: 800,
-              letterSpacing: 3,
-              color: isGolden ? '#FFD54F' : '#5A8AAA',
-              textTransform: 'uppercase',
-              marginBottom: 4,
-              fontFamily: 'monospace',
-            }}
-          >
-            {isGolden ? 'GOLDEN CHAPTER COMPLETE' : 'CHAPTER COMPLETE'}
+          <div className="text-xs font-extrabold tracking-[3px] uppercase mb-1" style={{ color: accentColor }}>
+            {isGolden ? 'Golden chapter complete' : 'Chapter complete'}
           </div>
-          <div
-            style={{
-              fontSize: 20,
-              fontWeight: 800,
-              color: isGolden ? '#FFB800' : '#C0D8EA',
-              letterSpacing: 1,
-              fontFamily: 'monospace',
-            }}
-          >
+          <div className="text-2xl font-black text-surface-900">
             {unitTitle}
           </div>
         </motion.div>
 
-        {/* Blueprint SVG area */}
+        {/* Drawing card */}
         <motion.div
           className="relative z-10"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -247,31 +229,20 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
           style={{
             width: 'min(85vw, 420px)',
             maxHeight: 'min(50vh, 340px)',
-            border: `2px solid ${isGolden ? 'rgba(255,184,0,0.3)' : 'rgba(100,160,220,0.2)'}`,
-            borderRadius: 8,
-            padding: 16,
-            background: isGolden ? 'rgba(255,184,0,0.03)' : 'rgba(100,160,220,0.03)',
+            borderRadius: 20,
+            padding: 20,
+            background: 'white',
+            border: '1px solid #E2E8F0',
+            boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
           }}
         >
-          {/* Title block in corner */}
+          {/* Small label in corner */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            style={{
-              position: 'absolute',
-              bottom: 8,
-              right: 8,
-              padding: '4px 10px',
-              border: `1px solid ${isGolden ? 'rgba(255,184,0,0.25)' : 'rgba(100,160,220,0.2)'}`,
-              borderRadius: 3,
-              fontSize: 8,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: isGolden ? '#B8860B' : '#5A8AAA',
-              letterSpacing: 1.5,
-              textTransform: 'uppercase',
-            }}
+            className="absolute bottom-3 right-4 text-[10px] font-bold tracking-wider uppercase"
+            style={{ color: dimColor }}
           >
             {blueprint.title}
           </motion.div>
@@ -281,70 +252,47 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
             style={{ width: '100%', height: '100%' }}
             preserveAspectRatio="xMidYMid meet"
           >
-            {/* Drawing paths */}
             {blueprint.paths.map((path, i) => (
               <AnimatedPath
                 key={i}
                 d={path.d}
                 strokeWidth={path.strokeWidth}
                 delay={0.5 + i * 0.22}
-                color={lineColor}
-                golden={isGolden}
+                color={drawColor}
               />
             ))}
-
-            {/* Dimension lines */}
             {blueprint.dimensions.map((dim, i) => (
               <DimensionLine
                 key={`dim-${i}`}
                 {...dim}
                 delay={totalDrawTime + 0.2 + i * 0.2}
-                color={isGolden ? '#B8860B' : '#5A8AAA'}
-                golden={isGolden}
+                color={dimColor}
               />
             ))}
           </svg>
         </motion.div>
 
-        {/* APPROVED Stamp */}
+        {/* Stamp */}
         <AnimatePresence>
           {(phase === 'stamp' || phase === 'stats') && (
             <motion.div
-              className="absolute z-20"
+              className="absolute z-20 pointer-events-none"
               initial={{ scale: 3, rotate: -15, opacity: 0 }}
               animate={{ scale: 1, rotate: -8, opacity: 1 }}
-              transition={{
-                type: 'spring',
-                stiffness: 400,
-                damping: 20,
-              }}
-              style={{
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                pointerEvents: 'none',
-              }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+              style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
             >
               <div
+                className="font-black text-3xl tracking-[6px] uppercase"
                 style={{
                   padding: '10px 30px',
-                  border: `4px solid ${isGolden ? '#FFB800' : '#FF4444'}`,
-                  borderRadius: 8,
-                  fontSize: 32,
-                  fontWeight: 900,
-                  fontFamily: 'monospace',
-                  color: isGolden ? '#FFB800' : '#FF4444',
-                  letterSpacing: 6,
-                  textTransform: 'uppercase',
-                  textShadow: isGolden
-                    ? '0 0 20px rgba(255,184,0,0.5)'
-                    : '0 0 20px rgba(255,68,68,0.3)',
-                  background: isGolden
-                    ? 'rgba(255,184,0,0.08)'
-                    : 'rgba(255,68,68,0.05)',
+                  border: `4px solid ${isGolden ? '#FFB800' : '#58CC02'}`,
+                  borderRadius: 12,
+                  color: isGolden ? '#FFB800' : '#58CC02',
+                  background: isGolden ? 'rgba(255,184,0,0.08)' : 'rgba(88,204,2,0.08)',
                 }}
               >
-                {isGolden ? 'MASTERED' : 'APPROVED'}
+                {isGolden ? 'MASTERED' : 'COMPLETE'}
               </div>
             </motion.div>
           )}
@@ -354,72 +302,53 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
         {phase === 'stamp' && (
           <motion.div
             className="fixed inset-0 pointer-events-none z-10"
-            animate={{
-              x: [0, -4, 4, -2, 2, 0],
-              y: [0, 2, -3, 1, -1, 0],
-            }}
+            animate={{ x: [0, -4, 4, -2, 2, 0], y: [0, 2, -3, 1, -1, 0] }}
             transition={{ duration: 0.4 }}
           />
         )}
 
-        {/* Stats panel */}
+        {/* Stats */}
         <AnimatePresence>
           {phase === 'stats' && (
             <motion.div
-              className="relative z-10 flex flex-col items-center"
+              className="relative z-10 flex flex-col items-center mt-5"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              style={{ marginTop: 20 }}
             >
               <div
-                style={{
-                  display: 'flex',
-                  gap: 24,
-                  padding: '14px 28px',
-                  borderRadius: 14,
-                  border: `1.5px solid ${isGolden ? 'rgba(255,184,0,0.25)' : 'rgba(100,160,220,0.2)'}`,
-                  background: isGolden ? 'rgba(255,184,0,0.06)' : 'rgba(100,160,220,0.05)',
-                }}
+                className="flex gap-6 px-7 py-4 rounded-2xl bg-white border border-surface-200"
+                style={{ boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}
               >
-                <StatItem
-                  label="Lessons"
-                  value={`${chapterStats.lessons}`}
-                  color={isGolden ? '#FFB800' : '#C0D8EA'}
-                />
+                <StatItem label="Lessons" value={`${chapterStats.lessons}`} color="#0F172A" />
                 <StatItem
                   label="Accuracy"
                   value={`${chapterStats.accuracy}%`}
-                  color={chapterStats.accuracy >= 90
-                    ? (isGolden ? '#FFD54F' : '#58CC02')
-                    : (isGolden ? '#FFB800' : '#FF9600')}
+                  color={chapterStats.accuracy >= 90 ? '#58CC02' : '#FF9600'}
                 />
-                <StatItem
-                  label="XP"
-                  value={`${chapterStats.totalXp}`}
-                  color={isGolden ? '#FFB800' : theme.color}
-                />
+                <StatItem label="XP" value={`${chapterStats.totalXp}`} color={accentColor} />
               </div>
 
-              {/* Dismiss hint */}
-              <motion.div
+              {/* Continue button */}
+              <motion.button
                 initial={{ opacity: 0 }}
-                animate={{ opacity: canDismiss ? 0.6 : 0 }}
+                animate={{ opacity: canDismiss ? 1 : 0 }}
                 transition={{ duration: 0.5 }}
+                onClick={(e) => { e.stopPropagation(); handleDismiss(); }}
+                className="mt-5 px-12 py-3.5 text-white font-extrabold rounded-2xl text-[15px] tracking-wide transition-transform active:translate-y-[2px]"
                 style={{
-                  marginTop: 16,
-                  fontSize: 13,
-                  color: isGolden ? '#B8860B' : '#5A8AAA',
-                  fontWeight: 600,
+                  background: isGolden ? '#FFB800' : '#58CC02',
+                  boxShadow: `0 4px 0 ${isGolden ? '#CC9400' : '#46A302'}`,
+                  color: isGolden ? '#5D4200' : 'white',
                 }}
               >
-                Tap to continue
-              </motion.div>
+                CONTINUE
+              </button>
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Golden sparkle particles */}
+        {/* Golden sparkles */}
         {isGolden && (
           <div className="fixed inset-0 pointer-events-none z-[5]">
             {[...Array(16)].map((_, i) => (
@@ -464,27 +393,10 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
 function StatItem({ label, value, color }: { label: string; value: string; color: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div
-        style={{
-          fontSize: 10,
-          fontWeight: 700,
-          letterSpacing: 1.5,
-          color: 'rgba(160,190,220,0.6)',
-          textTransform: 'uppercase',
-          fontFamily: 'monospace',
-          marginBottom: 4,
-        }}
-      >
+      <div className="text-[10px] font-bold tracking-wider uppercase text-surface-400 mb-1">
         {label}
       </div>
-      <div
-        style={{
-          fontSize: 22,
-          fontWeight: 800,
-          color,
-          fontFamily: 'monospace',
-        }}
-      >
+      <div className="text-xl font-black" style={{ color }}>
         {value}
       </div>
     </div>
