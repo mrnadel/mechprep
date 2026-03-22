@@ -60,9 +60,22 @@ export async function POST(request: NextRequest) {
   // Create a transaction server-side and return its ID
   // This avoids client-side transaction creation issues
   try {
-    const transaction = await paddle.transactions.create({
-      items: [{ priceId, quantity: 1 }],
-    });
+    // Look up existing Paddle customer ID for this user
+    const [sub] = await db
+      .select({ paddleCustomerId: subscriptions.paddleCustomerId })
+      .from(subscriptions)
+      .where(eq(subscriptions.userId, userId))
+      .limit(1);
+
+    const transaction = sub?.paddleCustomerId
+      ? await paddle.transactions.create({
+          items: [{ priceId, quantity: 1 }],
+          customerId: sub.paddleCustomerId,
+        })
+      : await paddle.transactions.create({
+          items: [{ priceId, quantity: 1 }],
+          customer: { email: user.email },
+        } as never);
     return NextResponse.json({ transactionId: transaction.id });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : String(err);
