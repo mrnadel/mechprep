@@ -189,11 +189,12 @@ export function EngagementBar() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -6, scale: 0.97 }}
                 transition={{ duration: 0.18, ease: 'easeOut' }}
-                className="absolute left-0 top-full mt-2 z-50 bg-white rounded-2xl border border-gray-200 overflow-hidden"
+                className="absolute left-0 top-full mt-2 z-50 bg-white rounded-2xl border border-gray-200 overflow-y-auto overflow-x-hidden"
                 style={{
                   minWidth: 300,
                   width: 'calc(100vw - 40px)',
                   maxWidth: 380,
+                  maxHeight: 'calc(100vh - 160px)',
                   boxShadow: '0 12px 40px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.06)',
                 }}
               >
@@ -281,22 +282,63 @@ export function EngagementBar() {
                   )}
                 </div>
 
-                {/* Weekly + view all */}
-                <div className="border-t border-gray-100">
-                  <Link
-                    href="/quests"
-                    onClick={() => setQuestsOpen(false)}
-                    className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm">📋</span>
-                      <span className="text-[13px] font-semibold text-gray-600">
-                        Weekly: {weeklyDone}/{weeklyQuests.length} done
-                      </span>
+                {/* Weekly quests */}
+                {weeklyQuests.length > 0 && (
+                  <div className="border-t border-gray-200">
+                    <div className="px-4 pt-3 pb-1.5">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-[15px] font-extrabold text-gray-900">Weekly Quests</h3>
+                        <button
+                          onClick={handleWeeklyChest}
+                          disabled={!allWeeklyComplete || weeklyChestClaimed}
+                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all"
+                          style={{
+                            background: weeklyChestClaimed
+                              ? '#F0FDF4'
+                              : allWeeklyComplete
+                                ? 'linear-gradient(135deg, #8B5CF6, #7C3AED)'
+                                : '#F3F4F6',
+                            color: weeklyChestClaimed
+                              ? '#16A34A'
+                              : allWeeklyComplete
+                                ? '#FFFFFF'
+                                : '#9CA3AF',
+                            cursor: allWeeklyComplete && !weeklyChestClaimed ? 'pointer' : 'default',
+                            border: 'none',
+                            boxShadow: allWeeklyComplete && !weeklyChestClaimed
+                              ? '0 2px 8px rgba(124, 58, 237, 0.3)'
+                              : 'none',
+                          }}
+                        >
+                          {weeklyChestClaimed ? '✓ Collected' : '🎁 Open Chest'}
+                        </button>
+                      </div>
+                      <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                        <motion.div
+                          className="h-full rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${weeklyProgressPercent}%` }}
+                          transition={{ duration: 0.5, ease: 'easeOut' }}
+                          style={{
+                            background: allWeeklyComplete
+                              ? 'linear-gradient(90deg, #34D399, #10B981)'
+                              : 'linear-gradient(90deg, #818CF8, #6366F1)',
+                          }}
+                        />
+                      </div>
                     </div>
-                    <span className="text-[13px] font-bold text-primary-600">View all →</span>
-                  </Link>
-                </div>
+                    <div className="px-3 pb-3 space-y-1">
+                      {weeklyQuests.slice(0, 3).map((quest) => (
+                        <QuestCard
+                          key={quest.definitionId}
+                          quest={quest}
+                          onClaim={claimQuestReward}
+                          compact
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
               </motion.div>
             )}
           </AnimatePresence>
