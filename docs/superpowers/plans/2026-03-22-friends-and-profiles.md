@@ -96,7 +96,7 @@ export const friendRequests = pgTable(
 );
 ```
 
-Note: `uniqueIndex` and `index` are already imported in the schema file. You'll also need to add `check` to the imports from `drizzle-orm/pg-core`.
+Note: `uniqueIndex` and `index` are already imported in the schema file. You'll also need to add `check` to the imports from `drizzle-orm/pg-core`, and add `import { sql } from 'drizzle-orm';` at the top of the file (needed for the CHECK constraint).
 
 - [ ] **Step 3: Push schema to database**
 
@@ -1682,7 +1682,7 @@ Create `src/app/(app)/friends/page.tsx`:
 ```tsx
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, Users, Loader2 } from 'lucide-react';
 import UserSearch from '@/components/friends/UserSearch';
@@ -1834,8 +1834,7 @@ export default function FriendsPage() {
                     <h3 className="text-xs font-extrabold text-surface-400 uppercase tracking-wider mb-3">
                       Sent ({outgoing.length})
                     </h3>
-                    <AnimatePresence>
-                      <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2">
                         {outgoing.map((req: any) => (
                           <FriendRequestCard
                             key={req.id}
