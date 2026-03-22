@@ -181,7 +181,7 @@ export function CourseHeader() {
               }}
               onClick={() => togglePopover('xp')}
             >
-              <span style={{ fontSize: 18 }}>💎</span>
+              <span style={{ fontSize: 18 }}>⭐</span>
               <span>{progress.totalXp.toLocaleString()}</span>
             </button>
 
@@ -620,7 +620,7 @@ export function CourseHeader() {
                           boxShadow: '0 4px 12px rgba(168,85,247,0.3)',
                         }}
                       >
-                        💎
+                        ⭐
                       </div>
                       <div>
                         <h3 style={{ fontSize: 16, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2 }}>

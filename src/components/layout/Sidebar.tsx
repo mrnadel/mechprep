@@ -48,7 +48,7 @@ export default function Sidebar() {
   const pathname = usePathname();
   const { sidebarOpen, toggleSidebar } = useSidebar();
   const progress = useProgress();
-  const { tier, isProUser } = useSubscription();
+  const { tier, isProUser, hasFetched } = useSubscription();
 
   return (
     <>
@@ -100,7 +100,7 @@ export default function Sidebar() {
             const Icon = item.icon;
             const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
 
-            const showProBadge = item.pro && !isProUser;
+            const showProBadge = hasFetched && item.pro && !isProUser;
 
             return (
               <Link
@@ -136,7 +136,7 @@ export default function Sidebar() {
         </nav>
 
         {/* Upgrade CTA for free users */}
-        {sidebarOpen && !isProUser && (
+        {sidebarOpen && hasFetched && !isProUser && (
           <div className="px-2 pb-2 shrink-0">
             <Link
               href="/pricing"
@@ -161,7 +161,7 @@ export default function Sidebar() {
                 <p className="text-sm font-medium text-surface-900 truncate">{progress.displayName}</p>
                 <div className="flex items-center gap-1.5">
                   <p className="text-xs text-surface-500">Level {progress.currentLevel} · {progress.totalXp} XP</p>
-                  {isProUser ? (
+                  {hasFetched && (isProUser ? (
                     <span
                       className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-1.5 py-0.5 rounded-full tracking-wide"
                       style={{
@@ -179,7 +179,7 @@ export default function Sidebar() {
                     <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-surface-100 text-surface-500">
                       FREE
                     </span>
-                  )}
+                  ))}
                 </div>
               </div>
             </div>
