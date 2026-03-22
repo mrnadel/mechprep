@@ -8,11 +8,13 @@ import { GemCounter } from '@/components/engagement/GemCounter';
 import { DoubleXpTimer } from '@/components/engagement/DoubleXpTimer';
 import { useLeague } from '@/store/useEngagementStore';
 import { leagueTiers } from '@/data/league';
+import { useSubscription } from '@/hooks/useSubscription';
 
 export default function TopBar() {
   const progress = useProgress();
   const { toggleSidebar } = useSidebar();
   const league = useLeague();
+  const { isProUser } = useSubscription();
   const leagueTier = leagueTiers.find((t) => t.tier === league.currentTier);
 
   const currentLevel = levels.find(l => l.level === progress.currentLevel) || levels[0];
@@ -48,6 +50,24 @@ export default function TopBar() {
             <Flame className="w-4 h-4" aria-hidden="true" />
             <span>{progress.currentStreak}</span>
           </div>
+
+          {/* Pro badge */}
+          {isProUser && (
+            <div
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-full text-[11px] font-extrabold tracking-wide"
+              style={{
+                background: 'linear-gradient(135deg, #F59E0B, #D97706)',
+                color: '#FFFBEB',
+                boxShadow: '0 0 8px rgba(245, 158, 11, 0.3)',
+              }}
+              aria-label="Pro member"
+            >
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+              </svg>
+              PRO
+            </div>
+          )}
 
           {/* XP */}
           <div
