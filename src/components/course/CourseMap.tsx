@@ -132,8 +132,8 @@ export function CourseMap() {
     >
       {/* Units container */}
       <div
-        className="flex flex-col"
-        style={{ padding: '12px 16px', gap: 16 }}
+        className="flex flex-col px-3 sm:px-4"
+        style={{ paddingTop: 12, paddingBottom: 0, gap: 16 }}
       >
         {course.map((unit, unitIndex) => {
           const theme = getUnitTheme(unitIndex);
@@ -199,8 +199,8 @@ export function CourseMap() {
                     className="overflow-hidden"
                   >
                     <div
-                      className="flex flex-col"
-                      style={{ padding: '4px 16px 20px', gap: 8 }}
+                      className="flex flex-col px-3 sm:px-4"
+                      style={{ paddingTop: 4, paddingBottom: 20, gap: 8 }}
                     >
                       {unit.lessons.map((lesson, lessonIndex) => {
                         const state = getLessonState(unitIndex, lessonIndex);
@@ -299,9 +299,10 @@ export function CourseMap() {
               >
                 <div className="absolute inset-0 bg-black/40" />
                 <motion.div
-                  className="relative w-full sm:w-auto bg-white sm:mx-4"
+                  className="relative w-full sm:w-auto bg-white sm:mx-4 overflow-y-auto"
                   style={{
                     maxWidth: 480,
+                    maxHeight: 'calc(100vh - 48px)',
                     borderRadius: 24,
                     padding: '20px 20px 32px',
                   }}
@@ -332,8 +333,9 @@ export function CourseMap() {
                     >
                       {lesson.icon}
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p
+                        className="truncate"
                         style={{
                           fontSize: 12,
                           fontWeight: 700,
@@ -343,6 +345,7 @@ export function CourseMap() {
                         {unit.title}
                       </p>
                       <p
+                        className="truncate"
                         style={{
                           fontSize: 16,
                           fontWeight: 800,
@@ -371,7 +374,7 @@ export function CourseMap() {
                         <button
                           className="flex-1 active:scale-[0.98] transition-transform"
                           style={{
-                            padding: '14px 0',
+                            padding: '16px 0',
                             borderRadius: 16,
                             fontSize: 14,
                             fontWeight: 800,
@@ -387,7 +390,7 @@ export function CourseMap() {
                         <button
                           className="flex-1 active:scale-[0.98] transition-transform"
                           style={{
-                            padding: '14px 0',
+                            padding: '16px 0',
                             borderRadius: 16,
                             fontSize: 14,
                             fontWeight: 800,
@@ -423,7 +426,7 @@ export function CourseMap() {
                         <button
                           className="flex-1 active:scale-[0.98] transition-transform"
                           style={{
-                            padding: '14px 0',
+                            padding: '16px 0',
                             borderRadius: 16,
                             fontSize: 14,
                             fontWeight: 800,
@@ -440,7 +443,7 @@ export function CourseMap() {
                           className="flex-1 flex items-center justify-center active:scale-[0.98] transition-transform"
                           style={{
                             gap: 6,
-                            padding: '14px 0',
+                            padding: '16px 0',
                             borderRadius: 16,
                             fontSize: 14,
                             fontWeight: 800,
@@ -477,7 +480,7 @@ export function CourseMap() {
                         <button
                           className="flex-1 active:scale-[0.98] transition-transform"
                           style={{
-                            padding: '14px 0',
+                            padding: '16px 0',
                             borderRadius: 16,
                             fontSize: 14,
                             fontWeight: 800,
@@ -493,7 +496,7 @@ export function CourseMap() {
                         <button
                           className="flex-1 active:scale-[0.98] transition-transform"
                           style={{
-                            padding: '14px 0',
+                            padding: '16px 0',
                             borderRadius: 16,
                             fontSize: 14,
                             fontWeight: 800,
@@ -532,7 +535,7 @@ export function CourseMap() {
                         <button
                           className="flex-1 active:scale-[0.98] transition-transform"
                           style={{
-                            padding: '14px 0',
+                            padding: '16px 0',
                             borderRadius: 16,
                             fontSize: 14,
                             fontWeight: 800,
@@ -549,7 +552,7 @@ export function CourseMap() {
                           className="flex-1 flex items-center justify-center active:scale-[0.98] transition-transform"
                           style={{
                             gap: 6,
-                            padding: '14px 0',
+                            padding: '16px 0',
                             borderRadius: 16,
                             fontSize: 14,
                             fontWeight: 800,

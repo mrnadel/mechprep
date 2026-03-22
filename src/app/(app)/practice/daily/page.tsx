@@ -19,13 +19,13 @@ export default function DailyChallengePage() {
   const challenge = dailyChallenges.find(c => c.dayOfWeek === today) || dailyChallenges[0];
 
   return (
-    <div className="max-w-2xl mx-auto text-center py-12">
-      <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-amber-50 mb-6">
-        <Calendar className="w-10 h-10 text-amber-500" />
+    <div className="max-w-2xl mx-auto text-center px-4 sm:px-0 py-8 sm:py-12">
+      <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-amber-50 mb-4 sm:mb-6">
+        <Calendar className="w-8 h-8 sm:w-10 sm:h-10 text-amber-500" />
       </div>
-      <h1 className="text-2xl font-bold text-surface-900 mb-1">Daily Challenge</h1>
-      <p className="text-lg font-semibold text-amber-600 mb-3">{challenge.theme}</p>
-      <p className="text-surface-500 mb-8 max-w-md mx-auto">
+      <h1 className="text-xl sm:text-2xl font-bold text-surface-900 mb-1">Daily Challenge</h1>
+      <p className="text-base sm:text-lg font-semibold text-amber-600 mb-3">{challenge.theme}</p>
+      <p className="text-surface-500 mb-6 sm:mb-8 max-w-md mx-auto">
         {challenge.description}
       </p>
 

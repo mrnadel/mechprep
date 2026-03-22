@@ -16,11 +16,11 @@ export default function AdaptivePracticePage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto text-center py-12">
-      <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary-50 mb-6">
-        <Zap className="w-10 h-10 text-primary-500" />
+    <div className="max-w-2xl mx-auto text-center px-4 sm:px-0 py-8 sm:py-12">
+      <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-primary-50 mb-4 sm:mb-6">
+        <Zap className="w-8 h-8 sm:w-10 sm:h-10 text-primary-500" />
       </div>
-      <h1 className="text-2xl font-bold text-surface-900 mb-3">Adaptive Practice</h1>
+      <h1 className="text-xl sm:text-2xl font-bold text-surface-900 mb-3">Adaptive Practice</h1>
       <p className="text-surface-500 mb-8 max-w-md mx-auto">
         Questions are selected based on your performance. Weak areas get more attention.
         Difficulty adapts as you improve.

@@ -292,7 +292,7 @@ export function CourseHeader() {
       </header>
 
       {/* Greeting */}
-      <div style={{ padding: '24px 20px 8px' }}>
+      <div className="px-4 sm:px-5 pt-5 sm:pt-6 pb-2">
         <h2 style={{ fontSize: 22, fontWeight: 800, color: '#3C3C3C' }}>
           {getGreeting()}
         </h2>

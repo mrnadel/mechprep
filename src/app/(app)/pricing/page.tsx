@@ -183,7 +183,7 @@ export default function PricingPage() {
             {/* Price display */}
             <div className="mt-6 mb-2">
               <div className="flex items-baseline justify-center gap-1">
-                <span className="text-5xl font-extrabold text-white tracking-tight">
+                <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
                   {formatPrice(effectiveMonthly)}
                 </span>
                 <span className="text-primary-200 text-base font-medium">/mo</span>
