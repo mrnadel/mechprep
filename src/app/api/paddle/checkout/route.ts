@@ -67,10 +67,35 @@ export async function POST(request: NextRequest) {
   let customerId = existingSub?.paddleCustomerId ?? undefined;
 
   if (!customerId) {
-    const customer = await paddle.customers.create({
-      email: user.email,
+    // Try to find existing Paddle customer by email, or create a new one
+    try {
+      const customer = await paddle.customers.create({
+        email: user.email,
+      });
+      customerId = customer.id;
+    } catch (err: unknown) {
+      // If customer already exists in Paddle, list and find by email
+      const message = err instanceof Error ? err.message : '';
+      if (message.includes('conflicts')) {
+        const customers = await paddle.customers.list({ email: [user.email] });
+        for await (const c of customers) {
+          customerId = c.id;
+          break;
+        }
+      }
+      if (!customerId) throw err;
+    }
+
+    // Save the Paddle customer ID for future checkouts
+    await db.insert(subscriptions).values({
+      userId,
+      tier: 'free',
+      status: 'active',
+      paddleCustomerId: customerId,
+    }).onConflictDoUpdate({
+      target: subscriptions.userId,
+      set: { paddleCustomerId: customerId, updatedAt: new Date() },
     });
-    customerId = customer.id;
   }
 
   // Return customer ID so the client can open the Paddle checkout overlay
