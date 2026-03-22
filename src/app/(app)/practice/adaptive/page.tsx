@@ -3,6 +3,8 @@
 import { useSession, useSessionActions } from '@/store/useStore';
 import SessionView from '@/components/session/SessionView';
 import { DailyLimitBanner } from '@/components/ui/DailyLimitBanner';
+import { UpgradeGate } from '@/components/ui/UpgradeGate';
+import { FEATURES } from '@/lib/pricing';
 import { Zap } from 'lucide-react';
 
 export default function AdaptivePracticePage() {
@@ -24,14 +26,16 @@ export default function AdaptivePracticePage() {
         Difficulty adapts as you improve.
       </p>
 
-      <DailyLimitBanner />
+      <UpgradeGate feature={FEATURES.ALL_PRACTICE_MODES} reason="Adaptive learning focuses on your weak areas and adjusts difficulty as you improve.">
+        <DailyLimitBanner />
 
-      <div className="space-y-3 max-w-sm mx-auto">
-        <button onClick={() => startSession('adaptive')} className="btn-primary w-full text-lg py-3">
-          Start Practice Session
-        </button>
-        <p className="text-xs text-surface-400">10 questions · Mixed topics · Adaptive difficulty</p>
-      </div>
+        <div className="space-y-3 max-w-sm mx-auto">
+          <button onClick={() => startSession('adaptive')} className="btn-primary w-full text-lg py-3">
+            Start Practice Session
+          </button>
+          <p className="text-xs text-surface-400">10 questions · Mixed topics · Adaptive difficulty</p>
+        </div>
+      </UpgradeGate>
     </div>
   );
 }
