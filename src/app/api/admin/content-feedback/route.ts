@@ -72,7 +72,7 @@ export async function GET(req: NextRequest) {
         contentType: row.contentType,
         contentId: row.contentId,
         totalFlags: 0,
-        reasons: { confusing: 0, incorrect: 0, 'too-easy': 0, 'too-hard': 0 },
+        reasons: { confusing: 0, incorrect: 0, 'too-easy': 0, 'too-hard': 0, 'bad-graphic': 0 },
         comments: [],
         latestFlagAt: null,
       });

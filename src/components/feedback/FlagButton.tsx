@@ -12,6 +12,7 @@ const REASON_LABELS: Record<FeedbackReason, string> = {
   incorrect: 'Incorrect',
   'too-easy': 'Too Easy',
   'too-hard': 'Too Hard',
+  'bad-graphic': 'Bad Graphic',
 };
 
 interface Props {

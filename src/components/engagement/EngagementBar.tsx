@@ -13,7 +13,7 @@ import {
 } from '@/store/useEngagementStore';
 import { leagueTiers } from '@/data/league';
 import { getUserRank } from '@/lib/league-simulator';
-import { dailyChestReward } from '@/data/quests';
+import { dailyChestReward, weeklyChestReward } from '@/data/quests';
 import { QuestCard } from './QuestCard';
 import { ChestAnimation } from './ChestAnimation';
 
@@ -42,6 +42,7 @@ export function EngagementBar() {
   const league = useLeague();
   const { claimQuestReward, claimChest, initDailyQuests, initWeeklyQuests } = useEngagementActions();
   const dailyChestClaimed = useEngagementStore((s) => s.dailyChestClaimed);
+  const weeklyChestClaimed = useEngagementStore((s) => s.weeklyChestClaimed);
   const { data: session } = useSession();
   const isAdmin = session?.user?.id === process.env.NEXT_PUBLIC_ADMIN_USER_ID;
 
@@ -74,7 +75,9 @@ export function EngagementBar() {
   const totalDone = dailyDone + weeklyDone;
   const questsRemaining = totalQuests - totalDone;
   const allDailyComplete = dailyQuests.length >= 3 && dailyQuests.every((q) => q.completed);
+  const allWeeklyComplete = weeklyQuests.length >= 3 && weeklyQuests.every((q) => q.completed);
   const dailyProgressPercent = dailyQuests.length > 0 ? (dailyDone / dailyQuests.length) * 100 : 0;
+  const weeklyProgressPercent = weeklyQuests.length > 0 ? (weeklyDone / weeklyQuests.length) * 100 : 0;
 
   // League stats
   const tier = leagueTiers.find((t) => t.tier === league.currentTier) ?? leagueTiers[0];
@@ -86,6 +89,12 @@ export function EngagementBar() {
     setChestOpen({ type: 'daily', reward: dailyChestReward });
   };
 
+  const handleWeeklyChest = () => {
+    if (!allWeeklyComplete || weeklyChestClaimed) return;
+    claimChest('weekly');
+    setChestOpen({ type: 'weekly', reward: weeklyChestReward });
+  };
+
   const skipToNextDay = useCallback(() => {
     // Reset dailyQuestDate to force initDailyQuests to generate new quests
     useEngagementStore.setState({
@@ -94,6 +103,21 @@ export function EngagementBar() {
     });
     initDailyQuests();
   }, [initDailyQuests]);
+
+  const completeAllQuests = useCallback(() => {
+    useEngagementStore.setState((state) => ({
+      dailyQuests: state.dailyQuests.map((q) => ({
+        ...q,
+        progress: q.target,
+        completed: true,
+      })),
+      weeklyQuests: state.weeklyQuests.map((q) => ({
+        ...q,
+        progress: q.target,
+        completed: true,
+      })),
+    }));
+  }, []);
 
   const buttons = [
     {
@@ -183,12 +207,20 @@ export function EngagementBar() {
                           Resets in {timeLeft}
                         </p>
                         {isAdmin && (
-                          <button
-                            onClick={skipToNextDay}
-                            className="text-[10px] font-bold text-orange-500 bg-orange-50 hover:bg-orange-100 px-1.5 py-0.5 rounded transition-colors"
-                          >
-                            Skip day
-                          </button>
+                          <>
+                            <button
+                              onClick={skipToNextDay}
+                              className="text-[10px] font-bold text-orange-500 bg-orange-50 hover:bg-orange-100 px-1.5 py-0.5 rounded transition-colors"
+                            >
+                              Skip day
+                            </button>
+                            <button
+                              onClick={completeAllQuests}
+                              className="text-[10px] font-bold text-emerald-500 bg-emerald-50 hover:bg-emerald-100 px-1.5 py-0.5 rounded transition-colors"
+                            >
+                              Finish all
+                            </button>
+                          </>
                         )}
                       </div>
                     </div>
