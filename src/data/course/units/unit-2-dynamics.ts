@@ -644,14 +644,14 @@ export const unit2: Unit = {
           type: 'multiple-choice',
           question: 'An engineer is designing a centrifuge to produce 500g of centripetal acceleration at the sample radius of 0.15 m. What rotational speed (rpm) is required?',
           options: [
+            '1,726 rpm',
             '5,437 rpm',
-            '1,722 rpm',
             '10,874 rpm',
             '543 rpm',
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Outer casing --> <circle cx="40" cy="40" r="30" stroke="#3B8700" stroke-width="2" fill="none" opacity="0.2"/> <!-- Rotor (fast rotation) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="1s" repeatCount="indefinite"/> <circle cx="40" cy="40" r="26" fill="#58CC02" opacity="0.05"/> <!-- Rotor arms --> <line x1="40" y1="40" x2="40" y2="16" stroke="#58CC02" stroke-width="2" stroke-linecap="round" opacity="0.3"/> <line x1="40" y1="40" x2="40" y2="64" stroke="#58CC02" stroke-width="2" stroke-linecap="round" opacity="0.3"/> <!-- Sample tubes (at ends of arms) --> <rect x="36" y="14" width="8" height="10" rx="3" fill="#58CC02" opacity="0.3"/> <rect x="36" y="14" width="8" height="10" rx="3" stroke="#3B8700" stroke-width="1.2" fill="none"/> <rect x="36" y="56" width="8" height="10" rx="3" fill="#58CC02" opacity="0.3"/> <rect x="36" y="56" width="8" height="10" rx="3" stroke="#3B8700" stroke-width="1.2" fill="none"/> <!-- Sediment in tubes (heavier particles pushed outward) --> <rect x="37" y="14" width="6" height="4" rx="2" fill="#3B8700" opacity="0.3"/> <rect x="37" y="62" width="6" height="4" rx="2" fill="#3B8700" opacity="0.3"/> </g> <!-- Hub --> <circle cx="40" cy="40" r="5" fill="#3B8700"/> <circle cx="40" cy="40" r="2" fill="white" opacity="0.15"/> <!-- Centrifugal force arrows (pointing outward) --> <g opacity="0.15"> <animate attributeName="opacity" values="0.1;0.25;0.1" dur="0.5s" repeatCount="indefinite"/> <line x1="40" y1="10" x2="40" y2="4" stroke="#3B8700" stroke-width="1"/> <polygon points="38.5,5 40,2 41.5,5" fill="#3B8700"/> <line x1="40" y1="70" x2="40" y2="76" stroke="#3B8700" stroke-width="1"/> <polygon points="38.5,75 40,78 41.5,75" fill="#3B8700"/> </g> <!-- ω label --> <text x="64" y="18" font-size="5" fill="#3B8700" opacity="0.2" font-style="italic">ω</text> <text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">F = mω²r</text> </svg>',
-          explanation: 'Required centripetal acceleration: a = 500 × 9.81 = 4905 m/s². Using a = ω²r: ω = sqrt(a/r) = sqrt(4905/0.15) = sqrt(32700) = 180.8 rad/s.',
+          explanation: 'Required centripetal acceleration: a = 500 × 9.81 = 4905 m/s². Using a = ω²r: ω = sqrt(a/r) = sqrt(4905/0.15) = sqrt(32700) = 180.8 rad/s. Converting: rpm = 180.8 × 60/(2π) = 1726 rpm.',
           hint: 'Use a_c = ω²r and convert ω from rad/s to rpm.',
         },
         {
