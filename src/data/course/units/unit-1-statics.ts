@@ -317,13 +317,13 @@ export const unit1: Unit = {
           type: 'multiple-choice',
           question: 'A force of 1000 N must be resolved into two components along directions that are 40° and 65° from the force vector (the two directions are 105° apart). Using the sine rule on the force triangle, what is the component along the 40° direction?',
           options: [
-            '652 N',
-            '766 N',
+            '666 N',
+            '938 N',
             '1000 N',
             '500 N',
           ],
           correctIndex: 0,
-          explanation: 'Using the sine rule: F_40 = 1000 × sin40°/sin105° = 1000 × 0.643/0.966 ≈ 652 N. The angle opposite each component is the angle the other makes with the force.',
+          explanation: 'In the force triangle, the angle opposite to F_40 is 40° (the angle that direction makes with the resultant). By sine rule: F_40/sin40° = 1000/sin105°. F_40 = 1000 × sin40°/sin105° = 1000 × 0.6428/0.9659 = 666 N.',
           hint: 'Apply the sine rule to the force triangle.',
         },
         {
