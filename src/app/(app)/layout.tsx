@@ -4,6 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useDbSync } from '@/hooks/useDbSync';
 import { DebugTierToggle } from '@/components/dev/DebugTierToggle';
 import { useEngagementInit } from '@/lib/engagement-init';
+import Footer from '@/components/layout/Footer';
 
 function LoadingSkeleton() {
   return (
@@ -37,16 +38,18 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   // Unauthenticated users (landing page) get full-width layout
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen">
-        {children}
+      <div className="min-h-screen flex flex-col">
+        <div className="flex-1">{children}</div>
+        <Footer />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] lg:bg-[#E8E8E8]">
-      <div className="max-w-3xl mx-auto min-h-screen bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200">
-        {children}
+      <div className="max-w-3xl mx-auto min-h-screen bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200 flex flex-col">
+        <div className="flex-1">{children}</div>
+        <Footer />
       </div>
       <DebugTierToggle />
     </div>
