@@ -35,6 +35,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMasteryStore } from '@/store/useMasteryStore';
 import { computeAllMastery } from '@/data/mastery';
+import { useSubscription } from '@/hooks/useSubscription';
 
 // ─── Image compression ──────────────────────────────────────
 const MAX_UPLOAD_MB = 5;
@@ -93,6 +94,28 @@ const MASTERY_COLORS: Record<string, string> = {
   'needs-work': '#EF4444',
   'not-started': '#94A3B8',
 };
+
+// ─── Pro Badge ──────────────────────────────────────────────
+function ProBadge({ className = '' }: { className?: string }) {
+  return (
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ delay: 0.4, type: 'spring', stiffness: 300, damping: 20 }}
+      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-extrabold text-xs tracking-wide shadow-lg ${className}`}
+      style={{
+        background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%)',
+        color: '#FFFBEB',
+        boxShadow: '0 0 12px rgba(245, 158, 11, 0.4), 0 2px 8px rgba(0,0,0,0.15)',
+      }}
+    >
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
+        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+      </svg>
+      PRO
+    </motion.div>
+  );
+}
 
 // ─── Animated counter ───────────────────────────────────────
 function AnimatedNumber({ value, duration = 1.2 }: { value: number; duration?: number }) {
@@ -268,6 +291,7 @@ export default function ProfilePage() {
   const { data: session, update: updateSession } = useSession();
   const progress = useStore((s) => s.progress);
   const courseProgress = useCourseStore((s) => s.progress);
+  const { isProUser } = useSubscription();
 
   const [hasPassword, setHasPassword] = useState<boolean | null>(null);
   const [editingName, setEditingName] = useState(false);
@@ -620,11 +644,12 @@ export default function ProfilePage() {
 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
               <p className="text-sm text-white/40 mt-1">{email}</p>
-              <div className="flex items-center justify-center gap-3 mt-2">
+              <div className="flex items-center justify-center gap-3 mt-2 flex-wrap">
                 <span className="inline-flex items-center gap-1 text-xs font-bold text-amber-300/80 bg-amber-400/10 px-2.5 py-1 rounded-full">
                   <Crown className="w-3 h-3" />
                   {levelInfo.current.title}
                 </span>
+                {isProUser && <ProBadge />}
                 {joinedDate && (
                   <span className="text-xs text-white/30">
                     Joined {new Date(joinedDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}

@@ -118,7 +118,13 @@ export default function Sidebar() {
                   <span className="flex-1 flex items-center justify-between">
                     <span>{item.label}</span>
                     {showProBadge && (
-                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-700">
+                      <span
+                        className="text-[10px] font-extrabold px-1.5 py-0.5 rounded-full tracking-wide"
+                        style={{
+                          background: 'linear-gradient(135deg, #FDE68A, #FCD34D)',
+                          color: '#92400E',
+                        }}
+                      >
                         PRO
                       </span>
                     )}
@@ -155,14 +161,25 @@ export default function Sidebar() {
                 <p className="text-sm font-medium text-surface-900 truncate">{progress.displayName}</p>
                 <div className="flex items-center gap-1.5">
                   <p className="text-xs text-surface-500">Level {progress.currentLevel} · {progress.totalXp} XP</p>
-                  <span className={cn(
-                    'text-[10px] font-semibold px-1.5 py-0.5 rounded-full',
-                    isProUser
-                      ? 'bg-primary-100 text-primary-700'
-                      : 'bg-surface-100 text-surface-500'
-                  )}>
-                    {isProUser ? 'PRO' : 'FREE'}
-                  </span>
+                  {isProUser ? (
+                    <span
+                      className="inline-flex items-center gap-0.5 text-[10px] font-extrabold px-1.5 py-0.5 rounded-full tracking-wide"
+                      style={{
+                        background: 'linear-gradient(135deg, #F59E0B, #D97706)',
+                        color: '#FFFBEB',
+                        boxShadow: '0 0 6px rgba(245, 158, 11, 0.3)',
+                      }}
+                    >
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                      </svg>
+                      PRO
+                    </span>
+                  ) : (
+                    <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-surface-100 text-surface-500">
+                      FREE
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
