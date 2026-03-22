@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechReady Launch Checklist</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0F172A;
+    color: #E2E8F0;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #818CF8, #6366F1, #A78BFA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.25rem;
+  }
+
+  header p {
+    color: #64748B;
+    font-size: 0.875rem;
+  }
+
+  .progress-bar-container {
+    background: #1E293B;
+    border-radius: 999px;
+    height: 10px;
+    margin: 1.5rem 0 0.5rem;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #6366F1, #818CF8);
+    transition: width 0.5s ease;
+    width: 0%;
+  }
+
+  .progress-text {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #64748B;
+    font-weight: 600;
+  }
+
+  /* Phase sections */
+  .phase {
+    margin-bottom: 2rem;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .phase-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .badge-critical { background: #7F1D1D; color: #FCA5A5; }
+  .badge-high { background: #78350F; color: #FCD34D; }
+  .badge-growth { background: #064E3B; color: #6EE7B7; }
+  .badge-optional { background: #1E293B; color: #94A3B8; }
+
+  .phase-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #F1F5F9;
+  }
+
+  .phase-arrow {
+    margin-left: auto;
+    color: #475569;
+    transition: transform 0.2s;
+    font-size: 1.25rem;
+  }
+
+  .phase-header.collapsed .phase-arrow {
+    transform: rotate(-90deg);
+  }
+
+  .phase-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .phase-items.hidden {
+    display: none;
+  }
+
+  /* Checklist items */
+  .item {
+    background: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: all 0.2s;
+  }
+
+  .item:hover {
+    border-color: #475569;
+    background: #1E2D45;
+  }
+
+  .item.checked {
+    opacity: 0.45;
+    border-color: #1E293B;
+  }
+
+  .item.checked .item-title {
+    text-decoration: line-through;
+    color: #64748B;
+  }
+
+  .item input[type="checkbox"] {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border: 2px solid #475569;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1px;
+    transition: all 0.15s;
+    position: relative;
+  }
+
+  .item input[type="checkbox"]:checked {
+    background: #6366F1;
+    border-color: #6366F1;
+  }
+
+  .item input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+  }
+
+  .item-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .item-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #F1F5F9;
+    margin-bottom: 0.25rem;
+  }
+
+  .item-desc {
+    font-size: 0.8rem;
+    color: #94A3B8;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+
+  .item-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .item-links a {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.15s;
+    background: #0F172A;
+    border: 1px solid #334155;
+    color: #818CF8;
+  }
+
+  .item-links a:hover {
+    background: #312E81;
+    border-color: #6366F1;
+    color: #C7D2FE;
+  }
+
+  .item-links a.alt {
+    color: #94A3B8;
+  }
+
+  .item-links a.alt:hover {
+    background: #1E293B;
+    border-color: #475569;
+    color: #CBD5E1;
+  }
+
+  .separator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.75rem 0;
+    font-size: 0.7rem;
+    color: #475569;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #1E293B;
+  }
+
+  /* Notes */
+  .note {
+    background: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .note-title {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #FCD34D;
+    margin-bottom: 0.5rem;
+  }
+
+  .note p {
+    font-size: 0.8rem;
+    color: #94A3B8;
+    line-height: 1.6;
+  }
+
+  .note a {
+    color: #818CF8;
+    text-decoration: none;
+  }
+
+  .note a:hover {
+    text-decoration: underline;
+  }
+
+  .note ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+  }
+
+  .note ul li {
+    font-size: 0.8rem;
+    color: #94A3B8;
+    padding: 0.2rem 0;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .note ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: #475569;
+    font-weight: 700;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1E293B;
+    font-size: 0.75rem;
+    color: #475569;
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 1rem 0.75rem; }
+    header h1 { font-size: 1.5rem; }
+    .item { padding: 0.875rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>MechReady Launch Checklist</h1>
+    <p>Everything you need to go live and start making money</p>
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+    <div class="progress-text" id="progressText">0 / 0 completed</div>
+  </header>
+
+  <!-- ═══ PHASE 1 ═══ -->
+  <div class="phase">
+    <div class="phase-header" onclick="togglePhase(this)">
+      <span class="phase-badge badge-critical">Blocking</span>
+      <span class="phase-title">Before You Can Charge Money</span>
+      <span class="phase-arrow">&#9662;</span>
+    </div>
+    <div class="phase-items">
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Register mechready.com</div>
+          <div class="item-desc">Buy the domain. Nobody will pay for an app on a .vercel.app URL. Use Cloudflare for at-cost pricing (~$10/yr, no renewal markup).</div>
+          <div class="item-links">
+            <a href="https://dash.cloudflare.com/sign-up" target="_blank">Cloudflare Registrar</a>
+            <a href="https://www.namecheap.com/domains/registration/results/?domain=mechready" target="_blank" class="alt">Namecheap</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Connect domain to Vercel</div>
+          <div class="item-desc">Add your domain in Vercel project settings. Point DNS to Vercel's nameservers. SSL is automatic.</div>
+          <div class="item-links">
+            <a href="https://vercel.com/dashboard" target="_blank">Vercel Dashboard</a>
+            <a href="https://vercel.com/docs/projects/domains/add-a-domain" target="_blank" class="alt">Docs: Add Domain</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Set up business email</div>
+          <div class="item-desc">Create support@mechready.com. Your Privacy Policy and Terms link to it. Paddle also requires a real support email. Zoho is free for 1 mailbox.</div>
+          <div class="item-links">
+            <a href="https://www.zoho.com/mail/zohomail-pricing.html" target="_blank">Zoho Mail (free)</a>
+            <a href="https://workspace.google.com/intl/iw/pricing.html" target="_blank" class="alt">Google Workspace (30/mo ILS)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Switch Paddle to production</div>
+          <div class="item-desc">You're on sandbox mode. Create real products + prices in Paddle production environment, then update your .env with the new price IDs and API keys. Paddle is the Merchant of Record so they handle Israeli VAT for you.</div>
+          <div class="item-links">
+            <a href="https://vendors.paddle.com/overview" target="_blank">Paddle Dashboard</a>
+            <a href="https://developer.paddle.com/build/onboarding/go-live-checklist" target="_blank" class="alt">Go-Live Checklist</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Publish Google OAuth consent screen</div>
+          <div class="item-desc">Currently in test mode - only whitelisted emails can log in via Google. Submit for verification. Takes 2-5 business days. Do this NOW so it's ready when you launch.</div>
+          <div class="item-links">
+            <a href="https://console.cloud.google.com/apis/credentials/consent" target="_blank">Google OAuth Console</a>
+            <a href="https://developers.google.com/identity/protocols/oauth2/production-readiness" target="_blank" class="alt">Verification Docs</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ PHASE 2 ═══ -->
+  <div class="phase">
+    <div class="phase-header" onclick="togglePhase(this)">
+      <span class="phase-badge badge-high">Week 1</span>
+      <span class="phase-title">Critical Infrastructure</span>
+      <span class="phase-arrow">&#9662;</span>
+    </div>
+    <div class="phase-items">
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Add PostHog analytics</div>
+          <div class="item-desc">Track user behavior: where do free users drop off? What makes them upgrade? Which units drive conversions? Free up to 1M events/mo. Sign up, get the project API key, and ask Claude to integrate it.</div>
+          <div class="item-links">
+            <a href="https://app.posthog.com/signup" target="_blank">PostHog (free tier)</a>
+            <a href="https://mixpanel.com/register/" target="_blank" class="alt">Mixpanel (alt)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Add Sentry error monitoring</div>
+          <div class="item-desc">Get alerted when checkout breaks, questions fail to load, or API errors spike. Without this you'll lose users silently. Free tier covers small apps. Sign up, get DSN, and ask Claude to integrate.</div>
+          <div class="item-links">
+            <a href="https://sentry.io/signup/" target="_blank">Sentry (free tier)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Set up transactional emails</div>
+          <div class="item-desc">Welcome email, streak-about-to-break reminders, payment confirmations. Streak emails are your #1 retention tool (Duolingo's entire growth strategy). Resend is free up to 3K emails/mo and has great DX.</div>
+          <div class="item-links">
+            <a href="https://resend.com/signup" target="_blank">Resend (free tier)</a>
+            <a href="https://www.brevo.com/pricing/" target="_blank" class="alt">Brevo (alt, free 300/day)</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ PHASE 3 ═══ -->
+  <div class="phase">
+    <div class="phase-header" onclick="togglePhase(this)">
+      <span class="phase-badge badge-growth">First Month</span>
+      <span class="phase-title">Growth &amp; Marketing</span>
+      <span class="phase-arrow">&#9662;</span>
+    </div>
+    <div class="phase-items">
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Create LinkedIn company page</div>
+          <div class="item-desc">Your users are engineers job-hunting. They live on LinkedIn. Create a MechReady company page, post ME interview tips weekly. This is your #1 organic channel.</div>
+          <div class="item-links">
+            <a href="https://www.linkedin.com/company/setup/new/" target="_blank">Create Company Page</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Launch on Product Hunt</div>
+          <div class="item-desc">Best single-day traffic source for niche SaaS. Engineers browse PH. Prep a clean launch page with screenshots, pick a Tuesday morning (US time = afternoon Israel time).</div>
+          <div class="item-links">
+            <a href="https://www.producthunt.com/posts/new" target="_blank">Submit to Product Hunt</a>
+            <a href="https://www.producthunt.com/launch" target="_blank" class="alt">Launch Guide</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Post in relevant subreddits</div>
+          <div class="item-desc">Share interview tips first (value-first), mention MechReady naturally. Don't hard-sell. r/MechanicalEngineering (180K+), r/engineering, r/AskEngineers, and r/Israel tech communities.</div>
+          <div class="item-links">
+            <a href="https://www.reddit.com/r/MechanicalEngineering/" target="_blank">r/MechanicalEngineering</a>
+            <a href="https://www.reddit.com/r/engineering/" target="_blank" class="alt">r/engineering</a>
+            <a href="https://www.reddit.com/r/AskEngineers/" target="_blank" class="alt">r/AskEngineers</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Post in Israeli engineering communities</div>
+          <div class="item-desc">Share on Israeli Facebook groups for mechanical engineers, Technion/TAU/BGU alumni groups, and the IsraelTech subreddit. Hebrew posts in FB groups convert well.</div>
+          <div class="item-links">
+            <a href="https://www.facebook.com/groups/" target="_blank">Facebook Groups</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ PHASE 4 ═══ -->
+  <div class="phase">
+    <div class="phase-header collapsed" onclick="togglePhase(this)">
+      <span class="phase-badge badge-optional">Optional</span>
+      <span class="phase-title">Nice-to-Have (Consider Later)</span>
+      <span class="phase-arrow">&#9662;</span>
+    </div>
+    <div class="phase-items hidden">
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Register as an Osek Murshe / Osek Patur</div>
+          <div class="item-desc">If you start making real revenue, you need to register with Mas Hachnasa (Israeli Tax Authority). Osek Patur if under ~120K ILS/yr (no VAT collection needed since Paddle is MoR). Consult an accountant (ro'eh cheshbon) once you hit steady income.</div>
+          <div class="item-links">
+            <a href="https://www.gov.il/he/service/opening-a-file-at-the-tax-authority" target="_blank">Tax Authority (Hebrew)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Hebrew localization</div>
+          <div class="item-desc">Your landing page and marketing in Hebrew could significantly boost Israeli conversions. The course content stays in English (interviews are in English), but onboarding + marketing in Hebrew builds trust locally.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Student verification for discounts</div>
+          <div class="item-desc">Your pricing mentions 50% student discount. Consider verifying via .ac.il email domains (Technion, TAU, BGU, etc.) or a manual verification flow. Israeli universities use .ac.il, not .edu.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">OG image for social sharing</div>
+          <div class="item-desc">When someone shares your link on LinkedIn or WhatsApp, a branded preview image makes it look professional. Create a 1200x630px image with your logo + tagline. Ask Claude to generate it or use Figma.</div>
+          <div class="item-links">
+            <a href="https://www.figma.com/" target="_blank">Figma (free)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Uptime monitoring</div>
+          <div class="item-desc">Get a ping when your site goes down. BetterStack has a generous free tier and alerts via email/Telegram.</div>
+          <div class="item-links">
+            <a href="https://betterstack.com/uptime" target="_blank">BetterStack (free)</a>
+            <a href="https://uptimerobot.com/" target="_blank" class="alt">UptimeRobot (alt)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" onchange="updateProgress()">
+        <div class="item-content">
+          <div class="item-title">Israeli privacy regulation (PPPA)</div>
+          <div class="item-desc">Israel's Protection of Privacy Act requires registering databases with the Privacy Protection Authority if you hold personal data on 10K+ people. Not urgent now, but be aware as you grow.</div>
+          <div class="item-links">
+            <a href="https://www.gov.il/he/departments/the_privacy_protection_authority" target="_blank">Privacy Authority (Hebrew)</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ NOTES ═══ -->
+  <div class="note">
+    <div class="note-title">Why Paddle handles your tax headaches</div>
+    <p>Paddle is a <strong>Merchant of Record</strong> - they sell to the customer on your behalf. This means:</p>
+    <ul>
+      <li>Paddle collects and remits VAT/GST in every country (including Israeli Ma'am for Israeli customers)</li>
+      <li>Paddle issues invoices to customers, not you</li>
+      <li>You receive payouts from Paddle (like a salary), report it as income in Israel</li>
+      <li>You don't need to register for VAT in the EU, US, or anywhere else</li>
+      <li>You still need to report income to Mas Hachnasa - consult a local accountant</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <div class="note-title">Already done (by Claude)</div>
+    <ul>
+      <li>Privacy Policy page (/privacy)</li>
+      <li>Terms of Service page (/terms)</li>
+      <li>Contact page (/contact)</li>
+      <li>Cookie consent banner</li>
+      <li>Favicon + PWA manifest</li>
+      <li>robots.txt + sitemap.xml</li>
+      <li>Open Graph + Twitter meta tags</li>
+      <li>Footer with legal links</li>
+    </ul>
+  </div>
+
+  <footer>
+    MechReady Launch Checklist &middot; Generated March 2025
+  </footer>
+
+</div>
+
+<script>
+  // Persist checkbox state in localStorage
+  const STORAGE_KEY = 'mechready-checklist';
+
+  function getState() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch { return {}; }
+  }
+
+  function saveState(state) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function updateProgress() {
+    const checkboxes = document.querySelectorAll('.item input[type="checkbox"]');
+    const total = checkboxes.length;
+    let checked = 0;
+    const state = {};
+
+    checkboxes.forEach((cb, i) => {
+      if (cb.checked) checked++;
+      state[i] = cb.checked;
+      cb.closest('.item').classList.toggle('checked', cb.checked);
+    });
+
+    saveState(state);
+
+    const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+    document.getElementById('progressBar').style.width = pct + '%';
+    document.getElementById('progressText').textContent = checked + ' / ' + total + ' completed';
+  }
+
+  function togglePhase(header) {
+    header.classList.toggle('collapsed');
+    const items = header.nextElementSibling;
+    items.classList.toggle('hidden');
+  }
+
+  // Restore state on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const state = getState();
+    const checkboxes = document.querySelectorAll('.item input[type="checkbox"]');
+    checkboxes.forEach((cb, i) => {
+      if (state[i]) cb.checked = true;
+    });
+    updateProgress();
+
+    // Open optional section if it was already interacted with
+    const optionalChecks = Array.from(checkboxes).slice(-6);
+    if (optionalChecks.some(cb => cb.checked)) {
+      const optionalHeader = document.querySelector('.phase-header.collapsed');
+      if (optionalHeader) togglePhase(optionalHeader);
+    }
+  });
+</script>
+
+</body>
+</html>
