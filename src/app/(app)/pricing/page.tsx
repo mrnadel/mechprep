@@ -106,6 +106,7 @@ export default function PricingPage() {
       : PADDLE_PRICES.PRO_MONTHLY;
 
     setCheckoutLoading(true);
+    setCheckoutError('');
     try {
       const res = await fetch('/api/paddle/checkout', {
         method: 'POST',
@@ -113,8 +114,9 @@ export default function PricingPage() {
         body: JSON.stringify({ priceId }),
       });
       if (!res.ok) {
-        const err = await res.json();
+        const err = await res.json().catch(() => ({}));
         console.error('Checkout API error:', err);
+        setCheckoutError('Something went wrong. Please try again.');
         return;
       }
       const { transactionId } = await res.json();
@@ -129,6 +131,7 @@ export default function PricingPage() {
       });
     } catch (err) {
       console.error('Checkout error:', err);
+      setCheckoutError('Something went wrong. Please try again.');
     } finally {
       setCheckoutLoading(false);
     }

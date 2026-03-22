@@ -2,7 +2,7 @@
 // Server-Side Access Control — MechReady SaaS
 // ============================================================
 
-import { eq, and } from 'drizzle-orm';
+import { eq, and, sql } from 'drizzle-orm';
 import { db } from './db';
 import { subscriptions, dailyUsage } from './db/schema';
 import { LIMITS, PRO_SESSION_TYPES } from './pricing';
@@ -109,26 +109,33 @@ export async function getRemainingDailyQuestions(
 export async function incrementDailyUsage(userId: string): Promise<void> {
   const today = getTodayString();
 
-  const [existing] = await db
-    .select({ id: dailyUsage.id, questionsUsed: dailyUsage.questionsUsed })
-    .from(dailyUsage)
-    .where(and(eq(dailyUsage.userId, userId), eq(dailyUsage.date, today)))
-    .limit(1);
+  // Try atomic increment first (handles the common case without a race condition)
+  const result = await db
+    .update(dailyUsage)
+    .set({
+      questionsUsed: sql`${dailyUsage.questionsUsed} + 1`,
+      updatedAt: new Date(),
+    })
+    .where(and(eq(dailyUsage.userId, userId), eq(dailyUsage.date, today)));
 
-  if (existing) {
-    await db
-      .update(dailyUsage)
-      .set({
-        questionsUsed: existing.questionsUsed + 1,
-        updatedAt: new Date(),
-      })
-      .where(eq(dailyUsage.id, existing.id));
-  } else {
+  // If no row was updated, this is the first question today — insert
+  if (result.rowCount === 0) {
     await db.insert(dailyUsage).values({
       userId,
       date: today,
       questionsUsed: 1,
-    });
+    }).onConflictDoNothing();
+
+    // If insert was a no-op (concurrent insert won), do the increment
+    if (result.rowCount === 0) {
+      await db
+        .update(dailyUsage)
+        .set({
+          questionsUsed: sql`${dailyUsage.questionsUsed} + 1`,
+          updatedAt: new Date(),
+        })
+        .where(and(eq(dailyUsage.userId, userId), eq(dailyUsage.date, today)));
+    }
   }
 }
 
