@@ -3,6 +3,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useSession } from 'next-auth/react';
 import { Search, ChevronUp, ChevronDown, Trash2, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface AdminUser {
   id: string;
@@ -18,6 +19,16 @@ interface AdminUser {
 
 type SortKey = 'name' | 'email' | 'tier' | 'totalXp' | 'currentStreak' | 'totalQuestionsAttempted' | 'joinedDate' | 'lastActiveDate';
 type SortDir = 'asc' | 'desc';
+
+const SORT_OPTIONS: { key: SortKey; label: string }[] = [
+  { key: 'name', label: 'Name' },
+  { key: 'tier', label: 'Tier' },
+  { key: 'totalXp', label: 'XP' },
+  { key: 'currentStreak', label: 'Streak' },
+  { key: 'totalQuestionsAttempted', label: 'Questions' },
+  { key: 'joinedDate', label: 'Joined' },
+  { key: 'lastActiveDate', label: 'Last Active' },
+];
 
 function formatDate(value: string | null): string {
   if (!value) return '-';
@@ -110,7 +121,6 @@ export default function AdminUsersPage() {
     return [...filtered].sort((a, b) => {
       let aVal: string | number = '';
       let bVal: string | number = '';
-
       switch (sortKey) {
         case 'name':
           aVal = (a.name || '').toLowerCase();
@@ -145,7 +155,6 @@ export default function AdminUsersPage() {
           bVal = b.lastActiveDate ? new Date(b.lastActiveDate).getTime() : 0;
           break;
       }
-
       if (aVal < bVal) return sortDir === 'asc' ? -1 : 1;
       if (aVal > bVal) return sortDir === 'asc' ? 1 : -1;
       return 0;
@@ -197,22 +206,47 @@ export default function AdminUsersPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-extrabold text-gray-900 mb-1">Users</h1>
-      <p className="text-sm text-gray-500 mb-5">
+      <h1 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-1">Users</h1>
+      <p className="text-sm text-gray-500 mb-4 md:mb-5">
         {loading ? 'Loading...' : `${total} registered user${total === 1 ? '' : 's'}`}
         {search && !loading && ` · ${sorted.length} match${sorted.length === 1 ? '' : 'es'}`}
       </p>
 
-      {/* Search */}
-      <div className="relative mb-4">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-        <input
-          type="text"
-          placeholder="Search by name, email, or tier..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-        />
+      {/* Search + Sort (mobile) */}
+      <div className="flex flex-col sm:flex-row gap-2 mb-4">
+        <div className="relative flex-1">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search by name, email, or tier..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          />
+        </div>
+        {/* Mobile sort dropdown */}
+        <div className="md:hidden">
+          <select
+            value={`${sortKey}:${sortDir}`}
+            onChange={(e) => {
+              const [k, d] = e.target.value.split(':');
+              setSortKey(k as SortKey);
+              setSortDir(d as SortDir);
+            }}
+            className="w-full sm:w-auto px-3 py-2.5 rounded-xl border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+          >
+            {SORT_OPTIONS.map((opt) => (
+              <option key={`${opt.key}:desc`} value={`${opt.key}:desc`}>
+                {opt.label} (High → Low)
+              </option>
+            ))}
+            {SORT_OPTIONS.map((opt) => (
+              <option key={`${opt.key}:asc`} value={`${opt.key}:asc`}>
+                {opt.label} (Low → High)
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
@@ -224,114 +258,194 @@ export default function AdminUsersPage() {
       )}
 
       {!loading && !error && sorted.length > 0 && (
-        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-100">
-                  {columns.map((col) => (
-                    <th
-                      key={col.key}
-                      onClick={() => handleSort(col.key)}
-                      className={`px-3 py-2.5 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider cursor-pointer hover:text-gray-700 select-none whitespace-nowrap ${col.className || ''}`}
-                    >
-                      <span className="inline-flex items-center gap-1">
-                        {col.label}
-                        <SortIcon col={col.key} />
-                      </span>
-                    </th>
-                  ))}
-                  <th className="w-28 px-3 py-2.5 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {sorted.map((user) => (
-                  <tr
-                    key={user.id}
-                    className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors"
-                  >
-                    {/* User (name + email) */}
-                    <td className="px-3 py-2.5">
-                      <div className="font-semibold text-gray-900 truncate max-w-[200px]">
-                        {user.name || '-'}
-                      </div>
-                      <div className="text-xs text-gray-400 truncate max-w-[200px]">
-                        {user.email || '-'}
-                      </div>
-                    </td>
-                    {/* Tier */}
-                    <td className="px-3 py-2.5">
-                      <span
-                        className={`inline-block text-[11px] font-bold px-2 py-0.5 rounded-md capitalize ${
-                          user.tier === 'pro'
-                            ? 'bg-green-100 text-green-700'
-                            : 'bg-gray-100 text-gray-500'
-                        }`}
+        <>
+          {/* Desktop table */}
+          <div className="hidden md:block bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-100">
+                    {columns.map((col) => (
+                      <th
+                        key={col.key}
+                        onClick={() => handleSort(col.key)}
+                        className={cn(
+                          'px-3 py-2.5 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider cursor-pointer hover:text-gray-700 select-none whitespace-nowrap',
+                          col.className
+                        )}
                       >
-                        {user.tier}
-                      </span>
-                    </td>
-                    {/* XP */}
-                    <td className="px-3 py-2.5 text-right font-medium text-gray-700">
-                      {user.totalXp.toLocaleString()}
-                    </td>
-                    {/* Streak */}
-                    <td className="px-3 py-2.5 text-right font-medium text-gray-700">
-                      {user.currentStreak}
-                    </td>
-                    {/* Questions */}
-                    <td className="px-3 py-2.5 text-right font-medium text-gray-700">
-                      {user.totalQuestionsAttempted}
-                    </td>
-                    {/* Joined */}
-                    <td className="px-3 py-2.5 text-gray-500 whitespace-nowrap">
-                      {formatDate(user.joinedDate)}
-                    </td>
-                    {/* Last Active */}
-                    <td className="px-3 py-2.5 text-gray-500 whitespace-nowrap">
-                      {formatDate(user.lastActiveDate)}
-                    </td>
-                    {/* Actions */}
-                    <td className="px-3 py-2.5">
-                      <div className="flex items-center gap-1.5">
-                        <button
-                          onClick={() => toggleTier(user.id, user.tier)}
-                          disabled={updating === user.id}
-                          className={`text-[11px] font-bold px-2.5 py-1 rounded-lg transition-colors disabled:opacity-50 ${
-                            user.tier === 'pro'
-                              ? 'bg-red-50 text-red-600 hover:bg-red-100'
-                              : 'bg-green-50 text-green-600 hover:bg-green-100'
-                          }`}
-                        >
-                          {updating === user.id
-                            ? '...'
-                            : user.tier === 'pro'
-                              ? 'Revoke'
-                              : 'Grant'}
-                        </button>
-                        <button
-                          onClick={() => { setDeleteTarget(user); setConfirmText(''); }}
-                          className="p-1.5 rounded-lg text-gray-300 hover:text-red-500 hover:bg-red-50 transition-colors"
-                          title="Delete user"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-                    </td>
+                        <span className="inline-flex items-center gap-1">
+                          {col.label}
+                          <SortIcon col={col.key} />
+                        </span>
+                      </th>
+                    ))}
+                    <th className="w-28 px-3 py-2.5 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      Actions
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {sorted.map((user) => (
+                    <tr
+                      key={user.id}
+                      className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors"
+                    >
+                      <td className="px-3 py-2.5">
+                        <div className="font-semibold text-gray-900 truncate max-w-[200px]">
+                          {user.name || '-'}
+                        </div>
+                        <div className="text-xs text-gray-400 truncate max-w-[200px]">
+                          {user.email || '-'}
+                        </div>
+                      </td>
+                      <td className="px-3 py-2.5">
+                        <span
+                          className={cn(
+                            'inline-block text-[11px] font-bold px-2 py-0.5 rounded-md capitalize',
+                            user.tier === 'pro'
+                              ? 'bg-green-100 text-green-700'
+                              : 'bg-gray-100 text-gray-500'
+                          )}
+                        >
+                          {user.tier}
+                        </span>
+                      </td>
+                      <td className="px-3 py-2.5 text-right font-medium text-gray-700">
+                        {user.totalXp.toLocaleString()}
+                      </td>
+                      <td className="px-3 py-2.5 text-right font-medium text-gray-700">
+                        {user.currentStreak}
+                      </td>
+                      <td className="px-3 py-2.5 text-right font-medium text-gray-700">
+                        {user.totalQuestionsAttempted}
+                      </td>
+                      <td className="px-3 py-2.5 text-gray-500 whitespace-nowrap">
+                        {formatDate(user.joinedDate)}
+                      </td>
+                      <td className="px-3 py-2.5 text-gray-500 whitespace-nowrap">
+                        {formatDate(user.lastActiveDate)}
+                      </td>
+                      <td className="px-3 py-2.5">
+                        <div className="flex items-center gap-1.5">
+                          <button
+                            onClick={() => toggleTier(user.id, user.tier)}
+                            disabled={updating === user.id}
+                            className={cn(
+                              'text-[11px] font-bold px-2.5 py-1 rounded-lg transition-colors disabled:opacity-50',
+                              user.tier === 'pro'
+                                ? 'bg-red-50 text-red-600 hover:bg-red-100'
+                                : 'bg-green-50 text-green-600 hover:bg-green-100'
+                            )}
+                          >
+                            {updating === user.id
+                              ? '...'
+                              : user.tier === 'pro'
+                                ? 'Revoke'
+                                : 'Grant'}
+                          </button>
+                          <button
+                            onClick={() => { setDeleteTarget(user); setConfirmText(''); }}
+                            className="p-1.5 rounded-lg text-gray-300 hover:text-red-500 hover:bg-red-50 transition-colors"
+                            title="Delete user"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
+
+          {/* Mobile cards */}
+          <div className="md:hidden space-y-2.5">
+            {sorted.map((user) => (
+              <div
+                key={user.id}
+                className="bg-white rounded-xl border border-gray-200 p-3.5"
+              >
+                {/* Top row: name + tier + actions */}
+                <div className="flex items-start gap-2 mb-2">
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-gray-900 text-sm truncate">
+                      {user.name || '-'}
+                    </div>
+                    <div className="text-xs text-gray-400 truncate">
+                      {user.email || '-'}
+                    </div>
+                  </div>
+                  <span
+                    className={cn(
+                      'shrink-0 text-[11px] font-bold px-2 py-0.5 rounded-md capitalize',
+                      user.tier === 'pro'
+                        ? 'bg-green-100 text-green-700'
+                        : 'bg-gray-100 text-gray-500'
+                    )}
+                  >
+                    {user.tier}
+                  </span>
+                </div>
+
+                {/* Stats row */}
+                <div className="flex gap-4 mb-2.5 text-xs">
+                  <div>
+                    <span className="text-gray-400 font-medium">XP </span>
+                    <span className="font-semibold text-gray-700">{user.totalXp.toLocaleString()}</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-400 font-medium">Streak </span>
+                    <span className="font-semibold text-gray-700">{user.currentStreak}</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-400 font-medium">Qs </span>
+                    <span className="font-semibold text-gray-700">{user.totalQuestionsAttempted}</span>
+                  </div>
+                </div>
+
+                {/* Dates + actions */}
+                <div className="flex items-center justify-between">
+                  <div className="text-[11px] text-gray-400">
+                    Joined {formatDate(user.joinedDate)}
+                    {user.lastActiveDate && <> · Active {formatDate(user.lastActiveDate)}</>}
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={() => toggleTier(user.id, user.tier)}
+                      disabled={updating === user.id}
+                      className={cn(
+                        'text-[11px] font-bold px-2.5 py-1 rounded-lg transition-colors disabled:opacity-50',
+                        user.tier === 'pro'
+                          ? 'bg-red-50 text-red-600 hover:bg-red-100'
+                          : 'bg-green-50 text-green-600 hover:bg-green-100'
+                      )}
+                    >
+                      {updating === user.id
+                        ? '...'
+                        : user.tier === 'pro'
+                          ? 'Revoke'
+                          : 'Grant'}
+                    </button>
+                    <button
+                      onClick={() => { setDeleteTarget(user); setConfirmText(''); }}
+                      className="p-1.5 rounded-lg text-gray-300 hover:text-red-500 hover:bg-red-50 transition-colors"
+                    >
+                      <Trash2 className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
       )}
 
       {/* Delete Confirmation Modal */}
       {deleteTarget && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 p-6">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-5 sm:p-6">
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="text-lg font-bold text-gray-900">Delete User</h3>
@@ -345,7 +459,7 @@ export default function AdminUsersPage() {
               </button>
             </div>
 
-            <div className="bg-red-50 rounded-xl p-4 mb-4">
+            <div className="bg-red-50 rounded-xl p-3.5 mb-4">
               <p className="text-sm text-red-800">
                 You are about to permanently delete <strong>{deleteTarget.name || deleteTarget.email}</strong> and
                 all their data including progress, subscriptions, and payment history.
@@ -361,7 +475,7 @@ export default function AdminUsersPage() {
                 value={confirmText}
                 onChange={(e) => setConfirmText(e.target.value)}
                 placeholder="DELETE"
-                className="w-full px-3 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                 autoFocus
               />
             </div>
