@@ -18,6 +18,7 @@ import {
   Check,
   Sparkles,
   ArrowLeft,
+  Loader2,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -202,6 +203,9 @@ export default function GetStartedPage() {
     SAMPLE_QUESTIONS[Math.floor(Math.random() * SAMPLE_QUESTIONS.length)]
   );
 
+  // Navigation loading
+  const [navigating, setNavigating] = useState(false);
+
   // Account creation
   const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
@@ -292,6 +296,8 @@ export default function GetStartedPage() {
   };
 
   const completeOnboarding = () => {
+    if (navigating) return;
+    setNavigating(true);
     savePreferences();
     router.push('/');
     router.refresh();
@@ -302,6 +308,27 @@ export default function GetStartedPage() {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
+      {/* ── Loading Overlay ── */}
+      <AnimatePresence>
+        {navigating && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center gap-4"
+          >
+            <motion.div
+              className="w-20 h-20 bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl flex items-center justify-center"
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            >
+              <span className="text-4xl">⚙️</span>
+            </motion.div>
+            <p className="text-lg font-black text-gray-900">Preparing your course...</p>
+            <Loader2 className="w-6 h-6 animate-spin text-[#58CC02]" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* ── Progress Bar ── */}
       <div className="px-5 pt-4 pb-2">
         <div className="flex gap-1.5">
@@ -384,7 +411,7 @@ export default function GetStartedPage() {
 
               <motion.button
                 onClick={nextStep}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#58CC02] text-white font-extrabold text-lg rounded-2xl transition-all active:translate-y-[2px]"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#58CC02] text-white font-extrabold text-lg rounded-2xl transition-all active:translate-y-[2px] disabled:opacity-70"
                 style={{ boxShadow: '0 5px 0 #46A302' }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -803,8 +830,8 @@ export default function GetStartedPage() {
                 disabled={googleLoading}
                 className="w-full flex items-center justify-center gap-3 px-4 py-3.5 bg-white border-2 border-gray-200 rounded-2xl text-gray-700 font-bold hover:border-gray-300 disabled:opacity-60 transition-colors mb-4"
               >
-                <GoogleIcon />
-                {googleLoading ? 'Redirecting...' : 'Continue with Google'}
+                {googleLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : <GoogleIcon />}
+                {googleLoading ? 'Redirecting to Google...' : 'Continue with Google'}
               </button>
 
               <div className="flex items-center gap-4 mb-4">
@@ -867,7 +894,12 @@ export default function GetStartedPage() {
                     boxShadow: loading || password.length < 8 ? 'none' : '0 5px 0 #46A302',
                   }}
                 >
-                  {loading ? 'Creating account...' : 'CREATE ACCOUNT'}
+                  {loading ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      Creating account...
+                    </span>
+                  ) : 'CREATE ACCOUNT'}
                 </button>
               </form>
 
@@ -981,14 +1013,22 @@ export default function GetStartedPage() {
 
               <motion.button
                 onClick={completeOnboarding}
-                className="w-full py-4 rounded-2xl bg-[#58CC02] text-white font-extrabold text-lg transition-all active:translate-y-[2px]"
-                style={{ boxShadow: '0 5px 0 #46A302' }}
+                disabled={navigating}
+                className="w-full py-4 rounded-2xl bg-[#58CC02] text-white font-extrabold text-lg transition-all active:translate-y-[2px] disabled:opacity-70 flex items-center justify-center gap-2"
+                style={{ boxShadow: navigating ? 'none' : '0 5px 0 #46A302' }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 whileTap={{ scale: 0.98 }}
               >
-                START LEARNING
+                {navigating ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Loading your course...
+                  </>
+                ) : (
+                  'START LEARNING'
+                )}
               </motion.button>
             </motion.div>
           )}
