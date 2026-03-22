@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   useDailyQuests,
@@ -41,6 +42,8 @@ export function EngagementBar() {
   const league = useLeague();
   const { claimQuestReward, claimChest, initDailyQuests, initWeeklyQuests } = useEngagementActions();
   const dailyChestClaimed = useEngagementStore((s) => s.dailyChestClaimed);
+  const { data: session } = useSession();
+  const isAdmin = session?.user?.id === process.env.NEXT_PUBLIC_ADMIN_USER_ID;
 
   const [questsOpen, setQuestsOpen] = useState(false);
   const [chestOpen, setChestOpen] = useState<{ type: 'daily' | 'weekly'; reward: { xp: number; gems: number } } | null>(null);
@@ -82,6 +85,15 @@ export function EngagementBar() {
     claimChest('daily');
     setChestOpen({ type: 'daily', reward: dailyChestReward });
   };
+
+  const skipToNextDay = useCallback(() => {
+    // Reset dailyQuestDate to force initDailyQuests to generate new quests
+    useEngagementStore.setState({
+      dailyQuestDate: '',
+      dailyChestClaimed: false,
+    });
+    initDailyQuests();
+  }, [initDailyQuests]);
 
   const buttons = [
     {
@@ -166,9 +178,19 @@ export function EngagementBar() {
                   <div className="flex items-center justify-between mb-2.5">
                     <div>
                       <h3 className="text-[15px] font-extrabold text-gray-900">Daily Quests</h3>
-                      <p className="text-[11px] text-gray-400 font-medium mt-0.5">
-                        Resets in {timeLeft}
-                      </p>
+                      <div className="flex items-center gap-2 mt-0.5">
+                        <p className="text-[11px] text-gray-400 font-medium">
+                          Resets in {timeLeft}
+                        </p>
+                        {isAdmin && (
+                          <button
+                            onClick={skipToNextDay}
+                            className="text-[10px] font-bold text-orange-500 bg-orange-50 hover:bg-orange-100 px-1.5 py-0.5 rounded transition-colors"
+                          >
+                            Skip day
+                          </button>
+                        )}
+                      </div>
                     </div>
                     <button
                       onClick={handleDailyChest}
