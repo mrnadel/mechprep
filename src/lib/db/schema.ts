@@ -9,7 +9,9 @@ import {
   primaryKey,
   uniqueIndex,
   index,
+  check,
 } from 'drizzle-orm/pg-core';
+import { sql } from 'drizzle-orm';
 
 // ─── Auth.js required tables ───────────────────────────────────
 
@@ -386,3 +388,37 @@ export const masteryEvents = pgTable('mastery_events', {
 }, (table) => [
   index('mastery_events_user_topic_idx').on(table.userId, table.topicId),
 ]);
+
+// ─── Friends system ─────────────────────────────────────────
+
+export const friendships = pgTable(
+  'friendships',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    friendId: text('friend_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('friendships_pair_idx').on(table.userId, table.friendId),
+    index('friendships_user_idx').on(table.userId),
+    index('friendships_friend_idx').on(table.friendId),
+    check('friendship_order_check', sql`user_id < friend_id`),
+  ]
+);
+
+export const friendRequests = pgTable(
+  'friend_requests',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    senderId: text('sender_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    receiverId: text('receiver_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    status: text('status').notNull().default('pending'), // 'pending' | 'accepted' | 'declined'
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+    updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('friend_requests_pair_idx').on(table.senderId, table.receiverId),
+    index('friend_requests_receiver_idx').on(table.receiverId),
+  ]
+);

@@ -122,6 +122,7 @@ interface EngagementActions {
   addGems: (amount: number, source: string) => void;
   completeComebackQuest: () => void;
   debugSetFromCourse: (data: { gems: number; leagueXp: number }) => void;
+  debugSetLeagueTier: (tier: number) => void;
 }
 
 type EngagementStore = EngagementState & EngagementActions;
@@ -575,6 +576,18 @@ export const useEngagementStore = create<EngagementStore>()(
             },
           }));
         },
+
+        // === Action 18: debugSetLeagueTier ===
+        debugSetLeagueTier: (tier) => {
+          const clamped = Math.max(1, Math.min(tier, 5)) as 1 | 2 | 3 | 4 | 5;
+          set((state) => ({
+            league: {
+              ...state.league,
+              currentTier: clamped,
+              competitors: generateCompetitors(state.league.weekStartDate, clamped),
+            },
+          }));
+        },
       }),
       {
         name: 'mechready-engagement',
@@ -599,6 +612,7 @@ export const useEngagementStore = create<EngagementStore>()(
             addGems: _15,
             completeComebackQuest: _16,
             debugSetFromCourse: _17,
+            debugSetLeagueTier: _18,
             ...stateOnly
           } = state;
           return stateOnly;

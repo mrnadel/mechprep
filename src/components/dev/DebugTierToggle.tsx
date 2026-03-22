@@ -1,9 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { useSubscriptionStore } from '@/hooks/useSubscription';
 import { useCourseStore } from '@/store/useCourseStore';
+import { useEngagementStore } from '@/store/useEngagementStore';
 import { getTotalLessons } from '@/data/course';
+import { leagueTiers } from '@/data/league';
 import type { SubscriptionTier } from '@/lib/subscription';
 
 const TIERS: { value: SubscriptionTier | null; label: string }[] = [
@@ -12,12 +14,49 @@ const TIERS: { value: SubscriptionTier | null; label: string }[] = [
   { value: 'pro', label: 'Pro' },
 ];
 
+function LeagueDebug() {
+  const currentTier = useEngagementStore((s) => s.league.currentTier);
+  const debugSetLeagueTier = useEngagementStore((s) => s.debugSetLeagueTier);
+  const tier = leagueTiers.find((t) => t.tier === currentTier) ?? leagueTiers[0];
+
+  return (
+    <div className="flex items-center gap-2">
+      <button
+        onClick={() => debugSetLeagueTier(currentTier - 1)}
+        disabled={currentTier <= 1}
+        className="px-2 py-1 rounded-md text-sm font-bold bg-red-50 text-red-600 hover:bg-red-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+      >
+        ▼
+      </button>
+      <span className="flex-1 text-center text-sm font-bold">
+        {tier.icon} {tier.name}
+      </span>
+      <button
+        onClick={() => debugSetLeagueTier(currentTier + 1)}
+        disabled={currentTier >= 5}
+        className="px-2 py-1 rounded-md text-sm font-bold bg-green-50 text-green-600 hover:bg-green-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+      >
+        ▲
+      </button>
+    </div>
+  );
+}
+
 export function DebugTierToggle() {
   const [isOpen, setIsOpen] = useState(false);
   const { debugTierOverride, setDebugTierOverride } = useSubscriptionStore();
   const completedCount = useCourseStore((s) => Object.keys(s.progress.completedLessons).length);
   const debugSetProgress = useCourseStore((s) => s.debugSetProgress);
   const totalLessons = getTotalLessons();
+  const [sliderValue, setSliderValue] = useState<number | null>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const commitProgress = useCallback((value: number) => {
+    clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      debugSetProgress(value);
+      setSliderValue(null);
+    }, 150);
+  }, [debugSetProgress]);
 
   if (process.env.NODE_ENV !== 'development') return null;
 
@@ -52,18 +91,29 @@ export function DebugTierToggle() {
 
           <div className="border-t border-gray-200 mt-3 pt-3">
             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">
+              League Tier
+            </p>
+            <LeagueDebug />
+          </div>
+
+          <div className="border-t border-gray-200 mt-3 pt-3">
+            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">
               Lesson Progress
             </p>
             <input
               type="range"
               min={0}
               max={totalLessons}
-              value={completedCount}
-              onChange={(e) => debugSetProgress(Number(e.target.value))}
+              value={sliderValue ?? completedCount}
+              onChange={(e) => {
+                const v = Number(e.target.value);
+                setSliderValue(v);
+                commitProgress(v);
+              }}
               className="w-full accent-indigo-600"
             />
             <div className="flex justify-between text-[11px] text-gray-500 mt-1">
-              <span>{completedCount} / {totalLessons}</span>
+              <span>{sliderValue ?? completedCount} / {totalLessons}</span>
               <span>{totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0}%</span>
             </div>
           </div>
