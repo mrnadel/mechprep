@@ -2,84 +2,113 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Check, X, Sparkles, HelpCircle, ChevronDown, Loader2 } from 'lucide-react';
-import Link from 'next/link';
+import {
+  ArrowLeft,
+  Check,
+  Sparkles,
+  ChevronDown,
+  Loader2,
+  Infinity as InfinityIcon,
+  BookOpen,
+  BarChart3,
+  Shield,
+  BrainCircuit,
+  GraduationCap,
+  Lock,
+  Zap,
+} from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import { TIERS, FEATURES, PADDLE_PRICES, formatPrice, getYearlySavingsPercent, type Feature } from '@/lib/pricing';
+import { PADDLE_PRICES, formatPrice, getYearlySavingsPercent, TIERS } from '@/lib/pricing';
 import { useSubscription } from '@/hooks/useSubscription';
-import type { SubscriptionTier } from '@/lib/subscription';
 import { cn } from '@/lib/utils';
 import { getPaddle } from '@/lib/paddle-client';
+import Link from 'next/link';
 
-const FEATURE_LABELS: Record<Feature, string> = {
-  [FEATURES.UNIT_ACCESS_ALL]: 'All course units',
-  [FEATURES.UNLIMITED_PRACTICE]: 'Unlimited daily practice',
-  [FEATURES.ALL_PRACTICE_MODES]: 'All practice modes',
-  [FEATURES.FULL_ANALYTICS]: 'Full analytics dashboard',
-  [FEATURES.STREAK_FREEZE]: 'Weekly streak freeze',
-  [FEATURES.INTERVIEW_READINESS]: 'Interview readiness score',
-  [FEATURES.DETAILED_EXPLANATIONS]: 'Detailed explanations',
-  [FEATURES.TEAM_DASHBOARD]: 'Team dashboard',
-  [FEATURES.TEAM_PROGRESS]: 'Team progress tracking',
-  [FEATURES.CUSTOM_QUESTION_SETS]: 'Custom question sets',
-  [FEATURES.BULK_LICENSING]: 'Bulk licensing',
-};
+const PRO_FEATURES = [
+  {
+    icon: InfinityIcon,
+    label: 'Unlimited daily practice',
+    sublabel: 'No more 5-question cap',
+  },
+  {
+    icon: BookOpen,
+    label: 'All 10 course units',
+    sublabel: 'Thermo, fluids, materials & more',
+  },
+  {
+    icon: BrainCircuit,
+    label: 'Adaptive learning',
+    sublabel: 'Focuses on your weak areas',
+  },
+  {
+    icon: GraduationCap,
+    label: 'Interview readiness score',
+    sublabel: 'Know when you\'re prepared',
+  },
+  {
+    icon: BarChart3,
+    label: 'Full analytics dashboard',
+    sublabel: 'Track your progress in detail',
+  },
+  {
+    icon: Shield,
+    label: 'Weekly streak freeze',
+    sublabel: 'Protect your streak on busy days',
+  },
+];
 
-const ALL_DISPLAY_FEATURES: Feature[] = [
-  FEATURES.ALL_PRACTICE_MODES,
-  FEATURES.UNIT_ACCESS_ALL,
-  FEATURES.UNLIMITED_PRACTICE,
-  FEATURES.DETAILED_EXPLANATIONS,
-  FEATURES.FULL_ANALYTICS,
-  FEATURES.STREAK_FREEZE,
-  FEATURES.INTERVIEW_READINESS,
-  FEATURES.TEAM_DASHBOARD,
-  FEATURES.TEAM_PROGRESS,
-  FEATURES.CUSTOM_QUESTION_SETS,
-  FEATURES.BULK_LICENSING,
+const FREE_LIMITS = [
+  '5 questions per day',
+  'Unit 1 only',
+  'No streak protection',
 ];
 
 const FAQ_ITEMS = [
   {
     q: 'What do I get for free?',
-    a: 'You get full access to Unit 1 with up to 5 practice questions per day, all practice modes, and progress tracking. It\'s a great way to experience MechReady before upgrading.',
+    a: 'Full access to Unit 1 with up to 5 practice questions per day, all practice modes, and progress tracking. It\'s a great way to experience MechReady before upgrading.',
   },
   {
     q: 'Can I cancel anytime?',
-    a: 'Yes! You can cancel your Pro subscription at any time. You\'ll keep access until the end of your current billing period.',
+    a: 'Yes! Cancel your Pro subscription at any time from Settings > Billing. You keep access until the end of your current billing period.',
   },
   {
-    q: 'What happens to my progress if I upgrade later?',
-    a: 'Your progress is always saved. When you upgrade to Pro, you keep everything you\'ve earned and unlock all additional units and features.',
+    q: 'What happens to my progress if I upgrade?',
+    a: 'Your progress is always saved. When you upgrade to Pro, you keep everything you\'ve earned and unlock all additional units and features instantly.',
   },
   {
     q: 'Is there a student discount?',
-    a: 'Yes! Students with a valid .edu email get 50% off Pro. Contact us with your student email to claim your discount.',
-  },
-  {
-    q: 'How does Team billing work?',
-    a: 'Team plans are billed per seat with a minimum of 5 seats. Contact our sales team for annual pricing and volume discounts.',
+    a: 'Yes! Students with a valid .edu email get 50% off Pro. Contact support@mechready.com with your student email to claim your discount.',
   },
 ];
 
-const tierOrder: SubscriptionTier[] = ['free', 'pro', 'team'];
-
 export default function PricingPage() {
   const router = useRouter();
-  const [billingInterval, setBillingInterval] = useState<'month' | 'year'>('month');
+  const [billingInterval, setBillingInterval] = useState<'month' | 'year'>('year');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
-  const { tier: currentTier, isProUser } = useSubscription();
+  const { isProUser } = useSubscription();
   const { data: session } = useSession();
 
   const yearlySavings = getYearlySavingsPercent('pro');
+  const monthlyPrice = TIERS.pro.priceMonthly;
+  const yearlyPrice = TIERS.pro.priceYearly;
+  const effectiveMonthly = billingInterval === 'year'
+    ? Math.round(yearlyPrice / 12)
+    : monthlyPrice;
 
-  const handleCheckout = async (priceId: string) => {
-    if (!session?.user?.id) return;
+  const handleCheckout = async () => {
+    if (!session?.user?.id) {
+      router.push('/login?callbackUrl=/pricing');
+      return;
+    }
+    const priceId = billingInterval === 'year'
+      ? PADDLE_PRICES.PRO_YEARLY
+      : PADDLE_PRICES.PRO_MONTHLY;
+
     setCheckoutLoading(true);
     try {
-      // Ensure Paddle customer exists
       const res = await fetch('/api/paddle/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -116,253 +145,211 @@ export default function PricingPage() {
           >
             <ArrowLeft className="w-5 h-5 text-gray-700" />
           </button>
-          <h1 className="text-lg font-bold text-gray-900 ml-2">Pricing</h1>
+          <h1 className="text-lg font-bold text-gray-900 ml-2">Upgrade to Pro</h1>
         </div>
       </div>
 
-      <div className="px-4 pt-8">
-        {/* Hero */}
+      <div className="px-4 pt-6 max-w-lg mx-auto">
+
+        {/* Hero glow card */}
         <motion.div
-          className="text-center mb-8"
-          initial={{ opacity: 0, y: 12 }}
+          className="relative rounded-3xl overflow-hidden mb-8"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.05 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            Invest in your engineering career
-          </h2>
-          <p className="text-gray-500 text-sm max-w-sm mx-auto">
-            Start free today. Upgrade to Pro for unlimited access to all content.
-          </p>
+          {/* Gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-indigo-400" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.2),transparent_60%)]" />
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary-700/40 to-transparent" />
+
+          <div className="relative px-6 pt-8 pb-6 text-center">
+            {/* Floating sparkle icon */}
+            <motion.div
+              className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-5 border border-white/30"
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              <Zap className="w-8 h-8 text-white" />
+            </motion.div>
+
+            <h2 className="text-2xl font-extrabold text-white mb-2 tracking-tight">
+              Unlock your full potential
+            </h2>
+            <p className="text-primary-100 text-sm leading-relaxed max-w-xs mx-auto">
+              Unlimited practice, all topics, and smart tools to ace your mechanical engineering interviews.
+            </p>
+
+            {/* Price display */}
+            <div className="mt-6 mb-2">
+              <div className="flex items-baseline justify-center gap-1">
+                <span className="text-5xl font-extrabold text-white tracking-tight">
+                  {formatPrice(effectiveMonthly)}
+                </span>
+                <span className="text-primary-200 text-base font-medium">/mo</span>
+              </div>
+              {billingInterval === 'year' && (
+                <motion.p
+                  className="text-primary-200 text-xs mt-1"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                >
+                  {formatPrice(yearlyPrice)}/year &middot; billed annually
+                </motion.p>
+              )}
+            </div>
+          </div>
         </motion.div>
 
-        {/* Billing Toggle */}
+        {/* Billing toggle */}
         <motion.div
-          className="flex items-center justify-center gap-3 mb-8"
+          className="flex items-center justify-center gap-2 mb-8"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
+          transition={{ delay: 0.15 }}
         >
-          <span className={cn(
-            'text-sm font-medium transition-colors',
-            billingInterval === 'month' ? 'text-gray-900' : 'text-gray-400'
-          )}>
-            Monthly
-          </span>
           <button
-            onClick={() => setBillingInterval(billingInterval === 'month' ? 'year' : 'month')}
+            onClick={() => setBillingInterval('month')}
             className={cn(
-              'relative w-12 h-6 rounded-full transition-colors',
-              billingInterval === 'year' ? 'bg-primary-600' : 'bg-gray-300'
+              'px-4 py-2 rounded-xl text-sm font-semibold transition-all',
+              billingInterval === 'month'
+                ? 'bg-surface-900 text-white shadow-md'
+                : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
             )}
-            aria-label="Toggle billing interval"
           >
-            <motion.div
-              className="absolute top-0.5 w-5 h-5 bg-white rounded-full shadow-sm"
-              animate={{ left: billingInterval === 'year' ? '26px' : '2px' }}
-              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-            />
+            Monthly
           </button>
-          <span className={cn(
-            'text-sm font-medium transition-colors',
-            billingInterval === 'year' ? 'text-gray-900' : 'text-gray-400'
-          )}>
+          <button
+            onClick={() => setBillingInterval('year')}
+            className={cn(
+              'px-4 py-2 rounded-xl text-sm font-semibold transition-all relative',
+              billingInterval === 'year'
+                ? 'bg-surface-900 text-white shadow-md'
+                : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+            )}
+          >
             Yearly
-          </span>
-          {yearlySavings > 0 && (
-            <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full">
-              Save {yearlySavings}%
-            </span>
-          )}
+            {yearlySavings > 0 && (
+              <span className="absolute -top-2.5 -right-2 bg-accent-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">
+                -{yearlySavings}%
+              </span>
+            )}
+          </button>
         </motion.div>
 
-        {/* Tier Cards */}
-        <div className="space-y-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-4 sm:space-y-0 mb-12">
-          {tierOrder.map((tierId, index) => {
-            const tier = TIERS[tierId];
-            const price = billingInterval === 'year' && tier.priceYearly > 0
-              ? tier.priceYearly
-              : tier.priceMonthly;
-            const isHighlighted = tier.highlighted;
-            const isTeam = tierId === 'team';
-            const isCurrent = tierId === currentTier;
-
-            return (
-              <motion.div
-                key={tierId}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.15 + index * 0.1 }}
-                className={cn(
-                  'rounded-2xl border-2 p-5 relative overflow-hidden',
-                  isHighlighted
-                    ? 'border-primary-500 bg-white shadow-lg shadow-primary-100'
-                    : 'border-gray-200 bg-white'
-                )}
-              >
-                {isHighlighted && (
-                  <div className="absolute top-0 right-0 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl flex items-center gap-1">
-                    <Sparkles className="w-3 h-3" />
-                    Best Value
-                  </div>
-                )}
-
-                <div className="mb-4">
-                  <h3 className="text-lg font-bold text-gray-900">{tier.name}</h3>
-                  <p className="text-sm text-gray-500">{tier.tagline}</p>
-                </div>
-
-                <div className="mb-4">
-                  {isTeam && billingInterval === 'year' ? (
-                    <p className="text-2xl font-bold text-gray-900">Custom</p>
-                  ) : (
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-bold text-gray-900">
-                        {formatPrice(billingInterval === 'year' && tier.priceYearly > 0
-                          ? Math.round(tier.priceYearly / 12)
-                          : price
-                        )}
-                      </span>
-                      {price > 0 && (
-                        <span className="text-sm text-gray-400">
-                          /mo{isTeam ? ' per seat' : ''}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                  {billingInterval === 'year' && tier.priceYearly > 0 && (
-                    <p className="text-xs text-gray-400 mt-0.5">
-                      {formatPrice(tier.priceYearly)}/year billed annually
-                    </p>
-                  )}
-                  {isTeam && <p className="text-xs text-gray-400 mt-0.5">Minimum {tier.minSeats} seats</p>}
-                </div>
-
-                {/* Feature list */}
-                <ul className="space-y-2 mb-5">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2 text-sm">
-                      <Check className={cn(
-                        'w-4 h-4 mt-0.5 shrink-0',
-                        isHighlighted ? 'text-primary-600' : 'text-green-500'
-                      )} />
-                      <span className="text-gray-700">{FEATURE_LABELS[feature]}</span>
-                    </li>
-                  ))}
-                  {tierId === 'free' && (
-                    <li className="flex items-start gap-2 text-sm">
-                      <span className="text-gray-400 text-xs ml-6">5 questions/day &middot; Unit 1 only</span>
-                    </li>
-                  )}
-                </ul>
-
-                {/* CTA Button */}
-                {isCurrent ? (
-                  <button
-                    disabled
-                    className="w-full py-2.5 rounded-xl bg-gray-100 text-gray-400 font-semibold text-sm cursor-not-allowed"
-                  >
-                    Current Plan
-                  </button>
-                ) : tierId === 'pro' ? (
-                  <button
-                    onClick={() => handleCheckout(
-                      billingInterval === 'year'
-                        ? PADDLE_PRICES.PRO_YEARLY
-                        : PADDLE_PRICES.PRO_MONTHLY
-                    )}
-                    disabled={checkoutLoading || !session}
-                    className="w-full py-2.5 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold text-sm transition-colors shadow-md shadow-primary-200 active:scale-[0.98] disabled:opacity-50 flex items-center justify-center gap-2"
-                  >
-                    {checkoutLoading ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                    ) : (
-                      <Sparkles className="w-4 h-4" />
-                    )}
-                    {session ? 'Subscribe to Pro' : 'Sign in to Subscribe'}
-                  </button>
-                ) : (
-                  <a
-                    href="mailto:team@mechready.com?subject=MechReady%20Team%20Plan%20Inquiry"
-                    className="w-full py-2.5 rounded-xl bg-gray-900 hover:bg-gray-800 text-white font-semibold text-sm transition-colors active:scale-[0.98] flex items-center justify-center"
-                  >
-                    Contact Us
-                  </a>
-                )}
-              </motion.div>
-            );
-          })}
-        </div>
-
-        {/* Feature Comparison */}
+        {/* What you get */}
         <motion.div
-          className="mb-12"
+          className="mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.2 }}
         >
-          <h3 className="text-lg font-bold text-gray-900 text-center mb-4">
-            Feature comparison
+          <h3 className="text-xs font-bold text-surface-400 uppercase tracking-widest mb-4 px-1">
+            Everything in Pro
           </h3>
-          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            {/* Header row */}
-            <div className="grid grid-cols-4 gap-0 border-b border-gray-100 px-3 py-2.5 bg-gray-50">
-              <div className="text-xs font-semibold text-gray-500">Feature</div>
-              {tierOrder.map((t) => (
-                <div key={t} className="text-xs font-semibold text-gray-700 text-center">
-                  {TIERS[t].name}
-                </div>
-              ))}
-            </div>
-            {/* Rows */}
-            {ALL_DISPLAY_FEATURES.map((feature, i) => (
-              <div
-                key={feature}
-                className={cn(
-                  'grid grid-cols-4 gap-0 px-3 py-2.5',
-                  i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
-                )}
+          <div className="space-y-3">
+            {PRO_FEATURES.map((feature, i) => (
+              <motion.div
+                key={feature.label}
+                className="flex items-center gap-3.5 bg-white rounded-2xl border border-gray-100 p-3.5 shadow-sm"
+                initial={{ opacity: 0, x: -16 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.25 + i * 0.06 }}
               >
-                <div className="text-xs text-gray-600 pr-2">{FEATURE_LABELS[feature]}</div>
-                {tierOrder.map((t) => (
-                  <div key={t} className="flex justify-center">
-                    {TIERS[t].features.includes(feature) ? (
-                      <Check className="w-4 h-4 text-green-500" />
-                    ) : (
-                      <X className="w-4 h-4 text-gray-300" />
-                    )}
-                  </div>
-                ))}
+                <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center shrink-0">
+                  <feature.icon className="w-5 h-5 text-primary-600" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-surface-900">{feature.label}</p>
+                  <p className="text-xs text-surface-400">{feature.sublabel}</p>
+                </div>
+                <Check className="w-5 h-5 text-accent-500 shrink-0 ml-auto" />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Free limits reminder */}
+        <motion.div
+          className="mb-8 bg-surface-50 rounded-2xl border border-dashed border-surface-200 p-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.55 }}
+        >
+          <p className="text-xs font-bold text-surface-400 uppercase tracking-widest mb-3">
+            Free plan limits
+          </p>
+          <div className="space-y-2">
+            {FREE_LIMITS.map((limit) => (
+              <div key={limit} className="flex items-center gap-2.5">
+                <Lock className="w-3.5 h-3.5 text-surface-300" />
+                <span className="text-sm text-surface-500">{limit}</span>
               </div>
             ))}
           </div>
+        </motion.div>
+
+        {/* CTA Button */}
+        <motion.div
+          className="mb-10"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+        >
+          {isProUser ? (
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-accent-500/10 text-accent-600 font-bold text-sm">
+                <Check className="w-5 h-5" />
+                You&apos;re already on Pro
+              </div>
+              <Link
+                href="/settings/billing"
+                className="block text-sm text-surface-400 hover:text-primary-600 mt-3 transition-colors"
+              >
+                Manage billing →
+              </Link>
+            </div>
+          ) : (
+            <button
+              onClick={handleCheckout}
+              disabled={checkoutLoading}
+              className="w-full py-4 rounded-2xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white font-bold text-base transition-all shadow-lg shadow-primary-200 disabled:opacity-50 flex items-center justify-center gap-2.5"
+            >
+              {checkoutLoading ? (
+                <Loader2 className="w-5 h-5 animate-spin" />
+              ) : (
+                <Sparkles className="w-5 h-5" />
+              )}
+              {session ? 'Upgrade to Pro' : 'Sign in to upgrade'}
+            </button>
+          )}
+          <p className="text-center text-xs text-surface-400 mt-3">
+            Cancel anytime &middot; Secure payment via Paddle
+          </p>
         </motion.div>
 
         {/* FAQ */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.7 }}
         >
-          <div className="flex items-center gap-2 justify-center mb-4">
-            <HelpCircle className="w-5 h-5 text-gray-400" />
-            <h3 className="text-lg font-bold text-gray-900">
-              Frequently asked questions
-            </h3>
-          </div>
+          <h3 className="text-xs font-bold text-surface-400 uppercase tracking-widest mb-4 px-1">
+            Questions
+          </h3>
           <div className="space-y-2">
             {FAQ_ITEMS.map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+                className="bg-white rounded-2xl border border-gray-100 overflow-hidden"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between px-4 py-3 text-left"
+                  className="w-full flex items-center justify-between px-4 py-3.5 text-left"
                 >
-                  <span className="text-sm font-medium text-gray-800 pr-2">{item.q}</span>
+                  <span className="text-sm font-medium text-surface-800 pr-3">{item.q}</span>
                   <ChevronDown className={cn(
-                    'w-4 h-4 text-gray-400 shrink-0 transition-transform',
+                    'w-4 h-4 text-surface-300 shrink-0 transition-transform duration-200',
                     openFaq === i && 'rotate-180'
                   )} />
                 </button>
@@ -375,7 +362,7 @@ export default function PricingPage() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <p className="px-4 pb-3 text-sm text-gray-500 leading-relaxed">
+                      <p className="px-4 pb-4 text-sm text-surface-500 leading-relaxed">
                         {item.a}
                       </p>
                     </motion.div>
@@ -385,6 +372,7 @@ export default function PricingPage() {
             ))}
           </div>
         </motion.div>
+
       </div>
     </div>
   );
