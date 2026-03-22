@@ -28,7 +28,8 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { priceId } = (await request.json()) as { priceId?: string };
+  const body = (await request.json()) as { priceId?: string };
+  const priceId = body.priceId?.trim();
 
   // Validate the priceId is one we recognise
   const validPrices = [
