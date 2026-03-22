@@ -1217,6 +1217,8 @@ useEngagementStore.getState().checkComebackFlow();
 Run: `npm run build`
 Expected: No errors. The old `generateCompetitors` function is no longer imported by the store (it still exists in `league-simulator.ts` but is now unused — leave it for now as a reference).
 
+**Migration note:** Existing users who already have `mechready-engagement` in localStorage will see old-style competitors (without `fakeUserId`) until the next Monday rollover, when `simulateLeagueWeek()` detects a new week and calls `drawCompetitorsFromPool()`. This is expected and harmless — the old competitors work fine for the remaining days of the current week.
+
 - [ ] **Step 5: Manual smoke test**
 
 Run: `npm run dev`
@@ -1457,14 +1459,14 @@ export function CompetitorPreview({ fakeUserId, isOpen, onClose }: CompetitorPre
 
   const userAchievements = user.achievementsUnlocked
     .map((id) => achievements.find((a) => a.id === id))
-    .filter(Boolean);
+    .filter((a): a is NonNullable<typeof a> => Boolean(a));
 
   const userTopics = user.topicMastery
     .map((tm) => {
       const topic = topics.find((t) => t.id === tm.topicId);
       return topic ? { ...tm, name: topic.name, icon: topic.icon } : null;
     })
-    .filter(Boolean);
+    .filter(<T,>(t: T): t is NonNullable<T> => Boolean(t));
 
   return (
     <AnimatePresence>
@@ -1554,12 +1556,12 @@ export function CompetitorPreview({ fakeUserId, isOpen, onClose }: CompetitorPre
                   <div className="flex flex-wrap gap-2">
                     {userAchievements.map((ach) => (
                       <div
-                        key={ach!.id}
+                        key={ach.id}
                         className="flex items-center gap-1.5 px-2.5 py-1 bg-gray-50 rounded-lg"
-                        title={ach!.description}
+                        title={ach.description}
                       >
-                        <span className="text-sm">{ach!.icon}</span>
-                        <span className="text-xs font-medium text-gray-600">{ach!.name}</span>
+                        <span className="text-sm">{ach.icon}</span>
+                        <span className="text-xs font-medium text-gray-600">{ach.name}</span>
                       </div>
                     ))}
                   </div>
@@ -1572,17 +1574,17 @@ export function CompetitorPreview({ fakeUserId, isOpen, onClose }: CompetitorPre
                   <h4 className="text-sm font-bold text-gray-700 mb-2">Topics</h4>
                   <div className="space-y-1.5">
                     {userTopics.map((topic) => (
-                      <div key={topic!.topicId} className="flex items-center gap-2">
-                        <span className="text-sm w-5">{topic!.icon}</span>
-                        <span className="text-sm text-gray-700 flex-1 truncate">{topic!.name}</span>
+                      <div key={topic.topicId} className="flex items-center gap-2">
+                        <span className="text-sm w-5">{topic.icon}</span>
+                        <span className="text-sm text-gray-700 flex-1 truncate">{topic.name}</span>
                         <span
                           className="text-xs font-medium px-2 py-0.5 rounded-full"
                           style={{
-                            background: `${MASTERY_COLORS[topic!.masteryLevel]}20`,
-                            color: MASTERY_COLORS[topic!.masteryLevel],
+                            background: `${MASTERY_COLORS[topic.masteryLevel]}20`,
+                            color: MASTERY_COLORS[topic.masteryLevel],
                           }}
                         >
-                          {MASTERY_LABELS[topic!.masteryLevel]}
+                          {MASTERY_LABELS[topic.masteryLevel]}
                         </span>
                       </div>
                     ))}
