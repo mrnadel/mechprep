@@ -453,7 +453,7 @@ export function CourseMap() {
                         </button>
                       </div>
                     </>
-                  ) : (
+                  ) : isProUser ? (
                     <>
                       <p
                         style={{
@@ -505,6 +505,60 @@ export function CourseMap() {
                           }}
                         >
                           Jump to Lesson
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <p
+                        style={{
+                          fontSize: 14,
+                          color: '#AFAFAF',
+                          fontWeight: 600,
+                          marginBottom: 20,
+                        }}
+                      >
+                        Complete lessons in order to progress, or upgrade to Pro
+                        to jump ahead to any lesson.
+                      </p>
+                      <div className="flex" style={{ gap: 12 }}>
+                        <button
+                          className="flex-1 active:scale-[0.98] transition-transform"
+                          style={{
+                            padding: '14px 0',
+                            borderRadius: 16,
+                            fontSize: 14,
+                            fontWeight: 800,
+                            color: '#AFAFAF',
+                            background: '#F5F5F5',
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
+                          onClick={() => setJumpConfirm(null)}
+                        >
+                          OK
+                        </button>
+                        <button
+                          className="flex-1 flex items-center justify-center active:scale-[0.98] transition-transform"
+                          style={{
+                            gap: 6,
+                            padding: '14px 0',
+                            borderRadius: 16,
+                            fontSize: 14,
+                            fontWeight: 800,
+                            color: '#FFFFFF',
+                            background: theme.color,
+                            boxShadow: `0 4px 0 ${theme.dark}`,
+                            border: 'none',
+                            cursor: 'pointer',
+                          }}
+                          onClick={() => {
+                            setJumpConfirm(null);
+                            setShowUpgradeModal(true);
+                          }}
+                        >
+                          <Sparkles style={{ width: 16, height: 16 }} />
+                          Upgrade to Pro
                         </button>
                       </div>
                     </>
