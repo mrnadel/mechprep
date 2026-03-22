@@ -13,6 +13,7 @@ export function initMixpanel() {
     persistence: 'localStorage',
     ignore_dnt: false,
     debug: !IS_PROD,
+    api_host: '/api/mp', // proxy through our own API to bypass ad blockers
   });
 
   initialized = true;
