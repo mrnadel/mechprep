@@ -12,6 +12,7 @@ import { WelcomeBack } from '@/components/engagement/WelcomeBack';
 import { LeaguePromotion } from '@/components/engagement/LeaguePromotion';
 import { StreakFreeze } from '@/components/engagement/StreakFreeze';
 import { StreakMilestone } from '@/components/engagement/StreakMilestone';
+import { BlueprintCelebration } from '@/components/engagement/BlueprintCelebration';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useStore } from '@/store/useStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
@@ -19,7 +20,7 @@ import { streakMilestones } from '@/data/streak-milestones';
 
 export default function HomePage() {
   const { status } = useSession();
-  const { activeLesson, lessonResult } = useCourseStore();
+  const { activeLesson, lessonResult, chapterJustCompleted, dismissChapterCompletion } = useCourseStore();
   const currentStreak = useStore((s) => s.progress.currentStreak);
   const milestonesReached = useEngagementStore((s) => s.streak.milestonesReached);
   const addGems = useEngagementStore((s) => s.addGems);
@@ -83,6 +84,13 @@ export default function HomePage() {
 
       {activeLesson && <LessonView />}
       {lessonResult && <ResultScreen />}
+      {!lessonResult && chapterJustCompleted && (
+        <BlueprintCelebration
+          unitIndex={chapterJustCompleted.unitIndex}
+          isGolden={chapterJustCompleted.isGolden}
+          onDismiss={dismissChapterCompletion}
+        />
+      )}
     </>
   );
 }

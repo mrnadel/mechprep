@@ -12,11 +12,17 @@ import type { CourseProgress, ActiveLesson, LessonResult, Unit } from '@/data/co
 import type { AnswerEvent } from '@/data/mastery';
 import type { TopicId } from '@/data/types';
 
+export interface ChapterCompletion {
+  unitIndex: number;
+  isGolden: boolean;
+}
+
 interface CourseState {
   progress: CourseProgress;
   courseData: Unit[];
   activeLesson: ActiveLesson | null;
   lessonResult: LessonResult | null;
+  chapterJustCompleted: ChapterCompletion | null;
 
   // Actions — Content
   setCourseData: (data: Unit[]) => void;
@@ -28,6 +34,7 @@ interface CourseState {
   completeLesson: () => void;
   exitLesson: () => void;
   dismissResult: () => void;
+  dismissChapterCompletion: () => void;
 
   // Debug
   debugSetProgress: (lessonCount: number) => void;
@@ -89,6 +96,7 @@ export const useCourseStore = create<CourseState>()(
       courseData: course as Unit[],
       activeLesson: null,
       lessonResult: null,
+      chapterJustCompleted: null,
 
       setCourseData: (data: Unit[]) => set({ courseData: data }),
 
@@ -232,19 +240,50 @@ export const useCourseStore = create<CourseState>()(
           isGolden,
         };
 
+        const newCompletedLessons = {
+          ...state.progress.completedLessons,
+          [lesson.id]: updatedLessonProgress,
+        };
+
+        // Detect chapter (unit) completion:
+        // All lessons in this unit must be completed
+        const allUnitLessonsCompleted = unit.lessons.every(
+          (l) => l.id in newCompletedLessons
+        );
+
+        // Check if this lesson was the one that completed the chapter
+        // (it wasn't completed before, or it just went golden and now all are golden)
+        const wasAlreadyAllCompleted = unit.lessons.every(
+          (l) => l.id in state.progress.completedLessons
+        );
+        const allGolden = allUnitLessonsCompleted && unit.lessons.every(
+          (l) => newCompletedLessons[l.id]?.golden
+        );
+        const wasAlreadyAllGolden = wasAlreadyAllCompleted && unit.lessons.every(
+          (l) => state.progress.completedLessons[l.id]?.golden
+        );
+
+        // Trigger chapter completion if:
+        // 1. All lessons just became completed (wasn't all-completed before), OR
+        // 2. All lessons just became golden (wasn't all-golden before)
+        let chapterJustCompleted: ChapterCompletion | null = null;
+        if (allUnitLessonsCompleted && !wasAlreadyAllCompleted) {
+          chapterJustCompleted = { unitIndex, isGolden: allGolden };
+        } else if (allGolden && !wasAlreadyAllGolden) {
+          chapterJustCompleted = { unitIndex, isGolden: true };
+        }
+
         set({
           activeLesson: null,
           lessonResult: result,
+          chapterJustCompleted,
           progress: {
             ...state.progress,
             totalXp: newTotalXp,
             currentStreak: newStreak,
             longestStreak: Math.max(state.progress.longestStreak, newStreak),
             lastActiveDate: today,
-            completedLessons: {
-              ...state.progress.completedLessons,
-              [lesson.id]: updatedLessonProgress,
-            },
+            completedLessons: newCompletedLessons,
           },
         });
       },
@@ -255,6 +294,10 @@ export const useCourseStore = create<CourseState>()(
 
       dismissResult: () => {
         set({ lessonResult: null });
+      },
+
+      dismissChapterCompletion: () => {
+        set({ chapterJustCompleted: null });
       },
 
       debugSetProgress: (lessonCount: number) => {
