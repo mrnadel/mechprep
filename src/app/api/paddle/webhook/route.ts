@@ -14,11 +14,9 @@ import { rateLimit, RATE_LIMITS } from '@/lib/rate-limit';
 
 export const runtime = 'nodejs';
 
+const isSandbox = process.env.PADDLE_API_KEY?.startsWith('pdl_sdbx_') ?? false;
 const paddle = new Paddle(process.env.PADDLE_API_KEY!, {
-  environment:
-    process.env.NODE_ENV === 'production'
-      ? Environment.production
-      : Environment.sandbox,
+  environment: isSandbox ? Environment.sandbox : Environment.production,
 });
 
 export async function POST(request: NextRequest) {

@@ -8,11 +8,9 @@ let _paddle: Paddle | null = null;
 
 function getPaddleServer(): Paddle {
   if (!_paddle) {
+    const isSandbox = process.env.PADDLE_API_KEY?.startsWith('pdl_sdbx_') ?? false;
     _paddle = new Paddle(process.env.PADDLE_API_KEY!, {
-      environment:
-        process.env.NODE_ENV === 'production'
-          ? Environment.production
-          : Environment.sandbox,
+      environment: isSandbox ? Environment.sandbox : Environment.production,
     });
   }
   return _paddle;
