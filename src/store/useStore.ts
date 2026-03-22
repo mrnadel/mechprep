@@ -9,6 +9,8 @@ import { levels } from '@/data/levels';
 import { achievements as allAchievements } from '@/data/achievements';
 import { allQuestions } from '@/data/questions';
 import { shuffleArray, getTodayString, calculateXP } from '@/lib/utils';
+import { PRO_SESSION_TYPES } from '@/lib/pricing';
+import { useSubscriptionStore } from '@/hooks/useSubscription';
 
 // --- Session Types ---
 export type SessionType = 'adaptive' | 'topic-deep-dive' | 'interview-sim' | 'daily-challenge' | 'real-world' | 'weak-areas';
@@ -272,6 +274,17 @@ export const useStore = create<AppState>()(
       setQuestions: (questions: Question[]) => set({ questions }),
 
       startSession: (type, options) => {
+        // Enforce Pro-only session types
+        if (PRO_SESSION_TYPES.has(type)) {
+          const subStore = useSubscriptionStore.getState();
+          const tier = subStore.debugTierOverride && process.env.NODE_ENV === 'development'
+            ? subStore.debugTierOverride
+            : subStore.tier;
+          const isTrialing = subStore.status === 'trialing';
+          const isPastDue = subStore.status === 'past_due';
+          if (tier !== 'pro' && !isTrialing && !isPastDue) return;
+        }
+
         const questions = selectQuestionsForSession(type, get().questions, options);
         if (questions.length === 0) return;
 

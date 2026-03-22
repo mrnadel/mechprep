@@ -5,7 +5,7 @@
 import { eq, and } from 'drizzle-orm';
 import { db } from './db';
 import { subscriptions, dailyUsage } from './db/schema';
-import { LIMITS } from './pricing';
+import { LIMITS, PRO_SESSION_TYPES } from './pricing';
 import type { SubscriptionTier } from './subscription';
 
 function getTodayString(): string {
@@ -130,6 +130,21 @@ export async function incrementDailyUsage(userId: string): Promise<void> {
       questionsUsed: 1,
     });
   }
+}
+
+/**
+ * Check if a user can access a specific practice mode.
+ * Pro-only modes: adaptive, interview-sim, weak-areas.
+ */
+export async function canAccessPracticeMode(
+  userId: string,
+  sessionType: string,
+): Promise<{ allowed: boolean; tier: SubscriptionTier }> {
+  const tier = await getEffectiveTier(userId);
+  if (!PRO_SESSION_TYPES.has(sessionType as any)) {
+    return { allowed: true, tier };
+  }
+  return { allowed: tier === 'pro', tier };
 }
 
 // ─── Internal helpers ───────────────────────────────────────────

@@ -29,6 +29,15 @@ export const FEATURES = {
 
 export type Feature = (typeof FEATURES)[keyof typeof FEATURES];
 
+// --------------- Pro-Only Practice Modes ---------------
+// Session types that require ALL_PRACTICE_MODES (Pro tier).
+// Keep in sync with SessionType from store/useStore.ts.
+export const PRO_SESSION_TYPES: ReadonlySet<string> = new Set([
+  'adaptive',
+  'interview-sim',
+  'weak-areas',
+]);
+
 // --------------- Daily / Usage Limits ---------------
 
 export const LIMITS = {
