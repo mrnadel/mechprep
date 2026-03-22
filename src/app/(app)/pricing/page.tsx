@@ -86,6 +86,7 @@ export default function PricingPage() {
   const [billingInterval, setBillingInterval] = useState<'month' | 'year'>('year');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
+  const [checkoutError, setCheckoutError] = useState('');
   const { isProUser } = useSubscription();
   const { data: session } = useSession();
 
@@ -325,6 +326,9 @@ export default function PricingPage() {
               )}
               {session ? 'Upgrade to Pro' : 'Sign in to upgrade'}
             </button>
+          )}
+          {checkoutError && (
+            <p className="text-center text-sm text-red-500 mt-2 font-medium">{checkoutError}</p>
           )}
           <p className="text-center text-xs text-surface-400 mt-3">
             Cancel anytime &middot; Secure payment via Paddle
