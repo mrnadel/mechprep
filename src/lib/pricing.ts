@@ -11,8 +11,8 @@ import type {
 // --------------- Paddle Price IDs ---------------
 
 export const PADDLE_PRICES = {
-  PRO_MONTHLY: process.env.PADDLE_PRO_MONTHLY_PRICE_ID || '',
-  PRO_YEARLY: process.env.PADDLE_PRO_YEARLY_PRICE_ID || '',
+  PRO_MONTHLY: process.env.NEXT_PUBLIC_PADDLE_PRO_MONTHLY_PRICE_ID || process.env.PADDLE_PRO_MONTHLY_PRICE_ID || '',
+  PRO_YEARLY: process.env.NEXT_PUBLIC_PADDLE_PRO_YEARLY_PRICE_ID || process.env.PADDLE_PRO_YEARLY_PRICE_ID || '',
 } as const;
 
 // --------------- Features ---------------
