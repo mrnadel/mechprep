@@ -31,6 +31,32 @@ export const lesson3: Lesson = {
         'About 8.9 N',
         'About 12.0 N',
       ],
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect x="2" y="2" width="76" height="76" rx="8" fill="#58CC02" opacity="0.06"/>
+  <!-- Hinge pin -->
+  <circle cx="15" cy="40" r="3.5" stroke="#3B8700" stroke-width="2" fill="none"/>
+  <circle cx="15" cy="40" r="1" fill="#3B8700"/>
+  <!-- Door (animated rotation) -->
+  <g transform-origin="15 40">
+    <animateTransform attributeName="transform" type="rotate" values="0 15 40;15 15 40;0 15 40" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>
+    <rect x="15" y="30" width="45" height="20" rx="1.5" stroke="#3B8700" stroke-width="2" fill="#A5E86C" opacity="0.35"/>
+    <!-- Handle dot -->
+    <circle cx="55" cy="40" r="2" fill="#3B8700"/>
+    <!-- Distance label "d" -->
+    <line x1="15" y1="55" x2="55" y2="55" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 1.5"/>
+    <text x="35" y="60" font-size="5" fill="#334155" text-anchor="middle" font-style="italic">d</text>
+    <!-- Force arrow at handle -->
+    <line x1="55" y1="28" x2="55" y2="18" stroke="#58CC02" stroke-width="2"/>
+    <polygon points="55,16 52.5,21 57.5,21" fill="#58CC02"/>
+    <text x="60" y="17" font-size="5" fill="#334155" font-style="italic">F</text>
+  </g>
+  <!-- Torque curved arrow at hinge -->
+  <path d="M 22 30 A 12 12 0 0 1 22 50" stroke="#58CC02" stroke-width="1.8" fill="none"/>
+  <polygon points="22,50 19,46 24,47" fill="#58CC02"/>
+  <text x="27" y="28" font-size="4.5" fill="#334155" font-style="italic">τ</text>
+  <!-- Labels -->
+  <text x="40" y="74" font-size="4" fill="#6B7280" text-anchor="middle">Torque = F × d</text>
+</svg>`,
       correctIndex: 2,
       explanation: 'Torque = Force × distance. To balance 8 N·m at 0.9 m: F = 8 / 0.9 ≈ 8.9 N. This is a direct application of moment equilibrium about the hinge axis — the same principle used to size actuators and select motors.',
       hint: 'Rearrange τ = F × d to solve for F.',
@@ -46,6 +72,36 @@ export const lesson3: Lesson = {
         'Water pressure from the supply line pushing through the bowl',
         'Capillary action drawing water through the narrow siphon tube',
       ],
+      diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect x="2" y="2" width="76" height="76" rx="8" fill="#58CC02" opacity="0.06"/>
+  <!-- Bowl outline -->
+  <path d="M 12 25 L 12 55 Q 12 62 20 62 L 28 62 Q 32 62 32 58 L 32 48" stroke="#3B8700" stroke-width="2" fill="none"/>
+  <!-- S-shaped siphon trap -->
+  <path d="M 32 48 Q 32 38 38 38 Q 44 38 44 48 Q 44 58 50 58 Q 56 58 56 48 L 56 70" stroke="#3B8700" stroke-width="2" fill="none"/>
+  <!-- Water in bowl -->
+  <path d="M 14 42 L 14 55 Q 14 60 20 60 L 28 60 Q 30 60 30 56 L 30 48 Q 30 40 36 40 Q 40 40 42 44" fill="#58CC02" opacity="0.18"/>
+  <!-- Animated water flow over crest -->
+  <circle r="1.5" fill="#58CC02" opacity="0.7">
+    <animateMotion dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" path="M 30 48 Q 30 36 38 36 Q 46 36 46 48 Q 46 60 52 60 L 56 65"/>
+  </circle>
+  <circle r="1.5" fill="#58CC02" opacity="0.7">
+    <animateMotion dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" path="M 30 48 Q 30 36 38 36 Q 46 36 46 48 Q 46 60 52 60 L 56 65" begin="0.7s"/>
+  </circle>
+  <!-- Water surface in bowl -->
+  <line x1="14" y1="42" x2="30" y2="42" stroke="#58CC02" stroke-width="1.5"/>
+  <!-- Atmospheric pressure arrows -->
+  <line x1="18" y1="30" x2="18" y2="39" stroke="#6B7280" stroke-width="1.5"/>
+  <polygon points="18,40 16,36 20,36" fill="#6B7280"/>
+  <line x1="25" y1="30" x2="25" y2="39" stroke="#6B7280" stroke-width="1.5"/>
+  <polygon points="25,40 23,36 27,36" fill="#6B7280"/>
+  <text x="21" y="27" font-size="3.5" fill="#6B7280" text-anchor="middle">P_atm</text>
+  <!-- Siphon crest label -->
+  <text x="38" y="33" font-size="3.5" fill="#334155" text-anchor="middle">crest</text>
+  <!-- Drain arrow -->
+  <line x1="56" y1="65" x2="56" y2="73" stroke="#3B8700" stroke-width="1.5"/>
+  <polygon points="56,75 53.5,71 58.5,71" fill="#3B8700"/>
+  <text x="63" y="73" font-size="3.5" fill="#6B7280">drain</text>
+</svg>`,
       correctIndex: 0,
       explanation: 'Once the siphon is primed (water rises over the crest), the taller water column on the drain side creates a lower pressure at the crest than atmospheric pressure on the bowl side. Atmospheric pressure then pushes bowl water up and over. This is the same principle used in siphon-based flow measurement and priming of pumps.',
     },
