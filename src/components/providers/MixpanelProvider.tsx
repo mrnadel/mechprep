@@ -28,12 +28,17 @@ export default function MixpanelProvider({ children }: { children: React.ReactNo
     return () => window.removeEventListener('cookie-consent', handleConsent);
   }, []);
 
-  // Identify user when session changes
+  // Identify user and set profile properties (properties are free, not counted as events)
   useEffect(() => {
     if (status === 'authenticated' && session?.user) {
+      const progress = useStore.getState().progress;
       identifyUser(session.user.id ?? session.user.email ?? 'unknown', {
         $email: session.user.email,
         $name: session.user.name,
+        level: progress.currentLevel,
+        total_xp: progress.totalXp,
+        streak: progress.currentStreak,
+        questions_answered: progress.totalQuestionsAttempted,
       });
     } else if (status === 'unauthenticated') {
       resetUser();
