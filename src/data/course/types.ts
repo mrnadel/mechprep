@@ -41,12 +41,13 @@ export interface Unit {
 }
 
 export interface LessonProgress {
-  stars: number;       // 1-3 based on accuracy
+  stars: number;       // 1-3 based on attempt count (not accuracy)
   bestAccuracy: number;
   attempts: number;
   lastAttempted: string;
   golden: boolean;                // achieved golden mastery
   answeredQuestionIds: string[];  // questions seen across all attempts
+  correctQuestionIds: string[];   // questions answered correctly at least once
 }
 
 export interface CourseProgress {

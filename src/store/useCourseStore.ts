@@ -108,20 +108,28 @@ export const useCourseStore = create<CourseState>()(
         const lesson = unit.lessons[lessonIndex];
         const allIds = lesson.questions.map((q) => q.id);
         const isGolden = golden === true;
+        const existing = get().progress.completedLessons[lesson.id];
 
         let sessionQuestionIds: string[];
+        const SESSION_SIZE = 10;
 
         if (isGolden) {
           // Golden session: pick questions the user hasn't seen before
-          const existing = get().progress.completedLessons[lesson.id];
           const seen = new Set(existing?.answeredQuestionIds ?? []);
           const unseen = allIds.filter((id) => !seen.has(id));
           // If fewer than 5 unseen, use all questions as comprehensive review
           const pool = unseen.length >= 5 ? unseen : allIds;
-          sessionQuestionIds = shuffleArray(pool);
+          sessionQuestionIds = shuffleArray(pool).slice(0, Math.min(SESSION_SIZE, pool.length));
+        } else if (existing && existing.attempts > 0) {
+          // Retry session (attempt 2 or 3): focus on questions not yet answered correctly
+          const correctSet = new Set(existing.correctQuestionIds ?? []);
+          const incorrectPool = allIds.filter((id) => !correctSet.has(id));
+          // If enough incorrect questions, use those; otherwise pad with all
+          const pool = incorrectPool.length >= 5 ? incorrectPool : allIds;
+          const shuffled = shuffleArray(pool);
+          sessionQuestionIds = shuffled.slice(0, Math.min(SESSION_SIZE, shuffled.length));
         } else {
-          // Normal session: 10 random questions
-          const SESSION_SIZE = 10;
+          // First attempt: 10 random questions
           const shuffled = shuffleArray(allIds);
           sessionQuestionIds = shuffled.slice(0, Math.min(SESSION_SIZE, shuffled.length));
         }
@@ -188,8 +196,6 @@ export const useCourseStore = create<CourseState>()(
         const accuracy = totalQuestions > 0
           ? Math.round((correctAnswers / totalQuestions) * 100)
           : 0;
-        const stars = calculateStars(accuracy);
-        const xpEarned = lesson.xpReward * stars;
 
         // Check if this is a new best or first completion
         const existingProgress = state.progress.completedLessons[lesson.id];
@@ -200,14 +206,30 @@ export const useCourseStore = create<CourseState>()(
         const previousAnswered = existingProgress?.answeredQuestionIds ?? [];
         const mergedAnswered = [...new Set([...previousAnswered, ...sessionQuestionIds])];
 
+        // Merge correct question IDs (questions answered correctly at least once)
+        const previousCorrect = existingProgress?.correctQuestionIds ?? [];
+        const newCorrect = answers.filter((a) => a.correct).map((a) => a.questionId);
+        const mergedCorrect = [...new Set([...previousCorrect, ...newCorrect])];
+
+        // Stars = attempt count (capped at 3), not accuracy
+        const newAttempts = existingProgress ? existingProgress.attempts + 1 : 1;
+        const stars = isGolden
+          ? 3 // Golden always shows 3 stars
+          : Math.min(newAttempts, 3);
+
+        // XP based on accuracy performance within this session
+        const accuracyMultiplier = calculateStars(accuracy); // 1-3 based on accuracy
+        const xpEarned = lesson.xpReward * accuracyMultiplier;
+
         // Build updated lesson progress
         const updatedLessonProgress = {
-          stars: existingProgress ? Math.max(existingProgress.stars, stars) : stars,
+          stars,
           bestAccuracy: existingProgress ? Math.max(existingProgress.bestAccuracy, accuracy) : accuracy,
-          attempts: existingProgress ? existingProgress.attempts + 1 : 1,
+          attempts: newAttempts,
           lastAttempted: getTodayString(),
           golden: isGolden ? true : (existingProgress?.golden ?? false),
           answeredQuestionIds: mergedAnswered,
+          correctQuestionIds: mergedCorrect,
         };
 
         // Update streak
@@ -335,14 +357,17 @@ export const useCourseStore = create<CourseState>()(
             const GOLDEN_OFFSET = 6;
             const isGolden = count + GOLDEN_OFFSET < lessonCount;
             completedLessons[lesson.id] = {
-              stars: 3,
+              stars: isGolden ? 3 : Math.min(count + 1, 3),
               bestAccuracy: 95,
-              attempts: isGolden ? 2 : 1,
+              attempts: isGolden ? 4 : Math.min(count + 1, 3),
               lastAttempted: today,
               golden: isGolden,
               answeredQuestionIds: isGolden
                 ? lesson.questions.map(q => q.id)
                 : lesson.questions.slice(0, 10).map(q => q.id),
+              correctQuestionIds: isGolden
+                ? lesson.questions.map(q => q.id)
+                : lesson.questions.slice(0, 9).map(q => q.id),
             };
             xp += lesson.xpReward * 3;
 
@@ -482,6 +507,7 @@ export const useCourseStore = create<CourseState>()(
             ...lp,
             golden: lp.golden ?? false,
             answeredQuestionIds: lp.answeredQuestionIds ?? [],
+            correctQuestionIds: (lp as any).correctQuestionIds ?? [],
           };
         }
 

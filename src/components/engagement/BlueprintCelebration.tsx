@@ -2,10 +2,13 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 import { useCourseStore } from '@/store/useCourseStore';
 import { blueprints } from '@/data/blueprints';
 import { getUnitTheme } from '@/lib/unitThemes';
 import { useBackHandler } from '@/hooks/useBackHandler';
+import { useSubscription } from '@/hooks/useSubscription';
+import { UpgradeModal } from '@/components/ui/UpgradeModal';
 
 interface BlueprintCelebrationProps {
   unitIndex: number;
@@ -98,10 +101,15 @@ function DimensionLine({
 
 export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: BlueprintCelebrationProps) {
   const [phase, setPhase] = useState<'drawing' | 'stamp' | 'stats'>('drawing');
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const blueprint = blueprints[unitIndex] ?? blueprints[0];
   const theme = getUnitTheme(unitIndex);
   const courseData = useCourseStore((s) => s.courseData);
   const progress = useCourseStore((s) => s.progress);
+  const { isProUser } = useSubscription();
+
+  // Show upgrade prompt when completing last lesson of free chapter (unit 0)
+  const shouldShowUpgrade = unitIndex === 0 && !isProUser && !isGolden;
 
   const chapterStats = useMemo(() => {
     const unit = courseData[unitIndex];
@@ -329,6 +337,50 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
                 <StatItem label="XP" value={`${chapterStats.totalXp}`} color={accentColor} />
               </div>
 
+              {/* Upgrade prompt for free users completing Unit 0 */}
+              {shouldShowUpgrade && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="mt-4 w-full max-w-xs"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div
+                    style={{
+                      background: 'linear-gradient(135deg, #FFF8E1 0%, #FFF3CD 100%)',
+                      border: '1.5px solid #FFD54F',
+                      borderRadius: 16,
+                      padding: '14px 18px',
+                      textAlign: 'center',
+                    }}
+                  >
+                    <div style={{ fontSize: 13, fontWeight: 700, color: '#5D4200', marginBottom: 8 }}>
+                      Unlock all 10 units and keep learning!
+                    </div>
+                    <button
+                      onClick={() => setShowUpgradeModal(true)}
+                      className="flex items-center justify-center w-full transition-transform active:scale-[0.97]"
+                      style={{
+                        gap: 6,
+                        padding: '12px 0',
+                        borderRadius: 14,
+                        fontSize: 14,
+                        fontWeight: 800,
+                        color: '#FFFFFF',
+                        background: '#FFB800',
+                        boxShadow: '0 4px 0 #CC9400',
+                        border: 'none',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <Sparkles style={{ width: 16, height: 16 }} />
+                      Upgrade to Pro
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+
               {/* Continue button */}
               <motion.button
                 initial={{ opacity: 0 }}
@@ -347,6 +399,15 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Upgrade Modal */}
+        {showUpgradeModal && (
+          <UpgradeModal
+            isOpen={showUpgradeModal}
+            onClose={() => setShowUpgradeModal(false)}
+            reason="Unlock all 10 course units"
+          />
+        )}
 
         {/* Golden sparkles */}
         {isGolden && (

@@ -145,6 +145,8 @@ export function CourseMap() {
           const isGuestLocked = isGuest && unitIndex > 0;
           const isProLocked = isFreeLocked(unitIndex);
           const isUnitLocked = isGuestLocked || isProLocked;
+          const isAllGolden = completedInUnit === unit.lessons.length &&
+            unit.lessons.every((l) => progress.completedLessons[l.id]?.golden);
 
           return (
             <div
@@ -153,7 +155,8 @@ export function CourseMap() {
               style={{
                 borderRadius: 24,
                 overflow: 'hidden',
-                backgroundColor: theme.bg,
+                backgroundColor: isAllGolden ? '#FFF8E1' : theme.bg,
+                border: isAllGolden ? '2px solid #FFD54F' : undefined,
                 transition: 'box-shadow 0.3s ease',
                 animation: 'unitSlideUp 0.5s ease backwards',
                 animationDelay: `${Math.min(unitIndex * 0.1, 0.5)}s`,
@@ -166,6 +169,7 @@ export function CourseMap() {
                 totalInUnit={unit.lessons.length}
                 isExpanded={isExpanded}
                 isLocked={isUnitLocked}
+                isAllGolden={isAllGolden}
                 lockMessage={
                   isGuestLocked
                     ? 'Sign up to unlock'
@@ -220,8 +224,11 @@ export function CourseMap() {
                                   setShowUpgradeModal(true);
                                 } else if (state === 'locked') {
                                   setJumpConfirm({ unitIndex, lessonIndex });
-                                } else if (state === 'completed' && !lessonProgress?.golden) {
-                                  // Completed but not golden: start golden challenge
+                                } else if (state === 'completed' && lessonProgress && (lessonProgress.attempts ?? 0) < 3) {
+                                  // Completed but fewer than 3 attempts: regular retry with incorrect questions
+                                  startLesson(unitIndex, lessonIndex, false);
+                                } else if (state === 'completed' && lessonProgress && (lessonProgress.attempts ?? 0) >= 3) {
+                                  // 3+ attempts done: start golden (or re-do golden)
                                   startLesson(unitIndex, lessonIndex, true);
                                 } else {
                                   startLesson(unitIndex, lessonIndex);

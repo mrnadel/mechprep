@@ -172,7 +172,7 @@ export const subscriptions = pgTable('subscriptions', {
     .notNull()
     .references(() => users.id, { onDelete: 'cascade' })
     .unique(),
-  tier: text('tier').notNull().default('free'),           // 'free' | 'pro' | 'team'
+  tier: text('tier').notNull().default('free'),           // 'free' | 'pro'
   status: text('status').notNull().default('active'),     // SubscriptionStatus
   paddleCustomerId: text('paddle_customer_id'),
   paddleSubscriptionId: text('paddle_subscription_id').unique(),
@@ -183,7 +183,6 @@ export const subscriptions = pgTable('subscriptions', {
   trialStart: text('trial_start'),
   trialEnd: text('trial_end'),
   cancelAtPeriodEnd: boolean('cancel_at_period_end').default(false).notNull(),
-  teamId: text('team_id'),
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
   updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
 });

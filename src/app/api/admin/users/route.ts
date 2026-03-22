@@ -54,7 +54,7 @@ export async function PATCH(req: NextRequest) {
   }
 
   const { userId, tier } = await req.json();
-  if (!userId || !['free', 'pro', 'team'].includes(tier)) {
+  if (!userId || !['free', 'pro'].includes(tier)) {
     return NextResponse.json({ error: 'Invalid userId or tier' }, { status: 400 });
   }
 

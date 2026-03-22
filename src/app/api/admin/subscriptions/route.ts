@@ -21,7 +21,7 @@ export async function GET() {
     .from(subscriptions)
     .groupBy(subscriptions.tier);
 
-  const counts: Record<string, number> = { free: 0, pro: 0, team: 0 };
+  const counts: Record<string, number> = { free: 0, pro: 0 };
   for (const row of tierCounts) {
     counts[row.tier] = row.count;
   }
@@ -91,7 +91,6 @@ export async function GET() {
     overview: {
       free: counts.free,
       pro: counts.pro,
-      team: counts.team,
       activeSubscriptions: activeCount,
       trialUsers: trialCount,
       revenueThisMonthCents,

@@ -6,7 +6,6 @@ import { useSession } from 'next-auth/react';
 interface Overview {
   free: number;
   pro: number;
-  team: number;
   activeSubscriptions: number;
   trialUsers: number;
   revenueThisMonthCents: number;
@@ -43,7 +42,6 @@ const tierBadgeStyle = (tier: string): React.CSSProperties => {
   const colors: Record<string, { bg: string; color: string }> = {
     free: { bg: '#F0F0F0', color: '#666' },
     pro: { bg: '#E8F5E9', color: '#2E7D32' },
-    team: { bg: '#E3F2FD', color: '#1565C0' },
   };
   const c = colors[tier] ?? colors.free;
   return {
@@ -147,7 +145,6 @@ export default function AdminSubscriptionsPage() {
             {[
               { label: 'Free', value: data.overview.free },
               { label: 'Pro', value: data.overview.pro },
-              { label: 'Team', value: data.overview.team },
               { label: 'Active Subscriptions', value: data.overview.activeSubscriptions },
               { label: 'Trial Users', value: data.overview.trialUsers },
               { label: 'Revenue (this month)', value: formatDollars(data.overview.revenueThisMonthCents) },

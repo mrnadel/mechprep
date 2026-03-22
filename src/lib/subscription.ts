@@ -2,7 +2,7 @@
 // Subscription Types — MechReady SaaS
 // ============================================================
 
-export type SubscriptionTier = 'free' | 'pro' | 'team';
+export type SubscriptionTier = 'free' | 'pro';
 
 export type SubscriptionStatus =
   | 'active'
@@ -28,7 +28,6 @@ export interface Subscription {
   trialStart: string | null;    // ISO date
   trialEnd: string | null;      // ISO date
   cancelAtPeriodEnd: boolean;
-  teamId: string | null;        // null for individual subscriptions
   createdAt: string;
   updatedAt: string;
 }
@@ -55,6 +54,4 @@ export interface TierLimitsResult {
   streakFreezePerWeek: number;
   interviewReadinessScore: boolean;
   unlockedUnits: number[];          // unit indices (0-based)
-  teamFeatures: boolean;
-  customQuestionSets: boolean;
 }

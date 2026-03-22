@@ -13,9 +13,15 @@ interface UnitHeaderProps {
   isExpanded: boolean;
   isLocked?: boolean;
   lockMessage?: string;
+  isAllGolden?: boolean;
   onToggle: () => void;
   theme: UnitTheme;
 }
+
+const GOLD_BG = '#FFF8E1';
+const GOLD_COLOR = '#FFB800';
+const GOLD_DARK = '#B8860B';
+const GOLD_MID = '#D4A017';
 
 export function UnitHeader({
   unit,
@@ -25,11 +31,18 @@ export function UnitHeader({
   isExpanded,
   isLocked,
   lockMessage,
+  isAllGolden,
   onToggle,
   theme,
 }: UnitHeaderProps) {
   const progressPercent =
     totalInUnit > 0 ? (completedInUnit / totalInUnit) * 100 : 0;
+
+  // Override colors when all lessons are golden
+  const displayColor = isAllGolden ? GOLD_COLOR : theme.color;
+  const displayDark = isAllGolden ? GOLD_DARK : theme.dark;
+  const displayMid = isAllGolden ? GOLD_MID : theme.mid;
+  const displayBg = isAllGolden ? GOLD_BG : theme.bg;
 
   return (
     <div>
@@ -61,18 +74,18 @@ export function UnitHeader({
               textTransform: 'uppercase',
               letterSpacing: 1.2,
               marginBottom: 4,
-              color: theme.dark,
+              color: displayDark,
               opacity: 0.7,
             }}
           >
-            Unit {unitIndex + 1}
+            {isAllGolden ? '\uD83D\uDC51 ' : ''}Unit {unitIndex + 1}
           </div>
           <div
             style={{
               fontSize: 19,
               fontWeight: 800,
               lineHeight: 1.2,
-              color: theme.dark,
+              color: displayDark,
             }}
           >
             {unit.title}
@@ -90,14 +103,14 @@ export function UnitHeader({
                 borderRadius: 8,
                 background: 'rgba(0,0,0,0.06)',
                 marginTop: 6,
-                color: theme.dark,
+                color: displayDark,
               }}
             >
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                <rect x="5" y="11" width="14" height="10" rx="2" fill={theme.dark} />
+                <rect x="5" y="11" width="14" height="10" rx="2" fill={displayDark} />
                 <path
                   d="M8 11V7a4 4 0 118 0v4"
-                  stroke={theme.dark}
+                  stroke={displayDark}
                   strokeWidth="2.5"
                   strokeLinecap="round"
                 />
@@ -109,12 +122,14 @@ export function UnitHeader({
               style={{
                 fontSize: 12.5,
                 fontWeight: 700,
-                color: theme.mid,
+                color: displayMid,
                 opacity: 0.6,
                 marginTop: 3,
               }}
             >
-              {completedInUnit} of {totalInUnit} lessons complete
+              {isAllGolden
+                ? 'All lessons mastered!'
+                : `${completedInUnit} of ${totalInUnit} lessons complete`}
             </div>
           )}
         </div>
@@ -126,7 +141,7 @@ export function UnitHeader({
         >
           <UnitIllustration
             unitIndex={unitIndex}
-            color={theme.color}
+            color={displayColor}
             className="w-full h-full"
           />
         </div>
@@ -151,7 +166,7 @@ export function UnitHeader({
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
               d="M4 6l4 4 4-4"
-              stroke={theme.dark}
+              stroke={displayDark}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -177,7 +192,7 @@ export function UnitHeader({
             style={{
               height: '100%',
               borderRadius: 5,
-              backgroundColor: theme.color,
+              backgroundColor: displayColor,
             }}
             initial={{ width: 0 }}
             animate={{ width: `${progressPercent}%` }}
@@ -188,7 +203,7 @@ export function UnitHeader({
           style={{
             fontSize: 12,
             fontWeight: 800,
-            color: theme.dark,
+            color: displayDark,
             opacity: 0.7,
             whiteSpace: 'nowrap',
           }}

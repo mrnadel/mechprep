@@ -74,11 +74,6 @@ const sections: Section[] = [
             unlimited daily practice, detailed explanations, full analytics, streak
             freezes, interview readiness scoring, and all practice modes.
           </li>
-          <li>
-            <strong>Team ($29/month per seat):</strong> Everything in Pro, plus a team
-            dashboard, team progress tracking, custom question sets, and bulk licensing.
-            Minimum of 5 seats required.
-          </li>
         </ul>
         <p>
           All payments are processed securely through Paddle, our Merchant of Record.

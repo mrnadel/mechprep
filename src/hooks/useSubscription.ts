@@ -97,7 +97,7 @@ export function useSubscription() {
   const activeTier = isDev && store.debugTierOverride ? store.debugTierOverride : store.tier;
 
   const isTrialing = store.status === 'trialing';
-  const isProUser = activeTier === 'pro' || activeTier === 'team' || isTrialing;
+  const isProUser = activeTier === 'pro' || isTrialing;
 
   const trialDaysLeft = (() => {
     if (!isTrialing || !store.trialEnd) return 0;
@@ -132,11 +132,6 @@ export function useSubscription() {
 // ─── Internal ───────────────────────────────────────────────────
 
 function getTierFeatures(tier: SubscriptionTier): Feature[] {
-  // Mirror the TIERS definition without importing the full object
-  // to keep this lightweight on the client
-  if (tier === 'team') {
-    return Object.values(FEATURES);
-  }
   if (tier === 'pro') {
     return [
       FEATURES.UNIT_ACCESS_ALL,

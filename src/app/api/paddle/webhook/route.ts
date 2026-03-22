@@ -96,13 +96,11 @@ export async function POST(request: NextRequest) {
 
 // ─── Helpers ────────────────────────────────────────────────────
 
-function tierFromPriceId(priceId: string | null): 'free' | 'pro' | 'team' {
+function tierFromPriceId(priceId: string | null): 'free' | 'pro' {
   const proMonthly = process.env.PADDLE_PRO_MONTHLY_PRICE_ID;
   const proYearly = process.env.PADDLE_PRO_YEARLY_PRICE_ID;
-  const teamMonthly = process.env.PADDLE_TEAM_MONTHLY_PRICE_ID;
 
   if (priceId === proMonthly || priceId === proYearly) return 'pro';
-  if (priceId === teamMonthly) return 'team';
   return 'free';
 }
 
@@ -230,7 +228,6 @@ async function upsertSubscription(
     trialStart: string | null;
     trialEnd: string | null;
     cancelAtPeriodEnd: boolean;
-    teamId: string | null;
   }>,
 ) {
   const [existing] = await db

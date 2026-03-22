@@ -34,7 +34,6 @@ export async function POST(request: NextRequest) {
   const validPrices = [
     PADDLE_PRICES.PRO_MONTHLY,
     PADDLE_PRICES.PRO_YEARLY,
-    PADDLE_PRICES.TEAM_MONTHLY,
   ];
   if (!priceId || !validPrices.includes(priceId)) {
     return NextResponse.json({ error: 'Invalid price' }, { status: 400 });

@@ -61,10 +61,15 @@ export default function ResultScreen() {
 
   const isGolden = lessonResult.isGolden;
 
+  // Get attempt info from store for messaging
+  const lessonProgress = useCourseStore((s) => s.progress.completedLessons[lessonResult.lessonId]);
+  const attempts = lessonProgress?.attempts ?? 1;
+
   const getMessage = () => {
     if (isGolden) return 'Mastered!';
-    if (lessonResult.stars === 3) return 'Perfect Score!';
-    if (lessonResult.stars === 2) return 'Great Work!';
+    if (attempts >= 3) return 'Golden Unlocked!';
+    if (lessonResult.accuracy >= 90) return 'Perfect Score!';
+    if (lessonResult.accuracy >= 70) return 'Great Work!';
     return 'Lesson Complete!';
   };
 
@@ -215,7 +220,7 @@ export default function ResultScreen() {
               </motion.svg>
             ) : (
               [1, 2, 3].map((starNum) => {
-                const earned = starNum <= lessonResult.stars;
+                const earned = starNum <= attempts;
                 return (
                   <motion.div
                     key={starNum}
@@ -347,7 +352,7 @@ export default function ResultScreen() {
           </div>
 
           {/* Achievement badges */}
-          {(lessonResult.isNewBest || lessonResult.isFirstCompletion || isGolden) && (
+          {(lessonResult.isNewBest || lessonResult.isFirstCompletion || isGolden || (!isGolden && attempts >= 3)) && (
             <div className="flex flex-col" style={{ gap: 8, marginTop: 12 }}>
               {isGolden && (
                 <motion.div
@@ -373,6 +378,46 @@ export default function ResultScreen() {
                   </span>
                 </motion.div>
               )}
+              {!isGolden && attempts >= 3 && (
+                <motion.div
+                  initial={{ opacity: 0, x: -12 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.9 }}
+                  className="flex items-center"
+                  style={{
+                    gap: 8,
+                    padding: '10px 14px',
+                    borderRadius: 14,
+                    background: '#FFF8E1',
+                    border: '1.5px solid #FFD54F',
+                  }}
+                >
+                  <span style={{ fontSize: 16 }}>{'\uD83D\uDC51'}</span>
+                  <span style={{ fontSize: 13, fontWeight: 800, color: '#B8860B' }}>
+                    Golden challenge now available!
+                  </span>
+                </motion.div>
+              )}
+              {!isGolden && attempts < 3 && (
+                <motion.div
+                  initial={{ opacity: 0, x: -12 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.9 }}
+                  className="flex items-center"
+                  style={{
+                    gap: 8,
+                    padding: '10px 14px',
+                    borderRadius: 14,
+                    background: theme.bg,
+                    border: `1.5px solid ${theme.color}40`,
+                  }}
+                >
+                  <span style={{ fontSize: 16 }}>{'\u2B50'}</span>
+                  <span style={{ fontSize: 13, fontWeight: 800, color: theme.dark }}>
+                    {attempts}/3 — {3 - attempts} more to unlock golden!
+                  </span>
+                </motion.div>
+              )}
               {lessonResult.isNewBest && (
                 <motion.div
                   initial={{ opacity: 0, x: -12 }}
@@ -390,26 +435,6 @@ export default function ResultScreen() {
                   <span style={{ fontSize: 16 }}>{'\uD83C\uDFC6'}</span>
                   <span style={{ fontSize: 13, fontWeight: 800, color: '#B56E00' }}>
                     New personal best!
-                  </span>
-                </motion.div>
-              )}
-              {lessonResult.isFirstCompletion && (
-                <motion.div
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.1 }}
-                  className="flex items-center"
-                  style={{
-                    gap: 8,
-                    padding: '10px 14px',
-                    borderRadius: 14,
-                    background: theme.bg,
-                    border: `1.5px solid ${theme.color}40`,
-                  }}
-                >
-                  <span style={{ fontSize: 16 }}>{'\uD83C\uDFAF'}</span>
-                  <span style={{ fontSize: 13, fontWeight: 800, color: theme.dark }}>
-                    First time completing!
                   </span>
                 </motion.div>
               )}

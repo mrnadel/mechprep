@@ -13,7 +13,6 @@ import type {
 export const PADDLE_PRICES = {
   PRO_MONTHLY: process.env.PADDLE_PRO_MONTHLY_PRICE_ID || '',
   PRO_YEARLY: process.env.PADDLE_PRO_YEARLY_PRICE_ID || '',
-  TEAM_MONTHLY: process.env.PADDLE_TEAM_MONTHLY_PRICE_ID || '',
 } as const;
 
 // --------------- Features ---------------
@@ -26,10 +25,6 @@ export const FEATURES = {
   STREAK_FREEZE: 'streak_freeze',
   INTERVIEW_READINESS: 'interview_readiness',
   DETAILED_EXPLANATIONS: 'detailed_explanations',
-  TEAM_DASHBOARD: 'team_dashboard',
-  TEAM_PROGRESS: 'team_progress',
-  CUSTOM_QUESTION_SETS: 'custom_question_sets',
-  BULK_LICENSING: 'bulk_licensing',
 } as const;
 
 export type Feature = (typeof FEATURES)[keyof typeof FEATURES];
@@ -44,11 +39,6 @@ export const LIMITS = {
   },
   pro: {
     dailyQuestions: -1,               // unlimited
-    streakFreezesPerWeek: 1,
-    unlockedUnits: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] as number[],
-  },
-  team: {
-    dailyQuestions: -1,
     streakFreezesPerWeek: 1,
     unlockedUnits: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] as number[],
   },
@@ -97,28 +87,6 @@ export const TIERS: Record<SubscriptionTier, TierDefinition> = {
       FEATURES.DETAILED_EXPLANATIONS,
     ],
     highlighted: true,
-  },
-  team: {
-    id: 'team',
-    name: 'Team',
-    tagline: 'Prepare your engineering team',
-    priceMonthly: 2900,          // $29/month per seat
-    priceYearly: 0,              // contact sales for annual
-    minSeats: 5,
-    features: [
-      FEATURES.UNIT_ACCESS_ALL,
-      FEATURES.UNLIMITED_PRACTICE,
-      FEATURES.ALL_PRACTICE_MODES,
-      FEATURES.FULL_ANALYTICS,
-      FEATURES.STREAK_FREEZE,
-      FEATURES.INTERVIEW_READINESS,
-      FEATURES.DETAILED_EXPLANATIONS,
-      FEATURES.TEAM_DASHBOARD,
-      FEATURES.TEAM_PROGRESS,
-      FEATURES.CUSTOM_QUESTION_SETS,
-      FEATURES.BULK_LICENSING,
-    ],
-    highlighted: false,
   },
 } as const;
 
@@ -174,14 +142,10 @@ export function getFeatureAccess(
     };
   }
 
-  // Determine the cheapest tier that includes this feature
-  const requiredTier: SubscriptionTier =
-    TIERS.pro.features.includes(feature) ? 'pro' : 'team';
-
   return {
     allowed: false,
     reason: 'tier_required',
-    requiredTier,
+    requiredTier: 'pro',
   };
 }
 
@@ -205,8 +169,6 @@ export function getTierLimits(
     streakFreezePerWeek: limits.streakFreezesPerWeek,
     interviewReadinessScore: tierDef.features.includes(FEATURES.INTERVIEW_READINESS),
     unlockedUnits: [...limits.unlockedUnits],
-    teamFeatures: tierDef.features.includes(FEATURES.TEAM_DASHBOARD),
-    customQuestionSets: tierDef.features.includes(FEATURES.CUSTOM_QUESTION_SETS),
   };
 }
 

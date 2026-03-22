@@ -43,7 +43,7 @@ async function getEffectiveTier(userId: string): Promise<SubscriptionTier> {
 
 /**
  * Check if a user can access a specific course unit.
- * Free users: unit 1 only (index 0). Pro/Team: all units.
+ * Free users: unit 1 only (index 0). Pro: all units.
  */
 export async function canAccessUnit(
   userId: string,
@@ -56,7 +56,7 @@ export async function canAccessUnit(
 
 /**
  * Check if a user can start a practice session.
- * Free users: 5 questions per day. Pro/Team: unlimited.
+ * Free users: 5 questions per day. Pro: unlimited.
  */
 export async function canStartPracticeSession(
   userId: string,
@@ -82,7 +82,7 @@ export async function canAccessAnalytics(
   userId: string,
 ): Promise<{ fullAccess: boolean; tier: SubscriptionTier }> {
   const tier = await getEffectiveTier(userId);
-  const fullAccess = tier === 'pro' || tier === 'team';
+  const fullAccess = tier === 'pro';
   return { fullAccess, tier };
 }
 

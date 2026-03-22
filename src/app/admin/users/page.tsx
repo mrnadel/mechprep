@@ -18,7 +18,6 @@ interface AdminUser {
 const TIER_STYLES: Record<string, { background: string; color: string }> = {
   free: { background: '#E5E5E5', color: '#555' },
   pro: { background: '#E8F5E9', color: '#2E7D32' },
-  team: { background: '#E3F2FD', color: '#1565C0' },
 };
 
 function formatDate(value: string | null): string {

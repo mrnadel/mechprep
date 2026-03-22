@@ -18,10 +18,6 @@ const FEATURE_LABELS: Record<Feature, string> = {
   [FEATURES.STREAK_FREEZE]: 'Weekly streak freeze',
   [FEATURES.INTERVIEW_READINESS]: 'Interview readiness score',
   [FEATURES.DETAILED_EXPLANATIONS]: 'Detailed explanations',
-  [FEATURES.TEAM_DASHBOARD]: 'Team dashboard',
-  [FEATURES.TEAM_PROGRESS]: 'Team progress tracking',
-  [FEATURES.CUSTOM_QUESTION_SETS]: 'Custom question sets',
-  [FEATURES.BULK_LICENSING]: 'Bulk licensing',
 };
 
 export default function BillingSettingsPage() {
