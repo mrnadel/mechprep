@@ -67,7 +67,7 @@ export default function UserSearch() {
           placeholder="Search users by name..."
           className="w-full pl-10 pr-10 py-3 rounded-xl border border-surface-200 bg-white text-sm font-medium text-surface-900 placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-primary-200 focus:border-primary-400 transition-all"
         />
-        {query && (
+        {query && !loading && (
           <button
             onClick={() => { setQuery(''); setResults([]); }}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-400 hover:text-surface-600"

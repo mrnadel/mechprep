@@ -90,8 +90,20 @@ export default function PublicProfilePage() {
             <span style={{ fontSize: 16, fontWeight: 700 }}>Back</span>
           </Link>
         </header>
-        <div className="flex flex-col items-center justify-center gap-3 py-20">
-          <p className="text-surface-500 text-lg font-semibold">User not found</p>
+        <div className="flex flex-col items-center justify-center gap-4 py-20 px-6">
+          <div className="w-20 h-20 rounded-full bg-surface-100 flex items-center justify-center">
+            <span className="text-4xl">🔍</span>
+          </div>
+          <div className="text-center">
+            <p className="text-surface-700 font-bold text-lg mb-1">User not found</p>
+            <p className="text-surface-400 text-sm">This user may have been removed or doesn't exist</p>
+          </div>
+          <Link
+            href="/friends"
+            className="px-5 py-2.5 rounded-xl bg-primary-600 text-white text-sm font-semibold hover:bg-primary-700 transition-colors"
+          >
+            Back to Friends
+          </Link>
         </div>
       </div>
     );
