@@ -33,7 +33,7 @@ interface FakeUser {
 
   // Progress (grows over time)
   totalXp: number;
-  currentLevel: number;
+  // Level is derived from totalXp via getLevelForXp() — not stored
   currentStreak: number;
   longestStreak: number;
   achievementsUnlocked: string[];  // IDs from existing 30 achievements
@@ -82,7 +82,7 @@ interface FakeUserPool {
 ```
 
 - **Key:** `mechready-fake-users` (separate from `mechready-engagement`)
-- **Size:** ~250 users × ~400 bytes ≈ 100KB
+- **Size:** ~250 users × ~600 bytes ≈ 150KB (Masters users with 27 achievements and 11 topics are ~1KB; Bronze users with 0-3 achievements are ~300 bytes; average ~600 bytes)
 - **Version field** enables future migration — bumping version regenerates the pool
 
 ---
@@ -159,11 +159,13 @@ Each user with an avatar gets a seeded-random style assignment. The leaderboard 
 
 Each tier defines realistic attribute ranges. Values are randomly picked within ranges at generation time, then grow through weekly progression.
 
+**Level is always derived from totalXp** using the existing `getLevelForXp()` function from `src/data/levels.ts`. It is never generated independently. The level column below shows the resulting range for reference only. Max level is 30 (100,000 XP).
+
 | Attribute | Bronze | Silver | Gold | Platinum | Masters |
 |-----------|--------|--------|------|----------|---------|
 | Join date | 0-30 days ago | 1-12 wks ago | 3-24 wks ago | 6-40 wks ago | 12-52+ wks ago |
-| Level | 1-5 | 3-12 | 8-25 | 15-40 | 25-50+ |
-| Total XP | 0-1,500 | 1K-6K | 4K-18K | 12K-40K | 25K+ |
+| Total XP | 0-850 | 850-7,100 | 7,100-20,300 | 20,300-52,000 | 52,000-100,000 |
+| Level (derived) | 1-5 | 5-12 | 12-18 | 18-25 | 25-30 |
 | Current streak | 0-5 (60% at 0-1) | 0-14 | 2-30 | 5-60 | 14-200 |
 | Longest streak | 0-7 | 3-21 | 7-45 | 14-90 | 30-365 |
 | Achievements | 0-3 | 2-8 | 5-15 | 8-22 | 12-27 |
@@ -180,11 +182,20 @@ Fake users receive achievements from the existing 30 achievement definitions. As
 - **Platinum:** Adds `ach-hundred-correct`, `ach-streak-30`, `ach-speed-round`, `ach-multi-master`, `ach-all-topics`
 - **Masters:** All of the above plus `ach-interview-ready`, `ach-hard-streak`, `ach-scenario-master`
 
+**Remaining achievements distributed across tiers:**
+- `ach-all-advanced` (No Easy Mode) — Gold+ (requires advanced question engagement)
+- `ach-estimation-ace` (Back of the Envelope) — Silver+ at 15% probability
+- `ach-weekend-warrior` (Weekend Warrior) — any tier at 20% probability
+- `ach-confidence-calibrated` (Confidence Calibrated) — Gold+ at 20% probability
+- `ach-flaw-finder` (Eagle Eye) — Silver+ at 15% probability
+- `ach-bookworm` (Bookmarked for Later) — any tier at 25% probability
+- `ach-weakness-conquered` (Weakness Conquered) — Gold+ at 15% probability
+
 Hidden achievements (`ach-night-owl`, `ach-early-bird`, `ach-wrong-five`) are sprinkled randomly across all tiers at ~10% probability each — adds a fun "even bots practice at 2 AM" touch.
 
 ### 4.2 Topic Mastery Assignment
 
-Topics are drawn from the existing 11 topic IDs. The number of topics and their mastery levels follow the tier ranges. Topics are assigned in a weighted order: critical-relevance topics (`engineering-mechanics`, `strength-of-materials`, `materials-engineering`, `design-tolerancing`) are more likely to be attempted first, since that mirrors how real users would prioritize.
+Topics are drawn from the existing 11 topic IDs. The number of topics and their mastery levels follow the tier ranges. Topics are assigned in a weighted order: critical-relevance topics (`engineering-mechanics`, `strength-of-materials`, `materials-engineering`, `design-tolerancing`) have **2x draw probability** compared to non-critical topics, since that mirrors how real users would prioritize interview-critical content first.
 
 ---
 
@@ -219,9 +230,9 @@ Every Monday when `simulateLeagueWeek()` detects a new week, before drawing comp
 For each user in the pool:
 
 - **XP gain:** `weeklyXp = tierXpRange.midpoint * activityLevel * (0.5 + random())`; added to `totalXp`
-- **Streak:** if `random() < consistency`, streak += 7; otherwise streak resets to `random(0, 3)`
+- **Streak:** Simulate 7 individual days. For each day: if `random() < consistency`, the user practiced (active day). Count consecutive active days from the end of the week. If all 7 days active, `streak += 7`. If the last N days were active but earlier days were missed, `streak = N`. If the last day was missed, `streak = 0` (broken). This produces realistic varied streaks — some users practice 5/7 days but still break their streak, while consistent users build long runs.
 - **Longest streak:** `max(longestStreak, currentStreak)`
-- **Level:** Recalculate from `totalXp` using same XP-to-level formula as real users
+- **Level:** Derived from `totalXp` using `getLevelForXp()` from `src/data/levels.ts` (never generated independently)
 - **Achievements:** Check if new milestones are met based on updated stats (e.g., `totalXp > 5000` triggers XP-based achievements; `longestStreak >= 14` triggers streak achievements)
 - **Topic mastery:** 15% chance per week to advance one random topic by one mastery level
 
@@ -230,18 +241,21 @@ For each user in the pool:
 Simulate each user's weekly performance within their tier:
 
 1. Group all fake users by `currentTier`
-2. Assign each a simulated weekly XP rank within their tier group
-3. Apply the same promotion/demotion rules used for the real league:
-   - Top `promoteCount` users promote (if tier < 5)
-   - Bottom `demoteCount` users demote (if tier > 1)
-4. Update each user's `currentTier` accordingly
+2. Assign each a simulated weekly XP (from the XP gain step above)
+3. Rank users within each tier group by their simulated weekly XP
+4. Apply **proportional** promotion/demotion (since tier groups are not fixed at 30):
+   - `promoteThreshold = ceil(tierGroup.length * promoteCount / 30)` — top N promote
+   - `demoteThreshold = ceil(tierGroup.length * demoteCount / 30)` — bottom N demote
+   - Example: Bronze has 80 users, `promoteCount=5` → top `ceil(80 * 5/30) = 14` promote
+   - Example: Masters has 20 users, `demoteCount=5` → bottom `ceil(20 * 5/30) = 4` demote
+5. Update each user's `currentTier` accordingly
 
-This creates natural tier movement over time — Bronze users gradually climb, Masters users occasionally fall back.
+This creates natural tier movement over time — Bronze users gradually climb, Masters users occasionally fall back. The proportional approach keeps movement rates consistent regardless of tier group size.
 
 ### 6.3 Churn
 
 - **Inactive drift:** 5% of Bronze users per week have their `activityLevel` multiplied by 0.3 (simulates people losing interest). They'll naturally stagnate or get demoted.
-- **New signups:** 2% chance per week to add a fresh Bronze user to the pool (replacing the most inactive user), simulating new people joining the platform.
+- **New signups:** 2% chance per week to add a fresh Bronze user to the pool (replacing the most inactive user), simulating new people joining the platform. **Pool size is hard-capped at 300** — no new users are added if the pool is at capacity.
 
 ---
 
@@ -351,20 +365,46 @@ DiceBear SVG generation is synchronous and fast (~1ms per avatar). For a list of
 | **New:** `src/components/engagement/CompetitorPreview.tsx` | Bottom sheet profile preview |
 | **Modify:** `src/data/engagement-types.ts` | Add `FakeUser`, `FakeUserPool` interfaces; add `fakeUserId?` to `LeagueCompetitor` |
 | **Modify:** `src/lib/league-simulator.ts` | Replace `generateCompetitors()` with `drawCompetitorsFromPool()`; keep all other functions |
+| **Modify:** `src/store/useEngagementStore.ts` | Update `simulateLeagueWeek` action to call `drawCompetitorsFromPool()` instead of `generateCompetitors()` |
 | **Modify:** `src/components/engagement/LeagueBoard.tsx` | Add click handler for competitor rows; render DiceBear avatars; varied initials colors |
 | **Modify:** `src/components/engagement/LeagueCard.tsx` | Render DiceBear avatars for top-5 mini leaderboard |
-| **Modify:** `src/lib/engagement-init.ts` | Call `initFakeUserPool()` and `progressFakeUsers()` on app mount |
+| **Modify:** `src/lib/engagement-init.ts` | Call `initFakeUserPool()` and `progressFakeUsers()` before `simulateLeagueWeek()` |
 | **New dependency:** `@dicebear/core`, `@dicebear/collection` | Client-side avatar SVG generation |
 
 ### 10.2 Initialization Flow
 
+The full updated sequence in `engagement-init.ts` (ordering matters — fake user pool must exist before league simulation):
+
 ```
 App mount
-  → engagement-init.ts
-    → initFakeUserPool()          // Create pool if missing
-    → progressFakeUsers()         // Advance all users if new week
-    → simulateLeagueWeek()        // Now uses drawCompetitorsFromPool() internally
+  → useEngagementInit() effect fires
+    → streak freeze/break detection (unchanged)
+    → initFakeUserPool()          // Create pool if missing in localStorage
+    → progressFakeUsers()         // Advance all fake users if new week detected
+    → initDailyQuests()           // unchanged
+    → initWeeklyQuests()          // unchanged
+    → simulateLeagueWeek()        // Now calls drawCompetitorsFromPool() internally
+    → checkComebackFlow()         // unchanged
 ```
+
+### 10.3 DiceBear Bundle Size
+
+Import only the specific style packages needed rather than `@dicebear/collection` (which bundles all styles). Import `@dicebear/adventurer`, `@dicebear/avataaars`, `@dicebear/lorelei`, `@dicebear/thumbs` individually to minimize bundle impact (~50-80KB total instead of ~300KB+).
+
+### 10.4 Colored Initials Palette
+
+For users with `avatarType: 'none'`, the background color is selected by: `palette[hashSeed(userId) % palette.length]`.
+
+Palette (Tailwind 500 values): `['#64748b', '#71717a', '#78716c', '#f59e0b', '#10b981', '#0ea5e9', '#8b5cf6', '#f43f5e']` (slate, zinc, stone, amber, emerald, sky, violet, rose).
+
+### 10.5 Interaction with Friends System
+
+The friends system design spec (`2026-03-22-friends-and-profiles-design.md`, Section 5.2) says tapping league competitors navigates to `/user/[id]` for real users. The behavior is:
+
+- **Fake users** (have `fakeUserId`): open a bottom sheet (`CompetitorPreview.tsx`). No navigation.
+- **Real users** (no `fakeUserId`, future): navigate to `/user/[id]` as specified in the friends spec.
+
+This distinction is checked via the `fakeUserId` field on `LeagueCompetitor`.
 
 ---
 
