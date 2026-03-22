@@ -111,7 +111,7 @@ export function LandingPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section style={{ paddingTop: 120, paddingBottom: 80, textAlign: 'center' }}>
+      <section className="landing-hero-section" style={{ paddingTop: 120, paddingBottom: 80, textAlign: 'center' }}>
         <div style={{ maxWidth: 700, margin: '0 auto', padding: '0 24px' }}>
           <AnimateIn>
             <div style={{
@@ -349,7 +349,7 @@ export function LandingPage() {
       </section>
 
       {/* ── COMPARISON SECTION ── */}
-      <section style={{
+      <section className="landing-compare-section" style={{
         padding: '80px 24px', background: '#fff',
         borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0',
       }}>
@@ -446,7 +446,7 @@ export function LandingPage() {
       </section>
 
       {/* ── TOPICS SECTION ── */}
-      <section style={{ padding: '80px 24px' }}>
+      <section className="landing-topics-section" style={{ padding: '80px 24px' }}>
         <div style={{ maxWidth: 700, margin: '0 auto' }}>
           <AnimateIn>
             <div style={{
@@ -572,16 +572,37 @@ export function LandingPage() {
             margin-right: auto !important;
           }
           .landing-compare-featured { transform: none !important; order: -1; }
+          .landing-hero-stats { gap: 24px !important; }
         }
 
         @media (max-width: 480px) {
-          .landing-hero-h1 { font-size: 28px !important; }
+          .landing-hero-h1 { font-size: 26px !important; letter-spacing: -0.5px !important; }
+          .landing-hero-p { font-size: 15px !important; }
+          .landing-section-heading { font-size: 22px !important; }
           .landing-hero-actions { flex-direction: column; }
           .landing-hero-actions .landing-btn-primary,
-          .landing-hero-actions .landing-btn-secondary { width: 100%; text-align: center; }
+          .landing-hero-actions .landing-btn-secondary { width: 100%; text-align: center; padding: 12px 24px !important; }
           .landing-player-header { flex-direction: column; text-align: center; }
-          .landing-level-row { justify-content: center; }
+          .landing-player-card { padding: 20px !important; }
+          .landing-level-row { justify-content: center; flex-wrap: wrap; }
           .landing-achievements { justify-content: center; }
+          .landing-stats-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; }
+          .landing-stat-number { font-size: 16px !important; }
+          .landing-stat-box { padding: 10px 4px !important; }
+          .landing-topic-pill { padding: 8px 14px !important; font-size: 13px !important; }
+          nav > div { padding: 0 16px !important; }
+          .landing-hero-section { padding-top: 100px !important; padding-bottom: 48px !important; }
+          .landing-compare-section, .landing-topics-section { padding-top: 48px !important; padding-bottom: 48px !important; }
+        }
+
+        @media (max-width: 360px) {
+          .landing-hero-section { padding-top: 88px !important; padding-bottom: 40px !important; }
+          .landing-compare-section, .landing-topics-section { padding-top: 40px !important; padding-bottom: 40px !important; }
+          .landing-hero-h1 { font-size: 22px !important; }
+          .landing-hero-p { font-size: 14px !important; }
+          .landing-section-heading { font-size: 20px !important; }
+          .landing-player-card { padding: 16px !important; }
+          .landing-topic-pill { padding: 6px 12px !important; font-size: 12px !important; }
         }
       `}</style>
     </div>

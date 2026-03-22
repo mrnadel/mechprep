@@ -107,7 +107,7 @@ function PasswordStrength({ password }: { password: string }) {
           <div
             key={i}
             className={cn(
-              'h-1 flex-1 rounded-full transition-colors',
+              'h-1.5 sm:h-1 flex-1 rounded-full transition-colors',
               i <= score
                 ? score === 3 ? 'bg-[#58CC02]' : score === 2 ? 'bg-amber-400' : 'bg-red-400'
                 : 'bg-gray-200'
@@ -115,7 +115,7 @@ function PasswordStrength({ password }: { password: string }) {
           />
         ))}
       </div>
-      <div className="flex gap-3">
+      <div className="flex flex-wrap gap-2 sm:gap-3">
         {checks.map((check) => (
           <span key={check.label} className={cn('text-xs font-bold', check.met ? 'text-[#58CC02]' : 'text-gray-300')}>
             {check.met ? '✓' : '•'} {check.label}
@@ -292,7 +292,7 @@ export default function GetStartedPage() {
       </div>
 
       {/* ── Step Content ── */}
-      <div className="flex-1 px-5 flex flex-col justify-center pb-8">
+      <div className="flex-1 px-4 sm:px-5 flex flex-col justify-center pb-4 sm:pb-8">
         <AnimatePresence mode="wait" custom={direction}>
           {/* ═══ Step 0: Welcome ═══ */}
           {step === 0 && (
@@ -316,7 +316,7 @@ export default function GetStartedPage() {
               </motion.div>
 
               <motion.h1
-                className="text-3xl font-black text-gray-900 mb-3"
+                className="text-2xl sm:text-3xl font-black text-gray-900 mb-3"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -409,7 +409,7 @@ export default function GetStartedPage() {
                       onClick={() => handleSampleAnswer(opt.id)}
                       disabled={sampleRevealed}
                       className={cn(
-                        'w-full flex items-start gap-3 p-3.5 rounded-xl border-2 transition-all text-left',
+                        'w-full flex items-start gap-3 p-3.5 sm:p-3.5 min-h-[48px] rounded-xl border-2 transition-all text-left',
                         optionStyle
                       )}
                     >
@@ -631,7 +631,7 @@ export default function GetStartedPage() {
               </motion.div>
 
               <motion.h2
-                className="text-3xl font-black text-gray-900 mb-3"
+                className="text-2xl sm:text-3xl font-black text-gray-900 mb-3"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}

@@ -1,11 +1,18 @@
+import React from 'react'
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import MultipleChoiceInput from '@/components/question/MultipleChoiceInput'
 import type { MultipleChoiceQuestion } from '@/data/types'
 
-vi.mock('lucide-react', () => new Proxy({}, {
-  get: (_, name) => (props: any) => <span data-testid={`icon-${String(name)}`} {...props} />,
-}))
+vi.mock('lucide-react', async () => {
+  const React = await import('react')
+  const icon = (name: string) => (props: any) =>
+    React.createElement('span', { 'data-testid': `icon-${name}`, ...props })
+  return {
+    Check: icon('Check'),
+    X: icon('X'),
+  }
+})
 
 const baseQuestion: MultipleChoiceQuestion = {
   id: 'mc-1',
