@@ -37,7 +37,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         <div className="flex gap-8 relative z-10">
           {[
             { num: '10', label: 'Units' },
-            { num: '200+', label: 'Questions' },
+            { num: '94', label: 'Questions' },
             { num: '12', label: 'Types' },
           ].map((s) => (
             <div key={s.label}>

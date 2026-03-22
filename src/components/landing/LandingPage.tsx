@@ -178,7 +178,7 @@ export function LandingPage() {
             }}>
               {[
                 { num: '10', label: 'Units' },
-                { num: '200+', label: 'Questions' },
+                { num: '94', label: 'Questions' },
                 { num: '12', label: 'Question Types' },
               ].map((s) => (
                 <div key={s.label} style={{ textAlign: 'center' }}>
