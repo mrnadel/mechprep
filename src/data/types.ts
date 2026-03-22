@@ -94,6 +94,7 @@ export interface BaseQuestion {
   subtopic: string;
   difficulty: Difficulty;
   question: string;
+  diagram?: string;
   explanation: string;
   interviewInsight: string;
   realWorldConnection?: string;

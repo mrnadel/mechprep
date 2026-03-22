@@ -49,6 +49,7 @@ export function EngagementBar() {
   const isAdmin = session?.user?.id === process.env.NEXT_PUBLIC_ADMIN_USER_ID;
 
   const [questsOpen, setQuestsOpen] = useState(false);
+  const [showDebug, setShowDebug] = useState(false);
   const [chestOpen, setChestOpen] = useState<{ type: 'daily' | 'weekly'; reward: { xp: number; gems: number } } | null>(null);
   const popoverRef = useRef<HTMLDivElement>(null);
   const timeLeft = useMidnightCountdown();
@@ -58,7 +59,6 @@ export function EngagementBar() {
     initWeeklyQuests();
   }, [initDailyQuests, initWeeklyQuests]);
 
-  // Close on outside click
   useEffect(() => {
     if (!questsOpen) return;
     function handleClick(e: MouseEvent) {
@@ -70,7 +70,6 @@ export function EngagementBar() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, [questsOpen]);
 
-  // Quest stats
   const dailyDone = dailyQuests.filter((q) => q.completed).length;
   const weeklyDone = weeklyQuests.filter((q) => q.completed).length;
   const totalQuests = dailyQuests.length + weeklyQuests.length;
@@ -81,7 +80,6 @@ export function EngagementBar() {
   const dailyProgressPercent = dailyQuests.length > 0 ? (dailyDone / dailyQuests.length) * 100 : 0;
   const weeklyProgressPercent = weeklyQuests.length > 0 ? (weeklyDone / weeklyQuests.length) * 100 : 0;
 
-  // League stats
   const tier = leagueTiers.find((t) => t.tier === league.currentTier) ?? leagueTiers[0];
   const rank = getUserRank(league.weeklyXp, league.competitors);
 
@@ -97,31 +95,66 @@ export function EngagementBar() {
     setChestOpen({ type: 'weekly', reward: weeklyChestReward });
   };
 
+  // ---- Debug actions (admin only) ----
+
   const skipToNextDay = useCallback(() => {
-    // Advance simulated date by 1 day, then re-init both daily and weekly
     addDebugDayOffset(1);
-    useEngagementStore.setState({
-      dailyQuestDate: '',
-      dailyChestClaimed: false,
-    });
+    useEngagementStore.setState({ dailyQuestDate: '', dailyChestClaimed: false });
     initDailyQuests();
     initWeeklyQuests();
   }, [initDailyQuests, initWeeklyQuests]);
 
   const completeAllQuests = useCallback(() => {
     useEngagementStore.setState((state) => ({
-      dailyQuests: state.dailyQuests.map((q) => ({
-        ...q,
-        progress: q.target,
-        completed: true,
-      })),
-      weeklyQuests: state.weeklyQuests.map((q) => ({
-        ...q,
-        progress: q.target,
-        completed: true,
-      })),
+      dailyQuests: state.dailyQuests.map((q) => ({ ...q, progress: q.target, completed: true })),
+      weeklyQuests: state.weeklyQuests.map((q) => ({ ...q, progress: q.target, completed: true })),
     }));
   }, []);
+
+  const debugAddXp = useCallback((amount: number) => {
+    useStore.setState((state) => ({
+      progress: { ...state.progress, totalXp: state.progress.totalXp + amount },
+    }));
+    useEngagementStore.getState().updateLeagueXp(amount);
+  }, []);
+
+  const debugSetStreak = useCallback((days: number) => {
+    useStore.setState((state) => ({
+      progress: { ...state.progress, currentStreak: days },
+    }));
+  }, []);
+
+  const debugResetStreak = useCallback(() => {
+    const currentStreak = useStore.getState().progress.currentStreak;
+    useEngagementStore.getState().recordStreakBreak(currentStreak);
+    useStore.setState((state) => ({
+      progress: { ...state.progress, currentStreak: 0 },
+    }));
+  }, []);
+
+  const debugSimulateWeekEnd = useCallback(() => {
+    addDebugDayOffset(7);
+    useEngagementStore.setState({ dailyQuestDate: '', dailyChestClaimed: false });
+    useEngagementStore.getState().simulateLeagueWeek();
+    initDailyQuests();
+    initWeeklyQuests();
+  }, [initDailyQuests, initWeeklyQuests]);
+
+  const debugResetAll = useCallback(() => {
+    useStore.getState().resetProgress();
+    resetDebugDayOffset();
+    useEngagementStore.setState({
+      dailyQuestDate: '',
+      weeklyQuestDate: '',
+      dailyChestClaimed: false,
+      weeklyChestClaimed: false,
+      gems: { balance: 0, transactions: [], totalEarned: 0, inventory: { activeTitles: [], activeFrames: [] } },
+    });
+    initDailyQuests();
+    initWeeklyQuests();
+  }, [initDailyQuests, initWeeklyQuests]);
+
+  // ---- End debug actions ----
 
   const buttons = [
     {
@@ -145,6 +178,8 @@ export function EngagementBar() {
       color: '#15803D',
     },
   ];
+
+  const debugBtn = 'text-[10px] font-bold px-2 py-1 rounded-lg transition-colors';
 
   return (
     <div style={{ padding: '12px 20px 0' }}>
@@ -202,30 +237,20 @@ export function EngagementBar() {
                   boxShadow: '0 12px 40px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.06)',
                 }}
               >
-                {/* Header */}
+                {/* Daily header */}
                 <div className="px-4 pt-4 pb-2">
                   <div className="flex items-center justify-between mb-2.5">
                     <div>
                       <h3 className="text-[15px] font-extrabold text-gray-900">Daily Quests</h3>
                       <div className="flex items-center gap-2 mt-0.5">
-                        <p className="text-[11px] text-gray-400 font-medium">
-                          Resets in {timeLeft}
-                        </p>
+                        <p className="text-[11px] text-gray-400 font-medium">Resets in {timeLeft}</p>
                         {isAdmin && (
-                          <>
-                            <button
-                              onClick={skipToNextDay}
-                              className="text-[10px] font-bold text-orange-500 bg-orange-50 hover:bg-orange-100 px-1.5 py-0.5 rounded transition-colors"
-                            >
-                              Skip day
-                            </button>
-                            <button
-                              onClick={completeAllQuests}
-                              className="text-[10px] font-bold text-emerald-500 bg-emerald-50 hover:bg-emerald-100 px-1.5 py-0.5 rounded transition-colors"
-                            >
-                              Finish all
-                            </button>
-                          </>
+                          <button
+                            onClick={() => setShowDebug((v) => !v)}
+                            className="text-[10px] font-bold text-violet-500 bg-violet-50 hover:bg-violet-100 px-1.5 py-0.5 rounded transition-colors"
+                          >
+                            {showDebug ? 'Hide Debug' : 'Debug'}
+                          </button>
                         )}
                       </div>
                     </div>
@@ -234,28 +259,16 @@ export function EngagementBar() {
                       disabled={!allDailyComplete || dailyChestClaimed}
                       className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all"
                       style={{
-                        background: dailyChestClaimed
-                          ? '#F0FDF4'
-                          : allDailyComplete
-                            ? 'linear-gradient(135deg, #8B5CF6, #7C3AED)'
-                            : '#F3F4F6',
-                        color: dailyChestClaimed
-                          ? '#16A34A'
-                          : allDailyComplete
-                            ? '#FFFFFF'
-                            : '#9CA3AF',
+                        background: dailyChestClaimed ? '#F0FDF4' : allDailyComplete ? 'linear-gradient(135deg, #8B5CF6, #7C3AED)' : '#F3F4F6',
+                        color: dailyChestClaimed ? '#16A34A' : allDailyComplete ? '#FFFFFF' : '#9CA3AF',
                         cursor: allDailyComplete && !dailyChestClaimed ? 'pointer' : 'default',
                         border: 'none',
-                        boxShadow: allDailyComplete && !dailyChestClaimed
-                          ? '0 2px 8px rgba(124, 58, 237, 0.3)'
-                          : 'none',
+                        boxShadow: allDailyComplete && !dailyChestClaimed ? '0 2px 8px rgba(124, 58, 237, 0.3)' : 'none',
                       }}
                     >
                       {dailyChestClaimed ? '✓ Collected' : '🎁 Open Chest'}
                     </button>
                   </div>
-
-                  {/* Overall progress bar */}
                   <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
                     <motion.div
                       className="h-full rounded-full"
@@ -271,15 +284,10 @@ export function EngagementBar() {
                   </div>
                 </div>
 
-                {/* Quest cards */}
+                {/* Daily quest cards */}
                 <div className="px-3 pb-3 space-y-1">
                   {dailyQuests.slice(0, 3).map((quest) => (
-                    <QuestCard
-                      key={quest.definitionId}
-                      quest={quest}
-                      onClaim={claimQuestReward}
-                      compact
-                    />
+                    <QuestCard key={quest.definitionId} quest={quest} onClaim={claimQuestReward} compact />
                   ))}
                   {dailyQuests.length === 0 && (
                     <p className="text-center text-xs text-gray-400 py-4">No quests today yet.</p>
@@ -297,21 +305,11 @@ export function EngagementBar() {
                           disabled={!allWeeklyComplete || weeklyChestClaimed}
                           className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all"
                           style={{
-                            background: weeklyChestClaimed
-                              ? '#F0FDF4'
-                              : allWeeklyComplete
-                                ? 'linear-gradient(135deg, #8B5CF6, #7C3AED)'
-                                : '#F3F4F6',
-                            color: weeklyChestClaimed
-                              ? '#16A34A'
-                              : allWeeklyComplete
-                                ? '#FFFFFF'
-                                : '#9CA3AF',
+                            background: weeklyChestClaimed ? '#F0FDF4' : allWeeklyComplete ? 'linear-gradient(135deg, #8B5CF6, #7C3AED)' : '#F3F4F6',
+                            color: weeklyChestClaimed ? '#16A34A' : allWeeklyComplete ? '#FFFFFF' : '#9CA3AF',
                             cursor: allWeeklyComplete && !weeklyChestClaimed ? 'pointer' : 'default',
                             border: 'none',
-                            boxShadow: allWeeklyComplete && !weeklyChestClaimed
-                              ? '0 2px 8px rgba(124, 58, 237, 0.3)'
-                              : 'none',
+                            boxShadow: allWeeklyComplete && !weeklyChestClaimed ? '0 2px 8px rgba(124, 58, 237, 0.3)' : 'none',
                           }}
                         >
                           {weeklyChestClaimed ? '✓ Collected' : '🎁 Open Chest'}
@@ -333,13 +331,50 @@ export function EngagementBar() {
                     </div>
                     <div className="px-3 pb-3 space-y-1">
                       {weeklyQuests.slice(0, 3).map((quest) => (
-                        <QuestCard
-                          key={quest.definitionId}
-                          quest={quest}
-                          onClaim={claimQuestReward}
-                          compact
-                        />
+                        <QuestCard key={quest.definitionId} quest={quest} onClaim={claimQuestReward} compact />
                       ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Admin Debug Panel */}
+                {isAdmin && showDebug && (
+                  <div className="border-t border-gray-200">
+                    <div className="px-3.5 py-3 space-y-2.5">
+                      <h4 className="text-[11px] font-extrabold text-violet-500 uppercase tracking-wider">Debug Tools</h4>
+                      <div>
+                        <p className="text-[10px] font-semibold text-gray-400 mb-1">Time</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          <button onClick={skipToNextDay} className={`${debugBtn} text-orange-600 bg-orange-50 hover:bg-orange-100`}>+1 Day</button>
+                          <button onClick={debugSimulateWeekEnd} className={`${debugBtn} text-orange-600 bg-orange-50 hover:bg-orange-100`}>+1 Week</button>
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-semibold text-gray-400 mb-1">Quests</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          <button onClick={completeAllQuests} className={`${debugBtn} text-emerald-600 bg-emerald-50 hover:bg-emerald-100`}>Finish All</button>
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-semibold text-gray-400 mb-1">XP</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          <button onClick={() => debugAddXp(50)} className={`${debugBtn} text-blue-600 bg-blue-50 hover:bg-blue-100`}>+50</button>
+                          <button onClick={() => debugAddXp(500)} className={`${debugBtn} text-blue-600 bg-blue-50 hover:bg-blue-100`}>+500</button>
+                          <button onClick={() => debugAddXp(5000)} className={`${debugBtn} text-blue-600 bg-blue-50 hover:bg-blue-100`}>+5000</button>
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-semibold text-gray-400 mb-1">Streak</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          <button onClick={debugResetStreak} className={`${debugBtn} text-red-600 bg-red-50 hover:bg-red-100`}>Break</button>
+                          <button onClick={() => debugSetStreak(7)} className={`${debugBtn} text-amber-600 bg-amber-50 hover:bg-amber-100`}>7d</button>
+                          <button onClick={() => debugSetStreak(30)} className={`${debugBtn} text-amber-600 bg-amber-50 hover:bg-amber-100`}>30d</button>
+                          <button onClick={() => debugSetStreak(100)} className={`${debugBtn} text-amber-600 bg-amber-50 hover:bg-amber-100`}>100d</button>
+                        </div>
+                      </div>
+                      <div>
+                        <button onClick={debugResetAll} className={`${debugBtn} text-red-600 bg-red-50 hover:bg-red-100`}>Reset All Progress</button>
+                      </div>
                     </div>
                   </div>
                 )}

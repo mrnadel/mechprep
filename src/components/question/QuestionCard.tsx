@@ -16,6 +16,7 @@ import DesignDecisionInput from './DesignDecisionInput';
 import MaterialSelectionInput from './MaterialSelectionInput';
 import ConfidenceRating from './ConfidenceRating';
 import FeedbackPanel from '../feedback/FeedbackPanel';
+import QuestionDiagram from './QuestionDiagram';
 import { topics } from '@/data/topics';
 
 interface QuestionCardProps {
@@ -120,6 +121,9 @@ export default function QuestionCard({
         <h2 className="text-lg font-semibold text-surface-900 leading-relaxed mb-6">
           {question.question}
         </h2>
+
+        {/* Question Diagram */}
+        {question.diagram && <QuestionDiagram svg={question.diagram} />}
 
         {/* Question-specific input */}
         {renderQuestionInput()}
