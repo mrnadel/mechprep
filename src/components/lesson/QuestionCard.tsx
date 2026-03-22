@@ -194,6 +194,8 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                 background: 'white',
                 border: '2px solid #E5E5E5',
                 padding: 10,
+                maxWidth: 400,
+                margin: '0 auto',
               }}
               dangerouslySetInnerHTML={{
                 __html: question.diagram.replace(

@@ -15,52 +15,42 @@ interface LessonRowProps {
   theme: UnitTheme;
 }
 
-function CompletedDots({ count, color, isGolden }: { count: number; color: string; isGolden?: boolean }) {
-  return (
-    <div className="flex items-center" style={{ gap: 4 }}>
-      {[1, 2, 3].map((i) => (
-        <div
-          key={i}
-          className={i <= count && isGolden ? 'golden-dot' : ''}
-          style={{
-            width: 9,
-            height: 9,
-            borderRadius: '50%',
-            backgroundColor: i <= count ? (isGolden ? undefined : color) : '#D4D4D4',
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 const GOLD = '#FFB800';
 const GOLD_DARK = '#C8960B';
 
-function GoldenStar({ filled }: { filled: boolean }) {
-  if (!filled) {
-    return (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"
-          fill="none"
-          stroke={GOLD}
-          strokeWidth="2"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
+function CompletionBadge({ stars, color, darkColor, isGolden }: { stars: number; color: string; darkColor: string; isGolden?: boolean }) {
+  const starColor = isGolden ? '#FFFFFF' : color;
+  const starEmptyColor = isGolden ? 'rgba(255,255,255,0.35)' : '#E0E0E0';
+  const bgColor = isGolden ? '#CC9400' : `${color}18`;
+  const borderColor = isGolden ? 'transparent' : `${color}25`;
+
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="golden-star-pulse">
-      <path
-        d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"
-        fill={GOLD}
-        stroke={GOLD_DARK}
-        strokeWidth="1.2"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <div
+      className="flex items-center"
+      style={{
+        gap: 3,
+        background: bgColor,
+        border: `1.5px solid ${borderColor}`,
+        borderRadius: 10,
+        padding: '5px 10px',
+      }}
+    >
+      {[1, 2, 3].map((i) => (
+        <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"
+            fill={i <= stars ? starColor : starEmptyColor}
+            strokeLinejoin="round"
+          />
+        </svg>
+      ))}
+      {isGolden && (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ marginLeft: 1 }}>
+          <path d="M5 16h14l-2-8-3.5 4L12 6l-1.5 6L7 8l-2 8z" fill="#FFE082" />
+          <path d="M5 16h14v2a1 1 0 01-1 1H6a1 1 0 01-1-1v-2z" fill="#FFE082" />
+        </svg>
+      )}
+    </div>
   );
 }
 
@@ -178,10 +168,7 @@ export function LessonNode({
       {/* Badge */}
       <div className="flex-shrink-0">
         {state === 'completed' && stars !== undefined && stars > 0 ? (
-          <div className="flex items-center" style={{ gap: 8 }}>
-            <CompletedDots count={stars} color={golden ? GOLD : theme.color} isGolden={golden} />
-            <GoldenStar filled={!!golden} />
-          </div>
+          <CompletionBadge stars={stars} color={golden ? GOLD : theme.color} darkColor={golden ? GOLD_DARK : theme.dark} isGolden={golden} />
         ) : state === 'current' ? (
           <div
             className="go-btn-pulse"
