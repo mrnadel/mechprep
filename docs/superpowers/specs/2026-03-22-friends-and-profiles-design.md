@@ -31,7 +31,7 @@ friendships
     INDEX on friendId
 ```
 
-**Invariant:** `userId < friendId` is enforced at the application layer before insert. This means to check if A and B are friends, you query where `userId = min(A,B) AND friendId = max(A,B)`.
+**Invariant:** `userId < friendId` is enforced via a PostgreSQL `CHECK` constraint (`CHECK (user_id < friend_id)`) as a safety net, plus application-layer sorting before insert. To check if A and B are friends, query where `userId = min(A,B) AND friendId = max(A,B)`.
 
 ### 1.2 `friendRequests` table
 
@@ -49,6 +49,8 @@ friendRequests
     INDEX on receiverId (for fetching incoming requests)
 ```
 
+**Bidirectional check:** The `UNIQUE(senderId, receiverId)` constraint only prevents exact duplicates (A→B twice). The reverse-direction check (preventing B→A when A→B exists) is enforced at the application layer — before inserting a new request, query for existing requests in both directions: `WHERE (senderId=A AND receiverId=B) OR (senderId=B AND receiverId=A)`.
+
 ### 1.3 Lifecycle
 
 1. User A sends request → row inserted into `friendRequests` with status `pending`
@@ -56,6 +58,7 @@ friendRequests
 3. User B declines → `friendRequests.status` updated to `declined`
 4. Either user removes friend → `friendships` row deleted, `friendRequests` row deleted
 5. User A cancels pending request → `friendRequests` row deleted
+6. User B declines → `friendRequests.status` set to `declined`. After 7 days, declined rows are eligible for cleanup (sender can re-send after that cooldown).
 
 ### 1.4 Constraints
 
@@ -69,6 +72,8 @@ friendRequests
 ## 2. Public User Profiles
 
 ### 2.1 Route: `/user/[id]`
+
+**File path:** `src/app/(app)/user/[id]/page.tsx` (inside the `(app)` route group to inherit auth gating and layout).
 
 A read-only profile page viewable by any authenticated user. This is separate from the existing `/profile` page which remains the user's private, editable profile.
 
@@ -115,11 +120,13 @@ The profile page shows a contextual action button based on the viewer's relation
 
 ### 3.1 Route: `/friends`
 
+**File path:** `src/app/(app)/friends/page.tsx` (inside the `(app)` route group).
+
 Main social hub with two tabs:
 
 **Tab 1: Friends**
-- List of accepted friends sorted by weekly XP (descending) — a mini friend leaderboard
-- Each card shows: avatar, display name, level, streak (flame icon + count), weekly XP
+- List of accepted friends sorted by total XP (descending) — a mini friend leaderboard
+- Each card shows: avatar, display name, level, streak (flame icon + count), total XP
 - Tap card → navigate to `/user/[id]`
 - Empty state: illustration + "Find friends to compete with!" + search prompt
 
@@ -155,6 +162,7 @@ At the top of the friends page, a search bar for finding users:
 | `DELETE /api/friends/[id]` | DELETE | Remove a friend | Required |
 | `GET /api/user/[id]/profile` | GET | Get public profile for any user | Required |
 | `GET /api/user/search` | GET | Search users by name (query: `?q=`) | Required |
+| `GET /api/friends/requests/count` | GET | Pending incoming request count (for nav badge) | Required |
 
 ### 4.2 Response Shapes
 
@@ -167,7 +175,7 @@ At the top of the friends page, a search bar for finding users:
     image: string | null
     level: number
     currentStreak: number
-    weeklyXp: number
+    totalXp: number
     leagueTier: number
   }[]
 }
@@ -188,8 +196,7 @@ At the top of the friends page, a search bar for finding users:
   achievements: string[]
   topicMastery: {
     topicId: string
-    questionsAttempted: number
-    questionsCorrect: number
+    masteryLevel: 'not-started' | 'needs-work' | 'developing' | 'strong'
   }[]
   relationship: 'none' | 'request_sent' | 'request_received' | 'friends' | 'self'
 }
@@ -225,7 +232,7 @@ At the top of the friends page, a search bar for finding users:
 
 | Component | Change |
 |-----------|--------|
-| Navigation (sidebar/bottom nav) | Add Friends link with `FriendsBadge` |
+| Navigation (sidebar/bottom nav) | Add Friends link with `FriendsBadge`. The `NavItem` type and Sidebar rendering will need to support an optional `badge` property, or Friends will be a special-cased item outside the static `navItems` array. |
 | League competitor cards | Add tap → `/user/[id]` for real users (simulated competitors stay as-is) |
 
 ### 5.3 Styling
@@ -284,14 +291,14 @@ The league board currently shows simulated competitors. This design does NOT cha
 
 ## 8. State Management
 
-No new Zustand store needed. Friends data is fetched on-demand:
+No new Zustand store needed. Friends data is fetched on-demand using `useSWR` consistently:
 
-- `/friends` page: `useSWR` or `useEffect` + fetch for friends list and requests
-- `/user/[id]` page: `useEffect` + fetch for profile data
-- Nav badge: lightweight polling or `useSWR` with `refreshInterval`
-- Mutations (send/accept/decline/remove): `fetch` + refetch the relevant list
+- `/friends` page: `useSWR('/api/friends')` and `useSWR('/api/friends/requests')`
+- `/user/[id]` page: `useSWR('/api/user/${id}/profile')`
+- Nav badge: `useSWR('/api/friends/requests/count', { refreshInterval: 60000 })`
+- Mutations (send/accept/decline/remove): `fetch` + `mutate()` to revalidate the relevant SWR keys
 
-This keeps the approach simple and avoids adding another persistent store for infrequently-changing data.
+This keeps the approach simple, gives us automatic revalidation and caching, and avoids adding another persistent store for infrequently-changing data.
 
 ---
 
@@ -304,7 +311,7 @@ This keeps the approach simple and avoids adding another persistent store for in
 | User tries to add themselves | API rejects, button not shown on own profile |
 | Duplicate request (A→B when B→A exists) | API detects existing request in either direction, returns error |
 | Friends cap reached (50) | API rejects, UI shows "Friends list full" |
-| Declined request re-send | After decline, sender can re-send (old request is cleaned up) |
+| Declined request re-send | Declined rows kept for 7 days (cooldown). After cooldown, old row deleted and sender can re-send. Search hides users with active declined status. |
 | User views profile of deleted user | 404 page |
 
 ---
@@ -320,3 +327,14 @@ These are explicitly NOT part of this design:
 - **Profile privacy settings** — all profiles are public to authenticated users
 - **Blocking users** — can be added later if needed
 - **Notifications (push/email)** — in-app badge only for now
+
+---
+
+## 11. Database Migration
+
+New tables (`friendships` and `friendRequests`) will be created via Drizzle migration:
+
+1. Add table definitions to `src/lib/db/schema.ts`
+2. Run `npx drizzle-kit generate` to create migration SQL
+3. Run `npx drizzle-kit push` to apply to the database
+4. No data migration needed — these are new tables with no existing data dependencies

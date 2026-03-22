@@ -14,15 +14,9 @@ import {
   X,
   Lock,
   LogOut,
-  Zap,
-  Flame,
-  Target,
   Trophy,
-  BookOpen,
-  TrendingUp,
   ChevronRight,
   Shield,
-  Star,
   Crown,
   Camera,
   Trash2,
@@ -162,37 +156,39 @@ function XpRing({ progress, size = 112 }: { progress: number; size?: number }) {
   );
 }
 
-// ─── Stat card ──────────────────────────────────────────────
-function StatCard({
-  icon,
-  label,
+// ─── Hero stat pill ─────────────────────────────────────────
+function HeroStat({
+  emoji,
   value,
-  color,
-  suffix = '',
+  label,
+  bg,
+  border,
+  valueColor,
   delay = 0,
 }: {
-  icon: React.ReactNode;
-  label: string;
+  emoji: string;
   value: number;
-  color: string;
-  suffix?: string;
+  label: string;
+  bg: string;
+  border: string;
+  valueColor: string;
   delay?: number;
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      className="relative overflow-hidden bg-white rounded-2xl p-4 shadow-sm border border-gray-100 group hover:shadow-md transition-shadow"
+      transition={{ duration: 0.4, delay }}
+      className="flex-1 flex flex-col items-center py-3.5 rounded-2xl"
+      style={{ background: bg, border: `1.5px solid ${border}` }}
     >
-      <div className="absolute top-0 right-0 w-20 h-20 rounded-full opacity-[0.07] -translate-y-6 translate-x-6" style={{ background: color }} />
-      <div className="w-9 h-9 rounded-xl flex items-center justify-center mb-2.5" style={{ background: `${color}15` }}>
-        <div style={{ color }}>{icon}</div>
-      </div>
-      <p className="text-2xl font-extrabold text-gray-900 tracking-tight">
-        <AnimatedNumber value={value} />{suffix}
+      <span style={{ fontSize: 22, lineHeight: 1 }}>{emoji}</span>
+      <p className="text-xl font-extrabold tracking-tight mt-1.5" style={{ color: valueColor }}>
+        <AnimatedNumber value={value} />
       </p>
-      <p className="text-xs font-semibold text-gray-400 mt-0.5 uppercase tracking-wider">{label}</p>
+      <p className="text-[10px] font-bold uppercase tracking-wider mt-0.5" style={{ color: `${valueColor}99` }}>
+        {label}
+      </p>
     </motion.div>
   );
 }
@@ -690,15 +686,12 @@ export default function ProfilePage() {
         </div>
       </motion.div>
 
-      {/* ─── Stats Grid ──────────────────────────────────── */}
+      {/* ─── Stats Row ───────────────────────────────────── */}
       <div className="px-4 -mt-5">
-        <div className="grid grid-cols-3 gap-2.5">
-          <StatCard icon={<Zap className="w-4 h-4" />} label="Total XP" value={totalXp} color="#8B5CF6" delay={0.2} />
-          <StatCard icon={<Flame className="w-4 h-4" />} label="Streak" value={currentStreak} color="#F97316" delay={0.3} />
-          <StatCard icon={<Target className="w-4 h-4" />} label="Accuracy" value={accuracy} color="#10B981" suffix="%" delay={0.4} />
-          <StatCard icon={<BookOpen className="w-4 h-4" />} label="Questions" value={totalQuestions} color="#3B82F6" delay={0.5} />
-          <StatCard icon={<Trophy className="w-4 h-4" />} label="Achievements" value={unlockedAchievements.length} color="#FBBF24" delay={0.6} />
-          <StatCard icon={<TrendingUp className="w-4 h-4" />} label="Best Streak" value={longestStreak} color="#EC4899" delay={0.7} />
+        <div className="flex gap-2.5">
+          <HeroStat emoji="⭐" value={totalXp} label="Total XP" bg="#FFFBEB" border="#FDE68A" valueColor="#B45309" delay={0.2} />
+          <HeroStat emoji="🔥" value={currentStreak} label="Day Streak" bg="#FFF7ED" border="#FED7AA" valueColor="#C2410C" delay={0.3} />
+          <HeroStat emoji="🎯" value={accuracy} label="Accuracy" bg="#F0FDF4" border="#BBF7D0" valueColor="#15803D" delay={0.4} />
         </div>
       </div>
 
