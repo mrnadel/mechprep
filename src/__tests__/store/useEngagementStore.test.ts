@@ -643,7 +643,7 @@ describe('useEngagementStore', () => {
       useEngagementStore.getState().addGems(-30, 'spend');
 
       expect(useEngagementStore.getState().gems.balance).toBe(120);
-      expect(useEngagementStore.getState().gems.totalEarned).toBe(120); // note: addGems adds to totalEarned even for negative, but that's how it works
+      expect(useEngagementStore.getState().gems.totalEarned).toBe(150); // only positive amounts count toward totalEarned (Math.max(0, amount))
     });
   });
 });

@@ -29,9 +29,9 @@ describe('generateFakeUserPool', () => {
     expect(pool.pool).toHaveLength(250);
   });
 
-  it('has version 1', () => {
+  it('has correct version', () => {
     const pool = generateFakeUserPool();
-    expect(pool.version).toBe(1);
+    expect(pool.version).toBe(4); // POOL_VERSION = 4 (v4: ~20% avatars with random photos)
   });
 
   it('has tier distribution 80/70/50/30/20', () => {
@@ -183,7 +183,7 @@ describe('avatar probability trends by tier', () => {
 
   it('users with dicebear avatar have a valid avatarStyle', () => {
     const pool = generateFakeUserPool();
-    const validStyles = ['adventurer', 'avataaars', 'lorelei', 'thumbs'];
+    const validStyles = ['photo-a', 'photo-b', 'photo-c', 'photo-d'];
     for (const user of pool.pool) {
       if (user.avatarType === 'dicebear') {
         expect(validStyles).toContain(user.avatarStyle);
@@ -416,7 +416,7 @@ describe('initFakeUserPool', () => {
     localStorage.setItem('mechready-fake-users', JSON.stringify(badPool));
     const pool = initFakeUserPool();
     expect(pool.pool).toHaveLength(250);
-    expect(pool.version).toBe(1);
+    expect(pool.version).toBe(4);
   });
 
   it('regenerates pool when localStorage contains invalid JSON', () => {

@@ -16,7 +16,14 @@ vi.mock('@/store/useStore', () => ({
 
 vi.mock('@/store/useEngagementStore', () => ({
   useEngagementStore: {
-    getState: () => ({ debugSetFromCourse: vi.fn() }),
+    getState: () => ({
+      debugSetFromCourse: vi.fn(),
+      streak: { freezesOwned: 0, freezeUsedToday: false },
+      useStreakFreeze: vi.fn(),
+      recordStreakBreak: vi.fn(),
+      updateLeagueXp: vi.fn(),
+      updateQuestProgress: vi.fn(),
+    }),
   },
 }));
 
