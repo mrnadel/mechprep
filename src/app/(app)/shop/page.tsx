@@ -1,5 +1,3 @@
-'use client';
-
 import { GemShop } from '@/components/engagement/GemShop';
 import { CourseHeader } from '@/components/course/CourseHeader';
 
