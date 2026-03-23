@@ -105,6 +105,9 @@ export function CourseHeader() {
                 padding: '5px 8px',
                 borderRadius: 10,
                 background: popover === 'streak' ? '#FFFBEB' : 'transparent',
+                minWidth: 44,
+                minHeight: 44,
+                justifyContent: 'center',
               }}
               onClick={() => togglePopover('streak')}
               aria-label={`${progress.currentStreak} day streak`}
@@ -125,6 +128,9 @@ export function CourseHeader() {
                 padding: '5px 8px',
                 borderRadius: 10,
                 background: popover === 'xp' ? '#F3E6FF' : 'transparent',
+                minWidth: 44,
+                minHeight: 44,
+                justifyContent: 'center',
               }}
               onClick={() => togglePopover('xp')}
               aria-label={`${progress.totalXp.toLocaleString()} experience points`}
@@ -145,6 +151,9 @@ export function CourseHeader() {
                 padding: '5px 8px',
                 borderRadius: 10,
                 background: popover === 'gems' ? '#F3E8FF' : 'transparent',
+                minWidth: 44,
+                minHeight: 44,
+                justifyContent: 'center',
               }}
               onClick={() => togglePopover('gems')}
               aria-label={`${gems.balance} gems`}
@@ -169,6 +178,9 @@ export function CourseHeader() {
                   fontWeight: 800,
                   textTransform: 'uppercase',
                   letterSpacing: 0.5,
+                  minHeight: 44,
+                  minWidth: 44,
+                  justifyContent: 'center',
                 }}
               >
                 <Sparkles style={{ width: 12, height: 12 }} />

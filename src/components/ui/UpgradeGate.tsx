@@ -33,7 +33,7 @@ export function UpgradeGate({ feature, reason, children, inline }: UpgradeGatePr
       <>
         <button
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-50 text-primary-600 text-xs font-medium hover:bg-primary-100 transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-50 text-primary-600 text-xs font-medium hover:bg-primary-100 transition-colors min-h-[44px] min-w-[44px] justify-center"
         >
           <Lock className="w-3 h-3" />
           <span>Pro</span>

@@ -61,7 +61,7 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
           ) : isComplete ? (
             <motion.button
               onClick={() => onClaim(quest.definitionId)}
-              className="px-2.5 py-1 rounded-lg text-[11px] font-extrabold text-white bg-emerald-500 hover:bg-emerald-600 shadow-sm shadow-emerald-200"
+              className="px-3 py-2 rounded-lg text-[11px] font-extrabold text-white bg-emerald-500 hover:bg-emerald-600 shadow-sm shadow-emerald-200 min-h-[44px] min-w-[44px]"
               style={{ border: 'none', cursor: 'pointer' }}
               animate={{ scale: [1, 1.06, 1] }}
               transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
@@ -131,7 +131,7 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
         ) : isComplete ? (
           <motion.button
             onClick={() => onClaim(quest.definitionId)}
-            className="px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 shadow-sm shadow-emerald-200"
+            className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 shadow-sm shadow-emerald-200 min-h-[44px]"
             style={{ border: 'none', cursor: 'pointer' }}
             animate={{ scale: [1, 1.04, 1] }}
             transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}

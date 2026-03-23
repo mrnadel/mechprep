@@ -72,13 +72,13 @@ export default function UserSearch() {
           aria-expanded={showDropdown}
           aria-autocomplete="list"
           aria-controls="user-search-results"
-          className="w-full pl-10 pr-10 py-3 rounded-xl border border-surface-200 bg-white text-sm font-medium text-surface-900 placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-primary-200 focus:border-primary-400 transition-all"
+          className="w-full pl-10 pr-10 py-3 rounded-xl border border-surface-200 bg-white text-base font-medium text-surface-900 placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-primary-200 focus:border-primary-400 transition-all"
         />
         {query && !loading && (
           <button
             onClick={() => { setQuery(''); setResults([]); }}
             aria-label="Clear search"
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-400 hover:text-surface-600"
+            className="absolute right-1 top-1/2 -translate-y-1/2 text-surface-400 hover:text-surface-600 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             <X className="w-4 h-4" />
           </button>
@@ -100,7 +100,7 @@ export default function UserSearch() {
                   key={user.id}
                   href={`/user/${user.id}`}
                   onClick={() => setFocused(false)}
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-surface-50 transition-colors"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-surface-50 transition-colors min-h-[48px]"
                 >
                   <div
                     className="rounded-full flex items-center justify-center overflow-hidden shrink-0"

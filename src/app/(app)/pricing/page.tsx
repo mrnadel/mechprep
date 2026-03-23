@@ -153,7 +153,7 @@ export default function PricingPage() {
         <div className="flex items-center h-14 px-4">
           <button
             onClick={() => router.back()}
-            className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors"
+            className="p-3 -ml-3 rounded-full hover:bg-gray-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             <ArrowLeft className="w-5 h-5 text-gray-700" />
           </button>

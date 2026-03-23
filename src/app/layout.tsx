@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Nunito, JetBrains_Mono } from 'next/font/google';
 import { AuthSessionProvider } from '@/components/providers/SessionProvider';
 import MixpanelProvider from '@/components/providers/MixpanelProvider';
@@ -17,6 +17,14 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains',
   display: 'swap',
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
+  themeColor: '#4F46E5',
+};
 
 export const metadata: Metadata = {
   title: 'MechReady — Mechanical Engineering Interview Training',
@@ -39,9 +47,7 @@ export const metadata: Metadata = {
     title: 'MechReady — ME Interview Training',
     description: 'Gamified mechanical engineering interview prep. 1,700+ questions, adaptive practice, and smart feedback.',
   },
-  other: {
-    'theme-color': '#4F46E5',
-  },
+  other: {},
 };
 
 export default function RootLayout({

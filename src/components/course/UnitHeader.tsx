@@ -158,8 +158,8 @@ export const UnitHeader = memo(function UnitHeader({
         <motion.div
           className="flex items-center justify-center"
           style={{
-            width: 32,
-            height: 32,
+            width: 44,
+            height: 44,
             borderRadius: '50%',
             background: isAllGolden ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
           }}

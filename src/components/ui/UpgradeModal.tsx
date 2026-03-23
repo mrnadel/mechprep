@@ -96,7 +96,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
             {/* Close button */}
             <button
               onClick={handleClose}
-              className="absolute top-3 right-3 p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10"
+              className="absolute top-2 right-2 p-2.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Close"
             >
               <X className="w-4 h-4 text-gray-500" />

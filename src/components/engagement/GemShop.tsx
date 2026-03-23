@@ -94,7 +94,7 @@ const ShopCard = memo(function ShopCard({ item, canAfford, isDisabled, disabledR
           {isOwned && isCosmetic ? (
             <button
               onClick={() => onToggleEquip(item.id)}
-              className="px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all"
+              className="px-3.5 py-2 rounded-xl text-xs font-bold transition-all min-h-[44px]"
               style={{
                 background: isEquipped ? '#FEF3C7' : '#F0FDF4',
                 color: isEquipped ? '#B45309' : '#16A34A',
@@ -108,7 +108,7 @@ const ShopCard = memo(function ShopCard({ item, canAfford, isDisabled, disabledR
             <button
               onClick={() => !isDisabled && onBuy(item.id)}
               disabled={isDisabled}
-              className="px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all"
+              className="px-3.5 py-2 rounded-xl text-xs font-bold transition-all min-h-[44px]"
               style={{
                 background: isOwned
                   ? '#F0FDF4'

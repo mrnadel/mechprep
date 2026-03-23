@@ -37,7 +37,7 @@ export default function DesktopSideNav() {
               key={tab.href}
               href={tab.href}
               className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors text-sm font-semibold',
+                'flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors text-sm font-semibold min-h-[44px]',
                 isActive
                   ? 'bg-primary-50 text-primary-600'
                   : 'text-surface-500 hover:bg-surface-50 hover:text-surface-700'

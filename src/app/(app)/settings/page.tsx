@@ -106,7 +106,7 @@ export default function SettingsPage() {
       {/* Header */}
       <div className="sticky top-0 z-30 bg-white/90 backdrop-blur-xl border-b border-gray-100">
         <div className="flex items-center h-14 px-4">
-          <button onClick={() => router.back()} className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors">
+          <button onClick={() => router.back()} className="p-3 -ml-3 rounded-full hover:bg-gray-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
             <ArrowLeft className="w-5 h-5 text-gray-600" />
           </button>
           <h1 className="text-lg font-extrabold text-gray-900 ml-2">Settings</h1>
@@ -183,12 +183,12 @@ export default function SettingsPage() {
                         <input
                           type="password" placeholder="Current password" value={currentPassword}
                           onChange={(e) => setCurrentPassword(e.target.value)} required
-                          className="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400 transition-all"
+                          className="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400 transition-all"
                         />
                         <input
                           type="password" placeholder="New password (8+ characters)" value={newPassword}
                           onChange={(e) => setNewPassword(e.target.value)} required minLength={8}
-                          className="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400 transition-all"
+                          className="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-400 transition-all"
                         />
                         <button
                           type="submit" disabled={passwordLoading}
@@ -306,7 +306,7 @@ export default function SettingsPage() {
                           onChange={(e) => setResetConfirmText(e.target.value)}
                           placeholder="Type here..."
                           autoFocus
-                          className="w-full px-3 py-2.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-sm font-mono focus:outline-none focus:border-red-400 transition-all"
+                          className="w-full px-3 py-2.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-base font-mono focus:outline-none focus:border-red-400 transition-all"
                         />
                         <div className="flex gap-2">
                           <button

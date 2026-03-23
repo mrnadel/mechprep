@@ -104,6 +104,7 @@ export function LandingPage() {
             fontSize: 14, fontWeight: 800, color: '#1CB0F6',
             textDecoration: 'none', textTransform: 'uppercase', letterSpacing: 0.8,
             padding: '10px 20px', border: '2px solid #E2E8F0', borderRadius: 12,
+            minHeight: 44, display: 'inline-flex', alignItems: 'center',
           }}>
             Log in
           </Link>

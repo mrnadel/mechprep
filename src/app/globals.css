@@ -43,6 +43,7 @@
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
   }
 
   ::selection {
@@ -230,7 +231,7 @@
   border-radius: 0.5rem;
   color: #0F172A;
   transition: all 0.2s;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .input::placeholder {
   color: #94A3B8;

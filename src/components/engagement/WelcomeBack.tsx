@@ -74,7 +74,7 @@ export function WelcomeBack() {
               </div>
               <button
                 onClick={() => setShowRepair(true)}
-                className="flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-white"
+                className="flex-shrink-0 px-4 py-2 rounded-xl text-xs font-bold text-white min-h-[44px]"
                 style={{ background: '#EF4444', border: 'none', cursor: 'pointer' }}
               >
                 Repair

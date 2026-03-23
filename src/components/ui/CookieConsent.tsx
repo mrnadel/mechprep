@@ -45,6 +45,7 @@ export default function CookieConsent() {
           role="dialog"
           aria-label="Cookie consent"
           className="fixed bottom-0 left-0 right-0 z-50 border-t border-surface-200 bg-white shadow-lg"
+          style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
         >
           <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:flex-nowrap sm:gap-4">
             <div className="flex items-center gap-3 text-sm text-surface-600">
@@ -63,13 +64,13 @@ export default function CookieConsent() {
             <div className="flex flex-shrink-0 items-center gap-2">
               <button
                 onClick={() => handleResponse(false)}
-                className="rounded-lg px-4 py-2 text-sm font-semibold text-surface-500 hover:text-surface-700 transition-colors"
+                className="rounded-lg px-4 py-2 text-sm font-semibold text-surface-500 hover:text-surface-700 transition-colors min-h-[44px]"
               >
                 Decline
               </button>
               <button
                 onClick={() => handleResponse(true)}
-                className="rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-700 transition-colors"
+                className="rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-700 transition-colors min-h-[44px]"
               >
                 Accept
               </button>

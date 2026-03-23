@@ -168,13 +168,14 @@ export default function FlagButton({ contentType, contentId, hasGraphic }: Props
                   style={{
                     fontSize: 11,
                     fontWeight: 700,
-                    padding: '4px 10px',
+                    padding: '8px 12px',
                     borderRadius: 12,
                     border: '1.5px solid #FF4B4B',
                     background: '#FFF0F0',
                     color: '#EA2B2B',
                     cursor: 'pointer',
                     whiteSpace: 'nowrap',
+                    minHeight: 44,
                   }}
                 >
                   Remove flag
@@ -188,13 +189,14 @@ export default function FlagButton({ contentType, contentId, hasGraphic }: Props
                     style={{
                       fontSize: 11,
                       fontWeight: 700,
-                      padding: '4px 10px',
+                      padding: '8px 12px',
                       borderRadius: 12,
                       border: '1.5px solid #E5E5E5',
                       background: '#F5F5F5',
                       color: '#3C3C3C',
                       cursor: 'pointer',
                       whiteSpace: 'nowrap',
+                      minHeight: 44,
                     }}
                     className="transition-colors hover:border-[#AFAFAF] hover:bg-[#EBEBEB]"
                   >
@@ -234,8 +236,8 @@ export default function FlagButton({ contentType, contentId, hasGraphic }: Props
           aria-label={`Flag content ${contentId}`}
           className="flex items-center justify-center transition-transform active:scale-90"
           style={{
-            width: 32,
-            height: 32,
+            width: 44,
+            height: 44,
             borderRadius: 10,
             border: 'none',
             background: isFlagged ? '#FFF0F0' : 'transparent',
@@ -282,7 +284,7 @@ export default function FlagButton({ contentType, contentId, hasGraphic }: Props
                 rows={2}
                 style={{
                   flex: 1,
-                  fontSize: 12,
+                  fontSize: 16,
                   fontWeight: 600,
                   padding: '8px 10px',
                   borderRadius: 10,
@@ -299,8 +301,8 @@ export default function FlagButton({ contentType, contentId, hasGraphic }: Props
                 aria-label="Submit comment"
                 className="flex items-center justify-center transition-transform active:scale-90"
                 style={{
-                  width: 32,
-                  height: 32,
+                  width: 44,
+                  height: 44,
                   borderRadius: 10,
                   border: 'none',
                   background: commentText.trim() ? '#58CC02' : '#E5E5E5',

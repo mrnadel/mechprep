@@ -7,14 +7,14 @@ export default function Footer() {
         <p className="text-sm text-surface-500">
           &copy; 2026 MechReady
         </p>
-        <nav className="flex items-center gap-6" aria-label="Footer">
-          <Link href="/privacy" className="text-sm text-surface-500 hover:text-primary-600 transition-colors">
+        <nav className="flex items-center gap-4 sm:gap-6" aria-label="Footer">
+          <Link href="/privacy" className="text-sm text-surface-500 hover:text-primary-600 transition-colors py-2 min-h-[44px] flex items-center">
             Privacy Policy
           </Link>
-          <Link href="/terms" className="text-sm text-surface-500 hover:text-primary-600 transition-colors">
+          <Link href="/terms" className="text-sm text-surface-500 hover:text-primary-600 transition-colors py-2 min-h-[44px] flex items-center">
             Terms of Service
           </Link>
-          <Link href="/contact" className="text-sm text-surface-500 hover:text-primary-600 transition-colors">
+          <Link href="/contact" className="text-sm text-surface-500 hover:text-primary-600 transition-colors py-2 min-h-[44px] flex items-center">
             Contact
           </Link>
         </nav>

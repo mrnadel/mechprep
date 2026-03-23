@@ -272,8 +272,8 @@ export default function LessonView() {
             onClick={handleExitClick}
             className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90"
             style={{
-              width: 36,
-              height: 36,
+              width: 44,
+              height: 44,
               borderRadius: 12,
               background: '#F5F5F5',
               border: 'none',
