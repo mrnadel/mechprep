@@ -12,6 +12,7 @@ import type { QuestionCardHandle } from './QuestionCard';
 import ResultScreen from './ResultScreen';
 import FlagButton from '@/components/feedback/FlagButton';
 import { useMasteryStore } from '@/store/useMasteryStore';
+import EngineeringCalculator from '@/components/calculator/EngineeringCalculator';
 
 export { LessonView };
 export default function LessonView() {
@@ -25,6 +26,7 @@ export default function LessonView() {
   const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [showDebugMenu, setShowDebugMenu] = useState(false);
   const [hasSelection, setHasSelection] = useState(false);
+  const [isCalcOpen, setIsCalcOpen] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
   const [xpGain, setXpGain] = useState(0);
   const questionRef = useRef<QuestionCardHandle>(null);
@@ -168,6 +170,12 @@ export default function LessonView() {
   // Global keyboard handler
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // If calculator has focus, let it handle its own keys
+      const activeEl = document.activeElement;
+      if (activeEl && activeEl.closest('[aria-label="Engineering calculator"]')) {
+        return;
+      }
+
       const target = e.target as HTMLElement;
       const isInInput =
         (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') &&
@@ -184,6 +192,13 @@ export default function LessonView() {
       if (e.key === 'Escape') {
         e.preventDefault();
         handleExitClick();
+        return;
+      }
+
+      // Backtick toggles calculator
+      if (e.key === '`') {
+        e.preventDefault();
+        setIsCalcOpen(c => !c);
         return;
       }
 
@@ -233,6 +248,7 @@ export default function LessonView() {
     handleContinue,
     handleExitClick,
     handleCancelExit,
+    isCalcOpen,
   ]);
 
   if (lessonResult) return <ResultScreen />;
@@ -423,6 +439,33 @@ export default function LessonView() {
             </svg>
             <span aria-live="polite">+{xpGain} XP</span>
           </motion.div>
+
+          {/* Calculator toggle */}
+          <button
+            onClick={() => setIsCalcOpen(c => !c)}
+            className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90"
+            style={{
+              width: 36,
+              height: 36,
+              borderRadius: 12,
+              background: isCalcOpen ? theme.bg : '#F5F5F5',
+              border: isCalcOpen ? `1.5px solid ${unitColor}` : '1.5px solid transparent',
+              cursor: 'pointer',
+            }}
+            aria-label={isCalcOpen ? 'Close calculator' : 'Open calculator'}
+            title="Calculator (`)"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <rect x="4" y="2" width="16" height="20" rx="2" stroke={isCalcOpen ? unitColor : '#AFAFAF'} strokeWidth="2" />
+              <rect x="7" y="5" width="10" height="4" rx="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+              <circle cx="8.5" cy="13" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+              <circle cx="12" cy="13" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+              <circle cx="15.5" cy="13" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+              <circle cx="8.5" cy="17" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+              <circle cx="12" cy="17" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+              <circle cx="15.5" cy="17" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+            </svg>
+          </button>
         </div>
 
         {/* Question area */}
@@ -588,6 +631,18 @@ export default function LessonView() {
         )}
 
         </div>{/* end centered wrapper */}
+
+        {/* Calculator panel */}
+        <AnimatePresence>
+          {isCalcOpen && (
+            <EngineeringCalculator
+              isOpen={isCalcOpen}
+              onClose={() => setIsCalcOpen(false)}
+              accentColor={unitColor}
+              accentDark={theme.dark}
+            />
+          )}
+        </AnimatePresence>
 
         {/* Exit confirmation modal */}
         <AnimatePresence>
