@@ -7,12 +7,12 @@ import { cn } from '@/lib/utils';
 import FriendsBadge from '@/components/friends/FriendsBadge';
 
 const tabs = [
-  { href: '/', label: 'Home', icon: LayoutDashboard },
-  { href: '/quests', label: 'Quests', icon: Swords },
-  { href: '/practice/topics', label: 'Practice', icon: BookOpen },
-  { href: '/league', label: 'League', icon: Trophy },
-  { href: '/friends', label: 'Friends', icon: Users, badge: true },
-  { href: '/profile', label: 'Profile', icon: User },
+  { href: '/', label: 'Home', icon: LayoutDashboard, activeColor: 'text-indigo-600', activeBg: 'bg-indigo-50', inactiveColor: 'text-slate-400' },
+  { href: '/quests', label: 'Quests', icon: Swords, activeColor: 'text-orange-500', activeBg: 'bg-orange-50', inactiveColor: 'text-slate-400' },
+  { href: '/practice/topics', label: 'Practice', icon: BookOpen, activeColor: 'text-emerald-600', activeBg: 'bg-emerald-50', inactiveColor: 'text-slate-400' },
+  { href: '/league', label: 'League', icon: Trophy, activeColor: 'text-amber-500', activeBg: 'bg-amber-50', inactiveColor: 'text-slate-400' },
+  { href: '/friends', label: 'Friends', icon: Users, badge: true, activeColor: 'text-pink-500', activeBg: 'bg-pink-50', inactiveColor: 'text-slate-400' },
+  { href: '/profile', label: 'Profile', icon: User, activeColor: 'text-sky-500', activeBg: 'bg-sky-50', inactiveColor: 'text-slate-400' },
 ];
 
 export default function MobileBottomNav() {
@@ -24,7 +24,7 @@ export default function MobileBottomNav() {
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       aria-label="Mobile navigation"
     >
-      <div className="flex items-center justify-around h-14">
+      <div className="flex items-center justify-around h-16 px-1">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = pathname === tab.href || (tab.href !== '/' && pathname.startsWith(tab.href));
@@ -34,15 +34,25 @@ export default function MobileBottomNav() {
               key={tab.href}
               href={tab.href}
               className={cn(
-                'flex flex-col items-center justify-center gap-0.5 flex-1 h-full transition-colors',
-                isActive ? 'text-primary-600' : 'text-surface-400'
+                'flex flex-col items-center justify-center gap-0.5 flex-1 h-full transition-all duration-200',
+                isActive ? tab.activeColor : tab.inactiveColor
               )}
             >
-              <span className="relative">
-                <Icon className="w-5 h-5" />
+              <span
+                className={cn(
+                  'relative flex items-center justify-center w-10 h-7 rounded-full transition-all duration-200',
+                  isActive && tab.activeBg
+                )}
+              >
+                <Icon className={cn('w-5 h-5 transition-transform duration-200', isActive && 'scale-110')} />
                 {tab.badge && <FriendsBadge />}
               </span>
-              <span className="text-[10px] font-semibold">{tab.label}</span>
+              <span className={cn(
+                'text-[10px] transition-all duration-200',
+                isActive ? 'font-bold' : 'font-medium'
+              )}>
+                {tab.label}
+              </span>
             </Link>
           );
         })}

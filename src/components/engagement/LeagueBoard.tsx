@@ -15,17 +15,6 @@ export function LeagueBoard() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
 
-  // Avoid hydration mismatch — league data comes from localStorage
-  if (!mounted) {
-    return (
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <div className="px-4 py-8 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-gray-300 border-t-indigo-500 rounded-full animate-spin" />
-        </div>
-      </div>
-    );
-  }
-
   const tier = leagueTiers.find((t) => t.tier === league.currentTier) ?? leagueTiers[0];
   const tierConfig = getTierConfig(league.currentTier);
 
@@ -51,6 +40,17 @@ export function LeagueBoard() {
       userEntry,
     ].sort((a, b) => b.weeklyXp - a.weeklyXp);
   }, [league.competitors, league.weeklyXp, displayName]);
+
+  // Avoid hydration mismatch — league data comes from localStorage
+  if (!mounted) {
+    return (
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        <div className="px-4 py-8 flex items-center justify-center">
+          <div className="w-6 h-6 border-2 border-gray-300 border-t-indigo-500 rounded-full animate-spin" />
+        </div>
+      </div>
+    );
+  }
 
   const userRank = getUserRank(league.weeklyXp, league.competitors);
   const promoteCount = tierConfig.promoteCount;
