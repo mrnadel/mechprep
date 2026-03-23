@@ -1,24 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { eq } from 'drizzle-orm';
-import { z } from 'zod';
 import { db } from '@/lib/db';
 import { masteryEvents } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
-
-const masteryEventSchema = z.object({
-  id: z.string().max(100),
-  questionId: z.string().max(100),
-  topicId: z.string().max(100),
-  subtopic: z.string().max(100).optional(),
-  difficulty: z.string().max(50),
-  correct: z.boolean(),
-  source: z.string().max(50),
-  answeredAt: z.string().max(50),
-});
-
-const masteryBatchSchema = z.object({
-  events: z.array(masteryEventSchema).max(200),
-});
+import { canStartPracticeSession, canAccessPracticeMode } from '@/lib/access-control';
 
 export async function GET() {
   const userId = await getAuthUserId();
@@ -49,18 +34,30 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body = await request.json();
-  const parsed = masteryBatchSchema.safeParse(body);
-  if (!parsed.success) {
+  // ── Server-side daily limit enforcement ──
+  // Reject mastery events if the user has exceeded their daily question limit
+  const limitCheck = await canStartPracticeSession(userId);
+  if (!limitCheck.allowed) {
     return NextResponse.json(
-      { error: 'Invalid input', details: parsed.error.issues[0]?.message },
-      { status: 400 }
+      { error: 'Daily question limit reached', remaining: 0, limit: limitCheck.limit },
+      { status: 403 }
     );
   }
 
-  const { events } = parsed.data;
+  const { events } = (await request.json()) as {
+    events: {
+      id: string;
+      questionId: string;
+      topicId: string;
+      subtopic?: string;
+      difficulty: string;
+      correct: boolean;
+      source: string;
+      answeredAt: string;
+    }[];
+  };
 
-  if (events.length === 0) {
+  if (!events || events.length === 0) {
     return NextResponse.json({ ok: true, inserted: 0 });
   }
 

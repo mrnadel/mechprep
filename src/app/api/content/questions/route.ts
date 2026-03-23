@@ -1,18 +1,16 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { asc } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { practiceQuestions } from '@/lib/db/schema';
-import { rateLimit } from '@/lib/rate-limit';
+import { getAuthUserId } from '@/lib/auth-utils';
 
-export async function GET(request: NextRequest) {
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
-  const rl = rateLimit(`content-questions:${ip}`, { limit: 30, windowMs: 60_000 });
-  if (!rl.success) {
-    return NextResponse.json(
-      { error: 'Too many requests' },
-      { status: 429 }
-    );
+export async function GET() {
+  // Require authentication to prevent unauthenticated scraping of question content
+  const userId = await getAuthUserId();
+  if (!userId) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
+
   const rows = await db
     .select()
     .from(practiceQuestions)

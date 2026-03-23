@@ -10,6 +10,7 @@ import {
   leagueState,
 } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
+import { incrementDailyUsage, canStartPracticeSession } from '@/lib/access-control';
 import { progressSyncSchema } from '@/lib/validation';
 import type { UserProgress, TopicProgress, SessionRecord, TopicId } from '@/data/types';
 
@@ -19,54 +20,35 @@ export async function GET() {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  // Fetch user info, progress, topics, and sessions in parallel
-  const [userResult, progressResult, topics, sessions] = await Promise.all([
-    db
-      .select({
-        displayName: users.displayName,
-        name: users.name,
-        joinedDate: users.joinedDate,
-      })
-      .from(users)
-      .where(eq(users.id, userId))
-      .limit(1),
-    db
-      .select()
-      .from(userProgress)
-      .where(eq(userProgress.userId, userId))
-      .limit(1),
-    db
-      .select({
-        topicId: topicProgressTable.topicId,
-        questionsAttempted: topicProgressTable.questionsAttempted,
-        questionsCorrect: topicProgressTable.questionsCorrect,
-        averageConfidence: topicProgressTable.averageConfidence,
-        lastAttempted: topicProgressTable.lastAttempted,
-        subtopicBreakdown: topicProgressTable.subtopicBreakdown,
-      })
-      .from(topicProgressTable)
-      .where(eq(topicProgressTable.userId, userId)),
-    db
-      .select({
-        sessionId: sessionHistory.sessionId,
-        date: sessionHistory.date,
-        durationMinutes: sessionHistory.durationMinutes,
-        questionsAttempted: sessionHistory.questionsAttempted,
-        questionsCorrect: sessionHistory.questionsCorrect,
-        topicsCovered: sessionHistory.topicsCovered,
-        xpEarned: sessionHistory.xpEarned,
-      })
-      .from(sessionHistory)
-      .where(eq(sessionHistory.userId, userId)),
-  ]);
-
-  const [user] = userResult;
+  // Fetch user info
+  const [user] = await db
+    .select()
+    .from(users)
+    .where(eq(users.id, userId))
+    .limit(1);
 
   if (!user) {
     return NextResponse.json({ error: 'User not found' }, { status: 404 });
   }
 
-  const [progress] = progressResult;
+  // Fetch user progress
+  const [progress] = await db
+    .select()
+    .from(userProgress)
+    .where(eq(userProgress.userId, userId))
+    .limit(1);
+
+  // Fetch topic progress rows
+  const topics = await db
+    .select()
+    .from(topicProgressTable)
+    .where(eq(topicProgressTable.userId, userId));
+
+  // Fetch session history
+  const sessions = await db
+    .select()
+    .from(sessionHistory)
+    .where(eq(sessionHistory.userId, userId));
 
   // Assemble into UserProgress shape
   const topicProgressData: TopicProgress[] = topics.map((t) => ({
@@ -85,7 +67,7 @@ export async function GET() {
     durationMinutes: s.durationMinutes,
     questionsAttempted: s.questionsAttempted,
     questionsCorrect: s.questionsCorrect,
-    topicsCovered: (s.topicsCovered as unknown as TopicId[]) ?? [],
+    topicsCovered: (s.topicsCovered as TopicId[]) ?? [],
     xpEarned: s.xpEarned,
   }));
 
@@ -118,12 +100,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  let body: unknown;
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
-  }
+  const body = await request.json();
   const parsed = progressSyncSchema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json(
@@ -133,143 +110,161 @@ export async function POST(request: NextRequest) {
   }
   const { progress } = parsed.data as { progress: UserProgress };
 
-  await db.transaction(async (tx) => {
-    // Upsert user_progress row
-    const existing = await tx
-      .select({ id: userProgress.id })
-      .from(userProgress)
-      .where(eq(userProgress.userId, userId))
-      .limit(1);
+  // Upsert user_progress row
+  const existing = await db
+    .select({ id: userProgress.id })
+    .from(userProgress)
+    .where(eq(userProgress.userId, userId))
+    .limit(1);
 
-    const progressData = {
-      userId,
-      currentLevel: progress.currentLevel,
-      totalXp: progress.totalXp,
-      currentStreak: progress.currentStreak,
-      longestStreak: progress.longestStreak,
-      lastActiveDate: progress.lastActiveDate,
-      achievementsUnlocked: progress.achievementsUnlocked,
-      dailyChallengesCompleted: progress.dailyChallengesCompleted,
-      totalQuestionsAttempted: progress.totalQuestionsAttempted,
-      totalQuestionsCorrect: progress.totalQuestionsCorrect,
-      bookmarkedQuestions: progress.bookmarkedQuestions,
-      weakAreas: progress.weakAreas,
-      strongAreas: progress.strongAreas,
-      updatedAt: new Date(),
-    };
+  const progressData = {
+    userId,
+    currentLevel: progress.currentLevel,
+    totalXp: progress.totalXp,
+    currentStreak: progress.currentStreak,
+    longestStreak: progress.longestStreak,
+    lastActiveDate: progress.lastActiveDate,
+    achievementsUnlocked: progress.achievementsUnlocked,
+    dailyChallengesCompleted: progress.dailyChallengesCompleted,
+    totalQuestionsAttempted: progress.totalQuestionsAttempted,
+    totalQuestionsCorrect: progress.totalQuestionsCorrect,
+    bookmarkedQuestions: progress.bookmarkedQuestions,
+    weakAreas: progress.weakAreas,
+    strongAreas: progress.strongAreas,
+    updatedAt: new Date(),
+  };
 
-    if (existing.length > 0) {
-      await tx
-        .update(userProgress)
-        .set(progressData)
-        .where(eq(userProgress.userId, userId));
-    } else {
-      await tx.insert(userProgress).values(progressData);
-    }
+  if (existing.length > 0) {
+    await db
+      .update(userProgress)
+      .set(progressData)
+      .where(eq(userProgress.userId, userId));
+  } else {
+    await db.insert(userProgress).values(progressData);
+  }
 
-    // Update display name on user row
-    await tx
-      .update(users)
-      .set({ displayName: progress.displayName, updatedAt: new Date() })
-      .where(eq(users.id, userId));
+  // Update display name on user row
+  await db
+    .update(users)
+    .set({ displayName: progress.displayName, updatedAt: new Date() })
+    .where(eq(users.id, userId));
 
-    // Delete and re-insert topic progress
-    await tx
-      .delete(topicProgressTable)
-      .where(eq(topicProgressTable.userId, userId));
+  // Delete and re-insert topic progress
+  await db
+    .delete(topicProgressTable)
+    .where(eq(topicProgressTable.userId, userId));
 
-    if (progress.topicProgress.length > 0) {
-      await tx.insert(topicProgressTable).values(
-        progress.topicProgress.map((tp) => ({
-          userId,
-          topicId: tp.topicId,
-          questionsAttempted: tp.questionsAttempted,
-          questionsCorrect: tp.questionsCorrect,
-          averageConfidence: tp.averageConfidence,
-          lastAttempted: tp.lastAttempted,
-          subtopicBreakdown: tp.subtopicBreakdown,
-        }))
+  if (progress.topicProgress.length > 0) {
+    await db.insert(topicProgressTable).values(
+      progress.topicProgress.map((tp) => ({
+        userId,
+        topicId: tp.topicId,
+        questionsAttempted: tp.questionsAttempted,
+        questionsCorrect: tp.questionsCorrect,
+        averageConfidence: tp.averageConfidence,
+        lastAttempted: tp.lastAttempted,
+        subtopicBreakdown: tp.subtopicBreakdown,
+      }))
+    );
+  }
+
+  // Append-only session history: only insert new sessions
+  const existingSessions = await db
+    .select({ sessionId: sessionHistory.sessionId })
+    .from(sessionHistory)
+    .where(eq(sessionHistory.userId, userId));
+
+  const existingIds = new Set(existingSessions.map((s) => s.sessionId));
+  const newSessions = progress.sessionHistory.filter(
+    (s) => !existingIds.has(s.id)
+  );
+
+  if (newSessions.length > 0) {
+    // ── Server-side daily usage enforcement ──
+    // Check if the user can still answer questions today before accepting new sessions.
+    const limitCheck = await canStartPracticeSession(userId);
+    const todayStr = new Date().toISOString().split('T')[0];
+    const todaySessions = newSessions.filter((s) => s.date === todayStr);
+    const todayQuestionsAttempted = todaySessions.reduce((sum, s) => sum + s.questionsAttempted, 0);
+
+    // If the user is on the free tier AND daily limit is reached, reject the new sessions
+    if (!limitCheck.allowed && todayQuestionsAttempted > 0) {
+      return NextResponse.json(
+        { error: 'Daily question limit reached', remaining: 0, limit: limitCheck.limit },
+        { status: 403 }
       );
     }
 
-    // Append-only session history: only insert new sessions
-    const existingSessions = await tx
-      .select({ sessionId: sessionHistory.sessionId })
-      .from(sessionHistory)
-      .where(eq(sessionHistory.userId, userId));
-
-    const existingIds = new Set(existingSessions.map((s) => s.sessionId));
-    const newSessions = progress.sessionHistory.filter(
-      (s) => !existingIds.has(s.id)
+    await db.insert(sessionHistory).values(
+      newSessions.map((s) => ({
+        userId,
+        sessionId: s.id,
+        date: s.date,
+        durationMinutes: s.durationMinutes,
+        questionsAttempted: s.questionsAttempted,
+        questionsCorrect: s.questionsCorrect,
+        topicsCovered: s.topicsCovered,
+        xpEarned: s.xpEarned,
+      }))
     );
 
-    if (newSessions.length > 0) {
-      await tx.insert(sessionHistory).values(
-        newSessions.map((s) => ({
+    // Track daily usage for each question answered today
+    for (let i = 0; i < todayQuestionsAttempted; i++) {
+      await incrementDailyUsage(userId);
+    }
+  }
+
+  // Sync engagement data if provided (now validated by Zod schema)
+  const engagement = parsed.data.engagement;
+  if (engagement) {
+    const { gems, leagueTier, streakFreezes, streakMilestones, newGemTransactions } = engagement;
+
+    // Update userProgress engagement columns
+    await db.update(userProgress).set({
+      gemsBalance: gems?.balance,
+      gemsTotalEarned: gems?.totalEarned,
+      streakFreezes: streakFreezes,
+      streakMilestones: streakMilestones,
+    }).where(eq(userProgress.userId, userId));
+
+    // Batch insert new gem transactions
+    if (newGemTransactions?.length) {
+      await db.insert(gemTransactions).values(
+        newGemTransactions.map((t: { amount: number; source: string }) => ({
           userId,
-          sessionId: s.id,
-          date: s.date,
-          durationMinutes: s.durationMinutes,
-          questionsAttempted: s.questionsAttempted,
-          questionsCorrect: s.questionsCorrect,
-          topicsCovered: s.topicsCovered,
-          xpEarned: s.xpEarned,
+          amount: t.amount,
+          source: t.source,
         }))
       );
     }
 
-    // Sync engagement data if provided (now validated by Zod schema)
-    const engagement = parsed.data.engagement;
-    if (engagement) {
-      const { gems, leagueTier, streakFreezes, streakMilestones, newGemTransactions } = engagement;
+    // Upsert league state
+    if (leagueTier !== undefined && engagement.weekStart !== undefined) {
+      const existingLeague = await db
+        .select({ id: leagueState.id })
+        .from(leagueState)
+        .where(eq(leagueState.userId, userId))
+        .limit(1);
 
-      // Update userProgress engagement columns
-      await tx.update(userProgress).set({
-        gemsBalance: gems?.balance,
-        gemsTotalEarned: gems?.totalEarned,
-        streakFreezes: streakFreezes,
-        streakMilestones: streakMilestones,
-      }).where(eq(userProgress.userId, userId));
+      const leagueData = {
+        userId,
+        tier: leagueTier,
+        weeklyXp: engagement.weeklyXp ?? 0,
+        weekStart: engagement.weekStart,
+        competitors: engagement.competitors ?? [],
+        updatedAt: new Date(),
+      };
 
-      // Batch insert new gem transactions
-      if (newGemTransactions?.length) {
-        await tx.insert(gemTransactions).values(
-          newGemTransactions.map((t: { amount: number; source: string }) => ({
-            userId,
-            amount: t.amount,
-            source: t.source,
-          }))
-        );
-      }
-
-      // Upsert league state
-      if (leagueTier !== undefined && engagement.weekStart !== undefined) {
-        const existingLeague = await tx
-          .select({ id: leagueState.id })
-          .from(leagueState)
-          .where(eq(leagueState.userId, userId))
-          .limit(1);
-
-        const leagueData = {
-          userId,
-          tier: leagueTier,
-          weeklyXp: engagement.weeklyXp ?? 0,
-          weekStart: engagement.weekStart,
-          competitors: engagement.competitors ?? [],
-          updatedAt: new Date(),
-        };
-
-        if (existingLeague.length > 0) {
-          await tx
-            .update(leagueState)
-            .set(leagueData)
-            .where(eq(leagueState.userId, userId));
-        } else {
-          await tx.insert(leagueState).values(leagueData);
-        }
+      if (existingLeague.length > 0) {
+        await db
+          .update(leagueState)
+          .set(leagueData)
+          .where(eq(leagueState.userId, userId));
+      } else {
+        await db.insert(leagueState).values(leagueData);
       }
     }
-  });
+  }
 
   return NextResponse.json({ ok: true });
 }

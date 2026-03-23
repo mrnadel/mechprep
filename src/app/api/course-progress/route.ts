@@ -3,7 +3,9 @@ import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { users, courseProgress } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
-import { courseProgressSyncSchema } from '@/lib/validation';
+import { canAccessUnit } from '@/lib/access-control';
+import { getLessonById } from '@/data/course';
+import { progressSyncSchema } from '@/lib/validation';
 import type { CourseProgress } from '@/data/course/types';
 
 export async function GET() {
@@ -12,35 +14,21 @@ export async function GET() {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const [userResult, progressResult] = await Promise.all([
-    db
-      .select({
-        displayName: users.displayName,
-        name: users.name,
-      })
-      .from(users)
-      .where(eq(users.id, userId))
-      .limit(1),
-    db
-      .select({
-        totalXp: courseProgress.totalXp,
-        currentStreak: courseProgress.currentStreak,
-        longestStreak: courseProgress.longestStreak,
-        lastActiveDate: courseProgress.lastActiveDate,
-        completedLessons: courseProgress.completedLessons,
-      })
-      .from(courseProgress)
-      .where(eq(courseProgress.userId, userId))
-      .limit(1),
-  ]);
-
-  const [user] = userResult;
+  const [user] = await db
+    .select()
+    .from(users)
+    .where(eq(users.id, userId))
+    .limit(1);
 
   if (!user) {
     return NextResponse.json({ error: 'User not found' }, { status: 404 });
   }
 
-  const [progress] = progressResult;
+  const [progress] = await db
+    .select()
+    .from(courseProgress)
+    .where(eq(courseProgress.userId, userId))
+    .limit(1);
 
   const assembled: CourseProgress = {
     displayName: user.displayName || user.name || 'Engineer',
@@ -61,13 +49,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  let body: unknown;
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
-  }
-  const parsed = courseProgressSyncSchema.safeParse(body);
+  const body = await request.json();
+  const parsed = progressSyncSchema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json(
       { error: 'Invalid input', details: parsed.error.issues[0]?.message },
@@ -76,38 +59,49 @@ export async function POST(request: NextRequest) {
   }
   const { progress } = parsed.data as { progress: CourseProgress };
 
-  await db.transaction(async (tx) => {
-    const existing = await tx
-      .select({ id: courseProgress.id })
-      .from(courseProgress)
-      .where(eq(courseProgress.userId, userId))
-      .limit(1);
-
-    const data = {
-      userId,
-      totalXp: progress.totalXp,
-      currentStreak: progress.currentStreak,
-      longestStreak: progress.longestStreak,
-      lastActiveDate: progress.lastActiveDate,
-      completedLessons: progress.completedLessons,
-      updatedAt: new Date(),
-    };
-
-    if (existing.length > 0) {
-      await tx
-        .update(courseProgress)
-        .set(data)
-        .where(eq(courseProgress.userId, userId));
-    } else {
-      await tx.insert(courseProgress).values(data);
+  // ── Server-side unit access enforcement ──
+  // Strip out completedLessons for units the user cannot access
+  const filteredLessons: CourseProgress['completedLessons'] = {};
+  for (const [lessonId, lessonData] of Object.entries(progress.completedLessons)) {
+    const info = getLessonById(lessonId);
+    if (!info) continue; // Unknown lesson ID — skip
+    const access = await canAccessUnit(userId, info.unitIndex);
+    if (access.allowed) {
+      filteredLessons[lessonId] = lessonData;
     }
+    // Silently drop lessons from units the user has no access to
+  }
 
-    // Also update display name
-    await tx
-      .update(users)
-      .set({ displayName: progress.displayName, updatedAt: new Date() })
-      .where(eq(users.id, userId));
-  });
+  const existing = await db
+    .select({ id: courseProgress.id })
+    .from(courseProgress)
+    .where(eq(courseProgress.userId, userId))
+    .limit(1);
+
+  const data = {
+    userId,
+    totalXp: progress.totalXp,
+    currentStreak: progress.currentStreak,
+    longestStreak: progress.longestStreak,
+    lastActiveDate: progress.lastActiveDate,
+    completedLessons: filteredLessons,
+    updatedAt: new Date(),
+  };
+
+  if (existing.length > 0) {
+    await db
+      .update(courseProgress)
+      .set(data)
+      .where(eq(courseProgress.userId, userId));
+  } else {
+    await db.insert(courseProgress).values(data);
+  }
+
+  // Also update display name
+  await db
+    .update(users)
+    .set({ displayName: progress.displayName, updatedAt: new Date() })
+    .where(eq(users.id, userId));
 
   return NextResponse.json({ ok: true });
 }

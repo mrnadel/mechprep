@@ -1,18 +1,12 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { asc } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { courseUnits, courseLessons, courseQuestions } from '@/lib/db/schema';
-import { rateLimit } from '@/lib/rate-limit';
+import { getAuthUserId } from '@/lib/auth-utils';
+import { canAccessUnit } from '@/lib/access-control';
+import { LIMITS } from '@/lib/pricing';
 
-export async function GET(request: NextRequest) {
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
-  const rl = rateLimit(`content-course:${ip}`, { limit: 30, windowMs: 60_000 });
-  if (!rl.success) {
-    return NextResponse.json(
-      { error: 'Too many requests' },
-      { status: 429 }
-    );
-  }
+export async function GET() {
   const units = await db
     .select()
     .from(courseUnits)
@@ -27,6 +21,23 @@ export async function GET(request: NextRequest) {
     .select()
     .from(courseQuestions)
     .orderBy(asc(courseQuestions.orderIndex));
+
+  // Determine user's accessible units
+  const userId = await getAuthUserId();
+  let accessibleUnitIndices: Set<number>;
+
+  if (userId) {
+    // Check each unit index against the user's subscription
+    const checks = await Promise.all(
+      units.map((_, idx) => canAccessUnit(userId, idx))
+    );
+    accessibleUnitIndices = new Set(
+      checks.map((c, idx) => (c.allowed ? idx : -1)).filter((i) => i >= 0)
+    );
+  } else {
+    // Unauthenticated: only free-tier units
+    accessibleUnitIndices = new Set(LIMITS.free.unlockedUnits);
+  }
 
   // Group questions by lessonId
   const questionsByLesson = new Map<string, typeof questions>();
@@ -45,36 +56,44 @@ export async function GET(request: NextRequest) {
   }
 
   // Assemble the Unit[] structure
-  const course = units.map((unit) => ({
-    id: unit.id,
-    title: unit.title,
-    description: unit.description,
-    color: unit.color,
-    icon: unit.icon,
-    lessons: (lessonsByUnit.get(unit.id) ?? []).map((lesson) => ({
-      id: lesson.id,
-      title: lesson.title,
-      description: lesson.description,
-      icon: lesson.icon,
-      xpReward: lesson.xpReward,
-      questions: (questionsByLesson.get(lesson.id) ?? []).map((q) => ({
-        id: q.id,
-        type: q.type,
-        question: q.question,
-        ...(q.options != null ? { options: q.options } : {}),
-        ...(q.correctIndex != null ? { correctIndex: q.correctIndex } : {}),
-        ...(q.correctAnswer != null
-          ? { correctAnswer: q.correctAnswer === 'true' }
-          : {}),
-        ...(q.acceptedAnswers != null
-          ? { acceptedAnswers: q.acceptedAnswers }
-          : {}),
-        explanation: q.explanation,
-        ...(q.hint != null ? { hint: q.hint } : {}),
-        ...(q.diagram != null ? { diagram: q.diagram } : {}),
+  // For locked units: return metadata (title, icon, etc.) but strip question content
+  const course = units.map((unit, unitIndex) => {
+    const isAccessible = accessibleUnitIndices.has(unitIndex);
+
+    return {
+      id: unit.id,
+      title: unit.title,
+      description: unit.description,
+      color: unit.color,
+      icon: unit.icon,
+      lessons: (lessonsByUnit.get(unit.id) ?? []).map((lesson) => ({
+        id: lesson.id,
+        title: lesson.title,
+        description: lesson.description,
+        icon: lesson.icon,
+        xpReward: lesson.xpReward,
+        // Only include question content for accessible units
+        questions: isAccessible
+          ? (questionsByLesson.get(lesson.id) ?? []).map((q) => ({
+              id: q.id,
+              type: q.type,
+              question: q.question,
+              ...(q.options != null ? { options: q.options } : {}),
+              ...(q.correctIndex != null ? { correctIndex: q.correctIndex } : {}),
+              ...(q.correctAnswer != null
+                ? { correctAnswer: q.correctAnswer === 'true' }
+                : {}),
+              ...(q.acceptedAnswers != null
+                ? { acceptedAnswers: q.acceptedAnswers }
+                : {}),
+              explanation: q.explanation,
+              ...(q.hint != null ? { hint: q.hint } : {}),
+              ...(q.diagram != null ? { diagram: q.diagram } : {}),
+            }))
+          : [], // Locked unit: no questions served
       })),
-    })),
-  }));
+    };
+  });
 
   return NextResponse.json({ course });
 }

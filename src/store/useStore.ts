@@ -445,7 +445,7 @@ export const useStore = create<AppState>()(
       showAchievementToast: null,
 
       startSession: (type, options) => {
-        // Enforce Pro-only session types
+        // Enforce Pro-only session types (client-side fast check)
         if (PRO_SESSION_TYPES.has(type)) {
           const subStore = useSubscriptionStore.getState();
           const tier = subStore.debugTierOverride && process.env.NODE_ENV === 'development'
@@ -473,6 +473,27 @@ export const useStore = create<AppState>()(
           },
           sessionSummary: null,
         });
+
+        // ── Server-side validation (async, aborts session if rejected) ──
+        // Fire-and-forget: if the server says no, abort the session
+        fetch('/api/session/validate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sessionType: type }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data && !data.allowed) {
+              // Server rejected — abort the session
+              const current = get().session;
+              if (current?.type === type && current.startTime === get().session?.startTime) {
+                set({ session: null, sessionSummary: null });
+              }
+            }
+          })
+          .catch(() => {
+            // Network error — don't abort (offline-friendly)
+          });
       },
 
       answerQuestion: (questionId, correct, confidence, timeSpent = 0) => {
