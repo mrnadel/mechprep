@@ -6,6 +6,7 @@ import type { AnswerEvent } from '@/data/mastery';
 import type { TopicId } from '@/data/types';
 
 const PRUNE_DAYS = 90;
+let _syncing = false; // guard against concurrent sync calls
 
 interface MasteryState {
   events: AnswerEvent[];
@@ -53,10 +54,12 @@ export const useMasteryStore = create<MasteryState>()(
         get().events.filter((e) => e.topicId === topicId),
 
       syncToServer: async () => {
+        if (_syncing) return; // prevent concurrent sync calls
         const { events, lastSyncedIndex } = get();
         const unsynced = events.slice(lastSyncedIndex);
         if (unsynced.length === 0) return;
 
+        _syncing = true;
         try {
           const res = await fetch('/api/mastery', {
             method: 'POST',
@@ -68,6 +71,8 @@ export const useMasteryStore = create<MasteryState>()(
           }
         } catch {
           // Silent fail — will retry on next sync
+        } finally {
+          _syncing = false;
         }
       },
 

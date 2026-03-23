@@ -17,7 +17,9 @@ export function CourseMap() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const currentUnitRef = useRef<HTMLDivElement>(null);
   const currentLessonRef = useRef<HTMLDivElement>(null);
-  const { progress, startLesson, isLessonUnlocked } = useCourseStore();
+  const progress = useCourseStore((s) => s.progress);
+  const startLesson = useCourseStore((s) => s.startLesson);
+  const isLessonUnlocked = useCourseStore((s) => s.isLessonUnlocked);
   const { status } = useSession();
   const router = useRouter();
   const isGuest = status !== 'authenticated';

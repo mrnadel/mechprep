@@ -432,6 +432,7 @@ export const useEngagementStore = create<EngagementStore>()(
             todayD.setUTCDate(todayD.getUTCDate() - 1);
             const yesterdayStr = todayD.toISOString().slice(0, 10);
 
+
             useStore.setState((s) => ({
               progress: {
                 ...s.progress,
