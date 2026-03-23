@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { useSession, useSessionActions } from '@/store/useStore';
+import { useStore, useSession, useSessionActions } from '@/store/useStore';
 import SessionView from '@/components/session/SessionView';
 import type { TopicId } from '@/data/types';
 
@@ -23,32 +23,40 @@ function SmartPracticeInner() {
 
   const topicFilter = searchParams.get('topic') as TopicId | null;
 
-  // Auto-start session on mount — but only once per page lifecycle
   useEffect(() => {
     if (started.current) return;
     started.current = true;
 
-    // If there's already an active session or summary, just show it
+    // Already have an active session or summary — just show it
     if (session || sessionSummary) return;
-
-    // Check if we got here via back button (no session means it was already cleared)
-    // Use navigation type to detect back/forward navigation
-    const navEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
-    const isBackNav = navEntries.length > 0 && navEntries[0].type === 'back_forward';
-    if (isBackNav) {
-      router.replace('/');
-      return;
-    }
 
     startSession('smart-practice', {
       topicId: topicFilter ?? undefined,
     });
+
+    // Check if session was actually created (startSession is sync — store updates immediately)
+    const storeSession = useStore.getState().session;
+    if (!storeSession) {
+      // No questions available or session failed to start — go home
+      router.replace('/');
+    }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Fallback: if we've started but still have no session after mount, redirect
+  useEffect(() => {
+    if (started.current && !session && !sessionSummary) {
+      const timer = setTimeout(() => {
+        if (!useStore.getState().session && !useStore.getState().sessionSummary) {
+          router.replace('/');
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [session, sessionSummary, router]);
 
   if (session || sessionSummary) {
     return <SessionView />;
   }
 
-  // Brief blank while session initializes (typically <1 frame)
   return null;
 }
