@@ -64,12 +64,30 @@ export default function AdminFeedbackPage() {
       });
       fetchData();
     } catch {
-      // Silently fail — data will be stale but consistent on next refresh
+      setError('Failed to dismiss item. Please try again.');
     }
   };
 
-  if (status === 'loading') return <p className="p-10 text-gray-500">Loading...</p>;
-  if (status !== 'authenticated') return <p className="p-10 text-gray-500">Not authenticated</p>;
+  if (status === 'loading') {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="text-center">
+          <div className="w-8 h-8 border-2 border-gray-200 border-t-primary-500 rounded-full animate-spin mx-auto mb-3" />
+          <p className="text-sm text-gray-500">Loading feedback...</p>
+        </div>
+      </div>
+    );
+  }
+  if (status !== 'authenticated') {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="text-center">
+          <p className="text-gray-500 font-semibold">Not authenticated</p>
+          <a href="/login" className="text-primary-600 text-sm font-medium hover:underline mt-1 inline-block">Sign in</a>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>

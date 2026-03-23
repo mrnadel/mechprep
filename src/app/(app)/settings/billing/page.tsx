@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowLeft, Check, X, Sparkles, Loader2, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Check, X, Sparkles, Loader2, ExternalLink, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
@@ -27,12 +27,14 @@ export default function BillingSettingsPage() {
   const { data: session } = useSession();
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const [portalLoading, setPortalLoading] = useState(false);
+  const [billingError, setBillingError] = useState('');
 
   const tierDef = TIERS[tier];
 
   const handleSubscribe = async () => {
     if (!session?.user?.id) return;
     setCheckoutLoading(true);
+    setBillingError('');
     analytics.subscription({ action: 'checkout_initiated', plan: 'pro', interval: 'month', source: 'billing_page' });
     try {
       const res = await fetch('/api/paddle/checkout', {
@@ -40,11 +42,17 @@ export default function BillingSettingsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ priceId: PADDLE_PRICES.PRO_MONTHLY }),
       });
-      if (!res.ok) return;
+      if (!res.ok) {
+        setBillingError('Failed to start checkout. Please try again.');
+        return;
+      }
       const { transactionId } = await res.json();
 
       const paddle = await getPaddle();
-      if (!paddle || !transactionId) return;
+      if (!paddle || !transactionId) {
+        setBillingError('Payment system unavailable. Please try again later.');
+        return;
+      }
 
       // Open checkout using the server-created transaction (price-validated).
       // This prevents client-side price/plan tampering.
@@ -56,6 +64,7 @@ export default function BillingSettingsPage() {
       });
     } catch (err) {
       console.error('Checkout error:', err);
+      setBillingError('Something went wrong. Please try again.');
     } finally {
       setCheckoutLoading(false);
     }
@@ -63,16 +72,23 @@ export default function BillingSettingsPage() {
 
   const handleManageSubscription = async () => {
     setPortalLoading(true);
+    setBillingError('');
     analytics.subscription({ action: 'manage_clicked', plan: tier });
     try {
       const res = await fetch('/api/paddle/portal', { method: 'POST' });
-      if (!res.ok) return;
+      if (!res.ok) {
+        setBillingError('Failed to open subscription portal. Please try again.');
+        return;
+      }
       const { updateUrl } = await res.json();
       if (updateUrl) {
         window.open(updateUrl, '_blank');
+      } else {
+        setBillingError('No subscription portal available.');
       }
     } catch (err) {
       console.error('Portal error:', err);
+      setBillingError('Something went wrong. Please try again.');
     } finally {
       setPortalLoading(false);
     }
@@ -94,6 +110,21 @@ export default function BillingSettingsPage() {
       </div>
 
       <div className="px-4 pt-6 space-y-6 max-w-lg mx-auto">
+        {billingError && (
+          <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-2xl">
+            <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+            <div>
+              <p className="text-sm font-semibold text-red-700">{billingError}</p>
+              <button
+                onClick={() => setBillingError('')}
+                className="text-xs text-red-500 hover:underline mt-1"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Current Plan Card */}
         <div className="bg-white rounded-2xl border border-gray-200 p-5">
           <div className="flex items-center justify-between mb-4">

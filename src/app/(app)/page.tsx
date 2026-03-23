@@ -92,7 +92,31 @@ export default function HomePage() {
     setShownMilestone(null);
   };
 
-  if (status === 'loading') return null;
+  if (status === 'loading') {
+    return (
+      <div className="animate-pulse px-4 py-6 space-y-4">
+        <div className="bg-white rounded-2xl border-2 border-[#E5E5E5] p-4">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl bg-surface-100" />
+            <div className="flex-1">
+              <div className="h-4 w-40 bg-surface-100 rounded-md" />
+              <div className="h-3 w-28 bg-surface-100 rounded-md mt-2" />
+            </div>
+          </div>
+        </div>
+        <div className="bg-white rounded-2xl border-2 border-[#E5E5E5] p-5">
+          <div className="h-5 w-48 bg-surface-100 rounded-md" />
+          <div className="h-3 w-32 bg-surface-100 rounded-md mt-2" />
+          <div className="h-2 w-full bg-surface-100 rounded-full mt-4" />
+        </div>
+        <div className="flex flex-col items-center gap-4 py-4">
+          {[0, 1, 2, 3].map((i) => (
+            <div key={i} className="w-16 h-16 rounded-full bg-surface-100" />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (status === 'unauthenticated') {
     return (

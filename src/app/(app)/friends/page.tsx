@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, Users, Loader2 } from 'lucide-react';
+import { ChevronLeft, Users, Loader2, AlertCircle, RefreshCw } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import InviteShare from '@/components/friends/InviteShare';
 import FriendCard from '@/components/friends/FriendCard';
@@ -20,12 +20,14 @@ export default function FriendsPage() {
 
   const {
     data: friendsData,
+    error: friendsError,
     isLoading: friendsLoading,
     mutate: mutateFriends,
   } = useSWR('/api/friends', fetcher);
 
   const {
     data: requestsData,
+    error: requestsError,
     isLoading: requestsLoading,
     mutate: mutateRequests,
   } = useSWR('/api/friends/requests', fetcher);
@@ -106,6 +108,25 @@ export default function FriendsPage() {
                 <div className="flex justify-center py-10">
                   <Loader2 className="w-6 h-6 animate-spin text-primary-400" />
                 </div>
+              ) : friendsError ? (
+                <div className="card p-8 text-center" style={{ background: '#FEF2F2', borderColor: '#FECACA' }}>
+                  <div className="flex justify-center mb-3">
+                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                      <AlertCircle className="w-6 h-6 text-red-500" />
+                    </div>
+                  </div>
+                  <p className="text-surface-700 font-bold text-sm mb-1">Failed to load friends</p>
+                  <p className="text-surface-400 text-xs mb-3">
+                    Something went wrong. Please try again.
+                  </p>
+                  <button
+                    onClick={() => mutateFriends()}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-surface-200 text-sm font-semibold text-surface-600 hover:bg-surface-50 transition-colors"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" />
+                    Retry
+                  </button>
+                </div>
               ) : friends.length === 0 ? (
                 <div className="card p-8 text-center" style={{ background: '#EEF2FF', borderColor: '#C7D2FE' }}>
                   <div className="flex justify-center mb-3">
@@ -137,6 +158,25 @@ export default function FriendsPage() {
               {requestsLoading ? (
                 <div className="flex justify-center py-10">
                   <Loader2 className="w-6 h-6 animate-spin text-primary-400" />
+                </div>
+              ) : requestsError ? (
+                <div className="card p-8 text-center" style={{ background: '#FEF2F2', borderColor: '#FECACA' }}>
+                  <div className="flex justify-center mb-3">
+                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                      <AlertCircle className="w-6 h-6 text-red-500" />
+                    </div>
+                  </div>
+                  <p className="text-surface-700 font-bold text-sm mb-1">Failed to load requests</p>
+                  <p className="text-surface-400 text-xs mb-3">
+                    Something went wrong. Please try again.
+                  </p>
+                  <button
+                    onClick={() => mutateRequests()}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-surface-200 text-sm font-semibold text-surface-600 hover:bg-surface-50 transition-colors"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" />
+                    Retry
+                  </button>
                 </div>
               ) : incoming.length === 0 && outgoing.length === 0 ? (
                 <div className="card p-8 text-center" style={{ background: '#F0FDF4', borderColor: '#BBF7D0' }}>

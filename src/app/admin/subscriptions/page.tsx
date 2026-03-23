@@ -105,8 +105,26 @@ export default function AdminSubscriptionsPage() {
     })();
   }, [status]);
 
-  if (status === 'loading') return <p style={{ padding: 40 }}>Loading...</p>;
-  if (status !== 'authenticated') return <p style={{ padding: 40 }}>Not authenticated</p>;
+  if (status === 'loading') {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="text-center">
+          <div className="w-8 h-8 border-2 border-gray-200 border-t-indigo-500 rounded-full animate-spin mx-auto mb-3" />
+          <p className="text-sm text-gray-500">Loading subscriptions...</p>
+        </div>
+      </div>
+    );
+  }
+  if (status !== 'authenticated') {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="text-center">
+          <p className="text-gray-500 font-semibold">Not authenticated</p>
+          <a href="/login" className="text-indigo-600 text-sm font-medium hover:underline mt-1 inline-block">Sign in</a>
+        </div>
+      </div>
+    );
+  }
 
   const labelStyle: React.CSSProperties = {
     fontSize: 12,

@@ -31,7 +31,7 @@ function GoogleIcon() {
 
 export default function LoginPage() {
   return (
-    <Suspense>
+    <Suspense fallback={<div className="h-6" />}>
       <LoginPageInner />
     </Suspense>
   );

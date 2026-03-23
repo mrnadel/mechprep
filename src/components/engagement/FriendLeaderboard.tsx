@@ -1,10 +1,14 @@
 'use client';
 
-import { Users } from 'lucide-react';
+import { Users, AlertCircle, RefreshCw } from 'lucide-react';
 import useSWR from 'swr';
 import InviteShare from '@/components/friends/InviteShare';
 
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
+const fetcher = (url: string) =>
+  fetch(url).then((r) => {
+    if (!r.ok) throw new Error(`Request failed: ${r.status}`);
+    return r.json();
+  });
 
 interface LeaderboardEntry {
   id: string;
@@ -15,13 +19,34 @@ interface LeaderboardEntry {
 }
 
 export function FriendLeaderboard() {
-  const { data, isLoading } = useSWR('/api/friends/weekly-xp', fetcher);
+  const { data, error, isLoading, mutate } = useSWR('/api/friends/weekly-xp', fetcher);
   const leaderboard: LeaderboardEntry[] = data?.leaderboard ?? [];
 
   if (isLoading) {
     return (
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex justify-center">
         <div className="w-6 h-6 border-2 border-gray-300 border-t-indigo-500 rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 text-center">
+        <div className="flex justify-center mb-3">
+          <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center">
+            <AlertCircle className="w-6 h-6 text-red-400" />
+          </div>
+        </div>
+        <p className="text-gray-700 font-bold text-sm mb-1">Failed to load leaderboard</p>
+        <p className="text-gray-400 text-xs mb-3">Something went wrong. Please try again.</p>
+        <button
+          onClick={() => mutate()}
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-gray-200 text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors"
+        >
+          <RefreshCw className="w-3.5 h-3.5" />
+          Retry
+        </button>
       </div>
     );
   }

@@ -32,8 +32,14 @@ export default function UserSearch() {
       setLoading(true);
       try {
         const res = await fetch(`/api/user/search?q=${encodeURIComponent(query)}`);
+        if (!res.ok) {
+          setResults([]);
+          return;
+        }
         const data = await res.json();
         setResults(data.users ?? []);
+      } catch {
+        setResults([]);
       } finally {
         setLoading(false);
       }
