@@ -743,8 +743,6 @@ export const useWeeklyQuests = () => useEngagementStore((s) => s.weeklyQuests);
 export const useLeague = () => useEngagementStore((s) => s.league);
 export const useStreakEnhancements = () => useEngagementStore((s) => s.streak);
 export const useComeback = () => useEngagementStore((s) => s.comeback);
-export const useDoubleXpExpiry = () => useEngagementStore((s) => s.doubleXpExpiry);
-
 export const useEngagementActions = () =>
   useEngagementStore(
     useShallow((s) => ({

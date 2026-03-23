@@ -10,7 +10,6 @@ import {
 } from 'react';
 import { motion } from 'framer-motion';
 import type { Question } from '@/data/types';
-import QuestionDiagram from './QuestionDiagram';
 
 /* ── Public imperative handle (matches lesson QuestionCard) ── */
 

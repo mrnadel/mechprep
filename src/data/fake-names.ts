@@ -1,4 +1,4 @@
-export interface FakeName {
+interface FakeName {
   name: string;
   quality: 1 | 2 | 3 | 4 | 5;
 }

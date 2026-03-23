@@ -17,10 +17,6 @@ export function getTotalLessons(): number {
   return course.reduce((sum, unit) => sum + unit.lessons.length, 0);
 }
 
-export function getTotalQuestions(): number {
-  return course.reduce((sum, unit) => sum + unit.lessons.reduce((s, l) => s + l.questions.length, 0), 0);
-}
-
 export function getLessonById(lessonId: string): { unit: Unit; lesson: Lesson; unitIndex: number; lessonIndex: number } | null {
   for (let ui = 0; ui < course.length; ui++) {
     for (let li = 0; li < course[ui].lessons.length; li++) {

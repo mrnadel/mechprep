@@ -4,7 +4,6 @@ import paddle from '@/lib/paddle';
 import { db } from '@/lib/db';
 import { users, subscriptions } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
-import { PADDLE_PRICES } from '@/lib/pricing';
 import { rateLimit, RATE_LIMITS } from '@/lib/rate-limit';
 
 export async function POST(request: NextRequest) {

@@ -2,7 +2,7 @@
 // Server-Side Access Control — MechReady SaaS
 // ============================================================
 
-import { eq, and, sql } from 'drizzle-orm';
+import { eq, and } from 'drizzle-orm';
 import { db } from './db';
 import { subscriptions, dailyUsage } from './db/schema';
 import { LIMITS, PRO_SESSION_TYPES } from './pricing';
@@ -42,19 +42,6 @@ async function getEffectiveTier(userId: string): Promise<SubscriptionTier> {
 }
 
 /**
- * Check if a user can access a specific course unit.
- * Free users: unit 1 only (index 0). Pro: all units.
- */
-export async function canAccessUnit(
-  userId: string,
-  unitIndex: number,
-): Promise<{ allowed: boolean; tier: SubscriptionTier }> {
-  const tier = await getEffectiveTier(userId);
-  const allowed = LIMITS[tier].unlockedUnits.includes(unitIndex);
-  return { allowed, tier };
-}
-
-/**
  * Check if a user can start a practice session.
  * Free users: 5 questions per day. Pro: unlimited.
  */
@@ -73,72 +60,6 @@ export async function canStartPracticeSession(
   const remaining = Math.max(0, limit - used);
 
   return { allowed: remaining > 0, tier, remaining, limit };
-}
-
-/**
- * Check analytics access level.
- */
-export async function canAccessAnalytics(
-  userId: string,
-): Promise<{ fullAccess: boolean; tier: SubscriptionTier }> {
-  const tier = await getEffectiveTier(userId);
-  const fullAccess = tier === 'pro';
-  return { fullAccess, tier };
-}
-
-/**
- * Get remaining daily questions for a user.
- */
-export async function getRemainingDailyQuestions(
-  userId: string,
-): Promise<{ remaining: number; used: number; limit: number; tier: SubscriptionTier }> {
-  const tier = await getEffectiveTier(userId);
-  const limit = LIMITS[tier].dailyQuestions;
-
-  if (limit === -1) {
-    return { remaining: -1, used: 0, limit: -1, tier };
-  }
-
-  const used = await getDailyQuestionsUsed(userId);
-  return { remaining: Math.max(0, limit - used), used, limit, tier };
-}
-
-/**
- * Increment the daily question counter. Call after each question answered.
- */
-export async function incrementDailyUsage(userId: string): Promise<void> {
-  const today = getTodayString();
-
-  // Try atomic increment first (handles the common case without a race condition)
-  const result = await db
-    .update(dailyUsage)
-    .set({
-      questionsUsed: sql`${dailyUsage.questionsUsed} + 1`,
-      updatedAt: new Date(),
-    })
-    .where(and(eq(dailyUsage.userId, userId), eq(dailyUsage.date, today)));
-
-  const rowCount = (result as unknown as { rowCount: number }).rowCount;
-
-  // If no row was updated, this is the first question today — insert
-  if (rowCount === 0) {
-    await db.insert(dailyUsage).values({
-      userId,
-      date: today,
-      questionsUsed: 1,
-    }).onConflictDoNothing();
-
-    // If insert was a no-op (concurrent insert won), do the increment
-    if (rowCount === 0) {
-      await db
-        .update(dailyUsage)
-        .set({
-          questionsUsed: sql`${dailyUsage.questionsUsed} + 1`,
-          updatedAt: new Date(),
-        })
-        .where(and(eq(dailyUsage.userId, userId), eq(dailyUsage.date, today)));
-    }
-  }
 }
 
 /**

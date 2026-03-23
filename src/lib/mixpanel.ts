@@ -20,7 +20,7 @@ export function initMixpanel() {
   initialized = true;
 }
 
-export function trackEvent(event: string, properties?: Record<string, unknown>) {
+function trackEvent(event: string, properties?: Record<string, unknown>) {
   if (!initialized) return;
   mixpanel.track(event, properties);
 }

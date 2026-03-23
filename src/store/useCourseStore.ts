@@ -12,7 +12,7 @@ import type { CourseProgress, ActiveLesson, LessonResult, Unit } from '@/data/co
 import type { AnswerEvent } from '@/data/mastery';
 import type { TopicId } from '@/data/types';
 
-export interface ChapterCompletion {
+interface ChapterCompletion {
   unitIndex: number;
   isGolden: boolean;
 }

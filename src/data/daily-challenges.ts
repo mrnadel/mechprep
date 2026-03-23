@@ -58,14 +58,3 @@ export const dailyChallenges: DailyChallenge[] = [
     questionIds: ['mat-001', 'mat-003', 'mat-007', 'mfg-002', 'mfg-008'],
   },
 ];
-
-// --------------- Helpers ---------------
-
-export function getTodaysChallenge(): DailyChallenge {
-  const dayOfWeek = new Date().getDay();
-  return dailyChallenges.find((c) => c.dayOfWeek === dayOfWeek) ?? dailyChallenges[0];
-}
-
-export function getChallengeByDay(dayOfWeek: number): DailyChallenge {
-  return dailyChallenges.find((c) => c.dayOfWeek === dayOfWeek) ?? dailyChallenges[0];
-}

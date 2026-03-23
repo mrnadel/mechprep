@@ -416,7 +416,7 @@ export const shopItems: ShopItem[] = [
 
 // ─── Reward Frames (not purchasable — earned via league, streaks, achievements) ───
 
-export interface RewardFrame {
+interface RewardFrame {
   id: string;
   name: string;
   icon: string;
@@ -426,7 +426,7 @@ export interface RewardFrame {
   glowColor: string;
 }
 
-export const rewardFrames: RewardFrame[] = [
+const rewardFrames: RewardFrame[] = [
   // League
   { id: 'reward-frame-league-bronze', name: 'Bronze League', icon: '🥉', frameStyle: 'league-bronze', source: 'Start in Bronze League', borderColor: '#CD7F32', glowColor: 'rgba(205,127,50,0.3)' },
   { id: 'reward-frame-league-silver', name: 'Silver League', icon: '🥈', frameStyle: 'league-silver', source: 'Reach Silver League', borderColor: '#C0C0C0', glowColor: 'rgba(192,192,192,0.3)' },
@@ -448,7 +448,7 @@ export const rewardFrames: RewardFrame[] = [
 ];
 
 // Reward titles (not purchasable)
-export const rewardTitles: { id: string; name: string; titleText: string; icon: string; source: string }[] = [
+const rewardTitles: { id: string; name: string; titleText: string; icon: string; source: string }[] = [
   { id: 'reward-title-consistent', name: 'Consistent', titleText: 'Consistent', icon: '⚡', source: '14-day streak' },
   { id: 'reward-title-iron-will', name: 'Iron Will', titleText: 'Iron Will', icon: '🔥', source: '30-day streak' },
   { id: 'reward-title-diamond-mind', name: 'Diamond Mind', titleText: 'Diamond Mind', icon: '💎', source: '60-day streak' },
@@ -485,7 +485,7 @@ export function findTitleById(titleId: string): string | null {
 }
 
 // Helper: get frame visual style from metadata (legacy — use findFrameById instead)
-export function getFrameStyle(frameStyle: string | undefined): { border: string; boxShadow: string } | null {
+function getFrameStyle(frameStyle: string | undefined): { border: string; boxShadow: string } | null {
   if (!frameStyle) return null;
   const item = shopItems.find((i) => i.type === 'frame' && i.metadata?.frameStyle === frameStyle);
   if (item?.metadata) {

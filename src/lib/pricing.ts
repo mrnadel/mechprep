@@ -4,8 +4,6 @@
 
 import type {
   SubscriptionTier,
-  FeatureAccessResult,
-  TierLimitsResult,
 } from './subscription';
 
 // --------------- Paddle Price IDs ---------------
@@ -55,7 +53,7 @@ export const LIMITS = {
 
 // --------------- Tier Definitions ---------------
 
-export interface TierDefinition {
+interface TierDefinition {
   id: SubscriptionTier;
   name: string;
   tagline: string;
@@ -96,88 +94,6 @@ export const TIERS: Record<SubscriptionTier, TierDefinition> = {
     highlighted: true,
   },
 } as const;
-
-// --------------- Pro Trial ---------------
-
-export const PRO_TRIAL_DAYS = 7;
-
-// --------------- Helper Functions ---------------
-
-/**
- * Check whether a given tier has access to a specific feature.
- * During an active trial, the user has Pro-level access.
- */
-export function getFeatureAccess(
-  tier: SubscriptionTier,
-  feature: Feature,
-  options?: { isTrialing?: boolean; dailyQuestionsUsed?: number },
-): FeatureAccessResult {
-  const effectiveTier: SubscriptionTier =
-    options?.isTrialing && tier === 'free' ? 'pro' : tier;
-
-  const tierDef = TIERS[effectiveTier];
-  const included = tierDef.features.includes(feature);
-
-  // Special handling for daily question limits
-  if (feature === FEATURES.UNLIMITED_PRACTICE && !included) {
-    const limit = LIMITS[effectiveTier].dailyQuestions;
-    const used = options?.dailyQuestionsUsed ?? 0;
-    if (limit !== -1 && used >= limit) {
-      return {
-        allowed: false,
-        reason: 'limit_reached',
-        requiredTier: 'pro',
-        currentUsage: used,
-        limit,
-      };
-    }
-    // Under the cap — allow even on free tier
-    return {
-      allowed: true,
-      reason: effectiveTier === tier ? 'included' : 'trial_active',
-      requiredTier: 'pro',
-      currentUsage: used,
-      limit,
-    };
-  }
-
-  if (included) {
-    return {
-      allowed: true,
-      reason: effectiveTier === tier ? 'included' : 'trial_active',
-      requiredTier: tier,
-    };
-  }
-
-  return {
-    allowed: false,
-    reason: 'tier_required',
-    requiredTier: 'pro',
-  };
-}
-
-/**
- * Return concrete limits for a tier (respecting trial state).
- */
-export function getTierLimits(
-  tier: SubscriptionTier,
-  options?: { isTrialing?: boolean },
-): TierLimitsResult {
-  const effectiveTier: SubscriptionTier =
-    options?.isTrialing && tier === 'free' ? 'pro' : tier;
-
-  const limits = LIMITS[effectiveTier];
-  const tierDef = TIERS[effectiveTier];
-
-  return {
-    dailyQuestions: limits.dailyQuestions,
-    practiceModesUnlocked: tierDef.features.includes(FEATURES.ALL_PRACTICE_MODES),
-    fullAnalytics: tierDef.features.includes(FEATURES.FULL_ANALYTICS),
-    streakFreezePerWeek: limits.streakFreezesPerWeek,
-    interviewReadinessScore: tierDef.features.includes(FEATURES.INTERVIEW_READINESS),
-    unlockedUnits: [...limits.unlockedUnits],
-  };
-}
 
 /**
  * Format a price in cents to a display string.

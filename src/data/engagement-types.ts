@@ -4,13 +4,10 @@
 
 // --------------- Constants ---------------
 
-export const FAST_ANSWER_THRESHOLD_MS = 30000;
 export const MAX_STREAK_FREEZES = 2;
 export const MAX_GEM_TRANSACTIONS_CLIENT = 100;
-export const DOUBLE_XP_FREE_DURATION_MS = 10 * 60 * 1000;
 export const DOUBLE_XP_SHOP_DURATION_MS = 30 * 60 * 1000;
 export const COMEBACK_THRESHOLD_DAYS = 3;
-export const STALE_TOPIC_DAYS = 7;
 
 // --------------- Quest Types ---------------
 
@@ -212,27 +209,6 @@ export type NudgeType =
   | 'chest_ready'
   | 'comeback'
   | 'neglected_topic';
-
-export interface NudgeCard {
-  type: NudgeType;
-  title: string;
-  body: string;
-  cta: string;
-  icon: string;
-  dismissible: boolean;
-}
-
-export type HookType =
-  | 'streak_freeze_low'
-  | 'quest_near_complete'
-  | 'league_rank_close'
-  | 'double_xp_active';
-
-export interface ContinuationHook {
-  type: HookType;
-  message: string;
-  urgency: 'low' | 'medium' | 'high';
-}
 
 // --------------- Root Engagement State ---------------
 

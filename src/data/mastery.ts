@@ -11,7 +11,7 @@ export interface AnswerEvent {
   answeredAt: string;
 }
 
-export interface MasteryScore {
+interface MasteryScore {
   topicId: TopicId;
   score: number;
   level: MasteryLevel;
@@ -19,7 +19,7 @@ export interface MasteryScore {
   lastPracticed: string | null;
 }
 
-export type MasteryLevel = 'strong' | 'developing' | 'needs-work' | 'not-started';
+type MasteryLevel = 'strong' | 'developing' | 'needs-work' | 'not-started';
 
 const HALF_LIFE_DAYS = 14;
 const CONFIDENCE_THRESHOLD = 8;
@@ -29,7 +29,7 @@ const DIFFICULTY_WEIGHTS: Record<Difficulty, number> = {
   advanced: 1.5,
 };
 
-export function computeMastery(events: AnswerEvent[]): number {
+function computeMastery(events: AnswerEvent[]): number {
   if (events.length === 0) return 0;
 
   const now = Date.now();
@@ -52,7 +52,7 @@ export function computeMastery(events: AnswerEvent[]): number {
   return Math.round(rawAccuracy * confidence * 100);
 }
 
-export function getMasteryLevel(score: number, eventCount: number): MasteryLevel {
+function getMasteryLevel(score: number, eventCount: number): MasteryLevel {
   if (eventCount === 0) return 'not-started';
   if (score >= 75) return 'strong';
   if (score >= 40) return 'developing';

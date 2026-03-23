@@ -16,7 +16,7 @@ import { useCourseStore } from '@/store/useCourseStore';
 // --- Session Types ---
 export type SessionType = 'adaptive' | 'topic-deep-dive' | 'interview-sim' | 'daily-challenge' | 'real-world' | 'weak-areas' | 'smart-practice';
 
-export interface ActiveSession {
+interface ActiveSession {
   type: SessionType;
   topicId?: TopicId;
   difficulty?: Difficulty;
@@ -53,7 +53,6 @@ interface AppState {
   sessionSummary: SessionSummary | null;
 
   // UI State
-  sidebarOpen: boolean;
   showAchievementToast: string | null;
 
   // Actions — Content
@@ -79,8 +78,6 @@ interface AppState {
   }) => void;
 
   // Actions — UI
-  toggleSidebar: () => void;
-  setSidebarOpen: (open: boolean) => void;
   dismissAchievementToast: () => void;
 }
 
@@ -436,7 +433,6 @@ export const useStore = create<AppState>()(
       questions: allQuestions as Question[],
       session: null,
       sessionSummary: null,
-      sidebarOpen: false,
       showAchievementToast: null,
 
       setQuestions: (questions: Question[]) => set({ questions }),
@@ -662,14 +658,6 @@ export const useStore = create<AppState>()(
         set({ progress: newProgress });
       },
 
-      toggleSidebar: () => {
-        set(state => ({ sidebarOpen: !state.sidebarOpen }));
-      },
-
-      setSidebarOpen: (open) => {
-        set({ sidebarOpen: open });
-      },
-
       dismissAchievementToast: () => {
         set({ showAchievementToast: null });
       },
@@ -717,9 +705,4 @@ export const useSessionActions = () => useStore(useShallow(s => ({
   prevQuestion: s.prevQuestion,
   completeSession: s.completeSession,
   abandonSession: s.abandonSession,
-})));
-export const useSidebar = () => useStore(useShallow(s => ({
-  sidebarOpen: s.sidebarOpen,
-  toggleSidebar: s.toggleSidebar,
-  setSidebarOpen: s.setSidebarOpen,
 })));

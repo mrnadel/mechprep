@@ -17,18 +17,6 @@ export const registerSchema = z.object({
     .max(50, 'Display name must be at most 50 characters'),
 });
 
-export const loginSchema = z.object({
-  email: z.string().email('Invalid email format'),
-  password: z.string().min(1, 'Password is required'),
-});
-
-export const profileUpdateSchema = z.object({
-  displayName: z
-    .string()
-    .min(2, 'Display name must be at least 2 characters')
-    .max(50, 'Display name must be at most 50 characters'),
-});
-
 export const changePasswordSchema = z.object({
   currentPassword: z.string().min(1, 'Current password is required'),
   newPassword: passwordSchema,

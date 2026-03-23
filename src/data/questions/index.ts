@@ -25,18 +25,6 @@ export const allQuestions: Question[] = [
   ...realWorldMechanismsQuestions,
 ];
 
-export function getQuestionsByTopic(topicId: string): Question[] {
-  return allQuestions.filter(q => q.topic === topicId);
-}
-
-export function getQuestionsByDifficulty(difficulty: string): Question[] {
-  return allQuestions.filter(q => q.difficulty === difficulty);
-}
-
-export function getQuestionsByType(type: string): Question[] {
-  return allQuestions.filter(q => q.type === type);
-}
-
 export function getQuestionById(id: string): Question | undefined {
   return allQuestions.find(q => q.id === id);
 }

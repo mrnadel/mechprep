@@ -18,7 +18,7 @@
  *   - Title block / PE seal              (Interview Prep)
  */
 
-export interface BlueprintPath {
+interface BlueprintPath {
   d: string;
   strokeWidth?: number;
   label?: string;
@@ -31,7 +31,7 @@ export interface DimensionLine {
   offset?: number;
 }
 
-export interface BlueprintData {
+interface BlueprintData {
   name: string;
   title: string;
   paths: BlueprintPath[];

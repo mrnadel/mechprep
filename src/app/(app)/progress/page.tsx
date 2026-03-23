@@ -6,7 +6,6 @@ import { topics } from '@/data/topics';
 import { FEATURES } from '@/lib/pricing';
 import { BarChart3, Target, TrendingUp, Brain, Zap } from 'lucide-react';
 import { UpgradeGate } from '@/components/ui/UpgradeGate';
-import { cn } from '@/lib/utils';
 
 export default function ProgressPage() {
   const progress = useProgress();

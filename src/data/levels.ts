@@ -35,7 +35,7 @@ export const levels: Level[] = [
 
 // --------------- Helper functions ---------------
 
-export function getLevelForXp(totalXp: number): Level {
+function getLevelForXp(totalXp: number): Level {
   let current = levels[0];
   for (const level of levels) {
     if (totalXp >= level.xpRequired) {

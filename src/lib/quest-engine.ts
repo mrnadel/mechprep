@@ -10,9 +10,7 @@ import { dailyQuestPool, weeklyQuestPool } from '@/data/quests';
 // Debug day offset — admin "Skip day" increments this so
 // getTodayDate / getCurrentWeekMonday advance without waiting.
 let _debugDayOffset = 0;
-export function getDebugDayOffset() { return _debugDayOffset; }
-export function addDebugDayOffset(days: number) { _debugDayOffset += days; }
-export function resetDebugDayOffset() { _debugDayOffset = 0; }
+function getDebugDayOffset() { return _debugDayOffset; }
 
 function getSimulatedNow(): Date {
   const d = new Date();
@@ -36,7 +34,7 @@ export function getCurrentWeekMonday(): string {
 
 // --------------- Hash Utility ---------------
 
-export function hashString(str: string): number {
+function hashString(str: string): number {
   let hash = 2166136261; // FNV-1a offset basis (32-bit)
   for (let i = 0; i < str.length; i++) {
     hash ^= str.charCodeAt(i);
@@ -52,7 +50,7 @@ export function hashString(str: string): number {
  * Filters out quests whose IDs are in `lastIds`.
  * Ensures difficulty balance: at least 1 easy, at least 1 stretch if available.
  */
-export function selectQuests(
+function selectQuests(
   pool: QuestDefinition[],
   count: number,
   dateSeed: string,
@@ -134,11 +132,11 @@ export function createQuests(
 
 // --------------- Reset Detection ---------------
 
-export function needsDailyReset(storedDate: string | null): boolean {
+function needsDailyReset(storedDate: string | null): boolean {
   return storedDate !== getTodayDate();
 }
 
-export function needsWeeklyReset(storedMonday: string | null): boolean {
+function needsWeeklyReset(storedMonday: string | null): boolean {
   return storedMonday !== getCurrentWeekMonday();
 }
 

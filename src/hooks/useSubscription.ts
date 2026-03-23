@@ -4,7 +4,7 @@ import { useEffect, useCallback } from 'react';
 import { create } from 'zustand';
 import { useSession } from 'next-auth/react';
 import type { SubscriptionTier, SubscriptionStatus } from '@/lib/subscription';
-import { FEATURES, LIMITS, type Feature } from '@/lib/pricing';
+import { FEATURES, type Feature } from '@/lib/pricing';
 
 // ─── Subscription Store ─────────────────────────────────────────
 

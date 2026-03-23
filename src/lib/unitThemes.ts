@@ -5,7 +5,7 @@ export interface UnitTheme {
   mid: string;
 }
 
-export const UNIT_THEMES: UnitTheme[] = [
+const UNIT_THEMES: UnitTheme[] = [
   { bg: '#E8F8D4', color: '#58CC02', dark: '#3B8700', mid: '#58A617' },
   { bg: '#F3E6FF', color: '#CE82FF', dark: '#7B2FBE', mid: '#9E5DD0' },
   { bg: '#FFF0DB', color: '#FF9600', dark: '#B56E00', mid: '#CC8B1F' },

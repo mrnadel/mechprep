@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Crown } from 'lucide-react';
 import { getFakeUserById } from '@/lib/fake-user-generator';
 import { getFakeAvatarUrl, getInitialsColor } from '@/lib/fake-avatar';
-import { getLevelForXp, getXpToNextLevel } from '@/data/levels';
+import { getXpToNextLevel } from '@/data/levels';
 import { leagueTiers } from '@/data/league';
 import { achievements } from '@/data/achievements';
 import { AvatarFrame } from '@/components/ui/AvatarFrame';

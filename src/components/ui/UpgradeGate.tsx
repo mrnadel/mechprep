@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, type ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Lock, Sparkles } from 'lucide-react';
 import { useSubscription } from '@/hooks/useSubscription';
 import { UpgradeModal } from './UpgradeModal';

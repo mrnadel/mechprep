@@ -11,7 +11,7 @@ interface IllustrationProps {
 }
 
 /* ─── Unit 1: Statics — Truss / Bridge ─── */
-export function StaticsIllustration({ color, className }: IllustrationProps) {
+function StaticsIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Ground */}
@@ -40,7 +40,7 @@ export function StaticsIllustration({ color, className }: IllustrationProps) {
 }
 
 /* ─── Unit 2: Dynamics — Moving Car / Velocity ─── */
-export function DynamicsIllustration({ color, className }: IllustrationProps) {
+function DynamicsIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Road */}
@@ -75,7 +75,7 @@ export function DynamicsIllustration({ color, className }: IllustrationProps) {
 }
 
 /* ─── Unit 3: Strength of Materials — Beam Bending ─── */
-export function StrengthIllustration({ color, className }: IllustrationProps) {
+function StrengthIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Supports */}
@@ -102,7 +102,7 @@ export function StrengthIllustration({ color, className }: IllustrationProps) {
 }
 
 /* ─── Unit 4: Thermodynamics — Engine / Piston ─── */
-export function ThermoIllustration({ color, className }: IllustrationProps) {
+function ThermoIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Cylinder */}
@@ -131,7 +131,7 @@ export function ThermoIllustration({ color, className }: IllustrationProps) {
 }
 
 /* ─── Unit 5: Heat Transfer — Conduction / Radiation ─── */
-export function HeatTransferIllustration({ color, className }: IllustrationProps) {
+function HeatTransferIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Hot side */}
@@ -159,7 +159,7 @@ export function HeatTransferIllustration({ color, className }: IllustrationProps
 }
 
 /* ─── Unit 6: Fluid Mechanics — Pipe Flow ─── */
-export function FluidsIllustration({ color, className }: IllustrationProps) {
+function FluidsIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Pipe */}
@@ -188,7 +188,7 @@ export function FluidsIllustration({ color, className }: IllustrationProps) {
 }
 
 /* ─── Unit 7: Materials — Crystal / Atom Structure ─── */
-export function MaterialsIllustration({ color, className }: IllustrationProps) {
+function MaterialsIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Crystal lattice - atoms */}
@@ -220,7 +220,7 @@ export function MaterialsIllustration({ color, className }: IllustrationProps) {
 }
 
 /* ─── Unit 8: Machine Elements — Gear ─── */
-export function MachineElementsIllustration({ color, className }: IllustrationProps) {
+function MachineElementsIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Large gear */}
@@ -263,7 +263,7 @@ export function MachineElementsIllustration({ color, className }: IllustrationPr
 }
 
 /* ─── Unit 9: GD&T — Dimension Lines ─── */
-export function GDTIllustration({ color, className }: IllustrationProps) {
+function GDTIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Part outline */}
@@ -296,7 +296,7 @@ export function GDTIllustration({ color, className }: IllustrationProps) {
 }
 
 /* ─── Unit 10: Interview Prep — Person / Briefcase ─── */
-export function InterviewIllustration({ color, className }: IllustrationProps) {
+function InterviewIllustration({ color, className }: IllustrationProps) {
   return (
     <svg viewBox="0 0 200 140" fill="none" className={className}>
       {/* Person - head */}

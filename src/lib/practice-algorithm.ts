@@ -134,13 +134,13 @@ function adaptCourseQuestions(courseData: Unit[]): { question: Question; lessonI
 
 // --- Main Selection Function ---
 
-export interface SmartPracticeOptions {
+interface SmartPracticeOptions {
   topicId?: TopicId;
   subtopic?: string;
   count?: number;
 }
 
-export interface SelectedQuestion {
+interface SelectedQuestion {
   question: Question;
   sourceType: 'practice' | 'course';
   courseLessonId?: string;
