@@ -2,7 +2,7 @@
 
 import { create } from 'zustand';
 import { persist, subscribeWithSelector } from 'zustand/middleware';
-import { course } from '@/data/course';
+import { courseMeta, loadUnitData } from '@/data/course/course-meta';
 import { topics } from '@/data/topics';
 import { shuffleArray } from '@/lib/utils';
 import { LIMITS } from '@/lib/pricing';
@@ -105,7 +105,7 @@ export const useCourseStore = create<CourseState>()(
   persist(
     (set, get) => ({
       progress: getDefaultProgress(),
-      courseData: course as Unit[],
+      courseData: courseMeta as Unit[],
       activeLesson: null,
       lessonResult: null,
       chapterJustCompleted: null,
@@ -128,6 +128,21 @@ export const useCourseStore = create<CourseState>()(
 
         const unit = get().courseData[unitIndex];
         const lesson = unit.lessons[lessonIndex];
+
+        // If questions are not loaded yet (lightweight metadata), load the
+        // full unit data dynamically and then retry.
+        if (lesson.questions.length === 0) {
+          loadUnitData(unitIndex).then((fullUnit) => {
+            // Patch courseData with the loaded unit
+            const updated = [...get().courseData];
+            updated[unitIndex] = fullUnit;
+            set({ courseData: updated });
+            // Retry with full data now available
+            get().startLesson(unitIndex, lessonIndex, golden);
+          });
+          return;
+        }
+
         const allIds = lesson.questions.map((q) => q.id);
         const isGolden = golden === true;
         const existing = get().progress.completedLessons[lesson.id];
@@ -432,11 +447,22 @@ export const useCourseStore = create<CourseState>()(
       },
 
       debugSetProgress: (lessonCount: number) => {
+        // Load all unit data before running debug — units may still be lightweight metadata
+        const courseData = get().courseData;
+        const needsLoad = courseData.some(u => u.lessons.some(l => l.questions.length === 0));
+        if (needsLoad) {
+          Promise.all(courseData.map((_, i) => loadUnitData(i))).then((fullUnits) => {
+            set({ courseData: fullUnits });
+            // Retry with full data
+            get().debugSetProgress(lessonCount);
+          });
+          return;
+        }
+
         const completedLessons: CourseProgress['completedLessons'] = {};
         let xp = 0;
         let count = 0;
         const today = getTodayString();
-        const courseData = get().courseData;
 
         // Track per-topic question counts for downstream stores
         const topicCounts: Record<string, { attempted: number; correct: number }> = {};

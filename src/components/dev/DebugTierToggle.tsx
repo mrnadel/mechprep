@@ -4,7 +4,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { useSubscriptionStore } from '@/hooks/useSubscription';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
-import { getTotalLessons } from '@/data/course';
+import { getTotalLessonsMeta } from '@/data/course/course-meta';
 import { leagueTiers } from '@/data/league';
 import type { SubscriptionTier } from '@/lib/subscription';
 
@@ -47,7 +47,7 @@ export function DebugTierToggle() {
   const { debugTierOverride, setDebugTierOverride } = useSubscriptionStore();
   const completedCount = useCourseStore((s) => Object.keys(s.progress.completedLessons).length);
   const debugSetProgress = useCourseStore((s) => s.debugSetProgress);
-  const totalLessons = getTotalLessons();
+  const totalLessons = getTotalLessonsMeta();
   const [sliderValue, setSliderValue] = useState<number | null>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const commitProgress = useCallback((value: number) => {

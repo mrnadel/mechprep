@@ -3,7 +3,6 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
-import { course } from '@/data/course';
 import { getUnitTheme } from '@/lib/unitThemes';
 import { useBackHandler } from '@/hooks/useBackHandler';
 import LessonProgressBar from './LessonProgressBar';
@@ -38,14 +37,16 @@ export default function LessonView() {
     }
   }, [lessonResult, syncMastery]);
 
+  const courseData = useCourseStore((s) => s.courseData);
+
   const lessonData = useMemo(() => {
     if (!activeLesson) return null;
-    const unit = course[activeLesson.unitIndex];
+    const unit = courseData[activeLesson.unitIndex];
     if (!unit) return null;
     const lesson = unit.lessons[activeLesson.lessonIndex];
     if (!lesson) return null;
     return { unit, lesson };
-  }, [activeLesson]);
+  }, [activeLesson, courseData]);
 
   const theme = useMemo(() => {
     if (!activeLesson) return getUnitTheme(0);
