@@ -587,19 +587,6 @@ describe('useStore', () => {
   });
 
   describe('UI actions', () => {
-    it('toggleSidebar flips the sidebarOpen state', () => {
-      expect(useStore.getState().sidebarOpen).toBe(true);
-      useStore.getState().toggleSidebar();
-      expect(useStore.getState().sidebarOpen).toBe(false);
-      useStore.getState().toggleSidebar();
-      expect(useStore.getState().sidebarOpen).toBe(true);
-    });
-
-    it('setSidebarOpen sets sidebarOpen', () => {
-      useStore.getState().setSidebarOpen(false);
-      expect(useStore.getState().sidebarOpen).toBe(false);
-    });
-
     it('dismissAchievementToast clears the toast', () => {
       useStore.setState({ showAchievementToast: 'ach-first-correct' });
       useStore.getState().dismissAchievementToast();

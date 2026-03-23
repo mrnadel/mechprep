@@ -79,9 +79,9 @@ const SAMPLE_QUESTIONS = [
 ];
 
 const FEATURES = [
-  { icon: BookOpen, label: 'Bite-sized lessons', color: 'text-blue-500' },
-  { icon: Zap, label: 'Real interview Qs', color: 'text-amber-500' },
-  { icon: Trophy, label: 'Track progress', color: 'text-emerald-500' },
+  { icon: BookOpen, label: 'Bite-sized lessons', color: 'text-primary-500' },
+  { icon: Zap, label: 'Real interview Qs', color: 'text-[#58CC02]' },
+  { icon: Trophy, label: 'Track progress', color: 'text-primary-400' },
 ];
 
 /* ─── Animation Variants ─── */
@@ -120,7 +120,7 @@ function PasswordStrength({ password }: { password: string }) {
             className={cn(
               'h-1.5 sm:h-1 flex-1 rounded-full transition-colors',
               i <= score
-                ? score === 3 ? 'bg-[#58CC02]' : score === 2 ? 'bg-amber-400' : 'bg-red-400'
+                ? score === 3 ? 'bg-[#58CC02]' : score === 2 ? 'bg-primary-400' : 'bg-red-400'
                 : 'bg-gray-200'
             )}
           />
@@ -360,7 +360,7 @@ export default function GetStartedPage() {
                     ].map((spark, i) => (
                       <motion.div
                         key={i}
-                        className="absolute text-amber-400"
+                        className="absolute text-primary-400"
                         style={{ left: spark.x, top: spark.y }}
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: [0, 1, 0.6, 1], scale: 1 }}
@@ -555,11 +555,11 @@ export default function GetStartedPage() {
                       'p-4 rounded-xl mb-5',
                       sampleAnswer === sampleQuestion.correctAnswer
                         ? 'bg-[#58CC02]/10 border border-[#58CC02]/20'
-                        : 'bg-amber-50 border border-amber-200'
+                        : 'bg-primary-50 border border-primary-200'
                     )}>
                       <p className={cn(
                         'font-black text-sm mb-1',
-                        sampleAnswer === sampleQuestion.correctAnswer ? 'text-[#58CC02]' : 'text-amber-600'
+                        sampleAnswer === sampleQuestion.correctAnswer ? 'text-[#58CC02]' : 'text-primary-600'
                       )}>
                         {sampleAnswer === sampleQuestion.correctAnswer ? '🎉 Correct!' : '💡 Good try!'}
                       </p>
@@ -727,7 +727,7 @@ export default function GetStartedPage() {
                 ].map((spark, i) => (
                   <motion.div
                     key={i}
-                    className="absolute text-amber-400"
+                    className="absolute text-primary-400"
                     style={{ left: spark.x, top: spark.y }}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
