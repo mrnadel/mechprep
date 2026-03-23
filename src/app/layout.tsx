@@ -23,7 +23,12 @@ export const metadata: Metadata = {
   description: 'Sharpen your mechanical engineering skills with gamified, interview-focused practice. Adaptive questions, real-world mechanisms, and smart feedback.',
   metadataBase: new URL('https://mechready.com'),
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
   openGraph: {
@@ -33,9 +38,11 @@ export const metadata: Metadata = {
     siteName: 'MechReady',
     type: 'website',
     locale: 'en_US',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary',
+    images: ['/og-image.png'],
     title: 'MechReady — ME Interview Training',
     description: 'Gamified mechanical engineering interview prep. 1,700+ questions, adaptive practice, and smart feedback.',
   },

@@ -97,7 +97,9 @@ export function LandingPage() {
           <Link href="/" style={{
             fontSize: 24, fontWeight: 900, color: '#6366F1',
             letterSpacing: -0.5, textDecoration: 'none',
+            display: 'flex', alignItems: 'center', gap: 10,
           }}>
+            <img src="/icon-48.png" alt="" width={32} height={32} style={{ borderRadius: 10 }} />
             MechReady
           </Link>
           <Link href="/login" style={{
@@ -525,7 +527,8 @@ export function LandingPage() {
       <footer style={{ padding: '40px 24px', borderTop: '1px solid #E2E8F0', textAlign: 'center' }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <p>
-            <Link href="/" style={{ fontSize: 20, fontWeight: 900, color: '#6366F1', letterSpacing: -0.5, textDecoration: 'none' }}>
+            <Link href="/" style={{ fontSize: 20, fontWeight: 900, color: '#6366F1', letterSpacing: -0.5, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+              <img src="/icon-48.png" alt="" width={26} height={26} style={{ borderRadius: 8 }} />
               MechReady
             </Link>
           </p>

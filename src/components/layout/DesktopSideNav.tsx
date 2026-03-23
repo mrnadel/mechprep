@@ -23,7 +23,8 @@ export default function DesktopSideNav() {
       className="hidden lg:flex flex-col w-56 shrink-0 bg-[#FAFAFA] h-screen sticky top-0"
       aria-label="Desktop navigation"
     >
-      <div className="px-5 py-5">
+      <div className="px-5 py-5 flex items-center gap-2.5">
+        <img src="/icon-48.png" alt="" width={28} height={28} className="rounded-lg" />
         <p className="text-lg font-black text-surface-800">MechReady</p>
       </div>
 
