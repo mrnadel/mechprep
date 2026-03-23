@@ -42,7 +42,7 @@ export function QuestBoard() {
   const dailyChestClaimed = useEngagementStore((s) => s.dailyChestClaimed);
   const weeklyChestClaimed = useEngagementStore((s) => s.weeklyChestClaimed);
 
-  const [weeklyExpanded, setWeeklyExpanded] = useState(false);
+  const [weeklyExpanded, setWeeklyExpanded] = useState(true);
   const [chestOpen, setChestOpen] = useState<{ type: 'daily' | 'weekly'; reward: { xp: number; gems: number } } | null>(null);
 
   const timeLeft = useMidnightCountdown();
