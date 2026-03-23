@@ -23,21 +23,26 @@ function SmartPracticeInner() {
 
   const topicFilter = searchParams.get('topic') as TopicId | null;
 
-  // Auto-start session on mount — questions are selected from course data inside startSession
+  // Auto-start session on mount — but only once per page lifecycle
   useEffect(() => {
-    if (started.current || session || sessionSummary) return;
+    if (started.current) return;
     started.current = true;
+
+    // If there's already an active session or summary, just show it
+    if (session || sessionSummary) return;
+
+    // Check if we got here via back button (no session means it was already cleared)
+    // Use navigation type to detect back/forward navigation
+    const navEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
+    const isBackNav = navEntries.length > 0 && navEntries[0].type === 'back_forward';
+    if (isBackNav) {
+      router.replace('/');
+      return;
+    }
 
     startSession('smart-practice', {
       topicId: topicFilter ?? undefined,
     });
-
-    // If startSession produced no session (no questions), redirect
-    setTimeout(() => {
-      const s = useSession;
-      if (!started.current) return;
-      // Session was set synchronously by startSession, so check right away via store
-    }, 0);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (session || sessionSummary) {

@@ -29,6 +29,7 @@ export function PracticeCard() {
     <div className="px-3 sm:px-4" style={{ paddingTop: 12 }}>
       <Link
         href="/practice/smart"
+        replace
         className="block transition-transform active:scale-[0.98]"
         style={{
           borderRadius: 24,
