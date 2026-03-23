@@ -38,6 +38,11 @@ export function resetUser() {
   mixpanel.reset();
 }
 
+export function setSuperProperties(props: Record<string, unknown>) {
+  if (!initialized) return;
+  mixpanel.register(props);
+}
+
 // Lean event model — few events, rich properties
 export const analytics = {
   // Fires once when a practice session ends (completed or abandoned)
@@ -64,17 +69,35 @@ export const analytics = {
     trackEvent('milestone', props);
   },
 
-  // Fires on subscription changes
+  // Fires on subscription changes (client-side: checkout initiated, page viewed)
   subscription(props: {
-    action: 'started' | 'cancelled' | 'upgraded' | 'downgraded';
+    action: 'checkout_initiated' | 'checkout_success' | 'manage_clicked';
     plan: string;
     interval?: string;
+    source?: string;
   }) {
     trackEvent('subscription', props);
+  },
+
+  // Fires on auth events
+  auth(props: {
+    action: 'signup' | 'login' | 'logout';
+    method: 'credentials' | 'google';
+  }) {
+    trackEvent('auth', props);
   },
 
   // Fires when user engages with a specific feature
   feature(name: string, details?: Record<string, unknown>) {
     trackEvent('feature', { name, ...details });
+  },
+
+  // Fires on errors that impact user experience
+  error(props: {
+    action: string;
+    message: string;
+    source?: string;
+  }) {
+    trackEvent('error', props);
   },
 };

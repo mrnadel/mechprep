@@ -4,6 +4,7 @@ import { useState, Suspense } from 'react';
 import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { analytics } from '@/lib/mixpanel';
 
 function GoogleIcon() {
   return (
@@ -61,6 +62,7 @@ function LoginPageInner() {
       setError('Invalid email or password');
       setLoading(false);
     } else {
+      analytics.auth({ action: 'login', method: 'credentials' });
       router.push(callbackUrl);
       router.refresh();
     }
@@ -68,6 +70,7 @@ function LoginPageInner() {
 
   const handleGoogleSignIn = () => {
     setGoogleLoading(true);
+    analytics.auth({ action: 'login', method: 'google' });
     signIn('google', { callbackUrl });
   };
 

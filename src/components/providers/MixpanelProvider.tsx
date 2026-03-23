@@ -2,8 +2,9 @@
 
 import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
-import { initMixpanel, identifyUser, resetUser, analytics } from '@/lib/mixpanel';
+import { initMixpanel, identifyUser, resetUser, setSuperProperties, analytics } from '@/lib/mixpanel';
 import { useStore } from '@/store/useStore';
+import { useSubscriptionStore } from '@/hooks/useSubscription';
 
 const CONSENT_KEY = 'mechready-cookie-consent';
 
@@ -44,6 +45,15 @@ export default function MixpanelProvider({ children }: { children: React.ReactNo
       resetUser();
     }
   }, [session, status]);
+
+  // Set super properties so every event includes subscription tier
+  const subTier = useSubscriptionStore((s) => s.tier);
+  const subFetched = useSubscriptionStore((s) => s.hasFetched);
+  useEffect(() => {
+    if (subFetched) {
+      setSuperProperties({ plan: subTier });
+    }
+  }, [subTier, subFetched]);
 
   // Track session abandoned via Zustand subscribe
   // (session completed is tracked in SessionSummary)

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { analytics } from '@/lib/mixpanel';
 
 function GoogleIcon() {
   return (
@@ -101,6 +102,8 @@ export default function RegisterPage() {
         return;
       }
 
+      analytics.auth({ action: 'signup', method: 'credentials' });
+
       const result = await signIn('credentials', {
         email,
         password,
@@ -116,12 +119,14 @@ export default function RegisterPage() {
       }
     } catch {
       setError('Something went wrong. Please try again.');
+      analytics.error({ action: 'signup', message: 'Registration request failed', source: 'register_page' });
       setLoading(false);
     }
   };
 
   const handleGoogleSignIn = () => {
     setGoogleLoading(true);
+    analytics.auth({ action: 'signup', method: 'google' });
     signIn('google', { callbackUrl: '/' });
   };
 

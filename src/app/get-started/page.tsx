@@ -12,6 +12,7 @@ import {
   Loader2,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { analytics } from '@/lib/mixpanel';
 import Link from 'next/link';
 
 /* ─── Constants ─── */
@@ -200,6 +201,8 @@ export default function GetStartedPage() {
         return;
       }
 
+      analytics.auth({ action: 'signup', method: 'credentials' });
+
       const result = await signIn('credentials', {
         email,
         password,
@@ -215,18 +218,21 @@ export default function GetStartedPage() {
       }
     } catch {
       setError('Something went wrong. Please try again.');
+      analytics.error({ action: 'signup', message: 'Registration request failed', source: 'get_started' });
       setLoading(false);
     }
   };
 
   const handleGoogleSignIn = () => {
     setGoogleLoading(true);
+    analytics.auth({ action: 'signup', method: 'google' });
     signIn('google', { callbackUrl: '/' });
   };
 
   const completeOnboarding = () => {
     if (navigating) return;
     setNavigating(true);
+    analytics.milestone({ type: 'onboarding_completed' });
     window.location.href = '/';
   };
 

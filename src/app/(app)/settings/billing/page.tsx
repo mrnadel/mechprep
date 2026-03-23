@@ -9,6 +9,7 @@ import { TIERS, FEATURES, PADDLE_PRICES, type Feature } from '@/lib/pricing';
 import { useSubscription } from '@/hooks/useSubscription';
 import { cn } from '@/lib/utils';
 import { getPaddle } from '@/lib/paddle-client';
+import { analytics } from '@/lib/mixpanel';
 
 const FEATURE_LABELS: Record<Feature, string> = {
   [FEATURES.UNIT_ACCESS_ALL]: 'All course units',
@@ -32,6 +33,7 @@ export default function BillingSettingsPage() {
   const handleSubscribe = async () => {
     if (!session?.user?.id) return;
     setCheckoutLoading(true);
+    analytics.subscription({ action: 'checkout_initiated', plan: 'pro', interval: 'month', source: 'billing_page' });
     try {
       const res = await fetch('/api/paddle/checkout', {
         method: 'POST',
@@ -60,6 +62,7 @@ export default function BillingSettingsPage() {
 
   const handleManageSubscription = async () => {
     setPortalLoading(true);
+    analytics.subscription({ action: 'manage_clicked', plan: tier });
     try {
       const res = await fetch('/api/paddle/portal', { method: 'POST' });
       if (!res.ok) return;

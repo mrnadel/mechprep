@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Check, Lock, Sparkles, Loader2 } from 'lucide-react';
 import { useSession } from 'next-auth/react';
 import { cn } from '@/lib/utils';
 import { PADDLE_PRICES } from '@/lib/pricing';
 import { getPaddle } from '@/lib/paddle-client';
+import { analytics } from '@/lib/mixpanel';
 
 interface UpgradeModalProps {
   isOpen: boolean;
@@ -18,9 +19,17 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
   const [loading, setLoading] = useState(false);
   const { data: session } = useSession();
 
+  // Track when the upgrade modal is shown
+  useEffect(() => {
+    if (isOpen) {
+      analytics.feature('upgrade_modal_shown', { reason });
+    }
+  }, [isOpen, reason]);
+
   const handleSubscribe = async () => {
     if (!session?.user?.id) return;
     setLoading(true);
+    analytics.subscription({ action: 'checkout_initiated', plan: 'pro', interval: 'month', source: 'upgrade_modal' });
     try {
       const res = await fetch('/api/paddle/checkout', {
         method: 'POST',
@@ -43,6 +52,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
       onClose();
     } catch (err) {
       console.error('Checkout error:', err);
+      analytics.error({ action: 'checkout', message: 'Checkout failed', source: 'upgrade_modal' });
     } finally {
       setLoading(false);
     }

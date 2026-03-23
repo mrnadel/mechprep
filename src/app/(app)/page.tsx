@@ -18,6 +18,7 @@ import { useStore } from '@/store/useStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
 import { streakMilestones } from '@/data/streak-milestones';
 import { PracticeCard } from '@/components/course/PracticeCard';
+import { analytics } from '@/lib/mixpanel';
 
 export default function HomePage() {
   const { status } = useSession();
@@ -47,6 +48,7 @@ export default function HomePage() {
 
   const handleMilestoneClose = () => {
     if (unclaimedMilestone) {
+      analytics.milestone({ type: 'streak', name: `${unclaimedMilestone.days}_day_streak`, value: unclaimedMilestone.days });
       addGems(unclaimedMilestone.gems, `streak_milestone_${unclaimedMilestone.days}`);
 
       // Grant milestone frame + title to inventory

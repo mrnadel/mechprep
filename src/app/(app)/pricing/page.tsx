@@ -23,6 +23,7 @@ import { PADDLE_PRICES, formatPrice, getYearlySavingsPercent, TIERS } from '@/li
 import { useSubscription } from '@/hooks/useSubscription';
 import { cn } from '@/lib/utils';
 import { getPaddle } from '@/lib/paddle-client';
+import { analytics } from '@/lib/mixpanel';
 import Link from 'next/link';
 
 const PRO_FEATURES = [
@@ -108,6 +109,12 @@ export default function PricingPage() {
 
     setCheckoutLoading(true);
     setCheckoutError('');
+    analytics.subscription({
+      action: 'checkout_initiated',
+      plan: 'pro',
+      interval: billingInterval,
+      source: 'pricing_page',
+    });
     try {
       const res = await fetch('/api/paddle/checkout', {
         method: 'POST',
@@ -133,6 +140,7 @@ export default function PricingPage() {
     } catch (err) {
       console.error('Checkout error:', err);
       setCheckoutError('Something went wrong. Please try again.');
+      analytics.error({ action: 'checkout', message: 'Checkout failed', source: 'pricing_page' });
     } finally {
       setCheckoutLoading(false);
     }

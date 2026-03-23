@@ -1,16 +1,24 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { analytics } from '@/lib/mixpanel';
 
 export default function CheckoutSuccessPage() {
   const [showConfetti, setShowConfetti] = useState(true);
+  const tracked = useRef(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowConfetti(false), 4000);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (tracked.current) return;
+    tracked.current = true;
+    analytics.subscription({ action: 'checkout_success', plan: 'pro' });
   }, []);
 
   return (
