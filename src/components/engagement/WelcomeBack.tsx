@@ -32,6 +32,9 @@ export function WelcomeBack() {
       >
         <motion.div
           className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="welcome-back-title"
           initial={{ scale: 0.9, opacity: 0, y: 24 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 24 }}
@@ -39,8 +42,8 @@ export function WelcomeBack() {
         >
           {/* Header */}
           <div className="text-center mb-5">
-            <div className="text-5xl mb-3">👋</div>
-            <h2 className="text-2xl font-extrabold text-gray-900 mb-1">
+            <div className="text-5xl mb-3" aria-hidden="true">👋</div>
+            <h2 id="welcome-back-title" className="text-2xl font-extrabold text-gray-900 mb-1">
               Welcome back!
             </h2>
             <p className="text-sm text-gray-500">We missed you.</p>

@@ -80,6 +80,7 @@ export default function RankingInput({ question, disabled, onSubmit }: Props) {
                   <button
                     onClick={() => moveItem(index, 'up')}
                     disabled={index === 0}
+                    aria-label={`Move ${item.text} up`}
                     className={cn('p-1 rounded hover:bg-surface-100', index === 0 && 'opacity-30')}
                   >
                     <ArrowUp className="w-4 h-4 text-surface-400" />
@@ -87,6 +88,7 @@ export default function RankingInput({ question, disabled, onSubmit }: Props) {
                   <button
                     onClick={() => moveItem(index, 'down')}
                     disabled={index === items.length - 1}
+                    aria-label={`Move ${item.text} down`}
                     className={cn('p-1 rounded hover:bg-surface-100', index === items.length - 1 && 'opacity-30')}
                   >
                     <ArrowDown className="w-4 h-4 text-surface-400" />

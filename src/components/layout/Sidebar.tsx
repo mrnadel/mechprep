@@ -60,6 +60,10 @@ export default function Sidebar() {
         <div
           className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
           onClick={toggleSidebar}
+          onKeyDown={(e) => { if (e.key === 'Escape') toggleSidebar(); }}
+          role="button"
+          tabIndex={0}
+          aria-label="Close navigation"
         />
       )}
 
@@ -176,7 +180,7 @@ export default function Sidebar() {
                         boxShadow: '0 0 6px rgba(245, 158, 11, 0.3)',
                       }}
                     >
-                      <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" className="shrink-0" aria-hidden="true">
                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                       </svg>
                       PRO

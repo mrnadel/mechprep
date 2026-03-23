@@ -18,6 +18,8 @@ function SuccessToast({ message }: { message: string }) {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 16 }}
+      role="status"
+      aria-live="polite"
       className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-2.5 rounded-2xl text-sm font-bold text-white shadow-lg"
       style={{ background: '#10B981' }}
     >

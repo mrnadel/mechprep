@@ -55,7 +55,9 @@ export default function EstimationInput({ question, disabled, onSubmit }: Props)
       {/* Input */}
       <div className="flex items-center gap-3">
         <div className="relative flex-1">
+          <label htmlFor="estimation-input" className="sr-only">Your estimate in {question.acceptableRange.unit}</label>
           <input
+            id="estimation-input"
             type="number"
             value={value}
             onChange={(e) => setValue(e.target.value)}

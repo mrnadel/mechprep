@@ -18,19 +18,22 @@ const levels = [
 
 export default function ConfidenceRating({ value, onChange, className }: Props) {
   return (
-    <div className={cn('border-t border-surface-200 pt-4', className)}>
-      <p className="text-sm font-medium text-surface-600 mb-3">How confident are you?</p>
-      <div className="flex gap-2">
+    <div className={cn('border-t border-surface-200 pt-4', className)} role="group" aria-label="Confidence rating">
+      <p className="text-sm font-medium text-surface-600 mb-3" id="confidence-label">How confident are you?</p>
+      <div className="flex gap-2" role="radiogroup" aria-labelledby="confidence-label">
         {levels.map((level) => (
           <button
             key={level.value}
             onClick={() => onChange(level.value)}
+            role="radio"
+            aria-checked={value === level.value}
+            aria-label={`${level.label} confidence`}
             className={cn(
               'flex-1 py-2 px-1 rounded-lg border-2 text-center transition-all duration-200 text-xs font-medium',
               value === level.value ? level.color : 'border-surface-200 text-surface-400 hover:border-surface-300'
             )}
           >
-            <span className="block text-base mb-0.5">{level.emoji}</span>
+            <span className="block text-base mb-0.5" aria-hidden="true">{level.emoji}</span>
             {level.label}
           </button>
         ))}

@@ -184,6 +184,11 @@ export function UnitHeader({
       >
         <div
           className="flex-1 overflow-hidden"
+          role="progressbar"
+          aria-valuenow={completedInUnit}
+          aria-valuemin={0}
+          aria-valuemax={totalInUnit}
+          aria-label={`Unit progress: ${completedInUnit} of ${totalInUnit} lessons`}
           style={{
             height: 10,
             borderRadius: 5,

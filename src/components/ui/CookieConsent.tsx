@@ -42,6 +42,8 @@ export default function CookieConsent() {
           animate={{ y: 0 }}
           exit={{ y: 100 }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          role="dialog"
+          aria-label="Cookie consent"
           className="fixed bottom-0 left-0 right-0 z-50 border-t border-surface-200 bg-white shadow-lg"
         >
           <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:flex-nowrap sm:gap-4">

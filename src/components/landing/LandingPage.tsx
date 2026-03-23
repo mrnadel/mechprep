@@ -61,19 +61,19 @@ function AnimateIn({ children, className = '', delay = 0 }: { children: React.Re
 
 /* ── SVG Icons ── */
 const CheckIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }}>
+  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }} aria-hidden="true">
     <path d="M20 6L9 17l-5-5" stroke="#58CC02" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 const CrossIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }}>
+  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }} aria-hidden="true">
     <path d="M18 6L6 18M6 6l12 12" stroke="#E2E8F0" strokeWidth="2.5" strokeLinecap="round" />
   </svg>
 );
 
 const PartialIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }}>
+  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }} aria-hidden="true">
     <path d="M20 6L9 17l-5-5" stroke="#FBBF24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
@@ -86,7 +86,7 @@ export function LandingPage() {
     <div style={{ fontFamily: "'Nunito', sans-serif", background: '#FAFAFA', color: '#0F172A', minHeight: '100vh' }}>
 
       {/* ── NAV ── */}
-      <nav style={{
+      <nav aria-label="Main navigation" style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         background: '#FAFAFA', borderBottom: '1px solid #E2E8F0',
       }}>
@@ -205,12 +205,12 @@ export function LandingPage() {
             </div>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <div style={{
+            <h2 style={{
               textAlign: 'center', fontSize: 32, fontWeight: 900,
               color: '#0F172A', marginBottom: 40, letterSpacing: -0.5,
             }}>
               Level up as you learn
-            </div>
+            </h2>
           </AnimateIn>
 
           <AnimateIn delay={0.2}>

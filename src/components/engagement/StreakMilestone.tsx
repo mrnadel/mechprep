@@ -60,6 +60,9 @@ export function StreakMilestone({ milestone, onClose }: Props) {
         {/* Main card */}
         <motion.div
           className="relative bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm text-center"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="streak-milestone-title"
           initial={{ scale: 0.85, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.85, opacity: 0, y: 20 }}
@@ -85,7 +88,7 @@ export function StreakMilestone({ milestone, onClose }: Props) {
           </div>
 
           {/* Badge name */}
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-1">
+          <h2 id="streak-milestone-title" className="text-2xl font-extrabold text-gray-900 mb-1">
             {milestone.badgeName}
           </h2>
 

@@ -267,6 +267,7 @@ export default function FlagButton({ contentType, contentId, hasGraphic }: Props
                 ref={textareaRef}
                 value={commentText}
                 onChange={(e) => setCommentText(e.target.value)}
+                aria-label="Details about what is wrong with this content"
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
@@ -295,6 +296,7 @@ export default function FlagButton({ contentType, contentId, hasGraphic }: Props
               />
               <button
                 onClick={handleSubmitComment}
+                aria-label="Submit comment"
                 className="flex items-center justify-center transition-transform active:scale-90"
                 style={{
                   width: 32,

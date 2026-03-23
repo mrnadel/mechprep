@@ -40,7 +40,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen flex flex-col">
-        <div className="flex-1">{children}</div>
+        <div id="main-content" className="flex-1">{children}</div>
         <Footer />
       </div>
     );
@@ -49,7 +49,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-[#FAFAFA] lg:bg-[#E8E8E8]">
       <div className="max-w-3xl mx-auto min-h-screen bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200 flex flex-col">
-        <main className="flex-1 pb-16">
+        <main id="main-content" className="flex-1 pb-16">
           {children}
         </main>
         <Footer />
