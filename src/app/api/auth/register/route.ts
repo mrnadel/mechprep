@@ -36,8 +36,9 @@ export async function POST(request: NextRequest) {
       .limit(1);
 
     if (existing.length > 0) {
+      // Use generic message to prevent account enumeration
       return NextResponse.json(
-        { error: 'Email already registered' },
+        { error: 'Unable to create account. Please try a different email or sign in.' },
         { status: 409 }
       );
     }

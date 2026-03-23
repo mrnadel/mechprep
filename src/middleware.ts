@@ -2,7 +2,20 @@ import { auth } from '@/lib/auth';
 import { NextResponse } from 'next/server';
 
 // Routes that require authentication (not necessarily Pro)
-const authRequiredPrefixes = ['/profile', '/analytics'];
+const authRequiredPrefixes = [
+  '/profile',
+  '/analytics',
+  '/settings',
+  '/friends',
+  '/achievements',
+  '/quests',
+  '/shop',
+  '/progress',
+  '/skills',
+  '/onboarding',
+  '/checkout',
+  '/admin',
+];
 
 // Routes that require Pro subscription — gated on the client side via
 // useSubscription, but middleware redirects unauthenticated users to login
