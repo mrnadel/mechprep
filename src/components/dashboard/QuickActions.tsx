@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { Zap, Timer, Calendar, Wrench, AlertTriangle, BookOpen } from 'lucide-react';
 

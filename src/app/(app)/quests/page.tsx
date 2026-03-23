@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import { QuestBoard } from '@/components/engagement/QuestBoard';
