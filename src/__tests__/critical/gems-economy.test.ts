@@ -202,9 +202,9 @@ describe('Gems Economy', () => {
       expect(useEngagementStore.getState().gems.balance).toBe(50);
     });
 
-    it('balance can go negative (no validation in addGems)', () => {
+    it('balance is clamped to zero (cannot go negative)', () => {
       useEngagementStore.getState().addGems(-50, 'spend');
-      expect(useEngagementStore.getState().gems.balance).toBe(-50);
+      expect(useEngagementStore.getState().gems.balance).toBe(0);
     });
   });
 

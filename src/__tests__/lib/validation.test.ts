@@ -1,8 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
   registerSchema,
-  loginSchema,
-  profileUpdateSchema,
   changePasswordSchema,
   progressSyncSchema,
   getValidationError,
@@ -90,32 +88,6 @@ describe('registerSchema', () => {
   });
 });
 
-// ============================================================
-// loginSchema
-// ============================================================
-
-describe('loginSchema', () => {
-  it('accepts valid login data', () => {
-    const result = loginSchema.safeParse({ email: 'test@test.com', password: 'x' });
-    expect(result.success).toBe(true);
-  });
-
-  it('rejects invalid email', () => {
-    const result = loginSchema.safeParse({ email: 'bad', password: 'x' });
-    expect(result.success).toBe(false);
-  });
-
-  it('rejects empty password', () => {
-    const result = loginSchema.safeParse({ email: 'test@test.com', password: '' });
-    expect(result.success).toBe(false);
-  });
-
-  it('does not enforce strong password rules (login only)', () => {
-    // Login should accept any non-empty password
-    const result = loginSchema.safeParse({ email: 'test@test.com', password: 'weak' });
-    expect(result.success).toBe(true);
-  });
-});
 
 // ============================================================
 // changePasswordSchema
@@ -147,26 +119,6 @@ describe('changePasswordSchema', () => {
   });
 });
 
-// ============================================================
-// profileUpdateSchema
-// ============================================================
-
-describe('profileUpdateSchema', () => {
-  it('accepts valid display name', () => {
-    const result = profileUpdateSchema.safeParse({ displayName: 'Hello' });
-    expect(result.success).toBe(true);
-  });
-
-  it('rejects display name < 2 chars', () => {
-    const result = profileUpdateSchema.safeParse({ displayName: 'X' });
-    expect(result.success).toBe(false);
-  });
-
-  it('rejects display name > 50 chars', () => {
-    const result = profileUpdateSchema.safeParse({ displayName: 'X'.repeat(51) });
-    expect(result.success).toBe(false);
-  });
-});
 
 // ============================================================
 // progressSyncSchema

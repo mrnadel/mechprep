@@ -12,6 +12,7 @@ import { shuffleArray, getTodayString, calculateXP } from '@/lib/utils';
 import { PRO_SESSION_TYPES } from '@/lib/pricing';
 import { useSubscriptionStore } from '@/hooks/useSubscription';
 import { useCourseStore } from '@/store/useCourseStore';
+import { useEngagementStore } from '@/store/useEngagementStore';
 
 // --- Session Types ---
 export type SessionType = 'adaptive' | 'topic-deep-dive' | 'interview-sim' | 'daily-challenge' | 'real-world' | 'weak-areas' | 'smart-practice';
@@ -506,7 +507,6 @@ export const useStore = create<AppState>()(
         let xp = calculateXP(question, correct, timeSpent, confidence);
 
         // Apply double XP boost if active
-        const { useEngagementStore } = require('@/store/useEngagementStore');
         const doubleXpExpiry = useEngagementStore.getState().doubleXpExpiry;
         if (doubleXpExpiry && new Date(doubleXpExpiry).getTime() > Date.now()) {
           xp *= 2;

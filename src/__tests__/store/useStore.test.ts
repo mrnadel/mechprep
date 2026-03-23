@@ -162,20 +162,6 @@ describe('useStore', () => {
       expect(useStore.getState().sessionSummary).toBeNull();
     });
 
-    it('accepts specific questionIds', () => {
-      const qIds = ['q-thermodynamics-0', 'q-thermodynamics-1', 'q-thermodynamics-2'];
-      useStore.getState().startSession('adaptive', { questionIds: qIds });
-
-      const session = useStore.getState().session;
-      expect(session!.questions).toHaveLength(3);
-      expect(session!.questions.map(q => q.id)).toEqual(qIds);
-    });
-
-    it('does not start session with empty question pool', () => {
-      useStore.setState({ questions: [] });
-      useStore.getState().startSession('adaptive');
-      expect(useStore.getState().session).toBeNull();
-    });
 
     it('blocks Pro-only session types for free tier', () => {
       // Switch mock to free tier

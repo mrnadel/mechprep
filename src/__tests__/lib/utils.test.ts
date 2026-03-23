@@ -411,22 +411,22 @@ describe('getStreakStatus()', () => {
 
   it('returns "active" when lastActiveDate is today', () => {
     vi.setSystemTime(new Date('2025-06-10T15:00:00Z'));
-    expect(getStreakStatus('2025-06-10T08:00:00Z')).toBe('active');
+    expect(getStreakStatus('2025-06-10')).toBe('active');
   });
 
   it('returns "at-risk" when lastActiveDate is yesterday', () => {
     vi.setSystemTime(new Date('2025-06-10T15:00:00Z'));
-    expect(getStreakStatus('2025-06-09T15:00:00Z')).toBe('at-risk');
+    expect(getStreakStatus('2025-06-09')).toBe('at-risk');
   });
 
   it('returns "broken" when lastActiveDate is 2+ days ago', () => {
     vi.setSystemTime(new Date('2025-06-10T15:00:00Z'));
-    expect(getStreakStatus('2025-06-08T15:00:00Z')).toBe('broken');
+    expect(getStreakStatus('2025-06-08')).toBe('broken');
   });
 
   it('returns "broken" for very old dates', () => {
     vi.setSystemTime(new Date('2025-06-10T15:00:00Z'));
-    expect(getStreakStatus('2024-01-01T00:00:00Z')).toBe('broken');
+    expect(getStreakStatus('2024-01-01')).toBe('broken');
   });
 });
 

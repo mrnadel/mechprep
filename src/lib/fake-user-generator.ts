@@ -377,7 +377,7 @@ function generateFakeUser(
   };
 }
 
-function generateFakeUserPool(): FakeUserPool {
+export function generateFakeUserPool(): FakeUserPool {
   const rng = seededRandom(hashSeed('mechready-fake-pool-v1'));
   const pool: FakeUser[] = [];
   let index = 0;
@@ -416,7 +416,7 @@ function generateFakeUserPool(): FakeUserPool {
 
 // --------------- Storage ---------------
 
-function getFakeUserPool(): FakeUserPool | null {
+export function getFakeUserPool(): FakeUserPool | null {
   if (typeof window === 'undefined') return null;
   try {
     const raw = localStorage.getItem(POOL_STORAGE_KEY);
@@ -429,7 +429,7 @@ function getFakeUserPool(): FakeUserPool | null {
   }
 }
 
-function saveFakeUserPool(pool: FakeUserPool): void {
+export function saveFakeUserPool(pool: FakeUserPool): void {
   if (typeof window === 'undefined') return;
   localStorage.setItem(POOL_STORAGE_KEY, JSON.stringify(pool));
 }

@@ -29,7 +29,7 @@ const DIFFICULTY_WEIGHTS: Record<Difficulty, number> = {
   advanced: 1.5,
 };
 
-function computeMastery(events: AnswerEvent[]): number {
+export function computeMastery(events: AnswerEvent[]): number {
   if (events.length === 0) return 0;
 
   const now = Date.now();
@@ -52,7 +52,7 @@ function computeMastery(events: AnswerEvent[]): number {
   return Math.round(rawAccuracy * confidence * 100);
 }
 
-function getMasteryLevel(score: number, eventCount: number): MasteryLevel {
+export function getMasteryLevel(score: number, eventCount: number): MasteryLevel {
   if (eventCount === 0) return 'not-started';
   if (score >= 75) return 'strong';
   if (score >= 40) return 'developing';
