@@ -22,8 +22,13 @@ export function useEngagementInit() {
     const engagement = useEngagementStore.getState();
     const today = new Date().toISOString().split('T')[0];
 
+    // Skip streak/comeback detection on fresh installs — dailyQuestDate is null
+    // when the engagement system has never been initialized (e.g. after clearing storage).
+    // Without this guard, seed progress dates trigger false streak-break/comeback popups.
+    const hasEngagementHistory = engagement.dailyQuestDate !== null;
+
     // Streak freeze / break detection
-    if (progress.lastActiveDate && progress.lastActiveDate !== today) {
+    if (hasEngagementHistory && progress.lastActiveDate && progress.lastActiveDate !== today) {
       const lastActive = new Date(progress.lastActiveDate);
       const todayDate = new Date(today);
       const daysDiff = Math.floor(
@@ -69,6 +74,8 @@ export function useEngagementInit() {
     useEngagementStore.getState().initDailyQuests();
     useEngagementStore.getState().initWeeklyQuests();
     useEngagementStore.getState().simulateLeagueWeek();
-    useEngagementStore.getState().checkComebackFlow();
+    if (hasEngagementHistory) {
+      useEngagementStore.getState().checkComebackFlow();
+    }
   }, []);
 }

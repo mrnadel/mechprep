@@ -34,7 +34,7 @@ export default function SessionSummary({ summary }: Props) {
 
   const handleBack = useCallback(() => {
     abandonSession();
-    router.push('/');
+    router.replace('/');
   }, [abandonSession, router]);
 
   useBackHandler(true, handleBack);

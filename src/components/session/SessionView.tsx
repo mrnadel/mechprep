@@ -32,7 +32,7 @@ export default function SessionView() {
 
   const handleExit = useCallback(() => {
     abandonSession();
-    router.push('/');
+    router.replace('/');
   }, [abandonSession, router]);
 
   const handleExitClick = useCallback(() => {
