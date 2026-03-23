@@ -3,13 +3,15 @@
 // ============================================================
 
 import { Environment, Paddle } from '@paddle/paddle-node-sdk';
+import { serverEnv } from './env';
 
 let _paddle: Paddle | null = null;
 
 function getPaddleServer(): Paddle {
   if (!_paddle) {
-    const isSandbox = process.env.PADDLE_API_KEY?.startsWith('pdl_sdbx_') ?? false;
-    _paddle = new Paddle(process.env.PADDLE_API_KEY!, {
+    const apiKey = serverEnv().PADDLE_API_KEY;
+    const isSandbox = apiKey.startsWith('pdl_sdbx_');
+    _paddle = new Paddle(apiKey, {
       environment: isSandbox ? Environment.sandbox : Environment.production,
     });
   }

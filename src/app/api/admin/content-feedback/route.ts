@@ -1,25 +1,33 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { contentFeedback, contentFeedbackDismissals } from '@/lib/db/schema';
-import { getAuthUserId } from '@/lib/auth-utils';
+import { requireAdmin } from '@/lib/auth-utils';
+import { getQuestionById } from '@/data/questions';
 import { course } from '@/data/course';
 import type { ContentFeedbackType, FeedbackReason } from '@/data/types';
 
-const ADMIN_USER_ID = process.env.ADMIN_USER_ID;
-
-function getQuestionText(_contentType: string, contentId: string): string {
+function getCourseQuestionText(contentId: string): string | null {
   for (const unit of course) {
     for (const lesson of unit.lessons) {
       const q = lesson.questions.find((q) => q.id === contentId);
-      if (q) return q.question.slice(0, 80);
+      if (q) return q.question;
     }
   }
-  return `[Unknown: ${contentId}]`;
+  return null;
+}
+
+function getQuestionText(contentType: string, contentId: string): string {
+  if (contentType === 'question') {
+    const q = getQuestionById(contentId);
+    return q ? q.question.slice(0, 80) : `[Unknown: ${contentId}]`;
+  }
+  const text = getCourseQuestionText(contentId);
+  return text ? text.slice(0, 80) : `[Unknown: ${contentId}]`;
 }
 
 export async function GET(req: NextRequest) {
-  const userId = await getAuthUserId();
-  if (!userId || userId !== ADMIN_USER_ID) {
+  const adminId = await requireAdmin();
+  if (!adminId) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 

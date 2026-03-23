@@ -2,13 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { eq, asc } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { courseLessons } from '@/lib/db/schema';
-import { getAuthUserId } from '@/lib/auth-utils';
-
-const ADMIN_USER_ID = process.env.ADMIN_USER_ID;
+import { requireAdmin } from '@/lib/auth-utils';
 
 export async function GET(req: NextRequest) {
-  const userId = await getAuthUserId();
-  if (!userId || userId !== ADMIN_USER_ID) {
+  const adminId = await requireAdmin();
+  if (!adminId) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
@@ -26,8 +24,8 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const userId = await getAuthUserId();
-  if (!userId || userId !== ADMIN_USER_ID) {
+  const adminId = await requireAdmin();
+  if (!adminId) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 

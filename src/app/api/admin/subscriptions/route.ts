@@ -1,14 +1,12 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { users, subscriptions, paymentHistory } from '@/lib/db/schema';
-import { getAuthUserId } from '@/lib/auth-utils';
+import { requireAdmin } from '@/lib/auth-utils';
 import { eq, sql, desc, and } from 'drizzle-orm';
 
-const ADMIN_USER_ID = process.env.ADMIN_USER_ID;
-
 export async function GET() {
-  const userId = await getAuthUserId();
-  if (!userId || userId !== ADMIN_USER_ID) {
+  const adminId = await requireAdmin();
+  if (!adminId) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 

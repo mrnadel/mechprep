@@ -1,14 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { users, userProgress, subscriptions } from '@/lib/db/schema';
-import { getAuthUserId } from '@/lib/auth-utils';
+import { requireAdmin } from '@/lib/auth-utils';
 import { eq, desc } from 'drizzle-orm';
 
-const ADMIN_USER_ID = process.env.ADMIN_USER_ID;
-
 export async function GET() {
-  const userId = await getAuthUserId();
-  if (!userId || userId !== ADMIN_USER_ID) {
+  const adminId = await requireAdmin();
+  if (!adminId) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
@@ -48,8 +46,8 @@ export async function GET() {
 
 // PATCH: Update a user's subscription tier
 export async function PATCH(req: NextRequest) {
-  const adminId = await getAuthUserId();
-  if (!adminId || adminId !== ADMIN_USER_ID) {
+  const adminId = await requireAdmin();
+  if (!adminId) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
@@ -89,8 +87,8 @@ export async function PATCH(req: NextRequest) {
 
 // DELETE: Remove a user and all related data
 export async function DELETE(req: NextRequest) {
-  const adminId = await getAuthUserId();
-  if (!adminId || adminId !== ADMIN_USER_ID) {
+  const adminId = await requireAdmin();
+  if (!adminId) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 

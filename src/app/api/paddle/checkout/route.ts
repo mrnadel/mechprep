@@ -6,6 +6,7 @@ import { users, subscriptions } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { PADDLE_PRICES } from '@/lib/pricing';
 import { rateLimit, RATE_LIMITS } from '@/lib/rate-limit';
+import { serverEnv } from '@/lib/env';
 
 export async function POST(request: NextRequest) {
   const userId = await getAuthUserId();
@@ -32,17 +33,18 @@ export async function POST(request: NextRequest) {
   const priceId = body.priceId?.trim();
 
   // Validate the priceId is one we recognise
+  const env = serverEnv();
   const validPrices = [
-    process.env.PADDLE_PRO_MONTHLY_PRICE_ID || '',
-    process.env.PADDLE_PRO_YEARLY_PRICE_ID || '',
-  ];
+    env.PADDLE_PRO_MONTHLY_PRICE_ID || '',
+    env.PADDLE_PRO_YEARLY_PRICE_ID || '',
+  ].filter(Boolean);
 
   if (!priceId || !validPrices.includes(priceId)) {
     console.error('Checkout price validation failed', {
       priceId,
       validPrices,
-      envMonthly: process.env.PADDLE_PRO_MONTHLY_PRICE_ID ?? 'MISSING',
-      envYearly: process.env.PADDLE_PRO_YEARLY_PRICE_ID ?? 'MISSING',
+      envMonthly: env.PADDLE_PRO_MONTHLY_PRICE_ID ?? 'MISSING',
+      envYearly: env.PADDLE_PRO_YEARLY_PRICE_ID ?? 'MISSING',
     });
     return NextResponse.json({ error: 'Invalid price' }, { status: 400 });
   }
