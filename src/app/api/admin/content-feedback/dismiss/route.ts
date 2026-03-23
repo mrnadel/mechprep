@@ -12,7 +12,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
-  const { contentType, contentId } = await req.json();
+  const body = await req.json();
+  const { contentType, contentId } = body;
+
+  if (!contentType || typeof contentType !== 'string' || contentType.length > 50) {
+    return NextResponse.json({ error: 'Invalid contentType' }, { status: 400 });
+  }
+  if (!contentId || typeof contentId !== 'string' || contentId.length > 100) {
+    return NextResponse.json({ error: 'Invalid contentId' }, { status: 400 });
+  }
 
   // Upsert: delete + insert
   await db.transaction(async (tx) => {

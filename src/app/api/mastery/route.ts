@@ -1,8 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { eq } from 'drizzle-orm';
+import { z } from 'zod';
 import { db } from '@/lib/db';
 import { masteryEvents } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
+import { rateLimit, RATE_LIMITS } from '@/lib/rate-limit';
+
+const masteryEventSchema = z.object({
+  id: z.string().uuid(),
+  questionId: z.string().min(1).max(200),
+  topicId: z.string().min(1).max(100),
+  subtopic: z.string().max(100).optional(),
+  difficulty: z.enum(['easy', 'medium', 'hard']),
+  correct: z.boolean(),
+  source: z.string().min(1).max(50),
+  answeredAt: z.string().min(1).max(50),
+});
+
+const masteryPostSchema = z.object({
+  events: z.array(masteryEventSchema).max(200),
+});
 
 export async function GET() {
   const userId = await getAuthUserId();
@@ -33,20 +50,32 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { events } = (await request.json()) as {
-    events: {
-      id: string;
-      questionId: string;
-      topicId: string;
-      subtopic?: string;
-      difficulty: string;
-      correct: boolean;
-      source: string;
-      answeredAt: string;
-    }[];
-  };
+  const rl = rateLimit(`mastery:${userId}`, RATE_LIMITS.api);
+  if (!rl.success) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429 }
+    );
+  }
 
-  if (!events || events.length === 0) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+
+  const parsed = masteryPostSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: 'Invalid input', details: parsed.error.issues[0]?.message },
+      { status: 400 }
+    );
+  }
+
+  const { events } = parsed.data;
+
+  if (events.length === 0) {
     return NextResponse.json({ ok: true, inserted: 0 });
   }
 
