@@ -1,7 +1,8 @@
 const rateMap = new Map<string, { count: number; resetAt: number }>();
 
 // Clean up expired entries every 60 seconds
-setInterval(() => {
+// Use unref() so the timer does not prevent Node.js process from exiting
+const _rateLimitCleanup = setInterval(() => {
   const now = Date.now();
   for (const [key, entry] of rateMap) {
     if (entry.resetAt <= now) {
@@ -9,6 +10,7 @@ setInterval(() => {
     }
   }
 }, 60_000);
+if (typeof _rateLimitCleanup?.unref === 'function') _rateLimitCleanup.unref();
 
 export function rateLimit(
   identifier: string,
@@ -94,7 +96,7 @@ export function clearFailedLogins(email: string): void {
 }
 
 // Clean up expired lockouts every 5 minutes
-setInterval(() => {
+const _loginCleanup = setInterval(() => {
   const now = Date.now();
   for (const [key, entry] of failedLogins) {
     if (entry.lockedUntil > 0 && entry.lockedUntil <= now) {
@@ -102,3 +104,4 @@ setInterval(() => {
     }
   }
 }, 5 * 60_000);
+if (typeof _loginCleanup?.unref === 'function') _loginCleanup.unref();

@@ -3,7 +3,7 @@ import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { users, courseProgress } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
-import { progressSyncSchema } from '@/lib/validation';
+import { courseProgressSyncSchema } from '@/lib/validation';
 import type { CourseProgress } from '@/data/course/types';
 
 export async function GET() {
@@ -47,8 +47,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body = await request.json();
-  const parsed = progressSyncSchema.safeParse(body);
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+  const parsed = courseProgressSyncSchema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json(
       { error: 'Invalid input', details: parsed.error.issues[0]?.message },

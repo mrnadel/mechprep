@@ -24,6 +24,7 @@ export function DoubleXpTimer() {
     }
 
     const expiryTime = new Date(doubleXpExpiry).getTime();
+    let hideTimer: ReturnType<typeof setTimeout> | null = null;
 
     function tick() {
       const remaining = expiryTime - Date.now();
@@ -31,15 +32,19 @@ export function DoubleXpTimer() {
         setMsRemaining(0);
         setShowEnded(true);
         // Hide "ended" flash after 3 seconds
-        const hideTimer = setTimeout(() => setShowEnded(false), 3000);
-        return () => clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => setShowEnded(false), 3000);
+        clearInterval(interval);
+        return;
       }
       setMsRemaining(remaining);
     }
 
     tick(); // run immediately
     const interval = setInterval(tick, 1000);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      if (hideTimer) clearTimeout(hideTimer);
+    };
   }, [doubleXpExpiry]);
 
   // Show "Double XP ended" flash briefly

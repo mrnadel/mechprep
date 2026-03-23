@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGems, useEngagementActions, useStreakEnhancements, useEngagementStore } from '@/store/useEngagementStore';
 import { shopItems } from '@/data/gem-shop';
@@ -147,13 +147,22 @@ export function GemShop() {
   const streak = useStreakEnhancements();
   const { purchaseItem } = useEngagementActions();
   const [toasts, setToasts] = useState<ToastState[]>([]);
+  const toastTimers = useRef<Set<ReturnType<typeof setTimeout>>>(new Set());
+
+  useEffect(() => {
+    return () => {
+      toastTimers.current.forEach(clearTimeout);
+    };
+  }, []);
 
   function showToast(message: string) {
     const id = Date.now();
     setToasts((prev) => [...prev, { id, message }]);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setToasts((prev) => prev.filter((t) => t.id !== id));
+      toastTimers.current.delete(timer);
     }, 2500);
+    toastTimers.current.add(timer);
   }
 
   function handleBuy(itemId: string) {

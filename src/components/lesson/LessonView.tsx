@@ -123,6 +123,7 @@ export default function LessonView() {
 
   const handleContinue = useCallback(() => {
     setLastAnswerCorrect(null);
+    setHasSelection(false);
     if (isLastQuestion) {
       completeLesson();
     } else {

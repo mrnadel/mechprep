@@ -130,11 +130,13 @@ export function getTodayString(): string {
 }
 
 export function getStreakStatus(lastActiveDate: string): 'active' | 'at-risk' | 'broken' {
-  const last = new Date(lastActiveDate);
-  const now = new Date();
-  const diffDays = Math.floor((now.getTime() - last.getTime()) / (1000 * 60 * 60 * 24));
-  if (diffDays === 0) return 'active';
-  if (diffDays === 1) return 'at-risk';
+  if (!lastActiveDate) return 'broken';
+  const today = getTodayString();
+  if (lastActiveDate === today) return 'active';
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayStr = yesterday.toISOString().split('T')[0];
+  if (lastActiveDate === yesterdayStr) return 'at-risk';
   return 'broken';
 }
 

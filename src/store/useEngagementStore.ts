@@ -406,13 +406,12 @@ export const useEngagementStore = create<EngagementStore>()(
 
           // Restore the streak in the main progress store
           if (previousStreak > 0) {
-            const { useStore } = require('@/store/useStore');
-            useStore.setState((s: { progress: Record<string, unknown> }) => ({
+            useStore.setState((s) => ({
               progress: {
                 ...s.progress,
                 currentStreak: previousStreak,
                 longestStreak: Math.max(
-                  (s.progress.longestStreak as number) || 0,
+                  s.progress.longestStreak || 0,
                   previousStreak,
                 ),
               },

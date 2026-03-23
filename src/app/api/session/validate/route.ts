@@ -13,7 +13,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ allowed: false, reason: 'unauthenticated' }, { status: 401 });
   }
 
-  const body = await request.json();
+  let body: Record<string, unknown>;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ allowed: false, reason: 'invalid_json' }, { status: 400 });
+  }
   const sessionType = body.sessionType as string;
   if (!sessionType) {
     return NextResponse.json({ allowed: false, reason: 'missing_session_type' }, { status: 400 });

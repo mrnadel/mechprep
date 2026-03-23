@@ -111,7 +111,7 @@ function selectQuestionsForSession(type: SessionType, allQs: Question[], options
   let count = 10;
 
   if (options?.questionIds) {
-    return options.questionIds.map(id => allQs.find(q => q.id === id)!).filter(Boolean);
+    return options.questionIds.map(id => allQs.find(q => q.id === id)).filter((q): q is Question => q !== undefined);
   }
 
   switch (type) {

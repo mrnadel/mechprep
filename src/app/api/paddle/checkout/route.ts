@@ -28,7 +28,12 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const body = (await request.json()) as { priceId?: string };
+  let body: { priceId?: string };
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
   const priceId = body.priceId?.trim();
 
   // Validate the priceId is one we recognise

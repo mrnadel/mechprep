@@ -1,8 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { eq } from 'drizzle-orm';
+import { z } from 'zod';
 import { db } from '@/lib/db';
 import { masteryEvents } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
+
+const masteryEventSchema = z.object({
+  id: z.string().max(100),
+  questionId: z.string().max(100),
+  topicId: z.string().max(100),
+  subtopic: z.string().max(200).optional(),
+  difficulty: z.string().max(50),
+  correct: z.boolean(),
+  source: z.string().max(50),
+  answeredAt: z.string().max(50),
+});
+
+const masteryPostSchema = z.object({
+  events: z.array(masteryEventSchema).max(200),
+});
 
 export async function GET() {
   const userId = await getAuthUserId();
@@ -33,20 +49,24 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { events } = (await request.json()) as {
-    events: {
-      id: string;
-      questionId: string;
-      topicId: string;
-      subtopic?: string;
-      difficulty: string;
-      correct: boolean;
-      source: string;
-      answeredAt: string;
-    }[];
-  };
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
 
-  if (!events || events.length === 0) {
+  const parsed = masteryPostSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: 'Invalid input', details: parsed.error.issues[0]?.message },
+      { status: 400 },
+    );
+  }
+
+  const { events } = parsed.data;
+
+  if (events.length === 0) {
     return NextResponse.json({ ok: true, inserted: 0 });
   }
 

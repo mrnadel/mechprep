@@ -114,6 +114,26 @@ export const progressSyncSchema = z.object({
   }).optional(),
 });
 
+export const courseProgressSyncSchema = z.object({
+  progress: z.object({
+    displayName: z.string().min(2).max(50).optional(),
+    totalXp: z.number().int().min(0).max(MAX_XP),
+    currentStreak: z.number().int().min(0).max(MAX_STREAK),
+    longestStreak: z.number().int().min(0).max(MAX_STREAK),
+    lastActiveDate: z.string(),
+    completedLessons: z.record(z.string(), z.object({
+      stars: z.number().int().min(0).max(3),
+      bestAccuracy: z.number().int().min(0).max(100),
+      attempts: z.number().int().min(0).max(1000),
+      lastAttempted: z.string(),
+      passed: z.boolean().optional(),
+      golden: z.boolean().optional(),
+      answeredQuestionIds: z.array(z.string()).max(500).optional(),
+      correctQuestionIds: z.array(z.string()).max(500).optional(),
+    })).optional(),
+  }),
+});
+
 // Helper to extract the first validation error message
 export function getValidationError(result: { success: false; error: { issues: Array<{ message: string }> } } | { success: true }): string | null {
   if (result.success) return null;

@@ -122,14 +122,16 @@ export async function incrementDailyUsage(userId: string): Promise<void> {
 
   // If no row was updated, this is the first question today — insert
   if (rowCount === 0) {
-    await db.insert(dailyUsage).values({
+    const insertResult = await db.insert(dailyUsage).values({
       userId,
       date: today,
       questionsUsed: 1,
     }).onConflictDoNothing();
 
+    const insertCount = (insertResult as unknown as { rowCount: number }).rowCount;
+
     // If insert was a no-op (concurrent insert won), do the increment
-    if (rowCount === 0) {
+    if (insertCount === 0) {
       await db
         .update(dailyUsage)
         .set({
