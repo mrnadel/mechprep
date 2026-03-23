@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Crown } from 'lucide-react';
@@ -86,7 +87,7 @@ export default function CompetitorProfilePage() {
   });
 
   const avatarContent = avatarUrl ? (
-    <img src={avatarUrl} alt={user.name} className="w-full h-full object-cover rounded-full" />
+    <Image src={avatarUrl} alt={user.name} width={96} height={96} className="w-full h-full object-cover rounded-full" />
   ) : (
     <div
       className="w-full h-full rounded-full flex items-center justify-center text-3xl font-extrabold text-white"

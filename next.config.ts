@@ -33,11 +33,11 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline' https://*.paddle.com",
       "img-src 'self' data: blob: https://*.googleusercontent.com https://*.paddle.com https://picsum.photos https://fastly.picsum.photos",
       "font-src 'self' https://*.paddle.com",
-      "connect-src 'self' https://*.paddle.com https://*.supabase.co https://api-js.mixpanel.com https://api.mixpanel.com",
+      "connect-src 'self' https://*.paddle.com https://*.supabase.co https://api-js.mixpanel.com https://api.mixpanel.com https://api-eu.mixpanel.com",
       "frame-src https://*.paddle.com",
       "object-src 'none'",
       "base-uri 'self'",
-      "form-action 'self'",
+      "form-action 'self' https://accounts.google.com",
     ].join('; '),
   },
 ];

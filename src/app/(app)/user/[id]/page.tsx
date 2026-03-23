@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useMemo } from 'react';
+import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -266,7 +267,7 @@ export default function PublicProfilePage() {
                 style={{ top: 8, left: 8, width: 96, height: 96 }}
               >
                 {profile.image ? (
-                  <img src={profile.image} alt={profile.displayName} className="w-full h-full object-cover" />
+                  <Image src={profile.image} alt={profile.displayName} width={96} height={96} className="w-full h-full object-cover" />
                 ) : (
                   <div
                     className="w-full h-full flex items-center justify-center text-white text-3xl font-extrabold"

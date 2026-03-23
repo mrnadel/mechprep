@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 import { useStore } from '@/store/useStore';
 import { useCourseStore } from '@/store/useCourseStore';
@@ -469,7 +470,7 @@ export default function ProfilePage() {
           >
             <AvatarFrame frameStyle={equippedFrameStyle as FrameStyleId} size={120}>
               {image ? (
-                <img src={image} alt={displayName} className="w-full h-full object-cover" />
+                <Image src={image} alt={displayName} width={120} height={120} className="w-full h-full object-cover" />
               ) : (
                 <div
                   className="w-full h-full flex items-center justify-center text-white text-3xl font-extrabold"

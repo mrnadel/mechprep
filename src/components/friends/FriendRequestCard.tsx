@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Check, X, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -94,7 +95,7 @@ export default function FriendRequestCard({
         style={{ width: 44, height: 44, background: '#E0E7FF' }}
       >
         {image ? (
-          <img src={image} alt="" className="w-full h-full object-cover" />
+          <Image src={image} alt={displayName} width={44} height={44} className="w-full h-full object-cover" />
         ) : (
           <span className="text-primary-700 font-bold text-sm">{initials}</span>
         )}

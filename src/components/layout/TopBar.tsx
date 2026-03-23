@@ -10,6 +10,7 @@ import { useLeague } from '@/store/useEngagementStore';
 import { leagueTiers } from '@/data/league';
 import { useSubscription } from '@/hooks/useSubscription';
 import { useSession } from 'next-auth/react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function TopBar() {
@@ -115,7 +116,7 @@ export default function TopBar() {
           <Link href="/profile" className="relative shrink-0 group" aria-label="View profile">
             <div className="w-8 h-8 rounded-full overflow-hidden ring-2 ring-surface-200 group-hover:ring-primary-300 transition-all">
               {image ? (
-                <img src={image} alt={displayName} className="w-full h-full object-cover" />
+                <Image src={image} alt={displayName} width={32} height={32} className="w-full h-full object-cover" />
               ) : (
                 <div
                   className="w-full h-full flex items-center justify-center text-white text-xs font-bold"

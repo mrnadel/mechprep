@@ -6,7 +6,7 @@
  *
  * Usage:
  *   <AvatarFrame frameStyle="gold" size={96}>
- *     <img src={...} className="w-full h-full rounded-full object-cover" />
+ *     <Image src={...} alt="..." width={96} height={96} className="w-full h-full rounded-full object-cover" />
  *   </AvatarFrame>
  */
 

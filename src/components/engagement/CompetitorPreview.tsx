@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { getFakeUserById } from '@/lib/fake-user-generator';
@@ -55,7 +56,7 @@ export function CompetitorPreview({ fakeUserId, isOpen, onClose }: CompetitorPre
     .filter((a): a is NonNullable<typeof a> => Boolean(a));
 
   const avatarContent = avatarUrl ? (
-    <img src={avatarUrl} alt="" className="w-full h-full rounded-full object-cover" />
+    <Image src={avatarUrl} alt={user.name} width={56} height={56} className="w-full h-full rounded-full object-cover" />
   ) : (
     <div
       className="w-full h-full rounded-full flex items-center justify-center text-xl font-bold text-white"

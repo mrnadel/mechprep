@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+import Image from 'next/image';
 import { getFakeUserById } from '@/lib/fake-user-generator';
 import { getFakeAvatarUrl, getInitialsColor } from '@/lib/fake-avatar';
 import { AvatarFrame } from '@/components/ui/AvatarFrame';
@@ -37,9 +38,11 @@ export function CompetitorAvatar({
   const hasFrame = !isUser && !!frameStyle;
 
   const avatarContent = avatarUrl ? (
-    <img
+    <Image
       src={avatarUrl}
-      alt=""
+      alt={`${avatarInitial} avatar`}
+      width={hasFrame ? size - 8 : size}
+      height={hasFrame ? size - 8 : size}
       className="w-full h-full object-cover"
     />
   ) : (
