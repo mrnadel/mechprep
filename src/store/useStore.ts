@@ -125,6 +125,22 @@ function gatherCourseQuestions(): PracticeQuestion[] {
   return all;
 }
 
+/**
+ * Ensure full course question data is loaded into useCourseStore.
+ * Returns true if data was already loaded, false if a load was triggered (async).
+ */
+async function ensureCourseDataLoaded(): Promise<void> {
+  const { loadUnitData } = await import('@/data/course/course-meta');
+  const store = useCourseStore.getState();
+  const needsLoad = store.courseData.some(u => u.lessons.some(l => l.questions.length === 0));
+  if (!needsLoad) return;
+
+  const fullUnits = await Promise.all(
+    store.courseData.map((_, i) => loadUnitData(i))
+  );
+  useCourseStore.setState({ courseData: fullUnits });
+}
+
 function selectQuestionsForSession(type: SessionType, options?: { topicId?: TopicId; difficulty?: Difficulty; resolvedQuestions?: PracticeQuestion[] }): PracticeQuestion[] {
   if (options?.resolvedQuestions && options.resolvedQuestions.length > 0) {
     return options.resolvedQuestions;
@@ -455,6 +471,16 @@ export const useStore = create<AppState>()(
           const isTrialing = subStore.status === 'trialing';
           const isPastDue = subStore.status === 'past_due';
           if (tier !== 'pro' && !isTrialing && !isPastDue) return;
+        }
+
+        // If course data is not fully loaded yet, load it first then retry
+        const courseStore = useCourseStore.getState();
+        const needsLoad = courseStore.courseData.some(u => u.lessons.some(l => l.questions.length === 0));
+        if (needsLoad && !options?.resolvedQuestions) {
+          ensureCourseDataLoaded().then(() => {
+            get().startSession(type, options);
+          });
+          return;
         }
 
         const questions = selectQuestionsForSession(type, options);

@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
-import { course } from '@/data/course';
+import { courseMeta } from '@/data/course/course-meta';
 import { topics } from '@/data/topics';
 import Link from 'next/link';
 import { ChevronLeft, TrendingUp, AlertTriangle, Trophy } from 'lucide-react';
@@ -39,7 +39,7 @@ export default function SkillMapPage() {
     // Map each topic to stats from course units
     return topics.map((topic) => {
       // Find all course units that map to this topic
-      const matchingUnits = course.filter((u) => u.topicId === topic.id);
+      const matchingUnits = courseMeta.filter((u) => u.topicId === topic.id);
 
       let totalQuestions = 0;
       let totalCorrect = 0;

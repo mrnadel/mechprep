@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { Sparkles } from 'lucide-react';
-import { course } from '@/data/course';
+import { courseMeta } from '@/data/course/course-meta';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useSubscription } from '@/hooks/useSubscription';
 import { getUnitTheme } from '@/lib/unitThemes';
@@ -38,7 +38,7 @@ export function CourseMap() {
       unitIndex: number,
       lessonIndex: number
     ): 'completed' | 'current' | 'locked' => {
-      const lessonId = course[unitIndex]?.lessons[lessonIndex]?.id;
+      const lessonId = courseMeta[unitIndex]?.lessons[lessonIndex]?.id;
       if (!lessonId) return 'locked';
 
       if (isGuest && unitIndex > 0) return 'locked';
@@ -53,8 +53,8 @@ export function CourseMap() {
 
   const findActiveUnitIndex = useCallback((): number => {
     let lastCompletedUnit = 0;
-    for (let ui = 0; ui < course.length; ui++) {
-      for (let li = 0; li < course[ui].lessons.length; li++) {
+    for (let ui = 0; ui < courseMeta.length; ui++) {
+      for (let li = 0; li < courseMeta[ui].lessons.length; li++) {
         if (getLessonState(ui, li) === 'completed') {
           lastCompletedUnit = ui;
         }
@@ -68,10 +68,10 @@ export function CourseMap() {
   // Find the last completed lesson to scroll to
   const currentLessonId = useMemo(() => {
     let lastCompletedId: string | null = null;
-    for (let ui = 0; ui < course.length; ui++) {
-      for (let li = 0; li < course[ui].lessons.length; li++) {
+    for (let ui = 0; ui < courseMeta.length; ui++) {
+      for (let li = 0; li < courseMeta[ui].lessons.length; li++) {
         if (getLessonState(ui, li) === 'completed') {
-          lastCompletedId = course[ui].lessons[li].id;
+          lastCompletedId = courseMeta[ui].lessons[li].id;
         }
       }
     }
@@ -159,7 +159,7 @@ export function CourseMap() {
         className="flex flex-col px-3 sm:px-4"
         style={{ paddingTop: 12, paddingBottom: 0, gap: 16 }}
       >
-        {course.map((unit, unitIndex) => {
+        {courseMeta.map((unit, unitIndex) => {
           const theme = getUnitTheme(unitIndex);
           const completedInUnit = unit.lessons.filter(
             (l) => progress.completedLessons[l.id]?.passed
@@ -295,7 +295,7 @@ export function CourseMap() {
       <AnimatePresence>
         {jumpConfirm &&
           (() => {
-            const unit = course[jumpConfirm.unitIndex];
+            const unit = courseMeta[jumpConfirm.unitIndex];
             const lesson = unit.lessons[jumpConfirm.lessonIndex];
             const theme = getUnitTheme(jumpConfirm.unitIndex);
             return (

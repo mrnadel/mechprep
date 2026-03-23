@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useCourseStore } from '@/store/useCourseStore';
-import { course } from '@/data/course';
+import { courseMeta } from '@/data/course/course-meta';
 import { Sparkles } from 'lucide-react';
 import { useSubscription } from '@/hooks/useSubscription';
 import { useGems } from '@/store/useEngagementStore';
@@ -46,7 +46,7 @@ export function CourseHeader() {
   const [popoverPos, setPopoverPos] = useState<{ top: number; arrowRight: number; right: number; width: number } | null>(null);
 
   const completedCount = Object.keys(progress.completedLessons).length;
-  const totalLessons = course.reduce((s, u) => s + u.lessons.length, 0);
+  const totalLessons = courseMeta.reduce((s, u) => s + u.lessons.length, 0);
   const completedPercent = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
   const lessonsToNext = Math.max(1, 3 - (completedCount % 3));
 

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
-import { getLessonById } from '@/data/course';
+import { getLessonByIdMeta } from '@/data/course/course-meta';
 import { getUnitTheme } from '@/lib/unitThemes';
 import { useBackHandler } from '@/hooks/useBackHandler';
 import { useEngagementActions } from '@/store/useEngagementStore';
@@ -19,7 +19,7 @@ export default function ResultScreen() {
   // Mobile back button dismisses result
   useBackHandler(!!lessonResult, dismissResult);
 
-  const lessonInfo = lessonResult ? getLessonById(lessonResult.lessonId) : null;
+  const lessonInfo = lessonResult ? getLessonByIdMeta(lessonResult.lessonId) : null;
 
   useEffect(() => {
     if (!lessonResult) return;
