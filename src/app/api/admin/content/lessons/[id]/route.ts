@@ -18,9 +18,22 @@ export async function PUT(
   const { id } = await params;
   const body = await req.json();
 
+  // Allowlist fields to prevent mass assignment
+  const allowedFields: Record<string, unknown> = {};
+  if (body.unitId !== undefined) allowedFields.unitId = body.unitId;
+  if (body.title !== undefined) allowedFields.title = body.title;
+  if (body.description !== undefined) allowedFields.description = body.description;
+  if (body.icon !== undefined) allowedFields.icon = body.icon;
+  if (body.xpReward !== undefined) allowedFields.xpReward = body.xpReward;
+  if (body.orderIndex !== undefined) allowedFields.orderIndex = body.orderIndex;
+
+  if (Object.keys(allowedFields).length === 0) {
+    return NextResponse.json({ error: 'No valid fields to update' }, { status: 400 });
+  }
+
   const [updated] = await db
     .update(courseLessons)
-    .set({ ...body, updatedAt: new Date() })
+    .set({ ...allowedFields, updatedAt: new Date() })
     .where(eq(courseLessons.id, id))
     .returning();
 

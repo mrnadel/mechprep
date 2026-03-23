@@ -16,9 +16,27 @@ export async function PUT(
   const { id } = await params;
   const body = await req.json();
 
+  // Allowlist fields to prevent mass assignment
+  const allowedFields: Record<string, unknown> = {};
+  if (body.lessonId !== undefined) allowedFields.lessonId = body.lessonId;
+  if (body.type !== undefined) allowedFields.type = body.type;
+  if (body.question !== undefined) allowedFields.question = body.question;
+  if (body.options !== undefined) allowedFields.options = body.options;
+  if (body.correctIndex !== undefined) allowedFields.correctIndex = body.correctIndex;
+  if (body.correctAnswer !== undefined) allowedFields.correctAnswer = body.correctAnswer;
+  if (body.acceptedAnswers !== undefined) allowedFields.acceptedAnswers = body.acceptedAnswers;
+  if (body.explanation !== undefined) allowedFields.explanation = body.explanation;
+  if (body.hint !== undefined) allowedFields.hint = body.hint;
+  if (body.diagram !== undefined) allowedFields.diagram = body.diagram;
+  if (body.orderIndex !== undefined) allowedFields.orderIndex = body.orderIndex;
+
+  if (Object.keys(allowedFields).length === 0) {
+    return NextResponse.json({ error: 'No valid fields to update' }, { status: 400 });
+  }
+
   const [updated] = await db
     .update(courseQuestions)
-    .set({ ...body, updatedAt: new Date() })
+    .set({ ...allowedFields, updatedAt: new Date() })
     .where(eq(courseQuestions.id, id))
     .returning();
 

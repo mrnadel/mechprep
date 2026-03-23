@@ -4,6 +4,8 @@ import { db } from '@/lib/db';
 import { subscriptions } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 
+const ADMIN_USER_ID = process.env.ADMIN_USER_ID;
+
 // DEV ONLY: Grant Pro to the currently logged-in user
 export async function POST() {
   if (process.env.NODE_ENV !== 'development') {
@@ -13,6 +15,11 @@ export async function POST() {
   const userId = await getAuthUserId();
   if (!userId) {
     return NextResponse.json({ error: 'Not logged in' }, { status: 401 });
+  }
+
+  // Only admin can grant pro, even in development
+  if (ADMIN_USER_ID && userId !== ADMIN_USER_ID) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
   try {
