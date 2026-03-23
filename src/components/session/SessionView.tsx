@@ -157,10 +157,24 @@ export default function SessionView() {
 
       if (!isCurrentAnswered) {
         const key = e.key.toLowerCase();
+        const qType = questionRef.current?.questionType;
+
         if (/^[1-9]$/.test(key)) {
-          questionRef.current?.selectOption(parseInt(key) - 1);
+          const idx = parseInt(key) - 1;
+          if (qType === 'fill-blank') {
+            questionRef.current?.selectWord(idx);
+          } else if (qType === 'true-false') {
+            if (idx === 0) questionRef.current?.selectBool(true);
+            else if (idx === 1) questionRef.current?.selectBool(false);
+          } else {
+            questionRef.current?.selectOption(idx);
+          }
         } else if (['a', 'b', 'c', 'd', 'e'].includes(key)) {
           questionRef.current?.selectOption(key.charCodeAt(0) - 97);
+        } else if (key === 't') {
+          questionRef.current?.selectBool(true);
+        } else if (key === 'f') {
+          questionRef.current?.selectBool(false);
         }
       }
     };
@@ -292,7 +306,10 @@ export default function SessionView() {
                       flexShrink: 0,
                     }}
                   >
-                    A–E select · Enter check · Esc exit
+                    {currentQuestion?.type === 'multiple-choice' && 'A\u2013D select \u00b7 '}
+                    {currentQuestion?.type === 'true-false' && '1/2 or T/F select \u00b7 '}
+                    {currentQuestion?.type === 'fill-blank' && '1\u20139 select word \u00b7 '}
+                    Enter check \u00b7 Esc exit
                   </motion.div>
                 )}
               </AnimatePresence>
