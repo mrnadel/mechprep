@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
   const { currentPassword, newPassword } = parsed.data;
 
   const [user] = await db
-    .select()
+    .select({ id: users.id, passwordHash: users.passwordHash })
     .from(users)
     .where(eq(users.id, userId))
     .limit(1);

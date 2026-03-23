@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     const { email, password, displayName } = parsed.data;
 
     const existing = await db
-      .select()
+      .select({ id: users.id })
       .from(users)
       .where(eq(users.email, email))
       .limit(1);

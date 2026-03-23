@@ -26,15 +26,17 @@ export async function DELETE(request: NextRequest) {
     );
   }
 
-  // Wipe all progress tables for this user
-  await Promise.all([
-    db.delete(sessionHistory).where(eq(sessionHistory.userId, userId)),
-    db.delete(topicProgress).where(eq(topicProgress.userId, userId)),
-    db.delete(dailyUsage).where(eq(dailyUsage.userId, userId)),
-    db.delete(userProgress).where(eq(userProgress.userId, userId)),
-    db.delete(courseProgress).where(eq(courseProgress.userId, userId)),
-    db.delete(masteryEvents).where(eq(masteryEvents.userId, userId)),
-  ]);
+  // Wipe all progress tables for this user atomically
+  await db.transaction(async (tx) => {
+    await Promise.all([
+      tx.delete(sessionHistory).where(eq(sessionHistory.userId, userId)),
+      tx.delete(topicProgress).where(eq(topicProgress.userId, userId)),
+      tx.delete(dailyUsage).where(eq(dailyUsage.userId, userId)),
+      tx.delete(userProgress).where(eq(userProgress.userId, userId)),
+      tx.delete(courseProgress).where(eq(courseProgress.userId, userId)),
+      tx.delete(masteryEvents).where(eq(masteryEvents.userId, userId)),
+    ]);
+  });
 
   return NextResponse.json({ ok: true });
 }

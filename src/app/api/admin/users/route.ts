@@ -66,7 +66,7 @@ export async function PATCH(req: NextRequest) {
 
   // Upsert: check if subscription exists
   const [existing] = await db
-    .select()
+    .select({ id: subscriptions.id })
     .from(subscriptions)
     .where(eq(subscriptions.userId, userId))
     .limit(1);

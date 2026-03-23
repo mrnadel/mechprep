@@ -20,50 +20,48 @@ export async function GET(
 
   const { id: targetId } = await params;
 
-  // Get user profile
-  const user = await getPublicProfile(targetId);
+  // Fetch all independent data in parallel
+  const [user, progress, accuracyResult, leagueResult, events] = await Promise.all([
+    getPublicProfile(targetId),
+    getPublicProgress(targetId),
+    db
+      .select({
+        totalQuestionsAttempted: userProgress.totalQuestionsAttempted,
+        totalQuestionsCorrect: userProgress.totalQuestionsCorrect,
+      })
+      .from(userProgress)
+      .where(eq(userProgress.userId, targetId))
+      .limit(1),
+    db
+      .select({ tier: leagueState.tier })
+      .from(leagueState)
+      .where(eq(leagueState.userId, targetId))
+      .limit(1),
+    db
+      .select({
+        id: masteryEvents.id,
+        questionId: masteryEvents.questionId,
+        topicId: masteryEvents.topicId,
+        subtopic: masteryEvents.subtopic,
+        difficulty: masteryEvents.difficulty,
+        correct: masteryEvents.correct,
+        source: masteryEvents.source,
+        answeredAt: masteryEvents.answeredAt,
+      })
+      .from(masteryEvents)
+      .where(eq(masteryEvents.userId, targetId)),
+  ]);
+
   if (!user) {
     return NextResponse.json({ error: 'User not found' }, { status: 404 });
   }
 
-  // Get progress
-  const progress = await getPublicProgress(targetId);
-
-  // Get accuracy data
-  const [accuracyData] = await db
-    .select({
-      totalQuestionsAttempted: userProgress.totalQuestionsAttempted,
-      totalQuestionsCorrect: userProgress.totalQuestionsCorrect,
-    })
-    .from(userProgress)
-    .where(eq(userProgress.userId, targetId))
-    .limit(1);
-
+  const [accuracyData] = accuracyResult;
   const attempted = accuracyData?.totalQuestionsAttempted ?? 0;
   const correct = accuracyData?.totalQuestionsCorrect ?? 0;
   const accuracy = attempted > 0 ? Math.round((correct / attempted) * 100) : 0;
 
-  // Get league tier
-  const [league] = await db
-    .select({ tier: leagueState.tier })
-    .from(leagueState)
-    .where(eq(leagueState.userId, targetId))
-    .limit(1);
-
-  // Get mastery events to compute topic mastery levels
-  const events = await db
-    .select({
-      id: masteryEvents.id,
-      questionId: masteryEvents.questionId,
-      topicId: masteryEvents.topicId,
-      subtopic: masteryEvents.subtopic,
-      difficulty: masteryEvents.difficulty,
-      correct: masteryEvents.correct,
-      source: masteryEvents.source,
-      answeredAt: masteryEvents.answeredAt,
-    })
-    .from(masteryEvents)
-    .where(eq(masteryEvents.userId, targetId));
+  const [league] = leagueResult;
 
   const topicIds = topics.map((t) => t.id) as TopicId[];
   const masteryScores = computeAllMastery(events as AnswerEvent[], topicIds);

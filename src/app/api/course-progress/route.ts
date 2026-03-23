@@ -12,21 +12,35 @@ export async function GET() {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const [user] = await db
-    .select()
-    .from(users)
-    .where(eq(users.id, userId))
-    .limit(1);
+  const [userResult, progressResult] = await Promise.all([
+    db
+      .select({
+        displayName: users.displayName,
+        name: users.name,
+      })
+      .from(users)
+      .where(eq(users.id, userId))
+      .limit(1),
+    db
+      .select({
+        totalXp: courseProgress.totalXp,
+        currentStreak: courseProgress.currentStreak,
+        longestStreak: courseProgress.longestStreak,
+        lastActiveDate: courseProgress.lastActiveDate,
+        completedLessons: courseProgress.completedLessons,
+      })
+      .from(courseProgress)
+      .where(eq(courseProgress.userId, userId))
+      .limit(1),
+  ]);
+
+  const [user] = userResult;
 
   if (!user) {
     return NextResponse.json({ error: 'User not found' }, { status: 404 });
   }
 
-  const [progress] = await db
-    .select()
-    .from(courseProgress)
-    .where(eq(courseProgress.userId, userId))
-    .limit(1);
+  const [progress] = progressResult;
 
   const assembled: CourseProgress = {
     displayName: user.displayName || user.name || 'Engineer',
@@ -57,36 +71,38 @@ export async function POST(request: NextRequest) {
   }
   const { progress } = parsed.data as { progress: CourseProgress };
 
-  const existing = await db
-    .select({ id: courseProgress.id })
-    .from(courseProgress)
-    .where(eq(courseProgress.userId, userId))
-    .limit(1);
+  await db.transaction(async (tx) => {
+    const existing = await tx
+      .select({ id: courseProgress.id })
+      .from(courseProgress)
+      .where(eq(courseProgress.userId, userId))
+      .limit(1);
 
-  const data = {
-    userId,
-    totalXp: progress.totalXp,
-    currentStreak: progress.currentStreak,
-    longestStreak: progress.longestStreak,
-    lastActiveDate: progress.lastActiveDate,
-    completedLessons: progress.completedLessons,
-    updatedAt: new Date(),
-  };
+    const data = {
+      userId,
+      totalXp: progress.totalXp,
+      currentStreak: progress.currentStreak,
+      longestStreak: progress.longestStreak,
+      lastActiveDate: progress.lastActiveDate,
+      completedLessons: progress.completedLessons,
+      updatedAt: new Date(),
+    };
 
-  if (existing.length > 0) {
-    await db
-      .update(courseProgress)
-      .set(data)
-      .where(eq(courseProgress.userId, userId));
-  } else {
-    await db.insert(courseProgress).values(data);
-  }
+    if (existing.length > 0) {
+      await tx
+        .update(courseProgress)
+        .set(data)
+        .where(eq(courseProgress.userId, userId));
+    } else {
+      await tx.insert(courseProgress).values(data);
+    }
 
-  // Also update display name
-  await db
-    .update(users)
-    .set({ displayName: progress.displayName, updatedAt: new Date() })
-    .where(eq(users.id, userId));
+    // Also update display name
+    await tx
+      .update(users)
+      .set({ displayName: progress.displayName, updatedAt: new Date() })
+      .where(eq(users.id, userId));
+  });
 
   return NextResponse.json({ ok: true });
 }

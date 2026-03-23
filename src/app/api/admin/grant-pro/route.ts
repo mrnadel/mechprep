@@ -18,7 +18,7 @@ export async function POST() {
   try {
     // Check if subscription already exists
     const [existing] = await db
-      .select()
+      .select({ id: subscriptions.id })
       .from(subscriptions)
       .where(eq(subscriptions.userId, userId))
       .limit(1);

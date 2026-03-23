@@ -119,21 +119,28 @@ export const topicProgress = pgTable(
   ]
 );
 
-export const sessionHistory = pgTable('session_history', {
-  id: text('id')
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
-  userId: text('user_id')
-    .notNull()
-    .references(() => users.id, { onDelete: 'cascade' }),
-  sessionId: text('session_id').notNull(),
-  date: text('date').notNull(),
-  durationMinutes: integer('duration_minutes').default(0).notNull(),
-  questionsAttempted: integer('questions_attempted').default(0).notNull(),
-  questionsCorrect: integer('questions_correct').default(0).notNull(),
-  topicsCovered: jsonb('topics_covered').$type<string[]>().default([]),
-  xpEarned: integer('xp_earned').default(0).notNull(),
-});
+export const sessionHistory = pgTable(
+  'session_history',
+  {
+    id: text('id')
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    sessionId: text('session_id').notNull(),
+    date: text('date').notNull(),
+    durationMinutes: integer('duration_minutes').default(0).notNull(),
+    questionsAttempted: integer('questions_attempted').default(0).notNull(),
+    questionsCorrect: integer('questions_correct').default(0).notNull(),
+    topicsCovered: jsonb('topics_covered').$type<string[]>().default([]),
+    xpEarned: integer('xp_earned').default(0).notNull(),
+  },
+  (table) => [
+    index('session_history_user_idx').on(table.userId),
+    uniqueIndex('session_history_session_id_idx').on(table.sessionId),
+  ]
+);
 
 export const courseProgress = pgTable('course_progress', {
   id: text('id')
@@ -166,43 +173,56 @@ export const courseProgress = pgTable('course_progress', {
 
 // ─── Subscription tables ──────────────────────────────────────
 
-export const subscriptions = pgTable('subscriptions', {
-  id: text('id')
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
-  userId: text('user_id')
-    .notNull()
-    .references(() => users.id, { onDelete: 'cascade' })
-    .unique(),
-  tier: text('tier').notNull().default('free'),           // 'free' | 'pro'
-  status: text('status').notNull().default('active'),     // SubscriptionStatus
-  paddleCustomerId: text('paddle_customer_id'),
-  paddleSubscriptionId: text('paddle_subscription_id').unique(),
-  paddlePriceId: text('paddle_price_id'),
-  billingInterval: text('billing_interval'),              // 'month' | 'year'
-  currentPeriodStart: text('current_period_start'),
-  currentPeriodEnd: text('current_period_end'),
-  trialStart: text('trial_start'),
-  trialEnd: text('trial_end'),
-  cancelAtPeriodEnd: boolean('cancel_at_period_end').default(false).notNull(),
-  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
-  updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
-});
+export const subscriptions = pgTable(
+  'subscriptions',
+  {
+    id: text('id')
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' })
+      .unique(),
+    tier: text('tier').notNull().default('free'),           // 'free' | 'pro'
+    status: text('status').notNull().default('active'),     // SubscriptionStatus
+    paddleCustomerId: text('paddle_customer_id'),
+    paddleSubscriptionId: text('paddle_subscription_id').unique(),
+    paddlePriceId: text('paddle_price_id'),
+    billingInterval: text('billing_interval'),              // 'month' | 'year'
+    currentPeriodStart: text('current_period_start'),
+    currentPeriodEnd: text('current_period_end'),
+    trialStart: text('trial_start'),
+    trialEnd: text('trial_end'),
+    cancelAtPeriodEnd: boolean('cancel_at_period_end').default(false).notNull(),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+    updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    index('subscriptions_paddle_customer_idx').on(table.paddleCustomerId),
+  ]
+);
 
-export const paymentHistory = pgTable('payment_history', {
-  id: text('id')
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
-  userId: text('user_id')
-    .notNull()
-    .references(() => users.id, { onDelete: 'cascade' }),
-  paddleTransactionId: text('paddle_transaction_id').unique(),
-  amountCents: integer('amount_cents').notNull(),
-  currency: text('currency').notNull().default('usd'),
-  status: text('status').notNull(),                       // 'succeeded' | 'failed' | 'pending'
-  description: text('description'),
-  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
-});
+export const paymentHistory = pgTable(
+  'payment_history',
+  {
+    id: text('id')
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    paddleTransactionId: text('paddle_transaction_id').unique(),
+    amountCents: integer('amount_cents').notNull(),
+    currency: text('currency').notNull().default('usd'),
+    status: text('status').notNull(),                       // 'succeeded' | 'failed' | 'pending'
+    description: text('description'),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    index('payment_history_user_idx').on(table.userId),
+    index('payment_history_status_created_idx').on(table.status, table.createdAt),
+  ]
+);
 
 // ─── Pro Waitlist ────────────────────────────────────────────
 
@@ -259,6 +279,7 @@ export const contentFeedback = pgTable(
       table.contentType,
       table.contentId
     ),
+    index('content_feedback_user_idx').on(table.userId),
   ]
 );
 
@@ -283,35 +304,53 @@ export const contentFeedbackDismissals = pgTable(
 // ─── Engagement system tables ─────────────────────────────────
 
 // Gems ledger
-export const gemTransactions = pgTable('gem_transactions', {
-  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-  userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
-  amount: integer('amount').notNull(),
-  source: text('source').notNull(),
-  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
-})
+export const gemTransactions = pgTable(
+  'gem_transactions',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
+    amount: integer('amount').notNull(),
+    source: text('source').notNull(),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
+  },
+  (table) => [
+    index('gem_transactions_user_idx').on(table.userId),
+  ]
+);
 
 // Quest progress (server-side sync)
-export const questProgress = pgTable('quest_progress', {
-  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-  userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
-  questDate: text('quest_date').notNull(),
-  questType: text('quest_type').notNull(),
-  quests: jsonb('quests').notNull(),
-  chestClaimed: boolean('chest_claimed').default(false),
-  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
-})
+export const questProgress = pgTable(
+  'quest_progress',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
+    questDate: text('quest_date').notNull(),
+    questType: text('quest_type').notNull(),
+    quests: jsonb('quests').notNull(),
+    chestClaimed: boolean('chest_claimed').default(false),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
+  },
+  (table) => [
+    uniqueIndex('quest_progress_user_date_type_idx').on(table.userId, table.questDate, table.questType),
+  ]
+);
 
 // League state
-export const leagueState = pgTable('league_state', {
-  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-  userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
-  tier: integer('tier').default(1),
-  weeklyXp: integer('weekly_xp').default(0),
-  weekStart: text('week_start').notNull(),
-  competitors: jsonb('competitors').notNull(),
-  updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow().notNull(),
-})
+export const leagueState = pgTable(
+  'league_state',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull().unique(),
+    tier: integer('tier').default(1),
+    weeklyXp: integer('weekly_xp').default(0),
+    weekStart: text('week_start').notNull(),
+    competitors: jsonb('competitors').notNull(),
+    updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow().notNull(),
+  },
+  (table) => [
+    index('league_state_user_idx').on(table.userId),
+  ]
+);
 
 // ─── Content Management ──────────────────────────────────────
 
@@ -326,52 +365,70 @@ export const courseUnits = pgTable('course_units', {
   updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
 });
 
-export const courseLessons = pgTable('course_lessons', {
-  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-  unitId: text('unit_id').notNull().references(() => courseUnits.id, { onDelete: 'cascade' }),
-  title: text('title').notNull(),
-  description: text('description').notNull(),
-  icon: text('icon').notNull(),
-  xpReward: integer('xp_reward').notNull().default(10),
-  orderIndex: integer('order_index').notNull(),
-  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
-  updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
-});
+export const courseLessons = pgTable(
+  'course_lessons',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    unitId: text('unit_id').notNull().references(() => courseUnits.id, { onDelete: 'cascade' }),
+    title: text('title').notNull(),
+    description: text('description').notNull(),
+    icon: text('icon').notNull(),
+    xpReward: integer('xp_reward').notNull().default(10),
+    orderIndex: integer('order_index').notNull(),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+    updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    index('course_lessons_unit_idx').on(table.unitId),
+  ]
+);
 
-export const courseQuestions = pgTable('course_questions', {
-  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-  lessonId: text('lesson_id').notNull().references(() => courseLessons.id, { onDelete: 'cascade' }),
-  type: text('type').notNull(),
-  question: text('question').notNull(),
-  options: jsonb('options').$type<string[]>(),
-  correctIndex: integer('correct_index'),
-  correctAnswer: text('correct_answer'),
-  acceptedAnswers: jsonb('accepted_answers').$type<string[]>(),
-  explanation: text('explanation').notNull(),
-  hint: text('hint'),
-  diagram: text('diagram'),
-  orderIndex: integer('order_index').notNull(),
-  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
-  updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
-});
+export const courseQuestions = pgTable(
+  'course_questions',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    lessonId: text('lesson_id').notNull().references(() => courseLessons.id, { onDelete: 'cascade' }),
+    type: text('type').notNull(),
+    question: text('question').notNull(),
+    options: jsonb('options').$type<string[]>(),
+    correctIndex: integer('correct_index'),
+    correctAnswer: text('correct_answer'),
+    acceptedAnswers: jsonb('accepted_answers').$type<string[]>(),
+    explanation: text('explanation').notNull(),
+    hint: text('hint'),
+    diagram: text('diagram'),
+    orderIndex: integer('order_index').notNull(),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+    updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    index('course_questions_lesson_idx').on(table.lessonId),
+  ]
+);
 
-export const practiceQuestions = pgTable('practice_questions', {
-  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-  type: text('type').notNull(),
-  topic: text('topic').notNull(),
-  subtopic: text('subtopic').notNull(),
-  difficulty: text('difficulty').notNull(),
-  question: text('question').notNull(),
-  explanation: text('explanation').notNull(),
-  interviewInsight: text('interview_insight').notNull(),
-  realWorldConnection: text('real_world_connection'),
-  commonMistake: text('common_mistake').notNull(),
-  tags: jsonb('tags').$type<string[]>().notNull().default([]),
-  typeData: jsonb('type_data').notNull().default({}),
-  orderIndex: integer('order_index').notNull().default(0),
-  createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
-  updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
-});
+export const practiceQuestions = pgTable(
+  'practice_questions',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    type: text('type').notNull(),
+    topic: text('topic').notNull(),
+    subtopic: text('subtopic').notNull(),
+    difficulty: text('difficulty').notNull(),
+    question: text('question').notNull(),
+    explanation: text('explanation').notNull(),
+    interviewInsight: text('interview_insight').notNull(),
+    realWorldConnection: text('real_world_connection'),
+    commonMistake: text('common_mistake').notNull(),
+    tags: jsonb('tags').$type<string[]>().notNull().default([]),
+    typeData: jsonb('type_data').notNull().default({}),
+    orderIndex: integer('order_index').notNull().default(0),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+    updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    index('practice_questions_topic_idx').on(table.topic),
+  ]
+);
 
 // ── Mastery Events ──────────────────────────────────────────
 export const masteryEvents = pgTable('mastery_events', {

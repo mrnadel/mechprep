@@ -41,7 +41,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
 
         const result = await db
-          .select()
+          .select({
+            id: users.id,
+            email: users.email,
+            name: users.name,
+            image: users.image,
+            displayName: users.displayName,
+            passwordHash: users.passwordHash,
+          })
           .from(users)
           .where(eq(users.email, email))
           .limit(1);

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db';
-import { courseUnits, courseLessons, courseQuestions } from '@/lib/db/schema';
+import { courseUnits } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 
 const ADMIN_USER_ID = process.env.ADMIN_USER_ID;
@@ -42,23 +42,8 @@ export async function DELETE(
 
   const { id } = await params;
 
-  // Get all lessons for this unit so we can cascade-delete their questions
-  const lessons = await db
-    .select({ id: courseLessons.id })
-    .from(courseLessons)
-    .where(eq(courseLessons.unitId, id));
-
-  // Delete questions for each lesson
-  for (const lesson of lessons) {
-    await db
-      .delete(courseQuestions)
-      .where(eq(courseQuestions.lessonId, lesson.id));
-  }
-
-  // Delete all lessons for this unit
-  await db.delete(courseLessons).where(eq(courseLessons.unitId, id));
-
-  // Delete the unit itself
+  // Schema has onDelete: cascade on courseLessons.unitId and courseQuestions.lessonId,
+  // so deleting the unit automatically cascades to lessons and questions.
   const [deleted] = await db
     .delete(courseUnits)
     .where(eq(courseUnits.id, id))
