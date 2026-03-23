@@ -102,6 +102,9 @@ export default function ResultScreen() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
         className="fixed inset-0 z-50 flex items-center justify-center"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="result-heading"
         style={{
           background: '#FAFAFA',
           paddingTop: 'env(safe-area-inset-top, 0px)',
@@ -211,6 +214,7 @@ export default function ResultScreen() {
                 animate={isGolden ? { rotate: [0, -5, 5, -3, 3, 0] } : undefined}
                 transition={isGolden ? { duration: 1.2, delay: 0.6, ease: 'easeInOut' } : undefined}
                 style={{ display: 'inline-block' }}
+                aria-hidden="true"
               >
                 {!passed ? '📚' : isFlawless ? '💎' : isGolden ? '👑' : lessonResult.stars === 3 ? '👑' : '🏆'}
               </motion.span>
@@ -218,6 +222,7 @@ export default function ResultScreen() {
 
             {/* Heading */}
             <motion.h1
+              id="result-heading"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}

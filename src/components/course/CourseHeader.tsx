@@ -107,8 +107,10 @@ export function CourseHeader() {
                 background: popover === 'streak' ? '#FFFBEB' : 'transparent',
               }}
               onClick={() => togglePopover('streak')}
+              aria-label={`${progress.currentStreak} day streak`}
+              aria-expanded={popover === 'streak'}
             >
-              <span style={{ fontSize: 15 }}>⚡</span>
+              <span style={{ fontSize: 15 }} aria-hidden="true">⚡</span>
               <span>{progress.currentStreak}</span>
             </button>
 
@@ -125,8 +127,10 @@ export function CourseHeader() {
                 background: popover === 'xp' ? '#F3E6FF' : 'transparent',
               }}
               onClick={() => togglePopover('xp')}
+              aria-label={`${progress.totalXp.toLocaleString()} experience points`}
+              aria-expanded={popover === 'xp'}
             >
-              <span style={{ fontSize: 15 }}>⭐</span>
+              <span style={{ fontSize: 15 }} aria-hidden="true">⭐</span>
               <span>{progress.totalXp.toLocaleString()}</span>
             </button>
 
@@ -143,8 +147,10 @@ export function CourseHeader() {
                 background: popover === 'gems' ? '#F3E8FF' : 'transparent',
               }}
               onClick={() => togglePopover('gems')}
+              aria-label={`${gems.balance} gems`}
+              aria-expanded={popover === 'gems'}
             >
-              <span style={{ fontSize: 15 }}>💎</span>
+              <span style={{ fontSize: 15 }} aria-hidden="true">💎</span>
               <span>{gems.balance}</span>
             </button>
 

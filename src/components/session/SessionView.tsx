@@ -277,10 +277,10 @@ export default function SessionView() {
               animate={{ scale: [1, 1.15, 1] }}
               transition={{ duration: 0.25 }}
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" fill={PRACTICE_THEME.dark} />
               </svg>
-              +{xpGain} XP
+              <span aria-live="polite">+{xpGain} XP</span>
             </motion.div>
           </div>
 
@@ -382,7 +382,7 @@ export default function SessionView() {
                 borderTop: `2px solid ${lastAnswerCorrect ? '#58CC02' : '#FF4B4B'}`,
               }}
             >
-              <div style={{ marginBottom: 12 }}>
+              <div style={{ marginBottom: 12 }} role="status" aria-live="assertive">
                 <p
                   style={{
                     fontSize: 17,
@@ -460,6 +460,9 @@ export default function SessionView() {
               <div className="absolute inset-0 bg-black/40" />
               <motion.div
                 className="relative w-full sm:w-auto bg-white"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="session-exit-title"
                 style={{
                   maxWidth: 480,
                   borderRadius: 24,
@@ -472,6 +475,7 @@ export default function SessionView() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <p
+                  id="session-exit-title"
                   style={{
                     fontSize: 19,
                     fontWeight: 800,

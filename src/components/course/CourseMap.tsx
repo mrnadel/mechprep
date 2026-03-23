@@ -304,6 +304,9 @@ export function CourseMap() {
                 <div className="absolute inset-0 bg-black/40" />
                 <motion.div
                   className="relative w-full sm:w-auto bg-white sm:mx-4 overflow-y-auto"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label="Lesson action"
                   style={{
                     maxWidth: 480,
                     maxHeight: 'calc(100vh - 48px)',

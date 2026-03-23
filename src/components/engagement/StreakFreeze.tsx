@@ -90,6 +90,9 @@ export function StreakFreeze() {
         >
           <motion.div
             className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-sm"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="streak-repair-title"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
@@ -100,12 +103,13 @@ export function StreakFreeze() {
               <div
                 className="flex items-center justify-center w-16 h-16 rounded-full text-4xl"
                 style={{ background: '#FEF2F2' }}
+                aria-hidden="true"
               >
                 💔
               </div>
             </div>
 
-            <h2 className="text-xl font-extrabold text-center text-gray-900 mb-1">
+            <h2 id="streak-repair-title" className="text-xl font-extrabold text-center text-gray-900 mb-1">
               Your streak broke!
             </h2>
             <p className="text-sm text-center text-gray-500 mb-5">

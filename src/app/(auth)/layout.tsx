@@ -9,10 +9,11 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           href="/"
           className="inline-flex items-center gap-1 text-sm font-bold text-surface-300 hover:text-surface-500 transition-colors w-fit"
         >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
             <path d="M12 5L7 10L12 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <span className="hidden lg:inline">Back to home</span>
+          <span className="lg:hidden sr-only">Back to home</span>
         </Link>
 
         {/* Logo */}

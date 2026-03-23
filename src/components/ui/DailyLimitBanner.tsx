@@ -29,7 +29,14 @@ export function DailyLimitBanner({ questionsUsedToday = 0 }: DailyLimitBannerPro
             {remaining} of {limit} remaining
           </span>
         </div>
-        <div className="h-1.5 bg-amber-100 rounded-full overflow-hidden">
+        <div
+          className="h-1.5 bg-amber-100 rounded-full overflow-hidden"
+          role="progressbar"
+          aria-valuenow={questionsUsedToday}
+          aria-valuemin={0}
+          aria-valuemax={limit}
+          aria-label={`${questionsUsedToday} of ${limit} daily questions used`}
+        >
           <div
             className="h-full bg-amber-400 rounded-full transition-all duration-300"
             style={{ width: `${pct}%` }}

@@ -344,5 +344,9 @@ const illustrationMap: Record<number, React.FC<IllustrationProps>> = {
  */
 export function UnitIllustration({ unitIndex, color, className }: { unitIndex: number; color: string; className?: string }) {
   const Component = illustrationMap[unitIndex] ?? StaticsIllustration;
-  return <Component color={color} className={className} />;
+  return (
+    <div aria-hidden="true">
+      <Component color={color} className={className} />
+    </div>
+  );
 }

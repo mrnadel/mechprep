@@ -35,6 +35,9 @@ export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
           >
             <motion.div
               className="bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full text-center"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${type === 'daily' ? 'Daily' : 'Weekly'} chest reward`}
               initial={{ scale: 0.7, y: 40 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.7, y: 40 }}

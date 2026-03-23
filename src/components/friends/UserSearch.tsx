@@ -60,17 +60,24 @@ export default function UserSearch() {
     <div ref={containerRef} className="relative mb-5">
       <div className="relative">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-surface-400" />
+        <label htmlFor="user-search" className="sr-only">Search users by name</label>
         <input
-          type="text"
+          id="user-search"
+          type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
           placeholder="Search users by name..."
+          role="combobox"
+          aria-expanded={showDropdown}
+          aria-autocomplete="list"
+          aria-controls="user-search-results"
           className="w-full pl-10 pr-10 py-3 rounded-xl border border-surface-200 bg-white text-sm font-medium text-surface-900 placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-primary-200 focus:border-primary-400 transition-all"
         />
         {query && !loading && (
           <button
             onClick={() => { setQuery(''); setResults([]); }}
+            aria-label="Clear search"
             className="absolute right-3 top-1/2 -translate-y-1/2 text-surface-400 hover:text-surface-600"
           >
             <X className="w-4 h-4" />
@@ -82,7 +89,7 @@ export default function UserSearch() {
       </div>
 
       {showDropdown && (
-        <div className="absolute top-full mt-1 left-0 right-0 bg-white rounded-xl border border-surface-200 shadow-lg z-20 overflow-hidden">
+        <div id="user-search-results" role="listbox" className="absolute top-full mt-1 left-0 right-0 bg-white rounded-xl border border-surface-200 shadow-lg z-20 overflow-hidden">
           {results.length === 0 ? (
             <p className="px-4 py-3 text-sm text-surface-400">No users found</p>
           ) : (

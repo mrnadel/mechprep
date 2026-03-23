@@ -249,6 +249,8 @@ export default function LessonView() {
         exit={{ y: '100%' }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         className="fixed inset-0 z-50 flex items-center justify-center"
+        role="main"
+        aria-label="Lesson view"
         style={{
           backgroundColor: '#FAFAFA',
           paddingTop: 'env(safe-area-inset-top, 0px)',
@@ -415,10 +417,10 @@ export default function LessonView() {
             animate={{ scale: [1, 1.15, 1] }}
             transition={{ duration: 0.25 }}
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" fill={theme.dark} />
             </svg>
-            +{xpGain} XP
+            <span aria-live="polite">+{xpGain} XP</span>
           </motion.div>
         </div>
 
@@ -520,7 +522,7 @@ export default function LessonView() {
               borderTop: `2px solid ${lastAnswerCorrect ? '#58CC02' : '#FF4B4B'}`,
             }}
           >
-            <div style={{ marginBottom: 12 }}>
+            <div style={{ marginBottom: 12 }} role="status" aria-live="assertive">
               <p
                 style={{
                   fontSize: 17,
@@ -599,6 +601,9 @@ export default function LessonView() {
               <div className="absolute inset-0 bg-black/40" />
               <motion.div
                 className="relative w-full sm:w-auto bg-white"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="exit-confirm-title"
                 style={{
                   maxWidth: 480,
                   borderRadius: 24,
@@ -611,6 +616,7 @@ export default function LessonView() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <p
+                  id="exit-confirm-title"
                   style={{
                     fontSize: 19,
                     fontWeight: 800,

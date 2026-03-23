@@ -10,7 +10,15 @@ interface LessonProgressBarProps {
 
 export default function LessonProgressBar({ current, total, color }: LessonProgressBarProps) {
   return (
-    <div className="flex items-center flex-1" style={{ gap: 5 }}>
+    <div
+      className="flex items-center flex-1"
+      style={{ gap: 5 }}
+      role="progressbar"
+      aria-valuenow={current}
+      aria-valuemin={0}
+      aria-valuemax={total}
+      aria-label={`Question ${current} of ${total} completed`}
+    >
       {Array.from({ length: total }).map((_, i) => {
         const isCompleted = i < current;
         const isCurrent = i === current;

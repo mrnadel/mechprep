@@ -84,6 +84,9 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
           {/* Modal */}
           <motion.div
             className="relative bg-white rounded-t-2xl sm:rounded-2xl w-full max-w-md mx-4 mb-0 sm:mb-0 overflow-hidden shadow-2xl"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="upgrade-modal-title"
             initial={{ y: 60, opacity: 0, scale: 0.96 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 60, opacity: 0, scale: 0.96 }}
@@ -106,7 +109,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
                   {reason || 'This feature requires Pro'}
                 </span>
               </div>
-              <h3 className="text-xl font-bold">MechReady Pro</h3>
+              <h3 id="upgrade-modal-title" className="text-xl font-bold">MechReady Pro</h3>
               <p className="text-sm text-primary-100 mt-1">
                 Unlock all units, unlimited practice, and full analytics
               </p>

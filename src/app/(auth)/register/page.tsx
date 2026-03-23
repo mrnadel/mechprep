@@ -8,7 +8,7 @@ import { analytics } from '@/lib/mixpanel';
 
 function GoogleIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="20" height="20">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
       <path
         fill="#4285F4"
         d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
@@ -42,8 +42,8 @@ function PasswordStrength({ password }: { password: string }) {
   const score = checks.filter((c) => c.met).length;
 
   return (
-    <div className="space-y-2 pt-1">
-      <div className="flex gap-1">
+    <div className="space-y-2 pt-1" role="status" aria-label={`Password strength: ${score} of 4 requirements met`}>
+      <div className="flex gap-1" aria-hidden="true">
         {[1, 2, 3, 4].map((i) => (
           <div
             key={i}
@@ -154,12 +154,14 @@ export default function RegisterPage() {
       {/* Form */}
       <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-3">
         {error && (
-          <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm text-center font-semibold">
+          <div role="alert" className="p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm text-center font-semibold">
             {error}
           </div>
         )}
 
+        <label htmlFor="register-name" className="sr-only">Name</label>
         <input
+          id="register-name"
           type="text"
           placeholder="Name"
           value={displayName}
@@ -167,26 +169,33 @@ export default function RegisterPage() {
           required
           minLength={2}
           maxLength={50}
+          autoComplete="name"
           className="w-full px-4 py-3.5 bg-surface-50 border-2 border-surface-200 rounded-2xl text-surface-900 font-semibold placeholder-surface-300 focus:outline-none focus:border-primary-400 focus:bg-white transition-colors"
         />
 
+        <label htmlFor="register-email" className="sr-only">Email</label>
         <input
+          id="register-email"
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          autoComplete="email"
           className="w-full px-4 py-3.5 bg-surface-50 border-2 border-surface-200 rounded-2xl text-surface-900 font-semibold placeholder-surface-300 focus:outline-none focus:border-primary-400 focus:bg-white transition-colors"
         />
 
         <div>
+          <label htmlFor="register-password" className="sr-only">Password</label>
           <input
+            id="register-password"
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
             minLength={8}
+            autoComplete="new-password"
             className="w-full px-4 py-3.5 bg-surface-50 border-2 border-surface-200 rounded-2xl text-surface-900 font-semibold placeholder-surface-300 focus:outline-none focus:border-primary-400 focus:bg-white transition-colors"
           />
           <PasswordStrength password={password} />
