@@ -1,7 +1,7 @@
 import type { Lesson } from '../types';
 
 export const lesson1: Lesson = {
-  id: 'u7-L1',
+  id: 'htw-L1',
   title: 'Kitchen Engineering',
   description: 'How pressure cookers, refrigerators, faucets, and kitchen knives use core engineering principles.',
   icon: '🍳',
@@ -9,7 +9,7 @@ export const lesson1: Lesson = {
   questions: [
     // --- PRESSURE COOKER (Q1-Q4) ---
     {
-      id: 'u7-L1-Q1',
+      id: 'htw-L1-Q1',
       type: 'multiple-choice',
       question: 'A pressure cooker cooks food faster primarily because:',
       options: [
@@ -23,16 +23,16 @@ export const lesson1: Lesson = {
       explanation: 'By sealing the pot, steam pressure builds above atmospheric. Per the Clausius-Clapeyron relation, higher pressure raises the saturation temperature, so water boils at ~120\u00B0C instead of 100\u00B0C \u2014 cooking food faster.',
     },
     {
-      id: 'u7-L1-Q2',
+      id: 'htw-L1-Q2',
       type: 'fill-blank',
-      question: 'The ___ relation describes how the boiling point of a liquid changes with pressure, which is the principle behind a pressure cooker.',
+      question: 'The _____ relation describes how the boiling point of a liquid changes with pressure, which is the principle behind a pressure cooker.',
       blanks: ['Clausius-Clapeyron'],
       wordBank: ['Clausius-Clapeyron', 'Bernoulli', 'Fourier', 'Carnot', 'Navier-Stokes'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="15" y1="65" x2="15" y2="10" stroke="#3B8700" stroke-width="1.5"/><line x1="15" y1="65" x2="70" y2="65" stroke="#3B8700" stroke-width="1.5"/><text x="8" y="38" font-size="4" fill="#334155" transform="rotate(-90 8 38)">P</text><text x="42" y="74" font-size="4" fill="#334155">T</text><path d="M20,58 C30,50 45,35 60,15" stroke="#58CC02" stroke-width="2.5" fill="none"/><circle cx="35" cy="45" r="2.5" fill="#58CC02"><animate attributeName="r" values="2.5;3.5;2.5" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></circle><text x="40" y="44" font-size="3.5" fill="#334155">(T,P)</text><text x="22" y="20" font-size="4" fill="#6B7280" font-style="italic">dP/dT</text><text x="20" y="26" font-size="3.5" fill="#6B7280">= L/(TΔv)</text><text x="35" y="58" font-size="3.5" fill="#6B7280">Clausius-Clapeyron</text></svg>`,
       explanation: 'The Clausius-Clapeyron equation relates the slope of the vapor pressure curve to latent heat and temperature. It predicts that increasing pressure raises the saturation (boiling) temperature \u2014 the core principle that lets a pressure cooker reach ~120\u00B0C.',
     },
     {
-      id: 'u7-L1-Q3',
+      id: 'htw-L1-Q3',
       type: 'multiple-choice',
       question: 'A cylindrical pressure cooker wall is under internal pressure. The hoop (circumferential) stress in the wall is:',
       options: [
@@ -46,7 +46,7 @@ export const lesson1: Lesson = {
       explanation: 'For a thin-walled pressure vessel, hoop stress = pR/t and axial stress = pR/(2t). The hoop stress is exactly twice the axial stress, which is why pressure vessels tend to split along their length (longitudinal seam) rather than around their circumference.',
     },
     {
-      id: 'u7-L1-Q4',
+      id: 'htw-L1-Q4',
       type: 'true-false',
       question: 'The safety valve on a pressure cooker is a dead-weight relief valve \u2014 it lifts when internal pressure exceeds the force of a calibrated weight divided by the valve seat area.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="25" y="45" width="30" height="20" rx="3" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.1"/><rect x="36" y="38" width="8" height="7" rx="1" stroke="#3B8700" stroke-width="1.5" fill="#3B8700" fill-opacity="0.2"/><rect x="37" y="24" width="6" height="14" rx="1" fill="#334155" fill-opacity="0.6"><animate attributeName="y" values="24;20;24" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><text x="48" y="30" font-size="4" fill="#334155" font-style="italic">W</text><line x1="40" y1="50" x2="40" y2="42" stroke="#58CC02" stroke-width="2" marker-end="url(#av1)"/><defs><marker id="av1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="46" y="48" font-size="4" fill="#58CC02" font-style="italic">P·A</text><line x1="40" y1="24" x2="40" y2="18" stroke="#334155" stroke-width="1.5"><animate attributeName="y2" values="18;14;18" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><circle cx="35" cy="52" r="1" fill="#A5E86C"><animate attributeName="cy" values="52;48;52" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></circle><circle cx="45" cy="55" r="1" fill="#A5E86C"><animate attributeName="cy" values="55;50;55" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></circle><text x="40" y="76" text-anchor="middle" font-size="4" fill="#6B7280">Lifts when P·A > W</text></svg>`,
@@ -56,7 +56,7 @@ export const lesson1: Lesson = {
 
     // --- REFRIGERATOR (Q5-Q8) ---
     {
-      id: 'u7-L1-Q5',
+      id: 'htw-L1-Q5',
       type: 'multiple-choice',
       question: 'In a household refrigerator, the evaporator is located:',
       options: [
@@ -70,7 +70,7 @@ export const lesson1: Lesson = {
       explanation: 'The evaporator is inside the compartment where refrigerant absorbs heat by evaporating at low pressure. The condenser is on the back/bottom exterior, where it rejects heat to the kitchen. Heat flows from food \u2192 evaporator \u2192 compressor \u2192 condenser \u2192 kitchen air.',
     },
     {
-      id: 'u7-L1-Q6',
+      id: 'htw-L1-Q6',
       type: 'multiple-choice',
       question: 'A refrigerator has a COP of 4. This means:',
       options: [
@@ -84,16 +84,16 @@ export const lesson1: Lesson = {
       explanation: 'COP (Coefficient of Performance) = Q_cold / W_in. A COP of 4 means 1 kW of compressor work moves 4 kW of heat out of the fridge. Note COP > 1 is normal for refrigeration \u2014 it\'s not an efficiency, it\'s a ratio of desired output to work input.',
     },
     {
-      id: 'u7-L1-Q7',
+      id: 'htw-L1-Q7',
       type: 'fill-blank',
-      question: 'In the vapor-compression refrigeration cycle, the ___ reduces refrigerant pressure without extracting work, causing a temperature drop via throttling.',
+      question: 'In the vapor-compression refrigeration cycle, the _____ reduces refrigerant pressure without extracting work, causing a temperature drop via throttling.',
       blanks: ['expansion valve'],
       wordBank: ['expansion valve', 'compressor', 'evaporator', 'condenser', 'accumulator'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="15" width="60" height="50" rx="6" stroke="#3B8700" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/><text x="40" y="12" text-anchor="middle" font-size="3.5" fill="#6B7280">Vapor-compression cycle</text><rect x="25" y="20" width="30" height="10" rx="2" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.15"/><text x="40" y="27" text-anchor="middle" font-size="3.5" fill="#334155">Condenser</text><rect x="25" y="50" width="30" height="10" rx="2" stroke="#58CC02" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><text x="40" y="57" text-anchor="middle" font-size="3.5" fill="#334155">Evaporator</text><circle cx="12" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="#3B8700" fill-opacity="0.1"/><text x="12" y="42" text-anchor="middle" font-size="3" fill="#334155">Comp</text><circle cx="68" cy="40" r="4" stroke="#58CC02" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><text x="68" y="42" text-anchor="middle" font-size="2.5" fill="#334155">Exp.V</text><line x1="17" y1="37" x2="25" y2="25" stroke="#3B8700" stroke-width="1.5"/><line x1="55" y1="25" x2="64" y2="37" stroke="#3B8700" stroke-width="1.5"/><line x1="64" y1="43" x2="55" y2="55" stroke="#58CC02" stroke-width="1.5"/><line x1="25" y1="55" x2="17" y2="43" stroke="#58CC02" stroke-width="1.5"/><circle r="1.5" fill="#58CC02"><animateMotion dur="3s" repeatCount="indefinite" path="M12,35 L30,22 L55,22 L68,36 L68,44 L55,55 L25,55 L12,43 L12,35"/></circle><text x="68" y="52" font-size="3" fill="#58CC02" font-weight="bold">throttle</text><text x="20" y="76" font-size="4" fill="#6B7280">Isenthalpic: h₁ = h₂</text></svg>`,
       explanation: 'The expansion valve (or capillary tube) is an isenthalpic throttling device. It drops the high-pressure liquid refrigerant to low pressure, causing partial flash evaporation and a sharp temperature drop \u2014 no moving parts or work extraction needed.',
     },
     {
-      id: 'u7-L1-Q8',
+      id: 'htw-L1-Q8',
       type: 'true-false',
       question: 'In a refrigerator\'s vapor-compression cycle, the refrigerant enters the compressor as a superheated vapor and leaves the condenser as a subcooled liquid.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="12" y1="68" x2="12" y2="8" stroke="#3B8700" stroke-width="1.5"/><line x1="12" y1="68" x2="72" y2="68" stroke="#3B8700" stroke-width="1.5"/><text x="6" y="38" font-size="4" fill="#334155" transform="rotate(-90 6 38)">T</text><text x="42" y="76" font-size="4" fill="#334155">s</text><path d="M22,55 C30,40 42,28 62,16" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 1" fill="none"/><path d="M22,55 C22,38 30,32 38,32 C46,32 54,38 54,55" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.1"/><circle cx="20" cy="48" r="2.5" fill="#58CC02"><animate attributeName="r" values="2.5;3.5;2.5" dur="2s" repeatCount="indefinite"/></circle><text x="14" y="44" font-size="3" fill="#58CC02">1</text><circle cx="35" cy="18" r="2.5" fill="#3B8700"/><text x="38" y="17" font-size="3" fill="#3B8700">2</text><circle cx="56" cy="34" r="2.5" fill="#A5E86C"/><text x="59" y="33" font-size="3" fill="#3B8700">3</text><circle cx="24" cy="52" r="2.5" fill="#58CC02"/><text x="17" y="56" font-size="3" fill="#58CC02">4</text><text x="14" y="42" font-size="3" fill="#6B7280">sup.vap</text><text x="54" y="30" font-size="3" fill="#6B7280">sub.liq</text></svg>`,
@@ -103,7 +103,7 @@ export const lesson1: Lesson = {
 
     // --- FAUCET/TAP (Q9-Q11) ---
     {
-      id: 'u7-L1-Q9',
+      id: 'htw-L1-Q9',
       type: 'multiple-choice',
       question: 'A kitchen faucet aerator mixes air into the water stream. From a fluid mechanics perspective, this works primarily by:',
       options: [
@@ -117,7 +117,7 @@ export const lesson1: Lesson = {
       explanation: 'The aerator\'s small orifices accelerate water, which by Bernoulli\'s principle lowers local static pressure below atmospheric. This pressure difference draws ambient air into the stream (venturi/ejector effect), producing a bubbly, voluminous-feeling flow while using less water.',
     },
     {
-      id: 'u7-L1-Q10',
+      id: 'htw-L1-Q10',
       type: 'multiple-choice',
       question: 'Municipal water pressure is typically 40-60 psi at the tap. If you partially close the faucet valve, the flow rate decreases because:',
       options: [
@@ -131,9 +131,9 @@ export const lesson1: Lesson = {
       explanation: 'A valve acts as a variable-resistance element. Partially closing it reduces the flow area, increasing the local pressure drop across the valve. With a fixed supply pressure, more pressure is "used up" across the valve restriction, leaving less to drive flow \u2014 so flow rate decreases.',
     },
     {
-      id: 'u7-L1-Q11',
+      id: 'htw-L1-Q11',
       type: 'fill-blank',
-      question: 'A single-handle kitchen faucet uses a ___ valve that controls both flow rate and hot/cold mixing ratio with one lever movement.',
+      question: 'A single-handle kitchen faucet uses a _____ valve that controls both flow rate and hot/cold mixing ratio with one lever movement.',
       blanks: ['cartridge'],
       wordBank: ['cartridge', 'globe', 'butterfly', 'gate', 'check'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="40" cy="40" r="18" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.1"/><ellipse cx="40" cy="40" rx="14" ry="14" stroke="#3B8700" stroke-width="1" stroke-dasharray="2 2" fill="none"/><path d="M32,46 A12,12 0 0,1 32,34" stroke="#58CC02" stroke-width="2.5" fill="none"/><path d="M48,34 A12,12 0 0,1 48,46" stroke="#3B8700" stroke-width="2.5" fill="none"/><text x="24" y="42" font-size="3.5" fill="#58CC02">Hot</text><text x="52" y="42" font-size="3.5" fill="#3B8700">Cold</text><line x1="40" y1="22" x2="40" y2="14" stroke="#334155" stroke-width="2"/><rect x="36" y="10" width="8" height="6" rx="1" fill="#334155" fill-opacity="0.3"/><text x="40" y="15" text-anchor="middle" font-size="3" fill="#334155">lever</text><g transform-origin="40 40"><animateTransform attributeName="transform" type="rotate" values="-10 40 40;10 40 40;-10 40 40" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/><ellipse cx="40" cy="40" rx="8" ry="6" fill="#334155" fill-opacity="0.2" stroke="#334155" stroke-width="1"/></g><text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#334155">Rotate: mix ratio</text><text x="40" y="74" text-anchor="middle" font-size="3.5" fill="#6B7280">Lift: flow rate</text></svg>`,
@@ -142,7 +142,7 @@ export const lesson1: Lesson = {
 
     // --- KITCHEN KNIFE (Q12-Q14) ---
     {
-      id: 'u7-L1-Q12',
+      id: 'htw-L1-Q12',
       type: 'multiple-choice',
       question: 'A sharp kitchen knife cuts more easily than a dull one because:',
       options: [
@@ -156,7 +156,7 @@ export const lesson1: Lesson = {
       explanation: 'Stress = Force / Area. A sharp knife edge might be only 0.01 mm wide, concentrating your hand force over a minuscule area. This creates enormous contact stress \u2014 easily exceeding the food\'s shear strength \u2014 even with modest force. This is pure stress concentration.',
     },
     {
-      id: 'u7-L1-Q13',
+      id: 'htw-L1-Q13',
       type: 'true-false',
       question: 'Ceramic kitchen knives are harder than steel knives but more brittle \u2014 they hold an edge longer but can shatter if dropped on a hard floor.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="20" width="25" height="40" rx="1" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.15"/><text x="22" y="38" text-anchor="middle" font-size="3.5" fill="#334155" font-weight="bold">Steel</text><text x="22" y="44" text-anchor="middle" font-size="3" fill="#6B7280">600 HV</text><text x="22" y="50" text-anchor="middle" font-size="3" fill="#58CC02">Ductile</text><rect x="45" y="20" width="25" height="40" rx="1" stroke="#334155" stroke-width="2" fill="#334155" fill-opacity="0.08"/><text x="57" y="38" text-anchor="middle" font-size="3.5" fill="#334155" font-weight="bold">Ceramic</text><text x="57" y="44" text-anchor="middle" font-size="3" fill="#6B7280">1200 HV</text><text x="57" y="50" text-anchor="middle" font-size="3" fill="#3B8700">Brittle</text><path d="M50,58 L52,60 M55,57 L58,62 M60,58 L62,63" stroke="#334155" stroke-width="1" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite"/></path><text x="40" y="72" text-anchor="middle" font-size="4" fill="#6B7280">Harder but shatters</text></svg>`,
@@ -164,7 +164,7 @@ export const lesson1: Lesson = {
       explanation: 'Ceramic blades (typically zirconia, ZrO\u2082) have Vickers hardness around 1200 HV vs. ~600 HV for good steel. But ceramics have near-zero ductility \u2014 they cannot undergo plastic deformation. This means excellent edge retention but catastrophic brittle fracture under impact or bending loads.',
     },
     {
-      id: 'u7-L1-Q14',
+      id: 'htw-L1-Q14',
       type: 'multiple-choice',
       question: 'A knife blade is essentially a wedge. When you push a knife down into food, the wedge converts vertical force into:',
       options: [
@@ -180,7 +180,7 @@ export const lesson1: Lesson = {
 
     // --- MICROWAVE (Q15-Q17) ---
     {
-      id: 'u7-L1-Q15',
+      id: 'htw-L1-Q15',
       type: 'multiple-choice',
       question: 'A microwave oven heats food primarily through:',
       options: [
@@ -194,7 +194,7 @@ export const lesson1: Lesson = {
       explanation: 'Microwaves (~2.45 GHz) cause polar molecules (mainly water) to rotate and align with the oscillating electric field billions of times per second. This molecular friction converts electromagnetic energy into thermal energy throughout the food\'s volume \u2014 volumetric heating, not surface heating.',
     },
     {
-      id: 'u7-L1-Q16',
+      id: 'htw-L1-Q16',
       type: 'true-false',
       question: 'Microwave ovens can produce hot spots and cold spots in food because the standing electromagnetic waves inside the cavity create nodes (zero amplitude) and antinodes (maximum amplitude).',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="18" width="60" height="40" rx="3" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.06"/><path d="M10,38 C20,20 30,56 40,38 C50,20 60,56 70,38" stroke="#58CC02" stroke-width="2" fill="none"><animate attributeName="d" values="M10,38 C20,20 30,56 40,38 C50,20 60,56 70,38;M10,38 C20,56 30,20 40,38 C50,56 60,20 70,38;M10,38 C20,20 30,56 40,38 C50,20 60,56 70,38" dur="1.5s" repeatCount="indefinite"/></path><circle cx="25" cy="38" r="3" fill="#58CC02" fill-opacity="0.4"><animate attributeName="r" values="3;4.5;3" dur="1.5s" repeatCount="indefinite"/></circle><text x="25" y="52" text-anchor="middle" font-size="3" fill="#58CC02">antinode</text><circle cx="55" cy="38" r="3" fill="#58CC02" fill-opacity="0.4"><animate attributeName="r" values="3;4.5;3" dur="1.5s" repeatCount="indefinite"/></circle><text x="55" y="52" text-anchor="middle" font-size="3" fill="#58CC02">antinode</text><circle cx="40" cy="38" r="2" fill="#6B7280" fill-opacity="0.3"/><text x="40" y="52" text-anchor="middle" font-size="3" fill="#6B7280">node</text><text x="40" y="68" text-anchor="middle" font-size="4" fill="#334155">Standing wave pattern</text><text x="40" y="75" text-anchor="middle" font-size="3.5" fill="#6B7280">Turntable averages heating</text></svg>`,
@@ -202,9 +202,9 @@ export const lesson1: Lesson = {
       explanation: 'The microwave cavity dimensions create standing wave patterns with fixed nodes and antinodes. Food at antinodes gets intense heating; food at nodes gets almost none. This is why microwaves have turntables \u2014 rotating the food averages out the uneven field pattern.',
     },
     {
-      id: 'u7-L1-Q17',
+      id: 'htw-L1-Q17',
       type: 'fill-blank',
-      question: 'In a conventional oven, heat reaches the food\'s interior from its hot surface via ___, which is slow because food has low thermal conductivity. Microwaves bypass this entirely by heating volumetrically.',
+      question: 'In a conventional oven, heat reaches the food\'s interior from its hot surface via _____, which is slow because food has low thermal conductivity. Microwaves bypass this entirely by heating volumetrically.',
       blanks: ['conduction'],
       wordBank: ['conduction', 'radiation', 'induction', 'sublimation', 'advection'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><text x="20" y="12" font-size="4" fill="#334155" font-weight="bold">Conventional</text><rect x="8" y="16" width="28" height="28" rx="3" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.1"/><circle cx="22" cy="30" r="8" fill="#58CC02" fill-opacity="0.15" stroke="#3B8700" stroke-width="1.5"/><line x1="14" y1="30" x2="18" y2="30" stroke="#58CC02" stroke-width="1.5" marker-end="url(#aq1)"/><line x1="22" y1="22" x2="22" y2="26" stroke="#58CC02" stroke-width="1.5" marker-end="url(#aq1)"/><text x="22" y="32" text-anchor="middle" font-size="3" fill="#334155">slow</text><text x="56" y="12" font-size="4" fill="#334155" font-weight="bold">Microwave</text><rect x="44" y="16" width="28" height="28" rx="3" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.08"/><circle cx="58" cy="30" r="8" fill="#58CC02" fill-opacity="0.3" stroke="#58CC02" stroke-width="1.5"><animate attributeName="fill-opacity" values="0.1;0.3;0.1" dur="1.5s" repeatCount="indefinite"/></circle><text x="58" y="32" text-anchor="middle" font-size="3" fill="#334155">instant</text><defs><marker id="aq1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="22" y="52" text-anchor="middle" font-size="3.5" fill="#6B7280">Surface → core</text><text x="58" y="52" text-anchor="middle" font-size="3.5" fill="#6B7280">Volumetric</text><text x="40" y="64" text-anchor="middle" font-size="4" fill="#334155">k_food ≈ 0.5 W/m·K</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#6B7280">Conduction is the bottleneck</text></svg>`,
@@ -213,7 +213,7 @@ export const lesson1: Lesson = {
 
     // --- POT/PAN ON STOVE (Q18-Q20) ---
     {
-      id: 'u7-L1-Q18',
+      id: 'htw-L1-Q18',
       type: 'multiple-choice',
       question: 'Copper-bottomed pots heat food more evenly than plain stainless steel pots because:',
       options: [
@@ -227,7 +227,7 @@ export const lesson1: Lesson = {
       explanation: 'Copper\'s thermal conductivity is roughly 25x that of stainless steel. A copper base spreads heat laterally from the burner contact area across the entire pan bottom, reducing hot spots. This is why high-end cookware uses copper or aluminum (k \u2248 235) cores clad in stainless steel.',
     },
     {
-      id: 'u7-L1-Q19',
+      id: 'htw-L1-Q19',
       type: 'multiple-choice',
       question: 'When boiling water in a pot, the primary heat transfer mechanism within the water itself is:',
       options: [
@@ -241,7 +241,7 @@ export const lesson1: Lesson = {
       explanation: 'The pot base heats the bottom water layer, which expands and becomes less dense. Buoyancy causes it to rise while cooler, denser water sinks \u2014 creating natural convection currents. This circulation distributes heat far faster than conduction alone through the still liquid.',
     },
     {
-      id: 'u7-L1-Q20',
+      id: 'htw-L1-Q20',
       type: 'multiple-choice',
       question: 'Fourier\'s law (q = -k dT/dx) governs heat transfer through the solid base of a pot on a stove. If you double the pot base thickness while keeping everything else the same, the heat flow rate through the base will:',
       options: [
@@ -258,7 +258,7 @@ export const lesson1: Lesson = {
 };
 
 export const lesson2: Lesson = {
-  id: 'u7-L2',
+  id: 'htw-L2',
   title: 'The Car You Drive',
   description: 'How engines, brakes, suspension, tires, and transmissions apply thermodynamics, dynamics, and solid mechanics.',
   icon: '🚗',
@@ -266,7 +266,7 @@ export const lesson2: Lesson = {
   questions: [
     // --- ENGINE (Q1-Q4) ---
     {
-      id: 'u7-L2-Q1',
+      id: 'htw-L2-Q1',
       type: 'multiple-choice',
       question: 'The four strokes of a gasoline engine follow the Otto cycle. Which stroke performs useful work?',
       options: [
@@ -280,7 +280,7 @@ export const lesson2: Lesson = {
       explanation: 'Only the power (expansion) stroke produces net positive work on the piston. The other three strokes are "overhead" \u2014 intake and exhaust require small pumping work, and compression requires significant work input. The power stroke must produce enough work to cover all three plus deliver useful output.',
     },
     {
-      id: 'u7-L2-Q2',
+      id: 'htw-L2-Q2',
       type: 'multiple-choice',
       question: 'The thermal efficiency of an ideal Otto cycle depends primarily on:',
       options: [
@@ -294,7 +294,7 @@ export const lesson2: Lesson = {
       explanation: 'For an ideal Otto cycle, thermal efficiency \u03B7 = 1 - (1/r^(\u03B3-1)), where r is the compression ratio and \u03B3 is the specific heat ratio. Higher compression ratio = higher efficiency. This is a pure thermodynamic result \u2014 it doesn\'t depend on engine size or number of cylinders.',
     },
     {
-      id: 'u7-L2-Q3',
+      id: 'htw-L2-Q3',
       type: 'true-false',
       question: 'Diesel engines are more thermally efficient than gasoline engines primarily because they operate at higher compression ratios.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="18" width="28" height="36" rx="3" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.1"/><text x="22" y="14" text-anchor="middle" font-size="4" fill="#334155" font-weight="bold">Gas</text><rect x="14" y="34" width="16" height="6" rx="1" fill="#334155" fill-opacity="0.4"/><text x="22" y="62" text-anchor="middle" font-size="3.5" fill="#6B7280">r = 8-12</text><text x="22" y="70" text-anchor="middle" font-size="3.5" fill="#58CC02">η ≈ 25-35%</text><rect x="44" y="18" width="28" height="36" rx="3" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><text x="58" y="14" text-anchor="middle" font-size="4" fill="#334155" font-weight="bold">Diesel</text><rect x="50" y="44" width="16" height="6" rx="1" fill="#334155" fill-opacity="0.4"/><text x="58" y="62" text-anchor="middle" font-size="3.5" fill="#6B7280">r = 15-22</text><text x="58" y="70" text-anchor="middle" font-size="3.5" fill="#58CC02">η ≈ 35-45%</text><text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#334155">Higher r → higher η</text></svg>`,
@@ -302,9 +302,9 @@ export const lesson2: Lesson = {
       explanation: 'Diesel engines compress only air (no fuel to pre-ignite), allowing compression ratios of 15-22:1 vs. 8-12:1 for gasoline. Since Otto cycle efficiency increases with compression ratio (\u03B7 = 1 - 1/r^(\u03B3-1)), diesel engines achieve higher thermal efficiency \u2014 typically 35-45% vs. 25-35% for gasoline.',
     },
     {
-      id: 'u7-L2-Q4',
+      id: 'htw-L2-Q4',
       type: 'fill-blank',
-      question: 'In the Otto cycle, both heat addition and heat rejection occur at constant ___, which distinguishes it from the Diesel cycle where heat is added at constant pressure.',
+      question: 'In the Otto cycle, both heat addition and heat rejection occur at constant _____, which distinguishes it from the Diesel cycle where heat is added at constant pressure.',
       blanks: ['volume'],
       wordBank: ['volume', 'pressure', 'temperature', 'entropy', 'enthalpy'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="12" y1="65" x2="12" y2="8" stroke="#3B8700" stroke-width="1.5"/><line x1="12" y1="65" x2="72" y2="65" stroke="#3B8700" stroke-width="1.5"/><text x="6" y="38" font-size="4" fill="#334155" transform="rotate(-90 6 38)">P</text><text x="42" y="74" font-size="4" fill="#334155">V</text><path d="M25,55 L25,15" stroke="#58CC02" stroke-width="2"/><text x="22" y="36" font-size="3" fill="#58CC02">Q_in</text><path d="M25,15 C35,20 50,35 60,50" stroke="#3B8700" stroke-width="2" fill="none"/><path d="M60,50 L60,58" stroke="#58CC02" stroke-width="2"/><text x="63" y="55" font-size="3" fill="#58CC02">Q_out</text><path d="M60,58 C50,56 35,55 25,55" stroke="#3B8700" stroke-width="2" fill="none"/><circle cx="25" cy="55" r="2" fill="#3B8700"/><text x="20" y="60" font-size="3" fill="#334155">1</text><circle cx="25" cy="15" r="2" fill="#3B8700"/><text x="20" y="14" font-size="3" fill="#334155">3</text><circle cx="60" cy="50" r="2" fill="#3B8700"/><text x="63" y="48" font-size="3" fill="#334155">4</text><circle cx="60" cy="58" r="2" fill="#3B8700"/><text x="63" y="62" font-size="3" fill="#334155">1</text><text x="40" y="10" font-size="4" fill="#334155" font-weight="bold">Otto P-V</text><text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#6B7280">Const-V heat add/reject</text></svg>`,
@@ -313,7 +313,7 @@ export const lesson2: Lesson = {
 
     // --- SUSPENSION (Q5-Q7) ---
     {
-      id: 'u7-L2-Q5',
+      id: 'htw-L2-Q5',
       type: 'multiple-choice',
       question: 'A car suspension consists of a spring and a shock absorber (damper) in parallel. The damper\'s primary role is to:',
       options: [
@@ -327,7 +327,7 @@ export const lesson2: Lesson = {
       explanation: 'The spring supports the car\'s weight and absorbs bumps, but a spring alone would bounce indefinitely. The damper converts kinetic energy of oscillation into heat (via viscous fluid forced through orifices), controlling how quickly oscillations decay. Without it, the car would keep bouncing after every bump.',
     },
     {
-      id: 'u7-L2-Q6',
+      id: 'htw-L2-Q6',
       type: 'multiple-choice',
       question: 'A car suspension is designed to be underdamped. What does this mean in vibration terms?',
       options: [
@@ -341,9 +341,9 @@ export const lesson2: Lesson = {
       explanation: 'An underdamped system (damping ratio \u03B6 < 1) oscillates with exponentially decaying amplitude. This gives the best ride comfort \u2014 it absorbs bumps quickly but allows a small amount of controlled oscillation. Overdamped (\u03B6 > 1) feels harsh; critically damped (\u03B6 = 1) is fastest without oscillation but too stiff for comfort.',
     },
     {
-      id: 'u7-L2-Q7',
+      id: 'htw-L2-Q7',
       type: 'fill-blank',
-      question: 'The natural frequency of a car\'s suspension is approximately f = (1/2\u03C0)\u221A(k/m), where k is the ___ and m is the sprung mass.',
+      question: 'The natural frequency of a car\'s suspension is approximately f = (1/2\u03C0)\u221A(k/m), where k is the _____ and m is the sprung mass.',
       blanks: ['spring rate'],
       wordBank: ['spring rate', 'damping coefficient', 'natural frequency', 'static deflection', 'moment of inertia'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="25" y="14" width="30" height="12" rx="2" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.15"/><text x="40" y="22" text-anchor="middle" font-size="4" fill="#334155" font-style="italic">m</text><polyline points="40,26 40,30 36,33 44,37 36,41 44,45 36,49 40,52 40,56" stroke="#3B8700" stroke-width="2" fill="none"/><line x1="30" y1="56" x2="50" y2="56" stroke="#3B8700" stroke-width="2"/><line x1="30" y1="58" x2="50" y2="58" stroke="#6B7280" stroke-width="1"/><line x1="30" y1="60" x2="50" y2="60" stroke="#6B7280" stroke-width="1"/><text x="53" y="40" font-size="4" fill="#334155" font-style="italic">k</text><text x="40" y="70" text-anchor="middle" font-size="4" fill="#334155">f = (1/2π)√(k/m)</text><text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#6B7280">~1-1.5 Hz for cars</text></svg>`,
@@ -352,7 +352,7 @@ export const lesson2: Lesson = {
 
     // --- BRAKES (Q8-Q10) ---
     {
-      id: 'u7-L2-Q8',
+      id: 'htw-L2-Q8',
       type: 'multiple-choice',
       question: 'When you press the brake pedal and the car decelerates from 100 km/h to 0, the kinetic energy of the car is:',
       options: [
@@ -366,7 +366,7 @@ export const lesson2: Lesson = {
       explanation: 'By conservation of energy, the car\'s kinetic energy (\u00BDmv\u00B2) must go somewhere. Friction between the brake pad and rotor converts kinetic energy into thermal energy. After hard braking, rotors can reach 300-500\u00B0C. This is why brake cooling (ventilated rotors, air ducts) is a critical design concern.',
     },
     {
-      id: 'u7-L2-Q9',
+      id: 'htw-L2-Q9',
       type: 'true-false',
       question: 'Disc brakes are preferred over drum brakes for front axles because disc brakes dissipate heat more effectively \u2014 the rotor is exposed to airflow on both sides.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><text x="22" y="12" text-anchor="middle" font-size="3.5" fill="#334155" font-weight="bold">Disc</text><circle cx="22" cy="32" r="12" stroke="#3B8700" stroke-width="2" fill="none"/><line x1="14" y1="20" x2="14" y2="25" stroke="#58CC02" stroke-width="1.5"/><line x1="30" y1="20" x2="30" y2="25" stroke="#58CC02" stroke-width="1.5"/><text x="22" y="18" text-anchor="middle" font-size="3" fill="#58CC02">air both sides</text><text x="58" y="12" text-anchor="middle" font-size="3.5" fill="#334155" font-weight="bold">Drum</text><circle cx="58" cy="32" r="12" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.1"/><path d="M52,24 L52,40" stroke="#3B8700" stroke-width="2"/><path d="M64,24 L64,40" stroke="#3B8700" stroke-width="2"/><text x="58" y="50" text-anchor="middle" font-size="3" fill="#6B7280">heat trapped</text><text x="22" y="50" text-anchor="middle" font-size="3" fill="#58CC02">better cooling</text><text x="40" y="66" text-anchor="middle" font-size="3.5" fill="#334155">Front: 60-70% of braking</text><text x="40" y="74" text-anchor="middle" font-size="3.5" fill="#6B7280">Needs superior heat rejection</text></svg>`,
@@ -374,7 +374,7 @@ export const lesson2: Lesson = {
       explanation: 'Disc brakes have an exposed rotor swept by ambient air on both faces, giving excellent convective heat dissipation. Drum brakes enclose the friction surfaces inside a drum, trapping heat. Since front brakes handle 60-70% of braking force (due to weight transfer), they need superior cooling \u2014 hence disc brakes up front.',
     },
     {
-      id: 'u7-L2-Q10',
+      id: 'htw-L2-Q10',
       type: 'multiple-choice',
       question: 'Braking force between the tire and road depends on the friction equation F = \u03BCN. During hard braking with weight transfer to the front, the front brakes can generate more stopping force because:',
       options: [
@@ -390,7 +390,7 @@ export const lesson2: Lesson = {
 
     // --- TRANSMISSION (Q11-Q13) ---
     {
-      id: 'u7-L2-Q11',
+      id: 'htw-L2-Q11',
       type: 'multiple-choice',
       question: 'In first gear, a transmission provides high torque but low speed at the wheels. This is because:',
       options: [
@@ -404,16 +404,16 @@ export const lesson2: Lesson = {
       explanation: 'In first gear, a small engine gear meshes with a large output gear. The gear ratio (N_driven/N_driver > 1) multiplies engine torque by the ratio but divides speed by the same ratio. Power is conserved (P = T\u03C9), so you trade speed for torque \u2014 essential for accelerating from a stop.',
     },
     {
-      id: 'u7-L2-Q12',
+      id: 'htw-L2-Q12',
       type: 'fill-blank',
-      question: 'A gear ratio of 3:1 means the output shaft has ___ times the torque but one-third the rotational speed of the input shaft.',
+      question: 'A gear ratio of 3:1 means the output shaft has _____ times the torque but one-third the rotational speed of the input shaft.',
       blanks: ['three'],
       wordBank: ['three', 'one-third', 'nine', 'six', 'one'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="24" width="28" height="32" rx="3" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.1"/><text x="22" y="22" text-anchor="middle" font-size="3.5" fill="#334155" font-weight="bold">Input</text><text x="22" y="38" text-anchor="middle" font-size="4" fill="#58CC02">ω = 3</text><text x="22" y="46" text-anchor="middle" font-size="4" fill="#3B8700">T = 1</text><rect x="44" y="24" width="28" height="32" rx="3" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.1"/><text x="58" y="22" text-anchor="middle" font-size="3.5" fill="#334155" font-weight="bold">Output</text><text x="58" y="38" text-anchor="middle" font-size="4" fill="#58CC02">ω = 1</text><text x="58" y="46" text-anchor="middle" font-size="4" fill="#3B8700">T = 3</text><line x1="36" y1="40" x2="44" y2="40" stroke="#3B8700" stroke-width="2" marker-end="url(#ar1)"/><defs><marker id="ar1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#3B8700" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="40" y="64" text-anchor="middle" font-size="4" fill="#334155">Gear ratio 3:1</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#6B7280">P = Tω conserved</text></svg>`,
       explanation: 'Gear ratio = input speed / output speed = output torque / input torque (assuming no losses). A 3:1 ratio triples torque and cuts speed to one-third. Power (P = T\u00D7\u03C9) is conserved. This is why low gears give high torque for hill climbing and acceleration.',
     },
     {
-      id: 'u7-L2-Q13',
+      id: 'htw-L2-Q13',
       type: 'true-false',
       question: 'An automatic transmission\'s torque converter can multiply engine torque at low speeds, acting like a fluid coupling with a stator that redirects flow.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="40" cy="36" r="22" stroke="#3B8700" stroke-width="2" fill="#A5E86C" fill-opacity="0.08"/><path d="M25,36 A15,15 0 0,1 55,36" stroke="#58CC02" stroke-width="2" fill="none"/><text x="40" y="28" text-anchor="middle" font-size="3.5" fill="#58CC02">Impeller</text><path d="M55,36 A15,15 0 0,1 25,36" stroke="#3B8700" stroke-width="2" fill="none"/><text x="40" y="48" text-anchor="middle" font-size="3.5" fill="#3B8700">Turbine</text><circle cx="40" cy="36" r="6" stroke="#334155" stroke-width="1.5" fill="#334155" fill-opacity="0.1"/><text x="40" y="38" text-anchor="middle" font-size="3" fill="#334155">Stator</text><circle r="1.5" fill="#58CC02"><animateMotion dur="2s" repeatCount="indefinite" path="M25,36 A15,15 0 0,1 55,36 A15,15 0 0,1 25,36"/></circle><text x="40" y="66" text-anchor="middle" font-size="3.5" fill="#334155">Stator redirects fluid</text><text x="40" y="74" text-anchor="middle" font-size="3.5" fill="#6B7280">Torque multiply up to 2-3×</text></svg>`,
@@ -423,7 +423,7 @@ export const lesson2: Lesson = {
 
     // --- TIRES (Q14-Q16) ---
     {
-      id: 'u7-L2-Q14',
+      id: 'htw-L2-Q14',
       type: 'multiple-choice',
       question: 'The contact patch (tire footprint) is the area where the tire touches the road. For a tire supporting 4000 N of load inflated to 200 kPa, the approximate contact patch area is:',
       options: [
@@ -437,7 +437,7 @@ export const lesson2: Lesson = {
       explanation: 'The contact patch area approximately equals the load divided by inflation pressure: A = F/P = 4000 N / 200,000 Pa = 0.02 m\u00B2 = 200 cm\u00B2. This is roughly the size of a postcard \u2014 a surprisingly small area connecting a 1500 kg car to the road. All acceleration, braking, and turning forces pass through these four patches.',
     },
     {
-      id: 'u7-L2-Q15',
+      id: 'htw-L2-Q15',
       type: 'multiple-choice',
       question: 'Hydroplaning occurs when a car drives through standing water and the tires lose contact with the road. From a fluid mechanics perspective, this happens because:',
       options: [
@@ -451,9 +451,9 @@ export const lesson2: Lesson = {
       explanation: 'At high speed, the tire cannot displace water fast enough through its tread grooves. Hydrodynamic pressure builds in the water wedge ahead of the contact patch, eventually exceeding the tire\'s inflation pressure and lifting the tire off the road. The tire is now floating on a water film with virtually zero traction.',
     },
     {
-      id: 'u7-L2-Q16',
+      id: 'htw-L2-Q16',
       type: 'fill-blank',
-      question: 'Tire inflation pressure creates ___ stress in the tire sidewall, similar to a thin-walled pressure vessel, which is why underinflated tires flex excessively and overheat.',
+      question: 'Tire inflation pressure creates _____ stress in the tire sidewall, similar to a thin-walled pressure vessel, which is why underinflated tires flex excessively and overheat.',
       blanks: ['hoop'],
       wordBank: ['hoop', 'shear', 'bending', 'torsional', 'bearing'],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><ellipse cx="40" cy="38" rx="24" ry="22" stroke="#3B8700" stroke-width="2.5" fill="none"/><ellipse cx="40" cy="38" rx="12" ry="10" stroke="#3B8700" stroke-width="1.5" fill="#3B8700" fill-opacity="0.1"/><line x1="64" y1="38" x2="72" y2="38" stroke="#58CC02" stroke-width="2" marker-end="url(#ah2)"/><line x1="16" y1="38" x2="8" y2="38" stroke="#58CC02" stroke-width="2" marker-end="url(#ah2)"/><line x1="40" y1="16" x2="40" y2="8" stroke="#58CC02" stroke-width="2" marker-end="url(#ah2)"/><line x1="40" y1="60" x2="40" y2="68" stroke="#58CC02" stroke-width="2" marker-end="url(#ah2)"/><defs><marker id="ah2" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="72" y="36" font-size="4" fill="#334155" font-style="italic">σ_h</text><text x="40" y="42" text-anchor="middle" font-size="4" fill="#6B7280">P_air</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#6B7280">Toroidal pressure vessel</text></svg>`,
@@ -462,7 +462,7 @@ export const lesson2: Lesson = {
 
     // --- STEERING (Q17-Q18) ---
     {
-      id: 'u7-L2-Q17',
+      id: 'htw-L2-Q17',
       type: 'multiple-choice',
       question: 'Power steering reduces the effort needed to turn the wheel. In a hydraulic power steering system, the assist comes from:',
       options: [
@@ -476,7 +476,7 @@ export const lesson2: Lesson = {
       explanation: 'Hydraulic power steering uses an engine-driven pump to pressurize fluid. When you turn the wheel, a rotary valve directs pressurized fluid to one side of a piston in the rack housing, adding hydraulic force to your steering effort. Pascal\'s principle: pressure \u00D7 piston area = large assist force.',
     },
     {
-      id: 'u7-L2-Q18',
+      id: 'htw-L2-Q18',
       type: 'multiple-choice',
       question: 'Ackermann steering geometry ensures that during a turn:',
       options: [
@@ -492,7 +492,7 @@ export const lesson2: Lesson = {
 
     // --- EXHAUST (Q19-Q20) ---
     {
-      id: 'u7-L2-Q19',
+      id: 'htw-L2-Q19',
       type: 'multiple-choice',
       question: 'An exhaust manifold experiences significant thermal expansion because exhaust gases can reach 700-900\u00B0C. Engineers accommodate this expansion by:',
       options: [
@@ -506,7 +506,7 @@ export const lesson2: Lesson = {
       explanation: 'Thermal expansion (\u0394L = \u03B1 \u00B7 L \u00B7 \u0394T) is unavoidable. A 0.5 m steel manifold heating by 700\u00B0C expands about 4 mm. Rigid mounting would create enormous thermal stresses leading to cracking. Flexible joints and bellows sections allow the manifold to expand freely, preventing thermally-induced fatigue failure.',
     },
     {
-      id: 'u7-L2-Q20',
+      id: 'htw-L2-Q20',
       type: 'true-false',
       question: 'Excessive exhaust backpressure reduces engine performance because it increases the pumping work the engine must do during the exhaust stroke, leaving less net work available at the crankshaft.',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="15" y1="65" x2="15" y2="8" stroke="#3B8700" stroke-width="1.5"/><line x1="15" y1="65" x2="72" y2="65" stroke="#3B8700" stroke-width="1.5"/><text x="8" y="38" font-size="4" fill="#334155" transform="rotate(-90 8 38)">P</text><text x="42" y="74" font-size="4" fill="#334155">V</text><path d="M25,15 C35,22 50,40 65,52" stroke="#3B8700" stroke-width="2" fill="none"/><path d="M65,52 L25,52 L25,55 L65,55" stroke="#58CC02" stroke-width="1.5" fill="#58CC02" fill-opacity="0.15"/><text x="45" y="50" font-size="3" fill="#58CC02">pumping loss</text><path d="M25,58 L65,58" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 1"/><text x="45" y="62" font-size="3" fill="#6B7280">P_atm</text><text x="45" y="56" font-size="3" fill="#334155">P_back</text><text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#6B7280">Higher backpressure → more loss</text></svg>`,

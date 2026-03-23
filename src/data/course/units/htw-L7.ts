@@ -1,7 +1,7 @@
 import type { Lesson } from '../types';
 
 export const lesson7: Lesson = {
-  id: 'u7-L7',
+  id: 'htw-L7',
   title: 'Everyday Failures',
   description:
     'Why pipes burst, bolts loosen, chains break, and tires blow out — real-world failure analysis through everyday objects.',
@@ -10,7 +10,7 @@ export const lesson7: Lesson = {
   questions: [
     // ── MC 1 – Frozen Pipe Burst ──────────────────────────────────────
     {
-      id: 'u7-L7-Q1',
+      id: 'htw-L7-Q1',
       type: 'multiple-choice',
       question:
         'A copper water pipe bursts during a winter freeze. What is the primary mechanical cause of the failure?',
@@ -29,7 +29,7 @@ export const lesson7: Lesson = {
 
     // ── MC 2 – PEX vs Copper ──────────────────────────────────────────
     {
-      id: 'u7-L7-Q2',
+      id: 'htw-L7-Q2',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="5" y="20" width="30" height="22" rx="3" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="1"/><text x="20" y="28" text-anchor="middle" font-size="3.5" fill="#A5E86C" font-weight="bold">Copper</text><text x="20" y="35" text-anchor="middle" font-size="3" fill="#334155">ε_break ≈ 20%</text><line x1="8" y1="38" x2="32" y2="38" stroke="#A5E86C" stroke-width="1.5"/><rect x="45" y="14" width="30" height="32" rx="3" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.5"/><text x="60" y="26" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">PEX</text><text x="60" y="33" text-anchor="middle" font-size="3" fill="#334155">ε_break ≈ 400%</text><path d="M48 38 Q54 42 60 38 Q66 34 72 38" stroke="#58CC02" stroke-width="1.5" fill="none"><animate attributeName="d" values="M48 38 Q54 42 60 38 Q66 34 72 38;M48 38 Q54 44 60 38 Q66 32 72 38;M48 38 Q54 42 60 38 Q66 34 72 38" dur="2s" repeatCount="indefinite"/></path><text x="40" y="58" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Elongation at Break</text><text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">PEX stretches with ice expansion</text></svg>`,
       type: 'multiple-choice',
       question:
@@ -47,7 +47,7 @@ export const lesson7: Lesson = {
 
     // ── MC 3 – Bolt Self-Loosening ────────────────────────────────────
     {
-      id: 'u7-L7-Q3',
+      id: 'htw-L7-Q3',
       type: 'multiple-choice',
       question:
         'A bolted joint on a vibrating machine keeps loosening despite being initially torqued to spec. What is the dominant loosening mechanism?',
@@ -66,7 +66,7 @@ export const lesson7: Lesson = {
 
     // ── MC 4 – Loctite & Preload ──────────────────────────────────────
     {
-      id: 'u7-L7-Q4',
+      id: 'htw-L7-Q4',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="34" y="12" width="12" height="40" rx="1" fill="#334155" opacity="0.4"/><path d="M36 18 L44 22 M36 24 L44 28 M36 30 L44 34 M36 36 L44 40 M36 42 L44 46" stroke="#334155" stroke-width="0.8"/><rect x="31" y="8" width="18" height="6" rx="1.5" fill="#334155" opacity="0.3"/><rect x="30" y="50" width="20" height="8" rx="1.5" fill="#3B8700" opacity="0.4"/><path d="M34 22 L32 22 M34 28 L32 28 M34 34 L32 34 M34 40 L32 40" stroke="#58CC02" stroke-width="2" opacity="0.6"/><path d="M46 22 L48 22 M46 28 L48 28 M46 34 L48 34 M46 40 L48 40" stroke="#58CC02" stroke-width="2" opacity="0.6"/><text x="55" y="32" font-size="3.5" fill="#58CC02" font-weight="bold">adhesive</text><text x="55" y="38" font-size="3" fill="#334155" font-style="italic">(anaerobic)</text><text x="40" y="68" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Threadlocker</text><text x="40" y="76" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">bonds threads → no slip</text></svg>`,
       type: 'multiple-choice',
       question:
@@ -84,7 +84,7 @@ export const lesson7: Lesson = {
 
     // ── MC 5 – Bicycle Chain Fatigue ──────────────────────────────────
     {
-      id: 'u7-L7-Q5',
+      id: 'htw-L7-Q5',
       type: 'multiple-choice',
       question:
         'A bicycle chain link fails after thousands of kilometers with no single overload event. The fracture surface shows beach marks. What failure mode does this indicate?',
@@ -103,7 +103,7 @@ export const lesson7: Lesson = {
 
     // ── MC 6 – S-N Curve Concept ──────────────────────────────────────
     {
-      id: 'u7-L7-Q6',
+      id: 'htw-L7-Q6',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="12" y1="65" x2="72" y2="65" stroke="#334155" stroke-width="1"/><line x1="12" y1="65" x2="12" y2="12" stroke="#334155" stroke-width="1"/><path d="M14 18 Q25 22 35 35 Q45 48 55 52 L72 52" stroke="#58CC02" stroke-width="2" fill="none"/><line x1="12" y1="52" x2="72" y2="52" stroke="#A5E86C" stroke-width="1" stroke-dasharray="3 2"/><text x="74" y="51" font-size="3" fill="#A5E86C" font-weight="bold">S_e</text><text x="42" y="72" font-size="3" fill="#334155">log(N) cycles</text><text x="6" y="38" font-size="3" fill="#334155" transform="rotate(-90 6 38)">Stress σ</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">S-N Curve (Steel)</text><text x="60" y="60" font-size="3" fill="#A5E86C" font-style="italic">endurance limit</text></svg>`,
       type: 'multiple-choice',
       question:
@@ -121,7 +121,7 @@ export const lesson7: Lesson = {
 
     // ── MC 7 – Tire Blowout ───────────────────────────────────────────
     {
-      id: 'u7-L7-Q7',
+      id: 'htw-L7-Q7',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="40" cy="40" r="22" stroke="#3B8700" stroke-width="2" fill="none"/><circle cx="40" cy="40" r="14" stroke="#334155" stroke-width="1" fill="#334155" opacity="0.1"/><path d="M18 42 Q22 55 30 58" stroke="#58CC02" stroke-width="2" fill="none"><animate attributeName="d" values="M18 42 Q22 55 30 58;M18 44 Q24 58 32 60;M18 42 Q22 55 30 58" dur="1s" repeatCount="indefinite"/></path><path d="M62 42 Q58 55 50 58" stroke="#58CC02" stroke-width="2" fill="none"><animate attributeName="d" values="M62 42 Q58 55 50 58;M62 44 Q56 58 48 60;M62 42 Q58 55 50 58" dur="1s" repeatCount="indefinite"/></path><text x="40" y="68" text-anchor="middle" font-size="3" fill="#A5E86C">excessive flex</text><line x1="40" y1="62" x2="40" y2="65" stroke="#334155" stroke-width="1.5"/><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Under-Inflated Tire</text><text x="40" y="76" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">sidewall fatigue + heat buildup</text></svg>`,
       type: 'multiple-choice',
       question:
@@ -140,7 +140,7 @@ export const lesson7: Lesson = {
 
     // ── MC 8 – Tire Pressure & Temperature ────────────────────────────
     {
-      id: 'u7-L7-Q8',
+      id: 'htw-L7-Q8',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="25" cy="38" r="15" stroke="#3B8700" stroke-width="1.5" fill="#3B8700" opacity="0.08"/><text x="25" y="35" text-anchor="middle" font-size="3.5" fill="#3B8700">20°C</text><text x="25" y="42" text-anchor="middle" font-size="3" fill="#334155">35 psi</text><path d="M42 38 L52 38" stroke="#334155" stroke-width="1.5" marker-end="url(#a78)"/><defs><marker id="a78" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#334155"/></marker></defs><circle cx="62" cy="38" r="15" stroke="#58CC02" stroke-width="1.5" fill="#58CC02" opacity="0.1"/><text x="62" y="35" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">60°C</text><text x="62" y="42" text-anchor="middle" font-size="3" fill="#334155">≈40 psi</text><text x="44" y="15" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Gay-Lussac's Law</text><text x="44" y="65" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">P₁/T₁ = P₂/T₂ (const. V)</text></svg>`,
       type: 'multiple-choice',
       question:
@@ -158,7 +158,7 @@ export const lesson7: Lesson = {
 
     // ── MC 9 – Galvanic Corrosion ─────────────────────────────────────
     {
-      id: 'u7-L7-Q9',
+      id: 'htw-L7-Q9',
       type: 'multiple-choice',
       question:
         'A steel bolt is used to fasten an aluminum bracket on a boat. Within months the aluminum shows severe pitting while the steel bolt is unaffected. What type of corrosion is occurring?',
@@ -176,7 +176,7 @@ export const lesson7: Lesson = {
 
     // ── MC 10 – Sacrificial Anode ─────────────────────────────────────
     {
-      id: 'u7-L7-Q10',
+      id: 'htw-L7-Q10',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="35" width="60" height="16" rx="1" fill="#334155" opacity="0.15" stroke="#334155" stroke-width="1"/><rect x="10" y="30" width="60" height="5" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="1"/><rect x="10" y="51" width="60" height="5" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="1"/><text x="40" y="44" text-anchor="middle" font-size="3.5" fill="#334155">Steel (cathode)</text><text x="74" y="33" font-size="3" fill="#58CC02">Zn coating</text><path d="M35 30 L35 25 L45 25 L45 30" stroke="#A5E86C" stroke-width="1.5" fill="none"/><text x="40" y="23" text-anchor="middle" font-size="3" fill="#A5E86C">scratch</text><path d="M33 30 L33 26" stroke="#58CC02" stroke-width="0.8"/><path d="M47 30 L47 26" stroke="#58CC02" stroke-width="0.8"/><text x="30" y="28" font-size="2.5" fill="#58CC02">Zn²⁺</text><text x="46" y="28" font-size="2.5" fill="#58CC02">Zn²⁺</text><circle cx="36" cy="28" r="1" fill="#58CC02" opacity="0.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="44" cy="28" r="1" fill="#58CC02" opacity="0.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite" begin="0.5s"/></circle><text x="40" y="14" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Sacrificial Anode</text><text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">Zn corrodes to protect steel</text></svg>`,
       type: 'multiple-choice',
       question:
@@ -194,7 +194,7 @@ export const lesson7: Lesson = {
 
     // ── MC 11 – Glass Thermal Shock ───────────────────────────────────
     {
-      id: 'u7-L7-Q11',
+      id: 'htw-L7-Q11',
       type: 'multiple-choice',
       question:
         'Pouring boiling water into a room-temperature glass cup can crack it, but a Pyrex measuring cup survives the same treatment. What material property gives Pyrex its advantage?',
@@ -213,7 +213,7 @@ export const lesson7: Lesson = {
 
     // ── MC 12 – Phone Screen Crack ────────────────────────────────────
     {
-      id: 'u7-L7-Q12',
+      id: 'htw-L7-Q12',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="22" y="12" width="36" height="56" rx="4" fill="#334155" opacity="0.08" stroke="#334155" stroke-width="1.5"/><rect x="24" y="16" width="32" height="48" rx="2" fill="#A5E86C" opacity="0.08" stroke="#A5E86C" stroke-width="0.5"/><circle cx="22" cy="12" r="2" fill="#58CC02"><animate attributeName="r" values="1;3;1" dur="1.5s" repeatCount="indefinite"/></circle><path d="M22 12 L35 28" stroke="#58CC02" stroke-width="1"><animate attributeName="opacity" values="0;1;1" dur="1.5s" repeatCount="indefinite"/></path><path d="M22 12 L30 20 L38 35" stroke="#58CC02" stroke-width="0.8"><animate attributeName="opacity" values="0;0.5;1" dur="1.5s" repeatCount="indefinite"/></path><path d="M22 12 L28 32" stroke="#58CC02" stroke-width="0.5"><animate attributeName="opacity" values="0;0.3;0.8" dur="1.5s" repeatCount="indefinite"/></path><text x="14" y="12" font-size="3" fill="#58CC02" font-weight="bold">flaw</text><text x="40" y="50" text-anchor="middle" font-size="3" fill="#334155">K = σ√πa</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">edge flaws → crack propagation</text></svg>`,
       type: 'multiple-choice',
       question:
@@ -231,7 +231,7 @@ export const lesson7: Lesson = {
 
     // ── TF 1 – Paper Clip Fatigue ─────────────────────────────────────
     {
-      id: 'u7-L7-Q13',
+      id: 'htw-L7-Q13',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><path d="M15 40 Q25 40 30 30 Q35 20 40 30 Q45 40 55 40 L65 40" stroke="#334155" stroke-width="2" fill="none"/><path d="M15 40 Q25 40 30 30 Q35 20 40 30 Q45 40 55 40 L65 40" stroke="#58CC02" stroke-width="1.5" fill="none"><animate attributeName="d" values="M15 40 Q25 40 30 30 Q35 20 40 30 Q45 40 55 40 L65 40;M15 40 Q25 40 30 50 Q35 60 40 50 Q45 40 55 40 L65 40;M15 40 Q25 40 30 30 Q35 20 40 30 Q45 40 55 40 L65 40" dur="1s" repeatCount="indefinite"/></path><circle cx="35" cy="25" r="2" fill="#A5E86C" opacity="0.5"><animate attributeName="cy" values="25;55;25" dur="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.8;0.3" dur="1s" repeatCount="indefinite"/></circle><text x="35" y="16" text-anchor="middle" font-size="3" fill="#A5E86C">max stress</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Paper Clip Fatigue</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">low-cycle: high ε, few cycles</text></svg>`,
       type: 'true-false',
       question:
@@ -243,7 +243,7 @@ export const lesson7: Lesson = {
 
     // ── TF 2 – Radiator Hose Creep ────────────────────────────────────
     {
-      id: 'u7-L7-Q14',
+      id: 'htw-L7-Q14',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><path d="M15 30 Q25 25 35 30 Q45 35 55 30 Q60 28 65 30" stroke="#3B8700" stroke-width="3" fill="none" stroke-linecap="round"/><text x="40" y="22" text-anchor="middle" font-size="3.5" fill="#3B8700" font-weight="bold">New hose (flexible)</text><path d="M15 55 L65 55" stroke="#A5E86C" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M25 53 L25 57" stroke="#58CC02" stroke-width="1"/><path d="M35 52 L35 58" stroke="#58CC02" stroke-width="1"/><path d="M45 53 L45 57" stroke="#58CC02" stroke-width="1"/><path d="M55 52 L56 58" stroke="#58CC02" stroke-width="1"/><text x="40" y="48" text-anchor="middle" font-size="3.5" fill="#A5E86C">Aged hose (hard, cracked)</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Thermo-Oxidative Aging</text><text x="40" y="70" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">chemical degradation ≠ creep</text></svg>`,
       type: 'true-false',
       question:
@@ -255,7 +255,7 @@ export const lesson7: Lesson = {
 
     // ── TF 3 – Pitting vs Uniform Corrosion ──────────────────────────
     {
-      id: 'u7-L7-Q15',
+      id: 'htw-L7-Q15',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="5" y="25" width="30" height="20" rx="1" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="1"/><path d="M8 25 L32 25" stroke="#A5E86C" stroke-width="1.5"/><path d="M8 30 L32 30" stroke="#A5E86C" stroke-width="0.5" stroke-dasharray="2 1"/><text x="20" y="38" text-anchor="middle" font-size="3" fill="#A5E86C">uniform</text><text x="20" y="52" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">predictable</text><rect x="45" y="25" width="30" height="20" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1"/><path d="M48 25 L72 25" stroke="#58CC02" stroke-width="1.5"/><path d="M52 25 L52 38" stroke="#58CC02" stroke-width="1.5"/><path d="M60 25 L60 40" stroke="#58CC02" stroke-width="1.5"/><path d="M66 25 L66 35" stroke="#58CC02" stroke-width="1"/><circle cx="60" cy="40" r="1.5" fill="#58CC02" opacity="0.6"><animate attributeName="r" values="1;2;1" dur="1.5s" repeatCount="indefinite"/></circle><text x="58" y="52" text-anchor="middle" font-size="3" fill="#58CC02" font-weight="bold">pitting</text><text x="58" y="58" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">dangerous!</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Corrosion Types</text><text x="40" y="72" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">pits = stress concentrators</text></svg>`,
       type: 'true-false',
       question:
@@ -267,7 +267,7 @@ export const lesson7: Lesson = {
 
     // ── TF 4 – Pressure-Treated Wood ──────────────────────────────────
     {
-      id: 'u7-L7-Q16',
+      id: 'htw-L7-Q16',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="20" y="22" width="40" height="30" rx="2" fill="#A5E86C" opacity="0.12" stroke="#3B8700" stroke-width="1.5"/><line x1="25" y1="22" x2="25" y2="52" stroke="#3B8700" stroke-width="0.5" opacity="0.4"/><line x1="35" y1="22" x2="35" y2="52" stroke="#3B8700" stroke-width="0.5" opacity="0.4"/><line x1="45" y1="22" x2="45" y2="52" stroke="#3B8700" stroke-width="0.5" opacity="0.4"/><line x1="55" y1="22" x2="55" y2="52" stroke="#3B8700" stroke-width="0.5" opacity="0.4"/><circle cx="28" cy="30" r="1.5" fill="#58CC02" opacity="0.5"/><circle cx="38" cy="35" r="1.5" fill="#58CC02" opacity="0.5"/><circle cx="48" cy="28" r="1.5" fill="#58CC02" opacity="0.5"/><circle cx="33" cy="45" r="1.5" fill="#58CC02" opacity="0.5"/><circle cx="52" cy="42" r="1.5" fill="#58CC02" opacity="0.5"/><text x="65" y="35" font-size="3" fill="#58CC02">Cu preservative</text><text x="65" y="42" font-size="3" fill="#334155" font-style="italic">in wood cells</text><text x="40" y="14" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Pressure Treatment</text><text x="40" y="62" text-anchor="middle" font-size="3" fill="#334155">NOT waterproof</text><text x="40" y="70" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">toxic to fungi/insects</text></svg>`,
       type: 'true-false',
       question:
@@ -279,11 +279,11 @@ export const lesson7: Lesson = {
 
     // ── FB 1 – Hoop Stress in Frozen Pipe ─────────────────────────────
     {
-      id: 'u7-L7-Q17',
+      id: 'htw-L7-Q17',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="40" cy="38" r="18" stroke="#3B8700" stroke-width="2" fill="none"/><circle cx="40" cy="38" r="14" stroke="#334155" stroke-width="0.5" stroke-dasharray="2 2" fill="none"/><circle cx="40" cy="38" r="10" fill="#A5E86C" opacity="0.2"><animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/></circle><text x="40" y="40" text-anchor="middle" font-size="3.5" fill="#334155">9% exp.</text><line x1="40" y1="20" x2="40" y2="15" stroke="#58CC02" stroke-width="1"/><path d="M38 16 L40 13 L42 16" fill="#58CC02"/><line x1="58" y1="38" x2="63" y2="38" stroke="#58CC02" stroke-width="1"/><path d="M62 36 L65 38 L62 40" fill="#58CC02"/><text x="67" y="40" font-size="3.5" fill="#58CC02">σ_h</text><text x="40" y="13" text-anchor="middle" font-size="3.5" fill="#58CC02">σ_h</text><text x="40" y="8" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Hoop Stress</text><text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">σ_h = pr/t</text></svg>`,
       type: 'fill-blank',
       question:
-        'When water freezes inside a sealed pipe, it expands by about ___ %, creating internal pressure. The resulting ___ stress in the pipe wall equals pr/t for a thin-walled cylinder.',
+        'When water freezes inside a sealed pipe, it expands by about _____ %, creating internal pressure. The resulting _____ stress in the pipe wall equals pr/t for a thin-walled cylinder.',
       blanks: ['9', 'hoop'],
       wordBank: ['9', 'hoop', '4', 'axial', 'shear'],
       explanation:
@@ -293,11 +293,11 @@ export const lesson7: Lesson = {
 
     // ── FB 2 – Thermal Stress Formula ─────────────────────────────────
     {
-      id: 'u7-L7-Q18',
+      id: 'htw-L7-Q18',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="15" y="28" width="50" height="20" rx="2" fill="#A5E86C" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><line x1="12" y1="28" x2="12" y2="48" stroke="#334155" stroke-width="3"/><line x1="68" y1="28" x2="68" y2="48" stroke="#334155" stroke-width="3"/><text x="40" y="40" text-anchor="middle" font-size="5" fill="#58CC02" font-weight="bold">σ = Eα ΔT</text><path d="M22 38 L17 38" stroke="#58CC02" stroke-width="1" marker-end="url(#a718)"/><path d="M58 38 L63 38" stroke="#58CC02" stroke-width="1" marker-end="url(#a718b)"/><defs><marker id="a718" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker><marker id="a718b" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker></defs><text x="15" y="58" font-size="3" fill="#334155">constrained</text><text x="52" y="58" font-size="3" fill="#334155">constrained</text><text x="40" y="14" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Thermal Stress</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">low α → low σ (Pyrex)</text></svg>`,
       type: 'fill-blank',
       question:
-        'The thermal stress in a fully constrained solid is given by σ = E·___·ΔT, where E is elastic modulus and ΔT is temperature change. Pyrex resists thermal shock because its coefficient of thermal ___ is very low.',
+        'The thermal stress in a fully constrained solid is given by σ = E·_____·ΔT, where E is elastic modulus and ΔT is temperature change. Pyrex resists thermal shock because its coefficient of thermal _____ is very low.',
       blanks: ['α', 'expansion'],
       wordBank: ['α', 'expansion', 'ρ', 'ν', 'k'],
       explanation:
@@ -307,11 +307,11 @@ export const lesson7: Lesson = {
 
     // ── FB 3 – Junker Effect ──────────────────────────────────────────
     {
-      id: 'u7-L7-Q19',
+      id: 'htw-L7-Q19',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="25" y="28" width="30" height="6" rx="1" fill="#A5E86C" opacity="0.15" stroke="#3B8700" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0,0;4,0;0,0;-4,0;0,0" dur="1s" repeatCount="indefinite"/></rect><rect x="25" y="38" width="30" height="6" rx="1" fill="#A5E86C" opacity="0.15" stroke="#3B8700" stroke-width="1"><animateTransform attributeName="transform" type="translate" values="0,0;-4,0;0,0;4,0;0,0" dur="1s" repeatCount="indefinite"/></rect><rect x="38" y="20" width="4" height="28" rx="0.5" fill="#334155" opacity="0.5"/><rect x="36" y="16" width="8" height="5" rx="1" fill="#334155" opacity="0.4"/><text x="48" y="36" font-size="3.5" fill="#58CC02" font-weight="bold">⊥ bolt axis</text><path d="M15 31 L22 31" stroke="#58CC02" stroke-width="1" marker-end="url(#a719)"/><path d="M65 41 L58 41" stroke="#58CC02" stroke-width="1" marker-end="url(#a719)"/><defs><marker id="a719" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker></defs><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Transverse Vibration</text><text x="40" y="60" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">thread slip → nut walks off</text></svg>`,
       type: 'fill-blank',
       question:
-        'Bolts loosen most readily under ___ vibration (perpendicular to the bolt axis), which causes relative ___ between mating thread surfaces — an effect demonstrated by Junker.',
+        'Bolts loosen most readily under _____ vibration (perpendicular to the bolt axis), which causes relative _____ between mating thread surfaces — an effect demonstrated by Junker.',
       blanks: ['transverse', 'slip'],
       wordBank: ['transverse', 'slip', 'axial', 'torsion', 'creep'],
       explanation:
@@ -320,11 +320,11 @@ export const lesson7: Lesson = {
 
     // ── FB 4 – Griffith Criterion ─────────────────────────────────────
     {
-      id: 'u7-L7-Q20',
+      id: 'htw-L7-Q20',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="20" y="15" width="40" height="45" rx="2" fill="#A5E86C" opacity="0.08" stroke="#3B8700" stroke-width="1"/><line x1="40" y1="32" x2="40" y2="45" stroke="#58CC02" stroke-width="2"><animate attributeName="y2" values="42;48;42" dur="2s" repeatCount="indefinite"/></line><text x="44" y="40" font-size="3.5" fill="#58CC02" font-weight="bold">2a</text><path d="M20 15 L20 10" stroke="#334155" stroke-width="1"/><path d="M60 15 L60 10" stroke="#334155" stroke-width="1"/><path d="M18 11 L20 8 L22 11" fill="#334155"/><path d="M58 11 L60 8 L62 11" fill="#334155"/><text x="16" y="9" font-size="3" fill="#334155">σ</text><text x="63" y="9" font-size="3" fill="#334155">σ</text><path d="M20 60 L20 65" stroke="#334155" stroke-width="1"/><path d="M60 60 L60 65" stroke="#334155" stroke-width="1"/><path d="M18 64 L20 67 L22 64" fill="#334155"/><path d="M58 64 L60 67 L62 64" fill="#334155"/><text x="40" y="8" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Griffith Criterion</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">G_release > 2γ_surface</text></svg>`,
       type: 'fill-blank',
       question:
-        'According to the Griffith criterion, a crack in a brittle material will propagate when the ___ energy released by crack growth exceeds the energy needed to create new ___.',
+        'According to the Griffith criterion, a crack in a brittle material will propagate when the _____ energy released by crack growth exceeds the energy needed to create new _____.',
       blanks: ['strain', 'surfaces'],
       wordBank: ['strain', 'surfaces', 'kinetic', 'bonds', 'thermal'],
       explanation:

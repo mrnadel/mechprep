@@ -93,7 +93,7 @@ export const unit9: Unit = {
         {
           id: 'u9-L1-Q6',
           type: 'fill-blank',
-          question: 'The minimum intended difference in size between mating parts in a clearance fit is called the ___.',
+          question: 'The minimum intended difference in size between mating parts in a clearance fit is called the ___ _____.',
           blanks: ['allowance'],
           wordBank: ['allowance', 'tolerance', 'deviation', 'clearance', 'variance'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="8" y="20" width="28" height="40" rx="2" fill="#58CC02" opacity="0.08" stroke="#58CC02" stroke-width="1.5"/><rect x="44" y="20" width="28" height="40" rx="2" fill="#3B8700" opacity="0.08" stroke="#3B8700" stroke-width="1.5"/><text x="22" y="42" font-size="4.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Hole</text><text x="58" y="42" font-size="4.5" fill="#3B8700" text-anchor="middle" font-weight="bold">Shaft</text><line x1="36" y1="30" x2="44" y2="30" stroke="#A5E86C" stroke-width="1.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/></line><line x1="36" y1="50" x2="44" y2="50" stroke="#A5E86C" stroke-width="1.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/></line><text x="40" y="42" font-size="3.5" fill="#334155" text-anchor="middle" font-style="italic">min</text><text x="40" y="46" font-size="3.5" fill="#334155" text-anchor="middle" font-style="italic">gap</text><text x="40" y="10" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">Allowance</text><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Tightest fit condition</text></svg>',
@@ -250,7 +250,7 @@ export const unit9: Unit = {
         {
           id: 'u9-L1-Q18',
           type: 'fill-blank',
-          question: 'A fit where the tolerance zones of the hole and shaft overlap, potentially resulting in either clearance or interference, is?',
+          question: 'A fit where the tolerance zones of the hole and shaft overlap, potentially resulting in either clearance or interference, is _____?',
           blanks: ['transition'],
           wordBank: ['transition', 'clearance', 'interference', 'sliding', 'running'],
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">Transition Fit</text><line x1="40" y1="68" x2="40" y2="14" stroke="#3B8700" stroke-width="0.8" opacity="0.3"/><line x1="12" y1="40" x2="68" y2="40" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.3"/><rect x="18" y="28" width="14" height="22" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1"/><rect x="48" y="32" width="14" height="18" rx="1" fill="#3B8700" opacity="0.15" stroke="#3B8700" stroke-width="1"/><rect x="32" y="32" width="16" height="8" rx="0.5" fill="#A5E86C" opacity="0.25"><animate attributeName="opacity" values="0.15;0.35;0.15" dur="2s" repeatCount="indefinite"/></rect><text x="40" y="37" font-size="3" fill="#334155" text-anchor="middle">overlap</text><text x="25" y="42" font-size="3.5" fill="#58CC02" text-anchor="middle">Hole</text><text x="55" y="44" font-size="3.5" fill="#3B8700" text-anchor="middle">Shaft</text><text x="40" y="60" font-size="3.5" fill="#6B7280" text-anchor="middle">Zones overlap</text></svg>',
@@ -502,7 +502,7 @@ export const unit9: Unit = {
         {
           id: 'u9-L2-Q6',
           type: 'fill-blank',
-          question: 'The condition where a feature of size contains the maximum amount of material is called ___.',
+          question: 'The condition where a feature of size contains the maximum amount of material is called ___ _____.',
           blanks: ['MMC'],
           wordBank: ['MMC', 'LMC', 'RFS', 'MMS', 'VCB'],
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">MMC Condition</text><rect x="8" y="18" width="28" height="40" rx="2" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1"/><text x="22" y="30" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Hole</text><text x="22" y="38" font-size="3" fill="#334155" text-anchor="middle">MMC =</text><text x="22" y="44" font-size="3" fill="#334155" text-anchor="middle">smallest</text><circle cx="22" cy="52" r="4" fill="white" stroke="#3B8700" stroke-width="1"/><rect x="44" y="18" width="28" height="40" rx="2" fill="#3B8700" opacity="0.06" stroke="#3B8700" stroke-width="1"/><text x="58" y="30" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">Shaft</text><text x="58" y="38" font-size="3" fill="#334155" text-anchor="middle">MMC =</text><text x="58" y="44" font-size="3" fill="#334155" text-anchor="middle">largest</text><circle cx="58" cy="52" r="6" fill="#3B8700" opacity="0.15" stroke="#3B8700" stroke-width="1"/><text x="40" y="70" font-size="3.5" fill="#6B7280" text-anchor="middle">Most material everywhere</text></svg>',
@@ -665,7 +665,7 @@ export const unit9: Unit = {
         {
           id: 'u9-L2-Q18',
           type: 'fill-blank',
-          question: 'The geometric tolerance that controls the overall 3D form of a cylindrical surface — combining roundness, straightness, and?',
+          question: 'The geometric tolerance that controls the overall 3D form of a cylindrical surface — combining roundness, straightness, and _____?',
           blanks: ['cylindricity'],
           wordBank: ['cylindricity', 'circularity', 'concentricity', 'straightness', 'total runout'],
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Cylindricity</text><ellipse cx="40" cy="24" rx="16" ry="6" fill="none" stroke="#58CC02" stroke-width="1.5"/><ellipse cx="40" cy="56" rx="16" ry="6" fill="none" stroke="#58CC02" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.3"/><line x1="24" y1="24" x2="24" y2="56" stroke="#58CC02" stroke-width="1.5"/><line x1="56" y1="24" x2="56" y2="56" stroke="#58CC02" stroke-width="1.5"/><ellipse cx="40" cy="24" rx="13" ry="5" fill="none" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.5"/><line x1="27" y1="24" x2="27" y2="56" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.5"/><line x1="53" y1="24" x2="53" y2="56" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.5"/><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Two coaxial cylinders = zone</text></svg>',
@@ -916,7 +916,7 @@ export const unit9: Unit = {
         {
           id: 'u9-L3-Q6',
           type: 'fill-blank',
-          question: 'The system of three mutually perpendicular datum planes that fully constrains a part in 6 degrees of freedom is called the datum ___ frame.',
+          question: 'The system of three mutually perpendicular datum planes that fully constrains a part in 6 degrees of freedom is called the datum ___ frame _____.',
           blanks: ['reference'],
           wordBank: ['reference', 'coordinate', 'alignment', 'constraint', 'feature'],
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Datum Reference Frame</text><line x1="20" y1="60" x2="70" y2="60" stroke="#58CC02" stroke-width="1.5"/><line x1="20" y1="60" x2="20" y2="20" stroke="#A5E86C" stroke-width="1.5"/><line x1="20" y1="60" x2="8" y2="70" stroke="#3B8700" stroke-width="1.5"/><text x="72" y="62" font-size="4" fill="#58CC02">X</text><text x="18" y="18" font-size="4" fill="#A5E86C">Y</text><text x="6" y="74" font-size="4" fill="#3B8700">Z</text><text x="22" y="58" font-size="3" fill="#334155">origin</text><text x="48" y="45" font-size="3.5" fill="#6B7280" text-anchor="middle">3 mutually perpendicular</text><text x="48" y="50" font-size="3.5" fill="#6B7280" text-anchor="middle">datum planes</text></svg>',
@@ -1319,7 +1319,7 @@ export const unit9: Unit = {
         {
           id: 'u9-L4-Q6',
           type: 'fill-blank',
-          question: 'The statistical tolerance analysis method that computes the total tolerance as the square root of the sum of squared individual?',
+          question: 'The statistical tolerance analysis method that computes the total tolerance as the square root of the sum of squared individual _____?',
           blanks: ['RSS'],
           wordBank: ['RSS', 'WCA', 'RMS', 'GD&T', 'FMEA'],
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="5" fill="#334155" text-anchor="middle" font-weight="bold">RSS Method</text><text x="40" y="30" font-size="5" fill="#58CC02" text-anchor="middle" font-weight="bold">T = sqrt(sum t_i^2)</text><rect x="12" y="38" width="12" height="12" rx="1" fill="#58CC02" opacity="0.15"/><text x="18" y="46" font-size="3.5" fill="#334155" text-anchor="middle">t1^2</text><text x="28" y="46" font-size="5" fill="#334155">+</text><rect x="32" y="38" width="12" height="12" rx="1" fill="#A5E86C" opacity="0.15"/><text x="38" y="46" font-size="3.5" fill="#334155" text-anchor="middle">t2^2</text><text x="48" y="46" font-size="5" fill="#334155">+</text><rect x="52" y="38" width="12" height="12" rx="1" fill="#3B8700" opacity="0.15"/><text x="58" y="46" font-size="3.5" fill="#334155" text-anchor="middle">t3^2</text><text x="40" y="62" font-size="3.5" fill="#6B7280" text-anchor="middle">Statistical: assumes normal dist</text><text x="40" y="70" font-size="3.5" fill="#6B7280" text-anchor="middle">Result smaller than worst-case</text></svg>',

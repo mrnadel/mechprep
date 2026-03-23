@@ -1,7 +1,7 @@
 import type { Lesson } from '../types';
 
 export const lesson5: Lesson = {
-  id: 'u7-L5',
+  id: 'htw-L5',
   title: 'Sports & Outdoors',
   description: 'Gear ratios on a bike, sweet spots on a racket, energy on a roller coaster — real sports equipment decoded through engineering.',
   icon: '⚽',
@@ -9,7 +9,7 @@ export const lesson5: Lesson = {
   questions: [
     // ── BICYCLE ──
     {
-      id: 'u7-L5-Q1',
+      id: 'htw-L5-Q1',
       type: 'multiple-choice',
       question: 'A bicycle has a 48-tooth chainring and a 16-tooth rear cog. What is the gear ratio, and what does it mean physically?',
       diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#58CC02" opacity="0.06"/><circle cx="25" cy="40" r="16" stroke="#3B8700" stroke-width="2" stroke-dasharray="2.5 2.5"><animateTransform attributeName="transform" type="rotate" from="0 25 40" to="360 25 40" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1" keyTimes="0;1"/></circle><circle cx="25" cy="40" r="13.5" stroke="#3B8700" stroke-width="1.5"/><circle cx="25" cy="40" r="3" fill="#3B8700"/><circle cx="58" cy="40" r="7" stroke="#3B8700" stroke-width="2" stroke-dasharray="1.8 1.8"><animateTransform attributeName="transform" type="rotate" from="0 58 40" to="1080 58 40" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1" keyTimes="0;1"/></circle><circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5"/><circle cx="58" cy="40" r="1.8" fill="#3B8700"/><line x1="25" y1="24" x2="58" y2="33" stroke="#58CC02" stroke-width="1.5"/><line x1="25" y1="56" x2="58" y2="47" stroke="#58CC02" stroke-width="1.5"/><text x="25" y="14" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">48T</text><text x="58" y="14" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">16T</text><text x="41" y="72" text-anchor="middle" font-size="4.5" fill="#6B7280">Gear ratio 3:1</text><text x="58" y="58" text-anchor="middle" font-size="3.5" fill="#6B7280" font-style="italic">3× speed</text></svg>',
@@ -24,7 +24,7 @@ export const lesson5: Lesson = {
       hint: 'Think about how many times the smaller gear spins when the larger gear completes one revolution.',
     },
     {
-      id: 'u7-L5-Q2',
+      id: 'htw-L5-Q2',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="40" cy="40" r="26" stroke="#334155" stroke-width="1.5" fill="none"/><circle cx="40" cy="40" r="6" stroke="#3B8700" stroke-width="1.5" fill="#3B8700" opacity="0.15"/><line x1="40" y1="34" x2="40" y2="14" stroke="#58CC02" stroke-width="1"/><line x1="45" y1="36" x2="63" y2="22" stroke="#58CC02" stroke-width="1"/><line x1="46" y1="40" x2="66" y2="40" stroke="#58CC02" stroke-width="1"/><line x1="45" y1="44" x2="63" y2="58" stroke="#58CC02" stroke-width="1"/><line x1="40" y1="46" x2="40" y2="66" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2 1"/><line x1="35" y1="44" x2="17" y2="58" stroke="#58CC02" stroke-width="1"/><line x1="34" y1="40" x2="14" y2="40" stroke="#58CC02" stroke-width="1"/><line x1="35" y1="36" x2="17" y2="22" stroke="#58CC02" stroke-width="1"/><path d="M40 68 L37 72 L43 72 Z" fill="#334155"/><text x="48" y="72" font-size="3.5" fill="#334155" font-style="italic">load</text><text x="50" y="12" font-size="3.5" fill="#58CC02" font-weight="bold">T (taut)</text><text x="22" y="72" font-size="3.5" fill="#A5E86C">less T</text><text x="40" y="8" text-anchor="middle" font-size="4" fill="#334155" font-weight="bold">Spoke Pretension</text></svg>`,
       type: 'multiple-choice',
       question: 'Why are bicycle spokes installed with pretension (tightened before any load is applied)?',
@@ -39,7 +39,7 @@ export const lesson5: Lesson = {
       hint: 'A thin wire cannot push — it can only pull.',
     },
     {
-      id: 'u7-L5-Q3',
+      id: 'htw-L5-Q3',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="25" cy="38" r="12" stroke="#3B8700" stroke-width="1.5" fill="none"/><circle cx="25" cy="38" r="2" fill="#3B8700"/><circle cx="55" cy="38" r="5" stroke="#334155" stroke-width="1.5" fill="none" stroke-dasharray="1.5 1.5"/><circle cx="55" cy="38" r="1.5" fill="#334155"/><circle cx="55" cy="38" r="8" stroke="#58CC02" stroke-width="1.5" fill="none" stroke-dasharray="1.5 1.5"/><path d="M52 30 L58 30" stroke="#58CC02" stroke-width="0.8"/><path d="M50 33 L53 33" stroke="#334155" stroke-width="0.8"/><text x="55" y="22" text-anchor="middle" font-size="3.5" fill="#58CC02">large cog</text><text x="55" y="52" text-anchor="middle" font-size="3.5" fill="#334155">small cog</text><path d="M55 46 L55 50" stroke="#334155" stroke-width="0.8" marker-end="url(#a53)"/><defs><marker id="a53" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#334155"/></marker></defs><text x="25" y="18" text-anchor="middle" font-size="4" fill="#3B8700" font-weight="bold">Chainring</text><text x="40" y="65" text-anchor="middle" font-size="5" fill="#58CC02" font-weight="bold">Gear Shifting</text><text x="40" y="73" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">smaller cog = higher ratio</text></svg>`,
       type: 'true-false',
       question: 'On a bicycle, shifting to a smaller rear cog (fewer teeth) makes pedaling easier because the gear ratio decreases.',
@@ -47,17 +47,17 @@ export const lesson5: Lesson = {
       explanation: 'A smaller rear cog increases the gear ratio (chainring/cog), meaning the wheel turns more per pedal revolution. This makes pedaling harder, not easier — it is a higher gear for faster speeds. Shifting to a larger rear cog decreases the ratio and makes pedaling easier (lower gear).',
     },
     {
-      id: 'u7-L5-Q4',
+      id: 'htw-L5-Q4',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="22" cy="40" r="10" stroke="#3B8700" stroke-width="1.5" fill="none"/><circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/><line x1="22" y1="30" x2="58" y2="35" stroke="#58CC02" stroke-width="2.5"/><line x1="22" y1="50" x2="58" y2="45" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2 2"/><text x="40" y="28" text-anchor="middle" font-size="4" fill="#58CC02" font-weight="bold">Tight side (T₁)</text><text x="40" y="58" text-anchor="middle" font-size="4" fill="#A5E86C">Slack side (T₂)</text><path d="M32 29 L38 28" stroke="#58CC02" stroke-width="1.5" marker-end="url(#a54)"/><path d="M48 47 L42 48" stroke="#A5E86C" stroke-width="1" marker-end="url(#a54b)"/><defs><marker id="a54" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker><marker id="a54b" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#A5E86C"/></marker></defs><animateTransform attributeName="transform" type="rotate" from="0 22 40" to="360 22 40" dur="3s" repeatCount="indefinite"/><text x="40" y="70" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">Chain Drive</text><text x="40" y="77" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">T₁ &gt; T₂</text></svg>`,
       type: 'fill-blank',
-      question: 'A bicycle chain transmits force through ___. The chain links on the tight side (pulling side) carry ___ tension than the slack side.',
+      question: 'A bicycle chain transmits force through _____. The chain links on the tight side (pulling side) carry _____ tension than the slack side.',
       blanks: ['tension', 'higher'],
       wordBank: ['tension', 'compression', 'higher', 'lower', 'equal'],
       explanation: 'The chain is a flexible element that can only carry tension. The tight side (connected to the driving chainring) carries significantly higher tension than the slack side — the difference in tension is what transmits power to the rear wheel.',
     },
     // ── TENNIS/BADMINTON RACKET ──
     {
-      id: 'u7-L5-Q5',
+      id: 'htw-L5-Q5',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><ellipse cx="40" cy="30" rx="14" ry="20" stroke="#3B8700" stroke-width="1.5" fill="none"/><line x1="40" y1="50" x2="40" y2="75" stroke="#334155" stroke-width="3" stroke-linecap="round"/><path d="M26 30 Q33 24 40 30 Q47 36 54 30" stroke="#A5E86C" stroke-width="0.5" fill="none" opacity="0.5"/><circle cx="40" cy="28" r="3" fill="#58CC02" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/></circle><text x="52" y="28" font-size="3.5" fill="#58CC02" font-weight="bold">Node</text><text x="52" y="33" font-size="3" fill="#334155" font-style="italic">(sweet spot)</text><path d="M40 50 Q42 55 40 60 Q38 65 40 70" stroke="#A5E86C" stroke-width="0.8" fill="none" opacity="0.6"><animate attributeName="d" values="M40 50 Q42 55 40 60 Q38 65 40 70;M40 50 Q38 55 40 60 Q42 65 40 70;M40 50 Q42 55 40 60 Q38 65 40 70" dur="0.3s" repeatCount="indefinite"/></path><text x="18" y="68" font-size="3" fill="#A5E86C" font-style="italic">vibration</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Sweet Spot</text></svg>`,
       type: 'multiple-choice',
       question: 'The "sweet spot" of a tennis racket is the point where hitting feels effortless with minimal vibration in the handle. What engineering principle explains this?',
@@ -72,7 +72,7 @@ export const lesson5: Lesson = {
       hint: 'Think of a vibrating guitar string — where are the points that do not move?',
     },
     {
-      id: 'u7-L5-Q6',
+      id: 'htw-L5-Q6',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="28" width="25" height="30" rx="2" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="1"/><text x="22" y="40" text-anchor="middle" font-size="3.5" fill="#A5E86C" font-weight="bold">Wood</text><text x="22" y="46" text-anchor="middle" font-size="3" fill="#334155">E/ρ = 16</text><text x="22" y="52" text-anchor="middle" font-size="3" fill="#334155">GPa·m³/kg</text><rect x="45" y="20" width="25" height="38" rx="2" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.5"/><text x="57" y="34" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">CFRP</text><text x="57" y="40" text-anchor="middle" font-size="3" fill="#334155">E/ρ = 140</text><text x="57" y="46" text-anchor="middle" font-size="3" fill="#334155">GPa·m³/kg</text><line x1="57" y1="50" x2="57" y2="55" stroke="#3B8700" stroke-width="1"/><text x="57" y="53" text-anchor="middle" font-size="2.5" fill="#3B8700">~9× stiffer</text><path d="M38 38 L42 38" stroke="#334155" stroke-width="1" marker-end="url(#a56)"/><defs><marker id="a56" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#334155"/></marker></defs><text x="40" y="12" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">Specific Stiffness</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">E/ρ (stiffness per kg)</text></svg>`,
       type: 'multiple-choice',
       question: 'Modern tennis rackets use carbon fiber composites instead of wood. What is the primary engineering advantage?',
@@ -87,7 +87,7 @@ export const lesson5: Lesson = {
     },
     // ── SKATEBOARD / ROLLER COASTER ──
     {
-      id: 'u7-L5-Q7',
+      id: 'htw-L5-Q7',
       type: 'multiple-choice',
       question: 'A roller coaster car reaches the top of a vertical loop. What is the minimum condition for the car to maintain contact with the track at the top?',
       diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#58CC02" opacity="0.06"/><circle cx="40" cy="42" r="22" stroke="#3B8700" stroke-width="2" fill="none"/><line x1="8" y1="64" x2="18" y2="64" stroke="#3B8700" stroke-width="2"/><line x1="62" y1="64" x2="72" y2="64" stroke="#3B8700" stroke-width="2"/><rect x="36" y="16" width="8" height="5" rx="1.5" fill="#58CC02" stroke="#3B8700" stroke-width="1.5"><animateMotion dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.33;0.66;1" path="M0,0 A22,22 0 0,1 0,44 A22,22 0 0,1 0,0" rotate="auto"/></rect><line x1="40" y1="24" x2="40" y2="32" stroke="#334155" stroke-width="1.5" marker-end="url(#arrowDown1)"/><defs><marker id="arrowDown1" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#334155"/></marker><marker id="arrowDown2" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker><marker id="arrowTangent" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#6B7280"/></marker></defs><line x1="40" y1="16" x2="40" y2="10" stroke="#334155" stroke-width="1.5"/><path d="M38,11 L40,8 L42,11" fill="#334155"/><text x="44" y="10" font-size="4.5" fill="#334155" font-style="italic">mg</text><line x1="40" y1="20" x2="40" y2="28" stroke="#58CC02" stroke-width="1.5"/><path d="M38,27 L40,30 L42,27" fill="#58CC02"/><text x="44" y="28" font-size="4.5" fill="#58CC02" font-style="italic">N</text><line x1="44" y1="17" x2="52" y2="17" stroke="#6B7280" stroke-width="1.5"/><path d="M50,15 L53,17 L50,19" fill="#6B7280"/><text x="54" y="16" font-size="3.5" fill="#6B7280" font-style="italic">v</text><text x="40" y="76" text-anchor="middle" font-size="4" fill="#6B7280">At top: mg + N = mv&#xB2;/r</text></svg>',
@@ -102,7 +102,7 @@ export const lesson5: Lesson = {
       hint: 'At the top of the loop, what direction does gravity point relative to the center?',
     },
     {
-      id: 'u7-L5-Q8',
+      id: 'htw-L5-Q8',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><path d="M10 20 Q20 20 25 45 Q30 65 45 65 Q60 65 70 65" stroke="#3B8700" stroke-width="2" fill="none"/><path d="M10 20 Q15 20 20 35 Q30 65 45 65 Q60 65 70 65" stroke="#A5E86C" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/><rect x="7" y="16" width="6" height="4" rx="1" fill="#58CC02"><animateMotion dur="3s" repeatCount="indefinite" path="M0,0 Q10,0 15,25 Q20,45 35,45 Q50,45 60,45" calcMode="spline" keySplines="0.3 0 0.7 1"/></rect><line x1="8" y1="20" x2="8" y2="65" stroke="#334155" stroke-width="0.5" stroke-dasharray="2 2"/><text x="5" y="42" font-size="3.5" fill="#334155" font-style="italic" transform="rotate(-90 5 42)">h</text><text x="70" y="60" font-size="4" fill="#58CC02" font-weight="bold">v</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Energy Conservation</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">mgh = ½mv² (path independent)</text></svg>`,
       type: 'true-false',
       question: 'On a frictionless roller coaster, a car that starts from rest at height h will always reach the same maximum speed at the bottom, regardless of the track shape.',
@@ -110,7 +110,7 @@ export const lesson5: Lesson = {
       explanation: 'Conservation of energy: mgh = ½mv². The speed at the bottom depends only on the height difference, not the path taken (assuming no friction or drag). This is a direct consequence of gravity being a conservative force. The track shape affects the time to reach the bottom, but not the final speed.',
     },
     {
-      id: 'u7-L5-Q9',
+      id: 'htw-L5-Q9',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><path d="M10 25 Q10 60 40 60 Q70 60 70 25" stroke="#3B8700" stroke-width="2" fill="none"/><circle cx="40" cy="56" r="3" fill="#334155"/><line x1="40" y1="53" x2="40" y2="46" stroke="#58CC02" stroke-width="1.5"/><path d="M38 47 L40 44 L42 47" fill="#58CC02"/><text x="45" y="47" font-size="3.5" fill="#58CC02" font-weight="bold">N</text><line x1="40" y1="59" x2="40" y2="66" stroke="#334155" stroke-width="1.5"/><path d="M38 65 L40 68 L42 65" fill="#334155"/><text x="45" y="66" font-size="3.5" fill="#334155" font-style="italic">mg</text><path d="M40 56 Q40 40 40 36" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="2 1"/><text x="45" y="38" font-size="3" fill="#A5E86C">to center</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Half-Pipe</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">N = m(g + v²/r)</text></svg>`,
       type: 'multiple-choice',
       question: 'When a skateboarder rides through a curved half-pipe, they feel "heavier" at the bottom of the curve. Why?',
@@ -125,7 +125,7 @@ export const lesson5: Lesson = {
     },
     // ── DIVING BOARD ──
     {
-      id: 'u7-L5-Q10',
+      id: 'htw-L5-Q10',
       type: 'multiple-choice',
       question: 'A diving board is a classic example of what type of structural element, and where does maximum bending stress occur?',
       diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#58CC02" opacity="0.06"/><rect x="4" y="18" width="8" height="24" fill="#3B8700" opacity="0.18"/><line x1="4" y1="18" x2="12" y2="24" stroke="#3B8700" stroke-width="1"/><line x1="4" y1="22" x2="12" y2="28" stroke="#3B8700" stroke-width="1"/><line x1="4" y1="26" x2="12" y2="32" stroke="#3B8700" stroke-width="1"/><line x1="4" y1="30" x2="12" y2="36" stroke="#3B8700" stroke-width="1"/><line x1="4" y1="34" x2="12" y2="40" stroke="#3B8700" stroke-width="1"/><path d="M12,28 Q40,28 68,34" stroke="#58CC02" stroke-width="2.5" fill="none"><animate attributeName="d" values="M12,28 Q40,28 68,28;M12,28 Q40,30 68,36;M12,28 Q40,28 68,28" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></path><circle cx="68" cy="34" r="4" fill="#334155" opacity="0.7"><animate attributeName="cy" values="28;36;28" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></circle><line x1="68" y1="38" x2="68" y2="46" stroke="#334155" stroke-width="1.5"><animate attributeName="y1" values="32;40;32" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/><animate attributeName="y2" values="40;48;40" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><path d="M66,44 L68,48 L70,44" fill="#334155"><animate attributeName="d" values="M66,38 L68,42 L70,38;M66,46 L68,50 L70,46;M66,38 L68,42 L70,38" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></path><text x="72" y="40" font-size="4" fill="#334155" font-style="italic">F</text><line x1="12" y1="56" x2="68" y2="56" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="2 2"/><polygon points="12,56 12,68 68,56" fill="#A5E86C" opacity="0.3" stroke="#3B8700" stroke-width="1.5"/><text x="14" y="66" font-size="3.5" fill="#3B8700">M_max</text><text x="40" y="75" text-anchor="middle" font-size="4" fill="#6B7280">Bending moment diagram</text></svg>',
@@ -140,17 +140,17 @@ export const lesson5: Lesson = {
       hint: 'One end is clamped to the platform; the other hangs freely over the water.',
     },
     {
-      id: 'u7-L5-Q11',
+      id: 'htw-L5-Q11',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="5" y="30" width="8" height="16" rx="1" fill="#3B8700" opacity="0.2"/><path d="M13 38 Q40 38 65 38" stroke="#334155" stroke-width="1" stroke-dasharray="2 2"/><path d="M13 38 Q40 42 65 50" stroke="#58CC02" stroke-width="2" fill="none"><animate attributeName="d" values="M13 38 Q40 42 65 50;M13 38 Q40 34 65 26;M13 38 Q40 42 65 50" dur="1.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></path><circle cx="65" cy="50" r="3" fill="#334155"><animate attributeName="cy" values="50;26;50" dur="1.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></circle><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Board Oscillation</text><text x="40" y="20" text-anchor="middle" font-size="3.5" fill="#58CC02" font-style="italic">natural frequency</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">U = ½kx² (elastic PE)</text></svg>`,
       type: 'fill-blank',
-      question: 'When a diver stands at the end of a diving board and bounces, the board oscillates at its ___. The energy stored in the bent board is ___ energy.',
+      question: 'When a diver stands at the end of a diving board and bounces, the board oscillates at its _____. The energy stored in the bent board is _____ energy.',
       blanks: ['natural frequency', 'elastic potential'],
       wordBank: ['natural frequency', 'forced frequency', 'elastic potential', 'kinetic', 'thermal'],
       explanation: 'The diver excites the board\'s natural frequency (determined by its stiffness and mass). A bent beam stores elastic potential energy (U = ½kx²), which converts to kinetic energy as the board springs back, launching the diver upward.',
     },
     // ── HELMET ──
     {
-      id: 'u7-L5-Q12',
+      id: 'htw-L5-Q12',
       type: 'multiple-choice',
       question: 'Bicycle and football helmets use crushable foam liners to protect the head during impact. What is the engineering principle behind this?',
       diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#58CC02" opacity="0.06"/><path d="M20,44 Q20,22 40,18 Q60,22 60,44" stroke="#3B8700" stroke-width="2.5" fill="none"/><path d="M22,44 Q22,26 40,22 Q58,26 58,44" stroke="#A5E86C" stroke-width="1.5" fill="#A5E86C" opacity="0.3"><animate attributeName="d" values="M22,44 Q22,26 40,22 Q58,26 58,44;M22,44 Q22,30 40,26 Q58,30 58,44;M22,44 Q22,26 40,22 Q58,26 58,44" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></path><ellipse cx="40" cy="50" rx="14" ry="8" fill="#334155" opacity="0.15"/><line x1="26" y1="44" x2="54" y2="44" stroke="#6B7280" stroke-width="1"/><text x="67" y="34" font-size="3.5" fill="#3B8700">Shell</text><text x="67" y="40" font-size="3.5" fill="#A5E86C">Foam</text><line x1="40" y1="4" x2="40" y2="14" stroke="#334155" stroke-width="2"><animate attributeName="y2" values="14;20;14" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><path d="M37,12 L40,16 L43,12" fill="#334155"><animate attributeName="d" values="M37,12 L40,16 L43,12;M37,18 L40,22 L43,18;M37,12 L40,16 L43,12" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></path><text x="48" y="10" font-size="4.5" fill="#334155" font-weight="bold">Impact</text><rect x="24" y="36" width="32" height="8" rx="1" fill="#A5E86C" opacity="0.2" stroke="#A5E86C" stroke-width="0.8"><animate attributeName="height" values="8;5;8" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/><animate attributeName="y" values="36;38;36" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><text x="40" y="72" text-anchor="middle" font-size="4" fill="#6B7280">Foam crushes &#x2192; longer &#x394;t &#x2192; lower F</text></svg>',
@@ -165,7 +165,7 @@ export const lesson5: Lesson = {
       hint: 'If you catch an egg by moving your hands backward, you increase the stopping time.',
     },
     {
-      id: 'u7-L5-Q13',
+      id: 'htw-L5-Q13',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="25" width="25" height="18" rx="2" fill="#A5E86C" opacity="0.3" stroke="#A5E86C" stroke-width="1"/><text x="22" y="32" text-anchor="middle" font-size="3" fill="#A5E86C" font-weight="bold">EPS foam</text><text x="22" y="38" text-anchor="middle" font-size="3" fill="#334155">plastic</text><rect x="10" y="45" width="25" height="10" rx="2" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="0.5" stroke-dasharray="2 1"/><text x="22" y="52" text-anchor="middle" font-size="2.5" fill="#334155">crushed</text><text x="38" y="36" font-size="6" fill="#334155">≠</text><rect x="45" y="25" width="25" height="18" rx="2" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="1"/><text x="57" y="32" text-anchor="middle" font-size="3" fill="#58CC02" font-weight="bold">Rubber</text><text x="57" y="38" text-anchor="middle" font-size="3" fill="#334155">elastic</text><path d="M57 45 Q54 50 57 55 Q60 50 57 45" stroke="#58CC02" stroke-width="1" fill="none"><animate attributeName="d" values="M57 45 Q54 50 57 55 Q60 50 57 45;M57 45 Q52 50 57 57 Q62 50 57 45;M57 45 Q54 50 57 55 Q60 50 57 45" dur="1s" repeatCount="indefinite"/></path><text x="57" y="62" text-anchor="middle" font-size="2.5" fill="#334155">bounces back</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Foam Deformation</text><text x="40" y="74" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">plastic crush absorbs energy</text></svg>`,
       type: 'true-false',
       question: 'A helmet foam liner should be highly elastic (like a rubber ball) so it can be reused after each impact.',
@@ -174,7 +174,7 @@ export const lesson5: Lesson = {
     },
     // ── SWIMMING / ROWING ──
     {
-      id: 'u7-L5-Q14',
+      id: 'htw-L5-Q14',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><ellipse cx="40" cy="38" rx="28" ry="8" fill="#58CC02" opacity="0.1" stroke="#3B8700" stroke-width="1"/><line x1="12" y1="32" x2="68" y2="32" stroke="#A5E86C" stroke-width="0.5"/><line x1="12" y1="44" x2="68" y2="44" stroke="#A5E86C" stroke-width="0.5"/><path d="M14 36 L18 36" stroke="#334155" stroke-width="0.5"/><path d="M14 40 L18 40" stroke="#334155" stroke-width="0.5"/><path d="M62 36 L66 36" stroke="#334155" stroke-width="0.5"/><path d="M62 40 L66 40" stroke="#334155" stroke-width="0.5"/><text x="40" y="40" text-anchor="middle" font-size="3" fill="#334155">body surface</text><path d="M15 30 L25 30" stroke="#58CC02" stroke-width="1" marker-end="url(#a514)"/><path d="M55 30 L65 30" stroke="#58CC02" stroke-width="1" marker-end="url(#a514)"/><defs><marker id="a514" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker></defs><text x="40" y="28" text-anchor="middle" font-size="3" fill="#58CC02">flow direction</text><text x="40" y="52" text-anchor="middle" font-size="3.5" fill="#A5E86C" font-style="italic">τ_wall (shear stress)</text><path d="M25 44 L35 48" stroke="#A5E86C" stroke-width="0.8"/><path d="M45 44 L55 48" stroke="#A5E86C" stroke-width="0.8"/><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Skin Friction Drag</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">smooth surface → lower τ</text></svg>`,
       type: 'multiple-choice',
       question: 'Competitive swimmers shave their bodies and wear smooth suits to reduce drag. Which type of drag are they primarily targeting?',
@@ -189,17 +189,17 @@ export const lesson5: Lesson = {
       hint: 'Think about the fluid sliding along the skin surface — what force resists that sliding?',
     },
     {
-      id: 'u7-L5-Q15',
+      id: 'htw-L5-Q15',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><ellipse cx="30" cy="35" rx="14" ry="8" fill="#58CC02" opacity="0.1" stroke="#3B8700" stroke-width="1"/><text x="30" y="37" text-anchor="middle" font-size="3" fill="#3B8700">streamlined</text><circle cx="30" cy="58" r="7" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="1"/><text x="30" y="60" text-anchor="middle" font-size="3" fill="#A5E86C">bluff</text><path d="M44 35 Q55 30 65 35 Q55 40 65 38" stroke="#334155" stroke-width="0.5" fill="none"/><path d="M37 58 Q48 52 58 55 Q50 62 60 58" stroke="#334155" stroke-width="0.5" fill="none"/><text x="60" y="32" font-size="3" fill="#334155">thin wake</text><text x="60" y="53" font-size="3" fill="#334155">wide wake</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Pressure Drag</text><text x="40" y="75" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">Re ~ 10⁶ → turbulent flow</text></svg>`,
       type: 'fill-blank',
-      question: 'The Reynolds number for a swimmer is approximately 10⁶, indicating the flow is ___. Streamlining the body profile primarily reduces ___ drag.',
+      question: 'The Reynolds number for a swimmer is approximately 10⁶, indicating the flow is _____. Streamlining the body profile primarily reduces _____ drag.',
       blanks: ['turbulent', 'pressure'],
       wordBank: ['turbulent', 'laminar', 'pressure', 'friction', 'wave'],
       explanation: 'At Re ~ 10⁶, flow around a human body is fully turbulent. Streamlining (reducing the projected frontal area and making the body shape more hydrodynamic) primarily reduces pressure drag (also called form drag), which results from the pressure difference between the front and rear of the body.',
     },
     // ── GOLF CLUB ──
     {
-      id: 'u7-L5-Q16',
+      id: 'htw-L5-Q16',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="30" width="12" height="18" rx="1" fill="#A5E86C" opacity="0.2" stroke="#A5E86C" stroke-width="1"/><text x="16" y="42" text-anchor="middle" font-size="3" fill="#A5E86C">old</text><text x="16" y="52" text-anchor="middle" font-size="2.5" fill="#334155">small MOI</text><rect x="45" y="24" width="24" height="28" rx="3" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.5"/><text x="57" y="40" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">new</text><text x="57" y="56" text-anchor="middle" font-size="2.5" fill="#334155">large MOI</text><circle cx="16" cy="39" r="1.5" fill="#334155"/><circle cx="57" cy="38" r="1.5" fill="#334155"/><circle cx="62" cy="32" r="1" fill="#334155" opacity="0.5"/><text x="67" y="33" font-size="2.5" fill="#334155">off-center</text><path d="M62 32 Q63 33 62 34" stroke="#334155" stroke-width="0.5" fill="none"><animate attributeName="d" values="M62 32 Q63 33 62 34;M62 32 Q64 33 63 35;M62 32 Q63 33 62 34" dur="1s" repeatCount="indefinite"/></path><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Club Head MOI</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">higher MOI = more forgiving</text></svg>`,
       type: 'multiple-choice',
       question: 'Golf club heads have evolved from small steel blocks to large hollow titanium drivers. What engineering property does a larger head improve?',
@@ -214,7 +214,7 @@ export const lesson5: Lesson = {
       hint: 'What happens when you hit the ball near the toe instead of the center?',
     },
     {
-      id: 'u7-L5-Q17',
+      id: 'htw-L5-Q17',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="40" y1="20" x2="40" y2="60" stroke="#334155" stroke-width="1.5"/><circle cx="30" cy="38" r="4" fill="#58CC02" opacity="0.3" stroke="#58CC02" stroke-width="1"><animate attributeName="cx" values="20;36;20" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></circle><circle cx="50" cy="38" r="4" fill="#A5E86C" opacity="0.3" stroke="#A5E86C" stroke-width="1"><animate attributeName="cx" values="60;44;60" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></circle><text x="20" y="50" font-size="3" fill="#58CC02">v_approach</text><text x="50" y="50" font-size="3" fill="#A5E86C">v_separation</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">COR</text><text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#334155">e = v_sep / v_app</text><text x="40" y="75" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">max 0.83</text></svg>`,
       type: 'multiple-choice',
       question: 'The coefficient of restitution (COR) for a golf ball striking a club face is regulated to a maximum of 0.83. What does COR physically represent?',
@@ -228,7 +228,7 @@ export const lesson5: Lesson = {
       explanation: 'COR = (v_separation) / (v_approach). A COR of 1.0 means a perfectly elastic collision (no energy loss); 0 means perfectly inelastic (objects stick together). At 0.83, about 31% of kinetic energy is lost to deformation, heat, and sound. Higher COR means the ball leaves faster for a given swing speed.',
     },
     {
-      id: 'u7-L5-Q18',
+      id: 'htw-L5-Q18',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="15" y1="65" x2="70" y2="65" stroke="#334155" stroke-width="1"/><line x1="15" y1="65" x2="15" y2="15" stroke="#334155" stroke-width="1"/><path d="M15 65 Q30 40 45 30 Q60 22 70 20" stroke="#58CC02" stroke-width="1.5" fill="none"/><path d="M15 65 L70 15" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="3 2"/><text x="72" y="17" font-size="3" fill="#A5E86C">linear</text><text x="72" y="22" font-size="3" fill="#58CC02">actual</text><text x="42" y="75" text-anchor="middle" font-size="3" fill="#334155">club speed</text><text x="8" y="40" font-size="3" fill="#334155" transform="rotate(-90 8 40)">ball speed</text><text x="40" y="10" text-anchor="middle" font-size="4" fill="#334155" font-weight="bold">Nonlinear COR</text></svg>`,
       type: 'true-false',
       question: 'In a golf swing, doubling the club head speed at impact will exactly double the ball\'s launch speed.',
@@ -237,16 +237,16 @@ export const lesson5: Lesson = {
     },
     // ── MIXED / CROSS-TOPIC ──
     {
-      id: 'u7-L5-Q19',
+      id: 'htw-L5-Q19',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="25" cy="40" r="18" stroke="#A5E86C" stroke-width="0.8" fill="none" stroke-dasharray="2 2"/><text x="25" y="16" text-anchor="middle" font-size="3" fill="#A5E86C">circle</text><path d="M50 65 Q42 65 40 50 Q38 30 40 22 Q42 18 46 18 Q50 18 52 22 Q54 30 52 50 Q50 65 58 65" stroke="#58CC02" stroke-width="2" fill="none"/><text x="58" y="16" font-size="3" fill="#58CC02" font-weight="bold">clothoid</text><text x="46" y="22" font-size="3" fill="#334155">r_small</text><text x="46" y="60" font-size="3" fill="#334155">r_large</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Loop Shape</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">teardrop = less speed needed</text></svg>`,
       type: 'fill-blank',
-      question: 'A roller coaster loop is often shaped as a ___ (not a perfect circle) so that the centripetal acceleration at the top is manageable without requiring excessive ___.',
+      question: 'A roller coaster loop is often shaped as a _____ (not a perfect circle) so that the centripetal acceleration at the top is manageable without requiring excessive _____.',
       blanks: ['clothoid', 'speed'],
       wordBank: ['clothoid', 'parabola', 'speed', 'height', 'friction'],
       explanation: 'A clothoid (or Euler spiral / teardrop) loop has a smaller radius at the top and a larger radius at the bottom. The smaller radius at the top means v²/r can equal g at a lower speed, so the coaster does not need as much speed (and therefore height) to maintain contact at the top. This also reduces the g-forces at the bottom, improving rider comfort.',
     },
     {
-      id: 'u7-L5-Q20',
+      id: 'htw-L5-Q20',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><path d="M12 42 Q20 38 40 38 Q60 38 68 42 L65 44 Q55 40 40 40 Q25 40 15 44 Z" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1"/><line x1="68" y1="42" x2="75" y2="42" stroke="#58CC02" stroke-width="1.5" marker-end="url(#a520)"/><text x="74" y="39" font-size="3.5" fill="#58CC02">v</text><line x1="12" y1="42" x2="5" y2="42" stroke="#334155" stroke-width="1" marker-end="url(#a520b)"/><text x="3" y="39" font-size="3" fill="#334155">D</text><defs><marker id="a520" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker><marker id="a520b" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#334155"/></marker></defs><line x1="20" y1="50" x2="20" y2="65" stroke="#334155" stroke-width="0.5"/><line x1="60" y1="50" x2="60" y2="65" stroke="#334155" stroke-width="0.5"/><text x="40" y="60" text-anchor="middle" font-size="3.5" fill="#334155">P = Cv³</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Drag vs Power</text><text x="40" y="75" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">2×P → 2^(1/3) × v ≈ 1.26v</text></svg>`,
       type: 'multiple-choice',
       question: 'A rowing team wants to maximize boat speed. The drag force on the hull is proportional to v². If they double their combined power output, by what factor does the steady-state speed increase?',
@@ -264,7 +264,7 @@ export const lesson5: Lesson = {
 };
 
 export const lesson6: Lesson = {
-  id: 'u7-L6',
+  id: 'htw-L6',
   title: 'Buildings & Infrastructure',
   description: 'Elevators, bridges, cranes, and dams — the engineering principles hidden in the structures all around us.',
   icon: '🏗️',
@@ -272,7 +272,7 @@ export const lesson6: Lesson = {
   questions: [
     // ── ELEVATOR ──
     {
-      id: 'u7-L6-Q1',
+      id: 'htw-L6-Q1',
       type: 'multiple-choice',
       question: 'Most elevators use a counterweight that equals the cab weight plus about 40% of the maximum passenger load. Why not 50%?',
       diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#58CC02" opacity="0.06"/><rect x="30" y="6" width="20" height="4" rx="1" fill="#3B8700"/><ellipse cx="40" cy="8" rx="6" ry="3" stroke="#3B8700" stroke-width="1.5" fill="none"/><line x1="34" y1="8" x2="34" y2="38" stroke="#3B8700" stroke-width="1.5"><animate attributeName="y2" values="38;52;38" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><line x1="46" y1="8" x2="46" y2="26" stroke="#3B8700" stroke-width="1.5"><animate attributeName="y2" values="26;12;26" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><rect x="24" y="38" width="20" height="14" rx="2" fill="#58CC02" opacity="0.3" stroke="#3B8700" stroke-width="1.5"><animate attributeName="y" values="38;52;38" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><text x="34" y="47" font-size="4" fill="#334155" font-weight="bold"><animate attributeName="y" values="47;61;47" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>Cab</text><rect x="44" y="26" width="12" height="10" rx="1" fill="#3B8700" opacity="0.25" stroke="#3B8700" stroke-width="1.5"><animate attributeName="y" values="26;12;26" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><text x="50" y="33" text-anchor="middle" font-size="3.5" fill="#334155"><animate attributeName="y" values="33;19;33" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>CW</text><line x1="20" y1="10" x2="20" y2="72" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="2 2"/><line x1="60" y1="10" x2="60" y2="72" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="2 2"/><text x="34" y="60" font-size="3.5" fill="#6B7280" font-style="italic"><animate attributeName="y" values="60;74;60" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>m_cab</text><text x="50" y="44" text-anchor="middle" font-size="3.5" fill="#6B7280" font-style="italic"><animate attributeName="y" values="44;30;44" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/>m_cw</text><text x="40" y="76" text-anchor="middle" font-size="4" fill="#6B7280">Cab &#x2191; Counterweight &#x2193;</text></svg>',
@@ -287,7 +287,7 @@ export const lesson6: Lesson = {
       hint: 'Think about how often an elevator runs empty vs. fully loaded.',
     },
     {
-      id: 'u7-L6-Q2',
+      id: 'htw-L6-Q2',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="12" y="35" width="18" height="16" rx="2" fill="#58CC02" opacity="0.2" stroke="#3B8700" stroke-width="1"/><text x="21" y="45" text-anchor="middle" font-size="3.5" fill="#334155" font-weight="bold">2000kg</text><rect x="52" y="25" width="14" height="12" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1"/><text x="59" y="33" text-anchor="middle" font-size="3" fill="#334155">1500kg</text><ellipse cx="40" cy="14" rx="6" ry="3" stroke="#334155" stroke-width="1" fill="none"/><line x1="21" y1="35" x2="34" y2="14" stroke="#334155" stroke-width="1"/><line x1="46" y1="14" x2="59" y2="25" stroke="#334155" stroke-width="1"/><path d="M21 51 L21 58" stroke="#58CC02" stroke-width="1.5"/><path d="M19 56 L21 60 L23 56" fill="#58CC02"/><text x="28" y="58" font-size="3" fill="#58CC02">a=1.5</text><text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">F = Δmg + (m₁+m₂)a</text><text x="40" y="75" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">≈ 10,155 N</text></svg>`,
       type: 'multiple-choice',
       question: 'An elevator cable supports a 2000 kg cab with a 1500 kg counterweight. When the cab accelerates upward at 1.5 m/s², what is the net force the motor must provide?',
@@ -302,7 +302,7 @@ export const lesson6: Lesson = {
       hint: 'The counterweight cancels most of the gravitational load. The motor handles the difference plus the acceleration.',
     },
     {
-      id: 'u7-L6-Q3',
+      id: 'htw-L6-Q3',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="28" y="20" width="24" height="30" rx="2" stroke="#3B8700" stroke-width="1.5" fill="#3B8700" opacity="0.1"/><line x1="25" y1="15" x2="25" y2="70" stroke="#334155" stroke-width="2"/><line x1="55" y1="15" x2="55" y2="70" stroke="#334155" stroke-width="2"/><text x="22" y="13" font-size="3" fill="#334155">rail</text><text x="56" y="13" font-size="3" fill="#334155">rail</text><path d="M28 35 L25 32 L25 38 Z" fill="#58CC02"><animate attributeName="d" values="M28 35 L27 32 L27 38 Z;M28 35 L25 32 L25 38 Z;M28 35 L27 32 L27 38 Z" dur="1.5s" repeatCount="indefinite"/></path><path d="M52 35 L55 32 L55 38 Z" fill="#58CC02"><animate attributeName="d" values="M52 35 L53 32 L53 38 Z;M52 35 L55 32 L55 38 Z;M52 35 L53 32 L53 38 Z" dur="1.5s" repeatCount="indefinite"/></path><text x="40" y="30" text-anchor="middle" font-size="3.5" fill="#334155">cab</text><circle cx="40" cy="60" r="5" stroke="#58CC02" stroke-width="1" fill="none"><animateTransform attributeName="transform" type="rotate" from="0 40 60" to="360 40 60" dur="1s" repeatCount="indefinite"/></circle><text x="40" y="62" text-anchor="middle" font-size="3" fill="#58CC02">gov</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Safety Brake</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">fail-safe: activates on overspeed</text></svg>`,
       type: 'true-false',
       question: 'Elevator safety brakes work by gripping the guide rails when the cable tension drops to zero (cable breaks), using a centrifugal governor that detects overspeed.',
@@ -310,17 +310,17 @@ export const lesson6: Lesson = {
       explanation: 'Elisha Otis invented this in 1852. A centrifugal governor spins faster as the cab accelerates downward. When speed exceeds a threshold, the governor triggers wedge-shaped brakes that grip the guide rails, bringing the cab to a stop. The system is fail-safe — it activates when something goes wrong (loss of tension or overspeed), not when something is applied.',
     },
     {
-      id: 'u7-L6-Q4',
+      id: 'htw-L6-Q4',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="40" cy="12" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/><line x1="35" y1="12" x2="20" y2="40" stroke="#334155" stroke-width="1"/><line x1="45" y1="12" x2="60" y2="30" stroke="#334155" stroke-width="1"/><rect x="14" y="40" width="12" height="18" rx="2" fill="#58CC02" opacity="0.2" stroke="#3B8700" stroke-width="1"><animate attributeName="y" values="40;28;40" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><text x="20" y="51" text-anchor="middle" font-size="3" fill="#334155">cab</text><rect x="54" y="30" width="10" height="12" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1"><animate attributeName="y" values="30;42;30" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><text x="59" y="38" text-anchor="middle" font-size="3" fill="#334155">CW</text><path d="M20 28 L20 24" stroke="#58CC02" stroke-width="1"><animate attributeName="d" values="M20 40 L20 36;M20 28 L20 24;M20 40 L20 36" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></path><path d="M59 42 L59 46" stroke="#A5E86C" stroke-width="1"><animate attributeName="d" values="M59 30 L59 34;M59 42 L59 46;M59 30 L59 34" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></path><text x="40" y="72" text-anchor="middle" font-size="4" fill="#334155" font-weight="bold">Pulley System</text><text x="40" y="78" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">cab ↑ = CW ↓</text></svg>`,
       type: 'fill-blank',
-      question: 'An elevator uses a ___ system where the counterweight moves ___ when the cab moves up, keeping the cable tension manageable.',
+      question: 'An elevator uses a _____ system where the counterweight moves _____ when the cab moves up, keeping the cable tension manageable.',
       blanks: ['pulley', 'down'],
       wordBank: ['pulley', 'gear', 'down', 'up', 'sideways'],
       explanation: 'The elevator cable runs over a sheave (pulley) at the top of the shaft. When the motor raises the cab, the counterweight descends on the other side. This pulley arrangement means the motor only needs to handle the net weight difference, not the full cab weight.',
     },
     // ── BRIDGE TYPES ──
     {
-      id: 'u7-L6-Q5',
+      id: 'htw-L6-Q5',
       type: 'multiple-choice',
       question: 'In a simple truss bridge, how do the top chord and bottom chord members carry loads?',
       diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#58CC02" opacity="0.06"/><line x1="6" y1="28" x2="74" y2="28" stroke="#3B8700" stroke-width="2"/><text x="40" y="26" text-anchor="middle" font-size="3.5" fill="#3B8700" font-weight="bold">C</text><line x1="6" y1="52" x2="74" y2="52" stroke="#58CC02" stroke-width="2"/><text x="40" y="60" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">T</text><line x1="6" y1="28" x2="6" y2="52" stroke="#3B8700" stroke-width="1.5"/><line x1="74" y1="28" x2="74" y2="52" stroke="#3B8700" stroke-width="1.5"/><line x1="23" y1="28" x2="23" y2="52" stroke="#6B7280" stroke-width="1.5"/><line x1="40" y1="28" x2="40" y2="52" stroke="#6B7280" stroke-width="1.5"/><line x1="57" y1="28" x2="57" y2="52" stroke="#6B7280" stroke-width="1.5"/><line x1="6" y1="28" x2="23" y2="52" stroke="#58CC02" stroke-width="1.5"/><text x="12" y="43" font-size="3" fill="#58CC02">T</text><line x1="23" y1="52" x2="40" y2="28" stroke="#3B8700" stroke-width="1.5"/><text x="29" y="37" font-size="3" fill="#3B8700">C</text><line x1="40" y1="28" x2="57" y2="52" stroke="#58CC02" stroke-width="1.5"/><text x="46" y="43" font-size="3" fill="#58CC02">T</text><line x1="57" y1="52" x2="74" y2="28" stroke="#3B8700" stroke-width="1.5"/><text x="63" y="37" font-size="3" fill="#3B8700">C</text><polygon points="4,54 8,54 6,58" fill="#6B7280"/><line x1="4" y1="58" x2="8" y2="58" stroke="#6B7280" stroke-width="1"/><circle cx="74" cy="55" r="2" fill="none" stroke="#6B7280" stroke-width="1"/><line x1="71" y1="58" x2="77" y2="58" stroke="#6B7280" stroke-width="1"/><line x1="20" y1="52" x2="20" y2="64" stroke="#334155" stroke-width="1.5"/><path d="M18,62 L20,66 L22,62" fill="#334155"/><line x1="40" y1="52" x2="40" y2="64" stroke="#334155" stroke-width="1.5"/><path d="M38,62 L40,66 L42,62" fill="#334155"/><line x1="60" y1="52" x2="60" y2="64" stroke="#334155" stroke-width="1.5"/><path d="M58,62 L60,66 L62,62" fill="#334155"/><text x="40" y="74" text-anchor="middle" font-size="4" fill="#6B7280">C = compression, T = tension</text></svg>',
@@ -335,7 +335,7 @@ export const lesson6: Lesson = {
       hint: 'Think about bending a solid beam — the top compresses and the bottom stretches.',
     },
     {
-      id: 'u7-L6-Q6',
+      id: 'htw-L6-Q6',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><path d="M10 50 Q40 15 70 50" stroke="#58CC02" stroke-width="2.5" fill="none"/><line x1="10" y1="50" x2="70" y2="50" stroke="#334155" stroke-width="1.5"/><line x1="25" y1="50" x2="25" y2="35" stroke="#3B8700" stroke-width="0.8"/><line x1="40" y1="50" x2="40" y2="23" stroke="#3B8700" stroke-width="0.8"/><line x1="55" y1="50" x2="55" y2="35" stroke="#3B8700" stroke-width="0.8"/><path d="M40 23 L37 18" stroke="#A5E86C" stroke-width="0.8"/><path d="M40 23 L43 18" stroke="#A5E86C" stroke-width="0.8"/><text x="46" y="20" font-size="3" fill="#A5E86C" font-style="italic">C</text><path d="M10 50 L5 53" stroke="#334155" stroke-width="1.5"/><path d="M70 50 L75 53" stroke="#334155" stroke-width="1.5"/><text x="8" y="58" font-size="3" fill="#334155">thrust</text><text x="60" y="58" font-size="3" fill="#334155">thrust</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Arch Bridge</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">loads → compression along arch</text></svg>`,
       type: 'multiple-choice',
       question: 'Why can an arch bridge span farther than a simple beam bridge of the same material and cross-section?',
@@ -349,7 +349,7 @@ export const lesson6: Lesson = {
       explanation: 'An arch transfers loads primarily as compression along its curved axis, minimizing bending moments. Stone and concrete are very strong in compression but weak in tension, making the arch ideal for these materials. A beam of the same material would develop tension on its bottom face, limiting its span before the material fails in tension.',
     },
     {
-      id: 'u7-L6-Q7',
+      id: 'htw-L6-Q7',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="22" y="18" width="4" height="38" fill="#3B8700" opacity="0.3" stroke="#3B8700" stroke-width="1"/><rect x="54" y="18" width="4" height="38" fill="#3B8700" opacity="0.3" stroke="#3B8700" stroke-width="1"/><path d="M5 30 Q24 18 40 28 Q56 18 75 30" stroke="#58CC02" stroke-width="2" fill="none"/><line x1="5" y1="56" x2="75" y2="56" stroke="#334155" stroke-width="1.5"/><line x1="30" y1="32" x2="30" y2="56" stroke="#A5E86C" stroke-width="0.5"/><line x1="35" y1="30" x2="35" y2="56" stroke="#A5E86C" stroke-width="0.5"/><line x1="40" y1="28" x2="40" y2="56" stroke="#A5E86C" stroke-width="0.5"/><line x1="45" y1="30" x2="45" y2="56" stroke="#A5E86C" stroke-width="0.5"/><line x1="50" y1="32" x2="50" y2="56" stroke="#A5E86C" stroke-width="0.5"/><text x="40" y="52" text-anchor="middle" font-size="3" fill="#334155">deck</text><text x="40" y="24" text-anchor="middle" font-size="3" fill="#58CC02" font-weight="bold">T (cable)</text><text x="18" y="40" font-size="3" fill="#3B8700">C</text><text x="60" y="40" font-size="3" fill="#3B8700">C</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Suspension Bridge</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">cables = tension, towers = compression</text></svg>`,
       type: 'true-false',
       question: 'In a suspension bridge, the main cables are in tension and the towers are in compression.',
@@ -358,7 +358,7 @@ export const lesson6: Lesson = {
     },
     // ── WATER TOWER ──
     {
-      id: 'u7-L6-Q8',
+      id: 'htw-L6-Q8',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="30" y="8" width="20" height="14" rx="2" fill="#58CC02" opacity="0.15" stroke="#3B8700" stroke-width="1.5"/><line x1="38" y1="22" x2="38" y2="58" stroke="#3B8700" stroke-width="1"/><rect x="50" y="54" width="18" height="12" rx="2" stroke="#334155" stroke-width="1" fill="none"/><line x1="38" y1="58" x2="50" y2="58" stroke="#3B8700" stroke-width="1"/><text x="40" y="17" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">water</text><line x1="22" y1="15" x2="22" y2="58" stroke="#334155" stroke-width="0.5" stroke-dasharray="2 2"/><text x="19" y="38" font-size="3.5" fill="#334155" transform="rotate(-90 19 38)">40 m</text><line x1="20" y1="15" x2="24" y2="15" stroke="#334155" stroke-width="0.5"/><line x1="20" y1="58" x2="24" y2="58" stroke="#334155" stroke-width="0.5"/><text x="59" y="62" text-anchor="middle" font-size="3" fill="#334155">house</text><circle cx="68" cy="58" r="1.5" fill="#58CC02"><animate attributeName="r" values="1;2;1" dur="1s" repeatCount="indefinite"/></circle><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">P = ρgh ≈ 392 kPa</text></svg>`,
       type: 'multiple-choice',
       question: 'A water tower provides water pressure to a town. If the water surface is 40 m above a house\'s faucet, what is the approximate water pressure at the faucet (ρ_water = 1000 kg/m³)?',
@@ -373,17 +373,17 @@ export const lesson6: Lesson = {
       hint: 'Hydrostatic pressure depends only on fluid density, gravity, and height — not container shape or pipe size.',
     },
     {
-      id: 'u7-L6-Q9',
+      id: 'htw-L6-Q9',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="15" y="12" width="16" height="20" rx="2" fill="#58CC02" opacity="0.15" stroke="#3B8700" stroke-width="1"/><text x="23" y="24" text-anchor="middle" font-size="3.5" fill="#3B8700">mgh</text><path d="M35 22 L45 22" stroke="#334155" stroke-width="1.5" marker-end="url(#a69)"/><defs><marker id="a69" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#334155"/></marker></defs><rect x="49" y="12" width="16" height="20" rx="2" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="1"/><text x="57" y="24" text-anchor="middle" font-size="3.5" fill="#A5E86C">P=ρgh</text><text x="23" y="40" text-anchor="middle" font-size="3" fill="#334155">PE</text><text x="57" y="40" text-anchor="middle" font-size="3" fill="#334155">pressure</text><text x="40" y="55" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Energy Conversion</text><text x="40" y="65" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">gravitational PE → pressure energy</text></svg>`,
       type: 'fill-blank',
-      question: 'A water tower works by converting gravitational ___ energy of elevated water into ___ energy (pressure) at the point of use.',
+      question: 'A water tower works by converting gravitational _____ energy of elevated water into _____ energy at the point of use.',
       blanks: ['potential', 'pressure'],
       wordBank: ['potential', 'kinetic', 'pressure', 'thermal', 'chemical'],
       explanation: 'Water stored at elevation has gravitational potential energy (mgh). When a faucet opens, this potential energy converts to pressure energy (P = ρgh) that drives flow. This is the basis of the "hydraulic head" concept used throughout civil and mechanical engineering. No pump is needed during peak demand — the elevated water provides pressure passively.',
     },
     // ── HVAC DUCTWORK ──
     {
-      id: 'u7-L6-Q10',
+      id: 'htw-L6-Q10',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="22" width="30" height="18" rx="9" fill="#3B8700" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><text x="23" y="33" text-anchor="middle" font-size="3.5" fill="#3B8700">D=30cm</text><rect x="8" y="48" width="30" height="10" rx="5" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="1.5"/><text x="23" y="55" text-anchor="middle" font-size="3.5" fill="#A5E86C">D=20cm</text><text x="55" y="33" font-size="3.5" fill="#3B8700">ΔP = 1×</text><text x="55" y="55" font-size="3.5" fill="#A5E86C" font-weight="bold">ΔP ≈ 7.6×</text><path d="M42 31 L48 31" stroke="#3B8700" stroke-width="0.8" marker-end="url(#a610)"/><path d="M42 53 L48 53" stroke="#A5E86C" stroke-width="0.8" marker-end="url(#a610b)"/><defs><marker id="a610" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#3B8700"/></marker><marker id="a610b" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#A5E86C"/></marker></defs><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Duct Sizing</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">ΔP ∝ 1/D⁵</text></svg>`,
       type: 'multiple-choice',
       question: 'An HVAC engineer must choose between a 30 cm and a 20 cm diameter round duct for the same airflow. How does the pressure drop compare?',
@@ -398,7 +398,7 @@ export const lesson6: Lesson = {
       hint: 'The Darcy-Weisbach equation shows pressure drop depends very strongly on diameter.',
     },
     {
-      id: 'u7-L6-Q11',
+      id: 'htw-L6-Q11',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="15" y1="62" x2="72" y2="62" stroke="#334155" stroke-width="1"/><line x1="15" y1="62" x2="15" y2="14" stroke="#334155" stroke-width="1"/><path d="M15 20 Q25 30 35 38 Q50 48 72 55" stroke="#58CC02" stroke-width="1.5" fill="none"/><path d="M15 25 Q25 35 35 42 Q50 50 72 58" stroke="#A5E86C" stroke-width="1" fill="none" stroke-dasharray="2 2"/><path d="M15 15 Q20 25 25 32 Q30 38 35 55 L35 62" stroke="#3B8700" stroke-width="1" fill="none" stroke-dasharray="3 1"/><text x="35" y="60" font-size="3" fill="#3B8700">transition</text><text x="74" y="53" font-size="3" fill="#58CC02">rough</text><text x="74" y="59" font-size="3" fill="#A5E86C">smooth</text><text x="44" y="70" font-size="3" fill="#334155">log(Re)</text><text x="10" y="38" font-size="3" fill="#334155" transform="rotate(-90 10 38)">f</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Moody Chart</text></svg>`,
       type: 'multiple-choice',
       question: 'In HVAC duct design, the Reynolds number is used to determine whether the airflow is laminar or turbulent. For typical duct conditions (Re > 4000), what does this mean for the friction factor?',
@@ -413,7 +413,7 @@ export const lesson6: Lesson = {
     },
     // ── CRANE ──
     {
-      id: 'u7-L6-Q12',
+      id: 'htw-L6-Q12',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="20" y="50" width="30" height="10" rx="2" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1.5"/><line x1="35" y1="50" x2="65" y2="20" stroke="#334155" stroke-width="2"/><line x1="65" y1="20" x2="65" y2="40" stroke="#A5E86C" stroke-width="0.8"/><rect x="61" y="40" width="8" height="6" rx="1" fill="#58CC02" opacity="0.3" stroke="#58CC02" stroke-width="1"/><text x="65" y="45" text-anchor="middle" font-size="3" fill="#334155">W_L</text><circle cx="50" cy="60" r="2" fill="#334155"/><text x="50" y="68" text-anchor="middle" font-size="3" fill="#334155">tip edge</text><path d="M35 62 L35 70" stroke="#3B8700" stroke-width="1"/><path d="M33 68 L35 72 L37 68" fill="#3B8700"/><text x="28" y="72" font-size="3" fill="#3B8700">W_c</text><path d="M65 46 L65 54" stroke="#58CC02" stroke-width="1"/><path d="M63 52 L65 56 L67 52" fill="#58CC02"/><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Crane Stability</text><text x="40" y="78" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">M_restoring > M_overturning</text></svg>`,
       type: 'multiple-choice',
       question: 'A mobile crane must not tip over when lifting a load. What is the stability criterion based on moments about the tipping edge?',
@@ -428,7 +428,7 @@ export const lesson6: Lesson = {
       hint: 'Think about a seesaw — which side has the greater moment about the pivot?',
     },
     {
-      id: 'u7-L6-Q13',
+      id: 'htw-L6-Q13',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="15" y1="60" x2="72" y2="60" stroke="#334155" stroke-width="1"/><line x1="15" y1="60" x2="15" y2="15" stroke="#334155" stroke-width="1"/><path d="M18 20 Q30 22 45 35 Q55 45 70 55" stroke="#58CC02" stroke-width="2" fill="none"/><text x="44" y="70" font-size="3.5" fill="#334155">reach (m)</text><text x="8" y="38" font-size="3.5" fill="#334155" transform="rotate(-90 8 38)">capacity (t)</text><circle cx="25" cy="22" r="2" fill="#58CC02"/><text x="28" y="20" font-size="3" fill="#58CC02">50t @ 10m</text><circle cx="60" cy="50" r="2" fill="#A5E86C"/><text x="55" y="48" font-size="3" fill="#A5E86C">15t @ 30m</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Load Chart</text></svg>`,
       type: 'true-false',
       question: 'A crane\'s maximum lifting capacity remains constant regardless of the boom angle and reach distance.',
@@ -436,17 +436,17 @@ export const lesson6: Lesson = {
       explanation: 'The overturning moment = load × horizontal distance from the tipping point. As the boom extends or lowers (increasing horizontal reach), the same load creates a larger overturning moment. This is why every crane has a load chart: capacity decreases as radius increases. A crane rated at 50 tonnes at 10 m might only lift 15 tonnes at 30 m.',
     },
     {
-      id: 'u7-L6-Q14',
+      id: 'htw-L6-Q14',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="15" y1="55" x2="65" y2="20" stroke="#3B8700" stroke-width="2.5"/><path d="M15 55 Q40 30 65 20" stroke="#58CC02" stroke-width="1.5" fill="none" stroke-dasharray="3 2"><animate attributeName="d" values="M15 55 Q40 35 65 20;M15 55 Q40 30 65 20;M15 55 Q40 35 65 20" dur="2s" repeatCount="indefinite"/></path><circle cx="15" cy="55" r="3" fill="#334155" opacity="0.3"/><path d="M65 20 L65 35" stroke="#334155" stroke-width="0.8"/><rect x="62" y="35" width="6" height="5" rx="1" fill="#A5E86C" opacity="0.3"/><text x="62" y="45" font-size="3" fill="#334155">load</text><path d="M62 22 L55 18" stroke="#58CC02" stroke-width="0.8"/><text x="48" y="16" font-size="3" fill="#58CC02" font-style="italic">P (axial)</text><text x="45" y="28" font-size="3" fill="#A5E86C">buckled shape</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Boom Buckling</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">cantilever under compression</text></svg>`,
       type: 'fill-blank',
-      question: 'A crane boom acts as a ___ beam under combined axial compression and bending. The critical failure mode for a long slender boom is ___.',
+      question: 'A crane boom acts as a _____ beam under combined axial compression and bending. The critical failure mode for a long slender boom is _____.',
       blanks: ['cantilever', 'buckling'],
       wordBank: ['cantilever', 'simply supported', 'buckling', 'yielding', 'fatigue'],
       explanation: 'The boom is fixed at its base pivot and loaded at the tip — a cantilever configuration. The cable tension and load create a compressive axial force along the boom. For long, slender members under compression, Euler buckling (elastic instability) is the governing failure mode, not material yielding. This is why booms use lattice/truss construction — to maximize moment of inertia (buckling resistance) at minimum weight.',
     },
     // ── DAM ──
     {
-      id: 'u7-L6-Q15',
+      id: 'htw-L6-Q15',
       type: 'multiple-choice',
       question: 'Hydrostatic pressure on a dam increases linearly with depth. What is the shape of the pressure distribution, and where does the resultant force act?',
       diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="8" fill="#58CC02" opacity="0.06"/><polygon points="30,14 36,14 40,68 26,68" fill="#3B8700" opacity="0.25" stroke="#3B8700" stroke-width="1.5"/><rect x="2" y="14" width="28" height="54" fill="#58CC02" opacity="0.1"/><line x1="2" y1="14" x2="30" y2="14" stroke="#58CC02" stroke-width="1" stroke-dasharray="2 2"/><text x="14" y="42" text-anchor="middle" font-size="5" fill="#58CC02" opacity="0.5">Water</text><line x1="30" y1="18" x2="34" y2="18" stroke="#334155" stroke-width="1"><animate attributeName="x2" values="32;34;32" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><line x1="30" y1="26" x2="38" y2="26" stroke="#334155" stroke-width="1"><animate attributeName="x2" values="35;38;35" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><line x1="30" y1="34" x2="42" y2="34" stroke="#334155" stroke-width="1"><animate attributeName="x2" values="38;42;38" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><line x1="30" y1="42" x2="46" y2="42" stroke="#334155" stroke-width="1"><animate attributeName="x2" values="42;46;42" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><line x1="30" y1="50" x2="50" y2="50" stroke="#334155" stroke-width="1"><animate attributeName="x2" values="46;50;46" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><line x1="30" y1="58" x2="54" y2="58" stroke="#334155" stroke-width="1"><animate attributeName="x2" values="50;54;50" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><line x1="30" y1="66" x2="58" y2="66" stroke="#334155" stroke-width="1"><animate attributeName="x2" values="54;58;54" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></line><polygon points="30,14 30,68 58,68" fill="#A5E86C" opacity="0.15" stroke="#58CC02" stroke-width="1"/><line x1="46" y1="50" x2="60" y2="50" stroke="#58CC02" stroke-width="2"/><path d="M58,48 L62,50 L58,52" fill="#58CC02"/><text x="63" y="51" font-size="4" fill="#58CC02" font-weight="bold" font-style="italic">F_R</text><text x="2" y="14" font-size="3.5" fill="#6B7280">P=0</text><text x="2" y="68" font-size="3.5" fill="#6B7280">P=&#x3C1;gH</text><line x1="68" y1="50" x2="68" y2="68" stroke="#6B7280" stroke-width="0.8"/><line x1="66" y1="50" x2="70" y2="50" stroke="#6B7280" stroke-width="0.8"/><line x1="66" y1="68" x2="70" y2="68" stroke="#6B7280" stroke-width="0.8"/><text x="72" y="60" font-size="3.5" fill="#6B7280" font-style="italic">H/3</text><line x1="26" y1="70" x2="40" y2="70" stroke="#6B7280" stroke-width="0.5"/><text x="33" y="76" text-anchor="middle" font-size="4" fill="#6B7280">Dam cross-section</text></svg>',
@@ -460,7 +460,7 @@ export const lesson6: Lesson = {
       explanation: 'Pressure P = ρgh increases linearly from zero at the surface to ρgH at the base, forming a triangle. The resultant of a triangular distribution acts at the centroid: 1/3 from the base (or 2/3 from the surface). For a dam of height H and width w, the total force = ½ρgH² × w, acting at H/3 from the bottom.',
     },
     {
-      id: 'u7-L6-Q16',
+      id: 'htw-L6-Q16',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><polygon points="30,15 35,15 50,65 20,65" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1.5"/><rect x="4" y="15" width="26" height="50" fill="#58CC02" opacity="0.08"/><text x="17" y="40" text-anchor="middle" font-size="4" fill="#58CC02" opacity="0.4">water</text><line x1="30" y1="20" x2="36" y2="20" stroke="#334155" stroke-width="0.8"/><line x1="30" y1="35" x2="42" y2="35" stroke="#334155" stroke-width="0.8"/><line x1="30" y1="50" x2="48" y2="50" stroke="#334155" stroke-width="0.8"/><line x1="30" y1="63" x2="50" y2="63" stroke="#334155" stroke-width="0.8"/><path d="M35 67 L35 73" stroke="#3B8700" stroke-width="1"/><path d="M33 71 L35 75 L37 71" fill="#3B8700"/><text x="40" y="74" font-size="3" fill="#3B8700">W_dam</text><text x="55" y="40" font-size="3" fill="#334155" font-style="italic">P_max</text><text x="55" y="48" font-size="3" fill="#334155" font-style="italic">at base</text><text x="40" y="8" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Gravity Dam</text></svg>`,
       type: 'multiple-choice',
       question: 'Why are gravity dams built with a much thicker base than top?',
@@ -475,7 +475,7 @@ export const lesson6: Lesson = {
       hint: 'Where is the water pressure highest — at the top of the dam or the bottom?',
     },
     {
-      id: 'u7-L6-Q17',
+      id: 'htw-L6-Q17',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="10" y="35" width="5" height="25" fill="#334155" stroke="#334155" stroke-width="1"/><rect x="15" y="35" width="18" height="25" fill="#58CC02" opacity="0.1"/><text x="24" y="50" text-anchor="middle" font-size="3.5" fill="#58CC02">H</text><text x="24" y="68" text-anchor="middle" font-size="3" fill="#334155">F = ½ρgH²</text><rect x="45" y="15" width="5" height="50" fill="#334155" stroke="#334155" stroke-width="1"/><rect x="50" y="15" width="25" height="50" fill="#A5E86C" opacity="0.1"/><text x="62" y="42" text-anchor="middle" font-size="3.5" fill="#A5E86C">2H</text><text x="62" y="72" text-anchor="middle" font-size="3" fill="#A5E86C" font-weight="bold">F = 4× !</text><text x="40" y="10" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Force ∝ H²</text></svg>`,
       type: 'true-false',
       question: 'The total hydrostatic force on a dam doubles when the water depth doubles.',
@@ -484,7 +484,7 @@ export const lesson6: Lesson = {
     },
     // ── ESCALATOR / CONVEYOR ──
     {
-      id: 'u7-L6-Q18',
+      id: 'htw-L6-Q18',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="15" y1="65" x2="65" y2="20" stroke="#3B8700" stroke-width="2"/><line x1="15" y1="65" x2="65" y2="65" stroke="#334155" stroke-width="0.5" stroke-dasharray="2 2"/><line x1="65" y1="20" x2="65" y2="65" stroke="#334155" stroke-width="0.5" stroke-dasharray="2 2"/><text x="68" y="44" font-size="3.5" fill="#334155">10m</text><text x="40" y="72" font-size="3" fill="#334155">30°</text><path d="M25 55 Q20 58 18 62" stroke="#334155" stroke-width="0.5"/><circle cx="30" cy="52" r="2" fill="#58CC02" opacity="0.5"><animateMotion dur="3s" repeatCount="indefinite" path="M0,0 L25,-22"/></circle><circle cx="40" cy="42" r="2" fill="#58CC02" opacity="0.5"><animateMotion dur="3s" repeatCount="indefinite" path="M0,0 L25,-22"/></circle><circle cx="50" cy="32" r="2" fill="#58CC02" opacity="0.5"><animateMotion dur="3s" repeatCount="indefinite" path="M0,0 L25,-22"/></circle><text x="20" y="48" font-size="3" fill="#58CC02">v=0.5 m/s</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Escalator Power</text><text x="40" y="78" text-anchor="middle" font-size="3" fill="#334155" font-style="italic">P = mg × v × sin30° ≈ 5.5 kW</text></svg>`,
       type: 'multiple-choice',
       question: 'An escalator carries 30 passengers (average 75 kg each) up a vertical rise of 10 m. The belt moves at 0.5 m/s along the incline at 30°. What minimum motor power is needed, ignoring friction and efficiency losses?',
@@ -499,16 +499,16 @@ export const lesson6: Lesson = {
       hint: 'Power equals the rate of doing work against gravity: P = (total weight) × (vertical component of velocity).',
     },
     {
-      id: 'u7-L6-Q19',
+      id: 'htw-L6-Q19',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><circle cx="18" cy="40" r="8" stroke="#3B8700" stroke-width="1.5" fill="none"><animateTransform attributeName="transform" type="rotate" from="0 18 40" to="360 18 40" dur="2s" repeatCount="indefinite"/></circle><circle cx="62" cy="40" r="8" stroke="#3B8700" stroke-width="1.5" fill="none"><animateTransform attributeName="transform" type="rotate" from="0 62 40" to="360 62 40" dur="2s" repeatCount="indefinite"/></circle><line x1="18" y1="32" x2="62" y2="32" stroke="#58CC02" stroke-width="1.5"/><line x1="18" y1="48" x2="62" y2="48" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2 2"/><text x="40" y="29" text-anchor="middle" font-size="3" fill="#58CC02" font-weight="bold">tight side (F)</text><text x="40" y="55" text-anchor="middle" font-size="3" fill="#A5E86C">slack side</text><path d="M30 32 L38 32" stroke="#58CC02" stroke-width="1" marker-end="url(#a619)"/><defs><marker id="a619" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker></defs><text x="18" y="58" text-anchor="middle" font-size="3" fill="#3B8700">drive</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Belt Conveyor</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">P = F × v</text></svg>`,
       type: 'fill-blank',
-      question: 'For a belt conveyor, the motor must provide enough torque to overcome ___ between the belt and pulleys. The relationship between power, force, and belt speed is P = ___ × v.',
+      question: 'For a belt conveyor, the motor must provide enough torque to overcome _____ between the belt and pulleys. The power equation P = _____ × v relates driving force to belt speed.',
       blanks: ['friction', 'force'],
       wordBank: ['friction', 'inertia', 'force', 'torque', 'mass'],
       explanation: 'A belt conveyor relies on friction between the belt and the drive pulley to transmit force. The motor power relationship P = F × v connects the driving force along the belt to the belt speed. Higher belt speed or heavier loads require more power. The Euler belt friction equation (T1/T2 = e^(μθ)) determines the maximum tension ratio before the belt slips on the pulley.',
     },
     {
-      id: 'u7-L6-Q20',
+      id: 'htw-L6-Q20',
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="28" width="22" height="18" rx="3" fill="#3B8700" opacity="0.15" stroke="#3B8700" stroke-width="1.5"/><text x="19" y="38" text-anchor="middle" font-size="3.5" fill="#3B8700" font-weight="bold">Motor</text><text x="19" y="43" text-anchor="middle" font-size="3" fill="#334155">15 kW in</text><path d="M30 37 L42 37" stroke="#58CC02" stroke-width="1.5" marker-end="url(#a620)"/><defs><marker id="a620" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0,0 L4,2 L0,4Z" fill="#58CC02"/></marker></defs><rect x="44" y="28" width="26" height="18" rx="3" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.5"/><text x="57" y="38" text-anchor="middle" font-size="3.5" fill="#58CC02" font-weight="bold">Output</text><text x="57" y="43" text-anchor="middle" font-size="3" fill="#334155">12.75 kW</text><path d="M30 50 Q36 58 42 50" stroke="#A5E86C" stroke-width="0.8" fill="none"/><text x="36" y="62" text-anchor="middle" font-size="3" fill="#A5E86C">2.25 kW heat</text><text x="40" y="12" text-anchor="middle" font-size="4.5" fill="#334155" font-weight="bold">Motor Efficiency</text><text x="40" y="75" text-anchor="middle" font-size="3.5" fill="#334155" font-style="italic">η = 85% → P_out = 12.75 kW</text></svg>`,
       type: 'multiple-choice',
       question: 'An elevator motor is rated at 15 kW with 85% efficiency. What is the maximum useful power delivered to move the cab?',

@@ -199,9 +199,9 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'What happens to the viscosity of a gas versus a liquid as temperature increases?',
           options: [
-            'Gas viscosity increases',
-            'Both gas',
-            'Both gas',
+            'Gas viscosity increases while liquid viscosity decreases',
+            'Both gas and liquid viscosities increase with temperature',
+            'Both gas and liquid viscosities decrease with temperature',
             'Gas viscosity decreases while liquid viscosity increases with temperature'
           ],
           correctIndex: 0,
@@ -496,7 +496,7 @@ export const unit6: Unit = {
         {
           id: 'u6-L2-Q6',
           type: 'fill-blank',
-          question: 'The line representing total head in a pipe system is called the _____ Grade Line, and it sits above the Hydraulic.',
+          question: 'The line representing total head in a pipe system is called the _____ Grade Line, and it sits above the Hydraulic _____.',
           blanks: ['Energy', 'velocity'],
           wordBank: ['Energy', 'velocity', 'Pressure', 'friction', 'elevation'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Pipe with elevation change --> <path d="M4,52 L24,52 Q34,52 40,40 Q46,28 56,28 L76,28" stroke="#3B8700" stroke-width="2" fill="none" stroke-linecap="round"/> <path d="M4,60 L24,60 Q34,60 40,48 Q46,36 56,36 L76,36" stroke="#3B8700" stroke-width="2" fill="none" stroke-linecap="round"/> <!-- Pipe fill --> <path d="M4,52 L24,52 Q34,52 40,40 Q46,28 56,28 L76,28 L76,36 L56,36 Q46,36 40,48 Q34,60 24,60 L4,60 Z" fill="#58CC02" opacity="0.05"/> <!-- Elevation reference --> <line x1="4" y1="66" x2="76" y2="66" stroke="#3B8700" stroke-width="0.6" stroke-dasharray="2,3" opacity="0.1"/> <!-- z₁ and z₂ height indicators --> <line x1="14" y1="56" x2="14" y2="66" stroke="#3B8700" stroke-width="0.6" stroke-dasharray="1.5,2" opacity="0.15"/> <text x="10" y="64" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">z₁</text> <line x1="66" y1="32" x2="66" y2="66" stroke="#3B8700" stroke-width="0.6" stroke-dasharray="1.5,2" opacity="0.15"/> <text x="70" y="52" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">z₂</text> <!-- Flow particles (speed up at narrower/higher section) --> <circle r="2" fill="#3B8700" opacity="0.4"> <animateMotion dur="2.5s" repeatCount="indefinite" path="M6,56 L24,56 Q34,56 40,44 Q46,32 56,32 L74,32" keyPoints="0;0.35;0.65;1" keyTimes="0;0.4;0.55;1" calcMode="linear"/> </circle> <circle r="1.8" fill="#58CC02" opacity="0.3"> <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.8s" path="M6,56 L24,56 Q34,56 40,44 Q46,32 56,32 L74,32" keyPoints="0;0.35;0.65;1" keyTimes="0;0.4;0.55;1" calcMode="linear"/> </circle> <!-- Pressure indicators (higher at low section, lower at high section) --> <line x1="14" y1="52" x2="14" y2="44" stroke="#58CC02" stroke-width="1" opacity="0.2"/> <polygon points="12.5,45 14,42 15.5,45" fill="#58CC02" opacity="0.2"/> <text x="18" y="46" font-size="3.5" fill="#58CC02" opacity="0.2">P₁</text> <line x1="66" y1="28" x2="66" y2="22" stroke="#A5E86C" stroke-width="1" opacity="0.2"/> <polygon points="64.5,23 66,20 67.5,23" fill="#A5E86C" opacity="0.2"/> <text x="70" y="24" font-size="3.5" fill="#A5E86C" opacity="0.2">P₂</text> <!-- Velocity labels --> <text x="14" y="50" font-size="3.5" fill="#3B8700" opacity="0.15">v₁</text> <text x="66" y="28" font-size="3.5" fill="#3B8700" opacity="0.15">v₂</text> <!-- Bernoulli equation --> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.18" font-style="italic">P + ½ρv² + ρgz = const</text> </svg>',
@@ -629,7 +629,7 @@ export const unit6: Unit = {
         {
           id: 'u6-L2-Q16',
           type: 'fill-blank',
-          question: 'The theorem stating that the exit velocity of fluid through an orifice at the bottom of a tank equals √ is called.',
+          question: 'The theorem stating that the exit velocity of fluid through an orifice at the bottom of a tank equals √ is called _____.',
           blanks: ['Torricelli\'s'],
           wordBank: ['Torricelli\'s', 'Bernoulli\'s', 'Pascal\'s', 'Archimedes\'', 'Euler\'s'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Tank --> <rect x="20" y="10" width="30" height="45" rx="2" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1.5"/> <!-- Water level --> <rect x="20" y="15" width="30" height="40" rx="0" fill="#58CC02" opacity="0.08"/> <!-- Water surface --> <line x1="20" y1="15" x2="50" y2="15" stroke="#58CC02" stroke-width="1" opacity="0.4"/> <!-- Height h --> <line x1="55" y1="15" x2="55" y2="55" stroke="#334155" stroke-width="0.6" stroke-dasharray="2,1" opacity="0.3"/> <text x="58" y="37" font-size="4" fill="#334155" opacity="0.4" font-style="italic">h</text> <!-- Orifice at bottom --> <rect x="35" y="53" width="6" height="4" fill="white" stroke="#3B8700" stroke-width="1" opacity="0.4"/> <!-- Exit jet --> <g opacity="0"> <animate attributeName="opacity" values="0;0.6;0.6" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.2;1"/> <line x1="38" y1="57" x2="38" y2="72" stroke="#58CC02" stroke-width="2.5" stroke-linecap="round"/> <polygon points="36,70 38,75 40,70" fill="#58CC02"/> <text x="46" y="68" font-size="4" fill="#58CC02" font-weight="bold" font-style="italic">v</text> </g> <!-- Formula --> <text x="40" y="79" text-anchor="middle" font-size="3.5" fill="#334155" opacity="0.4" font-style="italic">v = &#x221a;(2gh) Torricelli</text> </svg>',
@@ -898,7 +898,7 @@ export const unit6: Unit = {
         {
           id: 'u6-L3-Q6',
           type: 'fill-blank',
-          question: 'The head loss equation h_f = f is called the _____-Weisbach equation, and for laminar flow the friction factor equals.',
+          question: 'The head loss equation h_f = f is called the _____-Weisbach equation, and for laminar flow the friction factor equals _____.',
           blanks: ['Darcy', '64'],
           wordBank: ['Darcy', '64', 'Bernoulli', '32', 'Colebrook', '128'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="4" y="22" width="72" height="36" rx="10" fill="#58CC02" opacity="0.06"/> <rect x="4" y="22" width="72" height="36" rx="10" stroke="#3B8700" stroke-width="2" fill="none"/> <path d="M5,40 Q40,24 75,40" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,3" opacity="0.25" fill="none"/> <path d="M5,40 Q40,56 75,40" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,3" opacity="0.25" fill="none"/> <circle r="3" fill="#3B8700" opacity="0.6"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M8,40 L72,40"/> </circle> <circle r="2.5" fill="#58CC02" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M8,33 L72,33"/> </circle> <circle r="2.5" fill="#58CC02" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M8,47 L72,47"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.35"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,27 L72,27"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.35"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,53 L72,53"/> </circle> <circle r="3" fill="#3B8700" opacity="0.4"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M8,40 L72,40" begin="0.6s"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.25"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,27 L72,27" begin="1.1s"/> </circle> </svg>',
@@ -1046,7 +1046,7 @@ export const unit6: Unit = {
         {
           id: 'u6-L3-Q17',
           type: 'fill-blank',
-          question: 'The dimensionless chart that plots friction factor versus Reynolds number for various relative roughness values.',
+          question: 'The dimensionless chart that plots friction factor versus Reynolds number for various relative roughness values _____.',
           blanks: ['Moody'],
           wordBank: ['Moody', 'Stribeck', 'Fanno', 'Nikuradse', 'Colebrook'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Pipe (top half - laminar) --> <rect x="4" y="8" width="72" height="24" rx="2" stroke-width="0.7" stroke="#58CC02" fill="none"/> <text x="40" y="6" font-size="3" fill="#3B8700" opacity="0.5" text-anchor="middle">Laminar (Re &lt; 2300)</text> <!-- Laminar flow lines (smooth, parallel) --> <g stroke="#A5E86C" stroke-width="0.5" opacity="0.4"> <line x1="8" y1="14" x2="72" y2="14"/> <line x1="8" y1="18" x2="72" y2="18"/> <line x1="8" y1="20" x2="72" y2="20"/> <line x1="8" y1="24" x2="72" y2="24"/> <line x1="8" y1="28" x2="72" y2="28"/> </g> <!-- Laminar flow particles --> <circle r="1" fill="#A5E86C" opacity="0.6"> <animate attributeName="cx" values="8;72" dur="3s" repeatCount="indefinite"/> <animate attributeName="cy" values="20;20" dur="3s" repeatCount="indefinite"/> </circle> <circle r="0.8" fill="#A5E86C" opacity="0.5"> <animate attributeName="cx" values="8;65" dur="3s" repeatCount="indefinite" begin="0.5s"/> <animate attributeName="cy" values="15;15" dur="3s" repeatCount="indefinite" begin="0.5s"/> </circle> <!-- Pipe (bottom half - turbulent) --> <rect x="4" y="44" width="72" height="24" rx="2" stroke-width="0.7" stroke="#58CC02" fill="none"/> <text x="40" y="42" font-size="3" fill="#3B8700" opacity="0.5" text-anchor="middle">Turbulent (Re &gt; 4000)</text> <!-- Turbulent flow lines (wavy) --> <g stroke="#A5E86C" stroke-width="0.5" opacity="0.4"> <path d="M8,50 Q20,48 30,52 Q42,48 52,52 Q62,48 72,50" fill="none"/> <path d="M8,54 Q18,58 28,52 Q38,58 48,54 Q58,58 72,54" fill="none"/> <path d="M8,58 Q16,54 26,60 Q36,54 46,58 Q56,54 72,58" fill="none"/> <path d="M8,62 Q22,58 32,64 Q42,60 52,62 Q64,58 72,62" fill="none"/> </g> <!-- Turbulent flow particles (chaotic paths) --> <circle r="1" fill="#A5E86C" opacity="0.6"> <animate attributeName="cx" values="8;22;35;48;60;72" dur="2.5s" repeatCount="indefinite"/> <animate attributeName="cy" values="56;52;60;50;58;54" dur="2.5s" repeatCount="indefinite"/> </circle> <circle r="0.8" fill="#A5E86C" opacity="0.5"> <animate attributeName="cx" values="8;20;32;45;58;72" dur="2.8s" repeatCount="indefinite"/> <animate attributeName="cy" values="50;58;52;60;54;56" dur="2.8s" repeatCount="indefinite"/> </circle> <!-- Formula --> <text x="40" y="76" text-anchor="middle" font-size="4" fill="#58CC02" opacity="0.4">Re = ρvD/μ</text> </svg>',
@@ -1834,10 +1834,10 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'What is geometric similarity, and is it sufficient for valid model testing?',
           options: [
-            'Geometric similarity means the model',
-            'Geometric similarity means the model',
+            'Geometric similarity means the model is a scaled replica in shape; it is necessary but not sufficient — dynamic similarity (matching Re, Fr, etc.) is also needed',
+            'Geometric similarity means matching all dimensionless numbers between model and prototype',
             'Geometric similarity alone is sufficient for all model testing',
-            'Geometric similarity requires the model'
+            'Geometric similarity requires the model and prototype to be the same physical size'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="5" y="35" width="25" height="18" rx="3" fill="#58CC02" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><text x="17" y="47" font-size="3.5" fill="#3B8700" opacity="0.5" text-anchor="middle">model</text><rect x="40" y="20" width="35" height="40" rx="5" fill="#58CC02" opacity="0.08" stroke="#3B8700" stroke-width="1.5"/><text x="57" y="43" font-size="3.5" fill="#3B8700" opacity="0.5" text-anchor="middle">prototype</text><text x="40" y="76" font-size="3" fill="#58CC02" opacity="0.4" text-anchor="middle">similarity required</text></svg>',
@@ -1847,7 +1847,7 @@ export const unit6: Unit = {
         {
           id: 'u6-L5-Q16',
           type: 'fill-blank',
-          question: 'The dimensionless number Fr = V/√, which represents the ratio of inertial forces to gravitational forces, is called.',
+          question: 'The dimensionless number Fr = V/√, which represents the ratio of inertial forces to gravitational forces, is called _____.',
           blanks: ['Froude'],
           wordBank: ['Froude', 'Reynolds', 'Weber', 'Mach', 'Euler'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"><path d="M5,45 Q20,35 40,45 Q60,55 75,45" stroke="#58CC02" stroke-width="1.5" fill="none" opacity="0.5"/><rect x="10" y="55" width="60" height="15" fill="#A5E86C" opacity="0.06"/><line x1="10" y1="55" x2="70" y2="55" stroke="#3B8700" stroke-width="1.5"/><line x1="40" y1="30" x2="40" y2="55" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.3"/><text x="44" y="43" font-size="3.5" fill="#3B8700" opacity="0.5">y</text><line x1="20" y1="45" x2="35" y2="45" stroke="#58CC02" stroke-width="1" opacity="0.4"/><polygon points="33,43.5 37,45 33,46.5" fill="#58CC02" opacity="0.4"/><text x="25" y="42" font-size="3" fill="#58CC02" opacity="0.5">V</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#58CC02" opacity="0.4">Fr = V/sqrt(gy)</text></svg>',

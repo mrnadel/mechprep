@@ -2065,9 +2065,9 @@ export const unit3: Unit = {
           question: 'Biaxial (200,100) vs uniaxial (200,0) MPa. Same sigma_1. Which yields first?',
           options: [
             'The uniaxial bar is closer to yielding',
-            'The pressure vessel is closer to yielding,',
+            'The pressure vessel is closer to yielding',
             'They are equally close to yielding',
-            'The pressure vessel is closer to yielding,',
+            'It depends on the material yield strength',
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes --> <line x1="40" y1="74" x2="40" y2="6" stroke-width="0.6" stroke="#58CC02"/> <line x1="6" y1="40" x2="74" y2="40" stroke-width="0.6" stroke="#58CC02"/> <text x="42" y="10" font-size="3" fill="#58CC02" opacity="0.5">σ₂</text> <text x="72" y="38" font-size="3" fill="#58CC02" opacity="0.5">σ₁</text> <!-- Von Mises ellipse --> <ellipse cx="40" cy="40" rx="30" ry="22" stroke-width="0.7" stroke="#A5E86C" fill="none" opacity="0.4" transform="rotate(45,40,40)"/> <!-- Uniaxial point (200, 0) --> <circle cx="60" cy="40" r="3" fill="#58CC02" opacity="0.6"> <animate attributeName="r" values="2.5;3.5;2.5" dur="2s" repeatCount="indefinite"/> </circle> <text x="62" y="36" font-size="3" fill="#58CC02" opacity="0.5">(200,0)</text> <!-- Biaxial point (200, 100) --> <circle cx="60" cy="30" r="3" fill="#3B8700" opacity="0.6"> <animate attributeName="r" values="2.5;3.5;2.5" dur="2s" repeatCount="indefinite" begin="1s"/> </circle> <text x="62" y="28" font-size="3" fill="#3B8700" opacity="0.5">(200,100)</text> <!-- Dashed lines to points --> <line x1="60" y1="40" x2="40" y2="40" stroke="#58CC02" stroke-width="0.5" stroke-dasharray="1.5,2" opacity="0.2"/> <line x1="60" y1="30" x2="40" y2="30" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="1.5,2" opacity="0.2"/> <line x1="60" y1="30" x2="60" y2="40" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="1.5,2" opacity="0.15"/> <!-- Labels --> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">von Mises failure envelope</text> <!-- Uniaxial is closer to boundary --> <text x="14" y="20" font-size="3" fill="#334155" opacity="0.25">uniaxial closer</text> <text x="14" y="24" font-size="3" fill="#334155" opacity="0.25">to boundary</text> </svg>',

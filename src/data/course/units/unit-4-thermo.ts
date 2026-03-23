@@ -202,7 +202,7 @@ export const unit4: Unit = {
         {
           id: 'u4-L1-Q15',
           type: 'fill-blank',
-          question: 'The state postulate says a simple compressible substance needs _____ independent intensive properties. Answer: _____.',
+          question: 'The state postulate says a simple compressible substance needs _____ independent intensive properties to fix its state.',
           blanks: ['2'],
           wordBank: ['2', '1', '3', '4', '0'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="16" y="18" width="48" height="36" rx="3" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/> <text x="40" y="40" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.2" font-style="italic">system</text> <g opacity="0.3"> <line x1="40" y1="8" x2="40" y2="18" stroke="#3B8700" stroke-width="1.5"/> <polygon points="38,17 40,21 42,17" fill="#3B8700"/> <text x="46" y="14" font-size="3.5" fill="#3B8700" opacity="0.4">Q</text> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/> </g> <g opacity="0.3"> <line x1="64" y1="36" x2="74" y2="36" stroke="#A5E86C" stroke-width="1.5"/> <polygon points="72,34 76,36 72,38" fill="#A5E86C"/> <text x="72" y="32" font-size="3.5" fill="#A5E86C" opacity="0.4">W</text> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" begin="0.5s" repeatCount="indefinite"/> </g> <text x="40" y="66" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.2" font-style="italic">&#x394;U = Q - W</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">1st law</text> </svg>',
@@ -539,9 +539,9 @@ export const unit4: Unit = {
           type: 'multiple-choice',
           question: 'Is it reasonable to neglect kinetic energy changes in this analysis?',
           options: [
-            'Yes',
+            'Yes — KE change is small compared to enthalpy change',
             'No',
-            'Yes',
+            'Only if the fluid is incompressible',
             'No — the exit velocity exceeds 100 m/s',
           ],
           correctIndex: 0,
@@ -1123,7 +1123,7 @@ export const unit4: Unit = {
         {
           id: 'u4-L3-Q24',
           type: 'fill-blank',
-          question: 'A heat engine that violates the second law of thermodynamics by producing more work than the Carnot limit is called.',
+          question: 'A heat engine that violates the _____ law of thermodynamics by producing more work than the Carnot limit is called.',
           blanks: ['second'],
           wordBank: ['second', 'first', 'third', 'zeroth', 'fourth'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <line x1="12" y1="64" x2="72" y2="64" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <line x1="12" y1="64" x2="12" y2="10" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <text x="8" y="38" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">T</text> <text x="42" y="74" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">s</text> <path d="M20,50 L20,20 L60,20 L60,50 Z" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.05" opacity="0.4"/> <polygon points="18,20 22,20 20,17" fill="#3B8700" opacity="0.3"/> <polygon points="58,20 62,20 60,17" fill="#3B8700" opacity="0.3"/> <text x="40" y="38" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">W_net</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">cycle &amp; entropy</text> </svg>',
@@ -1526,7 +1526,7 @@ export const unit4: Unit = {
         {
           id: 'u4-L4-Q24',
           type: 'fill-blank',
-          question: 'The Otto cycle efficiency depends only on the compression ratio and the specific heat ratio, given by η = 1 - 1/r^.',
+          question: 'The Otto cycle efficiency depends only on the compression ratio and the specific heat ratio, given by η = 1 - 1/r^ _____.',
           blanks: ['γ-1'],
           wordBank: ['γ-1', 'γ', 'γ+1', '1/γ', '2γ'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes (η vs r) --> <line x1="12" y1="68" x2="74" y2="68" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <line x1="12" y1="68" x2="12" y2="8" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <text x="44" y="77" text-anchor="middle" font-size="5" fill="#334155" font-style="italic">r</text> <text x="7" y="38" text-anchor="middle" font-size="5" fill="#334155" font-style="italic">η</text> <!-- Efficiency curve --> <path d="M16,62 Q24,48 32,38 Q40,30 48,24 Q56,20 64,18 Q68,16 72,15" stroke="#58CC02" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="90" stroke-dashoffset="90"> <animate attributeName="stroke-dashoffset" values="90;0;0;90" keyTimes="0;0.5;0.8;1" dur="4s" repeatCount="indefinite"/> </path> <!-- r = 8 typical marker --> <line x1="36" y1="68" x2="36" y2="34" stroke="#3B8700" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.3"/> <text x="36" y="74" text-anchor="middle" font-size="3" fill="#3B8700" opacity="0.3">r=8</text> <circle cx="36" cy="34" r="2.5" fill="#3B8700" opacity="0.4"/> <!-- Formula --> <text x="54" y="46" font-size="4" fill="#334155" opacity="0.3" font-style="italic">η = 1 − 1/r^(γ−1)</text> </svg>',
@@ -1812,7 +1812,7 @@ export const unit4: Unit = {
         {
           id: 'u4-L5-Q15',
           type: 'fill-blank',
-          question: 'The component in a vapor-compression system that converts low-pressure vapor into high-pressure vapor by adding work.',
+          question: 'The component in a vapor-compression system that converts low-pressure vapor into high-pressure vapor by adding work _____.',
           blanks: ['compressor'],
           wordBank: ['compressor', 'condenser', 'evaporator', 'turbine', 'expansion valve'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="16" y="18" width="48" height="32" rx="6" fill="#58CC02" opacity="0.08"/> <rect x="16" y="18" width="48" height="32" rx="6" stroke="#3B8700" stroke-width="2" fill="none"/> <rect x="19" y="30" width="42" height="18" rx="3" fill="#A5E86C" opacity="0.15"/> <circle cx="32" cy="40" r="3" stroke="#58CC02" stroke-width="1" fill="none" opacity="0"> <animate attributeName="cy" values="44;26" dur="1.8s" repeatCount="indefinite"/> <animate attributeName="opacity" values="0;0.5;0" dur="1.8s" repeatCount="indefinite"/> </circle> <circle cx="42" cy="40" r="2.5" stroke="#58CC02" stroke-width="1" fill="none" opacity="0"> <animate attributeName="cy" values="43;28" dur="1.5s" begin="0.4s" repeatCount="indefinite"/> <animate attributeName="opacity" values="0;0.4;0" dur="1.5s" begin="0.4s" repeatCount="indefinite"/> </circle> <circle cx="50" cy="40" r="2.8" stroke="#58CC02" stroke-width="1" fill="none" opacity="0"> <animate attributeName="cy" values="42;24" dur="2s" begin="0.8s" repeatCount="indefinite"/> <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.8s" repeatCount="indefinite"/> </circle> <rect x="16" y="50" width="3" height="16" rx="1.5" fill="#3B8700" opacity="0.3"/> <rect x="61" y="50" width="3" height="16" rx="1.5" fill="#3B8700" opacity="0.3"/> <rect x="10" y="64" width="60" height="4" rx="2" fill="#3B8700" opacity="0.2"/> <ellipse cx="34" cy="59" rx="6" ry="8" fill="#58CC02" opacity="0.4"> <animate attributeName="ry" values="8;10;6;9;8" dur="0.5s" repeatCount="indefinite"/> <animate attributeName="rx" values="6;4.5;7;5;6" dur="0.5s" repeatCount="indefinite"/> </ellipse> <ellipse cx="46" cy="59" rx="5" ry="7" fill="#A5E86C" opacity="0.3"> <animate attributeName="ry" values="7;9;5;7" dur="0.6s" repeatCount="indefinite"/> </ellipse> <ellipse cx="40" cy="58" rx="4" ry="6" fill="#3B8700" opacity="0.35"> <animate attributeName="ry" values="6;8;4;6" dur="0.45s" repeatCount="indefinite"/> </ellipse> </svg>',
