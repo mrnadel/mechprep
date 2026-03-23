@@ -48,7 +48,7 @@ export default function FriendsPage() {
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-[10px] active:scale-90 transition-transform"
+            className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-[10px] active:scale-90 transition-transform lg:hidden"
             style={{ background: '#F0F0F0' }}
           >
             <ChevronLeft style={{ width: 20, height: 20, color: '#3C3C3C' }} />

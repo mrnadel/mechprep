@@ -135,7 +135,7 @@ export default function SkillMapPage() {
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="flex items-center justify-center w-11 h-11 sm:w-9 sm:h-9 rounded-[10px] bg-[#F0F0F0] transition-transform active:scale-90"
+            className="flex items-center justify-center w-11 h-11 sm:w-9 sm:h-9 rounded-[10px] bg-[#F0F0F0] transition-transform active:scale-90 lg:hidden"
           >
             <ChevronLeft style={{ width: 20, height: 20, color: '#777' }} />
           </Link>

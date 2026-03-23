@@ -15,7 +15,7 @@ export default function QuestsPage() {
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-[10px] transition-transform active:scale-90"
+            className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-[10px] transition-transform active:scale-90 lg:hidden"
             style={{ background: '#F0F0F0' }}
           >
             <ChevronLeft style={{ width: 20, height: 20, color: '#777' }} />

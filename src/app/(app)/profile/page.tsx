@@ -423,7 +423,7 @@ export default function ProfilePage() {
       {/* ─── Sticky Header ───────────────────────────────── */}
       <div className="sticky top-0 z-30 bg-white/90 backdrop-blur-xl border-b border-gray-100">
         <div className="flex items-center h-14 px-4">
-          <button onClick={() => router.back()} className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors">
+          <button onClick={() => router.back()} className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors lg:hidden">
             <ArrowLeft className="w-5 h-5 text-gray-600" />
           </button>
           <h1 className="text-lg font-extrabold text-gray-900 ml-2">Profile</h1>
