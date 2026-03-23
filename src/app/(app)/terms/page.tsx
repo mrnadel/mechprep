@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'MechReady terms of service covering account usage, subscriptions, billing, intellectual property, and more.',
+  alternates: { canonical: '/terms' },
+};
 
 const LAST_UPDATED = 'March 2025';
 

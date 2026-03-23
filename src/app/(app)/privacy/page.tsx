@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { ArrowLeft, Shield } from 'lucide-react';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'Learn how MechReady collects, uses, and protects your personal data. GDPR-compliant privacy practices.',
+  alternates: { canonical: '/privacy' },
+};
 
 const sections = [
   {

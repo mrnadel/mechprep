@@ -132,7 +132,7 @@ export default function RegisterPage() {
 
   return (
     <>
-      <h2 className="text-xl sm:text-2xl font-black text-surface-900 mb-6 sm:mb-8">Create account</h2>
+      <h1 className="text-xl sm:text-2xl font-black text-surface-900 mb-6 sm:mb-8">Create account</h1>
 
       {/* Google */}
       <button
