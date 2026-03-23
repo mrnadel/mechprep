@@ -479,7 +479,14 @@ export const useStore = create<AppState>()(
         const question = session.questions.find(q => q.id === questionId);
         if (!question) return;
 
-        const xp = calculateXP(question, correct, timeSpent, confidence);
+        let xp = calculateXP(question, correct, timeSpent, confidence);
+
+        // Apply double XP boost if active
+        const { useEngagementStore } = require('@/store/useEngagementStore');
+        const doubleXpExpiry = useEngagementStore.getState().doubleXpExpiry;
+        if (doubleXpExpiry && new Date(doubleXpExpiry).getTime() > Date.now()) {
+          xp *= 2;
+        }
 
         set(state => ({
           session: state.session ? {

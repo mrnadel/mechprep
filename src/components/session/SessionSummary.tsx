@@ -65,12 +65,15 @@ export default function SessionSummary({ summary }: Props) {
     updateQuestProgress('questions_correct', summary.questionsCorrect);
     updateLeagueXp(summary.xpEarned);
     updateQuestProgress('xp_earned', summary.xpEarned);
-    if (summary.accuracy >= 80) updateQuestProgress('accuracy_above_threshold', 1);
+    if (summary.accuracy >= 90) updateQuestProgress('accuracy_above_threshold', 1, { threshold: 0.9 });
+    if (summary.accuracy >= 80) updateQuestProgress('accuracy_above_threshold', 1, { threshold: 0.8 });
     if (summary.accuracy === 100 && summary.questionsAttempted >= 3) updateQuestProgress('perfect_sessions', 1);
     updateQuestProgress('topics_practiced', 1);
     if (summary.type === 'daily-challenge') updateQuestProgress('daily_challenges_completed', 1);
+    // streak_days: use absolute mode to set progress to the current streak value,
+    // preventing multi-session-per-day inflation (quest target is 7 for a full week)
     const currentStreak = useStore.getState().progress.currentStreak;
-    if (currentStreak > 0) updateQuestProgress('streak_days', currentStreak);
+    if (currentStreak > 0) updateQuestProgress('streak_days', currentStreak, { _absolute: true });
 
     const grade = getGrade(summary.accuracy);
     analytics.session({

@@ -150,19 +150,35 @@ function progressQuests(
   value: number,
   filter?: Record<string, unknown>,
 ): Quest[] {
+  // Special mode: { _absolute: true } sets progress to `value` instead of adding
+  const isAbsolute = filter && '_absolute' in filter;
+  const cleanFilter = (() => {
+    if (!filter) return undefined;
+    const { _absolute, ...rest } = filter as Record<string, unknown>;
+    return Object.keys(rest).length > 0 ? rest : undefined;
+  })();
+
   return quests.map((quest) => {
     if (quest.trackingKey !== key) return quest;
     if (quest.completed) return quest;
 
-    // Check filter match if provided
-    if (filter && quest.filter) {
-      const filterMatches = Object.keys(filter).every(
-        (k) => quest.filter && quest.filter[k] === filter[k],
+    // Filter matching:
+    // - If the caller provides a filter AND the quest has a filter, the caller's
+    //   filter keys must match the quest's filter values (strict match).
+    // - If the caller provides a filter but the quest has none, the quest still
+    //   progresses (the filter is extra context, not a restriction).
+    // - If the caller does NOT provide a filter but the quest has one, the quest
+    //   still progresses (backwards-compat for soft filters like currentUnit).
+    if (cleanFilter && quest.filter) {
+      const filterMatches = Object.keys(cleanFilter).every(
+        (k) => quest.filter && quest.filter[k] === cleanFilter[k],
       );
       if (!filterMatches) return quest;
     }
 
-    const newProgress = Math.min(quest.progress + value, quest.target);
+    const newProgress = isAbsolute
+      ? Math.min(value, quest.target)
+      : Math.min(quest.progress + value, quest.target);
     const completed = newProgress >= quest.target;
     return { ...quest, progress: newProgress, completed };
   });
@@ -180,7 +196,7 @@ export const useEngagementStore = create<EngagementStore>()(
         // === Action 1: initDailyQuests ===
         initDailyQuests: () => {
           const today = getTodayDate();
-          const { dailyQuestDate, dailyQuests, lastDailyQuestIds } = get();
+          const { dailyQuestDate, dailyQuests, lastDailyQuestIds, streak } = get();
           if (dailyQuestDate === today) return; // same day, no-op
 
           const previousIds = dailyQuests.map((q) => q.definitionId);
@@ -192,6 +208,11 @@ export const useEngagementStore = create<EngagementStore>()(
             dailyQuestDate: today,
             dailyChestClaimed: false,
             lastDailyQuestIds: previousIds.length > 0 ? previousIds : lastDailyQuestIds,
+            // Reset the freeze-used-today flag on new day
+            streak: {
+              ...streak,
+              freezeUsedToday: false,
+            },
           });
         },
 
@@ -377,9 +398,9 @@ export const useEngagementStore = create<EngagementStore>()(
           if (!breakDate) return false;
 
           const today = getTodayDate();
-          const yesterday = new Date();
-          yesterday.setDate(yesterday.getDate() - 1);
-          const yesterdayStr = yesterday.toISOString().slice(0, 10);
+          const todayDate = new Date(today + 'T12:00:00Z');
+          todayDate.setUTCDate(todayDate.getUTCDate() - 1);
+          const yesterdayStr = todayDate.toISOString().slice(0, 10);
 
           if (breakDate !== today && breakDate !== yesterdayStr) return false;
 
@@ -406,6 +427,11 @@ export const useEngagementStore = create<EngagementStore>()(
 
           // Restore the streak in the main progress store
           if (previousStreak > 0) {
+            // Set lastActiveDate to yesterday so next session continues the streak
+            const todayD = new Date(today + 'T12:00:00Z');
+            todayD.setUTCDate(todayD.getUTCDate() - 1);
+            const yesterdayStr = todayD.toISOString().slice(0, 10);
+
             const { useStore } = require('@/store/useStore');
             useStore.setState((s: { progress: Record<string, unknown> }) => ({
               progress: {
@@ -415,6 +441,7 @@ export const useEngagementStore = create<EngagementStore>()(
                   (s.progress.longestStreak as number) || 0,
                   previousStreak,
                 ),
+                lastActiveDate: yesterdayStr,
               },
             }));
           }
@@ -574,6 +601,8 @@ export const useEngagementStore = create<EngagementStore>()(
         // === Action 15: addGems ===
         addGems: (amount, source) => {
           set((state) => {
+            // Prevent balance from going negative
+            const newBalance = Math.max(0, state.gems.balance + amount);
             const transaction = createGemTransaction(amount, source);
             const updatedTransactions = [transaction, ...state.gems.transactions].slice(
               0,
@@ -583,7 +612,7 @@ export const useEngagementStore = create<EngagementStore>()(
             return {
               gems: {
                 ...state.gems,
-                balance: state.gems.balance + amount,
+                balance: newBalance,
                 // Only count positive amounts toward lifetime earned total
                 totalEarned: state.gems.totalEarned + Math.max(0, amount),
                 transactions: updatedTransactions,

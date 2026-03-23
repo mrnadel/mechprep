@@ -5,6 +5,7 @@ import { persist, subscribeWithSelector } from 'zustand/middleware';
 import { course } from '@/data/course';
 import { topics } from '@/data/topics';
 import { shuffleArray } from '@/lib/utils';
+import { getTodayDate as getTodayString } from '@/lib/quest-engine';
 import { useMasteryStore } from '@/store/useMasteryStore';
 import { useStore } from '@/store/useStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
@@ -61,14 +62,11 @@ function getDefaultProgress(): CourseProgress {
   };
 }
 
-function getTodayString(): string {
-  return new Date().toISOString().split('T')[0];
-}
-
 function getYesterdayString(): string {
-  const d = new Date();
-  d.setDate(d.getDate() - 1);
-  return d.toISOString().split('T')[0];
+  const today = getTodayString();
+  const d = new Date(today + 'T12:00:00Z');
+  d.setUTCDate(d.getUTCDate() - 1);
+  return d.toISOString().slice(0, 10);
 }
 
 const PASSING_ACCURACY = 70;

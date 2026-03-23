@@ -8,7 +8,6 @@ import {
   useGems,
   useEngagementActions,
 } from '@/store/useEngagementStore';
-import { useStore } from '@/store/useStore';
 
 const REPAIR_COST = 50;
 
@@ -62,19 +61,7 @@ export function StreakFreeze() {
     const handleRepair = () => {
       const success = repairStreak();
       if (success) {
-        // Restore streak in useStore
-        const previousStreak = streak.lastStreakValueBeforeBreak;
-        const yesterday = new Date();
-        yesterday.setDate(yesterday.getDate() - 1);
-        const yesterdayStr = yesterday.toISOString().slice(0, 10);
-
-        useStore.setState((state) => ({
-          progress: {
-            ...state.progress,
-            currentStreak: previousStreak,
-            lastActiveDate: yesterdayStr,
-          },
-        }));
+        // repairStreak() already restores the streak and lastActiveDate in useStore
         dismissRepairModal();
       }
     };

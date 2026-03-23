@@ -56,7 +56,8 @@ export default function ResultScreen() {
     // Quest/achievement progress only on passing attempts
     if (lessonResult.passed) {
       updateQuestProgress('lessons_completed', 1);
-      if (lessonResult.accuracy >= 80) updateQuestProgress('accuracy_above_threshold', 1);
+      if (lessonResult.accuracy >= 90) updateQuestProgress('accuracy_above_threshold', 1, { threshold: 0.9 });
+      if (lessonResult.accuracy >= 80) updateQuestProgress('accuracy_above_threshold', 1, { threshold: 0.8 });
       if (lessonResult.accuracy === 100 && lessonResult.totalQuestions >= 3) updateQuestProgress('perfect_sessions', 1);
       if (lessonResult.stars === 3) updateQuestProgress('stars_earned', 1);
       updateQuestProgress('topics_practiced', 1);

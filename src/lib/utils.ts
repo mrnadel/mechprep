@@ -125,9 +125,7 @@ export function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
-export function getTodayString(): string {
-  return new Date().toISOString().split('T')[0];
-}
+export { getTodayDate as getTodayString } from '@/lib/quest-engine';
 
 export function getStreakStatus(lastActiveDate: string): 'active' | 'at-risk' | 'broken' {
   const last = new Date(lastActiveDate);
