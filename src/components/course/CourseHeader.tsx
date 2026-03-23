@@ -8,8 +8,12 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { course } from '@/data/course';
 import { Sparkles, User, LogOut, Shield } from 'lucide-react';
 import { useSubscription } from '@/hooks/useSubscription';
+import { useGems } from '@/store/useEngagementStore';
+import { shopItems, findFrameById, findTitleById } from '@/data/gem-shop';
+import { AvatarFrame } from '@/components/ui/AvatarFrame';
+import type { FrameStyleId } from '@/components/ui/AvatarFrame';
 
-type PopoverType = 'streak' | 'xp' | 'menu' | null;
+type PopoverType = 'streak' | 'xp' | 'gems' | 'menu' | null;
 
 function getGreeting(): string {
   const hour = new Date().getHours();
@@ -35,15 +39,20 @@ export function CourseHeader() {
   const progress = useCourseStore((s) => s.progress);
   const [popover, setPopover] = useState<PopoverType>(null);
   const { tier, isProUser, hasFetched } = useSubscription();
+  const gems = useGems();
 
   const headerRef = useRef<HTMLElement>(null);
   const streakBtnRef = useRef<HTMLButtonElement>(null);
   const xpBtnRef = useRef<HTMLButtonElement>(null);
+  const gemsBtnRef = useRef<HTMLButtonElement>(null);
   const [popoverPos, setPopoverPos] = useState<{ top: number; arrowRight: number; right: number; width: number } | null>(null);
 
   const userName = session?.user?.name || progress.displayName || 'Engineer';
   const userImage = session?.user?.image;
   const initial = userName.charAt(0).toUpperCase();
+
+  const equippedFrameMeta = gems.selectedFrame ? findFrameById(gems.selectedFrame) : null;
+  const equippedFrameStyle = equippedFrameMeta?.frameStyle;
 
   const completedCount = Object.keys(progress.completedLessons).length;
   const totalLessons = course.reduce((s, u) => s + u.lessons.length, 0);
@@ -58,7 +67,7 @@ export function CourseHeader() {
       setPopoverPos(null);
       return;
     }
-    const ref = type === 'streak' ? streakBtnRef : type === 'xp' ? xpBtnRef : null;
+    const ref = type === 'streak' ? streakBtnRef : type === 'xp' ? xpBtnRef : type === 'gems' ? gemsBtnRef : null;
     const headerEl = headerRef.current;
     if (headerEl) {
       const headerRect = headerEl.getBoundingClientRect();
@@ -185,6 +194,25 @@ export function CourseHeader() {
               <span>{progress.totalXp.toLocaleString()}</span>
             </button>
 
+            {/* Gems */}
+            <button
+              ref={gemsBtnRef}
+              className="flex items-center transition-all active:scale-95"
+              style={{
+                gap: 4,
+                fontWeight: 800,
+                fontSize: 15,
+                color: popover === 'gems' ? '#7C3AED' : '#3C3C3C',
+                padding: '8px 10px',
+                borderRadius: 12,
+                background: popover === 'gems' ? '#F3E8FF' : 'transparent',
+              }}
+              onClick={() => togglePopover('gems')}
+            >
+              <span style={{ fontSize: 18 }}>💎</span>
+              <span>{gems.balance}</span>
+            </button>
+
             {/* Upgrade CTA for free registered users */}
             {hasFetched && tier === 'free' && status === 'authenticated' && (
               <Link
@@ -219,35 +247,32 @@ export function CourseHeader() {
                 className="transition-transform active:scale-95"
                 style={{ flexShrink: 0, position: 'relative' }}
               >
-                {userImage ? (
-                  <img
-                    src={userImage}
-                    alt={userName}
-                    style={{
-                      width: 34,
-                      height: 34,
-                      borderRadius: '50%',
-                      objectFit: 'cover',
-                      border: popover === 'menu' ? '2.5px solid #58CC02' : '2.5px solid #E5E5E5',
-                    }}
-                  />
-                ) : (
-                  <div
-                    className="flex items-center justify-center"
-                    style={{
-                      width: 34,
-                      height: 34,
-                      borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #89E219 0%, #58CC02 100%)',
-                      border: popover === 'menu' ? '2.5px solid #58CC02' : '2.5px solid #E5E5E5',
-                      color: 'white',
-                      fontSize: 14,
-                      fontWeight: 800,
-                    }}
-                  >
-                    {initial}
-                  </div>
-                )}
+                <AvatarFrame
+                  frameStyle={popover === 'menu' ? null : (equippedFrameStyle as FrameStyleId)}
+                  size={38}
+                >
+                  {userImage ? (
+                    <img
+                      src={userImage}
+                      alt={userName}
+                      className="w-full h-full object-cover"
+                      style={{
+                        border: popover === 'menu' ? '2px solid #58CC02' : 'none',
+                      }}
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full flex items-center justify-center text-white font-extrabold"
+                      style={{
+                        background: 'linear-gradient(135deg, #89E219 0%, #58CC02 100%)',
+                        fontSize: 14,
+                        border: popover === 'menu' ? '2px solid #58CC02' : 'none',
+                      }}
+                    >
+                      {initial}
+                    </div>
+                  )}
+                </AvatarFrame>
                 {hasFetched && isProUser && (
                   <div
                     style={{
@@ -366,7 +391,7 @@ export function CourseHeader() {
                         <img
                           src={userImage}
                           alt={userName}
-                          style={{ width: 40, height: 40, borderRadius: '50%', objectFit: 'cover', border: '2px solid #E5E5E5' }}
+                          style={{ width: 40, height: 40, borderRadius: '50%', objectFit: 'cover', border: '2px solid #E5E5E5', flexShrink: 0 }}
                         />
                       ) : (
                         <div
@@ -376,6 +401,7 @@ export function CourseHeader() {
                             height: 40,
                             borderRadius: '50%',
                             background: 'linear-gradient(135deg, #89E219 0%, #58CC02 100%)',
+                            border: '2px solid #E5E5E5',
                             color: 'white',
                             fontSize: 16,
                             fontWeight: 800,
@@ -389,6 +415,14 @@ export function CourseHeader() {
                         <p style={{ fontSize: 14, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                           {userName}
                         </p>
+                        {gems.selectedTitle && (() => {
+                          const titleText = findTitleById(gems.selectedTitle);
+                          return titleText ? (
+                            <p style={{ fontSize: 10, fontWeight: 800, color: '#D97706', marginTop: 1, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                              {titleText}
+                            </p>
+                          ) : null;
+                        })()}
                         {session?.user?.email && (
                           <p style={{ fontSize: 11, fontWeight: 600, color: '#AFAFAF', marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                             {session.user.email}
@@ -603,6 +637,8 @@ export function CourseHeader() {
                       Complete a lesson each day to keep going!
                     </p>
                   </div>
+                ) : popover === 'gems' ? (
+                  <GemsPopoverContent gems={gems} onGoToShop={closePopover} />
                 ) : (
                   <div>
                     {/* Header */}
@@ -696,4 +732,153 @@ export function CourseHeader() {
       </AnimatePresence>
     </>
   );
+}
+
+function GemsPopoverContent({
+  gems,
+  onGoToShop,
+}: {
+  gems: ReturnType<typeof useGems>;
+  onGoToShop: () => void;
+}) {
+  const recentTx = gems.transactions.slice(-5).reverse();
+  const affordable = shopItems
+    .filter((i) => i.cost <= gems.balance)
+    .sort((a, b) => a.cost - b.cost);
+
+  return (
+    <div>
+      {/* Header */}
+      <div className="flex items-center justify-between" style={{ marginBottom: 16 }}>
+        <div className="flex items-center" style={{ gap: 10 }}>
+          <div
+            style={{
+              width: 44,
+              height: 44,
+              borderRadius: 12,
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: 24,
+              boxShadow: '0 4px 12px rgba(124,58,237,0.3)',
+            }}
+          >
+            💎
+          </div>
+          <div>
+            <p style={{ fontSize: 28, fontWeight: 800, color: '#7C3AED', lineHeight: 1 }}>
+              {gems.balance.toLocaleString()}
+            </p>
+            <p style={{ fontSize: 11, color: '#AFAFAF', fontWeight: 600, marginTop: 2 }}>
+              {gems.totalEarned.toLocaleString()} total earned
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Affordable items hint */}
+      {affordable.length > 0 && (
+        <div
+          style={{
+            background: '#F5F3FF',
+            borderRadius: 12,
+            padding: '10px 12px',
+            marginBottom: 14,
+            border: '1px solid #EDE9FE',
+          }}
+        >
+          <p style={{ fontSize: 11, fontWeight: 700, color: '#7C3AED' }}>
+            You can afford {affordable.length} item{affordable.length !== 1 ? 's' : ''} in the shop!
+          </p>
+          <div className="flex items-center" style={{ gap: 4, marginTop: 6 }}>
+            {affordable.slice(0, 5).map((item) => (
+              <span key={item.id} style={{ fontSize: 16 }} title={`${item.name} — ${item.cost} 💎`}>
+                {item.icon}
+              </span>
+            ))}
+            {affordable.length > 5 && (
+              <span style={{ fontSize: 10, fontWeight: 800, color: '#A78BFA', marginLeft: 2 }}>
+                +{affordable.length - 5}
+              </span>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Recent transactions */}
+      {recentTx.length > 0 && (
+        <div style={{ marginBottom: 14 }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
+            Recent
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {recentTx.map((tx) => {
+              const isPositive = tx.amount > 0;
+              return (
+                <div
+                  key={tx.id}
+                  className="flex items-center justify-between"
+                  style={{
+                    padding: '5px 8px',
+                    borderRadius: 8,
+                    background: isPositive ? '#FAFFF5' : '#FFF5F5',
+                  }}
+                >
+                  <span style={{ fontSize: 12, color: '#4B5563', fontWeight: 600, textTransform: 'capitalize', maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {formatGemSource(tx.source)}
+                  </span>
+                  <span style={{ fontSize: 12, fontWeight: 800, color: isPositive ? '#16A34A' : '#DC2626', flexShrink: 0, marginLeft: 8 }}>
+                    {isPositive ? '+' : ''}{tx.amount} 💎
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Empty state */}
+      {recentTx.length === 0 && (
+        <div style={{ textAlign: 'center', padding: '12px 0', marginBottom: 14 }}>
+          <p style={{ fontSize: 13, color: '#AFAFAF', fontWeight: 600 }}>
+            Complete quests and lessons to earn gems!
+          </p>
+        </div>
+      )}
+
+      {/* Shop CTA */}
+      <Link
+        href="/shop"
+        onClick={onGoToShop}
+        className="flex items-center justify-center transition-all hover:brightness-110 active:scale-95"
+        style={{
+          gap: 6,
+          padding: '10px 16px',
+          borderRadius: 12,
+          background: 'linear-gradient(135deg, #8B5CF6, #7C3AED)',
+          color: '#FFFFFF',
+          fontSize: 13,
+          fontWeight: 800,
+          textDecoration: 'none',
+          boxShadow: '0 2px 8px rgba(124,58,237,0.3)',
+        }}
+      >
+        🛍️ Visit Gem Shop
+      </Link>
+    </div>
+  );
+}
+
+function formatGemSource(source: string): string {
+  return source
+    .replace(/_/g, ' ')
+    .replace(/-/g, ' ')
+    .replace(/\bxp\b/gi, 'XP')
+    .replace(/\bdaily\b/gi, 'Daily')
+    .replace(/\bweekly\b/gi, 'Weekly')
+    .replace(/\bquest\b/gi, 'Quest')
+    .replace(/\blesson\b/gi, 'Lesson')
+    .replace(/\bchest\b/gi, 'Chest')
+    .replace(/\bpurchase\b/gi, 'Purchase');
 }
