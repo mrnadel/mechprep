@@ -62,7 +62,8 @@ select{background:var(--s2);border:1px solid var(--b);color:var(--t);padding:4px
 /* SVG interactions */
 #canvas-svg path{transition:opacity .08s}
 #canvas-svg path.dim{opacity:.15}
-#canvas-svg path.hi{stroke:var(--acc);stroke-width:2;stroke-linejoin:round}
+#canvas-svg path.hi{stroke:var(--acc);stroke-width:2;stroke-linejoin:round;filter:brightness(1.5) saturate(0.5)}
+#canvas-svg g.hi path{filter:brightness(1.5) saturate(0.5)}
 .joint-handle{cursor:grab;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
 .joint-handle:hover{filter:drop-shadow(0 0 6px var(--acc))}
 .bone-line{pointer-events:none}
