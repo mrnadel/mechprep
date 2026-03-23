@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Refund Policy',
+  description: 'MechReady 14-day money-back guarantee. Learn about our refund process for Pro subscriptions.',
+  alternates: { canonical: '/refund-policy' },
+};
 
 const LAST_UPDATED = 'March 2025';
 

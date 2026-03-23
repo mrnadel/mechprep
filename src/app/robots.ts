@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/checkout/', '/settings/'],
+        disallow: ['/api/', '/admin/', '/checkout/', '/settings/', '/onboarding/', '/invite/'],
       },
     ],
     sitemap: 'https://mechready.com/sitemap.xml',

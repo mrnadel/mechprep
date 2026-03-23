@@ -1,8 +1,15 @@
+import type { Metadata } from 'next';
 import { eq } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { users } from '@/lib/db/schema';
 import { auth } from '@/lib/auth';
 import InviteClient from './InviteClient';
+
+export const metadata: Metadata = {
+  title: 'You\'ve Been Invited to MechReady',
+  description: 'A friend invited you to join MechReady — the gamified mechanical engineering interview prep platform.',
+  robots: { index: false, follow: false },
+};
 
 interface Props {
   params: Promise<{ code: string }>;

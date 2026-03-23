@@ -14,6 +14,9 @@ export default function Footer() {
           <Link href="/terms" className="text-sm text-surface-500 hover:text-primary-600 transition-colors">
             Terms of Service
           </Link>
+          <Link href="/refund-policy" className="text-sm text-surface-500 hover:text-primary-600 transition-colors">
+            Refund Policy
+          </Link>
           <Link href="/contact" className="text-sm text-surface-500 hover:text-primary-600 transition-colors">
             Contact
           </Link>
