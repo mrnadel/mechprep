@@ -159,13 +159,12 @@ function Mascot({ className, size = 'md' }: { className?: string; size?: 'sm' | 
     lg: { width: 200, height: 200 },
   };
   return (
-    <Image
-      src="/mascot.png"
+    <img
+      src="/mascot.svg"
       alt="MechReady mascot"
       width={sizes[size].width}
       height={sizes[size].height}
       className={cn('select-none pointer-events-none', className)}
-      priority
     />
   );
 }

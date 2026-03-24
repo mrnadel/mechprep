@@ -25,6 +25,54 @@ function useAnimatedFill(target: number, delay: number) {
   return { ref, width };
 }
 
+/* ── Demo questions for interactive landing ── */
+const DEMO_QUESTIONS = [
+  {
+    topic: 'Statics', topicColor: '#10B981', typeLabel: 'Multiple Choice',
+    question: 'A beam is supported at both ends. Where should you place a load to maximize the reaction force at the left support?',
+    options: ['Directly at the left support', 'At the center of the beam', 'At the right support', "It doesn't matter — both supports share equally"],
+    correctIndex: 0,
+    explanation: "Placing the load closer to a support increases that support's reaction. At the left end, the left support carries nearly all the load — a key equilibrium concept.",
+    xp: 20,
+  },
+  {
+    topic: 'Thermodynamics', topicColor: '#22C55E', typeLabel: 'True / False',
+    question: 'A refrigerator violates the second law of thermodynamics because it transfers heat from a cold space to a warmer room.',
+    options: ['True', 'False'],
+    correctIndex: 1,
+    explanation: "The 2nd law only forbids spontaneous heat flow from cold to hot. A refrigerator uses compressor work to move heat — perfectly allowed by the Clausius statement.",
+    xp: 15,
+  },
+  {
+    topic: 'Materials', topicColor: '#6366F1', typeLabel: 'Multiple Choice',
+    question: 'Why does adding a small percentage of carbon to iron dramatically increase its strength?',
+    options: ['Carbon atoms block dislocation movement in the crystal lattice', 'Carbon makes the iron lighter and more flexible', 'Carbon prevents all forms of corrosion', 'Carbon increases the melting point above 3,000°C'],
+    correctIndex: 0,
+    explanation: "Carbon atoms act as obstacles to dislocation motion in the iron lattice, dramatically increasing yield strength — the fundamental principle behind all carbon steels.",
+    xp: 20,
+  },
+];
+
+/* ── Animated count-up ── */
+function useCountUp(target: number, dur = 500) {
+  const [val, setVal] = useState(0);
+  const prev = useRef(0);
+  useEffect(() => {
+    if (target === prev.current) return;
+    const from = prev.current;
+    const diff = target - from;
+    const t0 = performance.now();
+    const step = (now: number) => {
+      const t = Math.min((now - t0) / dur, 1);
+      setVal(Math.round(from + diff * (1 - Math.pow(1 - t, 3))));
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+    prev.current = target;
+  }, [target, dur]);
+  return val;
+}
+
 /* ── Scroll-triggered fade-in ── */
 function AnimateIn({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -80,8 +128,6 @@ const PartialIcon = () => (
 
 /* ── Main Landing Page ── */
 export function LandingPage() {
-  const xpBar = useAnimatedFill(68, 400);
-
   return (
     <div style={{ fontFamily: "'Nunito', sans-serif", background: '#FAFAFA', color: '#0F172A', minHeight: '100vh' }}>
 
@@ -106,7 +152,7 @@ export function LandingPage() {
             </span>
           </Link>
           <Link href="/login" style={{
-            fontSize: 14, fontWeight: 800, color: '#1CB0F6',
+            fontSize: 14, fontWeight: 800, color: '#F5B800',
             textDecoration: 'none', textTransform: 'uppercase', letterSpacing: 0.8,
             padding: '10px 20px', border: '2px solid #E2E8F0', borderRadius: 12,
             minHeight: 44, display: 'inline-flex', alignItems: 'center',
@@ -121,7 +167,7 @@ export function LandingPage() {
         <div style={{ maxWidth: 700, margin: '0 auto', padding: '0 24px' }}>
           <AnimateIn>
             <div style={{
-              display: 'inline-block', background: '#EEF2FF', color: '#6366F1',
+              display: 'inline-block', background: '#FFF8E1', color: '#C49200',
               fontSize: 13, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1,
               padding: '6px 16px', borderRadius: 100, marginBottom: 24,
             }}>
@@ -131,10 +177,10 @@ export function LandingPage() {
 
           <AnimateIn delay={0.1}>
             <h1 className="landing-hero-h1" style={{
-              fontWeight: 900, lineHeight: 1.1, color: '#0F172A',
+              fontWeight: 900, lineHeight: 1.1, color: '#3D4654',
               marginBottom: 20, letterSpacing: -1,
             }}>
-              Study for interviews<br />without it <span style={{ color: '#58CC02' }}>feeling like studying</span>
+              Study for interviews<br />without it <span style={{ color: '#E5A800' }}>feeling like studying</span>
             </h1>
           </AnimateIn>
 
@@ -153,10 +199,10 @@ export function LandingPage() {
                 href="/get-started"
                 className="landing-btn-primary"
                 style={{
-                  display: 'inline-block', background: '#58CC02', color: '#fff',
+                  display: 'inline-block', background: '#F5B800', color: '#fff',
                   fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8,
                   padding: '14px 36px', border: 'none', borderRadius: 16,
-                  boxShadow: '0 5px 0 #46A302', textDecoration: 'none',
+                  boxShadow: '0 5px 0 #C49200', textDecoration: 'none',
                   transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
                 }}
               >
@@ -166,7 +212,7 @@ export function LandingPage() {
                 href="/login"
                 className="landing-btn-secondary"
                 style={{
-                  display: 'inline-block', color: '#1CB0F6', fontSize: 15, fontWeight: 700,
+                  display: 'inline-block', color: '#3D4654', fontSize: 15, fontWeight: 700,
                   textDecoration: 'none', padding: '12px 28px',
                   border: '2px solid #E2E8F0', borderRadius: 16,
                   transition: 'background 0.15s',
@@ -183,12 +229,12 @@ export function LandingPage() {
               gap: 32, marginTop: 40, flexWrap: 'wrap',
             }}>
               {[
-                { num: '10', label: 'Units' },
-                { num: '94', label: 'Questions' },
-                { num: '12', label: 'Question Types' },
+                { num: '11', label: 'Units' },
+                { num: '1,500+', label: 'Questions' },
+                { num: '11', label: 'Question Types' },
               ].map((s) => (
                 <div key={s.label} style={{ textAlign: 'center' }}>
-                  <div className="landing-stat-num" style={{ fontWeight: 900, color: '#0F172A' }}>{s.num}</div>
+                  <div className="landing-stat-num" style={{ fontWeight: 900, color: '#3D4654' }}>{s.num}</div>
                   <div style={{ fontSize: 13, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: 0.5 }}>
                     {s.label}
                   </div>
@@ -199,157 +245,28 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* ── PLAYER STATS SECTION ── */}
-      <section style={{ padding: '0 24px 80px' }}>
-        <div style={{ maxWidth: 560, margin: '0 auto' }}>
+
+      {/* ── INTERACTIVE DEMO SECTION ── */}
+      <section className="landing-demo-section" style={{ padding: '0 24px 80px' }}>
+        <div style={{ maxWidth: 580, margin: '0 auto' }}>
           <AnimateIn>
             <div style={{
               textAlign: 'center', fontSize: 13, fontWeight: 800,
-              textTransform: 'uppercase', letterSpacing: 1.5, color: '#94A3B8', marginBottom: 16,
+              textTransform: 'uppercase', letterSpacing: 1.5, color: '#C49200', marginBottom: 16,
             }}>
-              Your progress, visualized
+              Try it yourself
             </div>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <h2 style={{
-              textAlign: 'center', fontSize: 32, fontWeight: 900,
-              color: '#0F172A', marginBottom: 40, letterSpacing: -0.5,
+            <h2 className="landing-section-heading" style={{
+              textAlign: 'center', fontWeight: 900,
+              color: '#3D4654', marginBottom: 40, letterSpacing: -0.5,
             }}>
-              Level up as you learn
+              Answer a real interview question
             </h2>
           </AnimateIn>
-
           <AnimateIn delay={0.2}>
-            <div className="landing-player-card" style={{
-              background: '#fff', border: '1px solid #E2E8F0', borderRadius: 12,
-              boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
-            }}>
-              {/* Player Header */}
-              <div className="landing-player-header" style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 28 }}>
-                <div style={{
-                  width: 56, height: 56, borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #6366F1, #818CF8)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-                }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28">
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                  </svg>
-                </div>
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 18, fontWeight: 800, color: '#0F172A' }}>Engineering_Pro</div>
-                  <div className="landing-level-row" style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 2 }}>
-                    <span style={{
-                      display: 'inline-flex', alignItems: 'center', gap: 4,
-                      background: '#FEF3C7', color: '#D97706',
-                      fontSize: 12, fontWeight: 800, padding: '3px 10px',
-                      borderRadius: 100, textTransform: 'uppercase', letterSpacing: 0.5,
-                    }}>
-                      <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26" />
-                      </svg>
-                      Level 7
-                    </span>
-                    <span style={{ fontSize: 13, fontWeight: 700, color: '#94A3B8' }}>Thermo Specialist</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* XP Bar */}
-              <div style={{ marginBottom: 24 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                  <span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>Experience Points</span>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: '#64748B' }}>1,340 / 2,000 XP</span>
-                </div>
-                <div
-                  ref={xpBar.ref}
-                  style={{ height: 14, background: '#E2E8F0', borderRadius: 100, overflow: 'hidden' }}
-                >
-                  <div style={{
-                    height: '100%',
-                    background: 'linear-gradient(90deg, #58CC02, #6EE715)',
-                    borderRadius: 100,
-                    width: `${xpBar.width}%`,
-                    transition: 'width 1.5s ease',
-                  }} />
-                </div>
-              </div>
-
-              {/* Stats Grid */}
-              <div className="landing-stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 24 }}>
-                {/* Streak */}
-                <div className="landing-stat-box" style={{ textAlign: 'center', background: '#FAFAFA', borderRadius: 12, border: '1px solid #F1F5F9' }}>
-                  <div style={{ marginBottom: 8, display: 'flex', justifyContent: 'center' }}>
-                    <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
-                      <path d="M12 23C7.029 23 3 18.971 3 14c0-3.275 2.07-6.239 4.2-8.4C9.033 3.767 10.88 2.43 12 1c1.12 1.43 2.967 2.767 4.8 4.6C18.93 7.761 21 10.725 21 14c0 4.971-4.029 9-9 9z" fill="#FF9600" />
-                      <path d="M12 23c-2.485 0-4.5-2.686-4.5-6 0-1.638 1.035-3.12 2.1-4.2C10.517 11.883 11.44 11.215 12 10.5c.56.715 1.483 1.383 2.4 2.3 1.065 1.08 2.1 2.562 2.1 4.2 0 3.314-2.015 6-4.5 6z" fill="#FFCC00" />
-                    </svg>
-                  </div>
-                  <div className="landing-stat-number" style={{ fontWeight: 900, color: '#0F172A', lineHeight: 1 }}>14</div>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: 0.5, marginTop: 4 }}>Day Streak</div>
-                </div>
-
-                {/* Questions Answered */}
-                <div className="landing-stat-box" style={{ textAlign: 'center', background: '#FAFAFA', borderRadius: 12, border: '1px solid #F1F5F9' }}>
-                  <div style={{ marginBottom: 8, display: 'flex', justifyContent: 'center' }}>
-                    <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
-                      <circle cx="12" cy="12" r="10" fill="#58CC02" />
-                      <path d="M8 12.5l2.5 2.5 5.5-5.5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <div className="landing-stat-number" style={{ fontWeight: 900, color: '#0F172A', lineHeight: 1 }}>87</div>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: 0.5, marginTop: 4 }}>Answered</div>
-                </div>
-
-                {/* Accuracy */}
-                <div className="landing-stat-box" style={{ textAlign: 'center', background: '#FAFAFA', borderRadius: 12, border: '1px solid #F1F5F9' }}>
-                  <div style={{ marginBottom: 8, display: 'flex', justifyContent: 'center' }}>
-                    <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
-                      <circle cx="12" cy="12" r="10" stroke="#6366F1" strokeWidth="2" fill="none" />
-                      <circle cx="12" cy="12" r="6" stroke="#6366F1" strokeWidth="2" fill="none" />
-                      <circle cx="12" cy="12" r="2" fill="#6366F1" />
-                    </svg>
-                  </div>
-                  <div className="landing-stat-number" style={{ fontWeight: 900, color: '#0F172A', lineHeight: 1 }}>91%</div>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: 0.5, marginTop: 4 }}>Accuracy</div>
-                </div>
-              </div>
-
-              {/* Achievements */}
-              <div style={{ fontSize: 14, fontWeight: 800, color: '#0F172A', marginBottom: 12 }}>Achievements</div>
-              <div className="landing-achievements" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                {/* Earned achievements */}
-                {[
-                  { title: 'First Lesson', icon: <><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></> },
-                  { title: '7-Day Streak', icon: <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26" /> },
-                  { title: 'Perfect Score', icon: <><circle cx="12" cy="8" r="7" /><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" /></> },
-                  { title: 'Speed Demon', icon: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /> },
-                ].map((a) => (
-                  <div key={a.title} style={{
-                    width: 48, height: 48, borderRadius: 12,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    background: '#ECFDF5', border: '2px solid #A7F3D0',
-                  }} title={a.title}>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
-                      {a.icon}
-                    </svg>
-                  </div>
-                ))}
-                {/* Locked */}
-                {[1, 2].map((i) => (
-                  <div key={`locked-${i}`} style={{
-                    width: 48, height: 48, borderRadius: 12,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    background: '#F1F5F9', border: '2px solid #E2E8F0', opacity: 0.5,
-                  }} title="Locked">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                    </svg>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <InteractiveDemo />
           </AnimateIn>
         </div>
       </section>
@@ -363,7 +280,7 @@ export function LandingPage() {
           <AnimateIn>
             <div style={{
               textAlign: 'center', fontSize: 13, fontWeight: 800,
-              textTransform: 'uppercase', letterSpacing: 1.5, color: '#94A3B8', marginBottom: 16,
+              textTransform: 'uppercase', letterSpacing: 1.5, color: '#C49200', marginBottom: 16,
             }}>
               Why MechReady?
             </div>
@@ -371,7 +288,7 @@ export function LandingPage() {
           <AnimateIn delay={0.1}>
             <div className="landing-section-heading" style={{
               textAlign: 'center', fontWeight: 900,
-              color: '#0F172A', marginBottom: 40, letterSpacing: -0.5,
+              color: '#3D4654', marginBottom: 40, letterSpacing: -0.5,
             }}>
               Not all prep methods are equal
             </div>
@@ -422,7 +339,7 @@ export function LandingPage() {
                 title="MechReady"
                 subtitle="Active + fun"
                 items={[
-                  { text: '12 interactive question types', type: 'check' },
+                  { text: '11 interactive question types', type: 'check' },
                   { text: 'Instant feedback & explanations', type: 'check' },
                   { text: 'XP, streaks & achievements', type: 'check' },
                   { text: 'Built for real interview questions', type: 'check' },
@@ -437,10 +354,10 @@ export function LandingPage() {
                 href="/get-started"
                 className="landing-btn-primary"
                 style={{
-                  display: 'inline-block', background: '#58CC02', color: '#fff',
+                  display: 'inline-block', background: '#F5B800', color: '#fff',
                   fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8,
                   padding: '14px 36px', border: 'none', borderRadius: 16,
-                  boxShadow: '0 5px 0 #46A302', textDecoration: 'none',
+                  boxShadow: '0 5px 0 #C49200', textDecoration: 'none',
                   transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
                 }}
               >
@@ -457,15 +374,15 @@ export function LandingPage() {
           <AnimateIn>
             <div style={{
               textAlign: 'center', fontSize: 13, fontWeight: 800,
-              textTransform: 'uppercase', letterSpacing: 1.5, color: '#94A3B8', marginBottom: 16,
+              textTransform: 'uppercase', letterSpacing: 1.5, color: '#C49200', marginBottom: 16,
             }}>
-              10 units covering everything
+              11 units covering everything
             </div>
           </AnimateIn>
           <AnimateIn delay={0.1}>
             <div className="landing-section-heading" style={{
               textAlign: 'center', fontWeight: 900,
-              color: '#0F172A', marginBottom: 40, letterSpacing: -0.5,
+              color: '#3D4654', marginBottom: 40, letterSpacing: -0.5,
             }}>
               What you&apos;ll master
             </div>
@@ -486,6 +403,7 @@ export function LandingPage() {
                 { name: 'Materials Science', color: '#6366F1', count: '20+' },
                 { name: 'Machine Elements', color: '#8B5CF6', count: '20+' },
                 { name: 'GD&T', color: '#EC4899', count: '15+' },
+                { name: 'How Things Work', color: '#F59E0B', count: '15+' },
                 { name: 'Interview Prep', color: '#0F172A', count: '20+' },
               ].map((topic) => (
                 <div
@@ -513,10 +431,10 @@ export function LandingPage() {
                 href="/get-started"
                 className="landing-btn-primary"
                 style={{
-                  display: 'inline-block', background: '#58CC02', color: '#fff',
+                  display: 'inline-block', background: '#F5B800', color: '#fff',
                   fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8,
                   padding: '14px 36px', border: 'none', borderRadius: 16,
-                  boxShadow: '0 5px 0 #46A302', textDecoration: 'none',
+                  boxShadow: '0 5px 0 #C49200', textDecoration: 'none',
                   transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
                 }}
               >
@@ -543,9 +461,9 @@ export function LandingPage() {
             Mechanical engineering interview prep that actually sticks.
           </p>
           <p style={{ marginTop: 8, fontSize: 14, fontWeight: 600, color: '#94A3B8' }}>
-            <Link href="/get-started" style={{ color: '#1CB0F6', fontWeight: 700, textDecoration: 'none' }}>Sign up</Link>
+            <Link href="/get-started" style={{ color: '#F5B800', fontWeight: 700, textDecoration: 'none' }}>Sign up</Link>
             {' '}&middot;{' '}
-            <Link href="/login" style={{ color: '#1CB0F6', fontWeight: 700, textDecoration: 'none' }}>Log in</Link>
+            <Link href="/login" style={{ color: '#F5B800', fontWeight: 700, textDecoration: 'none' }}>Log in</Link>
           </p>
         </div>
       </footer>
@@ -562,9 +480,20 @@ export function LandingPage() {
         .landing-compare-grid { grid-template-columns: repeat(3, 1fr); }
 
         .landing-btn-primary:hover { filter: brightness(1.05); }
-        .landing-btn-primary:active { transform: translateY(2px); box-shadow: 0 3px 0 #46A302 !important; }
+        .landing-btn-primary:active { transform: translateY(2px); box-shadow: 0 3px 0 #C49200 !important; }
         .landing-btn-secondary:hover { background: #F0F9FF; }
         .landing-topic-pill:hover { border-color: #6366F1 !important; box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1) !important; }
+
+        @keyframes demoFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes demoPopIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        .demo-option { font-family: inherit; }
+        .demo-option:not(:disabled):hover { border-color: #F5B800 !important; background: #FFFBEB !important; transform: translateY(-1px); }
+        .demo-option:not(:disabled):active { transform: translateY(1px); box-shadow: none !important; }
+        .demo-next-btn { font-family: inherit; }
+        .demo-next-btn:hover { filter: brightness(1.05); }
+        .demo-next-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #C49200 !important; }
+        .demo-restart-btn { font-family: inherit; }
+        .demo-restart-btn:hover { background: #F8FAFC !important; border-color: #CBD5E1 !important; }
 
         @media (max-width: 768px) {
           .landing-hero-h1 { font-size: 34px !important; }
@@ -615,6 +544,119 @@ export function LandingPage() {
           .landing-topic-pill { padding: 6px 12px !important; font-size: 12px !important; }
         }
       `}</style>
+    </div>
+  );
+}
+
+/* ── Interactive Demo Component ── */
+function InteractiveDemo() {
+  const [qIdx, setQIdx] = useState(0);
+  const [selected, setSelected] = useState<number | null>(null);
+  const [stats, setStats] = useState({ xp: 0, answered: 0, correct: 0 });
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [achievement, setAchievement] = useState(false);
+  const done = qIdx >= DEMO_QUESTIONS.length;
+  const q = DEMO_QUESTIONS[done ? 0 : qIdx];
+  const isRight = selected !== null && selected === q.correctIndex;
+  const animXp = useCountUp(stats.xp);
+  const totalXp = 70;
+  const accuracy = stats.answered > 0 ? Math.round((stats.correct / stats.answered) * 100) : 0;
+  function pick(idx: number) {
+    if (selected !== null || done) return;
+    setSelected(idx);
+    const correct = idx === DEMO_QUESTIONS[qIdx].correctIndex;
+    setTimeout(() => {
+      setStats(p => ({ xp: p.xp + (correct ? DEMO_QUESTIONS[qIdx].xp : 5), answered: p.answered + 1, correct: p.correct + (correct ? 1 : 0) }));
+      setShowFeedback(true);
+      if (correct && stats.correct === 0 && !achievement) setTimeout(() => setAchievement(true), 300);
+    }, 500);
+  }
+  function next() { setQIdx(i => i + 1); setSelected(null); setShowFeedback(false); }
+  function restart() { setQIdx(0); setSelected(null); setShowFeedback(false); setStats({ xp: 0, answered: 0, correct: 0 }); setAchievement(false); }
+
+  if (done) {
+    return (
+      <div style={{ background: '#fff', borderRadius: 16, border: '2px solid #F5B800', padding: 32, textAlign: 'center', boxShadow: '0 4px 24px rgba(245, 184, 0, 0.12)' }}>
+        <div style={{ width: 72, height: 72, borderRadius: '50%', margin: '0 auto 20px', background: 'linear-gradient(135deg, #F5B800, #FFD54F)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <svg viewBox="0 0 24 24" fill="none" width="36" height="36"><path d="M20 6L9 17l-5-5" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        </div>
+        <div style={{ fontSize: 24, fontWeight: 900, color: '#0F172A', marginBottom: 8 }}>Nice work!</div>
+        <div style={{ fontSize: 15, fontWeight: 600, color: '#64748B', marginBottom: 28 }}>You got {stats.correct} of {stats.answered} correct</div>
+        <div className="demo-final-stats" style={{ display: 'flex', justifyContent: 'center', gap: 32, marginBottom: 28 }}>
+          {[{ val: stats.xp, label: 'XP Earned' }, { val: `${accuracy}%`, label: 'Accuracy' }, { val: stats.correct, label: 'Correct' }].map((s) => (
+            <div key={s.label} style={{ textAlign: 'center' }}><div style={{ fontSize: 28, fontWeight: 900, color: '#0F172A' }}>{s.val}</div><div style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: 0.5, marginTop: 4 }}>{s.label}</div></div>
+          ))}
+        </div>
+        <div style={{ fontSize: 14, fontWeight: 700, color: '#94A3B8', marginBottom: 24 }}>1,500+ more questions across 11 engineering topics</div>
+        <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/get-started" className="landing-btn-primary" style={{ display: 'inline-block', background: '#F5B800', color: '#fff', fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, padding: '14px 32px', border: 'none', borderRadius: 16, boxShadow: '0 5px 0 #C49200', textDecoration: 'none' }}>Keep playing</Link>
+          <button onClick={restart} className="demo-restart-btn" style={{ background: 'none', border: '2px solid #E2E8F0', borderRadius: 16, padding: '12px 24px', fontSize: 14, fontWeight: 700, color: '#64748B', cursor: 'pointer' }}>Try again</button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ background: '#fff', borderRadius: 16, border: '1px solid #E2E8F0', overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
+      <div style={{ height: 4, background: '#F1F5F9' }}><div style={{ height: '100%', background: 'linear-gradient(90deg, #F5B800, #FFD54F)', width: `${(qIdx / DEMO_QUESTIONS.length) * 100}%`, transition: 'width 0.5s ease', borderRadius: '0 4px 4px 0' }} /></div>
+      <div className="demo-card-inner" style={{ padding: 32 }}>
+        <div className="demo-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20, flexWrap: 'wrap', gap: 8 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {DEMO_QUESTIONS.map((_, i) => (<div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: i < qIdx ? '#F5B800' : i === qIdx ? q.topicColor : '#E2E8F0', transition: 'background 0.3s' }} />))}
+            <span style={{ fontSize: 13, fontWeight: 700, color: '#94A3B8', marginLeft: 4 }}>{qIdx + 1} / {DEMO_QUESTIONS.length}</span>
+          </div>
+          <div style={{ display: 'flex', gap: 6 }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: q.topicColor, background: `${q.topicColor}15`, padding: '4px 10px', borderRadius: 100, textTransform: 'uppercase', letterSpacing: 0.5 }}>{q.topic}</span>
+            <span style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8', background: '#F1F5F9', padding: '4px 10px', borderRadius: 100, textTransform: 'uppercase', letterSpacing: 0.5 }}>{q.typeLabel}</span>
+          </div>
+        </div>
+        <div style={{ fontSize: 17, fontWeight: 700, color: '#0F172A', lineHeight: 1.5, marginBottom: 24 }}>{q.question}</div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {q.options.map((opt, i) => {
+            const isSel = selected === i; const isCorr = i === q.correctIndex; const answered = selected !== null;
+            let bg = '#fff', border = '2px solid #E2E8F0', color = '#0F172A', shadow = '0 2px 0 #E2E8F0';
+            if (answered) {
+              if (isSel && isCorr) { bg = '#DCFCE7'; border = '2px solid #58CC02'; color = '#166534'; shadow = '0 2px 0 #86EFAC'; }
+              else if (isSel) { bg = '#FEE2E2'; border = '2px solid #EF4444'; color = '#991B1B'; shadow = '0 2px 0 #FECACA'; }
+              else if (isCorr && showFeedback) { bg = '#DCFCE7'; border = '2px solid #58CC02'; color = '#166534'; shadow = '0 2px 0 #86EFAC'; }
+              else { bg = '#FAFAFA'; border = '2px solid #F1F5F9'; color = '#94A3B8'; shadow = 'none'; }
+            }
+            return (
+              <button key={i} onClick={() => pick(i)} disabled={answered} className="demo-option" style={{ width: '100%', textAlign: 'left', padding: q.options.length === 2 ? '16px 20px' : '14px 18px', borderRadius: 12, background: bg, border, color, fontSize: 15, fontWeight: 600, cursor: answered ? 'default' : 'pointer', boxShadow: shadow, transition: 'all 0.2s ease', display: 'flex', alignItems: 'center', gap: 12, opacity: answered && !isSel && !(isCorr && showFeedback) ? 0.5 : 1 }}>
+                {q.options.length > 2 && (<span style={{ width: 28, height: 28, borderRadius: 8, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: answered && (isSel || (isCorr && showFeedback)) ? (isCorr ? '#58CC02' : '#EF4444') : '#F1F5F9', color: answered && (isSel || (isCorr && showFeedback)) ? '#fff' : '#64748B', fontSize: 13, fontWeight: 800 }}>{String.fromCharCode(65 + i)}</span>)}
+                <span style={{ flex: 1 }}>{opt}</span>
+                {answered && isSel && (<svg viewBox="0 0 24 24" fill="none" width="20" height="20" style={{ flexShrink: 0 }}>{isCorr ? <path d="M20 6L9 17l-5-5" stroke="#16A34A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /> : <path d="M18 6L6 18M6 6l12 12" stroke="#DC2626" strokeWidth="2.5" strokeLinecap="round" />}</svg>)}
+              </button>
+            );
+          })}
+        </div>
+        {showFeedback && (
+          <div style={{ marginTop: 16, padding: 20, borderRadius: 12, background: isRight ? '#F0FDF4' : '#FFF7ED', border: `1px solid ${isRight ? '#BBF7D0' : '#FED7AA'}`, animation: 'demoFadeIn 0.3s ease' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+              {isRight ? (<><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="10" fill="#58CC02" /><path d="M8 12.5l2.5 2.5 5.5-5.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg><span style={{ fontSize: 15, fontWeight: 800, color: '#166534' }}>Correct! +{q.xp} XP</span></>) : (<><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="10" fill="#F97316" /><path d="M15 9l-6 6M9 9l6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" /></svg><span style={{ fontSize: 15, fontWeight: 800, color: '#9A3412' }}>Not quite &mdash; +5 XP</span></>)}
+            </div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: '#64748B', lineHeight: 1.5, marginBottom: 16 }}>{q.explanation}</div>
+            <button onClick={next} className="demo-next-btn" style={{ width: '100%', padding: '12px', borderRadius: 12, background: '#F5B800', color: '#fff', border: 'none', fontSize: 15, fontWeight: 800, cursor: 'pointer', boxShadow: '0 4px 0 #C49200', textTransform: 'uppercase', letterSpacing: 0.5 }}>{qIdx < DEMO_QUESTIONS.length - 1 ? 'Next Question' : 'See Results'}</button>
+          </div>
+        )}
+        <div className="demo-stats-bar" style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid #F1F5F9', display: 'flex', alignItems: 'center', gap: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 23C7 23 3 19 3 14c0-3.3 2-6.2 4.2-8.4C9 3.8 10.9 2.4 12 1c1.1 1.4 3 2.8 4.8 4.6C19 7.8 21 10.7 21 14c0 5-4 9-9 9z" fill="#FF9600" /><path d="M12 23c-2.5 0-4.5-2.7-4.5-6 0-1.6 1-3.1 2.1-4.2C10.5 11.9 11.4 11.2 12 10.5c.6.7 1.5 1.4 2.4 2.3 1.1 1.1 2.1 2.6 2.1 4.2 0 3.3-2 6-4.5 6z" fill="#FFCC00" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.correct}</span></div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="10" fill="#58CC02" /><path d="M8 12.5l2.5 2.5 5.5-5.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.answered}/{DEMO_QUESTIONS.length}</span></div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="10" stroke="#6366F1" strokeWidth="2" fill="none" /><circle cx="12" cy="12" r="6" stroke="#6366F1" strokeWidth="2" fill="none" /><circle cx="12" cy="12" r="2" fill="#6366F1" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.answered > 0 ? `${accuracy}%` : '--'}</span></div>
+          </div>
+          <div style={{ flex: 1, maxWidth: 160, marginLeft: 'auto' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}><span style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8' }}>XP</span><span style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8' }}>{animXp}/{totalXp}</span></div>
+            <div style={{ height: 8, background: '#F1F5F9', borderRadius: 100, overflow: 'hidden' }}><div style={{ height: '100%', background: 'linear-gradient(90deg, #F5B800, #FFD54F)', width: `${Math.min((stats.xp / totalXp) * 100, 100)}%`, transition: 'width 0.8s ease', borderRadius: 100 }} /></div>
+          </div>
+        </div>
+        {achievement && (
+          <div style={{ marginTop: 12, padding: '10px 16px', borderRadius: 10, background: '#FFF8E1', border: '1px solid #FFE082', display: 'flex', alignItems: 'center', gap: 10, animation: 'demoPopIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)' }}>
+            <div style={{ width: 32, height: 32, borderRadius: 8, background: '#FFE082', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><svg viewBox="0 0 24 24" fill="none" stroke="#C49200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg></div>
+            <div><div style={{ fontSize: 11, fontWeight: 800, color: '#C49200', textTransform: 'uppercase', letterSpacing: 0.5 }}>Achievement Unlocked!</div><div style={{ fontSize: 13, fontWeight: 700, color: '#A16207' }}>First Correct Answer</div></div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
