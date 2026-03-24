@@ -465,6 +465,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
             <div style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', letterSpacing: 0.5, textTransform: 'uppercase' }}>
               Tap a word to fill the blank
             </div>
+            {process.env.NODE_ENV === 'development' && (
+              <div style={{ fontSize: 10, color: 'red', fontFamily: 'monospace', wordBreak: 'break-all' }}>
+                wordBank: {JSON.stringify(question.wordBank)} | shuffled: {shuffledWordBank.length} | available: {availableWords.length}
+              </div>
+            )}
             <div className="flex flex-wrap" style={{ gap: 8, justifyContent: 'center' }}>
               {availableWords.map(({ word, available }, i) => (
                 <motion.button
