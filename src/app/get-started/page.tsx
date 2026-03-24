@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronRight,
   Rocket,
-  Sparkles,
   ArrowLeft,
   Loader2,
   BookOpen,
@@ -80,7 +79,7 @@ const SAMPLE_QUESTIONS = [
 
 const FEATURES = [
   { icon: BookOpen, label: 'Bite-sized lessons', color: 'text-primary-500' },
-  { icon: Zap, label: 'Real interview Qs', color: 'text-[#58CC02]' },
+  { icon: Zap, label: 'Real interview Qs', color: 'text-brand-400' },
   { icon: Trophy, label: 'Track progress', color: 'text-primary-400' },
 ];
 
@@ -120,7 +119,7 @@ function PasswordStrength({ password }: { password: string }) {
             className={cn(
               'h-1.5 sm:h-1 flex-1 rounded-full transition-colors',
               i <= score
-                ? score === 3 ? 'bg-[#58CC02]' : score === 2 ? 'bg-primary-400' : 'bg-red-400'
+                ? score === 3 ? 'bg-brand-400' : score === 2 ? 'bg-primary-400' : 'bg-red-400'
                 : 'bg-gray-200'
             )}
           />
@@ -128,7 +127,7 @@ function PasswordStrength({ password }: { password: string }) {
       </div>
       <div className="flex flex-wrap gap-2 sm:gap-3">
         {checks.map((check) => (
-          <span key={check.label} className={cn('text-xs font-bold', check.met ? 'text-[#58CC02]' : 'text-gray-300')}>
+          <span key={check.label} className={cn('text-xs font-bold', check.met ? 'text-brand-400' : 'text-gray-300')}>
             {check.met ? '✓' : '•'} {check.label}
           </span>
         ))}
@@ -285,7 +284,7 @@ export default function GetStartedPage() {
               <Mascot size="md" />
             </motion.div>
             <p className="text-lg font-black text-gray-900">Preparing your course...</p>
-            <Loader2 className="w-6 h-6 animate-spin text-[#58CC02]" />
+            <Loader2 className="w-6 h-6 animate-spin text-brand-400" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -299,9 +298,9 @@ export default function GetStartedPage() {
               className={cn(
                 'h-2 rounded-full flex-1 transition-all duration-500',
                 i < step
-                  ? 'bg-[#58CC02]'
+                  ? 'bg-brand-400'
                   : i === step
-                    ? 'bg-[#58CC02]/60'
+                    ? 'bg-brand-400/60'
                     : 'bg-gray-100'
               )}
             />
@@ -349,32 +348,13 @@ export default function GetStartedPage() {
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ delay: 0.1, type: 'spring', stiffness: 180, damping: 14 }}
                 >
-                  <div className="relative">
-                    <Mascot size="lg" className="drop-shadow-xl" />
-                    {/* Floating sparkles around mascot */}
-                    {[
-                      { x: -12, y: 8, delay: 0.6 },
-                      { x: '85%', y: -4, delay: 0.8 },
-                      { x: '90%', y: '80%', delay: 0.7 },
-                    ].map((spark, i) => (
-                      <motion.div
-                        key={i}
-                        className="absolute text-primary-400"
-                        style={{ left: spark.x, top: spark.y }}
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: [0, 1, 0.6, 1], scale: 1 }}
-                        transition={{ delay: spark.delay, duration: 0.5, type: 'spring' }}
-                      >
-                        <Sparkles className="w-4 h-4" />
-                      </motion.div>
-                    ))}
-                  </div>
+                  <Mascot size="lg" className="drop-shadow-xl" />
                 </motion.div>
 
                 {/* Text content */}
                 <div className="text-center md:text-left flex-1">
                   <motion.div
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#58CC02]/10 text-[#58CC02] text-xs font-black uppercase tracking-wider mb-4"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-400/10 text-brand-400 text-xs font-black uppercase tracking-wider mb-4"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15 }}
@@ -428,8 +408,8 @@ export default function GetStartedPage() {
                   >
                     <button
                       onClick={nextStep}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#58CC02] text-white font-extrabold text-lg rounded-2xl transition-all active:translate-y-[2px]"
-                      style={{ boxShadow: '0 5px 0 #46A302' }}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-400 text-white font-extrabold text-lg rounded-2xl transition-all active:translate-y-[2px]"
+                      style={{ boxShadow: '0 5px 0 #C49200' }}
                     >
                       GET STARTED
                       <ChevronRight className="w-5 h-5" />
@@ -482,7 +462,7 @@ export default function GetStartedPage() {
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-lg">{sampleQuestion.topicIcon}</span>
-                    <span className="text-xs font-black text-[#58CC02] uppercase tracking-wider">
+                    <span className="text-xs font-black text-brand-400 uppercase tracking-wider">
                       Try a question
                     </span>
                   </div>
@@ -499,7 +479,7 @@ export default function GetStartedPage() {
                   let optionStyle = 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50';
                   if (sampleRevealed) {
                     if (isCorrect) {
-                      optionStyle = 'border-[#58CC02] bg-[#58CC02]/5';
+                      optionStyle = 'border-brand-400 bg-brand-400/5';
                     } else if (isSelected && !isCorrect) {
                       optionStyle = 'border-red-400 bg-red-50';
                     } else {
@@ -525,7 +505,7 @@ export default function GetStartedPage() {
                       <span className={cn(
                         'w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 mt-0.5',
                         sampleRevealed && isCorrect
-                          ? 'bg-[#58CC02] text-white'
+                          ? 'bg-brand-400 text-white'
                           : sampleRevealed && isSelected && !isCorrect
                             ? 'bg-red-400 text-white'
                             : 'bg-gray-100 text-gray-500'
@@ -553,12 +533,12 @@ export default function GetStartedPage() {
                     <div className={cn(
                       'p-4 rounded-xl mb-5',
                       sampleAnswer === sampleQuestion.correctAnswer
-                        ? 'bg-[#58CC02]/10 border border-[#58CC02]/20'
+                        ? 'bg-brand-400/10 border border-brand-400/20'
                         : 'bg-primary-50 border border-primary-200'
                     )}>
                       <p className={cn(
                         'font-black text-sm mb-1',
-                        sampleAnswer === sampleQuestion.correctAnswer ? 'text-[#58CC02]' : 'text-primary-600'
+                        sampleAnswer === sampleQuestion.correctAnswer ? 'text-brand-400' : 'text-primary-600'
                       )}>
                         {sampleAnswer === sampleQuestion.correctAnswer ? '🎉 Correct!' : '💡 Good try!'}
                       </p>
@@ -569,8 +549,8 @@ export default function GetStartedPage() {
 
                     <button
                       onClick={nextStep}
-                      className="w-full py-3.5 rounded-2xl bg-[#58CC02] text-white font-extrabold text-base transition-all active:translate-y-[2px]"
-                      style={{ boxShadow: '0 5px 0 #46A302' }}
+                      className="w-full py-3.5 rounded-2xl bg-brand-400 text-white font-extrabold text-base transition-all active:translate-y-[2px]"
+                      style={{ boxShadow: '0 5px 0 #C49200' }}
                     >
                       CONTINUE
                     </button>
@@ -641,7 +621,7 @@ export default function GetStartedPage() {
                   required
                   minLength={2}
                   maxLength={50}
-                  className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-2xl text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-[#58CC02] focus:bg-white transition-colors"
+                  className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-2xl text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-brand-400 focus:bg-white transition-colors"
                 />
 
                 <input
@@ -650,7 +630,7 @@ export default function GetStartedPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-2xl text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-[#58CC02] focus:bg-white transition-colors"
+                  className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-2xl text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-brand-400 focus:bg-white transition-colors"
                 />
 
                 <div>
@@ -661,7 +641,7 @@ export default function GetStartedPage() {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     minLength={8}
-                    className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-2xl text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-[#58CC02] focus:bg-white transition-colors"
+                    className="w-full px-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-2xl text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-brand-400 focus:bg-white transition-colors"
                   />
                   <PasswordStrength password={password} />
                 </div>
@@ -673,10 +653,10 @@ export default function GetStartedPage() {
                     'w-full py-3.5 rounded-2xl font-extrabold text-base transition-all active:translate-y-[2px]',
                     loading || password.length < 8
                       ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                      : 'bg-[#58CC02] text-white'
+                      : 'bg-brand-400 text-white'
                   )}
                   style={{
-                    boxShadow: loading || password.length < 8 ? 'none' : '0 5px 0 #46A302',
+                    boxShadow: loading || password.length < 8 ? 'none' : '0 5px 0 #C49200',
                   }}
                 >
                   {loading ? (
@@ -717,24 +697,6 @@ export default function GetStartedPage() {
                 transition={{ type: 'spring', stiffness: 200, damping: 12 }}
               >
                 <Mascot size="lg" className="mx-auto drop-shadow-xl" />
-                {/* Sparkle decorations */}
-                {[
-                  { x: 0, y: 0, delay: 0.3, size: 18 },
-                  { x: '100%', y: 0, delay: 0.4, size: 16 },
-                  { x: -8, y: '85%', delay: 0.5, size: 14 },
-                  { x: '105%', y: '80%', delay: 0.35, size: 16 },
-                ].map((spark, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute text-primary-400"
-                    style={{ left: spark.x, top: spark.y }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: spark.delay, type: 'spring', stiffness: 300 }}
-                  >
-                    <Sparkles style={{ width: spark.size, height: spark.size }} />
-                  </motion.div>
-                ))}
               </motion.div>
 
               <motion.h2
@@ -760,8 +722,8 @@ export default function GetStartedPage() {
               <motion.button
                 onClick={completeOnboarding}
                 disabled={navigating}
-                className="w-full py-4 rounded-2xl bg-[#58CC02] text-white font-extrabold text-lg transition-all active:translate-y-[2px] disabled:opacity-70 flex items-center justify-center gap-2"
-                style={{ boxShadow: navigating ? 'none' : '0 5px 0 #46A302' }}
+                className="w-full py-4 rounded-2xl bg-brand-400 text-white font-extrabold text-lg transition-all active:translate-y-[2px] disabled:opacity-70 flex items-center justify-center gap-2"
+                style={{ boxShadow: navigating ? 'none' : '0 5px 0 #C49200' }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}

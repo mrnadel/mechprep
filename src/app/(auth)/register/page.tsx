@@ -50,7 +50,7 @@ function PasswordStrength({ password }: { password: string }) {
             className={`h-1.5 sm:h-1 flex-1 rounded-full transition-colors ${
               i <= score
                 ? score >= 4
-                  ? 'bg-[#58CC02]'
+                  ? 'bg-brand-400'
                   : score === 3
                     ? 'bg-amber-400'
                     : 'bg-red-400'
@@ -63,7 +63,7 @@ function PasswordStrength({ password }: { password: string }) {
         {checks.map((check) => (
           <span
             key={check.label}
-            className={`text-xs font-bold ${check.met ? 'text-[#58CC02]' : 'text-surface-300'}`}
+            className={`text-xs font-bold ${check.met ? 'text-brand-400' : 'text-surface-300'}`}
           >
             {check.met ? '\u2713' : '\u2022'} {check.label}
           </span>
@@ -207,9 +207,9 @@ export default function RegisterPage() {
         <button
           type="submit"
           disabled={loading || password.length < 8}
-          className="w-full py-3.5 bg-[#58CC02] hover:bg-[#4CAD02] disabled:bg-surface-200 disabled:shadow-none disabled:translate-y-0 text-white font-extrabold rounded-2xl transition-all text-[17px] tracking-wide active:translate-y-[2px]"
+          className="w-full py-3.5 bg-brand-400 hover:bg-brand-500 disabled:bg-surface-200 disabled:shadow-none disabled:translate-y-0 text-white font-extrabold rounded-2xl transition-all text-[17px] tracking-wide active:translate-y-[2px]"
           style={{
-            boxShadow: loading || password.length < 8 ? 'none' : '0 5px 0 #46A302',
+            boxShadow: loading || password.length < 8 ? 'none' : '0 5px 0 #C49200',
           }}
         >
           {loading ? 'Creating account...' : 'CREATE ACCOUNT'}

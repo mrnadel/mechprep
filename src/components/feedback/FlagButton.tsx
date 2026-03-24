@@ -305,7 +305,7 @@ export default function FlagButton({ contentType, contentId, hasGraphic }: Props
                   height: 44,
                   borderRadius: 10,
                   border: 'none',
-                  background: commentText.trim() ? '#58CC02' : '#E5E5E5',
+                  background: commentText.trim() ? '#F5B800' : '#E5E5E5',
                   cursor: 'pointer',
                   flexShrink: 0,
                 }}

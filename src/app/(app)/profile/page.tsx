@@ -668,7 +668,7 @@ export default function ProfilePage() {
                     <div
                       className="rounded-2xl p-2 transition-all"
                       style={{
-                        border: !gems.selectedFrame ? '2px solid #58CC02' : '2px solid transparent',
+                        border: !gems.selectedFrame ? '2px solid #F5B800' : '2px solid transparent',
                         background: !gems.selectedFrame ? '#F0FDF4' : '#F9FAFB',
                       }}
                     >
@@ -729,7 +729,7 @@ export default function ProfilePage() {
                     className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all"
                     style={{
                       background: !gems.selectedTitle ? '#F0FDF4' : '#F9FAFB',
-                      border: !gems.selectedTitle ? '2px solid #58CC02' : '2px solid #E5E7EB',
+                      border: !gems.selectedTitle ? '2px solid #F5B800' : '2px solid #E5E7EB',
                       color: !gems.selectedTitle ? '#16A34A' : '#6B7280',
                     }}
                   >

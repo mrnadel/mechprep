@@ -684,9 +684,9 @@ function CompareCard({
       className={featured ? 'landing-compare-featured' : ''}
       style={{
         background: featured ? '#fff' : '#FAFAFA',
-        border: featured ? '2px solid #58CC02' : '1px solid #E2E8F0',
+        border: featured ? '2px solid #F5B800' : '1px solid #E2E8F0',
         borderRadius: 12,
-        boxShadow: featured ? '0 4px 16px rgba(88, 204, 2, 0.15)' : '0 1px 2px rgba(0,0,0,0.05)',
+        boxShadow: featured ? '0 4px 16px rgba(245, 184, 0, 0.15)' : '0 1px 2px rgba(0,0,0,0.05)',
         padding: '32px 24px',
         textAlign: 'center',
         position: 'relative',
@@ -697,7 +697,7 @@ function CompareCard({
       {featured && (
         <div style={{
           position: 'absolute', top: -13, left: '50%', transform: 'translateX(-50%)',
-          background: '#58CC02', color: '#fff', fontSize: 11, fontWeight: 800,
+          background: '#F5B800', color: '#fff', fontSize: 11, fontWeight: 800,
           textTransform: 'uppercase', letterSpacing: 1, padding: '4px 16px',
           borderRadius: 100, whiteSpace: 'nowrap',
         }}>

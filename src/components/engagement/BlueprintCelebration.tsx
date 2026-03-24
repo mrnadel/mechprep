@@ -294,9 +294,9 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
                 className="font-black text-3xl tracking-[6px] uppercase"
                 style={{
                   padding: '10px 30px',
-                  border: `4px solid ${isGolden ? '#FFB800' : '#58CC02'}`,
+                  border: `4px solid ${isGolden ? '#FFB800' : '#F5B800'}`,
                   borderRadius: 12,
-                  color: isGolden ? '#FFB800' : '#58CC02',
+                  color: isGolden ? '#FFB800' : '#F5B800',
                   background: isGolden ? 'rgba(255,184,0,0.08)' : 'rgba(88,204,2,0.08)',
                 }}
               >
@@ -389,8 +389,8 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
                 onClick={(e) => { e.stopPropagation(); handleDismiss(); }}
                 className="mt-5 px-12 py-3.5 text-white font-extrabold rounded-2xl text-[15px] tracking-wide transition-transform active:translate-y-[2px]"
                 style={{
-                  background: isGolden ? '#FFB800' : '#58CC02',
-                  boxShadow: `0 4px 0 ${isGolden ? '#CC9400' : '#46A302'}`,
+                  background: isGolden ? '#FFB800' : '#F5B800',
+                  boxShadow: `0 4px 0 ${isGolden ? '#CC9400' : '#C49200'}`,
                   color: isGolden ? '#5D4200' : 'white',
                 }}
               >

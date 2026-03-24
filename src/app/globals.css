@@ -12,6 +12,17 @@
   --color-primary-800: #3730A3;
   --color-primary-900: #312E81;
 
+  --color-brand-50: #FFF8E1;
+  --color-brand-100: #FFECB3;
+  --color-brand-200: #FFD54F;
+  --color-brand-300: #FFC107;
+  --color-brand-400: #F5B800;
+  --color-brand-500: #E5A800;
+  --color-brand-600: #C49200;
+  --color-brand-700: #A17700;
+  --color-brand-800: #7D5D00;
+  --color-brand-900: #5D4200;
+
   --color-accent-400: #34D399;
   --color-accent-500: #10B981;
   --color-accent-600: #059669;

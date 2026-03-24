@@ -408,8 +408,8 @@ export function CourseMap() {
                             fontSize: 14,
                             fontWeight: 800,
                             color: '#FFFFFF',
-                            background: '#58CC02',
-                            boxShadow: '0 4px 0 #46A302',
+                            background: '#F5B800',
+                            boxShadow: '0 4px 0 #C49200',
                             border: 'none',
                             cursor: 'pointer',
                           }}

@@ -132,9 +132,9 @@ function LoginPageInner() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-3.5 bg-[#58CC02] hover:bg-[#4CAD02] disabled:bg-surface-200 disabled:shadow-none disabled:translate-y-0 text-white font-extrabold rounded-2xl transition-all text-[17px] tracking-wide active:translate-y-[2px]"
+          className="w-full py-3.5 bg-brand-400 hover:bg-brand-500 disabled:bg-surface-200 disabled:shadow-none disabled:translate-y-0 text-white font-extrabold rounded-2xl transition-all text-[17px] tracking-wide active:translate-y-[2px]"
           style={{
-            boxShadow: loading ? 'none' : '0 5px 0 #46A302',
+            boxShadow: loading ? 'none' : '0 5px 0 #C49200',
           }}
         >
           {loading ? 'Signing in...' : 'LOG IN'}

@@ -620,7 +620,7 @@ export default function LessonView() {
                 background: lastAnswerCorrect ? '#58CC02' : '#FF4B4B',
                 color: '#FFFFFF',
                 boxShadow: lastAnswerCorrect
-                  ? '0 4px 0 #46A302'
+                  ? '0 4px 0 #C49200'
                   : '0 4px 0 #CC2D2D',
                 border: 'none',
                 cursor: 'pointer',

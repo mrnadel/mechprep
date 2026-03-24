@@ -93,7 +93,7 @@ export function CourseCompleteCelebration({ onDismiss }: Props) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center mb-5"
           >
-            <div className="text-xs font-extrabold tracking-[3px] uppercase text-[#58CC02] mb-2">
+            <div className="text-xs font-extrabold tracking-[3px] uppercase text-brand-400 mb-2">
               Course complete
             </div>
             <h1 className="text-3xl font-black text-surface-900 mb-1">
@@ -193,9 +193,9 @@ export function CourseCompleteCelebration({ onDismiss }: Props) {
                 className="font-black text-3xl tracking-[6px] uppercase"
                 style={{
                   padding: '10px 30px',
-                  border: '4px solid #58CC02',
+                  border: '4px solid #F5B800',
                   borderRadius: 12,
-                  color: '#58CC02',
+                  color: '#F5B800',
                   background: 'rgba(88,204,2,0.08)',
                 }}
               >
@@ -214,7 +214,7 @@ export function CourseCompleteCelebration({ onDismiss }: Props) {
             <button
               onClick={handleDismiss}
               className="w-full max-w-xs py-4 text-white font-extrabold rounded-2xl text-[17px] tracking-wide transition-transform active:translate-y-[2px]"
-              style={{ background: '#58CC02', boxShadow: '0 5px 0 #46A302' }}
+              style={{ background: '#F5B800', boxShadow: '0 5px 0 #C49200' }}
             >
               CONTINUE
             </button>
