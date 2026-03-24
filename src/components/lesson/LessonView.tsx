@@ -448,32 +448,6 @@ export default function LessonView() {
             <span aria-live="polite">+{xpGain} XP</span>
           </motion.div>
 
-          {/* Calculator toggle */}
-          <button
-            onClick={() => setIsCalcOpen(c => !c)}
-            className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90"
-            style={{
-              width: 36,
-              height: 36,
-              borderRadius: 12,
-              background: isCalcOpen ? theme.bg : '#F5F5F5',
-              border: isCalcOpen ? `1.5px solid ${unitColor}` : '1.5px solid transparent',
-              cursor: 'pointer',
-            }}
-            aria-label={isCalcOpen ? 'Close calculator' : 'Open calculator'}
-            title="Calculator (`)"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <rect x="4" y="2" width="16" height="20" rx="2" stroke={isCalcOpen ? unitColor : '#AFAFAF'} strokeWidth="2" />
-              <rect x="7" y="5" width="10" height="4" rx="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-              <circle cx="8.5" cy="13" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-              <circle cx="12" cy="13" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-              <circle cx="15.5" cy="13" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-              <circle cx="8.5" cy="17" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-              <circle cx="12" cy="17" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-              <circle cx="15.5" cy="17" r="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-            </svg>
-          </button>
         </div>
 
         {/* Question area */}
@@ -538,28 +512,59 @@ export default function LessonView() {
               background: 'white',
             }}
           >
-            <button
-              onClick={handleCheck}
-              disabled={!hasSelection}
-              className="w-full transition-transform active:scale-[0.98]"
-              style={{
-                padding: '14px 0',
-                borderRadius: 16,
-                fontSize: 15,
-                fontWeight: 800,
-                textTransform: 'uppercase',
-                letterSpacing: 0.8,
-                background: hasSelection ? unitColor : '#E5E5E5',
-                color: hasSelection ? '#FFFFFF' : '#AFAFAF',
-                boxShadow: hasSelection
-                  ? `0 4px 0 ${theme.dark}`
-                  : '0 4px 0 #CCCCCC',
-                border: 'none',
-                cursor: hasSelection ? 'pointer' : 'default',
-              }}
-            >
-              Check
-            </button>
+            <div className="flex items-center gap-2.5">
+              {/* Calculator toggle */}
+              <button
+                onClick={() => setIsCalcOpen(c => !c)}
+                className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90"
+                style={{
+                  width: 48,
+                  height: 48,
+                  borderRadius: 14,
+                  background: isCalcOpen ? theme.bg : '#F5F5F5',
+                  border: isCalcOpen ? `2px solid ${unitColor}` : '2px solid #E5E5E5',
+                  boxShadow: isCalcOpen ? 'none' : '0 3px 0 #CCCCCC',
+                  cursor: 'pointer',
+                }}
+                aria-label={isCalcOpen ? 'Close calculator' : 'Open calculator'}
+                title="Calculator (`)"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="2" width="16" height="20" rx="2" stroke={isCalcOpen ? unitColor : '#AFAFAF'} strokeWidth="2" />
+                  <rect x="7" y="5" width="10" height="4" rx="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+                  <circle cx="8.5" cy="13" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+                  <circle cx="12" cy="13" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+                  <circle cx="15.5" cy="13" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+                  <circle cx="8.5" cy="17" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+                  <circle cx="12" cy="17" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+                  <circle cx="15.5" cy="17" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+                </svg>
+              </button>
+
+              {/* Check button */}
+              <button
+                onClick={handleCheck}
+                disabled={!hasSelection}
+                className="flex-1 transition-transform active:scale-[0.98]"
+                style={{
+                  padding: '14px 0',
+                  borderRadius: 16,
+                  fontSize: 15,
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: 0.8,
+                  background: hasSelection ? unitColor : '#E5E5E5',
+                  color: hasSelection ? '#FFFFFF' : '#AFAFAF',
+                  boxShadow: hasSelection
+                    ? `0 4px 0 ${theme.dark}`
+                    : '0 4px 0 #CCCCCC',
+                  border: 'none',
+                  cursor: hasSelection ? 'pointer' : 'default',
+                }}
+              >
+                Check
+              </button>
+            </div>
           </div>
         ) : (
           <motion.div
