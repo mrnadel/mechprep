@@ -85,19 +85,25 @@ function DoubleXpCountdown() {
     >
       {/* Fire icon with x2 overlay */}
       <motion.div
-        style={{ position: 'relative', width: 36, height: 36, cursor: 'pointer' }}
+        style={{
+          position: 'relative',
+          width: 36,
+          height: 36,
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
         animate={{ scale: [1, 1.08, 1] }}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
-        <span style={{ fontSize: 34, lineHeight: 1, display: 'block' }}>🔥</span>
+        <span style={{ fontSize: 34, lineHeight: 1 }}>🔥</span>
         <span
           style={{
             position: 'absolute',
-            inset: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            paddingTop: 6,
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
             fontSize: 11,
             fontWeight: 900,
             color: 'white',
