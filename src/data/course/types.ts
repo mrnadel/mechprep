@@ -57,6 +57,7 @@ export interface CourseProgress {
   currentStreak: number;
   longestStreak: number;
   lastActiveDate: string;
+  activeDays: string[];  // YYYY-MM-DD dates of recent activity (last 14 days, local only)
   completedLessons: Record<string, LessonProgress>;
 }
 

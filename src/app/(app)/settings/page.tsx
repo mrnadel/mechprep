@@ -90,7 +90,7 @@ export default function SettingsPage() {
         throw new Error(data.error || 'Failed to reset');
       }
       useStore.getState().resetProgress();
-      useCourseStore.setState({ progress: { displayName, totalXp: 0, currentStreak: 0, longestStreak: 0, lastActiveDate: '', completedLessons: {} } });
+      useCourseStore.setState({ progress: { displayName, totalXp: 0, currentStreak: 0, longestStreak: 0, lastActiveDate: '', activeDays: [], completedLessons: {} } });
       useMasteryStore.getState().clearEvents();
       setResetStep(0);
       setResetConfirmText('');

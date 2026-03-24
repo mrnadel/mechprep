@@ -12,7 +12,7 @@ import { useStore } from '@/store/useStore';
 import { shopItems } from '@/data/gem-shop';
 import { getXpToNextLevel, levels } from '@/data/levels';
 import { getLevelReward } from '@/data/level-rewards';
-import { getTodayString } from '@/lib/utils';
+import { getTodayString, getStreakStatus } from '@/lib/utils';
 import { LevelBadge } from '@/components/engagement/LevelBadge';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 
@@ -30,16 +30,26 @@ function getWeekDays() {
   const today = new Date();
   const dayOfWeek = today.getDay(); // 0=Sun, 1=Mon...
   const todayIdx = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Convert to Mon=0 index
-  return labels.map((label, i) => ({
-    label,
-    isToday: i === todayIdx,
-    todayIdx,
-  }));
+
+  // Calculate the date for each day of this week (Mon-Sun)
+  return labels.map((label, i) => {
+    const d = new Date(today);
+    d.setDate(d.getDate() - todayIdx + i);
+    const dateStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    return {
+      label,
+      isToday: i === todayIdx,
+      isFuture: i > todayIdx,
+      todayIdx,
+      dateStr,
+    };
+  });
 }
 
 export function CourseHeader() {
   const { status } = useSession();
   const progress = useCourseStore((s) => s.progress);
+  const streakStatus = getStreakStatus(progress.lastActiveDate);
   const [popover, setPopover] = useState<PopoverType>(null);
   const { tier, hasFetched } = useSubscription();
   const gems = useGems();
@@ -103,10 +113,18 @@ export function CourseHeader() {
                 gap: 3,
                 fontWeight: 800,
                 fontSize: 13,
-                color: popover === 'streak' ? '#D97706' : '#3C3C3C',
+                color: popover === 'streak'
+                  ? '#D97706'
+                  : streakStatus === 'at-risk'
+                    ? '#DC2626'
+                    : '#3C3C3C',
                 padding: '5px 8px',
                 borderRadius: 10,
-                background: popover === 'streak' ? '#FFFBEB' : 'transparent',
+                background: popover === 'streak'
+                  ? '#FFFBEB'
+                  : streakStatus === 'at-risk'
+                    ? '#FEF2F2'
+                    : 'transparent',
                 minWidth: 44,
                 minHeight: 44,
                 justifyContent: 'center',
@@ -273,8 +291,17 @@ export function CourseHeader() {
                         <h3 style={{ fontSize: 16, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2 }}>
                           Practice Streak
                         </h3>
-                        <p style={{ fontSize: 12, fontWeight: 600, color: '#AFAFAF', marginTop: 1 }}>
-                          {progress.currentStreak > 0 ? 'Fully charged!' : 'Start your streak today!'}
+                        <p style={{
+                          fontSize: 12,
+                          fontWeight: 600,
+                          color: streakStatus === 'at-risk' ? '#DC2626' : '#AFAFAF',
+                          marginTop: 1,
+                        }}>
+                          {streakStatus === 'at-risk'
+                            ? 'Practice today or lose your streak!'
+                            : progress.currentStreak > 0
+                              ? 'Fully charged!'
+                              : 'Start your streak today!'}
                         </p>
                       </div>
                     </div>
@@ -330,9 +357,9 @@ export function CourseHeader() {
                       </p>
                       <div className="flex justify-between" style={{ gap: 4 }}>
                         {weekDays.map((day, i) => {
-                          const { todayIdx } = day;
-                          const streakStart = todayIdx - progress.currentStreak + 1;
-                          const isActive = i >= Math.max(0, streakStart) && i <= todayIdx && progress.currentStreak > 0;
+                          const activeDays = progress.activeDays ?? [];
+                          const isActive = activeDays.includes(day.dateStr);
+                          const isAtRisk = day.isToday && !isActive && streakStatus === 'at-risk';
                           return (
                             <div key={i} className="flex flex-col items-center" style={{ gap: 4, flex: 1 }}>
                               <div
@@ -347,11 +374,25 @@ export function CourseHeader() {
                                   fontWeight: 800,
                                   background: isActive
                                     ? 'linear-gradient(135deg, #FBBF24 0%, #D97706 100%)'
-                                    : day.isToday
-                                      ? '#E5E5E5'
-                                      : 'transparent',
-                                  color: isActive ? 'white' : day.isToday ? '#3C3C3C' : '#CFCFCF',
-                                  border: day.isToday && !isActive ? '2px dashed #CFCFCF' : 'none',
+                                    : isAtRisk
+                                      ? '#FEE2E2'
+                                      : day.isToday
+                                        ? '#E5E5E5'
+                                        : 'transparent',
+                                  color: isActive
+                                    ? 'white'
+                                    : isAtRisk
+                                      ? '#DC2626'
+                                      : day.isToday
+                                        ? '#3C3C3C'
+                                        : day.isFuture
+                                          ? '#E5E5E5'
+                                          : '#CFCFCF',
+                                  border: isAtRisk
+                                    ? '2px dashed #DC2626'
+                                    : day.isToday && !isActive
+                                      ? '2px dashed #CFCFCF'
+                                      : 'none',
                                   boxShadow: isActive ? '0 2px 6px rgba(217,119,6,0.3)' : 'none',
                                 }}
                               >

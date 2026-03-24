@@ -285,6 +285,7 @@ export interface UserProgress {
   currentStreak: number;
   longestStreak: number;
   lastActiveDate: string;
+  activeDays: string[];  // YYYY-MM-DD dates of recent activity (last 14 days, local only)
   achievementsUnlocked: string[];
   topicProgress: TopicProgress[];
   sessionHistory: SessionRecord[];

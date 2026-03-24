@@ -393,16 +393,14 @@ export const useEngagementStore = create<EngagementStore>()(
           const state = get();
           if (!state.streak.repairAvailable) return false;
 
-          // Check repair window: lastStreakBreakDate must be today or yesterday
+          // Check repair window: lastStreakBreakDate must be within 3 days
           const breakDate = state.streak.lastStreakBreakDate;
           if (!breakDate) return false;
 
-          const today = getTodayDate();
-          const todayDate = new Date(today + 'T12:00:00Z');
-          todayDate.setUTCDate(todayDate.getUTCDate() - 1);
-          const yesterdayStr = todayDate.toISOString().slice(0, 10);
-
-          if (breakDate !== today && breakDate !== yesterdayStr) return false;
+          const today = new Date();
+          const breakD = new Date(breakDate + 'T12:00:00');
+          const daysSinceBreak = Math.floor((today.getTime() - breakD.getTime()) / (1000 * 60 * 60 * 24));
+          if (daysSinceBreak > 3) return false;
 
           // Check gem balance
           const repairCost = 50;
@@ -428,9 +426,9 @@ export const useEngagementStore = create<EngagementStore>()(
           // Restore the streak in both progress stores (practice + course)
           if (previousStreak > 0) {
             // Set lastActiveDate to yesterday so next session continues the streak
-            const todayD = new Date(today + 'T12:00:00Z');
-            todayD.setUTCDate(todayD.getUTCDate() - 1);
-            const yesterdayStr = todayD.toISOString().slice(0, 10);
+            const yesterdayD = new Date();
+            yesterdayD.setDate(yesterdayD.getDate() - 1);
+            const yesterdayStr = `${yesterdayD.getFullYear()}-${String(yesterdayD.getMonth() + 1).padStart(2, '0')}-${String(yesterdayD.getDate()).padStart(2, '0')}`;
 
             useStore.setState((s) => ({
               progress: {

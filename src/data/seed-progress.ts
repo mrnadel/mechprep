@@ -9,6 +9,7 @@ export const seedProgress: UserProgress = {
   currentStreak: 5,
   longestStreak: 7,
   lastActiveDate: '2026-03-20',
+  activeDays: ['2026-03-16', '2026-03-17', '2026-03-18', '2026-03-19', '2026-03-20'],
   achievementsUnlocked: [
     'ach-first-correct',
     'ach-ten-correct',

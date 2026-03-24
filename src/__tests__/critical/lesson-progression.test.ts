@@ -64,6 +64,7 @@ function resetStore() {
       currentStreak: 0,
       longestStreak: 0,
       lastActiveDate: '',
+      activeDays: [],
       completedLessons: {},
     },
     activeLesson: null,

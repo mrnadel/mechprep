@@ -22,16 +22,18 @@ function getSimulatedNow(): Date {
 
 export function getTodayDate(): string {
   const d = getSimulatedNow();
-  return d.toISOString().slice(0, 10); // YYYY-MM-DD
+  // Use local time, not UTC — so a user practicing at 11pm local time
+  // doesn't get tomorrow's date and break their streak.
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
 export function getCurrentWeekMonday(): string {
   const d = getSimulatedNow();
-  const day = d.getUTCDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+  const day = d.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat (local time)
   const diff = (day === 0 ? -6 : 1 - day); // days to subtract to get Monday
   const monday = new Date(d);
-  monday.setUTCDate(d.getUTCDate() + diff);
-  return monday.toISOString().slice(0, 10);
+  monday.setDate(d.getDate() + diff);
+  return `${monday.getFullYear()}-${String(monday.getMonth() + 1).padStart(2, '0')}-${String(monday.getDate()).padStart(2, '0')}`;
 }
 
 // --------------- Hash Utility ---------------

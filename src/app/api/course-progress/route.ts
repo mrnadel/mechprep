@@ -36,6 +36,7 @@ export async function GET() {
     currentStreak: progress?.currentStreak ?? 0,
     longestStreak: progress?.longestStreak ?? 0,
     lastActiveDate: progress?.lastActiveDate ?? '',
+    activeDays: [],  // Client-only field — tracked in localStorage, not DB
     completedLessons:
       (progress?.completedLessons as CourseProgress['completedLessons']) ?? {},
   };

@@ -13,6 +13,7 @@ import { PRO_SESSION_TYPES } from '@/lib/pricing';
 import { useSubscriptionStore } from '@/hooks/useSubscription';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
+import { streakMilestones } from '@/data/streak-milestones';
 
 // --- Session Types ---
 export type SessionType = 'adaptive' | 'topic-deep-dive' | 'interview-sim' | 'daily-challenge' | 'real-world' | 'weak-areas' | 'smart-practice';
@@ -97,6 +98,7 @@ function getDefaultProgress(): UserProgress {
     currentStreak: 0,
     longestStreak: 0,
     lastActiveDate: '',
+    activeDays: [],
     achievementsUnlocked: [],
     topicProgress: [],
     sessionHistory: [],
@@ -636,7 +638,7 @@ export const useStore = create<AppState>()(
         if (lastActive !== today) {
           const yesterday = new Date();
           yesterday.setDate(yesterday.getDate() - 1);
-          const yesterdayStr = yesterday.toISOString().split('T')[0];
+          const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth() + 1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
           if (lastActive === yesterdayStr) {
             newStreak += 1;
           } else if (!lastActive) {
@@ -665,11 +667,47 @@ export const useStore = create<AppState>()(
           xpEarned,
         };
 
+        // Track active days for week tracker (keep last 14 days)
+        const existingDays = progress.activeDays ?? [];
+        const updatedActiveDays = existingDays.includes(today)
+          ? existingDays
+          : [...existingDays, today].slice(-14);
+
+        // Check and award streak milestones
+        if (newStreak > progress.currentStreak) {
+          for (const milestone of streakMilestones) {
+            if (newStreak >= milestone.days && !engState.streak.milestonesReached.includes(milestone.days)) {
+              useEngagementStore.setState((s) => ({
+                streak: { ...s.streak, milestonesReached: [...s.streak.milestonesReached, milestone.days] },
+              }));
+              engState.addGems(milestone.gems, `streak_milestone_${milestone.days}`);
+              if (milestone.hasTitle && milestone.titleText) {
+                const titleId = `reward-title-${milestone.titleText.toLowerCase().replace(/\s+/g, '-')}`;
+                useEngagementStore.setState((s) => {
+                  if (s.gems.inventory.activeTitles.includes(titleId)) return {};
+                  return { gems: { ...s.gems, inventory: { ...s.gems.inventory, activeTitles: [...s.gems.inventory.activeTitles, titleId] } } };
+                });
+              }
+              if (milestone.hasFrame) {
+                const frameMap: Record<number, string> = { 30: 'reward-frame-streak-iron', 60: 'reward-frame-streak-diamond', 100: 'reward-frame-streak-centurion' };
+                const frameId = frameMap[milestone.days];
+                if (frameId) {
+                  useEngagementStore.setState((s) => {
+                    if (s.gems.inventory.activeFrames.includes(frameId)) return {};
+                    return { gems: { ...s.gems, inventory: { ...s.gems.inventory, activeFrames: [...s.gems.inventory.activeFrames, frameId] } } };
+                  });
+                }
+              }
+            }
+          }
+        }
+
         const updatedProgress: UserProgress = {
           ...progress,
           currentStreak: newStreak,
           longestStreak: Math.max(progress.longestStreak, newStreak),
           lastActiveDate: today,
+          activeDays: updatedActiveDays,
           sessionHistory: [sessionRecord, ...progress.sessionHistory].slice(0, 50),
           dailyChallengesCompleted: session.type === 'daily-challenge'
             ? progress.dailyChallengesCompleted + 1
@@ -722,14 +760,20 @@ export const useStore = create<AppState>()(
         // Cross-store sync: keep course store's streak in lockstep so the
         // header display and freeze/repair systems stay consistent regardless
         // of which mode the user practices in.
-        useCourseStore.setState((cs) => ({
-          progress: {
-            ...cs.progress,
-            currentStreak: newStreak,
-            longestStreak: Math.max(cs.progress.longestStreak, newStreak),
-            lastActiveDate: today,
-          },
-        }));
+        useCourseStore.setState((cs) => {
+          const csActiveDays = cs.progress.activeDays ?? [];
+          return {
+            progress: {
+              ...cs.progress,
+              currentStreak: newStreak,
+              longestStreak: Math.max(cs.progress.longestStreak, newStreak),
+              lastActiveDate: today,
+              activeDays: csActiveDays.includes(today)
+                ? csActiveDays
+                : [...csActiveDays, today].slice(-14),
+            },
+          };
+        });
       },
 
       abandonSession: () => {
@@ -831,6 +875,7 @@ export const useStore = create<AppState>()(
             weakAreas: persisted.progress.weakAreas ?? defaults.weakAreas,
             strongAreas: persisted.progress.strongAreas ?? defaults.strongAreas,
             displayName: persisted.progress.displayName ?? defaults.displayName,
+            activeDays: persisted.progress.activeDays ?? defaults.activeDays,
           },
         };
       },

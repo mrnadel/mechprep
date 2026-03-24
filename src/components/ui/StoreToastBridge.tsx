@@ -108,7 +108,7 @@ export function StoreToastBridge() {
 
         if (streak <= prev || streak <= 1) return;
 
-        // Toast on streak milestones (3, 7, 14, 30)
+        // Toast on streak milestones (3, 7, 14, 30, 50, 100)
         const milestones = [3, 7, 14, 30, 50, 100];
         if (milestones.includes(streak)) {
           push({
@@ -117,6 +117,37 @@ export function StoreToastBridge() {
             subtitle: 'Keep the momentum going!',
             color: '#D97706',
             duration: 4000,
+          });
+        }
+      },
+    );
+    return unsub;
+  }, [push]);
+
+  // Subscribe to streak freeze usage
+  const prevFreezeUsedRef = useRef(false);
+  useEffect(() => {
+    const engState = useEngagementStore.getState();
+    prevFreezeUsedRef.current = engState.streak.freezeUsedToday;
+
+    const unsub = useEngagementStore.subscribe(
+      (state) => state.streak.freezeUsedToday,
+      (freezeUsed) => {
+        if (!mountedRef.current) {
+          prevFreezeUsedRef.current = freezeUsed;
+          return;
+        }
+        const wasUsed = prevFreezeUsedRef.current;
+        prevFreezeUsedRef.current = freezeUsed;
+
+        // Toast when freeze transitions from false → true
+        if (freezeUsed && !wasUsed) {
+          push({
+            icon: '🧊',
+            title: 'Streak Freeze Used!',
+            subtitle: 'Your streak was saved for today',
+            color: '#0EA5E9',
+            duration: 4500,
           });
         }
       },

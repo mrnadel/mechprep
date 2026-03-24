@@ -68,6 +68,7 @@ function getDefaultProgress(): UserProgress {
     currentStreak: 0,
     longestStreak: 0,
     lastActiveDate: '',
+    activeDays: [],
     achievementsUnlocked: [],
     topicProgress: [],
     sessionHistory: [],

@@ -128,13 +128,17 @@ export function shuffleArray<T>(array: T[]): T[] {
 
 export { getTodayDate as getTodayString } from '@/lib/quest-engine';
 
+function toLocalDateString(d: Date): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
 export function getStreakStatus(lastActiveDate: string): 'active' | 'at-risk' | 'broken' {
   if (!lastActiveDate) return 'broken';
   const today = getTodayDate();
   if (lastActiveDate === today) return 'active';
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
-  const yesterdayStr = yesterday.toISOString().split('T')[0];
+  const yesterdayStr = toLocalDateString(yesterday);
   if (lastActiveDate === yesterdayStr) return 'at-risk';
   return 'broken';
 }
