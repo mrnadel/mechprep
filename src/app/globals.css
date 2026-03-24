@@ -514,6 +514,7 @@
   box-shadow: 0 4px 0 #996E00;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 .golden-unit::after {
   content: '';

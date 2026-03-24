@@ -106,6 +106,41 @@ function getDefaultState(): EngagementState {
   };
 }
 
+// --------------- Inventory Helpers ---------------
+
+/** Grant a title or frame to the inventory if not already owned. Returns updated GemsState. */
+export function grantInventoryItem(
+  gems: GemsState,
+  type: 'title' | 'frame',
+  itemId: string,
+): GemsState {
+  const key = type === 'title' ? 'activeTitles' : 'activeFrames';
+  if (gems.inventory[key].includes(itemId)) return gems;
+  return {
+    ...gems,
+    inventory: {
+      ...gems.inventory,
+      [key]: [...gems.inventory[key], itemId],
+    },
+  };
+}
+
+/** Grant a title to the engagement store (call from outside the store). */
+export function grantTitle(titleId: string): void {
+  useEngagementStore.setState((s) => {
+    const updated = grantInventoryItem(s.gems, 'title', titleId);
+    return updated === s.gems ? {} : { gems: updated };
+  });
+}
+
+/** Grant a frame to the engagement store (call from outside the store). */
+export function grantFrame(frameId: string): void {
+  useEngagementStore.setState((s) => {
+    const updated = grantInventoryItem(s.gems, 'frame', frameId);
+    return updated === s.gems ? {} : { gems: updated };
+  });
+}
+
 // --------------- Store Actions Interface ---------------
 
 interface EngagementActions {
@@ -337,40 +372,20 @@ export const useEngagementStore = create<EngagementStore>()(
               }));
               return true;
             }
-            case 'title': {
-              if (state.gems.inventory.activeTitles.includes(itemId)) return false;
-              set((s) => ({
-                gems: {
-                  ...s.gems,
-                  balance: s.gems.balance - item.cost,
-                  transactions: [
-                    createGemTransaction(-item.cost, 'shop_purchase'),
-                    ...s.gems.transactions,
-                  ].slice(0, MAX_GEM_TRANSACTIONS_CLIENT),
-                  inventory: {
-                    ...s.gems.inventory,
-                    activeTitles: [...s.gems.inventory.activeTitles, itemId],
-                  },
-                  selectedTitle: itemId, // auto-equip on purchase
-                },
-              }));
-              return true;
-            }
+            case 'title':
             case 'frame': {
-              if (state.gems.inventory.activeFrames.includes(itemId)) return false;
+              const invKey = item.type === 'title' ? 'activeTitles' : 'activeFrames';
+              const equipKey = item.type === 'title' ? 'selectedTitle' : 'selectedFrame';
+              if (state.gems.inventory[invKey].includes(itemId)) return false;
               set((s) => ({
                 gems: {
-                  ...s.gems,
+                  ...grantInventoryItem(s.gems, item.type as 'title' | 'frame', itemId),
                   balance: s.gems.balance - item.cost,
                   transactions: [
                     createGemTransaction(-item.cost, 'shop_purchase'),
                     ...s.gems.transactions,
                   ].slice(0, MAX_GEM_TRANSACTIONS_CLIENT),
-                  inventory: {
-                    ...s.gems.inventory,
-                    activeFrames: [...s.gems.inventory.activeFrames, itemId],
-                  },
-                  selectedFrame: itemId, // auto-equip on purchase
+                  [equipKey]: itemId, // auto-equip on purchase
                 },
               }));
               return true;

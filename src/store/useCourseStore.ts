@@ -4,7 +4,7 @@ import { create } from 'zustand';
 import { persist, subscribeWithSelector } from 'zustand/middleware';
 import { courseMeta, loadUnitData } from '@/data/course/course-meta';
 import { topics } from '@/data/topics';
-import { shuffleArray } from '@/lib/utils';
+import { shuffleArray, toLocalDateString, getYesterdayString } from '@/lib/utils';
 import { LIMITS, isUnitUnlocked } from '@/lib/pricing';
 import { useSubscriptionStore } from '@/hooks/useSubscription';
 import { useMasteryStore } from '@/store/useMasteryStore';
@@ -13,64 +13,7 @@ import { useEngagementStore } from '@/store/useEngagementStore';
 import type { CourseProgress, ActiveLesson, LessonResult, Unit } from '@/data/course/types';
 import type { AnswerEvent } from '@/data/mastery';
 import type { TopicId } from '@/data/types';
-import { streakMilestones } from '@/data/streak-milestones';
-
-/** Check if the new streak crosses any milestone threshold and award rewards. */
-function checkAndAwardMilestones(
-  newStreak: number,
-  engState: ReturnType<typeof useEngagementStore.getState>,
-  streakFrozen: boolean,
-) {
-  void streakFrozen; // consumed — satisfies linter
-
-  for (const milestone of streakMilestones) {
-    if (newStreak >= milestone.days && !engState.streak.milestonesReached.includes(milestone.days)) {
-      // Mark milestone reached
-      useEngagementStore.setState((s) => ({
-        streak: {
-          ...s.streak,
-          milestonesReached: [...s.streak.milestonesReached, milestone.days],
-        },
-      }));
-      // Award gems
-      engState.addGems(milestone.gems, `streak_milestone_${milestone.days}`);
-      // Award title
-      if (milestone.hasTitle && milestone.titleText) {
-        const titleId = `reward-title-${milestone.titleText.toLowerCase().replace(/\s+/g, '-')}`;
-        useEngagementStore.setState((s) => {
-          if (s.gems.inventory.activeTitles.includes(titleId)) return {};
-          return {
-            gems: {
-              ...s.gems,
-              inventory: {
-                ...s.gems.inventory,
-                activeTitles: [...s.gems.inventory.activeTitles, titleId],
-              },
-            },
-          };
-        });
-      }
-      // Award frame
-      if (milestone.hasFrame && milestone.frameId) {
-        const frameId = milestone.frameId;
-        if (frameId) {
-          useEngagementStore.setState((s) => {
-            if (s.gems.inventory.activeFrames.includes(frameId)) return {};
-            return {
-              gems: {
-                ...s.gems,
-                inventory: {
-                  ...s.gems.inventory,
-                  activeFrames: [...s.gems.inventory.activeFrames, frameId],
-                },
-              },
-            };
-          });
-        }
-      }
-    }
-  }
-}
+import { awardStreakMilestones } from '@/lib/streak-rewards';
 
 interface ChapterCompletion {
   unitIndex: number;
@@ -122,18 +65,8 @@ function getDefaultProgress(): CourseProgress {
   };
 }
 
-function toLocalDateString(d: Date): string {
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-}
-
 function getTodayString(): string {
   return toLocalDateString(new Date());
-}
-
-function getYesterdayString(): string {
-  const d = new Date();
-  d.setDate(d.getDate() - 1);
-  return toLocalDateString(d);
 }
 
 const PASSING_ACCURACY = 70;
@@ -389,7 +322,7 @@ export const useCourseStore = create<CourseState>()(
 
         // Check and award streak milestones
         if (newStreak > (state.progress.currentStreak || 0)) {
-          checkAndAwardMilestones(newStreak, engState, streakFrozen);
+          awardStreakMilestones(newStreak);
         }
 
         const newTotalXp = state.progress.totalXp + xpEarned;

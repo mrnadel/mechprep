@@ -6,7 +6,7 @@ import { CourseHeader } from '@/components/course/CourseHeader';
 import { CourseMap } from '@/components/course/CourseMap';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useStore } from '@/store/useStore';
-import { useEngagementStore } from '@/store/useEngagementStore';
+import { useEngagementStore, grantTitle, grantFrame } from '@/store/useEngagementStore';
 import { streakMilestones } from '@/data/streak-milestones';
 import { PracticeCard } from '@/components/course/PracticeCard';
 import { analytics } from '@/lib/mixpanel';
@@ -59,24 +59,14 @@ export default function HomePage() {
       addGems(unclaimedMilestone.gems, `streak_milestone_${unclaimedMilestone.days}`);
 
       // Grant milestone frame + title to inventory
-      useEngagementStore.setState((s) => {
-        const frames = [...s.gems.inventory.activeFrames];
-        const titles = [...s.gems.inventory.activeTitles];
-        const frameId = unclaimedMilestone.frameId;
-        const titleId = unclaimedMilestone.titleId;
-        if (frameId && !frames.includes(frameId)) frames.push(frameId);
-        if (titleId && !titles.includes(titleId)) titles.push(titleId);
-        return {
-          streak: {
-            ...s.streak,
-            milestonesReached: [...s.streak.milestonesReached, unclaimedMilestone.days],
-          },
-          gems: {
-            ...s.gems,
-            inventory: { ...s.gems.inventory, activeFrames: frames, activeTitles: titles },
-          },
-        };
-      });
+      if (unclaimedMilestone.frameId) grantFrame(unclaimedMilestone.frameId);
+      if (unclaimedMilestone.titleId) grantTitle(unclaimedMilestone.titleId);
+      useEngagementStore.setState((s) => ({
+        streak: {
+          ...s.streak,
+          milestonesReached: [...s.streak.milestonesReached, unclaimedMilestone.days],
+        },
+      }));
     }
     setShownMilestone(null);
   };

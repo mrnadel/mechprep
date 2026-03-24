@@ -8,12 +8,12 @@ import type { CourseQuestion } from '@/data/course/types';
 import { seedProgress } from '@/data/seed-progress';
 import { levels } from '@/data/levels';
 import { achievements as allAchievements } from '@/data/achievements';
-import { shuffleArray, getTodayString, calculateXP } from '@/lib/utils';
+import { shuffleArray, getTodayString, getYesterdayString, calculateXP } from '@/lib/utils';
 import { PRO_SESSION_TYPES } from '@/lib/pricing';
 import { useSubscriptionStore } from '@/hooks/useSubscription';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
-import { streakMilestones } from '@/data/streak-milestones';
+import { awardStreakMilestones } from '@/lib/streak-rewards';
 
 // --- Session Types ---
 export type SessionType = 'adaptive' | 'topic-deep-dive' | 'interview-sim' | 'daily-challenge' | 'real-world' | 'weak-areas' | 'smart-practice';
@@ -636,10 +636,7 @@ export const useStore = create<AppState>()(
         const engState = useEngagementStore.getState();
         let newStreak = progress.currentStreak;
         if (lastActive !== today) {
-          const yesterday = new Date();
-          yesterday.setDate(yesterday.getDate() - 1);
-          const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth() + 1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
-          if (lastActive === yesterdayStr) {
+          if (lastActive === getYesterdayString()) {
             newStreak += 1;
           } else if (!lastActive) {
             newStreak = 1;
@@ -675,30 +672,7 @@ export const useStore = create<AppState>()(
 
         // Check and award streak milestones
         if (newStreak > progress.currentStreak) {
-          for (const milestone of streakMilestones) {
-            if (newStreak >= milestone.days && !engState.streak.milestonesReached.includes(milestone.days)) {
-              useEngagementStore.setState((s) => ({
-                streak: { ...s.streak, milestonesReached: [...s.streak.milestonesReached, milestone.days] },
-              }));
-              engState.addGems(milestone.gems, `streak_milestone_${milestone.days}`);
-              if (milestone.hasTitle && milestone.titleId) {
-                const titleId = milestone.titleId;
-                useEngagementStore.setState((s) => {
-                  if (s.gems.inventory.activeTitles.includes(titleId)) return {};
-                  return { gems: { ...s.gems, inventory: { ...s.gems.inventory, activeTitles: [...s.gems.inventory.activeTitles, titleId] } } };
-                });
-              }
-              if (milestone.hasFrame && milestone.frameId) {
-                const frameId = milestone.frameId;
-                if (frameId) {
-                  useEngagementStore.setState((s) => {
-                    if (s.gems.inventory.activeFrames.includes(frameId)) return {};
-                    return { gems: { ...s.gems, inventory: { ...s.gems.inventory, activeFrames: [...s.gems.inventory.activeFrames, frameId] } } };
-                  });
-                }
-              }
-            }
-          }
+          awardStreakMilestones(newStreak);
         }
 
         const updatedProgress: UserProgress = {
