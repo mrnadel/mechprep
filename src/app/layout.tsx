@@ -42,12 +42,12 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
-  keywords: ['mechanical engineering', 'interview prep', 'ME interview', 'engineering practice', 'thermodynamics', 'fluid mechanics', 'materials science', 'machine design'],
+  keywords: ['gamified learning', 'interview prep', 'engineering practice', 'personal finance', 'mechanical engineering', 'adaptive learning', 'online education', 'professional development'],
   authors: [{ name: APP_NAME }],
   creator: APP_NAME,
   openGraph: {
     title: `${APP_NAME} — ${APP_TAGLINE}`,
-    description: 'Gamified mechanical engineering interview prep. Adaptive practice across 10 core ME topics with smart feedback.',
+    description: APP_DESCRIPTION,
     url: APP_URL,
     siteName: APP_NAME,
     type: 'website',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og-image.png'],
     title: `${APP_NAME} — ${APP_TAGLINE}`,
-    description: 'Gamified mechanical engineering interview prep. Adaptive practice, real-world questions, and smart feedback.',
+    description: APP_DESCRIPTION,
   },
   alternates: {
     canonical: APP_URL,
@@ -73,7 +73,7 @@ const jsonLd = {
       '@type': 'WebApplication',
       name: APP_NAME,
       url: APP_URL,
-      description: 'Gamified mechanical engineering interview prep platform with adaptive practice across 10 core ME topics.',
+      description: APP_DESCRIPTION,
       applicationCategory: 'EducationalApplication',
       operatingSystem: 'Web',
       offers: [
@@ -123,7 +123,7 @@ const jsonLd = {
           name: 'What topics are covered?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: `${APP_NAME} covers thermodynamics, fluid mechanics, materials science, statics & dynamics, machine design, manufacturing, heat transfer, and more.`,
+            text: `${APP_NAME} offers courses across multiple professions including mechanical engineering and personal finance, with more on the way.`,
           },
         },
       ],

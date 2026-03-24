@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Create Account',
-  description: 'Sign up for MechReady and start practicing mechanical engineering interview questions for free.',
+  description: 'Sign up for MechReady and start learning for free across multiple professions.',
   alternates: { canonical: '/register' },
 };
 

@@ -17,10 +17,13 @@ import { cn } from '@/lib/utils';
 import { analytics } from '@/lib/mixpanel';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ProfessionPicker } from '@/components/profession/ProfessionPicker';
+import { useCourseStore } from '@/store/useCourseStore';
+import { getProfession, DEFAULT_PROFESSION } from '@/data/professions';
 
 /* ─── Constants ─── */
 
-const TOTAL_STEPS = 4;
+const TOTAL_STEPS = 5;
 
 const SAMPLE_QUESTIONS = [
   {
@@ -205,6 +208,10 @@ export default function GetStartedPage() {
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState(1);
 
+  // Profession selection
+  const setActiveProfession = useCourseStore((s) => s.setActiveProfession);
+  const [selectedProfession, setSelectedProfession] = useState<string>(DEFAULT_PROFESSION);
+
   // Trial questions (3 random from pool)
   const [trialQuestions] = useState(() => {
     const shuffled = [...SAMPLE_QUESTIONS].sort(() => Math.random() - 0.5);
@@ -316,9 +323,20 @@ export default function GetStartedPage() {
     signIn('google', { callbackUrl: '/' });
   };
 
+  const handleProfessionSelect = (id: string) => {
+    setSelectedProfession(id);
+  };
+
+  const handleProfessionContinue = () => {
+    setActiveProfession(selectedProfession);
+    nextStep();
+  };
+
   const completeOnboarding = () => {
     if (navigating) return;
     setNavigating(true);
+    // Ensure profession is set before navigating
+    setActiveProfession(selectedProfession);
     analytics.milestone({ type: 'onboarding_completed' });
     window.location.href = '/';
   };
@@ -491,8 +509,64 @@ export default function GetStartedPage() {
             </motion.div>
           )}
 
-          {/* ═══ Step 1: Trial Questions ═══ */}
+          {/* ═══ Step 1: Choose Profession ═══ */}
           {step === 1 && (
+            <motion.div
+              key="profession"
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
+              className="max-w-lg mx-auto w-full"
+            >
+              <motion.div
+                className="text-center mb-6"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2">
+                  What do you want to learn?
+                </h2>
+                <p className="text-gray-400 text-sm sm:text-base font-semibold">
+                  Pick a course to get started
+                </p>
+              </motion.div>
+
+              <ProfessionPicker
+                selectedId={selectedProfession}
+                onSelect={handleProfessionSelect}
+              />
+
+              <motion.div
+                className="mt-6"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <button
+                  onClick={handleProfessionContinue}
+                  disabled={!selectedProfession}
+                  className={cn(
+                    'w-full py-3.5 rounded-2xl font-extrabold text-base transition-all active:translate-y-[2px]',
+                    selectedProfession
+                      ? 'bg-brand-400 text-white'
+                      : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  )}
+                  style={{
+                    boxShadow: selectedProfession ? '0 5px 0 #C49200' : 'none',
+                  }}
+                >
+                  CONTINUE
+                </button>
+              </motion.div>
+            </motion.div>
+          )}
+
+          {/* ═══ Step 2: Trial Questions ═══ */}
+          {step === 2 && (
             <motion.div
               key="trial"
               custom={direction}
@@ -708,8 +782,8 @@ export default function GetStartedPage() {
             </motion.div>
           )}
 
-          {/* ═══ Step 2: Create Account ═══ */}
-          {step === 2 && (
+          {/* ═══ Step 3: Create Account ═══ */}
+          {step === 3 && (
             <motion.div
               key="signup"
               custom={direction}
@@ -825,8 +899,8 @@ export default function GetStartedPage() {
             </motion.div>
           )}
 
-          {/* ═══ Step 3: Ready! ═══ */}
-          {step === 3 && (
+          {/* ═══ Step 4: Ready! ═══ */}
+          {step === 4 && (
             <motion.div
               key="ready"
               custom={direction}
@@ -864,7 +938,7 @@ export default function GetStartedPage() {
               >
                 Start with Unit 1 — it&apos;s completely free.
                 <br />
-                Dive in and master mechanical engineering!
+                Dive in and master {getProfession(selectedProfession)?.name ?? 'your course'}!
               </motion.p>
 
               <motion.button

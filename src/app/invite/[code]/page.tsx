@@ -7,7 +7,7 @@ import InviteClient from './InviteClient';
 
 export const metadata: Metadata = {
   title: 'You\'ve Been Invited to MechReady',
-  description: 'A friend invited you to join MechReady — the gamified mechanical engineering interview prep platform.',
+  description: 'A friend invited you to join MechReady — the gamified learning platform for mastering any profession.',
   robots: { index: false, follow: false },
 };
 
