@@ -460,17 +460,18 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
         )}
 
         {/* Fill in the Blank - Word Bank */}
-        {question.type === 'fill-blank' && question.wordBank && (
-          <div className="flex flex-wrap" style={{ gap: 8, justifyContent: 'center' }}>
-            <AnimatePresence>
+        {question.type === 'fill-blank' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'center' }}>
+            <div style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', letterSpacing: 0.5, textTransform: 'uppercase' }}>
+              Tap a word to fill the blank
+            </div>
+            <div className="flex flex-wrap" style={{ gap: 8, justifyContent: 'center' }}>
               {availableWords.map(({ word, available }, i) => (
                 <motion.button
                   key={`${word}-${i}`}
                   onClick={() => available && handleWordTap(word)}
                   disabled={answered || !available}
                   whileTap={!answered && available ? { scale: 0.93 } : undefined}
-                  layout
-                  initial={{ opacity: 1, scale: 1 }}
                   animate={{
                     opacity: available ? 1 : 0.35,
                     scale: available ? 1 : 0.95,
@@ -492,7 +493,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   {word}
                 </motion.button>
               ))}
-            </AnimatePresence>
+            </div>
           </div>
         )}
 
