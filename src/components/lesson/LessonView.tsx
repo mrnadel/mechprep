@@ -499,6 +499,14 @@ export default function LessonView() {
                 />
               </motion.div>
             </AnimatePresence>
+            {process.env.NODE_ENV === 'development' && (
+              <div
+                className="text-[10px] text-gray-300 text-center py-1 select-all cursor-text font-mono"
+                title="Question ID (dev only)"
+              >
+                {currentQuestion.id}
+              </div>
+            )}
           </div>
         </div>
 
