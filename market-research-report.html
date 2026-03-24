@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Market Research — Duolingo for Professions</title>
+<title>Market Research — Duolingo for Knowledge</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
@@ -18,10 +18,7 @@
     line-height: 1.6;
   }
 
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
+  .container { max-width: 960px; margin: 0 auto; }
 
   /* ── Header ── */
   header {
@@ -56,17 +53,10 @@
     line-height: 1.2;
   }
 
-  header p {
-    color: #6b7280;
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  header p { color: #6b7280; font-size: 1rem; max-width: 640px; margin: 0 auto; }
 
   /* ── Sections ── */
-  section {
-    margin-bottom: 3rem;
-  }
+  section { margin-bottom: 3rem; }
 
   h2 {
     font-size: 1.5rem;
@@ -77,22 +67,12 @@
     border-bottom: 2px solid rgba(99,102,241,0.2);
   }
 
-  h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #e5e7eb;
-    margin: 1.5rem 0 0.75rem;
-  }
+  h3 { font-size: 1.15rem; font-weight: 700; color: #e5e7eb; margin: 1.5rem 0 0.75rem; }
 
-  p, li {
-    color: #9ca3af;
-    font-size: 0.9rem;
-    line-height: 1.7;
-  }
-
+  p, li { color: #9ca3af; font-size: 0.9rem; line-height: 1.7; }
   strong { color: #e5e7eb; }
 
-  /* ── Big Picture Stats ── */
+  /* ── Stats Grid ── */
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -109,9 +89,7 @@
     transition: border-color 0.2s;
   }
 
-  .stat-card:hover {
-    border-color: rgba(99,102,241,0.4);
-  }
+  .stat-card:hover { border-color: rgba(99,102,241,0.4); }
 
   .stat-card .number {
     font-size: 1.75rem;
@@ -122,18 +100,14 @@
   }
 
   .stat-card .label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: #6b7280;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
   }
 
-  /* ── Tier Cards ── */
-  .tier-section {
-    margin-bottom: 2rem;
-  }
-
+  /* ── Profession Cards ── */
   .tier-badge {
     display: inline-block;
     padding: 0.3rem 0.8rem;
@@ -145,9 +119,11 @@
     margin-bottom: 1rem;
   }
 
-  .tier-1 { background: rgba(34,197,94,0.12); color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
-  .tier-2 { background: rgba(234,179,8,0.12); color: #facc15; border: 1px solid rgba(234,179,8,0.25); }
-  .tier-3 { background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+  .tier-s { background: rgba(168,85,247,0.12); color: #c084fc; border: 1px solid rgba(168,85,247,0.25); }
+  .tier-a { background: rgba(34,197,94,0.12); color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
+  .tier-b { background: rgba(234,179,8,0.12); color: #facc15; border: 1px solid rgba(234,179,8,0.25); }
+  .tier-c { background: rgba(107,114,128,0.15); color: #9ca3af; border: 1px solid rgba(107,114,128,0.25); }
+  .tier-avoid { background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
 
   .profession-card {
     background: #111118;
@@ -163,14 +139,14 @@
     transform: translateY(-1px);
   }
 
-  .profession-card .card-header {
+  .card-header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 1rem;
   }
 
-  .profession-card .rank {
+  .rank {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,22 +158,17 @@
     flex-shrink: 0;
   }
 
-  .rank-1 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #1a1a2e; }
-  .rank-2 { background: linear-gradient(135deg, #94a3b8, #64748b); color: #1a1a2e; }
-  .rank-3 { background: linear-gradient(135deg, #b45309, #92400e); color: #fef3c7; }
-  .rank-4 { background: #1e293b; color: #94a3b8; }
-  .rank-5 { background: #1e293b; color: #94a3b8; }
+  .rank-1 { background: linear-gradient(135deg, #c084fc, #818cf8); color: #fff; }
+  .rank-2 { background: linear-gradient(135deg, #a78bfa, #6366f1); color: #fff; }
+  .rank-3 { background: linear-gradient(135deg, #818cf8, #4f46e5); color: #fff; }
+  .rank-4 { background: linear-gradient(135deg, #4ade80, #22c55e); color: #1a1a2e; }
+  .rank-5 { background: linear-gradient(135deg, #34d399, #059669); color: #1a1a2e; }
+  .rank-6 { background: linear-gradient(135deg, #2dd4bf, #0d9488); color: #1a1a2e; }
+  .rank-7 { background: linear-gradient(135deg, #fbbf24, #d97706); color: #1a1a2e; }
+  .rank-n { background: #1e293b; color: #94a3b8; }
 
-  .profession-card .card-title {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #f3f4f6;
-  }
-
-  .profession-card .card-subtitle {
-    font-size: 0.78rem;
-    color: #6b7280;
-  }
+  .card-title { font-size: 1.1rem; font-weight: 800; color: #f3f4f6; }
+  .card-subtitle { font-size: 0.78rem; color: #6b7280; }
 
   .metric-grid {
     display: grid;
@@ -244,11 +215,7 @@
   }
 
   /* ── Competition Meter ── */
-  .competition-meter {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
+  .competition-meter { display: flex; align-items: center; gap: 0.5rem; }
 
   .meter-bar {
     flex: 1;
@@ -258,21 +225,28 @@
     overflow: hidden;
   }
 
-  .meter-fill {
-    height: 100%;
-    border-radius: 999px;
-    transition: width 0.5s ease;
-  }
-
+  .meter-fill { height: 100%; border-radius: 999px; }
+  .meter-fill.none { width: 5%; background: #4ade80; }
   .meter-fill.low { width: 15%; background: #4ade80; }
   .meter-fill.med { width: 45%; background: #facc15; }
   .meter-fill.high { width: 75%; background: #f97316; }
   .meter-fill.saturated { width: 95%; background: #ef4444; }
 
-  .meter-label {
-    font-size: 0.7rem;
-    font-weight: 700;
-    white-space: nowrap;
+  .meter-label { font-size: 0.7rem; font-weight: 700; white-space: nowrap; }
+
+  /* ── Curiosity Meter ── */
+  .curiosity-bar {
+    height: 8px;
+    background: #1e293b;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 0.3rem;
+  }
+
+  .curiosity-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #818cf8, #c084fc);
   }
 
   /* ── Tables ── */
@@ -283,11 +257,7 @@
     margin: 1rem 0;
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.83rem;
-  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
 
   thead th {
     background: #111118;
@@ -310,11 +280,29 @@
 
   tbody tr:hover { background: rgba(99,102,241,0.04); }
 
-  /* ── Expansion Roadmap ── */
-  .roadmap {
-    position: relative;
-    padding-left: 2.5rem;
+  /* ── Comparison Box ── */
+  .comparison-box {
+    background: linear-gradient(135deg, rgba(34,197,94,0.05), rgba(99,102,241,0.05));
+    border: 1px solid rgba(34,197,94,0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
   }
+
+  .comparison-box h4 { color: #4ade80; font-size: 1rem; font-weight: 800; margin-bottom: 0.75rem; }
+
+  .comparison-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .comparison-stat { text-align: center; }
+  .comparison-stat .val { font-size: 1.4rem; font-weight: 900; color: #4ade80; }
+  .comparison-stat .lbl { font-size: 0.65rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+
+  /* ── Roadmap ── */
+  .roadmap { position: relative; padding-left: 2.5rem; }
 
   .roadmap::before {
     content: '';
@@ -359,72 +347,47 @@
     margin-bottom: 0.5rem;
   }
 
-  .phase-1-label { background: rgba(34,197,94,0.12); color: #4ade80; }
+  .phase-1-label { background: rgba(168,85,247,0.12); color: #c084fc; }
   .phase-2-label { background: rgba(99,102,241,0.12); color: #818cf8; }
-  .phase-3-label { background: rgba(168,85,247,0.12); color: #c084fc; }
+  .phase-3-label { background: rgba(34,197,94,0.12); color: #4ade80; }
 
-  .roadmap-phase h4 {
-    color: #f3f4f6;
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-  }
+  .roadmap-phase h4 { color: #f3f4f6; font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .roadmap-phase ul { list-style: none; padding: 0; }
+  .roadmap-phase li { padding: 0.25rem 0 0.25rem 1.2rem; position: relative; font-size: 0.85rem; }
+  .roadmap-phase li::before { content: '\2192'; position: absolute; left: 0; color: #6b7280; }
 
-  .roadmap-phase ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .roadmap-phase li {
-    padding: 0.25rem 0;
-    padding-left: 1.2rem;
-    position: relative;
-    font-size: 0.85rem;
-  }
-
-  .roadmap-phase li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: #6b7280;
-  }
-
-  /* ── Investor Section ── */
-  .investor-grid {
+  /* ── Monetization Cards ── */
+  .mono-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
     margin: 1rem 0;
   }
 
-  .investor-card {
+  .mono-card {
     background: #111118;
     border: 1px solid #1f2937;
     border-radius: 14px;
     padding: 1.25rem;
   }
 
-  .investor-card h4 {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #e5e7eb;
-    margin-bottom: 0.5rem;
+  .mono-card h4 { font-size: 0.85rem; font-weight: 700; color: #e5e7eb; margin-bottom: 0.5rem; }
+  .mono-card .amount { font-size: 1.3rem; font-weight: 900; }
+  .mono-card .details { font-size: 0.78rem; color: #6b7280; margin-top: 0.25rem; }
+
+  /* ── Avoid Card ── */
+  .avoid-card {
+    background: rgba(239,68,68,0.04);
+    border: 1px solid rgba(239,68,68,0.15);
+    border-radius: 14px;
+    padding: 1.25rem;
+    margin-bottom: 0.75rem;
   }
 
-  .investor-card .amount {
-    font-size: 1.3rem;
-    font-weight: 900;
-    color: #4ade80;
-  }
+  .avoid-card .avoid-name { font-weight: 700; color: #f87171; font-size: 0.9rem; margin-bottom: 0.25rem; }
+  .avoid-card .avoid-reason { font-size: 0.82rem; color: #9ca3af; }
 
-  .investor-card .details {
-    font-size: 0.78rem;
-    color: #6b7280;
-    margin-top: 0.25rem;
-  }
-
-  /* ── Naming Section ── */
+  /* ── Name Grid ── */
   .name-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -440,23 +403,11 @@
     transition: border-color 0.2s;
   }
 
-  .name-card:hover {
-    border-color: rgba(99,102,241,0.4);
-  }
+  .name-card:hover { border-color: rgba(99,102,241,0.4); }
+  .name-card .domain { font-size: 1.05rem; font-weight: 800; color: #f3f4f6; margin-bottom: 0.25rem; }
+  .name-card .rationale { font-size: 0.78rem; color: #6b7280; }
 
-  .name-card .domain {
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: #f3f4f6;
-    margin-bottom: 0.25rem;
-  }
-
-  .name-card .rationale {
-    font-size: 0.78rem;
-    color: #6b7280;
-  }
-
-  .availability-tag {
+  .avail-tag {
     display: inline-block;
     font-size: 0.6rem;
     font-weight: 700;
@@ -472,7 +423,7 @@
   .avail-maybe { background: rgba(234,179,8,0.15); color: #facc15; }
   .avail-taken { background: rgba(239,68,68,0.15); color: #f87171; }
 
-  /* ── Rename Checklist ── */
+  /* ── Rename Section ── */
   .rename-category {
     background: #111118;
     border: 1px solid #1f2937;
@@ -486,88 +437,37 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.25rem;
-    cursor: default;
   }
 
-  .rename-header .cat-name {
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: #e5e7eb;
-  }
-
-  .rename-header .cat-count {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #6b7280;
-    background: #1e293b;
-    padding: 0.2rem 0.6rem;
-    border-radius: 6px;
-  }
+  .rename-header .cat-name { font-weight: 700; font-size: 0.9rem; color: #e5e7eb; }
+  .rename-header .cat-count { font-size: 0.75rem; font-weight: 700; color: #6b7280; background: #1e293b; padding: 0.2rem 0.6rem; border-radius: 6px; }
 
   .risk-high { border-left: 3px solid #ef4444; }
   .risk-med { border-left: 3px solid #f59e0b; }
   .risk-low { border-left: 3px solid #4ade80; }
 
-  /* ── Avoid Table ── */
-  .avoid-card {
-    background: rgba(239,68,68,0.04);
-    border: 1px solid rgba(239,68,68,0.15);
-    border-radius: 14px;
-    padding: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
+  /* ── Paywall Funnel ── */
+  .funnel { display: flex; flex-direction: column; gap: 0.5rem; margin: 1rem 0; }
 
-  .avoid-card .avoid-name {
-    font-weight: 700;
-    color: #f87171;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .avoid-card .avoid-reason {
-    font-size: 0.82rem;
-    color: #9ca3af;
-  }
-
-  /* ── Duolingo Comparison ── */
-  .comparison-box {
-    background: linear-gradient(135deg, rgba(34,197,94,0.05), rgba(99,102,241,0.05));
-    border: 1px solid rgba(34,197,94,0.15);
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-  }
-
-  .comparison-box h4 {
-    color: #4ade80;
-    font-size: 1rem;
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-  }
-
-  .comparison-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .funnel-step {
+    display: flex;
+    align-items: center;
     gap: 0.75rem;
+    background: #111118;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
   }
 
-  .comparison-stat {
-    text-align: center;
-  }
-
-  .comparison-stat .val {
-    font-size: 1.4rem;
+  .funnel-step .funnel-pct {
+    font-size: 1.1rem;
     font-weight: 900;
-    color: #4ade80;
+    min-width: 60px;
+    text-align: right;
   }
 
-  .comparison-stat .lbl {
-    font-size: 0.7rem;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-  }
+  .funnel-step .funnel-desc { font-size: 0.82rem; color: #9ca3af; }
+  .funnel-step .funnel-label { font-size: 0.82rem; font-weight: 700; color: #e5e7eb; }
 
   /* ── Footer ── */
   footer {
@@ -579,12 +479,13 @@
     font-size: 0.75rem;
   }
 
-  /* ── Responsive ── */
   @media (max-width: 640px) {
     header h1 { font-size: 1.75rem; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .metric-grid { grid-template-columns: 1fr; }
     .name-grid { grid-template-columns: 1fr; }
+    .mono-grid { grid-template-columns: 1fr; }
+    .comparison-stats { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -594,386 +495,491 @@
 
   <!-- ════════════════════ HEADER ════════════════════ -->
   <header>
-    <div class="badge">Market Research Report — March 2026</div>
-    <h1>Duolingo for Professions</h1>
-    <p>Expanding from MechReady into a multi-profession gamified learning platform. Which professions have the biggest untapped markets?</p>
+    <div class="badge">Market Research Report &mdash; March 2026</div>
+    <h1>Duolingo for Knowledge</h1>
+    <p>Casual, gamified learning across professions and curiosity topics. Not exam prep &mdash; just making it fun to learn real-world skills and fascinating knowledge. Which topics have the biggest untapped audience?</p>
   </header>
 
-  <!-- ════════════════════ BIG PICTURE ════════════════════ -->
+  <!-- ════════════════════ THE MODEL ════════════════════ -->
   <section>
-    <h2>The Big Picture</h2>
-    <p>The gamified learning market is exploding. Duolingo proved the model at $1B+ revenue — and they've expanded into math, music, and chess. But they have <strong>NOT entered professional education</strong>. No profession today has a Duolingo-quality gamified mobile experience for exam prep. Every market relies on textbooks, video lectures, and static practice questions.</p>
+    <h2>The Model &mdash; Casual Learning, Not Exam Prep</h2>
+    <p>This is <strong>Duolingo's actual model</strong>: most Duolingo users learn a language casually, not for a test. The same applies here &mdash; people who want to <em>feel like they're learning while having fun</em>. Bite-sized lessons, streaks, XP, leagues. The audience is anyone <strong>curious</strong> about a topic, not just exam candidates.</p>
 
     <div class="stats-grid">
       <div class="stat-card">
+        <span class="number">$216B</span>
+        <span class="label">Gamified Learning Market by 2034</span>
+      </div>
+      <div class="stat-card">
         <span class="number">32.8%</span>
-        <span class="label">Gamified Learning CAGR</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">$216.7B</span>
-        <span class="label">Market by 2034</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">22.3%</span>
-        <span class="label">Microlearning CAGR</span>
+        <span class="label">CAGR Growth Rate</span>
       </div>
       <div class="stat-card">
         <span class="number">80%</span>
         <span class="label">Microlearning Completion Rate</span>
       </div>
+      <div class="stat-card">
+        <span class="number">$8/mo</span>
+        <span class="label">Avg Education App Subscription</span>
+      </div>
     </div>
 
     <div class="comparison-box">
-      <h4>Duolingo — The Benchmark (2025)</h4>
+      <h4>Duolingo &mdash; The Benchmark (2025)</h4>
       <div class="comparison-stats">
         <div class="comparison-stat">
           <div class="val">$1.04B</div>
           <div class="lbl">Annual Revenue</div>
         </div>
         <div class="comparison-stat">
-          <div class="val">50M+</div>
+          <div class="val">52.7M</div>
           <div class="lbl">Daily Active Users</div>
         </div>
         <div class="comparison-stat">
-          <div class="val">10.9M</div>
+          <div class="val">12.2M</div>
           <div class="lbl">Paid Subscribers</div>
+        </div>
+        <div class="comparison-stat">
+          <div class="val">8.8%</div>
+          <div class="lbl">Free&rarr;Paid Conversion</div>
+        </div>
+        <div class="comparison-stat">
+          <div class="val">$2.50</div>
+          <div class="lbl">ARPU / Month</div>
         </div>
         <div class="comparison-stat">
           <div class="val">~$14B</div>
           <div class="lbl">Valuation</div>
         </div>
       </div>
-      <p style="margin-top: 0.75rem; font-size: 0.82rem; color: #6b7280;">Duolingo expanded into Math (2023), Music (2023), Chess (2025) — but has NOT entered professional/career education. That gap is your opportunity.</p>
+      <p style="margin-top: 0.75rem; font-size: 0.82rem; color: #6b7280;">Duolingo expanded into Math, Music, and Chess &mdash; but has NOT entered professional/knowledge education. Most users learn casually, not for exams. 81% of revenue comes from subscriptions, only 7% from ads.</p>
+    </div>
+
+    <div style="background: rgba(168,85,247,0.06); border: 1px solid rgba(168,85,247,0.15); border-radius: 14px; padding: 1.25rem; margin-top: 1rem;">
+      <p style="font-size: 0.88rem; color: #c084fc; margin: 0;"><strong>Key insight:</strong> The casual curiosity market for any topic is 10&ndash;100x larger than the exam-taking market. Finance has ~80K CPA candidates/year but <strong>21.4M people</strong> in r/personalfinance alone. That's your real audience.</p>
     </div>
   </section>
 
-  <!-- ════════════════════ TIER 1 ════════════════════ -->
+  <!-- ════════════════════ S-TIER ════════════════════ -->
   <section>
-    <h2>Tier 1 — Best Expansion Opportunities</h2>
-    <div class="tier-badge tier-1">Highest Potential — Pursue These</div>
+    <h2>S-Tier &mdash; Massive Curiosity, Zero Competition</h2>
+    <div class="tier-badge tier-s">Best Opportunities &mdash; Pursue First</div>
 
-    <!-- #1 Skilled Trades -->
+    <!-- #1 Personal Finance -->
     <div class="profession-card">
       <div class="card-header">
         <div class="rank rank-1">1</div>
         <div>
-          <div class="card-title">Skilled Trades</div>
-          <div class="card-subtitle">Electrician · Plumber · HVAC · Welding · Automotive (ASE)</div>
+          <div class="card-title">Personal Finance &amp; Investing</div>
+          <div class="card-subtitle">Budgeting &middot; Stocks &middot; Crypto &middot; Real Estate &middot; Retirement &middot; Taxes</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
-          <div class="metric-label">Active Apprentices</div>
-          <div class="metric-value highlight-green">680,000 (target: 1M)</div>
+          <div class="metric-label">Reddit Community</div>
+          <div class="metric-value highlight-purple">r/personalfinance: 21.4M</div>
         </div>
         <div class="metric">
-          <div class="metric-label">New Workers Needed by 2027</div>
-          <div class="metric-value highlight-green">456,000</div>
+          <div class="metric-label">Also</div>
+          <div class="metric-value">r/wallstreetbets: 15M &middot; r/investing: 2M</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Govt Investment</div>
-          <div class="metric-value highlight-blue">$145M (DOL)</div>
+          <div class="metric-label">YouTube (Graham Stephan)</div>
+          <div class="metric-value">5.15M subscribers</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Willingness to Pay</div>
-          <div class="metric-value">$10–15/mo</div>
+          <div class="metric-label">Udemy Top Instructor</div>
+          <div class="metric-value">1.5M students enrolled</div>
         </div>
       </div>
       <div style="margin-bottom: 0.75rem;">
-        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Competition Level</div>
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamified Competition</div>
         <div class="competition-meter">
-          <div class="meter-bar"><div class="meter-fill low"></div></div>
-          <span class="meter-label highlight-green">Almost None</span>
+          <div class="meter-bar"><div class="meter-fill none"></div></div>
+          <span class="meter-label highlight-green">None</span>
         </div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">SkillCat (300K users, basic quizzes) is the only player — not gamified</p>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Acorns/Stash teach investing as a side feature. Zogo exists but small &amp; bank-funded. No Duolingo-style app.</p>
+      </div>
+      <div style="margin-bottom: 0.75rem;">
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 9/10</div>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width: 90%;"></div></div>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Concepts break into perfect bite-sized modules: budgeting &rarr; compound interest &rarr; index funds &rarr; tax brackets &rarr; retirement. Quiz-heavy. Visual progress (virtual portfolio growth).</p>
       </div>
       <div class="card-insight">
-        <strong>Why #1:</strong> Massive worker shortage + $145M government investment + zero gamified competition + young mobile-native demographic entering trades. Visual content (circuit diagrams, pipe systems, refrigeration cycles) is PERFECT for gamification. State-by-state licensing creates a content moat. B2B potential with unions and trade schools.
+        <strong>Why #1:</strong> Everyone needs this knowledge, nobody has made it fun. 21M+ Reddit members in finance subs alone. Users perceive direct financial ROI from learning ("I saved $500 because I understood tax brackets"). Universal appeal across every demographic and income level. Natural progression from basics to advanced. The <em>single biggest casual learning gap</em> in any category.
       </div>
     </div>
 
-    <!-- #2 Insurance -->
+    <!-- #2 Psychology -->
     <div class="profession-card">
       <div class="card-header">
         <div class="rank rank-2">2</div>
         <div>
-          <div class="card-title">Insurance Licensing</div>
-          <div class="card-subtitle">Property & Casualty · Life & Health · 50 State Exams</div>
+          <div class="card-title">Psychology &amp; Human Behavior</div>
+          <div class="card-subtitle">Cognitive Biases &middot; Social Psychology &middot; Behavioral Economics &middot; Mental Models</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
-          <div class="metric-label">Annual First-Time Exam Takers</div>
-          <div class="metric-value highlight-green">382,913</div>
+          <div class="metric-label">Yale "Science of Well-Being"</div>
+          <div class="metric-value highlight-purple">4.6M enrollments on Coursera</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Licensed Agents (US)</div>
-          <div class="metric-value">~1.59M</div>
+          <div class="metric-label">YouTube (Vsauce, adjacent)</div>
+          <div class="metric-value">24M subscribers</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Average Pass Rate</div>
-          <div class="metric-value highlight-red">57.9%</div>
+          <div class="metric-label">Documented Biases to Teach</div>
+          <div class="metric-value">200+ (perfect module-per-bias)</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Willingness to Pay</div>
-          <div class="metric-value">$15–20/mo</div>
+          <div class="metric-label">Reddit</div>
+          <div class="metric-value">r/psychology: ~1.2M</div>
         </div>
       </div>
       <div style="margin-bottom: 0.75rem;">
-        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Competition Level</div>
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamified Competition</div>
         <div class="competition-meter">
-          <div class="meter-bar"><div class="meter-fill low"></div></div>
-          <span class="meter-label highlight-green">No Gamified App</span>
+          <div class="meter-bar"><div class="meter-fill none"></div></div>
+          <span class="meter-label highlight-green">None</span>
         </div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">ExamFX (web-based), Kaplan (traditional courses) — nothing mobile-first or gamified</p>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Blinkist/Headway do book summaries (passive). No interactive gamified app for psychology.</p>
+      </div>
+      <div style="margin-bottom: 0.75rem;">
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 9/10</div>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width: 90%;"></div></div>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Each cognitive bias = one lesson. Scenario quizzes ("Which bias is this?"). Optical illusions. Experiment recreations. Highly shareable ("I just learned why I always do this!").</p>
       </div>
       <div class="card-insight">
-        <strong>Why #2:</strong> Nearly 400K exam takers/year with only 58% passing — massive retake market. 50 states = 50 content modules creating natural "course trees." Constant churn of new agents entering the industry. Pure knowledge recall is ideal for spaced repetition. B2B to insurance agencies onboarding agents.
+        <strong>Why #2:</strong> Yale's free psychology course attracted 4.6M enrollments &mdash; staggering demand for casual psychology education. The content is inherently viral ("Did you know your brain does this?"). Social sharing drives organic growth. Zero app competition. Overlaps with self-improvement crowd (massive market).
       </div>
     </div>
 
-    <!-- #3 Nursing -->
+    <!-- #3 Space -->
     <div class="profession-card">
       <div class="card-header">
         <div class="rank rank-3">3</div>
         <div>
-          <div class="card-title">Nursing / Healthcare (NCLEX)</div>
-          <div class="card-subtitle">Largest single-exam market in professional education</div>
+          <div class="card-title">Space &amp; Astronomy</div>
+          <div class="card-subtitle">Planets &middot; Stars &middot; Astrophysics &middot; Space Exploration &middot; Cosmology</div>
         </div>
       </div>
       <div class="metric-grid">
         <div class="metric">
-          <div class="metric-label">Annual NCLEX Candidates</div>
-          <div class="metric-value highlight-green">318,000</div>
+          <div class="metric-label">Reddit</div>
+          <div class="metric-value highlight-purple">r/space: 27.8M members</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Prep Market Size</div>
-          <div class="metric-value highlight-blue">$1.52B (8.9% CAGR)</div>
+          <div class="metric-label">YouTube Audience</div>
+          <div class="metric-value">Kurzgesagt: 24M &middot; Mark Rober: 69M</div>
         </div>
         <div class="metric">
-          <div class="metric-label">First-Time Pass Rate</div>
-          <div class="metric-value highlight-yellow">~73%</div>
+          <div class="metric-label">SmarterEveryDay</div>
+          <div class="metric-value">11.8M subscribers</div>
         </div>
         <div class="metric">
-          <div class="metric-label">Willingness to Pay</div>
-          <div class="metric-value">$30–100/mo</div>
+          <div class="metric-label">Star Walk App</div>
+          <div class="metric-value">10M+ downloads (ID tool, not learning)</div>
         </div>
       </div>
       <div style="margin-bottom: 0.75rem;">
-        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Competition Level</div>
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamified Competition</div>
         <div class="competition-meter">
-          <div class="meter-bar"><div class="meter-fill high"></div></div>
-          <span class="meter-label highlight-yellow">Crowded, No Gamified Player</span>
+          <div class="meter-bar"><div class="meter-fill none"></div></div>
+          <span class="meter-label highlight-green">None</span>
         </div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">UWorld (strong), AMBOSS ($863M), Lecturio, Picmonic, SimpleNursing — but none are Duolingo-style</p>
-      </div>
-      <div class="card-insight">
-        <strong>Why #3:</strong> The largest single-exam market with proven investor interest (AMBOSS raised $259M in 2025). Massive international opportunity (India, Philippines). Crowded with traditional prep but nobody owns the gamified niche. Repeat taker pass rates drop to ~40%, creating acute demand for better tools.
-      </div>
-    </div>
-
-    <!-- #4 Real Estate -->
-    <div class="profession-card">
-      <div class="card-header">
-        <div class="rank rank-4">4</div>
-        <div>
-          <div class="card-title">Real Estate Licensing</div>
-          <div class="card-subtitle">500K+ exam candidates/year across 50 states</div>
-        </div>
-      </div>
-      <div class="metric-grid">
-        <div class="metric">
-          <div class="metric-label">Active Licensees (US)</div>
-          <div class="metric-value">~2M+</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Annual Exam Takers</div>
-          <div class="metric-value highlight-green">500,000+</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">First-Time Pass Rate</div>
-          <div class="metric-value highlight-red">~50%</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Willingness to Pay</div>
-          <div class="metric-value">$80–500</div>
-        </div>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Star Walk/SkyView are identification tools, not learning apps. NASA apps are reference/news. No gamified space science app for adults.</p>
       </div>
       <div style="margin-bottom: 0.75rem;">
-        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Competition Level</div>
-        <div class="competition-meter">
-          <div class="meter-bar"><div class="meter-fill med"></div></div>
-          <span class="meter-label highlight-yellow">Moderate — Not Gamified</span>
-        </div>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">PrepAgent, Kaplan, Colibri — have apps but none truly gamified. Market is cyclical with housing.</p>
+        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Gamifiability &mdash; 9/10</div>
+        <div class="curiosity-bar"><div class="curiosity-fill" style="width: 90%;"></div></div>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.3rem;">Visually stunning (free NASA imagery). Planet quizzes, star classification, scale comparisons, mission timelines. Universal appeal across age and gender.</p>
       </div>
       <div class="card-insight">
-        <strong>Why #4:</strong> Huge volume of career changers who are highly motivated. State-by-state exams create a natural content moat. 50% pass rate = massive retake audience. Caveat: market is cyclical with the housing market.
-      </div>
-    </div>
-
-    <!-- #5 PMP -->
-    <div class="profession-card">
-      <div class="card-header">
-        <div class="rank rank-5">5</div>
-        <div>
-          <div class="card-title">Project Management (PMP)</div>
-          <div class="card-subtitle">Cross-industry appeal, 39.6M professionals globally</div>
-        </div>
-      </div>
-      <div class="metric-grid">
-        <div class="metric">
-          <div class="metric-label">Global Professionals</div>
-          <div class="metric-value">39.6M</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">PMP Holders</div>
-          <div class="metric-value">1.58M</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Annual Exam Attempts</div>
-          <div class="metric-value highlight-green">350K+</div>
-        </div>
-        <div class="metric">
-          <div class="metric-label">Pass Rate</div>
-          <div class="metric-value highlight-yellow">~60%</div>
-        </div>
-      </div>
-      <div style="margin-bottom: 0.75rem;">
-        <div class="metric-label" style="font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:0.3rem;">Competition Level</div>
-        <div class="competition-meter">
-          <div class="meter-bar"><div class="meter-fill med"></div></div>
-          <span class="meter-label highlight-yellow">Fragmented — No Dominant Player</span>
-        </div>
-      </div>
-      <div class="card-insight">
-        <strong>Why #5:</strong> Cross-industry appeal means no ceiling on audience. Strong international demand especially in India and Middle East. Content is highly structured (PMBOK, Agile, etc.) and gamifies well. $200–500 willingness to pay.
+        <strong>Why #3:</strong> r/space has 27.8M members &mdash; one of the largest communities on all of Reddit. The appetite for space content is essentially unlimited (Mark Rober: 69M subs). Visually gorgeous content. Zero gamified competition. Universal appeal across every demographic. People LOVE feeling smart about space.
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════ TIER 2 ════════════════════ -->
+  <!-- ════════════════════ A-TIER ════════════════════ -->
   <section>
-    <h2>Tier 2 — Solid Opportunities</h2>
-    <div class="tier-badge tier-2">Good Markets — Consider for Later</div>
+    <h2>A-Tier &mdash; Large Audience, Highly Gamifiable</h2>
+    <div class="tier-badge tier-a">Strong Opportunities &mdash; Phase 2 Expansion</div>
+
+    <!-- #4 Nutrition -->
+    <div class="profession-card">
+      <div class="card-header">
+        <div class="rank rank-4">4</div>
+        <div>
+          <div class="card-title">Nutrition &amp; Fitness Science</div>
+          <div class="card-subtitle">Macros &middot; Exercise Science &middot; Supplements &middot; Sports Nutrition</div>
+        </div>
+      </div>
+      <div class="metric-grid">
+        <div class="metric">
+          <div class="metric-label">Reddit</div>
+          <div class="metric-value">r/Fitness: 12.4M &middot; r/nutrition: 2.4M &middot; r/bodybuilding: 3M</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Gamified Competition</div>
+          <div class="metric-value highlight-green">None &mdash; tracking apps only, no learning</div>
+        </div>
+      </div>
+      <div class="card-insight">
+        Thousands of tracking apps (MyFitnessPal, MacroFactor) but nobody <em>teaches</em> the science. "Which food has more protein?" "What does creatine actually do?" Perfectly gamifiable. Overlaps with massive gym/health culture.
+      </div>
+    </div>
+
+    <!-- #5 Automotive -->
+    <div class="profession-card">
+      <div class="card-header">
+        <div class="rank rank-5">5</div>
+        <div>
+          <div class="card-title">Automotive &amp; How Cars Work</div>
+          <div class="card-subtitle">Engine Mechanics &middot; EV Technology &middot; Maintenance &middot; Diagnostics</div>
+        </div>
+      </div>
+      <div class="metric-grid">
+        <div class="metric">
+          <div class="metric-label">Reddit</div>
+          <div class="metric-value">r/cars: 7.4M &middot; r/MechanicAdvice: 1M+</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">YouTube</div>
+          <div class="metric-value">ChrisFix: 11M &middot; Donut Media: 9.2M &middot; Scotty Kilmer: 6.6M</div>
+        </div>
+      </div>
+      <div class="card-insight">
+        Zero casual consumer apps exist &mdash; YouTube is the only competition. "What does this dashboard light mean?" "How does a turbo work?" EV transition creating massive new wave of curiosity. Interactive engine diagrams are inherently engaging.
+      </div>
+    </div>
+
+    <!-- #6 Law -->
+    <div class="profession-card">
+      <div class="card-header">
+        <div class="rank rank-6">6</div>
+        <div>
+          <div class="card-title">Law &amp; Legal Basics</div>
+          <div class="card-subtitle">Know Your Rights &middot; Contracts &middot; Tenant Law &middot; Employment Law</div>
+        </div>
+      </div>
+      <div class="metric-grid">
+        <div class="metric">
+          <div class="metric-label">Reddit</div>
+          <div class="metric-value">r/legaladvice: 3.4M members</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Gamified Competition</div>
+          <div class="metric-value highlight-green">Law Dojo exists but targets law students only</div>
+        </div>
+      </div>
+      <div class="card-insight">
+        Everyone has Googled a legal question. "Can my landlord do this?" "What counts as a contract?" "When can police search my car?" Scenario-based quizzes are extremely engaging. Universal need, zero casual competition.
+      </div>
+    </div>
+
+    <!-- #7 Cooking -->
+    <div class="profession-card">
+      <div class="card-header">
+        <div class="rank rank-7">7</div>
+        <div>
+          <div class="card-title">Cooking &amp; Culinary Science</div>
+          <div class="card-subtitle">Techniques &middot; Food Science &middot; Cuisines &middot; Flavor Pairing</div>
+        </div>
+      </div>
+      <div class="metric-grid">
+        <div class="metric">
+          <div class="metric-label">YouTube</div>
+          <div class="metric-value">Joshua Weissman: 10.5M &middot; Babish: 9M+</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Existing App</div>
+          <div class="metric-value highlight-yellow">Parsnip: "Duolingo for cooking" but small &amp; limited</div>
+        </div>
+      </div>
+      <div class="card-insight">
+        Parsnip proves the concept exists but hasn't scaled. Knife cuts, cooking temperatures, flavor pairings, cuisine identification all gamify well. Harvard's "Science &amp; Cooking" course is hugely popular. Universal appeal.
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ B-TIER ════════════════════ -->
+  <section>
+    <h2>B-Tier &mdash; Good Markets, Some Caveats</h2>
+    <div class="tier-badge tier-b">Solid Opportunities &mdash; Phase 3</div>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Profession</th>
-            <th>Annual Exam Takers</th>
+            <th>Topic</th>
+            <th>Curiosity Signal</th>
             <th>Competition</th>
-            <th>Key Advantage</th>
+            <th>Caveat</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Medical Coding (CPC/CCS)</strong></td>
-            <td>~100–150K</td>
-            <td>
-              <div class="competition-meter">
-                <div class="meter-bar"><div class="meter-fill low"></div></div>
-                <span class="meter-label highlight-green">Weak</span>
-              </div>
-            </td>
-            <td>300K+ AAPC members, 40–50% fail rate. Code-matching is inherently game-like</td>
+            <td><strong>Trades / DIY / Home Improvement</strong></td>
+            <td>r/DIY: 22M &middot; r/woodworking: 6.1M</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill none"></div></div><span class="meter-label highlight-green">None</span></div></td>
+            <td>Trades are hands-on &mdash; harder to make purely app-based. Knowledge part works, doing part doesn't.</td>
           </tr>
           <tr>
-            <td><strong>Securities Licensing</strong><br><span style="font-size:0.75rem;color:#6b7280;">Series 7 / 63 / SIE</span></td>
-            <td>~43K+ (Series 7)</td>
-            <td>
-              <div class="competition-meter">
-                <div class="meter-bar"><div class="meter-fill med"></div></div>
-                <span class="meter-label highlight-yellow">Moderate</span>
-              </div>
-            </td>
-            <td>Less saturated than CPA/CFA. Scenario-based content gamifies well</td>
+            <td><strong>Cybersecurity / Digital Literacy</strong></td>
+            <td>r/hacking: 2.9M &middot; TryHackMe: 6M users</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill med"></div></div><span class="meter-label highlight-yellow">TryHackMe</span></div></td>
+            <td>TryHackMe dominates the aspiring-pro niche. But casual "protect yourself online" for non-tech people is open.</td>
           </tr>
           <tr>
-            <td><strong>EMT / Paramedic</strong></td>
-            <td>~100K+</td>
-            <td>
-              <div class="competition-meter">
-                <div class="meter-bar"><div class="meter-fill low"></div></div>
-                <span class="meter-label highlight-green">Weak</span>
-              </div>
-            </td>
-            <td>617K certified clinicians. Recertification every 2 years = recurring demand</td>
+            <td><strong>Engineering Fundamentals</strong></td>
+            <td>Practical Engineering: 4.1M &middot; Kurzgesagt: 24M</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill med"></div></div><span class="meter-label highlight-yellow">Brilliant.org</span></div></td>
+            <td>Brilliant.org (10M users, $25/mo) covers this. But there's room for a more casual, cheaper approach.</td>
           </tr>
           <tr>
-            <td><strong>Pharmacy Technician</strong></td>
-            <td>~50K+</td>
-            <td>
-              <div class="competition-meter">
-                <div class="meter-bar"><div class="meter-fill low"></div></div>
-                <span class="meter-label highlight-green">Weak</span>
-              </div>
-            </td>
-            <td>313K certified. Drug ID and dosage calcs are perfect for gamification</td>
+            <td><strong>Architecture / Interior Design</strong></td>
+            <td>r/InteriorDesign: 1.1M &middot; HGTV audience: millions</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill none"></div></div><span class="meter-label highlight-green">None</span></div></td>
+            <td>Design is subjective &mdash; harder to make quiz-based. Style ID and color theory work well though.</td>
           </tr>
           <tr>
-            <td><strong>OSHA / Construction Safety</strong></td>
-            <td>1.5M+ trained/yr</td>
-            <td>
-              <div class="competition-meter">
-                <div class="meter-bar"><div class="meter-fill low"></div></div>
-                <span class="meter-label highlight-green">Weak</span>
-              </div>
-            </td>
-            <td>Legally required training = constant demand. All web-video, no mobile app</td>
+            <td><strong>Sustainability / Environment</strong></td>
+            <td>r/environment: 1.6M &middot; Gen Z highly engaged</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-green">Weak</span></div></td>
+            <td>Smaller audience. Content can feel preachy. Best framed as science, not advocacy.</td>
           </tr>
           <tr>
-            <td><strong>Civil Engineering</strong><br><span style="font-size:0.75rem;color:#6b7280;">FE / PE Exams</span></td>
-            <td>~53K (FE) + ~29K (PE)</td>
-            <td>
-              <div class="competition-meter">
-                <div class="meter-bar"><div class="meter-fill low"></div></div>
-                <span class="meter-label highlight-green">Weak</span>
-              </div>
-            </td>
-            <td>Same NCEES exam system as your current ME content — easiest expansion path</td>
+            <td><strong>Healthcare / Anatomy</strong></td>
+            <td>Complete Anatomy: 3M+ users</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-yellow">Some</span></div></td>
+            <td>3D anatomy apps exist but target students. Liability concerns limit casual medical content.</td>
           </tr>
           <tr>
-            <td><strong>Electrical Engineering</strong><br><span style="font-size:0.75rem;color:#6b7280;">FE / PE Exams</span></td>
-            <td>~20K combined</td>
-            <td>
-              <div class="competition-meter">
-                <div class="meter-bar"><div class="meter-fill low"></div></div>
-                <span class="meter-label highlight-green">Weak</span>
-              </div>
-            </td>
-            <td>Same NCEES platform — only content development needed, not platform changes</td>
+            <td><strong>Photography</strong></td>
+            <td>r/photography: 5.5M &middot; Peter McKinnon: 6M</td>
+            <td><div class="competition-meter"><div class="meter-bar"><div class="meter-fill low"></div></div><span class="meter-label highlight-green">Weak</span></div></td>
+            <td>Visual/creative skill is hard to quiz. Composition rules and settings work, artistry doesn't.</td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- ════════════════════ TIER 3 — AVOID ════════════════════ -->
+  <!-- ════════════════════ AVOID ════════════════════ -->
   <section>
-    <h2>Tier 3 — Avoid for Now</h2>
-    <div class="tier-badge tier-3">Saturated or Too Small</div>
+    <h2>Avoid</h2>
+    <div class="tier-badge tier-avoid">Saturated or Duolingo Already There</div>
 
     <div class="avoid-card">
-      <div class="avoid-name">CPA / CFA Exam Prep</div>
-      <div class="avoid-reason">Dominated by Becker ($1K–$3.5K courses), Kaplan Schweser, and UWorld. Deeply entrenched incumbents with strong brand loyalty and high switching costs.</div>
+      <div class="avoid-name">Music Theory</div>
+      <div class="avoid-reason">Duolingo has entered this market directly with 135M MAU distribution. Simply Piano and Yousician cover instrument learning. Competing against Duolingo itself in their model is a losing battle.</div>
     </div>
     <div class="avoid-card">
-      <div class="avoid-name">Cloud / IT Certifications (AWS, CompTIA)</div>
-      <div class="avoid-reason">CompTIA already launched CertGames (gamified). Cloud certs require hands-on lab work that gamification alone can't replace. Crowded market with A Cloud Guru, Pluralsight, Whizlabs.</div>
+      <div class="avoid-name">Programming / Coding</div>
+      <div class="avoid-reason">Codecademy (50M users, acquired for $525M), Mimo (20M downloads), Sololearn (20M+), freeCodeCamp. Deeply saturated. Every possible angle has been tried.</div>
     </div>
     <div class="avoid-card">
-      <div class="avoid-name">India Test Prep (NEET, GATE, JEE)</div>
-      <div class="avoid-reason">Enormous market (2.2M+ NEET takers) but Physics Wallah ($410M IPO) and Unacademy are deeply entrenched. Requires massive capital and local expertise to compete.</div>
+      <div class="avoid-name">Math (standalone)</div>
+      <div class="avoid-reason">Duolingo Math exists. Brilliant.org dominates interactive math. Khan Academy is free. No room.</div>
     </div>
-    <div class="avoid-card">
-      <div class="avoid-name">Pharmacy (PharmD)</div>
-      <div class="avoid-reason">Shrinking job demand and UWorld has near-monopoly on exam prep.</div>
+  </section>
+
+  <!-- ════════════════════ MONETIZATION ════════════════════ -->
+  <section>
+    <h2>Monetization &mdash; How Casual Learning Apps Make Money</h2>
+
+    <h3>Duolingo's Paywall Playbook</h3>
+    <p>The critical insight: <strong>all content is free</strong>. Duolingo paywalls <em>convenience and comfort</em>, not content.</p>
+
+    <div class="funnel">
+      <div class="funnel-step">
+        <div class="funnel-pct highlight-green">Free</div>
+        <div>
+          <div class="funnel-label">All courses &amp; lessons</div>
+          <div class="funnel-desc">Full content access. 5 hearts (mistakes). Ads between lessons.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-pct highlight-blue">$5/mo</div>
+        <div>
+          <div class="funnel-label">Super &mdash; $59.99/year</div>
+          <div class="funnel-desc">No ads. Unlimited hearts. Streak freeze. Offline. Progress quizzes.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-pct highlight-purple">$14/mo</div>
+        <div>
+          <div class="funnel-label">Max &mdash; $168/year</div>
+          <div class="funnel-desc">Everything in Super + AI video call, roleplay, "explain my answer."</div>
+        </div>
+      </div>
     </div>
-    <div class="avoid-card">
-      <div class="avoid-name">Architecture (ARE Exam)</div>
-      <div class="avoid-reason">Only ~5,800 candidates/year. Too small to justify content investment.</div>
+
+    <p style="font-size: 0.85rem; margin-top: 0.5rem;"><strong>Top conversion drivers:</strong> #1 Unlimited hearts (no penalty for mistakes). #2 Ad removal. #3 Streak protection (loss aversion). 80&ndash;90% of trial conversions happen on Day 0 &mdash; onboarding is everything.</p>
+
+    <h3>Revenue Breakdown (Duolingo 2024)</h3>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="number">81%</span>
+        <span class="label">Subscriptions ($606M)</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">7%</span>
+        <span class="label">Ads ($52M)</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">6%</span>
+        <span class="label">English Test ($45M)</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">5%</span>
+        <span class="label">In-App Purchases ($37M)</span>
+      </div>
+    </div>
+
+    <h3>Competitive Pricing Landscape</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>App</th><th>Focus</th><th>Pricing</th><th>Users</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Duolingo</strong></td><td>Languages, Math, Music</td><td>Free / $5-14/mo</td><td>133M MAU</td></tr>
+          <tr><td><strong>Brilliant.org</strong></td><td>STEM / Math / Science</td><td>$25/mo or $300/yr</td><td>10M registered</td></tr>
+          <tr><td><strong>Blinkist</strong></td><td>Book summaries</td><td>$12-22/mo</td><td>20M+</td></tr>
+          <tr><td><strong>Headway</strong></td><td>Book summaries (gamified)</td><td>Similar to Blinkist</td><td>30M+</td></tr>
+          <tr><td><strong>Mimo</strong></td><td>Coding</td><td>$7-10/mo</td><td>20M downloads</td></tr>
+          <tr><td><strong>MasterClass</strong></td><td>Celebrity-taught classes</td><td>$10-20/mo</td><td>2M+ paid</td></tr>
+          <tr><td><strong>Skillshare</strong></td><td>Creative skills</td><td>$14/mo</td><td>1.46M paid</td></tr>
+          <tr><td><strong>CuriosityStream</strong></td><td>Documentaries</td><td>$3-10/mo</td><td>20M subs</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Your Pricing Sweet Spot</h3>
+    <div class="mono-grid">
+      <div class="mono-card">
+        <h4>Free Tier</h4>
+        <div class="amount highlight-green">$0</div>
+        <div class="details">All content. Hearts/lives limit. Ads. XP, streaks, leagues. The hook.</div>
+      </div>
+      <div class="mono-card">
+        <h4>Pro (target: 4-8% conversion)</h4>
+        <div class="amount highlight-blue">$7.99/mo or $49.99/yr</div>
+        <div class="details">No ads. Unlimited hearts. Streak freeze. Offline. Progress stats. Undercuts Brilliant ($25/mo) by 3x.</div>
+      </div>
+      <div class="mono-card">
+        <h4>B2B / Teams</h4>
+        <div class="amount highlight-purple">$10-25/seat/mo</div>
+        <div class="details">Corporate "lunch &amp; learn" replacement. Onboarding tool. Employee perk. US training spend: $874/employee/year.</div>
+      </div>
+    </div>
+
+    <h3>Key Retention Challenge</h3>
+    <div style="background: rgba(239,68,68,0.04); border: 1px solid rgba(239,68,68,0.12); border-radius: 14px; padding: 1.25rem;">
+      <p style="font-size: 0.88rem; color: #f87171; margin: 0 0 0.5rem;"><strong>Education apps have the worst retention of any category.</strong></p>
+      <p style="font-size: 0.82rem; color: #9ca3af; margin: 0;">Average Day 30 retention: 2&ndash;4%. Duolingo achieves ~20% through gamification depth (streaks, social pressure, leagues, notifications). Your gamification engine is your moat. Without it, users churn in weeks.</p>
     </div>
   </section>
 
@@ -983,313 +989,158 @@
 
     <div class="roadmap">
       <div class="roadmap-phase">
-        <div class="phase-label phase-1-label">Phase 1 — Low Effort, Shared Platform</div>
-        <h4>Engineering Siblings (NCEES Exams)</h4>
+        <div class="phase-label phase-1-label">Phase 1 &mdash; Now (Existing Engine)</div>
+        <h4>Engineering + First Curiosity Topic</h4>
         <ul>
-          <li>Mechanical Engineering — <strong>current</strong></li>
-          <li>Civil Engineering — same NCEES FE/PE exam system, overlapping content</li>
-          <li>Electrical Engineering — same exam system, only content development needed</li>
+          <li>Mechanical Engineering &mdash; <strong>keep as first "course"</strong></li>
+          <li>Personal Finance &mdash; biggest curiosity market, zero competition, universal appeal</li>
+          <li>Add profession/topic picker to app (like Duolingo's language picker)</li>
         </ul>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">~82K combined annual FE+PE candidates. Reuses 100% of existing gamification engine.</p>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">Finance validates the multi-topic model with the largest possible audience.</p>
       </div>
 
       <div class="roadmap-phase">
-        <div class="phase-label phase-2-label">Phase 2 — New Content, Biggest Markets</div>
-        <h4>Skilled Trades + Insurance</h4>
+        <div class="phase-label phase-2-label">Phase 2 &mdash; Growth</div>
+        <h4>High-Curiosity Expansion</h4>
         <ul>
-          <li>Electrician / Plumber / HVAC — biggest opportunity, zero competition</li>
-          <li>ASE Automotive — 200K+ certified, recurring recertification</li>
-          <li>Insurance Licensing — 383K exam takers, 58% pass rate, 50 state modules</li>
+          <li>Psychology &amp; Human Behavior &mdash; viral content, "I just learned why I do this"</li>
+          <li>Space &amp; Astronomy &mdash; 27.8M Reddit audience, visually stunning</li>
+          <li>Nutrition &amp; Fitness Science &mdash; overlaps with massive gym culture</li>
         </ul>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">This is where the majority of growth will come from. New content but same gamification mechanics.</p>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">These three topics each have 10M+ curiosity signals and zero gamified competition.</p>
       </div>
 
       <div class="roadmap-phase">
-        <div class="phase-label phase-3-label">Phase 3 — Scale</div>
-        <h4>Healthcare + Business</h4>
+        <div class="phase-label phase-3-label">Phase 3 &mdash; Scale</div>
+        <h4>Broaden the Platform</h4>
         <ul>
-          <li>Nursing (NCLEX) — 318K candidates, $1.52B market</li>
-          <li>Real Estate — 500K+ candidates, 50% pass rate</li>
-          <li>PMP — 350K+ attempts, cross-industry</li>
-          <li>Medical Coding — 300K AAPC members</li>
+          <li>Automotive / How Cars Work &mdash; 7.4M r/cars + EV curiosity wave</li>
+          <li>Law &amp; Legal Basics &mdash; universal need, "know your rights"</li>
+          <li>Cooking &amp; Culinary Science &mdash; proven concept (Parsnip), huge YouTube audience</li>
+          <li>Additional engineering disciplines (Civil, Electrical) &mdash; same NCEES engine</li>
         </ul>
-        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">These markets are larger but have more competition. Enter once the platform has brand recognition.</p>
+        <p style="font-size:0.78rem;color:#6b7280;margin-top:0.5rem;">By this phase, the platform has a strong brand and the gamification engine is proven across multiple topics.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════ INVESTOR SIGNALS ════════════════════ -->
-  <section>
-    <h2>Investor Signals</h2>
-    <p>EdTech VC fell to $2.4B in 2024 (lowest in a decade), but average check size rose to <strong>$7.8M</strong> — investors are making fewer, bigger bets on proven models. Here's where the money is going:</p>
-
-    <div class="investor-grid">
-      <div class="investor-card">
-        <h4>AMBOSS (Medical Education)</h4>
-        <div class="amount">$259M Series C</div>
-        <div class="details">March 2025 · ~$863M valuation · Approaching IPO</div>
-      </div>
-      <div class="investor-card">
-        <h4>BetterUp (Corporate Coaching)</h4>
-        <div class="amount">$373M Series E</div>
-        <div class="details">January 2025 · Workforce upskilling</div>
-      </div>
-      <div class="investor-card">
-        <h4>Attensi (Gamified Training)</h4>
-        <div class="amount">$25M Growth Round</div>
-        <div class="details">May 2025 · 40%+ YoY growth for 3 years</div>
-      </div>
-      <div class="investor-card">
-        <h4>Duolingo (Language Learning)</h4>
-        <div class="amount">$1.04B Revenue</div>
-        <div class="details">2025 · $14B valuation · The benchmark</div>
-      </div>
-    </div>
-
-    <div class="table-wrap" style="margin-top: 1.5rem;">
-      <table>
-        <thead>
-          <tr><th>What Investors Want</th><th>Your Angle</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>AI-powered personalization</td>
-            <td>Adaptive learning engine, AI-generated practice questions</td>
-          </tr>
-          <tr>
-            <td>Measurable learning outcomes</td>
-            <td>Track pass rates of users vs. national average</td>
-          </tr>
-          <tr>
-            <td>Scalable mechanics (not just content)</td>
-            <td>Gamification engine reusable across all professions</td>
-          </tr>
-          <tr>
-            <td>B2B revenue channel</td>
-            <td>Sell to trade schools, unions, insurance agencies, hospitals</td>
-          </tr>
-          <tr>
-            <td>Category creation</td>
-            <td>"Duolingo for Professions" — first mover in an underserved vertical</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </section>
 
   <!-- ════════════════════ DOMAIN / NAMING ════════════════════ -->
   <section>
     <h2>Domain Name Suggestions</h2>
-    <p>You need a name that works across all professions — no engineering-specific language. Sorted by likelihood of <code>.com</code> availability.</p>
+    <p>With the casual knowledge angle, the name should feel <strong>fun, curious, and broad</strong> &mdash; not certification-focused. Think "Duolingo" energy, not "ExamPrep" energy.</p>
 
-    <h3>Top Picks — Invented Words (Best Availability)</h3>
+    <h3>Top Picks &mdash; Invented Words (Best .com Availability)</h3>
     <div class="name-grid">
       <div class="name-card">
-        <div class="domain">Certivo.com <span class="availability-tag avail-good">Likely Available</span></div>
-        <div class="rationale">"Cert" + invented suffix. Professional, clean, universal</div>
+        <div class="domain">Drillio.com <span class="avail-tag avail-good">Likely Available</span></div>
+        <div class="rationale">Practice drills + playful suffix. Duolingo-energy. Fun to say.</div>
       </div>
       <div class="name-card">
-        <div class="domain">Praxly.com <span class="availability-tag avail-good">Likely Available</span></div>
-        <div class="rationale">From Greek "praxis" (practice). Elegant, unique</div>
+        <div class="domain">Praxly.com <span class="avail-tag avail-good">Likely Available</span></div>
+        <div class="rationale">From Greek "praxis" (practice). Elegant, curious, intellectual.</div>
       </div>
       <div class="name-card">
-        <div class="domain">Drillio.com <span class="availability-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Practice drills + playful suffix. Duolingo vibes</div>
+        <div class="domain">Questly.com <span class="avail-tag avail-good">Likely Available</span></div>
+        <div class="rationale">Quest + ly. Every topic is a quest. Adventurous, broad.</div>
       </div>
       <div class="name-card">
-        <div class="domain">Examio.com <span class="availability-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Exam-focused, clean, international</div>
+        <div class="domain">Skillivo.com <span class="avail-tag avail-good">Likely Available</span></div>
+        <div class="rationale">Skill-focused, playful ending. Works for any topic.</div>
       </div>
       <div class="name-card">
-        <div class="domain">Certora.com <span class="availability-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Certification-forward, brandable</div>
+        <div class="domain">Readify.com <span class="avail-tag avail-maybe">Check Avail</span></div>
+        <div class="rationale">"Ready" + "-ify." Keeps your brand DNA. Universal.</div>
       </div>
       <div class="name-card">
-        <div class="domain">Skillivo.com <span class="availability-tag avail-good">Likely Available</span></div>
-        <div class="rationale">Skill-focused, playful</div>
+        <div class="domain">Learnova.com <span class="avail-tag avail-good">Likely Available</span></div>
+        <div class="rationale">Learn + nova (new/star). Fresh, bright, knowledge-forward.</div>
       </div>
       <div class="name-card">
-        <div class="domain">Readify.com <span class="availability-tag avail-maybe">Check Avail</span></div>
-        <div class="rationale">"Ready" + "-ify" — to make ready. Keeps "Ready" branding</div>
+        <div class="domain">Knowledgio.com <span class="avail-tag avail-good">Likely Available</span></div>
+        <div class="rationale">Knowledge + playful suffix. Very clear what the app is.</div>
       </div>
       <div class="name-card">
-        <div class="domain">Prepforge.com <span class="availability-tag avail-maybe">Check Avail</span></div>
-        <div class="rationale">Prep + forge (building mastery). Strong imagery</div>
+        <div class="domain">Sparqly.com <span class="avail-tag avail-good">Likely Available</span></div>
+        <div class="rationale">Spark + ly. Curiosity spark. Energetic, fun.</div>
       </div>
     </div>
 
-    <h3>Strong if Available — Real Words (May Be Premium)</h3>
+    <h3>Strong if Available (Real Words)</h3>
     <div class="name-grid">
       <div class="name-card">
-        <div class="domain">ProReady.com <span class="availability-tag avail-maybe">Check Avail</span></div>
-        <div class="rationale">Keeps your "Ready" branding, adds "Pro" for all professions</div>
+        <div class="domain">BrainDrill.com <span class="avail-tag avail-maybe">Check Avail</span></div>
+        <div class="rationale">Immediate clarity: drill your brain. Catchy. Gamified feel.</div>
       </div>
       <div class="name-card">
-        <div class="domain">CertReady.com <span class="availability-tag avail-maybe">Check Avail</span></div>
-        <div class="rationale">Clear value prop: ready for certification</div>
+        <div class="domain">CurioPro.com <span class="avail-tag avail-maybe">Check Avail</span></div>
+        <div class="rationale">Curiosity + Pro. Casual yet aspirational.</div>
       </div>
       <div class="name-card">
-        <div class="domain">PassReady.com <span class="availability-tag avail-maybe">Check Avail</span></div>
-        <div class="rationale">Outcome-focused: ready to pass your exam</div>
+        <div class="domain">MindForge.com <span class="avail-tag avail-maybe">Check Avail</span></div>
+        <div class="rationale">Forging knowledge. Strong imagery. Broad.</div>
       </div>
       <div class="name-card">
-        <div class="domain">GuildPrep.com <span class="availability-tag avail-maybe">Check Avail</span></div>
-        <div class="rationale">"Guild" evokes professional community + mastery</div>
+        <div class="domain">SkillSpark.com <span class="avail-tag avail-maybe">Check Avail</span></div>
+        <div class="rationale">Igniting skill acquisition. Clean, memorable.</div>
       </div>
-    </div>
-
-    <h3>Known Taken — Avoid</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Domain</th><th>Why It's Taken</th></tr></thead>
-        <tbody>
-          <tr><td>ProQuest.com</td><td>Major academic database company (Clarivate)</td></tr>
-          <tr><td>Preply.com</td><td>Large online tutoring platform</td></tr>
-          <tr><td>CertMaster.com</td><td>CompTIA's official exam prep product</td></tr>
-          <tr><td>SkillForge.com</td><td>Existing IT training company</td></tr>
-          <tr><td>ProPrep.com</td><td>Existing education platform</td></tr>
-        </tbody>
-      </table>
     </div>
 
     <div class="card-insight" style="margin-top:1rem;">
-      <strong>Next step:</strong> Bulk-check these at <strong>instantdomainsearch.com</strong> or <strong>namecheap.com</strong>. Invented names (Certivo, Praxly, Drillio) have the best odds of being available at standard registration price (~$10–15/yr).
+      <strong>Next step:</strong> Bulk-check at <strong>instantdomainsearch.com</strong> or <strong>namecheap.com</strong>. Invented names (Drillio, Praxly, Questly, Learnova) have the best odds of being available at ~$10&ndash;15/yr.
     </div>
   </section>
 
   <!-- ════════════════════ RENAME PLAN ════════════════════ -->
   <section>
-    <h2>Rename Plan — From MechReady to [New Name]</h2>
-    <p>Full audit found <strong>~195+ occurrences across ~55 files</strong>. Here's what needs to change:</p>
+    <h2>Rename Plan &mdash; From MechReady to [New Name]</h2>
+    <p>Full codebase audit: <strong>~195+ occurrences across ~55 files</strong>.</p>
 
     <h3>External Services</h3>
-    <div class="rename-category risk-med">
-      <div class="rename-header">
-        <span class="cat-name">Vercel — Rename project or create new, update domain</span>
-        <span class="cat-count">Dashboard + DNS</span>
-      </div>
-    </div>
-    <div class="rename-category risk-med">
-      <div class="rename-header">
-        <span class="cat-name">Domain — Purchase new .com, configure DNS, set up redirects from mechready.com</span>
-        <span class="cat-count">301 Redirects</span>
-      </div>
-    </div>
-    <div class="rename-category risk-med">
-      <div class="rename-header">
-        <span class="cat-name">Email — Set up support@newname.com (referenced in 4 files, ~16 places)</span>
-        <span class="cat-count">4 files</span>
-      </div>
-    </div>
-    <div class="rename-category risk-med">
-      <div class="rename-header">
-        <span class="cat-name">Paddle — Update product names and checkout URLs</span>
-        <span class="cat-count">Dashboard</span>
-      </div>
-    </div>
-    <div class="rename-category risk-med">
-      <div class="rename-header">
-        <span class="cat-name">Google OAuth — Update authorized redirect URIs</span>
-        <span class="cat-count">Console</span>
-      </div>
-    </div>
-    <div class="rename-category risk-med">
-      <div class="rename-header">
-        <span class="cat-name">NextAuth — Update NEXTAUTH_URL env var</span>
-        <span class="cat-count">.env</span>
-      </div>
-    </div>
+    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Vercel &mdash; Rename project, update domain &amp; DNS</span><span class="cat-count">Dashboard</span></div></div>
+    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Domain &mdash; Purchase new .com, 301 redirect from mechready.com</span><span class="cat-count">DNS</span></div></div>
+    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Email &mdash; support@newname.com (4 files, ~16 refs)</span><span class="cat-count">4 files</span></div></div>
+    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Paddle &mdash; Product names &amp; checkout URLs</span><span class="cat-count">Dashboard</span></div></div>
+    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Google OAuth &mdash; Redirect URIs &middot; NextAuth URL</span><span class="cat-count">.env</span></div></div>
 
-    <h3>Code Changes (Find & Replace)</h3>
-    <div class="rename-category risk-low">
-      <div class="rename-header">
-        <span class="cat-name">package.json + manifest.json — name fields</span>
-        <span class="cat-count">2 files · 4 refs</span>
-      </div>
-    </div>
-    <div class="rename-category risk-low">
-      <div class="rename-header">
-        <span class="cat-name">Root layout SEO / metadata / OG / JSON-LD</span>
-        <span class="cat-count">1 file · ~16 refs</span>
-      </div>
-    </div>
-    <div class="rename-category risk-low">
-      <div class="rename-header">
-        <span class="cat-name">OG image generators + sitemap + robots.ts</span>
-        <span class="cat-count">4 files · 5 refs</span>
-      </div>
-    </div>
-    <div class="rename-category risk-low">
-      <div class="rename-header">
-        <span class="cat-name">UI components — sidebar, footer, modals, landing page, loading screens</span>
-        <span class="cat-count">10 files · ~14 refs</span>
-      </div>
-    </div>
-    <div class="rename-category risk-low">
-      <div class="rename-header">
-        <span class="cat-name">Page-level metadata — all layout.tsx / page.tsx meta descriptions</span>
-        <span class="cat-count">14 files · ~16 refs</span>
-      </div>
-    </div>
-    <div class="rename-category risk-low">
-      <div class="rename-header">
-        <span class="cat-name">Legal pages — Terms, Privacy, Refund Policy (heavy text)</span>
-        <span class="cat-count">3 files · ~38 refs</span>
-      </div>
-    </div>
-    <div class="rename-category risk-low">
-      <div class="rename-header">
-        <span class="cat-name">Code comments, test files, documentation</span>
-        <span class="cat-count">13 files · ~60 refs</span>
-      </div>
-    </div>
-    <div class="rename-category risk-low">
-      <div class="rename-header">
-        <span class="cat-name">URL references — https://mechready.com → new domain (6 files)</span>
-        <span class="cat-count">6 files</span>
-      </div>
-    </div>
+    <h3>Code Changes (Find &amp; Replace)</h3>
+    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">package.json + manifest.json</span><span class="cat-count">2 files &middot; 4 refs</span></div></div>
+    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">Root layout SEO / metadata / OG / JSON-LD</span><span class="cat-count">1 file &middot; ~16 refs</span></div></div>
+    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">OG image generators + sitemap + robots.ts</span><span class="cat-count">4 files &middot; 5 refs</span></div></div>
+    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">UI components &mdash; sidebar, footer, modals, landing, loading</span><span class="cat-count">10 files &middot; ~14 refs</span></div></div>
+    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">Page-level metadata &mdash; all layout.tsx meta descriptions</span><span class="cat-count">14 files &middot; ~16 refs</span></div></div>
+    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">Legal pages &mdash; Terms, Privacy, Refund Policy</span><span class="cat-count">3 files &middot; ~38 refs</span></div></div>
+    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">Code comments, tests, documentation</span><span class="cat-count">13 files &middot; ~60 refs</span></div></div>
+    <div class="rename-category risk-low"><div class="rename-header"><span class="cat-name">URL references: https://mechready.com &rarr; new domain</span><span class="cat-count">6 files</span></div></div>
 
     <h3>High-Risk Items</h3>
-    <div class="rename-category risk-high">
-      <div class="rename-header">
-        <span class="cat-name">localStorage keys (6 keys across 4 files) — WILL WIPE USER DATA IF RENAMED</span>
-        <span class="cat-count" style="background:rgba(239,68,68,0.2);color:#f87171;">HIGH RISK</span>
-      </div>
-    </div>
+    <div class="rename-category risk-high"><div class="rename-header"><span class="cat-name">localStorage keys (6 keys, 4 files) &mdash; WILL WIPE USER DATA</span><span class="cat-count" style="background:rgba(239,68,68,0.2);color:#f87171;">HIGH RISK</span></div></div>
     <p style="font-size:0.82rem;margin: 0.5rem 0 0.5rem 1rem;color:#f87171;">
-      Keys: <code>mechready-storage</code>, <code>mechready-course</code>, <code>mechready-engagement</code>, <code>mechready-fake-users</code>, <code>mechready-cookie-consent</code>, <code>mechready-guest-xp</code>
+      <code>mechready-storage</code> &middot; <code>mechready-course</code> &middot; <code>mechready-engagement</code> &middot; <code>mechready-fake-users</code> &middot; <code>mechready-cookie-consent</code> &middot; <code>mechready-guest-xp</code>
     </p>
     <p style="font-size:0.82rem;margin: 0 0 1rem 1rem;color:#9ca3af;">
-      <strong>Migration strategy:</strong> Write a one-time migration — on app load, check for old <code>mechready-*</code> keys, copy data to new keys, then delete old keys. This preserves all existing user progress.
+      <strong>Migration:</strong> On app load, check for old <code>mechready-*</code> keys, copy to new keys, delete old. Preserves all user progress.
     </p>
-
-    <div class="rename-category risk-med">
-      <div class="rename-header">
-        <span class="cat-name">Static assets — favicon, logo, OG image, apple-touch-icon, 9 icon sizes</span>
-        <span class="cat-count" style="background:rgba(245,158,11,0.2);color:#f59e0b;">MANUAL</span>
-      </div>
-    </div>
-    <p style="font-size:0.82rem;margin: 0 0 1rem 1rem;color:#9ca3af;">
-      14 image files need redesign with new brand identity. Can't be automated — requires new logo/icon design.
-    </p>
+    <div class="rename-category risk-med"><div class="rename-header"><span class="cat-name">Static assets &mdash; favicon, logo, OG image, 14 icon files</span><span class="cat-count" style="background:rgba(245,158,11,0.2);color:#f59e0b;">MANUAL DESIGN</span></div></div>
   </section>
 
-  <!-- ════════════════════ KEY TAKEAWAY ════════════════════ -->
+  <!-- ════════════════════ BOTTOM LINE ════════════════════ -->
   <section>
-    <div class="comparison-box" style="border-color: rgba(168,85,247,0.2); background: linear-gradient(135deg, rgba(168,85,247,0.05), rgba(99,102,241,0.05));">
-      <h4 style="color: #a78bfa;">Bottom Line</h4>
-      <p style="font-size: 0.9rem; color: #d1d5db;">
-        <strong>Skilled Trades</strong> is the single biggest opportunity — 680K+ apprentices growing to 1M, massive worker shortage, $145M government investment, and <strong>virtually zero gamified competition</strong>. Combined with insurance licensing (383K exam takers, 58% pass rate) and your existing engineering content, a multi-profession platform could address <strong>millions of annual learners</strong> across professions that are currently stuck with textbooks and static video courses.
+    <div style="background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(99,102,241,0.08)); border: 1px solid rgba(168,85,247,0.2); border-radius: 16px; padding: 1.5rem;">
+      <h4 style="color: #c084fc; font-size: 1.1rem; font-weight: 800; margin-bottom: 0.75rem;">Bottom Line</h4>
+      <p style="font-size: 0.9rem; color: #d1d5db; margin-bottom: 0.75rem;">
+        The casual curiosity market dwarfs the exam-prep market. <strong>Personal Finance</strong> alone has 21M+ Reddit members vs. 80K CPA exam takers. <strong>Space</strong> has 27.8M. <strong>Psychology</strong> attracted 4.6M enrollments from a single Yale course. These audiences are 100&ndash;1000x larger than any certification market &mdash; and none of them have a Duolingo-style app.
       </p>
-      <p style="font-size: 0.82rem; color: #9ca3af; margin-top: 0.75rem;">
-        The gamification gap is real. Duolingo hasn't entered professional education. AMBOSS proved healthcare education can reach $863M valuation. The first to build a true Duolingo-quality experience across professional certifications will own the category.
+      <p style="font-size: 0.9rem; color: #d1d5db; margin-bottom: 0.75rem;">
+        Your gamification engine (XP, streaks, leagues, spaced repetition) is <strong>topic-agnostic</strong>. The same mechanics that make mechanical engineering fun can make personal finance, psychology, and space science fun. Each new topic is just content &mdash; the engine is the moat.
+      </p>
+      <p style="font-size: 0.85rem; color: #9ca3af;">
+        Start with Finance (biggest gap) alongside your existing Engineering content. Prove the multi-topic model. Then expand to Psychology, Space, Nutrition. By Phase 3, you'll have a platform that competes with Brilliant.org but at Duolingo pricing &mdash; more fun, more accessible, more topics.
       </p>
     </div>
   </section>
 
   <footer>
-    Market Research Report · Generated March 2026 · Sources include NCEES, NCSBN, BLS, DOL, HolonIQ, Statista, company filings, and industry reports
+    Market Research Report &middot; March 2026 &middot; Sources include Reddit stats, YouTube channel data, Coursera enrollments, Duolingo investor reports, App Store data, Statista, HolonIQ, Business of Apps, and industry reports.
   </footer>
 
 </div>
