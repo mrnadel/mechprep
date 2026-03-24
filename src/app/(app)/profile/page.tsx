@@ -508,11 +508,10 @@ export default function ProfilePage() {
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6, type: 'spring', stiffness: 300 }}
-              className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 text-xs font-extrabold px-2.5 py-0.5 rounded-full shadow-lg whitespace-nowrap flex items-center gap-1"
+              className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-500 text-amber-950 text-[11px] font-bold tracking-wide px-3 py-0.5 rounded-full shadow-md whitespace-nowrap border border-amber-300/50"
               style={{ zIndex: 20 }}
             >
-              <LevelBadge level={levelInfo.current} size={18} />
-              <span>Lv. {levelInfo.current.level}</span>
+              Level {levelInfo.current.level}
             </motion.div>
             {/* Remove photo button */}
             {image && !avatarUploading && (

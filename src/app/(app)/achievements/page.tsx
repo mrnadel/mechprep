@@ -3,6 +3,7 @@
 import { useProgress } from '@/store/useStore';
 import { achievements } from '@/data/achievements';
 import { Trophy, Lock, Star, ChevronRight, ChevronLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import type { AchievementCategory } from '@/data/types';
 import Link from 'next/link';
@@ -200,12 +201,12 @@ export default function AchievementsPage() {
 
               {/* Achievement Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {catAchievements.map(achievement => {
+                {catAchievements.map((achievement, achIdx) => {
                   const unlocked = unlockedSet.has(achievement.id);
                   const isHidden = achievement.category === 'hidden' && !unlocked;
 
                   return (
-                    <div
+                    <motion.div
                       key={achievement.id}
                       className={cn(
                         'card p-3.5 flex items-center gap-3 transition-all duration-200',
@@ -213,6 +214,10 @@ export default function AchievementsPage() {
                           ? cn(config.cardBorder, 'ring-1', config.cardBorder.replace('border-', 'ring-').replace('-200', '-100'))
                           : 'opacity-50 grayscale'
                       )}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: unlocked ? 1 : 0.5, y: 0 }}
+                      transition={{ delay: 0.05 + achIdx * 0.04, duration: 0.35 }}
+                      whileHover={unlocked ? { scale: 1.02, transition: { duration: 0.15 } } : undefined}
                     >
                       {/* Icon */}
                       <div className={cn(
@@ -252,7 +257,7 @@ export default function AchievementsPage() {
                           </span>
                         ) : null}
                       </div>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>

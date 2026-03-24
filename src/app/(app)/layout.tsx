@@ -8,6 +8,8 @@ import { useEngagementInit } from '@/lib/engagement-init';
 import Footer from '@/components/layout/Footer';
 import MobileBottomNav from '@/components/layout/MobileBottomNav';
 import DesktopSideNav from '@/components/layout/DesktopSideNav';
+import { ToastContainer } from '@/components/ui/ToastNotification';
+import { StoreToastBridge } from '@/components/ui/StoreToastBridge';
 
 function LoadingSkeleton() {
   return (
@@ -67,6 +69,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
       <DebugTierToggle />
       <DebugQuestionViewer />
+      <ToastContainer />
+      <StoreToastBridge />
     </div>
   );
 }

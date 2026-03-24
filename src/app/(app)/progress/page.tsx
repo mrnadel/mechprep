@@ -6,7 +6,9 @@ import { topics } from '@/data/topics';
 import { FEATURES } from '@/lib/pricing';
 import { BarChart3, Target, TrendingUp, Brain, Zap, ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { UpgradeGate } from '@/components/ui/UpgradeGate';
+import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 
 export default function ProgressPage() {
   const progress = useProgress();
@@ -62,27 +64,28 @@ export default function ProgressPage() {
       )}
 
       {/* Key Metrics — always visible */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="stat-card">
-          <Target className="w-5 h-5 text-emerald-500 mb-2" />
-          <span className="stat-value">{overallAccuracy}%</span>
-          <span className="stat-label">Overall Accuracy</span>
-        </div>
-        <div className="stat-card">
-          <Brain className="w-5 h-5 text-purple-500 mb-2" />
-          <span className="stat-value">{progress.totalQuestionsAttempted}</span>
-          <span className="stat-label">Questions Answered</span>
-        </div>
-        <div className="stat-card">
-          <TrendingUp className="w-5 h-5 text-blue-500 mb-2" />
-          <span className="stat-value">{progress.sessionHistory.length}</span>
-          <span className="stat-label">Sessions Completed</span>
-        </div>
-        <div className="stat-card">
-          <Zap className="w-5 h-5 text-amber-500 mb-2" />
-          <span className="stat-value">{progress.totalXp.toLocaleString()}</span>
-          <span className="stat-label">Total XP</span>
-        </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 sm:px-5">
+        {[
+          { icon: <Target className="w-5 h-5 text-emerald-500 mb-2" />, value: overallAccuracy, suffix: '%', label: 'Overall Accuracy' },
+          { icon: <Brain className="w-5 h-5 text-purple-500 mb-2" />, value: progress.totalQuestionsAttempted, label: 'Questions Answered' },
+          { icon: <TrendingUp className="w-5 h-5 text-blue-500 mb-2" />, value: progress.sessionHistory.length, label: 'Sessions Completed' },
+          { icon: <Zap className="w-5 h-5 text-amber-500 mb-2" />, value: progress.totalXp, format: (n: number) => n.toLocaleString(), label: 'Total XP' },
+        ].map((stat, i) => (
+          <motion.div
+            key={stat.label}
+            className="stat-card"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 + i * 0.08, duration: 0.4, ease: 'easeOut' }}
+          >
+            {stat.icon}
+            <span className="stat-value">
+              <AnimatedCounter value={stat.value} format={stat.format} />
+              {stat.suffix ?? ''}
+            </span>
+            <span className="stat-label">{stat.label}</span>
+          </motion.div>
+        ))}
       </div>
 
       {/* Full Analytics — Pro only */}
@@ -109,8 +112,14 @@ export default function ProgressPage() {
         <div className="card p-5 mt-6">
           <h2 className="font-bold text-surface-900 mb-4">Performance by Topic</h2>
           <div className="space-y-4">
-            {topicBreakdown.map(({ topic, attempted, correct, accuracy }) => (
-              <div key={topic.id} className="flex items-center gap-3 sm:gap-4">
+            {topicBreakdown.map(({ topic, attempted, correct, accuracy }, i) => (
+              <motion.div
+                key={topic.id}
+                className="flex items-center gap-3 sm:gap-4"
+                initial={{ opacity: 0, x: -12 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.15 + i * 0.04, duration: 0.35 }}
+              >
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center text-lg shrink-0"
                   style={{ backgroundColor: `${topic.color}15` }}>
                   {topic.icon}
@@ -137,7 +146,7 @@ export default function ProgressPage() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

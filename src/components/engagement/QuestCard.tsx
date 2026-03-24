@@ -1,7 +1,7 @@
 'use client';
 
-import { memo } from 'react';
-import { motion } from 'framer-motion';
+import { memo, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import type { Quest } from '@/data/engagement-types';
 
 interface Props {
@@ -14,10 +14,20 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
   const progressPercent = Math.min((quest.progress / quest.target) * 100, 100);
   const isComplete = quest.completed;
   const isClaimed = quest.claimed;
+  const [justClaimed, setJustClaimed] = useState(false);
+
+  const handleClaim = useCallback((questId: string) => {
+    setJustClaimed(true);
+    onClaim(questId);
+  }, [onClaim]);
 
   if (compact) {
     return (
-      <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-gray-50/80 hover:bg-gray-100/80 transition-colors">
+      <motion.div
+        className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-gray-50/80 hover:bg-gray-100/80 transition-colors"
+        animate={isComplete && !isClaimed && !justClaimed ? { backgroundColor: ['rgba(249,250,251,0.8)', 'rgba(220,252,231,0.5)', 'rgba(249,250,251,0.8)'] } : undefined}
+        transition={isComplete && !isClaimed && !justClaimed ? { duration: 2, repeat: Infinity, ease: 'easeInOut' } : undefined}
+      >
         {/* Icon */}
         <div
           className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-lg text-base"
@@ -54,29 +64,44 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
 
         {/* Right action */}
         <div className="flex-shrink-0">
-          {isClaimed ? (
-            <div className="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center">
-              <span className="text-emerald-500 text-sm font-bold">✓</span>
-            </div>
-          ) : isComplete ? (
-            <motion.button
-              onClick={() => onClaim(quest.definitionId)}
-              className="px-3 py-2 rounded-lg text-[11px] font-extrabold text-white bg-emerald-500 hover:bg-emerald-600 shadow-sm shadow-emerald-200 min-h-[44px] min-w-[44px]"
-              style={{ border: 'none', cursor: 'pointer' }}
-              animate={{ scale: [1, 1.06, 1] }}
-              transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-              whileTap={{ scale: 0.92 }}
-            >
-              Claim
-            </motion.button>
-          ) : (
-            <div className="flex items-center gap-0.5 px-2 py-1 rounded-lg text-[11px] font-bold bg-amber-50 text-amber-700">
-              <span className="text-xs">💎</span>
-              <span>{quest.reward.gems}</span>
-            </div>
-          )}
+          <AnimatePresence mode="wait">
+            {isClaimed || justClaimed ? (
+              <motion.div
+                key="claimed"
+                className="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center"
+                initial={{ scale: 0, rotate: -90 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+              >
+                <span className="text-emerald-500 text-sm font-bold">✓</span>
+              </motion.div>
+            ) : isComplete ? (
+              <motion.button
+                key="claim-btn"
+                onClick={() => handleClaim(quest.definitionId)}
+                className="px-3 py-2 rounded-lg text-[11px] font-extrabold text-white bg-emerald-500 hover:bg-emerald-600 shadow-sm shadow-emerald-200 min-h-[44px] min-w-[44px]"
+                style={{ border: 'none', cursor: 'pointer' }}
+                animate={{ scale: [1, 1.06, 1] }}
+                transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+                whileTap={{ scale: 0.92 }}
+                exit={{ scale: 1.3, opacity: 0 }}
+              >
+                Claim
+              </motion.button>
+            ) : (
+              <motion.div
+                key="reward"
+                className="flex items-center gap-0.5 px-2 py-1 rounded-lg text-[11px] font-bold bg-amber-50 text-amber-700"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+              >
+                <span className="text-xs">💎</span>
+                <span>{quest.reward.gems}</span>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-      </div>
+      </motion.div>
     );
   }
 
@@ -124,29 +149,42 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
 
       {/* Right: reward badge or claim button or checkmark */}
       <div className="flex-shrink-0 flex items-center">
-        {isClaimed ? (
-          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100">
-            <span className="text-emerald-600 text-base">✓</span>
-          </div>
-        ) : isComplete ? (
-          <motion.button
-            onClick={() => onClaim(quest.definitionId)}
-            className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 shadow-sm shadow-emerald-200 min-h-[44px]"
-            style={{ border: 'none', cursor: 'pointer' }}
-            animate={{ scale: [1, 1.04, 1] }}
-            transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Claim
-          </motion.button>
-        ) : (
-          <div
-            className="flex items-center gap-0.5 px-2 py-1 rounded-lg text-xs font-bold bg-amber-50 text-amber-700"
-          >
-            <span>💎</span>
-            <span>{quest.reward.gems}</span>
-          </div>
-        )}
+        <AnimatePresence mode="wait">
+          {isClaimed || justClaimed ? (
+            <motion.div
+              key="claimed"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100"
+              initial={{ scale: 0, rotate: -90 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+            >
+              <span className="text-emerald-600 text-base">✓</span>
+            </motion.div>
+          ) : isComplete ? (
+            <motion.button
+              key="claim-btn"
+              onClick={() => handleClaim(quest.definitionId)}
+              className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 shadow-sm shadow-emerald-200 min-h-[44px]"
+              style={{ border: 'none', cursor: 'pointer' }}
+              animate={{ scale: [1, 1.04, 1] }}
+              transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
+              whileTap={{ scale: 0.95 }}
+              exit={{ scale: 1.3, opacity: 0 }}
+            >
+              Claim
+            </motion.button>
+          ) : (
+            <motion.div
+              key="reward"
+              className="flex items-center gap-0.5 px-2 py-1 rounded-lg text-xs font-bold bg-amber-50 text-amber-700"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+            >
+              <span>💎</span>
+              <span>{quest.reward.gems}</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
