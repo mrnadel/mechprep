@@ -23,8 +23,8 @@ vi.mock('@/lib/auth', () => ({
 }));
 
 // Force the module to load -- this calls auth(handler) at module init time
-import '@/middleware';
-import { config } from '@/middleware';
+import '@/proxy';
+import { config } from '@/proxy';
 import { NextResponse } from 'next/server';
 
 function createMockRequest(pathname: string, isLoggedIn: boolean) {

@@ -79,27 +79,6 @@ export function CourseMap() {
     return lastCompletedId;
   }, [getLessonState]);
 
-  // Only the active unit is expanded; everything else collapsed
-  const [expandedUnits, setExpandedUnits] = useState<Set<number>>(
-    () => new Set([activeUnitIndex])
-  );
-
-  // When the active unit changes (e.g. user completes a unit), re-focus
-  useEffect(() => {
-    setExpandedUnits(new Set([activeUnitIndex]));
-  }, [activeUnitIndex]);
-
-  const toggleUnit = (index: number) => {
-    setExpandedUnits((prev) => {
-      const next = new Set(prev);
-      if (next.has(index)) {
-        next.delete(index);
-      } else {
-        next.add(index);
-      }
-      return next;
-    });
-  };
 
   // Stable callback for lesson clicks — avoids creating new function refs per lesson
   const handleLessonClick = useCallback(
@@ -165,7 +144,6 @@ export function CourseMap() {
           const completedInUnit = unit.lessons.filter(
             (l) => progress.completedLessons[l.id]?.passed
           ).length;
-          const isExpanded = expandedUnits.has(unitIndex);
           const isActive = unitIndex === activeUnitIndex;
           const isGuestLocked = isGuest && !isUnitUnlocked(LIMITS.free.unlockedUnits, unitIndex);
           const isProLocked = isFreeLocked(unitIndex);
@@ -192,7 +170,6 @@ export function CourseMap() {
                 unitIndex={unitIndex}
                 completedInUnit={completedInUnit}
                 totalInUnit={unit.lessons.length}
-                isExpanded={isExpanded}
                 isLocked={isUnitLocked}
                 isAllGolden={isAllGolden}
                 lockMessage={
@@ -202,58 +179,38 @@ export function CourseMap() {
                       ? 'Upgrade to Pro to unlock'
                       : undefined
                 }
-                onToggle={() => {
-                  if (isGuestLocked) {
-                    router.push('/register');
-                    return;
-                  }
-                  toggleUnit(unitIndex);
-                }}
                 theme={theme}
               />
 
-              {/* Expandable lesson list */}
-              <AnimatePresence initial={false}>
-                {isExpanded && (
-                  <motion.div
-                    key={`lessons-${unitIndex}`}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.35, ease: 'easeInOut' }}
-                    className="overflow-hidden"
-                  >
-                    <div
-                      className="flex flex-col px-3 sm:px-4"
-                      style={{ paddingTop: 4, paddingBottom: 20, gap: 8 }}
-                    >
-                      {unit.lessons.map((lesson, lessonIndex) => {
-                        const state = getLessonState(unitIndex, lessonIndex);
-                        const lessonProgress =
-                          progress.completedLessons[lesson.id];
+              {/* Lesson list — always visible */}
+              <div
+                className="flex flex-col px-3 sm:px-4"
+                style={{ paddingTop: 4, paddingBottom: 20, gap: 8 }}
+              >
+                {unit.lessons.map((lesson, lessonIndex) => {
+                  const state = getLessonState(unitIndex, lessonIndex);
+                  const lessonProgress =
+                    progress.completedLessons[lesson.id];
 
-                        return (
-                          <div
-                            key={lesson.id}
-                            ref={lesson.id === currentLessonId ? currentLessonRef : undefined}
-                          >
-                            <LessonNode
-                              lesson={lesson}
-                              unitColor={theme.color}
-                              state={state}
-                              stars={lessonProgress?.stars}
-                              golden={lessonProgress?.golden}
-                              index={lessonIndex}
-                              onClick={() => handleLessonClick(unitIndex, lessonIndex, state, lessonProgress)}
-                              theme={theme}
-                            />
-                          </div>
-                        );
-                      })}
+                  return (
+                    <div
+                      key={lesson.id}
+                      ref={lesson.id === currentLessonId ? currentLessonRef : undefined}
+                    >
+                      <LessonNode
+                        lesson={lesson}
+                        unitColor={theme.color}
+                        state={state}
+                        stars={lessonProgress?.stars}
+                        golden={lessonProgress?.golden}
+                        index={lessonIndex}
+                        onClick={() => handleLessonClick(unitIndex, lessonIndex, state, lessonProgress)}
+                        theme={theme}
+                      />
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  );
+                })}
+              </div>
             </div>
           );
         })}

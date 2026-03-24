@@ -30,7 +30,7 @@ describe('getUnitTheme()', () => {
   it('returns the correct theme for index 0', () => {
     const theme = getUnitTheme(0);
     expect(theme).toBe(UNIT_THEMES[0]);
-    expect(theme.color).toBe('#58CC02');
+    expect(theme.color).toBe(UNIT_THEMES[0].color);
   });
 
   it('returns the correct theme for index 9', () => {

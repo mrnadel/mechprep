@@ -11,11 +11,9 @@ interface UnitHeaderProps {
   unitIndex: number;
   completedInUnit: number;
   totalInUnit: number;
-  isExpanded: boolean;
   isLocked?: boolean;
   lockMessage?: string;
   isAllGolden?: boolean;
-  onToggle: () => void;
   theme: UnitTheme;
 }
 
@@ -28,11 +26,9 @@ export const UnitHeader = memo(function UnitHeader({
   unitIndex,
   completedInUnit,
   totalInUnit,
-  isExpanded,
   isLocked,
   lockMessage,
   isAllGolden,
-  onToggle,
   theme,
 }: UnitHeaderProps) {
   const progressPercent =
@@ -44,23 +40,7 @@ export const UnitHeader = memo(function UnitHeader({
   const displayMid = isAllGolden ? GOLD_MID : theme.mid;
 
   return (
-    <div
-      className="select-none"
-      style={{
-        cursor: 'pointer',
-        WebkitTapHighlightColor: 'transparent',
-      }}
-      onClick={onToggle}
-      role="button"
-      tabIndex={0}
-      aria-expanded={!isLocked ? isExpanded : undefined}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          onToggle();
-        }
-      }}
-    >
+    <div className="select-none">
       {/* Header row */}
       <div
         className="flex items-center"
@@ -148,34 +128,6 @@ export const UnitHeader = memo(function UnitHeader({
             className="w-full h-full"
           />
         </div>
-      </div>
-
-      {/* Chevron */}
-      <div
-        className="flex justify-end"
-        style={{ padding: '0 20px', marginTop: -12, marginBottom: 4 }}
-      >
-        <motion.div
-          className="flex items-center justify-center"
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: '50%',
-            background: isAllGolden ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
-          }}
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path
-              d="M4 6l4 4 4-4"
-              stroke={isAllGolden ? '#FFFFFF' : displayDark}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </motion.div>
       </div>
 
       {/* Progress bar */}
