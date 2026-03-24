@@ -544,10 +544,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'The hole has a size tolerance of ∅10.0-10.5. What is the total positional tolerance allowed when the hole is produced at ∅10.3?',
           options: [
-            '∅0.25 — the tolerance is fixed regardless of actual size, for geometries',
-            '∅0.55 — the stated tolerance (0.25) plus the departure from MMC',
-            '∅0.30 — only the bonus tolerance applies',
-            '∅0.50 — twice the stated tolerance'
+            '∅0.25 — the tolerance is fixed regardless of actual size',
+            '∅0.55 — stated tolerance (0.25) plus departure from MMC (0.30)',
+            '∅0.30 — only the bonus tolerance applies, not the stated',
+            '∅0.50 — twice the stated tolerance at any produced size'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Bonus Tolerance at MMC</text><line x1="10" y1="65" x2="70" y2="65" stroke="#3B8700" stroke-width="0.8"/><line x1="10" y1="65" x2="10" y2="20" stroke="#3B8700" stroke-width="0.8"/><rect x="16" y="52" width="10" height="13" rx="0.5" fill="#58CC02" opacity="0.3" stroke="#58CC02" stroke-width="0.8"/><text x="21" y="60" font-size="3" fill="#334155" text-anchor="middle">0.25</text><rect x="30" y="42" width="10" height="23" rx="0.5" fill="#A5E86C" opacity="0.3" stroke="#A5E86C" stroke-width="0.8"/><rect x="30" y="52" width="10" height="13" rx="0.5" fill="#58CC02" opacity="0.3" stroke="#58CC02" stroke-width="0.8"/><text x="35" y="48" font-size="2.5" fill="#334155" text-anchor="middle">+0.1</text><rect x="44" y="32" width="10" height="33" rx="0.5" fill="#A5E86C" opacity="0.3" stroke="#A5E86C" stroke-width="0.8"/><rect x="44" y="52" width="10" height="13" rx="0.5" fill="#58CC02" opacity="0.3" stroke="#58CC02" stroke-width="0.8"/><text x="49" y="44" font-size="2.5" fill="#334155" text-anchor="middle">+0.3</text><rect x="58" y="24" width="10" height="41" rx="0.5" fill="#A5E86C" opacity="0.3" stroke="#A5E86C" stroke-width="0.8"/><rect x="58" y="52" width="10" height="13" rx="0.5" fill="#58CC02" opacity="0.3" stroke="#58CC02" stroke-width="0.8"/><text x="63" y="40" font-size="2.5" fill="#334155" text-anchor="middle">+0.5</text><text x="21" y="72" font-size="3" fill="#6B7280" text-anchor="middle">MMC</text><text x="49" y="72" font-size="3" fill="#6B7280" text-anchor="middle">10.3</text><text x="63" y="72" font-size="3" fill="#6B7280" text-anchor="middle">LMC</text><text x="40" y="18" font-size="3" fill="#58CC02" text-anchor="middle">stated tol</text><text x="60" y="18" font-size="3" fill="#A5E86C" text-anchor="middle">bonus</text></svg>',
@@ -598,10 +598,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'What is the "virtual condition" of an external feature (shaft) specified at ∅20.0 ± 0.1 with a perpendicularity tolerance of ∅0.05 at MMC?',
           options: [
-            '∅20.00 — just the nominal size of the feature',
+            '∅20.00 — the nominal size, ignoring all tolerances',
             '∅20.15 — MMC size (20.1) plus geometric tol (0.05)',
-            '∅20.10 — just the MMC size, incomplete explanation',
-            '∅20.05 — nominal size plus geometric tolerance'
+            '∅20.10 — just the MMC size without geometric tolerance',
+            '∅20.05 — nominal plus geometric tolerance only'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Virtual Condition</text><circle cx="40" cy="40" r="18" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.5"/><circle cx="40" cy="40" r="15" fill="#3B8700" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><text x="40" y="38" font-size="3.5" fill="#334155" text-anchor="middle">MMC=20.1</text><text x="40" y="44" font-size="3.5" fill="#334155" text-anchor="middle">+perp 0.05</text><text x="40" y="62" font-size="4" fill="#EC4899" text-anchor="middle" font-weight="bold">VC = 20.15</text><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Worst-case boundary</text></svg>',
@@ -652,10 +652,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'What is the "bonus tolerance" in GD&T, and when does it apply?',
           options: [
-            'An extra tolerance given to preferred suppliers, provided all secondary',
-            'Additional positional or orientation tolerance gained when a feature\'s actual',
-            'A tolerance added by the inspector when parts are borderline',
-            'The difference between the drawing tolerance and the general tolerance block'
+            'An extra tolerance given to preferred suppliers as a quality incentive',
+            'Additional geometric tolerance gained when feature departs from MMC',
+            'A tolerance added by the inspector when parts are borderline passing',
+            'The difference between drawing tolerance and general tolerance block'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Bonus Tolerance</text><rect x="10" y="18" width="60" height="14" rx="1" fill="#58CC02" opacity="0.04" stroke="#3B8700" stroke-width="1.5"/><circle cx="18" cy="25" r="4" stroke="#58CC02" stroke-width="1" fill="none"/><line x1="18" y1="21" x2="18" y2="29" stroke="#58CC02" stroke-width="0.8"/><line x1="14" y1="25" x2="22" y2="25" stroke="#58CC02" stroke-width="0.8"/><text x="36" y="27" font-size="4" fill="#334155">0.25</text><circle cx="48" cy="25" r="3.5" stroke="#334155" stroke-width="0.8" fill="none"/><text x="48" y="27" font-size="4" fill="#334155" text-anchor="middle">M</text><text x="40" y="46" font-size="3.5" fill="#58CC02" text-anchor="middle">Stated tolerance: 0.25</text><text x="40" y="54" font-size="3.5" fill="#A5E86C" text-anchor="middle">+ Bonus when departing MMC</text><text x="40" y="62" font-size="3.5" fill="#334155" text-anchor="middle" font-weight="bold">Total = stated + bonus</text><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Bonus = actual size - MMC size</text></svg>',
@@ -795,10 +795,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'What is the "zero tolerance at MMC" concept, and what advantage does it offer?',
           options: [
-            'It means no tolerance is applied — the feature is free-form, provided all',
-            'The stated geometric tolerance is zero at MMC',
-            'It means the feature must be exactly at MMC with no size variation, provided',
-            'Zero tolerance at MMC is not a valid GD&T concept, provided all secondary'
+            'It means no tolerance is applied — the feature is free-form entirely',
+            'The stated geometric tolerance is zero; all tolerance comes from bonus',
+            'The feature must be exactly at MMC with zero size variation allowed',
+            'Zero tolerance at MMC is not a valid concept under ASME Y14.5'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Zero Tolerance at MMC</text><line x1="10" y1="65" x2="70" y2="65" stroke="#3B8700" stroke-width="0.8"/><line x1="10" y1="65" x2="10" y2="20" stroke="#3B8700" stroke-width="0.8"/><line x1="15" y1="65" x2="65" y2="20" stroke="#58CC02" stroke-width="2" fill="none"/><circle cx="15" cy="65" r="2" fill="#3B8700"/><text x="15" y="72" font-size="3" fill="#334155" text-anchor="middle">MMC</text><text x="65" y="18" font-size="3" fill="#334155" text-anchor="middle">LMC</text><text x="8" y="44" font-size="3" fill="#334155" transform="rotate(-90,8,44)">Pos tol</text><text x="40" y="76" font-size="3.5" fill="#6B7280" text-anchor="middle">All tolerance comes from bonus</text></svg>',
@@ -819,10 +819,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'What does the MMC modifier on datums B and C mean?',
           options: [
-            'It means the datums must be inspected at their MMC size, provided all',
-            'When datum features B and C depart from their MMC size, the datum reference',
-            'It means the tolerance only applies when datums B and C are at MMC, provided',
-            'The modifier on datums is ignored — it only matters on the tolerance value'
+            'Datums must be inspected at their MMC size for valid results',
+            'When datums B and C depart from MMC, the datum reference frame can shift',
+            'The tolerance only applies when datums B and C are produced at MMC',
+            'The modifier on datums is ignored — only matters on tolerance value'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">MMC on Datums</text><rect x="8" y="16" width="64" height="14" rx="1" fill="#58CC02" opacity="0.04" stroke="#3B8700" stroke-width="1.5"/><circle cx="16" cy="23" r="4" stroke="#58CC02" stroke-width="1" fill="none"/><line x1="16" y1="19" x2="16" y2="27" stroke="#58CC02" stroke-width="0.8"/><line x1="12" y1="23" x2="20" y2="23" stroke="#58CC02" stroke-width="0.8"/><text x="34" y="25" font-size="4" fill="#334155">0.5 M</text><text x="54" y="25" font-size="4" fill="#334155">A B(M) C(M)</text><text x="40" y="42" font-size="3.5" fill="#6B7280" text-anchor="middle">Datum simulator fixed at VC</text><text x="40" y="52" font-size="3.5" fill="#6B7280" text-anchor="middle">When datum departs from MMC:</text><text x="40" y="62" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Datum shift = extra movement</text></svg>',
@@ -858,10 +858,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'When selecting datum features for a machined part, which principle should guide the selection?',
           options: [
-            'Always select the smallest features as datums — an approximation that loses',
-            'Select functional surfaces — datums should represent how the part',
-            'Always use three mutually perpendicular flat surfaces — an oversimplification',
-            'Select the features with the tightest tolerances as datums, measured relative'
+            'Always select the smallest features as datums for precision',
+            'Select functional surfaces that represent how the part mounts',
+            'Always use three mutually perpendicular flat surfaces only',
+            'Select features with the tightest tolerances as datums'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Functional Datum Selection</text><rect x="10" y="20" width="60" height="36" rx="2" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><line x1="10" y1="56" x2="70" y2="56" stroke="#58CC02" stroke-width="2"/><text x="72" y="58" font-size="3" fill="#58CC02">A</text><circle cx="30" cy="38" r="5" fill="white" stroke="#3B8700" stroke-width="1"/><circle cx="50" cy="38" r="5" fill="white" stroke="#3B8700" stroke-width="1"/><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">Datums = assembly contact surfaces</text><text x="40" y="76" font-size="3.5" fill="#58CC02" text-anchor="middle">Match how part mounts</text></svg>',
@@ -928,10 +928,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'How many degrees of freedom does a primary datum plane constrain, and which DOFs are they?',
           options: [
-            '1 DOF — translation normal to the plane, across the full gauge length',
-            '2 DOF — two translations in the plane, prior to any post-processing',
-            '3 DOF — one translation (normal to the plane) and two rotations',
-            '6 DOF — all degrees of freedom — a common misunderstanding in this context'
+            '1 DOF — only the translation normal to the plane surface',
+            '2 DOF — the two translations within the plane itself',
+            '3 DOF — one translation (normal) and two rotations (tilt)',
+            '6 DOF — all degrees of freedom constrained at once'
           ],
           correctIndex: 2,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Primary Datum: 3 DOF</text><rect x="12" y="40" width="56" height="4" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="1.5"/><text x="72" y="44" font-size="3" fill="#58CC02">A</text><rect x="20" y="20" width="40" height="20" rx="2" fill="#3B8700" opacity="0.06" stroke="#3B8700" stroke-width="1"/><circle cx="26" cy="40" r="1.5" fill="#58CC02"/><circle cx="40" cy="40" r="1.5" fill="#58CC02"/><circle cx="54" cy="40" r="1.5" fill="#58CC02"/><text x="40" y="54" font-size="3.5" fill="#334155" text-anchor="middle">3 contact points</text><text x="40" y="62" font-size="3.5" fill="#6B7280" text-anchor="middle">1 translation + 2 rotations</text><text x="40" y="70" font-size="3.5" fill="#6B7280" text-anchor="middle">= 3 degrees of freedom</text></svg>',
@@ -943,10 +943,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'Why is this a good datum selection?',
           options: [
-            'It is not — the datums should all be the same size, provided all secondary',
-            'The large flat surface provides stable primary support (3 DOF), the long edge',
-            'Because the surfaces are labeled in alphabetical order based on their',
-            'Because the CMM can probe all three surfaces easily, provided all secondary'
+            'It is not — the datums should all be the same size for consistency',
+            'Large flat provides stable primary support (3 DOF), long edge adds 2 DOF',
+            'Because the surfaces are labeled in alphabetical order by convention',
+            'Because the CMM can probe all three surfaces easily in one setup'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Good Datum Selection</text><rect x="10" y="20" width="60" height="8" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.5"/><text x="72" y="26" font-size="3.5" fill="#58CC02" font-weight="bold">A</text><text x="40" y="26" font-size="3" fill="#334155" text-anchor="middle">Large flat = stable</text><rect x="10" y="28" width="8" height="30" rx="1" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="1.2"/><text x="22" y="44" font-size="3.5" fill="#A5E86C" font-weight="bold">B</text><text x="32" y="44" font-size="3" fill="#334155">Long edge</text><rect x="46" y="28" width="8" height="8" rx="1" fill="#3B8700" opacity="0.15" stroke="#3B8700" stroke-width="1"/><text x="58" y="34" font-size="3.5" fill="#3B8700" font-weight="bold">C</text><text x="64" y="34" font-size="3" fill="#334155">End</text><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">Stability decreases each level</text></svg>',

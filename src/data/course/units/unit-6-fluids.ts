@@ -187,7 +187,7 @@ export const unit6: Unit = {
             'About 3.02 MPa (approximately 30 atmospheres)',
             'About 302 kPa (approximately 3 atmospheres)',
             'About 30.2 MPa (approximately 300 atmospheres)',
-            'About 101.3 kPa (always one atmosphere regardless of depth)'
+            'About 101.3 kPa (one atmosphere at any depth)'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="10" y="12" width="34" height="48" rx="6" fill="#58CC02" opacity="0.08"/> <rect x="10" y="12" width="34" height="48" rx="6" stroke="#3B8700" stroke-width="2" fill="none"/> <rect x="13" y="24" width="28" height="34" rx="3" fill="#58CC02" opacity="0.12"/> <rect x="44" y="42" width="8" height="6" rx="3" fill="#3B8700" opacity="0.4"/> <path d="M52,45 Q62,45 67,52 Q71,58 73,66" stroke="#58CC02" stroke-width="2.5" fill="none" opacity="0.35" stroke-linecap="round"/> <circle r="2.5" fill="#58CC02" opacity="0"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M52,45 Q62,45 67,52 Q71,58 73,66"/> <animate attributeName="opacity" values="0.5;0.5;0" dur="1.5s" repeatCount="indefinite"/> </circle> <circle r="2" fill="#A5E86C" opacity="0"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M52,45 Q62,45 67,52 Q71,58 73,66" begin="0.3s"/> <animate attributeName="opacity" values="0.4;0.4;0" dur="1.5s" begin="0.3s" repeatCount="indefinite"/> </circle> <circle r="1.8" fill="#3B8700" opacity="0"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M52,45 Q62,45 67,52 Q71,58 73,66" begin="0.6s"/> <animate attributeName="opacity" values="0.4;0.4;0" dur="1.5s" begin="0.6s" repeatCount="indefinite"/> </circle> <circle r="2.2" fill="#58CC02" opacity="0"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M52,45 Q62,45 67,52 Q71,58 73,66" begin="0.9s"/> <animate attributeName="opacity" values="0.3;0.3;0" dur="1.5s" begin="0.9s" repeatCount="indefinite"/> </circle> <line x1="6" y1="24" x2="6" y2="46" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <text x="4" y="37" font-size="7" fill="#3B8700" opacity="0.35" text-anchor="middle" font-style="italic">h</text> <rect x="4" y="66" width="72" height="4" rx="2" fill="#58CC02" opacity="0.06"/> </svg>',
@@ -199,10 +199,10 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'What happens to the viscosity of a gas versus a liquid as temperature increases?',
           options: [
-            'Gas viscosity increases while liquid viscosity decreases',
+            'Gas viscosity increases; liquid viscosity decreases',
             'Both gas and liquid viscosities increase with temperature',
             'Both gas and liquid viscosities decrease with temperature',
-            'Gas viscosity decreases while liquid viscosity increases with temperature'
+            'Gas viscosity decreases; liquid viscosity increases'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Channel walls --> <line x1="4" y1="20" x2="76" y2="20" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="4" y1="60" x2="76" y2="60" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <!-- No-slip labels at walls --> <text x="40" y="16" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15">no-slip (v=0)</text> <text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15">no-slip (v=0)</text> <!-- Velocity profile (parabolic) — static arrows showing velocity distribution --> <line x1="12" y1="24" x2="16" y2="24" stroke="#58CC02" stroke-width="1" opacity="0.2"/> <polygon points="15,22.5 18,24 15,25.5" fill="#58CC02" opacity="0.2"/> <line x1="12" y1="30" x2="24" y2="30" stroke="#58CC02" stroke-width="1" opacity="0.3"/> <polygon points="23,28.5 26,30 23,31.5" fill="#58CC02" opacity="0.3"/> <line x1="12" y1="36" x2="32" y2="36" stroke="#58CC02" stroke-width="1.2" opacity="0.35"/> <polygon points="31,34.5 34,36 31,37.5" fill="#58CC02" opacity="0.35"/> <line x1="12" y1="40" x2="36" y2="40" stroke="#3B8700" stroke-width="1.5" opacity="0.4"/> <polygon points="35,38 38,40 35,42" fill="#3B8700" opacity="0.4"/> <line x1="12" y1="44" x2="32" y2="44" stroke="#58CC02" stroke-width="1.2" opacity="0.35"/> <polygon points="31,42.5 34,44 31,45.5" fill="#58CC02" opacity="0.35"/> <line x1="12" y1="50" x2="24" y2="50" stroke="#58CC02" stroke-width="1" opacity="0.3"/> <polygon points="23,48.5 26,50 23,51.5" fill="#58CC02" opacity="0.3"/> <line x1="12" y1="56" x2="16" y2="56" stroke="#58CC02" stroke-width="1" opacity="0.2"/> <polygon points="15,54.5 18,56 15,57.5" fill="#58CC02" opacity="0.2"/> <!-- Parabolic envelope --> <path d="M12,20 Q38,40 12,60" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="2,3" fill="none" opacity="0.15"/> <!-- Flow particles at different speeds --> <circle r="1.5" fill="#3B8700" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M14,40 L66,40"/> </circle> <circle r="1.5" fill="#58CC02" opacity="0.3"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M14,30 L66,30" begin="0.3s"/> </circle> <circle r="1.5" fill="#58CC02" opacity="0.3"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M14,50 L66,50" begin="0.6s"/> </circle> <circle r="1.2" fill="#A5E86C" opacity="0.2"> <animateMotion dur="4s" repeatCount="indefinite" path="M14,24 L66,24" begin="0.2s"/> </circle> <circle r="1.2" fill="#A5E86C" opacity="0.2"> <animateMotion dur="4s" repeatCount="indefinite" path="M14,56 L66,56" begin="0.5s"/> </circle> <!-- v_max label --> <text x="42" y="39" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">v_max</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">Poiseuille flow</text> </svg>',
@@ -224,10 +224,10 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'What is the primary advantage?',
           options: [
-            'It amplifies the reading — for a given pressure difference',
-            'It allows measurement of higher pressures than a vertical manometer',
-            'It eliminates parallax error',
-            'It removes the need for a manometer fluid of different density'
+            'It amplifies the reading for a given pressure difference',
+            'It allows measurement of higher pressures than vertical',
+            'It eliminates parallax error in the pressure reading',
+            'It removes the need for a different-density manometer fluid'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- U-tube --> <path d="M24,14 L24,58 Q24,66 32,66 L48,66 Q56,66 56,58 L56,14" stroke-width="1" stroke="#58CC02" fill="none"/> <!-- Manometric fluid (heavy liquid in U-bend) --> <path d="M24.5,44 L24.5,58 Q24.5,65.5 32,65.5 L48,65.5 Q55.5,65.5 55.5,58 L55.5,36" fill="#A5E86C" opacity="0.15"/> <!-- Left fluid column top --> <line x1="22" y1="44" x2="26" y2="44" stroke-width="0.5" stroke="#A5E86C" opacity="0.5"> <animate attributeName="y1" values="44;40;44" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <!-- Right fluid column top --> <line x1="54" y1="36" x2="58" y2="36" stroke-width="0.5" stroke="#A5E86C" opacity="0.5"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="40;40;40" dur="4s" repeatCount="indefinite"/> </line> <!-- h measurement --> <line x1="62" y1="36" x2="62" y2="44" stroke-width="0.4" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <line x1="60" y1="36" x2="64" y2="36" stroke-width="0.3" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="36;40;36" dur="4s" repeatCount="indefinite"/> </line> <line x1="60" y1="44" x2="64" y2="44" stroke-width="0.3" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="44;40;44" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <text x="66" y="42" font-size="3.5" fill="#3B8700" opacity="0.5">h</text> <!-- Pressure connection (left) --> <line x1="10" y1="20" x2="24" y2="20" stroke-width="0.6" stroke="#58CC02"/> <text x="8" y="21.5" font-size="3" fill="#58CC02" text-anchor="end">P₁</text> <!-- Open/reference (right) --> <text x="58" y="12" font-size="3" fill="#3B8700" opacity="0.4">P_atm</text> <!-- Fluid labels --> <text x="40" y="62" font-size="2.5" fill="#A5E86C" opacity="0.35" text-anchor="middle">mercury</text> <!-- Formula --> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#58CC02" opacity="0.4">ΔP = ρgh</text> </svg>',
@@ -240,9 +240,9 @@ export const unit6: Unit = {
           question: 'A floating object is displaced slightly and released. Under what condition will it be stable?',
           options: [
             'When the metacenter is above the center of gravity',
-            'When the center of buoyancy is above the center of gravity using standard',
-            'When the center of gravity (G) is at the waterline',
-            'When the metacentric height is zero, giving neutral stability using standard'
+            'When the center of buoyancy is above the center of gravity',
+            'When the center of gravity (G) is located at the waterline',
+            'When the metacentric height is zero, giving neutral stability'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="5" y="35" width="70" height="35" fill="#A5E86C" opacity="0.08"/><line x1="5" y1="35" x2="75" y2="35" stroke="#58CC02" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/><rect x="25" y="25" width="30" height="30" rx="3" fill="#58CC02" opacity="0.12" stroke="#3B8700" stroke-width="1.5"/><circle cx="40" cy="45" r="1.5" fill="#3B8700" opacity="0.6"/><text x="44" y="47" font-size="3" fill="#3B8700" opacity="0.5">G</text><circle cx="40" cy="50" r="1.5" fill="#58CC02" opacity="0.6"/><text x="44" y="52" font-size="3" fill="#58CC02" opacity="0.5">B</text><circle cx="40" cy="38" r="1" fill="#A5E86C" opacity="0.6"/><text x="44" y="40" font-size="3" fill="#A5E86C" opacity="0.5">M</text><text x="40" y="76" text-anchor="middle" font-size="3" fill="#58CC02" opacity="0.4">M above G = stable</text></svg>',
@@ -293,9 +293,9 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'Why does a fluid at rest exert no shear stress?',
           options: [
-            'A fluid deforms continuously under any applied shear',
-            'Fluids at rest have infinite viscosity value',
-            'Gravity exactly cancels all internal shear stresses',
+            'A fluid deforms continuously under any shear stress',
+            'Fluids at rest have infinite viscosity preventing shear',
+            'Gravity cancels all internal shear stresses exactly',
             'Shear stress exists in static fluid, balanced by P'
           ],
           correctIndex: 0,
@@ -317,10 +317,10 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'What is the net vertical hydrostatic force (buoyancy) on the sphere?',
           options: [
-            'F_b = ρ_water × g × V = 1000 × 9.81 × (4/3)π(1)³ ≈ 41.1 kN upward',
-            'F_b = ρ_water × g × h_c × A_projected ≈ 154.0 kN upward',
-            'Zero — since the sphere is filled with water',
-            'F_b depends on the depth of the center (5 m) and increases with depth'
+            'F_b = ρ_water × g × V_sphere ≈ 41.1 kN upward',
+            'F_b = ρ_water × g × h_c × A_proj ≈ 154.0 kN upward',
+            'Zero — the sphere is filled with water',
+            'F_b depends on center depth and increases with it'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="5" y="20" width="70" height="50" fill="#A5E86C" opacity="0.08"/><line x1="5" y1="20" x2="75" y2="20" stroke="#58CC02" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/><circle cx="40" cy="45" r="12" fill="#58CC02" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><line x1="40" y1="58" x2="40" y2="68" stroke="#3B8700" stroke-width="1.2" opacity="0.5"/><polygon points="38,66 40,70 42,66" fill="#3B8700" opacity="0.5"/><text x="44" y="68" font-size="3" fill="#3B8700" opacity="0.5">W</text><line x1="40" y1="33" x2="40" y2="23" stroke="#58CC02" stroke-width="1.2" opacity="0.5"/><polygon points="38,25 40,21 42,25" fill="#58CC02" opacity="0.5"/><text x="44" y="28" font-size="3" fill="#58CC02" opacity="0.5">Fb</text><text x="40" y="78" text-anchor="middle" font-size="3" fill="#58CC02" opacity="0.4">Fb = rho g V</text></svg>',
@@ -332,10 +332,10 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'What is the vapor pressure of a liquid, and why is it critical in fluid system design?',
           options: [
-            'Pressure at which a liquid begins to boil at given T',
+            'Pressure at which a liquid boils at a given temperature',
             'Maximum pressure a fluid can withstand before failing',
             'Pressure exerted by vapors above a liquid surface',
-            'Vapor pressure is only relevant for gas phases'
+            'Vapor pressure is relevant only for gas-phase systems'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Pipe with constriction --> <path d="M4,30 L28,30 Q40,36 52,30 L76,30" stroke-width="0.8" stroke="#58CC02" fill="none"/> <path d="M4,50 L28,50 Q40,44 52,50 L76,50" stroke-width="0.8" stroke="#58CC02" fill="none"/> <!-- Flow region fill --> <path d="M4,30 L28,30 Q40,36 52,30 L76,30 L76,50 L52,50 Q40,44 28,50 L4,50 Z" fill="#58CC02" opacity="0.03"/> <!-- Cavitation bubbles (forming at constriction, collapsing downstream) --> <circle cx="42" cy="38" r="1.5" stroke-width="0.3" stroke="#A5E86C" fill="none"> <animate attributeName="r" values="0;2;0" dur="1.5s" repeatCount="indefinite"/> <animate attributeName="cx" values="40;50;58" dur="1.5s" repeatCount="indefinite"/> <animate attributeName="opacity" values="0;0.6;0" dur="1.5s" repeatCount="indefinite"/> </circle> <circle cx="42" cy="42" r="1" stroke-width="0.3" stroke="#A5E86C" fill="none"> <animate attributeName="r" values="0;1.5;0" dur="1.5s" repeatCount="indefinite" begin="0.3s"/> <animate attributeName="cx" values="40;48;56" dur="1.5s" repeatCount="indefinite" begin="0.3s"/> <animate attributeName="opacity" values="0;0.5;0" dur="1.5s" repeatCount="indefinite" begin="0.3s"/> </circle> <circle cx="42" cy="40" r="1.8" stroke-width="0.3" stroke="#A5E86C" fill="none"> <animate attributeName="r" values="0;2.5;0" dur="1.5s" repeatCount="indefinite" begin="0.6s"/> <animate attributeName="cx" values="41;52;60" dur="1.5s" repeatCount="indefinite" begin="0.6s"/> <animate attributeName="opacity" values="0;0.5;0" dur="1.5s" repeatCount="indefinite" begin="0.6s"/> </circle> <circle cx="42" cy="36" r="0.8" stroke-width="0.3" stroke="#A5E86C" fill="none"> <animate attributeName="r" values="0;1.2;0" dur="1.2s" repeatCount="indefinite" begin="0.9s"/> <animate attributeName="cx" values="42;50;57" dur="1.2s" repeatCount="indefinite" begin="0.9s"/> <animate attributeName="opacity" values="0;0.4;0" dur="1.2s" repeatCount="indefinite" begin="0.9s"/> </circle> <!-- Collapse burst markers --> <g opacity="0"> <line x1="56" y1="36" x2="60" y2="32" stroke-width="0.4" stroke="#A5E86C"/> <line x1="56" y1="36" x2="60" y2="40" stroke-width="0.4" stroke="#A5E86C"/> <line x1="56" y1="36" x2="52" y2="34" stroke-width="0.4" stroke="#A5E86C"/> <animate attributeName="opacity" values="0;0.5;0" dur="1.5s" repeatCount="indefinite" begin="1.1s"/> </g> <!-- Pressure profile --> <path d="M8,20 L28,20 Q40,26 52,12 L72,18" stroke-width="0.5" stroke="#3B8700" opacity="0.3" fill="none"/> <text x="8" y="18" font-size="2.5" fill="#3B8700" opacity="0.4">P</text> <!-- Vapor pressure line --> <line x1="8" y1="24" x2="72" y2="24" stroke-width="0.3" stroke="#3B8700" opacity="0.2" stroke-dasharray="2,2"/> <text x="74" y="25" font-size="2" fill="#3B8700" opacity="0.3">P_v</text> <!-- Flow arrows --> <g opacity="0.3"> <line x1="10" y1="40" x2="16" y2="40" stroke-width="0.5" stroke="#58CC02"/> <polygon points="16,38.5 16,41.5 19,40" fill="#58CC02"/> <line x1="62" y1="40" x2="68" y2="40" stroke-width="0.5" stroke="#58CC02"/> <polygon points="68,38.5 68,41.5 71,40" fill="#58CC02"/> </g> <!-- Labels --> <text x="40" y="58" font-size="3" fill="#3B8700" opacity="0.4" text-anchor="middle">P &lt; P_vapor</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">bubble collapse</text> </svg>',
@@ -396,10 +396,10 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'Under what conditions is a piezometer NOT suitable for pressure measurement?',
           options: [
-            'When the pressure is very high',
-            'When the pipe diameter exceeds 100 mm',
-            'When the water temperature is above 50°C',
-            'When the flow velocity in the pipe exceeds 1 m/s'
+            'When the pressure is very high or the fluid is a gas',
+            'When the pipe diameter exceeds 100 mm overall',
+            'When the water temperature is above 50°C range',
+            'When the flow velocity exceeds 1 m/s in the pipe'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- U-tube --> <path d="M24,14 L24,58 Q24,66 32,66 L48,66 Q56,66 56,58 L56,14" stroke-width="1" stroke="#58CC02" fill="none"/> <!-- Manometric fluid (heavy liquid in U-bend) --> <path d="M24.5,44 L24.5,58 Q24.5,65.5 32,65.5 L48,65.5 Q55.5,65.5 55.5,58 L55.5,36" fill="#A5E86C" opacity="0.15"/> <!-- Left fluid column top --> <line x1="22" y1="44" x2="26" y2="44" stroke-width="0.5" stroke="#A5E86C" opacity="0.5"> <animate attributeName="y1" values="44;40;44" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <!-- Right fluid column top --> <line x1="54" y1="36" x2="58" y2="36" stroke-width="0.5" stroke="#A5E86C" opacity="0.5"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="40;40;40" dur="4s" repeatCount="indefinite"/> </line> <!-- h measurement --> <line x1="62" y1="36" x2="62" y2="44" stroke-width="0.4" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <line x1="60" y1="36" x2="64" y2="36" stroke-width="0.3" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="36;40;36" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="36;40;36" dur="4s" repeatCount="indefinite"/> </line> <line x1="60" y1="44" x2="64" y2="44" stroke-width="0.3" stroke="#3B8700" opacity="0.4"> <animate attributeName="y1" values="44;40;44" dur="4s" repeatCount="indefinite"/> <animate attributeName="y2" values="44;40;44" dur="4s" repeatCount="indefinite"/> </line> <text x="66" y="42" font-size="3.5" fill="#3B8700" opacity="0.5">h</text> <!-- Pressure connection (left) --> <line x1="10" y1="20" x2="24" y2="20" stroke-width="0.6" stroke="#58CC02"/> <text x="8" y="21.5" font-size="3" fill="#58CC02" text-anchor="end">P₁</text> <!-- Open/reference (right) --> <text x="58" y="12" font-size="3" fill="#3B8700" opacity="0.4">P_atm</text> <!-- Fluid labels --> <text x="40" y="62" font-size="2.5" fill="#A5E86C" opacity="0.35" text-anchor="middle">mercury</text> <!-- Formula --> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#58CC02" opacity="0.4">ΔP = ρgh</text> </svg>',
@@ -430,9 +430,9 @@ export const unit6: Unit = {
           question: 'What is the likely error in the analysis?',
           options: [
             'Bernoulli assumes inviscid flow — fails in rough pipes',
-            'Bernoulli only works for gases, not for liquids',
+            'Bernoulli only works for gases, not for liquid flow',
             'The pipe diameter was likely measured incorrectly',
-            'Bernoulli does not apply to horizontal pipe flow'
+            'Bernoulli does not apply to horizontal pipe systems'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">Bernoulli - Venturi</text><path d="M4,24 L24,24 Q32,24 40,30 Q48,24 56,24 L76,24" stroke="#3B8700" stroke-width="1.5" fill="none"/><path d="M4,48 L24,48 Q32,48 40,42 Q48,48 56,48 L76,48" stroke="#3B8700" stroke-width="1.5" fill="none"/><path d="M4,24 L24,24 Q32,24 40,30 Q48,24 56,24 L76,24 L76,48 L56,48 Q48,48 40,42 Q32,48 24,48 L4,48 Z" fill="#58CC02" opacity="0.05"/><line x1="14" y1="28" x2="14" y2="44" stroke="#6B7280" stroke-width="0.4" stroke-dasharray="1.5,1.5" opacity="0.3"/><line x1="40" y1="32" x2="40" y2="40" stroke="#6B7280" stroke-width="0.4" stroke-dasharray="1.5,1.5" opacity="0.3"/><line x1="66" y1="28" x2="66" y2="44" stroke="#6B7280" stroke-width="0.4" stroke-dasharray="1.5,1.5" opacity="0.3"/><polygon points="10,36 7,34 7,38" fill="#3B8700" opacity="0.3"/><polygon points="16,36 13,34 13,38" fill="#3B8700" opacity="0.3"/><polygon points="39,36 36,34 36,38" fill="#3B8700" opacity="0.4"/><polygon points="43,36 40,34 40,38" fill="#3B8700" opacity="0.4"/><polygon points="46,36 43,34 43,38" fill="#3B8700" opacity="0.4"/><polygon points="64,36 61,34 61,38" fill="#3B8700" opacity="0.3"/><polygon points="70,36 67,34 67,38" fill="#3B8700" opacity="0.3"/><line x1="14" y1="18" x2="14" y2="14" stroke="#58CC02" stroke-width="0.8" opacity="0.4"/><polygon points="12.5,15 14,12 15.5,15" fill="#58CC02" opacity="0.4"/><line x1="14" y1="20" x2="14" y2="18" stroke="#58CC02" stroke-width="0.8" opacity="0.4"/><text x="18" y="16" font-size="3.5" fill="#58CC02">P&#x2081; high</text><text x="14" y="53" text-anchor="middle" font-size="3.5" fill="#3B8700">v&#x2081; low</text><line x1="40" y1="28" x2="40" y2="24" stroke="#58CC02" stroke-width="0.5" opacity="0.3"/><polygon points="38.5,25 40,22 41.5,25" fill="#58CC02" opacity="0.3"/><text x="44" y="23" font-size="3.5" fill="#58CC02">P&#x2082; low</text><text x="40" y="46" text-anchor="middle" font-size="3.5" fill="#3B8700">v&#x2082; high</text><text x="66" y="53" text-anchor="middle" font-size="3.5" fill="#3B8700">v&#x2083; low</text><text x="66" y="16" text-anchor="middle" font-size="3.5" fill="#58CC02">P&#x2083; high</text><text x="40" y="62" text-anchor="middle" font-size="4" fill="#334155" font-style="italic">P+&#xBD;&#x3C1;v&#xB2;+&#x3C1;gz = const</text><text x="40" y="69" text-anchor="middle" font-size="3.5" fill="#6B7280">A&#x2081;v&#x2081; = A&#x2082;v&#x2082; (continuity)</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#6B7280">v&#x2191; &#x2192; P&#x2193; (Bernoulli effect)</text></svg>',
@@ -469,9 +469,9 @@ export const unit6: Unit = {
           question: 'The HGL drops below the pipe centerline at a high point. What does this indicate?',
           options: [
             'Flow has reached sonic velocity at that point',
-            'The static pressure at that point is below atmospheric',
+            'Static pressure at that point is below atmospheric',
             'The flow has become turbulent at that section',
-            'The total energy of the flow has increased due to a pump'
+            'Total energy of the flow has increased via a pump'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="4" y="22" width="72" height="36" rx="10" fill="#58CC02" opacity="0.06"/> <rect x="4" y="22" width="72" height="36" rx="10" stroke="#3B8700" stroke-width="2" fill="none"/> <path d="M5,40 Q40,24 75,40" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,3" opacity="0.25" fill="none"/> <path d="M5,40 Q40,56 75,40" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,3" opacity="0.25" fill="none"/> <circle r="3" fill="#3B8700" opacity="0.6"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M8,40 L72,40"/> </circle> <circle r="2.5" fill="#58CC02" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M8,33 L72,33"/> </circle> <circle r="2.5" fill="#58CC02" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M8,47 L72,47"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.35"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,27 L72,27"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.35"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,53 L72,53"/> </circle> <circle r="3" fill="#3B8700" opacity="0.4"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M8,40 L72,40" begin="0.6s"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.25"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,27 L72,27" begin="1.1s"/> </circle> </svg>',
@@ -483,10 +483,10 @@ export const unit6: Unit = {
           type: 'multiple-choice',
           question: 'What is the fluid mechanics explanation for this problem?',
           options: [
-            'At the hilltop, the Hydraulic Grade Line drops below the pipe elevation',
-            'The water moves faster uphill due to gravity acceleration, reducing the flow',
+            'The HGL drops below the pipe elevation at the hilltop',
+            'Water moves faster uphill due to gravity, reducing flow',
             'The pipe diameter is too large on the hill section',
-            'Thermal expansion of the pipe on the sun-exposed hilltop reduces the'
+            'Thermal expansion at the sun-exposed hilltop reduces flow'
           ],
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="4" y="22" width="72" height="36" rx="10" fill="#58CC02" opacity="0.06"/> <rect x="4" y="22" width="72" height="36" rx="10" stroke="#3B8700" stroke-width="2" fill="none"/> <path d="M5,40 Q40,24 75,40" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,3" opacity="0.25" fill="none"/> <path d="M5,40 Q40,56 75,40" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,3" opacity="0.25" fill="none"/> <circle r="3" fill="#3B8700" opacity="0.6"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M8,40 L72,40"/> </circle> <circle r="2.5" fill="#58CC02" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M8,33 L72,33"/> </circle> <circle r="2.5" fill="#58CC02" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M8,47 L72,47"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.35"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,27 L72,27"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.35"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,53 L72,53"/> </circle> <circle r="3" fill="#3B8700" opacity="0.4"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M8,40 L72,40" begin="0.6s"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.25"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,27 L72,27" begin="1.1s"/> </circle> </svg>',
@@ -2045,3 +2045,4 @@ export const unit6: Unit = {
     }
   ]
 };
+                                                  

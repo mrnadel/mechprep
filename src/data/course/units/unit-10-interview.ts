@@ -74,10 +74,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'An interviewer asks: "How many ball bearings fit inside this room?" What is the best estimation approach?',
           options: [
-            'Calculate room volume, divide by sphere volume',
-            'Calculate exact room volume divided by sphere volume, no adjustments',
-            'Count how many bearings fit along each edge and multiply the three numbers',
-            'Estimate it as "millions" without any calculation'
+            'Room volume / sphere volume, with a packing fraction (~64%)',
+            'Room volume / sphere volume exactly, with no packing adjustment',
+            'Count bearings along each edge and multiply the three numbers',
+            'Estimate it as "millions" without performing any calculation'
 
           ],
           correctIndex: 0,
@@ -90,10 +90,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'The motor is about the size of a coffee can. Is this plausible?',
           options: [
-            'Yes, modern motors are very powerful for their size',
-            'No — a motor that size typically produces 1-10 N*m continuously',
-            'It depends entirely on the voltage — at high enough voltage any motor',
-            'Cannot be determined without knowing the exact motor model number'
+            'Yes — modern motors are very powerful for their size at any rating',
+            'No — a motor that size typically produces only 1-10 N*m continuously',
+            'It depends entirely on the voltage — higher voltage means any torque',
+            'Cannot be determined without knowing the exact motor model and brand'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="8" y="12" width="64" height="56" rx="4" fill="#58CC02" opacity="0.04"/> <rect x="8" y="12" width="64" height="56" rx="4" stroke="#3B8700" stroke-width="1.5" fill="none" opacity="0.2"/> <line x1="16" y1="60" x2="16" y2="20" stroke="#3B8700" stroke-width="1.2" opacity="0.3"/> <line x1="16" y1="60" x2="72" y2="60" stroke="#3B8700" stroke-width="1.2" opacity="0.3"/> <rect x="22" y="42" width="8" height="18" rx="1" fill="#58CC02" opacity="0.2"/> <rect x="22" y="42" width="8" height="18" rx="1" stroke="#58CC02" stroke-width="1" fill="none" opacity="0.4"/> <rect x="34" y="30" width="8" height="30" rx="1" fill="#58CC02" opacity="0.25"/> <rect x="34" y="30" width="8" height="30" rx="1" stroke="#58CC02" stroke-width="1" fill="none" opacity="0.4"/> <rect x="46" y="22" width="8" height="38" rx="1" fill="#58CC02" opacity="0.3"/> <rect x="46" y="22" width="8" height="38" rx="1" stroke="#58CC02" stroke-width="1" fill="none" opacity="0.4"/> <rect x="58" y="36" width="8" height="24" rx="1" fill="#A5E86C" opacity="0.2"/> <rect x="58" y="36" width="8" height="24" rx="1" stroke="#A5E86C" stroke-width="1" fill="none" opacity="0.3"/> <circle cx="26" cy="42" r="2" fill="#3B8700" opacity="0.4"> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/> </circle> <circle cx="38" cy="30" r="2" fill="#3B8700" opacity="0.4"> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" begin="0.3s" repeatCount="indefinite"/> </circle> <circle cx="50" cy="22" r="2" fill="#3B8700" opacity="0.4"> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" begin="0.6s" repeatCount="indefinite"/> </circle> </svg>',
@@ -213,10 +213,10 @@ export const unit10: Unit = {
           type: 'multiple-choice',
           question: 'Estimate whether a 5 mm fillet weld around the perimeter of a 50x50 mm square tube can support a 20 kN tensile load. Is this weld adequate?',
           options: [
-            'No — fillet welds cannot carry tensile loads, across the full gauge length',
+            'No — fillet welds cannot carry tensile loads at all',
             'No — square tubes require full-penetration butt welds only',
             'Cannot determine without knowing the electrode classification',
-            'Yes — the weld throat area times allowable stress exceeds 20 kN significantly'
+            'Yes — weld throat area times allowable stress well exceeds 20 kN'
 
           ],
           correctIndex: 3,
