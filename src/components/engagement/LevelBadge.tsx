@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import type { Level } from '@/data/types';
 
 interface LevelBadgeProps {
@@ -15,13 +14,14 @@ interface LevelBadgeProps {
 export function LevelBadge({ level, size = 48, className }: LevelBadgeProps) {
   if (level.badge) {
     return (
-      <Image
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
         src={level.badge}
         alt={level.title}
         width={size}
         height={size}
         className={className}
-        style={{ width: size, height: 'auto', objectFit: 'contain' }}
+        style={{ width: size, height: size, objectFit: 'contain' }}
         draggable={false}
       />
     );
