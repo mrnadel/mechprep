@@ -58,6 +58,7 @@ export function CourseHeader() {
   const streakBtnRef = useRef<HTMLButtonElement>(null);
   const xpBtnRef = useRef<HTMLButtonElement>(null);
   const gemsBtnRef = useRef<HTMLButtonElement>(null);
+  const popoverPanelRef = useRef<HTMLDivElement>(null);
   const [popoverPos, setPopoverPos] = useState<{ top: number; left: number; width: number; arrowLeft: number } | null>(null);
 
   const weekDays = useMemo(() => getWeekDays(), []);
@@ -97,6 +98,28 @@ export function CourseHeader() {
     setPopover(null);
     setPopoverPos(null);
   };
+
+  // Close popover on scroll or outside tap (backdrop is z-40 but header is z-50, so taps on header miss the backdrop)
+  useEffect(() => {
+    if (!popover) return;
+    const onScroll = () => closePopover();
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target as Node;
+      if (
+        popoverPanelRef.current?.contains(target) ||
+        streakBtnRef.current?.contains(target) ||
+        xpBtnRef.current?.contains(target) ||
+        gemsBtnRef.current?.contains(target)
+      ) return;
+      closePopover();
+    };
+    window.addEventListener('scroll', onScroll, { passive: true, capture: true });
+    document.addEventListener('pointerdown', onPointerDown);
+    return () => {
+      window.removeEventListener('scroll', onScroll, { capture: true });
+      document.removeEventListener('pointerdown', onPointerDown);
+    };
+  }, [popover]);
 
   return (
     <>
@@ -232,6 +255,7 @@ export function CourseHeader() {
       <AnimatePresence>
         {popover && popoverPos && (
           <motion.div
+            ref={popoverPanelRef}
             key="popover-panel"
             className="fixed z-50"
             style={{
