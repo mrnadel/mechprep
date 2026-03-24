@@ -185,7 +185,8 @@ export function DebugTierToggle() {
                   onChange={(e) => {
                     setNormalInput(e.target.value);
                     const n = Math.max(0, Math.min(totalLessons, Number(e.target.value) || 0));
-                    const g = goldenInput !== '' ? Number(goldenInput) || 0 : goldenCount;
+                    let g = goldenInput !== '' ? Number(goldenInput) || 0 : goldenCount;
+                    if (g > n) { g = n; setGoldenInput(String(g)); }
                     commitProgress(n, g);
                   }}
                   className="w-12 px-1 py-0.5 text-[11px] border border-gray-200 rounded text-center focus:outline-none focus:ring-1 focus:ring-indigo-400 tabular-nums"
@@ -199,25 +200,27 @@ export function DebugTierToggle() {
                 onChange={(e) => {
                   const n = Number(e.target.value);
                   setNormalInput(String(n));
-                  const g = goldenInput !== '' ? Number(goldenInput) || 0 : goldenCount;
+                  let g = goldenInput !== '' ? Number(goldenInput) || 0 : goldenCount;
+                  if (g > n) { g = n; setGoldenInput(String(g)); }
                   commitProgress(n, g);
                 }}
                 className="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-indigo-500 bg-gray-200"
               />
             </div>
 
-            {/* Golden slider */}
+            {/* Golden slider — capped at current normal count */}
             <div>
               <div className="flex items-center justify-between mb-1">
                 <label className="text-[11px] text-amber-600 font-semibold">Golden</label>
                 <input
                   type="number"
                   min={0}
-                  max={totalLessons}
+                  max={normalInput !== '' ? Number(normalInput) || 0 : normalCount}
                   value={goldenInput !== '' ? goldenInput : goldenCount}
                   onChange={(e) => {
+                    const maxG = normalInput !== '' ? Number(normalInput) || 0 : normalCount;
                     setGoldenInput(e.target.value);
-                    const g = Math.max(0, Math.min(totalLessons, Number(e.target.value) || 0));
+                    const g = Math.max(0, Math.min(maxG, Number(e.target.value) || 0));
                     const n = normalInput !== '' ? Number(normalInput) || 0 : normalCount;
                     commitProgress(n, g);
                   }}
@@ -227,8 +230,8 @@ export function DebugTierToggle() {
               <input
                 type="range"
                 min={0}
-                max={totalLessons}
-                value={goldenInput !== '' ? Number(goldenInput) || 0 : goldenCount}
+                max={normalInput !== '' ? Number(normalInput) || 0 : normalCount}
+                value={goldenInput !== '' ? Math.min(Number(goldenInput) || 0, normalInput !== '' ? Number(normalInput) || 0 : normalCount) : goldenCount}
                 onChange={(e) => {
                   const g = Number(e.target.value);
                   setGoldenInput(String(g));

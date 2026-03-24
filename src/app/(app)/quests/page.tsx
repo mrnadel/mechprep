@@ -4,7 +4,7 @@ import { QuestBoard } from '@/components/engagement/QuestBoard';
 
 export default function QuestsPage() {
   return (
-    <div className="min-h-screen" style={{ background: '#FAFAFA' }}>
+    <div className="min-h-screen overflow-x-hidden" style={{ background: '#FAFAFA' }}>
       {/* Header */}
       <header
         className="sticky top-0 z-30 bg-white px-4 sm:px-5 py-3"

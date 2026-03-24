@@ -94,10 +94,10 @@ export function QuestBoard() {
       {/* Daily Quests Section */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         {/* Section header */}
-        <div className="flex items-center justify-between px-4 pt-4 pb-2">
-          <div>
+        <div className="flex items-center justify-between gap-2 px-4 pt-4 pb-2">
+          <div className="min-w-0 flex-1">
             {comeback.isInComebackFlow ? (
-              <h2 className="text-base font-extrabold text-gray-800">Welcome Back! 👋</h2>
+              <h2 className="text-base font-extrabold text-gray-800 truncate">Welcome Back! 👋</h2>
             ) : (
               <h2 className="text-base font-extrabold text-gray-800">Daily Quests</h2>
             )}
@@ -105,7 +105,7 @@ export function QuestBoard() {
               <p className="text-xs text-gray-400 mt-0.5">Resets in {timeLeft}</p>
             )}
             {comeback.isInComebackFlow && (
-              <p className="text-xs text-gray-400 mt-0.5">Complete 3 quests to get back on track</p>
+              <p className="text-xs text-gray-400 mt-0.5 truncate">Complete 3 quests to get back on track</p>
             )}
           </div>
 
@@ -113,7 +113,7 @@ export function QuestBoard() {
           <button
             onClick={handleDailyChest}
             disabled={!allDailyComplete || dailyChestClaimed}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-all"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-all shrink-0"
             style={{
               background: dailyChestClaimed
                 ? '#F0FDF4'
@@ -183,12 +183,12 @@ export function QuestBoard() {
               style={{ overflow: 'hidden' }}
             >
               {/* Weekly chest button */}
-              <div className="flex items-center justify-between px-4 pb-2">
+              <div className="flex items-center justify-between gap-2 px-4 pb-2">
                 <p className="text-xs text-gray-400">Resets each Monday</p>
                 <button
                   onClick={handleWeeklyChest}
                   disabled={!allWeeklyComplete || weeklyChestClaimed}
-                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-all"
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-all shrink-0"
                   style={{
                     background: weeklyChestClaimed
                       ? '#F0FDF4'
