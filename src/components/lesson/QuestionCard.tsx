@@ -448,17 +448,18 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
         )}
 
         {/* Fill in the Blank - Word Bank */}
-        {question.type === 'fill-blank' && question.wordBank && (
-          <div className="flex flex-wrap" style={{ gap: 8, justifyContent: 'center' }}>
-            <AnimatePresence>
+        {question.type === 'fill-blank' && (
+          <div style={{ background: 'rgba(255,0,0,0.15)', padding: 12, borderRadius: 12 }}>
+            <div style={{ fontSize: 10, color: 'red', marginBottom: 8 }}>
+              WORD BANK DEBUG: wordBank={JSON.stringify(question.wordBank?.length)} | available={availableWords.length}
+            </div>
+            <div className="flex flex-wrap" style={{ gap: 8, justifyContent: 'center' }}>
               {availableWords.map(({ word, available }, i) => (
                 <motion.button
                   key={`${word}-${i}`}
                   onClick={() => available && handleWordTap(word)}
                   disabled={answered || !available}
                   whileTap={!answered && available ? { scale: 0.93 } : undefined}
-                  layout
-                  initial={{ opacity: 1, scale: 1 }}
                   animate={{
                     opacity: available ? 1 : 0.35,
                     scale: available ? 1 : 0.95,
@@ -470,17 +471,16 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                     fontSize: 15,
                     fontWeight: 700,
                     cursor: answered ? 'default' : available ? 'pointer' : 'default',
-                    transition: 'all 0.15s ease',
-                    background: available ? 'white' : '#F5F5F5',
-                    border: available ? '2px solid #E5E5E5' : '2px solid #EFEFEF',
-                    color: available ? '#3C3C3C' : '#CFCFCF',
-                    boxShadow: available ? '0 2px 0 #E0E0E0' : 'none',
+                    background: available ? '#FFE0E0' : '#F5F5F5',
+                    border: available ? '2px solid #FF4444' : '2px solid #EFEFEF',
+                    color: available ? '#000000' : '#CFCFCF',
+                    boxShadow: available ? '0 2px 0 #CC0000' : 'none',
                   }}
                 >
                   {word}
                 </motion.button>
               ))}
-            </AnimatePresence>
+            </div>
           </div>
         )}
 
