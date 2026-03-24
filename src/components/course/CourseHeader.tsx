@@ -1,16 +1,18 @@
 'use client';
 
-import { useState, useRef, useMemo } from 'react';
+import { useState, useRef, useMemo, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useCourseStore } from '@/store/useCourseStore';
 import { Sparkles } from 'lucide-react';
 import { useSubscription } from '@/hooks/useSubscription';
-import { useGems } from '@/store/useEngagementStore';
+import { useGems, useEngagementStore } from '@/store/useEngagementStore';
+import { useStore } from '@/store/useStore';
 import { shopItems } from '@/data/gem-shop';
-import { getXpToNextLevel } from '@/data/levels';
+import { getXpToNextLevel, levels } from '@/data/levels';
 import { getLevelReward } from '@/data/level-rewards';
+import { getTodayString } from '@/lib/utils';
 
 type PopoverType = 'streak' | 'xp' | 'gems' | null;
 
