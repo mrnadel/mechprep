@@ -37,6 +37,13 @@ export default function LessonView() {
     }
   }, [lessonResult, syncMastery]);
 
+  // Lock body scroll while lesson is open so the main page scrollbar doesn't show through
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, []);
+
   const courseData = useCourseStore((s) => s.courseData);
 
   const lessonData = useMemo(() => {

@@ -50,18 +50,16 @@ export function DebugTierToggle() {
   const totalLessons = getTotalLessonsMeta();
   const completedCount = Object.keys(completedLessons).length;
   const goldenCount = Object.values(completedLessons).filter((l) => l.golden).length;
-  const normalCount = completedCount - goldenCount;
 
-  const [normalInput, setNormalInput] = useState<string>('');
+  const [totalInput, setTotalInput] = useState<string>('');
   const [goldenInput, setGoldenInput] = useState<string>('');
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  const commitProgress = useCallback((normal: number, golden: number) => {
+  const commitProgress = useCallback((total: number, golden: number) => {
     clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
-      const total = normal + golden;
       debugSetProgress(total, golden);
-      setNormalInput('');
+      setTotalInput('');
       setGoldenInput('');
     }, 300);
   }, [debugSetProgress]);
@@ -173,21 +171,21 @@ export function DebugTierToggle() {
               Lesson Progress <span className="text-gray-300 font-normal">({completedCount}/{totalLessons})</span>
             </p>
 
-            {/* Normal slider */}
+            {/* Total completed slider */}
             <div className="mb-2">
               <div className="flex items-center justify-between mb-1">
-                <label className="text-[11px] text-gray-500 font-medium">Normal</label>
+                <label className="text-[11px] text-gray-500 font-medium">Completed</label>
                 <input
                   type="number"
                   min={0}
                   max={totalLessons}
-                  value={normalInput !== '' ? normalInput : normalCount}
+                  value={totalInput !== '' ? totalInput : completedCount}
                   onChange={(e) => {
-                    setNormalInput(e.target.value);
-                    const n = Math.max(0, Math.min(totalLessons, Number(e.target.value) || 0));
+                    setTotalInput(e.target.value);
+                    const t = Math.max(0, Math.min(totalLessons, Number(e.target.value) || 0));
                     let g = goldenInput !== '' ? Number(goldenInput) || 0 : goldenCount;
-                    if (g > n) { g = n; setGoldenInput(String(g)); }
-                    commitProgress(n, g);
+                    if (g > t) { g = t; setGoldenInput(String(g)); }
+                    commitProgress(t, g);
                   }}
                   className="w-12 px-1 py-0.5 text-[11px] border border-gray-200 rounded text-center focus:outline-none focus:ring-1 focus:ring-indigo-400 tabular-nums"
                 />
@@ -196,33 +194,33 @@ export function DebugTierToggle() {
                 type="range"
                 min={0}
                 max={totalLessons}
-                value={normalInput !== '' ? Number(normalInput) || 0 : normalCount}
+                value={totalInput !== '' ? Number(totalInput) || 0 : completedCount}
                 onChange={(e) => {
-                  const n = Number(e.target.value);
-                  setNormalInput(String(n));
+                  const t = Number(e.target.value);
+                  setTotalInput(String(t));
                   let g = goldenInput !== '' ? Number(goldenInput) || 0 : goldenCount;
-                  if (g > n) { g = n; setGoldenInput(String(g)); }
-                  commitProgress(n, g);
+                  if (g > t) { g = t; setGoldenInput(String(g)); }
+                  commitProgress(t, g);
                 }}
                 className="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-indigo-500 bg-gray-200"
               />
             </div>
 
-            {/* Golden slider — capped at current normal count */}
+            {/* Golden slider — subset of completed */}
             <div>
               <div className="flex items-center justify-between mb-1">
                 <label className="text-[11px] text-amber-600 font-semibold">Golden</label>
                 <input
                   type="number"
                   min={0}
-                  max={normalInput !== '' ? Number(normalInput) || 0 : normalCount}
+                  max={totalInput !== '' ? Number(totalInput) || 0 : completedCount}
                   value={goldenInput !== '' ? goldenInput : goldenCount}
                   onChange={(e) => {
-                    const maxG = normalInput !== '' ? Number(normalInput) || 0 : normalCount;
+                    const maxG = totalInput !== '' ? Number(totalInput) || 0 : completedCount;
                     setGoldenInput(e.target.value);
                     const g = Math.max(0, Math.min(maxG, Number(e.target.value) || 0));
-                    const n = normalInput !== '' ? Number(normalInput) || 0 : normalCount;
-                    commitProgress(n, g);
+                    const t = totalInput !== '' ? Number(totalInput) || 0 : completedCount;
+                    commitProgress(t, g);
                   }}
                   className="w-12 px-1 py-0.5 text-[11px] border border-amber-200 rounded text-center bg-amber-50 focus:outline-none focus:ring-1 focus:ring-amber-400 tabular-nums"
                 />
@@ -230,13 +228,13 @@ export function DebugTierToggle() {
               <input
                 type="range"
                 min={0}
-                max={normalInput !== '' ? Number(normalInput) || 0 : normalCount}
-                value={goldenInput !== '' ? Math.min(Number(goldenInput) || 0, normalInput !== '' ? Number(normalInput) || 0 : normalCount) : goldenCount}
+                max={totalInput !== '' ? Number(totalInput) || 0 : completedCount}
+                value={goldenInput !== '' ? Math.min(Number(goldenInput) || 0, totalInput !== '' ? Number(totalInput) || 0 : completedCount) : goldenCount}
                 onChange={(e) => {
                   const g = Number(e.target.value);
                   setGoldenInput(String(g));
-                  const n = normalInput !== '' ? Number(normalInput) || 0 : normalCount;
-                  commitProgress(n, g);
+                  const t = totalInput !== '' ? Number(totalInput) || 0 : completedCount;
+                  commitProgress(t, g);
                 }}
                 className="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-amber-500 bg-amber-100"
               />
