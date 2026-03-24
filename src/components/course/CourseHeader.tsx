@@ -221,7 +221,7 @@ export function CourseHeader() {
       {/* Header */}
       <header
         ref={headerRef}
-        className="sticky top-0 z-50 bg-[#FAFAFA] px-4 sm:px-5 py-1.5"
+        className="sticky top-0 z-50 bg-[#FAFAFA] px-4 sm:px-5 py-1.5 relative"
       >
         <div className="flex items-center justify-center gap-1 sm:gap-3">
             <button
@@ -301,10 +301,6 @@ export function CourseHeader() {
               <AnimatedCounter value={gems.balance} showDelta deltaColor="#7C3AED" />
             </button>
 
-            <AnimatePresence>
-              <DoubleXpCountdown />
-            </AnimatePresence>
-
             {/* Upgrade CTA for free registered users */}
             {hasFetched && tier === 'free' && status === 'authenticated' && (
               <Link
@@ -330,6 +326,9 @@ export function CourseHeader() {
               </Link>
             )}
         </div>
+        <AnimatePresence>
+          <DoubleXpCountdown />
+        </AnimatePresence>
       </header>
 
 
