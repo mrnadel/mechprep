@@ -144,6 +144,11 @@ select{background:var(--s2);border:1px solid var(--b);color:var(--t);padding:4px
       <input type="range" id="s-colors" min="2" max="10" value="8">
       <label>Smoothness <span class="v" id="v-smooth">6</span></label>
       <input type="range" id="s-smooth" min="1" max="10" value="6">
+      <label style="margin-top:6px">Shape mode</label>
+      <div class="row">
+        <button class="btn-sm btn-active" id="mode-spline">Spline</button>
+        <button class="btn-sm" id="mode-polygon">Polygon</button>
+      </div>
       <details style="margin-top:4px">
         <summary style="font-size:11px;color:var(--t3);cursor:pointer;margin-bottom:8px">Advanced</summary>
         <label>Speckle filter <span class="v" id="v-speckle">4</span></label>
@@ -152,11 +157,6 @@ select{background:var(--s2);border:1px solid var(--b);color:var(--t);padding:4px
         <input type="range" id="s-layer" min="4" max="48" value="16">
         <label>Corner threshold <span class="v" id="v-corner">60</span></label>
         <input type="range" id="s-corner" min="10" max="170" value="60">
-        <label style="margin-top:6px">Shape mode</label>
-        <div class="row">
-          <button class="btn-sm" id="mode-spline">Spline</button>
-          <button class="btn-sm btn-active" id="mode-polygon">Polygon</button>
-        </div>
         <label>Layer mode</label>
         <div class="row">
           <button class="btn-sm btn-active" id="hier-cutout">Cutout</button>
@@ -347,7 +347,7 @@ const S = {
   tool: 'select',    // select | joint | assign | lasso | eye | bucket
   selPaths: new Set(),
   selJoint: null,
-  mode: 'polygon',
+  mode: 'spline',
   anim: { playing: false, time: 0, preset: null, speed: 1, blinkRate: 3, blinkDur: 0.15, squashAmt: 0.3 },
   jointIdCounter: 0,
   lasso: { active: false, points: [] },
