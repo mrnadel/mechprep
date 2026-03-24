@@ -159,10 +159,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'You need to select a fit for a gear hub on a keyed shaft. Which fit type is most appropriate?',
           options: [
-            'H7/d9 — a loose running clearance fit',
-            'H7/s6 — a heavy interference press fit',
-            'H7/k6 — a transition (locational) fit that provides accurate centering',
-            'H11/c11 — an extra-loose clearance fit — typically a minor contributing factor'
+            'H7/d9 — loose running clearance fit with significant play',
+            'H7/s6 — heavy interference press fit requiring hydraulic press',
+            'H7/k6 — transition fit providing accurate centering, removable',
+            'H11/c11 — extra-loose clearance fit for non-precision assembly'
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Gear Hub on Keyed Shaft</text><circle cx="40" cy="42" r="22" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1.5"/><circle cx="40" cy="42" r="14" fill="#3B8700" opacity="0.1" stroke="#3B8700" stroke-width="1.5"/><rect x="36" y="28" width="8" height="6" rx="0.5" fill="#A5E86C" opacity="0.3" stroke="#3B8700" stroke-width="0.8"/><text x="40" y="32" font-size="3" fill="#334155" text-anchor="middle">key</text><path d="M18,42 L12,34 L8,38 L14,46 Z" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="0.8"/><path d="M62,42 L68,34 L72,38 L66,46 Z" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="0.8"/><text x="40" y="46" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">H7/k6</text><text x="40" y="74" font-size="3.5" fill="#6B7280" text-anchor="middle">Transition fit — accurate centering</text></svg>',
@@ -174,10 +174,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'What is the relationship between tolerance grade number (IT number) and the magnitude of the tolerance?',
           options: [
-            'Higher IT numbers indicate tighter tolerances',
-            'Higher IT numbers indicate wider (looser) tolerances — IT01 is the tightest',
-            'IT numbers are unrelated to tolerance magnitude — they refer to surface finish',
-            'All IT grades have the same tolerance magnitude but differ in the position'
+            'Higher IT numbers indicate tighter tolerances and finer precision',
+            'Higher IT numbers mean wider (looser) tolerances — IT01 is tightest',
+            'IT numbers are unrelated to tolerance — they refer to surface finish',
+            'All IT grades have the same magnitude but differ in zone position'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">IT Grade vs Tolerance</text><line x1="12" y1="65" x2="68" y2="65" stroke="#3B8700" stroke-width="0.8"/><line x1="12" y1="65" x2="12" y2="15" stroke="#3B8700" stroke-width="0.8"/><rect x="16" y="62" width="5" height="3" rx="0.5" fill="#58CC02" opacity="0.4"/><rect x="23" y="59" width="5" height="6" rx="0.5" fill="#58CC02" opacity="0.5"/><rect x="30" y="54" width="5" height="11" rx="0.5" fill="#58CC02" opacity="0.6"/><rect x="37" y="47" width="5" height="18" rx="0.5" fill="#A5E86C" opacity="0.7"/><rect x="44" y="38" width="5" height="27" rx="0.5" fill="#A5E86C" opacity="0.8"/><rect x="51" y="28" width="5" height="37" rx="0.5" fill="#3B8700" opacity="0.4"/><rect x="58" y="18" width="5" height="47" rx="0.5" fill="#3B8700" opacity="0.5"/><text x="18" y="72" font-size="3" fill="#6B7280" text-anchor="middle">5</text><text x="25" y="72" font-size="3" fill="#6B7280" text-anchor="middle">7</text><text x="32" y="72" font-size="3" fill="#6B7280" text-anchor="middle">9</text><text x="39" y="72" font-size="3" fill="#6B7280" text-anchor="middle">11</text><text x="46" y="72" font-size="3" fill="#6B7280" text-anchor="middle">13</text><text x="53" y="72" font-size="3" fill="#6B7280" text-anchor="middle">15</text><text x="60" y="72" font-size="3" fill="#6B7280" text-anchor="middle">18</text><text x="40" y="78" font-size="3.5" fill="#334155" text-anchor="middle">Higher IT = looser</text></svg>',
@@ -198,10 +198,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'A designer specifies ∅30 +0.021/+0.000 mm for a bore. What type of tolerancing is this?',
           options: [
-            'Bilateral symmetric tolerancing — which contradicts established test results',
-            'Bilateral asymmetric tolerancing, which limits its practical applicability',
-            'Unilateral tolerancing — both deviations are on the same side of nominal',
-            'Limit dimensioning'
+            'Bilateral symmetric tolerancing — equal deviations both sides',
+            'Bilateral asymmetric tolerancing — unequal deviations both sides',
+            'Unilateral tolerancing — both deviations on the same side',
+            'Limit dimensioning — stated as max and min values directly'
           ],
           correctIndex: 2,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Unilateral Tolerance</text><line x1="40" y1="68" x2="40" y2="16" stroke="#3B8700" stroke-width="0.8" opacity="0.3"/><line x1="12" y1="44" x2="68" y2="44" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.3"/><text x="10" y="46" font-size="3" fill="#6B7280">nom</text><rect x="28" y="28" width="24" height="16" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="1.2"/><text x="58" y="30" font-size="3.5" fill="#334155">+0.021</text><text x="58" y="46" font-size="3.5" fill="#334155">+0.000</text><text x="40" y="38" font-size="4.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Bore</text><text x="40" y="58" font-size="3.5" fill="#6B7280" text-anchor="middle">Both deviations same side</text></svg>',
@@ -213,10 +213,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'What is "limit dimensioning" and when is it preferred over plus/minus tolerancing?',
           options: [
-            'Limit dimensioning is another name for bilateral tolerancing, provided all',
-            'Limit dimensioning directly states the maximum and minimum acceptable sizes',
-            'Limit dimensioning only applies to angular dimensions, provided all secondary',
-            'Limit dimensioning means using the tightest possible tolerance for every'
+            'Limit dimensioning is another name for bilateral tolerancing',
+            'Limit dimensioning states the max and min acceptable sizes directly',
+            'Limit dimensioning only applies to angular dimensions on drawings',
+            'Limit dimensioning means using the tightest tolerance possible'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Limit Dimensioning</text><rect x="10" y="20" width="60" height="24" rx="2" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><circle cx="40" cy="32" r="8" fill="white" stroke="#3B8700" stroke-width="1.5"/><line x1="52" y1="28" x2="68" y2="20" stroke="#3B8700" stroke-width="0.6"/><text x="56" y="18" font-size="5" fill="#334155" font-weight="bold">30.021</text><text x="56" y="24" font-size="5" fill="#334155" font-weight="bold">30.000</text><line x1="56" y1="19" x2="72" y2="19" stroke="#3B8700" stroke-width="0.4"/><text x="40" y="58" font-size="3.5" fill="#6B7280" text-anchor="middle">Max and min sizes directly</text><text x="40" y="68" font-size="3.5" fill="#58CC02" text-anchor="middle">No math needed</text></svg>',
@@ -341,10 +341,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'Which correctly ranks these manufacturing processes from tightest to loosest typical tolerance capability?',
           options: [
-            'Sand casting → milling → grinding → lapping',
+            'Sand casting → milling → grinding → lapping (loosest to tightest)',
             'Lapping → grinding → turning → milling → die casting → sand casting',
-            'Milling → grinding → lapping → sand casting',
-            'Grinding → lapping → milling → sand casting — not supported by standard'
+            'Milling → grinding → lapping → sand casting (mixed ordering)',
+            'Grinding → lapping → milling → sand casting (incorrect sequence)'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Process Capability Ranking</text><rect x="8" y="12" width="64" height="8" rx="1" fill="#58CC02" opacity="0.1" stroke="#58CC02" stroke-width="0.8"/><text x="40" y="18" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Lapping (IT1-3)</text><rect x="8" y="22" width="64" height="8" rx="1" fill="#58CC02" opacity="0.15" stroke="#58CC02" stroke-width="0.8"/><text x="40" y="28" font-size="3.5" fill="#334155" text-anchor="middle">Grinding (IT4-6)</text><rect x="8" y="32" width="64" height="8" rx="1" fill="#A5E86C" opacity="0.15" stroke="#A5E86C" stroke-width="0.8"/><text x="40" y="38" font-size="3.5" fill="#334155" text-anchor="middle">Turning (IT6-9)</text><rect x="8" y="42" width="64" height="8" rx="1" fill="#A5E86C" opacity="0.2" stroke="#A5E86C" stroke-width="0.8"/><text x="40" y="48" font-size="3.5" fill="#334155" text-anchor="middle">Milling (IT7-10)</text><rect x="8" y="52" width="64" height="8" rx="1" fill="#3B8700" opacity="0.15" stroke="#3B8700" stroke-width="0.8"/><text x="40" y="58" font-size="3.5" fill="#334155" text-anchor="middle">Die Casting (IT8-10)</text><rect x="8" y="62" width="64" height="8" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="0.8"/><text x="40" y="68" font-size="3.5" fill="#334155" text-anchor="middle">Sand Casting (IT11-16)</text></svg>',
@@ -459,10 +459,10 @@ export const unit9: Unit = {
           type: 'multiple-choice',
           question: 'When would you specify a profile of a surface tolerance instead of combining individual form and orientation tolerances?',
           options: [
-            'Profile tolerance is only used for aesthetic surfaces where appearance matters',
-            'When you need to control the shape, orientation, and location of a complex',
-            'Profile is always preferred',
-            'Only when the surface is flat — profile cannot be applied to curved surfaces'
+            'Profile tolerance is only for aesthetic surfaces where appearance matters',
+            'When controlling shape, orientation, and location of a complex surface',
+            'Profile is always preferred over any other geometric tolerance type',
+            'Only when the surface is flat — profile cannot apply to curved surfaces'
           ],
           correctIndex: 1,
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Profile of a Surface</text><path d="M10,50 Q20,20 40,35 Q60,50 70,25" stroke="#58CC02" stroke-width="2" fill="none"/><path d="M10,53 Q20,23 40,38 Q60,53 70,28" stroke="#A5E86C" stroke-width="0.8" fill="none" stroke-dasharray="2,2" opacity="0.5"/><path d="M10,47 Q20,17 40,32 Q60,47 70,22" stroke="#A5E86C" stroke-width="0.8" fill="none" stroke-dasharray="2,2" opacity="0.5"/><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">Controls form + orientation + location</text><text x="40" y="76" font-size="3.5" fill="#58CC02" text-anchor="middle">Most versatile GD&amp;T tolerance</text></svg>',

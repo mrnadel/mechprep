@@ -13,9 +13,9 @@ export const lesson3: Lesson = {
       type: 'multiple-choice',
       question: 'A door hinge allows the door to rotate about a fixed axis. In structural analysis, what type of support does a hinge pin represent?',
       options: [
-        'Fixed support — prevents translation and rotation',
-        'Pin joint — prevents translation but allows free rotation',
-        'Roller support — prevents translation in one direction only',
+        'Fixed support — constrains both translation and rotation',
+        'Pin joint — constrains translation but allows free rotation',
+        'Roller support — constrains translation in one direction only',
         'Moment connection — transmits bending moment across the joint',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><rect x="8" y="15" width="6" height="50" rx="1" fill="#3B8700" fill-opacity="0.2" stroke="#3B8700" stroke-width="1.5"/><circle cx="14" cy="30" r="3.5" stroke="#3B8700" stroke-width="2" fill="none"/><circle cx="14" cy="30" r="1.2" fill="#3B8700"/><rect x="14" y="22" width="40" height="16" rx="2" stroke="#3B8700" stroke-width="1.5" fill="#A5E86C" fill-opacity="0.15"><animateTransform attributeName="transform" type="rotate" values="0 14 30;12 14 30;0 14 30" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/></rect><line x1="14" y1="30" x2="8" y2="36" stroke="#58CC02" stroke-width="1.5" marker-end="url(#ap1)"/><line x1="14" y1="30" x2="8" y2="24" stroke="#58CC02" stroke-width="1.5" marker-end="url(#ap1)"/><text x="3" y="30" font-size="3.5" fill="#58CC02">R</text><defs><marker id="ap1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><path fill="#58CC02" d="M0,0 L4,1.5 L0,3Z"/></marker></defs><text x="40" y="56" text-anchor="middle" font-size="4" fill="#334155">Pin joint</text><text x="40" y="64" text-anchor="middle" font-size="3.5" fill="#6B7280">Rx, Ry reactions</text><text x="40" y="72" text-anchor="middle" font-size="3.5" fill="#6B7280">M = 0 (free rotation)</text></svg>`,
@@ -68,10 +68,10 @@ export const lesson3: Lesson = {
       type: 'multiple-choice',
       question: 'A toilet flushes using a siphon. What primarily drives the water over the siphon crest and into the drain?',
       options: [
-        'Gravity pulling the water column on the drain side creates a pressure difference',
-        'A mechanical pump built into the toilet base',
-        'Water pressure from the supply line pushing through the bowl',
-        'Capillary action drawing water through the narrow siphon tube',
+        'Gravity pulling the taller drain-side water column creates a pressure difference',
+        'A mechanical pump mechanism built into the toilet base below the bowl',
+        'Water pressure from the supply line pushing water through the bowl',
+        'Capillary action drawing water upward through the narrow siphon tube',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
   <rect x="2" y="2" width="76" height="76" rx="8" fill="#58CC02" opacity="0.06"/>
@@ -120,10 +120,10 @@ export const lesson3: Lesson = {
       type: 'multiple-choice',
       question: 'In a split air conditioning system, the indoor unit contains the evaporator and the outdoor unit contains the condenser. Why does the indoor unit cool the room?',
       options: [
-        'The compressor in the indoor unit generates cold air directly',
-        'Refrigerant evaporates at low pressure in the indoor coil, absorbing heat from room air',
-        'The outdoor condenser pumps cold air through ducts to the indoor unit',
-        'An electric cooling element (Peltier device) in the indoor unit removes heat',
+        'The compressor in the indoor unit generates cold air directly by expansion',
+        'Refrigerant evaporates at low pressure in the indoor coil, absorbing room heat',
+        'The outdoor condenser pumps pre-cooled air through ducts to the indoor unit',
+        'An electric Peltier cooling element in the indoor unit removes thermal energy',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
   <rect x="2" y="2" width="76" height="76" rx="8" fill="#58CC02" opacity="0.06"/>
@@ -194,10 +194,10 @@ export const lesson3: Lesson = {
       type: 'multiple-choice',
       question: 'A home thermostat turns the AC compressor on when temperature exceeds the setpoint and off when it drops below. What type of control action is this?',
       options: [
-        'Proportional (P) control',
-        'On-off (bang-bang) control',
-        'PID control with derivative damping',
-        'Open-loop feedforward control',
+        'Proportional (P) control with variable output',
+        'On-off (bang-bang) control with fixed output',
+        'PID control with derivative damping term',
+        'Open-loop feedforward control without sensing',
       ],
       diagram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><rect x="1" y="1" width="78" height="78" rx="8" fill="#58CC02" opacity="0.08"/><line x1="10" y1="40" x2="72" y2="40" stroke="#6B7280" stroke-width="0.8" stroke-dasharray="2 1.5"/><line x1="10" y1="10" x2="10" y2="70" stroke="#3B8700" stroke-width="1.5"/><line x1="10" y1="70" x2="72" y2="70" stroke="#3B8700" stroke-width="1.5"/><text x="6" y="30" font-size="3.5" fill="#334155" transform="rotate(-90 6 30)">T</text><text x="42" y="78" font-size="3.5" fill="#334155">time</text><text x="72" y="38" font-size="3" fill="#6B7280">setpoint</text><path d="M10,45 L18,45 L18,35 L28,35 L28,45 L38,45 L38,35 L48,35 L48,45 L58,45 L58,35 L68,35" stroke="#58CC02" stroke-width="2" fill="none"/><path d="M10,50 L18,44 L28,48 L38,42 L48,46 L58,42 L68,44" stroke="#A5E86C" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/><text x="15" y="22" font-size="3.5" fill="#58CC02">ON</text><text x="24" y="54" font-size="3.5" fill="#6B7280">OFF</text><text x="40" y="64" text-anchor="middle" font-size="4" fill="#334155">Bang-bang control</text></svg>`,
       correctIndex: 1,

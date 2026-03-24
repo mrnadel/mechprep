@@ -74,10 +74,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A centrifuge operates at 12,000 RPM but its first critical speed is calculated at 8,000 RPM. Is this design safe?',
           options: [
-            'This is unsafe — no shaft should ever operate above its first critical speed.',
-            'This is safe in principle — supercritical operation is routine',
-            'This is only safe if the shaft is perfectly balanced — even 1 gram',
-            'This is safe'
+            'Unsafe — operating above the first critical speed always causes failure',
+            'Safe — supercritical operation is routine if you pass through quickly',
+            'Only safe if the shaft is perfectly balanced to sub-gram precision',
+            'Safe only below twice the critical speed, dangerous above that limit'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="40" r="24" fill="#58CC02" opacity="0.08"/> <circle cx="40" cy="40" r="24" stroke="#58CC02" stroke-width="2.5" fill="none"/> <circle cx="40" cy="40" r="18" fill="#58CC02" opacity="0.04"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> <rect x="34" y="16" width="12" height="10" rx="4" fill="#3B8700" opacity="0.35"/> <rect x="35" y="17" width="10" height="8" rx="3" fill="#A5E86C" opacity="0.25"/> <line x1="40" y1="20" x2="40" y2="64" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <line x1="24" y1="40" x2="56" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <circle cx="40" cy="21" r="2" fill="#3B8700" opacity="0.5"/> </g> <circle cx="40" cy="40" r="6" fill="#FAFAFA"/> <circle cx="40" cy="40" r="6" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="40" cy="40" r="3" fill="#3B8700" opacity="0.3"/> <path d="M68,30 Q74,40 68,50" stroke="#A5E86C" stroke-width="1.5" fill="none" opacity="0.25"> <animate attributeName="opacity" values="0.1;0.35;0.1" dur="1.5s" repeatCount="indefinite"/> </path> <polygon points="68,50 71,47 65,47" fill="#A5E86C" opacity="0.25"/> </svg>',
@@ -153,9 +153,9 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'The stress concentration factor is Kt = 2.5. Which approach is most effective?',
           options: [
-            'Increase the fillet radius from 1 mm to 4 mm — this can reduce Kt',
-            'Add a second, smaller shoulder step — going 50 to 45 to 40 mm with the same 1',
-            'Polish the fillet surface to mirror finish — surface finish is the dominant',
+            'Increase fillet radius from 1 mm to 4 mm to reduce Kt significantly',
+            'Add a second shoulder step (50→45→40 mm) keeping the same fillet radii',
+            'Polish the fillet to mirror finish since surface finish dominates Kt',
             'Add a retaining ring groove near the fillet to redistribute stress'
           ],
           correctIndex: 0,
@@ -353,10 +353,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the effect of a press-fit (interference fit) hub on the fatigue life of a shaft?',
           options: [
-            'It improves fatigue life by adding support material around the shaft',
-            'It has no effect on fatigue life since the hub is a separate component',
-            'It reduces fatigue life',
-            'It improves fatigue life by creating beneficial compressive residual stresses'
+            'Improves fatigue life by adding structural support material around the shaft',
+            'Has no effect on fatigue life since the hub is a separate component entirely',
+            'Reduces fatigue life due to fretting and stress concentration at the interface',
+            'Improves fatigue life by creating beneficial compressive residual stresses'
           ],
           correctIndex: 2,
 
@@ -393,10 +393,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'Using the DE-Goodman criterion, what are the equivalent alternating and mean stresses?',
           options: [
-            'sigma_a\' = 200 MPa, sigma_m\' = 80 MPa — a secondary effect only',
-            'sigma_a\' = 200 MPa, sigma_m\' = 138.6 MPa (= sqrt(3) * 80)',
-            'sigma_a\' = 215 MPa, sigma_m\' = 80 MPa, independent of strain rate',
-            'sigma_a\' = 280 MPa, sigma_m\' = 0 MPa, regardless of specimen size'
+            'sigma_a\' = 200 MPa, sigma_m\' = 80 MPa (shear unchanged)',
+            'sigma_a\' = 200 MPa, sigma_m\' = 138.6 MPa (sqrt(3) * 80)',
+            'sigma_a\' = 215 MPa, sigma_m\' = 80 MPa (von Mises on bending)',
+            'sigma_a\' = 280 MPa, sigma_m\' = 0 MPa (mean stress ignored)'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="40" r="24" fill="#58CC02" opacity="0.08"/> <circle cx="40" cy="40" r="24" stroke="#58CC02" stroke-width="2.5" fill="none"/> <circle cx="40" cy="40" r="18" fill="#58CC02" opacity="0.04"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> <rect x="34" y="16" width="12" height="10" rx="4" fill="#3B8700" opacity="0.35"/> <rect x="35" y="17" width="10" height="8" rx="3" fill="#A5E86C" opacity="0.25"/> <line x1="40" y1="20" x2="40" y2="64" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <line x1="24" y1="40" x2="56" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <circle cx="40" cy="21" r="2" fill="#3B8700" opacity="0.5"/> </g> <circle cx="40" cy="40" r="6" fill="#FAFAFA"/> <circle cx="40" cy="40" r="6" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="40" cy="40" r="3" fill="#3B8700" opacity="0.3"/> <path d="M68,30 Q74,40 68,50" stroke="#A5E86C" stroke-width="1.5" fill="none" opacity="0.25"> <animate attributeName="opacity" values="0.1;0.35;0.1" dur="1.5s" repeatCount="indefinite"/> </path> <polygon points="68,50 71,47 65,47" fill="#A5E86C" opacity="0.25"/> </svg>',
@@ -443,10 +443,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'An electric motor shaft. When would you choose a deep groove ball bearing over a tapered roller bearing, and vice versa?',
           options: [
-            'Use tapered roller bearings for both — they are superior in every way and',
-            'Use deep groove ball bearings for both — their lower friction makes them',
-            'Conveyor pulley: tapered roller (handles heavy radial loads, accommodates',
-            'The choice depends only on the catalog life calculation — whichever bearing'
+            'Use tapered roller bearings for both — they are superior in every way',
+            'Use deep groove ball bearings for both — lower friction suits every case',
+            'Conveyor: tapered roller; motor: deep groove ball for high-speed, low load',
+            'The choice depends only on the catalog life calculation result, nothing else'
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Outer race --> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.05"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="3" fill="none" opacity="0.3"/> <!-- Outer raceway groove (where balls contact) --> <circle cx="40" cy="40" r="23.5" stroke="#A5E86C" stroke-width="3" fill="none" opacity="0.06"/> <!-- Inner race --> <circle cx="40" cy="40" r="12.5" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="12.5" stroke="#3B8700" stroke-width="3" fill="none"/> <!-- Inner raceway groove --> <circle cx="40" cy="40" r="13.5" stroke="#A5E86C" stroke-width="2" fill="none" opacity="0.06"/> <!-- Inner race crosshairs (shaft rotation indicator) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <line x1="40" y1="28" x2="40" y2="52" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> <line x1="28" y1="40" x2="52" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> </g> <!-- Shaft bore --> <circle cx="40" cy="40" r="5" fill="#3B8700" opacity="0.25"/> <circle cx="40" cy="40" r="2" fill="white" opacity="0.12"/> <!-- Ball cage + balls (cage speed ≈ half shaft speed) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="4s" repeatCount="indefinite"/> <!-- Cage retainer ring --> <circle cx="40" cy="40" r="18" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="4,10" fill="none" opacity="0.2"/> <!-- Ball 0° --> <circle cx="58" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="56.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 45° --> <circle cx="52.7" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 90° --> <circle cx="40" cy="22" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="22" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="20.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 135° --> <circle cx="27.3" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 180° --> <circle cx="22" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="22" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="20.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 225° --> <circle cx="27.3" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="51.2" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 270° --> <circle cx="40" cy="58" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="58" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="56.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 315° --> <circle cx="52.7" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="51.2" r="1.5" fill="white" opacity="0.3"/> </g> </svg>',
@@ -467,10 +467,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'A plain (journal) bearing in a large pump is showing intermittent high temperatures and occasional metal-to-metal contact noise?',
           options: [
-            'The bearing clearance is too large, causing the shaft to rattle at all speeds.',
-            'At low startup speeds, the bearing operates in boundary/mixed lubrication',
-            'The lubricant viscosity is too high, causing overheating at startup when flow',
-            'The shaft is misaligned and contacts the bearing only during startup'
+            'Bearing clearance too large, causing shaft to rattle at all operating speeds',
+            'At low startup speeds, bearing operates in boundary/mixed lubrication regime',
+            'Lubricant viscosity too high, causing overheating at startup from poor flow',
+            'Shaft is misaligned and contacts the bearing surface only during startup'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Outer race --> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.05"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="3" fill="none" opacity="0.3"/> <!-- Outer raceway groove (where balls contact) --> <circle cx="40" cy="40" r="23.5" stroke="#A5E86C" stroke-width="3" fill="none" opacity="0.06"/> <!-- Inner race --> <circle cx="40" cy="40" r="12.5" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="12.5" stroke="#3B8700" stroke-width="3" fill="none"/> <!-- Inner raceway groove --> <circle cx="40" cy="40" r="13.5" stroke="#A5E86C" stroke-width="2" fill="none" opacity="0.06"/> <!-- Inner race crosshairs (shaft rotation indicator) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <line x1="40" y1="28" x2="40" y2="52" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> <line x1="28" y1="40" x2="52" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> </g> <!-- Shaft bore --> <circle cx="40" cy="40" r="5" fill="#3B8700" opacity="0.25"/> <circle cx="40" cy="40" r="2" fill="white" opacity="0.12"/> <!-- Ball cage + balls (cage speed ≈ half shaft speed) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="4s" repeatCount="indefinite"/> <!-- Cage retainer ring --> <circle cx="40" cy="40" r="18" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="4,10" fill="none" opacity="0.2"/> <!-- Ball 0° --> <circle cx="58" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="56.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 45° --> <circle cx="52.7" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 90° --> <circle cx="40" cy="22" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="22" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="20.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 135° --> <circle cx="27.3" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 180° --> <circle cx="22" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="22" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="20.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 225° --> <circle cx="27.3" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="51.2" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 270° --> <circle cx="40" cy="58" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="58" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="56.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 315° --> <circle cx="52.7" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="51.2" r="1.5" fill="white" opacity="0.3"/> </g> </svg>',
@@ -482,10 +482,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'The outer race looks normal. What does this wear pattern tell you about the root cause?',
           options: [
-            'Normal fatigue wear from exceeding L10 life — the bearing simply needs to be',
-            'Contaminated lubricant — abrasive particles caused accelerated surface damage',
-            'Misalignment — the load is concentrated on a narrow band instead of being',
-            'Electrical discharge damage (fluting) — stray currents passed through'
+            'Normal fatigue wear from exceeding rated L10 life, needs replacement',
+            'Contaminated lubricant — abrasive particles caused accelerated damage',
+            'Misalignment — load concentrated on a narrow band instead of full width',
+            'Electrical discharge damage (fluting) — stray currents through bearing'
           ],
           correctIndex: 2,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Outer race --> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.05"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="3" fill="none" opacity="0.3"/> <!-- Outer raceway groove (where balls contact) --> <circle cx="40" cy="40" r="23.5" stroke="#A5E86C" stroke-width="3" fill="none" opacity="0.06"/> <!-- Inner race --> <circle cx="40" cy="40" r="12.5" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="12.5" stroke="#3B8700" stroke-width="3" fill="none"/> <!-- Inner raceway groove --> <circle cx="40" cy="40" r="13.5" stroke="#A5E86C" stroke-width="2" fill="none" opacity="0.06"/> <!-- Inner race crosshairs (shaft rotation indicator) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <line x1="40" y1="28" x2="40" y2="52" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> <line x1="28" y1="40" x2="52" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> </g> <!-- Shaft bore --> <circle cx="40" cy="40" r="5" fill="#3B8700" opacity="0.25"/> <circle cx="40" cy="40" r="2" fill="white" opacity="0.12"/> <!-- Ball cage + balls (cage speed ≈ half shaft speed) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="4s" repeatCount="indefinite"/> <!-- Cage retainer ring --> <circle cx="40" cy="40" r="18" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="4,10" fill="none" opacity="0.2"/> <!-- Ball 0° --> <circle cx="58" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="56.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 45° --> <circle cx="52.7" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 90° --> <circle cx="40" cy="22" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="22" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="20.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 135° --> <circle cx="27.3" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 180° --> <circle cx="22" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="22" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="20.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 225° --> <circle cx="27.3" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="51.2" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 270° --> <circle cx="40" cy="58" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="58" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="56.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 315° --> <circle cx="52.7" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="51.2" r="1.5" fill="white" opacity="0.3"/> </g> </svg>',
@@ -640,10 +640,10 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'For a purely radial load of 8 kN at 1500 RPM, which bearing gives longer life?',
           options: [
-            '6208 ball bearing because ball bearings always last longer',
-            'NU208 roller bearing: L10 = (41/8)^(10/3) = 218 million rev vs.',
+            '6208 ball bearing — ball bearings always outlast rollers',
+            'NU208 roller: L10 = (41/8)^(10/3) = 218 Mrev, much longer life',
             'Both give the same life because they have the same bore size',
-            '6208 ball bearing: L10 = (29.5/8)^3 = 50.1 million rev vs.'
+            '6208 ball: L10 = (29.5/8)^3 = 50.1 Mrev, longer than roller'
           ],
           correctIndex: 1,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Outer race --> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.05"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="3" fill="none" opacity="0.3"/> <!-- Outer raceway groove (where balls contact) --> <circle cx="40" cy="40" r="23.5" stroke="#A5E86C" stroke-width="3" fill="none" opacity="0.06"/> <!-- Inner race --> <circle cx="40" cy="40" r="12.5" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="12.5" stroke="#3B8700" stroke-width="3" fill="none"/> <!-- Inner raceway groove --> <circle cx="40" cy="40" r="13.5" stroke="#A5E86C" stroke-width="2" fill="none" opacity="0.06"/> <!-- Inner race crosshairs (shaft rotation indicator) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <line x1="40" y1="28" x2="40" y2="52" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> <line x1="28" y1="40" x2="52" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.15"/> </g> <!-- Shaft bore --> <circle cx="40" cy="40" r="5" fill="#3B8700" opacity="0.25"/> <circle cx="40" cy="40" r="2" fill="white" opacity="0.12"/> <!-- Ball cage + balls (cage speed ≈ half shaft speed) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="4s" repeatCount="indefinite"/> <!-- Cage retainer ring --> <circle cx="40" cy="40" r="18" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="4,10" fill="none" opacity="0.2"/> <!-- Ball 0° --> <circle cx="58" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="58" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="56.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 45° --> <circle cx="52.7" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 90° --> <circle cx="40" cy="22" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="22" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="20.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 135° --> <circle cx="27.3" cy="27.3" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="27.3" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="25.8" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 180° --> <circle cx="22" cy="40" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="22" cy="40" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="20.5" cy="38.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 225° --> <circle cx="27.3" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="27.3" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="25.8" cy="51.2" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 270° --> <circle cx="40" cy="58" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="40" cy="58" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="38.5" cy="56.5" r="1.5" fill="white" opacity="0.3"/> <!-- Ball 315° --> <circle cx="52.7" cy="52.7" r="5" fill="#58CC02" opacity="0.22"/> <circle cx="52.7" cy="52.7" r="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="51.2" cy="51.2" r="1.5" fill="white" opacity="0.3"/> </g> </svg>',
@@ -655,8 +655,8 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the difference between face-to-face (DF) and back-to-back (DB) arrangements for paired angular contact bearings?',
           options: [
-            'No difference — both arrangements perform identically, which would only hold',
-            'DB (back-to-back) provides a wider effective bearing span and better moment',
+            'No difference — both arrangements perform identically in practice',
+            'DB (back-to-back) provides wider effective span and better moment rigidity',
             'DF is used for high-speed applications and DB for low-speed applications',
             'DB handles only radial loads while DF handles only axial loads'
           ],
@@ -694,9 +694,9 @@ export const unit8: Unit = {
           type: 'multiple-choice',
           question: 'What is the primary failure mode that determines the L10 life rating of rolling element bearings?',
           options: [
-            'Abrasive wear of the rolling elements — an oversimplification of the real',
-            'Subsurface-initiated fatigue spalling of the raceways',
-            'Cage failure and roller jamming, though the effect is secondary in most cases',
+            'Abrasive wear of the rolling elements from particle contamination',
+            'Subsurface-initiated fatigue spalling of the raceways under load',
+            'Cage failure and roller jamming from insufficient lubrication',
             'Lubricant breakdown and overheating — which contradicts established test results'
           ],
           correctIndex: 1,
