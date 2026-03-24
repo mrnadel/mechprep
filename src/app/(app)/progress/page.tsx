@@ -4,7 +4,8 @@ import { useProgress } from '@/store/useStore';
 import { useSubscription } from '@/hooks/useSubscription';
 import { topics } from '@/data/topics';
 import { FEATURES } from '@/lib/pricing';
-import { BarChart3, Target, TrendingUp, Brain, Zap } from 'lucide-react';
+import { BarChart3, Target, TrendingUp, Brain, Zap, ChevronLeft } from 'lucide-react';
+import Link from 'next/link';
 import { UpgradeGate } from '@/components/ui/UpgradeGate';
 
 export default function ProgressPage() {
@@ -33,12 +34,18 @@ export default function ProgressPage() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <div>
-        <h1 className="text-xl sm:text-2xl font-bold text-surface-900 flex items-center gap-2 sm:gap-3">
-          <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 text-primary-500 shrink-0" />
-          Progress &amp; Analytics
-        </h1>
-        <p className="text-surface-500 mt-1">Track your improvement and identify areas to focus on.</p>
+      <div className="sticky top-0 z-30 bg-white px-4 sm:px-5 py-3" style={{ borderBottom: '2px solid #E5E5E5' }}>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <Link href="/" className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#F5F5F5] active:scale-90 transition-transform" aria-label="Back">
+            <ChevronLeft className="w-5 h-5 text-[#AFAFAF]" />
+          </Link>
+          <div>
+            <h1 className="text-base sm:text-lg font-extrabold text-[#3C3C3C] flex items-center gap-2">
+              <BarChart3 className="w-5 h-5 text-primary-500 shrink-0" />
+              Progress &amp; Analytics
+            </h1>
+          </div>
+        </div>
       </div>
 
       {/* Empty State */}

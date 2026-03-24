@@ -425,13 +425,12 @@ export const useEngagementStore = create<EngagementStore>()(
             },
           }));
 
-          // Restore the streak in the main progress store
+          // Restore the streak in both progress stores (practice + course)
           if (previousStreak > 0) {
             // Set lastActiveDate to yesterday so next session continues the streak
             const todayD = new Date(today + 'T12:00:00Z');
             todayD.setUTCDate(todayD.getUTCDate() - 1);
             const yesterdayStr = todayD.toISOString().slice(0, 10);
-
 
             useStore.setState((s) => ({
               progress: {
@@ -444,6 +443,24 @@ export const useEngagementStore = create<EngagementStore>()(
                 lastActiveDate: yesterdayStr,
               },
             }));
+
+            // Also restore the course store's streak so the header display
+            // and future completeLesson calls see the repaired value.
+            // Use dynamic import to avoid circular dependency at module load time
+            // (useCourseStore imports useEngagementStore).
+            import('@/store/useCourseStore').then(({ useCourseStore }) => {
+              useCourseStore.setState((cs) => ({
+                progress: {
+                  ...cs.progress,
+                  currentStreak: previousStreak,
+                  longestStreak: Math.max(
+                    cs.progress.longestStreak || 0,
+                    previousStreak,
+                  ),
+                  lastActiveDate: yesterdayStr,
+                },
+              }));
+            });
           }
 
           return true;

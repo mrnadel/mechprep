@@ -11,6 +11,7 @@ vi.mock('@/store/useMasteryStore', () => ({
 vi.mock('@/store/useStore', () => ({
   useStore: {
     getState: () => ({ debugSetFromCourse: vi.fn() }),
+    setState: vi.fn(),
   },
 }));
 

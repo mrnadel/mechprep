@@ -302,30 +302,12 @@ describe('useStore', () => {
     });
 
     it('updates streak when no previous activity', () => {
-      // answerQuestion sets lastActiveDate to today, so streak logic in
-      // completeSession sees lastActive === today and doesn't change it.
-      // The streak gets set to 1 during the first answerQuestion call
-      // (via lastActiveDate being set). But actually, answerQuestion does NOT
-      // update streak -- only completeSession does. However, answerQuestion
-      // does set lastActiveDate to today. So completeSession sees lastActive=today
-      // and leaves streak unchanged (at 0 from default).
-      //
-      // The real flow: the user's lastActiveDate is "" initially.
-      // answerQuestion sets lastActiveDate to today.
-      // Then completeSession sees lastActiveDate === today (from answerQuestion)
-      // and does NOT update the streak. This means streak stays 0 after the
-      // first session in the real app flow. That seems like the actual behavior.
-      //
-      // Let's test the real behavior: streak stays at what it was if
-      // answerQuestion already set lastActiveDate to today.
+      // answerQuestion no longer sets lastActiveDate — completeSession handles
+      // both streak calculation and date update. So the first session correctly
+      // initializes the streak to 1.
       completeAdaptiveSession(5);
-      // answerQuestion already set lastActiveDate to today, so
-      // completeSession's streak logic sees lastActive === today => no change
-      // The streak was 0 and stays 0 unless lastActiveDate was not today
-      // This is the actual store behavior
       const progress = useStore.getState().progress;
-      // Streak unchanged because lastActive was set to today by answerQuestion
-      expect(progress.currentStreak).toBe(0);
+      expect(progress.currentStreak).toBe(1);
     });
 
     it('increments streak when last active yesterday and no answers yet today', () => {

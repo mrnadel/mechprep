@@ -260,8 +260,20 @@ export const useCourseStore = create<CourseState>()(
         // XP based on accuracy performance within this session
         const isFlawless = accuracy === 100 && totalQuestions >= 3;
         const accuracyMultiplier = isFlawless ? 4 : calculateStars(accuracy); // 4x flawless, 1-3 otherwise
-        const doubleXpExpiry = useEngagementStore.getState().doubleXpExpiry;
-        const isDoubleXp = doubleXpExpiry ? new Date(doubleXpExpiry).getTime() > Date.now() : false;
+        // Double XP check with tamper validation
+        const engState = useEngagementStore.getState();
+        const doubleXpExpiry = engState.doubleXpExpiry;
+        let isDoubleXp = false;
+        if (doubleXpExpiry) {
+          const expiry = new Date(doubleXpExpiry).getTime();
+          const now = Date.now();
+          if (!isNaN(expiry) && expiry > now && expiry <= now + 30 * 60 * 1000 + 5000) {
+            const recentCutoff = now - (30 * 60 * 1000 + 5 * 60 * 1000);
+            isDoubleXp = engState.gems.transactions.some(
+              (t) => t.source === 'shop_purchase' && t.amount < 0 && new Date(t.timestamp).getTime() > recentCutoff
+            );
+          }
+        }
         const xpEarned = lesson.xpReward * accuracyMultiplier * (isDoubleXp ? 2 : 1);
 
         // Build updated lesson progress
@@ -280,7 +292,6 @@ export const useCourseStore = create<CourseState>()(
         const today = getTodayString();
         const yesterday = getYesterdayString();
         const lastActive = state.progress.lastActiveDate;
-        const engState = useEngagementStore.getState();
 
         let newStreak = state.progress.currentStreak;
         let streakFrozen = false;
@@ -381,6 +392,18 @@ export const useCourseStore = create<CourseState>()(
             completedLessons: newCompletedLessons,
           },
         });
+
+        // Cross-store sync: keep practice store's streak in lockstep so
+        // streak freeze/repair and comeback detection stay consistent
+        // regardless of which mode the user practices in.
+        useStore.setState((ps) => ({
+          progress: {
+            ...ps.progress,
+            currentStreak: newStreak,
+            longestStreak: Math.max(ps.progress.longestStreak, newStreak),
+            lastActiveDate: today,
+          },
+        }));
       },
 
       exitLesson: () => {

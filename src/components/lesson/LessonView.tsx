@@ -11,6 +11,7 @@ import type { QuestionCardHandle } from './QuestionCard';
 import ResultScreen from './ResultScreen';
 import FlagButton from '@/components/feedback/FlagButton';
 import { useMasteryStore } from '@/store/useMasteryStore';
+import { useDoubleXpActive } from '@/store/useEngagementStore';
 import EngineeringCalculator from '@/components/calculator/EngineeringCalculator';
 import type { CourseQuestion } from '@/data/course/types';
 import type { ContentFeedbackType } from '@/data/types';
@@ -61,6 +62,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
   const [xpGain, setXpGain] = useState(0);
   const questionRef = useRef<QuestionCardHandle>(null);
+  const isDoubleXp = useDoubleXpActive();
   const addMasteryEvent = useMasteryStore((s) => s.addEvent);
   const syncMastery = useMasteryStore((s) => s.syncToServer);
 
@@ -162,9 +164,9 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         }
       }
       setLastAnswerCorrect(correct);
-      if (correct) setXpGain((prev) => prev + 10);
+      if (correct) setXpGain((prev) => prev + (isDoubleXp ? 20 : 10));
     },
-    [adapter, currentQuestion, _submitAnswer, lessonData, addMasteryEvent]
+    [adapter, currentQuestion, _submitAnswer, lessonData, addMasteryEvent, isDoubleXp]
   );
 
   const handleSelectionChange = useCallback((value: boolean) => {
@@ -492,26 +494,46 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             )
           )}
 
-          <motion.div
-            className="flex-shrink-0 flex items-center"
-            style={{
-              gap: 4,
-              padding: '4px 10px',
-              borderRadius: 10,
-              background: theme.bg,
-              color: theme.dark,
-              fontWeight: 800,
-              fontSize: 13,
-            }}
-            key={xpGain}
-            animate={{ scale: [1, 1.15, 1] }}
-            transition={{ duration: 0.25 }}
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" fill={theme.dark} />
-            </svg>
-            <span aria-live="polite">+{xpGain} XP</span>
-          </motion.div>
+          <div className="flex-shrink-0 flex items-center gap-1">
+            {isDoubleXp && (
+              <div
+                className="flex items-center"
+                style={{
+                  padding: '3px 7px',
+                  borderRadius: 8,
+                  background: 'linear-gradient(135deg, #F59E0B, #EF4444)',
+                  color: '#FFFFFF',
+                  fontWeight: 900,
+                  fontSize: 11,
+                  letterSpacing: 0.3,
+                  lineHeight: 1,
+                  boxShadow: '0 1px 4px rgba(245,158,11,0.4)',
+                }}
+              >
+                2X
+              </div>
+            )}
+            <motion.div
+              className="flex items-center"
+              style={{
+                gap: 4,
+                padding: '4px 10px',
+                borderRadius: 10,
+                background: isDoubleXp ? 'linear-gradient(135deg, #FEF3C7, #FDE68A)' : theme.bg,
+                color: isDoubleXp ? '#B45309' : theme.dark,
+                fontWeight: 800,
+                fontSize: 13,
+              }}
+              key={xpGain}
+              animate={{ scale: [1, 1.15, 1] }}
+              transition={{ duration: 0.25 }}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" fill={isDoubleXp ? '#B45309' : theme.dark} />
+              </svg>
+              <span aria-live="polite">+{xpGain} XP</span>
+            </motion.div>
+          </div>
 
         </div>
 

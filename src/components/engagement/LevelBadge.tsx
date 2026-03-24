@@ -21,7 +21,7 @@ export function LevelBadge({ level, size = 48, className }: LevelBadgeProps) {
         width={size}
         height={size}
         className={className}
-        style={{ objectFit: 'contain' }}
+        style={{ width: size, height: 'auto', objectFit: 'contain' }}
         draggable={false}
       />
     );

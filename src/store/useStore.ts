@@ -589,7 +589,9 @@ export const useStore = create<AppState>()(
             totalQuestionsCorrect: state.progress.totalQuestionsCorrect + (correct ? 1 : 0),
             currentLevel: updateLevel(state.progress.totalXp + xp),
             topicProgress: updateTopicProgress(state.progress.topicProgress, question.topic, question.subtopic, correct),
-            lastActiveDate: getTodayString(),
+            // NOTE: lastActiveDate is intentionally NOT set here — it must stay
+            // at the previous value until completeSession runs, so streak logic
+            // can detect consecutive-day gaps and increment correctly.
           },
         }));
 
@@ -626,9 +628,10 @@ export const useStore = create<AppState>()(
         const topicsCovered = [...new Set(session.questions.map(q => q.topic))];
         const xpEarned = answers.reduce((sum, a) => sum + a.xpAwarded, 0);
 
-        // Update streak
+        // Update streak (with freeze support + cross-store sync)
         const today = getTodayString();
         const lastActive = progress.lastActiveDate;
+        const engState = useEngagementStore.getState();
         let newStreak = progress.currentStreak;
         if (lastActive !== today) {
           const yesterday = new Date();
@@ -639,7 +642,16 @@ export const useStore = create<AppState>()(
           } else if (!lastActive) {
             newStreak = 1;
           } else {
-            newStreak = 1; // streak broken
+            // Missed day(s) — check for streak freeze
+            if (engState.streak.freezesOwned > 0 && newStreak > 0) {
+              engState.useStreakFreeze();
+              newStreak += 1; // Continue as if no break
+            } else {
+              if (newStreak > 0) {
+                engState.recordStreakBreak(newStreak);
+              }
+              newStreak = 1; // streak broken
+            }
           }
         }
 
@@ -706,6 +718,18 @@ export const useStore = create<AppState>()(
           sessionSummary: summary,
           showAchievementToast: newAchievements.length > 0 ? newAchievements[0] : null,
         });
+
+        // Cross-store sync: keep course store's streak in lockstep so the
+        // header display and freeze/repair systems stay consistent regardless
+        // of which mode the user practices in.
+        useCourseStore.setState((cs) => ({
+          progress: {
+            ...cs.progress,
+            currentStreak: newStreak,
+            longestStreak: Math.max(cs.progress.longestStreak, newStreak),
+            lastActiveDate: today,
+          },
+        }));
       },
 
       abandonSession: () => {
@@ -762,6 +786,10 @@ export const useStore = create<AppState>()(
             totalXp: xp,
             currentLevel: updateLevel(xp),
           },
+        }));
+        // Sync to course store so XP popover in CourseHeader reflects the change
+        useCourseStore.setState((state) => ({
+          progress: { ...state.progress, totalXp: xp },
         }));
       },
 

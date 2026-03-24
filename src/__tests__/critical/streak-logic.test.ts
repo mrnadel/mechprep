@@ -294,7 +294,7 @@ describe('Streak Logic', () => {
   });
 
   describe('streak with answerQuestion interaction', () => {
-    it('answerQuestion sets lastActiveDate to today', () => {
+    it('answerQuestion does NOT set lastActiveDate (completeSession handles it)', () => {
       useStore.setState({
         progress: { ...getDefaultProgress(), lastActiveDate: '' },
       });
@@ -302,12 +302,13 @@ describe('Streak Logic', () => {
       const q = useStore.getState().session!.questions[0];
       useStore.getState().answerQuestion(q.id, true, undefined, 10);
 
-      expect(useStore.getState().progress.lastActiveDate).toBe(getTodayString());
+      // lastActiveDate should remain empty — only completeSession sets it
+      expect(useStore.getState().progress.lastActiveDate).toBe('');
     });
 
-    it('streak stays unchanged when answerQuestion already set today', () => {
-      // Since answerQuestion sets lastActiveDate to today,
-      // completeSession sees lastActive === today and doesn't change streak
+    it('streak increments correctly when using answerQuestion then completeSession', () => {
+      // answerQuestion no longer sets lastActiveDate — completeSession handles it.
+      // So the full flow (answer questions → complete) correctly increments the streak.
       useStore.setState({
         progress: {
           ...getDefaultProgress(),
@@ -317,19 +318,16 @@ describe('Streak Logic', () => {
         },
       });
 
-      // Using answerQuestion which sets lastActiveDate to today
       useStore.getState().startSession('adaptive');
       const questions = useStore.getState().session!.questions;
       for (let i = 0; i < questions.length; i++) {
         useStore.getState().answerQuestion(questions[i].id, i < 5, undefined, 20);
       }
 
-      // After answerQuestion, lastActiveDate is today, so completeSession
-      // doesn't change streak
       useStore.getState().completeSession();
 
-      // Streak stays 5 because lastActive was already set to today by answerQuestion
-      expect(useStore.getState().progress.currentStreak).toBe(5);
+      // Streak correctly increments from 5 to 6
+      expect(useStore.getState().progress.currentStreak).toBe(6);
     });
   });
 

@@ -2,7 +2,7 @@
 
 import { useProgress } from '@/store/useStore';
 import { achievements } from '@/data/achievements';
-import { Trophy, Lock, Star, ChevronRight } from 'lucide-react';
+import { Trophy, Lock, Star, ChevronRight, ChevronLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { AchievementCategory } from '@/data/types';
 import Link from 'next/link';
@@ -111,8 +111,22 @@ export default function AchievementsPage() {
     .reduce((sum, a) => sum + a.xpReward, 0);
 
   return (
-    <div className="max-w-3xl mx-auto px-4 pb-12 animate-fade-in">
-      {/* Header */}
+    <div className="max-w-3xl mx-auto pb-12 animate-fade-in">
+      {/* Sticky top bar */}
+      <div className="sticky top-0 z-30 bg-white px-4 sm:px-5 py-3" style={{ borderBottom: '2px solid #E5E5E5' }}>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <Link href="/" className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#F5F5F5] active:scale-90 transition-transform" aria-label="Back">
+            <ChevronLeft className="w-5 h-5 text-[#AFAFAF]" />
+          </Link>
+          <h1 className="text-base sm:text-lg font-extrabold text-[#3C3C3C] flex items-center gap-2">
+            <Trophy className="w-5 h-5 text-amber-500" />
+            Achievements
+          </h1>
+        </div>
+      </div>
+
+      {/* Stats card */}
+      <div className="px-4 mt-4">
       <div className="card p-5 sm:p-6 mb-6">
         <div className="flex items-center gap-4 sm:gap-6">
           {/* Progress Ring */}
@@ -124,7 +138,7 @@ export default function AchievementsPage() {
           </div>
 
           <div className="flex-1 min-w-0">
-            <h1 className="text-lg sm:text-xl font-bold text-surface-900">Achievements</h1>
+            <p className="text-sm font-bold text-surface-900">Achievement Progress</p>
             <p className="text-sm text-surface-500 mt-0.5">
               {unlockedCount} of {totalCount} unlocked
             </p>
@@ -246,6 +260,7 @@ export default function AchievementsPage() {
           );
         })}
       </div>
+      </div>{/* end px-4 wrapper */}
     </div>
   );
 }

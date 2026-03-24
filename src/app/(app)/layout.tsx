@@ -54,8 +54,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         {/* Desktop side nav */}
         <DesktopSideNav />
 
-        <div className="flex-1 max-w-3xl mx-auto min-h-screen bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200 flex flex-col overflow-x-hidden">
-          <main id="main-content" className="flex-1 pb-16 lg:pb-0 overflow-x-hidden">
+        <div className="flex-1 max-w-3xl mx-auto min-h-screen bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200 flex flex-col">
+          <main id="main-content" className="flex-1 pb-16 lg:pb-0">
             {children}
           </main>
           <Footer />
