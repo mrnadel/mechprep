@@ -2,7 +2,7 @@ import { config } from 'dotenv';
 config({ path: '.env.local' });
 
 import postgres from 'postgres';
-import { course } from '../src/data/course/index.ts';
+import { course } from '../src/data/course/index';
 
 const sql = postgres(process.env.POSTGRES_URL!, { prepare: false });
 

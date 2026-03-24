@@ -5,6 +5,7 @@ import { courseUnits, courseLessons, courseQuestions } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 import { canAccessUnit } from '@/lib/access-control';
 import { LIMITS } from '@/lib/pricing';
+import { courseMeta } from '@/data/course/course-meta';
 
 export async function GET() {
   const units = await db
@@ -55,6 +56,9 @@ export async function GET() {
     lessonsByUnit.set(l.unitId, list);
   }
 
+  // Build topicId lookup from static courseMeta (DB doesn't store topicId)
+  const topicIdByUnitId = new Map(courseMeta.map(u => [u.id, u.topicId]));
+
   // Assemble the Unit[] structure
   // For locked units: return metadata (title, icon, etc.) but strip question content
   const course = units.map((unit, unitIndex) => {
@@ -66,6 +70,7 @@ export async function GET() {
       description: unit.description,
       color: unit.color,
       icon: unit.icon,
+      topicId: topicIdByUnitId.get(unit.id),
       lessons: (lessonsByUnit.get(unit.id) ?? []).map((lesson) => ({
         id: lesson.id,
         title: lesson.title,
