@@ -14,6 +14,7 @@ import { getXpToNextLevel, levels } from '@/data/levels';
 import { getLevelReward } from '@/data/level-rewards';
 import { getTodayString } from '@/lib/utils';
 import { LevelBadge } from '@/components/engagement/LevelBadge';
+import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 
 type PopoverType = 'streak' | 'xp' | 'gems' | null;
 
@@ -115,7 +116,7 @@ export function CourseHeader() {
               aria-expanded={popover === 'streak'}
             >
               <span style={{ fontSize: 15 }} aria-hidden="true">⚡</span>
-              <span>{progress.currentStreak}</span>
+              <AnimatedCounter value={progress.currentStreak} showDelta deltaColor="#D97706" />
             </button>
 
             <button
@@ -138,7 +139,7 @@ export function CourseHeader() {
               aria-expanded={popover === 'xp'}
             >
               <span style={{ fontSize: 15 }} aria-hidden="true">⭐</span>
-              <span>{progress.totalXp.toLocaleString()}</span>
+              <AnimatedCounter value={progress.totalXp} showDelta deltaColor="#7B2FBE" />
             </button>
 
             <button
@@ -161,7 +162,7 @@ export function CourseHeader() {
               aria-expanded={popover === 'gems'}
             >
               <span style={{ fontSize: 15 }} aria-hidden="true">💎</span>
-              <span>{gems.balance}</span>
+              <AnimatedCounter value={gems.balance} showDelta deltaColor="#7C3AED" />
             </button>
 
             {/* Upgrade CTA for free registered users */}
