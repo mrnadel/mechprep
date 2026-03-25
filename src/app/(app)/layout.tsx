@@ -14,15 +14,27 @@ import { StoreToastBridge } from '@/components/ui/StoreToastBridge';
 
 function LoadingSkeleton() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center">
-      <div className="text-center">
-        <p className="text-lg font-black text-surface-800 mb-3">{APP_NAME}</p>
-        <div className="flex justify-center gap-1">
-          <div className="w-2 h-2 bg-surface-300 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-          <div className="w-2 h-2 bg-surface-300 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-          <div className="w-2 h-2 bg-surface-300 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-        </div>
+    <div className="fixed inset-0 z-[9999] bg-[#FFB800] flex flex-col items-center justify-center">
+      <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-4 animate-pulse">
+        <span className="text-3xl font-black text-white select-none">M</span>
       </div>
+      <p className="text-xl font-black text-white tracking-tight mb-6">{APP_NAME}</p>
+      <div className="w-32 h-1 bg-white/30 rounded-full overflow-hidden">
+        <div
+          className="h-full bg-white rounded-full"
+          style={{
+            animation: 'loader-slide 1.2s ease-in-out infinite',
+            width: '40%',
+          }}
+        />
+      </div>
+      <style>{`
+        @keyframes loader-slide {
+          0% { transform: translateX(-100%); }
+          50% { transform: translateX(180%); }
+          100% { transform: translateX(-100%); }
+        }
+      `}</style>
     </div>
   );
 }
