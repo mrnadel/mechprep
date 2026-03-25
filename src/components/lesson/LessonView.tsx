@@ -11,6 +11,10 @@ import type { QuestionCardHandle } from './QuestionCard';
 import TeachingCard from './TeachingCard';
 import SortBucketsCard from './SortBucketsCard';
 import MatchPairsCard from './MatchPairsCard';
+import OrderStepsCard from './OrderStepsCard';
+import MultiSelectCard from './MultiSelectCard';
+import SliderEstimateCard from './SliderEstimateCard';
+import ScenarioCard from './ScenarioCard';
 import ResultScreen from './ResultScreen';
 import FlagButton from '@/components/feedback/FlagButton';
 import { useMasteryStore } from '@/store/useMasteryStore';
@@ -154,7 +158,14 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
       case 'teaching':
       case 'sort-buckets':
       case 'match-pairs':
+      case 'order-steps':
         return '';
+      case 'multi-select':
+        return (currentQuestion.correctIndices ?? []).map(i => currentQuestion.options?.[i]).filter(Boolean).join(', ');
+      case 'slider-estimate':
+        return `${currentQuestion.unit === '$' ? '$' : ''}${currentQuestion.correctValue?.toLocaleString() ?? ''}${currentQuestion.unit === '%' ? '%' : currentQuestion.unit && currentQuestion.unit !== '$' ? ` ${currentQuestion.unit}` : ''}`;
+      case 'scenario':
+        return currentQuestion.options?.[currentQuestion.correctIndex ?? 0] ?? '';
       default:
         return '';
     }
@@ -649,6 +660,42 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   />
                 ) : displayQuestion.type === 'match-pairs' ? (
                   <MatchPairsCard
+                    ref={questionRef}
+                    question={displayQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : displayQuestion.type === 'order-steps' ? (
+                  <OrderStepsCard
+                    ref={questionRef}
+                    question={displayQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : displayQuestion.type === 'multi-select' ? (
+                  <MultiSelectCard
+                    ref={questionRef}
+                    question={displayQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : displayQuestion.type === 'slider-estimate' ? (
+                  <SliderEstimateCard
+                    ref={questionRef}
+                    question={displayQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : displayQuestion.type === 'scenario' ? (
+                  <ScenarioCard
                     ref={questionRef}
                     question={displayQuestion}
                     onAnswer={handleAnswer}

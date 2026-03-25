@@ -1,6 +1,6 @@
 import type { TopicId } from '../types';
 
-export type QuestionType = 'multiple-choice' | 'true-false' | 'fill-blank' | 'teaching' | 'sort-buckets' | 'match-pairs';
+export type QuestionType = 'multiple-choice' | 'true-false' | 'fill-blank' | 'teaching' | 'sort-buckets' | 'match-pairs' | 'order-steps' | 'multi-select' | 'slider-estimate' | 'scenario';
 
 export interface CourseQuestion {
   id: string;
@@ -21,6 +21,19 @@ export interface CourseQuestion {
   // Match-pairs
   matchTargets?: string[];     // right column items
   correctMatches?: number[];   // options[i] matches matchTargets[correctMatches[i]]
+  // Order-steps
+  steps?: string[];              // items to reorder
+  correctOrder?: number[];       // correct sequence (indices into steps[])
+  // Multi-select
+  correctIndices?: number[];     // all correct option indices (uses options[])
+  // Slider-estimate
+  sliderMin?: number;
+  sliderMax?: number;
+  correctValue?: number;
+  tolerance?: number;            // % tolerance (e.g. 10 = within 10% is correct)
+  unit?: string;                 // display unit ("$", "%", "years", etc.)
+  // Scenario
+  scenario?: string;             // the situation/story text (uses options[] + correctIndex)
   // Common
   explanation: string;
   hint?: string;
