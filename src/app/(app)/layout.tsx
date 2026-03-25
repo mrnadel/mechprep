@@ -11,6 +11,7 @@ import MobileBottomNav from '@/components/layout/MobileBottomNav';
 import DesktopSideNav from '@/components/layout/DesktopSideNav';
 import { ToastContainer } from '@/components/ui/ToastNotification';
 import { StoreToastBridge } from '@/components/ui/StoreToastBridge';
+import { PushPrompt } from '@/components/engagement/PushPrompt';
 
 function LoadingSkeleton() {
   return (
@@ -85,6 +86,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <DebugQuestionViewer />
       <ToastContainer />
       <StoreToastBridge />
+      <PushPrompt />
     </div>
   );
 }

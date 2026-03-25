@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
+  Bell,
   CreditCard,
   Lock,
   LogOut,
@@ -18,6 +19,7 @@ import {
   Loader2,
 } from 'lucide-react';
 import { useStore } from '@/store/useStore';
+import { usePushNotifications } from '@/hooks/usePushNotifications';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useMasteryStore } from '@/store/useMasteryStore';
 import { useSubscription } from '@/hooks/useSubscription';
@@ -101,6 +103,8 @@ export default function SettingsPage() {
     }
   }, [resetConfirmText, displayName]);
 
+  const { state: pushState, subscribe: enablePush, unsubscribe: disablePush } = usePushNotifications();
+
   return (
     <div className="pb-10">
       {/* Header */}
@@ -114,6 +118,45 @@ export default function SettingsPage() {
       </div>
 
       <div className="px-3 sm:px-4 mt-6 space-y-6">
+        {/* Push Notifications */}
+        {pushState !== 'unsupported' && (
+          <div>
+            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-1">Notifications</h3>
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="flex items-center gap-3 w-full px-4 py-3.5">
+                <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center">
+                  <Bell className="w-4 h-4 text-amber-500" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <span className="text-sm font-bold text-gray-700 block">Streak Reminders</span>
+                  <span className="text-xs text-gray-400">
+                    {pushState === 'denied'
+                      ? 'Blocked in browser settings'
+                      : pushState === 'granted'
+                        ? 'Daily reminder before your streak breaks'
+                        : 'Get notified before your streak breaks'}
+                  </span>
+                </div>
+                {pushState === 'granted' ? (
+                  <button
+                    onClick={disablePush}
+                    className="px-3 py-1.5 text-xs font-bold text-gray-400 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                  >
+                    Off
+                  </button>
+                ) : pushState === 'prompt' ? (
+                  <button
+                    onClick={enablePush}
+                    className="px-3 py-1.5 text-xs font-bold text-white bg-[#FFB800] rounded-lg shadow-[0_2px_0_#D49A00] hover:brightness-105 transition-all active:translate-y-[1px] active:shadow-[0_0px_0_#D49A00]"
+                  >
+                    Enable
+                  </button>
+                ) : null}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Subscription / Billing */}
         <div>
           <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-1">Subscription</h3>

@@ -449,6 +449,24 @@ export const masteryEvents = pgTable('mastery_events', {
   index('mastery_events_user_topic_idx').on(table.userId, table.topicId),
 ]);
 
+// ─── Push Subscriptions ─────────────────────────────────────
+
+export const pushSubscriptions = pgTable(
+  'push_subscriptions',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+    endpoint: text('endpoint').notNull(),
+    p256dh: text('p256dh').notNull(),
+    auth: text('auth').notNull(),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('push_subscriptions_endpoint_idx').on(table.endpoint),
+    index('push_subscriptions_user_idx').on(table.userId),
+  ]
+);
+
 // ─── Friends system ─────────────────────────────────────────
 
 export const friendships = pgTable(

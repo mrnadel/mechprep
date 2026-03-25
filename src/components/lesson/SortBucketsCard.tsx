@@ -216,7 +216,11 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                               : { opacity: 1, scale: 1, y: 0 }
                           }
                           exit={{ opacity: 0, scale: 0.7, y: -8 }}
-                          transition={{ type: 'spring', stiffness: 500, damping: 25 }}
+                          transition={
+                            isCorrect !== null
+                              ? { duration: 0.35 }
+                              : { type: 'spring', stiffness: 500, damping: 25 }
+                          }
                           onClick={(e) => {
                             e.stopPropagation();
                             handleReturnToPool(originalIdx);
