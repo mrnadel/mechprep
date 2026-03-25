@@ -22,11 +22,12 @@ export function useDbSync() {
 
     async function hydrate() {
       try {
+        const activeProfession = useCourseStore.getState().activeProfession;
         const [progressRes, courseRes, feedbackRes, contentCourseRes] = await Promise.all([
           fetch('/api/progress'),
           fetch('/api/course-progress'),
           fetch('/api/content-feedback'),
-          fetch('/api/content/course'),
+          fetch(`/api/content/course?profession=${encodeURIComponent(activeProfession)}`),
         ]);
 
         if (cancelled) return;
@@ -54,7 +55,9 @@ export function useDbSync() {
 
         if (contentCourseRes.ok) {
           const data = await contentCourseRes.json();
-          if (data.course?.length) {
+          // Only apply DB course data if the user is still on the same profession
+          // (DB currently only has ME content; other professions use static data)
+          if (data.course?.length && useCourseStore.getState().activeProfession === activeProfession) {
             useCourseStore.getState().setCourseData(data.course);
           }
         }

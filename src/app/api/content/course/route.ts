@@ -10,6 +10,12 @@ import { getCourseMetaForProfession } from '@/data/course/course-meta';
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const profession = searchParams.get('profession') || 'mechanical-engineering';
+
+  // DB currently only stores ME course content; other professions use static data
+  if (profession !== 'mechanical-engineering') {
+    return NextResponse.json({ course: [] });
+  }
+
   const units = await db
     .select()
     .from(courseUnits)
