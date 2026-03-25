@@ -15,7 +15,7 @@ import { UnitHeader } from './UnitHeader';
 import { LessonNode } from './LessonNode';
 
 type JumpModalType =
-  | { kind: 'within-unit'; unitIndex: number }
+  | { kind: 'within-unit'; unitIndex: number; lessonIndex: number }
   | { kind: 'placement-test'; unitIndex: number }
   | { kind: 'guest-signup'; unitIndex: number }
   | { kind: 'free-upgrade'; unitIndex: number };
@@ -28,6 +28,8 @@ export function CourseMap() {
   const courseData = useCourseStore((s) => s.courseData);
   const startLesson = useCourseStore((s) => s.startLesson);
   const startPlacementTest = useCourseStore((s) => s.startPlacementTest);
+  const debugSkipToUnit = useCourseStore((s) => s.debugSkipToUnit);
+  const debugSkipToLesson = useCourseStore((s) => s.debugSkipToLesson);
   const isLessonUnlocked = useCourseStore((s) => s.isLessonUnlocked);
   const { status } = useSession();
   const router = useRouter();
@@ -100,7 +102,7 @@ export function CourseMap() {
           );
           if (unitHasAccessible) {
             // Locked lesson inside the user's active unit → must progress sequentially
-            setJumpModal({ kind: 'within-unit', unitIndex });
+            setJumpModal({ kind: 'within-unit', unitIndex, lessonIndex });
           } else {
             // Unit not yet reached → offer placement test
             setJumpModal({ kind: 'placement-test', unitIndex });
@@ -349,6 +351,28 @@ export function CourseMap() {
                       >
                         Got it
                       </button>
+                      {process.env.NODE_ENV === 'development' && (
+                        <button
+                          className="w-full active:scale-[0.98] transition-transform"
+                          style={{
+                            marginTop: 8,
+                            padding: '12px 0',
+                            borderRadius: 16,
+                            fontSize: 12,
+                            fontWeight: 800,
+                            color: '#FFFFFF',
+                            background: '#EF4444',
+                            border: '2px dashed #B91C1C',
+                            cursor: 'pointer',
+                          }}
+                          onClick={() => {
+                            debugSkipToLesson(jumpModal.unitIndex, jumpModal.lessonIndex);
+                            setJumpModal(null);
+                          }}
+                        >
+                          DEBUG: Skip to Lesson
+                        </button>
+                      )}
                     </>
                   )}
 
@@ -399,6 +423,28 @@ export function CourseMap() {
                           Start Test
                         </button>
                       </div>
+                      {process.env.NODE_ENV === 'development' && (
+                        <button
+                          className="w-full active:scale-[0.98] transition-transform"
+                          style={{
+                            marginTop: 8,
+                            padding: '12px 0',
+                            borderRadius: 16,
+                            fontSize: 12,
+                            fontWeight: 800,
+                            color: '#FFFFFF',
+                            background: '#EF4444',
+                            border: '2px dashed #B91C1C',
+                            cursor: 'pointer',
+                          }}
+                          onClick={() => {
+                            debugSkipToUnit(jumpModal.unitIndex);
+                            setJumpModal(null);
+                          }}
+                        >
+                          DEBUG: Skip to Unit
+                        </button>
+                      )}
                     </>
                   )}
 

@@ -68,6 +68,8 @@ interface CourseState {
 
   // Debug
   debugSetProgress: (lessonCount: number, goldenCount?: number) => void;
+  debugSkipToUnit: (targetUnitIndex: number) => void;
+  debugSkipToLesson: (unitIndex: number, lessonIndex: number) => void;
 
   // Helpers
   isLessonUnlocked: (unitIndex: number, lessonIndex: number) => boolean;
@@ -846,6 +848,55 @@ export const useCourseStore = create<CourseState>()(
           gems: gemsEarned,
           leagueXp: xp,
         });
+      },
+
+      debugSkipToUnit: (targetUnitIndex: number) => {
+        const { courseData, progress } = get();
+        const fromUnit = getFirstIncompleteUnitIndex(courseData, progress.completedLessons);
+        if (fromUnit >= targetUnitIndex) return;
+
+        const today = getTodayString();
+        const newCompleted = { ...progress.completedLessons };
+        for (let ui = fromUnit; ui < targetUnitIndex; ui++) {
+          for (const lesson of courseData[ui].lessons) {
+            if (!newCompleted[lesson.id]?.passed) {
+              newCompleted[lesson.id] = {
+                stars: 0,
+                bestAccuracy: 0,
+                attempts: 0,
+                lastAttempted: today,
+                passed: true,
+                golden: false,
+                answeredQuestionIds: [],
+                correctQuestionIds: [],
+              };
+            }
+          }
+        }
+        set({ progress: { ...progress, completedLessons: newCompleted } });
+      },
+
+      debugSkipToLesson: (unitIndex: number, lessonIndex: number) => {
+        const { courseData, progress } = get();
+        const today = getTodayString();
+        const newCompleted = { ...progress.completedLessons };
+        // Mark all lessons in this unit up to (not including) the target as passed
+        for (let li = 0; li < lessonIndex; li++) {
+          const lesson = courseData[unitIndex]?.lessons[li];
+          if (lesson && !newCompleted[lesson.id]?.passed) {
+            newCompleted[lesson.id] = {
+              stars: 0,
+              bestAccuracy: 0,
+              attempts: 0,
+              lastAttempted: today,
+              passed: true,
+              golden: false,
+              answeredQuestionIds: [],
+              correctQuestionIds: [],
+            };
+          }
+        }
+        set({ progress: { ...progress, completedLessons: newCompleted } });
       },
 
       isLessonUnlocked: (unitIndex: number, lessonIndex: number) => {
