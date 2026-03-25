@@ -65,13 +65,13 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] lg:bg-[#E8E8E8] overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAFA] lg:bg-[#E8E8E8]">
       <div className="flex">
         {/* Desktop side nav */}
         <DesktopSideNav />
 
-        <div className="flex-1 min-w-0 max-w-3xl mx-auto min-h-screen bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200 flex flex-col">
-          <main id="main-content" className="flex-1 pb-16 lg:pb-0 overflow-x-hidden">
+        <div className="flex-1 min-w-0 max-w-3xl mx-auto min-h-screen bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200 flex flex-col overflow-x-hidden">
+          <main id="main-content" className="flex-1 pb-16 lg:pb-0">
             {children}
           </main>
           <Footer />
