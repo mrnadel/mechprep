@@ -71,45 +71,63 @@ export const useSubscriptionStore = create<SubscriptionState>()((set, get) => ({
 
 export function useSubscription() {
   const { status: authStatus } = useSession();
-  const store = useSubscriptionStore();
+  // Select only the fields we need to avoid re-renders on unrelated store changes
+  const tier = useSubscriptionStore((s) => s.tier);
+  const status = useSubscriptionStore((s) => s.status);
+  const isLoading = useSubscriptionStore((s) => s.isLoading);
+  const hasFetched = useSubscriptionStore((s) => s.hasFetched);
+  const cancelAtPeriodEnd = useSubscriptionStore((s) => s.cancelAtPeriodEnd);
+  const currentPeriodEnd = useSubscriptionStore((s) => s.currentPeriodEnd);
+  const trialEnd = useSubscriptionStore((s) => s.trialEnd);
+  const debugTierOverride = useSubscriptionStore((s) => s.debugTierOverride);
+  const fetchSub = useSubscriptionStore((s) => s.fetch);
+  const resetSub = useSubscriptionStore((s) => s.reset);
 
   // Fetch on mount when authenticated
   useEffect(() => {
-    if (authStatus === 'authenticated' && !store.hasFetched) {
-      store.fetch();
+    if (authStatus === 'authenticated' && !hasFetched) {
+      fetchSub();
     }
     if (authStatus === 'unauthenticated') {
-      store.reset();
+      resetSub();
     }
-  }, [authStatus, store.hasFetched]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [authStatus, hasFetched, fetchSub, resetSub]);
 
-  // Refresh on window focus
+  // Refresh on window focus (throttled — at most once per 5 minutes)
   useEffect(() => {
     if (authStatus !== 'authenticated') return;
 
-    const onFocus = () => store.fetch();
+    let lastFetchTime = 0;
+    const THROTTLE_MS = 5 * 60 * 1000;
+
+    const onFocus = () => {
+      const now = Date.now();
+      if (now - lastFetchTime > THROTTLE_MS) {
+        lastFetchTime = now;
+        fetchSub();
+      }
+    };
     window.addEventListener('focus', onFocus);
     return () => window.removeEventListener('focus', onFocus);
-  }, [authStatus]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [authStatus, fetchSub]);
 
   // In dev mode, allow overriding the tier for testing
   const isDev = process.env.NODE_ENV === 'development';
-  const activeTier = isDev && store.debugTierOverride ? store.debugTierOverride : store.tier;
+  const activeTier = isDev && debugTierOverride ? debugTierOverride : tier;
 
-  const isTrialing = store.status === 'trialing';
-  const isPastDue = store.status === 'past_due';
+  const isTrialing = status === 'trialing';
+  const isPastDue = status === 'past_due';
   const isProUser = activeTier === 'pro' || isTrialing || isPastDue;
 
   const trialDaysLeft = (() => {
-    if (!isTrialing || !store.trialEnd) return 0;
-    const end = new Date(store.trialEnd);
+    if (!isTrialing || !trialEnd) return 0;
+    const end = new Date(trialEnd);
     const now = new Date();
     return Math.max(0, Math.ceil((end.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
   })();
 
   const canAccess = useCallback(
     (feature: Feature): boolean => {
-      // Trialing and past_due (grace period) both grant Pro access
       const effectiveTier = (isTrialing || isPastDue) ? 'pro' : activeTier;
       const tierDef = { features: getTierFeatures(effectiveTier) };
       return tierDef.features.includes(feature);
@@ -119,16 +137,16 @@ export function useSubscription() {
 
   return {
     tier: activeTier,
-    status: store.status,
-    isLoading: store.isLoading,
-    hasFetched: store.hasFetched,
+    status,
+    isLoading,
+    hasFetched,
     isProUser,
     isTrialing,
     trialDaysLeft,
-    cancelAtPeriodEnd: store.cancelAtPeriodEnd,
-    currentPeriodEnd: store.currentPeriodEnd,
+    cancelAtPeriodEnd,
+    currentPeriodEnd,
     canAccess,
-    refresh: store.fetch,
+    refresh: fetchSub,
   };
 }
 

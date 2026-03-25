@@ -16,35 +16,24 @@ export async function GET(request: Request) {
     return NextResponse.json({ course: [] });
   }
 
-  const units = await db
-    .select()
-    .from(courseUnits)
-    .orderBy(asc(courseUnits.orderIndex));
+  // Run all DB queries in parallel instead of sequentially
+  const [units, lessons, questions, userId] = await Promise.all([
+    db.select().from(courseUnits).orderBy(asc(courseUnits.orderIndex)),
+    db.select().from(courseLessons).orderBy(asc(courseLessons.orderIndex)),
+    db.select().from(courseQuestions).orderBy(asc(courseQuestions.orderIndex)),
+    getAuthUserId(),
+  ]);
 
-  const lessons = await db
-    .select()
-    .from(courseLessons)
-    .orderBy(asc(courseLessons.orderIndex));
-
-  const questions = await db
-    .select()
-    .from(courseQuestions)
-    .orderBy(asc(courseQuestions.orderIndex));
-
-  // Determine user's accessible units
-  const userId = await getAuthUserId();
+  // Determine user's accessible units — single subscription lookup instead of per-unit
   let accessibleUnitIndices: Set<number>;
 
   if (userId) {
-    // Check each unit index against the user's subscription
-    const checks = await Promise.all(
-      units.map((_, idx) => canAccessUnit(userId, idx))
-    );
-    accessibleUnitIndices = new Set(
-      checks.map((c, idx) => (c.allowed ? idx : -1)).filter((i) => i >= 0)
-    );
+    const { allowed: _ignored, tier } = await canAccessUnit(userId, 0);
+    const unlockedUnits = LIMITS[tier].unlockedUnits;
+    accessibleUnitIndices = unlockedUnits === 'all'
+      ? new Set(units.map((_, i) => i))
+      : new Set(unlockedUnits as number[]);
   } else {
-    // Unauthenticated: only free-tier units
     const freeUnits = LIMITS.free.unlockedUnits;
     accessibleUnitIndices = freeUnits === 'all'
       ? new Set(units.map((_, i) => i))
