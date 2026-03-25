@@ -33,11 +33,16 @@ export async function POST(
   const search = req.nextUrl.searchParams.toString();
   const body = await req.text();
 
-  const resp = await fetch(`${MIXPANEL_API}/${endpoint}?${search}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body,
-  });
+  let resp: Response;
+  try {
+    resp = await fetch(`${MIXPANEL_API}/${endpoint}?${search}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+    });
+  } catch {
+    return NextResponse.json({ error: 'Upstream request failed' }, { status: 502 });
+  }
 
   const data = await resp.text();
   return new NextResponse(data, {

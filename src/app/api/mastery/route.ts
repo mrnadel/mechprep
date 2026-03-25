@@ -44,7 +44,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { events } = (await request.json()) as {
+  let body: Record<string, unknown>;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+  const { events } = body as {
     events: {
       id: string;
       questionId: string;

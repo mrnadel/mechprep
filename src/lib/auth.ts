@@ -135,13 +135,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     async createUser({ user }) {
       // Set joinedDate for OAuth users auto-created by the adapter
       if (user.id) {
-        await db
-          .update(users)
-          .set({
-            joinedDate: new Date().toISOString().split('T')[0],
-            displayName: user.name || 'Engineer',
-          })
-          .where(eq(users.id, user.id));
+        try {
+          await db
+            .update(users)
+            .set({
+              joinedDate: new Date().toISOString().split('T')[0],
+              displayName: user.name || 'Engineer',
+            })
+            .where(eq(users.id, user.id));
+        } catch (err) {
+          console.error('Failed to set joinedDate for new user:', err);
+        }
       }
     },
   },

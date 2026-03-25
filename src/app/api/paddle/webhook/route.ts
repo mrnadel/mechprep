@@ -253,7 +253,7 @@ async function handleTransactionCompleted(txn: TransactionNotification) {
   }
 
   const amountStr = txn.details?.totals?.total ?? '0';
-  const amountCents = Math.round(parseFloat(amountStr));
+  const amountCents = Math.round(parseFloat(amountStr) || 0);
 
   await db.insert(paymentHistory).values({
     userId,
@@ -285,7 +285,7 @@ async function handleTransactionPaymentFailed(txn: TransactionNotification) {
   }
 
   const amountStr = txn.details?.totals?.total ?? '0';
-  const amountCents = Math.round(parseFloat(amountStr));
+  const amountCents = Math.round(parseFloat(amountStr) || 0);
 
   await db.insert(paymentHistory).values({
     userId,
@@ -342,7 +342,7 @@ async function handleAdjustmentCreated(data: Record<string, unknown>) {
 
   const totals = data.totals as Record<string, string> | undefined;
   const amountStr = totals?.total ?? '0';
-  const amountCents = Math.round(parseFloat(amountStr));
+  const amountCents = Math.round(parseFloat(amountStr) || 0);
 
   await db.insert(paymentHistory).values({
     userId,

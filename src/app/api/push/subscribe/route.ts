@@ -10,8 +10,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const body = await req.json();
-  const { endpoint, keys } = body;
+  let body: Record<string, unknown>;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+  const { endpoint, keys } = body as { endpoint?: string; keys?: { p256dh?: string; auth?: string } };
 
   if (!endpoint || !keys?.p256dh || !keys?.auth) {
     return NextResponse.json({ error: 'Invalid subscription' }, { status: 400 });

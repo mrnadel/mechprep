@@ -15,6 +15,7 @@ interface UnitHeaderProps {
   lockMessage?: string;
   isAllGolden?: boolean;
   theme: UnitTheme;
+  professionId?: string;
 }
 
 const GOLD_COLOR = '#FFFFFF';
@@ -30,6 +31,7 @@ export const UnitHeader = memo(function UnitHeader({
   lockMessage,
   isAllGolden,
   theme,
+  professionId,
 }: UnitHeaderProps) {
   const progressPercent =
     totalInUnit > 0 ? (completedInUnit / totalInUnit) * 100 : 0;
@@ -126,6 +128,7 @@ export const UnitHeader = memo(function UnitHeader({
             unitIndex={unitIndex}
             color={displayColor}
             className="w-full h-full"
+            professionId={professionId}
           />
         </div>
       </div>

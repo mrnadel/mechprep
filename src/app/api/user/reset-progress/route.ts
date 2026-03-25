@@ -18,7 +18,13 @@ export async function DELETE(request: NextRequest) {
   }
 
   // Require the confirmation phrase in the body
-  const { confirmation } = await request.json();
+  let body: Record<string, unknown>;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+  const { confirmation } = body as { confirmation?: string };
   if (confirmation !== 'RESET MY PROGRESS') {
     return NextResponse.json(
       { error: 'Invalid confirmation phrase' },

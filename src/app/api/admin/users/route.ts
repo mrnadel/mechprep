@@ -51,8 +51,14 @@ export async function PATCH(req: NextRequest) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
-  const { userId, tier } = await req.json();
-  if (!userId || !['free', 'pro'].includes(tier)) {
+  let body: Record<string, unknown>;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+  const { userId, tier } = body as { userId?: string; tier?: string };
+  if (!userId || !tier || !['free', 'pro'].includes(tier)) {
     return NextResponse.json({ error: 'Invalid userId or tier' }, { status: 400 });
   }
 
@@ -92,7 +98,13 @@ export async function DELETE(req: NextRequest) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
-  const { userId } = await req.json();
+  let delBody: Record<string, unknown>;
+  try {
+    delBody = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+  const { userId } = delBody as { userId?: string };
   if (!userId || typeof userId !== 'string') {
     return NextResponse.json({ error: 'Invalid userId' }, { status: 400 });
   }

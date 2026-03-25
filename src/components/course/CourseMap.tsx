@@ -141,6 +141,7 @@ export function CourseMap() {
   const debugSkipToUnit = useCourseStore((s) => s.debugSkipToUnit);
   const debugSkipToLesson = useCourseStore((s) => s.debugSkipToLesson);
   const isLessonUnlocked = useCourseStore((s) => s.isLessonUnlocked);
+  const activeProfession = useCourseStore((s) => s.activeProfession);
   const { status } = useSession();
   const router = useRouter();
   const isGuest = status !== 'authenticated';
@@ -320,6 +321,7 @@ export function CourseMap() {
                       : undefined
                 }
                 theme={theme}
+                professionId={activeProfession}
               />
 
               {/* Floating "Jump here" button for placement-test-eligible locked units */}
