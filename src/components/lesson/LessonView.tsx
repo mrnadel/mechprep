@@ -15,6 +15,10 @@ import OrderStepsCard from './OrderStepsCard';
 import MultiSelectCard from './MultiSelectCard';
 import SliderEstimateCard from './SliderEstimateCard';
 import ScenarioCard from './ScenarioCard';
+import CategorySwipeCard from './CategorySwipeCard';
+import RankOrderCard from './RankOrderCard';
+import PickTheBestCard from './PickTheBestCard';
+import ImageTapCard from './ImageTapCard';
 import ResultScreen from './ResultScreen';
 import FlagButton from '@/components/feedback/FlagButton';
 import { useMasteryStore } from '@/store/useMasteryStore';
@@ -159,12 +163,16 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
       case 'sort-buckets':
       case 'match-pairs':
       case 'order-steps':
+      case 'category-swipe':
+      case 'rank-order':
+      case 'image-tap':
         return '';
       case 'multi-select':
         return (currentQuestion.correctIndices ?? []).map(i => currentQuestion.options?.[i]).filter(Boolean).join(', ');
       case 'slider-estimate':
         return `${currentQuestion.unit === '$' ? '$' : ''}${currentQuestion.correctValue?.toLocaleString() ?? ''}${currentQuestion.unit === '%' ? '%' : currentQuestion.unit && currentQuestion.unit !== '$' ? ` ${currentQuestion.unit}` : ''}`;
       case 'scenario':
+      case 'pick-the-best':
         return currentQuestion.options?.[currentQuestion.correctIndex ?? 0] ?? '';
       default:
         return '';
@@ -696,6 +704,42 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   />
                 ) : displayQuestion.type === 'scenario' ? (
                   <ScenarioCard
+                    ref={questionRef}
+                    question={displayQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : displayQuestion.type === 'category-swipe' ? (
+                  <CategorySwipeCard
+                    ref={questionRef}
+                    question={displayQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : displayQuestion.type === 'rank-order' ? (
+                  <RankOrderCard
+                    ref={questionRef}
+                    question={displayQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : displayQuestion.type === 'pick-the-best' ? (
+                  <PickTheBestCard
+                    ref={questionRef}
+                    question={displayQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : displayQuestion.type === 'image-tap' ? (
+                  <ImageTapCard
                     ref={questionRef}
                     question={displayQuestion}
                     onAnswer={handleAnswer}

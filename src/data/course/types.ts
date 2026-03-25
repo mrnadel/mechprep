@@ -1,6 +1,6 @@
 import type { TopicId } from '../types';
 
-export type QuestionType = 'multiple-choice' | 'true-false' | 'fill-blank' | 'teaching' | 'sort-buckets' | 'match-pairs' | 'order-steps' | 'multi-select' | 'slider-estimate' | 'scenario';
+export type QuestionType = 'multiple-choice' | 'true-false' | 'fill-blank' | 'teaching' | 'sort-buckets' | 'match-pairs' | 'order-steps' | 'multi-select' | 'slider-estimate' | 'scenario' | 'category-swipe' | 'rank-order' | 'pick-the-best' | 'image-tap';
 
 export interface CourseQuestion {
   id: string;
@@ -34,6 +34,13 @@ export interface CourseQuestion {
   unit?: string;                 // display unit ("$", "%", "years", etc.)
   // Scenario
   scenario?: string;             // the situation/story text (uses options[] + correctIndex)
+  // Category-swipe (reuses options[], buckets[0]=left, buckets[1]=right, correctBuckets[])
+  // Rank-order (reuses steps[], correctOrder[])
+  rankCriteria?: string;         // e.g. "Risk level: lowest → highest"
+  // Pick-the-best (reuses options[], correctIndex — all options are valid, one is BEST)
+  // Image-tap
+  tapZones?: { id: string; label: string; x: number; y: number; w: number; h: number }[];
+  correctZoneId?: string;
   // Common
   explanation: string;
   hint?: string;
