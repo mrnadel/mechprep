@@ -249,7 +249,17 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                     <motion.button
                       onClick={() => handleBlankTap(i)}
                       disabled={answered}
-                      whileTap={!answered && filledBlanks[i] ? { scale: 0.95 } : undefined}
+                      whileTap={!answered && filledBlanks[i] ? { scale: 0.92 } : undefined}
+                      animate={
+                        answered && localCorrect !== null
+                          ? filledBlanks[i]?.toLowerCase() === question.blanks![i]?.toLowerCase()
+                            ? { scale: [1, 1.1, 1] }
+                            : { x: [0, -5, 5, -3, 3, 0] }
+                          : filledBlanks[i]
+                            ? { scale: [0.9, 1.05, 1] }
+                            : {}
+                      }
+                      transition={{ duration: 0.3 }}
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',
@@ -263,14 +273,15 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                         fontSize: 15,
                         fontWeight: 800,
                         cursor: answered ? 'default' : filledBlanks[i] ? 'pointer' : 'default',
-                        transition: 'all 0.15s ease',
+                        transition: 'background 0.2s ease, border 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                         ...(answered && localCorrect !== null
                           ? filledBlanks[i]?.toLowerCase() === question.blanks![i]?.toLowerCase()
                             ? { background: '#D7FFB8', border: '2px solid #58CC02', color: '#58A700' }
                             : { background: '#FFDFE0', border: '2px solid #FF4B4B', color: '#EA2B2B' }
                           : filledBlanks[i]
                             ? { background: 'white', border: `2.5px solid ${unitColor}`, color: '#3C3C3C',
-                                ...(i === activeBlankIdx && blankCount > 1 ? { boxShadow: `0 0 0 2px ${unitColor}33` } : {}) }
+                                boxShadow: `0 0 0 3px ${unitColor}20`,
+                                ...(i === activeBlankIdx && blankCount > 1 ? { boxShadow: `0 0 0 3px ${unitColor}33` } : {}) }
                             : { background: i === activeBlankIdx ? '#E8E8FF' : '#F0F0F0',
                                 border: i === activeBlankIdx ? `2px dashed ${unitColor}` : '2px dashed #CFCFCF',
                                 color: '#CFCFCF' }
@@ -299,7 +310,10 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
 
           {/* Hint */}
           {question.hint && !answered && (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.3 }}
               style={{
                 padding: '8px 12px',
                 borderRadius: 10,
@@ -312,7 +326,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               }}
             >
               <MoneyText text={question.hint} />
-            </div>
+            </motion.div>
           )}
         </div>
 
@@ -332,6 +346,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               let textColor = '#3C3C3C';
               let badgeBg = '#F0F0F0';
               let badgeColor = '#AFAFAF';
+              let shadow = 'none';
 
               if (answered && localCorrect !== null) {
                 if (isCorrectOption) {
@@ -340,6 +355,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   textColor = '#58A700';
                   badgeBg = '#58CC02';
                   badgeColor = 'white';
+                  shadow = '0 0 12px rgba(88, 204, 2, 0.3)';
                 } else if (isSelected && !isCorrectOption) {
                   bg = '#FFDFE0';
                   border = '2px solid #FF4B4B';
@@ -357,14 +373,33 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                 border = `2.5px solid ${unitColor}`;
                 badgeBg = unitColor;
                 badgeColor = 'white';
+                shadow = `0 0 0 3px ${unitColor}20`;
               }
+
+              // Answer reveal animation
+              const revealAnimation = answered && localCorrect !== null
+                ? isCorrectOption
+                  ? { opacity: 1, y: 0, scale: [1, 1.04, 1] }
+                  : isSelected && !isCorrectOption
+                    ? { opacity: 1, y: 0, x: [0, -8, 8, -5, 5, 0] }
+                    : { opacity: 0.5, y: 0, scale: 0.98 }
+                : { opacity: 1, y: 0 };
 
               return (
                 <motion.button
                   key={originalIndex}
                   onClick={() => !answered && setSelectedIndex(displayIndex)}
                   disabled={answered}
-                  whileTap={!answered ? { scale: 0.98 } : undefined}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={revealAnimation}
+                  transition={{
+                    delay: answered ? 0 : displayIndex * 0.06,
+                    type: 'spring',
+                    stiffness: 400,
+                    damping: 25,
+                  }}
+                  whileTap={!answered ? { scale: 0.97, transition: { duration: 0.1 } } : undefined}
+                  whileHover={!answered ? { scale: 1.01 } : undefined}
                   className="w-full text-left flex items-center"
                   style={{
                     padding: '10px 14px',
@@ -373,11 +408,14 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                     border,
                     gap: 12,
                     cursor: answered ? 'default' : 'pointer',
-                    transition: 'all 0.15s ease',
+                    transition: 'background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease',
+                    boxShadow: shadow,
                   }}
                 >
-                  <span
+                  <motion.span
                     className="flex-shrink-0 flex items-center justify-center"
+                    animate={isSelected && !answered ? { scale: [1, 1.15, 1] } : { scale: 1 }}
+                    transition={{ duration: 0.2 }}
                     style={{
                       width: 28,
                       height: 28,
@@ -386,16 +424,18 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                       color: badgeColor,
                       fontSize: 12,
                       fontWeight: 800,
+                      transition: 'background 0.2s ease, color 0.2s ease',
                     }}
                   >
                     {String.fromCharCode(65 + displayIndex)}
-                  </span>
+                  </motion.span>
                   <span
                     style={{
                       fontSize: 14.5,
                       fontWeight: 700,
                       color: textColor,
                       lineHeight: 1.3,
+                      transition: 'color 0.2s ease',
                     }}
                   >
                     <MoneyText text={option} />
@@ -409,19 +449,21 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
         {/* True / False */}
         {question.type === 'true-false' && (
           <div className="grid grid-cols-2" style={{ gap: 10 }}>
-            {[true, false].map((value) => {
+            {[true, false].map((value, idx) => {
               const isSelected = selectedBool === value;
               const isCorrectOption = value === question.correctAnswer;
 
               let bg = 'rgba(255,255,255,0.65)';
               let border = '2px solid transparent';
               let textColor = '#3C3C3C';
+              let shadow = 'none';
 
               if (answered && localCorrect !== null) {
                 if (isCorrectOption) {
                   bg = '#D7FFB8';
                   border = '2px solid #58CC02';
                   textColor = '#58A700';
+                  shadow = '0 0 12px rgba(88, 204, 2, 0.3)';
                 } else if (isSelected && !isCorrectOption) {
                   bg = '#FFDFE0';
                   border = '2px solid #FF4B4B';
@@ -433,14 +475,32 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               } else if (isSelected) {
                 bg = 'white';
                 border = `2.5px solid ${unitColor}`;
+                shadow = `0 0 0 3px ${unitColor}20`;
               }
+
+              const revealAnimation = answered && localCorrect !== null
+                ? isCorrectOption
+                  ? { opacity: 1, y: 0, scale: [1, 1.06, 1] }
+                  : isSelected && !isCorrectOption
+                    ? { opacity: 1, y: 0, x: [0, -6, 6, -4, 4, 0] }
+                    : { opacity: 0.5, y: 0, scale: 0.97 }
+                : { opacity: 1, y: 0 };
 
               return (
                 <motion.button
                   key={String(value)}
                   onClick={() => !answered && setSelectedBool(value)}
                   disabled={answered}
-                  whileTap={!answered ? { scale: 0.97 } : undefined}
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={revealAnimation}
+                  transition={{
+                    delay: answered ? 0 : idx * 0.08,
+                    type: 'spring',
+                    stiffness: 400,
+                    damping: 25,
+                  }}
+                  whileTap={!answered ? { scale: 0.95, transition: { duration: 0.1 } } : undefined}
+                  whileHover={!answered ? { scale: 1.02 } : undefined}
                   className="flex items-center justify-center"
                   style={{
                     padding: '14px 16px',
@@ -451,7 +511,8 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                     fontSize: 16,
                     fontWeight: 800,
                     color: textColor,
-                    transition: 'all 0.15s ease',
+                    transition: 'background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease',
+                    boxShadow: shadow,
                   }}
                 >
                   {value ? 'True' : 'False'}
@@ -470,21 +531,28 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   key={`${word}-${i}`}
                   onClick={() => available && handleWordTap(word)}
                   disabled={answered || !available}
-                  whileTap={!answered && available ? { scale: 0.93 } : undefined}
+                  whileTap={!answered && available ? { scale: 0.9, transition: { duration: 0.1 } } : undefined}
+                  whileHover={!answered && available ? { scale: 1.04, y: -2 } : undefined}
                   layout
-                  initial={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 10, scale: 0.9 }}
                   animate={{
-                    opacity: available ? 1 : 0.35,
-                    scale: available ? 1 : 0.95,
+                    opacity: available ? 1 : 0.3,
+                    scale: available ? 1 : 0.92,
+                    y: 0,
                   }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                  transition={{
+                    delay: i * 0.04,
+                    type: 'spring',
+                    stiffness: 400,
+                    damping: 25,
+                  }}
                   style={{
                     padding: '10px 18px',
                     borderRadius: 12,
                     fontSize: 15,
                     fontWeight: 700,
                     cursor: answered ? 'default' : available ? 'pointer' : 'default',
-                    transition: 'all 0.15s ease',
+                    transition: 'background 0.15s ease, border 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
                     background: available ? 'white' : '#F5F5F5',
                     border: available ? '2px solid #E5E5E5' : '2px solid #EFEFEF',
                     color: available ? '#3C3C3C' : '#CFCFCF',

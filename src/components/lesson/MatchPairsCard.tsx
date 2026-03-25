@@ -123,26 +123,45 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
               let bg = 'white';
               let border = '2px solid #E5E5E5';
               let textColor = '#3C3C3C';
+              let shadow = 'none';
 
               if (isCorrect !== null) {
                 bg = isCorrect ? '#D7FFB8' : '#FFDFE0';
                 border = isCorrect ? '2px solid #58CC02' : '2px solid #FF4B4B';
                 textColor = isCorrect ? '#58A700' : '#EA2B2B';
+                shadow = isCorrect ? '0 0 12px rgba(88, 204, 2, 0.25)' : 'none';
               } else if (matchColor) {
                 bg = `${matchColor}15`;
                 border = `2.5px solid ${matchColor}`;
                 textColor = matchColor;
+                shadow = `0 0 8px ${matchColor}20`;
               } else if (isSelected) {
                 bg = `${unitColor}10`;
                 border = `2.5px solid ${unitColor}`;
+                shadow = `0 0 0 3px ${unitColor}20`;
               }
+
+              const revealAnimation = isCorrect !== null
+                ? isCorrect
+                  ? { opacity: 1, x: 0, scale: [1, 1.06, 1] }
+                  : { opacity: 1, x: [0, -5, 5, -3, 3, 0], scale: 1 }
+                : { opacity: 1, x: 0, scale: 1 };
 
               return (
                 <motion.button
                   key={`l-${leftIdx}`}
                   onClick={() => handleLeftTap(leftIdx)}
                   disabled={answered}
-                  whileTap={!answered ? { scale: 0.95 } : undefined}
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={revealAnimation}
+                  transition={{
+                    delay: answered ? 0 : leftIdx * 0.06,
+                    type: 'spring',
+                    stiffness: 400,
+                    damping: 25,
+                  }}
+                  whileTap={!answered ? { scale: 0.94, transition: { duration: 0.1 } } : undefined}
+                  whileHover={!answered ? { scale: 1.02 } : undefined}
                   style={{
                     padding: '10px 12px',
                     borderRadius: 12,
@@ -152,8 +171,9 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                     fontWeight: 700,
                     color: textColor,
                     cursor: answered ? 'default' : 'pointer',
-                    transition: 'all 0.15s ease',
+                    transition: 'background 0.2s ease, border 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                     textAlign: 'center',
+                    boxShadow: shadow,
                   }}
                 >
                   <MoneyText text={item} />
@@ -174,25 +194,43 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
               let bg = 'white';
               let border = '2px solid #E5E5E5';
               let textColor = '#3C3C3C';
+              let shadow = 'none';
 
               if (isCorrect !== null) {
                 bg = isCorrect ? '#D7FFB8' : '#FFDFE0';
                 border = isCorrect ? '2px solid #58CC02' : '2px solid #FF4B4B';
                 textColor = isCorrect ? '#58A700' : '#EA2B2B';
+                shadow = isCorrect ? '0 0 12px rgba(88, 204, 2, 0.25)' : 'none';
               } else if (matchColor) {
                 bg = `${matchColor}15`;
                 border = `2.5px solid ${matchColor}`;
                 textColor = matchColor;
+                shadow = `0 0 8px ${matchColor}20`;
               } else if (selectedLeft !== null && isAvailable) {
                 border = `2px dashed ${unitColor}`;
               }
+
+              const revealAnimation = isCorrect !== null
+                ? isCorrect
+                  ? { opacity: 1, x: 0, scale: [1, 1.06, 1] }
+                  : { opacity: 1, x: [0, 5, -5, 3, -3, 0], scale: 1 }
+                : { opacity: 1, x: 0, scale: 1 };
 
               return (
                 <motion.button
                   key={`r-${displayIdx}`}
                   onClick={() => handleRightTap(rightActualIdx)}
                   disabled={answered || selectedLeft === null}
-                  whileTap={!answered && selectedLeft !== null ? { scale: 0.95 } : undefined}
+                  initial={{ opacity: 0, x: 16 }}
+                  animate={revealAnimation}
+                  transition={{
+                    delay: answered ? 0 : displayIdx * 0.06 + 0.1,
+                    type: 'spring',
+                    stiffness: 400,
+                    damping: 25,
+                  }}
+                  whileTap={!answered && selectedLeft !== null ? { scale: 0.94, transition: { duration: 0.1 } } : undefined}
+                  whileHover={!answered && selectedLeft !== null ? { scale: 1.02 } : undefined}
                   style={{
                     padding: '10px 12px',
                     borderRadius: 12,
@@ -202,8 +240,9 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                     fontWeight: 700,
                     color: textColor,
                     cursor: answered || selectedLeft === null ? 'default' : 'pointer',
-                    transition: 'all 0.15s ease',
+                    transition: 'background 0.2s ease, border 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                     textAlign: 'center',
+                    boxShadow: shadow,
                   }}
                 >
                   <MoneyText text={item} />

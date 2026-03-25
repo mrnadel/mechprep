@@ -207,15 +207,22 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                         <motion.button
                           key={`sorted-${originalIdx}`}
                           layout
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.8 }}
+                          initial={{ opacity: 0, scale: 0.7, y: -8 }}
+                          animate={
+                            isCorrect !== null
+                              ? isCorrect
+                                ? { opacity: 1, scale: [1, 1.08, 1], y: 0 }
+                                : { opacity: 1, scale: 1, y: 0, x: [0, -4, 4, -2, 2, 0] }
+                              : { opacity: 1, scale: 1, y: 0 }
+                          }
+                          exit={{ opacity: 0, scale: 0.7, y: -8 }}
+                          transition={{ type: 'spring', stiffness: 500, damping: 25 }}
                           onClick={(e) => {
                             e.stopPropagation();
                             handleReturnToPool(originalIdx);
                           }}
                           disabled={answered}
-                          whileTap={!answered ? { scale: 0.93 } : undefined}
+                          whileTap={!answered ? { scale: 0.9, transition: { duration: 0.1 } } : undefined}
                           style={{
                             padding: '8px 10px',
                             borderRadius: 10,
@@ -226,9 +233,11 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                             border: 'none',
                             background: isCorrect === null ? 'white'
                               : isCorrect ? '#D7FFB8' : '#FFDFE0',
-                            boxShadow: isCorrect === null ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
+                            boxShadow: isCorrect === null ? '0 1px 3px rgba(0,0,0,0.08)'
+                              : isCorrect ? '0 0 10px rgba(88, 204, 2, 0.25)' : 'none',
                             color: isCorrect === null ? '#3C3C3C'
                               : isCorrect ? '#58A700' : '#EA2B2B',
+                            transition: 'background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                           }}
                         >
                           <MoneyText text={items[originalIdx]} /> {isCorrect === true ? '✓' : isCorrect === false ? '✗' : '×'}
