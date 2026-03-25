@@ -23,6 +23,10 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
     const bucket0Ref = useRef<HTMLDivElement>(null);
     const bucket1Ref = useRef<HTMLDivElement>(null);
     const [highlightBucket, setHighlightBucket] = useState<number | null>(null);
+    // Track the last known pointer position during drag (more reliable than onDragEnd info)
+    const lastDragPoint = useRef<{ x: number; y: number } | null>(null);
+    // Tap-to-assign: selected item waiting to be placed
+    const [selectedItem, setSelectedItem] = useState<number | null>(null);
 
     // Shuffle items for display
     const shuffledOrder = useMemo(() => {
@@ -42,6 +46,7 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
     useEffect(() => {
       setAssignments(items.map(() => -1));
       setResults(null);
+      setSelectedItem(null);
     }, [question.id, items.length]);
 
     const allSorted = assignments.every((a) => a !== -1);
@@ -51,38 +56,65 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
       onSelectionChange(allSorted);
     }, [allSorted, onSelectionChange]);
 
-    // Check which bucket a point is over
+    // Check which bucket a point is over (with generous padding for easier drops)
     const getBucketAtPoint = useCallback((x: number, y: number): number | null => {
       const refs = [bucket0Ref, bucket1Ref];
+      const PAD = 18; // extra hit area
       for (let i = 0; i < refs.length; i++) {
         const el = refs[i].current;
         if (!el) continue;
         const rect = el.getBoundingClientRect();
-        if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+        if (
+          x >= rect.left - PAD &&
+          x <= rect.right + PAD &&
+          y >= rect.top - PAD &&
+          y <= rect.bottom + PAD
+        ) {
           return i;
         }
       }
       return null;
     }, []);
 
-    const handleDragEnd = useCallback((originalIdx: number, _info: { point: { x: number; y: number } }) => {
-      setHighlightBucket(null);
+    const handleDrag = useCallback((_: unknown, info: { point: { x: number; y: number } }) => {
       if (answered) return;
-      const bucket = getBucketAtPoint(_info.point.x, _info.point.y);
+      lastDragPoint.current = { x: info.point.x, y: info.point.y };
+      const bucket = getBucketAtPoint(info.point.x, info.point.y);
+      setHighlightBucket(bucket);
+    }, [answered, getBucketAtPoint]);
+
+    const handleDragEnd = useCallback((originalIdx: number) => {
+      const point = lastDragPoint.current;
+      setHighlightBucket(null);
+      lastDragPoint.current = null;
+      if (answered || !point) return;
+      const bucket = getBucketAtPoint(point.x, point.y);
       if (bucket !== null) {
         setAssignments((prev) => {
           const next = [...prev];
           next[originalIdx] = bucket;
           return next;
         });
+        setSelectedItem(null);
       }
     }, [answered, getBucketAtPoint]);
 
-    const handleDrag = useCallback((_: unknown, info: { point: { x: number; y: number } }) => {
+    // Tap item to select it (tap-to-assign fallback)
+    const handleItemTap = useCallback((originalIdx: number) => {
       if (answered) return;
-      const bucket = getBucketAtPoint(info.point.x, info.point.y);
-      setHighlightBucket(bucket);
-    }, [answered, getBucketAtPoint]);
+      setSelectedItem((prev) => prev === originalIdx ? null : originalIdx);
+    }, [answered]);
+
+    // Tap bucket to assign the selected item
+    const handleBucketTap = useCallback((bucketIdx: number) => {
+      if (answered || selectedItem === null) return;
+      setAssignments((prev) => {
+        const next = [...prev];
+        next[selectedItem] = bucketIdx;
+        return next;
+      });
+      setSelectedItem(null);
+    }, [answered, selectedItem]);
 
     const handleReturnToPool = useCallback((originalIdx: number) => {
       if (answered) return;
@@ -118,31 +150,39 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
           <MoneyText text={question.question} />
         </h2>
 
+        {/* Spacer pushes buckets + items toward the bottom */}
+        <div style={{ flex: 1, minHeight: 8 }} />
+
         {/* Two bucket drop zones */}
         <div className="grid grid-cols-2" style={{ gap: 10 }}>
           {bucketLabels.map((label, bIdx) => {
             const bucketRef = bIdx === 0 ? bucket0Ref : bucket1Ref;
             const bucketItemIndices = shuffledOrder.filter((i) => assignments[i] === bIdx);
             const isHighlighted = highlightBucket === bIdx;
+            const isTargetable = selectedItem !== null;
 
             return (
               <div
                 key={label}
                 ref={bucketRef}
+                onClick={() => handleBucketTap(bIdx)}
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
                   borderRadius: 16,
-                  border: isHighlighted
+                  border: isHighlighted || isTargetable
                     ? `2.5px solid ${unitColor}`
                     : '2px dashed #D5D5D5',
                   background: isHighlighted
                     ? `${unitColor}15`
-                    : `${unitColor}06`,
+                    : isTargetable
+                      ? `${unitColor}08`
+                      : `${unitColor}06`,
                   padding: '10px 10px',
-                  minHeight: 110,
+                  minHeight: 100,
                   transition: 'all 0.15s ease',
                   transform: isHighlighted ? 'scale(1.02)' : 'scale(1)',
+                  cursor: isTargetable ? 'pointer' : 'default',
                 }}
               >
                 {/* Bucket label */}
@@ -170,7 +210,10 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.8 }}
-                          onClick={() => handleReturnToPool(originalIdx)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleReturnToPool(originalIdx);
+                          }}
                           disabled={answered}
                           whileTap={!answered ? { scale: 0.93 } : undefined}
                           style={{
@@ -195,15 +238,16 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                   </AnimatePresence>
                   {bucketItemIndices.length === 0 && (
                     <div style={{
-                      padding: '16px 8px',
+                      padding: '14px 8px',
                       borderRadius: 10,
-                      border: '1.5px dashed #D5D5D5',
+                      border: isTargetable ? `1.5px dashed ${unitColor}` : '1.5px dashed #D5D5D5',
                       fontSize: 12,
                       fontWeight: 600,
-                      color: '#CFCFCF',
+                      color: isTargetable ? unitColor : '#CFCFCF',
                       textAlign: 'center',
+                      transition: 'all 0.15s ease',
                     }}>
-                      Drop here
+                      {isTargetable ? 'Tap here' : 'Drop here'}
                     </div>
                   )}
                 </div>
@@ -218,46 +262,49 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
         </div>
 
         {/* Unsorted items pool - at bottom */}
-        <div style={{ minHeight: 48, marginTop: 'auto', paddingTop: 14 }}>
+        <div style={{ minHeight: 48, paddingTop: 10 }}>
           {unsortedIndices.length > 0 && (
             <div style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 0.5 }}>
-              Drag each item to a category
+              Drag or tap to sort
             </div>
           )}
           <div className="flex flex-wrap" style={{ gap: 8 }}>
             <AnimatePresence>
-              {unsortedIndices.map((originalIdx) => (
-                <motion.div
-                  key={`item-${originalIdx}`}
-                  drag
-                  dragSnapToOrigin
-                  dragElastic={0.6}
-                  dragMomentum={false}
-                  onDrag={handleDrag}
-                  onDragEnd={(_, info) => handleDragEnd(originalIdx, info)}
-                  whileDrag={{ scale: 1.08, zIndex: 50, boxShadow: '0 8px 24px rgba(0,0,0,0.18)' }}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  style={{
-                    padding: '10px 18px',
-                    borderRadius: 12,
-                    background: 'white',
-                    border: '2px solid #E5E5E5',
-                    fontSize: 14,
-                    fontWeight: 700,
-                    color: '#3C3C3C',
-                    cursor: 'grab',
-                    boxShadow: '0 2px 0 #E5E5E5',
-                    touchAction: 'none',
-                    userSelect: 'none',
-                    position: 'relative',
-                    zIndex: 10,
-                  }}
-                >
-                  <MoneyText text={items[originalIdx]} />
-                </motion.div>
-              ))}
+              {unsortedIndices.map((originalIdx) => {
+                const isSelected = selectedItem === originalIdx;
+                return (
+                  <motion.div
+                    key={`item-${originalIdx}`}
+                    drag
+                    dragSnapToOrigin
+                    dragMomentum={false}
+                    onDrag={handleDrag}
+                    onDragEnd={() => handleDragEnd(originalIdx)}
+                    onTap={() => handleItemTap(originalIdx)}
+                    whileDrag={{ scale: 1.08, zIndex: 50, boxShadow: '0 8px 24px rgba(0,0,0,0.18)' }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    style={{
+                      padding: '10px 18px',
+                      borderRadius: 12,
+                      background: isSelected ? `${unitColor}10` : 'white',
+                      border: isSelected ? `2.5px solid ${unitColor}` : '2px solid #E5E5E5',
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: '#3C3C3C',
+                      cursor: 'grab',
+                      boxShadow: isSelected ? `0 2px 0 ${unitColor}` : '0 2px 0 #E5E5E5',
+                      touchAction: 'none',
+                      userSelect: 'none',
+                      position: 'relative',
+                      zIndex: 10,
+                    }}
+                  >
+                    <MoneyText text={items[originalIdx]} />
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
           </div>
           {unsortedIndices.length === 0 && !answered && (
