@@ -392,12 +392,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   disabled={answered}
                   initial={{ opacity: 0, y: 16 }}
                   animate={revealAnimation}
-                  transition={{
-                    delay: answered ? 0 : displayIndex * 0.06,
-                    type: 'spring',
-                    stiffness: 400,
-                    damping: 25,
-                  }}
+                  transition={
+                    answered && localCorrect !== null
+                      ? { duration: 0.35 }
+                      : { delay: displayIndex * 0.06, type: 'spring', stiffness: 400, damping: 25 }
+                  }
                   whileTap={!answered ? { scale: 0.97, transition: { duration: 0.1 } } : undefined}
                   whileHover={!answered ? { scale: 1.01 } : undefined}
                   className="w-full text-left flex items-center"
@@ -493,12 +492,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   disabled={answered}
                   initial={{ opacity: 0, y: 14 }}
                   animate={revealAnimation}
-                  transition={{
-                    delay: answered ? 0 : idx * 0.08,
-                    type: 'spring',
-                    stiffness: 400,
-                    damping: 25,
-                  }}
+                  transition={
+                    answered && localCorrect !== null
+                      ? { duration: 0.35 }
+                      : { delay: idx * 0.08, type: 'spring', stiffness: 400, damping: 25 }
+                  }
                   whileTap={!answered ? { scale: 0.95, transition: { duration: 0.1 } } : undefined}
                   whileHover={!answered ? { scale: 1.02 } : undefined}
                   className="flex items-center justify-center"
