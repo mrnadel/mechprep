@@ -260,7 +260,7 @@ export async function loadUnitData(unitIndex: number, professionId?: string): Pr
 
 async function loadFinanceUnit(unitIndex: number): Promise<Unit> {
   const loaders: (() => Promise<Unit>)[] = [
-    () => import('./professions/personal-finance/units/unit-0').then(m => m.unit0),
+    () => import('./professions/personal-finance/units/unit-1').then(m => m.unit1),
   ];
 
   if (unitIndex < 0 || unitIndex >= loaders.length) {
