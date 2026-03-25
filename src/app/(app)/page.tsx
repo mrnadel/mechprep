@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import { useSession } from 'next-auth/react';
-import { ChevronDown } from 'lucide-react';
 import { CourseHeader } from '@/components/course/CourseHeader';
 import { CourseMap } from '@/components/course/CourseMap';
 import { useCourseStore } from '@/store/useCourseStore';
@@ -10,8 +9,6 @@ import { useStore } from '@/store/useStore';
 import { useEngagementStore, grantTitle, grantFrame } from '@/store/useEngagementStore';
 import { streakMilestones } from '@/data/streak-milestones';
 import { PracticeCard } from '@/components/course/PracticeCard';
-import { ProfessionPickerModal } from '@/components/profession/ProfessionPickerModal';
-import { getProfession } from '@/data/professions';
 import { analytics } from '@/lib/mixpanel';
 
 // Lazy-load heavy components that are conditionally rendered
@@ -33,14 +30,9 @@ export default function HomePage() {
   const dismissChapterCompletion = useCourseStore((s) => s.dismissChapterCompletion);
   const courseJustCompleted = useCourseStore((s) => s.courseJustCompleted);
   const dismissCourseCompletion = useCourseStore((s) => s.dismissCourseCompletion);
-  const activeProfession = useCourseStore((s) => s.activeProfession);
-  const setActiveProfession = useCourseStore((s) => s.setActiveProfession);
   const currentStreak = useStore((s) => s.progress.currentStreak);
   const milestonesReached = useEngagementStore((s) => s.streak.milestonesReached);
   const addGems = useEngagementStore((s) => s.addGems);
-
-  const [showProfessionPicker, setShowProfessionPicker] = useState(false);
-  const profession = getProfession(activeProfession);
 
   // Detect streak milestone to show
   const [shownMilestone, setShownMilestone] = useState<number | null>(null);
@@ -125,30 +117,8 @@ export default function HomePage() {
         )}
       </Suspense>
 
-      {/* Profession picker modal */}
-      <ProfessionPickerModal
-        isOpen={showProfessionPicker}
-        onClose={() => setShowProfessionPicker(false)}
-        selectedId={activeProfession}
-        onSelect={setActiveProfession}
-      />
-
       {/* Header */}
       <CourseHeader />
-
-      {/* Profession switcher pill */}
-      {profession && (
-        <div className="px-4 pt-1 pb-1">
-          <button
-            onClick={() => setShowProfessionPicker(true)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-50 border border-gray-200 hover:bg-gray-100 hover:border-gray-300 transition-colors text-sm"
-          >
-            <span>{profession.icon}</span>
-            <span className="font-bold text-gray-600">{profession.name}</span>
-            <ChevronDown className="w-3.5 h-3.5 text-gray-400" />
-          </button>
-        </div>
-      )}
 
       {/* Smart Practice card */}
       <PracticeCard />

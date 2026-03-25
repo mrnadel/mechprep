@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useCourseStore } from '@/store/useCourseStore';
 import { Sparkles } from 'lucide-react';
+import { getProfession } from '@/data/professions';
 import { useSubscription } from '@/hooks/useSubscription';
 import { useGems, useEngagementStore, useDoubleXpActive } from '@/store/useEngagementStore';
 import { useStore } from '@/store/useStore';
@@ -154,6 +155,8 @@ export function CourseHeader() {
   const [popover, setPopover] = useState<PopoverType>(null);
   const { tier, hasFetched } = useSubscription();
   const gems = useGems();
+  const activeProfession = useCourseStore((s) => s.activeProfession);
+  const profession = getProfession(activeProfession);
 
   const headerRef = useRef<HTMLElement>(null);
   const streakBtnRef = useRef<HTMLButtonElement>(null);
@@ -230,6 +233,15 @@ export function CourseHeader() {
         className="sticky top-0 z-50 bg-[#FAFAFA] px-4 sm:px-5 py-1.5 relative"
       >
         <div className="flex items-center justify-center gap-1 sm:gap-3">
+            {profession && (
+              <Link
+                href="/switch-course"
+                className="flex items-center justify-center w-9 h-9 rounded-xl hover:bg-surface-100 transition-colors active:scale-95"
+                aria-label={`Switch course — ${profession.name}`}
+              >
+                <span className="text-lg">{profession.icon}</span>
+              </Link>
+            )}
             <button
               ref={streakBtnRef}
               className="flex items-center transition-all active:scale-95"

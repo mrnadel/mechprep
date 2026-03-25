@@ -9,6 +9,8 @@ import LessonProgressBar from './LessonProgressBar';
 import QuestionCard from './QuestionCard';
 import type { QuestionCardHandle } from './QuestionCard';
 import TeachingCard from './TeachingCard';
+import SortBucketsCard from './SortBucketsCard';
+import MatchPairsCard from './MatchPairsCard';
 import ResultScreen from './ResultScreen';
 import FlagButton from '@/components/feedback/FlagButton';
 import { useMasteryStore } from '@/store/useMasteryStore';
@@ -149,6 +151,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
       case 'fill-blank':
         return currentQuestion.blanks?.join(', ') ?? currentQuestion.acceptedAnswers?.[0] ?? '';
       case 'teaching':
+      case 'sort-buckets':
+      case 'match-pairs':
         return '';
       default:
         return '';
@@ -626,6 +630,24 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                     question={currentQuestion}
                     unitColor={unitColor}
                     onGotIt={handleTeachingGotIt}
+                  />
+                ) : currentQuestion.type === 'sort-buckets' ? (
+                  <SortBucketsCard
+                    ref={questionRef}
+                    question={currentQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
+                  />
+                ) : currentQuestion.type === 'match-pairs' ? (
+                  <MatchPairsCard
+                    ref={questionRef}
+                    question={currentQuestion}
+                    onAnswer={handleAnswer}
+                    onSelectionChange={handleSelectionChange}
+                    answered={isCurrentAnswered}
+                    unitColor={unitColor}
                   />
                 ) : (
                   <QuestionCard

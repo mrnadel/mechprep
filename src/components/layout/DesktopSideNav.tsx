@@ -1,13 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LayoutDashboard, BookOpen, Trophy, Users, User, Swords } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { APP_NAME } from '@/lib/constants';
 import FriendsBadge from '@/components/friends/FriendsBadge';
-import { ProfessionPickerModal } from '@/components/profession/ProfessionPickerModal';
 import { useCourseStore } from '@/store/useCourseStore';
 import { getProfession } from '@/data/professions';
 
@@ -23,19 +21,9 @@ const tabs = [
 export default function DesktopSideNav() {
   const pathname = usePathname();
   const activeProfession = useCourseStore((s) => s.activeProfession);
-  const setActiveProfession = useCourseStore((s) => s.setActiveProfession);
   const profession = getProfession(activeProfession);
-  const [showPicker, setShowPicker] = useState(false);
 
   return (
-    <>
-      <ProfessionPickerModal
-        isOpen={showPicker}
-        onClose={() => setShowPicker(false)}
-        selectedId={activeProfession}
-        onSelect={setActiveProfession}
-      />
-
       <nav
         className="hidden lg:flex flex-col w-56 shrink-0 bg-[#FAFAFA] h-screen sticky top-0"
         aria-label="Desktop navigation"
@@ -43,16 +31,13 @@ export default function DesktopSideNav() {
         <div className="px-5 py-5">
           <p className="text-lg font-black text-surface-800">{APP_NAME}</p>
           {profession && (
-            <button
-              onClick={() => setShowPicker(true)}
+            <Link
+              href="/switch-course"
               className="flex items-center gap-1.5 mt-1 text-xs font-bold text-surface-400 hover:text-surface-600 transition-colors"
             >
               <span>{profession.icon}</span>
               <span>{profession.shortName}</span>
-              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
+            </Link>
           )}
         </div>
 
@@ -82,6 +67,5 @@ export default function DesktopSideNav() {
           })}
         </div>
       </nav>
-    </>
   );
 }
