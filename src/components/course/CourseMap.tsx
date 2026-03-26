@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
-import { ChevronUp, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -169,8 +168,6 @@ function ScrollToCurrentButton({
 
   if (!direction) return null;
 
-  const Icon = direction === 'up' ? ChevronUp : ChevronDown;
-
   return (
     <motion.button
       initial={{ opacity: 0, scale: 0.8 }}
@@ -178,17 +175,16 @@ function ScrollToCurrentButton({
       exit={{ opacity: 0, scale: 0.8 }}
       transition={{ duration: 0.2 }}
       style={{
-        width: 48,
-        height: 48,
-        borderRadius: '50%',
-        border: 'none',
+        width: 44,
+        height: 44,
+        borderRadius: 14,
+        border: '2px solid #E0E0E0',
         cursor: 'pointer',
-        background: '#3C3C3C',
-        color: '#FFFFFF',
+        background: '#FFFFFF',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
         WebkitTapHighlightColor: 'transparent',
       }}
       aria-label={`Scroll ${direction} to current lesson`}
@@ -196,7 +192,12 @@ function ScrollToCurrentButton({
         targetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }}
     >
-      <Icon style={{ width: 28, height: 28 }} />
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path
+          d={direction === 'up' ? 'M12 5l-7 9h14l-7-9z' : 'M12 19l-7-9h14l-7 9z'}
+          fill="#FFB800"
+        />
+      </svg>
     </motion.button>
   );
 }

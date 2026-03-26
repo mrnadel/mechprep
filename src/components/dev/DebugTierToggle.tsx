@@ -5,10 +5,14 @@ import { useSubscriptionStore } from '@/hooks/useSubscription';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
 import { useStore } from '@/store/useStore';
-import { getTotalLessonsMeta } from '@/data/course/course-meta';
+import { getTotalLessonsMeta, loadUnitData, courseMeta } from '@/data/course/course-meta';
 import { leagueTiers } from '@/data/league';
 import { levels, getLevelForXp } from '@/data/levels';
 import { LevelBadge } from '@/components/engagement/LevelBadge';
+import { getUnitTheme } from '@/lib/unitThemes';
+import QuestionCard from '@/components/lesson/QuestionCard';
+import type { QuestionCardHandle } from '@/components/lesson/QuestionCard';
+import type { CourseQuestion, Unit } from '@/data/course/types';
 import type { SubscriptionTier } from '@/lib/subscription';
 
 const TIERS: { value: SubscriptionTier | null; label: string }[] = [
@@ -82,6 +86,174 @@ function LeagueDebug() {
       >
         ▲
       </button>
+    </div>
+  );
+}
+
+/** Parse "u1-L3-Q16" → { unitNum, lessonNum, questionNum } */
+function parseQuestionId(raw: string) {
+  const m = raw.trim().match(/^u(\d+)-L(\d+)-Q(\d+)$/i);
+  if (!m) return null;
+  return { unitNum: parseInt(m[1], 10), lessonNum: parseInt(m[2], 10), questionNum: parseInt(m[3], 10) };
+}
+
+interface ResolvedQuestion {
+  question: CourseQuestion;
+  unitIndex: number;
+  lessonIndex: number;
+  unitTitle: string;
+  lessonTitle: string;
+}
+
+function QuestionSearch() {
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [resolved, setResolved] = useState<ResolvedQuestion | null>(null);
+  const [hasSelection, setHasSelection] = useState(false);
+  const [answered, setAnswered] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
+  const questionRef = useRef<QuestionCardHandle>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const loadedUnitsRef = useRef<Map<number, Unit>>(new Map());
+
+  const handleGo = useCallback(async () => {
+    const parsed = parseQuestionId(input);
+    if (!parsed) { setError('Format: u1-L3-Q16'); return; }
+    const unitIndex = parsed.unitNum - 1;
+    const lessonIndex = parsed.lessonNum - 1;
+    if (unitIndex < 0 || unitIndex >= courseMeta.length) { setError(`Unit ${parsed.unitNum} doesn't exist (1-${courseMeta.length})`); return; }
+    const unitMeta = courseMeta[unitIndex];
+    if (lessonIndex < 0 || lessonIndex >= unitMeta.lessons.length) { setError(`Lesson ${parsed.lessonNum} doesn't exist in Unit ${parsed.unitNum} (1-${unitMeta.lessons.length})`); return; }
+    setError(''); setLoading(true);
+    try {
+      let unit = loadedUnitsRef.current.get(unitIndex);
+      if (!unit) { unit = await loadUnitData(unitIndex); loadedUnitsRef.current.set(unitIndex, unit); }
+      const lesson = unit.lessons[lessonIndex];
+      const questionId = `u${parsed.unitNum}-L${parsed.lessonNum}-Q${parsed.questionNum}`;
+      const question = lesson.questions.find(q => q.id === questionId);
+      if (!question) { const qIds = lesson.questions.map(q => q.id.split('-Q')[1]).join(', '); setError(`Q${parsed.questionNum} not found. Available: Q${qIds}`); setLoading(false); return; }
+      setResolved({ question, unitIndex, lessonIndex, unitTitle: unit.title, lessonTitle: lesson.title });
+      setAnswered(false); setHasSelection(false);
+    } catch { setError('Failed to load unit data'); }
+    setLoading(false);
+  }, [input]);
+
+  const handleClose = useCallback(() => { setResolved(null); setError(''); setAnswered(false); setHasSelection(false); }, []);
+
+  // Prev/next navigation
+  const adjacentIds = (() => {
+    if (!resolved) return { prev: null as string | null, next: null as string | null };
+    const parsed = parseQuestionId(resolved.question.id);
+    if (!parsed) return { prev: null, next: null };
+    const unit = loadedUnitsRef.current.get(resolved.unitIndex);
+    if (!unit) return { prev: null, next: null };
+    const lesson = unit.lessons[resolved.lessonIndex];
+    const currentIdx = lesson.questions.findIndex(q => q.id === resolved.question.id);
+    return {
+      prev: currentIdx > 0 ? lesson.questions[currentIdx - 1].id : null,
+      next: currentIdx < lesson.questions.length - 1 ? lesson.questions[currentIdx + 1].id : null,
+    };
+  })();
+
+  const goToQuestion = useCallback(async (id: string) => {
+    setInput(id);
+    const parsed = parseQuestionId(id);
+    if (!parsed) return;
+    const unit = loadedUnitsRef.current.get(parsed.unitNum - 1);
+    if (!unit) return;
+    const lesson = unit.lessons[parsed.lessonNum - 1];
+    const question = lesson.questions.find(q => q.id === id);
+    if (!question) return;
+    setResolved({ question, unitIndex: parsed.unitNum - 1, lessonIndex: parsed.lessonNum - 1, unitTitle: unit.title, lessonTitle: lesson.title });
+    setAnswered(false); setHasSelection(false);
+  }, []);
+
+  // Global keyboard handler when viewing a question
+  useEffect(() => {
+    if (!resolved) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { e.preventDefault(); handleClose(); return; }
+      if (e.key === 'ArrowLeft' && adjacentIds.prev) { e.preventDefault(); goToQuestion(adjacentIds.prev); return; }
+      if (e.key === 'ArrowRight' && adjacentIds.next) { e.preventDefault(); goToQuestion(adjacentIds.next); return; }
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (answered) { setAnswered(false); setHasSelection(false); setRetryKey(k => k + 1); }
+        else if (hasSelection) { questionRef.current?.check(); }
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [resolved, answered, hasSelection, adjacentIds, handleClose, goToQuestion]);
+
+  const theme = resolved ? getUnitTheme(resolved.unitIndex) : null;
+  const unitColor = theme?.color ?? '#6366F1';
+
+  // Full-screen question preview overlay
+  if (resolved) {
+    return (
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#FAFAFA]">
+        <div className="w-full h-full max-w-3xl flex flex-col bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200">
+          <div className="flex items-center" style={{ padding: '10px 16px', gap: 12, borderBottom: '2px solid #E5E5E5', background: 'white' }}>
+            <button onClick={handleClose} className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90" style={{ width: 44, height: 44, borderRadius: 12, background: '#F5F5F5', border: 'none', cursor: 'pointer' }} aria-label="Close preview">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="#AFAFAF" strokeWidth="2.5" strokeLinecap="round" /></svg>
+            </button>
+            <div className="flex-1 min-w-0">
+              <p className="text-xs font-bold text-gray-400 truncate">{resolved.unitTitle} &rarr; {resolved.lessonTitle}</p>
+              <p className="text-sm font-extrabold text-gray-700 font-mono">{resolved.question.id}</p>
+            </div>
+            <span className="flex-shrink-0 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg" style={{ background: theme?.bg, color: theme?.dark }}>{resolved.question.type}</span>
+            <span className="flex-shrink-0 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg" style={{ background: '#FEE2E2', color: '#DC2626' }}>DEBUG</span>
+          </div>
+          <div className="flex-1 overflow-y-auto" style={{ padding: '16px 20px 20px' }}>
+            <div style={{ minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
+              <QuestionCard key={`${resolved.question.id}-${retryKey}`} ref={questionRef} question={resolved.question} onAnswer={() => setAnswered(true)} onSelectionChange={setHasSelection} answered={answered} unitColor={unitColor} />
+            </div>
+          </div>
+          <div style={{ padding: '12px 20px', paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)', borderTop: '2px solid #E5E5E5', background: 'white' }}>
+            <div className="flex items-center gap-2.5">
+              <button onClick={() => adjacentIds.prev && goToQuestion(adjacentIds.prev)} disabled={!adjacentIds.prev} className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90 disabled:opacity-30" style={{ width: 48, height: 48, borderRadius: 14, background: '#F5F5F5', border: '2px solid #E5E5E5', boxShadow: '0 3px 0 #CCCCCC', cursor: adjacentIds.prev ? 'pointer' : 'default' }} title="Previous question (←)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#AFAFAF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </button>
+              {!answered ? (
+                <button onClick={() => questionRef.current?.check()} disabled={!hasSelection} className="flex-1 transition-transform active:scale-[0.98]" style={{ padding: '14px 0', borderRadius: 16, fontSize: 15, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, background: hasSelection ? unitColor : '#E5E5E5', color: hasSelection ? '#FFFFFF' : '#AFAFAF', boxShadow: hasSelection ? `0 4px 0 ${theme?.dark ?? '#4F46E5'}` : '0 4px 0 #CCCCCC', border: 'none', cursor: hasSelection ? 'pointer' : 'default' }}>Check</button>
+              ) : (
+                <button onClick={() => { setAnswered(false); setHasSelection(false); setRetryKey(k => k + 1); }} className="flex-1 transition-transform active:scale-[0.98]" style={{ padding: '14px 0', borderRadius: 16, fontSize: 15, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, background: unitColor, color: '#FFFFFF', boxShadow: `0 4px 0 ${theme?.dark ?? '#4F46E5'}`, border: 'none', cursor: 'pointer' }}>Try Again</button>
+              )}
+              <button onClick={() => adjacentIds.next && goToQuestion(adjacentIds.next)} disabled={!adjacentIds.next} className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90 disabled:opacity-30" style={{ width: 48, height: 48, borderRadius: 14, background: '#F5F5F5', border: '2px solid #E5E5E5', boxShadow: '0 3px 0 #CCCCCC', cursor: adjacentIds.next ? 'pointer' : 'default' }} title="Next question (→)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#AFAFAF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Inline search bar inside the debug panel
+  return (
+    <div>
+      <div className="flex gap-1.5">
+        <input
+          ref={inputRef}
+          type="text"
+          value={input}
+          onChange={e => { setInput(e.target.value); setError(''); }}
+          onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); handleGo(); } }}
+          placeholder="u1-L3-Q16"
+          className="flex-1 min-w-0 px-2 py-1.5 rounded-lg border border-gray-200 text-[11px] font-mono font-bold focus:outline-none focus:border-indigo-400 transition-colors"
+          spellCheck={false}
+        />
+        <button
+          onClick={handleGo}
+          disabled={loading || !input.trim()}
+          className="px-3 py-1.5 rounded-lg text-[11px] font-bold text-white transition-colors disabled:opacity-40"
+          style={{ background: '#6366F1' }}
+        >
+          {loading ? '...' : 'Go'}
+        </button>
+      </div>
+      {error && <p className="mt-1 text-[10px] font-semibold text-red-500">{error}</p>}
     </div>
   );
 }
@@ -175,13 +347,13 @@ export function DebugTierToggle() {
       ref={containerRef}
       className="fixed z-[9999]"
       style={{
-        bottom: `calc(1rem + ${-pos.y}px)`,
-        right: `calc(1rem + ${-pos.x}px)`,
+        bottom: `calc(5rem + ${-pos.y}px)`,
+        left: `calc(1rem + ${pos.x}px)`,
         touchAction: 'none',
       }}
     >
       {isOpen && (
-        <div className="absolute bottom-12 right-0 bg-white rounded-lg shadow-xl border border-gray-200 p-3 min-w-[200px]">
+        <div className="absolute bottom-12 left-0 bg-white rounded-lg shadow-xl border border-gray-200 p-3 min-w-[200px]">
           <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">
             Test as
           </p>
@@ -292,6 +464,27 @@ export function DebugTierToggle() {
               />
             </div>
           </div>
+
+          {/* Jump to Question */}
+          <div className="border-t border-gray-200 mt-3 pt-3">
+            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">
+              Jump to Question
+            </p>
+            <QuestionSearch />
+          </div>
+
+          {/* Scroll to Current Lesson */}
+          <div className="border-t border-gray-200 mt-3 pt-3">
+            <button
+              onClick={() => {
+                const el = document.querySelector('[data-current-lesson]');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }}
+              className="w-full px-3 py-1.5 rounded-lg text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 transition-colors"
+            >
+              📍 Scroll to Current Lesson
+            </button>
+          </div>
         </div>
       )}
       <button
@@ -299,20 +492,24 @@ export function DebugTierToggle() {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onClick={handleClick}
-        className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold shadow-lg transition-colors select-none ${
+        className={`flex items-center justify-center shadow-lg transition-colors select-none ${
           isDragging ? 'cursor-grabbing' : 'cursor-grab'
         }`}
         style={{
+          width: 36,
+          height: 36,
+          borderRadius: '50%',
           background: isOverriding
             ? 'rgba(245, 158, 11, 0.4)'
             : 'rgba(31, 41, 55, 0.35)',
           color: isOverriding ? '#FFF' : 'rgba(209, 213, 219, 0.9)',
           backdropFilter: 'blur(8px)',
           WebkitBackdropFilter: 'blur(8px)',
+          fontSize: 16,
+          border: 'none',
         }}
       >
-        <span className="text-sm">&#x1F527;</span>
-        {isOverriding ? currentLabel.toUpperCase() : 'DEV'}
+        &#x1F527;
       </button>
     </div>
   );
