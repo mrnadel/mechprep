@@ -381,8 +381,8 @@ export function CourseMap() {
     >
       {/* Units container */}
       <div
-        className="flex flex-col px-3 sm:px-4"
-        style={{ paddingTop: 12, paddingBottom: 0, gap: 36 }}
+        className="flex flex-col px-3 sm:px-4 mx-auto"
+        style={{ paddingTop: 12, paddingBottom: 0, gap: 36, maxWidth: 520 }}
       >
         {courseData.map((unit, unitIndex) => {
           const theme = getUnitTheme(unitIndex);
@@ -408,12 +408,6 @@ export function CourseMap() {
               {/* Unit header card */}
               <div
                 className={isAllGolden ? 'golden-unit' : ''}
-                style={{
-                  borderRadius: 24,
-                  overflow: 'hidden',
-                  backgroundColor: isAllGolden ? undefined : theme.bg,
-                  transition: 'box-shadow 0.3s ease',
-                }}
               >
                 <UnitHeader
                   unit={unit}
