@@ -19,22 +19,22 @@ interface LessonRowProps {
 const GOLD = '#FFB800';
 const GOLD_DARK = '#B38600';
 
-// Isometric transform matrix from the reference SVG
+// Isometric transform from reference SVG
 const ISO = '0.822752 0.5684 -0.822752 0.5684';
-const SQ = 149.543;  // source square size
-const RX = 31;       // corner radius
-const TX = 123.037;  // horizontal translation to center
+const SQ = 149.543;
+const RX = 31;
+const TX = 123.037;
 
-// ViewBox: diamond spans 0→247 wide, 0→170 tall
 const VW = 247;
 const VH = 170;
 
-// Rendered sizes
-const BTN_W = 110;
-const BTN_H = Math.round(BTN_W * VH / VW); // ~76px
-const PRESS = 5;
+// Rendered sizes — large
+const BTN_W = 140;
+const BTN_H = Math.round(BTN_W * VH / VW); // ~96px
+const PRESS = 6;
+const ICON_SIZE = 34;
 
-function LessonIcon({ type, size = 26 }: { type: LessonType; size?: number }) {
+function LessonIcon({ type, size = ICON_SIZE }: { type: LessonType; size?: number }) {
   switch (type) {
     case 'conversation':
       return (
@@ -75,7 +75,7 @@ function LessonIcon({ type, size = 26 }: { type: LessonType; size?: number }) {
   }
 }
 
-function CheckIcon({ size = 26 }: { size?: number }) {
+function CheckIcon({ size = ICON_SIZE }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <path d="M5.5 12.5L10 17L18.5 7" stroke="#FFF" strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -83,7 +83,7 @@ function CheckIcon({ size = 26 }: { size?: number }) {
   );
 }
 
-function CrownIcon({ size = 26 }: { size?: number }) {
+function CrownIcon({ size = ICON_SIZE }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <path d="M4 16.5h16L18 7.5l-3.5 4.5L12 5l-2.5 7L6 7.5 4 16.5Z" fill="#FFF" />
@@ -92,7 +92,6 @@ function CrownIcon({ size = 26 }: { size?: number }) {
   );
 }
 
-/** Isometric diamond shape — matching reference SVG exactly */
 function IsoShape({ fill, clipId, withShine }: { fill: string; clipId?: string; withShine?: boolean }) {
   const inner = (
     <>
@@ -127,6 +126,29 @@ function IsoShape({ fill, clipId, withShine }: { fill: string; clipId?: string; 
   return inner;
 }
 
+/** 4-segment progress bar — fills based on stars (1-3) + golden (4th) */
+function ProgressBars({ stars, golden, color }: { stars: number; golden?: boolean; color: string }) {
+  const filled = golden ? 4 : stars;
+  const barColor = golden ? GOLD : color;
+
+  return (
+    <div className="flex items-center justify-center" style={{ gap: 3 }}>
+      {[1, 2, 3, 4].map((i) => (
+        <div
+          key={i}
+          style={{
+            width: 20,
+            height: 5,
+            borderRadius: 3,
+            background: i <= filled ? barColor : '#E0E0E0',
+            transition: 'background 0.3s ease',
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export const LessonNode = memo(function LessonNode({
   lesson,
   state,
@@ -154,14 +176,14 @@ export const LessonNode = memo(function LessonNode({
   const clipId = `lc-${lesson.id}`;
 
   return (
-    <div className="flex flex-col items-center" style={{ gap: 4 }}>
+    <div className="flex flex-col items-center" style={{ gap: 6 }}>
       {/* Isometric tile container */}
       <div style={{
         position: 'relative',
         width: BTN_W,
         height: BTN_H + PRESS,
       }}>
-        {/* Shadow layer — static, offset down */}
+        {/* Shadow layer */}
         <svg
           width={BTN_W} height={BTN_H}
           viewBox={`0 0 ${VW} ${VH}`}
@@ -177,7 +199,7 @@ export const LessonNode = memo(function LessonNode({
           <IsoShape fill={rim} />
         </svg>
 
-        {/* Face layer — animated */}
+        {/* Face layer */}
         <motion.button
           className={state === 'current' ? 'lesson-btn-pulse' : ''}
           style={{
@@ -197,7 +219,7 @@ export const LessonNode = memo(function LessonNode({
             '--go-glow-color': `${theme.color}40`,
           } as React.CSSProperties}
           onClick={onClick}
-          whileHover={state !== 'locked' ? { scale: 1.08, y: -2 } : undefined}
+          whileHover={state !== 'locked' ? { scale: 1.06, y: -2 } : undefined}
           whileTap={state !== 'locked' ? { scale: 1, y: PRESS - 1 } : undefined}
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: state === 'locked' ? 0.5 : 1, scale: 1 }}
@@ -239,19 +261,27 @@ export const LessonNode = memo(function LessonNode({
         </motion.button>
       </div>
 
-      {/* Mini stars for completed */}
+      {/* Progress bars — replaces stars */}
       {state === 'completed' && stars !== undefined && stars > 0 && (
-        <div className="flex items-center" style={{ gap: 2 }}>
-          {[1, 2, 3].map((i) => (
-            <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"
-                fill={i <= stars ? (isGold ? GOLD : theme.color) : '#E0E0E0'}
-              />
-            </svg>
-          ))}
-        </div>
+        <ProgressBars stars={stars} golden={golden} color={theme.color} />
       )}
+
+      {/* Lesson title */}
+      <div style={{
+        fontSize: 13,
+        fontWeight: 700,
+        color: state === 'locked' ? '#AFAFAF' : '#3C3C3C',
+        textAlign: 'center',
+        maxWidth: BTN_W + 30,
+        lineHeight: 1.25,
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: '-webkit-box',
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: 'vertical' as const,
+      }}>
+        {lesson.title}
+      </div>
     </div>
   );
 });
