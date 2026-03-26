@@ -19,7 +19,6 @@ interface LessonRowProps {
 const GOLD = '#FFB800';
 const GOLD_DARK = '#B38600';
 
-/** Simple bold white icons — Duolingo style */
 function LessonIcon({ type, size = 28 }: { type: LessonType; size?: number }) {
   switch (type) {
     case 'conversation':
@@ -79,9 +78,7 @@ function CrownIcon({ size = 28 }: { size?: number }) {
 }
 
 const CIRCLE = 70;
-const BASE_H = 16;    // squashed ellipse height
-const BASE_PEEK = 8;  // how much base shows below circle at rest
-const PRESS = 6;      // how far down circle moves on press
+const DEPTH = 8;
 
 export const LessonNode = memo(function LessonNode({
   lesson,
@@ -97,7 +94,7 @@ export const LessonNode = memo(function LessonNode({
   const bg = state === 'locked'
     ? '#D8D8D8'
     : isGold ? GOLD : theme.color;
-  const shadow = state === 'locked'
+  const rim = state === 'locked'
     ? '#B0B0B0'
     : isGold ? GOLD_DARK : theme.dark;
 
@@ -109,21 +106,21 @@ export const LessonNode = memo(function LessonNode({
 
   return (
     <div className="flex flex-col items-center" style={{ gap: 4 }}>
-      {/* Button with squashed 3D base */}
+      {/* Coin container */}
       <div style={{
         position: 'relative',
         width: CIRCLE,
-        height: CIRCLE + BASE_PEEK,
+        height: CIRCLE + DEPTH,
       }}>
-        {/* 3D base — squashed ellipse behind circle */}
+        {/* 3D rim — same-size circle offset down */}
         <div style={{
           position: 'absolute',
-          bottom: 0,
+          top: DEPTH,
           left: 0,
           width: CIRCLE,
-          height: BASE_H,
+          height: CIRCLE,
           borderRadius: '50%',
-          background: shadow,
+          background: rim,
           opacity: state === 'locked' ? 0.5 : 1,
         }} />
 
@@ -152,7 +149,7 @@ export const LessonNode = memo(function LessonNode({
           } as React.CSSProperties}
           onClick={onClick}
           whileHover={state !== 'locked' ? { scale: 1.08, y: -3 } : undefined}
-          whileTap={state !== 'locked' ? { scale: 1, y: PRESS } : undefined}
+          whileTap={state !== 'locked' ? { scale: 1, y: DEPTH - 1 } : undefined}
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: state === 'locked' ? 0.5 : 1, scale: 1 }}
           transition={{
@@ -172,39 +169,23 @@ export const LessonNode = memo(function LessonNode({
                 : `Locked: ${lesson.title}`
           }
         >
-          {/* Top highlight gradient */}
+          {/* Flat shine — subtle top highlight */}
           <div style={{
             position: 'absolute',
             inset: 0,
             borderRadius: '50%',
-            background: 'linear-gradient(to bottom, rgba(255,255,255,0.22) 30%, transparent 55%)',
+            background: 'linear-gradient(to bottom, rgba(255,255,255,0.2) 25%, transparent 50%)',
             pointerEvents: 'none',
           }} />
 
-          {/* Flat shine lines — glossy light reflection */}
-          <svg
-            viewBox="0 0 70 70"
-            fill="none"
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              pointerEvents: 'none',
-            }}
-          >
-            <path d="M14 21 Q35 15 56 21" stroke="rgba(255,255,255,0.4)" strokeWidth="2.5" strokeLinecap="round" />
-            <path d="M19 28 Q35 23 51 28" stroke="rgba(255,255,255,0.25)" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
-
-          {/* Centered white icon */}
+          {/* White icon */}
           <div style={{ position: 'relative' }}>
             {icon}
           </div>
         </motion.button>
       </div>
 
-      {/* Mini stars for completed lessons */}
+      {/* Mini stars for completed */}
       {state === 'completed' && stars !== undefined && stars > 0 && (
         <div className="flex items-center" style={{ gap: 2 }}>
           {[1, 2, 3].map((i) => (
