@@ -19,107 +19,60 @@ interface LessonRowProps {
 const GOLD = '#FFB800';
 const GOLD_DARK = '#C8960B';
 
-/** SVG icon per lesson type — Duolingo-inspired flat bold style */
-function LessonTypeIcon({ type, color, size = 20 }: { type: LessonType; color: string; size?: number }) {
+/** SVG icon per lesson type — bold white silhouette for colored backgrounds */
+function LessonTypeIcon({ type, color, size = 24 }: { type: LessonType; color: string; size?: number }) {
   switch (type) {
     case 'conversation':
-      // Chat bubbles
       return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
           <rect x="2" y="3" width="14" height="11" rx="3" fill={color} />
           <path d="M6 14v3l3-3H6Z" fill={color} />
           <rect x="10" y="9" width="12" height="9" rx="3" fill={color} opacity="0.5" />
           <path d="M18 18v2.5l2.5-2.5H18Z" fill={color} opacity="0.5" />
-          <rect x="5" y="7" width="6" height="1.5" rx="0.75" fill="#FFF" />
-          <rect x="5" y="10" width="4" height="1.5" rx="0.75" fill="#FFF" opacity="0.7" />
         </svg>
       );
     case 'speed-round':
-      // Lightning bolt / stopwatch
       return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="13" r="9" fill={color} opacity="0.2" />
-          <circle cx="12" cy="13" r="7" fill={color} opacity="0.4" />
           <path d="M13.5 4L8 14h4.5l-1 7L18 11h-4.5l1-7Z" fill={color} />
-          <path d="M13.5 4L8 14h4.5l-1 7L18 11h-4.5l1-7Z" fill="#FFF" opacity="0.3" />
         </svg>
       );
     case 'timeline':
-      // Branching path / story book
       return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <path d="M7 4v16" stroke={color} strokeWidth="2.5" strokeLinecap="round" opacity="0.3" />
+          <path d="M7 4v16" stroke={color} strokeWidth="2.5" strokeLinecap="round" opacity="0.4" />
           <circle cx="7" cy="6" r="2.5" fill={color} />
           <circle cx="7" cy="12" r="2.5" fill={color} />
           <circle cx="7" cy="18" r="2.5" fill={color} />
-          <rect x="12" y="4" width="8" height="4" rx="2" fill={color} opacity="0.6" />
+          <rect x="12" y="4" width="8" height="4" rx="2" fill={color} opacity="0.7" />
           <rect x="12" y="10" width="10" height="4" rx="2" fill={color} />
-          <rect x="12" y="16" width="6" height="4" rx="2" fill={color} opacity="0.6" />
+          <rect x="12" y="16" width="6" height="4" rx="2" fill={color} opacity="0.7" />
         </svg>
       );
     case 'case-study':
-      // Document with magnifying glass
       return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <rect x="3" y="2" width="13" height="18" rx="2.5" fill={color} opacity="0.2" />
-          <rect x="3" y="2" width="13" height="18" rx="2.5" stroke={color} strokeWidth="2" />
+          <rect x="3" y="2" width="13" height="18" rx="2.5" stroke={color} strokeWidth="2" fill={color} fillOpacity="0.15" />
           <rect x="6" y="6" width="7" height="1.5" rx="0.75" fill={color} />
-          <rect x="6" y="9" width="5" height="1.5" rx="0.75" fill={color} opacity="0.5" />
-          <rect x="6" y="12" width="4" height="1.5" rx="0.75" fill={color} opacity="0.5" />
+          <rect x="6" y="9" width="5" height="1.5" rx="0.75" fill={color} opacity="0.6" />
           <circle cx="17.5" cy="16.5" r="3.5" fill={color} />
-          <circle cx="17.5" cy="16.5" r="2" fill="#FFF" opacity="0.4" />
           <path d="M20 19.5L22 21.5" stroke={color} strokeWidth="2" strokeLinecap="round" />
         </svg>
       );
     case 'standard':
     default:
-      // Open book / quiz
       return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <path d="M12 6C10.5 4.5 7 3.5 4 4v14c3 0 6.5 1 8 2.5C13.5 19 17 18 20 18V4c-3-.5-6.5.5-8 2Z" fill={color} opacity="0.2" />
-          <path d="M12 6C10.5 4.5 7 3.5 4 4v14c3 0 6.5 1 8 2.5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M12 6c1.5-1.5 5-2.5 8-2v14c-3 0-6.5 1-8 2.5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M12 6v14.5" stroke={color} strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+          <path d="M12 6C10.5 4.5 7 3.5 4 4v14c3 0 6.5 1 8 2.5C13.5 19 17 18 20 18V4c-3-.5-6.5.5-8 2Z" fill={color} opacity="0.25" />
+          <path d="M12 6C10.5 4.5 7 3.5 4 4v14c3 0 6.5 1 8 2.5" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M12 6c1.5-1.5 5-2.5 8-2v14c-3 0-6.5 1-8 2.5" stroke={color} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       );
   }
 }
 
-function CompletionBadge({ stars, color, darkColor, isGolden }: { stars: number; color: string; darkColor: string; isGolden?: boolean }) {
-  const starColor = isGolden ? '#FFFFFF' : color;
-  const starEmptyColor = isGolden ? 'rgba(255,255,255,0.35)' : '#E0E0E0';
-  const bgColor = isGolden ? '#CC9400' : `${color}18`;
-  const borderColor = isGolden ? 'transparent' : `${color}25`;
-
-  return (
-    <div
-      className="flex items-center"
-      style={{
-        gap: 3,
-        background: bgColor,
-        border: `1.5px solid ${borderColor}`,
-        borderRadius: 10,
-        padding: '5px 10px',
-      }}
-    >
-      {[1, 2, 3].map((i) => (
-        <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"
-            fill={i <= stars ? starColor : starEmptyColor}
-            strokeLinejoin="round"
-          />
-        </svg>
-      ))}
-      {isGolden && (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ marginLeft: 1 }}>
-          <path d="M5 16h14l-2-8-3.5 4L12 6l-1.5 6L7 8l-2 8z" fill="#FFE082" />
-          <path d="M5 16h14v2a1 1 0 01-1 1H6a1 1 0 01-1-1v-2z" fill="#FFE082" />
-        </svg>
-      )}
-    </div>
-  );
-}
+const ICON_SIZE = 56;
+const DEPTH = 5;
 
 export const LessonNode = memo(function LessonNode({
   lesson,
@@ -130,127 +83,102 @@ export const LessonNode = memo(function LessonNode({
   onClick,
   theme,
 }: LessonRowProps) {
+  const isGold = state === 'completed' && golden;
+
+  const bg = state === 'locked'
+    ? '#E5E5E5'
+    : isGold ? GOLD : theme.color;
+  const shadow = state === 'locked'
+    ? '#CACACA'
+    : isGold ? GOLD_DARK : theme.dark;
+
   return (
-    <motion.button
-      className={`w-full flex items-center text-left ${state === 'completed' && golden ? 'golden-node' : ''}`}
-      style={{
-        padding: '12px 14px',
-        background:
-          state === 'locked' ? 'transparent'
-          : (state === 'completed' && golden) ? undefined  /* handled by .golden-node */
-          : 'rgba(255,255,255,0.85)',
-        borderRadius: 16,
-        gap: 12,
-        opacity: state === 'locked' ? 0.7 : 1,
-        cursor: state === 'locked' ? 'default' : 'pointer',
-        boxShadow:
-          state === 'locked'
-            ? 'none'
-            : (state === 'completed' && golden) ? undefined /* handled by .golden-node */
-            : `0 3px 0 ${theme.dark}22, 0 1px 3px rgba(0,0,0,0.06)`,
-        border:
-          state === 'locked'
-            ? 'none'
-            : (state === 'completed' && golden) ? undefined /* handled by .golden-node */
-            : '1.5px solid rgba(255,255,255,0.9)',
-        position: 'relative',
-        WebkitTapHighlightColor: 'transparent',
-      }}
-      onClick={onClick}
-      whileHover={state !== 'locked' ? { scale: 1.015, ...((state === 'completed' && golden) ? {} : { backgroundColor: 'rgba(255,255,255,0.95)' }) } : undefined}
-      whileTap={state !== 'locked' ? { scale: 0.97, y: 2, boxShadow: (state === 'completed' && golden) ? '0 1px 0 #996E00' : `0 1px 0 ${theme.dark}22, 0 0px 2px rgba(0,0,0,0.04)` } : undefined}
-      initial={{ opacity: 0, x: -8 }}
-      animate={{ opacity: state === 'locked' ? 0.7 : 1, x: 0 }}
-      transition={{ delay: index * 0.05, duration: 0.25, scale: { duration: 0.1 }, y: { duration: 0.1 }, boxShadow: { duration: 0.1 } }}
-      aria-label={
-        state === 'completed'
-          ? `Replay: ${lesson.title}`
-          : state === 'current'
-            ? `Start: ${lesson.title}`
-            : `Locked: ${lesson.title}`
-      }
-    >
-      {/* Icon */}
-      <div
-        className={`flex items-center justify-center flex-shrink-0 ${state === 'completed' && golden ? 'golden-icon-box' : ''}`}
+    <div className="flex flex-col items-center" style={{ gap: 4, width: ICON_SIZE }}>
+      <motion.button
+        className={state === 'current' ? 'go-btn-pulse' : ''}
         style={{
-          width: 38,
-          height: 38,
-          borderRadius: 12,
-          background:
-            state === 'locked' ? '#F0F0F0'
-            : (state === 'completed' && golden) ? undefined /* handled by .golden-icon-box */
-            : `${theme.color}20`,
-          fontSize: 16,
+          width: ICON_SIZE,
+          height: ICON_SIZE,
+          borderRadius: 16,
+          background: bg,
+          boxShadow: `0 ${DEPTH}px 0 ${shadow}`,
+          border: 'none',
+          padding: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: state === 'locked' ? 'default' : 'pointer',
+          opacity: state === 'locked' ? 0.55 : 1,
+          position: 'relative',
+          overflow: 'hidden',
+          WebkitTapHighlightColor: 'transparent',
+          '--go-shadow-color': shadow,
+          '--go-glow-color': `${theme.color}30`,
+        } as React.CSSProperties}
+        onClick={onClick}
+        whileHover={state !== 'locked' ? { scale: 1.08, y: -2 } : undefined}
+        whileTap={state !== 'locked' ? {
+          scale: 1,
+          y: DEPTH - 1,
+          boxShadow: `0 1px 0 ${shadow}`,
+        } : undefined}
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: state === 'locked' ? 0.55 : 1, scale: 1 }}
+        transition={{
+          delay: index * 0.04,
+          duration: 0.3,
+          scale: { duration: 0.1 },
+          y: { duration: 0.1 },
+          boxShadow: { duration: 0.1 },
         }}
+        aria-label={
+          state === 'completed'
+            ? `Replay: ${lesson.title}`
+            : state === 'current'
+              ? `Start: ${lesson.title}`
+              : `Locked: ${lesson.title}`
+        }
       >
-        {state === 'completed' && golden ? (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M5 16h14l-2-8-3.5 4L12 6l-1.5 6L7 8l-2 8z" fill={GOLD} />
-            <path d="M5 16h14v2a1 1 0 01-1 1H6a1 1 0 01-1-1v-2z" fill={GOLD} />
-            <circle cx="7.5" cy="16" r="1.2" fill="#FFF8E1" />
-            <circle cx="12" cy="16" r="1.2" fill="#FFF8E1" />
-            <circle cx="16.5" cy="16" r="1.2" fill="#FFF8E1" />
-          </svg>
-        ) : state === 'completed' ? (
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path
-              d="M5 10.5L8.5 14L15 6"
-              stroke={theme.color}
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+        {/* Top highlight for convex 3D look */}
+        <div style={{
+          position: 'absolute',
+          top: 0, left: 0, right: 0,
+          height: '50%',
+          borderRadius: '16px 16px 0 0',
+          background: 'linear-gradient(to bottom, rgba(255,255,255,0.22), transparent)',
+          pointerEvents: 'none',
+        }} />
+
+        <div style={{ position: 'relative' }}>
+          {isGold ? (
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M5 16h14l-2-8-3.5 4L12 6l-1.5 6L7 8l-2 8z" fill="#FFF" />
+              <path d="M5 16h14v2a1 1 0 01-1 1H6a1 1 0 01-1-1v-2z" fill="#FFF" />
+            </svg>
+          ) : (
+            <LessonTypeIcon
+              type={lesson.type ?? 'standard'}
+              color="#FFFFFF"
+              size={26}
             />
-          </svg>
-        ) : (
-          <div style={{ opacity: state === 'locked' ? 0.5 : 1 }}>
-            <LessonTypeIcon type={lesson.type ?? 'standard'} color={state === 'locked' ? '#AFAFAF' : theme.color} />
-          </div>
-        )}
-      </div>
-
-      {/* Info */}
-      <div className="flex-1 min-w-0">
-        <div
-          style={{
-            fontSize: 14.5,
-            fontWeight: 700,
-            color: state === 'locked' ? '#AFAFAF' : '#3C3C3C',
-            lineHeight: 1.2,
-          }}
-        >
-          {lesson.title}
+          )}
         </div>
-      </div>
+      </motion.button>
 
-      {/* Badge */}
-      <div className="flex-shrink-0">
-        {state === 'completed' && stars !== undefined && stars > 0 ? (
-          <CompletionBadge stars={stars} color={golden ? GOLD : theme.color} darkColor={golden ? GOLD_DARK : theme.dark} isGolden={golden} />
-        ) : state === 'current' ? (
-          <div
-            className="go-btn-pulse"
-            style={
-              {
-                background: theme.color,
-                color: '#FFFFFF',
-                fontSize: 13,
-                fontWeight: 800,
-                padding: '8px 20px',
-                borderRadius: 12,
-                textTransform: 'uppercase',
-                letterSpacing: 0.8,
-                boxShadow: `0 4px 0 ${theme.dark}`,
-                '--go-shadow-color': theme.dark,
-                '--go-glow-color': `${theme.color}25`,
-              } as React.CSSProperties
-            }
-          >
-            Go
-          </div>
-        ) : null}
-      </div>
-    </motion.button>
+      {/* Mini stars for completed lessons */}
+      {state === 'completed' && stars !== undefined && stars > 0 && (
+        <div className="flex items-center" style={{ gap: 1.5 }}>
+          {[1, 2, 3].map((i) => (
+            <svg key={i} width="10" height="10" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"
+                fill={i <= stars ? (isGold ? GOLD : theme.color) : '#E0E0E0'}
+              />
+            </svg>
+          ))}
+        </div>
+      )}
+    </div>
   );
 });
 

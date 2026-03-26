@@ -340,8 +340,8 @@
 
 /* GO button pulse animation */
 @keyframes goPulse {
-  0%, 100% { box-shadow: 0 4px 0 var(--go-shadow-color), 0 0 0 0 transparent; }
-  50% { box-shadow: 0 4px 0 var(--go-shadow-color), 0 0 0 6px var(--go-glow-color); }
+  0%, 100% { box-shadow: 0 5px 0 var(--go-shadow-color), 0 0 0 0 transparent; }
+  50% { box-shadow: 0 5px 0 var(--go-shadow-color), 0 0 0 8px var(--go-glow-color); }
 }
 
 .go-btn-pulse {

@@ -445,8 +445,8 @@ export function CourseMap() {
 
               {/* Lesson list — below the unit card */}
               <div
-                className="flex flex-col px-1 sm:px-2"
-                style={{ paddingTop: 14, gap: 10 }}
+                className="flex flex-wrap justify-center px-1 sm:px-2"
+                style={{ paddingTop: 14, gap: 12 }}
               >
                 {unit.lessons.map((lesson, lessonIndex) => {
                   const state = getLessonState(unitIndex, lessonIndex);
