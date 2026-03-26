@@ -348,10 +348,10 @@
   animation: goPulse 2.5s ease-in-out infinite;
 }
 
-/* Lesson circle pulse — round Duolingo-style buttons */
+/* Lesson circle pulse — glow ring around current lesson */
 @keyframes lessonPulse {
-  0%, 100% { box-shadow: 0 7px 0 var(--go-shadow-color), 0 0 0 0 transparent; }
-  50% { box-shadow: 0 7px 0 var(--go-shadow-color), 0 0 0 10px var(--go-glow-color); }
+  0%, 100% { box-shadow: 0 0 0 0 transparent; }
+  50% { box-shadow: 0 0 0 10px var(--go-glow-color); }
 }
 
 .lesson-btn-pulse {
