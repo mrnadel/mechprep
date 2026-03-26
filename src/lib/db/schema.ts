@@ -397,6 +397,30 @@ export const courseQuestions = pgTable(
     acceptedAnswers: jsonb('accepted_answers').$type<string[]>(),
     blanks: jsonb('blanks').$type<string[]>(),
     wordBank: jsonb('word_bank').$type<string[]>(),
+    // Sort-buckets / category-swipe
+    buckets: jsonb('buckets').$type<string[]>(),
+    correctBuckets: jsonb('correct_buckets').$type<number[]>(),
+    // Match-pairs
+    matchTargets: jsonb('match_targets').$type<string[]>(),
+    correctMatches: jsonb('correct_matches').$type<number[]>(),
+    // Order-steps / rank-order
+    steps: jsonb('steps').$type<string[]>(),
+    correctOrder: jsonb('correct_order').$type<number[]>(),
+    // Multi-select
+    correctIndices: jsonb('correct_indices').$type<number[]>(),
+    // Slider-estimate
+    sliderMin: real('slider_min'),
+    sliderMax: real('slider_max'),
+    correctValue: real('correct_value'),
+    tolerance: real('tolerance'),
+    unit: text('unit'),
+    // Scenario
+    scenario: text('scenario'),
+    // Rank-order criteria
+    rankCriteria: text('rank_criteria'),
+    // Image-tap
+    tapZones: jsonb('tap_zones').$type<{ id: string; label: string; x: number; y: number; w: number; h: number }[]>(),
+    correctZoneId: text('correct_zone_id'),
     explanation: text('explanation').notNull(),
     hint: text('hint'),
     diagram: text('diagram'),

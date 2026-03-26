@@ -205,15 +205,15 @@ function ScrollToCurrentButton({
         style={{ transform: direction === 'down' ? 'rotate(180deg)' : undefined }}
       >
         <path
-          d="M12 4L12 20"
-          stroke="#58A6FF"
-          strokeWidth="3.5"
+          d="M12 6L12 19"
+          stroke="#6366F1"
+          strokeWidth="4.5"
           strokeLinecap="round"
         />
         <path
-          d="M5 11L12 4L19 11"
-          stroke="#58A6FF"
-          strokeWidth="3.5"
+          d="M5.5 12L12 5.5L18.5 12"
+          stroke="#6366F1"
+          strokeWidth="4.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -342,7 +342,7 @@ export function CourseMap() {
       attempts++;
       const target = currentLessonRef.current || currentUnitRef.current;
       if (target && target.getBoundingClientRect().height > 0) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.scrollIntoView({ behavior: 'instant', block: 'center' });
       } else if (attempts < 10) {
         // Retry — animations may still be running
         requestAnimationFrame(tryScroll);
@@ -371,7 +371,7 @@ export function CourseMap() {
       {/* Units container */}
       <div
         className="flex flex-col px-3 sm:px-4"
-        style={{ paddingTop: 12, paddingBottom: 0, gap: 16 }}
+        style={{ paddingTop: 12, paddingBottom: 0, gap: 36 }}
       >
         {courseData.map((unit, unitIndex) => {
           const theme = getUnitTheme(unitIndex);
@@ -389,48 +389,54 @@ export function CourseMap() {
             <div
               key={unit.id}
               ref={isActive ? currentUnitRef : undefined}
-              className={isAllGolden ? 'golden-unit' : ''}
               style={{
-                borderRadius: 24,
-                overflow: 'hidden',
-                backgroundColor: isAllGolden ? undefined : theme.bg,
-                transition: 'box-shadow 0.3s ease',
                 animation: 'unitSlideUp 0.5s ease backwards',
                 animationDelay: `${Math.min(unitIndex * 0.1, 0.5)}s`,
               }}
             >
-              <UnitHeader
-                unit={unit}
-                unitIndex={unitIndex}
-                completedInUnit={completedInUnit}
-                totalInUnit={unit.lessons.length}
-                isLocked={isUnitLocked}
-                isAllGolden={isAllGolden}
-                lockMessage={
-                  isGuestLocked
-                    ? 'Sign up to unlock'
-                    : isProLocked
-                      ? 'Upgrade to Pro to unlock'
-                      : undefined
-                }
-                theme={theme}
-                professionId={activeProfession}
-              />
-
-              {/* Floating "Jump here" button for placement-test-eligible locked units */}
-              {isUnitJumpable(unitIndex) && (
-                <JumpHereButton
-                  theme={theme}
-                  onClick={() => {
-                    setJumpModal({ kind: 'placement-test', unitIndex });
-                  }}
-                />
-              )}
-
-              {/* Lesson list — always visible */}
+              {/* Unit header card */}
               <div
-                className="flex flex-col px-3 sm:px-4"
-                style={{ paddingTop: 4, paddingBottom: 20, gap: 8 }}
+                className={isAllGolden ? 'golden-unit' : ''}
+                style={{
+                  borderRadius: 24,
+                  overflow: 'hidden',
+                  backgroundColor: isAllGolden ? undefined : theme.bg,
+                  transition: 'box-shadow 0.3s ease',
+                }}
+              >
+                <UnitHeader
+                  unit={unit}
+                  unitIndex={unitIndex}
+                  completedInUnit={completedInUnit}
+                  totalInUnit={unit.lessons.length}
+                  isLocked={isUnitLocked}
+                  isAllGolden={isAllGolden}
+                  lockMessage={
+                    isGuestLocked
+                      ? 'Sign up to unlock'
+                      : isProLocked
+                        ? 'Upgrade to Pro to unlock'
+                        : undefined
+                  }
+                  theme={theme}
+                  professionId={activeProfession}
+                />
+
+                {/* Floating "Jump here" button for placement-test-eligible locked units */}
+                {isUnitJumpable(unitIndex) && (
+                  <JumpHereButton
+                    theme={theme}
+                    onClick={() => {
+                      setJumpModal({ kind: 'placement-test', unitIndex });
+                    }}
+                  />
+                )}
+              </div>
+
+              {/* Lesson list — below the unit card */}
+              <div
+                className="flex flex-col px-1 sm:px-2"
+                style={{ paddingTop: 14, gap: 10 }}
               >
                 {unit.lessons.map((lesson, lessonIndex) => {
                   const state = getLessonState(unitIndex, lessonIndex);
