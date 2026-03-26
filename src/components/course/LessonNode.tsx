@@ -126,29 +126,6 @@ function IsoShape({ fill, clipId, withShine }: { fill: string; clipId?: string; 
   return inner;
 }
 
-/** 4-segment progress bar — fills based on stars (1-3) + golden (4th) */
-function ProgressBars({ stars, golden, color }: { stars: number; golden?: boolean; color: string }) {
-  const filled = golden ? 4 : stars;
-  const barColor = golden ? GOLD : color;
-
-  return (
-    <div className="flex items-center justify-center" style={{ gap: 3 }}>
-      {[1, 2, 3, 4].map((i) => (
-        <div
-          key={i}
-          style={{
-            width: 20,
-            height: 5,
-            borderRadius: 3,
-            background: i <= filled ? barColor : '#E0E0E0',
-            transition: 'background 0.3s ease',
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 export const LessonNode = memo(function LessonNode({
   lesson,
   state,
@@ -247,6 +224,25 @@ export const LessonNode = memo(function LessonNode({
             style={{ display: 'block' }}
           >
             <IsoShape fill={bg} clipId={clipId} withShine />
+
+            {/* Progress outline — 4 segments tracing diamond edges */}
+            {state === 'completed' && stars !== undefined && stars > 0 &&
+              [0, 1, 2, 3].map(i => {
+                const segsFilled = golden ? 4 : stars;
+                return (
+                  <rect key={i}
+                    width={SQ} height={SQ} rx={RX}
+                    transform={`matrix(${ISO} ${TX} 0)`}
+                    fill="none"
+                    stroke={i < segsFilled ? 'rgba(255,255,255,0.7)' : 'rgba(255,255,255,0.12)'}
+                    strokeWidth={8}
+                    pathLength={4}
+                    strokeDasharray="0.9 3.1"
+                    strokeDashoffset={-(i + 0.05)}
+                  />
+                );
+              })
+            }
           </svg>
 
           {/* Icon centered on diamond */}
@@ -260,11 +256,6 @@ export const LessonNode = memo(function LessonNode({
           </div>
         </motion.button>
       </div>
-
-      {/* Progress bars — replaces stars */}
-      {state === 'completed' && stars !== undefined && stars > 0 && (
-        <ProgressBars stars={stars} golden={golden} color={theme.color} />
-      )}
 
       {/* Lesson title */}
       <div style={{
