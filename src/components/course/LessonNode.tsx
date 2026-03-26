@@ -19,7 +19,22 @@ interface LessonRowProps {
 const GOLD = '#FFB800';
 const GOLD_DARK = '#B38600';
 
-function LessonIcon({ type, size = 28 }: { type: LessonType; size?: number }) {
+// Isometric transform matrix from the reference SVG
+const ISO = '0.822752 0.5684 -0.822752 0.5684';
+const SQ = 149.543;  // source square size
+const RX = 31;       // corner radius
+const TX = 123.037;  // horizontal translation to center
+
+// ViewBox: diamond spans 0→247 wide, 0→170 tall
+const VW = 247;
+const VH = 170;
+
+// Rendered sizes
+const BTN_W = 80;
+const BTN_H = Math.round(BTN_W * VH / VW); // ~55px
+const PRESS = 4;
+
+function LessonIcon({ type, size = 26 }: { type: LessonType; size?: number }) {
   switch (type) {
     case 'conversation':
       return (
@@ -60,7 +75,7 @@ function LessonIcon({ type, size = 28 }: { type: LessonType; size?: number }) {
   }
 }
 
-function CheckIcon({ size = 28 }: { size?: number }) {
+function CheckIcon({ size = 26 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <path d="M5.5 12.5L10 17L18.5 7" stroke="#FFF" strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -68,7 +83,7 @@ function CheckIcon({ size = 28 }: { size?: number }) {
   );
 }
 
-function CrownIcon({ size = 28 }: { size?: number }) {
+function CrownIcon({ size = 26 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <path d="M4 16.5h16L18 7.5l-3.5 4.5L12 5l-2.5 7L6 7.5 4 16.5Z" fill="#FFF" />
@@ -77,9 +92,40 @@ function CrownIcon({ size = 28 }: { size?: number }) {
   );
 }
 
-const BTN_W = 70;
-const BTN_H = 58;   // squashed height for 3D perspective
-const DEPTH = 8;
+/** Isometric diamond shape — matching reference SVG exactly */
+function IsoShape({ fill, clipId, withShine }: { fill: string; clipId?: string; withShine?: boolean }) {
+  const inner = (
+    <>
+      <rect width={SQ} height={SQ} rx={RX}
+        transform={`matrix(${ISO} ${TX} 0)`}
+        fill={fill} />
+      {withShine && (
+        <>
+          <rect width="217" height="42" transform="translate(18 34)" fill="white" fillOpacity="0.09" />
+          <rect width="217" height="10" transform="translate(18 99)" fill="white" fillOpacity="0.09" />
+        </>
+      )}
+    </>
+  );
+
+  if (clipId && withShine) {
+    return (
+      <>
+        <defs>
+          <clipPath id={clipId}>
+            <rect width={SQ} height={SQ} rx={RX}
+              transform={`matrix(${ISO} ${TX} 0)`} />
+          </clipPath>
+        </defs>
+        <g clipPath={`url(#${clipId})`}>
+          {inner}
+        </g>
+      </>
+    );
+  }
+
+  return inner;
+}
 
 export const LessonNode = memo(function LessonNode({
   lesson,
@@ -96,36 +142,42 @@ export const LessonNode = memo(function LessonNode({
     ? '#D8D8D8'
     : isGold ? GOLD : theme.color;
   const rim = state === 'locked'
-    ? '#B0B0B0'
+    ? '#505050'
     : isGold ? GOLD_DARK : theme.dark;
 
   const icon = isGold
-    ? <CrownIcon size={30} />
+    ? <CrownIcon />
     : state === 'completed'
-      ? <CheckIcon size={30} />
-      : <LessonIcon type={lesson.type ?? 'standard'} size={28} />;
+      ? <CheckIcon />
+      : <LessonIcon type={lesson.type ?? 'standard'} />;
+
+  const clipId = `lc-${lesson.id}`;
 
   return (
     <div className="flex flex-col items-center" style={{ gap: 4 }}>
-      {/* Coin container */}
+      {/* Isometric tile container */}
       <div style={{
         position: 'relative',
         width: BTN_W,
-        height: BTN_H + DEPTH,
+        height: BTN_H + PRESS,
       }}>
-        {/* 3D rim — squashed ellipse for perspective depth */}
-        <div style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: BTN_W,
-          height: Math.round(BTN_H * 0.55),
-          borderRadius: '50%',
-          background: rim,
-          opacity: state === 'locked' ? 0.5 : 1,
-        }} />
+        {/* Shadow layer — static, offset down */}
+        <svg
+          width={BTN_W} height={BTN_H}
+          viewBox={`0 0 ${VW} ${VH}`}
+          fill="none"
+          style={{
+            position: 'absolute',
+            top: PRESS,
+            left: 0,
+            pointerEvents: 'none',
+            opacity: state === 'locked' ? 0.4 : 1,
+          }}
+        >
+          <IsoShape fill={rim} />
+        </svg>
 
-        {/* Button face — squashed oval */}
+        {/* Face layer — animated */}
         <motion.button
           className={state === 'current' ? 'lesson-btn-pulse' : ''}
           style={{
@@ -134,23 +186,19 @@ export const LessonNode = memo(function LessonNode({
             left: 0,
             width: BTN_W,
             height: BTN_H,
-            borderRadius: '50%',
-            background: bg,
+            background: 'none',
             border: 'none',
             padding: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
             cursor: state === 'locked' ? 'default' : 'pointer',
             opacity: state === 'locked' ? 0.5 : 1,
-            overflow: 'hidden',
             zIndex: 1,
+            overflow: 'visible',
             WebkitTapHighlightColor: 'transparent',
-            '--go-glow-color': `${theme.color}35`,
+            '--go-glow-color': `${theme.color}40`,
           } as React.CSSProperties}
           onClick={onClick}
-          whileHover={state !== 'locked' ? { scale: 1.08, y: -3 } : undefined}
-          whileTap={state !== 'locked' ? { scale: 1, y: DEPTH - 1 } : undefined}
+          whileHover={state !== 'locked' ? { scale: 1.08, y: -2 } : undefined}
+          whileTap={state !== 'locked' ? { scale: 1, y: PRESS - 1 } : undefined}
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: state === 'locked' ? 0.5 : 1, scale: 1 }}
           transition={{
@@ -170,17 +218,22 @@ export const LessonNode = memo(function LessonNode({
                 : `Locked: ${lesson.title}`
           }
         >
-          {/* Flat shine — subtle top highlight */}
+          <svg
+            width={BTN_W} height={BTN_H}
+            viewBox={`0 0 ${VW} ${VH}`}
+            fill="none"
+            style={{ display: 'block' }}
+          >
+            <IsoShape fill={bg} clipId={clipId} withShine />
+          </svg>
+
+          {/* Icon centered on diamond */}
           <div style={{
             position: 'absolute',
-            inset: 0,
-            borderRadius: '50%',
-            background: 'linear-gradient(to bottom, rgba(255,255,255,0.2) 25%, transparent 50%)',
-            pointerEvents: 'none',
-          }} />
-
-          {/* White icon */}
-          <div style={{ position: 'relative' }}>
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}>
             {icon}
           </div>
         </motion.button>
