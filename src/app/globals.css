@@ -348,14 +348,14 @@
   animation: goPulse 2.5s ease-in-out infinite;
 }
 
-/* Lesson icon pulse — filter-based glow for background-less icons */
-@keyframes iconPulse {
-  0%, 100% { filter: drop-shadow(0 4px 0 var(--icon-shadow)); }
-  50% { filter: drop-shadow(0 4px 0 var(--icon-shadow)) drop-shadow(0 0 10px var(--icon-glow)); }
+/* Lesson circle pulse — round Duolingo-style buttons */
+@keyframes lessonPulse {
+  0%, 100% { box-shadow: 0 7px 0 var(--go-shadow-color), 0 0 0 0 transparent; }
+  50% { box-shadow: 0 7px 0 var(--go-shadow-color), 0 0 0 10px var(--go-glow-color); }
 }
 
-.lesson-icon-pulse {
-  animation: iconPulse 2.5s ease-in-out infinite;
+.lesson-btn-pulse {
+  animation: lessonPulse 2.5s ease-in-out infinite;
 }
 
 /* Lesson overlay — full-screen view for active lessons */
