@@ -226,7 +226,11 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                                 : { opacity: 1, scale: 1, x: [0, -4, 4, -2, 2, 0] }
                               : { opacity: 1, scale: 1 }
                           }
-                          transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                          transition={
+                            isCorrect === false
+                              ? { duration: 0.35 }
+                              : { type: 'spring', stiffness: 400, damping: 25 }
+                          }
                           style={{
                             padding: '8px 10px', borderRadius: 10, textAlign: 'center',
                             fontSize: 13, fontWeight: 700,
