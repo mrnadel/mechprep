@@ -452,8 +452,8 @@ export function CourseMap() {
                   const state = getLessonState(unitIndex, lessonIndex);
                   const lessonProgress =
                     progress.completedLessons[lesson.id];
-                  // S-curve zigzag: sways left and right
-                  const offsetX = Math.sin(lessonIndex * (Math.PI / 2.5)) * 48;
+                  // Strict left-right alternating zigzag
+                  const offsetX = (lessonIndex % 2 === 0 ? -1 : 1) * 55;
 
                   return (
                     <div

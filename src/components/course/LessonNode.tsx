@@ -30,9 +30,9 @@ const VW = 247;
 const VH = 170;
 
 // Rendered sizes
-const BTN_W = 80;
-const BTN_H = Math.round(BTN_W * VH / VW); // ~55px
-const PRESS = 4;
+const BTN_W = 110;
+const BTN_H = Math.round(BTN_W * VH / VW); // ~76px
+const PRESS = 5;
 
 function LessonIcon({ type, size = 26 }: { type: LessonType; size?: number }) {
   switch (type) {
