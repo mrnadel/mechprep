@@ -255,8 +255,8 @@ export function CourseHeader() {
                 aria-label={`Switch course — ${profession.name}`}
                 aria-expanded={popover === 'course'}
               >
-                <CourseIcon professionId={profession.id} color={profession.color} size={40} />
-                <span style={{ fontSize: 20, fontWeight: 800, color: popover === 'course' ? profession.color : '#3C3C3C' }}>
+                <CourseIcon professionId={profession.id} color={profession.color} size={32} />
+                <span style={{ fontSize: 17, fontWeight: 800, color: popover === 'course' ? profession.color : '#3C3C3C' }}>
                   {profession.shortName}
                 </span>
                 <svg
@@ -277,7 +277,7 @@ export function CourseHeader() {
               style={{
                 gap: 4,
                 fontWeight: 800,
-                fontSize: 21,
+                fontSize: 17,
                 color: popover === 'streak'
                   ? '#D97706'
                   : streakStatus === 'at-risk'
@@ -298,7 +298,7 @@ export function CourseHeader() {
               aria-label={`${progress.currentStreak} day streak`}
               aria-expanded={popover === 'streak'}
             >
-              <span style={{ fontSize: 36 }} aria-hidden="true">⚡</span>
+              <span style={{ fontSize: 28 }} aria-hidden="true">⚡</span>
               <AnimatedCounter value={progress.currentStreak} showDelta deltaColor="#D97706" />
             </button>
 
@@ -308,7 +308,7 @@ export function CourseHeader() {
               style={{
                 gap: 4,
                 fontWeight: 800,
-                fontSize: 21,
+                fontSize: 17,
                 color: popover === 'xp' ? '#7B2FBE' : '#3C3C3C',
                 padding: '4px 8px',
                 borderRadius: 10,
@@ -321,7 +321,7 @@ export function CourseHeader() {
               aria-label={`${progress.totalXp.toLocaleString()} experience points`}
               aria-expanded={popover === 'xp'}
             >
-              <span style={{ fontSize: 36 }} aria-hidden="true">⭐</span>
+              <span style={{ fontSize: 28 }} aria-hidden="true">⭐</span>
               <AnimatedCounter value={progress.totalXp} showDelta deltaColor="#7B2FBE" />
             </button>
 
@@ -331,7 +331,7 @@ export function CourseHeader() {
               style={{
                 gap: 4,
                 fontWeight: 800,
-                fontSize: 21,
+                fontSize: 17,
                 color: popover === 'gems' ? '#7C3AED' : '#3C3C3C',
                 padding: '4px 8px',
                 borderRadius: 10,
@@ -344,7 +344,7 @@ export function CourseHeader() {
               aria-label={`${gems.balance} gems`}
               aria-expanded={popover === 'gems'}
             >
-              <span style={{ fontSize: 36 }} aria-hidden="true">💎</span>
+              <span style={{ fontSize: 28 }} aria-hidden="true">💎</span>
               <AnimatedCounter value={gems.balance} showDelta deltaColor="#7C3AED" />
             </button>
 
@@ -359,7 +359,7 @@ export function CourseHeader() {
                   borderRadius: 8,
                   background: '#FFF0DB',
                   color: '#B56E00',
-                  fontSize: 15,
+                  fontSize: 13,
                   fontWeight: 800,
                   textTransform: 'uppercase',
                   letterSpacing: 0.5,
@@ -368,7 +368,7 @@ export function CourseHeader() {
                   justifyContent: 'center',
                 }}
               >
-                <Sparkles style={{ width: 18, height: 18 }} />
+                <Sparkles style={{ width: 14, height: 14 }} />
                 <span>Pro</span>
               </Link>
             )}
