@@ -35,14 +35,51 @@ export function useDbSync() {
         if (progressRes.ok) {
           const data = await progressRes.json();
           if (data.progress) {
-            useStore.setState({ progress: data.progress });
+            // Merge DB progress with local state to avoid overwriting
+            // data changed while the fetch was in-flight
+            const local = useStore.getState().progress;
+            const db = data.progress;
+            useStore.setState({
+              progress: {
+                ...db,
+                totalXp: Math.max(db.totalXp ?? 0, local.totalXp ?? 0),
+                currentStreak: Math.max(db.currentStreak ?? 0, local.currentStreak ?? 0),
+                longestStreak: Math.max(db.longestStreak ?? 0, local.longestStreak ?? 0),
+                lastActiveDate: (db.lastActiveDate ?? '') > (local.lastActiveDate ?? '')
+                  ? db.lastActiveDate : local.lastActiveDate,
+                activeDays: local.activeDays, // client-only field
+              },
+            });
           }
         }
 
         if (courseRes.ok) {
           const data = await courseRes.json();
           if (data.progress) {
-            useCourseStore.setState({ progress: data.progress });
+            // Merge DB progress with local state instead of replacing,
+            // so we don't overwrite lessons completed while the fetch was in-flight
+            const local = useCourseStore.getState().progress;
+            const db = data.progress;
+            const mergedLessons = { ...db.completedLessons };
+            for (const [id, localLesson] of Object.entries(local.completedLessons)) {
+              const dbLesson = mergedLessons[id];
+              if (!dbLesson || localLesson.attempts > dbLesson.attempts ||
+                  localLesson.bestAccuracy > (dbLesson.bestAccuracy ?? 0)) {
+                mergedLessons[id] = localLesson;
+              }
+            }
+            useCourseStore.setState({
+              progress: {
+                ...db,
+                totalXp: Math.max(db.totalXp, local.totalXp),
+                currentStreak: Math.max(db.currentStreak, local.currentStreak),
+                longestStreak: Math.max(db.longestStreak, local.longestStreak),
+                lastActiveDate: db.lastActiveDate > local.lastActiveDate
+                  ? db.lastActiveDate : local.lastActiveDate,
+                activeDays: local.activeDays, // client-only field, never from DB
+                completedLessons: mergedLessons,
+              },
+            });
           }
         }
 
