@@ -132,7 +132,6 @@ function JumpHereButton({ theme, onClick }: { theme: UnitTheme; onClick: () => v
 
 /** Floating arrow button that scrolls to the current lesson when it's off-screen */
 function ScrollToCurrentButton({
-  scrollRef,
   targetRef,
 }: {
   scrollRef: React.RefObject<HTMLDivElement | null>;
@@ -141,30 +140,27 @@ function ScrollToCurrentButton({
   const [direction, setDirection] = useState<'up' | 'down' | null>(null);
 
   useEffect(() => {
-    const container = scrollRef.current;
     const target = targetRef.current;
-    if (!container || !target) return;
+    if (!target) return;
 
     function check() {
       const el = targetRef.current;
-      const ctr = scrollRef.current;
-      if (!el || !ctr) { setDirection(null); return; }
-      const cRect = ctr.getBoundingClientRect();
-      const tRect = el.getBoundingClientRect();
-      const center = tRect.top + tRect.height / 2;
-      if (center < cRect.top) setDirection('up');
-      else if (center > cRect.bottom) setDirection('down');
+      if (!el) { setDirection(null); return; }
+      const rect = el.getBoundingClientRect();
+      const center = rect.top + rect.height / 2;
+      if (center < 0) setDirection('up');
+      else if (center > window.innerHeight) setDirection('down');
       else setDirection(null);
     }
 
     check();
-    container.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('scroll', check, { passive: true, capture: true });
     window.addEventListener('resize', check);
     return () => {
-      container.removeEventListener('scroll', check);
+      window.removeEventListener('scroll', check, { capture: true });
       window.removeEventListener('resize', check);
     };
-  }, [scrollRef, targetRef]);
+  }, [targetRef]);
 
   if (!direction) return null;
 
