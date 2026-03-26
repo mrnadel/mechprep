@@ -164,10 +164,15 @@ export const LessonNode = memo(function LessonNode({
 
   const clipId = `lc-${lesson.id}`;
 
-  // Stack count: stars (1-3) + golden fills 4th
-  const stackCount = state === 'completed'
-    ? (golden ? 4 : Math.min(stars ?? 0, 4))
+  // Stack count driven by lesson.levels (default 1)
+  // levels = max stacks this lesson supports
+  // Completed stacks = min(attempts aka stars, levels)
+  // Golden counts as one extra level beyond stars
+  const maxLevels = lesson.levels ?? 1;
+  const completedLevels = state === 'completed'
+    ? Math.min((golden ? (stars ?? 0) + 1 : (stars ?? 0)), maxLevels)
     : 0;
+  const stackCount = completedLevels;
 
   const totalH = BTN_H + PRESS + stackCount * STACK_STEP;
 

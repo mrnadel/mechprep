@@ -119,6 +119,7 @@ export interface Lesson {
   icon: string;
   xpReward: number;
   type?: LessonType;
+  levels?: number;             // max mastery levels / stacks (default 1)
   questions: CourseQuestion[];
   // Conversation
   conversationNodes?: ConversationNode[];

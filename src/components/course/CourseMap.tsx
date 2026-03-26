@@ -331,10 +331,11 @@ export function CourseMap() {
             setJumpModal({ kind: 'placement-test', unitIndex });
           }
         }
-      } else if (state === 'completed' && lessonProgress && (lessonProgress.attempts ?? 0) < 3) {
-        startLesson(unitIndex, lessonIndex, false);
-      } else if (state === 'completed' && lessonProgress && (lessonProgress.attempts ?? 0) >= 3) {
-        startLesson(unitIndex, lessonIndex, true);
+      } else if (state === 'completed' && lessonProgress) {
+        const lesson = courseData[unitIndex].lessons[lessonIndex];
+        const maxLevels = lesson.levels ?? 1;
+        const isGoldenEligible = maxLevels > 1 && (lessonProgress.attempts ?? 0) >= maxLevels - 1;
+        startLesson(unitIndex, lessonIndex, isGoldenEligible);
       } else {
         startLesson(unitIndex, lessonIndex);
       }

@@ -306,9 +306,10 @@ export const useCourseStore = create<CourseState>()(
 
         const prevAttempts = existingProgress?.attempts ?? 0;
         const newAttempts = prevAttempts + 1;
+        const maxLevels = lesson.levels ?? 1;
         const stars = isGolden
-          ? 3 // Golden always shows 3 stars
-          : Math.min(newAttempts, 3);
+          ? Math.min(maxLevels, newAttempts) // Golden caps at lesson's max levels
+          : Math.min(newAttempts, maxLevels);
 
         // XP based on accuracy performance within this session
         const isFlawless = accuracy === 100 && totalQuestions >= 3;
