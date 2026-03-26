@@ -473,18 +473,6 @@ export function DebugTierToggle() {
             <QuestionSearch />
           </div>
 
-          {/* Scroll to Current Lesson */}
-          <div className="border-t border-gray-200 mt-3 pt-3">
-            <button
-              onClick={() => {
-                const el = document.querySelector('[data-current-lesson]');
-                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }}
-              className="w-full px-3 py-1.5 rounded-lg text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 transition-colors"
-            >
-              📍 Scroll to Current Lesson
-            </button>
-          </div>
         </div>
       )}
       <button

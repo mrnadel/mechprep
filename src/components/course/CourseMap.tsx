@@ -175,16 +175,16 @@ function ScrollToCurrentButton({
       exit={{ opacity: 0, scale: 0.8 }}
       transition={{ duration: 0.2 }}
       style={{
-        width: 44,
-        height: 44,
+        width: 48,
+        height: 48,
         borderRadius: 14,
-        border: '2px solid #E0E0E0',
+        border: '2px solid #E8E8E8',
         cursor: 'pointer',
         background: '#FFFFFF',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.08)',
         WebkitTapHighlightColor: 'transparent',
       }}
       aria-label={`Scroll ${direction} to current lesson`}
@@ -192,10 +192,25 @@ function ScrollToCurrentButton({
         targetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }}
     >
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <svg
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        fill="none"
+        style={{ transform: direction === 'down' ? 'rotate(180deg)' : undefined }}
+      >
         <path
-          d={direction === 'up' ? 'M12 5l-7 9h14l-7-9z' : 'M12 19l-7-9h14l-7 9z'}
-          fill="#FFB800"
+          d="M12 4L12 20"
+          stroke="#58A6FF"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M5 11L12 4L19 11"
+          stroke="#58A6FF"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </motion.button>
