@@ -4,9 +4,10 @@ import { useState, useRef, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useCourseStore } from '@/store/useCourseStore';
 import { Sparkles } from 'lucide-react';
-import { getProfession } from '@/data/professions';
+import { getProfession, PROFESSIONS } from '@/data/professions';
 import { useSubscription } from '@/hooks/useSubscription';
 import { useGems, useEngagementStore, useDoubleXpActive } from '@/store/useEngagementStore';
 import { useStore } from '@/store/useStore';
@@ -18,7 +19,7 @@ import { LevelBadge } from '@/components/engagement/LevelBadge';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { CourseIcon } from '@/components/course/CourseIcon';
 
-type PopoverType = 'streak' | 'xp' | 'gems' | null;
+type PopoverType = 'course' | 'streak' | 'xp' | 'gems' | null;
 
 function getGreeting(): string {
   const hour = new Date().getHours();
@@ -157,9 +158,12 @@ export function CourseHeader() {
   const { tier, hasFetched } = useSubscription();
   const gems = useGems();
   const activeProfession = useCourseStore((s) => s.activeProfession);
+  const setActiveProfession = useCourseStore((s) => s.setActiveProfession);
   const profession = getProfession(activeProfession);
+  const router = useRouter();
 
   const headerRef = useRef<HTMLElement>(null);
+  const courseBtnRef = useRef<HTMLButtonElement>(null);
   const streakBtnRef = useRef<HTMLButtonElement>(null);
   const xpBtnRef = useRef<HTMLButtonElement>(null);
   const gemsBtnRef = useRef<HTMLButtonElement>(null);
@@ -174,7 +178,7 @@ export function CourseHeader() {
       setPopoverPos(null);
       return;
     }
-    const ref = type === 'streak' ? streakBtnRef : type === 'xp' ? xpBtnRef : gemsBtnRef;
+    const ref = type === 'course' ? courseBtnRef : type === 'streak' ? streakBtnRef : type === 'xp' ? xpBtnRef : gemsBtnRef;
     const headerEl = headerRef.current;
     if (!headerEl || !ref?.current) return;
 
@@ -182,7 +186,8 @@ export function CourseHeader() {
     const btnRect = ref.current.getBoundingClientRect();
     const vw = window.innerWidth;
     const btnCenterX = btnRect.left + btnRect.width / 2;
-    const popoverWidth = vw >= 640 ? Math.min(340, vw - 32) : Math.min(300, vw - 32);
+    const maxW = type === 'course' ? 360 : 340;
+    const popoverWidth = vw >= 640 ? Math.min(maxW, vw - 32) : Math.min(300, vw - 32);
 
     // Center popover under the clicked button, clamped to viewport edges
     let left = btnCenterX - popoverWidth / 2;
@@ -212,6 +217,7 @@ export function CourseHeader() {
       const target = e.target as Node;
       if (
         popoverPanelRef.current?.contains(target) ||
+        courseBtnRef.current?.contains(target) ||
         streakBtnRef.current?.contains(target) ||
         xpBtnRef.current?.contains(target) ||
         gemsBtnRef.current?.contains(target)
@@ -235,13 +241,35 @@ export function CourseHeader() {
       >
         <div className="flex items-center gap-1 sm:gap-2">
             {profession && (
-              <Link
-                href="/switch-course"
-                className="flex items-center justify-center w-10 h-10 rounded-xl hover:bg-surface-100 transition-colors active:scale-95 mr-auto"
+              <button
+                ref={courseBtnRef}
+                className="flex items-center gap-1.5 rounded-xl transition-all active:scale-95 mr-auto"
+                style={{
+                  padding: '4px 10px 4px 6px',
+                  minWidth: 44,
+                  minHeight: 44,
+                  background: popover === 'course' ? `${profession.color}12` : 'transparent',
+                  borderRadius: 12,
+                }}
+                onClick={() => togglePopover('course')}
                 aria-label={`Switch course — ${profession.name}`}
+                aria-expanded={popover === 'course'}
               >
                 <CourseIcon professionId={profession.id} color={profession.color} size={26} />
-              </Link>
+                <span style={{ fontSize: 13, fontWeight: 800, color: popover === 'course' ? profession.color : '#3C3C3C' }}>
+                  {profession.shortName}
+                </span>
+                <svg
+                  width="10" height="6" viewBox="0 0 10 6" fill="none"
+                  style={{
+                    marginLeft: 1,
+                    transition: 'transform 0.2s',
+                    transform: popover === 'course' ? 'rotate(180deg)' : 'rotate(0deg)',
+                  }}
+                >
+                  <path d="M1 1L5 5L9 1" stroke={popover === 'course' ? profession.color : '#AFAFAF'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
             )}
             <button
               ref={streakBtnRef}
@@ -379,7 +407,7 @@ export function CourseHeader() {
               top: popoverPos.top,
               left: popoverPos.left,
               width: popoverPos.width,
-              maxWidth: 340,
+              maxWidth: popover === 'course' ? 360 : 340,
               borderRadius: 16,
               background: 'white',
               border: '2px solid #E5E5E5',
@@ -408,8 +436,17 @@ export function CourseHeader() {
             />
 
             {/* Content */}
-            <div style={{ padding: 20, position: 'relative' }}>
-                {popover === 'streak' ? (
+            <div style={{ padding: popover === 'course' ? 0 : 20, position: 'relative' }}>
+                {popover === 'course' ? (
+                  <CoursePopoverContent
+                    activeProfession={activeProfession}
+                    onSelect={(id) => {
+                      setActiveProfession(id);
+                      closePopover();
+                      if (id !== activeProfession) router.push('/');
+                    }}
+                  />
+                ) : popover === 'streak' ? (
                   <div>
                     {/* Header */}
                     <div className="flex items-center" style={{ gap: 10, marginBottom: 16 }}>
@@ -559,6 +596,122 @@ export function CourseHeader() {
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+// ─── Course popover ───
+function CoursePopoverContent({ activeProfession, onSelect }: { activeProfession: string; onSelect: (id: string) => void }) {
+  return (
+    <div>
+      {/* Header */}
+      <div style={{ padding: '16px 20px 12px' }}>
+        <h3 style={{ fontSize: 15, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2 }}>
+          My Courses
+        </h3>
+        <p style={{ fontSize: 12, fontWeight: 600, color: '#AFAFAF', marginTop: 2 }}>
+          Choose what to practice
+        </p>
+      </div>
+
+      {/* Course list */}
+      <div style={{ padding: '0 10px 10px' }}>
+        {PROFESSIONS.map((p, i) => {
+          const isActive = activeProfession === p.id;
+          const isDisabled = p.isComingSoon === true;
+
+          return (
+            <motion.button
+              key={p.id}
+              onClick={() => !isDisabled && onSelect(p.id)}
+              disabled={isDisabled}
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.04, duration: 0.2 }}
+              className="w-full text-left transition-all"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 12,
+                padding: '10px 12px',
+                borderRadius: 12,
+                background: isActive ? `${p.color}10` : 'transparent',
+                border: isActive ? `1.5px solid ${p.color}30` : '1.5px solid transparent',
+                cursor: isDisabled ? 'not-allowed' : 'pointer',
+                opacity: isDisabled ? 0.45 : 1,
+                marginBottom: i < PROFESSIONS.length - 1 ? 4 : 0,
+              }}
+              whileHover={isDisabled ? undefined : { backgroundColor: isActive ? undefined : '#F7F7F7' }}
+              whileTap={isDisabled ? undefined : { scale: 0.98 }}
+            >
+              {/* Icon */}
+              <span
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 10,
+                  backgroundColor: `${p.color}15`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <CourseIcon professionId={p.id} color={p.color} size={22} />
+              </span>
+
+              {/* Text */}
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 14, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2 }}>
+                  {p.name}
+                </div>
+                <div style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', marginTop: 2, display: 'flex', gap: 6, alignItems: 'center' }}>
+                  <span style={{ color: p.color }}>{p.unitCount} units</span>
+                  <span style={{ color: '#DDD' }}>·</span>
+                  <span>{p.questionCount.toLocaleString()} questions</span>
+                </div>
+              </div>
+
+              {/* Active indicator / Coming Soon */}
+              {isDisabled ? (
+                <span style={{
+                  fontSize: 9,
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: 0.5,
+                  color: '#AFAFAF',
+                  background: '#F0F0F0',
+                  padding: '3px 7px',
+                  borderRadius: 6,
+                  whiteSpace: 'nowrap',
+                }}>
+                  Soon
+                </span>
+              ) : isActive ? (
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+                  style={{
+                    width: 22,
+                    height: 22,
+                    borderRadius: '50%',
+                    backgroundColor: p.color,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </motion.div>
+              ) : null}
+            </motion.button>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
