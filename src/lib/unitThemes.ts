@@ -6,16 +6,16 @@ export interface UnitTheme {
 }
 
 export const UNIT_THEMES: UnitTheme[] = [
-  { bg: '#FFF8E1', color: '#D49B00', dark: '#A07600', mid: '#B88A00' },
-  { bg: '#F3E6FF', color: '#A855F7', dark: '#7E22CE', mid: '#8B3DC8' },
-  { bg: '#FFF0DB', color: '#E07800', dark: '#A35800', mid: '#B86800' },
-  { bg: '#DDF4FF', color: '#1295D0', dark: '#0B6F9E', mid: '#1085B8' },
-  { bg: '#FFE5E5', color: '#E03E3E', dark: '#B52D2D', mid: '#C43535' },
-  { bg: '#E0F8F3', color: '#1A9A8E', dark: '#127068', mid: '#17867C' },
-  { bg: '#FFE8F5', color: '#D455A8', dark: '#A83E85', mid: '#BC4A98' },
-  { bg: '#FFF5D4', color: '#D4A200', dark: '#A07D00', mid: '#B89000' },
-  { bg: '#EDEAFF', color: '#6354CC', dark: '#4A3CA6', mid: '#5648B8' },
-  { bg: '#D8F5EC', color: '#00A87E', dark: '#007D5E', mid: '#009470' },
+  { bg: '#EBF3FF', color: '#3B82F6', dark: '#1E5BB8', mid: '#2D6FD7' }, // Sapphire
+  { bg: '#FBE8FF', color: '#D946EF', dark: '#A321B8', mid: '#BE34D4' }, // Fuchsia
+  { bg: '#E6FAF2', color: '#10B981', dark: '#0B8660', mid: '#0DA071' }, // Emerald
+  { bg: '#FFF8E6', color: '#F59E0B', dark: '#B37408', mid: '#D4890A' }, // Amber
+  { bg: '#F0EAFF', color: '#8B5CF6', dark: '#6737D4', mid: '#794AE5' }, // Violet
+  { bg: '#FFE8EC', color: '#F43F5E', dark: '#BE2D45', mid: '#D93652' }, // Rose
+  { bg: '#E4FAF8', color: '#14B8A6', dark: '#0D897C', mid: '#11A191' }, // Teal
+  { bg: '#FFF1E6', color: '#F97316', dark: '#BA5610', mid: '#D96513' }, // Orange
+  { bg: '#F0FAE6', color: '#65A30D', dark: '#4D7B0A', mid: '#598E0C' }, // Lime
+  { bg: '#EDEAFF', color: '#6366F1', dark: '#494BB8', mid: '#5659D5' }, // Indigo
 ];
 
 export function getUnitTheme(unitIndex: number): UnitTheme {
