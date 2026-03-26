@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
+import { ChevronUp, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -127,6 +128,76 @@ function JumpHereButton({ theme, onClick }: { theme: UnitTheme; onClick: () => v
           </motion.div>
         </motion.button>
     </motion.div>
+  );
+}
+
+/** Floating arrow button that scrolls to the current lesson when it's off-screen */
+function ScrollToCurrentButton({
+  scrollRef,
+  targetRef,
+}: {
+  scrollRef: React.RefObject<HTMLDivElement | null>;
+  targetRef: React.RefObject<HTMLDivElement | null>;
+}) {
+  const [direction, setDirection] = useState<'up' | 'down' | null>(null);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    const target = targetRef.current;
+    if (!container || !target) return;
+
+    function check() {
+      const el = targetRef.current;
+      const ctr = scrollRef.current;
+      if (!el || !ctr) { setDirection(null); return; }
+      const cRect = ctr.getBoundingClientRect();
+      const tRect = el.getBoundingClientRect();
+      const center = tRect.top + tRect.height / 2;
+      if (center < cRect.top) setDirection('up');
+      else if (center > cRect.bottom) setDirection('down');
+      else setDirection(null);
+    }
+
+    check();
+    container.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+    return () => {
+      container.removeEventListener('scroll', check);
+      window.removeEventListener('resize', check);
+    };
+  }, [scrollRef, targetRef]);
+
+  if (!direction) return null;
+
+  const Icon = direction === 'up' ? ChevronUp : ChevronDown;
+
+  return (
+    <motion.button
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8 }}
+      transition={{ duration: 0.2 }}
+      style={{
+        width: 48,
+        height: 48,
+        borderRadius: '50%',
+        border: 'none',
+        cursor: 'pointer',
+        background: '#3C3C3C',
+        color: '#FFFFFF',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
+        WebkitTapHighlightColor: 'transparent',
+      }}
+      aria-label={`Scroll ${direction} to current lesson`}
+      onClick={() => {
+        targetRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }}
+    >
+      <Icon style={{ width: 28, height: 28 }} />
+    </motion.button>
   );
 }
 
@@ -348,6 +419,7 @@ export function CourseMap() {
                     <div
                       key={lesson.id}
                       ref={lesson.id === currentLessonId ? currentLessonRef : undefined}
+                      {...(lesson.id === currentLessonId ? { 'data-current-lesson': '' } : {})}
                     >
                       <LessonNode
                         lesson={lesson}
@@ -685,6 +757,26 @@ export function CourseMap() {
         onClose={() => setShowUpgradeModal(false)}
         reason="Unlock all 10 course units"
       />
+
+      {/* Sticky anchor for the scroll-to-current button */}
+      <div style={{
+        position: 'sticky',
+        bottom: 24,
+        height: 0,
+        pointerEvents: 'none',
+        zIndex: 40,
+        display: 'flex',
+        justifyContent: 'flex-end',
+        paddingRight: 16,
+      }}>
+        <div style={{ pointerEvents: 'auto', marginTop: -48 }}>
+          <AnimatePresence>
+            {currentLessonId && (
+              <ScrollToCurrentButton scrollRef={scrollRef} targetRef={currentLessonRef} />
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
     </div>
   );
 }
