@@ -774,25 +774,12 @@ export function CourseMap() {
         reason="Unlock all 10 course units"
       />
 
-      {/* Sticky anchor for the scroll-to-current button */}
-      <div style={{
-        position: 'sticky',
-        bottom: 24,
-        height: 0,
-        pointerEvents: 'none',
-        zIndex: 40,
-        display: 'flex',
-        justifyContent: 'flex-end',
-        paddingRight: 16,
-      }}>
-        <div style={{ pointerEvents: 'auto', marginTop: -48 }}>
-          <AnimatePresence>
-            {currentLessonId && (
-              <ScrollToCurrentButton scrollRef={scrollRef} targetRef={currentLessonRef} />
-            )}
-          </AnimatePresence>
-        </div>
-      </div>
+      {/* Fixed scroll-to-current button — bottom-right, above mobile nav */}
+      <AnimatePresence>
+        {currentLessonId && (
+          <ScrollToCurrentButton scrollRef={scrollRef} targetRef={currentLessonRef} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
