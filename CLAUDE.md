@@ -13,6 +13,10 @@ Before making changes, read `docs/project-overview.md` for full project context 
 - **Course content** is static TypeScript files in `src/data/course/units/`, NOT from DB
 - **Vitest** for testing. Run `npm test` before committing
 
+## Content Writing
+- **Read `docs/content-writing-guide.md` before writing or editing any course content.** It defines tone, structure, question formatting, and banned patterns.
+- After changing content, always re-run the seed: `npx tsx scripts/seed-content.ts`
+
 ## Common Gotchas
 - Dual progress stores: `useStore` (practice) and `useCourseStore` (course) — update both when needed
 - Friendships table has CHECK constraint: `user_id < friend_id` — always use `sortFriendPair()`
