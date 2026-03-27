@@ -64,8 +64,10 @@ export async function POST(request: NextRequest) {
   }
   const parsed = courseProgressSyncSchema.safeParse(body);
   if (!parsed.success) {
+    const issue = parsed.error.issues[0];
+    console.error('course-progress validation failed:', JSON.stringify({ path: issue?.path, message: issue?.message, code: issue?.code }));
     return NextResponse.json(
-      { error: 'Invalid input', details: parsed.error.issues[0]?.message },
+      { error: 'Invalid input', details: issue?.message, path: issue?.path },
       { status: 400 }
     );
   }

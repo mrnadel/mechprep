@@ -7,6 +7,7 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { useFeedbackStore } from '@/store/useFeedbackStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
 import { streakMilestones } from '@/data/streak-milestones';
+import { shallow } from 'zustand/shallow';
 
 export function useDbSync() {
   const { status } = useSession();
@@ -196,15 +197,24 @@ export function useDbSync() {
       (state) => ({ progress: state.progress, activeProfession: state.activeProfession }),
       () => {
         clearTimeout(courseTimer);
-        courseTimer = setTimeout(() => {
+        courseTimer = setTimeout(async () => {
           const { progress, activeProfession } = useCourseStore.getState();
-          fetch('/api/course-progress', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ progress, activeProfession }),
-          }).catch(console.error);
+          try {
+            const res = await fetch('/api/course-progress', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ progress, activeProfession }),
+            });
+            if (!res.ok) {
+              const data = await res.json().catch(() => ({}));
+              console.error('course-progress sync failed:', res.status, data);
+            }
+          } catch (err) {
+            console.error('course-progress sync error:', err);
+          }
         }, 800);
-      }
+      },
+      { equalityFn: shallow },
     );
 
     return () => {
