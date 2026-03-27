@@ -77,13 +77,13 @@ export function LeaguePromotion() {
           {/* Panel */}
           <motion.div
             key="league-promo-panel"
-            className="fixed inset-0 z-50 flex items-center justify-center p-6"
+            className="fixed inset-0 z-50 flex items-center justify-center sm:p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="max-w-sm w-full rounded-3xl shadow-2xl overflow-hidden"
+              className="w-full h-full sm:h-auto sm:max-w-sm sm:rounded-3xl sm:shadow-2xl overflow-y-auto flex flex-col justify-center"
               style={{ background: content.bg }}
               initial={{ scale: 0.75, y: 50 }}
               animate={{ scale: 1, y: 0 }}

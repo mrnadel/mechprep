@@ -29,7 +29,7 @@ export function LevelUpCelebration({ reward, onClose }: Props) {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 z-50 flex items-center justify-center sm:p-4"
         style={{ background: 'rgba(0,0,0,0.7)' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -65,7 +65,7 @@ export function LevelUpCelebration({ reward, onClose }: Props) {
 
         {/* Card */}
         <motion.div
-          className="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl"
+          className="relative w-full h-full sm:h-auto sm:max-w-sm sm:rounded-3xl overflow-y-auto sm:shadow-2xl"
           role="dialog"
           aria-modal="true"
           aria-labelledby="level-up-title"
@@ -91,7 +91,7 @@ export function LevelUpCelebration({ reward, onClose }: Props) {
             />
           )}
 
-          <div className="relative flex flex-col items-center px-8 pt-10 pb-8">
+          <div className="relative flex flex-col items-center justify-center min-h-full sm:min-h-0 px-8 pt-10 pb-8">
             {/* Level badge */}
             <motion.div
               className="flex items-center justify-center rounded-full mb-2"

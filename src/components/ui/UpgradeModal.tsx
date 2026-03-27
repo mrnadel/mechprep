@@ -67,7 +67,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center"
+          className="fixed inset-0 z-50 flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -84,7 +84,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
 
           {/* Modal */}
           <motion.div
-            className="relative bg-white rounded-t-2xl sm:rounded-2xl w-full max-w-md mx-4 mb-0 sm:mb-0 overflow-hidden shadow-2xl"
+            className="relative bg-white w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col justify-center"
             role="dialog"
             aria-modal="true"
             aria-labelledby="upgrade-modal-title"

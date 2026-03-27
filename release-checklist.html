@@ -366,6 +366,10 @@
       <div class="done-item">hearts_depleted Mixpanel event</div>
       <div class="done-item">Sentry error tracking (code ready)</div>
       <div class="done-item">Production build passes</div>
+      <div class="done-item">Paddle production mode (live)</div>
+      <div class="done-item">Google OAuth production URI (live)</div>
+      <div class="done-item">All env vars verified (production)</div>
+      <div class="done-item">Production DB seeded (8.8MB course data)</div>
       <div class="done-item">Domain + SSL (mechready.com verified)</div>
       <div class="done-item">JSON-LD pricing updated</div>
     </div>
@@ -762,6 +766,10 @@
     'onboard-3': true, // PushPrompt already delays until MIN_LESSONS_BEFORE_PROMPT
     'monitor-1': true, // Sentry installed + configured (needs DSN env var)
     'monitor-2': true, // hearts_depleted + upgrade CTA tracking in OutOfHeartsModal
+    'deploy-1': true,  // Paddle already in production mode (auto-detected from key prefix)
+    'deploy-2': true,  // Google OAuth production redirect URI already configured
+    'deploy-3': true,  // Env vars verified — auth, paddle, course API all responding on production
+    'deploy-4': true,  // Production DB seeded — /api/content/course returns 8.8MB
     'deploy-5': true,  // Production build passes
     'deploy-6': true,  // Domain + SSL verified via Vercel MCP (mechready.com + www)
     'test-1': true,    // Tests pass (fixed useStore + middleware tests)

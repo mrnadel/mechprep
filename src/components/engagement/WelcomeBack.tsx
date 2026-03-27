@@ -24,14 +24,14 @@ export function WelcomeBack() {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 z-50 flex items-center justify-center sm:p-4"
         style={{ background: 'rgba(0,0,0,0.55)' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
         <motion.div
-          className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-sm"
+          className="bg-white w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-2xl overflow-y-auto flex flex-col justify-center"
           role="dialog"
           aria-modal="true"
           aria-labelledby="welcome-back-title"
@@ -40,6 +40,7 @@ export function WelcomeBack() {
           exit={{ scale: 0.9, opacity: 0, y: 24 }}
           transition={{ type: 'spring', stiffness: 280, damping: 22 }}
         >
+          <div className="p-6">
           {/* Header */}
           <div className="text-center mb-5">
             <div className="text-5xl mb-3" aria-hidden="true">👋</div>
@@ -119,6 +120,7 @@ export function WelcomeBack() {
           >
             Let&apos;s Go! 🚀
           </button>
+          </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>

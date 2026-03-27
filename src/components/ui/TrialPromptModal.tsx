@@ -39,7 +39,7 @@ export function TrialPromptModal() {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-[80] flex items-end sm:items-center justify-center"
+          className="fixed inset-0 z-[80] flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -56,7 +56,7 @@ export function TrialPromptModal() {
 
           {/* Modal */}
           <motion.div
-            className="relative bg-white rounded-t-2xl sm:rounded-2xl w-full max-w-md mx-4 mb-0 sm:mb-0 overflow-hidden shadow-2xl"
+            className="relative bg-white w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col justify-center"
             role="dialog"
             aria-modal="true"
             aria-labelledby="trial-prompt-title"
@@ -69,10 +69,10 @@ export function TrialPromptModal() {
             {/* Close */}
             <button
               onClick={handleClose}
-              className="absolute top-2 right-2 p-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="absolute top-3 right-3 p-2.5 rounded-full bg-gray-100 sm:bg-white/20 hover:bg-gray-200 sm:hover:bg-white/30 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Close"
             >
-              <X className="w-4 h-4 text-white" />
+              <X className="w-4 h-4 text-gray-500 sm:text-white" />
             </button>
 
             {/* Header */}

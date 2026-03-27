@@ -29,7 +29,7 @@ export function StreakMilestone({ milestone, onClose }: Props) {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 z-50 flex items-center justify-center sm:p-4"
         style={{ background: 'rgba(0,0,0,0.6)' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -59,7 +59,7 @@ export function StreakMilestone({ milestone, onClose }: Props) {
 
         {/* Main card */}
         <motion.div
-          className="relative bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm text-center"
+          className="relative bg-white w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-2xl overflow-y-auto flex flex-col justify-center"
           role="dialog"
           aria-modal="true"
           aria-labelledby="streak-milestone-title"
@@ -68,6 +68,7 @@ export function StreakMilestone({ milestone, onClose }: Props) {
           exit={{ scale: 0.85, opacity: 0, y: 20 }}
           transition={{ type: 'spring', stiffness: 280, damping: 22 }}
         >
+          <div className="p-8 text-center">
           {/* Badge icon */}
           <motion.div
             className="inline-flex items-center justify-center w-24 h-24 rounded-full mb-4 text-5xl"
@@ -139,6 +140,7 @@ export function StreakMilestone({ milestone, onClose }: Props) {
           >
             Continue
           </button>
+          </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>

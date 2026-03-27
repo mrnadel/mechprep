@@ -69,19 +69,20 @@ export function StreakFreeze() {
     return (
       <AnimatePresence>
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center sm:p-4"
           style={{ background: 'rgba(0,0,0,0.5)' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-sm"
+            className="bg-white w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-xl overflow-y-auto flex flex-col justify-center"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 24 }}
           >
+            <div className="p-6">
             {/* Streak break icon */}
             <div className="flex justify-center mb-4">
               <div
@@ -137,6 +138,7 @@ export function StreakFreeze() {
             >
               Skip
             </button>
+            </div>
           </motion.div>
         </motion.div>
       </AnimatePresence>
