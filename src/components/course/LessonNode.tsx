@@ -1,8 +1,8 @@
 'use client';
 
-import { memo, useRef, useEffect, useState } from 'react';
+import { memo } from 'react';
 import { motion } from 'framer-motion';
-import type { Lesson, LessonType } from '@/data/course/types';
+import type { Lesson } from '@/data/course/types';
 import type { UnitTheme } from '@/lib/unitThemes';
 
 interface LessonRowProps {
@@ -17,113 +17,42 @@ interface LessonRowProps {
 }
 
 const GOLD = '#FFB800';
-const GOLD_DARK = '#B38600';
+const GOLD_DARK = '#C8960B';
 
-const ICON_SIZE = 28;
-const DEPTH = 7; // 3D bottom layer offset
+function CompletionBadge({ stars, color, darkColor, isGolden }: { stars: number; color: string; darkColor: string; isGolden?: boolean }) {
+  const starColor = isGolden ? '#FFFFFF' : color;
+  const starEmptyColor = isGolden ? 'rgba(255,255,255,0.35)' : '#E0E0E0';
+  const bgColor = isGolden ? '#CC9400' : `${color}18`;
+  const borderColor = isGolden ? 'transparent' : `${color}25`;
 
-function LessonIcon({ type, size = ICON_SIZE }: { type: LessonType; size?: number }) {
-  switch (type) {
-    case 'conversation':
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <rect x="3" y="3" width="18" height="13" rx="4" fill="#FFF" />
-          <path d="M8 16v4.5l5-4.5H8Z" fill="#FFF" />
-        </svg>
-      );
-    case 'speed-round':
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <path d="M14.5 2L7 13h5.5L11 22L19 10h-5.5L14.5 2Z" fill="#FFF" />
-        </svg>
-      );
-    case 'timeline':
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <rect x="5" y="4.5" width="14" height="3.5" rx="1.75" fill="#FFF" />
-          <rect x="5" y="10.25" width="14" height="3.5" rx="1.75" fill="#FFF" />
-          <rect x="5" y="16" width="14" height="3.5" rx="1.75" fill="#FFF" />
-        </svg>
-      );
-    case 'case-study':
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <circle cx="10.5" cy="10.5" r="7" stroke="#FFF" strokeWidth="3.2" />
-          <path d="M16 16L21 21" stroke="#FFF" strokeWidth="3.2" strokeLinecap="round" />
-        </svg>
-      );
-    case 'standard':
-    default:
-      return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-          <rect x="3" y="5" width="7.8" height="14" rx="2" fill="#FFF" />
-          <rect x="13.2" y="5" width="7.8" height="14" rx="2" fill="#FFF" />
-        </svg>
-      );
-  }
-}
-
-function CheckIcon({ size = ICON_SIZE }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-      <path d="M5.5 12.5L10 17L18.5 7" stroke="#FFF" strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function CrownIcon({ size = ICON_SIZE }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-      <path d="M4 16.5h16L18 7.5l-3.5 4.5L12 5l-2.5 7L6 7.5 4 16.5Z" fill="#FFF" />
-      <rect x="4" y="16.5" width="16" height="3" rx="1" fill="#FFF" />
-    </svg>
-  );
-}
-
-/** Star dots for completed lessons */
-function StarDots({ count, max }: { count: number; max: number }) {
-  if (max <= 1) return null;
-  return (
-    <div style={{ display: 'flex', gap: 4, marginTop: 2 }}>
-      {Array.from({ length: max }).map((_, i) => (
-        <div
-          key={i}
-          style={{
-            width: 8,
-            height: 8,
-            borderRadius: '50%',
-            background: i < count ? '#FFFFFF' : 'rgba(255,255,255,0.35)',
-          }}
-        />
+    <div
+      className="flex items-center"
+      style={{
+        gap: 3,
+        background: bgColor,
+        border: `1.5px solid ${borderColor}`,
+        borderRadius: 10,
+        padding: '5px 10px',
+      }}
+    >
+      {[1, 2, 3].map((i) => (
+        <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"
+            fill={i <= stars ? starColor : starEmptyColor}
+            strokeLinejoin="round"
+          />
+        </svg>
       ))}
+      {isGolden && (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ marginLeft: 1 }}>
+          <path d="M5 16h14l-2-8-3.5 4L12 6l-1.5 6L7 8l-2 8z" fill="#FFE082" />
+          <path d="M5 16h14v2a1 1 0 01-1 1H6a1 1 0 01-1-1v-2z" fill="#FFE082" />
+        </svg>
+      )}
     </div>
   );
-}
-
-/** Hook: detects when element enters viewport */
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(el);
-        }
-      },
-      { threshold },
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return { ref, isVisible };
 }
 
 export const LessonNode = memo(function LessonNode({
@@ -135,194 +64,153 @@ export const LessonNode = memo(function LessonNode({
   onClick,
   theme,
 }: LessonRowProps) {
-  const isGold = state === 'completed' && golden;
-  const { ref, isVisible } = useInView(0.1);
-
-  const bg = state === 'locked'
-    ? '#D8D8D8'
-    : isGold ? GOLD : theme.color;
-  const rim = state === 'locked'
-    ? '#ABABAB'
-    : isGold ? GOLD_DARK : theme.dark;
-
-  const icon = isGold
-    ? <CrownIcon />
-    : state === 'completed'
-      ? <CheckIcon />
-      : <LessonIcon type={lesson.type ?? 'standard'} />;
-
-  const maxLevels = lesson.levels ?? 1;
-  const completedLevels = state === 'completed'
-    ? Math.min((golden ? (stars ?? 0) + 1 : (stars ?? 0)), maxLevels)
-    : 0;
-
-  const filterId = `wb-${lesson.id}`;
-
   return (
-    <div ref={ref} style={{ width: '100%' }}>
-      <motion.div
-        initial={{ opacity: 0, y: 30, scale: 0.92 }}
-        animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.92 }}
-        transition={{
-          delay: index * 0.04,
-          duration: 0.45,
-          type: 'spring',
-          stiffness: 300,
-          damping: 24,
+    <motion.button
+      className={`w-full flex items-center text-left ${state === 'completed' && golden ? 'golden-node' : ''}`}
+      style={{
+        padding: '12px 14px',
+        background:
+          state === 'locked' ? 'transparent'
+          : (state === 'completed' && golden) ? undefined  /* handled by .golden-node */
+          : 'rgba(255,255,255,0.85)',
+        borderRadius: 16,
+        gap: 12,
+        opacity: state === 'locked' ? 0.7 : 1,
+        cursor: state === 'locked' ? 'default' : 'pointer',
+        boxShadow:
+          state === 'locked'
+            ? 'none'
+            : (state === 'completed' && golden) ? undefined /* handled by .golden-node */
+            : `0 3px 0 ${theme.dark}22, 0 1px 3px rgba(0,0,0,0.06)`,
+        border:
+          state === 'locked'
+            ? 'none'
+            : (state === 'completed' && golden) ? undefined /* handled by .golden-node */
+            : '1.5px solid rgba(255,255,255,0.9)',
+        position: 'relative',
+        WebkitTapHighlightColor: 'transparent',
+      }}
+      onClick={onClick}
+      whileHover={state !== 'locked' ? { scale: 1.015, ...((state === 'completed' && golden) ? {} : { backgroundColor: 'rgba(255,255,255,0.95)' }) } : undefined}
+      whileTap={state !== 'locked' ? { scale: 0.97, y: 2, boxShadow: (state === 'completed' && golden) ? '0 1px 0 #996E00' : `0 1px 0 ${theme.dark}22, 0 0px 2px rgba(0,0,0,0.04)` } : undefined}
+      initial={{ opacity: 0, x: -8 }}
+      animate={{ opacity: state === 'locked' ? 0.7 : 1, x: 0 }}
+      transition={{ delay: index * 0.05, duration: 0.25, scale: { duration: 0.1 }, y: { duration: 0.1 }, boxShadow: { duration: 0.1 } }}
+      aria-label={
+        state === 'completed'
+          ? `Replay: ${lesson.title}`
+          : state === 'current'
+            ? `Start: ${lesson.title}`
+            : `Locked: ${lesson.title}`
+      }
+    >
+      {/* Icon */}
+      <div
+        className={`flex items-center justify-center flex-shrink-0 ${state === 'completed' && golden ? 'golden-icon-box' : ''}`}
+        style={{
+          width: 38,
+          height: 38,
+          borderRadius: 12,
+          background:
+            state === 'locked' ? '#F0F0F0'
+            : (state === 'completed' && golden) ? undefined /* handled by .golden-icon-box */
+            : `${theme.color}20`,
+          fontSize: 16,
         }}
-        style={{ width: '100%' }}
       >
-        {/* 3D wide button container */}
-        <div style={{ position: 'relative', width: '100%' }}>
-          {/* Bottom 3D layer */}
-          <svg
-            width="100%"
-            viewBox="0 0 1012 293"
-            fill="none"
-            style={{
-              display: 'block',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              pointerEvents: 'none',
-            }}
-          >
-            <rect y="17" width="1012" height="270" rx="43" fill={rim} />
+        {state === 'completed' && golden ? (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 16h14l-2-8-3.5 4L12 6l-1.5 6L7 8l-2 8z" fill={GOLD} />
+            <path d="M5 16h14v2a1 1 0 01-1 1H6a1 1 0 01-1-1v-2z" fill={GOLD} />
+            <circle cx="7.5" cy="16" r="1.2" fill="#FFF8E1" />
+            <circle cx="12" cy="16" r="1.2" fill="#FFF8E1" />
+            <circle cx="16.5" cy="16" r="1.2" fill="#FFF8E1" />
           </svg>
+        ) : state === 'completed' ? (
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M5 10.5L8.5 14L15 6"
+              stroke={theme.color}
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        ) : state === 'locked' ? (
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="5" y="11" width="14" height="10" rx="2" fill="#D4D4D4" />
+            <path
+              d="M8 11V7a4 4 0 118 0v4"
+              stroke="#D4D4D4"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <circle cx="12" cy="16" r="1.5" fill="#AFAFAF" />
+          </svg>
+        ) : (
+          <span>{lesson.icon}</span>
+        )}
+      </div>
 
-          {/* Interactive face button */}
-          <motion.button
-            className={state === 'current' ? 'lesson-btn-pulse' : ''}
-            style={{
-              position: 'relative',
-              display: 'flex',
-              alignItems: 'center',
-              width: '100%',
-              background: 'none',
-              border: 'none',
-              padding: 0,
-              cursor: state === 'locked' ? 'default' : 'pointer',
-              opacity: state === 'locked' ? 0.55 : 1,
-              WebkitTapHighlightColor: 'transparent',
-              '--go-glow-color': `${theme.color}40`,
-            } as React.CSSProperties}
-            onClick={onClick}
-            whileHover={state !== 'locked' ? { y: -2, scale: 1.015 } : undefined}
-            whileTap={state !== 'locked' ? { y: 4, scale: 0.985 } : undefined}
-            aria-label={
-              state === 'completed'
-                ? `Replay: ${lesson.title}`
-                : state === 'current'
-                  ? `Start: ${lesson.title}`
-                  : `Locked: ${lesson.title}`
+      {/* Info */}
+      <div className="flex-1 min-w-0">
+        <div
+          style={{
+            fontSize: 14.5,
+            fontWeight: 700,
+            color: state === 'locked' ? '#AFAFAF' : '#3C3C3C',
+            lineHeight: 1.2,
+          }}
+        >
+          {lesson.title}
+        </div>
+      </div>
+
+      {/* Badge */}
+      <div className="flex-shrink-0">
+        {state === 'completed' && stars !== undefined && stars > 0 ? (
+          <CompletionBadge stars={stars} color={golden ? GOLD : theme.color} darkColor={golden ? GOLD_DARK : theme.dark} isGolden={golden} />
+        ) : state === 'current' ? (
+          <div
+            className="go-btn-pulse"
+            style={
+              {
+                background: theme.color,
+                color: '#FFFFFF',
+                fontSize: 13,
+                fontWeight: 800,
+                padding: '8px 20px',
+                borderRadius: 12,
+                textTransform: 'uppercase',
+                letterSpacing: 0.8,
+                boxShadow: `0 4px 0 ${theme.dark}`,
+                '--go-shadow-color': theme.dark,
+                '--go-glow-color': `${theme.color}25`,
+              } as React.CSSProperties
             }
           >
-            {/* Wide button SVG face */}
-            <svg
-              width="100%"
-              viewBox="0 0 1012 280"
-              fill="none"
-              style={{ display: 'block' }}
-            >
-              <defs>
-                <filter id={filterId} x="0" y="0" width="1012" height="284" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                  <feMorphology radius="16" operator="erode" in="SourceAlpha" result="innerShadow"/>
-                  <feOffset dy="4"/>
-                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.12 0"/>
-                  <feBlend mode="normal" in2="shape" result="innerShadow"/>
-                </filter>
-                <clipPath id={`clip-${filterId}`}>
-                  <rect width="1012" height="260" rx="43" />
-                </clipPath>
-              </defs>
-              <g filter={`url(#${filterId})`}>
-                <rect width="1012" height="260" rx="43" fill={bg} />
-              </g>
-              {/* Top highlight for 3D curvature */}
-              <g clipPath={`url(#clip-${filterId})`}>
-                <rect y="0" width="1012" height="80" fill="white" fillOpacity="0.12" rx="43" />
-                <rect x="40" y="16" width="932" height="6" rx="3" fill="white" fillOpacity="0.18" />
-              </g>
-            </svg>
-
-            {/* Content overlay */}
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0 20px',
-                gap: 14,
-              }}
-            >
-              {/* Icon circle */}
-              <div
-                style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.22)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0,
-                }}
-              >
-                {icon}
-              </div>
-
-              {/* Text */}
-              <div style={{ flex: 1, minWidth: 0, textAlign: 'left' }}>
-                <div
-                  style={{
-                    fontSize: 16,
-                    fontWeight: 800,
-                    color: '#FFFFFF',
-                    lineHeight: 1.3,
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    display: '-webkit-box',
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: 'vertical' as const,
-                  }}
-                >
-                  {lesson.title}
-                </div>
-                {state === 'completed' && maxLevels > 1 && (
-                  <StarDots count={completedLevels} max={maxLevels} />
-                )}
-              </div>
-
-              {/* Right arrow / status */}
-              <div
-                style={{
-                  flexShrink: 0,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                {state === 'locked' ? (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <rect x="5" y="11" width="14" height="10" rx="3" fill="rgba(255,255,255,0.4)" />
-                    <path d="M8 11V8a4 4 0 118 0v3" stroke="rgba(255,255,255,0.4)" strokeWidth="2.5" strokeLinecap="round" />
-                  </svg>
-                ) : (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 6l6 6-6 6" stroke="rgba(255,255,255,0.7)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                )}
-              </div>
-            </div>
-          </motion.button>
-        </div>
-      </motion.div>
-    </div>
+            Go
+          </div>
+        ) : state === 'locked' ? (
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            style={{ opacity: 0.35 }}
+          >
+            <rect x="5" y="11" width="14" height="10" rx="2" fill="#D4D4D4" />
+            <path
+              d="M8 11V7a4 4 0 118 0v4"
+              stroke="#D4D4D4"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <circle cx="12" cy="16" r="1.5" fill="#AFAFAF" />
+          </svg>
+        ) : null}
+      </div>
+    </motion.button>
   );
 });
 

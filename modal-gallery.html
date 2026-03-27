@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechReady — Full-Screen Modal Gallery</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0F0F0F;
+    color: #fff;
+    padding: 40px 24px 80px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 48px;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    margin: 48px 0 24px;
+    text-align: center;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .card-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .phone {
+    width: 375px;
+    height: 812px;
+    border-radius: 40px;
+    overflow: hidden;
+    border: 3px solid #333;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+
+  .screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .close-btn svg { width: 16px; height: 16px; color: #6b7280; }
+
+  .close-btn-light {
+    background: rgba(243,244,246,0.9);
+  }
+
+  /* Shared button style */
+  .btn-primary {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-game {
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  /* ============== 1. OUT OF HEARTS ============== */
+  .hearts-screen { background: #fff; }
+  .hearts-header {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    padding: 32px 24px 28px;
+    text-align: center;
+    color: white;
+  }
+  .hearts-header svg { width: 64px; height: 64px; opacity: 0.9; margin-bottom: 12px; }
+  .hearts-header h3 { font-size: 22px; font-weight: 800; }
+  .hearts-header p { font-size: 14px; opacity: 0.8; margin-top: 4px; }
+  .hearts-content { padding: 28px 24px; text-align: center; }
+  .hearts-countdown-label { font-size: 12px; font-weight: 600; color: #9ca3af; margin-bottom: 4px; }
+  .hearts-countdown { font-size: 28px; font-weight: 800; color: #1f2937; font-variant-numeric: tabular-nums; }
+  .hearts-divider { display: flex; align-items: center; gap: 12px; margin: 24px 0; }
+  .hearts-divider span { font-size: 12px; font-weight: 500; color: #d1d5db; }
+  .hearts-divider hr { flex: 1; border: none; height: 1px; background: #e5e7eb; }
+
+  /* ============== 2. TRIAL PROMPT ============== */
+  .trial-screen { background: #fff; }
+  .trial-header {
+    background: linear-gradient(135deg, #6366f1, #4f46e5, #4338ca);
+    padding: 36px 24px 28px;
+    text-align: center;
+    color: white;
+  }
+  .trial-icon-box {
+    width: 56px; height: 56px; border-radius: 16px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 12px;
+  }
+  .trial-header h3 { font-size: 22px; font-weight: 800; }
+  .trial-header p { font-size: 14px; opacity: 0.75; margin-top: 4px; }
+  .trial-content { padding: 24px; }
+  .trial-feature { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .trial-feature-icon {
+    width: 36px; height: 36px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    font-size: 18px;
+  }
+  .trial-feature-text strong { display: block; font-size: 14px; font-weight: 700; color: #1f2937; }
+  .trial-feature-text span { font-size: 12px; color: #9ca3af; }
+  .trial-dismiss { width: 100%; text-align: center; font-size: 12px; color: #9ca3af; margin-top: 12px; padding: 8px; background: none; border: none; cursor: pointer; }
+
+  /* ============== 3. UPGRADE ============== */
+  .upgrade-screen { background: #fff; }
+  .upgrade-header {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    padding: 28px 24px 24px;
+    color: white;
+  }
+  .upgrade-lock { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; opacity: 0.75; font-size: 14px; font-weight: 500; }
+  .upgrade-header h3 { font-size: 22px; font-weight: 800; }
+  .upgrade-header p { font-size: 14px; opacity: 0.75; margin-top: 4px; }
+  .upgrade-content { padding: 20px 24px; }
+  .upgrade-benefit { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 14px; color: #374151; }
+  .upgrade-check { color: #22c55e; font-size: 16px; flex-shrink: 0; }
+
+  /* ============== 4. PROFESSION PICKER ============== */
+  .profession-screen { background: #fff; }
+  .profession-header { padding: 24px 24px 12px; }
+  .profession-header h3 { font-size: 20px; font-weight: 900; color: #111827; }
+  .profession-header p { font-size: 14px; color: #9ca3af; font-weight: 500; margin-top: 2px; }
+  .profession-content { padding: 4px 24px 24px; }
+  .profession-option {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px; border-radius: 16px;
+    border: 2px solid #e5e7eb; margin-bottom: 10px;
+    cursor: pointer; transition: border-color 0.15s;
+  }
+  .profession-option.active { border-color: #4f46e5; background: #f0f0ff; }
+  .profession-option-icon { font-size: 28px; }
+  .profession-option-text strong { display: block; font-size: 15px; font-weight: 700; color: #111827; }
+  .profession-option-text span { font-size: 12px; color: #9ca3af; }
+
+  /* ============== 5. LEVEL UP ============== */
+  .levelup-screen-normal { background: linear-gradient(135deg, #1E293B, #334155); }
+  .levelup-screen-milestone { background: linear-gradient(135deg, #1E1B4B, #312E81 50%, #4338CA); }
+  .levelup-content { display: flex; flex-direction: column; align-items: center; padding: 40px 32px 36px; }
+  .levelup-badge {
+    width: 88px; height: 88px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 42px; margin-bottom: 10px;
+  }
+  .levelup-badge-normal { background: rgba(255,255,255,0.1); border: 3px solid rgba(255,255,255,0.2); }
+  .levelup-badge-milestone { background: linear-gradient(135deg, #FBBF24, #F59E0B); border: 3px solid #FDE68A; }
+  .levelup-label {
+    padding: 4px 16px; border-radius: 999px;
+    font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .levelup-label-normal { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+  .levelup-label-milestone { background: rgba(251,191,36,0.2); color: #FDE68A; }
+  .levelup-level { font-size: 30px; font-weight: 900; color: #fff; margin-bottom: 4px; }
+  .levelup-title-normal { font-size: 16px; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+  .levelup-title-milestone { font-size: 16px; font-weight: 700; color: #FDE68A; margin-bottom: 20px; }
+  .levelup-message { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 24px; }
+  .levelup-rewards {
+    width: 100%; border-radius: 16px; padding: 16px;
+    background: rgba(255,255,255,0.08); margin-bottom: 28px;
+  }
+  .levelup-rewards-label {
+    font-size: 10px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 2px; text-align: center; margin-bottom: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+  .levelup-reward-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .levelup-reward-row span:first-child { font-size: 18px; }
+  .levelup-btn-normal { background: #4F46E5; color: white; }
+  .levelup-btn-milestone { background: linear-gradient(135deg, #FBBF24, #F59E0B); color: #1E1B4B; }
+
+  /* ============== 6. STREAK MILESTONE ============== */
+  .streak-screen { background: #fff; }
+  .streak-content { padding: 36px 32px; text-align: center; }
+  .streak-badge-circle {
+    width: 96px; height: 96px; border-radius: 50%;
+    background: #FEF3C7; display: inline-flex;
+    align-items: center; justify-content: center;
+    font-size: 48px; margin-bottom: 16px;
+  }
+  .streak-count-badge {
+    display: inline-block; padding: 4px 12px; border-radius: 999px;
+    background: #FEF3C7; color: #D97706;
+    font-size: 14px; font-weight: 800; margin-bottom: 12px;
+  }
+  .streak-badge-name { font-size: 24px; font-weight: 800; color: #111827; margin-bottom: 4px; }
+  .streak-gems { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 16px; }
+  .streak-gems .gem { font-size: 16px; }
+  .streak-gems .amount { font-size: 18px; font-weight: 800; color: #7C3AED; }
+  .streak-gems .label { font-size: 14px; font-weight: 600; color: #6b7280; }
+  .streak-unlocks {
+    background: #F0FDF4; border-radius: 12px; padding: 12px 16px;
+    margin-bottom: 16px; text-align: left;
+  }
+  .streak-unlocks-label { font-size: 11px; font-weight: 700; color: #15803d; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .streak-unlocks p { font-size: 14px; font-weight: 600; color: #166534; }
+  .streak-keep { font-size: 14px; color: #6b7280; margin-bottom: 4px; }
+  .streak-next { font-size: 12px; color: #9ca3af; margin-bottom: 28px; }
+  .streak-next strong { color: #4b5563; }
+
+  /* ============== 7. WELCOME BACK ============== */
+  .welcome-screen { background: #fff; }
+  .welcome-content { padding: 28px 24px; }
+  .welcome-header { text-align: center; margin-bottom: 20px; }
+  .welcome-wave { font-size: 48px; margin-bottom: 12px; }
+  .welcome-title { font-size: 24px; font-weight: 800; color: #111827; margin-bottom: 4px; }
+  .welcome-sub { font-size: 14px; color: #6b7280; }
+  .welcome-days {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 10px 16px; border-radius: 12px; background: #F0F7FF; margin-bottom: 16px;
+    font-size: 14px; font-weight: 600; color: #4b5563;
+  }
+  .welcome-days strong { color: #2563eb; font-weight: 800; }
+  .welcome-repair {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 12px 16px; border-radius: 12px;
+    background: #FEF2F2; border: 1px solid #FECACA; margin-bottom: 16px;
+  }
+  .welcome-repair-text strong { display: block; font-size: 14px; font-weight: 700; color: #b91c1c; }
+  .welcome-repair-text span { font-size: 12px; color: #ef4444; }
+  .welcome-repair-btn {
+    padding: 8px 16px; border-radius: 12px;
+    font-size: 12px; font-weight: 700; color: white;
+    background: #EF4444; border: none; cursor: pointer;
+    flex-shrink: 0; min-height: 44px;
+  }
+  .welcome-quests-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #9ca3af; margin-bottom: 8px; }
+  .welcome-quest {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px; border-radius: 12px;
+    background: #F9FAFB; border: 1px solid #F3F4F6;
+    margin-bottom: 8px;
+  }
+  .welcome-quest-icon { font-size: 20px; }
+  .welcome-quest-info { flex: 1; min-width: 0; }
+  .welcome-quest-info strong { display: block; font-size: 14px; font-weight: 700; color: #1f2937; }
+  .welcome-quest-info span { font-size: 12px; color: #6b7280; }
+  .welcome-quest-gems {
+    display: flex; align-items: center; gap: 2px;
+    padding: 4px 8px; border-radius: 8px;
+    background: #FEF3C7; font-size: 12px; font-weight: 700; color: #92400E;
+    flex-shrink: 0;
+  }
+  .welcome-quests-section { margin-bottom: 24px; }
+
+  /* ============== 8. STREAK FREEZE (Repair) ============== */
+  .freeze-screen { background: #fff; }
+  .freeze-content { padding: 28px 24px; text-align: center; }
+  .freeze-heart { width: 64px; height: 64px; border-radius: 50%; background: #FEF2F2; display: inline-flex; align-items: center; justify-content: center; font-size: 36px; margin-bottom: 16px; }
+  .freeze-title { font-size: 22px; font-weight: 800; color: #111827; margin-bottom: 4px; }
+  .freeze-sub { font-size: 14px; color: #6b7280; margin-bottom: 24px; }
+  .freeze-sub strong { color: #374151; font-weight: 700; }
+  .freeze-cost {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 16px; border-radius: 12px; background: #F3E8FF; margin-bottom: 24px;
+  }
+  .freeze-cost .gem { font-size: 18px; }
+  .freeze-cost .amount { font-size: 22px; font-weight: 800; color: #7C3AED; }
+  .freeze-cost .label { font-size: 14px; font-weight: 600; color: #6b7280; }
+  .freeze-repair-btn { background: #7C3AED; }
+  .freeze-skip {
+    width: 100%; padding: 10px; border-radius: 12px;
+    font-size: 14px; font-weight: 600; color: #6b7280;
+    background: none; border: none; cursor: pointer; margin-top: 8px;
+  }
+
+  /* ============== 9. LEAGUE PROMOTION ============== */
+  .league-content { padding: 40px 32px; text-align: center; }
+  .league-emoji { font-size: 72px; margin-bottom: 16px; }
+  .league-headline { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+  .league-subtext { font-size: 14px; color: #4b5563; line-height: 1.5; margin-bottom: 24px; }
+  .league-stats { display: flex; align-items: center; justify-content: center; gap: 24px; margin-bottom: 36px; }
+  .league-stat-val { font-size: 24px; font-weight: 800; color: #1f2937; }
+  .league-stat-label { font-size: 11px; font-weight: 600; color: #9ca3af; }
+  .league-divider { width: 1px; height: 32px; background: #e5e7eb; }
+  .league-gems-val { font-size: 24px; font-weight: 800; color: #059669; }
+
+  /* ============== 10. BLUEPRINT CELEBRATION ============== */
+  .blueprint-screen { background: #FAFAFA; }
+  .blueprint-content { display: flex; flex-direction: column; align-items: center; padding: 32px 20px; }
+  .blueprint-label { font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: #F5B800; margin-bottom: 4px; }
+  .blueprint-title { font-size: 24px; font-weight: 900; color: #0f172a; margin-bottom: 20px; }
+  .blueprint-card {
+    width: 100%; max-width: 320px; border-radius: 20px; padding: 20px;
+    background: white; border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 24px;
+    position: relative; min-height: 220px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .blueprint-card-label { position: absolute; bottom: 12px; right: 16px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #94a3b8; }
+  .blueprint-placeholder { font-size: 64px; opacity: 0.3; }
+  .blueprint-stamp {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-8deg);
+    font-size: 28px; font-weight: 900; letter-spacing: 6px; text-transform: uppercase;
+    padding: 10px 30px; border: 4px solid #F5B800; border-radius: 12px;
+    color: #F5B800; background: rgba(88,204,2,0.08);
+  }
+  .blueprint-stats {
+    display: flex; gap: 24px; padding: 16px 28px; border-radius: 16px;
+    background: white; border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06); margin-bottom: 24px;
+  }
+  .blueprint-stat { text-align: center; }
+  .blueprint-stat-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #94a3b8; margin-bottom: 4px; }
+  .blueprint-stat-val { font-size: 20px; font-weight: 900; }
+
+  /* ============== 11. COURSE COMPLETE ============== */
+  .course-screen { background: #FAFAFA; }
+  .course-content { display: flex; flex-direction: column; align-items: center; padding: 32px 20px; }
+  .course-label { font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: #F5B800; margin-bottom: 8px; }
+  .course-title { font-size: 28px; font-weight: 900; color: #0f172a; margin-bottom: 4px; }
+  .course-sub { font-size: 14px; font-weight: 600; color: #94a3b8; margin-bottom: 24px; }
+  .course-drawing {
+    width: 100%; border-radius: 24px; padding: 16px 24px;
+    background: white; border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 8px;
+    min-height: 260px; display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .course-layers-placeholder { display: flex; flex-direction: column; gap: 3px; }
+  .course-layer-line { height: 3px; border-radius: 2px; width: 180px; }
+  .course-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; padding: 12px 0 20px; }
+  .course-legend-item { display: flex; align-items: center; gap: 6px; }
+  .course-legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .course-legend-name { font-size: 10px; font-weight: 700; color: #94a3b8; }
+
+  /* Freeze banner mode */
+  .freeze-banner-demo {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 16px; border-radius: 12px; background: #DBEAFE; border: 1px solid #93C5FD;
+    margin: 40px auto; max-width: 375px;
+  }
+  .freeze-banner-demo span { font-size: 14px; font-weight: 600; color: #1D4ED8; }
+  .freeze-banner-x { width: 24px; height: 24px; border-radius: 50%; border: none; background: transparent; color: #3B82F6; cursor: pointer; font-size: 16px; }
+</style>
+</head>
+<body>
+
+<h1>MechReady — Modal Gallery</h1>
+<p class="subtitle">All overlays shown as mobile full-screen (375 × 812). Desktop renders as centered card.</p>
+
+<!-- ================ DIALOG MODALS ================ -->
+<div class="section-title">Dialog Modals</div>
+<div class="grid">
+
+  <!-- 1. Out of Hearts -->
+  <div class="card-wrapper">
+    <div class="card-label">Out of Hearts</div>
+    <div class="phone">
+      <div class="screen hearts-screen">
+        <button class="close-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <div style="display:flex;flex-direction:column;justify-content:center;min-height:100%;">
+          <div class="hearts-header">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <h3>Out of Hearts</h3>
+            <p>You need hearts to continue practicing</p>
+          </div>
+          <div class="hearts-content">
+            <div class="hearts-countdown-label">Next heart in</div>
+            <div class="hearts-countdown">4:32</div>
+            <div class="hearts-divider"><hr><span>or</span><hr></div>
+            <button class="btn-primary" style="background:#4f46e5;box-shadow:0 4px 12px rgba(79,70,229,0.3);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 3l1.5 4.5H18l-3.5 2.5 1.5 4.5L12 12l-4 2.5 1.5-4.5L6 7.5h4.5z"/></svg>
+              Get Unlimited Hearts
+            </button>
+            <p style="font-size:12px;color:#9ca3af;margin-top:12px;">Pro members never run out of hearts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Trial Prompt -->
+  <div class="card-wrapper">
+    <div class="card-label">Trial Prompt</div>
+    <div class="phone">
+      <div class="screen trial-screen">
+        <button class="close-btn close-btn-light"><svg viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <div style="display:flex;flex-direction:column;justify-content:center;min-height:100%;">
+          <div class="trial-header">
+            <div class="trial-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 3l1.5 4.5H18l-3.5 2.5 1.5 4.5L12 12l-4 2.5 1.5-4.5L6 7.5h4.5z"/></svg>
+            </div>
+            <h3>You're off to a great start!</h3>
+            <p>Try Pro free for 7 days</p>
+          </div>
+          <div class="trial-content">
+            <div class="trial-feature">
+              <div class="trial-feature-icon" style="background:#FEF2F2;">❤️</div>
+              <div class="trial-feature-text"><strong>Unlimited hearts</strong><span>Keep practicing without waiting</span></div>
+            </div>
+            <div class="trial-feature">
+              <div class="trial-feature-icon" style="background:#FFFBEB;">🛡️</div>
+              <div class="trial-feature-text"><strong>Streak freeze</strong><span>Protect your streak on busy days</span></div>
+            </div>
+            <div class="trial-feature">
+              <div class="trial-feature-icon" style="background:#EEF2FF;">⚡</div>
+              <div class="trial-feature-text"><strong>2x XP on weekends</strong><span>Level up faster</span></div>
+            </div>
+            <div style="margin-top:10px;">
+              <button class="btn-primary" style="background:#4f46e5;box-shadow:0 4px 12px rgba(79,70,229,0.3);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 3l1.5 4.5H18l-3.5 2.5 1.5 4.5L12 12l-4 2.5 1.5-4.5L6 7.5h4.5z"/></svg>
+                Try Pro Free for 7 Days
+              </button>
+              <button class="trial-dismiss">Maybe later</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Upgrade Modal -->
+  <div class="card-wrapper">
+    <div class="card-label">Upgrade Modal</div>
+    <div class="phone">
+      <div class="screen upgrade-screen">
+        <button class="close-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <div style="display:flex;flex-direction:column;justify-content:center;min-height:100%;">
+          <div class="upgrade-header">
+            <div class="upgrade-lock">🔒 <span>This unit requires Pro</span></div>
+            <h3>MechReady Pro</h3>
+            <p>Unlimited hearts &amp; premium perks</p>
+          </div>
+          <div class="upgrade-content">
+            <div class="upgrade-benefit"><span class="upgrade-check">✓</span> Unlimited hearts — never wait</div>
+            <div class="upgrade-benefit"><span class="upgrade-check">✓</span> Weekly streak freeze</div>
+            <div class="upgrade-benefit"><span class="upgrade-check">✓</span> Full analytics dashboard</div>
+            <div class="upgrade-benefit"><span class="upgrade-check">✓</span> 2x XP on weekends</div>
+            <div class="upgrade-benefit"><span class="upgrade-check">✓</span> Detailed explanations</div>
+            <div class="upgrade-benefit"><span class="upgrade-check">✓</span> Premium league rewards</div>
+            <div style="margin-top:20px;">
+              <button class="btn-primary" style="background:#4f46e5;box-shadow:0 4px 12px rgba(79,70,229,0.3);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 3l1.5 4.5H18l-3.5 2.5 1.5 4.5L12 12l-4 2.5 1.5-4.5L6 7.5h4.5z"/></svg>
+                Subscribe to Pro
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Profession Picker -->
+  <div class="card-wrapper">
+    <div class="card-label">Profession Picker</div>
+    <div class="phone">
+      <div class="screen profession-screen">
+        <button class="close-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <div style="display:flex;flex-direction:column;justify-content:center;min-height:100%;">
+          <div class="profession-header">
+            <h3>Switch Course</h3>
+            <p>Choose what you want to learn</p>
+          </div>
+          <div class="profession-content">
+            <div class="profession-option active">
+              <span class="profession-option-icon">⚙️</span>
+              <div class="profession-option-text"><strong>Mechanical Engineering</strong><span>Interview prep for ME roles</span></div>
+            </div>
+            <div class="profession-option">
+              <span class="profession-option-icon">🔌</span>
+              <div class="profession-option-text"><strong>Electrical Engineering</strong><span>Circuits, power, signals</span></div>
+            </div>
+            <div class="profession-option">
+              <span class="profession-option-icon">🏗️</span>
+              <div class="profession-option-text"><strong>Civil Engineering</strong><span>Structures, materials, geo</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ================ CELEBRATION MODALS ================ -->
+<div class="section-title">Celebrations &amp; Engagement</div>
+<div class="grid">
+
+  <!-- 5a. Level Up (normal) -->
+  <div class="card-wrapper">
+    <div class="card-label">Level Up (Normal)</div>
+    <div class="phone">
+      <div class="screen levelup-screen-normal">
+        <div class="levelup-content" style="min-height:100%;justify-content:center;">
+          <div class="levelup-badge levelup-badge-normal">⭐</div>
+          <div class="levelup-label levelup-label-normal">Level Up!</div>
+          <div class="levelup-level">Level 5</div>
+          <div class="levelup-title-normal">Apprentice</div>
+          <div class="levelup-message">You're making real progress!</div>
+          <div class="levelup-rewards">
+            <div class="levelup-rewards-label">Rewards</div>
+            <div class="levelup-reward-row"><span>💎</span><span style="font-size:16px;font-weight:800;color:#A78BFA;">+15 gems</span></div>
+          </div>
+          <button class="btn-game levelup-btn-normal">Claim &amp; Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5b. Level Up (milestone) -->
+  <div class="card-wrapper">
+    <div class="card-label">Level Up (Milestone)</div>
+    <div class="phone">
+      <div class="screen levelup-screen-milestone">
+        <div class="levelup-content" style="min-height:100%;justify-content:center;">
+          <div class="levelup-badge levelup-badge-milestone">🏆</div>
+          <div class="levelup-label levelup-label-milestone">Level Up!</div>
+          <div class="levelup-level">Level 10</div>
+          <div class="levelup-title-milestone">Journeyman</div>
+          <div class="levelup-message">A major milestone — keep pushing!</div>
+          <div class="levelup-rewards">
+            <div class="levelup-rewards-label">Rewards</div>
+            <div class="levelup-reward-row"><span>💎</span><span style="font-size:16px;font-weight:800;color:#A78BFA;">+50 gems</span></div>
+            <div class="levelup-reward-row"><span>🧊</span><span style="font-size:16px;font-weight:800;color:#67E8F9;">Free Streak Freeze</span></div>
+            <div class="levelup-reward-row"><span>🏷️</span><span style="font-size:16px;font-weight:800;color:#FDE68A;">Title: "Journeyman"</span></div>
+            <div class="levelup-reward-row"><span>🖼️</span><span style="font-size:16px;font-weight:800;color:#86EFAC;">Exclusive Profile Frame</span></div>
+          </div>
+          <button class="btn-game levelup-btn-milestone">Claim &amp; Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Streak Milestone -->
+  <div class="card-wrapper">
+    <div class="card-label">Streak Milestone</div>
+    <div class="phone">
+      <div class="screen streak-screen">
+        <div class="streak-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;">
+          <div class="streak-badge-circle">🔥</div>
+          <div class="streak-count-badge">🔥 7-Day Streak!</div>
+          <div class="streak-badge-name">Week Warrior</div>
+          <div class="streak-gems">
+            <span class="gem">💎</span>
+            <span class="amount">+10</span>
+            <span class="label">gems earned</span>
+          </div>
+          <div class="streak-unlocks" style="width:100%;max-width:280px;">
+            <div class="streak-unlocks-label">Unlocked</div>
+            <p>🏷️ Title: "Week Warrior"</p>
+          </div>
+          <p class="streak-keep">Keep going!</p>
+          <p class="streak-next">Next milestone: <strong>Fortnight of Focus</strong> at 14 days</p>
+          <button class="btn-primary" style="background:#4F46E5;max-width:280px;">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Welcome Back -->
+  <div class="card-wrapper">
+    <div class="card-label">Welcome Back</div>
+    <div class="phone">
+      <div class="screen welcome-screen">
+        <div class="welcome-content" style="display:flex;flex-direction:column;justify-content:center;min-height:100%;">
+          <div class="welcome-header">
+            <div class="welcome-wave">👋</div>
+            <div class="welcome-title">Welcome back!</div>
+            <div class="welcome-sub">We missed you.</div>
+          </div>
+          <div class="welcome-days">You've been away for <strong>5 days</strong></div>
+          <div class="welcome-repair">
+            <div class="welcome-repair-text"><strong>Your streak broke</strong><span>But you can still repair it with gems!</span></div>
+            <button class="welcome-repair-btn">Repair</button>
+          </div>
+          <div class="welcome-quests-section">
+            <div class="welcome-quests-label">Your comeback quests</div>
+            <div class="welcome-quest">
+              <span class="welcome-quest-icon">📝</span>
+              <div class="welcome-quest-info"><strong>Complete a lesson</strong><span>Finish any lesson today</span></div>
+              <div class="welcome-quest-gems">💎 10</div>
+            </div>
+            <div class="welcome-quest">
+              <span class="welcome-quest-icon">🎯</span>
+              <div class="welcome-quest-info"><strong>Score 80%+</strong><span>Get 80% accuracy or better</span></div>
+              <div class="welcome-quest-gems">💎 15</div>
+            </div>
+            <div class="welcome-quest">
+              <span class="welcome-quest-icon">🔥</span>
+              <div class="welcome-quest-info"><strong>3-day streak</strong><span>Practice 3 days in a row</span></div>
+              <div class="welcome-quest-gems">💎 25</div>
+            </div>
+          </div>
+          <button class="btn-primary" style="background:#4F46E5;">Let's Go! 🚀</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Streak Freeze (Repair) -->
+  <div class="card-wrapper">
+    <div class="card-label">Streak Freeze (Repair)</div>
+    <div class="phone">
+      <div class="screen freeze-screen">
+        <div class="freeze-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;">
+          <div class="freeze-heart">💔</div>
+          <div class="freeze-title">Your streak broke!</div>
+          <div class="freeze-sub">You had a <strong>12-day streak</strong></div>
+          <div class="freeze-cost">
+            <span class="gem">💎</span>
+            <span class="amount">50</span>
+            <span class="label">to repair</span>
+          </div>
+          <button class="btn-primary freeze-repair-btn" style="max-width:300px;">Repair Streak</button>
+          <button class="freeze-skip">Skip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ================ LEAGUE ================ -->
+<div class="section-title">League Results (3 variants)</div>
+<div class="grid">
+
+  <!-- 9a. League Promoted -->
+  <div class="card-wrapper">
+    <div class="card-label">League — Promoted</div>
+    <div class="phone">
+      <div class="screen" style="background:#F0FDF4;">
+        <div class="league-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;">
+          <div class="league-emoji">🏆</div>
+          <div class="league-headline" style="color:#16A34A;">Promoted to Gold!</div>
+          <div class="league-subtext">You earned +15 💎 gems for finishing in the top ranks.</div>
+          <div class="league-stats">
+            <div><div class="league-stat-val">#2</div><div class="league-stat-label">Final Rank</div></div>
+            <div class="league-divider"></div>
+            <div><div class="league-gems-val">+15 💎</div><div class="league-stat-label">Gems Earned</div></div>
+          </div>
+          <button class="btn-game" style="background:#16A34A;color:white;box-shadow:0 4px 0 #15803D;max-width:300px;">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9b. League Stayed -->
+  <div class="card-wrapper">
+    <div class="card-label">League — Stayed</div>
+    <div class="phone">
+      <div class="screen" style="background:#EFF6FF;">
+        <div class="league-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;">
+          <div class="league-emoji">🥈</div>
+          <div class="league-headline" style="color:#3B82F6;">Stayed in Silver</div>
+          <div class="league-subtext">Nice consistency! Keep it up to reach the promotion zone.</div>
+          <div class="league-stats">
+            <div><div class="league-stat-val">#8</div><div class="league-stat-label">Final Rank</div></div>
+          </div>
+          <button class="btn-game" style="background:#4F46E5;color:white;box-shadow:0 4px 0 #3730A3;max-width:300px;">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9c. League Demoted -->
+  <div class="card-wrapper">
+    <div class="card-label">League — Demoted</div>
+    <div class="phone">
+      <div class="screen" style="background:#FEF2F2;">
+        <div class="league-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;">
+          <div class="league-emoji">🥉</div>
+          <div class="league-headline" style="color:#DC2626;">Moved to Bronze</div>
+          <div class="league-subtext">Don't give up — keep practicing and you'll climb back up.</div>
+          <div class="league-stats">
+            <div><div class="league-stat-val">#14</div><div class="league-stat-label">Final Rank</div></div>
+          </div>
+          <button class="btn-game" style="background:#4F46E5;color:white;box-shadow:0 4px 0 #3730A3;max-width:300px;">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ================ FULLSCREEN CELEBRATIONS ================ -->
+<div class="section-title">Full-Screen Celebrations (already full-screen)</div>
+<div class="grid">
+
+  <!-- 10. Blueprint Celebration -->
+  <div class="card-wrapper">
+    <div class="card-label">Blueprint Celebration</div>
+    <div class="phone">
+      <div class="screen blueprint-screen">
+        <div class="blueprint-content" style="min-height:100%;justify-content:center;">
+          <div class="blueprint-label">Chapter Complete</div>
+          <div class="blueprint-title">Thermodynamics</div>
+          <div class="blueprint-card">
+            <div class="blueprint-placeholder">📐</div>
+            <div class="blueprint-stamp">COMPLETE</div>
+            <div class="blueprint-card-label">Heat Engine Cycle</div>
+          </div>
+          <div class="blueprint-stats">
+            <div class="blueprint-stat"><div class="blueprint-stat-label">Lessons</div><div class="blueprint-stat-val" style="color:#0f172a;">8</div></div>
+            <div class="blueprint-stat"><div class="blueprint-stat-label">Accuracy</div><div class="blueprint-stat-val" style="color:#58CC02;">92%</div></div>
+            <div class="blueprint-stat"><div class="blueprint-stat-label">XP</div><div class="blueprint-stat-val" style="color:#F5B800;">340</div></div>
+          </div>
+          <button class="btn-game" style="background:#F5B800;color:white;box-shadow:0 4px 0 #C49200;padding:16px 48px;">CONTINUE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. Course Complete -->
+  <div class="card-wrapper">
+    <div class="card-label">Course Complete</div>
+    <div class="phone">
+      <div class="screen course-screen">
+        <div class="course-content" style="min-height:100%;justify-content:center;">
+          <div class="course-label">Course Complete</div>
+          <div class="course-title">The full machine.</div>
+          <div class="course-sub">Every system you mastered, assembled.</div>
+          <div class="course-drawing">
+            <div class="course-layers-placeholder">
+              <div class="course-layer-line" style="background:#4F46E5;"></div>
+              <div class="course-layer-line" style="background:#2563EB;width:160px;"></div>
+              <div class="course-layer-line" style="background:#0891B2;width:170px;"></div>
+              <div class="course-layer-line" style="background:#059669;width:150px;"></div>
+              <div class="course-layer-line" style="background:#16A34A;"></div>
+              <div class="course-layer-line" style="background:#CA8A04;width:165px;"></div>
+              <div class="course-layer-line" style="background:#EA580C;width:155px;"></div>
+              <div class="course-layer-line" style="background:#DC2626;width:175px;"></div>
+              <div class="course-layer-line" style="background:#9333EA;width:145px;"></div>
+              <div class="course-layer-line" style="background:#DB2777;width:170px;"></div>
+            </div>
+            <div class="blueprint-stamp" style="font-size:22px;padding:8px 24px;">COMPLETE</div>
+          </div>
+          <div class="course-legend">
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#4F46E5;"></div><span class="course-legend-name">Statics</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#2563EB;"></div><span class="course-legend-name">Dynamics</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#0891B2;"></div><span class="course-legend-name">Thermo</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#059669;"></div><span class="course-legend-name">Fluids</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#16A34A;"></div><span class="course-legend-name">Materials</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#CA8A04;"></div><span class="course-legend-name">Mechanics</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#EA580C;"></div><span class="course-legend-name">Heat Transfer</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#DC2626;"></div><span class="course-legend-name">Machine Design</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#9333EA;"></div><span class="course-legend-name">Controls</span></div>
+            <div class="course-legend-item"><div class="course-legend-dot" style="background:#DB2777;"></div><span class="course-legend-name">Manufacturing</span></div>
+          </div>
+          <button class="btn-game" style="background:#F5B800;color:white;box-shadow:0 5px 0 #C49200;width:100%;max-width:300px;padding:18px;">CONTINUE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ================ BANNERS (inline, not full-screen) ================ -->
+<div class="section-title">Inline Banners (not converted)</div>
+<div style="text-align:center;">
+  <div class="freeze-banner-demo">
+    <span>🧊 Your streak freeze saved your streak yesterday!</span>
+    <button class="freeze-banner-x">✕</button>
+  </div>
+  <p style="font-size:12px;color:#555;margin-top:8px;">StreakFreeze banner mode — inline, not a modal</p>
+</div>
+
+<div style="text-align:center;margin-top:64px;padding:24px;border-top:1px solid #222;">
+  <p style="font-size:12px;color:#555;">13 screens total &middot; 9 converted to mobile full-screen &middot; 2 already full-screen &middot; 2 non-modal</p>
+</div>
+
+</body>
+</html>
