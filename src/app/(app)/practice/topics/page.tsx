@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useRef, useCallback, Suspense } from 'react';
-import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useSession, useSessionActions, useProgress } from '@/store/useStore';
 import { topics } from '@/data/topics';
 import SessionView from '@/components/session/SessionView';
-import { ChevronLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { cn, getDifficultyColor, getDifficultyLabel } from '@/lib/utils';
 import type { Difficulty, TopicId } from '@/data/types';
 
@@ -39,29 +39,7 @@ function TopicDeepDiveContent() {
 
   return (
     <div className="min-h-screen" style={{ background: '#FAFAFA' }}>
-      {/* Header */}
-      <header
-        className="sticky top-0 z-30 bg-white px-4 sm:px-5 py-3"
-        style={{ borderBottom: '2px solid #E5E5E5' }}
-      >
-        <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-[10px] transition-transform active:scale-90 lg:hidden"
-            style={{ background: '#F0F0F0' }}
-          >
-            <ChevronLeft style={{ width: 20, height: 20, color: '#777' }} />
-          </Link>
-          <div>
-            <h1 className="text-lg sm:text-xl font-extrabold" style={{ color: '#3C3C3C', lineHeight: 1.2 }}>
-              Topic Deep Dive
-            </h1>
-            <p className="text-xs font-semibold mt-px" style={{ color: '#AFAFAF' }}>
-              Choose a topic and difficulty, then go deep
-            </p>
-          </div>
-        </div>
-      </header>
+      <PageHeader title="Topic Deep Dive" subtitle="Choose a topic and difficulty, then go deep" />
 
       <div className="px-4 sm:px-5 pt-4 pb-8">
 

@@ -662,14 +662,14 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L6-T2",
           type: "teaching",
-          question: "🛟 Your Emergency Fund Starter",
-          explanation: "Your first savings goal: 500 in an emergency fund. That's it. Not 10,000. Not 6 months of expenses. Just 500. This covers a surprise car repair, a medical bill, or a broken phone. Without it, one bad week puts you in debt.",
+          question: "🛟 Your First Savings Goal: 500",
+          explanation: "Start with just 500 in an emergency fund. It covers a car repair, medical bill, or broken phone. Without it, one surprise = debt.",
           options: [
-            "First goal: 500 emergency fund — small but life-changing",
-            "Covers: car repair, medical bill, broken phone, surprise expense",
-            "Without it: one emergency = credit card debt spiral",
+            "First goal: just 500 — small but life-changing",
+            "Covers surprise expenses like repairs or medical bills",
+            "Without it: one emergency puts you into debt",
           ],
-          hint: "78% of people live paycheck to paycheck. Having even 500 saved puts you ahead of most.",
+          hint: "78% of people live paycheck to paycheck. Even 500 saved puts you ahead.",
         },
         {
           id: "pf-u1-L6-Q3",
@@ -695,14 +695,14 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L6-T3",
           type: "teaching",
-          question: "⚡ Start Embarrassingly Small",
-          explanation: "Think you can't save? Start with 25 per paycheck. That's it. It's almost nothing — but it's not nothing. The habit matters more than the amount. Once saving feels normal, increase it. 25 becomes 50, then 100, then 200. The hardest part is just starting.",
+          question: "⚡ Start Small — That's Fine",
+          explanation: "Start with 25 per paycheck. The habit matters more than the amount. Once it feels normal, increase it. 25 becomes 50, then 100.",
           options: [
-            "Start with any amount — even 10 or 25 per paycheck",
-            "The habit matters more than the amount at first",
+            "Start with even 10 or 25 per paycheck",
+            "The habit matters more than the amount",
             "Increase gradually as it becomes automatic",
           ],
-          hint: "25/paycheck = 50/month = 600/year. That's a starter emergency fund built in less than a year.",
+          hint: "25/paycheck = 50/month = 600/year. Emergency fund done in under a year.",
         },
         {
           id: "pf-u1-L6-Q5",
@@ -727,7 +727,7 @@ export const unit1: Unit = {
           type: "true-false",
           question: "You should wait until you earn more money before you start saving.",
           correctAnswer: false,
-          explanation: "Classic excuse. People who don't save at 2,000/month don't save at 5,000/month either. Spending rises with income. The habit of saving matters more than the amount. Start now with whatever you can.",
+          explanation: "People who don't save at 2,000/month don't save at 5,000 either. Spending rises with income. The habit matters more than the amount.",
         },
         {
           id: "pf-u1-L6-Q8",
@@ -740,7 +740,7 @@ export const unit1: Unit = {
             "1,200",
           ],
           correctIndex: 0,
-          explanation: "50 × 12 months = 600. That's a solid emergency fund built from a tiny monthly habit. And it cost you less than 2/day. You've spent more than that on worse things.",
+          explanation: "50 × 12 = 600. A solid emergency fund from a tiny monthly habit — less than 2/day.",
         },
       ],
     },
