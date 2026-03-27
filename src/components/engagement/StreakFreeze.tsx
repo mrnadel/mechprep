@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, HeartCrack, Gem, Snowflake } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { X, Gem, Snowflake } from 'lucide-react';
 import {
   useEngagementStore,
   useStreakEnhancements,
@@ -10,7 +10,7 @@ import {
   useEngagementActions,
 } from '@/store/useEngagementStore';
 import { GameButton } from '@/components/ui/GameButton';
-import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 
 const REPAIR_COST = 50;
@@ -22,118 +22,60 @@ export function StreakFreeze() {
   const { repairStreak } = useEngagementActions();
 
   const dismissFreezeBanner = () => {
-    useEngagementStore.setState((s) => ({
-      streak: { ...s.streak, freezeUsedToday: false },
-    }));
+    useEngagementStore.setState((s) => ({ streak: { ...s.streak, freezeUsedToday: false } }));
   };
-
   const dismissRepairModal = () => {
-    useEngagementStore.setState((s) => ({
-      streak: { ...s.streak, repairAvailable: false },
-    }));
+    useEngagementStore.setState((s) => ({ streak: { ...s.streak, repairAvailable: false } }));
   };
 
-  // --- Mode 1: Freeze notification banner ---
+  // Mode 1: Banner
   if (streak.freezeUsedToday) {
     return (
-      <motion.div
-        initial={{ opacity: 0, y: -8 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -8 }}
+      <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
         className="flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl"
-        style={{ background: '#DBEAFE', border: '1px solid #93C5FD' }}
-      >
+        style={{ background: '#DBEAFE', border: '1px solid #93C5FD' }}>
         <span className="text-sm font-semibold" style={{ color: '#1D4ED8' }}>
           <Snowflake className="w-4 h-4 inline mr-1" /> Your streak freeze saved your streak yesterday!
         </span>
-        <button
-          onClick={dismissFreezeBanner}
-          className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full transition-colors"
-          style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: '#3B82F6' }}
-          aria-label="Dismiss"
-        >
+        <button onClick={dismissFreezeBanner} className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full"
+          style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: '#3B82F6' }} aria-label="Dismiss">
           <X className="w-4 h-4" />
         </button>
       </motion.div>
     );
   }
 
-  // --- Mode 2: Repair modal (skip if WelcomeBack is handling repair inline) ---
-  if (streak.repairAvailable && !comeback.isInComebackFlow) {
+  // Mode 2: Repair modal
+  if (streak.repairAvailable) {
     const canAfford = gems.balance >= REPAIR_COST;
     const gemsNeeded = REPAIR_COST - gems.balance;
-
-    const handleRepair = () => {
-      const success = repairStreak();
-      if (success) dismissRepairModal();
-    };
+    const handleRepair = () => { if (repairStreak()) dismissRepairModal(); };
 
     return (
-      <AnimatePresence>
-        <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center sm:p-4"
-          style={{ background: 'rgba(0,0,0,0.5)' }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          <motion.div
-            className="bg-[#7B61D9] w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-xl overflow-y-auto flex flex-col"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-          >
-            <FloatingParticles color="rgba(255,255,255,0.05)" intensity="subtle" drift />
-
-            {/* Content — centered */}
-            <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-6 pt-[18vh] sm:pt-10 text-center text-white">
-              <motion.div
-                className="mb-2"
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 15, delay: 0.1 }}
-              >
-                <MascotWithGlow pose="worried" size={150} />
-              </motion.div>
-
-              <h2 className="text-[26px] font-extrabold text-white mb-1">
-                Your streak broke!
-              </h2>
-              <p className="text-sm text-white/60 mb-5">
-                You had a{' '}
-                <span className="font-bold text-white">
-                  {streak.lastStreakValueBeforeBreak}-day streak
-                </span>
-              </p>
-
-              <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/15 backdrop-blur-sm">
-                <Gem className="w-5 h-5 text-white/80" />
-                <span className="text-xl font-extrabold text-white">{REPAIR_COST}</span>
-                <span className="text-sm font-semibold text-white/60">to repair</span>
-              </div>
-            </div>
-
-            {/* Footer — pinned bottom */}
-            <div className="shrink-0 px-6 pb-8 sm:pb-5 relative z-[1]">
-              <GameButton
-                variant="purple"
-                onClick={handleRepair}
-                disabled={!canAfford}
-              >
-                {canAfford ? 'Repair Streak' : `Need ${gemsNeeded} more gems`}
-              </GameButton>
-              <button
-                onClick={dismissRepairModal}
-                className="w-full py-2.5 mt-2 rounded-xl text-sm font-semibold text-white/60 hover:text-white/80 transition-colors"
-                style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
-              >
-                Skip
-              </button>
-            </div>
-          </motion.div>
+      <FullScreenModal
+        show
+        bg="#7B61D9"
+        fx="bokeh"
+        footer={
+          <>
+            <GameButton variant="purple" onClick={handleRepair} disabled={!canAfford}>
+              {canAfford ? 'Repair Streak' : `Need ${gemsNeeded} more gems`}
+            </GameButton>
+            <button onClick={dismissRepairModal} className="w-full py-2.5 mt-2 rounded-xl text-sm font-semibold text-white/60 hover:text-white/80 transition-colors" style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}>Skip</button>
+          </>
+        }
+      >
+        <motion.div className="mb-4" initial={{ scale: 0.5 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 300, damping: 15, delay: 0.1 }}>
+          <MascotWithGlow pose="worried" size={150} />
         </motion.div>
-      </AnimatePresence>
+        <h2 className="text-[26px] font-extrabold text-white mb-1">Your streak broke!</h2>
+        <p className="text-sm text-white/60 mb-5">You had a <span className="font-bold text-white">{streak.lastStreakValueBeforeBreak}-day streak</span></p>
+        <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/15">
+          <Gem className="w-5 h-5 text-white/80" />
+          <span className="text-xl font-extrabold text-white">{REPAIR_COST}</span>
+          <span className="text-sm font-semibold text-white/60">to repair</span>
+        </div>
+      </FullScreenModal>
     );
   }
 
