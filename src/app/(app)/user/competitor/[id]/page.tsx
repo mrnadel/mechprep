@@ -9,6 +9,7 @@ import { getFakeUserById } from '@/lib/fake-user-generator';
 import { getFakeAvatarUrl, getInitialsColor } from '@/lib/fake-avatar';
 import { getXpToNextLevel } from '@/data/levels';
 import { leagueTiers } from '@/data/league';
+import { LeagueImage } from '@/components/icons/LeagueImage';
 import { achievements } from '@/data/achievements';
 import { AvatarFrame } from '@/components/ui/AvatarFrame';
 import type { FrameStyleId } from '@/components/ui/AvatarFrame';
@@ -205,7 +206,7 @@ export default function CompetitorProfilePage() {
                     className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full"
                     style={{ color: tier.color, background: `${tier.color}20` }}
                   >
-                    {tier.icon} {tier.name}
+                    <LeagueImage tier={tier} size={16} className="inline-block" /> {tier.name}
                   </span>
                   <span className="text-xs text-white/30">Joined {joinLabel}</span>
                 </div>

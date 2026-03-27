@@ -1,9 +1,13 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import Link from 'next/link';
-import { ChevronLeft, Users, Loader2, AlertCircle, RefreshCw } from 'lucide-react';
+import { Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { PageHeader } from '@/components/ui/PageHeader';
+import { TabToggle } from '@/components/ui/TabToggle';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
+import { ErrorRetry } from '@/components/ui/ErrorRetry';
+import { EmptyState } from '@/components/ui/EmptyState';
 import InviteShare from '@/components/friends/InviteShare';
 import FriendCard from '@/components/friends/FriendCard';
 import FriendRequestCard from '@/components/friends/FriendRequestCard';
@@ -41,58 +45,20 @@ export default function FriendsPage() {
     mutateRequests();
   }, [mutateFriends, mutateRequests]);
 
+  const tabs = [
+    { id: 'friends' as const, label: friends.length > 0 ? `Friends (${friends.length})` : 'Friends' },
+    { id: 'requests' as const, label: 'Requests', badge: incoming.length },
+  ];
+
   return (
     <div className="min-h-screen" style={{ background: '#FAFAFA' }}>
-      <header
-        className="sticky top-0 z-10 bg-white px-4 sm:px-5 py-3"
-        style={{ borderBottom: '2px solid #E5E5E5' }}
-      >
-        <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-[10px] active:scale-90 transition-transform lg:hidden"
-            style={{ background: '#F0F0F0' }}
-          >
-            <ChevronLeft style={{ width: 20, height: 20, color: '#3C3C3C' }} />
-          </Link>
-          <div>
-            <h1 className="text-lg sm:text-xl font-extrabold" style={{ color: '#3C3C3C' }}>Friends</h1>
-            <p className="text-xs font-semibold" style={{ color: '#9CA3AF' }}>Study together, grow together</p>
-          </div>
-        </div>
-      </header>
+      <PageHeader title="Friends" subtitle="Study together, grow together" />
 
       <div className="px-3 sm:px-5 py-4 sm:py-5 max-w-[600px] mx-auto">
         <InviteShare />
 
-        <div className="flex gap-2 mb-4 sm:mb-5">
-          <button
-            onClick={() => setTab('friends')}
-            className={`flex-1 min-h-[44px] py-2.5 rounded-xl text-sm font-bold transition-colors ${
-              tab === 'friends'
-                ? 'bg-primary-600 text-white'
-                : 'bg-surface-100 text-surface-500 hover:bg-surface-200'
-            }`}
-          >
-            Friends {friends.length > 0 && `(${friends.length})`}
-          </button>
-          <button
-            onClick={() => setTab('requests')}
-            className={`flex-1 min-h-[44px] py-2.5 rounded-xl text-sm font-bold transition-colors relative ${
-              tab === 'requests'
-                ? 'bg-primary-600 text-white'
-                : 'bg-surface-100 text-surface-500 hover:bg-surface-200'
-            }`}
-          >
-            Requests
-            {incoming.length > 0 && (
-              <span
-                className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center"
-              >
-                {incoming.length}
-              </span>
-            )}
-          </button>
+        <div className="mb-4 sm:mb-5">
+          <TabToggle tabs={tabs} activeTab={tab} onChange={setTab} />
         </div>
 
         <AnimatePresence mode="wait">
@@ -105,40 +71,21 @@ export default function FriendsPage() {
               transition={{ duration: 0.15 }}
             >
               {friendsLoading ? (
-                <div className="flex justify-center py-10">
-                  <Loader2 className="w-6 h-6 animate-spin text-primary-400" />
-                </div>
+                <LoadingSpinner card={false} />
               ) : friendsError ? (
-                <div className="card p-6 sm:p-8 text-center" style={{ background: '#FEF2F2', borderColor: '#FECACA' }}>
-                  <div className="flex justify-center mb-3">
-                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
-                      <AlertCircle className="w-6 h-6 text-red-500" />
-                    </div>
-                  </div>
-                  <p className="text-surface-700 font-bold text-sm mb-1">Failed to load friends</p>
-                  <p className="text-surface-400 text-xs mb-3">
-                    Something went wrong. Please try again.
-                  </p>
-                  <button
-                    onClick={() => mutateFriends()}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-surface-200 text-sm font-semibold text-surface-600 hover:bg-surface-50 transition-colors"
-                  >
-                    <RefreshCw className="w-3.5 h-3.5" />
-                    Retry
-                  </button>
-                </div>
+                <ErrorRetry title="Failed to load friends" onRetry={() => mutateFriends()} />
               ) : friends.length === 0 ? (
-                <div className="card p-6 sm:p-8 text-center" style={{ background: '#EEF2FF', borderColor: '#C7D2FE' }}>
-                  <div className="flex justify-center mb-3">
+                <EmptyState
+                  icon={
                     <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center">
                       <Users className="w-8 h-8 text-primary-500" />
                     </div>
-                  </div>
-                  <p className="text-surface-700 font-bold text-sm mb-1">No friends yet</p>
-                  <p className="text-surface-400 text-xs">
-                    Share your invite link above to add friends!
-                  </p>
-                </div>
+                  }
+                  title="No friends yet"
+                  subtitle="Share your invite link above to add friends!"
+                  bgColor="#EEF2FF"
+                  borderColor="#C7D2FE"
+                />
               ) : (
                 <div className="flex flex-col gap-2">
                   {friends.map((f: any, i: number) => (
@@ -156,36 +103,17 @@ export default function FriendsPage() {
               transition={{ duration: 0.15 }}
             >
               {requestsLoading ? (
-                <div className="flex justify-center py-10">
-                  <Loader2 className="w-6 h-6 animate-spin text-primary-400" />
-                </div>
+                <LoadingSpinner card={false} />
               ) : requestsError ? (
-                <div className="card p-8 text-center" style={{ background: '#FEF2F2', borderColor: '#FECACA' }}>
-                  <div className="flex justify-center mb-3">
-                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
-                      <AlertCircle className="w-6 h-6 text-red-500" />
-                    </div>
-                  </div>
-                  <p className="text-surface-700 font-bold text-sm mb-1">Failed to load requests</p>
-                  <p className="text-surface-400 text-xs mb-3">
-                    Something went wrong. Please try again.
-                  </p>
-                  <button
-                    onClick={() => mutateRequests()}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-surface-200 text-sm font-semibold text-surface-600 hover:bg-surface-50 transition-colors"
-                  >
-                    <RefreshCw className="w-3.5 h-3.5" />
-                    Retry
-                  </button>
-                </div>
+                <ErrorRetry title="Failed to load requests" onRetry={() => mutateRequests()} />
               ) : incoming.length === 0 && outgoing.length === 0 ? (
-                <div className="card p-6 sm:p-8 text-center" style={{ background: '#F0FDF4', borderColor: '#BBF7D0' }}>
-                  <div className="flex justify-center mb-3">
-                    <span className="text-3xl">✅</span>
-                  </div>
-                  <p className="text-surface-700 font-bold text-sm">All caught up!</p>
-                  <p className="text-surface-400 text-xs mt-1">No pending requests</p>
-                </div>
+                <EmptyState
+                  icon={<span className="text-3xl">✅</span>}
+                  title="All caught up!"
+                  subtitle="No pending requests"
+                  bgColor="#F0FDF4"
+                  borderColor="#BBF7D0"
+                />
               ) : (
                 <>
                   {incoming.length > 0 && (

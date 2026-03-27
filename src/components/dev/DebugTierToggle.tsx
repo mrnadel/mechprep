@@ -78,7 +78,7 @@ function LeagueDebug() {
         ▼
       </button>
       <span className="flex-1 text-center text-sm font-bold">
-        {tier.icon} {tier.name}
+        <LeagueImage tier={tier} size={20} /> {tier.name}
       </span>
       <button
         onClick={() => debugSetLeagueTier(currentTier + 1)}
