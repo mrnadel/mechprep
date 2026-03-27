@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MechReady SVG Icon Library</title>
+<style>
+  :root {
+    --bg: #0f0f14;
+    --card: #1a1a24;
+    --card-hover: #24243a;
+    --border: #2a2a3a;
+    --text: #e4e4ed;
+    --text-dim: #8888a0;
+    --accent: #6366f1;
+    --accent-dim: #4338ca;
+    --success: #58cc02;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 0;
+  }
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 32px;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header h1 { font-size: 22px; font-weight: 800; color: var(--text); }
+  .header h1 span { color: var(--accent); }
+  .header-row { display: flex; align-items: center; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+  .search {
+    flex: 1; min-width: 200px;
+    padding: 8px 14px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--bg);
+    color: var(--text); font-size: 14px; outline: none;
+  }
+  .search:focus { border-color: var(--accent); }
+  .size-control { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-dim); }
+  .size-control input { width: 100px; accent-color: var(--accent); }
+  .stats { font-size: 13px; color: var(--text-dim); }
+  /* ── Category Nav ── */
+  .cat-nav {
+    display: flex; gap: 6px; padding: 12px 32px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto; background: var(--bg);
+    position: sticky; top: 90px; z-index: 99;
+  }
+  .cat-btn {
+    padding: 6px 14px; border-radius: 20px;
+    border: 1px solid var(--border); background: var(--card);
+    color: var(--text-dim); font-size: 12px; font-weight: 700;
+    cursor: pointer; white-space: nowrap; transition: all .15s;
+  }
+  .cat-btn:hover { border-color: var(--accent); color: var(--text); }
+  .cat-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+  /* ── Grid ── */
+  .gallery { padding: 24px 32px; }
+  .section-title {
+    font-size: 16px; font-weight: 800; color: var(--text);
+    margin: 24px 0 12px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .section-title span { color: var(--accent); font-weight: 400; font-size: 13px; margin-left: 8px; text-transform: none; letter-spacing: 0; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  .icon-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 8px 10px;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 8px; cursor: pointer; transition: all .15s;
+    position: relative;
+  }
+  .icon-card:hover { background: var(--card-hover); border-color: var(--accent); transform: translateY(-2px); }
+  .icon-card svg { flex-shrink: 0; }
+  .icon-name {
+    font-size: 10px; color: var(--text-dim);
+    text-align: center; word-break: break-all;
+    line-height: 1.3; max-width: 100%;
+  }
+  .copied {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--success); color: white;
+    padding: 4px 12px; border-radius: 6px;
+    font-size: 12px; font-weight: 700;
+    pointer-events: none; animation: fadeOut 1s forwards;
+  }
+  @keyframes fadeOut { 0%{opacity:1} 70%{opacity:1} 100%{opacity:0} }
+  /* ── Toast ── */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--accent); color: white;
+    padding: 10px 20px; border-radius: 10px;
+    font-size: 13px; font-weight: 700;
+    opacity: 0; transition: opacity .3s;
+    z-index: 200;
+  }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1><span>MechReady</span> SVG Icon Library</h1>
+  <div class="header-row">
+    <input class="search" type="text" placeholder="Search icons..." id="search">
+    <div class="size-control">
+      <label>Size:</label>
+      <input type="range" min="24" max="128" value="64" id="sizeSlider">
+      <span id="sizeLabel">64px</span>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</div>
+<div class="cat-nav" id="catNav"></div>
+<div class="gallery" id="gallery"></div>
+<div class="toast" id="toast">Copied SVG!</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// MechReady SVG Icon Library — Duolingo-style Design Language
+// ═══════════════════════════════════════════════════════════════
+
+const MechIcons = (() => {
+
+// ── Color Palette ──
+const C = {
+  green:    { base: '#58CC02', dark: '#3B8700', light: '#D0F0B0' },
+  purple:   { base: '#CE82FF', dark: '#7B2FBE', light: '#F3E6FF' },
+  red:      { base: '#FF4B4B', dark: '#CC3333', light: '#FFE0E0' },
+  orange:   { base: '#FF9600', dark: '#CC6B00', light: '#FFF0D4' },
+  blue:     { base: '#1CB0F6', dark: '#0F85BD', light: '#D6F0FF' },
+  gold:     { base: '#FFD900', dark: '#CC9900', light: '#FFF8D4' },
+  cyan:     { base: '#06B6D4', dark: '#0E7490', light: '#CFFAFE' },
+  indigo:   { base: '#6366F1', dark: '#4338CA', light: '#E0E7FF' },
+  amber:    { base: '#F59E0B', dark: '#B45309', light: '#FEF3C7' },
+  steel:    { base: '#94A3B8', dark: '#64748B', light: '#E2E8F0' },
+  pink:     { base: '#EC4899', dark: '#BE185D', light: '#FCE7F3' },
+  teal:     { base: '#14B8A6', dark: '#0F766E', light: '#CCFBF1' },
+  bronze:   { base: '#CD7F32', dark: '#8B5722', light: '#F0D4A8' },
+  silver:   { base: '#C0C0C0', dark: '#808080', light: '#E8E8E8' },
+  goldMetal:{ base: '#FFD700', dark: '#B8860B', light: '#FFF5CC' },
+  platinum: { base: '#14B8A6', dark: '#0F766E', light: '#CCFBF1' },
+  masters:  { base: '#A855F7', dark: '#6D28D9', light: '#EDE9FE' },
+};
+
+// tier color for levels
+function levelColor(n) {
+  if (n <= 5) return C.steel;
+  if (n <= 10) return C.green;
+  if (n <= 15) return C.blue;
+  if (n <= 20) return C.purple;
+  if (n <= 25) return C.gold;
+  return C.red;
+}
+
+// ── Shared gradient defs ──
+function defs(id, c) {
+  return `<defs>
+    <linearGradient id="${id}-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${c.base}"/>
+      <stop offset="100%" stop-color="${c.dark}"/>
+    </linearGradient>
+    <linearGradient id="${id}-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="${c.light}"/>
+      <stop offset="100%" stop-color="${c.base}" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="${id}-shine" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>`;
+}
+
+// ── Base: Circle badge (topics) ──
+function circleBase(id, c, symbol) {
+  return `${defs(id, c)}
+  <g data-part="base">
+    <circle cx="32" cy="32" r="28" fill="url(#${id}-fill)" stroke="${c.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="32" r="28" fill="url(#${id}-shine)"/>
+  </g>
+  <g data-part="body">${symbol}</g>
+  <g data-part="highlight">
+    <circle cx="20" cy="18" r="4" fill="white" opacity="0.15"/>
+  </g>`;
+}
+
+// ── Base: Rounded square (quests/shop) ──
+function squareBase(id, c, symbol) {
+  return `${defs(id, c)}
+  <g data-part="base">
+    <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#${id}-fill)" stroke="${c.dark}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="4" y="4" width="56" height="56" rx="14" fill="white" fill-opacity="0.06"/>
+  </g>
+  <g data-part="body">${symbol}</g>
+  <g data-part="highlight">
+    <circle cx="16" cy="14" r="3" fill="white" opacity="0.12"/>
+  </g>`;
+}
+
+// ── Base: Shield (leagues) ──
+function shieldBase(id, c, symbol) {
+  return `<defs>
+    <linearGradient id="${id}-body" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="${c.base}"/>
+      <stop offset="50%" stop-color="${c.dark}"/>
+      <stop offset="100%" stop-color="${c.base}" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="${id}-shine" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g data-part="base">
+    <path d="M32,4 L56,14 L56,34 Q56,50 32,60 Q8,50 8,34 L8,14Z" fill="url(#${id}-body)" stroke="${c.dark}" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M32,4 L56,14 L56,34 Q56,50 32,60 Q8,50 8,34 L8,14Z" fill="url(#${id}-shine)"/>
+    <path d="M32,9 L51,17 L51,33 Q51,47 32,55 Q13,47 13,33 L13,17Z" fill="none" stroke="${c.base}" stroke-width="1" opacity="0.4" stroke-linejoin="round"/>
+  </g>
+  <g data-part="body">${symbol}</g>
+  <g data-part="highlight">
+    <ellipse cx="24" cy="18" rx="6" ry="4" fill="white" opacity="0.1"/>
+  </g>`;
+}
+
+// ── Base: Medal (achievements) ──
+function medalBase(id, c, symbol) {
+  return `<defs>
+    <linearGradient id="${id}-ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${c.base}"/>
+      <stop offset="100%" stop-color="${c.dark}"/>
+    </linearGradient>
+    <linearGradient id="${id}-inner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="100%" stop-color="${c.light}"/>
+    </linearGradient>
+    <linearGradient id="${id}-ribbon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${c.base}"/>
+      <stop offset="100%" stop-color="${c.dark}" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <g data-part="base">
+    <path d="M22,6 L18,18 L32,15 L46,18 L42,6" fill="url(#${id}-ribbon)" stroke="${c.dark}" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="32" cy="36" r="22" fill="url(#${id}-ring)" stroke="${c.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="36" r="18" fill="url(#${id}-inner)" stroke="${c.base}" stroke-width="1" opacity="0.6"/>
+  </g>
+  <g data-part="body">${symbol}</g>
+  <g data-part="highlight">
+    <circle cx="22" cy="24" r="3" fill="white" opacity="0.15"/>
+  </g>`;
+}
+
+// ── Base: Level badge ──
+function levelBase(id, c, n, symbol) {
+  return `${defs(id, c)}
+  <g data-part="base">
+    <circle cx="32" cy="30" r="26" fill="url(#${id}-fill)" stroke="${c.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="30" r="22" fill="${c.dark}" opacity="0.15"/>
+    <circle cx="32" cy="30" r="26" fill="url(#${id}-shine)"/>
+  </g>
+  <g data-part="body">${symbol}</g>
+  <g data-part="badge">
+    <text x="32" y="59" text-anchor="middle" font-size="9" font-weight="bold" fill="${c.light}" font-family="system-ui,sans-serif">${n}</text>
+  </g>
+  <g data-part="highlight">
+    <circle cx="20" cy="16" r="3" fill="white" opacity="0.12"/>
+  </g>`;
+}
+
+// ── Base: Streak medal ──
+function streakBase(id, c, num, symbol) {
+  return `<defs>
+    <linearGradient id="${id}-medal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${c.base}"/>
+      <stop offset="100%" stop-color="${c.dark}"/>
+    </linearGradient>
+    <radialGradient id="${id}-flame" cx="0.5" cy="0.7" r="0.5">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="${c.base}"/>
+      <stop offset="100%" stop-color="${c.dark}"/>
+    </radialGradient>
+  </defs>
+  <g data-part="base">
+    <path d="M24,6 L20,16 L32,14 L44,16 L40,6" fill="${c.base}" stroke="${c.dark}" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="32" cy="34" r="22" fill="url(#${id}-medal)" stroke="${c.dark}" stroke-width="2.5"/>
+    <circle cx="32" cy="34" r="18" fill="none" stroke="${c.base}" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g data-part="body">${symbol}</g>
+  <g data-part="badge">
+    <circle cx="48" cy="48" r="10" fill="${c.base}" stroke="${c.dark}" stroke-width="2"/>
+    <circle cx="48" cy="48" r="7" fill="white" stroke="${c.dark}" stroke-width="0.5"/>
+    <text x="48" y="52" text-anchor="middle" font-size="10" font-weight="bold" fill="${c.dark}" font-family="system-ui,sans-serif">${num}</text>
+  </g>`;
+}
+
+// ── Base: Frame ring ──
+function frameBase(id, c, decoration) {
+  return `${defs(id, c)}
+  <g data-part="base">
+    <circle cx="32" cy="32" r="28" fill="none" stroke="url(#${id}-fill)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g data-part="body">${decoration}</g>`;
+}
+
+// ═══════════════════════════════════════════
+// ICON DEFINITIONS
+// ═══════════════════════════════════════════
+
+const icons = {};
+
+// ────────────────────────────
+// TOPICS (11)
+// ────────────────────────────
+
+icons['topic-statics'] = { category: 'Topics', label: 'Statics', draw(id) {
+  return circleBase(id, C.green, `
+    <polygon points="32,38 26,48 38,48" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round" opacity="0.9"/>
+    <line x1="20" y1="48" x2="44" y2="48" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="14" y="26" width="36" height="4" rx="2" fill="white" opacity="0.9"/>
+    <line x1="18" y1="30" x2="18" y2="22" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="46" y1="30" x2="46" y2="22" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M12,22 Q15,24 18,22 Q21,24 24,22" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M40,22 Q43,24 46,22 Q49,24 52,22" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="18" y1="14" x2="18" y2="20" stroke="#FFD900" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="18,21 15.5,17 20.5,17" fill="#FFD900"/>
+    <line x1="46" y1="14" x2="46" y2="20" stroke="#FFD900" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="46,21 43.5,17 48.5,17" fill="#FFD900"/>
+  `);
+}};
+
+icons['topic-dynamics'] = { category: 'Topics', label: 'Dynamics', draw(id) {
+  return circleBase(id, C.purple, `
+    <rect x="8" y="20" width="4" height="24" rx="2" fill="white" opacity="0.85"/>
+    <polyline points="12,28 17,25 22,31 27,25 32,31 37,25 40,28" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="40" y="22" width="14" height="12" rx="3" fill="white" opacity="0.9"/>
+    <line x1="12" y1="40" x2="40" y2="40" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <rect x="14" y="37" width="4" height="6" rx="1" fill="white" opacity="0.6"/>
+    <rect x="34" y="37" width="4" height="6" rx="1" fill="white" opacity="0.6"/>
+    <line x1="54" y1="28" x2="48" y2="28" stroke="#FFD900" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="55,28 51,25 51,31" fill="#FFD900"/>
+  `);
+}};
+
+icons['topic-strength'] = { category: 'Topics', label: 'Strength of Materials', draw(id) {
+  return circleBase(id, C.red, `
+    <rect x="12" y="28" width="40" height="8" rx="2" fill="white" opacity="0.9"/>
+    <line x1="8" y1="32" x2="16" y2="32" stroke="#FFD900" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="8,32 12,29 12,35" fill="#FFD900"/>
+    <line x1="56" y1="32" x2="48" y2="32" stroke="#FFD900" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="56,32 52,29 52,35" fill="#FFD900"/>
+    <line x1="32" y1="28" x2="32" y2="20" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="32" y1="36" x2="32" y2="44" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <text x="32" y="23" text-anchor="middle" font-size="7" font-weight="bold" fill="white" opacity="0.8" font-family="system-ui">σ</text>
+    <text x="32" y="50" text-anchor="middle" font-size="7" font-weight="bold" fill="white" opacity="0.8" font-family="system-ui">ε</text>
+  `);
+}};
+
+icons['topic-thermo'] = { category: 'Topics', label: 'Thermodynamics', draw(id) {
+  return circleBase(id, C.orange, `
+    <path d="M32,14 Q26,22 24,30 Q22,38 32,44 Q42,38 40,30 Q38,22 32,14Z" fill="white" opacity="0.9" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M32,20 Q29,26 28,32 Q27,37 32,40 Q37,37 36,32 Q35,26 32,20Z" fill="${C.orange.base}" opacity="0.6"/>
+    <path d="M32,26 Q30.5,30 30,33 Q29.5,36 32,37 Q34.5,36 34,33 Q33.5,30 32,26Z" fill="#FFD900" opacity="0.8"/>
+    <circle cx="30" cy="22" r="1.5" fill="white" opacity="0.4"/>
+  `);
+}};
+
+icons['topic-heat-transfer'] = { category: 'Topics', label: 'Heat Transfer', draw(id) {
+  return circleBase(id, C.cyan, `
+    <path d="M16,20 Q22,16 28,20 Q34,24 40,20 Q46,16 52,20" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M16,32 Q22,28 28,32 Q34,36 40,32 Q46,28 52,32" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <path d="M16,44 Q22,40 28,44 Q34,48 40,44 Q46,40 52,44" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+    <polygon points="50,14 54,18 50,16 54,20" fill="#FF4B4B" opacity="0.8"/>
+    <polygon points="12,44 8,48 12,46 8,50" fill="${C.blue.base}" opacity="0.8"/>
+  `);
+}};
+
+icons['topic-fluids'] = { category: 'Topics', label: 'Fluid Mechanics', draw(id) {
+  return circleBase(id, C.blue, `
+    <path d="M32,14 Q24,24 22,32 Q20,42 32,48 Q44,42 42,32 Q40,24 32,14Z" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M32,22 Q28,28 27,33 Q26,40 32,44 Q38,40 37,33 Q36,28 32,22Z" fill="${C.blue.base}" opacity="0.4"/>
+    <ellipse cx="32" cy="38" rx="6" ry="3" fill="${C.blue.base}" opacity="0.3"/>
+    <path d="M28,24 Q30,20 32,24" fill="white" opacity="0.4" stroke="none"/>
+  `);
+}};
+
+icons['topic-materials'] = { category: 'Topics', label: 'Materials Science', draw(id) {
+  return circleBase(id, C.gold, `
+    <circle cx="32" cy="30" r="5" fill="white" opacity="0.9" stroke="white" stroke-width="1"/>
+    <circle cx="22" cy="38" r="4" fill="white" opacity="0.7"/>
+    <circle cx="42" cy="38" r="4" fill="white" opacity="0.7"/>
+    <circle cx="26" cy="22" r="3.5" fill="white" opacity="0.6"/>
+    <circle cx="38" cy="22" r="3.5" fill="white" opacity="0.6"/>
+    <line x1="32" y1="30" x2="22" y2="38" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="32" y1="30" x2="42" y2="38" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="32" y1="30" x2="26" y2="22" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="32" y1="30" x2="38" y2="22" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="22" y1="38" x2="42" y2="38" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    <line x1="26" y1="22" x2="38" y2="22" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  `);
+}};
+
+icons['topic-machine-elements'] = { category: 'Topics', label: 'Machine Elements', draw(id) {
+  return circleBase(id, C.teal, `
+    <path d="M32,12 L36,16 L36,20 L40,20 L44,16 L48,20 L44,24 L44,28 L48,28 L52,32 L48,36 L44,36 L44,40 L48,44 L44,48 L40,44 L36,44 L36,48 L32,52 L28,48 L28,44 L24,44 L20,48 L16,44 L20,40 L20,36 L16,36 L12,32 L16,28 L20,28 L20,24 L16,20 L20,16 L24,20 L28,20 L28,16Z"
+      fill="white" opacity="0.85" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+    <circle cx="32" cy="32" r="8" fill="${C.teal.dark}" opacity="0.5"/>
+    <circle cx="32" cy="32" r="4" fill="white" opacity="0.6"/>
+  `);
+}};
+
+icons['topic-gdt'] = { category: 'Topics', label: 'GD&T', draw(id) {
+  return circleBase(id, C.indigo, `
+    <rect x="16" y="18" width="32" height="8" rx="1" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="16" y="30" width="16" height="8" rx="1" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+    <rect x="36" y="30" width="12" height="8" rx="1" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+    <circle cx="24" cy="22" r="2" fill="white" opacity="0.9"/>
+    <text x="40" y="25" font-size="6" fill="white" font-weight="bold" font-family="system-ui" opacity="0.9">0.05</text>
+    <polygon points="32,42 28,48 36,48" fill="white" opacity="0.7" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+    <text x="24" y="36" font-size="7" fill="white" font-weight="bold" font-family="system-ui" opacity="0.8">A</text>
+  `);
+}};
+
+icons['topic-vibrations'] = { category: 'Topics', label: 'Vibrations', draw(id) {
+  return circleBase(id, C.purple, `
+    <path d="M12,32 Q16,16 20,32 Q24,48 28,32 Q32,16 36,32 Q40,48 44,32 Q48,16 52,32" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="12" y1="32" x2="52" y2="32" stroke="white" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+    <circle cx="28" cy="32" r="2" fill="#FFD900" opacity="0.8"/>
+  `);
+}};
+
+icons['topic-mechanisms'] = { category: 'Topics', label: 'Mechanisms', draw(id) {
+  return circleBase(id, C.steel, `
+    <circle cx="22" cy="24" r="6" fill="none" stroke="white" stroke-width="2.5"/>
+    <circle cx="22" cy="24" r="2" fill="white" opacity="0.8"/>
+    <circle cx="42" cy="24" r="4" fill="none" stroke="white" stroke-width="2.5"/>
+    <circle cx="42" cy="24" r="1.5" fill="white" opacity="0.8"/>
+    <circle cx="36" cy="42" r="5" fill="none" stroke="white" stroke-width="2.5"/>
+    <circle cx="36" cy="42" r="2" fill="white" opacity="0.8"/>
+    <line x1="28" y1="24" x2="38" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="42" y1="28" x2="36" y2="37" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="22" y1="30" x2="32" y2="40" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  `);
+}};
+
+// ────────────────────────────
+// LEAGUES (5)
+// ────────────────────────────
+
+icons['league-bronze'] = { category: 'Leagues', label: 'Bronze', draw(id) {
+  return shieldBase(id, C.bronze, `
+    <line x1="22" y1="20" x2="42" y2="40" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <line x1="42" y1="20" x2="22" y2="40" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="32" cy="30" r="5" fill="white" opacity="0.3" stroke="white" stroke-width="1.5"/>
+    <circle cx="32" cy="30" r="2" fill="white" opacity="0.5"/>
+  `);
+}};
+
+icons['league-silver'] = { category: 'Leagues', label: 'Silver', draw(id) {
+  return shieldBase(id, C.silver, `
+    <circle cx="32" cy="28" r="8" fill="none" stroke="white" stroke-width="2.5" opacity="0.8"/>
+    <circle cx="32" cy="28" r="3" fill="white" opacity="0.5"/>
+    <text x="32" y="48" text-anchor="middle" font-size="10" font-weight="bold" fill="white" opacity="0.7" font-family="system-ui">II</text>
+  `);
+}};
+
+icons['league-gold'] = { category: 'Leagues', label: 'Gold', draw(id) {
+  return shieldBase(id, C.goldMetal, `
+    <path d="M32,16 L35,24 L44,24 L37,30 L39,38 L32,34 L25,38 L27,30 L20,24 L29,24Z" fill="white" opacity="0.85" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M24,44 L28,40 L32,42 L36,40 L40,44" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  `);
+}};
+
+icons['league-platinum'] = { category: 'Leagues', label: 'Platinum', draw(id) {
+  return shieldBase(id, C.platinum, `
+    <polygon points="32,16 38,28 32,24 26,28" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="32,24 44,34 32,30 20,34" fill="white" opacity="0.6" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+    <polygon points="32,30 38,42 32,38 26,42" fill="white" opacity="0.4" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+    <circle cx="32" cy="28" r="2" fill="white" opacity="0.9"/>
+  `);
+}};
+
+icons['league-masters'] = { category: 'Leagues', label: 'Masters', draw(id) {
+  return shieldBase(id, C.masters, `
+    <path d="M22,28 L26,18 L30,24 L32,16 L34,24 L38,18 L42,28" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="32" cy="36" r="6" fill="white" opacity="0.3" stroke="white" stroke-width="1.5"/>
+    <path d="M22,44 Q27,48 32,44 Q37,48 42,44" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="32" cy="36" r="2.5" fill="white" opacity="0.6"/>
+  `);
+}};
+
+// ────────────────────────────
+// LEVELS (30)
+// ────────────────────────────
+
+const levelSymbols = [
+  /* 1  Apprentice */      `<polygon points="32,16 40,22 40,34 32,40 24,34 24,22" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><circle cx="32" cy="28" r="5" fill="${C.steel.dark}" opacity="0.4"/>`,
+  /* 2  ShopHand */        `<path d="M24,18 C20,22 20,28 24,32 L38,44 C40,46 43,46 45,44 C47,42 47,39 45,37 L31,24 C35,20 35,14 31,10Z" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>`,
+  /* 3  Drafter */         `<rect x="20" y="14" width="8" height="36" rx="2" fill="white" opacity="0.85" stroke="white" stroke-width="1" transform="rotate(-30 24 32)"/><line x1="22" y1="20" x2="22" y2="44" stroke="${C.steel.dark}" stroke-width="1" opacity="0.3" transform="rotate(-30 24 32)"/>`,
+  /* 4  JuniorTech */      `<rect x="20" y="18" width="24" height="28" rx="3" fill="white" opacity="0.85"/><line x1="24" y1="24" x2="40" y2="24" stroke="${C.steel.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><line x1="24" y1="30" x2="36" y2="30" stroke="${C.steel.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/><line x1="24" y1="36" x2="38" y2="36" stroke="${C.steel.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>`,
+  /* 5  LabAssistant */    `<path d="M28,14 L28,28 L20,44 L44,44 L36,28 L36,14Z" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><rect x="26" y="12" width="12" height="4" rx="1" fill="white" opacity="0.7"/><circle cx="30" cy="38" r="2" fill="${C.steel.dark}" opacity="0.3"/><circle cx="36" cy="36" r="1.5" fill="${C.steel.dark}" opacity="0.2"/>`,
+  /* 6  DesignIntern */    `<polygon points="32,14 46,24 42,40 22,40 18,24" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><polygon points="32,20 40,26 38,36 26,36 24,26" fill="${C.green.dark}" opacity="0.2"/>`,
+  /* 7  AssociateEng */    `<path d="M32,12 L36,16 L36,20 L40,20 L44,16 L48,20 L44,24 L44,28 L48,28 L52,32 L48,36 L44,36 L44,40 L48,44 L44,48 L40,44 L36,44 L36,48 L32,52 L28,48 L28,44 L24,44 L20,48 L16,44 L20,40 L20,36 L16,36 L12,32 L16,28 L20,28 L20,24 L16,20 L20,16 L24,20 L28,20 L28,16Z" fill="white" opacity="0.8" stroke="white" stroke-width="1" stroke-linejoin="round"/><circle cx="32" cy="32" r="7" fill="${C.green.dark}" opacity="0.3"/><circle cx="32" cy="32" r="3" fill="white" opacity="0.5"/>`,
+  /* 8  ProjectEng */      `<rect x="18" y="20" width="28" height="22" rx="3" fill="white" opacity="0.85"/><line x1="22" y1="26" x2="42" y2="26" stroke="${C.green.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><rect x="22" y="30" width="8" height="3" rx="1" fill="${C.green.base}" opacity="0.5"/><rect x="22" y="35" width="14" height="3" rx="1" fill="${C.green.base}" opacity="0.3"/>`,
+  /* 9  StressAnalyst */   `<rect x="14" y="26" width="36" height="8" rx="2" fill="white" opacity="0.85"/><line x1="10" y1="30" x2="18" y2="30" stroke="#FFD900" stroke-width="2" stroke-linecap="round"/><line x1="54" y1="30" x2="46" y2="30" stroke="#FFD900" stroke-width="2" stroke-linecap="round"/><polygon points="10,30 14,27.5 14,32.5" fill="#FFD900"/><polygon points="54,30 50,27.5 50,32.5" fill="#FFD900"/>`,
+  /* 10 ThermalSpec */     `<rect x="24" y="14" width="6" height="32" rx="3" fill="white" opacity="0.85"/><circle cx="27" cy="42" r="7" fill="white" opacity="0.7"/><rect x="26" y="20" width="4" height="20" rx="2" fill="${C.green.base}" opacity="0.5"/><circle cx="27" cy="42" r="5" fill="${C.green.base}" opacity="0.4"/><line x1="36" y1="20" x2="40" y2="20" stroke="white" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/><line x1="36" y1="26" x2="42" y2="26" stroke="white" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/><line x1="36" y1="32" x2="38" y2="32" stroke="white" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>`,
+  /* 11 DesignLead */      `<path d="M20,44 L32,14 L44,44Z" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><line x1="24" y1="36" x2="40" y2="36" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><circle cx="32" cy="22" r="2" fill="white" opacity="0.6"/>`,
+  /* 12 ManufEng */        `<rect x="16" y="22" width="32" height="20" rx="3" fill="white" opacity="0.85"/><line x1="20" y1="30" x2="44" y2="30" stroke="${C.blue.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/><circle cx="28" cy="26" r="2" fill="${C.blue.base}" opacity="0.5"/><circle cx="36" cy="26" r="2" fill="${C.blue.base}" opacity="0.5"/><path d="M24,36 L28,32 L32,36 L36,32 L40,36" fill="none" stroke="${C.blue.base}" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>`,
+  /* 13 ReliabilityEng */  `<circle cx="32" cy="28" r="12" fill="none" stroke="white" stroke-width="2.5"/><path d="M32,28 L32,18" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M32,28 L40,32" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="28" r="2" fill="white" opacity="0.8"/><path d="M26,42 L32,38 L38,42" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>`,
+  /* 14 SystemsEng */      `<rect x="16" y="16" width="12" height="10" rx="2" fill="white" opacity="0.7"/><rect x="36" y="16" width="12" height="10" rx="2" fill="white" opacity="0.7"/><rect x="26" y="36" width="12" height="10" rx="2" fill="white" opacity="0.8"/><line x1="28" y1="26" x2="32" y2="36" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><line x1="36" y1="26" x2="32" y2="36" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>`,
+  /* 15 SeniorEng */       `<path d="M32,14 L36,22 L44,22 L38,28 L40,36 L32,32 L24,36 L26,28 L20,22 L28,22Z" fill="white" opacity="0.85" stroke="white" stroke-width="1" stroke-linejoin="round"/><circle cx="32" cy="24" r="3" fill="${C.blue.dark}" opacity="0.3"/>`,
+  /* 16 MaterialsSpec */   `<circle cx="26" cy="28" r="6" fill="white" opacity="0.7"/><circle cx="38" cy="28" r="6" fill="white" opacity="0.7"/><circle cx="32" cy="38" r="6" fill="white" opacity="0.7"/><line x1="26" y1="28" x2="38" y2="28" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><line x1="26" y1="28" x2="32" y2="38" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><line x1="38" y1="28" x2="32" y2="38" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>`,
+  /* 17 TechLead */        `<rect x="18" y="18" width="28" height="4" rx="2" fill="white" opacity="0.8"/><rect x="18" y="26" width="28" height="4" rx="2" fill="white" opacity="0.6"/><rect x="18" y="34" width="28" height="4" rx="2" fill="white" opacity="0.4"/><polygon points="46,14 52,20 46,20" fill="#FFD900" opacity="0.7"/>`,
+  /* 18 PrincipalEng */    `<path d="M32,14 L38,22 L46,22 L40,30 L42,38 L32,34 L22,38 L24,30 L18,22 L26,22Z" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M32,14 L38,22 L46,22 L40,30 L42,38 L32,34 L22,38 L24,30 L18,22 L26,22Z" fill="${C.purple.base}" opacity="0.15"/>`,
+  /* 19 RnDInnovator */    `<circle cx="32" cy="20" r="8" fill="white" opacity="0.85"/><line x1="32" y1="28" x2="32" y2="38" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="26" y1="42" x2="38" y2="42" stroke="white" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="46" x2="36" y2="46" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><path d="M28,14 Q32,8 36,14" fill="none" stroke="#FFD900" stroke-width="2" stroke-linecap="round"/>`,
+  /* 20 EngManager */      `<circle cx="32" cy="22" r="6" fill="white" opacity="0.85"/><path d="M20,44 Q20,34 32,34 Q44,34 44,44" fill="white" opacity="0.7"/><circle cx="18" cy="28" r="4" fill="white" opacity="0.5"/><circle cx="46" cy="28" r="4" fill="white" opacity="0.5"/>`,
+  /* 21 StaffEng */        `<rect x="20" y="16" width="24" height="30" rx="3" fill="white" opacity="0.85"/><line x1="24" y1="22" x2="40" y2="22" stroke="${C.gold.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><line x1="24" y1="28" x2="36" y2="28" stroke="${C.gold.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><line x1="24" y1="34" x2="38" y2="34" stroke="${C.gold.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/><circle cx="42" cy="14" r="4" fill="#FFD900" opacity="0.7"/>`,
+  /* 22 DomainExpert */    `<path d="M32,14 L42,22 L42,38 L32,46 L22,38 L22,22Z" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><circle cx="32" cy="30" r="6" fill="${C.gold.dark}" opacity="0.25"/><circle cx="32" cy="30" r="2.5" fill="white" opacity="0.6"/>`,
+  /* 23 DistinguishedEng */`<path d="M32,14 L36,22 L46,22 L38,28 L42,38 L32,32 L22,38 L26,28 L18,22 L28,22Z" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M32,32 L32,46" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M26,42 L38,42" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>`,
+  /* 24 ChiefEng */        `<path d="M20,36 L26,16 L32,24 L38,16 L44,36" fill="white" opacity="0.85" stroke="white" stroke-width="2" stroke-linejoin="round"/><rect x="18" y="36" width="28" height="4" rx="2" fill="white" opacity="0.7"/><circle cx="32" cy="24" r="2" fill="#FFD900" opacity="0.8"/>`,
+  /* 25 EngFellow */       `<path d="M32,12 L36,20 L46,20 L38,26 L42,36 L32,30 L22,36 L26,26 L18,20 L28,20Z" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><circle cx="32" cy="24" r="4" fill="#FFD900" opacity="0.5"/><path d="M22,42 Q27,48 32,42 Q37,48 42,42" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>`,
+  /* 26 TechDirector */    `<rect x="16" y="20" width="32" height="22" rx="3" fill="white" opacity="0.85"/><rect x="20" y="24" width="24" height="14" rx="1" fill="${C.red.dark}" opacity="0.2"/><path d="M28,28 L34,31 L28,34Z" fill="white" opacity="0.8"/><line x1="20" y1="14" x2="20" y2="20" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><circle cx="20" cy="12" r="2" fill="#FF4B4B" opacity="0.7"/>`,
+  /* 27 VPEng */           `<path d="M16,16 L32,44 L48,16" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="22" y1="24" x2="42" y2="24" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><circle cx="32" cy="12" r="3" fill="#FFD900" opacity="0.7"/>`,
+  /* 28 CTO */             `<rect x="14" y="16" width="36" height="28" rx="4" fill="white" opacity="0.85"/><rect x="18" y="20" width="28" height="20" rx="2" fill="${C.red.dark}" opacity="0.15"/><text x="32" y="34" text-anchor="middle" font-size="10" font-weight="bold" fill="white" opacity="0.9" font-family="system-ui">&lt;/&gt;</text>`,
+  /* 29 EngLegend */       `<path d="M32,10 L36,20 L48,20 L38,28 L42,40 L32,34 L22,40 L26,28 L16,20 L28,20Z" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M32,10 L36,20 L48,20 L38,28 L42,40 L32,34 L22,40 L26,28 L16,20 L28,20Z" fill="#FFD900" opacity="0.15"/><circle cx="32" cy="26" r="4" fill="#FFD900" opacity="0.5"/><path d="M24,46 L32,42 L40,46" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><circle cx="32" cy="26" r="1.5" fill="white" opacity="0.8"/>`,
+  /* 30 Grandmaster */     `<path d="M18,34 L24,16 L30,22 L32,12 L34,22 L40,16 L46,34" fill="white" opacity="0.85" stroke="white" stroke-width="2" stroke-linejoin="round"/><rect x="16" y="34" width="32" height="4" rx="2" fill="white" opacity="0.7"/><circle cx="32" cy="12" r="3" fill="#FFD900" opacity="0.8"/><path d="M22,42 Q27,48 32,44 Q37,48 42,42" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>`,
+];
+
+const levelNames = [
+  'Apprentice','Shop Hand','Drafter','Junior Tech','Lab Assistant',
+  'Design Intern','Associate Eng','Project Eng','Stress Analyst','Thermal Spec',
+  'Design Lead','Manuf Eng','Reliability Eng','Systems Eng','Senior Eng',
+  'Materials Spec','Tech Lead','Principal Eng','R&D Innovator','Eng Manager',
+  'Staff Eng','Domain Expert','Distinguished Eng','Chief Eng','Eng Fellow',
+  'Tech Director','VP Eng','CTO','Eng Legend','Grandmaster'
+];
+
+for (let i = 0; i < 30; i++) {
+  const n = i + 1;
+  const key = `level-${n}`;
+  icons[key] = {
+    category: 'Levels',
+    label: `Lv${n} ${levelNames[i]}`,
+    draw(id) { return levelBase(id, levelColor(n), n, levelSymbols[i]); }
+  };
+}
+
+// ────────────────────────────
+// ACHIEVEMENTS (30)
+// ────────────────────────────
+
+const achievementDefs = [
+  { key:'achievement-first-principles', label:'First Principles', color: C.indigo,
+    sym:`<path d="M32,22 L32,42" stroke="${C.indigo.dark}" stroke-width="2.5" stroke-linecap="round"/><path d="M26,28 L32,22 L38,28" fill="none" stroke="${C.indigo.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="42" r="3" fill="${C.indigo.base}" opacity="0.5"/>` },
+  { key:'achievement-building-momentum', label:'Building Momentum', color: C.green,
+    sym:`<path d="M22,42 L28,34 L34,38 L42,24" fill="none" stroke="${C.green.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><polygon points="42,24 38,26 40,30" fill="${C.green.dark}"/>` },
+  { key:'achievement-solid-foundation', label:'Solid Foundation', color: C.indigo,
+    sym:`<rect x="22" y="30" width="20" height="14" rx="2" fill="${C.indigo.dark}" opacity="0.4"/><rect x="26" y="24" width="12" height="8" rx="2" fill="${C.indigo.dark}" opacity="0.3"/><polygon points="32,18 22,28 42,28" fill="${C.indigo.base}" opacity="0.3"/>` },
+  { key:'achievement-centurion', label:'Centurion', color: C.green,
+    sym:`<text x="32" y="42" text-anchor="middle" font-size="16" font-weight="bold" fill="${C.green.dark}" font-family="system-ui">100</text>` },
+  { key:'achievement-flawless-execution', label:'Flawless Execution', color: C.amber,
+    sym:`<circle cx="32" cy="34" r="10" fill="none" stroke="${C.amber.dark}" stroke-width="2.5"/><path d="M26,34 L30,38 L38,28" fill="none" stroke="${C.amber.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>` },
+  { key:'achievement-no-easy-mode', label:'No Easy Mode', color: C.amber,
+    sym:`<path d="M24,24 L40,40" stroke="${C.amber.dark}" stroke-width="2.5" stroke-linecap="round"/><path d="M40,24 L24,40" stroke="${C.amber.dark}" stroke-width="2.5" stroke-linecap="round"/><circle cx="32" cy="32" r="10" fill="none" stroke="${C.amber.dark}" stroke-width="2"/>` },
+  { key:'achievement-back-of-envelope', label:'Back of Envelope', color: C.indigo,
+    sym:`<rect x="22" y="22" width="20" height="22" rx="2" fill="${C.indigo.dark}" opacity="0.3"/><line x1="26" y1="28" x2="38" y2="28" stroke="${C.indigo.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><line x1="26" y1="34" x2="36" y2="34" stroke="${C.indigo.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><line x1="26" y1="38" x2="34" y2="38" stroke="${C.indigo.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>` },
+  { key:'achievement-getting-warmed-up', label:'Getting Warmed Up', color: C.green,
+    sym:`<path d="M32,24 Q28,30 28,36 Q28,42 32,44 Q36,42 36,36 Q36,30 32,24Z" fill="${C.green.dark}" opacity="0.4"/><circle cx="32" cy="36" r="2" fill="${C.green.base}" opacity="0.6"/>` },
+  { key:'achievement-seven-day-streak', label:'Seven Day Streak', color: C.green,
+    sym:`<path d="M32,22 Q28,28 26,32 Q24,38 32,42 Q40,38 38,32 Q36,28 32,22Z" fill="${C.amber.base}" opacity="0.5"/><text x="32" y="38" text-anchor="middle" font-size="10" font-weight="bold" fill="${C.green.dark}" font-family="system-ui">7</text>` },
+  { key:'achievement-fortnight-of-focus', label:'Fortnight of Focus', color: C.green,
+    sym:`<path d="M32,22 Q28,28 26,32 Q24,38 32,42 Q40,38 38,32 Q36,28 32,22Z" fill="${C.amber.base}" opacity="0.5"/><text x="32" y="38" text-anchor="middle" font-size="9" font-weight="bold" fill="${C.green.dark}" font-family="system-ui">14</text>` },
+  { key:'achievement-iron-will', label:'Iron Will', color: C.green,
+    sym:`<path d="M32,20 L50,30 L50,40 Q50,48 32,52 Q14,48 14,40 L14,30Z" fill="${C.green.dark}" opacity="0.35" stroke="${C.green.dark}" stroke-width="1.5" stroke-linejoin="round"/><path d="M26,36 L30,40 L38,30" fill="none" stroke="${C.green.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>` },
+  { key:'achievement-challenger', label:'Challenger', color: C.amber,
+    sym:`<path d="M24,24 L32,18 L40,24 L40,40 L32,44 L24,40Z" fill="${C.amber.dark}" opacity="0.3" stroke="${C.amber.dark}" stroke-width="1.5" stroke-linejoin="round"/><text x="32" y="36" text-anchor="middle" font-size="12" font-weight="bold" fill="${C.amber.dark}" font-family="system-ui">!</text>` },
+  { key:'achievement-weekend-warrior', label:'Weekend Warrior', color: C.amber,
+    sym:`<rect x="22" y="24" width="20" height="20" rx="3" fill="${C.amber.dark}" opacity="0.3"/><text x="32" y="30" text-anchor="middle" font-size="7" font-weight="bold" fill="${C.amber.dark}" font-family="system-ui">SAT</text><text x="32" y="40" text-anchor="middle" font-size="7" font-weight="bold" fill="${C.amber.dark}" font-family="system-ui">SUN</text>` },
+  { key:'achievement-quick-draw', label:'Quick Draw', color: C.amber,
+    sym:`<circle cx="32" cy="32" r="10" fill="none" stroke="${C.amber.dark}" stroke-width="2"/><path d="M32,24 L32,32 L38,36" stroke="${C.amber.dark}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polygon points="44,20 48,16 48,24" fill="${C.amber.base}" opacity="0.6"/>` },
+  { key:'achievement-confidence-calibrated', label:'Confidence Calibrated', color: C.amber,
+    sym:`<circle cx="32" cy="34" r="12" fill="none" stroke="${C.amber.dark}" stroke-width="2"/><circle cx="32" cy="34" r="7" fill="none" stroke="${C.amber.dark}" stroke-width="1.5" opacity="0.6"/><circle cx="32" cy="34" r="3" fill="${C.amber.dark}" opacity="0.5"/>` },
+  { key:'achievement-eagle-eye', label:'Eagle Eye', color: C.amber,
+    sym:`<ellipse cx="32" cy="34" rx="14" ry="8" fill="none" stroke="${C.amber.dark}" stroke-width="2.5"/><circle cx="32" cy="34" r="4" fill="${C.amber.dark}" opacity="0.5"/><circle cx="32" cy="34" r="2" fill="${C.amber.base}" opacity="0.6"/>` },
+  { key:'achievement-scenario-commander', label:'Scenario Commander', color: C.amber,
+    sym:`<path d="M20,26 L32,22 L44,26 L44,40 L32,44 L20,40Z" fill="${C.amber.dark}" opacity="0.3" stroke="${C.amber.dark}" stroke-width="1.5" stroke-linejoin="round"/><path d="M32,22 L32,44" stroke="${C.amber.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><path d="M20,33 L44,33" stroke="${C.amber.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>` },
+  { key:'achievement-gauntlet-runner', label:'Gauntlet Runner', color: C.amber,
+    sym:`<path d="M22,40 L28,26 L34,34 L40,22 L46,40" fill="none" stroke="${C.amber.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="22" r="2.5" fill="${C.amber.base}" opacity="0.6"/>` },
+  { key:'achievement-first-steps', label:'First Steps', color: C.indigo,
+    sym:`<path d="M26,24 L30,24 L30,28 L26,28Z" fill="${C.indigo.dark}" opacity="0.4" transform="rotate(-15 28 26)"/><path d="M34,32 L38,32 L38,36 L34,36Z" fill="${C.indigo.dark}" opacity="0.5" transform="rotate(10 36 34)"/><path d="M28,40 L32,40 L32,44 L28,44Z" fill="${C.indigo.dark}" opacity="0.3" transform="rotate(-10 30 42)"/>` },
+  { key:'achievement-renaissance-engineer', label:'Renaissance Engineer', color: C.cyan,
+    sym:`<circle cx="32" cy="32" r="10" fill="none" stroke="${C.cyan.dark}" stroke-width="2"/><line x1="32" y1="22" x2="32" y2="42" stroke="${C.cyan.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><line x1="22" y1="32" x2="42" y2="32" stroke="${C.cyan.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><circle cx="32" cy="26" r="2" fill="${C.cyan.base}" opacity="0.5"/><circle cx="38" cy="32" r="2" fill="${C.cyan.base}" opacity="0.5"/><circle cx="32" cy="38" r="2" fill="${C.cyan.base}" opacity="0.5"/><circle cx="26" cy="32" r="2" fill="${C.cyan.base}" opacity="0.5"/>` },
+  { key:'achievement-polymath', label:'Polymath', color: C.cyan,
+    sym:`<rect x="22" y="24" width="8" height="10" rx="1" fill="${C.cyan.dark}" opacity="0.4"/><rect x="34" y="28" width="8" height="10" rx="1" fill="${C.cyan.dark}" opacity="0.3"/><rect x="24" y="38" width="8" height="6" rx="1" fill="${C.cyan.dark}" opacity="0.2"/><line x1="30" y1="34" x2="34" y2="34" stroke="${C.cyan.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>` },
+  { key:'achievement-format-master', label:'Format Master', color: C.cyan,
+    sym:`<rect x="22" y="24" width="20" height="20" rx="2" fill="none" stroke="${C.cyan.dark}" stroke-width="2"/><line x1="22" y1="30" x2="42" y2="30" stroke="${C.cyan.dark}" stroke-width="1.5" opacity="0.5"/><line x1="30" y1="30" x2="30" y2="44" stroke="${C.cyan.dark}" stroke-width="1.5" opacity="0.5"/><path d="M26,26 L30,24 L34,26" fill="none" stroke="${C.cyan.dark}" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>` },
+  { key:'achievement-bookmarked', label:'Bookmarked', color: C.cyan,
+    sym:`<path d="M24,22 L24,44 L32,38 L40,44 L40,22Z" fill="${C.cyan.dark}" opacity="0.4" stroke="${C.cyan.dark}" stroke-width="1.5" stroke-linejoin="round"/>` },
+  { key:'achievement-topic-master', label:'Topic Master', color: C.gold,
+    sym:`<path d="M32,22 L35,30 L44,30 L37,36 L39,44 L32,40 L25,44 L27,36 L20,30 L29,30Z" fill="${C.gold.dark}" opacity="0.5" stroke="${C.gold.dark}" stroke-width="1" stroke-linejoin="round"/>` },
+  { key:'achievement-multi-domain-expert', label:'Multi-Domain Expert', color: C.gold,
+    sym:`<circle cx="26" cy="30" r="5" fill="${C.gold.dark}" opacity="0.3"/><circle cx="38" cy="30" r="5" fill="${C.gold.dark}" opacity="0.3"/><circle cx="32" cy="40" r="5" fill="${C.gold.dark}" opacity="0.3"/><circle cx="32" cy="34" r="3" fill="${C.gold.base}" opacity="0.5"/>` },
+  { key:'achievement-weakness-conquered', label:'Weakness Conquered', color: C.gold,
+    sym:`<path d="M32,22 L50,32 L50,38 Q50,46 32,50 Q14,46 14,38 L14,32Z" fill="${C.gold.dark}" opacity="0.3" stroke="${C.gold.dark}" stroke-width="1.5" stroke-linejoin="round"/><path d="M26,36 L30,40 L38,30" fill="none" stroke="${C.gold.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>` },
+  { key:'achievement-interview-ready', label:'Interview Ready', color: C.gold,
+    sym:`<circle cx="32" cy="28" r="6" fill="${C.gold.dark}" opacity="0.3"/><path d="M20,44 Q20,36 32,36 Q44,36 44,44" fill="${C.gold.dark}" opacity="0.25"/><rect x="28" y="22" width="8" height="4" rx="1" fill="${C.gold.dark}" opacity="0.2"/>` },
+  { key:'achievement-night-owl', label:'Night Owl', color: C.purple,
+    sym:`<circle cx="28" cy="30" r="5" fill="${C.purple.dark}" opacity="0.3" stroke="${C.purple.dark}" stroke-width="1.5"/><circle cx="36" cy="30" r="5" fill="${C.purple.dark}" opacity="0.3" stroke="${C.purple.dark}" stroke-width="1.5"/><circle cx="28" cy="30" r="2" fill="${C.purple.base}" opacity="0.6"/><circle cx="36" cy="30" r="2" fill="${C.purple.base}" opacity="0.6"/><path d="M26,38 Q32,42 38,38" fill="none" stroke="${C.purple.dark}" stroke-width="1.5" stroke-linecap="round"/><path d="M20,24 L26,26" stroke="${C.purple.dark}" stroke-width="1.5" stroke-linecap="round"/><path d="M44,24 L38,26" stroke="${C.purple.dark}" stroke-width="1.5" stroke-linecap="round"/>` },
+  { key:'achievement-early-bird', label:'Early Bird', color: C.purple,
+    sym:`<circle cx="38" cy="22" r="6" fill="${C.amber.base}" opacity="0.3"/><path d="M28,30 Q24,38 28,42 Q32,44 36,42 Q38,40 38,36 L34,34 L28,30Z" fill="${C.purple.dark}" opacity="0.4"/><circle cx="30" cy="34" r="1.5" fill="${C.purple.base}" opacity="0.6"/><path d="M34,34 L40,32" stroke="${C.purple.dark}" stroke-width="1.5" stroke-linecap="round"/>` },
+  { key:'achievement-learning-from-failure', label:'Learning From Failure', color: C.purple,
+    sym:`<path d="M24,42 L30,26 L36,36 L42,22" fill="none" stroke="${C.purple.dark}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="42" cy="22" r="3" fill="${C.purple.base}" opacity="0.5"/><polygon points="42,22 46,18 46,26" fill="${C.purple.base}" opacity="0.3"/>` },
+];
+
+achievementDefs.forEach(a => {
+  icons[a.key] = {
+    category: 'Achievements',
+    label: a.label,
+    draw(id) { return medalBase(id, a.color, a.sym); }
+  };
+});
+
+// ────────────────────────────
+// QUESTS (24)
+// ────────────────────────────
+
+const questDefs = [
+  { key:'quest-double-up', label:'Double Up', sym:`<polyline points="22,34 32,22 42,34" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="22,46 32,34 42,46" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>` },
+  { key:'quest-sharp-shooter', label:'Sharp Shooter', sym:`<circle cx="32" cy="32" r="14" stroke="white" stroke-width="2" fill="none"/><circle cx="32" cy="32" r="7" stroke="white" stroke-width="1.5" fill="none" opacity="0.7"/><circle cx="32" cy="32" r="3" fill="#FFD900"/><line x1="32" y1="12" x2="32" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="32" y1="44" x2="32" y2="52" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="32" x2="20" y2="32" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="44" y1="32" x2="52" y2="32" stroke="white" stroke-width="2" stroke-linecap="round"/>` },
+  { key:'quest-dust-off', label:'Dust Off', sym:`<line x1="32" y1="18" x2="32" y2="42" stroke="white" stroke-width="3" stroke-linecap="round"/><path d="M24,42 L26,36 L30,40 L34,36 L38,40 L40,42" fill="white" opacity="0.8" stroke="white" stroke-width="1"/><line x1="26" y1="22" x2="22" y2="18" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/><line x1="38" y1="22" x2="42" y2="18" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/><circle cx="20" cy="16" r="1.5" fill="white" opacity="0.5"/><circle cx="44" cy="16" r="1.5" fill="white" opacity="0.5"/>` },
+  { key:'quest-daily-challenger', label:'Daily Challenger', sym:`<rect x="20" y="18" width="24" height="28" rx="3" fill="none" stroke="white" stroke-width="2.5"/><line x1="20" y1="26" x2="44" y2="26" stroke="white" stroke-width="2" stroke-linecap="round"/><text x="32" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="white" font-family="system-ui">!</text>` },
+  { key:'quest-answer-machine', label:'Answer Machine', sym:`<rect x="18" y="16" width="28" height="32" rx="4" fill="none" stroke="white" stroke-width="2.5"/><circle cx="32" cy="28" r="6" fill="white" opacity="0.2" stroke="white" stroke-width="1.5"/><path d="M28,28 L31,31 L36,25" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="24" y1="40" x2="40" y2="40" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>` },
+  { key:'quest-xp-grind', label:'XP Grind', sym:`<polygon points="32,14 38,26 32,24 38,42 28,30 32,32 24,18" fill="white" opacity="0.9" stroke="white" stroke-width="1" stroke-linejoin="round"/><text x="38" y="50" font-size="10" font-weight="bold" fill="#FFD900" font-family="system-ui">XP</text>` },
+  { key:'quest-star-collector', label:'Star Collector', sym:`<path d="M32,16 L35,26 L46,26 L38,32 L40,42 L32,38 L24,42 L26,32 L18,26 L29,26Z" fill="white" opacity="0.9" stroke="white" stroke-width="1" stroke-linejoin="round"/>` },
+  { key:'quest-on-track', label:'On Track', sym:`<circle cx="32" cy="32" r="14" fill="none" stroke="white" stroke-width="2.5"/><path d="M26,32 L30,36 L38,26" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>` },
+  { key:'quest-speed-round', label:'Speed Round', sym:`<circle cx="32" cy="32" r="14" fill="none" stroke="white" stroke-width="2.5"/><path d="M32,20 L32,32 L40,36" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="32" r="2" fill="white" opacity="0.8"/>` },
+  { key:'quest-flawless', label:'Flawless', sym:`<path d="M32,18 L35,26 L44,26 L37,32 L39,40 L32,36 L25,40 L27,32 L20,26 L29,26Z" fill="#FFD900" opacity="0.9"/><circle cx="32" cy="28" r="3" fill="white" opacity="0.4"/>` },
+  { key:'quest-committed-learner', label:'Committed Learner', sym:`<rect x="20" y="16" width="24" height="30" rx="3" fill="none" stroke="white" stroke-width="2.5"/><line x1="26" y1="24" x2="38" y2="24" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><line x1="26" y1="30" x2="38" y2="30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="26" y1="36" x2="34" y2="36" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.4"/>` },
+  { key:'quest-xp-hunter', label:'XP Hunter', sym:`<polygon points="32,16 38,28 32,26 38,44 28,32 32,34 24,20" fill="white" opacity="0.9"/><circle cx="44" cy="18" r="4" fill="#FFD900" opacity="0.6"/><circle cx="46" cy="16" r="1.5" fill="white" opacity="0.4"/>` },
+  { key:'quest-triple-star', label:'Triple Star', sym:`<path d="M20,22 L22,28 L28,28 L24,32 L25,38 L20,34 L15,38 L16,32 L12,28 L18,28Z" fill="white" opacity="0.9"/><path d="M32,16 L34,22 L40,22 L36,26 L37,32 L32,28 L27,32 L28,26 L24,22 L30,22Z" fill="white" opacity="0.9"/><path d="M44,22 L46,28 L52,28 L48,32 L49,38 L44,34 L39,38 L40,32 L36,28 L42,28Z" fill="white" opacity="0.9"/>` },
+  { key:'quest-broad-mind', label:'Broad Mind', sym:`<circle cx="32" cy="28" r="12" fill="none" stroke="white" stroke-width="2.5"/><path d="M24,28 Q28,20 32,28 Q36,20 40,28" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><circle cx="32" cy="42" r="3" fill="white" opacity="0.5"/>` },
+  { key:'quest-challenge-champion', label:'Challenge Champion', sym:`<path d="M22,42 L22,24 Q22,16 32,16 Q42,16 42,24 L42,42" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="18" y1="42" x2="46" y2="42" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M18,24 L22,24" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M42,24 L46,24" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>` },
+  { key:'quest-streak-week', label:'Streak Week', sym:`<path d="M32,16 Q26,26 24,32 Q22,40 32,46 Q42,40 40,32 Q38,26 32,16Z" fill="#FF9600" opacity="0.8"/><path d="M32,24 Q30,30 29,34 Q28,40 32,42 Q36,40 35,34 Q34,30 32,24Z" fill="#FFD900" opacity="0.7"/><text x="32" y="40" text-anchor="middle" font-size="8" font-weight="bold" fill="white" font-family="system-ui">7</text>` },
+  { key:'quest-unit-progress', label:'Unit Progress', sym:`<rect x="20" y="36" width="6" height="12" rx="2" fill="white" opacity="0.5"/><rect x="29" y="28" width="6" height="20" rx="2" fill="white" opacity="0.7"/><rect x="38" y="20" width="6" height="28" rx="2" fill="white" opacity="0.9"/>` },
+  { key:'quest-the-fifty', label:'The Fifty', sym:`<text x="32" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="white" font-family="system-ui">50</text>` },
+  { key:'quest-unit-complete', label:'Unit Complete', sym:`<circle cx="32" cy="30" r="14" fill="none" stroke="white" stroke-width="2.5"/><path d="M24,30 L30,36 L40,24" fill="none" stroke="#FFD900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="48" r="2" fill="white" opacity="0.5"/>` },
+  { key:'quest-precision-expert', label:'Precision Expert', sym:`<circle cx="32" cy="32" r="14" fill="none" stroke="white" stroke-width="2"/><circle cx="32" cy="32" r="9" fill="none" stroke="white" stroke-width="1.5" opacity="0.7"/><circle cx="32" cy="32" r="4" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/><circle cx="32" cy="32" r="2" fill="#FFD900"/><line x1="32" y1="14" x2="32" y2="20" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><line x1="32" y1="44" x2="32" y2="50" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>` },
+  { key:'quest-back-in-the-game', label:'Back in the Game', sym:`<path d="M44,24 Q44,16 36,16 L28,16 Q20,16 20,24 L20,28" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><polygon points="20,32 16,26 24,26" fill="white" opacity="0.9"/><circle cx="32" cy="40" r="3" fill="white" opacity="0.5"/>` },
+  { key:'quest-one-step', label:'One Step', sym:`<rect x="26" y="22" width="12" height="8" rx="2" fill="white" opacity="0.8" transform="rotate(-10 32 26)"/><path d="M28,34 L32,30 L36,34 L36,46 L28,46Z" fill="white" opacity="0.7"/>` },
+  { key:'quest-getting-back', label:'Getting Back', sym:`<path d="M22,36 Q22,22 32,22 Q42,22 42,36" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/><polygon points="42,40 46,34 38,34" fill="white" opacity="0.9"/><circle cx="32" cy="46" r="2" fill="white" opacity="0.5"/>` },
+];
+
+questDefs.forEach(q => {
+  icons[q.key] = {
+    category: 'Quests',
+    label: q.label,
+    draw(id) { return squareBase(id, C.indigo, q.sym); }
+  };
+});
+
+// ────────────────────────────
+// STREAK MILESTONES (6)
+// ────────────────────────────
+
+const flameSym = `<path d="M32,18 Q26,26 24,32 Q22,40 32,46 Q42,40 40,32 Q38,26 32,18Z" fill="url(#$ID-flame)" stroke="${C.amber.dark}" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M32,26 Q30,30 29,34 Q28,38 32,42 Q36,38 35,34 Q34,30 32,26Z" fill="#FDE68A" opacity="0.7"/>`;
+
+icons['streak-week-warrior'] = { category: 'Streaks', label: 'Week Warrior (7d)', draw(id) {
+  return streakBase(id, C.amber, '7', flameSym.replace(/\$ID/g, id));
+}};
+icons['streak-fortnight-focus'] = { category: 'Streaks', label: 'Fortnight Focus (14d)', draw(id) {
+  return streakBase(id, C.amber, '14', flameSym.replace(/\$ID/g, id));
+}};
+icons['streak-iron-will'] = { category: 'Streaks', label: 'Iron Will (30d)', draw(id) {
+  return streakBase(id, C.orange, '30', flameSym.replace(/\$ID/g, id));
+}};
+icons['streak-diamond-dedication'] = { category: 'Streaks', label: 'Diamond Dedication', draw(id) {
+  return streakBase(id, C.cyan, '60', `
+    <polygon points="32,18 42,30 38,30 44,44 32,36 20,44 26,30 22,30" fill="white" opacity="0.85" stroke="${C.cyan.dark}" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="32" cy="30" r="3" fill="${C.cyan.base}" opacity="0.5"/>
+  `);
+}};
+icons['streak-centurion'] = { category: 'Streaks', label: 'Centurion (100d)', draw(id) {
+  return streakBase(id, C.gold, '100', `
+    <path d="M32,16 Q24,24 22,32 Q20,42 32,48 Q44,42 42,32 Q40,24 32,16Z" fill="${C.gold.base}" opacity="0.6" stroke="${C.gold.dark}" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M32,24 Q29,28 28,32 Q27,38 32,42 Q37,38 36,32 Q35,28 32,24Z" fill="white" opacity="0.5"/>
+    <circle cx="32" cy="32" r="3" fill="${C.gold.base}" opacity="0.8"/>
+  `);
+}};
+icons['streak-chest'] = { category: 'Streaks', label: 'Reward Chest', draw(id) {
+  return `${defs(id, C.amber)}
+  <g data-part="base">
+    <rect x="12" y="28" width="40" height="24" rx="4" fill="url(#${id}-fill)" stroke="${C.amber.dark}" stroke-width="2.5" stroke-linejoin="round"/>
+    <rect x="12" y="24" width="40" height="10" rx="3" fill="${C.amber.base}" stroke="${C.amber.dark}" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <g data-part="body">
+    <rect x="28" y="28" width="8" height="8" rx="2" fill="${C.amber.dark}" opacity="0.4"/>
+    <circle cx="32" cy="32" r="3" fill="${C.gold.base}" stroke="${C.amber.dark}" stroke-width="1"/>
+  </g>
+  <g data-part="highlight">
+    <rect x="16" y="26" width="12" height="2" rx="1" fill="white" opacity="0.2"/>
+    <circle cx="32" cy="18" r="4" fill="#FFD900" opacity="0.6"/>
+    <line x1="26" y1="14" x2="28" y2="18" stroke="#FFD900" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="38" y1="14" x2="36" y2="18" stroke="#FFD900" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="32" y1="10" x2="32" y2="16" stroke="#FFD900" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  </g>`;
+}};
+
+// ────────────────────────────
+// SHOP (7)
+// ────────────────────────────
+
+icons['shop-streak-freeze'] = { category: 'Shop', label: 'Streak Freeze', draw(id) {
+  return squareBase(id, C.blue, `
+    <line x1="32" y1="14" x2="32" y2="50" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <line x1="18" y1="32" x2="46" y2="32" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <line x1="22" y1="20" x2="42" y2="44" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="42" y1="20" x2="22" y2="44" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="32" y1="14" x2="28" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+    <line x1="32" y1="14" x2="36" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+    <line x1="46" y1="32" x2="42" y2="28" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+    <line x1="46" y1="32" x2="42" y2="36" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  `);
+}};
+
+icons['shop-streak-repair'] = { category: 'Shop', label: 'Streak Repair', draw(id) {
+  return squareBase(id, C.amber, `
+    <path d="M20,44 L36,28 C34,24 36,18 42,16 L44,22 L50,20 C48,26 44,30 38,30 L22,46Z" fill="white" opacity="0.9" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M40,14 Q42,10 44,14 Q46,18 42,18 Q38,18 40,14Z" fill="#FF4B4B" opacity="0.8"/>
+    <circle cx="42" cy="12" r="1.5" fill="#FFD900" opacity="0.6"/>
+  `);
+}};
+
+icons['shop-double-xp'] = { category: 'Shop', label: 'Double XP', draw(id) {
+  return squareBase(id, C.purple, `
+    <polygon points="32,12 38,26 32,24 38,44 26,30 32,32 24,16" fill="white" opacity="0.9" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+    <circle cx="44" cy="16" r="6" fill="#FFD900" stroke="${C.purple.dark}" stroke-width="1.5"/>
+    <text x="44" y="19" text-anchor="middle" font-size="7" font-weight="bold" fill="${C.purple.dark}" font-family="system-ui">2x</text>
+  `);
+}};
+
+icons['shop-thermal-king'] = { category: 'Shop', label: 'Thermal King', draw(id) {
+  return squareBase(id, C.red, `
+    <path d="M20,36 L26,18 L30,26 L32,16 L34,26 L38,18 L44,36" fill="white" opacity="0.85" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+    <rect x="18" y="36" width="28" height="4" rx="2" fill="white" opacity="0.7"/>
+    <circle cx="32" cy="16" r="2" fill="#FFD900" opacity="0.8"/>
+  `);
+}};
+
+icons['shop-stress-master'] = { category: 'Shop', label: 'Stress Master', draw(id) {
+  return squareBase(id, C.indigo, `
+    <path d="M26,42 L26,24 Q26,18 32,16 L32,16 Q38,18 38,24 L38,32" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M38,32 L44,28 L44,36Z" fill="white" opacity="0.8"/>
+    <line x1="22" y1="20" x2="18" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="22" y1="28" x2="18" y2="28" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    <line x1="42" y1="20" x2="46" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  `);
+}};
+
+icons['shop-flow-guru'] = { category: 'Shop', label: 'Flow Guru', draw(id) {
+  return squareBase(id, C.cyan, `
+    <circle cx="32" cy="24" r="6" fill="white" opacity="0.8"/>
+    <path d="M26,34 L32,30 L38,34 L38,46 Q38,48 32,48 Q26,48 26,46Z" fill="white" opacity="0.7"/>
+    <path d="M16,28 Q22,20 28,28" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <path d="M36,28 Q42,20 48,28" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <path d="M12,36 Q20,28 28,36" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    <path d="M36,36 Q44,28 52,36" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  `);
+}};
+
+icons['shop-gem'] = { category: 'Shop', label: 'Gem', draw(id) {
+  return `<defs>
+    <linearGradient id="${id}-gem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <g data-part="base">
+    <polygon points="20,22 32,10 44,22 32,54" fill="url(#${id}-gem)" stroke="#1D4ED8" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+  <g data-part="body">
+    <line x1="20" y1="22" x2="44" y2="22" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="32" y1="10" x2="32" y2="54" stroke="#93C5FD" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+    <line x1="20" y1="22" x2="32" y2="54" stroke="#93C5FD" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+    <line x1="44" y1="22" x2="32" y2="54" stroke="#93C5FD" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+  </g>
+  <g data-part="highlight">
+    <polygon points="20,22 32,10 32,22" fill="white" opacity="0.2"/>
+    <circle cx="26" cy="18" r="2" fill="white" opacity="0.3"/>
+  </g>`;
+}};
+
+// ── Coin ──
+icons['coin'] = { category: 'Shop', label: 'Coin', draw(id) {
+  return `<defs>
+    <linearGradient id="${id}-coin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+  </defs>
+  <g data-part="base">
+    <circle cx="32" cy="34" r="24" fill="#B8860B"/>
+    <circle cx="32" cy="32" r="24" fill="url(#${id}-coin)" stroke="#B8860B" stroke-width="2"/>
+  </g>
+  <g data-part="body">
+    <circle cx="32" cy="32" r="18" fill="none" stroke="#B8860B" stroke-width="1.5" opacity="0.3"/>
+  </g>
+  <g data-part="highlight">
+    <path d="M20,24 Q32,14 44,24" fill="none" stroke="#FFF5CC" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  </g>`;
+}};
+
+// ────────────────────────────
+// FRAMES (50)
+// ────────────────────────────
+
+const frameDefs = [
+  // Common (metallic)
+  { key:'frame-gold-ring', label:'Gold Ring', c: C.goldMetal, dec:'' },
+  { key:'frame-emerald-halo', label:'Emerald Halo', c: C.green, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="${C.green.light}" stroke-width="2" opacity="0.3"/>` },
+  { key:'frame-ruby-blaze', label:'Ruby Blaze', c: C.red, dec:`<path d="M32,2 L34,6 L32,4 L30,6Z" fill="${C.red.base}" opacity="0.6"/><path d="M32,62 L34,58 L32,60 L30,58Z" fill="${C.red.base}" opacity="0.6"/>` },
+  { key:'frame-sapphire-wave', label:'Sapphire Wave', c: C.blue, dec:`<path d="M4,32 Q10,26 16,32 Q22,38 28,32" fill="none" stroke="${C.blue.light}" stroke-width="1.5" opacity="0.4"/>` },
+  { key:'frame-brushed-steel', label:'Brushed Steel', c: C.steel, dec:'' },
+  { key:'frame-copper-pipe', label:'Copper Pipe', c: C.bronze, dec:`<circle cx="32" cy="32" r="26" fill="none" stroke="${C.bronze.base}" stroke-width="1" opacity="0.3"/>` },
+  // Uncommon (engineering)
+  { key:'frame-hex-bolt', label:'Hex Bolt', c: C.steel, dec:`<polygon points="32,3 56,17 56,47 32,61 8,47 8,17" fill="none" stroke="${C.steel.base}" stroke-width="2" opacity="0.3"/>` },
+  { key:'frame-blueprint-border', label:'Blueprint Border', c: C.blue, dec:`<rect x="6" y="6" width="52" height="52" rx="2" fill="none" stroke="${C.blue.base}" stroke-width="0.5" opacity="0.3" stroke-dasharray="4 2"/>` },
+  { key:'frame-titanium-band', label:'Titanium Band', c: C.steel, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="white" stroke-width="1" opacity="0.15"/>` },
+  { key:'frame-rivet-ring', label:'Rivet Ring', c: C.steel, dec:`<circle cx="32" cy="4" r="2" fill="${C.steel.base}" opacity="0.5"/><circle cx="60" cy="32" r="2" fill="${C.steel.base}" opacity="0.5"/><circle cx="32" cy="60" r="2" fill="${C.steel.base}" opacity="0.5"/><circle cx="4" cy="32" r="2" fill="${C.steel.base}" opacity="0.5"/>` },
+  { key:'frame-cast-iron', label:'Cast Iron', c: { base:'#6B7280', dark:'#374151', light:'#D1D5DB' }, dec:'' },
+  { key:'frame-coil-spring', label:'Coil Spring', c: C.green, dec:`<circle cx="32" cy="32" r="24" fill="none" stroke="${C.green.base}" stroke-width="1.5" opacity="0.3" stroke-dasharray="6 4"/>` },
+  { key:'frame-gear-teeth', label:'Gear Teeth', c: C.teal, dec:`<circle cx="32" cy="2" r="3" fill="${C.teal.base}" opacity="0.3"/><circle cx="54" cy="10" r="3" fill="${C.teal.base}" opacity="0.3"/><circle cx="62" cy="32" r="3" fill="${C.teal.base}" opacity="0.3"/><circle cx="54" cy="54" r="3" fill="${C.teal.base}" opacity="0.3"/><circle cx="32" cy="62" r="3" fill="${C.teal.base}" opacity="0.3"/><circle cx="10" cy="54" r="3" fill="${C.teal.base}" opacity="0.3"/><circle cx="2" cy="32" r="3" fill="${C.teal.base}" opacity="0.3"/><circle cx="10" cy="10" r="3" fill="${C.teal.base}" opacity="0.3"/>` },
+  { key:'frame-gasket-seal', label:'Gasket Seal', c: C.orange, dec:`<circle cx="32" cy="32" r="24" fill="none" stroke="${C.orange.base}" stroke-width="1" opacity="0.3"/><circle cx="32" cy="32" r="30" fill="none" stroke="${C.orange.base}" stroke-width="0.5" opacity="0.2"/>` },
+  // Rare
+  { key:'frame-bare-wire', label:'Bare Wire', c: C.orange, dec:`<circle cx="32" cy="32" r="26" fill="none" stroke="${C.orange.light}" stroke-width="1.5" opacity="0.3" stroke-dasharray="2 3"/>` },
+  { key:'frame-concrete-ring', label:'Concrete Ring', c: { base:'#9CA3AF', dark:'#6B7280', light:'#E5E7EB' }, dec:'' },
+  { key:'frame-diamond-aura', label:'Diamond Aura', c: C.cyan, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="${C.cyan.light}" stroke-width="2" opacity="0.25"/>` },
+  { key:'frame-sunset-gradient', label:'Sunset Gradient', c: { base:'#F97316', dark:'#7C3AED', light:'#FED7AA' }, dec:'' },
+  { key:'frame-torque-wrench', label:'Torque Wrench', c: C.steel, dec:`<line x1="48" y1="8" x2="56" y2="16" stroke="${C.steel.base}" stroke-width="2" stroke-linecap="round" opacity="0.3"/>` },
+  { key:'frame-piston-ring', label:'Piston Ring', c: C.steel, dec:`<circle cx="32" cy="32" r="26" fill="none" stroke="${C.steel.dark}" stroke-width="2" opacity="0.2"/><circle cx="32" cy="32" r="24" fill="none" stroke="${C.steel.dark}" stroke-width="1" opacity="0.15"/>` },
+  // Epic
+  { key:'frame-circuit-board', label:'Circuit Board', c: C.green, dec:`<line x1="6" y1="16" x2="16" y2="16" stroke="${C.green.base}" stroke-width="1" opacity="0.3"/><line x1="16" y1="16" x2="16" y2="6" stroke="${C.green.base}" stroke-width="1" opacity="0.3"/><line x1="48" y1="58" x2="58" y2="58" stroke="${C.green.base}" stroke-width="1" opacity="0.3"/><line x1="48" y1="48" x2="48" y2="58" stroke="${C.green.base}" stroke-width="1" opacity="0.3"/>` },
+  { key:'frame-thermal-gradient', label:'Thermal Gradient', c: { base:'#EF4444', dark:'#3B82F6', light:'#FEE2E2' }, dec:'' },
+  { key:'frame-weld-bead', label:'Weld Bead', c: C.amber, dec:`<circle cx="32" cy="32" r="26" fill="none" stroke="${C.amber.base}" stroke-width="2" opacity="0.3" stroke-dasharray="3 2"/>` },
+  { key:'frame-aurora-borealis', label:'Aurora Borealis', c: { base:'#34D399', dark:'#6366F1', light:'#D1FAE5' }, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="${C.purple.base}" stroke-width="1" opacity="0.2"/>` },
+  { key:'frame-neon-pulse', label:'Neon Pulse', c: C.pink, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="${C.pink.light}" stroke-width="2" opacity="0.2"/>` },
+  { key:'frame-turbine-blade', label:'Turbine Blade', c: C.teal, dec:`<path d="M32,2 Q38,12 32,22" fill="none" stroke="${C.teal.base}" stroke-width="1" opacity="0.3"/><path d="M62,32 Q52,38 42,32" fill="none" stroke="${C.teal.base}" stroke-width="1" opacity="0.3"/><path d="M32,62 Q26,52 32,42" fill="none" stroke="${C.teal.base}" stroke-width="1" opacity="0.3"/><path d="M2,32 Q12,26 22,32" fill="none" stroke="${C.teal.base}" stroke-width="1" opacity="0.3"/>` },
+  { key:'frame-plasma-arc', label:'Plasma Arc', c: C.purple, dec:`<path d="M10,10 Q32,0 54,10" fill="none" stroke="${C.purple.light}" stroke-width="1.5" opacity="0.3"/><path d="M10,54 Q32,64 54,54" fill="none" stroke="${C.purple.light}" stroke-width="1.5" opacity="0.3"/>` },
+  // Legendary
+  { key:'frame-star-drive', label:'Star Drive', c: C.gold, dec:`<circle cx="12" cy="8" r="1" fill="${C.gold.base}" opacity="0.4"/><circle cx="52" cy="12" r="1.5" fill="${C.gold.base}" opacity="0.3"/><circle cx="8" cy="48" r="1" fill="${C.gold.base}" opacity="0.3"/><circle cx="56" cy="52" r="1.5" fill="${C.gold.base}" opacity="0.4"/>` },
+  { key:'frame-singularity', label:'Singularity', c: C.purple, dec:`<circle cx="32" cy="32" r="22" fill="none" stroke="${C.purple.base}" stroke-width="1" opacity="0.2"/><circle cx="32" cy="32" r="18" fill="none" stroke="${C.purple.base}" stroke-width="0.5" opacity="0.15"/>` },
+  { key:'frame-fusion-reactor', label:'Fusion Reactor', c: C.cyan, dec:`<ellipse cx="32" cy="32" rx="26" ry="10" fill="none" stroke="${C.cyan.base}" stroke-width="1" opacity="0.2" transform="rotate(30 32 32)"/><ellipse cx="32" cy="32" rx="26" ry="10" fill="none" stroke="${C.cyan.base}" stroke-width="1" opacity="0.2" transform="rotate(-30 32 32)"/>` },
+  { key:'frame-supernova', label:'Supernova', c: C.gold, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="${C.gold.light}" stroke-width="2" opacity="0.2"/><circle cx="32" cy="32" r="26" fill="none" stroke="${C.gold.base}" stroke-width="1" opacity="0.15"/>` },
+  // League rewards
+  { key:'frame-bronze-league', label:'Bronze League', c: C.bronze, dec:`<path d="M32,2 L36,6 L32,4 L28,6Z" fill="${C.bronze.base}" opacity="0.4"/>` },
+  { key:'frame-silver-league', label:'Silver League', c: C.silver, dec:`<path d="M32,2 L36,6 L32,4 L28,6Z" fill="${C.silver.base}" opacity="0.4"/>` },
+  { key:'frame-gold-league', label:'Gold League', c: C.goldMetal, dec:`<path d="M32,2 L36,6 L32,4 L28,6Z" fill="${C.goldMetal.base}" opacity="0.5"/>` },
+  { key:'frame-platinum-league', label:'Platinum League', c: C.platinum, dec:`<path d="M32,2 L36,6 L32,4 L28,6Z" fill="${C.platinum.base}" opacity="0.5"/>` },
+  { key:'frame-masters-league', label:'Masters League', c: C.masters, dec:`<path d="M32,2 L36,6 L32,4 L28,6Z" fill="${C.masters.base}" opacity="0.5"/><circle cx="32" cy="32" r="30" fill="none" stroke="${C.masters.light}" stroke-width="1" opacity="0.2"/>` },
+  // Achievement frames
+  { key:'frame-iron-will', label:'Iron Will', c: C.steel, dec:`<path d="M32,3 L34,7 L32,5 L30,7Z" fill="${C.steel.base}" opacity="0.5"/>` },
+  { key:'frame-diamond-mind', label:'Diamond Mind', c: C.cyan, dec:`<polygon points="32,2 36,8 32,6 28,8" fill="${C.cyan.base}" opacity="0.4"/>` },
+  { key:'frame-centurion', label:'Centurion', c: C.amber, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="${C.amber.light}" stroke-width="1" opacity="0.2"/>` },
+  { key:'frame-first-gold', label:'First Gold', c: C.goldMetal, dec:'' },
+  { key:'frame-marathon-runner', label:'Marathon Runner', c: C.green, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="${C.green.light}" stroke-width="1.5" opacity="0.2"/>` },
+  { key:'frame-early-adopter', label:'Early Adopter', c: C.indigo, dec:'' },
+  { key:'frame-flawless', label:'Flawless', c: C.amber, dec:`<circle cx="32" cy="32" r="30" fill="none" stroke="white" stroke-width="1" opacity="0.15"/>` },
+  { key:'frame-speed-demon', label:'Speed Demon', c: C.orange, dec:`<line x1="50" y1="8" x2="56" y2="14" stroke="${C.orange.base}" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/><line x1="54" y1="6" x2="58" y2="10" stroke="${C.orange.base}" stroke-width="1" stroke-linecap="round" opacity="0.2"/>` },
+  { key:'frame-perfectionist', label:'Perfectionist', c: C.gold, dec:`<circle cx="32" cy="2" r="2" fill="${C.gold.base}" opacity="0.4"/>` },
+  { key:'frame-golden-engineer', label:'Golden Engineer', c: C.goldMetal, dec:`<circle cx="32" cy="32" r="26" fill="none" stroke="${C.goldMetal.base}" stroke-width="1.5" opacity="0.2"/>` },
+  { key:'frame-engineers-crest', label:'Engineers Crest', c: C.indigo, dec:`<path d="M32,2 L36,8 L32,6 L28,8Z" fill="${C.indigo.base}" opacity="0.4"/>` },
+  { key:'frame-masters-mark', label:'Masters Mark', c: C.purple, dec:`<circle cx="32" cy="32" r="26" fill="none" stroke="${C.purple.light}" stroke-width="1" opacity="0.2"/>` },
+  { key:'frame-elite-badge', label:'Elite Badge', c: C.red, dec:`<circle cx="32" cy="2" r="2.5" fill="${C.red.base}" opacity="0.4"/>` },
+  { key:'frame-grandmaster-crown', label:'Grandmaster Crown', c: C.gold, dec:`<path d="M24,4 L28,0 L32,4 L36,0 L40,4" fill="none" stroke="${C.gold.base}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>` },
+];
+
+frameDefs.forEach(f => {
+  icons[f.key] = {
+    category: 'Frames',
+    label: f.label,
+    draw(id) { return frameBase(id, f.c, f.dec); }
+  };
+});
+
+// ────────────────────────────
+// COURSE ICONS (2)
+// ────────────────────────────
+
+icons['course-mechanical-engineering'] = { category: 'Course', label: 'Mechanical Engineering', draw(id) {
+  return circleBase(id, C.indigo, `
+    <path d="M32,12 L36,16 L36,20 L40,20 L44,16 L48,20 L44,24 L44,28 L48,28 L52,32 L48,36 L44,36 L44,40 L48,44 L44,48 L40,44 L36,44 L36,48 L32,52 L28,48 L28,44 L24,44 L20,48 L16,44 L20,40 L20,36 L16,36 L12,32 L16,28 L20,28 L20,24 L16,20 L20,16 L24,20 L28,20 L28,16Z"
+      fill="white" opacity="0.8" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+    <circle cx="32" cy="32" r="7" fill="${C.indigo.dark}" opacity="0.4"/>
+    <circle cx="32" cy="32" r="3" fill="white" opacity="0.6"/>
+  `);
+}};
+
+icons['course-personal-finance'] = { category: 'Course', label: 'Personal Finance', draw(id) {
+  return circleBase(id, C.green, `
+    <rect x="18" y="24" width="18" height="12" rx="2" fill="white" opacity="0.7"/>
+    <rect x="20" y="28" width="18" height="12" rx="2" fill="white" opacity="0.85"/>
+    <circle cx="42" cy="36" r="8" fill="#FFD700" opacity="0.8" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="42" y="39.5" text-anchor="middle" font-size="8" font-weight="bold" fill="#B8860B" font-family="system-ui">$</text>
+  `);
+}};
+
+
+// ═══════════════════════════════════════════
+// PUBLIC API
+// ═══════════════════════════════════════════
+
+function render(name, size = 64) {
+  const icon = icons[name];
+  if (!icon) return `<svg width="${size}" height="${size}" viewBox="0 0 64 64"><text x="32" y="32" text-anchor="middle" font-size="8" fill="#888">?</text></svg>`;
+  const id = name.replace(/[^a-z0-9]/g, '-');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64" fill="none" stroke-linecap="round" stroke-linejoin="round">${icon.draw(id)}</svg>`;
+}
+
+function getAll() { return icons; }
+function getCategory(cat) {
+  return Object.fromEntries(Object.entries(icons).filter(([,v]) => v.category === cat));
+}
+function getCategories() {
+  return [...new Set(Object.values(icons).map(i => i.category))];
+}
+
+return { render, getAll, getCategory, getCategories, icons, colors: C };
+
+})(); // end MechIcons IIFE
+
+
+// ═══════════════════════════════════════════
+// GALLERY UI
+// ═══════════════════════════════════════════
+
+(function() {
+  const gallery = document.getElementById('gallery');
+  const search = document.getElementById('search');
+  const sizeSlider = document.getElementById('sizeSlider');
+  const sizeLabel = document.getElementById('sizeLabel');
+  const catNav = document.getElementById('catNav');
+  const stats = document.getElementById('stats');
+  const toast = document.getElementById('toast');
+
+  let currentSize = 64;
+  let currentCat = 'All';
+  let searchQuery = '';
+
+  // Category nav
+  function buildCatNav() {
+    const cats = ['All', ...MechIcons.getCategories()];
+    catNav.innerHTML = cats.map(c =>
+      `<button class="cat-btn ${c === currentCat ? 'active' : ''}" data-cat="${c}">${c} ${c === 'All' ? `(${Object.keys(MechIcons.getAll()).length})` : `(${Object.keys(MechIcons.getCategory(c)).length})`}</button>`
+    ).join('');
+    catNav.querySelectorAll('.cat-btn').forEach(btn => {
+      btn.onclick = () => { currentCat = btn.dataset.cat; buildCatNav(); renderGallery(); };
+    });
+  }
+
+  function renderGallery() {
+    const all = MechIcons.getAll();
+    const cats = MechIcons.getCategories();
+    let html = '';
+    let total = 0;
+
+    cats.forEach(cat => {
+      if (currentCat !== 'All' && currentCat !== cat) return;
+      const entries = Object.entries(all).filter(([k, v]) => {
+        if (v.category !== cat) return false;
+        if (searchQuery && !k.includes(searchQuery) && !v.label.toLowerCase().includes(searchQuery)) return false;
+        return true;
+      });
+      if (entries.length === 0) return;
+      total += entries.length;
+
+      html += `<div class="section-title">${cat} <span>${entries.length} icons</span></div>`;
+      html += `<div class="grid">`;
+      entries.forEach(([key, icon]) => {
+        html += `<div class="icon-card" data-key="${key}" title="${key}">
+          ${MechIcons.render(key, currentSize)}
+          <div class="icon-name">${key}</div>
+        </div>`;
+      });
+      html += `</div>`;
+    });
+
+    gallery.innerHTML = html;
+    stats.textContent = `${total} icons shown`;
+
+    // Click to copy
+    gallery.querySelectorAll('.icon-card').forEach(card => {
+      card.onclick = () => {
+        const key = card.dataset.key;
+        const svg = MechIcons.render(key, 64);
+        navigator.clipboard.writeText(svg).then(() => {
+          const el = document.createElement('div');
+          el.className = 'copied';
+          el.textContent = 'Copied!';
+          card.appendChild(el);
+          setTimeout(() => el.remove(), 1000);
+        });
+      };
+    });
+  }
+
+  // Size slider
+  sizeSlider.oninput = () => {
+    currentSize = parseInt(sizeSlider.value);
+    sizeLabel.textContent = currentSize + 'px';
+    renderGallery();
+  };
+
+  // Search
+  search.oninput = () => {
+    searchQuery = search.value.toLowerCase().trim();
+    renderGallery();
+  };
+
+  buildCatNav();
+  renderGallery();
+})();
+</script>
+</body>
+</html>

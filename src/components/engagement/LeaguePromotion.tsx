@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLeague, useEngagementStore } from '@/store/useEngagementStore';
 import { leagueTiers } from '@/data/league';
 import { LEAGUE_GEM_REWARD_PROMOTION } from '@/data/league';
+import { GameButton, type GameButtonVariant } from '@/components/ui/GameButton';
+import { FloatingParticles } from '@/components/ui/FloatingParticles';
 
 export function LeaguePromotion() {
   const league = useLeague();
@@ -30,31 +32,31 @@ export function LeaguePromotion() {
         emoji: currentTier.icon,
         headline: `Promoted to ${currentTier.name}!`,
         subtext: `You earned +${LEAGUE_GEM_REWARD_PROMOTION} 💎 gems for finishing in the top ranks.`,
-        bg: '#F0FDF4',
+        bg: '#ECFDF5',
         accentColor: '#16A34A',
-        buttonBg: '#16A34A',
-        buttonShadow: '#15803D',
+        buttonVariant: 'green' as GameButtonVariant,
+        particleColor: 'rgba(34,197,94,0.3)',
       };
     }
     if (isDemoted) {
       return {
         emoji: currentTier.icon,
         headline: `Moved to ${currentTier.name}`,
-        subtext: "Don't give up — keep practicing and you'll climb back up.",
+        subtext: "Keep practicing and you'll climb back.",
         bg: '#FEF2F2',
         accentColor: '#DC2626',
-        buttonBg: '#4F46E5',
-        buttonShadow: '#3730A3',
+        buttonVariant: 'indigo' as GameButtonVariant,
+        particleColor: 'rgba(239,68,68,0.2)',
       };
     }
     return {
       emoji: currentTier.icon,
       headline: `Stayed in ${currentTier.name}`,
-      subtext: 'Nice consistency! Keep it up to reach the promotion zone.',
+      subtext: 'Keep it up to reach the promotion zone.',
       bg: '#EFF6FF',
       accentColor: '#3B82F6',
-      buttonBg: '#4F46E5',
-      buttonShadow: '#3730A3',
+      buttonVariant: 'indigo' as GameButtonVariant,
+      particleColor: 'rgba(59,130,246,0.25)',
     };
   };
 
@@ -64,7 +66,6 @@ export function LeaguePromotion() {
     <AnimatePresence>
       {shouldShow && (
         <>
-          {/* Backdrop */}
           <motion.div
             key="league-backdrop"
             className="fixed inset-0 z-40"
@@ -74,7 +75,6 @@ export function LeaguePromotion() {
             exit={{ opacity: 0 }}
           />
 
-          {/* Panel */}
           <motion.div
             key="league-promo-panel"
             className="fixed inset-0 z-50 flex items-center justify-center sm:p-6"
@@ -83,16 +83,17 @@ export function LeaguePromotion() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="w-full h-full sm:h-auto sm:max-w-sm sm:rounded-3xl sm:shadow-2xl overflow-y-auto flex flex-col justify-center"
+              className="w-full h-full sm:h-auto sm:max-w-sm sm:rounded-3xl sm:shadow-2xl overflow-y-auto flex flex-col"
               style={{ background: content.bg }}
               initial={{ scale: 0.75, y: 50 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.75, y: 50 }}
               transition={{ type: 'spring', stiffness: 260, damping: 20 }}
             >
-              {/* Content area */}
-              <div className="px-8 py-10 text-center">
-                {/* Tier icon */}
+              <FloatingParticles color={content.particleColor} count={4} />
+
+              {/* Content — centered */}
+              <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] px-8 py-10 text-center">
                 <motion.div
                   className="text-7xl mb-4"
                   initial={{ scale: 0.3, rotate: -15 }}
@@ -102,7 +103,6 @@ export function LeaguePromotion() {
                   {content.emoji}
                 </motion.div>
 
-                {/* Headline */}
                 <motion.h2
                   className="text-2xl font-extrabold mb-2"
                   style={{ color: content.accentColor }}
@@ -113,19 +113,8 @@ export function LeaguePromotion() {
                   {content.headline}
                 </motion.h2>
 
-                {/* Subtext */}
-                <motion.p
-                  className="text-sm text-gray-600 mb-6 leading-relaxed"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.45 }}
-                >
-                  {content.subtext}
-                </motion.p>
-
-                {/* Result stats */}
                 <motion.div
-                  className="flex items-center justify-center gap-6 mb-8"
+                  className="flex items-center justify-center gap-6 mt-6"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.55 }}
@@ -146,24 +135,19 @@ export function LeaguePromotion() {
                     </>
                   )}
                 </motion.div>
+              </div>
 
-                {/* Continue button */}
-                <motion.button
-                  onClick={setResultSeen}
-                  className="w-full py-3.5 rounded-2xl text-sm font-bold text-white"
-                  style={{
-                    background: content.buttonBg,
-                    border: 'none',
-                    cursor: 'pointer',
-                    boxShadow: `0 4px 0 ${content.buttonShadow}`,
-                  }}
+              {/* Footer — pinned bottom */}
+              <div className="shrink-0 px-8 pb-8 sm:pb-6 relative z-[1]">
+                <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.7 }}
-                  whileTap={{ scale: 0.97 }}
                 >
-                  Continue
-                </motion.button>
+                  <GameButton variant={content.buttonVariant} onClick={setResultSeen}>
+                    Continue
+                  </GameButton>
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>

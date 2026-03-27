@@ -8,6 +8,8 @@ import {
   useGems,
   useEngagementActions,
 } from '@/store/useEngagementStore';
+import { GameButton } from '@/components/ui/GameButton';
+import { FloatingParticles } from '@/components/ui/FloatingParticles';
 
 const REPAIR_COST = 50;
 
@@ -60,10 +62,7 @@ export function StreakFreeze() {
 
     const handleRepair = () => {
       const success = repairStreak();
-      if (success) {
-        // repairStreak() already restores the streak and lastActiveDate in useStore
-        dismissRepairModal();
-      }
+      if (success) dismissRepairModal();
     };
 
     return (
@@ -76,68 +75,61 @@ export function StreakFreeze() {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="bg-white w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-xl overflow-y-auto flex flex-col justify-center"
+            className="bg-[#F0F4FF] w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-xl overflow-y-auto flex flex-col"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 24 }}
           >
-            <div className="p-6">
-            {/* Streak break icon */}
-            <div className="flex justify-center mb-4">
+            <FloatingParticles color="rgba(96,165,250,0.35)" count={5} drift />
+
+            {/* Content — centered */}
+            <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-6 text-center">
               <div
-                className="flex items-center justify-center w-16 h-16 rounded-full text-4xl"
+                className="flex items-center justify-center w-16 h-16 rounded-full text-4xl mb-4"
                 style={{ background: '#FEF2F2' }}
               >
                 💔
               </div>
+
+              <h2 className="text-xl font-extrabold text-gray-900 mb-1">
+                Your streak broke!
+              </h2>
+              <p className="text-sm text-gray-500 mb-5">
+                You had a{' '}
+                <span className="font-bold text-gray-700">
+                  {streak.lastStreakValueBeforeBreak}-day streak
+                </span>
+              </p>
+
+              <div
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl"
+                style={{ background: 'rgba(255,255,255,0.8)' }}
+              >
+                <span className="text-lg">💎</span>
+                <span className="text-xl font-extrabold" style={{ color: '#7C3AED' }}>
+                  {REPAIR_COST}
+                </span>
+                <span className="text-sm font-semibold text-gray-500">to repair</span>
+              </div>
             </div>
 
-            <h2 className="text-xl font-extrabold text-center text-gray-900 mb-1">
-              Your streak broke!
-            </h2>
-            <p className="text-sm text-center text-gray-500 mb-5">
-              You had a{' '}
-              <span className="font-bold text-gray-700">
-                {streak.lastStreakValueBeforeBreak}-day streak
-              </span>
-            </p>
-
-            {/* Cost display */}
-            <div
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl mb-5"
-              style={{ background: '#F3E8FF' }}
-            >
-              <span className="text-lg">💎</span>
-              <span className="text-xl font-extrabold" style={{ color: '#7C3AED' }}>
-                {REPAIR_COST}
-              </span>
-              <span className="text-sm font-semibold text-gray-500">to repair</span>
-            </div>
-
-            {/* Repair button */}
-            <button
-              onClick={handleRepair}
-              disabled={!canAfford}
-              className="w-full py-3 rounded-xl text-sm font-bold text-white mb-2 transition-opacity"
-              style={{
-                background: canAfford ? '#7C3AED' : '#D1D5DB',
-                border: 'none',
-                cursor: canAfford ? 'pointer' : 'not-allowed',
-                opacity: canAfford ? 1 : 0.7,
-              }}
-            >
-              {canAfford ? 'Repair Streak' : `Need ${gemsNeeded} more 💎`}
-            </button>
-
-            {/* Skip button */}
-            <button
-              onClick={dismissRepairModal}
-              className="w-full py-2.5 rounded-xl text-sm font-semibold text-gray-500 transition-colors"
-              style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
-            >
-              Skip
-            </button>
+            {/* Footer — pinned bottom */}
+            <div className="shrink-0 px-6 pb-8 sm:pb-5 relative z-[1]">
+              <GameButton
+                variant="purple"
+                onClick={handleRepair}
+                disabled={!canAfford}
+              >
+                {canAfford ? 'Repair Streak' : `Need ${gemsNeeded} more 💎`}
+              </GameButton>
+              <button
+                onClick={dismissRepairModal}
+                className="w-full py-2.5 mt-2 rounded-xl text-sm font-semibold text-gray-500 transition-colors"
+                style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+              >
+                Skip
+              </button>
             </div>
           </motion.div>
         </motion.div>

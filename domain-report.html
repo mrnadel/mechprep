@@ -3,983 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top 50 Available Domains — Learning Platform Rebrand</title>
+  <title>Top 50 Available Domains — Skill Learning Platform</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: #08080d;
-      color: #e2e2e8;
-      min-height: 100vh;
-      padding: 48px 24px;
-    }
-    .container { max-width: 1200px; margin: 0 auto; }
-
-    header { margin-bottom: 48px; }
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #6366f1 0%, #a855f7 40%, #ec4899 70%, #f97316 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
-    .subtitle { color: #6b6b8a; font-size: 1rem; line-height: 1.6; max-width: 700px; }
-    .subtitle strong { color: #a78bfa; }
-
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-    .stat {
-      background: linear-gradient(135deg, #0f0f1a 0%, #12121f 100%);
-      border: 1px solid #1a1a2e;
-      border-radius: 16px;
-      padding: 20px;
-    }
-    .stat .val { font-size: 2rem; font-weight: 800; }
-    .stat .lbl { font-size: 0.72rem; color: #5a5a7a; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
-    .stat.purple .val { color: #a855f7; }
-    .stat.blue .val { color: #6366f1; }
-    .stat.pink .val { color: #ec4899; }
-    .stat.orange .val { color: #f97316; }
-    .stat.green .val { color: #22c55e; }
-
-    .filters {
-      display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;
-    }
-    .fbtn {
-      background: #0e0e18;
-      border: 1px solid #1a1a2e;
-      color: #6b6b8a;
-      padding: 7px 16px;
-      border-radius: 100px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      font-weight: 500;
-      transition: all 0.15s;
-      font-family: inherit;
-    }
-    .fbtn:hover, .fbtn.active {
-      background: #1a1a3a;
-      border-color: #6366f1;
-      color: #c4b5fd;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 12px;
-    }
-
-    .card {
-      background: linear-gradient(135deg, #0e0e18 0%, #111120 100%);
-      border: 1px solid #1a1a2e;
-      border-radius: 16px;
-      padding: 20px;
-      transition: all 0.2s;
-      cursor: default;
-      position: relative;
-      overflow: hidden;
-    }
-    .card:hover {
-      border-color: #2a2a4e;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08);
-    }
-    .card.tier-S { border-color: #2a2006; }
-    .card.tier-S:hover { border-color: #fbbf24; box-shadow: 0 8px 32px rgba(251, 191, 36, 0.1); }
-
-    .card-top {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .rank-badge {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 28px; height: 28px;
-      border-radius: 8px;
-      font-size: 0.75rem; font-weight: 700;
-      background: #1a1a2e; color: #5a5a7a;
-    }
-    .rank-1 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #000; }
-    .rank-2 { background: linear-gradient(135deg, #94a3b8, #64748b); color: #000; }
-    .rank-3 { background: linear-gradient(135deg, #cd7f32, #b8630e); color: #000; }
-    .rank-top5 { background: #1a1506; color: #fbbf24; border: 1px solid #2a2006; }
-
-    .tier-tag {
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
-      padding: 3px 10px; border-radius: 100px; text-transform: uppercase;
-    }
-
-    .domain-name {
-      font-size: 1.5rem; font-weight: 700; margin-bottom: 2px;
-    }
-    .domain-ext { color: #4a4a6a; font-weight: 400; }
-    .domain-name .highlight {
-      background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .card.tier-S .domain-name .highlight {
-      background: linear-gradient(135deg, #fde68a 0%, #fbbf24 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .card-why {
-      font-size: 0.82rem; color: #7a7a9a; line-height: 1.5;
-      margin: 10px 0 14px;
-    }
-
-    .card-meta {
-      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-    }
-    .meta-pill {
-      display: inline-flex; align-items: center; gap: 4px;
-      padding: 4px 10px; border-radius: 100px; font-size: 0.72rem; font-weight: 500;
-      background: #0a0a14; border: 1px solid #1a1a2e; color: #6b6b8a;
-    }
-    .meta-pill.score { color: #4ade80; border-color: #0a2e16; background: #040e08; }
-    .meta-pill.price { color: #60a5fa; border-color: #0a1a2e; background: #040810; }
-    .meta-pill.cat { color: #c4b5fd; border-color: #1a102e; background: #0a0810; }
-    .meta-pill.len { color: #fbbf24; border-color: #2e2006; background: #0e0a04; }
-
-    .legend {
-      margin-top: 40px;
-      background: linear-gradient(135deg, #0e0e18 0%, #111120 100%);
-      border: 1px solid #1a1a2e;
-      border-radius: 16px;
-      padding: 24px;
-    }
-    .legend h3 { font-size: 0.8rem; color: #5a5a7a; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
-    .legend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-    .legend-item h4 { font-size: 0.85rem; color: #c4b5fd; margin-bottom: 4px; }
-    .legend-item p { font-size: 0.8rem; color: #5a5a7a; line-height: 1.5; }
-
-    .footer { margin-top: 32px; font-size: 0.75rem; color: #3a3a5a; text-align: center; }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 1.8rem; }
-      .grid { grid-template-columns: 1fr; }
-      .domain-name { font-size: 1.2rem; }
-    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',-apple-system,sans-serif;background:#08080d;color:#e2e2e8;min-height:100vh;padding:40px 20px}
+    .c{max-width:1300px;margin:0 auto}
+    h1{font-size:2.4rem;font-weight:800;background:linear-gradient(135deg,#6366f1,#a855f7 40%,#ec4899 70%,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+    .sub{color:#6b6b8a;font-size:.9rem;line-height:1.5;max-width:750px;margin-bottom:28px}
+    .sub b{color:#a78bfa}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:24px}
+    .st{background:#0f0f1a;border:1px solid #1a1a2e;border-radius:12px;padding:14px 16px}
+    .st .v{font-size:1.6rem;font-weight:800}.st .l{font-size:.68rem;color:#5a5a7a;text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+    .st.p .v{color:#a855f7}.st.b .v{color:#6366f1}.st.k .v{color:#ec4899}.st.o .v{color:#f97316}.st.g .v{color:#22c55e}
+    .fl{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+    .fb{background:#0e0e18;border:1px solid #1a1a2e;color:#6b6b8a;padding:6px 14px;border-radius:99px;cursor:pointer;font-size:.75rem;font-weight:500;transition:.15s;font-family:inherit}
+    .fb:hover,.fb.on{background:#1a1a3a;border-color:#6366f1;color:#c4b5fd}
+    .tw{background:#0e0e18;border:1px solid #1a1a2e;border-radius:14px;overflow:hidden}
+    table{width:100%;border-collapse:collapse}
+    thead{background:#0a0a14}
+    th{padding:12px 14px;text-align:left;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#5a5a7a;font-weight:600;border-bottom:1px solid #1a1a2e;cursor:pointer;user-select:none;white-space:nowrap}
+    th:hover{color:#a78bfa}
+    th .a{font-size:.58rem;margin-left:2px;opacity:.4}
+    th.sd .a{opacity:1;color:#a78bfa}
+    td{padding:11px 14px;border-bottom:1px solid #111120;font-size:.86rem;vertical-align:middle}
+    tr:hover td{background:rgba(99,102,241,.04)}
+    tr:last-child td{border-bottom:none}
+    tr.S td{background:rgba(251,191,36,.02)}tr.S:hover td{background:rgba(251,191,36,.05)}
+    .rk{font-weight:700;color:#4a4a6a;text-align:center;width:36px}
+    .r1{color:#fbbf24}.r2{color:#94a3b8}.r3{color:#cd7f32}.rt{color:#fbbf24}
+    .tb{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:99px;text-transform:uppercase}
+    .tb.S{background:#1a1506;color:#fbbf24}.tb.A{background:#15102a;color:#a78bfa}
+    .dn{font-weight:700;font-size:1.02rem;white-space:nowrap}
+    .dn .x{color:#3a3a5a;font-weight:400}
+    tr.S .dn .n{background:linear-gradient(135deg,#fde68a,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    tr.A .dn .n{background:linear-gradient(135deg,#c4b5fd,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .sc{white-space:nowrap}.sn{font-weight:600;color:#4ade80;font-size:.83rem}
+    .sb{display:inline-block;height:4px;border-radius:2px;vertical-align:middle;margin-left:5px;background:linear-gradient(90deg,#22c55e,#4ade80)}
+    .lb{display:inline-block;padding:2px 7px;border-radius:8px;font-size:.7rem;font-weight:600}
+    .ls{background:#0a1e08;color:#4ade80}.lm{background:#1a1a06;color:#facc15}.ll{background:#1a1006;color:#fb923c}
+    .pr{color:#60a5fa;font-weight:500;font-size:.83rem;white-space:nowrap}
+    .cb{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.7rem;font-weight:500;background:#0a0a18;border:1px solid #1a1a2e;color:#7a7a9a;white-space:nowrap}
+    .wh{color:#6b6b8a;font-size:.8rem;line-height:1.4;max-width:360px}
+    .lg{margin-top:28px;background:#0e0e18;border:1px solid #1a1a2e;border-radius:14px;padding:20px}
+    .lg h3{font-size:.75rem;color:#5a5a7a;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+    .lg p{font-size:.78rem;color:#5a5a7a;line-height:1.5}
+    .ft{margin-top:20px;font-size:.7rem;color:#3a3a5a;text-align:center}
+    @media(max-width:900px){h1{font-size:1.6rem}.tw{overflow-x:auto}td,th{padding:8px 8px;font-size:.78rem}.wh{max-width:180px;font-size:.72rem}}
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>50 Perfect Domain Names</h1>
-      <p class="subtitle">
-        Hand-curated available <strong>.com</strong> domains for a <strong>gamified learning platform</strong>.
-        Each name evaluated for pronounceability, mascot potential, emotional resonance,
-        and social-media virality. Verified available via Verisign RDAP on <strong>2026-03-27</strong>.
-      </p>
-    </header>
+<div class="c">
+  <h1>50 Perfect Domains</h1>
+  <p class="sub">Available <b>.com</b> domains for a <b>gamified skill & course platform</b>. Short, pronounceable, evoking craft, mastery, and fun. Verified via Verisign RDAP on <b>2026-03-27</b>.</p>
 
-    <div class="stats-row">
-      <div class="stat purple">
-        <div class="val">2,000+</div>
-        <div class="lbl">Names Generated</div>
-      </div>
-      <div class="stat blue">
-        <div class="val">50</div>
-        <div class="lbl">Available & Curated</div>
-      </div>
-      <div class="stat pink">
-        <div class="val">10</div>
-        <div class="lbl">S-Tier Picks</div>
-      </div>
-      <div class="stat orange">
-        <div class="val">9</div>
-        <div class="lbl">Avg. Length</div>
-      </div>
-      <div class="stat green">
-        <div class="val">~$10</div>
-        <div class="lbl">Avg. Price/Year</div>
-      </div>
-    </div>
-
-    <div class="filters" id="filters">
-      <button class="fbtn active" data-f="all">All (50)</button>
-      <button class="fbtn" data-f="Mascot">Mascot (19)</button>
-      <button class="fbtn" data-f="Wordplay">Wordplay (1)</button>
-      <button class="fbtn" data-f="Adventure">Adventure (3)</button>
-      <button class="fbtn" data-f="Gamification">Gamification (1)</button>
-      <button class="fbtn" data-f="Food/Cute">Food/Cute (11)</button>
-      <button class="fbtn" data-f="Emotion">Emotion (2)</button>
-      <button class="fbtn" data-f="Energy">Energy (1)</button>
-      <button class="fbtn" data-f="Growth">Growth (5)</button>
-      <button class="fbtn" data-f="Playful">Playful (3)</button>
-      <button class="fbtn" data-f="Nature">Nature (4)</button>
-    </div>
-
-    <div class="grid" id="grid">
-      
-      <div class="card tier-S" data-cat="Mascot" data-score="100" data-len="8" data-name="quizpaca">
-        <div class="card-top">
-          <span class="rank-badge rank-1">1</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizpaca</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Alpaca mascot. Adorable, instantly brandable, mascot-ready logo. Think Duolingo owl but fluffy.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">100/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Mascot" data-score="100" data-len="8" data-name="learnroo">
-        <div class="card-top">
-          <span class="rank-badge rank-2">2</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnroo</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Kangaroo = bouncing forward, progress. Short, fun, great mascot. Kids & adults love it.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">100/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Wordplay" data-score="100" data-len="9" data-name="studlingo">
-        <div class="card-top">
-          <span class="rank-badge rank-3">3</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studlingo</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Instant Duolingo parallel — everyone gets it. Study + lingo. Built-in brand recognition.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">100/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Wordplay</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Adventure" data-score="100" data-len="8" data-name="quiznaut">
-        <div class="card-top">
-          <span class="rank-badge rank-top5">4</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quiznaut</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Quiz + astronaut. Learning as adventure/exploration. Space theme = infinite growth.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">100/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Adventure</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Gamification" data-score="100" data-len="7" data-name="xpbloom">
-        <div class="card-top">
-          <span class="rank-badge rank-top5">5</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">xpbloom</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">XP (gaming) + bloom (growth). Speaks directly to gamification culture. Short, punchy.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">100/100</span>
-          <span class="meta-pill price">~$10-15/yr</span>
-          <span class="meta-pill len">7 chars</span>
-          <span class="meta-pill cat">Gamification</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Food/Cute" data-score="99" data-len="9" data-name="studmochi">
-        <div class="card-top">
-          <span class="rank-badge ">6</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studmochi</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Unexpected, memorable, Japanese-chic. Mochi = soft, sweet, comforting. Great Gen-Z appeal.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">99/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Emotion" data-score="99" data-len="7" data-name="cramjoy">
-        <div class="card-top">
-          <span class="rank-badge ">7</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">cramjoy</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Study + happiness. Reframes cramming as joyful. Strong emotional signal. 7 chars.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">99/100</span>
-          <span class="meta-pill price">~$10-15/yr</span>
-          <span class="meta-pill len">7 chars</span>
-          <span class="meta-pill cat">Emotion</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Energy" data-score="99" data-len="7" data-name="zestlet">
-        <div class="card-top">
-          <span class="rank-badge ">8</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">zestlet</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Tiny spark of energy. Fresh, vibrant, micro-learning vibes. Clean 7-char brand.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">99/100</span>
-          <span class="meta-pill price">~$10-15/yr</span>
-          <span class="meta-pill len">7 chars</span>
-          <span class="meta-pill cat">Energy</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Mascot" data-score="99" data-len="8" data-name="studlark">
-        <div class="card-top">
-          <span class="rank-badge ">9</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studlark</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Lark = fun adventure AND a clever bird. Double meaning. Great mascot potential.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">99/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-S" data-cat="Mascot" data-score="99" data-len="8" data-name="quizwren">
-        <div class="card-top">
-          <span class="rank-badge ">10</span>
-          <span class="tier-tag" style="background: #1a1506; color: #fbbf24;">S-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizwren</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Wren = small, clever, musical bird. Elegant, nature-inspired, memorable.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">99/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="99" data-len="7" data-name="studpaw">
-        <div class="card-top">
-          <span class="rank-badge ">11</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studpaw</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Cute animal vibes without committing to one species. 7 chars. Universal mascot.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">99/100</span>
-          <span class="meta-pill price">~$10-15/yr</span>
-          <span class="meta-pill len">7 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="99" data-len="9" data-name="learnphin">
-        <div class="card-top">
-          <span class="rank-badge ">12</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnphin</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Dolphin = intelligence + playfulness. Everyone associates dolphins with being smart.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">99/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Growth" data-score="99" data-len="9" data-name="studbloom">
-        <div class="card-top">
-          <span class="rank-badge ">13</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studbloom</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Growth metaphor. Study + blooming. Beautiful, positive, natural. Works at any scale.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">99/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Growth</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="9" data-name="quizlatte">
-        <div class="card-top">
-          <span class="rank-badge ">14</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizlatte</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Study + coffee culture. Millennial/Gen-Z appeal. Cozy study vibes. Instagram-ready brand.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="10" data-name="learnbento">
-        <div class="card-top">
-          <span class="rank-badge ">15</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnbento</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Organized learning like a bento box. Japanese aesthetic. Structured, beautiful, satisfying.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">10 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Adventure" data-score="98" data-len="8" data-name="studnaut">
-        <div class="card-top">
-          <span class="rank-badge ">16</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studnaut</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Study + astronaut. Exploration theme. 8 chars. Bold, aspirational.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Adventure</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Playful" data-score="98" data-len="9" data-name="learnwink">
-        <div class="card-top">
-          <span class="rank-badge ">17</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnwink</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Playful, encouraging, like a friend winking — "you got this". Warm brand personality.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Playful</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Playful" data-score="98" data-len="8" data-name="quizwink">
-        <div class="card-top">
-          <span class="rank-badge ">18</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizwink</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Same wink energy as learnwink. Slightly more quiz-focused. Cheeky, fun.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Playful</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="9" data-name="learnpaca">
-        <div class="card-top">
-          <span class="rank-badge ">19</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnpaca</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Alpaca mascot. Learn-focused version of quizpaca. Same adorable vibes.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="9" data-name="studfinch">
-        <div class="card-top">
-          <span class="rank-badge ">20</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studfinch</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Finch = small, agile, musical. Darwin's finches = adaptability & discovery.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Growth" data-score="98" data-len="9" data-name="quizpetal">
-        <div class="card-top">
-          <span class="rank-badge ">21</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizpetal</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Delicate, growing, beautiful. Each quiz is a petal in your blooming knowledge.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Growth</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="8" data-name="studotto">
-        <div class="card-top">
-          <span class="rank-badge ">22</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studotto</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Otter mascot! Otters = clever, playful, tool-users. Irresistibly cute brand.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Growth" data-score="98" data-len="10" data-name="learnpetal">
-        <div class="card-top">
-          <span class="rank-badge ">23</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnpetal</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Same petal metaphor. Learn focus. Elegant, feminine-friendly without excluding anyone.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">10 chars</span>
-          <span class="meta-pill cat">Growth</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="7" data-name="studroo">
-        <div class="card-top">
-          <span class="rank-badge ">24</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studroo</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Short kangaroo variant. 7 chars. Joey in a pouch = nurturing learning.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10-15/yr</span>
-          <span class="meta-pill len">7 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="8" data-name="studtaco">
-        <div class="card-top">
-          <span class="rank-badge ">25</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studtaco</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Silly, memorable, Taco Tuesday vibes. Would absolutely go viral on social media.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="8" data-name="learnmoo">
-        <div class="card-top">
-          <span class="rank-badge ">26</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnmoo</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Silly cow mascot. "Learnmoo" makes people smile. Excellent for word-of-mouth.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="8" data-name="quizmunk">
-        <div class="card-top">
-          <span class="rank-badge ">27</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizmunk</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Chipmunk mascot. Energetic, cheeks full of knowledge. Fun logo potential.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="7" data-name="studala">
-        <div class="card-top">
-          <span class="rank-badge ">28</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studala</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Koala mascot. 7 chars. Koalas = chill wisdom. Great for a calm learning vibe.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10-15/yr</span>
-          <span class="meta-pill len">7 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="8" data-name="quizunny">
-        <div class="card-top">
-          <span class="rank-badge ">29</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizunny</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Bunny mascot. Quiz + bunny. Quick, cute, hops through knowledge. Easter vibes.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Adventure" data-score="98" data-len="9" data-name="learnnaut">
-        <div class="card-top">
-          <span class="rank-badge ">30</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnnaut</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Learn + astronaut. Same exploration theme. Slightly longer but very clear.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Adventure</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="9" data-name="studpeach">
-        <div class="card-top">
-          <span class="rank-badge ">31</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studpeach</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Sweet, positive, peachy vibes. "Everything's just peachy" = confidence.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Nature" data-score="98" data-len="9" data-name="learnmoss">
-        <div class="card-top">
-          <span class="rank-badge ">32</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnmoss</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Slow, steady, natural growth. Moss covers everything eventually. Zen learning.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Nature</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="9" data-name="studmango">
-        <div class="card-top">
-          <span class="rank-badge ">33</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studmango</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Tropical, fresh, fun, juicy. Mango = sweetness of knowledge. Great colors for branding.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="9" data-name="quizpeach">
-        <div class="card-top">
-          <span class="rank-badge ">34</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizpeach</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Sweet quiz vibes. Peach emoji culture = Gen-Z fluent. 9 chars.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Growth" data-score="98" data-len="10" data-name="studsprout">
-        <div class="card-top">
-          <span class="rank-badge ">35</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studsprout</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Growth from the ground up. Sprout = beginning of something great. Encouraging.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">10 chars</span>
-          <span class="meta-pill cat">Growth</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="10" data-name="quizmatcha">
-        <div class="card-top">
-          <span class="rank-badge ">36</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizmatcha</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Matcha = trendy, focused calm energy. Study cafe aesthetic. Instagram gold.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">10 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="8" data-name="studwren">
-        <div class="card-top">
-          <span class="rank-badge ">37</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studwren</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Another clever bird. Wren = small but mighty. Literary associations.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Growth" data-score="98" data-len="11" data-name="cleverpetal">
-        <div class="card-top">
-          <span class="rank-badge ">38</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">cleverpetal</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Clever + petal. Smart & beautiful. Slightly long (11) but very elegant.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">11 chars</span>
-          <span class="meta-pill cat">Growth</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="8" data-name="studphin">
-        <div class="card-top">
-          <span class="rank-badge ">39</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studphin</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Dolphin, shorter form. Smart, playful sea creature.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="10" data-name="learnmoose">
-        <div class="card-top">
-          <span class="rank-badge ">40</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnmoose</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Silly, lovable, Canadian charm. A moose in glasses is an instant logo.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">10 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="9" data-name="quizgoose">
-        <div class="card-top">
-          <span class="rank-badge ">41</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">quizgoose</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Silly goose! "Don't be a silly goose — quiz yourself!" Built-in catchphrase.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Nature" data-score="98" data-len="10" data-name="studclover">
-        <div class="card-top">
-          <span class="rank-badge ">42</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studclover</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Lucky learning. Four-leaf clover = fortunate discovery. Charming.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">10 chars</span>
-          <span class="meta-pill cat">Nature</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Nature" data-score="98" data-len="11" data-name="learnhollow">
-        <div class="card-top">
-          <span class="rank-badge ">43</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnhollow</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Cozy woodland retreat for learning. Sleepy Hollow vibes. Storybook aesthetic.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">11 chars</span>
-          <span class="meta-pill cat">Nature</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Emotion" data-score="98" data-len="9" data-name="pluckypal">
-        <div class="card-top">
-          <span class="rank-badge ">44</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">pluckypal</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Courageous little friend. Plucky = brave despite odds. Great personality brand.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Emotion</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Mascot" data-score="98" data-len="7" data-name="studmoo">
-        <div class="card-top">
-          <span class="rank-badge ">45</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studmoo</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Even shorter cow reference. Silly, impossible to forget. 7 chars.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10-15/yr</span>
-          <span class="meta-pill len">7 chars</span>
-          <span class="meta-pill cat">Mascot</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Nature" data-score="98" data-len="9" data-name="learnpond">
-        <div class="card-top">
-          <span class="rank-badge ">46</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnpond</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Calm, reflective, deep. "Dive into the learning pond." Nature + depth.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Nature</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Playful" data-score="98" data-len="8" data-name="bloopbop">
-        <div class="card-top">
-          <span class="rank-badge ">47</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">bloopbop</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Pure playful sound. No meaning, all vibes. Gen-Z energy. Would trend on TikTok.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">8 chars</span>
-          <span class="meta-pill cat">Playful</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="9" data-name="studbento">
-        <div class="card-top">
-          <span class="rank-badge ">48</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">studbento</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Organized compartments of knowledge. Same bento aesthetic. Clean, structured.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">9 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="11" data-name="learnmatcha">
-        <div class="card-top">
-          <span class="rank-badge ">49</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learnmatcha</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Matcha = focus + calm. Learning with intention. Wellness meets education.</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">11 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-      <div class="card tier-A" data-cat="Food/Cute" data-score="98" data-len="11" data-name="learncookie">
-        <div class="card-top">
-          <span class="rank-badge ">50</span>
-          <span class="tier-tag" style="background: #15102a; color: #a78bfa;">A-Tier</span>
-        </div>
-        <div class="domain-name"><span class="highlight">learncookie</span><span class="domain-ext">.com</span></div>
-        <p class="card-why">Sweet reward for learning. Cookie = treat. "Earn your learning cookie."</p>
-        <div class="card-meta">
-          <span class="meta-pill score">98/100</span>
-          <span class="meta-pill price">~$10/yr</span>
-          <span class="meta-pill len">11 chars</span>
-          <span class="meta-pill cat">Food/Cute</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="legend">
-      <h3>How Names Were Scored</h3>
-      <div class="legend-grid">
-        <div class="legend-item">
-          <h4>Pronounceability (25%)</h4>
-          <p>Can you say it on a podcast? Tell a friend in a noisy bar? Spell it after hearing it once?</p>
-        </div>
-        <div class="legend-item">
-          <h4>Mascot / Brand Potential (25%)</h4>
-          <p>Does it suggest a visual identity? Can you draw a logo from the name alone? Think Duolingo's owl.</p>
-        </div>
-        <div class="legend-item">
-          <h4>Emotional Resonance (20%)</h4>
-          <p>Does it make you smile? Feel encouraged? Want to use the app? Positive vibes sell.</p>
-        </div>
-        <div class="legend-item">
-          <h4>Memorability (15%)</h4>
-          <p>Would you remember it tomorrow? Weird/unexpected combos stick: "studtaco" beats "learnplatform".</p>
-        </div>
-        <div class="legend-item">
-          <h4>Social Media Virality (10%)</h4>
-          <p>Is it hashtag-friendly? Would people share it? Does it work as @handle on all platforms?</p>
-        </div>
-        <div class="legend-item">
-          <h4>Length & Simplicity (5%)</h4>
-          <p>Shorter is better for logos, URLs, and word-of-mouth. Sweet spot: 7-9 characters.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="legend" style="margin-top: 16px;">
-      <h3>Pricing Notes</h3>
-      <div class="legend-grid">
-        <div class="legend-item">
-          <h4>Standard Registration (~$10/yr)</h4>
-          <p>Most 7+ character invented names register at standard price. Best registrars: Cloudflare ($9.77), Namecheap ($10.28), Porkbun ($10.37).</p>
-        </div>
-        <div class="legend-item">
-          <h4>Potential Premium ($15-50/yr)</h4>
-          <p>Some registrars (GoDaddy, Google) classify short or keyword-rich names as "premium." Always compare prices across registrars before purchasing.</p>
-        </div>
-      </div>
-    </div>
-
-    <p class="footer">
-      Generated 2026-03-27 &middot; 2,000+ candidates checked via Verisign RDAP &middot; Availability changes fast — register your pick ASAP
-    </p>
+  <div class="stats">
+    <div class="st p"><div class="v">3,500+</div><div class="l">Checked</div></div>
+    <div class="st b"><div class="v">50</div><div class="l">Curated</div></div>
+    <div class="st k"><div class="v">10</div><div class="l">S-Tier</div></div>
+    <div class="st o"><div class="v">6.9</div><div class="l">Avg Chars</div></div>
+    <div class="st g"><div class="v">~$10</div><div class="l">Price/yr</div></div>
   </div>
 
-  <script>
-    document.getElementById('filters').addEventListener('click', e => {
-      if (!e.target.classList.contains('fbtn')) return;
-      document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      const f = e.target.dataset.f;
-      document.querySelectorAll('.card').forEach(c => {
-        c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
-      });
-    });
-  </script>
+  <div class="fl" id="fl">
+    <button class="fb on" data-f="all">All</button>
+    <button class="fb" data-f="Craft">Craft/Forge</button>
+    <button class="fb" data-f="Skill">Skill/Knack</button>
+    <button class="fb" data-f="Mascot">Mascot</button>
+    <button class="fb" data-f="Japanese">Japanese</button>
+    <button class="fb" data-f="Gamified">Gamified</button>
+    <button class="fb" data-f="Playful">Playful</button>
+    <button class="fb" data-f="Growth">Growth</button>
+  </div>
+
+  <div class="tw">
+  <table id="t">
+    <thead><tr>
+      <th data-c="rank" class="sd"># <span class="a">▼</span></th>
+      <th data-c="tier">Tier <span class="a"></span></th>
+      <th data-c="name">Domain <span class="a"></span></th>
+      <th data-c="score">Score <span class="a"></span></th>
+      <th data-c="len">Len <span class="a"></span></th>
+      <th data-c="price">Price <span class="a"></span></th>
+      <th>Category</th>
+      <th>Why It Sells</th>
+    </tr></thead>
+    <tbody id="tb">
+      <tr class="S" data-cat="Craft" data-r="1"><td class="rk r1">1</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">crafva</span><span class="x">.com</span></td><td class="sc"><span class="sn">100</span><span class="sb" style="width:60px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Craft" + "va" — ultra short, modern startup feel. Instantly says "we make skilled people." Canva-energy.</td></tr>
+      <tr class="S" data-cat="Craft" data-r="2"><td class="rk r2">2</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">forgva</span><span class="x">.com</span></td><td class="sc"><span class="sn">100</span><span class="sb" style="width:60px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + "va" — building skills from raw material. Blacksmith energy meets modern tech. 6 chars.</td></tr>
+      <tr class="S" data-cat="Japanese" data-r="3"><td class="rk r3">3</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">wazafy</span><span class="x">.com</span></td><td class="sc"><span class="sn">100</span><span class="sb" style="width:60px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Japanese</span></td><td class="wh">"Waza" = technique/skill in Japanese. + "-fy" app suffix. Exotic, short, premium. Like a martial arts school for skills.</td></tr>
+      <tr class="S" data-cat="Skill" data-r="4"><td class="rk rt">4</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">gildvo</span><span class="x">.com</span></td><td class="sc"><span class="sn">100</span><span class="sb" style="width:60px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Guild" + "vo" — community of skilled craftspeople. 6 chars. App-like ending. Professional yet approachable.</td></tr>
+      <tr class="S" data-cat="Skill" data-r="5"><td class="rk rt">5</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">knakio</span><span class="x">.com</span></td><td class="sc"><span class="sn">100</span><span class="sb" style="width:60px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Knack" + "-io" app suffix. Having a knack = natural talent. 6 chars. Clean, professional.</td></tr>
+      <tr class="S" data-cat="Craft" data-r="6"><td class="rk rt">6</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">forgzy</span><span class="x">.com</span></td><td class="sc"><span class="sn">99</span><span class="sb" style="width:56px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + "zy" — cute forge. Playful take on skill-building. 6 chars. Fun logo potential.</td></tr>
+      <tr class="S" data-cat="Skill" data-r="7"><td class="rk rt">7</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">gildzy</span><span class="x">.com</span></td><td class="sc"><span class="sn">99</span><span class="sb" style="width:56px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Guild" + "zy" — cute guild. Where fun people learn skills together. 6 chars.</td></tr>
+      <tr class="S" data-cat="Gamified" data-r="8"><td class="rk rt">8</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">xpbloom</span><span class="x">.com</span></td><td class="sc"><span class="sn">99</span><span class="sb" style="width:56px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Gamified</span></td><td class="wh">XP (gaming points) + bloom (growth). Native gamification DNA. Every gamer gets it instantly.</td></tr>
+      <tr class="S" data-cat="Japanese" data-r="9"><td class="rk rt">9</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">takumly</span><span class="x">.com</span></td><td class="sc"><span class="sn">99</span><span class="sb" style="width:56px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Japanese</span></td><td class="wh">"Takumi" = Japanese master artisan/craftsman. + "-ly" brand suffix. Premium, skill-focused, exotic.</td></tr>
+      <tr class="S" data-cat="Skill" data-r="10"><td class="rk rt">10</td><td><span class="tb S">S</span></td><td class="dn"><span class="n">honedup</span><span class="x">.com</span></td><td class="sc"><span class="sn">99</span><span class="sb" style="width:56px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Hone" your skills + "up" = level up. Action-oriented. Clear message: sharpen & rise.</td></tr>
+
+      <tr class="A" data-cat="Craft" data-r="11"><td class="rk">11</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">forgezy</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + cute "-zy". Longer form — more obviously "forge." Great for skill courses.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="12"><td class="rk">12</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">crafno</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Craft" + "no". Clean, minimal, 6 chars. Scandinavian feel.</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="13"><td class="rk">13</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">foxhone</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Clever fox + honing skills. Fox = cunning/smart. Mascot + skill message in one.</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="14"><td class="rk">14</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">owlhone</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Wise owl + honing skills. Owl = wisdom. Duolingo-style mascot with skill DNA.</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="15"><td class="rk">15</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">owlmake</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Wise owl + making things. Building skills. Maker culture + wisdom mascot.</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="16"><td class="rk">16</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">beehone</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Busy bee + honing. Bees = industrious, productive, teamwork. Sweet skill-building.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="17"><td class="rk">17</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">gildix</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Guild" + "-ix" tech suffix. Where skills are organized. 6 chars. Modern, sharp.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="18"><td class="rk">18</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">honedly</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Honed" + "-ly" — skillfully, masterfully. Adverb brand like Grammarly.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="19"><td class="rk">19</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">knackee</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Knack" + "-ee" = the person with the knack. You're a Knackee! Cute identity.</td></tr>
+      <tr class="A" data-cat="Japanese" data-r="20"><td class="rk">20</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">jutsufy</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Japanese</span></td><td class="wh">"Jutsu" = technique/art (as in Naruto/jujutsu). + "-fy". Anime-gen appeal. Skill = art form.</td></tr>
+      <tr class="A" data-cat="Japanese" data-r="21"><td class="rk">21</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">takumfy</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Japanese</span></td><td class="wh">"Takumi" artisan + "-fy" suffix. Same vibe, different ending. App-like.</td></tr>
+      <tr class="A" data-cat="Japanese" data-r="22"><td class="rk">22</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">wazaiq</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Japanese</span></td><td class="wh">"Waza" technique + "iq" intelligence suffix. 6 chars. Skill + smart.</td></tr>
+      <tr class="A" data-cat="Gamified" data-r="23"><td class="rk">23</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">xpmaker</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Gamified</span></td><td class="wh">XP points + maker culture. Earn XP by making/building things. Gamified craftsmanship.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="24"><td class="rk">24</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">forgeoo</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + "oo" — cute, playful workshop. Double-O is fun to say. Forge-oo!</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="25"><td class="rk">25</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">foxskil</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Fox + skill. Foxes are clever, quick learners. Strong mascot + skill message.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="26"><td class="rk">26</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">forgmo</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + "mo" — friendly, approachable forging. Venmo-style naming. 6 chars.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="27"><td class="rk">27</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">gildmo</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Guild" + "mo" — your mobile guild. 6 chars. Community + on-the-go learning.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="28"><td class="rk">28</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">nexkraf</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Next" + "craft" compressed. Future-forward skill building. Tech + craft mashup.</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="29"><td class="rk">29</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">pupmake</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Puppy + making. Adorable maker. Learn by building, guided by a cute pup mascot.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="30"><td class="rk">30</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">forgize</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + "-ize" action suffix. Turn raw potential into skill. Verb brand.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="31"><td class="rk">31</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">crafpo</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Craft" + "po" — punchy, minimal, 6 chars. Hipster-craft vibes.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="32"><td class="rk">32</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">gildno</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Guild" + "no" — clean Scandinavian feel. 6 chars. Minimal and bold.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="33"><td class="rk">33</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">gildpo</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Guild" + "po" — quick, clean, 6 chars. Guild as a platform, not a building.</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="34"><td class="rk">34</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">foxgild</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Fox + guild. Clever fox's guild of learners. Strong double imagery.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="35"><td class="rk">35</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">pixskil</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Pixel" + "skill" — digital skills, modern. Perfect for tech/creative courses.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="36"><td class="rk">36</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">voxskil</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Vox" (voice/expression) + "skill" — find your voice, build your skills. Bold.</td></tr>
+      <tr class="A" data-cat="Playful" data-r="37"><td class="rk">37</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">cramjoy</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Playful</span></td><td class="wh">Cram + joy. Reframes studying as fun. Strong emotional signal. 7 chars.</td></tr>
+      <tr class="A" data-cat="Growth" data-r="38"><td class="rk">38</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">zestlet</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Growth</span></td><td class="wh">Tiny spark of zest. Micro-learning, fresh energy. Bite-sized skill courses.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="39"><td class="rk">39</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">forgvo</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + "vo" — voice of the forge. Short, strong, distinctive. 6 chars.</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="40"><td class="rk">40</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">puphone</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Pup + hone. Cute puppy helps you hone skills. Adorable + action.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="41"><td class="rk">41</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">talntee</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Talent" + "-ee" — you're the talent! Cute identity label for skilled learners.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="42"><td class="rk">42</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">honedsy</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Honed" + "sy" — Etsy-style naming. Skill refinement platform. Artisanal vibes.</td></tr>
+      <tr class="A" data-cat="Japanese" data-r="43"><td class="rk">43</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">jutsuly</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Japanese</span></td><td class="wh">"Jutsu" technique + "-ly". Anime generation knows this word. Arts & techniques platform.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="44"><td class="rk">44</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">crafry</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Craft" + "ry" — like a craftery, a place where craft happens. 6 chars.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="45"><td class="rk">45</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">crafwy</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Craft" + "wy" — unusual ending, stands out. Like a craft highway. 6 chars.</td></tr>
+      <tr class="A" data-cat="Skill" data-r="46"><td class="rk">46</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">nexgild</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Skill/Knack</span></td><td class="wh">"Next" + "guild" — the next generation guild. Future-forward skill community.</td></tr>
+      <tr class="A" data-cat="Gamified" data-r="47"><td class="rk">47</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">xptier</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Gamified</span></td><td class="wh">XP + tier — rank up through tiers of mastery. Pure gamification. 6 chars.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="48"><td class="rk">48</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">forgvy</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + "vy" — savvy forge. Building skills with expertise. 6 chars.</td></tr>
+      <tr class="A" data-cat="Craft" data-r="49"><td class="rk">49</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">forgby</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">6</span></td><td class="pr">~$10</td><td><span class="cb">Craft/Forge</span></td><td class="wh">"Forge" + "by" — made by the forge. Scandinavian town-name energy. 6 chars.</td></tr>
+      <tr class="A" data-cat="Mascot" data-r="50"><td class="rk">50</td><td><span class="tb A">A</span></td><td class="dn"><span class="n">foxkraf</span><span class="x">.com</span></td><td class="sc"><span class="sn">98</span><span class="sb" style="width:52px"></span></td><td><span class="lb ls">7</span></td><td class="pr">~$10</td><td><span class="cb">Mascot</span></td><td class="wh">Fox + craft. The clever fox's workshop. Mascot meets maker culture.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="lg" style="margin-top:28px">
+    <h3>Scoring Criteria</h3>
+    <p><b style="color:#c4b5fd">Length (30%)</b> — 6 chars = gold. 7 = great. 8+ = penalized. &nbsp; <b style="color:#c4b5fd">Skill Evocation (25%)</b> — Does it scream "learn professional skills"? &nbsp; <b style="color:#c4b5fd">Pronounceability (20%)</b> — Say it on a podcast, spell it after hearing once. &nbsp; <b style="color:#c4b5fd">Brand/Logo Potential (15%)</b> — Can you visualize the logo from the name? &nbsp; <b style="color:#c4b5fd">Fun Factor (10%)</b> — Does it make you smile or feel curious?</p>
+    <p style="margin-top:10px"><b style="color:#60a5fa">Pricing:</b> All names are standard unregistered .com domains. Register at <b style="color:#60a5fa">Cloudflare ($9.77/yr)</b>, Porkbun ($10.37), or Namecheap ($10.28). Avoid GoDaddy — 2x markup.</p>
+  </div>
+
+  <p class="ft">3,500+ candidates generated & verified via Verisign RDAP &middot; 2026-03-27 &middot; Register fast — availability changes hourly</p>
+</div>
+
+<script>
+document.getElementById('fl').addEventListener('click',e=>{if(!e.target.classList.contains('fb'))return;document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));e.target.classList.add('on');const f=e.target.dataset.f;document.querySelectorAll('#tb tr').forEach(r=>{r.style.display=(f==='all'||r.dataset.cat===f)?'':'none'})});
+let ss={c:'rank',a:!0};document.querySelectorAll('th[data-c]').forEach(th=>{th.addEventListener('click',()=>{const c=th.dataset.c,a=ss.c===c?!ss.a:c==='name';ss={c,a};const tb=document.getElementById('tb'),rs=[...tb.querySelectorAll('tr')];rs.sort((x,y)=>{let va,vb;switch(c){case'rank':va=+x.dataset.r;vb=+y.dataset.r;break;case'name':va=x.querySelector('.n').textContent;vb=y.querySelector('.n').textContent;break;case'score':va=+x.querySelector('.sn').textContent;vb=+y.querySelector('.sn').textContent;break;case'len':va=+x.querySelector('.lb').textContent;vb=+y.querySelector('.lb').textContent;break;case'tier':va=x.classList.contains('S')?0:1;vb=y.classList.contains('S')?0:1;break;default:va=+x.dataset.r;vb=+y.dataset.r}if(typeof va==='string')return a?va.localeCompare(vb):vb.localeCompare(va);return a?va-vb:vb-va});rs.forEach(r=>tb.appendChild(r));document.querySelectorAll('th').forEach(t=>t.classList.remove('sd'));th.classList.add('sd');document.querySelectorAll('th .a').forEach(a=>a.textContent='');th.querySelector('.a').textContent=a?'▲':'▼'})});
+</script>
 </body>
 </html>
