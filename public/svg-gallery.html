@@ -866,6 +866,398 @@ icons['course-personal-finance'] = { category:'Course', label:'Personal Finance'
 `}};
 
 
+// ════════════════════════════
+// ANIMALS (12) — cute Duolingo-style characters
+// ════════════════════════════
+
+icons['animal-bee'] = { category:'Animals', label:'Bee', draw() { return `
+  <g data-part="shadow"><rect x="14" y="54" width="36" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="36" rx="14" ry="16" fill="${C.bee}" ${S}/>
+    <ellipse cx="22" cy="22" rx="8" ry="5" fill="${C.canary}" ${S} transform="rotate(-30 22 22)"/>
+    <ellipse cx="42" cy="22" rx="8" ry="5" fill="${C.canary}" ${S} transform="rotate(30 42 22)"/>
+  </g>
+  <g data-part="detail">
+    <rect x="20" y="32" width="24" height="4" rx="2" fill="${C.camel}" ${S2}/>
+    <rect x="20" y="40" width="24" height="4" rx="2" fill="${C.camel}" ${S2}/>
+    <ellipse cx="26" cy="28" rx="3.5" ry="4" fill="${C.polar}" ${S2}/>
+    <ellipse cx="38" cy="28" rx="3.5" ry="4" fill="${C.polar}" ${S2}/>
+    <circle cx="27.5" cy="29" r="2" fill="${C.eel}"/>
+    <circle cx="39.5" cy="29" r="2" fill="${C.eel}"/>
+    <path d="M30,35 Q32,37 34,35" fill="none" ${S2}/>
+    <circle cx="18" cy="48" r="1.5" fill="${C.canary}" opacity="0.5"/>
+  </g>
+  <g data-part="highlight"><circle cx="24" cy="24" r="2" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-octopus'] = { category:'Animals', label:'Octopus', draw() { return `
+  <g data-part="shadow"><rect x="10" y="54" width="44" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="24" rx="16" ry="14" fill="${C.beetle}" ${S}/>
+    <path d="M16,30 Q12,42 10,50" fill="none" stroke="${C.betta}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20,32 Q18,44 14,52" fill="none" stroke="${C.betta}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M44,32 Q46,44 50,52" fill="none" stroke="${C.betta}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M48,30 Q52,42 54,50" fill="none" stroke="${C.betta}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26,34 Q24,46 22,54" fill="none" stroke="${C.beetle}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M38,34 Q40,46 42,54" fill="none" stroke="${C.beetle}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="25" cy="22" rx="4" ry="5" fill="${C.polar}" ${S2}/>
+    <ellipse cx="39" cy="22" rx="4" ry="5" fill="${C.polar}" ${S2}/>
+    <circle cx="26.5" cy="23" r="2.5" fill="${C.eel}"/>
+    <circle cx="40.5" cy="23" r="2.5" fill="${C.eel}"/>
+    <path d="M30,30 Q32,32 34,30" fill="none" ${S2}/>
+    <circle cx="32" cy="14" r="2" fill="${C.starfish}" opacity="0.5"/>
+  </g>
+  <g data-part="highlight"><circle cx="22" cy="16" r="2.5" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-beaver'] = { category:'Animals', label:'Beaver', draw() { return `
+  <g data-part="shadow"><rect x="12" y="54" width="40" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="30" rx="16" ry="18" fill="${C.monkey}" ${S}/>
+    <ellipse cx="32" cy="38" rx="10" ry="6" fill="${C.cheetah}" ${S}/>
+    <circle cx="22" cy="14" r="5" fill="${C.monkey}" ${S}/>
+    <circle cx="42" cy="14" r="5" fill="${C.monkey}" ${S}/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="26" cy="26" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <ellipse cx="38" cy="26" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <circle cx="27" cy="27" r="2" fill="${C.eel}"/>
+    <circle cx="39" cy="27" r="2" fill="${C.eel}"/>
+    <circle cx="32" cy="34" r="2.5" fill="${C.grizzly}" ${S2}/>
+    <rect x="29" y="38" width="3" height="5" rx="1" fill="${C.polar}" ${S2}/>
+    <rect x="33" y="38" width="3" height="5" rx="1" fill="${C.polar}" ${S2}/>
+    <rect x="22" y="48" width="20" height="6" rx="2" fill="${C.grizzly}" ${S}/>
+  </g>
+  <g data-part="highlight"><circle cx="24" cy="20" r="2" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-fox'] = { category:'Animals', label:'Fox', draw() { return `
+  <g data-part="shadow"><rect x="12" y="54" width="40" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="32" rx="16" ry="18" fill="${C.fox}" ${S}/>
+    <path d="M16,28 L10,8 L22,20 Z" fill="${C.fox}" ${S}/>
+    <path d="M48,28 L54,8 L42,20 Z" fill="${C.fox}" ${S}/>
+    <path d="M16,28 L12,12 L20,20 Z" fill="${C.cheetah}"/>
+    <path d="M48,28 L52,12 L44,20 Z" fill="${C.cheetah}"/>
+    <ellipse cx="32" cy="38" rx="10" ry="8" fill="${C.canary}" ${S}/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="25" cy="28" rx="3.5" ry="4" fill="${C.polar}" ${S2}/>
+    <ellipse cx="39" cy="28" rx="3.5" ry="4" fill="${C.polar}" ${S2}/>
+    <circle cx="26" cy="29" r="2" fill="${C.eel}"/>
+    <circle cx="40" cy="29" r="2" fill="${C.eel}"/>
+    <circle cx="32" cy="35" r="2.5" fill="${C.eel}" opacity="0.8"/>
+    <path d="M29,39 Q32,42 35,39" fill="none" ${S2}/>
+    <path d="M46,44 Q54,40 58,46" fill="none" stroke="${C.fox}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g data-part="highlight"><circle cx="23" cy="22" r="2" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-penguin'] = { category:'Animals', label:'Penguin', draw() { return `
+  <g data-part="shadow"><rect x="14" y="54" width="36" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="32" rx="15" ry="20" fill="${C.eel}" ${S}/>
+    <ellipse cx="32" cy="36" rx="10" ry="14" fill="${C.polar}" ${S2}/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="26" cy="24" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <ellipse cx="38" cy="24" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <circle cx="27" cy="25" r="2" fill="${C.eel}"/>
+    <circle cx="39" cy="25" r="2" fill="${C.eel}"/>
+    <path d="M29,32 L32,35 L35,32" fill="${C.fox}" ${S2}/>
+    <ellipse cx="14" cy="34" rx="4" ry="7" fill="${C.eel}" ${S} transform="rotate(15 14 34)"/>
+    <ellipse cx="50" cy="34" rx="4" ry="7" fill="${C.eel}" ${S} transform="rotate(-15 50 34)"/>
+    <ellipse cx="28" cy="52" rx="5" ry="2.5" fill="${C.fox}" ${S2}/>
+    <ellipse cx="36" cy="52" rx="5" ry="2.5" fill="${C.fox}" ${S2}/>
+  </g>
+  <g data-part="highlight"><circle cx="24" cy="18" r="2" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-cat'] = { category:'Animals', label:'Cat', draw() { return `
+  <g data-part="shadow"><rect x="14" y="54" width="36" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="34" rx="15" ry="16" fill="${C.beetle}" ${S}/>
+    <path d="M17,26 L12,8 L24,22 Z" fill="${C.beetle}" ${S}/>
+    <path d="M47,26 L52,8 L40,22 Z" fill="${C.beetle}" ${S}/>
+    <path d="M17,26 L14,12 L22,22 Z" fill="${C.betta}"/>
+    <path d="M47,26 L50,12 L42,22 Z" fill="${C.betta}"/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="25" cy="30" rx="4" ry="4.5" fill="${C.polar}" ${S2}/>
+    <ellipse cx="39" cy="30" rx="4" ry="4.5" fill="${C.polar}" ${S2}/>
+    <ellipse cx="26" cy="31" rx="2.5" ry="3" fill="${C.butterfly}"/>
+    <ellipse cx="40" cy="31" rx="2.5" ry="3" fill="${C.butterfly}"/>
+    <circle cx="26" cy="30" r="1.2" fill="${C.eel}"/>
+    <circle cx="40" cy="30" r="1.2" fill="${C.eel}"/>
+    <ellipse cx="32" cy="37" rx="2" ry="1.5" fill="${C.betta}" ${S2}/>
+    <path d="M30,39 Q32,42 34,39" fill="none" ${S2}/>
+    <line x1="14" y1="34" x2="22" y2="36" ${S2}/>
+    <line x1="14" y1="38" x2="22" y2="38" ${S2}/>
+    <line x1="42" y1="36" x2="50" y2="34" ${S2}/>
+    <line x1="42" y1="38" x2="50" y2="38" ${S2}/>
+  </g>
+  <g data-part="highlight"><circle cx="22" cy="22" r="2" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-rabbit'] = { category:'Animals', label:'Rabbit', draw() { return `
+  <g data-part="shadow"><rect x="14" y="54" width="36" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="38" rx="14" ry="14" fill="${C.flamingo}" ${S}/>
+    <rect x="20" y="4" width="8" height="24" rx="4" fill="${C.flamingo}" ${S}/>
+    <rect x="36" y="4" width="8" height="24" rx="4" fill="${C.flamingo}" ${S}/>
+    <rect x="22" y="8" width="4" height="16" rx="2" fill="${C.starfish}"/>
+    <rect x="38" y="8" width="4" height="16" rx="2" fill="${C.starfish}"/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="26" cy="34" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <ellipse cx="38" cy="34" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <circle cx="27" cy="35" r="2" fill="${C.eel}"/>
+    <circle cx="39" cy="35" r="2" fill="${C.eel}"/>
+    <ellipse cx="32" cy="40" rx="2" ry="1.5" fill="${C.walkFish}" ${S2}/>
+    <path d="M30,43 Q32,45 34,43" fill="none" ${S2}/>
+    <circle cx="44" cy="44" r="4" fill="${C.walkFish}" ${S2}/>
+  </g>
+  <g data-part="highlight"><circle cx="24" cy="30" r="2" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-bear'] = { category:'Animals', label:'Bear', draw() { return `
+  <g data-part="shadow"><rect x="12" y="54" width="40" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="34" rx="18" ry="18" fill="${C.grizzly}" ${S}/>
+    <circle cx="16" cy="16" r="6" fill="${C.grizzly}" ${S}/>
+    <circle cx="48" cy="16" r="6" fill="${C.grizzly}" ${S}/>
+    <circle cx="16" cy="16" r="3.5" fill="${C.monkey}"/>
+    <circle cx="48" cy="16" r="3.5" fill="${C.monkey}"/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="32" cy="38" rx="10" ry="8" fill="${C.cheetah}" ${S}/>
+    <ellipse cx="26" cy="28" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <ellipse cx="38" cy="28" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <circle cx="27" cy="29" r="2" fill="${C.eel}"/>
+    <circle cx="39" cy="29" r="2" fill="${C.eel}"/>
+    <ellipse cx="32" cy="36" rx="3" ry="2.5" fill="${C.eel}" opacity="0.8"/>
+    <path d="M30,40 Q32,43 34,40" fill="none" ${S2}/>
+  </g>
+  <g data-part="highlight"><circle cx="22" cy="22" r="2.5" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-whale'] = { category:'Animals', label:'Whale', draw() { return `
+  <g data-part="shadow"><rect x="8" y="54" width="48" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="30" cy="36" rx="22" ry="14" fill="${C.macaw}" ${S}/>
+    <ellipse cx="30" cy="40" rx="16" ry="8" fill="${C.blueJay}" ${S2}/>
+    <path d="M52,30 Q58,20 56,12 Q54,18 50,22" fill="${C.whale}" ${S}/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="20" cy="32" rx="3" ry="3.5" fill="${C.polar}" ${S2}/>
+    <circle cx="21" cy="33" r="2" fill="${C.eel}"/>
+    <path d="M14,40 Q16,42 18,40" fill="none" ${S2}/>
+    <circle cx="30" cy="10" r="2" fill="${C.blueJay}" ${S2}/>
+    <path d="M28,10 Q30,4 32,10" fill="none" stroke="${C.blueJay}" stroke-width="1.5" stroke-linecap="round"/>
+    <ellipse cx="44" cy="40" rx="4" ry="2" fill="${C.macaw}" ${S2}/>
+  </g>
+  <g data-part="highlight"><circle cx="16" cy="28" r="2.5" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-turtle'] = { category:'Animals', label:'Turtle', draw() { return `
+  <g data-part="shadow"><rect x="8" y="54" width="48" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <ellipse cx="32" cy="36" rx="20" ry="14" fill="${C.owl}" ${S}/>
+    <ellipse cx="32" cy="34" rx="16" ry="10" fill="${C.treeFrog}" ${S}/>
+    <circle cx="50" cy="32" r="6" fill="${C.turtle}" ${S}/>
+  </g>
+  <g data-part="detail">
+    <line x1="24" y1="28" x2="24" y2="40" ${S2}/>
+    <line x1="32" y1="26" x2="32" y2="42" ${S2}/>
+    <line x1="40" y1="28" x2="40" y2="40" ${S2}/>
+    <ellipse cx="52" cy="30" rx="2" ry="2.5" fill="${C.polar}" ${S2}/>
+    <circle cx="53" cy="31" r="1.5" fill="${C.eel}"/>
+    <path d="M50,35 Q52,36 53,35" fill="none" ${S2}/>
+    <ellipse cx="14" cy="48" rx="4" ry="2.5" fill="${C.turtle}" ${S2}/>
+    <ellipse cx="50" cy="48" rx="4" ry="2.5" fill="${C.turtle}" ${S2}/>
+    <ellipse cx="18" cy="46" rx="4" ry="2.5" fill="${C.turtle}" ${S2}/>
+    <ellipse cx="46" cy="46" rx="4" ry="2.5" fill="${C.turtle}" ${S2}/>
+  </g>
+  <g data-part="highlight"><circle cx="24" cy="28" r="2" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-flamingo'] = { category:'Animals', label:'Flamingo', draw() { return `
+  <g data-part="shadow"><rect x="20" y="54" width="24" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <circle cx="32" cy="14" r="8" fill="${C.flamingo}" ${S}/>
+    <ellipse cx="32" cy="30" rx="10" ry="12" fill="${C.starfish}" ${S}/>
+    <path d="M32,42 Q32,52 28,56" fill="none" stroke="${C.cardinal}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M34,42 Q36,52 40,54 Q40,56 38,56" fill="none" stroke="${C.cardinal}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="28" cy="12" rx="2.5" ry="3" fill="${C.polar}" ${S2}/>
+    <circle cx="29" cy="13" r="1.5" fill="${C.eel}"/>
+    <path d="M34,16 L38,18 L34,18" fill="${C.cardinal}" ${S2}/>
+    <path d="M24,28 Q22,24 20,22" fill="none" stroke="${C.flamingo}" stroke-width="2" stroke-linecap="round"/>
+    <path d="M40,28 Q42,24 44,22" fill="none" stroke="${C.flamingo}" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g data-part="highlight"><circle cx="27" cy="10" r="2" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+icons['animal-puffer-fish'] = { category:'Animals', label:'Puffer Fish', draw() { return `
+  <g data-part="shadow"><rect x="12" y="54" width="40" height="6" rx="3" fill="${C.eel}" opacity="0.1"/></g>
+  <g data-part="body">
+    <circle cx="32" cy="32" r="18" fill="${C.bee}" ${S}/>
+    <ellipse cx="32" cy="36" rx="12" ry="10" fill="${C.canary}" ${S}/>
+  </g>
+  <g data-part="detail">
+    <ellipse cx="26" cy="26" rx="3.5" ry="4" fill="${C.polar}" ${S2}/>
+    <ellipse cx="38" cy="26" rx="3.5" ry="4" fill="${C.polar}" ${S2}/>
+    <circle cx="27" cy="27" r="2" fill="${C.eel}"/>
+    <circle cx="39" cy="27" r="2" fill="${C.eel}"/>
+    <path d="M30,34 Q32,36 34,34" fill="none" ${S2}/>
+    <circle cx="32" cy="14" r="2.5" fill="${C.lion}" ${S2}/>
+    <circle cx="18" cy="22" r="2.5" fill="${C.lion}" ${S2}/>
+    <circle cx="46" cy="22" r="2.5" fill="${C.lion}" ${S2}/>
+    <circle cx="16" cy="34" r="2.5" fill="${C.lion}" ${S2}/>
+    <circle cx="48" cy="34" r="2.5" fill="${C.lion}" ${S2}/>
+    <circle cx="20" cy="46" r="2.5" fill="${C.lion}" ${S2}/>
+    <circle cx="44" cy="46" r="2.5" fill="${C.lion}" ${S2}/>
+    <ellipse cx="50" cy="32" rx="5" ry="3" fill="${C.bee}" ${S2}/>
+  </g>
+  <g data-part="highlight"><circle cx="24" cy="20" r="2.5" fill="${C.polar}" opacity="0.35"/></g>
+`}};
+
+
+// ════════════════════════════
+// SHOWCASE — Duolingo-style mascot/character
+// ════════════════════════════
+
+// Mech — a cute robot engineer mascot
+icons['mascot-mech'] = { category:'Mascots', label:'Mech (Robot Engineer)', draw() { return `
+  <g data-part="shadow">
+    <rect x="18" y="56" width="28" height="6" rx="3" fill="${C.eel}" opacity="0.12"/>
+  </g>
+  <g data-part="body">
+    <!-- Body (rounded rectangle) -->
+    <rect x="18" y="28" width="28" height="24" rx="8" fill="${C.macaw}" ${S}/>
+    <!-- Belly plate -->
+    <rect x="24" y="34" width="16" height="12" rx="5" fill="${C.blueJay}"/>
+    <!-- Belly bolt -->
+    <circle cx="32" cy="40" r="2" fill="${C.whale}"/>
+    <!-- Head (big rounded square) -->
+    <rect x="14" y="4" width="36" height="28" rx="10" fill="${C.macaw}" ${S}/>
+    <!-- Face plate -->
+    <rect x="20" y="10" width="24" height="16" rx="6" fill="${C.blueJay}"/>
+    <!-- Antenna -->
+    <line x1="32" y1="4" x2="32" y2="0" stroke="${C.eel}" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="32" cy="0" r="3" fill="${C.bee}" stroke="${C.eel}" stroke-width="1.5"/>
+  </g>
+  <g data-part="detail">
+    <!-- Left eye (pill shape, Duolingo style) -->
+    <rect x="23" y="14" width="6" height="8" rx="3" fill="${C.polar}"/>
+    <circle cx="27" cy="18" r="2" fill="${C.eel}"/>
+    <circle cx="27.5" cy="17" r="0.8" fill="${C.polar}"/>
+    <!-- Right eye -->
+    <rect x="35" y="14" width="6" height="8" rx="3" fill="${C.polar}"/>
+    <circle cx="39" cy="18" r="2" fill="${C.eel}"/>
+    <circle cx="39.5" cy="17" r="0.8" fill="${C.polar}"/>
+    <!-- Mouth (asymmetric, slightly to the right — Duolingo style) -->
+    <path d="M30,24 Q33,27 37,24" fill="none" stroke="${C.eel}" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Left arm (rounded rectangle) -->
+    <rect x="6" y="30" width="12" height="6" rx="3" fill="${C.macaw}" ${S}/>
+    <!-- Left hand (circle) -->
+    <circle cx="8" cy="33" r="4" fill="${C.whale}" ${S}/>
+    <!-- Wrench in left hand! -->
+    <rect x="2" y="26" width="3" height="10" rx="1.5" fill="${C.bee}" stroke="${C.eel}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="3.5" cy="24" r="3" fill="none" stroke="${C.eel}" stroke-width="1.5"/>
+    <!-- Right arm -->
+    <rect x="46" y="30" width="12" height="6" rx="3" fill="${C.macaw}" ${S}/>
+    <!-- Right hand -->
+    <circle cx="56" cy="33" r="4" fill="${C.whale}" ${S}/>
+    <!-- Left foot -->
+    <rect x="20" y="50" width="8" height="6" rx="3" fill="${C.whale}" ${S}/>
+    <!-- Right foot -->
+    <rect x="36" y="50" width="8" height="6" rx="3" fill="${C.whale}" ${S}/>
+    <!-- Ear bolts -->
+    <circle cx="14" cy="18" r="2.5" fill="${C.whale}" stroke="${C.eel}" stroke-width="1.5"/>
+    <circle cx="50" cy="18" r="2.5" fill="${C.whale}" stroke="${C.eel}" stroke-width="1.5"/>
+  </g>
+  <g data-part="highlight">
+    <circle cx="22" cy="10" r="3" fill="${C.polar}" opacity="0.3"/>
+  </g>
+`}};
+
+// Gear buddy — a cute anthropomorphic gear
+icons['mascot-gear-buddy'] = { category:'Mascots', label:'Gear Buddy', draw() { return `
+  <g data-part="shadow">
+    <rect x="16" y="56" width="32" height="6" rx="3" fill="${C.eel}" opacity="0.12"/>
+  </g>
+  <g data-part="body">
+    <!-- Gear body with teeth -->
+    <circle cx="32" cy="30" r="18" fill="${C.owl}" ${S}/>
+    <rect x="28" y="8" width="8" height="8" rx="4" fill="${C.owl}" ${S}/>
+    <rect x="28" y="44" width="8" height="8" rx="4" fill="${C.owl}" ${S}/>
+    <rect x="10" y="26" width="8" height="8" rx="4" fill="${C.owl}" ${S}/>
+    <rect x="46" y="26" width="8" height="8" rx="4" fill="${C.owl}" ${S}/>
+    <rect x="14" y="14" width="7" height="6" rx="3" fill="${C.owl}" ${S} transform="rotate(45 17.5 17)"/>
+    <rect x="43" y="14" width="7" height="6" rx="3" fill="${C.owl}" ${S} transform="rotate(-45 46.5 17)"/>
+    <rect x="14" y="40" width="7" height="6" rx="3" fill="${C.owl}" ${S} transform="rotate(-45 17.5 43)"/>
+    <rect x="43" y="40" width="7" height="6" rx="3" fill="${C.owl}" ${S} transform="rotate(45 46.5 43)"/>
+    <!-- Face plate (inner circle) -->
+    <circle cx="32" cy="30" r="12" fill="${C.turtle}"/>
+  </g>
+  <g data-part="detail">
+    <!-- Left eye -->
+    <rect x="25" y="24" width="5" height="7" rx="2.5" fill="${C.polar}"/>
+    <circle cx="28" cy="28" r="1.8" fill="${C.eel}"/>
+    <circle cx="28.5" cy="27.2" r="0.7" fill="${C.polar}"/>
+    <!-- Right eye -->
+    <rect x="34" y="24" width="5" height="7" rx="2.5" fill="${C.polar}"/>
+    <circle cx="37" cy="28" r="1.8" fill="${C.eel}"/>
+    <circle cx="37.5" cy="27.2" r="0.7" fill="${C.polar}"/>
+    <!-- Mouth — cute asymmetric smile -->
+    <path d="M29,35 Q32,38 36,34.5" fill="none" stroke="${C.eel}" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Feet -->
+    <rect x="22" y="50" width="8" height="6" rx="3" fill="${C.treeFrog}" ${S}/>
+    <rect x="34" y="50" width="8" height="6" rx="3" fill="${C.treeFrog}" ${S}/>
+  </g>
+  <g data-part="highlight">
+    <circle cx="24" cy="20" r="3" fill="${C.polar}" opacity="0.3"/>
+  </g>
+`}};
+
+// Flame buddy — streak mascot
+icons['mascot-flame'] = { category:'Mascots', label:'Flame Buddy', draw() { return `
+  <g data-part="shadow">
+    <rect x="18" y="56" width="28" height="6" rx="3" fill="${C.eel}" opacity="0.12"/>
+  </g>
+  <g data-part="body">
+    <!-- Flame body -->
+    <path d="M32,4 Q18,20 16,32 Q14,46 32,56 Q50,46 48,32 Q46,20 32,4Z" fill="${C.fox}" ${S}/>
+    <!-- Inner flame -->
+    <path d="M32,16 Q24,28 22,36 Q20,46 32,50 Q44,46 42,36 Q40,28 32,16Z" fill="${C.bee}"/>
+    <!-- Core -->
+    <path d="M32,28 Q29,34 28,38 Q27,44 32,46 Q37,44 36,38 Q35,34 32,28Z" fill="${C.canary}"/>
+  </g>
+  <g data-part="detail">
+    <!-- Left eye -->
+    <rect x="24" y="30" width="5" height="7" rx="2.5" fill="${C.polar}"/>
+    <circle cx="27" cy="34" r="1.8" fill="${C.eel}"/>
+    <circle cx="27.5" cy="33.2" r="0.7" fill="${C.polar}"/>
+    <!-- Right eye -->
+    <rect x="35" y="30" width="5" height="7" rx="2.5" fill="${C.polar}"/>
+    <circle cx="38" cy="34" r="1.8" fill="${C.eel}"/>
+    <circle cx="38.5" cy="33.2" r="0.7" fill="${C.polar}"/>
+    <!-- Mouth -->
+    <path d="M30,40 Q33,43 37,40" fill="none" stroke="${C.eel}" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Cheek blush -->
+    <circle cx="23" cy="38" r="2.5" fill="${C.cardinal}" opacity="0.25"/>
+    <circle cx="41" cy="38" r="2.5" fill="${C.cardinal}" opacity="0.25"/>
+  </g>
+  <g data-part="highlight">
+    <circle cx="24" cy="14" r="3" fill="${C.polar}" opacity="0.35"/>
+  </g>
+`}};
+
+
 // ═══════════════════════════
 // PUBLIC API
 // ═══════════════════════════

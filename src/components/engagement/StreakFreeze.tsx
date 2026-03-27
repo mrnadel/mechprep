@@ -75,42 +75,34 @@ export function StreakFreeze() {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="bg-[#F0F4FF] w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-xl overflow-y-auto flex flex-col"
+            className="bg-gradient-to-b from-violet-500 to-purple-600 w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-xl overflow-y-auto flex flex-col"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 24 }}
           >
-            <FloatingParticles color="rgba(96,165,250,0.35)" count={5} drift />
+            <FloatingParticles color="rgba(255,255,255,0.12)" count={5} drift />
 
             {/* Content — centered */}
-            <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-6 text-center">
-              <div
-                className="flex items-center justify-center w-16 h-16 rounded-full text-4xl mb-4"
-                style={{ background: '#FEF2F2' }}
-              >
+            <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-6 text-center text-white">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full text-4xl mb-4 bg-white/15">
                 💔
               </div>
 
-              <h2 className="text-xl font-extrabold text-gray-900 mb-1">
+              <h2 className="text-xl font-extrabold text-white mb-1">
                 Your streak broke!
               </h2>
-              <p className="text-sm text-gray-500 mb-5">
+              <p className="text-sm text-white/60 mb-5">
                 You had a{' '}
-                <span className="font-bold text-gray-700">
+                <span className="font-bold text-white">
                   {streak.lastStreakValueBeforeBreak}-day streak
                 </span>
               </p>
 
-              <div
-                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl"
-                style={{ background: 'rgba(255,255,255,0.8)' }}
-              >
+              <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/15 backdrop-blur-sm">
                 <span className="text-lg">💎</span>
-                <span className="text-xl font-extrabold" style={{ color: '#7C3AED' }}>
-                  {REPAIR_COST}
-                </span>
-                <span className="text-sm font-semibold text-gray-500">to repair</span>
+                <span className="text-xl font-extrabold text-white">{REPAIR_COST}</span>
+                <span className="text-sm font-semibold text-white/60">to repair</span>
               </div>
             </div>
 
@@ -125,7 +117,7 @@ export function StreakFreeze() {
               </GameButton>
               <button
                 onClick={dismissRepairModal}
-                className="w-full py-2.5 mt-2 rounded-xl text-sm font-semibold text-gray-500 transition-colors"
+                className="w-full py-2.5 mt-2 rounded-xl text-sm font-semibold text-white/60 hover:text-white/80 transition-colors"
                 style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
               >
                 Skip

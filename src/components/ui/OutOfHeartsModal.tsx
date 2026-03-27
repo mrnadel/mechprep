@@ -93,19 +93,17 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
             </button>
 
             {/* Content — centered */}
-            <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1]">
-              <div className="bg-gradient-to-br from-red-500 to-red-600 px-5 pt-6 pb-5 text-white text-center">
-                <div className="flex justify-center mb-3">
-                  <svg className="w-14 h-14 text-white opacity-90" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                  </svg>
-                </div>
-                <h3 id="out-of-hearts-title" className="text-xl font-extrabold">Out of Hearts</h3>
+            <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] text-center text-white px-5">
+              <div className="flex justify-center mb-4">
+                <svg className="w-20 h-20 text-white opacity-90" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
               </div>
+              <h3 id="out-of-hearts-title" className="text-2xl font-extrabold mb-6">Out of Hearts</h3>
 
-              <div className="px-5 py-6 text-center">
-                <p className="text-xs font-semibold text-gray-500 mb-1">Next heart in</p>
-                <p className="text-3xl font-extrabold text-gray-900 tabular-nums">{countdown}</p>
+              <div className="bg-white/15 backdrop-blur-sm rounded-2xl px-8 py-5">
+                <p className="text-xs font-semibold text-white/60 mb-1">Next heart in</p>
+                <p className="text-4xl font-extrabold text-white tabular-nums">{countdown}</p>
               </div>
             </div>
 
@@ -115,7 +113,7 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
                 href="/pricing"
                 onClick={() => { analytics.subscription({ action: 'checkout_initiated', plan: 'pro', interval: 'month', source: 'out_of_hearts' }); handleClose(); }}
               >
-                <GameButton variant="indigo" className="pointer-events-none">
+                <GameButton variant="gold" className="pointer-events-none">
                   Get Unlimited Hearts
                 </GameButton>
               </Link>

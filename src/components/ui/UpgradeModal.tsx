@@ -69,7 +69,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
           />
 
           <motion.div
-            className="relative bg-white w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
+            className="relative bg-gradient-to-b from-primary-600 to-primary-700 w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
             role="dialog"
             aria-modal="true"
             aria-labelledby="upgrade-modal-title"
@@ -80,22 +80,22 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
           >
             <button
               onClick={onClose}
-              className="absolute top-3 right-3 p-2.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="absolute top-3 right-3 p-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Close"
             >
-              <X className="w-4 h-4 text-gray-500" />
+              <X className="w-4 h-4 text-white/70" />
             </button>
 
             {/* Content — centered */}
             <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1]">
-              <div className="bg-gradient-to-br from-primary-600 to-primary-700 px-5 pt-6 pb-5 text-white">
+              <div className="px-5 pt-8 pb-4 text-white">
                 <div className="flex items-center gap-2 mb-2">
-                  <Lock className="w-5 h-5 text-primary-200" />
-                  <span className="text-sm font-medium text-primary-200">
+                  <Lock className="w-5 h-5 text-white/60" />
+                  <span className="text-sm font-medium text-white/60">
                     {reason || 'This feature requires Pro'}
                   </span>
                 </div>
-                <h3 id="upgrade-modal-title" className="text-xl font-extrabold">MechReady Pro</h3>
+                <h3 id="upgrade-modal-title" className="text-2xl font-extrabold">MechReady Pro</h3>
               </div>
 
               <div className="px-5 py-4">
@@ -106,8 +106,8 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
                     'Full analytics dashboard',
                     '2x XP on weekends',
                   ].map((benefit) => (
-                    <li key={benefit} className="flex items-center gap-2.5 text-sm text-gray-700">
-                      <Check className="w-4 h-4 text-green-500 shrink-0" />
+                    <li key={benefit} className="flex items-center gap-2.5 text-sm text-white/80 bg-white/10 rounded-xl px-3 py-2.5">
+                      <Check className="w-4 h-4 text-green-400 shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -118,7 +118,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
             {/* Footer — pinned bottom */}
             <div className="shrink-0 px-5 pb-8 sm:pb-5 relative z-[1]">
               <GameButton
-                variant="indigo"
+                variant="gold"
                 onClick={handleSubscribe}
                 disabled={loading || !session}
               >

@@ -32,10 +32,11 @@ export function LeaguePromotion() {
         emoji: currentTier.icon,
         headline: `Promoted to ${currentTier.name}!`,
         subtext: `You earned +${LEAGUE_GEM_REWARD_PROMOTION} 💎 gems for finishing in the top ranks.`,
-        bg: '#ECFDF5',
-        accentColor: '#16A34A',
-        buttonVariant: 'green' as GameButtonVariant,
-        particleColor: 'rgba(34,197,94,0.3)',
+        bg: 'linear-gradient(to bottom, #22c55e, #16a34a)',
+        accentColor: '#fff',
+        textColor: 'text-white',
+        buttonVariant: 'gold' as GameButtonVariant,
+        particleColor: 'rgba(255,255,255,0.15)',
       };
     }
     if (isDemoted) {
@@ -43,20 +44,22 @@ export function LeaguePromotion() {
         emoji: currentTier.icon,
         headline: `Moved to ${currentTier.name}`,
         subtext: "Keep practicing and you'll climb back.",
-        bg: '#FEF2F2',
-        accentColor: '#DC2626',
+        bg: 'linear-gradient(to bottom, #f87171, #dc2626)',
+        accentColor: '#fff',
+        textColor: 'text-white',
         buttonVariant: 'indigo' as GameButtonVariant,
-        particleColor: 'rgba(239,68,68,0.2)',
+        particleColor: 'rgba(255,255,255,0.12)',
       };
     }
     return {
       emoji: currentTier.icon,
       headline: `Stayed in ${currentTier.name}`,
       subtext: 'Keep it up to reach the promotion zone.',
-      bg: '#EFF6FF',
-      accentColor: '#3B82F6',
+      bg: 'linear-gradient(to bottom, #60a5fa, #3b82f6)',
+      accentColor: '#fff',
+      textColor: 'text-white',
       buttonVariant: 'indigo' as GameButtonVariant,
-      particleColor: 'rgba(59,130,246,0.25)',
+      particleColor: 'rgba(255,255,255,0.12)',
     };
   };
 
@@ -104,8 +107,7 @@ export function LeaguePromotion() {
                 </motion.div>
 
                 <motion.h2
-                  className="text-2xl font-extrabold mb-2"
-                  style={{ color: content.accentColor }}
+                  className="text-2xl font-extrabold mb-2 text-white"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
@@ -120,17 +122,17 @@ export function LeaguePromotion() {
                   transition={{ delay: 0.55 }}
                 >
                   <div className="text-center">
-                    <p className="text-2xl font-extrabold text-gray-800">#{result.rank}</p>
-                    <p className="text-xs text-gray-400 font-semibold">Final Rank</p>
+                    <p className="text-2xl font-extrabold text-white">#{result.rank}</p>
+                    <p className="text-xs text-white/50 font-semibold">Final Rank</p>
                   </div>
                   {isPromoted && (
                     <>
-                      <div className="w-px h-8 bg-gray-200" />
+                      <div className="w-px h-8 bg-white/20" />
                       <div className="text-center">
-                        <p className="text-2xl font-extrabold text-emerald-600">
+                        <p className="text-2xl font-extrabold text-white">
                           +{LEAGUE_GEM_REWARD_PROMOTION} 💎
                         </p>
-                        <p className="text-xs text-gray-400 font-semibold">Gems Earned</p>
+                        <p className="text-xs text-white/50 font-semibold">Gems Earned</p>
                       </div>
                     </>
                   )}
