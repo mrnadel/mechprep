@@ -47,7 +47,7 @@ export function WelcomeBack() {
           {/* Content — centered */}
           <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1] p-6 text-white">
             <div className="text-center mb-5">
-              <div className="mb-3" aria-hidden="true"><Hand className="w-12 h-12 text-white" /></div>
+              <div className="mb-3" aria-hidden="true"><img src="/badges/waving-hand.png" alt="" width={64} height={64} draggable={false} /></div>
               <h2 id="welcome-back-title" className="text-2xl font-extrabold text-white mb-1">
                 Welcome back!
               </h2>

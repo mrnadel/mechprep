@@ -72,11 +72,11 @@ export function TrialPromptModal() {
             <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1]">
               <div className="px-5 pt-8 pb-5 text-center">
                 <motion.div
-                  className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-4 border border-white/30"
+                  className="flex items-center justify-center mx-auto mb-4"
                   animate={{ y: [0, -4, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 >
-                  <Sparkles className="w-7 h-7 text-white" />
+                  <img src="/badges/crown.png" alt="" width={72} height={72} draggable={false} />
                 </motion.div>
                 <h3 id="trial-prompt-title" className="text-2xl font-extrabold text-white">
                   Try Pro Free

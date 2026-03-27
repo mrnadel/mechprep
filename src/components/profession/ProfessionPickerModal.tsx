@@ -58,7 +58,8 @@ export function ProfessionPickerModal({ isOpen, onClose, selectedId, onSelect }:
             </button>
 
             <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1]">
-              <div className="px-5 pt-6 pb-3">
+              <div className="px-5 pt-6 pb-3 flex items-center gap-3">
+                <img src="/badges/switch-course.png" alt="" width={40} height={40} draggable={false} />
                 <h3 id="profession-picker-title" className="text-xl font-black text-white">
                   Switch Course
                 </h3>

@@ -85,8 +85,8 @@ export function StreakFreeze() {
 
             {/* Content — centered */}
             <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-6 text-center text-white">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-white/15">
-                <HeartCrack className="w-8 h-8 text-white" />
+              <div className="flex items-center justify-center mb-4">
+                <img src="/badges/broken-heart.png" alt="" width={72} height={72} draggable={false} />
               </div>
 
               <h2 className="text-xl font-extrabold text-white mb-1">
