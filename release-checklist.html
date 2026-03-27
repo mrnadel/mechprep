@@ -364,6 +364,7 @@
       <div class="done-item">Onboarding → first lesson pipeline</div>
       <div class="done-item">Delayed push notification prompt</div>
       <div class="done-item">hearts_depleted Mixpanel event</div>
+      <div class="done-item">Sentry error tracking (code ready)</div>
       <div class="done-item">Production build passes</div>
     </div>
   </div>
@@ -513,9 +514,9 @@
         <li class="checklist-item" data-id="monitor-1">
           <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
           <div class="item-content">
-            <div class="item-title">Add Error Tracking (Sentry) <span class="priority p-high">High</span> <span class="effort e-medium">Medium</span></div>
-            <div class="item-desc">No error tracking in the codebase. Production errors are invisible. Add @sentry/nextjs (free tier = 5K events/mo). Catches unhandled exceptions, API errors, and client crashes.</div>
-            <div class="item-files">npm i @sentry/nextjs &bull; sentry.client.config.ts &bull; sentry.server.config.ts &bull; next.config.ts</div>
+            <div class="item-title">Add Sentry DSN Env Var <span class="priority p-high">High</span> <span class="effort e-small">Small</span></div>
+            <div class="item-desc">Code is installed and configured (@sentry/nextjs, client/server/edge configs, next.config.ts wrapped). Just need to: create a Sentry project at sentry.io (free), copy the DSN, and set <code>NEXT_PUBLIC_SENTRY_DSN</code> in Vercel env vars. Optionally set SENTRY_ORG, SENTRY_PROJECT, SENTRY_AUTH_TOKEN for source map uploads.</div>
+            <div class="item-files">Sentry dashboard &bull; Vercel env vars &bull; .env.local</div>
           </div>
         </li>
         <li class="checklist-item" data-id="monitor-2">
@@ -757,6 +758,7 @@
     'onboard-1': true, // Onboarding flow: 4-step welcome → auto-starts first lesson
     'onboard-2': true, // Trial prompt modal built + integrated into ResultScreen
     'onboard-3': true, // PushPrompt already delays until MIN_LESSONS_BEFORE_PROMPT
+    'monitor-1': true, // Sentry installed + configured (needs DSN env var)
     'monitor-2': true, // hearts_depleted + upgrade CTA tracking in OutOfHeartsModal
     'deploy-5': true,  // Production build passes
     'test-1': true,    // Tests pass (fixed useStore + middleware tests)
