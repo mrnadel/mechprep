@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Flame, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { UserAvatar } from '@/components/ui/UserAvatar';
 
 interface FriendCardProps {
   id: string;
@@ -32,7 +32,6 @@ export default function FriendCard({
   todayXp = 0,
   index,
 }: FriendCardProps) {
-  const initials = (displayName || '?').charAt(0).toUpperCase();
   const subtitle = getActivitySnippet(currentStreak, todayXp, level);
 
   return (
@@ -45,16 +44,7 @@ export default function FriendCard({
         href={`/user/${id}`}
         className="card-hover flex items-center gap-3 p-3 sm:p-4"
       >
-        <div
-          className="rounded-full flex items-center justify-center overflow-hidden shrink-0"
-          style={{ width: 44, height: 44, background: '#E0E7FF' }}
-        >
-          {image ? (
-            <Image src={image} alt={displayName} width={44} height={44} className="w-full h-full object-cover" />
-          ) : (
-            <span className="text-primary-700 font-bold text-sm">{initials}</span>
-          )}
-        </div>
+        <UserAvatar image={image} name={displayName} size={44} />
 
         <div className="flex-1 min-w-0">
           <p className="text-sm font-bold text-surface-900 truncate">{displayName}</p>

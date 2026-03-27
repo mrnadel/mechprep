@@ -8,6 +8,8 @@ import { leagueTiers } from '@/data/league';
 import { getUserRank, getTierConfig } from '@/lib/league-simulator';
 import { CompetitorAvatar } from './CompetitorAvatar';
 import { LeagueImage } from '@/components/icons/LeagueImage';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
+import { LeaderboardRow } from '@/components/ui/LeaderboardRow';
 
 export function LeagueBoard() {
   const league = useLeague();
@@ -43,15 +45,7 @@ export function LeagueBoard() {
   }, [league.competitors, league.weeklyXp, displayName]);
 
   // Avoid hydration mismatch — league data comes from localStorage
-  if (!mounted) {
-    return (
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <div className="px-4 py-8 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-gray-300 border-t-indigo-500 rounded-full animate-spin" />
-        </div>
-      </div>
-    );
-  }
+  if (!mounted) return <LoadingSpinner />;
 
   const userRank = getUserRank(league.weeklyXp, league.competitors);
   const promoteCount = tierConfig.promoteCount;
@@ -92,74 +86,38 @@ export function LeagueBoard() {
                 : 'transparent';
 
           return (
-            <div
+            <LeaderboardRow
               key={entry.id}
-              className={`flex items-center gap-2.5 px-4 border-b border-gray-50 last:border-0 ${
-                isTop3 ? 'py-3' : 'py-2.5'
-              } ${
-                !isUser ? 'cursor-pointer hover:bg-gray-50 active:bg-gray-100 transition-colors' : ''
-              }`}
-              onClick={() => {
-                if (!isUser && entry.fakeUserId) {
-                  router.push(`/user/competitor/${entry.fakeUserId}`);
-                }
-              }}
-              style={{ background: rowBg }}
-            >
-              {/* Rank */}
-              <span
-                className={`font-bold text-center flex-shrink-0 ${isTop3 ? 'text-base w-7' : 'text-sm w-6'}`}
-                style={{
-                  color:
-                    rank === 1
-                      ? '#F59E0B'
-                      : rank === 2
-                        ? '#9CA3AF'
-                        : rank === 3
-                          ? '#CD7F32'
-                          : '#D1D5DB',
-                }}
-              >
-                {rank === 1 ? '\u{1F947}' : rank === 2 ? '\u{1F948}' : rank === 3 ? '\u{1F949}' : rank}
-              </span>
-
-              {/* Avatar */}
-              <CompetitorAvatar
-                fakeUserId={entry.fakeUserId}
-                avatarInitial={entry.avatarInitial}
-                isUser={isUser}
-                size={isTop3 ? 36 : 32}
-                frameStyle={entry.frameStyle}
-              />
-
-              {/* Name + "You" pill */}
-              <div className="flex-1 min-w-0 flex items-center gap-1.5">
-                <span
-                  className="text-sm font-semibold truncate"
-                  style={{ color: isUser ? '#4F46E5' : '#374151' }}
-                >
-                  {entry.name}
-                </span>
-                {isUser && (
-                  <span className="flex-shrink-0 text-[10px] font-bold uppercase tracking-wide text-indigo-600 bg-indigo-100 px-1.5 py-0.5 rounded-full">
-                    You
-                  </span>
-                )}
-              </div>
-
-              {/* XP + zone arrow */}
-              <div className="flex items-center gap-1 flex-shrink-0">
-                {inPromoteZone && !isUser && (
-                  <span className="text-emerald-500 text-xs leading-none">{'\u2191'}</span>
-                )}
-                {inDemoteZone && !isUser && (
-                  <span className="text-red-400 text-xs leading-none">{'\u2193'}</span>
-                )}
-                <span className="text-sm font-bold text-gray-600 min-w-[60px] text-right">
-                  {entry.weeklyXp} XP
-                </span>
-              </div>
-            </div>
+              rank={rank}
+              name={entry.name}
+              xp={entry.weeklyXp}
+              isUser={isUser}
+              bgColor={rowBg}
+              onClick={
+                !isUser && entry.fakeUserId
+                  ? () => router.push(`/user/competitor/${entry.fakeUserId}`)
+                  : undefined
+              }
+              avatar={
+                <CompetitorAvatar
+                  fakeUserId={entry.fakeUserId}
+                  avatarInitial={entry.avatarInitial}
+                  isUser={isUser}
+                  size={isTop3 ? 36 : 32}
+                  frameStyle={entry.frameStyle}
+                />
+              }
+              trailing={
+                <>
+                  {inPromoteZone && !isUser && (
+                    <span className="text-emerald-500 text-xs leading-none">{'\u2191'}</span>
+                  )}
+                  {inDemoteZone && !isUser && (
+                    <span className="text-red-400 text-xs leading-none">{'\u2193'}</span>
+                  )}
+                </>
+              }
+            />
           );
         })}
       </div>

@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
 import { courseMeta } from '@/data/course/course-meta';
 import { topics } from '@/data/topics';
-import Link from 'next/link';
-import { ChevronLeft, TrendingUp, AlertTriangle, Trophy } from 'lucide-react';
+import { TrendingUp, AlertTriangle, Trophy } from 'lucide-react';
+import { PageHeader } from '@/components/ui/PageHeader';
 
 /* ── helpers ── */
 
@@ -127,21 +127,7 @@ export default function SkillMapPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#FAFAFA' }}>
-      {/* Header */}
-      <header
-        className="sticky top-0 z-30 bg-white px-4 sm:px-5 py-3"
-        style={{ borderBottom: '2px solid #E5E5E5' }}
-      >
-        <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            className="flex items-center justify-center w-11 h-11 sm:w-9 sm:h-9 rounded-[10px] bg-[#F0F0F0] transition-transform active:scale-90 lg:hidden"
-          >
-            <ChevronLeft style={{ width: 20, height: 20, color: '#777' }} />
-          </Link>
-          <h1 className="text-lg sm:text-xl font-extrabold text-[#3C3C3C]">Interview Readiness</h1>
-        </div>
-      </header>
+      <PageHeader title="Interview Readiness" />
 
       <div className="px-4 sm:px-5 pt-5 pb-10 max-w-[600px] mx-auto">
         {/* ── Readiness Score Ring ── */}

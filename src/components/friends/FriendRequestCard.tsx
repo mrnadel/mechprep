@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Check, X, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { UserAvatar } from '@/components/ui/UserAvatar';
 
 interface FriendRequestCardProps {
   id: string;
@@ -30,8 +30,6 @@ export default function FriendRequestCard({
   const [loading, setLoading] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [accepted, setAccepted] = useState(false);
-  const initials = (displayName || '?').charAt(0).toUpperCase();
-
   async function handleAccept() {
     setLoading(true);
     try {
@@ -90,16 +88,8 @@ export default function FriendRequestCard({
       className="card-hover p-3 sm:p-4"
     >
       <div className="flex items-center gap-3">
-        <Link
-          href={`/user/${userId}`}
-          className="rounded-full flex items-center justify-center overflow-hidden shrink-0"
-          style={{ width: 44, height: 44, background: '#E0E7FF' }}
-        >
-          {image ? (
-            <Image src={image} alt={displayName} width={44} height={44} className="w-full h-full object-cover" />
-          ) : (
-            <span className="text-primary-700 font-bold text-sm">{initials}</span>
-          )}
+        <Link href={`/user/${userId}`}>
+          <UserAvatar image={image} name={displayName} size={44} />
         </Link>
 
         <div className="flex-1 min-w-0">

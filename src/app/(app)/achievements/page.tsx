@@ -2,11 +2,12 @@
 
 import { useProgress } from '@/store/useStore';
 import { achievements } from '@/data/achievements';
-import { Trophy, Lock, Star, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Trophy, Lock, Star, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import type { AchievementCategory } from '@/data/types';
 import Link from 'next/link';
+import { PageHeader } from '@/components/ui/PageHeader';
 
 const categoryConfig: Record<AchievementCategory, { label: string; icon: string; gradient: string; badgeBg: string; badgeText: string; cardBorder: string; iconBg: string }> = {
   knowledge: {
@@ -113,18 +114,10 @@ export default function AchievementsPage() {
 
   return (
     <div className="max-w-3xl mx-auto pb-12 animate-fade-in">
-      {/* Sticky top bar */}
-      <div className="sticky top-0 z-30 bg-white px-4 sm:px-5 py-3" style={{ borderBottom: '2px solid #E5E5E5' }}>
-        <div className="flex items-center gap-2 sm:gap-3">
-          <Link href="/" className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#F5F5F5] active:scale-90 transition-transform" aria-label="Back">
-            <ChevronLeft className="w-5 h-5 text-[#AFAFAF]" />
-          </Link>
-          <h1 className="text-base sm:text-lg font-extrabold text-[#3C3C3C] flex items-center gap-2">
-            <Trophy className="w-5 h-5 text-amber-500" />
-            Achievements
-          </h1>
-        </div>
-      </div>
+      <PageHeader
+        title="Achievements"
+        icon={<Trophy className="w-5 h-5 text-amber-500" />}
+      />
 
       {/* Stats card */}
       <div className="px-4 mt-4">

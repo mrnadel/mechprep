@@ -4,11 +4,12 @@ import { useProgress } from '@/store/useStore';
 import { useSubscription } from '@/hooks/useSubscription';
 import { topics } from '@/data/topics';
 import { FEATURES } from '@/lib/pricing';
-import { BarChart3, Target, TrendingUp, Brain, Zap, ChevronLeft } from 'lucide-react';
-import Link from 'next/link';
+import { BarChart3, Target, TrendingUp, Brain, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { UpgradeGate } from '@/components/ui/UpgradeGate';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
+import { PageHeader } from '@/components/ui/PageHeader';
+import { ProgressBar } from '@/components/ui/ProgressBar';
 
 export default function ProgressPage() {
   const progress = useProgress();
@@ -36,19 +37,10 @@ export default function ProgressPage() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <div className="sticky top-0 z-30 bg-white px-4 sm:px-5 py-3" style={{ borderBottom: '2px solid #E5E5E5' }}>
-        <div className="flex items-center gap-2 sm:gap-3">
-          <Link href="/" className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#F5F5F5] active:scale-90 transition-transform" aria-label="Back">
-            <ChevronLeft className="w-5 h-5 text-[#AFAFAF]" />
-          </Link>
-          <div>
-            <h1 className="text-base sm:text-lg font-extrabold text-[#3C3C3C] flex items-center gap-2">
-              <BarChart3 className="w-5 h-5 text-primary-500 shrink-0" />
-              Progress &amp; Analytics
-            </h1>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        title="Progress & Analytics"
+        icon={<BarChart3 className="w-5 h-5 text-primary-500 shrink-0" />}
+      />
 
       {/* Empty State */}
       {progress.totalQuestionsAttempted === 0 && (
@@ -132,13 +124,11 @@ export default function ProgressPage() {
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="flex-1 h-2 bg-surface-200 rounded-full overflow-hidden">
-                      <div
-                        className="h-full rounded-full transition-all duration-500"
-                        style={{
-                          width: attempted > 0 ? `${accuracy}%` : '0%',
-                          backgroundColor: accuracy >= 80 ? '#10B981' : accuracy >= 60 ? '#F59E0B' : accuracy > 0 ? '#EF4444' : '#E2E8F0',
-                        }}
+                    <div className="flex-1">
+                      <ProgressBar
+                        percent={attempted > 0 ? accuracy : 0}
+                        color={accuracy >= 80 ? '#10B981' : accuracy >= 60 ? '#F59E0B' : accuracy > 0 ? '#EF4444' : '#E2E8F0'}
+                        animate={false}
                       />
                     </div>
                     <span className="text-xs text-surface-400 shrink-0 w-20 text-right hidden sm:inline">
