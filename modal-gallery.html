@@ -24,9 +24,9 @@
   .sc-foot{flex-shrink:0;padding:0 24px 40px;position:relative;z-index:2;}
   .sc-foot-sm{padding:0 24px 32px;}
 
-  /* 3D Game Button */
-  .btn{width:100%;padding:16px;border-radius:16px;font-size:14px;font-weight:800;color:#fff;border:none;cursor:pointer;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;}
-  .btn:active{transform:translateY(2px);}
+  /* 3D Game Button — shadow disappears on press */
+  .btn{width:100%;padding:16px;border-radius:16px;font-size:14px;font-weight:800;color:#fff;border:none;cursor:pointer;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform 75ms,box-shadow 75ms;-webkit-user-select:none;user-select:none;}
+  .btn:active{transform:translateY(4px);box-shadow:0 0px 0 transparent !important;}
   .b-ind{background:#4F46E5;box-shadow:0 4px 0 #3730A3;}
   .b-gld{background:#FFB800;box-shadow:0 4px 0 #CC9400;color:#5D4200;}
   .b-pur{background:#7C3AED;box-shadow:0 4px 0 #5B21B6;}

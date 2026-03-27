@@ -101,7 +101,7 @@ export const LessonNode = memo(function LessonNode({
           ? `Replay: ${lesson.title}`
           : state === 'current'
             ? `Start: ${lesson.title}`
-            : `Locked: ${lesson.title}`
+            : `Upcoming: ${lesson.title}`
       }
     >
       {/* Icon */}
@@ -136,19 +136,8 @@ export const LessonNode = memo(function LessonNode({
               strokeLinejoin="round"
             />
           </svg>
-        ) : state === 'locked' ? (
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <rect x="5" y="11" width="14" height="10" rx="2" fill="#D4D4D4" />
-            <path
-              d="M8 11V7a4 4 0 118 0v4"
-              stroke="#D4D4D4"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-            />
-            <circle cx="12" cy="16" r="1.5" fill="#AFAFAF" />
-          </svg>
         ) : (
-          <span>{lesson.icon}</span>
+          <span style={{ opacity: state === 'locked' ? 0.5 : 1 }}>{lesson.icon}</span>
         )}
       </div>
 
@@ -191,23 +180,6 @@ export const LessonNode = memo(function LessonNode({
           >
             Go
           </div>
-        ) : state === 'locked' ? (
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            style={{ opacity: 0.35 }}
-          >
-            <rect x="5" y="11" width="14" height="10" rx="2" fill="#D4D4D4" />
-            <path
-              d="M8 11V7a4 4 0 118 0v4"
-              stroke="#D4D4D4"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-            />
-            <circle cx="12" cy="16" r="1.5" fill="#AFAFAF" />
-          </svg>
         ) : null}
       </div>
     </motion.button>
