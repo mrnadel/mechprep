@@ -1,4 +1,4 @@
-# MechReady — Content Writing Guide
+# MechReady Content Writing Guide
 
 > This is the style guide for writing course content (lessons, questions, explanations, hints, teaching cards). Follow these rules when creating or editing any content in `src/data/course/`.
 
@@ -24,7 +24,7 @@ Learning should feel like play, not pain. We combine technology with bite-sized 
 | Trait | What it means for content |
 |-------|--------------------------|
 | **Inspiring** | Every lesson unlocks a new ability. Frame knowledge as power, not obligation. |
-| **Inclusive** | Write for everyone — from first-year students to career changers. Never assume prior knowledge unless the course structure guarantees it. |
+| **Inclusive** | Write for everyone, from first-year students to career changers. Never assume prior knowledge unless the course structure guarantees it. |
 | **Can-do** | Root for the learner. They can do this. We bring the energy so they bring their A-game. |
 | **Curious** | Make learners want to know more. Tease the "why" before giving the answer. |
 | **Quirky** | Put the fun in fundamentals. Learning doesn't have to be boring or intimidating. |
@@ -33,7 +33,7 @@ Learning should feel like play, not pain. We combine technology with bite-sized 
 
 ## Content Structure Rules
 
-### Start easy — always
+### Start easy, always
 Like Duolingo, the first questions of every lesson should be almost impossible to get wrong. Build confidence before introducing complexity.
 
 **Progression pattern:**
@@ -70,7 +70,7 @@ Like Duolingo, the first questions of every lesson should be almost impossible t
 ### We are
 - Helpful, motivating, supportive, positive
 - Clear, direct, conversational
-- Slightly playful — but never at the learner's expense
+- Slightly playful, but never at the learner's expense
 
 ### We are NOT
 - Preachy, condescending, or sarcastic
@@ -81,7 +81,7 @@ Like Duolingo, the first questions of every lesson should be almost impossible t
 
 | Don't write | Why | Write instead |
 |-------------|-----|---------------|
-| "Obviously!" / "Of course!" | Condescending — if it were obvious, they wouldn't need the lesson | State the fact directly |
+| "Obviously!" / "Of course!" | Condescending. If it were obvious, they wouldn't need the lesson. | State the fact directly |
 | "Nope!" / "Wrong!" | Negative and discouraging | "Not quite." or just state the correct answer |
 | "Classic mistake" / "Classic excuse" | Judgmental | State why it doesn't work |
 | "Spoiler:" / "Here's the thing:" | Filler that adds nothing | Just say the thing |
@@ -95,7 +95,7 @@ Like Duolingo, the first questions of every lesson should be almost impossible t
 
 **After correct answers:** Brief positive reinforcement + the key fact.
 ```
-Good: "Yes — net pay is always smaller because deductions are removed first."
+Good: "Yes, net pay is always smaller because deductions are removed first."
 Bad: "Exactly right! You're a genius! Net pay is indeed always smaller than gross because, you see, the government and other entities take their share before..."
 ```
 
@@ -129,7 +129,7 @@ Bad: "Nope! That's wrong. Obviously net pay is less because deductions are taken
 - Don't punctuate headlines or question titles, except with ! or ?
 - Use the Oxford comma: "food, shelter, and transportation"
 - Avoid semicolons — use two sentences instead.
-- Avoid em dashes (—) in explanations. Use two sentences instead. Em dashes are okay in teaching card titles.
+- Never use em dashes (—). Use two sentences, a comma, or a colon instead. No exceptions.
 - Ellipses: use sparingly. No space before, space after if followed by a new sentence.
 
 ### Capitalization
