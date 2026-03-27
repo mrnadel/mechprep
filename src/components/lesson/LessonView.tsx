@@ -444,19 +444,39 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   if (currentQuestion) lastQuestionRef.current = currentQuestion;
   const displayQuestion = currentQuestion ?? lastQuestionRef.current;
 
-  // === EARLY RETURNS ===
-  // Show result screen after lesson completion (course mode only)
-  if (!adapter && lessonResult) return <ResultScreen />;
-  if (!displayQuestion && !isNonStandard) return null;
+  // === EXIT ANIMATION STATE ===
+  // When lesson completes, slide the lesson view down before showing ResultScreen.
+  const [exiting, setExiting] = useState(false);
+  const [showResult, setShowResult] = useState(false);
+
+  useEffect(() => {
+    if (!adapter && lessonResult && !showResult) {
+      // Start slide-down exit
+      setExiting(true);
+      // After exit animation completes, show result screen
+      const timer = setTimeout(() => {
+        setShowResult(true);
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [adapter, lessonResult, showResult]);
+
+  // Show result screen after exit animation
+  if (showResult && lessonResult) return <ResultScreen />;
+
+  if (!displayQuestion && !isNonStandard && !exiting) return null;
 
   return (
     <AnimatePresence>
       <motion.div
         key="lesson-view"
         initial={{ y: '100%' }}
-        animate={{ y: 0 }}
+        animate={{ y: exiting ? '100%' : 0 }}
         exit={{ y: '100%' }}
-        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+        transition={exiting
+          ? { type: 'tween', duration: 0.3, ease: 'easeIn' }
+          : { type: 'spring', stiffness: 300, damping: 30 }
+        }
         className="fixed inset-0 z-50 flex items-center justify-center"
         role="main"
         aria-label={adapter ? 'Practice view' : 'Lesson view'}
