@@ -1,20 +1,34 @@
 # MechReady SVG Design Language
 
-> Duolingo-inspired illustration system for mechanical engineering education.
-> Every icon in MechReady follows these rules to create a cohesive, friendly, and instantly recognizable visual library.
+> Based on [Duolingo's illustration system](https://design.duolingo.com/illustration/shape-language).
+> Mechanical engineering icons that feel playful, approachable, and instantly recognizable.
 
 ---
 
 ## 1. Philosophy
 
-- **Simple over detailed** — Every icon must be recognizable at 24×24px. If you can't tell what it is at that size, it's too complex.
-- **Bold over delicate** — Thick strokes, confident shapes. No hairlines, no fussy detail.
-- **Warm over clinical** — Even engineering concepts should feel approachable and fun. Rounded corners, vibrant colors, friendly proportions.
-- **Consistent over unique** — Every icon feels like it belongs to the same family. Shared stroke widths, corner radii, color system, and proportions.
+Borrowed directly from Duolingo:
+- **Simple** — Target ~15 shapes per icon. If it has ~30, it's too complex.
+- **Bold** — Thick Eel (#4B4B4B) outlines, confident shapes, no fussy detail.
+- **Playful** — Rounded everything, vibrant colors, friendly proportions.
+- **Flat** — No gradients. No drop shadows. No blur. Flat fills only.
+- **Standalone** — Icons ARE the shape. No enclosing circles, squares, or badges. The object itself is the icon.
 
 ---
 
-## 2. Grid & Canvas
+## 2. Construction: Three Shapes Only
+
+All icons are built from **three basic shapes**:
+
+1. **Rounded rectangle** (most common)
+2. **Circle**
+3. **Rounded triangle** (via paths with round joins)
+
+You may cut and combine shapes with pathfinder operations, but **every resulting edge must remain rounded**. No pointy shapes. No sharp corners. Ever.
+
+---
+
+## 3. Grid & Canvas
 
 | Property | Value |
 |---|---|
@@ -23,245 +37,151 @@
 | **Center point** | `32, 32` |
 | **Default render size** | 64×64px (scales freely) |
 
-All coordinates are designed on the 64×64 grid. Icons scale proportionally.
-
 ---
 
-## 3. Stroke Rules
+## 4. Stroke Rules
 
 | Property | Value |
 |---|---|
-| **Primary stroke** | `2.5px` |
-| **Secondary stroke** | `1.5px` (inner details) |
+| **Outline stroke** | `2.5px` in Eel `#4B4B4B` |
+| **Detail stroke** | `1.5px` in Eel `#4B4B4B` |
 | **Stroke cap** | `round` (always) |
 | **Stroke join** | `round` (always) |
 | **Minimum gap** | `3px` between parallel strokes |
 
-Never use `butt` or `miter`. Every line end and corner is rounded.
+The Eel outline is what gives all icons the Duolingo family feel. Never omit it.
 
 ---
 
-## 4. Shape Vocabulary
+## 5. Color Rules
 
-### 4.1 Base Shapes (per category)
+### NEVER:
+- **Never use gradients** — all fills are flat solid colors
+- **Never use white (#FFF) as a base fill** — use light pastels (Iguana, Sea Sponge, Canary, etc.)
+- **Never use gray** — it appears lifeless. Use Anchovy #D2E4E8 or tinted neutrals instead
+- **Never use colors outside the palette**
 
-| Category | Base Shape | Notes |
+### DO:
+- Use **2-3 colors max** per icon (plus Eel outline and optional white highlight)
+- Be **playful and vibrant** — lean into saturated colors
+- Use **white highlight spots** (small circles) sparingly for dimensionality
+
+---
+
+## 6. Color Palette (from Duolingo)
+
+### Core Brand
+| Name | Hex | Use |
 |---|---|---|
-| **Topics** | Circle (r=28, cx/cy=32) | Colored circle with 2px stroke, centered symbol |
-| **Leagues** | Shield | Pointed bottom, symmetric, 2px stroke |
-| **Levels** | Circle badge | Like topics but with hex/octagon accent and level number |
-| **Achievements** | Medal | Circle with ribbon on top, category-colored |
-| **Quests** | Rounded square | `rx=14`, 56×56 at offset (4,4) |
-| **Streak** | Flame medal | Medal base with flame centerpiece |
-| **Shop** | Rounded square | Same as quests, themed per item |
-| **Frames** | Ring/border | Circular frame that wraps avatar |
-| **Currency** | Faceted shape | Gem = hexagonal, Coin = circle |
+| **Feather Green** | `#58CC02` | Primary, success, statics |
+| **Mask Green** | `#89E219` | Secondary green, highlights |
+| **Tree Frog** | `#58A700` | Dark green accent |
 
-### 4.2 Symbol Rules
-
-- Symbols sit **centered** in the base shape
-- Maximum symbol size: **60%** of base shape area
-- Symbols use **no more than 3 colors** (base, dark, light/white)
-- All symbols have a **2px white or light highlight** at top-left for dimensionality
-- No text smaller than `7px` font-size at 64×64
-
----
-
-## 5. Color System
-
-### 5.1 Core Palette
-
-```
-GREEN       #58CC02  (primary, success, statics)
-  dark:     #3B8700
-  light:    #D0F0B0
-
-PURPLE      #CE82FF  (dynamics, special)
-  dark:     #7B2FBE
-  light:    #F3E6FF
-
-RED         #FF4B4B  (strength, wrong, danger)
-  dark:     #CC3333
-  light:    #FFE0E0
-
-ORANGE      #FF9600  (thermo, streak, fire)
-  dark:     #CC6B00
-  light:    #FFF0D4
-
-BLUE        #1CB0F6  (fluids, learning)
-  dark:     #0F85BD
-  light:    #D6F0FF
-
-GOLD        #FFD900  (achievements, premium)
-  dark:     #CC9900
-  light:    #FFF8D4
-
-CYAN        #06B6D4  (exploration, heat transfer)
-  dark:     #0E7490
-  light:    #CFFAFE
-
-INDIGO      #6366F1  (knowledge, quests)
-  dark:     #4338CA
-  light:    #E0E7FF
-
-AMBER       #F59E0B  (challenges)
-  dark:     #B45309
-  light:    #FEF3C7
-
-STEEL       #94A3B8  (neutral, beginner)
-  dark:     #64748B
-  light:    #E2E8F0
-```
-
-### 5.2 Metallic Palette (Leagues & Frames)
-
-```
-BRONZE      #CD7F32 → #8B5722  (linear gradient)
-SILVER      #C0C0C0 → #808080
-GOLD-METAL  #FFD700 → #B8860B
-PLATINUM    #14B8A6 → #0F766E
-MASTERS     #A855F7 → #6D28D9
-```
-
-### 5.3 Level Tier Colors
-
-| Levels | Color | Name |
+### Secondary
+| Name | Hex | Use |
 |---|---|---|
-| 1–5 | Steel (#94A3B8) | Beginner |
-| 6–10 | Green (#58CC02) | Junior |
-| 11–15 | Blue (#1CB0F6) | Mid |
-| 16–20 | Purple (#CE82FF) | Senior |
-| 21–25 | Gold (#FFD900) | Expert |
-| 26–30 | Red (#FF4B4B) | Legendary |
+| **Macaw** | `#1CB0F6` | Blue, fluids, learning |
+| **Cardinal** | `#FF4B4B` | Red, strength, wrong |
+| **Bee** | `#FFC800` | Yellow, achievements |
+| **Fox** | `#FF9600` | Orange, streak, thermo |
+| **Beetle** | `#CE82FF` | Purple, dynamics, special |
+| **Humpback** | `#2B70C9` | Dark blue, quests |
 
-### 5.4 Color Usage Rules
+### Extended
+| Name | Hex | Use |
+|---|---|---|
+| **Whale** | `#1899D6` | Mid blue |
+| **Narwhal** | `#1453A3` | Deep blue |
+| **Blue Jay** | `#84D8FF` | Light blue |
+| **Moon Jelly** | `#7AF0F2` | Cyan/teal |
+| **Turtle** | `#A5ED6E` | Light green |
+| **Duck** | `#FBE56D` | Soft yellow |
+| **Lion** | `#FFB100` | Warm yellow |
+| **Camel** | `#E7A601` | Gold |
+| **Guinea Pig** | `#CD7900` | Bronze |
+| **Monkey** | `#E5A259` | Warm brown |
+| **Grizzly** | `#A56644` | Dark brown |
+| **Crab** | `#FF7878` | Soft red |
+| **Flamingo** | `#FFB2B2` | Pink |
+| **Starfish** | `#FFAADE` | Bright pink |
+| **Betta** | `#9069CD` | Mid purple |
+| **Butterfly** | `#6F4EA1` | Deep purple |
+| **Fire Ant** | `#EA2B2B` | Dark red |
 
-- **Background fills** use the `light` variant
-- **Strokes and outlines** use the `dark` variant
-- **Main shapes** use the base color
-- **Highlights** are always `white` or `rgba(255,255,255,0.3)`
-- **Never mix category colors** — each icon uses ONE color family plus white
+### Pastels (for light fills — NEVER use white)
+| Name | Hex |
+|---|---|
+| **Sea Sponge** | `#D7FFB8` |
+| **Canary** | `#FFF5D3` |
+| **Walking Fish** | `#FFDFE0` |
+| **Iguana** | `#DDF4FF` |
+| **Beluga** | `#BBF2FF` |
+| **Cheetah** | `#FFCE8E` |
+| **Squid** | `#EBE3E3` |
 
----
-
-## 6. Gradients
-
-### 6.1 Standard Top-Down Gradient
-
-Every filled shape uses a subtle top-to-bottom linear gradient:
-- Top: base color
-- Bottom: dark variant
-
-This creates a gentle 3D effect without being skeuomorphic.
-
-```svg
-<linearGradient id="example" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0%" stop-color="#58CC02" />
-  <stop offset="100%" stop-color="#3B8700" />
-</linearGradient>
-```
-
-### 6.2 Shine Gradient
-
-A white-to-transparent diagonal sweep for metallic surfaces:
-
-```svg
-<linearGradient id="shine" x1="0.2" y1="0" x2="0.8" y2="1">
-  <stop offset="0%" stop-color="white" stop-opacity="0.4" />
-  <stop offset="50%" stop-color="white" stop-opacity="0" />
-  <stop offset="100%" stop-color="white" stop-opacity="0.1" />
-</linearGradient>
-```
+### Outline
+| Name | Hex | Use |
+|---|---|---|
+| **Eel** | `#4B4B4B` | ALL outlines and strokes |
 
 ---
 
-## 7. Animation Structure
+## 7. Shadows
 
-Every icon is composed of **named groups** (`<g>` elements) that serve as animation targets. Each group has a logical `data-part` attribute and its elements are positioned relative to a clear transform origin.
+- Shadows are **pill-shaped** (rounded rectangles), placed directly **below** the object
+- Shadow color: Eel `#4B4B4B` at `10-15%` opacity
+- Shadow width: ~60-80% of object width
+- Never use ovals (implies perspective) — always use `rx` rounded rects
+- Shadow is optional for small icons
 
-### 7.1 Standard Parts
+---
+
+## 8. Animation Structure
+
+Every icon uses **named groups** for animation targets:
 
 ```svg
 <svg viewBox="0 0 64 64">
-  <g data-part="base">       <!-- Background shape (circle, shield, etc.) -->
-  <g data-part="body">       <!-- Main symbol body -->
-  <g data-part="detail">     <!-- Secondary details (bolts, lines) -->
-  <g data-part="highlight">  <!-- Shine, sparkle, glow effects -->
-  <g data-part="badge">      <!-- Number badge, label (optional) -->
+  <g data-part="shadow">    <!-- Pill shadow below object -->
+  <g data-part="body">      <!-- Main shape (the icon itself) -->
+  <g data-part="detail">    <!-- Inner details, accents -->
+  <g data-part="highlight"> <!-- White shine spots -->
+  <g data-part="badge">     <!-- Number or label (optional) -->
 </svg>
 ```
 
-### 7.2 Pivot Points
+### Pivot Points
 
-| Part | Transform Origin | Typical Animation |
+| Part | Transform Origin | Animation |
 |---|---|---|
-| `base` | `32 32` (center) | Scale pulse, rotate |
-| `body` | Center of symbol | Bounce, wiggle, spin |
-| `detail` | Varies per element | Subtle movement, fade |
-| `highlight` | `32 16` (top-center) | Shimmer, fade in/out |
+| `shadow` | Center of shadow | Scale with body |
+| `body` | Center of icon | Bounce, wiggle, spin |
+| `detail` | Varies | Subtle movement |
+| `highlight` | Top-left of icon | Shimmer, fade |
 | `badge` | Center of badge | Pop-in, bounce |
-
-### 7.3 Animation-Friendly Conventions
-
-- All rotatable elements are centered at origin `(0,0)` and positioned via `translate()`
-- Compound shapes use `<g>` wrappers (never animate individual path elements)
-- Sparkle/highlight elements are separate so they can fade independently
-- Badge numbers are separate groups for pop-in animations
 
 ---
 
-## 8. Icon Naming Convention
+## 9. Naming
 
 ```
 {category}-{name}
 ```
 
-Examples:
-- `topic-statics`
-- `league-bronze`
-- `level-1`
-- `achievement-first-principles`
-- `quest-double-up`
-- `streak-week-warrior`
-- `shop-streak-freeze`
-- `frame-gold-ring`
-
-Names are lowercase, kebab-case, no abbreviations.
-
----
-
-## 9. Do's and Don'ts
-
-### DO ✓
-- Use the 64×64 viewBox
-- Keep strokes at 2.5px (primary) or 1.5px (detail)
-- Use `round` cap and join everywhere
-- Include a highlight (white arc or dot) for 3D feel
-- Group elements by animation purpose
-- Test readability at 24×24
-- Use the color palette — never freestyle colors
-
-### DON'T ✗
-- No hairline strokes (< 1px)
-- No sharp corners (miter joins)
-- No complex gradients (max 2 stops)
-- No drop shadows or blur filters
-- No text below 7px
-- No more than 15 SVG elements per icon
-- No colors outside the palette
-- No ungrouped elements (everything in a `<g data-part>`)
+Lowercase, kebab-case. Examples: `topic-statics`, `league-bronze`, `level-1`, `quest-double-up`.
 
 ---
 
 ## 10. Adding New Icons
 
-1. Choose the correct **base shape** for the category
-2. Pick the **color family** from the palette
-3. Design the **symbol** using simple geometric shapes
-4. Test at **24px, 48px, 64px, 128px**
-5. Name the icon following the convention
-6. Add to the SVG library gallery HTML
-7. Export as React component for the app
+1. Build from **rounded rectangles, circles, and rounded triangles** only
+2. Pick **2-3 colors** from the palette + Eel outline
+3. Keep it to **~15 shapes** maximum
+4. Ensure every edge is **rounded**
+5. Add a **white highlight circle** (optional, for dimensionality)
+6. Group elements into `data-part` groups
+7. Test at **24px, 48px, 64px, 128px**
+8. Add to `public/svg-gallery.html`
 
 ---
 
@@ -269,6 +189,6 @@ Names are lowercase, kebab-case, no abbreviations.
 
 | File | Purpose |
 |---|---|
-| `public/svg-gallery.html` | Living gallery — view all SVGs, search, copy, preview at sizes |
-| `src/components/icons/*.tsx` | React components for app usage |
+| `public/svg-gallery.html` | Living SVG gallery — view, search, copy, add icons |
+| `src/components/icons/*.tsx` | React components consumed by the app |
 | `docs/svg-design-language.md` | This document |
