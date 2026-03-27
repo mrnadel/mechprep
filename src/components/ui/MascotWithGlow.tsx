@@ -8,9 +8,59 @@ interface MascotWithGlowProps {
   size?: number;
   /** Flat color for a pulsing glow behind the mascot */
   glowColor?: string;
-  /** Show animated blue flame behind the mascot */
+  /** Show animated blue flame spritesheet behind the mascot */
   flame?: boolean;
   className?: string;
+}
+
+/**
+ * CSS spritesheet flame animation.
+ * Uses mix-blend-mode: screen to hide the white background naturally.
+ * Spritesheet: 6 cols x 2 rows = 12 frames, each 256x512px.
+ */
+function FlameSprite({ size }: { size: number }) {
+  // Sprite is 1536x1024, frame is 256x512 (6 cols x 2 rows)
+  // Display height = size * 2 (flame is taller than wide)
+  const displayW = size;
+  const displayH = size * 2;
+  // The full sprite scales: 6 frames wide = displayW * 6
+  const sheetW = displayW * 6;
+  const sheetH = displayH * 2;
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: '50%',
+        bottom: '-10%',
+        marginLeft: -displayW / 2,
+        width: displayW,
+        height: displayH,
+        overflow: 'hidden',
+        mixBlendMode: 'screen',
+        pointerEvents: 'none',
+        zIndex: 0,
+      }}
+    >
+      <div
+        style={{
+          width: sheetW,
+          height: sheetH,
+          backgroundImage: 'url(/effects/flame-sprite.png)',
+          backgroundSize: `${sheetW}px ${sheetH}px`,
+          animation: 'flame-sprite 0.8s steps(6) infinite',
+        }}
+      />
+      <style>{`
+        @keyframes flame-sprite {
+          0% { transform: translateX(0); }
+          50% { transform: translateX(-${sheetW}px); }
+          50.01% { transform: translateX(0); background-position-y: -${displayH}px; }
+          100% { transform: translateX(-${sheetW}px); background-position-y: -${displayH}px; }
+        }
+      `}</style>
+    </div>
+  );
 }
 
 export function MascotWithGlow({ pose, size = 120, glowColor, flame, className }: MascotWithGlowProps) {
@@ -24,28 +74,10 @@ export function MascotWithGlow({ pose, size = 120, glowColor, flame, className }
     );
   }
 
-  const flameSize = size * 2.2;
-
   return (
-    <div className={className} style={{ position: 'relative', width: size, height: flame ? size * 1.3 : size }}>
-      {/* Animated flame WebP — loops behind mascot */}
-      {flame && (
-        <img
-          src="/effects/blue-flame.webp"
-          alt=""
-          width={flameSize}
-          height={flameSize}
-          draggable={false}
-          style={{
-            position: 'absolute',
-            left: '50%',
-            bottom: 0,
-            marginLeft: -flameSize / 2,
-            zIndex: 0,
-            pointerEvents: 'none',
-          }}
-        />
-      )}
+    <div className={className} style={{ position: 'relative', width: size, height: flame ? size * 1.4 : size }}>
+      {/* Flame spritesheet */}
+      {flame && <FlameSprite size={size * 1.8} />}
 
       {/* Flat color glow */}
       {glowColor && !flame && (
@@ -67,7 +99,7 @@ export function MascotWithGlow({ pose, size = 120, glowColor, flame, className }
       )}
 
       {/* Mascot on top */}
-      <div style={{ position: 'absolute', bottom: 0, left: 0, zIndex: 1 }}>
+      <div style={{ position: 'absolute', bottom: 0, left: '50%', marginLeft: -size / 2, zIndex: 1 }}>
         <Mascot pose={pose} size={size} />
       </div>
     </div>

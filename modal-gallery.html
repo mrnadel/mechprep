@@ -50,6 +50,9 @@
   .mascot-wrap{position:relative;display:inline-block;}
   .mascot-wrap img{position:relative;z-index:1;}
 
+  /* Flame spritesheet animation */
+  @keyframes fsprite{0%{transform:translateX(0)}50%{transform:translateX(-1728px)}50.01%{transform:translateX(0);background-position-y:-400px}100%{transform:translateX(-1728px);background-position-y:-400px}}
+
   /* Wormhole streaks — vertical falling lines */
   .space-warp{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
   .streak{position:absolute;top:-80px;width:var(--w,2px);height:var(--h,60px);border-radius:2px;background:rgba(255,255,255,.45);left:var(--x,50%);animation:fall var(--speed,1.2s) var(--delay,0s) infinite linear;}
@@ -123,31 +126,36 @@
 <div class="cw"><div class="cl">Trial Prompt</div>
 <div class="ph"><div class="sc" style="background:#5B4FCF;">
   <div class="pts space-warp">
-    <div class="streak" style="--x:9%;--w:1px;--h:40px;--speed:1.3s;--delay:0.51s;--o:0.62"></div>
-    <div class="streak" style="--x:41%;--w:2px;--h:57px;--speed:1.7s;--delay:1.74s;--o:0.36"></div>
-    <div class="streak" style="--x:57%;--w:2px;--h:95px;--speed:2.2s;--delay:1.63s;--o:0.48"></div>
-    <div class="streak" style="--x:36%;--w:1px;--h:33px;--speed:1.3s;--delay:2.8s;--o:0.66"></div>
-    <div class="streak" style="--x:56%;--w:3px;--h:51px;--speed:1.6s;--delay:0.71s;--o:0.31"></div>
-    <div class="streak" style="--x:43%;--w:1px;--h:47px;--speed:1.6s;--delay:1.08s;--o:0.51"></div>
-    <div class="streak" style="--x:73%;--w:1px;--h:87px;--speed:2.0s;--delay:2.2s;--o:0.66"></div>
-    <div class="streak" style="--x:48%;--w:3px;--h:75px;--speed:1.3s;--delay:2.58s;--o:0.48"></div>
-    <div class="streak" style="--x:98%;--w:2px;--h:89px;--speed:1.8s;--delay:0.75s;--o:0.41"></div>
-    <div class="streak" style="--x:65%;--w:3px;--h:95px;--speed:2.0s;--delay:1.06s;--o:0.65"></div>
-    <div class="streak" style="--x:61%;--w:2px;--h:88px;--speed:1.5s;--delay:0.67s;--o:0.43"></div>
-    <div class="streak" style="--x:91%;--w:1px;--h:64px;--speed:2.0s;--delay:1.44s;--o:0.42"></div>
-    <div class="streak" style="--x:92%;--w:3px;--h:96px;--speed:1.6s;--delay:1.85s;--o:0.46"></div>
-    <div class="streak" style="--x:95%;--w:1px;--h:92px;--speed:1.6s;--delay:2.8s;--o:0.55"></div>
-    <div class="streak" style="--x:11%;--w:2px;--h:31px;--speed:2.2s;--delay:0.57s;--o:0.6"></div>
-    <div class="streak" style="--x:9%;--w:3px;--h:36px;--speed:1.2s;--delay:0.68s;--o:0.65"></div>
-    <div class="streak" style="--x:15%;--w:3px;--h:47px;--speed:2.1s;--delay:0.73s;--o:0.38"></div>
-    <div class="streak" style="--x:9%;--w:2px;--h:34px;--speed:0.9s;--delay:1.08s;--o:0.4"></div>
-    <div class="streak" style="--x:5%;--w:1px;--h:44px;--speed:2.2s;--delay:0.08s;--o:0.59"></div>
-    <div class="streak" style="--x:4%;--w:2px;--h:62px;--speed:1.0s;--delay:2.81s;--o:0.59"></div>
-    <div class="streak" style="--x:68%;--w:1px;--h:79px;--speed:1.7s;--delay:2.38s;--o:0.4"></div>
-    <div class="streak" style="--x:6%;--w:1px;--h:74px;--speed:2.2s;--delay:1.88s;--o:0.6"></div>
-    <div class="streak" style="--x:38%;--w:2px;--h:92px;--speed:0.8s;--delay:1.35s;--o:0.61"></div>
-    <div class="streak" style="--x:96%;--w:1px;--h:63px;--speed:1.9s;--delay:2.59s;--o:0.58"></div>
-    <div class="streak" style="--x:62%;--w:1px;--h:41px;--speed:1.8s;--delay:0.95s;--o:0.34"></div>
+    <div class="streak" style="--x:2%;--w:1px;--h:53px;--speed:1.6s;--delay:2.55s;--o:0.25"></div>
+    <div class="streak" style="--x:3%;--w:1px;--h:23px;--speed:1.2s;--delay:2.98s;--o:0.25"></div>
+    <div class="streak" style="--x:6%;--w:3px;--h:77px;--speed:1.2s;--delay:0.6s;--o:0.48"></div>
+    <div class="streak" style="--x:11%;--w:2px;--h:74px;--speed:0.7s;--delay:1.55s;--o:0.58"></div>
+    <div class="streak" style="--x:13%;--w:1px;--h:93px;--speed:1.0s;--delay:0.61s;--o:0.24"></div>
+    <div class="streak" style="--x:16%;--w:2px;--h:59px;--speed:1.6s;--delay:0.49s;--o:0.25"></div>
+    <div class="streak" style="--x:18%;--w:1px;--h:48px;--speed:1.5s;--delay:0.17s;--o:0.56"></div>
+    <div class="streak" style="--x:24%;--w:2px;--h:37px;--speed:1.6s;--delay:1.01s;--o:0.52"></div>
+    <div class="streak" style="--x:28%;--w:2px;--h:91px;--speed:1.8s;--delay:0.47s;--o:0.38"></div>
+    <div class="streak" style="--x:31%;--w:1px;--h:36px;--speed:2.1s;--delay:1.74s;--o:0.36"></div>
+    <div class="streak" style="--x:32%;--w:3px;--h:26px;--speed:1.4s;--delay:1.31s;--o:0.65"></div>
+    <div class="streak" style="--x:38%;--w:1px;--h:57px;--speed:0.6s;--delay:1.95s;--o:0.34"></div>
+    <div class="streak" style="--x:41%;--w:2px;--h:87px;--speed:1.7s;--delay:2.18s;--o:0.58"></div>
+    <div class="streak" style="--x:42%;--w:2px;--h:91px;--speed:1.1s;--delay:0.22s;--o:0.54"></div>
+    <div class="streak" style="--x:45%;--w:2px;--h:30px;--speed:2.0s;--delay:2.34s;--o:0.5"></div>
+    <div class="streak" style="--x:51%;--w:1px;--h:48px;--speed:1.4s;--delay:2.1s;--o:0.27"></div>
+    <div class="streak" style="--x:55%;--w:3px;--h:37px;--speed:1.9s;--delay:2.62s;--o:0.39"></div>
+    <div class="streak" style="--x:55%;--w:1px;--h:47px;--speed:1.0s;--delay:2.58s;--o:0.24"></div>
+    <div class="streak" style="--x:59%;--w:2px;--h:37px;--speed:1.6s;--delay:1.35s;--o:0.2"></div>
+    <div class="streak" style="--x:62%;--w:2px;--h:71px;--speed:2.0s;--delay:0.28s;--o:0.57"></div>
+    <div class="streak" style="--x:65%;--w:3px;--h:58px;--speed:0.8s;--delay:2.18s;--o:0.2"></div>
+    <div class="streak" style="--x:68%;--w:2px;--h:67px;--speed:1.7s;--delay:0.85s;--o:0.64"></div>
+    <div class="streak" style="--x:75%;--w:1px;--h:28px;--speed:1.5s;--delay:0.63s;--o:0.61"></div>
+    <div class="streak" style="--x:77%;--w:3px;--h:28px;--speed:2.0s;--delay:1.64s;--o:0.64"></div>
+    <div class="streak" style="--x:81%;--w:1px;--h:55px;--speed:1.0s;--delay:2.54s;--o:0.24"></div>
+    <div class="streak" style="--x:85%;--w:1px;--h:47px;--speed:1.7s;--delay:1.85s;--o:0.38"></div>
+    <div class="streak" style="--x:87%;--w:3px;--h:66px;--speed:1.8s;--delay:1.33s;--o:0.56"></div>
+    <div class="streak" style="--x:89%;--w:3px;--h:68px;--speed:1.9s;--delay:1.69s;--o:0.38"></div>
+    <div class="streak" style="--x:91%;--w:2px;--h:31px;--speed:1.5s;--delay:1.48s;--o:0.3"></div>
+    <div class="streak" style="--x:95%;--w:2px;--h:63px;--speed:1.2s;--delay:1.87s;--o:0.36"></div>
   </div>
   <div class="pts">
     <div class="ptd" style="width:5px;height:5px;left:12%;top:20%;--d:9s;--dl:0s;--dx:25px;--dy:-50px"></div>
@@ -158,8 +166,10 @@
   <button class="x"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   <div class="sc-body">
     <div style="text-align:center;padding:36px 24px 20px;color:#fff;">
-      <div style="position:relative;width:160px;height:260px;display:inline-block;">
-        <img src="public/effects/blue-flame.webp" width="350" height="350" style="position:absolute;left:50%;bottom:-10px;margin-left:-175px;z-index:0;pointer-events:none;" />
+      <div style="position:relative;width:160px;height:220px;display:inline-block;">
+        <div style="position:absolute;left:50%;bottom:-10%;margin-left:-144px;width:288px;height:400px;overflow:hidden;mix-blend-mode:screen;pointer-events:none;z-index:0;">
+          <div style="width:1728px;height:800px;background:url(public/effects/flame-sprite.png);background-size:1728px 800px;animation:fsprite 1s steps(6) infinite;"></div>
+        </div>
         <img src="public/mascot/pro.png" width="160" height="160" style="position:absolute;bottom:0;left:0;z-index:1;" />
       </div>
       <div style="height:12px;"></div>
@@ -215,8 +225,10 @@
   <button class="x"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   <div class="sc-body">
     <div style="padding:36px 24px 16px;color:#fff;">
-      <div style="position:relative;width:160px;height:260px;display:inline-block;">
-        <img src="public/effects/blue-flame.webp" width="350" height="350" style="position:absolute;left:50%;bottom:-10px;margin-left:-175px;z-index:0;pointer-events:none;" />
+      <div style="position:relative;width:160px;height:220px;display:inline-block;">
+        <div style="position:absolute;left:50%;bottom:-10%;margin-left:-144px;width:288px;height:400px;overflow:hidden;mix-blend-mode:screen;pointer-events:none;z-index:0;">
+          <div style="width:1728px;height:800px;background:url(public/effects/flame-sprite.png);background-size:1728px 800px;animation:fsprite 1s steps(6) infinite;"></div>
+        </div>
         <img src="public/mascot/pro.png" width="160" height="160" style="position:absolute;bottom:0;left:0;z-index:1;" />
       </div>
       <div style="height:12px;"></div>
