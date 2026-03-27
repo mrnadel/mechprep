@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { ProfessionPicker } from './ProfessionPicker';
+import { FloatingParticles } from '@/components/ui/FloatingParticles';
 
 interface ProfessionPickerModalProps {
   isOpen: boolean;
@@ -27,7 +28,6 @@ export function ProfessionPickerModal({ isOpen, onClose, selectedId, onSelect }:
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
         >
-          {/* Backdrop */}
           <motion.div
             className="absolute inset-0 bg-black/40 backdrop-blur-sm"
             onClick={onClose}
@@ -36,9 +36,8 @@ export function ProfessionPickerModal({ isOpen, onClose, selectedId, onSelect }:
             exit={{ opacity: 0 }}
           />
 
-          {/* Modal */}
           <motion.div
-            className="relative bg-white w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col justify-center"
+            className="relative bg-gradient-to-b from-teal-500 to-teal-600 w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
             role="dialog"
             aria-modal="true"
             aria-labelledby="profession-picker-title"
@@ -48,32 +47,33 @@ export function ProfessionPickerModal({ isOpen, onClose, selectedId, onSelect }:
             transition={{ duration: 0.25, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
+            <FloatingParticles color="rgba(255,255,255,0.15)" count={5} drift />
+
             <button
               onClick={onClose}
-              className="absolute top-2 right-2 p-2.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="absolute top-3 right-3 p-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Close"
             >
-              <X className="w-4 h-4 text-gray-500" />
+              <X className="w-4 h-4 text-white/70" />
             </button>
 
-            {/* Header */}
-            <div className="px-5 pt-5 pb-3">
-              <h3 id="profession-picker-title" className="text-lg font-black text-gray-900">
-                Switch Course
-              </h3>
-              <p className="text-sm text-gray-400 font-medium mt-0.5">
-                Choose what you want to learn
-              </p>
-            </div>
+            <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1]">
+              <div className="px-5 pt-6 pb-3">
+                <h3 id="profession-picker-title" className="text-xl font-black text-white">
+                  Switch Course
+                </h3>
+                <p className="text-sm text-white/60 font-medium mt-0.5">
+                  Choose what you want to learn
+                </p>
+              </div>
 
-            {/* Picker */}
-            <div className="px-5 pb-5">
-              <ProfessionPicker
-                selectedId={selectedId}
-                onSelect={handleSelect}
-                compact
-              />
+              <div className="px-5 pb-5">
+                <ProfessionPicker
+                  selectedId={selectedId}
+                  onSelect={handleSelect}
+                  compact
+                />
+              </div>
             </div>
           </motion.div>
         </motion.div>

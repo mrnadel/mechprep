@@ -36,10 +36,10 @@
 
   /* Particles */
   .pts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
-  .pt{position:absolute;border-radius:50%;opacity:0;background:rgba(255,255,255,.15);animation:fl var(--d,7s) var(--dl,0s) infinite ease-in-out;}
-  @keyframes fl{0%{opacity:0;transform:translateY(0) scale(.5)}15%{opacity:.4}85%{opacity:.4}100%{opacity:0;transform:translateY(var(--t,-500px)) scale(.8)}}
-  .ptd{position:absolute;border-radius:50%;opacity:0;background:rgba(255,255,255,.12);animation:dr var(--d,9s) var(--dl,0s) infinite ease-in-out;}
-  @keyframes dr{0%{opacity:0;transform:translate(0,0) scale(.4)}20%{opacity:.3}50%{transform:translate(var(--dx,20px),var(--dy,-60px)) scale(.6)}80%{opacity:.3}100%{opacity:0;transform:translate(calc(var(--dx)*1.5),calc(var(--dy)*2)) scale(.3)}}
+  .pt{position:absolute;border-radius:50%;background:rgba(255,255,255,.25);animation:fl var(--d,7s) var(--dl,0s) infinite ease-in-out;}
+  @keyframes fl{0%{opacity:0;transform:translateY(0) scale(.6)}10%{opacity:.6}50%{opacity:.5}90%{opacity:.3}100%{opacity:0;transform:translateY(var(--t,-500px)) scale(1)}}
+  .ptd{position:absolute;border-radius:50%;background:rgba(255,255,255,.2);animation:dr var(--d,9s) var(--dl,0s) infinite ease-in-out;}
+  @keyframes dr{0%{opacity:0;transform:translate(0,0) scale(.5)}15%{opacity:.5}50%{opacity:.4;transform:translate(var(--dx,20px),var(--dy,-60px)) scale(.7)}85%{opacity:.3}100%{opacity:0;transform:translate(calc(var(--dx)*1.5),calc(var(--dy)*2)) scale(.4)}}
 
   /* Glow */
   .glow{position:absolute;width:200px;height:200px;border-radius:50%;top:30%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(251,191,36,.2) 0%,transparent 70%);animation:gl 3s infinite ease-in-out;z-index:1;}
@@ -132,19 +132,24 @@
   <div class="sc-foot"><button class="btn b-gld">Subscribe to Pro</button></div>
 </div></div></div>
 
-<!-- 4. PROFESSION PICKER — Clean white (no celebration) -->
-<div class="cw"><div class="cl">Profession Picker</div>
-<div class="ph"><div class="sc" style="background:#fff;">
-  <button class="x" style="background:rgba(0,0,0,.06);"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" style="stroke:#6b7280;"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+<!-- 4. PROFESSION PICKER — Bold Teal -->
+<div class="cw"><div class="cl">Switch Course</div>
+<div class="ph"><div class="sc" style="background:linear-gradient(to bottom,#14B8A6,#0D9488);">
+  <div class="pts">
+    <div class="ptd" style="width:5px;height:5px;left:15%;top:20%;--d:9s;--dl:0s;--dx:25px;--dy:-40px"></div>
+    <div class="ptd" style="width:4px;height:4px;left:75%;top:40%;--d:10s;--dl:2s;--dx:-20px;--dy:-50px"></div>
+    <div class="ptd" style="width:5px;height:5px;left:50%;top:70%;--d:8s;--dl:3s;--dx:15px;--dy:-45px"></div>
+  </div>
+  <button class="x"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   <div class="sc-body">
-    <div style="padding:28px 24px 12px;">
-      <h3 style="font-size:20px;font-weight:900;color:#111827;">Switch Course</h3>
-      <p style="font-size:14px;color:#9ca3af;font-weight:500;margin-top:2px;">Choose what you want to learn</p>
+    <div style="padding:28px 24px 16px;color:#fff;">
+      <h3 style="font-size:22px;font-weight:900;">Switch Course</h3>
+      <p style="font-size:14px;color:rgba(255,255,255,.6);margin-top:2px;">Choose what you want to learn</p>
     </div>
-    <div style="padding:8px 24px;">
-      <div style="display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;border:2px solid #4f46e5;background:#F5F3FF;margin-bottom:10px;"><span style="font-size:28px;">&#9881;&#65039;</span><div><strong style="font-size:15px;color:#111827;">Mechanical Engineering</strong><br><span style="font-size:12px;color:#9ca3af;">Interview prep for ME roles</span></div></div>
-      <div style="display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;border:2px solid #e5e7eb;margin-bottom:10px;"><span style="font-size:28px;">&#128268;</span><div><strong style="font-size:15px;color:#111827;">Electrical Engineering</strong><br><span style="font-size:12px;color:#9ca3af;">Circuits, power, signals</span></div></div>
-      <div style="display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;border:2px solid #e5e7eb;"><span style="font-size:28px;">&#127959;&#65039;</span><div><strong style="font-size:15px;color:#111827;">Civil Engineering</strong><br><span style="font-size:12px;color:#9ca3af;">Structures, materials, geo</span></div></div>
+    <div style="padding:4px 24px;display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);"><span style="font-size:28px;">&#9881;&#65039;</span><div><strong style="font-size:15px;color:#fff;">Mechanical Engineering</strong><br><span style="font-size:12px;color:rgba(255,255,255,.6);">Interview prep for ME roles</span></div></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.15);"><span style="font-size:28px;">&#128268;</span><div><strong style="font-size:15px;color:#fff;">Electrical Engineering</strong><br><span style="font-size:12px;color:rgba(255,255,255,.5);">Circuits, power, signals</span></div></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.15);"><span style="font-size:28px;">&#127959;&#65039;</span><div><strong style="font-size:15px;color:#fff;">Civil Engineering</strong><br><span style="font-size:12px;color:rgba(255,255,255,.5);">Structures, materials, geo</span></div></div>
     </div>
   </div>
 </div></div></div>
@@ -270,8 +275,11 @@
 <div class="cw"><div class="cl">Promoted</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(to bottom,#22C55E,#16A34A);">
   <div class="pts">
-    <div class="pt" style="width:5px;height:5px;left:20%;bottom:5%;--d:7s;--dl:0s;--t:-500px"></div>
-    <div class="pt" style="width:4px;height:4px;left:60%;bottom:10%;--d:9s;--dl:2s;--t:-550px"></div>
+    <div class="pt" style="width:6px;height:6px;left:10%;bottom:5%;--d:7s;--dl:0s;--t:-500px"></div>
+    <div class="pt" style="width:5px;height:5px;left:35%;bottom:8%;--d:8s;--dl:1s;--t:-550px"></div>
+    <div class="pt" style="width:7px;height:7px;left:60%;bottom:3%;--d:9s;--dl:2s;--t:-480px"></div>
+    <div class="pt" style="width:4px;height:4px;left:80%;bottom:10%;--d:7.5s;--dl:3.5s;--t:-520px"></div>
+    <div class="pt" style="width:5px;height:5px;left:50%;bottom:6%;--d:10s;--dl:4s;--t:-560px"></div>
   </div>
   <div class="sc-body">
     <div style="text-align:center;padding:40px 28px;color:#fff;">
@@ -291,8 +299,10 @@
 <div class="cw"><div class="cl">Stayed</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(to bottom,#60A5FA,#3B82F6);">
   <div class="pts">
-    <div class="pt" style="width:4px;height:4px;left:25%;bottom:8%;--d:8s;--dl:.5s;--t:-500px"></div>
-    <div class="pt" style="width:5px;height:5px;left:70%;bottom:3%;--d:9s;--dl:2.5s;--t:-550px"></div>
+    <div class="pt" style="width:6px;height:6px;left:15%;bottom:8%;--d:8s;--dl:.5s;--t:-500px"></div>
+    <div class="pt" style="width:5px;height:5px;left:45%;bottom:3%;--d:7s;--dl:1.5s;--t:-540px"></div>
+    <div class="pt" style="width:7px;height:7px;left:70%;bottom:6%;--d:9s;--dl:2.5s;--t:-550px"></div>
+    <div class="pt" style="width:4px;height:4px;left:90%;bottom:10%;--d:8.5s;--dl:4s;--t:-480px"></div>
   </div>
   <div class="sc-body">
     <div style="text-align:center;padding:40px 28px;color:#fff;">
@@ -309,8 +319,10 @@
 <div class="cw"><div class="cl">Demoted</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(to bottom,#F87171,#DC2626);">
   <div class="pts">
-    <div class="pt" style="width:4px;height:4px;left:30%;bottom:5%;--d:9s;--dl:1s;--t:-500px"></div>
-    <div class="pt" style="width:5px;height:5px;left:70%;bottom:8%;--d:7s;--dl:3s;--t:-550px"></div>
+    <div class="pt" style="width:5px;height:5px;left:15%;bottom:5%;--d:9s;--dl:1s;--t:-500px"></div>
+    <div class="pt" style="width:6px;height:6px;left:45%;bottom:8%;--d:7s;--dl:2s;--t:-530px"></div>
+    <div class="pt" style="width:4px;height:4px;left:70%;bottom:3%;--d:8s;--dl:3s;--t:-550px"></div>
+    <div class="pt" style="width:5px;height:5px;left:85%;bottom:10%;--d:7.5s;--dl:0s;--t:-490px"></div>
   </div>
   <div class="sc-body">
     <div style="text-align:center;padding:40px 28px;color:#fff;">
