@@ -1,18 +1,15 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useEngagementStore, useComeback, useStreakEnhancements } from '@/store/useEngagementStore';
+import { motion } from 'framer-motion';
+import { useEngagementStore, useComeback } from '@/store/useEngagementStore';
 import { comebackQuests } from '@/data/quests';
 import { Gem } from 'lucide-react';
 import { GameButton } from '@/components/ui/GameButton';
-import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 
 export function WelcomeBack() {
   const comeback = useComeback();
-  const streak = useStreakEnhancements();
-  const [showRepair, setShowRepair] = useState(false);
 
   const dismiss = () => {
     useEngagementStore.setState((s) => ({
@@ -25,99 +22,58 @@ export function WelcomeBack() {
   }
 
   return (
-    <AnimatePresence>
+    <FullScreenModal
+      show
+      bg="#235390"
+      fx="snow"
+      labelId="welcome-back-title"
+      footer={<GameButton variant="gold" onClick={dismiss}>Let&apos;s Go!</GameButton>}
+    >
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center sm:p-4"
-        style={{ background: 'rgba(0,0,0,0.55)' }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        className="mb-3"
+        initial={{ scale: 0.5, rotate: -10 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 15 }}
       >
-        <motion.div
-          className="bg-[#1CB0F6] w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-2xl overflow-y-auto flex flex-col"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="welcome-back-title"
-          initial={{ scale: 0.9, opacity: 0, y: 24 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0.9, opacity: 0, y: 24 }}
-          transition={{ type: 'spring', stiffness: 280, damping: 22 }}
-        >
-          <FloatingParticles color="rgba(255,255,255,0.05)" intensity="subtle" drift />
-
-          {/* Content — centered */}
-          <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-6 pt-[12vh] sm:pt-8 text-white">
-            <div className="text-center mb-5">
-              <motion.div
-                className="mb-3"
-                aria-hidden="true"
-                initial={{ scale: 0.5, rotate: -10 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-              >
-                <MascotWithGlow pose="sleeping" size={150} />
-              </motion.div>
-              <h2 id="welcome-back-title" className="text-[26px] font-extrabold text-white mb-1">
-                Welcome back!
-              </h2>
-              <p className="text-sm text-white/60">We missed you.</p>
-            </div>
-
-            <div className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl mb-4 bg-white/15 backdrop-blur-sm">
-              <span className="text-sm font-semibold text-white/80">
-                You&apos;ve been away for{' '}
-                <span className="font-extrabold text-white">{comeback.daysAway} days</span>
-              </span>
-            </div>
-
-            {streak.repairAvailable && !showRepair && (
-              <div className="flex items-center justify-between gap-3 px-4 py-3 rounded-xl mb-4 bg-red-500/30 border border-red-400/30">
-                <div>
-                  <p className="text-sm font-bold text-white">Your streak broke</p>
-                  <p className="text-xs text-white/60">Repair it with gems!</p>
-                </div>
-                <button
-                  onClick={() => setShowRepair(true)}
-                  className="flex-shrink-0 px-4 py-2 rounded-xl text-xs font-extrabold text-white min-h-[44px]"
-                  style={{ background: '#EF4444', boxShadow: '0 3px 0 #B91C1C', border: 'none', cursor: 'pointer' }}
-                >
-                  Repair
-                </button>
-              </div>
-            )}
-
-            <div className="mb-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-white/50 mb-2">
-                Comeback quests
-              </p>
-              <div className="space-y-2">
-                {comebackQuests.map((quest) => (
-                  <div
-                    key={quest.id}
-                    className="flex items-center gap-3 p-3 rounded-xl bg-white/15 backdrop-blur-sm"
-                  >
-                    <span className="text-xl">{quest.icon}</span>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-bold text-white truncate">{quest.title}</p>
-                    </div>
-                    <div className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-bold flex-shrink-0 bg-white/20 text-white">
-                      <Gem className="w-3 h-3" />
-                      <span>{quest.reward.gems}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Footer — pinned bottom */}
-          <div className="shrink-0 px-6 pb-8 sm:pb-5 relative z-[1]">
-            <GameButton variant="gold" onClick={dismiss}>
-              Let&apos;s Go!
-            </GameButton>
-          </div>
-        </motion.div>
+        <MascotWithGlow pose="sleeping" size={140} />
       </motion.div>
-    </AnimatePresence>
+
+      <h2 id="welcome-back-title" className="text-[26px] font-extrabold text-white mb-1">
+        Welcome back!
+      </h2>
+      <p className="text-sm text-white/50 mb-5">We missed you.</p>
+
+      <div className="w-full space-y-3">
+        <div className="w-full px-4 py-3 rounded-2xl bg-white/10 text-center">
+          <span className="text-sm font-semibold text-white/70">
+            You&apos;ve been away for{' '}
+            <span className="font-extrabold text-white">{comeback.daysAway} days</span>
+          </span>
+        </div>
+
+        <div className="w-full">
+          <p className="text-xs font-bold uppercase tracking-wide text-white/40 mb-2">
+            Comeback quests
+          </p>
+          <div className="space-y-2">
+            {comebackQuests.map((quest) => (
+              <div
+                key={quest.id}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/10"
+              >
+                <span className="text-xl">{quest.icon}</span>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-bold text-white truncate">{quest.title}</p>
+                </div>
+                <div className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-bold flex-shrink-0 bg-white/15 text-white">
+                  <Gem className="w-3 h-3" />
+                  <span>{quest.reward.gems}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </FullScreenModal>
   );
 }

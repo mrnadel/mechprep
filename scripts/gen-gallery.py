@@ -109,8 +109,8 @@ screens_html.append(screen("Streak Milestone", "#E8850C",
     flow="Practice daily &#8594; Hit 7/14/30/60/100 day streak &#8594; Home loads"))
 
 # 7. Welcome Back
-screens_html.append(screen("Welcome Back", "#1CB0F6",
-    '      <img src="public/mascot/sleeping.png" width="130" height="130" style="margin-bottom:10px;" />\n      <div style="font-size:26px;font-weight:800;">Welcome back!</div>\n      <div style="font-size:14px;color:rgba(255,255,255,.5);margin-bottom:16px;">We missed you.</div>\n      <div style="display:inline-block;padding:8px 16px;border-radius:12px;background:rgba(255,255,255,.15);font-size:14px;font-weight:600;">Away for <strong>5 days</strong></div>',
+screens_html.append(screen("Welcome Back", "#235390",
+    '      <img src="public/mascot/sleeping.png" width="130" height="130" style="margin-bottom:10px;" />\n      <div style="font-size:26px;font-weight:800;">Welcome back!</div>\n      <div style="font-size:14px;color:rgba(255,255,255,.5);margin-bottom:16px;">We missed you.</div>\n      <div style="width:100%;padding:10px 16px;border-radius:14px;background:rgba(255,255,255,.1);font-size:14px;font-weight:600;text-align:center;">Away for <strong>5 days</strong></div>',
     gen_snow(20), '<button class="btn b-gld">Let\'s Go!</button>',
     flow="Be away 2+ days &#8594; Open app &#8594; Home page shows this"))
 
