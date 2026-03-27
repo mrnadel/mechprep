@@ -509,12 +509,13 @@ export const useEngagementStore = create<EngagementStore>()(
             const rank = getUserRank(state.league.weeklyXp, simulatedCompetitors);
             const result = getWeekResult(rank, state.league.currentTier);
 
-            const lastWeekResult = {
+            // Only show league results if user actually participated (earned XP)
+            const lastWeekResult = state.league.weeklyXp > 0 ? {
               rank,
               promoted: result.promoted,
               demoted: result.demoted,
               tier: state.league.currentTier,
-            };
+            } : null;
 
             // Generate new competitors for new week
             const newCompetitors = drawCompetitorsFromPool(monday, result.newTier);
@@ -526,12 +527,12 @@ export const useEngagementStore = create<EngagementStore>()(
                 weekStartDate: monday,
                 competitors: newCompetitors,
                 lastWeekResult,
-                resultSeen: false,
+                resultSeen: lastWeekResult === null ? true : false,
               },
             });
 
-            // Award promotion gems + league frame
-            if (result.promoted) {
+            // Award promotion gems + league frame (only if user participated)
+            if (result.promoted && lastWeekResult !== null) {
               get().addGems(LEAGUE_GEM_REWARD_PROMOTION, 'league_promotion');
 
               // Grant league frame for the new tier
@@ -595,8 +596,11 @@ export const useEngagementStore = create<EngagementStore>()(
           const state = get();
           if (state.comeback.isInComebackFlow) return; // already in comeback flow
 
-          const lastActiveDate = useStore.getState().progress.lastActiveDate;
+          const progress = useStore.getState().progress;
+          const lastActiveDate = progress.lastActiveDate;
           if (!lastActiveDate) return;
+          // Don't show comeback for users who never really practiced
+          if (progress.totalXp === 0) return;
 
           const lastActive = new Date(lastActiveDate + 'T00:00:00Z');
           const today = new Date(getTodayDate() + 'T00:00:00Z');

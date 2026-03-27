@@ -72,7 +72,7 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
           />
 
           <motion.div
-            className="relative bg-[#FFF5F5] w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
+            className="relative bg-gradient-to-b from-red-500 to-red-600 w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
             role="dialog"
             aria-modal="true"
             aria-labelledby="out-of-hearts-title"
@@ -82,14 +82,14 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
             transition={{ duration: 0.25, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <FloatingParticles color="rgba(239,68,68,0.3)" count={5} />
+            <FloatingParticles color="rgba(255,255,255,0.15)" count={6} />
 
             <button
               onClick={handleClose}
-              className="absolute top-3 right-3 p-2.5 rounded-full bg-white/80 hover:bg-white transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="absolute top-3 right-3 p-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Close"
             >
-              <X className="w-4 h-4 text-gray-500" />
+              <X className="w-4 h-4 text-white/70" />
             </button>
 
             {/* Content — centered */}

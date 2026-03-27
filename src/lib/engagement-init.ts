@@ -27,8 +27,8 @@ export function useEngagementInit() {
     // Without this guard, seed progress dates trigger false streak-break/comeback popups.
     const hasEngagementHistory = engagement.dailyQuestDate !== null;
 
-    // Streak freeze / break detection
-    if (hasEngagementHistory && progress.lastActiveDate && progress.lastActiveDate !== today) {
+    // Streak freeze / break detection — only if user actually has a streak to lose
+    if (hasEngagementHistory && progress.lastActiveDate && progress.lastActiveDate !== today && progress.currentStreak > 0) {
       const lastActive = new Date(progress.lastActiveDate);
       const todayDate = new Date(today);
       const daysDiff = Math.floor(
