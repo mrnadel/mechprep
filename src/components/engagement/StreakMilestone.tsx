@@ -61,7 +61,7 @@ export function StreakMilestone({ milestone, onClose }: Props) {
           exit={{ scale: 0.85, opacity: 0, y: 20 }}
           transition={{ type: 'spring', stiffness: 280, damping: 22 }}
         >
-          <FloatingParticles color="rgba(255,255,255,0.15)" count={6} />
+          <FloatingParticles color="rgba(255,255,255,0.3)" intensity="celebration" />
 
           {/* Content — centered */}
           <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-8 text-center text-white">

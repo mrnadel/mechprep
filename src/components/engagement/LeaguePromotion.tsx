@@ -93,7 +93,7 @@ export function LeaguePromotion() {
               exit={{ scale: 0.75, y: 50 }}
               transition={{ type: 'spring', stiffness: 260, damping: 20 }}
             >
-              <FloatingParticles color={content.particleColor} count={4} />
+              <FloatingParticles color={content.particleColor} intensity={isPromoted ? 'celebration' : 'normal'} />
 
               {/* Content — centered */}
               <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] px-8 py-10 text-center">

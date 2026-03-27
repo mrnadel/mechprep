@@ -81,7 +81,7 @@ export function StreakFreeze() {
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 24 }}
           >
-            <FloatingParticles color="rgba(255,255,255,0.12)" count={5} drift />
+            <FloatingParticles color="rgba(255,255,255,0.2)" intensity="normal" drift />
 
             {/* Content — centered */}
             <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-6 text-center text-white">

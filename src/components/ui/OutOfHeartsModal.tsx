@@ -82,7 +82,7 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
             transition={{ duration: 0.25, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <FloatingParticles color="rgba(255,255,255,0.15)" count={6} />
+            <FloatingParticles color="rgba(255,255,255,0.25)" intensity="normal" />
 
             <button
               onClick={handleClose}

@@ -5,6 +5,7 @@ import type { LevelReward } from '@/data/level-rewards';
 import { levels } from '@/data/levels';
 import { LevelBadge } from '@/components/engagement/LevelBadge';
 import { GameButton } from '@/components/ui/GameButton';
+import { FloatingParticles } from '@/components/ui/FloatingParticles';
 
 interface Props {
   reward: LevelReward;
@@ -62,6 +63,8 @@ export function LevelUpCelebration({ reward, onClose }: Props) {
           exit={{ scale: 0.8, opacity: 0, y: 30 }}
           transition={{ type: 'spring', stiffness: 260, damping: 20 }}
         >
+          <FloatingParticles color="rgba(255,255,255,0.2)" intensity="celebration" />
+
           {/* Glow ring for milestones */}
           {isMilestone && (
             <motion.div

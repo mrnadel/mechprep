@@ -41,7 +41,7 @@ export function WelcomeBack() {
           exit={{ scale: 0.9, opacity: 0, y: 24 }}
           transition={{ type: 'spring', stiffness: 280, damping: 22 }}
         >
-          <FloatingParticles color="rgba(255,255,255,0.12)" count={6} drift />
+          <FloatingParticles color="rgba(255,255,255,0.2)" intensity="normal" drift />
 
           {/* Content — centered */}
           <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1] p-6 text-white">

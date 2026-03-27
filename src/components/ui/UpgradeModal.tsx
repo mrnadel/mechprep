@@ -8,6 +8,7 @@ import { PADDLE_PRICES } from '@/lib/pricing';
 import { getPaddle } from '@/lib/paddle-client';
 import { analytics } from '@/lib/mixpanel';
 import { GameButton } from '@/components/ui/GameButton';
+import { FloatingParticles } from '@/components/ui/FloatingParticles';
 
 interface UpgradeModalProps {
   isOpen: boolean;
@@ -78,6 +79,8 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
             exit={{ y: 60, opacity: 0, scale: 0.96 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
           >
+            <FloatingParticles color="rgba(255,255,255,0.2)" intensity="normal" drift />
+
             <button
               onClick={onClose}
               className="absolute top-3 right-3 p-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"

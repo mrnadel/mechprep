@@ -36,10 +36,10 @@
 
   /* Particles */
   .pts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
-  .pt{position:absolute;border-radius:50%;background:rgba(255,255,255,.25);animation:fl var(--d,7s) var(--dl,0s) infinite ease-in-out;}
-  @keyframes fl{0%{opacity:0;transform:translateY(0) scale(.6)}10%{opacity:.6}50%{opacity:.5}90%{opacity:.3}100%{opacity:0;transform:translateY(var(--t,-500px)) scale(1)}}
-  .ptd{position:absolute;border-radius:50%;background:rgba(255,255,255,.2);animation:dr var(--d,9s) var(--dl,0s) infinite ease-in-out;}
-  @keyframes dr{0%{opacity:0;transform:translate(0,0) scale(.5)}15%{opacity:.5}50%{opacity:.4;transform:translate(var(--dx,20px),var(--dy,-60px)) scale(.7)}85%{opacity:.3}100%{opacity:0;transform:translate(calc(var(--dx)*1.5),calc(var(--dy)*2)) scale(.4)}}
+  .pt{position:absolute;border-radius:50%;background:rgba(255,255,255,.3);animation:fl var(--d,7s) var(--dl,0s) infinite ease-in-out;}
+  @keyframes fl{0%{opacity:0;transform:translateY(0) scale(.6)}8%{opacity:.7}50%{opacity:.6}92%{opacity:.3}100%{opacity:0;transform:translateY(var(--t,-600px)) scale(1.2)}}
+  .ptd{position:absolute;border-radius:50%;background:rgba(255,255,255,.25);animation:dr var(--d,9s) var(--dl,0s) infinite ease-in-out;}
+  @keyframes dr{0%{opacity:0;transform:translate(0,0) scale(.5)}12%{opacity:.6}50%{opacity:.5;transform:translate(var(--dx,20px),var(--dy,-60px)) scale(.8)}88%{opacity:.3}100%{opacity:0;transform:translate(calc(var(--dx)*1.5),calc(var(--dy)*2)) scale(.4)}}
 
   /* Glow */
   .glow{position:absolute;width:200px;height:200px;border-radius:50%;top:30%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(251,191,36,.2) 0%,transparent 70%);animation:gl 3s infinite ease-in-out;z-index:1;}
@@ -85,6 +85,12 @@
 <!-- 2. TRIAL PROMPT — Bold Indigo -->
 <div class="cw"><div class="cl">Trial Prompt</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(to bottom,#6366F1,#4338CA);">
+  <div class="pts">
+    <div class="ptd" style="width:5px;height:5px;left:12%;top:20%;--d:9s;--dl:0s;--dx:25px;--dy:-50px"></div>
+    <div class="ptd" style="width:6px;height:6px;left:75%;top:35%;--d:11s;--dl:2s;--dx:-20px;--dy:-40px"></div>
+    <div class="ptd" style="width:4px;height:4px;left:45%;top:60%;--d:8s;--dl:3.5s;--dx:30px;--dy:-55px"></div>
+    <div class="ptd" style="width:5px;height:5px;left:88%;top:50%;--d:10s;--dl:1s;--dx:-25px;--dy:-45px"></div>
+  </div>
   <button class="x"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   <div class="sc-body">
     <div style="text-align:center;padding:36px 24px 20px;color:#fff;">
@@ -116,6 +122,12 @@
 <!-- 3. UPGRADE — Bold Purple -->
 <div class="cw"><div class="cl">Upgrade Modal</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(to bottom,#4F46E5,#3730A3);">
+  <div class="pts">
+    <div class="ptd" style="width:5px;height:5px;left:18%;top:25%;--d:10s;--dl:0s;--dx:20px;--dy:-45px"></div>
+    <div class="ptd" style="width:6px;height:6px;left:70%;top:40%;--d:8s;--dl:2.5s;--dx:-25px;--dy:-50px"></div>
+    <div class="ptd" style="width:4px;height:4px;left:50%;top:65%;--d:9s;--dl:1s;--dx:15px;--dy:-40px"></div>
+    <div class="ptd" style="width:5px;height:5px;left:85%;top:20%;--d:11s;--dl:3.5s;--dx:-20px;--dy:-55px"></div>
+  </div>
   <button class="x"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   <div class="sc-body">
     <div style="padding:36px 24px 16px;color:#fff;">
@@ -160,9 +172,19 @@
 <div class="sec">Celebrations</div>
 <div class="g">
 
-<!-- 5a. LEVEL UP (normal) — Dark Slate -->
+<!-- 5a. LEVEL UP (normal) — Dark Slate — CELEBRATION -->
 <div class="cw"><div class="cl">Level Up</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(135deg,#1E293B,#334155);">
+  <div class="pts">
+    <div class="pt" style="width:6px;height:6px;left:10%;bottom:5%;--d:6s;--dl:0s;--t:-600px"></div>
+    <div class="pt" style="width:5px;height:5px;left:30%;bottom:8%;--d:7s;--dl:1s;--t:-550px"></div>
+    <div class="pt" style="width:7px;height:7px;left:55%;bottom:3%;--d:8s;--dl:2s;--t:-650px"></div>
+    <div class="pt" style="width:5px;height:5px;left:75%;bottom:10%;--d:6.5s;--dl:3s;--t:-580px"></div>
+    <div class="pt" style="width:6px;height:6px;left:90%;bottom:6%;--d:7.5s;--dl:1.5s;--t:-620px"></div>
+    <div class="pt" style="width:8px;height:8px;left:42%;bottom:2%;--d:5.5s;--dl:4s;--t:-700px"></div>
+    <div class="pt" style="width:4px;height:4px;left:65%;bottom:12%;--d:9s;--dl:0.5s;--t:-540px"></div>
+    <div class="pt" style="width:7px;height:7px;left:20%;bottom:1%;--d:6.8s;--dl:2.5s;--t:-660px"></div>
+  </div>
   <div class="sc-body">
     <div style="display:flex;flex-direction:column;align-items:center;padding:40px 32px;color:#fff;">
       <div style="width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,.1);border:3px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:42px;margin-bottom:14px;">&#11088;</div>
@@ -174,9 +196,21 @@
   <div class="sc-foot"><button class="btn b-ind">Claim &amp; Continue</button></div>
 </div></div></div>
 
-<!-- 5b. LEVEL UP (milestone) — Deep Indigo + Glow -->
+<!-- 5b. LEVEL UP (milestone) — Deep Indigo + Glow — CELEBRATION -->
 <div class="cw"><div class="cl">Level Up (Milestone)</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(135deg,#1E1B4B,#312E81 50%,#4338CA);">
+  <div class="pts">
+    <div class="pt" style="width:7px;height:7px;left:8%;bottom:3%;--d:5.5s;--dl:0s;--t:-650px"></div>
+    <div class="pt" style="width:6px;height:6px;left:22%;bottom:8%;--d:6.5s;--dl:1s;--t:-600px"></div>
+    <div class="pt" style="width:8px;height:8px;left:38%;bottom:1%;--d:7s;--dl:2s;--t:-700px"></div>
+    <div class="pt" style="width:5px;height:5px;left:52%;bottom:10%;--d:5s;--dl:3s;--t:-580px"></div>
+    <div class="pt" style="width:7px;height:7px;left:68%;bottom:5%;--d:6s;--dl:0.5s;--t:-640px"></div>
+    <div class="pt" style="width:6px;height:6px;left:82%;bottom:2%;--d:8s;--dl:1.5s;--t:-620px"></div>
+    <div class="pt" style="width:9px;height:9px;left:45%;bottom:6%;--d:5.8s;--dl:4s;--t:-680px"></div>
+    <div class="pt" style="width:5px;height:5px;left:90%;bottom:8%;--d:7.5s;--dl:2.5s;--t:-560px"></div>
+    <div class="pt" style="width:8px;height:8px;left:15%;bottom:4%;--d:6.2s;--dl:3.5s;--t:-720px"></div>
+    <div class="pt" style="width:6px;height:6px;left:60%;bottom:1%;--d:5.2s;--dl:0.8s;--t:-660px"></div>
+  </div>
   <div class="glow"></div>
   <div class="sc-body" style="z-index:2;">
     <div style="display:flex;flex-direction:column;align-items:center;padding:40px 32px;color:#fff;">
@@ -192,14 +226,20 @@
   <div class="sc-foot" style="z-index:2;"><button class="btn b-gld-dk">Claim &amp; Continue</button></div>
 </div></div></div>
 
-<!-- 6. STREAK MILESTONE — Bold Amber-to-Orange -->
+<!-- 6. STREAK MILESTONE — Bold Amber-to-Orange — CELEBRATION -->
 <div class="cw"><div class="cl">Streak Milestone</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(to bottom,#F59E0B,#EA580C);">
   <div class="pts">
-    <div class="pt" style="width:5px;height:5px;left:12%;bottom:5%;--d:6s;--dl:0s;--t:-600px"></div>
-    <div class="pt" style="width:4px;height:4px;left:50%;bottom:10%;--d:8s;--dl:1.5s;--t:-550px"></div>
-    <div class="pt" style="width:5px;height:5px;left:85%;bottom:3%;--d:7s;--dl:3s;--t:-580px"></div>
-    <div class="pt" style="width:3px;height:3px;left:30%;bottom:8%;--d:9s;--dl:4s;--t:-520px"></div>
+    <div class="pt" style="width:7px;height:7px;left:5%;bottom:5%;--d:5.5s;--dl:0s;--t:-650px"></div>
+    <div class="pt" style="width:5px;height:5px;left:18%;bottom:8%;--d:7s;--dl:0.8s;--t:-600px"></div>
+    <div class="pt" style="width:8px;height:8px;left:32%;bottom:3%;--d:6s;--dl:1.5s;--t:-700px"></div>
+    <div class="pt" style="width:6px;height:6px;left:48%;bottom:10%;--d:8s;--dl:2.2s;--t:-580px"></div>
+    <div class="pt" style="width:5px;height:5px;left:60%;bottom:6%;--d:5s;--dl:3s;--t:-620px"></div>
+    <div class="pt" style="width:7px;height:7px;left:72%;bottom:2%;--d:7.5s;--dl:0.3s;--t:-660px"></div>
+    <div class="pt" style="width:4px;height:4px;left:85%;bottom:12%;--d:6.5s;--dl:4s;--t:-550px"></div>
+    <div class="pt" style="width:6px;height:6px;left:93%;bottom:7%;--d:5.8s;--dl:1.8s;--t:-640px"></div>
+    <div class="pt" style="width:5px;height:5px;left:40%;bottom:1%;--d:9s;--dl:3.5s;--t:-580px"></div>
+    <div class="pt" style="width:8px;height:8px;left:55%;bottom:4%;--d:6.2s;--dl:2.8s;--t:-700px"></div>
   </div>
   <div class="sc-body">
     <div style="text-align:center;padding:40px 28px;color:#fff;">
@@ -341,12 +381,18 @@
 <div class="sec">Chapter &amp; Course Complete</div>
 <div class="g">
 
-<!-- 10. CHAPTER COMPLETE — Bold Green -->
+<!-- 10. CHAPTER COMPLETE — Bold Green — CELEBRATION -->
 <div class="cw"><div class="cl">Chapter Complete</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(160deg,#22C55E,#16A34A);">
   <div class="pts">
-    <div class="pt" style="width:4px;height:4px;left:20%;bottom:5%;--d:8s;--dl:0s;--t:-500px"></div>
-    <div class="pt" style="width:5px;height:5px;left:70%;bottom:10%;--d:7s;--dl:2s;--t:-550px"></div>
+    <div class="pt" style="width:6px;height:6px;left:8%;bottom:5%;--d:6s;--dl:0s;--t:-600px"></div>
+    <div class="pt" style="width:7px;height:7px;left:25%;bottom:3%;--d:7s;--dl:1s;--t:-650px"></div>
+    <div class="pt" style="width:5px;height:5px;left:42%;bottom:8%;--d:5.5s;--dl:2s;--t:-580px"></div>
+    <div class="pt" style="width:8px;height:8px;left:58%;bottom:2%;--d:8s;--dl:0.5s;--t:-700px"></div>
+    <div class="pt" style="width:6px;height:6px;left:75%;bottom:10%;--d:6.5s;--dl:3s;--t:-620px"></div>
+    <div class="pt" style="width:5px;height:5px;left:90%;bottom:6%;--d:7.5s;--dl:1.5s;--t:-560px"></div>
+    <div class="pt" style="width:7px;height:7px;left:35%;bottom:1%;--d:5.8s;--dl:4s;--t:-680px"></div>
+    <div class="pt" style="width:4px;height:4px;left:65%;bottom:12%;--d:9s;--dl:2.5s;--t:-540px"></div>
   </div>
   <div class="sc-body">
     <div style="display:flex;flex-direction:column;align-items:center;padding:40px 24px;text-align:center;color:#fff;">
@@ -365,9 +411,19 @@
   <div class="sc-foot"><button class="btn b-gld">CONTINUE</button></div>
 </div></div></div>
 
-<!-- 10b. CHAPTER MASTERED — Bold Gold -->
+<!-- 10b. CHAPTER MASTERED — Bold Gold — CELEBRATION -->
 <div class="cw"><div class="cl">Chapter Mastered</div>
 <div class="ph"><div class="sc" style="background:linear-gradient(160deg,#F59E0B,#D97706);">
+  <div class="pts">
+    <div class="pt" style="width:7px;height:7px;left:10%;bottom:5%;--d:5.5s;--dl:0s;--t:-650px"></div>
+    <div class="pt" style="width:6px;height:6px;left:30%;bottom:3%;--d:7s;--dl:1.2s;--t:-600px"></div>
+    <div class="pt" style="width:8px;height:8px;left:50%;bottom:8%;--d:6s;--dl:2.5s;--t:-700px"></div>
+    <div class="pt" style="width:5px;height:5px;left:70%;bottom:2%;--d:8s;--dl:0.8s;--t:-580px"></div>
+    <div class="pt" style="width:7px;height:7px;left:88%;bottom:6%;--d:6.5s;--dl:3.5s;--t:-640px"></div>
+    <div class="pt" style="width:6px;height:6px;left:40%;bottom:1%;--d:5.2s;--dl:4s;--t:-680px"></div>
+    <div class="pt" style="width:9px;height:9px;left:22%;bottom:10%;--d:7.5s;--dl:1.8s;--t:-720px"></div>
+    <div class="pt" style="width:5px;height:5px;left:62%;bottom:4%;--d:6.8s;--dl:2.2s;--t:-560px"></div>
+  </div>
   <div class="sc-body">
     <div style="display:flex;flex-direction:column;align-items:center;padding:40px 24px;text-align:center;color:#fff;">
       <div style="font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px;">Chapter Mastered</div>

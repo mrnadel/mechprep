@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useSubscription } from '@/hooks/useSubscription';
 import { analytics } from '@/lib/mixpanel';
 import { GameButton } from '@/components/ui/GameButton';
+import { FloatingParticles } from '@/components/ui/FloatingParticles';
 
 const SHOWN_KEY = 'mechready-trial-prompt-shown';
 
@@ -57,12 +58,14 @@ export function TrialPromptModal() {
             transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
           >
+            <FloatingParticles color="rgba(255,255,255,0.2)" intensity="normal" drift />
+
             <button
               onClick={handleClose}
-              className="absolute top-3 right-3 p-2.5 rounded-full bg-gray-100 sm:bg-white/20 hover:bg-gray-200 sm:hover:bg-white/30 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="absolute top-3 right-3 p-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-colors z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Close"
             >
-              <X className="w-4 h-4 text-gray-500 sm:text-white" />
+              <X className="w-4 h-4 text-white/70" />
             </button>
 
             {/* Content — centered */}

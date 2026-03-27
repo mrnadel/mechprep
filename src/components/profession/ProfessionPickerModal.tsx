@@ -47,7 +47,7 @@ export function ProfessionPickerModal({ isOpen, onClose, selectedId, onSelect }:
             transition={{ duration: 0.25, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <FloatingParticles color="rgba(255,255,255,0.15)" count={5} drift />
+            <FloatingParticles color="rgba(255,255,255,0.2)" intensity="subtle" drift />
 
             <button
               onClick={onClose}
