@@ -41,7 +41,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
     <FullScreenModal
       show={isOpen}
       bg="#5B4FCF"
-      fx="sparkles"
+      fx="sparkle-dust"
       closable
       onClose={onClose}
       labelId="upgrade-modal-title"

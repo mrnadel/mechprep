@@ -28,7 +28,7 @@ export function TrialPromptModal() {
     <FullScreenModal
       show={isOpen}
       bg="#5B4FCF"
-      fx="sparkles"
+      fx="sparkle-dust"
       closable
       onClose={handleClose}
       labelId="trial-prompt-title"

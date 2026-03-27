@@ -8,7 +8,7 @@ import { LEAGUE_GEM_REWARD_PROMOTION } from '@/data/league';
 import { GameButton, type GameButtonVariant } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { LeagueImage } from '@/components/icons/LeagueImage';
-import type { FXType } from '@/components/ui/ScreenFX';
+import type { FXName } from '@/components/ui/ScreenFX';
 
 export function LeaguePromotion() {
   const league = useLeague();
@@ -26,13 +26,13 @@ export function LeaguePromotion() {
 
   const content = isPromoted ? {
     headline: `Promoted to ${currentTier.name}!`, subtext: `You earned +${LEAGUE_GEM_REWARD_PROMOTION} gems for finishing in the top ranks.`,
-    bg: '#58A700', buttonVariant: 'green' as GameButtonVariant, fx: 'confetti' as FXType,
+    bg: '#58A700', buttonVariant: 'green' as GameButtonVariant, fx: 'confetti' as FXName,
   } : isDemoted ? {
     headline: `Moved to ${currentTier.name}`, subtext: "Keep practicing and you'll climb back.",
-    bg: '#CE3030', buttonVariant: 'indigo' as GameButtonVariant, fx: 'hearts' as FXType,
+    bg: '#CE3030', buttonVariant: 'indigo' as GameButtonVariant, fx: 'hearts' as FXName,
   } : {
     headline: `Stayed in ${currentTier.name}`, subtext: 'Keep it up to reach the promotion zone.',
-    bg: '#1899D6', buttonVariant: 'indigo' as GameButtonVariant, fx: 'bubbles' as FXType,
+    bg: '#1899D6', buttonVariant: 'indigo' as GameButtonVariant, fx: 'bubbles' as FXName,
   };
 
   return (

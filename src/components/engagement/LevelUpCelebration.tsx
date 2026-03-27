@@ -18,7 +18,7 @@ export function LevelUpCelebration({ reward, onClose }: Props) {
     <FullScreenModal
       show
       bg={isMilestone ? '#5B4FCF' : '#3C4D6B'}
-      fx={isMilestone ? 'stars' : 'sparkles'}
+      fx={isMilestone ? 'stars' : 'sparkle-dust'}
       labelId="level-up-title"
       footer={
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
