@@ -91,11 +91,11 @@ function LeagueDebug() {
   );
 }
 
-/** Parse "u1-L3-Q16" → { unitNum, lessonNum, questionNum } */
+/** Parse "u1-L3-Q16" or "pf-u0-L1-Q5" → { unitNum, lessonNum, questionNum, prefix } */
 function parseQuestionId(raw: string) {
-  const m = raw.trim().match(/^u(\d+)-L(\d+)-Q(\d+)$/i);
+  const m = raw.trim().match(/^(?:([a-z]+-)?u(\d+)-L(\d+)-Q(\d+))$/i);
   if (!m) return null;
-  return { unitNum: parseInt(m[1], 10), lessonNum: parseInt(m[2], 10), questionNum: parseInt(m[3], 10) };
+  return { prefix: m[1] ?? '', unitNum: parseInt(m[2], 10), lessonNum: parseInt(m[3], 10), questionNum: parseInt(m[4], 10) };
 }
 
 interface ResolvedQuestion {
@@ -120,10 +120,11 @@ function QuestionSearch() {
 
   const handleGo = useCallback(async () => {
     const parsed = parseQuestionId(input);
-    if (!parsed) { setError('Format: u1-L3-Q16'); return; }
-    const unitIndex = parsed.unitNum - 1;
+    if (!parsed) { setError('Format: u1-L3-Q16 or pf-u0-L1-Q5'); return; }
+    // Prefixed IDs (pf-u0) use 0-based units; unprefixed (u1) use 1-based
+    const unitIndex = parsed.prefix ? parsed.unitNum : parsed.unitNum - 1;
     const lessonIndex = parsed.lessonNum - 1;
-    if (unitIndex < 0 || unitIndex >= courseMeta.length) { setError(`Unit ${parsed.unitNum} doesn't exist (1-${courseMeta.length})`); return; }
+    if (unitIndex < 0 || unitIndex >= courseMeta.length) { setError(`Unit ${parsed.unitNum} doesn't exist`); return; }
     const unitMeta = courseMeta[unitIndex];
     if (lessonIndex < 0 || lessonIndex >= unitMeta.lessons.length) { setError(`Lesson ${parsed.lessonNum} doesn't exist in Unit ${parsed.unitNum} (1-${unitMeta.lessons.length})`); return; }
     setError(''); setLoading(true);
@@ -131,7 +132,7 @@ function QuestionSearch() {
       let unit = loadedUnitsRef.current.get(unitIndex);
       if (!unit) { unit = await loadUnitData(unitIndex); loadedUnitsRef.current.set(unitIndex, unit); }
       const lesson = unit.lessons[lessonIndex];
-      const questionId = `u${parsed.unitNum}-L${parsed.lessonNum}-Q${parsed.questionNum}`;
+      const questionId = `${parsed.prefix}u${parsed.unitNum}-L${parsed.lessonNum}-Q${parsed.questionNum}`;
       const question = lesson.questions.find(q => q.id === questionId);
       if (!question) { const qIds = lesson.questions.map(q => q.id.split('-Q')[1]).join(', '); setError(`Q${parsed.questionNum} not found. Available: Q${qIds}`); setLoading(false); return; }
       setResolved({ question, unitIndex, lessonIndex, unitTitle: unit.title, lessonTitle: lesson.title });
@@ -161,12 +162,14 @@ function QuestionSearch() {
     setInput(id);
     const parsed = parseQuestionId(id);
     if (!parsed) return;
-    const unit = loadedUnitsRef.current.get(parsed.unitNum - 1);
+    const unitIndex = parsed.prefix ? parsed.unitNum : parsed.unitNum - 1;
+    const lessonIndex = parsed.lessonNum - 1;
+    const unit = loadedUnitsRef.current.get(unitIndex);
     if (!unit) return;
-    const lesson = unit.lessons[parsed.lessonNum - 1];
+    const lesson = unit.lessons[lessonIndex];
     const question = lesson.questions.find(q => q.id === id);
     if (!question) return;
-    setResolved({ question, unitIndex: parsed.unitNum - 1, lessonIndex: parsed.lessonNum - 1, unitTitle: unit.title, lessonTitle: lesson.title });
+    setResolved({ question, unitIndex, lessonIndex, unitTitle: unit.title, lessonTitle: lesson.title });
     setAnswered(false); setHasSelection(false);
   }, []);
 
@@ -241,7 +244,7 @@ function QuestionSearch() {
           value={input}
           onChange={e => { setInput(e.target.value); setError(''); }}
           onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); handleGo(); } }}
-          placeholder="u1-L3-Q16"
+          placeholder="u1-L3-Q16 or pf-u0-L1-Q5"
           className="flex-1 min-w-0 px-2 py-1.5 rounded-lg border border-gray-200 text-[11px] font-mono font-bold focus:outline-none focus:border-indigo-400 transition-colors"
           spellCheck={false}
         />

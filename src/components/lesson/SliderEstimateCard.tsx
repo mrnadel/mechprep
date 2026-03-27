@@ -96,6 +96,11 @@ const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProp
 
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+        {/* Action title */}
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          Slide to estimate
+        </div>
+
         <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 12px' }}>
           <MoneyText text={question.question} />
         </h2>

@@ -145,6 +145,11 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
 
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+        {/* Action title */}
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          Sort into buckets
+        </div>
+
         {/* Question */}
         <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 12px' }}>
           <MoneyText text={question.question} />
@@ -226,7 +231,7 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                             handleReturnToPool(originalIdx);
                           }}
                           disabled={answered}
-                          whileTap={!answered ? { scale: 0.9, transition: { duration: 0.1 } } : undefined}
+                          whileTap={!answered ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                           style={{
                             padding: '8px 10px',
                             borderRadius: 10,
@@ -238,7 +243,8 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                               : isCorrect ? '2px solid #58CC02' : '2px solid #FF4B4B',
                             background: isCorrect === null ? 'white'
                               : isCorrect ? '#D7FFB8' : '#FFDFE0',
-                            boxShadow: isCorrect === true ? '0 0 12px rgba(88, 204, 2, 0.25)' : 'none',
+                            boxShadow: isCorrect === null ? '0 2px 0 #DCDCDC'
+                              : isCorrect ? '0 0 12px rgba(88, 204, 2, 0.25)' : 'none',
                             color: isCorrect === null ? '#3C3C3C'
                               : isCorrect ? '#58A700' : '#EA2B2B',
                             transition: 'background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',

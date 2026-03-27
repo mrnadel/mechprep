@@ -157,6 +157,14 @@ interface LessonProgress {
   correctQuestionIds: string[];   // questions answered correctly at least once
 }
 
+export interface CourseIntroData {
+  experienceLevel: 0 | 1 | 2 | 3;
+  placementChoice: 'scratch' | 'test' | 'advanced';
+  goal: 'interview' | 'refresh' | 'exam' | 'curiosity';
+  dailyMinutes: 5 | 10 | 15 | 20;
+  completedAt: string;
+}
+
 export interface CourseProgress {
   displayName: string;
   totalXp: number;
@@ -165,6 +173,7 @@ export interface CourseProgress {
   lastActiveDate: string;
   activeDays: string[];  // YYYY-MM-DD dates of recent activity (last 14 days, local only)
   completedLessons: Record<string, LessonProgress>;
+  courseIntros?: Record<string, CourseIntroData>;
 }
 
 export interface ActiveLesson {

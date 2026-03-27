@@ -448,12 +448,13 @@ describe('useEngagementStore', () => {
 
   describe('repairStreak', () => {
     it('deducts 50 gems and marks repair used when conditions met', () => {
+      const today = new Date().toISOString().split('T')[0];
       useEngagementStore.setState({
         gems: { ...getDefaultState().gems, balance: 100 },
         streak: {
           ...getDefaultState().streak,
           repairAvailable: true,
-          lastStreakBreakDate: '2026-03-22', // today
+          lastStreakBreakDate: today,
         },
       });
 

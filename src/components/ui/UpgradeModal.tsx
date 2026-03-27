@@ -9,6 +9,8 @@ import { getPaddle } from '@/lib/paddle-client';
 import { analytics } from '@/lib/mixpanel';
 import { GameButton } from '@/components/ui/GameButton';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { SpaceParticles } from '@/components/ui/SpaceParticles';
+import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 
 interface UpgradeModalProps {
   isOpen: boolean;
@@ -70,7 +72,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
           />
 
           <motion.div
-            className="relative bg-gradient-to-b from-primary-600 to-primary-700 w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
+            className="relative bg-[#5B4FCF] w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
             role="dialog"
             aria-modal="true"
             aria-labelledby="upgrade-modal-title"
@@ -79,7 +81,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
             exit={{ y: 60, opacity: 0, scale: 0.96 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
           >
-            <FloatingParticles color="rgba(255,255,255,0.2)" intensity="normal" drift />
+            <SpaceParticles count={25} color="rgba(255,255,255,0.5)" />
 
             <button
               onClick={onClose}
@@ -90,31 +92,27 @@ export function UpgradeModal({ isOpen, onClose, reason }: UpgradeModalProps) {
             </button>
 
             {/* Content — centered */}
-            <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1]">
-              <div className="px-5 pt-8 pb-4 text-white">
-                <div className="flex items-center gap-2 mb-2">
-                  <Lock className="w-5 h-5 text-white/60" />
-                  <span className="text-sm font-medium text-white/60">
-                    {reason || 'This feature requires Pro'}
-                  </span>
-                </div>
-                <h3 id="upgrade-modal-title" className="text-2xl font-extrabold">MechReady Pro</h3>
-              </div>
+            <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-6 pt-[15vh] sm:pt-10 text-white">
+              <MascotWithGlow pose="pro" size={160} flame glowColor="rgba(251,191,36,0.3)" className="mb-5" />
+              <h3 id="upgrade-modal-title" className="text-[26px] font-extrabold mb-2">MechReady Pro</h3>
+              <p className="text-sm text-white/50 mb-6">{reason || 'Unlock all premium features'}</p>
 
-              <div className="px-5 py-4">
-                <ul className="space-y-2.5">
-                  {[
-                    'Unlimited hearts — never wait',
-                    'Weekly streak freeze',
-                    'Full analytics dashboard',
-                    '2x XP on weekends',
-                  ].map((benefit) => (
-                    <li key={benefit} className="flex items-center gap-2.5 text-sm text-white/80 bg-white/10 rounded-xl px-3 py-2.5">
-                      <Check className="w-4 h-4 text-green-400 shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+              <div className="w-full">
+                <div className="px-5 py-4">
+                  <ul className="space-y-2.5">
+                    {[
+                      'Unlimited hearts — never wait',
+                      'Weekly streak freeze',
+                      'Full analytics dashboard',
+                      '2x XP on weekends',
+                    ].map((benefit) => (
+                      <li key={benefit} className="flex items-center gap-3 text-[15px] text-white bg-white/10 rounded-2xl px-4 py-3">
+                        <Check className="w-4 h-4 text-green-400 shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
 

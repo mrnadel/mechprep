@@ -8,6 +8,8 @@ import { useSubscription } from '@/hooks/useSubscription';
 import { analytics } from '@/lib/mixpanel';
 import { GameButton } from '@/components/ui/GameButton';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { SpaceParticles } from '@/components/ui/SpaceParticles';
+import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 
 const SHOWN_KEY = 'mechready-trial-prompt-shown';
 
@@ -48,7 +50,7 @@ export function TrialPromptModal() {
           />
 
           <motion.div
-            className="relative bg-gradient-to-b from-indigo-500 to-indigo-600 w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
+            className="relative bg-[#5B4FCF] w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
             role="dialog"
             aria-modal="true"
             aria-labelledby="trial-prompt-title"
@@ -58,7 +60,7 @@ export function TrialPromptModal() {
             transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <FloatingParticles color="rgba(255,255,255,0.2)" intensity="normal" drift />
+            <SpaceParticles count={25} color="rgba(255,255,255,0.5)" />
 
             <button
               onClick={handleClose}
@@ -68,40 +70,38 @@ export function TrialPromptModal() {
               <X className="w-4 h-4 text-white/70" />
             </button>
 
-            {/* Content — centered */}
-            <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1]">
-              <div className="px-5 pt-8 pb-5 text-center">
-                <motion.div
-                  className="flex items-center justify-center mx-auto mb-4"
-                  animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                >
-                  <img src="/badges/crown.png" alt="" width={72} height={72} draggable={false} />
-                </motion.div>
-                <h3 id="trial-prompt-title" className="text-2xl font-extrabold text-white">
-                  Try Pro Free
-                </h3>
-                <p className="text-sm text-white/60 mt-1">7 days, cancel anytime</p>
-              </div>
+            {/* Content — upper area */}
+            <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-6 pt-[15vh] sm:pt-10">
+              <motion.div
+                className="mb-5"
+                animate={{ y: [0, -4, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <MascotWithGlow pose="pro" size={160} flame glowColor="rgba(251,191,36,0.3)" />
+              </motion.div>
+              <h3 id="trial-prompt-title" className="text-[26px] font-extrabold text-white text-center">
+                Try Pro Free
+              </h3>
+              <p className="text-sm text-white/50 mt-1 mb-8">7 days, cancel anytime</p>
 
-              <div className="px-5 py-4 space-y-3">
-                <div className="flex items-center gap-3 bg-white/10 rounded-xl px-3 py-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
-                    <Heart className="w-4 h-4 text-white" />
+              <div className="w-full space-y-3">
+                <div className="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+                    <Heart className="w-5 h-5 text-white" />
                   </div>
-                  <p className="text-sm font-bold text-white">Unlimited hearts</p>
+                  <p className="text-[15px] font-bold text-white">Unlimited hearts</p>
                 </div>
-                <div className="flex items-center gap-3 bg-white/10 rounded-xl px-3 py-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
-                    <Shield className="w-4 h-4 text-white" />
+                <div className="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+                    <Shield className="w-5 h-5 text-white" />
                   </div>
-                  <p className="text-sm font-bold text-white">Streak freeze protection</p>
+                  <p className="text-[15px] font-bold text-white">Streak freeze</p>
                 </div>
-                <div className="flex items-center gap-3 bg-white/10 rounded-xl px-3 py-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
-                    <Zap className="w-4 h-4 text-white" />
+                <div className="flex items-center gap-3 bg-white/10 rounded-2xl px-4 py-3">
+                  <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+                    <Zap className="w-5 h-5 text-white" />
                   </div>
-                  <p className="text-sm font-bold text-white">2x XP on weekends</p>
+                  <p className="text-[15px] font-bold text-white">2x XP on weekends</p>
                 </div>
               </div>
             </div>

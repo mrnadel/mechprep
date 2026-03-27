@@ -52,8 +52,21 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
 
     const handleLeftTap = useCallback((leftIdx: number) => {
       if (answered) return;
-      setSelectedLeft((prev) => prev === leftIdx ? null : leftIdx);
-    }, [answered]);
+      if (selectedLeft === leftIdx) {
+        // Deselect
+        setSelectedLeft(null);
+      } else if (matches[leftIdx] !== null) {
+        // Already matched: clear the match so user can redo it
+        setMatches(prev => {
+          const next = [...prev];
+          next[leftIdx] = null;
+          return next;
+        });
+        setSelectedLeft(leftIdx);
+      } else {
+        setSelectedLeft(leftIdx);
+      }
+    }, [answered, selectedLeft, matches]);
 
     const handleRightTap = useCallback((rightActualIdx: number) => {
       if (answered || selectedLeft === null) return;
@@ -107,6 +120,11 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
 
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+        {/* Action title */}
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          Match the pairs
+        </div>
+
         <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 16px' }}>
           <MoneyText text={question.question} />
         </h2>
@@ -123,7 +141,7 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
               let bg = 'white';
               let border = '2px solid #E5E5E5';
               let textColor = '#3C3C3C';
-              let shadow = 'none';
+              let shadow = '0 3px 0 #DCDCDC';
 
               if (isCorrect !== null) {
                 bg = isCorrect ? '#D7FFB8' : '#FFDFE0';
@@ -134,11 +152,11 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                 bg = `${matchColor}15`;
                 border = `2.5px solid ${matchColor}`;
                 textColor = matchColor;
-                shadow = `0 0 8px ${matchColor}20`;
+                shadow = `0 3px 0 color-mix(in srgb, ${matchColor} 65%, black)`;
               } else if (isSelected) {
                 bg = `${unitColor}10`;
                 border = `2.5px solid ${unitColor}`;
-                shadow = `0 0 0 3px ${unitColor}20`;
+                shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;
               }
 
               const revealAnimation = isCorrect !== null
@@ -159,8 +177,7 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                       ? { duration: 0.35 }
                       : { delay: leftIdx * 0.06, type: 'spring', stiffness: 400, damping: 25 }
                   }
-                  whileTap={!answered ? { scale: 0.94, transition: { duration: 0.1 } } : undefined}
-                  whileHover={!answered ? { scale: 1.02 } : undefined}
+                  whileTap={!answered ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                   style={{
                     padding: '10px 12px',
                     borderRadius: 12,
@@ -193,7 +210,7 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
               let bg = 'white';
               let border = '2px solid #E5E5E5';
               let textColor = '#3C3C3C';
-              let shadow = 'none';
+              let shadow = '0 3px 0 #DCDCDC';
 
               if (isCorrect !== null) {
                 bg = isCorrect ? '#D7FFB8' : '#FFDFE0';
@@ -204,7 +221,7 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                 bg = `${matchColor}15`;
                 border = `2.5px solid ${matchColor}`;
                 textColor = matchColor;
-                shadow = `0 0 8px ${matchColor}20`;
+                shadow = `0 3px 0 color-mix(in srgb, ${matchColor} 65%, black)`;
               } else if (selectedLeft !== null && isAvailable) {
                 border = `2px dashed ${unitColor}`;
               }
@@ -227,8 +244,7 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                       ? { duration: 0.35 }
                       : { delay: displayIdx * 0.06 + 0.1, type: 'spring', stiffness: 400, damping: 25 }
                   }
-                  whileTap={!answered && selectedLeft !== null ? { scale: 0.94, transition: { duration: 0.1 } } : undefined}
-                  whileHover={!answered && selectedLeft !== null ? { scale: 1.02 } : undefined}
+                  whileTap={!answered && selectedLeft !== null ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                   style={{
                     padding: '10px 12px',
                     borderRadius: 12,

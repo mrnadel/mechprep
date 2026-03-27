@@ -1,6 +1,20 @@
 import type { Unit } from '../../types';
 
 export const financeCourseMeta: Unit[] = [
+  // ── Unit 0: Welcome to Money ✅ (content in unit-0.ts) ──
+  {
+    id: "pf-u0-welcome",
+    title: "Welcome to Money",
+    description: "The basics everyone should know. No experience needed.",
+    color: "#34D399",
+    icon: "👋",
+    lessons: [
+      { id: "pf-u0-L1", title: "Money 101", description: "What money is, how you get it, and how you lose it.", icon: "💵", xpReward: 10, questions: [] },
+      { id: "pf-u0-L2", title: "Your Bank Account", description: "Where your money lives and how to check on it.", icon: "🏦", xpReward: 10, questions: [] },
+      { id: "pf-u0-L3", title: "Saving vs Spending", description: "The one skill that changes everything.", icon: "🐷", xpReward: 10, questions: [] },
+    ],
+  },
+
   // ── Unit 1: Your Money Right Now ✅ (content in unit-1.ts) ──
   {
     id: "pf-u1-your-money",
@@ -9,12 +23,13 @@ export const financeCourseMeta: Unit[] = [
     color: "#10B981",
     icon: "💸",
     lessons: [
-      { id: "pf-u1-L1", title: "The Paycheck Reality", description: "Why your bank deposit is smaller than your salary — and where the rest goes.", icon: "🧾", xpReward: 15, questions: [] },
+      { id: "pf-u1-L0", title: "Small Money, Big Difference", description: "Why tiny amounts of money matter more than you think.", icon: "🪙", xpReward: 10, questions: [] },
+      { id: "pf-u1-L4", title: "The Latte Factor", description: "How small daily purchases add up to shocking yearly totals.", icon: "☕", xpReward: 15, questions: [] },
       { id: "pf-u1-L2", title: "Where It All Goes", description: "Track where your money actually disappears to each month.", icon: "🕵️", xpReward: 15, questions: [] },
       { id: "pf-u1-L7", title: "Coffee Shop Budget Chat", description: "Advise a friend on budgeting in this interactive conversation.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u1-L1", title: "The Paycheck Reality", description: "Why your bank deposit is smaller than your salary, and where the rest goes.", icon: "🧾", xpReward: 15, questions: [] },
       { id: "pf-u1-L3", title: "Needs vs Wants", description: "The real line between must-haves and nice-to-haves.", icon: "⚖️", xpReward: 15, questions: [] },
-      { id: "pf-u1-L4", title: "The Latte Factor", description: "How small daily purchases add up to shocking yearly totals.", icon: "☕", xpReward: 15, questions: [] },
-      { id: "pf-u1-L5", title: "Your First Budget", description: "The 50/30/20 rule — the simplest budget that actually works.", icon: "📊", xpReward: 15, questions: [] },
+      { id: "pf-u1-L5", title: "Your First Budget", description: "The 50/30/20 rule: the simplest budget that actually works.", icon: "📊", xpReward: 15, questions: [] },
       { id: "pf-u1-L8", title: "Paycheck & Budget Blitz", description: "Race the clock on gross/net pay, 50/30/20, and needs vs wants.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
       { id: "pf-u1-L6", title: "Pay Yourself First", description: "The one habit that separates savers from everyone else.", icon: "🥇", xpReward: 15, questions: [] },
     ],

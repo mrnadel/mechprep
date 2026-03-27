@@ -194,7 +194,7 @@ export const unit10: Unit = {
         },
         {
           id: "pf-u10-L2-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these features — do they belong to a 401(k) or NOT?",
           options: ["Employer-sponsored", "Pre-tax contributions", "Unlimited contributions", "You pick from employer's fund menu", "Available to self-employed", "Penalty for withdrawal before 59.5"],
           buckets: ["401(k) feature", "NOT a 401(k) feature"],
@@ -319,7 +319,7 @@ export const unit10: Unit = {
         },
         {
           id: "pf-u10-L3-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each statement to the correct IRA type:",
           options: ["Pay taxes now, not later", "Get a tax deduction today", "Best for younger, lower-income earners", "Best for high-income earners", "Contributions withdrawable anytime", "Must pay taxes on all withdrawals"],
           buckets: ["Roth IRA", "Traditional IRA"],
@@ -553,7 +553,7 @@ export const unit10: Unit = {
         },
         {
           id: "pf-u10-L5-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this a feature of target-date funds or NOT?",
           options: ["Automatically rebalances over time", "Requires you to pick individual stocks", "Gets more conservative near retirement", "Guarantees a specific return", "One-fund diversification", "You choose the retirement year"],
           buckets: ["Target-date fund feature", "NOT a feature"],
@@ -840,7 +840,7 @@ export const unit10: Unit = {
         },
         {
           id: "pf-u10-L7-Q6",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this advice good or bad for a late starter?",
           options: ["Max out catch-up contributions", "Only invest in bonds for safety", "Get the full employer match", "Wait for the 'perfect' time to start investing", "Cut lifestyle expenses to save more", "Delay retirement by 2-3 years"],
           buckets: ["Good advice", "Bad advice"],
@@ -1067,7 +1067,7 @@ export const unit10: Unit = {
         },
         {
           id: "pf-u10-L9-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into the correct catch-up contribution limit:",
           options: ["$7,500 extra per year", "$1,000 extra per year", "Total limit: $30,500", "Total limit: $8,000", "Available at employer", "Opened individually"],
           buckets: ["401(k) catch-up", "IRA catch-up"],
@@ -1166,7 +1166,7 @@ export const unit10: Unit = {
         },
         {
           id: "pf-u10-L10-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "When switching jobs, sort each option — is it SMART or COSTLY?",
           options: ["Roll over 401(k) to new employer's plan", "Cash out the 401(k) for a vacation", "Roll over to an IRA", "Leave it in old employer's plan (if allowed)", "Cash out to pay off a low-interest car loan", "Forget about the account entirely"],
           buckets: ["Smart move", "Costly mistake"],

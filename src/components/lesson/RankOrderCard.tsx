@@ -80,6 +80,11 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
 
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+        {/* Action title */}
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          Rank from best to worst
+        </div>
+
         <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 6px' }}>
           <MoneyText text={question.question} />
         </h2>
@@ -187,7 +192,7 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
                   {!answered && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 2, flexShrink: 0 }}>
                       <motion.button
-                        whileTap={{ scale: 0.85 }}
+                        whileTap={rank !== 0 ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                         onClick={() => moveItem(rank, -1)}
                         disabled={rank === 0}
                         style={{
@@ -196,12 +201,13 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
                           color: rank === 0 ? '#CFCFCF' : unitColor,
                           fontSize: 14, fontWeight: 800, cursor: rank === 0 ? 'default' : 'pointer',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          boxShadow: rank === 0 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,
                         }}
                       >
                         ▲
                       </motion.button>
                       <motion.button
-                        whileTap={{ scale: 0.85 }}
+                        whileTap={rank !== order.length - 1 ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                         onClick={() => moveItem(rank, 1)}
                         disabled={rank === order.length - 1}
                         style={{
@@ -210,6 +216,7 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
                           color: rank === order.length - 1 ? '#CFCFCF' : unitColor,
                           fontSize: 14, fontWeight: 800, cursor: rank === order.length - 1 ? 'default' : 'pointer',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          boxShadow: rank === order.length - 1 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,
                         }}
                       >
                         ▼

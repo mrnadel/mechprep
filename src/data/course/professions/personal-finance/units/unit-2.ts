@@ -11,40 +11,30 @@ export const unit2: Unit = {
     {
       id: "pf-u2-L1",
       title: "Why Saving Feels Impossible",
-      description: "The psychology behind why most people can't save — and how to beat it.",
+      description: "The psychology behind why most people can't save, and how to beat it.",
       icon: "🧠",
       xpReward: 15,
       questions: [
         {
           id: "pf-u2-L1-T1",
           type: "teaching",
-          question: "🧠 Your Brain Hates Saving",
-          explanation: "Here's the truth: your brain is wired to spend, not save. Thousands of years of evolution trained it to grab good things NOW — because for cavemen, there was no tomorrow. That impulse never left. Every time you see something you want, your brain screams 'BUY IT' and whispers 'save' quietly in the corner.",
-          options: [
-            "Your brain evolved to grab rewards NOW, not later",
-            "Spending triggers dopamine — saving doesn't (at first)",
-            "This isn't a character flaw — it's biology you can outsmart",
-          ],
-          hint: "You're not bad with money because you're lazy. You're fighting millions of years of brain wiring. But there are tricks to win.",
+          question: "Your Brain Hates Saving",
+          explanation: "Your brain is wired to spend, not save. Thousands of years of evolution trained it to grab rewards now, because for cavemen, there was no tomorrow.",
+          hint: "You're not bad with money. You're fighting millions of years of brain wiring, but there are tricks to win.",
         },
         {
           id: "pf-u2-L1-Q1",
           type: "true-false",
           question: "The human brain is naturally wired to prioritize spending over saving.",
           correctAnswer: true,
-          explanation: "Yes! Our brains evolved for immediate reward — that's why spending feels good and saving feels like punishment. Understanding this is the first step to beating it.",
+          explanation: "Yes! Our brains evolved for immediate reward, so spending feels good and saving feels like punishment. Understanding this is the first step to beating it.",
         },
         {
           id: "pf-u2-L1-T2",
           type: "teaching",
-          question: "🎯 Present Bias: Your Biggest Enemy",
-          explanation: "Present bias means you value today's pleasure way more than tomorrow's benefit. A 200 purchase today feels more real than 200 in savings that grows over decades. This is why people know they should save but still don't. The future feels fake. The shopping cart feels real.",
-          options: [
-            "Present bias = today feels more real than tomorrow",
-            "200 spent now feels bigger than 2,000 in 10 years",
-            "Every ad, sale, and 'limited offer' exploits this bias",
-          ],
-          hint: "Retailers know about present bias. 'Sale ends tonight!' is designed to make the future irrelevant so you buy NOW.",
+          question: "Present Bias: Your Biggest Enemy",
+          explanation: "Present bias means you value today's pleasure way more than tomorrow's benefit. A 200 purchase today feels more real than 200 in savings that grows over decades.",
+          hint: "Retailers know about present bias. 'Sale ends tonight!' is designed to make the future irrelevant so you buy now.",
         },
         {
           id: "pf-u2-L1-Q2",
@@ -57,11 +47,11 @@ export const unit2: Unit = {
             "A type of bank account fee",
           ],
           correctIndex: 0,
-          explanation: "Present bias means today's reward feels bigger and more important than tomorrow's — even when tomorrow's reward is objectively better. It's why we eat cake instead of going to the gym.",
+          explanation: "Present bias means today's reward feels bigger and more important than tomorrow's, even when tomorrow's reward is objectively better. It's why we eat cake instead of going to the gym.",
         },
         {
           id: "pf-u2-L1-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which make saving harder, and which make it easier?",
           options: ["One-click buying", "Auto-transfer to savings", "Sale notifications", "Removing saved credit cards", "Free shipping over 50", "24-hour purchase waiting rule"],
           buckets: ["Makes saving harder", "Makes saving easier"],
@@ -71,13 +61,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L1-T3",
           type: "teaching",
-          question: "🛡️ Beating Your Brain: Add Friction",
-          explanation: "Since your brain makes spending easy and saving hard, flip the script. Make spending harder: delete shopping apps, remove saved credit cards, use a 24-hour rule before buying. Make saving easier: automate transfers, hide your savings account. When saving is effortless and spending requires effort, you win.",
-          options: [
-            "Add friction to spending (delete apps, remove saved cards)",
-            "Remove friction from saving (automate everything)",
-            "Out of sight, out of mind — hide your savings account",
-          ],
+          question: "Beating Your Brain: Add Friction",
+          explanation: "Make spending harder by deleting shopping apps, removing saved cards, and using a 24-hour rule. Make saving easier by automating transfers and hiding your savings account.",
           hint: "If Amazon requires you to re-enter your card every time, you'd buy a lot less. That's friction working for you.",
         },
         {
@@ -115,7 +100,7 @@ export const unit2: Unit = {
           type: "true-false",
           question: "If you struggle to save money, it means you're bad with finances.",
           correctAnswer: false,
-          explanation: "Not at all. It means you're human. Every brain struggles with this — it's hardwired biology, not a personal failing. The difference between savers and non-savers is usually systems, not willpower.",
+          explanation: "Not at all. It means you're human, because it's hardwired biology, not a personal failing. The difference between savers and non-savers is usually systems, not willpower.",
         },
       ],
     },
@@ -131,13 +116,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L2-T1",
           type: "teaching",
-          question: "💡 The Most Important 500 You'll Ever Save",
-          explanation: "Forget saving 10,000. Forget 6 months of expenses. Your first real goal is just 500. Why? Because 500 is the difference between handling an emergency and spiraling into debt. Flat tire? 500 covers it. ER visit copay? 500 covers it. Without it, that same emergency goes on a credit card at 24% interest.",
-          options: [
-            "500 covers most common financial emergencies",
-            "Without it, surprises go on credit cards (24%+ interest)",
-            "39% of Americans can't cover a 400 emergency",
-          ],
+          question: "The Most Important 500 You'll Ever Save",
+          explanation: "Your first real savings goal is just 500, because that's the difference between handling an emergency and spiraling into debt. Without it, a flat tire or ER copay goes on a credit card at 24% interest.",
           hint: "A 400 emergency without savings can turn into 800+ in credit card debt with interest and fees.",
         },
         {
@@ -163,13 +143,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L2-T2",
           type: "teaching",
-          question: "🧱 How to Build Your First 500",
-          explanation: "500 sounds like a lot when you have 0. Break it down. Save 50/month and you're there in 10 months. Save 25/week and you're there in 20 weeks. Sell stuff you don't use. Skip eating out for two weeks. Stack small wins. The number isn't magic — the habit you build getting there is.",
-          options: [
-            "50/month = 500 in 10 months",
-            "25/week = 500 in 20 weeks",
-            "Sell unused items + reduce eating out = fast boost",
-          ],
+          question: "How to Build Your First 500",
+          explanation: "Break it down: save 50/month and you're there in 10 months, or 25/week and you're there in 20 weeks. The number isn't the point, the habit you build getting there is.",
           hint: "Scroll through your closet and list 5 things you haven't used in a year. You might be sitting on 100-200 in stuff you don't need.",
         },
         {
@@ -182,7 +157,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L2-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which help you reach 500 faster?",
           options: ["Sell unused electronics", "Buy new clothes", "Cook instead of ordering", "Upgrade your phone", "Cancel unused subscriptions", "Start a new streaming service"],
           buckets: ["Helps reach 500", "Slows you down"],
@@ -194,7 +169,7 @@ export const unit2: Unit = {
           type: "multiple-choice",
           question: "Your car breaks down and needs a 350 repair. You have 500 in savings. What happens?",
           options: [
-            "You pay cash, no debt, no interest — and rebuild your fund",
+            "You pay cash, no debt, no interest, and rebuild your fund",
             "You're still in trouble because 500 isn't enough",
             "You should ignore the repair and keep your savings",
             "You have to take out a loan",
@@ -209,7 +184,7 @@ export const unit2: Unit = {
           options: ["Flat tire", "ER visit copay", "Phone screen repair", "Emergency flight home"],
           matchTargets: ["150-300", "250-500", "100-250", "300-600"],
           correctMatches: [0, 1, 2, 3],
-          explanation: "All of these are under 600 — exactly the range that 500 in savings handles. Without savings, each one becomes credit card debt.",
+          explanation: "All of these are under 600, exactly the range that 500 in savings handles. Without savings, each one becomes credit card debt.",
         },
         {
           id: "pf-u2-L2-Q7",
@@ -245,13 +220,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L3-T1",
           type: "teaching",
-          question: "🛡️ Your Financial Bodyguard",
-          explanation: "An emergency fund is your financial bodyguard. It stands between you and disaster. The full target: 3 to 6 months of essential expenses. Not income — expenses. If you spend 2,000/month on needs, you need 6,000 to 12,000. Sounds huge, but you build it one paycheck at a time.",
-          options: [
-            "Target: 3-6 months of EXPENSES, not income",
-            "2,000/month expenses = 6,000 to 12,000 target",
-            "You already started with 500 — now just keep going",
-          ],
+          question: "Your Financial Bodyguard",
+          explanation: "An emergency fund is your financial bodyguard, and the full target is 3 to 6 months of essential expenses, not income. If you spend 2,000/month on needs, you need 6,000 to 12,000.",
           hint: "Calculate your monthly needs (rent + food + bills + transport). Multiply by 3. That's your next goal after 500.",
         },
         {
@@ -278,13 +248,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L3-T2",
           type: "teaching",
-          question: "📊 Your Emergency Fund Roadmap",
-          explanation: "Don't try to save 10,000 all at once. Use milestones. First: 500 (starter shield). Then: 1,000 (solid buffer). Then: 1 month of expenses. Then: 3 months. Then: 6 months. Each milestone is a celebration. Each one makes you more financially bulletproof.",
-          options: [
-            "Milestone 1: 500 (starter shield) ✓",
-            "Milestone 2: 1,000 → 1 month → 3 months → 6 months",
-            "Celebrate each level — you earned it",
-          ],
+          question: "Your Emergency Fund Roadmap",
+          explanation: "Don't try to save 10,000 all at once. Use milestones: 500, then 1,000, then 1 month of expenses, then 3 months, then 6 months.",
           hint: "Think of it like a video game. Each milestone is a new level. You don't jump straight to the final boss.",
         },
         {
@@ -292,18 +257,18 @@ export const unit2: Unit = {
           type: "match-pairs",
           question: "Match each emergency fund level to what it protects against:",
           options: ["500", "1,000", "3 months expenses", "6 months expenses"],
-          matchTargets: ["Small surprises (flat tire, copay)", "Bigger hits (appliance, vet bill)", "Job loss — time to find a new one", "Major crisis — serious illness, relocation"],
+          matchTargets: ["Small surprises (flat tire, copay)", "Bigger hits (appliance, vet bill)", "Job loss: time to find a new one", "Major crisis: serious illness, relocation"],
           correctMatches: [0, 1, 2, 3],
           explanation: "Each level gives you more protection. 500 handles small stuff. 6 months of expenses means even a serious crisis won't destroy your finances.",
         },
         {
           id: "pf-u2-L3-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "What counts as a real emergency?",
           options: ["Job loss", "New video game release", "Medical emergency", "Friend's birthday dinner", "Car accident", "Black Friday sale"],
           buckets: ["Real emergency", "Not an emergency"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "Emergencies are unexpected, urgent, and necessary. Job loss, medical emergencies, and accidents qualify. Sales, dinners, and game releases — plan for those separately.",
+          explanation: "Emergencies are unexpected, urgent, and necessary. Job loss, medical emergencies, and accidents qualify. Sales, dinners, and game releases should be planned for separately.",
         },
         {
           id: "pf-u2-L3-Q5",
@@ -321,13 +286,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L3-T3",
           type: "teaching",
-          question: "🏦 Where to Keep Your Emergency Fund",
-          explanation: "Your emergency fund needs two things: instant access and safety. Don't invest it. Don't lock it in a CD. Don't keep it in your checking account (too tempting to spend). A high-yield savings account (HYSA) is the sweet spot — earns some interest while staying liquid.",
-          options: [
-            "Best spot: high-yield savings account (HYSA)",
-            "Don't invest it — you need it available instantly",
-            "Don't keep it in checking — too easy to spend",
-          ],
+          question: "Where to Keep Your Emergency Fund",
+          explanation: "Your emergency fund needs instant access and safety. A high-yield savings account (HYSA) is the sweet spot: it earns some interest while staying liquid.",
           hint: "Keep your emergency fund in a separate bank from your everyday checking. Out of sight = out of the spending temptation zone.",
         },
         {
@@ -335,11 +295,11 @@ export const unit2: Unit = {
           type: "true-false",
           question: "You should invest your emergency fund in stocks for better returns.",
           correctAnswer: false,
-          explanation: "Never! Stocks can drop 30% right when you need the money most. An emergency fund must be safe and accessible — not growing fast but always there when disaster strikes.",
+          explanation: "Never! Stocks can drop 30% right when you need the money most. An emergency fund must be safe and accessible, not growing fast but always there when disaster strikes.",
         },
         {
           id: "pf-u2-L3-Q7",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Where should your emergency fund live?",
           options: ["High-yield savings account", "Stock market", "Separate savings account", "Crypto wallet", "Money market account", "Under your mattress"],
           buckets: ["Good place", "Bad place"],
@@ -352,7 +312,7 @@ export const unit2: Unit = {
           question: "What should you do after you use your emergency fund?",
           options: [
             "Rebuild it back to your target as soon as possible",
-            "Stop saving — you already proved you can do it",
+            "Stop saving, you already proved you can do it",
             "Move the money to stocks next time",
             "Give up on emergency funds",
           ],
@@ -366,21 +326,16 @@ export const unit2: Unit = {
     {
       id: "pf-u2-L4",
       title: "High-Yield vs Regular Savings",
-      description: "Your bank is paying you almost nothing — here's where to earn 10× more.",
+      description: "Your bank is paying you almost nothing. Here's where to earn 10x more.",
       icon: "📈",
       xpReward: 15,
       questions: [
         {
           id: "pf-u2-L4-T1",
           type: "teaching",
-          question: "📈 Your Bank Is Ripping You Off",
-          explanation: "Most big banks pay you 0.01% interest on savings. That means 10,000 in savings earns you... 1 per year. One dollar. Meanwhile, online high-yield savings accounts (HYSAs) pay 4-5%. Same 10,000 earns 400-500/year. Same money, same safety, same FDIC insurance. Just a different bank.",
-          options: [
-            "Big bank savings: 0.01% = 1/year on 10,000",
-            "Online HYSA: 4-5% = 400-500/year on 10,000",
-            "Both are FDIC insured — equally safe",
-          ],
-          hint: "Your big bank isn't keeping your interest for themselves. Oh wait — they literally are.",
+          question: "Your Bank Is Ripping You Off",
+          explanation: "Most big banks pay 0.01% interest on savings, so 10,000 earns just 1/year. Online high-yield savings accounts (HYSAs) pay 4-5%, turning that same 10,000 into 400-500/year with the same FDIC insurance.",
+          hint: "Big banks use your deposits to make money but pass very little interest back to you. Online banks offer much more.",
         },
         {
           id: "pf-u2-L4-Q1",
@@ -393,26 +348,21 @@ export const unit2: Unit = {
             "5",
           ],
           correctIndex: 0,
-          explanation: "5,000 × 0.01% = 0.50. Fifty cents. Per year. You could find more money in your couch cushions.",
+          explanation: "5,000 x 0.01% = 0.50. That's just 50 cents per year, which shows how little traditional savings accounts pay.",
         },
         {
           id: "pf-u2-L4-Q2",
           type: "true-false",
           question: "High-yield savings accounts are riskier than regular savings accounts.",
           correctAnswer: false,
-          explanation: "Nope! Both are FDIC-insured up to 250,000. Your money is equally safe. The difference is that online banks have lower costs (no fancy branches) so they can pay you more interest.",
+          explanation: "Not quite. Both are FDIC-insured up to 250,000, so your money is equally safe. The difference is that online banks have lower costs, so they can pay you more interest.",
         },
         {
           id: "pf-u2-L4-T2",
           type: "teaching",
-          question: "🤔 Why the Huge Difference?",
-          explanation: "Big banks like Chase and Bank of America have thousands of branches, fancy lobbies, and massive overhead. They don't need to offer high interest — they already have your money through convenience. Online banks like Ally, Marcus, and SoFi have no branches, so they pass those savings to you as higher interest rates.",
-          options: [
-            "Big banks spend on branches → don't need to pay you much",
-            "Online banks save on overhead → pass savings to you",
-            "The product is the same — it's just who gets the profit",
-          ],
-          hint: "When was the last time you actually walked into your bank? Exactly. You don't need branches.",
+          question: "Why the Huge Difference?",
+          explanation: "Big banks have thousands of branches and massive overhead, so they don't need to offer high interest. Online banks like Ally, Marcus, and SoFi have no branches, so they pass those savings to you as higher rates.",
+          hint: "When was the last time you actually walked into your bank? You probably don't need branches.",
         },
         {
           id: "pf-u2-L4-Q3",
@@ -429,19 +379,14 @@ export const unit2: Unit = {
           question: "Both regular and high-yield savings accounts are protected by _____ insurance up to _____.",
           blanks: ["FDIC", "250,000"],
           wordBank: ["FDIC", "250,000", "bank", "100,000", "government", "500,000"],
-          explanation: "FDIC (Federal Deposit Insurance Corporation) insures both types up to 250,000 per depositor, per bank. Your money is safe in either — but one pays you 400x more interest.",
+          explanation: "FDIC (Federal Deposit Insurance Corporation) insures both types up to 250,000 per depositor, per bank. Your money is safe in either, but one pays you 400x more interest.",
         },
         {
           id: "pf-u2-L4-T3",
           type: "teaching",
-          question: "💰 The Real Cost of Low Interest",
-          explanation: "Think low interest doesn't matter? Let's math it out. 10,000 saved over 5 years. At 0.01% (big bank): you earn 5 total. At 5% (HYSA): you earn about 2,763. That's a 2,758 difference for doing literally nothing different except choosing a better account.",
-          options: [
-            "10,000 for 5 years at 0.01% = 5 earned",
-            "10,000 for 5 years at 5% = ~2,763 earned",
-            "The difference: 2,758 — for free",
-          ],
-          hint: "Switching banks takes about 30 minutes. That might be the most profitable half-hour of your life.",
+          question: "The Real Cost of Low Interest",
+          explanation: "10,000 saved over 5 years earns 5 total at 0.01% (big bank) vs about 2,763 at 5% (HYSA). That's a 2,758 difference just from choosing a better account.",
+          hint: "Switching banks takes about 30 minutes and can earn you thousands more over time.",
         },
         {
           id: "pf-u2-L4-Q5",
@@ -458,7 +403,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L4-Q6",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Features of a high-yield savings account:",
           options: ["4-5% interest rate", "Physical branches everywhere", "FDIC insured", "0.01% interest", "Online-only access", "Same rate as checking"],
           buckets: ["HYSA feature", "Not a HYSA feature"],
@@ -470,7 +415,7 @@ export const unit2: Unit = {
           type: "true-false",
           question: "Opening a high-yield savings account at a different bank means closing your regular bank account.",
           correctAnswer: false,
-          explanation: "Not at all! Most people keep their checking account at their regular bank for daily spending and open a HYSA at an online bank just for savings. Two banks, two jobs — works perfectly.",
+          explanation: "Not at all! Most people keep their checking account at their regular bank for daily spending and open a HYSA at an online bank just for savings. Two banks, two jobs, works perfectly.",
         },
         {
           id: "pf-u2-L4-Q8",
@@ -492,21 +437,16 @@ export const unit2: Unit = {
     {
       id: "pf-u2-L5",
       title: "The Savings Automation Trick",
-      description: "Set it and forget it — how to save without willpower.",
+      description: "Set it and forget it: how to save without willpower.",
       icon: "⚙️",
       xpReward: 15,
       questions: [
         {
           id: "pf-u2-L5-T1",
           type: "teaching",
-          question: "⚙️ Remove Yourself from the Equation",
-          explanation: "The #1 reason people don't save isn't low income — it's decision fatigue. Every month you have to decide to save, and every month something comes up. 'I'll save next month.' The solution? Take yourself out of the equation completely. Set up automatic transfers and let the machine do what your brain won't.",
-          options: [
-            "Willpower fails — automation doesn't",
-            "Set up once, save forever without thinking",
-            "The best financial habit is one you don't have to remember",
-          ],
-          hint: "You don't manually pay Netflix every month — it just happens. Make savings work the same way.",
+          question: "Remove Yourself from the Equation",
+          explanation: "The #1 reason people don't save isn't low income, it's decision fatigue. Set up automatic transfers and let the machine do what your brain won't.",
+          hint: "You don't manually pay Netflix every month. It just happens. Make savings work the same way.",
         },
         {
           id: "pf-u2-L5-Q1",
@@ -519,18 +459,13 @@ export const unit2: Unit = {
             "It makes your credit score higher",
           ],
           correctIndex: 0,
-          explanation: "Automation removes the human element — the part that makes excuses, forgets, and procrastinates. Money moves before you can talk yourself out of it.",
+          explanation: "Automation removes the human element, the part that makes excuses, forgets, and procrastinates. Money moves before you can talk yourself out of it.",
         },
         {
           id: "pf-u2-L5-T2",
           type: "teaching",
-          question: "📅 The Payday Transfer Method",
-          explanation: "Here's the setup: on the day your paycheck hits, an automatic transfer moves a set amount to your savings account. You never see the money in your checking account, so you never miss it. Your spending adjusts to what's left — naturally and painlessly. This is how wealthy people save: automatically, on day one.",
-          options: [
-            "Paycheck arrives → auto-transfer fires immediately",
-            "You adjust spending to what's left (happens naturally)",
-            "You literally don't notice the money is gone",
-          ],
+          question: "The Payday Transfer Method",
+          explanation: "On the day your paycheck hits, an automatic transfer moves a set amount to savings. You never see the money in checking, so your spending adjusts to what's left naturally.",
           hint: "Set the transfer for the same day or day after your paycheck deposits. The faster it moves, the less tempted you are.",
         },
         {
@@ -539,11 +474,11 @@ export const unit2: Unit = {
           question: "The best day to auto-transfer to savings is on your _____ day.",
           blanks: ["pay"],
           wordBank: ["pay", "birth", "last", "first", "random", "free"],
-          explanation: "Payday is the ideal time — the money goes to savings before you have a chance to spend it. What you don't see, you don't spend.",
+          explanation: "Payday is the ideal time because the money goes to savings before you have a chance to spend it. What you don't see, you don't spend.",
         },
         {
           id: "pf-u2-L5-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which saving strategies actually work long-term?",
           options: ["Auto-transfer on payday", "Hoping to have leftovers", "Direct deposit split", "Manually moving money when you remember", "Round-up savings apps", "Saving only on good months"],
           buckets: ["Works long-term", "Doesn't work"],
@@ -553,13 +488,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L5-T3",
           type: "teaching",
-          question: "🏗️ The 3-Account System",
-          explanation: "Here's a simple setup that works beautifully. Account 1: Checking (daily spending). Account 2: HYSA for emergency fund. Account 3: HYSA for goals (vacation, car, etc). On payday, auto-split your paycheck across all three. Bills come from checking, emergencies from account 2, fun goals from account 3. Each dollar has a job.",
-          options: [
-            "Account 1: Checking = daily bills and spending",
-            "Account 2: HYSA = emergency fund (don't touch)",
-            "Account 3: HYSA = goal savings (vacation, big purchase)",
-          ],
+          question: "The 3-Account System",
+          explanation: "Use 3 accounts: checking for daily spending, a HYSA for your emergency fund, and another HYSA for goals like vacations. On payday, auto-split your paycheck across all 3 so each dollar has a job.",
           hint: "Many online banks let you create multiple 'buckets' within one HYSA. Same idea, fewer accounts to manage.",
         },
         {
@@ -589,7 +519,7 @@ export const unit2: Unit = {
           type: "true-false",
           question: "Direct deposit splitting (sending your paycheck to multiple accounts) is a form of automated saving.",
           correctAnswer: true,
-          explanation: "Yes! Many employers let you split your direct deposit across accounts. 80% to checking, 20% to savings — done. The money is saved before it even hits your spending account.",
+          explanation: "Yes! Many employers let you split your direct deposit across accounts. 80% to checking, 20% to savings. The money is saved before it even hits your spending account.",
         },
         {
           id: "pf-u2-L5-Q7",
@@ -606,7 +536,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L5-Q8",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which are features of good savings automation?",
           options: ["Happens on a schedule", "Requires you to remember", "Transfers a fixed amount", "Depends on your mood", "Works even when you're busy", "Only works if you check your app"],
           buckets: ["Good automation", "Not automation"],
@@ -627,14 +557,9 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L6-T1",
           type: "teaching",
-          question: "🏖️ Saving Doesn't Mean Never Spending",
-          explanation: "A sinking fund is money you set aside each month for a specific future expense. It's the opposite of impulse buying. Want a 1,200 vacation? Save 100/month for 12 months. When it's time to book, the money is there — no credit card, no guilt, no stress. Planned spending is smart spending.",
-          options: [
-            "Sinking fund = save monthly for a planned future expense",
-            "1,200 vacation ÷ 12 months = 100/month (painless!)",
-            "You enjoy the purchase more because there's no debt attached",
-          ],
-          hint: "Christmas comes every December 25th. It's never a surprise. Yet millions of people put gifts on credit cards every year. A sinking fund prevents that.",
+          question: "Saving Doesn't Mean Never Spending",
+          explanation: "A sinking fund is money you set aside each month for a specific future expense. Want a 1,200 vacation? Save 100/month for 12 months and the money is ready, with no credit card needed.",
+          hint: "Christmas comes every December 25th. It's never a surprise. A sinking fund means you're ready for it.",
         },
         {
           id: "pf-u2-L6-Q1",
@@ -647,7 +572,7 @@ export const unit2: Unit = {
             "A type of retirement account",
           ],
           correctIndex: 0,
-          explanation: "A sinking fund is just planned saving for a known future expense. Vacation, new phone, holiday gifts — you divide the total by the months you have and save a little each month.",
+          explanation: "A sinking fund is just planned saving for a known future expense. Divide the total by the months you have and save a little each month.",
         },
         {
           id: "pf-u2-L6-Q2",
@@ -660,18 +585,13 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L6-T2",
           type: "teaching",
-          question: "📋 Common Sinking Fund Categories",
-          explanation: "Most people benefit from 3-5 sinking funds running at the same time. Holiday gifts (save all year, spend stress-free in December). Car maintenance (oil changes, tires, brakes). Vacation (save monthly, travel debt-free). Medical (copays, prescriptions). Fun money (concerts, dining, entertainment). Each one prevents a future credit card charge.",
-          options: [
-            "Holiday gifts: 100/month × 12 = 1,200 for December",
-            "Car maintenance: 50/month for inevitable repairs",
-            "Vacation: start saving 8-12 months before the trip",
-          ],
-          hint: "Your car WILL need maintenance. The holidays WILL come. These are predictable — stop being surprised by them.",
+          question: "Common Sinking Fund Categories",
+          explanation: "Most people benefit from 3-5 sinking funds at once: holiday gifts, car maintenance, vacation, medical, and fun money. Each one prevents a future credit card charge.",
+          hint: "Your car will need maintenance and the holidays will come. These are predictable, so plan for them.",
         },
         {
           id: "pf-u2-L6-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which expenses are perfect for sinking funds?",
           options: ["Holiday gifts", "Sudden job loss", "Annual car insurance", "Random medical emergency", "Birthday presents", "Apartment fire"],
           buckets: ["Sinking fund", "Emergency fund"],
@@ -709,12 +629,12 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L6-Q7",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which approach is better for buying a 1,000 item?",
           options: ["Save 100/month for 10 months", "Put it on a credit card now", "Use a sinking fund", "Take a payday loan", "Plan ahead and pay cash", "Use Buy Now Pay Later"],
           buckets: ["Smart approach", "Costly approach"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "Saving, sinking funds, and paying cash cost exactly 1,000. Credit cards, payday loans, and BNPL all add interest and fees — often 200-500+ extra.",
+          explanation: "Saving, sinking funds, and paying cash cost exactly 1,000. Credit cards, payday loans, and BNPL all add interest and fees, often 200-500+ extra.",
         },
         {
           id: "pf-u2-L6-Q8",
@@ -743,14 +663,9 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L7-T1",
           type: "teaching",
-          question: "🏃 Day 1: Save 1. Day 30: Save 30.",
-          explanation: "The 30-day savings challenge is simple: save 1 on day 1, 2 on day 2, 3 on day 3... up to 30 on day 30. Total saved: 465 in just one month. It starts ridiculously easy and builds gradually. By the time it gets harder, you have momentum.",
-          options: [
-            "Day 1 = 1, Day 2 = 2, Day 3 = 3... Day 30 = 30",
-            "Total after 30 days: 465",
-            "Starts tiny, builds momentum gradually",
-          ],
-          hint: "The first week costs you 28 total. That's less than a single dinner out. But by day 30, you've got almost 500 saved.",
+          question: "Day 1: Save 1. Day 30: Save 30.",
+          explanation: "The 30-day savings challenge is simple: save 1 on day 1, 2 on day 2, up to 30 on day 30, for a total of 465. It starts easy and builds gradually, so you have momentum by the time it gets harder.",
+          hint: "The first week costs you 28 total. That's less than a single dinner out.",
         },
         {
           id: "pf-u2-L7-Q1",
@@ -770,18 +685,13 @@ export const unit2: Unit = {
           type: "true-false",
           question: "The 30-day savings challenge requires you to save the same amount every day.",
           correctAnswer: false,
-          explanation: "Nope! The amount increases by 1 each day. Day 1 = 1, Day 2 = 2, and so on up to Day 30 = 30. The gradual increase is what makes it manageable.",
+          explanation: "Not quite. The amount increases by 1 each day: Day 1 = 1, Day 2 = 2, up to Day 30 = 30. The gradual increase is what makes it manageable.",
         },
         {
           id: "pf-u2-L7-T2",
           type: "teaching",
-          question: "🔄 Challenge Variations That Work",
-          explanation: "Don't like the standard version? Try these: Reverse (save 30 on day 1 when motivation is highest, then decrease). Random shuffle (pick any amount 1-30 each day, cross it off). Weekly version (save 25, 50, 75, 100 each week = 250/month). The point is building the savings habit, not following one specific formula.",
-          options: [
-            "Reverse: start with 30, decrease to 1 (get the hard part over with)",
-            "Random: pick any amount 1-30 each day, cross it off",
-            "Weekly: 25 → 50 → 75 → 100 per week = 250/month",
-          ],
+          question: "Challenge Variations That Work",
+          explanation: "Try the reverse (start with 30 and decrease), random shuffle (pick any amount 1-30 each day), or weekly version (25, 50, 75, 100 per week). The point is building the habit, not following one specific formula.",
           hint: "Pick whichever version fits your paycheck schedule. Weekly works great if you get paid weekly.",
         },
         {
@@ -799,11 +709,11 @@ export const unit2: Unit = {
           question: "In the reverse 30-day challenge, you save _____ on day 1 and _____ on day 30.",
           blanks: ["30", "1"],
           wordBank: ["30", "1", "15", "465", "10", "50"],
-          explanation: "The reverse version front-loads the hard days when your motivation is fresh. By the end, you're only saving 1-3 per day — easy to finish strong.",
+          explanation: "The reverse version front-loads the hard days when your motivation is fresh. By the end, you're only saving 1-3 per day, making it easy to finish strong.",
         },
         {
           id: "pf-u2-L7-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "What makes a savings challenge effective?",
           options: ["Starts small and builds gradually", "Requires 500 on day one", "Has a clear end date", "Lasts forever with no milestones", "Makes saving feel like a game", "Feels like punishment"],
           buckets: ["Effective", "Not effective"],
@@ -813,13 +723,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L7-T3",
           type: "teaching",
-          question: "🏆 Why Challenges Work: The Psychology",
-          explanation: "Saving challenges work because they tap into your brain's love of streaks, progress, and completion. Same reason Duolingo streaks work — you don't want to break the chain. Tracking your progress visually (crossing off days, watching the total grow) turns boring saving into a game you want to win.",
-          options: [
-            "Streaks create 'don't break the chain' motivation",
-            "Visual progress tracking activates your reward system",
-            "Short timeline (30 days) feels achievable, not overwhelming",
-          ],
+          question: "Why Challenges Work: The Psychology",
+          explanation: "Saving challenges tap into your brain's love of streaks, progress, and completion. Tracking your progress visually turns boring saving into a game you want to win.",
           hint: "Print out a 30-day grid and cross off each day. Seeing progress makes you 2x more likely to finish.",
         },
         {
@@ -840,7 +745,7 @@ export const unit2: Unit = {
           type: "true-false",
           question: "After completing a 30-day savings challenge, you should stop saving.",
           correctAnswer: false,
-          explanation: "The challenge is a starter, not the finish line. Use the momentum to set up automatic savings. The challenge proves you CAN save — now make it permanent.",
+          explanation: "The challenge is a starter, not the finish line. Use the momentum to set up automatic savings and make the habit permanent.",
         },
         {
           id: "pf-u2-L7-Q8",
@@ -862,20 +767,15 @@ export const unit2: Unit = {
     {
       id: "pf-u2-L8",
       title: "Lifestyle Inflation Trap",
-      description: "Why earning more doesn't mean saving more — unless you're aware.",
+      description: "Why earning more doesn't mean saving more, unless you're aware.",
       icon: "🎈",
       xpReward: 15,
       questions: [
         {
           id: "pf-u2-L8-T1",
           type: "teaching",
-          question: "🎈 The Raise That Disappeared",
-          explanation: "You get a 500/month raise. You feel rich. New apartment, nicer car, better restaurants. Six months later, you're living paycheck to paycheck again — just at a higher level. This is lifestyle inflation: when your spending rises to match (or exceed) every income increase. It's the reason people earning 100,000 can be just as broke as someone earning 40,000.",
-          options: [
-            "Lifestyle inflation = spending rises with income",
-            "A raise doesn't help if spending rises equally",
-            "People earning 6 figures can live paycheck to paycheck too",
-          ],
+          question: "The Raise That Disappeared",
+          explanation: "Lifestyle inflation is when your spending rises to match every income increase. It's the reason people earning 100,000 can be just as broke as someone earning 40,000.",
           hint: "Someone making 40K saving 10% has more wealth-building potential than someone making 100K spending 100K.",
         },
         {
@@ -889,25 +789,20 @@ export const unit2: Unit = {
             "A type of investment strategy",
           ],
           correctIndex: 0,
-          explanation: "Lifestyle inflation is when you upgrade your spending to match your new income — bigger apartment, fancier car, more dining out. The raise vanishes because your lifestyle absorbed it all.",
+          explanation: "Lifestyle inflation is when you upgrade your spending to match your new income: bigger apartment, fancier car, more dining out. The raise vanishes because your lifestyle absorbed it all.",
         },
         {
           id: "pf-u2-L8-Q2",
           type: "true-false",
           question: "Earning more money automatically means you'll save more.",
           correctAnswer: false,
-          explanation: "Not even close. Without intentional choices, spending expands to fill whatever you earn. Studies show that high earners often save the same percentage (or less) as moderate earners. Income isn't the problem — habits are.",
+          explanation: "Not quite. Without intentional choices, spending expands to fill whatever you earn. Studies show that high earners often save the same percentage (or less) as moderate earners.",
         },
         {
           id: "pf-u2-L8-T2",
           type: "teaching",
-          question: "📐 The 50% Rule for Raises",
-          explanation: "Here's a simple defense: every time you get a raise, save at least 50% of it. Get a 400/month raise? Immediately auto-transfer 200/month to savings. Spend the other 200 guilt-free. You still enjoy a lifestyle upgrade, but your savings grow too. Over a career, this one rule can build six figures.",
-          options: [
-            "Save 50% of every raise before adjusting your lifestyle",
-            "400/month raise → 200 to savings, 200 to enjoy",
-            "Over a 20-year career, this could mean 100,000+ extra saved",
-          ],
+          question: "The 50% Rule for Raises",
+          explanation: "Every time you get a raise, save at least 50% of it. Get a 400/month raise? Auto-transfer 200 to savings and spend the other 200 guilt-free.",
           hint: "You were already living fine before the raise. You can definitely live on half of it while banking the rest.",
         },
         {
@@ -920,7 +815,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L8-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "After getting a raise, which is a lifestyle inflation trap?",
           options: ["Moving to a pricier apartment", "Increasing your savings rate", "Upgrading to a luxury car", "Opening a HYSA", "Eating out every night", "Keeping current lifestyle + saving more"],
           buckets: ["Lifestyle inflation trap", "Smart move"],
@@ -944,7 +839,7 @@ export const unit2: Unit = {
             "300/month",
             "600/month",
             "100/month",
-            "0 — enjoy the raise",
+            "0, enjoy the raise",
           ],
           correctIndex: 0,
           explanation: "50% of 600 = 300 to savings. The other 300 is yours to enjoy guilt-free. In one year, you've banked 3,600 extra while still upgrading your lifestyle.",
@@ -961,9 +856,9 @@ export const unit2: Unit = {
           type: "multiple-choice",
           question: "Two people both earn 80,000/year. Person A saves 20%. Person B spends every dollar. After 10 years, who is wealthier?",
           options: [
-            "Person A — they have a huge savings cushion plus compound growth",
-            "They're equal — same income means same wealth",
-            "Person B — they enjoyed life more",
+            "Person A, they have a huge savings cushion plus compound growth",
+            "They're equal, same income means same wealth",
+            "Person B, they enjoyed life more",
             "Impossible to tell without more info",
           ],
           correctIndex: 0,
@@ -983,13 +878,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L9-T1",
           type: "teaching",
-          question: "🎁 Surprise Money = Danger Zone",
-          explanation: "A tax refund, work bonus, birthday money, or inheritance feels different from regular income. Your brain treats it as 'free money' — and that's dangerous. Studies show people spend windfalls 2-3x faster than regular income. The average tax refund (about 3,000) is gone within weeks. But handled right, a windfall can change your financial trajectory.",
-          options: [
-            "Windfalls feel like 'free money' → brain says spend it all",
-            "Average tax refund (~3,000) is usually gone in weeks",
-            "Smart windfall strategy: pause before spending a single dollar",
-          ],
+          question: "Surprise Money = Danger Zone",
+          explanation: "Your brain treats windfalls like tax refunds and bonuses as 'free money,' so people spend them 2-3x faster than regular income. Handled right, though, a windfall can change your financial trajectory.",
           hint: "The first rule of windfall club: don't do anything for 48 hours. Let the excitement fade before you decide.",
         },
         {
@@ -1002,13 +892,8 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L9-T2",
           type: "teaching",
-          question: "📐 The 50/30/20 Windfall Split",
-          explanation: "Here's a simple formula for any windfall: 50% to your most important financial goal (emergency fund, debt payoff, investment). 30% to a shorter-term goal (sinking fund, car upgrade, vacation fund). 20% to fun — enjoy it guilt-free. You get the joy of spending AND the power of saving. Win-win.",
-          options: [
-            "50% → #1 financial goal (debt, emergency fund, invest)",
-            "30% → shorter-term goal (sinking fund, down payment)",
-            "20% → fun money (enjoy guilt-free!)",
-          ],
+          question: "The 50/30/20 Windfall Split",
+          explanation: "Simple formula: 50% to your top financial goal, 30% to a shorter-term goal, and 20% to fun. You get the joy of spending and the power of saving.",
           hint: "Got a 1,000 bonus? 500 to emergency fund, 300 to vacation fund, 200 for something fun. That's the formula.",
         },
         {
@@ -1034,7 +919,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L9-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Smart or wasteful windfall move?",
           options: ["Pay off high-interest credit card", "Blow it all on a shopping spree", "Boost your emergency fund", "Buy something to impress others", "Invest in index fund", "Lend it to a friend who never pays back"],
           buckets: ["Smart move", "Wasteful move"],
@@ -1055,13 +940,13 @@ export const unit2: Unit = {
           type: "multiple-choice",
           question: "What is 'mental accounting' and why is it dangerous with windfalls?",
           options: [
-            "Treating money differently based on its source — leads to careless spending of 'bonus' money",
+            "Treating money differently based on its source, leading to careless spending of 'bonus' money",
             "A type of budgeting app",
             "An accounting degree specialization",
-            "It's not dangerous — it's actually helpful",
+            "It's not dangerous, it's actually helpful",
           ],
           correctIndex: 0,
-          explanation: "Mental accounting means your brain treats 'found money' differently than earned money. A 100 bill found on the street feels more spendable than 100 from your paycheck — but they're the same 100. This trick makes you waste windfalls.",
+          explanation: "Mental accounting means your brain treats 'found money' differently than earned money. A 100 bill found on the street feels more spendable than 100 from your paycheck, but they're the same 100.",
         },
         {
           id: "pf-u2-L9-Q7",
@@ -1075,13 +960,13 @@ export const unit2: Unit = {
           type: "multiple-choice",
           question: "A large tax refund usually means:",
           options: [
-            "You've been overpaying taxes all year — you gave the government a free loan",
+            "You've been overpaying taxes all year and gave the government a free loan",
             "The government is being generous and giving you extra money",
             "You made smart financial decisions",
             "You should expect the same amount every year",
           ],
           correctIndex: 0,
-          explanation: "A tax refund is YOUR money being returned — you overpaid through your paycheck deductions all year. It's not a gift. The government held your money for free. Adjusting your W-4 means more in each paycheck and less in the refund.",
+          explanation: "A tax refund is your money being returned because you overpaid through your paycheck deductions all year. Adjusting your W-4 means more in each paycheck and less in the refund.",
         },
       ],
     },
@@ -1097,20 +982,15 @@ export const unit2: Unit = {
         {
           id: "pf-u2-L10-T1",
           type: "teaching",
-          question: "🏆 Final Round: Prove You Can Save",
-          explanation: "You've learned why saving is hard, how to automate it, where to keep your money, and how to handle windfalls. Now let's test everything. This lesson pulls from every concept you've learned in this unit. Get ready — no hints this time.",
-          options: [
-            "Every question in this lesson draws from the full unit",
-            "Mix of all question types — stay sharp",
-            "Score high and you've truly mastered smart saving",
-          ],
+          question: "Final Round: Prove You Can Save",
+          explanation: "You've learned why saving is hard, how to automate it, where to keep your money, and how to handle windfalls. This lesson tests everything from the full unit.",
         },
         {
           id: "pf-u2-L10-Q1",
           type: "multiple-choice",
           question: "Your brain resists saving because of:",
           options: [
-            "Present bias — immediate rewards feel more valuable than future ones",
+            "Present bias, where immediate rewards feel more valuable than future ones",
             "Low intelligence",
             "Bad parenting",
             "Living in the wrong country",
@@ -1128,7 +1008,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L10-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Classify each strategy:",
           options: ["Auto-transfer on payday", "Shopping spree with bonus", "50% rule for raises", "Spending every windfall", "Sinking funds for goals", "No emergency fund"],
           buckets: ["Wealth builder", "Wealth destroyer"],
@@ -1149,24 +1029,24 @@ export const unit2: Unit = {
           type: "true-false",
           question: "A person earning 40,000/year who saves 15% will be wealthier long-term than someone earning 100,000 who saves 0%.",
           correctAnswer: true,
-          explanation: "Absolutely. 40,000 × 15% = 6,000/year saved. Over 20 years with investment returns, that's 200,000+. The 100K earner with 0% saved has nothing. Income doesn't build wealth — savings rate does.",
+          explanation: "Absolutely. 40,000 x 15% = 6,000/year saved. Over 20 years with investment returns, that's 200,000+. The 100K earner with 0% saved has nothing. Income doesn't build wealth, savings rate does.",
         },
         {
           id: "pf-u2-L10-Q6",
           type: "multiple-choice",
           question: "You earn 3,500/month. You auto-save 350 (10%) to a HYSA at 5%, and get a 2,400 tax refund. Using the 50/30/20 windfall split, how much total goes to savings this year?",
           options: [
-            "5,400 — 4,200 from monthly savings + 1,200 from windfall",
-            "4,200 — just the monthly savings",
-            "2,400 — just the windfall",
-            "350 — one month of savings",
+            "5,400: 4,200 from monthly savings + 1,200 from windfall",
+            "4,200, just the monthly savings",
+            "2,400, just the windfall",
+            "350, one month of savings",
           ],
           correctIndex: 0,
           explanation: "Monthly: 350 × 12 = 4,200. Windfall 50%: 2,400 × 50% = 1,200. Total: 4,200 + 1,200 = 5,400 saved this year. Plus interest from the HYSA. Powerful combination.",
         },
         {
           id: "pf-u2-L10-Q7",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Emergency fund or sinking fund?",
           options: ["Job loss cushion", "Holiday gift budget", "Unexpected medical bill", "Annual car insurance", "Surprise home repair", "Next year's vacation"],
           buckets: ["Emergency fund", "Sinking fund"],
@@ -1191,7 +1071,7 @@ export const unit2: Unit = {
           type: "true-false",
           question: "Completing this unit means you'll never struggle with saving again.",
           correctAnswer: false,
-          explanation: "Knowledge helps, but saving is an ongoing practice. You'll still face temptations, setbacks, and tough months. The difference now is you have the tools — automation, sinking funds, the 50% rule — to handle them. Keep building the habit.",
+          explanation: "Knowledge helps, but saving is an ongoing practice. The difference now is you have the tools (automation, sinking funds, the 50% rule) to handle temptations and setbacks.",
         },
       ],
     },
@@ -1209,7 +1089,7 @@ export const unit2: Unit = {
       timelineStages: [
         {
           id: "pf-u2-L11-TS1",
-          narrative: "Month 1 — You just got your first real job. After rent and bills, you have $400 left over. What do you do?",
+          narrative: "Month 1: You just got your first real job. After rent and bills, you have $400 left over. What do you do?",
           emoji: "🎉",
           choices: [
             {
@@ -1219,7 +1099,7 @@ export const unit2: Unit = {
               optimal: true,
             },
             {
-              text: "Treat yourself — you earned it!",
+              text: "Treat yourself, you earned it!",
               nextStageId: "pf-u2-L11-TS2",
               impact: "You deserve fun, but starting savings early makes a huge difference thanks to habit formation.",
               optimal: false,
@@ -1234,11 +1114,11 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L11-TS2",
-          narrative: "Month 4 — You've saved $600. Your car needs a $400 repair. What now?",
+          narrative: "Month 4: You've saved $600. Your car needs a $400 repair. What now?",
           emoji: "🚗",
           choices: [
             {
-              text: "Pay from savings — that's what it's for",
+              text: "Pay from savings, that's what it's for",
               nextStageId: "pf-u2-L11-TS3",
               impact: "This is exactly why emergency funds exist. You avoided debt and stress.",
               optimal: true,
@@ -1253,11 +1133,11 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L11-TS3",
-          narrative: "Month 8 — A friend invites you on a $1,200 vacation. You have $1,400 saved. Go?",
+          narrative: "Month 8: A friend invites you on a $1,200 vacation. You have $1,400 saved. Go?",
           emoji: "✈️",
           choices: [
             {
-              text: "Skip it — you're not there yet",
+              text: "Skip it, you're not there yet",
               nextStageId: "pf-u2-L11-TS4",
               impact: "Tough call but smart. Your emergency fund needs to be funded before big splurges.",
               optimal: true,
@@ -1278,7 +1158,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L11-TS4",
-          narrative: "Month 12 — You get a $2,000 tax refund. How do you use it?",
+          narrative: "Month 12: You get a $2,000 tax refund. How do you use it?",
           emoji: "💰",
           choices: [
             {
@@ -1288,7 +1168,7 @@ export const unit2: Unit = {
               optimal: true,
             },
             {
-              text: "Save it all — every penny",
+              text: "Save it all, every penny",
               nextStageId: "pf-u2-L11-TS5",
               impact: "Great for the numbers, but allowing zero reward makes it harder to stay motivated long-term.",
               optimal: false,
@@ -1303,7 +1183,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L11-TS5",
-          narrative: "Month 15 — Your rent goes up by $150/month. Savings are getting harder.",
+          narrative: "Month 15: Your rent goes up by $150/month. Savings are getting harder.",
           emoji: "📈",
           choices: [
             {
@@ -1322,7 +1202,7 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L11-TS6",
-          narrative: "Month 18 — Final check-in. How did your journey go?",
+          narrative: "Month 18: Final check-in. How did your journey go?",
           emoji: "🏁",
         },
       ],
@@ -1358,7 +1238,7 @@ export const unit2: Unit = {
       caseStudySections: [
         {
           id: "pf-u2-L12-CS1",
-          content: "Meet the Ramirez family: Carlos (34) and Maria (31) with two kids. Combined income: $6,200/month after taxes. They feel like they're living paycheck to paycheck, but they've never actually tracked where the money goes.\n\nHere's their monthly breakdown:\n- Rent: $1,800\n- Car payments: $650\n- Groceries: $800\n- Dining out: $400\n- Subscriptions: $180\n- Kids' activities: $300\n- Utilities: $250\n- Insurance: $350\n- Miscellaneous: $500\n- Savings: $0\n\nTotal: $5,230 — that leaves $970 unaccounted for.",
+          content: "Meet the Ramirez family: Carlos (34) and Maria (31) with two kids. Combined income: $6,200/month after taxes. They feel like they're living paycheck to paycheck, but they've never actually tracked where the money goes.\n\nHere's their monthly breakdown:\n- Rent: $1,800\n- Car payments: $650\n- Groceries: $800\n- Dining out: $400\n- Subscriptions: $180\n- Kids' activities: $300\n- Utilities: $250\n- Insurance: $350\n- Miscellaneous: $500\n- Savings: $0\n\nTotal: $5,230, which leaves $970 unaccounted for.",
           checkpoint: {
             id: "pf-u2-L12-CP1",
             type: "slider-estimate",
@@ -1373,19 +1253,19 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L12-CS2",
-          content: "The $970 mystery — Carlos and Maria are shocked. They earn $6,200 but can only account for $5,230. Where does $970 go every month?\n\nAfter tracking for two weeks, they discovered:\n- Impulse Amazon purchases: ~$300/month\n- ATM fees and convenience store stops: ~$120/month\n- Forgotten app purchases and in-app spending: ~$80/month\n- Cash withdrawals they couldn't trace: ~$470/month\n\nThis invisible spending is called 'phantom spending' — money that disappears without you noticing because it's never part of a conscious decision.",
+          content: "The $970 mystery. Carlos and Maria are shocked. They earn $6,200 but can only account for $5,230. Where does $970 go every month?\n\nAfter tracking for two weeks, they discovered:\n- Impulse Amazon purchases: ~$300/month\n- ATM fees and convenience store stops: ~$120/month\n- Forgotten app purchases and in-app spending: ~$80/month\n- Cash withdrawals they couldn't trace: ~$470/month\n\nThis invisible spending is called 'phantom spending,' money that disappears without you noticing because it's never part of a conscious decision.",
           checkpoint: {
             id: "pf-u2-L12-CP2",
             type: "multiple-choice",
             question: "What is 'phantom spending'?",
             options: ["Money stolen from your account", "Spending you don't consciously track or notice", "Automatic bill payments", "Government tax deductions"],
             correctIndex: 1,
-            explanation: "Phantom spending is money that leaves your account through small, unconscious purchases — it adds up fast because you never made a deliberate choice to spend it.",
+            explanation: "Phantom spending is money that leaves your account through small, unconscious purchases. It adds up fast because you never made a deliberate choice to spend it.",
           },
         },
         {
           id: "pf-u2-L12-CS3",
-          content: "The Ramirez Plan — Maria suggests a 3-step approach:\n\n**Step 1: Cancel and cut.** They audit subscriptions and find 4 they don't use ($85/month saved). They switch to a meal-planning app and reduce dining out to twice a month ($250/month saved).\n\n**Step 2: Automate savings.** Before they can spend it, $500 automatically transfers to a high-yield savings account on payday. This is the 'pay yourself first' strategy.\n\n**Step 3: Cash envelope system for problem areas.** They withdraw $200/month cash for 'fun money' — when it's gone, it's gone. This eliminates phantom spending on impulse purchases.",
+          content: "The Ramirez Plan. Maria suggests a 3-step approach:\n\n**Step 1: Cancel and cut.** They audit subscriptions and find 4 they don't use ($85/month saved). They switch to a meal-planning app and reduce dining out to twice a month ($250/month saved).\n\n**Step 2: Automate savings.** Before they can spend it, $500 automatically transfers to a high-yield savings account on payday. This is the 'pay yourself first' strategy.\n\n**Step 3: Cash envelope system for problem areas.** They withdraw $200/month cash for 'fun money.' When it's gone, it's gone. This eliminates phantom spending on impulse purchases.",
           checkpoint: {
             id: "pf-u2-L12-CP3",
             type: "true-false",
@@ -1396,20 +1276,20 @@ export const unit2: Unit = {
         },
         {
           id: "pf-u2-L12-CS4",
-          content: "Six months later — The results:\n\n- Monthly savings: $500 (automated) + ~$335 (from cuts) = $835/month\n- Emergency fund: $5,010 (from zero!)\n- Phantom spending: Down from $970 to ~$200/month\n- Dining out budget: $150/month (down from $400)\n- Subscriptions: $95/month (down from $180)\n\nCarlos says the biggest surprise was how little they missed the things they cut. 'We didn't feel deprived at all. We just stopped wasting money on things we didn't even enjoy.'",
+          content: "Six months later. The results:\n\n- Monthly savings: $500 (automated) + ~$335 (from cuts) = $835/month\n- Emergency fund: $5,010 (from zero!)\n- Phantom spending: Down from $970 to ~$200/month\n- Dining out budget: $150/month (down from $400)\n- Subscriptions: $95/month (down from $180)\n\nCarlos says the biggest surprise was how little they missed the things they cut. 'We didn't feel deprived at all. We just stopped wasting money on things we didn't even enjoy.'",
           checkpoint: {
             id: "pf-u2-L12-CP4",
             type: "scenario",
-            question: "The Ramirez family now has $5,010 in emergency savings. Their car's transmission fails — repair cost is $3,200. What should they do?",
+            question: "The Ramirez family now has $5,010 in emergency savings. Their car's transmission fails and the repair cost is $3,200. What should they do?",
             scenario: "They have $5,010 in their emergency fund. The repair is $3,200. They also have a credit card with 22% APR.",
-            options: ["Pay from emergency fund — this is what it's for", "Put it on the credit card to keep savings intact", "Take out a personal loan at 8% interest", "Buy a new car instead"],
+            options: ["Pay from emergency fund, this is what it's for", "Put it on the credit card to keep savings intact", "Take out a personal loan at 8% interest", "Buy a new car instead"],
             correctIndex: 0,
             explanation: "This is EXACTLY what an emergency fund is for. Paying $3,200 from savings avoids interest charges entirely. They'll still have $1,810 left and can rebuild quickly with their $835/month savings habit.",
           },
         },
         {
           id: "pf-u2-L12-CS5",
-          content: "Key Takeaways\n\n1. **Track everything first.** You can't fix what you can't see. The Ramirez family found $970/month in phantom spending just by looking.\n\n2. **Automate the hard part.** Willpower is limited. Automatic transfers make saving effortless.\n\n3. **Cut painless things first.** Unused subscriptions and forgotten purchases are free money — you won't miss them.\n\n4. **Use your emergency fund when emergencies happen.** That's its job. Then rebuild.\n\n5. **Small changes compound.** $835/month in savings = $10,020/year. In 5 years, that's over $50,000 — enough for a house down payment.",
+          content: "Key Takeaways\n\n1. **Track everything first.** You can't fix what you can't see. The Ramirez family found $970/month in phantom spending just by looking.\n\n2. **Automate the hard part.** Willpower is limited. Automatic transfers make saving effortless.\n\n3. **Cut painless things first.** Unused subscriptions and forgotten purchases are free money. You won't miss them.\n\n4. **Use your emergency fund when emergencies happen.** That's its job. Then rebuild.\n\n5. **Small changes compound.** $835/month in savings = $10,020/year. In 5 years, that's over $50,000, enough for a house down payment.",
         },
       ],
     },

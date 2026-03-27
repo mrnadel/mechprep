@@ -83,7 +83,7 @@ export function LevelUpCelebration({ reward, onClose }: Props) {
           )}
 
           {/* Content — centered */}
-          <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] px-8 pt-10 pb-6">
+          <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-8 pt-[15vh] sm:pt-10 pb-6">
             {/* Level badge */}
             <motion.div
               className="flex items-center justify-center rounded-full mb-3"

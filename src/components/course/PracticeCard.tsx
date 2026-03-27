@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useStore } from '@/store/useStore';
+import { useCourseStore } from '@/store/useCourseStore';
 
 const THEME = {
   bg: '#EEF2FF',
@@ -10,8 +11,21 @@ const THEME = {
   mid: '#818CF8',
 };
 
+const GOAL_CONFIG: Record<string, { title: string; subtitle: string; icon: string }> = {
+  interview: { title: 'Interview Prep', subtitle: 'Simulate interview-style questions', icon: '\uD83D\uDCBC' },
+  exam: { title: 'Exam Drills', subtitle: 'Timed practice for exam readiness', icon: '\uD83D\uDCDD' },
+  refresh: { title: 'Quick Review', subtitle: 'Refresh what you\'ve forgotten', icon: '\uD83D\uDD04' },
+  curiosity: { title: 'Explore Topics', subtitle: 'Discover something new', icon: '\uD83D\uDCA1' },
+};
+
+const DEFAULT_CONFIG = { title: 'Practice Your Weak Areas', subtitle: 'Personalized questions for you', icon: '\uD83E\uDDE0' };
+
 export function PracticeCard() {
   const progress = useStore((s) => s.progress);
+  const activeProfession = useCourseStore((s) => s.activeProfession);
+  const courseIntro = useCourseStore((s) => s.progress.courseIntros?.[activeProfession]);
+
+  const goalConfig = (courseIntro?.goal && GOAL_CONFIG[courseIntro.goal]) || DEFAULT_CONFIG;
 
   const weakCount = progress.weakAreas.length;
   const topicsAttempted = progress.topicProgress.filter(
@@ -23,7 +37,7 @@ export function PracticeCard() {
       ? `${weakCount} weak ${weakCount === 1 ? 'area' : 'areas'} to improve`
       : topicsAttempted > 0
         ? 'Reinforce what you know'
-        : 'Personalized questions for you';
+        : goalConfig.subtitle;
 
   return (
     <div className="px-3 sm:px-4" style={{ paddingTop: 12 }}>
@@ -69,7 +83,7 @@ export function PracticeCard() {
                 color: THEME.dark,
               }}
             >
-              Practice Your Weak Areas
+              {goalConfig.title}
             </div>
             <div
               style={{
@@ -96,7 +110,7 @@ export function PracticeCard() {
               boxShadow: 'inset 0 -2px 4px rgba(99,102,241,0.08), 0 2px 8px rgba(99,102,241,0.1)',
             }}
           >
-            <span style={{ fontSize: 42 }}>🧠</span>
+            <span style={{ fontSize: 42 }}>{goalConfig.icon}</span>
           </div>
         </div>
 

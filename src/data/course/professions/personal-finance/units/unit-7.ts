@@ -69,7 +69,7 @@ export const unit7: Unit = {
         },
         {
           id: "pf-u7-L1-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into what makes stock prices go UP vs DOWN:",
           options: ["Strong earnings report", "CEO scandal", "Rising interest rates", "New product launch goes viral", "Major lawsuit against the company", "Beating analyst expectations"],
           buckets: ["Price goes UP", "Price goes DOWN"],
@@ -435,7 +435,7 @@ export const unit7: Unit = {
         },
         {
           id: "pf-u7-L4-Q6",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these companies into growth vs value characteristics:",
           options: ["A tech company reinvesting 100% of profits", "A utility company with 50 years of dividend history", "A biotech with explosive sales but no profits yet", "A bank trading at 8× earnings"],
           buckets: ["Growth characteristics", "Value characteristics"],
@@ -613,7 +613,7 @@ export const unit7: Unit = {
         },
         {
           id: "pf-u7-L6-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these sectors into cyclical (move with economy) vs defensive (stable in downturns):",
           options: ["Technology", "Utilities", "Consumer Discretionary (Nike, Amazon)", "Healthcare", "Energy", "Consumer Staples (Coca-Cola, P&G)"],
           buckets: ["Cyclical sector", "Defensive sector"],
@@ -1002,7 +1002,7 @@ export const unit7: Unit = {
         },
         {
           id: "pf-u7-L9-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into 'Diversified' or 'Concentrated' portfolios:",
           options: ["All savings in your employer's stock", "S&P 500 index fund + bond fund + international fund", "3 stocks in the same industry", "Total stock market fund plus real estate and bonds"],
           buckets: ["Concentrated (risky)", "Diversified (safer)"],
@@ -1081,7 +1081,7 @@ export const unit7: Unit = {
         },
         {
           id: "pf-u7-L10-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these characteristics into individual stocks vs index funds:",
           options: ["Requires research on each company", "Instant diversification", "Higher potential returns (and losses)", "Very low fees", "You could pick the next Amazon... or the next Enron", "Boring but effective"],
           buckets: ["Individual stocks", "Index funds"],
@@ -1314,7 +1314,7 @@ export const unit7: Unit = {
         },
         {
           id: "pf-u7-L12-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into 'Beginner Mistake' or 'Smart Investor Habit':",
           options: ["Buying a stock because it's trending on TikTok", "Investing the same amount every month automatically", "Selling everything when the market drops 10%", "Keeping an investment journal with buy/sell reasons", "Checking your portfolio 5 times a day", "Holding diversified index funds for 20+ years"],
           buckets: ["Beginner mistake", "Smart investor habit"],

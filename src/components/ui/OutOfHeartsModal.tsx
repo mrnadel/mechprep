@@ -8,6 +8,7 @@ import { useHeartsStore } from '@/store/useHeartsStore';
 import { analytics } from '@/lib/mixpanel';
 import { GameButton } from '@/components/ui/GameButton';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 
 interface OutOfHeartsModalProps {
   isOpen: boolean;
@@ -72,7 +73,7 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
           />
 
           <motion.div
-            className="relative bg-gradient-to-b from-red-500 to-red-600 w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
+            className="relative bg-[#CE3030] w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
             role="dialog"
             aria-modal="true"
             aria-labelledby="out-of-hearts-title"
@@ -82,7 +83,7 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
             transition={{ duration: 0.25, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <FloatingParticles color="rgba(255,255,255,0.25)" intensity="normal" />
+            <FloatingParticles color="rgba(255,255,255,0.06)" intensity="subtle" />
 
             <button
               onClick={handleClose}
@@ -92,15 +93,20 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
               <X className="w-4 h-4 text-white/70" />
             </button>
 
-            {/* Content — centered */}
-            <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] text-center text-white px-5">
-              <div className="flex justify-center mb-4">
-                <img src="/badges/broken-heart.png" alt="" width={80} height={80} draggable={false} />
-              </div>
-              <h3 id="out-of-hearts-title" className="text-2xl font-extrabold mb-6">Out of Hearts</h3>
+            {/* Content — upper area like Duolingo */}
+            <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] text-center text-white px-6 pt-[18vh] sm:pt-10">
+              <motion.div
+                className="mb-6"
+                initial={{ scale: 0.5 }}
+                animate={{ scale: 1 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 15, delay: 0.1 }}
+              >
+                <MascotWithGlow pose="sad" size={160} />
+              </motion.div>
+              <h3 id="out-of-hearts-title" className="text-[26px] font-extrabold mb-3">Out of Hearts</h3>
 
-              <div className="bg-white/15 backdrop-blur-sm rounded-2xl px-8 py-5">
-                <p className="text-xs font-semibold text-white/60 mb-1">Next heart in</p>
+              <div className="bg-white/15 rounded-2xl px-8 py-4 mt-2">
+                <p className="text-xs font-semibold text-white/50 mb-1">Next heart in</p>
                 <p className="text-4xl font-extrabold text-white tabular-nums">{countdown}</p>
               </div>
             </div>

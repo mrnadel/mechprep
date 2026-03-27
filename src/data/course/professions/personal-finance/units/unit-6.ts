@@ -94,7 +94,7 @@ export const unit6: Unit = {
         },
         {
           id: "pf-u6-L1-Q6",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into whether they typically beat inflation or lose to it:",
           options: ["S&P 500 index fund", "Regular savings account (0.5%)", "Real estate over 20+ years", "Cash under your mattress", "High-yield savings (5%)", "Government bonds"],
           buckets: ["Typically beats inflation", "Typically loses to inflation"],
@@ -293,7 +293,7 @@ export const unit6: Unit = {
         },
         {
           id: "pf-u6-L3-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each way of making money into the correct category:",
           options: ["Buying at $50, selling at $80", "Receiving $1.50 per share quarterly", "Stock price doubles over 5 years", "Company pays you $3/share annually", "Selling after a 40% gain", "Quarterly cash payment to shareholders"],
           buckets: ["Capital gains", "Dividends"],
@@ -625,7 +625,7 @@ export const unit6: Unit = {
         },
         {
           id: "pf-u6-L6-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each feature into ETF or Mutual Fund:",
           options: ["Trades throughout the day", "Trades once at end of day", "Often has lower minimum investment", "May require $1,000-$3,000 minimum", "Price changes in real-time", "Price set once daily (NAV)"],
           buckets: ["ETF", "Mutual Fund"],
@@ -766,7 +766,7 @@ export const unit6: Unit = {
         },
         {
           id: "pf-u6-L7-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Categorize each person's situation by recommended risk level:",
           options: ["25-year-old with stable job, no debt", "62-year-old retiring next year", "35-year-old with emergency fund, saving for retirement", "28-year-old saving for a house down payment in 2 years", "55-year-old with large pension guaranteed", "22-year-old just starting career, has student loans"],
           buckets: ["Higher risk OK", "Lower risk recommended"],
@@ -1096,7 +1096,7 @@ export const unit6: Unit = {
         },
         {
           id: "pf-u6-L10-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "During a market crash, sort each action as smart or harmful:",
           options: ["Continue your regular DCA investments", "Panic-sell all your investments", "Buy more shares at discounted prices", "Turn off financial news and stay calm", "Try to time the exact bottom to buy", "Move everything to cash and wait"],
           buckets: ["Smart move", "Harmful move"],
@@ -1244,7 +1244,7 @@ export const unit6: Unit = {
         },
         {
           id: "pf-u6-L11-Q8",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which companies are known for paying dividends vs. not paying dividends?",
           options: ["Coca-Cola", "Tesla", "Johnson & Johnson", "Amazon", "Procter & Gamble", "Netflix"],
           buckets: ["Pays dividends", "Doesn't pay dividends"],

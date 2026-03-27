@@ -68,6 +68,11 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
 
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+        {/* Action title */}
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          Read the scenario and decide
+        </div>
+
         {/* Question prompt */}
         <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 10px' }}>
           <MoneyText text={question.question} />
@@ -118,9 +123,6 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
         <div style={{ flex: 1, minHeight: 8 }} />
 
         {/* Decision options */}
-        <div style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 0.5 }}>
-          What should they do?
-        </div>
         <div className="flex flex-col" style={{ gap: 8 }}>
           {shuffledIndices.map((originalIdx, displayIdx) => {
             const option = options[originalIdx];
@@ -130,7 +132,7 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
             let bg = 'white';
             let border = '2px solid #E5E5E5';
             let textColor = '#3C3C3C';
-            let shadow = 'none';
+            let shadow = '0 3px 0 #DCDCDC';
             let iconContent = '';
 
             if (answered && localCorrect !== null) {
@@ -140,13 +142,15 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
                 iconContent = '✓';
               } else if (isSelected && !isCorrectOption) {
                 bg = '#FFDFE0'; border = '2px solid #FF4B4B'; textColor = '#EA2B2B';
+                shadow = 'none';
                 iconContent = '✗';
               } else {
                 bg = '#F5F5F5'; border = '2px solid #EFEFEF'; textColor = '#CFCFCF';
+                shadow = 'none';
               }
             } else if (isSelected) {
               bg = 'white'; border = `2.5px solid ${unitColor}`;
-              shadow = `0 0 0 3px ${unitColor}20`;
+              shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;
             }
 
             const revealAnimation = answered && localCorrect !== null
@@ -169,8 +173,7 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
                     ? { duration: 0.35 }
                     : { delay: displayIdx * 0.08 + 0.2, type: 'spring', stiffness: 400, damping: 25 }
                 }
-                whileTap={!answered ? { scale: 0.97, transition: { duration: 0.1 } } : undefined}
-                whileHover={!answered ? { scale: 1.01 } : undefined}
+                whileTap={!answered ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                 className="w-full text-left flex items-center"
                 style={{
                   padding: '12px 14px', borderRadius: 14, background: bg, border,

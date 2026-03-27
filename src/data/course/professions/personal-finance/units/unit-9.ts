@@ -61,7 +61,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L1-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this an advantage of renting or buying?",
           options: ["Building equity over time", "No maintenance costs", "Freedom to move easily", "Potential tax deductions", "Lower upfront costs", "Home value appreciation"],
           buckets: ["Advantage of renting", "Advantage of buying"],
@@ -198,7 +198,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L2-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which part of your monthly mortgage payment builds equity, and which doesn't?",
           options: ["Principal payment", "Interest payment", "Property tax escrow", "Homeowner's insurance", "PMI (mortgage insurance)", "Extra principal payments"],
           buckets: ["Builds equity", "Does NOT build equity"],
@@ -322,7 +322,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L3-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this a one-time cost at purchase or an ongoing monthly cost?",
           options: ["Home appraisal fee", "PMI", "Title insurance", "Property taxes", "Loan origination fee", "Homeowner's insurance"],
           buckets: ["One-time closing cost", "Ongoing monthly cost"],
@@ -545,7 +545,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L5-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Should you include this contingency in your offer, or is it optional/risky to include?",
           options: ["Financing contingency", "Home sale contingency (must sell your current home first)", "Inspection contingency", "Appraisal contingency", "Love letter to the seller", "Escalation clause"],
           buckets: ["Always include (essential protection)", "Situational / optional"],
@@ -654,7 +654,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L6-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this cost included in your mortgage payment (through escrow) or a separate bill you pay on your own?",
           options: ["Property taxes", "Water heater replacement", "Homeowner's insurance", "Lawn care / landscaping", "PMI", "Termite treatment"],
           buckets: ["Included in mortgage (escrow)", "Separate bill / your responsibility"],
@@ -792,7 +792,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L7-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this a good reason or a bad reason to refinance?",
           options: ["Rate dropped 1.5% and you'll stay 10+ more years", "You want cash to buy a boat", "Switching from ARM to fixed before rate adjusts up", "You're moving in 6 months", "Consolidating from a 30-year into a 15-year to save interest", "Rate only dropped 0.1%"],
           buckets: ["Good reason to refinance", "Bad reason to refinance"],
@@ -1041,7 +1041,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L9-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this expense typically a landlord's responsibility or a tenant's?",
           options: ["Roof replacement", "Monthly electric bill", "Plumbing repair", "Internet service", "Property taxes", "Lawn mowing (single-family)"],
           buckets: ["Landlord pays", "Tenant pays"],
@@ -1144,7 +1144,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L10-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this an advantage of REITs or an advantage of owning physical rental property?",
           options: ["Instant liquidity (sell in seconds)", "Leverage through mortgage", "No maintenance headaches", "Depreciation tax deductions", "Can start with $50", "You control renovation decisions"],
           buckets: ["REIT advantage", "Physical property advantage"],
@@ -1276,7 +1276,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L11-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this a pro or con of house hacking?",
           options: ["Dramatically reduced housing costs", "Being a landlord to your neighbors", "Building equity while living cheaply", "Less privacy than a single-family home", "Learning property management hands-on", "Dealing with tenant turnover and repairs"],
           buckets: ["Pro of house hacking", "Con of house hacking"],
@@ -1432,7 +1432,7 @@ export const unit9: Unit = {
         },
         {
           id: "pf-u9-L12-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this a smart buying move or a costly mistake?",
           options: ["Getting pre-approved before house hunting", "Draining your entire savings for the down payment", "Getting a home inspection on every property", "Buying the biggest house the bank approves you for", "Researching property tax rates before choosing a neighborhood", "Making decisions based on how the home is staged/decorated"],
           buckets: ["Smart move", "Costly mistake"],

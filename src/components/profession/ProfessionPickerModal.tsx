@@ -37,7 +37,7 @@ export function ProfessionPickerModal({ isOpen, onClose, selectedId, onSelect }:
           />
 
           <motion.div
-            className="relative bg-gradient-to-b from-teal-500 to-teal-600 w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
+            className="relative bg-[#1899D6] w-full h-full sm:h-auto sm:max-w-md sm:mx-4 sm:rounded-2xl overflow-y-auto sm:shadow-2xl flex flex-col"
             role="dialog"
             aria-modal="true"
             aria-labelledby="profession-picker-title"
@@ -47,7 +47,7 @@ export function ProfessionPickerModal({ isOpen, onClose, selectedId, onSelect }:
             transition={{ duration: 0.25, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <FloatingParticles color="rgba(255,255,255,0.2)" intensity="subtle" drift />
+            <FloatingParticles color="rgba(255,255,255,0.04)" intensity="subtle" drift />
 
             <button
               onClick={onClose}

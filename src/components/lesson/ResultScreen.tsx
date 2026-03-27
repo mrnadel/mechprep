@@ -405,11 +405,12 @@ export default function ResultScreen() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
           >
-            <button
+            <motion.button
               onClick={() => {
                 dismissResult();
               }}
-              className="w-full transition-transform active:scale-[0.98]"
+              whileTap={{ y: 4, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } }}
+              className="w-full"
               style={{
                 padding: '16px 0',
                 borderRadius: 16,
@@ -426,7 +427,7 @@ export default function ResultScreen() {
             >
               {passed ? 'Continue' : 'Try Again'}
               <span style={{ fontSize: 11, fontWeight: 700, opacity: 0.6, marginLeft: 8 }}>Enter ↵</span>
-            </button>
+            </motion.button>
           </motion.div>
         </div>
       </motion.div>

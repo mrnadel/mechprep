@@ -123,6 +123,7 @@ export interface LeagueState {
   competitors: LeagueCompetitor[];
   lastWeekResult: LeagueWeekResult | null;
   resultSeen: boolean;
+  winnerSeen?: boolean;
 }
 
 export interface LeagueTier {

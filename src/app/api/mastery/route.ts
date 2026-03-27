@@ -63,8 +63,23 @@ export async function POST(request: NextRequest) {
     }[];
   };
 
-  if (!events || events.length === 0) {
+  if (!events || !Array.isArray(events) || events.length === 0) {
     return NextResponse.json({ ok: true, inserted: 0 });
+  }
+
+  // Validate required fields on each event
+  const valid = events.every(
+    (e: Record<string, unknown>) =>
+      typeof e.id === 'string' &&
+      typeof e.questionId === 'string' &&
+      typeof e.topicId === 'string' &&
+      typeof e.difficulty === 'string' &&
+      typeof e.correct === 'boolean' &&
+      typeof e.source === 'string' &&
+      typeof e.answeredAt === 'string'
+  );
+  if (!valid) {
+    return NextResponse.json({ error: 'Malformed event data' }, { status: 400 });
   }
 
   const rows = events.map((event) => ({

@@ -196,7 +196,7 @@ export const unit4: Unit = {
         },
         {
           id: "pf-u4-L2-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which FICO factors are in the 'big impact' group vs 'smaller impact' group?",
           options: ["Payment History", "Credit Mix", "Credit Utilization", "New Credit", "Length of History", "Number of accounts"],
           buckets: ["Big impact (30%+)", "Smaller impact (15% or less)"],
@@ -525,7 +525,7 @@ export const unit4: Unit = {
         },
         {
           id: "pf-u4-L5-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which of these help build credit from zero?",
           options: ["Secured credit card", "Debit card purchases", "Being an authorized user", "Paying rent with cash", "Credit-builder loan", "Keeping cash under the mattress"],
           buckets: ["Builds credit", "Doesn't build credit"],
@@ -811,7 +811,7 @@ export const unit4: Unit = {
         },
         {
           id: "pf-u4-L8-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Hard pull or soft pull?",
           options: ["Checking your own score on CreditKarma", "Applying for a new credit card", "Employer background check", "Mortgage application", "Pre-approved credit offer in the mail", "Auto loan application"],
           buckets: ["Soft pull (no impact)", "Hard pull (affects score)"],
@@ -1067,7 +1067,7 @@ export const unit4: Unit = {
         },
         {
           id: "pf-u4-L10-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which are good long-term credit habits vs common mistakes?",
           options: ["Autopay minimum on every card", "Closing old accounts you don't use", "Checking your report every 4 months", "Applying for every store card discount", "Keeping utilization under 10%", "Only paying bills when you remember"],
           buckets: ["Good habit", "Common mistake"],

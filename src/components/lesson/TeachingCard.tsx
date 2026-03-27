@@ -1,9 +1,10 @@
 'use client';
 
-import { memo } from 'react';
+import { memo, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { Mascot, type MascotPose } from '@/components/ui/Mascot';
 
 const DiagramDisplay = memo(function DiagramDisplay({ html }: { html: string }) {
   const sanitised = html
@@ -25,6 +26,20 @@ const DiagramDisplay = memo(function DiagramDisplay({ html }: { html: string }) 
   );
 });
 
+// Mascot poses to cycle through for teaching cards
+const TEACHING_POSES: MascotPose[] = [
+  'excited', 'thinking', 'proud', 'winking', 'laughing', 'neutral', 'explorer',
+];
+
+// Pick a stable pose based on question ID
+function getPoseForQuestion(questionId: string): MascotPose {
+  let hash = 0;
+  for (let i = 0; i < questionId.length; i++) {
+    hash = ((hash << 5) - hash + questionId.charCodeAt(i)) | 0;
+  }
+  return TEACHING_POSES[Math.abs(hash) % TEACHING_POSES.length];
+}
+
 interface TeachingCardProps {
   question: CourseQuestion;
   unitColor: string;
@@ -32,164 +47,144 @@ interface TeachingCardProps {
 }
 
 export default function TeachingCard({ question, unitColor, onGotIt }: TeachingCardProps) {
-  // Extract emoji from beginning of question title if present
+  // Strip leading emoji from title (we use mascot instead now)
   const titleMatch = question.question.match(/^(\p{Emoji_Presentation}|\p{Emoji}\uFE0F?)\s*/u);
-  const emoji = titleMatch ? titleMatch[1] : null;
-  const title = emoji ? question.question.slice(titleMatch![0].length) : question.question;
+  const title = titleMatch ? question.question.slice(titleMatch[0].length) : question.question;
+
+  const pose = useMemo(() => getPoseForQuestion(question.id), [question.id]);
 
   return (
     <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
-      <div className="flex flex-col items-center" style={{ gap: 16, paddingTop: 8 }}>
-        {/* Big emoji */}
-        {emoji && (
-          <motion.div
-            initial={{ scale: 0, rotate: -20 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 15, delay: 0.1 }}
-            style={{ fontSize: 56, lineHeight: 1 }}
-          >
-            {emoji}
-          </motion.div>
-        )}
-
-        {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
+      <div className="flex flex-col" style={{ gap: 20, paddingTop: 12 }}>
+        {/* Mascot with speech bubble */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 }}
+          transition={{ duration: 0.35, ease: 'easeOut' }}
           style={{
-            fontSize: 22,
-            fontWeight: 800,
-            color: '#3C3C3C',
-            textAlign: 'center',
-            lineHeight: 1.3,
-            margin: 0,
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: 12,
+            maxWidth: 460,
+            margin: '0 auto',
+            width: '100%',
           }}
         >
-          {title}
-        </motion.h2>
+          {/* Mascot */}
+          <motion.div
+            initial={{ scale: 0.5, rotate: -10 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: 'spring', stiffness: 350, damping: 15, delay: 0.05 }}
+            style={{ flexShrink: 0 }}
+          >
+            <Mascot pose={pose} size={72} />
+          </motion.div>
+
+          {/* Speech bubble */}
+          <motion.div
+            initial={{ opacity: 0, x: -8 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.15, duration: 0.3 }}
+            style={{
+              position: 'relative',
+              background: 'white',
+              border: '2px solid #E5E7EB',
+              borderRadius: 18,
+              padding: '14px 18px',
+              flex: 1,
+              boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+            }}
+          >
+            {/* Triangle pointer */}
+            <div
+              style={{
+                position: 'absolute',
+                left: -9,
+                top: 18,
+                width: 14,
+                height: 14,
+                background: 'white',
+                border: '2px solid #E5E7EB',
+                borderRight: 'none',
+                borderBottom: 'none',
+                transform: 'rotate(-45deg)',
+              }}
+            />
+
+            {/* Title */}
+            <h2
+              style={{
+                fontSize: 17,
+                fontWeight: 800,
+                color: '#2D2D2D',
+                lineHeight: 1.3,
+                margin: 0,
+                marginBottom: 8,
+              }}
+            >
+              {title}
+            </h2>
+
+            {/* Explanation */}
+            <div
+              style={{
+                fontSize: 14.5,
+                fontWeight: 500,
+                color: '#555',
+                lineHeight: 1.55,
+              }}
+            >
+              <MoneyText text={question.explanation} />
+            </div>
+          </motion.div>
+        </motion.div>
 
         {/* Diagram if present */}
         {question.diagram && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.25 }}
             className="w-full"
           >
             <DiagramDisplay html={question.diagram} />
           </motion.div>
         )}
 
-        {/* Main teaching content */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25 }}
-          style={{
-            fontSize: 15,
-            fontWeight: 600,
-            color: '#6B6B6B',
-            lineHeight: 1.6,
-            textAlign: 'center',
-            maxWidth: 440,
-          }}
-        >
-          <MoneyText text={question.explanation} />
-        </motion.div>
-
-        {/* Key points (reuse options array) */}
-        {question.options && question.options.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 }}
-            className="w-full"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 8,
-              maxWidth: 440,
-              margin: '0 auto',
-            }}
-          >
-            {question.options.map((point, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -15 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 + i * 0.08 }}
-                style={{
-                  display: 'flex',
-                  alignItems: 'flex-start',
-                  gap: 10,
-                  padding: '10px 14px',
-                  borderRadius: 12,
-                  background: `${unitColor}10`,
-                  border: `1.5px solid ${unitColor}25`,
-                }}
-              >
-                <span
-                  style={{
-                    flexShrink: 0,
-                    width: 24,
-                    height: 24,
-                    borderRadius: 8,
-                    background: unitColor,
-                    color: 'white',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: 12,
-                    fontWeight: 800,
-                  }}
-                >
-                  {i + 1}
-                </span>
-                <span style={{ fontSize: 14, fontWeight: 600, color: '#4A4A4A', lineHeight: 1.4 }}>
-                  <MoneyText text={point} />
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-
-        {/* Example callout */}
+        {/* Hint callout (kept as separate element below bubble) */}
         {question.hint && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.35 }}
             style={{
               width: '100%',
-              maxWidth: 440,
-              padding: '14px 16px',
+              maxWidth: 460,
+              margin: '0 auto',
+              padding: '12px 16px',
               borderRadius: 14,
-              background: 'linear-gradient(135deg, #FFF9E8, #FFF3D0)',
-              border: '1.5px solid #FFE4B8',
+              background: `${unitColor}0A`,
+              border: `1.5px solid ${unitColor}20`,
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
-              <span style={{ fontSize: 14 }}>💡</span>
-              <span style={{ fontSize: 12, fontWeight: 800, color: '#B56E00', textTransform: 'uppercase', letterSpacing: 0.5 }}>
-                Real Talk
-              </span>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+              <Mascot pose="thinking" size={28} className="flex-shrink-0 mt-0.5" />
+              <p style={{ fontSize: 13, fontWeight: 600, color: '#666', lineHeight: 1.5, margin: 0 }}>
+                <MoneyText text={question.hint} />
+              </p>
             </div>
-            <p style={{ fontSize: 13.5, fontWeight: 600, color: '#8B6914', lineHeight: 1.5, margin: 0 }}>
-              <MoneyText text={question.hint} />
-            </p>
           </motion.div>
         )}
       </div>
 
-      {/* Got it button - pushed to bottom */}
+      {/* Got it button */}
       <div style={{ marginTop: 'auto', paddingTop: 24 }}>
         <motion.button
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.45 }}
           onClick={onGotIt}
-          whileTap={{ scale: 0.98 }}
+          whileTap={{ y: 4, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } }}
           className="w-full"
           style={{
             padding: '15px 0',

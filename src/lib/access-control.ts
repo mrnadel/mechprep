@@ -29,7 +29,7 @@ async function getEffectiveTier(userId: string): Promise<SubscriptionTier> {
   // Active trial counts as pro
   if (sub.status === 'trialing') {
     const trialEnd = sub.trialEnd ? new Date(sub.trialEnd) : null;
-    if (trialEnd && trialEnd > new Date()) return 'pro';
+    if (trialEnd && !isNaN(trialEnd.getTime()) && trialEnd > new Date()) return 'pro';
     return 'free';
   }
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { forwardRef } from 'react';
+import { motion, type HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const variants = {
@@ -14,31 +15,32 @@ const variants = {
 
 export type GameButtonVariant = keyof typeof variants;
 
-interface GameButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface GameButtonProps extends HTMLMotionProps<'button'> {
   variant?: GameButtonVariant;
 }
 
 export const GameButton = forwardRef<HTMLButtonElement, GameButtonProps>(
-  ({ variant = 'indigo', className, children, disabled, ...props }, ref) => {
+  ({ variant = 'indigo', className, children, disabled, style, ...props }, ref) => {
     const v = variants[variant];
 
     return (
-      <button
+      <motion.button
         ref={ref}
         disabled={disabled}
+        whileTap={!disabled ? { y: 4, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
         className={cn(
           'w-full py-4 rounded-2xl text-sm font-extrabold',
           'flex items-center justify-center gap-2',
-          'transition-all duration-75 select-none',
-          'active:translate-y-[4px] active:shadow-none',
+          'select-none',
           v.bg, v.shadow, v.text,
-          disabled && 'opacity-50 cursor-not-allowed active:translate-y-0 active:shadow-[0_4px_0_#9ca3af]',
+          disabled && 'opacity-50 cursor-not-allowed',
           className,
         )}
+        style={style}
         {...props}
       >
         {children}
-      </button>
+      </motion.button>
     );
   },
 );

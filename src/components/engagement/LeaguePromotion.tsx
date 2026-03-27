@@ -7,6 +7,7 @@ import { leagueTiers } from '@/data/league';
 import { LEAGUE_GEM_REWARD_PROMOTION } from '@/data/league';
 import { GameButton, type GameButtonVariant } from '@/components/ui/GameButton';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { Mascot } from '@/components/ui/Mascot';
 import { LeagueImage } from '@/components/icons/LeagueImage';
 
 export function LeaguePromotion() {
@@ -33,11 +34,9 @@ export function LeaguePromotion() {
         emoji: currentTier.icon,
         headline: `Promoted to ${currentTier.name}!`,
         subtext: `You earned +${LEAGUE_GEM_REWARD_PROMOTION} gems for finishing in the top ranks.`,
-        bg: 'linear-gradient(to bottom, #22c55e, #16a34a)',
-        accentColor: '#fff',
-        textColor: 'text-white',
-        buttonVariant: 'gold' as GameButtonVariant,
-        particleColor: 'rgba(255,255,255,0.15)',
+        bg: '#58A700',
+        buttonVariant: 'green' as GameButtonVariant,
+        particleColor: 'rgba(255,255,255,0.05)',
       };
     }
     if (isDemoted) {
@@ -45,22 +44,18 @@ export function LeaguePromotion() {
         emoji: currentTier.icon,
         headline: `Moved to ${currentTier.name}`,
         subtext: "Keep practicing and you'll climb back.",
-        bg: 'linear-gradient(to bottom, #f87171, #dc2626)',
-        accentColor: '#fff',
-        textColor: 'text-white',
+        bg: '#CE3030',
         buttonVariant: 'indigo' as GameButtonVariant,
-        particleColor: 'rgba(255,255,255,0.12)',
+        particleColor: 'rgba(255,255,255,0.05)',
       };
     }
     return {
       emoji: currentTier.icon,
       headline: `Stayed in ${currentTier.name}`,
       subtext: 'Keep it up to reach the promotion zone.',
-      bg: 'linear-gradient(to bottom, #60a5fa, #3b82f6)',
-      accentColor: '#fff',
-      textColor: 'text-white',
+      bg: '#1899D6',
       buttonVariant: 'indigo' as GameButtonVariant,
-      particleColor: 'rgba(255,255,255,0.12)',
+      particleColor: 'rgba(255,255,255,0.05)',
     };
   };
 
@@ -97,18 +92,18 @@ export function LeaguePromotion() {
               <FloatingParticles color={content.particleColor} intensity={isPromoted ? 'celebration' : 'normal'} />
 
               {/* Content — centered */}
-              <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] px-8 py-10 text-center">
+              <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-8 pt-[15vh] sm:pt-10 text-center">
                 <motion.div
-                  className="text-7xl mb-4"
+                  className="relative mb-4"
                   initial={{ scale: 0.3, rotate: -15 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ type: 'spring', stiffness: 280, damping: 14, delay: 0.15 }}
                 >
-                  <LeagueImage tier={currentTier} size={120} />
+                  <LeagueImage tier={currentTier} size={140} className="relative" />
                 </motion.div>
 
                 <motion.h2
-                  className="text-2xl font-extrabold mb-2 text-white"
+                  className="text-[26px] font-extrabold mb-2 text-white"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}

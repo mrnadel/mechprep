@@ -351,11 +351,11 @@ describe('useCourseStore', () => {
       expect(useCourseStore.getState().lessonResult!.xpEarned).toBe(xpReward * 2);
     });
 
-    it('computes XP for <70% accuracy (multiplier 1)', () => {
+    it('computes XP for 50-89% accuracy (multiplier 2)', () => {
       const xpReward = useCourseStore.getState().courseData[0].lessons[0].xpReward;
 
-      completeWithAccuracy(5, 10);
-      expect(useCourseStore.getState().lessonResult!.xpEarned).toBe(xpReward * 1);
+      completeWithAccuracy(5, 10); // 50% accuracy
+      expect(useCourseStore.getState().lessonResult!.xpEarned).toBe(xpReward * 2);
     });
 
     it('adds XP to progress.totalXp', () => {

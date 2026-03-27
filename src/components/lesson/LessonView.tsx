@@ -31,6 +31,7 @@ import { useHeartsStore } from '@/store/useHeartsStore';
 import { HeartDisplay } from '@/components/ui/HeartDisplay';
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
 import EngineeringCalculator from '@/components/calculator/EngineeringCalculator';
+import { GameButton } from '@/components/ui/GameButton';
 import type { CourseQuestion } from '@/data/course/types';
 import type { ContentFeedbackType } from '@/data/types';
 import { MoneyText } from '@/components/ui/MoneyText';
@@ -72,6 +73,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const _completeLesson = useCourseStore((s) => s.completeLesson);
   const _exitLesson = useCourseStore((s) => s.exitLesson);
   const courseData = useCourseStore((s) => s.courseData);
+  const activeProfession = useCourseStore((s) => s.activeProfession);
 
   // === SHARED LOCAL STATE ===
   const [showExitConfirm, setShowExitConfirm] = useState(false);
@@ -465,7 +467,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         <div className="w-full h-full max-w-3xl flex flex-col bg-[#FAFAFA] lg:shadow-lg lg:border-x lg:border-gray-200">
         {/* Top bar */}
         <div
-          className="flex items-center"
+          className="flex items-center flex-shrink-0 z-20"
           style={{
             padding: '10px 16px',
             gap: 12,
@@ -874,8 +876,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             }}
           >
             <div className="flex items-center gap-2.5">
-              {/* Calculator toggle */}
-              <button
+              {/* Calculator toggle — only for ME course */}
+              {activeProfession === 'mechanical-engineering' && <button
                 onClick={() => setIsCalcOpen(c => !c)}
                 className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90"
                 style={{
@@ -900,31 +902,20 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   <circle cx="12" cy="17" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
                   <circle cx="15.5" cy="17" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
                 </svg>
-              </button>
+              </button>}
 
               {/* Check button */}
-              <button
+              <GameButton
                 onClick={handleCheck}
                 disabled={!hasSelection}
-                className="flex-1 transition-transform active:scale-[0.98]"
-                style={{
-                  padding: '14px 0',
-                  borderRadius: 16,
-                  fontSize: 15,
-                  fontWeight: 800,
-                  textTransform: 'uppercase',
-                  letterSpacing: 0.8,
-                  background: hasSelection ? unitColor : '#E5E5E5',
-                  color: hasSelection ? '#FFFFFF' : '#AFAFAF',
-                  boxShadow: hasSelection
-                    ? `0 4px 0 ${theme.dark}`
-                    : '0 4px 0 #CCCCCC',
-                  border: 'none',
-                  cursor: hasSelection ? 'pointer' : 'default',
-                }}
+                className="flex-1"
+                style={hasSelection ? {
+                  background: unitColor,
+                  boxShadow: `0 4px 0 ${theme.dark}`,
+                } : undefined}
               >
                 Check
-              </button>
+              </GameButton>
             </div>
           </div>
         ) : (
@@ -980,27 +971,12 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
               <FlagButton contentType={flagContentType} contentId={displayQuestion.id} hasGraphic={!!displayQuestion.diagram} />
             </div>
 
-            <button
+            <GameButton
               onClick={handleContinue}
-              className="w-full transition-transform active:scale-[0.98]"
-              style={{
-                padding: '14px 0',
-                borderRadius: 16,
-                fontSize: 15,
-                fontWeight: 800,
-                textTransform: 'uppercase',
-                letterSpacing: 0.8,
-                background: lastAnswerCorrect ? '#58CC02' : '#FF4B4B',
-                color: '#FFFFFF',
-                boxShadow: lastAnswerCorrect
-                  ? '0 4px 0 #C49200'
-                  : '0 4px 0 #CC2D2D',
-                border: 'none',
-                cursor: 'pointer',
-              }}
+              variant={lastAnswerCorrect ? 'green' : 'red'}
             >
               {isLastQuestion ? 'Finish' : 'Continue'}
-            </button>
+            </GameButton>
           </motion.div>
         )}
         </>
@@ -1009,9 +985,9 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         </div>{/* end centered wrapper */}
 
 
-        {/* Calculator panel */}
+        {/* Calculator panel — ME course only */}
         <AnimatePresence>
-          {isCalcOpen && (
+          {isCalcOpen && activeProfession === 'mechanical-engineering' && (
             <EngineeringCalculator
               isOpen={isCalcOpen}
               onClose={() => setIsCalcOpen(false)}
@@ -1076,9 +1052,10 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   {exitConfirmMessage}
                 </p>
                 <div className="flex" style={{ gap: 12 }}>
-                  <button
+                  <motion.button
                     onClick={handleCancelExit}
-                    className="flex-1 transition-transform active:scale-[0.98]"
+                    whileTap={{ y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } }}
+                    className="flex-1"
                     style={{
                       padding: '14px 0',
                       borderRadius: 16,
@@ -1086,15 +1063,17 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                       fontWeight: 800,
                       color: '#AFAFAF',
                       background: '#F5F5F5',
+                      boxShadow: '0 3px 0 #E0E0E0',
                       border: 'none',
                       cursor: 'pointer',
                     }}
                   >
                     Keep going
-                  </button>
-                  <button
+                  </motion.button>
+                  <motion.button
                     onClick={handleConfirmExit}
-                    className="flex-1 transition-transform active:scale-[0.98]"
+                    whileTap={{ y: 4, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } }}
+                    className="flex-1"
                     style={{
                       padding: '14px 0',
                       borderRadius: 16,
@@ -1108,7 +1087,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                     }}
                   >
                     Quit
-                  </button>
+                  </motion.button>
                 </div>
               </motion.div>
             </motion.div>

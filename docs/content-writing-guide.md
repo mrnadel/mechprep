@@ -157,10 +157,10 @@ Bad: "Nope! That's wrong. Obviously net pay is less because deductions are taken
 ## Content by Question Type
 
 ### `teaching` cards
-- `question` field: short title with one emoji at the start. Keep under 8 words.
+- `question` field: short title, no emojis. Keep under 8 words. The octopus mascot replaces emojis visually.
 - `explanation`: 1-2 sentences. The core concept, nothing more.
 - **No `options` array.** The numbered pill UI looks clickable but isn't. Put all info in `explanation`.
-- `hint`: one practical sentence (optional).
+- `hint`: one practical sentence (optional). Shown with a small mascot icon.
 
 ### `true-false`
 - Statement should be clear and unambiguous.

@@ -41,7 +41,7 @@ export const unit3: Unit = {
         },
         {
           id: "pf-u3-L1-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Classify each type of debt:",
           options: ["Mortgage on a home", "Credit card for clothes shopping", "Student loan for in-demand degree", "Payday loan for concert tickets", "Small business loan", "Store credit card for electronics"],
           buckets: ["Generally good debt", "Generally bad debt"],
@@ -434,7 +434,7 @@ export const unit3: Unit = {
         },
         {
           id: "pf-u3-L4-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which features belong to federal vs private student loans?",
           options: ["Income-driven repayment plans", "Interest rate set by bank/market", "Public Service Loan Forgiveness eligible", "No deferment during hardship", "Subsidized options available", "Often requires cosigner"],
           buckets: ["Federal loan feature", "Private loan feature"],
@@ -587,7 +587,7 @@ export const unit3: Unit = {
         },
         {
           id: "pf-u3-L5-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Smart car buying moves vs dealer traps:",
           options: ["Get pre-approved at your bank first", "Focus only on monthly payment", "Choose a 48-month or shorter loan", "Stretch to an 84-month loan for lower payments", "Buy a 2-3 year old certified used car", "Roll old car loan debt into new car loan"],
           buckets: ["Smart move", "Dealer trap"],
@@ -882,7 +882,7 @@ export const unit3: Unit = {
         },
         {
           id: "pf-u3-L7-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which description matches which method?",
           options: ["Attacks highest interest rate first", "Attacks smallest balance first", "Saves most money mathematically", "Provides fastest emotional wins", "Recommended by Dave Ramsey", "Preferred by math-focused people"],
           buckets: ["Avalanche method", "Snowball method"],
@@ -990,7 +990,7 @@ export const unit3: Unit = {
         },
         {
           id: "pf-u3-L8-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Good reason or bad reason to consolidate debt?",
           options: ["Lower your overall interest rate", "Free up credit card limits to spend more", "Simplify multiple payments into one", "Get a longer term to pay less per month (but more total)", "Save money on total interest paid", "Avoid dealing with the root spending problem"],
           buckets: ["Good reason", "Bad reason"],
@@ -1114,7 +1114,7 @@ export const unit3: Unit = {
         },
         {
           id: "pf-u3-L9-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Borrowing that usually makes sense vs borrowing that usually doesn't:",
           options: ["Mortgage on an affordable home", "Credit card for a vacation", "Business loan with a solid plan", "Payday loan for new clothes", "Student loan for a high-demand degree", "Financing furniture at 0% for 6 months (paid in full)"],
           buckets: ["Usually makes sense", "Usually doesn't"],
@@ -1224,7 +1224,7 @@ export const unit3: Unit = {
         },
         {
           id: "pf-u3-L10-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Good debt or bad debt?",
           options: ["Mortgage at 5%", "Credit card balance at 24% for shopping", "Student loan for nursing degree", "Payday loan at 400% APR", "Small business loan at 7%", "Store card debt for electronics"],
           buckets: ["Good debt", "Bad debt"],

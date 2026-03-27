@@ -305,10 +305,10 @@ describe('Lesson Progression', () => {
       expect(result.passed).toBe(true);
     });
 
-    it('marks lesson as NOT passed with <70% accuracy', () => {
+    it('completing a lesson always counts as passed (hearts gate progression)', () => {
       completeLessonWithAccuracy(50);
       const result = useCourseStore.getState().lessonResult!;
-      expect(result.passed).toBe(false);
+      expect(result.passed).toBe(true);
     });
 
     it('70% accuracy is the minimum passing threshold', () => {
@@ -345,12 +345,12 @@ describe('Lesson Progression', () => {
       expect(lp.stars).toBe(1); // first pass = 1 star
     });
 
-    it('does not increment attempts on failed attempt', () => {
+    it('always increments attempts on completion (hearts gate progression)', () => {
       completeLessonWithAccuracy(30);
       const courseData = useCourseStore.getState().courseData;
       const lessonId = courseData[0].lessons[0].id;
       const lp = useCourseStore.getState().progress.completedLessons[lessonId];
-      expect(lp.attempts).toBe(0); // failed = no attempt increment
+      expect(lp.attempts).toBe(1); // completing = attempt counted
     });
 
     it('awards XP based on accuracy multiplier', () => {

@@ -70,7 +70,7 @@ export const analytics = {
 
   // Fires on meaningful milestones
   milestone(props: {
-    type: 'achievement' | 'level_up' | 'streak' | 'onboarding_completed';
+    type: 'achievement' | 'level_up' | 'streak' | 'onboarding_completed' | 'course_intro_completed';
     name?: string;
     value?: number;
   }) {

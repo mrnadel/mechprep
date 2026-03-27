@@ -75,6 +75,11 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
 
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+        {/* Action title */}
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          Tap the correct area
+        </div>
+
         <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 10px' }}>
           <MoneyText text={question.question} />
         </h2>
@@ -208,12 +213,13 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: i * 0.06, type: 'spring', stiffness: 400, damping: 25 }}
-                  whileTap={!answered ? { scale: 0.92 } : undefined}
+                  whileTap={!answered ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                   style={{
                     padding: '10px 18px', borderRadius: 12, background: bg, border,
                     fontSize: 14, fontWeight: 700, color: textColor,
                     cursor: answered ? 'default' : 'pointer',
                     transition: 'background 0.2s, border 0.2s',
+                    boxShadow: answered ? 'none' : isSelected ? `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)` : '0 3px 0 #DCDCDC',
                   }}
                 >
                   {zone.label}

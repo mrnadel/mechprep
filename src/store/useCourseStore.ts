@@ -4,13 +4,13 @@ import { create } from 'zustand';
 import { persist, subscribeWithSelector } from 'zustand/middleware';
 import { loadUnitData, getCourseMetaForProfession } from '@/data/course/course-meta';
 import { topics } from '@/data/topics';
-import { toLocalDateString, getYesterdayString } from '@/lib/utils';
+import { toLocalDateString, getYesterdayString, shuffleArray } from '@/lib/utils';
 import { LIMITS, isUnitUnlocked } from '@/lib/pricing';
 import { useSubscriptionStore } from '@/hooks/useSubscription';
 import { useMasteryStore } from '@/store/useMasteryStore';
 import { useStore } from '@/store/useStore';
 import { useEngagementStore, grantTitle, grantFrame } from '@/store/useEngagementStore';
-import type { CourseProgress, ActiveLesson, LessonResult, PlacementTest, PlacementTestResult, Unit, Lesson } from '@/data/course/types';
+import type { CourseProgress, CourseIntroData, ActiveLesson, LessonResult, PlacementTest, PlacementTestResult, Unit, Lesson } from '@/data/course/types';
 import { generatePlacementQuestions, getFirstIncompleteUnitIndex, PLACEMENT_TEST_CONFIG } from '@/lib/placement-test';
 import type { AnswerEvent } from '@/data/mastery';
 import type { TopicId } from '@/data/types';
@@ -34,6 +34,8 @@ function isLessonContentLoaded(lesson: Lesson): boolean {
       return lesson.questions.length > 0;
   }
 }
+
+const MAX_SESSION_QUESTIONS = 10;
 
 /** Get gradable item IDs for the session based on lesson type. */
 function getSessionIds(lesson: Lesson): string[] {
@@ -102,6 +104,10 @@ interface CourseState {
   completePlacementTest: () => void;
   exitPlacementTest: () => void;
   dismissPlacementResult: () => void;
+
+  // Course intro
+  completeCourseIntro: (professionId: string, data: CourseIntroData) => void;
+  hasCourseIntro: (professionId: string) => boolean;
 
   // Practice bridging
   creditPracticeAnswer: (questionId: string, correct: boolean) => void;
@@ -216,8 +222,49 @@ export const useCourseStore = create<CourseState>()(
 
         const isGolden = golden === true;
 
-        // Generate session IDs based on lesson type
-        const sessionQuestionIds = getSessionIds(lesson);
+        // Generate session IDs based on lesson type, capped at MAX_SESSION_QUESTIONS
+        const allIds = getSessionIds(lesson);
+        let sessionQuestionIds: string[];
+
+        if (allIds.length <= MAX_SESSION_QUESTIONS) {
+          sessionQuestionIds = allIds;
+        } else {
+          const existing = get().progress.completedLessons[lesson.id];
+          const answered = new Set(existing?.answeredQuestionIds ?? []);
+          const correct = new Set(existing?.correctQuestionIds ?? []);
+
+          if (isGolden) {
+            // Golden: prefer unseen questions, fill rest randomly
+            const unseen = allIds.filter((id) => !answered.has(id));
+            const seen = allIds.filter((id) => answered.has(id));
+            sessionQuestionIds = [...shuffleArray(unseen), ...shuffleArray(seen)].slice(0, MAX_SESSION_QUESTIONS);
+          } else if (existing && existing.attempts > 0) {
+            // Retry: prefer incorrect questions, fill rest randomly
+            const incorrect = allIds.filter((id) => answered.has(id) && !correct.has(id));
+            const rest = allIds.filter((id) => !incorrect.includes(id));
+            sessionQuestionIds = [...shuffleArray(incorrect), ...shuffleArray(rest)].slice(0, MAX_SESSION_QUESTIONS);
+          } else {
+            // First attempt: random selection
+            sessionQuestionIds = shuffleArray(allIds).slice(0, MAX_SESSION_QUESTIONS);
+          }
+        }
+
+        // For experienced users (level 2+), remove teaching cards from standard lessons
+        const lessonType = lesson.type ?? 'standard';
+        if (lessonType === 'standard') {
+          const introData = get().progress.courseIntros?.[get().activeProfession];
+          const experienceLevel = introData?.experienceLevel ?? 0;
+          if (experienceLevel >= 2) {
+            const filtered = sessionQuestionIds.filter(id => {
+              const q = lesson.questions.find(q => q.id === id);
+              return q?.type !== 'teaching';
+            });
+            // Only apply if there are still real questions left
+            if (filtered.length > 0) {
+              sessionQuestionIds = filtered;
+            }
+          }
+        }
 
         set({
           activeLesson: {
@@ -306,9 +353,9 @@ export const useCourseStore = create<CourseState>()(
 
         const prevAttempts = existingProgress?.attempts ?? 0;
         const newAttempts = prevAttempts + 1;
-        const maxLevels = lesson.levels ?? 1;
+        const maxLevels = lesson.levels ?? 3;
         const stars = isGolden
-          ? Math.min(maxLevels, newAttempts) // Golden caps at lesson's max levels
+          ? maxLevels // Golden = mastered, always max stars
           : Math.min(newAttempts, maxLevels);
 
         // XP based on accuracy performance within this session
@@ -456,6 +503,7 @@ export const useCourseStore = create<CourseState>()(
         }
 
         set({
+          activeLesson: null,
           lessonResult: result,
           pendingCelebrations: celebrations,
           chapterJustCompleted,
@@ -699,6 +747,23 @@ export const useCourseStore = create<CourseState>()(
         set({ placementTestResult: null });
       },
 
+      completeCourseIntro: (professionId: string, data: CourseIntroData) => {
+        const { progress } = get();
+        set({
+          progress: {
+            ...progress,
+            courseIntros: {
+              ...(progress.courseIntros ?? {}),
+              [professionId]: data,
+            },
+          },
+        });
+      },
+
+      hasCourseIntro: (professionId: string) => {
+        return !!get().progress.courseIntros?.[professionId];
+      },
+
       creditPracticeAnswer: (questionId: string, correct: boolean) => {
         const courseData = get().courseData;
         let targetLessonId: string | null = null;
@@ -726,7 +791,26 @@ export const useCourseStore = create<CourseState>()(
             : prevCorrect;
 
           if (!existing) {
-            return state;
+            // Lesson not formally started yet. Create a minimal entry so
+            // practice-mode answers aren't silently lost.
+            return {
+              progress: {
+                ...state.progress,
+                completedLessons: {
+                  ...state.progress.completedLessons,
+                  [targetLessonId!]: {
+                    stars: 0,
+                    bestAccuracy: 0,
+                    attempts: 0,
+                    lastAttempted: new Date().toISOString().split('T')[0],
+                    passed: false as boolean,
+                    golden: false,
+                    answeredQuestionIds: newAnswered,
+                    correctQuestionIds: newCorrect,
+                  },
+                },
+              },
+            };
           }
 
           return {
@@ -1012,6 +1096,7 @@ export const useCourseStore = create<CourseState>()(
             lastActiveDate: persisted.progress.lastActiveDate ?? defaults.lastActiveDate,
             activeDays: (persisted.progress as any).activeDays ?? defaults.activeDays,
             completedLessons: migratedLessons,
+            courseIntros: (persisted.progress as any).courseIntros ?? undefined,
           },
         };
       },

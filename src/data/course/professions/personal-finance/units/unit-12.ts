@@ -175,7 +175,7 @@ export const unit12: Unit = {
         },
         {
           id: "pf-u12-L2-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which of these are commonly negotiable vs fixed?",
           options: ["Starting salary", "Sales tax rate", "Credit card APR", "Cable/internet bill", "Speeding ticket fine", "Medical bills"],
           buckets: ["Negotiable", "Usually fixed"],
@@ -289,7 +289,7 @@ export const unit12: Unit = {
         },
         {
           id: "pf-u12-L3-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each approach: healthy or unhealthy financial habit in a relationship?",
           options: [
             "Monthly money dates to review the budget together",
@@ -446,7 +446,7 @@ export const unit12: Unit = {
         },
         {
           id: "pf-u12-L4-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each activity: good money lesson for kids or counterproductive?",
           options: [
             "Three jars: Save, Spend, Give",
@@ -668,7 +668,7 @@ export const unit12: Unit = {
         },
         {
           id: "pf-u12-L6-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Classify each income stream as active or passive:",
           options: [
             "Freelance consulting",
@@ -788,7 +788,7 @@ export const unit12: Unit = {
         },
         {
           id: "pf-u12-L7-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Classify each item as an asset or a liability:",
           options: [
             "Your savings account ($5,000)",
@@ -1148,7 +1148,7 @@ export const unit12: Unit = {
         },
         {
           id: "pf-u12-L10-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each belief: growth mindset or limiting belief?",
           options: [
             "I can learn to manage money well",
@@ -1352,7 +1352,7 @@ export const unit12: Unit = {
         },
         {
           id: "pf-u12-L11-Q6",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each action: do it NOW (this month) or LATER (this year)?",
           options: [
             "Open a high-yield savings account",

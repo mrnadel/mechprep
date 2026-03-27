@@ -39,9 +39,13 @@ export const useMasteryStore = create<MasteryState>()(
             (e) => new Date(e.answeredAt).getTime() > cutoff
           );
 
+          // Shift sync index back by number of pruned (old) events,
+          // but never past what still exists
+          const removedCount = state.events.length - pruned.length;
+          const adjusted = Math.max(0, state.lastSyncedIndex - removedCount);
           return {
             events: [...pruned, event],
-            lastSyncedIndex: Math.min(state.lastSyncedIndex, pruned.length),
+            lastSyncedIndex: Math.min(adjusted, pruned.length),
           };
         });
       },

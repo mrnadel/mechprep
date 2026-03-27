@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEngagementStore, useComeback, useStreakEnhancements } from '@/store/useEngagementStore';
 import { comebackQuests } from '@/data/quests';
-import { Gem, Hand } from 'lucide-react';
+import { Gem } from 'lucide-react';
 import { GameButton } from '@/components/ui/GameButton';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 
 export function WelcomeBack() {
   const comeback = useComeback();
@@ -33,7 +34,7 @@ export function WelcomeBack() {
         exit={{ opacity: 0 }}
       >
         <motion.div
-          className="bg-gradient-to-b from-blue-500 to-blue-600 w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-2xl overflow-y-auto flex flex-col"
+          className="bg-[#1CB0F6] w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-2xl overflow-y-auto flex flex-col"
           role="dialog"
           aria-modal="true"
           aria-labelledby="welcome-back-title"
@@ -42,13 +43,21 @@ export function WelcomeBack() {
           exit={{ scale: 0.9, opacity: 0, y: 24 }}
           transition={{ type: 'spring', stiffness: 280, damping: 22 }}
         >
-          <FloatingParticles color="rgba(255,255,255,0.2)" intensity="normal" drift />
+          <FloatingParticles color="rgba(255,255,255,0.05)" intensity="subtle" drift />
 
           {/* Content — centered */}
-          <div className="flex-1 flex flex-col justify-center sm:flex-initial relative z-[1] p-6 text-white">
+          <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-6 pt-[12vh] sm:pt-8 text-white">
             <div className="text-center mb-5">
-              <div className="mb-3" aria-hidden="true"><img src="/badges/waving-hand.png" alt="" width={64} height={64} draggable={false} /></div>
-              <h2 id="welcome-back-title" className="text-2xl font-extrabold text-white mb-1">
+              <motion.div
+                className="mb-3"
+                aria-hidden="true"
+                initial={{ scale: 0.5, rotate: -10 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+              >
+                <MascotWithGlow pose="sleeping" size={150} />
+              </motion.div>
+              <h2 id="welcome-back-title" className="text-[26px] font-extrabold text-white mb-1">
                 Welcome back!
               </h2>
               <p className="text-sm text-white/60">We missed you.</p>

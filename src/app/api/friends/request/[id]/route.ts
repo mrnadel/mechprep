@@ -42,18 +42,26 @@ export async function PATCH(
   }
 
   if (action === 'accept') {
-    if (await isFriendCapReached(userId) || await isFriendCapReached(req.senderId)) {
-      return NextResponse.json({ error: 'Friends list full (max 50)' }, { status: 409 });
-    }
-
     const [low, high] = sortFriendPair(userId, req.senderId);
-    await db.transaction(async (tx) => {
-      await tx.insert(friendships).values({ userId: low, friendId: high });
-      await tx
-        .update(friendRequests)
-        .set({ status: 'accepted', updatedAt: new Date() })
-        .where(eq(friendRequests.id, requestId));
-    });
+
+    try {
+      await db.transaction(async (tx) => {
+        // Check caps inside transaction to prevent concurrent accepts exceeding the limit
+        if (await isFriendCapReached(userId) || await isFriendCapReached(req.senderId)) {
+          throw new Error('FRIEND_CAP');
+        }
+        await tx.insert(friendships).values({ userId: low, friendId: high });
+        await tx
+          .update(friendRequests)
+          .set({ status: 'accepted', updatedAt: new Date() })
+          .where(eq(friendRequests.id, requestId));
+      });
+    } catch (err) {
+      if (err instanceof Error && err.message === 'FRIEND_CAP') {
+        return NextResponse.json({ error: 'Friends list full (max 50)' }, { status: 409 });
+      }
+      throw err;
+    }
 
     return NextResponse.json({ status: 'accepted' });
   }

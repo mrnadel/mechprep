@@ -117,6 +117,7 @@ export function selectQuests(
 export function createQuests(
   definitions: QuestDefinition[],
   type: 'daily' | 'weekly',
+  scale: number = 1.0,
 ): Quest[] {
   return definitions.map((def) => ({
     definitionId: def.id,
@@ -124,7 +125,7 @@ export function createQuests(
     title: def.title,
     description: def.description,
     icon: def.icon,
-    target: def.target,
+    target: Math.max(1, Math.round(def.target * scale)),
     progress: 0,
     reward: { xp: def.reward.xp, gems: def.reward.gems },
     trackingKey: def.trackingKey,
@@ -132,6 +133,17 @@ export function createQuests(
     completed: false,
     claimed: false,
   }));
+}
+
+/** Map daily commitment minutes to a quest difficulty scale factor. */
+export function getCommitmentScale(dailyMinutes: number | undefined): number {
+  switch (dailyMinutes) {
+    case 5: return 0.6;
+    case 10: return 1.0;  // baseline
+    case 15: return 1.3;
+    case 20: return 1.6;
+    default: return 1.0;
+  }
 }
 
 // --------------- Reset Detection ---------------

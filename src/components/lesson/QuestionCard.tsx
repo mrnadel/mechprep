@@ -148,6 +148,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
 
     const handleWordTap = useCallback((word: string) => {
       if (answered) return;
+      let nextActive = 0;
       setFilledBlanks((prev) => {
         const next = [...prev];
         // Prefer first empty blank; if all filled, replace active blank
@@ -155,11 +156,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
         const targetIdx = emptyIdx !== -1 ? emptyIdx : activeBlankIdx;
         next[targetIdx] = word;
         // Advance active to next blank (wrapping)
-        const nextActive = (targetIdx + 1) % next.length;
-        // Defer state update to avoid nested setState
-        setTimeout(() => setActiveBlankIdx(nextActive), 0);
+        nextActive = (targetIdx + 1) % next.length;
         return next;
       });
+      // React 18+ batches both updates into a single render
+      setActiveBlankIdx(nextActive);
     }, [answered, activeBlankIdx]);
 
     const handleBlankTap = useCallback((blankIdx: number) => {
@@ -228,6 +229,13 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Question content - top area */}
         <div className="flex flex-col" style={{ gap: 12 }}>
+          {/* Action title */}
+          <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8 }}>
+            {question.type === 'multiple-choice' ? 'Choose the correct answer'
+              : question.type === 'true-false' ? 'True or false?'
+              : 'Fill in the blank'}
+          </div>
+
           {/* Diagram */}
           {question.diagram && <DiagramDisplay html={question.diagram} />}
 
@@ -346,7 +354,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               let textColor = '#3C3C3C';
               let badgeBg = '#F0F0F0';
               let badgeColor = '#AFAFAF';
-              let shadow = 'none';
+              let shadow = '0 3px 0 #DCDCDC';
 
               if (answered && localCorrect !== null) {
                 if (isCorrectOption) {
@@ -362,19 +370,21 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   textColor = '#EA2B2B';
                   badgeBg = '#FF4B4B';
                   badgeColor = 'white';
+                  shadow = 'none';
                 } else {
                   bg = '#F5F5F5';
                   border = '2px solid #EFEFEF';
                   textColor = '#CFCFCF';
                   badgeBg = '#E5E5E5';
                   badgeColor = '#CFCFCF';
+                  shadow = 'none';
                 }
               } else if (isSelected) {
                 bg = 'white';
                 border = `2.5px solid ${unitColor}`;
                 badgeBg = unitColor;
                 badgeColor = 'white';
-                shadow = `0 0 0 3px ${unitColor}20`;
+                shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;
               }
 
               // Answer reveal animation
@@ -398,8 +408,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                       ? { duration: 0.35 }
                       : { delay: displayIndex * 0.06, type: 'spring', stiffness: 400, damping: 25 }
                   }
-                  whileTap={!answered ? { scale: 0.97, transition: { duration: 0.1 } } : undefined}
-                  whileHover={!answered ? { scale: 1.01 } : undefined}
+                  whileTap={!answered ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                   className="w-full text-left flex items-center"
                   style={{
                     padding: '10px 14px',
@@ -456,7 +465,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               let bg = 'white';
               let border = '2px solid #E5E5E5';
               let textColor = '#3C3C3C';
-              let shadow = 'none';
+              let shadow = '0 3px 0 #DCDCDC';
 
               if (answered && localCorrect !== null) {
                 if (isCorrectOption) {
@@ -468,15 +477,17 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   bg = '#FFDFE0';
                   border = '2px solid #FF4B4B';
                   textColor = '#EA2B2B';
+                  shadow = 'none';
                 } else {
                   bg = '#F5F5F5';
                   border = '2px solid #EFEFEF';
                   textColor = '#CFCFCF';
+                  shadow = 'none';
                 }
               } else if (isSelected) {
                 bg = 'white';
                 border = `2.5px solid ${unitColor}`;
-                shadow = `0 0 0 3px ${unitColor}20`;
+                shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;
               }
 
               const revealAnimation = answered && localCorrect !== null
@@ -499,8 +510,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                       ? { duration: 0.35 }
                       : { delay: idx * 0.08, type: 'spring', stiffness: 400, damping: 25 }
                   }
-                  whileTap={!answered ? { scale: 0.95, transition: { duration: 0.1 } } : undefined}
-                  whileHover={!answered ? { scale: 1.02 } : undefined}
+                  whileTap={!answered ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                   className="flex items-center justify-center"
                   style={{
                     padding: '14px 16px',
@@ -531,8 +541,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   key={`${word}-${i}`}
                   onClick={() => available && handleWordTap(word)}
                   disabled={answered || !available}
-                  whileTap={!answered && available ? { scale: 0.9, transition: { duration: 0.1 } } : undefined}
-                  whileHover={!answered && available ? { scale: 1.04, y: -2 } : undefined}
+                  whileTap={!answered && available ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                   layout
                   initial={{ opacity: 0, y: 10, scale: 0.9 }}
                   animate={{

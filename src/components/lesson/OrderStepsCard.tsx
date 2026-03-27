@@ -81,6 +81,11 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
 
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+        {/* Action title */}
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          Put in the right order
+        </div>
+
         <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 12px' }}>
           <MoneyText text={question.question} />
         </h2>
@@ -164,7 +169,7 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
                   {!answered && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 2, flexShrink: 0 }}>
                       <motion.button
-                        whileTap={{ scale: 0.85 }}
+                        whileTap={position !== 0 ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                         onClick={() => moveItem(position, -1)}
                         disabled={position === 0}
                         style={{
@@ -173,12 +178,13 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
                           color: position === 0 ? '#CFCFCF' : unitColor,
                           fontSize: 14, fontWeight: 800, cursor: position === 0 ? 'default' : 'pointer',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          boxShadow: position === 0 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,
                         }}
                       >
                         ▲
                       </motion.button>
                       <motion.button
-                        whileTap={{ scale: 0.85 }}
+                        whileTap={position !== order.length - 1 ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                         onClick={() => moveItem(position, 1)}
                         disabled={position === order.length - 1}
                         style={{
@@ -187,6 +193,7 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
                           color: position === order.length - 1 ? '#CFCFCF' : unitColor,
                           fontSize: 14, fontWeight: 800, cursor: position === order.length - 1 ? 'default' : 'pointer',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          boxShadow: position === order.length - 1 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,
                         }}
                       >
                         ▼

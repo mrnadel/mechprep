@@ -560,7 +560,7 @@ export const unit11: Unit = {
         },
         {
           id: "pf-u11-L5-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this typically covered by a STANDARD homeowner's policy or NOT?",
           options: ["Fire damage", "Flood damage", "Theft of belongings", "Earthquake damage", "Windstorm damage", "Sewer backup"],
           buckets: ["Covered by standard policy", "NOT covered (need extra policy)"],
@@ -905,7 +905,7 @@ export const unit11: Unit = {
         },
         {
           id: "pf-u11-L8-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Is this insurance generally worth it or usually a waste?",
           options: ["Health insurance", "Extended warranty on a $50 toaster", "Homeowner's insurance", "Phone screen protection plan ($12/mo)", "Long-term disability insurance", "Identity theft insurance (with credit monitoring)"],
           buckets: ["Generally worth it", "Usually a waste"],
@@ -1209,7 +1209,7 @@ export const unit11: Unit = {
         },
         {
           id: "pf-u11-L10-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Does this LOWER or RAISE your insurance premium?",
           options: ["Raising your deductible from $500 to $1,000", "Filing multiple small claims", "Bundling auto + home insurance", "Having a poor credit score", "Installing a home security system", "Adding a teenage driver to auto policy"],
           buckets: ["Lowers your premium", "Raises your premium"],

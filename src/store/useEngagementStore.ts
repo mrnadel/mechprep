@@ -27,11 +27,13 @@ import {
   selectDailyQuests,
   selectWeeklyQuests,
   createQuests,
+  getCommitmentScale,
   getTodayDate,
   getCurrentWeekMonday,
   DAILY_QUEST_COUNT,
   WEEKLY_QUEST_COUNT,
 } from '@/lib/quest-engine';
+import { useCourseStore } from '@/store/useCourseStore';
 import {
   simulateCompetitorXp,
   getUserRank,
@@ -238,7 +240,9 @@ export const useEngagementStore = create<EngagementStore>()(
 
           const previousIds = dailyQuests.map((q) => q.definitionId);
           const newDefs = selectDailyQuests(previousIds.length > 0 ? previousIds : lastDailyQuestIds);
-          const newQuests = createQuests(newDefs, 'daily');
+          const { activeProfession, progress: courseProgress } = useCourseStore.getState();
+          const scale = getCommitmentScale(courseProgress.courseIntros?.[activeProfession]?.dailyMinutes);
+          const newQuests = createQuests(newDefs, 'daily', scale);
 
           set({
             dailyQuests: newQuests,
@@ -261,7 +265,9 @@ export const useEngagementStore = create<EngagementStore>()(
 
           const previousIds = weeklyQuests.map((q) => q.definitionId);
           const newDefs = selectWeeklyQuests(previousIds.length > 0 ? previousIds : lastWeeklyQuestIds);
-          const newQuests = createQuests(newDefs, 'weekly');
+          const { activeProfession: weeklyProf, progress: weeklyProgress } = useCourseStore.getState();
+          const weeklyScale = getCommitmentScale(weeklyProgress.courseIntros?.[weeklyProf]?.dailyMinutes);
+          const newQuests = createQuests(newDefs, 'weekly', weeklyScale);
 
           set({
             weeklyQuests: newQuests,

@@ -67,6 +67,11 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
 
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+        {/* Action title */}
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          Pick the best answer
+        </div>
+
         <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 6px' }}>
           <MoneyText text={question.question} />
         </h2>
@@ -84,7 +89,7 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
             fontSize: 12, fontWeight: 800, color: '#B8860B', marginBottom: 10,
           }}
         >
-          ⭐ All are valid — pick the BEST answer
+          All are valid, pick the BEST
         </motion.div>
 
         {question.hint && !answered && (
@@ -115,7 +120,7 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
             let border = '2px solid #E5E5E5';
             let textColor = '#3C3C3C';
             let starColor = '#D5D5D5';
-            let shadow = 'none';
+            let shadow = '0 3px 0 #DCDCDC';
 
             if (answered && localCorrect !== null) {
               if (isBest) {
@@ -129,17 +134,19 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
                 border = '2px solid #F59E0B';
                 textColor = '#B8860B';
                 starColor = '#F59E0B';
+                shadow = 'none';
               } else {
                 bg = '#F8F8F8';
                 border = '2px solid #EFEFEF';
                 textColor = '#AFAFAF';
                 starColor = '#E5E5E5';
+                shadow = 'none';
               }
             } else if (isSelected) {
               bg = 'white';
               border = `2.5px solid ${unitColor}`;
               starColor = '#FFD700';
-              shadow = `0 0 0 3px ${unitColor}20`;
+              shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;
             }
 
             const revealAnimation = answered && localCorrect !== null
@@ -162,8 +169,7 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
                     ? { duration: 0.35 }
                     : { delay: displayIdx * 0.07, type: 'spring', stiffness: 400, damping: 25 }
                 }
-                whileTap={!answered ? { scale: 0.97, transition: { duration: 0.1 } } : undefined}
-                whileHover={!answered ? { scale: 1.01 } : undefined}
+                whileTap={!answered ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
                 className="w-full text-left flex items-center"
                 style={{
                   padding: '12px 14px', borderRadius: 14, background: bg, border,

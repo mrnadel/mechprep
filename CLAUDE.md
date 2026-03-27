@@ -17,6 +17,9 @@ Before making changes, read `docs/project-overview.md` for full project context 
 - **Read `docs/content-writing-guide.md` before writing or editing any course content.** It defines tone, structure, question formatting, and banned patterns.
 - After changing content, always re-run the seed: `npx tsx scripts/seed-content.ts`
 
+## Modal Gallery
+- **Every new screen, modal, or overlay must be added to `modal-gallery.html`** so all UI states are catalogued in one place. After building a new screen, add a corresponding entry to the gallery file.
+
 ## UI Components
 - **Always check `src/components/ui/` for existing reusable components before writing inline UI.** Key components:
   - `PageHeader` — sticky header with back button, title, subtitle, icon

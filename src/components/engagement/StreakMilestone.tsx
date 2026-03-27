@@ -7,6 +7,7 @@ import type { StreakMilestoneDefinition } from '@/data/engagement-types';
 import { streakMilestones } from '@/data/streak-milestones';
 import { GameButton } from '@/components/ui/GameButton';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { Mascot } from '@/components/ui/Mascot';
 import {
   WeekWarriorIcon,
   FortnightFocusIcon,
@@ -69,7 +70,7 @@ export function StreakMilestone({ milestone, onClose }: Props) {
         </div>
 
         <motion.div
-          className="relative bg-gradient-to-b from-amber-400 to-orange-500 w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-2xl overflow-y-auto flex flex-col"
+          className="relative bg-[#E8850C] w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-2xl overflow-y-auto flex flex-col"
           role="dialog"
           aria-modal="true"
           aria-labelledby="streak-milestone-title"
@@ -78,17 +79,23 @@ export function StreakMilestone({ milestone, onClose }: Props) {
           exit={{ scale: 0.85, opacity: 0, y: 20 }}
           transition={{ type: 'spring', stiffness: 280, damping: 22 }}
         >
-          <FloatingParticles color="rgba(255,255,255,0.3)" intensity="celebration" />
+          <FloatingParticles color="rgba(255,255,255,0.05)" intensity="subtle" />
 
-          <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-8 text-center text-white">
+          <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-8 pt-[15vh] sm:pt-10 text-center text-white">
             <motion.div
-              className="inline-flex items-center justify-center w-24 h-24 rounded-full mb-4"
+              className="relative inline-flex items-center justify-center w-28 h-28 rounded-full mb-3"
               style={{ background: 'rgba(255,255,255,0.2)' }}
               initial={{ scale: 0.5, rotate: -10 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 18, delay: 0.1 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 18, delay: 0.15 }}
             >
-              <BadgeIcon size={56} />
+              <motion.div
+                className="absolute inset-[-12px] rounded-full"
+                style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%)' }}
+                animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.8, 0.4] }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              />
+              <BadgeIcon size={64} />
             </motion.div>
 
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-extrabold mb-3 bg-white/20 text-white">
@@ -96,7 +103,7 @@ export function StreakMilestone({ milestone, onClose }: Props) {
               {milestone.days}-Day Streak!
             </div>
 
-            <h2 id="streak-milestone-title" className="text-2xl font-extrabold text-white mb-2">
+            <h2 id="streak-milestone-title" className="text-[26px] font-extrabold text-white mb-2">
               {milestone.badgeName}
             </h2>
 

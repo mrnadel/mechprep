@@ -70,7 +70,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L1-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into cryptocurrency features vs traditional banking features:",
           options: ["Peer-to-peer transfers", "FDIC insurance", "24/7 trading", "Branch locations", "Pseudonymous transactions", "Chargebacks available"],
           buckets: ["Cryptocurrency", "Traditional banking"],
@@ -208,7 +208,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L2-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into the correct consensus mechanism:",
           options: ["Solving complex math puzzles", "Validators lock up their crypto as collateral", "Uses massive amounts of electricity", "Energy-efficient", "Bitcoin uses this", "Ethereum switched to this"],
           buckets: ["Proof of Work", "Proof of Stake"],
@@ -437,7 +437,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L4-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into what's built on Ethereum vs what Bitcoin does:",
           options: ["DeFi lending platforms", "Store of value / digital gold", "NFT marketplaces", "Simple peer-to-peer payments", "Decentralized apps (dApps)", "Limited scripting capability"],
           buckets: ["Ethereum ecosystem", "Bitcoin ecosystem"],
@@ -602,7 +602,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L5-Q7",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these coins into legitimate projects vs meme/speculative coins:",
           options: ["Ethereum (smart contracts platform)", "Dogecoin (started as a joke)", "Chainlink (oracle network)", "Shiba Inu (dog-themed meme)", "Solana (high-speed blockchain)", "SafeMoon (promised safe returns)"],
           buckets: ["Legitimate project", "Meme / speculative"],
@@ -661,7 +661,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L6-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into hot wallets vs cold wallets:",
           options: ["MetaMask (browser extension)", "Ledger Nano (USB device)", "Trust Wallet (mobile app)", "Trezor (hardware device)", "Coinbase Wallet (app)", "Paper wallet (printed keys)"],
           buckets: ["Hot wallet", "Cold wallet"],
@@ -783,7 +783,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L7-Q1",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these features into the right exchange type:",
           options: ["Customer support available", "No KYC/ID verification needed", "FDIC-insured USD deposits", "Trade directly from your wallet", "Regulated by government agencies", "Fully controlled by smart contracts"],
           buckets: ["Centralized exchange (CEX)", "Decentralized exchange (DEX)"],
@@ -926,7 +926,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L8-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into DeFi advantages vs DeFi risks:",
           options: ["No credit check needed", "Smart contract bugs/exploits", "Open 24/7/365", "No FDIC insurance", "Accessible to anyone with internet", "Unsustainable APY promises"],
           buckets: ["DeFi advantage", "DeFi risk"],
@@ -1076,7 +1076,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L9-Q5",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into NFT applications that are thriving vs ones that collapsed:",
           options: ["Event ticketing", "Profile picture collections", "Gaming item ownership", "Speculative art flipping", "Supply chain verification", "Virtual land speculation"],
           buckets: ["Thriving / growing", "Collapsed / dying"],
@@ -1291,7 +1291,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L11-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these behaviors into smart vs emotional crypto investing:",
           options: ["Buying consistently every month regardless of price", "Panic selling during a 30% dip", "Setting a loss limit before investing", "Checking the price every 10 minutes", "Only investing money you can afford to lose", "Going all-in after a friend says 'it's mooning!'"],
           buckets: ["Smart behavior", "Emotional behavior"],
@@ -1451,7 +1451,7 @@ export const unit8: Unit = {
         },
         {
           id: "pf-u8-L12-Q4",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into crypto portfolio best practices vs mistakes:",
           options: ["DCA buying on a weekly schedule", "Putting 50% of savings into crypto", "Keeping 60-70% of crypto in Bitcoin", "Chasing the latest trending altcoin", "Rebalancing when crypto exceeds target %", "Using rent money to buy during a dip"],
           buckets: ["Best practice", "Common mistake"],

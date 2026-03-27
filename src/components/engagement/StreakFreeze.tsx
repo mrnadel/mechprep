@@ -6,16 +6,19 @@ import {
   useEngagementStore,
   useStreakEnhancements,
   useGems,
+  useComeback,
   useEngagementActions,
 } from '@/store/useEngagementStore';
 import { GameButton } from '@/components/ui/GameButton';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 
 const REPAIR_COST = 50;
 
 export function StreakFreeze() {
   const streak = useStreakEnhancements();
   const gems = useGems();
+  const comeback = useComeback();
   const { repairStreak } = useEngagementActions();
 
   const dismissFreezeBanner = () => {
@@ -55,8 +58,8 @@ export function StreakFreeze() {
     );
   }
 
-  // --- Mode 2: Repair modal ---
-  if (streak.repairAvailable) {
+  // --- Mode 2: Repair modal (skip if WelcomeBack is handling repair inline) ---
+  if (streak.repairAvailable && !comeback.isInComebackFlow) {
     const canAfford = gems.balance >= REPAIR_COST;
     const gemsNeeded = REPAIR_COST - gems.balance;
 
@@ -75,21 +78,26 @@ export function StreakFreeze() {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="bg-gradient-to-b from-violet-500 to-purple-600 w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-xl overflow-y-auto flex flex-col"
+            className="bg-[#7B61D9] w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-xl overflow-y-auto flex flex-col"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 24 }}
           >
-            <FloatingParticles color="rgba(255,255,255,0.2)" intensity="normal" drift />
+            <FloatingParticles color="rgba(255,255,255,0.05)" intensity="subtle" drift />
 
             {/* Content — centered */}
-            <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-6 text-center text-white">
-              <div className="flex items-center justify-center mb-4">
-                <img src="/badges/broken-heart.png" alt="" width={72} height={72} draggable={false} />
-              </div>
+            <div className="flex-1 flex flex-col items-center sm:flex-initial relative z-[1] px-6 pt-[18vh] sm:pt-10 text-center text-white">
+              <motion.div
+                className="mb-2"
+                initial={{ scale: 0.5 }}
+                animate={{ scale: 1 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 15, delay: 0.1 }}
+              >
+                <MascotWithGlow pose="worried" size={150} />
+              </motion.div>
 
-              <h2 className="text-xl font-extrabold text-white mb-1">
+              <h2 className="text-[26px] font-extrabold text-white mb-1">
                 Your streak broke!
               </h2>
               <p className="text-sm text-white/60 mb-5">

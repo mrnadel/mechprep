@@ -48,7 +48,7 @@ export const unit5: Unit = {
         },
         {
           id: "pf-u5-L1-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which account should handle each task?",
           options: ["Paying rent", "Emergency fund", "Grocery shopping", "Vacation savings", "Monthly subscriptions", "Down payment fund"],
           buckets: ["Checking account", "Savings account"],
@@ -169,7 +169,7 @@ export const unit5: Unit = {
         },
         {
           id: "pf-u5-L2-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each feature to the institution where it's strongest:",
           options: ["Highest savings rates", "Most ATMs and branches", "Lowest loan rates", "Best mobile app", "Personalized service", "No monthly fees"],
           buckets: ["Big bank advantage", "Credit union / online advantage"],
@@ -398,7 +398,7 @@ export const unit5: Unit = {
         },
         {
           id: "pf-u5-L4-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort these into digital wallets vs P2P payment apps:",
           options: ["Apple Pay", "Venmo", "Google Pay", "Zelle", "Samsung Pay", "Cash App"],
           buckets: ["Digital wallet (tap to pay)", "P2P app (send to friends)"],
@@ -669,7 +669,7 @@ export const unit5: Unit = {
         },
         {
           id: "pf-u5-L6-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Which are funded by your taxes, and which are NOT?",
           options: ["Public school teachers", "Your Netflix subscription", "Interstate highways", "Your cell phone bill", "National parks", "Your rent"],
           buckets: ["Funded by taxes", "Not funded by taxes"],
@@ -1140,7 +1140,7 @@ export const unit5: Unit = {
         },
         {
           id: "pf-u5-L10-Q2",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Sort each into deduction or credit:",
           options: ["Standard deduction ($14,600)", "Child Tax Credit ($2,000)", "Mortgage interest deduction", "EITC (up to $7,430)", "Charitable donation deduction", "American Opportunity Credit ($2,500)"],
           buckets: ["Tax deduction", "Tax credit"],
@@ -1269,7 +1269,7 @@ export const unit5: Unit = {
         },
         {
           id: "pf-u5-L11-Q3",
-          type: "sort-buckets",
+          type: "category-swipe",
           question: "Free filing options vs paid options:",
           options: ["IRS Free File", "TurboTax Deluxe ($60+)", "FreeTaxUSA federal", "H&R Block in-person ($150+)", "Cash App Taxes", "Hiring a CPA ($200+)"],
           buckets: ["Free or very cheap", "Paid services"],
