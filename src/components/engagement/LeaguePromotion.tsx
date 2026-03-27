@@ -104,7 +104,7 @@ export function LeaguePromotion() {
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ type: 'spring', stiffness: 280, damping: 14, delay: 0.15 }}
                 >
-                  <LeagueImage tier={currentTier} size={80} />
+                  <LeagueImage tier={currentTier} size={120} />
                 </motion.div>
 
                 <motion.h2

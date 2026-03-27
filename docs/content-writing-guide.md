@@ -49,7 +49,7 @@ Like Duolingo, the first questions of every lesson should be almost impossible t
 ### Teaching cards
 - **Maximum 2 sentences** for the explanation. If you need more, split into two teaching cards.
 - Lead with the concept, not the backstory. No "Did you know...?" or "Here's the thing..."
-- `options` (key takeaway bullets): maximum 3, keep each under 12 words.
+- **Do NOT use `options` on teaching cards.** They render as numbered pill buttons that look clickable but aren't. Put all key info in the `explanation` text instead.
 - `hint`: one sentence. Practical, not philosophical.
 
 ### Questions
@@ -159,8 +159,8 @@ Bad: "Nope! That's wrong. Obviously net pay is less because deductions are taken
 ### `teaching` cards
 - `question` field: short title with one emoji at the start. Keep under 8 words.
 - `explanation`: 1-2 sentences. The core concept, nothing more.
-- `options`: 2-3 key takeaway bullets. Short phrases, not sentences.
-- `hint`: one practical sentence.
+- **No `options` array.** The numbered pill UI looks clickable but isn't. Put all info in `explanation`.
+- `hint`: one practical sentence (optional).
 
 ### `true-false`
 - Statement should be clear and unambiguous.
@@ -202,7 +202,7 @@ Bad: "Nope! That's wrong. Obviously net pay is less because deductions are taken
 Before submitting content, verify:
 
 - [ ] First question is easy enough that a new learner can't get it wrong
-- [ ] Teaching cards have max 2-sentence explanations
+- [ ] Teaching cards have max 2-sentence explanations and NO `options` array
 - [ ] No preachy, condescending, or guilt-tripping language
 - [ ] All explanations are 1-2 sentences
 - [ ] Numbers are written as numerals

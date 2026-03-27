@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 interface LeaderboardRowProps {
   rank: number;
   name: string;
@@ -21,10 +23,10 @@ const RANK_COLORS: Record<number, string> = {
   3: '#CD7F32',
 };
 
-const RANK_MEDALS: Record<number, string> = {
-  1: '\u{1F947}',
-  2: '\u{1F948}',
-  3: '\u{1F949}',
+const RANK_MEDAL_IMAGES: Record<number, string> = {
+  1: '/badges/medal-gold-sm.png',
+  2: '/badges/medal-silver-sm.png',
+  3: '/badges/medal-bronze-sm.png',
 };
 
 export function LeaderboardRow({
@@ -50,10 +52,12 @@ export function LeaderboardRow({
     >
       {/* Rank */}
       <span
-        className={`font-bold text-center flex-shrink-0 ${isTop3 ? 'text-base w-7' : 'text-sm w-6'}`}
+        className={`font-bold text-center flex-shrink-0 flex items-center justify-center ${isTop3 ? 'w-7' : 'text-sm w-6'}`}
         style={{ color: RANK_COLORS[rank] ?? '#D1D5DB' }}
       >
-        {RANK_MEDALS[rank] ?? rank}
+        {RANK_MEDAL_IMAGES[rank] ? (
+          <Image src={RANK_MEDAL_IMAGES[rank]} alt={`Rank ${rank}`} width={24} height={24} draggable={false} />
+        ) : rank}
       </span>
 
       {/* Avatar */}
