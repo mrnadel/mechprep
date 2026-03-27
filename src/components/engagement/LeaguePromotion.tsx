@@ -7,6 +7,7 @@ import { leagueTiers } from '@/data/league';
 import { LEAGUE_GEM_REWARD_PROMOTION } from '@/data/league';
 import { GameButton, type GameButtonVariant } from '@/components/ui/GameButton';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
+import { LeagueImage } from '@/components/icons/LeagueImage';
 
 export function LeaguePromotion() {
   const league = useLeague();
@@ -103,7 +104,7 @@ export function LeaguePromotion() {
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ type: 'spring', stiffness: 280, damping: 14, delay: 0.15 }}
                 >
-                  {content.emoji}
+                  <LeagueImage tier={currentTier} size={80} />
                 </motion.div>
 
                 <motion.h2

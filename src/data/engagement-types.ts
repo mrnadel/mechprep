@@ -129,6 +129,7 @@ export interface LeagueTier {
   tier: 1 | 2 | 3 | 4 | 5;
   name: string;
   icon: string;
+  image: string;
   color: string;
   promoteCount: number;
   demoteCount: number;

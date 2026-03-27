@@ -7,6 +7,7 @@ import { useStore } from '@/store/useStore';
 import { leagueTiers } from '@/data/league';
 import { getUserRank, getTierConfig } from '@/lib/league-simulator';
 import { CompetitorAvatar } from './CompetitorAvatar';
+import { LeagueImage } from '@/components/icons/LeagueImage';
 
 export function LeagueBoard() {
   const league = useLeague();
@@ -64,7 +65,7 @@ export function LeagueBoard() {
         className="px-4 py-4 flex items-center gap-3 border-b border-gray-100"
         style={{ background: `${tier.color}14` }}
       >
-        <span className="text-3xl">{tier.icon}</span>
+        <LeagueImage tier={tier} size={48} />
         <div>
           <h2 className="text-lg font-extrabold text-gray-800">{tier.name} League</h2>
           <p className="text-xs text-gray-500">

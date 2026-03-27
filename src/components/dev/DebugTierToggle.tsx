@@ -7,6 +7,7 @@ import { useEngagementStore } from '@/store/useEngagementStore';
 import { useStore } from '@/store/useStore';
 import { getTotalLessonsMeta, loadUnitData, courseMeta } from '@/data/course/course-meta';
 import { leagueTiers } from '@/data/league';
+import { LeagueImage } from '@/components/icons/LeagueImage';
 import { levels, getLevelForXp } from '@/data/levels';
 import { LevelBadge } from '@/components/engagement/LevelBadge';
 import { getUnitTheme } from '@/lib/unitThemes';
