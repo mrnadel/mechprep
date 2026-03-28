@@ -38,30 +38,22 @@ export default function PlacementTestResult() {
     <AnimatePresence>
       <motion.div
         key="placement-result"
-        className="fixed inset-0 z-[70] flex items-center justify-center sm:p-4"
-        style={{ background: 'rgba(0,0,0,0.55)' }}
+        className="fixed inset-0 z-[70] flex flex-col overflow-hidden"
+        style={{ background: passed ? '#58A700' : '#CE3030' }}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Placement test result"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <motion.div
-          className="w-full h-full sm:h-auto sm:max-w-sm sm:rounded-2xl sm:shadow-2xl overflow-y-auto flex flex-col"
-          style={{ background: passed ? '#58A700' : '#CE3030' }}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Placement test result"
-          initial={{ scale: 0.9, opacity: 0, y: 24 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0.9, opacity: 0, y: 24 }}
-          transition={{ type: 'spring', stiffness: 280, damping: 22 }}
-        >
           <FloatingParticles
             color="rgba(255,255,255,0.06)"
             intensity={passed ? 'celebration' : 'subtle'}
           />
 
           {/* Content */}
-          <div className="flex-1 flex flex-col items-center justify-center sm:flex-initial relative z-[1] p-6 text-white">
+          <div className="flex-1 flex flex-col items-center justify-center relative z-[1] p-6 text-white">
             {/* Mascot */}
             <motion.div
               className="mb-4"
@@ -108,7 +100,7 @@ export default function PlacementTestResult() {
           </div>
 
           {/* Footer */}
-          <div className="shrink-0 px-6 pb-8 sm:pb-5 relative z-[1]">
+          <div className="shrink-0 px-6 pb-10 relative z-[1]">
             <GameButton
               variant={passed ? 'gold' : 'red'}
               onClick={dismiss}
@@ -116,7 +108,6 @@ export default function PlacementTestResult() {
               {passed ? 'Continue' : 'Start from the beginning'}
             </GameButton>
           </div>
-        </motion.div>
       </motion.div>
     </AnimatePresence>
   );
