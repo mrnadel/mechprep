@@ -40,6 +40,3 @@ self.addEventListener('notificationclick', (event) => {
   );
 });
 
-// ─── Minimal fetch handler for PWA install prompt ──────────
-
-self.addEventListener('fetch', () => {});
