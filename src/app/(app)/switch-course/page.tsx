@@ -4,11 +4,13 @@ import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import { ProfessionPicker } from '@/components/profession/ProfessionPicker';
 import { useCourseStore } from '@/store/useCourseStore';
+import { useCourseAccess } from '@/hooks/useCourseAccess';
 
 export default function SwitchCoursePage() {
   const router = useRouter();
   const activeProfession = useCourseStore((s) => s.activeProfession);
   const setActiveProfession = useCourseStore((s) => s.setActiveProfession);
+  const grantedCourses = useCourseAccess();
 
   const handleSelect = (id: string) => {
     setActiveProfession(id);
@@ -31,6 +33,7 @@ export default function SwitchCoursePage() {
       <ProfessionPicker
         selectedId={activeProfession}
         onSelect={handleSelect}
+        grantedCourses={grantedCourses}
       />
     </div>
   );
