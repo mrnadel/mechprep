@@ -65,12 +65,12 @@ export function FullScreenModal({
             </button>
           )}
 
-          <div className={`flex-1 flex flex-col items-center relative z-[1] px-6 text-center text-white ${fullScreen ? 'pt-[12vh]' : 'pt-[15vh]'}`}>
+          <div className={`flex-1 flex flex-col items-center relative z-[1] px-6 text-center text-white w-full max-w-3xl mx-auto ${fullScreen ? 'pt-[12vh]' : 'pt-[15vh]'}`}>
             {children}
           </div>
 
           {footer && (
-            <div className="shrink-0 px-6 pb-10 relative z-[1]">
+            <div className="shrink-0 px-6 pb-10 relative z-[1] w-full max-w-3xl mx-auto">
               {footer}
             </div>
           )}
