@@ -52,7 +52,7 @@ export function ScreenFX({ effect, type, active = true, className }: ScreenFXPro
   return (
     <div
       ref={ref}
-      className={`absolute inset-0 overflow-hidden pointer-events-none z-0 ${className ?? ''}`}
+      className={`absolute inset-0 pointer-events-none z-0 ${className ?? ''}`}
     />
   );
 }

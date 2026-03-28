@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react';
 import { MotionConfig } from 'framer-motion';
+// scrollLockDisabled is mutated via require() in useEffect below
 
 // Real components
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
@@ -235,13 +236,13 @@ export default function GalleryClient() {
   const [filter, setFilter] = useState<string | null>(null);
   const [activeScreen, setActiveScreen] = useState<string | null>(null);
 
-  // Force body scroll (FullScreenModal's useScrollLock fights this)
+  // Disable scroll locking globally so modals don't lock the gallery page
   useEffect(() => {
-    const interval = setInterval(() => {
-      document.body.style.overflow = 'auto';
-      document.documentElement.style.overflow = 'auto';
-    }, 200);
-    return () => clearInterval(interval);
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const mod = require('@/hooks/useScrollLock');
+    mod.scrollLockDisabled = true;
+    document.body.style.overflow = '';
+    return () => { mod.scrollLockDisabled = false; };
   }, []);
 
   const filtered = filter ? SCREENS.filter((s) => s.section === filter) : SCREENS;
