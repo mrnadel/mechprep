@@ -4,14 +4,14 @@ import { useEffect } from 'react';
 let lockCount = 0;
 
 /**
- * Set this to true to globally disable scroll locking.
- * Used by the dev gallery to prevent modals from locking the page.
+ * Mutable config for scroll locking.
+ * Set scrollLockConfig.disabled = true to globally disable (used by dev gallery).
  */
-export let scrollLockDisabled = false;
+export const scrollLockConfig = { disabled: false };
 
 export function useScrollLock(active: boolean) {
   useEffect(() => {
-    if (!active || scrollLockDisabled) return;
+    if (!active || scrollLockConfig.disabled) return;
     lockCount++;
     document.body.style.overflow = 'hidden';
     return () => {
