@@ -1,9 +1,11 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useDbSync } from '@/hooks/useDbSync';
 import { DebugTierToggle } from '@/components/dev/DebugTierToggle';
 import { useEngagementInit } from '@/lib/engagement-init';
+import { useFlagStore } from '@/hooks/useFeatureFlags';
 import Footer from '@/components/layout/Footer';
 import MobileBottomNav from '@/components/layout/MobileBottomNav';
 import DesktopSideNav from '@/components/layout/DesktopSideNav';
@@ -14,6 +16,11 @@ import { PushPrompt } from '@/components/engagement/PushPrompt';
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { status } = useSession();
   const { isHydrated } = useDbSync();
+
+  // Load feature flags from DB
+  const loadFlags = useFlagStore((s) => s.load);
+  const flagsLoaded = useFlagStore((s) => s.loaded);
+  useEffect(() => { if (!flagsLoaded) loadFlags(); }, [loadFlags, flagsLoaded]);
 
   // Initialize engagement systems (streak freeze, quests, league, comeback)
   // Wait for DB hydration so init doesn't run with empty/stale state

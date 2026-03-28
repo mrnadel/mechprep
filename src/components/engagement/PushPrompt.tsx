@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, X } from 'lucide-react';
 import { usePushNotifications } from '@/hooks/usePushNotifications';
 import { useStore } from '@/store/useStore';
+import { useFeatureFlag } from '@/hooks/useFeatureFlags';
 
 const DISMISSED_KEY = 'push-prompt-dismissed';
 const MIN_LESSONS_BEFORE_PROMPT = 2;
@@ -17,6 +18,9 @@ export function PushPrompt() {
   const { state, subscribe } = usePushNotifications();
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(true);
+  const flagEnabled = useFeatureFlag('prompts.push');
+
+  if (!flagEnabled) return null;
 
   const totalQuestions = useStore((s) => s.progress.totalQuestionsAttempted);
 

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Sparkles, Heart, Shield, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { useSubscription } from '@/hooks/useSubscription';
+import { useFeatureFlag } from '@/hooks/useFeatureFlags';
 import { analytics } from '@/lib/mixpanel';
 import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
@@ -15,9 +16,10 @@ const SHOWN_KEY = 'mechready-trial-prompt-shown';
 export function TrialPromptModal() {
   const [isOpen, setIsOpen] = useState(false);
   const { isProUser } = useSubscription();
+  const flagEnabled = useFeatureFlag('prompts.trial');
 
   useEffect(() => {
-    if (isProUser || typeof window === 'undefined' || localStorage.getItem(SHOWN_KEY)) return;
+    if (!flagEnabled || isProUser || typeof window === 'undefined' || localStorage.getItem(SHOWN_KEY)) return;
     const timer = setTimeout(() => { setIsOpen(true); localStorage.setItem(SHOWN_KEY, '1'); analytics.feature('trial_prompt_shown', {}); }, 2500);
     return () => clearTimeout(timer);
   }, [isProUser]);

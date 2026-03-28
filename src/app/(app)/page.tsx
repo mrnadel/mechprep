@@ -9,6 +9,7 @@ import { useStore } from '@/store/useStore';
 import { useEngagementStore, grantTitle, grantFrame } from '@/store/useEngagementStore';
 import { streakMilestones } from '@/data/streak-milestones';
 import { DailyGoalBar } from '@/components/course/DailyGoalBar';
+import { useFeatureFlag } from '@/hooks/useFeatureFlags';
 import { analytics } from '@/lib/mixpanel';
 
 // Lazy-load heavy components that are conditionally rendered
@@ -49,13 +50,22 @@ export default function HomePage() {
   const milestonesReached = useEngagementStore((s) => s.streak.milestonesReached);
   const addGems = useEngagementStore((s) => s.addGems);
 
+  // Feature flags
+  const flagLeagues = useFeatureFlag('engagement.leagues');
+  const flagStreaks = useFeatureFlag('engagement.streaks');
+  const flagCelebrations = useFeatureFlag('engagement.celebrations');
+  const flagComeback = useFeatureFlag('engagement.comeback_flow');
+  const flagDailyGoal = useFeatureFlag('ui.daily_goal_bar');
+  const flagIntroFlow = useFeatureFlag('course.intro_flow');
+  const flagPlacementTest = useFeatureFlag('course.placement_test');
+
   // Course intro flow: show when user hasn't completed intro for current profession
   // Skip for existing users who already have lesson progress (pre-feature migration)
   const completedLessons = useCourseStore((s) => s.progress.completedLessons);
   const hasExistingProgress = Object.keys(completedLessons).length > 0;
   const hasIntro = !!courseIntros?.[activeProfession];
   const [introDismissed, setIntroDismissed] = useState(false);
-  const showCourseIntro = !introDismissed && !hasExistingProgress && !hasIntro;
+  const showCourseIntro = flagIntroFlow && !introDismissed && !hasExistingProgress && !hasIntro;
 
   // Detect streak milestone to show
   const [shownMilestone, setShownMilestone] = useState<number | null>(null);
@@ -144,13 +154,13 @@ export default function HomePage() {
         </Suspense>
       )}
 
-      {/* Overlays - lazy loaded since they're conditional modals */}
+      {/* Overlays - lazy loaded, gated by feature flags */}
       <Suspense fallback={null}>
-        <WelcomeBack />
-        <LeagueWinner />
-        <LeaguePromotion />
-        <StreakFreeze />
-        {unclaimedMilestone && shownMilestone === unclaimedMilestone.days && (
+        {flagComeback && <WelcomeBack />}
+        {flagLeagues && <LeagueWinner />}
+        {flagLeagues && <LeaguePromotion />}
+        {flagStreaks && <StreakFreeze />}
+        {flagStreaks && unclaimedMilestone && shownMilestone === unclaimedMilestone.days && (
           <StreakMilestone milestone={unclaimedMilestone} onClose={handleMilestoneClose} />
         )}
       </Suspense>
@@ -159,30 +169,30 @@ export default function HomePage() {
       <CourseHeader />
 
       {/* Daily goal progress */}
-      <DailyGoalBar />
+      {flagDailyGoal && <DailyGoalBar />}
 
       {/* Course map */}
       <CourseMap />
 
       <Suspense fallback={null}>
         {activeLesson && <LessonView />}
-        {activePlacementTest && <PlacementTestView />}
-        {placementTestResult && <PlacementTestResult />}
+        {flagPlacementTest && activePlacementTest && <PlacementTestView />}
+        {flagPlacementTest && placementTestResult && <PlacementTestResult />}
         {lessonResult && <ResultScreen />}
-        {!lessonResult && pendingCelebrations.length > 0 && pendingCelebrations[0].type === 'level-up' && (
+        {flagCelebrations && !lessonResult && pendingCelebrations.length > 0 && pendingCelebrations[0].type === 'level-up' && (
           <LevelUpCelebration
             reward={pendingCelebrations[0].reward}
             onClose={dismissNextCelebration}
           />
         )}
-        {!lessonResult && pendingCelebrations.length === 0 && chapterJustCompleted && (
+        {flagCelebrations && !lessonResult && pendingCelebrations.length === 0 && chapterJustCompleted && (
           <BlueprintCelebration
             unitIndex={chapterJustCompleted.unitIndex}
             isGolden={chapterJustCompleted.isGolden}
             onDismiss={dismissChapterCompletion}
           />
         )}
-        {!lessonResult && pendingCelebrations.length === 0 && !chapterJustCompleted && courseJustCompleted && (
+        {flagCelebrations && !lessonResult && pendingCelebrations.length === 0 && !chapterJustCompleted && courseJustCompleted && (
           <CourseCompleteCelebration onDismiss={dismissCourseCompletion} />
         )}
       </Suspense>
