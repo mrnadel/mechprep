@@ -30,50 +30,30 @@ function useAnimatedFill(target: number, delay: number) {
 /* ── Demo questions for interactive landing ── */
 const DEMO_QUESTIONS = [
   {
-    topic: 'Statics', topicColor: '#10B981', typeLabel: 'Multiple Choice',
-    question: 'A beam is supported at both ends. Where should you place a load to maximize the reaction force at the left support?',
-    options: ['Directly at the left support', 'At the center of the beam', 'At the right support', "It doesn't matter — both supports share equally"],
+    topic: 'Everyday Physics', topicColor: '#14B8A6',
+    question: 'Why does a wet phone screen stop responding to your touch?',
+    options: ['Water conducts electricity and confuses the sensor', 'Your fingers lose their charge when wet', 'The screen glass gets too slippery', 'Water blocks Bluetooth signals'],
     correctIndex: 0,
-    explanation: "Placing the load closer to a support increases that support's reaction. At the left end, the left support carries nearly all the load — a key equilibrium concept.",
+    explanation: 'Touchscreens detect tiny electrical signals from your fingertip. Water conducts electricity too, creating false touches everywhere.',
     xp: 20,
   },
   {
-    topic: 'Thermodynamics', topicColor: '#22C55E', typeLabel: 'True / False',
-    question: 'A refrigerator violates the second law of thermodynamics because it transfers heat from a cold space to a warmer room.',
-    options: ['True', 'False'],
-    correctIndex: 1,
-    explanation: "The 2nd law only forbids spontaneous heat flow from cold to hot. A refrigerator uses compressor work to move heat — perfectly allowed by the Clausius statement.",
+    topic: 'Quick Think', topicColor: '#F59E0B',
+    question: 'Is it true that hot water freezes faster than cold water?',
+    options: ['Yes, it can', 'No, never'],
+    correctIndex: 0,
+    explanation: "It's called the Mpemba effect. Under certain conditions, hot water actually does freeze faster. Scientists still debate exactly why.",
     xp: 15,
   },
   {
-    topic: 'Materials', topicColor: '#3B82F6', typeLabel: 'Multiple Choice',
-    question: 'Why does adding a small percentage of carbon to iron dramatically increase its strength?',
-    options: ['Carbon atoms block dislocation movement in the crystal lattice', 'Carbon makes the iron lighter and more flexible', 'Carbon prevents all forms of corrosion', 'Carbon increases the melting point above 3,000°C'],
+    topic: 'Real World', topicColor: '#8B5CF6',
+    question: 'Why do bridges have expansion joints (gaps) in them?',
+    options: ['So the bridge can expand in heat without cracking', 'To let rainwater drain through', 'To reduce the weight of the bridge', 'For decoration and visual appeal'],
     correctIndex: 0,
-    explanation: "Carbon atoms act as obstacles to dislocation motion in the iron lattice, dramatically increasing yield strength — the fundamental principle behind all carbon steels.",
+    explanation: 'Materials expand when heated. Without gaps, a bridge could buckle on a hot day. Expansion joints give the structure room to grow and shrink safely.',
     xp: 20,
   },
 ];
-
-/* ── Animated count-up ── */
-function useCountUp(target: number, dur = 500) {
-  const [val, setVal] = useState(0);
-  const prev = useRef(0);
-  useEffect(() => {
-    if (target === prev.current) return;
-    const from = prev.current;
-    const diff = target - from;
-    const t0 = performance.now();
-    const step = (now: number) => {
-      const t = Math.min((now - t0) / dur, 1);
-      setVal(Math.round(from + diff * (1 - Math.pow(1 - t, 3))));
-      if (t < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-    prev.current = target;
-  }, [target, dur]);
-  return val;
-}
 
 /* ── Scroll-triggered fade-in ── */
 function AnimateIn({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -253,7 +233,7 @@ export function LandingPage() {
               textAlign: 'center', fontSize: 13, fontWeight: 800,
               textTransform: 'uppercase', letterSpacing: 1.5, color: '#0F766E', marginBottom: 16,
             }}>
-              Try it yourself
+              Try it now
             </div>
           </AnimateIn>
           <AnimateIn delay={0.1}>
@@ -261,7 +241,7 @@ export function LandingPage() {
               textAlign: 'center', fontWeight: 900,
               color: '#3D4654', marginBottom: 40, letterSpacing: -0.5,
             }}>
-              Answer a real interview question
+              Can you get all 3 right?
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.2}>
@@ -520,7 +500,7 @@ export function LandingPage() {
         @keyframes demoFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes demoPopIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
         .demo-option { font-family: inherit; }
-        .demo-option:not(:disabled):hover { border-color: #0D9488 !important; background: #F0FDFA !important; transform: translateY(-1px); }
+        .demo-option:not(:disabled):hover { border-color: #14B8A6 !important; background: #F0FDFA !important; transform: translateY(-1px); }
         .demo-option:not(:disabled):active { transform: translateY(1px); box-shadow: none !important; }
         .demo-next-btn { font-family: inherit; }
         .demo-next-btn:hover { filter: brightness(1.05); }
@@ -585,108 +565,120 @@ export function LandingPage() {
 function InteractiveDemo() {
   const [qIdx, setQIdx] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
-  const [stats, setStats] = useState({ xp: 0, answered: 0, correct: 0 });
+  const [correct, setCorrect] = useState(0);
   const [showFeedback, setShowFeedback] = useState(false);
-  const [achievement, setAchievement] = useState(false);
   const done = qIdx >= DEMO_QUESTIONS.length;
   const q = DEMO_QUESTIONS[done ? 0 : qIdx];
   const isRight = selected !== null && selected === q.correctIndex;
-  const animXp = useCountUp(stats.xp);
-  const totalXp = 70;
-  const accuracy = stats.answered > 0 ? Math.round((stats.correct / stats.answered) * 100) : 0;
+
   function pick(idx: number) {
     if (selected !== null || done) return;
     setSelected(idx);
-    const correct = idx === DEMO_QUESTIONS[qIdx].correctIndex;
     setTimeout(() => {
-      setStats(p => ({ xp: p.xp + (correct ? DEMO_QUESTIONS[qIdx].xp : 5), answered: p.answered + 1, correct: p.correct + (correct ? 1 : 0) }));
+      if (idx === DEMO_QUESTIONS[qIdx].correctIndex) setCorrect(c => c + 1);
       setShowFeedback(true);
-      if (correct && stats.correct === 0 && !achievement) setTimeout(() => setAchievement(true), 300);
-    }, 500);
+    }, 400);
   }
   function next() { setQIdx(i => i + 1); setSelected(null); setShowFeedback(false); }
-  function restart() { setQIdx(0); setSelected(null); setShowFeedback(false); setStats({ xp: 0, answered: 0, correct: 0 }); setAchievement(false); }
+  function restart() { setQIdx(0); setSelected(null); setShowFeedback(false); setCorrect(0); }
 
   if (done) {
     return (
-      <div style={{ background: '#fff', borderRadius: 16, border: '2px solid #0D9488', padding: 32, textAlign: 'center', boxShadow: '0 4px 24px rgba(13, 148, 136, 0.12)' }}>
-        <div style={{ width: 72, height: 72, borderRadius: '50%', margin: '0 auto 20px', background: 'linear-gradient(135deg, #0D9488, #FFD54F)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <svg viewBox="0 0 24 24" fill="none" width="36" height="36"><path d="M20 6L9 17l-5-5" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+      <div style={{ background: '#fff', borderRadius: 20, border: '2px solid #0D9488', padding: '40px 32px', textAlign: 'center', boxShadow: '0 4px 24px rgba(13, 148, 136, 0.10)' }}>
+        <div style={{ fontSize: 48, marginBottom: 16 }}>{correct === DEMO_QUESTIONS.length ? '\uD83C\uDF89' : '\uD83D\uDCAA'}</div>
+        <div style={{ fontSize: 26, fontWeight: 900, color: '#0F172A', marginBottom: 8 }}>
+          {correct === DEMO_QUESTIONS.length ? 'Perfect!' : 'Nice try!'}
         </div>
-        <div style={{ fontSize: 24, fontWeight: 900, color: '#0F172A', marginBottom: 8 }}>Nice work!</div>
-        <div style={{ fontSize: 15, fontWeight: 600, color: '#64748B', marginBottom: 28 }}>You got {stats.correct} of {stats.answered} correct</div>
-        <div className="demo-final-stats" style={{ display: 'flex', justifyContent: 'center', gap: 32, marginBottom: 28 }}>
-          {[{ val: stats.xp, label: 'XP Earned' }, { val: `${accuracy}%`, label: 'Accuracy' }, { val: stats.correct, label: 'Correct' }].map((s) => (
-            <div key={s.label} style={{ textAlign: 'center' }}><div style={{ fontSize: 28, fontWeight: 900, color: '#0F172A' }}>{s.val}</div><div style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: 0.5, marginTop: 4 }}>{s.label}</div></div>
-          ))}
+        <div style={{ fontSize: 16, fontWeight: 600, color: '#64748B', marginBottom: 32 }}>
+          You got {correct} of {DEMO_QUESTIONS.length} right
         </div>
-        <div style={{ fontSize: 14, fontWeight: 700, color: '#94A3B8', marginBottom: 24 }}>{PROFESSIONS.reduce((sum, p) => sum + p.questionCount, 0).toLocaleString()}+ questions across {PROFESSIONS.length} professions</div>
+        <div style={{ fontSize: 14, fontWeight: 600, color: '#94A3B8', marginBottom: 28 }}>
+          Imagine this with {PROFESSIONS.reduce((sum, p) => sum + p.questionCount, 0).toLocaleString()}+ questions across {PROFESSIONS.length} professions
+        </div>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/get-started" className="landing-btn-primary" style={{ display: 'inline-block', background: '#0D9488', color: '#fff', fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, padding: '14px 32px', border: 'none', borderRadius: 16, boxShadow: '0 5px 0 #0F766E', textDecoration: 'none' }}>Keep playing</Link>
-          <button onClick={restart} className="demo-restart-btn" style={{ background: 'none', border: '2px solid #E2E8F0', borderRadius: 16, padding: '12px 24px', fontSize: 14, fontWeight: 700, color: '#64748B', cursor: 'pointer' }}>Try again</button>
+          <Link href="/get-started" className="landing-btn-primary" style={{ display: 'inline-block', background: '#0D9488', color: '#fff', fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, padding: '14px 32px', border: 'none', borderRadius: 16, boxShadow: '0 5px 0 #0F766E', textDecoration: 'none' }}>Start learning free</Link>
+          <button onClick={restart} className="demo-restart-btn" style={{ background: 'none', border: '2px solid #E2E8F0', borderRadius: 16, padding: '12px 24px', fontSize: 14, fontWeight: 700, color: '#64748B', cursor: 'pointer' }}>Play again</button>
         </div>
       </div>
     );
   }
 
   return (
-    <div style={{ background: '#fff', borderRadius: 16, border: '1px solid #E2E8F0', overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
-      <div style={{ height: 4, background: '#F1F5F9' }}><div style={{ height: '100%', background: 'linear-gradient(90deg, #0D9488, #FFD54F)', width: `${(qIdx / DEMO_QUESTIONS.length) * 100}%`, transition: 'width 0.5s ease', borderRadius: '0 4px 4px 0' }} /></div>
-      <div className="demo-card-inner" style={{ padding: 32 }}>
-        <div className="demo-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20, flexWrap: 'wrap', gap: 8 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            {DEMO_QUESTIONS.map((_, i) => (<div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: i < qIdx ? '#0D9488' : i === qIdx ? q.topicColor : '#E2E8F0', transition: 'background 0.3s' }} />))}
-            <span style={{ fontSize: 13, fontWeight: 700, color: '#94A3B8', marginLeft: 4 }}>{qIdx + 1} / {DEMO_QUESTIONS.length}</span>
+    <div style={{ background: '#fff', borderRadius: 20, border: '1px solid #E2E8F0', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+      {/* Progress bar */}
+      <div style={{ height: 4, background: '#F1F5F9' }}>
+        <div style={{ height: '100%', background: '#14B8A6', width: `${(qIdx / DEMO_QUESTIONS.length) * 100}%`, transition: 'width 0.5s ease', borderRadius: '0 4px 4px 0' }} />
+      </div>
+
+      <div style={{ padding: '28px 28px 32px' }}>
+        {/* Step dots + topic */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            {DEMO_QUESTIONS.map((_, i) => (
+              <div key={i} style={{ width: 10, height: 10, borderRadius: '50%', background: i < qIdx ? '#14B8A6' : i === qIdx ? '#0D9488' : '#E2E8F0', transition: 'background 0.3s' }} />
+            ))}
           </div>
-          <div style={{ display: 'flex', gap: 6 }}>
-            <span style={{ fontSize: 11, fontWeight: 800, color: q.topicColor, background: `${q.topicColor}15`, padding: '4px 10px', borderRadius: 100, textTransform: 'uppercase', letterSpacing: 0.5 }}>{q.topic}</span>
-            <span style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8', background: '#F1F5F9', padding: '4px 10px', borderRadius: 100, textTransform: 'uppercase', letterSpacing: 0.5 }}>{q.typeLabel}</span>
-          </div>
+          <span style={{ fontSize: 12, fontWeight: 700, color: q.topicColor, background: `${q.topicColor}12`, padding: '4px 12px', borderRadius: 100 }}>{q.topic}</span>
         </div>
-        <div style={{ fontSize: 17, fontWeight: 700, color: '#0F172A', lineHeight: 1.5, marginBottom: 24 }}>{q.question}</div>
+
+        {/* Question */}
+        <div style={{ fontSize: 18, fontWeight: 700, color: '#0F172A', lineHeight: 1.5, marginBottom: 24 }}>{q.question}</div>
+
+        {/* Options */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {q.options.map((opt, i) => {
-            const isSel = selected === i; const isCorr = i === q.correctIndex; const answered = selected !== null;
+            const isSel = selected === i;
+            const isCorr = i === q.correctIndex;
+            const answered = selected !== null;
             let bg = '#fff', border = '2px solid #E2E8F0', color = '#0F172A', shadow = '0 2px 0 #E2E8F0';
             if (answered) {
-              if (isSel && isCorr) { bg = '#DCFCE7'; border = '2px solid #58CC02'; color = '#166534'; shadow = '0 2px 0 #86EFAC'; }
+              if (isSel && isCorr) { bg = '#DCFCE7'; border = '2px solid #22C55E'; color = '#166534'; shadow = '0 2px 0 #86EFAC'; }
               else if (isSel) { bg = '#FEE2E2'; border = '2px solid #EF4444'; color = '#991B1B'; shadow = '0 2px 0 #FECACA'; }
-              else if (isCorr && showFeedback) { bg = '#DCFCE7'; border = '2px solid #58CC02'; color = '#166534'; shadow = '0 2px 0 #86EFAC'; }
+              else if (isCorr && showFeedback) { bg = '#DCFCE7'; border = '2px solid #22C55E'; color = '#166534'; shadow = '0 2px 0 #86EFAC'; }
               else { bg = '#FAFAFA'; border = '2px solid #F1F5F9'; color = '#94A3B8'; shadow = 'none'; }
             }
             return (
-              <button key={i} onClick={() => pick(i)} disabled={answered} className="demo-option" style={{ width: '100%', textAlign: 'left', padding: q.options.length === 2 ? '16px 20px' : '14px 18px', borderRadius: 12, background: bg, border, color, fontSize: 15, fontWeight: 600, cursor: answered ? 'default' : 'pointer', boxShadow: shadow, transition: 'all 0.2s ease', display: 'flex', alignItems: 'center', gap: 12, opacity: answered && !isSel && !(isCorr && showFeedback) ? 0.5 : 1 }}>
-                {q.options.length > 2 && (<span style={{ width: 28, height: 28, borderRadius: 8, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: answered && (isSel || (isCorr && showFeedback)) ? (isCorr ? '#58CC02' : '#EF4444') : '#F1F5F9', color: answered && (isSel || (isCorr && showFeedback)) ? '#fff' : '#64748B', fontSize: 13, fontWeight: 800 }}>{String.fromCharCode(65 + i)}</span>)}
+              <button key={i} onClick={() => pick(i)} disabled={answered} className="demo-option" style={{
+                width: '100%', textAlign: 'left', padding: '14px 18px', borderRadius: 14, background: bg, border, color,
+                fontSize: 15, fontWeight: 600, cursor: answered ? 'default' : 'pointer', boxShadow: shadow,
+                transition: 'all 0.2s ease', display: 'flex', alignItems: 'center', gap: 12,
+                opacity: answered && !isSel && !(isCorr && showFeedback) ? 0.4 : 1,
+              }}>
                 <span style={{ flex: 1 }}>{opt}</span>
-                {answered && isSel && (<svg viewBox="0 0 24 24" fill="none" width="20" height="20" style={{ flexShrink: 0 }}>{isCorr ? <path d="M20 6L9 17l-5-5" stroke="#16A34A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /> : <path d="M18 6L6 18M6 6l12 12" stroke="#DC2626" strokeWidth="2.5" strokeLinecap="round" />}</svg>)}
+                {answered && isSel && (
+                  <svg viewBox="0 0 24 24" fill="none" width="20" height="20" style={{ flexShrink: 0 }}>
+                    {isCorr
+                      ? <path d="M20 6L9 17l-5-5" stroke="#16A34A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                      : <path d="M18 6L6 18M6 6l12 12" stroke="#DC2626" strokeWidth="2.5" strokeLinecap="round" />}
+                  </svg>
+                )}
               </button>
             );
           })}
         </div>
+
+        {/* Feedback */}
         {showFeedback && (
-          <div style={{ marginTop: 16, padding: 20, borderRadius: 12, background: isRight ? '#F0FDF4' : '#FFF7ED', border: `1px solid ${isRight ? '#BBF7D0' : '#FED7AA'}`, animation: 'demoFadeIn 0.3s ease' }}>
+          <div style={{
+            marginTop: 16, padding: '18px 20px', borderRadius: 14,
+            background: isRight ? '#F0FDF4' : '#FFF7ED',
+            border: `1px solid ${isRight ? '#BBF7D0' : '#FED7AA'}`,
+            animation: 'demoFadeIn 0.3s ease',
+          }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-              {isRight ? (<><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="10" fill="#58CC02" /><path d="M8 12.5l2.5 2.5 5.5-5.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg><span style={{ fontSize: 15, fontWeight: 800, color: '#166534' }}>Correct! +{q.xp} XP</span></>) : (<><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="10" fill="#F97316" /><path d="M15 9l-6 6M9 9l6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" /></svg><span style={{ fontSize: 15, fontWeight: 800, color: '#9A3412' }}>Not quite &mdash; +5 XP</span></>)}
+              <span style={{ fontSize: 20 }}>{isRight ? '\u2705' : '\uD83D\uDCA1'}</span>
+              <span style={{ fontSize: 15, fontWeight: 800, color: isRight ? '#166534' : '#9A3412' }}>
+                {isRight ? 'Correct!' : 'Good guess!'}
+              </span>
             </div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: '#64748B', lineHeight: 1.5, marginBottom: 16 }}>{q.explanation}</div>
-            <button onClick={next} className="demo-next-btn" style={{ width: '100%', padding: '12px', borderRadius: 12, background: '#0D9488', color: '#fff', border: 'none', fontSize: 15, fontWeight: 800, cursor: 'pointer', boxShadow: '0 4px 0 #0F766E', textTransform: 'uppercase', letterSpacing: 0.5 }}>{qIdx < DEMO_QUESTIONS.length - 1 ? 'Next Question' : 'See Results'}</button>
-          </div>
-        )}
-        <div className="demo-stats-bar" style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid #F1F5F9', display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 23C7 23 3 19 3 14c0-3.3 2-6.2 4.2-8.4C9 3.8 10.9 2.4 12 1c1.1 1.4 3 2.8 4.8 4.6C19 7.8 21 10.7 21 14c0 5-4 9-9 9z" fill="#FF9600" /><path d="M12 23c-2.5 0-4.5-2.7-4.5-6 0-1.6 1-3.1 2.1-4.2C10.5 11.9 11.4 11.2 12 10.5c.6.7 1.5 1.4 2.4 2.3 1.1 1.1 2.1 2.6 2.1 4.2 0 3.3-2 6-4.5 6z" fill="#FFCC00" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.correct}</span></div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="10" fill="#58CC02" /><path d="M8 12.5l2.5 2.5 5.5-5.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.answered}/{DEMO_QUESTIONS.length}</span></div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="10" stroke="#3B82F6" strokeWidth="2" fill="none" /><circle cx="12" cy="12" r="6" stroke="#3B82F6" strokeWidth="2" fill="none" /><circle cx="12" cy="12" r="2" fill="#3B82F6" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.answered > 0 ? `${accuracy}%` : '--'}</span></div>
-          </div>
-          <div style={{ flex: 1, maxWidth: 160, marginLeft: 'auto' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}><span style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8' }}>XP</span><span style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8' }}>{animXp}/{totalXp}</span></div>
-            <div style={{ height: 8, background: '#F1F5F9', borderRadius: 100, overflow: 'hidden' }}><div style={{ height: '100%', background: 'linear-gradient(90deg, #0D9488, #FFD54F)', width: `${Math.min((stats.xp / totalXp) * 100, 100)}%`, transition: 'width 0.8s ease', borderRadius: 100 }} /></div>
-          </div>
-        </div>
-        {achievement && (
-          <div style={{ marginTop: 12, padding: '10px 16px', borderRadius: 10, background: '#F0FDFA', border: '1px solid #FFE082', display: 'flex', alignItems: 'center', gap: 10, animation: 'demoPopIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)' }}>
-            <div style={{ width: 32, height: 32, borderRadius: 8, background: '#FFE082', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><svg viewBox="0 0 24 24" fill="none" stroke="#0F766E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg></div>
-            <div><div style={{ fontSize: 11, fontWeight: 800, color: '#0F766E', textTransform: 'uppercase', letterSpacing: 0.5 }}>Achievement Unlocked!</div><div style={{ fontSize: 13, fontWeight: 700, color: '#A16207' }}>First Correct Answer</div></div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: '#64748B', lineHeight: 1.6, marginBottom: 16 }}>{q.explanation}</div>
+            <button onClick={next} className="demo-next-btn" style={{
+              width: '100%', padding: '12px', borderRadius: 14, background: '#0D9488', color: '#fff',
+              border: 'none', fontSize: 15, fontWeight: 800, cursor: 'pointer',
+              boxShadow: '0 4px 0 #0F766E', letterSpacing: 0.3,
+            }}>
+              {qIdx < DEMO_QUESTIONS.length - 1 ? 'Next' : 'See Results'}
+            </button>
           </div>
         )}
       </div>
@@ -719,7 +711,7 @@ function CompareCard({
         background: featured ? '#fff' : '#FAFAFA',
         border: featured ? '2px solid #0D9488' : '1px solid #E2E8F0',
         borderRadius: 12,
-        boxShadow: featured ? '0 4px 16px rgba(245, 184, 0, 0.15)' : '0 1px 2px rgba(0,0,0,0.05)',
+        boxShadow: featured ? '0 4px 16px rgba(13, 148, 136, 0.15)' : '0 1px 2px rgba(0,0,0,0.05)',
         padding: '32px 24px',
         textAlign: 'center',
         position: 'relative',
