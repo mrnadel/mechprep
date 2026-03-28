@@ -35,7 +35,7 @@ function saveHistory(h: HistoryEntry[]) {
   } catch { /* ignore */ }
 }
 
-export default function EngineeringCalculator({ isOpen, onClose, accentColor = '#6366F1', accentDark = '#4338CA' }: Props) {
+export default function EngineeringCalculator({ isOpen, onClose, accentColor = '#3B82F6', accentDark = '#1D4ED8' }: Props) {
   const [expression, setExpression] = useState('');
   const [isDegrees, setIsDegrees] = useState(true);
   const [history, setHistory] = useState<HistoryEntry[]>(loadHistory);
@@ -181,7 +181,7 @@ export default function EngineeringCalculator({ isOpen, onClose, accentColor = '
       case 'digit':
         return { ...base, background: '#F5F5F5', color: '#3C3C3C', fontSize: 16 };
       case 'op':
-        return { ...base, background: '#EEF2FF', color: '#4338CA', fontSize: 16 };
+        return { ...base, background: '#EFF6FF', color: '#1D4ED8', fontSize: 16 };
       case 'fn':
         return { ...base, background: '#F5F5F5', color: '#3C3C3C', fontSize: 11 };
       case 'const':
@@ -242,8 +242,8 @@ export default function EngineeringCalculator({ isOpen, onClose, accentColor = '
                 borderRadius: 8,
                 fontSize: 10,
                 fontWeight: 800,
-                background: isDegrees ? '#EEF2FF' : '#F5F5F5',
-                color: isDegrees ? '#4338CA' : '#AFAFAF',
+                background: isDegrees ? '#EFF6FF' : '#F5F5F5',
+                color: isDegrees ? '#1D4ED8' : '#AFAFAF',
                 border: 'none',
                 cursor: 'pointer',
                 letterSpacing: 0.5,
@@ -295,7 +295,7 @@ export default function EngineeringCalculator({ isOpen, onClose, accentColor = '
               disabled={!lastResult}
               style={{
                 fontSize: 10, fontWeight: 800,
-                color: lastResult ? '#6366F1' : '#CFCFCF',
+                color: lastResult ? '#3B82F6' : '#CFCFCF',
                 background: 'none', border: 'none',
                 cursor: lastResult ? 'pointer' : 'default',
                 padding: '2px 6px',
@@ -445,8 +445,8 @@ export default function EngineeringCalculator({ isOpen, onClose, accentColor = '
               onClick={() => setIsDegrees(d => !d)}
               style={{
                 padding: '3px 8px', borderRadius: 8, fontSize: 10, fontWeight: 800,
-                background: isDegrees ? '#EEF2FF' : '#F5F5F5',
-                color: isDegrees ? '#4338CA' : '#AFAFAF',
+                background: isDegrees ? '#EFF6FF' : '#F5F5F5',
+                color: isDegrees ? '#1D4ED8' : '#AFAFAF',
                 border: 'none', cursor: 'pointer', letterSpacing: 0.5,
               }}
             >
@@ -470,7 +470,7 @@ export default function EngineeringCalculator({ isOpen, onClose, accentColor = '
               disabled={!lastResult}
               style={{
                 fontSize: 10, fontWeight: 800,
-                color: lastResult ? '#6366F1' : '#CFCFCF',
+                color: lastResult ? '#3B82F6' : '#CFCFCF',
                 background: 'none', border: 'none',
                 cursor: lastResult ? 'pointer' : 'default',
               }}

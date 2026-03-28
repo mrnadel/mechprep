@@ -15,7 +15,7 @@ export const UNIT_THEMES: UnitTheme[] = [
   { bg: '#E4FAF8', color: '#14B8A6', dark: '#0D897C', mid: '#11A191' }, // Teal
   { bg: '#FFF1E6', color: '#F97316', dark: '#BA5610', mid: '#D96513' }, // Orange
   { bg: '#F0FAE6', color: '#65A30D', dark: '#4D7B0A', mid: '#598E0C' }, // Lime
-  { bg: '#EDEAFF', color: '#6366F1', dark: '#494BB8', mid: '#5659D5' }, // Indigo
+  { bg: '#EDEAFF', color: '#3B82F6', dark: '#494BB8', mid: '#5659D5' }, // Indigo
 ];
 
 export function getUnitTheme(unitIndex: number): UnitTheme {

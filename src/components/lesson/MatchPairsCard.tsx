@@ -14,7 +14,7 @@ interface MatchPairsCardProps {
   unitColor: string;
 }
 
-const PAIR_COLORS = ['#6366F1', '#EC4899', '#F59E0B', '#10B981', '#8B5CF6', '#EF4444'];
+const PAIR_COLORS = ['#3B82F6', '#EC4899', '#F59E0B', '#10B981', '#8B5CF6', '#EF4444'];
 
 const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
   function MatchPairsCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {

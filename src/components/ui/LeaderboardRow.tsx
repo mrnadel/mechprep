@@ -18,7 +18,7 @@ interface LeaderboardRowProps {
 }
 
 const RANK_COLORS: Record<number, string> = {
-  1: '#F59E0B',
+  1: 'var(--color-brand-500)',
   2: '#9CA3AF',
   3: '#CD7F32',
 };
@@ -40,7 +40,7 @@ export function LeaderboardRow({
   bgColor,
 }: LeaderboardRowProps) {
   const isTop3 = rank <= 3;
-  const bg = bgColor ?? (isUser ? '#EEF2FF' : 'transparent');
+  const bg = bgColor ?? (isUser ? 'var(--color-primary-50)' : 'transparent');
 
   return (
     <div
@@ -67,12 +67,12 @@ export function LeaderboardRow({
       <div className="flex-1 min-w-0 flex items-center gap-1.5">
         <span
           className="text-sm font-semibold truncate"
-          style={{ color: isUser ? '#4F46E5' : '#374151' }}
+          style={{ color: isUser ? 'var(--color-primary-600)' : 'var(--color-surface-700)' }}
         >
           {name}
         </span>
         {isUser && (
-          <span className="flex-shrink-0 text-[10px] font-bold uppercase tracking-wide text-indigo-600 bg-indigo-100 px-1.5 py-0.5 rounded-full">
+          <span className="flex-shrink-0 text-[10px] font-bold uppercase tracking-wide text-primary-600 bg-primary-100 px-1.5 py-0.5 rounded-full">
             You
           </span>
         )}

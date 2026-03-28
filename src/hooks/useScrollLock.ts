@@ -1,13 +1,18 @@
 import { useEffect } from 'react';
 
-/** Prevents body scrolling while `active` is true. */
+/** Reference-counted body scroll lock. Safe with multiple concurrent modals. */
+let lockCount = 0;
+
 export function useScrollLock(active: boolean) {
   useEffect(() => {
     if (!active) return;
-    const prev = document.body.style.overflow;
+    lockCount++;
     document.body.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = prev;
+      lockCount--;
+      if (lockCount === 0) {
+        document.body.style.overflow = '';
+      }
     };
   }, [active]);
 }

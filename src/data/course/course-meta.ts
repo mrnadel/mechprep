@@ -150,7 +150,7 @@ const meCourseMeta: Unit[] = [
     id: 'u8-machine',
     title: 'Machine Design',
     description: 'Shafts, bearings, gears, fasteners, springs, and seals \u2014 core machine element design for mechanical engineers.',
-    color: '#6366F1',
+    color: '#3B82F6',
     icon: '\u2699\uFE0F',
     topicId: 'machine-elements',
     lessons: [
@@ -262,16 +262,16 @@ async function loadFinanceUnit(unitIndex: number): Promise<Unit> {
   const loaders: (() => Promise<Unit>)[] = [
     () => import('./professions/personal-finance/units/unit-0').then(m => m.unit0),
     () => import('./professions/personal-finance/units/unit-1').then(m => m.unit1),
+    () => import('./professions/personal-finance/units/unit-5').then(m => m.unit5),
     () => import('./professions/personal-finance/units/unit-2').then(m => m.unit2),
+    () => import('./professions/personal-finance/units/unit-11').then(m => m.unit11),
     () => import('./professions/personal-finance/units/unit-3').then(m => m.unit3),
     () => import('./professions/personal-finance/units/unit-4').then(m => m.unit4),
-    () => import('./professions/personal-finance/units/unit-5').then(m => m.unit5),
     () => import('./professions/personal-finance/units/unit-6').then(m => m.unit6),
-    () => import('./professions/personal-finance/units/unit-7').then(m => m.unit7),
-    () => import('./professions/personal-finance/units/unit-8').then(m => m.unit8),
-    () => import('./professions/personal-finance/units/unit-9').then(m => m.unit9),
     () => import('./professions/personal-finance/units/unit-10').then(m => m.unit10),
-    () => import('./professions/personal-finance/units/unit-11').then(m => m.unit11),
+    () => import('./professions/personal-finance/units/unit-7').then(m => m.unit7),
+    () => import('./professions/personal-finance/units/unit-9').then(m => m.unit9),
+    () => import('./professions/personal-finance/units/unit-8').then(m => m.unit8),
     () => import('./professions/personal-finance/units/unit-12').then(m => m.unit12),
   ];
 

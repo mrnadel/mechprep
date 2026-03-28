@@ -19,8 +19,8 @@ export const unit4: Unit = {
           id: "pf-u4-L1-T1",
           type: "teaching",
           question: "You Have a Financial GPA",
-          explanation: "Imagine a number between 300 and 850 that follows you everywhere. Banks check it before giving you a loan.",
-          hint: "Think of it like Yelp reviews for you as a borrower. Everyone checks before doing business with you.",
+          explanation: "Imagine a number between 300 and 850 that follows you everywhere. Banks check it before giving you a loan. This unit uses FICO (the US system), but most countries have similar credit scoring.",
+          hint: "Try this now: check your credit score for free at your bank's app or website.",
         },
         {
           id: "pf-u4-L1-T2",
@@ -238,7 +238,7 @@ export const unit4: Unit = {
           id: "pf-u4-L3-T2",
           type: "teaching",
           question: "The Damage Timeline",
-          explanation: "Here's how late payments escalate. 1-29 days late: your lender charges a fee but doesn't report it to bureaus yet.",
+          explanation: "Late payments escalate in stages. 1-29 days late: just a fee from your lender. At 30 days, the bureaus get notified and the real damage begins.",
         },
         {
           id: "pf-u4-L3-Q1",
@@ -304,10 +304,10 @@ export const unit4: Unit = {
         {
           id: "pf-u4-L3-Q7",
           type: "scenario",
-          scenario: "Jake realizes on Thursday that his credit card payment was due last Monday ,  3 days ago. He hasn't paid yet.",
+          scenario: "Jake realizes on Thursday that his credit card payment was due last Monday, 3 days ago. He hasn't paid yet.",
           question: "What should Jake do?",
           options: [
-            "Pay immediately ,  3 days late won't hit his credit report",
+            "Pay immediately, 3 days late won't hit his credit report",
             "Wait until next month's due date, the damage is already done",
             "Close the credit card to avoid the late fee",
             "Call and argue that Monday was a holiday",
@@ -345,7 +345,7 @@ export const unit4: Unit = {
           id: "pf-u4-L4-T2",
           type: "teaching",
           question: "The 30% Myth",
-          explanation: "You've probably heard 'keep utilization under 30%.' That's not wrong, but it's misleading.",
+          explanation: "You've probably heard 'keep utilization under 30%.' That's not wrong, but it's misleading. People with 800+ scores keep theirs under 10%. Lower is always better.",
         },
         {
           id: "pf-u4-L4-Q1",
@@ -425,6 +425,124 @@ export const unit4: Unit = {
           buckets: ["Lowers utilization", "Raises utilization"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
           explanation: "Paying off, getting higher limits, and mid-month payments all lower utilization. Maxing cards, closing cards (less total limit), and cash advances all push it higher.",
+        },
+      ],
+    },
+
+    // ===== CONVERSATION: Explaining Credit Scores to a Friend =====
+    {
+      id: "pf-u4-L13",
+      title: "Explaining Credit Scores to a Friend",
+      description: "Your friend just got denied for a credit card and has questions.",
+      icon: "\u{1F4AC}",
+      type: "conversation",
+      xpReward: 20,
+      questions: [],
+      conversationStartNodeId: "pf-u4-L13-C1",
+      conversationNodes: [
+        {
+          id: "pf-u4-L13-C1",
+          speaker: "Marcus",
+          message: "I just got rejected for a credit card. They said my credit score is too low. I don't even know what a credit score is. Can you explain?",
+          nextNodeId: "pf-u4-L13-C2",
+        },
+        {
+          id: "pf-u4-L13-C2",
+          speaker: "Marcus",
+          message: "Like, who even decides this number?",
+          options: [
+            {
+              text: "It's a number between 300 and 850 that shows how reliable you are with borrowed money. Three bureaus track it.",
+              nextNodeId: "pf-u4-L13-C3",
+              quality: "great",
+              feedback: "Clear and accurate. The 300-850 range and three bureaus are the essential facts.",
+            },
+            {
+              text: "It's basically a grade the government gives you on your finances.",
+              nextNodeId: "pf-u4-L13-C3",
+              quality: "poor",
+              feedback: "The government doesn't assign credit scores. Private credit bureaus calculate them based on your borrowing history.",
+            },
+            {
+              text: "It's a number banks use to decide if they trust you. Higher is better.",
+              nextNodeId: "pf-u4-L13-C3",
+              quality: "okay",
+              feedback: "That's the right idea, but it's not just banks. Landlords, insurers, and even employers can check it too.",
+            },
+          ],
+        },
+        {
+          id: "pf-u4-L13-C3",
+          speaker: "Marcus",
+          message: "Okay, so what makes the score go up or down? I've never borrowed money before.",
+          nextNodeId: "pf-u4-L13-C4",
+        },
+        {
+          id: "pf-u4-L13-C4",
+          speaker: "Marcus",
+          message: "What's the biggest factor?",
+          options: [
+            {
+              text: "Payment history is #1. It's 35% of your score. Paying on time is the single best thing you can do.",
+              nextNodeId: "pf-u4-L13-C5",
+              quality: "great",
+              feedback: "Payment history at 35% is the biggest FICO factor. One late payment can drop your score significantly.",
+            },
+            {
+              text: "How much money you make is the main factor.",
+              nextNodeId: "pf-u4-L13-C5",
+              quality: "poor",
+              feedback: "Income doesn't appear in your credit score at all. It's about how you handle debt, not how much you earn.",
+            },
+            {
+              text: "Having a lot of credit cards helps the most.",
+              nextNodeId: "pf-u4-L13-C5",
+              quality: "okay",
+              feedback: "Having multiple accounts can help your credit mix, but it's only 10% of your score. Payment history matters far more.",
+            },
+          ],
+        },
+        {
+          id: "pf-u4-L13-C5",
+          speaker: "Narrator",
+          message: "Marcus pulls his free credit report and discovers he has a thin file, meaning almost no credit history at all.",
+          nextNodeId: "pf-u4-L13-C6",
+        },
+        {
+          id: "pf-u4-L13-C6",
+          speaker: "Marcus",
+          message: "So I have almost no history. How do I start building credit if nobody will give me a card?",
+          options: [
+            {
+              text: "Get a secured credit card. You put down a deposit, and that becomes your limit. It's designed for building credit.",
+              nextNodeId: "pf-u4-L13-C7",
+              quality: "great",
+              feedback: "Secured cards are the best starting point. The deposit reduces risk for the bank, and your payments build your score.",
+            },
+            {
+              text: "Just wait a few years and your score will go up on its own.",
+              nextNodeId: "pf-u4-L13-C7",
+              quality: "poor",
+              feedback: "Without active credit accounts, your score won't improve. You need to actively build a payment history.",
+            },
+            {
+              text: "Ask a family member to add you as an authorized user on their card.",
+              nextNodeId: "pf-u4-L13-C7",
+              quality: "okay",
+              feedback: "Being an authorized user can help, but you're dependent on someone else's good habits. Getting your own card is more reliable.",
+            },
+          ],
+        },
+        {
+          id: "pf-u4-L13-C7",
+          speaker: "Marcus",
+          message: "A secured card sounds doable. Thanks for breaking this down. I feel way less confused now.",
+          nextNodeId: "pf-u4-L13-C8",
+        },
+        {
+          id: "pf-u4-L13-C8",
+          speaker: "Narrator",
+          message: "You helped Marcus understand credit scores, learn about the 5 FICO factors, and find a path to building credit from scratch with a secured card. Knowledge is the first step to a better score.",
         },
       ],
     },
@@ -546,14 +664,14 @@ export const unit4: Unit = {
           id: "pf-u4-L6-T1",
           type: "teaching",
           question: "Credit Training Wheels",
-          explanation: "A secured credit card is the training wheels of the credit world. Here's how it works: you give the bank a cash deposit (usually 200-500).",
+          explanation: "A secured credit card is the training wheels of the credit world. You give the bank a cash deposit (usually 200-500), and that deposit becomes your credit limit.",
           hint: "It's not a prepaid card, it's a real credit card that reports to all three bureaus. That's the entire point.",
         },
         {
           id: "pf-u4-L6-T2",
           type: "teaching",
           question: "The Secured Card Playbook",
-          explanation: "Here's the winning strategy: put ONE small recurring charge on it (like a streaming service at 15/month). Set up autopay for the full balance.",
+          explanation: "The winning strategy: put one small recurring charge on it (like a streaming service at 15/month). Set up autopay for the full balance, then forget about it.",
         },
         {
           id: "pf-u4-L6-Q1",
@@ -650,8 +768,8 @@ export const unit4: Unit = {
           id: "pf-u4-L7-T1",
           type: "teaching",
           question: "Your Credit Report Card. It's Free",
-          explanation: "You're legally entitled to a free credit report from each of the three bureaus every year. Go to AnnualCreditReport.",
-          hint: "Pro tip: stagger your requests, pull one bureau every 4 months so you can monitor year-round.",
+          explanation: "You're legally entitled to a free credit report from each bureau every year at AnnualCreditReport.com. It's the only federally authorized source.",
+          hint: "Try this now: go to AnnualCreditReport.com and pull your free credit report from one of the three bureaus.",
         },
         {
           id: "pf-u4-L7-T2",
@@ -752,7 +870,7 @@ export const unit4: Unit = {
           id: "pf-u4-L8-T1",
           type: "teaching",
           question: "Not All Credit Checks Are Equal",
-          explanation: "When someone checks your credit, it's called an 'inquiry' or 'pull.' But there are two very different types.",
+          explanation: "When someone checks your credit, it's called an 'inquiry' or 'pull.' Hard pulls (you applied for credit) affect your score. Soft pulls (you checked yourself) don't.",
           hint: "The easiest way to remember: if YOU initiated an application for credit, it's a hard pull. Everything else is soft.",
         },
         {
@@ -856,14 +974,14 @@ export const unit4: Unit = {
           id: "pf-u4-L9-T1",
           type: "teaching",
           question: "Quick Wins for Your Credit Score",
-          explanation: "Some credit moves take years. But others can boost your score in 30-90 days.",
+          explanation: "Some credit moves take years, but others can boost your score in 30-90 days. Utilization changes are the fastest lever you have.",
           hint: "If your score needs a quick boost (maybe before a mortgage application), utilization is your best friend.",
         },
         {
           id: "pf-u4-L9-T2",
           type: "teaching",
           question: "The 7 Score-Boosting Tactics",
-          explanation: "Here's your toolkit: 1) Pay down balances to under 10%. 2) Ask for credit limit increases (instant utilization drop).",
+          explanation: "Your top moves: pay down balances to under 10%, ask for credit limit increases, dispute report errors, and use Experian Boost for utility payments.",
         },
         {
           id: "pf-u4-L9-Q1",
@@ -968,7 +1086,7 @@ export const unit4: Unit = {
           id: "pf-u4-L10-T2",
           type: "teaching",
           question: "The 5 Pillars of Lifelong Credit Protection",
-          explanation: "Here are the five habits that keep your score bulletproof forever: 1) Autopay everything, at minimum, the minimum payment. 2) Keep utilization under 10% always.",
+          explanation: "Five habits for lifelong credit protection: autopay everything, keep utilization under 10%, monitor your report regularly, keep old accounts open, and freeze your credit when not applying.",
         },
         {
           id: "pf-u4-L10-Q1",
@@ -1075,7 +1193,7 @@ export const unit4: Unit = {
           id: "pf-u4-L11-SQ3",
           question: "Credit utilization should ideally stay below:",
           options: ["50%", "80%", "30%", "10%"],
-          correctIndex: 2,
+          correctIndex: 3,
         },
         {
           id: "pf-u4-L11-SQ4",

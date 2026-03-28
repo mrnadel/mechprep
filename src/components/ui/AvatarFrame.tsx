@@ -221,7 +221,7 @@ const FRAME_DEFS: Record<string, FrameDef> = {
       <linearGradient id="diamond-grad" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stopColor="#C7D2FE" />
         <stop offset="50%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
     ),
     render: (s) => {
@@ -1298,7 +1298,7 @@ const FRAME_DEFS: Record<string, FrameDef> = {
   singularity: {
     defs: (s) => (
       <linearGradient id="singularity-grad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#3B82F6" />
         <stop offset="50%" stopColor="#7C3AED" />
         <stop offset="100%" stopColor="#8B5CF6" />
       </linearGradient>
@@ -1325,7 +1325,7 @@ const FRAME_DEFS: Record<string, FrameDef> = {
         </>
       );
     },
-    glowColor: 'rgba(99,102,241,0.35)',
+    glowColor: 'rgba(59,130,246,0.35)',
     glowBlur: 14,
     glowOpacity: 0.6,
     animated: true,

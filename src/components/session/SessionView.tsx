@@ -9,9 +9,9 @@ import { LessonView } from '@/components/lesson/LessonView';
 import type { SessionAdapter } from '@/components/lesson/LessonView';
 
 const PRACTICE_THEME = {
-  color: '#6366F1',
-  dark: '#4338CA',
-  bg: '#EEF2FF',
+  color: '#3B82F6',
+  dark: '#1D4ED8',
+  bg: '#EFF6FF',
 };
 
 export default function SessionView() {

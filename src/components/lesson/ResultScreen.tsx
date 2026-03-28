@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
 import { getLessonByIdMeta } from '@/data/course/course-meta';
 import { useBackHandler } from '@/hooks/useBackHandler';
 import { useEngagementActions } from '@/store/useEngagementStore';
 import { TrialPromptModal } from '@/components/ui/TrialPromptModal';
 import { GameButton } from '@/components/ui/GameButton';
-import { ScreenFX } from '@/components/ui/ScreenFX';
+import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 import type { FXName } from '@/components/ui/ScreenFX';
 
@@ -74,98 +74,84 @@ export default function ResultScreen() {
 
   return (
     <>
-      <AnimatePresence>
+      <FullScreenModal
+        show={true}
+        bg={bg}
+        fx={fx}
+        fullScreen
+        labelId="result-heading"
+        footer={
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
+            <GameButton variant={btnVariant} onClick={dismissResult}>
+              {passed ? 'Continue' : 'Try Again'}
+            </GameButton>
+          </motion.div>
+        }
+      >
         <motion.div
-          key="result-screen"
+          className="mb-4"
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 15, delay: 0.1 }}
+        >
+          <MascotWithGlow pose={mascotPose} size={160} />
+        </motion.div>
+
+        <motion.h1
+          id="result-heading"
+          className="text-[28px] font-extrabold mb-2"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          {getMessage()}
+        </motion.h1>
+
+        <motion.p
+          className="text-sm text-white/50 font-semibold mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="fixed inset-0 flex flex-col"
-          style={{ zIndex: 9999, background: bg }}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="result-heading"
+          transition={{ delay: 0.35 }}
         >
-          <ScreenFX effect={fx} />
+          {lessonResult.lessonTitle}
+        </motion.p>
 
-          {/* Content — upper area */}
-          <div className="flex-1 flex flex-col items-center relative z-[1] px-6 pt-[12vh] sm:pt-10 text-center text-white">
-            <motion.div
-              className="mb-4"
-              initial={{ scale: 0.5 }}
-              animate={{ scale: 1 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 15, delay: 0.1 }}
-            >
-              <MascotWithGlow pose={mascotPose} size={160} />
-            </motion.div>
-
-            <motion.h1
-              id="result-heading"
-              className="text-[28px] font-extrabold mb-2"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              {getMessage()}
-            </motion.h1>
-
-            <motion.p
-              className="text-sm text-white/50 font-semibold mb-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.35 }}
-            >
-              {lessonResult.lessonTitle}
-            </motion.p>
-
-            {/* Stats */}
-            <motion.div
-              className="flex w-full max-w-xs bg-white/10 rounded-2xl overflow-hidden"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
-              <div className="flex-1 py-4 text-center">
-                <div className="text-2xl font-extrabold">{lessonResult.accuracy}%</div>
-                <div className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-1">Accuracy</div>
-              </div>
-              <div className="w-px bg-white/10 my-3" />
-              <div className="flex-1 py-4 text-center">
-                <motion.div
-                  className="text-2xl font-extrabold"
-                  initial={{ scale: 0.5, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ type: 'spring', stiffness: 250, damping: 15, delay: 0.7 }}
-                >
-                  +{lessonResult.xpEarned}
-                </motion.div>
-                <div className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-1">XP</div>
-              </div>
-              <div className="w-px bg-white/10 my-3" />
-              <div className="flex-1 py-4 text-center">
-                <div className="text-2xl font-extrabold">{lessonResult.correctAnswers}/{lessonResult.totalQuestions}</div>
-                <div className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-1">Correct</div>
-              </div>
-            </motion.div>
-
-            {isFlawless && passed && (
-              <motion.p className="mt-4 text-sm font-bold text-white/70" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
-                Flawless! 4x XP bonus
-              </motion.p>
-            )}
+        {/* Stats */}
+        <motion.div
+          className="flex w-full max-w-xs bg-white/10 rounded-2xl overflow-hidden"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          <div className="flex-1 py-4 text-center">
+            <div className="text-2xl font-extrabold">{lessonResult.accuracy}%</div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-1">Accuracy</div>
           </div>
-
-          {/* Footer — pinned bottom */}
-          <div className="shrink-0 px-6 pb-8 sm:pb-5 relative z-[1]">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
-              <GameButton variant={btnVariant} onClick={dismissResult}>
-                {passed ? 'Continue' : 'Try Again'}
-              </GameButton>
+          <div className="w-px bg-white/10 my-3" />
+          <div className="flex-1 py-4 text-center">
+            <motion.div
+              className="text-2xl font-extrabold"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ type: 'spring', stiffness: 250, damping: 15, delay: 0.7 }}
+            >
+              +{lessonResult.xpEarned}
             </motion.div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-1">XP</div>
+          </div>
+          <div className="w-px bg-white/10 my-3" />
+          <div className="flex-1 py-4 text-center">
+            <div className="text-2xl font-extrabold">{lessonResult.correctAnswers}/{lessonResult.totalQuestions}</div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-1">Correct</div>
           </div>
         </motion.div>
-      </AnimatePresence>
+
+        {isFlawless && passed && (
+          <motion.p className="mt-4 text-sm font-bold text-white/70" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
+            Flawless! 4x XP bonus
+          </motion.p>
+        )}
+      </FullScreenModal>
       {lessonResult.isFirstCompletion && lessonResult.passed && <TrialPromptModal />}
     </>
   );

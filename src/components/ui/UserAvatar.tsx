@@ -9,7 +9,7 @@ interface UserAvatarProps {
   name: string;
   /** Avatar diameter in px. Default: 40 */
   size?: number;
-  /** Background color for initials circle. Default: '#E0E7FF' */
+  /** Background color for initials circle. Default: '#DBEAFE' */
   bgColor?: string;
   /** Text color for initials. Default: 'text-primary-700' */
   textClass?: string;
@@ -19,7 +19,7 @@ export function UserAvatar({
   image,
   name,
   size = 40,
-  bgColor = '#E0E7FF',
+  bgColor = '#DBEAFE',
   textClass = 'text-primary-700',
 }: UserAvatarProps) {
   const initials = (name || '?').charAt(0).toUpperCase();

@@ -137,6 +137,12 @@ Bad: "Nope! That's wrong. Obviously net pay is less because deductions are taken
 - Don't capitalize common terms: "gross pay", "net pay", "emergency fund"
 - Capitalize proper nouns and product names only
 
+### Country-agnostic content
+- Teach concepts, not country-specific details. "Taxes fund public services" works everywhere. "You'll file a 1040" doesn't.
+- When US-specific details are unavoidable (401k, FICO, W-2), add a teaching card hint: "Details vary by country, but the concept applies everywhere."
+- Use generic currency ("1,000/month") not "$1,000/month" in explanations where possible. Dollar signs are fine in US-specific examples.
+- Retirement concepts: teach "employer-matched retirement accounts" not just "401k." Mention that names differ by country.
+
 ---
 
 ## Terminology
@@ -212,6 +218,8 @@ Before submitting content, verify:
 - [ ] Options are short and scannable (under 15 words each)
 - [ ] Correct option isn't noticeably longer than wrong ones
 - [ ] Hints are one sentence, practical, not philosophical
-- [ ] At least 1 teaching card per unit includes a "Try this now:" real-life action hint
+- [ ] At least 2 teaching cards per unit include a "Try this now:" real-life action hint
+- [ ] Country-specific content (taxes, retirement accounts, credit scores) includes a brief note like "Details vary by country, but the concept applies everywhere."
+- [ ] Each unit has at least 1 conversation lesson and 1 speed-round lesson for variety
 - [ ] Lesson has 8-12 questions with 2-3 teaching cards spaced between them
 - [ ] Re-run seed script after changes: `npx tsx scripts/seed-content.ts`

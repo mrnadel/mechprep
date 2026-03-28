@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useStore } from '@/store/useStore';
+import { useCourseStore } from '@/store/useCourseStore';
 import { useEngagementStore } from '@/store/useEngagementStore';
 import { initFakeUserPool, progressFakeUsers } from '@/lib/fake-user-generator';
 
@@ -27,8 +28,23 @@ export function useEngagementInit(isHydrated = true) {
     // Without this guard, seed progress dates trigger false streak-break/comeback popups.
     const hasEngagementHistory = engagement.dailyQuestDate !== null;
 
-    // Streak freeze / break detection — only if user actually has a streak to lose
-    if (hasEngagementHistory && progress.lastActiveDate && progress.lastActiveDate !== today && progress.currentStreak > 0) {
+    // Clear stale repair state: if repairAvailable is true but the user has no streak
+    // (e.g. never completed a session, or streak was already reset), dismiss it automatically.
+    if (engagement.streak.repairAvailable && progress.currentStreak === 0 && engagement.streak.lastStreakValueBeforeBreak === 0) {
+      useEngagementStore.setState((s) => ({ streak: { ...s.streak, repairAvailable: false } }));
+    }
+
+    // Streak freeze / break detection — only if user actually has a streak to lose.
+    // Skip if a break was already recorded (repairAvailable is persisted) to avoid
+    // re-triggering on every refresh before the user completes a new session.
+    const alreadyBroken = engagement.streak.repairAvailable || engagement.streak.lastStreakBreakDate === today;
+    if (
+      hasEngagementHistory &&
+      !alreadyBroken &&
+      progress.lastActiveDate &&
+      progress.lastActiveDate !== today &&
+      progress.currentStreak > 0
+    ) {
       const lastActive = new Date(progress.lastActiveDate);
       const todayDate = new Date(today);
       const daysDiff = Math.floor(
@@ -41,16 +57,15 @@ export function useEngagementInit(isHydrated = true) {
         useStore.setState((state) => ({
           progress: { ...state.progress, lastActiveDate: getYesterday() },
         }));
-      } else if (daysDiff >= 3 && engagement.streak.freezesOwned > 0) {
-        // Multi-day gap — freeze can't bridge it, record break
+      } else if (daysDiff >= 2) {
+        // Missed 1+ days with no usable freeze — record break and reset streak
         useEngagementStore.getState().recordStreakBreak(progress.currentStreak);
-      } else if (
-        daysDiff >= 2 &&
-        engagement.streak.freezesOwned === 0 &&
-        progress.currentStreak > 0
-      ) {
-        // No freeze and missed 1+ days — record break for repair offer
-        useEngagementStore.getState().recordStreakBreak(progress.currentStreak);
+        useStore.setState((state) => ({
+          progress: { ...state.progress, currentStreak: 0 },
+        }));
+        useCourseStore.setState((state) => ({
+          progress: { ...state.progress, currentStreak: 0 },
+        }));
       }
     }
 

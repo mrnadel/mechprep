@@ -464,8 +464,8 @@ export const ChestIcon = ({ size = 64, className }: IconProps) => (
       </linearGradient>
       <linearGradient id="streak-chest-band" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#8B8BFF" />
-        <stop offset="50%" stopColor="#6366F1" />
-        <stop offset="100%" stopColor="#3730A3" />
+        <stop offset="50%" stopColor="#3B82F6" />
+        <stop offset="100%" stopColor="#1E40AF" />
       </linearGradient>
       <radialGradient id="streak-chest-glow" cx="0.5" cy="0.3" r="0.5">
         <stop offset="0%" stopColor="#FFF8DC" stopOpacity="0.9" />
@@ -473,8 +473,8 @@ export const ChestIcon = ({ size = 64, className }: IconProps) => (
         <stop offset="100%" stopColor="#FFB800" stopOpacity="0" />
       </radialGradient>
       <linearGradient id="streak-chest-gear" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#4338CA" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#1D4ED8" />
       </linearGradient>
     </defs>
     {/* Interior glow (visible through open lid) */}
@@ -493,9 +493,9 @@ export const ChestIcon = ({ size = 64, className }: IconProps) => (
     {/* Chest body (bottom) */}
     <rect x="10" y="32" width="44" height="22" rx="3" fill="url(#streak-chest-body)" stroke="#6B4F0A" strokeWidth="2" strokeLinejoin="round" />
     {/* Chest body front band */}
-    <rect x="10" y="38" width="44" height="4" fill="url(#streak-chest-band)" stroke="#3730A3" strokeWidth="1" />
+    <rect x="10" y="38" width="44" height="4" fill="url(#streak-chest-band)" stroke="#1E40AF" strokeWidth="1" />
     {/* Lower decorative band */}
-    <rect x="10" y="48" width="44" height="3" fill="url(#streak-chest-band)" stroke="#3730A3" strokeWidth="1" />
+    <rect x="10" y="48" width="44" height="3" fill="url(#streak-chest-band)" stroke="#1E40AF" strokeWidth="1" />
     {/* Chest lid (slightly open, tilted back) */}
     <path
       d="M10,32 L10,24 Q10,18 16,18 L48,18 Q54,18 54,24 L54,32 Z"
@@ -507,39 +507,39 @@ export const ChestIcon = ({ size = 64, className }: IconProps) => (
     {/* Lid curve highlight */}
     <path d="M12,28 Q12,20 18,20 L46,20 Q52,20 52,28" fill="none" stroke="#FFE082" strokeWidth="1" opacity="0.5" />
     {/* Lid band */}
-    <rect x="10" y="26" width="44" height="3" fill="url(#streak-chest-band)" stroke="#3730A3" strokeWidth="1" />
+    <rect x="10" y="26" width="44" height="3" fill="url(#streak-chest-band)" stroke="#1E40AF" strokeWidth="1" />
     {/* Central lock mechanism — gear */}
     <path
       d="M32,32 L34,30 L36,32 L34,34 Z M32,32 L30,30 L28,32 L30,34 Z M32,32 L32,28 L34,30 Z M32,32 L32,36 L30,34 Z"
       fill="url(#streak-chest-gear)"
-      stroke="#3730A3"
+      stroke="#1E40AF"
       strokeWidth="0.5"
     />
-    <circle cx="32" cy="38" r="5" fill="url(#streak-chest-gear)" stroke="#3730A3" strokeWidth="1.5" />
+    <circle cx="32" cy="38" r="5" fill="url(#streak-chest-gear)" stroke="#1E40AF" strokeWidth="1.5" />
     {/* Gear teeth */}
-    <rect x="30" y="32" width="4" height="2" fill="url(#streak-chest-gear)" stroke="#3730A3" strokeWidth="0.5" />
-    <rect x="30" y="42" width="4" height="2" fill="url(#streak-chest-gear)" stroke="#3730A3" strokeWidth="0.5" />
-    <rect x="26" y="36.5" width="2" height="3" fill="url(#streak-chest-gear)" stroke="#3730A3" strokeWidth="0.5" />
-    <rect x="36" y="36.5" width="2" height="3" fill="url(#streak-chest-gear)" stroke="#3730A3" strokeWidth="0.5" />
+    <rect x="30" y="32" width="4" height="2" fill="url(#streak-chest-gear)" stroke="#1E40AF" strokeWidth="0.5" />
+    <rect x="30" y="42" width="4" height="2" fill="url(#streak-chest-gear)" stroke="#1E40AF" strokeWidth="0.5" />
+    <rect x="26" y="36.5" width="2" height="3" fill="url(#streak-chest-gear)" stroke="#1E40AF" strokeWidth="0.5" />
+    <rect x="36" y="36.5" width="2" height="3" fill="url(#streak-chest-gear)" stroke="#1E40AF" strokeWidth="0.5" />
     {/* Gear inner circle */}
-    <circle cx="32" cy="38" r="2.5" fill="#6366F1" stroke="#3730A3" strokeWidth="1" />
+    <circle cx="32" cy="38" r="2.5" fill="#3B82F6" stroke="#1E40AF" strokeWidth="1" />
     {/* Keyhole */}
     <circle cx="32" cy="37" r="1" fill="#1E1B4B" />
     <rect x="31.2" y="37" width="1.6" height="3" rx="0.5" fill="#1E1B4B" />
     {/* Corner bolts */}
-    <circle cx="14" cy="36" r="1.5" fill="#6366F1" stroke="#3730A3" strokeWidth="0.8" />
-    <circle cx="50" cy="36" r="1.5" fill="#6366F1" stroke="#3730A3" strokeWidth="0.8" />
-    <circle cx="14" cy="50" r="1.5" fill="#6366F1" stroke="#3730A3" strokeWidth="0.8" />
-    <circle cx="50" cy="50" r="1.5" fill="#6366F1" stroke="#3730A3" strokeWidth="0.8" />
+    <circle cx="14" cy="36" r="1.5" fill="#3B82F6" stroke="#1E40AF" strokeWidth="0.8" />
+    <circle cx="50" cy="36" r="1.5" fill="#3B82F6" stroke="#1E40AF" strokeWidth="0.8" />
+    <circle cx="14" cy="50" r="1.5" fill="#3B82F6" stroke="#1E40AF" strokeWidth="0.8" />
+    <circle cx="50" cy="50" r="1.5" fill="#3B82F6" stroke="#1E40AF" strokeWidth="0.8" />
     {/* Lid corner bolts */}
-    <circle cx="14" cy="22" r="1.2" fill="#6366F1" stroke="#3730A3" strokeWidth="0.8" />
-    <circle cx="50" cy="22" r="1.2" fill="#6366F1" stroke="#3730A3" strokeWidth="0.8" />
+    <circle cx="14" cy="22" r="1.2" fill="#3B82F6" stroke="#1E40AF" strokeWidth="0.8" />
+    <circle cx="50" cy="22" r="1.2" fill="#3B82F6" stroke="#1E40AF" strokeWidth="0.8" />
     {/* Small decorative gear (left) */}
-    <circle cx="20" cy="44" r="2.5" fill="url(#streak-chest-gear)" stroke="#3730A3" strokeWidth="0.8" />
-    <circle cx="20" cy="44" r="1" fill="#3730A3" />
+    <circle cx="20" cy="44" r="2.5" fill="url(#streak-chest-gear)" stroke="#1E40AF" strokeWidth="0.8" />
+    <circle cx="20" cy="44" r="1" fill="#1E40AF" />
     {/* Small decorative gear (right) */}
-    <circle cx="44" cy="44" r="2.5" fill="url(#streak-chest-gear)" stroke="#3730A3" strokeWidth="0.8" />
-    <circle cx="44" cy="44" r="1" fill="#3730A3" />
+    <circle cx="44" cy="44" r="2.5" fill="url(#streak-chest-gear)" stroke="#1E40AF" strokeWidth="0.8" />
+    <circle cx="44" cy="44" r="1" fill="#1E40AF" />
     {/* Metal sheen on lid */}
     <path d="M14,22 Q30,19 50,22" fill="none" stroke="white" strokeWidth="0.8" opacity="0.3" />
     {/* Chest base shadow */}

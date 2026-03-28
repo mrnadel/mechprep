@@ -86,6 +86,7 @@ function getDefaultComeback(): ComebackState {
     isInComebackFlow: false,
     comebackQuestsCompleted: 0,
     daysAway: 0,
+    lastDismissedDate: null,
   };
 }
 
@@ -608,6 +609,10 @@ export const useEngagementStore = create<EngagementStore>()(
           // Don't show comeback for users who never really practiced
           if (progress.totalXp === 0) return;
 
+          // Don't re-trigger if the user already dismissed the welcome back modal
+          // and hasn't completed a new session since (lastActiveDate unchanged)
+          if (state.comeback.lastDismissedDate && state.comeback.lastDismissedDate >= lastActiveDate) return;
+
           const lastActive = new Date(lastActiveDate + 'T00:00:00Z');
           const today = new Date(getTodayDate() + 'T00:00:00Z');
           const daysDiff = Math.floor(
@@ -620,6 +625,7 @@ export const useEngagementStore = create<EngagementStore>()(
                 isInComebackFlow: true,
                 comebackQuestsCompleted: 0,
                 daysAway: daysDiff,
+                lastDismissedDate: null,
               },
             });
           }

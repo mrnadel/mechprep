@@ -16,13 +16,13 @@ interface Props {
 }
 
 const PRACTICE_THEME = {
-  color: '#6366F1',
-  dark: '#4338CA',
+  color: '#3B82F6',
+  dark: '#1D4ED8',
 };
 
 function getGrade(accuracy: number) {
   if (accuracy >= 90) return { label: 'Outstanding!', icon: '👑', color: '#10B981', dark: '#059669' };
-  if (accuracy >= 75) return { label: 'Great Work!', icon: '🏆', color: '#6366F1', dark: '#4338CA' };
+  if (accuracy >= 75) return { label: 'Great Work!', icon: '🏆', color: '#3B82F6', dark: '#1D4ED8' };
   if (accuracy >= 60) return { label: 'Good Progress!', icon: '💪', color: '#F59E0B', dark: '#B45309' };
   return { label: 'Keep Practicing!', icon: '📚', color: '#8B5E5E', dark: '#5C3D3D' };
 }

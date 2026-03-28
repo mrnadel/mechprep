@@ -4,32 +4,55 @@
 [data-next-badge-root] { display: none !important; }
 
 @theme {
-  --color-primary-50: #EEF2FF;
-  --color-primary-100: #E0E7FF;
-  --color-primary-200: #C7D2FE;
-  --color-primary-300: #A5B4FC;
-  --color-primary-400: #818CF8;
-  --color-primary-500: #6366F1;
-  --color-primary-600: #4F46E5;
-  --color-primary-700: #4338CA;
-  --color-primary-800: #3730A3;
-  --color-primary-900: #312E81;
+  /* ── Primary (Professional Blue) ── */
+  --color-primary-50: #EFF6FF;
+  --color-primary-100: #DBEAFE;
+  --color-primary-200: #BFDBFE;
+  --color-primary-300: #93C5FD;
+  --color-primary-400: #60A5FA;
+  --color-primary-500: #3B82F6;
+  --color-primary-600: #2563EB;
+  --color-primary-700: #1D4ED8;
+  --color-primary-800: #1E40AF;
+  --color-primary-900: #1E3A8A;
 
-  --color-brand-50: #FFF8E1;
-  --color-brand-100: #FFECB3;
-  --color-brand-200: #FFD54F;
-  --color-brand-300: #FFC107;
-  --color-brand-400: #F5B800;
-  --color-brand-500: #E5A800;
-  --color-brand-600: #C49200;
-  --color-brand-700: #A17700;
-  --color-brand-800: #7D5D00;
-  --color-brand-900: #5D4200;
+  /* ── Brand (Refined Amber) ── */
+  --color-brand-50: #FFFBEB;
+  --color-brand-100: #FEF3C7;
+  --color-brand-200: #FDE68A;
+  --color-brand-300: #FCD34D;
+  --color-brand-400: #FBBF24;
+  --color-brand-500: #F59E0B;
+  --color-brand-600: #D97706;
+  --color-brand-700: #B45309;
+  --color-brand-800: #92400E;
+  --color-brand-900: #78350F;
 
+  /* ── Accent (Emerald) ── */
+  --color-accent-50: #ECFDF5;
+  --color-accent-100: #D1FAE5;
+  --color-accent-200: #A7F3D0;
+  --color-accent-300: #6EE7B7;
   --color-accent-400: #34D399;
   --color-accent-500: #10B981;
   --color-accent-600: #059669;
+  --color-accent-700: #047857;
+  --color-accent-800: #065F46;
+  --color-accent-900: #064E3B;
 
+  /* ── Danger (Red) ── */
+  --color-danger-50: #FEF2F2;
+  --color-danger-100: #FEE2E2;
+  --color-danger-200: #FECACA;
+  --color-danger-300: #FCA5A5;
+  --color-danger-400: #F87171;
+  --color-danger-500: #EF4444;
+  --color-danger-600: #DC2626;
+  --color-danger-700: #B91C1C;
+  --color-danger-800: #991B1B;
+  --color-danger-900: #7F1D1D;
+
+  /* ── Surface (Slate) ── */
   --color-surface-50: #F8FAFC;
   --color-surface-100: #F1F5F9;
   --color-surface-200: #E2E8F0;
@@ -53,7 +76,7 @@
 
   body {
     @apply text-surface-900 antialiased;
-    background-color: #FAFAFA;
+    background-color: var(--color-surface-50);
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
@@ -77,24 +100,25 @@
   }
 }
 
-/* Custom component classes — plain CSS to avoid Tailwind v4 @apply issues */
+/* ── Utility Components (all tokenized) ── */
+
 .card {
   background: white;
   border-radius: 0.75rem;
-  border: 1px solid #E2E8F0;
+  border: 1px solid var(--color-surface-200);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
 .card-hover {
   background: white;
   border-radius: 0.75rem;
-  border: 1px solid #E2E8F0;
+  border: 1px solid var(--color-surface-200);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   transition: all 0.2s;
 }
 .card-hover:hover {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  border-color: #CBD5E1;
+  border-color: var(--color-surface-300);
   transform: translateY(-2px);
 }
 
@@ -104,7 +128,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
-  background: #4F46E5;
+  background: var(--color-primary-600);
   color: white;
   font-weight: 500;
   border-radius: 0.5rem;
@@ -115,7 +139,7 @@
   font-size: 0.875rem;
 }
 .btn-primary:hover {
-  background: #4338CA;
+  background: var(--color-primary-700);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 .btn-primary:active {
@@ -133,17 +157,17 @@
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
   background: white;
-  color: #334155;
+  color: var(--color-surface-700);
   font-weight: 500;
   border-radius: 0.5rem;
-  border: 1px solid #CBD5E1;
+  border: 1px solid var(--color-surface-300);
   transition: all 0.2s;
   cursor: pointer;
   font-size: 0.875rem;
 }
 .btn-secondary:hover {
-  background: #F8FAFC;
-  border-color: #94A3B8;
+  background: var(--color-surface-50);
+  border-color: var(--color-surface-400);
 }
 
 .btn-ghost {
@@ -152,7 +176,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  color: #475569;
+  color: var(--color-surface-600);
   font-weight: 500;
   border-radius: 0.5rem;
   transition: all 0.2s;
@@ -162,8 +186,8 @@
   font-size: 0.875rem;
 }
 .btn-ghost:hover {
-  background: #F1F5F9;
-  color: #0F172A;
+  background: var(--color-surface-100);
+  color: var(--color-surface-900);
 }
 
 .badge {
@@ -184,8 +208,8 @@
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: #E0E7FF;
-  color: #4338CA;
+  background: var(--color-primary-100);
+  color: var(--color-primary-700);
 }
 
 .badge-success {
@@ -196,8 +220,8 @@
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: #D1FAE5;
-  color: #047857;
+  background: var(--color-accent-100);
+  color: var(--color-accent-700);
 }
 
 .badge-warning {
@@ -208,8 +232,8 @@
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: #FEF3C7;
-  color: #B45309;
+  background: var(--color-brand-100);
+  color: var(--color-brand-700);
 }
 
 .badge-error {
@@ -220,13 +244,13 @@
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: #FEE2E2;
-  color: #B91C1C;
+  background: var(--color-danger-100);
+  color: var(--color-danger-700);
 }
 
 .progress-bar {
   height: 0.5rem;
-  background: #E2E8F0;
+  background: var(--color-surface-200);
   border-radius: 9999px;
   overflow: hidden;
 }
@@ -241,25 +265,25 @@
   width: 100%;
   padding: 0.625rem 1rem;
   background: white;
-  border: 1px solid #CBD5E1;
+  border: 1px solid var(--color-surface-300);
   border-radius: 0.5rem;
-  color: #0F172A;
+  color: var(--color-surface-900);
   transition: all 0.2s;
   font-size: 1rem;
 }
 .input::placeholder {
-  color: #94A3B8;
+  color: var(--color-surface-400);
 }
 .input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #6366F1;
+  box-shadow: 0 0 0 2px var(--color-primary-500);
   border-color: transparent;
 }
 
 .stat-card {
   background: white;
   border-radius: 0.75rem;
-  border: 1px solid #E2E8F0;
+  border: 1px solid var(--color-surface-200);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   padding: 1rem;
   display: flex;
@@ -270,15 +294,16 @@
 .stat-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0F172A;
+  color: var(--color-surface-900);
 }
 
 .stat-label {
   font-size: 0.875rem;
-  color: #64748B;
+  color: var(--color-surface-500);
 }
 
-/* Animations */
+/* ── Animations ── */
+
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
 }
@@ -316,7 +341,8 @@
   100% { transform: scale(1); }
 }
 
-/* Scrollbar */
+/* ── Scrollbar ── */
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -325,14 +351,14 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: var(--color-surface-300);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: var(--color-surface-400);
 }
 
-/* Duolingo-style unit card entrance */
+/* ── Duolingo-style unit card entrance ── */
 @keyframes unitSlideUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
@@ -348,7 +374,7 @@
   animation: goPulse 2.5s ease-in-out infinite;
 }
 
-/* Lesson tile pulse — glow following isometric shape */
+/* Lesson tile pulse */
 @keyframes lessonPulse {
   0%, 100% { filter: drop-shadow(0 0 0px transparent); }
   50% { filter: drop-shadow(0 0 10px var(--go-glow-color)); }
@@ -358,19 +384,18 @@
   animation: lessonPulse 2.5s ease-in-out infinite;
 }
 
-/* Lesson overlay — full-screen view for active lessons */
+/* Lesson overlay */
 .lesson-overlay {
   position: fixed;
   inset: 0;
   z-index: 60;
-  background: #FAFAFA;
+  background: var(--color-surface-50);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 /* ── Golden Lesson Effects ── */
 
-/* Golden node on course map */
 .golden-node {
   background: #FFB800 !important;
   border: none !important;
@@ -405,12 +430,10 @@
   z-index: 1;
 }
 
-/* Golden icon container on the course map */
 .golden-icon-box {
   background: #CC9400;
 }
 
-/* Badge shimmer for in-lesson golden tag */
 .golden-badge-shimmer {
   background: #FFB800;
   border: none;
@@ -440,7 +463,6 @@
   transform: translateX(60%);
 }
 
-/* Golden result header */
 .golden-result-header {
   background: #FFB800;
   position: relative;
@@ -463,12 +485,10 @@
   left: 70%;
 }
 
-/* Golden text */
 .golden-text {
   color: #5D4200;
 }
 
-/* Golden mastery achievement row */
 .golden-achievement {
   background: #FFB800;
   border: none;
@@ -492,7 +512,6 @@
   left: 75%;
 }
 
-/* Golden continue button */
 .golden-btn {
   background: #FFB800;
   box-shadow: 0 4px 0 #996E00;
@@ -517,7 +536,6 @@
   left: 70%;
 }
 
-/* Golden unit/chapter on course map */
 .golden-unit {
   background: #FFB800 !important;
   border: none !important;
@@ -547,26 +565,22 @@
   z-index: 1;
 }
 
-/* Golden star on course map */
 .golden-star-pulse {
   filter: drop-shadow(0 0 2px rgba(255, 184, 0, 0.3));
 }
 
-/* Golden dots on map */
 .golden-dot {
   background: #FFFFFF;
 }
 
-/* ── Question Diagrams — mobile-friendly SVG rendering ── */
+/* ── Question Diagrams ── */
 
-/* Make inline SVGs fill their container */
 .diagram-svg svg {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Remap dark-theme SVG colors for light diagram backgrounds */
 .diagram-svg [fill="#e2e8f0"] {
   fill: #334155 !important;
 }
@@ -577,7 +591,6 @@
   stroke: #64748b !important;
 }
 
-/* Boost text legibility on small screens */
 @media (max-width: 640px) {
   .diagram-svg text {
     font-size: 14px !important;
@@ -594,7 +607,6 @@
   }
 }
 
-/* Expanded/fullscreen diagram */
 .diagram-expanded svg {
   width: 100%;
   height: auto;

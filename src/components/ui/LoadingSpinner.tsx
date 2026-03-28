@@ -8,7 +8,7 @@ interface LoadingSpinnerProps {
 export function LoadingSpinner({ card = true, size = 24 }: LoadingSpinnerProps) {
   const spinner = (
     <div
-      className="border-2 border-gray-300 border-t-indigo-500 rounded-full animate-spin"
+      className="border-2 border-surface-300 border-t-primary-500 rounded-full animate-spin"
       style={{ width: size, height: size }}
     />
   );

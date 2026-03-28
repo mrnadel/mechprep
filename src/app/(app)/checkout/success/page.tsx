@@ -34,7 +34,7 @@ export default function CheckoutSuccessPage() {
                 left: `${10 + Math.random() * 80}%`,
                 top: '-4%',
                 backgroundColor: [
-                  '#4F46E5', '#7C3AED', '#10B981', '#F59E0B',
+                  '#2563EB', '#7C3AED', '#10B981', '#F59E0B',
                   '#EF4444', '#3B82F6', '#EC4899', '#14B8A6',
                 ][i % 8],
               }}

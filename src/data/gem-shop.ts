@@ -406,7 +406,7 @@ export const shopItems: ShopItem[] = [
     category: 'frame',
     type: 'frame',
     rarity: 'legendary',
-    metadata: { frameStyle: 'singularity', borderColor: '#6366F1', glowColor: 'rgba(99,102,241,0.5)' },
+    metadata: { frameStyle: 'singularity', borderColor: '#3B82F6', glowColor: 'rgba(59,130,246,0.5)' },
   },
   {
     id: 'shop-frame-fusion-reactor',

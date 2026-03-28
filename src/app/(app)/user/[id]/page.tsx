@@ -217,7 +217,7 @@ export default function PublicProfilePage() {
           transition={{ duration: 0.6 }}
           className="relative overflow-hidden"
           style={{
-            background: 'linear-gradient(135deg, #1E293B 0%, #334155 40%, #3730A3 100%)',
+            background: 'linear-gradient(135deg, #1E293B 0%, #334155 40%, #1E40AF 100%)',
           }}
         >
           {/* Decorative grid pattern */}
@@ -232,7 +232,7 @@ export default function PublicProfilePage() {
             }}
           />
           {/* Glow accents */}
-          <div className="absolute -bottom-20 -right-20 w-60 h-60 rounded-full bg-indigo-500/20 blur-3xl" />
+          <div className="absolute -bottom-20 -right-20 w-60 h-60 rounded-full bg-primary-500/20 blur-3xl" />
           <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-amber-500/10 blur-3xl" />
 
           <div className="relative px-4 lg:px-8 pt-8 pb-10">

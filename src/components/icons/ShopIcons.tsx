@@ -244,12 +244,12 @@ export const StressMasterIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="shop-stress-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="shop-stress-arm" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#E0E7FF" />
+        <stop offset="100%" stopColor="#DBEAFE" />
       </linearGradient>
     </defs>
     <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#shop-stress-bg)" />

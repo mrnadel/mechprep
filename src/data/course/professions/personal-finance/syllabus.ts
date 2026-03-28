@@ -635,14 +635,14 @@ export const syllabus: SyllabusUnit[] = [
 
   // =============================================
   // SECTION C: GROWING YOUR WEALTH (Units 21-30)
-  // Color palette: Indigos → Purples (#4F46E5 → #7C3AED)
+  // Color palette: Blues → Purples (#2563EB → #7C3AED)
   // =============================================
   {
     unitIndex: 21,
     id: 'pf-u21-investing-101',
     title: 'Investing Basics',
     description: 'Why investing matters, how markets work, and the power of compound growth.',
-    color: '#4F46E5',
+    color: '#2563EB',
     icon: '📈',
     lessons: [
       { lessonIndex: 1, id: 'pf-u21-L1', title: 'Why Invest?', description: 'Saving alone isn\'t enough — you need your money to grow.', icon: '🌱', xpReward: 22, visualAidSuggestion: 'Two lines diverging: savings account vs invested money over 30 years', keyConcepts: ['investing purpose', 'inflation risk'] },

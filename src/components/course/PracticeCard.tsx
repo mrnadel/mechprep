@@ -5,10 +5,10 @@ import { useStore } from '@/store/useStore';
 import { useCourseStore } from '@/store/useCourseStore';
 
 const THEME = {
-  bg: '#EEF2FF',
-  color: '#6366F1',
-  dark: '#4338CA',
-  mid: '#818CF8',
+  bg: 'var(--color-primary-50)',
+  color: 'var(--color-primary-500)',
+  dark: 'var(--color-primary-700)',
+  mid: 'var(--color-primary-400)',
 };
 
 const GOAL_CONFIG: Record<string, { title: string; subtitle: string; icon: string }> = {

@@ -216,13 +216,13 @@ function ScrollToCurrentButton({
       >
         <path
           d="M12 6L12 19"
-          stroke="#6366F1"
+          stroke="#3B82F6"
           strokeWidth="4.5"
           strokeLinecap="round"
         />
         <path
           d="M5.5 12L12 5.5L18.5 12"
-          stroke="#6366F1"
+          stroke="#3B82F6"
           strokeWidth="4.5"
           strokeLinecap="round"
           strokeLinejoin="round"

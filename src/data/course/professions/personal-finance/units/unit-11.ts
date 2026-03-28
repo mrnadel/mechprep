@@ -23,26 +23,26 @@ export const unit11: Unit = {
           hint: "Think of it like a subscription to 'not going bankrupt from bad luck.'",
         },
         {
-          id: "pf-u11-L1-T2",
-          type: "teaching",
-          question: "The Key Insurance Terms You Need",
-          explanation: "Before we dive in, here are the terms that come up everywhere in insurance: Premium: what you pay monthly or annually for coverage.",
-          hint: "Higher deductible = lower premium. Lower deductible = higher premium. You're always making a trade-off.",
-        },
-        {
           id: "pf-u11-L1-Q1",
           type: "fill-blank",
           question: "Your _____ is the amount you pay for insurance coverage, while your _____ is what you pay before insurance kicks in.",
           blanks: ["premium", "deductible"],
           wordBank: ["premium", "deductible", "copay", "claim", "coverage", "coinsurance"],
-          explanation: "Premium = your regular payment to keep the policy active. Deductible = the amount you pay out of pocket first when something happens. These two have an inverse relationship. Raise one, lower the other.",
+          explanation: "Premium = your regular payment to keep the policy active. Deductible = the amount you pay out of pocket first when something happens.",
+        },
+        {
+          id: "pf-u11-L1-T2",
+          type: "teaching",
+          question: "The Key Insurance Terms You Need",
+          explanation: "Before we dive in, here are the terms that come up everywhere in insurance: Premium: what you pay monthly or annually for coverage.",
+          hint: "Try this now: review your current insurance policies and note what they cover, their deductibles, and monthly premiums.",
         },
         {
           id: "pf-u11-L1-Q2",
           type: "true-false",
           question: "Insurance is only worth buying if you're likely to use it.",
           correctAnswer: false,
-          explanation: "That's like saying a seatbelt is only worth wearing if you're planning to crash. Insurance protects against unpredictable events. The whole point is you DON'T know when you'll need it. A single ER visit can cost $10,000+. Your $300/month premium is a bargain if that happens.",
+          explanation: "That's like saying a seatbelt is only worth wearing if you're planning to crash. Insurance protects against unpredictable events, and a single ER visit can cost $10,000+.",
         },
         {
           id: "pf-u11-L1-Q3",
@@ -55,7 +55,7 @@ export const unit11: Unit = {
             "$0. Insurance covers everything",
           ],
           correctIndex: 0,
-          explanation: "You pay your $1,500 deductible first, then insurance covers the rest (in this simplified example). Without insurance, you'd owe the full $4,000. That $1,500 deductible hurts, but it saved you $2,500.",
+          explanation: "You pay your $1,500 deductible first, then insurance covers the rest. Without insurance, you'd owe the full $4,000, so the deductible saved you $2,500.",
         },
         {
           id: "pf-u11-L1-Q4",
@@ -78,7 +78,7 @@ export const unit11: Unit = {
             "It doesn't matter. The hospital will treat him either way",
           ],
           correctIndex: 0,
-          explanation: "A broken leg can cost $7,500. An appendectomy can run $33,000. One bad bike accident could eat his entire savings and put him in debt. Health insurance isn't about how you feel today. It's about what could happen tomorrow.",
+          explanation: "A broken leg can cost $7,500, and an appendectomy can run $33,000. One bad bike accident could eat his entire savings and put him in debt.",
         },
         {
           id: "pf-u11-L1-Q6",
@@ -89,7 +89,7 @@ export const unit11: Unit = {
           correctValue: 30000,
           tolerance: 25,
           unit: "$",
-          explanation: "The average 3-day hospital stay in the U.S. Costs around $30,000. Even with insurance, you might pay $3,000-$5,000 out of pocket. Without insurance? Financial devastation. This is why health insurance isn't optional.",
+          explanation: "The average 3-day hospital stay in the U.S. costs around $30,000. Even with insurance you might pay $3,000-$5,000 out of pocket, so without insurance it's financial devastation.",
         },
         {
           id: "pf-u11-L1-Q7",
@@ -98,7 +98,7 @@ export const unit11: Unit = {
           steps: ["Minor fender bender ($2,000)", "Broken arm ER visit ($7,500)", "House fire ($150,000)", "Cancer treatment ($250,000)"],
           correctOrder: [0, 1, 2, 3],
           rankCriteria: "Financial impact: least to most devastating",
-          explanation: "This is exactly why insurance exists. A fender bender stings. A broken arm hurts your wallet. But a house fire or cancer diagnosis without insurance? That's a life-altering financial catastrophe. Insurance protects you from the big ones.",
+          explanation: "A fender bender stings and a broken arm hurts your wallet, but a house fire or cancer diagnosis without insurance is a life-altering financial catastrophe. Insurance protects you from the big ones.",
         },
         {
           id: "pf-u11-L1-Q8",
@@ -107,7 +107,7 @@ export const unit11: Unit = {
           options: ["Your health", "A $30 phone case", "Your car", "A $15 umbrella", "Your home", "An $8 pair of socks"],
           buckets: ["Worth insuring", "Not worth insuring"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "The rule of thumb: insure things you can't afford to replace on your own. Health, car, and home? Absolutely. Cheap everyday items? Just buy a new one. Insurance is for catastrophic losses, not small inconveniences.",
+          explanation: "Insure things you can't afford to replace on your own (health, car, home). Cheap everyday items? Just buy a new one.",
         },
       ],
     },
@@ -132,7 +132,7 @@ export const unit11: Unit = {
           type: "teaching",
           question: "The HSA Superpower",
           explanation: "An HSA (Health Savings Account) is available only with an HDHP, and it's basically a cheat code. Triple tax advantage: contributions are tax-deductible, money grows tax-free, and withdrawals for medical expenses are tax-free.",
-          hint: "Many financial pros call the HSA the best tax-advantaged account in existence. Yes, even better than a 401(k).",
+          hint: "Many financial pros call the HSA the best tax-advantaged account in existence, because of its triple tax benefit.",
         },
         {
           id: "pf-u11-L2-Q1",
@@ -148,7 +148,7 @@ export const unit11: Unit = {
           type: "true-false",
           question: "With a PPO plan, you need a referral from your primary care doctor before seeing a specialist.",
           correctAnswer: false,
-          explanation: "That's HMO, not PPO. PPO plans let you see any doctor. Including specialists. Without a referral. That flexibility is why PPO premiums are higher. You're paying for freedom of choice.",
+          explanation: "That's HMO, not PPO. PPO plans let you see any doctor, including specialists, without a referral, and that flexibility is why PPO premiums are higher.",
         },
         {
           id: "pf-u11-L2-Q3",
@@ -161,7 +161,7 @@ export const unit11: Unit = {
             "The government matches your contributions",
           ],
           correctIndex: 0,
-          explanation: "The HSA is the only account with a triple tax benefit. Money goes in pre-tax, grows tax-free, and comes out tax-free for medical expenses. After 65, you can use it for anything. No other account does all three.",
+          explanation: "The HSA is the only account with a triple tax benefit: money goes in pre-tax, grows tax-free, and comes out tax-free for medical expenses. After 65, you can use it for anything.",
         },
         {
           id: "pf-u11-L2-Q4",
@@ -175,7 +175,7 @@ export const unit11: Unit = {
             "None. She should skip insurance since she's healthy",
           ],
           correctIndex: 0,
-          explanation: "Priya is young, healthy, and only sees a doctor once a year. The HDHP saves her $60-200/month on premiums, and the HSA lets her invest those savings tax-free. She can stockpile HSA money for future medical needs while paying the least now.",
+          explanation: "Priya is young, healthy, and only sees a doctor once a year. The HDHP saves her $60-200/month on premiums, and the HSA lets her save tax-free for future medical needs while paying the least now.",
         },
         {
           id: "pf-u11-L2-Q5",
@@ -183,7 +183,7 @@ export const unit11: Unit = {
           question: "An HSA offers a _____ tax advantage: contributions are deductible, growth is tax-free, and withdrawals for medical expenses are _____.",
           blanks: ["triple", "tax-free"],
           wordBank: ["triple", "tax-free", "double", "taxable", "single", "deferred"],
-          explanation: "Triple tax advantage is the magic phrase. In, growing, and out. All tax-free (for medical expenses). After 65, it's still great because it becomes a regular retirement account for non-medical spending.",
+          explanation: "Triple tax advantage is the magic phrase. In, growing, and out, all tax-free (for medical expenses). After 65, you can withdraw for non-medical spending too (just taxed as regular income).",
         },
         {
           id: "pf-u11-L2-Q6",
@@ -196,7 +196,7 @@ export const unit11: Unit = {
             "Review your plan during open enrollment each year",
           ],
           correctIndex: 0,
-          explanation: "All are good moves, but maxing your HSA is the biggest long-term play. That money grows tax-free forever. Over 30 years of maxing an HSA at ~$4,000/year with 7% returns, you'd have over $400,000 in tax-free medical money.",
+          explanation: "All are good moves, but maxing your HSA is the biggest long-term play. That money grows tax-free forever, and over 30 years of consistent contributions it can grow to hundreds of thousands.",
         },
         {
           id: "pf-u11-L2-Q7",
@@ -221,7 +221,7 @@ export const unit11: Unit = {
           correctValue: 4150,
           tolerance: 10,
           unit: "$",
-          explanation: "The 2024 individual HSA contribution limit is $4,150 ($8,300 for families). These limits go up a little each year with inflation. If you can max it out, do it. It's the most tax-efficient savings vehicle available.",
+          explanation: "The 2024 individual HSA contribution limit is $4,150 ($8,300 for families). These limits go up with inflation, and maxing it out is one of the smartest savings moves available.",
         },
       ],
     },
@@ -288,7 +288,7 @@ export const unit11: Unit = {
           type: "true-false",
           question: "Your out-of-pocket maximum is the most you'll ever pay for covered services in a single year. After that, insurance covers 100%.",
           correctAnswer: true,
-          explanation: "The out-of-pocket maximum (OOP max) is your ultimate safety net. Once your deductibles, copays, and coinsurance hit that number, the insurance company picks up 100% of covered costs for the rest of the year. In 2024, the ACA max is $9,450 for individuals.",
+          explanation: "The out-of-pocket maximum (OOP max) is your safety net: once your deductibles, copays, and coinsurance hit that number, insurance covers 100% for the rest of the year. In 2024, the ACA max is $9,450 for individuals.",
         },
         {
           id: "pf-u11-L3-Q5",
@@ -311,7 +311,7 @@ export const unit11: Unit = {
             "$8,000. Insurance doesn't help with broken bones",
           ],
           correctIndex: 0,
-          explanation: "Miguel pays the first $2,000 (deductible). The remaining $6,000 is split: he pays 20% ($1,200) and insurance pays 80% ($4,800). Total out-of-pocket: $2,000 + $1,200 = $3,200. Without insurance, he'd owe $8,000.",
+          explanation: "Miguel pays $2,000 (deductible), then 20% of the remaining $6,000 ($1,200). Total out-of-pocket: $3,200. Without insurance, he'd owe $8,000.",
         },
         {
           id: "pf-u11-L3-Q7",
@@ -324,7 +324,7 @@ export const unit11: Unit = {
             "Compare plan costs during open enrollment each year",
           ],
           correctIndex: 3,
-          explanation: "All are smart moves. But comparing plans during open enrollment has the biggest impact because it sets ALL your costs for the entire year. Premiums, deductibles, copays, and network. Choosing the wrong plan can cost you thousands.",
+          explanation: "All are smart moves, but comparing plans during open enrollment has the biggest impact because it sets ALL your costs for the entire year. Choosing the wrong plan can cost you thousands.",
         },
         {
           id: "pf-u11-L3-Q8",
@@ -335,7 +335,7 @@ export const unit11: Unit = {
           correctValue: 9450,
           tolerance: 10,
           unit: "$",
-          explanation: "The 2024 ACA out-of-pocket maximum is $9,450 for individuals ($18,900 for families). This is the absolute most you'd pay for covered in-network care in a year. After that, insurance covers everything. It's high. But it's a ceiling that prevents financial ruin.",
+          explanation: "The 2024 ACA out-of-pocket maximum is $9,450 for individuals ($18,900 for families). It's a ceiling: the absolute most you'd pay for covered in-network care in a year.",
         },
         {
           id: "pf-u11-L3-Q9",
@@ -349,7 +349,7 @@ export const unit11: Unit = {
             "Cosmetic surgery (not medically necessary)",
           ],
           correctIndices: [0, 2, 3],
-          explanation: "ER visits, lab work, and prescriptions (on most plans) count toward your deductible. Premiums NEVER count. They're separate. And cosmetic surgery typically isn't covered at all, so it doesn't count toward anything.",
+          explanation: "ER visits, lab work, and prescriptions (on most plans) count toward your deductible. Premiums never count (they're separate), and cosmetic surgery isn't covered at all.",
         },
       ],
     },
@@ -396,14 +396,14 @@ export const unit11: Unit = {
             "$150,000. $50,000 per person times 3",
           ],
           correctIndex: 0,
-          explanation: "Each person's bills are under the $50K per-person limit, so that's fine. But the total ($115K) exceeds the $100K per-accident limit. Insurance pays $100K; you're personally liable for the remaining $15K. This is why higher limits matter.",
+          explanation: "Each person's bills are under the $50K per-person limit, but the total ($115K) exceeds the $100K per-accident limit. Insurance pays $100K, and you're personally liable for the remaining $15K.",
         },
         {
           id: "pf-u11-L4-Q3",
           type: "true-false",
           question: "If your car is fully paid off and worth $3,000, it might make sense to drop collision coverage.",
           correctAnswer: true,
-          explanation: "If collision coverage costs you $400/year and your car is only worth $3,000, you're paying a lot for not much coverage. At that point, the insurance company would only pay the car's market value minus your deductible. You could self-insure by saving that $400/year instead.",
+          explanation: "If collision coverage costs $400/year and your car is only worth $3,000, you're paying a lot for not much coverage. You could self-insure by saving that $400/year instead.",
         },
         {
           id: "pf-u11-L4-Q4",
@@ -434,10 +434,10 @@ export const unit11: Unit = {
             "Having a clean driving record",
             "Living in a high-crime ZIP code",
             "Driving a newer, expensive car",
-            "Having a high credit score",
+            "Bundling with other insurance policies",
           ],
           correctIndices: [0, 2, 3],
-          explanation: "Being young (under 25), living in a high-crime area, and driving an expensive car all raise premiums. A clean driving record and high credit score actually LOWER premiums. Your ZIP code matters more than you'd think.",
+          explanation: "Being young (under 25), living in a high-crime area, and driving an expensive car all raise premiums. A clean driving record and bundling policies actually LOWER premiums. Your ZIP code matters more than you'd think.",
         },
         {
           id: "pf-u11-L4-Q7",
@@ -484,14 +484,14 @@ export const unit11: Unit = {
           type: "teaching",
           question: "Homeowner's Insurance: Protecting Your Biggest Asset",
           explanation: "If you own a home, homeowner's insurance is non-negotiable (your mortgage lender requires it anyway). It covers the structure itself, your personal belongings, liability if someone is injured on your property, and additional living expenses if your home is damaged.",
-          hint: "Your home is probably your most expensive asset. Spending $150/month to protect a $300,000 investment is a no-brainer.",
+          hint: "Your home is probably your most expensive possession. Spending $150/month to protect a $300,000 asset makes sense.",
         },
         {
           id: "pf-u11-L5-Q1",
           type: "true-false",
           question: "Renter's insurance is expensive. Most people pay over $100/month for basic coverage.",
           correctAnswer: false,
-          explanation: "Renter's insurance is one of the best deals in all of insurance. Most people pay just $15-25/month for $30,000+ in personal property coverage, plus liability protection. That's less than a single streaming subscription. Almost criminal not to have it.",
+          explanation: "Renter's insurance is one of the best deals in insurance. Most people pay just $15-25/month for $30,000+ in personal property coverage, plus liability protection.",
         },
         {
           id: "pf-u11-L5-Q2",
@@ -502,7 +502,7 @@ export const unit11: Unit = {
           correctValue: 30000,
           tolerance: 30,
           unit: "$",
-          explanation: "Most people underestimate. When you add up furniture, electronics, clothes, kitchen items, shoes, decorations, books, and everything else. The average renter has $20,000-$50,000 worth of stuff. Try doing a home inventory. You'll be surprised.",
+          explanation: "Most people underestimate. When you add up furniture, electronics, clothes, kitchen items, and everything else, the average renter has $20,000-$50,000 worth of stuff.",
         },
         {
           id: "pf-u11-L5-Q3",
@@ -511,7 +511,7 @@ export const unit11: Unit = {
           options: ["Fire damage", "Flood damage", "Theft of belongings", "Earthquake damage", "Windstorm damage", "Sewer backup"],
           buckets: ["Covered by standard policy", "NOT covered (need extra policy)"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "Standard homeowner's covers fire, theft, and windstorms. Floods, earthquakes, and sewer backups typically require separate policies or riders. This catches a lot of people off guard. Especially in flood-prone areas.",
+          explanation: "Standard homeowner's covers fire, theft, and windstorms. Floods, earthquakes, and sewer backups typically require separate policies or riders, which catches a lot of people off guard.",
         },
         {
           id: "pf-u11-L5-Q4",
@@ -524,7 +524,7 @@ export const unit11: Unit = {
             "You get back exactly what you paid for each item originally",
           ],
           correctIndex: 0,
-          explanation: "Replacement cost pays for a brand-new equivalent item. 'Actual cash value' (the cheaper alternative) accounts for depreciation. So your 3-year-old $1,200 laptop might only get you $400. Always choose replacement cost if you can. It's worth the few extra dollars per month.",
+          explanation: "Replacement cost pays for a brand-new equivalent item. 'Actual cash value' accounts for depreciation, so your 3-year-old $1,200 laptop might only get you $400. Always choose replacement cost.",
         },
         {
           id: "pf-u11-L5-Q5",
@@ -555,7 +555,7 @@ export const unit11: Unit = {
             "Tom can sue his landlord to cover the loss",
           ],
           correctIndex: 0,
-          explanation: "Tom loses everything with zero reimbursement. His landlord's insurance covers the building, not Tom's personal property. If Tom had renter's insurance ($20/month), he'd get up to $25,000 to replace his stuff. That's a $240/year policy protecting $25,000 in assets.",
+          explanation: "Tom loses everything with zero reimbursement, because his landlord's insurance covers the building, not Tom's personal property. Renter's insurance at $20/month would have covered up to $25,000 to replace his stuff.",
         },
         {
           id: "pf-u11-L5-Q8",
@@ -606,15 +606,15 @@ export const unit11: Unit = {
         {
           id: "pf-u11-L6-Q2",
           type: "multiple-choice",
-          question: "A 30-year-old gets a $500,000 term life policy for $25/month. A whole life policy with the same coverage costs $350/month. If they invest the $325 monthly difference for 30 years at 7% returns, how much would they have?",
+          question: "A 30-year-old gets a $500,000 term life policy for $25/month. A whole life policy with the same coverage costs $350/month. How much does the term buyer save per month?",
           options: [
-            "About $395,000. Nearly matching the death benefit AND keeping the money",
-            "About $117,000. Not enough to matter",
-            "About $50,000. Whole life wins easily",
-            "About $1,000,000. Unrealistic returns",
+            "$325/month, which can be saved or used for other goals",
+            "$25/month, barely any difference",
+            "$100/month, a small savings",
+            "$500/month, whole life costs way more",
           ],
           correctIndex: 0,
-          explanation: "$325/month invested at 7% for 30 years grows to about $395,000. That's money YOU control, can access anytime, and keep even if you don't die. Whole life's cash value would be far less due to high fees. This is why 'buy term, invest the difference' wins.",
+          explanation: "$350 - $25 = $325/month saved. Over 30 years, that's $117,000 in premium savings alone, and even more if you put it in a HYSA. Whole life's cash value rarely beats simply saving the difference.",
         },
         {
           id: "pf-u11-L6-Q3",
@@ -628,10 +628,10 @@ export const unit11: Unit = {
         {
           id: "pf-u11-L6-Q4",
           type: "fill-blank",
-          question: "Most financial experts recommend buying _____ life insurance and investing the difference rather than buying _____ life insurance.",
+          question: "Most financial experts recommend buying _____ life insurance and saving the difference rather than buying _____ life insurance.",
           blanks: ["term", "whole"],
           wordBank: ["term", "whole", "universal", "variable", "permanent", "indexed"],
-          explanation: "Buy term, invest the difference. It's one of the most universally agreed-upon pieces of financial advice. Term is cheap, simple, and does the job. Whole life is expensive, complex, and benefits the insurance company more than you.",
+          explanation: "Buy term, save the difference. Term is cheap, simple, and does the job. Whole life is expensive, complex, and benefits the insurance company more than you.",
         },
         {
           id: "pf-u11-L6-Q5",
@@ -674,12 +674,12 @@ export const unit11: Unit = {
           options: [
             "Replace your income for dependents who rely on it",
             "Cover outstanding debts so they don't burden your family",
-            "As an investment vehicle to grow wealth",
+            "As a savings vehicle to grow wealth",
             "Fund your children's education if you pass away",
             "Cover funeral and burial costs",
           ],
           correctIndices: [0, 1, 3, 4],
-          explanation: "Income replacement, debt coverage, education funding, and funeral costs are all solid reasons. Using life insurance as an investment vehicle is generally a bad idea. You'll get better returns investing directly. Keep insurance for protection, investments for growth.",
+          explanation: "Income replacement, debt coverage, education funding, and funeral costs are all solid reasons. Using life insurance as a wealth-building tool is generally a bad idea. Keep insurance for protection, not savings growth.",
         },
       ],
     },
@@ -715,7 +715,7 @@ export const unit11: Unit = {
           correctValue: 25,
           tolerance: 20,
           unit: "%",
-          explanation: "About 25% (1 in 4) workers will experience a disability lasting 90 days or more before reaching retirement age. That's not a rare edge case. It's a very real risk. Back pain, cancer, mental health conditions, and accidents are the most common causes.",
+          explanation: "About 25% (1 in 4) workers will experience a disability lasting 90+ days during their career. Back pain, cancer, mental health conditions, and accidents are the most common causes.",
         },
         {
           id: "pf-u11-L7-Q2",
@@ -731,7 +731,7 @@ export const unit11: Unit = {
           type: "true-false",
           question: "Most disabilities are caused by dramatic accidents like car crashes or falling off ladders.",
           correctAnswer: false,
-          explanation: "Actually, the most common causes of long-term disability are illnesses. Back problems, cancer, heart disease, mental health conditions, and arthritis. These 'boring' health issues are far more likely to stop you from working than a dramatic accident.",
+          explanation: "The most common causes of long-term disability are illnesses: back problems, cancer, heart disease, and mental health conditions. These are far more likely to stop you from working than a dramatic accident.",
         },
         {
           id: "pf-u11-L7-Q4",
@@ -744,7 +744,7 @@ export const unit11: Unit = {
             "$2,100/month",
           ],
           correctIndex: 0,
-          explanation: "$70,000 x 60% = $42,000/year. Divide by 12 months = $3,500/month. It's less than your full salary, which is why having an emergency fund and low expenses matters. Disability insurance replaces income, not lifestyle.",
+          explanation: "$70,000 x 60% = $42,000/year, or $3,500/month. It's less than your full salary, which is why having an emergency fund and low expenses matters.",
         },
         {
           id: "pf-u11-L7-Q5",
@@ -752,7 +752,7 @@ export const unit11: Unit = {
           question: "Long-term disability typically has a _____ day waiting period and replaces about _____% of your pre-disability income.",
           blanks: ["90", "60"],
           wordBank: ["90", "60", "30", "80", "14", "100"],
-          explanation: "Most LTD policies have a 90-day elimination period (waiting period) before benefits start, and they replace about 60% of your income. That 90-day gap is exactly why you need an emergency fund covering 3-6 months of expenses.",
+          explanation: "Most LTD policies have a 90-day waiting period before benefits start, and they replace about 60% of your income. That 90-day gap is why your emergency fund matters.",
         },
         {
           id: "pf-u11-L7-Q6",
@@ -779,7 +779,7 @@ export const unit11: Unit = {
             "Social Security disability will kick in within a month",
           ],
           correctIndex: 0,
-          explanation: "Without disability insurance, Rachel is in serious trouble. $5,000 covers maybe 1 month of expenses. Workers' comp may not apply (RSI from desk work is hard to prove). SSDI takes months and is usually denied initially. She faces 6+ months with no income. A $40/month LTD policy would have given her $4,750/month.",
+          explanation: "Without disability insurance, Rachel's $5,000 covers maybe 1 month of expenses, and she faces 6+ months with no income. A $40/month LTD policy would have given her $4,750/month.",
         },
         {
           id: "pf-u11-L7-Q8",
@@ -829,7 +829,7 @@ export const unit11: Unit = {
           type: "true-false",
           question: "If an extended warranty costs 20% of the product price, it's usually a good deal.",
           correctAnswer: false,
-          explanation: "An extended warranty costing 20% of the product price is almost always a bad deal. Only about 5-10% of products actually need repair during the warranty period, and the repair cost is often less than replacement. You're paying $200 on a $1,000 TV for maybe a 5% chance of needing it. The expected value is terrible.",
+          explanation: "Only about 5-10% of products actually need repair during the warranty period. You're paying $200 on a $1,000 TV for maybe a 5% chance of needing it.",
         },
         {
           id: "pf-u11-L8-Q3",
@@ -842,7 +842,7 @@ export const unit11: Unit = {
             "It depends on the brand of laptop",
           ],
           correctIndex: 0,
-          explanation: "Expected value: 8% chance x $200 average repair = $16 expected payout. You're paying $150 for $16 of expected value. The store makes a massive profit margin on warranties. About 50-60% pure profit. Just save the $150 and self-insure.",
+          explanation: "Expected value: 8% chance x $200 average repair = $16 expected payout. You're paying $150 for $16 of expected value, so just save the $150 and self-insure.",
         },
         {
           id: "pf-u11-L8-Q4",
@@ -921,7 +921,7 @@ export const unit11: Unit = {
           type: "teaching",
           question: "The Credit Freeze: Your Best Weapon",
           explanation: "A credit freeze is the single most effective thing you can do to prevent identity theft. It locks your credit reports at all three bureaus so nobody (including you) can open new accounts until you temporarily unfreeze.",
-          hint: "Do this today. Go to each bureau's website, create an account, and freeze your credit. It takes about 15 minutes total.",
+          hint: "Try this now: go to Equifax, Experian, and TransUnion's websites and freeze your credit for free (takes about 15 minutes).",
         },
         {
           id: "pf-u11-L9-Q1",
@@ -949,9 +949,9 @@ export const unit11: Unit = {
         {
           id: "pf-u11-L9-Q3",
           type: "true-false",
-          question: "A credit freeze hurts your credit score.",
+          question: "A credit freeze prevents you from using your existing bank accounts.",
           correctAnswer: false,
-          explanation: "A credit freeze has zero impact on your credit score. It simply prevents new credit inquiries. Your existing accounts, payment history, and score are completely unaffected. There's literally no downside. Just the minor inconvenience of unfreezing when you need to apply for credit.",
+          explanation: "A credit freeze only prevents NEW accounts from being opened in your name. Your existing accounts work normally, with no downside.",
         },
         {
           id: "pf-u11-L9-Q4",
@@ -1097,10 +1097,10 @@ export const unit11: Unit = {
           id: "pf-u11-L10-Q5",
           type: "category-swipe",
           question: "Does this LOWER or RAISE your insurance premium?",
-          options: ["Raising your deductible from $500 to $1,000", "Filing multiple small claims", "Bundling auto + home insurance", "Having a poor credit score", "Installing a home security system", "Adding a teenage driver to auto policy"],
+          options: ["Raising your deductible from $500 to $1,000", "Filing multiple small claims", "Bundling auto + home insurance", "Having multiple at-fault accidents", "Installing a home security system", "Adding a teenage driver to auto policy"],
           buckets: ["Lowers your premium", "Raises your premium"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "Higher deductible, bundling, and security systems lower premiums. Filing small claims, poor credit, and teen drivers raise them. Pro tip: avoid filing small claims. The premium increase often costs more than the payout.",
+          explanation: "Higher deductible, bundling, and security systems lower premiums. Filing small claims, at-fault accidents, and teen drivers raise them. Avoid filing small claims: the premium increase often costs more than the payout.",
         },
         {
           id: "pf-u11-L10-Q6",
@@ -1145,10 +1145,10 @@ export const unit11: Unit = {
             "Pay your annual premium in full instead of monthly",
             "Drop liability coverage to save on premiums",
             "Take a defensive driving course for a discount",
-            "Improve your credit score",
+            "Bundle auto and home/renter's insurance",
           ],
           correctIndices: [0, 1, 3, 4],
-          explanation: "Low-mileage discounts, paying in full (avoids installment fees), defensive driving courses (5-10% discount), and improving your credit score all legitimately lower premiums. Dropping liability coverage is dangerous and illegal in most states. Never do that.",
+          explanation: "Low-mileage discounts, paying in full (avoids installment fees), defensive driving courses (5-10% discount), and bundling policies all legitimately lower premiums. Dropping liability coverage is dangerous and illegal in most states.",
         },
         {
           id: "pf-u11-L10-Q10",
@@ -1216,7 +1216,7 @@ export const unit11: Unit = {
           message: "",
           options: [
             {
-              text: "Tell me more about the HSA with Plan C. The money rolls over year to year and I can invest it, right? What does the company contribute?",
+              text: "Tell me more about the HSA with Plan C. The money rolls over year to year, right? What does the company contribute?",
               nextNodeId: "pf-u11-L11-C5",
               quality: "great",
               feedback: "You understand the HSA's secret power: it's a triple tax-advantaged account. Tax-free contributions, tax-free growth, and tax-free withdrawals for medical expenses. It's the most tax-efficient account in the US.",
@@ -1238,7 +1238,7 @@ export const unit11: Unit = {
         {
           id: "pf-u11-L11-C5",
           speaker: "Dana",
-          message: "The company contributes $750/year to your HSA with Plan C. You can add up to $3,350 more. The money is yours forever. It rolls over every year and you can invest it once the balance hits $1,000. After age 65, you can withdraw for anything penalty-free.",
+          message: "The company contributes $750/year to your HSA with Plan C. You can add up to $3,350 more. The money is yours forever. It rolls over every year and grows tax-free. After age 65, you can withdraw for anything penalty-free.",
           nextNodeId: "pf-u11-L11-C6",
         },
         {
@@ -1281,7 +1281,7 @@ export const unit11: Unit = {
         {
           id: "pf-u11-L11-C9",
           speaker: "Narrator",
-          message: "Key takeaways from your insurance shopping:\n\n1. Never choose based on premium alone. Compare total cost (premium + deductible + out-of-pocket max)\n2. Check if your doctors are in-network before choosing\n3. HSAs are the most tax-advantaged account in the US (triple tax benefit)\n4. Healthy, young people usually benefit from HDHPs + HSAs\n5. Your employer's HSA contribution is free money. Always factor it in\n6. HSA funds roll over forever and can be invested for retirement\n\nThe right plan depends on YOUR health, doctors, and financial situation. Not which one 'looks' cheapest.",
+          message: "Key takeaways from your insurance shopping:\n\n1. Never choose based on premium alone. Compare total cost (premium + deductible + out-of-pocket max)\n2. Check if your doctors are in-network before choosing\n3. HSAs have a triple tax benefit: tax-free in, tax-free growth, tax-free out for medical\n4. Healthy, young people usually benefit from HDHPs + HSAs\n5. Your employer's HSA contribution is free money. Always factor it in\n6. HSA funds roll over forever and grow tax-free\n\nThe right plan depends on YOUR health, doctors, and financial situation. Not which one 'looks' cheapest.",
         },
       ],
     },

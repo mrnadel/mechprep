@@ -19,22 +19,22 @@ export const unit10: Unit = {
           id: "pf-u10-L1-T1",
           type: "teaching",
           question: "Meet Future You",
-          explanation: "Imagine yourself at 65. You stop working.",
+          explanation: "Imagine yourself at 65, when your paycheck stops but your bills don't. This unit uses US account types (401k, IRA), but every country has equivalent retirement savings plans.",
           hint: "If you spend $50,000/year and retire for 25 years, that's $1.25 million minimum. Before inflation. Don't panic. Compound interest is your best friend.",
         },
         {
           id: "pf-u10-L1-T2",
           type: "teaching",
           question: "The Rule of 25",
-          explanation: "Here's the simplest retirement formula: take your annual expenses and multiply by 25. That's roughly how much you need saved to retire.",
-          hint: "This is just a starting estimate. The actual number depends on inflation, investment returns, and how long you live. But it's a solid benchmark.",
+          explanation: "The simplest retirement formula: take your annual expenses and multiply by 25. That's roughly how much you need saved to retire.",
+          hint: "Try this now: multiply your current annual spending by 25 to see a rough estimate of your retirement savings target.",
         },
         {
           id: "pf-u10-L1-Q1",
           type: "true-false",
           question: "When you retire, your living expenses drop to zero.",
           correctAnswer: false,
-          explanation: "Expenses continue. Housing, food, healthcare, transportation, and entertainment costs continue. In fact, healthcare costs often increase in retirement. Your paycheck stops but your bills don't.",
+          explanation: "Housing, food, healthcare, transportation, and entertainment costs all continue. Healthcare costs often increase in retirement. Your paycheck stops but your bills don't.",
         },
         {
           id: "pf-u10-L1-Q2",
@@ -133,13 +133,13 @@ export const unit10: Unit = {
           type: "teaching",
           question: "What's a 401(k)?",
           explanation: "A 401(k) is a retirement savings account offered by your employer. Money goes in before taxes are taken out of your paycheck, which means you save on taxes NOW.",
-          hint: "Think of a 401(k) as a tax-advantaged savings account your employer sets up for you. You pick how much to contribute from each paycheck.",
+          hint: "Try this now: check if your employer offers a 401(k) or retirement plan and find out what percentage they match.",
         },
         {
           id: "pf-u10-L2-T2",
           type: "teaching",
           question: "How a 401(k) Actually Works",
-          explanation: "Every paycheck, a percentage you choose (say 6%) gets automatically moved into your 401(k) before taxes hit. You pick your investments from a menu your employer provides (usually mutual funds, index funds, and target-date funds).",
+          explanation: "Every paycheck, a percentage you choose (say 6%) gets automatically moved into your 401(k) before taxes. You pick investments from a menu your employer provides.",
           hint: "If you earn $60,000 and contribute 10%, that's $6,000/year or $230 per paycheck (biweekly). Your take-home pay drops less than $230 because you're saving on taxes too.",
         },
         {
@@ -358,14 +358,14 @@ export const unit10: Unit = {
           id: "pf-u10-L4-T1",
           type: "teaching",
           question: "The Best Deal in Personal Finance",
-          explanation: "Here's the single best financial deal you'll ever get: many employers will MATCH what you put into your 401(k), dollar for dollar up to a certain percentage. A typical match is 50% of your contributions up to 6% of your salary.",
+          explanation: "Many employers will match what you put into your 401(k), dollar for dollar up to a certain percentage. A typical match is 50% of your contributions up to 6% of your salary. It's free money.",
           hint: "If someone offered you a $1,800 bonus with no strings attached, you'd take it. That's exactly what an employer match is.",
         },
         {
           id: "pf-u10-L4-T2",
           type: "teaching",
           question: "How Matching Actually Works",
-          explanation: "Let's break down the most common match formula: '50% match up to 6%.' If your salary is $60,000 and you contribute 6% ($3,600/year), your employer adds 50% of that, so $1,800.",
+          explanation: "The most common match formula is '50% match up to 6%.' If your salary is $60,000 and you contribute 6% ($3,600/year), your employer adds 50% of that: $1,800 in free money.",
           hint: "Vesting means you might need to stay at the company for a few years before the matched money is truly 'yours.' But YOUR contributions are always 100% yours.",
         },
         {
@@ -458,6 +458,124 @@ export const unit10: Unit = {
       ],
     },
 
+    // ===== CONVERSATION: Retirement Planning Chat =====
+    {
+      id: "pf-u10-L14",
+      title: "Retirement Planning Chat",
+      description: "A friend thinks retirement planning can wait. Help them see why starting now matters.",
+      icon: "\u{1F4AC}",
+      type: "conversation",
+      xpReward: 20,
+      questions: [],
+      conversationStartNodeId: "pf-u10-L14-C1",
+      conversationNodes: [
+        {
+          id: "pf-u10-L14-C1",
+          speaker: "Ava",
+          message: "My company just started offering a 401(k), but I'm only 24. Retirement is 40 years away. I'd rather use that money now.",
+          nextNodeId: "pf-u10-L14-C2",
+        },
+        {
+          id: "pf-u10-L14-C2",
+          speaker: "Ava",
+          message: "Is it really worth locking money away for that long?",
+          options: [
+            {
+              text: "Starting at 24 is your biggest advantage. Thanks to compound interest, every dollar you invest now could be worth $10+ by retirement.",
+              nextNodeId: "pf-u10-L14-C3",
+              quality: "great",
+              feedback: "Time is the most powerful factor in investing. Starting 10 years earlier can literally double your retirement savings.",
+            },
+            {
+              text: "You're right, you're too young to worry about retirement. Start in your 30s.",
+              nextNodeId: "pf-u10-L14-C3",
+              quality: "poor",
+              feedback: "Waiting costs tens of thousands in lost compound growth. The earlier you start, the less you need to save each month.",
+            },
+            {
+              text: "You should save something, but maybe just a small amount for now.",
+              nextNodeId: "pf-u10-L14-C3",
+              quality: "okay",
+              feedback: "Even a small amount helps, but without a target like the employer match, people tend to contribute too little.",
+            },
+          ],
+        },
+        {
+          id: "pf-u10-L14-C3",
+          speaker: "Ava",
+          message: "Okay, $10 becoming $10 sounds nice. But my company matches 50% up to 6%. I don't really understand what that means.",
+          nextNodeId: "pf-u10-L14-C4",
+        },
+        {
+          id: "pf-u10-L14-C4",
+          speaker: "Ava",
+          message: "Can you break down the match for me?",
+          options: [
+            {
+              text: "If you put in 6% of your salary, your company adds another 3% for free. It's literally free money you're leaving on the table.",
+              nextNodeId: "pf-u10-L14-C5",
+              quality: "great",
+              feedback: "An employer match is a guaranteed 50% return on your contribution. Not taking it is the same as rejecting a bonus.",
+            },
+            {
+              text: "It means the company doubles everything you save.",
+              nextNodeId: "pf-u10-L14-C5",
+              quality: "poor",
+              feedback: "Not quite. A 50% match on 6% means they add 3%, not match dollar-for-dollar. The details matter for planning.",
+            },
+            {
+              text: "Basically the company gives you extra money. Just sign up for the max.",
+              nextNodeId: "pf-u10-L14-C5",
+              quality: "okay",
+              feedback: "The right advice, but understanding exactly how matches work helps Ava make informed decisions about her contribution level.",
+            },
+          ],
+        },
+        {
+          id: "pf-u10-L14-C5",
+          speaker: "Narrator",
+          message: "Ava calculates that on her $50,000 salary, contributing 6% means $3,000/year from her, plus $1,500 free from her employer. That's $4,500/year going toward retirement.",
+          nextNodeId: "pf-u10-L14-C6",
+        },
+        {
+          id: "pf-u10-L14-C6",
+          speaker: "Ava",
+          message: "Free money, I'm in. But should I pick a Roth 401(k) or a traditional one? My HR form asks me to choose.",
+          options: [
+            {
+              text: "At 24 with a lower salary, Roth is usually better. You pay taxes now at a low rate, then all growth is tax-free forever.",
+              nextNodeId: "pf-u10-L14-C7",
+              quality: "great",
+              feedback: "Young workers in lower tax brackets benefit most from Roth because they lock in today's low tax rate on decades of growth.",
+            },
+            {
+              text: "Traditional is always better because you save on taxes right now.",
+              nextNodeId: "pf-u10-L14-C7",
+              quality: "poor",
+              feedback: "Traditional saves taxes now, but you pay taxes later at potentially higher rates. For a 24-year-old, Roth usually wins.",
+            },
+            {
+              text: "It doesn't really matter. Just pick one and start contributing.",
+              nextNodeId: "pf-u10-L14-C7",
+              quality: "okay",
+              feedback: "Starting is more important than which type, but choosing wisely can save thousands in taxes over a career.",
+            },
+          ],
+        },
+        {
+          id: "pf-u10-L14-C7",
+          speaker: "Ava",
+          message: "Roth 401(k), 6% contribution, full employer match. I can't believe I almost skipped this. Thanks for the push!",
+          nextNodeId: "pf-u10-L14-C8",
+        },
+        {
+          id: "pf-u10-L14-C8",
+          speaker: "Narrator",
+          message: "You helped Ava go from 'retirement can wait' to a Roth 401(k) with the full employer match. Starting at 24, her $4,500/year could grow to over $1 million by 65. The best time to start was yesterday. The second best time is right now.",
+        },
+      ],
+    },
+
     // ===== LESSON 5: Target-Date Funds: Set and Forget =====
     {
       id: "pf-u10-L5",
@@ -477,7 +595,7 @@ export const unit10: Unit = {
           id: "pf-u10-L5-T2",
           type: "teaching",
           question: "How the 'Glide Path' Works",
-          explanation: "When you're young, a target-date fund puts most of your money in stocks (say 90% stocks, 10% bonds). Stocks are riskier but grow faster.",
+          explanation: "When you're young, a target-date fund puts most of your money in stocks (say 90% stocks, 10% bonds). As retirement approaches, it gradually shifts toward bonds for stability.",
           hint: "It's like a car that gradually slows down as it approaches a red light. You're going fast when you can afford risk, and cruising safely when you need stability.",
         },
         {
@@ -808,7 +926,7 @@ export const unit10: Unit = {
           id: "pf-u10-L8-T2",
           type: "teaching",
           question: "Is the 4% Rule Still Valid?",
-          explanation: "The 4% Rule has critics. Some say it's too conservative (you'll die with too much money).",
+          explanation: "The 4% Rule has critics. Some say it's too conservative (you'll die with too much money left). Others say it's too aggressive for today's lower expected returns. It's a starting point, not a rigid rule.",
           hint: "Think of 4% as the 'default setting.' You can always adjust the dial based on how your investments are performing.",
         },
         {
@@ -917,7 +1035,7 @@ export const unit10: Unit = {
           id: "pf-u10-L9-T2",
           type: "teaching",
           question: "Making Catch-Up Contributions Count",
-          explanation: "Here's why catch-up contributions are so powerful: if you're 50, you still have 15-17 years until traditional retirement. At 8% average returns, $7,500/year extra in your 401(k) for 15 years grows to about $215,000.",
+          explanation: "At 50, you still have 15-17 years until traditional retirement. At 8% average returns, $7,500/year extra in your 401(k) for 15 years grows to about $215,000. That's real catch-up power.",
           hint: "Your 50s are often your highest-earning years. More income + catch-up contributions = the perfect storm for retirement savings.",
         },
         {
@@ -1023,14 +1141,14 @@ export const unit10: Unit = {
           id: "pf-u10-L10-T1",
           type: "teaching",
           question: "Mistakes That Cost You Hundreds of Thousands",
-          explanation: "Retirement accounts are powerful. But they come with rules, and breaking them, and you'll pay dearly.",
+          explanation: "Retirement accounts are powerful, but they come with rules. Breaking those rules triggers taxes, penalties, or both, costing you thousands.",
           hint: "The scariest one? Leaving your 401(k) money in the 'default' cash/money market option. It sits there earning almost nothing for decades while you THINK it's invested.",
         },
         {
           id: "pf-u10-L10-T2",
           type: "teaching",
           question: "The 401(k) Cash-Out Trap",
-          explanation: "You change jobs and have $30,000 in your old 401(k). Your old employer sends you a check.",
+          explanation: "You change jobs and have $30,000 in your old 401(k). If you cash the check instead of rolling it over, you'll lose about 32% to taxes and penalties immediately.",
           hint: "If you cash out $30,000 at age 30 instead of rolling it over, you don't just lose $12,000 now. You lose the $300,000+ that money would have grown to by age 65.",
         },
         {
@@ -1137,7 +1255,7 @@ export const unit10: Unit = {
           id: "pf-u10-L11-T2",
           type: "teaching",
           question: "Milestones by Decade",
-          explanation: "Here's a rough guide for where to be: By 30: have 1x your annual salary saved. By 40: have 3x.",
+          explanation: "Rough savings milestones: by 30, have 1x your annual salary saved. By 40: 3x. By 50: 6x. By 67: 10x.",
           hint: "These are Fidelity's recommended milestones. Even if you're behind, knowing the target helps you plan your catch-up strategy.",
         },
         {
@@ -1163,7 +1281,7 @@ export const unit10: Unit = {
             "$325 to 401(k) (6% for full match) + $475 to Roth IRA",
             "All $800 to the 401(k)",
             "All $800 to a savings account",
-            "$400 to 401(k) + $400 to crypto",
+            "$400 to 401(k) + $400 to individual stocks",
           ],
           correctIndex: 0,
           explanation: "First get the full match: 6% of $65,000 = $3,900/year = $325/month to 401(k). That gets you $1,950 in free employer match. The remaining $475/month goes to a Roth IRA ($5,700/year) for tax-free growth. This combo maximizes both the match and tax diversification.",

@@ -16,7 +16,7 @@ export const PROFESSIONS: Profession[] = [
     name: 'Mechanical Engineering',
     shortName: 'ME',
     icon: '\u2699\uFE0F',
-    color: '#6366F1',
+    color: '#3B82F6',
     description: 'Thermodynamics, fluid mechanics, materials, and machine design',
     unitCount: 10,
     questionCount: 1700,

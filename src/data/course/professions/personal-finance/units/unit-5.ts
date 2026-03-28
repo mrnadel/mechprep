@@ -34,7 +34,7 @@ export const unit5: Unit = {
           type: "true-false",
           question: "A checking account is designed for everyday spending and bill payments.",
           correctAnswer: true,
-          explanation: "That's exactly its purpose. Checking accounts are built for frequent transactions, debit card swipes, bill payments, direct deposits. They're your financial front door.",
+          explanation: "That's exactly its purpose. Checking accounts are built for frequent transactions: debit card swipes, bill payments, and direct deposits.",
         },
         {
           id: "pf-u5-L1-Q2",
@@ -50,7 +50,7 @@ export const unit5: Unit = {
           type: "fill-blank",
           question: "Your _____ account is for daily spending, while your _____ account is for money you want to keep.",
           blanks: ["checking", "savings"],
-          wordBank: ["checking", "savings", "investment", "credit", "brokerage", "retirement"],
+          wordBank: ["checking", "savings", "spending", "credit", "money market", "joint"],
           explanation: "Checking = spend. Savings = keep. Two simple jobs, two separate accounts.",
         },
         {
@@ -62,7 +62,7 @@ export const unit5: Unit = {
           correctValue: 0.1,
           tolerance: 50,
           unit: "%",
-          explanation: "Big traditional banks like Chase or Bank of America typically offer around 0.01% to 0.10% APY on savings. That's basically nothing. Online banks offer 4-5%, which is why people switch.",
+          explanation: "Big traditional banks typically offer around 0.01% to 0.10% APY on savings, basically nothing. Online banks offer 4-5%, which is why people switch.",
         },
         {
           id: "pf-u5-L1-Q5",
@@ -136,7 +136,7 @@ export const unit5: Unit = {
           type: "teaching",
           question: "The Interest Rate Gap Is Real",
           explanation: "Here's what most people don't realize: the interest rate difference between bank types is massive. A big bank might pay 0.",
-          hint: "If you have $5,000 sitting in a big bank savings account, you're earning about 50 cents a year. An online bank would pay you $225.",
+          hint: "Try this now: compare your bank's savings rate with an online high-yield savings account and calculate the yearly difference.",
         },
         {
           id: "pf-u5-L2-Q1",
@@ -161,7 +161,7 @@ export const unit5: Unit = {
           type: "true-false",
           question: "Credit unions are owned by their members, not by shareholders trying to maximize profit.",
           correctAnswer: true,
-          explanation: "This is the key difference. Banks answer to shareholders (profit first). Credit unions answer to members (you). That's why credit unions typically offer better rates and lower fees, they're not trying to extract maximum profit from you.",
+          explanation: "Banks answer to shareholders (profit first), while credit unions answer to members (you). That's why credit unions typically offer better rates and lower fees.",
         },
         {
           id: "pf-u5-L2-Q4",
@@ -183,7 +183,7 @@ export const unit5: Unit = {
           options: ["Higher savings interest rates", "No physical branches to visit", "Lower fees", "Can't deposit cash easily", "24/7 app access", "May feel less personal"],
           buckets: ["Reason FOR online bank", "Reason AGAINST online bank"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "Online banks crush it on rates, fees, and app access. But if you need to deposit cash regularly or want face-to-face service, they have real drawbacks. Many people use both, an online bank for savings and a local bank for checking.",
+          explanation: "Online banks win on rates, fees, and app access, but lack branches for cash deposits. Many people use both: an online bank for savings and a local bank for checking.",
         },
         {
           id: "pf-u5-L2-Q6",
@@ -191,7 +191,7 @@ export const unit5: Unit = {
           question: "Credit unions are _____ by their members, while banks are owned by _____.",
           blanks: ["owned", "shareholders"],
           wordBank: ["owned", "shareholders", "managed", "government", "run", "customers"],
-          explanation: "Credit unions = member-owned cooperatives. Banks = shareholder-owned corporations. This ownership difference drives everything, rates, fees, and how they treat you.",
+          explanation: "Credit unions are member-owned cooperatives, while banks are shareholder-owned corporations. This ownership difference drives everything: rates, fees, and service.",
         },
         {
           id: "pf-u5-L2-Q7",
@@ -205,14 +205,14 @@ export const unit5: Unit = {
             "Keep cash at home, banks aren't worth it",
           ],
           correctIndex: 0,
-          explanation: "Maya needs cash deposit access (credit union or big bank for checking) AND high interest (online bank for savings). Using two institutions gives her the best of both worlds. This 'hybrid' approach is what many smart savers do.",
+          explanation: "Maya needs cash deposit access (credit union for checking) AND high interest (online bank for savings). Using two institutions gives her the best of both worlds.",
         },
         {
           id: "pf-u5-L2-Q8",
           type: "true-false",
           question: "Your money is equally protected at a bank (FDIC) and a credit union (NCUA), both insure up to $250,000.",
           correctAnswer: true,
-          explanation: "FDIC covers banks. NCUA covers credit unions. Both insure up to $250,000 per depositor, per institution. Your money is equally safe at either one. This is not a reason to pick one over the other.",
+          explanation: "FDIC covers banks, NCUA covers credit unions, and both insure up to $250,000 per depositor. Your money is equally safe at either one.",
         },
       ],
     },
@@ -230,7 +230,7 @@ export const unit5: Unit = {
           type: "teaching",
           question: "Banks Make Billions Off Your Fees",
           explanation: "Here's a fun fact that isn't fun at all: U.S.",
-          hint: "Check your last 12 months of bank statements. Search for 'fee.' You might be shocked.",
+          hint: "Try this now: search your bank statements from the last 12 months for the word 'fee' and add up what you've paid.",
         },
         {
           id: "pf-u5-L3-T2",
@@ -248,7 +248,7 @@ export const unit5: Unit = {
           correctValue: 35,
           tolerance: 15,
           unit: "$",
-          explanation: "The average overdraft fee is about $35. That means if you buy a $5 coffee with insufficient funds, the bank charges you $35 on top of it. Your coffee just cost $40.",
+          explanation: "The average overdraft fee is about $35. Buy a $5 coffee with insufficient funds and the bank charges $35 on top, making that coffee $40.",
         },
         {
           id: "pf-u5-L3-Q2",
@@ -262,7 +262,7 @@ export const unit5: Unit = {
             "Link savings as backup (free transfer)",
           ],
           correctOrder: [0, 1, 2, 3, 4],
-          explanation: "First, see what you're signed up for. Then opt out of the expensive 'protection' (it's not protecting you, it costs $35 per slip). Set alerts, keep a buffer, and link savings as a free safety net.",
+          explanation: "Check your settings, then opt out of the costly 'protection' ($35 per slip). Set alerts, keep a buffer, and link savings as a free safety net.",
         },
         {
           id: "pf-u5-L3-Q3",
@@ -275,7 +275,7 @@ export const unit5: Unit = {
             "$60. ATMs are free",
           ],
           correctIndex: 0,
-          explanation: "Double whammy! Your bank charges $3 AND the ATM owner charges $3.50. That $60 cash cost you $66.50 total. Use in-network ATMs or get an account that reimburses ATM fees.",
+          explanation: "Your bank charges $3 AND the ATM owner charges $3.50, so that $60 cash cost $66.50 total. Use in-network ATMs or get an account that reimburses ATM fees.",
         },
         {
           id: "pf-u5-L3-Q4",
@@ -284,7 +284,7 @@ export const unit5: Unit = {
           options: ["Overdraft fee", "Monthly maintenance fee", "ATM fee", "Paper statement fee"],
           matchTargets: ["Opt out + keep a buffer", "Meet minimum balance or switch banks", "Use in-network ATMs or get reimbursed", "Switch to e-statements"],
           correctMatches: [0, 1, 2, 3],
-          explanation: "Every single bank fee has a countermove. Opt out of overdraft, meet minimums (or find a no-fee account), use your bank's ATMs, and go paperless. Total effort: about 15 minutes.",
+          explanation: "Every bank fee has a countermove. Opt out of overdraft, meet minimums, use your bank's ATMs, and go paperless.",
         },
         {
           id: "pf-u5-L3-Q5",
@@ -300,7 +300,7 @@ export const unit5: Unit = {
           type: "true-false",
           question: "Overdraft 'protection' is a free service that helps you avoid fees.",
           correctAnswer: false,
-          explanation: "The name is genius marketing. Overdraft 'protection' doesn't protect you, it lets the bank pay for your purchase and then charge you $35 for the privilege. Opting OUT means the transaction just gets declined, which costs $0.",
+          explanation: "Overdraft 'protection' lets the bank cover your purchase, then charges you $35 for it. Opting OUT means the transaction just gets declined, which costs $0.",
         },
         {
           id: "pf-u5-L3-Q7",
@@ -314,7 +314,7 @@ export const unit5: Unit = {
             "Be a student (many banks waive fees for students)",
           ],
           correctIndices: [0, 1, 2, 4],
-          explanation: "Most banks waive maintenance fees if you keep a minimum balance, set up direct deposit, or are a student. Online banks often have no fees at all. Just asking nicely usually doesn't work (though some banks might offer a one-time courtesy waiver).",
+          explanation: "Most banks waive maintenance fees if you keep a minimum balance, set up direct deposit, or are a student. Online banks often have no fees at all.",
         },
         {
           id: "pf-u5-L3-Q8",
@@ -323,6 +323,124 @@ export const unit5: Unit = {
           blanks: ["out", "buffer"],
           wordBank: ["out", "buffer", "in", "minimum", "surplus", "overdraft"],
           explanation: "Opt OUT (not in!) of overdraft and maintain a cash buffer of $100-200. This way, if you almost overspend, the card gets declined (free) instead of triggering a $35 fee.",
+        },
+      ],
+    },
+
+    // ===== CONVERSATION: Choosing a Bank Account =====
+    {
+      id: "pf-u5-L15",
+      title: "Choosing a Bank Account",
+      description: "Help a friend decide between a big bank, credit union, and online bank.",
+      icon: "\u{1F4AC}",
+      type: "conversation",
+      xpReward: 20,
+      questions: [],
+      conversationStartNodeId: "pf-u5-L15-C1",
+      conversationNodes: [
+        {
+          id: "pf-u5-L15-C1",
+          speaker: "Dana",
+          message: "I just got my first real job and I need a bank account. There are so many options. Big bank, credit union, online bank. How do I pick?",
+          nextNodeId: "pf-u5-L15-C2",
+        },
+        {
+          id: "pf-u5-L15-C2",
+          speaker: "Dana",
+          message: "What matters most when choosing?",
+          options: [
+            {
+              text: "Think about what you need most: low fees, high interest, or lots of ATMs and branches nearby.",
+              nextNodeId: "pf-u5-L15-C3",
+              quality: "great",
+              feedback: "Starting with your priorities is the smartest approach. Different banks excel at different things.",
+            },
+            {
+              text: "Just pick the biggest bank. They're the safest.",
+              nextNodeId: "pf-u5-L15-C3",
+              quality: "poor",
+              feedback: "All banks with FDIC insurance protect your money equally. Big banks often have higher fees and lower interest rates.",
+            },
+            {
+              text: "Go with whatever bank is closest to your house.",
+              nextNodeId: "pf-u5-L15-C3",
+              quality: "okay",
+              feedback: "Convenience matters, but with mobile banking, location is less important than fees and interest rates.",
+            },
+          ],
+        },
+        {
+          id: "pf-u5-L15-C3",
+          speaker: "Dana",
+          message: "I don't want to pay monthly fees. I had a friend who lost $12/month just for having an account. That's $144 a year!",
+          nextNodeId: "pf-u5-L15-C4",
+        },
+        {
+          id: "pf-u5-L15-C4",
+          speaker: "Dana",
+          message: "How do I avoid those fees?",
+          options: [
+            {
+              text: "Online banks and credit unions usually have no monthly fees. Big banks often waive fees with direct deposit or minimum balances.",
+              nextNodeId: "pf-u5-L15-C5",
+              quality: "great",
+              feedback: "Online banks save on branches, so they pass the savings to you. Credit unions are member-owned, so fees are typically lower.",
+            },
+            {
+              text: "Just keep a lot of money in the account and they won't charge you.",
+              nextNodeId: "pf-u5-L15-C5",
+              quality: "okay",
+              feedback: "Minimum balance requirements do waive fees, but tying up hundreds of dollars just to avoid a fee isn't ideal for everyone.",
+            },
+            {
+              text: "All bank fees are unavoidable. It's just the cost of having an account.",
+              nextNodeId: "pf-u5-L15-C5",
+              quality: "poor",
+              feedback: "Many banks offer completely free checking. You never have to pay monthly maintenance fees.",
+            },
+          ],
+        },
+        {
+          id: "pf-u5-L15-C5",
+          speaker: "Narrator",
+          message: "Dana researches three options: a big national bank with branches everywhere, a local credit union with no fees, and an online bank with 4% savings interest.",
+          nextNodeId: "pf-u5-L15-C6",
+        },
+        {
+          id: "pf-u5-L15-C6",
+          speaker: "Dana",
+          message: "The online bank has way better interest, but I'm nervous about not having a branch. What if I need to deposit cash?",
+          options: [
+            {
+              text: "You could use two accounts: online for savings (better interest) and a local account for cash deposits. Best of both worlds.",
+              nextNodeId: "pf-u5-L15-C7",
+              quality: "great",
+              feedback: "Using multiple accounts for different purposes is a smart banking strategy. No rule says you need just one bank.",
+            },
+            {
+              text: "Cash is outdated anyway. Just go fully online.",
+              nextNodeId: "pf-u5-L15-C7",
+              quality: "poor",
+              feedback: "Some situations still require cash deposits. Dismissing the concern could leave Dana stuck when she needs it.",
+            },
+            {
+              text: "Stick with the local credit union so you have branches for everything.",
+              nextNodeId: "pf-u5-L15-C7",
+              quality: "okay",
+              feedback: "That solves the branch access problem, but she'd miss out on the higher savings interest rate.",
+            },
+          ],
+        },
+        {
+          id: "pf-u5-L15-C7",
+          speaker: "Dana",
+          message: "Two accounts! Why didn't I think of that? Credit union for checking, online bank for savings. This makes so much sense.",
+          nextNodeId: "pf-u5-L15-C8",
+        },
+        {
+          id: "pf-u5-L15-C8",
+          speaker: "Narrator",
+          message: "You helped Dana choose a fee-free credit union checking account for daily spending and a high-yield online savings account for growing her money. Smart banking is about using the right tool for each job.",
         },
       ],
     },
@@ -354,7 +472,7 @@ export const unit5: Unit = {
           type: "true-false",
           question: "Apple Pay is less secure than using a physical credit card.",
           correctAnswer: false,
-          explanation: "It's actually the opposite. Apple Pay creates a unique token for each transaction, the merchant never sees your real card number. Physical cards expose your actual number to every store, making them more vulnerable to data breaches.",
+          explanation: "It's the opposite: Apple Pay creates a unique token for each transaction, so the merchant never sees your real card number. Physical cards expose your actual number to every store.",
         },
         {
           id: "pf-u5-L4-Q2",
@@ -363,7 +481,7 @@ export const unit5: Unit = {
           options: ["Apple Pay", "Venmo", "Google Pay", "Zelle", "Samsung Pay", "Cash App"],
           buckets: ["Digital wallet (tap to pay)", "P2P app (send to friends)"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "Digital wallets replace your physical card at stores (tap to pay). P2P apps send money directly between people. Some apps do both, but their core function differs.",
+          explanation: "Digital wallets replace your physical card at stores (tap to pay), while P2P apps send money directly between people. Some apps do both, but their core function differs.",
         },
         {
           id: "pf-u5-L4-Q3",
@@ -377,16 +495,16 @@ export const unit5: Unit = {
             "Send it but ask for their ID first",
           ],
           correctIndex: 0,
-          explanation: "This is one of the most common P2P scams. They didn't actually send you anything, they want you to send real money based on a fake claim. Never send money to someone you don't know, and always verify the payment actually landed in your account first.",
+          explanation: "This is a classic P2P scam: they didn't actually send you anything and want you to send real money based on a fake claim. Never send money to someone you don't know without verifying the payment landed first.",
         },
         {
           id: "pf-u5-L4-Q4",
           type: "match-pairs",
           question: "Match each P2P app to its key characteristic:",
           options: ["Zelle", "Venmo", "Cash App", "PayPal"],
-          matchTargets: ["Built into most bank apps", "Social feed shows transactions", "Also offers stock/Bitcoin buying", "Buyer protection for goods"],
+          matchTargets: ["Built into most bank apps", "Social feed shows transactions", "Also offers a prepaid debit card", "Buyer protection for goods"],
           correctMatches: [0, 1, 2, 3],
-          explanation: "Zelle is integrated into banking apps. Venmo has a social feed (watch your privacy settings!). Cash App lets you invest. PayPal offers buyer/seller protection for purchases, making it safest for buying from strangers.",
+          explanation: "Zelle is integrated into banking apps. Venmo has a social feed (watch your privacy settings!). Cash App offers a debit card with cashback perks. PayPal offers buyer/seller protection for purchases, making it safest for buying from strangers.",
         },
         {
           id: "pf-u5-L4-Q5",
@@ -400,7 +518,7 @@ export const unit5: Unit = {
             "Venmo's social feed exposing your spending habits",
           ],
           correctIndices: [0, 1, 2, 4],
-          explanation: "Wrong-person transfers, scams, no FDIC insurance on in-app balances, and privacy leaks through social feeds are all real risks. Reputable apps don't steal your bank password, they use secure API connections. But the other risks are very real.",
+          explanation: "Wrong-person transfers, scams, no FDIC insurance on in-app balances, and privacy leaks through social feeds are all real risks. Reputable apps use secure API connections and don't steal your password.",
         },
         {
           id: "pf-u5-L4-Q6",
@@ -413,7 +531,7 @@ export const unit5: Unit = {
             "Cash App, quick transfer",
           ],
           correctIndex: 0,
-          explanation: "For large purchases from strangers, cash is king. You meet in person, inspect the item, and pay on the spot. P2P apps offer zero buyer protection for marketplace purchases, once you send, the money's gone even if the couch is garbage.",
+          explanation: "For large purchases from strangers, cash is king: meet in person, inspect the item, and pay on the spot. P2P apps offer zero buyer protection, so once you send, the money's gone.",
         },
         {
           id: "pf-u5-L4-Q7",
@@ -476,7 +594,7 @@ export const unit5: Unit = {
           ],
           buckets: ["Likely legit", "Likely scam"],
           correctBuckets: [1, 0, 1, 0, 1, 0],
-          explanation: "Legitimate banks communicate through their official app, mailed letters, and in-app alerts. They NEVER ask you to click urgent links in emails, reply with PINs via text, or give your full SSN over the phone. When in doubt, hang up and call the number on the back of your card.",
+          explanation: "Legitimate banks communicate through their official app, mailed letters, and in-app alerts. They NEVER ask you to click urgent links, reply with PINs via text, or give your full SSN over the phone.",
         },
         {
           id: "pf-u5-L5-Q2",
@@ -524,7 +642,7 @@ export const unit5: Unit = {
           type: "true-false",
           question: "If someone steals your debit card info and makes unauthorized purchases, you're responsible for the full amount.",
           correctAnswer: false,
-          explanation: "Federal law (Regulation E) protects you. If you report within 2 business days, your max liability is $50. Within 60 days, it's $500. Banks often waive even that. The key is reporting FAST.",
+          explanation: "Federal law (Regulation E) protects you: report within 2 business days and your max liability is $50. The key is reporting fast.",
         },
         {
           id: "pf-u5-L5-Q6",
@@ -538,7 +656,7 @@ export const unit5: Unit = {
             "Ignore it, it's probably nothing",
           ],
           correctIndex: 0,
-          explanation: "ALWAYS hang up and call back using the official number from your card or bank website. Real banks never ask for your PIN over the phone. Scammers can spoof caller ID to look like your bank's real number. The only safe move is to initiate the call yourself.",
+          explanation: "Always hang up and call back using the official number on your card. Real banks never ask for your PIN over the phone, and scammers can spoof caller ID.",
         },
         {
           id: "pf-u5-L5-Q7",
@@ -552,7 +670,7 @@ export const unit5: Unit = {
           ],
           correctOrder: [0, 1, 2, 3],
           rankCriteria: "Effectiveness: most to least protective",
-          explanation: "2FA is the single biggest security upgrade, it blocks nearly all unauthorized access. A unique password is next. Transaction alerts catch fraud quickly. Monthly monitoring is good but too slow to catch fraud early. Do all four, but prioritize in this order.",
+          explanation: "2FA blocks nearly all unauthorized access, making it the top priority. A unique password, transaction alerts, and regular monitoring add additional layers in that order.",
         },
         {
           id: "pf-u5-L5-Q8",
@@ -621,7 +739,7 @@ export const unit5: Unit = {
           type: "true-false",
           question: "Social Security and Medicare combined make up the largest portion of federal spending.",
           correctAnswer: true,
-          explanation: "Together they account for roughly 49% of federal spending, nearly half of every tax dollar. These programs support retired, disabled, and elderly Americans. That's why they dominate the budget.",
+          explanation: "Together they account for roughly 49% of federal spending, nearly half of every tax dollar. These programs support retired, disabled, and elderly Americans.",
         },
         {
           id: "pf-u5-L6-Q5",
@@ -634,7 +752,7 @@ export const unit5: Unit = {
             "A voluntary contribution to charity",
           ],
           correctIndex: 0,
-          explanation: "FICA stands for Federal Insurance Contributions Act. It's 7.65% of your paycheck (6.2% Social Security + 1.45% Medicare), and your employer matches it. This funds the safety net for retirees and the elderly.",
+          explanation: "FICA stands for Federal Insurance Contributions Act: 7.65% of your paycheck (6.2% Social Security + 1.45% Medicare), and your employer matches it. This funds programs for retirees and the elderly.",
         },
         {
           id: "pf-u5-L6-Q6",
@@ -656,7 +774,7 @@ export const unit5: Unit = {
             "Only rich people benefit from taxes",
           ],
           correctIndex: 0,
-          explanation: "Most people vastly underestimate how many tax-funded services they use daily. The road you drive on, the GPS in your phone (military satellites), the FDA making sure your food is safe, 911 services, all taxes. You use them every single day.",
+          explanation: "Most people underestimate how many tax-funded services they use daily: roads, GPS, food safety, weather forecasts, and 911 services. You benefit from taxes every single day.",
         },
         {
           id: "pf-u5-L6-Q8",
@@ -680,8 +798,8 @@ export const unit5: Unit = {
         {
           id: "pf-u5-L7-T1",
           type: "teaching",
-          question: "The Biggest Tax Myth in America",
-          explanation: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket and take home LESS money.' This is 100% wrong, and believing it has cost people promotions, raises, and side hustle income.",
+          question: "The Biggest Tax Myth",
+          explanation: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket and take home LESS money.' This is wrong. Most countries use progressive brackets, meaning only the income ABOVE each threshold is taxed at the higher rate.",
           hint: "If the 22% bracket starts at $44,726 and you earn $45,000, only $274 is taxed at 22%, not your entire $45,000.",
         },
         {
@@ -696,7 +814,7 @@ export const unit5: Unit = {
           type: "true-false",
           question: "If you get a raise that pushes you into a higher tax bracket, ALL of your income gets taxed at the higher rate.",
           correctAnswer: false,
-          explanation: "This is THE most common tax myth. Only the dollars above the bracket threshold get taxed at the higher rate. Your lower income is still taxed at the lower rates. A raise always means more take-home pay.",
+          explanation: "Only the dollars above the bracket threshold get taxed at the higher rate, not your entire income. A raise always means more take-home pay.",
         },
         {
           id: "pf-u5-L7-Q2",
@@ -709,7 +827,7 @@ export const unit5: Unit = {
             "$0, you don't reach 22%",
           ],
           correctIndex: 0,
-          explanation: "$50,000 - $47,151 = $2,849. That's the ONLY portion taxed at 22%. The first $11,600 was taxed at 10%, the next $35,550 at 12%, and just $2,849 at 22%. Your effective rate is about 13.5%.",
+          explanation: "$50,000 - $47,151 = $2,849, the only portion taxed at 22%. The rest was taxed at lower rates, giving you an effective rate of about 13.5%.",
         },
         {
           id: "pf-u5-L7-Q3",
@@ -717,7 +835,7 @@ export const unit5: Unit = {
           question: "Put the 2024 federal tax brackets in order from LOWEST to HIGHEST rate:",
           steps: ["10%", "12%", "22%", "24%", "32%", "37%"],
           correctOrder: [0, 1, 2, 3, 4, 5],
-          explanation: "The U.S. has 7 federal tax brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37%. Each applies only to income within that range. The jump from 12% to 22% is the biggest, which is why the standard deduction matters so much.",
+          explanation: "The U.S. has 7 federal tax brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37%. Each applies only to income within that range.",
         },
         {
           id: "pf-u5-L7-Q4",
@@ -742,7 +860,7 @@ export const unit5: Unit = {
             "Yes, they should stay at the lower bracket",
           ],
           correctIndex: 0,
-          explanation: "Your coworker is wrong and it's costing them $5,000/year. With the raise to $51,000, only about $3,850 hits the 22% bracket. The extra tax on that portion is about $385. They'd take home roughly $4,615 more, not less. Never turn down a raise because of brackets.",
+          explanation: "Your coworker is wrong: only about $3,850 of the raise hits the 22% bracket, costing roughly $385 in extra tax. They'd still take home about $4,615 more per year.",
         },
         {
           id: "pf-u5-L7-Q6",
@@ -772,7 +890,7 @@ export const unit5: Unit = {
             "Only the top 10% of earners pay income tax",
           ],
           correctIndex: 0,
-          explanation: "The layered (progressive) system is the key insight. Your first dollars are taxed lightly, and only your highest dollars face the top rate. This is fairer than a flat tax and means earning more always benefits you.",
+          explanation: "Your income is taxed in layers: first dollars are taxed lightly, and only your highest dollars face the top rate. Earning more always means more take-home pay.",
         },
       ],
     },
@@ -813,7 +931,7 @@ export const unit5: Unit = {
           ],
           buckets: ["W-2 Employee", "1099 Contractor"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "W-2 employees get withholding, benefits, and employer FICA contributions. 1099 contractors handle their own taxes, pay the full FICA, but can deduct business expenses. Each has trade-offs.",
+          explanation: "W-2 employees get withholding, benefits, and employer FICA contributions. 1099 contractors handle their own taxes and pay full FICA, but can deduct business expenses.",
         },
         {
           id: "pf-u5-L8-Q2",
@@ -833,7 +951,7 @@ export const unit5: Unit = {
           type: "true-false",
           question: "1099 contractors have the advantage of being able to deduct business expenses like home office, internet, and mileage.",
           correctAnswer: true,
-          explanation: "This is the silver lining of 1099 work. You can deduct your home office, internet, phone, equipment, mileage, and other business expenses. These deductions reduce your taxable income significantly, but you need to track them carefully.",
+          explanation: "You can deduct home office, internet, phone, equipment, mileage, and other business expenses. These deductions reduce your taxable income, but you need to track them carefully.",
         },
         {
           id: "pf-u5-L8-Q4",
@@ -853,7 +971,7 @@ export const unit5: Unit = {
           options: ["W-2", "1099-NEC", "1099-INT", "W-4"],
           matchTargets: ["Employee wages and tax withholdings", "Freelance/contractor income", "Interest income from your bank", "Form you fill out when starting a job"],
           correctMatches: [0, 1, 2, 3],
-          explanation: "W-2 shows your employee wages. 1099-NEC reports freelance income. 1099-INT reports bank interest. W-4 is the form you give your employer to set up tax withholding, you fill it out on day one of a new job.",
+          explanation: "W-2 = employee wages, 1099-NEC = freelance income, 1099-INT = bank interest, W-4 = the form you fill out when starting a job to set up withholding.",
         },
         {
           id: "pf-u5-L8-Q6",
@@ -867,7 +985,7 @@ export const unit5: Unit = {
             "Having taxes withheld from each paycheck",
           ],
           correctIndices: [0, 1, 3],
-          explanation: "Filing a return is required for everyone (not just contractors). Having taxes withheld is a W-2 thing. But quarterly payments, the full self-employment tax, and tracking deductions are all unique contractor responsibilities.",
+          explanation: "Filing a return and having taxes withheld apply to everyone or W-2 only, not just contractors. Quarterly payments, full self-employment tax, and tracking deductions are unique 1099 responsibilities.",
         },
         {
           id: "pf-u5-L8-Q7",
@@ -881,7 +999,7 @@ export const unit5: Unit = {
             "Freelance income under $20,000 is tax-free",
           ],
           correctIndex: 0,
-          explanation: "Jordan owes both income tax AND 15.3% self-employment tax on that $12,000 in freelance income. Without quarterly payments, she'll face a surprise tax bill of roughly $3,000-$4,000 in April, plus penalties for underpayment. She should start paying quarterly ASAP.",
+          explanation: "Jordan owes both income tax AND 15.3% self-employment tax on that $12,000 in freelance income. Without quarterly payments, she'll face a surprise bill of $3,000-$4,000 plus underpayment penalties.",
         },
         {
           id: "pf-u5-L8-Q8",
@@ -889,7 +1007,7 @@ export const unit5: Unit = {
           question: "W-2 employees pay _____ % in FICA while 1099 contractors pay _____ % because they cover both halves.",
           blanks: ["7.65", "15.3"],
           wordBank: ["7.65", "15.3", "6.2", "12.4", "10", "22"],
-          explanation: "Employees pay 7.65% (6.2% Social Security + 1.45% Medicare), and the employer matches it. Self-employed people pay the whole 15.3% themselves. That's the biggest tax difference between W-2 and 1099.",
+          explanation: "Employees pay 7.65% and the employer matches it. Self-employed people pay the whole 15.3% themselves, the biggest tax difference between W-2 and 1099.",
         },
       ],
     },
@@ -943,7 +1061,7 @@ export const unit5: Unit = {
           options: ["Single", "Married filing jointly", "Head of household", "Married filing separately"],
           matchTargets: ["$14,600", "$29,200", "$21,900", "$14,600"],
           correctMatches: [0, 1, 2, 3],
-          explanation: "Single and married-filing-separately get $14,600. Married filing jointly gets double: $29,200. Head of household (single parents) gets $21,900. These amounts adjust for inflation each year.",
+          explanation: "Single and married-filing-separately get $14,600, married jointly gets $29,200, and head of household gets $21,900. These amounts adjust for inflation each year.",
         },
         {
           id: "pf-u5-L9-Q4",
@@ -974,7 +1092,7 @@ export const unit5: Unit = {
           question: "The standard deduction reduces your _____ income, not your tax _____ directly.",
           blanks: ["taxable", "bill"],
           wordBank: ["taxable", "bill", "gross", "rate", "net", "total"],
-          explanation: "Key distinction: the standard deduction reduces your taxable income (what you're taxed on), not your final tax bill. A $14,600 deduction doesn't save you $14,600 in taxes, it saves you $14,600 x your tax rate.",
+          explanation: "The standard deduction reduces your taxable income, not your final tax bill directly. A $14,600 deduction saves you $14,600 x your tax rate, not $14,600.",
         },
         {
           id: "pf-u5-L9-Q7",
@@ -987,7 +1105,7 @@ export const unit5: Unit = {
             "Claim both standard and itemized",
           ],
           correctIndex: 0,
-          explanation: "The standard deduction ($14,600) crushes the $500 itemized deduction. For most young adults without a mortgage, the standard deduction is the clear winner. You can't take both, it's one or the other.",
+          explanation: "The standard deduction ($14,600) far exceeds the $500 itemized deduction. You pick one or the other, and for most people without a mortgage, standard wins.",
         },
         {
           id: "pf-u5-L9-Q8",
@@ -1059,23 +1177,23 @@ export const unit5: Unit = {
             "She can only use one credit, not both",
           ],
           correctIndex: 0,
-          explanation: "Lisa's $5,584 in credits wipes out her $2,800 tax bill completely. Since the EITC and some of the Child Tax Credit are 'refundable,' she actually gets money back, the government sends her a check for the difference. This is why credits matter so much.",
+          explanation: "Lisa's $5,584 in credits wipes out her $2,800 tax bill completely. Since the EITC is 'refundable,' she actually gets money back for the difference.",
         },
         {
           id: "pf-u5-L10-Q4",
           type: "true-false",
           question: "A 'refundable' tax credit can give you money back even if you owe $0 in taxes.",
           correctAnswer: true,
-          explanation: "This is huge. Nonrefundable credits can only reduce your tax to $0. Refundable credits (like the EITC) go further, if the credit is bigger than your tax bill, the IRS sends you the difference as a refund. It's literally free money.",
+          explanation: "Nonrefundable credits can only reduce your tax to $0. Refundable credits (like the EITC) go further: if the credit exceeds your tax bill, the IRS sends you the difference as a refund.",
         },
         {
           id: "pf-u5-L10-Q5",
           type: "match-pairs",
           question: "Match each credit to who it benefits most:",
           options: ["Earned Income Tax Credit", "American Opportunity Credit", "Child Tax Credit", "Saver's Credit"],
-          matchTargets: ["Low-to-moderate income workers", "College students (first 4 years)", "Parents of children under 17", "People contributing to retirement accounts"],
+          matchTargets: ["Low-to-moderate income workers", "College students (first 4 years)", "Parents of children under 17", "People saving for the future"],
           correctMatches: [0, 1, 2, 3],
-          explanation: "Each credit targets a specific group. The EITC helps lower earners. The American Opportunity helps college students. The Child Tax Credit helps parents. The Saver's Credit rewards retirement savers. Check if you qualify, you might be leaving money on the table.",
+          explanation: "Each credit targets a specific group. The EITC helps lower earners. The American Opportunity helps college students. The Child Tax Credit helps parents. The Saver's Credit rewards people who save for the future. Check if you qualify, you might be leaving money on the table.",
         },
         {
           id: "pf-u5-L10-Q6",
@@ -1103,7 +1221,7 @@ export const unit5: Unit = {
           question: "A tax _____ reduces your income, while a tax _____ reduces your bill dollar-for-dollar.",
           blanks: ["deduction", "credit"],
           wordBank: ["deduction", "credit", "bracket", "refund", "rate", "exemption"],
-          explanation: "Deductions shrink your income (indirect savings). Credits shrink your tax bill (direct savings). Credits are always more powerful. Remember: credit = cash back, deduction = smaller taxable base.",
+          explanation: "Deductions shrink your taxable income (indirect savings), while credits shrink your tax bill (direct savings). Credits are always more powerful dollar-for-dollar.",
         },
       ],
     },
@@ -1127,7 +1245,7 @@ export const unit5: Unit = {
           id: "pf-u5-L11-T2",
           type: "teaching",
           question: "The Filing Checklist",
-          explanation: "Before you sit down to file, gather these: Your W-2(s) from every employer. Any 1099 forms (freelance, bank interest, investments).",
+          explanation: "Before you sit down to file, gather these: your W-2(s) from every employer and any 1099 forms (freelance income, bank interest, or other income sources).",
           hint: "Set a reminder for February 1st: 'Check for W-2 and start gathering tax docs.' Get it done early and skip the April panic.",
         },
         {
@@ -1142,7 +1260,7 @@ export const unit5: Unit = {
             "Submit (e-file) and track your refund",
           ],
           correctOrder: [0, 1, 2, 3, 4],
-          explanation: "Gather docs, pick your tool, enter the info, review carefully, and submit. The whole process takes 30-60 minutes for most simple returns. Don't let the fear of filing cost you a refund.",
+          explanation: "Gather docs, pick your tool, enter the info, review carefully, and submit. The whole process takes 30-60 minutes for most simple returns.",
         },
         {
           id: "pf-u5-L11-Q2",
@@ -1155,7 +1273,7 @@ export const unit5: Unit = {
             "March 1",
           ],
           correctIndex: 0,
-          explanation: "April 15 is Tax Day. If it falls on a weekend or holiday, the deadline moves to the next business day. You can file an extension to October 15, but you still owe any taxes by April 15.",
+          explanation: "April 15 is Tax Day (or the next business day if it falls on a weekend/holiday). You can file an extension to October 15, but any taxes owed are still due April 15.",
         },
         {
           id: "pf-u5-L11-Q3",
@@ -1164,14 +1282,14 @@ export const unit5: Unit = {
           options: ["IRS Free File", "TurboTax Deluxe ($60+)", "FreeTaxUSA federal", "H&R Block in-person ($150+)", "Cash App Taxes", "Hiring a CPA ($200+)"],
           buckets: ["Free or very cheap", "Paid services"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "IRS Free File, FreeTaxUSA federal, and Cash App Taxes are free for simple returns. TurboTax premium, H&R Block offices, and CPAs charge real money. Most W-2 filers with simple returns don't need to pay anything.",
+          explanation: "IRS Free File, FreeTaxUSA federal, and Cash App Taxes are free for simple returns. TurboTax premium, H&R Block offices, and CPAs charge real money.",
         },
         {
           id: "pf-u5-L11-Q4",
           type: "true-false",
           question: "You have to pay a professional to file your taxes.",
           correctAnswer: false,
-          explanation: "Absolutely not. Most people with a W-2 and no complex investments can file for free. IRS Free File (income under $79K), FreeTaxUSA, and Cash App Taxes all offer free federal filing. Only pay for help if your taxes are genuinely complex.",
+          explanation: "Most people with a W-2 can file for free using IRS Free File, FreeTaxUSA, or Cash App Taxes. Only pay for help if your taxes are genuinely complex.",
         },
         {
           id: "pf-u5-L11-Q5",
@@ -1180,7 +1298,7 @@ export const unit5: Unit = {
           options: ["W-2", "1099-NEC", "1099-INT", "1098"],
           matchTargets: ["Wages from your employer", "Freelance income", "Bank interest earned", "Mortgage interest paid"],
           correctMatches: [0, 1, 2, 3],
-          explanation: "Each tax form reports a different type of income or payment. W-2 = your job. 1099-NEC = freelance work. 1099-INT = savings account interest. 1098 = mortgage interest you paid (which can be a deduction).",
+          explanation: "W-2 = job wages, 1099-NEC = freelance work, 1099-INT = savings interest, 1098 = mortgage interest paid. Each form reports a different type of income or payment.",
         },
         {
           id: "pf-u5-L11-Q6",
@@ -1194,7 +1312,7 @@ export const unit5: Unit = {
             "Wait and hope for the best",
           ],
           correctIndex: 0,
-          explanation: "File an extension. It gives you until October 15 to file. It's free and automatic, no explanation needed. Important: an extension to FILE is not an extension to PAY. If you owe taxes, estimate and pay by April 15 to avoid penalties.",
+          explanation: "An extension gives you until October 15 to file, and it's free and automatic. But an extension to file is not an extension to pay: estimate and pay what you owe by April 15.",
         },
         {
           id: "pf-u5-L11-Q7",
@@ -1208,14 +1326,14 @@ export const unit5: Unit = {
             "Choosing direct deposit instead of a paper check",
           ],
           correctIndices: [0, 1, 2],
-          explanation: "Errors, paper filing, and certain credits can delay refunds. Filing early actually speeds things up. Direct deposit is the fastest refund method (2-3 weeks vs 6-8 weeks for paper checks).",
+          explanation: "Errors, paper filing, and certain credits can delay refunds. Filing early and choosing direct deposit are the fastest ways to get your money.",
         },
         {
           id: "pf-u5-L11-Q8",
           type: "fill-blank",
           question: "An extension gives you more time to _____ but NOT more time to _____.",
           blanks: ["file", "pay"],
-          wordBank: ["file", "pay", "earn", "deduct", "save", "invest"],
+          wordBank: ["file", "pay", "earn", "deduct", "save", "spend"],
           explanation: "Crucial distinction. An extension moves your filing deadline to October 15. But any taxes you owe are still due April 15. If you file late AND owe money, you'll face both failure-to-file and failure-to-pay penalties.",
         },
       ],
@@ -1255,14 +1373,14 @@ export const unit5: Unit = {
           ],
           correctOrder: [0, 1, 2, 3],
           rankCriteria: "Financial impact: most costly to least costly",
-          explanation: "Not filing triggers a 5% per month penalty plus you miss your refund. Missing credits can cost $2,500-$7,430. Wrong filing status costs $800-$2,000. A typo delays your refund but doesn't cost you money long-term. All are avoidable.",
+          explanation: "Not filing triggers a 5%/month penalty, missing credits can cost $2,500-$7,430, and wrong filing status costs $800-$2,000. A typo just delays your refund, and all of these are avoidable.",
         },
         {
           id: "pf-u5-L12-Q2",
           type: "true-false",
           question: "The failure-to-file penalty is much worse than the failure-to-pay penalty.",
           correctAnswer: true,
-          explanation: "The failure-to-file penalty is 5% per month (up to 25%). The failure-to-pay penalty is only 0.5% per month. That's a 10x difference. If you can't afford to pay, FILE ANYWAY and set up a payment plan. The IRS is surprisingly flexible about payment plans.",
+          explanation: "Failure-to-file is 5% per month (up to 25%), while failure-to-pay is only 0.5% per month. If you can't afford to pay, file anyway and set up a payment plan.",
         },
         {
           id: "pf-u5-L12-Q3",
@@ -1275,7 +1393,7 @@ export const unit5: Unit = {
             "The freelance client handles your taxes",
           ],
           correctIndex: 0,
-          explanation: "The IRS receives a copy of every 1099 issued. Their computers automatically match it to your return. If you leave it out, you'll get a letter demanding the tax, PLUS interest and a 20% accuracy penalty. Report everything.",
+          explanation: "The IRS receives a copy of every 1099 issued and automatically matches it to your return. If you leave it out, you'll get a letter demanding the tax plus interest and a 20% accuracy penalty.",
         },
         {
           id: "pf-u5-L12-Q4",
@@ -1289,7 +1407,7 @@ export const unit5: Unit = {
             "Single parents can't get tax breaks",
           ],
           correctIndex: 0,
-          explanation: "Marcus qualifies for Head of Household, which gives him a $21,900 standard deduction (vs $14,600 Single) and wider tax brackets. He's been overpaying by roughly $800-$1,000 per year. Over 3 years, he's lost about $2,500-$3,000 in unnecessary taxes. He can amend past returns to get that money back.",
+          explanation: "Head of Household gives Marcus a $21,900 standard deduction (vs $14,600 Single) and wider tax brackets. He's been overpaying roughly $800-$1,000/year, and he can amend past returns to get that money back.",
         },
         {
           id: "pf-u5-L12-Q5",
@@ -1312,7 +1430,7 @@ export const unit5: Unit = {
           options: ["Not filing at all", "Forgetting a 1099", "Wrong filing status", "Math error on return"],
           matchTargets: ["5% monthly penalty + no refund", "IRS notice + accuracy penalty", "Overpaying hundreds per year", "IRS auto-corrects and may adjust refund"],
           correctMatches: [0, 1, 2, 3],
-          explanation: "Each mistake has a different consequence. Not filing is the worst (big penalties). Forgetting income triggers an IRS notice. Wrong filing status silently costs you money. Math errors get auto-corrected, the IRS will just adjust your refund or bill.",
+          explanation: "Not filing is the worst (big penalties), forgetting income triggers an IRS notice, and wrong filing status silently costs you money. Math errors get auto-corrected by the IRS.",
         },
         {
           id: "pf-u5-L12-Q7",
@@ -1326,7 +1444,7 @@ export const unit5: Unit = {
             "Receive any additional refund or pay the difference",
           ],
           correctOrder: [0, 1, 2, 3, 4],
-          explanation: "Mistakes happen. You can amend returns for the past 3 years using Form 1040-X. It takes a while (16+ weeks), but you can recover money you overpaid. Don't ignore a mistake, especially if it means you're owed money.",
+          explanation: "You can amend returns for the past 3 years using Form 1040-X. Processing takes 16+ weeks, but you can recover money you overpaid.",
         },
         {
           id: "pf-u5-L12-Q8",
@@ -1339,7 +1457,7 @@ export const unit5: Unit = {
             "Only report income over $10,000",
           ],
           correctIndex: 0,
-          explanation: "Filing early gives you time to catch errors. Double-checking prevents typos and wrong numbers. Reporting all income prevents the single biggest audit trigger. This simple combo avoids 90% of common tax problems, and it's free.",
+          explanation: "Filing early gives you time to catch errors, double-checking prevents typos, and reporting all income avoids the biggest audit trigger. This simple combo prevents most common tax problems.",
         },
       ],
     },
@@ -1432,7 +1550,7 @@ export const unit5: Unit = {
         {
           id: "pf-u5-L14-SQ2",
           question: "A checking account is best for:",
-          options: ["Long-term savings", "Daily transactions", "Investing", "Retirement"],
+          options: ["Long-term savings", "Daily transactions", "Earning interest", "Avoiding taxes"],
           correctIndex: 1,
         },
         {

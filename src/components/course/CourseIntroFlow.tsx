@@ -80,7 +80,7 @@ export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps)
   const activeProfession = useCourseStore((s) => s.activeProfession);
   const profession = getProfession(activeProfession);
   const professionName = profession?.name ?? 'this course';
-  const accent = profession?.color ?? '#6366F1';
+  const accent = profession?.color ?? '#3B82F6';
 
   const [step, setStep] = useState(0);
   const [experience, setExperience] = useState<ExperienceLevel | null>(null);

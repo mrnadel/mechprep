@@ -251,7 +251,7 @@ export const unit8: Unit = {
  type: "teaching",
  question: "The One That Started It All",
  explanation: "In 2008, someone (or some group) called Satoshi Nakamoto published a paper describing 'a peer-to-peer electronic cash system.' In January 2009, Bitcoin launched.",
- hint: "Nobody knows who Satoshi Nakamoto really is. Their Bitcoin wallet holds about $50 billion worth of BTC and has never been touched.",
+ hint: "Try this now: look up Bitcoin's price today vs one year ago and calculate the percentage change.",
  },
  {
  id: "pf-u8-L3-T2",
@@ -479,7 +479,7 @@ export const unit8: Unit = {
  id: "pf-u8-L5-T2",
  type: "teaching",
  question: "How to Evaluate an Altcoin (The DYOR Checklist)",
- explanation: "'DYOR' means 'Do Your Own Research.' Here's what to actually look at: 1) What problem does it solve?",
+ explanation: "'DYOR' means 'Do Your Own Research.' Check what problem it solves, who's on the team, whether there's a working product, and where the money comes from.",
  hint: "If a project's main marketing strategy is paying influencers and promising 100x returns, it's almost certainly a scam.",
  },
  {
@@ -690,13 +690,13 @@ export const unit8: Unit = {
  type: "teaching",
  question: "Centralized vs Decentralized Exchanges",
  explanation: "There are two types of crypto exchanges. Centralized exchanges (CEX) like Coinbase, Kraken, and Binance are companies that hold your crypto for you, like a brokerage.",
- hint: "Most beginners should start on a reputable CEX. Once you understand wallets and DeFi, explore DEXs.",
+ hint: "Try this now: visit Coinbase or Kraken's website and browse their fee schedule to see what trading would cost.",
  },
  {
  id: "pf-u8-L7-T2",
  type: "teaching",
  question: "Fees: The Hidden Cost of Trading",
- explanation: "Exchanges make money by charging you fees on every trade. These vary wildly: Coinbase charges 0.",
+ explanation: "Exchanges make money by charging you fees on every trade. Fees vary wildly, from 0.1% on advanced platforms to 1.5% or more on beginner-friendly 'simple buy' interfaces.",
  hint: "Never use the 'simple buy' button. Always switch to the advanced trading view. It looks scarier but saves you real money.",
  },
  {
@@ -798,7 +798,7 @@ export const unit8: Unit = {
  id: "pf-u8-L8-T1",
  type: "teaching",
  question: "What Is DeFi?",
- explanation: "DeFi (Decentralized Finance) rebuilds traditional banking services, lending, borrowing, savings accounts, trading, using smart contracts instead of banks. Want to earn interest on your crypto?",
+ explanation: "DeFi (Decentralized Finance) rebuilds traditional banking services (lending, borrowing, savings, trading) using smart contracts instead of banks. You can earn interest, take loans, and trade without ever talking to a banker.",
  hint: "DeFi is like banking without the bankers. The code IS the bank.",
  },
  {
@@ -1026,14 +1026,14 @@ export const unit8: Unit = {
  id: "pf-u8-L10-T1",
  type: "teaching",
  question: "The IRS Treats Crypto as Property",
- explanation: "Here's the part most crypto enthusiasts try to ignore: the IRS treats cryptocurrency as property (like stocks or real estate), not currency. That means every time you sell, trade, or spend crypto, it's a taxable event.",
+ explanation: "The IRS treats cryptocurrency as property (like stocks or real estate), not currency. Every time you sell, trade, or spend crypto, it's a taxable event.",
  hint: "Yes, even swapping one crypto for another triggers a tax event. The IRS doesn't care that you never 'cashed out' to dollars.",
  },
  {
  id: "pf-u8-L10-T2",
  type: "teaching",
  question: "Short-Term vs Long-Term Capital Gains",
- explanation: "How much tax you owe depends on how LONG you held the crypto. Sold within 1 year?",
+ explanation: "How much tax you owe depends on how long you held the crypto. Sold within 1 year: taxed at your regular income rate. Held over 1 year: taxed at lower long-term capital gains rates.",
  hint: "The single best tax strategy: hold for at least one year before selling. That switch from short-term to long-term rates can save thousands.",
  },
  {
@@ -1138,14 +1138,14 @@ export const unit8: Unit = {
  id: "pf-u8-L11-T1",
  type: "teaching",
  question: "Why Crypto Is So Volatile",
- explanation: "Crypto markets move 5-10x more than stock markets. Why?",
+ explanation: "Crypto markets move 5-10x more than stock markets. Smaller market size, 24/7 trading, no circuit breakers, and heavy retail speculation all amplify price swings.",
  hint: "If checking your portfolio every hour gives you anxiety, crypto's volatility might be too much. There's no shame in that.",
  },
  {
  id: "pf-u8-L11-T2",
  type: "teaching",
  question: "Managing Your Emotions in a Volatile Market",
- explanation: "The biggest risk in crypto isn't the technology, it's your own psychology. Fear makes you sell at the bottom.",
+ explanation: "The biggest risk in crypto isn't the technology, it's your own psychology. Fear makes you sell at the bottom, and greed makes you buy at the top.",
  hint: "Write down your plan: 'I'll invest $X/month. I won't sell unless ___. I can afford to lose everything in this account.' Then follow the plan.",
  },
  {
@@ -1257,7 +1257,7 @@ export const unit8: Unit = {
  id: "pf-u8-L12-T1",
  type: "teaching",
  question: "Crypto's Place in Your Portfolio",
- explanation: "Here's the honest truth: most financial advisors recommend keeping crypto at 1-5% of your total investment portfolio. Why so little?",
+ explanation: "Most financial advisors recommend keeping crypto at 1-5% of your total investment portfolio. That's enough to benefit from a big run-up without being devastated by a crash.",
  hint: "If you don't have an emergency fund and a retirement account, you have no business buying crypto. Get the foundation right first.",
  },
  {
@@ -1661,6 +1661,92 @@ export const unit8: Unit = {
  score: "poor",
  },
  },
+ },
+
+ // ===== SPEED ROUND: Crypto Terms Blitz =====
+ {
+ id: "pf-u8-L15",
+ title: "Crypto Terms Blitz",
+ description: "Race the clock on blockchain, Bitcoin, wallets, and crypto vocabulary.",
+ icon: "\u26A1",
+ type: "speed-round",
+ xpReward: 20,
+ questions: [],
+ speedTimeLimit: 60,
+ speedQuestions: [
+ {
+ id: "pf-u8-L15-SQ1",
+ question: "A blockchain is:",
+ options: ["A bank network", "A decentralized ledger", "A type of wallet", "A stock exchange"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ2",
+ question: "Bitcoin's maximum supply is:",
+ options: ["1 million", "21 million", "100 million", "Unlimited"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ3",
+ question: "A hot wallet is:",
+ options: ["Offline storage", "Connected to the internet", "A bank account", "A paper backup"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ4",
+ question: "A cold wallet is:",
+ options: ["Online storage", "Offline storage", "A mobile app", "An exchange account"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ5",
+ question: "DeFi stands for:",
+ options: ["Digital Finance", "Decentralized Finance", "Default Interest", "Defined Funds"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ6",
+ question: "Smart contracts run on:",
+ options: ["Bitcoin only", "Ethereum", "Banks", "Government servers"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ7",
+ question: "'Not your keys, not your coins' means:",
+ options: ["You need a key to trade", "You should control your private keys", "Keys are physical devices", "Banks hold your crypto"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ8",
+ question: "An altcoin is any cryptocurrency that isn't:",
+ options: ["Ethereum", "Bitcoin", "A stablecoin", "On an exchange"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ9",
+ question: "A stablecoin is pegged to:",
+ options: ["Bitcoin's price", "A real-world currency", "Ethereum", "Gold only"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ10",
+ question: "Crypto gains are typically taxed as:",
+ options: ["Not taxed", "Capital gains", "Sales tax", "Property tax"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ11",
+ question: "Gas fees on Ethereum pay for:",
+ options: ["Electricity bills", "Transaction processing", "Wallet storage", "Exchange listings"],
+ correctIndex: 1,
+ },
+ {
+ id: "pf-u8-L15-SQ12",
+ question: "HODL means:",
+ options: ["Buy more", "Hold and don't sell", "Sell at the top", "Trade frequently"],
+ correctIndex: 1,
+ },
+ ],
  },
  ],
 };

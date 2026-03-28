@@ -191,7 +191,7 @@ function QuestionSearch() {
   }, [resolved, answered, hasSelection, adjacentIds, handleClose, goToQuestion]);
 
   const theme = resolved ? getUnitTheme(resolved.unitIndex) : null;
-  const unitColor = theme?.color ?? '#6366F1';
+  const unitColor = theme?.color ?? 'var(--color-primary-500)';
 
   // Full-screen question preview overlay
   if (resolved) {
@@ -220,9 +220,9 @@ function QuestionSearch() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#AFAFAF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </button>
               {!answered ? (
-                <button onClick={() => questionRef.current?.check()} disabled={!hasSelection} className="flex-1 transition-transform active:scale-[0.98]" style={{ padding: '14px 0', borderRadius: 16, fontSize: 15, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, background: hasSelection ? unitColor : '#E5E5E5', color: hasSelection ? '#FFFFFF' : '#AFAFAF', boxShadow: hasSelection ? `0 4px 0 ${theme?.dark ?? '#4F46E5'}` : '0 4px 0 #CCCCCC', border: 'none', cursor: hasSelection ? 'pointer' : 'default' }}>Check</button>
+                <button onClick={() => questionRef.current?.check()} disabled={!hasSelection} className="flex-1 transition-transform active:scale-[0.98]" style={{ padding: '14px 0', borderRadius: 16, fontSize: 15, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, background: hasSelection ? unitColor : '#E5E5E5', color: hasSelection ? '#FFFFFF' : '#AFAFAF', boxShadow: hasSelection ? `0 4px 0 ${theme?.dark ?? 'var(--color-primary-600)'}` : '0 4px 0 #CCCCCC', border: 'none', cursor: hasSelection ? 'pointer' : 'default' }}>Check</button>
               ) : (
-                <button onClick={() => { setAnswered(false); setHasSelection(false); setRetryKey(k => k + 1); }} className="flex-1 transition-transform active:scale-[0.98]" style={{ padding: '14px 0', borderRadius: 16, fontSize: 15, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, background: unitColor, color: '#FFFFFF', boxShadow: `0 4px 0 ${theme?.dark ?? '#4F46E5'}`, border: 'none', cursor: 'pointer' }}>Try Again</button>
+                <button onClick={() => { setAnswered(false); setHasSelection(false); setRetryKey(k => k + 1); }} className="flex-1 transition-transform active:scale-[0.98]" style={{ padding: '14px 0', borderRadius: 16, fontSize: 15, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8, background: unitColor, color: '#FFFFFF', boxShadow: `0 4px 0 ${theme?.dark ?? 'var(--color-primary-600)'}`, border: 'none', cursor: 'pointer' }}>Try Again</button>
               )}
               <button onClick={() => adjacentIds.next && goToQuestion(adjacentIds.next)} disabled={!adjacentIds.next} className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90 disabled:opacity-30" style={{ width: 48, height: 48, borderRadius: 14, background: '#F5F5F5', border: '2px solid #E5E5E5', boxShadow: '0 3px 0 #CCCCCC', cursor: adjacentIds.next ? 'pointer' : 'default' }} title="Next question (→)">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#AFAFAF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -245,14 +245,14 @@ function QuestionSearch() {
           onChange={e => { setInput(e.target.value); setError(''); }}
           onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); handleGo(); } }}
           placeholder="u1-L3-Q16 or pf-u0-L1-Q5"
-          className="flex-1 min-w-0 px-2 py-1.5 rounded-lg border border-gray-200 text-[11px] font-mono font-bold focus:outline-none focus:border-indigo-400 transition-colors"
+          className="flex-1 min-w-0 px-2 py-1.5 rounded-lg border border-gray-200 text-[11px] font-mono font-bold focus:outline-none focus:border-primary-400 transition-colors"
           spellCheck={false}
         />
         <button
           onClick={handleGo}
           disabled={loading || !input.trim()}
           className="px-3 py-1.5 rounded-lg text-[11px] font-bold text-white transition-colors disabled:opacity-40"
-          style={{ background: '#6366F1' }}
+          style={{ background: 'var(--color-primary-500)' }}
         >
           {loading ? '...' : 'Go'}
         </button>
@@ -369,7 +369,7 @@ export function DebugTierToggle() {
               }}
               className={`w-full text-left px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                 debugTierOverride === value
-                  ? 'bg-indigo-50 text-indigo-700'
+                  ? 'bg-primary-50 text-primary-700'
                   : 'text-gray-600 hover:bg-gray-50'
               }`}
             >
@@ -415,7 +415,7 @@ export function DebugTierToggle() {
                     if (g > t) { g = t; setGoldenInput(String(g)); }
                     commitProgress(t, g);
                   }}
-                  className="w-12 px-1 py-0.5 text-[11px] border border-gray-200 rounded text-center focus:outline-none focus:ring-1 focus:ring-indigo-400 tabular-nums"
+                  className="w-12 px-1 py-0.5 text-[11px] border border-gray-200 rounded text-center focus:outline-none focus:ring-1 focus:ring-primary-400 tabular-nums"
                 />
               </div>
               <input
@@ -430,7 +430,7 @@ export function DebugTierToggle() {
                   if (g > t) { g = t; setGoldenInput(String(g)); }
                   commitProgress(t, g);
                 }}
-                className="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-indigo-500 bg-gray-200"
+                className="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-primary-500 bg-gray-200"
               />
             </div>
 

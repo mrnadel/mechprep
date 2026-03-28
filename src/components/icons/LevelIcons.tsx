@@ -148,29 +148,29 @@ export const DesignInternIcon = ({ size = 64, className }: IconProps) => (
   <svg viewBox="0 0 64 64" width={size} height={size} className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="lvl-6-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="lvl-6-tool" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#E0E7FF" />
-        <stop offset="100%" stopColor="#A5B4FC" />
+        <stop offset="0%" stopColor="#DBEAFE" />
+        <stop offset="100%" stopColor="#93C5FD" />
       </linearGradient>
     </defs>
-    <circle cx="32" cy="32" r="28" fill="url(#lvl-6-bg)" stroke="#4338CA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="32" cy="32" r="24" fill="#312E81" opacity="0.15" stroke="none" />
+    <circle cx="32" cy="32" r="28" fill="url(#lvl-6-bg)" stroke="#1D4ED8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="32" cy="32" r="24" fill="#1E3A8A" opacity="0.15" stroke="none" />
     {/* Protractor arc */}
     <path d="M16 38 A18 18 0 0 1 48 38" fill="none" stroke="url(#lvl-6-tool)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
     <line x1="16" y1="38" x2="48" y2="38" stroke="url(#lvl-6-tool)" strokeWidth="2" strokeLinecap="round" />
     {/* Tick marks on protractor */}
-    <line x1="32" y1="20" x2="32" y2="24" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="22" y1="24" x2="24" y2="27" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="42" y1="24" x2="40" y2="27" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="18" y1="32" x2="21" y2="33" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="46" y1="32" x2="43" y2="33" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="32" y1="20" x2="32" y2="24" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="22" y1="24" x2="24" y2="27" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="42" y1="24" x2="40" y2="27" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="18" y1="32" x2="21" y2="33" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="46" y1="32" x2="43" y2="33" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
     {/* Compass needle */}
     <line x1="32" y1="38" x2="42" y2="24" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" />
-    <circle cx="32" cy="38" r="2" fill="#4338CA" stroke="#C7D2FE" strokeWidth="1.5" />
-    <text x="32" y="54" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#E0E7FF" fontFamily="system-ui">6</text>
+    <circle cx="32" cy="38" r="2" fill="#1D4ED8" stroke="#BFDBFE" strokeWidth="1.5" />
+    <text x="32" y="54" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#DBEAFE" fontFamily="system-ui">6</text>
   </svg>
 );
 
@@ -179,30 +179,30 @@ export const AssociateEngIcon = ({ size = 64, className }: IconProps) => (
   <svg viewBox="0 0 64 64" width={size} height={size} className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="lvl-7-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="lvl-7-gear" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#E0E7FF" />
-        <stop offset="100%" stopColor="#A5B4FC" />
+        <stop offset="0%" stopColor="#DBEAFE" />
+        <stop offset="100%" stopColor="#93C5FD" />
       </linearGradient>
     </defs>
-    <circle cx="32" cy="30" r="28" fill="url(#lvl-7-bg)" stroke="#4338CA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="32" cy="30" r="24" fill="#312E81" opacity="0.15" stroke="none" />
+    <circle cx="32" cy="30" r="28" fill="url(#lvl-7-bg)" stroke="#1D4ED8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="32" cy="30" r="24" fill="#1E3A8A" opacity="0.15" stroke="none" />
     {/* Gear teeth - 8 teeth */}
     <path d="
       M32 12 L34 12 L35 16 L37 17 L40 14 L42 15 L40 19 L42 21 L46 20 L47 22 L43 25 L44 27 L48 28 L48 30
       L48 32 L44 33 L43 35 L47 38 L46 40 L42 39 L40 41 L42 45 L40 46 L37 43 L35 44 L34 48 L32 48
       L30 48 L29 44 L27 43 L24 46 L22 45 L24 41 L22 39 L18 40 L17 38 L21 35 L20 33 L16 32 L16 30
       L16 28 L20 27 L21 25 L17 22 L18 20 L22 21 L24 19 L22 15 L24 14 L27 17 L29 16 L30 12 Z
-    " fill="url(#lvl-7-gear)" stroke="#4338CA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    " fill="url(#lvl-7-gear)" stroke="#1D4ED8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     {/* Inner circle */}
-    <circle cx="32" cy="30" r="8" fill="#6366F1" stroke="#4338CA" strokeWidth="2" />
+    <circle cx="32" cy="30" r="8" fill="#3B82F6" stroke="#1D4ED8" strokeWidth="2" />
     {/* Center axle */}
-    <circle cx="32" cy="30" r="3" fill="#312E81" stroke="#818CF8" strokeWidth="1.5" />
+    <circle cx="32" cy="30" r="3" fill="#1E3A8A" stroke="#60A5FA" strokeWidth="1.5" />
     {/* Shine highlight */}
-    <path d="M26 24 Q32 20 38 24" fill="none" stroke="#E0E7FF" strokeWidth="1" opacity="0.5" strokeLinecap="round" />
-    <text x="32" y="56" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#E0E7FF" fontFamily="system-ui">7</text>
+    <path d="M26 24 Q32 20 38 24" fill="none" stroke="#DBEAFE" strokeWidth="1" opacity="0.5" strokeLinecap="round" />
+    <text x="32" y="56" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#DBEAFE" fontFamily="system-ui">7</text>
   </svg>
 );
 
@@ -211,32 +211,32 @@ export const ProjectEngIcon = ({ size = 64, className }: IconProps) => (
   <svg viewBox="0 0 64 64" width={size} height={size} className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="lvl-8-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="lvl-8-paper" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stopColor="#E0E7FF" />
-        <stop offset="100%" stopColor="#C7D2FE" />
+        <stop offset="0%" stopColor="#DBEAFE" />
+        <stop offset="100%" stopColor="#BFDBFE" />
       </linearGradient>
     </defs>
-    <circle cx="32" cy="32" r="28" fill="url(#lvl-8-bg)" stroke="#4338CA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="32" cy="32" r="24" fill="#312E81" opacity="0.15" stroke="none" />
+    <circle cx="32" cy="32" r="28" fill="url(#lvl-8-bg)" stroke="#1D4ED8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="32" cy="32" r="24" fill="#1E3A8A" opacity="0.15" stroke="none" />
     {/* Unrolled blueprint */}
-    <rect x="14" y="18" width="28" height="30" rx="2" fill="url(#lvl-8-paper)" stroke="#4338CA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <rect x="14" y="18" width="28" height="30" rx="2" fill="url(#lvl-8-paper)" stroke="#1D4ED8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     {/* Blueprint grid lines */}
-    <line x1="18" y1="24" x2="38" y2="24" stroke="#818CF8" strokeWidth="0.8" opacity="0.5" />
-    <line x1="18" y1="30" x2="38" y2="30" stroke="#818CF8" strokeWidth="0.8" opacity="0.5" />
-    <line x1="18" y1="36" x2="38" y2="36" stroke="#818CF8" strokeWidth="0.8" opacity="0.5" />
-    <line x1="18" y1="42" x2="38" y2="42" stroke="#818CF8" strokeWidth="0.8" opacity="0.5" />
+    <line x1="18" y1="24" x2="38" y2="24" stroke="#60A5FA" strokeWidth="0.8" opacity="0.5" />
+    <line x1="18" y1="30" x2="38" y2="30" stroke="#60A5FA" strokeWidth="0.8" opacity="0.5" />
+    <line x1="18" y1="36" x2="38" y2="36" stroke="#60A5FA" strokeWidth="0.8" opacity="0.5" />
+    <line x1="18" y1="42" x2="38" y2="42" stroke="#60A5FA" strokeWidth="0.8" opacity="0.5" />
     {/* Blueprint drawing — simple box with dimension */}
-    <rect x="20" y="26" width="14" height="10" fill="none" stroke="#4338CA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    <line x1="20" y1="38" x2="34" y2="38" stroke="#4338CA" strokeWidth="1" strokeLinecap="round" />
-    <line x1="20" y1="37" x2="20" y2="39" stroke="#4338CA" strokeWidth="1" strokeLinecap="round" />
-    <line x1="34" y1="37" x2="34" y2="39" stroke="#4338CA" strokeWidth="1" strokeLinecap="round" />
+    <rect x="20" y="26" width="14" height="10" fill="none" stroke="#1D4ED8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <line x1="20" y1="38" x2="34" y2="38" stroke="#1D4ED8" strokeWidth="1" strokeLinecap="round" />
+    <line x1="20" y1="37" x2="20" y2="39" stroke="#1D4ED8" strokeWidth="1" strokeLinecap="round" />
+    <line x1="34" y1="37" x2="34" y2="39" stroke="#1D4ED8" strokeWidth="1" strokeLinecap="round" />
     {/* Rolled portion */}
-    <ellipse cx="44" cy="33" rx="4" ry="15" fill="#C7D2FE" stroke="#4338CA" strokeWidth="2" />
-    <ellipse cx="44" cy="33" rx="2" ry="15" fill="#E0E7FF" stroke="none" opacity="0.5" />
-    <text x="32" y="56" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#E0E7FF" fontFamily="system-ui">8</text>
+    <ellipse cx="44" cy="33" rx="4" ry="15" fill="#BFDBFE" stroke="#1D4ED8" strokeWidth="2" />
+    <ellipse cx="44" cy="33" rx="2" ry="15" fill="#DBEAFE" stroke="none" opacity="0.5" />
+    <text x="32" y="56" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#DBEAFE" fontFamily="system-ui">8</text>
   </svg>
 );
 
@@ -245,8 +245,8 @@ export const StressAnalystIcon = ({ size = 64, className }: IconProps) => (
   <svg viewBox="0 0 64 64" width={size} height={size} className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="lvl-9-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="lvl-9-bar" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#34D399" />
@@ -254,12 +254,12 @@ export const StressAnalystIcon = ({ size = 64, className }: IconProps) => (
         <stop offset="100%" stopColor="#EF4444" />
       </linearGradient>
     </defs>
-    <circle cx="32" cy="32" r="28" fill="url(#lvl-9-bg)" stroke="#4338CA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="32" cy="32" r="24" fill="#312E81" opacity="0.15" stroke="none" />
+    <circle cx="32" cy="32" r="28" fill="url(#lvl-9-bg)" stroke="#1D4ED8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="32" cy="32" r="24" fill="#1E3A8A" opacity="0.15" stroke="none" />
     {/* I-beam cross section */}
-    <rect x="22" y="14" width="20" height="4" rx="1" fill="#C7D2FE" stroke="#4338CA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    <rect x="30" y="18" width="4" height="18" fill="#C7D2FE" stroke="#4338CA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    <rect x="22" y="36" width="20" height="4" rx="1" fill="#C7D2FE" stroke="#4338CA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <rect x="22" y="14" width="20" height="4" rx="1" fill="#BFDBFE" stroke="#1D4ED8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <rect x="30" y="18" width="4" height="18" fill="#BFDBFE" stroke="#1D4ED8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <rect x="22" y="36" width="20" height="4" rx="1" fill="#BFDBFE" stroke="#1D4ED8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     {/* Stress color gradient overlay on beam */}
     <rect x="30" y="18" width="4" height="18" fill="url(#lvl-9-bar)" opacity="0.4" />
     {/* Force arrows */}
@@ -268,8 +268,8 @@ export const StressAnalystIcon = ({ size = 64, className }: IconProps) => (
     <line x1="32" y1="44" x2="32" y2="40" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" />
     <polyline points="30,42 32,40 34,42" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     {/* Small sigma label */}
-    <text x="47" y="30" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#E0E7FF" fontFamily="serif" opacity="0.7">σ</text>
-    <text x="32" y="56" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#E0E7FF" fontFamily="system-ui">9</text>
+    <text x="47" y="30" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#DBEAFE" fontFamily="serif" opacity="0.7">σ</text>
+    <text x="32" y="56" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#DBEAFE" fontFamily="system-ui">9</text>
   </svg>
 );
 
@@ -278,8 +278,8 @@ export const ThermalSpecIcon = ({ size = 64, className }: IconProps) => (
   <svg viewBox="0 0 64 64" width={size} height={size} className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="lvl-10-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="lvl-10-temp" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#EF4444" />
@@ -287,24 +287,24 @@ export const ThermalSpecIcon = ({ size = 64, className }: IconProps) => (
         <stop offset="100%" stopColor="#14B8A6" />
       </linearGradient>
     </defs>
-    <circle cx="32" cy="32" r="28" fill="url(#lvl-10-bg)" stroke="#4338CA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="32" cy="32" r="24" fill="#312E81" opacity="0.15" stroke="none" />
+    <circle cx="32" cy="32" r="28" fill="url(#lvl-10-bg)" stroke="#1D4ED8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="32" cy="32" r="24" fill="#1E3A8A" opacity="0.15" stroke="none" />
     {/* Thermometer body */}
-    <rect x="28" y="12" width="8" height="28" rx="4" fill="#1E293B" stroke="#C7D2FE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <rect x="28" y="12" width="8" height="28" rx="4" fill="#1E293B" stroke="#BFDBFE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     {/* Bulb */}
-    <circle cx="32" cy="42" r="7" fill="#1E293B" stroke="#C7D2FE" strokeWidth="2" />
+    <circle cx="32" cy="42" r="7" fill="#1E293B" stroke="#BFDBFE" strokeWidth="2" />
     {/* Mercury fill */}
     <rect x="30" y="20" width="4" height="20" rx="2" fill="url(#lvl-10-temp)" />
     <circle cx="32" cy="42" r="5" fill="#EF4444" />
     {/* Temperature lines */}
-    <line x1="37" y1="18" x2="40" y2="18" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="37" y1="24" x2="40" y2="24" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="37" y1="30" x2="40" y2="30" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="37" y1="36" x2="40" y2="36" stroke="#C7D2FE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="37" y1="18" x2="40" y2="18" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="37" y1="24" x2="40" y2="24" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="37" y1="30" x2="40" y2="30" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="37" y1="36" x2="40" y2="36" stroke="#BFDBFE" strokeWidth="1.5" strokeLinecap="round" />
     {/* Heat waves */}
     <path d="M20 20 Q18 24, 20 28" fill="none" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
     <path d="M16 22 Q14 26, 16 30" fill="none" stroke="#EF4444" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-    <text x="32" y="56" textAnchor="middle" fontSize="7" fontWeight="bold" fill="#E0E7FF" fontFamily="system-ui">10</text>
+    <text x="32" y="56" textAnchor="middle" fontSize="7" fontWeight="bold" fill="#DBEAFE" fontFamily="system-ui">10</text>
   </svg>
 );
 

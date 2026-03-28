@@ -12,7 +12,6 @@ import {
   BookOpen,
   BarChart3,
   Shield,
-  BrainCircuit,
   GraduationCap,
   Lock,
   Zap,
@@ -153,187 +152,204 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="pb-12">
-      {/* Header */}
-      <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-gray-200">
-        <div className="flex items-center h-14 px-4">
-          <button
-            onClick={() => router.back()}
-            className="p-3 -ml-3 rounded-full hover:bg-gray-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-          >
-            <ArrowLeft className="w-5 h-5 text-gray-700" />
-          </button>
-          <h1 className="text-lg font-bold text-gray-900 ml-2">Upgrade to Pro</h1>
-        </div>
+    <div className="min-h-screen bg-gradient-to-b from-[#6B3FA0] to-[#4A2D7A] overflow-hidden relative">
+      {/* Floating sparkles */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              width: `${3 + (i % 3) * 2}px`,
+              height: `${3 + (i % 3) * 2}px`,
+              left: `${5 + i * 10}%`,
+              top: `${10 + (i % 5) * 18}%`,
+              background: ['rgba(255,200,0,.3)', 'rgba(255,255,255,.2)', 'rgba(132,216,255,.25)', 'rgba(255,170,222,.25)'][i % 4],
+              animation: `pricing-sparkle ${2 + (i % 4) * 0.5}s ${i * 0.3}s ease-in-out infinite`,
+            }}
+          />
+        ))}
       </div>
 
-      <div className="px-4 pt-6 max-w-lg mx-auto">
+      {/* Back button */}
+      <div className="sticky top-0 z-30 px-4 pt-3 pb-2">
+        <button
+          onClick={() => router.back()}
+          className="p-2.5 rounded-full bg-white/15 hover:bg-white/25 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+        >
+          <ArrowLeft className="w-5 h-5 text-white/80" />
+        </button>
+      </div>
 
-        {/* Hero glow card */}
+      <div className="relative z-10 px-5 max-w-lg mx-auto pb-12">
+
+        {/* Mascot + hero */}
         <motion.div
-          className="relative rounded-3xl overflow-hidden mb-8"
+          className="text-center mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-indigo-400" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.2),transparent_60%)]" />
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary-700/40 to-transparent" />
+          {/* Mascot with glow */}
+          <div className="relative inline-block mb-2">
+            <div
+              className="absolute -inset-5 rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(255,200,0,.2) 0%, transparent 70%)',
+                animation: 'pricing-glow 2.5s ease-in-out infinite',
+              }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/mascot/upgrade-pro.png"
+              alt=""
+              width={140}
+              height={140}
+              className="relative z-[1] drop-shadow-[0_8px_24px_rgba(0,0,0,.3)]"
+            />
+          </div>
 
-          <div className="relative px-6 pt-8 pb-6 text-center">
-            {/* Floating sparkle icon */}
-            <motion.div
-              className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-5 border border-white/30"
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <Zap className="w-8 h-8 text-white" />
-            </motion.div>
-
-            <h2 className="text-2xl font-extrabold text-white mb-2 tracking-tight">
-              Never run out of hearts
-            </h2>
-            <p className="text-primary-100 text-sm leading-relaxed max-w-xs mx-auto">
-              All content is free. Pro removes limits so you can practice without interruptions.
-            </p>
-
-            {/* Price display */}
-            <div className="mt-6 mb-2">
-              <div className="flex items-baseline justify-center gap-1">
-                <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-                  {formatPrice(effectiveMonthly)}
-                </span>
-                <span className="text-primary-200 text-base font-medium">/mo</span>
-              </div>
-              {billingInterval === 'year' && (
-                <motion.p
-                  className="text-primary-200 text-xs mt-1"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                >
-                  {formatPrice(yearlyPrice)}/year &middot; billed annually
-                </motion.p>
-              )}
+          {/* Pro badge */}
+          <div className="flex justify-center mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-[11px] font-extrabold text-yellow-200 uppercase tracking-widest">
+              ★ Pro
             </div>
+          </div>
+
+          <h1 className="text-[28px] font-black text-white tracking-tight mb-1">MechReady Pro</h1>
+          <p className="text-sm text-white/50">Unlock your full potential</p>
+        </motion.div>
+
+        {/* Price + billing toggle */}
+        <motion.div
+          className="text-center mb-6"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          <div className="flex items-baseline justify-center gap-1 mb-1">
+            <span className="text-5xl font-black text-white tracking-tight">
+              {formatPrice(effectiveMonthly)}
+            </span>
+            <span className="text-white/50 text-base font-medium">/mo</span>
+          </div>
+          {billingInterval === 'year' && (
+            <motion.p
+              className="text-white/40 text-xs"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              {formatPrice(yearlyPrice)}/year, billed annually
+            </motion.p>
+          )}
+
+          {/* Toggle */}
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <button
+              onClick={() => setBillingInterval('month')}
+              className={cn(
+                'px-5 py-2.5 rounded-xl text-sm font-bold transition-all',
+                billingInterval === 'month'
+                  ? 'bg-white/20 text-white shadow-md'
+                  : 'bg-white/5 text-white/40 hover:bg-white/10'
+              )}
+            >
+              Monthly
+            </button>
+            <button
+              onClick={() => setBillingInterval('year')}
+              className={cn(
+                'px-5 py-2.5 rounded-xl text-sm font-bold transition-all relative',
+                billingInterval === 'year'
+                  ? 'bg-white/20 text-white shadow-md'
+                  : 'bg-white/5 text-white/40 hover:bg-white/10'
+              )}
+            >
+              Yearly
+              {yearlySavings > 0 && (
+                <span className="absolute -top-2.5 -right-2 bg-green-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">
+                  -{yearlySavings}%
+                </span>
+              )}
+            </button>
           </div>
         </motion.div>
 
-        {/* Billing toggle */}
+        {/* Features */}
         <motion.div
-          className="flex items-center justify-center gap-2 mb-8"
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 }}
-        >
-          <button
-            onClick={() => setBillingInterval('month')}
-            className={cn(
-              'px-4 py-2 rounded-xl text-sm font-semibold transition-all',
-              billingInterval === 'month'
-                ? 'bg-surface-900 text-white shadow-md'
-                : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-            )}
-          >
-            Monthly
-          </button>
-          <button
-            onClick={() => setBillingInterval('year')}
-            className={cn(
-              'px-4 py-2 rounded-xl text-sm font-semibold transition-all relative',
-              billingInterval === 'year'
-                ? 'bg-surface-900 text-white shadow-md'
-                : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-            )}
-          >
-            Yearly
-            {yearlySavings > 0 && (
-              <span className="absolute -top-2.5 -right-2 bg-accent-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">
-                -{yearlySavings}%
-              </span>
-            )}
-          </button>
-        </motion.div>
-
-        {/* What you get */}
-        <motion.div
-          className="mb-8"
+          className="mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <h3 className="text-xs font-bold text-surface-400 uppercase tracking-widest mb-4 px-1">
-            Everything in Pro
-          </h3>
-          <div className="space-y-3">
+          <div className="space-y-2.5">
             {PRO_FEATURES.map((feature, i) => (
               <motion.div
                 key={feature.label}
-                className="flex items-center gap-3.5 bg-white rounded-2xl border border-gray-100 p-3.5 shadow-sm"
+                className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-3.5"
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.25 + i * 0.06 }}
               >
-                <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center shrink-0">
-                  <feature.icon className="w-5 h-5 text-primary-600" />
+                <div className="w-9 h-9 rounded-[10px] bg-white/12 flex items-center justify-center shrink-0">
+                  <feature.icon className="w-5 h-5 text-white/80" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-sm font-semibold text-surface-900">{feature.label}</p>
-                  <p className="text-xs text-surface-400">{feature.sublabel}</p>
+                  <p className="text-[14px] font-bold text-white">{feature.label}</p>
+                  <p className="text-[11px] text-white/40">{feature.sublabel}</p>
                 </div>
-                <Check className="w-5 h-5 text-accent-500 shrink-0 ml-auto" />
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Free plan — what's included + limits */}
+        {/* Free plan */}
         <motion.div
-          className="mb-8 bg-surface-50 rounded-2xl border border-dashed border-surface-200 p-4"
+          className="mb-6 bg-white/8 backdrop-blur-sm rounded-2xl border border-white/10 p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.55 }}
         >
-          <p className="text-xs font-bold text-accent-500 uppercase tracking-widest mb-3">
+          <p className="text-[11px] font-extrabold text-yellow-300/80 uppercase tracking-widest mb-3">
             Free plan includes
           </p>
           <div className="space-y-2 mb-4">
             {FREE_INCLUDES.map((item) => (
               <div key={item} className="flex items-center gap-2.5">
-                <Check className="w-3.5 h-3.5 text-accent-500" />
-                <span className="text-sm text-surface-600">{item}</span>
+                <Check className="w-3.5 h-3.5 text-green-400" />
+                <span className="text-sm text-white/70">{item}</span>
               </div>
             ))}
           </div>
-          <p className="text-xs font-bold text-surface-400 uppercase tracking-widest mb-3">
+          <p className="text-[11px] font-extrabold text-white/30 uppercase tracking-widest mb-3">
             Limitations
           </p>
           <div className="space-y-2">
             {FREE_LIMITS.map((limit) => (
               <div key={limit} className="flex items-center gap-2.5">
-                <Lock className="w-3.5 h-3.5 text-surface-300" />
-                <span className="text-sm text-surface-500">{limit}</span>
+                <Lock className="w-3.5 h-3.5 text-white/20" />
+                <span className="text-sm text-white/40">{limit}</span>
               </div>
             ))}
           </div>
         </motion.div>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <motion.div
-          className="mb-10"
+          className="mb-8"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
           {isProUser ? (
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-accent-500/10 text-accent-600 font-bold text-sm">
+              <div className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-green-400/15 text-green-300 font-bold text-sm">
                 <Check className="w-5 h-5" />
                 You&apos;re already on Pro
               </div>
               <Link
                 href="/settings/billing"
-                className="block text-sm text-surface-400 hover:text-primary-600 mt-3 transition-colors"
+                className="block text-sm text-white/40 hover:text-white/70 mt-3 transition-colors"
               >
                 Manage billing →
               </Link>
@@ -342,7 +358,7 @@ export default function PricingPage() {
             <button
               onClick={handleCheckout}
               disabled={checkoutLoading}
-              className="w-full py-4 rounded-2xl bg-primary-600 hover:bg-primary-700 active:scale-[0.98] text-white font-bold text-base transition-all shadow-lg shadow-primary-200 disabled:opacity-50 flex items-center justify-center gap-2.5"
+              className="w-full py-4 rounded-2xl bg-[#FFB800] hover:bg-[#FFC520] active:translate-y-[2px] text-[#5D4200] font-extrabold text-base transition-all shadow-[0_4px_0_#CC9400] active:shadow-none disabled:opacity-50 flex items-center justify-center gap-2.5"
             >
               {checkoutLoading ? (
                 <Loader2 className="w-5 h-5 animate-spin" />
@@ -353,9 +369,9 @@ export default function PricingPage() {
             </button>
           )}
           {checkoutError && (
-            <p className="text-center text-sm text-red-500 mt-2 font-medium">{checkoutError}</p>
+            <p className="text-center text-sm text-red-300 mt-2 font-medium">{checkoutError}</p>
           )}
-          <p className="text-center text-xs text-surface-400 mt-3">
+          <p className="text-center text-xs text-white/30 mt-3">
             Cancel anytime &middot; Secure payment via Paddle
           </p>
         </motion.div>
@@ -366,22 +382,22 @@ export default function PricingPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          <h3 className="text-xs font-bold text-surface-400 uppercase tracking-widest mb-4 px-1">
+          <h3 className="text-[11px] font-extrabold text-white/30 uppercase tracking-widest mb-4 px-1">
             Questions
           </h3>
           <div className="space-y-2">
             {FAQ_ITEMS.map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-gray-100 overflow-hidden"
+                className="bg-white/8 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full flex items-center justify-between px-4 py-3.5 min-h-[44px] text-left"
                 >
-                  <span className="text-sm font-medium text-surface-800 pr-3">{item.q}</span>
+                  <span className="text-sm font-medium text-white/80 pr-3">{item.q}</span>
                   <ChevronDown className={cn(
-                    'w-4 h-4 text-surface-300 shrink-0 transition-transform duration-200',
+                    'w-4 h-4 text-white/30 shrink-0 transition-transform duration-200',
                     openFaq === i && 'rotate-180'
                   )} />
                 </button>
@@ -394,7 +410,7 @@ export default function PricingPage() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <p className="px-4 pb-4 text-sm text-surface-500 leading-relaxed">
+                      <p className="px-4 pb-4 text-sm text-white/40 leading-relaxed">
                         {item.a}
                       </p>
                     </motion.div>
@@ -404,8 +420,19 @@ export default function PricingPage() {
             ))}
           </div>
         </motion.div>
-
       </div>
+
+      <style>{`
+        @keyframes pricing-glow {
+          0%, 100% { opacity: 0.4; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(1.1); }
+        }
+        @keyframes pricing-sparkle {
+          0%, 100% { opacity: 0; transform: scale(0); }
+          30% { opacity: 1; transform: scale(1); }
+          70% { opacity: 0.5; transform: scale(0.8); }
+        }
+      `}</style>
     </div>
   );
 }

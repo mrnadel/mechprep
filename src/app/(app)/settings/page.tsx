@@ -165,8 +165,8 @@ export default function SettingsPage() {
               href="/settings/billing"
               className="flex items-center gap-3 w-full px-4 py-3.5 hover:bg-gray-50 transition-colors"
             >
-              <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center">
-                <CreditCard className="w-4 h-4 text-indigo-500" />
+              <div className="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center">
+                <CreditCard className="w-4 h-4 text-primary-500" />
               </div>
               <div className="flex-1 min-w-0">
                 <span className="text-sm font-bold text-gray-700 block">Billing</span>
@@ -250,12 +250,12 @@ export default function SettingsPage() {
             {isAdmin && (
               <Link
                 href="/admin/users"
-                className="flex items-center gap-3 w-full px-4 py-3.5 hover:bg-indigo-50 transition-colors border-t border-gray-50"
+                className="flex items-center gap-3 w-full px-4 py-3.5 hover:bg-primary-50 transition-colors border-t border-gray-50"
               >
-                <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center">
-                  <Shield className="w-4 h-4 text-indigo-500" />
+                <div className="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center">
+                  <Shield className="w-4 h-4 text-primary-500" />
                 </div>
-                <span className="text-sm font-bold text-indigo-600">Admin Panel</span>
+                <span className="text-sm font-bold text-primary-600">Admin Panel</span>
                 <ChevronRight className="w-4 h-4 text-gray-300 ml-auto" />
               </Link>
             )}

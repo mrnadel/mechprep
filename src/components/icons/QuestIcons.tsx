@@ -23,12 +23,12 @@ export const DoubleUpIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="quest-doubleup-bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="quest-doubleup-arrow" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#E0E7FF" />
+        <stop offset="100%" stopColor="#DBEAFE" />
       </linearGradient>
     </defs>
     <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#quest-doubleup-bg)" />
@@ -69,12 +69,12 @@ export const SharpShooterIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="quest-sharp-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="quest-sharp-ring" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#C7D2FE" />
+        <stop offset="100%" stopColor="#BFDBFE" />
       </linearGradient>
     </defs>
     <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#quest-sharp-bg)" />
@@ -154,12 +154,12 @@ export const DailyChallengerIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="quest-daily-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="quest-daily-cal" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#E0E7FF" />
+        <stop offset="100%" stopColor="#DBEAFE" />
       </linearGradient>
       <linearGradient id="quest-daily-bolt" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#FBBF24" />
@@ -193,12 +193,12 @@ export const AnswerMachineIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="quest-machine-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="quest-machine-body" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#E0E7FF" />
-        <stop offset="100%" stopColor="#C7D2FE" />
+        <stop offset="0%" stopColor="#DBEAFE" />
+        <stop offset="100%" stopColor="#BFDBFE" />
       </linearGradient>
     </defs>
     <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#quest-machine-bg)" />
@@ -208,8 +208,8 @@ export const AnswerMachineIcon = ({ size = 64, className }: IconProps) => (
     {/* Robot head */}
     <rect x="16" y="18" width="32" height="26" rx="8" fill="url(#quest-machine-body)" />
     {/* Eyes */}
-    <circle cx="24" cy="28" r="4" fill="#6366F1" />
-    <circle cx="40" cy="28" r="4" fill="#6366F1" />
+    <circle cx="24" cy="28" r="4" fill="#3B82F6" />
+    <circle cx="40" cy="28" r="4" fill="#3B82F6" />
     <circle cx="25" cy="27" r="1.5" fill="white" fillOpacity="0.8" />
     <circle cx="41" cy="27" r="1.5" fill="white" fillOpacity="0.8" />
     {/* Mouth - checkmark */}
@@ -222,12 +222,12 @@ export const AnswerMachineIcon = ({ size = 64, className }: IconProps) => (
       fill="none"
     />
     {/* Ear bolts */}
-    <circle cx="14" cy="30" r="3" fill="#C7D2FE" stroke="white" strokeWidth="1.5" />
-    <circle cx="50" cy="30" r="3" fill="#C7D2FE" stroke="white" strokeWidth="1.5" />
+    <circle cx="14" cy="30" r="3" fill="#BFDBFE" stroke="white" strokeWidth="1.5" />
+    <circle cx="50" cy="30" r="3" fill="#BFDBFE" stroke="white" strokeWidth="1.5" />
     {/* Neck */}
-    <rect x="28" y="44" width="8" height="6" rx="2" fill="#C7D2FE" />
+    <rect x="28" y="44" width="8" height="6" rx="2" fill="#BFDBFE" />
     {/* Shoulder line */}
-    <line x1="20" y1="52" x2="44" y2="52" stroke="#C7D2FE" strokeWidth="3" strokeLinecap="round" />
+    <line x1="20" y1="52" x2="44" y2="52" stroke="#BFDBFE" strokeWidth="3" strokeLinecap="round" />
   </svg>
 );
 
@@ -336,8 +336,8 @@ export const OnTrackIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="quest-ontrack-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
     </defs>
     <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#quest-ontrack-bg)" />
@@ -457,12 +457,12 @@ export const CommittedLearnerIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="quest-committed-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="quest-committed-book" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#E0E7FF" />
+        <stop offset="100%" stopColor="#DBEAFE" />
       </linearGradient>
     </defs>
     <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#quest-committed-bg)" />
@@ -472,17 +472,17 @@ export const CommittedLearnerIcon = ({ size = 64, className }: IconProps) => (
       fill="url(#quest-committed-book)"
     />
     {/* Center crease */}
-    <line x1="32" y1="16" x2="32" y2="46" stroke="#C7D2FE" strokeWidth="1.5" />
+    <line x1="32" y1="16" x2="32" y2="46" stroke="#BFDBFE" strokeWidth="1.5" />
     {/* Page lines left */}
-    <line x1="18" y1="24" x2="29" y2="24" stroke="#A5B4FC" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
-    <line x1="18" y1="28" x2="29" y2="28" stroke="#A5B4FC" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
-    <line x1="18" y1="32" x2="29" y2="32" stroke="#A5B4FC" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
-    <line x1="18" y1="36" x2="29" y2="36" stroke="#A5B4FC" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+    <line x1="18" y1="24" x2="29" y2="24" stroke="#93C5FD" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+    <line x1="18" y1="28" x2="29" y2="28" stroke="#93C5FD" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+    <line x1="18" y1="32" x2="29" y2="32" stroke="#93C5FD" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+    <line x1="18" y1="36" x2="29" y2="36" stroke="#93C5FD" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
     {/* Page lines right */}
-    <line x1="35" y1="24" x2="46" y2="24" stroke="#A5B4FC" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
-    <line x1="35" y1="28" x2="46" y2="28" stroke="#A5B4FC" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
-    <line x1="35" y1="32" x2="46" y2="32" stroke="#A5B4FC" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
-    <line x1="35" y1="36" x2="46" y2="36" stroke="#A5B4FC" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+    <line x1="35" y1="24" x2="46" y2="24" stroke="#93C5FD" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+    <line x1="35" y1="28" x2="46" y2="28" stroke="#93C5FD" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+    <line x1="35" y1="32" x2="46" y2="32" stroke="#93C5FD" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+    <line x1="35" y1="36" x2="46" y2="36" stroke="#93C5FD" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
     {/* Bookmark ribbon */}
     <path d="M40,14 L40,26 L43,23 L46,26 L46,14" fill="#FFB800" />
     {/* Sparkle */}
@@ -725,12 +725,12 @@ export const UnitProgressIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="quest-unitprog-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
       <linearGradient id="quest-unitprog-block" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#E0E7FF" />
+        <stop offset="100%" stopColor="#DBEAFE" />
       </linearGradient>
     </defs>
     <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#quest-unitprog-bg)" />
@@ -928,8 +928,8 @@ export const OneStepIcon = ({ size = 64, className }: IconProps) => (
   >
     <defs>
       <linearGradient id="quest-onestep-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#818CF8" />
-        <stop offset="100%" stopColor="#6366F1" />
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#3B82F6" />
       </linearGradient>
     </defs>
     <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#quest-onestep-bg)" />

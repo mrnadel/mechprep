@@ -126,7 +126,7 @@ export const unit7: Unit = {
  type: "teaching",
  question: "Stock Charts Are Just Storytelling",
  explanation: "A stock chart is a visual story of what happened to a stock's price over time. The x-axis is time (days, weeks, months).",
- hint: "Charts show you what already happened. They're useful context, but they don't predict the future. Anyone who says otherwise is selling something.",
+ hint: "Try this now: open any stock app and look at how one company's price changed this week.",
  },
  {
  id: "pf-u7-L2-T2",
@@ -236,7 +236,7 @@ export const unit7: Unit = {
  type: "teaching",
  question: "Market Cap: A Company's Price Tag",
  explanation: "Market capitalization (market cap) is the total value of all a company's shares. The formula is dead simple: share price × total shares outstanding.",
- hint: "A $10 stock with 10 billion shares is a $100 billion company. A $1,000 stock with 1 million shares is only a $1 billion company. Market cap is what matters, not price.",
+ hint: "Try this now: search for a company you use daily (like Apple or Google) and look up its market cap and P/E ratio.",
  },
  {
  id: "pf-u7-L3-T2",
@@ -436,6 +436,124 @@ export const unit7: Unit = {
  ],
  },
 
+ // ===== CONVERSATION: A Friend Wants to Start Investing =====
+ {
+ id: "pf-u7-L15",
+ title: "A Friend Wants to Start Investing",
+ description: "Your friend heard about a hot stock and wants to jump in. Guide them wisely.",
+ icon: "\u{1F4AC}",
+ type: "conversation",
+ xpReward: 20,
+ questions: [],
+ conversationStartNodeId: "pf-u7-L15-C1",
+ conversationNodes: [
+ {
+ id: "pf-u7-L15-C1",
+ speaker: "Ryan",
+ message: "Okay I'm finally doing it. My coworker made $3,000 on this one stock last month. I'm putting my whole savings in. What do you think?",
+ nextNodeId: "pf-u7-L15-C2",
+ },
+ {
+ id: "pf-u7-L15-C2",
+ speaker: "Ryan",
+ message: "Should I go all in?",
+ options: [
+ {
+ text: "Hold on. Putting everything into one stock is extremely risky. Your coworker got lucky, but that's not a strategy.",
+ nextNodeId: "pf-u7-L15-C3",
+ quality: "great",
+ feedback: "Concentrating everything in one stock is gambling, not investing. Most professionals can't consistently pick winners.",
+ },
+ {
+ text: "If your coworker made money, it's probably a good stock. Go for it!",
+ nextNodeId: "pf-u7-L15-C3",
+ quality: "poor",
+ feedback: "Past performance doesn't predict future results. Following hot tips is one of the most common ways beginners lose money.",
+ },
+ {
+ text: "Maybe put in half and keep half in savings?",
+ nextNodeId: "pf-u7-L15-C3",
+ quality: "okay",
+ feedback: "Better than all-in, but it's still a single stock bet. Diversification matters more than position size.",
+ },
+ ],
+ },
+ {
+ id: "pf-u7-L15-C3",
+ speaker: "Ryan",
+ message: "Okay, I hear you. But I don't have time to research 50 different stocks. What's the easiest way to invest?",
+ nextNodeId: "pf-u7-L15-C4",
+ },
+ {
+ id: "pf-u7-L15-C4",
+ speaker: "Ryan",
+ message: "Is there something simple I can just buy and not worry about?",
+ options: [
+ {
+ text: "Look into index funds. You buy one fund and instantly own hundreds of companies. Low fees, no stock-picking required.",
+ nextNodeId: "pf-u7-L15-C5",
+ quality: "great",
+ feedback: "Index funds beat 90% of professional stock pickers over time. They're the simplest, most proven strategy for beginners.",
+ },
+ {
+ text: "Just pick 5 big companies you know, like Apple and Google, and split your money between them.",
+ nextNodeId: "pf-u7-L15-C5",
+ quality: "okay",
+ feedback: "Familiar companies aren't always good investments. Being a fan of a product doesn't mean the stock is fairly priced.",
+ },
+ {
+ text: "Download a trading app and follow what the top traders are doing.",
+ nextNodeId: "pf-u7-L15-C5",
+ quality: "poor",
+ feedback: "Copying others on social media is a recipe for buying high and selling low. Many 'top traders' exaggerate their results.",
+ },
+ ],
+ },
+ {
+ id: "pf-u7-L15-C5",
+ speaker: "Narrator",
+ message: "Ryan opens a brokerage account and starts researching index funds. A week later, the stock his coworker recommended drops 25%.",
+ nextNodeId: "pf-u7-L15-C6",
+ },
+ {
+ id: "pf-u7-L15-C6",
+ speaker: "Ryan",
+ message: "Wow, that stock my coworker told me about just tanked. I almost put my entire savings in! One more question: should I invest everything at once or spread it out?",
+ options: [
+ {
+ text: "Spread it out with dollar-cost averaging. Invest the same amount each month so you buy at different prices.",
+ nextNodeId: "pf-u7-L15-C7",
+ quality: "great",
+ feedback: "Dollar-cost averaging reduces the risk of bad timing. It's stress-free and works well for regular income earners.",
+ },
+ {
+ text: "Wait for the market to crash, then put it all in at the bottom.",
+ nextNodeId: "pf-u7-L15-C7",
+ quality: "poor",
+ feedback: "Nobody can consistently time the market bottom. Waiting means missing gains while trying to predict the unpredictable.",
+ },
+ {
+ text: "Put it all in right now. Time in the market beats timing the market.",
+ nextNodeId: "pf-u7-L15-C7",
+ quality: "okay",
+ feedback: "Statistically, lump sum investing slightly outperforms, but it's emotionally harder for beginners. DCA is a great compromise.",
+ },
+ ],
+ },
+ {
+ id: "pf-u7-L15-C7",
+ speaker: "Ryan",
+ message: "Index funds, dollar-cost averaging, no hot tips. This is way less exciting than I expected, but I feel way more confident.",
+ nextNodeId: "pf-u7-L15-C8",
+ },
+ {
+ id: "pf-u7-L15-C8",
+ speaker: "Narrator",
+ message: "You saved Ryan from a costly mistake and set him up with a proven strategy: diversified index funds with automatic monthly investments. Boring investing is winning investing.",
+ },
+ ],
+ },
+
  // ===== LESSON 5: Bull Markets & Bear Markets =====
  {
  id: "pf-u7-L5",
@@ -549,7 +667,7 @@ export const unit7: Unit = {
  id: "pf-u7-L6-T1",
  type: "teaching",
  question: "The Economy Has 11 Slices",
- explanation: "The stock market is divided into 11 sectors, basically 11 slices of the economy. Technology (Apple, Microsoft), Healthcare (Pfizer, UnitedHealth), Energy (ExxonMobil), Financials (JPMorgan), Consumer Discretionary (Amazon, Nike), Consumer Staples (Coca-Cola, P&G), Industrials (Boeing), Materials, Real Estate, Utilities, and Communication Services (Google, Netflix).",
+ explanation: "The stock market is divided into 11 sectors, basically 11 slices of the economy. The biggest include Technology, Healthcare, Energy, Financials, and Consumer sectors.",
  hint: "You don't need to memorize all 11. Just know that the market isn't one thing, it's a bunch of different industries moving at their own pace.",
  },
  {
@@ -763,7 +881,7 @@ export const unit7: Unit = {
  id: "pf-u7-L8-T2",
  type: "teaching",
  question: "Stop-Loss: Your Safety Net",
- explanation: "A stop-loss order is your insurance policy against big losses. Say you buy a stock at $100.",
+ explanation: "A stop-loss order is your insurance policy against big losses. Set one at $85, and if the stock drops to that price, it automatically sells to limit your downside.",
  hint: "A 15% stop-loss means: 'I'm okay losing up to 15%, but not a penny more.' It's a personal decision, there's no perfect number.",
  },
  {
@@ -875,7 +993,7 @@ export const unit7: Unit = {
  id: "pf-u7-L9-T2",
  type: "teaching",
  question: "Layers of Diversification",
- explanation: "Real diversification works on multiple levels. Level 1: Own many stocks, not just one.",
+ explanation: "Real diversification works on multiple levels: many stocks (not just one), across different sectors, asset classes (stocks, bonds, real estate), and even countries.",
  hint: "An S&P 500 index fund instantly gives you 500 stocks across 11 sectors. That's a great start for diversification.",
  },
  {
@@ -1084,7 +1202,7 @@ export const unit7: Unit = {
  id: "pf-u7-L11-T1",
  type: "teaching",
  question: "Selling Is Harder Than Buying",
- explanation: "Buying a stock feels exciting. Selling?",
+ explanation: "Buying a stock feels exciting. Selling is the hard part, because it forces you to admit you were wrong or risk leaving gains on the table.",
  hint: "Ask yourself: 'If I didn't own this stock, would I buy it today at this price?' If yes, hold. If no, it might be time to sell.",
  },
  {
@@ -1197,14 +1315,14 @@ export const unit7: Unit = {
  id: "pf-u7-L12-T1",
  type: "teaching",
  question: "Learn From Everyone Else's Expensive Mistakes",
- explanation: "Most beginner investors make the same mistakes, and they're almost all emotional, not intellectual. FOMO buying (buying because everyone else is and the price is soaring).",
+ explanation: "Most beginner investors make the same mistakes, and they're almost all emotional, not intellectual. FOMO buying, panic selling, and over-trading are the top three.",
  hint: "The stock market is designed to transfer money from the impatient to the patient. Which side do you want to be on?",
  },
  {
  id: "pf-u7-L12-T2",
  type: "teaching",
  question: "The FOMO Trap: Buying at the Top",
- explanation: "Here's how FOMO works: A stock goes from $20 to $80 in three months. Social media is going crazy.",
+ explanation: "FOMO in action: a stock goes from $20 to $80 in three months. Social media is going crazy. You buy at $75 because you can't stand watching everyone else profit.",
  hint: "If your barber, Uber driver, and dentist are all talking about the same stock, you're probably too late.",
  },
  {

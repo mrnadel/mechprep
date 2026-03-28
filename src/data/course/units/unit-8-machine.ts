@@ -4,7 +4,7 @@ export const unit8: Unit = {
   id: 'u8-machine',
   title: 'Machine Design',
   description: 'Shafts, bearings, gears, fasteners, springs, and seals — core machine element design for mechanical engineers.',
-  color: '#6366F1',
+  color: '#3B82F6',
   icon: '⚙️',
   topicId: 'machine-elements',
   lessons: [

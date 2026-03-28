@@ -76,7 +76,7 @@ export function FriendLeaderboard() {
                   image={entry.image}
                   name={entry.displayName}
                   size={isTop3 ? 36 : 32}
-                  bgColor={entry.isUser ? '#C7D2FE' : '#E0E7FF'}
+                  bgColor={entry.isUser ? '#C7D2FE' : '#DBEAFE'}
                 />
               }
             />

@@ -16,9 +16,9 @@ interface ProgressBarProps {
 }
 
 function autoColor(percent: number): string {
-  if (percent >= 80) return '#10B981';
-  if (percent >= 60) return '#F59E0B';
-  return '#EF4444';
+  if (percent >= 80) return 'var(--color-accent-500)';
+  if (percent >= 60) return 'var(--color-brand-500)';
+  return 'var(--color-danger-500)';
 }
 
 export function ProgressBar({

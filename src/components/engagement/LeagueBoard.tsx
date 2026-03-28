@@ -78,7 +78,7 @@ export function LeagueBoard() {
           const isTop3 = rank <= 3;
 
           const rowBg = isUser
-            ? '#EEF2FF'
+            ? '#EFF6FF'
             : inPromoteZone
               ? 'rgba(16, 185, 129, 0.04)'
               : inDemoteZone

@@ -84,7 +84,7 @@ export function DailyGoalBar() {
   const target = getDailyXpTarget(introData.dailyMinutes);
   const percent = Math.min(100, (dailyXp / target) * 100);
   const goalReached = dailyXp >= target;
-  const accentColor = profession?.color ?? '#6366F1';
+  const accentColor = profession?.color ?? 'var(--color-primary-500)';
 
   return (
     <div className="px-3 sm:px-4" style={{ paddingTop: 12 }}>

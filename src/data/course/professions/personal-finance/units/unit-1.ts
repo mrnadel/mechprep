@@ -75,7 +75,7 @@ export const unit1: Unit = {
           options: ["50 cent gum", "15 lunch delivery", "1 water bottle", "8 parking fee", "2 bus fare", "20 takeout dinner"],
           buckets: ["Small monthly total", "Big monthly total"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
-          explanation: "15/day = 450/month, 8/day = 240/month, 20/day = 600/month. Those add up fast. 50 cents, 1, and 2 are much smaller: 15, 30, and 60/month.",
+          explanation: "15/day = 450/month, 8/day = 240/month, 20/day = 600/month. The smaller amounts (50 cents, 1, 2) stay under 60/month.",
         },
         {
           id: "pf-u1-L0-Q6",
@@ -456,7 +456,7 @@ export const unit1: Unit = {
           options: [
             "Your employer's profit",
             "Roads, hospitals, schools",
-            "Your retirement only",
+            "Your bank account only",
             "Nothing useful",
           ],
           correctIndex: 1,
@@ -666,7 +666,7 @@ export const unit1: Unit = {
           options: ["Rent", "Concert tickets", "Emergency savings", "Groceries", "New sneakers", "Debt payment"],
           buckets: ["Needs (50%)", "Wants (30%)"],
           correctBuckets: [0, 1, 1, 0, 1, 0],
-          explanation: "Rent, groceries, and minimum debt payments are needs. Concert tickets and new sneakers are wants. Emergency savings comes from the 20%.",
+          explanation: "Rent, groceries, and debt payments are needs (50%). Concert tickets and new sneakers are wants (30%), and emergency savings comes from the 20%.",
         },
         {
           id: "pf-u1-L5-T3",
@@ -737,7 +737,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L8-SQ3",
           question: "In the 50/30/20 rule, 50% goes to:",
-          options: ["Wants", "Savings", "Needs", "Investments"],
+          options: ["Wants", "Savings", "Needs", "Taxes"],
           correctIndex: 2,
         },
         {
@@ -773,7 +773,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L8-SQ9",
           question: "'Pay yourself first' means:",
-          options: ["Buy what you want", "Save before spending", "Pay bills early", "Invest in stocks"],
+          options: ["Buy what you want", "Save before spending", "Pay bills early", "Skip all expenses"],
           correctIndex: 1,
         },
         {
@@ -844,7 +844,7 @@ export const unit1: Unit = {
           type: "fill-blank",
           question: "The 'pay yourself first' method means you _____ before you _____.",
           blanks: ["save", "spend"],
-          wordBank: ["save", "spend", "earn", "invest", "budget", "borrow"],
+          wordBank: ["save", "spend", "earn", "budget", "borrow", "plan"],
           explanation: "Save first, spend second. The one habit that makes every other money skill work.",
         },
         {
@@ -879,9 +879,9 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L6-Q6",
           type: "true-false",
-          question: "You should wait until you earn more money before you start saving.",
-          correctAnswer: false,
-          explanation: "People who don't save at 2,000/month don't save at 5,000 either. Spending rises with income. The habit matters more than the amount.",
+          question: "Automating your savings on payday is more effective than manually transferring money each month.",
+          correctAnswer: true,
+          explanation: "Automation removes the temptation to skip saving. When it happens before you see the money, you adjust your spending naturally.",
         },
         {
           id: "pf-u1-L6-Q7",

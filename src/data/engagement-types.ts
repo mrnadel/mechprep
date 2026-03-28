@@ -202,6 +202,7 @@ export interface ComebackState {
   isInComebackFlow: boolean;
   comebackQuestsCompleted: number;
   daysAway: number;
+  lastDismissedDate: string | null; // prevents re-triggering after dismiss
 }
 
 // --------------- Nudges & Hooks ---------------

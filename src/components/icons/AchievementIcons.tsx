@@ -4,7 +4,7 @@ import React from 'react';
 
 // ─── Category Color Palettes ───────────────────────────────────────────────
 const COLORS = {
-  knowledge: { base: '#6366F1', dark: '#4338CA', light: '#E0E7FF' },
+  knowledge: { base: '#3B82F6', dark: '#1D4ED8', light: '#DBEAFE' },
   consistency: { base: '#10B981', dark: '#047857', light: '#D1FAE5' },
   challenge: { base: '#F59E0B', dark: '#B45309', light: '#FEF3C7' },
   exploration: { base: '#06B6D4', dark: '#0E7490', light: '#CFFAFE' },
@@ -982,7 +982,7 @@ export function FormatMasterIcon({ size = 64, className }: IconProps) {
       <defs>
         <linearGradient id={`${id}-card1`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#FFFFFF" />
-          <stop offset="100%" stopColor="#E0E7FF" />
+          <stop offset="100%" stopColor="#DBEAFE" />
         </linearGradient>
         <linearGradient id={`${id}-card2`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#FFFFFF" />
@@ -994,8 +994,8 @@ export function FormatMasterIcon({ size = 64, className }: IconProps) {
         </linearGradient>
       </defs>
       {/* Card 1 (back, rotated left) */}
-      <rect x="17" y="20" width="16" height="22" rx="2" fill={`url(#${id}-card1)`} stroke="#6366F1" strokeWidth="1.5" transform="rotate(-10 25 31)" />
-      <line x1="19" y1="26" x2="31" y2="24" stroke="#6366F1" strokeWidth="1" opacity="0.5" transform="rotate(-10 25 25)" />
+      <rect x="17" y="20" width="16" height="22" rx="2" fill={`url(#${id}-card1)`} stroke="#3B82F6" strokeWidth="1.5" transform="rotate(-10 25 31)" />
+      <line x1="19" y1="26" x2="31" y2="24" stroke="#3B82F6" strokeWidth="1" opacity="0.5" transform="rotate(-10 25 25)" />
       {/* Card 2 (middle) */}
       <rect x="24" y="19" width="16" height="22" rx="2" fill={`url(#${id}-card2)`} stroke={c.dark} strokeWidth="1.5" />
       <line x1="27" y1="24" x2="37" y2="24" stroke={c.dark} strokeWidth="1" opacity="0.5" />
@@ -1069,8 +1069,8 @@ export function TopicMasterIcon({ size = 64, className }: IconProps) {
           <stop offset="100%" stopColor="#B8860B" />
         </linearGradient>
         <linearGradient id={`${id}-book`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#6366F1" />
-          <stop offset="100%" stopColor="#4338CA" />
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#1D4ED8" />
         </linearGradient>
       </defs>
       {/* Laurel wreath left */}

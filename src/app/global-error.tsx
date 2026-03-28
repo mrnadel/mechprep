@@ -91,7 +91,7 @@ export default function GlobalError({
                   alignItems: 'center',
                   justifyContent: 'center',
                   padding: '0.625rem 1.25rem',
-                  backgroundColor: '#4F46E5',
+                  backgroundColor: '#2563EB',
                   color: 'white',
                   borderRadius: '0.5rem',
                   border: 'none',

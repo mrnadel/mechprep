@@ -61,7 +61,7 @@ export default function InviteClient({ inviterName, inviterImage, inviteCode, lo
     <div className="min-h-screen flex items-center justify-center bg-[#FAFAFA] px-4">
       <div className="bg-white rounded-2xl shadow-lg border border-surface-200 p-8 max-w-sm w-full text-center">
         <div className="flex justify-center mb-4">
-          <div className="w-20 h-20 rounded-full overflow-hidden flex items-center justify-center" style={{ background: '#E0E7FF' }}>
+          <div className="w-20 h-20 rounded-full overflow-hidden flex items-center justify-center" style={{ background: 'var(--color-primary-100)' }}>
             {inviterImage ? (
               <img src={inviterImage} alt="" className="w-full h-full object-cover" />
             ) : (

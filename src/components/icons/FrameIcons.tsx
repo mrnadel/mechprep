@@ -377,7 +377,7 @@ export const FrameDiamondAura: React.FC<FrameIconProps> = ({ size = 64, classNam
         <stop offset="0%" stopColor="#C7D2FE" />
         <stop offset="25%" stopColor="#818CF8" />
         <stop offset="50%" stopColor="#A5B4FC" />
-        <stop offset="75%" stopColor="#6366F1" />
+        <stop offset="75%" stopColor="#3B82F6" />
         <stop offset="100%" stopColor="#C7D2FE" />
       </linearGradient>
     </defs>
@@ -756,9 +756,9 @@ export const FrameSingularity: React.FC<FrameIconProps> = ({ size = 64, classNam
       </radialGradient>
       <linearGradient id="frame-singularity-ring" x1="0" y1="0" x2="64" y2="64">
         <stop offset="0%" stopColor="#C7D2FE" />
-        <stop offset="25%" stopColor="#6366F1" />
+        <stop offset="25%" stopColor="#3B82F6" />
         <stop offset="50%" stopColor="#A5B4FC" />
-        <stop offset="75%" stopColor="#4F46E5" />
+        <stop offset="75%" stopColor="#2563EB" />
         <stop offset="100%" stopColor="#C7D2FE" />
       </linearGradient>
       <radialGradient id="frame-singularity-glow" cx="50%" cy="50%" r="50%">
@@ -771,8 +771,8 @@ export const FrameSingularity: React.FC<FrameIconProps> = ({ size = 64, classNam
     <circle cx="32" cy="32" r="31" fill="url(#frame-singularity-glow)" />
     <circle cx="32" cy="32" r="20" fill="url(#frame-singularity-void)" />
     <circle cx="32" cy="32" r="26" stroke="url(#frame-singularity-ring)" strokeWidth="2" fill="none" />
-    <circle cx="32" cy="32" r="29" stroke="#6366F1" strokeWidth="0.5" fill="none" opacity="0.5" />
-    <circle cx="32" cy="32" r="23" stroke="#6366F1" strokeWidth="0.5" fill="none" opacity="0.3" />
+    <circle cx="32" cy="32" r="29" stroke="#3B82F6" strokeWidth="0.5" fill="none" opacity="0.5" />
+    <circle cx="32" cy="32" r="23" stroke="#3B82F6" strokeWidth="0.5" fill="none" opacity="0.3" />
     {/* event horizon particles being pulled in */}
     <circle cx="6" cy="20" r="0.8" fill="#A5B4FC" opacity="0.6" />
     <circle cx="58" cy="44" r="0.8" fill="#A5B4FC" opacity="0.6" />
@@ -1243,7 +1243,7 @@ export const FrameEngineersCrest: React.FC<FrameIconProps> = ({ size = 64, class
     <defs>
       <linearGradient id="frame-level15-grad" x1="0" y1="0" x2="64" y2="64">
         <stop offset="0%" stopColor="#C7D2FE" />
-        <stop offset="50%" stopColor="#4F46E5" />
+        <stop offset="50%" stopColor="#2563EB" />
         <stop offset="100%" stopColor="#312E81" />
       </linearGradient>
       <radialGradient id="frame-level15-glow" cx="50%" cy="50%" r="50%">
@@ -1255,7 +1255,7 @@ export const FrameEngineersCrest: React.FC<FrameIconProps> = ({ size = 64, class
     <circle cx="32" cy="32" r="31" fill="url(#frame-level15-glow)" />
     <circle cx="32" cy="32" r="27" stroke="url(#frame-level15-grad)" strokeWidth="3" fill="none" />
     {/* crest shield at top */}
-    <path d="M28 2 L36 2 L36 8 L32 11 L28 8 Z" fill="#4F46E5" opacity="0.7" />
+    <path d="M28 2 L36 2 L36 8 L32 11 L28 8 Z" fill="#2563EB" opacity="0.7" />
     <path d="M30 4 L34 4 L34 7 L32 9 L30 7 Z" fill="#C7D2FE" opacity="0.4" />
     <AvatarPlaceholder />
   </svg>

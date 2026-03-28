@@ -30,7 +30,7 @@ export const CompetitorAvatar = memo(function CompetitorAvatar({
   }, [fakeUserId, isUser]);
 
   const bgColor = useMemo(() => {
-    if (isUser) return '#4F46E5';
+    if (isUser) return '#2563EB';
     if (avatarUrl) return 'transparent';
     return fakeUserId ? getInitialsColor(fakeUserId) : '#6B7280';
   }, [isUser, avatarUrl, fakeUserId]);

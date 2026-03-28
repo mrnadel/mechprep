@@ -8,7 +8,6 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { useStore } from '@/store/useStore';
 import { useEngagementStore, grantTitle, grantFrame } from '@/store/useEngagementStore';
 import { streakMilestones } from '@/data/streak-milestones';
-import { PracticeCard } from '@/components/course/PracticeCard';
 import { DailyGoalBar } from '@/components/course/DailyGoalBar';
 import { analytics } from '@/lib/mixpanel';
 
@@ -161,9 +160,6 @@ export default function HomePage() {
 
       {/* Daily goal progress */}
       <DailyGoalBar />
-
-      {/* Smart Practice card */}
-      <PracticeCard />
 
       {/* Course map */}
       <CourseMap />

@@ -150,9 +150,10 @@ export default function ConversationView({
 
   // Auto-scroll
   useEffect(() => {
-    requestAnimationFrame(() => {
+    const id = requestAnimationFrame(() => {
       scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
     });
+    return () => cancelAnimationFrame(id);
   }, [messages, isTyping, showOptions]);
 
   const showAutoNode = useCallback(

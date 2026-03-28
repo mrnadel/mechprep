@@ -45,8 +45,8 @@ export function StreakFreeze() {
     );
   }
 
-  // Mode 2: Repair modal
-  if (streak.repairAvailable) {
+  // Mode 2: Repair modal — only show if there was an actual streak to repair
+  if (streak.repairAvailable && streak.lastStreakValueBeforeBreak > 0) {
     const canAfford = gems.balance >= REPAIR_COST;
     const gemsNeeded = REPAIR_COST - gems.balance;
     const handleRepair = () => { if (repairStreak()) dismissRepairModal(); };

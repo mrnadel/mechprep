@@ -83,7 +83,7 @@ export default function FriendsPage() {
                   }
                   title="No friends yet"
                   subtitle="Share your invite link above to add friends!"
-                  bgColor="#EEF2FF"
+                  bgColor="#EFF6FF"
                   borderColor="#C7D2FE"
                 />
               ) : (

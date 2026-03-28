@@ -118,7 +118,7 @@ export const topics: Topic[] = [
     name: 'Machine Elements',
     description: 'Bearings, gears, fasteners, shafts, and seals — the components that make machines work.',
     icon: '⚙️',
-    color: '#6366F1',
+    color: '#3B82F6',
     interviewRelevance: 'high',
     questionCount: 8,
     subtopics: [

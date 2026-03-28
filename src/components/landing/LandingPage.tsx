@@ -46,7 +46,7 @@ const DEMO_QUESTIONS = [
     xp: 15,
   },
   {
-    topic: 'Materials', topicColor: '#6366F1', typeLabel: 'Multiple Choice',
+    topic: 'Materials', topicColor: '#3B82F6', typeLabel: 'Multiple Choice',
     question: 'Why does adding a small percentage of carbon to iron dramatically increase its strength?',
     options: ['Carbon atoms block dislocation movement in the crystal lattice', 'Carbon makes the iron lighter and more flexible', 'Carbon prevents all forms of corrosion', 'Carbon increases the melting point above 3,000°C'],
     correctIndex: 0,
@@ -682,7 +682,7 @@ function InteractiveDemo() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 23C7 23 3 19 3 14c0-3.3 2-6.2 4.2-8.4C9 3.8 10.9 2.4 12 1c1.1 1.4 3 2.8 4.8 4.6C19 7.8 21 10.7 21 14c0 5-4 9-9 9z" fill="#FF9600" /><path d="M12 23c-2.5 0-4.5-2.7-4.5-6 0-1.6 1-3.1 2.1-4.2C10.5 11.9 11.4 11.2 12 10.5c.6.7 1.5 1.4 2.4 2.3 1.1 1.1 2.1 2.6 2.1 4.2 0 3.3-2 6-4.5 6z" fill="#FFCC00" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.correct}</span></div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="10" fill="#58CC02" /><path d="M8 12.5l2.5 2.5 5.5-5.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.answered}/{DEMO_QUESTIONS.length}</span></div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="10" stroke="#6366F1" strokeWidth="2" fill="none" /><circle cx="12" cy="12" r="6" stroke="#6366F1" strokeWidth="2" fill="none" /><circle cx="12" cy="12" r="2" fill="#6366F1" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.answered > 0 ? `${accuracy}%` : '--'}</span></div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="10" stroke="#3B82F6" strokeWidth="2" fill="none" /><circle cx="12" cy="12" r="6" stroke="#3B82F6" strokeWidth="2" fill="none" /><circle cx="12" cy="12" r="2" fill="#3B82F6" /></svg><span style={{ fontSize: 14, fontWeight: 800, color: '#0F172A' }}>{stats.answered > 0 ? `${accuracy}%` : '--'}</span></div>
           </div>
           <div style={{ flex: 1, maxWidth: 160, marginLeft: 'auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}><span style={{ fontSize: 11, fontWeight: 800, color: '#94A3B8' }}>XP</span><span style={{ fontSize: 11, fontWeight: 700, color: '#94A3B8' }}>{animXp}/{totalXp}</span></div>

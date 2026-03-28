@@ -31,6 +31,7 @@ export function AnimatedCounter({
   const [delta, setDelta] = useState<number | null>(null);
   const prevRef = useRef(value);
   const rafRef = useRef<number>(0);
+  const deltaTimerRef = useRef<ReturnType<typeof setTimeout>>();
   const mountedRef = useRef(false);
 
   useEffect(() => {
@@ -55,11 +56,7 @@ export function AnimatedCounter({
     // Show delta badge
     if (showDelta && diff !== 0) {
       setDelta(diff);
-      const deltaTimer = setTimeout(() => setDelta(null), 1800);
-      // Clean up delta timer
-      const cleanup = () => clearTimeout(deltaTimer);
-      // Store for cleanup
-      (rafRef as any)._deltaClear = cleanup;
+      deltaTimerRef.current = setTimeout(() => setDelta(null), 1800);
     }
 
     // Animate the number
@@ -83,7 +80,7 @@ export function AnimatedCounter({
     return () => {
       cancelAnimationFrame(rafRef.current);
       clearTimeout(bounceTimer);
-      if ((rafRef as any)._deltaClear) (rafRef as any)._deltaClear();
+      if (deltaTimerRef.current) clearTimeout(deltaTimerRef.current);
     };
   }, [value, showDelta]);
 

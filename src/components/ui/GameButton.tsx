@@ -5,12 +5,12 @@ import { motion, type HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const variants = {
-  indigo:   { bg: 'bg-[#4F46E5]',  shadow: 'shadow-[0_4px_0_#3730A3]', text: 'text-white' },
-  gold:     { bg: 'bg-[#FFB800]',  shadow: 'shadow-[0_4px_0_#CC9400]', text: 'text-[#5D4200]' },
-  purple:   { bg: 'bg-[#7C3AED]',  shadow: 'shadow-[0_4px_0_#5B21B6]', text: 'text-white' },
-  green:    { bg: 'bg-[#16A34A]',  shadow: 'shadow-[0_4px_0_#15803D]', text: 'text-white' },
-  red:      { bg: 'bg-[#EF4444]',  shadow: 'shadow-[0_4px_0_#B91C1C]', text: 'text-white' },
-  goldDark: { bg: 'bg-gradient-to-br from-amber-400 to-amber-500', shadow: 'shadow-[0_4px_0_#B45309]', text: 'text-[#1E1B4B]' },
+  indigo:   { bg: 'bg-primary-600',  shadow: 'shadow-[0_4px_0_var(--color-primary-800)]', text: 'text-white' },
+  gold:     { bg: 'bg-[#FFB800]',    shadow: 'shadow-[0_4px_0_#CC9400]', text: 'text-[#5D4200]' },
+  purple:   { bg: 'bg-[#7C3AED]',    shadow: 'shadow-[0_4px_0_#5B21B6]', text: 'text-white' },
+  green:    { bg: 'bg-accent-600',    shadow: 'shadow-[0_4px_0_var(--color-accent-800)]', text: 'text-white' },
+  red:      { bg: 'bg-danger-500',    shadow: 'shadow-[0_4px_0_var(--color-danger-700)]', text: 'text-white' },
+  goldDark: { bg: 'bg-gradient-to-br from-brand-400 to-brand-500', shadow: 'shadow-[0_4px_0_var(--color-brand-700)]', text: 'text-primary-900' },
 } as const;
 
 export type GameButtonVariant = keyof typeof variants;

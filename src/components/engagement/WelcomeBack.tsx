@@ -13,7 +13,7 @@ export function WelcomeBack() {
 
   const dismiss = () => {
     useEngagementStore.setState((s) => ({
-      comeback: { ...s.comeback, isInComebackFlow: false },
+      comeback: { ...s.comeback, isInComebackFlow: false, lastDismissedDate: new Date().toISOString().split('T')[0] },
     }));
   };
 

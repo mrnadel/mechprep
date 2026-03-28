@@ -1,7 +1,7 @@
 import type { Unit } from '../../types';
 
 export const financeCourseMeta: Unit[] = [
-  // ── Unit 0: Welcome to Money ✅ (content in unit-0.ts) ──
+  // ── Unit 1: Welcome to Money ✅ (content in unit-0.ts) ──
   {
     id: "pf-u0-welcome",
     title: "Welcome to Money",
@@ -15,7 +15,7 @@ export const financeCourseMeta: Unit[] = [
     ],
   },
 
-  // ── Unit 1: Your Money Right Now ✅ (content in unit-1.ts) ──
+  // ── Unit 2: Your Money Right Now ✅ (content in unit-1.ts) ──
   {
     id: "pf-u1-your-money",
     title: "Your Money Right Now",
@@ -35,76 +35,7 @@ export const financeCourseMeta: Unit[] = [
     ],
   },
 
-  // ── Unit 2: Smart Saving ──
-  {
-    id: "pf-u2-saving",
-    title: "Smart Saving",
-    description: "Build your safety net, automate your savings, and make your money work while you sleep.",
-    color: "#0EA572",
-    icon: "🐷",
-    lessons: [
-      { id: "pf-u2-L1", title: "Why Saving Feels Impossible", description: "The psychology behind why most people can't save — and how to beat it.", icon: "🧠", xpReward: 15, questions: [] },
-      { id: "pf-u2-L2", title: "The $500 That Changes Everything", description: "Why your first $500 in savings is the most important money you'll ever set aside.", icon: "💡", xpReward: 15, questions: [] },
-      { id: "pf-u2-L3", title: "Emergency Fund Blueprint", description: "How to build 3–6 months of expenses without feeling broke.", icon: "🛡️", xpReward: 15, questions: [] },
-      { id: "pf-u2-L11", title: "The $5,000 Emergency", description: "Navigate 18 months of saving decisions in this interactive timeline.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
-      { id: "pf-u2-L4", title: "High-Yield vs Regular Savings", description: "Your bank is paying you almost nothing — here's where to earn 10× more.", icon: "📈", xpReward: 15, questions: [] },
-      { id: "pf-u2-L5", title: "The Savings Automation Trick", description: "Set it and forget it — how to save without willpower.", icon: "⚙️", xpReward: 15, questions: [] },
-      { id: "pf-u2-L6", title: "Sinking Funds: Save for Fun Stuff", description: "How to save for vacations, gifts, and big purchases guilt-free.", icon: "🏖️", xpReward: 15, questions: [] },
-      { id: "pf-u2-L7", title: "The 30-Day Savings Challenge", description: "A simple challenge that builds real momentum fast.", icon: "🏃", xpReward: 15, questions: [] },
-      { id: "pf-u2-L12", title: "The Ramirez Family Savings Overhaul", description: "Analyze a real family's budget and help them save smarter.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
-      { id: "pf-u2-L8", title: "Lifestyle Inflation Trap", description: "Why earning more doesn't mean saving more — unless you're aware.", icon: "🎈", xpReward: 15, questions: [] },
-      { id: "pf-u2-L9", title: "Windfalls: Don't Blow the Bonus", description: "Smart moves when you get a tax refund, bonus, or surprise money.", icon: "🎁", xpReward: 15, questions: [] },
-      { id: "pf-u2-L10", title: "Saving Scoreboard", description: "Put your saving knowledge to the ultimate test.", icon: "🏆", xpReward: 20, questions: [] },
-    ],
-  },
-
-  // ── Unit 3: Debt Decoded ──
-  {
-    id: "pf-u3-debt",
-    title: "Debt Decoded",
-    description: "Understand how debt actually works — then use that knowledge to destroy it.",
-    color: "#0D9F63",
-    icon: "⛓️",
-    lessons: [
-      { id: "pf-u3-L1", title: "Debt Is a Tool, Not a Monster", description: "Not all debt is bad — learn when borrowing is smart and when it's a trap.", icon: "🔧", xpReward: 15, questions: [] },
-      { id: "pf-u3-L2", title: "How Interest Eats Your Money", description: "The math behind why a $1,000 purchase can cost you $2,000.", icon: "🦠", xpReward: 15, questions: [] },
-      { id: "pf-u3-L3", title: "Credit Cards: The Double-Edged Sword", description: "How credit cards work, grace periods, and why minimums are a trap.", icon: "💳", xpReward: 15, questions: [] },
-      { id: "pf-u3-L11", title: "The Debt Payoff Journey", description: "Follow a $28K debt payoff over years — snowball vs avalanche.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
-      { id: "pf-u3-L4", title: "Student Loans Survival Guide", description: "Federal vs private, repayment plans, and forgiveness programs.", icon: "🎓", xpReward: 15, questions: [] },
-      { id: "pf-u3-L5", title: "Car Loans: The Dealer's Game", description: "How dealerships make money off your loan — and how to fight back.", icon: "🚗", xpReward: 15, questions: [] },
-      { id: "pf-u3-L6", title: "The Minimum Payment Trap", description: "Why paying the minimum keeps you in debt for decades.", icon: "🪤", xpReward: 15, questions: [] },
-      { id: "pf-u3-L7", title: "Snowball vs Avalanche: Pick Your Fighter", description: "Two proven strategies to pay off debt — which one fits you?", icon: "⛄", xpReward: 15, questions: [] },
-      { id: "pf-u3-L12", title: "Calling the Credit Card Company", description: "Practice negotiating a lower interest rate in this conversation.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "pf-u3-L8", title: "Consolidation & Refinancing", description: "Combining debts or getting a lower rate — when it helps and when it hurts.", icon: "🔗", xpReward: 15, questions: [] },
-      { id: "pf-u3-L9", title: "When Borrowing Makes Sense", description: "A decision framework for taking on debt intentionally.", icon: "🤔", xpReward: 15, questions: [] },
-      { id: "pf-u3-L10", title: "Debt-Free Victory Plan", description: "Build your personalized plan to crush debt for good.", icon: "🏆", xpReward: 20, questions: [] },
-    ],
-  },
-
-  // ── Unit 4: Credit Scores ──
-  {
-    id: "pf-u4-credit",
-    title: "Credit Scores",
-    description: "Your 3-digit reputation controls your financial life — learn to master it.",
-    color: "#0B9954",
-    icon: "📊",
-    lessons: [
-      { id: "pf-u4-L1", title: "Your 3-Digit Reputation", description: "What a credit score is and why landlords, lenders, and employers care about it.", icon: "🔢", xpReward: 15, questions: [] },
-      { id: "pf-u4-L2", title: "The 5 FICO Ingredients", description: "The exact recipe that determines your credit score.", icon: "🧩", xpReward: 15, questions: [] },
-      { id: "pf-u4-L3", title: "Payment History: The #1 Factor", description: "One late payment can haunt you for 7 years — here's how to never miss.", icon: "📅", xpReward: 15, questions: [] },
-      { id: "pf-u4-L11", title: "Credit Score Lightning Quiz", description: "Rapid-fire questions on FICO factors, utilization, and credit pulls.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
-      { id: "pf-u4-L4", title: "Credit Utilization: The 30% Myth", description: "How much of your credit limit you use matters more than you think.", icon: "📏", xpReward: 15, questions: [] },
-      { id: "pf-u4-L5", title: "Building Credit from Zero", description: "No credit history? Here's how to get started without getting burned.", icon: "🏗️", xpReward: 15, questions: [] },
-      { id: "pf-u4-L6", title: "Secured Cards & Starter Moves", description: "The training wheels of credit — how secured cards build your score.", icon: "🛞", xpReward: 15, questions: [] },
-      { id: "pf-u4-L7", title: "Your Free Credit Report", description: "How to check your reports for free and what to look for.", icon: "📄", xpReward: 15, questions: [] },
-      { id: "pf-u4-L12", title: "Two Twins, Two Scores", description: "See how identical twins ended up with wildly different credit scores.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
-      { id: "pf-u4-L8", title: "Hard vs Soft Pulls", description: "Which credit checks hurt your score and which are invisible.", icon: "🔍", xpReward: 15, questions: [] },
-      { id: "pf-u4-L9", title: "Credit Score Boosting Hacks", description: "Actionable tricks to raise your score in 30–90 days.", icon: "🚀", xpReward: 15, questions: [] },
-      { id: "pf-u4-L10", title: "Protect Your Score for Life", description: "Long-term habits that keep your credit score bulletproof.", icon: "🏆", xpReward: 20, questions: [] },
-    ],
-  },
-
-  // ── Unit 5: Banking & Taxes ──
+  // ── Unit 3: Banking & Taxes ──
   {
     id: "pf-u5-banking-taxes",
     title: "Banking & Taxes",
@@ -115,6 +46,7 @@ export const financeCourseMeta: Unit[] = [
       { id: "pf-u5-L1", title: "Checking vs Savings: What Goes Where", description: "Two accounts, two jobs — how to use each one correctly.", icon: "📂", xpReward: 15, questions: [] },
       { id: "pf-u5-L2", title: "Banks vs Credit Unions vs Online", description: "The pros and cons of each — and which one wins for you.", icon: "🏛️", xpReward: 15, questions: [] },
       { id: "pf-u5-L3", title: "Fee Graveyard: Stop Losing Money", description: "Overdraft fees, ATM fees, maintenance fees — and how to dodge them all.", icon: "🚫", xpReward: 15, questions: [] },
+      { id: "pf-u5-L15", title: "Choosing a Bank Account", description: "Help a friend decide between a big bank, credit union, and online bank.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
       { id: "pf-u5-L4", title: "Digital Wallets & P2P Payments", description: "Venmo, Zelle, Apple Pay — how digital money moves and the risks.", icon: "📱", xpReward: 15, questions: [] },
       { id: "pf-u5-L13", title: "Alex's First Tax Season", description: "Help a freelancer navigate their first tax filing in this case study.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
       { id: "pf-u5-L5", title: "Banking Safety & Fraud Defense", description: "Protect your accounts from scammers, hackers, and phishing.", icon: "🔐", xpReward: 15, questions: [] },
@@ -129,131 +61,32 @@ export const financeCourseMeta: Unit[] = [
     ],
   },
 
-  // ── Unit 6: Investing 101 ──
+  // ── Unit 4: Smart Saving ──
   {
-    id: "pf-u6-investing",
-    title: "Investing 101",
-    description: "Make your money grow — from compound interest to your first investment.",
-    color: "#078D36",
-    icon: "📈",
+    id: "pf-u2-saving",
+    title: "Smart Saving",
+    description: "Build your safety net, automate your savings, and make your money work while you sleep.",
+    color: "#0EA572",
+    icon: "🐷",
     lessons: [
-      { id: "pf-u6-L1", title: "Why Your Savings Account Isn't Enough", description: "Inflation silently eats your cash — investing is how you fight back.", icon: "🦠", xpReward: 15, questions: [] },
-      { id: "pf-u6-L2", title: "Compound Interest: The 8th Wonder", description: "Einstein's favorite concept — and the reason time beats talent.", icon: "✨", xpReward: 15, questions: [] },
-      { id: "pf-u6-L3", title: "Stocks: Owning a Piece of a Company", description: "What it actually means to buy a share of Apple or Tesla.", icon: "🏢", xpReward: 15, questions: [] },
-      { id: "pf-u6-L4", title: "Bonds: Lending Your Money Out", description: "The safer, slower cousin of stocks — and when to use them.", icon: "📜", xpReward: 15, questions: [] },
-      { id: "pf-u6-L13", title: "Meeting Your Financial Advisor", description: "Navigate your first advisor meeting and spot red flags.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "pf-u6-L5", title: "Index Funds: The Lazy Genius Move", description: "How to beat 90% of professional investors by doing almost nothing.", icon: "🧠", xpReward: 15, questions: [] },
-      { id: "pf-u6-L6", title: "ETFs vs Mutual Funds", description: "Two ways to own a basket of investments — what's the difference?", icon: "🧺", xpReward: 15, questions: [] },
-      { id: "pf-u6-L7", title: "Risk: How Much Can You Stomach?", description: "Understand your risk tolerance before you invest a single dollar.", icon: "🎢", xpReward: 15, questions: [] },
-      { id: "pf-u6-L8", title: "Your First Brokerage Account", description: "Step-by-step: opening an account and making your first trade.", icon: "🖥️", xpReward: 15, questions: [] },
-      { id: "pf-u6-L9", title: "Dollar-Cost Averaging", description: "The stress-free strategy: invest the same amount every month, no matter what.", icon: "📅", xpReward: 15, questions: [] },
-      { id: "pf-u6-L14", title: "Your First Year of Investing", description: "Make decisions through market dips and hot tips over 12 months.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
-      { id: "pf-u6-L10", title: "The Market Will Crash (And That's OK)", description: "Why crashes are normal, expected, and secretly great for you.", icon: "📉", xpReward: 15, questions: [] },
-      { id: "pf-u6-L11", title: "Dividends: Getting Paid to Own", description: "Some stocks pay you cash just for holding them.", icon: "💰", xpReward: 15, questions: [] },
-      { id: "pf-u6-L12", title: "Don't Touch It: The Power of Time", description: "Why the best investors are the ones who do the least.", icon: "🏆", xpReward: 20, questions: [] },
+      { id: "pf-u2-L1", title: "Why Saving Feels Impossible", description: "The psychology behind why most people can't save — and how to beat it.", icon: "🧠", xpReward: 15, questions: [] },
+      { id: "pf-u2-L2", title: "The $500 That Changes Everything", description: "Why your first $500 in savings is the most important money you'll ever set aside.", icon: "💡", xpReward: 15, questions: [] },
+      { id: "pf-u2-L3", title: "Emergency Fund Blueprint", description: "How to build 3–6 months of expenses without feeling broke.", icon: "🛡️", xpReward: 15, questions: [] },
+      { id: "pf-u2-L13", title: "Helping a Friend Start Saving", description: "Your friend wants to start saving but doesn't know where to begin.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u2-L11", title: "The $5,000 Emergency", description: "Navigate 18 months of saving decisions in this interactive timeline.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
+      { id: "pf-u2-L4", title: "High-Yield vs Regular Savings", description: "Your bank is paying you almost nothing — here's where to earn 10× more.", icon: "📈", xpReward: 15, questions: [] },
+      { id: "pf-u2-L5", title: "The Savings Automation Trick", description: "Set it and forget it — how to save without willpower.", icon: "⚙️", xpReward: 15, questions: [] },
+      { id: "pf-u2-L6", title: "Sinking Funds: Save for Fun Stuff", description: "How to save for vacations, gifts, and big purchases guilt-free.", icon: "🏖️", xpReward: 15, questions: [] },
+      { id: "pf-u2-L7", title: "The 30-Day Savings Challenge", description: "A simple challenge that builds real momentum fast.", icon: "🏃", xpReward: 15, questions: [] },
+      { id: "pf-u2-L12", title: "The Ramirez Family Savings Overhaul", description: "Analyze a real family's budget and help them save smarter.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
+      { id: "pf-u2-L8", title: "Lifestyle Inflation Trap", description: "Why earning more doesn't mean saving more — unless you're aware.", icon: "🎈", xpReward: 15, questions: [] },
+      { id: "pf-u2-L9", title: "Windfalls: Don't Blow the Bonus", description: "Smart moves when you get a tax refund, bonus, or surprise money.", icon: "🎁", xpReward: 15, questions: [] },
+      { id: "pf-u2-L14", title: "Saving Concepts Blitz", description: "Race the clock on emergency funds, automation, and saving strategies.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "pf-u2-L10", title: "Saving Scoreboard", description: "Put your saving knowledge to the ultimate test.", icon: "🏆", xpReward: 20, questions: [] },
     ],
   },
 
-  // ── Unit 7: Stock Market Deep Dive ──
-  {
-    id: "pf-u7-stocks",
-    title: "Stock Market Deep Dive",
-    description: "Go beyond the basics — read charts, understand valuations, and invest with confidence.",
-    color: "#058727",
-    icon: "📉",
-    lessons: [
-      { id: "pf-u7-L1", title: "How the Stock Market Actually Works", description: "Buyers, sellers, exchanges, and why prices move every second.", icon: "🔄", xpReward: 15, questions: [] },
-      { id: "pf-u7-L2", title: "Reading a Stock Chart", description: "Candlesticks, trends, and volume — what the chart is telling you.", icon: "📊", xpReward: 15, questions: [] },
-      { id: "pf-u7-L3", title: "Market Cap, P/E, and Other Jargon", description: "The key numbers that tell you if a stock is cheap or expensive.", icon: "🔢", xpReward: 15, questions: [] },
-      { id: "pf-u7-L4", title: "Growth vs Value Stocks", description: "Two investing philosophies — fast-growing vs underpriced.", icon: "⚡", xpReward: 15, questions: [] },
-      { id: "pf-u7-L13", title: "Stock Market Jargon Blitz", description: "Speed round on P/E ratios, market cap, order types, and more.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
-      { id: "pf-u7-L5", title: "Bull Markets & Bear Markets", description: "The market's mood swings and how to handle both.", icon: "🐂", xpReward: 15, questions: [] },
-      { id: "pf-u7-L6", title: "Sector Investing: Tech, Health, Energy", description: "How different parts of the economy move at different times.", icon: "🏭", xpReward: 15, questions: [] },
-      { id: "pf-u7-L7", title: "Earnings Season: Why Stocks Jump or Crash", description: "What happens when companies report their numbers — and how to read it.", icon: "📰", xpReward: 15, questions: [] },
-      { id: "pf-u7-L8", title: "Stop-Loss & Limit Orders", description: "Automate your buying and selling to remove emotion.", icon: "🤖", xpReward: 15, questions: [] },
-      { id: "pf-u7-L9", title: "Portfolio Diversification", description: "Don't put all your eggs in one basket — here's how to spread risk.", icon: "🥚", xpReward: 15, questions: [] },
-      { id: "pf-u7-L14", title: "The GameStop Frenzy", description: "Analyze the short squeeze that shook Wall Street.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
-      { id: "pf-u7-L10", title: "Individual Stocks vs Index Funds", description: "Stock picking vs passive investing — the honest comparison.", icon: "⚖️", xpReward: 15, questions: [] },
-      { id: "pf-u7-L11", title: "When to Sell (And When to Hold)", description: "The hardest decision in investing — made simple.", icon: "🤔", xpReward: 15, questions: [] },
-      { id: "pf-u7-L12", title: "Mistakes That Wipe Out Beginners", description: "FOMO, panic selling, and other traps — learn from others' pain.", icon: "🏆", xpReward: 20, questions: [] },
-    ],
-  },
-
-  // ── Unit 8: Crypto & Digital Assets ──
-  {
-    id: "pf-u8-crypto",
-    title: "Crypto & Digital Assets",
-    description: "Understand blockchain, Bitcoin, and the crypto landscape — without the hype.",
-    color: "#038118",
-    icon: "🪙",
-    lessons: [
-      { id: "pf-u8-L1", title: "What Is Cryptocurrency, Really?", description: "Digital money without banks — how it works in plain English.", icon: "💡", xpReward: 15, questions: [] },
-      { id: "pf-u8-L2", title: "How Blockchain Works (Simply)", description: "The technology behind crypto — explained without the tech jargon.", icon: "🔗", xpReward: 15, questions: [] },
-      { id: "pf-u8-L3", title: "Bitcoin: Digital Gold?", description: "The first cryptocurrency — what it does, why it matters, and the risks.", icon: "₿", xpReward: 15, questions: [] },
-      { id: "pf-u8-L4", title: "Ethereum & Smart Contracts", description: "The programmable blockchain — and why developers love it.", icon: "💎", xpReward: 15, questions: [] },
-      { id: "pf-u8-L13", title: "Your Cousin's Crypto Pitch", description: "Evaluate an altcoin pitch and decide what's hype vs substance.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "pf-u8-L5", title: "Altcoins: The Good, Bad & Scammy", description: "Thousands of coins exist — how to spot value vs garbage.", icon: "🎰", xpReward: 15, questions: [] },
-      { id: "pf-u8-L6", title: "Crypto Wallets: Hot vs Cold", description: "Where to store your crypto — and why 'not your keys, not your coins.'", icon: "🔐", xpReward: 15, questions: [] },
-      { id: "pf-u8-L7", title: "Exchanges: Where to Buy Safely", description: "Coinbase, Binance, Kraken — choosing a platform and staying safe.", icon: "🏪", xpReward: 15, questions: [] },
-      { id: "pf-u8-L8", title: "DeFi: Banking Without Banks", description: "Lending, borrowing, and earning yield — all without a middleman.", icon: "🌐", xpReward: 15, questions: [] },
-      { id: "pf-u8-L9", title: "NFTs: Dead or Evolving?", description: "Digital ownership beyond the hype — what actually stuck.", icon: "🖼️", xpReward: 15, questions: [] },
-      { id: "pf-u8-L14", title: "The Crypto Rollercoaster", description: "Navigate 12 months of Bitcoin decisions through wild swings.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
-      { id: "pf-u8-L10", title: "Crypto Taxes: Yes, You Owe Them", description: "The IRS is watching — how crypto gains are taxed.", icon: "🧾", xpReward: 15, questions: [] },
-      { id: "pf-u8-L11", title: "The Volatility Rollercoaster", description: "Why crypto swings 20% in a day and how to handle it mentally.", icon: "🎢", xpReward: 15, questions: [] },
-      { id: "pf-u8-L12", title: "Crypto in a Balanced Portfolio", description: "How much crypto belongs in your investment mix — if any.", icon: "🏆", xpReward: 20, questions: [] },
-    ],
-  },
-
-  // ── Unit 9: Real Estate ──
-  {
-    id: "pf-u9-real-estate",
-    title: "Real Estate",
-    description: "The biggest purchase of your life — make sure you don't screw it up.",
-    color: "#027B12",
-    icon: "🏠",
-    lessons: [
-      { id: "pf-u9-L1", title: "Renting vs Buying: The Real Math", description: "The truth about homeownership — it's not always better than renting.", icon: "🔢", xpReward: 15, questions: [] },
-      { id: "pf-u9-L2", title: "Mortgage 101: What You're Signing", description: "Fixed vs adjustable, 15 vs 30 year — what it all means for your wallet.", icon: "📝", xpReward: 15, questions: [] },
-      { id: "pf-u9-L3", title: "Down Payments & Closing Costs", description: "How much cash you actually need upfront — it's more than you think.", icon: "💵", xpReward: 15, questions: [] },
-      { id: "pf-u9-L4", title: "How Much House Can You Afford?", description: "The real number — not the inflated amount the bank approves you for.", icon: "🏷️", xpReward: 15, questions: [] },
-      { id: "pf-u9-L13", title: "First-Time Homebuyer", description: "Follow a 2-year journey from renting to owning your first home.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
-      { id: "pf-u9-L5", title: "The Home Buying Process Step by Step", description: "From pre-approval to getting the keys — every stage explained.", icon: "🔑", xpReward: 15, questions: [] },
-      { id: "pf-u9-L6", title: "Property Taxes & Hidden Costs", description: "The expenses that don't show up in the listing price.", icon: "🔍", xpReward: 15, questions: [] },
-      { id: "pf-u9-L7", title: "Refinancing: When It Makes Sense", description: "Replacing your mortgage with a better deal — the math that matters.", icon: "♻️", xpReward: 15, questions: [] },
-      { id: "pf-u9-L8", title: "Real Estate as an Investment", description: "When a house builds wealth and when it's just an expensive place to live.", icon: "📈", xpReward: 15, questions: [] },
-      { id: "pf-u9-L9", title: "Rental Properties: Landlord Math", description: "The numbers behind owning rental property — cash flow, expenses, ROI.", icon: "🧮", xpReward: 15, questions: [] },
-      { id: "pf-u9-L14", title: "Negotiating the Home Price", description: "Practice counter-offers with a seller's agent in this conversation.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "pf-u9-L10", title: "REITs: Real Estate Without the Headaches", description: "Own real estate through the stock market — no tenants, no toilets.", icon: "🏢", xpReward: 15, questions: [] },
-      { id: "pf-u9-L11", title: "House Hacking: Live Free-ish", description: "How to make your living situation pay for itself.", icon: "🧠", xpReward: 15, questions: [] },
-      { id: "pf-u9-L12", title: "Real Estate Mistakes That Cost Thousands", description: "The most expensive errors first-time buyers and investors make.", icon: "🏆", xpReward: 20, questions: [] },
-    ],
-  },
-
-  // ── Unit 10: Retirement Planning ──
-  {
-    id: "pf-u10-retirement",
-    title: "Retirement Planning",
-    description: "Future you is counting on present you — here's how to not let them down.",
-    color: "#017509",
-    icon: "🏖️",
-    lessons: [
-      { id: "pf-u10-L1", title: "Retirement Math: Your Future Self Needs You", description: "How much you'll actually need — and why starting now matters so much.", icon: "🧮", xpReward: 15, questions: [] },
-      { id: "pf-u10-L2", title: "401(k): Free Money from Your Boss", description: "The most powerful retirement tool most people underuse.", icon: "💼", xpReward: 15, questions: [] },
-      { id: "pf-u10-L3", title: "IRA: Roth vs Traditional Showdown", description: "Pay taxes now or later? The answer changes your retirement.", icon: "⚔️", xpReward: 15, questions: [] },
-      { id: "pf-u10-L4", title: "Employer Match: Never Leave Money Behind", description: "If you're not getting the full match, you're giving away free cash.", icon: "🎁", xpReward: 15, questions: [] },
-      { id: "pf-u10-L12", title: "Three Retirement Paths", description: "Compare starting at 22 vs 35 vs 45 — see the compounding difference.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
-      { id: "pf-u10-L5", title: "Target-Date Funds: Set and Forget", description: "The one-fund retirement strategy that works for most people.", icon: "🎯", xpReward: 15, questions: [] },
-      { id: "pf-u10-L6", title: "Social Security: What You'll Actually Get", description: "Don't count on it for everything — here's what to realistically expect.", icon: "🏛️", xpReward: 15, questions: [] },
-      { id: "pf-u10-L7", title: "Starting Late? Here's the Plan", description: "It's never too late — but the strategy changes with your age.", icon: "⏰", xpReward: 15, questions: [] },
-      { id: "pf-u10-L8", title: "The 4% Rule: How Much Is Enough?", description: "The simple formula to know when you can actually retire.", icon: "📐", xpReward: 15, questions: [] },
-      { id: "pf-u10-L13", title: "Retirement Accounts Speed Drill", description: "Speed round on 401k, IRA, Roth rules, and contribution limits.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
-      { id: "pf-u10-L9", title: "Catch-Up Contributions After 50", description: "Extra savings power unlocked at 50 — use it.", icon: "🏃", xpReward: 15, questions: [] },
-      { id: "pf-u10-L10", title: "Retirement Account Mistakes", description: "Early withdrawals, missed matches, and other costly errors.", icon: "⚠️", xpReward: 15, questions: [] },
-      { id: "pf-u10-L11", title: "Your Retirement Roadmap", description: "Build a personalized retirement plan based on where you are today.", icon: "🏆", xpReward: 20, questions: [] },
-    ],
-  },
-
-  // ── Unit 11: Insurance & Protection ──
+  // ── Unit 5: Insurance & Protection ──
   {
     id: "pf-u11-insurance",
     title: "Insurance & Protection",
@@ -276,7 +109,184 @@ export const financeCourseMeta: Unit[] = [
     ],
   },
 
-  // ── Unit 12: Big Money Moves ──
+  // ── Unit 6: Debt Decoded ──
+  {
+    id: "pf-u3-debt",
+    title: "Debt Decoded",
+    description: "Understand how debt actually works — then use that knowledge to destroy it.",
+    color: "#0D9F63",
+    icon: "⛓️",
+    lessons: [
+      { id: "pf-u3-L1", title: "Debt Is a Tool, Not a Monster", description: "Not all debt is bad — learn when borrowing is smart and when it's a trap.", icon: "🔧", xpReward: 15, questions: [] },
+      { id: "pf-u3-L2", title: "How Interest Eats Your Money", description: "The math behind why a $1,000 purchase can cost you $2,000.", icon: "🦠", xpReward: 15, questions: [] },
+      { id: "pf-u3-L3", title: "Credit Cards: The Double-Edged Sword", description: "How credit cards work, grace periods, and why minimums are a trap.", icon: "💳", xpReward: 15, questions: [] },
+      { id: "pf-u3-L11", title: "The Debt Payoff Journey", description: "Follow a $28K debt payoff over years — snowball vs avalanche.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
+      { id: "pf-u3-L4", title: "Student Loans Survival Guide", description: "Federal vs private, repayment plans, and forgiveness programs.", icon: "🎓", xpReward: 15, questions: [] },
+      { id: "pf-u3-L5", title: "Car Loans: The Dealer's Game", description: "How dealerships make money off your loan — and how to fight back.", icon: "🚗", xpReward: 15, questions: [] },
+      { id: "pf-u3-L6", title: "The Minimum Payment Trap", description: "Why paying the minimum keeps you in debt for decades.", icon: "🪤", xpReward: 15, questions: [] },
+      { id: "pf-u3-L7", title: "Snowball vs Avalanche: Pick Your Fighter", description: "Two proven strategies to pay off debt — which one fits you?", icon: "⛄", xpReward: 15, questions: [] },
+      { id: "pf-u3-L12", title: "Calling the Credit Card Company", description: "Practice negotiating a lower interest rate in this conversation.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u3-L8", title: "Consolidation & Refinancing", description: "Combining debts or getting a lower rate — when it helps and when it hurts.", icon: "🔗", xpReward: 15, questions: [] },
+      { id: "pf-u3-L9", title: "When Borrowing Makes Sense", description: "A decision framework for taking on debt intentionally.", icon: "🤔", xpReward: 15, questions: [] },
+      { id: "pf-u3-L10", title: "Debt-Free Victory Plan", description: "Build your personalized plan to crush debt for good.", icon: "🏆", xpReward: 20, questions: [] },
+      { id: "pf-u3-L13", title: "Debt Terms Blitz", description: "Race the clock on interest rates, repayment strategies, and debt vocabulary.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+    ],
+  },
+
+  // ── Unit 7: Credit Scores ──
+  {
+    id: "pf-u4-credit",
+    title: "Credit Scores",
+    description: "Your 3-digit reputation controls your financial life — learn to master it.",
+    color: "#0B9954",
+    icon: "📊",
+    lessons: [
+      { id: "pf-u4-L1", title: "Your 3-Digit Reputation", description: "What a credit score is and why landlords, lenders, and employers care about it.", icon: "🔢", xpReward: 15, questions: [] },
+      { id: "pf-u4-L2", title: "The 5 FICO Ingredients", description: "The exact recipe that determines your credit score.", icon: "🧩", xpReward: 15, questions: [] },
+      { id: "pf-u4-L3", title: "Payment History: The #1 Factor", description: "One late payment can haunt you for 7 years — here's how to never miss.", icon: "📅", xpReward: 15, questions: [] },
+      { id: "pf-u4-L11", title: "Credit Score Lightning Quiz", description: "Rapid-fire questions on FICO factors, utilization, and credit pulls.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "pf-u4-L4", title: "Credit Utilization: The 30% Myth", description: "How much of your credit limit you use matters more than you think.", icon: "📏", xpReward: 15, questions: [] },
+      { id: "pf-u4-L13", title: "Explaining Credit Scores to a Friend", description: "Your friend just got denied for a credit card and has questions.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u4-L5", title: "Building Credit from Zero", description: "No credit history? Here's how to get started without getting burned.", icon: "🏗️", xpReward: 15, questions: [] },
+      { id: "pf-u4-L6", title: "Secured Cards & Starter Moves", description: "The training wheels of credit — how secured cards build your score.", icon: "🛞", xpReward: 15, questions: [] },
+      { id: "pf-u4-L7", title: "Your Free Credit Report", description: "How to check your reports for free and what to look for.", icon: "📄", xpReward: 15, questions: [] },
+      { id: "pf-u4-L12", title: "Two Twins, Two Scores", description: "See how identical twins ended up with wildly different credit scores.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
+      { id: "pf-u4-L8", title: "Hard vs Soft Pulls", description: "Which credit checks hurt your score and which are invisible.", icon: "🔍", xpReward: 15, questions: [] },
+      { id: "pf-u4-L9", title: "Credit Score Boosting Hacks", description: "Actionable tricks to raise your score in 30–90 days.", icon: "🚀", xpReward: 15, questions: [] },
+      { id: "pf-u4-L10", title: "Protect Your Score for Life", description: "Long-term habits that keep your credit score bulletproof.", icon: "🏆", xpReward: 20, questions: [] },
+    ],
+  },
+
+  // ── Unit 8: Investing 101 ──
+  {
+    id: "pf-u6-investing",
+    title: "Investing 101",
+    description: "Make your money grow — from compound interest to your first investment.",
+    color: "#078D36",
+    icon: "📈",
+    lessons: [
+      { id: "pf-u6-L1", title: "Why Your Savings Account Isn't Enough", description: "Inflation silently eats your cash — investing is how you fight back.", icon: "🦠", xpReward: 15, questions: [] },
+      { id: "pf-u6-L2", title: "Compound Interest: The 8th Wonder", description: "Einstein's favorite concept — and the reason time beats talent.", icon: "✨", xpReward: 15, questions: [] },
+      { id: "pf-u6-L3", title: "Stocks: Owning a Piece of a Company", description: "What it actually means to buy a share of Apple or Tesla.", icon: "🏢", xpReward: 15, questions: [] },
+      { id: "pf-u6-L4", title: "Bonds: Lending Your Money Out", description: "The safer, slower cousin of stocks — and when to use them.", icon: "📜", xpReward: 15, questions: [] },
+      { id: "pf-u6-L13", title: "Meeting Your Financial Advisor", description: "Navigate your first advisor meeting and spot red flags.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u6-L5", title: "Index Funds: The Lazy Genius Move", description: "How to beat 90% of professional investors by doing almost nothing.", icon: "🧠", xpReward: 15, questions: [] },
+      { id: "pf-u6-L6", title: "ETFs vs Mutual Funds", description: "Two ways to own a basket of investments — what's the difference?", icon: "🧺", xpReward: 15, questions: [] },
+      { id: "pf-u6-L7", title: "Risk: How Much Can You Stomach?", description: "Understand your risk tolerance before you invest a single dollar.", icon: "🎢", xpReward: 15, questions: [] },
+      { id: "pf-u6-L8", title: "Your First Brokerage Account", description: "Step-by-step: opening an account and making your first trade.", icon: "🖥️", xpReward: 15, questions: [] },
+      { id: "pf-u6-L9", title: "Dollar-Cost Averaging", description: "The stress-free strategy: invest the same amount every month, no matter what.", icon: "📅", xpReward: 15, questions: [] },
+      { id: "pf-u6-L14", title: "Your First Year of Investing", description: "Make decisions through market dips and hot tips over 12 months.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
+      { id: "pf-u6-L10", title: "The Market Will Crash (And That's OK)", description: "Why crashes are normal, expected, and secretly great for you.", icon: "📉", xpReward: 15, questions: [] },
+      { id: "pf-u6-L11", title: "Dividends: Getting Paid to Own", description: "Some stocks pay you cash just for holding them.", icon: "💰", xpReward: 15, questions: [] },
+      { id: "pf-u6-L12", title: "Don't Touch It: The Power of Time", description: "Why the best investors are the ones who do the least.", icon: "🏆", xpReward: 20, questions: [] },
+      { id: "pf-u6-L15", title: "Investing Basics Blitz", description: "Race the clock on compound interest, stocks, bonds, and fund types.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+    ],
+  },
+
+  // ── Unit 9: Retirement Planning ──
+  {
+    id: "pf-u10-retirement",
+    title: "Retirement Planning",
+    description: "Future you is counting on present you — here's how to not let them down.",
+    color: "#017509",
+    icon: "🏖️",
+    lessons: [
+      { id: "pf-u10-L1", title: "Retirement Math: Your Future Self Needs You", description: "How much you'll actually need — and why starting now matters so much.", icon: "🧮", xpReward: 15, questions: [] },
+      { id: "pf-u10-L2", title: "401(k): Free Money from Your Boss", description: "The most powerful retirement tool most people underuse.", icon: "💼", xpReward: 15, questions: [] },
+      { id: "pf-u10-L3", title: "IRA: Roth vs Traditional Showdown", description: "Pay taxes now or later? The answer changes your retirement.", icon: "⚔️", xpReward: 15, questions: [] },
+      { id: "pf-u10-L4", title: "Employer Match: Never Leave Money Behind", description: "If you're not getting the full match, you're giving away free cash.", icon: "🎁", xpReward: 15, questions: [] },
+      { id: "pf-u10-L14", title: "Retirement Planning Chat", description: "A friend thinks retirement planning can wait. Help them see why starting now matters.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u10-L12", title: "Three Retirement Paths", description: "Compare starting at 22 vs 35 vs 45 — see the compounding difference.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
+      { id: "pf-u10-L5", title: "Target-Date Funds: Set and Forget", description: "The one-fund retirement strategy that works for most people.", icon: "🎯", xpReward: 15, questions: [] },
+      { id: "pf-u10-L6", title: "Social Security: What You'll Actually Get", description: "Don't count on it for everything — here's what to realistically expect.", icon: "🏛️", xpReward: 15, questions: [] },
+      { id: "pf-u10-L7", title: "Starting Late? Here's the Plan", description: "It's never too late — but the strategy changes with your age.", icon: "⏰", xpReward: 15, questions: [] },
+      { id: "pf-u10-L8", title: "The 4% Rule: How Much Is Enough?", description: "The simple formula to know when you can actually retire.", icon: "📐", xpReward: 15, questions: [] },
+      { id: "pf-u10-L13", title: "Retirement Accounts Speed Drill", description: "Speed round on 401k, IRA, Roth rules, and contribution limits.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "pf-u10-L9", title: "Catch-Up Contributions After 50", description: "Extra savings power unlocked at 50 — use it.", icon: "🏃", xpReward: 15, questions: [] },
+      { id: "pf-u10-L10", title: "Retirement Account Mistakes", description: "Early withdrawals, missed matches, and other costly errors.", icon: "⚠️", xpReward: 15, questions: [] },
+      { id: "pf-u10-L11", title: "Your Retirement Roadmap", description: "Build a personalized retirement plan based on where you are today.", icon: "🏆", xpReward: 20, questions: [] },
+    ],
+  },
+
+  // ── Unit 10: Stock Market Deep Dive ──
+  {
+    id: "pf-u7-stocks",
+    title: "Stock Market Deep Dive",
+    description: "Go beyond the basics — read charts, understand valuations, and invest with confidence.",
+    color: "#058727",
+    icon: "📉",
+    lessons: [
+      { id: "pf-u7-L1", title: "How the Stock Market Actually Works", description: "Buyers, sellers, exchanges, and why prices move every second.", icon: "🔄", xpReward: 15, questions: [] },
+      { id: "pf-u7-L2", title: "Reading a Stock Chart", description: "Candlesticks, trends, and volume — what the chart is telling you.", icon: "📊", xpReward: 15, questions: [] },
+      { id: "pf-u7-L3", title: "Market Cap, P/E, and Other Jargon", description: "The key numbers that tell you if a stock is cheap or expensive.", icon: "🔢", xpReward: 15, questions: [] },
+      { id: "pf-u7-L4", title: "Growth vs Value Stocks", description: "Two investing philosophies — fast-growing vs underpriced.", icon: "⚡", xpReward: 15, questions: [] },
+      { id: "pf-u7-L15", title: "A Friend Wants to Start Investing", description: "Your friend heard about a hot stock and wants to jump in. Guide them wisely.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u7-L13", title: "Stock Market Jargon Blitz", description: "Speed round on P/E ratios, market cap, order types, and more.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "pf-u7-L5", title: "Bull Markets & Bear Markets", description: "The market's mood swings and how to handle both.", icon: "🐂", xpReward: 15, questions: [] },
+      { id: "pf-u7-L6", title: "Sector Investing: Tech, Health, Energy", description: "How different parts of the economy move at different times.", icon: "🏭", xpReward: 15, questions: [] },
+      { id: "pf-u7-L7", title: "Earnings Season: Why Stocks Jump or Crash", description: "What happens when companies report their numbers — and how to read it.", icon: "📰", xpReward: 15, questions: [] },
+      { id: "pf-u7-L8", title: "Stop-Loss & Limit Orders", description: "Automate your buying and selling to remove emotion.", icon: "🤖", xpReward: 15, questions: [] },
+      { id: "pf-u7-L9", title: "Portfolio Diversification", description: "Don't put all your eggs in one basket — here's how to spread risk.", icon: "🥚", xpReward: 15, questions: [] },
+      { id: "pf-u7-L14", title: "The GameStop Frenzy", description: "Analyze the short squeeze that shook Wall Street.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
+      { id: "pf-u7-L10", title: "Individual Stocks vs Index Funds", description: "Stock picking vs passive investing — the honest comparison.", icon: "⚖️", xpReward: 15, questions: [] },
+      { id: "pf-u7-L11", title: "When to Sell (And When to Hold)", description: "The hardest decision in investing — made simple.", icon: "🤔", xpReward: 15, questions: [] },
+      { id: "pf-u7-L12", title: "Mistakes That Wipe Out Beginners", description: "FOMO, panic selling, and other traps — learn from others' pain.", icon: "🏆", xpReward: 20, questions: [] },
+    ],
+  },
+
+  // ── Unit 11: Real Estate ──
+  {
+    id: "pf-u9-real-estate",
+    title: "Real Estate",
+    description: "The biggest purchase of your life — make sure you don't screw it up.",
+    color: "#027B12",
+    icon: "🏠",
+    lessons: [
+      { id: "pf-u9-L1", title: "Renting vs Buying: The Real Math", description: "The truth about homeownership — it's not always better than renting.", icon: "🔢", xpReward: 15, questions: [] },
+      { id: "pf-u9-L2", title: "Mortgage 101: What You're Signing", description: "Fixed vs adjustable, 15 vs 30 year — what it all means for your wallet.", icon: "📝", xpReward: 15, questions: [] },
+      { id: "pf-u9-L3", title: "Down Payments & Closing Costs", description: "How much cash you actually need upfront — it's more than you think.", icon: "💵", xpReward: 15, questions: [] },
+      { id: "pf-u9-L4", title: "How Much House Can You Afford?", description: "The real number — not the inflated amount the bank approves you for.", icon: "🏷️", xpReward: 15, questions: [] },
+      { id: "pf-u9-L13", title: "First-Time Homebuyer", description: "Follow a 2-year journey from renting to owning your first home.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
+      { id: "pf-u9-L5", title: "The Home Buying Process Step by Step", description: "From pre-approval to getting the keys — every stage explained.", icon: "🔑", xpReward: 15, questions: [] },
+      { id: "pf-u9-L6", title: "Property Taxes & Hidden Costs", description: "The expenses that don't show up in the listing price.", icon: "🔍", xpReward: 15, questions: [] },
+      { id: "pf-u9-L7", title: "Refinancing: When It Makes Sense", description: "Replacing your mortgage with a better deal — the math that matters.", icon: "♻️", xpReward: 15, questions: [] },
+      { id: "pf-u9-L8", title: "Real Estate as an Investment", description: "When a house builds wealth and when it's just an expensive place to live.", icon: "📈", xpReward: 15, questions: [] },
+      { id: "pf-u9-L9", title: "Rental Properties: Landlord Math", description: "The numbers behind owning rental property — cash flow, expenses, ROI.", icon: "🧮", xpReward: 15, questions: [] },
+      { id: "pf-u9-L14", title: "Negotiating the Home Price", description: "Practice counter-offers with a seller's agent in this conversation.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u9-L10", title: "REITs: Real Estate Without the Headaches", description: "Own real estate through the stock market — no tenants, no toilets.", icon: "🏢", xpReward: 15, questions: [] },
+      { id: "pf-u9-L11", title: "House Hacking: Live Free-ish", description: "How to make your living situation pay for itself.", icon: "🧠", xpReward: 15, questions: [] },
+      { id: "pf-u9-L12", title: "Real Estate Mistakes That Cost Thousands", description: "The most expensive errors first-time buyers and investors make.", icon: "🏆", xpReward: 20, questions: [] },
+      { id: "pf-u9-L15", title: "Real Estate Terms Blitz", description: "Race the clock on mortgages, buying, and property investment terms.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+    ],
+  },
+
+  // ── Unit 12: Crypto & Digital Assets ──
+  {
+    id: "pf-u8-crypto",
+    title: "Crypto & Digital Assets",
+    description: "Understand blockchain, Bitcoin, and the crypto landscape — without the hype.",
+    color: "#038118",
+    icon: "🪙",
+    lessons: [
+      { id: "pf-u8-L1", title: "What Is Cryptocurrency, Really?", description: "Digital money without banks — how it works in plain English.", icon: "💡", xpReward: 15, questions: [] },
+      { id: "pf-u8-L2", title: "How Blockchain Works (Simply)", description: "The technology behind crypto — explained without the tech jargon.", icon: "🔗", xpReward: 15, questions: [] },
+      { id: "pf-u8-L3", title: "Bitcoin: Digital Gold?", description: "The first cryptocurrency — what it does, why it matters, and the risks.", icon: "₿", xpReward: 15, questions: [] },
+      { id: "pf-u8-L4", title: "Ethereum & Smart Contracts", description: "The programmable blockchain — and why developers love it.", icon: "💎", xpReward: 15, questions: [] },
+      { id: "pf-u8-L13", title: "Your Cousin's Crypto Pitch", description: "Evaluate an altcoin pitch and decide what's hype vs substance.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
+      { id: "pf-u8-L5", title: "Altcoins: The Good, Bad & Scammy", description: "Thousands of coins exist — how to spot value vs garbage.", icon: "🎰", xpReward: 15, questions: [] },
+      { id: "pf-u8-L6", title: "Crypto Wallets: Hot vs Cold", description: "Where to store your crypto — and why 'not your keys, not your coins.'", icon: "🔐", xpReward: 15, questions: [] },
+      { id: "pf-u8-L7", title: "Exchanges: Where to Buy Safely", description: "Coinbase, Binance, Kraken — choosing a platform and staying safe.", icon: "🏪", xpReward: 15, questions: [] },
+      { id: "pf-u8-L8", title: "DeFi: Banking Without Banks", description: "Lending, borrowing, and earning yield — all without a middleman.", icon: "🌐", xpReward: 15, questions: [] },
+      { id: "pf-u8-L9", title: "NFTs: Dead or Evolving?", description: "Digital ownership beyond the hype — what actually stuck.", icon: "🖼️", xpReward: 15, questions: [] },
+      { id: "pf-u8-L14", title: "The Crypto Rollercoaster", description: "Navigate 12 months of Bitcoin decisions through wild swings.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
+      { id: "pf-u8-L10", title: "Crypto Taxes: Yes, You Owe Them", description: "The IRS is watching — how crypto gains are taxed.", icon: "🧾", xpReward: 15, questions: [] },
+      { id: "pf-u8-L11", title: "The Volatility Rollercoaster", description: "Why crypto swings 20% in a day and how to handle it mentally.", icon: "🎢", xpReward: 15, questions: [] },
+      { id: "pf-u8-L12", title: "Crypto in a Balanced Portfolio", description: "How much crypto belongs in your investment mix — if any.", icon: "🏆", xpReward: 20, questions: [] },
+      { id: "pf-u8-L15", title: "Crypto Terms Blitz", description: "Race the clock on blockchain, Bitcoin, wallets, and crypto vocabulary.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+    ],
+  },
+
+  // ── Unit 13: Big Money Moves ──
   {
     id: "pf-u12-big-moves",
     title: "Big Money Moves",
@@ -288,6 +298,7 @@ export const financeCourseMeta: Unit[] = [
       { id: "pf-u12-L2", title: "Negotiation: Ask and You Shall Receive", description: "How to negotiate anything — salary, bills, prices, contracts.", icon: "🤝", xpReward: 15, questions: [] },
       { id: "pf-u12-L3", title: "Marriage & Money: The Merge", description: "Combining finances with a partner without destroying the relationship.", icon: "💑", xpReward: 15, questions: [] },
       { id: "pf-u12-L4", title: "Teaching Kids About Money", description: "Age-appropriate ways to raise financially smart kids.", icon: "👧", xpReward: 15, questions: [] },
+      { id: "pf-u12-L14", title: "A Major Financial Decision", description: "Your friend is deciding whether to leave their job to start a business.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
       { id: "pf-u12-L12", title: "The 10-Year Wealth Builder", description: "Make a decade of compounding decisions in this interactive timeline.", icon: "🔀", type: "timeline", xpReward: 20, questions: [] },
       { id: "pf-u12-L5", title: "Side Hustles That Actually Work", description: "Real ways to earn extra income — not get-rich-quick schemes.", icon: "💼", xpReward: 15, questions: [] },
       { id: "pf-u12-L6", title: "Multiple Income Streams", description: "Why relying on one paycheck is risky — and how to diversify.", icon: "🌊", xpReward: 15, questions: [] },
@@ -297,6 +308,7 @@ export const financeCourseMeta: Unit[] = [
       { id: "pf-u12-L9", title: "Building Wealth on Any Salary", description: "You don't need a huge income — you need the right habits.", icon: "🧱", xpReward: 15, questions: [] },
       { id: "pf-u12-L10", title: "Money Mindset: Think Like the Rich", description: "How your beliefs about money secretly control your outcomes.", icon: "🧠", xpReward: 15, questions: [] },
       { id: "pf-u12-L11", title: "Your Lifetime Money Action Plan", description: "Everything comes together — build your personalized financial roadmap.", icon: "🏆", xpReward: 20, questions: [] },
+      { id: "pf-u12-L15", title: "Advanced Finance Blitz", description: "Race the clock on net worth, negotiation, income streams, and wealth building.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
     ],
   },
 ];

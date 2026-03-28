@@ -5,7 +5,7 @@ import { useCourseStore } from '@/store/useCourseStore';
 import LessonView from '@/components/lesson/LessonView';
 import type { SessionAdapter } from '@/components/lesson/LessonView';
 
-const TEST_THEME = { color: '#6366F1', dark: '#4338CA', bg: '#EEF2FF' };
+const TEST_THEME = { color: 'var(--color-primary-500)', dark: 'var(--color-primary-700)', bg: 'var(--color-primary-50)' };
 
 export default function PlacementTestView() {
   const test = useCourseStore((s) => s.activePlacementTest);

@@ -11,14 +11,14 @@ export function CourseIcon({ professionId, color, size = 22 }: CourseIconProps) 
         {/* Gear body */}
         <path
           d="M12 1.5l2.1 2.4h3l.9 2.9 2.6 1.5-.3 3 1.7 2.5-1.7 2.5.3 3-2.6 1.5-.9 2.9h-3L12 22.5l-2.1-2.3h-3l-.9-2.9-2.6-1.5.3-3L2 10.3l1.7-2.5-.3-3L6 3.3l.9-2.9h3L12 1.5Z"
-          fill="#4F46E5"
+          fill="#2563EB"
         />
         {/* Gear inner ring */}
-        <circle cx="12" cy="12" r="6.5" fill="#6366F1" />
+        <circle cx="12" cy="12" r="6.5" fill="#3B82F6" />
         {/* Gear highlight ring */}
         <circle cx="12" cy="12" r="5" fill="#818CF8" />
         {/* Center hub */}
-        <circle cx="12" cy="12" r="2.8" fill="#4F46E5" />
+        <circle cx="12" cy="12" r="2.8" fill="#2563EB" />
         {/* Center dot */}
         <circle cx="12" cy="12" r="1.3" fill="#C7D2FE" />
         {/* Wrench accent */}

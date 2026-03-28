@@ -19,7 +19,7 @@ export const unit12: Unit = {
           id: "pf-u12-L1-T1",
           type: "teaching",
           question: "Before You Swipe: The Big Purchase Framework",
-          explanation: "Here's the deal: anyone can buy stuff. The hard part is knowing when a big purchase is smart and when it's a trap.",
+          explanation: "Anyone can buy stuff. The hard part is knowing when a big purchase is smart and when it's a trap.",
           hint: "The most expensive mistakes happen when you skip the thinking step and go straight to 'add to cart.'",
         },
         {
@@ -140,14 +140,14 @@ export const unit12: Unit = {
           id: "pf-u12-L2-T1",
           type: "teaching",
           question: "The Art of Asking for More",
-          explanation: "Most people leave thousands of dollars on the table every year because they never ask. Your rent?",
+          explanation: "Most people leave thousands of dollars on the table every year because they never ask. Your rent, salary, credit card rate, and medical bills are all negotiable.",
           hint: "People who negotiate their starting salary earn an average of $1 million more over their career than those who don't.",
         },
         {
           id: "pf-u12-L2-T2",
           type: "teaching",
           question: "The Negotiation Playbook",
-          explanation: "Here's the playbook that works everywhere: research the market rate, ask for more than you expect, listen to their counter, be willing to walk away, and get it in writing. The person with the most information and the least desperation always wins.",
+          explanation: "The playbook that works everywhere: research the market rate, ask for more than you expect, listen to their counter, be willing to walk away, and get it in writing.",
           hint: "The person with the most information and the least desperation always wins the negotiation.",
         },
         {
@@ -386,7 +386,7 @@ export const unit12: Unit = {
           id: "pf-u12-L4-T1",
           type: "teaching",
           question: "Raising Money-Smart Kids",
-          explanation: "Here's a wild stat: most money habits are formed by age 7. Seven!",
+          explanation: "Most money habits are formed by age 7. That makes early financial education one of the most impactful gifts you can give a child.",
           hint: "The best money lessons happen naturally. At the grocery store, during allowance time, or when explaining why you're choosing the generic brand.",
         },
         {
@@ -486,6 +486,124 @@ export const unit12: Unit = {
       ],
     },
 
+    // ===== CONVERSATION: A Major Financial Decision =====
+    {
+      id: "pf-u12-L14",
+      title: "A Major Financial Decision",
+      description: "Your friend is deciding whether to leave their job to start a business. Help them think it through.",
+      icon: "\u{1F4AC}",
+      type: "conversation",
+      xpReward: 20,
+      questions: [],
+      conversationStartNodeId: "pf-u12-L14-C1",
+      conversationNodes: [
+        {
+          id: "pf-u12-L14-C1",
+          speaker: "Leah",
+          message: "I want to quit my job and start my own bakery. I've been dreaming about this for years, but I'm terrified. Should I just go for it?",
+          nextNodeId: "pf-u12-L14-C2",
+        },
+        {
+          id: "pf-u12-L14-C2",
+          speaker: "Leah",
+          message: "What should I think about first?",
+          options: [
+            {
+              text: "Before quitting, check your financial runway. How many months of expenses can you cover without income while the business gets going?",
+              nextNodeId: "pf-u12-L14-C3",
+              quality: "great",
+              feedback: "Financial runway is the #1 factor. Most businesses take 6-18 months to become profitable. You need savings to bridge that gap.",
+            },
+            {
+              text: "Follow your passion! Life is too short to play it safe.",
+              nextNodeId: "pf-u12-L14-C3",
+              quality: "poor",
+              feedback: "Passion is important, but passion without a financial plan leads to stress and failure. Smart risk-taking beats reckless risk-taking.",
+            },
+            {
+              text: "Maybe start the bakery as a side project while keeping your job.",
+              nextNodeId: "pf-u12-L14-C3",
+              quality: "okay",
+              feedback: "Testing the idea part-time is smart, but eventually she'll need to evaluate the full leap. Financial readiness is key.",
+            },
+          ],
+        },
+        {
+          id: "pf-u12-L14-C3",
+          speaker: "Leah",
+          message: "I have about $20,000 saved. My monthly expenses are $3,500. My job pays $65,000 a year. Is $20,000 enough to make the jump?",
+          nextNodeId: "pf-u12-L14-C4",
+        },
+        {
+          id: "pf-u12-L14-C4",
+          speaker: "Leah",
+          message: "Be honest with me.",
+          options: [
+            {
+              text: "$20K covers about 5-6 months of personal expenses, but you'll also need startup costs. Build a buffer of 12 months of expenses before quitting.",
+              nextNodeId: "pf-u12-L14-C5",
+              quality: "great",
+              feedback: "Separating personal runway from business startup costs is crucial. $20K might cover living expenses, but the bakery needs its own budget.",
+            },
+            {
+              text: "$20K is plenty. Plenty of businesses started with less.",
+              nextNodeId: "pf-u12-L14-C5",
+              quality: "poor",
+              feedback: "Survivorship bias is dangerous. For every success story that started with nothing, many more failed due to underfunding.",
+            },
+            {
+              text: "It's tight. Maybe save for another year or two first.",
+              nextNodeId: "pf-u12-L14-C5",
+              quality: "okay",
+              feedback: "More savings help, but giving a specific target (12 months of expenses + startup costs) is more actionable than 'save more.'",
+            },
+          ],
+        },
+        {
+          id: "pf-u12-L14-C5",
+          speaker: "Narrator",
+          message: "Leah creates a spreadsheet with two columns: personal expenses ($3,500/month x 12 = $42,000) and estimated bakery startup costs ($15,000). Her target savings: $57,000.",
+          nextNodeId: "pf-u12-L14-C6",
+        },
+        {
+          id: "pf-u12-L14-C6",
+          speaker: "Leah",
+          message: "That's way more than I have. But I don't want to wait 2 more years. Is there a middle path?",
+          options: [
+            {
+              text: "Start selling baked goods on weekends while you work. Build a customer base, test your recipes, and save aggressively. When revenue covers your expenses, make the leap.",
+              nextNodeId: "pf-u12-L14-C7",
+              quality: "great",
+              feedback: "Starting part-time reduces risk, builds proof of concept, and lets you save. Many successful businesses started exactly this way.",
+            },
+            {
+              text: "Take out a small business loan to cover the gap.",
+              nextNodeId: "pf-u12-L14-C7",
+              quality: "okay",
+              feedback: "Business loans are an option, but adding debt before you have revenue increases pressure. Testing the concept first is safer.",
+            },
+            {
+              text: "Just quit and figure it out. Pressure makes people perform better.",
+              nextNodeId: "pf-u12-L14-C7",
+              quality: "poor",
+              feedback: "Financial pressure causes stress and bad decisions. Burning bridges before you're ready is the top reason small businesses fail.",
+            },
+          ],
+        },
+        {
+          id: "pf-u12-L14-C7",
+          speaker: "Leah",
+          message: "Weekend baking business, keep my job, build savings, and transition when I have real customers. This actually feels doable now. Thank you!",
+          nextNodeId: "pf-u12-L14-C8",
+        },
+        {
+          id: "pf-u12-L14-C8",
+          speaker: "Narrator",
+          message: "You helped Leah turn an impulsive dream into a calculated plan: test the concept part-time, build savings, and transition when the numbers work. Big money moves aren't about being fearless. They're about being prepared.",
+        },
+      ],
+    },
+
     // ===== LESSON 5: Side Hustles That Actually Work =====
     {
       id: "pf-u12-L5",
@@ -505,7 +623,7 @@ export const unit12: Unit = {
           id: "pf-u12-L5-T2",
           type: "teaching",
           question: "Picking the Right Side Hustle",
-          explanation: "Here's the filter: Does it use a skill you have? Can you start in under a week?",
+          explanation: "The filter for a good side hustle: Does it use a skill you have? Can you start in under a week?",
           hint: "If a side hustle requires you to buy a $997 course first, it's not a side hustle. It's someone else's side hustle (selling you the course).",
         },
         {
@@ -731,7 +849,7 @@ export const unit12: Unit = {
           type: "teaching",
           question: "Forget Income. Net Worth Is Your Real Score",
           explanation: "Someone earning $200,000/year with $300,000 in debt is poorer than someone earning $50,000/year with $100,000 saved. Income is what flows in.",
-          hint: "Check your net worth at least once a month. Watching it grow (or shrink) gives you instant feedback on whether your habits are working.",
+          hint: "Try this now: calculate your net worth by adding up everything you own and subtracting everything you owe.",
         },
         {
           id: "pf-u12-L7-Q1",
@@ -955,7 +1073,7 @@ export const unit12: Unit = {
           id: "pf-u12-L9-T1",
           type: "teaching",
           question: "Wealth Isn't About How Much You Earn",
-          explanation: "Here's a fact that shocks most people: about one-third of millionaires never earned a six-figure salary. They built wealth through consistent habits, not huge paychecks.",
+          explanation: "About one-third of millionaires never earned a six-figure salary. They built wealth through consistent habits, not huge paychecks.",
           hint: "The Millionaire Next Door research found that most millionaires drive used cars, live in average neighborhoods, and avoid luxury brands. Wealth is what you keep, not what you show.",
         },
         {
@@ -1070,7 +1188,7 @@ export const unit12: Unit = {
           id: "pf-u12-L10-T1",
           type: "teaching",
           question: "Your Money Mindset Is Running the Show",
-          explanation: "Here's the thing nobody talks about: your beliefs about money control your financial behavior more than any budget ever will. If you grew up hearing 'money is evil' or 'rich people are greedy,' your subconscious will sabotage every attempt to build wealth.",
+          explanation: "Your beliefs about money control your financial behavior more than any budget ever will. If you grew up hearing 'money is evil' or 'rich people are greedy,' your subconscious will sabotage every attempt to build wealth.",
           hint: "Ask yourself: what did your parents say about money? What did you learn about wealthy people? Those early messages are still running in the background.",
         },
         {
@@ -1193,7 +1311,7 @@ export const unit12: Unit = {
           type: "teaching",
           question: "This Is Where It All Comes Together",
           explanation: "You've now learned more about money than most adults ever will. Your Lifetime Money Action Plan is a living document that evolves as your life changes.",
-          hint: "The best financial plan is the one you actually follow. Simple beats complex every time.",
+          hint: "Try this now: write down your top 3 financial goals for the next year and one action step for each.",
         },
         {
           id: "pf-u12-L11-T2",
@@ -1551,6 +1669,92 @@ export const unit12: Unit = {
         {
           id: "pf-u12-L13-CS5",
           content: "**Priya's Negotiation Scorecard**\n\n| Factor | Before | After | Change |\n|--------|--------|-------|--------|\n| Base salary | $78,000 | $93,000 | +$15,000 (19%) |\n| Bonus | 10% ($7,800) | 12% ($11,160) | +$3,360 |\n| Title | Marketing Manager | Senior Manager | Promotion |\n| RSUs | $0 | $5,000 | New benefit |\n| Total comp change |. |. | +$23,360/year |\n\n**What made this work:**\n\n1. **Preparation over improvisation.** Priya had data, achievements, and a number before the meeting.\n2. **Led with value, not threats.** She sold her contributions before mentioning the competing offer.\n3. **Named a specific number.** '$98K' anchors the negotiation higher than 'I want a raise.'\n4. **Had a walk-away number.** This prevented her from accepting the first lowball ($85K).\n5. **Negotiated the final dollar.** That last $1K counter showed confidence and yielded results.\n6. **Considered total compensation.** Title, RSUs, culture, and growth path matter as much as base salary.\n\n**Lifetime impact:** That $15K raise, compounded with future raises built on this higher base, is worth **$500K+** over her career.",
+        },
+      ],
+    },
+
+    // ===== SPEED ROUND: Advanced Finance Blitz =====
+    {
+      id: "pf-u12-L15",
+      title: "Advanced Finance Blitz",
+      description: "Race the clock on net worth, negotiation, income streams, and wealth building.",
+      icon: "\u26A1",
+      type: "speed-round",
+      xpReward: 20,
+      questions: [],
+      speedTimeLimit: 60,
+      speedQuestions: [
+        {
+          id: "pf-u12-L15-SQ1",
+          question: "Net worth equals:",
+          options: ["Income minus taxes", "Assets minus liabilities", "Savings plus investments", "Salary times years"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ2",
+          question: "The FIRE movement stands for:",
+          options: ["Fast Income, Rapid Earnings", "Financial Independence, Retire Early", "Fixed Interest Rate Earnings", "Free Investment Returns Early"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ3",
+          question: "Passive income requires:",
+          options: ["No work ever", "Upfront effort, then less ongoing work", "A high salary", "A business degree"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ4",
+          question: "When negotiating salary, lead with:",
+          options: ["Threats to leave", "Your value and achievements", "Your personal expenses", "Your coworker's salary"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ5",
+          question: "A good big-purchase rule is to:",
+          options: ["Buy now, think later", "Wait 24-48 hours before deciding", "Always finance it", "Ask friends first"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ6",
+          question: "Multiple income streams reduce:",
+          options: ["Your taxes", "Financial risk", "Your workload", "Investment returns"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ7",
+          question: "Lifestyle creep happens when:",
+          options: ["Prices rise", "You spend more as you earn more", "You lose your job", "Taxes increase"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ8",
+          question: "A walk-away number in negotiation is:",
+          options: ["Your dream salary", "The minimum you'll accept", "The market average", "Your current salary"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ9",
+          question: "Total compensation includes:",
+          options: ["Base salary only", "Salary, benefits, equity, and perks", "Just salary and bonus", "Only what's on your paycheck"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ10",
+          question: "The best time to start building wealth is:",
+          options: ["After 40", "When you're debt-free", "As early as possible", "When you earn six figures"],
+          correctIndex: 2,
+        },
+        {
+          id: "pf-u12-L15-SQ11",
+          question: "Joint finances with a partner should start with:",
+          options: ["Merging everything", "An honest money conversation", "Separate accounts forever", "A prenup"],
+          correctIndex: 1,
+        },
+        {
+          id: "pf-u12-L15-SQ12",
+          question: "The most important money habit is:",
+          options: ["Earning more", "Spending less", "Consistency over time", "Picking great stocks"],
+          correctIndex: 2,
         },
       ],
     },

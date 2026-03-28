@@ -110,7 +110,7 @@ export default function UserSearch() {
                 >
                   <div
                     className="rounded-full flex items-center justify-center overflow-hidden shrink-0"
-                    style={{ width: 36, height: 36, background: '#E0E7FF' }}
+                    style={{ width: 36, height: 36, background: '#DBEAFE' }}
                   >
                     {user.image ? (
                       <Image src={user.image} alt={user.displayName} width={36} height={36} className="w-full h-full object-cover" />

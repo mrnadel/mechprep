@@ -83,7 +83,7 @@ export const unit0: Unit = {
             "You lose money",
           ],
           correctIndex: 0,
-          explanation: "3,000 - 2,800 = 200 left over. That's money you could save or invest.",
+          explanation: "3,000 - 2,800 = 200 left over. That's money you could save.",
         },
         {
           id: "pf-u0-L1-Q7",
@@ -124,7 +124,7 @@ export const unit0: Unit = {
           options: [
             "How much money is in your account right now",
             "How much the bank charges you",
-            "Your credit score",
+            "The bank's profit margin",
             "How much you owe the bank",
           ],
           correctIndex: 0,

@@ -6,7 +6,7 @@ import { LayoutDashboard, BookOpen, Trophy, User, Swords } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const tabs = [
-  { href: '/', label: 'Home', icon: LayoutDashboard, activeColor: 'text-indigo-600', activeBg: 'bg-indigo-50', inactiveColor: 'text-slate-400' },
+  { href: '/', label: 'Home', icon: LayoutDashboard, activeColor: 'text-primary-600', activeBg: 'bg-primary-50', inactiveColor: 'text-slate-400' },
   { href: '/quests', label: 'Quests', icon: Swords, activeColor: 'text-orange-500', activeBg: 'bg-orange-50', inactiveColor: 'text-slate-400' },
   { href: '/practice/topics', label: 'Practice', icon: BookOpen, activeColor: 'text-emerald-600', activeBg: 'bg-emerald-50', inactiveColor: 'text-slate-400' },
   { href: '/league', label: 'League', icon: Trophy, activeColor: 'text-amber-500', activeBg: 'bg-amber-50', inactiveColor: 'text-slate-400' },

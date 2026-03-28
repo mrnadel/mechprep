@@ -12,8 +12,8 @@ const ONBOARDED_KEY = 'mechready-onboarded';
 const STEPS = [
   {
     icon: Zap,
-    color: '#6366F1',
-    bg: '#EEF2FF',
+    color: '#3B82F6',
+    bg: '#EFF6FF',
     title: 'Bite-sized lessons',
     desc: 'Each lesson is 5–10 questions. Learn in just a few minutes a day.',
   },
@@ -98,7 +98,7 @@ export default function OnboardingPage() {
               animate={{
                 width: i === step ? 24 : 8,
                 height: 8,
-                backgroundColor: i <= step ? '#6366F1' : '#E5E7EB',
+                backgroundColor: i <= step ? '#3B82F6' : '#E5E7EB',
               }}
               transition={{ duration: 0.3 }}
             />

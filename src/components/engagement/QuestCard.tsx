@@ -31,7 +31,7 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
         {/* Icon */}
         <div
           className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-lg text-base"
-          style={{ background: isComplete ? '#DCFCE7' : '#EEF2FF' }}
+          style={{ background: isComplete ? '#DCFCE7' : '#EFF6FF' }}
         >
           {quest.icon}
         </div>
@@ -56,7 +56,7 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
                   ? '#A3E635'
                   : isComplete
                     ? 'linear-gradient(90deg, #34D399, #10B981)'
-                    : 'linear-gradient(90deg, #818CF8, #6366F1)',
+                    : 'linear-gradient(90deg, #818CF8, #3B82F6)',
               }}
             />
           </div>
@@ -137,7 +137,7 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
               style={{
                 background: isComplete
                   ? 'linear-gradient(90deg, #34D399, #10B981)'
-                  : 'linear-gradient(90deg, #818CF8, #6366F1)',
+                  : 'linear-gradient(90deg, #818CF8, #3B82F6)',
               }}
             />
           </div>
