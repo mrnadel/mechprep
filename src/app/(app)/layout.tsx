@@ -4,40 +4,12 @@ import { useSession } from 'next-auth/react';
 import { useDbSync } from '@/hooks/useDbSync';
 import { DebugTierToggle } from '@/components/dev/DebugTierToggle';
 import { useEngagementInit } from '@/lib/engagement-init';
-import { APP_NAME } from '@/lib/constants';
 import Footer from '@/components/layout/Footer';
 import MobileBottomNav from '@/components/layout/MobileBottomNav';
 import DesktopSideNav from '@/components/layout/DesktopSideNav';
 import { ToastContainer } from '@/components/ui/ToastNotification';
 import { StoreToastBridge } from '@/components/ui/StoreToastBridge';
 import { PushPrompt } from '@/components/engagement/PushPrompt';
-
-function LoadingSkeleton() {
-  return (
-    <div className="fixed inset-0 z-[9999] bg-[#FFB800] flex flex-col items-center justify-center">
-      <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-4 animate-pulse">
-        <span className="text-3xl font-black text-white select-none">M</span>
-      </div>
-      <p className="text-xl font-black text-white tracking-tight mb-6">{APP_NAME}</p>
-      <div className="w-32 h-1 bg-white/30 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-white rounded-full"
-          style={{
-            animation: 'loader-slide 1.2s ease-in-out infinite',
-            width: '40%',
-          }}
-        />
-      </div>
-      <style>{`
-        @keyframes loader-slide {
-          0% { transform: translateX(-100%); }
-          50% { transform: translateX(180%); }
-          100% { transform: translateX(-100%); }
-        }
-      `}</style>
-    </div>
-  );
-}
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { status } = useSession();
@@ -48,15 +20,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   useEngagementInit(isHydrated);
 
   const isAuthenticated = status === 'authenticated';
-  const isLoading = status === 'loading';
-
-  // Show branded loader while session loads or authenticated user hydrates data
-  if (isLoading || (isAuthenticated && !isHydrated)) {
-    return <LoadingSkeleton />;
-  }
 
   // Unauthenticated users (landing page) get full-width layout
-  if (!isAuthenticated) {
+  if (status !== 'loading' && !isAuthenticated) {
     return (
       <div className="min-h-screen flex flex-col">
         <div id="main-content" className="flex-1">{children}</div>
