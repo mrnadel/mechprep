@@ -110,8 +110,8 @@ export const courseProgressSyncSchema = z.object({
     longestStreak: z.number().int().min(0).max(MAX_STREAK),
     lastActiveDate: z.string(),
     completedLessons: z.record(z.string(), z.object({
-      stars: z.number().min(0),
-      bestAccuracy: z.number().min(0),
+      stars: z.number().int().min(0).max(10),
+      bestAccuracy: z.number().min(0).max(100),
       attempts: z.number().int().min(0),
       lastAttempted: z.string(),
     }).passthrough()).optional(),
