@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, type ReactNode } from 'react';
+import { useState, useEffect, useRef, type ReactNode } from 'react';
 import { MotionConfig } from 'framer-motion';
 
 // Real components
@@ -282,8 +282,22 @@ export default function GalleryClient() {
 // ─── Phone Frame ─────────────────────────────────────
 
 function PhoneFrame({ screen, onClick }: { screen: ScreenDef; onClick: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { rootMargin: '200px' },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+    <div ref={ref} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
       <div style={{ fontSize: 11, fontWeight: 700, color: '#555', textTransform: 'uppercase', letterSpacing: 1 }}>
         {screen.label}
       </div>
@@ -296,9 +310,15 @@ function PhoneFrame({ screen, onClick }: { screen: ScreenDef; onClick: () => voi
           transform: 'scale(1)',
         }}
       >
-        <div style={{ pointerEvents: 'none', width: '100%', height: '100%' }} className="gallery-phone-frame">
-          <ScreenRenderer screen={screen} />
-        </div>
+        {visible ? (
+          <div style={{ pointerEvents: 'none', width: '100%', height: '100%' }} className="gallery-phone-frame">
+            <ScreenRenderer screen={screen} />
+          </div>
+        ) : (
+          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#333', fontSize: 13 }}>
+            Loading...
+          </div>
+        )}
         {/* Force sm: responsive classes to render as mobile (full-screen) */}
         <style>{`
           .gallery-phone-frame .sm\\:h-auto { height: 100% !important; }
