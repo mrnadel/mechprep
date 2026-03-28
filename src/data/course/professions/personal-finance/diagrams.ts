@@ -3,6 +3,173 @@
  * Style: Duolingo palette, flat fills, no outlines, rounded everything.
  */
 
+// ═══════════════════════════════
+// CONCEPT ICONS (small, per-question)
+// ═══════════════════════════════
+
+/** Single gold coin */
+export const iconCoin = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="64" r="42" fill="#E7A601"/>
+  <circle cx="60" cy="60" r="42" fill="#FFC800"/>
+  <circle cx="60" cy="60" r="32" fill="#FFD54F"/>
+  <circle cx="60" cy="60" r="26" fill="#FFC800"/>
+  <text x="60" y="70" text-anchor="middle" font-size="28" font-weight="900" fill="#E7A601" font-family="system-ui">$</text>
+  <circle cx="46" cy="46" r="6" fill="#FFE680" opacity="0.6"/>
+</svg>`;
+
+/** Stack of coins growing */
+export const iconCoinStack = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="36" cy="92" rx="20" ry="6" fill="#E7A601"/>
+  <rect x="16" y="80" width="40" height="12" rx="4" fill="#FFC800"/>
+  <ellipse cx="36" cy="80" rx="20" ry="6" fill="#FFD54F"/>
+
+  <ellipse cx="60" cy="82" rx="20" ry="6" fill="#E7A601"/>
+  <rect x="40" y="62" width="40" height="20" rx="4" fill="#FFC800"/>
+  <ellipse cx="60" cy="62" rx="20" ry="6" fill="#FFD54F"/>
+
+  <ellipse cx="84" cy="72" rx="20" ry="6" fill="#E7A601"/>
+  <rect x="64" y="40" width="40" height="32" rx="4" fill="#FFC800"/>
+  <ellipse cx="84" cy="40" rx="20" ry="6" fill="#FFD54F"/>
+  <circle cx="76" cy="34" r="4" fill="#FFE680" opacity="0.5"/>
+</svg>`;
+
+/** Coffee cup */
+export const iconCoffee = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="28" y="36" width="56" height="64" rx="10" fill="#A56644"/>
+  <rect x="28" y="36" width="56" height="20" rx="10" fill="#CD7900"/>
+  <rect x="82" y="50" width="16" height="24" rx="8" fill="none" stroke="#A56644" stroke-width="6"/>
+  <ellipse cx="56" cy="36" rx="30" ry="8" fill="#E5A259"/>
+  <rect x="22" y="96" width="68" height="8" rx="4" fill="#8B5722"/>
+  <path d="M42,26 Q46,16 50,26" fill="none" stroke="#D2E4E8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M54,22 Q58,10 62,22" fill="none" stroke="#D2E4E8" stroke-width="3" stroke-linecap="round"/>
+</svg>`;
+
+/** Piggy bank */
+export const iconPiggy = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="58" cy="68" rx="38" ry="30" fill="#FFAADE"/>
+  <ellipse cx="58" cy="70" rx="38" ry="30" fill="#FF7EB3"/>
+  <circle cx="88" cy="56" r="8" fill="#FFAADE"/>
+  <circle cx="32" cy="58" r="6" fill="#FFAADE"/>
+  <ellipse cx="94" cy="64" rx="6" ry="4" fill="#FF7EB3"/>
+  <circle cx="94" cy="62" r="2" fill="#4B4B4B"/>
+  <circle cx="80" cy="52" r="3" fill="#4B4B4B"/>
+  <rect x="44" y="90" width="8" height="14" rx="4" fill="#FFAADE"/>
+  <rect x="64" y="90" width="8" height="14" rx="4" fill="#FFAADE"/>
+  <rect x="48" y="30" width="20" height="6" rx="3" fill="#FFC800"/>
+  <circle cx="52" cy="28" r="4" fill="#FFC800"/>
+  <circle cx="64" cy="28" r="4" fill="#FFC800"/>
+</svg>`;
+
+/** Paycheck/receipt */
+export const iconPaycheck = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="16" width="80" height="92" rx="8" fill="#DDF4FF"/>
+  <rect x="20" y="16" width="80" height="24" rx="8" fill="#1CB0F6"/>
+  <text x="60" y="33" text-anchor="middle" font-size="11" font-weight="800" fill="white" font-family="system-ui">PAYCHECK</text>
+  <rect x="30" y="50" width="50" height="6" rx="3" fill="#84D8FF"/>
+  <rect x="30" y="62" width="40" height="6" rx="3" fill="#84D8FF"/>
+  <rect x="30" y="74" width="45" height="6" rx="3" fill="#84D8FF"/>
+  <rect x="30" y="90" width="60" height="8" rx="4" fill="#58CC02"/>
+  <text x="60" y="97" text-anchor="middle" font-size="8" font-weight="800" fill="white" font-family="system-ui">NET: $3,200</text>
+</svg>`;
+
+/** Shopping bag (wants) */
+export const iconShoppingBag = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="24" y="40" width="72" height="64" rx="12" fill="#FF9600"/>
+  <rect x="24" y="40" width="72" height="16" rx="8" fill="#CC6B00"/>
+  <path d="M42,40 L42,28 Q42,16 60,16 Q78,16 78,28 L78,40" fill="none" stroke="#CC6B00" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="60" cy="74" r="12" fill="#FFC800"/>
+  <text x="60" y="79" text-anchor="middle" font-size="14" font-weight="900" fill="#CC6B00" font-family="system-ui">$</text>
+</svg>`;
+
+/** House (needs/rent) */
+export const iconHouse = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="28" y="52" width="64" height="48" rx="6" fill="#58CC02"/>
+  <polygon points="60,18 16,56 104,56" fill="#58A700"/>
+  <rect x="48" y="68" width="24" height="32" rx="4" fill="#A56644"/>
+  <circle cx="66" cy="84" r="2.5" fill="#E7A601"/>
+  <rect x="34" y="60" width="14" height="14" rx="3" fill="#84D8FF"/>
+  <rect x="72" y="60" width="14" height="14" rx="3" fill="#84D8FF"/>
+</svg>`;
+
+/** Calendar (monthly) */
+export const iconCalendar = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="24" width="80" height="76" rx="10" fill="#1CB0F6"/>
+  <rect x="20" y="24" width="80" height="22" rx="10" fill="#0F85BD"/>
+  <rect x="38" y="16" width="6" height="16" rx="3" fill="#0F85BD"/>
+  <rect x="76" y="16" width="6" height="16" rx="3" fill="#0F85BD"/>
+  <text x="60" y="40" text-anchor="middle" font-size="10" font-weight="800" fill="white" font-family="system-ui">MONTH</text>
+  <rect x="28" y="54" width="12" height="10" rx="3" fill="#84D8FF"/>
+  <rect x="44" y="54" width="12" height="10" rx="3" fill="#84D8FF"/>
+  <rect x="60" y="54" width="12" height="10" rx="3" fill="#84D8FF"/>
+  <rect x="76" y="54" width="12" height="10" rx="3" fill="#84D8FF"/>
+  <rect x="28" y="70" width="12" height="10" rx="3" fill="#84D8FF"/>
+  <rect x="44" y="70" width="12" height="10" rx="3" fill="#84D8FF"/>
+  <rect x="60" y="70" width="12" height="10" rx="3" fill="#58CC02"/>
+  <rect x="76" y="70" width="12" height="10" rx="3" fill="#84D8FF"/>
+  <rect x="28" y="86" width="12" height="10" rx="3" fill="#84D8FF"/>
+  <rect x="44" y="86" width="12" height="10" rx="3" fill="#84D8FF"/>
+</svg>`;
+
+/** Balance scale (needs vs wants) */
+export const iconScale = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="56" y="28" width="8" height="60" rx="4" fill="#4B4B4B"/>
+  <polygon points="60,92 48,102 72,102" fill="#4B4B4B"/>
+  <rect x="20" y="24" width="80" height="8" rx="4" fill="#4B4B4B"/>
+  <rect x="16" y="30" width="30" height="6" rx="3" fill="#58CC02"/>
+  <rect x="8" y="36" width="46" height="24" rx="8" fill="#D7FFB8"/>
+  <text x="31" y="52" text-anchor="middle" font-size="9" font-weight="800" fill="#58A700" font-family="system-ui">NEEDS</text>
+  <rect x="74" y="30" width="30" height="6" rx="3" fill="#FF9600"/>
+  <rect x="66" y="36" width="46" height="24" rx="8" fill="#FFF0D4"/>
+  <text x="89" y="52" text-anchor="middle" font-size="9" font-weight="800" fill="#CC6B00" font-family="system-ui">WANTS</text>
+</svg>`;
+
+/** Subscription/recurring */
+export const iconSubscription = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="30" width="80" height="52" rx="10" fill="#CE82FF"/>
+  <rect x="30" y="40" width="60" height="32" rx="6" fill="#E8D5FF"/>
+  <circle cx="60" cy="56" r="10" fill="#CE82FF"/>
+  <polygon points="56,52 66,56 56,60" fill="white"/>
+  <text x="60" y="96" text-anchor="middle" font-size="10" font-weight="800" fill="#4B4B4B" font-family="system-ui">$13/mo</text>
+  <path d="M82,96 Q100,96 100,82 Q100,68 88,68" fill="none" stroke="#CE82FF" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="86,64 92,68 86,72" fill="#CE82FF"/>
+</svg>`;
+
+/** Calculator */
+export const iconCalculator = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="26" y="14" width="68" height="92" rx="12" fill="#1CB0F6"/>
+  <rect x="32" y="22" width="56" height="24" rx="6" fill="#0F85BD"/>
+  <text x="60" y="40" text-anchor="middle" font-size="14" font-weight="800" fill="#BBF2FF" font-family="system-ui">365</text>
+  <rect x="32" y="54" width="14" height="12" rx="4" fill="#84D8FF"/>
+  <rect x="52" y="54" width="14" height="12" rx="4" fill="#84D8FF"/>
+  <rect x="72" y="54" width="14" height="12" rx="4" fill="#84D8FF"/>
+  <rect x="32" y="72" width="14" height="12" rx="4" fill="#84D8FF"/>
+  <rect x="52" y="72" width="14" height="12" rx="4" fill="#84D8FF"/>
+  <rect x="72" y="72" width="14" height="12" rx="4" fill="#FFC800"/>
+  <rect x="32" y="90" width="34" height="12" rx="4" fill="#84D8FF"/>
+  <rect x="72" y="90" width="14" height="12" rx="4" fill="#58CC02"/>
+</svg>`;
+
+/** Emergency fund shield */
+export const iconShield = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <path d="M60,14 Q20,30 20,56 Q20,88 60,108 Q100,88 100,56 Q100,30 60,14Z" fill="#58CC02"/>
+  <path d="M60,24 Q30,36 30,56 Q30,80 60,98 Q90,80 90,56 Q90,36 60,24Z" fill="#A5ED6E"/>
+  <text x="60" y="56" text-anchor="middle" font-size="24" font-weight="900" fill="#58A700" font-family="system-ui">$</text>
+  <text x="60" y="76" text-anchor="middle" font-size="10" font-weight="800" fill="#58A700" font-family="system-ui">500</text>
+</svg>`;
+
+/** Automation/gear */
+export const iconAutomation = `<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="30" fill="#1CB0F6"/>
+  <circle cx="60" cy="60" r="20" fill="#84D8FF"/>
+  <circle cx="60" cy="60" r="8" fill="#1CB0F6"/>
+  <rect x="56" y="24" width="8" height="12" rx="4" fill="#1CB0F6"/>
+  <rect x="56" y="84" width="8" height="12" rx="4" fill="#1CB0F6"/>
+  <rect x="24" y="56" width="12" height="8" rx="4" fill="#1CB0F6"/>
+  <rect x="84" y="56" width="12" height="8" rx="4" fill="#1CB0F6"/>
+  <path d="M38,90 Q28,104 46,104" fill="none" stroke="#FFC800" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="48,100 48,108 54,104" fill="#FFC800"/>
+</svg>`;
+
 // ── Lesson 0: Small Money, Big Difference ──
 
 export const coinGrowthStaircase = `<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg">

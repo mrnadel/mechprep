@@ -1,5 +1,5 @@
 import type { Unit } from '../../../types';
-import { coinGrowthStaircase, timelineArrow, coffeeYearlyCost, spendingPieChart, fixedVsVariable, paycheckBreakdown, taxFlowDiagram, needsVsWants, budget502020, budgetBarSplit, payYourselfFirst } from '../diagrams';
+import { coinGrowthStaircase, timelineArrow, coffeeYearlyCost, spendingPieChart, fixedVsVariable, paycheckBreakdown, taxFlowDiagram, needsVsWants, budget502020, budgetBarSplit, payYourselfFirst, iconCoin, iconCoinStack, iconCoffee, iconPiggy, iconPaycheck, iconShoppingBag, iconHouse, iconCalendar, iconScale, iconSubscription, iconCalculator, iconShield, iconAutomation } from '../diagrams';
 
 export const unit1: Unit = {
   id: "pf-u1-your-money",
@@ -26,6 +26,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L0-Q1",
           type: "multiple-choice",
+          diagram: iconCoin,
           question: "If you save just 1 dollar every day, how much do you have after a month?",
           options: [
             "About 30",
@@ -66,6 +67,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L0-Q4",
           type: "fill-blank",
+          diagram: iconCalendar,
           question: "To find how much a daily expense costs per month, multiply by _____.",
           blanks: ["30"],
           wordBank: ["30", "7", "12", "52", "100", "10"],
@@ -83,6 +85,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L0-Q6",
           type: "multiple-choice",
+          diagram: iconPiggy,
           question: "You save 5/day instead of buying a snack. After one month you have about:",
           options: [
             "150",
@@ -129,6 +132,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L4-Q2",
           type: "multiple-choice",
+          diagram: iconCoffee,
           question: "If you buy 5 coffee every single day, how much is that per year?",
           options: [
             "About 500",
@@ -158,6 +162,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L4-Q4",
           type: "fill-blank",
+          diagram: iconCalculator,
           question: "To find the yearly cost of a daily purchase, multiply the price by _____.",
           blanks: ["365"],
           wordBank: ["365", "12", "52", "30", "7", "100"],
@@ -196,6 +201,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L4-Q8",
           type: "multiple-choice",
+          diagram: iconShoppingBag,
           question: "You buy a 6 lunch every workday. How much is that per year? (250 workdays)",
           options: [
             "1,500",
@@ -267,6 +273,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L2-Q4",
           type: "multiple-choice",
+          diagram: iconSubscription,
           question: "You pay 13/month for streaming, 10/month for music, 15/month for a gym you never go to, and 8/month for cloud storage. What's your yearly total?",
           options: [
             "552",
@@ -497,6 +504,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L1-Q5",
           type: "multiple-choice",
+          diagram: iconPaycheck,
           question: "You earn 4,000/month. Your bank shows 3,200. Where did the 800 go?",
           options: [
             "Bank fees and service charges",
@@ -589,6 +597,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L3-Q5",
           type: "multiple-choice",
+          diagram: iconScale,
           question: "A freelance designer says they 'need' a 3,000 laptop. Need or want?",
           options: [
             "A good laptop is a need, but 3,000 might add want on top",
@@ -689,6 +698,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L5-Q5",
           type: "multiple-choice",
+          diagram: iconAutomation,
           question: "Why is automating savings better than doing it manually?",
           options: [
             "You save before you can spend it",
@@ -827,6 +837,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L6-Q1",
           type: "multiple-choice",
+          diagram: iconPiggy,
           question: "What does 'pay yourself first' mean?",
           options: [
             "Put money into savings before spending on anything else",
@@ -862,6 +873,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L6-Q4",
           type: "multiple-choice",
+          diagram: iconShield,
           question: "What is a good first emergency fund goal?",
           options: [
             "500",
@@ -898,6 +910,7 @@ export const unit1: Unit = {
         {
           id: "pf-u1-L6-Q7",
           type: "multiple-choice",
+          diagram: iconCoinStack,
           question: "You save 50/month starting today. How much do you have after one year?",
           options: [
             "600",
