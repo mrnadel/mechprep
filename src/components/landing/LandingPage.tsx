@@ -5,28 +5,6 @@ import { useEffect, useRef, useState } from 'react';
 import { PROFESSIONS } from '@/data/professions';
 import { CourseIcon } from '@/components/course/CourseIcon';
 
-/* ── Animated XP bar fill ── */
-function useAnimatedFill(target: number, delay: number) {
-  const [width, setWidth] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => setWidth(target), delay);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [target, delay]);
-  return { ref, width };
-}
-
 /* ── Demo questions for interactive landing ── */
 const DEMO_QUESTIONS = [
   {
@@ -63,50 +41,22 @@ function AnimateIn({ children, className = '', delay = 0 }: { children: React.Re
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.15 }
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold: 0.15 },
     );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
   return (
-    <div
-      ref={ref}
-      className={className}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(24px)',
-        transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`,
-      }}
-    >
+    <div ref={ref} className={className} style={{
+      opacity: visible ? 1 : 0,
+      transform: visible ? 'translateY(0)' : 'translateY(24px)',
+      transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`,
+    }}>
       {children}
     </div>
   );
 }
-
-/* ── SVG Icons ── */
-const CheckIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }} aria-hidden="true">
-    <path d="M20 6L9 17l-5-5" stroke="#58CC02" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-const CrossIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }} aria-hidden="true">
-    <path d="M18 6L6 18M6 6l12 12" stroke="#E2E8F0" strokeWidth="2.5" strokeLinecap="round" />
-  </svg>
-);
-
-const PartialIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style={{ flexShrink: 0, marginTop: 1 }} aria-hidden="true">
-    <path d="M20 6L9 17l-5-5" stroke="#FBBF24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 
 /* ── Main Landing Page ── */
 export function LandingPage() {
@@ -114,21 +64,11 @@ export function LandingPage() {
     <div className="landing-page" style={{ fontFamily: "'Nunito', sans-serif", background: '#FAFAFA', color: '#0F172A', minHeight: '100vh' }}>
 
       {/* ── NAV ── */}
-      <nav aria-label="Main navigation" style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        background: '#FAFAFA',
-      }}>
-        <div style={{
-          maxWidth: 960, margin: '0 auto', padding: '0 24px',
-          height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        }}>
-          <Link href="/" style={{
-            fontSize: 24, fontWeight: 900,
-            letterSpacing: -0.5, textDecoration: 'none',
-            display: 'flex', alignItems: 'center', gap: 10,
-          }}>
+      <nav aria-label="Main navigation" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: '#FAFAFA' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Link href="/" style={{ fontSize: 24, fontWeight: 900, letterSpacing: -0.5, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
             <img src="/icon-48.png" alt="" width={34} height={34} style={{ borderRadius: 10, filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }} />
-            <span style={{ color: '#0D9488', textShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>Octokeen</span>
+            <span style={{ color: '#0D9488' }}>Octokeen</span>
           </Link>
           <Link href="/login" style={{
             fontSize: 14, fontWeight: 800, color: '#0D9488',
@@ -142,320 +82,125 @@ export function LandingPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="landing-hero-section" style={{ paddingTop: 120, paddingBottom: 80, textAlign: 'center' }}>
-        <div style={{ maxWidth: 700, margin: '0 auto', padding: '0 24px' }}>
+      <section className="landing-hero-section" style={{ paddingTop: 140, paddingBottom: 60, textAlign: 'center' }}>
+        <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 24px' }}>
           <AnimateIn>
-            <div style={{
-              display: 'inline-block', background: '#F0FDFA', color: '#0F766E',
-              fontSize: 13, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1,
-              padding: '6px 16px', borderRadius: 100, marginBottom: 24,
-            }}>
-              Free to start
-            </div>
-          </AnimateIn>
-
-          <AnimateIn delay={0.1}>
-            <h1 className="landing-hero-h1" style={{
-              fontWeight: 900, lineHeight: 1.1, color: '#3D4654',
-              marginBottom: 20, letterSpacing: -1,
-            }}>
-              Learn anything.<br /><span style={{ color: '#14B8A6' }}>Master everything.</span>
+            <h1 className="landing-hero-h1" style={{ fontWeight: 900, lineHeight: 1.1, color: '#1E293B', marginBottom: 20, letterSpacing: -1 }}>
+              The free, fun way to<br />
+              <span style={{ color: '#14B8A6' }}>master any profession</span>
             </h1>
           </AnimateIn>
 
-          <AnimateIn delay={0.2}>
-            <p className="landing-hero-p" style={{
-              fontWeight: 600, color: '#64748B', lineHeight: 1.6,
-              maxWidth: 540, margin: '0 auto 36px',
-            }}>
-              Octokeen turns learning into a game. Pick your profession, earn XP, keep your streak, unlock achievements &mdash; and actually remember what you learn.
+          <AnimateIn delay={0.1}>
+            <p className="landing-hero-p" style={{ fontWeight: 600, color: '#64748B', lineHeight: 1.6, maxWidth: 460, margin: '0 auto 40px' }}>
+              Bite-sized lessons. Real interview questions. Gamified from the ground up.
             </p>
           </AnimateIn>
 
-          <AnimateIn delay={0.3}>
-            <div className="landing-hero-actions" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
-              <Link
-                href="/get-started"
-                className="landing-btn-primary"
-                style={{
-                  display: 'inline-block', background: '#0D9488', color: '#fff',
-                  fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8,
-                  padding: '14px 36px', border: 'none', borderRadius: 16,
-                  boxShadow: '0 5px 0 #0F766E', textDecoration: 'none',
-                  transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
-                }}
-              >
-                Start playing free
-              </Link>
-              <Link
-                href="/login"
-                className="landing-btn-secondary"
-                style={{
-                  display: 'inline-block', color: '#3D4654', fontSize: 15, fontWeight: 700,
-                  textDecoration: 'none', padding: '12px 28px',
-                  border: '2px solid #E2E8F0', borderRadius: 16,
-                  transition: 'background 0.15s',
-                }}
-              >
-                I already have an account
-              </Link>
-            </div>
+          <AnimateIn delay={0.2}>
+            <Link
+              href="/get-started"
+              className="landing-btn-primary"
+              style={{
+                display: 'inline-block', background: '#0D9488', color: '#fff',
+                fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8,
+                padding: '16px 48px', border: 'none', borderRadius: 16,
+                boxShadow: '0 5px 0 #0F766E', textDecoration: 'none',
+                transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
+              }}
+            >
+              Get started
+            </Link>
           </AnimateIn>
 
-          <AnimateIn delay={0.4}>
-            <div className="landing-hero-stats" style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              gap: 32, marginTop: 40, flexWrap: 'wrap',
-            }}>
-              {[
-                { num: `${PROFESSIONS.length}`, label: 'Professions' },
-                { num: `${PROFESSIONS.reduce((sum, p) => sum + p.questionCount, 0).toLocaleString()}+`, label: 'Questions' },
-                { num: 'Free', label: 'To Start' },
-              ].map((s) => (
-                <div key={s.label} style={{ textAlign: 'center' }}>
-                  <div className="landing-stat-num" style={{ fontWeight: 900, color: '#3D4654' }}>{s.num}</div>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: 0.5 }}>
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
+          <AnimateIn delay={0.3}>
+            <p style={{ marginTop: 16, fontSize: 13, fontWeight: 600, color: '#94A3B8' }}>
+              <Link href="/login" style={{ color: '#0D9488', fontWeight: 700, textDecoration: 'none' }}>I already have an account</Link>
+            </p>
           </AnimateIn>
         </div>
       </section>
 
-
-      {/* ── INTERACTIVE DEMO SECTION ── */}
+      {/* ── INTERACTIVE DEMO ── */}
       <section className="landing-demo-section" style={{ padding: '0 24px 80px' }}>
-        <div style={{ maxWidth: 580, margin: '0 auto' }}>
+        <div style={{ maxWidth: 520, margin: '0 auto' }}>
           <AnimateIn>
-            <div style={{
-              textAlign: 'center', fontSize: 13, fontWeight: 800,
-              textTransform: 'uppercase', letterSpacing: 1.5, color: '#0F766E', marginBottom: 16,
-            }}>
-              Try it now
-            </div>
-          </AnimateIn>
-          <AnimateIn delay={0.1}>
             <h2 className="landing-section-heading" style={{
-              textAlign: 'center', fontWeight: 900,
-              color: '#3D4654', marginBottom: 40, letterSpacing: -0.5,
+              textAlign: 'center', fontWeight: 900, color: '#1E293B', marginBottom: 32, letterSpacing: -0.5,
             }}>
               Can you get all 3 right?
             </h2>
           </AnimateIn>
-          <AnimateIn delay={0.2}>
+          <AnimateIn delay={0.1}>
             <InteractiveDemo />
           </AnimateIn>
         </div>
       </section>
 
-      {/* ── COMPARISON SECTION ── */}
-      <section className="landing-compare-section" style={{
-        padding: '80px 24px', background: '#fff',
-        borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0',
-      }}>
-        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+      {/* ── PROFESSIONS ── */}
+      <section style={{ padding: '64px 24px', background: '#fff', borderTop: '1px solid #E2E8F0' }}>
+        <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
           <AnimateIn>
-            <div style={{
-              textAlign: 'center', fontSize: 13, fontWeight: 800,
-              textTransform: 'uppercase', letterSpacing: 1.5, color: '#0F766E', marginBottom: 16,
-            }}>
-              Why Octokeen?
-            </div>
-          </AnimateIn>
-          <AnimateIn delay={0.1}>
-            <div className="landing-section-heading" style={{
-              textAlign: 'center', fontWeight: 900,
-              color: '#3D4654', marginBottom: 40, letterSpacing: -0.5,
-            }}>
-              Not all prep methods are equal
-            </div>
-          </AnimateIn>
-
-          <div className="landing-compare-grid" style={{ display: 'grid', gap: 24, marginBottom: 48 }}>
-            {/* Textbook */}
-            <AnimateIn delay={0}>
-              <CompareCard
-                iconBg="#FEE2E2"
-                iconColor="#DC2626"
-                icon={<><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></>}
-                title="Textbooks"
-                subtitle="Passive reading"
-                items={[
-                  { text: 'Dense walls of theory', type: 'cross' },
-                  { text: 'No feedback on understanding', type: 'cross' },
-                  { text: 'Easy to zone out', type: 'cross' },
-                  { text: 'Not interview-focused', type: 'cross' },
-                ]}
-              />
-            </AnimateIn>
-
-            {/* Flashcards */}
-            <AnimateIn delay={0.1}>
-              <CompareCard
-                iconBg="#FEF3C7"
-                iconColor="#D97706"
-                icon={<><rect x="2" y="4" width="16" height="14" rx="2" /><path d="M6 2h12a2 2 0 0 1 2 2v12" /></>}
-                title="Flashcards"
-                subtitle="Recall practice"
-                items={[
-                  { text: 'Tests memorization only', type: 'partial' },
-                  { text: 'No problem-solving practice', type: 'cross' },
-                  { text: 'Gets repetitive fast', type: 'cross' },
-                  { text: 'No progress tracking', type: 'cross' },
-                ]}
-              />
-            </AnimateIn>
-
-            {/* Octokeen (featured) */}
-            <AnimateIn delay={0.2}>
-              <CompareCard
-                featured
-                iconBg="#DCFCE7"
-                iconColor="#16A34A"
-                icon={<><line x1="6" y1="12" x2="18" y2="12" /><line x1="12" y1="6" x2="12" y2="18" /><rect x="2" y="6" width="20" height="12" rx="3" /></>}
-                title="Octokeen"
-                subtitle="Active + fun"
-                items={[
-                  { text: '11 interactive question types', type: 'check' },
-                  { text: 'Instant feedback & explanations', type: 'check' },
-                  { text: 'XP, streaks & achievements', type: 'check' },
-                  { text: 'Built for real interview questions', type: 'check' },
-                ]}
-              />
-            </AnimateIn>
-          </div>
-
-          <AnimateIn delay={0.3}>
-            <div style={{ textAlign: 'center' }}>
-              <Link
-                href="/get-started"
-                className="landing-btn-primary"
-                style={{
-                  display: 'inline-block', background: '#0D9488', color: '#fff',
-                  fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8,
-                  padding: '14px 36px', border: 'none', borderRadius: 16,
-                  boxShadow: '0 5px 0 #0F766E', textDecoration: 'none',
-                  transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
-                }}
-              >
-                Start learning for free
-              </Link>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
-
-      {/* ── PROFESSIONS SECTION ── */}
-      <section className="landing-topics-section" style={{ padding: '80px 24px' }}>
-        <div style={{ maxWidth: 700, margin: '0 auto' }}>
-          <AnimateIn>
-            <div style={{
-              textAlign: 'center', fontSize: 13, fontWeight: 800,
-              textTransform: 'uppercase', letterSpacing: 1.5, color: '#0F766E', marginBottom: 16,
-            }}>
-              Multiple professions
-            </div>
-          </AnimateIn>
-          <AnimateIn delay={0.1}>
-            <div className="landing-section-heading" style={{
-              textAlign: 'center', fontWeight: 900,
-              color: '#3D4654', marginBottom: 40, letterSpacing: -0.5,
-            }}>
+            <h2 className="landing-section-heading" style={{ fontWeight: 900, color: '#1E293B', marginBottom: 12, letterSpacing: -0.5 }}>
               Pick your path
-            </div>
+            </h2>
+            <p style={{ fontSize: 15, fontWeight: 600, color: '#94A3B8', marginBottom: 36 }}>
+              {PROFESSIONS.reduce((sum, p) => sum + p.questionCount, 0).toLocaleString()}+ questions across {PROFESSIONS.length} professions
+            </p>
           </AnimateIn>
 
-          <AnimateIn delay={0.2}>
-            <div className="landing-professions-grid" style={{
-              display: 'grid', gap: 16, marginBottom: 40,
-            }}>
+          <AnimateIn delay={0.1}>
+            <div className="landing-professions-grid" style={{ display: 'grid', gap: 12, marginBottom: 40 }}>
               {PROFESSIONS.map((prof) => (
                 <div
                   key={prof.id}
                   className="landing-profession-card"
                   style={{
-                    background: '#fff',
-                    border: '1px solid #E2E8F0',
-                    borderRadius: 16,
-                    padding: '24px',
-                    boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
-                    transition: 'border-color 0.2s, box-shadow 0.2s',
-                    position: 'relative',
-                    overflow: 'hidden',
+                    background: '#FAFAFA', border: '1px solid #E2E8F0', borderRadius: 14,
+                    padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 14,
+                    transition: 'border-color 0.2s, box-shadow 0.2s', position: 'relative',
                   }}
                 >
-                  {prof.isComingSoon && (
-                    <div style={{
-                      position: 'absolute', top: 12, right: 12,
-                      background: '#F0FDFA', color: '#0F766E',
-                      fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.5,
-                      padding: '3px 10px', borderRadius: 100,
-                    }}>
-                      Coming soon
-                    </div>
-                  )}
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
-                    <div style={{
-                      width: 52, height: 52, borderRadius: 14,
-                      background: `${prof.color}15`,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      flexShrink: 0,
-                    }}>
-                      <CourseIcon professionId={prof.id} color={prof.color} size={30} />
-                    </div>
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{
-                        fontSize: 18, fontWeight: 800, color: '#0F172A', marginBottom: 4,
-                      }}>
-                        {prof.name}
-                      </div>
-                      <div style={{
-                        fontSize: 14, fontWeight: 600, color: '#64748B', lineHeight: 1.5, marginBottom: 12,
-                      }}>
-                        {prof.description}
-                      </div>
-                      <div style={{ display: 'flex', gap: 16 }}>
-                        <div style={{
-                          display: 'flex', alignItems: 'center', gap: 6,
-                          fontSize: 13, fontWeight: 700, color: '#94A3B8',
-                        }}>
-                          <span style={{
-                            width: 8, height: 8, borderRadius: '50%',
-                            background: prof.color, flexShrink: 0,
-                          }} />
-                          {prof.unitCount} {prof.unitCount === 1 ? 'unit' : 'units'}
-                        </div>
-                        <div style={{
-                          fontSize: 13, fontWeight: 700, color: '#94A3B8',
-                        }}>
-                          {prof.questionCount.toLocaleString()}+ questions
-                        </div>
-                      </div>
+                  <div style={{
+                    width: 44, height: 44, borderRadius: 12, background: `${prof.color}15`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                  }}>
+                    <CourseIcon professionId={prof.id} color={prof.color} size={26} />
+                  </div>
+                  <div style={{ textAlign: 'left' }}>
+                    <div style={{ fontSize: 16, fontWeight: 800, color: '#0F172A' }}>{prof.name}</div>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: '#94A3B8' }}>
+                      {prof.questionCount.toLocaleString()}+ questions
                     </div>
                   </div>
+                  {prof.isComingSoon && (
+                    <div style={{
+                      marginLeft: 'auto', background: '#F0FDFA', color: '#0F766E',
+                      fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.5,
+                      padding: '3px 8px', borderRadius: 100,
+                    }}>
+                      Soon
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
           </AnimateIn>
 
-          <AnimateIn delay={0.3}>
-            <div style={{ textAlign: 'center' }}>
-              <Link
-                href="/get-started"
-                className="landing-btn-primary"
-                style={{
-                  display: 'inline-block', background: '#0D9488', color: '#fff',
-                  fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8,
-                  padding: '14px 36px', border: 'none', borderRadius: 16,
-                  boxShadow: '0 5px 0 #0F766E', textDecoration: 'none',
-                  transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
-                }}
-              >
-                Start playing free
-              </Link>
-            </div>
+          <AnimateIn delay={0.2}>
+            <Link
+              href="/get-started"
+              className="landing-btn-primary"
+              style={{
+                display: 'inline-block', background: '#0D9488', color: '#fff',
+                fontSize: 16, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8,
+                padding: '16px 48px', border: 'none', borderRadius: 16,
+                boxShadow: '0 5px 0 #0F766E', textDecoration: 'none',
+                transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
+              }}
+            >
+              Start playing free
+            </Link>
           </AnimateIn>
         </div>
       </section>
@@ -469,13 +214,12 @@ export function LandingPage() {
               <span style={{ color: '#0D9488' }}>Octokeen</span>
             </Link>
           </p>
-          <p style={{ marginTop: 12, fontSize: 14, fontWeight: 600, color: '#94A3B8' }}>
-            Gamified learning that actually sticks.
-          </p>
-          <p style={{ marginTop: 8, fontSize: 14, fontWeight: 600, color: '#94A3B8' }}>
-            <Link href="/get-started" style={{ color: '#0D9488', fontWeight: 700, textDecoration: 'none' }}>Sign up</Link>
+          <p style={{ marginTop: 8, fontSize: 13, fontWeight: 600, color: '#94A3B8' }}>
+            <Link href="/terms" style={{ color: '#94A3B8', textDecoration: 'none' }}>Terms</Link>
             {' '}&middot;{' '}
-            <Link href="/login" style={{ color: '#0D9488', fontWeight: 700, textDecoration: 'none' }}>Log in</Link>
+            <Link href="/privacy" style={{ color: '#94A3B8', textDecoration: 'none' }}>Privacy</Link>
+            {' '}&middot;{' '}
+            <Link href="/contact" style={{ color: '#94A3B8', textDecoration: 'none' }}>Contact</Link>
           </p>
         </div>
       </footer>
@@ -487,23 +231,16 @@ export function LandingPage() {
           .landing-demo-section { scroll-snap-align: start; }
         }
 
-        .landing-hero-h1 { font-size: 48px; }
-        .landing-hero-p { font-size: 19px; }
-        .landing-stat-num { font-size: 28px; }
-        .landing-section-heading { font-size: 32px; }
-        .landing-stat-number { font-size: 22px; }
-        .landing-player-card { padding: 32px; }
-        .landing-stat-box { padding: 16px 8px; }
-        .landing-compare-grid { grid-template-columns: repeat(3, 1fr); }
+        .landing-hero-h1 { font-size: 46px; }
+        .landing-hero-p { font-size: 18px; }
+        .landing-section-heading { font-size: 30px; }
+        .landing-professions-grid { grid-template-columns: 1fr; }
 
         .landing-btn-primary:hover { filter: brightness(1.05); }
         .landing-btn-primary:active { transform: translateY(2px); box-shadow: 0 3px 0 #0F766E !important; }
-        .landing-btn-secondary:hover { background: #F0F9FF; }
         .landing-profession-card:hover { border-color: #0D9488 !important; box-shadow: 0 4px 16px rgba(13, 148, 136, 0.12) !important; }
-        .landing-professions-grid { grid-template-columns: 1fr; }
 
         @keyframes demoFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes demoPopIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
         .demo-option { font-family: inherit; }
         .demo-option:not(:disabled):hover { border-color: #14B8A6 !important; background: #F0FDFA !important; transform: translateY(-1px); }
         .demo-option:not(:disabled):active { transform: translateY(1px); box-shadow: none !important; }
@@ -514,52 +251,18 @@ export function LandingPage() {
         .demo-restart-btn:hover { background: #F8FAFC !important; border-color: #CBD5E1 !important; }
 
         @media (max-width: 768px) {
-          .landing-hero-h1 { font-size: 34px !important; }
-          .landing-hero-p { font-size: 17px !important; }
-          .landing-stat-num { font-size: 24px !important; }
-          .landing-section-heading { font-size: 26px !important; }
-          .landing-stat-number { font-size: 18px !important; }
-          .landing-player-card { padding: 24px !important; }
-          .landing-stat-box { padding: 12px 6px !important; }
-          .landing-stats-grid { gap: 10px !important; }
-          .landing-compare-grid {
-            grid-template-columns: 1fr !important;
-            max-width: 400px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-          }
-          .landing-compare-featured { transform: none !important; order: -1; }
-          .landing-hero-stats { gap: 24px !important; }
+          .landing-hero-h1 { font-size: 32px !important; }
+          .landing-hero-p { font-size: 16px !important; }
+          .landing-section-heading { font-size: 24px !important; }
+          .landing-hero-section { padding-top: 110px !important; padding-bottom: 40px !important; }
         }
 
         @media (max-width: 480px) {
           .landing-hero-h1 { font-size: 26px !important; letter-spacing: -0.5px !important; }
           .landing-hero-p { font-size: 15px !important; }
           .landing-section-heading { font-size: 22px !important; }
-          .landing-hero-actions { flex-direction: column; }
-          .landing-hero-actions .landing-btn-primary,
-          .landing-hero-actions .landing-btn-secondary { width: 100%; text-align: center; padding: 12px 24px !important; }
-          .landing-player-header { flex-direction: column; text-align: center; }
-          .landing-player-card { padding: 20px !important; }
-          .landing-level-row { justify-content: center; flex-wrap: wrap; }
-          .landing-achievements { justify-content: center; }
-          .landing-stats-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; }
-          .landing-stat-number { font-size: 16px !important; }
-          .landing-stat-box { padding: 10px 4px !important; }
-          .landing-profession-card { padding: 20px !important; }
+          .landing-hero-section { padding-top: 100px !important; padding-bottom: 32px !important; }
           nav > div { padding: 0 16px !important; }
-          .landing-hero-section { padding-top: 100px !important; padding-bottom: 48px !important; }
-          .landing-compare-section, .landing-topics-section { padding-top: 48px !important; padding-bottom: 48px !important; }
-        }
-
-        @media (max-width: 360px) {
-          .landing-hero-section { padding-top: 88px !important; padding-bottom: 40px !important; }
-          .landing-compare-section, .landing-topics-section { padding-top: 40px !important; padding-bottom: 40px !important; }
-          .landing-hero-h1 { font-size: 22px !important; }
-          .landing-hero-p { font-size: 14px !important; }
-          .landing-section-heading { font-size: 20px !important; }
-          .landing-player-card { padding: 16px !important; }
-          .landing-profession-card { padding: 16px !important; }
         }
       `}</style>
     </div>
@@ -687,75 +390,6 @@ function InteractiveDemo() {
           </div>
         )}
       </div>
-    </div>
-  );
-}
-
-/* ── Comparison Card Component ── */
-function CompareCard({
-  featured = false,
-  iconBg,
-  iconColor,
-  icon,
-  title,
-  subtitle,
-  items,
-}: {
-  featured?: boolean;
-  iconBg: string;
-  iconColor: string;
-  icon: React.ReactNode;
-  title: string;
-  subtitle: string;
-  items: { text: string; type: 'check' | 'cross' | 'partial' }[];
-}) {
-  return (
-    <div
-      className={featured ? 'landing-compare-featured' : ''}
-      style={{
-        background: featured ? '#fff' : '#FAFAFA',
-        border: featured ? '2px solid #0D9488' : '1px solid #E2E8F0',
-        borderRadius: 12,
-        boxShadow: featured ? '0 4px 16px rgba(13, 148, 136, 0.15)' : '0 1px 2px rgba(0,0,0,0.05)',
-        padding: '32px 24px',
-        textAlign: 'center',
-        position: 'relative',
-        height: '100%',
-        transform: featured ? 'scale(1.03)' : undefined,
-      }}
-    >
-      {featured && (
-        <div style={{
-          position: 'absolute', top: -13, left: '50%', transform: 'translateX(-50%)',
-          background: '#0D9488', color: '#fff', fontSize: 11, fontWeight: 800,
-          textTransform: 'uppercase', letterSpacing: 1, padding: '4px 16px',
-          borderRadius: 100, whiteSpace: 'nowrap',
-        }}>
-          Best for interviews
-        </div>
-      )}
-      <div style={{
-        width: 64, height: 64, borderRadius: 16, margin: '0 auto 20px',
-        display: 'flex', alignItems: 'center', justifyContent: 'center', background: iconBg,
-      }}>
-        <svg viewBox="0 0 24 24" fill="none" stroke={iconColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="32" height="32">
-          {icon}
-        </svg>
-      </div>
-      <div style={{ fontSize: 20, fontWeight: 800, color: '#0F172A', marginBottom: 8 }}>{title}</div>
-      <div style={{ fontSize: 14, fontWeight: 700, color: '#94A3B8', marginBottom: 24, textTransform: 'uppercase', letterSpacing: 0.5 }}>{subtitle}</div>
-      <ul style={{ listStyle: 'none', textAlign: 'left', padding: 0, margin: 0 }}>
-        {items.map((item, i) => (
-          <li key={i} style={{
-            display: 'flex', alignItems: 'flex-start', gap: 10,
-            padding: '10px 0', fontSize: 14, fontWeight: 600, color: '#64748B',
-            borderTop: i > 0 ? '1px solid #F1F5F9' : 'none',
-          }}>
-            {item.type === 'check' ? <CheckIcon /> : item.type === 'partial' ? <PartialIcon /> : <CrossIcon />}
-            {item.text}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
