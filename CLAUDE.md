@@ -1,4 +1,4 @@
-# MechReady — Project Instructions
+# Octokeen — Project Instructions
 
 ## First Steps
 Before making changes, read `docs/project-overview.md` for full project context (tech stack, architecture, database schema, API routes, stores, content structure, auth, engagement systems, gotchas). This saves significant exploration time.

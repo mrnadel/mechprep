@@ -15,10 +15,10 @@ Make the friends system useful by adding invite links as the sole way to add fri
 - Generated via `crypto.randomBytes(6).toString('base64url').slice(0, 8)`
 
 ### Invite URL
-- Format: `mechready.com/invite/[code]`
+- Format: `octokeen.com/invite/[code]`
 - The `/invite/[code]` page is a **server component** that:
   - Looks up the inviter by code
-  - Shows the inviter's name/avatar and a "Join MechReady" CTA
+  - Shows the inviter's name/avatar and a "Join Octokeen" CTA
   - Stores the inviter's user ID in `invite_ref` cookie (server-side, httpOnly)
   - Provides a "Join" button → redirects to `/register`
   - Provides a "Already have an account? Log in" link → redirects to `/login`

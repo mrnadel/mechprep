@@ -93,7 +93,7 @@ const FAQ_ITEMS = [
     question: 'How is this different from just reading a textbook?',
     answer:
       'Octokeen uses active recall and spaced repetition — proven study techniques. Instead of passively reading, you\'re actively solving problems, which leads to much better retention.',
-    tags: 'why mechready better studying learn',
+    tags: 'why octokeen better studying learn',
   },
   {
     question: 'Can I practice specific topics?',

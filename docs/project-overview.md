@@ -1,4 +1,4 @@
-# MechReady — Brownfield Project Documentation
+# Octokeen — Brownfield Project Documentation
 
 > **Generated:** 2026-03-24 | **Scan Level:** Deep | **Project Type:** Web (Monolith)
 >
@@ -9,10 +9,10 @@
 
 ## 1. What Is This Project?
 
-**MechReady** is a Duolingo-style gamified mechanical engineering interview prep web application. It helps mechanical engineers practice core ME topics through structured courses, adaptive practice sessions, and engagement systems (streaks, XP, leagues, quests, achievements, gems).
+**Octokeen** is a Duolingo-style gamified mechanical engineering interview prep web application. It helps mechanical engineers practice core ME topics through structured courses, adaptive practice sessions, and engagement systems (streaks, XP, leagues, quests, achievements, gems).
 
 - **Domain:** EdTech / Engineering interview preparation
-- **URL:** https://mechready.com
+- **URL:** https://octokeen.com
 - **Monetization:** Freemium SaaS — Free tier (Unit 1 + 5 daily questions) / Pro tier ($9/mo or $79/yr via Paddle)
 - **Target Users:** Mechanical engineers preparing for technical interviews
 
@@ -341,11 +341,11 @@ designs/                          # Design assets
 
 | Store | File | localStorage Key | Purpose |
 |---|---|---|---|
-| `useStore` | `store/useStore.ts` | `mechready-storage` | Practice progress, sessions, achievements, XP, levels |
-| `useCourseStore` | `store/useCourseStore.ts` | `mechready-course` | Course lessons, stars, completion, streaks |
-| `useEngagementStore` | `store/useEngagementStore.ts` | `mechready-engagement` | Gems, leagues, quests, streak freezes, comeback |
-| `useFeedbackStore` | `store/useFeedbackStore.ts` | `mechready-feedback` | Content flagging state |
-| `useMasteryStore` | `store/useMasteryStore.ts` | `mechready-mastery` | Per-question mastery events |
+| `useStore` | `store/useStore.ts` | `octokeen-storage` | Practice progress, sessions, achievements, XP, levels |
+| `useCourseStore` | `store/useCourseStore.ts` | `octokeen-course` | Course lessons, stars, completion, streaks |
+| `useEngagementStore` | `store/useEngagementStore.ts` | `octokeen-engagement` | Gems, leagues, quests, streak freezes, comeback |
+| `useFeedbackStore` | `store/useFeedbackStore.ts` | `octokeen-feedback` | Content flagging state |
+| `useMasteryStore` | `store/useMasteryStore.ts` | `octokeen-mastery` | Per-question mastery events |
 
 **Cross-store communication:**
 - `useCourseStore.completeLesson()` → reads from `useEngagementStore` (double XP, streak freezes)
