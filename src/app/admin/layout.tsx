@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
@@ -15,6 +17,35 @@ const NAV_LINKS = [
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const router = useRouter();
+  const { status } = useSession();
+  const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    if (status !== 'authenticated') return;
+    // Quick admin check: try fetching any admin endpoint
+    fetch('/api/admin/users', { method: 'HEAD' }).then((res) => {
+      setIsAdmin(res.ok);
+      if (!res.ok) router.replace('/');
+    }).catch(() => {
+      setIsAdmin(false);
+      router.replace('/');
+    });
+  }, [status, router]);
+
+  // Loading or checking auth
+  if (status === 'loading' || isAdmin === null) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="w-6 h-6 border-2 border-gray-200 border-t-gray-600 rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  // Not admin: redirect already triggered, show nothing
+  if (!isAdmin) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
