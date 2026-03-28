@@ -5,12 +5,12 @@ import { motion, type HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const variants = {
-  indigo:   { bg: 'bg-primary-600',  shadow: 'shadow-[0_4px_0_var(--color-primary-800)]', text: 'text-white' },
-  gold:     { bg: 'bg-[#FFB800]',    shadow: 'shadow-[0_4px_0_#CC9400]', text: 'text-[#5D4200]' },
-  purple:   { bg: 'bg-[#7C3AED]',    shadow: 'shadow-[0_4px_0_#5B21B6]', text: 'text-white' },
-  green:    { bg: 'bg-accent-600',    shadow: 'shadow-[0_4px_0_var(--color-accent-800)]', text: 'text-white' },
-  red:      { bg: 'bg-danger-500',    shadow: 'shadow-[0_4px_0_var(--color-danger-700)]', text: 'text-white' },
-  goldDark: { bg: 'bg-gradient-to-br from-brand-400 to-brand-500', shadow: 'shadow-[0_4px_0_var(--color-brand-700)]', text: 'text-primary-900' },
+  indigo:   { bg: 'bg-primary-600',  shadow: 'shadow-[0_6px_0_var(--color-primary-800)]', text: 'text-white' },
+  gold:     { bg: 'bg-[#FFB800]',    shadow: 'shadow-[0_6px_0_#CC9400]', text: 'text-[#5D4200]' },
+  purple:   { bg: 'bg-[#7C3AED]',    shadow: 'shadow-[0_6px_0_#5B21B6]', text: 'text-white' },
+  green:    { bg: 'bg-accent-600',    shadow: 'shadow-[0_6px_0_var(--color-accent-800)]', text: 'text-white' },
+  red:      { bg: 'bg-danger-500',    shadow: 'shadow-[0_6px_0_var(--color-danger-700)]', text: 'text-white' },
+  goldDark: { bg: 'bg-gradient-to-br from-brand-400 to-brand-500', shadow: 'shadow-[0_6px_0_var(--color-brand-700)]', text: 'text-primary-900' },
 } as const;
 
 export type GameButtonVariant = keyof typeof variants;
@@ -27,7 +27,7 @@ export const GameButton = forwardRef<HTMLButtonElement, GameButtonProps>(
       <motion.button
         ref={ref}
         disabled={disabled}
-        whileTap={!disabled ? { y: 4, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
+        whileTap={!disabled ? { y: 6, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
         className={cn(
           'w-full py-4 rounded-2xl text-sm font-extrabold',
           'flex items-center justify-center gap-2',

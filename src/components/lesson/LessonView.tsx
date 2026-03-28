@@ -669,26 +669,6 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                 2X
               </div>
             )}
-            <motion.div
-              className="flex items-center"
-              style={{
-                gap: 4,
-                padding: '4px 10px',
-                borderRadius: 10,
-                background: isDoubleXp ? 'linear-gradient(135deg, #FEF3C7, #FDE68A)' : theme.bg,
-                color: isDoubleXp ? '#B45309' : theme.dark,
-                fontWeight: 800,
-                fontSize: 13,
-              }}
-              key={xpGain}
-              animate={{ scale: [1, 1.15, 1] }}
-              transition={{ duration: 0.25 }}
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" fill={isDoubleXp ? '#B45309' : theme.dark} />
-              </svg>
-              <span aria-live="polite">+{xpGain} XP</span>
-            </motion.div>
           </div>
 
         </div>
