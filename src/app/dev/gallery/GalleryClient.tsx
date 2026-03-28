@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, type ReactNode } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef, type ReactNode } from 'react';
 import { MotionConfig } from 'framer-motion';
 
 // Real components
@@ -64,6 +64,14 @@ const SCREENS: ScreenDef[] = [
   },
   {
     id: 'trial-prompt', label: 'TrialPromptModal', section: 'Utility Modals',
+    setup: () => {
+      // Clear the "already shown" flag so the modal will open
+      if (typeof window !== 'undefined') localStorage.removeItem('mechready-trial-prompt-shown');
+    },
+    cleanup: () => {
+      // Re-set it so it doesn't pop up elsewhere
+      if (typeof window !== 'undefined') localStorage.setItem('mechready-trial-prompt-shown', '1');
+    },
     render: () => <TrialPromptModal />,
   },
   {
@@ -117,7 +125,13 @@ const SCREENS: ScreenDef[] = [
     id: 'league-winner', label: 'LeagueWinner', section: 'League',
     setup: () => {
       useEngagementStore.setState((s) => ({
-        league: { ...s.league, resultSeen: false, winnerSeen: false, lastWeekResult: { rank: 1, xp: 520, promoted: true, demoted: false, stayed: false, tier: 3, gemsEarned: 20 } },
+        league: {
+          ...s.league,
+          currentTier: 3 as 1|2|3|4|5,
+          resultSeen: false,
+          winnerSeen: false,
+          lastWeekResult: { rank: 1, xp: 520, promoted: true, demoted: false, stayed: false, tier: 3, gemsEarned: 20 },
+        },
       }));
     },
     cleanup: () => {
@@ -340,7 +354,10 @@ function PhoneFrame({ screen, onClick }: { screen: ScreenDef; onClick: () => voi
 function ScreenRenderer({ screen, instant = true }: { screen: ScreenDef; instant?: boolean }) {
   const [ready, setReady] = useState(false);
 
-  useEffect(() => {
+  // Use layoutEffect so state is set synchronously before paint.
+  // This ensures each screen renders with its own mock state even when
+  // multiple screens share the same Zustand store slice.
+  useLayoutEffect(() => {
     screen.setup?.();
     setReady(true);
     return () => screen.cleanup?.();
