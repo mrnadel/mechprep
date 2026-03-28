@@ -24,6 +24,10 @@ export const MASCOT_POSES = {
   error: '/mascot/error.png',
   offline: '/mascot/offline.png',
   'empty-state': '/mascot/empty-state.png',
+  'level-up': '/mascot/level-up.png',
+  streak: '/mascot/streak.png',
+  'almost-there': '/mascot/almost-there.png',
+  mastered: '/mascot/mastered.png',
 } as const;
 
 export type MascotPose = keyof typeof MASCOT_POSES;
