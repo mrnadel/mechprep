@@ -16,6 +16,12 @@ export const unit9: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u9-bridge",
+          type: "teaching",
+          question: "Your Biggest Purchase Ever",
+          explanation: "You can read stock charts and pick investments with confidence. Now let's tackle the largest purchase most people ever make: real estate.",
+        },
+        {
           id: "pf-u9-L1-T1",
           type: "teaching",
           question: "\"Renting Is Throwing Money Away\": Is It?",

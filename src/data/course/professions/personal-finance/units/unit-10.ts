@@ -16,6 +16,12 @@ export const unit10: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u10-bridge",
+          type: "teaching",
+          question: "Investing in Your Future Self",
+          explanation: "You've learned the fundamentals of investing and how markets work. Now let's apply those skills to the biggest goal of all: retiring comfortably.",
+        },
+        {
           id: "pf-u10-L1-T1",
           type: "teaching",
           question: "Meet Future You",

@@ -16,6 +16,12 @@ export const unit5: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u5-bridge",
+          type: "teaching",
+          question: "From Budgets to Bank Accounts",
+          explanation: "You've learned to budget and track your spending. Now let's set up the bank accounts and tax knowledge to put those skills to work.",
+        },
+        {
           id: "pf-u5-L1-T1",
           type: "teaching",
           question: "Two Accounts, Two Jobs",

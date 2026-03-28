@@ -34,6 +34,26 @@ export const PROFESSIONS: Profession[] = [
     unitCount: 1,
     questionCount: 30,
   },
+  {
+    id: 'psychology',
+    name: 'Psychology & Human Behavior',
+    shortName: 'Psychology',
+    icon: '\uD83E\uDDE0',
+    color: '#A78BFA',
+    description: 'Cognitive biases, social psychology, behavioral economics, and mental models',
+    unitCount: 10,
+    questionCount: 0,
+  },
+  {
+    id: 'space-astronomy',
+    name: 'Space & Astronomy',
+    shortName: 'Space',
+    icon: '\uD83D\uDE80',
+    color: '#818CF8',
+    description: 'Planets, stars, black holes, space exploration, and cosmology',
+    unitCount: 10,
+    questionCount: 0,
+  },
 ];
 
 export const DEFAULT_PROFESSION = 'mechanical-engineering';

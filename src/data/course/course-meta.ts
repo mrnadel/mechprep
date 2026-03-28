@@ -17,6 +17,8 @@
 
 import type { Unit } from './types';
 import { financeCourseMeta } from './professions/personal-finance/meta';
+import { psychologyCourseMeta } from './professions/psychology/meta';
+import { spaceCourseMeta } from './professions/space-astronomy/meta';
 
 const meCourseMeta: Unit[] = [
   {
@@ -203,6 +205,8 @@ export const courseMeta: Unit[] = meCourseMeta;
 export function getCourseMetaForProfession(professionId: string): Unit[] {
   switch (professionId) {
     case 'personal-finance': return financeCourseMeta;
+    case 'psychology': return psychologyCourseMeta;
+    case 'space-astronomy': return spaceCourseMeta;
     case 'mechanical-engineering':
     default: return meCourseMeta;
   }
@@ -233,6 +237,14 @@ export function getLessonByIdMeta(lessonId: string, professionId?: string): { un
 export async function loadUnitData(unitIndex: number, professionId?: string): Promise<Unit> {
   if (professionId === 'personal-finance') {
     return loadFinanceUnit(unitIndex);
+  }
+
+  if (professionId === 'psychology') {
+    return loadProfessionUnit(unitIndex, psychologyCourseMeta);
+  }
+
+  if (professionId === 'space-astronomy') {
+    return loadProfessionUnit(unitIndex, spaceCourseMeta);
   }
 
   // Default: mechanical-engineering
@@ -285,4 +297,16 @@ async function loadFinanceUnit(unitIndex: number): Promise<Unit> {
   }
 
   return loaders[unitIndex]();
+}
+
+/**
+ * Generic loader for professions that don't have full unit content files yet.
+ * Returns lightweight metadata (no questions). Once unit files are created,
+ * add profession-specific loaders like loadFinanceUnit above.
+ */
+async function loadProfessionUnit(unitIndex: number, meta: Unit[]): Promise<Unit> {
+  if (unitIndex < 0 || unitIndex >= meta.length) {
+    throw new Error(`Invalid unit index: ${unitIndex}`);
+  }
+  return meta[unitIndex];
 }

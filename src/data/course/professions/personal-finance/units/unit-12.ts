@@ -16,6 +16,12 @@ export const unit12: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u12-bridge",
+          type: "teaching",
+          question: "Putting It All Together",
+          explanation: "You've navigated crypto and digital assets like a pro. Now let's bring everything together and make the big money moves that build real wealth.",
+        },
+        {
           id: "pf-u12-L1-T1",
           type: "teaching",
           question: "Before You Swipe: The Big Purchase Framework",

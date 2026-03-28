@@ -16,6 +16,12 @@ export const unit7: Unit = {
  xpReward: 15,
  questions: [
  {
+ id: "pf-u7-bridge",
+ type: "teaching",
+ question: "Going Deeper Into the Market",
+ explanation: "You've set up your retirement plan and understand long-term investing. Now let's dive deeper into the stock market so you can invest with real confidence.",
+ },
+ {
  id: "pf-u7-L1-T1",
  type: "teaching",
  question: "The World's Biggest Auction House",

@@ -16,6 +16,12 @@ export const unit4: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u4-bridge",
+          type: "teaching",
+          question: "The Number That Follows You Everywhere",
+          explanation: "You've decoded how debt works and how to manage it wisely. Now let's master the credit score that determines what debt costs you.",
+        },
+        {
           id: "pf-u4-L1-T1",
           type: "teaching",
           question: "You Have a Financial GPA",

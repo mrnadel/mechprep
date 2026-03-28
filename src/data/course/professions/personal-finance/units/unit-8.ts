@@ -16,6 +16,12 @@ export const unit8: Unit = {
  xpReward: 15,
  questions: [
  {
+ id: "pf-u8-bridge",
+ type: "teaching",
+ question: "Exploring the Digital Frontier",
+ explanation: "You understand real estate and traditional investments. Now let's explore cryptocurrency and digital assets so you can separate the real opportunities from the hype.",
+ },
+ {
  id: "pf-u8-L1-T1",
  type: "teaching",
  question: "Digital Money Without a Middleman",

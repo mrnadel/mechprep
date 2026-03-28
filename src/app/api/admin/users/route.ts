@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { users, userProgress, subscriptions } from '@/lib/db/schema';
+import { users, userProgress, subscriptions, courseAccess } from '@/lib/db/schema';
 import { requireAdmin } from '@/lib/auth-utils';
 import { eq, desc } from 'drizzle-orm';
 
@@ -29,6 +29,18 @@ export async function GET() {
     .leftJoin(subscriptions, eq(users.id, subscriptions.userId))
     .orderBy(desc(users.createdAt));
 
+  // Fetch all course access grants in one query
+  const accessRows = await db
+    .select({ userId: courseAccess.userId, professionId: courseAccess.professionId })
+    .from(courseAccess);
+
+  const accessMap = new Map<string, string[]>();
+  for (const row of accessRows) {
+    const existing = accessMap.get(row.userId) ?? [];
+    existing.push(row.professionId);
+    accessMap.set(row.userId, existing);
+  }
+
   const result = rows.map((row) => ({
     id: row.id,
     name: row.displayName || row.name || null,
@@ -39,6 +51,7 @@ export async function GET() {
     totalQuestionsAttempted: row.totalQuestionsAttempted ?? 0,
     lastActiveDate: row.lastActiveDate || null,
     tier: row.tier || 'free',
+    courseAccess: accessMap.get(row.id) ?? [],
   }));
 
   return NextResponse.json({ users: result, total: result.length });

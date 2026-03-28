@@ -16,6 +16,12 @@ export const unit6: Unit = {
  xpReward: 15,
  questions: [
  {
+ id: "pf-u6-bridge",
+ type: "teaching",
+ question: "Making Your Money Grow",
+ explanation: "You've mastered credit scores and know how to borrow smartly. Now let's put your money to work so it grows while you sleep.",
+ },
+ {
  id: "pf-u6-L1-T1",
  type: "teaching",
  question: "Your Savings Account Has a Secret Enemy",

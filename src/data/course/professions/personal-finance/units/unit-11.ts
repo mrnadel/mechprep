@@ -16,6 +16,12 @@ export const unit11: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u11-bridge",
+          type: "teaching",
+          question: "Guarding What You've Built",
+          explanation: "You've built a savings safety net. Now let's protect everything you've worked for with the right insurance.",
+        },
+        {
           id: "pf-u11-L1-T1",
           type: "teaching",
           question: "What Insurance Actually Is",

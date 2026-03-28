@@ -43,16 +43,16 @@ export const financeCourseMeta: Unit[] = [
     color: "#099345",
     icon: "🏦",
     lessons: [
-      { id: "pf-u5-L1", title: "Checking vs Savings: What Goes Where", description: "Two accounts, two jobs — how to use each one correctly.", icon: "📂", xpReward: 15, questions: [] },
-      { id: "pf-u5-L2", title: "Banks vs Credit Unions vs Online", description: "The pros and cons of each — and which one wins for you.", icon: "🏛️", xpReward: 15, questions: [] },
-      { id: "pf-u5-L3", title: "Fee Graveyard: Stop Losing Money", description: "Overdraft fees, ATM fees, maintenance fees — and how to dodge them all.", icon: "🚫", xpReward: 15, questions: [] },
+      { id: "pf-u5-L1", title: "Checking vs Savings: What Goes Where", description: "Two accounts, two jobs. Learn how to use each one correctly.", icon: "📂", xpReward: 15, questions: [] },
+      { id: "pf-u5-L2", title: "Banks vs Credit Unions vs Online", description: "The pros and cons of each, and which one wins for you.", icon: "🏛️", xpReward: 15, questions: [] },
+      { id: "pf-u5-L3", title: "Fee Graveyard: Stop Losing Money", description: "Overdraft fees, ATM fees, maintenance fees, and how to dodge them all.", icon: "🚫", xpReward: 15, questions: [] },
       { id: "pf-u5-L15", title: "Choosing a Bank Account", description: "Help a friend decide between a big bank, credit union, and online bank.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "pf-u5-L4", title: "Digital Wallets & P2P Payments", description: "Venmo, Zelle, Apple Pay — how digital money moves and the risks.", icon: "📱", xpReward: 15, questions: [] },
+      { id: "pf-u5-L4", title: "Digital Wallets & P2P Payments", description: "Venmo, Zelle, Apple Pay: how digital money moves and the risks.", icon: "📱", xpReward: 15, questions: [] },
       { id: "pf-u5-L13", title: "Alex's First Tax Season", description: "Help a freelancer navigate their first tax filing in this case study.", icon: "📋", type: "case-study", xpReward: 20, questions: [] },
       { id: "pf-u5-L5", title: "Banking Safety & Fraud Defense", description: "Protect your accounts from scammers, hackers, and phishing.", icon: "🔐", xpReward: 15, questions: [] },
       { id: "pf-u5-L6", title: "Taxes Aren't Theft (Here's Why)", description: "Where your tax dollars go and why everyone pays.", icon: "🏛️", xpReward: 15, questions: [] },
-      { id: "pf-u5-L7", title: "Tax Brackets Aren't What You Think", description: "Marginal rates explained — you don't pay one rate on everything.", icon: "📐", xpReward: 15, questions: [] },
-      { id: "pf-u5-L8", title: "W-2 vs 1099: Know Your Form", description: "Employee vs contractor — and why it changes your tax life.", icon: "📄", xpReward: 15, questions: [] },
+      { id: "pf-u5-L7", title: "Tax Brackets Aren't What You Think", description: "Marginal rates explained. You don't pay one rate on everything.", icon: "📐", xpReward: 15, questions: [] },
+      { id: "pf-u5-L8", title: "W-2 vs 1099: Know Your Form", description: "Employee vs contractor, and why it changes your tax life.", icon: "📄", xpReward: 15, questions: [] },
       { id: "pf-u5-L14", title: "Banking & Tax Terms Blitz", description: "Speed round on account types, tax brackets, and common forms.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
       { id: "pf-u5-L9", title: "The Standard Deduction Shortcut", description: "The easiest way to lower your tax bill without any paperwork.", icon: "✂️", xpReward: 15, questions: [] },
       { id: "pf-u5-L10", title: "Tax Credits: Free Money You're Missing", description: "Dollar-for-dollar reductions most people don't claim.", icon: "💲", xpReward: 15, questions: [] },
@@ -312,3 +312,4 @@ export const financeCourseMeta: Unit[] = [
     ],
   },
 ];
+   

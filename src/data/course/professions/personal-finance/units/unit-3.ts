@@ -16,6 +16,12 @@ export const unit3: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u3-bridge",
+          type: "teaching",
+          question: "Understanding the Other Side of Money",
+          explanation: "You know how to save and protect your money. Now let's understand debt, so it works for you instead of against you.",
+        },
+        {
           id: "pf-u3-L1-T1",
           type: "teaching",
           question: "Debt Isn't Evil. It's a Tool",

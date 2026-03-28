@@ -15,6 +15,7 @@ interface AdminUser {
   totalQuestionsAttempted: number;
   lastActiveDate: string | null;
   tier: string;
+  courseAccess: string[];
 }
 
 type SortKey = 'name' | 'email' | 'tier' | 'totalXp' | 'currentStreak' | 'totalQuestionsAttempted' | 'joinedDate' | 'lastActiveDate';
@@ -67,6 +68,32 @@ export default function AdminUsersPage() {
       }
     } catch {
       setError('Failed to update tier. Please try again.');
+    } finally {
+      setUpdating(null);
+    }
+  };
+
+  const toggleMeAccess = async (userId: string, hasAccess: boolean) => {
+    setUpdating(userId);
+    try {
+      const res = await fetch('/api/admin/course-access', {
+        method: hasAccess ? 'DELETE' : 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId, professionId: 'mechanical-engineering' }),
+      });
+      if (res.ok) {
+        setUsers((prev) =>
+          prev.map((u) => {
+            if (u.id !== userId) return u;
+            const access = hasAccess
+              ? u.courseAccess.filter((c) => c !== 'mechanical-engineering')
+              : [...u.courseAccess, 'mechanical-engineering'];
+            return { ...u, courseAccess: access };
+          })
+        );
+      }
+    } catch {
+      setError('Failed to update access. Please try again.');
     } finally {
       setUpdating(null);
     }
@@ -363,6 +390,19 @@ export default function AdminUsersPage() {
                                 : 'Grant'}
                           </button>
                           <button
+                            onClick={() => toggleMeAccess(user.id, user.courseAccess.includes('mechanical-engineering'))}
+                            disabled={updating === user.id}
+                            className={cn(
+                              'text-[11px] font-bold px-2.5 py-1.5 min-h-[32px] rounded-lg transition-colors disabled:opacity-50',
+                              user.courseAccess.includes('mechanical-engineering')
+                                ? 'bg-blue-50 text-blue-600 hover:bg-blue-100'
+                                : 'bg-gray-50 text-gray-400 hover:bg-gray-100'
+                            )}
+                            title={user.courseAccess.includes('mechanical-engineering') ? 'Revoke ME access' : 'Grant ME access'}
+                          >
+                            ME
+                          </button>
+                          <button
                             onClick={() => { setDeleteTarget(user); setConfirmText(''); }}
                             className="p-2 rounded-lg text-gray-300 hover:text-red-500 hover:bg-red-50 transition-colors"
                             title="Delete user"
@@ -445,6 +485,18 @@ export default function AdminUsersPage() {
                         : user.tier === 'pro'
                           ? 'Revoke'
                           : 'Grant'}
+                    </button>
+                    <button
+                      onClick={() => toggleMeAccess(user.id, user.courseAccess.includes('mechanical-engineering'))}
+                      disabled={updating === user.id}
+                      className={cn(
+                        'text-[11px] font-bold px-2.5 py-2 min-h-[44px] rounded-lg transition-colors disabled:opacity-50',
+                        user.courseAccess.includes('mechanical-engineering')
+                          ? 'bg-blue-50 text-blue-600 hover:bg-blue-100'
+                          : 'bg-gray-50 text-gray-400 hover:bg-gray-100'
+                      )}
+                    >
+                      ME
                     </button>
                     <button
                       onClick={() => { setDeleteTarget(user); setConfirmText(''); }}

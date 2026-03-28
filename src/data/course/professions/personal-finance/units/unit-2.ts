@@ -16,6 +16,12 @@ export const unit2: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u2-bridge",
+          type: "teaching",
+          question: "Time to Build Your Safety Net",
+          explanation: "Your bank accounts are set up and you understand how taxes work. Now let's build a savings system that runs on autopilot.",
+        },
+        {
           id: "pf-u2-L1-T1",
           type: "teaching",
           question: "Your Brain Hates Saving",
