@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { useScrollLock } from '@/hooks/useScrollLock';
 
 interface Props {
   type: 'daily' | 'weekly';
@@ -10,6 +11,8 @@ interface Props {
 }
 
 export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
+  useScrollLock(isOpen);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -17,7 +20,7 @@ export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
           {/* Backdrop */}
           <motion.div
             key="chest-backdrop"
-            className="fixed inset-0 z-40"
+            className="fixed inset-0 z-50"
             style={{ background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(4px)' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -28,7 +31,7 @@ export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
           {/* Modal */}
           <motion.div
             key="chest-modal"
-            className="fixed inset-0 z-50 flex items-center justify-center p-6"
+            className="fixed inset-0 z-[60] flex items-center justify-center p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

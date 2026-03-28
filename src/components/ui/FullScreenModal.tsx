@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { ScreenFX, type FXName } from './ScreenFX';
+import { useScrollLock } from '@/hooks/useScrollLock';
 
 /**
  * Shared full-screen modal wrapper for all overlay screens.
@@ -31,6 +32,8 @@ export function FullScreenModal({
   footer,
   labelId,
 }: FullScreenModalProps) {
+  useScrollLock(show);
+
   return (
     <AnimatePresence>
       {show && (

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useScrollLock } from '@/hooks/useScrollLock';
 import { X, ArrowLeft, Rocket, Sparkles, ChevronRight } from 'lucide-react';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 import { useCourseStore } from '@/store/useCourseStore';
@@ -75,6 +76,7 @@ interface CourseIntroFlowProps {
 }
 
 export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps) {
+  useScrollLock(true);
   const activeProfession = useCourseStore((s) => s.activeProfession);
   const profession = getProfession(activeProfession);
   const professionName = profession?.name ?? 'this course';
@@ -143,7 +145,7 @@ export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps)
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center"
+        className="fixed inset-0 z-[60] flex items-center justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

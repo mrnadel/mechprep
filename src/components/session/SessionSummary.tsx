@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import type { SessionSummary as SessionSummaryType } from '@/store/useStore';
 import { useSessionActions, useStore } from '@/store/useStore';
 import { useBackHandler } from '@/hooks/useBackHandler';
+import { useScrollLock } from '@/hooks/useScrollLock';
 import { useEngagementActions } from '@/store/useEngagementStore';
 import { analytics } from '@/lib/mixpanel';
 import { achievements } from '@/data/achievements';
@@ -38,6 +39,7 @@ export default function SessionSummary({ summary }: Props) {
   }, [abandonSession, router]);
 
   useBackHandler(true, handleBack);
+  useScrollLock(true);
 
   // Keyboard: Enter/Space to continue
   useEffect(() => {
@@ -108,7 +110,7 @@ export default function SessionSummary({ summary }: Props) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 z-50 flex items-center justify-center"
+        className="fixed inset-0 z-[60] flex items-center justify-center"
         style={{
           background: bgColor,
           paddingTop: 'env(safe-area-inset-top, 0px)',

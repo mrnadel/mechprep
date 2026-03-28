@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
 import { getUnitTheme } from '@/lib/unitThemes';
 import { useBackHandler } from '@/hooks/useBackHandler';
+import { useScrollLock } from '@/hooks/useScrollLock';
 import LessonProgressBar from './LessonProgressBar';
 import QuestionCard from './QuestionCard';
 import type { QuestionCardHandle } from './QuestionCard';
@@ -88,6 +89,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const questionRef = useRef<QuestionCardHandle>(null);
   const isDoubleXp = useDoubleXpActive();
   const addMasteryEvent = useMasteryStore((s) => s.addEvent);
+  useScrollLock(true);
   const syncMastery = useMasteryStore((s) => s.syncToServer);
   const loseHeart = useHeartsStore((s) => s.loseHeart);
   const hasHearts = useHeartsStore((s) => s.hasHearts);
@@ -477,7 +479,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
           ? { type: 'tween', duration: 0.3, ease: 'easeIn' }
           : { type: 'spring', stiffness: 300, damping: 30 }
         }
-        className="fixed inset-0 z-50 flex items-center justify-center"
+        className="fixed inset-0 z-[60] flex items-center justify-center"
         role="main"
         aria-label={adapter ? 'Practice view' : 'Lesson view'}
         style={{
