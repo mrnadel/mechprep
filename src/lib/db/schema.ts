@@ -527,6 +527,16 @@ export const friendRequests = pgTable(
   ]
 );
 
+// ─── Feature Flags ─────────────────────────────────────────────
+
+export const featureFlags = pgTable('feature_flags', {
+  key: text('key').primaryKey(),
+  enabled: boolean('enabled').notNull().default(true),
+  description: text('description').notNull().default(''),
+  category: text('category').notNull().default('general'),
+  updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
+});
+
 // ─── Course Access (admin-granted per-course access) ───────────
 export const courseAccess = pgTable(
   'course_access',
