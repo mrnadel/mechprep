@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 export const MASCOT_POSES = {
+  // Emotions
   neutral: '/mascot/neutral.png',
   excited: '/mascot/excited.png',
   worried: '/mascot/worried.png',
@@ -11,26 +12,48 @@ export const MASCOT_POSES = {
   celebrating: '/mascot/celebrating.png',
   laughing: '/mascot/laughing.png',
   proud: '/mascot/proud.png',
+
+  // Adventure
   sword: '/mascot/sword.png',
   torch: '/mascot/torch.png',
   explorer: '/mascot/explorer.png',
   pro: '/mascot/pro.png',
   champion: '/mascot/champion.png',
+
+  // Rewards & progress
   'out-of-hearts': '/mascot/out-of-hearts.png',
   'reward-gems': '/mascot/reward-gems.png',
   'upgrade-pro': '/mascot/upgrade-pro.png',
   'chest-reward': '/mascot/chest-reward.png',
-  loading: '/mascot/loading.png',
-  error: '/mascot/error.png',
-  offline: '/mascot/offline.png',
-  'empty-state': '/mascot/empty-state.png',
   'level-up': '/mascot/level-up.png',
   streak: '/mascot/streak.png',
   'almost-there': '/mascot/almost-there.png',
   mastered: '/mascot/mastered.png',
+
+  // System states
+  loading: '/mascot/loading.png',
+  error: '/mascot/error.png',
+  offline: '/mascot/offline.png',
+  'empty-state': '/mascot/empty-state.png',
+
+  // Space course
+  'space-flag': '/mascot/space-flag.png',
+  'space-astronaut': '/mascot/space-astronaut.png',
+  'space-ufo': '/mascot/space-ufo.png',
+  'space-moon': '/mascot/space-moon.png',
 } as const;
 
 export type MascotPose = keyof typeof MASCOT_POSES;
+
+export type MascotTag = 'emotions' | 'adventure' | 'rewards' | 'system' | 'space';
+
+export const MASCOT_TAGS: Record<MascotTag, MascotPose[]> = {
+  emotions: ['neutral', 'excited', 'worried', 'sleeping', 'winking', 'sad', 'thinking', 'celebrating', 'laughing', 'proud'],
+  adventure: ['sword', 'torch', 'explorer', 'pro', 'champion'],
+  rewards: ['out-of-hearts', 'reward-gems', 'upgrade-pro', 'chest-reward', 'level-up', 'streak', 'almost-there', 'mastered'],
+  system: ['loading', 'error', 'offline', 'empty-state'],
+  space: ['space-flag', 'space-astronaut', 'space-ufo', 'space-moon'],
+};
 
 interface MascotProps {
   pose: MascotPose;
