@@ -16,6 +16,13 @@ export const unit10: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u10-L1-T1',
+          type: 'teaching',
+          question: 'What Are Fermi Estimates',
+          explanation: 'Fermi estimation is the art of making rough calculations with limited information. You break a big unknown question into smaller pieces you can estimate, then multiply them together. The goal isn\'t an exact answer; it\'s getting within the right order of magnitude (power of 10).',
+          hint: 'Interviewers care about your thought process, not precision.',
+        },
+        {
           id: 'u10-L1-Q1',
           type: 'multiple-choice',
           question: 'Estimate the power needed to keep a car at highway speed. What approach should you take?',
@@ -85,6 +92,13 @@ export const unit10: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="8" y="12" width="64" height="56" rx="4" fill="#58CC02" opacity="0.04"/> <rect x="8" y="12" width="64" height="56" rx="4" stroke="#3B8700" stroke-width="1.5" fill="none" opacity="0.2"/> <line x1="16" y1="60" x2="16" y2="20" stroke="#3B8700" stroke-width="1.2" opacity="0.3"/> <line x1="16" y1="60" x2="72" y2="60" stroke="#3B8700" stroke-width="1.2" opacity="0.3"/> <rect x="22" y="42" width="8" height="18" rx="1" fill="#58CC02" opacity="0.2"/> <rect x="22" y="42" width="8" height="18" rx="1" stroke="#58CC02" stroke-width="1" fill="none" opacity="0.4"/> <rect x="34" y="30" width="8" height="30" rx="1" fill="#58CC02" opacity="0.25"/> <rect x="34" y="30" width="8" height="30" rx="1" stroke="#58CC02" stroke-width="1" fill="none" opacity="0.4"/> <rect x="46" y="22" width="8" height="38" rx="1" fill="#58CC02" opacity="0.3"/> <rect x="46" y="22" width="8" height="38" rx="1" stroke="#58CC02" stroke-width="1" fill="none" opacity="0.4"/> <rect x="58" y="36" width="8" height="24" rx="1" fill="#A5E86C" opacity="0.2"/> <rect x="58" y="36" width="8" height="24" rx="1" stroke="#A5E86C" stroke-width="1" fill="none" opacity="0.3"/> <circle cx="26" cy="42" r="2" fill="#3B8700" opacity="0.4"> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/> </circle> <circle cx="38" cy="30" r="2" fill="#3B8700" opacity="0.4"> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" begin="0.3s" repeatCount="indefinite"/> </circle> <circle cx="50" cy="22" r="2" fill="#3B8700" opacity="0.4"> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" begin="0.6s" repeatCount="indefinite"/> </circle> </svg>',
           explanation: 'Room volume = L x W x H. Sphere volume = (4/3)*pi*r^3. Naive count = room volume / sphere volume.',
           hint: 'Spheres cannot fill 100% of space.'
+        },
+        {
+          id: 'u10-L1-T2',
+          type: 'teaching',
+          question: 'Anchor Values You Should Know',
+          explanation: 'Keep key reference numbers in your head: steel density is about 7850 kg/m3, steel yield strength is roughly 250 MPa, E for steel is 200 GPa, water density is 1000 kg/m3, and 1 HP is about 750 W. These "anchors" let you sanity-check any estimate quickly.',
+          hint: 'If your answer says a steel part weighs 0.1 kg but it\'s a meter long, something\'s off.',
         },
         {
           id: 'u10-L1-Q6',
@@ -707,6 +721,13 @@ export const unit10: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Specimen block --> <rect x="10" y="16" width="60" height="48" rx="1" stroke-width="0.8" stroke="#58CC02" fill="#58CC02" fill-opacity="0.03"/> <!-- Initial notch --> <path d="M10,40 L22,40" stroke-width="1" stroke="#58CC02"/> <!-- Growing crack --> <path d="M22,40 L28,41 L32,39 L36,40.5 L40,39.5 L44,40" stroke-width="0.8" stroke="#A5E86C" fill="none"> <animate attributeName="d" values="M22,40 L26,40.5 L28,39.5;M22,40 L28,41 L32,39 L36,40.5 L40,39.5 L44,40;M22,40 L28,41 L32,39 L36,40.5 L40,39.5 L44,40 L48,40.5 L52,39.5 L56,40" dur="6s" repeatCount="indefinite"/> </path> <!-- Crack tip stress field (plastic zone) --> <circle cx="44" cy="40" r="4" fill="#A5E86C" opacity="0.1"> <animate attributeName="cx" values="28;44;56" dur="6s" repeatCount="indefinite"/> <animate attributeName="r" values="2;4;6" dur="6s" repeatCount="indefinite"/> </circle> <!-- Cyclic load arrows --> <g opacity="0.4"> <line x1="40" y1="4" x2="40" y2="14" stroke-width="0.6" stroke="#58CC02"/> <polygon points="38.5,14 41.5,14 40,16" fill="#58CC02"/> <line x1="40" y1="76" x2="40" y2="66" stroke-width="0.6" stroke="#58CC02"/> <polygon points="38.5,66 41.5,66 40,64" fill="#58CC02"/> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="1.5s" repeatCount="indefinite"/> </g> <!-- Beach marks (striations) --> <g stroke="#58CC02" stroke-width="0.2" opacity="0.15"> <path d="M26,36 Q26,40 26,44" fill="none"/> <path d="M30,35 Q30,40 30,45" fill="none"/> <path d="M34,34.5 Q34,40 34,45.5" fill="none"/> <path d="M38,34 Q38,40 38,46" fill="none"/> <path d="M42,33.5 Q42,40 42,46.5" fill="none"/> </g> <!-- Crack length label --> <line x1="22" y1="50" x2="44" y2="50" stroke-width="0.3" stroke="#3B8700" opacity="0.3"/> <text x="33" y="54" font-size="3" fill="#3B8700" opacity="0.4" text-anchor="middle">a</text> <!-- da/dN label --> <text x="40" y="12" font-size="3" fill="#58CC02" opacity="0.4" text-anchor="middle">da/dN = C(ΔK)ᵐ</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">Paris law</text> </svg>',
           explanation: 'Under pure torsion, the maximum tensile stress occurs on a 45-degree helix. Brittle materials (or brittle failure modes) fracture along this plane, producing the characteristic spiral fracture.',
           hint: 'Under torsion, maximum tensile stress acts at 45°.'
+        },
+        {
+          id: 'u10-L2-T3',
+          type: 'teaching',
+          question: 'Environment Causes Hidden Failures',
+          explanation: 'Corrosion isn\'t just rust. Stress corrosion cracking, hydrogen embrittlement, and galvanic corrosion can destroy parts that look fine on the surface. These environment-assisted failures are sneaky because they often happen below the yield strength of the material.',
+          hint: 'Always consider what fluids, temperatures, and chemicals the part is exposed to.',
         },
         {
           id: 'u10-L2-Q20',
