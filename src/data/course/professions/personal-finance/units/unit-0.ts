@@ -12,7 +12,7 @@ export const unit0: Unit = {
       id: "pf-u0-L1",
       title: "Money 101",
       description: "What money is, how you get it, and how you lose it.",
-      icon: "💵",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -100,7 +100,7 @@ export const unit0: Unit = {
       id: "pf-u0-L2",
       title: "Your Bank Account",
       description: "Where your money lives and how to check on it.",
-      icon: "🏦",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -182,7 +182,7 @@ export const unit0: Unit = {
       id: "pf-u0-L3",
       title: "Saving vs Spending",
       description: "The one skill that changes everything.",
-      icon: "🐷",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {

@@ -12,7 +12,7 @@ export const unit7: Unit = {
       id: "sp-u7-L1",
       title: "What Are Exoplanets?",
       description: "Planets orbiting other stars. We've found over 5,000 so far.",
-      icon: "🪐",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -119,7 +119,7 @@ export const unit7: Unit = {
       id: "sp-u7-L2",
       title: "How We Find Them",
       description: "Transit method, radial velocity, direct imaging. Detecting worlds we can't see.",
-      icon: "🔍",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -228,7 +228,7 @@ export const unit7: Unit = {
       id: "sp-u7-L3",
       title: "The Habitable Zone",
       description: "The 'Goldilocks zone' where water can exist as a liquid. Not too hot, not too cold.",
-      icon: "🌡️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -335,7 +335,7 @@ export const unit7: Unit = {
       id: "sp-u7-L4",
       title: "Types of Exoplanets",
       description: "Hot Jupiters, super-Earths, rogue planets. Worlds stranger than fiction.",
-      icon: "🌍",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -443,7 +443,7 @@ export const unit7: Unit = {
       id: "sp-u7-L5",
       title: "The Drake Equation",
       description: "A famous formula for estimating how many civilizations might be out there.",
-      icon: "🔢",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -549,7 +549,7 @@ export const unit7: Unit = {
       id: "sp-u7-L6",
       title: "Biosignatures & SETI",
       description: "What would alien life look like? What signals are we searching for?",
-      icon: "📻",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

@@ -12,7 +12,7 @@ export const unit9: Unit = {
       id: "psy-u9-L0",
       title: "From Money Traps to Thinking Tools",
       description: "You learned to spot irrational behavior. Now let's build frameworks for thinking clearly.",
-      icon: "🌉",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -99,7 +99,7 @@ export const unit9: Unit = {
       id: "psy-u9-L1",
       title: "First Principles Thinking",
       description: "Break problems down to fundamentals instead of reasoning by analogy.",
-      icon: "🧱",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -208,7 +208,7 @@ export const unit9: Unit = {
       id: "psy-u9-L2",
       title: "Inversion: Think Backwards",
       description: "Instead of 'how do I succeed?', ask 'what would guarantee failure?'",
-      icon: "🔄",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -317,7 +317,7 @@ export const unit9: Unit = {
       id: "psy-u9-L3",
       title: "Correlation vs Causation",
       description: "Ice cream sales and drownings both rise in summer. Connected? No.",
-      icon: "📊",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -426,7 +426,7 @@ export const unit9: Unit = {
       id: "psy-u9-L4",
       title: "Base Rate Neglect",
       description: "Why your positive test result is probably wrong. The math that saves lives.",
-      icon: "🎲",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -643,7 +643,7 @@ export const unit9: Unit = {
       id: "psy-u9-L6",
       title: "Debiasing Your Thinking",
       description: "Pre-mortems, red teams, and other tools to outsmart your own brain.",
-      icon: "🛡️",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

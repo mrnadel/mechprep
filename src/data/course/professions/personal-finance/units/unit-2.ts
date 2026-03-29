@@ -12,7 +12,7 @@ export const unit2: Unit = {
       id: "pf-u2-L1",
       title: "Why Saving Feels Impossible",
       description: "The psychology behind why most people can't save, and how to beat it.",
-      icon: "🧠",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -116,7 +116,7 @@ export const unit2: Unit = {
       id: "pf-u2-L2",
       title: "The $500 That Changes Everything",
       description: "Why your first $500 in savings is the most important money you'll ever set aside.",
-      icon: "💡",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -220,7 +220,7 @@ export const unit2: Unit = {
       id: "pf-u2-L3",
       title: "Emergency Fund Blueprint",
       description: "How to build 3–6 months of expenses without feeling broke.",
-      icon: "🛡️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -451,7 +451,7 @@ export const unit2: Unit = {
       id: "pf-u2-L4",
       title: "High-Yield vs Regular Savings",
       description: "Your bank is paying you almost nothing. Here's where to earn 10x more.",
-      icon: "📈",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -562,7 +562,7 @@ export const unit2: Unit = {
       id: "pf-u2-L5",
       title: "The Savings Automation Trick",
       description: "Set it and forget it: how to save without willpower.",
-      icon: "⚙️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -675,7 +675,7 @@ export const unit2: Unit = {
       id: "pf-u2-L6",
       title: "Sinking Funds: Save for Fun Stuff",
       description: "How to save for vacations, gifts, and big purchases guilt-free.",
-      icon: "🏖️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -781,7 +781,7 @@ export const unit2: Unit = {
       id: "pf-u2-L7",
       title: "The 30-Day Savings Challenge",
       description: "A simple challenge that builds real momentum fast.",
-      icon: "🏃",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -892,7 +892,7 @@ export const unit2: Unit = {
       id: "pf-u2-L8",
       title: "Lifestyle Inflation Trap",
       description: "Why earning more doesn't mean saving more, unless you're aware.",
-      icon: "🎈",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -996,7 +996,7 @@ export const unit2: Unit = {
       id: "pf-u2-L9",
       title: "Windfalls: Don't Blow the Bonus",
       description: "Smart moves when you get a tax refund, bonus, or surprise money.",
-      icon: "🎁",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1186,7 +1186,7 @@ export const unit2: Unit = {
       id: "pf-u2-L10",
       title: "Saving Scoreboard",
       description: "Put your saving knowledge to the ultimate test.",
-      icon: "🏆",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

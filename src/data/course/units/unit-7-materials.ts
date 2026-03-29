@@ -12,7 +12,7 @@ export const unit7: Unit = {
       id: 'u7-L1',
       title: 'Material Properties & Testing',
       description: 'Tensile test, hardness tests (Rockwell/Brinell/Vickers), impact testing, creep, fatigue properties.',
-      icon: '🧪',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -439,7 +439,7 @@ export const unit7: Unit = {
       id: 'u7-L2',
       title: 'Phase Diagrams & Heat Treatment',
       description: 'Iron-carbon diagram, TTT/CCT diagrams, annealing/normalizing/quenching/tempering, martensite/austenite/pearlite.',
-      icon: '📊',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -876,7 +876,7 @@ export const unit7: Unit = {
       id: 'u7-L3',
       title: 'Casting & Forming',
       description: 'Sand/investment/die casting, forging, rolling, extrusion, drawing, defects, shrinkage allowance.',
-      icon: '🔨',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1343,7 +1343,7 @@ export const unit7: Unit = {
       id: 'u7-L4',
       title: 'Machining & CNC',
       description: 'Turning/milling/drilling, cutting speed/feed/depth, tool wear, surface finish, CNC programming basics, G-code.',
-      icon: '⚙️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -1782,7 +1782,7 @@ export const unit7: Unit = {
       id: 'u7-L5',
       title: 'Modern Manufacturing',
       description: 'SLA/SLS/FDM/DMLS, design for additive, injection molding, sheet metal, DFM principles.',
-      icon: '🖨️',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [

@@ -12,7 +12,7 @@ export const unit5: Unit = {
       id: "psy-u5-L0",
       title: "From Feelings to Social Forces",
       description: "Your emotions don't exist in a vacuum. Other people shape them constantly.",
-      icon: "🌉",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -99,7 +99,7 @@ export const unit5: Unit = {
       id: "psy-u5-L1",
       title: "Conformity & Peer Pressure",
       description: "The Asch experiment: why you'll agree with a group you know is wrong.",
-      icon: "🐑",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -199,7 +199,7 @@ export const unit5: Unit = {
       id: "psy-u5-L2",
       title: "Obedience to Authority",
       description: "Milgram's experiment: how ordinary people do extraordinary harm when told to.",
-      icon: "👔",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -307,7 +307,7 @@ export const unit5: Unit = {
       id: "psy-u5-L3",
       title: "The Bystander Effect",
       description: "Why more witnesses means less help. The Kitty Genovese lesson.",
-      icon: "👀",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -420,7 +420,7 @@ export const unit5: Unit = {
       id: "psy-u5-L4",
       title: "First Impressions & Stereotypes",
       description: "Your brain judges people in 100 milliseconds. Is it right?",
-      icon: "🤔",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -532,7 +532,7 @@ export const unit5: Unit = {
       id: "psy-u5-L5",
       title: "Groupthink & Echo Chambers",
       description: "When smart groups make terrible decisions. From boardrooms to social media.",
-      icon: "🔊",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -640,7 +640,7 @@ export const unit5: Unit = {
       id: "psy-u5-L6",
       title: "Persuasion & Influence",
       description: "Cialdini's six principles: reciprocity, scarcity, authority, consistency, liking, consensus.",
-      icon: "🎤",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

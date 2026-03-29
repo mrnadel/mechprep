@@ -12,7 +12,7 @@ export const unit9: Unit = {
       id: "sp-u9-L1",
       title: "The Big Bang",
       description: "13.8 billion years ago, everything began from an infinitely dense point.",
-      icon: "💥",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -119,7 +119,7 @@ export const unit9: Unit = {
       id: "sp-u9-L2",
       title: "Cosmic Microwave Background",
       description: "The oldest light in the universe. A baby photo from 380,000 years after the Big Bang.",
-      icon: "📡",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -226,7 +226,7 @@ export const unit9: Unit = {
       id: "sp-u9-L3",
       title: "Dark Matter",
       description: "27% of the universe is made of something we can't see. We know it's there.",
-      icon: "🔮",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -333,7 +333,7 @@ export const unit9: Unit = {
       id: "sp-u9-L4",
       title: "Dark Energy & Expansion",
       description: "The universe is expanding faster and faster. Something mysterious is pushing it apart.",
-      icon: "💨",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -441,7 +441,7 @@ export const unit9: Unit = {
       id: "sp-u9-L5",
       title: "The Fate of the Universe",
       description: "Big Freeze, Big Crunch, or Big Rip? How does everything end?",
-      icon: "🔮",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

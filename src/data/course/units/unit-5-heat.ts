@@ -12,7 +12,7 @@ export const unit5: Unit = {
       id: 'u5-L1',
       title: 'Conduction',
       description: 'Fourier\'s law, thermal resistance, composite walls, contact resistance, and critical radius of insulation.',
-      icon: '🧱',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -435,7 +435,7 @@ export const unit5: Unit = {
       id: 'u5-L2',
       title: 'Convection',
       description: 'Newton\'s cooling law, dimensionless numbers, forced vs. natural convection, and correlations.',
-      icon: '💨',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -860,7 +860,7 @@ export const unit5: Unit = {
       id: 'u5-L3',
       title: 'Radiation',
       description: 'Stefan-Boltzmann law, emissivity, view factors, blackbody and graybody, and radiation shields.',
-      icon: '☀️',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1281,7 +1281,7 @@ export const unit5: Unit = {
       id: 'u5-L4',
       title: 'Heat Exchangers',
       description: 'LMTD method, NTU-effectiveness, parallel/counter/cross flow, fouling, and overall U.',
-      icon: '🔄',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -1701,7 +1701,7 @@ export const unit5: Unit = {
       id: 'u5-L5',
       title: 'Fins & Extended Surfaces',
       description: 'Fin efficiency, fin effectiveness, heat dissipation, fin types, and thermal design considerations.',
-      icon: '🪭',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -2124,7 +2124,7 @@ export const unit5: Unit = {
       id: 'u5-L6',
       title: 'Transient Conduction',
       description: 'Biot number, lumped capacitance method, time constant, semi-infinite solids, Heisler charts, and practical transient thermal problems.',
-      icon: '⏱️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [

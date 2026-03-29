@@ -12,7 +12,7 @@ export const unit3: Unit = {
       id: 'u3-L1',
       title: 'Stress & Strain Fundamentals',
       description: 'Normal and shear stress, engineering and true strain, stress-strain diagrams, elastic modulus, and Poisson\'s ratio.',
-      icon: '📊',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -440,7 +440,7 @@ export const unit3: Unit = {
       id: 'u3-L2',
       title: 'Beam Bending',
       description: 'Bending stress formula, neutral axis, section modulus, and deflection formulas.',
-      icon: '📏',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -873,7 +873,7 @@ export const unit3: Unit = {
       id: 'u3-L3',
       title: 'Shear & Bending Diagrams',
       description: 'SFD/BMD construction, distributed loads, concentrated loads, and maximum bending moment location.',
-      icon: '📈',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1304,7 +1304,7 @@ export const unit3: Unit = {
       id: 'u3-L4',
       title: 'Torsion',
       description: 'Torsion formula, polar moment, angle of twist, and power transmission.',
-      icon: '🔧',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1733,7 +1733,7 @@ export const unit3: Unit = {
       id: 'u3-L5',
       title: 'Mohr\'s Circle & Combined Loading',
       description: 'Principal stresses, maximum shear, plane stress transformation, and combined loading analysis.',
-      icon: '⭕',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -2166,7 +2166,7 @@ export const unit3: Unit = {
       id: 'u3-L6',
       title: 'Failure Theories',
       description: 'Von Mises, Tresca, Maximum Normal Stress, fatigue, S-N curves, endurance limit, and safety factors.',
-      icon: '⚠️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -2600,7 +2600,7 @@ export const unit3: Unit = {
       id: 'u3-L7',
       title: 'Column Buckling & Pressure Vessels',
       description: 'Euler\'s critical load, effective length factors, slenderness ratio, Johnson\'s formula, and thin/thick-wall pressure vessel stress analysis.',
-      icon: '🏗️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [

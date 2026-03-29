@@ -12,7 +12,7 @@ export const unit10: Unit = {
       id: "psy-u10-L0",
       title: "From Clear Thinking to Self-Defense",
       description: "You've built your critical thinking toolkit. Now let's see who's trying to bypass it.",
-      icon: "🌉",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -99,7 +99,7 @@ export const unit10: Unit = {
       id: "psy-u10-L1",
       title: "Advertising & Your Brain",
       description: "How ads bypass your rational mind and speak directly to your emotions.",
-      icon: "📺",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -208,7 +208,7 @@ export const unit10: Unit = {
       id: "psy-u10-L2",
       title: "Social Media & Dopamine Loops",
       description: "Infinite scroll, notifications, likes. Designed to be addictive.",
-      icon: "📱",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -317,7 +317,7 @@ export const unit10: Unit = {
       id: "psy-u10-L3",
       title: "Propaganda & Misinformation",
       description: "Repetition, emotional triggers, and us-vs-them framing. How to spot it.",
-      icon: "📢",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -426,7 +426,7 @@ export const unit10: Unit = {
       id: "psy-u10-L4",
       title: "Dark UX Patterns",
       description: "Confirmshaming, hidden fees, roach motels. When design manipulates you.",
-      icon: "🕸️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -535,7 +535,7 @@ export const unit10: Unit = {
       id: "psy-u10-L5",
       title: "Building Your Defense System",
       description: "Practical tools to protect your attention, decisions, and mental health.",
-      icon: "🏰",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

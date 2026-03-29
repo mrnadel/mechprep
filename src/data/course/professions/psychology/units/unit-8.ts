@@ -12,7 +12,7 @@ export const unit8: Unit = {
       id: "psy-u8-L0",
       title: "From Decisions to Dollars",
       description: "How decision-making biases show up every time you open your wallet.",
-      icon: "🌉",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -112,7 +112,7 @@ export const unit8: Unit = {
       id: "psy-u8-L1",
       title: "Rational vs Real Humans",
       description: "Economics assumes you're rational. Psychology proves you're not.",
-      icon: "🤖",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -212,7 +212,7 @@ export const unit8: Unit = {
       id: "psy-u8-L2",
       title: "Mental Accounting",
       description: "Why $100 from a bonus feels different from $100 you earned. It shouldn't.",
-      icon: "🧮",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -321,7 +321,7 @@ export const unit8: Unit = {
       id: "psy-u8-L3",
       title: "The Endowment Effect",
       description: "You value what you own more than what you don't. Sellers always overcharge.",
-      icon: "🏠",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -421,7 +421,7 @@ export const unit8: Unit = {
       id: "psy-u8-L4",
       title: "Pricing Psychology",
       description: "Why $9.99 beats $10 and why decoy options change your pick.",
-      icon: "🏷️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -530,7 +530,7 @@ export const unit8: Unit = {
       id: "psy-u8-L5",
       title: "Hyperbolic Discounting",
       description: "Why you'd take $50 today over $100 in a year. Your future self loses.",
-      icon: "⏳",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -639,7 +639,7 @@ export const unit8: Unit = {
       id: "psy-u8-L6",
       title: "Scarcity & FOMO",
       description: "Limited time! Only 3 left! Why urgency hacks your brain.",
-      icon: "⏰",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {

@@ -12,7 +12,7 @@ export const unit4: Unit = {
       id: "psy-u4-L1",
       title: "What Are Emotions?",
       description: "Not just feelings. Emotions are your brain's rapid-response system.",
-      icon: "💡",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -121,7 +121,7 @@ export const unit4: Unit = {
       id: "psy-u4-L2",
       title: "The Big Six Emotions",
       description: "Happiness, sadness, anger, fear, surprise, and disgust. Why exactly these six?",
-      icon: "🎭",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -229,7 +229,7 @@ export const unit4: Unit = {
       id: "psy-u4-L3",
       title: "Fight, Flight, Freeze",
       description: "Your stress response: the ancient survival system that still runs your life.",
-      icon: "🏃",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -338,7 +338,7 @@ export const unit4: Unit = {
       id: "psy-u4-L4",
       title: "Intrinsic vs Extrinsic Motivation",
       description: "Why paying people sometimes makes them perform worse.",
-      icon: "🎯",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -447,7 +447,7 @@ export const unit4: Unit = {
       id: "psy-u4-L5",
       title: "Dopamine & Reward",
       description: "The brain's motivation molecule: why likes, games, and junk food feel so good.",
-      icon: "🍬",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -555,7 +555,7 @@ export const unit4: Unit = {
       id: "psy-u4-L6",
       title: "Emotional Intelligence",
       description: "Reading emotions in yourself and others. The skill that predicts success.",
-      icon: "🤝",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

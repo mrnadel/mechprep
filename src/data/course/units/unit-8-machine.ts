@@ -12,7 +12,7 @@ export const unit8: Unit = {
       id: 'u8-L1',
       title: 'Shafts & Keys',
       description: 'Shaft design for bending+torsion, keyway stress concentration, ASME shaft code, critical speed, whirling.',
-      icon: '🔑',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -442,7 +442,7 @@ export const unit8: Unit = {
       id: 'u8-L2',
       title: 'Bearings & Lubrication',
       description: 'Ball/roller/plain bearings, L10 life calculation, bearing selection, viscosity, lubrication regimes.',
-      icon: '🛞',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -868,7 +868,7 @@ export const unit8: Unit = {
       id: 'u8-L3',
       title: 'Gears & Power Transmission',
       description: 'Spur/helical/bevel/worm gears, Lewis equation, gear ratios, tooth contact stress, gear trains, efficiency.',
-      icon: '⚙️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -1305,7 +1305,7 @@ export const unit8: Unit = {
       id: 'u8-L4',
       title: 'Fasteners & Joints',
       description: 'Bolt preload, bolt stiffness, gasket factors, welded joints (fillet/butt), adhesive bonding, joint design.',
-      icon: '🔩',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1741,7 +1741,7 @@ export const unit8: Unit = {
       id: 'u8-L5',
       title: 'Springs & Seals',
       description: 'Helical spring design, Wahl factor, spring rate, O-ring/lip seal/mechanical seal selection, PV limits.',
-      icon: '🌀',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [

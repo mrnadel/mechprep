@@ -12,7 +12,7 @@ export const unit5: Unit = {
       id: "pf-u5-L1",
       title: "Checking vs Savings: What Goes Where",
       description: "Two accounts, two jobs, how to use each one correctly.",
-      icon: "\u{1F4C2}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -127,7 +127,7 @@ export const unit5: Unit = {
       id: "pf-u5-L2",
       title: "Banks vs Credit Unions vs Online",
       description: "The pros and cons of each, and which one wins for you.",
-      icon: "\u{1F3DB}\u{FE0F}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -228,7 +228,7 @@ export const unit5: Unit = {
       id: "pf-u5-L3",
       title: "Fee Graveyard: Stop Losing Money",
       description: "Overdraft fees, ATM fees, maintenance fees, and how to dodge them all.",
-      icon: "\u{1F6AB}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -456,7 +456,7 @@ export const unit5: Unit = {
       id: "pf-u5-L4",
       title: "Digital Wallets & P2P Payments",
       description: "Venmo, Zelle, Apple Pay, how digital money moves and the risks.",
-      icon: "\u{1F4F1}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -569,7 +569,7 @@ export const unit5: Unit = {
       id: "pf-u5-L5",
       title: "Banking Safety & Fraud Defense",
       description: "Protect your accounts from scammers, hackers, and phishing.",
-      icon: "\u{1F510}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -694,7 +694,7 @@ export const unit5: Unit = {
       id: "pf-u5-L6",
       title: "Taxes Aren't Theft (Here's Why)",
       description: "Where your tax dollars go and why everyone pays.",
-      icon: "\u{1F3DB}\u{FE0F}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -798,7 +798,7 @@ export const unit5: Unit = {
       id: "pf-u5-L7",
       title: "Tax Brackets Aren't What You Think",
       description: "Marginal rates explained, you don't pay one rate on everything.",
-      icon: "\u{1F4D0}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -906,7 +906,7 @@ export const unit5: Unit = {
       id: "pf-u5-L8",
       title: "W-2 vs 1099: Know Your Form",
       description: "Employee vs contractor, and why it changes your tax life.",
-      icon: "\u{1F4C4}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1023,7 +1023,7 @@ export const unit5: Unit = {
       id: "pf-u5-L9",
       title: "The Standard Deduction Shortcut",
       description: "The easiest way to lower your tax bill without any paperwork.",
-      icon: "\u{2702}\u{FE0F}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1132,7 +1132,7 @@ export const unit5: Unit = {
       id: "pf-u5-L10",
       title: "Tax Credits: Free Money You're Missing",
       description: "Dollar-for-dollar reductions most people don't claim.",
-      icon: "\u{1F4B2}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1237,7 +1237,7 @@ export const unit5: Unit = {
       id: "pf-u5-L11",
       title: "Filing Step by Step",
       description: "The exact process from W-2 to 'accepted', demystified.",
-      icon: "\u{1F4EC}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1350,7 +1350,7 @@ export const unit5: Unit = {
       id: "pf-u5-L12",
       title: "5 Tax Mistakes That Cost You",
       description: "Common errors that trigger audits or leave money on the table.",
-      icon: "\u{1F3C6}",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

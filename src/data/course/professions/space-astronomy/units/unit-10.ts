@@ -12,7 +12,7 @@ export const unit10: Unit = {
       id: "sp-u10-L1",
       title: "Artemis: Return to the Moon",
       description: "NASA's plan to put humans back on the Moon, this time to stay.",
-      icon: "🌙",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -119,7 +119,7 @@ export const unit10: Unit = {
       id: "sp-u10-L2",
       title: "Mars Colonization",
       description: "What it would take to live on Mars: air, water, radiation, and psychology.",
-      icon: "🔴",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -228,7 +228,7 @@ export const unit10: Unit = {
       id: "sp-u10-L3",
       title: "Space Tourism",
       description: "Blue Origin, Virgin Galactic, SpaceX. Space is opening up to civilians.",
-      icon: "🎟️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -336,7 +336,7 @@ export const unit10: Unit = {
       id: "sp-u10-L4",
       title: "Space Mining & Resources",
       description: "Asteroids contain trillions of dollars in metals. How do we get them?",
-      icon: "⛏️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -445,7 +445,7 @@ export const unit10: Unit = {
       id: "sp-u10-L5",
       title: "Interstellar Travel",
       description: "Light sails, generation ships, warp drives. Can we ever reach another star?",
-      icon: "🌟",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -553,7 +553,7 @@ export const unit10: Unit = {
       id: "sp-u10-L6",
       title: "The Fermi Paradox",
       description: "If the universe is so big, where is everyone? The great silence.",
-      icon: "🤫",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

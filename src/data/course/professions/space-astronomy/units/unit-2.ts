@@ -12,7 +12,7 @@ export const unit2: Unit = {
       id: "sp-u2-L1",
       title: "The Sun: Our Star",
       description: "A giant nuclear reactor 93 million miles away that makes life possible.",
-      icon: "☀️",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -121,7 +121,7 @@ export const unit2: Unit = {
       id: "sp-u2-L2",
       title: "Rocky Planets: Mercury to Mars",
       description: "Small, dense, and close to the Sun. The four inner worlds.",
-      icon: "🪨",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -229,7 +229,7 @@ export const unit2: Unit = {
       id: "sp-u2-L3",
       title: "Gas Giants: Jupiter & Saturn",
       description: "Massive, ringed, and full of storms. The solar system's heavyweights.",
-      icon: "🪐",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -337,7 +337,7 @@ export const unit2: Unit = {
       id: "sp-u2-L4",
       title: "Ice Giants: Uranus & Neptune",
       description: "The cold, distant worlds we've only visited once.",
-      icon: "🧊",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -445,7 +445,7 @@ export const unit2: Unit = {
       id: "sp-u2-L5",
       title: "Dwarf Planets & the Asteroid Belt",
       description: "Pluto, Ceres, Eris, and the billions of rocks between Mars and Jupiter.",
-      icon: "💎",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -553,7 +553,7 @@ export const unit2: Unit = {
       id: "sp-u2-L6",
       title: "Moons of the Solar System",
       description: "Europa's hidden ocean, Titan's thick atmosphere, and Io's volcanoes.",
-      icon: "🌙",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

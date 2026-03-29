@@ -12,7 +12,7 @@ export const unit4: Unit = {
       id: 'u4-L1',
       title: 'Properties & State',
       description: 'Intensive/extensive properties, phase diagrams, quality, ideal gas law, and specific heats.',
-      icon: '🌡️',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -439,7 +439,7 @@ export const unit4: Unit = {
       id: 'u4-L2',
       title: 'First Law & Energy Balance',
       description: 'Closed and open systems, enthalpy, steady flow energy equation, and polytropic processes.',
-      icon: '⚖️',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1286,7 +1286,7 @@ export const unit4: Unit = {
       id: 'u4-L4',
       title: 'Power Cycles',
       description: 'Rankine, Brayton, Otto, Diesel cycles, reheat, regeneration, and efficiency calculations.',
-      icon: '♻️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -1711,7 +1711,7 @@ export const unit4: Unit = {
       id: 'u4-L5',
       title: 'Refrigeration & Heat Pumps',
       description: 'Vapor compression, COP, refrigerants, absorption cycle, and heat pump vs. air conditioner.',
-      icon: '❄️',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [

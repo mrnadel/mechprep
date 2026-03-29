@@ -12,7 +12,7 @@ export const unit9: Unit = {
       id: "pf-u9-L1",
       title: "Renting vs Buying: The Real Math",
       description: "The truth about homeownership: it's not always better than renting.",
-      icon: "🔢",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -232,7 +232,7 @@ export const unit9: Unit = {
       id: "pf-u9-L3",
       title: "Down Payments & Closing Costs",
       description: "How much cash you actually need upfront: it's more than you think.",
-      icon: "💵",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -341,7 +341,7 @@ export const unit9: Unit = {
       id: "pf-u9-L4",
       title: "How Much House Can You Afford?",
       description: "The real number, not the inflated amount the bank approves you for.",
-      icon: "🏷️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -452,7 +452,7 @@ export const unit9: Unit = {
       id: "pf-u9-L5",
       title: "The Home Buying Process Step by Step",
       description: "From pre-approval to getting the keys, every stage explained.",
-      icon: "🔑",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -567,7 +567,7 @@ export const unit9: Unit = {
       id: "pf-u9-L6",
       title: "Property Taxes & Hidden Costs",
       description: "The expenses that don't show up in the listing price.",
-      icon: "🔍",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -685,7 +685,7 @@ export const unit9: Unit = {
       id: "pf-u9-L7",
       title: "Refinancing: When It Makes Sense",
       description: "Replacing your mortgage with a better deal and the math that matters.",
-      icon: "♻️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -798,7 +798,7 @@ export const unit9: Unit = {
       id: "pf-u9-L8",
       title: "Real Estate as an Investment",
       description: "When a house builds wealth and when it's just an expensive place to live.",
-      icon: "📈",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -909,7 +909,7 @@ export const unit9: Unit = {
       id: "pf-u9-L9",
       title: "Rental Properties: Landlord Math",
       description: "The numbers behind owning rental property. Cash flow, expenses, ROI.",
-      icon: "🧮",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1014,7 +1014,7 @@ export const unit9: Unit = {
       id: "pf-u9-L10",
       title: "REITs: Real Estate Without the Headaches",
       description: "Own real estate through the stock market. No tenants, no toilets.",
-      icon: "🏢",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1121,7 +1121,7 @@ export const unit9: Unit = {
       id: "pf-u9-L11",
       title: "House Hacking: Live Free-ish",
       description: "How to make your living situation pay for itself.",
-      icon: "🧠",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1240,7 +1240,7 @@ export const unit9: Unit = {
       id: "pf-u9-L12",
       title: "Real Estate Mistakes That Cost Thousands",
       description: "The most expensive errors first-time buyers and investors make.",
-      icon: "🏆",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

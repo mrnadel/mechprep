@@ -12,7 +12,7 @@ export const unit8: Unit = {
       id: "sp-u8-L1",
       title: "The Milky Way: Our Home Galaxy",
       description: "200 billion stars, a supermassive black hole at the center, and you are here.",
-      icon: "🌌",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -119,7 +119,7 @@ export const unit8: Unit = {
       id: "sp-u8-L2",
       title: "Types of Galaxies",
       description: "Spirals, ellipticals, irregulars. How galaxies are classified.",
-      icon: "🔮",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -227,7 +227,7 @@ export const unit8: Unit = {
       id: "sp-u8-L3",
       title: "Galaxy Collisions",
       description: "Andromeda is heading our way at 110 km/s. What happens when galaxies merge.",
-      icon: "💥",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -334,7 +334,7 @@ export const unit8: Unit = {
       id: "sp-u8-L4",
       title: "What Is a Black Hole?",
       description: "A region where gravity is so strong that nothing, not even light, can escape.",
-      icon: "🕳️",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -441,7 +441,7 @@ export const unit8: Unit = {
       id: "sp-u8-L5",
       title: "Event Horizons & Spaghettification",
       description: "Cross the line and you're gone. What happens as you fall into a black hole.",
-      icon: "🍝",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

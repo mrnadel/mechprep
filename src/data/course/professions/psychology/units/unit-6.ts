@@ -12,7 +12,7 @@ export const unit6: Unit = {
       id: "psy-u6-L0",
       title: "From Groups to the Individual",
       description: "You've seen how groups shape behavior. Now let's look at what makes each person unique.",
-      icon: "🌉",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -99,7 +99,7 @@ export const unit6: Unit = {
       id: "psy-u6-L1",
       title: "The Big Five Personality Traits",
       description: "OCEAN: the five dimensions that science actually agrees on.",
-      icon: "🌊",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -207,7 +207,7 @@ export const unit6: Unit = {
       id: "psy-u6-L2",
       title: "Myers-Briggs: Popular but Problematic",
       description: "Why MBTI is everywhere and why psychologists don't trust it.",
-      icon: "📊",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -319,7 +319,7 @@ export const unit6: Unit = {
       id: "psy-u6-L3",
       title: "Nature vs Nurture",
       description: "Genes load the gun, environment pulls the trigger. How much is each?",
-      icon: "🧬",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -419,7 +419,7 @@ export const unit6: Unit = {
       id: "psy-u6-L4",
       title: "Self-Concept & Self-Esteem",
       description: "How you see yourself shapes everything you do. Can you change it?",
-      icon: "🪞",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -531,7 +531,7 @@ export const unit6: Unit = {
       id: "psy-u6-L5",
       title: "Growth Mindset vs Fixed Mindset",
       description: "Dweck's research: believing you can improve actually makes you improve.",
-      icon: "🌱",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {

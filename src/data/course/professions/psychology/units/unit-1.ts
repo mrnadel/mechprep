@@ -12,7 +12,7 @@ export const unit1: Unit = {
       id: "psy-u1-L1",
       title: "Meet Your Brain",
       description: "The 3-pound organ that runs your entire life.",
-      icon: "🧠",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -225,7 +225,7 @@ export const unit1: Unit = {
       id: "psy-u1-L3",
       title: "Left Brain, Right Brain",
       description: "The popular myth that won't go away, and what's actually true.",
-      icon: "🎭",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -332,7 +332,7 @@ export const unit1: Unit = {
       id: "psy-u1-L4",
       title: "Attention & Focus",
       description: "Why your brain can't really multitask, and what actually helps focus.",
-      icon: "🎯",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {

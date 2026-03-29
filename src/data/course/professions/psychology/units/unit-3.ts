@@ -12,7 +12,7 @@ export const unit3: Unit = {
       id: "psy-u3-L1",
       title: "How Memories Form",
       description: "From sensation to short-term to long-term: the journey of a memory.",
-      icon: "🧩",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -121,7 +121,7 @@ export const unit3: Unit = {
       id: "psy-u3-L2",
       title: "Short-Term vs Long-Term Memory",
       description: "Why you can remember your childhood but forgot what you ate yesterday.",
-      icon: "📦",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -230,7 +230,7 @@ export const unit3: Unit = {
       id: "psy-u3-L3",
       title: "The Forgetting Curve",
       description: "You lose 50% of new info within an hour. Here's how to beat it.",
-      icon: "📉",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -339,7 +339,7 @@ export const unit3: Unit = {
       id: "psy-u3-L4",
       title: "Spaced Repetition & Active Recall",
       description: "The two most powerful study techniques science has ever found.",
-      icon: "🔁",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -448,7 +448,7 @@ export const unit3: Unit = {
       id: "psy-u3-L5",
       title: "False Memories & Eyewitness Errors",
       description: "Your memory isn't a camera. It rewrites itself every time you remember.",
-      icon: "📷",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -561,7 +561,7 @@ export const unit3: Unit = {
       id: "psy-u3-L6",
       title: "Sleep, Stress & Memory",
       description: "Why pulling all-nighters destroys your ability to learn.",
-      icon: "😴",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {

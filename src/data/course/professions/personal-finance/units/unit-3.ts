@@ -12,7 +12,7 @@ export const unit3: Unit = {
       id: "pf-u3-L1",
       title: "Debt Is a Tool, Not a Monster",
       description: "Not all debt is bad. Learn the difference between smart borrowing and trap borrowing.",
-      icon: "🔧",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -136,7 +136,7 @@ export const unit3: Unit = {
       id: "pf-u3-L2",
       title: "How Interest Eats Your Money",
       description: "The math behind why a 1,000 purchase can end up costing 2,000.",
-      icon: "🦈",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -252,7 +252,7 @@ export const unit3: Unit = {
       id: "pf-u3-L3",
       title: "Credit Cards: The Double-Edged Sword",
       description: "How credit cards actually work, grace periods, minimum traps, and how to win the game.",
-      icon: "💳",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -381,7 +381,7 @@ export const unit3: Unit = {
       id: "pf-u3-L4",
       title: "Student Loans Survival Guide",
       description: "Federal vs private, repayment plans, and the truth about forgiveness.",
-      icon: "🎓",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -504,7 +504,7 @@ export const unit3: Unit = {
       id: "pf-u3-L5",
       title: "Car Loans: The Dealer's Game",
       description: "How dealerships profit from financing, and how to avoid their traps.",
-      icon: "🚗",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -627,7 +627,7 @@ export const unit3: Unit = {
       id: "pf-u3-L6",
       title: "The Minimum Payment Trap",
       description: "Why paying the minimum keeps you in debt for decades.",
-      icon: "🪤",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -751,7 +751,7 @@ export const unit3: Unit = {
       id: "pf-u3-L7",
       title: "Snowball vs Avalanche: Pick Your Fighter",
       description: "Two proven strategies to pay off multiple debts, choose the one that fits your brain.",
-      icon: "⚔️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -877,7 +877,7 @@ export const unit3: Unit = {
       id: "pf-u3-L8",
       title: "Consolidation & Refinancing",
       description: "Combining debts and lowering rates, when it works and when it's a trap.",
-      icon: "🔄",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -998,7 +998,7 @@ export const unit3: Unit = {
       id: "pf-u3-L9",
       title: "When Borrowing Makes Sense",
       description: "A decision framework for taking on debt intentionally.",
-      icon: "🧭",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1124,7 +1124,7 @@ export const unit3: Unit = {
       id: "pf-u3-L10",
       title: "Debt-Free Victory Plan",
       description: "Comprehensive review, prove you've mastered debt.",
-      icon: "🏆",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

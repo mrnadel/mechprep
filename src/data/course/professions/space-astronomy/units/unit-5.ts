@@ -12,7 +12,7 @@ export const unit5: Unit = {
       id: "sp-u5-L0",
       title: "From Stars to Spacecraft",
       description: "You've studied the stars. Now let's figure out how to reach them.",
-      icon: "🌉",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -103,7 +103,7 @@ export const unit5: Unit = {
       id: "sp-u5-L1",
       title: "Newton's Third Law & Rockets",
       description: "Every action has an equal and opposite reaction. That's how rockets fly.",
-      icon: "🚀",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -206,7 +206,7 @@ export const unit5: Unit = {
       id: "sp-u5-L2",
       title: "Escape Velocity",
       description: "How fast you need to go to leave Earth: 11.2 km/s. No shortcuts.",
-      icon: "💨",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -314,7 +314,7 @@ export const unit5: Unit = {
       id: "sp-u5-L3",
       title: "Orbits & Gravity",
       description: "Satellites are falling around the Earth. That's what an orbit is.",
-      icon: "🛰️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -423,7 +423,7 @@ export const unit5: Unit = {
       id: "sp-u5-L4",
       title: "Types of Orbits",
       description: "LEO, GEO, polar, Molniya. Different heights for different missions.",
-      icon: "🌐",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -532,7 +532,7 @@ export const unit5: Unit = {
       id: "sp-u5-L5",
       title: "Rocket Fuel & Staging",
       description: "Why rockets drop pieces of themselves on the way up.",
-      icon: "🔥",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -640,7 +640,7 @@ export const unit5: Unit = {
       id: "sp-u5-L6",
       title: "Landing Rockets: The SpaceX Revolution",
       description: "How reusable rockets changed the economics of space forever.",
-      icon: "🎯",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

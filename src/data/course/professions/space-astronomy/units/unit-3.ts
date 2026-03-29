@@ -12,7 +12,7 @@ export const unit3: Unit = {
       id: "sp-u3-L1",
       title: "Why We Have Seasons",
       description: "It's not because we're closer to the Sun in summer. The real reason.",
-      icon: "🍂",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -121,7 +121,7 @@ export const unit3: Unit = {
       id: "sp-u3-L2",
       title: "The Moon's Phases",
       description: "New, crescent, quarter, gibbous, full. What causes each phase.",
-      icon: "🌓",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -229,7 +229,7 @@ export const unit3: Unit = {
       id: "sp-u3-L3",
       title: "Eclipses: Solar & Lunar",
       description: "When the Sun, Earth, and Moon line up perfectly. A cosmic coincidence.",
-      icon: "🌑",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -337,7 +337,7 @@ export const unit3: Unit = {
       id: "sp-u3-L4",
       title: "Tides & Gravity",
       description: "The Moon pulls our oceans. Two high tides a day, and here's why.",
-      icon: "🌊",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -446,7 +446,7 @@ export const unit3: Unit = {
       id: "sp-u3-L5",
       title: "Earth's Magnetic Field & Auroras",
       description: "The invisible shield protecting you from solar radiation, and the light show it creates.",
-      icon: "🌌",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

@@ -11,7 +11,7 @@ export const unit10: Unit = {
       id: 'u10-L1',
       title: 'Estimation Problems',
       description: 'Back-of-envelope calculations, order-of-magnitude estimation, Fermi problems, quick sanity checks.',
-      icon: '🧮',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -453,7 +453,7 @@ export const unit10: Unit = {
       id: 'u10-L2',
       title: 'Failure Analysis',
       description: 'Root cause analysis, failure modes (fatigue, corrosion, overload, creep), fractography basics, 8D/fishbone.',
-      icon: '🔍',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -887,7 +887,7 @@ export const unit10: Unit = {
       id: 'u10-L3',
       title: 'Design Trade-offs',
       description: 'Material selection (Ashby charts), cost vs performance, weight optimization, DFM vs DFA, Pugh matrix.',
-      icon: '⚖️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -1322,7 +1322,7 @@ export const unit10: Unit = {
       id: 'u10-L4',
       title: 'FEA & Simulation',
       description: 'Mesh quality, boundary conditions, convergence, element types, interpreting stress results, singularities.',
-      icon: '💻',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -2195,7 +2195,7 @@ export const unit10: Unit = {
       id: 'u10-L6',
       title: 'Standards & Professional Practice',
       description: 'ISO/ASME standards, quality management systems, engineering change management, risk assessment, and project management for engineers.',
-      icon: '📜',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [

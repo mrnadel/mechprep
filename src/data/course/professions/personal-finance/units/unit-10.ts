@@ -12,7 +12,7 @@ export const unit10: Unit = {
       id: "pf-u10-L1",
       title: "Retirement Math: Your Future Self Needs You",
       description: "How much you'll actually need. And why starting now matters so much.",
-      icon: "\u{1F9EE}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -131,7 +131,7 @@ export const unit10: Unit = {
       id: "pf-u10-L2",
       title: "401(k): Free Money from Your Boss",
       description: "The most powerful retirement tool most people underuse.",
-      icon: "\u{1F4BC}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -243,7 +243,7 @@ export const unit10: Unit = {
       id: "pf-u10-L3",
       title: "IRA: Roth vs Traditional Showdown",
       description: "Pay taxes now or later? The answer changes your retirement.",
-      icon: "\u{2694}\u{FE0F}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -357,7 +357,7 @@ export const unit10: Unit = {
       id: "pf-u10-L4",
       title: "Employer Match: Never Leave Money Behind",
       description: "If you're not getting the full match, you're giving away free cash.",
-      icon: "\u{1F381}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -587,7 +587,7 @@ export const unit10: Unit = {
       id: "pf-u10-L5",
       title: "Target-Date Funds: Set and Forget",
       description: "The one-fund retirement strategy that works for most people.",
-      icon: "\u{1F3AF}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -695,7 +695,7 @@ export const unit10: Unit = {
       id: "pf-u10-L6",
       title: "Social Security: What You'll Actually Get",
       description: "Don't count on it for everything. Here's what to realistically expect.",
-      icon: "\u{1F3DB}\u{FE0F}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -804,7 +804,7 @@ export const unit10: Unit = {
       id: "pf-u10-L7",
       title: "Starting Late? Here's the Plan",
       description: "It's never too late. But the strategy changes with your age.",
-      icon: "\u{23F0}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -918,7 +918,7 @@ export const unit10: Unit = {
       id: "pf-u10-L8",
       title: "The 4% Rule: How Much Is Enough?",
       description: "The simple formula to know when you can actually retire.",
-      icon: "\u{1F4D0}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1027,7 +1027,7 @@ export const unit10: Unit = {
       id: "pf-u10-L9",
       title: "Catch-Up Contributions After 50",
       description: "Extra savings power unlocked at 50. Use it.",
-      icon: "\u{1F3C3}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1140,7 +1140,7 @@ export const unit10: Unit = {
       id: "pf-u10-L10",
       title: "Retirement Account Mistakes",
       description: "Early withdrawals, missed matches, and other costly errors.",
-      icon: "\u{26A0}\u{FE0F}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1247,7 +1247,7 @@ export const unit10: Unit = {
       id: "pf-u10-L11",
       title: "Your Retirement Roadmap",
       description: "Build a personalized retirement plan based on where you are today.",
-      icon: "\u{1F3C6}",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

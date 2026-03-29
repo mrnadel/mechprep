@@ -12,7 +12,7 @@ export const unit4: Unit = {
       id: "sp-u4-L0",
       title: "From Our Star to All Stars",
       description: "You know the Sun. Now meet the billions of stars beyond it.",
-      icon: "🌉",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -110,7 +110,7 @@ export const unit4: Unit = {
       id: "sp-u4-L1",
       title: "How Stars Are Born",
       description: "Gravity pulls gas together, temperature rises, and nuclear fusion ignites.",
-      icon: "👶",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -223,7 +223,7 @@ export const unit4: Unit = {
       id: "sp-u4-L2",
       title: "Star Colors & Temperature",
       description: "Red stars are cool, blue stars are scorching. Color tells you everything.",
-      icon: "🌈",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -332,7 +332,7 @@ export const unit4: Unit = {
       id: "sp-u4-L3",
       title: "The HR Diagram",
       description: "The single most important chart in astronomy. Main sequence, giants, dwarfs.",
-      icon: "📊",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -441,7 +441,7 @@ export const unit4: Unit = {
       id: "sp-u4-L4",
       title: "How Stars Die",
       description: "Red giants, white dwarfs, supernovae, neutron stars. Size determines fate.",
-      icon: "💥",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -549,7 +549,7 @@ export const unit4: Unit = {
       id: "sp-u4-L5",
       title: "Pulsars & Neutron Stars",
       description: "A teaspoon weighs a billion tons. The densest objects that aren't black holes.",
-      icon: "💫",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

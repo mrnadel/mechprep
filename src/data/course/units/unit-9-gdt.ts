@@ -12,7 +12,7 @@ export const unit9: Unit = {
       id: 'u9-L1',
       title: 'Tolerance Fundamentals',
       description: 'Tolerance/allowance, clearance/interference/transition fits, ISO/ANSI tolerance grades, bilateral/unilateral.',
-      icon: '📐',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -443,7 +443,7 @@ export const unit9: Unit = {
       id: 'u9-L2',
       title: 'Geometric Tolerancing',
       description: 'Form (flatness, cylindricity, circularity, straightness), orientation (perpendicularity, angularity, parallelism), MMC/LMC, bonus tolerance.',
-      icon: '🔷',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -879,7 +879,7 @@ export const unit9: Unit = {
       id: 'u9-L3',
       title: 'Datum Systems',
       description: 'Datum features, datum reference frame, primary/secondary/tertiary datums, datum targets, fixturing.',
-      icon: '📌',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1310,7 +1310,7 @@ export const unit9: Unit = {
       id: 'u9-L4',
       title: 'Tolerance Stack-Up',
       description: 'Worst-case analysis, RSS (statistical), 1D chain analysis, gap analysis, tolerance allocation.',
-      icon: '📊',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -1741,7 +1741,7 @@ export const unit9: Unit = {
       id: 'u9-L5',
       title: 'Surface Finish & Metrology',
       description: 'Ra/Rz/Rq, surface lay symbols, CMM basics, profilometry, measurement uncertainty.',
-      icon: '🔬',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [

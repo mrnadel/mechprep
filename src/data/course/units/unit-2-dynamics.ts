@@ -12,7 +12,7 @@ export const unit2: Unit = {
       id: 'u2-L1',
       title: 'Particle Kinematics',
       description: 'Position, velocity, acceleration, relative motion, curvilinear motion, and projectile motion.',
-      icon: '📍',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -442,7 +442,7 @@ export const unit2: Unit = {
       id: 'u2-L2',
       title: 'Newton\'s Laws Applied',
       description: 'F=ma applications, normal/tangential coordinates, pulleys, and inclined planes.',
-      icon: '🍎',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -1300,7 +1300,7 @@ export const unit2: Unit = {
       id: 'u2-L4',
       title: 'Impulse & Momentum',
       description: 'Linear and angular momentum, collisions, and coefficient of restitution.',
-      icon: '💥',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1729,7 +1729,7 @@ export const unit2: Unit = {
       id: 'u2-L5',
       title: 'Rotational Dynamics',
       description: 'Mass moment of inertia, angular momentum, gyroscopic effects, and rolling without slipping.',
-      icon: '🔄',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -2157,7 +2157,7 @@ export const unit2: Unit = {
       id: 'u2-L6',
       title: 'Free & Forced Vibration',
       description: 'Natural frequency, damping, resonance, transmissibility, and vibration isolation for SDOF systems.',
-      icon: '〰️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [

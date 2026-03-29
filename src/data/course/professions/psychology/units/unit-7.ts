@@ -121,7 +121,7 @@ export const unit7: Unit = {
       id: "psy-u7-L2",
       title: "Loss Aversion",
       description: "Losing $100 hurts twice as much as gaining $100 feels good. Why?",
-      icon: "📉",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -233,7 +233,7 @@ export const unit7: Unit = {
       id: "psy-u7-L3",
       title: "The Paradox of Choice",
       description: "More options make you less happy and less likely to choose at all.",
-      icon: "🛒",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -333,7 +333,7 @@ export const unit7: Unit = {
       id: "psy-u7-L4",
       title: "Heuristics: Mental Shortcuts",
       description: "Rules of thumb that save time but cost accuracy.",
-      icon: "🧭",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -441,7 +441,7 @@ export const unit7: Unit = {
       id: "psy-u7-L5",
       title: "Prospect Theory & Risk",
       description: "Why people buy lottery tickets and insurance on the same day.",
-      icon: "🎰",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -549,7 +549,7 @@ export const unit7: Unit = {
       id: "psy-u7-L6",
       title: "Nudges & Choice Architecture",
       description: "How small design changes lead to big behavior shifts.",
-      icon: "👉",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

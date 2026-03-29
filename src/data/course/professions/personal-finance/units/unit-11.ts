@@ -12,7 +12,7 @@ export const unit11: Unit = {
       id: "pf-u11-L1",
       title: "Insurance: Paying for Peace of Mind",
       description: "Why insurance exists and when it's actually worth the cost.",
-      icon: "🧘",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -123,7 +123,7 @@ export const unit11: Unit = {
       id: "pf-u11-L2",
       title: "Health Insurance Decoded",
       description: "HMO, PPO, deductibles, translated into plain English.",
-      icon: "🏥",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -237,7 +237,7 @@ export const unit11: Unit = {
       id: "pf-u11-L3",
       title: "Deductibles, Copays & Premiums",
       description: "The three numbers that control what you actually pay.",
-      icon: "💲",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -365,7 +365,7 @@ export const unit11: Unit = {
       id: "pf-u11-L4",
       title: "Auto Insurance: What You Actually Need",
       description: "Liability, collision, comprehensive. Which coverage matters.",
-      icon: "🚗",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -475,7 +475,7 @@ export const unit11: Unit = {
       id: "pf-u11-L5",
       title: "Renter's & Homeowner's Insurance",
       description: "Protecting your stuff costs less than you think.",
-      icon: "🏠",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -585,7 +585,7 @@ export const unit11: Unit = {
       id: "pf-u11-L6",
       title: "Life Insurance: Who Needs It?",
       description: "Term vs whole life. And why most young people only need one.",
-      icon: "👨‍👩‍👧",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -695,7 +695,7 @@ export const unit11: Unit = {
       id: "pf-u11-L7",
       title: "Disability Insurance: Protecting Your Income",
       description: "Your ability to earn is your biggest asset. Here's how to insure it.",
-      icon: "💪",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -804,7 +804,7 @@ export const unit11: Unit = {
       id: "pf-u11-L8",
       title: "When to Skip Coverage",
       description: "Not every insurance pitch is worth it. Know when to say no.",
-      icon: "🚫",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -912,7 +912,7 @@ export const unit11: Unit = {
       id: "pf-u11-L9",
       title: "Scams & Identity Theft Defense",
       description: "How to spot fraud, protect your identity, and recover if hit.",
-      icon: "🕵️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1036,7 +1036,7 @@ export const unit11: Unit = {
       id: "pf-u11-L10",
       title: "Insurance Shopping Like a Pro",
       description: "Compare, negotiate, and lock in the best rates.",
-      icon: "🏆",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

@@ -12,7 +12,7 @@ export const unit6: Unit = {
       id: "sp-u6-L0",
       title: "We Built the Rockets. Now Where Did We Go?",
       description: "From learning how rockets work to the missions they made possible.",
-      icon: "🌉",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -102,7 +102,7 @@ export const unit6: Unit = {
       id: "sp-u6-L1",
       title: "The Space Race",
       description: "USA vs USSR: Sputnik, Gagarin, Apollo. The competition that launched an era.",
-      icon: "🏁",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -211,7 +211,7 @@ export const unit6: Unit = {
       id: "sp-u6-L2",
       title: "Apollo: Walking on the Moon",
       description: "12 humans walked on another world. The engineering, the risks, the legacy.",
-      icon: "👨‍🚀",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -319,7 +319,7 @@ export const unit6: Unit = {
       id: "sp-u6-L3",
       title: "The International Space Station",
       description: "A football-field-sized lab orbiting at 17,500 mph. 24 years of science.",
-      icon: "🏠",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -428,7 +428,7 @@ export const unit6: Unit = {
       id: "sp-u6-L4",
       title: "Mars Rovers & Landers",
       description: "Curiosity, Perseverance, Ingenuity. Driving robots on another planet.",
-      icon: "🤖",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -536,7 +536,7 @@ export const unit6: Unit = {
       id: "sp-u6-L5",
       title: "Voyager: The Farthest Journey",
       description: "Launched in 1977, still transmitting from interstellar space. 15 billion miles out.",
-      icon: "📡",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {
@@ -645,7 +645,7 @@ export const unit6: Unit = {
       id: "sp-u6-L6",
       title: "Telescopes: Hubble to JWST",
       description: "How space telescopes see the invisible and look back in time.",
-      icon: "🔭",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

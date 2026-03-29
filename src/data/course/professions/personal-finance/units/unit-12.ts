@@ -12,7 +12,7 @@ export const unit12: Unit = {
       id: "pf-u12-L1",
       title: "The Big Purchase Framework",
       description: "A decision system for any purchase over $500.",
-      icon: "🧠",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -139,7 +139,7 @@ export const unit12: Unit = {
       id: "pf-u12-L2",
       title: "Negotiation: Ask and You Shall Receive",
       description: "How to negotiate anything. Salary, bills, prices, contracts.",
-      icon: "🤝",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -255,7 +255,7 @@ export const unit12: Unit = {
       id: "pf-u12-L3",
       title: "Marriage & Money: The Merge",
       description: "Combining finances with a partner without destroying the relationship.",
-      icon: "💑",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -385,7 +385,7 @@ export const unit12: Unit = {
       id: "pf-u12-L4",
       title: "Teaching Kids About Money",
       description: "Age-appropriate ways to raise financially smart kids.",
-      icon: "👧",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -615,7 +615,7 @@ export const unit12: Unit = {
       id: "pf-u12-L5",
       title: "Side Hustles That Actually Work",
       description: "Real ways to earn extra income. Not get-rich-quick schemes.",
-      icon: "💼",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -732,7 +732,7 @@ export const unit12: Unit = {
       id: "pf-u12-L6",
       title: "Multiple Income Streams",
       description: "Why relying on one paycheck is risky. And how to diversify.",
-      icon: "🌊",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -847,7 +847,7 @@ export const unit12: Unit = {
       id: "pf-u12-L7",
       title: "Net Worth: Your Real Score",
       description: "The one number that matters more than income.",
-      icon: "📊",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -963,7 +963,7 @@ export const unit12: Unit = {
       id: "pf-u12-L8",
       title: "The Financial Independence Formula",
       description: "The math behind retiring early. Or just having total freedom.",
-      icon: "🔥",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1072,7 +1072,7 @@ export const unit12: Unit = {
       id: "pf-u12-L9",
       title: "Building Wealth on Any Salary",
       description: "You don't need a huge income. You need the right habits.",
-      icon: "🧱",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1187,7 +1187,7 @@ export const unit12: Unit = {
       id: "pf-u12-L10",
       title: "Money Mindset: Think Like the Rich",
       description: "How your beliefs about money secretly control your outcomes.",
-      icon: "🧠",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1309,7 +1309,7 @@ export const unit12: Unit = {
       id: "pf-u12-L11",
       title: "Your Lifetime Money Action Plan",
       description: "Everything comes together. Build your personalized financial roadmap.",
-      icon: "🏆",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

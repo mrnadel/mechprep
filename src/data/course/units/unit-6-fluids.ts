@@ -12,7 +12,7 @@ export const unit6: Unit = {
       id: 'u6-L1',
       title: 'Fluid Properties & Statics',
       description: 'Viscosity, density, surface tension, Pascal\'s law, manometers, and hydrostatic forces on surfaces.',
-      icon: '💧',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -443,7 +443,7 @@ export const unit6: Unit = {
       id: 'u6-L2',
       title: 'Bernoulli & Energy Equation',
       description: 'Bernoulli equation, venturi meter, pitot tube, energy line/HGL, assumptions and limitations.',
-      icon: '🎢',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -867,7 +867,7 @@ export const unit6: Unit = {
       id: 'u6-L3',
       title: 'Pipe Flow & Losses',
       description: 'Reynolds number, laminar vs turbulent, Moody chart, major/minor losses, Darcy-Weisbach, pipe networks.',
-      icon: '🔧',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1297,7 +1297,7 @@ export const unit6: Unit = {
       id: 'u6-L4',
       title: 'Pumps & Turbomachinery',
       description: 'Pump curves, system curves, NPSH, cavitation, specific speed, affinity laws, pump selection.',
-      icon: '⚙️',
+      icon: '📝',
       xpReward: 30,
   levels: 4,
       questions: [
@@ -1727,7 +1727,7 @@ export const unit6: Unit = {
       id: 'u6-L5',
       title: 'Dimensional Analysis',
       description: 'Buckingham Pi theorem, dimensional homogeneity, similitude, Reynolds/Froude/Mach numbers, model testing.',
-      icon: '📐',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [

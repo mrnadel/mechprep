@@ -12,7 +12,7 @@ export const unit4: Unit = {
       id: "pf-u4-L1",
       title: "Your 3-Digit Reputation",
       description: "What a credit score is, who cares about it, and why it follows you everywhere.",
-      icon: "\u{1F3AF}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -126,7 +126,7 @@ export const unit4: Unit = {
       id: "pf-u4-L2",
       title: "The 5 FICO Ingredients",
       description: "The exact recipe that determines your credit score, no secrets here.",
-      icon: "\u{1F9EA}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -230,7 +230,7 @@ export const unit4: Unit = {
       id: "pf-u4-L3",
       title: "Payment History: The #1 Factor",
       description: "Late payments haunt you for 7 years, here's how to never miss one.",
-      icon: "\u{1F4C5}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -337,7 +337,7 @@ export const unit4: Unit = {
       id: "pf-u4-L4",
       title: "Credit Utilization: The 30% Myth",
       description: "How much of your credit limit you use, and why lower is always better.",
-      icon: "\u{1F4B3}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -558,7 +558,7 @@ export const unit4: Unit = {
       id: "pf-u4-L5",
       title: "Building Credit from Zero",
       description: "No credit history? No problem. Here's how to start from scratch.",
-      icon: "\u{1F331}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -663,7 +663,7 @@ export const unit4: Unit = {
       id: "pf-u4-L6",
       title: "Secured Cards & Starter Moves",
       description: "Training wheels of credit, how to use them and when to graduate.",
-      icon: "\u{1F6B2}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -767,7 +767,7 @@ export const unit4: Unit = {
       id: "pf-u4-L7",
       title: "Your Free Credit Report",
       description: "How to check your credit for free, what to look for, and how to spot errors.",
-      icon: "\u{1F4CB}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -869,7 +869,7 @@ export const unit4: Unit = {
       id: "pf-u4-L8",
       title: "Hard vs Soft Pulls",
       description: "Which credit checks hurt your score and which ones are totally harmless.",
-      icon: "\u{1F50E}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -973,7 +973,7 @@ export const unit4: Unit = {
       id: "pf-u4-L9",
       title: "Credit Score Boosting Hacks",
       description: "Proven tactics to raise your score in 30-90 days.",
-      icon: "\u{1F680}",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -1078,7 +1078,7 @@ export const unit4: Unit = {
       id: "pf-u4-L10",
       title: "Protect Your Score for Life",
       description: "Long-term bulletproof habits to keep your credit excellent forever.",
-      icon: "\u{1F6E1}\uFE0F",
+      icon: '📝',
       xpReward: 20,
       questions: [
         {

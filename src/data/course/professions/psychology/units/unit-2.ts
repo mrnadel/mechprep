@@ -12,7 +12,7 @@ export const unit2: Unit = {
       id: "psy-u2-L1",
       title: "What Are Cognitive Biases?",
       description: "Your brain takes shortcuts. Sometimes they backfire.",
-      icon: "🧩",
+      icon: '📝',
       xpReward: 10,
       questions: [
         {
@@ -121,7 +121,7 @@ export const unit2: Unit = {
       id: "psy-u2-L2",
       title: "Confirmation Bias",
       description: "Why you only notice things that agree with what you already believe.",
-      icon: "🔍",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -230,7 +230,7 @@ export const unit2: Unit = {
       id: "psy-u2-L3",
       title: "Anchoring & Framing",
       description: "How the first number you see and the way info is presented warp your judgment.",
-      icon: "⚓",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -339,7 +339,7 @@ export const unit2: Unit = {
       id: "psy-u2-L4",
       title: "The Availability Heuristic",
       description: "Why you think shark attacks are common but heart disease is rare.",
-      icon: "📰",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -448,7 +448,7 @@ export const unit2: Unit = {
       id: "psy-u2-L5",
       title: "Dunning-Kruger & Impostor Syndrome",
       description: "When beginners feel like experts and experts feel like fakes.",
-      icon: "🎭",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {
@@ -557,7 +557,7 @@ export const unit2: Unit = {
       id: "psy-u2-L6",
       title: "Sunk Cost Fallacy",
       description: "Why you finish bad movies and stay in bad situations too long.",
-      icon: "🕳️",
+      icon: '📝',
       xpReward: 15,
       questions: [
         {

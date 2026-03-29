@@ -12,7 +12,7 @@ export const unit1: Unit = {
       id: 'u1-L1',
       title: 'Force Systems & Resultants',
       description: 'Resultant forces, vector addition, components, concurrent and non-concurrent forces.',
-      icon: '🔢',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -443,7 +443,7 @@ export const unit1: Unit = {
       id: 'u1-L2',
       title: 'Free Body Diagrams',
       description: 'Drawing FBDs, reaction forces, constraints, and distributed loads.',
-      icon: '📐',
+      icon: '📝',
       xpReward: 20,
   levels: 4,
       questions: [
@@ -867,7 +867,7 @@ export const unit1: Unit = {
       id: 'u1-L3',
       title: 'Trusses & Frames',
       description: 'Method of joints, method of sections, zero-force members, and statical determinacy.',
-      icon: '🌉',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1289,7 +1289,7 @@ export const unit1: Unit = {
       id: 'u1-L4',
       title: 'Friction & Wedges',
       description: 'Static and kinetic friction, friction coefficient, self-locking, and wedge analysis.',
-      icon: '🔩',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
@@ -1712,7 +1712,7 @@ export const unit1: Unit = {
       id: 'u1-L5',
       title: 'Centroids & Moments of Inertia',
       description: 'Centroid calculation, parallel axis theorem, composite shapes, and radius of gyration.',
-      icon: '🎯',
+      icon: '📝',
       xpReward: 25,
   levels: 4,
       questions: [
