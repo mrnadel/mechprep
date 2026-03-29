@@ -5,9 +5,6 @@ import { motion } from 'framer-motion';
 import { playSound } from '@/lib/sounds';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useBackHandler } from '@/hooks/useBackHandler';
-import { useSubscription } from '@/hooks/useSubscription';
-import { LIMITS, isUnitUnlocked } from '@/lib/pricing';
-import { UpgradeModal } from '@/components/ui/UpgradeModal';
 import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
@@ -16,12 +13,8 @@ import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 interface BlueprintCelebrationProps { unitIndex: number; isGolden: boolean; onDismiss: () => void; }
 
 export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: BlueprintCelebrationProps) {
-  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const courseData = useCourseStore((s) => s.courseData);
   const progress = useCourseStore((s) => s.progress);
-  const { isProUser } = useSubscription();
-
-  const shouldShowUpgrade = isUnitUnlocked(LIMITS.free.unlockedUnits, unitIndex) && !isProUser && !isGolden;
 
   const chapterStats = useMemo(() => {
     const unit = courseData[unitIndex];
@@ -49,16 +42,9 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
         bg={isGolden ? '#E8850C' : '#58A700'}
         fx={isGolden ? 'stars' : 'confetti'}
         footer={
-          <>
-            {shouldShowUpgrade && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }} className="mb-3" onClick={(e) => e.stopPropagation()}>
-                <GameButton variant="gold" onClick={() => setShowUpgradeModal(true)}>Unlock All Units</GameButton>
-              </motion.div>
-            )}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: canDismiss ? 1 : 0 }} transition={{ duration: 0.4 }}>
-              <GameButton variant={shouldShowUpgrade ? 'indigo' : 'gold'} onClick={handleDismiss}>CONTINUE</GameButton>
-            </motion.div>
-          </>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: canDismiss ? 1 : 0 }} transition={{ duration: 0.4 }}>
+            <GameButton variant="gold" onClick={handleDismiss}>CONTINUE</GameButton>
+          </motion.div>
         }
       >
         <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xs font-extrabold tracking-[3px] uppercase text-white/50 mb-2">
@@ -76,7 +62,6 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
 
       </FullScreenModal>
 
-      {showUpgradeModal && <UpgradeModal isOpen={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} reason="Unlock all 10 course units" />}
     </>
   );
 }
