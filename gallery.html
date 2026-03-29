@@ -7,7 +7,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0a;color:#fff;padding:40px 20px 80px;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0a;color:#fff;padding:0;}
   h1{text-align:center;font-size:26px;font-weight:900;margin-bottom:4px;}
   .sub{text-align:center;font-size:12px;color:#555;margin-bottom:40px;}
   .sec{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:2.5px;color:#444;margin:56px 0 28px;text-align:center;}
@@ -54,7 +54,7 @@
   @keyframes bbfx{0%{opacity:0;transform:translateY(0) scale(.5)}12%{opacity:.5}85%{opacity:.2}100%{opacity:0;transform:translateY(-120%) scale(1.1)}}
 
   /* Tab Navigation */
-  .tab-bar{position:sticky;top:0;z-index:1000;background:#0a0a0a;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;padding:0 24px;gap:32px;height:56px;margin:-40px -20px 0;padding-left:28px;padding-right:28px;}
+  .tab-bar{position:sticky;top:0;z-index:1000;background:#0a0a0a;border-bottom:1px solid #1a1a1a;display:flex;align-items:center;padding:0 28px;gap:32px;height:56px;}
   .tab-bar-title{font-size:15px;font-weight:800;color:#fff;white-space:nowrap;margin-right:8px;letter-spacing:-0.2px;}
   .tab-bar-sep{width:1px;height:24px;background:#222;flex-shrink:0;}
   .tab-bar-tabs{display:flex;gap:4px;height:100%;}
@@ -62,6 +62,36 @@
   .tab-btn:hover{color:#999;}
   .tab-btn.active{color:#c4c9f7;}
   .tab-btn.active::after{content:'';position:absolute;bottom:0;left:8px;right:8px;height:2px;background:#818CF8;border-radius:1px;}
+
+  /* App layout */
+  .app-layout{display:flex;min-height:calc(100vh - 56px);}
+  .sidebar{width:220px;flex-shrink:0;background:#0d0d14;border-right:1px solid #1a1a1a;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;padding:16px 0;z-index:500;}
+  .sidebar::-webkit-scrollbar{width:4px;}
+  .sidebar::-webkit-scrollbar-track{background:transparent;}
+  .sidebar::-webkit-scrollbar-thumb{background:#222;border-radius:2px;}
+  .sidebar-title{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:#444;padding:12px 16px 6px;margin:0;}
+  .sidebar a{display:block;padding:7px 16px;font-size:12px;font-weight:600;color:#666;text-decoration:none;transition:color .15s,background .15s;border-left:2px solid transparent;}
+  .sidebar a:hover{color:#aaa;background:rgba(255,255,255,.03);}
+  .sidebar a.active{color:#c4c9f7;border-left-color:#818CF8;background:rgba(129,140,248,.06);}
+  .main-content{flex:1;min-width:0;padding:20px 20px 80px;}
+
+  /* Mascot + Badge grids */
+  .asset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px;max-width:1400px;margin:0 auto;padding:20px 0;}
+  .asset-card{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 12px;background:#111;border:1px solid #1a1a1a;border-radius:16px;transition:border-color .15s,transform .15s;}
+  .asset-card:hover{border-color:#333;transform:translateY(-2px);}
+  .asset-card img{max-width:100%;height:auto;object-fit:contain;}
+  .asset-card-name{font-size:11px;font-weight:700;color:#555;text-align:center;word-break:break-all;}
+
+  /* FX gallery embedded */
+  .fx-phone{width:220px;height:440px;border-radius:28px;overflow:hidden;border:2px solid #2a2a2a;position:relative;box-shadow:0 16px 60px rgba(0,0,0,0.5);flex-shrink:0;background:#1a1a2e;cursor:pointer;}
+  .fx-container{position:absolute;inset:0;overflow:hidden;}
+  .fx-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;}
+  .fx-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .fx-label{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px;text-align:center;max-width:200px;}
+
+  /* Badge group headers */
+  .badge-group-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:2.5px;color:#444;margin:40px 0 16px;text-align:center;}
+  .badge-group-title:first-child{margin-top:10px;}
 </style>
 </head>
 <body>
@@ -70,9 +100,16 @@
   <div class="tab-bar-sep"></div>
   <div class="tab-bar-tabs">
     <button class="tab-btn active" data-tab="screens">Screens</button>
+    <button class="tab-btn" data-tab="fx">FX</button>
+    <button class="tab-btn" data-tab="mascots">Mascots</button>
+    <button class="tab-btn" data-tab="badges">Badges</button>
     <button class="tab-btn" data-tab="diagrams">SVG Diagrams</button>
   </div>
 </div>
+
+<div class="app-layout">
+<aside class="sidebar" id="sidebar"></aside>
+<main class="main-content">
 
 <div id="tab-screens">
 <div class="sec">Utility Modals</div>
@@ -11949,25 +11986,325 @@
 <!-- SVG-GALLERY-END -->
 </div>
 
-<div style="text-align:center;margin-top:64px;padding:24px;border-top:1px solid #1a1a1a;">
-  <p style="font-size:11px;color:#444;">41 screens &middot; Hearts, Confetti, Stars, Sparkles, Fireworks, Snow, Bokeh, Bubbles</p>
+<div id="tab-fx" style="display:none">
+<div class="sec" id="fx-sec-celebration">Celebration</div>
+<div class="fx-grid" id="fx-grid-celebration"></div>
+<div class="sec" id="fx-sec-ambient">Ambient / Background</div>
+<div class="fx-grid" id="fx-grid-ambient"></div>
+<div class="sec" id="fx-sec-center-burst">Center Burst (behind character)</div>
+<div class="fx-grid" id="fx-grid-center-burst"></div>
+<div class="sec" id="fx-sec-weather">Weather</div>
+<div class="fx-grid" id="fx-grid-weather"></div>
+<div class="sec" id="fx-sec-dramatic">Dramatic</div>
+<div class="fx-grid" id="fx-grid-dramatic"></div>
+<div id="fx-fullscreen" style="display:none;position:fixed;inset:0;z-index:2000;cursor:pointer;" onclick="this.style.display='none'">
+  <div style="position:absolute;top:20px;right:20px;z-index:2001;background:rgba(0,0,0,0.5);color:#fff;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:700;">click anywhere to close</div>
 </div>
+</div>
+
+<div id="tab-mascots" style="display:none">
+<div class="sec">Mascot Images</div>
+<div class="asset-grid">
+<div class="asset-card"><img src="public/mascot/almost-there.png" width="200" height="200"><div class="asset-card-name">almost-there.png</div></div>
+<div class="asset-card"><img src="public/mascot/celebrating.png" width="200" height="200"><div class="asset-card-name">celebrating.png</div></div>
+<div class="asset-card"><img src="public/mascot/champion.png" width="200" height="200"><div class="asset-card-name">champion.png</div></div>
+<div class="asset-card"><img src="public/mascot/chest-reward.png" width="200" height="200"><div class="asset-card-name">chest-reward.png</div></div>
+<div class="asset-card"><img src="public/mascot/empty-state.png" width="200" height="200"><div class="asset-card-name">empty-state.png</div></div>
+<div class="asset-card"><img src="public/mascot/error.png" width="200" height="200"><div class="asset-card-name">error.png</div></div>
+<div class="asset-card"><img src="public/mascot/excited.png" width="200" height="200"><div class="asset-card-name">excited.png</div></div>
+<div class="asset-card"><img src="public/mascot/explorer.png" width="200" height="200"><div class="asset-card-name">explorer.png</div></div>
+<div class="asset-card"><img src="public/mascot/laughing.png" width="200" height="200"><div class="asset-card-name">laughing.png</div></div>
+<div class="asset-card"><img src="public/mascot/level-up.png" width="200" height="200"><div class="asset-card-name">level-up.png</div></div>
+<div class="asset-card"><img src="public/mascot/loading.png" width="200" height="200"><div class="asset-card-name">loading.png</div></div>
+<div class="asset-card"><img src="public/mascot/mastered.png" width="200" height="200"><div class="asset-card-name">mastered.png</div></div>
+<div class="asset-card"><img src="public/mascot/neutral.png" width="200" height="200"><div class="asset-card-name">neutral.png</div></div>
+<div class="asset-card"><img src="public/mascot/offline.png" width="200" height="200"><div class="asset-card-name">offline.png</div></div>
+<div class="asset-card"><img src="public/mascot/out-of-hearts.png" width="200" height="200"><div class="asset-card-name">out-of-hearts.png</div></div>
+<div class="asset-card"><img src="public/mascot/pro.png" width="200" height="200"><div class="asset-card-name">pro.png</div></div>
+<div class="asset-card"><img src="public/mascot/proud.png" width="200" height="200"><div class="asset-card-name">proud.png</div></div>
+<div class="asset-card"><img src="public/mascot/reward-gems.png" width="200" height="200"><div class="asset-card-name">reward-gems.png</div></div>
+<div class="asset-card"><img src="public/mascot/sad.png" width="200" height="200"><div class="asset-card-name">sad.png</div></div>
+<div class="asset-card"><img src="public/mascot/sleeping.png" width="200" height="200"><div class="asset-card-name">sleeping.png</div></div>
+<div class="asset-card"><img src="public/mascot/space-astronaut.png" width="200" height="200"><div class="asset-card-name">space-astronaut.png</div></div>
+<div class="asset-card"><img src="public/mascot/space-flag.png" width="200" height="200"><div class="asset-card-name">space-flag.png</div></div>
+<div class="asset-card"><img src="public/mascot/space-moon.png" width="200" height="200"><div class="asset-card-name">space-moon.png</div></div>
+<div class="asset-card"><img src="public/mascot/space-ufo.png" width="200" height="200"><div class="asset-card-name">space-ufo.png</div></div>
+<div class="asset-card"><img src="public/mascot/streak.png" width="200" height="200"><div class="asset-card-name">streak.png</div></div>
+<div class="asset-card"><img src="public/mascot/sword.png" width="200" height="200"><div class="asset-card-name">sword.png</div></div>
+<div class="asset-card"><img src="public/mascot/thinking.png" width="200" height="200"><div class="asset-card-name">thinking.png</div></div>
+<div class="asset-card"><img src="public/mascot/torch.png" width="200" height="200"><div class="asset-card-name">torch.png</div></div>
+<div class="asset-card"><img src="public/mascot/upgrade-pro.png" width="200" height="200"><div class="asset-card-name">upgrade-pro.png</div></div>
+<div class="asset-card"><img src="public/mascot/winking.png" width="200" height="200"><div class="asset-card-name">winking.png</div></div>
+<div class="asset-card"><img src="public/mascot/worried.png" width="200" height="200"><div class="asset-card-name">worried.png</div></div>
+</div>
+</div>
+
+<div id="tab-badges" style="display:none">
+<div class="sec" id="badge-sec-level">Level Badges</div>
+<div class="asset-grid">
+<div class="asset-card"><img src="public/badges/level-1.png" width="120" height="120"><div class="asset-card-name">level-1.png</div></div>
+<div class="asset-card"><img src="public/badges/level-2.png" width="120" height="120"><div class="asset-card-name">level-2.png</div></div>
+<div class="asset-card"><img src="public/badges/level-3.png" width="120" height="120"><div class="asset-card-name">level-3.png</div></div>
+<div class="asset-card"><img src="public/badges/level-4.png" width="120" height="120"><div class="asset-card-name">level-4.png</div></div>
+<div class="asset-card"><img src="public/badges/level-5.png" width="120" height="120"><div class="asset-card-name">level-5.png</div></div>
+<div class="asset-card"><img src="public/badges/level-6.png" width="120" height="120"><div class="asset-card-name">level-6.png</div></div>
+<div class="asset-card"><img src="public/badges/level-7.png" width="120" height="120"><div class="asset-card-name">level-7.png</div></div>
+<div class="asset-card"><img src="public/badges/level-8.png" width="120" height="120"><div class="asset-card-name">level-8.png</div></div>
+<div class="asset-card"><img src="public/badges/level-9.png" width="120" height="120"><div class="asset-card-name">level-9.png</div></div>
+<div class="asset-card"><img src="public/badges/level-10.png" width="120" height="120"><div class="asset-card-name">level-10.png</div></div>
+<div class="asset-card"><img src="public/badges/level-11.png" width="120" height="120"><div class="asset-card-name">level-11.png</div></div>
+<div class="asset-card"><img src="public/badges/level-12.png" width="120" height="120"><div class="asset-card-name">level-12.png</div></div>
+<div class="asset-card"><img src="public/badges/level-13.png" width="120" height="120"><div class="asset-card-name">level-13.png</div></div>
+<div class="asset-card"><img src="public/badges/level-14.png" width="120" height="120"><div class="asset-card-name">level-14.png</div></div>
+<div class="asset-card"><img src="public/badges/level-15.png" width="120" height="120"><div class="asset-card-name">level-15.png</div></div>
+<div class="asset-card"><img src="public/badges/level-16.png" width="120" height="120"><div class="asset-card-name">level-16.png</div></div>
+<div class="asset-card"><img src="public/badges/level-17.png" width="120" height="120"><div class="asset-card-name">level-17.png</div></div>
+<div class="asset-card"><img src="public/badges/level-18.png" width="120" height="120"><div class="asset-card-name">level-18.png</div></div>
+<div class="asset-card"><img src="public/badges/level-19.png" width="120" height="120"><div class="asset-card-name">level-19.png</div></div>
+<div class="asset-card"><img src="public/badges/level-20.png" width="120" height="120"><div class="asset-card-name">level-20.png</div></div>
+<div class="asset-card"><img src="public/badges/level-21.png" width="120" height="120"><div class="asset-card-name">level-21.png</div></div>
+<div class="asset-card"><img src="public/badges/level-22.png" width="120" height="120"><div class="asset-card-name">level-22.png</div></div>
+<div class="asset-card"><img src="public/badges/level-23.png" width="120" height="120"><div class="asset-card-name">level-23.png</div></div>
+<div class="asset-card"><img src="public/badges/level-24.png" width="120" height="120"><div class="asset-card-name">level-24.png</div></div>
+<div class="asset-card"><img src="public/badges/level-25.png" width="120" height="120"><div class="asset-card-name">level-25.png</div></div>
+<div class="asset-card"><img src="public/badges/level-26.png" width="120" height="120"><div class="asset-card-name">level-26.png</div></div>
+<div class="asset-card"><img src="public/badges/level-27.png" width="120" height="120"><div class="asset-card-name">level-27.png</div></div>
+<div class="asset-card"><img src="public/badges/level-28.png" width="120" height="120"><div class="asset-card-name">level-28.png</div></div>
+<div class="asset-card"><img src="public/badges/level-29.png" width="120" height="120"><div class="asset-card-name">level-29.png</div></div>
+<div class="asset-card"><img src="public/badges/level-30.png" width="120" height="120"><div class="asset-card-name">level-30.png</div></div>
+</div>
+
+<div class="sec" id="badge-sec-league">League Badges</div>
+<div class="asset-grid">
+<div class="asset-card"><img src="public/badges/league-bronze.png" width="120" height="120"><div class="asset-card-name">league-bronze.png</div></div>
+<div class="asset-card"><img src="public/badges/league-silver.png" width="120" height="120"><div class="asset-card-name">league-silver.png</div></div>
+<div class="asset-card"><img src="public/badges/league-gold.png" width="120" height="120"><div class="asset-card-name">league-gold.png</div></div>
+<div class="asset-card"><img src="public/badges/league-platinum.png" width="120" height="120"><div class="asset-card-name">league-platinum.png</div></div>
+<div class="asset-card"><img src="public/badges/league-masters.png" width="120" height="120"><div class="asset-card-name">league-masters.png</div></div>
+</div>
+
+<div class="sec" id="badge-sec-medal">Medal Badges</div>
+<div class="asset-grid">
+<div class="asset-card"><img src="public/badges/medal-bronze.png" width="120" height="120"><div class="asset-card-name">medal-bronze.png</div></div>
+<div class="asset-card"><img src="public/badges/medal-silver.png" width="120" height="120"><div class="asset-card-name">medal-silver.png</div></div>
+<div class="asset-card"><img src="public/badges/medal-gold.png" width="120" height="120"><div class="asset-card-name">medal-gold.png</div></div>
+</div>
+
+<div class="sec" id="badge-sec-achievement">Achievement Badges</div>
+<div class="asset-grid">
+<div class="asset-card"><img src="public/badges/broken-heart.png" width="120" height="120"><div class="asset-card-name">broken-heart.png</div></div>
+<div class="asset-card"><img src="public/badges/chapter-complete.png" width="120" height="120"><div class="asset-card-name">chapter-complete.png</div></div>
+<div class="asset-card"><img src="public/badges/chapter-mastered.png" width="120" height="120"><div class="asset-card-name">chapter-mastered.png</div></div>
+<div class="asset-card"><img src="public/badges/course-complete.png" width="120" height="120"><div class="asset-card-name">course-complete.png</div></div>
+<div class="asset-card"><img src="public/badges/course-mechanical-engineering.png" width="120" height="120"><div class="asset-card-name">course-mechanical-engineering.png</div></div>
+<div class="asset-card"><img src="public/badges/course-personal-finance.png" width="120" height="120"><div class="asset-card-name">course-personal-finance.png</div></div>
+<div class="asset-card"><img src="public/badges/course-psychology.png" width="120" height="120"><div class="asset-card-name">course-psychology.png</div></div>
+<div class="asset-card"><img src="public/badges/course-space-astronomy.png" width="120" height="120"><div class="asset-card-name">course-space-astronomy.png</div></div>
+<div class="asset-card"><img src="public/badges/crown.png" width="120" height="120"><div class="asset-card-name">crown.png</div></div>
+<div class="asset-card"><img src="public/badges/gem.png" width="120" height="120"><div class="asset-card-name">gem.png</div></div>
+<div class="asset-card"><img src="public/badges/league-source.png" width="120" height="120"><div class="asset-card-name">league-source.png</div></div>
+<div class="asset-card"><img src="public/badges/switch-course.png" width="120" height="120"><div class="asset-card-name">switch-course.png</div></div>
+<div class="asset-card"><img src="public/badges/waving-hand.png" width="120" height="120"><div class="asset-card-name">waving-hand.png</div></div>
+</div>
+</div>
+
+</main>
+</div>
+
+<div style="text-align:center;margin-top:64px;padding:24px;border-top:1px solid #1a1a1a;">
+  <p style="font-size:11px;color:#444;">Octokeen Gallery: Screens, FX, Mascots, Badges, SVG Diagrams</p>
+</div>
+
 <script>
+// ═══ FX Engine (from fx-gallery.html) ═══
 (function(){
-  var tabs = document.querySelectorAll('.tab-btn');
+var _uid=0;
+function uid(){return 'fx'+(++_uid);}
+function injectKF(name,css){var s=document.createElement('style');s.textContent='@keyframes '+name+'{'+css+'}';document.head.appendChild(s);return name;}
+function R(min,max){return min+Math.random()*(max-min);}
+function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+
+var effects=[
+{name:'bubbles',label:'Rising Bubbles',category:'celebration',bg:'#1a1a2e',gen:function(el){for(var i=0;i<25;i++){var b=document.createElement('div');var s=R(4,18),x=R(0,100),drift=R(-30,30),dur=R(5,12),dl=R(0,10);var id=uid();injectKF(id,'0%{opacity:0;transform:translateY(0) translateX(0) scale('+R(.4,.7)+')}'+(12)+'%{opacity:'+R(.3,.7)+'}50%{transform:translateY(-50%) translateX('+drift+'px)}88%{opacity:'+R(.1,.4)+'}100%{opacity:0;transform:translateY(-110%) translateX('+drift*R(.5,2)+'px) scale('+R(.8,1.3)+')}');Object.assign(b.style,{position:'absolute',borderRadius:'50%',width:s+'px',height:s+'px',left:x+'%',bottom:R(-5,15)+'%',background:'rgba(255,255,255,'+R(.06,.2)+')',animation:id+' '+dur+'s '+dl+'s infinite ease-in-out'});el.appendChild(b);}}},
+{name:'confetti',label:'Confetti Rain',category:'celebration',bg:'#1a1a2e',gen:function(el){var colors=['#FF4B4B','#FFC800','#58CC02','#1CB0F6','#CE82FF','#FF9600','#FFAADE'];for(var i=0;i<45;i++){var c=document.createElement('div');var w=R(4,10),h=R(3,8),x=R(-5,105),dur=R(2,5.5),dl=R(0,6),drift=R(-40,40),spin=R(360,1440);var id=uid();injectKF(id,'0%{opacity:1;transform:translateY(-20px) translateX(0) rotate(0deg)}50%{transform:translateY(240px) translateX('+drift*.6+'px) rotate('+spin*.5+'deg)}100%{opacity:'+R(.1,.4)+';transform:translateY(500px) translateX('+drift+'px) rotate('+spin+'deg)}');Object.assign(c.style,{position:'absolute',width:w+'px',height:h+'px',left:x+'%',top:'-3%',background:pick(colors),borderRadius:Math.random()>.5?'50%':'2px',animation:id+' '+dur+'s '+dl+'s infinite linear'});el.appendChild(c);}}},
+{name:'stars',label:'Gold Star Burst',category:'celebration',bg:'linear-gradient(180deg,#1a1a2e,#2d1b4e)',gen:function(el){for(var i=0;i<18;i++){var s=document.createElement('div');var x=R(5,90),y=R(5,85),sz=R(10,26),dur=R(1.5,4),dl=R(0,6),drift=R(-20,20);var id=uid();injectKF(id,'0%{opacity:0;transform:scale(0) rotate(0deg)}20%{opacity:1;transform:scale('+R(1,1.4)+') rotate('+R(20,60)+'deg)}60%{opacity:'+R(.5,.9)+';transform:scale('+R(.7,1)+') rotate('+R(40,90)+'deg) translateY('+drift+'px)}100%{opacity:0;transform:scale('+R(.2,.5)+') rotate('+R(60,120)+'deg) translateY('+drift*2+'px)}');s.style.cssText='position:absolute;left:'+x+'%;top:'+y+'%;animation:'+id+' '+dur+'s '+dl+'s infinite ease-out;';s.innerHTML='<span style="font-size:'+sz+'px;color:'+pick(['#FFC800','#FFB100','#FBE56D','#FF9600'])+'">&#9733;</span>';el.appendChild(s);}}},
+{name:'hearts',label:'Floating Hearts',category:'celebration',bg:'linear-gradient(180deg,#2d1020,#1a1a2e)',gen:function(el){for(var i=0;i<16;i++){var h=document.createElement('div');var x=R(0,95),sz=R(12,28),dur=R(3,8),dl=R(0,8),driftX=R(-50,50),riseY=R(200,400);var id=uid();injectKF(id,'0%{opacity:0;transform:translateY(0) translateX(0) scale('+R(.2,.5)+') rotate('+R(-20,20)+'deg)}15%{opacity:'+R(.7,1)+'}50%{transform:translateY(-'+riseY*.5+'px) translateX('+driftX*.7+'px) scale('+R(.8,1.1)+') rotate('+R(-10,10)+'deg)}100%{opacity:0;transform:translateY(-'+riseY+'px) translateX('+driftX+'px) scale('+R(.3,.7)+') rotate('+R(-30,30)+'deg)}');h.style.cssText='position:absolute;left:'+x+'%;bottom:'+R(-5,15)+'%;animation:'+id+' '+dur+'s '+dl+'s infinite ease-in-out;font-size:'+sz+'px;color:'+pick(['#FF4B4B','#FF7878','#FFAADE','#FFB2B2'])+';';h.textContent='\u2665';el.appendChild(h);}}},
+{name:'sparkle-dust',label:'Sparkle Dust',category:'ambient',bg:'#1a1a2e',gen:function(el){for(var i=0;i<35;i++){var s=document.createElement('div');var sz=R(2,6),x=R(0,100),y=R(0,100),dur=R(1,3.5),dl=R(0,5),dx=R(-25,25),dy=R(-25,25);var id=uid();injectKF(id,'0%{opacity:0;transform:scale(0) translate(0,0)}30%{opacity:'+R(.6,1)+';transform:scale('+R(.8,1.3)+')}100%{opacity:0;transform:scale(0) translate('+dx+'px,'+dy+'px)}');Object.assign(s.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:x+'%',top:y+'%',background:pick(['white','#FFC800','#84D8FF','#FFAADE','#58CC02']),animation:id+' '+dur+'s '+dl+'s infinite ease-out'});el.appendChild(s);}}},
+{name:'fireworks',label:'Firework Burst',category:'celebration',bg:'#0a0a1a',gen:function(el){var colors=['#FF4B4B','#FFC800','#58CC02','#1CB0F6','#CE82FF','#FF9600'];for(var burst=0;burst<4;burst++){var cx=R(15,85),cy=R(15,75),burstDl=burst*R(1,2.5);for(var i=0;i<14;i++){var d=document.createElement('div');var angle=((i+R(-.3,.3))/14)*Math.PI*2;var dist=R(30,80),dur=R(1.5,3),dotDl=burstDl+R(0,.3);var id=uid();injectKF(id,'0%{opacity:0;transform:translate(0,0) scale(0)}8%{opacity:1;transform:translate(0,0) scale('+R(.8,1.3)+')}100%{opacity:0;transform:translate('+Math.cos(angle)*dist+'px,'+Math.sin(angle)*dist+'px) scale('+R(.1,.4)+')}');Object.assign(d.style,{position:'absolute',width:R(3,6)+'px',height:R(3,6)+'px',borderRadius:'50%',left:cx+'%',top:cy+'%',background:pick(colors),animation:id+' '+dur+'s '+dotDl+'s infinite ease-out'});el.appendChild(d);}}}},
+{name:'snow',label:'Gentle Snow',category:'weather',bg:'linear-gradient(180deg,#1a2a3a,#0a1520)',gen:function(el){for(var i=0;i<35;i++){var s=document.createElement('div');var sz=R(2,5),x=R(-5,105),dur=R(4,10),dl=R(0,10),driftX=R(-40,40),driftMid=R(-20,20);var id=uid();injectKF(id,'0%{opacity:'+R(.5,.9)+';transform:translateY(-10px) translateX(0)}33%{transform:translateY(33%) translateX('+driftMid+'px)}66%{transform:translateY(66%) translateX('+driftX+'px)}100%{opacity:0;transform:translateY(110%) translateX('+driftMid+'px)}');Object.assign(s.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:x+'%',top:'-3%',background:'white',animation:id+' '+dur+'s '+dl+'s infinite linear'});el.appendChild(s);}}},
+{name:'lightning',label:'Lightning Flash',category:'dramatic',bg:'#0a0a1a',gen:function(el){for(var i=0;i<4;i++){var f=document.createElement('div');var dur=R(3,7),dl=R(0,5),t1=R(2,5),t2=t1+R(1,3),t3=t2+R(1,2);var id=uid();injectKF(id,'0%{opacity:0}'+t1+'%{opacity:'+R(.4,.8)+'}'+((t1+1))+'%{opacity:0}'+t2+'%{opacity:'+R(.2,.5)+'}'+((t2+0.8))+'%{opacity:0}'+t3+'%{opacity:'+R(.1,.3)+'}'+((t3+0.5))+'%{opacity:0}100%{opacity:0}');Object.assign(f.style,{position:'absolute',inset:'0',background:'white',animation:id+' '+dur+'s '+dl+'s infinite ease-out'});el.appendChild(f);}}},
+{name:'radial-pulse',label:'Radial Pulse',category:'center-burst',bg:'#1a1a2e',gen:function(el){var ringColors=['rgba(99,102,241,0.5)','rgba(168,85,247,0.4)','rgba(236,72,153,0.35)','rgba(6,182,212,0.4)','rgba(255,200,0,0.35)','rgba(88,204,2,0.3)'];for(var i=0;i<8;i++){var r=document.createElement('div');var sz=R(40,80),dur=R(1.5,3.5),dl=R(0,4),cx=R(30,70),cy=R(30,60);var id=uid();injectKF(id,'0%{opacity:'+R(.5,.9)+';transform:scale(0)}100%{opacity:0;transform:scale('+R(2,4)+')}');Object.assign(r.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'calc('+cx+'% - '+sz/2+'px)',top:'calc('+cy+'% - '+sz/2+'px)',border:R(1.5,3)+'px solid '+pick(ringColors),animation:id+' '+dur+'s '+dl+'s infinite ease-out'});el.appendChild(r);}}},
+{name:'speed-streaks',label:'Speed Streaks',category:'dramatic',bg:'linear-gradient(180deg,#1a1040,#0a0a1a)',gen:function(el){for(var i=0;i<16;i++){var s=document.createElement('div');var h=R(30,140),x=R(-5,105),dur=R(.5,1.5),dl=R(0,5);var id=uid();injectKF(id,'0%{opacity:0;transform:translateY(-'+h+'px)}40%{opacity:'+R(.4,.9)+'}100%{opacity:0;transform:translateY('+R(400,600)+'px)}');Object.assign(s.style,{position:'absolute',width:R(1,3)+'px',height:h+'px',borderRadius:'2px',left:x+'%',top:'-10%',background:'linear-gradient(to bottom,transparent,'+pick(['rgba(99,102,241,0.5)','rgba(168,85,247,0.5)','rgba(255,200,0,0.4)','rgba(28,176,246,0.4)'])+',transparent)',animation:id+' '+dur+'s '+dl+'s infinite linear'});el.appendChild(s);}}},
+{name:'swirl-orbs',label:'Swirl Orbs',category:'ambient',bg:'#1a1a2e',gen:function(el){var colors=['rgba(99,102,241,0.25)','rgba(206,130,255,0.2)','rgba(255,170,222,0.18)','rgba(28,176,246,0.2)','rgba(255,200,0,0.15)','rgba(88,204,2,0.18)'];for(var i=0;i<10;i++){var o=document.createElement('div');var sz=R(25,70),x=R(5,90),y=R(5,90),dur=R(6,14),dl=R(0,6);var p1x=R(-60,60),p1y=R(-80,0),p2x=R(-50,50),p2y=R(-60,40),p3x=R(-40,40),p3y=R(-30,30);var id=uid();injectKF(id,'0%{transform:translate(0,0) scale('+R(.7,1)+');opacity:'+R(.2,.5)+'}25%{transform:translate('+p1x+'px,'+p1y+'px) scale('+R(.8,1.2)+');opacity:'+R(.3,.7)+'}50%{transform:translate('+p2x+'px,'+p2y+'px) scale('+R(.6,1.1)+');opacity:'+R(.2,.5)+'}75%{transform:translate('+p3x+'px,'+p3y+'px) scale('+R(.8,1.1)+');opacity:'+R(.3,.6)+'}100%{transform:translate(0,0) scale('+R(.7,1)+');opacity:'+R(.2,.5)+'}');Object.assign(o.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:x+'%',top:y+'%',background:pick(colors),filter:'blur('+R(1,4)+'px)',animation:id+' '+dur+'s '+dl+'s infinite ease-in-out'});el.appendChild(o);}}},
+{name:'rain',label:'Diagonal Rain',category:'weather',bg:'linear-gradient(180deg,#102030,#0a1018)',gen:function(el){for(var i=0;i<25;i++){var d=document.createElement('div');var x=R(-15,110),h=R(12,30),dur=R(.8,2.5),dl=R(0,5),angle=R(15,30);var id=uid();injectKF(id,'0%{opacity:0;transform:rotate('+angle+'deg) translate(-40px,-30px)}20%{opacity:'+R(.3,.7)+'}100%{opacity:0;transform:rotate('+angle+'deg) translate('+R(60,120)+'px,'+R(400,600)+'px)}');Object.assign(d.style,{position:'absolute',width:R(1,3)+'px',height:h+'px',borderRadius:'1px',left:x+'%',top:'-5%',background:'rgba(130,216,255,'+R(.15,.4)+')',animation:id+' '+dur+'s '+dl+'s infinite linear'});el.appendChild(d);}}},
+{name:'emoji-party',label:'Emoji Party',category:'celebration',bg:'#1a1a2e',gen:function(el){var emojis=['\ud83c\udf89','\ud83c\udf8a','\u2b50','\ud83d\udd25','\ud83d\udcaa','\ud83c\udfc6','\ud83d\udc8e','\u26a1','\ud83d\ude80','\u2728','\ud83c\udfaf','\ud83c\udf1f'];for(var i=0;i<18;i++){var e=document.createElement('div');var x=R(2,95),sz=R(14,30),dur=R(3.5,9),dl=R(0,10),driftX=R(-60,60),riseY=R(250,500),startY=R(-10,20);var id=uid();injectKF(id,'0%{opacity:0;transform:translateY(0) translateX(0) scale('+R(.3,.6)+') rotate('+R(-30,30)+'deg)}12%{opacity:1}50%{transform:translateY(-'+riseY*.5+'px) translateX('+driftX*.6+'px) scale('+R(.8,1.1)+') rotate('+R(-15,15)+'deg)}80%{opacity:'+R(.4,.8)+'}100%{opacity:0;transform:translateY(-'+riseY+'px) translateX('+driftX+'px) scale('+R(.4,.8)+') rotate('+R(-40,40)+'deg)}');e.style.cssText='position:absolute;left:'+x+'%;bottom:'+startY+'%;font-size:'+sz+'px;animation:'+id+' '+dur+'s '+dl+'s infinite ease-in-out;';e.textContent=pick(emojis);el.appendChild(e);}}},
+{name:'glitch',label:'Glitch Lines',category:'dramatic',bg:'#0a0a0a',gen:function(el){for(var i=0;i<12;i++){var g=document.createElement('div');var y=R(5,95),h=R(1,4),dur=R(2,6),dl=R(0,8);var t1=R(3,8),t2=t1+R(2,5),t3=t2+R(2,5);var id=uid();injectKF(id,'0%{opacity:0;transform:translateX(0) scaleX(1)}'+t1+'%{opacity:'+R(.4,.9)+';transform:translateX('+R(-8,8)+'px) scaleX('+R(.3,1)+')}'+((t1+1.5))+'%{opacity:0}'+t2+'%{opacity:'+R(.3,.7)+';transform:translateX('+R(-5,5)+'px) scaleX('+R(.5,1.2)+')}'+((t2+1))+'%{opacity:0}'+t3+'%{opacity:'+R(.2,.5)+';transform:translateX('+R(-3,3)+'px)}'+((t3+0.8))+'%{opacity:0}100%{opacity:0}');Object.assign(g.style,{position:'absolute',left:'0',right:'0',top:y+'%',height:h+'px',background:'rgba(255,75,75,'+R(.3,.7)+')',animation:id+' '+dur+'s '+dl+'s infinite steps(1)'});el.appendChild(g);}}},
+{name:'bokeh',label:'Bokeh Lights',category:'ambient',bg:'linear-gradient(135deg,#1a1030,#0a1520)',gen:function(el){var colors=['rgba(255,200,0,0.12)','rgba(206,130,255,0.1)','rgba(28,176,246,0.1)','rgba(255,150,0,0.1)','rgba(88,204,2,0.08)','rgba(255,75,75,0.08)'];for(var i=0;i<12;i++){var b=document.createElement('div');var sz=R(30,100),x=R(-10,100),y=R(-10,100),dur=R(7,16),dl=R(0,8);var dx1=R(-40,40),dy1=R(-40,40),dx2=R(-30,30),dy2=R(-30,30);var id=uid();injectKF(id,'0%{transform:translate(0,0);opacity:'+R(.05,.2)+'}33%{transform:translate('+dx1+'px,'+dy1+'px);opacity:'+R(.15,.35)+'}66%{transform:translate('+dx2+'px,'+dy2+'px);opacity:'+R(.08,.2)+'}100%{transform:translate(0,0);opacity:'+R(.05,.2)+'}');Object.assign(b.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:x+'%',top:y+'%',background:pick(colors),animation:id+' '+dur+'s '+dl+'s infinite ease-in-out'});el.appendChild(b);}}},
+{name:'comets',label:'Comet Trails',category:'dramatic',bg:'#080818',gen:function(el){for(var i=0;i<8;i++){var c=document.createElement('div');var startY=R(10,90),dur=R(2,5),dl=R(0,8),endX=R(200,400),endY=R(-150,150),sz=R(2,5);var id=uid();injectKF(id,'0%{opacity:0;transform:translate(0,0)}25%{opacity:'+R(.6,1)+'}100%{opacity:0;transform:translate('+endX+'px,'+endY+'px)}');Object.assign(c.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'-3%',top:startY+'%',background:pick(['#FFC800','white','#84D8FF','#CE82FF']),boxShadow:'0 0 '+R(4,10)+'px '+R(1,3)+'px rgba(255,255,255,0.3)',animation:id+' '+dur+'s '+dl+'s infinite ease-in'});el.appendChild(c);}}},
+{name:'wave-bars',label:'Audio Wave Bars',category:'dramatic',bg:'linear-gradient(180deg,#1a1040,#0a0a1a)',gen:function(el){for(var i=0;i<24;i++){var w=document.createElement('div');var maxH=R(20,100),dur=R(.6,1.8),dl=R(0,1);var id=uid();injectKF(id,'0%{height:'+R(5,15)+'px;opacity:'+R(.2,.4)+'}50%{height:'+maxH+'px;opacity:'+R(.5,.8)+'}100%{height:'+R(5,15)+'px;opacity:'+R(.2,.4)+'}');Object.assign(w.style,{position:'absolute',bottom:'20%',left:(2+i*4)+'%',width:R(3,5)+'px',borderRadius:'2px',background:pick(['rgba(99,102,241,0.5)','rgba(168,85,247,0.45)','rgba(206,130,255,0.5)','rgba(28,176,246,0.4)']),animation:id+' '+dur+'s '+dl+'s infinite ease-in-out'});el.appendChild(w);}}},
+{name:'pixel-grid',label:'Pixel Grid Pop',category:'celebration',bg:'#1a1a2e',gen:function(el){var colors=['#58CC02','#1CB0F6','#FFC800','#FF4B4B','#CE82FF','#FF9600','#FFAADE','#84D8FF'];for(var i=0;i<30;i++){var p=document.createElement('div');var x=R(5,90),y=R(5,90),sz=R(4,8),dur=R(1.5,4),dl=R(0,6),driftY=R(-15,15);var id=uid();injectKF(id,'0%{opacity:0;transform:scale(0)}20%{opacity:'+R(.5,.9)+';transform:scale('+R(.8,1.3)+')}60%{opacity:'+R(.4,.7)+';transform:scale('+R(.6,1)+') translateY('+driftY+'px)}100%{opacity:0;transform:scale('+R(.1,.4)+') translateY('+driftY*2+'px)}');Object.assign(p.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:R(1,2)+'px',left:x+'%',top:y+'%',background:pick(colors),animation:id+' '+dur+'s '+dl+'s infinite ease-out'});el.appendChild(p);}}},
+{name:'dna-helix',label:'DNA Helix',category:'ambient',bg:'linear-gradient(180deg,#0a1520,#1a1a2e)',gen:function(el){for(var i=0;i<20;i++){var d=document.createElement('div');var side=(i%2===0),sz=R(4,7);var dur=R(3,6),dl=R(0,8);var amp=R(15,35),cx=side?38:52;var id=uid();injectKF(id,'0%{transform:translate(0,0);opacity:'+R(.2,.5)+'}25%{transform:translate('+(side?amp:-amp)+'px,-110px);opacity:'+R(.5,.9)+'}50%{transform:translate('+(side?-amp*0.8:amp*0.8)+'px,-220px);opacity:'+R(.3,.6)+'}75%{transform:translate('+(side?amp*0.6:-amp*0.6)+'px,-330px);opacity:'+R(.5,.8)+'}100%{transform:translate('+(side?-amp*0.4:amp*0.4)+'px,-440px);opacity:0}');Object.assign(d.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:cx+'%',bottom:R(-5,10)+'%',background:side?'#1CB0F6':'#CE82FF',animation:id+' '+dur+'s '+dl+'s infinite linear'});el.appendChild(d);}}},
+{name:'smoke',label:'Smoke Wisps',category:'ambient',bg:'linear-gradient(180deg,#1a1020,#0a0a0a)',gen:function(el){var colors=['rgba(206,130,255,0.1)','rgba(255,150,0,0.08)','rgba(28,176,246,0.08)','rgba(255,200,0,0.08)','rgba(255,170,222,0.07)'];for(var i=0;i<10;i++){var s=document.createElement('div');var sz=R(30,80),x=R(5,90),dur=R(5,12),dl=R(0,8),driftX=R(-50,50);var id=uid();injectKF(id,'0%{opacity:0;transform:translateY(0) translateX(0) scale('+R(.4,.7)+')}20%{opacity:'+R(.15,.4)+'}50%{transform:translateY(-'+R(100,200)+'px) translateX('+driftX+'px) scale('+R(1.2,2)+');opacity:'+R(.1,.25)+'}100%{opacity:0;transform:translateY(-'+R(200,400)+'px) translateX('+driftX*R(1.5,2.5)+'px) scale('+R(2,3.5)+')}');Object.assign(s.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:x+'%',bottom:R(-5,15)+'%',background:'radial-gradient(circle,'+pick(colors)+',transparent)',animation:id+' '+dur+'s '+dl+'s infinite ease-out'});el.appendChild(s);}}},
+{name:'supernova',label:'Center Supernova',category:'center-burst',bg:'#0a0a1a',gen:function(el){for(var i=0;i<12;i++){var r=document.createElement('div');var dur=R(1.5,4),dl=R(0,6),maxScale=R(3,8),sz=R(20,60);var id=uid();injectKF(id,'0%{opacity:'+R(.5,.9)+';transform:scale(0)}40%{opacity:'+R(.3,.6)+'}100%{opacity:0;transform:scale('+maxScale+')}');Object.assign(r.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'calc(50% - '+sz/2+'px)',top:'calc(42% - '+sz/2+'px)',border:R(1,3)+'px solid '+pick(['rgba(255,200,0,0.5)','rgba(255,75,75,0.4)','rgba(206,130,255,0.4)','rgba(88,204,2,0.4)','rgba(28,176,246,0.4)']),animation:id+' '+dur+'s '+dl+'s infinite ease-out'});el.appendChild(r);}for(var i=0;i<30;i++){var d=document.createElement('div');var angle=R(0,Math.PI*2),dist=R(80,220),dur2=R(1.5,4),dl2=R(0,7),sz2=R(2,6);var id2=uid();injectKF(id2,'0%{opacity:0;transform:translate(0,0) scale(0)}15%{opacity:'+R(.6,1)+';transform:translate(0,0) scale('+R(.8,1.5)+')}100%{opacity:0;transform:translate('+Math.cos(angle)*dist+'px,'+Math.sin(angle)*dist+'px) scale('+R(.1,.5)+')}');Object.assign(d.style,{position:'absolute',width:sz2+'px',height:sz2+'px',borderRadius:'50%',left:'50%',top:'42%',background:pick(['#FFC800','#FF4B4B','#58CC02','#1CB0F6','#CE82FF','white']),animation:id2+' '+dur2+'s '+dl2+'s infinite ease-out'});el.appendChild(d);}var g=document.createElement('div');var gid=uid();injectKF(gid,'0%{opacity:.3;transform:scale(.8)}50%{opacity:.6;transform:scale(1.2)}100%{opacity:.3;transform:scale(.8)}');Object.assign(g.style,{position:'absolute',width:'120px',height:'120px',borderRadius:'50%',left:'calc(50% - 60px)',top:'calc(42% - 60px)',background:'radial-gradient(circle,rgba(255,200,0,0.3),transparent)',animation:gid+' 3s 0s infinite ease-in-out'});el.appendChild(g);}},
+{name:'shockwave',label:'Shockwave Blast',category:'center-burst',bg:'#0a0a1a',gen:function(el){for(var i=0;i<6;i++){var r=document.createElement('div');var dur=R(2,4),dl=i*R(.6,1.2),sz=R(30,50);var id=uid();injectKF(id,'0%{opacity:'+R(.6,.9)+';transform:scale(0);border-width:'+R(3,6)+'px}60%{opacity:'+R(.2,.4)+'}100%{opacity:0;transform:scale('+R(6,12)+');border-width:1px}');Object.assign(r.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'calc(50% - '+sz/2+'px)',top:'calc(42% - '+sz/2+'px)',border:'3px solid '+pick(['rgba(99,102,241,0.6)','rgba(168,85,247,0.5)','rgba(255,200,0,0.5)']),animation:id+' '+dur+'s '+dl+'s infinite ease-out'});el.appendChild(r);}for(var i=0;i<20;i++){var d=document.createElement('div');var angle=R(0,Math.PI*2),dist=R(100,250),dur2=R(1,3),dl2=R(0,5),sz2=R(3,8);var midAngle=angle+R(-.3,.3);var id2=uid();injectKF(id2,'0%{opacity:0;transform:translate(0,0) scale(0) rotate(0deg)}10%{opacity:1;transform:scale(1)}50%{transform:translate('+Math.cos(midAngle)*dist*.5+'px,'+Math.sin(midAngle)*dist*.5+'px) rotate('+R(90,360)+'deg);opacity:.7}100%{opacity:0;transform:translate('+Math.cos(angle)*dist+'px,'+Math.sin(angle)*dist+'px) rotate('+R(180,720)+'deg) scale(.2)}');Object.assign(d.style,{position:'absolute',width:sz2+'px',height:sz2+'px',borderRadius:R(0,1)>0.5?'50%':'2px',left:'50%',top:'42%',background:pick(['#FFC800','#FF9600','#FF4B4B','white','#84D8FF']),animation:id2+' '+dur2+'s '+dl2+'s infinite ease-out'});el.appendChild(d);}}},
+{name:'spiral-galaxy',label:'Spiral Galaxy',category:'dramatic',bg:'#050510',gen:function(el){for(var i=0;i<40;i++){var d=document.createElement('div');var orbitR=R(20,160),startAngle=R(0,Math.PI*2),dur=R(4,12),dl=R(0,8),sz=R(1.5,4);var a1=startAngle,a2=a1+R(1.5,4),a3=a2+R(1.5,4),a4=a3+R(1.5,4);var expand=R(1,1.8);var id=uid();injectKF(id,'0%{opacity:'+R(.3,.7)+';transform:translate('+Math.cos(a1)*orbitR+'px,'+Math.sin(a1)*orbitR+'px)}25%{opacity:'+R(.5,.9)+';transform:translate('+Math.cos(a2)*orbitR*expand*.8+'px,'+Math.sin(a2)*orbitR*expand*.8+'px)}50%{opacity:'+R(.3,.7)+';transform:translate('+Math.cos(a3)*orbitR*expand+'px,'+Math.sin(a3)*orbitR*expand+'px)}75%{opacity:'+R(.5,.8)+';transform:translate('+Math.cos(a4)*orbitR*expand*1.1+'px,'+Math.sin(a4)*orbitR*expand*1.1+'px)}100%{opacity:'+R(.3,.7)+';transform:translate('+Math.cos(a1)*orbitR+'px,'+Math.sin(a1)*orbitR+'px)}');Object.assign(d.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'50%',top:'42%',background:pick(['white','#FFC800','#84D8FF','#CE82FF','#FFAADE']),animation:id+' '+dur+'s '+dl+'s infinite linear'});el.appendChild(d);}var g=document.createElement('div');Object.assign(g.style,{position:'absolute',width:'40px',height:'40px',borderRadius:'50%',left:'calc(50% - 20px)',top:'calc(42% - 20px)',background:'radial-gradient(circle,rgba(255,255,255,0.25),transparent)'});el.appendChild(g);}},
+{name:'power-up',label:'Power Up Aura',category:'center-burst',bg:'#0a0a1a',gen:function(el){for(var i=0;i<8;i++){var b=document.createElement('div');var x=R(35,65),w=R(2,6),dur=R(.8,2.5),dl=R(0,5),h=R(100,300);var id=uid();injectKF(id,'0%{opacity:0;height:0;transform:translateY(0)}15%{opacity:'+R(.4,.8)+';height:'+h+'px}100%{opacity:0;height:'+h*1.5+'px;transform:translateY(-'+R(200,400)+'px)}');Object.assign(b.style,{position:'absolute',width:w+'px',borderRadius:'2px',left:x+'%',top:'42%',background:'linear-gradient(to top,'+pick(['rgba(99,102,241,0.6)','rgba(168,85,247,0.5)','rgba(255,200,0,0.5)','rgba(88,204,2,0.5)'])+',transparent)',animation:id+' '+dur+'s '+dl+'s infinite ease-out'});el.appendChild(b);}for(var i=0;i<20;i++){var p=document.createElement('div');var angle=R(0,Math.PI*2),dist=R(50,180),dur2=R(1.5,4),dl2=R(0,6),sz=R(2,5);var riseY=R(50,200);var id2=uid();injectKF(id2,'0%{opacity:0;transform:translate(0,0) scale(0)}15%{opacity:'+R(.5,1)+'}60%{transform:translate('+Math.cos(angle)*dist*.6+'px,'+-riseY*.6+'px) scale(1);opacity:'+R(.3,.7)+'}100%{opacity:0;transform:translate('+Math.cos(angle)*dist+'px,'+-riseY+'px) scale('+R(.2,.5)+')}');Object.assign(p.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'50%',top:'42%',background:pick(['#FFC800','#58CC02','#1CB0F6','white','#CE82FF']),animation:id2+' '+dur2+'s '+dl2+'s infinite ease-out'});el.appendChild(p);}var g=document.createElement('div');var gid=uid();injectKF(gid,'0%{opacity:.2;transform:scale(.6)}50%{opacity:.5;transform:scale(1.3)}100%{opacity:.2;transform:scale(.6)}');Object.assign(g.style,{position:'absolute',width:'160px',height:'160px',borderRadius:'50%',left:'calc(50% - 80px)',top:'calc(42% - 80px)',background:'radial-gradient(circle,rgba(99,102,241,0.3),rgba(168,85,247,0.15),transparent)',animation:gid+' '+R(2,4)+'s 0s infinite ease-in-out'});el.appendChild(g);}},
+{name:'xp-explosion',label:'XP Explosion',category:'center-burst',bg:'#1a1a2e',gen:function(el){for(var i=0;i<15;i++){var t=document.createElement('div');var angle=R(0,Math.PI*2),dist=R(80,200),dur=R(1.5,4),dl=R(0,7),sz=R(10,16);var xp=pick(['+5','+10','+15','+20','+25','+50','+XP','XP','\u2605']);var id=uid();injectKF(id,'0%{opacity:0;transform:translate(0,0) scale(0)}12%{opacity:1;transform:scale('+R(1,1.4)+')}60%{opacity:'+R(.5,.8)+';transform:translate('+Math.cos(angle)*dist*.6+'px,'+Math.sin(angle)*dist*.6+'px) scale(1)}100%{opacity:0;transform:translate('+Math.cos(angle)*dist+'px,'+Math.sin(angle)*dist+'px) scale('+R(.4,.8)+')}');t.style.cssText='position:absolute;left:50%;top:42%;font-size:'+sz+'px;font-weight:900;color:'+pick(['#FFC800','#FFB100','#58CC02','white','#84D8FF'])+';animation:'+id+' '+dur+'s '+dl+'s infinite ease-out;white-space:nowrap;';t.textContent=xp;el.appendChild(t);}for(var i=0;i<4;i++){var r=document.createElement('div');var sz2=R(30,50),dur2=R(2,4),dl2=R(0,5);var id2=uid();injectKF(id2,'0%{opacity:.7;transform:scale(0)}100%{opacity:0;transform:scale('+R(4,8)+')}');Object.assign(r.style,{position:'absolute',width:sz2+'px',height:sz2+'px',borderRadius:'50%',left:'calc(50% - '+sz2/2+'px)',top:'calc(42% - '+sz2/2+'px)',border:'2px solid rgba(255,200,0,'+R(.3,.6)+')',animation:id2+' '+dur2+'s '+dl2+'s infinite ease-out'});el.appendChild(r);}}},
+{name:'tornado',label:'Tornado Vortex',category:'dramatic',bg:'#0a0a1a',gen:function(el){for(var i=0;i<50;i++){var d=document.createElement('div');var layer=i/50;var radiusX=8+layer*80,radiusY=4+layer*30;var yCenter=90-layer*75;var sz=R(1.5,3+layer*3);var dur=R(1.5,4),dl=R(0,6);var phase=R(0,Math.PI*2);var p=[[phase,1],[phase+Math.PI*.5,1.1],[phase+Math.PI,.95],[phase+Math.PI*1.5,1.05]];var id=uid();injectKF(id,'0%{transform:translate('+Math.cos(p[0][0])*radiusX*p[0][1]+'px,'+Math.sin(p[0][0])*radiusY+'px);opacity:'+R(.4,.8)+'}25%{transform:translate('+Math.cos(p[1][0])*radiusX*p[1][1]+'px,'+Math.sin(p[1][0])*radiusY+'px);opacity:'+R(.5,.9)+'}50%{transform:translate('+Math.cos(p[2][0])*radiusX*p[2][1]+'px,'+Math.sin(p[2][0])*radiusY+'px);opacity:'+R(.3,.7)+'}75%{transform:translate('+Math.cos(p[3][0])*radiusX*p[3][1]+'px,'+Math.sin(p[3][0])*radiusY+'px);opacity:'+R(.5,.8)+'}100%{transform:translate('+Math.cos(p[0][0])*radiusX*p[0][1]+'px,'+Math.sin(p[0][0])*radiusY+'px);opacity:'+R(.4,.8)+'}');Object.assign(d.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'50%',top:yCenter+'%',background:pick(['rgba(168,85,247,0.7)','rgba(99,102,241,0.6)','rgba(206,130,255,0.6)','rgba(28,176,246,0.5)','rgba(255,255,255,0.6)']),animation:id+' '+dur+'s '+dl+'s infinite linear'});el.appendChild(d);}}},
+{name:'golden-rain',label:'Golden Rain + Coins',category:'celebration',bg:'linear-gradient(180deg,#1a1020,#0a0a0a)',gen:function(el){for(var i=0;i<30;i++){var d=document.createElement('div');var x=R(-5,105),sz=R(2,5),dur=R(3,8),dl=R(0,10),driftX=R(-30,30),fallDist=R(400,600);var id=uid();injectKF(id,'0%{opacity:0;transform:translateY(-10px) translateX(0)}10%{opacity:'+R(.4,.8)+'}60%{transform:translateY('+fallDist*.6+'px) translateX('+driftX+'px)}100%{opacity:0;transform:translateY('+fallDist+'px) translateX('+driftX*1.5+'px)}');Object.assign(d.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:x+'%',top:'-3%',background:'rgba(255,200,0,'+R(.3,.7)+')',animation:id+' '+dur+'s '+dl+'s infinite linear'});el.appendChild(d);}for(var i=0;i<12;i++){var c=document.createElement('div');var x2=R(5,90),sz2=R(16,28),dur2=R(3.5,8),dl2=R(0,12),spin=R(180,720),driftX2=R(-40,40),fallDist2=R(400,600);var id2=uid();injectKF(id2,'0%{opacity:0;transform:translateY(-30px) translateX(0) rotate(0deg)}10%{opacity:1}50%{transform:translateY('+fallDist2*.5+'px) translateX('+driftX2+'px) rotate('+spin*.5+'deg)}100%{opacity:0;transform:translateY('+fallDist2+'px) translateX('+driftX2*1.3+'px) rotate('+spin+'deg)}');c.style.cssText='position:absolute;left:'+x2+'%;top:-5%;font-size:'+sz2+'px;animation:'+id2+' '+dur2+'s '+dl2+'s infinite linear;';c.textContent=pick(['\ud83e\ude99','\ud83d\udcb0','\u2728','\ud83d\udc8e','\u2b50']);el.appendChild(c);}}},
+{name:'electric',label:'Electric Field',category:'dramatic',bg:'#0a0a1a',gen:function(el){for(var i=0;i<16;i++){var b=document.createElement('div');var angle=R(0,Math.PI*2),len=R(50,150),dur=R(2,6),dl=R(0,8);var deg=Math.atan2(Math.sin(angle),Math.cos(angle))*180/Math.PI;var t1=R(3,10),t2=t1+R(1,3),t3=t2+R(3,10),t4=t3+R(1,2);var id=uid();injectKF(id,'0%{opacity:0}'+t1+'%{opacity:0}'+((t1+.5))+'%{opacity:'+R(.5,.9)+'}'+t2+'%{opacity:0}'+t3+'%{opacity:0}'+((t3+.3))+'%{opacity:'+R(.3,.7)+'}'+t4+'%{opacity:0}100%{opacity:0}');Object.assign(b.style,{position:'absolute',width:len+'px',height:R(1.5,3)+'px',left:'50%',top:'42%',background:pick(['rgba(130,216,255,0.9)','rgba(99,102,241,0.8)','rgba(255,200,0,0.7)','rgba(255,255,255,0.8)']),transformOrigin:'0 50%',transform:'rotate('+deg+'deg)',animation:id+' '+dur+'s '+dl+'s infinite steps(1)',borderRadius:'1px',boxShadow:'0 0 '+R(6,14)+'px '+R(2,5)+'px '+pick(['rgba(130,216,255,0.5)','rgba(99,102,241,0.4)','rgba(255,200,0,0.3)'])});el.appendChild(b);}for(var i=0;i<12;i++){var s=document.createElement('div');var angle2=R(0,Math.PI*2),dist=R(40,140),sz=R(2,4),dur2=R(1,3),dl2=R(0,6);var id2=uid();injectKF(id2,'0%{opacity:0;transform:translate('+Math.cos(angle2)*dist*.3+'px,'+Math.sin(angle2)*dist*.3+'px) scale(0)}20%{opacity:1;transform:translate('+Math.cos(angle2)*dist*.6+'px,'+Math.sin(angle2)*dist*.6+'px) scale(1.3)}100%{opacity:0;transform:translate('+Math.cos(angle2)*dist+'px,'+Math.sin(angle2)*dist+'px) scale(0)}');Object.assign(s.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'50%',top:'42%',background:pick(['#84D8FF','white','#FFC800']),animation:id2+' '+dur2+'s '+dl2+'s infinite ease-out'});el.appendChild(s);}var orb=document.createElement('div');var oid=uid();injectKF(oid,'0%{opacity:.3;transform:scale(.85)}20%{opacity:.7;transform:scale(1.15)}40%{opacity:.2;transform:scale(.9)}60%{opacity:.6;transform:scale(1.1)}80%{opacity:.25;transform:scale(.95)}100%{opacity:.3;transform:scale(.85)}');Object.assign(orb.style,{position:'absolute',width:'60px',height:'60px',borderRadius:'50%',left:'calc(50% - 30px)',top:'calc(42% - 30px)',background:'radial-gradient(circle,rgba(130,216,255,0.5),rgba(99,102,241,0.2),transparent)',animation:oid+' 2s 0s infinite ease-in-out'});el.appendChild(orb);}},
+{name:'portal',label:'Portal Warp',category:'center-burst',bg:'#050510',gen:function(el){for(var i=0;i<6;i++){var r=document.createElement('div');var sz=40+i*30,dur=R(3,8),dl=R(0,3);var id=uid();injectKF(id,'0%{transform:rotate(0deg)}100%{transform:rotate('+(i%2===0?360:-360)+'deg)}');Object.assign(r.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'calc(50% - '+sz/2+'px)',top:'calc(42% - '+sz/2+'px)',border:R(1,2.5)+'px solid transparent',borderTopColor:pick(['rgba(168,85,247,0.5)','rgba(99,102,241,0.4)','rgba(206,130,255,0.5)','rgba(255,170,222,0.4)']),borderRightColor:pick(['rgba(168,85,247,0.3)','rgba(99,102,241,0.2)']),animation:id+' '+Math.abs(dur)+'s '+dl+'s infinite linear',opacity:R(.4,.8)});el.appendChild(r);}for(var i=0;i<20;i++){var p=document.createElement('div');var startAngle=R(0,Math.PI*2),startDist=R(150,250),sz2=R(1.5,4),dur2=R(2,5),dl2=R(0,8);var id2=uid();injectKF(id2,'0%{opacity:0;transform:translate('+Math.cos(startAngle)*startDist+'px,'+Math.sin(startAngle)*startDist+'px) scale(1)}20%{opacity:'+R(.5,.9)+'}90%{opacity:'+R(.3,.6)+'}100%{opacity:0;transform:translate(0,0) scale(0)}');Object.assign(p.style,{position:'absolute',width:sz2+'px',height:sz2+'px',borderRadius:'50%',left:'50%',top:'42%',background:pick(['#CE82FF','#84D8FF','white','#FFAADE']),animation:id2+' '+dur2+'s '+dl2+'s infinite ease-in'});el.appendChild(p);}}},
+{name:'level-up-rays',label:'Level Up Rays',category:'center-burst',bg:'#0a0a1a',gen:function(el){var wrap=document.createElement('div');var wid=uid();injectKF(wid,'0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}');Object.assign(wrap.style,{position:'absolute',left:'0',top:'0',width:'100%',height:'100%',animation:wid+' 25s 0s infinite linear'});for(var i=0;i<14;i++){var ray=document.createElement('div');var angle=(i/14)*360+R(-5,5),w=R(3,8),h=R(100,200);var id=uid();var minO=R(.05,.15),maxO=R(.25,.55);injectKF(id,'0%{opacity:'+minO+'}50%{opacity:'+maxO+'}100%{opacity:'+minO+'}');Object.assign(ray.style,{position:'absolute',width:w+'px',height:h+'px',left:'50%',top:'42%',transformOrigin:w/2+'px 0',transform:'rotate('+angle+'deg) translateX(-'+w/2+'px)',background:'linear-gradient(to bottom,'+pick(['rgba(255,200,0,0.5)','rgba(255,180,0,0.4)','rgba(255,255,255,0.25)','rgba(255,150,0,0.35)'])+',transparent)',borderRadius:'3px',animation:id+' '+R(2,5)+'s '+R(0,3)+'s infinite ease-in-out'});wrap.appendChild(ray);}el.appendChild(wrap);var c=document.createElement('div');var cid=uid();injectKF(cid,'0%{opacity:.15;transform:scale(.7)}50%{opacity:.5;transform:scale(1.2)}100%{opacity:.15;transform:scale(.7)}');Object.assign(c.style,{position:'absolute',width:'90px',height:'90px',borderRadius:'50%',left:'calc(50% - 45px)',top:'calc(42% - 45px)',background:'radial-gradient(circle,rgba(255,200,0,0.45),rgba(255,150,0,0.15),transparent)',animation:cid+' 2.5s 0s infinite ease-in-out',zIndex:'2'});el.appendChild(c);for(var i=0;i<10;i++){var s=document.createElement('div');var angle2=R(0,Math.PI*2),dist=R(30,120),sz=R(2,4),dur=R(1.5,4),dl=R(0,6);var id2=uid();injectKF(id2,'0%{opacity:0;transform:translate(0,0) scale(0)}20%{opacity:'+R(.5,1)+';transform:scale(1)}100%{opacity:0;transform:translate('+Math.cos(angle2)*dist+'px,'+(Math.sin(angle2)*dist-40)+'px) scale(0)}');Object.assign(s.style,{position:'absolute',width:sz+'px',height:sz+'px',borderRadius:'50%',left:'50%',top:'42%',background:pick(['#FFC800','white','#FFB100']),animation:id2+' '+dur+'s '+dl+'s infinite ease-out',zIndex:'3'});el.appendChild(s);}}}
+];
+
+// Render into category grids
+var catMap={celebration:'celebration',ambient:'ambient','center-burst':'center-burst',weather:'weather',dramatic:'dramatic'};
+var fullscreen=document.getElementById('fx-fullscreen');
+
+effects.forEach(function(fx){
+  var cat=fx.category||'other';
+  var grid=document.getElementById('fx-grid-'+cat);
+  if(!grid) return;
+
+  var wrap=document.createElement('div');
+  wrap.className='fx-wrap';
+
+  var phone=document.createElement('div');
+  phone.className='fx-phone';
+  phone.title='Click for fullscreen: '+fx.name;
+
+  var fxEl=document.createElement('div');
+  fxEl.className='fx-container';
+  fxEl.style.background=fx.bg;
+  fx.gen(fxEl);
+  phone.appendChild(fxEl);
+
+  var codeBadge=document.createElement('div');
+  codeBadge.style.cssText='position:absolute;bottom:8px;left:8px;right:8px;padding:6px 8px;border-radius:8px;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);z-index:10;';
+  codeBadge.innerHTML='<div style="font-size:9px;color:rgba(255,255,255,0.4);font-weight:600;">REACT USAGE</div><div style="font-size:10px;color:#58CC02;font-family:monospace;font-weight:700;margin-top:2px;">&lt;ScreenFX effect="'+fx.name+'" /&gt;</div>';
+  phone.appendChild(codeBadge);
+
+  phone.addEventListener('click',function(){
+    fullscreen.style.display='block';
+    fullscreen.style.background=fx.bg;
+    while(fullscreen.childElementCount>1) fullscreen.removeChild(fullscreen.lastChild);
+    var fsEl=document.createElement('div');
+    fsEl.style.cssText='position:absolute;inset:0;overflow:hidden;';
+    fx.gen(fsEl);
+    fullscreen.appendChild(fsEl);
+  });
+
+  var label=document.createElement('div');
+  label.className='fx-label';
+  label.innerHTML='<strong>'+fx.name+'</strong><br>'+fx.label;
+
+  wrap.appendChild(phone);
+  wrap.appendChild(label);
+  grid.appendChild(wrap);
+});
+})();
+
+// ═══ Tab + Sidebar routing ═══
+(function(){
+  var tabBtns = document.querySelectorAll('.tab-btn');
   var panels = {
     screens: document.getElementById('tab-screens'),
+    fx: document.getElementById('tab-fx'),
+    mascots: document.getElementById('tab-mascots'),
+    badges: document.getElementById('tab-badges'),
     diagrams: document.getElementById('tab-diagrams')
   };
+  var sidebar = document.getElementById('sidebar');
+
+  // Sidebar configs per tab
+  var sidebarConfigs = {
+    screens: [
+      {label:'Utility Modals',target:'sec-utility-modals'},
+      {label:'Celebrations',target:'sec-celebrations'},
+      {label:'League',target:'sec-league'},
+      {label:'Lesson Results',target:'sec-lesson-results'},
+      {label:'Chapter & Course',target:'sec-chapter-course'},
+      {label:'Splash',target:'sec-splash'},
+      {label:'Lesson Results (2)',target:'sec-lesson-results-2'},
+      {label:'Active Lesson',target:'sec-active-lesson'},
+      {label:'Placement Test',target:'sec-placement-test'},
+      {label:'Push Prompt',target:'sec-push-prompt'},
+      {label:'Authentication',target:'sec-authentication'},
+      {label:'App Screens',target:'sec-app-screens'},
+      {label:'Streak Screen',target:'sec-streak-screen'}
+    ],
+    fx: [
+      {label:'Celebration',target:'fx-sec-celebration'},
+      {label:'Ambient / Background',target:'fx-sec-ambient'},
+      {label:'Center Burst',target:'fx-sec-center-burst'},
+      {label:'Weather',target:'fx-sec-weather'},
+      {label:'Dramatic',target:'fx-sec-dramatic'}
+    ],
+    mascots: [],
+    badges: [
+      {label:'Level Badges',target:'badge-sec-level'},
+      {label:'League Badges',target:'badge-sec-league'},
+      {label:'Medal Badges',target:'badge-sec-medal'},
+      {label:'Achievement Badges',target:'badge-sec-achievement'}
+    ],
+    diagrams: []
+  };
+
+  // Build diagram sidebar dynamically from course-details summaries
+  function buildDiagramSidebar() {
+    var items = [];
+    var details = document.querySelectorAll('#tab-diagrams .course-details > summary');
+    details.forEach(function(s, i) {
+      var text = s.querySelector('span')?.textContent?.trim() || ('Course ' + (i+1));
+      var id = 'diagram-course-' + i;
+      s.parentElement.id = id;
+      items.push({label: text, target: id});
+    });
+    sidebarConfigs.diagrams = items;
+  }
+
+  function renderSidebar(tabId) {
+    if (tabId === 'diagrams' && sidebarConfigs.diagrams.length === 0) {
+      buildDiagramSidebar();
+    }
+    var items = sidebarConfigs[tabId] || [];
+    if (items.length === 0) {
+      sidebar.style.display = 'none';
+      return;
+    }
+    sidebar.style.display = '';
+    var html = '<div class="sidebar-title">' + tabId + '</div>';
+    items.forEach(function(item) {
+      html += '<a href="#" data-target="' + item.target + '">' + item.label + '</a>';
+    });
+    sidebar.innerHTML = html;
+
+    // Attach click handlers
+    sidebar.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        var el = document.getElementById(a.getAttribute('data-target'));
+        if (el) {
+          el.scrollIntoView({behavior: 'smooth', block: 'start'});
+          // Update active state
+          sidebar.querySelectorAll('a').forEach(function(x){x.classList.remove('active');});
+          a.classList.add('active');
+        }
+      });
+    });
+  }
 
   function activate(id) {
     if (!panels[id]) id = 'screens';
     for (var k in panels) {
       panels[k].style.display = k === id ? '' : 'none';
     }
-    tabs.forEach(function(b) {
+    tabBtns.forEach(function(b) {
       b.classList.toggle('active', b.getAttribute('data-tab') === id);
     });
+    renderSidebar(id);
+    // Scroll to top on tab switch
+    window.scrollTo(0, 0);
   }
 
   function onHash() {
@@ -11975,14 +12312,40 @@
     activate(h || 'screens');
   }
 
-  tabs.forEach(function(b) {
+  tabBtns.forEach(function(b) {
     b.addEventListener('click', function() {
       location.hash = b.getAttribute('data-tab');
     });
   });
 
+  // Intersection observer for sidebar active state (screens tab)
+  function setupScrollSpy() {
+    var sections = document.querySelectorAll('#tab-screens .sec[id], #tab-fx .sec[id], #tab-badges .sec[id], #tab-diagrams .course-details[id]');
+    if (!sections.length || !('IntersectionObserver' in window)) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          sidebar.querySelectorAll('a').forEach(function(a) {
+            a.classList.toggle('active', a.getAttribute('data-target') === id);
+          });
+        }
+      });
+    }, {rootMargin: '-80px 0px -70% 0px'});
+    sections.forEach(function(s) { observer.observe(s); });
+  }
+
   window.addEventListener('hashchange', onHash);
   onHash();
+
+  // Add IDs to screen sections for sidebar scroll
+  var screenSecs = document.querySelectorAll('#tab-screens .sec');
+  var secIds = ['sec-utility-modals','sec-celebrations','sec-league','sec-lesson-results','sec-chapter-course','sec-splash','sec-lesson-results-2','sec-active-lesson','sec-placement-test','sec-push-prompt','sec-authentication','sec-app-screens','sec-streak-screen'];
+  screenSecs.forEach(function(s, i) {
+    if (secIds[i]) s.id = secIds[i];
+  });
+
+  setupScrollSpy();
 })();
 </script>
 </body>

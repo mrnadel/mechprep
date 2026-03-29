@@ -1165,6 +1165,75 @@ export const useCourseStore = create<CourseState>()(
           };
         }
 
+        // Migrate split lessons: if original lesson is passed, also mark b/c sub-lessons as passed
+        const splitMigrations: Record<string, string[]> = {
+          'u1-L1': ['u1-L1b', 'u1-L1c'],
+          'u1-L2': ['u1-L2b', 'u1-L2c'],
+          'u1-L3': ['u1-L3b', 'u1-L3c'],
+          'u1-L4': ['u1-L4b', 'u1-L4c'],
+          'u1-L5': ['u1-L5b', 'u1-L5c'],
+          'u2-L1': ['u2-L1b', 'u2-L1c'],
+          'u2-L2': ['u2-L2b', 'u2-L2c'],
+          'u2-L3': ['u2-L3b', 'u2-L3c'],
+          'u2-L4': ['u2-L4b', 'u2-L4c'],
+          'u2-L5': ['u2-L5b', 'u2-L5c'],
+          'u2-L6': ['u2-L6b', 'u2-L6c'],
+          'u3-L1': ['u3-L1b', 'u3-L1c'],
+          'u3-L2': ['u3-L2b', 'u3-L2c'],
+          'u3-L3': ['u3-L3b', 'u3-L3c'],
+          'u3-L4': ['u3-L4b', 'u3-L4c'],
+          'u3-L5': ['u3-L5b', 'u3-L5c'],
+          'u3-L6': ['u3-L6b', 'u3-L6c'],
+          'u3-L7': ['u3-L7b', 'u3-L7c'],
+          'u4-L1': ['u4-L1b', 'u4-L1c'],
+          'u4-L2': ['u4-L2b', 'u4-L2c'],
+          'u4-L3': ['u4-L3b', 'u4-L3c'],
+          'u4-L4': ['u4-L4b', 'u4-L4c'],
+          'u4-L5': ['u4-L5b', 'u4-L5c'],
+          'u5-L1': ['u5-L1b', 'u5-L1c'],
+          'u5-L2': ['u5-L2b', 'u5-L2c'],
+          'u5-L3': ['u5-L3b', 'u5-L3c'],
+          'u5-L4': ['u5-L4b', 'u5-L4c'],
+          'u5-L5': ['u5-L5b', 'u5-L5c'],
+          'u5-L6': ['u5-L6b', 'u5-L6c'],
+          'u6-L1': ['u6-L1b', 'u6-L1c'],
+          'u6-L2': ['u6-L2b', 'u6-L2c'],
+          'u6-L3': ['u6-L3b', 'u6-L3c'],
+          'u6-L4': ['u6-L4b', 'u6-L4c'],
+          'u6-L5': ['u6-L5b', 'u6-L5c'],
+          'u7-L1': ['u7-L1b', 'u7-L1c'],
+          'u7-L2': ['u7-L2b', 'u7-L2c'],
+          'u7-L3': ['u7-L3b', 'u7-L3c'],
+          'u7-L4': ['u7-L4b', 'u7-L4c'],
+          'u7-L5': ['u7-L5b', 'u7-L5c'],
+          'u7-L6': ['u7-L6b', 'u7-L6c'],
+          'u8-L1': ['u8-L1b', 'u8-L1c'],
+          'u8-L2': ['u8-L2b', 'u8-L2c'],
+          'u8-L3': ['u8-L3b', 'u8-L3c'],
+          'u8-L4': ['u8-L4b', 'u8-L4c'],
+          'u8-L5': ['u8-L5b', 'u8-L5c'],
+          'u9-L1': ['u9-L1b', 'u9-L1c'],
+          'u9-L2': ['u9-L2b', 'u9-L2c'],
+          'u9-L3': ['u9-L3b', 'u9-L3c'],
+          'u9-L4': ['u9-L4b', 'u9-L4c'],
+          'u9-L5': ['u9-L5b', 'u9-L5c'],
+          'u10-L1': ['u10-L1b', 'u10-L1c'],
+          'u10-L2': ['u10-L2b', 'u10-L2c'],
+          'u10-L3': ['u10-L3b', 'u10-L3c'],
+          'u10-L4': ['u10-L4b', 'u10-L4c'],
+          'u10-L5': ['u10-L5b', 'u10-L5c'],
+          'u10-L6': ['u10-L6b', 'u10-L6c'],
+        };
+        for (const [original, splits] of Object.entries(splitMigrations)) {
+          if (migratedLessons[original]?.passed) {
+            for (const splitId of splits) {
+              if (!migratedLessons[splitId]) {
+                migratedLessons[splitId] = { ...migratedLessons[original] };
+              }
+            }
+          }
+        }
+
         const restoredProfession = persisted.activeProfession ?? 'mechanical-engineering';
 
         return {
