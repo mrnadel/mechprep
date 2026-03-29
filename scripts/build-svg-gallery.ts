@@ -250,6 +250,75 @@ async function main() {
       </details>`;
   }
 
+  // Build slug for each course
+  const courseSlugMap: Record<string, string> = {};
+  for (const course of courses) {
+    courseSlugMap[course.name] = course.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  }
+
+  // Build tab buttons
+  const tabButtons = courses.map(c => {
+    const slug = courseSlugMap[c.name];
+    return `<button class="tab" data-tab="${slug}" onclick="switchTab('${slug}')">${escapeHtml(c.name)} <span class="tab-count">${c.totalDiagrams}</span></button>`;
+  }).join('\n        ');
+
+  // Build tab pages (one per course)
+  let tabPages = '';
+  for (const course of courses) {
+    const slug = courseSlugMap[course.name];
+    let unitSidebar = '';
+    let unitContent = '';
+
+    for (let ui = 0; ui < course.units.length; ui++) {
+      const unit = course.units[ui];
+      const unitSlug = `${slug}/${unit.unitTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
+      const unitDiagramCount = unit.lessons.reduce((s, l) => s + l.diagrams.length, 0);
+
+      unitSidebar += `<a class="sidebar-unit" href="#${unitSlug}" data-unit="${unitSlug}" onclick="switchUnit('${unitSlug}')">${unit.unitIcon} ${escapeHtml(unit.unitTitle)} <span class="count">${unitDiagramCount}</span></a>\n`;
+
+      let lessonSections = '';
+      for (const lesson of unit.lessons) {
+        let cards = '';
+        for (const d of lesson.diagrams) {
+          cards += `
+              <div class="card" data-search="${escapeHtml(d.questionId.toLowerCase())} ${escapeHtml(d.questionText.toLowerCase())} ${escapeHtml(d.questionType.toLowerCase())} ${escapeHtml(d.lessonTitle.toLowerCase())} ${escapeHtml(d.unitTitle.toLowerCase())}">
+                <div class="diagram-container">${d.diagram}</div>
+                <div class="card-info">
+                  <code class="qid">${escapeHtml(d.questionId)}</code>
+                  <span class="badge badge-${d.questionType}">${escapeHtml(d.questionType)}</span>
+                  <p class="qtext">${escapeHtml(d.questionText)}</p>
+                </div>
+              </div>`;
+        }
+        lessonSections += `
+            <div class="lesson-group">
+              <h4 class="lesson-title">${escapeHtml(lesson.lessonTitle)} <span class="count">${lesson.diagrams.length}</span></h4>
+              <div class="grid">${cards}</div>
+            </div>`;
+      }
+
+      unitContent += `
+          <div class="unit-page" id="unit-${unitSlug}" style="display:none">
+            <div class="unit-header">
+              <span class="unit-icon-lg">${unit.unitIcon}</span>
+              <div>
+                <h2 class="unit-page-title">${escapeHtml(unit.unitTitle)}</h2>
+                <p class="unit-page-sub">${unitDiagramCount} diagrams across ${unit.lessons.length} lessons</p>
+              </div>
+            </div>
+            ${lessonSections}
+          </div>`;
+    }
+
+    tabPages += `
+      <div class="tab-page" id="page-${slug}" style="display:none">
+        <div class="course-layout">
+          <aside class="sidebar">${unitSidebar}</aside>
+          <main class="content">${unitContent}</main>
+        </div>
+      </div>`;
+  }
+
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -261,260 +330,134 @@ async function main() {
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #0a0a0a;
-    color: #fff;
-    padding: 40px 20px 80px;
-    min-height: 100vh;
+    background: #0a0a0a; color: #fff; min-height: 100vh;
   }
 
-  /* ── Header ── */
-  .header {
-    text-align: center;
-    margin-bottom: 32px;
+  /* ── Top bar ── */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    background: #0a0a0a; border-bottom: 1px solid #1a1a2e;
+    padding: 12px 24px 0;
   }
-  .header h1 {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: -0.5px;
+  .topbar-row {
+    display: flex; align-items: center; gap: 16px; margin-bottom: 12px;
   }
-  .header .subtitle {
-    font-size: 14px;
-    color: #666;
-    margin-top: 4px;
+  .topbar h1 { font-size: 20px; font-weight: 900; flex-shrink: 0; }
+  .topbar .total {
+    padding: 3px 12px; background: #1a1a2e; border-radius: 12px;
+    font-size: 12px; font-weight: 800; color: #818CF8;
   }
-  .header .total {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 6px 16px;
-    background: #1a1a2e;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #818CF8;
-  }
-
-  /* ── Search ── */
   .search-bar {
-    max-width: 600px;
-    margin: 0 auto 40px;
-    position: sticky;
-    top: 12px;
-    z-index: 100;
+    flex: 1; max-width: 400px; position: relative; margin-left: auto;
   }
   .search-bar input {
-    width: 100%;
-    padding: 14px 20px 14px 44px;
-    background: #141422;
-    border: 2px solid #2a2a3e;
-    border-radius: 14px;
-    color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    outline: none;
-    transition: border-color 0.2s;
+    width: 100%; padding: 8px 14px 8px 36px;
+    background: #141422; border: 1px solid #2a2a3e; border-radius: 10px;
+    color: #fff; font-family: 'Nunito', sans-serif; font-size: 13px;
+    font-weight: 600; outline: none; transition: border-color 0.2s;
   }
-  .search-bar input:focus {
-    border-color: #818CF8;
-  }
-  .search-bar input::placeholder {
-    color: #555;
-  }
-  .search-bar .search-icon {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #555;
-    pointer-events: none;
-  }
-  .no-results {
-    text-align: center;
-    color: #555;
-    font-size: 15px;
-    padding: 60px 20px;
-    display: none;
+  .search-bar input:focus { border-color: #818CF8; }
+  .search-bar input::placeholder { color: #555; }
+  .search-icon {
+    position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+    color: #555; pointer-events: none;
   }
 
-  /* ── Course ── */
-  .course-details {
-    margin-bottom: 24px;
+  /* ── Tabs ── */
+  .tabs { display: flex; gap: 4px; overflow-x: auto; }
+  .tab {
+    padding: 8px 16px; background: none; border: none; border-bottom: 2px solid transparent;
+    color: #666; font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 700;
+    cursor: pointer; white-space: nowrap; transition: all 0.15s;
   }
-  .course-summary {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 20px;
-    background: #111;
-    border-radius: 14px;
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-    border: 1px solid #222;
-    transition: background 0.15s;
-  }
-  .course-summary:hover {
-    background: #1a1a1a;
-  }
-  .course-summary::-webkit-details-marker { display: none; }
-  .course-name {
-    font-size: 20px;
-    font-weight: 900;
-    flex: 1;
+  .tab:hover { color: #aaa; }
+  .tab.active { color: #fff; border-bottom-color: #818CF8; }
+  .tab-count {
+    font-size: 11px; font-weight: 800; color: #818CF8;
+    background: #1a1a2e; padding: 1px 7px; border-radius: 8px; margin-left: 6px;
   }
 
-  /* ── Unit ── */
-  .unit-details {
-    margin: 16px 0 16px 12px;
+  /* ── Course layout ── */
+  .course-layout { display: flex; min-height: calc(100vh - 100px); }
+  .sidebar {
+    width: 260px; flex-shrink: 0; padding: 16px 12px;
+    background: #0d0d14; border-right: 1px solid #1a1a2e;
+    overflow-y: auto; position: sticky; top: 100px; height: calc(100vh - 100px);
   }
-  .unit-summary {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    background: #0f0f1a;
-    border-radius: 12px;
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-    border: 1px solid #1a1a2e;
-    transition: background 0.15s;
+  .sidebar-unit {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 12px; border-radius: 10px; margin-bottom: 4px;
+    color: #888; text-decoration: none; font-size: 13px; font-weight: 700;
+    transition: all 0.15s; cursor: pointer;
   }
-  .unit-summary:hover {
-    background: #151528;
-  }
-  .unit-summary::-webkit-details-marker { display: none; }
-  .unit-icon {
-    font-size: 20px;
-  }
-  .unit-name {
-    font-size: 16px;
-    font-weight: 800;
-    flex: 1;
+  .sidebar-unit:hover { background: #151522; color: #ccc; }
+  .sidebar-unit.active { background: #1a1a2e; color: #fff; }
+  .content { flex: 1; padding: 24px 32px 80px; overflow-y: auto; }
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .content { padding: 16px; }
   }
 
-  /* ── Chevron ── */
-  .chevron {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid #555;
-    border-bottom: 2px solid #555;
-    transform: rotate(45deg);
-    transition: transform 0.2s;
-    flex-shrink: 0;
+  /* ── Unit page ── */
+  .unit-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid #1a1a2e;
   }
-  details[open] > summary .chevron {
-    transform: rotate(-135deg);
-  }
+  .unit-icon-lg { font-size: 36px; }
+  .unit-page-title { font-size: 22px; font-weight: 900; }
+  .unit-page-sub { font-size: 13px; color: #666; font-weight: 600; margin-top: 2px; }
 
   /* ── Count badge ── */
   .count {
-    padding: 2px 10px;
-    background: #1a1a2e;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: 800;
-    color: #818CF8;
-    flex-shrink: 0;
+    padding: 1px 8px; background: #1a1a2e; border-radius: 8px;
+    font-size: 11px; font-weight: 800; color: #818CF8; margin-left: auto;
   }
 
   /* ── Lesson ── */
-  .lesson-group {
-    margin: 16px 0 24px 24px;
-  }
+  .lesson-group { margin-bottom: 32px; }
   .lesson-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #888;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 14px; font-weight: 700; color: #888;
+    margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
   }
 
   /* ── Grid ── */
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 20px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;
   }
-  @media (max-width: 740px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
+  @media (max-width: 740px) { .grid { grid-template-columns: 1fr; } }
 
   /* ── Card ── */
   .card {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: border-color 0.2s, transform 0.15s;
+    background: #111; border: 1px solid #1a1a2e; border-radius: 14px;
+    overflow: hidden; transition: border-color 0.2s, transform 0.15s;
   }
-  .card:hover {
-    border-color: #333;
-    transform: translateY(-2px);
-  }
-  .card.hidden {
-    display: none;
-  }
-
+  .card:hover { border-color: #333; transform: translateY(-2px); }
+  .card.hidden { display: none; }
   .diagram-container {
-    background: #fff;
-    border: 2px solid #E5E5E5;
-    border-radius: 14px;
-    margin: 12px;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 160px;
-    overflow: hidden;
+    background: #fff; border: 2px solid #E5E5E5; border-radius: 12px;
+    margin: 10px; padding: 12px;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 140px; overflow: hidden;
   }
-  .diagram-container svg {
-    max-width: 100%;
-    max-height: 300px;
-    height: auto;
-  }
-
+  .diagram-container svg { max-width: 100%; max-height: 260px; height: auto; }
   .card-info {
-    padding: 8px 16px 16px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
+    padding: 6px 14px 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
   }
   .qid {
-    font-size: 11px;
-    font-weight: 700;
-    color: #555;
-    background: #1a1a1a;
-    padding: 2px 8px;
-    border-radius: 6px;
+    font-size: 10px; font-weight: 700; color: #555;
+    background: #1a1a1a; padding: 2px 7px; border-radius: 5px;
   }
   .qtext {
-    width: 100%;
-    font-size: 13px;
-    font-weight: 600;
-    color: #aaa;
-    line-height: 1.4;
-    margin-top: 4px;
+    width: 100%; font-size: 12px; font-weight: 600; color: #777;
+    line-height: 1.4; margin-top: 2px;
   }
 
-  /* ── Type badges ── */
+  /* ── Badges ── */
   .badge {
-    font-size: 10px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 2px 8px;
-    border-radius: 6px;
-    color: #fff;
+    font-size: 9px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.5px; padding: 2px 7px; border-radius: 5px; color: #fff;
   }
   .badge-teaching { background: #7C3AED; }
   .badge-multiple-choice { background: #2563EB; }
@@ -530,63 +473,123 @@ async function main() {
   .badge-rank-order { background: #BE185D; }
   .badge-pick-the-best { background: #0D9488; }
   .badge-image-tap { background: #7C2D12; }
+
+  .no-results {
+    text-align: center; color: #555; font-size: 15px;
+    padding: 80px 20px; display: none;
+  }
 </style>
 </head>
 <body>
-  <div class="header">
-    <h1>SVG Diagram Gallery</h1>
-    <p class="subtitle">All course diagrams, organized by course, unit, and lesson</p>
-    <div class="total">${grandTotal} diagrams</div>
-  </div>
-
-  <div class="search-bar">
-    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" id="search" placeholder="Filter by ID, question text, type, lesson, unit..." autocomplete="off" spellcheck="false">
+  <div class="topbar">
+    <div class="topbar-row">
+      <h1>SVG Gallery</h1>
+      <span class="total">${grandTotal} diagrams</span>
+      <div class="search-bar">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search" placeholder="Filter diagrams..." autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="tabs" id="tabs">
+      ${tabButtons}
+    </div>
   </div>
 
   <div class="no-results" id="no-results">No diagrams match your search.</div>
 
   <div id="gallery">
-    ${courseSections}
+    ${tabPages}
   </div>
 
   <script>
-    const input = document.getElementById('search');
-    const cards = document.querySelectorAll('.card');
-    const noResults = document.getElementById('no-results');
-    const lessonGroups = document.querySelectorAll('.lesson-group');
-    const unitDetails = document.querySelectorAll('.unit-details');
-    const courseDetails = document.querySelectorAll('.course-details');
+    // ── Tab routing ──
+    function switchTab(slug) {
+      // Hide all tab pages, deactivate all tabs
+      document.querySelectorAll('.tab-page').forEach(p => p.style.display = 'none');
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      // Show target
+      const page = document.getElementById('page-' + slug);
+      const tab = document.querySelector('.tab[data-tab="' + slug + '"]');
+      if (page) page.style.display = '';
+      if (tab) tab.classList.add('active');
+      // Show first unit by default if no unit hash
+      const hash = location.hash.slice(1);
+      if (!hash.startsWith(slug + '/')) {
+        const firstUnit = page && page.querySelector('.sidebar-unit');
+        if (firstUnit) {
+          const unitSlug = firstUnit.getAttribute('data-unit');
+          location.hash = unitSlug;
+          return; // hashchange will call switchUnit
+        }
+      }
+    }
 
+    function switchUnit(unitSlug) {
+      const courseSlug = unitSlug.split('/')[0];
+      // Ensure correct tab is active
+      document.querySelectorAll('.tab-page').forEach(p => p.style.display = 'none');
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      const page = document.getElementById('page-' + courseSlug);
+      const tab = document.querySelector('.tab[data-tab="' + courseSlug + '"]');
+      if (page) page.style.display = '';
+      if (tab) tab.classList.add('active');
+      // Hide all unit pages in this course, show target
+      if (page) {
+        page.querySelectorAll('.unit-page').forEach(u => u.style.display = 'none');
+        const unitPage = document.getElementById('unit-' + unitSlug);
+        if (unitPage) unitPage.style.display = '';
+      }
+      // Activate sidebar link
+      document.querySelectorAll('.sidebar-unit').forEach(s => s.classList.remove('active'));
+      const sidebarLink = document.querySelector('.sidebar-unit[data-unit="' + unitSlug + '"]');
+      if (sidebarLink) sidebarLink.classList.add('active');
+      // Update hash without triggering scroll
+      if (location.hash !== '#' + unitSlug) {
+        history.replaceState(null, '', '#' + unitSlug);
+      }
+    }
+
+    // ── Hash change listener ──
+    function handleHash() {
+      const hash = location.hash.slice(1);
+      if (!hash) {
+        // Default to first course, first unit
+        const firstTab = document.querySelector('.tab');
+        if (firstTab) {
+          const slug = firstTab.getAttribute('data-tab');
+          const page = document.getElementById('page-' + slug);
+          const firstUnit = page && page.querySelector('.sidebar-unit');
+          if (firstUnit) {
+            location.hash = firstUnit.getAttribute('data-unit');
+            return;
+          }
+        }
+        return;
+      }
+      if (hash.includes('/')) {
+        switchUnit(hash);
+      } else {
+        switchTab(hash);
+      }
+    }
+    window.addEventListener('hashchange', handleHash);
+    handleHash();
+
+    // ── Search ──
+    const input = document.getElementById('search');
     input.addEventListener('input', function() {
       const q = this.value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.card');
       let visible = 0;
-
       cards.forEach(card => {
         const match = !q || card.dataset.search.includes(q);
         card.classList.toggle('hidden', !match);
         if (match) visible++;
       });
-
-      // Hide empty lesson groups
-      lessonGroups.forEach(lg => {
-        const hasVisible = lg.querySelector('.card:not(.hidden)');
-        lg.style.display = hasVisible ? '' : 'none';
+      document.querySelectorAll('.lesson-group').forEach(lg => {
+        lg.style.display = lg.querySelector('.card:not(.hidden)') ? '' : 'none';
       });
-
-      // Hide empty unit sections
-      unitDetails.forEach(ud => {
-        const hasVisible = ud.querySelector('.card:not(.hidden)');
-        ud.style.display = hasVisible ? '' : 'none';
-      });
-
-      // Hide empty course sections
-      courseDetails.forEach(cd => {
-        const hasVisible = cd.querySelector('.card:not(.hidden)');
-        cd.style.display = hasVisible ? '' : 'none';
-      });
-
-      noResults.style.display = visible === 0 && q ? 'block' : 'none';
+      document.getElementById('no-results').style.display = visible === 0 && q ? 'block' : 'none';
     });
   </script>
 </body>
