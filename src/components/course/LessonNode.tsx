@@ -128,7 +128,7 @@ export const LessonNode = memo(function LessonNode({
                 background:
                   isLocked ? 'rgba(0,0,0,0.04)'
                   : isGolden ? undefined
-                  : `${theme.color}18`,
+                  : 'transparent',
                 fontSize: 18,
                 position: 'relative',
               }}
@@ -142,10 +142,12 @@ export const LessonNode = memo(function LessonNode({
                   <circle cx="16.5" cy="16" r="1.2" fill="#FFF8E1" />
                 </svg>
               ) : (
-                <span style={{
-                  opacity: isLocked ? 0.35 : 1,
-                  filter: isLocked ? undefined : 'grayscale(1) brightness(10)',
-                }}>{lesson.icon}</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style={{ opacity: isLocked ? 0.35 : 1 }}>
+                  <rect x="5" y="3" width="14" height="18" rx="2" stroke={isLocked ? '#999' : theme.color} strokeWidth="2" />
+                  <line x1="9" y1="8" x2="15" y2="8" stroke={isLocked ? '#999' : theme.color} strokeWidth="2" strokeLinecap="round" />
+                  <line x1="9" y1="12" x2="15" y2="12" stroke={isLocked ? '#999' : theme.color} strokeWidth="2" strokeLinecap="round" />
+                  <line x1="9" y1="16" x2="13" y2="16" stroke={isLocked ? '#999' : theme.color} strokeWidth="2" strokeLinecap="round" />
+                </svg>
               )}
 
               {isCompleted && !isGolden && (
