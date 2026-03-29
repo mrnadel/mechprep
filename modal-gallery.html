@@ -1179,8 +1179,176 @@
 </div></div></div>
 </div>
 
+<!-- ═══ Streak Screen ═══ -->
+<div class="sec">Streak Screen</div>
+<div class="g">
+<div class="cw"><div class="cl">Streak Screen &#8211; Active <span class="tip" data-tip="Full streak page with week calendar, milestone progress, streak challenge, stats. Accessible by tapping the streak flame in the header.">?</span></div>
+<div class="ph"><div class="sc" style="background:#FAFAFA;">
+  <div class="sc-body">
+    <!-- Header -->
+    <div style="position:sticky;top:0;z-index:30;background:#fff;padding:12px 16px;border-bottom:2px solid #E5E5E5;display:flex;align-items:center;gap:10px;">
+      <div style="width:44px;height:44px;border-radius:10px;background:#F0F0F0;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></div>
+      <div style="font-size:16px;font-weight:800;color:#3C3C3C;">Streak</div>
+    </div>
+    <!-- Hero -->
+    <div style="display:flex;flex-direction:column;align-items:center;padding:24px 16px 16px;">
+      <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#FFF7ED,#FFEDD5);display:flex;align-items:center;justify-content:center;font-size:64px;">&#128293;</div>
+      <div style="display:flex;align-items:baseline;gap:8px;margin-top:12px;">
+        <span style="font-size:52px;font-weight:800;color:#FF9600;line-height:1;">42</span>
+      </div>
+      <div style="font-size:16px;font-weight:800;color:#3C3C3C;margin-top:4px;">day streak</div>
+      <div style="font-size:14px;font-weight:600;color:#AFAFAF;margin-top:4px;">You're on fire!</div>
+      <!-- Status badge -->
+      <div style="margin-top:12px;display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:#ECFDF5;border:1.5px solid #A7F3D0;font-size:13px;font-weight:700;color:#059669;">&#10003; Streak charged for today</div>
+    </div>
+    <!-- Week calendar -->
+    <div style="margin:0 16px 12px;padding:16px;border-radius:16px;background:#fff;border:2px solid #E5E5E5;">
+      <div style="font-size:11px;font-weight:700;color:#AFAFAF;text-transform:uppercase;letter-spacing:1px;text-align:center;margin-bottom:12px;">This Week</div>
+      <div style="display:flex;justify-content:space-between;gap:4px;">
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBF24,#D97706);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;box-shadow:0 2px 8px rgba(217,119,6,.3);">&#9889;</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">M</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBF24,#D97706);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;box-shadow:0 2px 8px rgba(217,119,6,.3);">&#9889;</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">T</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBF24,#D97706);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;box-shadow:0 2px 8px rgba(217,119,6,.3);">&#9889;</div><span style="font-size:10px;font-weight:700;color:#3C3C3C;">W</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;border:2px dashed #CFCFCF;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#CFCFCF;">T</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">T</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#E5E5E5;">F</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">F</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#E5E5E5;">S</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">S</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#E5E5E5;">S</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">S</span></div>
+      </div>
+    </div>
+    <!-- Milestone card -->
+    <div style="margin:0 16px 12px;padding:16px;border-radius:16px;background:linear-gradient(135deg,#FFF6E8,#FFF0DB);border:2px solid #FFE4B8;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <div><div style="font-size:11px;font-weight:700;color:#CC8B1F;text-transform:uppercase;letter-spacing:1px;">Next Milestone</div><div style="font-size:14px;font-weight:800;color:#92400E;margin-top:2px;">Diamond Dedication</div></div>
+        <div style="display:flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;background:rgba(255,255,255,.6);"><span style="font-size:14px;">&#128142;</span><span style="font-size:14px;font-weight:800;color:#92400E;">+100</span></div>
+      </div>
+      <div style="height:12px;border-radius:6px;background:#FFE4B8;overflow:hidden;"><div style="height:100%;width:70%;border-radius:6px;background:linear-gradient(90deg,#FBBF24,#D97706);"></div></div>
+      <div style="font-size:12px;font-weight:700;color:#CC8B1F;margin-top:8px;text-align:right;">42 / 60 days</div>
+    </div>
+    <!-- Streak challenge -->
+    <div style="margin:0 16px 12px;border-radius:16px;background:#fff;border:2px solid #E5E5E5;overflow:hidden;">
+      <div style="padding:12px 16px;background:linear-gradient(135deg,#ECFDF5,#D1FAE5);border-bottom:1.5px solid #A7F3D0;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:14px;">&#9889;</span>
+        <span style="font-size:14px;font-weight:800;color:#065F46;">Bonus Challenge</span>
+      </div>
+      <div style="padding:16px;text-align:center;">
+        <div style="font-size:14px;color:#777;margin-bottom:16px;">Answer 3 quick questions to earn bonus XP.</div>
+        <button class="btn b-grn">Start Bonus Challenge</button>
+      </div>
+    </div>
+    <!-- Stats -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:0 16px 24px;">
+      <div style="border-radius:16px;padding:12px;text-align:center;background:#FFF6E8;border:1.5px solid #FFE4B8;"><div style="font-size:24px;font-weight:800;color:#FF9600;line-height:1;">42</div><div style="font-size:11px;font-weight:700;color:#FF960099;margin-top:4px;">Current</div></div>
+      <div style="border-radius:16px;padding:12px;text-align:center;background:#F7F7F7;border:1.5px solid #ECECEC;"><div style="font-size:24px;font-weight:800;color:#3C3C3C;line-height:1;">67</div><div style="font-size:11px;font-weight:700;color:#3C3C3C99;margin-top:4px;">Longest</div></div>
+      <div style="border-radius:16px;padding:12px;text-align:center;background:#ECFDF5;border:1.5px solid #A7F3D0;"><div style="font-size:24px;font-weight:800;color:#059669;line-height:1;">12</div><div style="font-size:11px;font-weight:700;color:#05966999;margin-top:4px;">Active Days</div></div>
+    </div>
+  </div>
+</div></div></div>
+
+<div class="cw"><div class="cl">Streak Screen &#8211; At Risk <span class="tip" data-tip="Streak at risk state: hasn't practiced today, shows urgent red messaging and streak saver challenge">?</span></div>
+<div class="ph"><div class="sc" style="background:#FAFAFA;">
+  <div class="sc-body">
+    <div style="position:sticky;top:0;z-index:30;background:#fff;padding:12px 16px;border-bottom:2px solid #E5E5E5;display:flex;align-items:center;gap:10px;">
+      <div style="width:44px;height:44px;border-radius:10px;background:#F0F0F0;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></div>
+      <div style="font-size:16px;font-weight:800;color:#3C3C3C;">Streak</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;padding:24px 16px 16px;">
+      <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#FEF2F2,#FECACA);display:flex;align-items:center;justify-content:center;font-size:64px;opacity:.7;">&#128293;</div>
+      <div style="display:flex;align-items:baseline;gap:8px;margin-top:12px;">
+        <span style="font-size:52px;font-weight:800;color:#FF9600;line-height:1;">15</span>
+      </div>
+      <div style="font-size:16px;font-weight:800;color:#3C3C3C;margin-top:4px;">day streak</div>
+      <div style="font-size:14px;font-weight:600;color:#DC2626;margin-top:4px;">Practice now to keep your streak alive!</div>
+      <div style="margin-top:12px;display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:#FEF2F2;border:1.5px solid #FECACA;font-size:13px;font-weight:700;color:#DC2626;">&#9889; Practice to save your streak!</div>
+    </div>
+    <div style="margin:0 16px 12px;padding:16px;border-radius:16px;background:#fff;border:2px solid #E5E5E5;">
+      <div style="font-size:11px;font-weight:700;color:#AFAFAF;text-transform:uppercase;letter-spacing:1px;text-align:center;margin-bottom:12px;">This Week</div>
+      <div style="display:flex;justify-content:space-between;gap:4px;">
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBF24,#D97706);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;box-shadow:0 2px 8px rgba(217,119,6,.3);">&#9889;</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">M</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FBBF24,#D97706);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;box-shadow:0 2px 8px rgba(217,119,6,.3);">&#9889;</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">T</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;border:2px dashed #DC2626;background:#FEE2E2;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#DC2626;">W</div><span style="font-size:10px;font-weight:700;color:#3C3C3C;">W</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#E5E5E5;">T</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">T</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#E5E5E5;">F</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">F</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#E5E5E5;">S</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">S</span></div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;"><div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#E5E5E5;">S</div><span style="font-size:10px;font-weight:700;color:#CFCFCF;">S</span></div>
+      </div>
+    </div>
+    <!-- Streak Challenge - urgent -->
+    <div style="margin:0 16px 12px;border-radius:16px;background:#fff;border:2px solid #E5E5E5;overflow:hidden;">
+      <div style="padding:12px 16px;background:linear-gradient(135deg,#FFF7ED,#FFEDD5);border-bottom:1.5px solid #FED7AA;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:14px;">&#9889;</span>
+        <span style="font-size:14px;font-weight:800;color:#9A3412;">Streak Challenge</span>
+        <span style="margin-left:auto;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:#FEE2E2;color:#DC2626;">Save your streak!</span>
+      </div>
+      <div style="padding:16px;text-align:center;">
+        <div style="font-size:14px;color:#777;margin-bottom:16px;">Answer 3 quick questions to keep your streak going.</div>
+        <button class="btn b-gld">Start Challenge</button>
+      </div>
+    </div>
+    <!-- Freeze inventory -->
+    <div style="margin:0 16px 12px;display:flex;align-items:center;gap:12px;border-radius:16px;padding:12px 16px;background:#EFF6FF;border:1.5px solid #BFDBFE;">
+      <span style="font-size:20px;">&#10052;&#65039;</span>
+      <div style="flex:1;"><div style="font-size:14px;font-weight:700;color:#1E40AF;">Streak Freeze</div><div style="font-size:12px;font-weight:600;color:#60A5FA;">1 available. Protects your streak if you miss a day.</div></div>
+      <div style="width:32px;height:32px;border-radius:50%;background:#DBEAFE;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#1E40AF;">1</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:0 16px 24px;">
+      <div style="border-radius:16px;padding:12px;text-align:center;background:#FFF6E8;border:1.5px solid #FFE4B8;"><div style="font-size:24px;font-weight:800;color:#FF9600;line-height:1;">15</div><div style="font-size:11px;font-weight:700;color:#FF960099;margin-top:4px;">Current</div></div>
+      <div style="border-radius:16px;padding:12px;text-align:center;background:#F7F7F7;border:1.5px solid #ECECEC;"><div style="font-size:24px;font-weight:800;color:#3C3C3C;line-height:1;">42</div><div style="font-size:11px;font-weight:700;color:#3C3C3C99;margin-top:4px;">Longest</div></div>
+      <div style="border-radius:16px;padding:12px;text-align:center;background:#ECFDF5;border:1.5px solid #A7F3D0;"><div style="font-size:24px;font-weight:800;color:#059669;line-height:1;">8</div><div style="font-size:11px;font-weight:700;color:#05966999;margin-top:4px;">Active Days</div></div>
+    </div>
+  </div>
+</div></div></div>
+
+<div class="cw"><div class="cl">Streak Challenge &#8211; Question <span class="tip" data-tip="Inline quick challenge: 3 multiple-choice questions to save/extend streak">?</span></div>
+<div class="ph"><div class="sc" style="background:#FAFAFA;">
+  <div class="sc-body">
+    <div style="position:sticky;top:0;z-index:30;background:#fff;padding:12px 16px;border-bottom:2px solid #E5E5E5;display:flex;align-items:center;gap:10px;">
+      <div style="width:44px;height:44px;border-radius:10px;background:#F0F0F0;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></div>
+      <div style="font-size:16px;font-weight:800;color:#3C3C3C;">Streak</div>
+    </div>
+    <div style="padding:16px;">
+      <!-- Challenge card -->
+      <div style="border-radius:16px;background:#fff;border:2px solid #E5E5E5;overflow:hidden;">
+        <div style="padding:12px 16px;background:linear-gradient(135deg,#FFF7ED,#FFEDD5);border-bottom:1.5px solid #FED7AA;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:14px;">&#9889;</span>
+          <span style="font-size:14px;font-weight:800;color:#9A3412;">Streak Challenge</span>
+        </div>
+        <div style="padding:16px;">
+          <!-- Progress dots -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;">
+            <div style="width:8px;height:8px;border-radius:4px;background:#10B981;"></div>
+            <div style="width:24px;height:8px;border-radius:4px;background:#FF9600;"></div>
+            <div style="width:8px;height:8px;border-radius:4px;background:#E5E5E5;"></div>
+          </div>
+          <!-- Question -->
+          <div style="font-size:15px;font-weight:700;color:#3C3C3C;margin-bottom:16px;line-height:1.4;">What is the primary purpose of a moment of inertia in structural analysis?</div>
+          <!-- Options -->
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;background:#fff;border:2px solid #E5E5E5;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#F0F0F0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#AFAFAF;">A</div>
+              <span style="font-size:14px;font-weight:600;color:#3C3C3C;">To measure mass distribution</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;background:#FFF7ED;border:2px solid #FF9600;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#FF9600;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;">B</div>
+              <span style="font-size:14px;font-weight:600;color:#9A3412;">To resist bending deformation</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;background:#fff;border:2px solid #E5E5E5;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#F0F0F0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#AFAFAF;">C</div>
+              <span style="font-size:14px;font-weight:600;color:#3C3C3C;">To calculate thermal stress</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;background:#fff;border:2px solid #E5E5E5;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#F0F0F0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#AFAFAF;">D</div>
+              <span style="font-size:14px;font-weight:600;color:#3C3C3C;">To determine yield strength</span>
+            </div>
+          </div>
+          <button class="btn b-gld">Check</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div></div>
+</div>
+
 <div style="text-align:center;margin-top:64px;padding:24px;border-top:1px solid #1a1a1a;">
-  <p style="font-size:11px;color:#444;">38 screens &middot; Hearts, Confetti, Stars, Sparkles, Fireworks, Snow, Bokeh, Bubbles</p>
+  <p style="font-size:11px;color:#444;">41 screens &middot; Hearts, Confetti, Stars, Sparkles, Fireworks, Snow, Bokeh, Bubbles</p>
 </div>
 </body>
 </html>

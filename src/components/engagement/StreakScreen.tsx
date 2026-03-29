@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Snowflake, Gem, Zap, Trophy, Check, X, ChevronRight } from 'lucide-react';
+import { Snowflake, Gem, Zap, Trophy, Check, X } from 'lucide-react';
 import { StreakFlame } from '@/components/icons/StreakFlame';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 import { GameButton } from '@/components/ui/GameButton';
@@ -11,8 +11,7 @@ import { useStore } from '@/store/useStore';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useEngagementStore, useStreakEnhancements } from '@/store/useEngagementStore';
 import { streakMilestones } from '@/data/streak-milestones';
-import { getStreakStatus, toLocalDateString, getYesterdayString, cn } from '@/lib/utils';
-import { getTodayDate } from '@/lib/quest-engine';
+import { getStreakStatus, toLocalDateString, getYesterdayString } from '@/lib/utils';
 import { awardStreakMilestones } from '@/lib/streak-rewards';
 import type { CourseQuestion } from '@/data/course/types';
 import type { StreakState } from '@/components/icons/StreakFlame';
