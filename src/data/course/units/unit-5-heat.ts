@@ -2024,6 +2024,13 @@ export const unit5: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u5-L6-T1',
+          type: 'teaching',
+          question: 'What is transient conduction?',
+          explanation: 'Transient conduction is heat transfer where temperatures change over time, not just position. Think of a hot steel part plunged into cold water: its temperature drops gradually, unlike steady-state where temperatures are constant.',
+          hint: 'Most real thermal events (startup, cooldown, quenching) are transient problems.',
+        },
+        {
           id: 'u5-L6-Q1',
           type: 'multiple-choice',
           question: 'What could explain this discrepancy?',
@@ -2074,6 +2081,13 @@ export const unit5: Unit = {
           correctAnswer: true,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Wall/slab cross-section --> <rect x="24" y="10" width="32" height="60" rx="3" fill="#58CC02" opacity="0.08"/> <rect x="24" y="10" width="32" height="60" rx="3" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Temperature gradient (hot left → cold right) --> <rect x="24" y="10" width="8" height="60" rx="0" fill="#3B8700" opacity="0.12"/> <rect x="32" y="10" width="8" height="60" rx="0" fill="#58CC02" opacity="0.08"/> <rect x="40" y="10" width="8" height="60" rx="0" fill="#A5E86C" opacity="0.06"/> <rect x="48" y="10" width="8" height="60" rx="0" fill="#A5E86C" opacity="0.03"/> <!-- Heat flow arrows (left to right, through wall) --> <g> <line x1="10" y1="28" x2="20" y2="28" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,26 23,28 19,30" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" repeatCount="indefinite"/> </g> <g> <line x1="10" y1="40" x2="20" y2="40" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,38 23,40 19,42" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" begin="0.4s" repeatCount="indefinite"/> </g> <g> <line x1="10" y1="52" x2="20" y2="52" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,50 23,52 19,54" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" begin="0.8s" repeatCount="indefinite"/> </g> <!-- Exit arrows (right side, fading) --> <g> <line x1="58" y1="28" x2="68" y2="28" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,26 71,28 67,30" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" repeatCount="indefinite"/> </g> <g> <line x1="58" y1="40" x2="68" y2="40" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,38 71,40 67,42" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" begin="0.4s" repeatCount="indefinite"/> </g> <g> <line x1="58" y1="52" x2="68" y2="52" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,50 71,52 67,54" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" begin="0.8s" repeatCount="indefinite"/> </g> <!-- Temperature labels --> <text x="10" y="74" text-anchor="middle" font-size="6" fill="#3B8700" opacity="0.3" font-style="italic">T_H</text> <text x="70" y="74" text-anchor="middle" font-size="6" fill="#3B8700" opacity="0.2" font-style="italic">T_C</text> <!-- Fourier\'s law label --> <text x="40" y="78" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.15" font-style="italic">q = -k dT/dx</text> </svg>',
           explanation: 'A semi-infinite solid assumes the body is thick enough that the far boundary is unaffected during the time of interest.',
+        },
+        {
+          id: 'u5-L6-T2',
+          type: 'teaching',
+          question: 'Biot number and lumped capacitance',
+          explanation: 'The Biot number (Bi = hL_c/k) compares surface convection resistance to internal conduction resistance. When Bi < 0.1, the object\'s temperature is nearly uniform inside, so you can treat it as one "lump" with a simple exponential cooldown: T(t) = T_env + (T_i - T_env)*e^(-t/tau).',
+          hint: 'L_c = Volume/Surface area. For a sphere, that\'s r/3.',
         },
         {
           id: 'u5-L6-Q5',
@@ -2128,6 +2142,13 @@ export const unit5: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Wall/slab cross-section --> <rect x="24" y="10" width="32" height="60" rx="3" fill="#58CC02" opacity="0.08"/> <rect x="24" y="10" width="32" height="60" rx="3" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Temperature gradient (hot left → cold right) --> <rect x="24" y="10" width="8" height="60" rx="0" fill="#3B8700" opacity="0.12"/> <rect x="32" y="10" width="8" height="60" rx="0" fill="#58CC02" opacity="0.08"/> <rect x="40" y="10" width="8" height="60" rx="0" fill="#A5E86C" opacity="0.06"/> <rect x="48" y="10" width="8" height="60" rx="0" fill="#A5E86C" opacity="0.03"/> <!-- Heat flow arrows (left to right, through wall) --> <g> <line x1="10" y1="28" x2="20" y2="28" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,26 23,28 19,30" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" repeatCount="indefinite"/> </g> <g> <line x1="10" y1="40" x2="20" y2="40" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,38 23,40 19,42" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" begin="0.4s" repeatCount="indefinite"/> </g> <g> <line x1="10" y1="52" x2="20" y2="52" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,50 23,52 19,54" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" begin="0.8s" repeatCount="indefinite"/> </g> <!-- Exit arrows (right side, fading) --> <g> <line x1="58" y1="28" x2="68" y2="28" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,26 71,28 67,30" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" repeatCount="indefinite"/> </g> <g> <line x1="58" y1="40" x2="68" y2="40" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,38 71,40 67,42" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" begin="0.4s" repeatCount="indefinite"/> </g> <g> <line x1="58" y1="52" x2="68" y2="52" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,50 71,52 67,54" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" begin="0.8s" repeatCount="indefinite"/> </g> <!-- Temperature labels --> <text x="10" y="74" text-anchor="middle" font-size="6" fill="#3B8700" opacity="0.3" font-style="italic">T_H</text> <text x="70" y="74" text-anchor="middle" font-size="6" fill="#3B8700" opacity="0.2" font-style="italic">T_C</text> <!-- Fourier\'s law label --> <text x="40" y="78" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.15" font-style="italic">q = -k dT/dx</text> </svg>',
           explanation: 'From tau = rho*V*cp/(h*A_s): (1) Increasing h reduces tau — oil quench (h ~ 500) vs. water quench (h ~ 3000) vs. brine quench (h ~ 10,000).',
           hint: 'Look at each variable in tau = rho*V*cp/(h*A_s).',
+        },
+        {
+          id: 'u5-L6-T3',
+          type: 'teaching',
+          question: 'Time constant and Heisler charts',
+          explanation: 'The lumped capacitance time constant is tau = rho*V*c_p/(h*A_s). After 1 tau, temperature drops to about 37% of the initial difference. When Bi > 0.1, temperature varies inside the object, and you need Heisler charts or the 1-term approximation instead.',
+          hint: 'After 5 time constants, the object is within 1% of the surrounding temperature.',
         },
         {
           id: 'u5-L6-Q9',

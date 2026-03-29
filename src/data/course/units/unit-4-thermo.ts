@@ -17,6 +17,13 @@ export const unit4: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u4-L1-T1',
+          type: 'teaching',
+          question: 'What is thermodynamic state?',
+          explanation: 'A thermodynamic state is the condition of a system defined by its properties, like temperature, pressure, and volume. You only need 2 independent properties to fully define the state of a simple substance.',
+          hint: 'Think of it like GPS coordinates: 2 numbers pin down your location.',
+        },
+        {
           id: 'u4-L1-Q1',
           type: 'multiple-choice',
           question: 'System as "closed, rigid, and insulated." What constraints does this impose?',
@@ -91,6 +98,13 @@ export const unit4: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="16" y="18" width="48" height="36" rx="3" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/> <text x="40" y="40" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.2" font-style="italic">system</text> <g opacity="0.3"> <line x1="40" y1="8" x2="40" y2="18" stroke="#3B8700" stroke-width="1.5"/> <polygon points="38,17 40,21 42,17" fill="#3B8700"/> <text x="46" y="14" font-size="3.5" fill="#3B8700" opacity="0.4">Q</text> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/> </g> <g opacity="0.3"> <line x1="64" y1="36" x2="74" y2="36" stroke="#A5E86C" stroke-width="1.5"/> <polygon points="72,34 76,36 72,38" fill="#A5E86C"/> <text x="72" y="32" font-size="3.5" fill="#A5E86C" opacity="0.4">W</text> <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" begin="0.5s" repeatCount="indefinite"/> </g> <text x="40" y="66" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.2" font-style="italic">&#x394;U = Q - W</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">1st law</text> </svg>',
           explanation: 'The ideal gas model assumes: (1) molecules have no intermolecular attractive or repulsive forces, and (2) molecules occupy negligible volume compared to the container. This gives PV = nRT.',
           hint: 'This model assumes no intermolecular forces.',
+        },
+        {
+          id: 'u4-L1-T2',
+          type: 'teaching',
+          question: 'Intensive vs extensive properties',
+          explanation: 'Intensive properties don\'t depend on system size: temperature, pressure, density. Extensive properties scale with the amount of matter: mass, total volume, total energy. Dividing an extensive property by mass gives a specific (intensive) property.',
+          hint: 'If you split a glass of water in half, temperature stays the same but total volume halves.',
         },
         {
           id: 'u4-L1-Q7',

@@ -17,6 +17,20 @@ export const unit6: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u6-L1-T1',
+          type: 'teaching',
+          question: 'What makes a fluid a fluid?',
+          explanation: 'A fluid is any substance that deforms continuously under shear stress. Unlike solids, fluids can\'t resist shear when at rest. The two key properties are density (mass per volume, kg/m3) and viscosity (resistance to flow).',
+          hint: 'Water and air are both fluids, even though one is much denser.',
+        },
+        {
+          id: 'u6-L1-T2',
+          type: 'teaching',
+          question: 'Pressure increases with depth',
+          explanation: 'In a static fluid, pressure at any point equals P = P_atm + rho*g*h, where h is the depth below the surface. This depends only on depth, not on container shape. That\'s called the hydrostatic paradox.',
+          hint: 'A tall narrow tube and a wide tank at the same depth have the same pressure.',
+        },
+        {
           id: 'u6-L1-Q1',
           type: 'multiple-choice',
           question: 'Pressure at a point in a static fluid depends on the shape of the container.?" Is this correct?',
@@ -90,6 +104,13 @@ export const unit6: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"><rect x="5" y="40" width="70" height="30" rx="2" fill="#58CC02" opacity="0.08" stroke="#3B8700" stroke-width="1"/><rect x="7" y="42" width="66" height="26" fill="#A5E86C" opacity="0.12"/><rect x="35" y="10" width="10" height="60" rx="1" stroke="#3B8700" stroke-width="1.5" fill="none"/><rect x="36" y="25" width="8" height="45" fill="#A5E86C" opacity="0.15"/><path d="M36,25 Q40,20 44,25" stroke="#58CC02" stroke-width="1" fill="#A5E86C" opacity="0.2"/><line x1="48" y1="25" x2="48" y2="42" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.4"/><text x="53" y="35" font-size="4" fill="#3B8700" opacity="0.5">h</text><text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#58CC02" opacity="0.4">capillary rise</text></svg>',
           explanation: 'Capillary rise h = 4σcos(θ)/(ρgd), which shows it is inversely proportional to tube diameter d.',
           hint: 'The capillary rise equation and how each variable.'
+        },
+        {
+          id: 'u6-L1-T3',
+          type: 'teaching',
+          question: 'Buoyancy and hydrostatic forces',
+          explanation: 'Archimedes\' principle says the buoyant force on a submerged object equals the weight of displaced fluid: F_b = rho_fluid * g * V_object. For forces on flat surfaces like gates and dams, use F = rho*g*y_c*A, where y_c is the depth to the centroid.',
+          hint: 'Buoyancy depends on the fluid\'s density and the object\'s volume, not its weight.',
         },
         {
           id: 'u6-L1-Q6',
@@ -426,6 +447,20 @@ export const unit6: Unit = {
       xpReward: 25,
   levels: 4,
       questions: [
+        {
+          id: 'u6-L2-T1',
+          type: 'teaching',
+          question: 'Bernoulli\'s equation explained',
+          explanation: 'Along a streamline in steady, incompressible, inviscid flow: P + 0.5*rho*v^2 + rho*g*z = constant. This means pressure, velocity, and elevation trade off. Where velocity goes up, pressure goes down.',
+          hint: 'Think of a garden hose nozzle: the narrow opening speeds up the water and drops the pressure.',
+        },
+        {
+          id: 'u6-L2-T2',
+          type: 'teaching',
+          question: 'Key assumptions of Bernoulli',
+          explanation: 'Bernoulli only works for steady, incompressible, inviscid (frictionless) flow along a single streamline. If there\'s significant friction, turbulence, or energy addition (pumps), you need the full energy equation instead.',
+          hint: 'When a textbook problem says "neglect losses," that\'s telling you to use Bernoulli.',
+        },
         {
           id: 'u6-L2-Q1',
           type: 'multiple-choice',

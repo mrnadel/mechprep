@@ -2111,6 +2111,13 @@ export const unit2: Unit = {
           hint: 'How does adding stiffness affect the frequency ratio,',
         },
         {
+          id: 'u2-L6-T2',
+          type: 'teaching',
+          question: 'Damping Controls the Peak',
+          explanation: 'Damping is what limits vibration amplitude at resonance. The damping ratio (zeta) describes how quickly vibrations die out: underdamped (zeta < 1) oscillates, critically damped (zeta = 1) returns fastest without oscillating, overdamped (zeta > 1) returns slowly.',
+          hint: 'Think of a door closer: slightly overdamped means no bounce-back.',
+        },
+        {
           id: 'u2-L6-Q5',
           type: 'multiple-choice',
           question: 'A rotating shaft balanced at 1500 rpm develops excessive vibration when the speed is increased to 3000 rpm. The operator says "But we balanced it!" Why is the vibration so much worse at the higher speed?',
@@ -2173,6 +2180,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Ceiling --> <rect x="24" y="2" width="32" height="5" rx="2.5" fill="#58CC02" opacity="0.12"/> <!-- Piston rod (from ceiling down into cylinder) --> <line x1="40" y1="7" stroke="#3B8700" stroke-width="2" stroke-linecap="round" opacity="0.4"> <animate attributeName="y2" values="30;42;30" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/> </line> <!-- Piston head inside cylinder --> <rect x="30" width="20" height="4" rx="1" fill="#58CC02" opacity="0.35"> <animate attributeName="y" values="28;40;28" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/> </rect> <rect x="30" width="20" height="4" rx="1" stroke="#3B8700" stroke-width="1" fill="none"> <animate attributeName="y" values="28;40;28" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/> </rect> <!-- Cylinder body --> <line x1="28" y1="26" x2="28" y2="58" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="52" y1="26" x2="52" y2="58" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="28" y1="58" x2="52" y2="58" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <!-- Fluid inside cylinder --> <rect x="29" y="26" width="22" height="32" rx="1" fill="#A5E86C" opacity="0.08"/> <!-- Orifice holes in piston (fluid passes through) --> <circle cx="34" r="1" fill="#3B8700" opacity="0.2"> <animate attributeName="cy" values="30;42;30" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/> </circle> <circle cx="46" r="1" fill="#3B8700" opacity="0.2"> <animate attributeName="cy" values="30;42;30" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/> </circle> <!-- Bottom attachment --> <circle cx="40" cy="62" r="3" fill="#3B8700" opacity="0.3"/> <!-- Damping force label --> <text x="58" y="38" font-size="5" fill="#3B8700" opacity="0.2" font-style="italic">c</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">F = c·ẋ</text> </svg>',
           explanation: 'A critically damped system (ζ = 1) does NOT oscillate at all — it returns to equilibrium in the shortest possible time without any oscillation.',
           hint: 'Does the critically damped response cross the equilibrium position?',
+        },
+        {
+          id: 'u2-L6-T3',
+          type: 'teaching',
+          question: 'Measuring Damping from Tests',
+          explanation: 'You can measure damping by recording how fast free vibrations decay. The logarithmic decrement compares successive peaks: a larger decay per cycle means more damping.',
+          hint: 'Count the amplitude drop over several cycles to estimate the damping ratio.',
         },
         {
           id: 'u2-L6-Q10',

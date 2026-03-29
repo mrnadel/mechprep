@@ -2479,6 +2479,13 @@ export const unit3: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u3-L7-T1',
+          type: 'teaching',
+          question: 'Euler Buckling of Columns',
+          explanation: 'Long, slender columns don\'t fail by crushing. They buckle sideways. Euler\'s formula gives the critical load: P_cr = pi^2*EI/(KL)^2. It depends on stiffness (E and I) and effective length (KL), not on material strength.',
+          hint: 'A stronger steel with the same E won\'t resist buckling any better.',
+        },
+        {
           id: 'u3-L7-Q1',
           type: 'multiple-choice',
           question: 'Column buckles below yield. Will higher-strength steel help?',
@@ -2544,6 +2551,13 @@ export const unit3: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">Thin-Walled Cylinder</text><ellipse cx="40" cy="38" rx="24" ry="28" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><ellipse cx="40" cy="38" rx="20" ry="24" fill="white" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.5"/><line x1="40" y1="38" x2="64" y2="38" stroke="#6B7280" stroke-width="0.5" opacity="0.3"/><text x="52" y="36" font-size="3" fill="#6B7280">r</text><line x1="64" y1="28" x2="70" y2="28" stroke="#6B7280" stroke-width="0.5" opacity="0.4"/><line x1="60" y1="28" x2="70" y2="28" stroke="#6B7280" stroke-width="0.3" opacity="0.3"/><text x="72" y="30" font-size="3.5" fill="#6B7280">t</text><line x1="18" y1="38" x2="10" y2="38" stroke="#3B8700" stroke-width="1.2" opacity="0.4"/><polygon points="12,36.5 8,38 12,39.5" fill="#3B8700" opacity="0.4"/><line x1="62" y1="38" x2="70" y2="38" stroke="#3B8700" stroke-width="1.2" opacity="0.4"/><polygon points="68,36.5 72,38 68,39.5" fill="#3B8700" opacity="0.4"/><text x="5" y="36" font-size="4" fill="#334155" font-style="italic">&#x3C3;h</text><text x="73" y="36" font-size="4" fill="#334155" font-style="italic">&#x3C3;h</text><circle cx="40" cy="38" r="2.5" fill="#3B8700" opacity="0.15"/><circle cx="40" cy="38" r="0.8" fill="#3B8700" opacity="0.3"/><text x="44" y="43" font-size="3.5" fill="#334155" font-style="italic">&#x3C3;a (out)</text><text x="40" y="56" text-anchor="middle" font-size="5" fill="#334155" font-weight="bold">p</text><text x="40" y="66" text-anchor="middle" font-size="4.5" fill="#334155" font-style="italic">&#x3C3;h = pr/t</text><text x="40" y="72" text-anchor="middle" font-size="4.5" fill="#334155" font-style="italic">&#x3C3;a = pr/2t</text><text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#6B7280">&#x3C3;h = 2&#x3C3;a (hoop governs)</text></svg>',
           explanation: 'For thick-walled vessels, the maximum hoop stress occurs at the inner surface and is always greater than the applied pressure. As the wall gets thicker, the stress at the inner surface decreases.',
+        },
+        {
+          id: 'u3-L7-T2',
+          type: 'teaching',
+          question: 'Thin-Walled Pressure Vessel Stresses',
+          explanation: 'A pressurized cylinder has two main stresses: hoop stress (sigma_h = pD/2t) acting around the circumference, and axial stress (sigma_a = pD/4t) along the length. Hoop stress is always exactly 2x the axial stress, so cylinders fail along their length first.',
+          hint: 'This is why hot dogs split lengthwise when they burst.',
         },
         {
           id: 'u3-L7-Q6',
@@ -2741,6 +2755,13 @@ export const unit3: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Column cross-section --> <rect x="24" y="14" width="24" height="52" rx="1" stroke-width="0.8" stroke="#58CC02" fill="#58CC02" fill-opacity="0.04"/> <!-- Centroid --> <circle cx="36" cy="40" r="1.5" fill="#58CC02" opacity="0.2"/> <text x="32" y="42" font-size="2.5" fill="#3B8700" opacity="0.35">C</text> <!-- Eccentric load (offset from centroid) --> <g opacity="0.5"> <line x1="44" y1="4" x2="44" y2="14" stroke-width="0.7" stroke="#58CC02"/> <polygon points="42.5,12 45.5,12 44,14" fill="#58CC02"/> <text x="48" y="8" font-size="3" fill="#58CC02">P</text> </g> <!-- Eccentricity e --> <line x1="36" y1="10" x2="44" y2="10" stroke-width="0.3" stroke="#3B8700" opacity="0.3"/> <text x="40" y="8" font-size="2.5" fill="#3B8700" opacity="0.35" text-anchor="middle">e</text> <!-- Stress distribution (linear, not uniform) --> <!-- Left side (less compression or tension) --> <g opacity="0.35"> <line x1="24" y1="24" x2="20" y2="24" stroke-width="0.3" stroke="#A5E86C"/> <line x1="24" y1="32" x2="18" y2="32" stroke-width="0.3" stroke="#A5E86C"/> <line x1="24" y1="40" x2="16" y2="40" stroke-width="0.3" stroke="#A5E86C"/> <line x1="24" y1="48" x2="18" y2="48" stroke-width="0.3" stroke="#A5E86C"/> <line x1="24" y1="56" x2="20" y2="56" stroke-width="0.3" stroke="#A5E86C"/> </g> <!-- Right side (more compression) --> <g opacity="0.35"> <line x1="48" y1="24" x2="56" y2="24" stroke-width="0.3" stroke="#58CC02"/> <line x1="48" y1="32" x2="60" y2="32" stroke-width="0.3" stroke="#58CC02"/> <line x1="48" y1="40" x2="64" y2="40" stroke-width="0.3" stroke="#58CC02"/> <line x1="48" y1="48" x2="60" y2="48" stroke-width="0.3" stroke="#58CC02"/> <line x1="48" y1="56" x2="56" y2="56" stroke-width="0.3" stroke="#58CC02"/> </g> <!-- Stress profile line --> <line x1="20" y1="24" x2="56" y2="24" stroke-width="0.4" stroke="#3B8700" opacity="0.2" stroke-dasharray="1,1"/> <!-- Pulsing stress --> <g> <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite"/> <line x1="16" y1="40" x2="64" y2="40" stroke-width="0.3" stroke="#A5E86C" opacity="0.2"/> </g> <!-- Formula --> <text x="40" y="72" font-size="2.8" fill="#58CC02" opacity="0.4" text-anchor="middle">σ = P/A ± Pey/I</text> <text x="40" y="76" text-anchor="middle" font-size="3" fill="#3B8700" opacity="0.15" font-style="italic">combined stress</text> </svg>',
           explanation: "Eccentric loading creates an initial bending moment M = P*e, which adds bending stress to the compressive stress. The combined effect causes the column to deflect laterally from the start, and failure occurs at a lower load than Euler predicts.",
           hint: "What does an initial bending moment do to the stress.",
+        },
+        {
+          id: 'u3-L7-T3',
+          type: 'teaching',
+          question: 'Thick-Walled Vessels and Lame Equations',
+          explanation: 'When wall thickness exceeds about 5% of the radius, thin-wall formulas aren\'t accurate. Lame\'s equations account for stress variation through the wall: hoop stress is highest at the inner surface and drops toward the outer surface.',
+          hint: 'For thick cylinders, always check stresses at the inner radius.',
         },
         {
           id: 'u3-L7-Q21',

@@ -17,6 +17,13 @@ export const unit1: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u1-L1-T1',
+          type: 'teaching',
+          question: 'Forces Are Vectors',
+          explanation: 'A force has both magnitude and direction, so it\'s a vector. You can\'t just add or subtract force magnitudes like regular numbers. Instead, you break each force into x and y components, sum them per axis, then combine: R = sqrt(Fx_total² + Fy_total²).',
+          hint: 'Think of force components as shadows on each axis.',
+        },
+        {
           id: 'u1-L1-Q1',
           type: 'multiple-choice',
           question: 'Why can\'t you find the resultant of concurrent forces by subtracting the smallest from the largest?',
@@ -94,6 +101,13 @@ export const unit1: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <g opacity="0"> <animate attributeName="opacity" values="0;0.7;0.7;0" dur="3s" repeatCount="indefinite" keyTimes="0;0.15;0.85;1"/> <line x1="25" y1="50" x2="25" y2="28" stroke="#58CC02" stroke-width="2" stroke-linecap="round"/> <polygon points="23,30 25,25 27,30" fill="#58CC02"/> <text x="18" y="36" font-size="6" fill="#58CC02" font-weight="bold" font-style="italic">F</text> <line x1="55" y1="28" x2="55" y2="50" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <polygon points="53,48 55,53 57,48" fill="#3B8700"/> <text x="58" y="44" font-size="6" fill="#3B8700" font-weight="bold" font-style="italic">&#x2212;F</text> <line x1="25" y1="56" x2="55" y2="56" stroke="#334155" stroke-width="0.6" stroke-dasharray="2,1" opacity="0.4"/> <text x="40" y="62" text-anchor="middle" font-size="5" fill="#334155" opacity="0.5" font-style="italic">d</text> </g> <path d="M32,38 Q40,30 48,38" stroke="#A5E86C" stroke-width="1.5" fill="none" stroke-linecap="round"> <animate attributeName="opacity" values="0;0.6;0.6;0" dur="3s" repeatCount="indefinite" keyTimes="0;0.3;0.85;1"/> </path> <polygon points="46,35 50,38 46,40" fill="#A5E86C"> <animate attributeName="opacity" values="0;0.6;0.6;0" dur="3s" repeatCount="indefinite" keyTimes="0;0.3;0.85;1"/> </polygon> <text x="40" y="26" text-anchor="middle" font-size="6" fill="#A5E86C" font-weight="bold" font-style="italic"> <animate attributeName="opacity" values="0;0.6;0.6;0" dur="3s" repeatCount="indefinite" keyTimes="0;0.3;0.85;1"/> M </text> <text x="40" y="74" text-anchor="middle" font-size="4" fill="#334155" opacity="0.4" font-style="italic">M = F &#xd7; d (any point)</text> </svg>',
           explanation: 'A couple is a free vector whose moment is the same about any point. The equal and opposite forces cancel, so the reference point does not affect the moment value.',
           hint: 'Couples have zero net force, making their moment position-independent.',
+        },
+        {
+          id: 'u1-L1-T2',
+          type: 'teaching',
+          question: 'Moments and Couples',
+          explanation: 'A moment is a force\'s tendency to rotate something: M = F times d, where d is the perpendicular distance to the pivot. A couple is 2 equal, opposite, separated forces that create pure rotation with zero net force.',
+          hint: 'Moment = force times perpendicular distance to the point.',
         },
         // ===== NEW QUESTIONS Q7–Q30 =====
         {
@@ -218,6 +232,13 @@ export const unit1: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="15" cy="50" r="1.5" fill="#3B8700" opacity="0.3"/> <line x1="15" y1="50" x2="60" y2="35" stroke="#58CC02" stroke-width="2" stroke-linecap="round"/> <polygon points="58,38 63,33 56,35" fill="#58CC02"/> <text x="40" y="32" font-size="5" fill="#58CC02" font-weight="bold" font-style="italic">F&#x2081;</text> <line x1="15" y1="50" x2="55" y2="60" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <polygon points="53,57 58,60 53,62" fill="#3B8700"/> <text x="40" y="67" font-size="5" fill="#3B8700" font-weight="bold" font-style="italic">F&#x2082;</text> <path d="M30,46 Q35,48 32,52" stroke="#A5E86C" stroke-width="1" fill="none" opacity="0.5"/> <text x="36" y="50" font-size="4" fill="#A5E86C" opacity="0.6" font-style="italic">&#x3b8;</text> <text x="40" y="76" text-anchor="middle" font-size="4" fill="#334155" opacity="0.5" font-style="italic"> <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2.5s" repeatCount="indefinite"/> F&#x2081;&#xb7;F&#x2082; = |F&#x2081;||F&#x2082;|cos&#x3b8; </text> </svg>',
           explanation: 'F1·F2 = |F1||F2|cosθ measures vector alignment. Key use: projecting one force onto another\'s direction. Also essential for work: W = F·d.',
           hint: 'the geometric meaning of the angle.',
+        },
+        {
+          id: 'u1-L1-T3',
+          type: 'teaching',
+          question: 'Equilibrium and Resultants',
+          explanation: 'A body is in equilibrium when the sum of all forces AND the sum of all moments equal zero. In 2D, that gives you 3 equations: sum of Fx = 0, sum of Fy = 0, sum of M = 0. In 3D, you get 6.',
+          hint: 'No net force means no translation. No net moment means no rotation.',
         },
         {
           id: 'u1-L1-Q16',
@@ -427,6 +448,13 @@ export const unit1: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u1-L2-T1',
+          type: 'teaching',
+          question: 'What Is a Free Body Diagram',
+          explanation: 'A free body diagram (FBD) isolates one object and shows every external force acting on it: gravity, applied loads, and reaction forces from supports. You remove all physical connections and replace them with the forces they exert.',
+          hint: 'Cut the object free, then draw all forces that the surroundings exert on it.',
+        },
+        {
           id: 'u1-L2-Q1',
           type: 'multiple-choice',
           question: ' a junior engineer\'s FBD of a cantilever beam and notice they drew only a vertical and horizontal reaction force at the wall, omitting the reaction moment. What consequence would this error have on their analysis?',
@@ -477,6 +505,13 @@ export const unit1: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Ground --> <line x1="4" y1="66" x2="76" y2="66" stroke="#3B8700" stroke-width="0.8" opacity="0.12"/> <!-- Ground hatching at supports --> <line x1="9" y1="66" x2="6" y2="70" stroke="#3B8700" stroke-width="0.5" opacity="0.08"/> <line x1="14" y1="66" x2="11" y2="70" stroke="#3B8700" stroke-width="0.5" opacity="0.08"/> <line x1="19" y1="66" x2="16" y2="70" stroke="#3B8700" stroke-width="0.5" opacity="0.08"/> <line x1="61" y1="66" x2="58" y2="70" stroke="#3B8700" stroke-width="0.5" opacity="0.08"/> <line x1="66" y1="66" x2="63" y2="70" stroke="#3B8700" stroke-width="0.5" opacity="0.08"/> <line x1="71" y1="66" x2="68" y2="70" stroke="#3B8700" stroke-width="0.5" opacity="0.08"/> <!-- Pin support (left) --> <polygon points="14,52 10,62 18,62" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.3"/> <circle cx="14" cy="52" r="1.5" fill="#3B8700" opacity="0.25"/> <!-- Roller support (right) --> <polygon points="66,52 62,60 70,60" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.3"/> <circle cx="64" cy="62" r="1.5" fill="#3B8700" opacity="0.15"/> <circle cx="68" cy="62" r="1.5" fill="#3B8700" opacity="0.15"/> <line x1="62" y1="64" x2="70" y2="64" stroke="#3B8700" stroke-width="0.6" opacity="0.15"/> <!-- Beam (deflects under load) --> <path fill="#58CC02" opacity="0.08"> <animate attributeName="d" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;1" values="M14,46 Q40,46 66,46 L66,52 Q40,52 14,52 Z;M14,46 Q40,49 66,46 L66,52 Q40,55 14,52 Z;M14,46 Q40,46 66,46 L66,52 Q40,52 14,52 Z"/> </path> <path stroke="#58CC02" stroke-width="4" fill="none" stroke-linecap="round"> <animate attributeName="d" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;1" values="M14,49 Q40,49 66,49;M14,49 Q40,52 66,49;M14,49 Q40,49 66,49"/> </path> <!-- Applied force F₁ (x=32, larger) --> <g> <line x1="32" y1="36" x2="32" y2="44" stroke="#3B8700" stroke-width="2" stroke-linecap="round" opacity="0.5"> <animate attributeName="y1" values="38;22;38" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;1"/> </line> <polygon points="30,43 32,47 34,43" fill="#3B8700" opacity="0.5"/> <text x="32" text-anchor="middle" font-size="7" fill="#3B8700" opacity="0.4" font-weight="bold" font-style="italic"> <animate attributeName="y" values="34;18;34" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;1"/> F₁ </text> </g> <!-- Applied force F₂ (x=52, smaller) --> <g> <line x1="52" y1="36" x2="52" y2="44" stroke="#3B8700" stroke-width="2" stroke-linecap="round" opacity="0.5"> <animate attributeName="y1" values="38;28;38" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;1"/> </line> <polygon points="50,43 52,47 54,43" fill="#3B8700" opacity="0.5"/> <text x="52" text-anchor="middle" font-size="7" fill="#3B8700" opacity="0.4" font-weight="bold" font-style="italic"> <animate attributeName="y" values="34;24;34" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;1"/> F₂ </text> </g> <!-- Reaction forces (appear when loaded) --> <!-- R₁ at pin support --> <g opacity="0"> <animate attributeName="opacity" values="0;0.35;0" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;1"/> <line x1="14" y1="65" x2="14" y2="58" stroke="#3B8700" stroke-width="1.2" stroke-linecap="round"/> <polygon points="12.5,59 14,56 15.5,59" fill="#3B8700"/> <text x="14" y="72" text-anchor="middle" font-size="5" fill="#3B8700" font-style="italic">R₁</text> </g> <!-- R₂ at roller support --> <g opacity="0"> <animate attributeName="opacity" values="0;0.35;0" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;1"/> <line x1="66" y1="65" x2="66" y2="58" stroke="#3B8700" stroke-width="1.2" stroke-linecap="round"/> <polygon points="64.5,59 66,56 67.5,59" fill="#3B8700"/> <text x="66" y="72" text-anchor="middle" font-size="5" fill="#3B8700" font-style="italic">R₂</text> </g> </svg>',
           explanation: 'An internal hinge cannot transmit moment, giving M=0 as an extra equation. Trade-off: larger deflections and higher peak moments elsewhere.',
+        },
+        {
+          id: 'u1-L2-T2',
+          type: 'teaching',
+          question: 'Support Types and Reactions',
+          explanation: 'Different supports provide different reactions. A pin gives 2 force components (Fx, Fy). A roller gives 1 force (perpendicular to the surface). A fixed wall gives 2 forces plus a moment. Always match the number of unknowns to the support type.',
+          hint: 'Count reactions by asking: what motions does this support prevent?',
         },
         {
           id: 'u1-L2-Q5',

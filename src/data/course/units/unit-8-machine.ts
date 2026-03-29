@@ -17,6 +17,13 @@ export const unit8: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u8-L1-T1',
+          type: 'teaching',
+          question: 'What shafts actually do',
+          explanation: 'A shaft is a rotating machine element that transmits power through torque and supports components like gears, pulleys, and bearings. Designing one means sizing the diameter to handle combined bending and torsion loads safely.',
+          hint: 'Every rotating machine has at least one shaft.',
+        },
+        {
           id: 'u8-L1-Q1',
           type: 'multiple-choice',
           question: 'A shaft broke at a keyway. Beach marks radiate from the keyway corner. What failure mode is this?',
@@ -69,6 +76,13 @@ export const unit8: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="40" r="24" fill="#58CC02" opacity="0.08"/> <circle cx="40" cy="40" r="24" stroke="#58CC02" stroke-width="2.5" fill="none"/> <circle cx="40" cy="40" r="18" fill="#58CC02" opacity="0.04"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> <rect x="34" y="16" width="12" height="10" rx="4" fill="#3B8700" opacity="0.35"/> <rect x="35" y="17" width="10" height="8" rx="3" fill="#A5E86C" opacity="0.25"/> <line x1="40" y1="20" x2="40" y2="64" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <line x1="24" y1="40" x2="56" y2="40" stroke="#3B8700" stroke-width="0.8" opacity="0.1"/> <circle cx="40" cy="21" r="2" fill="#3B8700" opacity="0.5"/> </g> <circle cx="40" cy="40" r="6" fill="#FAFAFA"/> <circle cx="40" cy="40" r="6" stroke="#3B8700" stroke-width="1.5" fill="none"/> <circle cx="40" cy="40" r="3" fill="#3B8700" opacity="0.3"/> <path d="M68,30 Q74,40 68,50" stroke="#A5E86C" stroke-width="1.5" fill="none" opacity="0.25"> <animate attributeName="opacity" values="0.1;0.35;0.1" dur="1.5s" repeatCount="indefinite"/> </path> <polygon points="68,50 71,47 65,47" fill="#A5E86C" opacity="0.25"/> </svg>',
           explanation: 'Consider a horizontal shaft with a gear load pushing downward at midspan: the top fiber is in tension and the bottom in compression.',
           hint: 'Consider what a single point on the shaft surface.'
+        },
+        {
+          id: 'u8-L1-T2',
+          type: 'teaching',
+          question: 'Keys, keyways, and stress risers',
+          explanation: 'A key is a small metal piece that locks a gear or pulley to a shaft for torque transfer. The keyway slot creates a stress concentration (Kt = 2 to 3), making it the most common fatigue crack initiation site on shafts.',
+          hint: 'Larger fillet radii in the keyway reduce Kt significantly.',
         },
         {
           id: 'u8-L1-Q5',
@@ -163,6 +177,13 @@ export const unit8: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Plate with hole --> <rect x="8" y="18" width="64" height="44" rx="1" stroke-width="0.8" stroke="#58CC02" fill="#58CC02" fill-opacity="0.03"/> <!-- Central hole --> <circle cx="40" cy="40" r="8" stroke-width="0.8" stroke="#58CC02" fill="white"/> <!-- Stress flow lines (curving around hole) --> <g stroke="#58CC02" stroke-width="0.4" opacity="0.35"> <path d="M8,24 Q30,24 32,34 Q34,38 32,42 Q30,52 8,56" fill="none"/> <path d="M8,28 Q28,28 33,36 Q34,38 33,42 Q28,50 8,52" fill="none"/> <path d="M8,36 Q26,36 32,38 Q34,40 32,42 Q26,44 8,44" fill="none"/> <path d="M72,24 Q50,24 48,34 Q46,38 48,42 Q50,52 72,56" fill="none"/> <path d="M72,28 Q52,28 47,36 Q46,38 47,42 Q52,50 72,52" fill="none"/> <path d="M72,36 Q54,36 48,38 Q46,40 48,42 Q54,44 72,44" fill="none"/> </g> <!-- Stress concentration zones (top and bottom of hole) --> <g fill="#A5E86C" opacity="0.2"> <ellipse cx="40" cy="32" rx="4" ry="2"> <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2s" repeatCount="indefinite"/> </ellipse> <ellipse cx="40" cy="48" rx="4" ry="2"> <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2s" repeatCount="indefinite"/> </ellipse> </g> <!-- Tension arrows --> <g opacity="0.5"> <line x1="2" y1="40" x2="7" y2="40" stroke-width="0.6" stroke="#58CC02"/> <polygon points="2,38.5 2,41.5 -1,40" fill="#58CC02"/> <line x1="78" y1="40" x2="73" y2="40" stroke-width="0.6" stroke="#58CC02"/> <polygon points="78,38.5 78,41.5 81,40" fill="#58CC02"/> <text x="-2" y="43" font-size="3" fill="#58CC02">σ</text> <text x="78" y="43" font-size="3" fill="#58CC02">σ</text> </g> <!-- Kt label --> <text x="40" y="14" text-anchor="middle" font-size="4" fill="#58CC02" opacity="0.5">K_t = σ_max/σ_nom</text> <!-- Max stress indicator --> <text x="40" y="30" font-size="2.5" fill="#A5E86C" opacity="0.4" text-anchor="middle">σ_max</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">notch effect</text> </svg>',
           explanation: 'The fillet radius is the dominant factor controlling stress concentration at a shoulder.',
           hint: 'which geometric parameter has the greatest influence on Kt.'
+        },
+        {
+          id: 'u8-L1-T3',
+          type: 'teaching',
+          question: 'Critical speed and fatigue criteria',
+          explanation: 'Every shaft has a critical speed where it vibrates violently because the RPM matches a natural frequency. Many machines safely operate above this speed by passing through it quickly. For fatigue design, the Soderberg, Goodman, and Gerber criteria combine alternating and mean stresses to predict safe life.',
+          hint: 'The Soderberg criterion is the most conservative of the three.',
         },
         {
           id: 'u8-L1-Q12',
