@@ -45,6 +45,9 @@ pnpm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# generated gallery
+/gallery.html
+
 # Playwright
 node_modules/
 /test-results/
