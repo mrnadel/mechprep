@@ -130,19 +130,36 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   }, [adapter, activeLesson, lessonSessionQuestions]);
 
   const lessonIsCurrentAnswered = useMemo(() => {
-    if (adapter || !activeLesson || !lessonCurrentQuestion) return false;
-    return activeLesson.answers.some((a) => a.questionId === lessonCurrentQuestion.id);
-  }, [adapter, activeLesson, lessonCurrentQuestion]);
+    if (adapter || !activeLesson) return false;
+    // Index-based: each position in the queue gets one answer sequentially
+    return activeLesson.answers.length > activeLesson.currentQuestionIndex;
+  }, [adapter, activeLesson]);
 
   const lessonIsLastQuestion = useMemo(() => {
     if (adapter || !activeLesson) return false;
     return activeLesson.currentQuestionIndex >= lessonSessionQuestions.length - 1;
   }, [adapter, activeLesson, lessonSessionQuestions]);
 
+  // Progress bar: unique questions correctly answered / unique question count
+  // This keeps a fixed number of segments and only advances on correct answers.
+  const lessonUniqueCorrect = useMemo(() => {
+    if (adapter || !activeLesson) return 0;
+    const correctIds = new Set<string>();
+    for (const a of activeLesson.answers) {
+      if (a.correct) correctIds.add(a.questionId);
+    }
+    return correctIds.size;
+  }, [adapter, activeLesson]);
+
+  const lessonUniqueTotal = useMemo(() => {
+    if (adapter || !activeLesson) return 0;
+    return new Set(activeLesson.sessionQuestionIds).size;
+  }, [adapter, activeLesson]);
+
   // === RESOLVED STATE — adapter wins, else lesson-mode ===
   const currentQuestion = adapter ? adapter.currentQuestion : lessonCurrentQuestion;
-  const answeredCount = adapter ? adapter.answeredCount : (activeLesson?.answers.length ?? 0);
-  const totalQuestions = adapter ? adapter.totalQuestions : lessonSessionQuestions.length;
+  const answeredCount = adapter ? adapter.answeredCount : lessonUniqueCorrect;
+  const totalQuestions = adapter ? adapter.totalQuestions : lessonUniqueTotal;
   const isCurrentAnswered = adapter ? adapter.isCurrentAnswered : lessonIsCurrentAnswered;
   const isLastQuestion = adapter ? adapter.isLastQuestion : lessonIsLastQuestion;
   const unitColor = adapter ? adapter.unitColor : lessonTheme.color;

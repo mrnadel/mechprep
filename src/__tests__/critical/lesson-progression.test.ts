@@ -286,14 +286,35 @@ describe('Lesson Progression', () => {
     function completeLessonWithAccuracy(accuracy: number) {
       useCourseStore.getState().startLesson(0, 0);
       const active = useCourseStore.getState().activeLesson!;
-      const total = active.sessionQuestionIds.length;
-      const correctCount = Math.round((accuracy / 100) * total);
+      const courseData = useCourseStore.getState().courseData;
+      const lesson = courseData[active.unitIndex].lessons[active.lessonIndex];
+      const questionMap = new Map(lesson.questions.map((q) => [q.id, q]));
 
-      for (let i = 0; i < total; i++) {
-        useCourseStore.getState().submitAnswer(
-          active.sessionQuestionIds[i],
-          i < correctCount,
-        );
+      // Count only gradable (non-teaching) questions for accuracy targeting
+      const gradableIds = active.sessionQuestionIds.filter(
+        (id) => questionMap.get(id)?.type !== 'teaching',
+      );
+      const correctCount = Math.round((accuracy / 100) * gradableIds.length);
+
+      // Submit answers: teaching cards always correct, gradable follow the ratio
+      let gradableIndex = 0;
+      for (let i = 0; i < active.sessionQuestionIds.length; i++) {
+        const id = active.sessionQuestionIds[i];
+        const isTeaching = questionMap.get(id)?.type === 'teaching';
+        if (isTeaching) {
+          useCourseStore.getState().submitAnswer(id, true);
+        } else {
+          useCourseStore.getState().submitAnswer(id, gradableIndex < correctCount);
+          gradableIndex++;
+        }
+      }
+
+      // Wrong answers get re-queued: answer them correctly to complete the lesson
+      let current = useCourseStore.getState().activeLesson!;
+      while (current.answers.length < current.sessionQuestionIds.length) {
+        const nextId = current.sessionQuestionIds[current.answers.length];
+        useCourseStore.getState().submitAnswer(nextId, true);
+        current = useCourseStore.getState().activeLesson!;
       }
 
       useCourseStore.getState().completeLesson();
@@ -317,22 +338,45 @@ describe('Lesson Progression', () => {
       expect(result.passed).toBe(true);
     });
 
-    it('calculates accuracy correctly', () => {
+    it('calculates accuracy correctly (first-attempt, excluding teaching)', () => {
       useCourseStore.getState().startLesson(0, 0);
       const active = useCourseStore.getState().activeLesson!;
-      const total = active.sessionQuestionIds.length;
+      const courseData = useCourseStore.getState().courseData;
+      const lesson = courseData[active.unitIndex].lessons[active.lessonIndex];
+      const questionMap = new Map(lesson.questions.map((q) => [q.id, q]));
 
-      // Answer exactly half correctly
-      for (let i = 0; i < total; i++) {
-        useCourseStore.getState().submitAnswer(
-          active.sessionQuestionIds[i],
-          i < Math.floor(total / 2),
-        );
+      // Separate teaching from gradable
+      const gradableIds = active.sessionQuestionIds.filter(
+        (id) => questionMap.get(id)?.type !== 'teaching',
+      );
+      const correctCount = Math.floor(gradableIds.length / 2);
+
+      // Submit: teaching = correct, first half of gradable = correct, rest = wrong
+      let gradableIndex = 0;
+      for (let i = 0; i < active.sessionQuestionIds.length; i++) {
+        const id = active.sessionQuestionIds[i];
+        const isTeaching = questionMap.get(id)?.type === 'teaching';
+        if (isTeaching) {
+          useCourseStore.getState().submitAnswer(id, true);
+        } else {
+          useCourseStore.getState().submitAnswer(id, gradableIndex < correctCount);
+          gradableIndex++;
+        }
       }
+
+      // Answer re-queued wrong questions correctly to finish
+      let current = useCourseStore.getState().activeLesson!;
+      while (current.answers.length < current.sessionQuestionIds.length) {
+        const nextId = current.sessionQuestionIds[current.answers.length];
+        useCourseStore.getState().submitAnswer(nextId, true);
+        current = useCourseStore.getState().activeLesson!;
+      }
+
       useCourseStore.getState().completeLesson();
 
       const result = useCourseStore.getState().lessonResult!;
-      const expectedAccuracy = Math.round((Math.floor(total / 2) / total) * 100);
+      // Accuracy is based on first attempt per unique non-teaching question
+      const expectedAccuracy = Math.round((correctCount / gradableIds.length) * 100);
       expect(result.accuracy).toBe(expectedAccuracy);
     });
 

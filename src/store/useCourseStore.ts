@@ -287,6 +287,13 @@ export const useCourseStore = create<CourseState>()(
         set((state) => {
           if (!state.activeLesson) return state;
 
+          const { unitIndex, lessonIndex } = state.activeLesson;
+          const lesson = state.courseData[unitIndex]?.lessons[lessonIndex];
+          const lessonType = lesson?.type ?? 'standard';
+
+          // Re-queue wrong answers so the user must answer them correctly to finish
+          const shouldRequeue = !correct && lessonType === 'standard';
+
           return {
             activeLesson: {
               ...state.activeLesson,
@@ -294,6 +301,9 @@ export const useCourseStore = create<CourseState>()(
                 ...state.activeLesson.answers,
                 { questionId, correct },
               ],
+              sessionQuestionIds: shouldRequeue
+                ? [...state.activeLesson.sessionQuestionIds, questionId]
+                : state.activeLesson.sessionQuestionIds,
             },
           };
         });
@@ -326,14 +336,19 @@ export const useCourseStore = create<CourseState>()(
         const unit = get().courseData[unitIndex];
         const lesson = unit.lessons[lessonIndex];
 
-        // Exclude teaching cards from accuracy calculation
+        // Accuracy based on first attempt per unique question (excluding teaching cards).
+        // Questions answered wrong get re-queued, so we only grade the first try.
         const questionMap = new Map(lesson.questions.map((q) => [q.id, q]));
-        const gradedAnswers = answers.filter((a) => {
+        const firstAttempts = new Map<string, boolean>();
+        for (const a of answers) {
           const q = questionMap.get(a.questionId);
-          return q?.type !== 'teaching';
-        });
-        const totalQuestions = gradedAnswers.length;
-        const correctAnswers = gradedAnswers.filter((a) => a.correct).length;
+          if (q?.type === 'teaching') continue;
+          if (!firstAttempts.has(a.questionId)) {
+            firstAttempts.set(a.questionId, a.correct);
+          }
+        }
+        const totalQuestions = firstAttempts.size;
+        const correctAnswers = [...firstAttempts.values()].filter(Boolean).length;
         const accuracy = totalQuestions > 0
           ? Math.round((correctAnswers / totalQuestions) * 100)
           : 0;
