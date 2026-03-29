@@ -2,13 +2,17 @@
 
 import useSWR from 'swr';
 import { motion } from 'framer-motion';
+import { useSession } from 'next-auth/react';
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 export default function FriendsBadge() {
-  const { data } = useSWR('/api/friends/requests/count', fetcher, {
-    refreshInterval: 60000,
-  });
+  const { status } = useSession();
+  const { data } = useSWR(
+    status === 'authenticated' ? '/api/friends/requests/count' : null,
+    fetcher,
+    { refreshInterval: 60000 },
+  );
 
   const count = data?.count ?? 0;
   if (count === 0) return null;

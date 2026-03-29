@@ -29,27 +29,6 @@ function getGreeting(): string {
   return 'Good evening!';
 }
 
-function getWeekDays() {
-  const labels = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
-  const today = new Date();
-  const dayOfWeek = today.getDay(); // 0=Sun, 1=Mon...
-  const todayIdx = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Convert to Mon=0 index
-
-  // Calculate the date for each day of this week (Mon-Sun)
-  return labels.map((label, i) => {
-    const d = new Date(today);
-    d.setDate(d.getDate() - todayIdx + i);
-    const dateStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-    return {
-      label,
-      isToday: i === todayIdx,
-      isFuture: i > todayIdx,
-      todayIdx,
-      dateStr,
-    };
-  });
-}
-
 function DoubleXpCountdown() {
   const doubleXpExpiry = useEngagementStore((s) => s.doubleXpExpiry);
   const isActive = useDoubleXpActive();
@@ -178,8 +157,6 @@ export function CourseHeader() {
   const popoverPanelRef = useRef<HTMLDivElement>(null);
   const [popoverPos, setPopoverPos] = useState<{ top: number; left: number; width: number; arrowLeft: number } | null>(null);
 
-  const weekDays = useMemo(() => getWeekDays(), []);
-
   const togglePopover = (type: PopoverType) => {
     if (popover === type) {
       setPopover(null);
@@ -272,25 +249,20 @@ export function CourseHeader() {
                 gap: 4,
                 fontWeight: 800,
                 fontSize: 17,
-                color: popover === 'streak'
-                  ? '#D97706'
-                  : streakStatus === 'at-risk'
-                    ? '#DC2626'
-                    : '#3C3C3C',
+                color: streakStatus === 'at-risk'
+                  ? '#DC2626'
+                  : '#3C3C3C',
                 padding: '4px 8px',
                 borderRadius: 10,
-                background: popover === 'streak'
-                  ? '#FFFBEB'
-                  : streakStatus === 'at-risk'
-                    ? '#FEF2F2'
-                    : 'transparent',
+                background: streakStatus === 'at-risk'
+                  ? '#FEF2F2'
+                  : 'transparent',
                 minWidth: 44,
                 minHeight: 44,
                 justifyContent: 'center',
               }}
-              onClick={() => togglePopover('streak')}
+              onClick={() => router.push('/streak')}
               aria-label={`${progress.currentStreak} day streak`}
-              aria-expanded={popover === 'streak'}
             >
               <StreakFlame state={flameState} size={28} />
               <AnimatedCounter value={progress.currentStreak} showDelta deltaColor="#D97706" />
@@ -415,145 +387,6 @@ export function CourseHeader() {
                       if (id !== activeProfession) router.push('/');
                     }}
                   />
-                ) : popover === 'streak' ? (
-                  <div>
-                    {/* Header */}
-                    <div className="flex items-center" style={{ gap: 10, marginBottom: 16 }}>
-                      <div
-                        style={{
-                          width: 44,
-                          height: 44,
-                          borderRadius: 12,
-                          background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          boxShadow: '0 4px 12px rgba(245,158,11,0.3)',
-                        }}
-                      >
-                        <StreakFlame state="active" size={26} />
-                      </div>
-                      <div>
-                        <h3 style={{ fontSize: 16, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.2 }}>
-                          Practice Streak
-                        </h3>
-                        <p style={{
-                          fontSize: 12,
-                          fontWeight: 600,
-                          color: streakStatus === 'at-risk' ? '#DC2626' : '#AFAFAF',
-                          marginTop: 1,
-                        }}>
-                          {streakStatus === 'at-risk'
-                            ? 'Practice today or lose your streak!'
-                            : progress.currentStreak > 0
-                              ? 'Fully charged!'
-                              : 'Start your streak today!'}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Stats cards */}
-                    <div className="grid grid-cols-2" style={{ gap: 10, marginBottom: 16 }}>
-                      <div
-                        style={{
-                          background: 'linear-gradient(135deg, #FFF6E8 0%, #FFF0DB 100%)',
-                          borderRadius: 14,
-                          padding: '14px 12px',
-                          textAlign: 'center',
-                          border: '1.5px solid #FFE4B8',
-                        }}
-                      >
-                        <p style={{ fontSize: 30, fontWeight: 800, color: '#FF9600', lineHeight: 1 }}>
-                          {progress.currentStreak}
-                        </p>
-                        <p style={{ fontSize: 11, color: '#CC8B1F', fontWeight: 700, marginTop: 4 }}>
-                          Current
-                        </p>
-                      </div>
-                      <div
-                        style={{
-                          background: '#F7F7F7',
-                          borderRadius: 14,
-                          padding: '14px 12px',
-                          textAlign: 'center',
-                          border: '1.5px solid #ECECEC',
-                        }}
-                      >
-                        <p style={{ fontSize: 30, fontWeight: 800, color: '#3C3C3C', lineHeight: 1 }}>
-                          {progress.longestStreak}
-                        </p>
-                        <p style={{ fontSize: 11, color: '#AFAFAF', fontWeight: 700, marginTop: 4 }}>
-                          Longest
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Week tracker */}
-                    <div
-                      style={{
-                        background: '#FAFAFA',
-                        borderRadius: 12,
-                        padding: '12px 10px',
-                        marginBottom: 14,
-                        border: '1px solid #F0F0F0',
-                      }}
-                    >
-                      <p style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', marginBottom: 8, textAlign: 'center' }}>
-                        This week
-                      </p>
-                      <div className="flex justify-between" style={{ gap: 4 }}>
-                        {weekDays.map((day, i) => {
-                          const activeDays = progress.activeDays ?? [];
-                          const isActive = activeDays.includes(day.dateStr);
-                          const isAtRisk = day.isToday && !isActive && streakStatus === 'at-risk';
-                          return (
-                            <div key={i} className="flex flex-col items-center" style={{ gap: 4, flex: 1 }}>
-                              <div
-                                style={{
-                                  width: 28,
-                                  height: 28,
-                                  borderRadius: '50%',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  justifyContent: 'center',
-                                  fontSize: isActive ? 13 : 11,
-                                  fontWeight: 800,
-                                  background: isActive
-                                    ? 'linear-gradient(135deg, #FBBF24 0%, #D97706 100%)'
-                                    : isAtRisk
-                                      ? '#FEE2E2'
-                                      : day.isToday
-                                        ? '#E5E5E5'
-                                        : 'transparent',
-                                  color: isActive
-                                    ? 'white'
-                                    : isAtRisk
-                                      ? '#DC2626'
-                                      : day.isToday
-                                        ? '#3C3C3C'
-                                        : day.isFuture
-                                          ? '#E5E5E5'
-                                          : '#CFCFCF',
-                                  border: isAtRisk
-                                    ? '2px dashed #DC2626'
-                                    : day.isToday && !isActive
-                                      ? '2px dashed #CFCFCF'
-                                      : 'none',
-                                  boxShadow: isActive ? '0 2px 6px rgba(217,119,6,0.3)' : 'none',
-                                }}
-                              >
-                                {isActive ? '⚡' : day.label}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    <p style={{ fontSize: 12, color: '#AFAFAF', fontWeight: 600, textAlign: 'center' }}>
-                      Complete a lesson each day to keep going!
-                    </p>
-                  </div>
                 ) : popover === 'gems' ? (
                   <GemsPopoverContent gems={gems} onGoToShop={closePopover} />
                 ) : (
