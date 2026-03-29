@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { playSound } from '@/lib/sounds';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useBackHandler } from '@/hooks/useBackHandler';
 import { useSubscription } from '@/hooks/useSubscription';
@@ -36,6 +37,7 @@ export function BlueprintCelebration({ unitIndex, isGolden, onDismiss }: Bluepri
   const unitTitle = courseData[unitIndex]?.title ?? 'Chapter';
   useBackHandler(true, onDismiss);
 
+  useEffect(() => { playSound(isGolden ? 'courseComplete' : 'sessionComplete'); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const [canDismiss, setCanDismiss] = useState(false);
   useEffect(() => { const t = setTimeout(() => setCanDismiss(true), 1500); return () => clearTimeout(t); }, []);
   const handleDismiss = useCallback(() => { if (canDismiss) onDismiss(); }, [canDismiss, onDismiss]);

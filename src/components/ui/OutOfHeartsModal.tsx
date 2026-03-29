@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useHeartsStore } from '@/store/useHeartsStore';
 import { analytics } from '@/lib/mixpanel';
+import { playSound } from '@/lib/sounds';
 import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
@@ -30,7 +31,7 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
   const current = useHeartsStore((s) => s.current);
   const [countdown, setCountdown] = useState('');
 
-  useEffect(() => { if (isOpen) analytics.feature('hearts_depleted', {}); }, [isOpen]);
+  useEffect(() => { if (isOpen) { analytics.feature('hearts_depleted', {}); playSound('outOfHearts'); } }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;

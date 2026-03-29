@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Gem, Snowflake, Tag, Image as ImageIcon, Star } from 'lucide-react';
+import { playSound } from '@/lib/sounds';
 import type { LevelReward } from '@/data/level-rewards';
 import { levels } from '@/data/levels';
 import { LevelBadge } from '@/components/engagement/LevelBadge';
@@ -13,6 +15,7 @@ interface Props { reward: LevelReward; onClose: () => void; }
 export function LevelUpCelebration({ reward, onClose }: Props) {
   const levelDef = levels.find((l) => l.level === reward.level);
   const isMilestone = reward.isMilestone;
+  useEffect(() => { playSound('levelUp'); }, []);
 
   return (
     <FullScreenModal

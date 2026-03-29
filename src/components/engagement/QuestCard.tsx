@@ -3,6 +3,7 @@
 import { memo, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Quest } from '@/data/engagement-types';
+import { playSound } from '@/lib/sounds';
 
 interface Props {
   quest: Quest;
@@ -17,6 +18,7 @@ export const QuestCard = memo(function QuestCard({ quest, onClaim, compact = fal
   const [justClaimed, setJustClaimed] = useState(false);
 
   const handleClaim = useCallback((questId: string) => {
+    playSound('claimReward');
     setJustClaimed(true);
     onClaim(questId);
   }, [onClaim]);

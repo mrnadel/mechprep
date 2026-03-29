@@ -2,6 +2,7 @@
 
 import { useState, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { playSound } from '@/lib/sounds';
 import { useGems, useEngagementActions, useStreakEnhancements, useEngagementStore } from '@/store/useEngagementStore';
 import { shopItems } from '@/data/gem-shop';
 import type { ShopItem } from '@/data/engagement-types';
@@ -298,6 +299,7 @@ export function GemShop() {
   function handleBuy(itemId: string) {
     const success = purchaseItem(itemId);
     if (success) {
+      playSound('purchase');
       const item = shopItems.find((i) => i.id === itemId);
       showToast(`Purchased ${item?.name ?? 'item'}!`);
     }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { playSound } from '@/lib/sounds';
 import { useCourseStore } from '@/store/useCourseStore';
 import { getUnitTheme } from '@/lib/unitThemes';
 import { useBackHandler } from '@/hooks/useBackHandler';
@@ -15,6 +16,7 @@ export function CourseCompleteCelebration({ onDismiss }: Props) {
   const [canDismiss, setCanDismiss] = useState(false);
   const courseData = useCourseStore((s) => s.courseData);
 
+  useEffect(() => { playSound('courseComplete'); }, []);
   useEffect(() => { const t = setTimeout(() => setCanDismiss(true), 1500); return () => clearTimeout(t); }, []);
   useBackHandler(true, () => { if (canDismiss) onDismiss(); });
   const handleDismiss = useCallback(() => { if (canDismiss) onDismiss(); }, [canDismiss, onDismiss]);

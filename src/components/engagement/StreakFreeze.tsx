@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { X, Gem, Snowflake } from 'lucide-react';
+import { playSound } from '@/lib/sounds';
 import {
   useEngagementStore,
   useStreakEnhancements,
@@ -20,6 +22,11 @@ export function StreakFreeze() {
   const gems = useGems();
   const comeback = useComeback();
   const { repairStreak } = useEngagementActions();
+
+  useEffect(() => {
+    if (streak.freezeUsedToday) playSound('streakFreeze');
+    else if (streak.repairAvailable && streak.lastStreakValueBeforeBreak > 0) playSound('streakBroke');
+  }, [streak.freezeUsedToday, streak.repairAvailable, streak.lastStreakValueBeforeBreak]);
 
   const dismissFreezeBanner = () => {
     useEngagementStore.setState((s) => ({ streak: { ...s.streak, freezeUsedToday: false } }));

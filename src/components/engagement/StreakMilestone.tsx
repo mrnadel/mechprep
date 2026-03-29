@@ -1,7 +1,8 @@
 'use client';
 
-import { type ComponentType } from 'react';
+import { type ComponentType, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { playSound } from '@/lib/sounds';
 import { Gem, Tag, Image as ImageIcon } from 'lucide-react';
 import { StreakFlame } from '@/components/icons/StreakFlame';
 import type { StreakMilestoneDefinition } from '@/data/engagement-types';
@@ -28,6 +29,7 @@ function getNextMilestone(current: StreakMilestoneDefinition): StreakMilestoneDe
 export function StreakMilestone({ milestone, onClose }: Props) {
   const next = getNextMilestone(milestone);
   const BadgeIcon = streakBadgeIcons[milestone.days] ?? WeekWarriorIcon;
+  useEffect(() => { playSound('streakMilestone'); }, []);
 
   return (
     <FullScreenModal

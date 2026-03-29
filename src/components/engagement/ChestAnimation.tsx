@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollLock } from '@/hooks/useScrollLock';
+import { playSound } from '@/lib/sounds';
 
 interface Props {
   type: 'daily' | 'weekly';
@@ -12,6 +14,7 @@ interface Props {
 
 export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
   useScrollLock(isOpen);
+  useEffect(() => { if (isOpen) playSound('chestOpen'); }, [isOpen]);
 
   return (
     <AnimatePresence>

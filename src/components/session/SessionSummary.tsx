@@ -10,6 +10,7 @@ import { useScrollLock } from '@/hooks/useScrollLock';
 import { useEngagementActions } from '@/store/useEngagementStore';
 import { analytics } from '@/lib/mixpanel';
 import { achievements } from '@/data/achievements';
+import { playSound } from '@/lib/sounds';
 
 interface Props {
   summary: SessionSummaryType;
@@ -57,6 +58,9 @@ export default function SessionSummary({ summary }: Props) {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleBack]);
+
+  // Sound on mount
+  useEffect(() => { playSound('sessionComplete'); }, []);
 
   // Track engagement metrics (fires once)
   useEffect(() => {

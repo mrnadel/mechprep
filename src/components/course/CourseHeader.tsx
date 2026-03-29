@@ -150,11 +150,17 @@ export function CourseHeader() {
   const { current: currentLevel } = getXpToNextLevel(progress.totalXp);
   const router = useRouter();
 
+  const heartsCurrent = useHeartsStore((s) => s.current);
+  const heartsMax = useHeartsStore((s) => s.max);
+  const heartsIsUnlimited = useHeartsStore((s) => s.isUnlimited);
+  const heartsRecharge = useHeartsStore((s) => s.rechargeHearts);
+
   const headerRef = useRef<HTMLElement>(null);
   const courseBtnRef = useRef<HTMLButtonElement>(null);
   const streakBtnRef = useRef<HTMLButtonElement>(null);
   const xpBtnRef = useRef<HTMLButtonElement>(null);
   const gemsBtnRef = useRef<HTMLButtonElement>(null);
+  const heartsBtnRef = useRef<HTMLButtonElement>(null);
   const popoverPanelRef = useRef<HTMLDivElement>(null);
   const [popoverPos, setPopoverPos] = useState<{ top: number; left: number; width: number; arrowLeft: number } | null>(null);
 
@@ -164,7 +170,7 @@ export function CourseHeader() {
       setPopoverPos(null);
       return;
     }
-    const ref = type === 'course' ? courseBtnRef : type === 'streak' ? streakBtnRef : type === 'xp' ? xpBtnRef : gemsBtnRef;
+    const ref = type === 'course' ? courseBtnRef : type === 'streak' ? streakBtnRef : type === 'xp' ? xpBtnRef : type === 'hearts' ? heartsBtnRef : gemsBtnRef;
     const headerEl = headerRef.current;
     if (!headerEl || !ref?.current) return;
 
@@ -172,7 +178,7 @@ export function CourseHeader() {
     const btnRect = ref.current.getBoundingClientRect();
     const vw = window.innerWidth;
     const btnCenterX = btnRect.left + btnRect.width / 2;
-    const maxW = type === 'course' ? 360 : 340;
+    const maxW = type === 'course' ? 360 : type === 'hearts' ? 320 : 340;
     const popoverWidth = vw >= 640 ? Math.min(maxW, vw - 32) : Math.min(300, vw - 32);
 
     // Center popover under the clicked button, clamped to viewport edges
@@ -206,7 +212,8 @@ export function CourseHeader() {
         courseBtnRef.current?.contains(target) ||
         streakBtnRef.current?.contains(target) ||
         xpBtnRef.current?.contains(target) ||
-        gemsBtnRef.current?.contains(target)
+        gemsBtnRef.current?.contains(target) ||
+        heartsBtnRef.current?.contains(target)
       ) return;
       closePopover();
     };
@@ -314,6 +321,35 @@ export function CourseHeader() {
               <AnimatedCounter value={gems.balance} showDelta deltaColor="#7C3AED" />
             </button>
 
+            <button
+              ref={heartsBtnRef}
+              className="flex items-center transition-all active:scale-95"
+              style={{
+                gap: 4,
+                fontWeight: 800,
+                fontSize: 17,
+                color: popover === 'hearts' ? '#E11D48' : heartsCurrent > 0 ? '#EF4444' : '#9CA3AF',
+                padding: '4px 8px',
+                borderRadius: 10,
+                background: popover === 'hearts' ? '#FFF1F2' : 'transparent',
+                minWidth: 44,
+                minHeight: 44,
+                justifyContent: 'center',
+              }}
+              onClick={() => { heartsRecharge(); togglePopover('hearts'); }}
+              aria-label={heartsIsUnlimited() ? 'Unlimited hearts' : `${heartsCurrent} hearts`}
+              aria-expanded={popover === 'hearts'}
+            >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              {heartsIsUnlimited() ? (
+                <span style={{ fontSize: 15 }}>&infin;</span>
+              ) : (
+                <AnimatedCounter value={heartsCurrent} />
+              )}
+            </button>
+
         </div>
         <AnimatePresence>
           <DoubleXpCountdown />
@@ -349,7 +385,7 @@ export function CourseHeader() {
               top: popoverPos.top,
               left: popoverPos.left,
               width: popoverPos.width,
-              maxWidth: popover === 'course' ? 360 : 340,
+              maxWidth: popover === 'course' ? 360 : popover === 'hearts' ? 320 : 340,
               borderRadius: 16,
               background: 'white',
               border: '2px solid #E5E5E5',
@@ -390,6 +426,8 @@ export function CourseHeader() {
                   />
                 ) : popover === 'gems' ? (
                   <GemsPopoverContent gems={gems} onGoToShop={closePopover} />
+                ) : popover === 'hearts' ? (
+                  <HeartsPopoverContent onClose={closePopover} />
                 ) : (
                   <XpLevelPopover totalXp={progress.totalXp} />
                 )}
@@ -1235,6 +1273,184 @@ function GemsPopoverContent({
       >
         🛍️ Visit Gem Shop
       </Link>
+    </div>
+  );
+}
+
+// ─── Hearts popover (Duolingo-style) ───
+function HeartsPopoverContent({ onClose }: { onClose: () => void }) {
+  const current = useHeartsStore((s) => s.current);
+  const max = useHeartsStore((s) => s.max);
+  const isUnlimited = useHeartsStore((s) => s.isUnlimited);
+  const getTimeUntilNextHeart = useHeartsStore((s) => s.getTimeUntilNextHeart);
+  const rechargeHearts = useHeartsStore((s) => s.rechargeHearts);
+  const gems = useGems();
+  const [countdown, setCountdown] = useState('');
+
+  useEffect(() => {
+    const tick = () => {
+      rechargeHearts();
+      const ms = getTimeUntilNextHeart();
+      if (ms <= 0) { setCountdown(''); return; }
+      const totalSeconds = Math.ceil(ms / 1000);
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      if (hours > 0) setCountdown(`${hours} hour${hours !== 1 ? 's' : ''} ${minutes} min`);
+      else setCountdown(`${minutes} minute${minutes !== 1 ? 's' : ''}`);
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [getTimeUntilNextHeart, rechargeHearts]);
+
+  const unlimited = isUnlimited();
+
+  return (
+    <div style={{ textAlign: 'center' }}>
+      {/* Title */}
+      <h3 style={{ fontSize: 20, fontWeight: 800, color: '#3C3C3C', marginBottom: 14 }}>
+        Hearts
+      </h3>
+
+      {/* Heart icons row */}
+      <div className="flex items-center justify-center" style={{ gap: 4, marginBottom: 14 }}>
+        {unlimited ? (
+          <div className="flex items-center" style={{ gap: 6 }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#EF4444">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span style={{ fontSize: 24, fontWeight: 800, color: '#EF4444' }}>&infin;</span>
+          </div>
+        ) : (
+          Array.from({ length: max }, (_, i) => {
+            const isFull = i < current;
+            const isBreaking = i === current; // the one that just became empty
+            return (
+              <motion.svg
+                key={i}
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill={isFull ? '#EF4444' : isBreaking ? '#FECDD3' : '#D1D5DB'}
+                initial={false}
+                animate={isBreaking ? { scale: [1, 1.15, 1], opacity: [1, 0.7, 1] } : {}}
+                transition={{ duration: 0.4 }}
+              >
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </motion.svg>
+            );
+          })
+        )}
+      </div>
+
+      {/* Countdown or status message */}
+      {unlimited ? (
+        <p style={{ fontSize: 13, fontWeight: 700, color: '#16A34A', marginBottom: 6 }}>
+          You have unlimited hearts!
+        </p>
+      ) : current < max && countdown ? (
+        <p style={{ fontSize: 14, fontWeight: 700, color: '#3C3C3C', marginBottom: 4 }}>
+          Next heart in <span style={{ color: '#E11D48' }}>{countdown}</span>
+        </p>
+      ) : null}
+
+      <p style={{ fontSize: 12, fontWeight: 600, color: '#9CA3AF', marginBottom: 16 }}>
+        {unlimited
+          ? 'Pro members never run out of hearts.'
+          : current > 0
+            ? 'You have hearts left! Keep on learning.'
+            : 'Run out of hearts? Wait for them to recharge.'}
+      </p>
+
+      {/* Action cards */}
+      {!unlimited && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          {/* Unlimited hearts CTA */}
+          <Link
+            href="/pricing"
+            onClick={onClose}
+            className="flex items-center transition-all hover:brightness-105 active:scale-[0.98]"
+            style={{
+              gap: 12,
+              padding: '12px 14px',
+              borderRadius: 14,
+              background: '#F9FAFB',
+              border: '1.5px solid #E5E7EB',
+              textDecoration: 'none',
+            }}
+          >
+            <div
+              style={{
+                width: 36,
+                height: 36,
+                borderRadius: 10,
+                background: 'linear-gradient(135deg, #EC4899, #8B5CF6)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}
+            >
+              <span style={{ fontSize: 18, color: 'white', fontWeight: 900 }}>&infin;</span>
+            </div>
+            <span style={{ fontSize: 13, fontWeight: 800, color: '#3C3C3C', flex: 1, textAlign: 'left' }}>
+              UNLIMITED HEARTS
+            </span>
+            <span style={{ fontSize: 13, fontWeight: 800, color: '#E11D48' }}>
+              GET SUPER
+            </span>
+          </Link>
+
+          {/* Refill hearts CTA */}
+          {current < max && (
+            <button
+              className="flex items-center transition-all hover:brightness-105 active:scale-[0.98]"
+              style={{
+                gap: 12,
+                padding: '12px 14px',
+                borderRadius: 14,
+                background: '#F9FAFB',
+                border: '1.5px solid #E5E7EB',
+                cursor: gems.balance >= 350 ? 'pointer' : 'not-allowed',
+                opacity: gems.balance >= 350 ? 1 : 0.5,
+                width: '100%',
+              }}
+              disabled={gems.balance < 350}
+              onClick={() => {
+                if (gems.balance >= 350) {
+                  useHeartsStore.setState({ current: max, lastRechargeAt: Date.now() });
+                  useEngagementStore.getState().addGems(-350, 'heart_refill');
+                  onClose();
+                }
+              }}
+            >
+              <div
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: 10,
+                  background: '#FEE2E2',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#EF4444">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+              <span style={{ fontSize: 13, fontWeight: 800, color: '#3C3C3C', flex: 1, textAlign: 'left' }}>
+                REFILL HEARTS
+              </span>
+              <div className="flex items-center" style={{ gap: 4 }}>
+                <span style={{ fontSize: 18 }}>💎</span>
+                <span style={{ fontSize: 14, fontWeight: 800, color: '#7C3AED' }}>350</span>
+              </div>
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }

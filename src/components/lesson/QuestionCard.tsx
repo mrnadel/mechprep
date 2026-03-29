@@ -150,6 +150,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
 
     const handleWordTap = useCallback((word: string) => {
       if (answered) return;
+      playSound('tap');
       let nextActive = 0;
       setFilledBlanks((prev) => {
         const next = [...prev];

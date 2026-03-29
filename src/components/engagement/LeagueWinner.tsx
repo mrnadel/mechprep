@@ -1,7 +1,8 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { playSound } from '@/lib/sounds';
 import { useLeague, useEngagementStore } from '@/store/useEngagementStore';
 import { leagueTiers } from '@/data/league';
 import { GameButton } from '@/components/ui/GameButton';
@@ -20,6 +21,10 @@ export function LeagueWinner() {
       league: { ...st.league, winnerSeen: true },
     }));
   }, []);
+
+  useEffect(() => {
+    if (shouldShow) playSound('leagueWinner');
+  }, [shouldShow]);
 
   if (!shouldShow || !result) return null;
 

@@ -11,6 +11,7 @@ import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 import type { FXName } from '@/components/ui/ScreenFX';
+import { playSound } from '@/lib/sounds';
 
 export { ResultScreen };
 export default function ResultScreen() {
@@ -31,6 +32,12 @@ export default function ResultScreen() {
     const timer = setTimeout(() => window.addEventListener('keydown', handleKeyDown), 500);
     return () => { clearTimeout(timer); window.removeEventListener('keydown', handleKeyDown); };
   }, [lessonResult, dismissResult]);
+
+  // Sound on mount
+  useEffect(() => {
+    if (!lessonResult) return;
+    playSound(lessonResult.passed ? (lessonResult.isFlawless ? 'sessionComplete' : 'lessonPass') : 'lessonFail');
+  }, [lessonResult]);
 
   useEffect(() => {
     if (!lessonResult || engagementTracked.current) return;

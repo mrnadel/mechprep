@@ -1,6 +1,8 @@
 'use client';
 
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { playSound } from '@/lib/sounds';
 import { useEngagementStore, useComeback } from '@/store/useEngagementStore';
 import { comebackQuests } from '@/data/quests';
 import { Gem } from 'lucide-react';
@@ -17,9 +19,10 @@ export function WelcomeBack() {
     }));
   };
 
-  if (!comeback.isInComebackFlow || comeback.comebackQuestsCompleted !== 0) {
-    return null;
-  }
+  const shouldShow = comeback.isInComebackFlow && comeback.comebackQuestsCompleted === 0;
+  useEffect(() => { if (shouldShow) playSound('welcomeBack'); }, [shouldShow]);
+
+  if (!shouldShow) return null;
 
   return (
     <FullScreenModal

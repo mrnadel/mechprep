@@ -1,7 +1,8 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { playSound } from '@/lib/sounds';
 import { useLeague, useEngagementStore } from '@/store/useEngagementStore';
 import { leagueTiers } from '@/data/league';
 import { LEAGUE_GEM_REWARD_PROMOTION } from '@/data/league';
@@ -17,12 +18,18 @@ export function LeaguePromotion() {
   }, []);
 
   const shouldShow = league.lastWeekResult !== null && !league.resultSeen;
-  if (!shouldShow || !league.lastWeekResult) return null;
-
   const result = league.lastWeekResult;
+  const isPromoted = result?.promoted ?? false;
+  const isDemoted = result?.demoted ?? false;
+
+  useEffect(() => {
+    if (!shouldShow || !result) return;
+    playSound(isPromoted ? 'leagueUp' : isDemoted ? 'leagueDown' : 'leagueUp');
+  }, [shouldShow, result, isPromoted, isDemoted]);
+
+  if (!shouldShow || !result) return null;
+
   const currentTier = leagueTiers.find((t) => t.tier === league.currentTier) ?? leagueTiers[0];
-  const isPromoted = result.promoted;
-  const isDemoted = result.demoted;
 
   const content = isPromoted ? {
     headline: `Promoted to ${currentTier.name}!`, subtext: `You earned +${LEAGUE_GEM_REWARD_PROMOTION} gems for finishing in the top ranks.`,
