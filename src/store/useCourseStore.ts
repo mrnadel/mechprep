@@ -230,47 +230,43 @@ export const useCourseStore = create<CourseState>()(
         const isGolden = golden === true;
 
         // Generate session IDs based on lesson type, capped at MAX_SESSION_QUESTIONS
+        // Teaching cards are always included and placed at their natural position (front).
         const allIds = getSessionIds(lesson);
-        let sessionQuestionIds: string[];
+        const lessonType = lesson.type ?? 'standard';
 
-        if (allIds.length <= MAX_SESSION_QUESTIONS) {
-          sessionQuestionIds = allIds;
+        // Separate teaching IDs (preserve order) from regular question IDs
+        const teachingIds = lessonType === 'standard'
+          ? allIds.filter(id => lesson.questions.find(q => q.id === id)?.type === 'teaching')
+          : [];
+        const questionIds = lessonType === 'standard'
+          ? allIds.filter(id => lesson.questions.find(q => q.id === id)?.type !== 'teaching')
+          : allIds;
+
+        let sessionQuestionIds: string[];
+        const questionSlots = MAX_SESSION_QUESTIONS - teachingIds.length;
+
+        if (questionIds.length <= questionSlots) {
+          // All questions fit, keep teaching cards at front
+          sessionQuestionIds = [...teachingIds, ...questionIds];
         } else {
           const existing = get().progress.completedLessons[lesson.id];
           const answered = new Set(existing?.answeredQuestionIds ?? []);
           const correct = new Set(existing?.correctQuestionIds ?? []);
+          let selectedQuestions: string[];
 
           if (isGolden) {
-            // Golden: prefer unseen questions, fill rest randomly
-            const unseen = allIds.filter((id) => !answered.has(id));
-            const seen = allIds.filter((id) => answered.has(id));
-            sessionQuestionIds = [...shuffleArray(unseen), ...shuffleArray(seen)].slice(0, MAX_SESSION_QUESTIONS);
+            const unseen = questionIds.filter((id) => !answered.has(id));
+            const seen = questionIds.filter((id) => answered.has(id));
+            selectedQuestions = [...shuffleArray(unseen), ...shuffleArray(seen)].slice(0, questionSlots);
           } else if (existing && existing.attempts > 0) {
-            // Retry: prefer incorrect questions, fill rest randomly
-            const incorrect = allIds.filter((id) => answered.has(id) && !correct.has(id));
-            const rest = allIds.filter((id) => !incorrect.includes(id));
-            sessionQuestionIds = [...shuffleArray(incorrect), ...shuffleArray(rest)].slice(0, MAX_SESSION_QUESTIONS);
+            const incorrect = questionIds.filter((id) => answered.has(id) && !correct.has(id));
+            const rest = questionIds.filter((id) => !incorrect.includes(id));
+            selectedQuestions = [...shuffleArray(incorrect), ...shuffleArray(rest)].slice(0, questionSlots);
           } else {
-            // First attempt: random selection
-            sessionQuestionIds = shuffleArray(allIds).slice(0, MAX_SESSION_QUESTIONS);
+            selectedQuestions = shuffleArray(questionIds).slice(0, questionSlots);
           }
-        }
 
-        // For experienced users (level 2+), remove teaching cards from standard lessons
-        const lessonType = lesson.type ?? 'standard';
-        if (lessonType === 'standard') {
-          const introData = get().progress.courseIntros?.[get().activeProfession];
-          const experienceLevel = introData?.experienceLevel ?? 0;
-          if (experienceLevel >= 2) {
-            const filtered = sessionQuestionIds.filter(id => {
-              const q = lesson.questions.find(q => q.id === id);
-              return q?.type !== 'teaching';
-            });
-            // Only apply if there are still real questions left
-            if (filtered.length > 0) {
-              sessionQuestionIds = filtered;
-            }
-          }
+          sessionQuestionIds = [...teachingIds, ...selectedQuestions];
         }
 
         set({
