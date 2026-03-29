@@ -208,6 +208,9 @@ export default function GetStartedPage() {
   const [placementDone, setPlacementDone] = useState(false);
   const loadingRef = useRef(false);
 
+  // Self-assessment level: determines which unit range the test draws from
+  const [testStartUnit, setTestStartUnit] = useState(0);
+
   // Hearts
   const [hearts, setHearts] = useState(STARTING_HEARTS);
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
@@ -233,10 +236,24 @@ export default function GetStartedPage() {
     setStep((s) => Math.max(s - 1, 0));
   }, []);
 
+  // Track which start unit was loaded so we reload if the user picks a different level
+  const loadedForStartUnit = useRef<number | null>(null);
+
   // Load placement test questions when entering step 2
   useEffect(() => {
-    if (step !== 2 || placementQuestions.length > 0 || loadingRef.current) return;
+    if (step !== 2) return;
+    if (loadingRef.current) return;
+    if (placementQuestions.length > 0 && loadedForStartUnit.current === testStartUnit) return;
     loadingRef.current = true;
+    loadedForStartUnit.current = testStartUnit;
+    // Reset placement state for fresh test
+    setPlacementIndex(0);
+    setPlacementAnswer(null);
+    setPlacementRevealed(false);
+    setHighestPassedUnit(-1);
+    setHearts(STARTING_HEARTS);
+    setPlacementDone(false);
+    setPlacementQuestions([]);
 
     async function loadPlacementQuestions() {
       setLoadingUnits(true);
@@ -244,13 +261,18 @@ export default function GetStartedPage() {
       const totalUnits = meta.length;
       const allQuestions: PlacementQuestion[] = [];
 
-      // Pick evenly spaced unit indices (e.g. for 13 units, 5 questions: units 0, 3, 5, 8, 11)
+      // Sample from testStartUnit onwards, picking evenly spaced units
+      const rangeStart = testStartUnit;
+      const rangeEnd = totalUnits - 1;
+      const rangeSize = rangeEnd - rangeStart + 1;
+      const count = Math.min(PLACEMENT_QUESTION_COUNT, rangeSize);
+
       const unitIndices: number[] = [];
-      if (totalUnits <= PLACEMENT_QUESTION_COUNT) {
-        for (let i = 0; i < totalUnits; i++) unitIndices.push(i);
+      if (rangeSize <= count) {
+        for (let i = rangeStart; i <= rangeEnd; i++) unitIndices.push(i);
       } else {
-        for (let i = 0; i < PLACEMENT_QUESTION_COUNT; i++) {
-          unitIndices.push(Math.round(i * (totalUnits - 1) / (PLACEMENT_QUESTION_COUNT - 1)));
+        for (let i = 0; i < count; i++) {
+          unitIndices.push(rangeStart + Math.round(i * (rangeSize - 1) / (count - 1)));
         }
       }
 
@@ -267,10 +289,12 @@ export default function GetStartedPage() {
 
       setPlacementQuestions(allQuestions);
       setLoadingUnits(false);
+      loadingRef.current = false;
     }
 
     loadPlacementQuestions();
-  }, [step, selectedProfession, placementQuestions.length]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step, selectedProfession, testStartUnit]);
 
   // Check answer for placement question
   const handlePlacementAnswer = (selectedIndices: number[]) => {
@@ -331,8 +355,11 @@ export default function GetStartedPage() {
     setStep(3);
   };
 
-  // "Test my level" handler: go to placement test
-  const handleTestLevel = () => {
+  // Level option handler: set the starting range and go to placement test
+  const handleLevelChoice = (startFraction: number) => {
+    const meta = getCourseMetaForProfession(selectedProfession);
+    const startIdx = Math.floor(startFraction * meta.length);
+    setTestStartUnit(startIdx);
     nextStep();
   };
 
@@ -547,39 +574,33 @@ export default function GetStartedPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <button
-                  onClick={handleNewUser}
-                  className="w-full p-5 rounded-2xl border-2 border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 transition-all text-left group"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="text-3xl">&#x1F331;</span>
-                    <div>
-                      <p className="text-base font-black text-gray-900 group-hover:text-primary-600 transition-colors">
-                        I&apos;m new to this
-                      </p>
-                      <p className="text-sm font-semibold text-gray-400 mt-0.5">
-                        Start from the basics
-                      </p>
+                {[
+                  { emoji: '\uD83C\uDF31', label: "I'm new to this", desc: 'Start from the basics', action: () => handleNewUser() },
+                  { emoji: '\uD83D\uDCA1', label: 'I know a little', desc: 'Test me on the early stuff', action: () => handleLevelChoice(0) },
+                  { emoji: '\uD83D\uDCDA', label: 'I know a fair amount', desc: 'Test me on intermediate topics', action: () => handleLevelChoice(0.3) },
+                  { emoji: '\uD83C\uDFAF', label: 'I know a lot', desc: 'Challenge me with advanced topics', action: () => handleLevelChoice(0.6) },
+                ].map((opt, i) => (
+                  <motion.button
+                    key={opt.label}
+                    onClick={opt.action}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.15 + i * 0.06 }}
+                    className="w-full p-4 rounded-2xl border-2 border-gray-200 bg-white hover:border-primary-300 hover:bg-primary-50/30 transition-all text-left group"
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="text-2xl">{opt.emoji}</span>
+                      <div>
+                        <p className="text-base font-black text-gray-900 group-hover:text-primary-600 transition-colors">
+                          {opt.label}
+                        </p>
+                        <p className="text-sm font-semibold text-gray-400 mt-0.5">
+                          {opt.desc}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </button>
-
-                <button
-                  onClick={handleTestLevel}
-                  className="w-full p-5 rounded-2xl border-2 border-primary-200 bg-primary-50/50 hover:border-primary-300 hover:bg-primary-50 transition-all text-left group"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="text-3xl">&#x1F3AF;</span>
-                    <div>
-                      <p className="text-base font-black text-gray-900 group-hover:text-primary-600 transition-colors">
-                        I know some already
-                      </p>
-                      <p className="text-sm font-semibold text-gray-400 mt-0.5">
-                        Take a placement test to skip ahead
-                      </p>
-                    </div>
-                  </div>
-                </button>
+                  </motion.button>
+                ))}
               </motion.div>
             </motion.div>
           )}
