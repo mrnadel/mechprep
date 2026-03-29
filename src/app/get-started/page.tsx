@@ -140,15 +140,21 @@ interface PlacementQuestion {
 
 function pickQuestionsFromUnit(unit: Unit, unitIndex: number, count: number): PlacementQuestion[] {
   // Gather all supported questions across all lessons (skip 'teaching' type)
-  const eligible: CourseQuestion[] = [];
+  // Prefer multiple-choice and multi-select over true-false for better placement accuracy
+  const mcQuestions: CourseQuestion[] = [];
+  const tfQuestions: CourseQuestion[] = [];
   for (const lesson of unit.lessons) {
     for (const q of lesson.questions) {
-      if (SUPPORTED_QUESTION_TYPES.has(q.type)) {
-        eligible.push(q);
+      if (q.type === 'multiple-choice' || q.type === 'multi-select') {
+        mcQuestions.push(q);
+      } else if (q.type === 'true-false') {
+        tfQuestions.push(q);
       }
     }
   }
 
+  // Use MC/multi-select first, fall back to true-false only if needed
+  const eligible = mcQuestions.length > 0 ? mcQuestions : tfQuestions;
   if (eligible.length === 0) return [];
 
   // Pick evenly spaced questions
@@ -292,14 +298,18 @@ export default function GetStartedPage() {
   const [answeredIds, setAnsweredIds] = useState<Set<string>>(new Set());
 
   const finishPlacement = useCallback(() => {
+    const meta = getCourseMetaForProfession(selectedProfession);
+    const maxUnit = meta.length - 1;
     // If user answered at least one question correctly, place them after the highest unit they passed.
     // If they got nothing right, place them at the testStartUnit (the level they claimed).
-    const placed = highestPassedUnit >= 0
+    const raw = highestPassedUnit >= 0
       ? highestPassedUnit + 1
       : testStartUnit;
+    // Clamp to valid range (can't place beyond the last unit)
+    const placed = Math.min(raw, maxUnit);
     setPlacedUnitIndex(placed);
     setPlacementDone(true);
-  }, [highestPassedUnit, testStartUnit]);
+  }, [highestPassedUnit, testStartUnit, selectedProfession]);
 
   // SessionAdapter submit: track correctness and hearts
   const submittedRef = useRef<Set<string>>(new Set());
@@ -497,15 +507,16 @@ export default function GetStartedPage() {
     signIn('google', { callbackUrl: '/' });
   };
 
-  const debugSkipToUnit = useCourseStore((s) => s.debugSkipToUnit);
   const completeOnboarding = () => {
     if (navigating) return;
     setNavigating(true);
     resetStoresForNewUser();
     setActiveProfession(selectedProfession);
-    // Apply placement: skip to the placed unit in the course store
+    // Apply placement: unlock units up to placed unit (without marking lessons as done)
     if (placedUnitIndex > 0) {
-      debugSkipToUnit(placedUnitIndex);
+      useCourseStore.setState((s) => ({
+        progress: { ...s.progress, placementUnitIndex: placedUnitIndex },
+      }));
     }
     analytics.milestone({ type: 'onboarding_completed' });
     window.location.href = '/';

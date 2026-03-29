@@ -59,7 +59,6 @@ export default function HomePage() {
   const flagIntroFlow = useFeatureFlag('course.intro_flow');
   const flagPlacementTest = useFeatureFlag('course.placement_test');
 
-  const debugSkipToUnit = useCourseStore((s) => s.debugSkipToUnit);
   const setActiveProfession = useCourseStore((s) => s.setActiveProfession);
 
   // Apply pending placement from get-started flow (Google sign-in redirect)
@@ -70,7 +69,11 @@ export default function HomePage() {
       sessionStorage.removeItem('octokeen-placement');
       const { professionId, unitIndex } = JSON.parse(raw);
       if (professionId) setActiveProfession(professionId);
-      if (unitIndex > 0) debugSkipToUnit(unitIndex);
+      if (unitIndex > 0) {
+        useCourseStore.setState((s) => ({
+          progress: { ...s.progress, placementUnitIndex: unitIndex },
+        }));
+      }
     } catch {}
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 

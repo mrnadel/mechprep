@@ -17,6 +17,13 @@ export const unit9: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u9-L1-T1',
+          type: 'teaching',
+          question: 'What Are Tolerances?',
+          explanation: 'No part can be made to an exact size. A tolerance is the total permissible variation on a dimension. For example, 50 +/- 0.1 mm means the part can be anywhere from 49.9 to 50.1 mm and still be acceptable.',
+          hint: 'Tighter tolerances cost more because they require more precise machining.',
+        },
+        {
           id: 'u9-L1-Q1',
           type: 'multiple-choice',
           question: 'Why use an interference fit for the inner ring on a rotating shaft, but a clearance fit for the outer ring in the housing?',
@@ -77,6 +84,13 @@ export const unit9: Unit = {
           hint: 'Tolerance = upper limit − lower limit.'
         },
         {
+          id: 'u9-L1-T2',
+          type: 'teaching',
+          question: 'Bilateral vs Unilateral Tolerances',
+          explanation: 'A bilateral tolerance allows variation on both sides of the nominal, like 50 +0.05/-0.10 mm. A unilateral tolerance puts all variation on one side, like 50 +0.00/+0.05 mm. The total tolerance is always the difference between the upper and lower limits.',
+          hint: 'Holes are often toleranced unilateral-positive so the minimum size equals nominal.',
+        },
+        {
           id: 'u9-L1-Q5',
           type: 'multiple-choice',
           question: 'A drawing has an IT6 tolerance on a rough cast surface that gets no machining. Why is this a problem, and how do you resolve it?',
@@ -130,6 +144,13 @@ export const unit9: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Hole-Basis vs Shaft-Basis</text><rect x="4" y="14" width="34" height="28" rx="2" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1"/><text x="21" y="22" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Hole-Basis</text><rect x="10" y="26" width="8" height="12" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="0.8"/><text x="14" y="34" font-size="3" fill="#334155" text-anchor="middle">H</text><rect x="22" y="28" width="8" height="8" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="0.8"/><text x="26" y="34" font-size="3" fill="#334155" text-anchor="middle">var</text><rect x="42" y="14" width="34" height="28" rx="2" fill="#3B8700" opacity="0.06" stroke="#3B8700" stroke-width="1"/><text x="59" y="22" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">Shaft-Basis</text><rect x="48" y="28" width="8" height="8" rx="1" fill="#58CC02" opacity="0.2" stroke="#58CC02" stroke-width="0.8"/><text x="52" y="34" font-size="3" fill="#334155" text-anchor="middle">var</text><rect x="60" y="26" width="8" height="12" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="0.8"/><text x="64" y="34" font-size="3" fill="#334155" text-anchor="middle">h</text><text x="21" y="52" font-size="3.5" fill="#58CC02" text-anchor="middle">Fixed hole</text><text x="21" y="57" font-size="3.5" fill="#58CC02" text-anchor="middle">Vary shaft</text><text x="59" y="52" font-size="3.5" fill="#3B8700" text-anchor="middle">Fixed shaft</text><text x="59" y="57" font-size="3.5" fill="#3B8700" text-anchor="middle">Vary hole</text><text x="40" y="70" font-size="3.5" fill="#6B7280" text-anchor="middle">Shaft-basis: drawn bar stock</text></svg>',
           explanation: 'The hole-basis system is most common because it is generally harder (more expensive) to adjust hole size than shaft size .',
           hint: 'Consider when it is cheaper to vary the hole rather.'
+        },
+        {
+          id: 'u9-L1-T3',
+          type: 'teaching',
+          question: 'Clearance, Interference, and Transition Fits',
+          explanation: 'When a shaft goes into a hole, the fit depends on their relative sizes. A clearance fit always has a gap (shaft smaller than hole). An interference fit always has overlap (shaft larger than hole, requiring a press). A transition fit could go either way depending on where each part lands in its tolerance.',
+          hint: 'The ISO system uses letter codes (H7/g6) to specify standard fits between holes and shafts.',
         },
         {
           id: 'u9-L1-Q9',
@@ -427,6 +448,13 @@ export const unit9: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u9-L2-T1',
+          type: 'teaching',
+          question: 'What Is GD&T?',
+          explanation: 'GD&T (Geometric Dimensioning and Tolerancing) controls the geometry of parts beyond just size. It uses symbols in a feature control frame to specify how flat, round, straight, or correctly positioned a feature must be. There are 5 categories: form, orientation, location, profile, and runout.',
+          hint: 'A feature control frame reads left to right: symbol, tolerance value, modifiers, then datum references.',
+        },
+        {
           id: 'u9-L2-Q1',
           type: 'multiple-choice',
           question: 'Why is position tolerance almost always applied at MMC rather than RFS for clearance-hole bolt patterns?',
@@ -500,6 +528,13 @@ export const unit9: Unit = {
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">LMC - Min Wall</text><rect x="10" y="20" width="60" height="36" rx="2" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><circle cx="40" cy="38" r="12" fill="white" stroke="#3B8700" stroke-width="1.5"/><line x1="52" y1="38" x2="70" y2="38" stroke="#A5E86C" stroke-width="1.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/></line><text x="64" y="36" font-size="3" fill="#334155" text-anchor="middle">min</text><text x="64" y="42" font-size="3" fill="#334155" text-anchor="middle">wall</text><text x="40" y="40" font-size="3.5" fill="#334155" text-anchor="middle">LMC hole</text><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">LMC protects minimum material</text></svg>',
           explanation: 'LMC is used when the critical concern is minimum wall thickness or minimum remaining material — for example, a hole close to an edge, or a bore close to an outer diameter.',
           hint: 'Consider when having less material is the dangerous.'
+        },
+        {
+          id: 'u9-L2-T2',
+          type: 'teaching',
+          question: 'MMC, LMC, and Bonus Tolerance',
+          explanation: 'MMC (Maximum Material Condition) is the size where a feature has the most material: smallest hole, largest shaft. When a feature departs from MMC, it gets "bonus" geometric tolerance because there is more room for the parts to fit. LMC is the opposite, used when minimum wall thickness is the concern.',
+          hint: 'The circled M in a feature control frame means the tolerance applies at MMC with bonus allowed.',
         },
         {
           id: 'u9-L2-Q6',
@@ -579,6 +614,13 @@ export const unit9: Unit = {
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="7" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Circular vs Total Runout</text><rect x="4" y="14" width="34" height="50" rx="2" fill="#58CC02" opacity="0.04" stroke="#58CC02" stroke-width="1"/><text x="21" y="22" font-size="3.5" fill="#58CC02" text-anchor="middle" font-weight="bold">Circular</text><line x1="10" y1="44" x2="32" y2="44" stroke="#3B8700" stroke-width="1.5"/><circle cx="21" cy="44" r="0.5" fill="#3B8700"/><text x="21" y="38" font-size="3" fill="#6B7280" text-anchor="middle">one slice</text><text x="21" y="56" font-size="3" fill="#6B7280" text-anchor="middle">cross-section</text><rect x="42" y="14" width="34" height="50" rx="2" fill="#3B8700" opacity="0.04" stroke="#3B8700" stroke-width="1"/><text x="59" y="22" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">Total</text><line x1="48" y1="36" x2="70" y2="36" stroke="#3B8700" stroke-width="0.8"/><line x1="48" y1="40" x2="70" y2="40" stroke="#3B8700" stroke-width="0.8"/><line x1="48" y1="44" x2="70" y2="44" stroke="#3B8700" stroke-width="0.8"/><line x1="48" y1="48" x2="70" y2="48" stroke="#3B8700" stroke-width="0.8"/><line x1="48" y1="52" x2="70" y2="52" stroke="#3B8700" stroke-width="0.8"/><text x="59" y="58" font-size="3" fill="#6B7280" text-anchor="middle">entire surface</text></svg>',
           explanation: 'Circular runout (single arrow symbol) controls the full indicator movement (FIM) at each individual cross-section independently as the part rotates 360° about the datum axis.',
           hint: 'One checks cross-section by cross-section; the other.'
+        },
+        {
+          id: 'u9-L2-T3',
+          type: 'teaching',
+          question: 'Form vs Orientation Tolerances',
+          explanation: 'Form tolerances (flatness, straightness, circularity, cylindricity) control a feature against its own ideal shape and never reference datums. Orientation tolerances (perpendicularity, parallelism, angularity) control a feature relative to a datum and also inherently control form.',
+          hint: 'If perpendicularity is 0.05 mm, the surface must also be flat within 0.05 mm.',
         },
         {
           id: 'u9-L2-Q12',
@@ -842,6 +884,13 @@ export const unit9: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u9-L3-T1',
+          type: 'teaching',
+          question: 'What Are Datums?',
+          explanation: 'A datum is a theoretically perfect reference point, line, or plane derived from a real (imperfect) surface on the part. Datums establish the coordinate system from which you measure everything else. They represent how the part sits in its assembly or fixture.',
+          hint: 'The physical surface is called the "datum feature." The perfect geometry derived from it is the "datum."',
+        },
+        {
           id: 'u9-L3-Q1',
           type: 'multiple-choice',
           question: 'Can\'t I just pick any three surfaces? How do you explain the significance of datum precedence?',
@@ -900,6 +949,13 @@ export const unit9: Unit = {
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Bore as Secondary Datum</text><line x1="10" y1="60" x2="70" y2="60" stroke="#58CC02" stroke-width="2"/><text x="72" y="62" font-size="3" fill="#58CC02">A</text><rect x="15" y="24" width="50" height="36" rx="2" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/><circle cx="40" cy="42" r="10" fill="white" stroke="#3B8700" stroke-width="1.5"/><text x="40" y="44" font-size="3.5" fill="#3B8700" text-anchor="middle" font-weight="bold">B</text><polygon points="40,52 38,57 42,57" fill="#3B8700" opacity="0.4"/><text x="56" y="42" font-size="3" fill="#6B7280">2 DOF</text><text x="56" y="48" font-size="3" fill="#6B7280">X + Y</text><text x="40" y="74" font-size="3.5" fill="#6B7280" text-anchor="middle">Bore constrains 2 translations</text></svg>',
           explanation: 'When a cylindrical bore is the secondary datum (after a planar primary datum A constrains 3 DOF), the bore constrains 2 additional DOF.',
           hint: 'The primary plane already constrains 3 DOF.'
+        },
+        {
+          id: 'u9-L3-T2',
+          type: 'teaching',
+          question: 'The Datum Reference Frame',
+          explanation: 'Three mutually perpendicular datum planes form the Datum Reference Frame (DRF). It constrains all 6 degrees of freedom using the 3-2-1 rule: the primary datum contacts 3 points (constrains 3 DOF), the secondary contacts 2 points (2 DOF), and the tertiary contacts 1 point (1 DOF).',
+          hint: 'Think of it like placing a block on a table (3 DOF), pushing it against a fence (2 DOF), then against a stop (1 DOF).',
         },
         {
           id: 'u9-L3-Q5',
@@ -979,6 +1035,13 @@ export const unit9: Unit = {
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Datum Simulator</text><rect x="10" y="50" width="60" height="8" rx="1" fill="#3B8700" opacity="0.2" stroke="#3B8700" stroke-width="1.5"/><text x="40" y="56" font-size="3.5" fill="#3B8700" text-anchor="middle">Surface Plate</text><rect x="20" y="30" width="40" height="20" rx="2" fill="#58CC02" opacity="0.06" stroke="#58CC02" stroke-width="1"/><text x="40" y="42" font-size="3.5" fill="#334155" text-anchor="middle">Part</text><circle cx="28" cy="50" r="1" fill="#58CC02"/><circle cx="40" cy="50" r="1" fill="#58CC02"/><circle cx="52" cy="50" r="1" fill="#58CC02"/><text x="40" y="68" font-size="3.5" fill="#6B7280" text-anchor="middle">Physical equipment simulates</text><text x="40" y="76" font-size="3.5" fill="#6B7280" text-anchor="middle">theoretical datum planes</text></svg>',
           explanation: 'Datum simulators are the physical embodiment of the theoretical datums. A surface plate simulates a datum plane.',
           hint: 'How does a surface plate establish a datum plane.'
+        },
+        {
+          id: 'u9-L3-T3',
+          type: 'teaching',
+          question: 'Primary, Secondary, Tertiary Datums',
+          explanation: 'The order of datums matters. The primary datum is contacted first and constrains the most degrees of freedom. It should be the most stable, functional surface. The secondary adds alignment, and the tertiary locks the last remaining movement. Changing the order changes how the part is measured.',
+          hint: 'In the feature control frame, datums read left to right: primary first, then secondary, then tertiary.',
         },
         {
           id: 'u9-L3-Q11',
@@ -1252,6 +1315,13 @@ export const unit9: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u9-L4-T1',
+          type: 'teaching',
+          question: 'What Is Tolerance Stack-Up?',
+          explanation: 'When multiple parts assemble together, their individual tolerances accumulate. A tolerance stack-up analysis predicts the total variation at a critical gap or clearance. If 5 parts each have +/-0.1 mm, the worst case total is +/-0.5 mm, which might be too much.',
+          hint: 'Always identify the critical gap first, then trace the chain of dimensions that contribute to it.',
+        },
+        {
           id: 'u9-L4-Q1',
           type: 'multiple-choice',
           question: 'Using worst-case analysis, what is the total stack-up tolerance?',
@@ -1319,6 +1389,13 @@ export const unit9: Unit = {
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Cost-Optimized Allocation</text><line x1="12" y1="60" x2="68" y2="60" stroke="#3B8700" stroke-width="0.8"/><rect x="16" y="34" width="8" height="26" rx="0.5" fill="#58CC02" opacity="0.3"/><text x="20" y="32" font-size="3" fill="#334155" text-anchor="middle">easy</text><rect x="28" y="42" width="8" height="18" rx="0.5" fill="#A5E86C" opacity="0.3"/><rect x="40" y="48" width="8" height="12" rx="0.5" fill="#A5E86C" opacity="0.3"/><rect x="52" y="52" width="8" height="8" rx="0.5" fill="#3B8700" opacity="0.3"/><text x="56" y="50" font-size="3" fill="#334155" text-anchor="middle">hard</text><text x="40" y="72" font-size="3.5" fill="#6B7280" text-anchor="middle">Tight where cheap, loose where costly</text></svg>',
           explanation: 'Cost-optimized tolerance allocation assigns tighter tolerances to dimensions that are inexpensive to control (e.g., features machined in the same setup, turned diameters, injection molded.',
           hint: 'Tolerance is directly tied to cost.'
+        },
+        {
+          id: 'u9-L4-T2',
+          type: 'teaching',
+          question: 'Worst-Case vs RSS Analysis',
+          explanation: 'Worst-case analysis adds all tolerances directly, guaranteeing 100% of assemblies will work. RSS (Root Sum Square) uses statistics, predicting about 99.73% success. RSS gives smaller, cheaper tolerances but accepts a tiny risk. Use worst-case for safety-critical applications.',
+          hint: 'RSS formula: total = square root of (t1 squared + t2 squared + ... + tn squared).',
         },
         {
           id: 'u9-L4-Q6',
@@ -1413,6 +1490,13 @@ export const unit9: Unit = {
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4" fill="#334155" text-anchor="middle" font-weight="bold">Sensitivity Factor</text><rect x="10" y="20" width="24" height="20" rx="1" fill="#58CC02" opacity="0.1" stroke="#58CC02" stroke-width="1"/><text x="22" y="32" font-size="3.5" fill="#334155" text-anchor="middle">dim A</text><rect x="34" y="20" width="12" height="20" rx="1" fill="#A5E86C" opacity="0.1" stroke="#A5E86C" stroke-width="1"/><text x="40" y="32" font-size="3.5" fill="#334155" text-anchor="middle">angle</text><line x1="46" y1="30" x2="60" y2="30" stroke="#3B8700" stroke-width="1" stroke-dasharray="2,2"/><text x="56" y="28" font-size="3" fill="#334155">gap</text><text x="40" y="52" font-size="3.5" fill="#6B7280" text-anchor="middle">Linear: sensitivity = 1</text><text x="40" y="60" font-size="3.5" fill="#6B7280" text-anchor="middle">Angular: sensitivity = sin/cos</text><text x="40" y="70" font-size="3.5" fill="#334155" text-anchor="middle">Partial derivative of result</text></svg>',
           explanation: 'In a general tolerance stack-up, each dimension contributes to the result with a sensitivity factor (partial derivative of the result with respect to that dimension).',
           hint: 'If an angle changes by 1°, how much does the linear gap.'
+        },
+        {
+          id: 'u9-L4-T3',
+          type: 'teaching',
+          question: 'Tolerance Chain Analysis',
+          explanation: 'To analyze a stack-up, trace a continuous path from one side of the critical gap through every contributing dimension to the other side. Each dimension is either a "positive" contributor (increases the gap) or "negative" (decreases it). The signs depend on the direction you trace.',
+          hint: 'Sketch the dimension loop on paper. Dimensions going right are positive, left are negative.',
         },
         {
           id: 'u9-L4-Q13',
@@ -1662,6 +1746,13 @@ export const unit9: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u9-L5-T1',
+          type: 'teaching',
+          question: 'Surface Roughness Basics',
+          explanation: 'Every machined surface has tiny peaks and valleys. Ra (arithmetic average roughness) is the most common measurement, averaging the height deviations from the mean line. Rz measures the average peak-to-valley height and better captures extreme features. Lower numbers mean smoother surfaces.',
+          hint: 'Ra is a good general indicator, but it can hide deep scratches because it averages everything out.',
+        },
+        {
           id: 'u9-L5-Q1',
           type: 'multiple-choice',
           question: 'The Ra measurement confirms the surface meets spec. What might the Ra value be missing?',
@@ -1737,6 +1828,13 @@ export const unit9: Unit = {
           hint: 'The measurement uncertainty should consume no more.'
         },
         {
+          id: 'u9-L5-T2',
+          type: 'teaching',
+          question: 'Surface Finish Symbols and Lay',
+          explanation: 'Drawing callouts specify the maximum allowable roughness (e.g., Ra 1.6 means the surface must be 1.6 or smoother). The "lay" is the direction of the machining marks, shown with symbols like "=" (parallel) or "perpendicular" (perpendicular to the boundary). Lay affects friction, sealing, and wear.',
+          hint: 'Each manufacturing process has a typical Ra range: grinding 0.1 to 1.6, turning 0.4 to 6.3, sand casting 12.5 to 25.',
+        },
+        {
           id: 'u9-L5-Q6',
           type: 'multiple-choice',
           question: 'You discover a tolerance on a legacy drawing that seems unnecessarily tight — Ra 0.2 on a non-sealing, non-bearing surface that?',
@@ -1804,6 +1902,13 @@ export const unit9: Unit = {
                     diagram: '<svg viewBox="0 0 80 80" fill="none"><text x="40" y="8" font-size="4.5" fill="#334155" text-anchor="middle" font-weight="bold">Rsk Skewness</text><path d="M10,55 Q20,25 30,55 Q35,70 40,55" stroke="#58CC02" stroke-width="1.5" fill="none"/><text x="25" y="62" font-size="3" fill="#58CC02" text-anchor="middle">Rsk &lt; 0</text><text x="25" y="70" font-size="3" fill="#6B7280" text-anchor="middle">valleys</text><path d="M48,55 Q53,40 58,55 Q68,25 72,55" stroke="#3B8700" stroke-width="1.5" fill="none"/><text x="60" y="62" font-size="3" fill="#3B8700" text-anchor="middle">Rsk &gt; 0</text><text x="60" y="70" font-size="3" fill="#6B7280" text-anchor="middle">peaks</text></svg>',
           explanation: 'Rsk (skewness) measures the asymmetry of the surface profile height distribution. Rsk = 0 indicates a symmetric (Gaussian) profile.',
           hint: 'This parameter tells you whether the surface texture.'
+        },
+        {
+          id: 'u9-L5-T3',
+          type: 'teaching',
+          question: 'CMM and Measurement Tools',
+          explanation: 'A CMM (Coordinate Measuring Machine) is a 3-axis probe system that captures X, Y, Z points on a part surface to verify GD&T. A profilometer measures micro-scale roughness with a fine stylus. They are not interchangeable: CMMs measure macro geometry (flatness, position), profilometers measure surface texture.',
+          hint: 'The standard reference temperature for all dimensional measurement is 20 degrees C (ISO 1).',
         },
         {
           id: 'u9-L5-Q11',

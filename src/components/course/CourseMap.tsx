@@ -282,23 +282,36 @@ export function CourseMap() {
     [progress.completedLessons, isLessonUnlocked, isGuest, isProUser] // eslint-disable-line react-hooks/exhaustive-deps
   );
 
+  const placementUnitIndex = useCourseStore((s) => s.progress.placementUnitIndex ?? 0);
+
   const findActiveUnitIndex = useCallback((): number => {
-    let lastCompletedUnit = 0;
+    let lastCompletedUnit = placementUnitIndex;
     for (let ui = 0; ui < courseData.length; ui++) {
       for (let li = 0; li < courseData[ui].lessons.length; li++) {
         if (getLessonState(ui, li) === 'completed') {
-          lastCompletedUnit = ui;
+          lastCompletedUnit = Math.max(lastCompletedUnit, ui);
         }
       }
     }
     return lastCompletedUnit;
-  }, [getLessonState]);
+  }, [getLessonState, placementUnitIndex]);
 
   const activeUnitIndex = useMemo(() => findActiveUnitIndex(), [findActiveUnitIndex]);
 
-  // Find the first "current" (next-to-do) lesson to scroll to
+  // Find the first "current" (next-to-do) lesson to scroll to.
+  // Start from the placement unit so the map scrolls to the right place.
   const currentLessonId = useMemo(() => {
-    for (let ui = 0; ui < courseData.length; ui++) {
+    const startUnit = placementUnitIndex;
+    // First check from placement unit onwards for the first uncompleted lesson
+    for (let ui = startUnit; ui < courseData.length; ui++) {
+      for (let li = 0; li < courseData[ui].lessons.length; li++) {
+        if (getLessonState(ui, li) === 'current') {
+          return courseData[ui].lessons[li].id;
+        }
+      }
+    }
+    // Fallback: check from beginning (user may have gone back to earlier units)
+    for (let ui = 0; ui < startUnit; ui++) {
       for (let li = 0; li < courseData[ui].lessons.length; li++) {
         if (getLessonState(ui, li) === 'current') {
           return courseData[ui].lessons[li].id;
@@ -306,7 +319,7 @@ export function CourseMap() {
       }
     }
     return null;
-  }, [getLessonState]);
+  }, [getLessonState, placementUnitIndex]);
 
 
   // Stable callback for lesson clicks

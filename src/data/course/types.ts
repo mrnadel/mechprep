@@ -174,6 +174,8 @@ export interface CourseProgress {
   activeDays: string[];  // YYYY-MM-DD dates of recent activity (last 14 days, local only)
   completedLessons: Record<string, LessonProgress>;
   courseIntros?: Record<string, CourseIntroData>;
+  /** Unit index from placement test. All lessons before this unit are unlocked (but not completed). */
+  placementUnitIndex?: number;
 }
 
 export interface ActiveLesson {

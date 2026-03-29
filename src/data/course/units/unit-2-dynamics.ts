@@ -17,6 +17,13 @@ export const unit2: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u2-L1-T1',
+          type: 'teaching',
+          question: 'Position, Velocity, Acceleration',
+          explanation: 'Position describes where something is. Velocity is how fast position changes (first derivative). Acceleration is how fast velocity changes (second derivative). If you know position as a function of time, differentiate to get velocity, then differentiate again for acceleration.',
+          hint: 'To go backward, integrate: acceleration to velocity, velocity to position.',
+        },
+        {
           id: 'u2-L1-Q1',
           type: 'multiple-choice',
           question: 'An accelerometer reads zero on a moving vehicle. What does this indicate?',
@@ -69,6 +76,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="42" r="28" stroke="#58CC02" stroke-width="2" fill="none" opacity="0.3"/><circle cx="40" cy="42" r="28" stroke="#A5E86C" stroke-width="6" fill="none" opacity="0.06"/><circle cx="40" cy="42" r="2" fill="#3B8700" opacity="0.4"/><text x="40" y="48" font-size="4" fill="#6B7280" font-family="sans-serif" text-anchor="middle">center</text><rect x="62" y="10" width="8" height="5" rx="1.5" fill="#58CC02" opacity="0.4" stroke="#3B8700" stroke-width="1" transform="rotate(25,66,12.5)"/><line x1="66" y1="12" x2="66" y2="3" stroke="#58CC02" stroke-width="1.8" stroke-linecap="round"/><polygon points="64.5,5 66,1 67.5,5" fill="#58CC02"/><text x="70" y="3" font-size="5" fill="#334155" font-family="sans-serif" font-weight="bold" font-style="italic">v</text><line x1="66" y1="12" x2="42" y2="30" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/><polygon points="44,28 40,32 46,31" fill="#3B8700"/><text x="50" y="23" font-size="4.5" fill="#334155" font-family="sans-serif" font-style="italic">a\u2099=v\u00b2/r</text><text x="40" y="78" text-anchor="middle" font-size="4.5" fill="#334155" font-family="sans-serif">Top view: car on circular track</text></svg>',
           explanation: 'Velocity is a vector. On a curve, direction changes continuously, requiring centripetal acceleration an = v²/r toward the center.',
           hint: 'Velocity is a vector, not just speed.',
+        },
+        {
+          id: 'u2-L1-T2',
+          type: 'teaching',
+          question: 'Curvilinear Motion Has Two Parts',
+          explanation: 'On a curved path, acceleration splits into two perpendicular components. Tangential acceleration (at = dv/dt) changes speed. Normal acceleration (an = v^2/r) changes direction. At constant speed on a curve, only normal acceleration exists.',
+          hint: 'A car on a circular track at constant speed still accelerates toward the center.',
         },
         {
           id: 'u2-L1-Q5',
@@ -148,6 +162,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="5" y1="65" x2="75" y2="65" stroke="#6B7280" stroke-width="0.8"/><path d="M10,65 Q30,5 70,65" stroke="#58CC02" stroke-width="2" fill="none"/><line x1="10" y1="65" x2="25" y2="40" stroke="#A5E86C" stroke-width="1.2" stroke-dasharray="3,2"/><text x="12" y="50" font-size="3.5" fill="#A5E86C" font-family="sans-serif" transform="rotate(-55,12,50)">30 m/s</text><path d="M22,65 A12,12 0 0,1 17,57" stroke="#3B8700" stroke-width="0.8" fill="none"/><text x="25" y="60" font-size="4" fill="#3B8700" font-family="sans-serif">60\u00b0</text><line x1="35" y1="12" x2="35" y2="65" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="2,1.5" opacity="0.5"/><text x="37" y="38" font-size="3.5" fill="#3B8700" font-family="sans-serif">H_max</text><circle cx="35" cy="12" r="2" fill="#58CC02"/><text x="40" y="76" font-size="3.5" fill="#6B7280" font-family="sans-serif" text-anchor="middle">H = v\u00b2sin\u00b260\u00b0 / 2g</text></svg>',
           explanation: 'vy0 = 30sin60° = 25.98 m/s. At max height vy=0: h = vy0²/(2g) = 675/19.62 = 34.4 m. Only the vertical component matters for height.',
           hint: 'Use vy and v² = v0² - 2gh.',
+        },
+        {
+          id: 'u2-L1-T3',
+          type: 'teaching',
+          question: 'Relative Motion Between Objects',
+          explanation: 'To find the velocity of B relative to A, subtract A\'s velocity vector from B\'s: v_B/A = v_B - v_A. This works for any two objects. The magnitude and direction come from vector subtraction.',
+          hint: 'A boat crossing a river deals with relative motion between the boat and the current.',
         },
         {
           id: 'u2-L1-Q11',
@@ -426,6 +447,13 @@ export const unit2: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u2-L2-T1',
+          type: 'teaching',
+          question: 'Newton\'s Three Laws of Motion',
+          explanation: 'First law: objects stay at rest or in constant velocity unless a net force acts. Second law: F = ma, the net force equals mass times acceleration. Third law: every action has an equal and opposite reaction on a DIFFERENT body.',
+          hint: 'The third law means action/reaction forces never cancel because they act on different objects.',
+        },
+        {
           id: 'u2-L2-Q1',
           type: 'multiple-choice',
           question: 'Compared to pulling horizontally with the same force magnitude, what happens to the friction force?',
@@ -477,6 +505,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Flywheel (rotating) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <!-- Heavy rim (thick outer ring — stores rotational energy) --> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="4" fill="none"/> <circle cx="40" cy="40" r="24" stroke="#A5E86C" stroke-width="0.8" fill="none" opacity="0.12"/> <!-- Web disc --> <circle cx="40" cy="40" r="16" fill="#58CC02" opacity="0.03"/> <!-- Spokes (4 cardinal directions) --> <line x1="40" y1="12" x2="40" y2="68" stroke="#A5E86C" stroke-width="2.5" opacity="0.18" stroke-linecap="round"/> <line x1="12" y1="40" x2="68" y2="40" stroke="#A5E86C" stroke-width="2.5" opacity="0.18" stroke-linecap="round"/> <!-- Lightening holes (between spokes, common in flywheels) --> <circle cx="50" cy="28" r="4" fill="none" stroke="#A5E86C" stroke-width="0.6" opacity="0.1"/> <circle cx="52" cy="52" r="4" fill="none" stroke="#A5E86C" stroke-width="0.6" opacity="0.1"/> <circle cx="28" cy="52" r="4" fill="none" stroke="#A5E86C" stroke-width="0.6" opacity="0.1"/> <circle cx="30" cy="28" r="4" fill="none" stroke="#A5E86C" stroke-width="0.6" opacity="0.1"/> <!-- Rim balance marks (4 dots at 45° on rim) --> <circle cx="59.8" cy="20.2" r="2" fill="#3B8700" opacity="0.35"/> <circle cx="59.8" cy="59.8" r="2" fill="#3B8700" opacity="0.25"/> <circle cx="20.2" cy="59.8" r="2" fill="#3B8700" opacity="0.3"/> <circle cx="20.2" cy="20.2" r="2" fill="#3B8700" opacity="0.25"/> </g> <!-- Hub (static — shaft bore with keyway) --> <circle cx="40" cy="40" r="6" fill="#3B8700"/> <circle cx="40" cy="40" r="3" fill="white" opacity="0.12"/> <rect x="38.5" y="34" width="3" height="6" rx="0.5" fill="white" opacity="0.08"/> <!-- Angular velocity indicator (ω) --> <path d="M8,32 A14,14 0 0,1 8,48" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.2"/> <polygon points="6.5,47 8.5,51 10,46.5" fill="#3B8700" opacity="0.2"/> <text x="4" y="42" text-anchor="middle" font-size="6" fill="#3B8700" opacity="0.25" font-style="italic">ω</text> <!-- Motion blur arcs (pulsing) --> <path d="M70,30 Q76,40 70,50" stroke="#A5E86C" stroke-width="1.5" opacity="0.3" fill="none"> <animate attributeName="opacity" values="0.08;0.35;0.08" dur="0.7s" repeatCount="indefinite"/> </path> <path d="M74,34 Q79,40 74,46" stroke="#A5E86C" stroke-width="1" opacity="0.2" fill="none"> <animate attributeName="opacity" values="0.05;0.25;0.05" dur="0.7s" begin="0.2s" repeatCount="indefinite"/> </path> </svg>',
           explanation: 'For an unbanked curve, friction alone provides centripetal force: mu_s x mg = mv^2/r. Mass cancels, giving mu_s = v^2/(rg), or v = sqrt(mu_s x r x g).',
           hint: 'How does safe speed scale with the friction coefficient?',
+        },
+        {
+          id: 'u2-L2-T2',
+          type: 'teaching',
+          question: 'Free Body Diagrams are Essential',
+          explanation: 'To solve any force problem, draw a free body diagram: isolate the object, draw ALL forces on it (weight, normal, friction, tension, applied), then apply F = ma in each direction. For connected objects, draw separate diagrams for each body.',
+          hint: 'Always resolve forces into components along and perpendicular to the direction of motion.',
         },
         {
           id: 'u2-L2-Q5',
@@ -555,6 +590,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <path d="M10,68 L70,68 L70,28 Z" fill="#58CC02" opacity="0.06"/> <line x1="10" y1="68" x2="70" y2="28" stroke="#58CC02" stroke-width="3" stroke-linecap="round"/> <rect x="6" y="66" width="68" height="5" rx="2.5" fill="#58CC02" opacity="0.08"/> <g> <animateMotion dur="2.5s" repeatCount="indefinite" path="M22,54 L58,34" calcMode="spline" keyTimes="0;1" keySplines="0.1 0 0.9 1"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,0,0;720,0,0" dur="2.5s" repeatCount="indefinite"/> <circle r="7" fill="#58CC02" opacity="0.25"/> <circle r="7" stroke="#3B8700" stroke-width="2" fill="none"/> <line x1="-4" y1="0" x2="4" y2="0" stroke="#3B8700" stroke-width="1.5" opacity="0.4"/> <circle r="2.5" fill="#3B8700" opacity="0.4"/> </g> </g> <path d="M58,68 Q62,63 66,60" stroke="#3B8700" stroke-width="1.5" fill="none" opacity="0.3"/> <text x="56" y="64" font-size="7" fill="#3B8700" opacity="0.4" font-style="italic">&#x3b8;</text> </svg>',
           explanation: 'On a frictionless banked curve, the horizontal component of the normal force provides centripetal force: N sin(θ) = mv²/r, and the vertical component supports weight: N cos(θ) = mg.',
           hint: 'On a frictionless bank, only the normal force components provide centripetal force and support weight.',
+        },
+        {
+          id: 'u2-L2-T3',
+          type: 'teaching',
+          question: 'Circular Motion Needs Centripetal Force',
+          explanation: 'Moving in a circle requires a centripetal force pointing toward the center: F = mv^2/r. On a flat curve, friction provides this. On a banked curve, the normal force\'s horizontal component helps. At ideal banking speed, friction isn\'t needed at all.',
+          hint: 'Safe speed on a curve scales with the square root of the friction coefficient.',
         },
         {
           id: 'u2-L2-Q11',
@@ -834,6 +876,13 @@ export const unit2: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u2-L3-T1',
+          type: 'teaching',
+          question: 'Work and Kinetic Energy',
+          explanation: 'Work is force times distance in the force\'s direction: W = F*d*cos(theta). The work-energy theorem says net work equals the change in kinetic energy: W_net = 1/2 mv2^2 - 1/2 mv1^2. This is powerful when you care about speed at two positions without needing time.',
+          hint: 'Spring energy is 1/2 kx^2, and it scales with the square of compression.',
+        },
+        {
           id: 'u2-L3-Q1',
           type: 'multiple-choice',
           question: 'When would you prefer to use the work-energy method instead of Newton\'s second law (F=ma) to solve a dynamics problem?',
@@ -885,6 +934,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="5" y1="55" x2="75" y2="55" stroke="#6B7280" stroke-width="1"/><rect x="25" y="40" width="20" height="14" rx="2" fill="#58CC02" opacity="0.3" stroke="#3B8700" stroke-width="1.5"/><line x1="45" y1="47" x2="65" y2="47" stroke="#58CC02" stroke-width="1.8" stroke-linecap="round"/><polygon points="63,44.5 68,47 63,49.5" fill="#58CC02"/><text x="55" y="42" font-size="4" fill="#58CC02" font-family="sans-serif">motion</text><line x1="25" y1="47" x2="12" y2="47" stroke="#A5E86C" stroke-width="1.8" stroke-linecap="round"/><polygon points="14,44.5 10,47 14,49.5" fill="#A5E86C"/><text x="15" y="42" font-size="4" fill="#A5E86C" font-family="sans-serif">f_k</text><text x="40" y="68" font-size="4" fill="#3B8700" font-family="sans-serif" text-anchor="middle">W_f = \u2212f_k \u00b7 d</text><text x="40" y="78" font-size="3.5" fill="#6B7280" font-family="sans-serif" text-anchor="middle">Friction always does negative work</text></svg>',
           explanation: 'The 9,810 W is the ideal steady-state hydraulic/mechanical power.',
           hint: 'Think beyond the ideal calculation',
+        },
+        {
+          id: 'u2-L3-T2',
+          type: 'teaching',
+          question: 'Conservation of Energy',
+          explanation: 'In systems with only conservative forces (gravity, springs), total mechanical energy stays constant: KE + PE = constant. Friction is non-conservative, so it removes mechanical energy as heat. The work-energy theorem still works with friction: just include friction\'s negative work.',
+          hint: 'On a frictionless roller coaster, speed depends only on height change.',
         },
         {
           id: 'u2-L3-Q5',
@@ -964,6 +1020,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Coordinate axes (reference frame) --> <line x1="6" y1="74" x2="17" y2="74" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="16,72.5 19,74 16,75.5" fill="#3B8700" opacity="0.2"/> <text x="20" y="73" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">x</text> <line x1="6" y1="74" x2="6" y2="63" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="4.5,64 6,61 7.5,64" fill="#3B8700" opacity="0.2"/> <text x="4" y="61" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">y</text> <!-- Isolated body --> <circle cx="40" cy="40" r="13" fill="#58CC02" opacity="0.1"/> <circle cx="40" cy="40" r="13" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Center of mass dot --> <circle cx="40" cy="40" r="1.5" fill="#3B8700" opacity="0.35"/> <text x="40" y="44" text-anchor="middle" font-size="9" fill="#3B8700" font-weight="bold" font-style="italic">m</text> <!-- Weight W (downward from center — gravity) --> <g opacity="0"> <animate attributeName="opacity" values="0;0;1;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> <line x1="40" y1="53" x2="40" y2="69" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <polygon points="38,67 40,72 42,67" fill="#3B8700"/> <text x="46" y="67" font-size="7" fill="#3B8700" font-weight="bold" font-style="italic">W</text> </g> <!-- Normal N (upward — surface reaction) --> <g opacity="0"> <animate attributeName="opacity" values="0;0;1;1" dur="4s" begin="0.4s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> <line x1="40" y1="27" x2="40" y2="11" stroke="#58CC02" stroke-width="2" stroke-linecap="round"/> <polygon points="38,13 40,8 42,13" fill="#58CC02"/> <text x="46" y="15" font-size="7" fill="#58CC02" font-weight="bold" font-style="italic">N</text> </g> <!-- Friction f (leftward — opposing motion) --> <g opacity="0"> <animate attributeName="opacity" values="0;0;1;1" dur="4s" begin="0.8s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> <line x1="27" y1="40" x2="14" y2="40" stroke="#A5E86C" stroke-width="1.8" stroke-linecap="round"/> <polygon points="16,38 11,40 16,42" fill="#A5E86C"/> <text x="11" y="36" font-size="7" fill="#A5E86C" font-weight="bold" font-style="italic">f</text> </g> <!-- Applied force F (rightward — larger magnitude) --> <g opacity="0"> <animate attributeName="opacity" values="0;0;1;1" dur="4s" begin="1.2s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> <line x1="53" y1="40" x2="71" y2="40" stroke="#3B8700" stroke-width="2.5" stroke-linecap="round"/> <polygon points="69,37 75,40 69,43" fill="#3B8700"/> <text x="69" y="35" font-size="7" fill="#3B8700" font-weight="bold" font-style="italic">F</text> </g> <!-- Equilibrium equation (appears after all forces) --> <text x="40" y="78" text-anchor="middle" font-size="5.5" fill="#3B8700" opacity="0" font-style="italic"> <animate attributeName="opacity" values="0;0;0.3;0.3" dur="4s" begin="1.8s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> &#x3a3;F = 0 </text> </svg>',
           explanation: 'Work by applied force: W_F = 200 × 10 = 2000 J. Friction force: f = μ_k × mg = 0.3 × 50 × 9.81 = 147.15 N.',
           hint: 'Calculate work done by each force separately, then sum them.',
+        },
+        {
+          id: 'u2-L3-T3',
+          type: 'teaching',
+          question: 'Power is Work per Unit Time',
+          explanation: 'Power measures how fast energy is transferred: P = W/t, or for a constant force, P = F*v. A motor lifting a load at constant speed needs P = mg*v. Real motors also need extra power to cover efficiency losses.',
+          hint: 'Doubling the speed doubles the power needed to maintain it.',
         },
         {
           id: 'u2-L3-Q11',
@@ -1242,6 +1305,13 @@ export const unit2: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u2-L4-T1',
+          type: 'teaching',
+          question: 'Momentum and Impulse',
+          explanation: 'Momentum is mass times velocity (p = mv). Impulse is force times time (J = F*dt), and it equals the change in momentum. A larger force over a shorter time gives the same momentum change as a smaller force over a longer time.',
+          hint: 'Crumple zones increase collision time to reduce the peak force on passengers.',
+        },
+        {
           id: 'u2-L4-Q1',
           type: 'multiple-choice',
           question: 'A car crumple zone is designed to increase the duration of a crash. Using the impulse-momentum theorem, explain why this reduces injury risk',
@@ -1292,6 +1362,13 @@ export const unit2: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="65" x2="72" y2="65" stroke="#6B7280" stroke-width="0.8"/><line x1="10" y1="10" x2="10" y2="65" stroke="#6B7280" stroke-width="0.8"/><path d="M10,65 L20,60 L30,30 L40,10 L50,30 L60,60 L70,65" stroke="#58CC02" stroke-width="2" fill="none"/><path d="M10,65 L20,60 L30,30 L40,10 L50,30 L60,60 L70,65 Z" fill="#A5E86C" opacity="0.2"/><text x="40" y="50" font-size="4.5" fill="#3B8700" font-family="sans-serif" text-anchor="middle">J = \u222bF dt</text><text x="8" y="8" font-size="4" fill="#334155" font-family="sans-serif">F</text><text x="70" y="72" font-size="4" fill="#334155" font-family="sans-serif">t</text><text x="40" y="78" font-size="3.5" fill="#6B7280" font-family="sans-serif" text-anchor="middle">Impulse = area under F-t curve</text></svg>',
           explanation: 'Total energy is always conserved (first law of thermodynamics), but kinetic energy alone is not.',
+        },
+        {
+          id: 'u2-L4-T2',
+          type: 'teaching',
+          question: 'Types of Collisions',
+          explanation: 'Momentum is conserved in ALL collisions. Kinetic energy is only conserved in elastic collisions. In inelastic collisions, some KE converts to heat, sound, and deformation. Perfectly inelastic means the objects stick together.',
+          hint: 'Use momentum conservation first, then check energy to classify the collision.',
         },
         {
           id: 'u2-L4-Q5',
@@ -1371,6 +1448,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="33" y="15" width="14" height="35" rx="3" fill="#58CC02" opacity="0.3" stroke="#3B8700" stroke-width="1.5"/><polygon points="33,50 40,60 47,50" fill="#A5E86C" opacity="0.4" stroke="#3B8700" stroke-width="1"/><line x1="38" y1="60" x2="35" y2="72" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/><line x1="42" y1="60" x2="45" y2="72" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/><line x1="40" y1="60" x2="40" y2="75" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/><text x="50" y="72" font-size="3.5" fill="#3B8700" font-family="sans-serif">exhaust</text><line x1="40" y1="15" x2="40" y2="5" stroke="#58CC02" stroke-width="2" stroke-linecap="round"/><polygon points="37.5,7 40,2 42.5,7" fill="#58CC02"/><text x="50" y="8" font-size="4" fill="#58CC02" font-family="sans-serif">thrust</text><text x="50" y="35" font-size="3.5" fill="#334155" font-family="sans-serif">F = v_e dm/dt</text></svg>',
           explanation: 'Initial momentum = 0 (at rest). By conservation of momentum: 0 = m₁v₁ + m₂v₂ → 0 = 2(15) + 3(v₂) → v₂ = -30/3 = -10 m/s. The 3 kg piece moves at 10 m/s in the opposite direction.',
           hint: 'Total initial momentum is zero, so the momentum of the pieces must cancel.',
+        },
+        {
+          id: 'u2-L4-T3',
+          type: 'teaching',
+          question: 'Coefficient of Restitution',
+          explanation: 'The coefficient of restitution (e) measures bounciness. It\'s the ratio of separation speed to approach speed. e = 1 means perfectly elastic (no energy loss), e = 0 means perfectly inelastic (objects stick together).',
+          hint: 'A bouncy ball has e close to 1, while clay hitting a wall has e close to 0.',
         },
         {
           id: 'u2-L4-Q11',
@@ -1650,6 +1734,13 @@ export const unit2: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u2-L5-T1',
+          type: 'teaching',
+          question: 'Torque and Moment of Inertia',
+          explanation: 'Rotation follows the same pattern as F = ma, but for spinning: torque = I * alpha. Moment of inertia (I) is the rotational equivalent of mass. It depends on how mass is distributed: mass farther from the axis means larger I.',
+          hint: 'I = sum of (mass x distance^2) for every piece of the object.',
+        },
+        {
           id: 'u2-L5-Q1',
           type: 'multiple-choice',
           question: 'A flywheel designer needs to maximize energy storage for a given mass. How should they distribute the mass, and what formula justifies this?',
@@ -1701,6 +1792,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Flywheel (rotating) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> <!-- Heavy rim (thick outer ring — stores rotational energy) --> <circle cx="40" cy="40" r="28" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="40" r="28" stroke="#58CC02" stroke-width="4" fill="none"/> <circle cx="40" cy="40" r="24" stroke="#A5E86C" stroke-width="0.8" fill="none" opacity="0.12"/> <!-- Web disc --> <circle cx="40" cy="40" r="16" fill="#58CC02" opacity="0.03"/> <!-- Spokes (4 cardinal directions) --> <line x1="40" y1="12" x2="40" y2="68" stroke="#A5E86C" stroke-width="2.5" opacity="0.18" stroke-linecap="round"/> <line x1="12" y1="40" x2="68" y2="40" stroke="#A5E86C" stroke-width="2.5" opacity="0.18" stroke-linecap="round"/> <!-- Lightening holes (between spokes, common in flywheels) --> <circle cx="50" cy="28" r="4" fill="none" stroke="#A5E86C" stroke-width="0.6" opacity="0.1"/> <circle cx="52" cy="52" r="4" fill="none" stroke="#A5E86C" stroke-width="0.6" opacity="0.1"/> <circle cx="28" cy="52" r="4" fill="none" stroke="#A5E86C" stroke-width="0.6" opacity="0.1"/> <circle cx="30" cy="28" r="4" fill="none" stroke="#A5E86C" stroke-width="0.6" opacity="0.1"/> <!-- Rim balance marks (4 dots at 45° on rim) --> <circle cx="59.8" cy="20.2" r="2" fill="#3B8700" opacity="0.35"/> <circle cx="59.8" cy="59.8" r="2" fill="#3B8700" opacity="0.25"/> <circle cx="20.2" cy="59.8" r="2" fill="#3B8700" opacity="0.3"/> <circle cx="20.2" cy="20.2" r="2" fill="#3B8700" opacity="0.25"/> </g> <!-- Hub (static — shaft bore with keyway) --> <circle cx="40" cy="40" r="6" fill="#3B8700"/> <circle cx="40" cy="40" r="3" fill="white" opacity="0.12"/> <rect x="38.5" y="34" width="3" height="6" rx="0.5" fill="white" opacity="0.08"/> <!-- Angular velocity indicator (ω) --> <path d="M8,32 A14,14 0 0,1 8,48" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.2"/> <polygon points="6.5,47 8.5,51 10,46.5" fill="#3B8700" opacity="0.2"/> <text x="4" y="42" text-anchor="middle" font-size="6" fill="#3B8700" opacity="0.25" font-style="italic">ω</text> <!-- Motion blur arcs (pulsing) --> <path d="M70,30 Q76,40 70,50" stroke="#A5E86C" stroke-width="1.5" opacity="0.3" fill="none"> <animate attributeName="opacity" values="0.08;0.35;0.08" dur="0.7s" repeatCount="indefinite"/> </path> <path d="M74,34 Q79,40 74,46" stroke="#A5E86C" stroke-width="1" opacity="0.2" fill="none"> <animate attributeName="opacity" values="0.05;0.25;0.05" dur="0.7s" begin="0.2s" repeatCount="indefinite"/> </path> </svg>',
           explanation: 'Rotational kinetic energy KE = (1/2)*I*omega^2 scales with the SQUARE of angular velocity.',
           hint: 'Look at how omega appears in the KE formula',
+        },
+        {
+          id: 'u2-L5-T2',
+          type: 'teaching',
+          question: 'Rolling Without Slipping',
+          explanation: 'When a wheel rolls without slipping, the contact point has zero velocity. This gives the constraint v = omega*R, linking translational and rotational motion. Energy splits between translational KE (1/2 mv^2) and rotational KE (1/2 I*omega^2).',
+          hint: 'Objects with more rotational inertia roll slower down a hill.',
         },
         {
           id: 'u2-L5-Q5',
@@ -1763,6 +1861,13 @@ export const unit2: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axis of rotation --> <line x1="40" y1="5" x2="40" y2="75" stroke-width="0.5" stroke="#3B8700" opacity="0.25" stroke-dasharray="2,2"/> <text x="42" y="8" font-size="3" fill="#3B8700" opacity="0.4">axis</text> <!-- Rotating disc --> <ellipse cx="40" cy="40" rx="24" ry="8" stroke-width="0.8" stroke="#58CC02" fill="none"/> <ellipse cx="40" cy="40" rx="24" ry="8" fill="#58CC02" opacity="0.04"/> <!-- dm elements at different radii --> <rect x="15" y="38" width="3" height="3" rx="0.5" stroke-width="0.5" class="s-stroke-l s-fill-l" fill-opacity="0.2"> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> </rect> <rect x="55" y="38" width="3" height="3" rx="0.5" stroke-width="0.5" class="s-stroke-l s-fill-l" fill-opacity="0.2"> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> </rect> <rect x="28" y="35" width="3" height="3" rx="0.5" stroke-width="0.5" class="s-stroke-l s-fill-l" fill-opacity="0.15"> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> </rect> <rect x="48" y="42" width="3" height="3" rx="0.5" stroke-width="0.5" class="s-stroke-l s-fill-l" fill-opacity="0.15"> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="3s" repeatCount="indefinite"/> </rect> <!-- Radius line r --> <line x1="40" y1="40" x2="64" y2="40" stroke-width="0.5" stroke="#3B8700" opacity="0.4"/> <text x="52" y="38" font-size="3.5" fill="#3B8700" opacity="0.5">r</text> <!-- dm label --> <text x="18" y="36" font-size="3" fill="#A5E86C" opacity="0.5">dm</text> <!-- Formula --> <text x="40" y="60" text-anchor="middle" font-size="4.5" fill="#58CC02" opacity="0.5">I = ∫r²dm</text> <!-- Center point --> <circle cx="40" cy="40" r="1.5" fill="#58CC02" opacity="0.3"/> <!-- Rotation arrow --> <path d="M62,28 A26,10 0 0,1 62,52" stroke-width="0.5" stroke="#3B8700" opacity="0.3" fill="none"/> <polygon points="62,52 60,48 64,49" fill="#3B8700" opacity="0.3"/> <text x="67" y="42" font-size="3" fill="#3B8700" opacity="0.3">ω</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">rotational inertia</text> </svg>',
           explanation: 'Moment of inertia I = ∫r² dm, where r is the perpendicular distance from each mass element to the axis. Different axes mean different distances, so I changes.',
           hint: 'Does the distance of mass elements from the axis change when you pick a different axis?',
+        },
+        {
+          id: 'u2-L5-T3',
+          type: 'teaching',
+          question: 'Angular Momentum Conservation',
+          explanation: 'When no external torque acts, angular momentum L = I*omega stays constant. If a spinning object changes its moment of inertia (like a skater pulling in her arms), the angular velocity changes to compensate.',
+          hint: 'A figure skater spins faster by pulling her arms inward, reducing I.',
         },
         {
           id: 'u2-L5-Q10',
@@ -2056,6 +2161,13 @@ export const unit2: Unit = {
       xpReward: 30,
   levels: 4,
       questions: [
+        {
+          id: 'u2-L6-T1',
+          type: 'teaching',
+          question: 'What is Natural Frequency?',
+          explanation: 'Every spring-mass system has a natural frequency: omega_n = sqrt(k/m). Push it and let go, and it vibrates at this frequency on its own. If an external force matches this frequency, you get resonance, and amplitudes become very large.',
+          hint: 'Softer springs or heavier masses lower the natural frequency.',
+        },
         {
           id: 'u2-L6-Q1',
           type: 'multiple-choice',

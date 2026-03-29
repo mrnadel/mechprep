@@ -516,6 +516,13 @@ export const unit6: Unit = {
           hint: 'What the HGL physically represents in terms of pressure?'
         },
         {
+          id: 'u6-L2-T3',
+          type: 'teaching',
+          question: 'Energy line and HGL',
+          explanation: 'The energy line (EL) shows total head: P/(rho*g) + v^2/(2g) + z. The hydraulic grade line (HGL) is the EL minus velocity head. When the HGL drops below a pipe, pressure there is below atmospheric, which can cause cavitation.',
+          hint: 'Pitot tubes and venturi meters both use Bernoulli to convert pressure measurements into velocity.',
+        },
+        {
           id: 'u6-L2-Q5',
           type: 'multiple-choice',
           question: 'What is the fluid mechanics explanation for this problem?',
@@ -865,6 +872,20 @@ export const unit6: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u6-L3-T1',
+          type: 'teaching',
+          question: 'Laminar vs turbulent flow',
+          explanation: 'Flow in a pipe is either laminar (smooth, orderly layers) or turbulent (chaotic mixing). The Reynolds number Re = rho*v*D/mu decides which: Re < 2300 is laminar, Re > 4000 is turbulent, and in between is the transition zone.',
+          hint: 'Turn on a faucet slowly for laminar, then open it fully for turbulent.',
+        },
+        {
+          id: 'u6-L3-T2',
+          type: 'teaching',
+          question: 'Friction losses in pipes',
+          explanation: 'The Darcy-Weisbach equation gives friction head loss: h_f = f*(L/D)*(v^2/(2g)). The friction factor f depends on Re and the pipe\'s relative roughness (epsilon/D). You find f from the Moody chart or the Colebrook equation.',
+          hint: 'Doubling pipe length doubles friction loss. Halving diameter increases it roughly 32x.',
+        },
+        {
           id: 'u6-L3-Q1',
           type: 'multiple-choice',
           question: 'What is the fluid mechanics explanation?',
@@ -917,6 +938,13 @@ export const unit6: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="4" y="22" width="72" height="36" rx="10" fill="#58CC02" opacity="0.06"/> <rect x="4" y="22" width="72" height="36" rx="10" stroke="#3B8700" stroke-width="2" fill="none"/> <path d="M5,40 Q40,24 75,40" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,3" opacity="0.25" fill="none"/> <path d="M5,40 Q40,56 75,40" stroke="#A5E86C" stroke-width="1" stroke-dasharray="2,3" opacity="0.25" fill="none"/> <circle r="3" fill="#3B8700" opacity="0.6"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M8,40 L72,40"/> </circle> <circle r="2.5" fill="#58CC02" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M8,33 L72,33"/> </circle> <circle r="2.5" fill="#58CC02" opacity="0.4"> <animateMotion dur="1.5s" repeatCount="indefinite" path="M8,47 L72,47"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.35"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,27 L72,27"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.35"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,53 L72,53"/> </circle> <circle r="3" fill="#3B8700" opacity="0.4"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M8,40 L72,40" begin="0.6s"/> </circle> <circle r="2" fill="#A5E86C" opacity="0.25"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M8,27 L72,27" begin="1.1s"/> </circle> </svg>',
           explanation: 'The term "minor losses" is misleading — it refers to losses that are LOCAL rather than distributed along the pipe length. In reality, minor losses can dominate the total system loss.',
           hint: 'Calculate the equivalent pipe length of the fittings.'
+        },
+        {
+          id: 'u6-L3-T3',
+          type: 'teaching',
+          question: 'Minor losses and pipe networks',
+          explanation: 'Fittings, valves, bends, and expansions cause "minor" losses: h_m = K*(v^2/(2g)). Despite the name, these can dominate in short systems with many fittings. In parallel pipes, the head loss across each branch must be equal.',
+          hint: 'A valve that\'s half-closed can cause more loss than 50 meters of straight pipe.',
         },
         {
           id: 'u6-L3-Q5',
@@ -1274,6 +1302,20 @@ export const unit6: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u6-L4-T1',
+          type: 'teaching',
+          question: 'Two main types of pumps',
+          explanation: 'Centrifugal pumps use a spinning impeller to convert velocity into pressure. They\'re great for high flow at moderate pressure. Positive displacement (PD) pumps trap and push fixed volumes, making them better for high-viscosity fluids or high-pressure, low-flow jobs.',
+          hint: 'Most water supply systems use centrifugal pumps. Hydraulic systems often use PD pumps.',
+        },
+        {
+          id: 'u6-L4-T2',
+          type: 'teaching',
+          question: 'Pump head, NPSH, and cavitation',
+          explanation: 'Pump "head" is the energy a pump adds, measured in meters of fluid. NPSH (net positive suction head) is the margin above the fluid\'s vapor pressure at the pump inlet. If NPSH is too low, bubbles form and collapse violently, which is called cavitation.',
+          hint: 'Hot liquids have higher vapor pressure, so they cavitate more easily.',
+        },
+        {
           id: 'u6-L4-Q1',
           type: 'multiple-choice',
           question: 'Centrifugal vs. positive displacement pump for high-viscosity fluid: which is better suited?',
@@ -1326,6 +1368,13 @@ export const unit6: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Volute casing --> <path d="M40,14 A26,26 0 1,1 66,40 Q68,50 60,56 L60,52" stroke-width="1" stroke="#58CC02" fill="none"/> <circle cx="40" cy="40" r="20" stroke-width="0.5" stroke="#58CC02" fill="none" opacity="0.3"/> <!-- Impeller (rotating vanes) --> <g> <path d="M40,40 Q34,30 40,22" stroke-width="1" stroke="#58CC02" fill="none"/> <path d="M40,40 Q50,34 56,40" stroke-width="1" stroke="#58CC02" fill="none" transform="rotate(0,40,40)"/> <path d="M40,40 Q46,50 40,58" stroke-width="1" stroke="#58CC02" fill="none"/> <path d="M40,40 Q30,46 24,40" stroke-width="1" stroke="#58CC02" fill="none"/> <path d="M40,40 Q34,50 30,56" stroke-width="1" stroke="#58CC02" fill="none"/> <path d="M40,40 Q50,30 56,24" stroke-width="1" stroke="#58CC02" fill="none"/> <circle cx="40" cy="40" r="4" stroke-width="0.6" stroke="#58CC02" fill="#58CC02" fill-opacity="0.08"/> <animateTransform attributeName="transform" type="rotate" values="0,40,40;360,40,40" dur="2s" repeatCount="indefinite"/> </g> <!-- Inlet (eye) --> <rect x="2" y="36" width="18" height="8" rx="1" stroke-width="0.6" stroke="#58CC02" fill="none"/> <text x="11" y="42" font-size="2.5" fill="#3B8700" opacity="0.4" text-anchor="middle">inlet</text> <!-- Discharge --> <rect x="58" y="50" width="16" height="7" rx="1" stroke-width="0.6" stroke="#58CC02" fill="none"/> <text x="66" y="55.5" font-size="2.5" fill="#3B8700" opacity="0.4" text-anchor="middle">outlet</text> <!-- Flow particles (inlet to impeller to discharge) --> <circle r="1" fill="#A5E86C" opacity="0.7"> <animate attributeName="cx" values="4;20;40;60;74" dur="2s" repeatCount="indefinite"/> <animate attributeName="cy" values="40;40;40;53;53" dur="2s" repeatCount="indefinite"/> </circle> <circle r="1" fill="#A5E86C" opacity="0.7"> <animate attributeName="cx" values="4;20;40;60;74" dur="2s" repeatCount="indefinite" begin="0.7s"/> <animate attributeName="cy" values="40;40;40;53;53" dur="2s" repeatCount="indefinite" begin="0.7s"/> </circle> <circle r="1" fill="#A5E86C" opacity="0.7"> <animate attributeName="cx" values="4;20;40;60;74" dur="2s" repeatCount="indefinite" begin="1.4s"/> <animate attributeName="cy" values="40;40;40;53;53" dur="2s" repeatCount="indefinite" begin="1.4s"/> </circle> <!-- Rotation label --> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">radial flow machine</text> </svg>',
           explanation: 'The system curve represents the total head the piping system requires at each flow rate: H_system = H_static + K_total × Q². Closing a valve increases K_total, making the parabola steeper.',
           hint: 'Draw the pump curve and system curve.'
+        },
+        {
+          id: 'u6-L4-T3',
+          type: 'teaching',
+          question: 'Pump curves and affinity laws',
+          explanation: 'A pump curve plots head vs. flow rate. The operating point is where the pump curve crosses the system curve. The affinity laws let you scale performance with speed: flow is proportional to speed, head to speed squared, and power to speed cubed.',
+          hint: 'Doubling pump speed quadruples the head but increases power 8x.',
         },
         {
           id: 'u6-L4-Q5',
@@ -1683,6 +1732,20 @@ export const unit6: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u6-L5-T1',
+          type: 'teaching',
+          question: 'What is dimensional analysis?',
+          explanation: 'Dimensional analysis reduces the number of variables in a problem by grouping them into dimensionless ratios. The Buckingham Pi theorem says if you have n variables and k fundamental dimensions (like M, L, T), you can form n-k independent dimensionless groups.',
+          hint: 'Instead of testing 7 separate variables, you might only need 4 dimensionless groups.',
+        },
+        {
+          id: 'u6-L5-T2',
+          type: 'teaching',
+          question: 'Common dimensionless numbers',
+          explanation: 'Reynolds number (Re = rho*v*L/mu) compares inertia to viscous forces. Froude number (Fr = v/sqrt(g*L)) compares inertia to gravity. Mach number (Ma = v/c) compares flow speed to sound speed. Matching these between model and prototype is called similitude.',
+          hint: 'For pipe flow, match Re. For ship waves, match Fr. For supersonic jets, match Ma.',
+        },
+        {
           id: 'u6-L5-Q1',
           type: 'multiple-choice',
           question: 'Why is dimensional analysis such a powerful tool in engineering,?',
@@ -1735,6 +1798,13 @@ export const unit6: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Low-pressure zone above (subtle) --> <path d="M10,42 Q20,42 32,30 Q48,24 62,32 Q72,37 76,42 L76,20 L0,20 L0,42 Z" fill="#58CC02" opacity="0.03"/> <!-- Cambered airfoil — thicker top, flatter bottom --> <path d="M10,42 Q20,42 32,30 Q48,24 62,32 Q72,37 76,42 Q72,44 62,46 Q48,50 32,47 Q20,44 10,42 Z" fill="#58CC02" opacity="0.22"/> <path d="M10,42 Q20,42 32,30 Q48,24 62,32 Q72,37 76,42 Q72,44 62,46 Q48,50 32,47 Q20,44 10,42 Z" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Chord line (angle of attack reference) --> <line x1="10" y1="42" x2="76" y2="42" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="2,3" opacity="0.15"/> <!-- Upper streamlines — closer together = faster flow, lower pressure --> <path d="M0,18 Q35,15 55,17 Q72,19 80,19" stroke="#A5E86C" stroke-width="0.6" fill="none" opacity="0.2"/> <path d="M0,25 Q18,23 32,20 Q52,22 70,26 L80,27" stroke="#A5E86C" stroke-width="0.7" fill="none" opacity="0.22"/> <path d="M0,32 Q15,31 24,26 Q40,21 56,27 Q70,32 80,34" stroke="#A5E86C" stroke-width="0.7" fill="none" opacity="0.25"/> <!-- Lower streamlines — more spread = slower flow, higher pressure --> <path d="M0,52 Q18,52 32,49 Q52,47 70,49 L80,50" stroke="#A5E86C" stroke-width="0.6" fill="none" opacity="0.18"/> <path d="M0,58 Q35,57 55,56 Q72,57 80,58" stroke="#A5E86C" stroke-width="0.6" fill="none" opacity="0.15"/> <path d="M0,64 Q40,63 80,64" stroke="#A5E86C" stroke-width="0.5" fill="none" opacity="0.12"/> <!-- Upper particles — FAST (Bernoulli: low pressure = high velocity) --> <circle r="1.8" fill="#3B8700" opacity="0.5"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M0,32 Q15,31 24,26 Q40,21 56,27 Q70,32 80,34"/> </circle> <circle r="1.8" fill="#3B8700" opacity="0.4"> <animateMotion dur="1.2s" repeatCount="indefinite" path="M0,32 Q15,31 24,26 Q40,21 56,27 Q70,32 80,34" begin="0.6s"/> </circle> <circle r="1.6" fill="#3B8700" opacity="0.4"> <animateMotion dur="1.4s" repeatCount="indefinite" path="M0,25 Q18,23 32,20 Q52,22 70,26 L80,27" begin="0.2s"/> </circle> <circle r="1.5" fill="#58CC02" opacity="0.3"> <animateMotion dur="1.6s" repeatCount="indefinite" path="M0,18 Q35,15 55,17 Q72,19 80,19" begin="0.4s"/> </circle> <!-- Lower particles — SLOW (higher pressure = lower velocity) --> <circle r="1.8" fill="#58CC02" opacity="0.3"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M0,52 Q18,52 32,49 Q52,47 70,49 L80,50" begin="0.3s"/> </circle> <circle r="1.6" fill="#58CC02" opacity="0.25"> <animateMotion dur="2.4s" repeatCount="indefinite" path="M0,58 Q35,57 55,56 Q72,57 80,58" begin="0.7s"/> </circle> <circle r="1.5" fill="#A5E86C" opacity="0.2"> <animateMotion dur="2.6s" repeatCount="indefinite" path="M0,64 Q40,63 80,64" begin="0.5s"/> </circle> <!-- Stagnation point at leading edge --> <circle cx="10" cy="42" r="1.5" fill="#3B8700" opacity="0.35"> <animate attributeName="r" values="1.5;2.2;1.5" dur="2s" repeatCount="indefinite"/> <animate attributeName="opacity" values="0.35;0.15;0.35" dur="2s" repeatCount="indefinite"/> </circle> <!-- Lift arrow (upward) --> <line x1="42" y1="30" x2="42" y2="12" stroke="#3B8700" stroke-width="2" opacity="0.4" stroke-linecap="round"/> <polygon points="39,15 42,8 45,15" fill="#3B8700" opacity="0.45"/> <text x="48" y="12" font-size="6" fill="#3B8700" opacity="0.4" font-weight="bold">L</text> <!-- Drag arrow (rightward, smaller) --> <line x1="76" y1="42" x2="76" y2="42" stroke="#3B8700" stroke-width="0" opacity="0"/> <line x1="62" y1="55" x2="72" y2="55" stroke="#3B8700" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/> <polygon points="70,53 75,55 70,57" fill="#3B8700" opacity="0.3"/> <text x="72" y="62" font-size="5" fill="#3B8700" opacity="0.25" font-weight="bold">D</text> </svg>',
           explanation: 'To increase Re without increasing V, you decrease ν. Two approaches: (1) Pressurized tunnels: increasing air pressure increases ρ while μ is nearly independent of pressure, so ν = μ/ρ drops.',
           hint: 'Re = VL/ν.'
+        },
+        {
+          id: 'u6-L5-T3',
+          type: 'teaching',
+          question: 'Similitude and model testing',
+          explanation: 'For a scale model to predict full-size behavior, you need similitude: geometric (same shape), kinematic (same velocity ratios), and dynamic (same force ratios). In practice, you usually can\'t match all dimensionless numbers at once, so you pick the most important one.',
+          hint: 'Ship models match Froude number because wave drag dominates. Wind tunnels match Reynolds number.',
         },
         {
           id: 'u6-L5-Q5',

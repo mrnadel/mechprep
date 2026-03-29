@@ -17,6 +17,13 @@ export const unit7: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u7-L1-T1',
+          type: 'teaching',
+          question: 'The Tensile Test',
+          explanation: 'A tensile test pulls a specimen until it breaks, producing a stress-strain curve. The key values are yield strength (where permanent deformation starts), ultimate tensile strength (the peak), and elongation at fracture (a measure of ductility).',
+          hint: 'The slope of the initial straight-line region is the elastic modulus (stiffness).',
+        },
+        {
           id: 'u7-L1-Q1',
           type: 'multiple-choice',
           question: 'Why is reduction in area often a better ductility measure than percent elongation?',
@@ -95,6 +102,13 @@ export const unit7: Unit = {
           explanation: 'Beach marks are the hallmark of fatigue failure. They represent the position of the crack front at different stages of growth, caused by variations in loading or environmental conditions.',
           hint: 'The smooth, progressively spreading region with curved.'
                 },
+        {
+          id: 'u7-L1-T2',
+          type: 'teaching',
+          question: 'Hardness, Creep, and Fatigue',
+          explanation: 'Hardness tests (Rockwell, Brinell, Vickers) measure resistance to indentation. Creep is slow, permanent deformation under constant stress at high temperature. Fatigue is cracking from repeated cyclic loading, even well below the yield strength.',
+          hint: 'The S-N curve shows how many cycles a material survives at a given stress level.',
+        },
         {
           id: 'u7-L1-Q7',
           type: 'multiple-choice',
@@ -276,6 +290,13 @@ export const unit7: Unit = {
           hint: "how the specimen is held — one is a beam.",
         },
         {
+          id: 'u7-L1-T3',
+          type: 'teaching',
+          question: 'Fracture Toughness and K_IC',
+          explanation: 'Fracture toughness (K_IC) measures how well a material resists crack growth. Higher K_IC means cracks need more energy to spread. It\'s the single most important property for parts with existing flaws or stress concentrations.',
+          hint: 'K_IC is tested using pre-cracked specimens loaded until the crack propagates.',
+        },
+        {
           id: 'u7-L1-Q20',
           type: 'true-false',
           question: "Modulus of resilience = area under the curve up to fracture.",
@@ -423,6 +444,13 @@ export const unit7: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u7-L2-T1',
+          type: 'teaching',
+          question: 'The Iron-Carbon Phase Diagram',
+          explanation: 'The iron-carbon diagram is the roadmap for steel heat treatment. It shows which phases (ferrite, austenite, cementite) exist at each temperature and carbon content. The key point is the eutectoid at 0.8% C and 727 degrees C, where austenite transforms into pearlite (a layered mix of ferrite and cementite).',
+          hint: 'Steels below 0.8% C are hypoeutectoid. Above 0.8% C are hypereutectoid.',
+        },
+        {
           id: 'u7-L2-Q1',
           type: 'multiple-choice',
           question: 'Why can austenite (FCC iron) dissolve much more carbon than ferrite (BCC iron)?',
@@ -501,6 +529,13 @@ export const unit7: Unit = {
           explanation: 'Temper embrittlement is a loss of toughness that occurs when certain steels are tempered in the 250-350°C range (Type I / TME) or slowly cooled through 375-575°C (Type II). It is caused by the segregation of impurity elements (P, Sn, Sb, As) to prior austenite grain boundaries, weakening them.',
           hint: 'This phenomenon makes the steel less tough despite.'
                 },
+        {
+          id: 'u7-L2-T2',
+          type: 'teaching',
+          question: 'Quenching, Tempering, and Annealing',
+          explanation: 'Quenching cools steel rapidly (in water or oil) to trap carbon in the crystal lattice, forming martensite: extremely hard but brittle. Tempering reheats quenched steel to a moderate temperature to restore some toughness. Annealing is slow furnace cooling that produces the softest, most ductile condition.',
+          hint: 'Almost all quenched parts are tempered before use to avoid cracking.',
+        },
         {
           id: 'u7-L2-Q7',
           type: 'multiple-choice',
@@ -693,6 +728,13 @@ export const unit7: Unit = {
           hint: "The hardening mechanism in nitriding is compound formation."
         },
         {
+          id: 'u7-L2-T3',
+          type: 'teaching',
+          question: 'Surface Hardening Methods',
+          explanation: 'Sometimes you want a hard surface and a tough core. Carburizing adds carbon to a low-carbon steel surface at high temperature, then quenches to form martensite on the outside only. Nitriding diffuses nitrogen into the surface without quenching. Induction hardening heats just the surface with electromagnetic fields.',
+          hint: 'Each method targets a different balance of cost, depth, and distortion.',
+        },
+        {
           id: 'u7-L2-Q21',
           type: 'multiple-choice',
           question: "A hypoeutectoid steel (0.4% C) is heated to 780°C and slowly cooled. What microstructural constituents will be present at room temperature and in what order did they form?",
@@ -839,6 +881,13 @@ export const unit7: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u7-L3-T1',
+          type: 'teaching',
+          question: 'Casting Basics',
+          explanation: 'Casting pours molten metal into a mold cavity shaped like the final part. Sand casting is cheap and handles large parts but has rough surfaces. Investment casting (lost-wax) gives tight tolerances and smooth finishes for complex shapes. Die casting injects metal under pressure for high-volume, precise parts.',
+          hint: 'Choose the casting process based on volume, part size, tolerance, and complexity.',
+        },
+        {
           id: 'u7-L3-Q1',
           type: 'multiple-choice',
           question: 'A structural bracket must withstand a static tensile load of 45 kN, operate at temperatures up to 150°C, weigh as little as possible, and be produced in batches of 5,000 units/year. The bracket has a complex 3D geometry with internal ribs and thin walls (2.5 mm). Considering material properties, manufacturability, and cost, which material + process combination is the best choice?',
@@ -925,6 +974,13 @@ export const unit7: Unit = {
           explanation: 'Draft angles are essential for pattern withdrawal from the sand mold. Without draft, the pattern would drag against the mold walls during removal, collapsing the cavity.',
           hint: 'This taper prevents the mold cavity from being damaged.'
                 },
+        {
+          id: 'u7-L3-T2',
+          type: 'teaching',
+          question: 'Casting Defects and Riser Design',
+          explanation: 'Metals shrink as they solidify, so castings need risers: extra reservoirs of liquid metal that feed the part as it contracts. If the riser freezes first, the casting gets shrinkage porosity (internal voids). Draft angles on vertical surfaces let the pattern pull out of the sand mold without damage.',
+          hint: 'The riser must always solidify after the casting itself.',
+        },
         {
           id: 'u7-L3-Q7',
           type: 'multiple-choice',
@@ -1073,6 +1129,13 @@ export const unit7: Unit = {
 
           explanation: "During deep drawing, thickness changes do occur. The blank thins at the punch nose radius and thickens at the flange. Excessive thinning at the punch radius leads to tearing.",
           hint: "To the material at different locations: the punch nose.",
+        },
+        {
+          id: 'u7-L3-T3',
+          type: 'teaching',
+          question: 'Metal Forming Processes',
+          explanation: 'Forming reshapes solid metal without removing material. Forging presses or hammers hot/cold metal into shape, producing superior grain structure. Rolling squeezes metal between rotating rolls to make sheets or bars. Extrusion pushes metal through a die to create long profiles (like squeezing toothpaste).',
+          hint: 'Formed parts are generally stronger than cast parts because the grain flow follows the shape.',
         },
         {
           id: 'u7-L3-Q17',
@@ -1285,6 +1348,13 @@ export const unit7: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u7-L4-T1',
+          type: 'teaching',
+          question: 'Turning, Milling, and Drilling',
+          explanation: 'In turning, the workpiece spins while a single-point tool removes material (lathes). In milling, a rotating multi-tooth cutter moves across a stationary workpiece. Drilling uses a rotating bit to make holes. The 3 key cutting parameters are speed (m/min), feed (mm/rev), and depth of cut (mm).',
+          hint: 'Climb milling (cutter rotation matches feed direction) gives a better finish than conventional milling.',
+        },
+        {
           id: 'u7-L4-Q1',
           type: 'multiple-choice',
           question: 'Facing a large-diameter workpiece from the outside edge toward the center. If the spindle speed is held constant (G97), what happens to the cutting conditions as the tool moves inward?',
@@ -1363,6 +1433,13 @@ export const unit7: Unit = {
           explanation: 'The theoretical arithmetic average roughness in turning is approximately Ra ≈ f²/(32 × r), where f is the feed per revolution and r is the tool nose radius. A larger nose radius or smaller feed produces a better finish.05–0.15 mm/rev) and tools with large nose radii (0.8–1.6 mm).',
           hint: 'The formula is Ra ≈ f²/(32r). What is r?'
                 },
+        {
+          id: 'u7-L4-T2',
+          type: 'teaching',
+          question: 'Tool Life and Surface Finish',
+          explanation: 'Taylor\'s tool life equation (VT^n = C) relates cutting speed to how long a tool lasts. Higher speed means shorter tool life. Surface roughness in turning follows Ra = f^2/(32r), where f is feed rate and r is the tool nose radius. Smaller feed or bigger nose radius gives a smoother finish.',
+          hint: 'Increasing feed rate hurts tool life less than increasing cutting speed.',
+        },
         {
           id: 'u7-L4-Q7',
           type: 'multiple-choice',
@@ -1559,6 +1636,13 @@ export const unit7: Unit = {
           hint: "The programmer programs the part shape."
         },
         {
+          id: 'u7-L4-T3',
+          type: 'teaching',
+          question: 'CNC Programming Essentials',
+          explanation: 'CNC machines follow G-code instructions. G00 is rapid positioning (non-cutting move), G01 is linear cutting at a set feed rate, and G02/G03 cut circular arcs. G96 activates constant surface speed mode, which automatically adjusts RPM as diameter changes during facing.',
+          hint: 'Cutter compensation (G41/G42) lets you program the actual part shape instead of the tool center path.',
+        },
+        {
           id: 'u7-L4-Q21',
           type: 'multiple-choice',
           question: "Why use coated carbide inserts (TiN, TiAlN) vs uncoated?",
@@ -1703,6 +1787,13 @@ export const unit7: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u7-L5-T1',
+          type: 'teaching',
+          question: 'Additive Manufacturing (3D Printing)',
+          explanation: 'Additive manufacturing builds parts layer by layer instead of cutting material away. FDM extrudes melted plastic filament. SLA cures liquid resin with UV light. SLS sinters powder with a laser. For metals, DMLS/SLM fuses metal powder with a high-power laser. AM excels at complex geometries and low-volume production but parts are often weaker in the build direction.',
+          hint: 'Metal AM parts almost always need post-build heat treatment to relieve residual stresses.',
+        },
+        {
           id: 'u7-L5-Q1',
           type: 'multiple-choice',
           question: 'Your team is considering metal 3D printing (DMLS/SLM) for a titanium aerospace bracket currently machined from billet. The machined version wastes 90% of the raw material. What factors would you evaluate to decide if switching to additive manufacturing is justified?',
@@ -1791,6 +1882,13 @@ export const unit7: Unit = {
           explanation: 'Sink marks are depressions on the surface of injection-molded parts caused by differential shrinkage. Thick sections cool more slowly than thin sections, and as the interior solidifies and shrinks, it pulls the already-solidified outer skin inward.',
           hint: 'This common injection molding defect appears as a.'
                 },
+        {
+          id: 'u7-L5-T2',
+          type: 'teaching',
+          question: 'Injection Molding Basics',
+          explanation: 'Injection molding melts plastic pellets and injects them under high pressure into a metal mold cavity. It\'s the go-to process for high-volume plastic parts. Key design rules: uniform wall thickness prevents warping and sink marks, draft angles let the part eject from the mold, and the gate is where plastic enters the cavity.',
+          hint: 'Sink marks appear on thick sections because the interior shrinks as it cools.',
+        },
         {
           id: 'u7-L5-Q7',
           type: 'multiple-choice',
@@ -1941,6 +2039,13 @@ export const unit7: Unit = {
 
           explanation: "Topology optimization starts with a design space (maximum envelope), loads, constraints, and boundary conditions, then iteratively removes material from low-stress regions while maintaining structural requirements. The result is often an organic, bone-like structure that places material only where it is needed.",
           hint: "Algorithms distribute material optimally."
+        },
+        {
+          id: 'u7-L5-T3',
+          type: 'teaching',
+          question: 'Design for Manufacturing (DFM)',
+          explanation: 'DFM means designing parts so they\'re easy and cheap to produce. For injection molding: keep wall thickness uniform, add draft angles, avoid sharp internal corners, and round out features. For sheet metal: respect minimum bend radii and keep holes away from bend lines. Unnecessary tight tolerances add cost.',
+          hint: 'Always ask: does this tolerance actually matter for the part\'s function?',
         },
         {
           id: 'u7-L5-Q17',
@@ -2157,6 +2262,13 @@ export const unit7: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u7-L6-T1',
+          type: 'teaching',
+          question: 'Welding Processes Overview',
+          explanation: 'MIG (GMAW) feeds a solid wire electrode with shielding gas, great for speed and ease. TIG (GTAW) uses a non-consumable tungsten electrode with a separate filler rod, giving the cleanest, most precise welds. Stick (SMAW) uses a flux-coated electrode and works well outdoors. Each process suits different materials, thicknesses, and quality requirements.',
+          hint: 'TIG is the go-to for stainless steel and aluminum when weld quality is critical.',
+        },
+        {
           id: 'u7-L6-Q1',
           type: 'multiple-choice',
           question: 'A fabrication shop must weld 6 mm thick 304 stainless steel panels for a food-processing vessel requiring high-quality, porosity-free welds with minimal spatter and excellent corrosion resistance in the weld zone. Which welding process is the best choice?',
@@ -2237,6 +2349,13 @@ export const unit7: Unit = {
           explanation: 'Joining aluminum to steel is a classic dissimilar-metal problem. Fusion welding creates brittle Fe-Al intermetallic compounds that crack easily.',
           hint: 'Fusion welding creates brittle intermetallics.'
                 },
+        {
+          id: 'u7-L6-T2',
+          type: 'teaching',
+          question: 'HAZ, Joint Types, and Fillet Welds',
+          explanation: 'The heat-affected zone (HAZ) is the base metal next to the weld that got hot enough to change its microstructure but didn\'t melt. It\'s often the weakest area. Fillet welds (triangular cross-section) join perpendicular surfaces. The load-carrying dimension is the throat, which equals 0.707 times the leg size.',
+          hint: 'Butt joints connect plates edge-to-edge. Lap joints overlap them. T-joints meet at 90 degrees.',
+        },
         {
           id: 'u7-L6-Q7',
           type: 'multiple-choice',
@@ -2435,6 +2554,13 @@ export const unit7: Unit = {
 
           explanation: "AWS D1.1 and most structural codes require a minimum overlap of 5× the thinner plate thickness for fillet-welded lap joints. Insufficient overlap creates: (1) High peeling/rotation forces on the fillet welds.",
           hint: "Short overlaps cause the fillet welds to experience."
+        },
+        {
+          id: 'u7-L6-T3',
+          type: 'teaching',
+          question: 'Weld Defects and Inspection',
+          explanation: 'Common weld defects include porosity (gas bubbles trapped in the weld), lack of fusion (weld metal didn\'t bond to the base metal), and cracking (from residual stress or hydrogen). Radiographic testing (RT) reveals internal defects on film. Magnetic particle inspection (MPI) finds surface cracks in ferromagnetic materials.',
+          hint: 'High carbon equivalent steels need preheating to prevent hydrogen-induced cracking.',
         },
         {
           id: 'u7-L6-Q21',

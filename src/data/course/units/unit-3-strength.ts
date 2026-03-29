@@ -17,6 +17,13 @@ export const unit3: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u3-L1-T1',
+          type: 'teaching',
+          question: 'What Are Stress and Strain?',
+          explanation: 'Stress is force divided by area (sigma = F/A), measured in Pa or MPa. Strain is the change in length divided by original length (epsilon = delta_L/L), and it\'s dimensionless. Stress tells you how hard the material is working. Strain tells you how much it\'s deforming.',
+          hint: 'Stress depends on geometry and load. Strain also depends on the material\'s stiffness (E).',
+        },
+        {
           id: 'u3-L1-Q1',
           type: 'multiple-choice',
           question: 'Same load and dimensions on aluminum vs. steel rods. How do stress and strain compare?',
@@ -67,6 +74,13 @@ export const unit3: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes --> <line x1="12" y1="68" x2="74" y2="68" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <line x1="12" y1="68" x2="12" y2="8" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <polygon points="74,66.5 74,69.5 76,68" fill="#3B8700" opacity="0.4"/> <polygon points="10.5,8 13.5,8 12,6" fill="#3B8700" opacity="0.4"/> <text x="44" y="77" text-anchor="middle" font-size="7" fill="#3B8700" opacity="0.4" font-style="italic">&#x3b5;</text> <text x="7" y="38" text-anchor="middle" font-size="7" fill="#3B8700" opacity="0.4" font-style="italic">&#x3c3;</text> <!-- Yield stress reference line --> <line x1="12" y1="32" x2="20" y2="32" stroke="#A5E86C" stroke-width="0.7" stroke-dasharray="1.5,2" opacity="0"> <animate attributeName="opacity" values="0;0;0.3;0.3;0" keyTimes="0;0.08;0.12;0.82;1" dur="6s" repeatCount="indefinite"/> </line> <!-- UTS reference line --> <line x1="12" y1="16" x2="50" y2="16" stroke="#A5E86C" stroke-width="0.7" stroke-dasharray="1.5,2" opacity="0"> <animate attributeName="opacity" values="0;0;0.25;0.25;0" keyTimes="0;0.35;0.4;0.82;1" dur="6s" repeatCount="indefinite"/> </line> <!-- Stress-Strain curve — animated progressive draw --> <path d="M12,68 L18,32 Q22,28 28,24 Q38,18 48,16 Q54,16 58,22 L64,30" stroke="#58CC02" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="110" stroke-dashoffset="110"> <animate attributeName="stroke-dashoffset" values="110;0;0;110" keyTimes="0;0.55;0.82;1" dur="6s" repeatCount="indefinite"/> </path> <!-- Yield point marker — appears as curve passes through --> <g opacity="0"> <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.08;0.12;0.82;1" dur="6s" repeatCount="indefinite"/> <circle cx="18" cy="32" r="3" stroke="#3B8700" stroke-width="1.2" stroke-dasharray="2,2" fill="none"/> <text x="6" y="30" font-size="4.5" fill="#3B8700" opacity="0.7">σ_y</text> </g> <!-- UTS marker — appears at peak --> <g opacity="0"> <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.35;0.4;0.82;1" dur="6s" repeatCount="indefinite"/> <circle cx="48" cy="16" r="3" stroke="#3B8700" stroke-width="1.2" stroke-dasharray="2,2" fill="none"/> <text x="50" y="12" font-size="4.5" fill="#3B8700" opacity="0.7">UTS</text> </g> <!-- Fracture X marker — appears at end --> <g opacity="0"> <animate attributeName="opacity" values="0;0;0.6;0.6;0" keyTimes="0;0.52;0.56;0.82;1" dur="6s" repeatCount="indefinite"/> <line x1="61" y1="27" x2="67" y2="33" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="67" y1="27" x2="61" y2="33" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <text x="67" y="25" font-size="4" fill="#3B8700" opacity="0.6">F</text> </g> <!-- Tracing dot — follows the curve drawing --> <circle r="3.5" fill="#3B8700"> <animateMotion dur="6s" repeatCount="indefinite" path="M12,68 L18,32 Q22,28 28,24 Q38,18 48,16 Q54,16 58,22 L64,30" keyPoints="0;1;1;0" keyTimes="0;0.55;0.82;1" calcMode="linear"/> <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.55;0.56;1" dur="6s" repeatCount="indefinite"/> </circle> <circle r="1.5" fill="white" opacity="0.5"> <animateMotion dur="6s" repeatCount="indefinite" path="M12,68 L18,32 Q22,28 28,24 Q38,18 48,16 Q54,16 58,22 L64,30" keyPoints="0;1;1;0" keyTimes="0;0.55;0.82;1" calcMode="linear"/> <animate attributeName="opacity" values="0.5;0.5;0;0" keyTimes="0;0.55;0.56;1" dur="6s" repeatCount="indefinite"/> </circle> <!-- Elastic modulus slope indicator (E) --> <line x1="22" y1="68" x2="28" y2="32" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="3,3" opacity="0"> <animate attributeName="opacity" values="0;0;0.2;0.2;0" keyTimes="0;0.12;0.16;0.82;1" dur="6s" repeatCount="indefinite"/> </line> <text x="30" y="46" font-size="4.5" fill="#3B8700" font-style="italic" opacity="0"> <animate attributeName="opacity" values="0;0;0.25;0.25;0" keyTimes="0;0.12;0.16;0.82;1" dur="6s" repeatCount="indefinite"/> E </text> </svg>',
           explanation: 'Many engineering alloys show a gradual transition from elastic to plastic behavior with no distinct yield point. The 0.2% offset method draws a line parallel to the elastic region starting at ε = 0.002.',
+        },
+        {
+          id: 'u3-L1-T2',
+          type: 'teaching',
+          question: 'The Stress-Strain Curve',
+          explanation: 'Pull a material sample and plot stress vs. strain. The initial straight line is the elastic region (slope = E, Young\'s modulus). Past yield, permanent deformation begins. The peak is the ultimate tensile strength (UTS), and then the sample necks and fractures.',
+          hint: 'Engineering stress uses original area, so it appears to drop after UTS. True stress keeps rising.',
         },
         {
           id: 'u3-L1-Q5',
@@ -271,6 +285,13 @@ export const unit3: Unit = {
           hint: "What pins dislocations and what frees them?",
         },
         {
+          id: 'u3-L1-T3',
+          type: 'teaching',
+          question: 'Stress Concentrations and Real Parts',
+          explanation: 'Holes, notches, and sharp corners cause local stress to spike well above the average. The stress concentration factor Kt multiplies the nominal stress: sigma_max = Kt * sigma_nominal. Smooth fillets and gradual transitions reduce Kt.',
+          hint: 'A small hole can triple the local stress (Kt = 3 for a circular hole in a plate).',
+        },
+        {
           id: 'u3-L1-Q20',
           type: 'multiple-choice',
           question: "Kt=1.8 at a fillet, nominal stress=80 MPa. Maximum stress?",
@@ -424,6 +445,13 @@ export const unit3: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u3-L2-T1',
+          type: 'teaching',
+          question: 'Bending Stress and the Neutral Axis',
+          explanation: 'When a beam bends, one side is in tension and the other in compression. The neutral axis (NA) is the line of zero stress in between, passing through the centroid. Bending stress increases linearly with distance from the NA: sigma = My/I.',
+          hint: 'Maximum stress occurs at the top and bottom surfaces, farthest from the NA.',
+        },
+        {
           id: 'u3-L2-Q1',
           type: 'multiple-choice',
           question: 'Beam deflects too much but stress is fine. How to reduce deflection?',
@@ -489,6 +517,13 @@ export const unit3: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Fixed wall support --> <rect x="4" y="20" width="10" height="40" rx="2" fill="#58CC02" opacity="0.1"/> <rect x="4" y="20" width="10" height="40" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none" opacity="0.3"/> <!-- Wall hatching (fixed support convention) --> <line x1="5" y1="25" x2="13" y2="20" stroke="#3B8700" stroke-width="0.6" opacity="0.12"/> <line x1="5" y1="31" x2="13" y2="25" stroke="#3B8700" stroke-width="0.6" opacity="0.12"/> <line x1="5" y1="37" x2="13" y2="31" stroke="#3B8700" stroke-width="0.6" opacity="0.12"/> <line x1="5" y1="43" x2="13" y2="37" stroke="#3B8700" stroke-width="0.6" opacity="0.12"/> <line x1="5" y1="49" x2="13" y2="43" stroke="#3B8700" stroke-width="0.6" opacity="0.12"/> <line x1="5" y1="55" x2="13" y2="49" stroke="#3B8700" stroke-width="0.6" opacity="0.12"/> <line x1="9" y1="60" x2="13" y2="55" stroke="#3B8700" stroke-width="0.6" opacity="0.12"/> <!-- Ground --> <rect x="4" y="63" width="72" height="3" rx="1.5" fill="#58CC02" opacity="0.04"/> <!-- Original position reference (dashed, appears when deflected) --> <line x1="14" y1="40" x2="70" y2="40" stroke="#A5E86C" stroke-width="0.7" stroke-dasharray="3,4" opacity="0"> <animate attributeName="opacity" values="0;0.2;0.1;0" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.4;0.7;1"/> </line> <!-- Beam body (visible thickness, bends) --> <path fill="#58CC02" opacity="0.12"> <animate attributeName="d" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;0.7;1" values="M14,37 Q42,37 70,37 L70,43 Q42,43 14,43 Z;M14,37 Q42,43 70,53 L70,59 Q42,49 14,43 Z;M14,37 Q42,35 70,33 L70,39 Q42,41 14,43 Z;M14,37 Q42,37 70,37 L70,43 Q42,43 14,43 Z"/> </path> <!-- Beam centerline (neutral axis) --> <path stroke="#58CC02" stroke-width="3" fill="none" stroke-linecap="round"> <animate attributeName="d" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;0.7;1" values="M14,40 Q42,40 70,40;M14,40 Q42,46 70,56;M14,40 Q42,37 70,35;M14,40 Q42,40 70,40"/> </path> <!-- Deflection indicator δ (appears during max deflection) --> <g opacity="0"> <animate attributeName="opacity" values="0;0.35;0.15;0" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.4;0.7;1"/> <line x1="73" y1="40" x2="73" y2="56" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="1.5,2"/> <polygon points="71.5,54 73,57 74.5,54" fill="#3B8700" opacity="0.6"/> <text x="76" y="50" font-size="5.5" fill="#3B8700" font-style="italic">δ</text> </g> <!-- Reaction moment at wall (curved arrow, appears under load) --> <g opacity="0"> <animate attributeName="opacity" values="0;0.3;0.15;0" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.4;0.7;1"/> <path d="M18,34 A6,6 0 0,1 18,46" stroke="#3B8700" stroke-width="1" fill="none"/> <polygon points="16.5,45 18,48 19.5,45" fill="#3B8700"/> <text x="23" y="42" font-size="5" fill="#3B8700" font-style="italic">M</text> </g> <!-- Applied load F (animated with beam tip) --> <g> <animateTransform attributeName="transform" type="translate" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.4;0.7;1" values="0,0;0,16;0,-5;0,0"/> <line x1="70" y1="26" x2="70" y2="36" stroke="#3B8700" stroke-width="2" stroke-linecap="round" opacity="0.5"/> <polygon points="68,35 70,40 72,35" fill="#3B8700" opacity="0.5"/> <text x="70" y="22" text-anchor="middle" font-size="8" fill="#3B8700" opacity="0.4" font-weight="bold" font-style="italic">F</text> </g> </svg>',
           explanation: 'From delta = 5wL^4/(384EI), holding delta and w constant while doubling L: EI_new/EI_old = (2L)^4/L^4 = 16. Doubling the span requires 16x the stiffness.',
           hint: 'If deflection formula has L^4, what happens when you.',
+        },
+        {
+          id: 'u3-L2-T2',
+          type: 'teaching',
+          question: 'Section Modulus and I-Beams',
+          explanation: 'The section modulus S = I/c gives the maximum bending stress directly: sigma_max = M/S. I-beams are efficient because they concentrate material far from the neutral axis, maximizing I while minimizing weight. That\'s why steel buildings use I-beams, not solid rectangles.',
+          hint: 'A deeper beam with the same area has a much higher section modulus.',
         },
         {
           id: 'u3-L2-Q6',
@@ -692,6 +727,13 @@ export const unit3: Unit = {
           hint: "S = I/c. For a circle, c = d/2 and I = pi*d^4/64.",
         },
         {
+          id: 'u3-L2-T3',
+          type: 'teaching',
+          question: 'Beam Deflection Formulas',
+          explanation: 'Deflection depends on load, span, E, and I. For a simply supported beam with center load: delta = PL^3/(48EI). Deflection scales with L^3 or L^4, so even small span increases cause large deflection jumps. Deeper beams (higher I) deflect less.',
+          hint: 'Codes often limit deflection to L/360 even when stress is fine.',
+        },
+        {
           id: 'u3-L2-Q21',
           type: 'multiple-choice',
           question: "When can superposition for beam deflections NOT be used?",
@@ -836,6 +878,13 @@ export const unit3: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u3-L3-T1',
+          type: 'teaching',
+          question: 'Shear Force and Bending Moment Diagrams',
+          explanation: 'SFD and BMD show how internal shear force and bending moment vary along a beam\'s length. To draw them, start by finding support reactions, then move along the beam tracking how loads change the internal forces. Point loads cause jumps in the SFD, and distributed loads cause slopes.',
+          hint: 'Always start by calculating support reactions using equilibrium.',
+        },
+        {
           id: 'u3-L3-Q1',
           type: 'multiple-choice',
           question: 'Where the SFD crosses zero, the BMD:',
@@ -870,6 +919,13 @@ export const unit3: Unit = {
           correctAnswer: true,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Beam --> <line x1="8" y1="18" x2="72" y2="18" stroke="#3B8700" stroke-width="3" stroke-linecap="round"/> <!-- Supports --> <polygon points="8,18 5,24 11,24" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.3"/> <polygon points="72,18 69,24 75,24" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.3"/> <!-- Point load --> <line x1="40" y1="6" x2="40" y2="16" stroke="#3B8700" stroke-width="2" stroke-linecap="round" opacity="0.5"/> <polygon points="38,15 40,19 42,15" fill="#3B8700" opacity="0.5"/> <text x="40" y="5" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.35" font-weight="bold" font-style="italic">P</text> <!-- Shear Force Diagram (V) --> <line x1="8" y1="38" x2="72" y2="38" stroke="#3B8700" stroke-width="0.5" opacity="0.1"/> <path fill="#58CC02" opacity="0.08"> <animate attributeName="d" values="M8,38 L8,38 L40,38 L40,38 L72,38 Z;M8,38 L8,32 L40,32 L40,44 L72,44 L72,38 Z;M8,38 L8,32 L40,32 L40,44 L72,44 L72,38 Z;M8,38 L8,38 L40,38 L40,38 L72,38 Z" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/> </path> <path stroke="#58CC02" stroke-width="1.5" fill="none" stroke-linecap="round"> <animate attributeName="d" values="M8,38 L40,38 L40,38 L72,38;M8,32 L40,32 L40,44 L72,44;M8,32 L40,32 L40,44 L72,44;M8,38 L40,38 L40,38 L72,38" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/> </path> <text x="4" y="37" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">V</text> <!-- Bending Moment Diagram (M) --> <line x1="8" y1="58" x2="72" y2="58" stroke="#3B8700" stroke-width="0.5" opacity="0.1"/> <path fill="#58CC02" opacity="0.06"> <animate attributeName="d" values="M8,58 Q40,58 72,58 Z;M8,58 Q40,48 72,58 Z;M8,58 Q40,48 72,58 Z;M8,58 Q40,58 72,58 Z" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/> </path> <path stroke="#3B8700" stroke-width="1.5" fill="none" stroke-linecap="round"> <animate attributeName="d" values="M8,58 Q40,58 72,58;M8,58 Q40,48 72,58;M8,58 Q40,48 72,58;M8,58 Q40,58 72,58" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/> </path> <text x="4" y="57" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">M</text> <!-- M_max label --> <text x="42" y="50" font-size="3.5" fill="#3B8700" opacity="0"> <animate attributeName="opacity" values="0;0.2;0.2;0" keyTimes="0;0.3;0.7;1" dur="4s" repeatCount="indefinite"/>M_max</text> </svg>',
           explanation: 'The load w = constant causes dV/dx = -w, so V(x) is linear. Since dM/dx = V, integrating a linear V gives a parabolic (quadratic) M(x).',
+        },
+        {
+          id: 'u3-L3-T2',
+          type: 'teaching',
+          question: 'Key Relationships: Load, Shear, Moment',
+          explanation: 'The slope of the SFD at any point equals the negative of the distributed load (dV/dx = -w). The slope of the BMD equals the shear force (dM/dx = V). So the area under the load diagram gives shear change, and the area under the SFD gives moment change.',
+          hint: 'Where V = 0, the bending moment reaches a maximum or minimum.',
         },
         {
           id: 'u3-L3-Q4',
@@ -1102,6 +1158,13 @@ export const unit3: Unit = {
           hint: "Count unknowns vs.",
         },
         {
+          id: 'u3-L3-T3',
+          type: 'teaching',
+          question: 'Statically Determinate vs Indeterminate',
+          explanation: 'A simply supported beam with 2 reactions can be solved using equilibrium alone (statically determinate). Add more supports and you get extra unknowns that require deflection compatibility equations. Indeterminate beams are stiffer but harder to analyze.',
+          hint: 'Count reactions vs. equilibrium equations to check determinacy.',
+        },
+        {
           id: 'u3-L3-Q21',
           type: 'fill-blank',
           question: "SS beam, UDL w, span L: M_max = wL²/_____ at _____.",
@@ -1246,6 +1309,13 @@ export const unit3: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u3-L4-T1',
+          type: 'teaching',
+          question: 'Torsion and Shear Stress in Shafts',
+          explanation: 'When a shaft is twisted by torque T, it develops shear stress. The stress is zero at the center and increases linearly to a maximum at the outer surface: tau_max = Tr/J, where r is the radius and J is the polar moment of inertia.',
+          hint: 'This linear distribution is why hollow shafts are efficient: the center carries almost no stress.',
+        },
+        {
           id: 'u3-L4-Q1',
           type: 'multiple-choice',
           question: 'Solid vs hollow shaft (same OD) for torque. Key trade-offs?',
@@ -1282,6 +1352,13 @@ export const unit3: Unit = {
           correctAnswer: true,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Shaft --> <rect x="10" y="36" width="60" height="8" rx="4" fill="#58CC02" opacity="0.12"/> <rect x="10" y="36" width="60" height="8" rx="4" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Cylindrical highlight --> <rect x="10" y="37" width="60" height="2.5" rx="1" fill="#A5E86C" opacity="0.1"/> <!-- Fixed end (left wall) --> <rect x="4" y="28" width="8" height="24" rx="2" fill="#58CC02" opacity="0.1"/> <rect x="4" y="28" width="8" height="24" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none" opacity="0.3"/> <line x1="5" y1="32" x2="11" y2="28" stroke="#3B8700" stroke-width="0.5" opacity="0.1"/> <line x1="5" y1="38" x2="11" y2="34" stroke="#3B8700" stroke-width="0.5" opacity="0.1"/> <line x1="5" y1="44" x2="11" y2="40" stroke="#3B8700" stroke-width="0.5" opacity="0.1"/> <line x1="5" y1="50" x2="11" y2="46" stroke="#3B8700" stroke-width="0.5" opacity="0.1"/> <!-- Applied torque (right end, rotating arrow) --> <path d="M72,30 A10,10 0 0,1 72,50" stroke="#3B8700" stroke-width="1.5" fill="none" opacity="0.3"> <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite"/> </path> <polygon points="71,49 73,53 74,48" fill="#3B8700" opacity="0.3"> <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite"/> </polygon> <text x="76" y="42" font-size="6" fill="#3B8700" opacity="0.3" font-weight="bold" font-style="italic">T</text> <!-- Twist angle visualization (grid lines that skew) --> <line x1="30" y1="36" x2="30" y2="44" stroke="#A5E86C" stroke-width="0.7" opacity="0.2"/> <line y1="36" y2="44" stroke="#A5E86C" stroke-width="0.7" opacity="0.2"> <animate attributeName="x1" values="50;52;50" dur="2s" repeatCount="indefinite"/> <animate attributeName="x2" values="50;48;50" dur="2s" repeatCount="indefinite"/> </line> <!-- Shear stress distribution (τ increases with radius) --> <g opacity="0"> <animate attributeName="opacity" values="0;0.25;0" dur="2s" repeatCount="indefinite"/> <line x1="40" y1="36" x2="40" y2="28" stroke="#3B8700" stroke-width="0.7"/> <polygon points="38.5,29 40,26 41.5,29" fill="#3B8700"/> <text x="44" y="27" font-size="4" fill="#3B8700" font-style="italic">τ</text> </g> <!-- Formula --> <text x="40" y="64" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">τ = Tr/J</text> </svg>',
           explanation: 'The torsion formula τ = Tρ/J shows that shear stress is directly proportional to the radial distance ρ from the center. At ρ = 0 (center), τ = 0; at ρ = R (surface), τ = TR/J = τ_max.',
+        },
+        {
+          id: 'u3-L4-T2',
+          type: 'teaching',
+          question: 'Polar Moment of Inertia',
+          explanation: 'The polar moment of inertia J measures a cross-section\'s resistance to twisting. For a solid circle, J = pi*d^4/32. Hollow shafts have surprisingly high J relative to their weight because the removed core material near the center contributes very little to torsional resistance.',
+          hint: 'Doubling the diameter increases J by 16x (it scales with d^4).',
         },
         {
           id: 'u3-L4-Q4',
@@ -1516,6 +1593,13 @@ export const unit3: Unit = {
           hint: "T is proportional to d³.",
         },
         {
+          id: 'u3-L4-T3',
+          type: 'teaching',
+          question: 'Power Transmission in Shafts',
+          explanation: 'Shafts transmit power: P = T * omega, where omega is in rad/s. For the same power, a slower shaft carries more torque and needs a larger diameter. That\'s why gearbox output shafts are thicker than input shafts.',
+          hint: 'Convert rpm to rad/s with omega = 2*pi*n/60.',
+        },
+        {
           id: 'u3-L4-Q21',
           type: 'fill-blank',
           question: "phi = TL/(G_____). The blank is the polar moment of inertia.",
@@ -1654,6 +1738,13 @@ export const unit3: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u3-L5-T1',
+          type: 'teaching',
+          question: 'Principal Stresses and Stress Transformation',
+          explanation: 'At any point in a loaded part, stresses change depending on the angle you look at. Principal stresses are the max and min normal stresses, found on planes where shear stress is zero. These are the stresses that matter most for predicting failure.',
+          hint: 'Rotating your viewpoint changes normal and shear stress, but principal stresses stay the same.',
+        },
+        {
           id: 'u3-L5-Q1',
           type: 'multiple-choice',
           question: 'Why is Mohr\'s circle such a valuable tool in stress analysis, even when computer tools can compute principal stresses directly? What insight does it provide that a formula alone does not?',
@@ -1689,6 +1780,13 @@ export const unit3: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes --> <line x1="8" y1="40" x2="72" y2="40" stroke="#3B8700" stroke-width="1.2" stroke-linecap="round"/> <line x1="40" y1="72" x2="40" y2="8" stroke="#3B8700" stroke-width="1.2" stroke-linecap="round"/> <polygon points="72,38.5 72,41.5 74,40" fill="#3B8700" opacity="0.4"/> <polygon points="38.5,8 41.5,8 40,6" fill="#3B8700" opacity="0.4"/> <text x="74" y="38" font-size="5" fill="#3B8700" opacity="0.3" font-style="italic">σ</text> <text x="43" y="10" font-size="5" fill="#3B8700" opacity="0.3" font-style="italic">τ</text> <!-- Mohr\'s circle --> <circle cx="44" cy="40" r="18" fill="#58CC02" opacity="0.06"/> <circle cx="44" cy="40" r="18" stroke="#58CC02" stroke-width="2" fill="none"/> <!-- Center point C --> <circle cx="44" cy="40" r="1.5" fill="#3B8700" opacity="0.4"/> <!-- Rotating diameter line (stress state) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,44,40;360,44,40" dur="4s" repeatCount="indefinite"/> <line x1="26" y1="40" x2="62" y2="40" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/> <!-- σ₁ point --> <circle cx="62" cy="40" r="3" fill="#3B8700" opacity="0.4"/> <!-- σ₂ point --> <circle cx="26" cy="40" r="3" fill="#58CC02" opacity="0.3"/> </g> <!-- Principal stresses labels (static) --> <text x="63" y="52" font-size="4.5" fill="#3B8700" opacity="0.25">σ₁</text> <text x="22" y="52" font-size="4.5" fill="#3B8700" opacity="0.25">σ₂</text> <!-- Max shear label --> <text x="46" y="20" font-size="4" fill="#3B8700" opacity="0.2">τ_max</text> <line x1="44" y1="22" x2="44" y2="26" stroke="#3B8700" stroke-width="0.6" stroke-dasharray="1.5,2" opacity="0.15"/> </svg>',
           explanation: 'On the planes of maximum in-plane shear stress, the normal stress equals the average normal stress σ_avg = (σx + σy)/2, which is the center of Mohr\'s circle. In general, the maximum shear planes carry a non-zero normal stress equal to σ_avg.',
+        },
+        {
+          id: 'u3-L5-T2',
+          type: 'teaching',
+          question: 'How to Use Mohr\'s Circle',
+          explanation: 'Plot the center at ((sigma_x + sigma_y)/2, 0), then use radius = sqrt(((sigma_x - sigma_y)/2)^2 + tau_xy^2). The circle\'s rightmost point is sigma_1 (max principal stress), the leftmost is sigma_2, and the top gives max shear stress.',
+          hint: 'A physical rotation of theta corresponds to 2*theta on the circle.',
         },
         {
           id: 'u3-L5-Q4',
@@ -1917,6 +2015,13 @@ export const unit3: Unit = {
           hint: "a case where both principal stresses are positive.",
         },
         {
+          id: 'u3-L5-T3',
+          type: 'teaching',
+          question: 'Combined Loading on Shafts',
+          explanation: 'Real shafts usually see bending and torsion at the same time. The critical point is typically at the surface where bending stress is highest. You combine the normal stress from bending with the shear stress from torsion, then use Mohr\'s circle or formulas to find principal stresses.',
+          hint: 'Always check the point where bending tension and torsional shear add up worst.',
+        },
+        {
           id: 'u3-L5-Q21',
           type: 'multiple-choice',
           question: "Bending 150 MPa + torsion 80 MPa. Angle to principal stress direction?",
@@ -2066,6 +2171,13 @@ export const unit3: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u3-L6-T1',
+          type: 'teaching',
+          question: 'Yield Criteria: Von Mises and Tresca',
+          explanation: 'Under complex loading, you can\'t just compare one stress to the yield strength. Von Mises combines all stress components into a single equivalent stress for comparison. Tresca is simpler: it says yielding occurs when the max shear stress reaches half the yield strength.',
+          hint: 'Von Mises is more accurate for ductile metals. Tresca is more conservative.',
+        },
+        {
           id: 'u3-L6-Q1',
           type: 'multiple-choice',
           question: 'Biaxial (200,100) vs uniaxial (200,0) MPa. Same sigma_1. Which yields first?',
@@ -2101,6 +2213,13 @@ export const unit3: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes --> <line x1="40" y1="74" x2="40" y2="6" stroke-width="0.6" stroke="#58CC02"/> <line x1="6" y1="40" x2="74" y2="40" stroke-width="0.6" stroke="#58CC02"/> <text x="42" y="10" font-size="3" fill="#58CC02" opacity="0.5">σ₂</text> <text x="72" y="38" font-size="3" fill="#58CC02" opacity="0.5">σ₁</text> <!-- Max Normal Stress square (brittle) --> <rect x="16" y="16" width="48" height="48" stroke="#3B8700" stroke-width="1.5" fill="none" opacity="0.4"/> <text x="68" y="14" font-size="3" fill="#3B8700" opacity="0.4">Rankine</text> <!-- Von Mises ellipse (ductile) --> <ellipse cx="40" cy="40" rx="30" ry="22" stroke-width="0.7" stroke="#A5E86C" fill="none" opacity="0.4" transform="rotate(45,40,40)"/> <text x="62" y="60" font-size="3" fill="#A5E86C" opacity="0.4">von Mises</text> <!-- Brittle specimen fracture (sharp break) --> <rect x="10" y="68" width="16" height="8" rx="1" stroke="#3B8700" stroke-width="1" fill="#3B8700" fill-opacity="0.1"/> <line x1="18" y1="68" x2="18" y2="76" stroke="#3B8700" stroke-width="1.5" stroke-dasharray="1,1" opacity="0.4"/> <text x="18" y="80" text-anchor="middle" font-size="3" fill="#3B8700" opacity="0.3">brittle</text> <!-- Ductile specimen (necking) --> <rect x="54" y="68" width="16" height="8" rx="1" stroke="#A5E86C" stroke-width="1" fill="#A5E86C" fill-opacity="0.1"/> <path d="M62,68 Q62,72 62,76" stroke="#A5E86C" stroke-width="0.8" opacity="0.3"/> <text x="62" y="80" text-anchor="middle" font-size="3" fill="#A5E86C" opacity="0.3">ductile</text> <!-- X mark on "ductile + Rankine" --> <text x="18" y="56" font-size="8" fill="#3B8700" opacity="0.3" text-anchor="middle">✗</text> </svg>',
           explanation: 'The Maximum Normal Stress (Rankine) theory is suitable for brittle materials, not ductile ones. Ductile materials fail by yielding due to shear/distortion, which is better captured by von Mises or Tresca.',
+        },
+        {
+          id: 'u3-L6-T2',
+          type: 'teaching',
+          question: 'Factor of Safety in Design',
+          explanation: 'The factor of safety (FS) is the ratio of material strength to actual stress. An FS of 2 means the part can handle twice the design load before failing. Engineers choose FS based on consequences of failure, load uncertainty, and material variability.',
+          hint: 'An FS of 1.0 means zero margin. Typical designs use 1.5 to 4.',
         },
         {
           id: 'u3-L6-Q4',
@@ -2328,6 +2447,13 @@ export const unit3: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes --> <line x1="40" y1="74" x2="40" y2="6" stroke-width="0.6" stroke="#58CC02"/> <line x1="6" y1="40" x2="74" y2="40" stroke-width="0.6" stroke="#58CC02"/> <text x="42" y="10" font-size="3" fill="#58CC02" opacity="0.5">σ₂</text> <text x="72" y="38" font-size="3" fill="#58CC02" opacity="0.5">σ₁</text> <!-- Tresca (hexagon) --> <polygon points="56,12 72,40 56,68 24,68 8,40 24,12" stroke-width="0.6" stroke="#3B8700" fill="none" opacity="0.4"/> <text x="10" y="18" font-size="2.5" fill="#3B8700" opacity="0.35">Tresca</text> <!-- Von Mises (ellipse) --> <ellipse cx="40" cy="40" rx="30" ry="22" stroke-width="0.7" stroke="#A5E86C" fill="none" opacity="0.5" transform="rotate(45,40,40)"/> <text x="62" y="16" font-size="2.5" fill="#A5E86C" opacity="0.45">von Mises</text> <!-- Yield stress markers --> <circle cx="56" cy="40" r="1.2" fill="#58CC02" opacity="0.3"/> <text x="58" y="44" font-size="2.5" fill="#3B8700" opacity="0.35">σ_y</text> <circle cx="40" cy="24" r="1.2" fill="#58CC02" opacity="0.3"/> <text x="44" y="24" font-size="2.5" fill="#3B8700" opacity="0.35">σ_y</text> <!-- Animated stress point --> <circle r="2" fill="#A5E86C" opacity="0.6"> <animate attributeName="cx" values="40;52;60;52;40;28;20;28;40" dur="6s" repeatCount="indefinite"/> <animate attributeName="cy" values="20;24;40;56;60;56;40;24;20" dur="6s" repeatCount="indefinite"/> </circle> <!-- Safe region label --> <text x="40" y="52" font-size="2.5" fill="#58CC02" opacity="0.25" text-anchor="middle">safe</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">failure envelope</text> </svg>',
           explanation: "For pure shear: sigma_1 = tau, sigma_2 = -tau, sigma_3 = 0. Von Mises: sigma_vm = sqrt(tau² - tau*(-tau) + (-tau)²) = sqrt(3*tau²) = tau*sqrt(3). Setting sigma_vm = Sy: tau_y = Sy/sqrt(3) = 0.577*Sy.",
           hint: "Calculate sigma_vm for a pure shear state (sigma_1 = +tau.",
+        },
+        {
+          id: 'u3-L6-T3',
+          type: 'teaching',
+          question: 'Fatigue Failure and S-N Curves',
+          explanation: 'Cyclic loading can cause failure well below the yield strength. S-N curves plot stress amplitude vs. number of cycles to failure. Steel has an endurance limit (a stress below which it can survive infinite cycles), but aluminum does not.',
+          hint: 'Most mechanical failures in service are caused by fatigue, not static overload.',
         },
         {
           id: 'u3-L6-Q21',

@@ -185,6 +185,13 @@ export const unit4: Unit = {
           hint: 'Count the degrees of freedom for a diatomic molecule.',
         },
         {
+          id: 'u4-L1-T3',
+          type: 'teaching',
+          question: 'Phase diagrams and the critical point',
+          explanation: 'Substances exist as solid, liquid, or vapor depending on temperature and pressure. On a phase diagram, the critical point is where liquid and vapor become indistinguishable. Above it, the substance is a "supercritical fluid" with no distinct phases.',
+          hint: 'Water\'s critical point is at 374C and 22.1 MPa.',
+        },
+        {
           id: 'u4-L1-Q13',
           type: 'multiple-choice',
           question: 'What is the compressibility factor Z, and what does Z < 1 indicate about a real gas?',
@@ -437,6 +444,13 @@ export const unit4: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u4-L2-T1',
+          type: 'teaching',
+          question: 'The first law of thermodynamics',
+          explanation: 'Energy can\'t be created or destroyed, only converted. For a closed system: the change in internal energy equals heat added minus work done by the system. In equation form: delta U = Q - W.',
+          hint: 'Think of your bank account: deposits (heat in) minus withdrawals (work out) equals balance change.',
+        },
+        {
           id: 'u4-L2-Q1',
           type: 'multiple-choice',
           question: 'What is wrong with this claim?',
@@ -525,6 +539,13 @@ export const unit4: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Cylinder body --> <rect x="18" y="10" width="44" height="52" rx="4" fill="#58CC02" opacity="0.06"/> <rect x="18" y="10" width="44" height="52" rx="4" stroke="#3B8700" stroke-width="2.5" fill="none"/> <!-- Wall thickness lines --> <line x1="21" y1="14" x2="21" y2="58" stroke="#A5E86C" stroke-width="0.5" opacity="0.2"/> <line x1="59" y1="14" x2="59" y2="58" stroke="#A5E86C" stroke-width="0.5" opacity="0.2"/> <!-- Gas — properly synced with piston movement --> <rect x="21" y="32" width="38" height="28" rx="2" fill="#A5E86C" opacity="0.15"> <animate attributeName="y" values="32;16;32" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> <animate attributeName="height" values="28;44;28" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> <animate attributeName="opacity" values="0.18;0.07;0.18" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> </rect> <!-- Piston assembly --> <g> <animateTransform attributeName="transform" type="translate" values="0,0;0,-16;0,0" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> <!-- Piston head --> <rect x="22" y="23" width="36" height="9" rx="3" fill="#58CC02" opacity="0.5"/> <rect x="22" y="23" width="36" height="9" rx="3" stroke="#3B8700" stroke-width="1.5" fill="none"/> <!-- Piston rings --> <line x1="23" y1="25.5" x2="57" y2="25.5" stroke="white" stroke-width="0.8" opacity="0.5"/> <line x1="23" y1="28.5" x2="57" y2="28.5" stroke="white" stroke-width="0.8" opacity="0.5"/> <!-- Wrist pin --> <circle cx="40" cy="27" r="1.8" fill="#3B8700" opacity="0.5"/> <!-- Connecting rod --> <rect x="37" y="11" width="6" height="12" rx="3" fill="#3B8700" opacity="0.4"/> <rect x="37" y="11" width="6" height="12" rx="3" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.4"/> <!-- Crosshead guide --> <rect x="33" y="5" width="14" height="7" rx="3" fill="#58CC02" opacity="0.3"/> <rect x="33" y="5" width="14" height="7" rx="3" stroke="#3B8700" stroke-width="1.2" fill="none"/> <circle cx="40" cy="8.5" r="2" fill="#3B8700" opacity="0.45"/> </g> <!-- Flames (path-based, flickering) --> <path d="M30,74 Q31,69 33,65 Q32,70 34,74 Z" fill="#58CC02" opacity="0.5"> <animate attributeName="d" values="M30,74 Q31,69 33,65 Q32,70 34,74 Z;M30,74 Q30,67 32,63 Q33,69 34,74 Z;M30,74 Q31,69 33,65 Q32,70 34,74 Z" dur="0.4s" repeatCount="indefinite"/> </path> <path d="M35,74 Q37,67 39,62 Q38,68 40,74 Z" fill="#3B8700" opacity="0.45"> <animate attributeName="d" values="M35,74 Q37,67 39,62 Q38,68 40,74 Z;M35,74 Q38,65 40,61 Q39,69 40,74 Z;M35,74 Q37,67 39,62 Q38,68 40,74 Z" dur="0.35s" repeatCount="indefinite"/> </path> <path d="M40,74 Q42,66 44,62 Q43,68 45,74 Z" fill="#58CC02" opacity="0.55"> <animate attributeName="d" values="M40,74 Q42,66 44,62 Q43,68 45,74 Z;M40,74 Q43,64 45,61 Q44,69 45,74 Z;M40,74 Q42,66 44,62 Q43,68 45,74 Z" dur="0.45s" repeatCount="indefinite"/> </path> <path d="M46,74 Q47,69 49,65 Q48,70 50,74 Z" fill="#A5E86C" opacity="0.4"> <animate attributeName="d" values="M46,74 Q47,69 49,65 Q48,70 50,74 Z;M46,74 Q48,67 50,64 Q49,71 50,74 Z;M46,74 Q47,69 49,65 Q48,70 50,74 Z" dur="0.3s" repeatCount="indefinite"/> </path> <!-- Heat arrows rising into cylinder --> <path d="M33,68 L33,65 L31,65 L34,62 L37,65 L35,65 L35,68 Z" fill="#3B8700" opacity="0.15"> <animate attributeName="opacity" values="0.1;0.3;0.1" dur="0.6s" repeatCount="indefinite"/> </path> <path d="M45,68 L45,65 L43,65 L46,62 L49,65 L47,65 L47,68 Z" fill="#3B8700" opacity="0.15"> <animate attributeName="opacity" values="0.1;0.3;0.1" dur="0.5s" repeatCount="indefinite"/> </path> </svg>',
           explanation: 'A closed system (control mass) has a fixed amount of mass — no mass crosses the boundary, though energy (heat and work) can. Examples: piston-cylinder with sealed gas, sealed pressure cooker.',
           hint: 'Which type allows mass to cross the system boundary?',
+        },
+        {
+          id: 'u4-L2-T2',
+          type: 'teaching',
+          question: 'Enthalpy and open systems',
+          explanation: 'Enthalpy (h = u + Pv) combines internal energy with flow work. For open systems like turbines and compressors, the steady-flow energy equation is: q - w_shaft = delta h + delta KE + delta PE. Most devices simplify by dropping KE and PE terms.',
+          hint: 'Enthalpy is the "total package" of energy that flows with the fluid.',
         },
         {
           id: 'u4-L2-Q8',
@@ -618,6 +639,13 @@ export const unit4: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <line x1="12" y1="64" x2="72" y2="64" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <line x1="12" y1="64" x2="12" y2="10" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <text x="8" y="38" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">P</text> <text x="42" y="74" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">V</text> <path d="M20,20 Q40,30 60,50" stroke="#3B8700" stroke-width="1.5" fill="none" opacity="0.4"> <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/> </path> <path d="M20,20 L20,50 L60,50" stroke="#A5E86C" stroke-width="0.8" fill="none" opacity="0.2" stroke-dasharray="2,2"/> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">P-V process</text> </svg>',
           explanation: 'The back-work ratio is the fraction of the turbine work that must be fed back to drive the compressor or pump. For the Rankine cycle, BWR ≈ 1-3% (pumping liquid requires very little work).',
           hint: 'What fraction of the work produced by the expansion?',
+        },
+        {
+          id: 'u4-L2-T3',
+          type: 'teaching',
+          question: 'Boundary work and process paths',
+          explanation: 'Boundary work is W = integral of P dV. It depends on the path, not just the start and end states. Common paths: constant volume (W=0), constant pressure (W = P times delta V), and polytropic (PV^n = constant).',
+          hint: 'On a P-V diagram, the area under the curve equals the boundary work.',
         },
         {
           id: 'u4-L2-Q15',
@@ -837,6 +865,13 @@ export const unit4: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u4-L3-T1',
+          type: 'teaching',
+          question: 'What is entropy?',
+          explanation: 'Entropy measures disorder or energy dispersal in a system. The second law says the total entropy of an isolated system always increases or stays the same. It never decreases. This is why heat flows from hot to cold, never the reverse, on its own.',
+          hint: 'A broken egg never unbreaks itself. That\'s entropy in action.',
+        },
+        {
           id: 'u4-L3-Q1',
           type: 'multiple-choice',
           question: 'Why is the Carnot cycle impractical to implement?',
@@ -901,6 +936,13 @@ export const unit4: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Boiler --> <rect x="30" y="4" width="20" height="12" rx="2" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.06"/> <text x="40" y="12" font-size="2.8" fill="#58CC02" text-anchor="middle">Boiler</text> <!-- Turbine --> <path d="M62,28 L72,22 L72,42 L62,36 Z" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.06"/> <text x="67" y="34" font-size="2.5" fill="#58CC02" text-anchor="middle">T</text> <!-- Condenser --> <rect x="30" y="52" width="20" height="12" rx="2" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.06"/> <text x="40" y="60" font-size="2.8" fill="#58CC02" text-anchor="middle">Cond.</text> <!-- Pump --> <circle cx="12" cy="40" r="7" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.06"/> <text x="12" y="42" font-size="2.8" fill="#58CC02" text-anchor="middle">P</text> <!-- Connecting pipes --> <line x1="50" y1="10" x2="62" y2="10" stroke-width="0.8" stroke="#58CC02"/> <line x1="62" y1="10" x2="62" y2="28" stroke-width="0.8" stroke="#58CC02"/> <line x1="62" y1="36" x2="62" y2="58" stroke-width="0.8" stroke="#58CC02"/> <line x1="62" y1="58" x2="50" y2="58" stroke-width="0.8" stroke="#58CC02"/> <line x1="30" y1="58" x2="12" y2="58" stroke-width="0.8" stroke="#58CC02"/> <line x1="12" y1="58" x2="12" y2="47" stroke-width="0.8" stroke="#58CC02"/> <line x1="12" y1="33" x2="12" y2="10" stroke-width="0.8" stroke="#58CC02"/> <line x1="12" y1="10" x2="30" y2="10" stroke-width="0.8" stroke="#58CC02"/> <!-- Flow particles --> <circle r="1.2" fill="#A5E86C" opacity="0.8"> <animateMotion dur="6s" repeatCount="indefinite" path="M40,10 L62,10 L62,32 L62,58 L40,58 L12,58 L12,40 L12,10 L40,10"/> </circle> <circle r="1.2" fill="#A5E86C" opacity="0.8"> <animateMotion dur="6s" repeatCount="indefinite" begin="3s" path="M40,10 L62,10 L62,32 L62,58 L40,58 L12,58 L12,40 L12,10 L40,10"/> </circle> <!-- Heat in/out --> <text x="40" y="2" font-size="2.5" fill="#3B8700" opacity="0.4" text-anchor="middle">Q_in</text> <text x="40" y="70" font-size="2.5" fill="#3B8700" opacity="0.4" text-anchor="middle">Q_out</text> <!-- Work out --> <line x1="72" y1="32" x2="77" y2="32" stroke-width="0.5" stroke="#3B8700" opacity="0.4"/> <polygon points="77,30.5 77,33.5 79,32" fill="#3B8700" opacity="0.4"/> <text x="76" y="29" font-size="2.5" fill="#3B8700" opacity="0.4">W</text> <!-- Turbine rotation indicator --> <g> <line x1="67" y1="30" x2="67" y2="34" stroke-width="0.3" stroke="#3B8700" opacity="0.3"/> <animateTransform attributeName="transform" type="rotate" values="0,67,32;360,67,32" dur="1.5s" repeatCount="indefinite"/> </g> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">steam power cycle</text> </svg>',
           explanation: 'Using η = 1 - T_L/T_H: Current η = 1 - 300/800 = 62.%. Raising T_H to 850 K: η = 1 - 300/850 = 64.% (gain of 2. points). Lowering T_L to 250 K: η = 1 - 250/800 = 68.5% (gain of 6.5 points).',
           hint: 'Calculate η_Carnot for both cases and compare.',
+        },
+        {
+          id: 'u4-L3-T2',
+          type: 'teaching',
+          question: 'Carnot efficiency sets the limit',
+          explanation: 'The Carnot cycle is the most efficient possible heat engine between 2 temperatures. Its efficiency is eta = 1 - T_cold/T_hot (using absolute temperatures in Kelvin). No real engine can beat this. Real engines have friction, finite-speed processes, and other irreversibilities that lower efficiency.',
+          hint: 'To improve efficiency: raise the hot source temperature or lower the cold sink temperature.',
         },
         {
           id: 'u4-L3-Q6',
@@ -988,6 +1030,13 @@ export const unit4: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <line x1="12" y1="64" x2="72" y2="64" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <line x1="12" y1="64" x2="12" y2="10" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <text x="8" y="38" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">T</text> <text x="42" y="74" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">s</text> <path d="M20,50 L20,20 L60,20 L60,50 Z" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" fill-opacity="0.05" opacity="0.4"/> <polygon points="18,20 22,20 20,17" fill="#3B8700" opacity="0.3"/> <polygon points="58,20 62,20 60,17" fill="#3B8700" opacity="0.3"/> <text x="40" y="38" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">W_net</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">cycle &amp; entropy</text> </svg>',
           explanation: 'The second law requires ΔS_universe = ΔS_system + ΔS_surroundings ≥ 0, or equivalently S_gen ≥ 0. The SYSTEM entropy can decrease (e. g.',
           hint: 'The second law constrains the total entropy change.',
+        },
+        {
+          id: 'u4-L3-T3',
+          type: 'teaching',
+          question: 'Irreversibility and lost work',
+          explanation: 'Every real process generates entropy due to friction, heat transfer across temperature differences, and mixing. Entropy generation directly measures lost work potential: W_lost = T_environment times S_gen. Minimizing irreversibility is the key to efficient engineering design.',
+          hint: 'An isentropic (no entropy generation) process is the ideal benchmark for turbines and compressors.',
         },
         {
           id: 'u4-L3-Q13',
@@ -1242,6 +1291,13 @@ export const unit4: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u4-L4-T1',
+          type: 'teaching',
+          question: 'Power cycles convert heat to work',
+          explanation: 'A power cycle is a repeating sequence of processes that takes in heat, produces net work, and rejects waste heat. The thermal efficiency is eta = W_net / Q_in. The 3 major cycles: Rankine (steam power plants), Otto (gasoline engines), and Diesel (diesel engines).',
+          hint: 'Every power cycle needs a hot source, a cold sink, and a working fluid going around in a loop.',
+        },
+        {
           id: 'u4-L4-Q1',
           type: 'multiple-choice',
           question: 'Why does the Rankine cycle compress liquid rather than vapor?',
@@ -1305,6 +1361,13 @@ export const unit4: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- PV axes --> <line x1="12" y1="66" x2="12" y2="8" stroke-width="0.6" stroke="#58CC02"/> <line x1="12" y1="66" x2="74" y2="66" stroke-width="0.6" stroke="#58CC02"/> <text x="7" y="10" font-size="3.5" fill="#58CC02" text-anchor="middle">P</text> <text x="74" y="72" font-size="3.5" fill="#58CC02" text-anchor="middle">V</text> <!-- Cycle: 1→2 isentropic compression, 2→3 const P heat add, 3→4 isentropic expansion, 4→1 const P heat reject --> <path d="M60,58 Q18,54 16,18" stroke-width="0.8" stroke="#58CC02" fill="none"/> <line x1="16" y1="18" x2="50" y2="18" stroke-width="0.8" stroke="#58CC02"/> <path d="M50,18 Q68,22 66,58" stroke-width="0.8" stroke="#58CC02" fill="none"/> <line x1="66" y1="58" x2="60" y2="58" stroke-width="0.8" stroke="#58CC02"/> <!-- Points --> <circle cx="60" cy="58" r="1.5" fill="#58CC02"/><text x="62" y="64" font-size="3" fill="#58CC02">1</text> <circle cx="16" cy="18" r="1.5" fill="#58CC02"/><text x="12" y="16" font-size="3" fill="#58CC02">2</text> <circle cx="50" cy="18" r="1.5" fill="#58CC02"/><text x="52" y="14" font-size="3" fill="#58CC02">3</text> <circle cx="66" cy="58" r="1.5" fill="#58CC02"/><text x="70" y="56" font-size="3" fill="#58CC02">4</text> <!-- Shaded work area --> <path d="M60,58 Q18,54 16,18 L50,18 Q68,22 66,58 Z" fill="#58CC02" opacity="0.06"/> <!-- Process labels --> <text x="28" y="46" font-size="2.5" fill="#3B8700" opacity="0.4" transform="rotate(-72,28,46)">isentropic</text> <text x="33" y="14" font-size="2.5" fill="#3B8700" opacity="0.4">const P</text> <text x="64" y="38" font-size="2.5" fill="#3B8700" opacity="0.4" transform="rotate(78,64,38)">isentropic</text> <!-- Tracer dot --> <circle r="1.8" fill="#A5E86C" opacity="0.7"> <animateMotion dur="5s" repeatCount="indefinite" path="M60,58 Q18,54 16,18 L50,18 Q68,22 66,58 L60,58"/> </circle> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">gas turbine cycle</text> </svg>',
           explanation: 'This is a subtle but important comparison. When compared at the same compression ratio, the Otto cycle actually has slightly higher thermal efficiency.',
+        },
+        {
+          id: 'u4-L4-T2',
+          type: 'teaching',
+          question: 'Rankine cycle for steam power',
+          explanation: 'The Rankine cycle has 4 steps: pump compresses liquid water, boiler heats it to steam, turbine expands steam to produce work, condenser cools it back to liquid. Its big advantage is that pumping liquid takes very little work compared to compressing gas.',
+          hint: 'Most of the world\'s electricity comes from Rankine cycle power plants.',
         },
         {
           id: 'u4-L4-Q6',
@@ -1392,6 +1455,13 @@ export const unit4: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Boiler --> <rect x="30" y="4" width="20" height="12" rx="2" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.06"/> <text x="40" y="12" font-size="2.8" fill="#58CC02" text-anchor="middle">Boiler</text> <!-- Turbine --> <path d="M62,28 L72,22 L72,42 L62,36 Z" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.06"/> <text x="67" y="34" font-size="2.5" fill="#58CC02" text-anchor="middle">T</text> <!-- Condenser --> <rect x="30" y="52" width="20" height="12" rx="2" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.06"/> <text x="40" y="60" font-size="2.8" fill="#58CC02" text-anchor="middle">Cond.</text> <!-- Pump --> <circle cx="12" cy="40" r="7" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.06"/> <text x="12" y="42" font-size="2.8" fill="#58CC02" text-anchor="middle">P</text> <!-- Connecting pipes --> <line x1="50" y1="10" x2="62" y2="10" stroke-width="0.8" stroke="#58CC02"/> <line x1="62" y1="10" x2="62" y2="28" stroke-width="0.8" stroke="#58CC02"/> <line x1="62" y1="36" x2="62" y2="58" stroke-width="0.8" stroke="#58CC02"/> <line x1="62" y1="58" x2="50" y2="58" stroke-width="0.8" stroke="#58CC02"/> <line x1="30" y1="58" x2="12" y2="58" stroke-width="0.8" stroke="#58CC02"/> <line x1="12" y1="58" x2="12" y2="47" stroke-width="0.8" stroke="#58CC02"/> <line x1="12" y1="33" x2="12" y2="10" stroke-width="0.8" stroke="#58CC02"/> <line x1="12" y1="10" x2="30" y2="10" stroke-width="0.8" stroke="#58CC02"/> <!-- Flow particles --> <circle r="1.2" fill="#A5E86C" opacity="0.8"> <animateMotion dur="6s" repeatCount="indefinite" path="M40,10 L62,10 L62,32 L62,58 L40,58 L12,58 L12,40 L12,10 L40,10"/> </circle> <circle r="1.2" fill="#A5E86C" opacity="0.8"> <animateMotion dur="6s" repeatCount="indefinite" begin="3s" path="M40,10 L62,10 L62,32 L62,58 L40,58 L12,58 L12,40 L12,10 L40,10"/> </circle> <!-- Heat in/out --> <text x="40" y="2" font-size="2.5" fill="#3B8700" opacity="0.4" text-anchor="middle">Q_in</text> <text x="40" y="70" font-size="2.5" fill="#3B8700" opacity="0.4" text-anchor="middle">Q_out</text> <!-- Work out --> <line x1="72" y1="32" x2="77" y2="32" stroke-width="0.5" stroke="#3B8700" opacity="0.4"/> <polygon points="77,30.5 77,33.5 79,32" fill="#3B8700" opacity="0.4"/> <text x="76" y="29" font-size="2.5" fill="#3B8700" opacity="0.4">W</text> <!-- Turbine rotation indicator --> <g> <line x1="67" y1="30" x2="67" y2="34" stroke-width="0.3" stroke="#3B8700" opacity="0.3"/> <animateTransform attributeName="transform" type="rotate" values="0,67,32;360,67,32" dur="1.5s" repeatCount="indefinite"/> </g> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">steam power cycle</text> </svg>',
           explanation: 'Higher boiler pressure increases the average temperature of heat addition, improving Carnot-like efficiency.',
           hint: 'Trace the expansion line on a T-s diagram as you.',
+        },
+        {
+          id: 'u4-L4-T3',
+          type: 'teaching',
+          question: 'Improving cycle efficiency',
+          explanation: 'Real cycles use reheat, regeneration, and intercooling to boost efficiency beyond the basic cycle. Reheat re-heats partially expanded steam to protect turbine blades and raise efficiency. Regeneration uses hot exhaust to preheat incoming fluid, reducing fuel consumption.',
+          hint: 'Combined gas-steam (Brayton + Rankine) plants achieve over 60% efficiency by cascading cycles.',
         },
         {
           id: 'u4-L4-Q13',
@@ -1646,6 +1716,13 @@ export const unit4: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u4-L5-T1',
+          type: 'teaching',
+          question: 'Refrigeration cycles move heat uphill',
+          explanation: 'A refrigeration cycle uses work to move heat from a cold space to a warm one. It\'s a power cycle running in reverse. The key metric is COP (coefficient of performance): COP_refrigerator = Q_cold / W_input. COP can be greater than 1 because you\'re moving heat, not creating it.',
+          hint: 'Your fridge uses about 100W of electricity to remove 300-400W of heat from the food compartment.',
+        },
+        {
           id: 'u4-L5-Q1',
           type: 'multiple-choice',
           question: 'What is the thermodynamic explanation?',
@@ -1709,6 +1786,13 @@ export const unit4: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="13" y="44" width="54" height="10" rx="5" fill="#58CC02" opacity="0.25"/> <rect x="13" y="44" width="54" height="10" rx="5" stroke="#3B8700" stroke-width="1.5" fill="none"/> <rect x="19" y="20" width="5" height="24" rx="2.5" fill="#58CC02" opacity="0.4"/> <rect x="28" y="20" width="5" height="24" rx="2.5" fill="#58CC02" opacity="0.4"/> <rect x="37" y="20" width="5" height="24" rx="2.5" fill="#58CC02" opacity="0.4"/> <rect x="46" y="20" width="5" height="24" rx="2.5" fill="#58CC02" opacity="0.4"/> <rect x="55" y="20" width="5" height="24" rx="2.5" fill="#58CC02" opacity="0.4"/> <path d="M21,18 Q23,11 21,5" stroke="#A5E86C" stroke-width="1.2" fill="none" opacity="0"> <animate attributeName="opacity" values="0;0.5;0" dur="2.2s" repeatCount="indefinite"/> <animateTransform attributeName="transform" type="translate" values="0,0;0,-6" dur="2.2s" repeatCount="indefinite"/> </path> <path d="M30,18 Q32,11 30,5" stroke="#A5E86C" stroke-width="1.2" fill="none" opacity="0"> <animate attributeName="opacity" values="0;0.5;0" dur="2.2s" begin="0.4s" repeatCount="indefinite"/> <animateTransform attributeName="transform" type="translate" values="0,0;0,-6" dur="2.2s" begin="0.4s" repeatCount="indefinite"/> </path> <path d="M39,18 Q41,11 39,5" stroke="#A5E86C" stroke-width="1.2" fill="none" opacity="0"> <animate attributeName="opacity" values="0;0.5;0" dur="2.2s" begin="0.8s" repeatCount="indefinite"/> <animateTransform attributeName="transform" type="translate" values="0,0;0,-6" dur="2.2s" begin="0.8s" repeatCount="indefinite"/> </path> <path d="M48,18 Q50,11 48,5" stroke="#A5E86C" stroke-width="1.2" fill="none" opacity="0"> <animate attributeName="opacity" values="0;0.5;0" dur="2.2s" begin="1.2s" repeatCount="indefinite"/> <animateTransform attributeName="transform" type="translate" values="0,0;0,-6" dur="2.2s" begin="1.2s" repeatCount="indefinite"/> </path> <path d="M57,18 Q59,11 57,5" stroke="#A5E86C" stroke-width="1.2" fill="none" opacity="0"> <animate attributeName="opacity" values="0;0.5;0" dur="2.2s" begin="1.6s" repeatCount="indefinite"/> <animateTransform attributeName="transform" type="translate" values="0,0;0,-6" dur="2.2s" begin="1.6s" repeatCount="indefinite"/> </path> <rect x="24" y="58" width="32" height="8" rx="4" fill="#A5E86C" opacity="0.15"/> <text x="40" y="64" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.4" font-weight="bold">HOT</text> </svg>',
           explanation: 'The absorption cycle replaces the power-hungry mechanical compressor with a thermally-driven absorber-generator pair.',
+        },
+        {
+          id: 'u4-L5-T2',
+          type: 'teaching',
+          question: 'The vapor compression cycle',
+          explanation: 'The standard refrigeration cycle has 4 components: compressor (raises pressure and temperature of refrigerant vapor), condenser (rejects heat, vapor becomes liquid), expansion valve (drops pressure, liquid partially flashes to vapor), evaporator (absorbs heat, liquid boils to vapor).',
+          hint: 'The expansion valve is just a cheap throttle. An expander would recover tiny work but add huge cost.',
         },
         {
           id: 'u4-L5-Q6',
@@ -1797,6 +1881,13 @@ export const unit4: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Window frame --> <rect x="8" y="12" width="64" height="56" rx="3" stroke="#334155" stroke-width="2" fill="none" opacity="0.3"/> <line x1="40" y1="12" x2="40" y2="68" stroke="#334155" stroke-width="2" opacity="0.3"/> <!-- Indoor label --> <text x="24" y="10" font-size="3.5" fill="#58CC02" text-anchor="middle">Indoor</text> <!-- Outdoor label --> <text x="56" y="10" font-size="3.5" fill="#3B8700" text-anchor="middle">Outdoor</text> <!-- AC unit body --> <rect x="12" y="28" width="56" height="24" rx="4" stroke="#3B8700" stroke-width="1.5" fill="#58CC02" opacity="0.08"/> <!-- Evaporator (indoor) --> <rect x="16" y="32" width="20" height="16" rx="2" stroke="#58CC02" stroke-width="1" fill="#58CC02" opacity="0.15"/> <text x="26" y="42" font-size="3" fill="#58CC02" text-anchor="middle">Evap</text> <!-- Condenser (outdoor) --> <rect x="44" y="32" width="20" height="16" rx="2" stroke="#3B8700" stroke-width="1" fill="#3B8700" opacity="0.15"/> <text x="54" y="42" font-size="3" fill="#3B8700" text-anchor="middle">Cond</text> <!-- Cool air arrows (indoor) --> <line x1="20" y1="52" x2="20" y2="60" stroke="#A5E86C" stroke-width="1" opacity="0"> <animate attributeName="opacity" values="0;0.6;0" dur="2s" repeatCount="indefinite"/> </line> <line x1="26" y1="52" x2="26" y2="60" stroke="#A5E86C" stroke-width="1" opacity="0"> <animate attributeName="opacity" values="0;0.6;0" dur="2s" begin="0.3s" repeatCount="indefinite"/> </line> <line x1="32" y1="52" x2="32" y2="60" stroke="#A5E86C" stroke-width="1" opacity="0"> <animate attributeName="opacity" values="0;0.6;0" dur="2s" begin="0.6s" repeatCount="indefinite"/> </line> <polygon points="19,60 21,60 20,63" fill="#A5E86C" opacity="0.5"/> <polygon points="25,60 27,60 26,63" fill="#A5E86C" opacity="0.5"/> <polygon points="31,60 33,60 32,63" fill="#A5E86C" opacity="0.5"/> <!-- Hot air arrows (outdoor) --> <path d="M50,28 Q52,22 50,16" stroke="#3B8700" stroke-width="1" fill="none" opacity="0"> <animate attributeName="opacity" values="0;0.5;0" dur="2s" repeatCount="indefinite"/> </path> <path d="M54,28 Q56,22 54,16" stroke="#3B8700" stroke-width="1" fill="none" opacity="0"> <animate attributeName="opacity" values="0;0.5;0" dur="2s" begin="0.4s" repeatCount="indefinite"/> </path> <path d="M58,28 Q60,22 58,16" stroke="#3B8700" stroke-width="1" fill="none" opacity="0"> <animate attributeName="opacity" values="0;0.5;0" dur="2s" begin="0.8s" repeatCount="indefinite"/> </path> <!-- Heat flow direction --> <line x1="26" y1="40" x2="54" y2="40" stroke="#58CC02" stroke-width="1.5" stroke-dasharray="2,1" opacity="0.4"/> <polygon points="52,38.5 52,41.5 55,40" fill="#58CC02" opacity="0.4"/> <text x="40" y="72" font-size="3" fill="#334155" text-anchor="middle" opacity="0.5">Q_L → Q_H</text> </svg>',
           explanation: 'A window AC unit and a heat pump both use the same vapor-compression cycle. In cooling mode, the evaporator faces indoors and the condenser faces outdoors (rejecting heat to the outside).',
           hint: 'Both devices move heat from one side to the other.',
+        },
+        {
+          id: 'u4-L5-T3',
+          type: 'teaching',
+          question: 'Refrigerants and environmental impact',
+          explanation: 'Refrigerants are the working fluids in cooling cycles. Old ones (CFCs like R-12) destroyed ozone. Newer HFCs (R-134a) are ozone-safe but have high global warming potential. The industry is shifting to HFOs (R-1234yf) and natural refrigerants (CO2, ammonia, propane) with lower environmental impact.',
+          hint: 'A good refrigerant boils at a useful temperature, is non-toxic, non-flammable, and cheap.',
         },
         {
           id: 'u4-L5-Q13',

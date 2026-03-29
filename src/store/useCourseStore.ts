@@ -1108,10 +1108,19 @@ export const useCourseStore = create<CourseState>()(
         // First lesson is always unlocked
         if (unitIndex === 0 && lessonIndex === 0) return true;
 
-        const prevLessonId = getPreviousLessonId(get().courseData, unitIndex, lessonIndex);
+        const { progress, courseData } = get();
+
+        // Placement unlock: all lessons in units before placementUnitIndex are accessible,
+        // plus the first lesson of the placement unit itself.
+        const placement = progress.placementUnitIndex ?? 0;
+        if (placement > 0) {
+          if (unitIndex < placement) return true;
+          if (unitIndex === placement && lessonIndex === 0) return true;
+        }
+
+        const prevLessonId = getPreviousLessonId(courseData, unitIndex, lessonIndex);
         if (!prevLessonId) return true;
 
-        const { progress } = get();
         return progress.completedLessons[prevLessonId]?.passed === true;
       },
 

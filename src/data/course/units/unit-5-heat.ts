@@ -17,6 +17,13 @@ export const unit5: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u5-L1-T1',
+          type: 'teaching',
+          question: 'Heat conduction and Fourier\'s law',
+          explanation: 'Conduction is heat transfer through a material without bulk motion. Fourier\'s law says the heat flux is q = -k*(dT/dx), where k is the thermal conductivity (a material property, units W/(m*K)). The negative sign means heat flows from hot to cold.',
+          hint: 'Metals have high k (~50-400), insulators have low k (~0.02-0.05).',
+        },
+        {
           id: 'u5-L1-Q1',
           type: 'multiple-choice',
           question: 'Which provides better thermal insulation and what is the reasoning?',
@@ -70,6 +77,13 @@ export const unit5: Unit = {
           explanation: 'Contact resistance arises because even "flat" surfaces only touch at microscopic asperities — the remaining gaps fill with air (k ≈ 0.026 W/(m·K)), creating high thermal resistance.',
         },
         {
+          id: 'u5-L1-T2',
+          type: 'teaching',
+          question: 'Thermal resistance and circuits',
+          explanation: 'Thermal resistance works just like electrical resistance. For a flat wall: R = L/(k*A). For layers in series, add the resistances. For parallel paths, use 1/R_total = 1/R1 + 1/R2. The total heat flow is Q = deltaT/R_total.',
+          hint: 'Contact resistance between surfaces adds another R in series.',
+        },
+        {
           id: 'u5-L1-Q5',
           type: 'multiple-choice',
           question: 'Contact thermal resistance between two surfaces in contact is primarily caused by:',
@@ -107,6 +121,13 @@ export const unit5: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Wall/slab cross-section --> <rect x="24" y="10" width="32" height="60" rx="3" fill="#58CC02" opacity="0.08"/> <rect x="24" y="10" width="32" height="60" rx="3" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Temperature gradient (hot left → cold right) --> <rect x="24" y="10" width="8" height="60" rx="0" fill="#3B8700" opacity="0.12"/> <rect x="32" y="10" width="8" height="60" rx="0" fill="#58CC02" opacity="0.08"/> <rect x="40" y="10" width="8" height="60" rx="0" fill="#A5E86C" opacity="0.06"/> <rect x="48" y="10" width="8" height="60" rx="0" fill="#A5E86C" opacity="0.03"/> <!-- Heat flow arrows (left to right, through wall) --> <g> <line x1="10" y1="28" x2="20" y2="28" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,26 23,28 19,30" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" repeatCount="indefinite"/> </g> <g> <line x1="10" y1="40" x2="20" y2="40" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,38 23,40 19,42" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" begin="0.4s" repeatCount="indefinite"/> </g> <g> <line x1="10" y1="52" x2="20" y2="52" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <polygon points="19,50 23,52 19,54" fill="#3B8700" opacity="0.3"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.2s" begin="0.8s" repeatCount="indefinite"/> </g> <!-- Exit arrows (right side, fading) --> <g> <line x1="58" y1="28" x2="68" y2="28" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,26 71,28 67,30" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" repeatCount="indefinite"/> </g> <g> <line x1="58" y1="40" x2="68" y2="40" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,38 71,40 67,42" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" begin="0.4s" repeatCount="indefinite"/> </g> <g> <line x1="58" y1="52" x2="68" y2="52" stroke="#A5E86C" stroke-width="1.2" stroke-linecap="round" opacity="0.2"/> <polygon points="67,50 71,52 67,54" fill="#A5E86C" opacity="0.2"/> <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.2s" begin="0.8s" repeatCount="indefinite"/> </g> <!-- Temperature labels --> <text x="10" y="74" text-anchor="middle" font-size="6" fill="#3B8700" opacity="0.3" font-style="italic">T_H</text> <text x="70" y="74" text-anchor="middle" font-size="6" fill="#3B8700" opacity="0.2" font-style="italic">T_C</text> <!-- Fourier\'s law label --> <text x="40" y="78" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.15" font-style="italic">q = -k dT/dx</text> </svg>',
           explanation: 'Per unit area: R_firebrick = 0.00/1. = 0.43 m²·K/W, R_insulating = 0.00/0.1 = 0.76 m²·K/W, R_steel = 0.06/50 = 0.0012 m²·K/W.',
           hint: 'Calculate R = L/k for each layer and compare.',
+        },
+        {
+          id: 'u5-L1-T3',
+          type: 'teaching',
+          question: 'Cylindrical conduction and critical radius',
+          explanation: 'For pipes and wires, the heat transfer area grows with radius, so the resistance formula uses a logarithm: R = ln(r_outer/r_inner)/(2*pi*k*L). Adding insulation to a small pipe can actually increase heat loss until you pass the critical radius r_cr = k_insulation/h_outside.',
+          hint: 'Critical radius matters most for thin wires and small pipes with low h.',
         },
         {
           id: 'u5-L1-Q8',
@@ -419,6 +440,13 @@ export const unit5: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u5-L2-T1',
+          type: 'teaching',
+          question: 'What is convection?',
+          explanation: 'Convection is heat transfer between a surface and a moving fluid. Newton\'s law of cooling says Q = h*A*(T_surface - T_fluid), where h is the convection coefficient. The value of h depends on the fluid, flow speed, and geometry. It\'s not a material property.',
+          hint: 'Typical h values: air ~10-50, water ~500-10,000 W/(m^2*K).',
+        },
+        {
           id: 'u5-L2-Q1',
           type: 'multiple-choice',
           question: 'Which of the following correctly ranks h from lowest to highest?',
@@ -491,6 +519,13 @@ export const unit5: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="5" y="18" width="70" height="20" rx="2" fill="#58CC02" opacity="0.06"/> <rect x="5" y="18" width="70" height="20" rx="2" stroke="#3B8700" stroke-width="1.5" fill="none"/> <line x1="10" y1="24" x2="40" y2="24" stroke="#A5E86C" stroke-width="0.8" opacity="0.3"/> <line x1="10" y1="28" x2="40" y2="28" stroke="#58CC02" stroke-width="1" opacity="0.4"/> <line x1="10" y1="32" x2="40" y2="32" stroke="#A5E86C" stroke-width="0.8" opacity="0.3"/> <path d="M44,24 Q48,22 52,24 Q56,26 60,24 Q64,22 68,24" stroke="#3B8700" stroke-width="0.8" fill="none" opacity="0.4"/> <path d="M44,28 Q48,26 52,28 Q56,30 60,28 Q64,26 68,28" stroke="#3B8700" stroke-width="1" fill="none" opacity="0.5"/> <path d="M44,32 Q48,34 52,32 Q56,30 60,32 Q64,34 68,32" stroke="#3B8700" stroke-width="0.8" fill="none" opacity="0.4"/> <line x1="42" y1="16" x2="42" y2="40" stroke="#3B8700" stroke-width="0.5" stroke-dasharray="1.5,2" opacity="0.2"/> <g opacity="0.4"> <line x1="2" y1="28" x2="8" y2="28" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <polygon points="7,26 10,28 7,30" fill="#3B8700"/> <animate attributeName="opacity" values="0.3;0.6;0.3" dur="1.2s" repeatCount="indefinite"/> </g> <text x="24" y="14" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">laminar</text> <text x="58" y="14" text-anchor="middle" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">turbulent</text> <text x="40" y="48" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.2" font-style="italic">D</text> <text x="40" y="58" text-anchor="middle" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">Re = ρVD/μ</text> <text x="40" y="68" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">inertial / viscous</text> </svg>',
           explanation: 'The Reynolds number Re = ρVD/μ = VD/ν is the single most important dimensionless parameter in fluid mechanics and convection. It determines the flow regime (laminar vs.',
           hint: 'Re compares _____ forces to viscous forces and is named.',
+        },
+        {
+          id: 'u5-L2-T2',
+          type: 'teaching',
+          question: 'Forced vs natural convection',
+          explanation: 'In forced convection, an external source (fan, pump) drives the fluid. In natural (free) convection, buoyancy from temperature differences drives the flow. Forced convection gives much higher h values. The key dimensionless numbers are Reynolds (Re) for forced and Grashof/Rayleigh (Gr, Ra) for natural convection.',
+          hint: 'The Nusselt number Nu = hL/k_fluid links h to flow correlations.',
         },
         {
           id: 'u5-L2-Q7',
@@ -575,6 +610,13 @@ export const unit5: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Container --> <rect x="8" y="14" width="64" height="52" rx="4" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Fluid fill --> <rect x="10" y="16" width="60" height="48" rx="2" fill="#A5E86C" opacity="0.06"/> <!-- Hot bottom --> <rect x="10" y="58" width="60" height="6" rx="1" fill="#3B8700" opacity="0.08"/> <!-- Left convection cell (clockwise) --> <circle r="2" fill="#3B8700" opacity="0.35"> <animateMotion dur="3s" repeatCount="indefinite" path="M28,56 Q28,20 28,20 Q28,18 40,18 Q40,18 40,56 Q40,58 28,58 Z"/> </circle> <circle r="1.8" fill="#58CC02" opacity="0.25"> <animateMotion dur="3s" repeatCount="indefinite" begin="1s" path="M28,56 Q28,20 28,20 Q28,18 40,18 Q40,18 40,56 Q40,58 28,58 Z"/> </circle> <circle r="1.5" fill="#A5E86C" opacity="0.2"> <animateMotion dur="3s" repeatCount="indefinite" begin="2s" path="M28,56 Q28,20 28,20 Q28,18 40,18 Q40,18 40,56 Q40,58 28,58 Z"/> </circle> <!-- Right convection cell (counter-clockwise) --> <circle r="2" fill="#3B8700" opacity="0.35"> <animateMotion dur="3s" repeatCount="indefinite" path="M52,56 Q52,20 52,20 Q52,18 40,18 Q40,18 40,56 Q40,58 52,58 Z"/> </circle> <circle r="1.8" fill="#58CC02" opacity="0.25"> <animateMotion dur="3s" repeatCount="indefinite" begin="1s" path="M52,56 Q52,20 52,20 Q52,18 40,18 Q40,18 40,56 Q40,58 52,58 Z"/> </circle> <!-- Cell circulation arrows (static hints) --> <path d="M24,40 Q24,22 34,20" stroke="#A5E86C" stroke-width="0.7" fill="none" opacity="0.12"/> <polygon points="33,18.5 36,20 33,21.5" fill="#A5E86C" opacity="0.12"/> <path d="M44,20 Q54,22 56,40" stroke="#A5E86C" stroke-width="0.7" fill="none" opacity="0.12"/> <polygon points="54.5,39 56,42 57.5,39" fill="#A5E86C" opacity="0.12"/> <!-- Temperature labels --> <text x="40" y="74" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.2">T_hot</text> <text x="40" y="12" text-anchor="middle" font-size="5" fill="#3B8700" opacity="0.15">T_cold</text> </svg>',
           explanation: 'Dittus-Boelter is an empirical correlation with conditions: Re > 10,000 (fully turbulent), L/D > 10 (fully developed), 0. < Pr < 160 (excludes liquid metals and very viscous oils), and smooth tubes.',
           hint: 'What Reynolds number range and flow conditions does?',
+        },
+        {
+          id: 'u5-L2-T3',
+          type: 'teaching',
+          question: 'Dimensionless numbers in convection',
+          explanation: 'Convection correlations use dimensionless numbers to generalize results. Prandtl number (Pr = nu/alpha) compares momentum to thermal diffusivity. Rayleigh number (Ra = Gr*Pr) determines if natural convection is laminar or turbulent. You look up Nu from a correlation, then calculate h = Nu*k/L.',
+          hint: 'Pr is a fluid property: ~0.7 for air, ~7 for water at room temperature.',
         },
         {
           id: 'u5-L2-Q13',
@@ -823,6 +865,13 @@ export const unit5: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u5-L3-T1',
+          type: 'teaching',
+          question: 'How thermal radiation works',
+          explanation: 'Every object above 0 K emits electromagnetic radiation. Unlike conduction and convection, radiation needs no medium and works through vacuum. The emitted power goes as T^4 (Stefan-Boltzmann law: E = epsilon*sigma*T^4), so radiation becomes dominant at high temperatures.',
+          hint: 'Sigma = 5.67 x 10^-8 W/(m^2*K^4). Always use absolute temperature (Kelvin).',
+        },
+        {
           id: 'u5-L3-Q1',
           type: 'multiple-choice',
           question: 'At what approximate temperature does radiation become the dominant mode of heat transfer compared to natural convection?',
@@ -898,6 +947,13 @@ export const unit5: Unit = {
           explanation: 'Kirchhoff\'s law: emissivity = absorptivity (at the same temperature and wavelength). A good emitter is a good absorber, and vice versa. A perfect blackbody has emissivity = absorptivity = 1.',
         },
         {
+          id: 'u5-L3-T2',
+          type: 'teaching',
+          question: 'Emissivity and real surfaces',
+          explanation: 'A blackbody (epsilon = 1) emits the maximum possible radiation at any temperature. Real surfaces emit less. Emissivity (epsilon, 0 to 1) is the ratio of a surface\'s emission to a blackbody\'s. Polished metals have low epsilon (~0.05), while oxidized or painted surfaces have high epsilon (~0.9).',
+          hint: 'For opaque surfaces: absorptivity + reflectivity = 1.',
+        },
+        {
           id: 'u5-L3-Q7',
           type: 'multiple-choice',
           question: 'What is the value and units of the Stefan-Boltzmann constant sigma?',
@@ -965,6 +1021,13 @@ export const unit5: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Hot body (left) --> <rect x="6" y="24" width="20" height="32" rx="3" stroke-width="0.8" stroke="#58CC02" fill="#A5E86C" fill-opacity="0.08"/> <text x="16" y="42" font-size="3" fill="#58CC02" opacity="0.4" text-anchor="middle">T₁</text> <!-- Cold body (right) --> <rect x="54" y="24" width="20" height="32" rx="3" stroke-width="0.8" stroke="#58CC02" fill="#58CC02" fill-opacity="0.04"/> <text x="64" y="42" font-size="3" fill="#58CC02" opacity="0.4" text-anchor="middle">T₂</text> <!-- Radiation waves (sinusoidal) --> <g stroke="#A5E86C" stroke-width="0.5" opacity="0.35"> <path d="M28,30 Q32,28 36,30 Q40,32 44,30 Q48,28 52,30" fill="none"> <animate attributeName="opacity" values="0.2;0.45;0.2" dur="2s" repeatCount="indefinite"/> <animateTransform attributeName="transform" type="translate" values="0,0;4,0;0,0" dur="2s" repeatCount="indefinite"/> </path> <path d="M28,36 Q32,34 36,36 Q40,38 44,36 Q48,34 52,36" fill="none"> <animate attributeName="opacity" values="0.2;0.45;0.2" dur="2s" repeatCount="indefinite" begin="0.3s"/> <animateTransform attributeName="transform" type="translate" values="0,0;4,0;0,0" dur="2s" repeatCount="indefinite" begin="0.3s"/> </path> <path d="M28,42 Q32,40 36,42 Q40,44 44,42 Q48,40 52,42" fill="none"> <animate attributeName="opacity" values="0.2;0.45;0.2" dur="2s" repeatCount="indefinite" begin="0.6s"/> <animateTransform attributeName="transform" type="translate" values="0,0;4,0;0,0" dur="2s" repeatCount="indefinite" begin="0.6s"/> </path> <path d="M28,48 Q32,46 36,48 Q40,50 44,48 Q48,46 52,48" fill="none"> <animate attributeName="opacity" values="0.2;0.45;0.2" dur="2s" repeatCount="indefinite" begin="0.9s"/> <animateTransform attributeName="transform" type="translate" values="0,0;4,0;0,0" dur="2s" repeatCount="indefinite" begin="0.9s"/> </path> </g> <!-- Arrow direction --> <g opacity="0.4"> <line x1="34" y1="56" x2="46" y2="56" stroke-width="0.5" stroke="#3B8700"/> <polygon points="46,54.5 46,57.5 49,56" fill="#3B8700"/> <text x="40" y="62" font-size="2.5" fill="#3B8700" text-anchor="middle">Q_rad</text> </g> <!-- Emissivity labels --> <text x="16" y="20" font-size="2.5" fill="#3B8700" opacity="0.35" text-anchor="middle">ε₁</text> <text x="64" y="20" font-size="2.5" fill="#3B8700" opacity="0.35" text-anchor="middle">ε₂</text> <!-- Stefan-Boltzmann formula --> <text x="40" y="72" font-size="3" fill="#58CC02" opacity="0.4" text-anchor="middle">Q = εσA(T₁⁴−T₂⁴)</text> <text x="40" y="76" text-anchor="middle" font-size="3" fill="#3B8700" opacity="0.15" font-style="italic">Stefan-Boltzmann</text> </svg>',
           explanation: 'View factors are purely geometric — they depend only on size, shape, orientation, and distance, not on surface properties or temperature.',
           hint: 'If radiation leaves surface i.',
+        },
+        {
+          id: 'u5-L3-T3',
+          type: 'teaching',
+          question: 'View factors control radiation exchange',
+          explanation: 'The view factor F_12 is the fraction of radiation leaving surface 1 that hits surface 2. It depends only on geometry, not temperature. Two key rules: the summation rule (all view factors from a surface add to 1) and reciprocity (A1*F_12 = A2*F_21).',
+          hint: 'A convex surface can\'t see itself, so F_11 = 0.',
         },
         {
           id: 'u5-L3-Q12',
@@ -1223,6 +1286,13 @@ export const unit5: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u5-L4-T1',
+          type: 'teaching',
+          question: 'What is a heat exchanger?',
+          explanation: 'A heat exchanger transfers thermal energy between two fluids without mixing them. The main types are shell-and-tube (for high pressure/temperature), plate (compact, easy to clean), and cross-flow (like car radiators). The key design equation is Q = U*A*deltaT_mean.',
+          hint: 'Counter-flow arrangements are more efficient than parallel-flow.',
+        },
+        {
           id: 'u5-L4-Q1',
           type: 'multiple-choice',
           question: 'What factors drive your choice between a shell-and-tube exchanger and a plate heat exchanger?',
@@ -1295,6 +1365,13 @@ export const unit5: Unit = {
           wordBank: ['maximum', 'minimum', 'average', 'nominal', 'design'],
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="14" y="24" width="52" height="32" rx="3" fill="#58CC02" opacity="0.06" stroke="#3B8700" stroke-width="1.5"/> <line x1="4" y1="34" x2="14" y2="34" stroke="#3B8700" stroke-width="1.5" opacity="0.4"/> <line x1="14" y1="34" x2="66" y2="34" stroke="#3B8700" stroke-width="1.2" opacity="0.3"/> <line x1="66" y1="34" x2="76" y2="34" stroke="#A5E86C" stroke-width="1.2" opacity="0.3"/> <polygon points="74,32 78,34 74,36" fill="#A5E86C" opacity="0.3"/> <line x1="76" y1="46" x2="66" y2="46" stroke="#A5E86C" stroke-width="1.5" opacity="0.4"/> <line x1="66" y1="46" x2="14" y2="46" stroke="#A5E86C" stroke-width="1.2" opacity="0.3"/> <line x1="14" y1="46" x2="4" y2="46" stroke="#3B8700" stroke-width="1.2" opacity="0.3"/> <polygon points="6,44 2,46 6,48" fill="#3B8700" opacity="0.3"/> <g opacity="0.25"> <line x1="30" y1="37" x2="30" y2="43" stroke="#58CC02" stroke-width="0.8"/> <polygon points="29,43 31,43 30,45" fill="#58CC02"/> <line x1="50" y1="37" x2="50" y2="43" stroke="#58CC02" stroke-width="0.8"/> <polygon points="49,43 51,43 50,45" fill="#58CC02"/> <animate attributeName="opacity" values="0.15;0.35;0.15" dur="1.5s" repeatCount="indefinite"/> </g> <text x="4" y="30" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">T_h,in</text> <text x="62" y="30" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">T_h,out</text> <text x="62" y="56" font-size="4" fill="#3B8700" opacity="0.2" font-style="italic">T_c,in</text> <text x="4" y="56" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">T_c,out</text> <text x="40" y="70" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.2" font-style="italic">ε = Q/Q_max</text> <text x="40" y="78" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">NTU = UA/C_min</text> </svg>',
           explanation: 'ε = Q_actual/Q_max where Q_max = C_min.',
+        },
+        {
+          id: 'u5-L4-T2',
+          type: 'teaching',
+          question: 'LMTD: the driving force for heat exchange',
+          explanation: 'The Log Mean Temperature Difference (LMTD) is the correct average temperature difference to use in Q = U*A*LMTD. It accounts for the fact that the temperature gap between hot and cold streams changes along the exchanger. LMTD = (deltaT1 - deltaT2) / ln(deltaT1/deltaT2).',
+          hint: 'Use LMTD when you know all 4 inlet/outlet temperatures.',
         },
         {
           id: 'u5-L4-Q7',
@@ -1373,6 +1450,13 @@ export const unit5: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Shell --> <rect x="8" y="20" width="64" height="40" rx="8" fill="#58CC02" opacity="0.06"/> <rect x="8" y="20" width="64" height="40" rx="8" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Inlet/outlet pipe stubs --> <rect x="2" y="28" width="8" height="6" rx="3" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.4"/> <rect x="70" y="28" width="8" height="6" rx="3" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.4"/> <rect x="70" y="46" width="8" height="6" rx="3" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.4"/> <rect x="2" y="46" width="8" height="6" rx="3" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.4"/> <!-- Hot tube (upper) --> <rect x="12" y="25" width="56" height="12" rx="6" fill="#A5E86C" opacity="0.1"/> <rect x="12" y="25" width="56" height="12" rx="6" stroke="#58CC02" stroke-width="1.5" fill="none"/> <!-- Cold tube (lower) --> <rect x="12" y="43" width="56" height="12" rx="6" fill="#A5E86C" opacity="0.1"/> <rect x="12" y="43" width="56" height="12" rx="6" stroke="#58CC02" stroke-width="1.5" fill="none"/> <!-- Heat transfer arrows (hot→cold, pulsing) --> <g> <line x1="26" y1="37.5" x2="26" y2="42" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="24.5,41 26,43.5 27.5,41" fill="#3B8700" opacity="0.2"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/> </g> <g> <line x1="40" y1="37.5" x2="40" y2="42" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="38.5,41 40,43.5 41.5,41" fill="#3B8700" opacity="0.2"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite" begin="0.5s"/> </g> <g> <line x1="54" y1="37.5" x2="54" y2="42" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="52.5,41 54,43.5 55.5,41" fill="#3B8700" opacity="0.2"/> <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite" begin="1s"/> </g> <!-- Hot fluid particles (→) — opacity fades as heat is lost --> <circle r="3" fill="#3B8700"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M14,31 L66,31"/> <animate attributeName="opacity" values="0.6;0.2" dur="2.2s" repeatCount="indefinite"/> </circle> <circle r="2.5" fill="#3B8700"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M14,31 L66,31" begin="0.55s"/> <animate attributeName="opacity" values="0.6;0.2" dur="2.2s" repeatCount="indefinite" begin="0.55s"/> </circle> <circle r="2.5" fill="#3B8700"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M14,31 L66,31" begin="1.1s"/> <animate attributeName="opacity" values="0.6;0.2" dur="2.2s" repeatCount="indefinite" begin="1.1s"/> </circle> <!-- Cold fluid particles (←) — opacity grows as heat is gained --> <circle r="3" fill="#58CC02"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M66,49 L14,49"/> <animate attributeName="opacity" values="0.15;0.5" dur="2.2s" repeatCount="indefinite"/> </circle> <circle r="2.5" fill="#58CC02"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M66,49 L14,49" begin="0.55s"/> <animate attributeName="opacity" values="0.15;0.5" dur="2.2s" repeatCount="indefinite" begin="0.55s"/> </circle> <circle r="2.5" fill="#58CC02"> <animateMotion dur="2.2s" repeatCount="indefinite" path="M66,49 L14,49" begin="1.1s"/> <animate attributeName="opacity" values="0.15;0.5" dur="2.2s" repeatCount="indefinite" begin="1.1s"/> </circle> <!-- Flow direction arrows on tubes --> <polygon points="42,29 45,31 42,33" fill="#3B8700" opacity="0.12"/> <polygon points="38,47 35,49 38,51" fill="#3B8700" opacity="0.12"/> <!-- Temperature labels --> <text x="5" y="24" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">T_H</text> <text x="68" y="44" font-size="4" fill="#3B8700" opacity="0.25" font-style="italic">T_C</text> <!-- Counterflow label --> <text x="40" y="72" text-anchor="middle" font-size="4.5" fill="#3B8700" opacity="0.2">counterflow</text> </svg>',
           explanation: 'When one fluid changes phase at constant temperature, its effective heat capacity rate is infinite. Therefore C_min/C_max = C_finite/C_infinite = 0?',
           hint: 'If one fluid stays at constant temperature during phase.',
+        },
+        {
+          id: 'u5-L4-T3',
+          type: 'teaching',
+          question: 'Effectiveness-NTU method',
+          explanation: 'When you don\'t know the outlet temperatures, use the NTU method instead of LMTD. NTU = UA/C_min measures the exchanger\'s "size" relative to the flow. Effectiveness epsilon = Q_actual/Q_max, where Q_max = C_min*(T_h,in - T_c,in). Higher NTU means higher effectiveness, but with diminishing returns.',
+          hint: 'C_min is the smaller of the two stream heat capacity rates (m_dot * c_p).',
         },
         {
           id: 'u5-L4-Q13',
@@ -1622,6 +1706,13 @@ export const unit5: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u5-L5-T1',
+          type: 'teaching',
+          question: 'Why do fins work?',
+          explanation: 'Fins increase the surface area available for convection. A bare hot surface can only reject heat through its own area. By attaching thin extensions of conductive material, you spread heat over a much larger surface that contacts the surrounding fluid.',
+          hint: 'Think of a motorcycle engine with cooling fins on the cylinder.',
+        },
+        {
           id: 'u5-L5-Q1',
           type: 'multiple-choice',
           question: 'Why does adding fins sometimes NOT improve heat transfer?',
@@ -1699,6 +1790,13 @@ export const unit5: Unit = {
           hint: 'This metric tells you what fraction of the fin surface.',
         },
         {
+          id: 'u5-L5-T2',
+          type: 'teaching',
+          question: 'Fin efficiency and the mL parameter',
+          explanation: 'Temperature drops along a fin from base to tip because heat is lost to the fluid along the way. Fin efficiency (eta) measures what fraction of the fin surface is actually useful: eta = actual heat transfer / heat transfer if the whole fin were at the base temperature. The parameter mL = L*sqrt(hP/kA_c) controls this. Short, thick, conductive fins (low mL) have high efficiency.',
+          hint: 'For a rectangular fin, eta = tanh(mL)/mL.',
+        },
+        {
           id: 'u5-L5-Q7',
           type: 'multiple-choice',
           question: 'What is the fin parameter mL, and how does it determine fin behavior?',
@@ -1736,6 +1834,13 @@ export const unit5: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Base wall --> <rect x="6" y="14" width="8" height="52" rx="1" stroke-width="0.7" stroke="#58CC02" fill="#A5E86C" fill-opacity="0.08"/> <text x="10" y="12" font-size="2.5" fill="#58CC02" opacity="0.4" text-anchor="middle">T_b</text> <!-- Fin (rectangular, extending right) --> <rect x="14" y="32" width="50" height="8" rx="1" stroke-width="0.7" stroke="#58CC02" fill="#58CC02" fill-opacity="0.04"/> <!-- Temperature gradient along fin (color fade) --> <rect x="14" y="33" width="50" height="6" rx="0.5" opacity="0.08"> <animate attributeName="opacity" values="0.05;0.12;0.05" dur="2s" repeatCount="indefinite"/> </rect> <linearGradient id="finGrad" x1="0" y1="0" x2="1" y2="0"> <stop offset="0%" style="stop-color:#58CC02"/> <stop offset="100%" style="stop-color:#58CC02;stop-opacity:0.05"/> </linearGradient> <!-- Temperature profile curve --> <path d="M14,28 Q30,28 42,30 Q54,32 64,36" stroke-width="0.6" stroke="#A5E86C" fill="none" opacity="0.5"/> <text x="66" y="36" font-size="2" fill="#A5E86C" opacity="0.4">T(x)</text> <!-- Ideal temperature line (dashed) --> <line x1="14" y1="28" x2="64" y2="28" stroke-width="0.4" stroke="#3B8700" opacity="0.2" stroke-dasharray="2,1"/> <text x="66" y="28" font-size="2" fill="#3B8700" opacity="0.3">T_b</text> <!-- Convection arrows (from fin surface) --> <g opacity="0.25"> <line x1="24" y1="32" x2="24" y2="26" stroke-width="0.3" stroke="#3B8700"/> <polygon points="23,26 25,26 24,24" fill="#3B8700"/> <line x1="36" y1="32" x2="36" y2="27" stroke-width="0.3" stroke="#3B8700"/> <polygon points="35,27 37,27 36,25" fill="#3B8700"/> <line x1="48" y1="32" x2="48" y2="28" stroke-width="0.3" stroke="#3B8700"/> <polygon points="47,28 49,28 48,26" fill="#3B8700"/> <line x1="24" y1="40" x2="24" y2="46" stroke-width="0.3" stroke="#3B8700"/> <polygon points="23,46 25,46 24,48" fill="#3B8700"/> <line x1="36" y1="40" x2="36" y2="45" stroke-width="0.3" stroke="#3B8700"/> <polygon points="35,45 37,45 36,47" fill="#3B8700"/> <line x1="48" y1="40" x2="48" y2="44" stroke-width="0.3" stroke="#3B8700"/> <polygon points="47,44 49,44 48,46" fill="#3B8700"/> <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2s" repeatCount="indefinite"/> </g> <!-- Ambient --> <text x="50" y="50" font-size="2.5" fill="#3B8700" opacity="0.35">T∞</text> <!-- Efficiency area shading --> <path d="M14,28 Q30,28 42,30 Q54,32 64,36 L64,28 L14,28 Z" fill="#58CC02" opacity="0.04"/> <text x="40" y="24" font-size="2.5" fill="#58CC02" opacity="0.3" text-anchor="middle">actual Q / ideal Q</text> <!-- Length --> <line x1="14" y1="56" x2="64" y2="56" stroke-width="0.3" stroke="#3B8700" opacity="0.3"/> <text x="40" y="60" font-size="2.5" fill="#3B8700" opacity="0.35" text-anchor="middle">L</text> <!-- Formula --> <text x="40" y="70" font-size="3" fill="#58CC02" opacity="0.4" text-anchor="middle">η = tanh(mL)/mL</text> <text x="40" y="76" text-anchor="middle" font-size="3" fill="#3B8700" opacity="0.15" font-style="italic">extended surface</text> </svg>',
           explanation: 'The insulated tip assumption is a common and practical simplification. For a thin fin, the tip area is much smaller than the total lateral surface area (P*L), so heat lost from the tip is negligible.',
           hint: 'Compare the tip area to the total fin surface area.',
+        },
+        {
+          id: 'u5-L5-T3',
+          type: 'teaching',
+          question: 'Fin effectiveness decides if fins help',
+          explanation: 'Fin effectiveness (epsilon) = heat transfer with fin / heat transfer without fin. If epsilon < 1, the fin actually makes things worse. The rule of thumb: fins help most when k_fin is high and h is low. That\'s why you see fins in air cooling (low h) but rarely in water cooling (high h).',
+          hint: 'Fins should generally have effectiveness of at least 2 to be worth the cost.',
         },
         {
           id: 'u5-L5-Q10',

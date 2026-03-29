@@ -673,6 +673,13 @@ export const unit1: Unit = {
           hint: 'How many points of force application does this special member type have?',
         },
         {
+          id: 'u1-L2-T3',
+          type: 'teaching',
+          question: 'Solving with Equilibrium Equations',
+          explanation: 'Once your FBD is complete, apply equilibrium: sum of Fx = 0, sum of Fy = 0, sum of M = 0. Pick your moment point wisely. Taking moments about a support eliminates that support\'s unknown forces from the equation.',
+          hint: 'Choose moment points where unknown forces pass through to simplify.',
+        },
+        {
           id: 'u1-L2-Q17',
           type: 'multiple-choice',
           question: 'On a three-force member in equilibrium, two forces intersect at a point. What about the third?',
@@ -865,6 +872,13 @@ export const unit1: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u1-L3-T1',
+          type: 'teaching',
+          question: 'What Is a Truss',
+          explanation: 'A truss is a structure made of straight members connected at pin joints. Loads are applied only at the joints, so each member carries only axial force (tension or compression), never bending. This makes trusses lightweight and efficient.',
+          hint: 'Think of a bridge made from triangles of steel bars pinned together.',
+        },
+        {
           id: 'u1-L3-Q1',
           type: 'multiple-choice',
           question: 'm=11, j=7, r=3 for a 2D truss. What does m+r vs. 2j tell you?',
@@ -900,6 +914,13 @@ export const unit1: Unit = {
           correctIndex: 0,
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Ground line + hatching --> <line x1="2" y1="66" x2="78" y2="66" stroke="#3B8700" stroke-width="1" opacity="0.15"/> <line x1="5" y1="66" x2="2" y2="70" stroke="#3B8700" stroke-width="0.6" opacity="0.1"/> <line x1="11" y1="66" x2="8" y2="70" stroke="#3B8700" stroke-width="0.6" opacity="0.1"/> <line x1="69" y1="66" x2="66" y2="70" stroke="#3B8700" stroke-width="0.6" opacity="0.1"/> <line x1="75" y1="66" x2="72" y2="70" stroke="#3B8700" stroke-width="0.6" opacity="0.1"/> <!-- Pin support (left) --> <polygon points="8,56 4,64 12,64" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.3"/> <!-- Roller support (right) --> <polygon points="72,56 68,62 76,62" stroke="#3B8700" stroke-width="1.2" fill="none" opacity="0.3"/> <circle cx="70" cy="64" r="1.5" fill="#3B8700" opacity="0.2"/> <circle cx="74" cy="64" r="1.5" fill="#3B8700" opacity="0.2"/> <line x1="68" y1="66" x2="76" y2="66" stroke="#3B8700" stroke-width="0.6" opacity="0.2"/> <!-- Diagonals (Pratt — symmetric V-pattern, in tension) --> <line x1="8" y1="54" x2="24" y2="32" stroke="#A5E86C" stroke-width="1.5" stroke-linecap="round" opacity="0.25"/> <line x1="24" y1="54" x2="40" y2="32" stroke="#A5E86C" stroke-width="1.5" stroke-linecap="round" opacity="0.25"/> <line x1="56" y1="54" x2="40" y2="32" stroke="#A5E86C" stroke-width="1.5" stroke-linecap="round" opacity="0.25"/> <line x1="72" y1="54" x2="56" y2="32" stroke="#A5E86C" stroke-width="1.5" stroke-linecap="round" opacity="0.25"/> <!-- Verticals (compression members) --> <line x1="8" y1="32" x2="8" y2="54" stroke="#58CC02" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <line x1="24" y1="32" x2="24" y2="54" stroke="#58CC02" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <line x1="40" y1="32" x2="40" y2="54" stroke="#58CC02" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <line x1="56" y1="32" x2="56" y2="54" stroke="#58CC02" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <line x1="72" y1="32" x2="72" y2="54" stroke="#58CC02" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/> <!-- Top chord (compression) --> <line x1="8" y1="32" x2="72" y2="32" stroke="#3B8700" stroke-width="2.5" stroke-linecap="round"/> <!-- Bottom chord (tension, sags under load) --> <path stroke="#3B8700" stroke-width="2.5" fill="none" stroke-linecap="round"> <animate attributeName="d" values="M8,54 Q40,54 72,54;M8,54 Q40,56.5 72,54;M8,54 Q40,54 72,54" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1"/> </path> <!-- Joint dots --> <circle cx="8" cy="32" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="24" cy="32" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="40" cy="32" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="56" cy="32" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="72" cy="32" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="8" cy="54" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="24" cy="54" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="40" cy="54" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="56" cy="54" r="1.8" fill="#3B8700" opacity="0.3"/> <circle cx="72" cy="54" r="1.8" fill="#3B8700" opacity="0.3"/> <!-- Moving load with force arrow --> <g> <animateTransform attributeName="transform" type="translate" values="0,0;64,0;0,0" dur="4s" repeatCount="indefinite"/> <!-- Vehicle body --> <rect x="3" y="22" width="10" height="5" rx="2" fill="#3B8700" opacity="0.4"/> <!-- Wheels --> <circle cx="5" cy="28" r="1.5" fill="#3B8700" opacity="0.3"/> <circle cx="11" cy="28" r="1.5" fill="#3B8700" opacity="0.3"/> <!-- Downward force arrow --> <line x1="8" y1="28.5" x2="8" y2="31" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/> <polygon points="6.5,30 8,33 9.5,30" fill="#3B8700" opacity="0.45"/> </g> </svg>',
           explanation: 'Zero-force members brace compression members against buckling, carry load under other load cases, and provide redundancy.',
+        },
+        {
+          id: 'u1-L3-T2',
+          type: 'teaching',
+          question: 'Method of Joints vs Sections',
+          explanation: 'Method of joints: isolate one joint at a time and apply sum of Fx = 0, sum of Fy = 0. Good for finding all member forces. Method of sections: cut through the truss, isolate one side, and use 3 equilibrium equations. Good for finding one specific member force quickly.',
+          hint: 'Joints works joint by joint. Sections lets you skip straight to the member you need.',
         },
         {
           id: 'u1-L3-Q4',
@@ -1032,6 +1053,13 @@ export const unit1: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <line x1="10" y1="60" x2="40" y2="20" stroke="#58CC02" stroke-width="2.5"/> <line x1="40" y1="20" x2="70" y2="60" stroke="#58CC02" stroke-width="2.5"/> <line x1="10" y1="60" x2="70" y2="60" stroke="#58CC02" stroke-width="2.5"/> <circle cx="10" cy="60" r="2.5" stroke="#3B8700" stroke-width="1" fill="white" opacity="0.5"/> <circle cx="40" cy="20" r="2.5" stroke="#3B8700" stroke-width="1" fill="white" opacity="0.5"/> <circle cx="70" cy="60" r="2.5" stroke="#3B8700" stroke-width="1" fill="white" opacity="0.5"/> <g opacity="0"> <animate attributeName="opacity" values="0;0.5;0.5" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.2;1"/> <line x1="22" y1="44" x2="15" y2="54" stroke="#3B8700" stroke-width="1.5"/> <polygon points="17,52 13,56 19,54" fill="#3B8700"/> <line x1="30" y1="34" x2="37" y2="24" stroke="#3B8700" stroke-width="1.5"/> <polygon points="35,26 39,22 33,24" fill="#3B8700"/> </g> <text x="40" y="76" text-anchor="middle" font-size="4" fill="#334155" opacity="0.4" font-style="italic">Pin joints: axial forces only</text> </svg>',
           explanation: 'Frictionless pins transmit no moment. With loads only at joints, every member becomes a two-force member carrying only axial force.',
           hint: 'What type of internal force does a frictionless pin connection permit?',
+        },
+        {
+          id: 'u1-L3-T3',
+          type: 'teaching',
+          question: 'Frames vs Trusses',
+          explanation: 'A frame has multi-force members that carry bending and shear, not just axial force. Unlike trusses, frame members can have loads applied between their joints. To analyze a frame, you must dismember it and draw separate FBDs for each member.',
+          hint: 'If a member has more than 2 force application points, it\'s not a two-force member.',
         },
         {
           id: 'u1-L3-Q14',
@@ -1266,6 +1294,13 @@ export const unit1: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u1-L4-T1',
+          type: 'teaching',
+          question: 'Static vs Kinetic Friction',
+          explanation: 'Friction resists sliding between surfaces. Static friction keeps things still: f is less than or equal to mu_s times N, where N is the normal force. Once sliding starts, kinetic friction takes over: f = mu_k times N. Static friction is always greater than or equal to kinetic.',
+          hint: 'It takes more force to start sliding than to keep sliding.',
+        },
+        {
           id: 'u1-L4-Q1',
           type: 'multiple-choice',
           question: 'How do you determine whether a crate on a ramp will slide?',
@@ -1302,6 +1337,13 @@ export const unit1: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Drum/capstan --> <circle cx="40" cy="36" r="16" stroke-width="0.8" class="s-stroke s-fill" fill-opacity="0.04"/> <circle cx="40" cy="36" r="3" stroke-width="0.4" class="s-stroke s-fill" fill-opacity="0.06"/> <!-- Rope wrapped around drum --> <path d="M10,52 L24,52 A16,16 0 1,1 56,52 L70,52" stroke-width="1" stroke="#58CC02" fill="none"/> <!-- Tight side (left — heavy load) --> <line x1="10" y1="52" x2="10" y2="68" stroke-width="0.6" stroke="#58CC02"/> <rect x="4" y="66" width="12" height="8" rx="1" stroke-width="0.5" class="s-stroke s-fill" fill-opacity="0.05"/> <text x="10" y="72" font-size="3" fill="#58CC02" text-anchor="middle" opacity="0.5">W</text> <!-- Slack side (right — small hold force) --> <line x1="70" y1="52" x2="70" y2="62" stroke-width="0.6" stroke="#58CC02"/> <g opacity="0.5"> <line x1="70" y1="62" x2="70" y2="68" stroke-width="0.5" stroke="#3B8700"/> <polygon points="68.5,68 71.5,68 70,70" fill="#3B8700"/> <text x="74" y="66" font-size="3" fill="#3B8700">T</text> </g> <!-- Wrap angle θ --> <path d="M52,48 A16,16 0 1,0 28,48" stroke-width="0.3" stroke="#3B8700" opacity="0.25" fill="none"/> <text x="40" y="14" font-size="3" fill="#3B8700" opacity="0.4" text-anchor="middle">θ wrap</text> <!-- Friction indicator --> <g opacity="0.2"> <circle cx="28" cy="48" r="1" fill="#A5E86C"> <animate attributeName="opacity" values="0.1;0.3;0.1" dur="1.5s" repeatCount="indefinite"/> </circle> <circle cx="40" cy="20" r="1" fill="#A5E86C"> <animate attributeName="opacity" values="0.1;0.3;0.1" dur="1.5s" repeatCount="indefinite" begin="0.5s"/> </circle> <circle cx="52" cy="48" r="1" fill="#A5E86C"> <animate attributeName="opacity" values="0.1;0.3;0.1" dur="1.5s" repeatCount="indefinite" begin="1s"/> </circle> </g> <!-- Formula --> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#58CC02" opacity="0.45">T = W·e^(−μθ)</text> </svg>',
           explanation: 'T1/T2 = e^(μθ) grows exponentially. For μ=0.3: 1 wrap ≈ 6.6×, 2 wraps ≈ 43×, 3 wraps ≈ 285×. Exponential growth lets a person hold a ship.',
           hint: 'whether how wraps and holding power is linear or something else.',
+        },
+        {
+          id: 'u1-L4-T2',
+          type: 'teaching',
+          question: 'Wedges and Self-Locking',
+          explanation: 'A wedge is an inclined plane that converts a small input force into a large output force. If the wedge angle is small enough relative to friction, it\'s self-locking: it won\'t slide back out when you remove the driving force. Self-locking happens when the lead angle is less than the friction angle.',
+          hint: 'Small wedge angle + high friction = stays in place on its own.',
         },
         {
           id: 'u1-L4-Q4',
@@ -1449,6 +1491,13 @@ export const unit1: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="38" r="18" fill="#58CC02" opacity="0.05" stroke="#58CC02" stroke-width="2"/> <circle cx="40" cy="38" r="2" fill="#3B8700" opacity="0.3"/> <path d="M22,38 Q22,20 40,20 Q58,20 58,38" stroke="#3B8700" stroke-width="2" fill="none"/> <line x1="22" y1="38" x2="8" y2="55" stroke="#58CC02" stroke-width="2" opacity="0.6"/> <text x="5" y="60" font-size="5" fill="#58CC02" font-weight="bold" font-style="italic">T&#x2081;</text> <line x1="58" y1="38" x2="72" y2="55" stroke="#A5E86C" stroke-width="1.5" opacity="0.5"/> <text x="72" y="60" font-size="5" fill="#A5E86C" font-weight="bold" font-style="italic">T&#x2082;</text> <text x="40" y="14" text-anchor="middle" font-size="4" fill="#334155" opacity="0.4" font-style="italic">&#x3b2;=&#x3c0;</text> <text x="40" y="72" text-anchor="middle" font-size="4" fill="#334155" opacity="0.4" font-style="italic">T&#x2081;/T&#x2082; = e^(&#x3bc;&#x3b2;)</text> </svg>',
           explanation: 'T_tight/T_slack = e^(μθ) = e^(0.3π) ≈ 2.57. T_slack = 500/2.57 ≈ 195 N. The answer 206 N reflects rounding differences.',
           hint: 'Apply the belt friction equation T1/T2 = e^(μθ) with the wrap angle in radians.',
+        },
+        {
+          id: 'u1-L4-T3',
+          type: 'teaching',
+          question: 'Belt Friction and Screws',
+          explanation: 'When a rope wraps around a drum, friction multiplies exponentially: T_tight / T_slack = e^(mu times theta). More wraps means dramatically more holding power. Screws work the same way: the thread is an inclined plane wrapped in a helix.',
+          hint: 'Each extra wrap multiplies the force ratio, not just adds to it.',
         },
         {
           id: 'u1-L4-Q15',
@@ -1668,6 +1717,13 @@ export const unit1: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u1-L5-T1',
+          type: 'teaching',
+          question: 'What Is a Centroid',
+          explanation: 'The centroid is the geometric center of a cross-section, found by the weighted average of position times area. For beams, the centroid defines the neutral axis: the line where bending stress is zero. Everything in beam design starts here.',
+          hint: 'Centroid = balance point of the shape\'s area.',
+        },
+        {
           id: 'u1-L5-Q1',
           type: 'multiple-choice',
           question: 'Why does centroid location matter for beam design?',
@@ -1703,6 +1759,13 @@ export const unit1: Unit = {
           correctAnswer: false,
           diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- Generic cross-section shape --><rect x="18" y="18" width="44" height="44" rx="3" fill="#58CC02" opacity="0.1" stroke="#58CC02" stroke-width="1.5"/><!-- Neutral axis --><line x1="8" y1="40" x2="72" y2="40" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/><text x="74" y="41" font-size="3.5" fill="#6B7280" font-style="italic">NA</text><!-- dA strip --><rect x="20" y="24" width="40" height="3" fill="#A5E86C" opacity="0.25" stroke="#A5E86C" stroke-width="0.5"/><text x="63" y="26" font-size="3" fill="#A5E86C">dA</text><!-- y distance --><line x1="40" y1="40" x2="40" y2="25.5" stroke="#6B7280" stroke-width="0.5" stroke-dasharray="1.5,1"/><text x="44" y="33" font-size="4" fill="#6B7280" font-style="italic">y</text><!-- Center dot --><circle cx="40" cy="40" r="1.5" fill="#3B8700" opacity="0.4"/><!-- Formula --><text x="40" y="72" text-anchor="middle" font-size="5" fill="#334155" font-style="italic">I = ∫y²dA</text></svg>',
           explanation: 'False: if the hole is centered, both share the same axis. Just subtract I_hole from I_outer — no parallel axis transfer needed.',
+        },
+        {
+          id: 'u1-L5-T2',
+          type: 'teaching',
+          question: 'Moment of Inertia and Parallel Axis',
+          explanation: 'The moment of inertia (I) measures a shape\'s resistance to bending. Material farther from the neutral axis contributes more because I = integral of y² dA. The parallel axis theorem, I = Ic + Ad², lets you shift from the centroidal axis to any parallel axis.',
+          hint: 'Doubling distance from the axis quadruples that area\'s contribution to I.',
         },
         {
           id: 'u1-L5-Q4',
@@ -1852,6 +1915,13 @@ export const unit1: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- Outer circle --><circle cx="40" cy="38" r="22" fill="#58CC02" opacity="0.1" stroke="#58CC02" stroke-width="1.5"/><!-- Inner circle (hole) --><circle cx="40" cy="38" r="13" fill="white" stroke="#3B8700" stroke-width="1" stroke-dasharray="2,1.5"/><!-- Centroidal axis --><line x1="10" y1="38" x2="70" y2="38" stroke="#3B8700" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/><!-- Center dot --><circle cx="40" cy="38" r="1.5" fill="#3B8700" opacity="0.4"/><!-- D label --><line x1="18" y1="52" x2="62" y2="52" stroke="#6B7280" stroke-width="0.5"/><line x1="18" y1="50" x2="18" y2="54" stroke="#6B7280" stroke-width="0.4"/><line x1="62" y1="50" x2="62" y2="54" stroke="#6B7280" stroke-width="0.4"/><text x="40" y="57" text-anchor="middle" font-size="5" fill="#334155" font-style="italic">D</text><!-- d label --><line x1="27" y1="45" x2="53" y2="45" stroke="#6B7280" stroke-width="0.4"/><text x="40" y="44" text-anchor="middle" font-size="4" fill="#6B7280" font-style="italic">d</text><!-- Formula --><text x="40" y="70" text-anchor="middle" font-size="4.5" fill="#334155" font-style="italic">I = π(D⁴−d⁴)/64</text></svg>',
           explanation: 'I = πD⁴/64 - πd⁴/64 = π(D⁴-d⁴)/64. Concentric circles, no transfer needed. Polar: J = π(D⁴-d⁴)/32.',
           hint: 'Subtract the inner circle\'s I from the outer circle\'s I',
+        },
+        {
+          id: 'u1-L5-T3',
+          type: 'teaching',
+          question: 'Composite Shapes Strategy',
+          explanation: 'For complex shapes, break them into simple rectangles, triangles, and circles. Find each part\'s area, centroid, and Ic. Then use the parallel axis theorem (I = Ic + Ad²) to transfer each part to the common centroidal axis. For holes, subtract their contributions.',
+          hint: 'Split, find centroids, transfer with Ad², then add (or subtract for holes).',
         },
         {
           id: 'u1-L5-Q15',

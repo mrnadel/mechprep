@@ -437,6 +437,13 @@ export const unit10: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u10-L2-T1',
+          type: 'teaching',
+          question: 'The Three Main Failure Modes',
+          explanation: 'Most mechanical failures fall into 3 categories: fatigue (repeated loading causes cracks to grow slowly), overload (single event exceeds material strength), and corrosion (environment degrades the material). Identifying which one happened is the first step in any failure analysis.',
+          hint: 'Look at the fracture surface first. Smooth with beach marks means fatigue; rough and jagged means overload.',
+        },
+        {
           id: 'u10-L2-Q1',
           type: 'multiple-choice',
           question: 'A rotating shaft fracture surface shows a smooth, flat region with beach marks covering 80% of the cross-section, and a rough,?',
@@ -491,6 +498,13 @@ export const unit10: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Plate with hole --> <rect x="8" y="18" width="64" height="44" rx="1" stroke-width="0.8" stroke="#58CC02" fill="#58CC02" fill-opacity="0.03"/> <!-- Central hole --> <circle cx="40" cy="40" r="8" stroke-width="0.8" stroke="#58CC02" fill="white"/> <!-- Stress flow lines (curving around hole) --> <g stroke="#58CC02" stroke-width="0.4" opacity="0.35"> <path d="M8,24 Q30,24 32,34 Q34,38 32,42 Q30,52 8,56" fill="none"/> <path d="M8,28 Q28,28 33,36 Q34,38 33,42 Q28,50 8,52" fill="none"/> <path d="M8,36 Q26,36 32,38 Q34,40 32,42 Q26,44 8,44" fill="none"/> <path d="M72,24 Q50,24 48,34 Q46,38 48,42 Q50,52 72,56" fill="none"/> <path d="M72,28 Q52,28 47,36 Q46,38 47,42 Q52,50 72,52" fill="none"/> <path d="M72,36 Q54,36 48,38 Q46,40 48,42 Q54,44 72,44" fill="none"/> </g> <!-- Stress concentration zones (top and bottom of hole) --> <g fill="#A5E86C" opacity="0.2"> <ellipse cx="40" cy="32" rx="4" ry="2"> <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2s" repeatCount="indefinite"/> </ellipse> <ellipse cx="40" cy="48" rx="4" ry="2"> <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2s" repeatCount="indefinite"/> </ellipse> </g> <!-- Tension arrows --> <g opacity="0.5"> <line x1="2" y1="40" x2="7" y2="40" stroke-width="0.6" stroke="#58CC02"/> <polygon points="2,38.5 2,41.5 -1,40" fill="#58CC02"/> <line x1="78" y1="40" x2="73" y2="40" stroke-width="0.6" stroke="#58CC02"/> <polygon points="78,38.5 78,41.5 81,40" fill="#58CC02"/> <text x="-2" y="43" font-size="3" fill="#58CC02">σ</text> <text x="78" y="43" font-size="3" fill="#58CC02">σ</text> </g> <!-- Kt label --> <text x="40" y="14" text-anchor="middle" font-size="4" fill="#58CC02" opacity="0.5">K_t = σ_max/σ_nom</text> <!-- Max stress indicator --> <text x="40" y="30" font-size="2.5" fill="#A5E86C" opacity="0.4" text-anchor="middle">σ_max</text> <text x="40" y="76" text-anchor="middle" font-size="3.5" fill="#3B8700" opacity="0.15" font-style="italic">notch effect</text> </svg>',
           explanation: 'Intermittent field failures that cannot be reproduced in the lab almost always stem from environmental or usage differences. A structured approach: Gather field data .',
           hint: 'What differences exist between the lab environment.'
+        },
+        {
+          id: 'u10-L2-T2',
+          type: 'teaching',
+          question: 'Root Cause Analysis Tools',
+          explanation: 'Fishbone (Ishikawa) diagrams organize potential causes into categories (Man, Machine, Material, Method, Measurement, Environment). The "5 Whys" technique digs deeper by asking "why?" repeatedly until you reach the root cause, not just the symptom.',
+          hint: 'FMEA rates each failure mode by Severity, Occurrence, and Detection to prioritize risks.',
         },
         {
           id: 'u10-L2-Q5',
@@ -850,6 +864,13 @@ export const unit10: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u10-L3-T1',
+          type: 'teaching',
+          question: 'Every Design Is a Trade-off',
+          explanation: 'There\'s no perfect material or process. Stronger materials cost more, lighter designs are harder to manufacture, and tighter tolerances increase scrap rate. Good engineering means choosing the best compromise for your specific constraints: cost, weight, performance, and manufacturability.',
+          hint: 'When asked "which material is best," always ask back: best for what?',
+        },
+        {
           id: 'u10-L3-Q1',
           type: 'multiple-choice',
           question: 'Steel has E = 200 GPa and density 7850 kg/m^3. Which is better for a bending beam?',
@@ -903,6 +924,13 @@ export const unit10: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <rect x="24" y="6" width="32" height="12" rx="3" fill="#58CC02" opacity="0.1"/> <rect x="24" y="6" width="32" height="12" rx="3" stroke="#58CC02" stroke-width="1.5" fill="none" opacity="0.3"/> <line x1="40" y1="18" x2="40" y2="26" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <polygon points="38.5,25 40,28 41.5,25" fill="#3B8700" opacity="0.3"/> <rect x="20" y="28" width="40" height="12" rx="3" fill="#58CC02" opacity="0.1"/> <rect x="20" y="28" width="40" height="12" rx="3" stroke="#58CC02" stroke-width="1.5" fill="none" opacity="0.3"/> <line x1="40" y1="40" x2="40" y2="48" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <polygon points="38.5,47 40,50 41.5,47" fill="#3B8700" opacity="0.3"/> <rect x="24" y="50" width="32" height="12" rx="3" fill="#A5E86C" opacity="0.1"/> <rect x="24" y="50" width="32" height="12" rx="3" stroke="#A5E86C" stroke-width="1.5" fill="none" opacity="0.3"/> <line x1="40" y1="62" x2="40" y2="70" stroke="#3B8700" stroke-width="1" opacity="0.3"/> <polygon points="38.5,69 40,72 41.5,69" fill="#3B8700" opacity="0.3"/> <circle cx="40" cy="76" r="3" fill="#3B8700" opacity="0.2"/> </svg>',
           explanation: 'A systematic approach considers all cost drivers.',
           hint: 'Good engineering is systematic.'
+        },
+        {
+          id: 'u10-L3-T2',
+          type: 'teaching',
+          question: 'DFM and DFA Basics',
+          explanation: 'Design for Manufacturing (DFM) means designing parts that are easy and cheap to make. Design for Assembly (DFA) means minimizing part count and making assembly foolproof. Both should start early in design, not after you\'ve already finalized the geometry.',
+          hint: 'A common interview question: "How would you make this cheaper to produce?"',
         },
         {
           id: 'u10-L3-Q5',
@@ -1108,6 +1136,13 @@ export const unit10: Unit = {
           hint: 'Metal molds cool faster than sand molds.'
         },
         {
+          id: 'u10-L3-T3',
+          type: 'teaching',
+          question: 'Volume Drives Process Selection',
+          explanation: 'Low volume (under 100) usually means machining or 3D printing. Medium volume (100-10,000) favors sheet metal or casting. High volume (10,000+) justifies injection molding or die casting despite expensive tooling. The tooling cost gets divided across all parts.',
+          hint: 'Always ask about production volume before recommending a manufacturing process.',
+        },
+        {
           id: 'u10-L3-Q20',
           type: 'multiple-choice',
           question: 'In topology optimization, what is the typical workflow and the key limitation that engineers must address before manufacturing the result?',
@@ -1264,6 +1299,13 @@ export const unit10: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u10-L4-T1',
+          type: 'teaching',
+          question: 'What FEA Actually Does',
+          explanation: 'Finite Element Analysis breaks a complex shape into thousands of small, simple pieces (elements). It solves equilibrium equations at each element to approximate stresses, displacements, and temperatures. The finer the mesh, the more accurate the result, but the longer it takes to solve.',
+          hint: 'Think of it like pixelating an image: more pixels means more detail but more data.',
+        },
+        {
           id: 'u10-L4-Q1',
           type: 'multiple-choice',
           question: 'In an FEA stress analysis, you observe that the maximum stress at a sharp re-entrant corner keeps increasing as you refine the?',
@@ -1317,6 +1359,13 @@ export const unit10: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes --> <line x1="8" y1="40" x2="72" y2="40" stroke="#3B8700" stroke-width="1.2" stroke-linecap="round"/> <line x1="40" y1="72" x2="40" y2="8" stroke="#3B8700" stroke-width="1.2" stroke-linecap="round"/> <polygon points="72,38.5 72,41.5 74,40" fill="#3B8700" opacity="0.4"/> <polygon points="38.5,8 41.5,8 40,6" fill="#3B8700" opacity="0.4"/> <text x="74" y="38" font-size="5" fill="#3B8700" opacity="0.3" font-style="italic">σ</text> <text x="43" y="10" font-size="5" fill="#3B8700" opacity="0.3" font-style="italic">τ</text> <!-- Mohr\'s circle --> <circle cx="44" cy="40" r="18" fill="#58CC02" opacity="0.06"/> <circle cx="44" cy="40" r="18" stroke="#58CC02" stroke-width="2" fill="none"/> <!-- Center point C --> <circle cx="44" cy="40" r="1.5" fill="#3B8700" opacity="0.4"/> <!-- Rotating diameter line (stress state) --> <g> <animateTransform attributeName="transform" type="rotate" values="0,44,40;360,44,40" dur="4s" repeatCount="indefinite"/> <line x1="26" y1="40" x2="62" y2="40" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/> <!-- σ₁ point --> <circle cx="62" cy="40" r="3" fill="#3B8700" opacity="0.4"/> <!-- σ₂ point --> <circle cx="26" cy="40" r="3" fill="#58CC02" opacity="0.3"/> </g> <!-- Principal stresses labels (static) --> <text x="63" y="52" font-size="4.5" fill="#3B8700" opacity="0.25">σ₁</text> <text x="22" y="52" font-size="4.5" fill="#3B8700" opacity="0.25">σ₂</text> <!-- Max shear label --> <text x="46" y="20" font-size="4" fill="#3B8700" opacity="0.2">τ_max</text> <line x1="44" y1="22" x2="44" y2="26" stroke="#3B8700" stroke-width="0.6" stroke-dasharray="1.5,2" opacity="0.15"/> </svg>',
           explanation: 'The correct response requires engineering judgment. Key checks: (1) Location — is the peak at a singularity? If so, the number is meaningless.',
           hint: 'Before accepting a peak stress value, check where it.'
+        },
+        {
+          id: 'u10-L4-T2',
+          type: 'teaching',
+          question: 'Mesh Convergence and Singularities',
+          explanation: 'A mesh convergence study means refining the mesh until results stop changing significantly (typically within 5%). Sharp corners create stress singularities where stress goes to infinity as you refine, so you can\'t trust peak stress at those locations.',
+          hint: 'Always check if high stress is real or just a mesh artifact at a sharp corner.',
         },
         {
           id: 'u10-L4-Q5',
@@ -1523,6 +1572,13 @@ export const unit10: Unit = {
           hint: 'Bonded = permanently attached.'
         },
         {
+          id: 'u10-L4-T3',
+          type: 'teaching',
+          question: 'Validating FEA Results',
+          explanation: 'FEA is only as good as your inputs. Always validate by checking boundary conditions, reaction forces (do they match applied loads?), and comparing results against hand calculations or test data. A beautiful color plot can still be completely wrong.',
+          hint: 'If reaction forces don\'t balance applied loads, something is wrong with your model.',
+        },
+        {
           id: 'u10-L4-Q20',
           type: 'multiple-choice',
           question: 'In a thermal-structural coupled FEA analysis, what is the typical analysis workflow?',
@@ -1678,6 +1734,13 @@ export const unit10: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u10-L5-T1',
+          type: 'teaching',
+          question: 'Structured Problem Solving',
+          explanation: 'Engineering case studies test how you think, not just what you know. The best approach is always: define the problem, gather data, form hypotheses, test them, then recommend a solution. Interviewers want to see your process, not just your answer.',
+          hint: 'Start every scenario by asking what information you\'d need before jumping to solutions.',
+        },
+        {
           id: 'u10-L5-Q1',
           type: 'multiple-choice',
           question: 'The leak occurs at the O-ring seal interface. What should be your first investigation step?',
@@ -1731,6 +1794,13 @@ export const unit10: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <circle cx="40" cy="32" r="20" fill="#58CC02" opacity="0.06"/> <circle cx="40" cy="32" r="20" stroke="#58CC02" stroke-width="2" fill="none" opacity="0.3"/> <line x1="40" y1="14" x2="40" y2="24" stroke="#3B8700" stroke-width="2" opacity="0.4"/> <circle cx="40" cy="12" r="2" fill="#3B8700" opacity="0.3"/> <g> <animateTransform attributeName="transform" type="rotate" values="0,40,32;360,40,32" dur="3s" repeatCount="indefinite"/> <line x1="40" y1="32" x2="40" y2="18" stroke="#3B8700" stroke-width="1.5" opacity="0.5"/> <circle cx="40" cy="18" r="1.5" fill="#3B8700" opacity="0.4"/> </g> <line x1="40" y1="32" x2="56" y2="32" stroke="#A5E86C" stroke-width="1" opacity="0.3"/> <text x="40" y="56" text-anchor="middle" font-size="4" fill="#334155" opacity="0.3" font-style="italic">diagnostics</text> <circle cx="20" cy="66" r="6" fill="#58CC02" opacity="0.1" stroke="#58CC02" stroke-width="1" opacity="0.2"/> <circle cx="40" cy="66" r="6" fill="#58CC02" opacity="0.1" stroke="#58CC02" stroke-width="1" opacity="0.2"/> <circle cx="60" cy="66" r="6" fill="#A5E86C" opacity="0.1" stroke="#A5E86C" stroke-width="1" opacity="0.2"/> <line x1="26" y1="66" x2="34" y2="66" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="33,64.5 36,66 33,67.5" fill="#3B8700" opacity="0.2"/> <line x1="46" y1="66" x2="54" y2="66" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="53,64.5 56,66 53,67.5" fill="#3B8700" opacity="0.2"/> </svg>',
           explanation: 'The gradual degradation over months followed by complete failure is characteristic of progressive impeller damage.',
           hint: 'The gradual decline rules out sudden events.'
+        },
+        {
+          id: 'u10-L5-T2',
+          type: 'teaching',
+          question: 'Lab vs Field Failures',
+          explanation: 'Products often pass lab tests but fail in the field. That\'s because lab tests can\'t capture every real-world condition: temperature swings, humidity, vibration, user misuse, and combined loads. Always ask what the test didn\'t simulate.',
+          hint: 'Think about environmental factors and usage patterns that differ between lab and reality.',
         },
         {
           id: 'u10-L5-Q5',
@@ -1938,6 +2008,13 @@ export const unit10: Unit = {
           hint: 'Noise control follows the source-path-receiver hierarchy.'
         },
         {
+          id: 'u10-L5-T3',
+          type: 'teaching',
+          question: 'Cross-Functional Decision Making',
+          explanation: 'Real engineering decisions involve trade-offs between manufacturing, quality, cost, and schedule. In interviews, show that you consider all stakeholders. The best answer isn\'t always the most technically elegant one; it\'s the one that balances all constraints.',
+          hint: 'When asked "how would you decide," always mention who else you\'d consult.',
+        },
+        {
           id: 'u10-L5-Q20',
           type: 'multiple-choice',
           question: 'A factory installs a new high-speed packaging machine. Who might be right, and what is the likely issue?',
@@ -2095,6 +2172,13 @@ export const unit10: Unit = {
   levels: 4,
       questions: [
         {
+          id: 'u10-L6-T1',
+          type: 'teaching',
+          question: 'Why Standards Exist',
+          explanation: 'Engineering standards (ASME, ISO, ASTM) define minimum safety and quality requirements so every engineer doesn\'t have to reinvent the wheel. They\'re the agreed-upon rules that keep bridges standing and pressure vessels from exploding.',
+          hint: 'In interviews, knowing which standard applies shows real-world awareness.',
+        },
+        {
           id: 'u10-L6-Q1',
           type: 'multiple-choice',
           question: 'Which standard should they certify to?',
@@ -2149,6 +2233,13 @@ export const unit10: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Coordinate axes (reference frame) --> <line x1="6" y1="74" x2="17" y2="74" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="16,72.5 19,74 16,75.5" fill="#3B8700" opacity="0.2"/> <text x="20" y="73" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">x</text> <line x1="6" y1="74" x2="6" y2="63" stroke="#3B8700" stroke-width="0.8" opacity="0.2"/> <polygon points="4.5,64 6,61 7.5,64" fill="#3B8700" opacity="0.2"/> <text x="4" y="61" font-size="4.5" fill="#3B8700" opacity="0.2" font-style="italic">y</text> <!-- Isolated body --> <circle cx="40" cy="40" r="13" fill="#58CC02" opacity="0.1"/> <circle cx="40" cy="40" r="13" stroke="#3B8700" stroke-width="2" fill="none"/> <!-- Center of mass dot --> <circle cx="40" cy="40" r="1.5" fill="#3B8700" opacity="0.35"/> <text x="40" y="44" text-anchor="middle" font-size="9" fill="#3B8700" font-weight="bold" font-style="italic">m</text> <!-- Weight W (downward from center — gravity) --> <g opacity="0"> <animate attributeName="opacity" values="0;0;1;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> <line x1="40" y1="53" x2="40" y2="69" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <polygon points="38,67 40,72 42,67" fill="#3B8700"/> <text x="46" y="67" font-size="7" fill="#3B8700" font-weight="bold" font-style="italic">W</text> </g> <!-- Normal N (upward — surface reaction) --> <g opacity="0"> <animate attributeName="opacity" values="0;0;1;1" dur="4s" begin="0.4s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> <line x1="40" y1="27" x2="40" y2="11" stroke="#58CC02" stroke-width="2" stroke-linecap="round"/> <polygon points="38,13 40,8 42,13" fill="#58CC02"/> <text x="46" y="15" font-size="7" fill="#58CC02" font-weight="bold" font-style="italic">N</text> </g> <!-- Friction f (leftward — opposing motion) --> <g opacity="0"> <animate attributeName="opacity" values="0;0;1;1" dur="4s" begin="0.8s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> <line x1="27" y1="40" x2="14" y2="40" stroke="#A5E86C" stroke-width="1.8" stroke-linecap="round"/> <polygon points="16,38 11,40 16,42" fill="#A5E86C"/> <text x="11" y="36" font-size="7" fill="#A5E86C" font-weight="bold" font-style="italic">f</text> </g> <!-- Applied force F (rightward — larger magnitude) --> <g opacity="0"> <animate attributeName="opacity" values="0;0;1;1" dur="4s" begin="1.2s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> <line x1="53" y1="40" x2="71" y2="40" stroke="#3B8700" stroke-width="2.5" stroke-linecap="round"/> <polygon points="69,37 75,40 69,43" fill="#3B8700"/> <text x="69" y="35" font-size="7" fill="#3B8700" font-weight="bold" font-style="italic">F</text> </g> <!-- Equilibrium equation (appears after all forces) --> <text x="40" y="78" text-anchor="middle" font-size="5.5" fill="#3B8700" opacity="0" font-style="italic"> <animate attributeName="opacity" values="0;0;0.3;0.3" dur="4s" begin="1.8s" repeatCount="indefinite" keyTimes="0;0.1;0.18;1"/> &#x3a3;F = 0 </text> </svg>',
           explanation: 'The ECR/ECO process is required by most quality standards (ISO 9001, AS9100). An ECR documents the proposed change, justification, and impact assessment.',
           hint: 'Consider the two-stage gate: first propose and assess.'
+        },
+        {
+          id: 'u10-L6-T2',
+          type: 'teaching',
+          question: 'Quality Systems and Risk Tools',
+          explanation: 'ISO 9001 is the foundation of quality management. FMEA rates risks by Severity, Occurrence, and Detection. Engineering change processes (ECR/ECO) keep designs controlled. These systems prevent chaos when multiple engineers work on the same product.',
+          hint: 'Interviewers love asking how you\'d manage changes to an existing product.',
         },
         {
           id: 'u10-L6-Q5',
@@ -2351,6 +2442,13 @@ export const unit10: Unit = {
           diagram: '<svg viewBox="0 0 80 80" fill="none"> <!-- Axes --> <line x1="12" y1="68" x2="74" y2="68" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <line x1="12" y1="68" x2="12" y2="8" stroke="#3B8700" stroke-width="1.5" stroke-linecap="round"/> <polygon points="74,66.5 74,69.5 76,68" fill="#3B8700" opacity="0.4"/> <polygon points="10.5,8 13.5,8 12,6" fill="#3B8700" opacity="0.4"/> <text x="44" y="77" text-anchor="middle" font-size="7" fill="#3B8700" opacity="0.4" font-style="italic">&#x3b5;</text> <text x="7" y="38" text-anchor="middle" font-size="7" fill="#3B8700" opacity="0.4" font-style="italic">&#x3c3;</text> <!-- Yield stress reference line --> <line x1="12" y1="32" x2="20" y2="32" stroke="#A5E86C" stroke-width="0.7" stroke-dasharray="1.5,2" opacity="0"> <animate attributeName="opacity" values="0;0;0.3;0.3;0" keyTimes="0;0.08;0.12;0.82;1" dur="6s" repeatCount="indefinite"/> </line> <!-- UTS reference line --> <line x1="12" y1="16" x2="50" y2="16" stroke="#A5E86C" stroke-width="0.7" stroke-dasharray="1.5,2" opacity="0"> <animate attributeName="opacity" values="0;0;0.25;0.25;0" keyTimes="0;0.35;0.4;0.82;1" dur="6s" repeatCount="indefinite"/> </line> <!-- Stress-Strain curve — animated progressive draw --> <path d="M12,68 L18,32 Q22,28 28,24 Q38,18 48,16 Q54,16 58,22 L64,30" stroke="#58CC02" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="110" stroke-dashoffset="110"> <animate attributeName="stroke-dashoffset" values="110;0;0;110" keyTimes="0;0.55;0.82;1" dur="6s" repeatCount="indefinite"/> </path> <!-- Yield point marker — appears as curve passes through --> <g opacity="0"> <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.08;0.12;0.82;1" dur="6s" repeatCount="indefinite"/> <circle cx="18" cy="32" r="3" stroke="#3B8700" stroke-width="1.2" stroke-dasharray="2,2" fill="none"/> <text x="6" y="30" font-size="4.5" fill="#3B8700" opacity="0.7">σ_y</text> </g> <!-- UTS marker — appears at peak --> <g opacity="0"> <animate attributeName="opacity" values="0;0;0.5;0.5;0" keyTimes="0;0.35;0.4;0.82;1" dur="6s" repeatCount="indefinite"/> <circle cx="48" cy="16" r="3" stroke="#3B8700" stroke-width="1.2" stroke-dasharray="2,2" fill="none"/> <text x="50" y="12" font-size="4.5" fill="#3B8700" opacity="0.7">UTS</text> </g> <!-- Fracture X marker — appears at end --> <g opacity="0"> <animate attributeName="opacity" values="0;0;0.6;0.6;0" keyTimes="0;0.52;0.56;0.82;1" dur="6s" repeatCount="indefinite"/> <line x1="61" y1="27" x2="67" y2="33" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <line x1="67" y1="27" x2="61" y2="33" stroke="#3B8700" stroke-width="2" stroke-linecap="round"/> <text x="67" y="25" font-size="4" fill="#3B8700" opacity="0.6">F</text> </g> <!-- Tracing dot — follows the curve drawing --> <circle r="3.5" fill="#3B8700"> <animateMotion dur="6s" repeatCount="indefinite" path="M12,68 L18,32 Q22,28 28,24 Q38,18 48,16 Q54,16 58,22 L64,30" keyPoints="0;1;1;0" keyTimes="0;0.55;0.82;1" calcMode="linear"/> <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.55;0.56;1" dur="6s" repeatCount="indefinite"/> </circle> <circle r="1.5" fill="white" opacity="0.5"> <animateMotion dur="6s" repeatCount="indefinite" path="M12,68 L18,32 Q22,28 28,24 Q38,18 48,16 Q54,16 58,22 L64,30" keyPoints="0;1;1;0" keyTimes="0;0.55;0.82;1" calcMode="linear"/> <animate attributeName="opacity" values="0.5;0.5;0;0" keyTimes="0;0.55;0.56;1" dur="6s" repeatCount="indefinite"/> </circle> <!-- Elastic modulus slope indicator (E) --> <line x1="22" y1="68" x2="28" y2="32" stroke="#A5E86C" stroke-width="0.8" stroke-dasharray="3,3" opacity="0"> <animate attributeName="opacity" values="0;0;0.2;0.2;0" keyTimes="0;0.12;0.16;0.82;1" dur="6s" repeatCount="indefinite"/> </line> <text x="30" y="46" font-size="4.5" fill="#3B8700" font-style="italic" opacity="0"> <animate attributeName="opacity" values="0;0;0.25;0.25;0" keyTimes="0;0.12;0.16;0.82;1" dur="6s" repeatCount="indefinite"/> E </text> </svg>',
           explanation: 'Calibration (per ISO/IEC 17025) involves comparing the instrument to a traceable reference standard, determining the measurement error at multiple points across the range, and either adjusting.',
           hint: 'One determines and documents the actual error; the other.'
+        },
+        {
+          id: 'u10-L6-T3',
+          type: 'teaching',
+          question: 'Professional Ethics and Licensing',
+          explanation: 'A PE (Professional Engineer) license means legal authority to sign off on public safety designs. Engineers have an ethical obligation to refuse signing off on work they believe is unsafe, even if it technically meets code. Public safety always comes first.',
+          hint: 'When in doubt, the answer in interviews is always: protect the public.',
         },
         {
           id: 'u10-L6-Q20',
