@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { PROFESSIONS } from '@/data/professions';
-import { CourseIcon } from '@/components/course/CourseIcon';
 
 /* ── Demo questions for interactive landing ── */
 const DEMO_QUESTIONS = [
@@ -137,57 +136,19 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* ── PROFESSIONS ── */}
+      {/* ── BOTTOM CTA ── */}
       <section style={{ padding: '64px 24px', background: '#fff', borderTop: '1px solid #E2E8F0' }}>
-        <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+        <div style={{ maxWidth: 500, margin: '0 auto', textAlign: 'center' }}>
           <AnimateIn>
             <h2 className="landing-section-heading" style={{ fontWeight: 900, color: '#1E293B', marginBottom: 12, letterSpacing: -0.5 }}>
-              Pick your path
+              Ready to start?
             </h2>
-            <p style={{ fontSize: 15, fontWeight: 600, color: '#94A3B8', marginBottom: 36 }}>
-              {PROFESSIONS.reduce((sum, p) => sum + p.questionCount, 0).toLocaleString()}+ questions across {PROFESSIONS.length} professions
+            <p style={{ fontSize: 15, fontWeight: 600, color: '#94A3B8', marginBottom: 32 }}>
+              {PROFESSIONS.filter(p => !p.requiresAccess).reduce((sum, p) => sum + p.questionCount, 0).toLocaleString()}+ questions across {PROFESSIONS.filter(p => !p.requiresAccess).length} courses. Free forever.
             </p>
           </AnimateIn>
 
           <AnimateIn delay={0.1}>
-            <div className="landing-professions-grid" style={{ display: 'grid', gap: 12, marginBottom: 40 }}>
-              {PROFESSIONS.map((prof) => (
-                <div
-                  key={prof.id}
-                  className="landing-profession-card"
-                  style={{
-                    background: '#FAFAFA', border: '1px solid #E2E8F0', borderRadius: 14,
-                    padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 14,
-                    transition: 'border-color 0.2s, box-shadow 0.2s', position: 'relative',
-                  }}
-                >
-                  <div style={{
-                    width: 44, height: 44, borderRadius: 12, background: `${prof.color}15`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-                  }}>
-                    <CourseIcon professionId={prof.id} color={prof.color} size={26} />
-                  </div>
-                  <div style={{ textAlign: 'left' }}>
-                    <div style={{ fontSize: 16, fontWeight: 800, color: '#0F172A' }}>{prof.name}</div>
-                    <div style={{ fontSize: 13, fontWeight: 600, color: '#94A3B8' }}>
-                      {prof.questionCount.toLocaleString()}+ questions
-                    </div>
-                  </div>
-                  {prof.isComingSoon && (
-                    <div style={{
-                      marginLeft: 'auto', background: '#F0FDFA', color: '#0F766E',
-                      fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.5,
-                      padding: '3px 8px', borderRadius: 100,
-                    }}>
-                      Soon
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </AnimateIn>
-
-          <AnimateIn delay={0.2}>
             <Link
               href="/get-started"
               className="landing-btn-primary"
@@ -199,7 +160,7 @@ export function LandingPage() {
                 transition: 'transform 0.1s, box-shadow 0.1s, filter 0.1s',
               }}
             >
-              Start playing free
+              Get started
             </Link>
           </AnimateIn>
         </div>
@@ -234,11 +195,8 @@ export function LandingPage() {
         .landing-hero-h1 { font-size: 46px; }
         .landing-hero-p { font-size: 18px; }
         .landing-section-heading { font-size: 30px; }
-        .landing-professions-grid { grid-template-columns: 1fr; }
-
         .landing-btn-primary:hover { filter: brightness(1.05); }
         .landing-btn-primary:active { transform: translateY(2px); box-shadow: 0 3px 0 #0F766E !important; }
-        .landing-profession-card:hover { border-color: #0D9488 !important; box-shadow: 0 4px 16px rgba(13, 148, 136, 0.12) !important; }
 
         @keyframes demoFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
         .demo-option { font-family: inherit; }
