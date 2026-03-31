@@ -82,6 +82,7 @@ export function DailyGoalBar() {
   // Don't render if the user hasn't completed the course intro
   if (!introData) return null;
 
+  const isDark = useIsDark();
   const target = getDailyXpTarget(introData.dailyMinutes);
   const percent = Math.min(100, (dailyXp / target) * 100);
   const goalReached = dailyXp >= target;
@@ -91,8 +92,8 @@ export function DailyGoalBar() {
     <div className="px-3 sm:px-4" style={{ paddingTop: 12 }}>
       <div
         style={{
-          background: '#FFFFFF',
-          border: '1.5px solid #E2E8F0',
+          background: isDark ? '#1E293B' : '#FFFFFF',
+          border: isDark ? '1.5px solid #334155' : '1.5px solid #E2E8F0',
           borderRadius: 16,
           padding: '14px 16px',
         }}
@@ -106,7 +107,7 @@ export function DailyGoalBar() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: goalReached ? '#10B981' : '#475569',
+              color: goalReached ? '#10B981' : (isDark ? '#CBD5E1' : '#475569'),
             }}
           >
             {goalReached ? (
@@ -122,7 +123,7 @@ export function DailyGoalBar() {
             style={{
               fontSize: 13,
               fontWeight: 600,
-              color: goalReached ? '#10B981' : '#64748B',
+              color: goalReached ? '#10B981' : (isDark ? '#94A3B8' : '#64748B'),
             }}
           >
             {dailyXp} / {target} XP

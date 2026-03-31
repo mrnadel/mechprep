@@ -158,7 +158,7 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3282358085183080"
           crossOrigin="anonymous"
-          strategy="lazyOnload"
+          strategy="beforeInteractive"
         />
         <a
           href="#main-content"

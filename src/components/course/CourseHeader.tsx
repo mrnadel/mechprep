@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useCourseStore } from '@/store/useCourseStore';
+import { useIsDark } from '@/store/useThemeStore';
 
 import { StreakFlame, type StreakState } from '@/components/icons/StreakFlame';
 import { getProfession, PROFESSIONS } from '@/data/professions';
@@ -133,6 +134,7 @@ function DoubleXpCountdown() {
 
 export function CourseHeader() {
   useSession();
+  const isDark = useIsDark();
   const progress = useCourseStore((s) => s.progress);
   const streakStatus = getStreakStatus(progress.lastActiveDate);
   const flameState: StreakState = progress.currentStreak === 0

@@ -4,6 +4,59 @@
 
 ---
 
+## Academic Foundations
+
+Every course syllabus is built on real university curricula and professional certification standards, not invented content. The AI writing the content must research these sources to ensure accuracy, completeness, and proper sequencing.
+
+### Personal Finance
+| Source | What it provides |
+|--------|-----------------|
+| **CFP (Certified Financial Planner) exam curriculum** | The actual professional certification topics: financial planning, insurance, investments, tax, retirement, estate planning. This defines "professional level." |
+| **CFA Level 1 curriculum (ethics + portfolio sections)** | Investment analysis, portfolio theory, ethical standards |
+| **Yale ECON 252: Financial Markets** (Robert Shiller) | Market structure, behavioral finance, risk management, derivatives |
+| **Duke Behavioral Finance** | Psychology of money decisions, biases in investing |
+| **Khan Academy Personal Finance** | Well-structured beginner-to-intermediate progression |
+| **IRS Publication 17** | Authoritative US tax reference (for tax sections) |
+| **FINRA Investor Education** | Brokerage, fraud prevention, investment literacy |
+
+**Professional equivalence target:** Someone who passes all 15 sections has the knowledge base to sit for the CFP exam (minus the experience requirement and ethics course).
+
+### Psychology
+| Source | What it provides |
+|--------|-----------------|
+| **MIT OCW 9.00: Introduction to Psychology** | Gold-standard university intro covering all core areas |
+| **Yale PSYC 110: Introduction to Psychology** (Paul Bloom) | Highly structured lecture series covering perception through clinical |
+| **APA undergraduate learning goals** | What the American Psychological Association says every psych graduate must know |
+| **AP Psychology curriculum (College Board)** | Standardized topic list: biological bases, sensation, learning, cognition, development, abnormal, social, research methods |
+| **Kaplan GRE Psychology Subject Test prep** | Defines professional-level knowledge boundaries across all subfields |
+| **DSM-5-TR diagnostic categories** | Authoritative reference for mental health section (not for diagnosis, but for understanding) |
+| **APA Ethics Code** | Professional ethics and research standards |
+
+**Professional equivalence target:** Someone who passes all 15 sections has undergraduate psychology knowledge equivalent to a BA/BS, sufficient to enter a graduate program or work in behavioral research, HR, UX, or counseling support roles.
+
+### Space & Astronomy
+| Source | What it provides |
+|--------|-----------------|
+| **MIT OCW 8.282: Introduction to Astronomy** | University-level coverage from observational basics through cosmology |
+| **University of Arizona Astronomy Specialization** (Coursera) | 4-course sequence: naked eye to cosmology, well-sequenced |
+| **ASP (Astronomical Society of the Pacific) standards** | What astronomy educators agree everyone should know |
+| **IAU educational framework** | International Astronomical Union's recommended topic coverage |
+| **NASA STEM engagement curriculum** | Practical space science, mission design, current programs |
+| **Fundamentals of Astronomy** (Karttunen et al.) | Standard university textbook: coordinates, optics, stellar physics, galaxies, cosmology |
+| **The Planetary Society educational resources** | Exoplanet science, astrobiology, space policy |
+
+**Professional equivalence target:** Someone who passes all 15 sections could work as a planetarium educator, science journalist, amateur research contributor, or space industry communicator. They could read and understand Sky & Telescope, follow arxiv astro-ph abstracts, and operate telescope equipment.
+
+### How Sources Map to Sections
+
+When building content for each section, the content writer must:
+1. **Cross-reference the academic source** that covers that topic (e.g., Section 11 "Mental Health" maps to DSM-5-TR categories + AP Psychology abnormal unit + Yale PSYC 110 lectures 18-20)
+2. **Verify no major topic is missing** by checking the source's table of contents against our unit list
+3. **Match difficulty level** to where the section falls in the course arc (Sections 1-4 = intro textbook level, Sections 5-10 = upper undergrad, Sections 11-15 = professional/graduate intro)
+4. **Use the source for accuracy**, not for copying. Our voice is Octokeen's (conversational, short, gamified), but the facts must match the academic source.
+
+---
+
 ## Duolingo's Actual Scale
 
 Duolingo's Spanish course (their gold standard):
