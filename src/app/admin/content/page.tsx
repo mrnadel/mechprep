@@ -5,50 +5,20 @@ import { PROFESSIONS } from '@/data/professions';
 import { ChevronRight } from 'lucide-react';
 
 const CourseEditor = lazy(() => import('./CourseEditor'));
-const PracticeEditor = lazy(() => import('./PracticeEditor'));
 
 export default function ContentPage() {
-  const [tab, setTab] = useState<'courses' | 'practice'>('courses');
   const [selectedProfession, setSelectedProfession] = useState<string | null>(null);
 
   return (
     <div>
       <h1 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-1">Content Management</h1>
       <p className="text-sm text-gray-500 mb-4">
-        {tab === 'courses'
-          ? selectedProfession
-            ? PROFESSIONS.find(p => p.id === selectedProfession)?.name
-            : `${PROFESSIONS.length} courses`
-          : 'Practice question bank'}
+        {selectedProfession
+          ? PROFESSIONS.find(p => p.id === selectedProfession)?.name
+          : `${PROFESSIONS.length} courses`}
       </p>
 
-      {/* Tab toggle */}
-      <div className="flex gap-0 mb-5">
-        <button
-          onClick={() => { setTab('courses'); setSelectedProfession(null); }}
-          className={`flex-1 py-3 text-sm font-bold border-2 border-gray-200 rounded-l-xl transition-colors ${
-            tab === 'courses' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-500 hover:bg-gray-50'
-          }`}
-        >
-          Courses
-        </button>
-        <button
-          onClick={() => setTab('practice')}
-          className={`flex-1 py-3 text-sm font-bold border-2 border-gray-200 border-l-0 rounded-r-xl transition-colors ${
-            tab === 'practice' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-500 hover:bg-gray-50'
-          }`}
-        >
-          Practice Questions
-        </button>
-      </div>
-
-      {tab === 'practice' && (
-        <Suspense fallback={<div className="py-8 text-center text-gray-400 text-sm">Loading editor...</div>}>
-          <PracticeEditor />
-        </Suspense>
-      )}
-
-      {tab === 'courses' && !selectedProfession && (
+      {!selectedProfession && (
         <div className="space-y-2">
           {PROFESSIONS.map((p) => (
             <button
@@ -74,7 +44,7 @@ export default function ContentPage() {
         </div>
       )}
 
-      {tab === 'courses' && selectedProfession && (
+      {selectedProfession && (
         <>
           <button
             onClick={() => setSelectedProfession(null)}

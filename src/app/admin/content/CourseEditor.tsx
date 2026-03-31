@@ -6,7 +6,7 @@ import { useEffect, useState, useCallback } from 'react';
 
 interface CourseQuestion {
   id: string;
-  type: 'multiple-choice' | 'true-false' | 'fill-blank';
+  type: string;
   question: string;
   options?: string[];
   correctIndex?: number;
@@ -1026,6 +1026,17 @@ function QuestionsView({
     'multiple-choice': { bg: '#E3F2FD', fg: '#1565C0' },
     'true-false': { bg: '#FFF8E1', fg: '#F57F17' },
     'fill-blank': { bg: '#F3E5F5', fg: '#7B1FA2' },
+    'teaching': { bg: '#E8F5E9', fg: '#2E7D32' },
+    'sort-buckets': { bg: '#FFF3E0', fg: '#E65100' },
+    'match-pairs': { bg: '#E0F7FA', fg: '#00695C' },
+    'order-steps': { bg: '#FCE4EC', fg: '#AD1457' },
+    'multi-select': { bg: '#E8EAF6', fg: '#283593' },
+    'slider-estimate': { bg: '#F1F8E9', fg: '#33691E' },
+    'scenario': { bg: '#EFEBE9', fg: '#4E342E' },
+    'category-swipe': { bg: '#FDE0DC', fg: '#C62828' },
+    'rank-order': { bg: '#E0F2F1', fg: '#004D40' },
+    'pick-the-best': { bg: '#F3E5F5', fg: '#6A1B9A' },
+    'image-tap': { bg: '#E3F2FD', fg: '#0D47A1' },
   };
 
   return (
@@ -1315,6 +1326,17 @@ function QuestionForm({
           <option value="multiple-choice">Multiple Choice</option>
           <option value="true-false">True / False</option>
           <option value="fill-blank">Fill in the Blank</option>
+          <option value="teaching">Teaching</option>
+          <option value="sort-buckets">Sort Buckets</option>
+          <option value="match-pairs">Match Pairs</option>
+          <option value="order-steps">Order Steps</option>
+          <option value="multi-select">Multi Select</option>
+          <option value="slider-estimate">Slider Estimate</option>
+          <option value="scenario">Scenario</option>
+          <option value="category-swipe">Category Swipe</option>
+          <option value="rank-order">Rank Order</option>
+          <option value="pick-the-best">Pick the Best</option>
+          <option value="image-tap">Image Tap</option>
         </select>
       </div>
 
