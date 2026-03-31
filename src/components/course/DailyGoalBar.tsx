@@ -5,6 +5,7 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { getProfession } from '@/data/professions';
 import { toLocalDateString } from '@/lib/utils';
 import { ProgressBar } from '@/components/ui/ProgressBar';
+import { useIsDark } from '@/store/useThemeStore';
 
 // ─── XP target mapping ────────────────────────────────────
 const DAILY_XP_MAP: Record<number, number> = {
