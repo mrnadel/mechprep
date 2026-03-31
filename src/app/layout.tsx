@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import { Nunito, JetBrains_Mono } from 'next/font/google';
 import { AuthSessionProvider } from '@/components/providers/SessionProvider';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
@@ -64,7 +65,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: APP_URL,
   },
-  other: {},
+  other: {
+    'google-adsense-account': 'ca-pub-3282358085183080',
+  },
 };
 
 const jsonLd = {
@@ -150,6 +153,12 @@ export default function RootLayout({
         />
         <script
           dangerouslySetInnerHTML={{ __html: `if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js')` }}
+        />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3282358085183080"
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
         />
         <a
           href="#main-content"

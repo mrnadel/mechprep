@@ -165,6 +165,7 @@ function getTierFeatures(tier: SubscriptionTier): Feature[] {
       FEATURES.DOUBLE_XP_WEEKENDS,
       FEATURES.DETAILED_EXPLANATIONS,
       FEATURES.PREMIUM_LEAGUE_REWARDS,
+      FEATURES.NO_ADS,
     ];
   }
   // free — all content accessible; Pro gates convenience (hearts, streak freeze, etc.)

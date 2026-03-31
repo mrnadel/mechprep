@@ -1,15 +1,18 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Play } from 'lucide-react';
 import { useHeartsStore } from '@/store/useHeartsStore';
 import { useEngagementStore, useGems } from '@/store/useEngagementStore';
+import { useSubscription } from '@/hooks/useSubscription';
 import { analytics } from '@/lib/mixpanel';
 import { playSound } from '@/lib/sounds';
 import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
+import { AdUnit } from '@/components/ads/AdUnit';
 
 interface OutOfHeartsModalProps {
   isOpen: boolean;
@@ -28,13 +31,18 @@ function formatCountdown(ms: number): string {
   return `${minutes}:${String(seconds).padStart(2, '0')}`;
 }
 
+const AD_REWARD_DELAY_MS = 5000;
+
 export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
   const getTimeUntilNextHeart = useHeartsStore((s) => s.getTimeUntilNextHeart);
   const rechargeHearts = useHeartsStore((s) => s.rechargeHearts);
   const current = useHeartsStore((s) => s.current);
   const max = useHeartsStore((s) => s.max);
   const gems = useGems();
+  const { isProUser } = useSubscription();
   const [countdown, setCountdown] = useState('');
+  const [watchingAd, setWatchingAd] = useState(false);
+  const adRewardTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const missingHearts = max - current;
   const refillCost = missingHearts * HEART_COST;
@@ -55,6 +63,30 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
   useEffect(() => { if (isOpen && current > 0) onClose(); }, [isOpen, current, onClose]);
 
   const handleClose = useCallback(() => onClose(), [onClose]);
+
+  // Clean up ad reward timer
+  useEffect(() => {
+    return () => { if (adRewardTimer.current) clearTimeout(adRewardTimer.current); };
+  }, []);
+
+  // Reset watchingAd when modal closes
+  useEffect(() => {
+    if (!isOpen) setWatchingAd(false);
+  }, [isOpen]);
+
+  const handleWatchAd = useCallback(() => {
+    setWatchingAd(true);
+    analytics.feature('ad_watched_for_heart', {});
+    // Grant heart after ad has been displayed for the reward delay
+    adRewardTimer.current = setTimeout(() => {
+      useHeartsStore.setState((s) => ({
+        current: Math.min(s.current + 1, s.max),
+        lastRechargeAt: s.current + 1 >= s.max ? Date.now() : s.lastRechargeAt,
+      }));
+      playSound('purchase');
+      setWatchingAd(false);
+    }, AD_REWARD_DELAY_MS);
+  }, []);
 
   const buyOneHeart = useCallback(() => {
     if (gems.balance < HEART_COST) return;
@@ -95,6 +127,48 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
         <p className="text-xs font-semibold text-white/50 mb-1">Next heart in</p>
         <p className="text-4xl font-extrabold text-white tabular-nums">{countdown}</p>
       </div>
+
+      {/* Watch ad for free heart */}
+      {!isProUser && !watchingAd && (
+        <div style={{ width: '100%', maxWidth: 320, marginBottom: 8 }}>
+          <button
+            onClick={handleWatchAd}
+            className="transition-all active:scale-[0.97]"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 8,
+              padding: '14px 20px',
+              borderRadius: 16,
+              background: 'rgba(255,255,255,0.25)',
+              border: '2px solid rgba(255,255,255,0.4)',
+              cursor: 'pointer',
+              width: '100%',
+            }}
+          >
+            <Play className="w-5 h-5 text-white" fill="white" />
+            <span style={{ fontSize: 14, fontWeight: 800, color: 'white' }}>
+              Watch Ad for Free Heart
+            </span>
+            <span style={{ fontSize: 18, marginLeft: 'auto' }}>❤️</span>
+          </button>
+        </div>
+      )}
+
+      {/* Ad display area */}
+      {watchingAd && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          style={{ width: '100%', maxWidth: 320, marginBottom: 8, borderRadius: 12, overflow: 'hidden' }}
+        >
+          <AdUnit slot="auto" format="rectangle" style={{ minHeight: 250 }} />
+          <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginTop: 6 }}>
+            Heart incoming...
+          </p>
+        </motion.div>
+      )}
 
       {/* Buy hearts with gems */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%', maxWidth: 320 }}>

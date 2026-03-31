@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -38,8 +38,8 @@ export default function SettingsPage() {
   const isAdmin = session?.user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL;
   const displayName = session?.user?.name || 'Engineer';
 
-  // Password
-  const [hasPassword, setHasPassword] = useState<boolean | null>(null);
+  // Password — only show for credentials (non-OAuth) users
+  const hasPassword = session?.user?.provider === 'credentials';
   const [showPasswordForm, setShowPasswordForm] = useState(false);
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -51,13 +51,6 @@ export default function SettingsPage() {
   const [resetStep, setResetStep] = useState(0);
   const [resetConfirmText, setResetConfirmText] = useState('');
   const [resetError, setResetError] = useState('');
-
-  useEffect(() => {
-    fetch('/api/user/profile')
-      .then((res) => res.json())
-      .then((data) => setHasPassword(data.hasPassword ?? false))
-      .catch(() => setHasPassword(false));
-  }, []);
 
   const handleChangePassword = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -130,7 +123,7 @@ export default function SettingsPage() {
 
       <div className="px-3 sm:px-4 mt-6 space-y-6">
         {/* Push Notifications */}
-        {pushState !== 'unsupported' && (
+        {pushState !== 'unsupported' && pushState !== 'loading' && (
           <div>
             <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-1">Notifications</h3>
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">

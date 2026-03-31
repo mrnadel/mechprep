@@ -18,6 +18,7 @@ const FEATURE_LABELS: Record<Feature, string> = {
   [FEATURES.DOUBLE_XP_WEEKENDS]: '2x XP on weekends',
   [FEATURES.DETAILED_EXPLANATIONS]: 'Detailed explanations',
   [FEATURES.PREMIUM_LEAGUE_REWARDS]: 'Premium league rewards',
+  [FEATURES.NO_ADS]: 'No ads',
 };
 
 export default function BillingSettingsPage() {

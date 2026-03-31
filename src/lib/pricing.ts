@@ -22,6 +22,7 @@ export const FEATURES = {
   DOUBLE_XP_WEEKENDS: 'double_xp_weekends',
   DETAILED_EXPLANATIONS: 'detailed_explanations',
   PREMIUM_LEAGUE_REWARDS: 'premium_league_rewards',
+  NO_ADS: 'no_ads',
 } as const;
 
 export type Feature = (typeof FEATURES)[keyof typeof FEATURES];

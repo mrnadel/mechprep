@@ -32,6 +32,7 @@ import { playSound } from '@/lib/sounds';
 import { HeartDisplay } from '@/components/ui/HeartDisplay';
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
 import EngineeringCalculator from '@/components/calculator/EngineeringCalculator';
+import FinanceCalculators from '@/components/calculator/FinanceCalculators';
 import { GameButton } from '@/components/ui/GameButton';
 import type { CourseQuestion } from '@/data/course/types';
 import type { ContentFeedbackType } from '@/data/types';
@@ -866,8 +867,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             }}
           >
             <div className="flex items-center gap-2.5">
-              {/* Calculator toggle — only for ME course */}
-              {activeProfession === 'mechanical-engineering' && <button
+              {/* Calculator toggle — available for courses with calculation questions */}
+              {(activeProfession === 'mechanical-engineering' || activeProfession === 'personal-finance' || activeProfession === 'space-astronomy') && <button
                 onClick={() => setIsCalcOpen(c => !c)}
                 className="flex-shrink-0 flex items-center justify-center transition-transform active:scale-90"
                 style={{
@@ -975,9 +976,48 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         </div>{/* end centered wrapper */}
 
 
-        {/* Calculator panel — ME course only */}
+        {/* Calculator panel — shows the right calculator per course */}
         <AnimatePresence>
           {isCalcOpen && activeProfession === 'mechanical-engineering' && (
+            <EngineeringCalculator
+              isOpen={isCalcOpen}
+              onClose={() => setIsCalcOpen(false)}
+              accentColor={unitColor}
+              accentDark={theme.dark}
+            />
+          )}
+          {isCalcOpen && activeProfession === 'personal-finance' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              style={{
+                position: 'fixed',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                maxHeight: '65vh',
+                overflowY: 'auto',
+                background: 'white',
+                borderTop: `3px solid ${unitColor}`,
+                borderTopLeftRadius: 20,
+                borderTopRightRadius: 20,
+                boxShadow: '0 -4px 20px rgba(0,0,0,0.15)',
+                zIndex: 50,
+                paddingTop: 16,
+              }}
+            >
+              <button
+                onClick={() => setIsCalcOpen(false)}
+                style={{ position: 'absolute', top: 12, right: 16, background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: '#94A3B8' }}
+                aria-label="Close calculator"
+              >
+                &times;
+              </button>
+              <FinanceCalculators />
+            </motion.div>
+          )}
+          {isCalcOpen && activeProfession === 'space-astronomy' && (
             <EngineeringCalculator
               isOpen={isCalcOpen}
               onClose={() => setIsCalcOpen(false)}

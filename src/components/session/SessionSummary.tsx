@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import type { SessionSummary as SessionSummaryType } from '@/store/useStore';
@@ -11,6 +11,8 @@ import { useEngagementActions } from '@/store/useEngagementStore';
 import { analytics } from '@/lib/mixpanel';
 import { achievements } from '@/data/achievements';
 import { playSound } from '@/lib/sounds';
+import { useAdManager } from '@/components/ads/useAdManager';
+import { InterstitialAd } from '@/components/ads/InterstitialAd';
 
 interface Props {
   summary: SessionSummaryType;
@@ -33,13 +35,32 @@ export default function SessionSummary({ summary }: Props) {
   const { updateQuestProgress, updateLeagueXp } = useEngagementActions();
   const router = useRouter();
   const tracked = useRef(false);
+  const adTracked = useRef(false);
+  const [showingAd, setShowingAd] = useState(false);
+  const { shouldShowAd, recordCompletion, recordAdShown } = useAdManager();
+
+  // Record completion for ad frequency tracking (once per summary)
+  useEffect(() => {
+    if (adTracked.current) return;
+    adTracked.current = true;
+    recordCompletion();
+  }, [recordCompletion]);
 
   const handleBack = useCallback(() => {
     abandonSession();
     router.replace('/');
   }, [abandonSession, router]);
 
-  useBackHandler(true, handleBack);
+  const handleContinue = useCallback(() => {
+    if (shouldShowAd) {
+      setShowingAd(true);
+      recordAdShown();
+    } else {
+      handleBack();
+    }
+  }, [shouldShowAd, recordAdShown, handleBack]);
+
+  useBackHandler(true, handleContinue);
   useScrollLock(true);
 
   // Keyboard: Enter/Space to continue
@@ -47,7 +68,7 @@ export default function SessionSummary({ summary }: Props) {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        handleBack();
+        handleContinue();
       }
     };
     const timer = setTimeout(() => {
@@ -57,7 +78,7 @@ export default function SessionSummary({ summary }: Props) {
       clearTimeout(timer);
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleBack]);
+  }, [handleContinue]);
 
   // Sound on mount
   useEffect(() => { playSound('sessionComplete'); }, []);
@@ -107,6 +128,7 @@ export default function SessionSummary({ summary }: Props) {
   const isFlawless = summary.accuracy === 100 && summary.questionsAttempted >= 3;
 
   return (
+    <>
     <AnimatePresence>
       <motion.div
         key="session-summary"
@@ -343,7 +365,7 @@ export default function SessionSummary({ summary }: Props) {
             transition={{ delay: 0.9 }}
           >
             <button
-              onClick={handleBack}
+              onClick={handleContinue}
               className="flex-1 transition-transform active:scale-[0.98]"
               style={{
                 padding: '16px 0',
@@ -384,5 +406,10 @@ export default function SessionSummary({ summary }: Props) {
         </div>
       </motion.div>
     </AnimatePresence>
+    <InterstitialAd
+      show={showingAd}
+      onClose={() => { setShowingAd(false); handleBack(); }}
+    />
+    </>
   );
 }

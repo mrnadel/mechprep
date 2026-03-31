@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Target } from 'lucide-react';
 import { useCourseStore } from '@/store/useCourseStore';
@@ -13,6 +13,8 @@ import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
 import type { FXName } from '@/components/ui/ScreenFX';
 import { playSound } from '@/lib/sounds';
+import { useAdManager } from '@/components/ads/useAdManager';
+import { InterstitialAd } from '@/components/ads/InterstitialAd';
 
 export { ResultScreen };
 export default function ResultScreen() {
@@ -20,19 +22,38 @@ export default function ResultScreen() {
   const dismissResult = useCourseStore((s) => s.dismissResult);
   const { updateQuestProgress, updateLeagueXp, addGems } = useEngagementActions();
   const engagementTracked = useRef(false);
+  const adTracked = useRef(false);
+  const [showingAd, setShowingAd] = useState(false);
+  const { shouldShowAd, recordCompletion, recordAdShown } = useAdManager();
 
-  useBackHandler(!!lessonResult, dismissResult);
+  // Record completion for ad frequency tracking (once per result)
+  useEffect(() => {
+    if (!lessonResult || adTracked.current) return;
+    adTracked.current = true;
+    recordCompletion();
+  }, [lessonResult, recordCompletion]);
+
+  const handleDismiss = useCallback(() => {
+    if (shouldShowAd) {
+      setShowingAd(true);
+      recordAdShown();
+    } else {
+      dismissResult();
+    }
+  }, [shouldShowAd, recordAdShown, dismissResult]);
+
+  useBackHandler(!!lessonResult, handleDismiss);
 
   const lessonInfo = lessonResult ? getLessonByIdMeta(lessonResult.lessonId) : null;
 
   useEffect(() => {
     if (!lessonResult) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dismissResult(); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleDismiss(); }
     };
     const timer = setTimeout(() => window.addEventListener('keydown', handleKeyDown), 500);
     return () => { clearTimeout(timer); window.removeEventListener('keydown', handleKeyDown); };
-  }, [lessonResult, dismissResult]);
+  }, [lessonResult, handleDismiss]);
 
   // Sound on mount
   useEffect(() => {
@@ -98,7 +119,7 @@ export default function ResultScreen() {
         labelId="result-heading"
         footer={
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
-            <GameButton variant={btnVariant} onClick={dismissResult}>
+            <GameButton variant={btnVariant} onClick={handleDismiss}>
               {passed ? 'Continue' : 'Try Again'}
             </GameButton>
           </motion.div>
@@ -200,6 +221,10 @@ export default function ResultScreen() {
         )}
       </FullScreenModal>
       {lessonResult.isFirstCompletion && lessonResult.passed && <TrialPromptModal />}
+      <InterstitialAd
+        show={showingAd}
+        onClose={() => { setShowingAd(false); dismissResult(); }}
+      />
     </>
   );
 }
