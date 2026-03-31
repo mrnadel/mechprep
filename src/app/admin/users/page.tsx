@@ -51,6 +51,8 @@ export default function AdminUsersPage() {
   const [deleteTarget, setDeleteTarget] = useState<AdminUser | null>(null);
   const [deleting, setDeleting] = useState(false);
   const [confirmText, setConfirmText] = useState('');
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [bulkDeleteOpen, setBulkDeleteOpen] = useState(false);
 
   const toggleTier = async (userId: string, currentTier: string) => {
     const newTier = currentTier === 'pro' ? 'free' : 'pro';
@@ -96,6 +98,49 @@ export default function AdminUsersPage() {
       setError('Failed to update access. Please try again.');
     } finally {
       setUpdating(null);
+    }
+  };
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const toggleSelectAll = () => {
+    if (selectedIds.size === sorted.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(sorted.map((u) => u.id)));
+    }
+  };
+
+  const bulkDelete = async () => {
+    if (selectedIds.size === 0) return;
+    setDeleting(true);
+    try {
+      const res = await fetch('/api/admin/users', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userIds: Array.from(selectedIds) }),
+      });
+      if (res.ok) {
+        setUsers((prev) => prev.filter((u) => !selectedIds.has(u.id)));
+        setTotal((t) => t - selectedIds.size);
+        setSelectedIds(new Set());
+        setBulkDeleteOpen(false);
+        setConfirmText('');
+      } else {
+        const data = await res.json();
+        setError(data.error || 'Failed to delete users');
+      }
+    } catch {
+      setError('Failed to delete users');
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -294,6 +339,27 @@ export default function AdminUsersPage() {
         </div>
       </div>
 
+      {/* Bulk selection bar */}
+      {selectedIds.size > 0 && (
+        <div className="flex items-center gap-3 mb-4 px-4 py-2.5 bg-red-50 border border-red-200 rounded-xl">
+          <span className="text-sm font-semibold text-red-700">
+            {selectedIds.size} user{selectedIds.size === 1 ? '' : 's'} selected
+          </span>
+          <button
+            onClick={() => { setBulkDeleteOpen(true); setConfirmText(''); }}
+            className="ml-auto text-sm font-bold px-3 py-1.5 rounded-lg bg-red-600 text-white hover:bg-red-700 transition-colors"
+          >
+            Delete Selected
+          </button>
+          <button
+            onClick={() => setSelectedIds(new Set())}
+            className="text-sm font-medium text-red-600 hover:text-red-800 transition-colors"
+          >
+            Clear
+          </button>
+        </div>
+      )}
+
       {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
 
       {!loading && !error && sorted.length === 0 && (
@@ -310,6 +376,14 @@ export default function AdminUsersPage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-gray-100">
+                    <th className="w-10 px-3 py-2.5">
+                      <input
+                        type="checkbox"
+                        checked={sorted.length > 0 && selectedIds.size === sorted.length}
+                        onChange={toggleSelectAll}
+                        className="w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 cursor-pointer"
+                      />
+                    </th>
                     {columns.map((col) => (
                       <th
                         key={col.key}
@@ -334,8 +408,19 @@ export default function AdminUsersPage() {
                   {sorted.map((user) => (
                     <tr
                       key={user.id}
-                      className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors"
+                      className={cn(
+                        'border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition-colors',
+                        selectedIds.has(user.id) && 'bg-primary-50/40'
+                      )}
                     >
+                      <td className="px-3 py-2.5">
+                        <input
+                          type="checkbox"
+                          checked={selectedIds.has(user.id)}
+                          onChange={() => toggleSelect(user.id)}
+                          className="w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 cursor-pointer"
+                        />
+                      </td>
                       <td className="px-3 py-2.5">
                         <div className="font-semibold text-gray-900 truncate max-w-[200px]">
                           {user.name || '-'}

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { users, userProgress, subscriptions, courseAccess } from '@/lib/db/schema';
 import { requireAdmin } from '@/lib/auth-utils';
-import { eq, desc } from 'drizzle-orm';
+import { eq, desc, inArray } from 'drizzle-orm';
 
 export async function HEAD() {
   const adminId = await requireAdmin();
@@ -125,18 +125,26 @@ export async function DELETE(req: NextRequest) {
   } catch {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
-  const { userId } = delBody as { userId?: string };
-  if (!userId || typeof userId !== 'string') {
-    return NextResponse.json({ error: 'Invalid userId' }, { status: 400 });
+
+  // Support both single userId and bulk userIds
+  const { userId, userIds } = delBody as { userId?: string; userIds?: string[] };
+  const idsToDelete: string[] = userIds && Array.isArray(userIds) && userIds.length > 0
+    ? userIds.filter((id): id is string => typeof id === 'string')
+    : userId && typeof userId === 'string'
+      ? [userId]
+      : [];
+
+  if (idsToDelete.length === 0) {
+    return NextResponse.json({ error: 'Invalid userId or userIds' }, { status: 400 });
   }
 
   // Prevent deleting yourself
-  if (userId === adminId) {
+  if (idsToDelete.includes(adminId)) {
     return NextResponse.json({ error: 'Cannot delete your own account' }, { status: 400 });
   }
 
   // All related tables have onDelete: 'cascade'
-  await db.delete(users).where(eq(users.id, userId));
+  await db.delete(users).where(inArray(users.id, idsToDelete));
 
-  return NextResponse.json({ success: true });
+  return NextResponse.json({ success: true, deleted: idsToDelete.length });
 }
