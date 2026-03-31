@@ -122,7 +122,7 @@ export function InterstitialAd({ show, onClose }: InterstitialAdProps) {
             style={{ minHeight: 280 }}
           >
             <AdUnit
-              slot="auto"
+              slot="4369997219"
               format="rectangle"
               responsive
               style={{ minHeight: 250 }}

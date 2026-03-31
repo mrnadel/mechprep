@@ -163,7 +163,7 @@ export function OutOfHeartsModal({ isOpen, onClose }: OutOfHeartsModalProps) {
           animate={{ opacity: 1, height: 'auto' }}
           style={{ width: '100%', maxWidth: 320, marginBottom: 8, borderRadius: 12, overflow: 'hidden' }}
         >
-          <AdUnit slot="auto" format="rectangle" style={{ minHeight: 250 }} />
+          <AdUnit slot="7126753574" format="rectangle" style={{ minHeight: 250 }} />
           <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginTop: 6 }}>
             Heart incoming...
           </p>
