@@ -744,10 +744,10 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
                   fontSize: 9,
                   fontWeight: 800,
                   color: '#D97706',
-                  background: '#FEF3C7',
+                  background: isDark ? 'rgba(217,119,6,0.15)' : '#FEF3C7',
                   padding: '1px 6px',
                   borderRadius: 6,
-                  border: '1px solid #FDE68A',
+                  border: isDark ? '1px solid rgba(217,119,6,0.3)' : '1px solid #FDE68A',
                 }}
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
@@ -784,11 +784,13 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
         </motion.div>
         <motion.div
           style={{
-            background: 'linear-gradient(135deg, #F5EAFF 0%, #EDE0FF 100%)',
+            background: isDark
+              ? 'linear-gradient(135deg, rgba(168,85,247,0.15) 0%, rgba(168,85,247,0.1) 100%)'
+              : 'linear-gradient(135deg, #F5EAFF 0%, #EDE0FF 100%)',
             borderRadius: 12,
             padding: '10px 12px',
             textAlign: 'center',
-            border: '1.5px solid #E4D0FA',
+            border: isDark ? '1.5px solid rgba(168,85,247,0.25)' : '1.5px solid #E4D0FA',
           }}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -808,12 +810,14 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
         <motion.div
           style={{
             background: isAlmostThere
-              ? 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)'
-              : 'linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%)',
+              ? (isDark ? 'linear-gradient(135deg, rgba(249,115,22,0.12) 0%, rgba(249,115,22,0.08) 100%)' : 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)')
+              : (isDark ? 'linear-gradient(135deg, rgba(168,85,247,0.12) 0%, rgba(168,85,247,0.08) 100%)' : 'linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%)'),
             borderRadius: 14,
             padding: '14px 14px 16px',
             marginBottom: 14,
-            border: isAlmostThere ? '1.5px solid #FDBA74' : '1.5px solid #E9D5FF',
+            border: isAlmostThere
+              ? (isDark ? '1.5px solid rgba(249,115,22,0.3)' : '1.5px solid #FDBA74')
+              : (isDark ? '1.5px solid rgba(168,85,247,0.25)' : '1.5px solid #E9D5FF'),
             position: 'relative',
             overflow: 'hidden',
           }}
@@ -856,7 +860,7 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
           </div>
 
           {/* Progress bar */}
-          <div style={{ position: 'relative', height: 16, background: isAlmostThere ? '#FED7AA' : '#E9D5FF', borderRadius: 8, overflow: 'hidden' }}>
+          <div style={{ position: 'relative', height: 16, background: isAlmostThere ? (isDark ? 'rgba(249,115,22,0.2)' : '#FED7AA') : (isDark ? 'rgba(168,85,247,0.2)' : '#E9D5FF'), borderRadius: 8, overflow: 'hidden' }}>
             <motion.div
               style={{
                 height: '100%',
@@ -936,11 +940,13 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
         /* Max level reached */
         <motion.div
           style={{
-            background: 'linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)',
+            background: isDark
+              ? 'linear-gradient(135deg, rgba(217,119,6,0.15) 0%, rgba(217,119,6,0.1) 100%)'
+              : 'linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)',
             borderRadius: 14,
             padding: '16px 14px',
             marginBottom: 14,
-            border: '1.5px solid #FCD34D',
+            border: isDark ? '1.5px solid rgba(217,119,6,0.3)' : '1.5px solid #FCD34D',
             textAlign: 'center',
           }}
           initial={{ opacity: 0, scale: 0.95 }}
@@ -968,12 +974,14 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
         <motion.div
           style={{
             background: nextReward.isMilestone
-              ? 'linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)'
-              : '#F9FAFB',
+              ? (isDark ? 'linear-gradient(135deg, rgba(217,119,6,0.12) 0%, rgba(217,119,6,0.08) 100%)' : 'linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)')
+              : (isDark ? '#0F172A' : '#F9FAFB'),
             borderRadius: 12,
             padding: '10px 12px',
             marginBottom: 12,
-            border: nextReward.isMilestone ? '1.5px solid #FDE68A' : '1px solid #F0F0F0',
+            border: nextReward.isMilestone
+              ? (isDark ? '1.5px solid rgba(217,119,6,0.3)' : '1.5px solid #FDE68A')
+              : (isDark ? '1px solid #334155' : '1px solid #F0F0F0'),
           }}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -999,7 +1007,7 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
               <LevelBadge level={next} size={28} />
             </motion.span>
             <div style={{ flex: 1 }}>
-              <p style={{ fontSize: 12, fontWeight: 700, color: '#374151' }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: isDark ? '#CBD5E1' : '#374151' }}>
                 {next.title}
               </p>
               <div className="flex items-center flex-wrap" style={{ gap: 6, marginTop: 2 }}>
@@ -1031,11 +1039,11 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
       {upcomingLevels.length > 0 && (
         <motion.div
           style={{
-            background: '#FAFAFA',
+            background: isDark ? '#0F172A' : '#FAFAFA',
             borderRadius: 12,
             padding: '10px 12px',
             marginBottom: 12,
-            border: '1px solid #F0F0F0',
+            border: isDark ? '1px solid #334155' : '1px solid #F0F0F0',
           }}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
