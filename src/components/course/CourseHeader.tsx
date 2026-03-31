@@ -1063,7 +1063,7 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
                   style={{
                     gap: 10,
                     padding: '6px 0',
-                    borderBottom: i < upcomingLevels.length - 1 ? '1px solid #F0F0F0' : 'none',
+                    borderBottom: i < upcomingLevels.length - 1 ? (isDark ? '1px solid #334155' : '1px solid #F0F0F0') : 'none',
                     opacity: 1 - i * 0.2,
                   }}
                   initial={{ opacity: 0, x: -10 }}
@@ -1079,7 +1079,7 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
                         borderRadius: '50%',
                         background: isNext
                           ? 'linear-gradient(135deg, #A855F7, #7C3AED)'
-                          : '#E5E7EB',
+                          : (isDark ? '#334155' : '#E5E7EB'),
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -1091,7 +1091,7 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
                     </div>
                   </div>
                   <div style={{ flex: 1 }}>
-                    <p style={{ fontSize: 11, fontWeight: 700, color: isNext ? '#3C3C3C' : '#9CA3AF' }}>
+                    <p style={{ fontSize: 11, fontWeight: 700, color: isNext ? (isDark ? '#E2E8F0' : '#3C3C3C') : (isDark ? '#64748B' : '#9CA3AF') }}>
                       Lv.{level.level} — {level.title}
                     </p>
                     <p style={{ fontSize: 10, color: '#C4B5FD', fontWeight: 600 }}>
@@ -1135,6 +1135,7 @@ function GemsPopoverContent({
   gems: ReturnType<typeof useGems>;
   onGoToShop: () => void;
 }) {
+  const isDark = useIsDark();
   const recentTx = gems.transactions.slice(-5).reverse();
   const affordable = shopItems
     .filter((i) => i.cost <= gems.balance)
@@ -1164,7 +1165,7 @@ function GemsPopoverContent({
             <p style={{ fontSize: 28, fontWeight: 800, color: '#7C3AED', lineHeight: 1 }}>
               {gems.balance.toLocaleString()}
             </p>
-            <p style={{ fontSize: 11, color: '#AFAFAF', fontWeight: 600, marginTop: 2 }}>
+            <p style={{ fontSize: 11, color: isDark ? '#64748B' : '#AFAFAF', fontWeight: 600, marginTop: 2 }}>
               {gems.totalEarned.toLocaleString()} total earned
             </p>
           </div>
@@ -1175,11 +1176,11 @@ function GemsPopoverContent({
       {affordable.length > 0 && (
         <div
           style={{
-            background: '#F5F3FF',
+            background: isDark ? 'rgba(124,58,237,0.1)' : '#F5F3FF',
             borderRadius: 12,
             padding: '10px 12px',
             marginBottom: 14,
-            border: '1px solid #EDE9FE',
+            border: isDark ? '1px solid rgba(124,58,237,0.2)' : '1px solid #EDE9FE',
           }}
         >
           <p style={{ fontSize: 11, fontWeight: 700, color: '#7C3AED' }}>
@@ -1216,7 +1217,9 @@ function GemsPopoverContent({
                   style={{
                     padding: '5px 8px',
                     borderRadius: 8,
-                    background: isPositive ? '#FAFFF5' : '#FFF5F5',
+                    background: isPositive
+                      ? (isDark ? 'rgba(22,163,74,0.1)' : '#FAFFF5')
+                      : (isDark ? 'rgba(220,38,38,0.1)' : '#FFF5F5'),
                   }}
                 >
                   <span style={{ fontSize: 12, color: '#4B5563', fontWeight: 600, textTransform: 'capitalize', maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
