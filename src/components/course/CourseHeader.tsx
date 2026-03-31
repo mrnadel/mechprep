@@ -1360,7 +1360,7 @@ function HeartsPopoverContent({ onClose }: { onClose: () => void }) {
       {/* Action cards */}
       {!unlimited && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {/* Get Super — unlimited hearts */}
+          {/* Get Pro — unlimited hearts */}
           <Link
             href="/pricing"
             onClick={onClose}
@@ -1385,7 +1385,7 @@ function HeartsPopoverContent({ onClose }: { onClose: () => void }) {
               UNLIMITED HEARTS
             </span>
             <span style={{ fontSize: 12, fontWeight: 800, color: '#E11D48', marginLeft: 'auto', whiteSpace: 'nowrap' }}>
-              GET SUPER
+              GET PRO
             </span>
           </Link>
 
