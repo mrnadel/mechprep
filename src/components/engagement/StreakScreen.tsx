@@ -10,6 +10,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { useStore } from '@/store/useStore';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useEngagementStore, useStreakEnhancements } from '@/store/useEngagementStore';
+import { useIsDark } from '@/store/useThemeStore';
 import { streakMilestones } from '@/data/streak-milestones';
 import { getStreakStatus, toLocalDateString, getYesterdayString } from '@/lib/utils';
 import { awardStreakMilestones } from '@/lib/streak-rewards';
@@ -139,6 +140,7 @@ export function StreakScreen() {
   const activeDays = useStore((s) => s.progress.activeDays) ?? [];
   const streakEnhancements = useStreakEnhancements();
   const addGems = useEngagementStore((s) => s.addGems);
+  const dark = useIsDark();
 
   const streakStatus = getStreakStatus(lastActiveDate);
   const isActiveToday = lastActiveDate === toLocalDateString(new Date());
@@ -227,8 +229,6 @@ export function StreakScreen() {
       setChallengeComplete(true);
       // Update streak
       if (!streakUpdated) {
-        const correctCount = [...results].filter(Boolean).length + (selectedOption === currentQuestion?.correctIndex ? 0 : 0);
-        // results already includes current answer from checkAnswer
         const { wasAlreadyActive } = updateStreakForChallenge();
         // Add XP for correct answers
         const totalCorrect = results.filter(Boolean).length;
@@ -253,8 +253,15 @@ export function StreakScreen() {
   const hasQuestions = useMemo(() => gatherChallengeQuestions().length > 0, []);
   const correctCount = results.filter(Boolean).length;
 
+  // Dark mode color helpers
+  const cardBg = dark ? '#1E293B' : 'white';
+  const cardBorder = dark ? '#334155' : '#E5E5E5';
+  const textPrimary = dark ? '#F1F5F9' : '#3C3C3C';
+  const textMuted = dark ? '#94A3B8' : '#AFAFAF';
+  const textDimmed = dark ? '#64748B' : '#CFCFCF';
+
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
+    <div className="min-h-screen" style={{ background: dark ? '#020617' : '#FAFAFA' }}>
       <PageHeader
         title="Streak"
         icon={<StreakFlame state={flameState} size={22} />}
@@ -274,17 +281,17 @@ export function StreakScreen() {
             <StreakFlame state={flameState} size={36} />
             <span
               className="font-extrabold"
-              style={{ fontSize: 52, color: currentStreak > 0 ? '#FF9600' : '#CFCFCF', lineHeight: 1 }}
+              style={{ fontSize: 52, color: currentStreak > 0 ? '#FF9600' : textDimmed, lineHeight: 1 }}
             >
               {currentStreak}
             </span>
           </div>
-          <p className="text-base font-extrabold text-[#3C3C3C] mt-1">
+          <p className="text-base font-extrabold mt-1" style={{ color: textPrimary }}>
             {currentStreak === 1 ? 'day streak' : 'day streak'}
           </p>
           <p
             className="text-sm font-semibold mt-1"
-            style={{ color: !isActiveToday && currentStreak > 0 ? '#DC2626' : '#AFAFAF' }}
+            style={{ color: !isActiveToday && currentStreak > 0 ? '#DC2626' : textMuted }}
           >
             {heroMessage}
           </p>
@@ -301,9 +308,11 @@ export function StreakScreen() {
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold"
               style={{
-                background: isActiveToday ? '#ECFDF5' : '#FEF2F2',
+                background: isActiveToday
+                  ? (dark ? 'rgba(5,150,105,0.15)' : '#ECFDF5')
+                  : (dark ? 'rgba(220,38,38,0.15)' : '#FEF2F2'),
                 color: isActiveToday ? '#059669' : '#DC2626',
-                border: `1.5px solid ${isActiveToday ? '#A7F3D0' : '#FECACA'}`,
+                border: `1.5px solid ${isActiveToday ? (dark ? '#065F46' : '#A7F3D0') : (dark ? '#991B1B' : '#FECACA')}`,
               }}
             >
               {isActiveToday ? (
@@ -318,12 +327,12 @@ export function StreakScreen() {
         {/* ── Week Calendar ── */}
         <motion.div
           className="rounded-2xl p-4 mb-4"
-          style={{ background: 'white', border: '2px solid #E5E5E5' }}
+          style={{ background: cardBg, border: `2px solid ${cardBorder}` }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
         >
-          <p className="text-xs font-bold text-[#AFAFAF] uppercase tracking-wide mb-3 text-center">
+          <p className="text-xs font-bold uppercase tracking-wide mb-3 text-center" style={{ color: textMuted }}>
             This Week
           </p>
           <div className="flex justify-between gap-1">
@@ -343,23 +352,23 @@ export function StreakScreen() {
                       background: isActive
                         ? 'linear-gradient(135deg, #FBBF24 0%, #D97706 100%)'
                         : isAtRisk
-                          ? '#FEE2E2'
+                          ? (dark ? 'rgba(220,38,38,0.2)' : '#FEE2E2')
                           : day.isToday
-                            ? '#E5E5E5'
+                            ? (dark ? '#334155' : '#E5E5E5')
                             : 'transparent',
                       color: isActive
                         ? 'white'
                         : isAtRisk
                           ? '#DC2626'
                           : day.isToday
-                            ? '#3C3C3C'
+                            ? textPrimary
                             : day.isFuture
-                              ? '#E5E5E5'
-                              : '#CFCFCF',
+                              ? (dark ? '#334155' : '#E5E5E5')
+                              : textDimmed,
                       border: isAtRisk
                         ? '2px dashed #DC2626'
                         : day.isToday && !isActive
-                          ? '2px dashed #CFCFCF'
+                          ? `2px dashed ${textDimmed}`
                           : 'none',
                       boxShadow: isActive ? '0 2px 8px rgba(217,119,6,0.3)' : 'none',
                     }}
@@ -371,7 +380,7 @@ export function StreakScreen() {
                   </motion.div>
                   <span
                     className="text-[10px] font-bold"
-                    style={{ color: day.isToday ? '#3C3C3C' : '#CFCFCF' }}
+                    style={{ color: day.isToday ? textPrimary : textDimmed }}
                   >
                     {day.label}
                   </span>
@@ -386,8 +395,10 @@ export function StreakScreen() {
           <motion.div
             className="rounded-2xl p-4 mb-4"
             style={{
-              background: 'linear-gradient(135deg, #FFF6E8 0%, #FFF0DB 100%)',
-              border: '2px solid #FFE4B8',
+              background: dark
+                ? 'linear-gradient(135deg, rgba(120,53,15,0.25) 0%, rgba(120,53,15,0.15) 100%)'
+                : 'linear-gradient(135deg, #FFF6E8 0%, #FFF0DB 100%)',
+              border: `2px solid ${dark ? '#92400E' : '#FFE4B8'}`,
             }}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -395,19 +406,22 @@ export function StreakScreen() {
           >
             <div className="flex items-center justify-between mb-3">
               <div>
-                <p className="text-xs font-bold text-[#CC8B1F] uppercase tracking-wide">
+                <p className="text-xs font-bold uppercase tracking-wide" style={{ color: dark ? '#FBBF24' : '#CC8B1F' }}>
                   Next Milestone
                 </p>
-                <p className="text-sm font-extrabold text-[#92400E] mt-0.5">
+                <p className="text-sm font-extrabold mt-0.5" style={{ color: dark ? '#FDE68A' : '#92400E' }}>
                   {nextMilestone.badgeName}
                 </p>
               </div>
-              <div className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/60">
-                <Gem className="w-3.5 h-3.5 text-[#CC8B1F]" />
-                <span className="text-sm font-extrabold text-[#92400E]">+{nextMilestone.gems}</span>
+              <div
+                className="flex items-center gap-1 px-2.5 py-1 rounded-lg"
+                style={{ background: dark ? 'rgba(120,53,15,0.3)' : 'rgba(255,255,255,0.6)' }}
+              >
+                <Gem className="w-3.5 h-3.5" style={{ color: dark ? '#FBBF24' : '#CC8B1F' }} />
+                <span className="text-sm font-extrabold" style={{ color: dark ? '#FDE68A' : '#92400E' }}>+{nextMilestone.gems}</span>
               </div>
             </div>
-            <div className="relative h-3 rounded-full overflow-hidden" style={{ background: '#FFE4B8' }}>
+            <div className="relative h-3 rounded-full overflow-hidden" style={{ background: dark ? '#78350F' : '#FFE4B8' }}>
               <motion.div
                 className="absolute inset-y-0 left-0 rounded-full"
                 style={{ background: 'linear-gradient(90deg, #FBBF24, #D97706)' }}
@@ -416,7 +430,7 @@ export function StreakScreen() {
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
               />
             </div>
-            <p className="text-xs font-bold text-[#CC8B1F] mt-2 text-right">
+            <p className="text-xs font-bold mt-2 text-right" style={{ color: dark ? '#FBBF24' : '#CC8B1F' }}>
               {currentStreak} / {nextMilestone.days} days
             </p>
           </motion.div>
@@ -426,16 +440,18 @@ export function StreakScreen() {
           <motion.div
             className="rounded-2xl p-4 mb-4 text-center"
             style={{
-              background: 'linear-gradient(135deg, #FFF6E8 0%, #FFF0DB 100%)',
-              border: '2px solid #FFE4B8',
+              background: dark
+                ? 'linear-gradient(135deg, rgba(120,53,15,0.25) 0%, rgba(120,53,15,0.15) 100%)'
+                : 'linear-gradient(135deg, #FFF6E8 0%, #FFF0DB 100%)',
+              border: `2px solid ${dark ? '#92400E' : '#FFE4B8'}`,
             }}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Trophy className="w-8 h-8 text-[#D97706] mx-auto mb-2" />
-            <p className="text-sm font-extrabold text-[#92400E]">All milestones reached!</p>
-            <p className="text-xs font-semibold text-[#CC8B1F] mt-1">
+            <Trophy className="w-8 h-8 mx-auto mb-2" style={{ color: '#D97706' }} />
+            <p className="text-sm font-extrabold" style={{ color: dark ? '#FDE68A' : '#92400E' }}>All milestones reached!</p>
+            <p className="text-xs font-semibold mt-1" style={{ color: dark ? '#FBBF24' : '#CC8B1F' }}>
               You've conquered every streak milestone. Legend.
             </p>
           </motion.div>
@@ -445,25 +461,28 @@ export function StreakScreen() {
         {streakEnhancements.freezesOwned > 0 && (
           <motion.div
             className="flex items-center gap-3 rounded-2xl px-4 py-3 mb-4"
-            style={{ background: '#EFF6FF', border: '1.5px solid #BFDBFE' }}
+            style={{
+              background: dark ? 'rgba(30,64,175,0.15)' : '#EFF6FF',
+              border: `1.5px solid ${dark ? '#1E40AF' : '#BFDBFE'}`,
+            }}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25 }}
           >
             <Snowflake className="w-5 h-5 text-[#3B82F6] flex-shrink-0" />
             <div className="flex-1">
-              <p className="text-sm font-bold text-[#1E40AF]">
+              <p className="text-sm font-bold" style={{ color: dark ? '#93C5FD' : '#1E40AF' }}>
                 Streak Freeze{streakEnhancements.freezesOwned > 1 ? 's' : ''}
               </p>
-              <p className="text-xs font-semibold text-[#60A5FA]">
+              <p className="text-xs font-semibold" style={{ color: dark ? '#60A5FA' : '#60A5FA' }}>
                 {streakEnhancements.freezesOwned} available. Protects your streak if you miss a day.
               </p>
             </div>
             <div
               className="flex items-center justify-center w-8 h-8 rounded-full"
-              style={{ background: '#DBEAFE' }}
+              style={{ background: dark ? 'rgba(30,64,175,0.3)' : '#DBEAFE' }}
             >
-              <span className="text-sm font-extrabold text-[#1E40AF]">
+              <span className="text-sm font-extrabold" style={{ color: dark ? '#93C5FD' : '#1E40AF' }}>
                 {streakEnhancements.freezesOwned}
               </span>
             </div>
@@ -473,7 +492,7 @@ export function StreakScreen() {
         {/* ── Streak Challenge ── */}
         <motion.div
           className="rounded-2xl overflow-hidden mb-4"
-          style={{ background: 'white', border: '2px solid #E5E5E5' }}
+          style={{ background: cardBg, border: `2px solid ${cardBorder}` }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -483,9 +502,9 @@ export function StreakScreen() {
             className="px-4 py-3 flex items-center gap-2"
             style={{
               background: isActiveToday
-                ? 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)'
-                : 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)',
-              borderBottom: `1.5px solid ${isActiveToday ? '#A7F3D0' : '#FED7AA'}`,
+                ? (dark ? 'rgba(5,150,105,0.15)' : 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)')
+                : (dark ? 'rgba(234,88,12,0.15)' : 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)'),
+              borderBottom: `1.5px solid ${isActiveToday ? (dark ? '#065F46' : '#A7F3D0') : (dark ? '#9A3412' : '#FED7AA')}`,
             }}
           >
             <Zap
@@ -494,14 +513,14 @@ export function StreakScreen() {
             />
             <p
               className="text-sm font-extrabold"
-              style={{ color: isActiveToday ? '#065F46' : '#9A3412' }}
+              style={{ color: isActiveToday ? (dark ? '#34D399' : '#065F46') : (dark ? '#FB923C' : '#9A3412') }}
             >
               {isActiveToday ? 'Bonus Challenge' : 'Streak Challenge'}
             </p>
             {!isActiveToday && currentStreak > 0 && (
               <span
                 className="ml-auto text-xs font-bold px-2 py-0.5 rounded-full"
-                style={{ background: '#FEE2E2', color: '#DC2626' }}
+                style={{ background: dark ? 'rgba(220,38,38,0.2)' : '#FEE2E2', color: '#DC2626' }}
               >
                 Save your streak!
               </span>
@@ -511,13 +530,13 @@ export function StreakScreen() {
           <div className="p-4">
             {!hasQuestions ? (
               <div className="text-center py-4">
-                <p className="text-sm font-semibold text-[#AFAFAF]">
+                <p className="text-sm font-semibold" style={{ color: textMuted }}>
                   Complete a lesson first to unlock streak challenges.
                 </p>
               </div>
             ) : !challengeStarted ? (
               <div className="text-center">
-                <p className="text-sm text-[#777] mb-4">
+                <p className="text-sm mb-4" style={{ color: dark ? '#94A3B8' : '#777' }}>
                   Answer {CHALLENGE_QUESTION_COUNT} quick questions to {isActiveToday ? 'earn bonus XP' : 'keep your streak going'}.
                 </p>
                 <GameButton
@@ -533,6 +552,7 @@ export function StreakScreen() {
                 totalCount={challengeQuestions.length}
                 xpEarned={correctCount * XP_PER_CORRECT}
                 isActiveToday={isActiveToday}
+                dark={dark}
                 onRetry={() => {
                   setStreakUpdated(false);
                   startChallenge();
@@ -545,6 +565,7 @@ export function StreakScreen() {
                 total={challengeQuestions.length}
                 selectedOption={selectedOption}
                 answered={answered}
+                dark={dark}
                 onSelect={setSelectedOption}
                 onCheck={checkAnswer}
                 onContinue={nextQuestion}
@@ -560,9 +581,9 @@ export function StreakScreen() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35 }}
         >
-          <StatCard label="Current" value={currentStreak} color="#FF9600" bg="#FFF6E8" border="#FFE4B8" />
-          <StatCard label="Longest" value={longestStreak} color="#3C3C3C" bg="#F7F7F7" border="#ECECEC" />
-          <StatCard label="Active Days" value={totalActiveDays} color="#059669" bg="#ECFDF5" border="#A7F3D0" />
+          <StatCard label="Current" value={currentStreak} color="#FF9600" bg={dark ? 'rgba(120,53,15,0.2)' : '#FFF6E8'} border={dark ? '#92400E' : '#FFE4B8'} />
+          <StatCard label="Longest" value={longestStreak} color={dark ? '#E2E8F0' : '#3C3C3C'} bg={dark ? '#1E293B' : '#F7F7F7'} border={dark ? '#334155' : '#ECECEC'} />
+          <StatCard label="Active Days" value={totalActiveDays} color="#059669" bg={dark ? 'rgba(5,150,105,0.12)' : '#ECFDF5'} border={dark ? '#065F46' : '#A7F3D0'} />
         </motion.div>
       </div>
     </div>
@@ -605,6 +626,7 @@ function ChallengeQuestion({
   total,
   selectedOption,
   answered,
+  dark,
   onSelect,
   onCheck,
   onContinue,
@@ -614,6 +636,7 @@ function ChallengeQuestion({
   total: number;
   selectedOption: number | null;
   answered: boolean;
+  dark: boolean;
   onSelect: (i: number) => void;
   onCheck: () => void;
   onContinue: () => void;
@@ -636,7 +659,7 @@ function ChallengeQuestion({
                   ? '#10B981'
                   : i === index
                     ? '#FF9600'
-                    : '#E5E5E5',
+                    : (dark ? '#334155' : '#E5E5E5'),
               borderRadius: 4,
             }}
           />
@@ -644,7 +667,7 @@ function ChallengeQuestion({
       </div>
 
       {/* Question */}
-      <p className="text-[15px] font-bold text-[#3C3C3C] mb-4 leading-snug">
+      <p className="text-[15px] font-bold mb-4 leading-snug" style={{ color: dark ? '#F1F5F9' : '#3C3C3C' }}>
         {question.question}
       </p>
 
@@ -653,24 +676,24 @@ function ChallengeQuestion({
         {question.options?.map((option, i) => {
           const isSelected = selectedOption === i;
           const isCorrectOption = i === question.correctIndex;
-          let bg = 'white';
-          let border = '#E5E5E5';
-          let textColor = '#3C3C3C';
+          let bg = dark ? '#0F172A' : 'white';
+          let border = dark ? '#334155' : '#E5E5E5';
+          let textColor = dark ? '#E2E8F0' : '#3C3C3C';
 
           if (answered) {
             if (isCorrectOption) {
-              bg = '#ECFDF5';
+              bg = dark ? 'rgba(5,150,105,0.15)' : '#ECFDF5';
               border = '#10B981';
-              textColor = '#065F46';
+              textColor = dark ? '#34D399' : '#065F46';
             } else if (isSelected && !isCorrectOption) {
-              bg = '#FEF2F2';
+              bg = dark ? 'rgba(239,68,68,0.15)' : '#FEF2F2';
               border = '#EF4444';
-              textColor = '#991B1B';
+              textColor = dark ? '#FCA5A5' : '#991B1B';
             }
           } else if (isSelected) {
-            bg = '#FFF7ED';
+            bg = dark ? 'rgba(255,150,0,0.12)' : '#FFF7ED';
             border = '#FF9600';
-            textColor = '#9A3412';
+            textColor = dark ? '#FBBF24' : '#9A3412';
           }
 
           return (
@@ -697,10 +720,10 @@ function ChallengeQuestion({
                       ? '#EF4444'
                       : isSelected
                         ? '#FF9600'
-                        : '#F0F0F0',
+                        : (dark ? '#1E293B' : '#F0F0F0'),
                   color: isSelected || (answered && (isCorrectOption || (isSelected && !isCorrectOption)))
                     ? 'white'
-                    : '#AFAFAF',
+                    : (dark ? '#64748B' : '#AFAFAF'),
                   fontSize: 12,
                   fontWeight: 800,
                 }}
@@ -725,8 +748,8 @@ function ChallengeQuestion({
           <motion.div
             className="rounded-xl px-4 py-3 mb-4"
             style={{
-              background: isCorrect ? '#ECFDF5' : '#FEF2F2',
-              border: `1.5px solid ${isCorrect ? '#A7F3D0' : '#FECACA'}`,
+              background: isCorrect ? (dark ? 'rgba(5,150,105,0.15)' : '#ECFDF5') : (dark ? 'rgba(220,38,38,0.15)' : '#FEF2F2'),
+              border: `1.5px solid ${isCorrect ? (dark ? '#065F46' : '#A7F3D0') : (dark ? '#991B1B' : '#FECACA')}`,
             }}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -734,11 +757,11 @@ function ChallengeQuestion({
           >
             <p
               className="text-sm font-bold mb-1"
-              style={{ color: isCorrect ? '#065F46' : '#991B1B' }}
+              style={{ color: isCorrect ? (dark ? '#34D399' : '#065F46') : (dark ? '#FCA5A5' : '#991B1B') }}
             >
               {isCorrect ? 'Correct!' : 'Not quite!'}
             </p>
-            <p className="text-xs font-medium" style={{ color: isCorrect ? '#047857' : '#B91C1C' }}>
+            <p className="text-xs font-medium" style={{ color: isCorrect ? (dark ? '#6EE7B7' : '#047857') : (dark ? '#F87171' : '#B91C1C') }}>
               {question.explanation}
             </p>
           </motion.div>
@@ -764,12 +787,14 @@ function ChallengeResults({
   totalCount,
   xpEarned,
   isActiveToday,
+  dark,
   onRetry,
 }: {
   correctCount: number;
   totalCount: number;
   xpEarned: number;
   isActiveToday: boolean;
+  dark: boolean;
   onRetry: () => void;
 }) {
   const perfect = correctCount === totalCount;
@@ -787,7 +812,7 @@ function ChallengeResults({
             ? 'linear-gradient(135deg, #FBBF24, #D97706)'
             : correctCount > 0
               ? 'linear-gradient(135deg, #34D399, #059669)'
-              : '#F0F0F0',
+              : (dark ? '#334155' : '#F0F0F0'),
         }}
         initial={{ scale: 0.5, rotate: -10 }}
         animate={{ scale: 1, rotate: 0 }}
@@ -800,17 +825,17 @@ function ChallengeResults({
         )}
       </motion.div>
 
-      <p className="text-lg font-extrabold text-[#3C3C3C]">
+      <p className="text-lg font-extrabold" style={{ color: dark ? '#F1F5F9' : '#3C3C3C' }}>
         {perfect ? 'Perfect!' : correctCount > 0 ? 'Nice work!' : 'Keep practicing!'}
       </p>
-      <p className="text-sm font-semibold text-[#AFAFAF] mt-1">
+      <p className="text-sm font-semibold mt-1" style={{ color: dark ? '#94A3B8' : '#AFAFAF' }}>
         {correctCount} of {totalCount} correct
       </p>
 
       {xpEarned > 0 && (
         <motion.div
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full mt-3"
-          style={{ background: '#F3E8FF', border: '1.5px solid #DDD6FE' }}
+          style={{ background: dark ? 'rgba(124,58,237,0.2)' : '#F3E8FF', border: `1.5px solid ${dark ? '#7C3AED' : '#DDD6FE'}` }}
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}

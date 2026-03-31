@@ -15,7 +15,7 @@ export async function GET() {
   }
 
   const [user] = await db
-    .select({ passwordHash: users.passwordHash })
+    .select({ passwordHash: users.passwordHash, country: users.country })
     .from(users)
     .where(eq(users.id, userId))
     .limit(1);
@@ -30,6 +30,7 @@ export async function GET() {
 
   return NextResponse.json({
     hasPassword: !isOAuthOnly && !!user?.passwordHash,
+    country: user?.country ?? null,
   });
 }
 
@@ -58,6 +59,23 @@ export async function PATCH(request: NextRequest) {
     await db
       .update(users)
       .set({ displayName, name: displayName, updatedAt: new Date() })
+      .where(eq(users.id, userId));
+
+    return NextResponse.json({ ok: true });
+  }
+
+  // ── Handle country update ──
+  if (body.country !== undefined) {
+    const country = body.country as string | null;
+    if (country !== null && (typeof country !== 'string' || !/^[A-Z]{2,3}$/.test(country))) {
+      return NextResponse.json(
+        { error: 'Country must be a valid code (e.g. US, IL, GB, INT)' },
+        { status: 400 }
+      );
+    }
+    await db
+      .update(users)
+      .set({ country, updatedAt: new Date() })
       .where(eq(users.id, userId));
 
     return NextResponse.json({ ok: true });

@@ -29,8 +29,8 @@ export function EmptyState({
       }}
     >
       <div className="flex justify-center mb-3">{icon}</div>
-      <p className="text-surface-700 font-bold text-sm mb-1">{title}</p>
-      {subtitle && <p className="text-surface-400 text-xs mb-3">{subtitle}</p>}
+      <p className="text-surface-700 dark:text-surface-200 font-bold text-sm mb-1">{title}</p>
+      {subtitle && <p className="text-surface-400 dark:text-surface-500 text-xs mb-3">{subtitle}</p>}
       {action}
     </div>
   );

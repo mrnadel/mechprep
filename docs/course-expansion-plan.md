@@ -4,6 +4,64 @@
 
 ---
 
+## Table of Contents
+
+**Vision & Direction**
+1. [The Experience We're Building](#the-experience-were-building) - Promise, feelings, fun vs school, professional vs toy, voice, brand, writing rules
+2. [Academic Foundations](#academic-foundations) - University curricula and professional standards backing each course
+3. [Competitive Differentiation](#competitive-differentiation) - Why Octokeen, not Khan/Brilliant/Coursera
+
+**Scale & Structure**
+4. [Duolingo's Actual Scale](#duolingos-actual-scale) - Their numbers and how we map to them
+5. [What "Professional Level" Means](#what-professional-level-means) - Graduate outcomes per course
+6. [Structure Rules](#structure-rules-for-professional-level-courses) - Section arc, unit rules, pacing, Bloom's progression
+7. [Naming Convention](#naming-convention-what-learners-see) - How names evolve with learner knowledge
+
+**Per-Course Plans**
+8. [Personal Finance](#course-1-personal-finance-professional-financial-advisor-level) - 15 sections, 181 units
+9. [Psychology](#course-2-psychology-professional-behavioral-science-level) - 15 sections, 175 units
+10. [Space & Astronomy](#course-3-space--astronomy-professional-science-communicator-level) - 15 sections, 166 units
+11. [Summary Targets](#summary-professional-level-targets) - Numbers at a glance
+
+**Learner Experience**
+12. [Learner Personas](#learner-personas) - Who takes each course and what they want
+13. [Retention Strategy](#retention-strategy-preventing-drop-off) - 5 danger zones, aha moments, misconception pedagogy
+14. [Reward & Motivation Curve](#reward-and-motivation-curve) - XP, levels, celebrations, surprise rewards, loss aversion
+15. [Misconception Lists](#misconception-lists-must-address-per-course) - Must-bust myths per course
+
+**Content Design**
+16. [Spaced Repetition Design](#spaced-repetition-design) - Review units, checkpoints, cross-section callbacks
+17. [Difficulty Calibration](#difficulty-calibration) - Optimal error rate, Bloom's mapping, per-question indicators
+18. [Calculation Questions](#calculation-questions-per-course) - What math each course teaches, by section
+19. [Diagram & Visual Strategy](#diagram-and-visual-strategy) - When visuals are required, rules
+20. [Assumed Vocabulary](#assumed-vocabulary-per-section-boundary) - What terms learners know at each section boundary
+
+**Globalization**
+21. [Globalization Strategy](#globalization-strategy-building-for-the-world) - Personalized variants, country selection, what's universal vs localized
+22. [Existing Content Assessment](#existing-content-rewrite-assessment) - What needs updating for global audience
+
+**Operations**
+23. [Placement Test Design](#placement-test-design) - Adaptive test specs
+24. [Content Dependencies](#content-dependencies) - Prerequisites and cross-course links
+25. [QA & Review Process](#qa-and-review-process) - Pre-ship checks, post-launch monitoring
+26. [QA Automation Script](#content-qa-automation-script) - 16 automated checks
+27. [Glossary Strategy](#glossary-strategy) - Per-course term management
+28. [Content Maintenance](#content-update-and-maintenance) - Volatile content, versioning
+29. [Accessibility](#accessibility) - WCAG, color blindness, screen readers, reading levels
+30. [Mobile-First Design](#mobile-first-design) - Touch targets, session length, diagrams
+31. [Success Metrics](#success-metrics) - Retention, completion, accuracy targets
+32. [Production Schedule](#production-schedule) - Per-section timeline, full course timeline
+
+**Samples**
+33. [Sample Standard Lesson](#sample-lesson-what-the-output-looks-like) - Finance emergency fund lesson (full code)
+34. [Sample Conversation Lesson](#sample-conversation-lesson) - Psychology persuasion lesson (full code)
+35. [Sample Speed-Round Lesson](#sample-speed-round-lesson) - Space stellar evolution (full code)
+
+**Implementation**
+36. [Implementation Order](#implementation-order-final) - Phase 0-3, sprint-by-sprint priority
+
+---
+
 ## The Experience We're Building
 
 ### The promise
@@ -1026,21 +1084,1200 @@ Each unit teaches one sub-topic through 3-7 lessons.
 7. **Every 4th unit is a review unit** for built-in spaced repetition
 8. **Section checkpoints** that verify mastery before advancing
 
-### Implementation Order
+---
 
-**Phase 1: Fix existing content** (1-2 weeks)
-- Fix correctIndex bias in all 3 courses
-- Add missing question types to Psychology and Space
+## Naming Convention: What Learners See
 
-**Phase 2: Build section infrastructure** (1 week)
+Unit and lesson names evolve with the learner. Early names assume zero vocabulary. Late names use professional terms the learner has already mastered.
+
+### Naming by section phase
+
+| Sections | Assumed knowledge | Naming style | Examples |
+|----------|------------------|-------------|---------|
+| 1-2 | Zero. Learner knows nothing. | Curiosity hooks, everyday language, outcome-focused | "Where Does Your Money Go?", "Why Your Brain Tricks You", "What's That Bright Dot?" |
+| 3-4 | Basic vocabulary from Sections 1-2 | Introduce real terms alongside casual descriptions | "Build Your Emergency Fund", "The Anchoring Trap", "How Stars Are Born" |
+| 5-7 | Core vocabulary owned | Mix professional terms with benefits | "Compound Interest and the Rule of 72", "System 1 vs System 2", "The Hertzsprung-Russell Diagram" |
+| 8-10 | Intermediate, thinks like a student | Full professional language is fine | "Risk-Adjusted Returns", "Cognitive Behavioral Therapy Basics", "Spectroscopy and Stellar Classification" |
+| 11-13 | Advanced, thinks like a practitioner | Names reflect professional activities | "Portfolio Rebalancing and Tax-Loss Harvesting", "Designing a Research Study", "Atmospheric Characterization with JWST" |
+| 14-15 | Expert, thinks like a professional | Names describe what professionals do | "Build a Client's Financial Plan", "Evaluate a Clinical Presentation", "Run a Planetarium Show" |
+
+### Naming rules
+
+1. **Name by outcome, not by topic.** "Why Losing Hurts More" not "Prospect Theory." (Exception: Sections 8+ where learners own the vocabulary.)
+2. **The learner should read the title and want to start.** If a title feels like a textbook chapter, rewrite it.
+3. **Never use roman numerals or "Part X".** Every sub-lesson gets a unique descriptive name.
+4. **Section names are aspirational.** "Master the Stock Market" not "Advanced Investing Module 3."
+
+---
+
+## Learner Personas
+
+Each course serves multiple personas. Content should be written for all of them, not just one.
+
+### Personal Finance
+
+| Persona | Age | Situation | What they want |
+|---------|-----|-----------|---------------|
+| **Fresh grad** | 22-26 | First real job, first paycheck, no financial education | "Tell me what to do with my money" |
+| **Career changer** | 30-40 | Making more money, worried about debt and retirement | "Am I on track? What am I missing?" |
+| **Parent** | 35-50 | Managing family finances, saving for college, mortgage | "How do I protect my family financially?" |
+| **Late starter** | 45-60 | Barely saved, worried about retirement | "Is it too late? What do I do now?" |
+
+### Psychology
+
+| Persona | Age | Situation | What they want |
+|---------|-----|-----------|---------------|
+| **Curious mind** | 18-30 | Loves learning, watches psychology YouTube | "I want to really understand this, not just know trivia" |
+| **Self-improver** | 25-45 | Wants to make better decisions, manage emotions | "How do I use this to improve my life?" |
+| **Manager/leader** | 30-50 | Manages people, needs to understand motivation | "How do I lead and communicate better?" |
+| **Pre-grad student** | 20-25 | Considering psychology as a career | "Can I learn enough to know if this field is for me?" |
+
+### Space & Astronomy
+
+| Persona | Age | Situation | What they want |
+|---------|-----|-----------|---------------|
+| **Night sky newbie** | Any age | Looked up, felt wonder, knows nothing | "What am I looking at?" |
+| **Science enthusiast** | 20-40 | Reads space news, watches launches | "I want to understand the science, not just the headlines" |
+| **Parent/teacher** | 30-50 | Kids ask space questions they can't answer | "Help me explain this to my kids" |
+| **Aspiring communicator** | 25-40 | Wants to work in science outreach, planetarium, journalism | "I need professional-level knowledge" |
+
+---
+
+## Retention Strategy: Preventing Drop-off
+
+Research shows education app retention follows a steep curve: ~50% Day 1 → ~25% Day 7 → ~10% Day 30. Duolingo's streaks, leagues, and notifications fight this. Our content design must also fight it.
+
+### The 5 drop-off danger zones
+
+| When | Why they quit | How we prevent it |
+|------|-------------|-------------------|
+| **Day 1-3** | "This isn't for me" or "too easy/hard" | First lesson must be engaging AND successful. Placement test for experienced learners. |
+| **Week 2-3** | "The novelty wore off" | Introduce speed-rounds and conversations by Unit 3. Variety prevents boredom. |
+| **Month 1-2 (Section 3-4 cliff)** | "It's getting harder and I'm not sure I'm learning" | Review units prove how much they've learned. "You just answered 20 questions about X. A month ago you knew nothing." |
+| **Month 3-4 (mid-course wall)** | "This is a lot. Am I even going to finish?" | Section checkpoints celebrate milestones. "You've completed 50% of the course." |
+| **Month 6+ (advanced fatigue)** | "The content is harder and less fun" | Professional scenarios and case studies feel rewarding. "You're now thinking like a [financial advisor / psychologist / astronomer]." |
+
+### Content-level retention mechanics
+
+1. **"Aha moments" per section.** Each section has at least one mind-blowing fact or realization that makes the learner want to tell someone. These are the viral moments.
+
+| Course | Section | Aha moment |
+|--------|---------|-----------|
+| Finance | 2 | "Your $5/day coffee habit costs $55,000 over 30 years with investing" |
+| Finance | 8 | "An index fund beats 90% of professional investors. You're better off doing nothing." |
+| Psychology | 2 | "Harvard students got the seasons question wrong. Your brain doesn't work the way you think." |
+| Psychology | 6 | "Paying people sometimes makes them perform WORSE" (overjustification effect) |
+| Space | 1 | "When you look at Andromeda, you're seeing 2.5 million years into the past" |
+| Space | 5 | "Every atom in your body heavier than hydrogen was made inside a star that exploded" |
+
+2. **Misconception-first pedagogy.** Research shows presenting the myth, letting the learner commit to an answer, then revealing the truth is more effective than just teaching facts. Every section should have at least 2 misconception-busting moments.
+
+3. **1-3 month engagement modules.** Research shows gamification works best in focused 1-3 month modules. Structure sections so every ~2 months feels like a complete mini-achievement with a celebration.
+
+---
+
+## Spaced Repetition Design
+
+### Review unit specs
+
+Every 4th unit in a section is a review unit. Here's how they work:
+
+| Rule | Spec |
+|------|------|
+| **Frequency** | Every 4th unit within a section |
+| **Question source** | 50% from the 3 preceding units, 30% from earlier in the section, 20% from previous sections |
+| **Question selection** | Prioritize concepts the learner got wrong in earlier lessons (tracked via `correctQuestionIds` in progress) |
+| **Length** | 10-12 questions (standard lesson length) |
+| **Question types** | Heavier on recall types: fill-blank, match-pairs, order-steps. Less multiple-choice. |
+| **Teaching cards** | None. Review units are pure practice. |
+| **Difficulty** | Mixed. Start easy (Section 1 concepts) and end hard (recent concepts). |
+
+### Section checkpoint specs
+
+| Rule | Spec |
+|------|------|
+| **Length** | 15 questions |
+| **Pass rate** | 80% (12/15) to advance to next section |
+| **Failure** | Can retry immediately. Different question selection each attempt. |
+| **Question source** | Spans the entire section, weighted toward later units |
+| **Question types** | All types. Emphasis on application (scenarios, order-steps, pick-the-best). |
+| **No teaching cards** | Checkpoints test, they don't teach. |
+
+### Cross-section spaced repetition
+
+Starting from Section 5, each new section includes 2-3 "callback questions" per unit that reference concepts from earlier sections. These are NOT in review units. They appear in regular lessons, mixed with new content. This mirrors Duolingo's approach of mixing old vocabulary into new lessons.
+
+---
+
+## Difficulty Calibration
+
+### Optimal error rate
+
+Research on "desirable difficulty" (Bjork, 1994) shows the optimal error rate for learning is **15-25%**. If learners get everything right, it's too easy (no learning). If they get more than 30% wrong, it's too hard (frustration).
+
+### How we calibrate
+
+| Method | How it works |
+|--------|-------------|
+| **Author tagging** | Content writers tag each question as easy/medium/hard when creating it |
+| **Target distribution per lesson** | Easy: 25%, Medium: 50%, Hard: 25% |
+| **Post-launch adjustment** | Track actual correct-answer rates. If a "medium" question has 95% accuracy, it's actually easy. Retag. |
+| **Bloom's level mapping** | Sections 1-2 = Remember/Understand. 3-7 = Apply/Analyze. 8-12 = Analyze/Evaluate. 13-15 = Evaluate/Create. |
+
+### Per-question difficulty indicators
+
+| Difficulty | Bloom's level | Correct rate target | Question characteristics |
+|-----------|--------------|--------------------|-----------------------|
+| Easy | Remember, Understand | 85-95% | Single concept, recognition, obvious answer |
+| Medium | Apply, Analyze | 60-80% | Combine 2 concepts, requires reasoning |
+| Hard | Evaluate, Create | 40-65% | Multi-concept, edge cases, professional judgment |
+
+---
+
+## Calculation Questions Per Course
+
+### Personal Finance
+
+| Section | Calculations introduced | Question type |
+|---------|----------------------|--------------|
+| 3 | Simple interest, savings goal timeline | slider-estimate |
+| 5 | Tax bracket math (marginal vs effective rate) | slider-estimate, fill-blank |
+| 6 | Loan interest, minimum payment cost over time | slider-estimate, scenario |
+| 8 | Compound interest (A = P(1+r/n)^nt), Rule of 72 | slider-estimate, fill-blank |
+| 9 | P/E ratio, dividend yield, CAGR | slider-estimate, fill-blank |
+| 10 | Mortgage amortization, rent vs buy break-even | slider-estimate, scenario |
+| 12 | Retirement needs (accumulation math), 4% withdrawal | slider-estimate, scenario |
+| 14 | Business cash flow, profit margin | slider-estimate, scenario |
+
+### Psychology
+
+| Section | Calculations introduced | Question type |
+|---------|----------------------|--------------|
+| 5 | Probability and base rates (Bayes) | slider-estimate, scenario |
+| 7 | Emotional arousal scales, stress inventory scoring | slider-estimate |
+| 14 | Mean, standard deviation, p-values (conceptual), effect size | slider-estimate, fill-blank |
+| 14 | Sample size reasoning, statistical significance | scenario, pick-the-best |
+
+### Space & Astronomy
+
+| Section | Calculations introduced | Question type |
+|---------|----------------------|--------------|
+| 4 | Inverse square law (brightness), telescope magnification | slider-estimate, fill-blank |
+| 5 | Stefan-Boltzmann (luminosity from temp), Wien's law (peak wavelength) | slider-estimate |
+| 6 | Hubble's law (recession velocity from distance) | slider-estimate |
+| 7 | Schwarzschild radius | slider-estimate |
+| 8 | Age of universe from expansion rate | slider-estimate |
+| 9 | Kepler's 3rd law (P^2 = a^3), escape velocity | slider-estimate, fill-blank |
+
+---
+
+## Diagram and Visual Strategy
+
+### When visuals are required
+
+| Course | Must-have visuals |
+|--------|-----------------|
+| **Finance** | Compound interest growth curves, amortization charts, pie charts (budget, asset allocation), tax bracket diagrams, supply/demand |
+| **Psychology** | Brain anatomy, neuron structure, classical conditioning diagram, Maslow's pyramid, Milgram experiment setup, stress response diagram, DSM category tree |
+| **Space** | Solar system scale, planet comparison, stellar lifecycle, HR diagram, galaxy types, orbit types, electromagnetic spectrum, telescope optics, Moon phases, eclipse geometry |
+
+### Visual rules
+
+1. **Every section must have at least 5 diagram questions.** Visuals prevent text fatigue.
+2. **Diagrams must NEVER reveal the answer.** Labels are for orientation, not hints.
+3. **Use SVG format** (inline in the `diagram` field). ViewBox: `0 0 80 80`.
+4. **Progressive complexity.** Section 1 diagrams are simple (labeled arrows, basic shapes). Section 10+ diagrams are professional (HR diagrams with axes, circuit-style flow charts).
+5. **Accessibility.** Every diagram-based question must be answerable from the question text alone. The diagram supplements, never replaces.
+
+---
+
+## Placement Test Design
+
+For 15-section courses, the placement test must be sophisticated.
+
+| Rule | Spec |
+|------|------|
+| **Algorithm** | Adaptive (CAT-like). Start at Section 5 difficulty. If correct, jump to Section 8. If wrong, drop to Section 3. Converge on the right level. |
+| **Questions** | 15-20 questions |
+| **Duration** | ~5 minutes |
+| **Coverage** | 1-2 questions per section, spanning all major topics |
+| **Placement result** | "You can skip to Section X." All lessons before that section are unlocked but not completed. |
+| **Floor** | Everyone starts at Section 1 minimum (no skipping Section 1). |
+| **Ceiling** | Maximum skip to Section 10. Sections 11-15 must be earned. |
+
+---
+
+## Content Dependencies
+
+### Within a course
+
+Each unit file must declare its prerequisites as a comment at the top:
+
+```typescript
+// Prerequisites: u47 (System 1 & 2), u35 (Sunk cost fallacy)
+// Concepts assumed known: heuristic, loss aversion, reference point
+```
+
+### Cross-course connections
+
+| When Finance mentions... | Link to Psychology... |
+|-------------------------|---------------------|
+| Behavioral investing biases | Section 6 (Cognitive Biases) |
+| Money psychology | Section 7 (Emotions & Motivation) |
+| Negotiation psychology | Section 8 (Social Psychology) |
+
+| When Space mentions... | Could link to... |
+|----------------------|-----------------|
+| Nuclear fusion | (Physics, not covered by our courses, so teach it inline) |
+| Perception and scale | Psychology Section 2 (Perception) |
+
+Cross-course links are **optional "did you know" hints**, not hard prerequisites. A learner should be able to complete any course independently.
+
+---
+
+## QA and Review Process
+
+### Before content ships
+
+| Step | Who/What | Checks |
+|------|----------|--------|
+| 1. Automated | Script | No em dashes, correctIndex distribution, teaching card count, question type variety, ID format, no duplicate IDs |
+| 2. Accuracy review | AI with academic source | Every fact cross-referenced against the academic source for that section |
+| 3. Voice review | AI with writing guide | Tone, length, banned phrases, contractions, sentence length |
+| 4. Difficulty review | AI | Bloom's level matches section phase, easy question after every teaching card |
+| 5. Seed test | Script | `npx tsx scripts/seed-content.ts` passes without errors |
+
+### Post-launch monitoring
+
+| Metric | Action threshold |
+|--------|-----------------|
+| Question accuracy rate <40% | Question is too hard. Review and simplify or add better teaching. |
+| Question accuracy rate >95% | Question is too easy. May need to increase difficulty or replace. |
+| Lesson completion rate <70% | Lesson is too long or too frustrating. Split or add more teaching. |
+| Section drop-off >50% | Section cliff. Add more engagement (conversations, aha moments). |
+
+---
+
+## Glossary Strategy
+
+Each course builds a glossary as content is written.
+
+| Rule | Spec |
+|------|------|
+| **Format** | One glossary file per course: `glossary.ts` |
+| **Entries** | Every technical term used in the course, with a 1-sentence plain-English definition |
+| **First use** | Every term must be defined in a teaching card BEFORE it appears in a question |
+| **Learner access** | Glossary is searchable in the app (future feature). For now, it serves as a content QA tool. |
+| **Section tagging** | Each glossary entry is tagged with the section where it's first introduced |
+
+---
+
+## Content Update and Maintenance
+
+### Content that changes
+
+| Type | Frequency | Examples | Strategy |
+|------|-----------|---------|---------|
+| **Facts that update yearly** | Annual review | Tax brackets, contribution limits, mission updates, new exoplanet discoveries | Tag these questions with `volatile: true`. Review every January. |
+| **Facts that update rarely** | Review every 2-3 years | FICO scoring model changes, DSM updates, major scientific revisions | Watch for major announcements in each field. |
+| **Facts that don't change** | Never | Kepler's laws, cognitive biases, compound interest formula | No maintenance needed. |
+
+### Versioning
+
+When a lesson is updated, learners who already completed it keep their progress. The updated content appears if they revisit the lesson (practice mode) or encounter review questions.
+
+---
+
+## Accessibility
+
+| Requirement | Implementation |
+|-------------|---------------|
+| **Color blindness** | Never use color alone to convey meaning. Always pair with text labels or patterns. Unit theme colors are decorative, not informational. |
+| **Screen readers** | All questions must be fully answerable from text. Diagram questions include the key information in the question text. `aria-label` on all interactive elements. |
+| **Motor accessibility** | All question types must work with keyboard navigation. Tap targets minimum 44x44px. |
+| **Cognitive load** | Max 20 words per sentence. Max 2 sentences per teaching card. No more than 3 new concepts per unit. These rules serve both clarity and accessibility. |
+| **Reading level** | Sections 1-4 target a Grade 8 reading level. Sections 5-10 target Grade 10-12. Sections 11-15 target college level (Flesch-Kincaid). |
+
+---
+
+## Mobile-First Design
+
+85% of Duolingo usage is mobile. We design for mobile first.
+
+| Rule | Spec |
+|------|------|
+| **Session length** | 3-5 minutes. 8-12 items per lesson. |
+| **Touch targets** | Minimum 44px. Options must be easily tappable. |
+| **Scrolling** | Minimize scrolling within a question. Question text + options should fit on one screen. |
+| **Question types** | Sort-buckets and match-pairs use drag gestures. Must work on small screens. |
+| **Diagrams** | Must be legible at mobile viewport width (~375px). Use large labels, simple shapes. |
+| **Offline** | Lesson data for the current section should be cacheable for offline play. |
+
+---
+
+## Competitive Differentiation
+
+### Why Octokeen, not...
+
+| Competitor | Their strength | Their weakness | Our advantage |
+|-----------|---------------|---------------|--------------|
+| **Khan Academy** | Free, comprehensive video lectures | Passive watching, no gamification, no streak motivation | Active learning with gamification. You DO things, not watch things. |
+| **Brilliant** | Beautiful interactive problems, great for STEM | Expensive ($25/mo), limited to STEM, no social features | Broader subjects, social competition, free tier |
+| **Coursera/edX** | University-backed certificates, deep content | Long courses (weeks per module), requires sitting at a computer | 5 min/day mobile-first. Professional-level without the time commitment. |
+| **Duolingo** | Best gamification, massive user base | Only teaches languages | Same addictive format, but for professional knowledge |
+| **YouTube** | Infinite free content on any topic | No structure, no verification, no progression, no accountability | Structured path from zero to professional, with verification at every step |
+
+**Our one-line pitch:** "Duolingo's addictive format, but for real-world professional skills."
+
+---
+
+## Success Metrics
+
+### How we know the course works
+
+| Metric | Target | How to measure |
+|--------|--------|---------------|
+| **Day 7 retention** | >30% | % of new learners who return after 7 days |
+| **Day 30 retention** | >15% | % still active after 30 days |
+| **Course completion** | >5% | % who finish all 15 sections (Duolingo's completion rate for Spanish is ~5-8%) |
+| **Section completion** | >40% per section | % who finish each section after starting it |
+| **Average accuracy** | 70-80% | If below 60%, content is too hard. If above 90%, too easy. |
+| **Session length** | 4-7 minutes | Matches our 3-5 min target with buffer for streaks/celebrations |
+| **Streak length** | Median 7+ days | Indicates habit formation |
+| **NPS** | >50 | "Would you recommend Octokeen?" |
+
+### How we know the learner learned
+
+| Level | Verification method |
+|-------|-------------------|
+| Section checkpoint passed (80%+) | They know the section's content |
+| Course completed with >70% avg accuracy | They have breadth across all topics |
+| Capstone section passed | They can synthesize and apply |
+| "Can explain it to someone else" (conversation lessons) | They have genuine understanding, not just recognition |
+
+---
+
+## Production Schedule
+
+### Per-section production
+
+| Step | Duration | Output |
+|------|----------|--------|
+| Research: cross-reference academic sources for the section | 1 day | Section syllabus with learning objectives per unit |
+| Content writing: teaching cards + questions for all units | 3-5 days per section | Complete unit files |
+| QA: automated checks + accuracy review + voice review | 1 day | QA report, fixes applied |
+| Seed and test | 0.5 day | Content live in DB |
+| **Total per section** | **~1 week** | |
+
+### Full course timeline
+
+| Phase | Duration | What |
+|-------|----------|------|
+| Phase 1: Fix existing (correctIndex, question types) | 1-2 weeks | All 3 courses fixed |
+| Phase 2: Section infrastructure (data model, UI) | 1 week | Section layer, checkpoints, review units working |
+| Phase 3: Expand Finance (15 sections) | ~15 weeks | ~880 lessons, ~8,800 questions |
+| Phase 4: Expand Psychology (15 sections) | ~15 weeks | ~850 lessons, ~8,500 questions |
+| Phase 5: Expand Space (15 sections) | ~15 weeks | ~820 lessons, ~8,200 questions |
+| **Total** | **~48 weeks** | All 3 courses at professional level |
+
+Sections can be built in parallel across courses. With 3 agents working simultaneously (one per course), total time drops to ~17 weeks.
+
+### Build order within each course
+
+1. Fix existing content first (Sections that already have content)
+2. Build entirely new sections next (highest impact)
+3. Deepen existing sections last (more units, more review)
+
+---
+
+## Sample Lesson: What the Output Looks Like
+
+### Personal Finance, Section 3, Unit 21: "Your Emergency Fund"
+
+```typescript
+{
+  id: 'pf-u21-L1',
+  title: 'How Much Do You Need?',
+  description: 'Calculate your personal emergency fund target based on your expenses.',
+  icon: '📝',
+  xpReward: 20,
+  levels: 4,
+  questions: [
+    {
+      id: 'pf-u21-L1-T1',
+      type: 'teaching',
+      question: 'The emergency fund rule',
+      explanation: "An emergency fund covers 3-6 months of essential expenses. Not income, expenses. If you spend $3,000/month on rent, food, and bills, you need $9,000-$18,000 saved.",
+      hint: 'Try this now: add up your rent, groceries, utilities, and insurance. That is your monthly essential expenses.',
+    },
+    {
+      id: 'pf-u21-L1-Q1',
+      type: 'true-false',
+      question: 'Your emergency fund should cover 3-6 months of expenses, not income.',
+      correctAnswer: true,
+      explanation: "Expenses, not income. If you earn $5,000 but spend $3,000, your fund targets $9,000-$18,000.",
+    },
+    {
+      id: 'pf-u21-L1-Q2',
+      type: 'multiple-choice',
+      question: 'You spend $2,500/month on essentials. What is a 3-month emergency fund?',
+      options: ['$2,500', '$5,000', '$7,500', '$10,000'],
+      correctIndex: 2,
+      explanation: "$2,500 x 3 months = $7,500. That is the minimum target.",
+    },
+    {
+      id: 'pf-u21-L1-T2',
+      type: 'teaching',
+      question: 'Who needs 6 months vs 3?',
+      explanation: "Freelancers, single-income households, and people in volatile industries should aim for 6 months. Dual-income households with stable jobs can start with 3.",
+      hint: 'If losing your job would take more than 3 months to replace, aim for 6.',
+    },
+    {
+      id: 'pf-u21-L1-Q3',
+      type: 'sort-buckets',
+      question: 'Sort these people by how much emergency fund they need:',
+      options: ['Freelance designer', 'Dual-income couple at tech companies', 'Single parent, one income', 'Government employee with tenure', 'Seasonal restaurant worker', 'Teacher with union contract'],
+      buckets: ['3 months is fine', 'Aim for 6 months'],
+      correctBuckets: [1, 0, 1, 0, 1, 0],
+      explanation: "Unstable or single-income situations need more buffer. Stable dual-income or tenured jobs can get by with less.",
+    },
+    {
+      id: 'pf-u21-L1-Q4',
+      type: 'slider-estimate',
+      question: 'Your monthly essentials are $4,200. What is a 6-month emergency fund?',
+      sliderMin: 10000,
+      sliderMax: 40000,
+      correctValue: 25200,
+      tolerance: 5,
+      unit: '$',
+      explanation: "$4,200 x 6 = $25,200. This is your safety net target.",
+    },
+    {
+      id: 'pf-u21-L1-Q5',
+      type: 'match-pairs',
+      question: 'Match each situation to the right emergency fund strategy:',
+      options: ['Just starting out', 'Have $1,000 saved', 'Have 3 months saved', 'Have 6 months saved'],
+      matchTargets: ['Save $1,000 as fast as possible', 'Build to 3 months gradually', 'Decide if you need 6 based on risk', 'You are done. Invest the rest.'],
+      correctMatches: [0, 1, 2, 3],
+      explanation: "The emergency fund has stages. Once you hit 6 months, redirect savings to investing.",
+    },
+    {
+      id: 'pf-u21-L1-Q6',
+      type: 'multiple-choice',
+      question: 'Where should you keep your emergency fund?',
+      options: ['High-yield savings account', 'Stock market index fund', 'Under your mattress', 'Checking account'],
+      correctIndex: 0,
+      explanation: "A high-yield savings account is accessible, earns interest, and is FDIC insured. Stocks are too volatile. Cash loses to inflation. Checking earns nothing.",
+    },
+    {
+      id: 'pf-u21-L1-T3',
+      type: 'teaching',
+      question: 'What counts as an emergency?',
+      explanation: "Job loss, medical bills, car breakdown, urgent home repair. Not vacations, sales, or impulse purchases. If you can plan for it, it's not an emergency.",
+    },
+    {
+      id: 'pf-u21-L1-Q7',
+      type: 'sort-buckets',
+      question: 'Is this a real emergency?',
+      options: ['Your car engine dies', 'A great deal on a TV', 'You break your arm', 'Your friend is getting married', 'Your roof starts leaking', 'New shoes are on sale'],
+      buckets: ['Real emergency', 'Not an emergency'],
+      correctBuckets: [0, 1, 0, 1, 0, 1],
+      explanation: "Emergencies are unexpected and necessary. Sales and planned events are not emergencies.",
+    },
+  ],
+}
+```
+
+This sample shows: 3 teaching cards, 7 questions, 5 different types (T/F, MC, sort-buckets, slider-estimate, match-pairs), difficulty ramp (easy T/F first, calculation later), real-world connection ("Try this now"), and 10 total items.
+
+---
+
+---
+
+## Globalization Strategy: Building for the World
+
+Octokeen is global from day one. Content must work for learners in any country. This means teaching universal principles, not country-specific implementations.
+
+### Impact on existing content
+
+| Course | Rewrite needed? | Why |
+|--------|----------------|-----|
+| **Finance** | **YES, significant.** 700+ US-specific references (IRS, 401k, FICO, W-2, Social Security, Roth IRA). | Core financial principles are universal, but current content teaches US implementations as if they're the only way. |
+| **Psychology** | **Minor additions only.** Content is 95% universal. | Need to address the WEIRD problem (Western, Educated, Industrialized, Rich, Democratic bias) and add cross-cultural examples. |
+| **Space** | **Minor additions only.** Astronomy is inherently global. | Need to add Southern Hemisphere sky, non-Western astronomical traditions, and global space agencies (ESA, ISRO, CNSA, JAXA). |
+
+### The personalized approach: one course, localized examples
+
+Making content generic ("employer retirement account") makes it useless for everyone. An American wants to learn about their 401(k). A Brit wants to learn about their workplace pension. An Israeli wants to learn about their keren pensia.
+
+**The solution: teach the universal principle, but show examples and details from the learner's country.**
+
+During onboarding, the learner selects their country. This determines which version of country-specific teaching cards and examples they see. The core questions test the CONCEPT, not the country-specific name.
+
+**Example: Retirement accounts**
+
+The teaching card has multiple versions stored in a `localizedExplanation` field:
+
+| Country | What the learner sees |
+|---------|---------------------|
+| US | "Your 401(k) is a tax-advantaged retirement account. Your employer matches your contributions up to a percentage. If you contribute 6% and they match 50%, that's 3% free money." |
+| UK | "Your workplace pension is a tax-advantaged retirement account. Your employer must contribute at least 3% on top of your own contribution." |
+| Australia | "Your super (superannuation) is a tax-advantaged retirement account. Your employer contributes 11.5% of your salary automatically." |
+| Canada | "Your RRSP is a tax-advantaged retirement account. Contributions are tax-deductible, and you pay tax when you withdraw in retirement." |
+| Israel | "Your keren pensia is a tax-advantaged retirement account. Your employer contributes 6.5% and you contribute 6% of your salary." |
+| Default | "Most countries have tax-advantaged retirement accounts. Your employer may contribute money on top of what you save. The names differ by country, but the principle is the same." |
+
+The QUESTION that follows tests the concept, not the local name:
+> "Why should you always contribute at least enough to get your employer's full match?"
+> Options: "It's free money", "It reduces your salary", "Your employer requires it", "It increases your tax bracket"
+
+This question works for everyone regardless of country.
+
+**What this means for content design:**
+
+1. **Teaching cards** that explain country-specific systems need a `variants` field with multiple country versions
+2. **Questions** should test the universal concept, not the local implementation name
+3. **Onboarding** asks the learner's country (or auto-detects). Default to "International" if not set.
+4. **Phase 1 countries:** US, UK, Australia, Canada, Israel, EU (generic), International (default)
+5. **The American experience gets MORE specific, not less.** They see 401(k), Roth IRA, FICO, W-2 with real numbers and real advice. Going global doesn't dilute the US content, it adds parallel tracks for others.
+
+### What needs localization vs what's universal
+
+Only Personal Finance has significant localization needs. Psychology and Space are 95%+ universal.
+
+**Finance: what needs country variants**
+
+| Topic | Needs variants | Universal question approach |
+|-------|---------------|---------------------------|
+| Retirement accounts | Yes (401k, pension, super, RRSP, keren pensia) | Test the concept: matching, tax advantage, compound growth |
+| Tax system | Yes (brackets, forms, filing) | Test the concept: marginal rates, deductions, credits |
+| Credit scores | Yes (FICO, Experian UK, no system in Japan) | Test the concept: creditworthiness, building credit, utilization |
+| Insurance | Yes (HMO/PPO vs NHS vs public systems) | Test the concept: premiums, deductibles, risk pooling |
+| Banking | Mostly universal (some country-specific fees/regulations) | Test the concept: account types, fees, FDIC/equivalent |
+| Investing | Mostly universal (brokerage details vary) | Test the concept: stocks, bonds, diversification, compound interest |
+| Budgeting | Universal | No variants needed |
+| Debt | Mostly universal (student loan specifics vary) | Test the concept: interest, payoff strategies, good vs bad debt |
+| Estate planning | Yes (laws vary dramatically) | Test the concept: wills, beneficiaries, why it matters |
+
+**Implementation approach:**
+
+```typescript
+// Teaching card with country variants
+{
+  id: 'pf-u87-L1-T1',
+  type: 'teaching',
+  question: 'Your employer retirement account',
+  explanation: 'Default explanation for international learners.',
+  variants: {
+    US: 'Your 401(k) lets you save for retirement with pre-tax dollars. Your employer often matches part of your contribution. Always contribute enough to get the full match.',
+    UK: 'Your workplace pension is automatically enrolled. Your employer must contribute at least 3%. You contribute 5%. That is 8% total going toward your future.',
+    AU: 'Your super (superannuation) gets 11.5% of your salary from your employer automatically. You can add extra voluntary contributions for tax benefits.',
+    CA: 'Your RRSP lets you save for retirement with tax-deductible contributions. Many employers offer matching through a group RRSP.',
+    IL: 'Your keren pensia gets contributions from both you (6%) and your employer (6.5%). This is mandatory for all employees in Israel.',
+  },
+  hint: 'Check your latest pay stub to see how much your employer contributes.',
+}
+```
+
+The renderer picks the right variant based on the learner's country setting. If no variant exists for their country, it shows the default.
+
+### What this does NOT mean
+
+- **NOT separate courses per country.** One course, one question bank, localized teaching examples.
+- **NOT watered-down content.** Americans still learn about 401(k) specifics. Brits still learn about workplace pensions. Everyone gets content that's relevant to their life.
+- **NOT translating to other languages (yet).** All content is in English. Country variants are in English for the learner's country.
+- **NOT every question needs variants.** Only ~20-30% of finance teaching cards need variants. Questions test concepts and are universal.
+
+### Universal vs country-specific by topic
+
+**Personal Finance:**
+
+| Universal (teach to everyone) | Country-specific (tag and contextualize) |
+|------------------------------|----------------------------------------|
+| Budgeting, needs vs wants, spending tracking | Tax brackets, filing process, specific forms |
+| Compound interest, time value of money | 401(k), IRA, Roth (US), ISA (UK), Super (AU), RRSP (CA) |
+| Debt mechanics, interest, amortization | Student loan programs, bankruptcy laws |
+| Credit concepts, creditworthiness | FICO (US), Experian 0-999 (UK), per-bank assessment (JP) |
+| Insurance principles, risk pooling | HMO/PPO (US), NHS (UK), Medicare (AU) |
+| Investing: stocks, bonds, diversification | Brokerage account types, tax-advantaged investing rules |
+| Emergency fund, saving automation | Specific account types, interest rates |
+| Estate planning principles | Wills/trusts laws (vary dramatically by country) |
+
+**Psychology:**
+
+| Universal | Needs cultural context |
+|-----------|---------------------|
+| Brain anatomy, neurons, neurotransmitters | Mental health stigma (varies hugely by culture) |
+| Classical/operant conditioning | Parenting practices, reinforcement norms |
+| Memory, forgetting curve, study techniques | Educational system differences |
+| Cognitive biases (anchoring, confirmation, etc.) | Individualism vs collectivism framing |
+| Emotions: big six, stress response | Emotional expression norms (vary by culture) |
+| Social psychology experiments (Milgram, Asch) | Note: mostly replicated cross-culturally, but add context |
+| Personality: Big Five | MBTI popularity varies by country (huge in Japan/Korea) |
+| Decision making, prospect theory | Risk attitudes differ across cultures |
+| Mental disorders: symptoms and categories | Therapy approaches, medication access, stigma |
+
+**The WEIRD problem:** Most classic psychology research was done on Western, Educated, Industrialized, Rich, Democratic populations. The plan must explicitly note when findings may not generalize. Add teaching cards like: "This study was done with American college students. Research in collectivist cultures shows different results."
+
+**Space & Astronomy:**
+
+| Universal | Regional additions needed |
+|-----------|------------------------|
+| Physics, stellar evolution, cosmology | All universal |
+| Solar system, exoplanets, black holes | All universal |
+| Constellations | Southern Hemisphere has different visible constellations (Southern Cross, Magellanic Clouds) |
+| Space history | Currently US-centric. Add: ESA (Rosetta, Huygens), ISRO (Chandrayaan, Mangalyaan), CNSA (Chang'e, Tiangong), JAXA (Hayabusa) |
+| Space policy | Currently NASA-focused. Add: Artemis Accords international context, ESA role, commercial space globally |
+| Astronomical traditions | Add: Arabic star names (many are already Arabic), Chinese constellations, Polynesian navigation, Aboriginal astronomy |
+
+### Currency and measurement
+
+| Rule | Implementation |
+|------|---------------|
+| **Currency** | Use generic amounts ("1,000/month") in explanations. Use $ only in clearly US-tagged examples. |
+| **Measurement** | Use metric as default. Add imperial in parentheses for US-tagged content. "The ISS orbits at 408 km (253 miles)." |
+| **Dates** | Use ISO format or spell out: "March 15" not "3/15" or "15/3" |
+| **Temperature** | Celsius as default. Fahrenheit in parentheses for US context. |
+
+### Languages and future translation
+
+**Phase 1 (English):** Build all content in English. Use simple, clear language that translates well. Avoid idioms, slang, and culturally loaded metaphors.
+
+**Phase 2 (future):** Priority languages for translation based on Duolingo's largest markets and EdTech demand:
+1. Spanish (Latin America + Spain)
+2. Portuguese (Brazil)
+3. French
+4. German
+5. Japanese
+6. Korean
+7. Hindi
+8. Arabic
+9. Hebrew
+10. Chinese (Simplified)
+
+**Translation-friendly writing rules:**
+- Avoid idioms ("break the bank", "hit the nail on the head")
+- Avoid cultural references that don't translate ("Super Bowl", "Thanksgiving")
+- Keep sentences short (max 20 words, already a rule)
+- Use concrete nouns, not abstract metaphors
+
+### Gamification across cultures
+
+Research shows leaderboards and competition work differently across cultures:
+- **Individualist cultures** (US, UK, Australia): Leaderboards and personal rankings are highly motivating
+- **Collectivist cultures** (Japan, Korea, China): Group achievements and collaborative goals may be more effective
+- **Current approach:** Keep leagues and leaderboards (they work broadly), but add future option for "team challenges" and "study groups" as social features expand
+
+---
+
+## Reward and Motivation Curve
+
+Based on behavioral psychology research (Skinner, Kahneman, Deci & Ryan) and Duolingo's documented reward system.
+
+### XP Design
+
+| Rule | Spec | Why |
+|------|------|-----|
+| **Base XP per lesson** | 10 XP, flat across all sections | Prevents inflation. Consistent unit of progress. |
+| **Accuracy bonus** | 0-5 XP based on % correct | Rewards quality, not just completion |
+| **Speed bonus** | 0-3 XP for fast completion | Rewards fluency |
+| **Perfect lesson bonus** | +5 XP for 100% accuracy | Celebration moment |
+| **Difficulty multiplier** | Sections 1-5: 1.0x, Sections 6-10: 1.2x, Sections 11-15: 1.5x | Later, harder content should feel more rewarding |
+| **Maximum per lesson** | ~23 XP (base 15 x 1.5 + bonuses) | Caps prevent farming |
+
+### Level Curve
+
+Levels use exponential scaling: early levels come fast (instant gratification), later levels slow down (user is already committed).
+
+| Level | XP needed | Lessons to reach (~) | Timeline |
+|-------|-----------|---------------------|----------|
+| 1 | 0 | Start | Day 1 |
+| 5 | 200 | ~15 lessons | Week 1 |
+| 10 | 800 | ~60 lessons | Month 1 |
+| 15 | 2,000 | ~150 lessons | Month 2 |
+| 20 | 4,000 | ~300 lessons | Month 3 |
+| 30 | 10,000 | ~600 lessons | Month 6 |
+| 40 | 20,000 | ~800 lessons | Month 9 |
+| 50 | 35,000 | ~900 (complete) | Month 12 |
+
+Formula: `XP_needed = floor(50 * level^1.6)`
+
+### Celebration Milestones
+
+| Milestone | When | Celebration level | What happens |
+|-----------|------|------------------|-------------|
+| First lesson complete | 3 min | Medium-high | Confetti, "+10 XP" animation, "You just took your first step!" |
+| First perfect lesson | ~10 min | Medium | Special star animation, achievement unlock |
+| Day 3 streak | Day 3 | Medium | Streak fire animation, free streak freeze gift |
+| Day 7 streak | Day 7 | High | Full-screen celebration, "Week Warrior" badge |
+| First unit complete | ~1 week | High | Unit summary stats, share card |
+| Level 5 | ~1 week | Medium | Level-up animation with new number |
+| First section complete | ~2-3 weeks | Very high | Section summary, "You've mastered [topic]!" certificate |
+| Day 30 streak | Month 1 | Very high | Special badge, gem reward |
+| 25% course complete | ~Month 2 | High | Progress visualization, "Look how far you've come" |
+| 50% course complete | ~Month 4 | Very high | Halfway celebration, "More than most people ever learn" |
+| Day 100 streak | ~Month 3.5 | Very high | Triple-digit milestone, profile badge |
+| 75% course complete | ~Month 7 | High | "Home stretch" framing |
+| Course completion | ~Month 10-12 | **Maximum** | Full-screen animation, certificate, profile badge, stat summary, share card |
+
+### Surprise Rewards (Variable Ratio)
+
+Unpredictable rewards every 3-7 lessons. These activate dopamine pathways more than fixed rewards.
+
+| Type | Frequency | Example |
+|------|-----------|---------|
+| **Bonus XP drop** | Every 3-5 lessons | "Bonus! +8 XP" with treasure chest animation |
+| **Gem reward** | Every 5-7 lessons | "You found 5 gems!" |
+| **Hidden achievement** | ~10% of achievements | Unlocks unexpectedly ("Night Owl: completed a lesson after midnight") |
+| **Streak bonus** | Random days | "Double XP day!" (announced at session start) |
+
+### Loss Aversion Introduction (Gradual)
+
+Research shows loss mechanics should only appear after the learner has something worth protecting.
+
+| Timing | Mechanic | Why now |
+|--------|----------|--------|
+| Day 1-7 | **Pure gain.** XP, achievements, celebrations. No penalties. | Build positive association. First week is all encouragement. |
+| Day 7 | **Streak appears.** Gentle: "You've practiced 7 days in a row!" | They now have something to lose. |
+| Day 7 | **Free streak freeze gifted.** | Safety net reduces anxiety about the new mechanic. |
+| Day 14 | **League placement.** Bronze league, 30 users. | Social comparison motivation. Demotion threat is mild at Bronze. |
+| Day 30+ | **Hearts system active.** 5 hearts, lose 1 per wrong answer. | User has formed the habit. Accuracy pressure improves learning. |
+| Always | **Recovery available.** Streak repair, heart refills from practice, gem purchases. | Loss without recovery causes permanent churn. Always provide a way back. |
+
+### The Motivation Dip Countermeasures
+
+Research shows a predictable motivation curve: peak at Day 1, cliff at Week 2, desert at Month 1-2, recovery at Month 3+.
+
+| Danger zone | When | Content design countermeasure |
+|-------------|------|------------------------------|
+| **Novelty fade** | Day 4-7 | Introduce speed-round and conversation lessons by Unit 3. New question types keep it fresh. |
+| **Reality check** | Week 2-3 | First section checkpoint proves progress. "You just passed Section 1!" |
+| **The desert** | Month 1-2 | Review units show how much they've learned. Case studies and real-world scenarios make it feel practical. "You now know more about [topic] than 90% of people." |
+| **Plateau feeling** | Month 2-3 | Introduce calculation questions (new challenge). Professional scenarios make it feel like they're leveling up. |
+| **Routine fatigue** | Month 4+ | New lesson types (timelines, case studies). Cross-section callbacks show how everything connects. |
+| **Final stretch drag** | Month 8+ | Goal gradient effect kicks in. Show "85% complete, just 2 sections left!" Capstone content feels rewarding. |
+
+---
+
+## Misconception Lists (Must-Address Per Course)
+
+Research shows that misconceptions not explicitly addressed survive the course. Each misconception below must appear as a teaching card that presents the myth, lets the learner commit, then reveals the truth.
+
+### Personal Finance Misconceptions
+
+| Misconception | Truth | Section to address |
+|--------------|-------|-------------------|
+| "I don't make enough to save" | Even $25/month compounds significantly over time | 3 (Saving) |
+| "All debt is bad" | Mortgage and student loans can build wealth | 6 (Debt) |
+| "I need to pick stocks to invest" | Index funds beat 90% of stock pickers | 8 (Investing) |
+| "I'm in the 22% tax bracket so I pay 22% on everything" | Marginal brackets: only income above the threshold is taxed at that rate | 5 (Taxes) |
+| "Renting is throwing money away" | Renting can be financially optimal in many markets | 10 (Real Estate) |
+| "You need a lot of money to start investing" | Many brokerages have $0 minimums and fractional shares | 8 (Investing) |
+| "Credit cards are always bad" | Responsible use builds credit and earns rewards | 6 (Debt) |
+| "Paying off your mortgage early is always smart" | Low-rate mortgage debt may be better left alone while investing the difference | 10 (Real Estate) |
+| "Financial advisors always have your best interest" | Fee-only fiduciaries do. Commission-based may not. | 15 (Mastery) |
+
+### Psychology Misconceptions
+
+| Misconception | Truth | Section to address |
+|--------------|-------|-------------------|
+| "We only use 10% of our brain" | Brain imaging shows all regions are active. Damage to any area causes deficits. | 1 (Brain) |
+| "Learning styles (visual, auditory) are real" | No evidence that matching instruction to "style" improves learning | 4 (Memory) |
+| "Left-brain = logical, right-brain = creative" | Both hemispheres contribute to all functions. Lateralization exists but not in the pop-science way. | 1 (Brain) |
+| "Schizophrenia means split personality" | Schizophrenia involves psychosis (hallucinations, delusions). Split personality is DID, a separate condition. | 11 (Mental Health) |
+| "Opposites attract" | Research consistently shows similarity predicts attraction | 8 (Social) |
+| "Psychology is just common sense" | Common sense contradicts itself. Psychology provides empirical evidence. | 1 (Brain) |
+| "You can tell if someone is lying by their body language" | No reliable behavioral cue for deception. Even experts perform at chance. | 8 (Social) |
+| "Venting anger helps reduce it" | Research shows venting often increases anger (catharsis myth) | 7 (Emotions) |
+| "People grieve in 5 stages" | Kubler-Ross stages were for dying patients, not universal grief. Grief is nonlinear. | 10 (Development) |
+| "Therapy means lying on a couch talking about your childhood" | Most evidence-based therapy (CBT, DBT) is structured, present-focused, and skill-building | 12 (Therapy) |
+
+### Space & Astronomy Misconceptions
+
+| Misconception | Truth | Section to address |
+|--------------|-------|-------------------|
+| "Seasons are caused by Earth being closer to the Sun" | Axial tilt (23.5 degrees) causes seasons. Earth is actually closest to the Sun in Northern winter. | 3 (Earth & Moon) |
+| "Moon phases are caused by Earth's shadow" | Phases are caused by the changing angle of sunlight. Earth's shadow only causes eclipses. | 3 (Earth & Moon) |
+| "The Sun is yellow" | The Sun is white. Atmosphere scatters blue light, making it appear yellow from the surface. | 2 (Solar System) |
+| "Astronauts float because there's no gravity in space" | ISS astronauts experience ~90% of surface gravity. They float because they're in freefall (orbit). | 9 (Rockets) |
+| "The Big Bang was an explosion in space" | It was an expansion of space itself. There was no pre-existing void for it to explode into. | 8 (Cosmology) |
+| "Black holes are cosmic vacuum cleaners" | They only pull objects that come close enough. From a distance, they have the same gravity as the star they replaced. | 7 (Black Holes) |
+| "Stars twinkle because they pulse" | Twinkling (scintillation) is caused by Earth's atmosphere bending starlight. In space, stars don't twinkle. | 1 (Looking Up) |
+| "There's a dark side of the Moon" | All sides get sunlight. The "far side" faces away from Earth but is fully illuminated during new moon. | 3 (Earth & Moon) |
+| "Sound travels in space" | Space is a vacuum. No medium, no sound. Explosions in space are silent. | 9 (Rockets) |
+
+---
+
+## Assumed Vocabulary Per Section Boundary
+
+Content writers must know which terms learners have already mastered at each section boundary. Using a term before it's been taught violates the "never assume prior knowledge" rule.
+
+### Personal Finance: Vocabulary Progression
+
+| After Section | Learner knows these terms |
+|--------------|--------------------------|
+| 1-2 | Income, expense, budget, saving, spending, bank account, checking, savings, debit card, credit card, interest (basic concept) |
+| 3-4 | Emergency fund, high-yield savings, compound interest, inflation, sinking fund, checking vs savings, overdraft, FDIC, tax, tax bracket, deduction, credit (concept), W-2, 1099 |
+| 5-6 | Marginal tax rate, standard deduction, tax credit, APR, minimum payment, principal, amortization, secured vs unsecured debt, refinancing, consolidation, snowball, avalanche |
+| 7-8 | Credit score, FICO, credit utilization, hard pull, soft pull, credit report, stock, bond, index fund, ETF, mutual fund, diversification, risk tolerance, brokerage, dollar-cost averaging, dividend, capital gain |
+| 9-10 | P/E ratio, market cap, valuation, expense ratio, asset allocation, rebalancing, mortgage, amortization schedule, down payment, escrow, PMI, closing costs, REIT, cap rate |
+| 11-12 | Premium, deductible, copay, coinsurance, HMO, PPO, term life, whole life, disability insurance, 401(k), IRA, Roth, employer match, vesting, RMD, Social Security, 4% rule |
+| 13-14 | Will, trust, beneficiary, estate tax, power of attorney, probate, LLC, S-Corp, revenue, profit, cash flow, P&L statement, balance sheet, quarterly taxes |
+| 15 | All terms. Professional-level vocabulary assumed. |
+
+### Psychology: Vocabulary Progression
+
+| After Section | Learner knows these terms |
+|--------------|--------------------------|
+| 1-2 | Neuron, synapse, neurotransmitter, cerebrum, cerebellum, brain stem, hemisphere, consciousness, attention, sensation, perception, stimulus |
+| 3-4 | Classical conditioning, operant conditioning, reinforcement, punishment, habituation, encoding, retrieval, short-term memory, long-term memory, working memory, forgetting curve, spaced repetition |
+| 5-6 | Heuristic, cognitive bias, confirmation bias, anchoring, availability heuristic, System 1, System 2, loss aversion, prospect theory, nudge, framing effect |
+| 7-8 | Emotion, motivation, intrinsic, extrinsic, dopamine, fight-or-flight, EQ, conformity, obedience, bystander effect, groupthink, persuasion, stereotype, attribution |
+| 9-10 | Big Five (OCEAN), nature vs nurture, self-concept, growth mindset, Piaget stages, attachment theory, Erikson stages, moral development |
+| 11-12 | DSM, anxiety disorder, depression, PTSD, OCD, schizophrenia, personality disorder, CBT, DBT, psychodynamic, psychopharmacology, evidence-based treatment |
+| 13-14 | Behavioral economics, mental accounting, endowment effect, I-O psychology, experimental design, control group, variable, p-value, effect size, correlation, causation, statistical significance |
+| 15 | All terms. Professional-level vocabulary assumed. |
+
+### Space & Astronomy: Vocabulary Progression
+
+| After Section | Learner knows these terms |
+|--------------|--------------------------|
+| 1-2 | Star, planet, constellation, light-year, AU, satellite, orbit, gravity, solar system, asteroid, comet, moon, dwarf planet |
+| 3-4 | Axial tilt, eclipse, tide, aurora, magnetic field, electromagnetic spectrum, wavelength, frequency, telescope, refractor, reflector, spectroscopy, redshift, blueshift |
+| 5-6 | Nuclear fusion, main sequence, red giant, white dwarf, supernova, neutron star, HR diagram, spectral class, luminosity, galaxy, spiral, elliptical, quasar, dark matter |
+| 7-8 | Black hole, event horizon, singularity, Schwarzschild radius, gravitational wave, general relativity, spacetime, Big Bang, cosmic microwave background, inflation, dark energy, Hubble's law |
+| 9-10 | Escape velocity, orbital mechanics, Kepler's laws, delta-v, gravity assist, LEO, GEO, staging, thrust, specific impulse |
+| 11-12 | Exoplanet, transit method, radial velocity, habitable zone, biosignature, Drake equation, Fermi Paradox, astrophotography, right ascension, declination, mount types |
+| 13-14 | Spacecraft bus, telemetry, Deep Space Network, ion propulsion, solar sail, Kessler syndrome, Lagrange point, delta-v budget, life support |
+| 15 | All terms. Professional-level vocabulary assumed. |
+
+---
+
+## Sample Conversation Lesson
+
+### Psychology, Section 8, Unit 86: "The Office Persuader"
+
+```typescript
+{
+  id: 'psy-u86-L-conv',
+  title: 'The Office Persuader',
+  description: 'Spot Cialdini\'s persuasion principles being used on you at work.',
+  icon: '💬',
+  type: 'conversation',
+  xpReward: 25,
+  questions: [],
+  conversationStartNodeId: 'psy-u86-conv-C1',
+  conversationNodes: [
+    {
+      id: 'psy-u86-conv-C1',
+      speaker: 'Marcus',
+      message: 'Hey, can I ask you something? My coworker keeps getting me to agree to things and I can\'t figure out how.',
+      nextNodeId: 'psy-u86-conv-C2',
+    },
+    {
+      id: 'psy-u86-conv-C2',
+      speaker: 'Marcus',
+      message: 'Last week she brought me coffee, then asked me to cover her shift. I felt like I had to say yes. What happened?',
+      options: [
+        {
+          text: 'That\'s reciprocity. She gave you something first, so you felt obligated to return the favor.',
+          nextNodeId: 'psy-u86-conv-C3',
+          quality: 'great',
+          feedback: 'Reciprocity is one of Cialdini\'s 6 principles. A small gift creates a sense of obligation.',
+        },
+        {
+          text: 'She\'s just being nice. Don\'t overthink it.',
+          nextNodeId: 'psy-u86-conv-C3',
+          quality: 'poor',
+          feedback: 'It might be genuine, but the pattern of giving before asking is classic reciprocity.',
+        },
+        {
+          text: 'That\'s the authority principle. She\'s asserting dominance.',
+          nextNodeId: 'psy-u86-conv-C3',
+          quality: 'okay',
+          feedback: 'Authority is a different principle. This is reciprocity: give first, then ask.',
+        },
+      ],
+    },
+    {
+      id: 'psy-u86-conv-C3',
+      speaker: 'Marcus',
+      message: 'Today she said "Everyone on the team already signed up for the volunteer event." Now I feel like I should too.',
+      nextNodeId: 'psy-u86-conv-C4',
+    },
+    {
+      id: 'psy-u86-conv-C4',
+      speaker: 'Marcus',
+      message: 'Is that another trick?',
+      options: [
+        {
+          text: 'That\'s social proof. "Everyone is doing it" makes you feel like you should too.',
+          nextNodeId: 'psy-u86-conv-C5',
+          quality: 'great',
+          feedback: 'Social proof is powerful. We look to others\' behavior when we\'re uncertain.',
+        },
+        {
+          text: 'That\'s scarcity. She\'s making it seem like spots are limited.',
+          nextNodeId: 'psy-u86-conv-C5',
+          quality: 'okay',
+          feedback: 'Scarcity would be "only 2 spots left!" This is social proof: what others are doing.',
+        },
+        {
+          text: 'She\'s just sharing information. Nothing manipulative about it.',
+          nextNodeId: 'psy-u86-conv-C5',
+          quality: 'poor',
+          feedback: 'Stating what "everyone" is doing is a textbook social proof technique.',
+        },
+      ],
+    },
+    {
+      id: 'psy-u86-conv-C5',
+      speaker: 'Marcus',
+      message: 'She also asked me to just "review one page" of her report. I said sure. Then she asked me to review the whole thing. I was already in, so I did it.',
+      nextNodeId: 'psy-u86-conv-C6',
+    },
+    {
+      id: 'psy-u86-conv-C6',
+      speaker: 'Marcus',
+      message: 'What\'s that one called?',
+      options: [
+        {
+          text: 'Commitment and consistency. You said yes to the small ask, so saying no to the bigger ask would feel inconsistent.',
+          nextNodeId: 'psy-u86-conv-C7',
+          quality: 'great',
+          feedback: 'The foot-in-the-door technique. Once you commit to a small action, you want to stay consistent.',
+        },
+        {
+          text: 'That\'s the liking principle. You helped because you like her.',
+          nextNodeId: 'psy-u86-conv-C7',
+          quality: 'okay',
+          feedback: 'Liking helps, but the escalation from small to large request is commitment and consistency.',
+        },
+        {
+          text: 'That\'s just poor boundaries on your part.',
+          nextNodeId: 'psy-u86-conv-C7',
+          quality: 'poor',
+          feedback: 'It\'s a well-documented psychological principle, not a personal failing. Awareness is the defense.',
+        },
+      ],
+    },
+    {
+      id: 'psy-u86-conv-C7',
+      speaker: 'Marcus',
+      message: 'So now that I know these, how do I actually say no?',
+      nextNodeId: 'psy-u86-conv-C8',
+    },
+    {
+      id: 'psy-u86-conv-C8',
+      speaker: 'Narrator',
+      message: 'You identified 3 of Cialdini\'s 6 principles: reciprocity, social proof, and commitment/consistency. Recognizing the technique is the first step to deciding freely.',
+    },
+  ],
+}
+```
+
+## Sample Speed-Round Lesson
+
+### Space, Section 5, Unit 60: "Stars Blitz"
+
+```typescript
+{
+  id: 'sp-u60-L-speed',
+  title: 'Stars Speed Round',
+  description: 'Race the clock on stellar birth, life, and death.',
+  icon: '⚡',
+  type: 'speed-round',
+  xpReward: 25,
+  questions: [],
+  speedTimeLimit: 60,
+  speedQuestions: [
+    { id: 'sp-u60-SQ1', question: 'Stars are powered by:', options: ['Nuclear fusion', 'Combustion', 'Electricity', 'Dark energy'], correctIndex: 0 },
+    { id: 'sp-u60-SQ2', question: 'The hottest stars are:', options: ['Blue', 'Red', 'Yellow', 'Green'], correctIndex: 0 },
+    { id: 'sp-u60-SQ3', question: 'Our Sun is classified as a:', options: ['G-type star', 'Red giant', 'Neutron star', 'White dwarf'], correctIndex: 0 },
+    { id: 'sp-u60-SQ4', question: 'Stars form inside:', options: ['Nebulae', 'Black holes', 'Asteroids', 'Moons'], correctIndex: 0 },
+    { id: 'sp-u60-SQ5', question: 'A dying massive star becomes a:', options: ['Supernova', 'Comet', 'Planet', 'Asteroid'], correctIndex: 0 },
+    { id: 'sp-u60-SQ6', question: 'The HR diagram plots:', options: ['Luminosity vs temperature', 'Mass vs age', 'Size vs distance', 'Color vs speed'], correctIndex: 0 },
+    { id: 'sp-u60-SQ7', question: 'A teaspoon of neutron star weighs:', options: ['A billion tons', 'A kilogram', 'Nothing', 'A million grams'], correctIndex: 0 },
+    { id: 'sp-u60-SQ8', question: 'The Sun will eventually become a:', options: ['White dwarf', 'Black hole', 'Neutron star', 'Red dwarf'], correctIndex: 0 },
+    { id: 'sp-u60-SQ9', question: 'Heavier elements are created by:', options: ['Supernovae', 'Planets', 'Moons', 'Comets'], correctIndex: 0 },
+    { id: 'sp-u60-SQ10', question: 'OBAFGKM classifies stars by:', options: ['Temperature', 'Size', 'Age', 'Distance'], correctIndex: 0 },
+    { id: 'sp-u60-SQ11', question: 'Binary stars are:', options: ['Two stars orbiting each other', 'Stars with two colors', 'Dying stars', 'Newborn stars'], correctIndex: 0 },
+    { id: 'sp-u60-SQ12', question: 'A pulsar is a spinning:', options: ['Neutron star', 'Black hole', 'White dwarf', 'Red giant'], correctIndex: 0 },
+    { id: 'sp-u60-SQ13', question: 'Stellar parallax measures:', options: ['Distance', 'Temperature', 'Mass', 'Age'], correctIndex: 0 },
+    { id: 'sp-u60-SQ14', question: 'Red giants are:', options: ['Cool and large', 'Hot and small', 'Cool and small', 'Hot and large'], correctIndex: 0 },
+    { id: 'sp-u60-SQ15', question: 'Iron in a star\'s core signals:', options: ['Imminent collapse', 'Long life ahead', 'Planet formation', 'Stability'], correctIndex: 0 },
+  ],
+}
+```
+
+*Note: correctIndex values in this sample are all 0 for readability. In actual content, they MUST be randomized across 0-3 using the fix-correct-index script.*
+
+---
+
+## Existing Content Rewrite Assessment
+
+### What needs updating vs expanding
+
+| Course | Update existing? | Expand with new? | Details |
+|--------|-----------------|------------------|---------|
+| **Finance** | **Yes, add country variants to ~20-30% of teaching cards.** Existing US content stays as-is for US learners. Add `variants` field with UK/AU/CA/IL/default versions. Refactor questions to test concepts, not US-specific names. | Yes, ~70% is new sections. | Tax, retirement, credit, and insurance teaching cards need the most variants. Questions should already test concepts and mostly don't need changes. |
+| **Psychology** | **Minor, 5-10%.** | Yes, ~75% is new sections. | Add WEIRD caveat teaching cards. Add cross-cultural examples to social psychology. Note when studies were only replicated in Western samples. |
+| **Space** | **Minor, 10-15%.** | Yes, ~70% is new sections. | Add Southern Hemisphere sky content. Add ESA, ISRO, CNSA, JAXA missions alongside NASA. Add non-Western astronomical traditions (Arabic star names, Polynesian navigation, Aboriginal astronomy). |
+
+### Finance variant priority
+
+| Existing section | Variant work needed | What changes |
+|-----------------|-------------------|-------------|
+| Welcome to Money | None | Already universal |
+| Budgeting & Saving | Minor | Currency examples need variants ($, £, A$, etc.) |
+| Banking & Taxes | **Heavy** | Tax system teaching cards need full variants per country. Questions should test marginal-rate concept, not "what's the IRS" |
+| Debt & Credit | **Heavy** | Credit score teaching cards need variants (FICO, Experian UK, etc.). Questions test the concept of creditworthiness. |
+| Investing | Minor | Mostly universal. Brokerage details need minor variants. |
+| Retirement | **Heavy** | Every retirement account teaching card needs variants (401k, pension, super, RRSP, keren pensia). Questions test matching, compound growth. |
+| Real Estate | Moderate | Mortgage concepts are universal. Home buying process details need variants. |
+| Insurance | **Heavy** | Health insurance is completely different per country. Must teach the principle (risk pooling, premiums, deductibles) then show country system. |
+
+### Full existing content upgrade (before expansion)
+
+Globalization is only one part. Existing content must also be brought up to the full quality spec before we build new sections on top of it. Here's everything that needs to happen to existing content:
+
+**All 3 courses:**
+
+| Task | Finance | Psychology | Space |
+|------|---------|------------|-------|
+| Fix correctIndex bias | Already done | Needs fixing (90% at 0) | Needs fixing (100% at 0) |
+| Add question type variety | Already has 17 types | Needs match-pairs, sort-buckets, order-steps, scenarios | Needs order-steps, scenarios, slider-estimate |
+| Add review units | None exist. Add 1 per 4 units. | Same | Same |
+| Add section checkpoints | None exist. Add 1 per section. | Same | Same |
+| Rename units/lessons | Some need outcome-based names | Many academic-style names need updating | Some need updating |
+| Difficulty audit | Check easy-after-teaching rule | Check easy-after-teaching rule | Check easy-after-teaching rule |
+| Add misconception teaching cards | 9 misconceptions from the list | 10 misconceptions from the list | 9 misconceptions from the list |
+| Add calculation questions | Has slider-estimate | Zero slider-estimate. Needs for Sections 5+ | Zero slider-estimate. Needs for Sections 4+ |
+| Add "aha moment" teaching cards | 2 per section minimum | 2 per section minimum | 2 per section minimum |
+| Add "Try this now" hints | Some exist | Verify 2+ per unit | Verify 2+ per unit |
+| Em dash audit | Clean | Needs check | Needs check |
+
+**Finance only:**
+
+| Task | Scope |
+|------|-------|
+| Add country variants to teaching cards | ~100-150 teaching cards need `variants` field |
+| Refactor US-name-testing questions | Questions that test "what is a 401k" should test "why max your employer match" |
+| Add country-agnostic hints | "Details vary by country" notes on US-specific content |
+
+**Psychology only:**
+
+| Task | Scope |
+|------|-------|
+| Add WEIRD caveats | ~10-15 teaching cards noting Western sample bias |
+| Add cross-cultural examples | Social psychology and personality sections |
+| Add non-Western therapy mentions | Brief notes in any future therapy content |
+
+**Space only:**
+
+| Task | Scope |
+|------|-------|
+| Add Southern Hemisphere sky | Constellation content needs both hemispheres |
+| Add global space agencies | ESA, ISRO, CNSA, JAXA alongside NASA references |
+| Add non-Western astronomy | Arabic star names, Polynesian navigation, Aboriginal astronomy |
+
+### Upgrade before or after expansion?
+
+**Upgrade existing content FIRST, then expand.** Three reasons:
+1. New sections should be built with the variant system, review units, and naming conventions from the start.
+2. Existing sections set the quality bar. If Section 1 is low quality while Section 13 is polished, the learner notices the inconsistency.
+3. The QA automation script should be running before any new content is written, catching issues in existing and new content equally.
+
+### Existing content upgrade agent count
+
+| Task | Agents needed | Notes |
+|------|--------------|-------|
+| Fix correctIndex (Psychology + Space) | 2 | Script-based, like ME fix |
+| Add question types (Psychology + Space) | 4 (2 per course) | Each agent handles 5 units |
+| Add review units + checkpoints (all 3) | 3 (1 per course) | Programmatic: generate review lessons from existing questions |
+| Add Finance country variants | 3 | Each agent handles 4-5 existing sections |
+| Rename units/lessons (all 3) | 3 (1 per course) | Update meta + unit files |
+| Add misconception teaching cards (all 3) | 3 (1 per course) | Insert ~9-10 new teaching cards per course |
+| Difficulty + em dash + calculation audit (all 3) | 3 (1 per course) | Review + fix pass |
+| Psychology WEIRD + Space global additions | 2 | 1 per course |
+| **Total** | **~23 agents** | Can run in batches of 5-8 |
+
+---
+
+## Content QA Automation Script
+
+A script should run before every seed to catch common violations automatically.
+
+### Checks to automate
+
+```
+1. No em dashes (—) or double dashes (--) in visible content
+2. correctIndex distributed across 0-3 (flag if >35% at any position)
+3. Every lesson has 2-3 teaching cards
+4. Teaching cards have NO options array
+5. Teaching cards have max 2-sentence explanations
+6. Every 4th unit in a section is a review unit
+7. Every section ends with a checkpoint
+8. No duplicate question IDs
+9. Match-pairs have exactly 4 pairs
+10. Sort-buckets have exactly 6 items and 2 buckets
+11. Order-steps have 4-5 items
+12. Speed-rounds have exactly 15 questions and 60s timer
+13. Conversations have exactly 3 decision points
+14. All question types have required fields
+15. No option text exceeds 15 words
+16. Country-specific content has region tag
+```
+
+Save as `scripts/qa-content.ts` and run before seed.
+
+---
+
+## Implementation Order (Final)
+
+**Phase 0: Upgrade all existing content to full quality spec** (2-3 weeks, ~23 agents in batches)
+
+Batch 1 (5 agents, parallel):
+- Fix correctIndex bias in Psychology and Space (2 agents, script-based)
+- Add question type variety to Psychology and Space (2 agents, each handles 5 units)
+- Build QA automation script (1 agent)
+
+Batch 2 (8 agents, parallel):
+- Add Finance country variants (3 agents, each handles 4-5 sections)
+- Add review units and section checkpoints to all 3 courses (3 agents, 1 per course)
+- Add Psychology WEIRD caveats (1 agent)
+- Add Space global agencies + Southern Hemisphere content (1 agent)
+
+Batch 3 (6 agents, parallel):
+- Rename units/lessons to outcome-based names (3 agents, 1 per course)
+- Add misconception teaching cards (3 agents, 1 per course)
+
+Batch 4 (4 agents, parallel):
+- Difficulty audit + em dash fix + calculation questions (3 agents, 1 per course)
+- Final QA pass using automation script (1 agent)
+
+**Phase 1: Build section infrastructure** (1-2 weeks)
 - Add section metadata layer to the data model
 - Implement section checkpoints and review units
+- Build adaptive placement test
+- Add glossary data structure
+- Build QA automation script
+- Implement reward/celebration system per milestone spec
 
-**Phase 3: Expand courses** (ongoing, section by section)
-Priority: complete one section at a time, alternating between courses for variety.
+**Phase 2: Expand courses, section by section** (ongoing)
 
-1. Finance Sections 13-14 (Estate planning, Business finance) - entirely new
-2. Psychology Sections 10-12 (Development, Mental health, Therapy) - entirely new
-3. Space Sections 4, 12 (Light/Telescopes, Amateur astronomy) - entirely new
-4. Deepen existing sections with more units
-5. Add calculation questions to all courses from Section 5 onward
+| Sprint | Course | Section | Why first |
+|--------|--------|---------|-----------|
+| 1 | Psychology | 2 (Sensation & Perception) | Entirely new, early section, sets foundation |
+| 2 | Space | 4 (Light & Telescopes) | Entirely new, enables all physics-based sections |
+| 3 | Finance | 13 (Estate Planning) | Entirely new, completes life stages arc |
+| 4 | Psychology | 10 (Developmental) | Entirely new, critical for professional level |
+| 5 | Space | 12 (Amateur Astronomy) | Entirely new, practical application |
+| 6 | Finance | 14 (Business Finance) | Entirely new, serves freelancer persona |
+| 7 | Psychology | 11 (Mental Health) | Most requested topic |
+| 8 | Psychology | 12 (Therapy) | Completes clinical arc |
+| 9 | Space | 7 (Black Holes deep) | Expands existing content significantly |
+| 10 | All | Deepen existing sections | More units, review units, cross-section callbacks |
+| 11 | All | Add calculation questions | Sections 5+ get slider-estimate and real math |
+| 12 | All | Capstone sections (15) | Final professional-level challenges |
+| 13 | All | QA pass and polish | Voice consistency, difficulty calibration, misconception coverage |

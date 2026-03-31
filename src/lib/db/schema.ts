@@ -28,6 +28,7 @@ export const users = pgTable('users', {
   displayName: text('display_name'),
   joinedDate: text('joined_date'),
   inviteCode: text('invite_code').unique(),
+  country: text('country'),                    // ISO 3166-1 alpha-2 (e.g. 'US', 'IL')
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
   updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
 });
@@ -365,6 +366,8 @@ export const courseUnits = pgTable('course_units', {
   color: text('color').notNull(),
   icon: text('icon').notNull(),
   orderIndex: integer('order_index').notNull(),
+  sectionIndex: integer('section_index'),      // groups units into sections (1-15)
+  sectionTitle: text('section_title'),          // banner text between unit groups on course map
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
   updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
 });
@@ -424,6 +427,7 @@ export const courseQuestions = pgTable(
     // Image-tap
     tapZones: jsonb('tap_zones').$type<{ id: string; label: string; x: number; y: number; w: number; h: number }[]>(),
     correctZoneId: text('correct_zone_id'),
+    variants: jsonb('variants'),
     explanation: text('explanation').notNull(),
     hint: text('hint'),
     diagram: text('diagram'),

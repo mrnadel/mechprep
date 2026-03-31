@@ -175,7 +175,7 @@ export default function SkillMapPage() {
               >
                 {readiness}
               </motion.span>
-              <span style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', marginTop: 2 }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: isDark ? '#64748B' : '#AFAFAF', marginTop: 2 }}>
                 / 100
               </span>
             </div>
@@ -195,7 +195,7 @@ export default function SkillMapPage() {
                 <span style={{ fontSize: 20, fontWeight: 900, color: s.color, lineHeight: 1 }}>
                   {s.n}
                 </span>
-                <span style={{ fontSize: 10, fontWeight: 700, color: '#AFAFAF', marginTop: 3 }}>
+                <span style={{ fontSize: 10, fontWeight: 700, color: isDark ? '#64748B' : '#AFAFAF', marginTop: 3 }}>
                   {s.label}
                 </span>
               </div>
@@ -285,6 +285,7 @@ function Section({
   delay: number;
   children: React.ReactNode;
 }) {
+  const isDark = useIsDark();
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
@@ -296,7 +297,7 @@ function Section({
         {icon}
         <span style={{ fontSize: 15, fontWeight: 800, color }}>{title}</span>
       </div>
-      <p style={{ fontSize: 12, fontWeight: 600, color: '#AFAFAF', marginBottom: 10, padding: '0 2px' }}>
+      <p style={{ fontSize: 12, fontWeight: 600, color: isDark ? '#64748B' : '#AFAFAF', marginBottom: 10, padding: '0 2px' }}>
         {subtitle}
       </p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>{children}</div>
@@ -326,6 +327,7 @@ interface TopicRowProps {
 }
 
 function TopicRow({ topic, compact, onPractice }: TopicRowProps) {
+  const isDark = useIsDark();
   const meta = masteryMeta[topic.level];
   const relevanceLabel =
     topic.interviewRelevance === 'critical'
@@ -427,7 +429,7 @@ function TopicRow({ topic, compact, onPractice }: TopicRowProps) {
                     flex: 1,
                     fontSize: 12,
                     fontWeight: 600,
-                    color: sub.attempted > 0 ? '#3C3C3C' : '#AFAFAF',
+                    color: sub.attempted > 0 ? (isDark ? '#E2E8F0' : '#3C3C3C') : (isDark ? '#64748B' : '#AFAFAF'),
                     minWidth: 0,
                   }}
                 >

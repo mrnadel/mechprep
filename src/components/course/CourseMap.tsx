@@ -15,6 +15,7 @@ import { UpgradeModal } from '@/components/ui/UpgradeModal';
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
 import { UnitHeader } from './UnitHeader';
 import { LessonNode } from './LessonNode';
+import { useIsDark } from '@/store/useThemeStore';
 
 type JumpModalType =
   | { kind: 'within-unit'; unitIndex: number; lessonIndex: number }
@@ -179,13 +180,14 @@ function ScrollToCurrentButton({
   direction: 'up' | 'down';
   targetRef: React.RefObject<HTMLDivElement | null>;
 }) {
+  const isDark = useIsDark();
   return (
     <motion.button
       key="scroll-to-current"
       initial={{ opacity: 0, y: 20, scale: 0.85 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 20, scale: 0.85 }}
-      whileTap={{ y: 3, boxShadow: '0 1px 0 #D0D0D0' }}
+      whileTap={{ y: 3, boxShadow: isDark ? '0 1px 0 #1E293B' : '0 1px 0 #D0D0D0' }}
       transition={{ type: 'spring', stiffness: 400, damping: 25 }}
       style={{
         position: 'fixed',
@@ -197,11 +199,11 @@ function ScrollToCurrentButton({
         borderRadius: 14,
         border: 'none',
         cursor: 'pointer',
-        background: '#FFFFFF',
+        background: isDark ? '#1E293B' : '#FFFFFF',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 4px 0 #D0D0D0',
+        boxShadow: isDark ? '0 4px 0 #0F172A' : '0 4px 0 #D0D0D0',
         WebkitTapHighlightColor: 'transparent',
       }}
       aria-label={`Scroll ${direction} to current lesson`}
@@ -249,6 +251,7 @@ export function CourseMap() {
   const activeProfession = useCourseStore((s) => s.activeProfession);
   const { status } = useSession();
   const router = useRouter();
+  const isDark = useIsDark();
   const isGuest = status !== 'authenticated';
   const { isProUser } = useSubscription();
   const hasHearts = useHeartsStore((s) => s.hasHearts);
@@ -420,6 +423,10 @@ export function CourseMap() {
           const isAllGolden = completedInUnit === unit.lessons.length &&
             unit.lessons.every((l) => progress.completedLessons[l.id]?.golden);
 
+          // Show section banner when sectionTitle changes between consecutive units
+          const prevUnit = unitIndex > 0 ? courseData[unitIndex - 1] : null;
+          const showSectionBanner = unit.sectionTitle && (!prevUnit || prevUnit.sectionTitle !== unit.sectionTitle);
+
           return (
             <div
               key={unit.id}
@@ -429,6 +436,27 @@ export function CourseMap() {
                 animationDelay: `${Math.min(unitIndex * 0.1, 0.5)}s`,
               }}
             >
+              {/* Section banner — Duolingo-style full-width header between unit groups */}
+              {showSectionBanner && (
+                <div
+                  style={{
+                    background: `linear-gradient(135deg, ${theme.color}18, ${theme.color}08)`,
+                    border: `2px solid ${theme.color}30`,
+                    borderRadius: 16,
+                    padding: '16px 20px',
+                    marginBottom: 20,
+                    textAlign: 'center',
+                  }}
+                >
+                  <div style={{ fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: theme.color, opacity: 0.7, marginBottom: 4 }}>
+                    Section {unit.sectionIndex}
+                  </div>
+                  <div style={{ fontSize: 18, fontWeight: 800, color: isDark ? '#F0F0F0' : '#1A1A1A' }}>
+                    {unit.sectionTitle}
+                  </div>
+                </div>
+              )}
+
               {/* Unit header card */}
               <div
                 className={isAllGolden ? 'golden-unit' : ''}

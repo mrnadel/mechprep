@@ -110,6 +110,8 @@ export interface CourseQuestion {
   explanation: string;
   hint?: string;
   diagram?: string;
+  // Localized content variants (keyed by ISO 3166-1 alpha-2 country code)
+  variants?: Record<string, string>;  // e.g. { US: '...', GB: '...', AU: '...', IL: '...' }
 }
 
 export interface Lesson {
@@ -143,6 +145,10 @@ export interface Unit {
   color: string;
   icon: string;
   topicId?: TopicId;
+  // Section grouping (for courses with 100+ units)
+  // Units with the same sectionIndex are grouped under the sectionTitle header on the course map
+  sectionIndex?: number;       // 1-15, determines order and grouping
+  sectionTitle?: string;       // displayed as a full-width banner between unit groups
   lessons: Lesson[];
 }
 

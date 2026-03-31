@@ -13,6 +13,7 @@ import {
 import { comebackQuests, dailyChestReward, weeklyChestReward } from '@/data/quests';
 import { QuestCard } from './QuestCard';
 import { ChestAnimation } from './ChestAnimation';
+import { useIsDark } from '@/store/useThemeStore';
 
 function useMidnightCountdown() {
   const [timeLeft, setTimeLeft] = useState('');
@@ -47,6 +48,7 @@ export function QuestBoard() {
   const [chestOpen, setChestOpen] = useState<{ type: 'daily' | 'weekly'; reward: { xp: number; gems: number } } | null>(null);
 
   const timeLeft = useMidnightCountdown();
+  const isDark = useIsDark();
 
   useEffect(() => {
     initDailyQuests();
@@ -93,20 +95,20 @@ export function QuestBoard() {
   return (
     <div className="space-y-4">
       {/* Daily Quests Section */}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div className="bg-white dark:bg-surface-900 rounded-2xl shadow-sm border border-gray-100 dark:border-surface-700 overflow-hidden">
         {/* Section header */}
         <div className="flex items-center justify-between gap-2 px-4 pt-4 pb-2">
           <div className="min-w-0 flex-1">
             {comeback.isInComebackFlow ? (
-              <h2 className="text-base font-extrabold text-gray-800 truncate">Welcome Back! 👋</h2>
+              <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-50 truncate">Welcome Back! 👋</h2>
             ) : (
-              <h2 className="text-base font-extrabold text-gray-800">Daily Quests</h2>
+              <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Daily Quests</h2>
             )}
             {!comeback.isInComebackFlow && timeLeft && (
-              <p className="text-xs text-gray-400 mt-0.5">Resets in {timeLeft}</p>
+              <p className="text-xs text-gray-400 dark:text-surface-500 mt-0.5">Resets in {timeLeft}</p>
             )}
             {comeback.isInComebackFlow && (
-              <p className="text-xs text-gray-400 mt-0.5 truncate">Complete 3 quests to get back on track</p>
+              <p className="text-xs text-gray-400 dark:text-surface-500 mt-0.5 truncate">Complete 3 quests to get back on track</p>
             )}
           </div>
 
@@ -117,15 +119,15 @@ export function QuestBoard() {
             className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-all shrink-0"
             style={{
               background: dailyChestClaimed
-                ? '#F0FDF4'
+                ? (isDark ? 'rgba(6,78,59,0.3)' : '#F0FDF4')
                 : allDailyComplete
                   ? '#7C3AED'
-                  : '#F3F4F6',
+                  : (isDark ? '#334155' : '#F3F4F6'),
               color: dailyChestClaimed
                 ? '#16A34A'
                 : allDailyComplete
                   ? '#FFFFFF'
-                  : '#9CA3AF',
+                  : (isDark ? '#94A3B8' : '#9CA3AF'),
               cursor: allDailyComplete && !dailyChestClaimed ? 'pointer' : 'default',
               border: 'none',
             }}
@@ -151,24 +153,24 @@ export function QuestBoard() {
             />
           ))}
           {displayDailyQuests.length === 0 && (
-            <p className="text-center text-sm text-gray-400 py-4">No quests today yet.</p>
+            <p className="text-center text-sm text-gray-400 dark:text-surface-500 py-4">No quests today yet.</p>
           )}
         </div>
       </div>
 
       {/* Weekly Quests Section */}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div className="bg-white dark:bg-surface-900 rounded-2xl shadow-sm border border-gray-100 dark:border-surface-700 overflow-hidden">
         {/* Expandable header */}
         <button
           onClick={() => setWeeklyExpanded((v) => !v)}
           className="w-full flex items-center justify-between px-4 py-3 text-left"
           style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
         >
-          <h2 className="text-base font-extrabold text-gray-800">Weekly Quests</h2>
+          <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-50">Weekly Quests</h2>
           <motion.span
             animate={{ rotate: weeklyExpanded ? 180 : 0 }}
             transition={{ duration: 0.2 }}
-            className="text-gray-400 text-lg"
+            className="text-gray-400 dark:text-surface-500 text-lg"
           >
             ▾
           </motion.span>
@@ -185,22 +187,22 @@ export function QuestBoard() {
             >
               {/* Weekly chest button */}
               <div className="flex items-center justify-between gap-2 px-4 pb-2">
-                <p className="text-xs text-gray-400">Resets each Monday</p>
+                <p className="text-xs text-gray-400 dark:text-surface-500">Resets each Monday</p>
                 <button
                   onClick={handleWeeklyChest}
                   disabled={!allWeeklyComplete || weeklyChestClaimed}
                   className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-all shrink-0"
                   style={{
                     background: weeklyChestClaimed
-                      ? '#F0FDF4'
+                      ? (isDark ? 'rgba(6,78,59,0.3)' : '#F0FDF4')
                       : allWeeklyComplete
                         ? '#7C3AED'
-                        : '#F3F4F6',
+                        : (isDark ? '#334155' : '#F3F4F6'),
                     color: weeklyChestClaimed
                       ? '#16A34A'
                       : allWeeklyComplete
                         ? '#FFFFFF'
-                        : '#9CA3AF',
+                        : (isDark ? '#94A3B8' : '#9CA3AF'),
                     cursor: allWeeklyComplete && !weeklyChestClaimed ? 'pointer' : 'default',
                     border: 'none',
                   }}
@@ -226,7 +228,7 @@ export function QuestBoard() {
                   />
                 ))}
                 {weeklyQuests.length === 0 && (
-                  <p className="text-center text-sm text-gray-400 py-4">No weekly quests yet.</p>
+                  <p className="text-center text-sm text-gray-400 dark:text-surface-500 py-4">No weekly quests yet.</p>
                 )}
               </div>
             </motion.div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -22,6 +22,8 @@ import {
   Sun,
   Moon,
   Monitor,
+  Trash2,
+  Globe,
 } from 'lucide-react';
 import { useStore } from '@/store/useStore';
 import { usePushNotifications } from '@/hooks/usePushNotifications';
@@ -51,6 +53,11 @@ export default function SettingsPage() {
   const [resetStep, setResetStep] = useState(0);
   const [resetConfirmText, setResetConfirmText] = useState('');
   const [resetError, setResetError] = useState('');
+
+  // Delete account
+  const [deleteStep, setDeleteStep] = useState(0);
+  const [deleteConfirmText, setDeleteConfirmText] = useState('');
+  const [deleteError, setDeleteError] = useState('');
 
   const handleChangePassword = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -103,11 +110,84 @@ export default function SettingsPage() {
     }
   }, [resetConfirmText, displayName]);
 
+  const handleDeleteAccount = useCallback(async () => {
+    if (deleteConfirmText !== 'DELETE MY ACCOUNT') return;
+    setDeleteStep(3);
+    setDeleteError('');
+    try {
+      const res = await fetch('/api/user/delete-account', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ confirmation: 'DELETE MY ACCOUNT' }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || 'Failed to delete account');
+      }
+      // Clear all local stores and sign out
+      localStorage.clear();
+      signOut({ callbackUrl: '/login' });
+    } catch (err: any) {
+      setDeleteError(err.message || 'Something went wrong');
+      setDeleteStep(2);
+    }
+  }, [deleteConfirmText]);
+
   const { state: pushState, subscribe: enablePush, unsubscribe: disablePush } = usePushNotifications();
   const soundEnabled = useSoundStore((s) => s.enabled);
   const toggleSound = useSoundStore((s) => s.toggleSound);
   const themeMode = useThemeStore((s) => s.mode);
   const setThemeMode = useThemeStore((s) => s.setMode);
+
+  // Region
+  const REGION_OPTIONS = [
+    { code: 'US', label: 'United States', flag: '\u{1F1FA}\u{1F1F8}' },
+    { code: 'GB', label: 'United Kingdom', flag: '\u{1F1EC}\u{1F1E7}' },
+    { code: 'AU', label: 'Australia', flag: '\u{1F1E6}\u{1F1FA}' },
+    { code: 'CA', label: 'Canada', flag: '\u{1F1E8}\u{1F1E6}' },
+    { code: 'IL', label: 'Israel', flag: '\u{1F1EE}\u{1F1F1}' },
+    { code: 'IN', label: 'India', flag: '\u{1F1EE}\u{1F1F3}' },
+    { code: 'DE', label: 'Germany', flag: '\u{1F1E9}\u{1F1EA}' },
+    { code: 'FR', label: 'France', flag: '\u{1F1EB}\u{1F1F7}' },
+    { code: 'JP', label: 'Japan', flag: '\u{1F1EF}\u{1F1F5}' },
+    { code: 'KR', label: 'South Korea', flag: '\u{1F1F0}\u{1F1F7}' },
+    { code: 'BR', label: 'Brazil', flag: '\u{1F1E7}\u{1F1F7}' },
+    { code: 'MX', label: 'Mexico', flag: '\u{1F1F2}\u{1F1FD}' },
+    { code: 'NL', label: 'Netherlands', flag: '\u{1F1F3}\u{1F1F1}' },
+    { code: 'SE', label: 'Sweden', flag: '\u{1F1F8}\u{1F1EA}' },
+    { code: 'CH', label: 'Switzerland', flag: '\u{1F1E8}\u{1F1ED}' },
+    { code: 'SG', label: 'Singapore', flag: '\u{1F1F8}\u{1F1EC}' },
+    { code: 'NZ', label: 'New Zealand', flag: '\u{1F1F3}\u{1F1FF}' },
+    { code: 'ZA', label: 'South Africa', flag: '\u{1F1FF}\u{1F1E6}' },
+    { code: 'AE', label: 'United Arab Emirates', flag: '\u{1F1E6}\u{1F1EA}' },
+    { code: 'EU', label: 'Europe (other)', flag: '\u{1F1EA}\u{1F1FA}' },
+    { code: 'XX', label: 'Other', flag: '\u{1F30D}' },
+  ] as const;
+  const [selectedCountry, setSelectedCountry] = useState('US');
+  const [showRegionPicker, setShowRegionPicker] = useState(false);
+  const [regionSearch, setRegionSearch] = useState('');
+
+  useEffect(() => {
+    const stored = localStorage.getItem('octokeen-country');
+    if (stored) setSelectedCountry(stored);
+  }, []);
+
+  const handleCountryChange = useCallback(async (code: string) => {
+    setSelectedCountry(code);
+    setShowRegionPicker(false);
+    localStorage.setItem('octokeen-country', code);
+    if (session?.user) {
+      try {
+        await fetch('/api/user/profile', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ country: code }),
+        });
+      } catch { /* silent — localStorage is the primary store */ }
+    }
+  }, [session?.user]);
+
+  const currentRegion = REGION_OPTIONS.find((r) => r.code === selectedCountry) || REGION_OPTIONS[0];
 
   return (
     <div className="pb-10">
@@ -231,6 +311,140 @@ export default function SettingsPage() {
             </div>
           </div>
         </div>
+
+        {/* Region */}
+        <div>
+          <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-1">Your Region</h3>
+          <div className="bg-white dark:bg-surface-800 rounded-2xl border border-gray-100 dark:border-surface-700 shadow-sm overflow-hidden">
+            <button
+              onClick={() => { setShowRegionPicker(true); setRegionSearch(''); }}
+              className="flex items-center gap-3 w-full px-4 py-3.5 hover:bg-gray-50 dark:hover:bg-surface-700 transition-colors"
+            >
+              <div className="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-900/30 flex items-center justify-center">
+                <Globe className="w-4 h-4 text-sky-500" />
+              </div>
+              <div className="flex-1 min-w-0 text-left">
+                <span className="text-sm font-bold text-gray-700 dark:text-surface-200 block">
+                  {currentRegion.flag} {currentRegion.label}
+                </span>
+                <span className="text-xs text-gray-400 dark:text-surface-500">Affects financial examples (tax systems, retirement accounts, etc.)</span>
+              </div>
+              <ChevronRight className="w-4 h-4 text-gray-300 dark:text-surface-600" />
+            </button>
+          </div>
+        </div>
+
+        {/* Region picker modal */}
+        <AnimatePresence>
+          {showRegionPicker && (
+            <motion.div
+              key="region-overlay"
+              className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowRegionPicker(false)}
+            >
+              <div className="absolute inset-0 bg-black/40" />
+              <motion.div
+                className="relative w-full sm:w-auto sm:mx-4 bg-white dark:bg-surface-800 overflow-hidden"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Select your region"
+                style={{
+                  maxWidth: 420,
+                  maxHeight: 'min(520px, calc(100vh - 48px))',
+                  borderRadius: 24,
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '100%' }}
+                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Header + search */}
+                <div className="px-5 pt-5 pb-3">
+                  <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-base font-extrabold text-gray-800 dark:text-surface-100">Select Region</h2>
+                    <button
+                      onClick={() => setShowRegionPicker(false)}
+                      className="w-8 h-8 rounded-full bg-gray-100 dark:bg-surface-700 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-surface-600 transition-colors"
+                      aria-label="Close"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M11 3L3 11M3 3l8 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-gray-400 dark:text-surface-400" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="relative">
+                    <svg
+                      className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-surface-500"
+                      width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    >
+                      <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2.5" />
+                      <path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                    </svg>
+                    <input
+                      type="text"
+                      value={regionSearch}
+                      onChange={(e) => setRegionSearch(e.target.value)}
+                      placeholder="Search countries..."
+                      autoFocus
+                      className="w-full pl-9 pr-3 py-2.5 bg-gray-100 dark:bg-surface-700 border-none rounded-xl text-sm text-gray-700 dark:text-surface-200 placeholder-gray-400 dark:placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-sky-500/30 transition-all"
+                    />
+                  </div>
+                </div>
+
+                {/* Scrollable option list */}
+                <div className="flex-1 overflow-y-auto px-3 pb-5" style={{ WebkitOverflowScrolling: 'touch' }}>
+                  {(() => {
+                    const q = regionSearch.toLowerCase().trim();
+                    const filtered = q
+                      ? REGION_OPTIONS.filter((r) => r.label.toLowerCase().includes(q) || r.code.toLowerCase().includes(q))
+                      : REGION_OPTIONS;
+                    if (filtered.length === 0) {
+                      return (
+                        <div className="py-8 text-center">
+                          <p className="text-sm font-semibold text-gray-400 dark:text-surface-500">No matching region</p>
+                          <p className="text-xs text-gray-300 dark:text-surface-600 mt-1">Try a different search term</p>
+                        </div>
+                      );
+                    }
+                    return filtered.map((r) => {
+                      const isSelected = selectedCountry === r.code;
+                      return (
+                        <button
+                          key={r.code}
+                          onClick={() => handleCountryChange(r.code)}
+                          className={`flex items-center gap-3 w-full px-3 py-3 rounded-xl text-left transition-all mb-0.5 ${
+                            isSelected
+                              ? 'bg-sky-50 dark:bg-sky-900/30'
+                              : 'hover:bg-gray-50 dark:hover:bg-surface-700'
+                          }`}
+                        >
+                          <span className="text-xl leading-none">{r.flag}</span>
+                          <span className={`text-sm font-semibold flex-1 ${
+                            isSelected ? 'text-sky-700 dark:text-sky-300' : 'text-gray-700 dark:text-surface-200'
+                          }`}>
+                            {r.label}
+                          </span>
+                          {isSelected && (
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                              <circle cx="12" cy="12" r="10" fill="#0EA5E9" />
+                              <path d="M7.5 12.5L10.5 15.5L16.5 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          )}
+                        </button>
+                      );
+                    });
+                  })()}
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Subscription / Billing */}
         <div>
@@ -448,6 +662,107 @@ export default function SettingsPage() {
                       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-center gap-2 py-4">
                         <Loader2 className="w-5 h-5 text-red-400 animate-spin" />
                         <span className="text-sm font-bold text-gray-500">Resetting all progress...</span>
+                      </motion.div>
+                    )}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Delete Account */}
+            <button
+              onClick={() => { setDeleteStep(deleteStep === 0 ? 1 : 0); setDeleteConfirmText(''); setDeleteError(''); }}
+              className="flex items-center gap-3 w-full px-4 py-3.5 hover:bg-red-50/50 transition-colors border-t border-red-100"
+            >
+              <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center">
+                <Trash2 className="w-4 h-4 text-red-400" />
+              </div>
+              <div className="text-left">
+                <span className="text-sm font-bold text-gray-700 block">Delete Account</span>
+                <span className="text-[11px] text-gray-400">Permanently delete your account and all data</span>
+              </div>
+              <ChevronRight className={`w-4 h-4 text-gray-300 ml-auto transition-transform ${deleteStep > 0 ? 'rotate-90' : ''}`} />
+            </button>
+
+            <AnimatePresence>
+              {deleteStep >= 1 && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-4 pb-4 border-t border-red-50 pt-4 space-y-3">
+                    {deleteStep === 1 && (
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
+                        <div className="flex gap-3 p-3 bg-red-50 rounded-xl">
+                          <AlertTriangle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                          <div className="text-xs text-red-700 space-y-1">
+                            <p className="font-bold">This will permanently delete your account.</p>
+                            <p>Everything will be erased and cannot be recovered:</p>
+                            <ul className="list-disc pl-4 space-y-0.5 text-red-600">
+                              <li>Your account and login credentials</li>
+                              <li>All progress, XP, streaks, and achievements</li>
+                              <li>Course and lesson history</li>
+                              <li>Subscription (if active)</li>
+                              <li>Friend connections</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => setDeleteStep(2)}
+                            className="flex-1 py-2.5 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl text-sm transition-colors"
+                          >
+                            I understand, continue
+                          </button>
+                          <button
+                            onClick={() => { setDeleteStep(0); setDeleteConfirmText(''); }}
+                            className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold rounded-xl text-sm transition-colors"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {deleteStep === 2 && (
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
+                        {deleteError && <p className="text-red-500 text-xs font-semibold">{deleteError}</p>}
+                        <p className="text-xs text-gray-500">
+                          Type <span className="font-mono font-bold text-red-500 bg-red-50 px-1.5 py-0.5 rounded">DELETE MY ACCOUNT</span> to confirm:
+                        </p>
+                        <input
+                          type="text"
+                          value={deleteConfirmText}
+                          onChange={(e) => setDeleteConfirmText(e.target.value)}
+                          placeholder="Type here..."
+                          autoFocus
+                          className="w-full px-3 py-2.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-base font-mono focus:outline-none focus:border-red-400 transition-all"
+                        />
+                        <div className="flex gap-2">
+                          <button
+                            onClick={handleDeleteAccount}
+                            disabled={deleteConfirmText !== 'DELETE MY ACCOUNT'}
+                            className="flex-1 py-2.5 bg-red-600 hover:bg-red-700 disabled:bg-gray-200 disabled:text-gray-400 text-white font-bold rounded-xl text-sm transition-colors"
+                          >
+                            Permanently Delete Account
+                          </button>
+                          <button
+                            onClick={() => { setDeleteStep(0); setDeleteConfirmText(''); setDeleteError(''); }}
+                            className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold rounded-xl text-sm transition-colors"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </motion.div>
+                    )}
+
+                    {deleteStep === 3 && (
+                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-center gap-2 py-4">
+                        <Loader2 className="w-5 h-5 text-red-400 animate-spin" />
+                        <span className="text-sm font-bold text-gray-500">Deleting your account...</span>
                       </motion.div>
                     )}
                   </div>

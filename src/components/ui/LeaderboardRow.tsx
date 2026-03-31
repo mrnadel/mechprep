@@ -44,9 +44,9 @@ export function LeaderboardRow({
 
   return (
     <div
-      className={`flex items-center gap-2.5 px-4 border-b border-gray-50 last:border-0 ${
+      className={`flex items-center gap-2.5 px-4 border-b border-gray-50 dark:border-surface-800 last:border-0 ${
         isTop3 ? 'py-3' : 'py-2.5'
-      } ${onClick && !isUser ? 'cursor-pointer hover:bg-gray-50 active:bg-gray-100 transition-colors' : ''}`}
+      } ${onClick && !isUser ? 'cursor-pointer hover:bg-gray-50 dark:hover:bg-surface-800 active:bg-gray-100 dark:active:bg-surface-700 transition-colors' : ''}`}
       style={{ background: bg }}
       onClick={onClick}
     >
@@ -81,7 +81,7 @@ export function LeaderboardRow({
       {/* XP + trailing */}
       <div className="flex items-center gap-1 flex-shrink-0">
         {trailing}
-        <span className="text-sm font-bold text-gray-600 min-w-[60px] text-right">
+        <span className="text-sm font-bold text-gray-600 dark:text-surface-300 min-w-[60px] text-right">
           {xp} XP
         </span>
       </div>

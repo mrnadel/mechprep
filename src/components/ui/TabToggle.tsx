@@ -23,7 +23,7 @@ export function TabToggle<T extends string>({ tabs, activeTab, onChange }: TabTo
           className={`flex-1 min-h-[44px] py-2.5 rounded-xl text-sm font-bold transition-colors relative ${
             activeTab === tab.id
               ? 'bg-primary-600 text-white'
-              : 'bg-surface-100 text-surface-500 hover:bg-surface-200'
+              : 'bg-surface-100 dark:bg-surface-800 text-surface-500 dark:text-surface-400 hover:bg-surface-200 dark:hover:bg-surface-700'
           }`}
         >
           {tab.label}

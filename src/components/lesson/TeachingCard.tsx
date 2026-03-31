@@ -1,6 +1,6 @@
 'use client';
 
-import { memo, useMemo } from 'react';
+import { memo, useMemo, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import { MoneyText } from '@/components/ui/MoneyText';
@@ -52,6 +52,13 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
   const title = titleMatch ? question.question.slice(titleMatch[0].length) : question.question;
 
   const pose = useMemo(() => getPoseForQuestion(question.id), [question.id]);
+
+  // Resolve localized explanation variant
+  const [country, setCountry] = useState<string | null>(null);
+  useEffect(() => {
+    setCountry(localStorage.getItem('octokeen-country'));
+  }, []);
+  const displayExplanation = (country && question.variants?.[country]) || question.explanation;
 
   return (
     <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
@@ -134,7 +141,7 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
                 lineHeight: 1.55,
               }}
             >
-              <MoneyText text={question.explanation} />
+              <MoneyText text={displayExplanation} />
             </div>
           </motion.div>
         </motion.div>

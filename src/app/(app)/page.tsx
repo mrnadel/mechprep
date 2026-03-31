@@ -210,7 +210,7 @@ export default function HomePage() {
 
       {/* Opaque backdrop stays mounted during entire lesson flow so home page never flashes */}
       {lessonFlowActive && (
-        <div className="fixed inset-0 z-50 bg-[#FAFAFA]" aria-hidden="true" />
+        <div className="fixed inset-0 z-50 bg-[#FAFAFA] dark:bg-surface-950" aria-hidden="true" />
       )}
 
       <Suspense fallback={null}>

@@ -35,6 +35,8 @@ async function seedUnits(tx: Parameters<Parameters<typeof db.transaction>[0]>[0]
       color: unit.color,
       icon: unit.icon,
       orderIndex: ui,
+      sectionIndex: (unit as any).sectionIndex ?? null,
+      sectionTitle: (unit as any).sectionTitle ?? null,
     });
     console.log(`  [${label}] Unit ${ui + 1}/${units.length}: ${unit.title}`);
 
@@ -79,6 +81,7 @@ async function seedUnits(tx: Parameters<Parameters<typeof db.transaction>[0]>[0]
           rankCriteria: q.rankCriteria ?? null,
           tapZones: q.tapZones ?? null,
           correctZoneId: q.correctZoneId ?? null,
+          variants: q.variants ?? null,
           explanation: q.explanation,
           hint: q.hint ?? null,
           diagram: q.diagram ?? null,
@@ -98,6 +101,8 @@ async function seedUnits(tx: Parameters<Parameters<typeof db.transaction>[0]>[0]
         color: sql.raw(`excluded."color"`),
         icon: sql.raw(`excluded."icon"`),
         orderIndex: sql.raw(`excluded."order_index"`),
+        sectionIndex: sql.raw(`excluded."section_index"`),
+        sectionTitle: sql.raw(`excluded."section_title"`),
         updatedAt: sql`now()`,
       },
     });
@@ -151,6 +156,7 @@ async function seedUnits(tx: Parameters<Parameters<typeof db.transaction>[0]>[0]
         rankCriteria: sql.raw(`excluded."rank_criteria"`),
         tapZones: sql.raw(`excluded."tap_zones"`),
         correctZoneId: sql.raw(`excluded."correct_zone_id"`),
+        variants: sql.raw(`excluded."variants"`),
         explanation: sql.raw(`excluded."explanation"`),
         hint: sql.raw(`excluded."hint"`),
         diagram: sql.raw(`excluded."diagram"`),

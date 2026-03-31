@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { useSession } from 'next-auth/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollLock } from '@/hooks/useScrollLock';
 import { X, ArrowLeft, Rocket, Sparkles, ChevronRight } from 'lucide-react';
@@ -11,6 +12,7 @@ import { analytics } from '@/lib/mixpanel';
 
 // ── Types ────────────────────────────────────────────────────
 
+type CountryCode = 'US' | 'GB' | 'AU' | 'CA' | 'IL' | 'EU' | 'INT';
 type ExperienceLevel = 0 | 1 | 2 | 3;
 type PlacementChoice = 'scratch' | 'test' | 'advanced';
 type GoalChoice = 'interview' | 'refresh' | 'exam' | 'curiosity';
@@ -47,6 +49,19 @@ const COMMITMENT_OPTIONS: { value: CommitmentChoice; label: string; tag: string;
   { value: 20, label: '20+ min', tag: 'Intense', icon: '🚀' },
 ];
 
+const COUNTRY_OPTIONS: { value: CountryCode; flag: string; label: string }[] = [
+  { value: 'US', flag: '\uD83C\uDDFA\uD83C\uDDF8', label: 'United States' },
+  { value: 'GB', flag: '\uD83C\uDDEC\uD83C\uDDE7', label: 'United Kingdom' },
+  { value: 'AU', flag: '\uD83C\uDDE6\uD83C\uDDFA', label: 'Australia' },
+  { value: 'CA', flag: '\uD83C\uDDE8\uD83C\uDDE6', label: 'Canada' },
+  { value: 'IL', flag: '\uD83C\uDDEE\uD83C\uDDF1', label: 'Israel' },
+  { value: 'EU', flag: '\uD83C\uDDEA\uD83C\uDDFA', label: 'Europe' },
+  { value: 'INT', flag: '\uD83C\uDF0D', label: 'Other' },
+];
+
+/** Professions that show the country selection step. */
+const COUNTRY_STEP_PROFESSIONS = new Set(['personal-finance']);
+
 // ── Signal bars ──────────────────────────────────────────────
 
 function SignalBars({ count, color }: { count: number; color: string }) {
@@ -77,27 +92,51 @@ interface CourseIntroFlowProps {
 
 export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps) {
   useScrollLock(true);
+  const { status: authStatus } = useSession();
   const activeProfession = useCourseStore((s) => s.activeProfession);
   const profession = getProfession(activeProfession);
   const professionName = profession?.name ?? 'this course';
   const accent = profession?.color ?? '#3B82F6';
 
+  const needsCountry = COUNTRY_STEP_PROFESSIONS.has(activeProfession);
+
   const [step, setStep] = useState(0);
+  const [country, setCountry] = useState<CountryCode | null>(null);
   const [experience, setExperience] = useState<ExperienceLevel | null>(null);
   const [placement, setPlacement] = useState<PlacementChoice | null>(null);
   const [goal, setGoal] = useState<GoalChoice | null>(null);
   const [commitment, setCommitment] = useState<CommitmentChoice | null>(null);
 
   const skipPlacement = experience === 0;
-  const totalSteps = skipPlacement ? 4 : 5;
 
+  // Map visual step index to logical step index, skipping placement when needed.
+  // With country:    0=country, 1=experience, 2=placement, 3=goal, 4=commitment, 5=launch
+  // Without country: 0=experience, 1=placement, 2=goal, 3=commitment, 4=launch
+  // Placement is auto-skipped when experience === 0.
   const getLogicalStep = (s: number) => {
-    if (skipPlacement && s >= 1) return s + 1;
-    return s;
+    let logical = s;
+    const placementLogical = needsCountry ? 2 : 1;
+    if (skipPlacement && logical >= placementLogical) logical += 1;
+    return logical;
   };
   const logicalStep = getLogicalStep(step);
 
+  // Total visual steps (what the user sees)
+  const baseSteps = needsCountry ? 6 : 5; // country + experience + placement + goal + commitment + launch
+  const totalSteps = skipPlacement ? baseSteps - 1 : baseSteps;
+
   const canContinue = () => {
+    if (needsCountry) {
+      switch (logicalStep) {
+        case 0: return country !== null;       // country
+        case 1: return experience !== null;    // experience
+        case 2: return placement !== null;     // placement
+        case 3: return goal !== null;          // goal
+        case 4: return commitment !== null;    // commitment
+        case 5: return true;                   // launch
+        default: return false;
+      }
+    }
     switch (logicalStep) {
       case 0: return experience !== null;
       case 1: return placement !== null;
@@ -108,8 +147,23 @@ export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps)
     }
   };
 
+  const handleCountrySelect = useCallback((code: CountryCode) => {
+    setCountry(code);
+    // Persist to localStorage immediately
+    try { localStorage.setItem('octokeen-country', code); } catch { /* SSR guard */ }
+    // If authenticated, also persist to server
+    if (authStatus === 'authenticated') {
+      fetch('/api/user/profile', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ country: code }),
+      }).catch(() => { /* best-effort */ });
+    }
+  }, [authStatus]);
+
   const handleNext = useCallback(() => {
-    if (logicalStep === 0 && experience === 0) {
+    const expLogical = needsCountry ? 1 : 0;
+    if (logicalStep === expLogical && experience === 0) {
       setPlacement('scratch');
     }
     if (step < totalSteps - 1) {
@@ -125,19 +179,23 @@ export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps)
       analytics.milestone({ type: 'course_intro_completed', name: `intro_${activeProfession}`, value: 1 });
       onComplete(data);
     }
-  }, [step, totalSteps, logicalStep, experience, placement, goal, commitment, activeProfession, onComplete]);
+  }, [step, totalSteps, logicalStep, experience, placement, goal, commitment, activeProfession, onComplete, needsCountry]);
 
   const handleBack = () => {
     if (step > 0) setStep(step - 1);
   };
 
-  const mascotConfig = [
+  const mascotConfigBase = [
     { pose: 'excited' as const, bubble: `How much ${professionName} do you know?` },
     { pose: 'thinking' as const, bubble: "Let's find the right starting point!" },
     { pose: 'proud' as const, bubble: "What's driving you?" },
     { pose: 'winking' as const, bubble: 'How often will you practice?' },
     { pose: 'celebrating' as const, bubble: "You're all set! Let's go!" },
   ];
+  const mascotConfig = needsCountry
+    ? [{ pose: 'excited' as const, bubble: 'Where are you based?' }, ...mascotConfigBase]
+    : mascotConfigBase;
+  const launchLogical = needsCountry ? 5 : 4;
   const mascot = mascotConfig[logicalStep] ?? mascotConfig[0];
   const launchText = placement === 'test' ? 'Take Placement Test' : 'Start Learning';
   const enabled = canContinue();
@@ -227,19 +285,22 @@ export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps)
                 </div>
 
                 {/* Step content */}
-                {logicalStep === 0 && (
+                {needsCountry && logicalStep === 0 && (
+                  <StepCountry selected={country} onSelect={handleCountrySelect} accent={accent} />
+                )}
+                {logicalStep === (needsCountry ? 1 : 0) && (
                   <StepExperience selected={experience} onSelect={setExperience} accent={accent} />
                 )}
-                {logicalStep === 1 && (
+                {logicalStep === (needsCountry ? 2 : 1) && (
                   <StepPlacement selected={placement} onSelect={setPlacement} experience={experience!} accent={accent} />
                 )}
-                {logicalStep === 2 && (
+                {logicalStep === (needsCountry ? 3 : 2) && (
                   <StepGoal selected={goal} onSelect={setGoal} accent={accent} />
                 )}
-                {logicalStep === 3 && (
+                {logicalStep === (needsCountry ? 4 : 3) && (
                   <StepCommitment selected={commitment} onSelect={setCommitment} accent={accent} />
                 )}
-                {logicalStep === 4 && (
+                {logicalStep === launchLogical && (
                   <StepLaunch professionName={professionName} commitment={commitment!} placement={placement!} accent={accent} />
                 )}
               </motion.div>
@@ -259,7 +320,7 @@ export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps)
                 color: enabled ? '#fff' : '#94A3B8',
               }}
             >
-              {logicalStep === 4 ? (
+              {logicalStep === launchLogical ? (
                 <>
                   <Sparkles className="w-4 h-4" />
                   {launchText}
@@ -278,7 +339,35 @@ export function CourseIntroFlow({ onComplete, onDismiss }: CourseIntroFlowProps)
   );
 }
 
-// ── Step 0: Experience Level ─────────────────────────────────
+// ── Step: Country Selection (personal-finance only) ──────────
+// Grid of country cards with flag + label
+
+function StepCountry({ selected, onSelect, accent }: { selected: CountryCode | null; onSelect: (v: CountryCode) => void; accent: string }) {
+  return (
+    <div className="grid grid-cols-2 gap-2.5">
+      {COUNTRY_OPTIONS.map((opt) => {
+        const active = selected === opt.value;
+        return (
+          <motion.button
+            key={opt.value}
+            onClick={() => onSelect(opt.value)}
+            className="flex flex-col items-center gap-2 p-4 rounded-xl text-center transition-all"
+            style={{
+              backgroundColor: active ? `color-mix(in srgb, ${accent} 6%, white)` : 'white',
+              border: active ? `2px solid ${accent}` : '2px solid #E2E8F0',
+            }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <span className="text-2xl">{opt.flag}</span>
+            <span className="text-xs font-bold text-surface-700 leading-tight">{opt.label}</span>
+          </motion.button>
+        );
+      })}
+    </div>
+  );
+}
+
+// ── Step: Experience Level ───────────────────────────────────
 // Cards with signal bars, title + subtitle, colored left border on active
 
 function StepExperience({ selected, onSelect, accent }: { selected: ExperienceLevel | null; onSelect: (v: ExperienceLevel) => void; accent: string }) {

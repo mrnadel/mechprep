@@ -58,7 +58,7 @@ export const LessonNode = memo(function LessonNode({
   const isCurrent = state === 'current';
   const isCompleted = state === 'completed';
 
-  const shadowH = isLocked ? 0 : isCurrent ? 6 : 5;
+  const shadowH = isCurrent ? 6 : 5;
   const shadowColor = isGolden ? '#C8960B' : `${theme.dark}35`;
 
   // Dark-mode-aware colors
@@ -103,7 +103,7 @@ export const LessonNode = memo(function LessonNode({
           padding: 0,
           background: 'none',
           border: 'none',
-          cursor: isLocked ? 'default' : 'pointer',
+          cursor: 'pointer',
           WebkitTapHighlightColor: 'transparent',
         }}
         onClick={onClick}
@@ -132,7 +132,7 @@ export const LessonNode = memo(function LessonNode({
           <div
             className={`
               relative w-full flex items-center rounded-2xl transition-transform duration-75
-              ${!isLocked ? 'group-active:translate-y-[var(--sh)]' : ''}
+              group-active:translate-y-[var(--sh)]
               ${isGolden ? 'golden-node' : ''}
             `}
             style={{

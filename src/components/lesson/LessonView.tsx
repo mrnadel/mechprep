@@ -95,6 +95,12 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const loseHeart = useHeartsStore((s) => s.loseHeart);
   const hasHearts = useHeartsStore((s) => s.hasHearts);
 
+  // Localized variant support
+  const [userCountry, setUserCountry] = useState<string | null>(null);
+  useEffect(() => {
+    setUserCountry(localStorage.getItem('octokeen-country'));
+  }, []);
+
   // Sync mastery when lesson completes (lesson mode only; practice handles its own)
   useEffect(() => {
     if (!adapter && lessonResult) syncMastery();
@@ -956,7 +962,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                     lineHeight: 1.4,
                   }}
                 >
-                  <MoneyText text={displayQuestion.explanation} />
+                  <MoneyText text={(userCountry && displayQuestion.variants?.[userCountry]) || displayQuestion.explanation} />
                 </p>
               )}
               <FlagButton contentType={flagContentType} contentId={displayQuestion.id} hasGraphic={!!displayQuestion.diagram} />

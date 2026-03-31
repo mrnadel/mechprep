@@ -48,7 +48,7 @@ export default function FriendCard({
         <UserAvatar image={image} name={displayName} size={44} />
 
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-bold text-surface-900 truncate">{displayName}</p>
+          <p className="text-sm font-bold text-surface-900 dark:text-surface-50 truncate">{displayName}</p>
           <p className="text-xs text-surface-400 font-semibold">{subtitle}</p>
         </div>
 

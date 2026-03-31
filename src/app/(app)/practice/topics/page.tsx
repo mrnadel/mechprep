@@ -8,6 +8,7 @@ import SessionView from '@/components/session/SessionView';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { cn, getDifficultyColor, getDifficultyLabel } from '@/lib/utils';
+import { useIsDark } from '@/store/useThemeStore';
 import type { Difficulty, TopicId } from '@/data/types';
 
 function TopicDeepDiveContent() {
@@ -19,6 +20,7 @@ function TopicDeepDiveContent() {
   const { startSession } = useSessionActions();
   const progress = useProgress();
   const startPanelRef = useRef<HTMLDivElement>(null);
+  const isDark = useIsDark();
 
   const handleTopicSelect = useCallback((topicId: TopicId) => {
     setSelectedTopic(topicId);
@@ -56,17 +58,17 @@ function TopicDeepDiveContent() {
                 key={topic.id}
                 onClick={() => handleTopicSelect(topic.id as TopicId)}
                 className={cn(
-                  'relative bg-white rounded-2xl text-left transition-all duration-200 overflow-hidden group',
+                  'relative bg-white dark:bg-surface-900 rounded-2xl text-left transition-all duration-200 overflow-hidden group',
                   isSelected
-                    ? 'ring-2 ring-offset-1 shadow-md'
-                    : 'border border-gray-100 hover:border-gray-200 hover:shadow-sm'
+                    ? 'ring-2 ring-offset-1 dark:ring-offset-surface-950 shadow-md'
+                    : 'border border-gray-100 dark:border-surface-700 hover:border-gray-200 dark:hover:border-surface-600 hover:shadow-sm'
                 )}
                 style={isSelected ? { '--tw-ring-color': topic.color } as React.CSSProperties : undefined}
               >
                 {/* Colored top accent */}
                 <div
                   className="h-1.5 w-full"
-                  style={{ background: isSelected ? topic.color : '#E5E7EB' }}
+                  style={{ background: isSelected ? topic.color : (isDark ? '#334155' : '#E5E7EB') }}
                 />
 
                 <div className="p-4">
@@ -79,25 +81,25 @@ function TopicDeepDiveContent() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
-                        <span className="font-bold text-sm text-gray-900 truncate">{topic.name}</span>
+                        <span className="font-bold text-sm text-gray-900 dark:text-surface-50 truncate">{topic.name}</span>
                         {isSelected && (
                           <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: topic.color }} />
                         )}
                       </div>
-                      <p className="text-xs text-gray-400 mt-0.5 line-clamp-2">{topic.description}</p>
+                      <p className="text-xs text-gray-400 dark:text-surface-500 mt-0.5 line-clamp-2">{topic.description}</p>
                     </div>
                   </div>
 
                   {/* Stats row */}
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs text-gray-400">
+                    <span className="text-xs text-gray-400 dark:text-surface-500">
                       {attempted > 0 ? `${accuracy}% accuracy · ${attempted} Qs` : 'Not started'}
                     </span>
                     <span className={cn(
                       'text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full',
-                      topic.interviewRelevance === 'critical' ? 'bg-red-50 text-red-500' :
-                      topic.interviewRelevance === 'high' ? 'bg-amber-50 text-amber-500' :
-                      'bg-gray-50 text-gray-400'
+                      topic.interviewRelevance === 'critical' ? (isDark ? 'bg-red-900/30 text-red-400' : 'bg-red-50 text-red-500') :
+                      topic.interviewRelevance === 'high' ? (isDark ? 'bg-amber-900/30 text-amber-400' : 'bg-amber-50 text-amber-500') :
+                      (isDark ? 'bg-surface-800 text-surface-500' : 'bg-gray-50 text-gray-400')
                     )}>
                       {topic.interviewRelevance}
                     </span>
@@ -105,7 +107,7 @@ function TopicDeepDiveContent() {
 
                   {/* Accuracy bar */}
                   {attempted > 0 && (
-                    <div className="mt-3 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="mt-3 h-1.5 bg-gray-100 dark:bg-surface-700 rounded-full overflow-hidden">
                       <div
                         className="h-full rounded-full transition-all duration-500"
                         style={{
@@ -122,16 +124,16 @@ function TopicDeepDiveContent() {
         </div>
 
         {selectedTopic && (
-          <div ref={startPanelRef} className="bg-white rounded-2xl border border-gray-100 p-4 sm:p-6 mb-6 animate-slide-up">
-            <h3 className="font-bold text-gray-900 mb-4">Select Difficulty (optional)</h3>
+          <div ref={startPanelRef} className="bg-white dark:bg-surface-900 rounded-2xl border border-gray-100 dark:border-surface-700 p-4 sm:p-6 mb-6 animate-slide-up">
+            <h3 className="font-bold text-gray-900 dark:text-surface-50 mb-4">Select Difficulty (optional)</h3>
             <div className="flex gap-3 flex-wrap mb-6">
               <button
                 onClick={() => setSelectedDifficulty(undefined)}
                 className={cn(
                   'px-4 py-2 rounded-xl border-2 text-sm font-semibold transition-colors',
                   !selectedDifficulty
-                    ? 'border-primary-500 bg-primary-50 text-primary-700'
-                    : 'border-gray-200 text-gray-400 hover:border-gray-300'
+                    ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300'
+                    : 'border-gray-200 dark:border-surface-600 text-gray-400 dark:text-surface-400 hover:border-gray-300 dark:hover:border-surface-500'
                 )}
               >
                 All Levels
@@ -144,7 +146,7 @@ function TopicDeepDiveContent() {
                     'px-4 py-2 rounded-xl border-2 text-sm font-semibold transition-colors',
                     selectedDifficulty === d
                       ? cn('border-current', getDifficultyColor(d))
-                      : 'border-gray-200 text-gray-400 hover:border-gray-300'
+                      : 'border-gray-200 dark:border-surface-600 text-gray-400 dark:text-surface-400 hover:border-gray-300 dark:hover:border-surface-500'
                   )}
                 >
                   {getDifficultyLabel(d)}

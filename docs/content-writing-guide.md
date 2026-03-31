@@ -612,8 +612,10 @@ Each sub-lesson gets its own title and description (never "Part 2" or roman nume
 ### Before writing content
 
 1. Read this guide fully
-2. Check what concepts are taught in earlier units/lessons
-3. Never test a concept that hasn't been taught yet
+2. Read `docs/course-expansion-plan.md` for course structure, section plans, naming conventions, assumed vocabulary per section, and globalization rules
+3. Read `docs/expansion-progress.md` for what's already been built
+4. Check what concepts are taught in earlier units/lessons
+5. Never test a concept that hasn't been taught yet
 
 ### After writing content
 

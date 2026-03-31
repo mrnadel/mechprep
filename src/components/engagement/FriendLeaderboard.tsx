@@ -49,13 +49,13 @@ export function FriendLeaderboard() {
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-surface-900 rounded-2xl border border-gray-100 dark:border-surface-700 shadow-sm overflow-hidden">
       {/* Header */}
-      <div className="px-4 py-4 flex items-center gap-3 border-b border-gray-100 bg-primary-50/50">
+      <div className="px-4 py-4 flex items-center gap-3 border-b border-gray-100 dark:border-surface-700 bg-primary-50/50 dark:bg-primary-900/20">
         <span className="text-3xl">👥</span>
         <div>
-          <h2 className="text-lg font-extrabold text-gray-800">Friends Leaderboard</h2>
-          <p className="text-xs text-gray-500">Weekly XP ranking</p>
+          <h2 className="text-lg font-extrabold text-gray-800 dark:text-surface-50">Friends Leaderboard</h2>
+          <p className="text-xs text-gray-500 dark:text-surface-400">Weekly XP ranking</p>
         </div>
       </div>
 

@@ -10,12 +10,14 @@ import { CompetitorAvatar } from './CompetitorAvatar';
 import { LeagueImage } from '@/components/icons/LeagueImage';
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 import { LeaderboardRow } from '@/components/ui/LeaderboardRow';
+import { useIsDark } from '@/store/useThemeStore';
 
 export function LeagueBoard() {
   const league = useLeague();
   const displayName = useStore((s) => s.progress.displayName);
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
+  const isDark = useIsDark();
   useEffect(() => { setMounted(true); }, []);
 
   const tier = leagueTiers.find((t) => t.tier === league.currentTier) ?? leagueTiers[0];
@@ -53,16 +55,16 @@ export function LeagueBoard() {
   const totalCount = allEntries.length;
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-surface-900 rounded-2xl border border-gray-100 dark:border-surface-700 shadow-sm overflow-hidden">
       {/* Board header */}
       <div
-        className="px-4 py-4 flex items-center gap-3 border-b border-gray-100"
-        style={{ background: `${tier.color}14` }}
+        className="px-4 py-4 flex items-center gap-3 border-b border-gray-100 dark:border-surface-700"
+        style={{ background: `${tier.color}${isDark ? '20' : '14'}` }}
       >
         <LeagueImage tier={tier} size={48} />
         <div>
-          <h2 className="text-lg font-extrabold text-gray-800">{tier.name} League</h2>
-          <p className="text-xs text-gray-500">
+          <h2 className="text-lg font-extrabold text-gray-800 dark:text-surface-50">{tier.name} League</h2>
+          <p className="text-xs text-gray-500 dark:text-surface-400">
             Your rank: #{userRank} of {totalCount} &middot; Week XP: {league.weeklyXp}
           </p>
         </div>
@@ -78,11 +80,11 @@ export function LeagueBoard() {
           const isTop3 = rank <= 3;
 
           const rowBg = isUser
-            ? '#EFF6FF'
+            ? (isDark ? 'rgba(59, 130, 246, 0.12)' : '#EFF6FF')
             : inPromoteZone
-              ? 'rgba(16, 185, 129, 0.04)'
+              ? (isDark ? 'rgba(16, 185, 129, 0.08)' : 'rgba(16, 185, 129, 0.04)')
               : inDemoteZone
-                ? 'rgba(239, 68, 68, 0.04)'
+                ? (isDark ? 'rgba(239, 68, 68, 0.08)' : 'rgba(239, 68, 68, 0.04)')
                 : 'transparent';
 
           return (

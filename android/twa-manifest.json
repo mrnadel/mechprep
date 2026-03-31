@@ -1,0 +1,32 @@
+{
+  "packageId": "com.octokeen.app",
+  "host": "octokeen.com",
+  "name": "Octokeen",
+  "launcherName": "Octokeen",
+  "display": "standalone",
+  "themeColor": "#0D9488",
+  "themeColorDark": "#0D9488",
+  "navigationColor": "#0D9488",
+  "navigationColorDark": "#0D9488",
+  "navigationDividerColor": "#0D9488",
+  "navigationDividerColorDark": "#0D9488",
+  "backgroundColor": "#FAFAFA",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://octokeen.com/icon-512.png",
+  "maskableIconUrl": "https://octokeen.com/icon-512.png",
+  "shortcuts": [],
+  "signingKey": {
+    "path": "android.keystore",
+    "alias": "octokeen"
+  },
+  "appVersionCode": 1,
+  "appVersionName": "1.0.0",
+  "splashScreenFadeOutDuration": 300,
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "orientation": "portrait",
+  "fingerprints": [],
+  "minSdkVersion": 23,
+  "targetSdkVersion": 36
+}

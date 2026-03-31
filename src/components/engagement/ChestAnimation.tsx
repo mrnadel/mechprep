@@ -40,7 +40,7 @@ export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full text-center"
+              className="bg-white dark:bg-surface-900 rounded-3xl shadow-2xl p-8 max-w-sm w-full text-center"
               role="dialog"
               aria-modal="true"
               aria-label={`${type === 'daily' ? 'Daily' : 'Weekly'} chest reward`}
@@ -50,7 +50,7 @@ export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
               transition={{ type: 'spring', stiffness: 280, damping: 20 }}
             >
               {/* Title */}
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-surface-500 mb-2">
                 {type === 'daily' ? 'Daily' : 'Weekly'} Chest
               </p>
 
@@ -73,10 +73,10 @@ export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
                   transition={{ delay: 0.35 }}
                 >
                   <span className="text-2xl font-extrabold text-amber-500">+{reward.xp}</span>
-                  <span className="text-xs font-semibold text-gray-400">XP</span>
+                  <span className="text-xs font-semibold text-gray-400 dark:text-surface-500">XP</span>
                 </motion.div>
 
-                <div className="w-px h-8 bg-gray-100" />
+                <div className="w-px h-8 bg-gray-100 dark:bg-surface-700" />
 
                 <motion.div
                   className="flex flex-col items-center gap-1"
@@ -87,7 +87,7 @@ export function ChestAnimation({ type, reward, onClose, isOpen }: Props) {
                   <span className="text-2xl font-extrabold text-violet-600">
                     💎 +{reward.gems}
                   </span>
-                  <span className="text-xs font-semibold text-gray-400">Gems</span>
+                  <span className="text-xs font-semibold text-gray-400 dark:text-surface-500">Gems</span>
                 </motion.div>
               </div>
 

@@ -48,6 +48,20 @@ next-env.d.ts
 # generated gallery
 /gallery.html
 
+# Android TWA build artifacts
+android/*.keystore
+android/*.jks
+android/app/
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/build.gradle
+android/settings.gradle
+android/.gradle/
+android/app-*.apk
+android/app-*.aab
+android/.bubblewrap/
+
 # Playwright
 node_modules/
 /test-results/

@@ -229,7 +229,7 @@ export function CourseHeader() {
       {/* Header */}
       <header
         ref={headerRef}
-        className="sticky top-0 z-50 bg-[#FAFAFA] px-4 sm:px-5 py-1.5 relative"
+        className="sticky top-0 z-50 bg-[#FAFAFA] dark:bg-surface-950 px-4 sm:px-5 py-1.5 relative"
       >
         <div className="flex items-center justify-between w-full">
             {profession && (
