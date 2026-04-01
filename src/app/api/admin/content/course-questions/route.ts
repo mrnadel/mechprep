@@ -12,13 +12,18 @@ export async function GET(req: NextRequest) {
 
   const lessonId = req.nextUrl.searchParams.get('lessonId');
 
-  let query = db.select().from(courseQuestions);
-
-  if (lessonId) {
-    query = query.where(eq(courseQuestions.lessonId, lessonId)) as typeof query;
+  if (!lessonId) {
+    return NextResponse.json(
+      { error: 'lessonId query parameter is required' },
+      { status: 400 }
+    );
   }
 
-  const questions = await query.orderBy(asc(courseQuestions.orderIndex));
+  const questions = await db
+    .select()
+    .from(courseQuestions)
+    .where(eq(courseQuestions.lessonId, lessonId))
+    .orderBy(asc(courseQuestions.orderIndex));
 
   return NextResponse.json({ questions });
 }

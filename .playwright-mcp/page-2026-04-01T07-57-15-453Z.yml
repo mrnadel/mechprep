@@ -1,0 +1,1351 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - navigation "Desktop navigation" [ref=e5]:
+        - generic [ref=e6]:
+          - paragraph [ref=e7]: Octokeen
+          - link "ME" [ref=e8] [cursor=pointer]:
+            - /url: /switch-course
+            - generic [ref=e9]: ME
+        - generic [ref=e10]:
+          - link "Home" [ref=e11] [cursor=pointer]:
+            - /url: /
+            - img [ref=e13]
+            - generic [ref=e18]: Home
+          - link "Quests" [ref=e19] [cursor=pointer]:
+            - /url: /quests
+            - img [ref=e21]
+            - generic [ref=e30]: Quests
+          - link "League" [ref=e31] [cursor=pointer]:
+            - /url: /league
+            - img [ref=e33]
+            - generic [ref=e39]: League
+          - link "Friends" [ref=e40] [cursor=pointer]:
+            - /url: /friends
+            - img [ref=e42]
+            - generic [ref=e47]: Friends
+          - link "Profile" [ref=e48] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e50]
+            - generic [ref=e53]: Profile
+      - generic [ref=e54]:
+        - main [ref=e55]:
+          - dialog "Course introduction" [ref=e57]:
+            - button [ref=e61]:
+              - img [ref=e62]
+            - generic [ref=e66]:
+              - paragraph [ref=e72]: How much Mechanical Engineering do you know?
+              - generic [ref=e73]:
+                - button "I'm completely new Never studied this" [ref=e74]:
+                  - img [ref=e75]
+                  - generic [ref=e80]:
+                    - paragraph [ref=e81]: I'm completely new
+                    - paragraph [ref=e82]: Never studied this
+                - button "I know the basics Took a course or two" [ref=e83]:
+                  - img [ref=e84]
+                  - generic [ref=e89]:
+                    - paragraph [ref=e90]: I know the basics
+                    - paragraph [ref=e91]: Took a course or two
+                - button "I use this at work Comfortable with core topics" [ref=e92]:
+                  - img [ref=e93]
+                  - generic [ref=e98]:
+                    - paragraph [ref=e99]: I use this at work
+                    - paragraph [ref=e100]: Comfortable with core topics
+                - button "I could teach it Deep expertise" [ref=e101]:
+                  - img [ref=e102]
+                  - generic [ref=e107]:
+                    - paragraph [ref=e108]: I could teach it
+                    - paragraph [ref=e109]: Deep expertise
+            - button "Continue" [disabled] [ref=e111]:
+              - text: Continue
+              - img [ref=e112]
+          - generic [ref=e115]:
+            - button "Switch course — Mechanical Engineering" [ref=e116]
+            - button "0 day streak" [ref=e117]:
+              - generic [ref=e119]: "0"
+            - button "0 gems" [ref=e120]:
+              - generic [ref=e121]: 💎
+              - generic [ref=e123]: "0"
+            - button "Unlimited hearts" [ref=e124]:
+              - img [ref=e125]
+              - generic [ref=e127]: ∞
+          - generic [ref=e128]:
+            - 'button "Unit 1: Statics & Equilibrium. Tap to browse units." [ref=e132] [cursor=pointer]':
+              - generic [ref=e133]:
+                - generic [ref=e134]: Unit 1
+                - generic [ref=e135]: Statics & Equilibrium
+              - img [ref=e137]
+            - generic [ref=e140]:
+              - generic [ref=e142]:
+                - 'button "Start: Forces as Vectors" [ref=e145] [cursor=pointer]':
+                  - generic [ref=e148]:
+                    - img [ref=e150]
+                    - generic [ref=e152]:
+                      - generic [ref=e153]: Forces as Vectors
+                      - generic [ref=e154]: +20 XP
+                    - generic [ref=e156]: Go
+                - 'button "Upcoming: Moments and Couples" [ref=e159] [cursor=pointer]':
+                  - generic [ref=e162]:
+                    - img [ref=e164]
+                    - generic [ref=e166]:
+                      - generic [ref=e167]: Moments and Couples
+                      - generic [ref=e168]: +20 XP
+                - 'button "Upcoming: Equilibrium Equations" [ref=e171] [cursor=pointer]':
+                  - generic [ref=e174]:
+                    - img [ref=e176]
+                    - generic [ref=e178]:
+                      - generic [ref=e179]: Equilibrium Equations
+                      - generic [ref=e180]: +20 XP
+                - 'button "Upcoming: Drawing Free Body Diagrams" [ref=e183] [cursor=pointer]':
+                  - generic [ref=e186]:
+                    - img [ref=e188]
+                    - generic [ref=e190]:
+                      - generic [ref=e191]: Drawing Free Body Diagrams
+                      - generic [ref=e192]: +20 XP
+                - 'button "Upcoming: Support Reactions" [ref=e195] [cursor=pointer]':
+                  - generic [ref=e198]:
+                    - img [ref=e200]
+                    - generic [ref=e202]:
+                      - generic [ref=e203]: Support Reactions
+                      - generic [ref=e204]: +20 XP
+                - 'button "Upcoming: Solving Beam Problems" [ref=e207] [cursor=pointer]':
+                  - generic [ref=e210]:
+                    - img [ref=e212]
+                    - generic [ref=e214]:
+                      - generic [ref=e215]: Solving Beam Problems
+                      - generic [ref=e216]: +20 XP
+                - 'button "Upcoming: Truss Fundamentals" [ref=e219] [cursor=pointer]':
+                  - generic [ref=e222]:
+                    - img [ref=e224]
+                    - generic [ref=e226]:
+                      - generic [ref=e227]: Truss Fundamentals
+                      - generic [ref=e228]: +25 XP
+                - 'button "Upcoming: Method of Joints" [ref=e231] [cursor=pointer]':
+                  - generic [ref=e234]:
+                    - img [ref=e236]
+                    - generic [ref=e238]:
+                      - generic [ref=e239]: Method of Joints
+                      - generic [ref=e240]: +25 XP
+                - 'button "Upcoming: Method of Sections & Frames" [ref=e243] [cursor=pointer]':
+                  - generic [ref=e246]:
+                    - img [ref=e248]
+                    - generic [ref=e250]:
+                      - generic [ref=e251]: Method of Sections & Frames
+                      - generic [ref=e252]: +25 XP
+                - 'button "Upcoming: Static Friction Basics" [ref=e255] [cursor=pointer]':
+                  - generic [ref=e258]:
+                    - img [ref=e260]
+                    - generic [ref=e262]:
+                      - generic [ref=e263]: Static Friction Basics
+                      - generic [ref=e264]: +25 XP
+                - 'button "Upcoming: Wedges and Tipping" [ref=e267] [cursor=pointer]':
+                  - generic [ref=e270]:
+                    - img [ref=e272]
+                    - generic [ref=e274]:
+                      - generic [ref=e275]: Wedges and Tipping
+                      - generic [ref=e276]: +25 XP
+                - 'button "Upcoming: Belt Friction and Screws" [ref=e279] [cursor=pointer]':
+                  - generic [ref=e282]:
+                    - img [ref=e284]
+                    - generic [ref=e286]:
+                      - generic [ref=e287]: Belt Friction and Screws
+                      - generic [ref=e288]: +25 XP
+                - 'button "Upcoming: Centroids of Simple Shapes" [ref=e291] [cursor=pointer]':
+                  - generic [ref=e294]:
+                    - img [ref=e296]
+                    - generic [ref=e298]:
+                      - generic [ref=e299]: Centroids of Simple Shapes
+                      - generic [ref=e300]: +25 XP
+                - 'button "Upcoming: Moment of Inertia" [ref=e303] [cursor=pointer]':
+                  - generic [ref=e306]:
+                    - img [ref=e308]
+                    - generic [ref=e310]:
+                      - generic [ref=e311]: Moment of Inertia
+                      - generic [ref=e312]: +25 XP
+                - 'button "Upcoming: Composite Sections" [ref=e315] [cursor=pointer]':
+                  - generic [ref=e318]:
+                    - img [ref=e320]
+                    - generic [ref=e322]:
+                      - generic [ref=e323]: Composite Sections
+                      - generic [ref=e324]: +25 XP
+                - 'button "Upcoming: Forces on the Job" [ref=e327] [cursor=pointer]':
+                  - generic [ref=e330]:
+                    - img [ref=e332]
+                    - generic [ref=e334]:
+                      - generic [ref=e335]: Forces on the Job
+                      - generic [ref=e336]: +20 XP
+                - 'button "Upcoming: Statics Speed Round" [ref=e339] [cursor=pointer]':
+                  - generic [ref=e342]:
+                    - img [ref=e344]
+                    - generic [ref=e346]:
+                      - generic [ref=e347]: Statics Speed Round
+                      - generic [ref=e348]: +20 XP
+              - generic [ref=e349]:
+                - generic [ref=e352]: Dynamics & Kinematics
+                - button "Take placement test to jump to this unit" [ref=e355] [cursor=pointer]:
+                  - img [ref=e356]
+                  - img [ref=e359]:
+                    - generic [ref=e369]: Jump here
+                - generic [ref=e370]:
+                  - 'button "Upcoming: Position, Velocity & Acceleration" [ref=e373] [cursor=pointer]':
+                    - generic [ref=e376]:
+                      - img [ref=e378]
+                      - generic [ref=e380]:
+                        - generic [ref=e381]: Position, Velocity & Acceleration
+                        - generic [ref=e382]: +20 XP
+                  - 'button "Upcoming: Curvilinear & Relative Motion" [ref=e385] [cursor=pointer]':
+                    - generic [ref=e388]:
+                      - img [ref=e390]
+                      - generic [ref=e392]:
+                        - generic [ref=e393]: Curvilinear & Relative Motion
+                        - generic [ref=e394]: +20 XP
+                  - 'button "Upcoming: Projectiles & Advanced Kinematics" [ref=e397] [cursor=pointer]':
+                    - generic [ref=e400]:
+                      - img [ref=e402]
+                      - generic [ref=e404]:
+                        - generic [ref=e405]: Projectiles & Advanced Kinematics
+                        - generic [ref=e406]: +20 XP
+                  - 'button "Upcoming: Newton''s Laws Fundamentals" [ref=e409] [cursor=pointer]':
+                    - generic [ref=e412]:
+                      - img [ref=e414]
+                      - generic [ref=e416]:
+                        - generic [ref=e417]: Newton's Laws Fundamentals
+                        - generic [ref=e418]: +20 XP
+                  - 'button "Upcoming: Circular Motion & Banked Curves" [ref=e421] [cursor=pointer]':
+                    - generic [ref=e424]:
+                      - img [ref=e426]
+                      - generic [ref=e428]:
+                        - generic [ref=e429]: Circular Motion & Banked Curves
+                        - generic [ref=e430]: +20 XP
+                  - 'button "Upcoming: Connected Systems & Real Problems" [ref=e433] [cursor=pointer]':
+                    - generic [ref=e436]:
+                      - img [ref=e438]
+                      - generic [ref=e440]:
+                        - generic [ref=e441]: Connected Systems & Real Problems
+                        - generic [ref=e442]: +20 XP
+                  - 'button "Upcoming: Work & Kinetic Energy" [ref=e445] [cursor=pointer]':
+                    - generic [ref=e448]:
+                      - img [ref=e450]
+                      - generic [ref=e452]:
+                        - generic [ref=e453]: Work & Kinetic Energy
+                        - generic [ref=e454]: +20 XP
+                  - 'button "Upcoming: Conservation of Energy" [ref=e457] [cursor=pointer]':
+                    - generic [ref=e460]:
+                      - img [ref=e462]
+                      - generic [ref=e464]:
+                        - generic [ref=e465]: Conservation of Energy
+                        - generic [ref=e466]: +20 XP
+                  - 'button "Upcoming: Power & Efficiency" [ref=e469] [cursor=pointer]':
+                    - generic [ref=e472]:
+                      - img [ref=e474]
+                      - generic [ref=e476]:
+                        - generic [ref=e477]: Power & Efficiency
+                        - generic [ref=e478]: +20 XP
+                  - 'button "Upcoming: Momentum & Impulse Basics" [ref=e481] [cursor=pointer]':
+                    - generic [ref=e484]:
+                      - img [ref=e486]
+                      - generic [ref=e488]:
+                        - generic [ref=e489]: Momentum & Impulse Basics
+                        - generic [ref=e490]: +20 XP
+                  - 'button "Upcoming: Collisions & Restitution" [ref=e493] [cursor=pointer]':
+                    - generic [ref=e496]:
+                      - img [ref=e498]
+                      - generic [ref=e500]:
+                        - generic [ref=e501]: Collisions & Restitution
+                        - generic [ref=e502]: +20 XP
+                  - 'button "Upcoming: Momentum in Systems & Machines" [ref=e505] [cursor=pointer]':
+                    - generic [ref=e508]:
+                      - img [ref=e510]
+                      - generic [ref=e512]:
+                        - generic [ref=e513]: Momentum in Systems & Machines
+                        - generic [ref=e514]: +20 XP
+                  - 'button "Upcoming: Torque & Moment of Inertia" [ref=e517] [cursor=pointer]':
+                    - generic [ref=e520]:
+                      - img [ref=e522]
+                      - generic [ref=e524]:
+                        - generic [ref=e525]: Torque & Moment of Inertia
+                        - generic [ref=e526]: +20 XP
+                  - 'button "Upcoming: Angular Momentum & Gyroscopes" [ref=e529] [cursor=pointer]':
+                    - generic [ref=e532]:
+                      - img [ref=e534]
+                      - generic [ref=e536]:
+                        - generic [ref=e537]: Angular Momentum & Gyroscopes
+                        - generic [ref=e538]: +20 XP
+                  - 'button "Upcoming: Rolling & Rotational Applications" [ref=e541] [cursor=pointer]':
+                    - generic [ref=e544]:
+                      - img [ref=e546]
+                      - generic [ref=e548]:
+                        - generic [ref=e549]: Rolling & Rotational Applications
+                        - generic [ref=e550]: +20 XP
+                  - 'button "Upcoming: Natural Frequency & Free Vibration" [ref=e553] [cursor=pointer]':
+                    - generic [ref=e556]:
+                      - img [ref=e558]
+                      - generic [ref=e560]:
+                        - generic [ref=e561]: Natural Frequency & Free Vibration
+                        - generic [ref=e562]: +25 XP
+                  - 'button "Upcoming: Forced Vibration & Resonance" [ref=e565] [cursor=pointer]':
+                    - generic [ref=e568]:
+                      - img [ref=e570]
+                      - generic [ref=e572]:
+                        - generic [ref=e573]: Forced Vibration & Resonance
+                        - generic [ref=e574]: +25 XP
+                  - 'button "Upcoming: Vibration Isolation & Absorbers" [ref=e577] [cursor=pointer]':
+                    - generic [ref=e580]:
+                      - img [ref=e582]
+                      - generic [ref=e584]:
+                        - generic [ref=e585]: Vibration Isolation & Absorbers
+                        - generic [ref=e586]: +25 XP
+                  - 'button "Upcoming: The Vibrating Machine Mystery" [ref=e589] [cursor=pointer]':
+                    - generic [ref=e592]:
+                      - img [ref=e594]
+                      - generic [ref=e596]:
+                        - generic [ref=e597]: The Vibrating Machine Mystery
+                        - generic [ref=e598]: +20 XP
+                  - 'button "Upcoming: Dynamics Speed Round" [ref=e601] [cursor=pointer]':
+                    - generic [ref=e604]:
+                      - img [ref=e606]
+                      - generic [ref=e608]:
+                        - generic [ref=e609]: Dynamics Speed Round
+                        - generic [ref=e610]: +20 XP
+              - generic [ref=e611]:
+                - generic [ref=e614]: Strength of Materials
+                - button "Take placement test to jump to this unit" [ref=e617] [cursor=pointer]:
+                  - img [ref=e618]
+                  - img [ref=e621]:
+                    - generic [ref=e631]: Jump here
+                - generic [ref=e632]:
+                  - 'button "Upcoming: Stress & Strain Fundamentals" [ref=e635] [cursor=pointer]':
+                    - generic [ref=e638]:
+                      - img [ref=e640]
+                      - generic [ref=e642]:
+                        - generic [ref=e643]: Stress & Strain Fundamentals
+                        - generic [ref=e644]: +20 XP
+                  - 'button "Upcoming: Thermal Stress, Composites & Toughness" [ref=e647] [cursor=pointer]':
+                    - generic [ref=e650]:
+                      - img [ref=e652]
+                      - generic [ref=e654]:
+                        - generic [ref=e655]: Thermal Stress, Composites & Toughness
+                        - generic [ref=e656]: +20 XP
+                  - 'button "Upcoming: Stress Concentrations & Elastic Constants" [ref=e659] [cursor=pointer]':
+                    - generic [ref=e662]:
+                      - img [ref=e664]
+                      - generic [ref=e666]:
+                        - generic [ref=e667]: Stress Concentrations & Elastic Constants
+                        - generic [ref=e668]: +20 XP
+                  - 'button "Upcoming: Beam Bending" [ref=e671] [cursor=pointer]':
+                    - generic [ref=e674]:
+                      - img [ref=e676]
+                      - generic [ref=e678]:
+                        - generic [ref=e679]: Beam Bending
+                        - generic [ref=e680]: +25 XP
+                  - 'button "Upcoming: I-Beams, Section Modulus & Deflection" [ref=e683] [cursor=pointer]':
+                    - generic [ref=e686]:
+                      - img [ref=e688]
+                      - generic [ref=e690]:
+                        - generic [ref=e691]: I-Beams, Section Modulus & Deflection
+                        - generic [ref=e692]: +25 XP
+                  - 'button "Upcoming: Deflection Formulas & Superposition" [ref=e695] [cursor=pointer]':
+                    - generic [ref=e698]:
+                      - img [ref=e700]
+                      - generic [ref=e702]:
+                        - generic [ref=e703]: Deflection Formulas & Superposition
+                        - generic [ref=e704]: +25 XP
+                  - 'button "Upcoming: Shear & Bending Diagrams" [ref=e707] [cursor=pointer]':
+                    - generic [ref=e710]:
+                      - img [ref=e712]
+                      - generic [ref=e714]:
+                        - generic [ref=e715]: Shear & Bending Diagrams
+                        - generic [ref=e716]: +25 XP
+                  - 'button "Upcoming: Drawing SFD & BMD Step by Step" [ref=e719] [cursor=pointer]':
+                    - generic [ref=e722]:
+                      - img [ref=e724]
+                      - generic [ref=e726]:
+                        - generic [ref=e727]: Drawing SFD & BMD Step by Step
+                        - generic [ref=e728]: +25 XP
+                  - 'button "Upcoming: Indeterminate Beams & Moment Envelopes" [ref=e731] [cursor=pointer]':
+                    - generic [ref=e734]:
+                      - img [ref=e736]
+                      - generic [ref=e738]:
+                        - generic [ref=e739]: Indeterminate Beams & Moment Envelopes
+                        - generic [ref=e740]: +25 XP
+                  - 'button "Upcoming: Torsion" [ref=e743] [cursor=pointer]':
+                    - generic [ref=e746]:
+                      - img [ref=e748]
+                      - generic [ref=e750]:
+                        - generic [ref=e751]: Torsion
+                        - generic [ref=e752]: +25 XP
+                  - 'button "Upcoming: Shaft Sizing & Power Transmission" [ref=e755] [cursor=pointer]':
+                    - generic [ref=e758]:
+                      - img [ref=e760]
+                      - generic [ref=e762]:
+                        - generic [ref=e763]: Shaft Sizing & Power Transmission
+                        - generic [ref=e764]: +25 XP
+                  - 'button "Upcoming: Polar Moments & Open vs Closed Sections" [ref=e767] [cursor=pointer]':
+                    - generic [ref=e770]:
+                      - img [ref=e772]
+                      - generic [ref=e774]:
+                        - generic [ref=e775]: Polar Moments & Open vs Closed Sections
+                        - generic [ref=e776]: +25 XP
+                  - 'button "Upcoming: Mohr''s Circle & Combined Loading" [ref=e779] [cursor=pointer]':
+                    - generic [ref=e782]:
+                      - img [ref=e784]
+                      - generic [ref=e786]:
+                        - generic [ref=e787]: Mohr's Circle & Combined Loading
+                        - generic [ref=e788]: +30 XP
+                  - 'button "Upcoming: Mohr''s Circle Construction & Pressure Vessels" [ref=e791] [cursor=pointer]':
+                    - generic [ref=e794]:
+                      - img [ref=e796]
+                      - generic [ref=e798]:
+                        - generic [ref=e799]: Mohr's Circle Construction & Pressure Vessels
+                        - generic [ref=e800]: +30 XP
+                  - 'button "Upcoming: Combined Loading & Plane Stress vs Strain" [ref=e803] [cursor=pointer]':
+                    - generic [ref=e806]:
+                      - img [ref=e808]
+                      - generic [ref=e810]:
+                        - generic [ref=e811]: Combined Loading & Plane Stress vs Strain
+                        - generic [ref=e812]: +30 XP
+                  - 'button "Upcoming: Failure Theories" [ref=e815] [cursor=pointer]':
+                    - generic [ref=e818]:
+                      - img [ref=e820]
+                      - generic [ref=e822]:
+                        - generic [ref=e823]: Failure Theories
+                        - generic [ref=e824]: +30 XP
+                  - 'button "Upcoming: Safety Factors, S-N Curves & Fatigue Criteria" [ref=e827] [cursor=pointer]':
+                    - generic [ref=e830]:
+                      - img [ref=e832]
+                      - generic [ref=e834]:
+                        - generic [ref=e835]: Safety Factors, S-N Curves & Fatigue Criteria
+                        - generic [ref=e836]: +30 XP
+                  - 'button "Upcoming: Fatigue Life & Endurance Limit Estimation" [ref=e839] [cursor=pointer]':
+                    - generic [ref=e842]:
+                      - img [ref=e844]
+                      - generic [ref=e846]:
+                        - generic [ref=e847]: Fatigue Life & Endurance Limit Estimation
+                        - generic [ref=e848]: +30 XP
+                  - 'button "Upcoming: Column Buckling & Pressure Vessels" [ref=e851] [cursor=pointer]':
+                    - generic [ref=e854]:
+                      - img [ref=e856]
+                      - generic [ref=e858]:
+                        - generic [ref=e859]: Column Buckling & Pressure Vessels
+                        - generic [ref=e860]: +30 XP
+                  - 'button "Upcoming: Effective Length & Thin-Wall Vessel Stresses" [ref=e863] [cursor=pointer]':
+                    - generic [ref=e866]:
+                      - img [ref=e868]
+                      - generic [ref=e870]:
+                        - generic [ref=e871]: Effective Length & Thin-Wall Vessel Stresses
+                        - generic [ref=e872]: +30 XP
+                  - 'button "Upcoming: Thick-Walled Vessels & Combined Vessel Loads" [ref=e875] [cursor=pointer]':
+                    - generic [ref=e878]:
+                      - img [ref=e880]
+                      - generic [ref=e882]:
+                        - generic [ref=e883]: Thick-Walled Vessels & Combined Vessel Loads
+                        - generic [ref=e884]: +30 XP
+                  - 'button "Upcoming: The Failing Bracket" [ref=e887] [cursor=pointer]':
+                    - generic [ref=e890]:
+                      - img [ref=e892]
+                      - generic [ref=e894]:
+                        - generic [ref=e895]: The Failing Bracket
+                        - generic [ref=e896]: +20 XP
+                  - 'button "Upcoming: Strength of Materials Blitz" [ref=e899] [cursor=pointer]':
+                    - generic [ref=e902]:
+                      - img [ref=e904]
+                      - generic [ref=e906]:
+                        - generic [ref=e907]: Strength of Materials Blitz
+                        - generic [ref=e908]: +20 XP
+              - generic [ref=e909]:
+                - generic [ref=e912]: Thermodynamics
+                - button "Take placement test to jump to this unit" [ref=e915] [cursor=pointer]:
+                  - img [ref=e916]
+                  - img [ref=e919]:
+                    - generic [ref=e929]: Jump here
+                - generic [ref=e930]:
+                  - 'button "Upcoming: Properties & State: Basics" [ref=e933] [cursor=pointer]':
+                    - generic [ref=e936]:
+                      - img [ref=e938]
+                      - generic [ref=e940]:
+                        - generic [ref=e941]: "Properties & State: Basics"
+                        - generic [ref=e942]: +20 XP
+                  - 'button "Upcoming: Properties & State: Phases" [ref=e945] [cursor=pointer]':
+                    - generic [ref=e948]:
+                      - img [ref=e950]
+                      - generic [ref=e952]:
+                        - generic [ref=e953]: "Properties & State: Phases"
+                        - generic [ref=e954]: +20 XP
+                  - 'button "Upcoming: Properties & State: Gases" [ref=e957] [cursor=pointer]':
+                    - generic [ref=e960]:
+                      - img [ref=e962]
+                      - generic [ref=e964]:
+                        - generic [ref=e965]: "Properties & State: Gases"
+                        - generic [ref=e966]: +20 XP
+                  - 'button "Upcoming: First Law: Foundations" [ref=e969] [cursor=pointer]':
+                    - generic [ref=e972]:
+                      - img [ref=e974]
+                      - generic [ref=e976]:
+                        - generic [ref=e977]: "First Law: Foundations"
+                        - generic [ref=e978]: +25 XP
+                  - 'button "Upcoming: First Law: Open Systems" [ref=e981] [cursor=pointer]':
+                    - generic [ref=e984]:
+                      - img [ref=e986]
+                      - generic [ref=e988]:
+                        - generic [ref=e989]: "First Law: Open Systems"
+                        - generic [ref=e990]: +25 XP
+                  - 'button "Upcoming: First Law: Processes" [ref=e993] [cursor=pointer]':
+                    - generic [ref=e996]:
+                      - img [ref=e998]
+                      - generic [ref=e1000]:
+                        - generic [ref=e1001]: "First Law: Processes"
+                        - generic [ref=e1002]: +25 XP
+                  - 'button "Upcoming: Second Law: Fundamentals" [ref=e1005] [cursor=pointer]':
+                    - generic [ref=e1008]:
+                      - img [ref=e1010]
+                      - generic [ref=e1012]:
+                        - generic [ref=e1013]: "Second Law: Fundamentals"
+                        - generic [ref=e1014]: +25 XP
+                  - 'button "Upcoming: Second Law: Entropy Math" [ref=e1017] [cursor=pointer]':
+                    - generic [ref=e1020]:
+                      - img [ref=e1022]
+                      - generic [ref=e1024]:
+                        - generic [ref=e1025]: "Second Law: Entropy Math"
+                        - generic [ref=e1026]: +25 XP
+                  - 'button "Upcoming: Second Law: Applications" [ref=e1029] [cursor=pointer]':
+                    - generic [ref=e1032]:
+                      - img [ref=e1034]
+                      - generic [ref=e1036]:
+                        - generic [ref=e1037]: "Second Law: Applications"
+                        - generic [ref=e1038]: +25 XP
+                  - 'button "Upcoming: Power Cycles: Rankine" [ref=e1041] [cursor=pointer]':
+                    - generic [ref=e1044]:
+                      - img [ref=e1046]
+                      - generic [ref=e1048]:
+                        - generic [ref=e1049]: "Power Cycles: Rankine"
+                        - generic [ref=e1050]: +30 XP
+                  - 'button "Upcoming: Power Cycles: Gas Engines" [ref=e1053] [cursor=pointer]':
+                    - generic [ref=e1056]:
+                      - img [ref=e1058]
+                      - generic [ref=e1060]:
+                        - generic [ref=e1061]: "Power Cycles: Gas Engines"
+                        - generic [ref=e1062]: +30 XP
+                  - 'button "Upcoming: Power Cycles: Efficiency" [ref=e1065] [cursor=pointer]':
+                    - generic [ref=e1068]:
+                      - img [ref=e1070]
+                      - generic [ref=e1072]:
+                        - generic [ref=e1073]: "Power Cycles: Efficiency"
+                        - generic [ref=e1074]: +30 XP
+                  - 'button "Upcoming: Refrigeration: Basics" [ref=e1077] [cursor=pointer]':
+                    - generic [ref=e1080]:
+                      - img [ref=e1082]
+                      - generic [ref=e1084]:
+                        - generic [ref=e1085]: "Refrigeration: Basics"
+                        - generic [ref=e1086]: +25 XP
+                  - 'button "Upcoming: Refrigeration: Advanced" [ref=e1089] [cursor=pointer]':
+                    - generic [ref=e1092]:
+                      - img [ref=e1094]
+                      - generic [ref=e1096]:
+                        - generic [ref=e1097]: "Refrigeration: Advanced"
+                        - generic [ref=e1098]: +25 XP
+                  - 'button "Upcoming: Refrigeration: Real Systems" [ref=e1101] [cursor=pointer]':
+                    - generic [ref=e1104]:
+                      - img [ref=e1106]
+                      - generic [ref=e1108]:
+                        - generic [ref=e1109]: "Refrigeration: Real Systems"
+                        - generic [ref=e1110]: +25 XP
+                  - 'button "Upcoming: Power Plant Troubleshooting" [ref=e1113] [cursor=pointer]':
+                    - generic [ref=e1116]:
+                      - img [ref=e1118]
+                      - generic [ref=e1120]:
+                        - generic [ref=e1121]: Power Plant Troubleshooting
+                        - generic [ref=e1122]: +30 XP
+                  - 'button "Upcoming: Thermo Speed Round" [ref=e1125] [cursor=pointer]':
+                    - generic [ref=e1128]:
+                      - img [ref=e1130]
+                      - generic [ref=e1132]:
+                        - generic [ref=e1133]: Thermo Speed Round
+                        - generic [ref=e1134]: +25 XP
+              - generic [ref=e1135]:
+                - generic [ref=e1138]: Heat Transfer
+                - button "Take placement test to jump to this unit" [ref=e1141] [cursor=pointer]:
+                  - img [ref=e1142]
+                  - img [ref=e1145]:
+                    - generic [ref=e1155]: Jump here
+                - generic [ref=e1156]:
+                  - 'button "Upcoming: Conduction Basics" [ref=e1159] [cursor=pointer]':
+                    - generic [ref=e1162]:
+                      - img [ref=e1164]
+                      - generic [ref=e1166]:
+                        - generic [ref=e1167]: Conduction Basics
+                        - generic [ref=e1168]: +20 XP
+                  - 'button "Upcoming: Composite Walls" [ref=e1171] [cursor=pointer]':
+                    - generic [ref=e1174]:
+                      - img [ref=e1176]
+                      - generic [ref=e1178]:
+                        - generic [ref=e1179]: Composite Walls
+                        - generic [ref=e1180]: +20 XP
+                  - 'button "Upcoming: Cylinders & Critical Radius" [ref=e1183] [cursor=pointer]':
+                    - generic [ref=e1186]:
+                      - img [ref=e1188]
+                      - generic [ref=e1190]:
+                        - generic [ref=e1191]: Cylinders & Critical Radius
+                        - generic [ref=e1192]: +20 XP
+                  - 'button "Upcoming: Convection Fundamentals" [ref=e1195] [cursor=pointer]':
+                    - generic [ref=e1198]:
+                      - img [ref=e1200]
+                      - generic [ref=e1202]:
+                        - generic [ref=e1203]: Convection Fundamentals
+                        - generic [ref=e1204]: +25 XP
+                  - 'button "Upcoming: Dimensionless Numbers" [ref=e1207] [cursor=pointer]':
+                    - generic [ref=e1210]:
+                      - img [ref=e1212]
+                      - generic [ref=e1214]:
+                        - generic [ref=e1215]: Dimensionless Numbers
+                        - generic [ref=e1216]: +25 XP
+                  - 'button "Upcoming: Convection Correlations" [ref=e1219] [cursor=pointer]':
+                    - generic [ref=e1222]:
+                      - img [ref=e1224]
+                      - generic [ref=e1226]:
+                        - generic [ref=e1227]: Convection Correlations
+                        - generic [ref=e1228]: +25 XP
+                  - 'button "Upcoming: Radiation Basics" [ref=e1231] [cursor=pointer]':
+                    - generic [ref=e1234]:
+                      - img [ref=e1236]
+                      - generic [ref=e1238]:
+                        - generic [ref=e1239]: Radiation Basics
+                        - generic [ref=e1240]: +25 XP
+                  - 'button "Upcoming: View Factors" [ref=e1243] [cursor=pointer]':
+                    - generic [ref=e1246]:
+                      - img [ref=e1248]
+                      - generic [ref=e1250]:
+                        - generic [ref=e1251]: View Factors
+                        - generic [ref=e1252]: +25 XP
+                  - 'button "Upcoming: Radiation Shields" [ref=e1255] [cursor=pointer]':
+                    - generic [ref=e1258]:
+                      - img [ref=e1260]
+                      - generic [ref=e1262]:
+                        - generic [ref=e1263]: Radiation Shields
+                        - generic [ref=e1264]: +25 XP
+                  - 'button "Upcoming: Heat Exchanger Basics" [ref=e1267] [cursor=pointer]':
+                    - generic [ref=e1270]:
+                      - img [ref=e1272]
+                      - generic [ref=e1274]:
+                        - generic [ref=e1275]: Heat Exchanger Basics
+                        - generic [ref=e1276]: +30 XP
+                  - 'button "Upcoming: LMTD Method" [ref=e1279] [cursor=pointer]':
+                    - generic [ref=e1282]:
+                      - img [ref=e1284]
+                      - generic [ref=e1286]:
+                        - generic [ref=e1287]: LMTD Method
+                        - generic [ref=e1288]: +30 XP
+                  - 'button "Upcoming: NTU-Effectiveness" [ref=e1291] [cursor=pointer]':
+                    - generic [ref=e1294]:
+                      - img [ref=e1296]
+                      - generic [ref=e1298]:
+                        - generic [ref=e1299]: NTU-Effectiveness
+                        - generic [ref=e1300]: +30 XP
+                  - 'button "Upcoming: Fin Fundamentals" [ref=e1303] [cursor=pointer]':
+                    - generic [ref=e1306]:
+                      - img [ref=e1308]
+                      - generic [ref=e1310]:
+                        - generic [ref=e1311]: Fin Fundamentals
+                        - generic [ref=e1312]: +25 XP
+                  - 'button "Upcoming: Fin Efficiency" [ref=e1315] [cursor=pointer]':
+                    - generic [ref=e1318]:
+                      - img [ref=e1320]
+                      - generic [ref=e1322]:
+                        - generic [ref=e1323]: Fin Efficiency
+                        - generic [ref=e1324]: +25 XP
+                  - 'button "Upcoming: Fin Design" [ref=e1327] [cursor=pointer]':
+                    - generic [ref=e1330]:
+                      - img [ref=e1332]
+                      - generic [ref=e1334]:
+                        - generic [ref=e1335]: Fin Design
+                        - generic [ref=e1336]: +25 XP
+                  - 'button "Upcoming: Transient Conduction Basics" [ref=e1339] [cursor=pointer]':
+                    - generic [ref=e1342]:
+                      - img [ref=e1344]
+                      - generic [ref=e1346]:
+                        - generic [ref=e1347]: Transient Conduction Basics
+                        - generic [ref=e1348]: +30 XP
+                  - 'button "Upcoming: Spatial Effects" [ref=e1351] [cursor=pointer]':
+                    - generic [ref=e1354]:
+                      - img [ref=e1356]
+                      - generic [ref=e1358]:
+                        - generic [ref=e1359]: Spatial Effects
+                        - generic [ref=e1360]: +30 XP
+                  - 'button "Upcoming: Transient Applications" [ref=e1363] [cursor=pointer]':
+                    - generic [ref=e1366]:
+                      - img [ref=e1368]
+                      - generic [ref=e1370]:
+                        - generic [ref=e1371]: Transient Applications
+                        - generic [ref=e1372]: +30 XP
+                  - 'button "Upcoming: Heat Sink Design Chat" [ref=e1375] [cursor=pointer]':
+                    - generic [ref=e1378]:
+                      - img [ref=e1380]
+                      - generic [ref=e1382]:
+                        - generic [ref=e1383]: Heat Sink Design Chat
+                        - generic [ref=e1384]: +30 XP
+                  - 'button "Upcoming: Heat Transfer Speed Round" [ref=e1387] [cursor=pointer]':
+                    - generic [ref=e1390]:
+                      - img [ref=e1392]
+                      - generic [ref=e1394]:
+                        - generic [ref=e1395]: Heat Transfer Speed Round
+                        - generic [ref=e1396]: +25 XP
+              - generic [ref=e1397]:
+                - generic [ref=e1400]: Fluid Mechanics
+                - button "Take placement test to jump to this unit" [ref=e1403] [cursor=pointer]:
+                  - img [ref=e1404]
+                  - img [ref=e1407]:
+                    - generic [ref=e1417]: Jump here
+                - generic [ref=e1418]:
+                  - 'button "Upcoming: Fluid Properties & Statics (1/3)" [ref=e1421] [cursor=pointer]':
+                    - generic [ref=e1424]:
+                      - img [ref=e1426]
+                      - generic [ref=e1428]:
+                        - generic [ref=e1429]: Fluid Properties & Statics (1/3)
+                        - generic [ref=e1430]: +20 XP
+                  - 'button "Upcoming: Fluid Properties & Statics (2/3)" [ref=e1433] [cursor=pointer]':
+                    - generic [ref=e1436]:
+                      - img [ref=e1438]
+                      - generic [ref=e1440]:
+                        - generic [ref=e1441]: Fluid Properties & Statics (2/3)
+                        - generic [ref=e1442]: +20 XP
+                  - 'button "Upcoming: Fluid Properties & Statics (3/3)" [ref=e1445] [cursor=pointer]':
+                    - generic [ref=e1448]:
+                      - img [ref=e1450]
+                      - generic [ref=e1452]:
+                        - generic [ref=e1453]: Fluid Properties & Statics (3/3)
+                        - generic [ref=e1454]: +20 XP
+                  - 'button "Upcoming: Bernoulli & Energy Equation (1/3)" [ref=e1457] [cursor=pointer]':
+                    - generic [ref=e1460]:
+                      - img [ref=e1462]
+                      - generic [ref=e1464]:
+                        - generic [ref=e1465]: Bernoulli & Energy Equation (1/3)
+                        - generic [ref=e1466]: +25 XP
+                  - 'button "Upcoming: Bernoulli & Energy Equation (2/3)" [ref=e1469] [cursor=pointer]':
+                    - generic [ref=e1472]:
+                      - img [ref=e1474]
+                      - generic [ref=e1476]:
+                        - generic [ref=e1477]: Bernoulli & Energy Equation (2/3)
+                        - generic [ref=e1478]: +25 XP
+                  - 'button "Upcoming: Bernoulli & Energy Equation (3/3)" [ref=e1481] [cursor=pointer]':
+                    - generic [ref=e1484]:
+                      - img [ref=e1486]
+                      - generic [ref=e1488]:
+                        - generic [ref=e1489]: Bernoulli & Energy Equation (3/3)
+                        - generic [ref=e1490]: +25 XP
+                  - 'button "Upcoming: Pipe Flow & Losses (1/3)" [ref=e1493] [cursor=pointer]':
+                    - generic [ref=e1496]:
+                      - img [ref=e1498]
+                      - generic [ref=e1500]:
+                        - generic [ref=e1501]: Pipe Flow & Losses (1/3)
+                        - generic [ref=e1502]: +25 XP
+                  - 'button "Upcoming: Pipe Flow & Losses (2/3)" [ref=e1505] [cursor=pointer]':
+                    - generic [ref=e1508]:
+                      - img [ref=e1510]
+                      - generic [ref=e1512]:
+                        - generic [ref=e1513]: Pipe Flow & Losses (2/3)
+                        - generic [ref=e1514]: +25 XP
+                  - 'button "Upcoming: Pipe Flow & Losses (3/3)" [ref=e1517] [cursor=pointer]':
+                    - generic [ref=e1520]:
+                      - img [ref=e1522]
+                      - generic [ref=e1524]:
+                        - generic [ref=e1525]: Pipe Flow & Losses (3/3)
+                        - generic [ref=e1526]: +25 XP
+                  - 'button "Upcoming: Pumps & Turbomachinery (1/3)" [ref=e1529] [cursor=pointer]':
+                    - generic [ref=e1532]:
+                      - img [ref=e1534]
+                      - generic [ref=e1536]:
+                        - generic [ref=e1537]: Pumps & Turbomachinery (1/3)
+                        - generic [ref=e1538]: +30 XP
+                  - 'button "Upcoming: Pumps & Turbomachinery (2/3)" [ref=e1541] [cursor=pointer]':
+                    - generic [ref=e1544]:
+                      - img [ref=e1546]
+                      - generic [ref=e1548]:
+                        - generic [ref=e1549]: Pumps & Turbomachinery (2/3)
+                        - generic [ref=e1550]: +30 XP
+                  - 'button "Upcoming: Pumps & Turbomachinery (3/3)" [ref=e1553] [cursor=pointer]':
+                    - generic [ref=e1556]:
+                      - img [ref=e1558]
+                      - generic [ref=e1560]:
+                        - generic [ref=e1561]: Pumps & Turbomachinery (3/3)
+                        - generic [ref=e1562]: +30 XP
+                  - 'button "Upcoming: Dimensional Analysis (1/3)" [ref=e1565] [cursor=pointer]':
+                    - generic [ref=e1568]:
+                      - img [ref=e1570]
+                      - generic [ref=e1572]:
+                        - generic [ref=e1573]: Dimensional Analysis (1/3)
+                        - generic [ref=e1574]: +25 XP
+                  - 'button "Upcoming: Dimensional Analysis (2/3)" [ref=e1577] [cursor=pointer]':
+                    - generic [ref=e1580]:
+                      - img [ref=e1582]
+                      - generic [ref=e1584]:
+                        - generic [ref=e1585]: Dimensional Analysis (2/3)
+                        - generic [ref=e1586]: +25 XP
+                  - 'button "Upcoming: Dimensional Analysis (3/3)" [ref=e1589] [cursor=pointer]':
+                    - generic [ref=e1592]:
+                      - img [ref=e1594]
+                      - generic [ref=e1596]:
+                        - generic [ref=e1597]: Dimensional Analysis (3/3)
+                        - generic [ref=e1598]: +25 XP
+                  - 'button "Upcoming: Sizing a Pump for a Building" [ref=e1601] [cursor=pointer]':
+                    - generic [ref=e1604]:
+                      - img [ref=e1606]
+                      - generic [ref=e1608]:
+                        - generic [ref=e1609]: Sizing a Pump for a Building
+                        - generic [ref=e1610]: +30 XP
+                  - 'button "Upcoming: Fluids Speed Round" [ref=e1613] [cursor=pointer]':
+                    - generic [ref=e1616]:
+                      - img [ref=e1618]
+                      - generic [ref=e1620]:
+                        - generic [ref=e1621]: Fluids Speed Round
+                        - generic [ref=e1622]: +25 XP
+              - generic [ref=e1623]:
+                - generic [ref=e1626]: How Things Work
+                - button "Take placement test to jump to this unit" [ref=e1629] [cursor=pointer]:
+                  - img [ref=e1630]
+                  - img [ref=e1633]:
+                    - generic [ref=e1643]: Jump here
+                - generic [ref=e1644]:
+                  - 'button "Upcoming: Kitchen Engineering" [ref=e1647] [cursor=pointer]':
+                    - generic [ref=e1650]:
+                      - img [ref=e1652]
+                      - generic [ref=e1654]:
+                        - generic [ref=e1655]: Kitchen Engineering
+                        - generic [ref=e1656]: +25 XP
+                  - 'button "Upcoming: The Car You Drive" [ref=e1659] [cursor=pointer]':
+                    - generic [ref=e1662]:
+                      - img [ref=e1664]
+                      - generic [ref=e1666]:
+                        - generic [ref=e1667]: The Car You Drive
+                        - generic [ref=e1668]: +25 XP
+                  - 'button "Upcoming: Around the House" [ref=e1671] [cursor=pointer]':
+                    - generic [ref=e1674]:
+                      - img [ref=e1676]
+                      - generic [ref=e1678]:
+                        - generic [ref=e1679]: Around the House
+                        - generic [ref=e1680]: +25 XP
+                  - 'button "Upcoming: Tools & Workshop" [ref=e1683] [cursor=pointer]':
+                    - generic [ref=e1686]:
+                      - img [ref=e1688]
+                      - generic [ref=e1690]:
+                        - generic [ref=e1691]: Tools & Workshop
+                        - generic [ref=e1692]: +25 XP
+                  - 'button "Upcoming: Sports & Outdoors" [ref=e1695] [cursor=pointer]':
+                    - generic [ref=e1698]:
+                      - img [ref=e1700]
+                      - generic [ref=e1702]:
+                        - generic [ref=e1703]: Sports & Outdoors
+                        - generic [ref=e1704]: +25 XP
+                  - 'button "Upcoming: Buildings & Infrastructure" [ref=e1707] [cursor=pointer]':
+                    - generic [ref=e1710]:
+                      - img [ref=e1712]
+                      - generic [ref=e1714]:
+                        - generic [ref=e1715]: Buildings & Infrastructure
+                        - generic [ref=e1716]: +25 XP
+                  - 'button "Upcoming: Everyday Failures" [ref=e1719] [cursor=pointer]':
+                    - generic [ref=e1722]:
+                      - img [ref=e1724]
+                      - generic [ref=e1726]:
+                        - generic [ref=e1727]: Everyday Failures
+                        - generic [ref=e1728]: +25 XP
+              - generic [ref=e1729]:
+                - generic [ref=e1732]: Materials & Manufacturing
+                - button "Take placement test to jump to this unit" [ref=e1735] [cursor=pointer]:
+                  - img [ref=e1736]
+                  - img [ref=e1739]:
+                    - generic [ref=e1749]: Jump here
+                - generic [ref=e1750]:
+                  - 'button "Upcoming: Tensile Test Basics" [ref=e1753] [cursor=pointer]':
+                    - generic [ref=e1756]:
+                      - img [ref=e1758]
+                      - generic [ref=e1760]:
+                        - generic [ref=e1761]: Tensile Test Basics
+                        - generic [ref=e1762]: +20 XP
+                  - 'button "Upcoming: Hardness, Creep, and Fatigue" [ref=e1765] [cursor=pointer]':
+                    - generic [ref=e1768]:
+                      - img [ref=e1770]
+                      - generic [ref=e1772]:
+                        - generic [ref=e1773]: Hardness, Creep, and Fatigue
+                        - generic [ref=e1774]: +25 XP
+                  - 'button "Upcoming: Fracture and Toughness" [ref=e1777] [cursor=pointer]':
+                    - generic [ref=e1780]:
+                      - img [ref=e1782]
+                      - generic [ref=e1784]:
+                        - generic [ref=e1785]: Fracture and Toughness
+                        - generic [ref=e1786]: +30 XP
+                  - 'button "Upcoming: Iron-Carbon Diagram" [ref=e1789] [cursor=pointer]':
+                    - generic [ref=e1792]:
+                      - img [ref=e1794]
+                      - generic [ref=e1796]:
+                        - generic [ref=e1797]: Iron-Carbon Diagram
+                        - generic [ref=e1798]: +25 XP
+                  - 'button "Upcoming: Heat Treatment Processes" [ref=e1801] [cursor=pointer]':
+                    - generic [ref=e1804]:
+                      - img [ref=e1806]
+                      - generic [ref=e1808]:
+                        - generic [ref=e1809]: Heat Treatment Processes
+                        - generic [ref=e1810]: +30 XP
+                  - 'button "Upcoming: Advanced Heat Treatment" [ref=e1813] [cursor=pointer]':
+                    - generic [ref=e1816]:
+                      - img [ref=e1818]
+                      - generic [ref=e1820]:
+                        - generic [ref=e1821]: Advanced Heat Treatment
+                        - generic [ref=e1822]: +35 XP
+                  - 'button "Upcoming: Casting Processes" [ref=e1825] [cursor=pointer]':
+                    - generic [ref=e1828]:
+                      - img [ref=e1830]
+                      - generic [ref=e1832]:
+                        - generic [ref=e1833]: Casting Processes
+                        - generic [ref=e1834]: +25 XP
+                  - 'button "Upcoming: Forming Processes" [ref=e1837] [cursor=pointer]':
+                    - generic [ref=e1840]:
+                      - img [ref=e1842]
+                      - generic [ref=e1844]:
+                        - generic [ref=e1845]: Forming Processes
+                        - generic [ref=e1846]: +30 XP
+                  - 'button "Upcoming: Casting and Forming Defects" [ref=e1849] [cursor=pointer]':
+                    - generic [ref=e1852]:
+                      - img [ref=e1854]
+                      - generic [ref=e1856]:
+                        - generic [ref=e1857]: Casting and Forming Defects
+                        - generic [ref=e1858]: +35 XP
+                  - 'button "Upcoming: Turning, Milling, and Drilling" [ref=e1861] [cursor=pointer]':
+                    - generic [ref=e1864]:
+                      - img [ref=e1866]
+                      - generic [ref=e1868]:
+                        - generic [ref=e1869]: Turning, Milling, and Drilling
+                        - generic [ref=e1870]: +30 XP
+                  - 'button "Upcoming: Tool Wear and Surface Finish" [ref=e1873] [cursor=pointer]':
+                    - generic [ref=e1876]:
+                      - img [ref=e1878]
+                      - generic [ref=e1880]:
+                        - generic [ref=e1881]: Tool Wear and Surface Finish
+                        - generic [ref=e1882]: +35 XP
+                  - 'button "Upcoming: CNC and Process Planning" [ref=e1885] [cursor=pointer]':
+                    - generic [ref=e1888]:
+                      - img [ref=e1890]
+                      - generic [ref=e1892]:
+                        - generic [ref=e1893]: CNC and Process Planning
+                        - generic [ref=e1894]: +40 XP
+                  - 'button "Upcoming: Additive Manufacturing" [ref=e1897] [cursor=pointer]':
+                    - generic [ref=e1900]:
+                      - img [ref=e1902]
+                      - generic [ref=e1904]:
+                        - generic [ref=e1905]: Additive Manufacturing
+                        - generic [ref=e1906]: +25 XP
+                  - 'button "Upcoming: Injection Molding and Sheet Metal" [ref=e1909] [cursor=pointer]':
+                    - generic [ref=e1912]:
+                      - img [ref=e1914]
+                      - generic [ref=e1916]:
+                        - generic [ref=e1917]: Injection Molding and Sheet Metal
+                        - generic [ref=e1918]: +30 XP
+                  - 'button "Upcoming: Design for Manufacturing" [ref=e1921] [cursor=pointer]':
+                    - generic [ref=e1924]:
+                      - img [ref=e1926]
+                      - generic [ref=e1928]:
+                        - generic [ref=e1929]: Design for Manufacturing
+                        - generic [ref=e1930]: +35 XP
+                  - 'button "Upcoming: Welding Processes" [ref=e1933] [cursor=pointer]':
+                    - generic [ref=e1936]:
+                      - img [ref=e1938]
+                      - generic [ref=e1940]:
+                        - generic [ref=e1941]: Welding Processes
+                        - generic [ref=e1942]: +30 XP
+                  - 'button "Upcoming: HAZ and Weld Defects" [ref=e1945] [cursor=pointer]':
+                    - generic [ref=e1948]:
+                      - img [ref=e1950]
+                      - generic [ref=e1952]:
+                        - generic [ref=e1953]: HAZ and Weld Defects
+                        - generic [ref=e1954]: +35 XP
+                  - 'button "Upcoming: Joint Design and Inspection" [ref=e1957] [cursor=pointer]':
+                    - generic [ref=e1960]:
+                      - img [ref=e1962]
+                      - generic [ref=e1964]:
+                        - generic [ref=e1965]: Joint Design and Inspection
+                        - generic [ref=e1966]: +40 XP
+                  - 'button "Upcoming: Materials Selection Meeting" [ref=e1969] [cursor=pointer]':
+                    - generic [ref=e1972]:
+                      - img [ref=e1974]
+                      - generic [ref=e1976]:
+                        - generic [ref=e1977]: Materials Selection Meeting
+                        - generic [ref=e1978]: +25 XP
+                  - 'button "Upcoming: Materials Rapid Fire" [ref=e1981] [cursor=pointer]':
+                    - generic [ref=e1984]:
+                      - img [ref=e1986]
+                      - generic [ref=e1988]:
+                        - generic [ref=e1989]: Materials Rapid Fire
+                        - generic [ref=e1990]: +20 XP
+              - generic [ref=e1991]:
+                - generic [ref=e1994]: Machine Design
+                - button "Take placement test to jump to this unit" [ref=e1997] [cursor=pointer]:
+                  - img [ref=e1998]
+                  - img [ref=e2001]:
+                    - generic [ref=e2011]: Jump here
+                - generic [ref=e2012]:
+                  - 'button "Upcoming: Shaft Basics" [ref=e2015] [cursor=pointer]':
+                    - generic [ref=e2018]:
+                      - img [ref=e2020]
+                      - generic [ref=e2022]:
+                        - generic [ref=e2023]: Shaft Basics
+                        - generic [ref=e2024]: +25 XP
+                  - 'button "Upcoming: Keys & Critical Speed" [ref=e2027] [cursor=pointer]':
+                    - generic [ref=e2030]:
+                      - img [ref=e2032]
+                      - generic [ref=e2034]:
+                        - generic [ref=e2035]: Keys & Critical Speed
+                        - generic [ref=e2036]: +25 XP
+                  - 'button "Upcoming: Shaft Fatigue Design" [ref=e2039] [cursor=pointer]':
+                    - generic [ref=e2042]:
+                      - img [ref=e2044]
+                      - generic [ref=e2046]:
+                        - generic [ref=e2047]: Shaft Fatigue Design
+                        - generic [ref=e2048]: +25 XP
+                  - 'button "Upcoming: Bearing Types" [ref=e2051] [cursor=pointer]':
+                    - generic [ref=e2054]:
+                      - img [ref=e2056]
+                      - generic [ref=e2058]:
+                        - generic [ref=e2059]: Bearing Types
+                        - generic [ref=e2060]: +25 XP
+                  - 'button "Upcoming: Bearing Life & Selection" [ref=e2063] [cursor=pointer]':
+                    - generic [ref=e2066]:
+                      - img [ref=e2068]
+                      - generic [ref=e2070]:
+                        - generic [ref=e2071]: Bearing Life & Selection
+                        - generic [ref=e2072]: +25 XP
+                  - 'button "Upcoming: Lubrication & Journal Bearings" [ref=e2075] [cursor=pointer]':
+                    - generic [ref=e2078]:
+                      - img [ref=e2080]
+                      - generic [ref=e2082]:
+                        - generic [ref=e2083]: Lubrication & Journal Bearings
+                        - generic [ref=e2084]: +25 XP
+                  - 'button "Upcoming: Gear Basics" [ref=e2087] [cursor=pointer]':
+                    - generic [ref=e2090]:
+                      - img [ref=e2092]
+                      - generic [ref=e2094]:
+                        - generic [ref=e2095]: Gear Basics
+                        - generic [ref=e2096]: +30 XP
+                  - 'button "Upcoming: Gear Types" [ref=e2099] [cursor=pointer]':
+                    - generic [ref=e2102]:
+                      - img [ref=e2104]
+                      - generic [ref=e2106]:
+                        - generic [ref=e2107]: Gear Types
+                        - generic [ref=e2108]: +30 XP
+                  - 'button "Upcoming: Gear Tooth Design" [ref=e2111] [cursor=pointer]':
+                    - generic [ref=e2114]:
+                      - img [ref=e2116]
+                      - generic [ref=e2118]:
+                        - generic [ref=e2119]: Gear Tooth Design
+                        - generic [ref=e2120]: +30 XP
+                  - 'button "Upcoming: Bolt Basics" [ref=e2123] [cursor=pointer]':
+                    - generic [ref=e2126]:
+                      - img [ref=e2128]
+                      - generic [ref=e2130]:
+                        - generic [ref=e2131]: Bolt Basics
+                        - generic [ref=e2132]: +25 XP
+                  - 'button "Upcoming: Bolt Design & Analysis" [ref=e2135] [cursor=pointer]':
+                    - generic [ref=e2138]:
+                      - img [ref=e2140]
+                      - generic [ref=e2142]:
+                        - generic [ref=e2143]: Bolt Design & Analysis
+                        - generic [ref=e2144]: +25 XP
+                  - 'button "Upcoming: Welded & Adhesive Joints" [ref=e2147] [cursor=pointer]':
+                    - generic [ref=e2150]:
+                      - img [ref=e2152]
+                      - generic [ref=e2154]:
+                        - generic [ref=e2155]: Welded & Adhesive Joints
+                        - generic [ref=e2156]: +25 XP
+                  - 'button "Upcoming: Spring Basics" [ref=e2159] [cursor=pointer]':
+                    - generic [ref=e2162]:
+                      - img [ref=e2164]
+                      - generic [ref=e2166]:
+                        - generic [ref=e2167]: Spring Basics
+                        - generic [ref=e2168]: +25 XP
+                  - 'button "Upcoming: Spring Fatigue & Seals" [ref=e2171] [cursor=pointer]':
+                    - generic [ref=e2174]:
+                      - img [ref=e2176]
+                      - generic [ref=e2178]:
+                        - generic [ref=e2179]: Spring Fatigue & Seals
+                        - generic [ref=e2180]: +25 XP
+                  - 'button "Upcoming: Advanced Spring & Seal Design" [ref=e2183] [cursor=pointer]':
+                    - generic [ref=e2186]:
+                      - img [ref=e2188]
+                      - generic [ref=e2190]:
+                        - generic [ref=e2191]: Advanced Spring & Seal Design
+                        - generic [ref=e2192]: +25 XP
+                  - 'button "Upcoming: Gearbox Bearing Selection" [ref=e2195] [cursor=pointer]':
+                    - generic [ref=e2198]:
+                      - img [ref=e2200]
+                      - generic [ref=e2202]:
+                        - generic [ref=e2203]: Gearbox Bearing Selection
+                        - generic [ref=e2204]: +30 XP
+                  - 'button "Upcoming: Machine Design Speed Round" [ref=e2207] [cursor=pointer]':
+                    - generic [ref=e2210]:
+                      - img [ref=e2212]
+                      - generic [ref=e2214]:
+                        - generic [ref=e2215]: Machine Design Speed Round
+                        - generic [ref=e2216]: +30 XP
+              - generic [ref=e2217]:
+                - generic [ref=e2220]: GD&T & Tolerancing
+                - button "Take placement test to jump to this unit" [ref=e2223] [cursor=pointer]:
+                  - img [ref=e2224]
+                  - img [ref=e2227]:
+                    - generic [ref=e2237]: Jump here
+                - generic [ref=e2238]:
+                  - 'button "Upcoming: Tolerance Fundamentals" [ref=e2241] [cursor=pointer]':
+                    - generic [ref=e2244]:
+                      - img [ref=e2246]
+                      - generic [ref=e2248]:
+                        - generic [ref=e2249]: Tolerance Fundamentals
+                        - generic [ref=e2250]: +20 XP
+                  - 'button "Upcoming: ISO Fit System" [ref=e2253] [cursor=pointer]':
+                    - generic [ref=e2256]:
+                      - img [ref=e2258]
+                      - generic [ref=e2260]:
+                        - generic [ref=e2261]: ISO Fit System
+                        - generic [ref=e2262]: +20 XP
+                  - 'button "Upcoming: Applied Fits & Standards" [ref=e2265] [cursor=pointer]':
+                    - generic [ref=e2268]:
+                      - img [ref=e2270]
+                      - generic [ref=e2272]:
+                        - generic [ref=e2273]: Applied Fits & Standards
+                        - generic [ref=e2274]: +20 XP
+                  - 'button "Upcoming: GD&T Basics" [ref=e2277] [cursor=pointer]':
+                    - generic [ref=e2280]:
+                      - img [ref=e2282]
+                      - generic [ref=e2284]:
+                        - generic [ref=e2285]: GD&T Basics
+                        - generic [ref=e2286]: +25 XP
+                  - 'button "Upcoming: Orientation & Position" [ref=e2289] [cursor=pointer]':
+                    - generic [ref=e2292]:
+                      - img [ref=e2294]
+                      - generic [ref=e2296]:
+                        - generic [ref=e2297]: Orientation & Position
+                        - generic [ref=e2298]: +25 XP
+                  - 'button "Upcoming: Advanced GD&T" [ref=e2301] [cursor=pointer]':
+                    - generic [ref=e2304]:
+                      - img [ref=e2306]
+                      - generic [ref=e2308]:
+                        - generic [ref=e2309]: Advanced GD&T
+                        - generic [ref=e2310]: +25 XP
+                  - 'button "Upcoming: Datum Basics" [ref=e2313] [cursor=pointer]':
+                    - generic [ref=e2316]:
+                      - img [ref=e2318]
+                      - generic [ref=e2320]:
+                        - generic [ref=e2321]: Datum Basics
+                        - generic [ref=e2322]: +25 XP
+                  - 'button "Upcoming: Datum Targets & Applications" [ref=e2325] [cursor=pointer]':
+                    - generic [ref=e2328]:
+                      - img [ref=e2330]
+                      - generic [ref=e2332]:
+                        - generic [ref=e2333]: Datum Targets & Applications
+                        - generic [ref=e2334]: +25 XP
+                  - 'button "Upcoming: Datum Systems in Practice" [ref=e2337] [cursor=pointer]':
+                    - generic [ref=e2340]:
+                      - img [ref=e2342]
+                      - generic [ref=e2344]:
+                        - generic [ref=e2345]: Datum Systems in Practice
+                        - generic [ref=e2346]: +25 XP
+                  - 'button "Upcoming: Stack-Up Basics" [ref=e2349] [cursor=pointer]':
+                    - generic [ref=e2352]:
+                      - img [ref=e2354]
+                      - generic [ref=e2356]:
+                        - generic [ref=e2357]: Stack-Up Basics
+                        - generic [ref=e2358]: +30 XP
+                  - 'button "Upcoming: RSS & Monte Carlo" [ref=e2361] [cursor=pointer]':
+                    - generic [ref=e2364]:
+                      - img [ref=e2366]
+                      - generic [ref=e2368]:
+                        - generic [ref=e2369]: RSS & Monte Carlo
+                        - generic [ref=e2370]: +30 XP
+                  - 'button "Upcoming: Stack-Up Solutions" [ref=e2373] [cursor=pointer]':
+                    - generic [ref=e2376]:
+                      - img [ref=e2378]
+                      - generic [ref=e2380]:
+                        - generic [ref=e2381]: Stack-Up Solutions
+                        - generic [ref=e2382]: +30 XP
+                  - 'button "Upcoming: Surface Roughness" [ref=e2385] [cursor=pointer]':
+                    - generic [ref=e2388]:
+                      - img [ref=e2390]
+                      - generic [ref=e2392]:
+                        - generic [ref=e2393]: Surface Roughness
+                        - generic [ref=e2394]: +25 XP
+                  - 'button "Upcoming: Metrology Fundamentals" [ref=e2397] [cursor=pointer]':
+                    - generic [ref=e2400]:
+                      - img [ref=e2402]
+                      - generic [ref=e2404]:
+                        - generic [ref=e2405]: Metrology Fundamentals
+                        - generic [ref=e2406]: +25 XP
+                  - 'button "Upcoming: Applied Metrology" [ref=e2409] [cursor=pointer]':
+                    - generic [ref=e2412]:
+                      - img [ref=e2414]
+                      - generic [ref=e2416]:
+                        - generic [ref=e2417]: Applied Metrology
+                        - generic [ref=e2418]: +25 XP
+                  - 'button "Upcoming: Drawing Review" [ref=e2421] [cursor=pointer]':
+                    - generic [ref=e2424]:
+                      - img [ref=e2426]
+                      - generic [ref=e2428]:
+                        - generic [ref=e2429]: Drawing Review
+                        - generic [ref=e2430]: +20 XP
+                  - 'button "Upcoming: GD&T Speed Round" [ref=e2433] [cursor=pointer]':
+                    - generic [ref=e2436]:
+                      - img [ref=e2438]
+                      - generic [ref=e2440]:
+                        - generic [ref=e2441]: GD&T Speed Round
+                        - generic [ref=e2442]: +20 XP
+              - generic [ref=e2443]:
+                - generic [ref=e2446]: Interview Problem Solving
+                - button "Take placement test to jump to this unit" [ref=e2449] [cursor=pointer]:
+                  - img [ref=e2450]
+                  - img [ref=e2453]:
+                    - generic [ref=e2463]: Jump here
+                - generic [ref=e2464]:
+                  - 'button "Upcoming: Fermi Problems Basics" [ref=e2467] [cursor=pointer]':
+                    - generic [ref=e2470]:
+                      - img [ref=e2472]
+                      - generic [ref=e2474]:
+                        - generic [ref=e2475]: Fermi Problems Basics
+                        - generic [ref=e2476]: +25 XP
+                  - 'button "Upcoming: Anchor Values & Sanity Checks" [ref=e2479] [cursor=pointer]':
+                    - generic [ref=e2482]:
+                      - img [ref=e2484]
+                      - generic [ref=e2486]:
+                        - generic [ref=e2487]: Anchor Values & Sanity Checks
+                        - generic [ref=e2488]: +25 XP
+                  - 'button "Upcoming: Scaling Laws & Advanced Estimation" [ref=e2491] [cursor=pointer]':
+                    - generic [ref=e2494]:
+                      - img [ref=e2496]
+                      - generic [ref=e2498]:
+                        - generic [ref=e2499]: Scaling Laws & Advanced Estimation
+                        - generic [ref=e2500]: +30 XP
+                  - 'button "Upcoming: Failure Modes & Fracture Surfaces" [ref=e2503] [cursor=pointer]':
+                    - generic [ref=e2506]:
+                      - img [ref=e2508]
+                      - generic [ref=e2510]:
+                        - generic [ref=e2511]: Failure Modes & Fracture Surfaces
+                        - generic [ref=e2512]: +30 XP
+                  - 'button "Upcoming: Root Cause Analysis Tools" [ref=e2515] [cursor=pointer]':
+                    - generic [ref=e2518]:
+                      - img [ref=e2520]
+                      - generic [ref=e2522]:
+                        - generic [ref=e2523]: Root Cause Analysis Tools
+                        - generic [ref=e2524]: +30 XP
+                  - 'button "Upcoming: Environment-Assisted Failures" [ref=e2527] [cursor=pointer]':
+                    - generic [ref=e2530]:
+                      - img [ref=e2532]
+                      - generic [ref=e2534]:
+                        - generic [ref=e2535]: Environment-Assisted Failures
+                        - generic [ref=e2536]: +35 XP
+                  - 'button "Upcoming: Material Selection Basics" [ref=e2539] [cursor=pointer]':
+                    - generic [ref=e2542]:
+                      - img [ref=e2544]
+                      - generic [ref=e2546]:
+                        - generic [ref=e2547]: Material Selection Basics
+                        - generic [ref=e2548]: +30 XP
+                  - 'button "Upcoming: DFM, DFA & Cost Reduction" [ref=e2551] [cursor=pointer]':
+                    - generic [ref=e2554]:
+                      - img [ref=e2556]
+                      - generic [ref=e2558]:
+                        - generic [ref=e2559]: DFM, DFA & Cost Reduction
+                        - generic [ref=e2560]: +30 XP
+                  - 'button "Upcoming: Decision Matrices & Optimization" [ref=e2563] [cursor=pointer]':
+                    - generic [ref=e2566]:
+                      - img [ref=e2568]
+                      - generic [ref=e2570]:
+                        - generic [ref=e2571]: Decision Matrices & Optimization
+                        - generic [ref=e2572]: +35 XP
+                  - 'button "Upcoming: FEA Mesh & Elements" [ref=e2575] [cursor=pointer]':
+                    - generic [ref=e2578]:
+                      - img [ref=e2580]
+                      - generic [ref=e2582]:
+                        - generic [ref=e2583]: FEA Mesh & Elements
+                        - generic [ref=e2584]: +25 XP
+                  - 'button "Upcoming: Boundary Conditions & Convergence" [ref=e2587] [cursor=pointer]':
+                    - generic [ref=e2590]:
+                      - img [ref=e2592]
+                      - generic [ref=e2594]:
+                        - generic [ref=e2595]: Boundary Conditions & Convergence
+                        - generic [ref=e2596]: +25 XP
+                  - 'button "Upcoming: Interpreting FEA Results" [ref=e2599] [cursor=pointer]':
+                    - generic [ref=e2602]:
+                      - img [ref=e2604]
+                      - generic [ref=e2606]:
+                        - generic [ref=e2607]: Interpreting FEA Results
+                        - generic [ref=e2608]: +30 XP
+                  - 'button "Upcoming: Engineering Case Studies" [ref=e2611] [cursor=pointer]':
+                    - generic [ref=e2614]:
+                      - img [ref=e2616]
+                      - generic [ref=e2618]:
+                        - generic [ref=e2619]: Engineering Case Studies
+                        - generic [ref=e2620]: +30 XP
+                  - 'button "Upcoming: Troubleshooting Scenarios" [ref=e2623] [cursor=pointer]':
+                    - generic [ref=e2626]:
+                      - img [ref=e2628]
+                      - generic [ref=e2630]:
+                        - generic [ref=e2631]: Troubleshooting Scenarios
+                        - generic [ref=e2632]: +30 XP
+                  - 'button "Upcoming: Cross-Disciplinary Design" [ref=e2635] [cursor=pointer]':
+                    - generic [ref=e2638]:
+                      - img [ref=e2640]
+                      - generic [ref=e2642]:
+                        - generic [ref=e2643]: Cross-Disciplinary Design
+                        - generic [ref=e2644]: +35 XP
+                  - 'button "Upcoming: Standards & Quality Systems" [ref=e2647] [cursor=pointer]':
+                    - generic [ref=e2650]:
+                      - img [ref=e2652]
+                      - generic [ref=e2654]:
+                        - generic [ref=e2655]: Standards & Quality Systems
+                        - generic [ref=e2656]: +25 XP
+                  - 'button "Upcoming: Risk Assessment & Change Control" [ref=e2659] [cursor=pointer]':
+                    - generic [ref=e2662]:
+                      - img [ref=e2664]
+                      - generic [ref=e2666]:
+                        - generic [ref=e2667]: Risk Assessment & Change Control
+                        - generic [ref=e2668]: +25 XP
+                  - 'button "Upcoming: Project Management for Engineers" [ref=e2671] [cursor=pointer]':
+                    - generic [ref=e2674]:
+                      - img [ref=e2676]
+                      - generic [ref=e2678]:
+                        - generic [ref=e2679]: Project Management for Engineers
+                        - generic [ref=e2680]: +30 XP
+                  - 'button "Upcoming: Mock Technical Interview" [ref=e2683] [cursor=pointer]':
+                    - generic [ref=e2686]:
+                      - img [ref=e2688]
+                      - generic [ref=e2690]:
+                        - generic [ref=e2691]: Mock Technical Interview
+                        - generic [ref=e2692]: +20 XP
+                  - 'button "Upcoming: Interview Rapid Fire" [ref=e2695] [cursor=pointer]':
+                    - generic [ref=e2698]:
+                      - img [ref=e2700]
+                      - generic [ref=e2702]:
+                        - generic [ref=e2703]: Interview Rapid Fire
+                        - generic [ref=e2704]: +20 XP
+              - generic [ref=e2705]:
+                - generic [ref=e2706]: 🏆
+                - paragraph [ref=e2707]: Course Complete!
+                - paragraph [ref=e2708]: You're ready for your interview
+        - contentinfo [ref=e2709]:
+          - generic [ref=e2710]:
+            - paragraph [ref=e2711]: © 2026 Octokeen
+            - navigation "Footer" [ref=e2712]:
+              - link "Privacy Policy" [ref=e2713] [cursor=pointer]:
+                - /url: /privacy
+              - link "Terms of Service" [ref=e2714] [cursor=pointer]:
+                - /url: /terms
+              - link "Contact" [ref=e2715] [cursor=pointer]:
+                - /url: /contact
+    - button "🔧" [ref=e2717]
+  - button "Open Next.js Dev Tools" [ref=e2723] [cursor=pointer]:
+    - img [ref=e2724]
+  - alert [ref=e2727]
+  - dialog "Cookie consent" [ref=e2728]:
+    - generic [ref=e2729]:
+      - generic [ref=e2730]:
+        - img [ref=e2731]
+        - paragraph [ref=e2733]:
+          - text: We use essential cookies to keep you signed in and optional analytics cookies to improve the app.
+          - link "Privacy Policy" [ref=e2734] [cursor=pointer]:
+            - /url: /privacy
+      - generic [ref=e2735]:
+        - button "Decline" [ref=e2736]
+        - button "Accept" [ref=e2737]

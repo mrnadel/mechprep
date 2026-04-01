@@ -1,0 +1,2009 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - navigation "Desktop navigation" [ref=e5]:
+        - generic [ref=e6]:
+          - paragraph [ref=e7]: Octokeen
+          - link "Finance" [ref=e8] [cursor=pointer]:
+            - /url: /switch-course
+            - generic [ref=e9]: Finance
+        - generic [ref=e10]:
+          - link "Home" [ref=e11] [cursor=pointer]:
+            - /url: /
+            - img [ref=e13]
+            - generic [ref=e18]: Home
+          - link "Quests" [ref=e19] [cursor=pointer]:
+            - /url: /quests
+            - img [ref=e21]
+            - generic [ref=e30]: Quests
+          - link "League" [ref=e31] [cursor=pointer]:
+            - /url: /league
+            - img [ref=e33]
+            - generic [ref=e39]: League
+          - link "Friends" [ref=e40] [cursor=pointer]:
+            - /url: /friends
+            - img [ref=e42]
+            - generic [ref=e47]: Friends
+          - link "Profile" [ref=e48] [cursor=pointer]:
+            - /url: /profile
+            - img [ref=e50]
+            - generic [ref=e53]: Profile
+      - generic [ref=e54]:
+        - main [ref=e55]:
+          - generic [ref=e57]:
+            - button "Switch course — Personal Finance" [ref=e58]
+            - button "1 day streak" [ref=e59]:
+              - generic [ref=e61]: "1"
+            - button "0 gems" [ref=e62]:
+              - generic [ref=e63]: 💎
+              - generic [ref=e65]: "0"
+            - button "Unlimited hearts" [ref=e66]:
+              - img [ref=e67]
+              - generic [ref=e69]: ∞
+          - generic [ref=e72]:
+            - generic [ref=e73]: Daily Goal
+            - generic [ref=e74]: 0 / 40 XP
+          - generic [ref=e76]:
+            - 'button "Unit 1: Welcome to Money. Tap to browse units." [ref=e80] [cursor=pointer]':
+              - generic [ref=e81]:
+                - generic [ref=e82]: Section 1, Unit 1
+                - generic [ref=e83]: Welcome to Money
+              - img [ref=e85]
+            - generic [ref=e88]:
+              - generic [ref=e90]:
+                - 'button "Start: Money 101" [ref=e93] [cursor=pointer]':
+                  - generic [ref=e96]:
+                    - img [ref=e98]
+                    - generic [ref=e100]:
+                      - generic [ref=e101]: Money 101
+                      - generic [ref=e102]: +10 XP · 9 Q
+                    - generic [ref=e104]: Go
+                - 'button "Upcoming: Your Bank Account" [ref=e107] [cursor=pointer]':
+                  - generic [ref=e110]:
+                    - img [ref=e112]
+                    - generic [ref=e114]:
+                      - generic [ref=e115]: Your Bank Account
+                      - generic [ref=e116]: +10 XP · 8 Q
+                - 'button "Upcoming: Saving vs Spending" [ref=e119] [cursor=pointer]':
+                  - generic [ref=e122]:
+                    - img [ref=e124]
+                    - generic [ref=e126]:
+                      - generic [ref=e127]: Saving vs Spending
+                      - generic [ref=e128]: +10 XP · 8 Q
+              - generic [ref=e129]:
+                - generic [ref=e132]: Your Money Right Now
+                - button "Take placement test to jump to this unit" [ref=e135] [cursor=pointer]:
+                  - img [ref=e136]
+                  - img [ref=e139]:
+                    - generic [ref=e149]: Jump here
+                - generic [ref=e150]:
+                  - 'button "Upcoming: Small Money, Big Difference" [ref=e153] [cursor=pointer]':
+                    - generic [ref=e156]:
+                      - img [ref=e158]
+                      - generic [ref=e160]:
+                        - generic [ref=e161]: Small Money, Big Difference
+                        - generic [ref=e162]: +10 XP · 9 Q
+                  - 'button "Upcoming: The Latte Factor" [ref=e165] [cursor=pointer]':
+                    - generic [ref=e168]:
+                      - img [ref=e170]
+                      - generic [ref=e172]:
+                        - generic [ref=e173]: The Latte Factor
+                        - generic [ref=e174]: +15 XP · 11 Q
+                  - 'button "Upcoming: Where It All Goes" [ref=e177] [cursor=pointer]':
+                    - generic [ref=e180]:
+                      - img [ref=e182]
+                      - generic [ref=e184]:
+                        - generic [ref=e185]: Where It All Goes
+                        - generic [ref=e186]: +15 XP · 10 Q
+                  - 'button "Upcoming: Coffee Shop Budget Chat" [ref=e189] [cursor=pointer]':
+                    - generic [ref=e192]:
+                      - img [ref=e194]
+                      - generic [ref=e196]:
+                        - generic [ref=e197]: Coffee Shop Budget Chat
+                        - generic [ref=e198]: +20 XP
+                  - 'button "Upcoming: The Paycheck Reality" [ref=e201] [cursor=pointer]':
+                    - generic [ref=e204]:
+                      - img [ref=e206]
+                      - generic [ref=e208]:
+                        - generic [ref=e209]: The Paycheck Reality
+                        - generic [ref=e210]: +15 XP · 9 Q
+                  - 'button "Upcoming: Needs vs Wants" [ref=e213] [cursor=pointer]':
+                    - generic [ref=e216]:
+                      - img [ref=e218]
+                      - generic [ref=e220]:
+                        - generic [ref=e221]: Needs vs Wants
+                        - generic [ref=e222]: +15 XP · 10 Q
+                  - 'button "Upcoming: Your First Budget" [ref=e225] [cursor=pointer]':
+                    - generic [ref=e228]:
+                      - img [ref=e230]
+                      - generic [ref=e232]:
+                        - generic [ref=e233]: Your First Budget
+                        - generic [ref=e234]: +15 XP · 10 Q
+                  - 'button "Upcoming: Paycheck & Budget Blitz" [ref=e237] [cursor=pointer]':
+                    - generic [ref=e240]:
+                      - img [ref=e242]
+                      - generic [ref=e244]:
+                        - generic [ref=e245]: Paycheck & Budget Blitz
+                        - generic [ref=e246]: +20 XP
+                  - 'button "Upcoming: Pay Yourself First" [ref=e249] [cursor=pointer]':
+                    - generic [ref=e252]:
+                      - img [ref=e254]
+                      - generic [ref=e256]:
+                        - generic [ref=e257]: Pay Yourself First
+                        - generic [ref=e258]: +15 XP · 10 Q
+              - generic [ref=e259]:
+                - generic [ref=e262]: Master Your Bank & Taxes
+                - button "Take placement test to jump to this unit" [ref=e265] [cursor=pointer]:
+                  - img [ref=e266]
+                  - img [ref=e269]:
+                    - generic [ref=e279]: Jump here
+                - generic [ref=e280]:
+                  - 'button "Upcoming: Checking vs Savings: What Goes Where" [ref=e283] [cursor=pointer]':
+                    - generic [ref=e286]:
+                      - img [ref=e288]
+                      - generic [ref=e290]:
+                        - generic [ref=e291]: "Checking vs Savings: What Goes Where"
+                        - generic [ref=e292]: +15 XP · 11 Q
+                  - 'button "Upcoming: Banks vs Credit Unions vs Online" [ref=e295] [cursor=pointer]':
+                    - generic [ref=e298]:
+                      - img [ref=e300]
+                      - generic [ref=e302]:
+                        - generic [ref=e303]: Banks vs Credit Unions vs Online
+                        - generic [ref=e304]: +15 XP · 10 Q
+                  - 'button "Upcoming: Fee Graveyard: Stop Losing Money" [ref=e307] [cursor=pointer]':
+                    - generic [ref=e310]:
+                      - img [ref=e312]
+                      - generic [ref=e314]:
+                        - generic [ref=e315]: "Fee Graveyard: Stop Losing Money"
+                        - generic [ref=e316]: +15 XP · 11 Q
+                  - 'button "Upcoming: Choosing a Bank Account" [ref=e319] [cursor=pointer]':
+                    - generic [ref=e322]:
+                      - img [ref=e324]
+                      - generic [ref=e326]:
+                        - generic [ref=e327]: Choosing a Bank Account
+                        - generic [ref=e328]: +20 XP
+                  - 'button "Upcoming: Digital Wallets & P2P Payments" [ref=e331] [cursor=pointer]':
+                    - generic [ref=e334]:
+                      - img [ref=e336]
+                      - generic [ref=e338]:
+                        - generic [ref=e339]: Digital Wallets & P2P Payments
+                        - generic [ref=e340]: +15 XP · 10 Q
+                  - 'button "Upcoming: Banking Safety & Fraud Defense" [ref=e343] [cursor=pointer]':
+                    - generic [ref=e346]:
+                      - img [ref=e348]
+                      - generic [ref=e350]:
+                        - generic [ref=e351]: Banking Safety & Fraud Defense
+                        - generic [ref=e352]: +15 XP · 10 Q
+                  - 'button "Upcoming: Taxes Aren''t Theft (Here''s Why)" [ref=e355] [cursor=pointer]':
+                    - generic [ref=e358]:
+                      - img [ref=e360]
+                      - generic [ref=e362]:
+                        - generic [ref=e363]: Taxes Aren't Theft (Here's Why)
+                        - generic [ref=e364]: +15 XP · 10 Q
+                  - 'button "Upcoming: Tax Brackets Aren''t What You Think" [ref=e367] [cursor=pointer]':
+                    - generic [ref=e370]:
+                      - img [ref=e372]
+                      - generic [ref=e374]:
+                        - generic [ref=e375]: Tax Brackets Aren't What You Think
+                        - generic [ref=e376]: +15 XP · 11 Q
+                  - 'button "Upcoming: W-2 vs 1099: Know Your Form" [ref=e379] [cursor=pointer]':
+                    - generic [ref=e382]:
+                      - img [ref=e384]
+                      - generic [ref=e386]:
+                        - generic [ref=e387]: "W-2 vs 1099: Know Your Form"
+                        - generic [ref=e388]: +15 XP · 10 Q
+                  - 'button "Upcoming: The Standard Deduction Shortcut" [ref=e391] [cursor=pointer]':
+                    - generic [ref=e394]:
+                      - img [ref=e396]
+                      - generic [ref=e398]:
+                        - generic [ref=e399]: The Standard Deduction Shortcut
+                        - generic [ref=e400]: +15 XP · 10 Q
+                  - 'button "Upcoming: Tax Credits: Free Money You''re Missing" [ref=e403] [cursor=pointer]':
+                    - generic [ref=e406]:
+                      - img [ref=e408]
+                      - generic [ref=e410]:
+                        - generic [ref=e411]: "Tax Credits: Free Money You're Missing"
+                        - generic [ref=e412]: +15 XP · 10 Q
+                  - 'button "Upcoming: Filing Step by Step" [ref=e415] [cursor=pointer]':
+                    - generic [ref=e418]:
+                      - img [ref=e420]
+                      - generic [ref=e422]:
+                        - generic [ref=e423]: Filing Step by Step
+                        - generic [ref=e424]: +15 XP · 10 Q
+                  - 'button "Upcoming: 5 Tax Mistakes That Cost You" [ref=e427] [cursor=pointer]':
+                    - generic [ref=e430]:
+                      - img [ref=e432]
+                      - generic [ref=e434]:
+                        - generic [ref=e435]: 5 Tax Mistakes That Cost You
+                        - generic [ref=e436]: +20 XP · 10 Q
+                  - 'button "Upcoming: Alex''s First Tax Season" [ref=e439] [cursor=pointer]':
+                    - generic [ref=e442]:
+                      - img [ref=e444]
+                      - generic [ref=e446]:
+                        - generic [ref=e447]: Alex's First Tax Season
+                        - generic [ref=e448]: +20 XP
+                  - 'button "Upcoming: Banking & Tax Terms Blitz" [ref=e451] [cursor=pointer]':
+                    - generic [ref=e454]:
+                      - img [ref=e456]
+                      - generic [ref=e458]:
+                        - generic [ref=e459]: Banking & Tax Terms Blitz
+                        - generic [ref=e460]: +20 XP
+              - generic [ref=e461]:
+                - generic [ref=e464]: Smart Saving
+                - button "Take placement test to jump to this unit" [ref=e467] [cursor=pointer]:
+                  - img [ref=e468]
+                  - img [ref=e471]:
+                    - generic [ref=e481]: Jump here
+                - generic [ref=e482]:
+                  - 'button "Upcoming: Why Saving Feels Impossible" [ref=e485] [cursor=pointer]':
+                    - generic [ref=e488]:
+                      - img [ref=e490]
+                      - generic [ref=e492]:
+                        - generic [ref=e493]: Why Saving Feels Impossible
+                        - generic [ref=e494]: +15 XP · 12 Q
+                  - 'button "Upcoming: The $500 That Changes Everything" [ref=e497] [cursor=pointer]':
+                    - generic [ref=e500]:
+                      - img [ref=e502]
+                      - generic [ref=e504]:
+                        - generic [ref=e505]: The $500 That Changes Everything
+                        - generic [ref=e506]: +15 XP · 10 Q
+                  - 'button "Upcoming: Emergency Fund Blueprint" [ref=e509] [cursor=pointer]':
+                    - generic [ref=e512]:
+                      - img [ref=e514]
+                      - generic [ref=e516]:
+                        - generic [ref=e517]: Emergency Fund Blueprint
+                        - generic [ref=e518]: +15 XP · 11 Q
+                  - 'button "Upcoming: Helping a Friend Start Saving" [ref=e521] [cursor=pointer]':
+                    - generic [ref=e524]:
+                      - img [ref=e526]
+                      - generic [ref=e528]:
+                        - generic [ref=e529]: Helping a Friend Start Saving
+                        - generic [ref=e530]: +20 XP
+                  - 'button "Upcoming: High-Yield vs Regular Savings" [ref=e533] [cursor=pointer]':
+                    - generic [ref=e536]:
+                      - img [ref=e538]
+                      - generic [ref=e540]:
+                        - generic [ref=e541]: High-Yield vs Regular Savings
+                        - generic [ref=e542]: +15 XP · 11 Q
+                  - 'button "Upcoming: The Savings Automation Trick" [ref=e545] [cursor=pointer]':
+                    - generic [ref=e548]:
+                      - img [ref=e550]
+                      - generic [ref=e552]:
+                        - generic [ref=e553]: The Savings Automation Trick
+                        - generic [ref=e554]: +15 XP · 11 Q
+                  - 'button "Upcoming: Sinking Funds: Save for Fun Stuff" [ref=e557] [cursor=pointer]':
+                    - generic [ref=e560]:
+                      - img [ref=e562]
+                      - generic [ref=e564]:
+                        - generic [ref=e565]: "Sinking Funds: Save for Fun Stuff"
+                        - generic [ref=e566]: +15 XP · 10 Q
+                  - 'button "Upcoming: The 30-Day Savings Challenge" [ref=e569] [cursor=pointer]':
+                    - generic [ref=e572]:
+                      - img [ref=e574]
+                      - generic [ref=e576]:
+                        - generic [ref=e577]: The 30-Day Savings Challenge
+                        - generic [ref=e578]: +15 XP · 11 Q
+                  - 'button "Upcoming: Lifestyle Inflation Trap" [ref=e581] [cursor=pointer]':
+                    - generic [ref=e584]:
+                      - img [ref=e586]
+                      - generic [ref=e588]:
+                        - generic [ref=e589]: Lifestyle Inflation Trap
+                        - generic [ref=e590]: +15 XP · 10 Q
+                  - 'button "Upcoming: Windfalls: Don''t Blow the Bonus" [ref=e593] [cursor=pointer]':
+                    - generic [ref=e596]:
+                      - img [ref=e598]
+                      - generic [ref=e600]:
+                        - generic [ref=e601]: "Windfalls: Don't Blow the Bonus"
+                        - generic [ref=e602]: +15 XP · 10 Q
+                  - 'button "Upcoming: Saving Concepts Blitz" [ref=e605] [cursor=pointer]':
+                    - generic [ref=e608]:
+                      - img [ref=e610]
+                      - generic [ref=e612]:
+                        - generic [ref=e613]: Saving Concepts Blitz
+                        - generic [ref=e614]: +20 XP
+                  - 'button "Upcoming: Saving Scoreboard" [ref=e617] [cursor=pointer]':
+                    - generic [ref=e620]:
+                      - img [ref=e622]
+                      - generic [ref=e624]:
+                        - generic [ref=e625]: Saving Scoreboard
+                        - generic [ref=e626]: +20 XP · 10 Q
+                  - 'button "Upcoming: The $5,000 Emergency" [ref=e629] [cursor=pointer]':
+                    - generic [ref=e632]:
+                      - img [ref=e634]
+                      - generic [ref=e636]:
+                        - generic [ref=e637]: The $5,000 Emergency
+                        - generic [ref=e638]: +20 XP
+                  - 'button "Upcoming: The Ramirez Family Savings Overhaul" [ref=e641] [cursor=pointer]':
+                    - generic [ref=e644]:
+                      - img [ref=e646]
+                      - generic [ref=e648]:
+                        - generic [ref=e649]: The Ramirez Family Savings Overhaul
+                        - generic [ref=e650]: +20 XP
+              - generic [ref=e651]:
+                - generic [ref=e654]: Protect What You've Built
+                - button "Take placement test to jump to this unit" [ref=e657] [cursor=pointer]:
+                  - img [ref=e658]
+                  - img [ref=e661]:
+                    - generic [ref=e671]: Jump here
+                - generic [ref=e672]:
+                  - 'button "Upcoming: Insurance: Paying for Peace of Mind" [ref=e675] [cursor=pointer]':
+                    - generic [ref=e678]:
+                      - img [ref=e680]
+                      - generic [ref=e682]:
+                        - generic [ref=e683]: "Insurance: Paying for Peace of Mind"
+                        - generic [ref=e684]: +15 XP · 12 Q
+                  - 'button "Upcoming: Health Insurance Decoded" [ref=e687] [cursor=pointer]':
+                    - generic [ref=e690]:
+                      - img [ref=e692]
+                      - generic [ref=e694]:
+                        - generic [ref=e695]: Health Insurance Decoded
+                        - generic [ref=e696]: +15 XP · 11 Q
+                  - 'button "Upcoming: Deductibles, Copays & Premiums" [ref=e699] [cursor=pointer]':
+                    - generic [ref=e702]:
+                      - img [ref=e704]
+                      - generic [ref=e706]:
+                        - generic [ref=e707]: Deductibles, Copays & Premiums
+                        - generic [ref=e708]: +15 XP · 11 Q
+                  - 'button "Upcoming: Auto Insurance: What You Actually Need" [ref=e711] [cursor=pointer]':
+                    - generic [ref=e714]:
+                      - img [ref=e716]
+                      - generic [ref=e718]:
+                        - generic [ref=e719]: "Auto Insurance: What You Actually Need"
+                        - generic [ref=e720]: +15 XP · 10 Q
+                  - 'button "Upcoming: Renter''s & Homeowner''s Insurance" [ref=e723] [cursor=pointer]':
+                    - generic [ref=e726]:
+                      - img [ref=e728]
+                      - generic [ref=e730]:
+                        - generic [ref=e731]: Renter's & Homeowner's Insurance
+                        - generic [ref=e732]: +15 XP · 10 Q
+                  - 'button "Upcoming: Life Insurance: Who Needs It?" [ref=e735] [cursor=pointer]':
+                    - generic [ref=e738]:
+                      - img [ref=e740]
+                      - generic [ref=e742]:
+                        - generic [ref=e743]: "Life Insurance: Who Needs It?"
+                        - generic [ref=e744]: +15 XP · 10 Q
+                  - 'button "Upcoming: Disability Insurance: Protecting Your Income" [ref=e747] [cursor=pointer]':
+                    - generic [ref=e750]:
+                      - img [ref=e752]
+                      - generic [ref=e754]:
+                        - generic [ref=e755]: "Disability Insurance: Protecting Your Income"
+                        - generic [ref=e756]: +15 XP · 10 Q
+                  - 'button "Upcoming: When to Skip Coverage" [ref=e759] [cursor=pointer]':
+                    - generic [ref=e762]:
+                      - img [ref=e764]
+                      - generic [ref=e766]:
+                        - generic [ref=e767]: When to Skip Coverage
+                        - generic [ref=e768]: +15 XP · 10 Q
+                  - 'button "Upcoming: Scams & Identity Theft Defense" [ref=e771] [cursor=pointer]':
+                    - generic [ref=e774]:
+                      - img [ref=e776]
+                      - generic [ref=e778]:
+                        - generic [ref=e779]: Scams & Identity Theft Defense
+                        - generic [ref=e780]: +15 XP · 11 Q
+                  - 'button "Upcoming: Insurance Shopping Like a Pro" [ref=e783] [cursor=pointer]':
+                    - generic [ref=e786]:
+                      - img [ref=e788]
+                      - generic [ref=e790]:
+                        - generic [ref=e791]: Insurance Shopping Like a Pro
+                        - generic [ref=e792]: +20 XP · 12 Q
+                  - 'button "Upcoming: Shopping for Health Insurance" [ref=e795] [cursor=pointer]':
+                    - generic [ref=e798]:
+                      - img [ref=e800]
+                      - generic [ref=e802]:
+                        - generic [ref=e803]: Shopping for Health Insurance
+                        - generic [ref=e804]: +20 XP
+                  - 'button "Upcoming: Insurance Terms Speed Drill" [ref=e807] [cursor=pointer]':
+                    - generic [ref=e810]:
+                      - img [ref=e812]
+                      - generic [ref=e814]:
+                        - generic [ref=e815]: Insurance Terms Speed Drill
+                        - generic [ref=e816]: +20 XP
+                  - 'button "Upcoming: Review: Real Estate & Insurance" [ref=e819] [cursor=pointer]':
+                    - generic [ref=e822]:
+                      - img [ref=e824]
+                      - generic [ref=e826]:
+                        - generic [ref=e827]: "Review: Real Estate & Insurance"
+                        - generic [ref=e828]: +25 XP · 10 Q
+              - generic [ref=e829]:
+                - generic [ref=e832]: Debt Decoded
+                - button "Take placement test to jump to this unit" [ref=e835] [cursor=pointer]:
+                  - img [ref=e836]
+                  - img [ref=e839]:
+                    - generic [ref=e849]: Jump here
+                - generic [ref=e850]:
+                  - 'button "Upcoming: Debt Is a Tool, Not a Monster" [ref=e853] [cursor=pointer]':
+                    - generic [ref=e856]:
+                      - img [ref=e858]
+                      - generic [ref=e860]:
+                        - generic [ref=e861]: Debt Is a Tool, Not a Monster
+                        - generic [ref=e862]: +15 XP · 13 Q
+                  - 'button "Upcoming: How Interest Eats Your Money" [ref=e865] [cursor=pointer]':
+                    - generic [ref=e868]:
+                      - img [ref=e870]
+                      - generic [ref=e872]:
+                        - generic [ref=e873]: How Interest Eats Your Money
+                        - generic [ref=e874]: +15 XP · 10 Q
+                  - 'button "Upcoming: Credit Cards: The Double-Edged Sword" [ref=e877] [cursor=pointer]':
+                    - generic [ref=e880]:
+                      - img [ref=e882]
+                      - generic [ref=e884]:
+                        - generic [ref=e885]: "Credit Cards: The Double-Edged Sword"
+                        - generic [ref=e886]: +15 XP · 12 Q
+                  - 'button "Upcoming: Student Loans Survival Guide" [ref=e889] [cursor=pointer]':
+                    - generic [ref=e892]:
+                      - img [ref=e894]
+                      - generic [ref=e896]:
+                        - generic [ref=e897]: Student Loans Survival Guide
+                        - generic [ref=e898]: +15 XP · 11 Q
+                  - 'button "Upcoming: Car Loans: The Dealer''s Game" [ref=e901] [cursor=pointer]':
+                    - generic [ref=e904]:
+                      - img [ref=e906]
+                      - generic [ref=e908]:
+                        - generic [ref=e909]: "Car Loans: The Dealer's Game"
+                        - generic [ref=e910]: +15 XP · 11 Q
+                  - 'button "Upcoming: The Minimum Payment Trap" [ref=e913] [cursor=pointer]':
+                    - generic [ref=e916]:
+                      - img [ref=e918]
+                      - generic [ref=e920]:
+                        - generic [ref=e921]: The Minimum Payment Trap
+                        - generic [ref=e922]: +15 XP · 11 Q
+                  - 'button "Upcoming: Snowball vs Avalanche: Pick Your Fighter" [ref=e925] [cursor=pointer]':
+                    - generic [ref=e928]:
+                      - img [ref=e930]
+                      - generic [ref=e932]:
+                        - generic [ref=e933]: "Snowball vs Avalanche: Pick Your Fighter"
+                        - generic [ref=e934]: +15 XP · 11 Q
+                  - 'button "Upcoming: Consolidation & Refinancing" [ref=e937] [cursor=pointer]':
+                    - generic [ref=e940]:
+                      - img [ref=e942]
+                      - generic [ref=e944]:
+                        - generic [ref=e945]: Consolidation & Refinancing
+                        - generic [ref=e946]: +15 XP · 11 Q
+                  - 'button "Upcoming: When Borrowing Makes Sense" [ref=e949] [cursor=pointer]':
+                    - generic [ref=e952]:
+                      - img [ref=e954]
+                      - generic [ref=e956]:
+                        - generic [ref=e957]: When Borrowing Makes Sense
+                        - generic [ref=e958]: +15 XP · 11 Q
+                  - 'button "Upcoming: Debt-Free Victory Plan" [ref=e961] [cursor=pointer]':
+                    - generic [ref=e964]:
+                      - img [ref=e966]
+                      - generic [ref=e968]:
+                        - generic [ref=e969]: Debt-Free Victory Plan
+                        - generic [ref=e970]: +20 XP · 11 Q
+                  - 'button "Upcoming: The Debt Payoff Journey" [ref=e973] [cursor=pointer]':
+                    - generic [ref=e976]:
+                      - img [ref=e978]
+                      - generic [ref=e980]:
+                        - generic [ref=e981]: The Debt Payoff Journey
+                        - generic [ref=e982]: +20 XP
+                  - 'button "Upcoming: Calling the Credit Card Company" [ref=e985] [cursor=pointer]':
+                    - generic [ref=e988]:
+                      - img [ref=e990]
+                      - generic [ref=e992]:
+                        - generic [ref=e993]: Calling the Credit Card Company
+                        - generic [ref=e994]: +20 XP
+                  - 'button "Upcoming: Debt Terms Blitz" [ref=e997] [cursor=pointer]':
+                    - generic [ref=e1000]:
+                      - img [ref=e1002]
+                      - generic [ref=e1004]:
+                        - generic [ref=e1005]: Debt Terms Blitz
+                        - generic [ref=e1006]: +20 XP
+                  - 'button "Upcoming: Review: Money, Budgets, Banking, Saving & Debt" [ref=e1009] [cursor=pointer]':
+                    - generic [ref=e1012]:
+                      - img [ref=e1014]
+                      - generic [ref=e1016]:
+                        - generic [ref=e1017]: "Review: Money, Budgets, Banking, Saving & Debt"
+                        - generic [ref=e1018]: +25 XP · 10 Q
+              - generic [ref=e1019]:
+                - generic [ref=e1022]: Credit Scores
+                - button "Take placement test to jump to this unit" [ref=e1025] [cursor=pointer]:
+                  - img [ref=e1026]
+                  - img [ref=e1029]:
+                    - generic [ref=e1039]: Jump here
+                - generic [ref=e1040]:
+                  - 'button "Upcoming: Your 3-Digit Reputation" [ref=e1043] [cursor=pointer]':
+                    - generic [ref=e1046]:
+                      - img [ref=e1048]
+                      - generic [ref=e1050]:
+                        - generic [ref=e1051]: Your 3-Digit Reputation
+                        - generic [ref=e1052]: +15 XP · 11 Q
+                  - 'button "Upcoming: The 5 FICO Ingredients" [ref=e1055] [cursor=pointer]':
+                    - generic [ref=e1058]:
+                      - img [ref=e1060]
+                      - generic [ref=e1062]:
+                        - generic [ref=e1063]: The 5 FICO Ingredients
+                        - generic [ref=e1064]: +15 XP · 10 Q
+                  - 'button "Upcoming: Payment History: The #1 Factor" [ref=e1067] [cursor=pointer]':
+                    - generic [ref=e1070]:
+                      - img [ref=e1072]
+                      - generic [ref=e1074]:
+                        - generic [ref=e1075]: "Payment History: The #1 Factor"
+                        - generic [ref=e1076]: +15 XP · 10 Q
+                  - 'button "Upcoming: Credit Utilization: The 30% Myth" [ref=e1079] [cursor=pointer]':
+                    - generic [ref=e1082]:
+                      - img [ref=e1084]
+                      - generic [ref=e1086]:
+                        - generic [ref=e1087]: "Credit Utilization: The 30% Myth"
+                        - generic [ref=e1088]: +15 XP · 11 Q
+                  - 'button "Upcoming: Explaining Credit Scores to a Friend" [ref=e1091] [cursor=pointer]':
+                    - generic [ref=e1094]:
+                      - img [ref=e1096]
+                      - generic [ref=e1098]:
+                        - generic [ref=e1099]: Explaining Credit Scores to a Friend
+                        - generic [ref=e1100]: +20 XP
+                  - 'button "Upcoming: Building Credit from Zero" [ref=e1103] [cursor=pointer]':
+                    - generic [ref=e1106]:
+                      - img [ref=e1108]
+                      - generic [ref=e1110]:
+                        - generic [ref=e1111]: Building Credit from Zero
+                        - generic [ref=e1112]: +15 XP · 10 Q
+                  - 'button "Upcoming: Secured Cards & Starter Moves" [ref=e1115] [cursor=pointer]':
+                    - generic [ref=e1118]:
+                      - img [ref=e1120]
+                      - generic [ref=e1122]:
+                        - generic [ref=e1123]: Secured Cards & Starter Moves
+                        - generic [ref=e1124]: +15 XP · 10 Q
+                  - 'button "Upcoming: Your Free Credit Report" [ref=e1127] [cursor=pointer]':
+                    - generic [ref=e1130]:
+                      - img [ref=e1132]
+                      - generic [ref=e1134]:
+                        - generic [ref=e1135]: Your Free Credit Report
+                        - generic [ref=e1136]: +15 XP · 10 Q
+                  - 'button "Upcoming: Hard vs Soft Pulls" [ref=e1139] [cursor=pointer]':
+                    - generic [ref=e1142]:
+                      - img [ref=e1144]
+                      - generic [ref=e1146]:
+                        - generic [ref=e1147]: Hard vs Soft Pulls
+                        - generic [ref=e1148]: +15 XP · 10 Q
+                  - 'button "Upcoming: Credit Score Boosting Hacks" [ref=e1151] [cursor=pointer]':
+                    - generic [ref=e1154]:
+                      - img [ref=e1156]
+                      - generic [ref=e1158]:
+                        - generic [ref=e1159]: Credit Score Boosting Hacks
+                        - generic [ref=e1160]: +15 XP · 10 Q
+                  - 'button "Upcoming: Protect Your Score for Life" [ref=e1163] [cursor=pointer]':
+                    - generic [ref=e1166]:
+                      - img [ref=e1168]
+                      - generic [ref=e1170]:
+                        - generic [ref=e1171]: Protect Your Score for Life
+                        - generic [ref=e1172]: +20 XP · 10 Q
+                  - 'button "Upcoming: Credit Score Lightning Quiz" [ref=e1175] [cursor=pointer]':
+                    - generic [ref=e1178]:
+                      - img [ref=e1180]
+                      - generic [ref=e1182]:
+                        - generic [ref=e1183]: Credit Score Lightning Quiz
+                        - generic [ref=e1184]: +20 XP
+                  - 'button "Upcoming: Two Twins, Two Scores" [ref=e1187] [cursor=pointer]':
+                    - generic [ref=e1190]:
+                      - img [ref=e1192]
+                      - generic [ref=e1194]:
+                        - generic [ref=e1195]: Two Twins, Two Scores
+                        - generic [ref=e1196]: +20 XP
+              - generic [ref=e1197]:
+                - generic [ref=e1200]: Make Your Money Grow
+                - button "Take placement test to jump to this unit" [ref=e1203] [cursor=pointer]:
+                  - img [ref=e1204]
+                  - img [ref=e1207]:
+                    - generic [ref=e1217]: Jump here
+                - generic [ref=e1218]:
+                  - 'button "Upcoming: Why Your Savings Account Isn''t Enough" [ref=e1221] [cursor=pointer]':
+                    - generic [ref=e1224]:
+                      - img [ref=e1226]
+                      - generic [ref=e1228]:
+                        - generic [ref=e1229]: Why Your Savings Account Isn't Enough
+                        - generic [ref=e1230]: +15 XP · 13 Q
+                  - 'button "Upcoming: Compound Interest: The 8th Wonder" [ref=e1233] [cursor=pointer]':
+                    - generic [ref=e1236]:
+                      - img [ref=e1238]
+                      - generic [ref=e1240]:
+                        - generic [ref=e1241]: "Compound Interest: The 8th Wonder"
+                        - generic [ref=e1242]: +15 XP · 11 Q
+                  - 'button "Upcoming: Stocks: Owning a Piece of a Company" [ref=e1245] [cursor=pointer]':
+                    - generic [ref=e1248]:
+                      - img [ref=e1250]
+                      - generic [ref=e1252]:
+                        - generic [ref=e1253]: "Stocks: Owning a Piece of a Company"
+                        - generic [ref=e1254]: +15 XP · 10 Q
+                  - 'button "Upcoming: Bonds: Lending Your Money Out" [ref=e1257] [cursor=pointer]':
+                    - generic [ref=e1260]:
+                      - img [ref=e1262]
+                      - generic [ref=e1264]:
+                        - generic [ref=e1265]: "Bonds: Lending Your Money Out"
+                        - generic [ref=e1266]: +15 XP · 11 Q
+                  - 'button "Upcoming: Index Funds: The Lazy Genius Move" [ref=e1269] [cursor=pointer]':
+                    - generic [ref=e1272]:
+                      - img [ref=e1274]
+                      - generic [ref=e1276]:
+                        - generic [ref=e1277]: "Index Funds: The Lazy Genius Move"
+                        - generic [ref=e1278]: +15 XP · 10 Q
+                  - 'button "Upcoming: ETFs vs Mutual Funds" [ref=e1281] [cursor=pointer]':
+                    - generic [ref=e1284]:
+                      - img [ref=e1286]
+                      - generic [ref=e1288]:
+                        - generic [ref=e1289]: ETFs vs Mutual Funds
+                        - generic [ref=e1290]: +15 XP · 9 Q
+                  - 'button "Upcoming: Risk: How Much Can You Stomach?" [ref=e1293] [cursor=pointer]':
+                    - generic [ref=e1296]:
+                      - img [ref=e1298]
+                      - generic [ref=e1300]:
+                        - generic [ref=e1301]: "Risk: How Much Can You Stomach?"
+                        - generic [ref=e1302]: +15 XP · 10 Q
+                  - 'button "Upcoming: Your First Brokerage Account" [ref=e1305] [cursor=pointer]':
+                    - generic [ref=e1308]:
+                      - img [ref=e1310]
+                      - generic [ref=e1312]:
+                        - generic [ref=e1313]: Your First Brokerage Account
+                        - generic [ref=e1314]: +15 XP · 10 Q
+                  - 'button "Upcoming: Dollar-Cost Averaging" [ref=e1317] [cursor=pointer]':
+                    - generic [ref=e1320]:
+                      - img [ref=e1322]
+                      - generic [ref=e1324]:
+                        - generic [ref=e1325]: Dollar-Cost Averaging
+                        - generic [ref=e1326]: +15 XP · 9 Q
+                  - 'button "Upcoming: The Market Will Crash (And That''s OK)" [ref=e1329] [cursor=pointer]':
+                    - generic [ref=e1332]:
+                      - img [ref=e1334]
+                      - generic [ref=e1336]:
+                        - generic [ref=e1337]: The Market Will Crash (And That's OK)
+                        - generic [ref=e1338]: +15 XP · 10 Q
+                  - 'button "Upcoming: Dividends: Getting Paid to Own" [ref=e1341] [cursor=pointer]':
+                    - generic [ref=e1344]:
+                      - img [ref=e1346]
+                      - generic [ref=e1348]:
+                        - generic [ref=e1349]: "Dividends: Getting Paid to Own"
+                        - generic [ref=e1350]: +15 XP · 10 Q
+                  - 'button "Upcoming: Don''t Touch It: The Power of Time" [ref=e1353] [cursor=pointer]':
+                    - generic [ref=e1356]:
+                      - img [ref=e1358]
+                      - generic [ref=e1360]:
+                        - generic [ref=e1361]: "Don't Touch It: The Power of Time"
+                        - generic [ref=e1362]: +20 XP · 12 Q
+                  - 'button "Upcoming: Meeting Your Financial Advisor" [ref=e1365] [cursor=pointer]':
+                    - generic [ref=e1368]:
+                      - img [ref=e1370]
+                      - generic [ref=e1372]:
+                        - generic [ref=e1373]: Meeting Your Financial Advisor
+                        - generic [ref=e1374]: +20 XP
+                  - 'button "Upcoming: Your First Year of Investing" [ref=e1377] [cursor=pointer]':
+                    - generic [ref=e1380]:
+                      - img [ref=e1382]
+                      - generic [ref=e1384]:
+                        - generic [ref=e1385]: Your First Year of Investing
+                        - generic [ref=e1386]: +20 XP
+                  - 'button "Upcoming: Investing Basics Blitz" [ref=e1389] [cursor=pointer]':
+                    - generic [ref=e1392]:
+                      - img [ref=e1394]
+                      - generic [ref=e1396]:
+                        - generic [ref=e1397]: Investing Basics Blitz
+                        - generic [ref=e1398]: +20 XP
+              - generic [ref=e1399]:
+                - generic [ref=e1402]: Set Up Future You
+                - button "Take placement test to jump to this unit" [ref=e1405] [cursor=pointer]:
+                  - img [ref=e1406]
+                  - img [ref=e1409]:
+                    - generic [ref=e1419]: Jump here
+                - generic [ref=e1420]:
+                  - 'button "Upcoming: Retirement Math: Your Future Self Needs You" [ref=e1423] [cursor=pointer]':
+                    - generic [ref=e1426]:
+                      - img [ref=e1428]
+                      - generic [ref=e1430]:
+                        - generic [ref=e1431]: "Retirement Math: Your Future Self Needs You"
+                        - generic [ref=e1432]: +15 XP · 11 Q
+                  - 'button "Upcoming: 401(k): Free Money from Your Boss" [ref=e1435] [cursor=pointer]':
+                    - generic [ref=e1438]:
+                      - img [ref=e1440]
+                      - generic [ref=e1442]:
+                        - generic [ref=e1443]: "401(k): Free Money from Your Boss"
+                        - generic [ref=e1444]: +15 XP · 10 Q
+                  - 'button "Upcoming: IRA: Roth vs Traditional Showdown" [ref=e1447] [cursor=pointer]':
+                    - generic [ref=e1450]:
+                      - img [ref=e1452]
+                      - generic [ref=e1454]:
+                        - generic [ref=e1455]: "IRA: Roth vs Traditional Showdown"
+                        - generic [ref=e1456]: +15 XP · 11 Q
+                  - 'button "Upcoming: Employer Match: Never Leave Money Behind" [ref=e1459] [cursor=pointer]':
+                    - generic [ref=e1462]:
+                      - img [ref=e1464]
+                      - generic [ref=e1466]:
+                        - generic [ref=e1467]: "Employer Match: Never Leave Money Behind"
+                        - generic [ref=e1468]: +15 XP · 10 Q
+                  - 'button "Upcoming: Retirement Planning Chat" [ref=e1471] [cursor=pointer]':
+                    - generic [ref=e1474]:
+                      - img [ref=e1476]
+                      - generic [ref=e1478]:
+                        - generic [ref=e1479]: Retirement Planning Chat
+                        - generic [ref=e1480]: +20 XP
+                  - 'button "Upcoming: Target-Date Funds: Set and Forget" [ref=e1483] [cursor=pointer]':
+                    - generic [ref=e1486]:
+                      - img [ref=e1488]
+                      - generic [ref=e1490]:
+                        - generic [ref=e1491]: "Target-Date Funds: Set and Forget"
+                        - generic [ref=e1492]: +15 XP · 10 Q
+                  - 'button "Upcoming: Social Security: What You''ll Actually Get" [ref=e1495] [cursor=pointer]':
+                    - generic [ref=e1498]:
+                      - img [ref=e1500]
+                      - generic [ref=e1502]:
+                        - generic [ref=e1503]: "Social Security: What You'll Actually Get"
+                        - generic [ref=e1504]: +15 XP · 10 Q
+                  - 'button "Upcoming: Starting Late? Here''s the Plan" [ref=e1507] [cursor=pointer]':
+                    - generic [ref=e1510]:
+                      - img [ref=e1512]
+                      - generic [ref=e1514]:
+                        - generic [ref=e1515]: Starting Late? Here's the Plan
+                        - generic [ref=e1516]: +15 XP · 10 Q
+                  - 'button "Upcoming: The 4% Rule: How Much Is Enough?" [ref=e1519] [cursor=pointer]':
+                    - generic [ref=e1522]:
+                      - img [ref=e1524]
+                      - generic [ref=e1526]:
+                        - generic [ref=e1527]: "The 4% Rule: How Much Is Enough?"
+                        - generic [ref=e1528]: +15 XP · 10 Q
+                  - 'button "Upcoming: Catch-Up Contributions After 50" [ref=e1531] [cursor=pointer]':
+                    - generic [ref=e1534]:
+                      - img [ref=e1536]
+                      - generic [ref=e1538]:
+                        - generic [ref=e1539]: Catch-Up Contributions After 50
+                        - generic [ref=e1540]: +15 XP · 10 Q
+                  - 'button "Upcoming: Retirement Account Mistakes" [ref=e1543] [cursor=pointer]':
+                    - generic [ref=e1546]:
+                      - img [ref=e1548]
+                      - generic [ref=e1550]:
+                        - generic [ref=e1551]: Retirement Account Mistakes
+                        - generic [ref=e1552]: +15 XP · 10 Q
+                  - 'button "Upcoming: Your Retirement Roadmap" [ref=e1555] [cursor=pointer]':
+                    - generic [ref=e1558]:
+                      - img [ref=e1560]
+                      - generic [ref=e1562]:
+                        - generic [ref=e1563]: Your Retirement Roadmap
+                        - generic [ref=e1564]: +20 XP · 12 Q
+                  - 'button "Upcoming: Three Retirement Paths" [ref=e1567] [cursor=pointer]':
+                    - generic [ref=e1570]:
+                      - img [ref=e1572]
+                      - generic [ref=e1574]:
+                        - generic [ref=e1575]: Three Retirement Paths
+                        - generic [ref=e1576]: +20 XP
+                  - 'button "Upcoming: Retirement Accounts Speed Drill" [ref=e1579] [cursor=pointer]':
+                    - generic [ref=e1582]:
+                      - img [ref=e1584]
+                      - generic [ref=e1586]:
+                        - generic [ref=e1587]: Retirement Accounts Speed Drill
+                        - generic [ref=e1588]: +20 XP
+              - generic [ref=e1589]:
+                - generic [ref=e1592]: Understand the Stock Market
+                - button "Take placement test to jump to this unit" [ref=e1595] [cursor=pointer]:
+                  - img [ref=e1596]
+                  - img [ref=e1599]:
+                    - generic [ref=e1609]: Jump here
+                - generic [ref=e1610]:
+                  - 'button "Upcoming: How the Stock Market Actually Works" [ref=e1613] [cursor=pointer]':
+                    - generic [ref=e1616]:
+                      - img [ref=e1618]
+                      - generic [ref=e1620]:
+                        - generic [ref=e1621]: How the Stock Market Actually Works
+                        - generic [ref=e1622]: +15 XP · 11 Q
+                  - 'button "Upcoming: Reading a Stock Chart" [ref=e1625] [cursor=pointer]':
+                    - generic [ref=e1628]:
+                      - img [ref=e1630]
+                      - generic [ref=e1632]:
+                        - generic [ref=e1633]: Reading a Stock Chart
+                        - generic [ref=e1634]: +15 XP · 10 Q
+                  - 'button "Upcoming: Market Cap, P/E, and Other Jargon" [ref=e1637] [cursor=pointer]':
+                    - generic [ref=e1640]:
+                      - img [ref=e1642]
+                      - generic [ref=e1644]:
+                        - generic [ref=e1645]: Market Cap, P/E, and Other Jargon
+                        - generic [ref=e1646]: +15 XP · 12 Q
+                  - 'button "Upcoming: Growth vs Value Stocks" [ref=e1649] [cursor=pointer]':
+                    - generic [ref=e1652]:
+                      - img [ref=e1654]
+                      - generic [ref=e1656]:
+                        - generic [ref=e1657]: Growth vs Value Stocks
+                        - generic [ref=e1658]: +15 XP · 9 Q
+                  - 'button "Upcoming: A Friend Wants to Start Investing" [ref=e1661] [cursor=pointer]':
+                    - generic [ref=e1664]:
+                      - img [ref=e1666]
+                      - generic [ref=e1668]:
+                        - generic [ref=e1669]: A Friend Wants to Start Investing
+                        - generic [ref=e1670]: +20 XP
+                  - 'button "Upcoming: Bull Markets & Bear Markets" [ref=e1673] [cursor=pointer]':
+                    - generic [ref=e1676]:
+                      - img [ref=e1678]
+                      - generic [ref=e1680]:
+                        - generic [ref=e1681]: Bull Markets & Bear Markets
+                        - generic [ref=e1682]: +15 XP · 10 Q
+                  - 'button "Upcoming: Sector Investing: Tech, Health, Energy" [ref=e1685] [cursor=pointer]':
+                    - generic [ref=e1688]:
+                      - img [ref=e1690]
+                      - generic [ref=e1692]:
+                        - generic [ref=e1693]: "Sector Investing: Tech, Health, Energy"
+                        - generic [ref=e1694]: +15 XP · 10 Q
+                  - 'button "Upcoming: Earnings Season: Why Stocks Jump or Crash" [ref=e1697] [cursor=pointer]':
+                    - generic [ref=e1700]:
+                      - img [ref=e1702]
+                      - generic [ref=e1704]:
+                        - generic [ref=e1705]: "Earnings Season: Why Stocks Jump or Crash"
+                        - generic [ref=e1706]: +15 XP · 10 Q
+                  - 'button "Upcoming: Stop-Loss & Limit Orders" [ref=e1709] [cursor=pointer]':
+                    - generic [ref=e1712]:
+                      - img [ref=e1714]
+                      - generic [ref=e1716]:
+                        - generic [ref=e1717]: Stop-Loss & Limit Orders
+                        - generic [ref=e1718]: +15 XP · 10 Q
+                  - 'button "Upcoming: Portfolio Diversification" [ref=e1721] [cursor=pointer]':
+                    - generic [ref=e1724]:
+                      - img [ref=e1726]
+                      - generic [ref=e1728]:
+                        - generic [ref=e1729]: Portfolio Diversification
+                        - generic [ref=e1730]: +15 XP · 10 Q
+                  - 'button "Upcoming: Individual Stocks vs Index Funds" [ref=e1733] [cursor=pointer]':
+                    - generic [ref=e1736]:
+                      - img [ref=e1738]
+                      - generic [ref=e1740]:
+                        - generic [ref=e1741]: Individual Stocks vs Index Funds
+                        - generic [ref=e1742]: +15 XP · 10 Q
+                  - 'button "Upcoming: When to Sell (And When to Hold)" [ref=e1745] [cursor=pointer]':
+                    - generic [ref=e1748]:
+                      - img [ref=e1750]
+                      - generic [ref=e1752]:
+                        - generic [ref=e1753]: When to Sell (And When to Hold)
+                        - generic [ref=e1754]: +15 XP · 10 Q
+                  - 'button "Upcoming: Mistakes That Wipe Out Beginners" [ref=e1757] [cursor=pointer]':
+                    - generic [ref=e1760]:
+                      - img [ref=e1762]
+                      - generic [ref=e1764]:
+                        - generic [ref=e1765]: Mistakes That Wipe Out Beginners
+                        - generic [ref=e1766]: +20 XP · 12 Q
+                  - 'button "Upcoming: Stock Market Jargon Blitz" [ref=e1769] [cursor=pointer]':
+                    - generic [ref=e1772]:
+                      - img [ref=e1774]
+                      - generic [ref=e1776]:
+                        - generic [ref=e1777]: Stock Market Jargon Blitz
+                        - generic [ref=e1778]: +20 XP
+                  - 'button "Upcoming: The GameStop Frenzy" [ref=e1781] [cursor=pointer]':
+                    - generic [ref=e1784]:
+                      - img [ref=e1786]
+                      - generic [ref=e1788]:
+                        - generic [ref=e1789]: The GameStop Frenzy
+                        - generic [ref=e1790]: +20 XP
+                  - 'button "Upcoming: Review: Investing, Retirement & Stocks" [ref=e1793] [cursor=pointer]':
+                    - generic [ref=e1796]:
+                      - img [ref=e1798]
+                      - generic [ref=e1800]:
+                        - generic [ref=e1801]: "Review: Investing, Retirement & Stocks"
+                        - generic [ref=e1802]: +25 XP · 10 Q
+              - generic [ref=e1803]:
+                - generic [ref=e1806]: Buy Your First Home
+                - button "Take placement test to jump to this unit" [ref=e1809] [cursor=pointer]:
+                  - img [ref=e1810]
+                  - img [ref=e1813]:
+                    - generic [ref=e1823]: Jump here
+                - generic [ref=e1824]:
+                  - 'button "Upcoming: Renting vs Buying: The Real Math" [ref=e1827] [cursor=pointer]':
+                    - generic [ref=e1830]:
+                      - img [ref=e1832]
+                      - generic [ref=e1834]:
+                        - generic [ref=e1835]: "Renting vs Buying: The Real Math"
+                        - generic [ref=e1836]: +15 XP · 13 Q
+                  - 'button "Upcoming: Mortgage 101: What You''re Signing" [ref=e1839] [cursor=pointer]':
+                    - generic [ref=e1842]:
+                      - img [ref=e1844]
+                      - generic [ref=e1846]:
+                        - generic [ref=e1847]: "Mortgage 101: What You're Signing"
+                        - generic [ref=e1848]: +15 XP · 11 Q
+                  - 'button "Upcoming: Down Payments & Closing Costs" [ref=e1851] [cursor=pointer]':
+                    - generic [ref=e1854]:
+                      - img [ref=e1856]
+                      - generic [ref=e1858]:
+                        - generic [ref=e1859]: Down Payments & Closing Costs
+                        - generic [ref=e1860]: +15 XP · 11 Q
+                  - 'button "Upcoming: How Much House Can You Afford?" [ref=e1863] [cursor=pointer]':
+                    - generic [ref=e1866]:
+                      - img [ref=e1868]
+                      - generic [ref=e1870]:
+                        - generic [ref=e1871]: How Much House Can You Afford?
+                        - generic [ref=e1872]: +15 XP · 10 Q
+                  - 'button "Upcoming: The Home Buying Process Step by Step" [ref=e1875] [cursor=pointer]':
+                    - generic [ref=e1878]:
+                      - img [ref=e1880]
+                      - generic [ref=e1882]:
+                        - generic [ref=e1883]: The Home Buying Process Step by Step
+                        - generic [ref=e1884]: +15 XP · 10 Q
+                  - 'button "Upcoming: Property Taxes & Hidden Costs" [ref=e1887] [cursor=pointer]':
+                    - generic [ref=e1890]:
+                      - img [ref=e1892]
+                      - generic [ref=e1894]:
+                        - generic [ref=e1895]: Property Taxes & Hidden Costs
+                        - generic [ref=e1896]: +15 XP · 11 Q
+                  - 'button "Upcoming: Refinancing: When It Makes Sense" [ref=e1899] [cursor=pointer]':
+                    - generic [ref=e1902]:
+                      - img [ref=e1904]
+                      - generic [ref=e1906]:
+                        - generic [ref=e1907]: "Refinancing: When It Makes Sense"
+                        - generic [ref=e1908]: +15 XP · 10 Q
+                  - 'button "Upcoming: Real Estate as an Investment" [ref=e1911] [cursor=pointer]':
+                    - generic [ref=e1914]:
+                      - img [ref=e1916]
+                      - generic [ref=e1918]:
+                        - generic [ref=e1919]: Real Estate as an Investment
+                        - generic [ref=e1920]: +15 XP · 10 Q
+                  - 'button "Upcoming: Rental Properties: Landlord Math" [ref=e1923] [cursor=pointer]':
+                    - generic [ref=e1926]:
+                      - img [ref=e1928]
+                      - generic [ref=e1930]:
+                        - generic [ref=e1931]: "Rental Properties: Landlord Math"
+                        - generic [ref=e1932]: +15 XP · 10 Q
+                  - 'button "Upcoming: REITs: Real Estate Without the Headaches" [ref=e1935] [cursor=pointer]':
+                    - generic [ref=e1938]:
+                      - img [ref=e1940]
+                      - generic [ref=e1942]:
+                        - generic [ref=e1943]: "REITs: Real Estate Without the Headaches"
+                        - generic [ref=e1944]: +15 XP · 10 Q
+                  - 'button "Upcoming: House Hacking: Live Free-ish" [ref=e1947] [cursor=pointer]':
+                    - generic [ref=e1950]:
+                      - img [ref=e1952]
+                      - generic [ref=e1954]:
+                        - generic [ref=e1955]: "House Hacking: Live Free-ish"
+                        - generic [ref=e1956]: +15 XP · 10 Q
+                  - 'button "Upcoming: Real Estate Mistakes That Cost Thousands" [ref=e1959] [cursor=pointer]':
+                    - generic [ref=e1962]:
+                      - img [ref=e1964]
+                      - generic [ref=e1966]:
+                        - generic [ref=e1967]: Real Estate Mistakes That Cost Thousands
+                        - generic [ref=e1968]: +20 XP · 12 Q
+                  - 'button "Upcoming: First-Time Homebuyer" [ref=e1971] [cursor=pointer]':
+                    - generic [ref=e1974]:
+                      - img [ref=e1976]
+                      - generic [ref=e1978]:
+                        - generic [ref=e1979]: First-Time Homebuyer
+                        - generic [ref=e1980]: +20 XP
+                  - 'button "Upcoming: Negotiating the Home Price" [ref=e1983] [cursor=pointer]':
+                    - generic [ref=e1986]:
+                      - img [ref=e1988]
+                      - generic [ref=e1990]:
+                        - generic [ref=e1991]: Negotiating the Home Price
+                        - generic [ref=e1992]: +20 XP
+                  - 'button "Upcoming: Real Estate Terms Blitz" [ref=e1995] [cursor=pointer]':
+                    - generic [ref=e1998]:
+                      - img [ref=e2000]
+                      - generic [ref=e2002]:
+                        - generic [ref=e2003]: Real Estate Terms Blitz
+                        - generic [ref=e2004]: +20 XP
+              - generic [ref=e2005]:
+                - generic [ref=e2008]: Crypto Without the Hype
+                - button "Take placement test to jump to this unit" [ref=e2011] [cursor=pointer]:
+                  - img [ref=e2012]
+                  - img [ref=e2015]:
+                    - generic [ref=e2025]: Jump here
+                - generic [ref=e2026]:
+                  - 'button "Upcoming: What Is Cryptocurrency, Really?" [ref=e2029] [cursor=pointer]':
+                    - generic [ref=e2032]:
+                      - img [ref=e2034]
+                      - generic [ref=e2036]:
+                        - generic [ref=e2037]: What Is Cryptocurrency, Really?
+                        - generic [ref=e2038]: +15 XP · 11 Q
+                  - 'button "Upcoming: How Blockchain Works (Simply)" [ref=e2041] [cursor=pointer]':
+                    - generic [ref=e2044]:
+                      - img [ref=e2046]
+                      - generic [ref=e2048]:
+                        - generic [ref=e2049]: How Blockchain Works (Simply)
+                        - generic [ref=e2050]: +15 XP · 12 Q
+                  - 'button "Upcoming: Bitcoin: Digital Gold?" [ref=e2053] [cursor=pointer]':
+                    - generic [ref=e2056]:
+                      - img [ref=e2058]
+                      - generic [ref=e2060]:
+                        - generic [ref=e2061]: "Bitcoin: Digital Gold?"
+                        - generic [ref=e2062]: +15 XP · 11 Q
+                  - 'button "Upcoming: Ethereum & Smart Contracts" [ref=e2065] [cursor=pointer]':
+                    - generic [ref=e2068]:
+                      - img [ref=e2070]
+                      - generic [ref=e2072]:
+                        - generic [ref=e2073]: Ethereum & Smart Contracts
+                        - generic [ref=e2074]: +15 XP · 10 Q
+                  - 'button "Upcoming: Altcoins: The Good, Bad & Scammy" [ref=e2077] [cursor=pointer]':
+                    - generic [ref=e2080]:
+                      - img [ref=e2082]
+                      - generic [ref=e2084]:
+                        - generic [ref=e2085]: "Altcoins: The Good, Bad & Scammy"
+                        - generic [ref=e2086]: +15 XP · 10 Q
+                  - 'button "Upcoming: Crypto Wallets: Hot vs Cold" [ref=e2089] [cursor=pointer]':
+                    - generic [ref=e2092]:
+                      - img [ref=e2094]
+                      - generic [ref=e2096]:
+                        - generic [ref=e2097]: "Crypto Wallets: Hot vs Cold"
+                        - generic [ref=e2098]: +15 XP · 10 Q
+                  - 'button "Upcoming: Exchanges: Where to Buy Safely" [ref=e2101] [cursor=pointer]':
+                    - generic [ref=e2104]:
+                      - img [ref=e2106]
+                      - generic [ref=e2108]:
+                        - generic [ref=e2109]: "Exchanges: Where to Buy Safely"
+                        - generic [ref=e2110]: +15 XP · 10 Q
+                  - 'button "Upcoming: DeFi: Banking Without Banks" [ref=e2113] [cursor=pointer]':
+                    - generic [ref=e2116]:
+                      - img [ref=e2118]
+                      - generic [ref=e2120]:
+                        - generic [ref=e2121]: "DeFi: Banking Without Banks"
+                        - generic [ref=e2122]: +15 XP · 11 Q
+                  - 'button "Upcoming: NFTs: Dead or Evolving?" [ref=e2125] [cursor=pointer]':
+                    - generic [ref=e2128]:
+                      - img [ref=e2130]
+                      - generic [ref=e2132]:
+                        - generic [ref=e2133]: "NFTs: Dead or Evolving?"
+                        - generic [ref=e2134]: +15 XP · 10 Q
+                  - 'button "Upcoming: Crypto Taxes: Yes, You Owe Them" [ref=e2137] [cursor=pointer]':
+                    - generic [ref=e2140]:
+                      - img [ref=e2142]
+                      - generic [ref=e2144]:
+                        - generic [ref=e2145]: "Crypto Taxes: Yes, You Owe Them"
+                        - generic [ref=e2146]: +15 XP · 10 Q
+                  - 'button "Upcoming: The Volatility Rollercoaster" [ref=e2149] [cursor=pointer]':
+                    - generic [ref=e2152]:
+                      - img [ref=e2154]
+                      - generic [ref=e2156]:
+                        - generic [ref=e2157]: The Volatility Rollercoaster
+                        - generic [ref=e2158]: +15 XP · 11 Q
+                  - 'button "Upcoming: Crypto in a Balanced Portfolio" [ref=e2161] [cursor=pointer]':
+                    - generic [ref=e2164]:
+                      - img [ref=e2166]
+                      - generic [ref=e2168]:
+                        - generic [ref=e2169]: Crypto in a Balanced Portfolio
+                        - generic [ref=e2170]: +20 XP · 12 Q
+                  - 'button "Upcoming: Your Cousin''s Crypto Pitch" [ref=e2173] [cursor=pointer]':
+                    - generic [ref=e2176]:
+                      - img [ref=e2178]
+                      - generic [ref=e2180]:
+                        - generic [ref=e2181]: Your Cousin's Crypto Pitch
+                        - generic [ref=e2182]: +20 XP
+                  - 'button "Upcoming: The Crypto Rollercoaster" [ref=e2185] [cursor=pointer]':
+                    - generic [ref=e2188]:
+                      - img [ref=e2190]
+                      - generic [ref=e2192]:
+                        - generic [ref=e2193]: The Crypto Rollercoaster
+                        - generic [ref=e2194]: +20 XP
+                  - 'button "Upcoming: Crypto Terms Blitz" [ref=e2197] [cursor=pointer]':
+                    - generic [ref=e2200]:
+                      - img [ref=e2202]
+                      - generic [ref=e2204]:
+                        - generic [ref=e2205]: Crypto Terms Blitz
+                        - generic [ref=e2206]: +20 XP
+              - generic [ref=e2207]:
+                - generic [ref=e2210]: Big Money Moves
+                - button "Take placement test to jump to this unit" [ref=e2213] [cursor=pointer]:
+                  - img [ref=e2214]
+                  - img [ref=e2217]:
+                    - generic [ref=e2227]: Jump here
+                - generic [ref=e2228]:
+                  - 'button "Upcoming: The Big Purchase Framework" [ref=e2231] [cursor=pointer]':
+                    - generic [ref=e2234]:
+                      - img [ref=e2236]
+                      - generic [ref=e2238]:
+                        - generic [ref=e2239]: The Big Purchase Framework
+                        - generic [ref=e2240]: +15 XP · 12 Q
+                  - 'button "Upcoming: Negotiation: Ask and You Shall Receive" [ref=e2243] [cursor=pointer]':
+                    - generic [ref=e2246]:
+                      - img [ref=e2248]
+                      - generic [ref=e2250]:
+                        - generic [ref=e2251]: "Negotiation: Ask and You Shall Receive"
+                        - generic [ref=e2252]: +15 XP · 11 Q
+                  - 'button "Upcoming: Marriage & Money: The Merge" [ref=e2255] [cursor=pointer]':
+                    - generic [ref=e2258]:
+                      - img [ref=e2260]
+                      - generic [ref=e2262]:
+                        - generic [ref=e2263]: "Marriage & Money: The Merge"
+                        - generic [ref=e2264]: +15 XP · 10 Q
+                  - 'button "Upcoming: Teaching Kids About Money" [ref=e2267] [cursor=pointer]':
+                    - generic [ref=e2270]:
+                      - img [ref=e2272]
+                      - generic [ref=e2274]:
+                        - generic [ref=e2275]: Teaching Kids About Money
+                        - generic [ref=e2276]: +15 XP · 9 Q
+                  - 'button "Upcoming: A Major Financial Decision" [ref=e2279] [cursor=pointer]':
+                    - generic [ref=e2282]:
+                      - img [ref=e2284]
+                      - generic [ref=e2286]:
+                        - generic [ref=e2287]: A Major Financial Decision
+                        - generic [ref=e2288]: +20 XP
+                  - 'button "Upcoming: Side Hustles That Actually Work" [ref=e2291] [cursor=pointer]':
+                    - generic [ref=e2294]:
+                      - img [ref=e2296]
+                      - generic [ref=e2298]:
+                        - generic [ref=e2299]: Side Hustles That Actually Work
+                        - generic [ref=e2300]: +15 XP · 10 Q
+                  - 'button "Upcoming: Multiple Income Streams" [ref=e2303] [cursor=pointer]':
+                    - generic [ref=e2306]:
+                      - img [ref=e2308]
+                      - generic [ref=e2310]:
+                        - generic [ref=e2311]: Multiple Income Streams
+                        - generic [ref=e2312]: +15 XP · 9 Q
+                  - 'button "Upcoming: Net Worth: Your Real Score" [ref=e2315] [cursor=pointer]':
+                    - generic [ref=e2318]:
+                      - img [ref=e2320]
+                      - generic [ref=e2322]:
+                        - generic [ref=e2323]: "Net Worth: Your Real Score"
+                        - generic [ref=e2324]: +15 XP · 9 Q
+                  - 'button "Upcoming: The Financial Independence Formula" [ref=e2327] [cursor=pointer]':
+                    - generic [ref=e2330]:
+                      - img [ref=e2332]
+                      - generic [ref=e2334]:
+                        - generic [ref=e2335]: The Financial Independence Formula
+                        - generic [ref=e2336]: +15 XP · 10 Q
+                  - 'button "Upcoming: Building Wealth on Any Salary" [ref=e2339] [cursor=pointer]':
+                    - generic [ref=e2342]:
+                      - img [ref=e2344]
+                      - generic [ref=e2346]:
+                        - generic [ref=e2347]: Building Wealth on Any Salary
+                        - generic [ref=e2348]: +15 XP · 10 Q
+                  - 'button "Upcoming: Money Mindset: Think Like the Rich" [ref=e2351] [cursor=pointer]':
+                    - generic [ref=e2354]:
+                      - img [ref=e2356]
+                      - generic [ref=e2358]:
+                        - generic [ref=e2359]: "Money Mindset: Think Like the Rich"
+                        - generic [ref=e2360]: +15 XP · 9 Q
+                  - 'button "Upcoming: Your Lifetime Money Action Plan" [ref=e2363] [cursor=pointer]':
+                    - generic [ref=e2366]:
+                      - img [ref=e2368]
+                      - generic [ref=e2370]:
+                        - generic [ref=e2371]: Your Lifetime Money Action Plan
+                        - generic [ref=e2372]: +20 XP · 12 Q
+                  - 'button "Upcoming: The 10-Year Wealth Builder" [ref=e2375] [cursor=pointer]':
+                    - generic [ref=e2378]:
+                      - img [ref=e2380]
+                      - generic [ref=e2382]:
+                        - generic [ref=e2383]: The 10-Year Wealth Builder
+                        - generic [ref=e2384]: +20 XP
+                  - 'button "Upcoming: The Salary Negotiation Breakdown" [ref=e2387] [cursor=pointer]':
+                    - generic [ref=e2390]:
+                      - img [ref=e2392]
+                      - generic [ref=e2394]:
+                        - generic [ref=e2395]: The Salary Negotiation Breakdown
+                        - generic [ref=e2396]: +20 XP
+                  - 'button "Upcoming: Advanced Finance Blitz" [ref=e2399] [cursor=pointer]':
+                    - generic [ref=e2402]:
+                      - img [ref=e2404]
+                      - generic [ref=e2406]:
+                        - generic [ref=e2407]: Advanced Finance Blitz
+                        - generic [ref=e2408]: +20 XP
+              - generic [ref=e2409]:
+                - generic [ref=e2412]: Why Everyone Needs an Estate Plan
+                - button "Take placement test to jump to this unit" [ref=e2415] [cursor=pointer]:
+                  - img [ref=e2416]
+                  - img [ref=e2419]:
+                    - generic [ref=e2429]: Jump here
+                - generic [ref=e2430]:
+                  - 'button "Upcoming: What Is Estate Planning?" [ref=e2433] [cursor=pointer]':
+                    - generic [ref=e2436]:
+                      - img [ref=e2438]
+                      - generic [ref=e2440]:
+                        - generic [ref=e2441]: What Is Estate Planning?
+                        - generic [ref=e2442]: +25 XP · 10 Q
+                  - 'button "Upcoming: The Core Documents" [ref=e2445] [cursor=pointer]':
+                    - generic [ref=e2448]:
+                      - img [ref=e2450]
+                      - generic [ref=e2452]:
+                        - generic [ref=e2453]: The Core Documents
+                        - generic [ref=e2454]: +25 XP · 10 Q
+                  - 'button "Upcoming: Probate and How to Avoid It" [ref=e2457] [cursor=pointer]':
+                    - generic [ref=e2460]:
+                      - img [ref=e2462]
+                      - generic [ref=e2464]:
+                        - generic [ref=e2465]: Probate and How to Avoid It
+                        - generic [ref=e2466]: +25 XP · 9 Q
+                  - 'button "Upcoming: Common Myths About Estate Planning" [ref=e2469] [cursor=pointer]':
+                    - generic [ref=e2472]:
+                      - img [ref=e2474]
+                      - generic [ref=e2476]:
+                        - generic [ref=e2477]: Common Myths About Estate Planning
+                        - generic [ref=e2478]: +30 XP · 10 Q
+                  - 'button "Upcoming: Getting Started With Your Estate Plan" [ref=e2481] [cursor=pointer]':
+                    - generic [ref=e2484]:
+                      - img [ref=e2486]
+                      - generic [ref=e2488]:
+                        - generic [ref=e2489]: Getting Started With Your Estate Plan
+                        - generic [ref=e2490]: +30 XP · 10 Q
+              - generic [ref=e2491]:
+                - generic [ref=e2494]: "Wills: Types and How to Create One"
+                - button "Take placement test to jump to this unit" [ref=e2497] [cursor=pointer]:
+                  - img [ref=e2498]
+                  - img [ref=e2501]:
+                    - generic [ref=e2511]: Jump here
+                - generic [ref=e2512]:
+                  - 'button "Upcoming: What a Will Does" [ref=e2515] [cursor=pointer]':
+                    - generic [ref=e2518]:
+                      - img [ref=e2520]
+                      - generic [ref=e2522]:
+                        - generic [ref=e2523]: What a Will Does
+                        - generic [ref=e2524]: +25 XP · 9 Q
+                  - 'button "Upcoming: Types of Wills" [ref=e2527] [cursor=pointer]':
+                    - generic [ref=e2530]:
+                      - img [ref=e2532]
+                      - generic [ref=e2534]:
+                        - generic [ref=e2535]: Types of Wills
+                        - generic [ref=e2536]: +25 XP · 9 Q
+                  - 'button "Upcoming: How to Create a Valid Will" [ref=e2539] [cursor=pointer]':
+                    - generic [ref=e2542]:
+                      - img [ref=e2544]
+                      - generic [ref=e2546]:
+                        - generic [ref=e2547]: How to Create a Valid Will
+                        - generic [ref=e2548]: +25 XP · 10 Q
+                  - 'button "Upcoming: Changing and Revoking a Will" [ref=e2551] [cursor=pointer]':
+                    - generic [ref=e2554]:
+                      - img [ref=e2556]
+                      - generic [ref=e2558]:
+                        - generic [ref=e2559]: Changing and Revoking a Will
+                        - generic [ref=e2560]: +25 XP · 10 Q
+                  - 'button "Upcoming: Executor Duties and Choosing Wisely" [ref=e2563] [cursor=pointer]':
+                    - generic [ref=e2566]:
+                      - img [ref=e2568]
+                      - generic [ref=e2570]:
+                        - generic [ref=e2571]: Executor Duties and Choosing Wisely
+                        - generic [ref=e2572]: +30 XP · 10 Q
+              - generic [ref=e2573]:
+                - generic [ref=e2576]: "Trusts: Revocable, Irrevocable, and Why"
+                - button "Take placement test to jump to this unit" [ref=e2579] [cursor=pointer]:
+                  - img [ref=e2580]
+                  - img [ref=e2583]:
+                    - generic [ref=e2593]: Jump here
+                - generic [ref=e2594]:
+                  - 'button "Upcoming: What Is a Trust?" [ref=e2597] [cursor=pointer]':
+                    - generic [ref=e2600]:
+                      - img [ref=e2602]
+                      - generic [ref=e2604]:
+                        - generic [ref=e2605]: What Is a Trust?
+                        - generic [ref=e2606]: +25 XP · 9 Q
+                  - 'button "Upcoming: Revocable Living Trusts" [ref=e2609] [cursor=pointer]':
+                    - generic [ref=e2612]:
+                      - img [ref=e2614]
+                      - generic [ref=e2616]:
+                        - generic [ref=e2617]: Revocable Living Trusts
+                        - generic [ref=e2618]: +25 XP · 10 Q
+                  - 'button "Upcoming: Irrevocable Trusts" [ref=e2621] [cursor=pointer]':
+                    - generic [ref=e2624]:
+                      - img [ref=e2626]
+                      - generic [ref=e2628]:
+                        - generic [ref=e2629]: Irrevocable Trusts
+                        - generic [ref=e2630]: +25 XP · 9 Q
+                  - 'button "Upcoming: Special Purpose Trusts" [ref=e2633] [cursor=pointer]':
+                    - generic [ref=e2636]:
+                      - img [ref=e2638]
+                      - generic [ref=e2640]:
+                        - generic [ref=e2641]: Special Purpose Trusts
+                        - generic [ref=e2642]: +30 XP · 10 Q
+                  - 'button "Upcoming: Choosing Between a Will and a Trust" [ref=e2645] [cursor=pointer]':
+                    - generic [ref=e2648]:
+                      - img [ref=e2650]
+                      - generic [ref=e2652]:
+                        - generic [ref=e2653]: Choosing Between a Will and a Trust
+                        - generic [ref=e2654]: +30 XP · 10 Q
+                  - 'button "Upcoming: Funding and Maintaining a Trust" [ref=e2657] [cursor=pointer]':
+                    - generic [ref=e2660]:
+                      - img [ref=e2662]
+                      - generic [ref=e2664]:
+                        - generic [ref=e2665]: Funding and Maintaining a Trust
+                        - generic [ref=e2666]: +30 XP · 10 Q
+              - generic [ref=e2667]:
+                - generic [ref=e2670]: "Review: Wills and Trusts"
+                - button "Take placement test to jump to this unit" [ref=e2673] [cursor=pointer]:
+                  - img [ref=e2674]
+                  - img [ref=e2677]:
+                    - generic [ref=e2687]: Jump here
+                - generic [ref=e2688]:
+                  - 'button "Upcoming: Review: Estate Planning Foundations" [ref=e2691] [cursor=pointer]':
+                    - generic [ref=e2694]:
+                      - img [ref=e2696]
+                      - generic [ref=e2698]:
+                        - generic [ref=e2699]: "Review: Estate Planning Foundations"
+                        - generic [ref=e2700]: +30 XP · 10 Q
+                  - 'button "Upcoming: Review: Wills Deep Dive" [ref=e2703] [cursor=pointer]':
+                    - generic [ref=e2706]:
+                      - img [ref=e2708]
+                      - generic [ref=e2710]:
+                        - generic [ref=e2711]: "Review: Wills Deep Dive"
+                        - generic [ref=e2712]: +30 XP · 10 Q
+                  - 'button "Upcoming: Review: Trusts Mastery" [ref=e2715] [cursor=pointer]':
+                    - generic [ref=e2718]:
+                      - img [ref=e2720]
+                      - generic [ref=e2722]:
+                        - generic [ref=e2723]: "Review: Trusts Mastery"
+                        - generic [ref=e2724]: +30 XP · 10 Q
+              - generic [ref=e2725]:
+                - generic [ref=e2728]: Powers of Attorney and Healthcare Directives
+                - button "Take placement test to jump to this unit" [ref=e2731] [cursor=pointer]:
+                  - img [ref=e2732]
+                  - img [ref=e2735]:
+                    - generic [ref=e2745]: Jump here
+                - generic [ref=e2746]:
+                  - 'button "Upcoming: Financial Power of Attorney" [ref=e2749] [cursor=pointer]':
+                    - generic [ref=e2752]:
+                      - img [ref=e2754]
+                      - generic [ref=e2756]:
+                        - generic [ref=e2757]: Financial Power of Attorney
+                        - generic [ref=e2758]: +25 XP · 10 Q
+                  - 'button "Upcoming: Healthcare Directives" [ref=e2761] [cursor=pointer]':
+                    - generic [ref=e2764]:
+                      - img [ref=e2766]
+                      - generic [ref=e2768]:
+                        - generic [ref=e2769]: Healthcare Directives
+                        - generic [ref=e2770]: +25 XP · 10 Q
+                  - 'button "Upcoming: Choosing Your Agents" [ref=e2773] [cursor=pointer]':
+                    - generic [ref=e2776]:
+                      - img [ref=e2778]
+                      - generic [ref=e2780]:
+                        - generic [ref=e2781]: Choosing Your Agents
+                        - generic [ref=e2782]: +25 XP · 10 Q
+                  - 'button "Upcoming: HIPAA and Document Access" [ref=e2785] [cursor=pointer]':
+                    - generic [ref=e2788]:
+                      - img [ref=e2790]
+                      - generic [ref=e2792]:
+                        - generic [ref=e2793]: HIPAA and Document Access
+                        - generic [ref=e2794]: +30 XP · 10 Q
+                  - 'button "Upcoming: When POA Goes Wrong" [ref=e2797] [cursor=pointer]':
+                    - generic [ref=e2800]:
+                      - img [ref=e2802]
+                      - generic [ref=e2804]:
+                        - generic [ref=e2805]: When POA Goes Wrong
+                        - generic [ref=e2806]: +30 XP · 11 Q
+              - generic [ref=e2807]:
+                - generic [ref=e2810]: "Beneficiary Designations: The Overlooked Step"
+                - button "Take placement test to jump to this unit" [ref=e2813] [cursor=pointer]:
+                  - img [ref=e2814]
+                  - img [ref=e2817]:
+                    - generic [ref=e2827]: Jump here
+                - generic [ref=e2828]:
+                  - 'button "Upcoming: Why Beneficiary Forms Beat Your Will" [ref=e2831] [cursor=pointer]':
+                    - generic [ref=e2834]:
+                      - img [ref=e2836]
+                      - generic [ref=e2838]:
+                        - generic [ref=e2839]: Why Beneficiary Forms Beat Your Will
+                        - generic [ref=e2840]: +25 XP · 9 Q
+                  - 'button "Upcoming: Primary and Contingent Beneficiaries" [ref=e2843] [cursor=pointer]':
+                    - generic [ref=e2846]:
+                      - img [ref=e2848]
+                      - generic [ref=e2850]:
+                        - generic [ref=e2851]: Primary and Contingent Beneficiaries
+                        - generic [ref=e2852]: +25 XP · 10 Q
+                  - 'button "Upcoming: Common Beneficiary Mistakes" [ref=e2855] [cursor=pointer]':
+                    - generic [ref=e2858]:
+                      - img [ref=e2860]
+                      - generic [ref=e2862]:
+                        - generic [ref=e2863]: Common Beneficiary Mistakes
+                        - generic [ref=e2864]: +30 XP · 11 Q
+                  - 'button "Upcoming: Beneficiaries and Taxes" [ref=e2867] [cursor=pointer]':
+                    - generic [ref=e2870]:
+                      - img [ref=e2872]
+                      - generic [ref=e2874]:
+                        - generic [ref=e2875]: Beneficiaries and Taxes
+                        - generic [ref=e2876]: +30 XP · 10 Q
+                  - 'button "Upcoming: The Beneficiary Audit" [ref=e2879] [cursor=pointer]':
+                    - generic [ref=e2882]:
+                      - img [ref=e2884]
+                      - generic [ref=e2886]:
+                        - generic [ref=e2887]: The Beneficiary Audit
+                        - generic [ref=e2888]: +30 XP · 11 Q
+              - generic [ref=e2889]:
+                - generic [ref=e2892]: Inheritance and Estate Taxes
+                - button "Take placement test to jump to this unit" [ref=e2895] [cursor=pointer]:
+                  - img [ref=e2896]
+                  - img [ref=e2899]:
+                    - generic [ref=e2909]: Jump here
+                - generic [ref=e2910]:
+                  - 'button "Upcoming: How Governments Tax Wealth Transfers" [ref=e2913] [cursor=pointer]':
+                    - generic [ref=e2916]:
+                      - img [ref=e2918]
+                      - generic [ref=e2920]:
+                        - generic [ref=e2921]: How Governments Tax Wealth Transfers
+                        - generic [ref=e2922]: +25 XP · 9 Q
+                  - 'button "Upcoming: The Stepped-Up Basis Advantage" [ref=e2925] [cursor=pointer]':
+                    - generic [ref=e2928]:
+                      - img [ref=e2930]
+                      - generic [ref=e2932]:
+                        - generic [ref=e2933]: The Stepped-Up Basis Advantage
+                        - generic [ref=e2934]: +25 XP · 10 Q
+                  - 'button "Upcoming: Estate Tax Reduction Strategies" [ref=e2937] [cursor=pointer]':
+                    - generic [ref=e2940]:
+                      - img [ref=e2942]
+                      - generic [ref=e2944]:
+                        - generic [ref=e2945]: Estate Tax Reduction Strategies
+                        - generic [ref=e2946]: +25 XP · 10 Q
+                  - 'button "Upcoming: State and International Estate Taxes" [ref=e2949] [cursor=pointer]':
+                    - generic [ref=e2952]:
+                      - img [ref=e2954]
+                      - generic [ref=e2956]:
+                        - generic [ref=e2957]: State and International Estate Taxes
+                        - generic [ref=e2958]: +25 XP · 10 Q
+                  - 'button "Upcoming: Generation-Skipping Transfer Tax" [ref=e2961] [cursor=pointer]':
+                    - generic [ref=e2964]:
+                      - img [ref=e2966]
+                      - generic [ref=e2968]:
+                        - generic [ref=e2969]: Generation-Skipping Transfer Tax
+                        - generic [ref=e2970]: +25 XP · 10 Q
+                  - 'button "Upcoming: Estate Tax Planning in Practice" [ref=e2973] [cursor=pointer]':
+                    - generic [ref=e2976]:
+                      - img [ref=e2978]
+                      - generic [ref=e2980]:
+                        - generic [ref=e2981]: Estate Tax Planning in Practice
+                        - generic [ref=e2982]: +30 XP · 10 Q
+              - generic [ref=e2983]:
+                - generic [ref=e2986]: Gifting Strategies
+                - button "Take placement test to jump to this unit" [ref=e2989] [cursor=pointer]:
+                  - img [ref=e2990]
+                  - img [ref=e2993]:
+                    - generic [ref=e3003]: Jump here
+                - generic [ref=e3004]:
+                  - 'button "Upcoming: The Annual Gift Tax Exclusion" [ref=e3007] [cursor=pointer]':
+                    - generic [ref=e3010]:
+                      - img [ref=e3012]
+                      - generic [ref=e3014]:
+                        - generic [ref=e3015]: The Annual Gift Tax Exclusion
+                        - generic [ref=e3016]: +25 XP · 9 Q
+                  - 'button "Upcoming: Strategic Lifetime Gifting" [ref=e3019] [cursor=pointer]':
+                    - generic [ref=e3022]:
+                      - img [ref=e3024]
+                      - generic [ref=e3026]:
+                        - generic [ref=e3027]: Strategic Lifetime Gifting
+                        - generic [ref=e3028]: +25 XP · 10 Q
+                  - 'button "Upcoming: 529 Plans and Education Gifting" [ref=e3031] [cursor=pointer]':
+                    - generic [ref=e3034]:
+                      - img [ref=e3036]
+                      - generic [ref=e3038]:
+                        - generic [ref=e3039]: 529 Plans and Education Gifting
+                        - generic [ref=e3040]: +25 XP · 10 Q
+                  - 'button "Upcoming: Gifting to Minors: UTMA and UGMA" [ref=e3043] [cursor=pointer]':
+                    - generic [ref=e3046]:
+                      - img [ref=e3048]
+                      - generic [ref=e3050]:
+                        - generic [ref=e3051]: "Gifting to Minors: UTMA and UGMA"
+                        - generic [ref=e3052]: +25 XP · 10 Q
+                  - 'button "Upcoming: Advanced Gifting Vehicles" [ref=e3055] [cursor=pointer]':
+                    - generic [ref=e3058]:
+                      - img [ref=e3060]
+                      - generic [ref=e3062]:
+                        - generic [ref=e3063]: Advanced Gifting Vehicles
+                        - generic [ref=e3064]: +30 XP · 10 Q
+              - generic [ref=e3065]:
+                - generic [ref=e3068]: Charitable Giving and Donor-Advised Funds
+                - button "Take placement test to jump to this unit" [ref=e3071] [cursor=pointer]:
+                  - img [ref=e3072]
+                  - img [ref=e3075]:
+                    - generic [ref=e3085]: Jump here
+                - generic [ref=e3086]:
+                  - 'button "Upcoming: Tax-Smart Charitable Giving Basics" [ref=e3089] [cursor=pointer]':
+                    - generic [ref=e3092]:
+                      - img [ref=e3094]
+                      - generic [ref=e3096]:
+                        - generic [ref=e3097]: Tax-Smart Charitable Giving Basics
+                        - generic [ref=e3098]: +25 XP · 9 Q
+                  - 'button "Upcoming: Donor-Advised Funds Explained" [ref=e3101] [cursor=pointer]':
+                    - generic [ref=e3104]:
+                      - img [ref=e3106]
+                      - generic [ref=e3108]:
+                        - generic [ref=e3109]: Donor-Advised Funds Explained
+                        - generic [ref=e3110]: +25 XP · 10 Q
+                  - 'button "Upcoming: Charitable Remainder and Lead Trusts" [ref=e3113] [cursor=pointer]':
+                    - generic [ref=e3116]:
+                      - img [ref=e3118]
+                      - generic [ref=e3120]:
+                        - generic [ref=e3121]: Charitable Remainder and Lead Trusts
+                        - generic [ref=e3122]: +25 XP · 10 Q
+                  - 'button "Upcoming: QCDs and Charitable Giving in Retirement" [ref=e3125] [cursor=pointer]':
+                    - generic [ref=e3128]:
+                      - img [ref=e3130]
+                      - generic [ref=e3132]:
+                        - generic [ref=e3133]: QCDs and Charitable Giving in Retirement
+                        - generic [ref=e3134]: +25 XP · 10 Q
+                  - 'button "Upcoming: Building a Charitable Giving Plan" [ref=e3137] [cursor=pointer]':
+                    - generic [ref=e3140]:
+                      - img [ref=e3142]
+                      - generic [ref=e3144]:
+                        - generic [ref=e3145]: Building a Charitable Giving Plan
+                        - generic [ref=e3146]: +30 XP · 10 Q
+              - generic [ref=e3147]:
+                - generic [ref=e3150]: Teaching Kids About Money
+                - button "Take placement test to jump to this unit" [ref=e3153] [cursor=pointer]:
+                  - img [ref=e3154]
+                  - img [ref=e3157]:
+                    - generic [ref=e3167]: Jump here
+                - generic [ref=e3168]:
+                  - 'button "Upcoming: Money Lessons by Age" [ref=e3171] [cursor=pointer]':
+                    - generic [ref=e3174]:
+                      - img [ref=e3176]
+                      - generic [ref=e3178]:
+                        - generic [ref=e3179]: Money Lessons by Age
+                        - generic [ref=e3180]: +25 XP · 10 Q
+                  - 'button "Upcoming: Allowance and Earning" [ref=e3183] [cursor=pointer]':
+                    - generic [ref=e3186]:
+                      - img [ref=e3188]
+                      - generic [ref=e3190]:
+                        - generic [ref=e3191]: Allowance and Earning
+                        - generic [ref=e3192]: +25 XP · 10 Q
+                  - 'button "Upcoming: Banking and Saving for Kids" [ref=e3195] [cursor=pointer]':
+                    - generic [ref=e3198]:
+                      - img [ref=e3200]
+                      - generic [ref=e3202]:
+                        - generic [ref=e3203]: Banking and Saving for Kids
+                        - generic [ref=e3204]: +25 XP · 10 Q
+                  - 'button "Upcoming: Teens and Financial Independence" [ref=e3207] [cursor=pointer]':
+                    - generic [ref=e3210]:
+                      - img [ref=e3212]
+                      - generic [ref=e3214]:
+                        - generic [ref=e3215]: Teens and Financial Independence
+                        - generic [ref=e3216]: +25 XP · 10 Q
+                  - 'button "Upcoming: Passing Down Financial Values" [ref=e3219] [cursor=pointer]':
+                    - generic [ref=e3222]:
+                      - img [ref=e3224]
+                      - generic [ref=e3226]:
+                        - generic [ref=e3227]: Passing Down Financial Values
+                        - generic [ref=e3228]: +30 XP · 10 Q
+              - generic [ref=e3229]:
+                - generic [ref=e3232]: Estate Planning Review
+                - button "Take placement test to jump to this unit" [ref=e3235] [cursor=pointer]:
+                  - img [ref=e3236]
+                  - img [ref=e3239]:
+                    - generic [ref=e3249]: Jump here
+                - generic [ref=e3250]:
+                  - 'button "Upcoming: Checkpoint: Estate and Inheritance Taxes" [ref=e3253] [cursor=pointer]':
+                    - generic [ref=e3256]:
+                      - img [ref=e3258]
+                      - generic [ref=e3260]:
+                        - generic [ref=e3261]: "Checkpoint: Estate and Inheritance Taxes"
+                        - generic [ref=e3262]: +30 XP · 10 Q
+                  - 'button "Upcoming: Checkpoint: Gifting Strategies" [ref=e3265] [cursor=pointer]':
+                    - generic [ref=e3268]:
+                      - img [ref=e3270]
+                      - generic [ref=e3272]:
+                        - generic [ref=e3273]: "Checkpoint: Gifting Strategies"
+                        - generic [ref=e3274]: +30 XP · 10 Q
+                  - 'button "Upcoming: Checkpoint: Charitable Giving" [ref=e3277] [cursor=pointer]':
+                    - generic [ref=e3280]:
+                      - img [ref=e3282]
+                      - generic [ref=e3284]:
+                        - generic [ref=e3285]: "Checkpoint: Charitable Giving"
+                        - generic [ref=e3286]: +30 XP · 10 Q
+                  - 'button "Upcoming: Checkpoint: Teaching Kids and Financial Legacy" [ref=e3289] [cursor=pointer]':
+                    - generic [ref=e3292]:
+                      - img [ref=e3294]
+                      - generic [ref=e3296]:
+                        - generic [ref=e3297]: "Checkpoint: Teaching Kids and Financial Legacy"
+                        - generic [ref=e3298]: +30 XP · 10 Q
+              - generic [ref=e3299]:
+                - generic [ref=e3302]: Freelancer and Side Hustle Finances
+                - button "Take placement test to jump to this unit" [ref=e3305] [cursor=pointer]:
+                  - img [ref=e3306]
+                  - img [ref=e3309]:
+                    - generic [ref=e3319]: Jump here
+                - generic [ref=e3320]:
+                  - 'button "Upcoming: The Side Hustle Economy" [ref=e3323] [cursor=pointer]':
+                    - generic [ref=e3326]:
+                      - img [ref=e3328]
+                      - generic [ref=e3330]:
+                        - generic [ref=e3331]: The Side Hustle Economy
+                        - generic [ref=e3332]: +25 XP · 9 Q
+                  - 'button "Upcoming: Self-Employment Taxes" [ref=e3335] [cursor=pointer]':
+                    - generic [ref=e3338]:
+                      - img [ref=e3340]
+                      - generic [ref=e3342]:
+                        - generic [ref=e3343]: Self-Employment Taxes
+                        - generic [ref=e3344]: +25 XP · 8 Q
+                  - 'button "Upcoming: Deductions That Save You Money" [ref=e3347] [cursor=pointer]':
+                    - generic [ref=e3350]:
+                      - img [ref=e3352]
+                      - generic [ref=e3354]:
+                        - generic [ref=e3355]: Deductions That Save You Money
+                        - generic [ref=e3356]: +25 XP · 9 Q
+                  - 'button "Upcoming: Invoicing and Getting Paid" [ref=e3359] [cursor=pointer]':
+                    - generic [ref=e3362]:
+                      - img [ref=e3364]
+                      - generic [ref=e3366]:
+                        - generic [ref=e3367]: Invoicing and Getting Paid
+                        - generic [ref=e3368]: +30 XP · 8 Q
+                  - 'button "Upcoming: Building a Sustainable Freelance Business" [ref=e3371] [cursor=pointer]':
+                    - generic [ref=e3374]:
+                      - img [ref=e3376]
+                      - generic [ref=e3378]:
+                        - generic [ref=e3379]: Building a Sustainable Freelance Business
+                        - generic [ref=e3380]: +30 XP · 9 Q
+              - generic [ref=e3381]:
+                - generic [ref=e3384]: "Business Structures: LLC, S-Corp, Sole Prop"
+                - button "Take placement test to jump to this unit" [ref=e3387] [cursor=pointer]:
+                  - img [ref=e3388]
+                  - img [ref=e3391]:
+                    - generic [ref=e3401]: Jump here
+                - generic [ref=e3402]:
+                  - 'button "Upcoming: Sole Proprietorship: The Default" [ref=e3405] [cursor=pointer]':
+                    - generic [ref=e3408]:
+                      - img [ref=e3410]
+                      - generic [ref=e3412]:
+                        - generic [ref=e3413]: "Sole Proprietorship: The Default"
+                        - generic [ref=e3414]: +25 XP · 7 Q
+                  - 'button "Upcoming: The LLC Advantage" [ref=e3417] [cursor=pointer]':
+                    - generic [ref=e3420]:
+                      - img [ref=e3422]
+                      - generic [ref=e3424]:
+                        - generic [ref=e3425]: The LLC Advantage
+                        - generic [ref=e3426]: +25 XP · 7 Q
+                  - 'button "Upcoming: S-Corp Election: Saving on Taxes" [ref=e3429] [cursor=pointer]':
+                    - generic [ref=e3432]:
+                      - img [ref=e3434]
+                      - generic [ref=e3436]:
+                        - generic [ref=e3437]: "S-Corp Election: Saving on Taxes"
+                        - generic [ref=e3438]: +25 XP · 7 Q
+                  - 'button "Upcoming: Partnerships and Corporations" [ref=e3441] [cursor=pointer]':
+                    - generic [ref=e3444]:
+                      - img [ref=e3446]
+                      - generic [ref=e3448]:
+                        - generic [ref=e3449]: Partnerships and Corporations
+                        - generic [ref=e3450]: +25 XP · 7 Q
+                  - 'button "Upcoming: Choosing the Right Structure" [ref=e3453] [cursor=pointer]':
+                    - generic [ref=e3456]:
+                      - img [ref=e3458]
+                      - generic [ref=e3460]:
+                        - generic [ref=e3461]: Choosing the Right Structure
+                        - generic [ref=e3462]: +30 XP · 7 Q
+                  - 'button "Upcoming: Registering Your Business" [ref=e3465] [cursor=pointer]':
+                    - generic [ref=e3468]:
+                      - img [ref=e3470]
+                      - generic [ref=e3472]:
+                        - generic [ref=e3473]: Registering Your Business
+                        - generic [ref=e3474]: +30 XP · 7 Q
+              - generic [ref=e3475]:
+                - generic [ref=e3478]: Business Banking and Bookkeeping
+                - button "Take placement test to jump to this unit" [ref=e3481] [cursor=pointer]:
+                  - img [ref=e3482]
+                  - img [ref=e3485]:
+                    - generic [ref=e3495]: Jump here
+                - generic [ref=e3496]:
+                  - 'button "Upcoming: Business Bank Accounts" [ref=e3499] [cursor=pointer]':
+                    - generic [ref=e3502]:
+                      - img [ref=e3504]
+                      - generic [ref=e3506]:
+                        - generic [ref=e3507]: Business Bank Accounts
+                        - generic [ref=e3508]: +25 XP · 7 Q
+                  - 'button "Upcoming: Bookkeeping Basics" [ref=e3511] [cursor=pointer]':
+                    - generic [ref=e3514]:
+                      - img [ref=e3516]
+                      - generic [ref=e3518]:
+                        - generic [ref=e3519]: Bookkeeping Basics
+                        - generic [ref=e3520]: +25 XP · 7 Q
+                  - 'button "Upcoming: Accounting Software and Tools" [ref=e3523] [cursor=pointer]':
+                    - generic [ref=e3526]:
+                      - img [ref=e3528]
+                      - generic [ref=e3530]:
+                        - generic [ref=e3531]: Accounting Software and Tools
+                        - generic [ref=e3532]: +25 XP · 7 Q
+                  - 'button "Upcoming: Receipts and Record Keeping" [ref=e3535] [cursor=pointer]':
+                    - generic [ref=e3538]:
+                      - img [ref=e3540]
+                      - generic [ref=e3542]:
+                        - generic [ref=e3543]: Receipts and Record Keeping
+                        - generic [ref=e3544]: +30 XP · 7 Q
+                  - 'button "Upcoming: Reconciliation and Month-End Close" [ref=e3547] [cursor=pointer]':
+                    - generic [ref=e3550]:
+                      - img [ref=e3552]
+                      - generic [ref=e3554]:
+                        - generic [ref=e3555]: Reconciliation and Month-End Close
+                        - generic [ref=e3556]: +30 XP · 7 Q
+              - generic [ref=e3557]:
+                - generic [ref=e3560]: "Review: Business Basics"
+                - button "Take placement test to jump to this unit" [ref=e3563] [cursor=pointer]:
+                  - img [ref=e3564]
+                  - img [ref=e3567]:
+                    - generic [ref=e3577]: Jump here
+                - generic [ref=e3578]:
+                  - 'button "Upcoming: Review: Freelancing and Side Hustles" [ref=e3581] [cursor=pointer]':
+                    - generic [ref=e3584]:
+                      - img [ref=e3586]
+                      - generic [ref=e3588]:
+                        - generic [ref=e3589]: "Review: Freelancing and Side Hustles"
+                        - generic [ref=e3590]: +30 XP · 7 Q
+                  - 'button "Upcoming: Review: Business Structures" [ref=e3593] [cursor=pointer]':
+                    - generic [ref=e3596]:
+                      - img [ref=e3598]
+                      - generic [ref=e3600]:
+                        - generic [ref=e3601]: "Review: Business Structures"
+                        - generic [ref=e3602]: +30 XP · 6 Q
+                  - 'button "Upcoming: Review: Banking and Bookkeeping" [ref=e3605] [cursor=pointer]':
+                    - generic [ref=e3608]:
+                      - img [ref=e3610]
+                      - generic [ref=e3612]:
+                        - generic [ref=e3613]: "Review: Banking and Bookkeeping"
+                        - generic [ref=e3614]: +30 XP · 7 Q
+              - generic [ref=e3615]:
+                - generic [ref=e3618]: Revenue, Profit, and Cash Flow
+                - button "Take placement test to jump to this unit" [ref=e3621] [cursor=pointer]:
+                  - img [ref=e3622]
+                  - img [ref=e3625]:
+                    - generic [ref=e3635]: Jump here
+                - generic [ref=e3636]:
+                  - 'button "Upcoming: Revenue Is Not Profit" [ref=e3639] [cursor=pointer]':
+                    - generic [ref=e3642]:
+                      - img [ref=e3644]
+                      - generic [ref=e3646]:
+                        - generic [ref=e3647]: Revenue Is Not Profit
+                        - generic [ref=e3648]: +25 XP · 8 Q
+                  - 'button "Upcoming: Profit Margins: Your Business Health Score" [ref=e3651] [cursor=pointer]':
+                    - generic [ref=e3654]:
+                      - img [ref=e3656]
+                      - generic [ref=e3658]:
+                        - generic [ref=e3659]: "Profit Margins: Your Business Health Score"
+                        - generic [ref=e3660]: +25 XP · 7 Q
+                  - 'button "Upcoming: Cash Flow: The Lifeblood" [ref=e3663] [cursor=pointer]':
+                    - generic [ref=e3666]:
+                      - img [ref=e3668]
+                      - generic [ref=e3670]:
+                        - generic [ref=e3671]: "Cash Flow: The Lifeblood"
+                        - generic [ref=e3672]: +25 XP · 7 Q
+                  - 'button "Upcoming: Pricing Your Products and Services" [ref=e3675] [cursor=pointer]':
+                    - generic [ref=e3678]:
+                      - img [ref=e3680]
+                      - generic [ref=e3682]:
+                        - generic [ref=e3683]: Pricing Your Products and Services
+                        - generic [ref=e3684]: +25 XP · 7 Q
+                  - 'button "Upcoming: Break-Even Analysis" [ref=e3687] [cursor=pointer]':
+                    - generic [ref=e3690]:
+                      - img [ref=e3692]
+                      - generic [ref=e3694]:
+                        - generic [ref=e3695]: Break-Even Analysis
+                        - generic [ref=e3696]: +30 XP · 7 Q
+                  - 'button "Upcoming: Financial Forecasting" [ref=e3699] [cursor=pointer]':
+                    - generic [ref=e3702]:
+                      - img [ref=e3704]
+                      - generic [ref=e3706]:
+                        - generic [ref=e3707]: Financial Forecasting
+                        - generic [ref=e3708]: +30 XP · 7 Q
+              - generic [ref=e3709]:
+                - generic [ref=e3712]: Business Taxes and Quarterly Payments
+                - button "Take placement test to jump to this unit" [ref=e3715] [cursor=pointer]:
+                  - img [ref=e3716]
+                  - img [ref=e3719]:
+                    - generic [ref=e3729]: Jump here
+                - generic [ref=e3730]:
+                  - 'button "Upcoming: How Business Income Is Taxed" [ref=e3733] [cursor=pointer]':
+                    - generic [ref=e3736]:
+                      - img [ref=e3738]
+                      - generic [ref=e3740]:
+                        - generic [ref=e3741]: How Business Income Is Taxed
+                        - generic [ref=e3742]: +25 XP · 7 Q
+                  - 'button "Upcoming: Quarterly Estimated Tax Deep Dive" [ref=e3745] [cursor=pointer]':
+                    - generic [ref=e3748]:
+                      - img [ref=e3750]
+                      - generic [ref=e3752]:
+                        - generic [ref=e3753]: Quarterly Estimated Tax Deep Dive
+                        - generic [ref=e3754]: +25 XP · 7 Q
+                  - 'button "Upcoming: Sales Tax and Nexus" [ref=e3757] [cursor=pointer]':
+                    - generic [ref=e3760]:
+                      - img [ref=e3762]
+                      - generic [ref=e3764]:
+                        - generic [ref=e3765]: Sales Tax and Nexus
+                        - generic [ref=e3766]: +25 XP · 7 Q
+                  - 'button "Upcoming: Tax Deductions for Business Owners" [ref=e3769] [cursor=pointer]':
+                    - generic [ref=e3772]:
+                      - img [ref=e3774]
+                      - generic [ref=e3776]:
+                        - generic [ref=e3777]: Tax Deductions for Business Owners
+                        - generic [ref=e3778]: +30 XP · 7 Q
+                  - 'button "Upcoming: Payroll Tax Basics" [ref=e3781] [cursor=pointer]':
+                    - generic [ref=e3784]:
+                      - img [ref=e3786]
+                      - generic [ref=e3788]:
+                        - generic [ref=e3789]: Payroll Tax Basics
+                        - generic [ref=e3790]: +30 XP · 7 Q
+                  - 'button "Upcoming: Year-End Tax Planning" [ref=e3793] [cursor=pointer]':
+                    - generic [ref=e3796]:
+                      - img [ref=e3798]
+                      - generic [ref=e3800]:
+                        - generic [ref=e3801]: Year-End Tax Planning
+                        - generic [ref=e3802]: +30 XP · 7 Q
+              - generic [ref=e3803]:
+                - generic [ref=e3806]: Payroll and Hiring Your First Employee
+                - button "Take placement test to jump to this unit" [ref=e3809] [cursor=pointer]:
+                  - img [ref=e3810]
+                  - img [ref=e3813]:
+                    - generic [ref=e3823]: Jump here
+                - generic [ref=e3824]:
+                  - 'button "Upcoming: Employees vs Contractors" [ref=e3827] [cursor=pointer]':
+                    - generic [ref=e3830]:
+                      - img [ref=e3832]
+                      - generic [ref=e3834]:
+                        - generic [ref=e3835]: Employees vs Contractors
+                        - generic [ref=e3836]: +25 XP · 7 Q
+                  - 'button "Upcoming: The True Cost of an Employee" [ref=e3839] [cursor=pointer]':
+                    - generic [ref=e3842]:
+                      - img [ref=e3844]
+                      - generic [ref=e3846]:
+                        - generic [ref=e3847]: The True Cost of an Employee
+                        - generic [ref=e3848]: +25 XP · 7 Q
+                  - 'button "Upcoming: Setting Up Payroll" [ref=e3851] [cursor=pointer]':
+                    - generic [ref=e3854]:
+                      - img [ref=e3856]
+                      - generic [ref=e3858]:
+                        - generic [ref=e3859]: Setting Up Payroll
+                        - generic [ref=e3860]: +25 XP · 7 Q
+                  - 'button "Upcoming: Benefits and Compliance" [ref=e3863] [cursor=pointer]':
+                    - generic [ref=e3866]:
+                      - img [ref=e3868]
+                      - generic [ref=e3870]:
+                        - generic [ref=e3871]: Benefits and Compliance
+                        - generic [ref=e3872]: +30 XP · 7 Q
+                  - 'button "Upcoming: Growing Your Team Sustainably" [ref=e3875] [cursor=pointer]':
+                    - generic [ref=e3878]:
+                      - img [ref=e3880]
+                      - generic [ref=e3882]:
+                        - generic [ref=e3883]: Growing Your Team Sustainably
+                        - generic [ref=e3884]: +30 XP · 7 Q
+              - generic [ref=e3885]:
+                - generic [ref=e3888]: Business Insurance and Liability
+                - button "Take placement test to jump to this unit" [ref=e3891] [cursor=pointer]:
+                  - img [ref=e3892]
+                  - img [ref=e3895]:
+                    - generic [ref=e3905]: Jump here
+                - generic [ref=e3906]:
+                  - 'button "Upcoming: Why Businesses Need Insurance" [ref=e3909] [cursor=pointer]':
+                    - generic [ref=e3912]:
+                      - img [ref=e3914]
+                      - generic [ref=e3916]:
+                        - generic [ref=e3917]: Why Businesses Need Insurance
+                        - generic [ref=e3918]: +25 XP · 7 Q
+                  - 'button "Upcoming: General and Professional Liability" [ref=e3921] [cursor=pointer]':
+                    - generic [ref=e3924]:
+                      - img [ref=e3926]
+                      - generic [ref=e3928]:
+                        - generic [ref=e3929]: General and Professional Liability
+                        - generic [ref=e3930]: +25 XP · 7 Q
+                  - 'button "Upcoming: Property and Cyber Insurance" [ref=e3933] [cursor=pointer]':
+                    - generic [ref=e3936]:
+                      - img [ref=e3938]
+                      - generic [ref=e3940]:
+                        - generic [ref=e3941]: Property and Cyber Insurance
+                        - generic [ref=e3942]: +25 XP · 7 Q
+                  - 'button "Upcoming: Limiting Your Liability" [ref=e3945] [cursor=pointer]':
+                    - generic [ref=e3948]:
+                      - img [ref=e3950]
+                      - generic [ref=e3952]:
+                        - generic [ref=e3953]: Limiting Your Liability
+                        - generic [ref=e3954]: +30 XP · 7 Q
+                  - 'button "Upcoming: When and How to Buy Business Insurance" [ref=e3957] [cursor=pointer]':
+                    - generic [ref=e3960]:
+                      - img [ref=e3962]
+                      - generic [ref=e3964]:
+                        - generic [ref=e3965]: When and How to Buy Business Insurance
+                        - generic [ref=e3966]: +30 XP · 7 Q
+              - generic [ref=e3967]:
+                - generic [ref=e3970]: Business Credit and Financing
+                - button "Take placement test to jump to this unit" [ref=e3973] [cursor=pointer]:
+                  - img [ref=e3974]
+                  - img [ref=e3977]:
+                    - generic [ref=e3987]: Jump here
+                - generic [ref=e3988]:
+                  - 'button "Upcoming: Building Business Credit" [ref=e3991] [cursor=pointer]':
+                    - generic [ref=e3994]:
+                      - img [ref=e3996]
+                      - generic [ref=e3998]:
+                        - generic [ref=e3999]: Building Business Credit
+                        - generic [ref=e4000]: +25 XP · 7 Q
+                  - 'button "Upcoming: Business Loans and Lines of Credit" [ref=e4003] [cursor=pointer]':
+                    - generic [ref=e4006]:
+                      - img [ref=e4008]
+                      - generic [ref=e4010]:
+                        - generic [ref=e4011]: Business Loans and Lines of Credit
+                        - generic [ref=e4012]: +25 XP · 7 Q
+                  - 'button "Upcoming: SBA Loans and Government Programs" [ref=e4015] [cursor=pointer]':
+                    - generic [ref=e4018]:
+                      - img [ref=e4020]
+                      - generic [ref=e4022]:
+                        - generic [ref=e4023]: SBA Loans and Government Programs
+                        - generic [ref=e4024]: +25 XP · 7 Q
+                  - 'button "Upcoming: Managing Business Debt" [ref=e4027] [cursor=pointer]':
+                    - generic [ref=e4030]:
+                      - img [ref=e4032]
+                      - generic [ref=e4034]:
+                        - generic [ref=e4035]: Managing Business Debt
+                        - generic [ref=e4036]: +30 XP · 7 Q
+                  - 'button "Upcoming: Funding Without Debt" [ref=e4039] [cursor=pointer]':
+                    - generic [ref=e4042]:
+                      - img [ref=e4044]
+                      - generic [ref=e4046]:
+                        - generic [ref=e4047]: Funding Without Debt
+                        - generic [ref=e4048]: +30 XP · 7 Q
+              - generic [ref=e4049]:
+                - generic [ref=e4052]: Reading Financial Statements
+                - button "Take placement test to jump to this unit" [ref=e4055] [cursor=pointer]:
+                  - img [ref=e4056]
+                  - img [ref=e4059]:
+                    - generic [ref=e4069]: Jump here
+                - generic [ref=e4070]:
+                  - 'button "Upcoming: The Profit and Loss Statement" [ref=e4073] [cursor=pointer]':
+                    - generic [ref=e4076]:
+                      - img [ref=e4078]
+                      - generic [ref=e4080]:
+                        - generic [ref=e4081]: The Profit and Loss Statement
+                        - generic [ref=e4082]: +25 XP · 7 Q
+                  - 'button "Upcoming: The Balance Sheet" [ref=e4085] [cursor=pointer]':
+                    - generic [ref=e4088]:
+                      - img [ref=e4090]
+                      - generic [ref=e4092]:
+                        - generic [ref=e4093]: The Balance Sheet
+                        - generic [ref=e4094]: +25 XP · 7 Q
+                  - 'button "Upcoming: The Cash Flow Statement" [ref=e4097] [cursor=pointer]':
+                    - generic [ref=e4100]:
+                      - img [ref=e4102]
+                      - generic [ref=e4104]:
+                        - generic [ref=e4105]: The Cash Flow Statement
+                        - generic [ref=e4106]: +25 XP · 7 Q
+                  - 'button "Upcoming: Key Financial Ratios" [ref=e4109] [cursor=pointer]':
+                    - generic [ref=e4112]:
+                      - img [ref=e4114]
+                      - generic [ref=e4116]:
+                        - generic [ref=e4117]: Key Financial Ratios
+                        - generic [ref=e4118]: +30 XP · 7 Q
+                  - 'button "Upcoming: Using Financial Statements for Decisions" [ref=e4121] [cursor=pointer]':
+                    - generic [ref=e4124]:
+                      - img [ref=e4126]
+                      - generic [ref=e4128]:
+                        - generic [ref=e4129]: Using Financial Statements for Decisions
+                        - generic [ref=e4130]: +30 XP · 7 Q
+                  - 'button "Upcoming: Financial Statement Red Flags" [ref=e4133] [cursor=pointer]':
+                    - generic [ref=e4136]:
+                      - img [ref=e4138]
+                      - generic [ref=e4140]:
+                        - generic [ref=e4141]: Financial Statement Red Flags
+                        - generic [ref=e4142]: +30 XP · 7 Q
+              - generic [ref=e4143]:
+                - generic [ref=e4146]: Business Finance Review and Checkpoint
+                - button "Take placement test to jump to this unit" [ref=e4149] [cursor=pointer]:
+                  - img [ref=e4150]
+                  - img [ref=e4153]:
+                    - generic [ref=e4163]: Jump here
+                - generic [ref=e4164]:
+                  - 'button "Upcoming: Checkpoint: Business Taxes and Hiring" [ref=e4167] [cursor=pointer]':
+                    - generic [ref=e4170]:
+                      - img [ref=e4172]
+                      - generic [ref=e4174]:
+                        - generic [ref=e4175]: "Checkpoint: Business Taxes and Hiring"
+                        - generic [ref=e4176]: +30 XP · 7 Q
+                  - 'button "Upcoming: Checkpoint: Insurance and Credit" [ref=e4179] [cursor=pointer]':
+                    - generic [ref=e4182]:
+                      - img [ref=e4184]
+                      - generic [ref=e4186]:
+                        - generic [ref=e4187]: "Checkpoint: Insurance and Credit"
+                        - generic [ref=e4188]: +30 XP · 7 Q
+                  - 'button "Upcoming: Checkpoint: Financial Statements" [ref=e4191] [cursor=pointer]':
+                    - generic [ref=e4194]:
+                      - img [ref=e4196]
+                      - generic [ref=e4198]:
+                        - generic [ref=e4199]: "Checkpoint: Financial Statements"
+                        - generic [ref=e4200]: +30 XP · 7 Q
+                  - 'button "Upcoming: Comprehensive Business Finance Challenge" [ref=e4203] [cursor=pointer]':
+                    - generic [ref=e4206]:
+                      - img [ref=e4208]
+                      - generic [ref=e4210]:
+                        - generic [ref=e4211]: Comprehensive Business Finance Challenge
+                        - generic [ref=e4212]: +35 XP · 7 Q
+              - generic [ref=e4213]:
+                - generic [ref=e4214]: 🏆
+                - paragraph [ref=e4215]: Course Complete!
+                - paragraph [ref=e4216]: You're ready for your interview
+        - contentinfo [ref=e4217]:
+          - generic [ref=e4218]:
+            - paragraph [ref=e4219]: © 2026 Octokeen
+            - navigation "Footer" [ref=e4220]:
+              - link "Privacy Policy" [ref=e4221] [cursor=pointer]:
+                - /url: /privacy
+              - link "Terms of Service" [ref=e4222] [cursor=pointer]:
+                - /url: /terms
+              - link "Contact" [ref=e4223] [cursor=pointer]:
+                - /url: /contact
+    - button "🔧" [ref=e4225]
+  - button "Open Next.js Dev Tools" [ref=e4231] [cursor=pointer]:
+    - img [ref=e4232]
+  - alert [ref=e4235]
+  - dialog "Cookie consent" [ref=e4236]:
+    - generic [ref=e4237]:
+      - generic [ref=e4238]:
+        - img [ref=e4239]
+        - paragraph [ref=e4241]:
+          - text: We use essential cookies to keep you signed in and optional analytics cookies to improve the app.
+          - link "Privacy Policy" [ref=e4242] [cursor=pointer]:
+            - /url: /privacy
+      - generic [ref=e4243]:
+        - button "Decline" [ref=e4244]
+        - button "Accept" [ref=e4245]

@@ -8,7 +8,6 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { useStore } from '@/store/useStore';
 import { useEngagementStore, grantTitle, grantFrame } from '@/store/useEngagementStore';
 import { streakMilestones } from '@/data/streak-milestones';
-import { DailyGoalBar } from '@/components/course/DailyGoalBar';
 import { useFeatureFlag } from '@/hooks/useFeatureFlags';
 import { analytics } from '@/lib/mixpanel';
 
@@ -55,7 +54,6 @@ export default function HomePage() {
   const flagStreaks = useFeatureFlag('engagement.streaks');
   const flagCelebrations = useFeatureFlag('engagement.celebrations');
   const flagComeback = useFeatureFlag('engagement.comeback_flow');
-  const flagDailyGoal = useFeatureFlag('ui.daily_goal_bar');
   const flagIntroFlow = useFeatureFlag('course.intro_flow');
   const flagPlacementTest = useFeatureFlag('course.placement_test');
 
@@ -201,9 +199,6 @@ export default function HomePage() {
 
       {/* Header */}
       <CourseHeader />
-
-      {/* Daily goal progress */}
-      {flagDailyGoal && <DailyGoalBar />}
 
       {/* Course map */}
       <CourseMap />

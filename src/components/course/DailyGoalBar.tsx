@@ -51,6 +51,7 @@ export function DailyGoalBar() {
   const activeProfession = useCourseStore((s) => s.activeProfession);
   const courseIntros = useCourseStore((s) => s.progress.courseIntros);
   const totalXp = useCourseStore((s) => s.progress.totalXp);
+  const isDark = useIsDark();
 
   const [dailyXp, setDailyXp] = useState(0);
   const initializedRef = useRef(false);
@@ -82,7 +83,6 @@ export function DailyGoalBar() {
   // Don't render if the user hasn't completed the course intro
   if (!introData) return null;
 
-  const isDark = useIsDark();
   const target = getDailyXpTarget(introData.dailyMinutes);
   const percent = Math.min(100, (dailyXp / target) * 100);
   const goalReached = dailyXp >= target;

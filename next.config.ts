@@ -32,7 +32,7 @@ const securityHeaders = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.paddle.com https://public.profitwell.com https://cdn.mxpnl.com https://static.cloudflareinsights.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
       "style-src 'self' 'unsafe-inline' https://*.paddle.com",
-      "img-src 'self' data: blob: https://*.googleusercontent.com https://*.paddle.com https://picsum.photos https://fastly.picsum.photos https://pagead2.googlesyndication.com https://tpc.googlesyndication.com",
+      "img-src 'self' data: blob: https://*.googleusercontent.com https://*.paddle.com https://picsum.photos https://fastly.picsum.photos https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
       "font-src 'self' https://*.paddle.com",
       "connect-src 'self' https://*.paddle.com https://*.supabase.co https://api-js.mixpanel.com https://api.mixpanel.com https://api-eu.mixpanel.com https://*.ingest.sentry.io https://public.profitwell.com https://pagead2.googlesyndication.com https://adservice.google.com https://tpc.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
       "frame-src https://*.paddle.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
@@ -73,6 +73,12 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: securityHeaders,
+      },
+      {
+        source: '/api/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        ],
       },
     ];
   },

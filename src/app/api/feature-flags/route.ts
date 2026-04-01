@@ -8,6 +8,11 @@ function isAdmin(email: string | undefined | null) {
   return email === process.env.NEXT_PUBLIC_ADMIN_EMAIL;
 }
 
+// Cache headers: CDN caches for 5 min. Admin PATCH busts on next request.
+const CACHE_HEADERS = {
+  'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600',
+};
+
 /** GET: return all flags (public, no auth needed) */
 export async function GET() {
   try {
@@ -22,14 +27,14 @@ export async function GET() {
       flags[def.key] = dbRow ? dbRow.enabled : def.enabled;
     }
 
-    return NextResponse.json({ flags });
+    return NextResponse.json({ flags }, { headers: CACHE_HEADERS });
   } catch {
     // If DB is unavailable, return defaults
     const flags: Record<string, boolean> = {};
     for (const def of FLAG_DEFINITIONS) {
       flags[def.key] = def.enabled;
     }
-    return NextResponse.json({ flags });
+    return NextResponse.json({ flags }, { headers: CACHE_HEADERS });
   }
 }
 

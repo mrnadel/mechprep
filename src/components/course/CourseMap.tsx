@@ -4,7 +4,7 @@ import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Lock, ChevronRight } from 'lucide-react';
 import { useCourseStore } from '@/store/useCourseStore';
 import { useHeartsStore } from '@/store/useHeartsStore';
 import { useSubscription } from '@/hooks/useSubscription';
@@ -240,7 +240,9 @@ export function CourseMap() {
   const currentUnitRef = useRef<HTMLDivElement>(null);
   const currentLessonRef = useRef<HTMLDivElement>(null);
   const unitElsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const headerRef = useRef<HTMLDivElement>(null);
   const scrollDirection = useScrollDirection(currentLessonRef, scrollRef);
+  const [headerStyle, setHeaderStyle] = useState({ left: 0, width: 0, top: 0 });
   const progress = useCourseStore((s) => s.progress);
   const courseData = useCourseStore((s) => s.courseData);
   const startLesson = useCourseStore((s) => s.startLesson);
@@ -305,6 +307,40 @@ export function CourseMap() {
   }, [getLessonState, placementUnitIndex]);
 
   const activeUnitIndex = useMemo(() => findActiveUnitIndex(), [findActiveUnitIndex]);
+
+  // Group units into sections (courses without sectionIndex treat all units as one section)
+  const sections = useMemo(() => {
+    const hasSections = courseData.some((u) => u.sectionIndex != null);
+    if (!hasSections) {
+      return [{ sectionIndex: 0, sectionTitle: '', units: courseData.map((u, i) => ({ unit: u, globalIndex: i })) }];
+    }
+    const groups: { sectionIndex: number; sectionTitle: string; units: { unit: typeof courseData[0]; globalIndex: number }[] }[] = [];
+    let current: typeof groups[0] | null = null;
+    courseData.forEach((unit, i) => {
+      const si = unit.sectionIndex ?? -1;
+      if (!current || current.sectionIndex !== si) {
+        current = { sectionIndex: si, sectionTitle: unit.sectionTitle ?? unit.title, units: [] };
+        groups.push(current);
+      }
+      current.units.push({ unit, globalIndex: i });
+    });
+    return groups;
+  }, [courseData]);
+
+  const hasSections = sections.length > 1;
+
+  // Determine which section the user is in based on progress
+  const activeSectionPos = useMemo(() => {
+    if (!hasSections) return 0;
+    return sections.findIndex((s) => s.units.some((u) => u.globalIndex === activeUnitIndex)) ?? 0;
+  }, [hasSections, sections, activeUnitIndex]);
+
+  const [viewingSectionPos, setViewingSectionPos] = useState(activeSectionPos);
+  useEffect(() => { setViewingSectionPos(activeSectionPos); }, [activeSectionPos]);
+
+  const currentSection = sections[viewingSectionPos] ?? sections[0];
+  const nextSection = sections[viewingSectionPos + 1] ?? null;
+  const prevSection = viewingSectionPos > 0 ? sections[viewingSectionPos - 1] : null;
 
   // Find the first "current" (next-to-do) lesson to scroll to.
   // Start from the placement unit so the map scrolls to the right place.
@@ -397,16 +433,38 @@ export function CourseMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Track which unit is at the top of the scroll viewport for the floating header
+  // Track container left/width on resize (for fixed positioning alignment)
   useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
+    const el = scrollRef.current;
+    if (!el) return;
 
+    const update = () => {
+      const rect = el.getBoundingClientRect();
+      setHeaderStyle((prev) => ({ ...prev, left: rect.left, width: rect.width }));
+    };
+
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  // Scroll handler: dynamically position header below CourseHeader + DailyGoalBar, and track visible unit
+  useEffect(() => {
     let lastIndex = 0;
-    const handleScroll = () => {
-      const containerTop = container.getBoundingClientRect().top;
-      const threshold = containerTop + 72; // below floating header
+    let lastTop = 0;
 
+    const handleScroll = () => {
+      // Compute top offset: below the sticky CourseHeader
+      const courseHeader = document.querySelector('header.sticky');
+      const topOffset = courseHeader?.getBoundingClientRect().bottom ?? 0;
+
+      if (Math.abs(topOffset - lastTop) > 0.5) {
+        lastTop = topOffset;
+        setHeaderStyle((prev) => ({ ...prev, top: topOffset }));
+      }
+
+      // 2. Track visible unit
+      const threshold = topOffset + 66;
       let newIndex = 0;
       for (let i = 0; i < unitElsRef.current.length; i++) {
         const el = unitElsRef.current[i];
@@ -422,8 +480,11 @@ export function CourseMap() {
       }
     };
 
-    container.addEventListener('scroll', handleScroll, { passive: true });
-    return () => container.removeEventListener('scroll', handleScroll);
+    // Run once on mount to set initial top
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [courseData.length]);
 
   // Derive floating header data from visibleUnitIndex
@@ -446,15 +507,19 @@ export function CourseMap() {
         WebkitOverflowScrolling: 'touch',
       }}
     >
-      {/* Floating sticky unit header */}
+      {/* Floating unit header — always fixed below CourseHeader + DailyGoalBar */}
       {floatingUnit && (
         <div
+          ref={headerRef}
           style={{
-            position: 'sticky',
-            top: 0,
-            zIndex: 10,
-            background: isDark ? '#020617' : '#FAFAFA',
+            position: 'fixed',
+            top: headerStyle.top,
+            left: headerStyle.left,
+            width: headerStyle.width,
+            zIndex: 30,
+            background: 'transparent',
             paddingBottom: 6,
+            transition: 'top 0.15s ease',
           }}
         >
           <div className="mx-auto" style={{ maxWidth: 544, padding: '0 12px' }}>
@@ -468,7 +533,7 @@ export function CourseMap() {
                 justifyContent: 'space-between',
                 gap: 12,
                 background: floatingBg,
-                borderRadius: '0 0 16px 16px',
+                borderRadius: 16,
                 padding: '10px 16px 12px',
                 border: 'none',
                 cursor: 'pointer',
@@ -476,7 +541,7 @@ export function CourseMap() {
                 transition: 'background-color 0.3s ease',
                 WebkitTapHighlightColor: 'transparent',
               }}
-              aria-label={`Unit ${visibleUnitIndex + 1}: ${floatingUnit.title}. Tap to browse units.`}
+              aria-label={`${hasSections ? `Section ${currentSection.sectionIndex}, ` : ''}Unit ${visibleUnitIndex + 1}: ${floatingUnit.title}. Tap to browse.`}
             >
               <div style={{ textAlign: 'left', minWidth: 0, flex: 1 }}>
                 <div style={{
@@ -486,8 +551,8 @@ export function CourseMap() {
                   letterSpacing: 1.2,
                   color: 'rgba(255,255,255,0.6)',
                 }}>
-                  {floatingUnit.sectionTitle
-                    ? `Section ${floatingUnit.sectionIndex}, Unit ${visibleUnitIndex + 1}`
+                  {hasSections
+                    ? `Section ${currentSection.sectionIndex}, Unit ${visibleUnitIndex + 1}`
                     : `Unit ${visibleUnitIndex + 1}`}
                 </div>
                 <div
@@ -524,12 +589,15 @@ export function CourseMap() {
         </div>
       )}
 
+      {/* Spacer accounts for the fixed header height */}
+      <div style={{ height: headerRef.current?.offsetHeight ?? 62 }} aria-hidden />
+
       {/* Units container */}
       <div
         className="flex flex-col px-3 sm:px-4 mx-auto"
         style={{ paddingTop: 8, paddingBottom: 0, gap: 0, maxWidth: 520 }}
       >
-        {courseData.map((unit, unitIndex) => {
+        {currentSection.units.map(({ unit, globalIndex: unitIndex }, localIdx) => {
           const theme = getUnitTheme(unitIndex);
           const completedInUnit = unit.lessons.filter(
             (l) => progress.completedLessons[l.id]?.passed
@@ -551,11 +619,11 @@ export function CourseMap() {
               data-unit-index={unitIndex}
               style={{
                 animation: 'unitSlideUp 0.5s ease backwards',
-                animationDelay: `${Math.min(unitIndex * 0.1, 0.5)}s`,
+                animationDelay: `${Math.min(localIdx * 0.1, 0.5)}s`,
               }}
             >
               {/* Unit name divider between units */}
-              {unitIndex > 0 && (
+              {localIdx > 0 && (
                 <div
                   className="flex items-center"
                   style={{ gap: 16, padding: '28px 8px 12px' }}
@@ -586,7 +654,7 @@ export function CourseMap() {
               {/* Lesson list */}
               <div
                 className="flex flex-col"
-                style={{ paddingTop: unitIndex === 0 ? 4 : 4, gap: 6 }}
+                style={{ paddingTop: 4, gap: 6 }}
               >
                 {unit.lessons.map((lesson, lessonIndex) => {
                   const state = getLessonState(unitIndex, lessonIndex);
@@ -617,38 +685,103 @@ export function CourseMap() {
           );
         })}
 
-        {/* Course completion marker */}
-        <div
-          className="flex flex-col items-center"
-          style={{ padding: '32px 16px' }}
-        >
+        {/* "Up Next" section card or Course completion marker */}
+        {nextSection ? (() => {
+          const nextTheme = getUnitTheme(nextSection.units[0]?.globalIndex ?? 0);
+          const nextFirstUnit = nextSection.units[0]?.globalIndex ?? 0;
+          const nextIsLocked = !isGuest && !isProUser && !isUnitUnlocked(LIMITS.free.unlockedUnits, nextFirstUnit);
+          const nextIsGuestLocked = isGuest && !isUnitUnlocked(LIMITS.free.unlockedUnits, nextFirstUnit);
+
+          return (
+            <div
+              style={{
+                marginTop: 32,
+                border: isDark ? '2px solid rgba(255,255,255,0.1)' : '2px solid rgba(0,0,0,0.08)',
+                borderRadius: 20,
+                padding: '28px 20px 24px',
+                textAlign: 'center',
+              }}
+            >
+              <div style={{
+                display: 'inline-block',
+                fontSize: 11,
+                fontWeight: 800,
+                textTransform: 'uppercase',
+                letterSpacing: 1.5,
+                color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.35)',
+                border: isDark ? '1.5px solid rgba(255,255,255,0.15)' : '1.5px solid rgba(0,0,0,0.1)',
+                borderRadius: 8,
+                padding: '4px 12px',
+                marginBottom: 16,
+              }}>
+                Up Next
+              </div>
+              <div className="flex items-center justify-center" style={{ gap: 8, marginBottom: 6 }}>
+                {(nextIsLocked || nextIsGuestLocked) && (
+                  <Lock style={{ width: 18, height: 18, color: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.3)' }} />
+                )}
+                <span style={{ fontSize: 20, fontWeight: 800, color: isDark ? '#E0E0E0' : '#1A1A1A' }}>
+                  Section {nextSection.sectionIndex}
+                </span>
+              </div>
+              <p style={{ fontSize: 14, fontWeight: 600, color: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.4)', marginBottom: 20 }}>
+                {nextSection.sectionTitle}
+              </p>
+              <button
+                className="active:scale-[0.98] transition-transform"
+                style={{
+                  width: '100%',
+                  padding: '14px 0',
+                  borderRadius: 14,
+                  fontSize: 14,
+                  fontWeight: 800,
+                  color: nextTheme.color,
+                  background: 'transparent',
+                  border: `2px solid ${nextTheme.color}`,
+                  cursor: 'pointer',
+                  WebkitTapHighlightColor: 'transparent',
+                }}
+                onClick={() => {
+                  if (nextIsGuestLocked) {
+                    setJumpModal({ kind: 'guest-signup', unitIndex: nextFirstUnit });
+                  } else if (nextIsLocked) {
+                    setJumpModal({ kind: 'free-upgrade', unitIndex: nextFirstUnit });
+                  } else {
+                    setViewingSectionPos(viewingSectionPos + 1);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+              >
+                {nextIsGuestLocked ? 'Sign up to continue' : nextIsLocked ? 'Upgrade to unlock' : 'Jump here?'}
+              </button>
+            </div>
+          );
+        })() : (
           <div
-            className="flex items-center justify-center"
-            style={{
-              width: 48,
-              height: 48,
-              borderRadius: 16,
-              background: isDark ? '#3D3200' : '#FFF5D4',
-              fontSize: 24,
-              marginBottom: 12,
-            }}
+            className="flex flex-col items-center"
+            style={{ padding: '32px 16px' }}
           >
-            🏆
+            <div
+              className="flex items-center justify-center"
+              style={{
+                width: 48,
+                height: 48,
+                borderRadius: 16,
+                background: isDark ? '#3D3200' : '#FFF5D4',
+                fontSize: 24,
+                marginBottom: 12,
+              }}
+            >
+              🏆
+            </div>
+            <p style={{ fontSize: 15, fontWeight: 800, color: isDark ? '#E0E0E0' : '#3C3C3C' }}>
+              Course Complete!
+            </p>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#AFAFAF', marginTop: 2 }}>
+              You&apos;re ready for your interview
+            </p>
           </div>
-          <p style={{ fontSize: 15, fontWeight: 800, color: isDark ? '#E0E0E0' : '#3C3C3C' }}>
-            Course Complete!
-          </p>
-          <p
-            style={{
-              fontSize: 13,
-              fontWeight: 700,
-              color: '#AFAFAF',
-              marginTop: 2,
-            }}
-          >
-            You&apos;re ready for your interview
-          </p>
-        </div>
+        )}
       </div>
 
       {/* Jump / placement-test / sign-up modal */}
