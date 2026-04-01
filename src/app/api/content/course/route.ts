@@ -2,10 +2,13 @@ import { NextResponse } from 'next/server';
 import { asc } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { courseUnits, courseLessons, courseQuestions } from '@/lib/db/schema';
-import { getAuthUserId } from '@/lib/auth-utils';
-import { canAccessUnit } from '@/lib/access-control';
-import { LIMITS, isUnitUnlocked } from '@/lib/pricing';
 import { getCourseMetaForProfession, loadUnitData } from '@/data/course/course-meta';
+
+// Cache headers: CDN caches for 1 hour, serves stale for 24h while revalidating.
+// Course content changes only when we re-seed, so this is safe.
+const CACHE_HEADERS = {
+  'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+};
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -17,32 +20,15 @@ export async function GET(request: Request) {
     const course = await Promise.all(
       meta.map((_, i) => loadUnitData(i, profession))
     );
-    return NextResponse.json({ course });
+    return NextResponse.json({ course }, { headers: CACHE_HEADERS });
   }
 
-  // Run all DB queries in parallel instead of sequentially
-  const [units, lessons, questions, userId] = await Promise.all([
+  // Run all DB queries in parallel
+  const [units, lessons, questions] = await Promise.all([
     db.select().from(courseUnits).orderBy(asc(courseUnits.orderIndex)),
     db.select().from(courseLessons).orderBy(asc(courseLessons.orderIndex)),
     db.select().from(courseQuestions).orderBy(asc(courseQuestions.orderIndex)),
-    getAuthUserId(),
   ]);
-
-  // Determine user's accessible units — single subscription lookup instead of per-unit
-  let accessibleUnitIndices: Set<number>;
-
-  if (userId) {
-    const { allowed: _ignored, tier } = await canAccessUnit(userId, 0);
-    const unlockedUnits = LIMITS[tier].unlockedUnits;
-    accessibleUnitIndices = unlockedUnits === 'all'
-      ? new Set(units.map((_, i) => i))
-      : new Set(unlockedUnits as number[]);
-  } else {
-    const freeUnits = LIMITS.free.unlockedUnits;
-    accessibleUnitIndices = freeUnits === 'all'
-      ? new Set(units.map((_, i) => i))
-      : new Set(freeUnits);
-  }
 
   // Group questions by lessonId
   const questionsByLesson = new Map<string, typeof questions>();
@@ -69,63 +55,57 @@ export async function GET(request: Request) {
   const professionUnits = units.filter(u => validUnitIds.has(u.id));
 
   // Assemble the Unit[] structure
-  // For locked units: return metadata (title, icon, etc.) but strip question content
-  const course = professionUnits.map((unit, unitIndex) => {
-    const isAccessible = accessibleUnitIndices.has(unitIndex);
-
-    return {
-      id: unit.id,
-      title: unit.title,
-      description: unit.description,
-      color: unit.color,
-      icon: unit.icon,
-      topicId: topicIdByUnitId.get(unit.id),
-      lessons: (lessonsByUnit.get(unit.id) ?? []).map((lesson) => ({
-        id: lesson.id,
-        title: lesson.title,
-        description: lesson.description,
-        icon: lesson.icon,
-        xpReward: lesson.xpReward,
-        // Only include question content for accessible units
-        questions: isAccessible
-          ? (questionsByLesson.get(lesson.id) ?? []).map((q) => ({
-              id: q.id,
-              type: q.type,
-              question: q.question,
-              ...(q.options != null ? { options: q.options } : {}),
-              ...(q.correctIndex != null ? { correctIndex: q.correctIndex } : {}),
-              ...(q.correctAnswer != null
-                ? { correctAnswer: q.correctAnswer === 'true' }
-                : {}),
-              ...(q.acceptedAnswers != null
-                ? { acceptedAnswers: q.acceptedAnswers }
-                : {}),
-              ...(q.blanks != null ? { blanks: q.blanks } : {}),
-              ...(q.wordBank != null ? { wordBank: q.wordBank } : {}),
-              ...(q.buckets != null ? { buckets: q.buckets } : {}),
-              ...(q.correctBuckets != null ? { correctBuckets: q.correctBuckets } : {}),
-              ...(q.matchTargets != null ? { matchTargets: q.matchTargets } : {}),
-              ...(q.correctMatches != null ? { correctMatches: q.correctMatches } : {}),
-              ...(q.steps != null ? { steps: q.steps } : {}),
-              ...(q.correctOrder != null ? { correctOrder: q.correctOrder } : {}),
-              ...(q.correctIndices != null ? { correctIndices: q.correctIndices } : {}),
-              ...(q.sliderMin != null ? { sliderMin: q.sliderMin } : {}),
-              ...(q.sliderMax != null ? { sliderMax: q.sliderMax } : {}),
-              ...(q.correctValue != null ? { correctValue: q.correctValue } : {}),
-              ...(q.tolerance != null ? { tolerance: q.tolerance } : {}),
-              ...(q.unit != null ? { unit: q.unit } : {}),
-              ...(q.scenario != null ? { scenario: q.scenario } : {}),
-              ...(q.rankCriteria != null ? { rankCriteria: q.rankCriteria } : {}),
-              ...(q.tapZones != null ? { tapZones: q.tapZones } : {}),
-              ...(q.correctZoneId != null ? { correctZoneId: q.correctZoneId } : {}),
-              explanation: q.explanation,
-              ...(q.hint != null ? { hint: q.hint } : {}),
-              ...(q.diagram != null ? { diagram: q.diagram } : {}),
-            }))
-          : [], // Locked unit: no questions served
+  // Serve full content to everyone (access gating is client-side, like non-ME courses).
+  // This makes the response cacheable at the CDN: one DB hit per hour for all users.
+  const course = professionUnits.map((unit) => ({
+    id: unit.id,
+    title: unit.title,
+    description: unit.description,
+    color: unit.color,
+    icon: unit.icon,
+    topicId: topicIdByUnitId.get(unit.id),
+    lessons: (lessonsByUnit.get(unit.id) ?? []).map((lesson) => ({
+      id: lesson.id,
+      title: lesson.title,
+      description: lesson.description,
+      icon: lesson.icon,
+      xpReward: lesson.xpReward,
+      questions: (questionsByLesson.get(lesson.id) ?? []).map((q) => ({
+        id: q.id,
+        type: q.type,
+        question: q.question,
+        ...(q.options != null ? { options: q.options } : {}),
+        ...(q.correctIndex != null ? { correctIndex: q.correctIndex } : {}),
+        ...(q.correctAnswer != null
+          ? { correctAnswer: q.correctAnswer === 'true' }
+          : {}),
+        ...(q.acceptedAnswers != null
+          ? { acceptedAnswers: q.acceptedAnswers }
+          : {}),
+        ...(q.blanks != null ? { blanks: q.blanks } : {}),
+        ...(q.wordBank != null ? { wordBank: q.wordBank } : {}),
+        ...(q.buckets != null ? { buckets: q.buckets } : {}),
+        ...(q.correctBuckets != null ? { correctBuckets: q.correctBuckets } : {}),
+        ...(q.matchTargets != null ? { matchTargets: q.matchTargets } : {}),
+        ...(q.correctMatches != null ? { correctMatches: q.correctMatches } : {}),
+        ...(q.steps != null ? { steps: q.steps } : {}),
+        ...(q.correctOrder != null ? { correctOrder: q.correctOrder } : {}),
+        ...(q.correctIndices != null ? { correctIndices: q.correctIndices } : {}),
+        ...(q.sliderMin != null ? { sliderMin: q.sliderMin } : {}),
+        ...(q.sliderMax != null ? { sliderMax: q.sliderMax } : {}),
+        ...(q.correctValue != null ? { correctValue: q.correctValue } : {}),
+        ...(q.tolerance != null ? { tolerance: q.tolerance } : {}),
+        ...(q.unit != null ? { unit: q.unit } : {}),
+        ...(q.scenario != null ? { scenario: q.scenario } : {}),
+        ...(q.rankCriteria != null ? { rankCriteria: q.rankCriteria } : {}),
+        ...(q.tapZones != null ? { tapZones: q.tapZones } : {}),
+        ...(q.correctZoneId != null ? { correctZoneId: q.correctZoneId } : {}),
+        explanation: q.explanation,
+        ...(q.hint != null ? { hint: q.hint } : {}),
+        ...(q.diagram != null ? { diagram: q.diagram } : {}),
       })),
-    };
-  });
+    })),
+  }));
 
-  return NextResponse.json({ course });
+  return NextResponse.json({ course }, { headers: CACHE_HEADERS });
 }

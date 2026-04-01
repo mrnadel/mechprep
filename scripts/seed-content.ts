@@ -195,7 +195,22 @@ async function loadProfessionUnits(professionDir: string): Promise<Unit[]> {
       return numA - numB;
     });
 
+  // Also discover section files (e.g., section-2-perception.ts, section-13-estate-part1.ts)
+  const sectionFiles = fs.readdirSync(unitsDir)
+    .filter(f => f.startsWith('section-') && f.endsWith('.ts'))
+    .sort((a, b) => {
+      const numA = parseInt(a.match(/section-(\d+)/)?.[1] ?? '0');
+      const numB = parseInt(b.match(/section-(\d+)/)?.[1] ?? '0');
+      if (numA !== numB) return numA - numB;
+      // For same section number, sort by part number (part1 before part2)
+      const partA = parseInt(a.match(/part(\d+)/)?.[1] ?? '0');
+      const partB = parseInt(b.match(/part(\d+)/)?.[1] ?? '0');
+      return partA - partB;
+    });
+
   const units: Unit[] = [];
+
+  // Load individual unit files
   for (const file of unitFiles) {
     const filePath = path.join(unitsDir, file);
     const mod = await import(pathToFileURL(filePath).href);
@@ -207,6 +222,20 @@ async function loadProfessionUnits(professionDir: string): Promise<Unit[]> {
       }
     }
   }
+
+  // Load section files (export Unit[] arrays)
+  for (const file of sectionFiles) {
+    const filePath = path.join(unitsDir, file);
+    const mod = await import(pathToFileURL(filePath).href);
+    for (const key of Object.keys(mod)) {
+      const val = mod[key];
+      if (Array.isArray(val) && val.length > 0 && isUnit(val[0])) {
+        units.push(...val);
+        break;
+      }
+    }
+  }
+
   return units;
 }
 

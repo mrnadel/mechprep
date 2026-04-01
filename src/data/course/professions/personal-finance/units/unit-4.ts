@@ -6,6 +6,8 @@ export const unit4: Unit = {
   description: "Your 3-digit reputation controls your financial life, learn to master it.",
   color: "#0B9954",
   icon: "\u{1F4CA}",
+  sectionIndex: 7,
+  sectionTitle: "Credit System",
   lessons: [
     // ===== LESSON 1: Your 3-Digit Reputation =====
     {
@@ -26,6 +28,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "You Have a Financial GPA",
           explanation: "Imagine a number between 300 and 850 that follows you everywhere. Banks check it before giving you a loan. This unit uses FICO (the US system), but most countries have similar credit scoring.",
+          variants: {
+            US: "Imagine a number between 300 and 850 that follows you everywhere. Banks check it before giving you a loan. The US uses FICO scores, calculated by three major bureaus: Equifax, Experian, and TransUnion.",
+            GB: "Imagine a number that follows you everywhere. Banks check it before giving you a loan. The UK uses three credit reference agencies: Experian (0-999), Equifax (0-1000), and TransUnion (0-710). Each has its own scoring scale.",
+            AU: "Imagine a number between 0 and 1200 that follows you everywhere. Banks check it before giving you a loan. Australia uses credit reporting bodies: Equifax (0-1200), Experian (0-1000), and illion (0-1000).",
+            CA: "Imagine a number between 300 and 900 that follows you everywhere. Banks check it before giving you a loan. Canada uses two credit bureaus: Equifax and TransUnion, both scoring from 300-900.",
+            IL: "Israel's credit scoring system is newer than most countries. The Credit Data Service (Sherut Ntuney Ashrai), run by the Bank of Israel since 2019, provides credit scores to lenders. Your score is based on your repayment history across banks.",
+          },
           hint: "Try this now: check your credit score for free at your bank's app or website.",
         },
         {
@@ -33,6 +42,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "Who's Keeping Score?",
           explanation: "Three companies track your credit: Equifax, Experian, and TransUnion. They're called credit bureaus.",
+          variants: {
+            US: "Three companies track your credit: Equifax, Experian, and TransUnion. They're called credit bureaus. They collect your payment history, credit accounts, and public records, then generate your scores.",
+            GB: "Three credit reference agencies track your credit in the UK: Experian, Equifax, and TransUnion. Each uses a different scoring scale. You can check your reports for free through ClearScore (Equifax), Credit Karma (TransUnion), and Experian's free service.",
+            AU: "Three credit reporting bodies track your credit in Australia: Equifax, Experian, and illion. Since 2018, comprehensive credit reporting means both positive and negative data is shared. You can request a free copy of your report from each.",
+            CA: "Two main bureaus track your credit in Canada: Equifax and TransUnion. They collect your payment history, credit accounts, and public records. You're entitled to a free credit report from each once per year by mail.",
+            IL: "Since 2019, the Bank of Israel operates the Credit Data Service (Sherut Ntuney Ashrai). It collects repayment data from banks and credit companies and generates credit scores. You can check your credit data for free through the Bank of Israel website.",
+          },
           hint: "You actually have three credit scores, one from each bureau. They're usually close but not identical.",
         },
         {
@@ -104,6 +120,13 @@ export const unit4: Unit = {
           blanks: ["Equifax", "Experian", "TransUnion"],
           wordBank: ["Equifax", "Experian", "TransUnion", "FICO", "Visa", "Federal Reserve"],
           explanation: "Equifax, Experian, and TransUnion are the three major credit bureaus that collect your credit data and generate your scores.",
+          variants: {
+            US: "Equifax, Experian, and TransUnion are the three major credit bureaus that collect your credit data and generate your scores.",
+            GB: "The UK's three credit reference agencies are Experian, Equifax, and TransUnion. Each uses its own scoring scale and you can check all three for free through ClearScore, Credit Karma, and Experian respectively.",
+            AU: "Australia's three credit reporting bodies are Equifax, Experian, and illion. They collect your credit history under comprehensive credit reporting and you can get a free copy of each report once per year.",
+            CA: "Canada has two major credit bureaus: Equifax Canada and TransUnion Canada. Both maintain your credit file and generate scores on a 300-900 scale.",
+            IL: "Israel's credit data is managed centrally by the Bank of Israel's Credit Data Service (Sherut Ntuney Ashrai), which was launched in 2019 to improve financial transparency and competition.",
+          },
         },
         {
           id: "pf-u4-L1-Q8",
@@ -134,6 +157,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "The Credit Score Recipe",
           explanation: "Your FICO score isn't random, it's built from exactly five ingredients, each with a specific weight. Think of it like a recipe.",
+          variants: {
+            US: "Your FICO score isn't random, it's built from exactly five ingredients, each with a specific weight: Payment History (35%), Credit Utilization (30%), Length of History (15%), Credit Mix (10%), and New Credit (10%).",
+            GB: "Your credit score isn't random. While UK agencies don't publish exact weights, the key factors are: payment history (most important), credit utilization, length of credit history, types of credit, and how often you apply for new credit. Electoral roll registration also matters in the UK.",
+            AU: "Your credit score isn't random. Since comprehensive credit reporting (CCR), Australian scores consider: repayment history, credit applications, credit limits, types of credit, and any defaults or bankruptcies. Positive payment data now counts too.",
+            CA: "Your credit score isn't random. Canadian scores (300-900) are built from similar factors to the US: payment history (biggest factor), credit utilization, length of credit history, types of credit, and new credit inquiries.",
+            IL: "Your credit score from the Bank of Israel's Credit Data Service is based on: repayment history across banks, number and types of credit accounts, outstanding debt levels, and recent credit applications. The system is newer and less detailed than some other countries.",
+          },
           hint: "The top two factors, payment history and utilization, make up 65% of your score. Master those two and you're most of the way there.",
         },
         {
@@ -143,6 +173,13 @@ export const unit4: Unit = {
           explanation: "Payment History (35%): Do you pay on time? One late payment can drop your score 100+ points.",
         },
         {
+          id: "pf-u4-L2-Q2",
+          type: "true-false",
+          question: "Payment history is the single biggest factor in your FICO credit score.",
+          correctAnswer: true,
+          explanation: "Yes! Payment history makes up 35% of your score, more than any other factor. Paying on time is the most important thing you can do for your credit.",
+        },
+        {
           id: "pf-u4-L2-Q1",
           type: "rank-order",
           question: "Rank these FICO factors from most to least important:",
@@ -150,17 +187,6 @@ export const unit4: Unit = {
           correctOrder: [0, 1, 2, 3, 4],
           rankCriteria: "Most important to least important (by weight)",
           explanation: "Payment History (35%) > Utilization (30%) > Length (15%) > Mix (10%) = New Credit (10%). The top two alone are 65% of your score.",
-        },
-        {
-          id: "pf-u4-L2-Q2",
-          type: "slider-estimate",
-          question: "What percentage of your FICO score comes from payment history?",
-          sliderMin: 10,
-          sliderMax: 60,
-          correctValue: 35,
-          tolerance: 10,
-          unit: "%",
-          explanation: "Payment history is 35% of your FICO score, the single largest factor. Pay your bills on time and you've already won a third of the battle.",
         },
         {
           id: "pf-u4-L2-Q3",
@@ -238,6 +264,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "One Late Payment Can Wreck Your Score",
           explanation: "Payment history is 35% of your FICO score, the single biggest factor. And it's binary: did you pay on time or didn't you?",
+          variants: {
+            US: "Payment history is 35% of your FICO score, the single biggest factor. And it's binary: did you pay on time or didn't you? One late payment (30+ days) stays on your report for 7 years.",
+            GB: "Payment history is the single biggest factor in your UK credit score. A missed payment shows on your report for 6 years. Even one default can make it very hard to get approved for credit at decent rates.",
+            AU: "Payment history is the single biggest factor in your Australian credit score. A default (payment 14+ days late for less than $150, or 60+ days for larger amounts) stays on your report for 5 years.",
+            CA: "Payment history is the single biggest factor in your Canadian credit score. Late payments stay on your report for 6-7 years depending on the province. Even one missed payment can drop your score significantly.",
+            IL: "Payment history is critical in Israel's credit scoring system. Negative payment data (bounced checks, loan defaults, overdue payments) is recorded by the Credit Data Service and shared with all lenders for up to 5 years.",
+          },
           hint: "A 750 score can drop to 670 from a single missed payment. That's 'excellent' to 'fair' overnight.",
         },
         {
@@ -245,6 +278,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "The Damage Timeline",
           explanation: "Late payments escalate in stages. 1-29 days late: just a fee from your lender. At 30 days, the bureaus get notified and the real damage begins.",
+          variants: {
+            US: "Late payments escalate in stages. 1-29 days late: just a fee from your lender. At 30 days, the bureaus get notified and the real damage begins. 60 days: bigger score hit. 90+ days: severe damage. Collections: nuclear event.",
+            GB: "Late payments escalate in stages. A few days late: your lender may charge a fee. After 1-2 missed payments, it appears on your credit file. After 3-6 missed payments, the account may 'default,' which is a severe mark lasting 6 years.",
+            AU: "Late payments escalate in stages. A few days late: your lender may charge a fee. After 14+ days on amounts under $150, or 60+ days on larger amounts, a default can be recorded on your credit report for 5 years.",
+            CA: "Late payments escalate in stages. 1-29 days late: just a fee from your lender. At 30 days, your creditor can report to the bureaus. 60-90 days: increasingly severe damage. Eventually the account may be sent to collections.",
+            IL: "Late payments in Israel escalate quickly. A bounced check (shek muzar) is reported to the Bank of Israel immediately. Multiple bounced checks in a year can get your account restricted (mugbal). Loan defaults are recorded by the Credit Data Service.",
+          },
         },
         {
           id: "pf-u4-L3-Q1",
@@ -352,6 +392,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "The 30% Myth",
           explanation: "You've probably heard 'keep utilization under 30%.' That's not wrong, but it's misleading. People with 800+ scores keep theirs under 10%. Lower is always better.",
+        },
+        {
+          id: "pf-u4-L4-Q0",
+          type: "true-false",
+          question: "Credit utilization means what percentage of your available credit you are currently using.",
+          correctAnswer: true,
+          explanation: "Exactly. If you have a 10,000 limit and owe 2,000, you're using 20% of your available credit.",
         },
         {
           id: "pf-u4-L4-Q1",
@@ -566,6 +613,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "The Catch-22 of Credit",
           explanation: "To get credit, you need a credit history. To get a credit history, you need credit.",
+          variants: {
+            US: "To get credit, you need a credit history. To get a credit history, you need credit. In the US, secured credit cards and credit-builder loans are the main ways to break this cycle.",
+            GB: "To get credit, you need a credit history. To get a credit history, you need credit. In the UK, registering on the electoral roll, using a credit builder card, and even having a mobile phone contract can help start building your file.",
+            AU: "To get credit, you need a credit history. To get a credit history, you need credit. In Australia, you can start building history with a low-limit credit card, a phone contract, or even just paying bills on time (now reported under CCR).",
+            CA: "To get credit, you need a credit history. To get a credit history, you need credit. In Canada, secured credit cards, becoming an authorized user, and even having a cell phone contract can help build your file.",
+            IL: "To get credit, you need a credit history. To get a credit history, you need credit. In Israel, your bank relationship is key. Starting with a small credit card, maintaining a stable bank account, and avoiding bounced checks builds your profile.",
+          },
           hint: "Having no credit is like having no reviews on a new restaurant. People don't trust it yet, not because it's bad, but because it's unknown.",
         },
         {
@@ -775,6 +829,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "Your Credit Report Card. It's Free",
           explanation: "You're legally entitled to a free credit report from each bureau every year at AnnualCreditReport.com. It's the only federally authorized source.",
+          variants: {
+            US: "You're legally entitled to a free credit report from each bureau every year at AnnualCreditReport.com. It's the only federally authorized source. You can stagger requests every 4 months for year-round monitoring.",
+            GB: "You can check your credit report for free. Use ClearScore (Equifax data), Credit Karma (TransUnion data), or Experian's free service. You're also legally entitled to your full statutory report for £2 from each agency.",
+            AU: "You're entitled to a free credit report from each bureau once per year: Equifax, Experian, and illion. Request them directly from each bureau's website. You can also get free reports if you've been denied credit in the last 90 days.",
+            CA: "You're entitled to a free credit report from each bureau once per year. Request by mail from Equifax Canada and TransUnion Canada. You can also use free services like Borrowell (Equifax) or Credit Karma (TransUnion) for ongoing monitoring.",
+            IL: "You can access your credit data for free through the Bank of Israel's Credit Data Service website (sheirutnetuneiashrai.boi.org.il). The report shows your repayment history across all banks and credit companies.",
+          },
           hint: "Try this now: go to AnnualCreditReport.com and pull your free credit report from one of the three bureaus.",
         },
         {
@@ -782,6 +843,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "What to Look For",
           explanation: "When you get your report, check for: 1) Accounts you don't recognize (possible identity theft). 2) Late payments that you believe you made on time (errors happen).",
+          variants: {
+            US: "When you get your report, check for: 1) Accounts you don't recognize (possible identity theft). 2) Late payments that you believe you made on time (errors happen). 3) Incorrect balances. 4) Accounts in collections you never knew about. About 20% of reports have errors.",
+            GB: "When you get your report, check for: 1) Accounts you don't recognize (possible identity theft). 2) Incorrect payment statuses. 3) Old addresses or linked names you don't recognize. 4) Outdated negative marks that should have been removed after 6 years.",
+            AU: "When you get your report, check for: 1) Accounts you don't recognize (possible identity theft). 2) Defaults or late payments you dispute. 3) Incorrect personal details. 4) Credit inquiries you didn't authorize. Dispute errors directly with the credit reporting body.",
+            CA: "When you get your report, check for: 1) Accounts you don't recognize (possible identity theft). 2) Late payments that you believe you made on time. 3) Incorrect balances. 4) Accounts in collections you never knew about. File disputes with the bureau in writing.",
+            IL: "When you check your Bank of Israel credit data, look for: 1) Accounts or loans you don't recognize. 2) Incorrect repayment statuses. 3) Bounced checks that weren't yours. 4) Any data that seems inaccurate. You can dispute errors through the Credit Data Service.",
+          },
         },
         {
           id: "pf-u4-L7-Q1",
@@ -795,6 +863,13 @@ export const unit4: Unit = {
           ],
           correctIndex: 0,
           explanation: "AnnualCreditReport.com is the ONLY federally authorized source. Other sites that look official often try to sign you up for paid monitoring services. Stick with the real one.",
+          variants: {
+            US: "AnnualCreditReport.com is the ONLY federally authorized source. Other sites that look official often try to sign you up for paid monitoring services. Stick with the real one.",
+            GB: "Use free services: ClearScore (Equifax data), Credit Karma (TransUnion data), or Experian's free tier. You can also request your statutory credit report from each agency. Avoid sites that push paid subscriptions.",
+            AU: "Request your free report directly from Equifax, Experian, and illion. You're entitled to one free report per year from each, or anytime within 90 days of a credit denial. Avoid third-party sites that push paid services.",
+            CA: "Request your free report by mail from Equifax Canada and TransUnion Canada. You can also use free services like Borrowell (Equifax) or Credit Karma (TransUnion) for ongoing access. Avoid sites that push paid subscriptions.",
+            IL: "Access your free credit data at sheirutnetuneiashrai.boi.org.il, the Bank of Israel's official Credit Data Service portal. You can check your data anytime at no cost. Avoid unofficial third-party sites.",
+          },
         },
         {
           id: "pf-u4-L7-Q2",
@@ -851,6 +926,13 @@ export const unit4: Unit = {
           blanks: ["one", "AnnualCreditReport.com"],
           wordBank: ["one", "AnnualCreditReport.com", "three", "CreditKarma", "twelve", "your bank"],
           explanation: "One report per bureau per year, totaling three. All accessed through AnnualCreditReport.com. Pro tip: check one bureau every 4 months for year-round monitoring.",
+          variants: {
+            US: "One report per bureau per year, totaling three. All accessed through AnnualCreditReport.com. Pro tip: check one bureau every 4 months for year-round monitoring.",
+            GB: "UK credit reports are available for free anytime through ClearScore (Equifax), Credit Karma (TransUnion), and Experian's free service. No limit on how often you check. Monitor all three regularly since each may have different data.",
+            AU: "One free report per bureau per year from Equifax, Experian, and illion. Request directly from each bureau's website. You also get a free report within 90 days of a credit denial.",
+            CA: "One free report per bureau per year by mail from Equifax Canada and TransUnion Canada. Free services like Borrowell and Credit Karma offer ongoing access. Check both bureaus since they may have different data.",
+            IL: "You can check your Bank of Israel credit data for free anytime through the official portal. There's no annual limit. Check periodically to ensure accuracy and catch any unauthorized activity.",
+          },
         },
         {
           id: "pf-u4-L7-Q8",
@@ -877,6 +959,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "Not All Credit Checks Are Equal",
           explanation: "When someone checks your credit, it's called an 'inquiry' or 'pull.' Hard pulls (you applied for credit) affect your score. Soft pulls (you checked yourself) don't.",
+          variants: {
+            US: "When someone checks your credit, it's called an 'inquiry' or 'pull.' Hard pulls (you applied for credit) affect your score. Soft pulls (you checked yourself, employer check, pre-approved offers) don't.",
+            GB: "When someone checks your credit, it's called a 'search.' Hard searches (you applied for credit) appear on your file and may affect your score. Soft searches (you checked yourself, eligibility checkers, quotation searches) don't.",
+            AU: "When someone checks your credit, it's called an 'inquiry.' Credit applications create inquiries that stay on your report for 5 years. Checking your own report is free and doesn't affect your score.",
+            CA: "When someone checks your credit, it's called an 'inquiry.' Hard inquiries (you applied for credit) affect your score and stay for 3 years. Soft inquiries (you checked yourself, pre-approved offers) don't.",
+            IL: "When a lender checks your credit data through the Bank of Israel's system, it's recorded. Multiple credit checks in a short period can signal risk to lenders. Checking your own data is free and doesn't affect your profile.",
+          },
           hint: "The easiest way to remember: if YOU initiated an application for credit, it's a hard pull. Everything else is soft.",
         },
         {
@@ -884,6 +973,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "The Rate Shopping Exception",
           explanation: "Here's some great news: when you're shopping for a mortgage, auto loan, or student loan, multiple hard pulls within a 14-45 day window count as just ONE inquiry. The scoring model knows you're comparing rates, not desperately seeking credit.",
+          variants: {
+            US: "Here's some great news: when you're shopping for a mortgage, auto loan, or student loan, multiple hard pulls within a 14-45 day window count as just ONE inquiry. The FICO scoring model knows you're comparing rates, not desperately seeking credit.",
+            GB: "Here's some great news: many UK lenders offer 'quotation searches' (soft checks) that let you compare rates without affecting your score. When you do formally apply, try to do all applications for the same type of credit within a short window.",
+            AU: "Here's something to know: unlike some countries, Australia doesn't have a formal 'rate shopping' exception. Each credit application creates a separate inquiry on your report. Use rate comparison websites that do soft checks before formally applying.",
+            CA: "Here's some great news: when you're shopping for a mortgage or auto loan, multiple hard inquiries within a 14-day window are treated as a single inquiry by scoring models. Shop around confidently within that window.",
+            IL: "When comparing loan rates in Israel, be aware that each formal credit check is recorded. Ask lenders for preliminary quotes or indicative rates before submitting a full application to minimize the number of checks on your record.",
+          },
         },
         {
           id: "pf-u4-L8-Q1",
@@ -981,6 +1077,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "Quick Wins for Your Credit Score",
           explanation: "Some credit moves take years, but others can boost your score in 30-90 days. Utilization changes are the fastest lever you have.",
+          variants: {
+            US: "Some credit moves take years, but others can boost your score in 30-90 days. Utilization changes are the fastest lever you have. Pay down balances, request limit increases, and use Experian Boost to add utility payments.",
+            GB: "Some credit moves take months, but others can boost your score quickly. Register on the electoral roll (instant improvement). Pay down credit card balances. Fix any errors on your report. Space out credit applications.",
+            AU: "Some credit moves take years, but others can improve your score in a few months. Pay down credit card balances, fix any errors on your report, and avoid multiple credit applications in a short period. Under CCR, on-time payments now actively help.",
+            CA: "Some credit moves take years, but others can boost your score in 30-90 days. Pay down credit card balances to under 30% utilization, request limit increases, and dispute any errors on your report.",
+            IL: "Improving your credit profile in Israel focuses on maintaining a clean banking record. Avoid bounced checks (shek muzar), keep your account in good standing, pay all loans on time, and avoid excessive credit applications.",
+          },
           hint: "If your score needs a quick boost (maybe before a mortgage application), utilization is your best friend.",
         },
         {
@@ -988,6 +1091,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "The 7 Score-Boosting Tactics",
           explanation: "Your top moves: pay down balances to under 10%, ask for credit limit increases, dispute report errors, and use Experian Boost for utility payments.",
+          variants: {
+            US: "Your top moves: pay down balances to under 10%, ask for credit limit increases, dispute report errors, use Experian Boost for utility payments, set up autopay, avoid new applications before big loans, and keep old accounts open.",
+            GB: "Your top moves: register on the electoral roll, pay down credit card balances, dispute report errors, avoid new applications before big purchases, use eligibility checkers instead of applying directly, keep old accounts open, and make sure you're not linked to someone with bad credit.",
+            AU: "Your top moves: pay down credit card balances, dispute report errors, avoid multiple applications, ensure all on-time payments are being reported under CCR, keep old accounts open, reduce your total credit limits on unused cards, and set up direct debits for all bills.",
+            CA: "Your top moves: pay down balances to under 30%, ask for credit limit increases, dispute report errors, set up autopay for all bills, avoid new applications before big loans, keep old accounts open, and mix credit types over time.",
+            IL: "Your top moves: ensure no bounced checks, pay all loan installments on time, maintain a stable relationship with your bank, avoid excessive credit applications, keep your bank account in positive balance, and resolve any disputed debts promptly.",
+          },
         },
         {
           id: "pf-u4-L9-Q1",
@@ -1093,6 +1203,13 @@ export const unit4: Unit = {
           type: "teaching",
           question: "The 5 Pillars of Lifelong Credit Protection",
           explanation: "Five habits for lifelong credit protection: autopay everything, keep utilization under 10%, monitor your report regularly, keep old accounts open, and freeze your credit when not applying.",
+          variants: {
+            US: "Five habits for lifelong credit protection: autopay everything, keep utilization under 10%, monitor your report regularly, keep old accounts open, and freeze your credit at all three bureaus when not applying.",
+            GB: "Five habits for lifelong credit protection: set up direct debits for all bills, keep credit utilization low, check your report every few months through free services, stay on the electoral roll, and use CIFAS protective registration if you're a fraud victim.",
+            AU: "Five habits for lifelong credit protection: set up direct debits for all bills, keep credit card balances low, check your report annually from all three bureaus, keep old accounts in good standing, and place a ban on your credit file if you suspect fraud.",
+            CA: "Five habits for lifelong credit protection: set up pre-authorized payments for all bills, keep utilization under 30%, check your report regularly through free services, keep old accounts open, and place a fraud alert or credit freeze if needed.",
+            IL: "Five habits for lifelong credit protection: set up standing orders (hora'ot keva) for all bills, never bounce checks, check your Bank of Israel credit data annually, maintain a stable bank relationship, and report any suspicious activity immediately.",
+          },
         },
         {
           id: "pf-u4-L10-Q1",
@@ -1186,7 +1303,7 @@ export const unit4: Unit = {
         {
           id: "pf-u4-L11-SQ1",
           question: "What is the most common credit score range?",
-          options: ["0–500", "300–850", "100–1000", "0–100"],
+          options: ["0-500", "300-850", "100-1000", "0-100"],
           correctIndex: 1,
         },
         {

@@ -288,6 +288,18 @@ Every course follows this arc. The first 6 sections build knowledge. The last 6-
 | **Professional** | 11-13 | Industry practice, methodology, ethics, real workflows. Teach-back and explanation. | Synthesis: case studies, conversations simulating professional situations |
 | **Mastery** | 14-15 | Capstone challenges. Cross-domain synthesis. "You could now work in this field." | Expert: comprehensive scenarios requiring knowledge from all sections |
 
+### How sections work (technical decision, resolved)
+
+Sections are NOT a new data layer. They are visual groupings rendered as banners on the course map, matching how Duolingo implements them.
+
+**Data model:** Each Unit has optional `sectionIndex` (number, 1-15) and `sectionTitle` (string) fields. Units with the same sectionIndex are grouped together. The course map renders a full-width banner when sectionTitle changes between consecutive units.
+
+**File organization:** One TypeScript file per section (15 files per course). Each file exports an array of units for that section. Example: `professions/personal-finance/sections/section-01-money-basics.ts` exports 8 units.
+
+**Course map UI:** The existing course map auto-renders section headers when it detects a `sectionTitle` change between units. No separate screen, no tabs. Just a scrolling path with visual dividers, exactly like Duolingo.
+
+**Performance:** For courses with 150-180 units, the course map will need virtualized scrolling (react-window or similar) in the future. For now, the existing rendering is fine up to ~50 units. We'll add virtualization when a course exceeds that.
+
 ### Unit Structure (8-15 units per section)
 
 Each unit teaches one sub-topic through 3-7 lessons.

@@ -6,6 +6,8 @@ export const unit12: Unit = {
   description: "Level up. Build wealth, create income streams, and design your financial life.",
   color: "#015E02",
   icon: "🚀",
+  sectionIndex: 13,
+  sectionTitle: "Financial Mastery",
   lessons: [
     // ===== LESSON 1: The Big Purchase Framework =====
     {
@@ -34,6 +36,13 @@ export const unit12: Unit = {
           question: "The 5-Step Big Purchase Checklist",
           explanation: "Step 1: Do I need it, or do I just want it right now? Step 2: Can I pay cash, or will I go into debt?",
           hint: "Most impulse purchases fail at Step 4. Time is the best antidote to buyer's remorse.",
+        },
+        {
+          id: "pf-u12-L1-Q0",
+          type: "true-false",
+          question: "Before making a big purchase, you should pause and think it through instead of buying on impulse.",
+          correctAnswer: true,
+          explanation: "That's the core idea. A few minutes of thinking can save you hundreds or thousands of dollars.",
         },
         {
           id: "pf-u12-L1-Q1",
@@ -155,6 +164,13 @@ export const unit12: Unit = {
           question: "The Negotiation Playbook",
           explanation: "The playbook that works everywhere: research the market rate, ask for more than you expect, listen to their counter, be willing to walk away, and get it in writing.",
           hint: "The person with the most information and the least desperation always wins the negotiation.",
+        },
+        {
+          id: "pf-u12-L2-Q0",
+          type: "true-false",
+          question: "Many everyday costs like your salary, bills, and interest rates can be negotiated if you simply ask.",
+          correctAnswer: true,
+          explanation: "Most people never ask, so they never get a better deal. The worst that can happen is they say no.",
         },
         {
           id: "pf-u12-L2-Q1",
@@ -1076,6 +1092,13 @@ export const unit12: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u12-L9-myth1",
+          type: "teaching",
+          question: "Myth: Financial advisors always have your best interest",
+          explanation: "Many advisors earn commissions by selling you specific products, not by growing your wealth. Only fee-only fiduciary advisors are legally required to put your interests first. Always ask: 'Are you a fiduciary?' and 'How do you get paid?' before trusting anyone with your money.",
+          hint: "The word 'advisor' has no legal protection. Anyone can call themselves one. A 'fiduciary' is the legal standard that actually means they must act in your interest.",
+        },
+        {
           id: "pf-u12-L9-T1",
           type: "teaching",
           question: "Wealth Isn't About How Much You Earn",
@@ -1623,7 +1646,7 @@ export const unit12: Unit = {
       caseStudySections: [
         {
           id: "pf-u12-L13-CS1",
-          content: "Meet Priya. A 28-year-old marketing manager at a mid-size tech company. She's been there 2 years, consistently exceeds targets, and just received an offer from a competitor: $95,000 + 15% bonus. Her current salary: $78,000 + 10% bonus.\n\nPriya likes her current company but feels underpaid. She decides to negotiate rather than just accept the outside offer or quietly leave.\n\nHer research shows the market range for her role is $85,000–$105,000 in her city.",
+          content: "Meet Priya. A 28-year-old marketing manager at a mid-size tech company. She's been there 2 years, consistently exceeds targets, and just received an offer from a competitor: $95,000 + 15% bonus. Her current salary: $78,000 + 10% bonus.\n\nPriya likes her current company but feels underpaid. She decides to negotiate rather than just accept the outside offer or quietly leave.\n\nHer research shows the market range for her role is $85,000 to $105,000 in her city.",
           checkpoint: {
             id: "pf-u12-L13-CP1",
             type: "slider-estimate",

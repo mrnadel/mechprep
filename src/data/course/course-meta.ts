@@ -404,6 +404,9 @@ export async function loadUnitData(unitIndex: number, professionId?: string): Pr
 }
 
 async function loadFinanceUnit(unitIndex: number): Promise<Unit> {
+  // Index 0-12: Original 13 units (unit-0 through unit-12)
+  // Index 13-18: Section 13 Part 1 - Estate Planning (6 units)
+  // Index 19-23: Section 13 Part 2 - Estate Planning (5 units)
   const loaders: (() => Promise<Unit>)[] = [
     () => import('./professions/personal-finance/units/unit-0').then(m => m.unit0),
     () => import('./professions/personal-finance/units/unit-1').then(m => m.unit1),
@@ -418,6 +421,17 @@ async function loadFinanceUnit(unitIndex: number): Promise<Unit> {
     () => import('./professions/personal-finance/units/unit-9').then(m => m.unit9),
     () => import('./professions/personal-finance/units/unit-8').then(m => m.unit8),
     () => import('./professions/personal-finance/units/unit-12').then(m => m.unit12),
+    () => import('./professions/personal-finance/units/section-13-estate-part1').then(m => m.financeSection13Part1[0]),
+    () => import('./professions/personal-finance/units/section-13-estate-part1').then(m => m.financeSection13Part1[1]),
+    () => import('./professions/personal-finance/units/section-13-estate-part1').then(m => m.financeSection13Part1[2]),
+    () => import('./professions/personal-finance/units/section-13-estate-part1').then(m => m.financeSection13Part1[3]),
+    () => import('./professions/personal-finance/units/section-13-estate-part1').then(m => m.financeSection13Part1[4]),
+    () => import('./professions/personal-finance/units/section-13-estate-part1').then(m => m.financeSection13Part1[5]),
+    () => import('./professions/personal-finance/units/section-13-estate-part2').then(m => m.financeSection13Part2[0]),
+    () => import('./professions/personal-finance/units/section-13-estate-part2').then(m => m.financeSection13Part2[1]),
+    () => import('./professions/personal-finance/units/section-13-estate-part2').then(m => m.financeSection13Part2[2]),
+    () => import('./professions/personal-finance/units/section-13-estate-part2').then(m => m.financeSection13Part2[3]),
+    () => import('./professions/personal-finance/units/section-13-estate-part2').then(m => m.financeSection13Part2[4]),
   ];
 
   // Units beyond what has full content files fall back to lightweight metadata
@@ -438,8 +452,20 @@ async function loadFinanceUnit(unitIndex: number): Promise<Unit> {
  * add profession-specific loaders like loadFinanceUnit above.
  */
 async function loadPsychologyUnit(unitIndex: number): Promise<Unit> {
+  // Index 0: Section 1 - Brain (unit-1)
+  // Index 1-9: Section 2 - Perception (section-2-perception, 9 units)
+  // Index 10-18: Section 1 continued - units 2-10
   const loaders: (() => Promise<Unit>)[] = [
     () => import('./professions/psychology/units/unit-1').then(m => m.unit1),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[0]),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[1]),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[2]),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[3]),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[4]),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[5]),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[6]),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[7]),
+    () => import('./professions/psychology/units/section-2-perception').then(m => m.psychologySection2[8]),
     () => import('./professions/psychology/units/unit-2').then(m => m.unit2),
     () => import('./professions/psychology/units/unit-3').then(m => m.unit3),
     () => import('./professions/psychology/units/unit-4').then(m => m.unit4),
@@ -450,17 +476,38 @@ async function loadPsychologyUnit(unitIndex: number): Promise<Unit> {
     () => import('./professions/psychology/units/unit-9').then(m => m.unit9),
     () => import('./professions/psychology/units/unit-10').then(m => m.unit10),
   ];
-  if (unitIndex < 0 || unitIndex >= loaders.length) {
+
+  if (unitIndex < 0 || unitIndex >= psychologyCourseMeta.length) {
     throw new Error(`Invalid psychology unit index: ${unitIndex}`);
   }
+
+  if (unitIndex >= loaders.length) {
+    return psychologyCourseMeta[unitIndex];
+  }
+
   return loaders[unitIndex]();
 }
 
 async function loadSpaceUnit(unitIndex: number): Promise<Unit> {
+  // Index 0-2: Section 1-3 (unit-1 to unit-3)
+  // Index 3-14: Section 4 - Light & Telescopes (section-4-light, 12 units)
+  // Index 15-21: Section 5-10 (unit-4 to unit-10, original stars onwards)
   const loaders: (() => Promise<Unit>)[] = [
     () => import('./professions/space-astronomy/units/unit-1').then(m => m.unit1),
     () => import('./professions/space-astronomy/units/unit-2').then(m => m.unit2),
     () => import('./professions/space-astronomy/units/unit-3').then(m => m.unit3),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[0]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[1]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[2]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[3]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[4]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[5]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[6]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[7]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[8]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[9]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[10]),
+    () => import('./professions/space-astronomy/units/section-4-light').then(m => m.spaceSection4[11]),
     () => import('./professions/space-astronomy/units/unit-4').then(m => m.unit4),
     () => import('./professions/space-astronomy/units/unit-5').then(m => m.unit5),
     () => import('./professions/space-astronomy/units/unit-6').then(m => m.unit6),
@@ -469,8 +516,14 @@ async function loadSpaceUnit(unitIndex: number): Promise<Unit> {
     () => import('./professions/space-astronomy/units/unit-9').then(m => m.unit9),
     () => import('./professions/space-astronomy/units/unit-10').then(m => m.unit10),
   ];
-  if (unitIndex < 0 || unitIndex >= loaders.length) {
+
+  if (unitIndex < 0 || unitIndex >= spaceCourseMeta.length) {
     throw new Error(`Invalid space unit index: ${unitIndex}`);
   }
+
+  if (unitIndex >= loaders.length) {
+    return spaceCourseMeta[unitIndex];
+  }
+
   return loaders[unitIndex]();
 }

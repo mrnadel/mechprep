@@ -4,6 +4,12 @@ import { db } from '@/lib/db';
 import { practiceQuestions } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
 
+// Cache for 1 hour at CDN, serve stale for 24h while revalidating.
+// Practice questions only change when we re-seed.
+const CACHE_HEADERS = {
+  'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+};
+
 export async function GET() {
   // Require authentication to prevent unauthenticated scraping of question content
   const userId = await getAuthUserId();
@@ -27,5 +33,5 @@ export async function GET() {
     };
   });
 
-  return NextResponse.json({ questions });
+  return NextResponse.json({ questions }, { headers: CACHE_HEADERS });
 }

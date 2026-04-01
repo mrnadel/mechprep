@@ -7,6 +7,8 @@ export const unit1: Unit = {
   description: "Where your money actually goes, what your paycheck really means, and your first power moves.",
   color: "#10B981",
   icon: "💸",
+  sectionIndex: 2,
+  sectionTitle: "Spending & Budgeting",
   lessons: [
     // ===== LESSON 0: Small Money, Big Difference (bridge from Unit 0) =====
     {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { eq } from 'drizzle-orm';
+import { eq, desc } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { masteryEvents } from '@/lib/db/schema';
 import { getAuthUserId } from '@/lib/auth-utils';
@@ -11,6 +11,8 @@ export async function GET() {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
+  // Limit to last 2000 events to reduce egress. Mastery computation
+  // is dominated by recent activity anyway (spaced-repetition decay).
   const events = await db
     .select({
       id: masteryEvents.id,
@@ -23,7 +25,9 @@ export async function GET() {
       answeredAt: masteryEvents.answeredAt,
     })
     .from(masteryEvents)
-    .where(eq(masteryEvents.userId, userId));
+    .where(eq(masteryEvents.userId, userId))
+    .orderBy(desc(masteryEvents.answeredAt))
+    .limit(2000);
 
   return NextResponse.json({ events });
 }

@@ -2,10 +2,12 @@ import type { Unit } from '../../../types';
 
 export const unit10: Unit = {
   id: "pf-u10-retirement",
-  title: "Retirement Planning",
+  title: "Set Up Future You",
   description: "Future you is counting on present you: here's how to not let them down.",
   color: "#017509",
   icon: "\u{1F3D6}\u{FE0F}",
+  sectionIndex: 9,
+  sectionTitle: "Set Up Future You",
   lessons: [
     // ===== LESSON 1: Retirement Math: Your Future Self Needs You =====
     {
@@ -27,6 +29,12 @@ export const unit10: Unit = {
           question: "Meet Future You",
           explanation: "Imagine yourself at 65, when your paycheck stops but your bills don't. This unit uses US account types (401k, IRA), but every country has equivalent retirement savings plans.",
           hint: "If you spend $50,000/year and retire for 25 years, that's $1.25 million minimum. Before inflation. Don't panic. Compound interest is your best friend.",
+          variants: {
+            GB: "In the UK, your main retirement accounts are workplace pensions and ISAs. The State Pension provides a base, but you need personal savings on top.",
+            AU: "In Australia, your employer contributes to your superannuation (super) fund. The Age Pension provides a safety net, but super is your main retirement vehicle.",
+            CA: "In Canada, your key accounts are the RRSP and TFSA. CPP and OAS provide government retirement income, but personal savings fill the gap.",
+            IL: "In Israel, your employer contributes to a keren pensia (pension fund). Bituach Leumi provides a base pension, but your workplace pension is the main source.",
+          },
         },
         {
           id: "pf-u10-L1-T2",
@@ -140,6 +148,12 @@ export const unit10: Unit = {
           question: "What's a 401(k)?",
           explanation: "A 401(k) is a retirement savings account offered by your employer. Money goes in before taxes are taken out of your paycheck, which means you save on taxes NOW.",
           hint: "Try this now: check if your employer offers a 401(k) or retirement plan and find out what percentage they match.",
+          variants: {
+            GB: "The UK equivalent is a workplace pension. Your employer must auto-enrol you and contribute at least 3% of qualifying earnings. Your contributions get tax relief at your marginal rate.",
+            AU: "In Australia, your employer must pay 11.5% of your salary into your superannuation fund. This is mandatory, not optional, so you're already saving for retirement from day one.",
+            CA: "Canada's equivalent is an RRSP (Registered Retirement Savings Plan). Contributions are tax-deductible, reducing your taxable income now. Some employers offer group RRSPs with matching.",
+            IL: "In Israel, employers are required by law to contribute to your keren pensia (pension fund). The combined employer + employee contribution is typically around 18.5% of salary.",
+          },
         },
         {
           id: "pf-u10-L2-T2",
@@ -147,6 +161,12 @@ export const unit10: Unit = {
           question: "How a 401(k) Actually Works",
           explanation: "Every paycheck, a percentage you choose (say 6%) gets automatically moved into your 401(k) before taxes. You pick investments from a menu your employer provides.",
           hint: "If you earn $60,000 and contribute 10%, that's $6,000/year or $230 per paycheck (biweekly). Your take-home pay drops less than $230 because you're saving on taxes too.",
+          variants: {
+            GB: "With a UK workplace pension, contributions are deducted from your pay automatically. The minimum is 5% employee + 3% employer. You can usually choose from a range of funds offered by the pension provider.",
+            AU: "With Australian super, your employer's 11.5% contribution is automatic. You can make extra voluntary contributions from pre-tax salary (salary sacrifice) or after-tax income to boost your balance.",
+            CA: "With a group RRSP, contributions are deducted from your pay. You get an immediate tax refund on your contribution. You choose investments from the plan's fund menu, similar to a 401(k).",
+            IL: "With an Israeli pension fund, contributions are split: typically 6% from you and 6.5% from your employer, plus 6% employer severance contribution. The fund is managed by a pension company.",
+          },
         },
         {
           id: "pf-u10-L2-Q1",
@@ -252,6 +272,12 @@ export const unit10: Unit = {
           question: "IRA: Your Personal Retirement Account",
           explanation: "An IRA (Individual Retirement Account) is a retirement account you open yourself, no employer needed. The two main types are Traditional (tax break now, pay later) and Roth (pay now, tax-free later).",
           hint: "Think of it like a tax timing decision. Traditional = pay later. Roth = pay now. The best choice depends on whether your tax rate will be higher or lower in retirement.",
+          variants: {
+            GB: "The UK equivalent is an ISA (Individual Savings Account). A Stocks & Shares ISA lets you invest up to 20,000 pounds/year with all growth and withdrawals completely tax-free. No 'traditional vs Roth' decision needed.",
+            AU: "In Australia, you can make voluntary super contributions. Pre-tax (concessional) contributions get a 15% tax rate. After-tax (non-concessional) contributions grow tax-free inside super.",
+            CA: "Canada offers the TFSA (Tax-Free Savings Account), similar to a Roth IRA. Contributions are after-tax, but all growth and withdrawals are tax-free. The 2024 limit is $7,000/year.",
+            IL: "In Israel, a kupat gemel (provident fund) serves as a personal savings vehicle. You can also open a self-directed pension savings plan (pensia makanat revachim) independently.",
+          },
         },
         {
           id: "pf-u10-L3-T2",
@@ -259,6 +285,12 @@ export const unit10: Unit = {
           question: "Why the Roth IRA Is a Crowd Favorite",
           explanation: "The Roth IRA is wildly popular, especially for younger people. You pay taxes on the money going in, and then everything comes out completely tax-free in retirement.",
           hint: "If you're in your 20s-30s earning a moderate income, a Roth IRA is almost always the smart move. You'll never pay a lower tax rate than you do right now.",
+          variants: {
+            GB: "The UK Stocks & Shares ISA works like a Roth by default: you invest after-tax money and all returns are tax-free. No income limits, no age restrictions on withdrawals. The 20,000 pounds/year allowance is generous.",
+            AU: "Voluntary after-tax super contributions offer similar benefits. Once you reach preservation age (60+), all withdrawals from super are completely tax-free. You can also use a First Home Super Saver Scheme.",
+            CA: "The TFSA is Canada's Roth equivalent. After-tax contributions, tax-free growth, tax-free withdrawals at any time for any reason. No age restrictions and unused room carries forward.",
+            IL: "Israel doesn't have a direct Roth equivalent. However, kupat gemel le-hashkaa (investment provident fund) offers tax-advantaged growth. Gains on deposits up to a ceiling are tax-exempt after a holding period.",
+          },
         },
         {
           id: "pf-u10-L3-Q1",
@@ -366,6 +398,12 @@ export const unit10: Unit = {
           question: "The Best Deal in Personal Finance",
           explanation: "Many employers will match what you put into your 401(k), dollar for dollar up to a certain percentage. A typical match is 50% of your contributions up to 6% of your salary. It's free money.",
           hint: "If someone offered you a $1,800 bonus with no strings attached, you'd take it. That's exactly what an employer match is.",
+          variants: {
+            GB: "In the UK, employers must contribute at least 3% of qualifying earnings to your workplace pension. Many offer more generous matching, such as matching your contributions up to 5-6%.",
+            AU: "In Australia, the employer contribution (11.5% of salary) is mandatory by law, so there's no 'match' to chase. It's automatic free money. Some employers offer additional matching above the minimum.",
+            CA: "Canadian employer RRSP matching varies widely. A common match is dollar-for-dollar up to 3-5% of salary. Always contribute at least enough to get the full match.",
+            IL: "In Israel, employer pension contributions (6.5% + 6% severance) are required by law. Some employers voluntarily contribute more. Unlike the US, you don't need to 'opt in' to receive employer contributions.",
+          },
         },
         {
           id: "pf-u10-L4-T2",
@@ -373,6 +411,12 @@ export const unit10: Unit = {
           question: "How Matching Actually Works",
           explanation: "The most common match formula is '50% match up to 6%.' If your salary is $60,000 and you contribute 6% ($3,600/year), your employer adds 50% of that: $1,800 in free money.",
           hint: "Vesting means you might need to stay at the company for a few years before the matched money is truly 'yours.' But YOUR contributions are always 100% yours.",
+          variants: {
+            GB: "UK employers commonly match your pension contributions pound-for-pound up to a percentage. Vesting is less common; employer contributions are usually yours immediately. Check your scheme's rules.",
+            AU: "Australia's mandatory 11.5% super contributions vest immediately. They're yours from day one. There's no vesting schedule or waiting period for the employer portion.",
+            CA: "Canadian RRSP matching often has a vesting period of 1-2 years. After vesting, the matched funds are fully yours. The match formula varies by employer, so read your benefits package carefully.",
+            IL: "In Israel, employer pension contributions vest over time. Severance contributions (6%) may be lost if you leave before one year, depending on your employment agreement.",
+          },
         },
         {
           id: "pf-u10-L4-Q1",
@@ -704,6 +748,12 @@ export const unit10: Unit = {
           question: "Social Security: The Safety Net, Not the Hammock",
           explanation: "Social Security is a government program that pays you monthly income in retirement. You've been paying into it your whole working life via FICA taxes (6.2% of your paycheck).",
           hint: "If you earned $60,000/year and Social Security gives you $1,900/month ($22,800/year), that's only 38% of your old income. You need savings to cover the other 62%.",
+          variants: {
+            GB: "The UK State Pension pays up to about 11,500 pounds/year (2024). You need 35 qualifying years of National Insurance contributions for the full amount. It's funded through NI, not a separate tax.",
+            AU: "Australia's Age Pension is means-tested. If your super balance and other assets are above certain thresholds, your pension is reduced or eliminated. The maximum single rate is about $28,500 AUD/year.",
+            CA: "Canada has two programs: CPP (Canada Pension Plan), which you pay into via payroll deductions, and OAS (Old Age Security), which is universal. Combined they replace roughly 33% of pre-retirement income.",
+            IL: "Bituach Leumi (National Insurance) provides a modest old-age pension. The full allowance for a single person is roughly 1,800 NIS/month. Most retirees rely primarily on their workplace pension fund.",
+          },
         },
         {
           id: "pf-u10-L6-T2",
@@ -711,6 +761,12 @@ export const unit10: Unit = {
           question: "When Can You Collect?",
           explanation: "You can start collecting Social Security as early as age 62, but you'll get a reduced benefit (about 30% less). Full benefits kick in at your 'full retirement age,' which is 67 for most people born after 1960.",
           hint: "If your full benefit at 67 is $2,000/month: at 62 you'd get ~$1,400, at 70 you'd get ~$2,480. Big difference over 20+ years of retirement.",
+          variants: {
+            GB: "UK State Pension age is currently 66, rising to 67 by 2028 and likely 68 after that. You cannot claim early for a reduced amount. You can defer for an increase of about 5.8% per year.",
+            AU: "The Age Pension qualifying age is 67 in Australia. There's no early claiming option. You can access your super from age 60 (preservation age) to bridge the gap if you retire earlier.",
+            CA: "CPP can be taken as early as age 60 (reduced by 0.6%/month before 65) or deferred until 70 (increased by 0.7%/month after 65). OAS starts at 65, deferrable to 70 for a 36% boost.",
+            IL: "Bituach Leumi old-age pension is available from age 70 for men and 65 for women (gradually increasing). You can claim a reduced pension up to 5 years earlier if your income is below a threshold.",
+          },
         },
         {
           id: "pf-u10-L6-Q1",
@@ -820,6 +876,12 @@ export const unit10: Unit = {
           question: "The Late-Starter Playbook",
           explanation: "If you're starting at 40 with zero savings, here's the playbook: get the employer match, save 20-25% of income, add a Roth IRA, cut expenses aggressively, and plan to work 2-3 years longer. At 50, use catch-up contributions to supercharge your savings.",
           hint: "Working from 65 to 68 gives you 3 extra years of saving AND 3 fewer years of withdrawing. That double benefit can add $100K+ to your retirement.",
+          variants: {
+            GB: "UK late-starter playbook: maximize workplace pension contributions (employer must match at least 3%), open a Stocks & Shares ISA (20,000 pounds/year), and check your State Pension forecast at gov.uk to fill any NI gaps.",
+            AU: "Australian late-starter playbook: make extra voluntary super contributions (salary sacrifice for tax savings), use the government co-contribution if eligible, and consider downsizer contributions from selling your home after 55.",
+            CA: "Canadian late-starter playbook: maximize RRSP contributions (you can use unused room from prior years), open a TFSA for flexible tax-free growth, and check your CPP statement at My Service Canada Account.",
+            IL: "Israeli late-starter playbook: increase your pension fund contribution above the minimum, open a kupat gemel le-hashkaa for additional tax-advantaged savings, and verify your Bituach Leumi contribution history.",
+          },
         },
         {
           id: "pf-u10-L7-Q1",
@@ -1036,6 +1098,12 @@ export const unit10: Unit = {
           question: "The 50+ Power-Up",
           explanation: "Once you turn 50, the IRS gives you a bonus: you can contribute MORE to your retirement accounts than younger workers. For 401(k)s, you get an extra $7,500/year on top of the $23,000 limit, for a total of $30,500.",
           hint: "If you max out both at 50 and do it for 15 years, that's $577,500 in contributions alone. Before any growth. Growth could push that past $1 million.",
+          variants: {
+            GB: "The UK has no age-based 'catch-up' limit, but annual pension contribution allowances are generous: up to 60,000 pounds/year (or 100% of earnings). You can also carry forward unused allowance from the past 3 years.",
+            AU: "Australia allows concessional super contributions up to $30,000 AUD/year regardless of age. You can also carry forward unused cap amounts from up to 5 prior years, which is helpful for late starters.",
+            CA: "Canada doesn't have a separate catch-up contribution. However, unused RRSP room accumulates indefinitely. If you under-contributed for years, you may have a large unused room balance you can use now.",
+            IL: "Israel doesn't have age-based catch-up contributions. However, the tax-deductible ceiling for pension contributions increases with salary, and you can boost savings through additional kupat gemel deposits.",
+          },
         },
         {
           id: "pf-u10-L9-T2",
@@ -1043,6 +1111,12 @@ export const unit10: Unit = {
           question: "Making Catch-Up Contributions Count",
           explanation: "At 50, you still have 15-17 years until traditional retirement. At 8% average returns, $7,500/year extra in your 401(k) for 15 years grows to about $215,000. That's real catch-up power.",
           hint: "Your 50s are often your highest-earning years. More income + catch-up contributions = the perfect storm for retirement savings.",
+          variants: {
+            GB: "In your 50s, use carry-forward rules to contribute up to 3 years of unused pension allowance in a single year. Combined with your current year's 60,000 pounds allowance, that could mean a massive one-time boost.",
+            AU: "In your 50s, use the carry-forward provision to catch up on under-contributed years. If your super balance is under $500,000 AUD, unused concessional cap amounts from the past 5 years can be used.",
+            CA: "In your 50s, check your RRSP contribution room on your Notice of Assessment. Years of unused room can add up to tens of thousands in available contribution space. Use it aggressively now.",
+            IL: "In your 50s, maximize your pension fund contributions and consider additional voluntary deposits. The tax benefits on pension contributions in Israel are among the most generous in developed countries.",
+          },
         },
         {
           id: "pf-u10-L9-Q1",
@@ -1149,6 +1223,12 @@ export const unit10: Unit = {
           question: "Mistakes That Cost You Hundreds of Thousands",
           explanation: "Retirement accounts are powerful, but they come with rules. Breaking those rules triggers taxes, penalties, or both, costing you thousands.",
           hint: "The scariest one? Leaving your 401(k) money in the 'default' cash/money market option. It sits there earning almost nothing for decades while you THINK it's invested.",
+          variants: {
+            GB: "Common UK pension mistakes: not opting into your workplace pension (you're auto-enrolled but can opt out), losing track of old pensions from previous jobs, and leaving your pension in the default fund without checking performance.",
+            AU: "Common Australian super mistakes: having multiple super accounts (fees eat your balance), not consolidating old accounts, and choosing the default 'balanced' option when you're young enough for 'growth.'",
+            CA: "Common Canadian RRSP mistakes: over-contributing (1% penalty per month on excess), not naming a beneficiary, and withdrawing early (full amount is added to taxable income that year).",
+            IL: "Common Israeli pension mistakes: not tracking your pension fund's management fees (even 0.5% difference compounds massively), not consolidating old funds, and not verifying your employer is actually making the required deposits.",
+          },
         },
         {
           id: "pf-u10-L10-T2",
@@ -1156,6 +1236,12 @@ export const unit10: Unit = {
           question: "The 401(k) Cash-Out Trap",
           explanation: "You change jobs and have $30,000 in your old 401(k). If you cash the check instead of rolling it over, you'll lose about 32% to taxes and penalties immediately.",
           hint: "If you cash out $30,000 at age 30 instead of rolling it over, you don't just lose $12,000 now. You lose the $300,000+ that money would have grown to by age 65.",
+          variants: {
+            GB: "When leaving a UK job, you can leave your pension with the old employer, transfer to your new employer's scheme, or transfer to a personal pension (SIPP). Never cash out early. You can't access pension money before age 55 (rising to 57 in 2028).",
+            AU: "In Australia, you generally cannot withdraw super before preservation age (60). When changing jobs, consolidate your super into one account to avoid paying multiple sets of fees. Use myGov to find and combine lost super accounts.",
+            CA: "When leaving a Canadian employer, you can transfer your group RRSP to a personal RRSP tax-free. Cashing out triggers full income tax on the withdrawal. Locked-in RPP funds must be transferred to a LIRA (Locked-In Retirement Account).",
+            IL: "When leaving an Israeli job, pension fund money stays invested. You can withdraw severance pay (piztuyim), but withdrawing pension savings early incurs heavy tax penalties. Transfer your pension to your new employer's fund or keep it in place.",
+          },
         },
         {
           id: "pf-u10-L10-Q1",
@@ -1256,6 +1342,12 @@ export const unit10: Unit = {
           question: "Your Retirement Action Plan",
           explanation: "You've learned the tools. 401(k), IRA, employer match, the 4% Rule, catch-up contributions. Now it's time to put it all together.",
           hint: "The best retirement plan isn't the perfect plan. It's the one you actually follow. Start today, automate, and let compound interest do the heavy lifting.",
+          variants: {
+            GB: "Your UK action plan: workplace pension (get the full employer match), Stocks & Shares ISA (tax-free growth up to 20,000 pounds/year), check your State Pension forecast, and consider a SIPP for extra flexibility.",
+            AU: "Your Australian action plan: ensure super is in a low-fee growth fund, make extra voluntary contributions via salary sacrifice, check your super balance on myGov, and consider additional investments outside super.",
+            CA: "Your Canadian action plan: RRSP (get any employer match), TFSA (tax-free growth), check your CPP statement, and consider non-registered investments once you've maxed RRSP and TFSA room.",
+            IL: "Your Israeli action plan: verify pension fund contributions on your payslip, compare fund management fees, consider additional kupat gemel savings, and check your Bituach Leumi contribution history online.",
+          },
         },
         {
           id: "pf-u10-L11-T2",
@@ -1263,6 +1355,12 @@ export const unit10: Unit = {
           question: "Milestones by Decade",
           explanation: "Rough savings milestones: by 30, have 1x your annual salary saved. By 40: 3x. By 50: 6x. By 67: 10x.",
           hint: "These are Fidelity's recommended milestones. Even if you're behind, knowing the target helps you plan your catch-up strategy.",
+          variants: {
+            GB: "UK milestones are similar, though mandatory workplace pensions help. Aim for your pension pot to reach 10-12x your final salary by retirement. Use the gov.uk pension forecast tool to track your State Pension entitlement.",
+            AU: "Australian super industry guidelines suggest a balance of $100,000 AUD by 30, $300,000 by 40, $500,000 by 50, and $750,000+ by 67 for a comfortable retirement. Check the ASFA Retirement Standard for targets.",
+            CA: "Canadian milestones follow similar ratios. Remember that CPP and OAS will supplement your savings, but aim for your RRSP + TFSA to reach 8-10x your salary by 65 to maintain your lifestyle.",
+            IL: "Israeli pension milestones differ because mandatory contributions are higher (18.5% total). Your pension fund should accumulate to roughly 70-80% of your final salary as an annual pension payment at retirement age.",
+          },
         },
         {
           id: "pf-u10-L11-Q1",

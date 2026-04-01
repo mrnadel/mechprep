@@ -8,6 +8,8 @@ export const spaceCourseMeta: Unit[] = [
     description: "The night sky basics: constellations, planets visible to the naked eye, and how to start stargazing.",
     color: "#818CF8",
     icon: "🌟",
+    sectionIndex: 1,
+    sectionTitle: "Look Up!",
     lessons: [
       { id: "sp-u1-L1", title: "Welcome to the Universe", description: "You're on a tiny rock hurtling through space at 67,000 mph. Let's explore.", icon: "📝", xpReward: 10, questions: [] },
       { id: "sp-u1-L2", title: "Stars, Planets & Satellites", description: "That bright dot in the sky: how to tell if it's a star, a planet, or the ISS.", icon: "📝", xpReward: 10, questions: [] },
@@ -26,6 +28,8 @@ export const spaceCourseMeta: Unit[] = [
     description: "The Sun, eight planets, dwarf planets, moons, and the debris in between.",
     color: "#F59E0B",
     icon: "☀️",
+    sectionIndex: 2,
+    sectionTitle: "Our Solar System",
     lessons: [
       { id: "sp-u2-L1", title: "The Sun: Our Star", description: "A giant nuclear reactor 93 million miles away that makes life possible.", icon: "📝", xpReward: 10, questions: [] },
       { id: "sp-u2-L2", title: "Rocky Planets: Mercury to Mars", description: "Small, dense, and close to the Sun. The four inner worlds.", icon: "📝", xpReward: 15, questions: [] },
@@ -38,13 +42,15 @@ export const spaceCourseMeta: Unit[] = [
     ],
   },
 
-  // ── Unit 3: Earth & Moon ──
+  // ── Unit 3: Seasons, Tides & Eclipses ──
   {
     id: "sp-u3-earth-moon",
-    title: "Earth & Moon",
-    description: "Tides, eclipses, seasons, and the relationship between our planet and its only natural satellite.",
+    title: "Seasons, Tides & Eclipses",
+    description: "Why we have seasons, how the Moon controls our tides, and the magic of eclipses.",
     color: "#3B82F6",
     icon: "🌎",
+    sectionIndex: 3,
+    sectionTitle: "Seasons, Tides & Eclipses",
     lessons: [
       { id: "sp-u3-L1", title: "Why We Have Seasons", description: "It's not because we're closer to the Sun in summer. The real reason.", icon: "📝", xpReward: 10, questions: [] },
       { id: "sp-u3-L2", title: "The Moon's Phases", description: "New, crescent, quarter, gibbous, full. What causes each phase.", icon: "📝", xpReward: 15, questions: [] },
@@ -52,56 +58,269 @@ export const spaceCourseMeta: Unit[] = [
       { id: "sp-u3-L4", title: "Tides & Gravity", description: "The Moon pulls our oceans. Two high tides a day, and here's why.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u3-L5", title: "Earth's Magnetic Field & Auroras", description: "The invisible shield protecting you from solar radiation, and the light show it creates.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u3-L6", title: "Explaining Eclipses", description: "Help explain an upcoming eclipse to someone who's never seen one.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "sp-u3-L7", title: "Earth & Moon Speed Round", description: "Race the clock on seasons, phases, eclipses, tides, and auroras.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "sp-u3-L7", title: "Seasons & Eclipses Speed Round", description: "Race the clock on seasons, phases, eclipses, tides, and auroras.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
     ],
   },
 
-  // ── Unit 4: The Sun & Stars ──
+  // ── Section 4: Light & Telescopes (12 units) ──
+  {
+    id: "sp-s4-u1",
+    title: "What Is Light?",
+    description: "Discover the dual nature of light: it behaves as both a wave and a particle.",
+    color: "#F59E0B",
+    icon: "💡",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u1-L1", title: "Light Is Energy You Can See", description: "What light actually is and why it matters for astronomy.", icon: "📝", xpReward: 15, questions: [] },
+      { id: "sp-s4-u1-L2", title: "Waves, Particles, or Both?", description: "Light has a dual nature that puzzled scientists for centuries.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u1-L3", title: "Wavelength and Frequency", description: "How wavelength and frequency are connected and what they determine.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u1-L4", title: "How Light Travels Through Space", description: "Reflection, refraction, and the inverse square law.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u1-L5", title: "Why Astronomers Obsess Over Light", description: "How astronomers extract temperature, speed, and composition from starlight.", icon: "📝", xpReward: 25, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u2",
+    title: "The Electromagnetic Spectrum",
+    description: "From radio waves to gamma rays, explore the full range of light.",
+    color: "#F59E0B",
+    icon: "🌈",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u2-L1", title: "Beyond What Your Eyes Can See", description: "Visible light is just a tiny slice of a much larger spectrum.", icon: "📝", xpReward: 15, questions: [] },
+      { id: "sp-s4-u2-L2", title: "Radio Waves and Microwaves", description: "The longest wavelengths reveal cold gas, pulsars, and the echo of the Big Bang.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u2-L3", title: "Infrared: Seeing Heat", description: "How infrared reveals hidden stars, cool planets, and dusty regions.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u2-L4", title: "The High-Energy Universe", description: "Ultraviolet, X-rays, and gamma rays reveal the most violent events in space.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u2-L5", title: "What Gets Through the Atmosphere", description: "Earth's atmosphere blocks most wavelengths, which is why we launch space telescopes.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u2-L6", title: "Seeing the Universe in Every Color", description: "Combining all wavelengths reveals a more complete picture of any object.", icon: "📝", xpReward: 30, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u3",
+    title: "How Telescopes Work: Refractors",
+    description: "Learn how lenses bend light to make distant objects appear closer.",
+    color: "#F59E0B",
+    icon: "🔭",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u3-L1", title: "What a Telescope Actually Does", description: "Telescopes collect light, not just magnify things.", icon: "📝", xpReward: 15, questions: [] },
+      { id: "sp-s4-u3-L2", title: "Bending Light With Lenses", description: "How a convex lens focuses parallel light rays to a single point.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u3-L3", title: "The Color Problem With Lenses", description: "Why refractors split light into unwanted rainbows and how to fix it.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u3-L4", title: "Famous Refractors in History", description: "From Galileo's simple tube to the great observatory refractors.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u3-L5", title: "Inside a Refractor Telescope", description: "Understand the optical path from starlight entering the lens to your eye.", icon: "📝", xpReward: 25, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u4",
+    title: "Reflectors and Compound Telescopes",
+    description: "Mirrors replaced lenses to build the largest telescopes in the world.",
+    color: "#F59E0B",
+    icon: "🪞",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u4-L1", title: "Why Mirrors Beat Lenses", description: "How reflectors solve the size and color problems of refractors.", icon: "📝", xpReward: 15, questions: [] },
+      { id: "sp-s4-u4-L2", title: "Newtonian, Cassegrain, and More", description: "Different mirror arrangements produce different telescope designs.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u4-L3", title: "Compound Telescopes: Best of Both", description: "Schmidt-Cassegrain and Maksutov designs combine lenses and mirrors.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u4-L4", title: "The Biggest Telescopes on Earth", description: "From Palomar to the ELT, how professional telescopes grew enormous.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u4-L5", title: "Refractor, Reflector, or Compound?", description: "When to choose each telescope type and why.", icon: "📝", xpReward: 25, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u5",
+    title: "Review: Light and Optics",
+    description: "Test your understanding of light, the spectrum, and telescope fundamentals.",
+    color: "#F59E0B",
+    icon: "🔄",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u5-L1", title: "Review: Light Fundamentals", description: "Revisit electromagnetic radiation, wavelength, frequency, and the speed of light.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u5-L2", title: "Review: Telescope Types", description: "Refractors, reflectors, and compounds compared side by side.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u5-L3", title: "Review: Light and Optics Calculations", description: "Practice the math of magnification, inverse square law, and light speed.", icon: "📝", xpReward: 25, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u6",
+    title: "Telescope Specs: Aperture, Focal Length, Magnification",
+    description: "Master the numbers that define a telescope's performance.",
+    color: "#F59E0B",
+    icon: "📐",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u6-L1", title: "Aperture: The Most Important Number", description: "Why aperture is the single most important telescope specification.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u6-L2", title: "Focal Length and Focal Ratio", description: "How focal length affects magnification, image brightness, and field of view.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u6-L3", title: "Magnification: When More Is Not Better", description: "Learn why high magnification has strict limits.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u6-L4", title: "Reading a Telescope Spec Sheet", description: "Decode the numbers on telescope listings like a pro.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u6-L5", title: "Beyond the Eyepiece: CCD Detectors", description: "How electronic sensors replaced the human eye for serious astronomy.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u6-L6", title: "Specs in Action: Real Telescopes Compared", description: "Compare real telescope models and see how specs translate to performance.", icon: "📝", xpReward: 30, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u7",
+    title: "Radio Telescopes and Interferometry",
+    description: "Explore how radio dishes detect invisible signals from space and how arrays act like one giant telescope.",
+    color: "#F59E0B",
+    icon: "📡",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u7-L1", title: "Listening to the Universe", description: "How radio telescopes detect invisible electromagnetic waves from space.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u7-L2", title: "Famous Radio Observatories", description: "Meet the biggest and most important radio telescopes on Earth.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u7-L3", title: "Interferometry: Linked Dishes", description: "How multiple small dishes work together to act like one enormous telescope.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u7-L4", title: "VLBI and Imaging a Black Hole", description: "How dishes on different continents created an Earth-sized telescope.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u7-L5", title: "What Radio Astronomy Found", description: "Pulsars, quasars, and the cosmic microwave background: radio's greatest hits.", icon: "📝", xpReward: 25, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u8",
+    title: "Space Telescopes: Hubble to JWST",
+    description: "Learn why we launch telescopes into space and how Hubble and JWST changed our view of the cosmos.",
+    color: "#F59E0B",
+    icon: "🛰️",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u8-L1", title: "Why Launch a Telescope to Space?", description: "Earth's atmosphere blocks, blurs, and absorbs light. Space solves all three problems.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u8-L2", title: "Hubble: The People's Telescope", description: "How a blurry mistake became one of humanity's greatest scientific tools.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u8-L3", title: "JWST: The Infrared Giant", description: "How Webb's golden mirror and sunshield let it see the universe's first light.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u8-L4", title: "Hubble vs JWST: Side by Side", description: "Compare the two greatest space telescopes ever built.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u8-L5", title: "Beyond Hubble and Webb", description: "Chandra, Spitzer, Kepler, and the fleet of space observatories.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u8-L6", title: "Modern Telescope Technology", description: "Adaptive optics, CCD detectors, and the tech that makes modern astronomy possible.", icon: "📝", xpReward: 25, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u9",
+    title: "Spectroscopy: Reading Starlight",
+    description: "Learn how splitting light into a spectrum reveals a star's temperature, composition, and motion.",
+    color: "#F59E0B",
+    icon: "🌈",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u9-L1", title: "Splitting Light into Colors", description: "How prisms and diffraction gratings spread light into a rainbow of wavelengths.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u9-L2", title: "Continuous, Emission, and Absorption", description: "The three spectral patterns and what each one tells you about the source.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u9-L3", title: "Fingerprints of the Elements", description: "Every element absorbs and emits unique wavelengths. This is how we know what stars are made of.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u9-L4", title: "Hot Stars, Cool Stars, and Color", description: "Why hot stars look blue and cool stars look red.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u9-L5", title: "OBAFGKM: The Spectral Classes", description: "How astronomers classify stars by their spectra and the famous mnemonic.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u9-L6", title: "What Spectra Reveal Beyond Chemistry", description: "Spectral lines also reveal motion, rotation, magnetic fields, and more.", icon: "📝", xpReward: 30, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u10",
+    title: "Redshift, Blueshift, and Doppler Effect",
+    description: "How the Doppler effect in light reveals whether objects are approaching or receding, and what that means for the universe.",
+    color: "#F59E0B",
+    icon: "🔴",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u10-L1", title: "Light Stretches and Squeezes", description: "When a light source moves, its wavelengths change. This is the Doppler effect.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u10-L2", title: "Calculating Speed from Shift", description: "How astronomers measure exactly how fast things move using the Doppler formula.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u10-L3", title: "The Expanding Universe", description: "Why almost every galaxy is redshifted and what that tells us about the universe.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u10-L4", title: "Gravity Bends Light Too", description: "Light loses energy escaping strong gravity, causing gravitational redshift.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u10-L5", title: "Redshift as a Distance Tool", description: "How astronomers use redshift to measure the distance and age of the universe.", icon: "📝", xpReward: 25, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u11",
+    title: "Choosing Your First Telescope",
+    description: "Practical advice for picking a beginner telescope that matches your goals, budget, and expectations.",
+    color: "#F59E0B",
+    icon: "🔭",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u11-L1", title: "What Beginners Actually Need", description: "Forget the marketing hype. Here's what actually matters when buying your first telescope.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u11-L2", title: "Refractor, Reflector, or Compound?", description: "Which telescope design is best for a beginner and why.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u11-L3", title: "Mounts, Eyepieces, and Accessories", description: "The telescope tube is only half the story. Mounts and eyepieces make or break the experience.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u11-L4", title: "Mistakes Every Beginner Makes", description: "Avoid these traps and your first telescope experience will be much better.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-s4-u11-L5", title: "Building Your Stargazing Toolkit", description: "Beyond the telescope: apps, accessories, and habits that make stargazing better.", icon: "📝", xpReward: 25, questions: [] },
+    ],
+  },
+
+  {
+    id: "sp-s4-u12",
+    title: "Review + Checkpoint",
+    description: "Test everything you've learned about light, telescopes, spectroscopy, and the Doppler effect.",
+    color: "#F59E0B",
+    icon: "🏁",
+    sectionIndex: 4,
+    sectionTitle: "Light & Telescopes",
+    lessons: [
+      { id: "sp-s4-u12-L1", title: "Review: Light and Telescope Fundamentals", description: "Revisit key concepts from electromagnetic radiation, optics, and telescope design.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u12-L2", title: "Review: Spectroscopy and Redshift", description: "Revisit spectral lines, the Doppler effect, and what they reveal about the universe.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u12-L3", title: "Review: Space and Radio Telescopes", description: "Test your knowledge of radio telescopes, interferometry, and space observatories.", icon: "📝", xpReward: 25, questions: [] },
+      { id: "sp-s4-u12-L4", title: "Section 4 Checkpoint Challenge", description: "A comprehensive challenge covering all of Light and Telescopes. Prove your mastery.", icon: "📝", xpReward: 35, questions: [] },
+    ],
+  },
+
+  // ── Unit 4: How Stars Live and Die ──
   {
     id: "sp-u4-stars",
-    title: "The Sun & Stars",
+    title: "How Stars Live and Die",
     description: "How stars are born, how they shine, and the spectacular ways they die.",
     color: "#EF4444",
     icon: "⭐",
+    sectionIndex: 4,
+    sectionTitle: "How Stars Live and Die",
     lessons: [
       { id: "sp-u4-L0", title: "From Our Star to All Stars", description: "You know the Sun. Now meet the billions of stars beyond it.", icon: "📝", xpReward: 10, questions: [] },
       { id: "sp-u4-L1", title: "How Stars Are Born", description: "Gravity pulls gas together, temperature rises, and nuclear fusion ignites.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u4-L2", title: "Star Colors & Temperature", description: "Red stars are cool, blue stars are scorching. Color tells you everything.", icon: "📝", xpReward: 15, questions: [] },
-      { id: "sp-u4-L3", title: "The HR Diagram", description: "The single most important chart in astronomy. Main sequence, giants, dwarfs.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-u4-L3", title: "Read a Star's Life Story", description: "The HR diagram: the single most important chart in astronomy. Main sequence, giants, dwarfs.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u4-L4", title: "How Stars Die", description: "Red giants, white dwarfs, supernovae, neutron stars. Size determines fate.", icon: "📝", xpReward: 20, questions: [] },
-      { id: "sp-u4-L5", title: "Pulsars & Neutron Stars", description: "A teaspoon weighs a billion tons. The densest objects that aren't black holes.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-u4-L5", title: "The Densest Objects in the Universe", description: "A teaspoon weighs a billion tons. Pulsars and neutron stars are mind-bending.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u4-L6", title: "Stargazing with a Friend", description: "Help a friend understand the stars they're looking at.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
       { id: "sp-u4-L7", title: "Stars Blitz", description: "Race through everything you've learned about stars.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "sp-u4-review", title: "Review: Night Sky, Solar System, Earth/Moon & Stars", description: "Test everything you've learned about stargazing, planets, our Moon, and stellar life cycles.", icon: "📝", xpReward: 25, questions: [] },
     ],
   },
 
-  // ── Unit 5: Rockets & Orbits ──
+  // ── Unit 5: How We Get to Space ──
   {
     id: "sp-u5-rockets",
-    title: "Rockets & Orbits",
+    title: "How We Get to Space",
     description: "How rockets work, what keeps satellites up, and the physics of getting to space.",
     color: "#F97316",
     icon: "🚀",
+    sectionIndex: 5,
+    sectionTitle: "How We Get to Space",
     lessons: [
       { id: "sp-u5-L0", title: "From Stars to Spacecraft", description: "You've studied the stars. Now let's figure out how to reach them.", icon: "📝", xpReward: 10, questions: [] },
       { id: "sp-u5-L1", title: "Newton's Third Law & Rockets", description: "Every action has an equal and opposite reaction. That's how rockets fly.", icon: "📝", xpReward: 15, questions: [] },
-      { id: "sp-u5-L2", title: "Escape Velocity", description: "How fast you need to go to leave Earth: 11.2 km/s. No shortcuts.", icon: "📝", xpReward: 15, questions: [] },
+      { id: "sp-u5-L2", title: "How Fast to Leave Earth", description: "Escape velocity: 11.2 km/s. No shortcuts to breaking free of gravity.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u5-L3", title: "Orbits & Gravity", description: "Satellites are falling around the Earth. That's what an orbit is.", icon: "📝", xpReward: 15, questions: [] },
-      { id: "sp-u5-L4", title: "Types of Orbits", description: "LEO, GEO, polar, Molniya. Different heights for different missions.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-u5-L4", title: "Choosing the Right Orbit", description: "LEO, GEO, polar, Molniya. Different heights for different missions.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u5-L5", title: "Rocket Fuel & Staging", description: "Why rockets drop pieces of themselves on the way up.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u5-L6", title: "Landing Rockets: The SpaceX Revolution", description: "How reusable rockets changed the economics of space forever.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u5-L7", title: "Mission Control Chat", description: "Help plan a satellite launch by choosing the right orbit and rocket.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "sp-u5-L8", title: "Rockets & Orbits Blitz", description: "Race through rocket science, orbital mechanics, and launch facts.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "sp-u5-L8", title: "Getting to Space Blitz", description: "Race through rocket science, orbital mechanics, and launch facts.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
     ],
   },
 
-  // ── Unit 6: Space Exploration ──
+  // ── Unit 6: Humanity's Greatest Adventure ──
   {
     id: "sp-u6-exploration",
-    title: "Space Exploration",
-    description: "From Sputnik to the ISS, Voyager to Mars rovers. Humanity's greatest adventure.",
+    title: "Humanity's Greatest Adventure",
+    description: "From Sputnik to the ISS, Voyager to Mars rovers. The story of exploration.",
     color: "#14B8A6",
     icon: "🛸",
+    sectionIndex: 6,
+    sectionTitle: "Humanity's Greatest Adventure",
     lessons: [
       { id: "sp-u6-L0", title: "We Built the Rockets. Now Where Did We Go?", description: "From learning how rockets work to the missions they made possible.", icon: "📝", xpReward: 10, questions: [] },
       { id: "sp-u6-L1", title: "The Space Race", description: "USA vs USSR: Sputnik, Gagarin, Apollo. The competition that launched an era.", icon: "📝", xpReward: 15, questions: [] },
@@ -115,18 +334,20 @@ export const spaceCourseMeta: Unit[] = [
     ],
   },
 
-  // ── Unit 7: Exoplanets & Alien Life ──
+  // ── Unit 7: Are We Alone? ──
   {
     id: "sp-u7-exoplanets",
-    title: "Exoplanets & Alien Life",
+    title: "Are We Alone?",
     description: "Planets beyond our solar system, habitable zones, and the search for life out there.",
     color: "#8B5CF6",
     icon: "👽",
+    sectionIndex: 7,
+    sectionTitle: "Are We Alone?",
     lessons: [
       { id: "sp-u7-L1", title: "What Are Exoplanets?", description: "Planets orbiting other stars. We've found over 5,000 so far.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u7-L2", title: "How We Find Them", description: "Transit method, radial velocity, direct imaging. Detecting worlds we can't see.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u7-L3", title: "The Habitable Zone", description: "The 'Goldilocks zone' where water can exist as a liquid. Not too hot, not too cold.", icon: "📝", xpReward: 15, questions: [] },
-      { id: "sp-u7-L4", title: "Types of Exoplanets", description: "Hot Jupiters, super-Earths, rogue planets. Worlds stranger than fiction.", icon: "📝", xpReward: 15, questions: [] },
+      { id: "sp-u7-L4", title: "Worlds Stranger Than Fiction", description: "Hot Jupiters, super-Earths, rogue planets. The wildest exoplanets we've found.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u7-L5", title: "The Drake Equation", description: "A famous formula for estimating how many civilizations might be out there.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u7-L6", title: "Biosignatures & SETI", description: "What would alien life look like? What signals are we searching for?", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u7-L7", title: "Exoplanet Explorers", description: "Help a fellow space enthusiast understand the search for alien worlds.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
@@ -134,50 +355,57 @@ export const spaceCourseMeta: Unit[] = [
     ],
   },
 
-  // ── Unit 8: Galaxies & Black Holes ──
+  // ── Unit 8: The Biggest and Strangest Objects ──
   {
     id: "sp-u8-galaxies",
-    title: "Galaxies & Black Holes",
+    title: "The Biggest and Strangest Objects",
     description: "The Milky Way, galaxy collisions, and the most extreme objects in the universe.",
     color: "#6366F1",
     icon: "🌀",
+    sectionIndex: 8,
+    sectionTitle: "The Biggest and Strangest Objects",
     lessons: [
       { id: "sp-u8-L1", title: "The Milky Way: Our Home Galaxy", description: "200 billion stars, a supermassive black hole at the center, and you are here.", icon: "📝", xpReward: 15, questions: [] },
-      { id: "sp-u8-L2", title: "Types of Galaxies", description: "Spirals, ellipticals, irregulars. How galaxies are classified.", icon: "📝", xpReward: 15, questions: [] },
+      { id: "sp-u8-L2", title: "Spirals, Ellipticals & Oddballs", description: "The different shapes of galaxies and what they tell us.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u8-L3", title: "Galaxy Collisions", description: "Andromeda is heading our way at 110 km/s. What happens when galaxies merge.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u8-L4", title: "What Is a Black Hole?", description: "A region where gravity is so strong that nothing, not even light, can escape.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u8-L5", title: "Event Horizons & Spaghettification", description: "Cross the line and you're gone. What happens as you fall into a black hole.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u8-L6", title: "Supermassive Black Holes & Quasars", description: "Millions to billions of solar masses. The engines at the heart of galaxies.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u8-L7", title: "Galaxy Chat", description: "Discuss galaxies and black holes with a curious friend.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "sp-u8-L8", title: "Galaxies & Black Holes Speed Round", description: "Race the clock on galaxies, black holes, and the most extreme objects in space.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "sp-u8-L8", title: "Biggest Objects Speed Round", description: "Race the clock on galaxies, black holes, and the most extreme objects in space.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "sp-u8-review", title: "Review: Rockets, Exploration, Exoplanets & Galaxies", description: "Test your knowledge of rocket science, space missions, alien worlds, and the structure of the cosmos.", icon: "📝", xpReward: 25, questions: [] },
     ],
   },
 
-  // ── Unit 9: The Universe ──
+  // ── Unit 9: How Everything Began ──
   {
     id: "sp-u9-universe",
-    title: "The Universe",
+    title: "How Everything Began",
     description: "The Big Bang, dark matter, dark energy, and the ultimate fate of everything.",
     color: "#EC4899",
     icon: "🌌",
+    sectionIndex: 9,
+    sectionTitle: "How Everything Began",
     lessons: [
       { id: "sp-u9-L1", title: "The Big Bang", description: "13.8 billion years ago, everything began from an infinitely dense point.", icon: "📝", xpReward: 15, questions: [] },
-      { id: "sp-u9-L2", title: "Cosmic Microwave Background", description: "The oldest light in the universe. A baby photo from 380,000 years after the Big Bang.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-u9-L2", title: "The Universe's Baby Photo", description: "The cosmic microwave background: the oldest light in the universe, from 380,000 years after the Big Bang.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u9-L3", title: "Dark Matter", description: "27% of the universe is made of something we can't see. We know it's there.", icon: "📝", xpReward: 20, questions: [] },
-      { id: "sp-u9-L4", title: "Dark Energy & Expansion", description: "The universe is expanding faster and faster. Something mysterious is pushing it apart.", icon: "📝", xpReward: 20, questions: [] },
+      { id: "sp-u9-L4", title: "The Mysterious Force Pulling Everything Apart", description: "Dark energy: the universe is expanding faster and faster. Something is pushing it apart.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u9-L5", title: "The Fate of the Universe", description: "Big Freeze, Big Crunch, or Big Rip? How does everything end?", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u9-L6", title: "Cosmic Questions", description: "Tackle the universe's biggest mysteries in conversation.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
       { id: "sp-u9-L7", title: "Universe Speed Round", description: "Race the clock on the Big Bang, dark matter, dark energy, and the fate of everything.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
     ],
   },
 
-  // ── Unit 10: Space Frontiers ──
+  // ── Unit 10: What Comes Next? ──
   {
     id: "sp-u10-frontiers",
-    title: "Space Frontiers",
+    title: "What Comes Next?",
     description: "The cutting edge: Moon bases, Mars colonization, space tourism, and what comes next.",
     color: "#10B981",
     icon: "🏗️",
+    sectionIndex: 10,
+    sectionTitle: "What Comes Next?",
     lessons: [
       { id: "sp-u10-L1", title: "Artemis: Return to the Moon", description: "NASA's plan to put humans back on the Moon, this time to stay.", icon: "📝", xpReward: 15, questions: [] },
       { id: "sp-u10-L2", title: "Mars Colonization", description: "What it would take to live on Mars: air, water, radiation, and psychology.", icon: "📝", xpReward: 15, questions: [] },
@@ -186,7 +414,7 @@ export const spaceCourseMeta: Unit[] = [
       { id: "sp-u10-L5", title: "Interstellar Travel", description: "Light sails, generation ships, warp drives. Can we ever reach another star?", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u10-L6", title: "The Fermi Paradox", description: "If the universe is so big, where is everyone? The great silence.", icon: "📝", xpReward: 20, questions: [] },
       { id: "sp-u10-L7", title: "Space Frontiers Chat", description: "Debate the future of space exploration with a fellow enthusiast.", icon: "💬", type: "conversation", xpReward: 20, questions: [] },
-      { id: "sp-u10-L8", title: "Space Frontiers Speed Round", description: "Race the clock on Artemis, Mars, space tourism, mining, and the Fermi Paradox.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
+      { id: "sp-u10-L8", title: "What's Next Speed Round", description: "Race the clock on Artemis, Mars, space tourism, mining, and the Fermi Paradox.", icon: "⚡", type: "speed-round", xpReward: 20, questions: [] },
     ],
   },
 ];

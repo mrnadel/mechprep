@@ -6,6 +6,8 @@ export const unit0: Unit = {
   description: "The basics everyone should know. No experience needed.",
   color: "#34D399",
   icon: "👋",
+  sectionIndex: 1,
+  sectionTitle: "What Is Money?",
   lessons: [
     // ===== LESSON 1: Money 101 =====
     {

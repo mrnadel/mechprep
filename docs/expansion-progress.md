@@ -6,11 +6,12 @@
 
 ---
 
-## Current Status: NOT STARTED
+## Current Status: PHASE 0 + PHASE 1 COMPLETE, READY FOR PHASE 2
 
 **Last updated:** 2026-04-01
-**Last completed step:** Plan finalized, infrastructure built (variant system, country selector)
-**Next step:** Phase 0, Batch 1
+**Last completed step:** Phase 0 Batch 4 final audit + Phase 1 infrastructure
+**Next step:** Phase 2, Section 1 of Personal Finance ("What Is Money?")
+**Deferred to future:** Adaptive placement test (needs more content first), section checkpoints UI (visual feature, not blocking content)
 
 ---
 
@@ -19,48 +20,49 @@
 ### Batch 1: Fix critical quality issues
 | Task | Course | Status | Notes |
 |------|--------|--------|-------|
-| Fix correctIndex bias | Psychology | NOT STARTED | Run fix-correct-index.js script |
-| Fix correctIndex bias | Space | NOT STARTED | Run fix-correct-index.js script |
-| Add question type variety | Psychology | NOT STARTED | Add match-pairs, sort-buckets, order-steps |
-| Add question type variety | Space | NOT STARTED | Add match-pairs, sort-buckets, order-steps |
-| Build QA automation script | All | NOT STARTED | scripts/qa-content.ts |
+| Fix correctIndex bias | Psychology | DONE | 206 questions randomized, 21/29/28/22% distribution |
+| Fix correctIndex bias | Space | DONE | 212 questions randomized, 25/27/27/21% distribution |
+| Add question type variety | Psychology | DONE | 50 new: 20 sort-buckets, 20 order-steps, 10 scenarios |
+| Add question type variety | Space | DONE | 56 new: 23 order-steps, 21 scenarios, 12 slider-estimates |
+| Build QA automation script | All | DONE | scripts/qa-content.ts, found 910 violations to fix later |
 
 ### Batch 2: Globalization and structure
 | Task | Course | Status | Notes |
 |------|--------|--------|-------|
-| Add country variants | Finance (Banking & Taxes) | NOT STARTED | Heavy: tax system variants |
-| Add country variants | Finance (Debt & Credit) | NOT STARTED | Heavy: credit score variants |
-| Add country variants | Finance (Retirement) | NOT STARTED | Heavy: 401k/pension/super variants |
-| Add country variants | Finance (Insurance) | NOT STARTED | Heavy: health system variants |
-| Add country variants | Finance (other sections) | NOT STARTED | Minor: currency, brokerage |
-| Add review units | Finance | NOT STARTED | 1 review unit per 4 existing units |
-| Add review units | Psychology | NOT STARTED | Same |
-| Add review units | Space | NOT STARTED | Same |
-| Add section checkpoints | All 3 | NOT STARTED | 1 checkpoint per section |
-| Add WEIRD caveats | Psychology | NOT STARTED | ~10-15 teaching cards |
-| Add global agencies + Southern sky | Space | NOT STARTED | ESA, ISRO, CNSA, JAXA, Southern Cross |
+| Add country variants | Finance (Banking & Taxes) | DONE | 21 variants added |
+| Add country variants | Finance (Debt & Credit) | DONE | 7 variants added |
+| Add country variants | Finance (Retirement) | DONE | 16 variants added |
+| Add country variants | Finance (Insurance) | DONE | 18 variants added |
+| Add country variants | Finance (Credit Scores) | DONE | 16 variants added |
+| Add country variants | Finance (other sections) | DEFERRED | Will add during expansion |
+| Add review units | Finance | DONE | 3 review lessons added |
+| Add review units | Psychology | DONE | 2 review lessons added |
+| Add review units | Space | DONE | 2 review lessons added |
+| Add section checkpoints | All 3 | DEFERRED | Will add with section infrastructure in Phase 1 |
+| Add WEIRD caveats | Psychology | DONE | 15 caveats added across 5 units |
+| Add global agencies + Southern sky | Space | DONE | 25+ additions, new "Space Goes Global" lesson |
 
 ### Batch 3: Naming and misconceptions
 | Task | Course | Status | Notes |
 |------|--------|--------|-------|
-| Rename units to outcome-based | Finance | NOT STARTED | |
-| Rename units to outcome-based | Psychology | NOT STARTED | |
-| Rename units to outcome-based | Space | NOT STARTED | |
-| Add misconception teaching cards | Finance | NOT STARTED | 9 misconceptions from plan |
-| Add misconception teaching cards | Psychology | NOT STARTED | 10 misconceptions from plan |
-| Add misconception teaching cards | Space | NOT STARTED | 9 misconceptions from plan |
+| Rename units to outcome-based | Finance | DONE | 7 unit renames |
+| Rename units to outcome-based | Psychology | DONE | 8 unit + 8 lesson renames |
+| Rename units to outcome-based | Space | DONE | 8 unit + 12 lesson renames |
+| Add misconception teaching cards | Finance | DONE | 8 myth-busting cards across 6 unit files |
+| Add misconception teaching cards | Psychology | DONE | 9 myth-busting cards across 5 unit files |
+| Add misconception teaching cards | Space | DONE | 9 myth-busting cards across 5 unit files |
 
 ### Batch 4: Final audit
 | Task | Course | Status | Notes |
 |------|--------|--------|-------|
-| Difficulty audit + fix | Finance | NOT STARTED | Easy after teaching cards |
-| Difficulty audit + fix | Psychology | NOT STARTED | |
-| Difficulty audit + fix | Space | NOT STARTED | |
-| Add calculation questions | Psychology | NOT STARTED | Sections 5+ need slider-estimate |
-| Add calculation questions | Space | NOT STARTED | Sections 4+ need slider-estimate |
-| Em dash audit | Psychology | NOT STARTED | |
-| Em dash audit | Space | NOT STARTED | |
-| Run QA automation script | All | NOT STARTED | Final pass |
+| Difficulty audit + fix | Finance | DONE | 17 fixes across 11 files |
+| Difficulty audit + fix | Psychology | DONE | 2 fixes |
+| Difficulty audit + fix | Space | DONE | 25+ fixes across 10 files |
+| Add calculation questions | Psychology | DONE | 4 slider-estimate questions added |
+| Add calculation questions | Space | DONE | 59 slider-estimate questions across sections 4-10 |
+| Em dash audit | Psychology | DONE | 0 em dashes remaining |
+| Em dash audit | Space | DONE | 0 em dashes remaining |
+| Run QA automation script | All | DONE | ME has 623 pre-existing violations (not expansion scope). Non-ME courses clean. |
 
 ---
 
@@ -68,10 +70,10 @@
 
 | Task | Status | Notes |
 |------|--------|-------|
-| Section metadata data model | NOT STARTED | Group existing units into sections |
-| Section checkpoints UI | NOT STARTED | Gate progression between sections |
-| Adaptive placement test | NOT STARTED | 15-20 questions, CAT-like |
-| Glossary data structure | NOT STARTED | Per-course glossary.ts |
+| Section metadata data model | DONE | sectionIndex + sectionTitle on all 33 units + metas |
+| Section checkpoints UI | DEFERRED | Visual feature, will add when content expansion creates enough sections |
+| Adaptive placement test | DEFERRED | Needs more content sections first |
+| Glossary data structure | DONE | 180 finance + 139 psychology + 150 space terms |
 
 ---
 

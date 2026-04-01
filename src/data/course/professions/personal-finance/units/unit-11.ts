@@ -2,10 +2,12 @@ import type { Unit } from '../../../types';
 
 export const unit11: Unit = {
   id: "pf-u11-insurance",
-  title: "Insurance & Protection",
+  title: "Protect What You've Built",
   description: "Protect everything you've built, from your health to your identity.",
   color: "#016B05",
   icon: "🛡️",
+  sectionIndex: 5,
+  sectionTitle: "Protect What You've Built",
   lessons: [
     // ===== LESSON 1: Insurance: Paying for Peace of Mind =====
     {
@@ -29,6 +31,13 @@ export const unit11: Unit = {
           hint: "Think of it like a subscription to 'not going bankrupt from bad luck.'",
         },
         {
+          id: "pf-u11-L1-Q0",
+          type: "true-false",
+          question: "Insurance protects you from paying the full cost of a disaster out of your own pocket.",
+          correctAnswer: true,
+          explanation: "That's the whole idea. You pay a small amount regularly so you don't get wiped out by one big surprise.",
+        },
+        {
           id: "pf-u11-L1-Q1",
           type: "fill-blank",
           question: "Your _____ is the amount you pay for insurance coverage, while your _____ is what you pay before insurance kicks in.",
@@ -42,6 +51,12 @@ export const unit11: Unit = {
           question: "The Key Insurance Terms You Need",
           explanation: "Before we dive in, here are the terms that come up everywhere in insurance: Premium: what you pay monthly or annually for coverage.",
           hint: "Try this now: review your current insurance policies and note what they cover, their deductibles, and monthly premiums.",
+          variants: {
+            GB: "UK insurance uses slightly different terms: 'excess' instead of 'deductible' (the amount you pay before the insurer pays), and 'sum insured' instead of 'coverage limit.' Premiums work the same way.",
+            AU: "Australian insurance uses 'excess' instead of 'deductible.' You'll also see 'sum insured' (maximum payout) and 'waiting period' (time before new coverage activates, common in health and income protection).",
+            CA: "Canadian insurance terminology is mostly the same as US terms. You'll see 'deductible,' 'premium,' and 'coverage limit.' One difference: 'co-insurance' in property insurance means the percentage of value you must insure.",
+            IL: "Israeli insurance uses 'hashtatfut atzmit' (self-participation, equivalent to a deductible) and 'premiya' (premium). 'Sechum habituach' is the coverage amount. Terms are similar in concept to the US system.",
+          },
         },
         {
           id: "pf-u11-L1-Q2",
@@ -132,6 +147,12 @@ export const unit11: Unit = {
           question: "Health Insurance Plan Types, Demystified",
           explanation: "There are a few main types of health plans, and they all balance cost vs freedom. HMO (Health Maintenance Organization): cheapest premiums, but you MUST use in-network doctors and need referrals to see specialists.",
           hint: "If you rarely see doctors and want to save money, HDHP + HSA is powerful. If you see specialists often, PPO gives you freedom.",
+          variants: {
+            GB: "In the UK, the NHS provides free healthcare at the point of use. No premiums, deductibles, or network restrictions. Some people buy private insurance (like Bupa or AXA) for faster specialist access and private hospital rooms.",
+            AU: "Australia has Medicare, which covers GP visits, public hospital treatment, and subsidized prescriptions. Private health insurance (like Medibank or Bupa) adds faster specialist access, private hospitals, and dental/optical coverage.",
+            CA: "Each Canadian province provides public health insurance covering doctor visits and hospital care. No premiums in most provinces. Private insurance covers extras like dental, vision, prescriptions, and physiotherapy.",
+            IL: "Israel has universal health coverage through four kupot cholim (health funds): Clalit, Maccabi, Meuhedet, and Leumit. Basic coverage is funded by health tax. You can add supplemental insurance (biituach mashlim) for extras.",
+          },
         },
         {
           id: "pf-u11-L2-T2",
@@ -139,6 +160,19 @@ export const unit11: Unit = {
           question: "The HSA Superpower",
           explanation: "An HSA (Health Savings Account) is available only with an HDHP, and it's basically a cheat code. Triple tax advantage: contributions are tax-deductible, money grows tax-free, and withdrawals for medical expenses are tax-free.",
           hint: "Many financial pros call the HSA the best tax-advantaged account in existence, because of its triple tax benefit.",
+          variants: {
+            GB: "The UK doesn't have HSAs since the NHS covers healthcare. Your tax-advantaged investing goes into ISAs instead. The Stocks & Shares ISA offers tax-free growth and withdrawals, similar to a Roth IRA.",
+            AU: "Australia doesn't have HSAs. Healthcare is covered by Medicare. You can claim private health insurance premiums as a tax offset if applicable, and the Medicare Levy Surcharge incentivizes higher earners to get private cover.",
+            CA: "Canada doesn't have HSAs for individuals. However, employer Health Spending Accounts (HSAs) let you pay eligible medical expenses with pre-tax dollars. Some self-employed individuals can deduct health premiums.",
+            IL: "Israel doesn't have HSAs since basic healthcare is universal. Supplemental insurance premiums are not tax-deductible. Your main tax-advantaged savings vehicles are pension funds and kupat gemel accounts.",
+          },
+        },
+        {
+          id: "pf-u11-L2-Q0",
+          type: "true-false",
+          question: "An HSA (Health Savings Account) has a triple tax advantage: money goes in tax-free, grows tax-free, and comes out tax-free for medical expenses.",
+          correctAnswer: true,
+          explanation: "That's what makes the HSA so powerful. No other account gives you tax benefits at all three stages.",
         },
         {
           id: "pf-u11-L2-Q1",
@@ -246,6 +280,12 @@ export const unit11: Unit = {
           question: "The Three Numbers That Run Your Healthcare Costs",
           explanation: "Every health plan has three key costs that determine what you actually pay. Premium: your monthly bill just to HAVE insurance (you pay this no matter what).",
           hint: "The out-of-pocket maximum is your safety net. Once you hit it, insurance covers 100% for the rest of the year.",
+          variants: {
+            GB: "In the UK, NHS care has no premiums, deductibles, or copays for most services. Prescriptions cost a flat 9.90 pounds per item in England (free in Scotland, Wales, and Northern Ireland). Private insurance has similar terms to US plans.",
+            AU: "Under Australia's Medicare, most GP visits are free (bulk-billed). You pay a gap for specialists and some services. Private health insurance has premiums, excesses (deductibles), and co-payments similar to US plans.",
+            CA: "Canadian provincial health plans have no premiums, deductibles, or copays for covered services (doctor visits, hospital care). These terms apply mainly to supplemental insurance for dental, prescriptions, and vision.",
+            IL: "Israeli kupot cholim charge no premiums beyond the health tax deducted from your salary. Co-payments are minimal: roughly 20-30 NIS per specialist visit. Supplemental insurance has small monthly premiums for added services.",
+          },
         },
         {
           id: "pf-u11-L3-T2",
@@ -253,6 +293,12 @@ export const unit11: Unit = {
           question: "The Premium-Deductible Seesaw",
           explanation: "Here's the fundamental trade-off in every health plan: high premium = low deductible, and low premium = high deductible. Plan A: $400/month premium, $500 deductible.",
           hint: "If you have a healthy emergency fund, a higher deductible plan often saves money overall.",
+          variants: {
+            GB: "This premium-deductible trade-off applies mainly to UK private health insurance. NHS care is free at point of use with no deductibles. For private policies, choosing a higher excess (deductible) lowers your premium.",
+            AU: "This trade-off applies to Australian private health insurance. A higher excess (deductible) reduces premiums. Medicare covers most essential care regardless. The trade-off matters for hospital cover and extras.",
+            CA: "This trade-off applies mainly to Canadian supplemental insurance (dental, prescriptions, vision). Provincial health plans have no premiums or deductibles for core services in most provinces.",
+            IL: "This trade-off applies to Israeli supplemental health insurance (biituach mashlim). Basic kupat cholim services have no deductibles. For supplemental plans, higher co-payments usually mean lower monthly premiums.",
+          },
         },
         {
           id: "pf-u11-L3-Q1",
@@ -374,6 +420,12 @@ export const unit11: Unit = {
           question: "Auto Insurance: The Three Layers",
           explanation: "Auto insurance isn't one thing; it's a stack of coverages. Liability pays for damage you cause to others, collision covers your car in a crash, and comprehensive covers non-accident damage like theft or weather.",
           hint: "If your car is old and paid off, you might skip collision/comprehensive. If it's new or financed, you need all three.",
+          variants: {
+            GB: "UK car insurance has three levels: third party only (cheapest, covers damage to others), third party fire & theft, and comprehensive (covers everything including your own car). Comprehensive is often cheaper than third party only due to pricing models.",
+            AU: "Australian car insurance tiers: compulsory third party (CTP, covers injuries, included in registration), third party property, and comprehensive. CTP is mandatory but only covers personal injury, not property damage.",
+            CA: "Canadian auto insurance varies by province. In most provinces, basic liability is mandatory. Collision and comprehensive are optional. Some provinces (BC, Saskatchewan, Manitoba) have government-run insurance programs.",
+            IL: "Israeli auto insurance has two layers: biituach chova (compulsory insurance covering bodily injury) and biituach mekif (comprehensive, covering property damage, theft, and third-party property). Compulsory insurance is required by law.",
+          },
         },
         {
           id: "pf-u11-L4-T2",
@@ -381,6 +433,12 @@ export const unit11: Unit = {
           question: "Decoding 100/300/100",
           explanation: "You'll see auto insurance limits written like '100/300/100.' Here's what those numbers mean. First number ($100K): max payout per PERSON for their injuries.",
           hint: "Minimum state limits are often dangerously low. Like 25/50/25. A serious accident can easily exceed that, leaving YOU on the hook.",
+          variants: {
+            GB: "UK car insurance doesn't use numbered limits like 100/300/100. Third-party bodily injury coverage is unlimited by law. Property damage has a minimum but most policies provide generous limits. Focus on your excess (deductible) amount instead.",
+            AU: "Australian CTP covers unlimited personal injury in most states. Third-party property policies typically cover $20 million in liability. You choose your excess (deductible) amount, which affects your premium.",
+            CA: "Canadian auto insurance uses a single liability limit (e.g., $1 million or $2 million) rather than split limits. Most provinces require a minimum of $200,000, but financial advisors recommend at least $2 million.",
+            IL: "Israeli compulsory insurance covers unlimited bodily injury. For property damage, biituach mekif policies have coverage limits you choose. Higher limits cost more but protect you from large claims.",
+          },
         },
         {
           id: "pf-u11-L4-Q1",
@@ -484,6 +542,12 @@ export const unit11: Unit = {
           question: "Your Landlord's Insurance Doesn't Cover YOUR Stuff",
           explanation: "Big misconception: your landlord's insurance covers the building structure, not your belongings inside it. Renter's insurance covers your personal property, liability, and additional living expenses for around $15-25/month.",
           hint: "Walk through your apartment and add up what everything costs. Most people have $20,000-50,000 worth of stuff and don't even realize it.",
+          variants: {
+            GB: "UK contents insurance (the equivalent of renter's insurance) covers your belongings in a rented property. It typically costs 10-20 pounds/month. Your landlord's buildings insurance only covers the structure, not your stuff.",
+            AU: "In Australia, contents insurance covers your belongings as a renter. It costs roughly $20-40 AUD/month. Your landlord's insurance covers the building only. Most renters underestimate how much their belongings are worth.",
+            CA: "Canadian tenant insurance (renter's insurance) covers your belongings, liability, and additional living expenses. It costs about $20-40 CAD/month. Your landlord's policy covers the building, not your personal property.",
+            IL: "In Israel, biituach dira (apartment insurance) for renters covers your contents and liability. It's relatively affordable at 50-100 NIS/month. Your landlord's insurance covers the building structure only.",
+          },
         },
         {
           id: "pf-u11-L5-T2",
@@ -491,6 +555,12 @@ export const unit11: Unit = {
           question: "Homeowner's Insurance: Protecting Your Biggest Asset",
           explanation: "If you own a home, homeowner's insurance is non-negotiable (your mortgage lender requires it anyway). It covers the structure itself, your personal belongings, liability if someone is injured on your property, and additional living expenses if your home is damaged.",
           hint: "Your home is probably your most expensive possession. Spending $150/month to protect a $300,000 asset makes sense.",
+          variants: {
+            GB: "UK buildings insurance covers the structure, and contents insurance covers your belongings. Your mortgage lender requires buildings insurance. Most people buy a combined buildings & contents policy for convenience.",
+            AU: "Australian home insurance is split into building insurance (structure) and contents insurance (belongings). Your mortgage lender requires building insurance. Premiums vary wildly by location due to flood and cyclone risk.",
+            CA: "Canadian homeowner's insurance covers the structure, contents, liability, and additional living expenses. Your mortgage lender requires it. Premiums depend heavily on location, with coastal and flood-prone areas paying significantly more.",
+            IL: "Israeli homeowner's insurance (biituach dira) covers the structure and contents. Mortgage lenders (banks) require structural coverage. Earthquake coverage is important given Israel's location on a fault line, but is often a separate add-on.",
+          },
         },
         {
           id: "pf-u11-L5-Q1",
@@ -594,6 +664,12 @@ export const unit11: Unit = {
           question: "Life Insurance in 60 Seconds",
           explanation: "Life insurance pays your loved ones money when you die. That's it.",
           hint: "A 30-year-old can get $500,000 of term life insurance for about $25-30/month. That's the cost of a couple coffees per week.",
+          variants: {
+            GB: "UK life insurance works the same way. Term life insurance for a 30-year-old costs about 10-20 pounds/month for 300,000 pounds of coverage. It's often arranged through a mortgage provider when buying a home.",
+            AU: "Australian life insurance can be held inside your super fund (often cheaper due to group rates) or bought separately. Many Australians have default life cover through their super without realizing it. Check your super statement.",
+            CA: "Canadian term life insurance for a 30-year-old costs about $25-35 CAD/month for $500,000 coverage. Many employers offer basic group life insurance (1-2x salary) as a workplace benefit.",
+            IL: "In Israel, biituach chaim (life insurance) is common. Many Israelis get life and disability coverage bundled with their pension fund. Standalone term policies are also available from insurance companies.",
+          },
         },
         {
           id: "pf-u11-L6-T2",
@@ -601,6 +677,12 @@ export const unit11: Unit = {
           question: "Term vs Whole Life: The Showdown",
           explanation: "Term life: covers you for a set period (10, 20, or 30 years). Cheap because most people don't die during the term.",
           hint: "If an insurance agent pushes whole life hard, remember. They earn WAY higher commissions on whole life policies. Follow the money.",
+          variants: {
+            GB: "The UK equivalent of whole life is 'whole of life' insurance. Same advice applies: term life is usually the better choice. 'Over-50s plans' are a type of whole life often marketed on TV, but they typically offer poor value.",
+            AU: "In Australia, the term vs whole life debate barely exists because whole life policies are rare. Most Australians use term life (often inside super). Beware insurance salespeople pushing 'investment-linked' life policies.",
+            CA: "Canada has the same term vs permanent (whole life) distinction. The advice is identical: buy term, invest the difference. Universal life policies are another variant to be cautious about due to high fees.",
+            IL: "In Israel, most life insurance is term-based (biituach chaim le-rishon). Whole life products exist but are less common. Your pension fund often includes a risk component (kisui sikun) that acts as built-in life insurance.",
+          },
         },
         {
           id: "pf-u11-L6-Q1",
@@ -704,6 +786,12 @@ export const unit11: Unit = {
           question: "Your #1 Asset Isn't Your Home. It's Your Income",
           explanation: "If you earn $60,000/year and work for 30 more years, your lifetime earnings are $1.8 million. That makes your ability to earn money your single most valuable asset.",
           hint: "People insure their $30,000 car but not their $1.8 million earning potential. That's backwards.",
+          variants: {
+            GB: "In the UK, income protection insurance replaces your salary if you can't work due to illness or injury. The government's Statutory Sick Pay (SSP) is only about 116 pounds/week, so private cover fills a massive gap.",
+            AU: "In Australia, income protection insurance is common and can be held inside your super fund. The government's Disability Support Pension is modest and hard to qualify for, making private cover essential.",
+            CA: "Canadian disability insurance works similarly. Employment Insurance (EI) sickness benefits cover only 15 weeks at 55% of earnings (max ~$668/week). Private long-term disability insurance covers the years after that.",
+            IL: "In Israel, disability coverage (kisui le-ovdan kosher avoda) is often included in your pension fund package. Bituach Leumi provides a disability allowance, but it's modest. Check that your pension includes adequate disability coverage.",
+          },
         },
         {
           id: "pf-u11-L7-T2",
@@ -711,6 +799,12 @@ export const unit11: Unit = {
           question: "Short-Term vs Long-Term Disability",
           explanation: "There are two types of disability insurance. Short-term disability (STD): kicks in quickly (within 1-2 weeks), covers you for 3-6 months.",
           hint: "If you only get one, get long-term disability. Your emergency fund can cover the first 90 days. LTD covers the years after that.",
+          variants: {
+            GB: "UK income protection policies typically have a 'deferred period' (waiting period) of 4-13 weeks before payments start. Policies pay until you recover, reach retirement age, or the policy ends. SSP covers the first 28 weeks at a basic rate.",
+            AU: "Australian income protection insurance usually has a 30-90 day waiting period and pays up to 75% of your income. Benefits can last 2 years, 5 years, or until age 65 depending on the policy. Shorter benefit periods cost less.",
+            CA: "In Canada, short-term disability is often provided by employers (typically 15-17 weeks). Long-term disability kicks in after that and can pay 60-70% of salary until age 65. Check if your employer provides group LTD.",
+            IL: "In Israel, your pension fund's disability component (kisui le-ovdan kosher avoda) provides income if you can't work. Coverage is typically 75% of your insured salary. Bituach Leumi provides a separate disability allowance based on the degree of disability.",
+          },
         },
         {
           id: "pf-u11-L7-Q1",
@@ -813,6 +907,12 @@ export const unit11: Unit = {
           question: "Insurance You Probably Don't Need",
           explanation: "The insurance industry makes a fortune selling fear. Not every policy is a good deal.",
           hint: "Ask yourself: 'Can I afford to replace this myself?' If yes, skip the insurance. If no, get the insurance.",
+          variants: {
+            GB: "In the UK, common unnecessary insurance includes: payment protection insurance (PPI was a massive scandal), extended warranties on electronics, and travel insurance from airlines (your bank or credit card may already cover it).",
+            AU: "In Australia, common unnecessary insurance includes: junk insurance sold with credit cards or loans, extended warranties on appliances, and funeral insurance (a basic term life policy is cheaper and more flexible).",
+            CA: "In Canada, common unnecessary insurance includes: mortgage life insurance from your bank (a personal term policy is cheaper and more flexible), credit card balance insurance, and extended warranties on electronics.",
+            IL: "In Israel, common unnecessary insurance includes: extended warranties on electronics (Israeli consumer law already provides 1-year warranty), flight insurance, and duplicate coverage from multiple credit cards.",
+          },
         },
         {
           id: "pf-u11-L8-T2",
@@ -921,6 +1021,12 @@ export const unit11: Unit = {
           question: "Identity Theft Is a $10 Billion Industry",
           explanation: "In 2023, Americans lost over $10 billion to fraud, with identity theft being the most common type. Someone uses your personal info to open credit cards, file tax returns, or drain bank accounts in your name.",
           hint: "The best defense is prevention. Freezing your credit is free and blocks 90% of identity theft.",
+          variants: {
+            GB: "UK fraud losses exceeded 1.2 billion pounds in 2023. You can place a CIFAS protective registration on your credit file to flag your identity to lenders. Check your credit report free at Experian, Equifax, or TransUnion UK.",
+            AU: "Australians lost over $2.7 billion AUD to scams in 2023. You can place a credit ban with the three bureaus (Equifax, Illion, Experian) for free. Report identity theft to ReportCyber and IDCARE.",
+            CA: "Canadians lost over $550 million CAD to fraud in 2023. You can place a fraud alert with Equifax and TransUnion Canada. The Canadian Anti-Fraud Centre (CAFC) is the national reporting agency.",
+            IL: "Israeli identity fraud is growing. Protect yourself by not sharing your teudat zehut (ID number) unnecessarily. Monitor your BDI credit report and report fraud to the Israel Police cybercrime unit.",
+          },
         },
         {
           id: "pf-u11-L9-T2",
@@ -928,6 +1034,12 @@ export const unit11: Unit = {
           question: "The Credit Freeze: Your Best Weapon",
           explanation: "A credit freeze is the single most effective thing you can do to prevent identity theft. It locks your credit reports at all three bureaus so nobody (including you) can open new accounts until you temporarily unfreeze.",
           hint: "Try this now: go to Equifax, Experian, and TransUnion's websites and freeze your credit for free (takes about 15 minutes).",
+          variants: {
+            GB: "In the UK, a CIFAS protective registration costs 25 pounds for 2 years and flags your identity to all lenders. You can also lock your credit file through Experian, Equifax, or TransUnion UK apps for free.",
+            AU: "In Australia, you can place a free credit ban for up to 21 days (extendable) with Equifax, Illion, and Experian Australia. This prevents new credit applications from being processed in your name.",
+            CA: "In Canada, contact Equifax and TransUnion Canada to place a fraud alert on your credit file. Unlike the US, there's no formal 'credit freeze' mechanism, but fraud alerts require lenders to verify your identity.",
+            IL: "Israel doesn't have a credit freeze system like the US. Monitor your BDI (Bank of Israel Credit Data) report regularly. Be cautious sharing your teudat zehut number, as it's the key to identity fraud.",
+          },
         },
         {
           id: "pf-u11-L9-Q1",
@@ -1045,6 +1157,12 @@ export const unit11: Unit = {
           question: "The Insurance Shopping Playbook",
           explanation: "Most people pick an insurance plan once and never look again. That's how you end up overpaying by hundreds (or thousands) per year.",
           hint: "Insurance companies count on your laziness. The average person could save $500-1,000/year just by shopping around once.",
+          variants: {
+            GB: "In the UK, use comparison sites like MoneySuperMarket, CompareTheMarket, and GoCompare. Auto-renewal is a common trap. Switching car or home insurance annually can save 100-300 pounds.",
+            AU: "In Australia, use comparison sites like iSelect, Canstar, and Compare the Market. Shopping around for health insurance during the annual premium review (April) can save hundreds of AUD per year.",
+            CA: "In Canada, use sites like Kanetix, LowestRates, or InsuranceHotline to compare auto and home insurance quotes. Rates vary dramatically between provinces and insurers.",
+            IL: "In Israel, use comparison sites like Rav Kav Bituach or Bituach Direkt. Israeli law requires insurers to let you cancel policies with 3 days notice. Shopping around annually is especially important for car insurance.",
+          },
         },
         {
           id: "pf-u11-L10-T2",
@@ -1052,6 +1170,12 @@ export const unit11: Unit = {
           question: "Discounts You're Probably Missing",
           explanation: "Insurance companies offer tons of discounts but rarely tell you about them. Auto: safe driver, good student, low mileage, bundling, military, paying in full.",
           hint: "When you call for a quote, literally say: 'What discounts am I eligible for?' Make them go through the whole list.",
+          variants: {
+            GB: "UK-specific discounts: no-claims bonus (up to 65% off car insurance after 5+ claim-free years), black box/telematics policies for young drivers, multi-car discounts, and paying annually instead of monthly.",
+            AU: "Australian-specific discounts: no-claims bonus, paying annually, bundling home and car, installing security devices, and being over 25. Some insurers offer discounts for online-only policies.",
+            CA: "Canadian-specific discounts: winter tire discount (mandatory in Quebec, discounted elsewhere), claims-free discount, multi-vehicle, bundling home/auto, and graduated licensing discounts for new drivers.",
+            IL: "Israeli-specific discounts: no-claims discount (bonuses for accident-free years), installing a car alarm (dashcam, immobilizer), driver experience discount, and paying the annual premium in a lump sum.",
+          },
         },
         {
           id: "pf-u11-L10-Q1",
@@ -1380,6 +1504,117 @@ export const unit11: Unit = {
           question: "Comprehensive auto insurance covers:",
           options: ["Only collisions", "Theft, weather, and non-collision damage", "Only liability", "Medical payments only"],
           correctIndex: 1,
+        },
+      ],
+    },
+    // ===== REVIEW LESSON: Real Estate & Insurance Review =====
+    {
+      id: "pf-u11-review",
+      title: "Review: Real Estate & Insurance",
+      description: "Test your knowledge of homebuying, mortgages, insurance types, and protecting your wealth.",
+      icon: '📝',
+      xpReward: 25,
+      questions: [
+        {
+          id: "pf-u11-rev-Q1",
+          type: "multiple-choice",
+          question: "What is the main reason buying a home only beats renting if you stay long enough?",
+          options: [
+            "Home prices always go up",
+            "Closing costs and agent fees need time to be recouped",
+            "Mortgage interest rates drop over time",
+            "Rent always increases faster than mortgage payments",
+          ],
+          correctIndex: 1,
+          explanation: "Buying involves 2-5% closing costs upfront and 5-6% selling fees. You need to stay long enough for appreciation to cover those costs before buying 'wins.'",
+        },
+        {
+          id: "pf-u11-rev-Q2",
+          type: "true-false",
+          question: "A fixed-rate mortgage keeps the same interest rate for the entire loan term.",
+          correctAnswer: true,
+          explanation: "Fixed-rate means your payment stays predictable. An adjustable-rate mortgage (ARM) can change after an initial period, making payments unpredictable.",
+        },
+        {
+          id: "pf-u11-rev-Q3",
+          type: "fill-blank",
+          question: "Your insurance _____ is what you pay monthly for coverage, while the _____ is what you pay out of pocket before insurance kicks in.",
+          blanks: ["premium", "deductible"],
+          wordBank: ["premium", "deductible", "copay", "claim", "coverage"],
+          explanation: "Premium is your regular payment to keep the policy active. Deductible is the amount you pay first when something happens.",
+        },
+        {
+          id: "pf-u11-rev-Q4",
+          type: "true-false",
+          question: "Term life insurance is typically cheaper than whole life insurance for the same coverage amount.",
+          correctAnswer: true,
+          explanation: "Term life covers you for a set period (10-30 years) and is much cheaper. Whole life covers you forever and includes a savings component, making it more expensive.",
+        },
+        {
+          id: "pf-u11-rev-Q5",
+          type: "match-pairs",
+          question: "Match each insurance type to what it covers:",
+          options: ["Liability insurance", "Renter's insurance", "Disability insurance", "Comprehensive auto"],
+          matchTargets: ["Damage you cause to others", "Your belongings inside a rental", "Lost income if you can't work", "Theft, weather, and non-collision damage to your car"],
+          correctMatches: [0, 1, 2, 3],
+          explanation: "Each type protects a different part of your financial life. Together, they form a safety net around your income, health, belongings, and legal liability.",
+        },
+        {
+          id: "pf-u11-rev-Q6",
+          type: "sort-buckets",
+          question: "Sort each cost: is it part of buying a home or owning a home?",
+          options: ["Down payment", "Property taxes", "Closing costs", "Maintenance and repairs", "Home inspection fee", "HOA fees"],
+          buckets: ["Buying costs", "Ongoing ownership costs"],
+          correctBuckets: [0, 1, 0, 1, 0, 1],
+          explanation: "Down payment, closing costs, and inspection fees are one-time buying costs. Property taxes, maintenance, and HOA fees continue for as long as you own the home.",
+        },
+        {
+          id: "pf-u11-rev-Q7",
+          type: "order-steps",
+          question: "Put the home buying process in the correct order:",
+          steps: ["Get pre-approved for a mortgage", "Find a home and make an offer", "Complete a home inspection", "Close on the property and get the keys"],
+          correctOrder: [0, 1, 2, 3],
+          explanation: "Pre-approval shows sellers you're serious. Then you shop, negotiate, inspect, and finally close the deal.",
+        },
+        {
+          id: "pf-u11-rev-Q8",
+          type: "multiple-choice",
+          question: "What is a REIT?",
+          options: [
+            "A type of mortgage with a variable rate",
+            "A trust that lets you invest in real estate through the stock market",
+            "A government program for first-time homebuyers",
+            "A tax deduction for property owners",
+          ],
+          correctIndex: 1,
+          explanation: "A Real Estate Investment Trust (REIT) lets you own real estate without buying property. You invest in a fund that owns and operates properties, and you earn dividends.",
+        },
+        {
+          id: "pf-u11-rev-Q9",
+          type: "multiple-choice",
+          question: "You pay $150/month for health insurance with a $2,000 deductible. You have a $5,000 surgery. What do you pay out of pocket (ignoring copays)?",
+          options: [
+            "$5,000",
+            "$2,000",
+            "$150",
+            "$0",
+          ],
+          correctIndex: 1,
+          explanation: "You pay your $2,000 deductible first. Insurance covers the remaining $3,000. Without insurance, the full $5,000 would be yours.",
+        },
+        {
+          id: "pf-u11-rev-Q10",
+          type: "scenario",
+          question: "What insurance should Sam prioritize?",
+          scenario: "Sam, 30, rents an apartment, owns a car, and works as a freelancer. He has $20,000 in savings and no dependents. He currently has no insurance at all.",
+          options: [
+            "Life insurance, since it protects his family",
+            "Health insurance and auto insurance first, since illness or an accident could wipe out his savings",
+            "Homeowner's insurance to protect his apartment",
+            "He doesn't need insurance since he has savings",
+          ],
+          correctIndex: 1,
+          explanation: "Health insurance is essential since a single ER visit can cost $10,000+. Auto insurance is legally required. As a renter with no dependents, life insurance is less urgent, and homeowner's insurance doesn't apply.",
         },
       ],
     },

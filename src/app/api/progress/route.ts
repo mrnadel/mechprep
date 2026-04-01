@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { eq } from 'drizzle-orm';
+import { eq, desc } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import {
   users,
@@ -21,11 +21,13 @@ export async function GET() {
   }
 
   // Fetch all user data in parallel instead of sequentially
+  // Limit session history to last 100 entries to reduce egress
   const [userRows, progressRows, topics, sessions] = await Promise.all([
     db.select().from(users).where(eq(users.id, userId)).limit(1),
     db.select().from(userProgress).where(eq(userProgress.userId, userId)).limit(1),
     db.select().from(topicProgressTable).where(eq(topicProgressTable.userId, userId)),
-    db.select().from(sessionHistory).where(eq(sessionHistory.userId, userId)),
+    db.select().from(sessionHistory).where(eq(sessionHistory.userId, userId))
+      .orderBy(desc(sessionHistory.date)).limit(100),
   ]);
 
   const user = userRows[0];

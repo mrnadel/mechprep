@@ -2,10 +2,12 @@ import type { Unit } from '../../../types';
 
 export const unit5: Unit = {
   id: "pf-u5-banking-taxes",
-  title: "Banking & Taxes",
+  title: "Master Your Bank & Taxes",
   description: "Optimize your bank accounts and stop overpaying the government.",
   color: "#099345",
   icon: "\u{1F3E6}",
+  sectionIndex: 3,
+  sectionTitle: "Master Your Bank & Taxes",
   lessons: [
     // ===== LESSON 1: Checking vs Savings: What Goes Where =====
     {
@@ -135,6 +137,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "Three Kinds of Places for Your Money",
           explanation: "You've got three main options for where to park your cash. Traditional banks (Chase, Bank of America), huge, everywhere, lots of services.",
+          variants: {
+            US: "You've got three main options for where to park your cash. Traditional banks (Chase, Bank of America), huge, everywhere, lots of services.",
+            GB: "You've got three main options for where to park your cash. High street banks (Barclays, HSBC, Lloyds), huge, branches on every corner, lots of services.",
+            AU: "You've got three main options for where to park your cash. Big four banks (CommBank, Westpac, ANZ, NAB), huge, everywhere, lots of services.",
+            CA: "You've got three main options for where to park your cash. Big five banks (RBC, TD, Scotiabank, BMO, CIBC), huge, everywhere, lots of services.",
+            IL: "You've got three main options for where to park your cash. Major banks (Hapoalim, Leumi, Discount), big, branches everywhere, lots of services.",
+          },
           hint: "There's no single 'best' option. It depends on whether you value branches, rates, or features most.",
         },
         {
@@ -219,6 +228,13 @@ export const unit5: Unit = {
           question: "Your money is equally protected at a bank (FDIC) and a credit union (NCUA), both insure up to $250,000.",
           correctAnswer: true,
           explanation: "FDIC covers banks, NCUA covers credit unions, and both insure up to $250,000 per depositor. Your money is equally safe at either one.",
+          variants: {
+            US: "FDIC covers banks, NCUA covers credit unions, and both insure up to $250,000 per depositor. Your money is equally safe at either one.",
+            GB: "The FSCS (Financial Services Compensation Scheme) protects deposits up to £85,000 per person, per institution. This covers banks and building societies alike.",
+            AU: "The Financial Claims Scheme guarantees deposits up to A$250,000 per person, per ADI (bank, building society, or credit union). Your money is equally safe.",
+            CA: "CDIC (Canada Deposit Insurance Corporation) protects deposits up to C$100,000 per category, per institution. Credit unions are covered by provincial deposit insurance.",
+            IL: "Israel does not have a formal deposit insurance scheme like the FDIC. However, major banks are closely regulated by the Bank of Israel, and the government has historically backed deposits during crises.",
+          },
         },
       ],
     },
@@ -236,6 +252,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "Banks Make Billions Off Your Fees",
           explanation: "Here's a fun fact that isn't fun at all: U.S.",
+          variants: {
+            US: "Here's a fun fact that isn't fun at all: U.S. banks collected over $12 billion in overdraft fees alone in a single year. Fees are one of the biggest profit centers for banks.",
+            GB: "Here's a fun fact that isn't fun at all: UK banks have historically made billions from overdraft charges and unauthorized borrowing fees. Regulations improved in 2020, but fees still add up.",
+            AU: "Here's a fun fact that isn't fun at all: Australian banks collect hundreds of millions in dishonour fees, account-keeping fees, and ATM charges every year.",
+            CA: "Here's a fun fact that isn't fun at all: Canadian banks earn billions in service charges, NSF (non-sufficient funds) fees, and monthly account fees every year.",
+            IL: "Here's a fun fact that isn't fun at all: Israeli banks earn substantial revenue from account management fees (dmei nihul), overdraft interest, and transaction charges every year.",
+          },
           hint: "Try this now: search your bank statements from the last 12 months for the word 'fee' and add up what you've paid.",
         },
         {
@@ -243,7 +266,21 @@ export const unit5: Unit = {
           type: "teaching",
           question: "The Big Three Fee Killers",
           explanation: "Three fees drain the most money from normal people. Overdraft fees ($35 each time you overspend your balance).",
+          variants: {
+            US: "Three fees drain the most money from normal people. Overdraft fees ($35 each time you overspend your balance). Monthly maintenance fees ($5-15/month just to have an account). ATM fees ($3-5 per out-of-network withdrawal).",
+            GB: "Three fees drain the most money from normal people. Overdraft interest (now a single annual rate, typically 35-40% EAR since 2020 reforms). Foreign transaction fees (2.75-3% per overseas purchase). Unpaid direct debit fees (up to £10 each).",
+            AU: "Three fees drain the most money from normal people. Dishonour fees (A$10-15 when a payment bounces). Monthly account fees (A$4-10/month). ATM fees (A$2+ per non-network withdrawal, though many banks have scrapped these).",
+            CA: "Three fees drain the most money from normal people. NSF (non-sufficient funds) fees (C$45-48 each). Monthly account fees (C$4-30/month). Interac e-Transfer fees (C$1-2 at some banks).",
+            IL: "Three fees drain the most money from normal people. Account management fees (dmei nihul, 10-25 NIS/month). Overdraft interest (very high rates on unauthorized overdrafts). ATM fees at other banks' machines.",
+          },
           hint: "Getting hit by 2 overdraft fees a month = $840/year gone. That's a vacation you're handing to your bank.",
+        },
+        {
+          id: "pf-u5-L3-Q0",
+          type: "true-false",
+          question: "Banks charge fees like overdraft fees, monthly maintenance fees, and ATM fees that can add up to hundreds of dollars per year.",
+          correctAnswer: true,
+          explanation: "Yes! These fees are one of the biggest ways banks make money from everyday customers. The good news: most of them are avoidable.",
         },
         {
           id: "pf-u5-L3-Q1",
@@ -471,6 +508,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "P2P Apps: Sending Money Instantly",
           explanation: "Venmo, Zelle, Cash App, and PayPal let you send money to friends in seconds. Super convenient for splitting bills or paying rent to a roommate.",
+          variants: {
+            US: "Venmo, Zelle, Cash App, and PayPal let you send money to friends in seconds. Super convenient for splitting bills or paying rent to a roommate.",
+            GB: "Faster Payments (bank transfers), PayPal, and Monzo/Revolut let you send money to friends in seconds. Super convenient for splitting bills or paying rent to a flatmate.",
+            AU: "PayID, Osko, and PayPal let you send money to friends in seconds using just a phone number or email. Super convenient for splitting bills or paying rent to a housemate.",
+            CA: "Interac e-Transfer, PayPal, and Wealthsimple Cash let you send money to friends in seconds. Super convenient for splitting bills or paying rent to a roommate.",
+            IL: "Bit, PayBox, and Pepper Pay let you send money to friends in seconds using just a phone number. Super convenient for splitting bills or paying rent to a roommate.",
+          },
           hint: "Would you hand $500 in cash to a stranger based on a text message? No? Then don't Zelle them either.",
         },
         {
@@ -577,6 +621,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "Your Money Has Enemies",
           explanation: "Bank fraud costs Americans billions every year. Scammers are creative, patient, and running operations 24/7.",
+          variants: {
+            US: "Bank fraud costs Americans billions every year. Scammers are creative, patient, and running operations 24/7. Your bank will never ask for your password, PIN, or full Social Security number.",
+            GB: "Bank fraud costs UK consumers over £1.2 billion per year. Scammers are creative, patient, and running operations 24/7. Your bank will never ask for your password, PIN, or National Insurance number.",
+            AU: "Australians lose over A$3 billion to scams every year. Scammers are creative, patient, and running operations 24/7. Your bank will never ask for your password, PIN, or Tax File Number.",
+            CA: "Canadians lose billions to fraud every year. Scammers are creative, patient, and running operations 24/7. Your bank will never ask for your password, PIN, or Social Insurance Number.",
+            IL: "Bank fraud in Israel is a growing problem. Scammers are creative, patient, and running operations 24/7. Your bank will never ask for your password, PIN, or teudat zehut number by phone or email.",
+          },
           hint: "Your bank will NEVER ask for your password, PIN, or full Social Security number by email, text, or phone. If someone does, it's a scam. Period.",
         },
         {
@@ -649,6 +700,13 @@ export const unit5: Unit = {
           question: "If someone steals your debit card info and makes unauthorized purchases, you're responsible for the full amount.",
           correctAnswer: false,
           explanation: "Federal law (Regulation E) protects you: report within 2 business days and your max liability is $50. The key is reporting fast.",
+          variants: {
+            US: "Federal law (Regulation E) protects you: report within 2 business days and your max liability is $50. The key is reporting fast.",
+            GB: "The Payment Services Regulations protect you. Your bank must refund unauthorized transactions unless they can prove gross negligence. Report as soon as possible.",
+            AU: "The ePayments Code protects you. If you report unauthorized transactions promptly and haven't been negligent, your bank must reimburse you. Report as soon as possible.",
+            CA: "The Canadian Code of Practice for Consumer Debit Card Services protects you. If you report within 30 days and weren't negligent, liability is typically zero. Report as soon as possible.",
+            IL: "The Banking (Service to Customer) Law and Bank of Israel regulations protect you. Report unauthorized transactions to your bank immediately. Banks must investigate and typically refund fraudulent charges.",
+          },
         },
         {
           id: "pf-u5-L5-Q6",
@@ -685,6 +743,13 @@ export const unit5: Unit = {
           blanks: ["2", "$50"],
           wordBank: ["2", "$50", "30", "$500", "7", "$0"],
           explanation: "Under federal Regulation E, reporting within 2 business days caps your loss at $50. Wait longer than 60 days and you could be on the hook for everything. Speed matters.",
+          variants: {
+            US: "Under federal Regulation E, reporting within 2 business days caps your loss at $50. Wait longer than 60 days and you could be on the hook for everything. Speed matters.",
+            GB: "Under the Payment Services Regulations, banks must refund unauthorized transactions unless you acted fraudulently or with gross negligence. Report as soon as possible for maximum protection.",
+            AU: "Under the ePayments Code, promptly reporting unauthorized transactions limits your liability. If you weren't negligent and report quickly, you're generally protected. Speed matters, report the same day if possible.",
+            CA: "Under the Canadian Code of Practice for Consumer Debit Card Services, reporting within 30 days and demonstrating you weren't negligent typically means zero liability. Report as quickly as possible for the strongest protection.",
+            IL: "Report unauthorized charges to your bank immediately. Israeli banking regulations require banks to investigate disputed transactions. The faster you report, the stronger your claim for reimbursement.",
+          },
         },
       ],
     },
@@ -709,6 +774,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "Where Your Federal Tax Dollars Actually Go",
           explanation: "Here's the rough breakdown of where federal tax money goes: About 22% to Social Security, 14% to Medicare, 13% to Medicaid/health, 13% to defense, 10% to interest on national debt, and the rest split across everything else, education, infrastructure, science, veterans, foreign aid (which is only about 1%). The biggest chunk by far?",
+          variants: {
+            US: "Here's the rough breakdown of where federal tax money goes: About 22% to Social Security, 14% to Medicare, 13% to Medicaid/health, 13% to defense, 10% to interest on national debt, and the rest split across everything else.",
+            GB: "Here's the rough breakdown of where UK tax money goes: About 20% to health (NHS), 20% to welfare/pensions, 11% to education, 5% to defense, and the rest split across transport, public order, housing, and debt interest.",
+            AU: "Here's the rough breakdown of where Australian federal tax goes: About 30% to social security and welfare, 16% to health, 10% to defense, 8% to education, and the rest split across infrastructure, public services, and debt interest.",
+            CA: "Here's the rough breakdown of where Canadian federal tax goes: About 22% to elderly benefits (OAS, GIS), 17% to health transfers, 12% to employment insurance and children's benefits, and the rest to defense, debt interest, and other programs.",
+            IL: "Here's the rough breakdown of where Israeli tax money goes: About 15% to defense, 16% to debt servicing, 12% to education, 10% to welfare, 7% to health, and the rest split across infrastructure, public safety, and other services.",
+          },
           hint: "Fun fact: foreign aid, the thing people complain about most, is only about 1% of the federal budget.",
         },
         {
@@ -759,6 +831,13 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "FICA stands for Federal Insurance Contributions Act: 7.65% of your paycheck (6.2% Social Security + 1.45% Medicare), and your employer matches it. This funds programs for retirees and the elderly.",
+          variants: {
+            US: "FICA stands for Federal Insurance Contributions Act: 7.65% of your paycheck (6.2% Social Security + 1.45% Medicare), and your employer matches it. This funds programs for retirees and the elderly.",
+            GB: "National Insurance Contributions (NICs) are automatically deducted from your pay. Employees pay 8% on earnings between £12,570 and £50,270, and 2% above that. This funds the State Pension and NHS.",
+            AU: "Your employer pays 11.5% Superannuation Guarantee on top of your salary into your super fund. You also pay the Medicare Levy of 2% of taxable income to fund public healthcare.",
+            CA: "CPP (Canada Pension Plan) contributions are split between you and your employer, each paying 5.95% on pensionable earnings. EI (Employment Insurance) premiums are also deducted, at 1.66% for employees.",
+            IL: "Bituach Leumi (National Insurance) contributions are automatically deducted from your salary. Rates vary by income bracket, roughly 3.5-12% for employees. This funds pensions, disability, maternity leave, and unemployment benefits.",
+          },
         },
         {
           id: "pf-u5-L6-Q6",
@@ -802,10 +881,24 @@ export const unit5: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u5-L7-myth1",
+          type: "teaching",
+          question: "Myth: I'm in the 22% bracket so I pay 22% on everything",
+          explanation: "Tax brackets are marginal, not flat. Only the income above each threshold is taxed at that rate. If you earn $50,000 and the 22% bracket starts at $44,726, only $5,274 is taxed at 22%. Your effective rate is much lower, probably around 12-14%.",
+          hint: "This myth causes people to turn down raises or overtime because they think earning more will somehow leave them with less. It never does.",
+        },
+        {
           id: "pf-u5-L7-T1",
           type: "teaching",
           question: "The Biggest Tax Myth",
           explanation: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket and take home LESS money.' This is wrong. Most countries use progressive brackets, meaning only the income ABOVE each threshold is taxed at the higher rate.",
+          variants: {
+            US: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket and take home LESS money.' This is wrong. The US uses progressive marginal brackets. Only the income ABOVE each threshold is taxed at the higher rate. If the 22% bracket starts at $44,726 and you earn $45,000, only $274 is taxed at 22%.",
+            GB: "Here's the myth: 'If I earn more, I'll move into a higher tax band and take home LESS money.' This is wrong. The UK uses progressive tax bands. Only the income ABOVE each threshold is taxed at the higher rate. If the 40% rate starts at £50,270 and you earn £51,000, only £730 is taxed at 40%.",
+            AU: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket and take home LESS money.' This is wrong. Australia uses progressive marginal brackets. Only the income ABOVE each threshold is taxed at the higher rate. If the 32.5% bracket starts at A$45,001 and you earn A$46,000, only A$999 is taxed at 32.5%.",
+            CA: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket and take home LESS money.' This is wrong. Canada uses progressive marginal brackets (federal plus provincial). Only the income ABOVE each threshold is taxed at the higher rate.",
+            IL: "Here's the myth: 'If I earn more, I'll move into a higher tax bracket (madrega) and take home LESS money.' This is wrong. Israel uses progressive marginal brackets (madregot mas). Only the income ABOVE each threshold is taxed at the higher rate.",
+          },
           hint: "If the 22% bracket starts at $44,726 and you earn $45,000, only $274 is taxed at 22%, not your entire $45,000.",
         },
         {
@@ -813,6 +906,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "How Brackets Actually Work",
           explanation: "Imagine income tax like a staircase. The first $11,600 is taxed at 10%.",
+          variants: {
+            US: "Imagine income tax like a staircase. The first $11,600 is taxed at 10%. The next chunk up to $47,150 is taxed at 12%. Then 22% up to $100,525, and so on through 7 brackets up to 37%.",
+            GB: "Imagine income tax like a staircase. The first £12,570 is your Personal Allowance, taxed at 0%. The next chunk up to £50,270 is taxed at 20% (basic rate). Then 40% (higher rate) up to £125,140, and 45% (additional rate) above that.",
+            AU: "Imagine income tax like a staircase. The first A$18,200 is tax-free. The next chunk up to A$45,000 is taxed at 19%. Then 32.5% up to A$120,000, 37% up to A$180,000, and 45% above that.",
+            CA: "Imagine income tax like a staircase. The first C$55,867 is taxed at 15% federally. The next chunk at 20.5%, then 26%, 29%, and 33% for the top bracket. Provincial tax adds additional brackets on top.",
+            IL: "Imagine income tax like a staircase. The first 84,120 NIS is taxed at 10%. The next bracket at 14%, then 20%, 31%, 35%, and 47%, with a top rate of 50% above 721,560 NIS.",
+          },
           hint: "Someone earning $50,000 has an effective tax rate around 13-14%, way below their 'bracket' of 22%.",
         },
         {
@@ -914,6 +1014,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "Two Forms, Two Very Different Tax Lives",
           explanation: "If you work for someone, you'll get one of two tax forms. A W-2 means you're an employee, your employer handles tax withholding, pays half your FICA, and gives you benefits.",
+          variants: {
+            US: "If you work for someone, you'll get one of two tax forms. A W-2 means you're an employee: your employer handles tax withholding, pays half your FICA, and gives you benefits. A 1099 means you're a contractor: you handle everything yourself.",
+            GB: "If you work for someone, you'll be either employed (PAYE) or self-employed. PAYE employees get a P60 at year-end: your employer handles tax and National Insurance through payroll. Self-employed workers file a Self Assessment tax return and pay their own NICs.",
+            AU: "If you work for someone, you'll be either an employee or a contractor. Employees get a PAYG Payment Summary (or income statement via myGov): your employer withholds tax and pays super. Contractors issue invoices, lodge a BAS, and manage their own tax.",
+            CA: "If you work for someone, you'll get either a T4 (employee) or T4A (contractor). T4 employees have tax, CPP, and EI deducted by their employer. Self-employed contractors file a T2125 and pay both halves of CPP themselves.",
+            IL: "If you work for someone, you'll be either an employee (sachir) or self-employed (atzmai). Employees get a Form 106 at year-end: your employer handles tax and Bituach Leumi deductions. Self-employed workers file annual returns and pay both employee and employer contributions.",
+          },
           hint: "If someone offers you a '1099 position' at the same rate as a W-2 job, you're actually earning less because you're covering the employer's share of taxes too.",
         },
         {
@@ -921,6 +1028,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "The Hidden Cost of Being 1099",
           explanation: "As a W-2 employee earning $60,000, your employer pays half your FICA ($4,590) and withholds taxes automatically. As a 1099 contractor earning $60,000, YOU pay the full FICA ($9,180), handle quarterly estimated tax payments, and get no employer-provided health insurance or 401(k) match.",
+          variants: {
+            US: "As a W-2 employee earning $60,000, your employer pays half your FICA ($4,590) and withholds taxes automatically. As a 1099 contractor earning $60,000, YOU pay the full FICA ($9,180), handle quarterly estimated tax payments, and get no employer-provided health insurance or 401(k) match.",
+            GB: "As a PAYE employee earning £45,000, your employer pays employer NICs (13.8%) and handles your tax automatically. As self-employed earning £45,000, YOU pay Class 2 and Class 4 NICs, make payments on account twice a year, and get no employer pension or sick pay.",
+            AU: "As an employee earning A$80,000, your employer pays 11.5% superannuation on top and withholds tax (PAYG). As a contractor earning A$80,000, YOU handle your own super contributions, lodge quarterly BAS returns, and get no employer-provided leave or insurance.",
+            CA: "As a T4 employee earning C$70,000, your employer pays half your CPP and handles tax withholding. As self-employed earning C$70,000, YOU pay both halves of CPP (11.9% total), make quarterly tax installments, and get no employer EI, benefits, or RRSP matching.",
+            IL: "As an employee (sachir) earning 250,000 NIS, your employer pays employer Bituach Leumi contributions and handles tax withholding. As self-employed (atzmai) earning 250,000 NIS, YOU pay both portions of Bituach Leumi, make advance tax payments (mikdamot), and get no employer pension or severance fund contributions.",
+          },
           hint: "The rule of thumb: multiply a W-2 salary by 1.25-1.30 to get the equivalent 1099 rate. A $50/hour W-2 job is really $62-65/hour as a 1099.",
         },
         {
@@ -1031,6 +1145,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "The Magic Subtraction",
           explanation: "Before the government taxes your income, you get to subtract a big chunk from it, for free. It's called the standard deduction, and for 2024 it's $14,600 for single filers.",
+          variants: {
+            US: "Before the government taxes your income, you get to subtract a big chunk from it, for free. It's called the standard deduction, and for 2024 it's $14,600 for single filers. You can also choose to itemize if your individual deductions add up to more.",
+            GB: "Before the government taxes your income, you get a Personal Allowance of £12,570 that's completely tax-free. You don't need to claim it; it's applied automatically through PAYE. Higher earners (above £100,000) gradually lose this allowance.",
+            AU: "Australia doesn't have a standard deduction. Instead, the first A$18,200 you earn is tax-free (the tax-free threshold). You claim individual deductions for work-related expenses, self-education, and other eligible costs at tax time.",
+            CA: "Before the government taxes your income, you get a Basic Personal Amount of C$15,705 (2024) that's effectively tax-free through a non-refundable tax credit. Provincial basic personal amounts vary by province.",
+            IL: "Before the government taxes your income, you get credit points (nekudot zikui). Every resident gets 2.75 points, women get an extra 0.5, and new immigrants get additional points. Each point reduces your tax by about 2,904 NIS per year.",
+          },
           hint: "If you earn $50,000 and take the $14,600 standard deduction, you're taxed on $35,400. At an effective rate of ~12%, that saves you roughly $1,752.",
         },
         {
@@ -1038,6 +1159,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "Standard vs Itemized: The Showdown",
           explanation: "You have two options: take the standard deduction (one big flat amount, no effort) or itemize (add up individual deductions like mortgage interest, charitable donations, state taxes, medical expenses). You pick whichever is LARGER.",
+          variants: {
+            US: "You have two options: take the standard deduction (one big flat amount, no effort) or itemize (add up individual deductions like mortgage interest, charitable donations, state taxes, medical expenses). You pick whichever is LARGER.",
+            GB: "The UK doesn't have a standard vs itemized choice. Your Personal Allowance (£12,570) is automatic. Tax relief on specific items (pension contributions, Gift Aid donations, work expenses) is claimed separately through Self Assessment or your employer.",
+            AU: "Australia uses only itemized deductions, there's no standard deduction. You claim work-related expenses, charitable donations, and other eligible costs individually at tax time. Keep receipts for everything over A$300 in a single category.",
+            CA: "Canada doesn't have a standard deduction like the US. Instead, you claim individual deductions (RRSP contributions, moving expenses, childcare) and receive non-refundable tax credits (Basic Personal Amount, tuition, medical expenses).",
+            IL: "Israel doesn't have a standard deduction. Tax benefits come through credit points (nekudot zikui) and specific deductions for pension contributions, advanced education funds, and charitable donations (section 46 of the Tax Ordinance).",
+          },
           hint: "Itemizing usually only makes sense if you have a big mortgage, large charitable donations, or high state taxes. For most young adults, standard wins by a mile.",
         },
         {
@@ -1147,6 +1275,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "The Big Credits You Should Know",
           explanation: "The major tax credits: Earned Income Tax Credit (EITC), up to $7,430 for low-to-moderate earners with kids. Child Tax Credit ,  $2,000 per kid.",
+          variants: {
+            US: "The major tax credits: Earned Income Tax Credit (EITC), up to $7,430 for low-to-moderate earners with kids. Child Tax Credit, $2,000 per kid. American Opportunity Credit, up to $2,500 for college students. Saver's Credit for retirement contributions.",
+            GB: "Key tax benefits: Marriage Allowance (transfer £1,260 to a spouse). Working Tax Credit and Child Tax Credit (being replaced by Universal Credit). 25% tax relief on pension contributions. Gift Aid boosts charitable donations by 25%.",
+            AU: "Key tax offsets (credits): Low and Middle Income Tax Offset (LMITO) for moderate earners. Senior Australians and Pensioners Tax Offset (SAPTO). Private health insurance rebate (up to 32.8%). Zone tax offset for remote area residents.",
+            CA: "Key tax credits: Canada Child Benefit (CCB), up to C$7,437 per child under 6. GST/HST credit for low-income earners. Canada Workers Benefit for low-income workers. Tuition tax credit for students. Disability tax credit.",
+            IL: "Key tax benefits: Credit points (nekudot zikui) reduce tax directly, 2.75 points per resident. New immigrant bonus of 1-3 extra credit points for up to 3.5 years. Section 45a tax credit for pension contributions. Child credit points for parents.",
+          },
           hint: "The EITC alone is missed by about 20% of eligible people. That's billions of dollars left on the table every year.",
         },
         {
@@ -1245,6 +1380,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "Filing Taxes Isn't as Scary as You Think",
           explanation: "Tax filing sounds intimidating, but for most people with a W-2 job, it's a 30-60 minute process once a year. You gather your forms (W-2, 1099s), plug numbers into software (TurboTax, FreeTaxUSA, IRS Free File), answer some questions, and submit.",
+          variants: {
+            US: "Tax filing sounds intimidating, but for most people with a W-2 job, it's a 30-60 minute process once a year. You gather your forms (W-2, 1099s), plug numbers into software (TurboTax, FreeTaxUSA, IRS Free File), answer some questions, and submit.",
+            GB: "Tax filing sounds intimidating, but most PAYE employees don't need to file at all, HMRC handles it automatically. You only need to file a Self Assessment return if you're self-employed, earn over £150,000, or have untaxed income. Filing is done online through the HMRC portal.",
+            AU: "Tax filing sounds intimidating, but for most employees it's a 30-minute process once a year. You log into myTax through your myGov account, and most of your income data is pre-filled from your employer and bank. Claim your deductions, review, and submit.",
+            CA: "Tax filing sounds intimidating, but for most employees it's a 30-60 minute process once a year. You gather your T4 slips, plug numbers into software (TurboTax, Wealthsimple Tax, or StudioTax), and file electronically through CRA's NETFILE system.",
+            IL: "Tax filing sounds intimidating, but most salaried employees (sachirim) don't need to file at all since tax is handled through payroll. You need to file an annual return if you're self-employed, earn above certain thresholds, or have multiple income sources. Filing is done through the Israel Tax Authority (mas hachnasa) portal.",
+          },
           hint: "If you earn under $79,000, you can use IRS Free File, completely free tax software. Don't pay for something that's free.",
         },
         {
@@ -1252,6 +1394,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "The Filing Checklist",
           explanation: "Before you sit down to file, gather these: your W-2(s) from every employer and any 1099 forms (freelance income, bank interest, or other income sources).",
+          variants: {
+            US: "Before you sit down to file, gather these: your W-2(s) from every employer and any 1099 forms (freelance income, bank interest, or other income sources). Also grab receipts for any deductions you plan to claim.",
+            GB: "Before you sit down to file your Self Assessment, gather these: your P60 from each employer, any P11D (benefits in kind), records of self-employment income and expenses, bank interest statements, and pension contribution records.",
+            AU: "Before you sit down to file, log into myGov. Most data is pre-filled, but gather these: payment summaries from any employers not linked to myGov, private health insurance statement, receipts for work-related deductions, and records of any investment income.",
+            CA: "Before you sit down to file, gather these: your T4 slip(s) from every employer, any T4A slips (self-employment, scholarships), T5 slips (investment income), RRSP contribution receipts, and receipts for deductions like childcare or moving expenses.",
+            IL: "Before you sit down to file your annual return, gather these: your Form 106 (tofes 106) from each employer, receipts for pension and education fund contributions, records of any rental or investment income, and documentation for donation deductions.",
+          },
           hint: "Set a reminder for February 1st: 'Check for W-2 and start gathering tax docs.' Get it done early and skip the April panic.",
         },
         {
@@ -1280,6 +1429,13 @@ export const unit5: Unit = {
           ],
           correctIndex: 0,
           explanation: "April 15 is Tax Day (or the next business day if it falls on a weekend/holiday). You can file an extension to October 15, but any taxes owed are still due April 15.",
+          variants: {
+            US: "April 15 is Tax Day (or the next business day if it falls on a weekend/holiday). You can file an extension to October 15, but any taxes owed are still due April 15.",
+            GB: "The Self Assessment deadline is January 31 for online filing (October 31 for paper). The tax year runs April 6 to April 5. Late filing triggers an automatic £100 penalty, with further penalties after 3, 6, and 12 months.",
+            AU: "The individual tax return deadline is October 31 if you self-lodge. If you use a registered tax agent, you may get an extension until March-May. The Australian tax year runs July 1 to June 30.",
+            CA: "The personal tax return deadline is April 30 (or June 15 for self-employed, though any tax owing is still due April 30). The Canadian tax year follows the calendar year, January 1 to December 31.",
+            IL: "The Israeli tax year follows the calendar year. Annual returns for self-employed are due by April 30 (or later with an extension). Most salaried employees don't need to file. The tax authority (Rashut HaMisim) sends notices if a return is required.",
+          },
         },
         {
           id: "pf-u5-L11-Q3",
@@ -1358,6 +1514,13 @@ export const unit5: Unit = {
           type: "teaching",
           question: "The Costly Errors Most People Make",
           explanation: "The IRS says most tax errors are avoidable, and they cost Americans millions each year. Some errors mean you pay MORE than you should (leaving money on the table).",
+          variants: {
+            US: "The IRS says most tax errors are avoidable, and they cost Americans millions each year. Some errors mean you pay MORE than you should (leaving money on the table). Others trigger penalties or audits.",
+            GB: "HMRC says most tax errors are avoidable. Common mistakes include missing the Self Assessment deadline (January 31), failing to report all income sources, and not claiming allowable expenses. Late filing triggers an automatic £100 penalty.",
+            AU: "The ATO says most tax errors are avoidable. Common mistakes include overclaiming deductions without receipts, forgetting to declare all income (including bank interest and crypto), and missing the October 31 deadline if you self-lodge.",
+            CA: "The CRA says most tax errors are avoidable. Common mistakes include missing the April 30 deadline, forgetting to report all T-slip income, not claiming eligible credits like the GST/HST credit, and errors in RRSP contribution reporting.",
+            IL: "The Israel Tax Authority (Rashut HaMisim) says most errors are avoidable. Common mistakes include not filing when required, failing to report all income sources, missing deadlines for advance payments (mikdamot), and not claiming eligible credit points.",
+          },
           hint: "The failure-to-file penalty is 5% per MONTH ,  10x worse than the failure-to-pay penalty. Always file, even if you can't pay.",
         },
         {

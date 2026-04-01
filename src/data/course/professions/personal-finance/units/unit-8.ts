@@ -2,10 +2,12 @@ import type { Unit } from '../../../types';
 
 export const unit8: Unit = {
  id: "pf-u8-crypto",
- title: "Crypto & Digital Assets",
+ title: "Crypto Without the Hype",
  description: "Understand blockchain, Bitcoin, and the crypto landscape, without the hype.",
  color: "#038118",
  icon: "🪙",
+ sectionIndex: 12,
+ sectionTitle: "Crypto Without the Hype",
  lessons: [
  // ===== LESSON 1: What Is Cryptocurrency, Really? =====
  {
@@ -148,6 +150,13 @@ export const unit8: Unit = {
  hint: "No single computer decides what's valid. The majority has to agree. That's what makes it trustworthy without a bank.",
  },
  {
+ id: "pf-u8-L2-Q0",
+ type: "true-false",
+ question: "On a blockchain, transactions are verified by a network of computers instead of a single bank.",
+ correctAnswer: true,
+ explanation: "Exactly. Instead of one bank deciding what's valid, thousands of computers around the world do the job together.",
+ },
+ {
  id: "pf-u8-L2-Q1",
  type: "order-steps",
  question: "Put the blockchain transaction process in the correct order:",
@@ -265,6 +274,13 @@ export const unit8: Unit = {
  question: "The Wild Ride of BTC",
  explanation: "Bitcoin's price history is not for the faint of heart. It went from $0 in 2009 to $69,000 in November 2021, crashed to $16,000 in 2022, then climbed past $100,000 in late 2024.",
  hint: "If you can't stomach watching your investment drop 50% and not sell, Bitcoin might not be for you, and that's perfectly fine.",
+ },
+ {
+ id: "pf-u8-L3-Q0",
+ type: "true-false",
+ question: "Bitcoin was the first cryptocurrency ever created.",
+ correctAnswer: true,
+ explanation: "Yes. Bitcoin launched in January 2009 and was the first successful implementation of a decentralized digital currency.",
  },
  {
  id: "pf-u8-L3-Q1",

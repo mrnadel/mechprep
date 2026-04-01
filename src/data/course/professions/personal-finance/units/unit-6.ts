@@ -2,10 +2,12 @@ import type { Unit } from '../../../types';
 
 export const unit6: Unit = {
  id: "pf-u6-investing",
- title: "Investing 101",
- description: "Make your money grow: from compound interest to your first investment.",
+ title: "Make Your Money Grow",
+ description: "From compound interest to your first investment. Put your money to work.",
  color: "#078D36",
  icon: "\u{1F4C8}",
+ sectionIndex: 8,
+ sectionTitle: "Make Your Money Grow",
  lessons: [
  // ===== LESSON 1: Why Your Savings Account Isn't Enough =====
  {
@@ -22,6 +24,13 @@ export const unit6: Unit = {
  explanation: "You've mastered credit scores and know how to borrow smartly. Now let's put your money to work so it grows while you sleep.",
  },
  {
+ id: "pf-u6-L1-myth1",
+ type: "teaching",
+ question: "Myth: I need to pick stocks to invest",
+ explanation: "You don't. Index funds let you own the entire market in one purchase with zero stock-picking required. Over 90% of professional stock pickers fail to beat a simple index fund over 15 years. You can outperform most pros by doing less, not more.",
+ hint: "Wall Street profits from making investing seem complicated. The truth is boring: buy a broad index fund, contribute regularly, and wait decades.",
+ },
+ {
  id: "pf-u6-L1-T1",
  type: "teaching",
  question: "Your Savings Account Has a Secret Enemy",
@@ -34,6 +43,13 @@ export const unit6: Unit = {
  question: "Investing = Making Your Money Work Overtime",
  explanation: "Investing is simply putting your money into things that have the potential to grow faster than inflation. Stocks have historically returned about 10% per year on average.",
  hint: "You don't need to be a Wall Street genius. You just need to get your money off the bench and into the game.",
+ },
+ {
+ id: "pf-u6-L1-Q0",
+ type: "true-false",
+ question: "Investing means putting your money into things that can grow in value over time.",
+ correctAnswer: true,
+ explanation: "That's exactly what investing is. You put money to work so it grows faster than inflation.",
  },
  {
  id: "pf-u6-L1-Q1",
@@ -143,6 +159,13 @@ export const unit6: Unit = {
  question: "The Rule of 72",
  explanation: "Want a quick shortcut? Divide 72 by your annual return rate to find out how many years it takes to double your money.",
  hint: "This simple mental math trick lets you instantly compare investment options. Higher return = faster doubling.",
+ },
+ {
+ id: "pf-u6-L2-Q0",
+ type: "true-false",
+ question: "Compound interest means you earn interest on your interest, not just your original amount.",
+ correctAnswer: true,
+ explanation: "That's it! Your interest earns its own interest, creating a snowball effect that grows faster over time.",
  },
  {
  id: "pf-u6-L2-Q1",
@@ -783,6 +806,13 @@ export const unit6: Unit = {
  icon: "\u{1F5A5}\u{FE0F}",
  xpReward: 15,
  questions: [
+ {
+ id: "pf-u6-L8-myth1",
+ type: "teaching",
+ question: "Myth: You need a lot of money to start investing",
+ explanation: "Most major brokerages have zero minimums and offer fractional shares. You can buy $5 worth of an S&P 500 index fund today. The barrier to entry is not money. It is the decision to start.",
+ hint: "This myth survives from the era when brokerages charged $50/trade and required $3,000 minimums. Those days are gone.",
+ },
  {
  id: "pf-u6-L8-T1",
  type: "teaching",

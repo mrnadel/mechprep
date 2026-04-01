@@ -6,6 +6,8 @@ export const unit2: Unit = {
   description: "Build your safety net, automate your savings, and make your money work while you sleep.",
   color: "#0EA572",
   icon: "🐷",
+  sectionIndex: 4,
+  sectionTitle: "Smart Saving",
   lessons: [
     // ===== LESSON 1: Why Saving Feels Impossible =====
     {
@@ -20,6 +22,13 @@ export const unit2: Unit = {
           type: "teaching",
           question: "Time to Build Your Safety Net",
           explanation: "Your bank accounts are set up and you understand how taxes work. Now let's build a savings system that runs on autopilot.",
+        },
+        {
+          id: "pf-u2-L1-myth1",
+          type: "teaching",
+          question: "Myth: I don't make enough to save",
+          explanation: "You do. People earning $30,000/year have built six-figure savings by automating small amounts. The issue is never the amount, it's the habit. Even $25/month builds the saving muscle and compounds over time.",
+          hint: "This myth persists because saving feels pointless when amounts are small. But $50/month at 7% for 30 years becomes over $56,000.",
         },
         {
           id: "pf-u2-L1-T1",
@@ -127,6 +136,13 @@ export const unit2: Unit = {
           hint: "A 400 emergency without savings can turn into 800+ in credit card debt with interest and fees.",
         },
         {
+          id: "pf-u2-L2-Q2",
+          type: "true-false",
+          question: "Having even 500 in savings can protect you from going into debt over a small emergency.",
+          correctAnswer: true,
+          explanation: "Exactly! A flat tire, ER copay, or phone repair costs less than 500. Without savings, those go on a credit card and cost you even more in interest.",
+        },
+        {
           id: "pf-u2-L2-Q1",
           type: "multiple-choice",
           question: "What percentage of Americans can't cover a 400 emergency from savings?",
@@ -138,13 +154,6 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "The Federal Reserve found that 39% of Americans would need to borrow or sell something to cover a 400 surprise expense. Having even 500 saved puts you ahead of millions.",
-        },
-        {
-          id: "pf-u2-L2-Q2",
-          type: "true-false",
-          question: "A 400 emergency can cost over 800 if you put it on a credit card and pay minimums.",
-          correctAnswer: true,
-          explanation: "Absolutely. At 24% interest with minimum payments, a 400 charge can take 2+ years to pay off and cost 200+ in interest alone. Savings prevent this debt spiral completely.",
         },
         {
           id: "pf-u2-L2-T2",
@@ -219,7 +228,7 @@ export const unit2: Unit = {
     {
       id: "pf-u2-L3",
       title: "Emergency Fund Blueprint",
-      description: "How to build 3–6 months of expenses without feeling broke.",
+      description: "How to build 3 to 6 months of expenses without feeling broke.",
       icon: '📝',
       xpReward: 15,
       questions: [

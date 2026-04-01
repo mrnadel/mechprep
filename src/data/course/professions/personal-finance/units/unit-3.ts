@@ -6,6 +6,8 @@ export const unit3: Unit = {
   description: "Understand how debt actually works, then use that knowledge to destroy it.",
   color: "#0D9F63",
   icon: "⛓️",
+  sectionIndex: 6,
+  sectionTitle: "Debt Mastery",
   lessons: [
     // ===== LESSON 1: Debt Is a Tool, Not a Monster =====
     {
@@ -22,6 +24,13 @@ export const unit3: Unit = {
           explanation: "You know how to save and protect your money. Now let's understand debt, so it works for you instead of against you.",
         },
         {
+          id: "pf-u3-L1-myth1",
+          type: "teaching",
+          question: "Myth: All debt is bad",
+          explanation: "Strategic debt can build wealth. A mortgage on an affordable home, a student loan for an in-demand degree, or a business loan with a solid plan can all make you richer over time. The question is whether the debt increases your net worth or earning power more than it costs in interest.",
+          hint: "This belief often comes from watching people drown in consumer debt. But confusing all debt with bad debt means missing opportunities that build wealth.",
+        },
+        {
           id: "pf-u3-L1-T1",
           type: "teaching",
           question: "Debt Isn't Evil. It's a Tool",
@@ -36,6 +45,13 @@ export const unit3: Unit = {
           hint: "A 200,000 mortgage on a home that appreciates = good debt. A 5,000 credit card balance on random shopping = bad debt.",
         },
         {
+          id: "pf-u3-L1-Q2",
+          type: "true-false",
+          question: "All debt is bad and should be avoided completely.",
+          correctAnswer: false,
+          explanation: "Not true. Strategic debt, like a mortgage or student loan for a high-earning degree, can actually build wealth. The key is whether the debt helps you earn more or own more than it costs you in interest.",
+        },
+        {
           id: "pf-u3-L1-Q1",
           type: "category-swipe",
           question: "Classify each type of debt:",
@@ -43,13 +59,6 @@ export const unit3: Unit = {
           buckets: ["Generally good debt", "Generally bad debt"],
           correctBuckets: [0, 1, 0, 1, 0, 1],
           explanation: "Mortgages, education loans for marketable degrees, and business loans build long-term value. Credit card splurges, payday loans for entertainment, and store credit for gadgets create debt on depreciating items.",
-        },
-        {
-          id: "pf-u3-L1-Q2",
-          type: "true-false",
-          question: "All debt is bad and should be avoided completely.",
-          correctAnswer: false,
-          explanation: "Not true. Strategic debt, like a mortgage or student loan for a high-earning degree, can actually build wealth. The key is whether the debt helps you earn more or own more than it costs you in interest.",
         },
         {
           id: "pf-u3-L1-Q3",
@@ -94,6 +103,13 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "The federal student loan has the lowest rate, best protections, and flexible repayment. Credit card advances and payday loans are absurdly expensive, and informal friend loans can destroy relationships.",
+          variants: {
+            US: "The federal student loan has the lowest rate, best protections, and flexible repayment. Credit card advances and payday loans are absurdly expensive, and informal friend loans can destroy relationships.",
+            GB: "A government-backed Student Finance loan has income-based repayment and eventual write-off. Credit card advances and payday loans are absurdly expensive, and informal friend loans can destroy relationships.",
+            AU: "A HELP/FEE-HELP loan (government-backed) charges no interest, only CPI indexation, and repayments are income-based. Credit card advances and payday loans are absurdly expensive, and informal loans can destroy relationships.",
+            CA: "A Canada Student Loan has 0% interest and repayment assistance programs. Credit card advances and payday loans are absurdly expensive, and informal friend loans can destroy relationships.",
+            IL: "A student loan from a major bank at a regulated rate is the best option. Credit card advances and payday loans are absurdly expensive, and informal friend loans can destroy relationships. Check for university-specific scholarships first.",
+          },
         },
         {
           id: "pf-u3-L1-Q7",
@@ -127,6 +143,13 @@ export const unit3: Unit = {
           tolerance: 15,
           unit: "%",
           explanation: "The average US credit card interest rate is around 24%, and some cards go even higher at 28-30%. Carrying a balance on credit cards is one of the most expensive forms of debt.",
+          variants: {
+            US: "The average US credit card interest rate is around 24%, and some cards go even higher at 28-30%. Carrying a balance on credit cards is one of the most expensive forms of debt.",
+            GB: "The average UK credit card interest rate is around 23-25% APR, though some cards charge up to 35%+. Since 2020, overdraft rates are also capped at a single annual rate. Carrying a balance is one of the most expensive forms of debt.",
+            AU: "The average Australian credit card interest rate is around 17-20% for purchases, and some cards charge 22%+. Cash advances often attract even higher rates. Carrying a balance is one of the most expensive forms of debt.",
+            CA: "The average Canadian credit card interest rate is around 20-22%, and some cards charge up to 29.99%. Low-rate cards exist at 12-14% but often have annual fees. Carrying a balance is one of the most expensive forms of debt.",
+            IL: "Israeli credit card interest on revolving balances (hov mitgalgel) is very high, often 15-20%+. Many Israelis use the 'tashlumim' (installment) system instead, which can be interest-free for a set number of months.",
+          },
         },
       ],
     },
@@ -154,6 +177,13 @@ export const unit3: Unit = {
           hint: "When you save, compound interest works FOR you. When you borrow, it works AGAINST you. Same math, opposite direction.",
         },
         {
+          id: "pf-u3-L2-Q2",
+          type: "true-false",
+          question: "When you borrow money, you have to pay back more than you originally borrowed.",
+          correctAnswer: true,
+          explanation: "Yes! The extra you pay is called interest. It's the cost of borrowing someone else's money.",
+        },
+        {
           id: "pf-u3-L2-Q1",
           type: "multiple-choice",
           question: "You owe 1,000 at 24% annual interest. Roughly how much interest accrues in one year if you don't pay anything?",
@@ -165,13 +195,6 @@ export const unit3: Unit = {
           ],
           correctIndex: 0,
           explanation: "With daily compounding at 24% APR, the actual amount is about 270, more than the simple 240 calculation because you're paying interest on interest. That's compound interest working against you.",
-        },
-        {
-          id: "pf-u3-L2-Q2",
-          type: "true-false",
-          question: "If you borrow 5,000 at 20% interest and only make minimum payments, you could end up paying back over 10,000 total.",
-          correctAnswer: true,
-          explanation: "Yes. Minimum payments (typically 1-2% of balance) stretch repayment over 20+ years on large balances. A 5,000 debt can easily become 10,000+ in total payments.",
         },
         {
           id: "pf-u3-L2-Q3",
@@ -256,6 +279,13 @@ export const unit3: Unit = {
       xpReward: 15,
       questions: [
         {
+          id: "pf-u3-L3-myth1",
+          type: "teaching",
+          question: "Myth: Credit cards are always bad",
+          explanation: "Credit cards used correctly are one of the best financial tools available. Pay your full balance monthly and you get free fraud protection, purchase insurance, cashback rewards, and a better credit score. The card itself is not the problem. Carrying a balance is.",
+          hint: "People see credit card horror stories and blame the card. But a knife is dangerous in careless hands and essential in a kitchen. Same principle.",
+        },
+        {
           id: "pf-u3-L3-T1",
           type: "teaching",
           question: "Credit Cards: Banks WANT You to Lose",
@@ -267,6 +297,13 @@ export const unit3: Unit = {
           type: "teaching",
           question: "The Grace Period: Your Secret Weapon",
           explanation: "Here's the cheat code: credit cards give you a 21-30 day grace period. If you pay your FULL statement balance by the due date, you pay ZERO interest.",
+          variants: {
+            US: "Here's the cheat code: credit cards give you a 21-30 day grace period (required by the CARD Act). If you pay your FULL statement balance by the due date, you pay ZERO interest. This is federal law.",
+            GB: "Here's the cheat code: most UK credit cards give you up to 56 days interest-free from the start of the statement period. If you pay your FULL statement balance by the due date, you pay ZERO interest.",
+            AU: "Here's the cheat code: Australian credit cards typically give you up to 55 days interest-free. If you pay your FULL statement balance by the due date, you pay ZERO interest on purchases.",
+            CA: "Here's the cheat code: Canadian credit cards give you a minimum 21-day grace period (required by law). If you pay your FULL statement balance by the due date, you pay ZERO interest.",
+            IL: "Here's the cheat code: Israeli credit cards work on a monthly billing cycle. If you pay the full balance by the due date, you pay ZERO interest. This is the standard 'hakafa' (credit) period.",
+          },
           hint: "The grace period is like a 30-day free trial. Cancel (pay in full) before it ends and it costs nothing. Forget? You pay full price.",
         },
         {
@@ -389,6 +426,13 @@ export const unit3: Unit = {
           type: "teaching",
           question: "Student Loans: The 1.7 Trillion Dollar Problem",
           explanation: "Americans owe over 1.7 trillion in student loan debt.",
+          variants: {
+            US: "Americans owe over 1.7 trillion in student loan debt. That's more than credit card debt and auto loans. The average graduate owes about $30,000. Understanding your loan type and repayment options is critical.",
+            GB: "UK student loan debt has surpassed £200 billion. The system works differently than most debt: repayments are income-based (9% of income above the threshold), and remaining debt is written off after 30-40 years depending on your plan.",
+            AU: "Australians owe over A$74 billion in HELP (formerly HECS) debt. Unlike other debt, repayments are income-based (only if you earn above A$51,550) and are collected through the tax system. The debt is indexed to inflation, not charged interest.",
+            CA: "Canadians owe over C$22 billion in student loan debt. Federal Canada Student Loans are interest-free, and repayment assistance programs (RAP) can reduce or eliminate payments for lower earners. Provincial loans vary by province.",
+            IL: "Israeli higher education costs are lower than many countries, but students still face tuition costs of 10,000-15,000 NIS per year for public universities. Student loans are available through banks, but many students work during studies or receive family support.",
+          },
           hint: "If you have student loans, check whether they're federal or private FIRST. This determines all your options.",
         },
         {
@@ -396,6 +440,13 @@ export const unit3: Unit = {
           type: "teaching",
           question: "Federal vs Private: Why It Matters",
           explanation: "Federal student loans come from the government. They offer income-driven repayment (payments based on what you earn), deferment if you lose your job, and potential forgiveness after 10-25 years of payments.",
+          variants: {
+            US: "Federal student loans come from the government. They offer income-driven repayment (payments based on what you earn), deferment if you lose your job, and potential forgiveness after 10-25 years of payments. Private loans from banks have none of these protections.",
+            GB: "Student Finance England (or equivalent in Scotland/Wales/NI) loans have built-in protections. You only repay when earning above the threshold (Plan 2: £27,295). Payments are 9% of income above that threshold. Remaining debt is written off after 30-40 years.",
+            AU: "HELP/HECS debt has built-in protections. You only repay through the tax system when your income exceeds A$51,550. Rates range from 1-10% of income. The debt is indexed to inflation (not interest), and there's no deadline for repayment.",
+            CA: "Canada Student Loans have built-in protections. Interest is 0% on federal loans. The Repayment Assistance Program (RAP) can reduce payments to $0 if your income is low, and forgives remaining debt after 15 years of payments. Provincial loans vary.",
+            IL: "Student loans in Israel are typically from commercial banks with standard interest rates. There is no government-backed income-driven repayment. Some scholarships and grants are available through the Council for Higher Education and individual universities.",
+          },
           hint: "Think of federal loans as the 'nice' lender who works with you. Private loans are the strict bank that doesn't care about your situation.",
         },
         {
@@ -512,6 +563,13 @@ export const unit3: Unit = {
           type: "teaching",
           question: "The Car Dealer Doesn't Care About You",
           explanation: "Car dealerships make more money from financing than from selling the car itself. They mark up the interest rate (your rate might be 5% from the bank, but the dealer tells you 7% and pockets the difference).",
+          variants: {
+            US: "Car dealerships make more money from financing than from selling the car itself. They mark up the interest rate (your rate might be 5% from the bank, but the dealer tells you 7% and pockets the difference). Always get pre-approved at your bank or credit union first.",
+            GB: "Car dealers make significant profit from finance deals (PCP, HP). The rate the dealer offers is often higher than what you could get directly from a bank. Always check direct lender rates before accepting dealer finance. PCP deals can be especially tricky with balloon payments.",
+            AU: "Car dealers make significant profit from financing. In Australia, dealer finance rates are often higher than what you can get from your bank or a credit union. Always get pre-approved before visiting the dealership. Watch out for 0% finance deals with inflated car prices.",
+            CA: "Car dealerships make more money from financing than from selling the car itself. In Canada, the dealer may mark up the rate from the lender and pocket the difference. Always get pre-approved at your bank or credit union first.",
+            IL: "Car dealers in Israel often partner with specific banks or finance companies. The rate the dealer offers may be higher than what you can get directly from your bank. Always compare with your bank's auto loan rates and check the total cost including all fees.",
+          },
           hint: "A dealer who asks 'what monthly payment can you afford?' is setting a trap. The right question is 'what's the total cost?'",
         },
         {
@@ -885,6 +943,13 @@ export const unit3: Unit = {
           type: "teaching",
           question: "One Payment Instead of Five",
           explanation: "Debt consolidation means combining multiple debts into a single loan, ideally at a lower interest rate. Instead of juggling five credit cards at 22-28%, you get one loan at 10-12%.",
+          variants: {
+            US: "Debt consolidation means combining multiple debts into a single loan, ideally at a lower interest rate. Instead of juggling five credit cards at 22-28%, you get one loan at 10-12%. Options include personal loans, balance transfer cards, and nonprofit debt management plans.",
+            GB: "Debt consolidation means combining multiple debts into a single loan, ideally at a lower interest rate. Options include 0% balance transfer cards, personal loans, and debt management plans through organizations like StepChange. Free debt advice is available from Citizens Advice.",
+            AU: "Debt consolidation means combining multiple debts into a single loan, ideally at a lower interest rate. Options include personal loans, balance transfer cards, and hardship programs. Free financial counselling is available through the National Debt Helpline (1800 007 007).",
+            CA: "Debt consolidation means combining multiple debts into a single loan, ideally at a lower interest rate. Options include personal loans, balance transfer cards, and consumer proposals (a legal alternative to bankruptcy). Free credit counselling is available through nonprofit agencies.",
+            IL: "Debt consolidation means combining multiple debts into a single loan, ideally at a lower interest rate. In Israel, you can consolidate through a bank loan (halvaat ichud hovot). The Bank of Israel regulates interest rates on consumer loans. Free debt advice is available through social services.",
+          },
           hint: "Consolidation is a tool, not a cure. If you consolidate 15,000 in credit card debt and then run up the cards again, you've doubled your problem.",
         },
         {
@@ -1593,6 +1658,117 @@ export const unit3: Unit = {
           question: "Dealer financing on cars is often:",
           options: ["The best deal", "Higher than bank rates", "Interest-free", "Government-backed"],
           correctIndex: 1,
+        },
+      ],
+    },
+    // ===== REVIEW LESSON: Units 0-3 Review =====
+    {
+      id: "pf-u3-review",
+      title: "Review: Money, Budgets, Banking, Saving & Debt",
+      description: "Test everything you've learned across your first units of personal finance.",
+      icon: '📝',
+      xpReward: 25,
+      questions: [
+        {
+          id: "pf-u3-rev-Q1",
+          type: "multiple-choice",
+          question: "What is the 50/30/20 rule?",
+          options: [
+            "50% savings, 30% needs, 20% wants",
+            "50% needs, 30% wants, 20% savings",
+            "50% wants, 30% savings, 20% needs",
+            "50% investments, 30% needs, 20% fun",
+          ],
+          correctIndex: 1,
+          explanation: "The 50/30/20 rule allocates 50% of income to needs, 30% to wants, and 20% to savings and debt repayment.",
+        },
+        {
+          id: "pf-u3-rev-Q2",
+          type: "true-false",
+          question: "Net pay is the amount deposited into your bank account after taxes and deductions.",
+          correctAnswer: true,
+          explanation: "Gross pay is your full salary. Net pay (take-home pay) is what's left after taxes, insurance, and other deductions.",
+        },
+        {
+          id: "pf-u3-rev-Q3",
+          type: "true-false",
+          question: "A high-yield savings account typically earns the same interest as a regular savings account.",
+          correctAnswer: false,
+          explanation: "High-yield savings accounts pay significantly more interest, often 10x or more than traditional bank savings accounts.",
+        },
+        {
+          id: "pf-u3-rev-Q4",
+          type: "fill-blank",
+          question: "The _____ method pays off the smallest debt first for quick wins, while the _____ method targets the highest interest rate first.",
+          blanks: ["snowball", "avalanche"],
+          wordBank: ["snowball", "avalanche", "waterfall", "blizzard", "cascade"],
+          explanation: "The snowball method builds motivation through quick wins. The avalanche method saves more on interest over time.",
+        },
+        {
+          id: "pf-u3-rev-Q5",
+          type: "match-pairs",
+          question: "Match each financial concept to its description:",
+          options: ["Emergency fund", "Marginal tax rate", "Checking account", "Compound interest"],
+          matchTargets: ["3-6 months of expenses saved for surprises", "The rate on your last dollar of income, not all of it", "Where daily spending flows in and out", "Earning interest on previously earned interest"],
+          correctMatches: [0, 1, 2, 3],
+          explanation: "These are foundational concepts from your first four units. Each one plays a different role in your financial life.",
+        },
+        {
+          id: "pf-u3-rev-Q6",
+          type: "sort-buckets",
+          question: "Sort each item: is it a need or a want?",
+          options: ["Rent or mortgage", "Streaming subscriptions", "Groceries", "Concert tickets", "Health insurance", "Designer sunglasses"],
+          buckets: ["Need", "Want"],
+          correctBuckets: [0, 1, 0, 1, 0, 1],
+          explanation: "Needs are essential for survival and basic function: shelter, food, insurance. Wants are nice-to-haves: entertainment, fashion, luxuries.",
+        },
+        {
+          id: "pf-u3-rev-Q7",
+          type: "order-steps",
+          question: "Put these steps for getting out of debt in the correct order:",
+          steps: ["List all your debts with balances and interest rates", "Choose a strategy (snowball or avalanche)", "Make minimum payments on all debts except the target", "Put extra money toward the target debt", "Repeat until debt-free"],
+          correctOrder: [0, 1, 2, 3, 4],
+          explanation: "A clear plan starts with knowing what you owe, choosing a strategy, and then focusing your extra cash on one debt at a time.",
+        },
+        {
+          id: "pf-u3-rev-Q8",
+          type: "multiple-choice",
+          question: "What's the main advantage of automating your savings?",
+          options: [
+            "It removes the need for willpower",
+            "It earns a higher interest rate",
+            "It qualifies you for tax deductions",
+            "It locks your money permanently",
+          ],
+          correctIndex: 0,
+          explanation: "Automation works because you never see the money in your checking account, so you never miss it. No willpower required.",
+        },
+        {
+          id: "pf-u3-rev-Q9",
+          type: "multiple-choice",
+          question: "A credit card has a $5,000 limit and you carry a $4,500 balance. What's your credit utilization?",
+          options: [
+            "10%",
+            "50%",
+            "90%",
+            "45%",
+          ],
+          correctIndex: 2,
+          explanation: "$4,500 / $5,000 = 90% utilization. That's way too high. Experts recommend staying below 30% for a healthy credit score.",
+        },
+        {
+          id: "pf-u3-rev-Q10",
+          type: "scenario",
+          question: "What should Alex prioritize first?",
+          scenario: "Alex earns $3,000/month after taxes. She has $200 in savings, $4,000 in credit card debt at 22% interest, and no budget. She wants to get her finances in order.",
+          options: [
+            "Start investing in stocks immediately",
+            "Build a small emergency fund of $500, then attack the credit card debt",
+            "Pay off the full credit card balance before saving anything",
+            "Take out a personal loan to pay off the credit card",
+          ],
+          correctIndex: 1,
+          explanation: "A small emergency buffer ($500) prevents new debt from surprises. Then focus all extra money on the high-interest credit card. Investing can wait until the debt is gone.",
         },
       ],
     },

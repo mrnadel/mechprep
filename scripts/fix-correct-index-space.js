@@ -1,13 +1,13 @@
 /**
- * fix-correct-index.js
+ * fix-correct-index-space.js
  *
  * Randomizes the position of correct answers in multiple-choice and
- * speed-round questions across all unit files.
+ * speed-round questions across space-astronomy unit files.
  *
  * Only targets questions where correctIndex is 0. Uses a seeded PRNG
  * for reproducible results.
  *
- * Usage: node scripts/fix-correct-index.js [--dry-run] [--unit N] [--dir path/to/units] [--seed N]
+ * Usage: node scripts/fix-correct-index-space.js [--dry-run] [--unit N]
  */
 
 const fs = require('fs');
@@ -24,7 +24,7 @@ function mulberry32(seed) {
   };
 }
 
-// rng is initialized after CLI args are parsed (see below)
+const rng = mulberry32(77); // different seed from main course fix
 
 function randomIndex() {
   return Math.floor(rng() * 4);
@@ -35,18 +35,9 @@ const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
 const unitArg = args.find((a) => a.startsWith('--unit'));
 const unitFilter = unitArg ? parseInt(args[args.indexOf(unitArg) + 1], 10) : null;
-const dirArg = args.find((a) => a.startsWith('--dir'));
-const dirPath = dirArg ? args[args.indexOf(dirArg) + 1] : null;
-const seedArg = args.find((a) => a.startsWith('--seed'));
-const seedVal = seedArg ? parseInt(args[args.indexOf(seedArg) + 1], 10) : 42;
-
-// Re-initialize RNG with chosen seed
-const rng = mulberry32(seedVal);
 
 // ── Find unit files ───────────────────────────────────────────
-const unitsDir = dirPath
-  ? path.resolve(dirPath)
-  : path.join(__dirname, '..', 'src', 'data', 'course', 'units');
+const unitsDir = path.join(__dirname, '..', 'src', 'data', 'course', 'professions', 'space-astronomy', 'units');
 
 const unitFiles = fs
   .readdirSync(unitsDir)
@@ -82,8 +73,6 @@ function findClosingBracket(text, openPos) {
 }
 
 // ── Find the start and end of each top-level string in an options array ──
-// Returns array of {start, end} where text[start..end] is the full string
-// including its quotes (e.g., 'some text')
 function findStringBoundaries(text) {
   const boundaries = [];
   let inStr = false;
@@ -107,7 +96,6 @@ function findStringBoundaries(text) {
       continue;
     }
 
-    // Track nested brackets/braces (to skip strings inside nested structures)
     if (c === '[' || c === '{' || c === '(') { depth++; continue; }
     if (c === ']' || c === '}' || c === ')') { depth--; continue; }
 
@@ -123,31 +111,18 @@ function findStringBoundaries(text) {
 
 // ── Main processing ───────────────────────────────────────────
 function processFile(content) {
-  // Strategy:
-  // 1. Find every `correctIndex: 0` in the file
-  // 2. For each one, look nearby (backward) for the associated `options: [`
-  // 3. Verify it belongs to a multiple-choice or speed question
-  // 4. Parse option string positions, swap option[0] with option[newIdx]
-  // 5. Update correctIndex value
-  //
-  // We collect all edits, then apply from end-to-start.
+  const edits = [];
 
-  const edits = []; // {pos, oldLen, newText}
-
-  // Find all correctIndex: 0
   const ciRegex = /correctIndex:\s*0(?=\s*[,}\n\r])/g;
   let ciMatch;
 
   while ((ciMatch = ciRegex.exec(content)) !== null) {
     const ciStart = ciMatch.index;
 
-    // Look backward from ciStart to find the nearest `options: [`
-    // In our data, options always come before correctIndex in the same object
     const searchBack = content.substring(Math.max(0, ciStart - 8000), ciStart);
     const optionsMatches = [...searchBack.matchAll(/options:\s*\[/g)];
     if (optionsMatches.length === 0) continue;
 
-    // Take the LAST match (closest to correctIndex)
     const lastOptionsMatch = optionsMatches[optionsMatches.length - 1];
     const optionsKeywordPos = (ciStart - searchBack.length) + lastOptionsMatch.index;
     const bracketOpenPos = content.indexOf('[', optionsKeywordPos);
@@ -156,26 +131,18 @@ function processFile(content) {
     const bracketClosePos = findClosingBracket(content, bracketOpenPos);
     if (bracketClosePos === -1 || bracketClosePos >= ciStart) continue;
 
-    // Verify this is a multiple-choice or speed-round question
-    // Check the context between the start of this question object and the options
-    const contextBack = content.substring(Math.max(0, optionsKeywordPos - 5000), optionsKeywordPos);
-    const isMC = contextBack.includes("type: 'multiple-choice'") || contextBack.includes('type: "multiple-choice"');
-    const isSpeed = contextBack.includes('speedQuestions');
+    // Any question with options + correctIndex needs fixing (multiple-choice, scenario, speed-round)
+    // No type filter needed: if it has an options array and correctIndex, it qualifies.
 
-    if (!isMC && !isSpeed) continue;
-
-    // Parse the options array to find individual string boundaries
     const arrayInner = content.substring(bracketOpenPos + 1, bracketClosePos);
     const stringBounds = findStringBoundaries(arrayInner);
 
     if (stringBounds.length < 2) continue;
 
-    // Pick a new random position
     let newIdx = randomIndex();
-    if (newIdx === 0) continue; // stays in place
+    if (newIdx === 0) continue;
     if (newIdx >= stringBounds.length) newIdx = stringBounds.length - 1;
 
-    // Get absolute positions of the two strings to swap
     const absOff = bracketOpenPos + 1;
     const s0Start = absOff + stringBounds[0].start;
     const s0End = absOff + stringBounds[0].end;
@@ -185,8 +152,6 @@ function processFile(content) {
     const s0Text = content.substring(s0Start, s0End);
     const sNText = content.substring(sNStart, sNEnd);
 
-    // Record edits: swap the two option strings and update correctIndex
-    // correctIndex edit: replace `correctIndex: 0` with `correctIndex: N`
     edits.push(
       { pos: s0Start, endPos: s0End, newText: sNText },
       { pos: sNStart, endPos: sNEnd, newText: s0Text },
@@ -194,7 +159,6 @@ function processFile(content) {
     );
   }
 
-  // Apply edits from end to start
   edits.sort((a, b) => b.pos - a.pos);
 
   let modified = content;
@@ -213,7 +177,6 @@ for (const file of unitFiles) {
   let content = fs.readFileSync(filePath, 'utf-8');
   const originalContent = content;
 
-  // Count total correctIndex: 0 before fix
   const beforeCount = (content.match(/correctIndex:\s*0(?=\s*[,}\n\r])/g) || []).length;
 
   const result = processFile(content);

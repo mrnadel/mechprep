@@ -2,10 +2,12 @@ import type { Unit } from '../../../types';
 
 export const unit9: Unit = {
   id: "pf-u9-real-estate",
-  title: "Real Estate",
+  title: "Buy Your First Home",
   description: "The biggest purchase of your life, so make sure you don't screw it up.",
   color: "#027B12",
   icon: "🏠",
+  sectionIndex: 11,
+  sectionTitle: "Buy Your First Home",
   lessons: [
     // ===== LESSON 1: Renting vs Buying: The Real Math =====
     {
@@ -22,6 +24,13 @@ export const unit9: Unit = {
           explanation: "You can read stock charts and pick investments with confidence. Now let's tackle the largest purchase most people ever make: real estate.",
         },
         {
+          id: "pf-u9-L1-myth1",
+          type: "teaching",
+          question: "Myth: Renting is throwing money away",
+          explanation: "Renting pays for a roof, flexibility, and zero maintenance costs. Buying a home also 'throws away' money on interest, property taxes, insurance, repairs, and closing costs. In many markets and timelines, renting and investing the difference builds more wealth than owning.",
+          hint: "The real estate industry repeats this myth because it sells houses. Run the actual math for your situation before believing it.",
+        },
+        {
           id: "pf-u9-L1-T1",
           type: "teaching",
           question: "\"Renting Is Throwing Money Away\": Is It?",
@@ -34,6 +43,13 @@ export const unit9: Unit = {
           question: "The Breakeven Timeline",
           explanation: "Buying only beats renting if you stay long enough. When you buy, you pay 2-5% in closing costs upfront and another 5-6% in agent fees when you sell.",
           hint: "A $300,000 home has roughly $10,000-$15,000 in buying costs and $15,000-$18,000 in selling costs. That's $25,000-$33,000 you need to recoup before buying \"wins.\"",
+        },
+        {
+          id: "pf-u9-L1-Q0",
+          type: "true-false",
+          question: "Buying a home has extra costs beyond the price, like closing costs and agent fees when you sell.",
+          correctAnswer: true,
+          explanation: "Yes! These transaction costs can total tens of thousands of dollars and are one of the biggest hidden costs of homeownership.",
         },
         {
           id: "pf-u9-L1-Q1",
@@ -145,6 +161,13 @@ export const unit9: Unit = {
           hint: "If you plan to sell or refinance within 5-7 years, an ARM's lower rate could save money. If you're staying long-term, fixed is safer.",
         },
         {
+          id: "pf-u9-L2-Q0",
+          type: "true-false",
+          question: "A fixed-rate mortgage keeps the same interest rate for the entire life of the loan.",
+          correctAnswer: true,
+          explanation: "That's what 'fixed' means. Your rate never changes, so your payment stays predictable for the full 15 or 30 years.",
+        },
+        {
           id: "pf-u9-L2-Q1",
           type: "fill-blank",
           question: "PITI stands for _____, _____, Taxes, and Insurance, the four parts of a mortgage payment.",
@@ -248,6 +271,13 @@ export const unit9: Unit = {
           question: "Closing Costs: The Bill Nobody Warned You About",
           explanation: "On top of your down payment, you'll pay closing costs, typically 2-5% of the home price. On a $300,000 home, that's $6,000-$15,000 in EXTRA cash due at closing.",
           hint: "Some sellers will cover part of closing costs as a negotiation tool. Always ask: the worst they can say is no.",
+        },
+        {
+          id: "pf-u9-L3-Q0",
+          type: "true-false",
+          question: "When buying a home, you need cash for both the down payment and closing costs.",
+          correctAnswer: true,
+          explanation: "Yes. The down payment is your upfront investment in the home, and closing costs (2-5% of the price) cover fees for appraisal, title search, and more.",
         },
         {
           id: "pf-u9-L3-Q1",
