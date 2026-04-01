@@ -8,6 +8,7 @@ import type {
   GemsState,
   GemTransaction,
   LeagueState,
+  LeagueCompetitor,
   StreakEnhancements,
   ComebackState,
   Quest,
@@ -529,12 +530,13 @@ export const useEngagementStore = create<EngagementStore>()(
         },
 
         // === Action 10: simulateLeagueWeek ===
+        // Hybrid: uses local fake-user fallback for immediate UI, then syncs with server.
         simulateLeagueWeek: () => {
           const state = get();
           const monday = getCurrentWeekMonday();
 
           if (state.league.weekStartDate !== monday) {
-            // New week - calculate results from old week
+            // New week - calculate results from old week (local first for instant UI)
             const simulatedCompetitors = simulateCompetitorXp(
               state.league.competitors,
               state.league.weekStartDate,
@@ -542,7 +544,6 @@ export const useEngagementStore = create<EngagementStore>()(
             const rank = getUserRank(state.league.weeklyXp, simulatedCompetitors);
             const result = getWeekResult(rank, state.league.currentTier);
 
-            // Only show league results if user actually participated (earned XP)
             const lastWeekResult = state.league.weeklyXp > 0 ? {
               rank,
               promoted: result.promoted,
@@ -550,7 +551,7 @@ export const useEngagementStore = create<EngagementStore>()(
               tier: state.league.currentTier,
             } : null;
 
-            // Generate new competitors for new week
+            // Immediate local update with fake users as fallback
             const newCompetitors = drawCompetitorsFromPool(monday, result.newTier);
 
             set({
@@ -564,11 +565,10 @@ export const useEngagementStore = create<EngagementStore>()(
               },
             });
 
-            // Award promotion gems + league frame (only if user participated)
+            // Award promotion gems + league frame
             if (result.promoted && lastWeekResult !== null) {
               get().addGems(LEAGUE_GEM_REWARD_PROMOTION, 'league_promotion');
 
-              // Grant league frame for the new tier
               const leagueFrameMap: Record<number, string> = {
                 2: 'reward-frame-league-silver',
                 3: 'reward-frame-league-gold',
@@ -592,8 +592,42 @@ export const useEngagementStore = create<EngagementStore>()(
                 });
               }
             }
+
+            // Server sync: join league group and fetch real leaderboard
+            fetch('/api/league', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ tier: result.newTier, weekStart: monday }),
+            })
+              .then((r) => r.ok ? r.json() : null)
+              .then((data) => {
+                if (!data?.members) return;
+                const reqUserId = data.requestingUserId;
+                // Replace local fake competitors with server data (real + fake mix), excluding self
+                const serverCompetitors: LeagueCompetitor[] = data.members
+                  .filter((m: any) => !(m.isReal && m.userId === reqUserId))
+                  .map((m: any) => ({
+                    id: m.isReal ? m.userId : (m.fakeUserId || m.id),
+                    name: m.displayName,
+                    avatarInitial: m.avatarInitial,
+                    countryFlag: m.countryFlag || '',
+                    weeklyXp: m.weeklyXp,
+                    dailyXpRate: 0,
+                    variance: 0,
+                    fakeUserId: m.isReal ? undefined : m.fakeUserId,
+                    frameStyle: m.frameStyle,
+                    realUserId: m.isReal ? m.userId : undefined,
+                  }));
+                // Only update if still on the same week
+                if (get().league.weekStartDate === monday) {
+                  set((s) => ({
+                    league: { ...s.league, competitors: serverCompetitors },
+                  }));
+                }
+              })
+              .catch(() => { /* silent - local fallback continues working */ });
           } else {
-            // Same week - re-simulate competitor XP
+            // Same week - re-simulate competitor XP locally
             const updated = simulateCompetitorXp(
               state.league.competitors,
               state.league.weekStartDate,
@@ -604,11 +638,41 @@ export const useEngagementStore = create<EngagementStore>()(
                 competitors: updated,
               },
             }));
+
+            // Also refresh from server for real user XP updates
+            fetch(`/api/league?weekStart=${monday}`)
+              .then((r) => r.ok ? r.json() : null)
+              .then((data) => {
+                if (!data?.members) return;
+                const reqUserId = data.requestingUserId;
+                const serverCompetitors: LeagueCompetitor[] = data.members
+                  .filter((m: any) => !(m.isReal && m.userId === reqUserId))
+                  .map((m: any) => ({
+                    id: m.isReal ? m.userId : (m.fakeUserId || m.id),
+                    name: m.displayName,
+                    avatarInitial: m.avatarInitial,
+                    countryFlag: m.countryFlag || '',
+                    weeklyXp: m.weeklyXp,
+                    dailyXpRate: 0,
+                    variance: 0,
+                    fakeUserId: m.isReal ? undefined : m.fakeUserId,
+                    frameStyle: m.frameStyle,
+                    realUserId: m.isReal ? m.userId : undefined,
+                  }));
+                if (get().league.weekStartDate === monday) {
+                  set((s) => ({
+                    league: { ...s.league, competitors: serverCompetitors },
+                  }));
+                }
+              })
+              .catch(() => {});
           }
         },
 
         // === Action 11: updateLeagueXp ===
         updateLeagueXp: (xp) => {
+          const weekStart = get().league.weekStartDate;
+          // Optimistic local update
           set((state) => {
             const updated = simulateCompetitorXp(
               state.league.competitors,
@@ -622,6 +686,12 @@ export const useEngagementStore = create<EngagementStore>()(
               },
             };
           });
+          // Sync to server
+          fetch('/api/league', {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ weekStart, xpDelta: xp }),
+          }).catch(() => {});
         },
 
         // === Action 12: checkComebackFlow ===

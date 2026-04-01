@@ -107,6 +107,8 @@ export interface LeagueCompetitor {
   variance: number;
   fakeUserId?: string;
   frameStyle?: string;
+  /** Set when competitor is a real user (from server-backed leagues). */
+  realUserId?: string;
 }
 
 export interface LeagueWeekResult {

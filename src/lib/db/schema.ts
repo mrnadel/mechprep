@@ -53,6 +53,7 @@ export const accounts = pgTable(
   },
   (account) => [
     primaryKey({ columns: [account.provider, account.providerAccountId] }),
+    index('accounts_user_id_idx').on(account.userId),
   ]
 );
 
@@ -92,6 +93,16 @@ export const userProgress = pgTable('user_progress', {
   gemsBalance: integer('gems_balance').default(0),
   gemsTotalEarned: integer('gems_total_earned').default(0),
   streakMilestones: jsonb('streak_milestones').default([]),
+  // Engagement: inventory & cosmetics
+  gemsInventory: jsonb('gems_inventory')
+    .$type<{ activeTitles: string[]; activeFrames: string[] }>()
+    .default({ activeTitles: [], activeFrames: [] }),
+  selectedTitle: text('selected_title'),
+  selectedFrame: text('selected_frame'),
+  doubleXpExpiry: text('double_xp_expiry'),
+  // Hearts (free-tier rate-limit)
+  heartsCurrent: integer('hearts_current').default(5),
+  heartsLastRechargeAt: text('hearts_last_recharge_at'),
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
   updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
 });
@@ -358,6 +369,48 @@ export const leagueState = pgTable(
   ]
 );
 
+// League groups — each holds up to 30 members (real + fake) for one week + tier
+export const leagueGroups = pgTable(
+  'league_groups',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    tier: integer('tier').notNull(),
+    weekStart: text('week_start').notNull(),          // ISO date of Monday (e.g. '2026-03-30')
+    realUserCount: integer('real_user_count').default(0).notNull(),
+    finalized: boolean('finalized').default(false).notNull(), // true after week-end processing
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    index('league_groups_tier_week_idx').on(table.tier, table.weekStart),
+  ]
+);
+
+// League memberships — one row per slot in a league group
+export const leagueMemberships = pgTable(
+  'league_memberships',
+  {
+    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+    groupId: text('group_id').references(() => leagueGroups.id, { onDelete: 'cascade' }).notNull(),
+    userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }), // null for fake users
+    fakeUserId: text('fake_user_id'),                 // null for real users (e.g. 'fake-Bronze-42')
+    displayName: text('display_name').notNull(),
+    avatarInitial: text('avatar_initial').notNull(),
+    countryFlag: text('country_flag'),
+    weeklyXp: integer('weekly_xp').default(0).notNull(),
+    dailyXpRate: real('daily_xp_rate').default(0).notNull(),  // for fake user XP simulation
+    variance: real('variance').default(0).notNull(),          // for fake user XP simulation
+    isReal: boolean('is_real').default(false).notNull(),
+    frameStyle: text('frame_style'),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
+  },
+  (table) => [
+    index('league_memberships_group_idx').on(table.groupId),
+    index('league_memberships_user_idx').on(table.userId),
+    uniqueIndex('league_memberships_group_user_idx').on(table.groupId, table.userId),
+    index('league_memberships_group_fake_xp_idx').on(table.groupId, table.isReal, table.dailyXpRate),
+  ]
+);
+
 // ─── Content Management ──────────────────────────────────────
 
 export const courseUnits = pgTable('course_units', {
@@ -455,6 +508,7 @@ export const masteryEvents = pgTable('mastery_events', {
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
 }, (table) => [
   index('mastery_events_user_topic_idx').on(table.userId, table.topicId),
+  index('mastery_events_user_answered_idx').on(table.userId, table.answeredAt),
 ]);
 
 // ─── Push Subscriptions ─────────────────────────────────────

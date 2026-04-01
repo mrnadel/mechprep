@@ -31,6 +31,7 @@ export function LeagueBoard() {
       avatarInitial: (displayName ?? 'Y')[0].toUpperCase(),
       weeklyXp: league.weeklyXp,
       fakeUserId: undefined as string | undefined,
+      realUserId: undefined as string | undefined,
       frameStyle: undefined as string | undefined,
     };
     return [
@@ -40,6 +41,7 @@ export function LeagueBoard() {
         avatarInitial: c.avatarInitial,
         weeklyXp: c.weeklyXp,
         fakeUserId: c.fakeUserId,
+        realUserId: c.realUserId,
         frameStyle: c.frameStyle,
       })),
       userEntry,
@@ -96,8 +98,12 @@ export function LeagueBoard() {
               isUser={isUser}
               bgColor={rowBg}
               onClick={
-                !isUser && entry.fakeUserId
-                  ? () => router.push(`/user/competitor/${entry.fakeUserId}`)
+                !isUser
+                  ? entry.realUserId
+                    ? () => router.push(`/user/${entry.realUserId}`)
+                    : entry.fakeUserId
+                      ? () => router.push(`/user/competitor/${entry.fakeUserId}`)
+                      : undefined
                   : undefined
               }
               avatar={
