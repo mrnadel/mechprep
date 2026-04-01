@@ -106,16 +106,6 @@ export function ProfessionPicker({ selectedId, onSelect, compact = false, grante
                   </p>
                 )}
 
-                {/* Stats */}
-                <div className={cn('flex items-center gap-2 text-xs font-bold', compact ? 'mt-0.5' : 'mt-2')}>
-                  <span style={{ color: profession.color }}>
-                    {profession.unitCount} units
-                  </span>
-                  <span className="text-gray-300">|</span>
-                  <span className="text-gray-400">
-                    {profession.questionCount.toLocaleString()} questions
-                  </span>
-                </div>
               </div>
 
               {/* Selection indicator */}
