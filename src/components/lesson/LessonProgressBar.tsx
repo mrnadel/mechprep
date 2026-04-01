@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface LessonProgressBarProps {
   current: number;
@@ -9,6 +10,7 @@ interface LessonProgressBarProps {
 }
 
 export default function LessonProgressBar({ current, total, color }: LessonProgressBarProps) {
+  const c = useLessonColors();
   return (
     <div
       className="flex items-center flex-1"
@@ -30,7 +32,7 @@ export default function LessonProgressBar({ current, total, color }: LessonProgr
             style={{
               height: 8,
               borderRadius: 4,
-              background: '#E5E5E5',
+              background: c.trackBg,
             }}
           >
             {isCompleted && (

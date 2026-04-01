@@ -5,6 +5,7 @@ import { motion, AnimatePresence, Reorder } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface OrderStepsCardProps {
   question: CourseQuestion;
@@ -16,6 +17,7 @@ interface OrderStepsCardProps {
 
 const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
   function OrderStepsCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const steps = question.steps ?? [];
     const correctOrder = question.correctOrder ?? steps.map((_, i) => i);
 
@@ -82,11 +84,11 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Put in the right order
         </div>
 
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 12px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 12px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -96,9 +98,9 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.3 }}
             style={{
-              padding: '8px 12px', borderRadius: 10, background: '#FFF9E8',
+              padding: '8px 12px', borderRadius: 10, background: c.hintBg,
               border: '1.5px solid #FFE4B8', fontSize: 13, fontWeight: 600,
-              color: '#B56E00', lineHeight: 1.4, marginBottom: 8,
+              color: c.hintColor, lineHeight: 1.4, marginBottom: 8,
             }}
           >
             <MoneyText text={question.hint} />
@@ -113,11 +115,11 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
             {order.map((stepIdx, position) => {
               const isCorrect = results ? results[position] : null;
 
-              let bg = 'white';
-              let border = '2px solid #E5E5E5';
-              let textColor = '#3C3C3C';
-              let numberBg = '#F0F0F0';
-              let numberColor = '#AFAFAF';
+              let bg = c.cardBg;
+              let border = `2px solid ${c.border}`;
+              let textColor = c.title;
+              let numberBg = c.emptyBg;
+              let numberColor = c.subtitle;
               let shadow = 'none';
 
               if (isCorrect !== null) {
@@ -174,8 +176,8 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
                         disabled={position === 0}
                         style={{
                           width: 28, height: 24, borderRadius: 6, border: 'none',
-                          background: position === 0 ? '#F0F0F0' : `${unitColor}15`,
-                          color: position === 0 ? '#CFCFCF' : unitColor,
+                          background: position === 0 ? c.emptyBg : `${unitColor}15`,
+                          color: position === 0 ? c.muted : unitColor,
                           fontSize: 14, fontWeight: 800, cursor: position === 0 ? 'default' : 'pointer',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                           boxShadow: position === 0 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,
@@ -189,8 +191,8 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
                         disabled={position === order.length - 1}
                         style={{
                           width: 28, height: 24, borderRadius: 6, border: 'none',
-                          background: position === order.length - 1 ? '#F0F0F0' : `${unitColor}15`,
-                          color: position === order.length - 1 ? '#CFCFCF' : unitColor,
+                          background: position === order.length - 1 ? c.emptyBg : `${unitColor}15`,
+                          color: position === order.length - 1 ? c.muted : unitColor,
                           fontSize: 14, fontWeight: 800, cursor: position === order.length - 1 ? 'default' : 'pointer',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                           boxShadow: position === order.length - 1 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,

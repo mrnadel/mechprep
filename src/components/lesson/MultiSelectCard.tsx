@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface MultiSelectCardProps {
   question: CourseQuestion;
@@ -16,6 +17,7 @@ interface MultiSelectCardProps {
 
 const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
   function MultiSelectCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const options = question.options ?? [];
     const correctIndices = question.correctIndices ?? [];
 
@@ -86,10 +88,10 @@ const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Question */}
         <div style={{ marginBottom: 6 }}>
-          <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+          <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
             Select all that apply ({correctIndices.length} correct)
           </div>
-          <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: 0 }}>
+          <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: 0 }}>
             <MoneyText text={question.question} />
           </h2>
         </div>
@@ -100,9 +102,9 @@ const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.3 }}
             style={{
-              padding: '8px 12px', borderRadius: 10, background: '#FFF9E8',
+              padding: '8px 12px', borderRadius: 10, background: c.hintBg,
               border: '1.5px solid #FFE4B8', fontSize: 13, fontWeight: 600,
-              color: '#B56E00', lineHeight: 1.4, marginBottom: 4,
+              color: c.hintColor, lineHeight: 1.4, marginBottom: 4,
             }}
           >
             <MoneyText text={question.hint} />
@@ -119,11 +121,11 @@ const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
             const isSelected = selected.has(originalIdx);
             const isCorrectOption = correctSet.has(originalIdx);
 
-            let bg = 'white';
-            let border = '2px solid #E5E5E5';
-            let textColor = '#3C3C3C';
-            let checkBg = '#F0F0F0';
-            let checkColor = '#CFCFCF';
+            let bg = c.cardBg;
+            let border = `2px solid ${c.border}`;
+            let textColor = c.title;
+            let checkBg = c.emptyBg;
+            let checkColor = c.muted;
             let checkContent = '';
             let shadow = '0 3px 0 #DCDCDC';
 
@@ -137,12 +139,12 @@ const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
                 checkBg = '#FF4B4B'; checkColor = 'white'; checkContent = '✗';
                 shadow = 'none';
               } else {
-                bg = '#F5F5F5'; border = '2px solid #EFEFEF'; textColor = '#CFCFCF';
-                checkBg = '#E5E5E5'; checkColor = '#CFCFCF'; checkContent = '';
+                bg = '#F5F5F5'; border = '2px solid #EFEFEF'; textColor = c.muted;
+                checkBg = '#E5E5E5'; checkColor = c.muted; checkContent = '';
                 shadow = 'none';
               }
             } else if (isSelected) {
-              bg = 'white'; border = `2.5px solid ${unitColor}`;
+              bg = c.cardBg; border = `2.5px solid ${unitColor}`;
               checkBg = unitColor; checkColor = 'white'; checkContent = '✓';
               shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;
             }

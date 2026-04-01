@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface RankOrderCardProps {
   question: CourseQuestion;
@@ -19,6 +20,7 @@ const RANK_COLORS = ['#FFD700', '#C0C0C0', '#CD7F32', '#888', '#888', '#888', '#
 
 const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
   function RankOrderCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const items = question.steps ?? [];
     const correctOrder = question.correctOrder ?? items.map((_, i) => i);
     const criteria = question.rankCriteria ?? 'Rank these items';
@@ -81,11 +83,11 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Rank from best to worst
         </div>
 
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 6px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 6px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -109,9 +111,9 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.3 }}
             style={{
-              padding: '8px 12px', borderRadius: 10, background: '#FFF9E8',
+              padding: '8px 12px', borderRadius: 10, background: c.hintBg,
               border: '1.5px solid #FFE4B8', fontSize: 13, fontWeight: 600,
-              color: '#B56E00', lineHeight: 1.4, marginBottom: 8,
+              color: c.hintColor, lineHeight: 1.4, marginBottom: 8,
             }}
           >
             <MoneyText text={question.hint} />
@@ -128,9 +130,9 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
               const medal = RANK_MEDALS[rank] ?? `${rank + 1}`;
               const medalColor = RANK_COLORS[rank] ?? '#888';
 
-              let bg = 'white';
-              let border = '2px solid #E5E5E5';
-              let textColor = '#3C3C3C';
+              let bg = c.cardBg;
+              let border = `2px solid ${c.border}`;
+              let textColor = c.title;
               let shadow = 'none';
 
               if (isCorrect !== null) {
@@ -197,8 +199,8 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
                         disabled={rank === 0}
                         style={{
                           width: 28, height: 24, borderRadius: 6, border: 'none',
-                          background: rank === 0 ? '#F0F0F0' : `${unitColor}15`,
-                          color: rank === 0 ? '#CFCFCF' : unitColor,
+                          background: rank === 0 ? c.emptyBg : `${unitColor}15`,
+                          color: rank === 0 ? c.muted : unitColor,
                           fontSize: 14, fontWeight: 800, cursor: rank === 0 ? 'default' : 'pointer',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                           boxShadow: rank === 0 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,
@@ -212,8 +214,8 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
                         disabled={rank === order.length - 1}
                         style={{
                           width: 28, height: 24, borderRadius: 6, border: 'none',
-                          background: rank === order.length - 1 ? '#F0F0F0' : `${unitColor}15`,
-                          color: rank === order.length - 1 ? '#CFCFCF' : unitColor,
+                          background: rank === order.length - 1 ? c.emptyBg : `${unitColor}15`,
+                          color: rank === order.length - 1 ? c.muted : unitColor,
                           fontSize: 14, fontWeight: 800, cursor: rank === order.length - 1 ? 'default' : 'pointer',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                           boxShadow: rank === order.length - 1 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,

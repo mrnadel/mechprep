@@ -5,8 +5,9 @@ import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import { MoneyText } from '@/components/ui/MoneyText';
 import { Mascot, type MascotPose } from '@/components/ui/Mascot';
+import { useLessonColors } from '@/lib/lessonColors';
 
-const DiagramDisplay = memo(function DiagramDisplay({ html }: { html: string }) {
+const DiagramDisplay = memo(function DiagramDisplay({ html, cardBg, border }: { html: string; cardBg: string; border: string }) {
   const sanitised = html
     .replace(/(<svg[^>]*)\sheight="auto"/gi, '$1')
     .replace(/(<svg[^>]*)\swidth="auto"/gi, '$1');
@@ -15,8 +16,8 @@ const DiagramDisplay = memo(function DiagramDisplay({ html }: { html: string }) 
       className="w-full flex items-center justify-center overflow-hidden"
       style={{
         borderRadius: 14,
-        background: 'white',
-        border: '2px solid #E5E5E5',
+        background: cardBg,
+        border: `2px solid ${border}`,
         padding: 10,
         maxWidth: 400,
         margin: '0 auto',
@@ -47,6 +48,7 @@ interface TeachingCardProps {
 }
 
 export default function TeachingCard({ question, unitColor, onGotIt }: TeachingCardProps) {
+  const c = useLessonColors();
   // Strip leading emoji from title (we use mascot instead now)
   const titleMatch = question.question.match(/^(\p{Emoji_Presentation}|\p{Emoji}\uFE0F?)\s*/u);
   const title = titleMatch ? question.question.slice(titleMatch[0].length) : question.question;
@@ -94,8 +96,8 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
             transition={{ delay: 0.15, duration: 0.3 }}
             style={{
               position: 'relative',
-              background: 'white',
-              border: '2px solid #E5E7EB',
+              background: c.cardBg,
+              border: `2px solid ${c.border}`,
               borderRadius: 18,
               padding: '14px 18px',
               flex: 1,
@@ -110,8 +112,8 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
                 top: 18,
                 width: 14,
                 height: 14,
-                background: 'white',
-                border: '2px solid #E5E7EB',
+                background: c.cardBg,
+                border: `2px solid ${c.border}`,
                 borderRight: 'none',
                 borderBottom: 'none',
                 transform: 'rotate(-45deg)',
@@ -123,7 +125,7 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
               style={{
                 fontSize: 17,
                 fontWeight: 800,
-                color: '#2D2D2D',
+                color: c.title,
                 lineHeight: 1.3,
                 margin: 0,
                 marginBottom: 8,
@@ -137,7 +139,7 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
               style={{
                 fontSize: 14.5,
                 fontWeight: 500,
-                color: '#555',
+                color: c.subtitle,
                 lineHeight: 1.55,
               }}
             >
@@ -154,7 +156,7 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
             transition={{ delay: 0.25 }}
             className="w-full"
           >
-            <DiagramDisplay html={question.diagram} />
+            <DiagramDisplay html={question.diagram} cardBg={c.cardBg} border={c.border} />
           </motion.div>
         )}
 
@@ -176,7 +178,7 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
           >
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
               <Mascot pose="thinking" size={28} className="flex-shrink-0 mt-0.5" />
-              <p style={{ fontSize: 13, fontWeight: 600, color: '#666', lineHeight: 1.5, margin: 0 }}>
+              <p style={{ fontSize: 13, fontWeight: 600, color: c.subtitle, lineHeight: 1.5, margin: 0 }}>
                 <MoneyText text={question.hint} />
               </p>
             </div>

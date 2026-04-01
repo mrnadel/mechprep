@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface PickTheBestCardProps {
   question: CourseQuestion;
@@ -16,6 +17,7 @@ interface PickTheBestCardProps {
 
 const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
   function PickTheBestCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const options = question.options ?? [];
     const correctIndex = question.correctIndex ?? 0;
 
@@ -68,11 +70,11 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Pick the best answer
         </div>
 
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 6px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 6px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -98,9 +100,9 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.3 }}
             style={{
-              padding: '8px 12px', borderRadius: 10, background: '#FFF9E8',
+              padding: '8px 12px', borderRadius: 10, background: c.hintBg,
               border: '1.5px solid #FFE4B8', fontSize: 13, fontWeight: 600,
-              color: '#B56E00', lineHeight: 1.4, marginBottom: 4,
+              color: c.hintColor, lineHeight: 1.4, marginBottom: 4,
             }}
           >
             <MoneyText text={question.hint} />
@@ -116,9 +118,9 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
             const isSelected = selectedIndex === displayIdx;
             const isBest = originalIdx === correctIndex;
 
-            let bg = 'white';
-            let border = '2px solid #E5E5E5';
-            let textColor = '#3C3C3C';
+            let bg = c.cardBg;
+            let border = `2px solid ${c.border}`;
+            let textColor = c.title;
             let starColor = '#D5D5D5';
             let shadow = '0 3px 0 #DCDCDC';
 
@@ -138,12 +140,12 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
               } else {
                 bg = '#F8F8F8';
                 border = '2px solid #EFEFEF';
-                textColor = '#AFAFAF';
+                textColor = c.subtitle;
                 starColor = '#E5E5E5';
                 shadow = 'none';
               }
             } else if (isSelected) {
-              bg = 'white';
+              bg = c.cardBg;
               border = `2.5px solid ${unitColor}`;
               starColor = '#FFD700';
               shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;

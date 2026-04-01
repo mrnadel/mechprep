@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface MatchPairsCardProps {
   question: CourseQuestion;
@@ -18,6 +19,7 @@ const PAIR_COLORS = ['#3B82F6', '#EC4899', '#F59E0B', '#10B981', '#8B5CF6', '#EF
 
 const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
   function MatchPairsCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const leftItems = question.options ?? [];
     const rightItems = question.matchTargets ?? [];
     const correctMatches = question.correctMatches ?? [];
@@ -121,11 +123,11 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Match the pairs
         </div>
 
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 16px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 16px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -138,9 +140,9 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
               const matchColor = getMatchColor(leftIdx);
               const isCorrect = results ? results[leftIdx] : null;
 
-              let bg = 'white';
-              let border = '2px solid #E5E5E5';
-              let textColor = '#3C3C3C';
+              let bg = c.cardBg;
+              let border = `2px solid ${c.border}`;
+              let textColor = c.title;
               let shadow = '0 3px 0 #DCDCDC';
 
               if (isCorrect !== null) {
@@ -207,9 +209,9 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
               const isCorrect = matchedByLeft !== -1 && results ? results[matchedByLeft] : null;
               const isAvailable = !matchedRightSet.has(rightActualIdx);
 
-              let bg = 'white';
-              let border = '2px solid #E5E5E5';
-              let textColor = '#3C3C3C';
+              let bg = c.cardBg;
+              let border = `2px solid ${c.border}`;
+              let textColor = c.title;
               let shadow = '0 3px 0 #DCDCDC';
 
               if (isCorrect !== null) {

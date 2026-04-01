@@ -5,6 +5,7 @@ import { motion, useMotionValue, useTransform, AnimatePresence } from 'framer-mo
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface CategorySwipeCardProps {
   question: CourseQuestion;
@@ -18,6 +19,7 @@ const SWIPE_THRESHOLD = 80;
 
 const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>(
   function CategorySwipeCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const items = question.options ?? [];
     const categories = question.buckets ?? ['Left', 'Right'];
     const correctBuckets = question.correctBuckets ?? [];
@@ -104,11 +106,11 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Sort into categories
         </div>
 
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 10px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 10px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -136,7 +138,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                   {catIdx === 0 ? '←' : '→'} {categories[catIdx]}
                 </motion.div>
                 <div style={{
-                  fontSize: 11, fontWeight: 700, color: '#AFAFAF',
+                  fontSize: 11, fontWeight: 700, color: c.subtitle,
                   textAlign: 'center', marginBottom: 4,
                   opacity: catItems.length > 0 ? 0 : 1,
                   height: catItems.length > 0 ? 0 : 'auto',
@@ -168,9 +170,9 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                           style={{
                             padding: '7px 10px', borderRadius: 10, textAlign: 'center',
                             fontSize: 12, fontWeight: 700,
-                            background: isCorrect === null ? 'white' : isCorrect ? '#D7FFB8' : '#FFDFE0',
-                            border: isCorrect === null ? '1.5px solid #E5E5E5' : isCorrect ? '1.5px solid #58CC02' : '1.5px solid #FF4B4B',
-                            color: isCorrect === null ? '#3C3C3C' : isCorrect ? '#58A700' : '#EA2B2B',
+                            background: isCorrect === null ? c.cardBg : isCorrect ? '#D7FFB8' : '#FFDFE0',
+                            border: isCorrect === null ? `1.5px solid ${c.border}` : isCorrect ? '1.5px solid #58CC02' : '1.5px solid #FF4B4B',
+                            color: isCorrect === null ? c.title : isCorrect ? '#58A700' : '#EA2B2B',
                             boxShadow: isCorrect === true ? '0 0 8px rgba(88,204,2,0.2)' : 'none',
                           }}
                         >
@@ -204,9 +206,9 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                 whileDrag={{ scale: 1.05 }}
               >
                 <div style={{
-                  padding: '28px 36px', borderRadius: 18, background: 'white',
-                  border: '2.5px solid #E5E5E5', boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                  fontSize: 18, fontWeight: 800, color: '#3C3C3C', textAlign: 'center',
+                  padding: '28px 36px', borderRadius: 18, background: c.cardBg,
+                  border: `2.5px solid ${c.border}`, boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                  fontSize: 18, fontWeight: 800, color: c.title, textAlign: 'center',
                   width: '85%', maxWidth: 320, userSelect: 'none',
                 }}>
                   <MoneyText text={items[currentOriginalIdx]} />
@@ -216,7 +218,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
           )}
 
           {allSwiped && !answered && (
-            <div style={{ fontSize: 14, fontWeight: 700, color: '#AFAFAF', textAlign: 'center', padding: 12 }}>
+            <div style={{ fontSize: 14, fontWeight: 700, color: c.subtitle, textAlign: 'center', padding: 12 }}>
               All sorted! Hit Check.
             </div>
           )}
@@ -253,7 +255,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
         )}
 
         {/* Progress counter */}
-        <div style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, color: '#CFCFCF', marginTop: 8 }}>
+        <div style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, color: c.muted, marginTop: 8 }}>
           {swipedCount}/{items.length} sorted
         </div>
       </div>

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface ImageTapCardProps {
   question: CourseQuestion;
@@ -29,6 +30,7 @@ const DiagramImage = memo(function DiagramImage({ html }: { html: string }) {
 
 const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
   function ImageTapCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const zones = question.tapZones ?? [];
     const correctZoneId = question.correctZoneId ?? '';
     const diagram = question.diagram ?? '';
@@ -76,11 +78,11 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Tap the correct area
         </div>
 
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 10px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 10px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -90,9 +92,9 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.3 }}
             style={{
-              padding: '8px 12px', borderRadius: 10, background: '#FFF9E8',
+              padding: '8px 12px', borderRadius: 10, background: c.hintBg,
               border: '1.5px solid #FFE4B8', fontSize: 13, fontWeight: 600,
-              color: '#B56E00', lineHeight: 1.4, marginBottom: 8,
+              color: c.hintColor, lineHeight: 1.4, marginBottom: 8,
             }}
           >
             <MoneyText text={question.hint} />
@@ -106,7 +108,7 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
           transition={{ type: 'spring', stiffness: 400, damping: 25 }}
           style={{
             position: 'relative', borderRadius: 16, overflow: 'hidden',
-            border: '2px solid #E5E5E5', background: 'white',
+            border: `2px solid ${c.border}`, background: c.cardBg,
           }}
         >
           {/* Diagram/image */}
@@ -189,9 +191,9 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
               const isSelected = selectedZone === zone.id;
               const isCorrectZone = zone.id === correctZoneId;
 
-              let bg = 'white';
-              let border = '2px solid #E5E5E5';
-              let textColor = '#3C3C3C';
+              let bg = c.cardBg;
+              let border = `2px solid ${c.border}`;
+              let textColor = c.title;
 
               if (answered && localCorrect !== null) {
                 if (isCorrectZone) {
@@ -199,7 +201,7 @@ const ImageTapCard = forwardRef<QuestionCardHandle, ImageTapCardProps>(
                 } else if (isSelected && !isCorrectZone) {
                   bg = '#FFDFE0'; border = '2px solid #FF4B4B'; textColor = '#EA2B2B';
                 } else {
-                  bg = '#F5F5F5'; border = '2px solid #EFEFEF'; textColor = '#CFCFCF';
+                  bg = '#F5F5F5'; border = '2px solid #EFEFEF'; textColor = c.muted;
                 }
               } else if (isSelected) {
                 bg = `${unitColor}10`; border = `2.5px solid ${unitColor}`;

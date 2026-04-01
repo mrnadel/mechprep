@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface ScenarioCardProps {
   question: CourseQuestion;
@@ -16,6 +17,7 @@ interface ScenarioCardProps {
 
 const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
   function ScenarioCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const options = question.options ?? [];
     const correctIndex = question.correctIndex ?? 0;
     const scenario = question.scenario ?? '';
@@ -69,12 +71,12 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Read the scenario and decide
         </div>
 
         {/* Question prompt */}
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 10px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 10px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -90,7 +92,7 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
             border: `1.5px solid ${unitColor}30`,
             fontSize: 14,
             fontWeight: 600,
-            color: '#4A4A4A',
+            color: c.title,
             lineHeight: 1.55,
             marginBottom: 8,
           }}
@@ -110,9 +112,9 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.3 }}
             style={{
-              padding: '8px 12px', borderRadius: 10, background: '#FFF9E8',
+              padding: '8px 12px', borderRadius: 10, background: c.hintBg,
               border: '1.5px solid #FFE4B8', fontSize: 13, fontWeight: 600,
-              color: '#B56E00', lineHeight: 1.4, marginBottom: 4,
+              color: c.hintColor, lineHeight: 1.4, marginBottom: 4,
             }}
           >
             <MoneyText text={question.hint} />
@@ -129,9 +131,9 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
             const isSelected = selectedIndex === displayIdx;
             const isCorrectOption = originalIdx === correctIndex;
 
-            let bg = 'white';
-            let border = '2px solid #E5E5E5';
-            let textColor = '#3C3C3C';
+            let bg = c.cardBg;
+            let border = `2px solid ${c.border}`;
+            let textColor = c.title;
             let shadow = '0 3px 0 #DCDCDC';
             let iconContent = '';
 
@@ -145,11 +147,11 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
                 shadow = 'none';
                 iconContent = '✗';
               } else {
-                bg = '#F5F5F5'; border = '2px solid #EFEFEF'; textColor = '#CFCFCF';
+                bg = c.closeBtnBg; border = `2px solid ${c.border}`; textColor = c.muted;
                 shadow = 'none';
               }
             } else if (isSelected) {
-              bg = 'white'; border = `2.5px solid ${unitColor}`;
+              bg = c.cardBg; border = `2.5px solid ${unitColor}`;
               shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;
             }
 
@@ -196,8 +198,8 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
                     width: 26, height: 26, borderRadius: 13, flexShrink: 0,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: 12, fontWeight: 800,
-                    background: isSelected ? unitColor : '#F0F0F0',
-                    color: isSelected ? 'white' : '#AFAFAF',
+                    background: isSelected ? unitColor : c.emptyBg,
+                    color: isSelected ? 'white' : c.subtitle,
                     border: !isSelected ? '2px solid #D5D5D5' : 'none',
                     transition: 'background 0.2s, color 0.2s',
                   }}>

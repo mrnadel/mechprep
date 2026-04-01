@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { LessonTypeProps, ConversationNode } from '@/data/course/types';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface ChatMessage {
   id: string;
@@ -15,11 +16,12 @@ interface ChatMessage {
 }
 
 function TypingIndicator() {
+  const c = useLessonColors();
   return (
     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8, marginBottom: 8 }}>
       <div
         style={{
-          background: '#FFFFFF',
+          background: c.cardBg,
           borderRadius: '16px 16px 16px 4px',
           padding: '12px 16px',
           boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
@@ -31,7 +33,7 @@ function TypingIndicator() {
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
-            style={{ width: 7, height: 7, borderRadius: '50%', background: '#AFAFAF' }}
+            style={{ width: 7, height: 7, borderRadius: '50%', background: c.subtitle }}
             animate={{ y: [0, -5, 0], opacity: [0.4, 1, 0.4] }}
             transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }}
           />
@@ -42,6 +44,7 @@ function TypingIndicator() {
 }
 
 function MessageBubble({ message, unitColor }: { message: ChatMessage; unitColor: string }) {
+  const c = useLessonColors();
   const qualityEmoji = message.quality === 'great' ? '🎯' : message.quality === 'okay' ? '👍' : message.quality === 'poor' ? '😬' : '';
   const qualityLabel = message.quality === 'great' ? 'Great answer!' : message.quality === 'okay' ? 'Okay' : message.quality === 'poor' ? 'Needs work' : '';
   const qualityColor = message.quality === 'great' ? '#58CC02' : message.quality === 'okay' ? '#F59E0B' : message.quality === 'poor' ? '#FF4B4B' : '';
@@ -59,14 +62,14 @@ function MessageBubble({ message, unitColor }: { message: ChatMessage; unitColor
       }}
     >
       {!message.isUser && (
-        <span style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', marginBottom: 3, marginLeft: 4 }}>
+        <span style={{ fontSize: 11, fontWeight: 700, color: c.subtitle, marginBottom: 3, marginLeft: 4 }}>
           {message.speaker}
         </span>
       )}
       <div
         style={{
-          background: message.isUser ? unitColor : '#FFFFFF',
-          color: message.isUser ? '#FFFFFF' : '#3C3C3C',
+          background: message.isUser ? unitColor : c.cardBg,
+          color: message.isUser ? '#FFFFFF' : c.title,
           borderRadius: message.isUser ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
           padding: '12px 16px',
           maxWidth: '82%',
@@ -94,8 +97,8 @@ function MessageBubble({ message, unitColor }: { message: ChatMessage; unitColor
           <span style={{ fontSize: 12 }}>{qualityEmoji}</span>
           <span style={{ fontSize: 11, fontWeight: 700, color: qualityColor }}>{qualityLabel}</span>
           {message.feedback && (
-            <span style={{ fontSize: 11, fontWeight: 600, color: '#AFAFAF', marginLeft: 2 }}>
-              — {message.feedback}
+            <span style={{ fontSize: 11, fontWeight: 600, color: c.subtitle, marginLeft: 2 }}>
+              - {message.feedback}
             </span>
           )}
         </motion.div>
@@ -113,6 +116,7 @@ export default function ConversationView({
   onComplete,
   checkHearts,
 }: LessonTypeProps) {
+  const c = useLessonColors();
   const nodes = lesson.conversationNodes ?? [];
   const startNodeId = lesson.conversationStartNodeId ?? nodes[0]?.id ?? '';
   const nodeMap = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
@@ -268,14 +272,14 @@ export default function ConversationView({
             style={{
               padding: '12px 20px',
               paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
-              borderTop: '2px solid #E5E5E5',
-              background: 'white',
+              borderTop: `2px solid ${c.border}`,
+              background: c.cardBg,
               display: 'flex',
               flexDirection: 'column',
               gap: 8,
             }}
           >
-            <span style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+            <span style={{ fontSize: 11, fontWeight: 700, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.5 }}>
               Choose your response
             </span>
             {currentNode.options.map((opt, i) => (
@@ -289,10 +293,10 @@ export default function ConversationView({
                   fontSize: 14,
                   fontWeight: 700,
                   textAlign: 'left',
-                  background: '#FFFFFF',
-                  color: '#3C3C3C',
-                  border: `2px solid #E5E5E5`,
-                  boxShadow: '0 3px 0 #E5E5E5',
+                  background: c.cardBg,
+                  color: c.title,
+                  border: `2px solid ${c.border}`,
+                  boxShadow: `0 3px 0 ${c.border}`,
                   cursor: 'pointer',
                   lineHeight: 1.4,
                 }}
@@ -301,8 +305,8 @@ export default function ConversationView({
                   e.currentTarget.style.background = theme.bg;
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#E5E5E5';
-                  e.currentTarget.style.background = '#FFFFFF';
+                  e.currentTarget.style.borderColor = c.border;
+                  e.currentTarget.style.background = c.cardBg;
                 }}
               >
                 {opt.text}
@@ -319,8 +323,8 @@ export default function ConversationView({
             style={{
               padding: '12px 20px',
               paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
-              borderTop: '2px solid #E5E5E5',
-              background: 'white',
+              borderTop: `2px solid ${c.border}`,
+              background: c.cardBg,
             }}
           >
             <button

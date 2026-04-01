@@ -13,9 +13,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import { MoneyText } from '@/components/ui/MoneyText';
 import { playSound } from '@/lib/sounds';
+import { useLessonColors } from '@/lib/lessonColors';
 
 /** Memoised diagram so SVG animations don't reset on answer selection re-renders */
 const DiagramDisplay = memo(function DiagramDisplay({ html }: { html: string }) {
+  const c = useLessonColors();
   const sanitised = html
     .replace(/(<svg[^>]*)\sheight="auto"/gi, '$1')
     .replace(/(<svg[^>]*)\swidth="auto"/gi, '$1');
@@ -25,8 +27,8 @@ const DiagramDisplay = memo(function DiagramDisplay({ html }: { html: string }) 
       className="w-full flex items-center justify-center overflow-hidden"
       style={{
         borderRadius: 14,
-        background: 'white',
-        border: '2px solid #E5E5E5',
+        background: c.cardBg,
+        border: `2px solid ${c.border}`,
         padding: 10,
         maxWidth: 400,
         margin: '0 auto',
@@ -56,6 +58,7 @@ interface QuestionCardProps {
 
 const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
   function QuestionCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const [selectedBool, setSelectedBool] = useState<boolean | null>(null);
     const [filledBlanks, setFilledBlanks] = useState<(string | null)[]>([]);
@@ -233,7 +236,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
         {/* Question content - top area */}
         <div className="flex flex-col" style={{ gap: 12 }}>
           {/* Action title */}
-          <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8 }}>
+          <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8 }}>
             {question.type === 'multiple-choice' ? 'Choose the correct answer'
               : question.type === 'true-false' ? 'True or false?'
               : 'Fill in the blank'}
@@ -248,7 +251,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               style={{
                 fontSize: 17,
                 fontWeight: 800,
-                color: '#3C3C3C',
+                color: c.title,
                 lineHeight: 2,
                 margin: 0,
               }}
@@ -290,12 +293,12 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                             ? { background: '#D7FFB8', border: '2px solid #58CC02', color: '#58A700' }
                             : { background: '#FFDFE0', border: '2px solid #FF4B4B', color: '#EA2B2B' }
                           : filledBlanks[i]
-                            ? { background: 'white', border: `2.5px solid ${unitColor}`, color: '#3C3C3C',
+                            ? { background: c.cardBg, border: `2.5px solid ${unitColor}`, color: c.title,
                                 boxShadow: `0 0 0 3px ${unitColor}20`,
                                 ...(i === activeBlankIdx && blankCount > 1 ? { boxShadow: `0 0 0 3px ${unitColor}33` } : {}) }
-                            : { background: i === activeBlankIdx ? '#E8E8FF' : '#F0F0F0',
-                                border: i === activeBlankIdx ? `2px dashed ${unitColor}` : '2px dashed #CFCFCF',
-                                color: '#CFCFCF' }
+                            : { background: i === activeBlankIdx ? c.emptyActiveBg : c.emptyBg,
+                                border: i === activeBlankIdx ? `2px dashed ${unitColor}` : `2px dashed ${c.muted}`,
+                                color: c.muted }
                         ),
                       }}
                     >
@@ -310,7 +313,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               style={{
                 fontSize: 17,
                 fontWeight: 800,
-                color: '#3C3C3C',
+                color: c.title,
                 lineHeight: 1.35,
                 margin: 0,
               }}
@@ -328,11 +331,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               style={{
                 padding: '8px 12px',
                 borderRadius: 10,
-                background: '#FFF9E8',
+                background: c.hintBg,
                 border: '1.5px solid #FFE4B8',
                 fontSize: 13,
                 fontWeight: 600,
-                color: '#B56E00',
+                color: c.hintColor,
                 lineHeight: 1.4,
               }}
             >
@@ -352,11 +355,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               const isSelected = selectedIndex === displayIndex;
               const isCorrectOption = originalIndex === question.correctIndex;
 
-              let bg = 'white';
-              let border = '2px solid #E5E5E5';
-              let textColor = '#3C3C3C';
-              let badgeBg = '#F0F0F0';
-              let badgeColor = '#AFAFAF';
+              let bg = c.cardBg;
+              let border = `2px solid ${c.border}`;
+              let textColor = c.title;
+              let badgeBg = c.emptyBg;
+              let badgeColor = c.subtitle;
               let shadow = '0 3px 0 #DCDCDC';
 
               if (answered && localCorrect !== null) {
@@ -377,13 +380,13 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                 } else {
                   bg = '#F5F5F5';
                   border = '2px solid #EFEFEF';
-                  textColor = '#CFCFCF';
+                  textColor = c.muted;
                   badgeBg = '#E5E5E5';
-                  badgeColor = '#CFCFCF';
+                  badgeColor = c.muted;
                   shadow = 'none';
                 }
               } else if (isSelected) {
-                bg = 'white';
+                bg = c.cardBg;
                 border = `2.5px solid ${unitColor}`;
                 badgeBg = unitColor;
                 badgeColor = 'white';
@@ -465,9 +468,9 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
               const isSelected = selectedBool === value;
               const isCorrectOption = value === question.correctAnswer;
 
-              let bg = 'white';
-              let border = '2px solid #E5E5E5';
-              let textColor = '#3C3C3C';
+              let bg = c.cardBg;
+              let border = `2px solid ${c.border}`;
+              let textColor = c.title;
               let shadow = '0 3px 0 #DCDCDC';
 
               if (answered && localCorrect !== null) {
@@ -484,11 +487,11 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                 } else {
                   bg = '#F5F5F5';
                   border = '2px solid #EFEFEF';
-                  textColor = '#CFCFCF';
+                  textColor = c.muted;
                   shadow = 'none';
                 }
               } else if (isSelected) {
-                bg = 'white';
+                bg = c.cardBg;
                 border = `2.5px solid ${unitColor}`;
                 shadow = `0 3px 0 color-mix(in srgb, ${unitColor} 65%, black)`;
               }
@@ -565,9 +568,9 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                     fontWeight: 700,
                     cursor: answered ? 'default' : available ? 'pointer' : 'default',
                     transition: 'background 0.15s ease, border 0.15s ease, color 0.15s ease, box-shadow 0.15s ease',
-                    background: available ? 'white' : '#F5F5F5',
-                    border: available ? '2px solid #E5E5E5' : '2px solid #EFEFEF',
-                    color: available ? '#3C3C3C' : '#CFCFCF',
+                    background: available ? c.cardBg : '#F5F5F5',
+                    border: available ? `2px solid ${c.border}` : '2px solid #EFEFEF',
+                    color: available ? c.title : c.muted,
                     boxShadow: available ? '0 2px 0 #E0E0E0' : 'none',
                   }}
                 >

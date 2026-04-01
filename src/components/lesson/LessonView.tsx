@@ -4,6 +4,7 @@ import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
 import { getUnitTheme } from '@/lib/unitThemes';
+import { useLessonColors } from '@/lib/lessonColors';
 import { useBackHandler } from '@/hooks/useBackHandler';
 import { useScrollLock } from '@/hooks/useScrollLock';
 import LessonProgressBar from './LessonProgressBar';
@@ -91,6 +92,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const isDoubleXp = useDoubleXpActive();
   const addMasteryEvent = useMasteryStore((s) => s.addEvent);
   useScrollLock(true);
+  const c = useLessonColors();
   const syncMastery = useMasteryStore((s) => s.syncToServer);
   const loseHeart = useHeartsStore((s) => s.loseHeart);
   const hasHearts = useHeartsStore((s) => s.hasHearts);
@@ -477,7 +479,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         role="main"
         aria-label={adapter ? 'Practice view' : 'Lesson view'}
         style={{
-          backgroundColor: '#FAFAFA',
+          backgroundColor: c.bg,
           paddingTop: 'env(safe-area-inset-top, 0px)',
         }}
       >
@@ -488,8 +490,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
           style={{
             padding: '10px 16px',
             gap: 12,
-            borderBottom: '2px solid #E5E5E5',
-            background: 'white',
+            borderBottom: `2px solid ${c.headerBorder}`,
+            background: c.cardBg,
           }}
         >
           <button
@@ -499,14 +501,14 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
               width: 44,
               height: 44,
               borderRadius: 12,
-              background: '#F5F5F5',
+              background: c.closeBtnBg,
               border: 'none',
               cursor: 'pointer',
             }}
             aria-label={exitLabel}
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M4 4l8 8M12 4l-8 8" stroke="#AFAFAF" strokeWidth="2.5" strokeLinecap="round" />
+              <path d="M4 4l8 8M12 4l-8 8" stroke={c.closeBtnStroke} strokeWidth="2.5" strokeLinecap="round" />
             </svg>
           </button>
 
@@ -556,7 +558,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   width: 28,
                   height: 28,
                   borderRadius: 8,
-                  background: '#FEE2E2',
+                  background: c.dangerBg,
                   border: '1px solid #FECACA',
                   cursor: 'pointer',
                   fontSize: 12,
@@ -578,7 +580,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                     width: 28,
                     height: 28,
                     borderRadius: 8,
-                    background: '#FEE2E2',
+                    background: c.dangerBg,
                     border: '1px solid #FECACA',
                     cursor: 'pointer',
                     fontSize: 12,
@@ -596,10 +598,10 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                       position: 'absolute',
                       top: 34,
                       right: 0,
-                      background: '#FFFFFF',
+                      background: c.disclaimerBg,
                       borderRadius: 12,
                       boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
-                      border: '1px solid #E5E7EB',
+                      border: `1px solid ${c.disclaimerBorder}`,
                       padding: 4,
                       zIndex: 100,
                       minWidth: 150,
@@ -715,7 +717,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   style={{
                     fontSize: 11,
                     fontWeight: 700,
-                    color: '#CFCFCF',
+                    color: c.muted,
                     textAlign: 'center',
                     marginBottom: 10,
                     letterSpacing: 0.3,
@@ -868,8 +870,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             style={{
               padding: '12px 20px',
               paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
-              borderTop: '2px solid #E5E5E5',
-              background: 'white',
+              borderTop: `2px solid ${c.headerBorder}`,
+              background: c.cardBg,
             }}
           >
             <div className="flex items-center gap-2.5">
@@ -881,8 +883,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   width: 48,
                   height: 48,
                   borderRadius: 14,
-                  background: isCalcOpen ? theme.bg : '#F5F5F5',
-                  border: isCalcOpen ? `2px solid ${unitColor}` : '2px solid #E5E5E5',
+                  background: isCalcOpen ? theme.bg : c.closeBtnBg,
+                  border: isCalcOpen ? `2px solid ${unitColor}` : `2px solid ${c.headerBorder}`,
                   boxShadow: isCalcOpen ? 'none' : '0 3px 0 #CCCCCC',
                   cursor: 'pointer',
                 }}
@@ -890,14 +892,14 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                 title="Calculator (`)"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <rect x="4" y="2" width="16" height="20" rx="2" stroke={isCalcOpen ? unitColor : '#AFAFAF'} strokeWidth="2" />
-                  <rect x="7" y="5" width="10" height="4" rx="1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-                  <circle cx="8.5" cy="13" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-                  <circle cx="12" cy="13" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-                  <circle cx="15.5" cy="13" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-                  <circle cx="8.5" cy="17" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-                  <circle cx="12" cy="17" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
-                  <circle cx="15.5" cy="17" r="1.1" fill={isCalcOpen ? unitColor : '#AFAFAF'} />
+                  <rect x="4" y="2" width="16" height="20" rx="2" stroke={isCalcOpen ? unitColor : c.closeBtnStroke} strokeWidth="2" />
+                  <rect x="7" y="5" width="10" height="4" rx="1" fill={isCalcOpen ? unitColor : c.closeBtnStroke} />
+                  <circle cx="8.5" cy="13" r="1.1" fill={isCalcOpen ? unitColor : c.closeBtnStroke} />
+                  <circle cx="12" cy="13" r="1.1" fill={isCalcOpen ? unitColor : c.closeBtnStroke} />
+                  <circle cx="15.5" cy="13" r="1.1" fill={isCalcOpen ? unitColor : c.closeBtnStroke} />
+                  <circle cx="8.5" cy="17" r="1.1" fill={isCalcOpen ? unitColor : c.closeBtnStroke} />
+                  <circle cx="12" cy="17" r="1.1" fill={isCalcOpen ? unitColor : c.closeBtnStroke} />
+                  <circle cx="15.5" cy="17" r="1.1" fill={isCalcOpen ? unitColor : c.closeBtnStroke} />
                 </svg>
               </button>}
 
@@ -1004,7 +1006,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                 right: 0,
                 maxHeight: '65vh',
                 overflowY: 'auto',
-                background: 'white',
+                background: c.cardBg,
                 borderTop: `3px solid ${unitColor}`,
                 borderTopLeftRadius: 20,
                 borderTopRightRadius: 20,
@@ -1015,7 +1017,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             >
               <button
                 onClick={() => setIsCalcOpen(false)}
-                style={{ position: 'absolute', top: 12, right: 16, background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: '#94A3B8' }}
+                style={{ position: 'absolute', top: 12, right: 16, background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: c.closeBtnStroke }}
                 aria-label="Close calculator"
               >
                 &times;
@@ -1051,7 +1053,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             >
               <div className="absolute inset-0 bg-black/40" />
               <motion.div
-                className="relative w-full sm:w-auto bg-white"
+                className="relative w-full sm:w-auto"
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="exit-confirm-title"
@@ -1059,6 +1061,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   maxWidth: 480,
                   borderRadius: 24,
                   padding: '20px 20px 32px',
+                  background: c.cardBg,
                 }}
                 initial={{ y: '100%', opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -1071,7 +1074,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   style={{
                     fontSize: 19,
                     fontWeight: 800,
-                    color: '#3C3C3C',
+                    color: c.title,
                     marginBottom: 4,
                   }}
                 >
@@ -1081,7 +1084,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   style={{
                     fontSize: 14,
                     fontWeight: 600,
-                    color: '#AFAFAF',
+                    color: c.subtitle,
                     marginBottom: 20,
                   }}
                 >
@@ -1097,8 +1100,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                       borderRadius: 16,
                       fontSize: 14,
                       fontWeight: 800,
-                      color: '#AFAFAF',
-                      background: '#F5F5F5',
+                      color: c.subtitle,
+                      background: c.skipBg,
                       boxShadow: '0 3px 0 #E0E0E0',
                       border: 'none',
                       cursor: 'pointer',

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface SortBucketsCardProps {
   question: CourseQuestion;
@@ -16,6 +17,7 @@ interface SortBucketsCardProps {
 
 const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
   function SortBucketsCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const items = question.options ?? [];
     const bucketLabels = question.buckets ?? ['A', 'B'];
     const correctBuckets = question.correctBuckets ?? [];
@@ -146,12 +148,12 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Sort into buckets
         </div>
 
         {/* Question */}
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 12px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 12px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -239,13 +241,13 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                             fontWeight: 700,
                             textAlign: 'center',
                             cursor: answered ? 'default' : 'pointer',
-                            border: isCorrect === null ? '2px solid #E5E5E5'
+                            border: isCorrect === null ? `2px solid ${c.border}`
                               : isCorrect ? '2px solid #58CC02' : '2px solid #FF4B4B',
-                            background: isCorrect === null ? 'white'
+                            background: isCorrect === null ? c.cardBg
                               : isCorrect ? '#D7FFB8' : '#FFDFE0',
                             boxShadow: isCorrect === null ? '0 2px 0 #DCDCDC'
                               : isCorrect ? '0 0 12px rgba(88, 204, 2, 0.25)' : 'none',
-                            color: isCorrect === null ? '#3C3C3C'
+                            color: isCorrect === null ? c.title
                               : isCorrect ? '#58A700' : '#EA2B2B',
                             transition: 'background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                           }}
@@ -262,7 +264,7 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                       border: isTargetable ? `1.5px dashed ${unitColor}` : '1.5px dashed #D5D5D5',
                       fontSize: 12,
                       fontWeight: 600,
-                      color: isTargetable ? unitColor : '#CFCFCF',
+                      color: isTargetable ? unitColor : c.muted,
                       textAlign: 'center',
                       transition: 'all 0.15s ease',
                     }}>
@@ -276,14 +278,14 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
         </div>
 
         {/* Counter */}
-        <div style={{ textAlign: 'center', marginTop: 8, fontSize: 12, fontWeight: 700, color: '#CFCFCF' }}>
+        <div style={{ textAlign: 'center', marginTop: 8, fontSize: 12, fontWeight: 700, color: c.muted }}>
           {items.length - unsortedIndices.length}/{items.length} sorted
         </div>
 
         {/* Unsorted items pool - at bottom */}
         <div style={{ minHeight: 48, paddingTop: 10 }}>
           {unsortedIndices.length > 0 && (
-            <div style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: c.subtitle, marginBottom: 8, textTransform: 'uppercase', letterSpacing: 0.5 }}>
               Drag or tap to sort
             </div>
           )}
@@ -307,13 +309,13 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                     style={{
                       padding: '10px 18px',
                       borderRadius: 12,
-                      background: isSelected ? `${unitColor}10` : 'white',
-                      border: isSelected ? `2.5px solid ${unitColor}` : '2px solid #E5E5E5',
+                      background: isSelected ? `${unitColor}10` : c.cardBg,
+                      border: isSelected ? `2.5px solid ${unitColor}` : `2px solid ${c.border}`,
                       fontSize: 14,
                       fontWeight: 700,
-                      color: '#3C3C3C',
+                      color: c.title,
                       cursor: 'grab',
-                      boxShadow: isSelected ? `0 2px 0 ${unitColor}` : '0 2px 0 #E5E5E5',
+                      boxShadow: isSelected ? `0 2px 0 ${unitColor}` : `0 2px 0 ${c.border}`,
                       touchAction: 'none',
                       userSelect: 'none',
                       position: 'relative',
@@ -327,7 +329,7 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
             </AnimatePresence>
           </div>
           {unsortedIndices.length === 0 && !answered && (
-            <div style={{ fontSize: 13, fontWeight: 700, color: '#AFAFAF', textAlign: 'center', padding: 8 }}>
+            <div style={{ fontSize: 13, fontWeight: 700, color: c.subtitle, textAlign: 'center', padding: 8 }}>
               All sorted! Hit Check.
             </div>
           )}

@@ -13,7 +13,6 @@ import { getUnitTheme, type UnitTheme } from '@/lib/unitThemes';
 import { PLACEMENT_TEST_CONFIG } from '@/lib/placement-test';
 import { UpgradeModal } from '@/components/ui/UpgradeModal';
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
-import { UnitHeader } from './UnitHeader';
 import { LessonNode } from './LessonNode';
 import { useIsDark } from '@/store/useThemeStore';
 
@@ -240,6 +239,7 @@ export function CourseMap() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const currentUnitRef = useRef<HTMLDivElement>(null);
   const currentLessonRef = useRef<HTMLDivElement>(null);
+  const unitElsRef = useRef<(HTMLDivElement | null)[]>([]);
   const scrollDirection = useScrollDirection(currentLessonRef, scrollRef);
   const progress = useCourseStore((s) => s.progress);
   const courseData = useCourseStore((s) => s.courseData);
@@ -258,6 +258,7 @@ export function CourseMap() {
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
   const [jumpModal, setJumpModal] = useState<JumpModalType | null>(null);
+  const [visibleUnitIndex, setVisibleUnitIndex] = useState(0);
 
   const isFreeLocked = useCallback((unitIndex: number) =>
     !isGuest && !isProUser && !isUnitUnlocked(LIMITS.free.unlockedUnits, unitIndex), [isGuest, isProUser]);
@@ -396,6 +397,45 @@ export function CourseMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Track which unit is at the top of the scroll viewport for the floating header
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    let lastIndex = 0;
+    const handleScroll = () => {
+      const containerTop = container.getBoundingClientRect().top;
+      const threshold = containerTop + 72; // below floating header
+
+      let newIndex = 0;
+      for (let i = 0; i < unitElsRef.current.length; i++) {
+        const el = unitElsRef.current[i];
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= threshold) {
+          newIndex = i;
+        }
+      }
+
+      if (newIndex !== lastIndex) {
+        lastIndex = newIndex;
+        setVisibleUnitIndex(newIndex);
+      }
+    };
+
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, [courseData.length]);
+
+  // Derive floating header data from visibleUnitIndex
+  const floatingUnit = courseData[visibleUnitIndex];
+  const floatingTheme = getUnitTheme(visibleUnitIndex);
+  const floatingCompleted = floatingUnit?.lessons.filter(
+    (l) => progress.completedLessons[l.id]?.passed
+  ).length ?? 0;
+  const floatingAllGolden = floatingUnit && floatingCompleted === floatingUnit.lessons.length &&
+    floatingUnit.lessons.every((l) => progress.completedLessons[l.id]?.golden);
+  const floatingBg = floatingAllGolden ? '#FFB800' : floatingTheme.color;
+
   return (
     <div
       ref={scrollRef}
@@ -406,10 +446,88 @@ export function CourseMap() {
         WebkitOverflowScrolling: 'touch',
       }}
     >
+      {/* Floating sticky unit header */}
+      {floatingUnit && (
+        <div
+          style={{
+            position: 'sticky',
+            top: 0,
+            zIndex: 10,
+            background: isDark ? '#020617' : '#FAFAFA',
+            paddingBottom: 6,
+          }}
+        >
+          <div className="mx-auto" style={{ maxWidth: 544, padding: '0 12px' }}>
+            <button
+              onClick={() => router.push('/units')}
+              className="active:scale-[0.99] transition-transform duration-75"
+              style={{
+                display: 'flex',
+                width: '100%',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 12,
+                background: floatingBg,
+                borderRadius: '0 0 16px 16px',
+                padding: '10px 16px 12px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+                transition: 'background-color 0.3s ease',
+                WebkitTapHighlightColor: 'transparent',
+              }}
+              aria-label={`Unit ${visibleUnitIndex + 1}: ${floatingUnit.title}. Tap to browse units.`}
+            >
+              <div style={{ textAlign: 'left', minWidth: 0, flex: 1 }}>
+                <div style={{
+                  fontSize: 11,
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: 1.2,
+                  color: 'rgba(255,255,255,0.6)',
+                }}>
+                  {floatingUnit.sectionTitle
+                    ? `Section ${floatingUnit.sectionIndex}, Unit ${visibleUnitIndex + 1}`
+                    : `Unit ${visibleUnitIndex + 1}`}
+                </div>
+                <div
+                  className="truncate"
+                  style={{
+                    fontSize: 17,
+                    fontWeight: 800,
+                    color: '#FFFFFF',
+                    lineHeight: 1.25,
+                  }}
+                >
+                  {floatingUnit.title}
+                </div>
+              </div>
+              {/* Guide icon */}
+              <div style={{
+                width: 34,
+                height: 34,
+                borderRadius: 10,
+                background: 'rgba(255,255,255,0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+              }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19.5v-15A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M9 7h6" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Units container */}
       <div
         className="flex flex-col px-3 sm:px-4 mx-auto"
-        style={{ paddingTop: 12, paddingBottom: 0, gap: 36, maxWidth: 520 }}
+        style={{ paddingTop: 8, paddingBottom: 0, gap: 0, maxWidth: 520 }}
       >
         {courseData.map((unit, unitIndex) => {
           const theme = getUnitTheme(unitIndex);
@@ -423,78 +541,52 @@ export function CourseMap() {
           const isAllGolden = completedInUnit === unit.lessons.length &&
             unit.lessons.every((l) => progress.completedLessons[l.id]?.golden);
 
-          // Show section banner when sectionTitle changes between consecutive units
-          const prevUnit = unitIndex > 0 ? courseData[unitIndex - 1] : null;
-          const showSectionBanner = unit.sectionTitle && (!prevUnit || prevUnit.sectionTitle !== unit.sectionTitle);
-
           return (
             <div
               key={unit.id}
-              ref={isActive ? currentUnitRef : undefined}
+              ref={(el) => {
+                unitElsRef.current[unitIndex] = el;
+                if (isActive && currentUnitRef) currentUnitRef.current = el;
+              }}
+              data-unit-index={unitIndex}
               style={{
                 animation: 'unitSlideUp 0.5s ease backwards',
                 animationDelay: `${Math.min(unitIndex * 0.1, 0.5)}s`,
               }}
             >
-              {/* Section banner — Duolingo-style full-width header between unit groups */}
-              {showSectionBanner && (
+              {/* Unit name divider between units */}
+              {unitIndex > 0 && (
                 <div
-                  style={{
-                    background: `linear-gradient(135deg, ${theme.color}18, ${theme.color}08)`,
-                    border: `2px solid ${theme.color}30`,
-                    borderRadius: 16,
-                    padding: '16px 20px',
-                    marginBottom: 20,
-                    textAlign: 'center',
-                  }}
+                  className="flex items-center"
+                  style={{ gap: 16, padding: '28px 8px 12px' }}
                 >
-                  <div style={{ fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.5, color: theme.color, opacity: 0.7, marginBottom: 4 }}>
-                    Section {unit.sectionIndex}
-                  </div>
-                  <div style={{ fontSize: 18, fontWeight: 800, color: isDark ? '#F0F0F0' : '#1A1A1A' }}>
-                    {unit.sectionTitle}
-                  </div>
+                  <div style={{ flex: 1, height: 2, borderRadius: 1, background: isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)' }} />
+                  <span style={{
+                    fontSize: 15,
+                    fontWeight: 700,
+                    color: isDark ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.3)',
+                    whiteSpace: 'nowrap',
+                  }}>
+                    {unit.title}
+                  </span>
+                  <div style={{ flex: 1, height: 2, borderRadius: 1, background: isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)' }} />
                 </div>
               )}
 
-              {/* Unit header card */}
-              <div
-                className={isAllGolden ? 'golden-unit' : ''}
-              >
-                <UnitHeader
-                  unit={unit}
-                  unitIndex={unitIndex}
-                  completedInUnit={completedInUnit}
-                  totalInUnit={unit.lessons.length}
-                  isLocked={isUnitLocked}
-                  isAllGolden={isAllGolden}
-                  lockMessage={
-                    isGuestLocked
-                      ? 'Sign up to unlock'
-                      : isProLocked
-                        ? 'Upgrade to Pro to unlock'
-                        : undefined
-                  }
+              {/* "Jump here" button for placement-test-eligible locked units */}
+              {isUnitJumpable(unitIndex) && (
+                <JumpHereButton
                   theme={theme}
-                  professionId={activeProfession}
-                  onClick={() => router.push('/units')}
+                  onClick={() => {
+                    setJumpModal({ kind: 'placement-test', unitIndex });
+                  }}
                 />
+              )}
 
-                {/* Floating "Jump here" button for placement-test-eligible locked units */}
-                {isUnitJumpable(unitIndex) && (
-                  <JumpHereButton
-                    theme={theme}
-                    onClick={() => {
-                      setJumpModal({ kind: 'placement-test', unitIndex });
-                    }}
-                  />
-                )}
-              </div>
-
-              {/* Lesson list — vertical wide buttons */}
+              {/* Lesson list */}
               <div
                 className="flex flex-col"
-                style={{ paddingTop: 16, gap: 6 }}
+                style={{ paddingTop: unitIndex === 0 ? 4 : 4, gap: 6 }}
               >
                 {unit.lessons.map((lesson, lessonIndex) => {
                   const state = getLessonState(unitIndex, lessonIndex);
@@ -536,14 +628,14 @@ export function CourseMap() {
               width: 48,
               height: 48,
               borderRadius: 16,
-              background: '#FFF5D4',
+              background: isDark ? '#3D3200' : '#FFF5D4',
               fontSize: 24,
               marginBottom: 12,
             }}
           >
             🏆
           </div>
-          <p style={{ fontSize: 15, fontWeight: 800, color: '#3C3C3C' }}>
+          <p style={{ fontSize: 15, fontWeight: 800, color: isDark ? '#E0E0E0' : '#3C3C3C' }}>
             Course Complete!
           </p>
           <p

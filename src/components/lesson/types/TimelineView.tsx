@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { LessonTypeProps, TimelineStage } from '@/data/course/types';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 export default function TimelineView({
   lesson,
@@ -14,6 +15,7 @@ export default function TimelineView({
   onComplete,
   checkHearts,
 }: LessonTypeProps) {
+  const c = useLessonColors();
   const stages = lesson.timelineStages ?? [];
   const startStageId = lesson.timelineStartStageId ?? stages[0]?.id ?? '';
   const stageMap = useMemo(() => new Map(stages.map((s) => [s.id, s])), [stages]);
@@ -128,7 +130,7 @@ export default function TimelineView({
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            style={{ fontSize: 22, fontWeight: 800, color: '#3C3C3C', margin: 0 }}
+            style={{ fontSize: 22, fontWeight: 800, color: c.title, margin: 0 }}
           >
             {outcome?.title ?? 'Story Complete!'}
           </motion.p>
@@ -178,7 +180,7 @@ export default function TimelineView({
             transition={{ delay: 0.5 }}
             style={{ width: '100%', maxWidth: 400, marginTop: 8 }}
           >
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 8 }}>
+            <p style={{ fontSize: 12, fontWeight: 700, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 8 }}>
               Your decisions
             </p>
             {stageHistory.map((h, i) => (
@@ -195,7 +197,7 @@ export default function TimelineView({
                 }}
               >
                 <span style={{ fontSize: 14 }}>{h.optimal ? '✓' : '✗'}</span>
-                <span style={{ fontSize: 13, fontWeight: 600, color: '#3C3C3C' }}>{h.choiceText}</span>
+                <span style={{ fontSize: 13, fontWeight: 600, color: c.title }}>{h.choiceText}</span>
               </div>
             ))}
           </motion.div>
@@ -205,8 +207,8 @@ export default function TimelineView({
           style={{
             padding: '12px 20px',
             paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
-            borderTop: '2px solid #E5E5E5',
-            background: 'white',
+            borderTop: `2px solid ${c.border}`,
+            background: c.cardBg,
           }}
         >
           <button
@@ -250,7 +252,7 @@ export default function TimelineView({
         {/* Stage indicator */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <div style={{ width: 8, height: 8, borderRadius: '50%', background: unitColor }} />
-          <span style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+          <span style={{ fontSize: 12, fontWeight: 700, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.5 }}>
             Decision {decisionsMade + 1} of {totalDecisions}
           </span>
         </div>
@@ -264,11 +266,11 @@ export default function TimelineView({
             exit={{ opacity: 0, y: -20 }}
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
             style={{
-              background: '#FFFFFF',
+              background: c.cardBg,
               borderRadius: 16,
               padding: 24,
               boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-              border: '1px solid #F0F0F0',
+              border: `1px solid ${c.emptyBg}`,
             }}
           >
             {currentStage.emoji && (
@@ -280,7 +282,7 @@ export default function TimelineView({
               style={{
                 fontSize: 16,
                 fontWeight: 600,
-                color: '#3C3C3C',
+                color: c.title,
                 lineHeight: 1.65,
                 margin: 0,
               }}
@@ -304,10 +306,10 @@ export default function TimelineView({
                 border: `2px solid ${currentStage.choices[selectedChoice].optimal ? '#58CC02' : '#F59E0B'}`,
               }}
             >
-              <p style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.5, margin: '0 0 4px' }}>
+              <p style={{ fontSize: 11, fontWeight: 700, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.5, margin: '0 0 4px' }}>
                 Impact
               </p>
-              <p style={{ fontSize: 14, fontWeight: 600, color: '#3C3C3C', lineHeight: 1.5, margin: 0 }}>
+              <p style={{ fontSize: 14, fontWeight: 600, color: c.title, lineHeight: 1.5, margin: 0 }}>
                 <MoneyText text={currentStage.choices[selectedChoice].impact} />
               </p>
             </motion.div>
@@ -327,14 +329,14 @@ export default function TimelineView({
             style={{
               padding: '12px 20px',
               paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
-              borderTop: '2px solid #E5E5E5',
-              background: 'white',
+              borderTop: `2px solid ${c.border}`,
+              background: c.cardBg,
               display: 'flex',
               flexDirection: 'column',
               gap: 8,
             }}
           >
-            <span style={{ fontSize: 11, fontWeight: 700, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+            <span style={{ fontSize: 11, fontWeight: 700, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.5 }}>
               What do you do?
             </span>
             {currentStage.choices.map((choice, i) => (
@@ -348,10 +350,10 @@ export default function TimelineView({
                   fontSize: 14,
                   fontWeight: 700,
                   textAlign: 'left',
-                  background: '#FFFFFF',
-                  color: '#3C3C3C',
-                  border: '2px solid #E5E5E5',
-                  boxShadow: '0 3px 0 #E5E5E5',
+                  background: c.cardBg,
+                  color: c.title,
+                  border: `2px solid ${c.border}`,
+                  boxShadow: `0 3px 0 ${c.border}`,
                   cursor: 'pointer',
                   lineHeight: 1.4,
                 }}
@@ -360,8 +362,8 @@ export default function TimelineView({
                   e.currentTarget.style.background = theme.bg;
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#E5E5E5';
-                  e.currentTarget.style.background = '#FFFFFF';
+                  e.currentTarget.style.borderColor = c.border;
+                  e.currentTarget.style.background = c.cardBg;
                 }}
               >
                 {choice.text}
@@ -378,8 +380,8 @@ export default function TimelineView({
             style={{
               padding: '12px 20px',
               paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
-              borderTop: '2px solid #E5E5E5',
-              background: 'white',
+              borderTop: `2px solid ${c.border}`,
+              background: c.cardBg,
             }}
           >
             <button

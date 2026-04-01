@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 interface SliderEstimateCardProps {
   question: CourseQuestion;
@@ -16,6 +17,7 @@ interface SliderEstimateCardProps {
 
 const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProps>(
   function SliderEstimateCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
+    const c = useLessonColors();
     const min = question.sliderMin ?? 0;
     const max = question.sliderMax ?? 100;
     const correctValue = question.correctValue ?? 50;
@@ -97,11 +99,11 @@ const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProp
     return (
       <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Action title */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Slide to estimate
         </div>
 
-        <h2 style={{ fontSize: 17, fontWeight: 800, color: '#3C3C3C', lineHeight: 1.35, margin: '0 0 12px' }}>
+        <h2 style={{ fontSize: 17, fontWeight: 800, color: c.title, lineHeight: 1.35, margin: '0 0 12px' }}>
           <MoneyText text={question.question} />
         </h2>
 
@@ -111,9 +113,9 @@ const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProp
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.3 }}
             style={{
-              padding: '8px 12px', borderRadius: 10, background: '#FFF9E8',
+              padding: '8px 12px', borderRadius: 10, background: c.hintBg,
               border: '1.5px solid #FFE4B8', fontSize: 13, fontWeight: 600,
-              color: '#B56E00', lineHeight: 1.4, marginBottom: 4,
+              color: c.hintColor, lineHeight: 1.4, marginBottom: 4,
             }}
           >
             <MoneyText text={question.hint} />
@@ -171,7 +173,7 @@ const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProp
             {/* Background track */}
             <div style={{
               position: 'absolute', left: 0, right: 0, height: 8, borderRadius: 4,
-              background: '#E5E5E5',
+              background: c.trackBg,
             }} />
 
             {/* Filled track */}
@@ -236,7 +238,7 @@ const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProp
               style={{
                 position: 'absolute', transform: 'translateX(-50%)',
                 width: 32, height: 32, borderRadius: 16,
-                background: 'white',
+                background: c.cardBg,
                 border: `3px solid ${
                   localCorrect !== null
                     ? localCorrect ? '#58CC02' : closeness === 'close' ? '#F59E0B' : '#FF4B4B'
@@ -251,8 +253,8 @@ const SliderEstimateCard = forwardRef<QuestionCardHandle, SliderEstimateCardProp
 
           {/* Min/Max labels */}
           <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF' }}>{formatValue(min)}</span>
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF' }}>{formatValue(max)}</span>
+            <span style={{ fontSize: 12, fontWeight: 700, color: c.subtitle }}>{formatValue(min)}</span>
+            <span style={{ fontSize: 12, fontWeight: 700, color: c.subtitle }}>{formatValue(max)}</span>
           </div>
         </div>
       </div>

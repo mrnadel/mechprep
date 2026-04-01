@@ -16,6 +16,7 @@ import RankOrderCard from '@/components/lesson/RankOrderCard';
 import PickTheBestCard from '@/components/lesson/PickTheBestCard';
 import ImageTapCard from '@/components/lesson/ImageTapCard';
 import { MoneyText } from '@/components/ui/MoneyText';
+import { useLessonColors } from '@/lib/lessonColors';
 
 function CheckpointQuestion({
   question,
@@ -69,6 +70,7 @@ export default function CaseStudyView({
   onComplete,
   checkHearts,
 }: LessonTypeProps) {
+  const c = useLessonColors();
   const sections = lesson.caseStudySections ?? [];
   const totalCheckpoints = useMemo(() => sections.filter((s) => s.checkpoint).length, [sections]);
 
@@ -158,7 +160,7 @@ export default function CaseStudyView({
                 flex: 1,
                 height: 4,
                 borderRadius: 2,
-                background: i <= currentSectionIndex ? unitColor : '#E5E5E5',
+                background: i <= currentSectionIndex ? unitColor : c.border,
                 transition: 'background 0.3s',
               }}
             />
@@ -169,7 +171,7 @@ export default function CaseStudyView({
         {currentSectionIndex === 0 && lesson.caseStudyTitle && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
             <span style={{ fontSize: 20 }}>📋</span>
-            <h2 style={{ fontSize: 18, fontWeight: 800, color: '#3C3C3C', margin: 0 }}>
+            <h2 style={{ fontSize: 18, fontWeight: 800, color: c.title, margin: 0 }}>
               {lesson.caseStudyTitle}
             </h2>
           </div>
@@ -187,11 +189,11 @@ export default function CaseStudyView({
             {/* Narrative text */}
             <div
               style={{
-                background: '#FFFFFF',
+                background: c.cardBg,
                 borderRadius: 16,
                 padding: 20,
                 boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-                border: '1px solid #F0F0F0',
+                border: `1px solid ${c.emptyBg}`,
                 marginBottom: hasCheckpoint ? 16 : 0,
               }}
             >
@@ -199,7 +201,7 @@ export default function CaseStudyView({
                 style={{
                   fontSize: 15,
                   fontWeight: 600,
-                  color: '#3C3C3C',
+                  color: c.title,
                   lineHeight: 1.7,
                   margin: 0,
                   whiteSpace: 'pre-line',
@@ -241,7 +243,7 @@ export default function CaseStudyView({
                   >
                     <span style={{ fontSize: 10, color: '#FFF', fontWeight: 800 }}>?</span>
                   </div>
-                  <span style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.5 }}>
                     Checkpoint
                   </span>
                 </div>
@@ -264,8 +266,8 @@ export default function CaseStudyView({
           style={{
             padding: '12px 20px',
             paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
-            borderTop: '2px solid #E5E5E5',
-            background: 'white',
+            borderTop: `2px solid ${c.border}`,
+            background: c.cardBg,
           }}
         >
           <button
@@ -279,8 +281,8 @@ export default function CaseStudyView({
               fontWeight: 800,
               textTransform: 'uppercase',
               letterSpacing: 0.8,
-              background: hasSelection ? unitColor : '#E5E5E5',
-              color: hasSelection ? '#FFFFFF' : '#AFAFAF',
+              background: hasSelection ? unitColor : c.border,
+              color: hasSelection ? '#FFFFFF' : c.subtitle,
               boxShadow: hasSelection ? `0 4px 0 ${theme.dark}` : '0 4px 0 #CCCCCC',
               border: 'none',
               cursor: hasSelection ? 'pointer' : 'default',
@@ -299,13 +301,13 @@ export default function CaseStudyView({
             paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
             borderTop: `2px solid ${
               lastAnswerCorrect === null
-                ? '#E5E5E5'
+                ? c.border
                 : lastAnswerCorrect
                   ? '#58CC02'
                   : '#FF4B4B'
             }`,
             background: lastAnswerCorrect === null
-              ? 'white'
+              ? c.cardBg
               : lastAnswerCorrect
                 ? '#D7FFB8'
                 : '#FFDFE0',

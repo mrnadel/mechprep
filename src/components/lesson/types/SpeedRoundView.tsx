@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { LessonTypeProps } from '@/data/course/types';
+import { useLessonColors } from '@/lib/lessonColors';
 
 export default function SpeedRoundView({
   lesson,
@@ -13,6 +14,7 @@ export default function SpeedRoundView({
   onProgress,
   onComplete,
 }: LessonTypeProps) {
+  const c = useLessonColors();
   const questions = lesson.speedQuestions ?? [];
   const timeLimit = lesson.speedTimeLimit ?? 60;
 
@@ -134,7 +136,7 @@ export default function SpeedRoundView({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            style={{ fontSize: 22, fontWeight: 800, color: '#3C3C3C', margin: 0 }}
+            style={{ fontSize: 22, fontWeight: 800, color: c.title, margin: 0 }}
           >
             {timeLeft === 0 ? "Time's Up!" : 'Round Complete!'}
           </motion.p>
@@ -150,17 +152,17 @@ export default function SpeedRoundView({
           >
             <div style={{ textAlign: 'center' }}>
               <p style={{ fontSize: 28, fontWeight: 800, color: unitColor, margin: 0 }}>{score}</p>
-              <p style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', margin: 0 }}>Score</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: c.subtitle, margin: 0 }}>Score</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontSize: 28, fontWeight: 800, color: '#3C3C3C', margin: 0 }}>
+              <p style={{ fontSize: 28, fontWeight: 800, color: c.title, margin: 0 }}>
                 {totalAnswered.current}/{questions.length}
               </p>
-              <p style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', margin: 0 }}>Answered</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: c.subtitle, margin: 0 }}>Answered</p>
             </div>
             <div style={{ textAlign: 'center' }}>
               <p style={{ fontSize: 28, fontWeight: 800, color: '#F59E0B', margin: 0 }}>🔥 {bestStreak}</p>
-              <p style={{ fontSize: 12, fontWeight: 700, color: '#AFAFAF', margin: 0 }}>Best Streak</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: c.subtitle, margin: 0 }}>Best Streak</p>
             </div>
           </motion.div>
         </div>
@@ -168,8 +170,8 @@ export default function SpeedRoundView({
           style={{
             padding: '12px 20px',
             paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 16px)',
-            borderTop: '2px solid #E5E5E5',
-            background: 'white',
+            borderTop: `2px solid ${c.border}`,
+            background: c.cardBg,
           }}
         >
           <button
@@ -208,7 +210,7 @@ export default function SpeedRoundView({
               flex: 1,
               height: 8,
               borderRadius: 4,
-              background: '#E5E5E5',
+              background: c.border,
               overflow: 'hidden',
             }}
           >
@@ -283,7 +285,7 @@ export default function SpeedRoundView({
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: '#AFAFAF',
+                color: c.subtitle,
                 textTransform: 'uppercase',
                 letterSpacing: 0.5,
                 marginBottom: 8,
@@ -295,7 +297,7 @@ export default function SpeedRoundView({
               style={{
                 fontSize: 20,
                 fontWeight: 800,
-                color: '#3C3C3C',
+                color: c.title,
                 lineHeight: 1.4,
                 margin: '0 0 24px',
               }}
@@ -316,10 +318,10 @@ export default function SpeedRoundView({
               {currentQ.options.map((opt, i) => {
                 const isSelected = selectedIndex === i;
                 const isCorrectOption = i === currentQ.correctIndex;
-                let bg = '#FFFFFF';
-                let borderColor = '#E5E5E5';
-                let shadow = '0 3px 0 #E5E5E5';
-                let textColor = '#3C3C3C';
+                let bg = c.cardBg;
+                let borderColor = c.border;
+                let shadow = `0 3px 0 ${c.border}`;
+                let textColor = c.title;
 
                 if (feedback && isSelected) {
                   if (feedback === 'correct') {

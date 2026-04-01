@@ -407,6 +407,7 @@ async function loadFinanceUnit(unitIndex: number): Promise<Unit> {
   // Index 0-12: Original 13 units (unit-0 through unit-12)
   // Index 13-18: Section 13 Part 1 - Estate Planning (6 units)
   // Index 19-23: Section 13 Part 2 - Estate Planning (5 units)
+  // Index 24-34: Section 14 - Business & Self-Employment (11 units)
   const loaders: (() => Promise<Unit>)[] = [
     () => import('./professions/personal-finance/units/unit-0').then(m => m.unit0),
     () => import('./professions/personal-finance/units/unit-1').then(m => m.unit1),
@@ -432,6 +433,18 @@ async function loadFinanceUnit(unitIndex: number): Promise<Unit> {
     () => import('./professions/personal-finance/units/section-13-estate-part2').then(m => m.financeSection13Part2[2]),
     () => import('./professions/personal-finance/units/section-13-estate-part2').then(m => m.financeSection13Part2[3]),
     () => import('./professions/personal-finance/units/section-13-estate-part2').then(m => m.financeSection13Part2[4]),
+    // Index 24-34: Section 14 - Business & Self-Employment (11 units)
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[0]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[1]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[2]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[3]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[4]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[5]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[6]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[7]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[8]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[9]),
+    () => import('./professions/personal-finance/units/section-14-business').then(m => m.financeSection14Business[10]),
   ];
 
   // Units beyond what has full content files fall back to lightweight metadata
@@ -492,6 +505,7 @@ async function loadSpaceUnit(unitIndex: number): Promise<Unit> {
   // Index 0-2: Section 1-3 (unit-1 to unit-3)
   // Index 3-14: Section 4 - Light & Telescopes (section-4-light, 12 units)
   // Index 15-21: Section 5-10 (unit-4 to unit-10, original stars onwards)
+  // Index 22-32: Section 12 - Astrophotography & Amateur Astronomy (section-12-amateur, 11 units)
   const loaders: (() => Promise<Unit>)[] = [
     () => import('./professions/space-astronomy/units/unit-1').then(m => m.unit1),
     () => import('./professions/space-astronomy/units/unit-2').then(m => m.unit2),
@@ -515,6 +529,17 @@ async function loadSpaceUnit(unitIndex: number): Promise<Unit> {
     () => import('./professions/space-astronomy/units/unit-8').then(m => m.unit8),
     () => import('./professions/space-astronomy/units/unit-9').then(m => m.unit9),
     () => import('./professions/space-astronomy/units/unit-10').then(m => m.unit10),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[0]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[1]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[2]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[3]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[4]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[5]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[6]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[7]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[8]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[9]),
+    () => import('./professions/space-astronomy/units/section-12-amateur').then(m => m.spaceSection12[10]),
   ];
 
   if (unitIndex < 0 || unitIndex >= spaceCourseMeta.length) {
