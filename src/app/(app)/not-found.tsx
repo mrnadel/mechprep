@@ -31,8 +31,8 @@ export default function AppNotFound() {
           <Link href="/" className="btn-primary">
             Back to Dashboard
           </Link>
-          <Link href="/practice/topics" className="btn-secondary">
-            Practice Topics
+          <Link href="/course" className="btn-secondary">
+            Course Map
           </Link>
         </div>
       </div>

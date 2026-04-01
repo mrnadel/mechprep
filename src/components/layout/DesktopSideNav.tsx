@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, BookOpen, Trophy, Users, User, Swords } from 'lucide-react';
+import { LayoutDashboard, Trophy, Users, User, Swords } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { APP_NAME } from '@/lib/constants';
 import FriendsBadge from '@/components/friends/FriendsBadge';
@@ -10,10 +10,11 @@ import { useCourseStore } from '@/store/useCourseStore';
 import { getProfession } from '@/data/professions';
 import { CourseIcon } from '@/components/course/CourseIcon';
 
-const tabs = [
+const allTabs = [
   { href: '/', label: 'Home', icon: LayoutDashboard },
   { href: '/quests', label: 'Quests', icon: Swords },
-  { href: '/practice/topics', label: 'Practice', icon: BookOpen },
+  // Practice tab hidden until per-course practice is built
+  // { href: '/practice/topics', label: 'Practice', icon: BookOpen },
   { href: '/league', label: 'League', icon: Trophy },
   { href: '/friends', label: 'Friends', icon: Users, badge: true },
   { href: '/profile', label: 'Profile', icon: User },
@@ -23,6 +24,7 @@ export default function DesktopSideNav() {
   const pathname = usePathname();
   const activeProfession = useCourseStore((s) => s.activeProfession);
   const profession = getProfession(activeProfession);
+  const tabs = allTabs;
 
   return (
       <nav

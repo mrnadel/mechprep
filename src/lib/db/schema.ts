@@ -440,30 +440,6 @@ export const courseQuestions = pgTable(
   ]
 );
 
-export const practiceQuestions = pgTable(
-  'practice_questions',
-  {
-    id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-    type: text('type').notNull(),
-    topic: text('topic').notNull(),
-    subtopic: text('subtopic').notNull(),
-    difficulty: text('difficulty').notNull(),
-    question: text('question').notNull(),
-    explanation: text('explanation').notNull(),
-    interviewInsight: text('interview_insight').notNull(),
-    realWorldConnection: text('real_world_connection'),
-    commonMistake: text('common_mistake').notNull(),
-    tags: jsonb('tags').$type<string[]>().notNull().default([]),
-    typeData: jsonb('type_data').notNull().default({}),
-    orderIndex: integer('order_index').notNull().default(0),
-    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow(),
-    updatedAt: timestamp('updated_at', { mode: 'date' }).defaultNow(),
-  },
-  (table) => [
-    index('practice_questions_topic_idx').on(table.topic),
-  ]
-);
-
 // ── Mastery Events ──────────────────────────────────────────
 export const masteryEvents = pgTable('mastery_events', {
   id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),

@@ -39,10 +39,10 @@ export default function NotFound() {
             Back to Dashboard
           </Link>
           <Link
-            href="/practice/topics"
+            href="/course"
             className="btn-secondary"
           >
-            Practice Topics
+            Course Map
           </Link>
         </div>
       </div>

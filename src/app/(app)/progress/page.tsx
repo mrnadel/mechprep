@@ -49,8 +49,8 @@ export default function ProgressPage() {
           <p className="text-surface-500 mb-4">
             Complete your first practice session to start tracking your progress!
           </p>
-          <a href="/practice/adaptive" className="btn-primary inline-flex items-center gap-2">
-            <Zap className="w-4 h-4" /> Start Practicing
+          <a href="/" className="btn-primary inline-flex items-center gap-2">
+            <Zap className="w-4 h-4" /> Start Learning
           </a>
         </div>
       )}

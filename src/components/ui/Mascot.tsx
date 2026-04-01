@@ -29,6 +29,7 @@ export const MASCOT_POSES = {
   streak: '/mascot/streak.png',
   'almost-there': '/mascot/almost-there.png',
   mastered: '/mascot/mastered.png',
+  'on-fire': '/mascot/on-fire.png',
 
   // System states
   loading: '/mascot/loading.png',
@@ -48,9 +49,9 @@ export type MascotPose = keyof typeof MASCOT_POSES;
 export type MascotTag = 'emotions' | 'adventure' | 'rewards' | 'system' | 'space';
 
 export const MASCOT_TAGS: Record<MascotTag, MascotPose[]> = {
-  emotions: ['neutral', 'excited', 'worried', 'sleeping', 'winking', 'sad', 'thinking', 'celebrating', 'laughing', 'proud'],
+  emotions: ['neutral', 'excited', 'worried', 'sleeping', 'winking', 'sad', 'thinking', 'celebrating', 'laughing', 'proud', 'on-fire'],
   adventure: ['sword', 'torch', 'explorer', 'pro', 'champion'],
-  rewards: ['out-of-hearts', 'reward-gems', 'upgrade-pro', 'chest-reward', 'level-up', 'streak', 'almost-there', 'mastered'],
+  rewards: ['out-of-hearts', 'reward-gems', 'upgrade-pro', 'chest-reward', 'level-up', 'streak', 'almost-there', 'mastered', 'on-fire'],
   system: ['loading', 'error', 'offline', 'empty-state'],
   space: ['space-flag', 'space-astronaut', 'space-ufo', 'space-moon'],
 };

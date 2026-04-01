@@ -2,14 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, BookOpen, Trophy, User, Swords } from 'lucide-react';
+import { LayoutDashboard, Trophy, User, Swords } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useDailyQuests, useWeeklyQuests } from '@/store/useEngagementStore';
 
 const tabs = [
   { href: '/', label: 'Home', icon: LayoutDashboard, activeColor: 'text-primary-600', activeBg: 'bg-primary-50', inactiveColor: 'text-slate-400' },
   { href: '/quests', label: 'Quests', icon: Swords, activeColor: 'text-orange-500', activeBg: 'bg-orange-50', inactiveColor: 'text-slate-400' },
-  { href: '/practice/topics', label: 'Practice', icon: BookOpen, activeColor: 'text-emerald-600', activeBg: 'bg-emerald-50', inactiveColor: 'text-slate-400' },
+  // Practice tab hidden until per-course practice is built
+  // { href: '/practice/topics', label: 'Practice', icon: BookOpen, activeColor: 'text-emerald-600', activeBg: 'bg-emerald-50', inactiveColor: 'text-slate-400' },
   { href: '/league', label: 'League', icon: Trophy, activeColor: 'text-amber-500', activeBg: 'bg-amber-50', inactiveColor: 'text-slate-400' },
   { href: '/profile', label: 'Profile', icon: User, activeColor: 'text-sky-500', activeBg: 'bg-sky-50', inactiveColor: 'text-slate-400' },
 ];
@@ -19,7 +20,6 @@ export default function MobileBottomNav() {
   const dailyQuests = useDailyQuests();
   const weeklyQuests = useWeeklyQuests();
   const hasClaimable = [...dailyQuests, ...weeklyQuests].some(q => q.completed && !q.claimed);
-
   return (
     <nav
       className="fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-surface-900 border-t border-surface-200 dark:border-surface-700 lg:hidden"
