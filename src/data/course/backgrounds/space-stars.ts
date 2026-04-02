@@ -22,7 +22,7 @@ export const background = {
   #lb-space-stars .lb-star {
     position: absolute;
     border-radius: 50%;
-    will-change: opacity;
+    will-change: opacity, transform;
     animation: lb-space-stars-twinkle var(--d, 4s) var(--dl, 0s) infinite ease-in-out;
   }
   #lb-space-stars .lb-planet {
@@ -34,21 +34,21 @@ export const background = {
   #lb-space-stars .lb-nebula {
     position: absolute;
     border-radius: 50%;
-    will-change: transform;
+    will-change: transform, opacity;
     animation: lb-space-stars-drift var(--d, 15s) var(--dl, 0s) infinite ease-in-out;
   }
   @keyframes lb-space-stars-twinkle {
-    0%, 100% { opacity: 0.25; }
-    50% { opacity: 1; }
+    0%, 100% { opacity: 0.1; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.4); }
   }
   @keyframes lb-space-stars-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(3deg); }
   }
   @keyframes lb-space-stars-drift {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(4px, -5px); }
-    100% { transform: translate(0, 0); }
+    0% { transform: translate(0, 0); opacity: 0.5; }
+    50% { transform: translate(10px, -12px); opacity: 1; }
+    100% { transform: translate(0, 0); opacity: 0.5; }
   }
   @media (prefers-reduced-motion: reduce) {
     #lb-space-stars * { animation: none !important; }

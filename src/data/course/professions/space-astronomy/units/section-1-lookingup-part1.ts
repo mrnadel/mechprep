@@ -18,6 +18,7 @@ export const spaceSection1Part1: Unit[] = [
         description: "Your address in the universe, from your street to the edge of the observable cosmos.",
         icon: "📝",
         xpReward: 15,
+        background: 'space-stars',
         levels: 4,
         questions: [
           {
@@ -107,6 +108,7 @@ export const spaceSection1Part1: Unit[] = [
         description: "The basic types of objects you can spot in the night sky and what makes each one different.",
         icon: "📝",
         xpReward: 15,
+        background: 'space-stars',
         levels: 4,
         questions: [
           {
@@ -201,6 +203,7 @@ export const spaceSection1Part1: Unit[] = [
         description: "Why city lights hide the stars and how to find better views of the night sky.",
         icon: "📝",
         xpReward: 20,
+        background: 'space-stars',
         levels: 4,
         questions: [
           {
@@ -294,6 +297,7 @@ export const spaceSection1Part1: Unit[] = [
         description: "Get a feel for how enormous the universe really is, from Earth to the edge of what we can observe.",
         icon: "📝",
         xpReward: 20,
+        background: 'space-stars',
         levels: 4,
         questions: [
           {

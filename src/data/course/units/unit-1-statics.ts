@@ -14,7 +14,6 @@ export const unit1: Unit = {
       description: 'Break forces into components and combine them using vector math.',
       icon: '📝',
       xpReward: 20,
-      background: 'space-stars',
       levels: 4,
       questions: [
         {
