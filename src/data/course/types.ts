@@ -136,6 +136,8 @@ export interface Lesson {
   // Case Study
   caseStudySections?: CaseStudySection[];
   caseStudyTitle?: string;
+  // Background
+  background?: string;          // key into backgrounds library (e.g. 'space-stars')
 }
 
 export interface Unit {
