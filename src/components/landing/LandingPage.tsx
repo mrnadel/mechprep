@@ -81,7 +81,7 @@ export function LandingPage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section className="landing-hero-section" style={{ paddingTop: 140, paddingBottom: 60, textAlign: 'center' }}>
+      <section className="landing-hero-section" style={{ minHeight: '100dvh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 24px' }}>
           <AnimateIn>
             <h1 className="landing-hero-h1" style={{ fontWeight: 900, lineHeight: 1.1, color: '#1E293B', marginBottom: 20, letterSpacing: -1 }}>
@@ -212,14 +212,12 @@ export function LandingPage() {
           .landing-hero-h1 { font-size: 32px !important; }
           .landing-hero-p { font-size: 16px !important; }
           .landing-section-heading { font-size: 24px !important; }
-          .landing-hero-section { padding-top: 110px !important; padding-bottom: 40px !important; }
         }
 
         @media (max-width: 480px) {
           .landing-hero-h1 { font-size: 26px !important; letter-spacing: -0.5px !important; }
           .landing-hero-p { font-size: 15px !important; }
           .landing-section-heading { font-size: 22px !important; }
-          .landing-hero-section { padding-top: 100px !important; padding-bottom: 32px !important; }
           nav > div { padding: 0 16px !important; }
         }
       `}</style>
