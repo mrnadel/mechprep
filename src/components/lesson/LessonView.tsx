@@ -161,8 +161,6 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
     return () => { document.head.removeChild(style); };
   }, [backgroundCss]);
 
-  const isTeachingQuestion = currentQuestion?.type === 'teaching';
-  const hasBackground = backgroundHtml !== null && isTeachingQuestion;
   const overlayActive = showExitConfirm || showOutOfHearts;
 
   const lessonSessionQuestions = useMemo(() => {
@@ -219,6 +217,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const exitConfirmTitle = adapter ? adapter.exitConfirmTitle : 'Quit lesson?';
   const exitConfirmMessage = adapter ? adapter.exitConfirmMessage : 'Your progress on this lesson will be lost.';
   const isTeaching = currentQuestion?.type === 'teaching';
+  const hasBackground = backgroundHtml !== null && isTeaching;
 
   // === LESSON TYPE ===
   const lessonType = useMemo(() => {
