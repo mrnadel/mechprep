@@ -30,6 +30,7 @@ import { useMasteryStore } from '@/store/useMasteryStore';
 import { useDoubleXpActive } from '@/store/useEngagementStore';
 import { useHeartsStore } from '@/store/useHeartsStore';
 import { playSound } from '@/lib/sounds';
+import { STORAGE_KEYS } from '@/lib/storage-keys';
 import { HeartDisplay } from '@/components/ui/HeartDisplay';
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
 import EngineeringCalculator from '@/components/calculator/EngineeringCalculator';
@@ -100,7 +101,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   // Localized variant support
   const [userCountry, setUserCountry] = useState<string | null>(null);
   useEffect(() => {
-    setUserCountry(localStorage.getItem('octokeen-country'));
+    setUserCountry(localStorage.getItem(STORAGE_KEYS.COUNTRY));
   }, []);
 
   // Sync mastery when lesson completes (lesson mode only; practice handles its own)
@@ -692,7 +693,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
           )}
 
           <div className="flex-shrink-0 flex items-center gap-2">
-            <HeartDisplay />
+            {!adapter?.noHearts && <HeartDisplay />}
             {isDoubleXp && (
               <div
                 className="flex items-center"
@@ -745,7 +746,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         ) : displayQuestion ? (
         <>
         <div
-          className="flex-1 overflow-y-auto overflow-x-hidden"
+          className={`flex-1 overflow-y-auto overflow-x-hidden${hasBackground ? ' lesson-has-background' : ''}`}
           style={{
             padding: '16px 20px 20px',
             position: 'relative',

@@ -6,6 +6,7 @@ import type { CourseQuestion } from '@/data/course/types';
 import { MoneyText } from '@/components/ui/MoneyText';
 import { Mascot, type MascotPose } from '@/components/ui/Mascot';
 import { useLessonColors } from '@/lib/lessonColors';
+import { STORAGE_KEYS } from '@/lib/storage-keys';
 
 const DiagramDisplay = memo(function DiagramDisplay({ html, cardBg, border }: { html: string; cardBg: string; border: string }) {
   const sanitised = html
@@ -58,12 +59,12 @@ export default function TeachingCard({ question, unitColor, onGotIt }: TeachingC
   // Resolve localized explanation variant
   const [country, setCountry] = useState<string | null>(null);
   useEffect(() => {
-    setCountry(localStorage.getItem('octokeen-country'));
+    setCountry(localStorage.getItem(STORAGE_KEYS.COUNTRY));
   }, []);
   const displayExplanation = (country && question.variants?.[country]) || question.explanation;
 
   return (
-    <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+    <div className="teaching-card flex flex-col flex-1" style={{ minHeight: '100%' }}>
       <div className="flex flex-col" style={{ gap: 20, paddingTop: 12 }}>
         {/* Mascot with speech bubble */}
         <motion.div

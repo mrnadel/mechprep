@@ -875,3 +875,12 @@
 :is(.dark .disabled\:text-gray-400:disabled) {
   color: var(--color-surface-500) !important;
 }
+
+/* ─── Lesson Background Glass Overrides ─── */
+.lesson-has-background .question-card,
+.lesson-has-background .teaching-card {
+  background: rgba(15, 23, 42, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

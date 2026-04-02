@@ -232,7 +232,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
     );
 
     return (
-      <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+      <div className="question-card flex flex-col flex-1" style={{ minHeight: '100%' }}>
         {/* Question content - top area */}
         <div className="flex flex-col" style={{ gap: 12 }}>
           {/* Action title */}
