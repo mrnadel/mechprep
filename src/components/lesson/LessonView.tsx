@@ -518,7 +518,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         role="main"
         aria-label={adapter ? 'Practice view' : 'Lesson view'}
         style={{
-          backgroundColor: c.bg,
+          backgroundColor: hasBackground ? 'transparent' : c.bg,
           paddingTop: 'env(safe-area-inset-top, 0px)',
         }}
       >
