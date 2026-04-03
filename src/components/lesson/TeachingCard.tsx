@@ -34,13 +34,20 @@ const TEACHING_POSES: MascotPose[] = [
   'excited', 'thinking', 'proud', 'winking', 'laughing', 'neutral', 'explorer',
 ];
 
+// Space-themed poses mixed with a few general ones for variety
+const SPACE_POSES: MascotPose[] = [
+  'space-astronaut', 'space-flag', 'space-ufo', 'space-moon',
+  'excited', 'thinking', 'explorer',
+];
+
 // Pick a stable pose based on question ID
-function getPoseForQuestion(questionId: string): MascotPose {
+function getPoseForQuestion(questionId: string, useSpacePoses: boolean): MascotPose {
+  const poses = useSpacePoses ? SPACE_POSES : TEACHING_POSES;
   let hash = 0;
   for (let i = 0; i < questionId.length; i++) {
     hash = ((hash << 5) - hash + questionId.charCodeAt(i)) | 0;
   }
-  return TEACHING_POSES[Math.abs(hash) % TEACHING_POSES.length];
+  return poses[Math.abs(hash) % poses.length];
 }
 
 interface TeachingCardProps {
@@ -61,7 +68,7 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
   const titleMatch = question.question.match(/^(\p{Emoji_Presentation}|\p{Emoji}\uFE0F?)\s*/u);
   const title = titleMatch ? question.question.slice(titleMatch[0].length) : question.question;
 
-  const pose = useMemo(() => getPoseForQuestion(question.id), [question.id]);
+  const pose = useMemo(() => getPoseForQuestion(question.id, !!hasBackground), [question.id, hasBackground]);
 
   // Resolve localized explanation variant
   const [country, setCountry] = useState<string | null>(null);
