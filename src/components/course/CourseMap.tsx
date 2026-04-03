@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
+import { useEffect, useLayoutEffect, useRef, useCallback, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -13,6 +13,8 @@ import { getUnitTheme, type UnitTheme } from '@/lib/unitThemes';
 import { UpgradeModal } from '@/components/ui/UpgradeModal';
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
 import { LessonNode } from './LessonNode';
+import { UnitHeroHeader, HERO_EXPANDED_HEIGHT, HERO_COMPACT_HEIGHT, HERO_MORPH_DISTANCE } from './UnitHeroHeader';
+import { getUnitBackground } from '@/lib/unitBackgrounds';
 import { useIsDark } from '@/store/useThemeStore';
 
 type JumpModalType =
@@ -239,7 +241,6 @@ export function CourseMap() {
   const currentUnitRef = useRef<HTMLDivElement>(null);
   const currentLessonRef = useRef<HTMLDivElement>(null);
   const unitElsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const headerRef = useRef<HTMLDivElement>(null);
   const scrollDirection = useScrollDirection(currentLessonRef, scrollRef);
   const [headerStyle, setHeaderStyle] = useState({ left: 0, width: 0, top: 0 });
   const progress = useCourseStore((s) => s.progress);
@@ -261,6 +262,8 @@ export function CourseMap() {
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
   const [jumpModal, setJumpModal] = useState<JumpModalType | null>(null);
   const [visibleUnitIndex, setVisibleUnitIndex] = useState(0);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const morphValueRef = useRef(0);
 
   const isFreeLocked = useCallback((unitIndex: number) =>
     !isGuest && !isProUser && !isUnitUnlocked(LIMITS.free.unlockedUnits, unitIndex), [isGuest, isProUser]);
@@ -481,7 +484,6 @@ export function CourseMap() {
   useEffect(() => {
     let lastIndex = 0;
     let lastTop = 0;
-
     const handleScroll = () => {
       // Compute top offset: below the sticky CourseHeader
       const courseHeader = document.querySelector('header.sticky');
@@ -507,6 +509,23 @@ export function CourseMap() {
         lastIndex = newIndex;
         setVisibleUnitIndex(newIndex);
       }
+
+      // 3. Hero morph — direct DOM update, no React state
+      const visibleEl = unitElsRef.current[newIndex];
+      if (visibleEl && heroRef.current) {
+        let mp: number;
+        if (newIndex === 0) {
+          // First unit: morph from spacer, 1:1 rate (no delay)
+          const scrolled = (topOffset + HERO_EXPANDED_HEIGHT) - visibleEl.getBoundingClientRect().top;
+          mp = Math.min(1, Math.max(0, scrolled / HERO_MORPH_DISTANCE));
+        } else {
+          // Subsequent units: re-expand when entering, 2:1 rate
+          const scrolled = (topOffset + HERO_COMPACT_HEIGHT) - visibleEl.getBoundingClientRect().top;
+          mp = Math.min(1, Math.max(0, (scrolled * 2) / HERO_MORPH_DISTANCE));
+        }
+        morphValueRef.current = mp;
+        heroRef.current.style.setProperty('--mp', mp.toFixed(3));
+      }
     };
 
     // Run once on mount to set initial top
@@ -524,7 +543,11 @@ export function CourseMap() {
   ).length ?? 0;
   const floatingAllGolden = floatingUnit && floatingCompleted === floatingUnit.lessons.length &&
     floatingUnit.lessons.every((l) => progress.completedLessons[l.id]?.golden);
-  const floatingBg = floatingAllGolden ? '#FFB800' : floatingTheme.color;
+
+  // Restore --mp after React re-renders (e.g. unit change) to avoid 1-frame flash
+  useLayoutEffect(() => {
+    heroRef.current?.style.setProperty('--mp', morphValueRef.current.toFixed(3));
+  });
 
   return (
     <div
@@ -536,90 +559,26 @@ export function CourseMap() {
         WebkitOverflowScrolling: 'touch',
       }}
     >
-      {/* Floating unit header — always fixed below CourseHeader + DailyGoalBar */}
+      {/* Morphing unit hero header */}
       {floatingUnit && (
-        <div
-          ref={headerRef}
-          style={{
-            position: 'fixed',
-            top: headerStyle.top,
-            left: headerStyle.left,
-            width: headerStyle.width,
-            zIndex: 30,
-            background: 'transparent',
-            paddingBottom: 6,
-            transition: 'top 0.15s ease',
-          }}
-        >
-          <div className="mx-auto" style={{ maxWidth: 544, padding: '0 12px' }}>
-            <button
-              onClick={() => router.push('/units')}
-              className="active:scale-[0.99] transition-transform duration-75"
-              style={{
-                display: 'flex',
-                width: '100%',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: 12,
-                background: floatingBg,
-                borderRadius: 16,
-                padding: '10px 16px 12px',
-                border: 'none',
-                cursor: 'pointer',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
-                transition: 'background-color 0.3s ease',
-                WebkitTapHighlightColor: 'transparent',
-              }}
-              aria-label={`${hasSections ? `Section ${currentSection.sectionIndex}, ` : ''}Unit ${visibleUnitIndex + 1}: ${floatingUnit.title}. Tap to browse.`}
-            >
-              <div style={{ textAlign: 'left', minWidth: 0, flex: 1 }}>
-                <div style={{
-                  fontSize: 11,
-                  fontWeight: 800,
-                  textTransform: 'uppercase',
-                  letterSpacing: 1.2,
-                  color: 'rgba(255,255,255,0.6)',
-                }}>
-                  {hasSections
-                    ? `Section ${currentSection.sectionIndex}, Unit ${visibleUnitIndex + 1}`
-                    : `Unit ${visibleUnitIndex + 1}`}
-                </div>
-                <div
-                  className="truncate"
-                  style={{
-                    fontSize: 17,
-                    fontWeight: 800,
-                    color: '#FFFFFF',
-                    lineHeight: 1.25,
-                  }}
-                >
-                  {floatingUnit.title}
-                </div>
-              </div>
-              {/* Guide icon */}
-              <div style={{
-                width: 34,
-                height: 34,
-                borderRadius: 10,
-                background: 'rgba(255,255,255,0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-              }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 19.5v-15A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M9 7h6" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </div>
-            </button>
-          </div>
-        </div>
+        <UnitHeroHeader
+          ref={heroRef}
+          unit={floatingUnit}
+          unitIndex={visibleUnitIndex}
+          completedInUnit={floatingCompleted}
+          totalInUnit={floatingUnit.lessons.length}
+          isAllGolden={!!floatingAllGolden}
+          theme={floatingTheme}
+          professionId={activeProfession}
+          hasSections={hasSections}
+          sectionIndex={currentSection.sectionIndex}
+          positionStyle={headerStyle}
+          onBrowseClick={() => router.push('/units')}
+        />
       )}
 
-      {/* Spacer accounts for the fixed header height */}
-      <div style={{ height: headerRef.current?.offsetHeight ?? 62 }} aria-hidden />
+      {/* Spacer accounts for the hero header height */}
+      <div style={{ height: HERO_EXPANDED_HEIGHT }} aria-hidden />
 
       {/* Units container */}
       <div
@@ -651,24 +610,48 @@ export function CourseMap() {
                 animationDelay: `${Math.min(localIdx * 0.1, 0.5)}s`,
               }}
             >
-              {/* Unit name divider between units */}
-              {localIdx > 0 && (
-                <div
-                  className="flex items-center"
-                  style={{ gap: 16, padding: '28px 8px 12px' }}
-                >
-                  <div style={{ flex: 1, height: 2, borderRadius: 1, background: isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)' }} />
-                  <span style={{
-                    fontSize: 15,
-                    fontWeight: 700,
-                    color: isDark ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.3)',
-                    whiteSpace: 'nowrap',
-                  }}>
-                    {unit.title}
-                  </span>
-                  <div style={{ flex: 1, height: 2, borderRadius: 1, background: isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)' }} />
-                </div>
-              )}
+              {/* Inline unit hero banner — scroll buffer for floating header re-expansion */}
+              {localIdx > 0 && (() => {
+                const bg = getUnitBackground(unitIndex);
+                const bannerBg = isAllGolden ? '#FFB800' : theme.color;
+                const pct = unit.lessons.length > 0 ? (completedInUnit / unit.lessons.length) * 100 : 0;
+                return (
+                  <div
+                    style={{
+                      borderRadius: 20,
+                      backgroundColor: bannerBg,
+                      padding: '18px 20px 16px',
+                      marginTop: 24,
+                      marginBottom: 8,
+                      minHeight: 160,
+                      position: 'relative',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <div aria-hidden style={{ position: 'absolute', inset: 0, background: bg.css, backgroundSize: bg.size, pointerEvents: 'none' }} />
+                    <div aria-hidden style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: '50%', background: 'linear-gradient(to top, rgba(0,0,0,0.1) 0%, transparent 100%)', pointerEvents: 'none' }} />
+                    <div style={{ position: 'relative' }}>
+                      <div style={{ fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.2, color: 'rgba(255,255,255,0.6)' }}>
+                        {hasSections ? `Section ${currentSection.sectionIndex}, Unit ${unitIndex + 1}` : `Unit ${unitIndex + 1}`}
+                      </div>
+                      <div style={{ fontSize: 20, fontWeight: 800, color: '#FFFFFF', lineHeight: 1.25 }}>
+                        {unit.title}
+                      </div>
+                      <div className="line-clamp-2" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.7)', marginTop: 4, lineHeight: 1.35 }}>
+                        {unit.description}
+                      </div>
+                      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <div style={{ flex: 1, height: 8, borderRadius: 4, background: 'rgba(0,0,0,0.15)', overflow: 'hidden' }}>
+                          <div style={{ width: `${pct}%`, height: '100%', borderRadius: 4, backgroundColor: '#FFFFFF', transition: 'width 0.4s ease' }} />
+                        </div>
+                        <span style={{ fontSize: 12, fontWeight: 800, color: 'rgba(255,255,255,0.75)', whiteSpace: 'nowrap' }}>
+                          {isAllGolden ? '\u2728 Mastered!' : `${completedInUnit}/${unit.lessons.length}`}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()}
 
               {/* "Jump here" button for placement-test-eligible locked units */}
               {isUnitJumpable(unitIndex) && (
