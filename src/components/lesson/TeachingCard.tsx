@@ -181,8 +181,8 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
               margin: '0 auto',
               padding: '12px 16px',
               borderRadius: 14,
-              background: `${unitColor}0A`,
-              border: `1.5px solid ${unitColor}20`,
+              background: bg,
+              border: `2px solid ${borderColor}`,
             }}
           >
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
