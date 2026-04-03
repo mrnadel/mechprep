@@ -252,7 +252,7 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                             transition: 'background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease',
                           }}
                         >
-                          <GlossaryText text={items[originalIdx]} /> {isCorrect === true ? '✓' : isCorrect === false ? '✗' : '×'}
+                          {items[originalIdx]} {isCorrect === true ? '✓' : isCorrect === false ? '✗' : '×'}
                         </motion.button>
                       );
                     })}
@@ -322,7 +322,7 @@ const SortBucketsCard = forwardRef<QuestionCardHandle, SortBucketsCardProps>(
                       zIndex: 10,
                     }}
                   >
-                    <GlossaryText text={items[originalIdx]} />
+                    {items[originalIdx]}
                   </motion.div>
                 );
               })}

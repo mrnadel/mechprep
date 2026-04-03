@@ -777,7 +777,7 @@ export const useStore = create<AppState>()(
           totalXp: data.totalXp,
           currentLevel: updateLevel(data.totalXp),
           currentStreak: data.streak,
-          longestStreak: Math.max(progress.longestStreak, data.streak),
+          longestStreak: data.streak,
           lastActiveDate: data.totalQuestions > 0 ? getTodayString() : '',
           weakAreas: [],
           strongAreas: data.topicProgress

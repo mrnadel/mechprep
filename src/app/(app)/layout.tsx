@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useDbSync } from '@/hooks/useDbSync';
-import { DebugTierToggle } from '@/components/dev/DebugTierToggle';
+
 import { useEngagementInit } from '@/lib/engagement-init';
 import { useFlagStore } from '@/hooks/useFeatureFlags';
 import Footer from '@/components/layout/Footer';
@@ -56,7 +56,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       {/* Bottom nav for mobile navigation */}
       <MobileBottomNav />
 
-      <DebugTierToggle />
       <ToastContainer />
       <StoreToastBridge />
       <PushPrompt />

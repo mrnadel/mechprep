@@ -453,7 +453,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                       transition: 'color 0.2s ease',
                     }}
                   >
-                    <GlossaryText text={option} />
+                    {option}
                   </span>
                 </motion.button>
               );

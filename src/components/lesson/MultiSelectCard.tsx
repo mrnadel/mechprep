@@ -194,7 +194,7 @@ const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
                   {checkContent}
                 </motion.span>
                 <span style={{ fontSize: 14.5, fontWeight: 700, color: textColor, lineHeight: 1.3 }}>
-                  <GlossaryText text={option} />
+                  {option}
                 </span>
               </motion.button>
             );

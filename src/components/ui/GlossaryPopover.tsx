@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import type { GlossaryMatcher } from '@/lib/glossary-matcher';
 
 interface GlossaryPopoverProps {
   entry: { term: string; definition: string; relatedTerms?: string[] };
@@ -8,6 +9,63 @@ interface GlossaryPopoverProps {
   accentColor: string;
   onClose: () => void;
   onRelatedTermClick: (term: string) => void;
+  matcher?: GlossaryMatcher | null;
+}
+
+/** Render definition text with glossary terms as tappable links. */
+function renderDefinition(
+  text: string,
+  matcher: GlossaryMatcher | null | undefined,
+  currentTerm: string,
+  accentColor: string,
+  onTermClick: (term: string) => void,
+): ReactNode {
+  if (!matcher) return text;
+
+  // Find terms in the definition, but skip the term we're already showing
+  const matches = matcher.findTerms(text)
+    .filter(m => m.term.toLowerCase() !== currentTerm.toLowerCase());
+
+  if (matches.length === 0) return text;
+
+  const parts: ReactNode[] = [];
+  let last = 0;
+
+  for (const m of matches) {
+    if (m.start > last) {
+      parts.push(text.slice(last, m.start));
+    }
+    const term = m.term;
+    parts.push(
+      <button
+        key={`${m.start}-${term}`}
+        type="button"
+        onClick={() => onTermClick(term)}
+        style={{
+          display: 'inline',
+          padding: 0,
+          margin: 0,
+          background: 'none',
+          font: 'inherit',
+          lineHeight: 'inherit',
+          cursor: 'pointer',
+          border: 'none',
+          borderBottom: `1.5px dotted ${accentColor}`,
+          color: accentColor,
+          fontWeight: 600,
+        }}
+      >
+        {text.slice(m.start, m.end)}
+      </button>,
+    );
+    last = m.end;
+  }
+
+  if (last < text.length) {
+    parts.push(text.slice(last));
+  }
+
+  return parts;
 }
 
 export function GlossaryPopover({
@@ -16,6 +74,7 @@ export function GlossaryPopover({
   accentColor,
   onClose,
   onRelatedTermClick,
+  matcher,
 }: GlossaryPopoverProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [placement, setPlacement] = useState<'above' | 'below'>('below');
@@ -70,7 +129,7 @@ export function GlossaryPopover({
         left,
         zIndex: 9999,
       }}
-      className="w-[280px] rounded-xl border border-surface-200 bg-white p-3.5 shadow-lg animate-scale-in dark:border-surface-700 dark:bg-surface-900"
+      className="w-[280px] rounded-xl border-2 border-surface-300 bg-white p-3.5 shadow-lg animate-scale-in dark:border-surface-600 dark:bg-surface-900"
     >
       {/* Arrow */}
       <div
@@ -93,11 +152,13 @@ export function GlossaryPopover({
         {entry.term}
       </p>
       <p className="mt-1 text-sm leading-relaxed text-surface-500">
-        {entry.definition}
+        {renderDefinition(entry.definition, matcher, entry.term, accentColor, onRelatedTermClick)}
       </p>
 
       {entry.relatedTerms && entry.relatedTerms.length > 0 && (
-        <div className="mt-2 flex flex-wrap gap-1.5">
+        <div className="mt-2.5">
+          <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-surface-400">Related</p>
+        <div className="flex flex-wrap gap-1.5">
           {entry.relatedTerms.map(rt => (
             <button
               key={rt}
@@ -108,6 +169,7 @@ export function GlossaryPopover({
               {rt}
             </button>
           ))}
+        </div>
         </div>
       )}
     </div>

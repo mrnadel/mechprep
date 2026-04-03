@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect, useImperativeHandle, forwardRef, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, Reorder } from 'framer-motion';
 import type { CourseQuestion } from '@/data/course/types';
 import type { QuestionCardHandle } from './QuestionCard';
 import { GlossaryText } from '@/components/ui/GlossaryText';
@@ -15,8 +15,17 @@ interface RankOrderCardProps {
   unitColor: string;
 }
 
-const RANK_MEDALS = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣'];
-const RANK_COLORS = ['#FFD700', '#C0C0C0', '#CD7F32', '#888', '#888', '#888', '#888', '#888'];
+const RANK_MEDALS = ['\u{1F947}', '\u{1F948}', '\u{1F949}', '4\uFE0F\u20E3', '5\uFE0F\u20E3', '6\uFE0F\u20E3', '7\uFE0F\u20E3', '8\uFE0F\u20E3'];
+
+function GripHandle({ color }: { color: string }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 3, padding: '4px 2px', cursor: 'grab', touchAction: 'none' }}>
+      {[0, 1, 2].map(i => (
+        <div key={i} style={{ width: 16, height: 2, borderRadius: 1, background: color, opacity: 0.5 }} />
+      ))}
+    </div>
+  );
+}
 
 const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
   function RankOrderCard({ question, onAnswer, onSelectionChange, answered, unitColor }, ref) {
@@ -25,7 +34,6 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
     const correctOrder = question.correctOrder ?? items.map((_, i) => i);
     const criteria = question.rankCriteria ?? 'Rank these items';
 
-    // Shuffle initial order
     const initialOrder = useMemo(() => {
       const indices = items.map((_, i) => i);
       for (let i = indices.length - 1; i > 0; i--) {
@@ -41,26 +49,22 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
 
     const [order, setOrder] = useState<number[]>(initialOrder);
     const [results, setResults] = useState<boolean[] | null>(null);
+    const [dragging, setDragging] = useState<number | null>(null);
 
     useEffect(() => {
       setOrder(initialOrder);
       setResults(null);
+      setDragging(null);
     }, [question.id, initialOrder]);
 
     useEffect(() => {
       onSelectionChange(true);
     }, [onSelectionChange]);
 
-    const moveItem = useCallback((fromIdx: number, direction: -1 | 1) => {
+    const handleReorder = useCallback((newOrder: number[]) => {
       if (answered) return;
-      const toIdx = fromIdx + direction;
-      if (toIdx < 0 || toIdx >= order.length) return;
-      setOrder(prev => {
-        const next = [...prev];
-        [next[fromIdx], next[toIdx]] = [next[toIdx], next[fromIdx]];
-        return next;
-      });
-    }, [answered, order.length]);
+      setOrder(newOrder);
+    }, [answered]);
 
     const handleCheck = useCallback(() => {
       if (answered) return;
@@ -81,7 +85,7 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
     }), [handleCheck]);
 
     return (
-      <div className="flex flex-col flex-1" style={{ minHeight: '100%' }}>
+      <div className="flex flex-col flex-1">
         {/* Action title */}
         <div style={{ fontSize: 12, fontWeight: 800, color: c.subtitle, textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 6 }}>
           Rank from best to worst
@@ -99,10 +103,10 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '6px 12px', borderRadius: 20, alignSelf: 'flex-start',
             background: `${unitColor}12`, border: `1.5px solid ${unitColor}30`,
-            fontSize: 12, fontWeight: 700, color: unitColor, marginBottom: 10,
+            fontSize: 12, fontWeight: 700, color: unitColor, marginBottom: 14,
           }}
         >
-          📊 {criteria}
+          {criteria}
         </motion.div>
 
         {question.hint && !answered && (
@@ -113,123 +117,95 @@ const RankOrderCard = forwardRef<QuestionCardHandle, RankOrderCardProps>(
             style={{
               padding: '8px 12px', borderRadius: 10, background: c.hintBg,
               border: '1.5px solid #FFE4B8', fontSize: 13, fontWeight: 600,
-              color: c.hintColor, lineHeight: 1.4, marginBottom: 8,
+              color: c.hintColor, lineHeight: 1.4, marginBottom: 12,
             }}
           >
             <GlossaryText text={question.hint} />
           </motion.div>
         )}
 
-        <div style={{ flex: 1, minHeight: 8 }} />
-
         {/* Ranked list */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          <AnimatePresence>
-            {order.map((itemIdx, rank) => {
-              const isCorrect = results ? results[rank] : null;
-              const medal = RANK_MEDALS[rank] ?? `${rank + 1}`;
-              const medalColor = RANK_COLORS[rank] ?? '#888';
+        <Reorder.Group
+          axis="y"
+          values={order}
+          onReorder={handleReorder}
+          style={{ display: 'flex', flexDirection: 'column', gap: 8, listStyle: 'none', padding: 0, margin: 0 }}
+        >
+          {order.map((itemIdx, rank) => {
+            const isCorrect = results ? results[rank] : null;
+            const isDragging = dragging === itemIdx;
+            const medal = RANK_MEDALS[rank] ?? `${rank + 1}`;
 
-              let bg = c.cardBg;
-              let border = `2px solid ${c.border}`;
-              let textColor = c.title;
-              let shadow = 'none';
+            let bg = c.cardBg;
+            let border = `2px solid ${c.border}`;
+            let textColor = c.title;
 
-              if (isCorrect !== null) {
-                if (isCorrect) {
-                  bg = '#D7FFB8'; border = '2px solid #58CC02'; textColor = '#58A700';
-                  shadow = '0 0 12px rgba(88,204,2,0.25)';
-                } else {
-                  bg = '#FFDFE0'; border = '2px solid #FF4B4B'; textColor = '#EA2B2B';
-                }
+            if (isCorrect !== null) {
+              if (isCorrect) {
+                bg = '#D7FFB8'; border = '2px solid #58CC02'; textColor = '#58A700';
+              } else {
+                bg = '#FFDFE0'; border = '2px solid #FF4B4B'; textColor = '#EA2B2B';
               }
+            }
 
-              const revealAnimation = isCorrect !== null
-                ? isCorrect
-                  ? { opacity: 1, scale: [1, 1.05, 1] }
-                  : { opacity: 1, x: [0, -6, 6, -4, 4, 0] }
-                : { opacity: 1 };
+            return (
+              <Reorder.Item
+                key={itemIdx}
+                value={itemIdx}
+                dragListener={!answered}
+                onDragStart={() => setDragging(itemIdx)}
+                onDragEnd={() => setDragging(null)}
+                initial={{ opacity: 0, y: 10 }}
+                animate={
+                  isCorrect !== null
+                    ? isCorrect
+                      ? { opacity: 1, scale: [1, 1.05, 1], y: 0 }
+                      : { opacity: 1, x: [0, -6, 6, -4, 4, 0], y: 0 }
+                    : { opacity: 1, y: 0 }
+                }
+                whileDrag={{ scale: 1.04, boxShadow: '0 8px 24px rgba(0,0,0,0.18)', zIndex: 10 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 28, delay: results === null ? rank * 0.05 : 0 }}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 10,
+                  padding: '12px 14px', borderRadius: 14, background: bg, border,
+                  cursor: answered ? 'default' : 'grab',
+                  transition: 'background 0.2s, border 0.2s',
+                  ...(isDragging ? { zIndex: 10 } : {}),
+                }}
+              >
+                {/* Medal/rank */}
+                <span style={{
+                  fontSize: 22, lineHeight: 1, flexShrink: 0, width: 32, textAlign: 'center',
+                  filter: isCorrect === false ? 'grayscale(1)' : 'none',
+                }}>
+                  {medal}
+                </span>
 
-              return (
-                <motion.div
-                  key={`rank-${itemIdx}`}
-                  layout
-                  initial={{ opacity: 0, x: -16 }}
-                  animate={revealAnimation}
-                  transition={{ type: 'spring', stiffness: 400, damping: 25, delay: rank * 0.05 }}
-                  style={{
-                    display: 'flex', alignItems: 'center', gap: 10,
-                    padding: '10px 12px', borderRadius: 14, background: bg, border,
-                    boxShadow: shadow, transition: 'background 0.2s, border 0.2s, box-shadow 0.2s',
-                  }}
-                >
-                  {/* Medal/rank */}
-                  <span style={{
-                    fontSize: 22, lineHeight: 1, flexShrink: 0, width: 32, textAlign: 'center',
-                    filter: isCorrect === false ? 'grayscale(1)' : 'none',
-                  }}>
-                    {medal}
-                  </span>
+                {/* Item text */}
+                <span style={{ flex: 1, fontSize: 15, fontWeight: 700, color: textColor, lineHeight: 1.3 }}>
+                  {items[itemIdx]}
+                </span>
 
-                  {/* Item text */}
-                  <span style={{ flex: 1, fontSize: 14, fontWeight: 700, color: textColor, lineHeight: 1.3 }}>
-                    <GlossaryText text={items[itemIdx]} />
-                  </span>
+                {/* Correct rank indicator after answer */}
+                {isCorrect === false && results && (
+                  <motion.span
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    style={{
+                      fontSize: 10, fontWeight: 800, color: '#58A700', background: '#D7FFB8',
+                      padding: '2px 8px', borderRadius: 8,
+                    }}
+                  >
+                    #{correctOrder.indexOf(itemIdx) + 1}
+                  </motion.span>
+                )}
 
-                  {/* Correct rank indicator after answer */}
-                  {isCorrect === false && results && (
-                    <motion.span
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      style={{
-                        fontSize: 10, fontWeight: 800, color: '#58A700', background: '#D7FFB8',
-                        padding: '2px 8px', borderRadius: 8,
-                      }}
-                    >
-                      #{correctOrder.indexOf(itemIdx) + 1}
-                    </motion.span>
-                  )}
-
-                  {/* Move buttons */}
-                  {!answered && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 2, flexShrink: 0 }}>
-                      <motion.button
-                        whileTap={rank !== 0 ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
-                        onClick={() => moveItem(rank, -1)}
-                        disabled={rank === 0}
-                        style={{
-                          width: 28, height: 24, borderRadius: 6, border: 'none',
-                          background: rank === 0 ? c.emptyBg : `${unitColor}15`,
-                          color: rank === 0 ? c.muted : unitColor,
-                          fontSize: 14, fontWeight: 800, cursor: rank === 0 ? 'default' : 'pointer',
-                          display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          boxShadow: rank === 0 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,
-                        }}
-                      >
-                        ▲
-                      </motion.button>
-                      <motion.button
-                        whileTap={rank !== order.length - 1 ? { y: 2, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}
-                        onClick={() => moveItem(rank, 1)}
-                        disabled={rank === order.length - 1}
-                        style={{
-                          width: 28, height: 24, borderRadius: 6, border: 'none',
-                          background: rank === order.length - 1 ? c.emptyBg : `${unitColor}15`,
-                          color: rank === order.length - 1 ? c.muted : unitColor,
-                          fontSize: 14, fontWeight: 800, cursor: rank === order.length - 1 ? 'default' : 'pointer',
-                          display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          boxShadow: rank === order.length - 1 ? 'none' : `0 2px 0 color-mix(in srgb, ${unitColor} 65%, black)`,
-                        }}
-                      >
-                        ▼
-                      </motion.button>
-                    </div>
-                  )}
-                </motion.div>
-              );
-            })}
-          </AnimatePresence>
-        </div>
+                {/* Drag handle */}
+                {!answered && <GripHandle color={unitColor} />}
+              </Reorder.Item>
+            );
+          })}
+        </Reorder.Group>
       </div>
     );
   }

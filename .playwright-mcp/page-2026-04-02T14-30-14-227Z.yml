@@ -1,0 +1,27 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - contentinfo [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e7]: © 2026 Octokeen
+      - navigation "Footer" [ref=e8]:
+        - link "Privacy Policy" [ref=e9] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms of Service" [ref=e10] [cursor=pointer]:
+          - /url: /terms
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: /contact
+  - button "Open Next.js Dev Tools" [ref=e17] [cursor=pointer]:
+    - img [ref=e18]
+  - alert [ref=e21]
+  - dialog "Cookie consent" [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - img [ref=e25]
+        - paragraph [ref=e27]:
+          - text: We use essential cookies to keep you signed in and optional analytics cookies to improve the app.
+          - link "Privacy Policy" [ref=e28] [cursor=pointer]:
+            - /url: /privacy
+      - generic [ref=e29]:
+        - button "Decline" [ref=e30]
+        - button "Accept" [ref=e31]

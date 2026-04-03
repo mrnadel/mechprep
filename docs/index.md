@@ -6,7 +6,7 @@
 - **Type:** Monolith (Next.js 16 App Router)
 - **Primary Language:** TypeScript
 - **Architecture:** Hybrid client-server with Zustand + PostgreSQL
-- **Domain:** Gamified mechanical engineering interview prep (EdTech SaaS)
+- **Domain:** Gamified multi-profession interview prep (EdTech SaaS)
 
 ## Quick Reference
 - **Framework:** Next.js 16.2+ (Turbopack)

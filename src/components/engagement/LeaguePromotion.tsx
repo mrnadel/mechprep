@@ -62,7 +62,7 @@ export function LeaguePromotion() {
 
       <motion.div className="flex items-center justify-center gap-6 mt-6" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>
         <div className="text-center"><p className="text-2xl font-extrabold text-white">#{result.rank}</p><p className="text-xs text-white/50 font-semibold">Final Rank</p></div>
-        {isPromoted && (<><div className="w-px h-8 bg-white/20" /><div className="text-center"><p className="text-2xl font-extrabold text-white">+{LEAGUE_GEM_REWARD_PROMOTION}</p><p className="text-xs text-white/50 font-semibold">Gems Earned</p></div></>)}
+        {isPromoted && (<><div className="w-px h-8 bg-white/20" /><div className="text-center"><p className="text-2xl font-extrabold text-white">+{LEAGUE_GEM_REWARD_PROMOTION}</p><p className="text-xs text-white/50 font-semibold">{CURRENCY.plural} Earned</p></div></>)}
       </motion.div>
     </FullScreenModal>
   );

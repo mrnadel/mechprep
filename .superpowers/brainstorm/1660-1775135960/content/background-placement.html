@@ -1,0 +1,123 @@
+<h2>Where should the lesson background appear?</h2>
+<p class="subtitle">The background (animated SVGs, space scene, etc.) needs a layer to live on. Which approach fits best?</p>
+
+<div class="cards">
+  <!-- Option A: Full-screen behind everything -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div style="position: relative; border-radius: 12px; overflow: hidden; height: 280px; background: linear-gradient(135deg, #0B1120 0%, #1a1a4e 50%, #0B1120 100%);">
+        <!-- Stars -->
+        <div style="position: absolute; inset: 0;">
+          <div style="position:absolute;top:12%;left:20%;width:3px;height:3px;background:#fff;border-radius:50%;box-shadow:0 0 6px #fff"></div>
+          <div style="position:absolute;top:25%;left:65%;width:2px;height:2px;background:#E0E7FF;border-radius:50%;box-shadow:0 0 4px #E0E7FF"></div>
+          <div style="position:absolute;top:8%;left:45%;width:4px;height:4px;background:#FDE68A;border-radius:50%;box-shadow:0 0 8px #FDE68A"></div>
+          <div style="position:absolute;top:40%;left:80%;width:2px;height:2px;background:#fff;border-radius:50%;box-shadow:0 0 4px #fff"></div>
+          <div style="position:absolute;top:55%;left:15%;width:3px;height:3px;background:#C4B5FD;border-radius:50%;box-shadow:0 0 6px #C4B5FD"></div>
+          <div style="position:absolute;top:70%;left:50%;width:2px;height:2px;background:#fff;border-radius:50%;box-shadow:0 0 4px #fff"></div>
+          <div style="position:absolute;top:85%;left:35%;width:3px;height:3px;background:#E0E7FF;border-radius:50%;box-shadow:0 0 5px #E0E7FF"></div>
+        </div>
+        <!-- Header bar -->
+        <div style="padding: 8px 12px; display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); backdrop-filter: blur(4px); border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <div style="width:20px;height:20px;border-radius:4px;background:rgba(255,255,255,0.2)"></div>
+          <div style="flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,0.15)">
+            <div style="width:40%;height:100%;border-radius:3px;background:rgba(99,102,241,0.7)"></div>
+          </div>
+          <div style="width:20px;height:20px;border-radius:4px;background:rgba(255,255,255,0.2)"></div>
+        </div>
+        <!-- Question card (semi-transparent) -->
+        <div style="margin: 20px 16px; padding: 16px; background: rgba(15,23,42,0.75); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
+          <div style="height:10px;width:80%;border-radius:4px;background:rgba(255,255,255,0.3);margin-bottom:10px"></div>
+          <div style="height:8px;width:60%;border-radius:4px;background:rgba(255,255,255,0.15);margin-bottom:16px"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div style="height:32px;border-radius:8px;background:rgba(99,102,241,0.3);border:1px solid rgba(99,102,241,0.4)"></div>
+            <div style="height:32px;border-radius:8px;background:rgba(99,102,241,0.3);border:1px solid rgba(99,102,241,0.4)"></div>
+            <div style="height:32px;border-radius:8px;background:rgba(99,102,241,0.3);border:1px solid rgba(99,102,241,0.4)"></div>
+            <div style="height:32px;border-radius:8px;background:rgba(99,102,241,0.3);border:1px solid rgba(99,102,241,0.4)"></div>
+          </div>
+        </div>
+        <!-- Planet -->
+        <div style="position:absolute;bottom:-20px;right:20px;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg, #6366F1, #4338CA);box-shadow:0 0 20px rgba(99,102,241,0.4)"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Full-Screen Background</h3>
+      <p>Background fills the entire lesson screen. Header, question cards, and buttons float on top with glass/transparent styling. Most immersive.</p>
+    </div>
+  </div>
+
+  <!-- Option B: Behind question area only -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div style="border-radius: 12px; overflow: hidden; height: 280px; background: #0F172A;">
+        <!-- Normal solid header -->
+        <div style="padding: 8px 12px; display: flex; align-items: center; gap: 8px; background: #1E293B; border-bottom: 1px solid #334155;">
+          <div style="width:20px;height:20px;border-radius:4px;background:#334155"></div>
+          <div style="flex:1;height:6px;border-radius:3px;background:#334155">
+            <div style="width:40%;height:100%;border-radius:3px;background:#6366F1"></div>
+          </div>
+          <div style="width:20px;height:20px;border-radius:4px;background:#334155"></div>
+        </div>
+        <!-- Space background zone -->
+        <div style="position: relative; margin: 12px; border-radius: 12px; overflow: hidden; height: 200px; background: linear-gradient(135deg, #0B1120 0%, #1a1a4e 50%, #0B1120 100%); border: 1px solid rgba(99,102,241,0.2);">
+          <!-- Stars -->
+          <div style="position:absolute;top:15%;left:25%;width:2px;height:2px;background:#fff;border-radius:50%;box-shadow:0 0 4px #fff"></div>
+          <div style="position:absolute;top:30%;left:70%;width:3px;height:3px;background:#E0E7FF;border-radius:50%;box-shadow:0 0 6px #E0E7FF"></div>
+          <div style="position:absolute;top:60%;left:40%;width:2px;height:2px;background:#FDE68A;border-radius:50%;box-shadow:0 0 4px #FDE68A"></div>
+          <!-- Question inside -->
+          <div style="padding: 16px;">
+            <div style="height:10px;width:80%;border-radius:4px;background:rgba(255,255,255,0.3);margin-bottom:10px"></div>
+            <div style="height:8px;width:60%;border-radius:4px;background:rgba(255,255,255,0.15);margin-bottom:16px"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <div style="height:28px;border-radius:8px;background:rgba(99,102,241,0.3);border:1px solid rgba(99,102,241,0.4)"></div>
+              <div style="height:28px;border-radius:8px;background:rgba(99,102,241,0.3);border:1px solid rgba(99,102,241,0.4)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Question Zone Only</h3>
+      <p>Background appears only behind the question/content area. Header and footer stay normal. Less immersive, simpler to implement.</p>
+    </div>
+  </div>
+
+  <!-- Option C: Subtle layer behind cards -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div style="position: relative; border-radius: 12px; overflow: hidden; height: 280px; background: #0F172A;">
+        <!-- Subtle background elements peeking around edges -->
+        <div style="position: absolute; inset: 0; opacity: 0.3;">
+          <div style="position:absolute;top:10%;left:8%;width:3px;height:3px;background:#fff;border-radius:50%;box-shadow:0 0 6px #fff"></div>
+          <div style="position:absolute;top:50%;left:5%;width:2px;height:2px;background:#E0E7FF;border-radius:50%;box-shadow:0 0 4px #E0E7FF"></div>
+          <div style="position:absolute;top:80%;left:12%;width:2px;height:2px;background:#C4B5FD;border-radius:50%;box-shadow:0 0 4px #C4B5FD"></div>
+          <div style="position:absolute;top:20%;right:8%;width:3px;height:3px;background:#FDE68A;border-radius:50%;box-shadow:0 0 6px #FDE68A"></div>
+          <div style="position:absolute;top:65%;right:5%;width:2px;height:2px;background:#fff;border-radius:50%;box-shadow:0 0 4px #fff"></div>
+          <div style="position:absolute;bottom:10%;right:12%;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg, #6366F1, #4338CA);box-shadow:0 0 15px rgba(99,102,241,0.3)"></div>
+        </div>
+        <!-- Normal header -->
+        <div style="position:relative;padding: 8px 12px; display: flex; align-items: center; gap: 8px; background: #1E293B; border-bottom: 1px solid #334155;">
+          <div style="width:20px;height:20px;border-radius:4px;background:#334155"></div>
+          <div style="flex:1;height:6px;border-radius:3px;background:#334155">
+            <div style="width:40%;height:100%;border-radius:3px;background:#6366F1"></div>
+          </div>
+          <div style="width:20px;height:20px;border-radius:4px;background:#334155"></div>
+        </div>
+        <!-- Solid question card on top -->
+        <div style="position:relative; margin: 20px 16px; padding: 16px; background: #1E293B; border-radius: 12px; border: 1px solid #334155;">
+          <div style="height:10px;width:80%;border-radius:4px;background:#475569;margin-bottom:10px"></div>
+          <div style="height:8px;width:60%;border-radius:4px;background:#334155;margin-bottom:16px"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div style="height:32px;border-radius:8px;background:#334155;border:1px solid #475569"></div>
+            <div style="height:32px;border-radius:8px;background:#334155;border:1px solid #475569"></div>
+            <div style="height:32px;border-radius:8px;background:#334155;border:1px solid #475569"></div>
+            <div style="height:32px;border-radius:8px;background:#334155;border:1px solid #475569"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Subtle Accent Layer</h3>
+      <p>Background elements (stars, planets) peek around the edges of normal solid cards. Cards stay opaque. Atmospheric without changing readability.</p>
+    </div>
+  </div>
+</div>

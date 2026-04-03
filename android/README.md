@@ -73,7 +73,7 @@ Or drag the APK to an Android emulator.
 3. Upload the `.aab` file
 4. Fill in:
    - App name: Octokeen
-   - Short description: Master mechanical engineering interviews with gamified practice
+   - Short description: Master professional interviews with gamified practice
    - Full description: (see below)
    - Screenshots: phone (2+), 7-inch tablet (1+), 10-inch tablet (1+)
    - Feature graphic: 1024x500 banner

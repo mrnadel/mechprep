@@ -57,7 +57,7 @@ const WORD_ANIMATION_BASE_DELAY = 0.15; // seconds
 const WORD_ANIMATION_STAGGER = 0.025; // seconds per word
 
 function EngagingText({ text, accentColor }: { text: string; accentColor: string }) {
-  const { matcher, sectionIndex, accentColor: glossaryAccent, openPopover } = useGlossary();
+  const { matcher, sectionIndex, accentColor: glossaryAccent, activeTerm, openPopover } = useGlossary();
 
   if (!text) return null;
 
@@ -149,6 +149,7 @@ function EngagingText({ text, accentColor }: { text: string; accentColor: string
           >
             <GlossaryTerm
               accentColor={glossaryAccent}
+              isActive={activeTerm === match.term}
               onTap={(rect) => openPopover(
                 { term: match.term, definition: match.definition, relatedTerms: match.relatedTerms },
                 rect,
@@ -172,7 +173,10 @@ function EngagingText({ text, accentColor }: { text: string; accentColor: string
         for (let wi = 0; wi < parts.length; wi++) {
           const part = parts[wi];
           if (/^\s+$/.test(part)) {
-            // Whitespace: if inside a glossary match, add to buffer
+            // Flush match buffer if whitespace falls past the match end
+            if (activeMatch && plainCharCount >= activeMatch.end) {
+              flushMatchBuffer();
+            }
             if (activeMatch) {
               matchBuffer.push(part);
             } else {

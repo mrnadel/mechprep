@@ -1,6 +1,6 @@
 # Octokeen Design Language
 
-> Comprehensive visual design system for Octokeen — a Duolingo-inspired gamified mechanical engineering interview prep app.
+> Comprehensive visual design system for Octokeen — a Duolingo-inspired gamified multi-profession interview prep app.
 > This document is the single source of truth for Claude (or any AI) designing pages, screens, and components.
 
 ---

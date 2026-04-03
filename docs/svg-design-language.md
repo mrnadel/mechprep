@@ -1,7 +1,7 @@
 # Octokeen SVG Design Language
 
 > Based on [Duolingo's illustration system](https://design.duolingo.com/illustration/shape-language).
-> Mechanical engineering icons that feel playful, approachable, and instantly recognizable.
+> Icons that feel playful, approachable, and instantly recognizable.
 
 ---
 

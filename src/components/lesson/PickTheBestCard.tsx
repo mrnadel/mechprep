@@ -193,7 +193,7 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
                   ⭐
                 </motion.span>
                 <span style={{ fontSize: 14, fontWeight: 700, color: textColor, lineHeight: 1.3 }}>
-                  <GlossaryText text={option} />
+                  {option}
                 </span>
 
                 {/* "BEST" badge after answer */}

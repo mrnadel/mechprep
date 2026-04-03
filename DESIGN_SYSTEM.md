@@ -1,4 +1,4 @@
-# Mechanical Engineering Interview Prep App -- Complete Design System
+# Octokeen — Complete Design System
 
 > Design Specification v1.0
 > Learning Experience + Gamification Architecture

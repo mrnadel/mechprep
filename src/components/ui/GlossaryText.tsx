@@ -5,7 +5,7 @@ import { useGlossary } from '@/components/lesson/GlossaryContext';
 import { GlossaryTerm } from '@/components/ui/GlossaryTerm';
 
 export function GlossaryText({ text }: { text: string }): ReactNode {
-  const { matcher, sectionIndex, accentColor, openPopover } = useGlossary();
+  const { matcher, sectionIndex, accentColor, activeTerm, openPopover } = useGlossary();
 
   if (!text) return null;
   if (!matcher) return <>{text}</>;
@@ -26,6 +26,7 @@ export function GlossaryText({ text }: { text: string }): ReactNode {
       <GlossaryTerm
         key={`${match.term}-${match.start}`}
         accentColor={accentColor}
+        isActive={activeTerm === match.term}
         onTap={(rect) => openPopover(match, rect)}
       >
         {matchedText}

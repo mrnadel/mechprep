@@ -194,7 +194,7 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                     boxShadow: shadow,
                   }}
                 >
-                  <GlossaryText text={item} />
+                  {item}
                 </motion.button>
               );
             })}
@@ -261,7 +261,7 @@ const MatchPairsCard = forwardRef<QuestionCardHandle, MatchPairsCardProps>(
                     boxShadow: shadow,
                   }}
                 >
-                  <GlossaryText text={item} />
+                  {item}
                 </motion.button>
               );
             })}

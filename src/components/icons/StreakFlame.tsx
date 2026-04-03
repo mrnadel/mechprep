@@ -27,6 +27,7 @@ export function StreakFlame({ state = 'active', size = 24, className }: StreakFl
       width={size}
       height={size}
       className={className}
+      style={{ width: 'auto', height: 'auto' }}
       draggable={false}
     />
   );

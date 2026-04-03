@@ -5,11 +5,12 @@ import { useCallback, useRef } from 'react';
 interface GlossaryTermProps {
   children: React.ReactNode;
   accentColor: string;
+  isActive?: boolean;
   onTap: (rect: DOMRect) => void;
 }
 
-export function GlossaryTerm({ children, accentColor, onTap }: GlossaryTermProps) {
-  const ref = useRef<HTMLButtonElement>(null);
+export function GlossaryTerm({ children, accentColor, isActive, onTap }: GlossaryTermProps) {
+  const ref = useRef<HTMLSpanElement>(null);
 
   const handleClick = useCallback(() => {
     if (ref.current) {
@@ -18,10 +19,12 @@ export function GlossaryTerm({ children, accentColor, onTap }: GlossaryTermProps
   }, [onTap]);
 
   return (
-    <button
+    <span
       ref={ref}
-      type="button"
+      role="button"
+      tabIndex={0}
       onClick={handleClick}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(); } }}
       aria-haspopup="dialog"
       className="glossary-term"
       style={{
@@ -32,12 +35,13 @@ export function GlossaryTerm({ children, accentColor, onTap }: GlossaryTermProps
         font: 'inherit',
         lineHeight: 'inherit',
         cursor: 'pointer',
-        borderBottom: `1.5px dotted ${accentColor}40`,
-        color: `color-mix(in oklch, currentColor 80%, ${accentColor})`,
-        transition: 'color 0.15s, border-color 0.15s',
+        borderBottom: `1.5px dotted ${accentColor}`,
+        color: `color-mix(in oklch, currentColor 65%, ${accentColor})`,
+        fontWeight: isActive ? 700 : 'inherit',
+        transition: 'color 0.15s, border-color 0.15s, font-weight 0.15s',
       }}
     >
       {children}
-    </button>
+    </span>
   );
 }

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { playSound } from '@/lib/sounds';
 import { useEngagementStore, useComeback } from '@/store/useEngagementStore';
 import { comebackQuests } from '@/data/quests';
-import { Gem } from 'lucide-react';
+import { CurrencyIcon } from '@/components/ui/CurrencyIcon';
 import { GameButton } from '@/components/ui/GameButton';
 import { FullScreenModal } from '@/components/ui/FullScreenModal';
 import { MascotWithGlow } from '@/components/ui/MascotWithGlow';
@@ -69,7 +69,7 @@ export function WelcomeBack() {
                   <p className="text-sm font-bold text-white truncate">{quest.title}</p>
                 </div>
                 <div className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-bold flex-shrink-0 bg-white/15 text-white">
-                  <Gem className="w-3 h-3" />
+                  <CurrencyIcon size={12} />
                   <span>{quest.reward.gems}</span>
                 </div>
               </div>

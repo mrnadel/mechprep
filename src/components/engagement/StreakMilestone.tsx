@@ -3,7 +3,9 @@
 import { type ComponentType, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { playSound } from '@/lib/sounds';
-import { Gem, Tag, Image as ImageIcon } from 'lucide-react';
+import { Tag, Image as ImageIcon } from 'lucide-react';
+import { CurrencyIcon } from '@/components/ui/CurrencyIcon';
+import { CURRENCY } from '@/data/currency';
 import { StreakFlame } from '@/components/icons/StreakFlame';
 import type { StreakMilestoneDefinition } from '@/data/engagement-types';
 import { streakMilestones } from '@/data/streak-milestones';
@@ -51,9 +53,9 @@ export function StreakMilestone({ milestone, onClose }: Props) {
       <h2 id="streak-milestone-title" className="text-[26px] font-extrabold text-white mb-2">{milestone.badgeName}</h2>
 
       <div className="flex items-center justify-center gap-1.5">
-        <Gem className="w-4 h-4 text-white/80" />
+        <CurrencyIcon size={16} />
         <span className="text-lg font-extrabold text-white">+{milestone.gems}</span>
-        <span className="text-sm text-white/60 font-semibold">gems</span>
+        <span className="text-sm text-white/60 font-semibold">{CURRENCY.plural}</span>
       </div>
 
       {(milestone.hasFrame || milestone.hasTitle) && (

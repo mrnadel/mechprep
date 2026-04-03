@@ -176,7 +176,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                             boxShadow: isCorrect === true ? '0 0 8px rgba(88,204,2,0.2)' : 'none',
                           }}
                         >
-                          <GlossaryText text={items[originalIdx]} />
+                          {items[originalIdx]}
                           {isCorrect !== null && (isCorrect ? ' ✓' : ' ✗')}
                         </motion.div>
                       );
@@ -211,7 +211,7 @@ const CategorySwipeCard = forwardRef<QuestionCardHandle, CategorySwipeCardProps>
                   fontSize: 18, fontWeight: 800, color: c.title, textAlign: 'center',
                   width: '85%', maxWidth: 320, userSelect: 'none',
                 }}>
-                  <GlossaryText text={items[currentOriginalIdx]} />
+                  {items[currentOriginalIdx]}
                 </div>
               </motion.div>
             </AnimatePresence>

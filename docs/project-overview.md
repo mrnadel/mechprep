@@ -9,12 +9,12 @@
 
 ## 1. What Is This Project?
 
-**Octokeen** is a Duolingo-style gamified mechanical engineering interview prep web application. It helps mechanical engineers practice core ME topics through structured courses, adaptive practice sessions, and engagement systems (streaks, XP, leagues, quests, achievements, gems).
+**Octokeen** is a Duolingo-style gamified multi-profession learning platform. Users practice interview prep and professional knowledge across multiple courses through structured lessons, adaptive practice sessions, and engagement systems (streaks, XP, leagues, quests, achievements, gems).
 
-- **Domain:** EdTech / Engineering interview preparation
+- **Domain:** EdTech / Multi-profession interview preparation
 - **URL:** https://octokeen.com
 - **Monetization:** Freemium SaaS — Free tier (Unit 1 + 5 daily questions) / Pro tier ($9/mo or $79/yr via Paddle)
-- **Target Users:** Mechanical engineers preparing for technical interviews
+- **Target Users:** Professionals preparing for technical interviews across various fields
 
 ---
 
@@ -150,7 +150,7 @@ src/
 │   ├── quests.ts                 # Quest definitions (daily/weekly)
 │   ├── seed-progress.ts          # Demo progress data
 │   ├── streak-milestones.ts      # Streak milestone rewards
-│   ├── topics.ts                 # Topic definitions with subtopics (11 ME topics)
+│   ├── topics.ts                 # Topic definitions with subtopics
 │   └── types.ts                  # Core type system (Question variants, Progress, etc.)
 │
 ├── hooks/
@@ -555,4 +555,4 @@ designs/                          # Design assets
 - **Zustand stores:** 5 persisted stores
 - **Course units:** 10 core + HTW supplemental
 - **Question types:** 3 (course) + 11 (practice/legacy)
-- **ME topics:** 11 engineering topics with subtopics
+- **Topics:** Multiple profession-specific topic sets with subtopics

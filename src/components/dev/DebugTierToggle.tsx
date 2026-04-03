@@ -292,13 +292,23 @@ export function DebugTierToggle() {
   const hasDraggedRef = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Load saved position
+  // Load saved position (clamped to viewport so it never ends up off-screen)
   useEffect(() => {
     try {
       const saved = localStorage.getItem('dev-btn-pos');
       if (saved) {
         const parsed = JSON.parse(saved);
-        setPos({ x: parsed.x ?? 0, y: parsed.y ?? 0 });
+        const x = parsed.x ?? 0;
+        const y = parsed.y ?? 0;
+        // Default origin is bottom:5rem left:1rem — clamp so button stays visible
+        const maxX = window.innerWidth - 16 - 36;   // 1rem base + 36px button
+        const minX = -16;                            // don't go past left edge
+        const maxY = 0;                              // don't go below bottom nav
+        const minY = -(window.innerHeight - 80 - 36); // don't go above viewport
+        setPos({
+          x: Math.max(minX, Math.min(maxX, x)),
+          y: Math.max(minY, Math.min(maxY, y)),
+        });
       }
     } catch {}
   }, []);

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching Card Redesign — Adaptive (Light/Dark)</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font: 'Nunito', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: #0F172A;
+    color: #E2E8F0;
+    padding: 32px 16px;
+  }
+
+  h1 { text-align: center; font-size: 28px; font-weight: 900; margin-bottom: 6px; }
+  .page-sub { text-align: center; color: #64748B; font-size: 14px; font-weight: 600; margin-bottom: 48px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .variation { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .var-label {
+    color: #818CF8; font-size: 13px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 1.5px; display: flex; align-items: center; gap: 8px;
+  }
+  .var-label::before, .var-label::after { content:''; width:24px; height:2px; background:#818CF8; opacity:.4; border-radius:1px; }
+  .var-title { color: #F1F5F9; font-size: 20px; font-weight: 800; text-align: center; }
+  .var-desc { color: #64748B; font-size: 13px; font-weight: 500; text-align: center; max-width: 340px; line-height: 1.5; }
+
+  /* ── Theme toggle ── */
+  .theme-toggle {
+    display: flex; border-radius: 10px; overflow: hidden;
+    border: 2px solid #334155; background: #1E293B; z-index: 20;
+  }
+  .theme-toggle button {
+    padding: 6px 14px; font-size: 12px; font-weight: 700;
+    font-family: var(--font); border: none; cursor: pointer;
+    color: #94A3B8; background: transparent; transition: all 0.2s;
+  }
+  .theme-toggle button.active { background: #334155; color: #E2E8F0; }
+
+  /* ── Phone ── */
+  .phone {
+    width: 375px; height: 700px; border-radius: 40px; overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 0 2px #334155, 0 0 0 6px #1E293B, 0 25px 60px rgba(0,0,0,0.5);
+    transition: box-shadow 0.4s;
+  }
+  .phone-screen {
+    width: 100%; height: 100%; overflow: hidden;
+    display: flex; flex-direction: column; position: relative;
+    transition: background 0.4s;
+  }
+
+  /* ── Space background layer ── */
+  .space-bg {
+    position: absolute; inset: 0; z-index: 0; overflow: hidden;
+    background: linear-gradient(160deg, #05080F 0%, #0a1128 25%, #15103a 55%, #0d0b2e 75%, #05080F 100%);
+    transition: opacity 0.5s;
+  }
+  .phone.light .space-bg { opacity: 0; }
+  .phone.dark .space-bg { opacity: 1; }
+
+  .space-bg .s { position: absolute; border-radius: 50%; animation: tw 4s infinite ease-in-out; }
+  @keyframes tw { 0%,100%{opacity:.4;transform:scale(.9)} 50%{opacity:1;transform:scale(1.2)} }
+  .space-bg .nb { position: absolute; border-radius: 50%; animation: br 20s infinite ease-in-out; }
+  @keyframes br { 0%,100%{transform:scale(1);opacity:.4} 50%{transform:scale(1.08);opacity:.6} }
+  .space-bg .pl { position: absolute; border-radius: 50%; animation: fl 14s infinite ease-in-out; }
+  .space-bg .pl::before {
+    content:''; position:absolute; top:50%; left:50%;
+    width:60px; height:10px; margin-left:-30px; margin-top:-5px;
+    border: 1.5px solid rgba(129,140,248,0.3); border-radius: 50%; transform: rotate(-20deg);
+  }
+  @keyframes fl { 0%,100%{transform:translateY(0)} 25%{transform:translateY(-8px)} 75%{transform:translateY(5px)} }
+  .space-bg .mn {
+    position: absolute; width:16px; height:16px; border-radius:50%; background:transparent;
+    box-shadow: 5px -2px 0 0 #D4D4D8, 5px -2px 8px 2px rgba(212,212,216,0.15);
+    animation: mg 8s infinite ease-in-out;
+  }
+  @keyframes mg { 0%,100%{opacity:.7} 50%{opacity:1} }
+
+  /* ── Adaptive token layer ── */
+  /* Light */
+  .phone.light .phone-screen { background: #F8FAFC; }
+  .phone.light { box-shadow: 0 0 0 2px #E2E8F0, 0 0 0 6px #CBD5E1, 0 25px 60px rgba(0,0,0,0.2); }
+  .phone.light .hdr { background: #fff; border-color: #E2E8F0; }
+  .phone.light .hdr-x { border-color: #E2E8F0; color: #94A3B8; background: transparent; }
+  .phone.light .hdr-bar { background: #E2E8F0; }
+  .phone.light .hdr-fill { background: #14B8A6; box-shadow: none; }
+  .phone.light .got-it { background: #14B8A6; box-shadow: 0 4px 0 #0D9488; }
+
+  .phone.light .t-title { color: #1E293B; text-shadow: none; }
+  .phone.light .t-body { color: #475569; }
+  .phone.light .t-muted { color: #94A3B8; }
+  .phone.light .t-accent { color: #0D9488; }
+  .phone.light .t-accent-soft { color: #14B8A6; }
+
+  .phone.light .a-card {
+    background: #fff; border-color: #E2E8F0;
+    backdrop-filter: none; -webkit-backdrop-filter: none;
+  }
+  .phone.light .a-card-accent { background: #F0FDFA; border-color: #99F6E4; }
+  .phone.light .a-num { background: #14B8A6; box-shadow: none; }
+  .phone.light .a-hint { background: #FEF3C7; border-color: #FDE68A; }
+  .phone.light .a-hint-text { color: #92400E; }
+  .phone.light .expand-trigger { color: #14B8A6; }
+
+  /* Dark */
+  .phone.dark .phone-screen { background: transparent; }
+  .phone.dark { box-shadow: 0 0 0 2px #1E293B, 0 0 0 6px #0F172A, 0 0 40px rgba(99,102,241,0.12), 0 25px 60px rgba(0,0,0,0.6); }
+  .phone.dark .hdr { background: rgba(5,8,15,0.7); backdrop-filter: blur(12px); border-color: rgba(148,163,184,0.12); }
+  .phone.dark .hdr-x { border-color: rgba(148,163,184,0.2); color: #64748B; background: rgba(255,255,255,0.05); }
+  .phone.dark .hdr-bar { background: rgba(148,163,184,0.12); }
+  .phone.dark .hdr-fill { background: #818CF8; box-shadow: 0 0 8px rgba(129,140,248,0.4); }
+  .phone.dark .got-it { background: #818CF8; box-shadow: 0 4px 0 #4F46E5, 0 0 20px rgba(129,140,248,0.25); }
+
+  .phone.dark .t-title { color: #F1F5F9; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+  .phone.dark .t-body { color: #CBD5E1; }
+  .phone.dark .t-muted { color: #64748B; }
+  .phone.dark .t-accent { color: #38BDF8; }
+  .phone.dark .t-accent-soft { color: #818CF8; }
+
+  .phone.dark .a-card {
+    background: rgba(15,23,42,0.6); border-color: rgba(148,163,184,0.12);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  }
+  .phone.dark .a-card-accent { background: rgba(129,140,248,0.1); border-color: rgba(129,140,248,0.2); }
+  .phone.dark .a-num { background: #818CF8; box-shadow: 0 0 10px rgba(129,140,248,0.3); }
+  .phone.dark .a-hint { background: rgba(129,140,248,0.08); border-color: rgba(129,140,248,0.15); }
+  .phone.dark .a-hint-text { color: #A78BFA; }
+  .phone.dark .expand-trigger { color: #818CF8; }
+
+  /* ── Header ── */
+  .hdr {
+    display: flex; align-items: center; padding: 16px 20px 12px; gap: 12px;
+    border-bottom: 1px solid; flex-shrink: 0; z-index: 5; position: relative;
+    transition: all 0.4s;
+  }
+  .hdr-x {
+    width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; cursor: pointer; transition: all 0.4s;
+  }
+  .hdr-bar { flex: 1; height: 12px; border-radius: 6px; overflow: hidden; transition: background 0.4s; }
+  .hdr-fill { width: 35%; height: 100%; border-radius: 6px; transition: all 0.4s; }
+  .hdr-hp { color: #FF4B4B; font-size: 14px; font-weight: 800; }
+
+  /* ── Got it ── */
+  .got-it {
+    margin: auto 20px 28px; padding: 15px 0; border-radius: 16px;
+    font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: .8px;
+    color: #fff; border: none; cursor: pointer;
+    flex-shrink: 0; z-index: 2; position: relative;
+    transition: all 0.4s;
+  }
+  .got-it:active { transform: translateY(4px); box-shadow: none !important; }
+
+  /* ── Expand ── */
+  .expand-trigger {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 6px 16px; cursor: pointer;
+    font-size: 13px; font-weight: 700;
+    background: none; border: none; z-index: 2; position: relative;
+    transition: color 0.4s;
+  }
+  .expand-trigger .arrow { display: inline-block; transition: transform 0.3s; font-size: 10px; }
+  .expand-trigger.open .arrow { transform: rotate(180deg); }
+
+  .expand-content {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s; opacity: 0;
+    z-index: 2; position: relative;
+  }
+  .expand-content.open { max-height: 300px; opacity: 1; }
+
+  /* ── Shared adaptive card ── */
+  .a-card { border: 1.5px solid; border-radius: 14px; transition: all 0.4s; }
+  .a-card-accent { border: 1.5px solid; border-radius: 14px; transition: all 0.4s; }
+  .a-num {
+    width: 28px; height: 28px; border-radius: 50%; color: #fff;
+    font-size: 14px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    transition: all 0.4s;
+  }
+  .a-hint { border: 1.5px solid; border-radius: 10px; transition: all 0.4s; }
+
+
+  /* =========================================
+     A — Hero Mascot + Statement
+     ========================================= */
+  .va-body {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; padding: 24px; gap: 14px;
+    z-index: 2; position: relative;
+  }
+  .va-ring {
+    width: 120px; height: 120px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    animation: bob 3s ease-in-out infinite;
+  }
+  .phone.light .va-ring { background: radial-gradient(circle, rgba(20,184,166,0.1) 0%, transparent 70%); }
+  .phone.dark .va-ring { background: radial-gradient(circle, rgba(129,140,248,0.18) 0%, transparent 70%); }
+  @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+  .va-headline { font-size: 26px; font-weight: 900; line-height: 1.15; max-width: 300px; }
+  .va-oneliner { font-size: 15px; font-weight: 600; line-height: 1.5; max-width: 280px; }
+
+  .va-expand { padding: 0 24px 8px; display: flex; flex-direction: column; gap: 10px; }
+  .va-detail { padding: 12px 16px; font-size: 13.5px; font-weight: 600; line-height: 1.5; }
+  .va-hint-wrap { display: flex; align-items: center; gap: 8px; padding: 10px 14px; }
+
+
+  /* ==========================================
+     B — Banner + Big Number
+     ========================================== */
+  .vb-zone { flex: 1; display: flex; flex-direction: column; z-index: 2; position: relative; }
+
+  .vb-banner {
+    padding: 22px 22px 18px; display: flex; align-items: center; gap: 14px;
+    position: relative; transition: all 0.4s;
+  }
+  .phone.light .vb-banner { background: linear-gradient(135deg, rgba(20,184,166,0.12) 0%, rgba(20,184,166,0.04) 100%); border-bottom: 1px solid #E2E8F0; }
+  .phone.dark .vb-banner { background: linear-gradient(135deg, rgba(99,102,241,0.25) 0%, rgba(56,189,248,0.08) 100%); border-bottom: 1px solid rgba(129,140,248,0.12); }
+
+  .vb-mascot { animation: vbfl 3s ease-in-out infinite; filter: drop-shadow(0 3px 10px rgba(0,0,0,0.25)); }
+  @keyframes vbfl { 0%,100%{transform:translateY(0) rotate(-2deg)} 50%{transform:translateY(-6px) rotate(2deg)} }
+  .vb-banner h2 { font-size: 20px; font-weight: 900; line-height: 1.2; }
+  .phone.light .vb-banner h2 { color: #0F766E; }
+  .phone.dark .vb-banner h2 { color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  .vb-tag {
+    display: inline-block; margin-top: 5px;
+    font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: .5px; transition: all 0.4s;
+  }
+  .phone.light .vb-tag { background: rgba(20,184,166,0.1); color: #0D9488; border: 1px solid rgba(20,184,166,0.15); }
+  .phone.dark .vb-tag { background: rgba(129,140,248,0.2); color: #C7D2FE; border: 1px solid rgba(129,140,248,0.15); }
+
+  .vb-fact-area {
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; padding: 28px 24px; gap: 10px; text-align: center;
+  }
+  .vb-big {
+    font-size: 44px; font-weight: 900; font-family: var(--mono);
+    letter-spacing: -1px; line-height: 1;
+  }
+  .phone.light .vb-big { color: #0D9488; }
+  .phone.dark .vb-big { color: #38BDF8; text-shadow: 0 0 24px rgba(56,189,248,0.35); }
+  .vb-big-label { font-size: 14px; font-weight: 700; line-height: 1.4; max-width: 260px; }
+
+  .vb-expand { padding: 0 24px 8px; display: flex; flex-direction: column; gap: 10px; }
+  .vb-detail { padding: 12px 16px; font-size: 13px; font-weight: 600; line-height: 1.5; }
+
+
+  /* ==========================================
+     C — Single Bubble + Expand
+     ========================================== */
+  .vc-zone {
+    flex: 1; display: flex; flex-direction: column; justify-content: center;
+    padding: 20px; gap: 12px; z-index: 2; position: relative;
+  }
+  .vc-row { display: flex; align-items: flex-start; gap: 10px; }
+  .vc-av {
+    width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; overflow: hidden;
+    transition: box-shadow 0.4s;
+  }
+  .phone.light .vc-av { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .phone.dark .vc-av { box-shadow: 0 0 16px rgba(129,140,248,0.2); }
+
+  .vc-bubble {
+    border-radius: 20px; border-bottom-left-radius: 6px;
+    padding: 16px 20px; flex: 1;
+  }
+  .vc-bubble h3 { font-size: 18px; font-weight: 900; line-height: 1.2; margin-bottom: 6px; }
+  .vc-bubble p { font-size: 14px; font-weight: 600; line-height: 1.5; }
+
+  .vc-expand { padding: 0 0 0 62px; display: flex; flex-direction: column; gap: 8px; }
+  .vc-extra {
+    border-radius: 16px; border-bottom-left-radius: 6px; padding: 12px 16px;
+    font-size: 13.5px; font-weight: 600; line-height: 1.45;
+  }
+  .vc-extra.hint { font-size: 12.5px; }
+  .phone.light .vc-extra.hint { color: #92400E; }
+  .phone.dark .vc-extra.hint { color: #A78BFA; }
+
+
+  /* ==========================================
+     D — Big Type Statement
+     ========================================== */
+  .vd-zone { flex: 1; display: flex; flex-direction: column; z-index: 2; position: relative; }
+
+  .vd-main {
+    flex: 1; display: flex; flex-direction: column; justify-content: center;
+    padding: 32px 24px; gap: 12px;
+  }
+  .vd-tag { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .vd-stmt { font-size: 28px; font-weight: 900; line-height: 1.15; }
+  .vd-sub { font-size: 15px; font-weight: 600; line-height: 1.55; max-width: 300px; }
+  .vd-sub .hl {
+    font-weight: 800; padding: 1px 6px; border-radius: 4px; white-space: nowrap;
+    transition: all 0.4s;
+  }
+  .phone.light .vd-sub .hl { background: rgba(20,184,166,0.1); color: #0D9488; border: 1px solid rgba(20,184,166,0.1); }
+  .phone.dark .vd-sub .hl { background: rgba(56,189,248,0.12); color: #38BDF8; border: 1px solid rgba(56,189,248,0.12); }
+
+  .vd-ghost {
+    position: absolute; bottom: 110px; right: 16px; opacity: 0.15; z-index: 1;
+    animation: drift 6s ease-in-out infinite;
+  }
+  @keyframes drift { 0%,100%{transform:translateY(0) rotate(-5deg)} 50%{transform:translateY(-10px) rotate(5deg)} }
+
+  .vd-expand { padding: 0 24px 8px; display: flex; flex-direction: column; gap: 10px; }
+  .vd-block {
+    border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px;
+    transition: all 0.4s;
+  }
+  .phone.light .vd-block { background: #F1F5F9; border: 1px solid #E2E8F0; }
+  .phone.dark .vd-block { background: rgba(0,0,0,0.35); border: 1px solid rgba(129,140,248,0.12); }
+  .vd-row { display: flex; align-items: center; gap: 8px; }
+  .vd-lbl { font-size: 12px; font-weight: 800; min-width: 60px; }
+  .vd-val { font-size: 13px; font-weight: 600; font-family: var(--mono); }
+  .vd-sep { height: 1px; margin: 2px 0; }
+  .phone.light .vd-sep { background: #E2E8F0; }
+  .phone.dark .vd-sep { background: rgba(148,163,184,0.08); }
+  .vd-hint-row {
+    display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+    border-radius: 10px;
+  }
+  .vd-hint-row p { font-size: 12.5px; font-weight: 600; line-height: 1.4; }
+</style>
+</head>
+<body>
+
+<h1>Teaching Card Redesign</h1>
+<p class="page-sub">Adaptive design — toggle Light / Space on each phone</p>
+
+<div class="grid">
+
+  <!-- ==================== A — Hero Mascot + Statement ==================== -->
+  <div class="variation">
+    <span class="var-label">Variation A</span>
+    <div class="var-title">Hero Mascot + Statement</div>
+    <p class="var-desc">Centered mascot, bold headline, one supporting line. Expand for depth.</p>
+    <div class="theme-toggle">
+      <button class="active" onclick="setTheme(this,'light')">&#9728; Light</button>
+      <button onclick="setTheme(this,'dark')">&#9733; Space</button>
+    </div>
+    <div class="phone light" id="phone-a">
+      <div class="space-bg">
+        <div class="s" style="top:5%;left:12%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.6);animation-duration:3.2s"></div>
+        <div class="s" style="top:15%;left:75%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 8px 2px rgba(253,230,138,0.5);animation-duration:4.5s;animation-delay:.8s"></div>
+        <div class="s" style="top:35%;left:88%;width:2px;height:2px;background:#C4B5FD;box-shadow:0 0 7px 2px rgba(196,181,253,0.5);animation-duration:3.9s;animation-delay:2.2s"></div>
+        <div class="s" style="top:55%;left:8%;width:3px;height:3px;background:#E0E7FF;box-shadow:0 0 8px 2px rgba(224,231,255,0.4);animation-duration:4.3s;animation-delay:1s"></div>
+        <div class="s" style="top:75%;left:50%;width:2px;height:2px;background:#fff;box-shadow:0 0 6px 2px rgba(255,255,255,0.4);animation-duration:5.5s;animation-delay:.5s"></div>
+        <div class="s" style="top:90%;left:30%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 6px 2px rgba(253,230,138,0.4);animation-duration:3.5s;animation-delay:1.7s"></div>
+        <div class="nb" style="top:5%;right:-10%;width:200px;height:200px;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 70%)"></div>
+        <div class="pl" style="bottom:8%;right:6%;width:36px;height:36px;background:linear-gradient(135deg,#818CF8,#312E81);box-shadow:0 0 18px 4px rgba(99,102,241,0.2),inset -5px -3px 8px rgba(0,0,0,0.4)"></div>
+        <div class="mn" style="top:10%;right:20%"></div>
+      </div>
+      <div class="phone-screen">
+        <div class="hdr">
+          <button class="hdr-x">&times;</button>
+          <div class="hdr-bar"><div class="hdr-fill"></div></div>
+          <div class="hdr-hp">&#10084; 5</div>
+        </div>
+        <div class="va-body">
+          <div class="va-ring">
+            <img src="../public/mascot/excited.png" width="84" height="84" style="border-radius:50%;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.2))" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="va-headline t-title">You're Already a Space Traveler</div>
+          <div class="va-oneliner t-body">Earth orbits the Sun at <strong class="t-accent">107,000 km/h</strong> — with you on it.</div>
+        </div>
+        <button class="expand-trigger" onclick="toggle(this)">Tell me more <span class="arrow">&#9660;</span></button>
+        <div class="expand-content">
+          <div class="va-expand">
+            <div class="va-detail a-card t-body">Your galaxy has <strong class="t-accent">200 billion</strong> stars — and it's just one of trillions.</div>
+            <div class="va-hint-wrap a-hint">
+              <span>&#128161;</span>
+              <span class="a-hint-text" style="font-size:12.5px;font-weight:600;line-height:1.4">Step outside and look up. Everything you see is part of the universe.</span>
+            </div>
+          </div>
+        </div>
+        <button class="got-it">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== B — Banner + Big Number ==================== -->
+  <div class="variation">
+    <span class="var-label">Variation B</span>
+    <div class="var-title">Banner + Big Number</div>
+    <p class="var-desc">Bold banner header, one hero number dominates. Expand for context.</p>
+    <div class="theme-toggle">
+      <button class="active" onclick="setTheme(this,'light')">&#9728; Light</button>
+      <button onclick="setTheme(this,'dark')">&#9733; Space</button>
+    </div>
+    <div class="phone light" id="phone-b">
+      <div class="space-bg">
+        <div class="s" style="top:42%;left:10%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.6);animation-duration:3.7s;animation-delay:1.5s"></div>
+        <div class="s" style="top:55%;left:85%;width:2px;height:2px;background:#C4B5FD;box-shadow:0 0 7px 2px rgba(196,181,253,0.5);animation-duration:4s;animation-delay:2.6s"></div>
+        <div class="s" style="top:70%;left:40%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 6px 2px rgba(253,230,138,0.4);animation-duration:3.3s;animation-delay:1.3s"></div>
+        <div class="s" style="top:85%;left:72%;width:3px;height:3px;background:#E0E7FF;box-shadow:0 0 8px 2px rgba(224,231,255,0.4);animation-duration:4.8s;animation-delay:.1s"></div>
+        <div class="nb" style="bottom:10%;left:-8%;width:180px;height:180px;background:radial-gradient(circle,rgba(168,85,247,0.06) 0%,transparent 70%)"></div>
+        <div class="mn" style="bottom:18%;right:15%"></div>
+      </div>
+      <div class="phone-screen">
+        <div class="hdr">
+          <button class="hdr-x">&times;</button>
+          <div class="hdr-bar"><div class="hdr-fill"></div></div>
+          <div class="hdr-hp">&#10084; 5</div>
+        </div>
+        <div class="vb-zone">
+          <div class="vb-banner">
+            <div class="vb-mascot">
+              <img src="../public/mascot/explorer.png" width="72" height="72" style="border-radius:50%" alt="" onerror="this.style.display='none'">
+            </div>
+            <div>
+              <h2 class="t-title">Your Speed Through Space</h2>
+              <span class="vb-tag">Looking Up</span>
+            </div>
+          </div>
+          <div class="vb-fact-area">
+            <div class="vb-big">107,000</div>
+            <div class="vb-big-label t-body">km/h — how fast you orbit the Sun right now</div>
+          </div>
+          <button class="expand-trigger" onclick="toggle(this)">Tell me more <span class="arrow">&#9660;</span></button>
+          <div class="expand-content">
+            <div class="vb-expand">
+              <div class="vb-detail a-card t-body">Earth also <strong class="t-accent">spins</strong> at 1,600 km/h. You've been a space traveler your whole life.</div>
+              <div class="vb-detail a-card t-body">&#127769; Step outside and look up — you're part of all of it.</div>
+            </div>
+          </div>
+          <button class="got-it">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== C — Single Bubble + Expand ==================== -->
+  <div class="variation">
+    <span class="var-label">Variation C</span>
+    <div class="var-title">Single Bubble + Expand</div>
+    <p class="var-desc">One mascot bubble with the core point. Tap for follow-up messages.</p>
+    <div class="theme-toggle">
+      <button class="active" onclick="setTheme(this,'light')">&#9728; Light</button>
+      <button onclick="setTheme(this,'dark')">&#9733; Space</button>
+    </div>
+    <div class="phone light" id="phone-c">
+      <div class="space-bg">
+        <div class="s" style="top:8%;left:20%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.6);animation-duration:3.2s"></div>
+        <div class="s" style="top:22%;left:80%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 8px 2px rgba(253,230,138,0.5);animation-duration:4.5s;animation-delay:.8s"></div>
+        <div class="s" style="top:40%;left:5%;width:2px;height:2px;background:#E0E7FF;box-shadow:0 0 6px 2px rgba(224,231,255,0.4);animation-duration:3.7s;animation-delay:1.5s"></div>
+        <div class="s" style="top:60%;left:65%;width:2px;height:2px;background:#C4B5FD;box-shadow:0 0 7px 2px rgba(196,181,253,0.4);animation-duration:4s;animation-delay:2.6s"></div>
+        <div class="s" style="top:80%;left:35%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.5);animation-duration:3.3s;animation-delay:1.3s"></div>
+        <div class="nb" style="top:15%;right:-12%;width:200px;height:200px;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 70%)"></div>
+        <div class="pl" style="bottom:15%;right:8%;width:28px;height:28px;background:linear-gradient(135deg,#FB7185,#4C0519);box-shadow:0 0 14px 3px rgba(251,113,133,0.12),inset -4px -2px 6px rgba(0,0,0,0.4)"></div>
+      </div>
+      <div class="phone-screen">
+        <div class="hdr">
+          <button class="hdr-x">&times;</button>
+          <div class="hdr-bar"><div class="hdr-fill"></div></div>
+          <div class="hdr-hp">&#10084; 5</div>
+        </div>
+        <div class="vc-zone">
+          <div class="vc-row">
+            <div class="vc-av">
+              <img src="../public/mascot/excited.png" width="52" height="52" style="border-radius:50%" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="vc-bubble a-card">
+              <h3 class="t-title">You're a Space Traveler</h3>
+              <p class="t-body">Earth orbits the Sun at <strong class="t-accent">107,000 km/h</strong> — you've been flying through space your whole life.</p>
+            </div>
+          </div>
+          <button class="expand-trigger" onclick="toggle(this)" style="justify-content:flex-start;padding-left:62px">Tell me more <span class="arrow">&#9660;</span></button>
+          <div class="expand-content">
+            <div class="vc-expand">
+              <div class="vc-extra a-card-accent t-body">Earth also <strong class="t-accent-soft">spins</strong> at 1,600 km/h. Our galaxy has 200 billion stars.</div>
+              <div class="vc-extra hint a-hint">&#127769; Step outside and look up. Everything you see is part of the universe.</div>
+            </div>
+          </div>
+        </div>
+        <button class="got-it">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== D — Big Type Statement ==================== -->
+  <div class="variation">
+    <span class="var-label">Variation D</span>
+    <div class="var-title">Big Type Statement</div>
+    <p class="var-desc">Pure typography dominates. Ghost mascot behind. Expand reveals structured detail.</p>
+    <div class="theme-toggle">
+      <button class="active" onclick="setTheme(this,'light')">&#9728; Light</button>
+      <button onclick="setTheme(this,'dark')">&#9733; Space</button>
+    </div>
+    <div class="phone light" id="phone-d">
+      <div class="space-bg">
+        <div class="s" style="top:4%;left:50%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 8px 2px rgba(253,230,138,0.5);animation-duration:4.5s;animation-delay:.8s"></div>
+        <div class="s" style="top:18%;left:85%;width:2px;height:2px;background:#C4B5FD;box-shadow:0 0 7px 2px rgba(196,181,253,0.5);animation-duration:3.9s;animation-delay:2.2s"></div>
+        <div class="s" style="top:32%;left:12%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.6);animation-duration:3.2s"></div>
+        <div class="s" style="top:60%;left:75%;width:2px;height:2px;background:#E0E7FF;box-shadow:0 0 6px 2px rgba(224,231,255,0.4);animation-duration:4.3s;animation-delay:1s"></div>
+        <div class="s" style="top:78%;left:25%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 6px 2px rgba(253,230,138,0.4);animation-duration:3.5s;animation-delay:1.7s"></div>
+        <div class="s" style="top:90%;left:60%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.5);animation-duration:4s;animation-delay:2.6s"></div>
+        <div class="nb" style="top:40%;left:-10%;width:200px;height:200px;background:radial-gradient(circle,rgba(168,85,247,0.07) 0%,transparent 70%)"></div>
+      </div>
+      <div class="vd-ghost">
+        <img src="../public/mascot/thinking.png" width="90" height="90" style="border-radius:50%;opacity:.5" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="phone-screen">
+        <div class="hdr">
+          <button class="hdr-x">&times;</button>
+          <div class="hdr-bar"><div class="hdr-fill"></div></div>
+          <div class="hdr-hp">&#10084; 5</div>
+        </div>
+        <div class="vd-zone">
+          <div class="vd-main">
+            <div class="vd-tag t-accent-soft">Space &middot; Looking Up</div>
+            <div class="vd-stmt t-title">You've Been a Space Traveler Your Whole Life</div>
+            <div class="vd-sub t-body">Earth orbits the Sun at <span class="hl">107,000 km/h</span> — and you're on it right now.</div>
+          </div>
+          <button class="expand-trigger" onclick="toggle(this)">Tell me more <span class="arrow">&#9660;</span></button>
+          <div class="expand-content">
+            <div class="vd-expand">
+              <div class="vd-block">
+                <div class="vd-row"><span class="vd-lbl t-accent">Spin</span><span class="vd-val t-body">1,600 km/h</span></div>
+                <div class="vd-sep"></div>
+                <div class="vd-row"><span class="vd-lbl t-accent">Orbit</span><span class="vd-val t-body">107,000 km/h</span></div>
+                <div class="vd-sep"></div>
+                <div class="vd-row"><span class="vd-lbl t-accent">Galaxy</span><span class="vd-val t-body">~200B stars</span></div>
+              </div>
+              <div class="vd-hint-row a-hint">
+                <img src="../public/mascot/thinking.png" width="28" height="28" style="border-radius:50%;flex-shrink:0" alt="" onerror="this.style.display='none'">
+                <p class="a-hint-text">Step outside and look up — you're part of all of it.</p>
+              </div>
+            </div>
+          </div>
+          <button class="got-it">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggle(btn) {
+    btn.classList.toggle('open');
+    btn.nextElementSibling.classList.toggle('open');
+  }
+
+  function setTheme(btn, theme) {
+    // Toggle buttons
+    const grp = btn.parentElement;
+    grp.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Toggle phone
+    const phone = grp.nextElementSibling;
+    phone.classList.remove('light', 'dark');
+    phone.classList.add(theme);
+    // Swap mascot images for space poses
+    const imgs = phone.querySelectorAll('img[src*="mascot"]');
+    imgs.forEach(img => {
+      const src = img.getAttribute('src');
+      if (theme === 'dark') {
+        if (src.includes('excited.png')) img.src = src.replace('excited.png', 'space-astronaut.png');
+        if (src.includes('explorer.png')) img.src = src.replace('explorer.png', 'space-flag.png');
+        if (src.includes('thinking.png') && img.width > 50) img.src = src.replace('thinking.png', 'space-ufo.png');
+      } else {
+        if (src.includes('space-astronaut.png')) img.src = src.replace('space-astronaut.png', 'excited.png');
+        if (src.includes('space-flag.png')) img.src = src.replace('space-flag.png', 'explorer.png');
+        if (src.includes('space-ufo.png')) img.src = src.replace('space-ufo.png', 'thinking.png');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

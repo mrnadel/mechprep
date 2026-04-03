@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching Card Redesign — Space Course (v2)</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --unit: #818CF8;
+    --unit-dark: #6366F1;
+    --unit-darker: #4F46E5;
+    --glass: rgba(15, 23, 42, 0.6);
+    --glass-border: rgba(148, 163, 184, 0.12);
+    --title: #F1F5F9;
+    --body: #CBD5E1;
+    --muted: #64748B;
+    --cyan: #38BDF8;
+    --purple: #A78BFA;
+    --font: 'Nunito', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: #020617;
+    color: var(--title);
+    padding: 32px 16px;
+  }
+
+  h1 { text-align: center; color: #E2E8F0; font-size: 28px; font-weight: 900; margin-bottom: 8px; }
+  .page-sub { text-align: center; color: #64748B; font-size: 14px; font-weight: 600; margin-bottom: 48px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .variation { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+
+  .variation-label {
+    color: var(--unit);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .variation-label::before, .variation-label::after {
+    content: ''; width: 24px; height: 2px; background: var(--unit); opacity: 0.4; border-radius: 1px;
+  }
+  .variation-title { color: #F1F5F9; font-size: 20px; font-weight: 800; text-align: center; }
+  .variation-desc { color: #64748B; font-size: 13px; font-weight: 500; text-align: center; max-width: 340px; line-height: 1.5; }
+
+  /* Phone */
+  .phone {
+    width: 375px; height: 720px;
+    background: #05080F;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 0 2px #1E293B, 0 0 0 6px #0F172A, 0 0 40px rgba(99,102,241,0.12), 0 25px 60px rgba(0,0,0,0.6);
+  }
+  .phone-screen {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+
+  /* Space background */
+  .space-bg {
+    position: absolute; inset: 0; z-index: 0; overflow: hidden;
+    background: linear-gradient(160deg, #05080F 0%, #0a1128 25%, #15103a 55%, #0d0b2e 75%, #05080F 100%);
+  }
+  .space-bg .s { position: absolute; border-radius: 50%; animation: tw 4s infinite ease-in-out; }
+  @keyframes tw { 0%,100%{opacity:.4;transform:scale(.9)} 50%{opacity:1;transform:scale(1.2)} }
+  .space-bg .nb { position: absolute; border-radius: 50%; animation: br 20s infinite ease-in-out; }
+  @keyframes br { 0%,100%{transform:scale(1);opacity:.4} 50%{transform:scale(1.08);opacity:.6} }
+  .space-bg .pl { position: absolute; border-radius: 50%; animation: fl 14s infinite ease-in-out; }
+  @keyframes fl { 0%,100%{transform:translateY(0)} 25%{transform:translateY(-8px)} 75%{transform:translateY(5px)} }
+  .space-bg .mn {
+    position: absolute; width: 16px; height: 16px; border-radius: 50%; background: transparent;
+    box-shadow: 5px -2px 0 0 #D4D4D8, 5px -2px 8px 2px rgba(212,212,216,0.15);
+    animation: mg 8s infinite ease-in-out;
+  }
+  @keyframes mg { 0%,100%{opacity:.7} 50%{opacity:1} }
+
+  /* Header */
+  .hdr {
+    display: flex; align-items: center; padding: 16px 20px 12px; gap: 12px;
+    background: rgba(5,8,15,0.7); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border); flex-shrink: 0; z-index: 5; position: relative;
+  }
+  .hdr-x {
+    width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid rgba(148,163,184,0.2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 16px; cursor: pointer; background: rgba(255,255,255,0.05);
+  }
+  .hdr-bar { flex: 1; height: 12px; background: rgba(148,163,184,0.12); border-radius: 6px; overflow: hidden; }
+  .hdr-fill { width: 35%; height: 100%; background: var(--unit); border-radius: 6px; box-shadow: 0 0 8px rgba(129,140,248,0.4); }
+  .hdr-hp { color: #FF4B4B; font-size: 14px; font-weight: 800; text-shadow: 0 0 8px rgba(255,75,75,0.3); }
+
+  /* Got it button */
+  .got-it {
+    margin: auto 20px 28px; padding: 15px 0; border-radius: 16px;
+    font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;
+    background: var(--unit); color: #fff; border: none; cursor: pointer;
+    box-shadow: 0 4px 0 var(--unit-darker), 0 0 20px rgba(129,140,248,0.25);
+    flex-shrink: 0; z-index: 2; position: relative;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .got-it:active { transform: translateY(4px); box-shadow: none; }
+
+  /* "Tell me more" expand */
+  .expand-trigger {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 8px 16px; cursor: pointer;
+    color: var(--unit); font-size: 13px; font-weight: 700;
+    background: none; border: none; z-index: 2; position: relative;
+    transition: opacity 0.2s;
+  }
+  .expand-trigger:hover { opacity: 0.8; }
+  .expand-trigger .arrow {
+    display: inline-block; transition: transform 0.3s; font-size: 11px;
+  }
+  .expand-trigger.open .arrow { transform: rotate(180deg); }
+
+  .expand-content {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s;
+    opacity: 0; z-index: 2; position: relative;
+  }
+  .expand-content.open { max-height: 300px; opacity: 1; }
+
+
+  /* =========================================
+     A — Hero Mascot + Bold Statement
+     ========================================= */
+  .va-body {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; padding: 24px;
+    gap: 16px; z-index: 2; position: relative;
+  }
+
+  .va-mascot-wrap {
+    width: 120px; height: 120px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(129,140,248,0.18) 0%, transparent 70%);
+    display: flex; align-items: center; justify-content: center;
+    animation: va-bob 3s ease-in-out infinite;
+    position: relative;
+  }
+  .va-mascot-wrap::before {
+    content: ''; position: absolute; inset: -5px; border-radius: 50%;
+    border: 2px solid rgba(129,140,248,0.15);
+    animation: va-ring 3s ease-in-out infinite;
+  }
+  @keyframes va-bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes va-ring { 0%,100%{opacity:.2;transform:scale(1)} 50%{opacity:.5;transform:scale(1.06)} }
+
+  .va-headline {
+    font-size: 26px; font-weight: 900; color: var(--title); line-height: 1.15;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+    max-width: 300px;
+  }
+
+  .va-one-liner {
+    font-size: 15px; font-weight: 600; color: var(--body); line-height: 1.5;
+    max-width: 280px;
+  }
+  .va-one-liner strong { color: var(--cyan); font-weight: 800; }
+
+  .va-expand-body {
+    padding: 0 24px 8px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .va-detail-card {
+    background: var(--glass); backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border); border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 13.5px; font-weight: 600; color: var(--body); line-height: 1.5;
+    text-align: left;
+  }
+  .va-detail-card strong { color: var(--cyan); }
+
+  .va-hint {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: rgba(129,140,248,0.08); border: 1px solid rgba(129,140,248,0.15);
+    border-radius: 10px; text-align: left;
+  }
+  .va-hint-text { font-size: 12.5px; font-weight: 600; color: var(--purple); line-height: 1.4; }
+
+
+  /* ==========================================
+     B — Banner + Big Fact
+     ========================================== */
+  .vb-zone {
+    flex: 1; display: flex; flex-direction: column; z-index: 2; position: relative;
+  }
+
+  .vb-banner {
+    background: linear-gradient(135deg, rgba(99,102,241,0.3) 0%, rgba(56,189,248,0.1) 100%);
+    padding: 24px 24px 20px; display: flex; align-items: center; gap: 16px;
+    border-bottom: 1px solid rgba(129,140,248,0.12);
+  }
+  .vb-mascot { animation: vb-fl 3s ease-in-out infinite; filter: drop-shadow(0 4px 14px rgba(0,0,0,0.4)); }
+  @keyframes vb-fl { 0%,100%{transform:translateY(0) rotate(-2deg)} 50%{transform:translateY(-7px) rotate(2deg)} }
+  .vb-banner h2 {
+    font-size: 21px; font-weight: 900; color: #fff; line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .vb-tag {
+    display: inline-block; margin-top: 6px;
+    background: rgba(129,140,248,0.2); color: #C7D2FE;
+    font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid rgba(129,140,248,0.15);
+  }
+
+  .vb-fact-area {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; padding: 32px 24px; gap: 12px; text-align: center;
+  }
+  .vb-big-fact {
+    font-size: 40px; font-weight: 900; color: var(--cyan);
+    text-shadow: 0 0 24px rgba(56,189,248,0.35);
+    font-family: var(--mono); letter-spacing: -1px;
+    line-height: 1;
+  }
+  .vb-big-fact-label {
+    font-size: 14px; font-weight: 700; color: var(--body); line-height: 1.4;
+    max-width: 260px;
+  }
+
+  .vb-expand-body {
+    padding: 0 24px 8px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .vb-expand-card {
+    background: var(--glass); backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border); border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 13px; font-weight: 600; color: var(--body); line-height: 1.5;
+  }
+  .vb-expand-card strong { color: var(--cyan); }
+
+
+  /* ==========================================
+     C — Single Chat Bubble + Expand
+     ========================================== */
+  .vc-zone {
+    flex: 1; display: flex; flex-direction: column;
+    justify-content: center; padding: 20px; gap: 14px;
+    z-index: 2; position: relative;
+  }
+
+  .vc-main-row { display: flex; align-items: flex-start; gap: 10px; }
+  .vc-av {
+    width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; overflow: hidden;
+    box-shadow: 0 0 16px rgba(129,140,248,0.2);
+  }
+  .vc-main-bubble {
+    background: var(--glass); backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border); border-radius: 20px; border-bottom-left-radius: 6px;
+    padding: 16px 20px; flex: 1;
+  }
+  .vc-main-bubble h3 {
+    font-size: 18px; font-weight: 900; color: var(--title); line-height: 1.2; margin-bottom: 6px;
+  }
+  .vc-main-bubble p {
+    font-size: 14px; font-weight: 600; color: var(--body); line-height: 1.5;
+  }
+  .vc-main-bubble p strong { color: var(--cyan); }
+
+  .vc-expand-body {
+    padding: 0 0 0 62px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .vc-extra-bubble {
+    background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.18);
+    border-radius: 16px; border-bottom-left-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13.5px; font-weight: 600; color: var(--body); line-height: 1.45;
+    animation: vc-in 0.3s ease-out both;
+  }
+  .vc-extra-bubble:nth-child(1) { animation-delay: 0.05s; }
+  .vc-extra-bubble:nth-child(2) { animation-delay: 0.15s; }
+  @keyframes vc-in { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+
+  .vc-extra-bubble strong { color: var(--purple); }
+  .vc-extra-bubble.hint {
+    background: rgba(129,140,248,0.06); color: var(--purple); font-size: 12.5px;
+  }
+
+
+  /* ==========================================
+     D — Typographic Statement
+     ========================================== */
+  .vd-zone {
+    flex: 1; display: flex; flex-direction: column; z-index: 2; position: relative;
+  }
+
+  .vd-main {
+    flex: 1; display: flex; flex-direction: column;
+    justify-content: center; padding: 32px 24px; gap: 14px;
+  }
+
+  .vd-topic-tag {
+    font-size: 11.5px; font-weight: 700; color: var(--unit);
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+
+  .vd-statement {
+    font-size: 28px; font-weight: 900; color: var(--title); line-height: 1.15;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+
+  .vd-sub {
+    font-size: 15px; font-weight: 600; color: var(--body); line-height: 1.55;
+    max-width: 300px;
+  }
+  .vd-sub .hl {
+    background: rgba(56,189,248,0.12); color: var(--cyan); font-weight: 800;
+    padding: 1px 6px; border-radius: 4px; border: 1px solid rgba(56,189,248,0.12);
+  }
+
+  .vd-mascot-float {
+    position: absolute; bottom: 120px; right: 20px;
+    opacity: 0.25; z-index: 1;
+    animation: vd-drift 6s ease-in-out infinite;
+  }
+  @keyframes vd-drift { 0%,100%{transform:translateY(0) rotate(-5deg)} 50%{transform:translateY(-10px) rotate(5deg)} }
+
+  .vd-expand-body {
+    padding: 0 24px 8px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .vd-detail-block {
+    background: rgba(0,0,0,0.35); border: 1px solid rgba(129,140,248,0.12);
+    border-radius: 12px; padding: 14px 16px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .vd-detail-row {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .vd-detail-label { font-size: 12px; font-weight: 800; color: var(--cyan); min-width: 70px; }
+  .vd-detail-val { font-size: 13px; font-weight: 600; color: var(--body); font-family: var(--mono); }
+  .vd-detail-sep { height: 1px; background: rgba(148,163,184,0.08); }
+
+  .vd-hint-aside {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    background: rgba(129,140,248,0.06); border: 1px solid rgba(129,140,248,0.12);
+    border-radius: 10px;
+  }
+  .vd-hint-aside p { font-size: 12.5px; font-weight: 600; color: var(--purple); line-height: 1.4; }
+</style>
+</head>
+<body>
+
+<h1>Teaching Card Redesign v2</h1>
+<p class="page-sub">Headline + one-liner visible &middot; "Tell me more" expands for the curious</p>
+
+<div class="grid">
+
+  <!-- ==================== A — Hero Mascot + Bold Statement ==================== -->
+  <div class="variation">
+    <span class="variation-label">Variation A</span>
+    <div class="variation-title">Hero Mascot + Statement</div>
+    <p class="variation-desc">Centered mascot, big headline, one supporting line. Expand reveals detail cards.</p>
+
+    <div class="phone">
+      <div class="space-bg">
+        <div class="s" style="top:5%;left:12%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.6);animation-duration:3.2s"></div>
+        <div class="s" style="top:15%;left:75%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 8px 2px rgba(253,230,138,0.5);animation-duration:4.5s;animation-delay:.8s"></div>
+        <div class="s" style="top:35%;left:88%;width:2px;height:2px;background:#C4B5FD;box-shadow:0 0 7px 2px rgba(196,181,253,0.5);animation-duration:3.9s;animation-delay:2.2s"></div>
+        <div class="s" style="top:55%;left:8%;width:3px;height:3px;background:#E0E7FF;box-shadow:0 0 8px 2px rgba(224,231,255,0.4);animation-duration:4.3s;animation-delay:1s"></div>
+        <div class="s" style="top:75%;left:50%;width:2px;height:2px;background:#fff;box-shadow:0 0 6px 2px rgba(255,255,255,0.4);animation-duration:5.5s;animation-delay:.5s"></div>
+        <div class="s" style="top:90%;left:30%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 6px 2px rgba(253,230,138,0.4);animation-duration:3.5s;animation-delay:1.7s"></div>
+        <div class="nb" style="top:5%;right:-10%;width:200px;height:200px;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 70%)"></div>
+        <div class="pl" style="bottom:8%;right:6%;width:36px;height:36px;background:linear-gradient(135deg,#818CF8,#312E81);box-shadow:0 0 18px 4px rgba(99,102,241,0.2),inset -5px -3px 8px rgba(0,0,0,0.4)"></div>
+        <div class="mn" style="top:10%;right:20%"></div>
+      </div>
+      <div class="phone-screen">
+        <div class="hdr">
+          <button class="hdr-x">&times;</button>
+          <div class="hdr-bar"><div class="hdr-fill"></div></div>
+          <div class="hdr-hp">&#10084; 5</div>
+        </div>
+
+        <div class="va-body">
+          <div class="va-mascot-wrap">
+            <img src="../public/mascot/space-astronaut.png" width="84" height="84" style="border-radius:50%;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.4))" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="va-headline">You're Already a Space Traveler</div>
+          <div class="va-one-liner">Earth spins at <strong>1,600 km/h</strong> and orbits the Sun at <strong>107,000 km/h</strong>.</div>
+        </div>
+
+        <button class="expand-trigger" onclick="toggle(this)">
+          Tell me more <span class="arrow">&#9660;</span>
+        </button>
+        <div class="expand-content">
+          <div class="va-expand-body">
+            <div class="va-detail-card">
+              You're on a rocky planet orbiting a star — and your galaxy has <strong>200 billion</strong> more of them.
+            </div>
+            <div class="va-hint">
+              <span>&#127769;</span>
+              <span class="va-hint-text">Step outside and look up. Everything you see is part of the universe.</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="got-it">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== B — Banner + Big Fact ==================== -->
+  <div class="variation">
+    <span class="variation-label">Variation B</span>
+    <div class="variation-title">Banner + Big Number</div>
+    <p class="variation-desc">Bold banner headline, one hero number/fact dominates the screen. Expand for context.</p>
+
+    <div class="phone">
+      <div class="space-bg">
+        <div class="s" style="top:42%;left:10%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.6);animation-duration:3.7s;animation-delay:1.5s"></div>
+        <div class="s" style="top:55%;left:85%;width:2px;height:2px;background:#C4B5FD;box-shadow:0 0 7px 2px rgba(196,181,253,0.5);animation-duration:4s;animation-delay:2.6s"></div>
+        <div class="s" style="top:70%;left:40%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 6px 2px rgba(253,230,138,0.4);animation-duration:3.3s;animation-delay:1.3s"></div>
+        <div class="s" style="top:85%;left:72%;width:3px;height:3px;background:#E0E7FF;box-shadow:0 0 8px 2px rgba(224,231,255,0.4);animation-duration:4.8s;animation-delay:.1s"></div>
+        <div class="nb" style="bottom:10%;left:-8%;width:180px;height:180px;background:radial-gradient(circle,rgba(168,85,247,0.06) 0%,transparent 70%)"></div>
+        <div class="mn" style="bottom:18%;right:15%"></div>
+      </div>
+      <div class="phone-screen">
+        <div class="hdr">
+          <button class="hdr-x">&times;</button>
+          <div class="hdr-bar"><div class="hdr-fill"></div></div>
+          <div class="hdr-hp">&#10084; 5</div>
+        </div>
+
+        <div class="vb-zone">
+          <div class="vb-banner">
+            <div class="vb-mascot">
+              <img src="../public/mascot/space-flag.png" width="80" height="80" style="border-radius:50%" alt="" onerror="this.style.display='none'">
+            </div>
+            <div>
+              <h2>Your Speed Through Space</h2>
+              <span class="vb-tag">Looking Up</span>
+            </div>
+          </div>
+
+          <div class="vb-fact-area">
+            <div class="vb-big-fact">107,000</div>
+            <div class="vb-big-fact-label">km/h — how fast Earth orbits the Sun right now, with you on it</div>
+          </div>
+
+          <button class="expand-trigger" onclick="toggle(this)">
+            Tell me more <span class="arrow">&#9660;</span>
+          </button>
+          <div class="expand-content">
+            <div class="vb-expand-body">
+              <div class="vb-expand-card">
+                Earth also <strong>spins</strong> at 1,600 km/h. You've been a space traveler your whole life.
+              </div>
+              <div class="vb-expand-card">
+                &#127769; Step outside and look up — everything you see is part of the universe, including you.
+              </div>
+            </div>
+          </div>
+
+          <button class="got-it">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== C — Chat Bubble + Expand ==================== -->
+  <div class="variation">
+    <span class="variation-label">Variation C</span>
+    <div class="variation-title">Single Bubble + Expand</div>
+    <p class="variation-desc">One mascot bubble with the key point. Tap to reveal follow-up messages for depth.</p>
+
+    <div class="phone">
+      <div class="space-bg">
+        <div class="s" style="top:8%;left:20%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.6);animation-duration:3.2s"></div>
+        <div class="s" style="top:22%;left:80%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 8px 2px rgba(253,230,138,0.5);animation-duration:4.5s;animation-delay:.8s"></div>
+        <div class="s" style="top:40%;left:5%;width:2px;height:2px;background:#E0E7FF;box-shadow:0 0 6px 2px rgba(224,231,255,0.4);animation-duration:3.7s;animation-delay:1.5s"></div>
+        <div class="s" style="top:60%;left:65%;width:2px;height:2px;background:#C4B5FD;box-shadow:0 0 7px 2px rgba(196,181,253,0.4);animation-duration:4s;animation-delay:2.6s"></div>
+        <div class="s" style="top:80%;left:35%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.5);animation-duration:3.3s;animation-delay:1.3s"></div>
+        <div class="nb" style="top:15%;right:-12%;width:200px;height:200px;background:radial-gradient(circle,rgba(99,102,241,0.1) 0%,transparent 70%)"></div>
+        <div class="pl" style="bottom:15%;right:8%;width:30px;height:30px;background:linear-gradient(135deg,#FB7185,#4C0519);box-shadow:0 0 14px 3px rgba(251,113,133,0.12),inset -4px -2px 6px rgba(0,0,0,0.4)"></div>
+      </div>
+      <div class="phone-screen">
+        <div class="hdr">
+          <button class="hdr-x">&times;</button>
+          <div class="hdr-bar"><div class="hdr-fill"></div></div>
+          <div class="hdr-hp">&#10084; 5</div>
+        </div>
+
+        <div class="vc-zone">
+          <div class="vc-main-row">
+            <div class="vc-av">
+              <img src="../public/mascot/space-astronaut.png" width="52" height="52" style="border-radius:50%" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="vc-main-bubble">
+              <h3>You're a Space Traveler</h3>
+              <p>Earth orbits the Sun at <strong>107,000 km/h</strong> — you've been flying through space your whole life.</p>
+            </div>
+          </div>
+
+          <button class="expand-trigger" onclick="toggle(this)" style="justify-content: flex-start; padding-left: 62px;">
+            Tell me more <span class="arrow">&#9660;</span>
+          </button>
+          <div class="expand-content">
+            <div class="vc-expand-body">
+              <div class="vc-extra-bubble">
+                Earth also <strong>spins</strong> at 1,600 km/h. Our galaxy has 200 billion stars — and it's just one of trillions.
+              </div>
+              <div class="vc-extra-bubble hint">
+                &#127769; Step outside and look up. Everything you see is part of the universe.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="got-it">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== D — Typographic Statement ==================== -->
+  <div class="variation">
+    <span class="variation-label">Variation D</span>
+    <div class="variation-title">Big Type Statement</div>
+    <p class="variation-desc">Pure typography — big statement, one line, ghost mascot. Expand reveals structured detail.</p>
+
+    <div class="phone">
+      <div class="space-bg">
+        <div class="s" style="top:4%;left:50%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 8px 2px rgba(253,230,138,0.5);animation-duration:4.5s;animation-delay:.8s"></div>
+        <div class="s" style="top:18%;left:85%;width:2px;height:2px;background:#C4B5FD;box-shadow:0 0 7px 2px rgba(196,181,253,0.5);animation-duration:3.9s;animation-delay:2.2s"></div>
+        <div class="s" style="top:32%;left:12%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.6);animation-duration:3.2s"></div>
+        <div class="s" style="top:60%;left:75%;width:2px;height:2px;background:#E0E7FF;box-shadow:0 0 6px 2px rgba(224,231,255,0.4);animation-duration:4.3s;animation-delay:1s"></div>
+        <div class="s" style="top:78%;left:25%;width:2px;height:2px;background:#FDE68A;box-shadow:0 0 6px 2px rgba(253,230,138,0.4);animation-duration:3.5s;animation-delay:1.7s"></div>
+        <div class="s" style="top:90%;left:60%;width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px rgba(255,255,255,0.5);animation-duration:4s;animation-delay:2.6s"></div>
+        <div class="nb" style="top:40%;left:-10%;width:200px;height:200px;background:radial-gradient(circle,rgba(168,85,247,0.07) 0%,transparent 70%)"></div>
+      </div>
+
+      <div class="vd-mascot-float">
+        <img src="../public/mascot/space-ufo.png" width="90" height="90" style="border-radius:50%;opacity:.6" alt="" onerror="this.style.display='none'">
+      </div>
+
+      <div class="phone-screen">
+        <div class="hdr">
+          <button class="hdr-x">&times;</button>
+          <div class="hdr-bar"><div class="hdr-fill"></div></div>
+          <div class="hdr-hp">&#10084; 5</div>
+        </div>
+
+        <div class="vd-zone">
+          <div class="vd-main">
+            <div class="vd-topic-tag">Space &middot; Looking Up</div>
+            <div class="vd-statement">You've Been a Space Traveler Your Whole Life</div>
+            <div class="vd-sub">Earth orbits the Sun at <span class="hl">107,000 km/h</span> — and you're on it right now.</div>
+          </div>
+
+          <button class="expand-trigger" onclick="toggle(this)">
+            Tell me more <span class="arrow">&#9660;</span>
+          </button>
+          <div class="expand-content">
+            <div class="vd-expand-body">
+              <div class="vd-detail-block">
+                <div class="vd-detail-row">
+                  <span class="vd-detail-label">Spin</span>
+                  <span class="vd-detail-val">1,600 km/h</span>
+                </div>
+                <div class="vd-detail-sep"></div>
+                <div class="vd-detail-row">
+                  <span class="vd-detail-label">Orbit</span>
+                  <span class="vd-detail-val">107,000 km/h</span>
+                </div>
+                <div class="vd-detail-sep"></div>
+                <div class="vd-detail-row">
+                  <span class="vd-detail-label">Galaxy</span>
+                  <span class="vd-detail-val">~200B stars</span>
+                </div>
+              </div>
+              <div class="vd-hint-aside">
+                <img src="../public/mascot/space-moon.png" width="28" height="28" style="border-radius:50%;flex-shrink:0" alt="" onerror="this.style.display='none'">
+                <p>Step outside and look up — you're part of all of it.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="got-it">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggle(btn) {
+    btn.classList.toggle('open');
+    const content = btn.nextElementSibling;
+    content.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>

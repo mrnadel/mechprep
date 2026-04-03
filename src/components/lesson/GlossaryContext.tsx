@@ -10,6 +10,7 @@ interface GlossaryContextValue {
   matcher: GlossaryMatcher | null;
   sectionIndex: number | undefined;
   accentColor: string;
+  activeTerm: string | null;
   openPopover: (entry: { term: string; definition: string; relatedTerms?: string[] }, rect: DOMRect) => void;
 }
 
@@ -17,6 +18,7 @@ const Ctx = createContext<GlossaryContextValue>({
   matcher: null,
   sectionIndex: undefined,
   accentColor: '#3B82F6',
+  activeTerm: null,
   openPopover: () => {},
 });
 
@@ -68,15 +70,19 @@ export function GlossaryProvider({ sectionIndex, accentColor, children }: Glossa
   );
 
   return (
-    <Ctx.Provider value={{ matcher, sectionIndex, accentColor, openPopover }}>
+    <Ctx.Provider value={{ matcher, sectionIndex, accentColor, activeTerm: popover?.entry.term ?? null, openPopover }}>
       {children}
       {popover && (
         <GlossaryPopover
-          entry={popover.entry}
+          entry={{
+            ...popover.entry,
+            relatedTerms: popover.entry.relatedTerms?.filter(rt => matcher?.lookupTerm(rt)),
+          }}
           anchorRect={popover.rect}
           accentColor={accentColor}
           onClose={closePopover}
           onRelatedTermClick={handleRelatedTermClick}
+          matcher={matcher}
         />
       )}
     </Ctx.Provider>
