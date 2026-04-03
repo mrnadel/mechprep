@@ -150,7 +150,7 @@ const OrderStepsCard = forwardRef<QuestionCardHandle, OrderStepsCardProps>(
                     : { opacity: 1, y: 0 }
                 }
                 whileDrag={{ scale: 1.04, boxShadow: '0 8px 24px rgba(0,0,0,0.18)', zIndex: 10 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 28, delay: results === null ? position * 0.05 : 0 }}
+                transition={isCorrect !== null ? { type: 'tween', duration: 0.35 } : { type: 'spring', stiffness: 400, damping: 28, delay: results === null ? position * 0.05 : 0 }}
                 style={{
                   display: 'flex', alignItems: 'center', gap: 10,
                   padding: '12px 14px', borderRadius: 14, background: bg, border,

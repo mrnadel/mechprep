@@ -956,7 +956,7 @@ function XpLevelPopover({ totalXp }: { totalXp: number }) {
           <motion.p
             style={{ fontSize: 28, marginBottom: 4 }}
             animate={{ rotate: [0, -5, 5, 0] }}
-            transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+            transition={{ type: 'tween', duration: 2, repeat: Infinity, repeatDelay: 3 }}
           >
             👑
           </motion.p>

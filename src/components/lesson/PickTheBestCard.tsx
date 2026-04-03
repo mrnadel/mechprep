@@ -183,7 +183,7 @@ const PickTheBestCard = forwardRef<QuestionCardHandle, PickTheBestCardProps>(
                 {/* Star indicator */}
                 <motion.span
                   animate={isSelected && !answered ? { scale: [1, 1.3, 1], rotate: [0, 15, -15, 0] } : { scale: 1 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ type: 'tween', duration: 0.3 }}
                   style={{
                     fontSize: 20, flexShrink: 0, width: 28, textAlign: 'center',
                     color: starColor, transition: 'color 0.2s',

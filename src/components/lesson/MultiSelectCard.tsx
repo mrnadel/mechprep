@@ -166,7 +166,7 @@ const MultiSelectCard = forwardRef<QuestionCardHandle, MultiSelectCardProps>(
                 animate={revealAnimation}
                 transition={
                   answered && localCorrect !== null
-                    ? { duration: 0.35 }
+                    ? { type: 'tween', duration: 0.35 }
                     : { delay: displayIdx * 0.06, type: 'spring', stiffness: 400, damping: 25 }
                 }
                 whileTap={!answered ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}

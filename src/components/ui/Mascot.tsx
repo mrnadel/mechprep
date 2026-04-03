@@ -70,9 +70,7 @@ export function Mascot({ pose, size = 120, className }: MascotProps) {
       width={size}
       height={size}
       className={className}
-      style={{ width: 'auto', height: 'auto' }}
       draggable={false}
-      priority
     />
   );
 }

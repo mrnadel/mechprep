@@ -354,7 +354,7 @@ export default function SpeedRoundView({
                         ? { x: [0, -6, 6, -4, 4, 0] }
                         : {}
                     }
-                    transition={{ duration: 0.3 }}
+                    transition={{ type: 'tween', duration: 0.3 }}
                     style={{
                       padding: '16px 12px',
                       borderRadius: 14,

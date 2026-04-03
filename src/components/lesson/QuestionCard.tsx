@@ -513,7 +513,7 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
                   animate={revealAnimation}
                   transition={
                     answered && localCorrect !== null
-                      ? { duration: 0.35 }
+                      ? { type: 'tween', duration: 0.35 }
                       : { delay: idx * 0.08, type: 'spring', stiffness: 400, damping: 25 }
                   }
                   whileTap={!answered ? { y: 3, boxShadow: '0 0 0 transparent', transition: { duration: 0.06 } } : undefined}

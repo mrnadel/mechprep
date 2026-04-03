@@ -34,7 +34,7 @@ export function LevelUpCelebration({ reward, onClose }: Props) {
       <motion.div className="flex items-center justify-center rounded-full mb-3"
         style={{ width: 88, height: 88, background: isMilestone ? 'linear-gradient(135deg, #FBBF24, #F59E0B)' : 'rgba(255,255,255,0.1)', border: isMilestone ? '3px solid #FDE68A' : '3px solid rgba(255,255,255,0.2)', fontSize: 42 }}
         initial={{ scale: 0, rotate: -15 }} animate={{ scale: 1, rotate: 0 }} transition={{ type: 'spring', stiffness: 300, damping: 15, delay: 0.15 }}>
-        <motion.span style={{ display: 'inline-block' }} animate={isMilestone ? { rotate: [0, -8, 8, -4, 4, 0] } : undefined} transition={isMilestone ? { duration: 1, delay: 0.5 } : undefined}>
+        <motion.span style={{ display: 'inline-block' }} animate={isMilestone ? { rotate: [0, -8, 8, -4, 4, 0] } : undefined} transition={isMilestone ? { type: 'tween', duration: 1, delay: 0.5 } : undefined}>
           {levelDef ? <LevelBadge level={levelDef} size={56} /> : <Star className="w-10 h-10 text-amber-400" />}
         </motion.span>
       </motion.div>
