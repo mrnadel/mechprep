@@ -7,6 +7,7 @@ import { MoneyText } from '@/components/ui/MoneyText';
 import { Mascot, type MascotPose } from '@/components/ui/Mascot';
 import { useLessonColors } from '@/lib/lessonColors';
 import { STORAGE_KEYS } from '@/lib/storage-keys';
+import EngagingText from './EngagingText';
 
 const DiagramDisplay = memo(function DiagramDisplay({ html, cardBg, border }: { html: string; cardBg: string; border: string }) {
   const sanitised = html
@@ -148,10 +149,10 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
                 fontSize: 14.5,
                 fontWeight: 500,
                 color: subtitleColor,
-                lineHeight: 1.55,
+                lineHeight: 1.6,
               }}
             >
-              <MoneyText text={displayExplanation} />
+              <EngagingText text={displayExplanation} accentColor={unitColor} />
             </div>
           </motion.div>
         </motion.div>
@@ -186,8 +187,8 @@ export default function TeachingCard({ question, unitColor, onGotIt, hasBackgrou
           >
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
               <Mascot pose="thinking" size={28} className="flex-shrink-0 mt-0.5" />
-              <p style={{ fontSize: 13, fontWeight: 600, color: subtitleColor, lineHeight: 1.5, margin: 0 }}>
-                <MoneyText text={question.hint} />
+              <p style={{ fontSize: 13, fontWeight: 500, color: subtitleColor, lineHeight: 1.5, margin: 0 }}>
+                <EngagingText text={question.hint} accentColor={unitColor} />
               </p>
             </div>
           </motion.div>
