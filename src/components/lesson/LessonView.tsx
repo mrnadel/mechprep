@@ -40,6 +40,7 @@ import { GameButton } from '@/components/ui/GameButton';
 import type { CourseQuestion } from '@/data/course/types';
 import type { ContentFeedbackType } from '@/data/types';
 import { GlossaryText } from '@/components/ui/GlossaryText';
+import { GlossaryProvider } from '@/components/lesson/GlossaryContext';
 
 /**
  * Adapter for driving LessonView from an external data source (e.g. practice sessions).
@@ -121,6 +122,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
     if (!lesson) return null;
     return { unit, lesson };
   }, [adapter, activeLesson, courseData]);
+
+  const currentSectionIndex = lessonData?.unit?.sectionIndex;
 
   const lessonTheme = useMemo(() => {
     if (adapter || !activeLesson) return getUnitTheme(0);
@@ -535,6 +538,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             dangerouslySetInnerHTML={{ __html: backgroundHtml! }}
           />
         )}
+        <GlossaryProvider sectionIndex={currentSectionIndex} accentColor={unitColor}>
         <div
           className={`w-full h-full max-w-3xl flex flex-col lg:shadow-lg lg:border-x ${hasBackground ? 'lg:border-transparent' : 'lg:border-gray-200'}`}
           style={{ position: 'relative', background: hasBackground ? 'transparent' : undefined }}
@@ -1046,6 +1050,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         ) : null}
 
         </div>{/* end centered wrapper */}
+        </GlossaryProvider>
 
 
         {/* Calculator panel — shows the right calculator per course */}
