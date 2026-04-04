@@ -511,13 +511,20 @@ export function CourseMap() {
       }
 
       // 3. Hero morph — direct DOM update, no React state
-      //    First unit: reference = spacer bottom (topOffset + 184)
-      //    Other units: reference = header top (topOffset) — banner overlays header when expanded
       const visibleEl = unitElsRef.current[newIndex];
+      const hiddenMp = HERO_EXPANDED_HEIGHT / HERO_MORPH_DISTANCE; // ≈1.508 → fully invisible
       if (visibleEl && heroRef.current) {
-        const morphRef = newIndex === 0 ? topOffset + HERO_EXPANDED_HEIGHT : topOffset;
-        const scrolled = morphRef - visibleEl.getBoundingClientRect().top;
-        let mp = Math.min(1, Math.max(0, scrolled / HERO_MORPH_DISTANCE));
+        let mp: number;
+        if (newIndex === 0) {
+          // First unit: morph from spacer, 1:1 rate
+          const scrolled = (topOffset + HERO_EXPANDED_HEIGHT) - visibleEl.getBoundingClientRect().top;
+          mp = Math.min(1, Math.max(0, scrolled / HERO_MORPH_DISTANCE));
+        } else {
+          // Other units: stay invisible until the inline banner reaches
+          // the header area, then morph expanded → compact on top of it
+          const scrolled = topOffset - visibleEl.getBoundingClientRect().top;
+          mp = scrolled < 0 ? hiddenMp : Math.min(1, scrolled / HERO_MORPH_DISTANCE);
+        }
 
         // 4. Squash: compress to 0 when approaching next unit's banner
         const nextUnitEl = unitElsRef.current[newIndex + 1];
