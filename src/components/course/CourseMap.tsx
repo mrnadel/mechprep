@@ -13,8 +13,7 @@ import { getUnitTheme, type UnitTheme } from '@/lib/unitThemes';
 import { UpgradeModal } from '@/components/ui/UpgradeModal';
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
 import { LessonNode } from './LessonNode';
-import { UnitHeroHeader, HERO_EXPANDED_HEIGHT, HERO_COMPACT_HEIGHT, HERO_MORPH_DISTANCE } from './UnitHeroHeader';
-import { getUnitBackground } from '@/lib/unitBackgrounds';
+import { UnitHeroHeader, HERO_EXPANDED_HEIGHT, HERO_MORPH_DISTANCE } from './UnitHeroHeader';
 import { useIsDark } from '@/store/useThemeStore';
 
 type JumpModalType =
@@ -623,48 +622,11 @@ export function CourseMap() {
                 animationDelay: `${Math.min(localIdx * 0.1, 0.5)}s`,
               }}
             >
-              {/* Inline unit hero banner — scroll buffer for floating header re-expansion */}
-              {localIdx > 0 && (() => {
-                const bg = getUnitBackground(unitIndex);
-                const bannerBg = isAllGolden ? '#FFB800' : theme.color;
-                const pct = unit.lessons.length > 0 ? (completedInUnit / unit.lessons.length) * 100 : 0;
-                return (
-                  <div
-                    style={{
-                      borderRadius: 20,
-                      backgroundColor: bannerBg,
-                      padding: '18px 20px 16px',
-                      marginTop: 24,
-                      marginBottom: 8,
-                      minHeight: HERO_EXPANDED_HEIGHT,
-                      position: 'relative',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <div aria-hidden style={{ position: 'absolute', inset: 0, backgroundImage: bg.css, backgroundSize: bg.size ?? 'auto', pointerEvents: 'none' }} />
-                    <div aria-hidden style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: '50%', background: 'linear-gradient(to top, rgba(0,0,0,0.1) 0%, transparent 100%)', pointerEvents: 'none' }} />
-                    <div style={{ position: 'relative' }}>
-                      <div style={{ fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.2, color: 'rgba(255,255,255,0.6)' }}>
-                        {hasSections ? `Section ${currentSection.sectionIndex}, Unit ${unitIndex + 1}` : `Unit ${unitIndex + 1}`}
-                      </div>
-                      <div style={{ fontSize: 20, fontWeight: 800, color: '#FFFFFF', lineHeight: 1.25 }}>
-                        {unit.title}
-                      </div>
-                      <div className="line-clamp-2" style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.7)', marginTop: 4, lineHeight: 1.35 }}>
-                        {unit.description}
-                      </div>
-                      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 10 }}>
-                        <div style={{ flex: 1, height: 8, borderRadius: 4, background: 'rgba(0,0,0,0.15)', overflow: 'hidden' }}>
-                          <div style={{ width: `${pct}%`, height: '100%', borderRadius: 4, backgroundColor: '#FFFFFF', transition: 'width 0.4s ease' }} />
-                        </div>
-                        <span style={{ fontSize: 12, fontWeight: 800, color: 'rgba(255,255,255,0.75)', whiteSpace: 'nowrap' }}>
-                          {isAllGolden ? '\u2728 Mastered!' : `${completedInUnit}/${unit.lessons.length}`}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })()}
+              {/* Invisible spacer — reserves space for the floating header to expand into.
+                  The floating header provides the full visual (bg, title, progress). */}
+              {localIdx > 0 && (
+                <div aria-hidden style={{ height: HERO_EXPANDED_HEIGHT, marginTop: 24, marginBottom: 8 }} />
+              )}
 
               {/* "Jump here" button for placement-test-eligible locked units */}
               {isUnitJumpable(unitIndex) && (
