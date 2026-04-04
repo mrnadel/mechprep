@@ -511,31 +511,13 @@ export function CourseMap() {
       }
 
       // 3. Hero morph — direct DOM update, no React state
+      //    First unit: reference = spacer bottom (topOffset + 184)
+      //    Other units: reference = header top (topOffset) — banner overlays header when expanded
       const visibleEl = unitElsRef.current[newIndex];
       if (visibleEl && heroRef.current) {
-        let mp: number;
-        // mp ≈ 1.508 → height = 0, opacity = 0 (fully hidden)
-        const hiddenMp = HERO_EXPANDED_HEIGHT / HERO_MORPH_DISTANCE;
-
-        if (newIndex === 0) {
-          // First unit: morph from expanded spacer → compact, 1:1 rate
-          const scrolled = (topOffset + HERO_EXPANDED_HEIGHT) - visibleEl.getBoundingClientRect().top;
-          mp = Math.min(1, Math.max(0, scrolled / HERO_MORPH_DISTANCE));
-        } else {
-          // Other units: hidden while inline banner is on screen,
-          // then fade in as compact once the banner scrolls past
-          const bannerBottom = visibleEl.getBoundingClientRect().top + 180;
-          const pastBanner = (topOffset + HERO_COMPACT_HEIGHT) - bannerBottom;
-          const fadeIn = 30;
-
-          if (pastBanner < 0) {
-            mp = hiddenMp;
-          } else if (pastBanner < fadeIn) {
-            mp = hiddenMp - (pastBanner / fadeIn) * (hiddenMp - 1);
-          } else {
-            mp = 1;
-          }
-        }
+        const morphRef = newIndex === 0 ? topOffset + HERO_EXPANDED_HEIGHT : topOffset;
+        const scrolled = morphRef - visibleEl.getBoundingClientRect().top;
+        let mp = Math.min(1, Math.max(0, scrolled / HERO_MORPH_DISTANCE));
 
         // 4. Squash: compress to 0 when approaching next unit's banner
         const nextUnitEl = unitElsRef.current[newIndex + 1];
@@ -647,7 +629,7 @@ export function CourseMap() {
                       padding: '18px 20px 16px',
                       marginTop: 24,
                       marginBottom: 8,
-                      minHeight: 160,
+                      minHeight: HERO_EXPANDED_HEIGHT,
                       position: 'relative',
                       overflow: 'hidden',
                     }}
