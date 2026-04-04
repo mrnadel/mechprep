@@ -5,6 +5,8 @@ import type { Unit } from '@/data/course/types';
 import type { UnitTheme } from '@/lib/unitThemes';
 import { getUnitBackground } from '@/lib/unitBackgrounds';
 import { UnitIllustration } from './UnitIllustrations';
+import { useDevImageStore } from '@/store/useDevImageStore';
+import { DebugHeaderImage } from '@/components/dev/DebugHeaderImage';
 
 /** Expanded hero height (px) */
 export const HERO_EXPANDED_HEIGHT = 184;
@@ -60,6 +62,13 @@ export const UnitHeroHeader = memo(
     const progressPercent =
       totalInUnit > 0 ? (completedInUnit / totalInUnit) * 100 : 0;
 
+    // Dev-only image override (store is only used in dev builds)
+    const imageOverride = process.env.NODE_ENV === 'development'
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      ? useDevImageStore((s) => s.overrides[unit.id])
+      : undefined;
+    const effectiveHeaderBg = imageOverride ?? unit.headerBg;
+
     return (
       <div
         ref={ref}
@@ -107,14 +116,26 @@ export const UnitHeroHeader = memo(
               style={{
                 position: 'absolute',
                 inset: 0,
-                backgroundImage: background.css,
-                backgroundSize: background.size ?? 'auto',
-                opacity: fade(1.8),
+                ...(effectiveHeaderBg
+                  ? { backgroundImage: `url(${effectiveHeaderBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+                  : { backgroundImage: background.css, backgroundSize: background.size ?? 'auto' }),
+                // Keep image visible in compact mode; fade CSS patterns
+                opacity: effectiveHeaderBg ? 1 : fade(1.8),
                 pointerEvents: 'none',
               }}
             />
 
-            {/* Bottom readability gradient */}
+            {/* Dev: header image upload button (fades with expanded state) */}
+            {process.env.NODE_ENV === 'development' && (
+              <div
+                onClick={(e) => { e.stopPropagation(); e.preventDefault(); }}
+                style={{ opacity: fade(2.5), pointerEvents: 'auto' }}
+              >
+                <DebugHeaderImage unitId={unit.id} />
+              </div>
+            )}
+
+            {/* Bottom readability gradient — stronger when bg image is set */}
             <div
               aria-hidden
               style={{
@@ -122,15 +143,16 @@ export const UnitHeroHeader = memo(
                 left: 0,
                 right: 0,
                 bottom: 0,
-                height: '50%',
-                background:
-                  'linear-gradient(to top, rgba(0,0,0,0.1) 0%, transparent 100%)',
-                opacity: fade(2.5),
+                height: '60%',
+                background: effectiveHeaderBg
+                  ? 'linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 100%)'
+                  : 'linear-gradient(to top, rgba(0,0,0,0.1) 0%, transparent 100%)',
+                opacity: effectiveHeaderBg ? 1 : fade(2.5),
                 pointerEvents: 'none',
               }}
             />
 
-            {/* Content */}
+            {/* Content — blur backdrop for readability over noisy bg images */}
             <div
               style={{
                 position: 'relative',
@@ -139,6 +161,11 @@ export const UnitHeroHeader = memo(
                 padding: `${px(20, 10)} ${px(20, 16)} ${px(16, 12)}`,
                 height: '100%',
                 gap: 12,
+                ...(effectiveHeaderBg ? {
+                  background: 'rgba(0,0,0,0.25)',
+                  backdropFilter: 'blur(8px)',
+                  WebkitBackdropFilter: 'blur(8px)',
+                } : {}),
               }}
             >
               {/* Left text */}
@@ -228,68 +255,22 @@ export const UnitHeroHeader = memo(
                 </div>
               </div>
 
-              {/* Right: illustration ↔ browse icon crossfade */}
+              {/* Right: unit illustration (fades out as header compacts) */}
               <div
                 style={{
-                  position: 'relative',
                   width: px(72, 34),
                   height: px(72, 34),
                   flexShrink: 0,
                   alignSelf: 'center',
+                  opacity: fade(1.667),
                 }}
               >
-                {/* Unit illustration (fades out by mp≈0.6) */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    opacity: fade(1.667),
-                  }}
-                >
-                  <UnitIllustration
-                    unitIndex={unitIndex}
-                    color="#FFFFFF"
-                    className="w-full h-full"
-                    professionId={professionId}
-                  />
-                </div>
-
-                {/* Browse book icon (fades in from mp≈0.4) */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    opacity: `calc(${mp} * 1.667 - 0.667)`,
-                    background: 'rgba(255,255,255,0.2)',
-                    borderRadius: 10,
-                  }}
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M4 19.5v-15A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M4 19.5A2.5 2.5 0 016.5 17H20"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9 7h6"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+                <UnitIllustration
+                  unitIndex={unitIndex}
+                  color="#FFFFFF"
+                  className="w-full h-full"
+                  professionId={professionId}
+                />
               </div>
             </div>
           </button>
