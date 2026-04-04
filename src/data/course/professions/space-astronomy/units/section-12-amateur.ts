@@ -18,7 +18,6 @@ export const spaceSection12: Unit[] = [
         description: "A great observation night starts long before you step outside.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u1-L1-T1",
@@ -109,7 +108,6 @@ export const spaceSection12: Unit[] = [
         description: "How the Moon and atmosphere affect what you can see.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u1-L2-T1",
@@ -206,7 +204,6 @@ export const spaceSection12: Unit[] = [
         description: "How to build a target list that matches the season, your equipment, and sky conditions.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u1-L3-T1",
@@ -296,7 +293,6 @@ export const spaceSection12: Unit[] = [
         description: "How to organize targets, set up a schedule, and maximize your time under the stars.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u1-L4-T1",
@@ -387,7 +383,6 @@ export const spaceSection12: Unit[] = [
         description: "What to bring, what to wear, and what most beginners forget.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u1-L5-T1",
@@ -494,7 +489,6 @@ export const spaceSection12: Unit[] = [
         description: "The mount is just as important as the telescope. Here's how to set it up right.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u2-L1-T1",
@@ -581,7 +575,6 @@ export const spaceSection12: Unit[] = [
         description: "How to point your equatorial mount's axis at the celestial pole.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u2-L2-T1",
@@ -674,7 +667,6 @@ export const spaceSection12: Unit[] = [
         description: "How to use finder scopes and perform star alignment for accurate GoTo pointing.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u2-L3-T1",
@@ -761,7 +753,6 @@ export const spaceSection12: Unit[] = [
         description: "Get the sharpest images by mastering focus and optical alignment.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u2-L4-T1",
@@ -854,7 +845,6 @@ export const spaceSection12: Unit[] = [
         description: "Why your telescope needs to cool down and how to fix common setup problems.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u2-L5-T1",
@@ -959,7 +949,6 @@ export const spaceSection12: Unit[] = [
         description: "Navigate the sky by jumping from star to star to reach your target.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u3-L1-T1",
@@ -1049,7 +1038,6 @@ export const spaceSection12: Unit[] = [
         description: "Practice star hopping with the most popular routes to famous deep sky objects.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u3-L2-T1",
@@ -1137,7 +1125,6 @@ export const spaceSection12: Unit[] = [
         description: "How computerized mounts find objects automatically and when to rely on them.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u3-L3-T1",
@@ -1231,7 +1218,6 @@ export const spaceSection12: Unit[] = [
         description: "Alternative methods to find objects using coordinates and smartphone apps.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u3-L4-T1",
@@ -1319,7 +1305,6 @@ export const spaceSection12: Unit[] = [
         description: "Combine star hopping and technology for efficient observing sessions.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u3-L5-T1",
@@ -1425,7 +1410,6 @@ export const spaceSection12: Unit[] = [
         description: "Revisit Moon phases, Bortle scale, seeing, transparency, and session planning.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u4-L1-T1",
@@ -1515,7 +1499,6 @@ export const spaceSection12: Unit[] = [
         description: "Test your knowledge of mounts, polar alignment, focusing, and collimation.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u4-L2-T1",
@@ -1602,7 +1585,6 @@ export const spaceSection12: Unit[] = [
         description: "Test star hopping skills, GoTo knowledge, and object-finding strategies.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u4-L3-T1",
@@ -1705,7 +1687,6 @@ export const spaceSection12: Unit[] = [
         description: "Modern smartphones can capture surprisingly good images of the Moon, planets, and even star trails.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u5-L1-T1",
@@ -1798,7 +1779,6 @@ export const spaceSection12: Unit[] = [
         description: "How to set up a DSLR or mirrorless camera for your first night sky photos.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u5-L2-T1",
@@ -1889,7 +1869,6 @@ export const spaceSection12: Unit[] = [
         description: "How long you can expose before stars trail, and how tracking mounts help.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u5-L3-T1",
@@ -1984,7 +1963,6 @@ export const spaceSection12: Unit[] = [
         description: "Capture stunning panoramas of our home galaxy with just a camera and tripod.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u5-L4-T1",
@@ -2076,7 +2054,6 @@ export const spaceSection12: Unit[] = [
         description: "Capture detailed images of the Moon and planets through your telescope.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u5-L5-T1",
@@ -2176,7 +2153,6 @@ export const spaceSection12: Unit[] = [
         description: "How collecting more photons reveals structure invisible to your eyes.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u6-L1-T1",
@@ -2272,7 +2248,6 @@ export const spaceSection12: Unit[] = [
         description: "Why astrophotographers take dozens of short exposures and combine them.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u6-L2-T1",
@@ -2362,7 +2337,6 @@ export const spaceSection12: Unit[] = [
         description: "Dark frames, flat frames, and bias frames improve your final image dramatically.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u6-L3-T1",
@@ -2453,7 +2427,6 @@ export const spaceSection12: Unit[] = [
         description: "Basic post-processing to bring out detail in your stacked astrophoto.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u6-L4-T1",
@@ -2540,7 +2513,6 @@ export const spaceSection12: Unit[] = [
         description: "How a small guide camera keeps your telescope locked on target during long exposures.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u6-L5-T1",
@@ -2643,7 +2615,6 @@ export const spaceSection12: Unit[] = [
         description: "Filters block unwanted light and pass the light you want, improving contrast and detail.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u7-L1-T1",
@@ -2736,7 +2707,6 @@ export const spaceSection12: Unit[] = [
         description: "How hydrogen-alpha and oxygen-III filters reveal nebulae even in light-polluted skies.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u7-L2-T1",
@@ -2827,7 +2797,6 @@ export const spaceSection12: Unit[] = [
         description: "How astrophotographers create stunning color images from narrowband data.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u7-L3-T1",
@@ -2920,7 +2889,6 @@ export const spaceSection12: Unit[] = [
         description: "Filters for safe solar viewing and enhanced planetary detail.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u7-L4-T1",
@@ -3008,7 +2976,6 @@ export const spaceSection12: Unit[] = [
         description: "Which filters to buy first and how to build a useful collection over time.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u7-L5-T1",
@@ -3115,7 +3082,6 @@ export const spaceSection12: Unit[] = [
         description: "Revisit the 500 rule, exposure settings, and planetary vs. deep sky imaging.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u8-L1-T1",
@@ -3192,7 +3158,6 @@ export const spaceSection12: Unit[] = [
         description: "Test your understanding of calibration frames, stacking workflow, and image processing.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u8-L2-T1",
@@ -3268,7 +3233,6 @@ export const spaceSection12: Unit[] = [
         description: "Test your knowledge of filter types, the Hubble Palette, and filter selection strategy.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u8-L3-T1",
@@ -3358,7 +3322,6 @@ export const spaceSection12: Unit[] = [
         description: "How amateur astronomers contribute real data to professional research.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u9-L1-T1",
@@ -3452,7 +3415,6 @@ export const spaceSection12: Unit[] = [
         description: "Measure the changing brightness of stars and submit data to the AAVSO.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u9-L2-T1",
@@ -3542,7 +3504,6 @@ export const spaceSection12: Unit[] = [
         description: "How amateurs track asteroids, time occultations, and even discover new comets.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u9-L3-T1",
@@ -3634,7 +3595,6 @@ export const spaceSection12: Unit[] = [
         description: "Classify galaxies, hunt for exoplanets, and count craters from your computer.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u9-L4-T1",
@@ -3721,7 +3681,6 @@ export const spaceSection12: Unit[] = [
         description: "How to submit observations properly so they have real scientific value.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u9-L5-T1",
@@ -3829,7 +3788,6 @@ export const spaceSection12: Unit[] = [
         description: "The benefits of a permanent setup and whether it's right for you.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u10-L1-T1",
@@ -3923,7 +3881,6 @@ export const spaceSection12: Unit[] = [
         description: "Choosing the best spot in your yard and building a stable telescope pier.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u10-L2-T1",
@@ -4008,7 +3965,6 @@ export const spaceSection12: Unit[] = [
         description: "Design and build the most popular type of amateur home observatory.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u10-L3-T1",
@@ -4104,7 +4060,6 @@ export const spaceSection12: Unit[] = [
         description: "Control your telescope and camera from inside the house or anywhere in the world.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u10-L4-T1",
@@ -4197,7 +4152,6 @@ export const spaceSection12: Unit[] = [
         description: "Keep your observatory running smoothly year after year.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u10-L5-T1",
@@ -4299,7 +4253,6 @@ export const spaceSection12: Unit[] = [
         description: "Test your knowledge of planning, setup, and finding objects.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u11-L1-T1",
@@ -4386,7 +4339,6 @@ export const spaceSection12: Unit[] = [
         description: "Test your understanding of imaging techniques, stacking, processing, and filters.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u11-L2-T1",
@@ -4476,7 +4428,6 @@ export const spaceSection12: Unit[] = [
         description: "Test your knowledge of citizen science, data reporting, and observatory design.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u11-L3-T1",
@@ -4566,7 +4517,6 @@ export const spaceSection12: Unit[] = [
         description: "A comprehensive challenge covering all of Astrophotography and Amateur Astronomy. Prove your mastery.",
         icon: "📝",
         xpReward: 35,
-        levels: 4,
         questions: [
           {
             id: "sp-sec12-u11-L4-T1",

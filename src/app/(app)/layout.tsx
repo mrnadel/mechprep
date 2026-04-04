@@ -3,6 +3,9 @@
 import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useDbSync } from '@/hooks/useDbSync';
+import { useCourseStore } from '@/store/useCourseStore';
+import { PROFESSIONS } from '@/data/professions';
+import { APP_NAME } from '@/lib/constants';
 
 import { useEngagementInit } from '@/lib/engagement-init';
 import { useFlagStore } from '@/hooks/useFeatureFlags';
@@ -16,6 +19,14 @@ import { PushPrompt } from '@/components/engagement/PushPrompt';
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { status } = useSession();
   const { isHydrated } = useDbSync();
+  const activeProfession = useCourseStore((s) => s.activeProfession);
+
+  // Build dynamic page title based on active course
+  const courseTitle = (() => {
+    if (status !== 'authenticated') return null;
+    const profession = PROFESSIONS.find((p) => p.id === activeProfession);
+    return profession ? `${profession.name} | ${APP_NAME}` : null;
+  })();
 
   // Load feature flags from DB
   const loadFlags = useFlagStore((s) => s.load);
@@ -41,6 +52,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] dark:bg-surface-950">
+      {courseTitle && <title>{courseTitle}</title>}
       <div className="flex">
         {/* Desktop side nav */}
         <DesktopSideNav />

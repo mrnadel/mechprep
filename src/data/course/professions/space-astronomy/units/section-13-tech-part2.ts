@@ -27,7 +27,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "Why orbital junk is one of the biggest threats to spaceflight today.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u6-L1-T1",
@@ -125,7 +124,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How one collision can trigger a chain reaction that threatens entire orbital zones.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u6-L2-T1",
@@ -230,7 +228,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How ground-based and space-based sensors track debris and predict close approaches.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u6-L3-T1",
@@ -330,7 +327,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "Technologies and policies being developed to clean up orbit and prevent future debris.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u6-L4-T1",
@@ -437,7 +433,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How large satellite constellations change the debris risk landscape and what safeguards are needed.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u6-L5-T1",
@@ -556,7 +551,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "The advantages of building things in microgravity instead of launching them from Earth.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u7-L1-T1",
@@ -658,7 +652,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How additive manufacturing works in space and what's been printed on the ISS.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u7-L2-T1",
@@ -755,7 +748,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "Advanced materials and metal printing that push space manufacturing beyond plastic parts.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u7-L3-T1",
@@ -857,7 +849,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How companies plan to build commercial factories in orbit and what products they aim to produce.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u7-L4-T1",
@@ -958,7 +949,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How 3D printing with regolith and ISRU could build lunar and Martian structures.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u7-L5-T1",
@@ -1077,7 +1067,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How spaceflight is being redesigned for people without years of training.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u8-L1-T1",
@@ -1176,7 +1165,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How engineers manage acceleration loads to keep untrained passengers safe and comfortable.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u8-L2-T1",
@@ -1279,7 +1267,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How tourist vehicles provide breathable air, temperature control, and emergency systems for civilians.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u8-L3-T1",
@@ -1380,7 +1367,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "Engineering challenges of hosting tourists in orbit for days or weeks.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u8-L4-T1",
@@ -1480,7 +1466,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How governments regulate commercial spaceflight and what the industry might look like in coming decades.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u8-L5-T1",
@@ -1594,7 +1579,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "The limitations of chemical propulsion and why we need alternatives for deep space.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u9-L1-T1",
@@ -1699,7 +1683,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How electric propulsion accelerates ions to extreme speeds for efficient space travel.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u9-L2-T1",
@@ -1798,7 +1781,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How spacecraft can accelerate using nothing but the pressure of sunlight.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u9-L3-T1",
@@ -1898,7 +1880,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "How nuclear reactors could power faster trips to Mars and beyond.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u9-L4-T1",
@@ -1998,7 +1979,6 @@ export const spaceSection13Part2: Unit[] = [
         description: "From antimatter engines to laser sails, the propulsion ideas that could reach other stars.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec13-u9-L5-T1",

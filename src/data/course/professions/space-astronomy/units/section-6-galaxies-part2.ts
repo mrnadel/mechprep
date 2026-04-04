@@ -26,7 +26,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Meet the Local Group: the collection of galaxies that includes the Milky Way.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u6-L1-T1",
@@ -117,7 +116,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "How groups of galaxies form clusters containing hundreds or thousands of members.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u6-L2-T1",
@@ -205,7 +203,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "The Milky Way and Andromeda are on a collision course billions of years from now.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u6-L3-T1",
@@ -537,7 +534,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Some galaxies have extraordinarily bright centers powered by feeding black holes.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u7-L1-T1",
@@ -624,7 +620,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Seyferts, radio galaxies, blazars, and how they're connected.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u7-L2-T1",
@@ -718,7 +713,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "The most luminous persistent objects in the cosmos and what they tell us about the early universe.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u7-L3-T1",
@@ -808,7 +802,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "How supermassive black holes launch jets traveling close to the speed of light.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u7-L4-T1",
@@ -904,7 +897,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "How active black holes shape the galaxies around them.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u7-L5-T1",
@@ -1116,7 +1108,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "A tour of everything beyond the solar system that isn't an individual star.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u8-L1-T1",
@@ -1205,7 +1196,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Emission, reflection, dark, and planetary nebulae each tell a different story.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u8-L2-T1",
@@ -1293,7 +1283,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Two types of star clusters reveal different chapters of a galaxy's history.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u8-L3-T1",
@@ -1385,7 +1374,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "The most stunning and scientifically important DSOs you should know.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u8-L4-T1",
@@ -1594,7 +1582,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Why measuring distances in space is one of the hardest problems in astronomy.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u9-L1-T1",
@@ -1682,7 +1669,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "How Earth's orbit gives us a baseline for measuring stellar distances.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u9-L2-T1",
@@ -1776,7 +1762,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Objects with known brightness let us measure distances to other galaxies.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u9-L3-T1",
@@ -1872,7 +1857,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "How exploding stars and expanding space measure the most distant reaches of the cosmos.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u9-L4-T1",
@@ -2194,7 +2178,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Review galaxy types, formation, collisions, and the Local Group.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u10-L1-T1",
@@ -2290,7 +2273,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Review active galaxies, quasars, jets, nebulae, and star clusters.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u10-L2-T1",
@@ -2386,7 +2368,6 @@ export const spaceSection6Part2: Unit[] = [
         description: "Review parallax, standard candles, Hubble's law, and dark energy.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u10-L3-T1",

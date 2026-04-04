@@ -2278,18 +2278,46 @@ Batch 4 (4 agents, parallel):
 
 **Phase 2: Expand courses, section by section** (ongoing)
 
-| Sprint | Course | Section | Why first |
-|--------|--------|---------|-----------|
-| 1 | Psychology | 2 (Sensation & Perception) | Entirely new, early section, sets foundation |
-| 2 | Space | 4 (Light & Telescopes) | Entirely new, enables all physics-based sections |
-| 3 | Finance | 13 (Estate Planning) | Entirely new, completes life stages arc |
-| 4 | Psychology | 10 (Developmental) | Entirely new, critical for professional level |
-| 5 | Space | 12 (Amateur Astronomy) | Entirely new, practical application |
-| 6 | Finance | 14 (Business Finance) | Entirely new, serves freelancer persona |
-| 7 | Psychology | 11 (Mental Health) | Most requested topic |
-| 8 | Psychology | 12 (Therapy) | Completes clinical arc |
-| 9 | Space | 7 (Black Holes deep) | Expands existing content significantly |
-| 10 | All | Deepen existing sections | More units, review units, cross-section callbacks |
+| Sprint | Course | Section | Status / Notes |
+|--------|--------|---------|----------------|
+| 1 | Psychology | 2 (Sensation & Perception) | DONE |
+| 2 | Space | 4 (Light & Telescopes) | DONE |
+| 3 | Finance | 13 (Estate Planning) | DONE |
+| 4 | Psychology | 10 (Developmental) | DONE |
+| 5 | Space | 12 (Amateur Astronomy) | DONE |
+| 6 | Finance | 14 (Business) | DONE |
+| 7 | Psychology | 11 (Mental Health) | DONE |
+| 8 | Psychology | 12 (Therapy) | DONE |
+| 9 | Space | 7 (Black Holes) | DONE |
+| 10a | All | Integrate written files (Psych 3,5,13 + Space 6,13 + Finance 5) | FILES WRITTEN, NOT INTEGRATED |
+| — | | **Sequential expansion resumes below (sections 1→15 per course)** | |
+| 10b | Finance | 1 (What Is Money?) | Deepen from 1 unit |
+| 10c | Finance | 2 (Spending & Budgeting) | Deepen from 1 unit |
+| 10d | Finance | 3 (Saving & Emergency Planning) | Deepen from 1 unit |
+| 10e | Finance | 4 (Banking & Financial Systems) | Deepen from 1 unit |
+| 10f | Finance | 6 (Debt Mastery) | Deepen from 1 unit |
+| 10g | Finance | 7 (Credit System) | Deepen from 1 unit |
+| 10h | Finance | 8 (Investing Fundamentals) | Deepen from 1 unit |
+| 10i | Finance | 9 (Advanced Investing) | Deepen from 1 unit |
+| 10j | Finance | 10 (Real Estate) | Deepen from 1 unit |
+| 10k | Finance | 11 (Insurance & Risk) | Deepen from 1 unit |
+| 10l | Finance | 12 (Retirement Planning) | Deepen from 1 unit |
+| 10m | Psychology | 1 (Welcome to Your Mind) | Deepen from 1 unit |
+| 10n | Psychology | 4 (Memory) | Deepen from 1 unit |
+| 10o | Psychology | 6 (Cognitive Biases) | Deepen from 2 units |
+| 10p | Psychology | 7 (Emotions & Motivation) | Deepen from 1 unit |
+| 10q | Psychology | 8 (Social Psychology) | Deepen from 1 unit |
+| 10r | Psychology | 9 (Personality) | Deepen from 1 unit |
+| 10s | Psychology | 14 (Research Methods) | Deepen from 1 unit |
+| 10t | Space | 1 (Looking Up) | Deepen from 1 unit |
+| 10u | Space | 2 (The Solar System) | Deepen from 1 unit |
+| 10v | Space | 3 (Earth & Moon) | Deepen from 1 unit |
+| 10w | Space | 5 (Stars) | Deepen from 1 unit |
+| 10x | Space | 8 (Cosmology) | Deepen from 1 unit |
+| 10y | Space | 9 (Rockets & Orbital Mechanics) | Deepen from 1 unit |
+| 10z | Space | 10 (Space Exploration History) | Deepen from 1 unit |
+| 10aa | Space | 11 (Exoplanets & Astrobiology) | Deepen from 1 unit |
+| 10ab | Space | 14 (Space Frontiers) | Deepen from 1 unit |
 | 11 | All | Add calculation questions | Sections 5+ get slider-estimate and real math |
 | 12 | All | Capstone sections (15) | Final professional-level challenges |
 | 13 | All | QA pass and polish | Voice consistency, difficulty calibration, misconception coverage |

@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Octokeen — Unit Lesson Views (Flat 3D)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; background: #F1F5F9; min-height: 100vh; }
+    .gallery-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid #E2E8F0; padding: 16px 20px; }
+    .gallery-title { font-size: 17px; font-weight: 800; text-align: center; margin-bottom: 4px; color: #0F172A; }
+    .gallery-title span { color: #14B8A6; }
+    .gallery-subtitle { font-size: 12px; font-weight: 600; color: #94A3B8; text-align: center; margin-bottom: 12px; }
+    .tab-nav { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+    .tab-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid #E2E8F0; border-radius: 10px; background: #fff; color: #64748B; font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; transition: all 0.15s; box-shadow: 0 3px 0 #E2E8F0; }
+    .tab-btn:hover { background: #F8FAFC; color: #334155; }
+    .tab-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #E2E8F0; }
+    .tab-btn.active { background: #3B82F6; color: #fff; border-color: #3B82F6; box-shadow: 0 3px 0 #1E5BB8; }
+    .tab-btn.active:active { transform: translateY(2px); box-shadow: 0 1px 0 #1E5BB8; }
+    .tab-num { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 6px; font-size: 11px; font-weight: 800; background: rgba(0,0,0,0.06); }
+    .tab-btn.active .tab-num { background: rgba(255,255,255,0.25); }
+    .designs-container { padding: 24px; }
+    .design-frame { display: none; max-width: 420px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 8px 32px rgba(0,0,0,0.08); background: #F8FAFC; position: relative; }
+    .design-frame.visible { display: block; animation: frameIn 0.35s ease; }
+    @keyframes frameIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .design-frame-label { position: absolute; top: 12px; right: 12px; z-index: 100; background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); color: #64748B; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 8px; border: 1px solid #E2E8F0; pointer-events: none; }
+    .gallery-footer { text-align: center; padding: 32px 24px 48px; color: #94A3B8; font-size: 13px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="gallery-header">
+    <div class="gallery-title"><span>Octokeen</span> &mdash; Unit Lesson Views</div>
+    <div class="gallery-subtitle">What it looks like inside "Budgeting Basics" &middot; Flat 3D style &middot; Arrow keys to navigate</div>
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="showDesign(0)"><span class="tab-num">1</span> Inline Expand</button>
+      <button class="tab-btn" onclick="showDesign(1)"><span class="tab-num">2</span> Chapter Page</button>
+      <button class="tab-btn" onclick="showDesign(2)"><span class="tab-num">3</span> Lesson Tiles Grid</button>
+    </div>
+  </div>
+  <div class="designs-container" id="singleView">
+    <div class="design-frame visible" data-design="0">
+      <div class="design-frame-label">Inline Expand</div>
+<section class="design-variation" data-title="Inline Expand">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
+
+  .vA-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    background: #F1F5F9;
+    min-height: 100vh;
+    padding-bottom: 32px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Unit Header Banner (sticky) ── */
+  .vA-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #DBEAFE;
+    padding: 16px 20px 0 20px;
+    box-shadow: 0 5px 0 #93C5FD;
+    margin-bottom: 24px;
+  }
+
+  .vA-header-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .vA-back-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    box-shadow: 0 4px 0 #93C5FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 800;
+    color: #3B82F6;
+    transition: transform 0.1s, box-shadow 0.1s;
+    flex-shrink: 0;
+  }
+
+  .vA-back-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #93C5FD;
+  }
+
+  .vA-header-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .vA-header-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #3B82F6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .vA-header-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1E3A5F;
+    line-height: 1.2;
+  }
+
+  .vA-header-badge {
+    background: #3B82F6;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 3px 0 #2563EB;
+    flex-shrink: 0;
+  }
+
+  .vA-progress-track {
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  .vA-progress-fill {
+    height: 100%;
+    width: 60%;
+    background: #3B82F6;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+  }
+
+  /* ── Lesson List ── */
+  .vA-lessons {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* ── Base Lesson Card ── */
+  .vA-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 5px 0 #CBD5E1;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    border: 2px solid transparent;
+    position: relative;
+  }
+
+  .vA-card:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #CBD5E1;
+  }
+
+  /* ── Completed Card ── */
+  .vA-card--completed {
+    border-left: 5px solid #10B981;
+  }
+
+  /* ── Current Card ── */
+  .vA-card--current {
+    border: 3px solid #3B82F6;
+    box-shadow: 0 6px 0 #93C5FD;
+  }
+
+  .vA-card--current:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #93C5FD;
+  }
+
+  /* ── Locked Card ── */
+  .vA-card--locked {
+    opacity: 0.5;
+    border: 2px dashed #CBD5E1;
+    box-shadow: 0 4px 0 #E2E8F0;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  /* ── Emoji Icon Box ── */
+  .vA-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .vA-icon--teal {
+    background: #14B8A6;
+    box-shadow: 0 4px 0 #0D9488;
+  }
+
+  .vA-icon--blue {
+    background: #3B82F6;
+    box-shadow: 0 4px 0 #2563EB;
+  }
+
+  .vA-icon--gray {
+    background: #E2E8F0;
+    box-shadow: 0 3px 0 #CBD5E1;
+  }
+
+  /* ── Card Text ── */
+  .vA-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .vA-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1E293B;
+    line-height: 1.2;
+    margin: 0 0 2px 0;
+  }
+
+  .vA-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748B;
+    margin: 0;
+  }
+
+  .vA-subtitle--teal {
+    color: #0D9488;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .vA-stars {
+    color: #F59E0B;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* ── XP Badge ── */
+  .vA-xp {
+    background: #FEF3C7;
+    color: #92400E;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 3px 0 #FDE68A;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── GO Button ── */
+  .vA-go-btn {
+    background: #14B8A6;
+    color: #fff;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 10px 22px;
+    border-radius: 14px;
+    box-shadow: 0 5px 0 #0D7D72;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    flex-shrink: 0;
+  }
+
+  .vA-go-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #0D7D72;
+  }
+
+  /* ── Lock Icon ── */
+  .vA-lock {
+    font-size: 20px;
+    color: #94A3B8;
+    flex-shrink: 0;
+  }
+
+  /* ── Pulsing Dot ── */
+  .vA-pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #14B8A6;
+    border-radius: 50%;
+    display: inline-block;
+    animation: vA-pulse 1.4s ease-in-out infinite;
+  }
+
+  @keyframes vA-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+
+  /* ── Smart Practice Card ── */
+  .vA-practice {
+    background: #FEF3C7;
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 5px 0 #FDE68A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 20px 16px 0 16px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+
+  .vA-practice:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #FDE68A;
+  }
+
+  .vA-practice-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .vA-practice-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+
+  .vA-practice-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #92400E;
+    margin: 0 0 2px 0;
+  }
+
+  .vA-practice-sub {
+    font-size: 12px;
+    font-weight: 700;
+    color: #B45309;
+    margin: 0;
+  }
+
+  .vA-practice-btn {
+    background: #F59E0B;
+    color: #fff;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 9px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 0 #D97706;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .vA-practice-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #D97706;
+  }
+</style>
+
+<div class="vA-wrap">
+
+  <!-- ── Unit Header Banner ── -->
+  <div class="vA-header">
+    <div class="vA-header-top">
+      <button class="vA-back-btn" aria-label="Back">←</button>
+      <div class="vA-header-info">
+        <div class="vA-header-label">Unit 1</div>
+        <div class="vA-header-title">Budgeting Basics</div>
+      </div>
+      <div class="vA-header-badge">3/5</div>
+    </div>
+    <div class="vA-progress-track">
+      <div class="vA-progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- ── Lesson List ── -->
+  <div class="vA-lessons">
+
+    <!-- Lesson 1: Completed / Mastered -->
+    <div class="vA-card vA-card--completed">
+      <div class="vA-icon vA-icon--teal">💵</div>
+      <div class="vA-text">
+        <p class="vA-title">Income vs Expenses</p>
+        <p class="vA-subtitle">Mastered</p>
+        <div class="vA-stars">★★★</div>
+      </div>
+      <div class="vA-xp">20 XP</div>
+    </div>
+
+    <!-- Lesson 2: Completed -->
+    <div class="vA-card vA-card--completed">
+      <div class="vA-icon vA-icon--teal">📊</div>
+      <div class="vA-text">
+        <p class="vA-title">50/30/20 Rule</p>
+        <p class="vA-subtitle">Complete</p>
+        <div class="vA-stars">★★☆</div>
+      </div>
+      <div class="vA-xp">20 XP</div>
+    </div>
+
+    <!-- Lesson 3: Completed -->
+    <div class="vA-card vA-card--completed">
+      <div class="vA-icon vA-icon--teal">🔍</div>
+      <div class="vA-text">
+        <p class="vA-title">Tracking Spending</p>
+        <p class="vA-subtitle">Complete</p>
+        <div class="vA-stars">★★☆</div>
+      </div>
+      <div class="vA-xp">20 XP</div>
+    </div>
+
+    <!-- Lesson 4: Current / Up Next -->
+    <div class="vA-card vA-card--current">
+      <div class="vA-icon vA-icon--blue">🏗️</div>
+      <div class="vA-text">
+        <p class="vA-title">Building a Budget</p>
+        <p class="vA-subtitle vA-subtitle--teal">
+          <span class="vA-pulse-dot"></span>
+          Up Next
+        </p>
+      </div>
+      <button class="vA-go-btn">GO</button>
+    </div>
+
+    <!-- Lesson 5: Locked -->
+    <div class="vA-card vA-card--locked">
+      <div class="vA-icon vA-icon--gray">🔒</div>
+      <div class="vA-text">
+        <p class="vA-title">Emergency Funds</p>
+        <p class="vA-subtitle">Complete previous lesson</p>
+      </div>
+      <div class="vA-lock">🔒</div>
+    </div>
+
+  </div>
+
+  <!-- ── Smart Practice Card ── -->
+  <div class="vA-practice">
+    <div class="vA-practice-left">
+      <div class="vA-practice-icon">🧠</div>
+      <div>
+        <p class="vA-practice-title">Smart Practice</p>
+        <p class="vA-practice-sub">Practice what you've learned</p>
+      </div>
+    </div>
+    <button class="vA-practice-btn">Practice</button>
+  </div>
+
+</div>
+</section>
+
+    </div>
+
+    <div class="design-frame" data-design="1">
+      <div class="design-frame-label">Chapter Page</div>
+<section class="design-variation" data-title="Chapter Page">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+  .vB-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    background: #F8FAFC;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #0F172A;
+  }
+
+  /* ── Hero Header ── */
+  .vB-hero {
+    background: #DBEAFE;
+    padding: 20px 20px 28px;
+    position: relative;
+    box-shadow: 0 5px 0 #93C5FD;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .vB-hero-emoji {
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    font-size: 60px;
+    opacity: 0.2;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .vB-back-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: none;
+    font-size: 18px;
+    font-weight: 800;
+    color: #3B82F6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 0 #CBD5E1;
+    transition: transform 0.1s, box-shadow 0.1s;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .vB-back-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #CBD5E1;
+  }
+
+  .vB-unit-label {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #3B82F6;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .vB-hero-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1E293B;
+    margin: 0 0 4px;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+  }
+
+  .vB-hero-subtitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin: 0 0 18px;
+    line-height: 1.4;
+    max-width: 260px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── Progress Ring Area ── */
+  .vB-progress-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .vB-progress-ring-wrap {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+
+  .vB-progress-ring-wrap svg {
+    transform: rotate(-90deg);
+    width: 56px;
+    height: 56px;
+  }
+
+  .vB-ring-bg {
+    fill: none;
+    stroke: #BFDBFE;
+    stroke-width: 5;
+  }
+
+  .vB-ring-fill {
+    fill: none;
+    stroke: #3B82F6;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 150.8;
+    stroke-dashoffset: 60.32;
+    transition: stroke-dashoffset 0.6s ease;
+  }
+
+  .vB-ring-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+    color: #1E40AF;
+  }
+
+  .vB-progress-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1E40AF;
+  }
+
+  .vB-progress-label span {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748B;
+    margin-top: 1px;
+  }
+
+  /* ── Lesson List ── */
+  .vB-lessons {
+    padding: 20px 16px 24px;
+  }
+
+  .vB-lesson-row {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .vB-lesson-row.vB-locked {
+    cursor: default;
+  }
+
+  /* Timeline column */
+  .vB-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  /* Connecting line */
+  .vB-timeline-line {
+    width: 3px;
+    flex: 1;
+    border-radius: 2px;
+  }
+
+  .vB-timeline-line.vB-line-done {
+    background: #93C5FD;
+  }
+
+  .vB-timeline-line.vB-line-current {
+    background: linear-gradient(to bottom, #93C5FD 0%, #E2E8F0 100%);
+  }
+
+  .vB-timeline-line.vB-line-locked {
+    background: #E2E8F0;
+  }
+
+  .vB-timeline-line.vB-line-hidden {
+    visibility: hidden;
+  }
+
+  /* Number badges */
+  .vB-num-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .vB-num-badge.vB-done {
+    background: #3B82F6;
+    color: #FFFFFF;
+    box-shadow: 0 4px 0 #1D4ED8;
+  }
+
+  .vB-num-badge.vB-current {
+    background: #14B8A6;
+    color: #FFFFFF;
+    box-shadow: 0 4px 0 #0D9488;
+    animation: vB-pulse-ring 2s ease-in-out infinite;
+  }
+
+  @keyframes vB-pulse-ring {
+    0%, 100% {
+      box-shadow: 0 4px 0 #0D9488, 0 0 0 0px rgba(20, 184, 166, 0.4);
+    }
+    50% {
+      box-shadow: 0 4px 0 #0D9488, 0 0 0 8px rgba(20, 184, 166, 0);
+    }
+  }
+
+  .vB-num-badge.vB-lock {
+    background: #E2E8F0;
+    color: #94A3B8;
+    box-shadow: 0 3px 0 #CBD5E1;
+  }
+
+  /* Lesson content card */
+  .vB-lesson-card {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-left: 12px;
+    margin-bottom: 6px;
+    box-shadow: 0 4px 0 #E2E8F0;
+    transition: transform 0.12s, box-shadow 0.12s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .vB-lesson-row:not(.vB-locked) .vB-lesson-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #E2E8F0;
+  }
+
+  .vB-lesson-row:not(.vB-locked) .vB-lesson-card:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #E2E8F0;
+  }
+
+  .vB-lesson-card.vB-card-locked {
+    opacity: 0.55;
+  }
+
+  .vB-lesson-emoji {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .vB-lesson-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .vB-lesson-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0 0 2px;
+    line-height: 1.3;
+  }
+
+  .vB-lesson-meta {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94A3B8;
+    margin: 0 0 6px;
+  }
+
+  /* Status tags */
+  .vB-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+  .vB-tag-mastered {
+    background: #FEF3C7;
+    color: #92400E;
+  }
+
+  .vB-tag-complete {
+    background: #D1FAE5;
+    color: #065F46;
+  }
+
+  .vB-tag-locked {
+    background: #F1F5F9;
+    color: #94A3B8;
+  }
+
+  /* Continue button */
+  .vB-continue-sm {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #14B8A6;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #0D9488;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+
+  .vB-continue-sm:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #0D9488;
+  }
+
+  /* ── Bottom CTA ── */
+  .vB-bottom-cta {
+    padding: 8px 16px 28px;
+  }
+
+  .vB-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: #14B8A6;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 16px 24px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #0D9488;
+    transition: transform 0.1s, box-shadow 0.1s;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .vB-cta-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #0D9488;
+  }
+
+  .vB-cta-arrow {
+    font-size: 18px;
+  }
+</style>
+
+<div class="vB-wrap">
+
+  <!-- ── Hero Header ── -->
+  <div class="vB-hero">
+    <span class="vB-hero-emoji">💰</span>
+
+    <button class="vB-back-btn" aria-label="Go back">←</button>
+
+    <div class="vB-unit-label">Unit 1</div>
+    <h1 class="vB-hero-title">Budgeting Basics</h1>
+    <p class="vB-hero-subtitle">Master the fundamentals of managing your money</p>
+
+    <div class="vB-progress-area">
+      <div class="vB-progress-ring-wrap">
+        <svg viewBox="0 0 56 56">
+          <circle class="vB-ring-bg" cx="28" cy="28" r="24" />
+          <circle class="vB-ring-fill" cx="28" cy="28" r="24" />
+        </svg>
+        <div class="vB-ring-text">60%</div>
+      </div>
+      <div class="vB-progress-label">
+        3 of 5 complete
+        <span>Keep going!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Lesson List ── -->
+  <div class="vB-lessons">
+
+    <!-- Lesson 1 — Mastered -->
+    <div class="vB-lesson-row">
+      <div class="vB-timeline">
+        <div class="vB-timeline-line vB-line-hidden" style="height: 6px; flex: none;"></div>
+        <div class="vB-num-badge vB-done">1</div>
+        <div class="vB-timeline-line vB-line-done"></div>
+      </div>
+      <div class="vB-lesson-card">
+        <span class="vB-lesson-emoji">💵</span>
+        <div class="vB-lesson-info">
+          <p class="vB-lesson-title">Income vs Expenses</p>
+          <p class="vB-lesson-meta">Standard · 20 XP</p>
+          <span class="vB-tag vB-tag-mastered">★ Mastered</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lesson 2 — Complete -->
+    <div class="vB-lesson-row">
+      <div class="vB-timeline">
+        <div class="vB-timeline-line vB-line-done" style="height: 6px; flex: none;"></div>
+        <div class="vB-num-badge vB-done">2</div>
+        <div class="vB-timeline-line vB-line-done"></div>
+      </div>
+      <div class="vB-lesson-card">
+        <span class="vB-lesson-emoji">📊</span>
+        <div class="vB-lesson-info">
+          <p class="vB-lesson-title">50/30/20 Rule</p>
+          <p class="vB-lesson-meta">Standard · 20 XP</p>
+          <span class="vB-tag vB-tag-complete">✓ Complete</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lesson 3 — Complete -->
+    <div class="vB-lesson-row">
+      <div class="vB-timeline">
+        <div class="vB-timeline-line vB-line-done" style="height: 6px; flex: none;"></div>
+        <div class="vB-num-badge vB-done">3</div>
+        <div class="vB-timeline-line vB-line-current"></div>
+      </div>
+      <div class="vB-lesson-card">
+        <span class="vB-lesson-emoji">🔍</span>
+        <div class="vB-lesson-info">
+          <p class="vB-lesson-title">Tracking Spending</p>
+          <p class="vB-lesson-meta">Practice · 20 XP</p>
+          <span class="vB-tag vB-tag-complete">✓ Complete</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lesson 4 — Current -->
+    <div class="vB-lesson-row">
+      <div class="vB-timeline">
+        <div class="vB-timeline-line vB-line-current" style="height: 6px; flex: none; background: #E2E8F0;"></div>
+        <div class="vB-num-badge vB-current">▶</div>
+        <div class="vB-timeline-line vB-line-locked"></div>
+      </div>
+      <div class="vB-lesson-card">
+        <span class="vB-lesson-emoji">🏗️</span>
+        <div class="vB-lesson-info">
+          <p class="vB-lesson-title">Building a Budget</p>
+          <p class="vB-lesson-meta">Standard · 25 XP</p>
+          <button class="vB-continue-sm">Continue ▶</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lesson 5 — Locked -->
+    <div class="vB-lesson-row vB-locked">
+      <div class="vB-timeline">
+        <div class="vB-timeline-line vB-line-locked" style="height: 6px; flex: none;"></div>
+        <div class="vB-num-badge vB-lock">🔒</div>
+        <div class="vB-timeline-line vB-line-hidden" style="height: 6px; flex: none;"></div>
+      </div>
+      <div class="vB-lesson-card vB-card-locked">
+        <span class="vB-lesson-emoji">🛡️</span>
+        <div class="vB-lesson-info">
+          <p class="vB-lesson-title">Emergency Funds</p>
+          <p class="vB-lesson-meta">Quiz · 20 XP</p>
+          <span class="vB-tag vB-tag-locked">🔒 Locked</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Bottom CTA ── -->
+  <div class="vB-bottom-cta">
+    <button class="vB-cta-btn">
+      Continue: Building a Budget
+      <span class="vB-cta-arrow">→</span>
+    </button>
+  </div>
+
+</div>
+
+</section>
+
+    </div>
+
+    <div class="design-frame" data-design="2">
+      <div class="design-frame-label">Lesson Tiles Grid</div>
+<section class="design-variation" data-title="Lesson Tiles Grid">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
+
+  .vC-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+    font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+    background: #F8FAFC;
+    min-height: 100vh;
+    color: #1E293B;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header bar ── */
+  .vC-header {
+    background: #DBEAFE;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .vC-back-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 0 #CBD5E1;
+    font-size: 18px;
+    font-weight: 800;
+    color: #3B82F6;
+    transition: transform 0.1s, box-shadow 0.1s;
+    flex-shrink: 0;
+  }
+  .vC-back-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #CBD5E1;
+  }
+
+  .vC-header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+  .vC-header-emoji {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .vC-header-text {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1E3A5F;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .vC-progress-badge {
+    background: #3B82F6;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 3px 0 #2563EB;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Progress bar section ── */
+  .vC-progress-section {
+    padding: 16px 16px 8px;
+  }
+  .vC-progress-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748B;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .vC-progress-pct {
+    color: #3B82F6;
+    font-weight: 800;
+  }
+  .vC-progress-track {
+    width: 100%;
+    height: 14px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06), 0 3px 0 #E2E8F0;
+    overflow: hidden;
+  }
+  .vC-progress-fill {
+    width: 60%;
+    height: 100%;
+    background: #3B82F6;
+    border-radius: 10px;
+    transition: width 0.6s ease;
+  }
+
+  /* ── Grid ── */
+  .vC-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  /* ── Base tile ── */
+  .vC-tile {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 150px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    box-shadow: 0 5px 0 #D1D5DB;
+    border-top: 4px solid #3B82F6;
+    user-select: none;
+  }
+  .vC-tile:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #D1D5DB;
+  }
+
+  .vC-tile-emoji {
+    font-size: 36px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .vC-tile-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    line-height: 1.3;
+    margin-bottom: auto;
+  }
+  .vC-tile-status {
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 0 transparent;
+  }
+
+  /* ── Completed tile ── */
+  .vC-tile--done .vC-tile-status {
+    background: #10B981;
+    color: #FFFFFF;
+    box-shadow: 0 2px 0 #059669;
+  }
+  .vC-tile--mastered .vC-tile-status {
+    background: #3B82F6;
+    color: #FFFFFF;
+    box-shadow: 0 2px 0 #2563EB;
+  }
+
+  /* ── Checkmark overlay ── */
+  .vC-tile--done::after,
+  .vC-tile--mastered::after {
+    content: '✓';
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #10B981;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  /* ── Current tile ── */
+  .vC-tile--current {
+    border: 3px solid #14B8A6;
+    border-top: 4px solid #14B8A6;
+    box-shadow: 0 5px 0 #0D9488, 0 0 0 3px rgba(20, 184, 166, 0.15);
+    animation: vC-pulse 2s ease-in-out infinite;
+  }
+  .vC-tile--current:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #0D9488;
+    animation: none;
+  }
+  .vC-tile--current .vC-tile-emoji {
+    font-size: 40px;
+  }
+  .vC-tile--current .vC-tile-title {
+    color: #115E59;
+  }
+
+  .vC-upnext-label {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #14B8A6;
+    margin-top: 6px;
+    margin-bottom: 4px;
+  }
+
+  .vC-go-btn {
+    background: #14B8A6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 24px;
+    font-size: 13px;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #0D9488;
+    transition: transform 0.1s, box-shadow 0.1s;
+    margin-top: 6px;
+  }
+  .vC-go-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #0D9488;
+  }
+
+  @keyframes vC-pulse {
+    0%, 100% {
+      box-shadow: 0 5px 0 #0D9488, 0 0 0 3px rgba(20, 184, 166, 0.15);
+    }
+    50% {
+      box-shadow: 0 5px 0 #0D9488, 0 0 0 7px rgba(20, 184, 166, 0.08);
+    }
+  }
+
+  /* ── Locked tile ── */
+  .vC-tile--locked {
+    background: #F1F5F9;
+    border: 2px dashed #CBD5E1;
+    border-top: 2px dashed #CBD5E1;
+    opacity: 0.55;
+    cursor: not-allowed;
+    box-shadow: 0 3px 0 #E2E8F0;
+  }
+  .vC-tile--locked:active {
+    transform: none;
+    box-shadow: 0 3px 0 #E2E8F0;
+  }
+  .vC-tile--locked .vC-tile-emoji {
+    font-size: 30px;
+  }
+  .vC-tile--locked .vC-tile-title {
+    color: #94A3B8;
+  }
+  .vC-tile--locked .vC-tile-status {
+    background: #E2E8F0;
+    color: #94A3B8;
+    box-shadow: none;
+  }
+
+  /* ── Smart Practice banner ── */
+  .vC-practice-banner {
+    margin: 4px 16px 20px;
+    background: #FEF3C7;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 5px 0 #F59E0B;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    user-select: none;
+  }
+  .vC-practice-banner:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #F59E0B;
+  }
+
+  .vC-practice-icon {
+    width: 48px;
+    height: 48px;
+    background: #F59E0B;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 3px 0 #D97706;
+    flex-shrink: 0;
+  }
+
+  .vC-practice-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .vC-practice-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #92400E;
+    margin-bottom: 2px;
+  }
+  .vC-practice-desc {
+    font-size: 12px;
+    font-weight: 600;
+    color: #B45309;
+    line-height: 1.3;
+  }
+
+  .vC-practice-arrow {
+    font-size: 20px;
+    font-weight: 900;
+    color: #D97706;
+    flex-shrink: 0;
+  }
+</style>
+
+<div class="vC-wrap">
+
+  <!-- Header bar -->
+  <div class="vC-header">
+    <button class="vC-back-btn" aria-label="Go back">←</button>
+    <div class="vC-header-title">
+      <span class="vC-header-emoji">💰</span>
+      <span class="vC-header-text">Budgeting Basics</span>
+    </div>
+    <span class="vC-progress-badge">3/5</span>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="vC-progress-section">
+    <div class="vC-progress-label">
+      <span>Unit Progress</span>
+      <span class="vC-progress-pct">60%</span>
+    </div>
+    <div class="vC-progress-track">
+      <div class="vC-progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- 2-column lesson tiles grid -->
+  <div class="vC-grid">
+
+    <!-- L1: Mastered -->
+    <div class="vC-tile vC-tile--mastered">
+      <span class="vC-tile-emoji">💵</span>
+      <span class="vC-tile-title">Income vs Expenses</span>
+      <span class="vC-tile-status">Mastered</span>
+    </div>
+
+    <!-- L2: Complete -->
+    <div class="vC-tile vC-tile--done">
+      <span class="vC-tile-emoji">📊</span>
+      <span class="vC-tile-title">50/30/20 Rule</span>
+      <span class="vC-tile-status">Done</span>
+    </div>
+
+    <!-- L3: Complete -->
+    <div class="vC-tile vC-tile--done">
+      <span class="vC-tile-emoji">🔍</span>
+      <span class="vC-tile-title">Tracking Spending</span>
+      <span class="vC-tile-status">Done</span>
+    </div>
+
+    <!-- L4: Current -->
+    <div class="vC-tile vC-tile--current">
+      <span class="vC-tile-emoji">🏗️</span>
+      <span class="vC-tile-title">Building a Budget</span>
+      <span class="vC-upnext-label">Up Next</span>
+      <button class="vC-go-btn">GO</button>
+    </div>
+
+    <!-- L5: Locked -->
+    <div class="vC-tile vC-tile--locked">
+      <span class="vC-tile-emoji">🔒</span>
+      <span class="vC-tile-title">???</span>
+      <span class="vC-tile-status">Locked</span>
+    </div>
+
+  </div>
+
+  <!-- Smart Practice banner -->
+  <div class="vC-practice-banner">
+    <div class="vC-practice-icon">⚡</div>
+    <div class="vC-practice-info">
+      <div class="vC-practice-title">Smart Practice</div>
+      <div class="vC-practice-desc">Review completed lessons to earn bonus XP</div>
+    </div>
+    <span class="vC-practice-arrow">›</span>
+  </div>
+
+</div>
+</section>
+
+    </div>
+
+  </div>
+  <div class="gallery-footer">Octokeen Lesson Views &mdash; 3 Variations of the "Colorful Course Cards" drill-in</div>
+  <script>
+    var allFrames = document.querySelectorAll('.design-frame');
+    var currentIdx = 0;
+    function showDesign(idx) {
+      currentIdx = idx;
+      document.querySelectorAll('.tab-btn').forEach(function(btn, i) { btn.classList.toggle('active', i === idx); });
+      allFrames.forEach(function(f, i) { f.classList.toggle('visible', i === idx); });
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') showDesign((currentIdx - 1 + 3) % 3);
+      else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') showDesign((currentIdx + 1) % 3);
+    });
+  </script>
+</body>
+</html>

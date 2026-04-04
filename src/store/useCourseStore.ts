@@ -376,7 +376,7 @@ export const useCourseStore = create<CourseState>()(
 
         const prevAttempts = existingProgress?.attempts ?? 0;
         const newAttempts = prevAttempts + 1;
-        const maxLevels = lesson.levels ?? 3;
+        const maxLevels = lesson.levels ?? 1;
         const stars = isGolden
           ? maxLevels // Golden = mastered, always max stars
           : Math.min(newAttempts, maxLevels);

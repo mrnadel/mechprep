@@ -19,7 +19,6 @@ export const spaceSection1Part1: Unit[] = [
         icon: "📝",
         xpReward: 15,
         background: 'space-stars',
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u1-L1-T1",
@@ -109,7 +108,6 @@ export const spaceSection1Part1: Unit[] = [
         icon: "📝",
         xpReward: 15,
         background: 'space-stars',
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u1-L2-T1",
@@ -204,7 +202,6 @@ export const spaceSection1Part1: Unit[] = [
         icon: "📝",
         xpReward: 20,
         background: 'space-stars',
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u1-L3-T1",
@@ -298,7 +295,6 @@ export const spaceSection1Part1: Unit[] = [
         icon: "📝",
         xpReward: 20,
         background: 'space-stars',
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u1-L4-T1",
@@ -404,7 +400,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "Why stars twinkle, why they come in different colors, and how to spot the brightest ones.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u2-L1-T1",
@@ -492,7 +487,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "How to tell a planet from a star without a telescope, and which planets are easiest to find.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u2-L2-T1",
@@ -586,7 +580,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "How to spot human-made objects in orbit, including the International Space Station.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u2-L3-T1",
@@ -680,7 +673,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "A quick-reference guide to identifying stars, planets, satellites, meteors, and airplanes at a glance.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u2-L4-T1",
@@ -774,7 +766,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "Put everything together and plan your first real stargazing outing.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u2-L5-T1",
@@ -881,7 +872,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "The patterns humans drew in the stars and why they still matter today.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u3-L1-T1",
@@ -975,7 +965,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "The most recognizable star patterns and how to locate them in the sky.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u3-L2-T1",
@@ -1069,7 +1058,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "The imaginary dome astronomers use to describe where objects are in the sky.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u3-L3-T1",
@@ -1163,7 +1151,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "How ancient travelers and modern adventurers use stars to find their way.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u3-L4-T1",
@@ -1257,7 +1244,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "Why different constellations are visible at different times of year.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u3-L5-T1",
@@ -1359,7 +1345,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "Review cosmic scales, stars, planets, satellites, and meteors.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u4-L1-Q1",
@@ -1477,7 +1462,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "Review constellation identification, the celestial sphere, and seasonal sky changes.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u4-L2-Q1",
@@ -1589,7 +1573,6 @@ export const spaceSection1Part1: Unit[] = [
         description: "A tougher mix pulling from all three previous units to test your complete understanding.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u4-L3-Q1",

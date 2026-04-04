@@ -121,21 +121,23 @@ button:hover{background:var(--s3)}
   <!-- CONVERSION SETTINGS -->
   <div class="panel-section" id="convert-section">
     <h3>Settings</h3>
-    <label>Smoothness <span class="v" id="v-smooth">7</span></label>
-    <input type="range" id="s-smooth" min="1" max="10" value="7">
+    <label>Smoothness <span class="v" id="v-smooth">8</span></label>
+    <input type="range" id="s-smooth" min="1" max="10" value="8">
     <label>Detail <span class="v" id="v-detail">5</span></label>
     <input type="range" id="s-detail" min="1" max="10" value="5">
     <label>Colors <span class="v" id="v-colors">6</span></label>
-    <input type="range" id="s-colors" min="2" max="16" value="6">
-    <label>Noise filter <span class="v" id="v-speckle">8</span></label>
-    <input type="range" id="s-speckle" min="1" max="30" value="8">
+    <input type="range" id="s-colors" min="2" max="32" value="6">
+    <label>Noise filter <span class="v" id="v-speckle">12</span></label>
+    <input type="range" id="s-speckle" min="1" max="30" value="12">
 
     <details style="margin-top:4px">
       <summary style="font-size:11px;color:var(--t3);cursor:pointer;margin-bottom:8px">Advanced</summary>
-      <label>Corner threshold <span class="v" id="v-corner">60</span></label>
-      <input type="range" id="s-corner" min="10" max="170" value="60">
+      <label>Corner threshold <span class="v" id="v-corner">120</span></label>
+      <input type="range" id="s-corner" min="10" max="170" value="120">
       <label>Layer diff <span class="v" id="v-layer">16</span></label>
       <input type="range" id="s-layer" min="4" max="48" value="16">
+      <label>Polygon resolution <span class="v" id="v-resolution">5</span></label>
+      <input type="range" id="s-resolution" min="1" max="10" value="5">
       <label style="margin-top:6px">Shape mode</label>
       <div class="row">
         <button class="btn-sm btn-active" id="mode-spline">Spline</button>
@@ -143,8 +145,8 @@ button:hover{background:var(--s3)}
       </div>
       <label>Layer mode</label>
       <div class="row">
-        <button class="btn-sm btn-active" id="hier-cutout">Cutout</button>
-        <button class="btn-sm" id="hier-stacked">Stacked</button>
+        <button class="btn-sm" id="hier-cutout">Cutout</button>
+        <button class="btn-sm btn-active" id="hier-stacked">Stacked</button>
       </div>
     </details>
 
@@ -163,6 +165,16 @@ button:hover{background:var(--s3)}
       <button id="btn-bg-undo" class="btn-sm">Undo remove</button>
     </div>
     <label><input type="checkbox" id="chk-remove-white" style="margin-right:6px"> Auto-remove near-white</label>
+  </div>
+
+  <!-- PRIMITIVIZE -->
+  <div class="panel-section hidden" id="prim-section">
+    <h3>Primitivize</h3>
+    <p class="help" style="margin-bottom:8px">Replace jaggy shapes with smooth geometric primitives (circles, ellipses, clean bezier curves).</p>
+    <label>Tolerance <span class="v" id="v-prim-thresh">15</span>%</label>
+    <input type="range" id="s-prim-thresh" min="5" max="40" value="15">
+    <button class="btn-p" id="btn-primitivize" style="width:100%;margin-top:6px">Primitivize</button>
+    <p id="prim-status" class="help"></p>
   </div>
 
   <!-- GRADIENTS -->
@@ -241,10 +253,11 @@ button:hover{background:var(--s3)}
 // ─── STATE ───
 const S = {
   paths: [],
+  originalPaths: [],  // saved after convert, used by primitivize
   imgData: null,
   svgW: 512, svgH: 512,
   mode: 'spline',
-  hierarchical: 'cutout',
+  hierarchical: 'stacked',
   selPaths: new Set(),
   tool: 'select',
   lasso: { active: false, points: [] },
@@ -421,6 +434,7 @@ bindSlider('s-colors', 'v-colors', debounceConvert);
 bindSlider('s-speckle', 'v-speckle', debounceConvert);
 bindSlider('s-corner', 'v-corner', debounceConvert);
 bindSlider('s-layer', 'v-layer', debounceConvert);
+bindSlider('s-resolution', 'v-resolution', debounceConvert);
 
 let _liveTimer = null;
 function debounceConvert() {
@@ -461,15 +475,22 @@ async function doConvert() {
         color_precision: parseInt($('s-colors').value),
         layer_difference: parseInt($('s-layer').value),
         corner_threshold: parseInt($('s-corner').value),
-        length_threshold: Math.max(1, 10 - smooth),
-        splice_threshold: 45,
-        path_precision: smooth >= 7 ? 3 : 2,
+        smooth: smooth,
+        length_threshold: S.mode === 'polygon'
+          ? Math.max(0.2, (11 - parseInt($('s-resolution').value)) * 0.8)
+          : Math.max(2, smooth * 2),
+        splice_threshold: 20 + smooth * 10,
+        path_precision: 3,
       }),
     });
     const data = await res.json();
     if (data.error) throw new Error(data.error);
 
-    S.paths = data.paths.map((p, i) => ({ ...p, index: i, centroid: calcCentroid(p) }));
+    S.paths = data.paths.map((p, i) => {
+      const smoothed = smooth > 1 ? { ...p, d: smoothPathD(p.d, smooth) } : p;
+      return { ...smoothed, index: i, centroid: calcCentroid(smoothed) };
+    });
+    S.originalPaths = S.paths.map(p => ({ ...p }));
     S.svgW = data.width;
     S.svgH = data.height;
     S.selPaths.clear();
@@ -489,8 +510,212 @@ async function doConvert() {
   btn.disabled = false; btn.textContent = 'Convert to SVG';
 }
 
+// ─── PATH SMOOTHING (spline + polygon) ───
+
+// Ramer-Douglas-Peucker point simplification
+function rdpSimplify(pts, epsilon) {
+  if (pts.length <= 2) return pts;
+  let maxDist = 0, maxIdx = 0;
+  const [sx, sy] = pts[0], [ex, ey] = pts[pts.length - 1];
+  const dx = ex - sx, dy = ey - sy;
+  const lenSq = dx * dx + dy * dy;
+  for (let i = 1; i < pts.length - 1; i++) {
+    let dist;
+    if (lenSq === 0) {
+      dist = Math.hypot(pts[i][0] - sx, pts[i][1] - sy);
+    } else {
+      const t = Math.max(0, Math.min(1, ((pts[i][0] - sx) * dx + (pts[i][1] - sy) * dy) / lenSq));
+      dist = Math.hypot(pts[i][0] - (sx + t * dx), pts[i][1] - (sy + t * dy));
+    }
+    if (dist > maxDist) { maxDist = dist; maxIdx = i; }
+  }
+  if (maxDist > epsilon) {
+    const left = rdpSimplify(pts.slice(0, maxIdx + 1), epsilon);
+    const right = rdpSimplify(pts.slice(maxIdx), epsilon);
+    return left.slice(0, -1).concat(right);
+  }
+  return [pts[0], pts[pts.length - 1]];
+}
+
+// Simplify a closed polygon using RDP
+function simplifyClosed(pts, epsilon) {
+  if (pts.length <= 4 || epsilon <= 0) return pts;
+  let cx = 0, cy = 0;
+  for (const p of pts) { cx += p[0]; cy += p[1]; }
+  cx /= pts.length; cy /= pts.length;
+  let maxD = 0, splitIdx = 0;
+  for (let i = 0; i < pts.length; i++) {
+    const d = Math.hypot(pts[i][0] - cx, pts[i][1] - cy);
+    if (d > maxD) { maxD = d; splitIdx = i; }
+  }
+  const rotated = pts.slice(splitIdx).concat(pts.slice(0, splitIdx), [pts[splitIdx]]);
+  const simplified = rdpSimplify(rotated, epsilon);
+  if (simplified.length > 1) simplified.pop();
+  return simplified.length >= 3 ? simplified : pts;
+}
+
+// Parse any SVG path (M/L/C/Q/Z) into sampled point arrays
+function pathToSubpaths(d) {
+  const tokens = d.match(/[MLCQSZmlcqsz]|-?[\d]*\.?\d+/g);
+  if (!tokens) return [];
+  const subpaths = [];
+  let pts = [];
+  let cx = 0, cy = 0, startX = 0, startY = 0;
+  let i = 0;
+  while (i < tokens.length) {
+    const cmd = tokens[i];
+    if (cmd === 'M') {
+      if (pts.length > 1) subpaths.push({ pts: pts.slice(), closed: false });
+      pts = [];
+      i++;
+      cx = parseFloat(tokens[i]); cy = parseFloat(tokens[i+1]);
+      startX = cx; startY = cy;
+      pts.push([cx, cy]);
+      i += 2;
+      // Implicit L coords after M
+      while (i < tokens.length && !/[A-Za-z]/.test(tokens[i])) {
+        cx = parseFloat(tokens[i]); cy = parseFloat(tokens[i+1]);
+        pts.push([cx, cy]);
+        i += 2;
+      }
+    } else if (cmd === 'L') {
+      i++;
+      while (i < tokens.length && !/[A-Za-z]/.test(tokens[i])) {
+        cx = parseFloat(tokens[i]); cy = parseFloat(tokens[i+1]);
+        pts.push([cx, cy]);
+        i += 2;
+      }
+    } else if (cmd === 'C') {
+      i++;
+      while (i + 5 < tokens.length && !/[A-Za-z]/.test(tokens[i])) {
+        const x0 = cx, y0 = cy;
+        const x1 = parseFloat(tokens[i]),   y1 = parseFloat(tokens[i+1]);
+        const x2 = parseFloat(tokens[i+2]), y2 = parseFloat(tokens[i+3]);
+        const x3 = parseFloat(tokens[i+4]), y3 = parseFloat(tokens[i+5]);
+        // Sample bezier at 3 interior points + endpoint
+        for (const t of [0.25, 0.5, 0.75, 1.0]) {
+          const u = 1 - t;
+          pts.push([
+            u*u*u*x0 + 3*u*u*t*x1 + 3*u*t*t*x2 + t*t*t*x3,
+            u*u*u*y0 + 3*u*u*t*y1 + 3*u*t*t*y2 + t*t*t*y3
+          ]);
+        }
+        cx = x3; cy = y3;
+        i += 6;
+      }
+    } else if (cmd === 'Q') {
+      i++;
+      while (i + 3 < tokens.length && !/[A-Za-z]/.test(tokens[i])) {
+        const x0 = cx, y0 = cy;
+        const x1 = parseFloat(tokens[i]),   y1 = parseFloat(tokens[i+1]);
+        const x2 = parseFloat(tokens[i+2]), y2 = parseFloat(tokens[i+3]);
+        for (const t of [0.33, 0.67, 1.0]) {
+          const u = 1 - t;
+          pts.push([u*u*x0 + 2*u*t*x1 + t*t*x2, u*u*y0 + 2*u*t*y1 + t*t*y2]);
+        }
+        cx = x2; cy = y2;
+        i += 4;
+      }
+    } else if (cmd === 'Z' || cmd === 'z') {
+      cx = startX; cy = startY;
+      subpaths.push({ pts: pts.slice(), closed: true });
+      pts = [];
+      i++;
+    } else {
+      i++; // skip unknown
+    }
+  }
+  if (pts.length > 1) subpaths.push({ pts, closed: false });
+  return subpaths;
+}
+
+function smoothPathD(d, smoothVal) {
+  // smoothVal: 1 (no smoothing) to 10 (max smoothing)
+  if (smoothVal <= 1) return d;
+
+  const subpaths = pathToSubpaths(d);
+  if (!subpaths.length) return d;
+
+  // RDP epsilon: quadratic scaling for visible effect
+  // smooth 2→0.4, smooth 5→2.5, smooth 8→6.4, smooth 10→10
+  const epsilon = smoothVal * smoothVal / 10;
+  // Catmull-Rom tension: 1/6 is standard; scale from ~0.1 to ~0.33
+  const tension = smoothVal / 30;
+
+  let out = '';
+  for (const sp of subpaths) {
+    // Simplify points
+    let p = sp.closed ? simplifyClosed(sp.pts, epsilon) : rdpSimplify(sp.pts, epsilon);
+
+    if (p.length < 3) {
+      out += `M ${p[0][0].toFixed(1)} ${p[0][1].toFixed(1)}`;
+      for (let j = 1; j < p.length; j++) out += ` L ${p[j][0].toFixed(1)} ${p[j][1].toFixed(1)}`;
+      if (sp.closed) out += ' Z';
+      continue;
+    }
+
+    // Catmull-Rom → cubic bezier
+    out += `M ${p[0][0].toFixed(1)} ${p[0][1].toFixed(1)}`;
+    const n = p.length;
+    const len = sp.closed ? n : n - 1;
+    for (let j = 0; j < len; j++) {
+      const p0 = p[sp.closed ? (j - 1 + n) % n : Math.max(j - 1, 0)];
+      const p1 = p[j];
+      const p2 = p[sp.closed ? (j + 1) % n : Math.min(j + 1, n - 1)];
+      const p3 = p[sp.closed ? (j + 2) % n : Math.min(j + 2, n - 1)];
+      const cp1x = p1[0] + (p2[0] - p0[0]) * tension;
+      const cp1y = p1[1] + (p2[1] - p0[1]) * tension;
+      const cp2x = p2[0] - (p3[0] - p1[0]) * tension;
+      const cp2y = p2[1] - (p3[1] - p1[1]) * tension;
+      out += ` C ${cp1x.toFixed(1)} ${cp1y.toFixed(1)} ${cp2x.toFixed(1)} ${cp2y.toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+    }
+    if (sp.closed) out += ' Z';
+  }
+  return out;
+}
+
+// ─── PRIMITIVIZE ───
+bindSlider('s-prim-thresh', 'v-prim-thresh');
+$('btn-primitivize').addEventListener('click', doPrimitivize);
+
+async function doPrimitivize() {
+  if (!S.paths.length) return;
+  const btn = $('btn-primitivize');
+  const status = $('prim-status');
+  btn.disabled = true; btn.textContent = 'Primitivizing...';
+  status.textContent = '';
+
+  const threshold = parseInt($('s-prim-thresh').value) / 100;
+
+  try {
+    const sendPaths = S.originalPaths.map(p => ({ d: p.d, fill: p.fill, tx: p.tx, ty: p.ty }));
+    const res = await fetch('/api/primitivize', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ paths: sendPaths, threshold, width: S.svgW, height: S.svgH }),
+    });
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+
+    S.paths = data.paths.map((p, i) => ({ ...p, index: i, centroid: calcCentroid(p) }));
+    S.selPaths.clear();
+
+    // Count primitives
+    const counts = {};
+    data.paths.forEach(p => { counts[p.primitive] = (counts[p.primitive] || 0) + 1; });
+    const parts = Object.entries(counts).map(([k, v]) => `${v} ${k}`).join(', ');
+    status.textContent = parts;
+
+    renderAll();
+  } catch (e) {
+    status.textContent = 'Error: ' + e.message;
+  }
+  btn.disabled = false; btn.textContent = 'Primitivize';
+}
+
 function showEditUI() {
   $('bg-section').classList.remove('hidden');
+  $('prim-section').classList.remove('hidden');
   $('grad-section').classList.remove('hidden');
   $('edit-section').classList.remove('hidden');
   $('parts-section').classList.remove('hidden');

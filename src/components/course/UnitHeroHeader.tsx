@@ -4,7 +4,6 @@ import { memo, forwardRef } from 'react';
 import type { Unit } from '@/data/course/types';
 import type { UnitTheme } from '@/lib/unitThemes';
 import { getUnitBackground } from '@/lib/unitBackgrounds';
-import { UnitIllustration } from './UnitIllustrations';
 import { useDevImageStore } from '@/store/useDevImageStore';
 import { DebugHeaderImage } from '@/components/dev/DebugHeaderImage';
 
@@ -134,11 +133,6 @@ export function UnitBannerContent({
           </div>
         </div>
 
-        {!effectiveHeaderBg && (
-          <div style={{ width: sz(72, 34), height: sz(72, 34), flexShrink: 0, alignSelf: 'center', opacity: op(1.667) }}>
-            <UnitIllustration unitIndex={unitIndex} color="#FFFFFF" className="w-full h-full" professionId={professionId} />
-          </div>
-        )}
       </div>
     </>
   );

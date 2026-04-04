@@ -18,7 +18,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'The basic building blocks every satellite needs to work in space.',
         icon: '\u{1F4DD}',
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u1-L1-T1',
@@ -107,7 +106,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'The physics of orbits and why satellites do not fall straight down.',
         icon: '\u{1F4DD}',
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u1-L2-T1',
@@ -214,7 +212,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'Different missions need different orbits, from low Earth to geostationary and beyond.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u1-L3-T1',
@@ -320,7 +317,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How spacecraft change their orbits using thrust and the concept of delta-v.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u1-L4-T1',
@@ -418,7 +414,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'The extreme conditions satellites must endure: vacuum, radiation, temperature swings, and debris.',
         icon: '\u{1F4DD}',
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u1-L5-T1',
@@ -533,7 +528,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'Why radio waves are the primary method for communicating with spacecraft.',
         icon: '\u{1F4DD}',
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u2-L1-T1',
@@ -629,7 +623,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'NASA\'s global array of giant dish antennas that keeps contact with distant spacecraft.',
         icon: '\u{1F4DD}',
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u2-L2-T1',
@@ -731,7 +724,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How commands travel up and science data comes down, and why bandwidth matters.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u2-L3-T1',
@@ -835,7 +827,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'Different antenna designs and how spacecraft extract clean data from noisy signals.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u2-L4-T1',
@@ -938,7 +929,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How optical communication could revolutionize data rates from deep space.',
         icon: '\u{1F4DD}',
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u2-L5-T1',
@@ -1060,7 +1050,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How solar panels work, their efficiency, and why they are the most common spacecraft power source.',
         icon: '\u{1F4DD}',
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u3-L1-T1',
@@ -1167,7 +1156,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How radioactive decay provides reliable electricity for missions far from the Sun.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u3-L2-T1',
@@ -1271,7 +1259,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How spacecraft store energy for when the Sun is blocked or demand spikes.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u3-L3-T1',
@@ -1376,7 +1363,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How engineers pick between solar, RTG, and other options based on mission needs.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u3-L4-T1',
@@ -1481,7 +1467,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'Advanced considerations engineers face when designing spacecraft power systems.',
         icon: '\u{1F4DD}',
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u3-L5-T1',
@@ -1601,7 +1586,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'Review satellite subsystems, orbital mechanics, and orbit types.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u4-L1-T1',
@@ -1695,7 +1679,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'Review how we send commands and receive data across the solar system.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u4-L2-T1',
@@ -1784,7 +1767,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'Review solar panels, RTGs, batteries, and how engineers choose between them.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u4-L3-T1',
@@ -1891,7 +1873,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'The fundamental requirements for human survival and how spacecraft provide them.',
         icon: '\u{1F4DD}',
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u5-L1-T1',
@@ -1982,7 +1963,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How spacecraft generate oxygen, remove CO2, and manage atmospheric pressure.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u5-L2-T1',
@@ -2086,7 +2066,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How spacecraft recycle water and provide nutrition for long-duration missions.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u5-L3-T1',
@@ -2197,7 +2176,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'The radiation threats in space and how engineers protect astronauts from them.',
         icon: '\u{1F4DD}',
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u5-L4-T1',
@@ -2300,7 +2278,6 @@ export const spaceSection13Part1: Unit[] = [
         description: 'How engineers design living spaces for crews spending months or years away from Earth.',
         icon: '\u{1F4DD}',
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: 'sp-sec13-u5-L5-T1',

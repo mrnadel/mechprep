@@ -1,20 +1,25 @@
 /**
  * Space Stars — animated deep-space background for space/astronomy lessons.
  *
- * Element count: 14 stars + 2 planets + 2 nebula + 1 aurora + 3 shooting stars
- *                + 1 comet + 1 satellite + 1 moon + 1 constellation = 26/30
+ * Scene elements — staggered timings so each gets its own cinematic moment:
  *
- * Features:
- * - Twinkling stars with varied sizes/colors/glow
- * - Supernova flash on star s4 every ~45s
- * - Saturn-ringed planet (p1) and small red planet (p2)
- * - Nebula breathing + slow position drift
- * - Aurora/nebula color wash — slow sweeping gradient
- * - Shooting stars with bright heads + meteor shower burst every ~35s
- * - Comet with correctly-angled trailing tail
- * - Satellite pass — image with wobbly tumble crossing screen
- * - Moon crescent with earthshine glow
- * - Constellation lines connecting star groups
+ * ALWAYS-ON (ambient):
+ * - 14 twinkling stars (varied sizes/colors/glow) + supernova flash on s4
+ * - 2 planets (Saturn-ringed p1, small red p2) — gentle float
+ * - 2 nebula glows — breathing + drift
+ * - 1 aurora color wash — slow sweeping gradient
+ * - 1 distant galaxy — slowly rotating elliptical glow (200s)
+ * - 1 moon crescent with earthshine
+ *
+ * SCENE EVENTS (each gets its own moment):
+ * - Shooting stars (3) — streaks + meteor shower burst (35s cycle)
+ * - Comet — arcs across with trailing tail (25s cycle, 5s delay)
+ * - Satellite — wobbly tumble crossing screen (47s cycle, 15s delay)
+ * - Asteroid field (5 rocks) — tumbling cluster drift (160s cycle, 20s delay)
+ * - Solar flare — warm glow peeking from corner with lens rays (100s cycle, 35s delay)
+ * - Space dust cloud — wide foggy band drifting upward (180s cycle, 50s delay)
+ * - Ring system (5 bands) — tilted rings sweeping across (140s cycle, 70s delay)
+ * - Foreground planet — huge dark silhouette blocking view (120s cycle, 8s delay)
  */
 export const background = {
   name: 'Space Stars',
@@ -115,9 +120,9 @@ export const background = {
   background: rgba(255,255,255,0.95);
   box-shadow: 0 0 6px 2px rgba(255,255,255,0.5);
 }
-#lb-space-stars .lb-sh1 { width: 100px; animation: lb-shoot-a 35s 0s infinite linear; }
-#lb-space-stars .lb-sh2 { width: 70px; animation: lb-shoot-b 35s 0s infinite linear; }
-#lb-space-stars .lb-sh3 { width: 50px; animation: lb-shoot-c 35s 0s infinite linear; }
+#lb-space-stars .lb-sh1 { width: 100px; animation: lb-shoot-a 600s 0s infinite linear; }
+#lb-space-stars .lb-sh2 { width: 70px; animation: lb-shoot-b 600s 0s infinite linear; }
+#lb-space-stars .lb-sh3 { width: 50px; animation: lb-shoot-c 600s 0s infinite linear; }
 
 /* ── Comet ── */
 #lb-space-stars .lb-comet {
@@ -128,7 +133,7 @@ export const background = {
   box-shadow: 0 0 12px 4px rgba(224,231,255,0.6), 0 0 30px 8px rgba(99,102,241,0.2);
   will-change: transform, opacity;
   opacity: 0;
-  animation: lb-comet 25s 5s infinite ease-in-out;
+  animation: lb-comet 600s 0s infinite linear;
 }
 #lb-space-stars .lb-comet::after {
   content: '';
@@ -146,7 +151,7 @@ export const background = {
   width: 44px; height: 44px;
   will-change: transform, opacity;
   opacity: 0;
-  animation: lb-satellite 47s 15s infinite linear;
+  animation: lb-satellite 600s 0s infinite linear;
   pointer-events: none;
   filter: brightness(0.85) drop-shadow(0 0 3px rgba(99,200,255,0.3));
 }
@@ -165,23 +170,227 @@ export const background = {
   animation: lb-moon-glow 8s 0s infinite ease-in-out;
 }
 
-/* ── Constellation lines ── */
-#lb-space-stars .lb-constellation {
+
+/* ── Asteroid field ── */
+#lb-space-stars .lb-asteroid-field {
   position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
+  top: 35%; left: 0;
+  width: 140px; height: 180px;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: lb-asteroids 600s 0s infinite linear;
+  pointer-events: none;
+  z-index: 5;
+  filter: blur(1.5px);
+}
+#lb-space-stars .lb-asteroid {
+  position: absolute;
+  background: linear-gradient(145deg, #3a3a48 0%, #22222e 40%, #111118 100%);
+  box-shadow: inset -3px -2px 6px rgba(0,0,0,0.5), inset 2px 1px 4px rgba(80,80,100,0.15);
+}
+#lb-space-stars .lb-ast1 {
+  width: 24px; height: 18px;
+  border-radius: 42% 58% 48% 52% / 55% 45% 55% 45%;
+  top: 15%; left: 25%;
+  animation: lb-tumble-a 7s infinite linear;
+}
+#lb-space-stars .lb-ast2 {
+  width: 14px; height: 11px;
+  border-radius: 55% 45% 60% 40% / 50% 60% 40% 50%;
+  top: 40%; left: 70%;
+  animation: lb-tumble-b 5.5s infinite linear;
+}
+#lb-space-stars .lb-ast3 {
+  width: 30px; height: 22px;
+  border-radius: 48% 52% 42% 58% / 45% 55% 50% 50%;
+  top: 58%; left: 10%;
+  animation: lb-tumble-a 10s infinite linear reverse;
+}
+#lb-space-stars .lb-ast4 {
+  width: 10px; height: 8px;
+  border-radius: 50% 42% 55% 48%;
+  top: 5%; left: 80%;
+  animation: lb-tumble-b 4s infinite linear;
+}
+#lb-space-stars .lb-ast5 {
+  width: 18px; height: 14px;
+  border-radius: 58% 42% 50% 50% / 48% 52% 48% 52%;
+  top: 78%; left: 45%;
+  animation: lb-tumble-a 8.5s infinite linear;
+}
+
+/* ── Distant galaxy ── */
+#lb-space-stars .lb-galaxy {
+  position: absolute;
+  top: 5%; right: 8%;
+  width: 140px; height: 80px;
+  background:
+    radial-gradient(ellipse 30% 30% at 50% 50%, rgba(230,215,255,0.2) 0%, transparent 100%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, rgba(160,130,240,0.08) 0%, rgba(100,80,200,0.03) 40%, transparent 70%);
+  will-change: transform, opacity;
+  animation: lb-galaxy 200s 0s infinite ease-in-out;
+  pointer-events: none;
+  transform: rotate(-30deg);
+}
+
+/* ── Space dust cloud ── */
+#lb-space-stars .lb-dust {
+  position: absolute;
+  left: -15%; width: 130%; height: 150px;
+  background: linear-gradient(180deg,
+    transparent 0%, rgba(90,90,130,0.03) 15%,
+    rgba(70,70,110,0.07) 35%, rgba(80,80,120,0.09) 50%,
+    rgba(70,70,110,0.06) 65%, rgba(90,90,130,0.03) 85%,
+    transparent 100%);
+  filter: blur(10px);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: lb-dust 600s 0s infinite linear;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ── Solar flare ── */
+#lb-space-stars .lb-sunflare {
+  position: absolute;
+  bottom: -110px; left: -110px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(255,220,150,0.45) 0%, rgba(255,180,80,0.2) 15%,
+    rgba(255,140,50,0.08) 30%, rgba(255,120,30,0.02) 45%,
+    transparent 60%);
+  opacity: 0;
   will-change: opacity;
-  animation: lb-constellation 12s 0s infinite ease-in-out;
+  animation: lb-sunflare 600s 0s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+#lb-space-stars .lb-sunflare::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(255,200,120,0.1) 0%, rgba(255,160,60,0.03) 25%, transparent 50%);
   pointer-events: none;
 }
 
-/* ── Keyframes ── */
+/* ── Ring system pass ── */
+#lb-space-stars .lb-rings {
+  position: absolute;
+  top: 15%; left: 0;
+  width: 450px; height: 80px;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: lb-rings 600s 0s infinite linear;
+  pointer-events: none;
+  z-index: 7;
+  filter: blur(1px);
+}
+#lb-space-stars .lb-ring-band {
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+}
+#lb-space-stars .lb-rb1 {
+  inset: 0;
+  border-width: 1.5px;
+  border-color: rgba(170,175,200,0.1);
+}
+#lb-space-stars .lb-rb2 {
+  top: 12%; bottom: 12%; left: 4%; right: 4%;
+  border-width: 2px;
+  border-color: rgba(180,185,215,0.18);
+  box-shadow: 0 0 6px 2px rgba(180,185,215,0.05);
+}
+#lb-space-stars .lb-rb3 {
+  top: 28%; bottom: 28%; left: 10%; right: 10%;
+  border-width: 1px;
+  border-color: rgba(160,165,195,0.08);
+}
+#lb-space-stars .lb-rb4 {
+  top: 38%; bottom: 38%; left: 16%; right: 16%;
+  border-width: 2.5px;
+  border-color: rgba(190,195,225,0.22);
+  box-shadow: 0 0 8px 2px rgba(190,195,225,0.06);
+}
+#lb-space-stars .lb-rb5 {
+  top: 46%; bottom: 46%; left: 22%; right: 22%;
+  border-width: 1px;
+  border-color: rgba(170,175,205,0.12);
+}
+
+/* ── Foreground planet (parallax) ── */
+#lb-space-stars .lb-fg-planet {
+  position: absolute;
+  top: 50%; left: 0;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #151525 0%, #0b0b18 40%, #060610 100%);
+  box-shadow:
+    inset 20px 12px 50px rgba(40,40,80,0.5),
+    -6px -3px 40px 6px rgba(100,120,200,0.10),
+    0 0 120px 50px rgba(10,10,30,0.6);
+  filter: blur(3px);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: lb-fg-planet 600s 0s infinite linear;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ── Parallax depth layers (driven by --bg-step CSS variable) ── */
+#lb-space-stars .lb-star,
+#lb-space-stars .lb-galaxy {
+  translate: 0 calc(var(--bg-step, 0) * -3px);
+}
+#lb-space-stars .lb-nebula,
+#lb-space-stars .lb-aurora {
+  translate: 0 calc(var(--bg-step, 0) * -6px);
+}
+#lb-space-stars .lb-planet,
+#lb-space-stars .lb-moon {
+  translate: 0 calc(var(--bg-step, 0) * -10px);
+}
+#lb-space-stars .lb-shoot,
+#lb-space-stars .lb-comet,
+#lb-space-stars .lb-satellite,
+#lb-space-stars .lb-dust {
+  translate: 0 calc(var(--bg-step, 0) * -16px);
+}
+#lb-space-stars .lb-asteroid-field,
+#lb-space-stars .lb-rings,
+#lb-space-stars .lb-sunflare {
+  translate: 0 calc(var(--bg-step, 0) * -22px);
+}
+#lb-space-stars .lb-fg-planet {
+  translate: 0 calc(var(--bg-step, 0) * -30px);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   KEYFRAMES
+   ─────────────────────────────────────────────────────────────────
+   Ambient (own cycles — always running):
+     lb-twinkle, lb-supernova, lb-float, lb-breathe, lb-aurora,
+     lb-moon-glow, lb-galaxy, lb-galaxy-spin, lb-tumble-a/b,
+     lb-flare-rotate
+
+   Scene events (all share a single 600s / 10-min cycle):
+     0-25s   (0%-4.2%)    Ambient only — establishing shot
+     25-55s  (4.2%-9.2%)  Shooting stars (3 staggered meteors)
+     70-95s  (11.7%-15.8%) Comet arc
+     115-150s (19.2%-25%)  Satellite wobble crossing
+     175-240s (29.2%-40%)  Asteroid field drift
+     270-330s (45%-55%)    Solar flare bloom
+     360-425s (60%-70.8%)  Space dust cloud rising
+     455-520s (75.8%-86.7%) Ring system sweep
+     545-597s (90.8%-99.5%) Foreground planet crossing
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Ambient keyframes (own cycles) ── */
 @keyframes lb-twinkle {
   0%, 100% { opacity: 0.4; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
   25% { opacity: 0.55; transform: scale(1.05); }
-  50% { opacity: 1; transform: scale(1.3); }
+  50% { opacity: 1; transform: scale(1.2); }
   75% { opacity: 0.55; transform: scale(1.05); }
 }
 @keyframes lb-supernova {
@@ -209,84 +418,165 @@ export const background = {
   80% { transform: translate(-2%,-5%) scale(0.95); opacity: 0.4; }
   100% { transform: translate(0,0) scale(1); opacity: 0; }
 }
-@keyframes lb-shoot-a {
-  0% { transform: translate(0,0) rotate(-28deg); opacity: 0; }
-  11% { transform: translate(0,0) rotate(-28deg); opacity: 0; }
-  11.3% { transform: translate(0,0) rotate(-28deg); opacity: 1; }
-  14% { transform: translate(-380px,200px) rotate(-28deg); opacity: 1; }
-  14.5% { transform: translate(-380px,200px) rotate(-28deg); opacity: 0; }
-  15% { transform: translate(0,0) rotate(-28deg); opacity: 0; }
-  69% { transform: translate(0,0) rotate(-28deg); opacity: 0; }
-  69.3% { transform: translate(0,0) rotate(-28deg); opacity: 1; }
-  72% { transform: translate(-380px,200px) rotate(-28deg); opacity: 1; }
-  72.5% { transform: translate(-380px,200px) rotate(-28deg); opacity: 0; }
-  73% { transform: translate(0,0) rotate(-28deg); opacity: 0; }
-  100% { transform: translate(0,0) rotate(-28deg); opacity: 0; }
-}
-@keyframes lb-shoot-b {
-  0% { transform: translate(0,0) rotate(-22deg); opacity: 0; }
-  70% { transform: translate(0,0) rotate(-22deg); opacity: 0; }
-  70.3% { transform: translate(0,0) rotate(-22deg); opacity: 0.85; }
-  73% { transform: translate(-310px,125px) rotate(-22deg); opacity: 0.85; }
-  73.5% { transform: translate(-310px,125px) rotate(-22deg); opacity: 0; }
-  74% { transform: translate(0,0) rotate(-22deg); opacity: 0; }
-  100% { transform: translate(0,0) rotate(-22deg); opacity: 0; }
-}
-@keyframes lb-shoot-c {
-  0% { transform: translate(0,0) rotate(-40deg); opacity: 0; }
-  41% { transform: translate(0,0) rotate(-40deg); opacity: 0; }
-  41.3% { transform: translate(0,0) rotate(-40deg); opacity: 0.7; }
-  44% { transform: translate(-250px,210px) rotate(-40deg); opacity: 0.7; }
-  44.5% { transform: translate(-250px,210px) rotate(-40deg); opacity: 0; }
-  45% { transform: translate(0,0) rotate(-40deg); opacity: 0; }
-  71% { transform: translate(0,0) rotate(-40deg); opacity: 0; }
-  71.3% { transform: translate(0,0) rotate(-40deg); opacity: 0.7; }
-  74% { transform: translate(-250px,210px) rotate(-40deg); opacity: 0.7; }
-  74.5% { transform: translate(-250px,210px) rotate(-40deg); opacity: 0; }
-  75% { transform: translate(0,0) rotate(-40deg); opacity: 0; }
-  100% { transform: translate(0,0) rotate(-40deg); opacity: 0; }
-}
-@keyframes lb-comet {
-  0% { transform: translate(0,0); opacity: 0; }
-  2% { transform: translate(10px,2px); opacity: 0.9; }
-  8% { transform: translate(100px,20px); opacity: 0.9; }
-  15% { transform: translate(250px,55px); opacity: 0.8; }
-  20% { transform: translate(350px,70px); opacity: 0.4; }
-  23% { transform: translate(400px,78px); opacity: 0; }
-  24% { transform: translate(0,0); opacity: 0; }
-  100% { transform: translate(0,0); opacity: 0; }
-}
-@keyframes lb-satellite {
-  0% { transform: translate(0,0) rotate(0deg); opacity: 0; }
-  0.5% { transform: translate(14px,-3px) rotate(6deg); opacity: 0.75; }
-  2% { transform: translate(56px,2px) rotate(-8deg); opacity: 0.75; }
-  3.5% { transform: translate(98px,-4px) rotate(7deg); opacity: 0.75; }
-  5% { transform: translate(141px,1px) rotate(-7deg); opacity: 0.75; }
-  6.5% { transform: translate(183px,-3px) rotate(8deg); opacity: 0.75; }
-  8% { transform: translate(225px,2px) rotate(-6deg); opacity: 0.75; }
-  9.5% { transform: translate(267px,-4px) rotate(7deg); opacity: 0.75; }
-  11% { transform: translate(310px,1px) rotate(-8deg); opacity: 0.75; }
-  12.5% { transform: translate(352px,-3px) rotate(6deg); opacity: 0.75; }
-  14% { transform: translate(394px,2px) rotate(-7deg); opacity: 0.75; }
-  15% { transform: translate(422px,-1px) rotate(4deg); opacity: 0.75; }
-  16% { transform: translate(450px,0px) rotate(0deg); opacity: 0; }
-  17% { transform: translate(0,0) rotate(0deg); opacity: 0; }
-  100% { transform: translate(0,0) rotate(0deg); opacity: 0; }
-}
 @keyframes lb-moon-glow {
   0%, 100% { opacity: 0.7; }
   50% { opacity: 1; }
 }
-@keyframes lb-constellation {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.7; }
+@keyframes lb-galaxy {
+  0%, 100% { opacity: 0.4; transform: rotate(-30deg) scale(1); }
+  30% { opacity: 0.7; transform: rotate(-28deg) scale(1.05); }
+  50% { opacity: 0.45; transform: rotate(-30deg) scale(1.02); }
+  70% { opacity: 0.8; transform: rotate(-32deg) scale(1.08); }
+}
+@keyframes lb-galaxy-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes lb-tumble-a {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes lb-tumble-b {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+@keyframes lb-flare-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Scene event keyframes (all on shared 600s cycle) ── */
+
+/* Shooting stars — 25-55s (4.2%-9.2%) — 3 staggered meteors */
+@keyframes lb-shoot-a {
+  0%, 4.15% { transform: translate(0,0) rotate(-28deg); opacity: 0; }
+  4.2% { transform: translate(0,0) rotate(-28deg); opacity: 1; }
+  5.5% { transform: translate(-380px,200px) rotate(-28deg); opacity: 1; }
+  5.7% { transform: translate(-380px,200px) rotate(-28deg); opacity: 0; }
+  5.8%, 100% { transform: translate(0,0) rotate(-28deg); opacity: 0; }
+}
+@keyframes lb-shoot-b {
+  0%, 6.15% { transform: translate(0,0) rotate(-22deg); opacity: 0; }
+  6.2% { transform: translate(0,0) rotate(-22deg); opacity: 0.85; }
+  7.1% { transform: translate(-310px,125px) rotate(-22deg); opacity: 0.85; }
+  7.3% { transform: translate(-310px,125px) rotate(-22deg); opacity: 0; }
+  7.4%, 100% { transform: translate(0,0) rotate(-22deg); opacity: 0; }
+}
+@keyframes lb-shoot-c {
+  0%, 7.75% { transform: translate(0,0) rotate(-40deg); opacity: 0; }
+  7.8% { transform: translate(0,0) rotate(-40deg); opacity: 0.7; }
+  8.6% { transform: translate(-250px,210px) rotate(-40deg); opacity: 0.7; }
+  8.8% { transform: translate(-250px,210px) rotate(-40deg); opacity: 0; }
+  8.9%, 100% { transform: translate(0,0) rotate(-40deg); opacity: 0; }
+}
+
+/* Comet — 70-95s (11.7%-15.8%) */
+@keyframes lb-comet {
+  0%, 11.6% { transform: translate(0,0); opacity: 0; }
+  11.9% { transform: translate(10px,2px); opacity: 0.9; }
+  13% { transform: translate(100px,20px); opacity: 0.9; }
+  14.2% { transform: translate(250px,55px); opacity: 0.8; }
+  15.2% { transform: translate(350px,70px); opacity: 0.4; }
+  15.7% { transform: translate(400px,78px); opacity: 0; }
+  15.8%, 100% { transform: translate(0,0); opacity: 0; }
+}
+
+/* Satellite — 115-150s (19.2%-25%) — slow wobble crossing */
+@keyframes lb-satellite {
+  0%, 19.1% { transform: translate(0,0) rotate(0deg); opacity: 0; }
+  19.2% { transform: translate(0,0) rotate(0deg); opacity: 0; }
+  19.7% { transform: translate(14px,-3px) rotate(6deg); opacity: 0.75; }
+  20.2% { transform: translate(56px,2px) rotate(-8deg); opacity: 0.75; }
+  20.6% { transform: translate(98px,-4px) rotate(7deg); opacity: 0.75; }
+  21.1% { transform: translate(141px,1px) rotate(-7deg); opacity: 0.75; }
+  21.6% { transform: translate(183px,-3px) rotate(8deg); opacity: 0.75; }
+  22.1% { transform: translate(225px,2px) rotate(-6deg); opacity: 0.75; }
+  22.6% { transform: translate(267px,-4px) rotate(7deg); opacity: 0.75; }
+  23.0% { transform: translate(310px,1px) rotate(-8deg); opacity: 0.75; }
+  23.5% { transform: translate(352px,-3px) rotate(6deg); opacity: 0.75; }
+  24.0% { transform: translate(394px,2px) rotate(-7deg); opacity: 0.75; }
+  24.4% { transform: translate(422px,-1px) rotate(4deg); opacity: 0.75; }
+  24.9% { transform: translate(450px,0px) rotate(0deg); opacity: 0; }
+  25%, 100% { transform: translate(0,0) rotate(0deg); opacity: 0; }
+}
+
+/* Asteroid field — 175-240s (29.2%-40%) */
+@keyframes lb-asteroids {
+  0%, 29.1% { transform: translate(480px, 20px); opacity: 0; }
+  29.5% { transform: translate(420px, 15px); opacity: 0.7; }
+  30% { transform: translate(380px, 10px); opacity: 0.9; }
+  34.5% { transform: translate(200px, -15px); opacity: 0.9; }
+  37% { transform: translate(30px, -40px); opacity: 0.9; }
+  39% { transform: translate(-200px, -70px); opacity: 0.7; }
+  39.5% { transform: translate(-350px, -90px); opacity: 0.4; }
+  39.8% { transform: translate(-460px, -105px); opacity: 0.15; }
+  40% { transform: translate(-520px, -112px); opacity: 0; }
+  40.1%, 100% { transform: translate(480px, 20px); opacity: 0; }
+}
+
+/* Solar flare — 270-330s (45%-55%) — slow bloom from corner */
+@keyframes lb-sunflare {
+  0%, 44.9% { opacity: 0; }
+  46% { opacity: 0.5; }
+  48% { opacity: 0.9; }
+  49.5% { opacity: 1; }
+  51% { opacity: 0.85; }
+  52% { opacity: 1; }
+  53.5% { opacity: 0.7; }
+  54.5% { opacity: 0.3; }
+  55%, 100% { opacity: 0; }
+}
+
+/* Space dust — 360-425s (60%-70.8%) — wide foggy band rising */
+@keyframes lb-dust {
+  0%, 59.9% { transform: translateY(950px); opacity: 0; }
+  60.5% { transform: translateY(850px); opacity: 0.5; }
+  61% { transform: translateY(780px); opacity: 1; }
+  65% { transform: translateY(400px); opacity: 1; }
+  69% { transform: translateY(0px); opacity: 1; }
+  70% { transform: translateY(-200px); opacity: 0.5; }
+  70.5% { transform: translateY(-320px); opacity: 0.2; }
+  70.8% { transform: translateY(-400px); opacity: 0; }
+  71%, 100% { transform: translateY(950px); opacity: 0; }
+}
+
+/* Ring system — 455-520s (75.8%-86.7%) — tilted bands sweeping */
+@keyframes lb-rings {
+  0%, 75.7% { transform: translate(480px, 250px) rotate(-22deg); opacity: 0; }
+  76.2% { transform: translate(400px, 210px) rotate(-22deg); opacity: 0.5; }
+  76.7% { transform: translate(340px, 180px) rotate(-22deg); opacity: 1; }
+  81% { transform: translate(100px, 70px) rotate(-22deg); opacity: 1; }
+  84% { transform: translate(-100px, -30px) rotate(-22deg); opacity: 1; }
+  86% { transform: translate(-350px, -130px) rotate(-22deg); opacity: 0.5; }
+  86.5% { transform: translate(-470px, -175px) rotate(-22deg); opacity: 0.2; }
+  86.7% { transform: translate(-520px, -190px) rotate(-22deg); opacity: 0; }
+  86.8%, 100% { transform: translate(480px, 250px) rotate(-22deg); opacity: 0; }
+}
+
+/* Foreground planet — 545-597s (90.8%-99.5%) — the grand finale */
+@keyframes lb-fg-planet {
+  0%, 90.7% { transform: translate(500px, 40px); opacity: 0; }
+  91% { transform: translate(450px, 35px); opacity: 0.6; }
+  91.5% { transform: translate(380px, 25px); opacity: 1; }
+  94% { transform: translate(200px, 0px); opacity: 1; }
+  96% { transform: translate(0px, -25px); opacity: 1; }
+  97.5% { transform: translate(-180px, -50px); opacity: 1; }
+  98.5% { transform: translate(-400px, -80px); opacity: 0.8; }
+  99% { transform: translate(-550px, -95px); opacity: 0.4; }
+  99.3% { transform: translate(-620px, -105px); opacity: 0; }
+  99.5%, 100% { transform: translate(500px, 40px); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   #lb-space-stars * { animation: none !important; }
   #lb-space-stars .lb-star { opacity: 0.6; transform: none; }
   #lb-space-stars .lb-shoot,
   #lb-space-stars .lb-comet,
-  #lb-space-stars .lb-satellite { display: none; }
+  #lb-space-stars .lb-satellite,
+  #lb-space-stars .lb-fg-planet,
+  #lb-space-stars .lb-asteroid-field,
+  #lb-space-stars .lb-dust,
+  #lb-space-stars .lb-sunflare,
+  #lb-space-stars .lb-rings { display: none; }
 }
 `,
   html: `<div id="lb-space-stars">
@@ -328,13 +618,35 @@ export const background = {
   <!-- Moon crescent (1) — with earthshine glow -->
   <div class="lb-moon" style="bottom:28%;right:18%"></div>
 
-  <!-- Constellation lines (1) — faint connecting lines between stars -->
-  <svg class="lb-constellation" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <polyline points="10,3 32,14 6,28 10,3" fill="none" stroke="rgba(148,163,184,0.12)" stroke-width="0.2"/>
-    <polyline points="15,52 40,70 22,86 15,52" fill="none" stroke="rgba(148,163,184,0.09)" stroke-width="0.2"/>
-    <line x1="58" y1="7" x2="72" y2="20" stroke="rgba(148,163,184,0.08)" stroke-width="0.15"/>
-    <line x1="78" y1="60" x2="62" y2="78" stroke="rgba(148,163,184,0.08)" stroke-width="0.15"/>
-  </svg>
+  <!-- Distant galaxy (1) — slowly rotating elliptical glow -->
+  <div class="lb-galaxy"></div>
+
+  <!-- Asteroid field (5) — tumbling rocks drifting as a cluster -->
+  <div class="lb-asteroid-field">
+    <div class="lb-asteroid lb-ast1"></div>
+    <div class="lb-asteroid lb-ast2"></div>
+    <div class="lb-asteroid lb-ast3"></div>
+    <div class="lb-asteroid lb-ast4"></div>
+    <div class="lb-asteroid lb-ast5"></div>
+  </div>
+
+  <!-- Solar flare (1) — warm glow peeking from bottom-left corner -->
+  <div class="lb-sunflare"></div>
+
+  <!-- Space dust cloud (1) — wide foggy band drifting upward -->
+  <div class="lb-dust"></div>
+
+  <!-- Ring system (5 bands) — tilted rings sweeping across -->
+  <div class="lb-rings">
+    <div class="lb-ring-band lb-rb1"></div>
+    <div class="lb-ring-band lb-rb2"></div>
+    <div class="lb-ring-band lb-rb3"></div>
+    <div class="lb-ring-band lb-rb4"></div>
+    <div class="lb-ring-band lb-rb5"></div>
+  </div>
+
+  <!-- Foreground planet (1) — huge blurred dark body drifting across, parallax depth -->
+  <div class="lb-fg-planet"></div>
 </div>
 `,
 };

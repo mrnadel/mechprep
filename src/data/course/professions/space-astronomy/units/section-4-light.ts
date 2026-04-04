@@ -18,7 +18,6 @@ export const spaceSection4: Unit[] = [
         description: "What light actually is and why it matters for astronomy.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u1-L1-T1",
@@ -107,7 +106,6 @@ export const spaceSection4: Unit[] = [
         description: "Light has a dual nature that puzzled scientists for centuries.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u1-L2-T1",
@@ -196,7 +194,6 @@ export const spaceSection4: Unit[] = [
         description: "How wavelength and frequency are connected and what they determine.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u1-L3-T1",
@@ -285,7 +282,6 @@ export const spaceSection4: Unit[] = [
         description: "Reflection, refraction, and the inverse square law.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u1-L4-T1",
@@ -382,7 +378,6 @@ export const spaceSection4: Unit[] = [
         description: "How astronomers extract temperature, speed, and composition from starlight.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u1-L5-T1",
@@ -487,7 +482,6 @@ export const spaceSection4: Unit[] = [
         description: "Visible light is just a tiny slice of a much larger spectrum.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u2-L1-T1",
@@ -575,7 +569,6 @@ export const spaceSection4: Unit[] = [
         description: "The longest wavelengths reveal cold gas, pulsars, and the echo of the Big Bang.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u2-L2-T1",
@@ -666,7 +659,6 @@ export const spaceSection4: Unit[] = [
         description: "How infrared reveals hidden stars, cool planets, and dusty regions.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u2-L3-T1",
@@ -752,7 +744,6 @@ export const spaceSection4: Unit[] = [
         description: "Ultraviolet, X-rays, and gamma rays reveal the most violent events in space.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u2-L4-T1",
@@ -837,7 +828,6 @@ export const spaceSection4: Unit[] = [
         description: "Earth's atmosphere blocks most wavelengths, which is why we launch space telescopes.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u2-L5-T1",
@@ -936,7 +926,6 @@ export const spaceSection4: Unit[] = [
         description: "Combining all wavelengths reveals a more complete picture of any object.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u2-L6-T1",
@@ -1038,7 +1027,6 @@ export const spaceSection4: Unit[] = [
         description: "Telescopes collect light, not just magnify things.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u3-L1-T1",
@@ -1126,7 +1114,6 @@ export const spaceSection4: Unit[] = [
         description: "How a convex lens focuses parallel light rays to a single point.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u3-L2-T1",
@@ -1216,7 +1203,6 @@ export const spaceSection4: Unit[] = [
         description: "Why refractors split light into unwanted rainbows and how to fix it.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u3-L3-T1",
@@ -1309,7 +1295,6 @@ export const spaceSection4: Unit[] = [
         description: "From Galileo's simple tube to the great observatory refractors.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u3-L4-T1",
@@ -1398,7 +1383,6 @@ export const spaceSection4: Unit[] = [
         description: "Understand the optical path from starlight entering the lens to your eye.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u3-L5-T1",
@@ -1504,7 +1488,6 @@ export const spaceSection4: Unit[] = [
         description: "How reflectors solve the size and color problems of refractors.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u4-L1-T1",
@@ -1590,7 +1573,6 @@ export const spaceSection4: Unit[] = [
         description: "Different mirror arrangements produce different telescope designs.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u4-L2-T1",
@@ -1684,7 +1666,6 @@ export const spaceSection4: Unit[] = [
         description: "Schmidt-Cassegrain and Maksutov designs combine lenses and mirrors.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u4-L3-T1",
@@ -1772,7 +1753,6 @@ export const spaceSection4: Unit[] = [
         description: "From Palomar to the ELT, how professional telescopes grew enormous.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u4-L4-T1",
@@ -1862,7 +1842,6 @@ export const spaceSection4: Unit[] = [
         description: "When to choose each telescope type and why.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u4-L5-T1",
@@ -1967,7 +1946,6 @@ export const spaceSection4: Unit[] = [
         description: "Revisit electromagnetic radiation, wavelength, frequency, and the speed of light.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u5-L1-T1",
@@ -2060,7 +2038,6 @@ export const spaceSection4: Unit[] = [
         description: "Refractors, reflectors, and compounds compared side by side.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u5-L2-T1",
@@ -2145,7 +2122,6 @@ export const spaceSection4: Unit[] = [
         description: "Practice the math of magnification, inverse square law, and light speed.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u5-L3-T1",
@@ -2260,7 +2236,6 @@ export const spaceSection4: Unit[] = [
         description: "Why aperture is the single most important telescope specification.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u6-L1-T1",
@@ -2355,7 +2330,6 @@ export const spaceSection4: Unit[] = [
         description: "How focal length affects magnification, image brightness, and field of view.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u6-L2-T1",
@@ -2445,7 +2419,6 @@ export const spaceSection4: Unit[] = [
         description: "Learn why high magnification has strict limits.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u6-L3-T1",
@@ -2539,7 +2512,6 @@ export const spaceSection4: Unit[] = [
         description: "Decode the numbers on telescope listings like a pro.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u6-L4-T1",
@@ -2631,7 +2603,6 @@ export const spaceSection4: Unit[] = [
         description: "How electronic sensors replaced the human eye for serious astronomy.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u6-L5-T1",
@@ -2717,7 +2688,6 @@ export const spaceSection4: Unit[] = [
         description: "Compare real telescope models and see how specs translate to performance.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u6-L6-T1",
@@ -2827,7 +2797,6 @@ export const spaceSection4: Unit[] = [
         description: "How radio telescopes detect invisible electromagnetic waves from space.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u7-L1-T1",
@@ -2926,7 +2895,6 @@ export const spaceSection4: Unit[] = [
         description: "Meet the biggest and most important radio telescopes on Earth.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u7-L2-T1",
@@ -3026,7 +2994,6 @@ export const spaceSection4: Unit[] = [
         description: "How multiple small dishes work together to act like one enormous telescope.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u7-L3-T1",
@@ -3126,7 +3093,6 @@ export const spaceSection4: Unit[] = [
         description: "How dishes on different continents created an Earth-sized telescope.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u7-L4-T1",
@@ -3225,7 +3191,6 @@ export const spaceSection4: Unit[] = [
         description: "Pulsars, quasars, and the cosmic microwave background: radio's greatest hits.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u7-L5-T1",
@@ -3335,7 +3300,6 @@ export const spaceSection4: Unit[] = [
         description: "Earth's atmosphere blocks, blurs, and absorbs light. Space solves all three problems.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u8-L1-T1",
@@ -3431,7 +3395,6 @@ export const spaceSection4: Unit[] = [
         description: "How a blurry mistake became one of humanity's greatest scientific tools.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u8-L2-T1",
@@ -3531,7 +3494,6 @@ export const spaceSection4: Unit[] = [
         description: "How Webb's golden mirror and sunshield let it see the universe's first light.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u8-L3-T1",
@@ -3641,7 +3603,6 @@ export const spaceSection4: Unit[] = [
         description: "Compare the two greatest space telescopes ever built.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u8-L4-T1",
@@ -3734,7 +3695,6 @@ export const spaceSection4: Unit[] = [
         description: "Chandra, Spitzer, Kepler, and the fleet of space observatories.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u8-L5-T1",
@@ -3834,7 +3794,6 @@ export const spaceSection4: Unit[] = [
         description: "Adaptive optics, CCD detectors, and the tech that makes modern astronomy possible.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u8-L6-T1",
@@ -3941,7 +3900,6 @@ export const spaceSection4: Unit[] = [
         description: "How prisms and diffraction gratings spread light into a rainbow of wavelengths.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u9-L1-T1",
@@ -4037,7 +3995,6 @@ export const spaceSection4: Unit[] = [
         description: "The three spectral patterns and what each one tells you about the source.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u9-L2-T1",
@@ -4135,7 +4092,6 @@ export const spaceSection4: Unit[] = [
         description: "Every element absorbs and emits unique wavelengths. This is how we know what stars are made of.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u9-L3-T1",
@@ -4240,7 +4196,6 @@ export const spaceSection4: Unit[] = [
         description: "Why hot stars look blue and cool stars look red.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u9-L4-T1",
@@ -4334,7 +4289,6 @@ export const spaceSection4: Unit[] = [
         description: "How astronomers classify stars by their spectra and the famous mnemonic.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u9-L5-T1",
@@ -4428,7 +4382,6 @@ export const spaceSection4: Unit[] = [
         description: "Spectral lines also reveal motion, rotation, magnetic fields, and more.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u9-L6-T1",
@@ -4537,7 +4490,6 @@ export const spaceSection4: Unit[] = [
         description: "When a light source moves, its wavelengths change. This is the Doppler effect.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u10-L1-T1",
@@ -4637,7 +4589,6 @@ export const spaceSection4: Unit[] = [
         description: "How astronomers measure exactly how fast things move using the Doppler formula.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u10-L2-T1",
@@ -4737,7 +4688,6 @@ export const spaceSection4: Unit[] = [
         description: "Why almost every galaxy is redshifted and what that tells us about the universe.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u10-L3-T1",
@@ -4835,7 +4785,6 @@ export const spaceSection4: Unit[] = [
         description: "Light loses energy escaping strong gravity, causing gravitational redshift.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u10-L4-T1",
@@ -4932,7 +4881,6 @@ export const spaceSection4: Unit[] = [
         description: "How astronomers use redshift to measure the distance and age of the universe.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u10-L5-T1",
@@ -5043,7 +4991,6 @@ export const spaceSection4: Unit[] = [
         description: "Forget the marketing hype. Here's what actually matters when buying your first telescope.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u11-L1-T1",
@@ -5143,7 +5090,6 @@ export const spaceSection4: Unit[] = [
         description: "Which telescope design is best for a beginner and why.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u11-L2-T1",
@@ -5239,7 +5185,6 @@ export const spaceSection4: Unit[] = [
         description: "The telescope tube is only half the story. Mounts and eyepieces make or break the experience.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u11-L3-T1",
@@ -5337,7 +5282,6 @@ export const spaceSection4: Unit[] = [
         description: "Avoid these traps and your first telescope experience will be much better.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u11-L4-T1",
@@ -5435,7 +5379,6 @@ export const spaceSection4: Unit[] = [
         description: "Beyond the telescope: apps, accessories, and habits that make stargazing better.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u11-L5-T1",
@@ -5550,7 +5493,6 @@ export const spaceSection4: Unit[] = [
         description: "Revisit key concepts from electromagnetic radiation, optics, and telescope design.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u12-L1-T1",
@@ -5652,7 +5594,6 @@ export const spaceSection4: Unit[] = [
         description: "Revisit spectral lines, the Doppler effect, and what they reveal about the universe.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u12-L2-T1",
@@ -5759,7 +5700,6 @@ export const spaceSection4: Unit[] = [
         description: "Test your knowledge of radio telescopes, interferometry, and space observatories.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u12-L3-T1",
@@ -5856,7 +5796,6 @@ export const spaceSection4: Unit[] = [
         description: "A comprehensive challenge covering all of Light and Telescopes. Prove your mastery.",
         icon: "📝",
         xpReward: 35,
-        levels: 4,
         questions: [
           {
             id: "sp-s4-u12-L4-T1",

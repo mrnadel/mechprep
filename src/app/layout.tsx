@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: `${APP_NAME} — ${APP_TAGLINE}`,
+    default: `${APP_NAME} | ${APP_TAGLINE}`,
     template: `%s | ${APP_NAME}`,
   },
   description: APP_DESCRIPTION,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   authors: [{ name: APP_NAME }],
   creator: APP_NAME,
   openGraph: {
-    title: `${APP_NAME} — ${APP_TAGLINE}`,
+    title: `${APP_NAME} | ${APP_TAGLINE}`,
     description: APP_DESCRIPTION,
     url: APP_URL,
     siteName: APP_NAME,
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     images: ['/og-image.png'],
-    title: `${APP_NAME} — ${APP_TAGLINE}`,
+    title: `${APP_NAME} | ${APP_TAGLINE}`,
     description: APP_DESCRIPTION,
   },
   alternates: {

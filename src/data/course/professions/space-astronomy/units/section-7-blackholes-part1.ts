@@ -18,7 +18,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "What a black hole actually is and why it's the strangest object in space.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u1-L1-T1",
@@ -107,7 +106,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "The dramatic death of massive stars and why only the biggest ones create black holes.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u1-L2-T1",
@@ -198,7 +196,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Black holes come in different sizes, from a few solar masses to billions.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u1-L3-T1",
@@ -295,7 +292,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "How astronomers find objects that emit no light at all.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u1-L4-T1",
@@ -389,7 +385,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Separating science fiction from science fact about black holes.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u1-L5-T1",
@@ -498,7 +493,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "What the event horizon is and why crossing it changes everything.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u2-L1-T1",
@@ -588,7 +582,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "The strange experience of falling through the event horizon.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u2-L2-T1",
@@ -673,7 +666,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "The point of infinite density at the heart of every black hole.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u2-L3-T1",
@@ -766,7 +758,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Gravity isn't a force pulling you in. It's the shape of space pushing you forward.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u2-L4-T1",
@@ -863,7 +854,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Why black holes have a distinctive glowing ring around a dark center.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u2-L5-T1",
@@ -953,7 +943,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "How black holes stretch, slow, and warp the flow of time itself.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u2-L6-T1",
@@ -1065,7 +1054,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Why gravity can pull you apart when it's stronger at your feet than your head.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u3-L1-T1",
@@ -1159,7 +1147,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "How Hawking proved that black holes aren't completely black after all.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u3-L2-T1",
@@ -1251,7 +1238,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Given enough time, every black hole will evaporate completely.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u3-L3-T1",
@@ -1341,7 +1327,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "What happens to information that falls into a black hole?",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u3-L4-T1",
@@ -1439,7 +1424,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Black holes obey the same laws as engines and refrigerators.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u3-L5-T1",
@@ -1540,7 +1524,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Revisit how black holes form and the different categories by mass.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u4-L1-T1",
@@ -1634,7 +1617,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Revisit event horizons, singularities, time dilation, and the first black hole image.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u4-L2-T1",
@@ -1728,7 +1710,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Revisit spaghettification, Hawking radiation, evaporation, and the information paradox.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u4-L3-T1",
@@ -1829,7 +1810,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "Nearly every large galaxy has a supermassive black hole at its center.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u5-L1-T1",
@@ -1924,7 +1904,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "When a supermassive black hole feeds actively, it can outshine its entire galaxy.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u5-L2-T1",
@@ -2018,7 +1997,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "How supermassive black holes regulate star formation across an entire galaxy.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u5-L3-T1",
@@ -2116,7 +2094,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "What happens when two supermassive black holes merge during a galaxy collision.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u5-L4-T1",
@@ -2212,7 +2189,6 @@ export const spaceSection7Part1: Unit[] = [
         description: "What we know about the supermassive black hole at the center of the Milky Way.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u5-L5-T1",

@@ -26,7 +26,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "The enormous challenges of imaging something that emits no light.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u6-L1-T1",
@@ -122,7 +121,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "How VLBI links telescopes across continents into one virtual dish.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u6-L2-T1",
@@ -212,7 +210,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "The historic 2019 image and what it showed us.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u6-L3-T1",
@@ -297,7 +294,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "How the EHT imaged the Milky Way's own supermassive black hole.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u6-L4-T1",
@@ -393,7 +389,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Next-generation plans to make sharper, real-time movies of black holes.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u6-L5-T1",
@@ -502,7 +497,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Ripples in spacetime predicted by Einstein and finally detected a century later.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u7-L1-T1",
@@ -595,7 +589,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Laser beams, mirrors, and the most sensitive measurement ever made.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u7-L2-T1",
@@ -684,7 +677,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "September 14, 2015: the day we heard the universe for the first time.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u7-L3-T1",
@@ -779,7 +771,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Virgo, KAGRA, and the worldwide effort to triangulate gravitational wave sources.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u7-L4-T1",
@@ -870,7 +861,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "When gravitational waves and light arrive from the same event, the payoff is enormous.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u7-L5-T1",
@@ -963,7 +953,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "New discoveries from nearly a decade of gravitational wave observations.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u7-L6-T1",
@@ -1069,7 +1058,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "When a massive star dies but isn't quite heavy enough to become a black hole.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u8-L1-T1",
@@ -1160,7 +1148,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Rapidly spinning neutron stars that sweep beams of radiation across the sky.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u8-L2-T1",
@@ -1258,7 +1245,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Neutron stars that spin hundreds of times per second, faster than a kitchen blender.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u8-L3-T1",
@@ -1348,7 +1334,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Neutron stars with magnetic fields a quadrillion times stronger than Earth's.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u8-L4-T1",
@@ -1441,7 +1426,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Why neutron stars are the best natural laboratories for extreme physics.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u8-L5-T1",
@@ -1545,7 +1529,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Theoretical tunnels through spacetime that connect distant points in the universe.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u9-L1-T1",
@@ -1638,7 +1621,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "A mathematical mirror of a black hole where nothing can enter and everything must leave.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u9-L2-T1",
@@ -1726,7 +1708,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Does general relativity actually allow time travel? The math says maybe.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u9-L3-T1",
@@ -1817,7 +1798,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "What if a singularity had no event horizon to hide behind?",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u9-L4-T1",
@@ -1910,7 +1890,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Where general relativity meets quantum mechanics, and the biggest unsolved questions.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u9-L5-T1",
@@ -2013,7 +1992,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Review formation, types, event horizons, and the historic first images.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u10-L1-T1",
@@ -2109,7 +2087,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Review LIGO, Virgo, key detections, and multi-messenger astronomy.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u10-L2-T1",
@@ -2195,7 +2172,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "Review pulsars, magnetars, wormholes, and the frontiers of extreme physics.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u10-L3-T1",
@@ -2285,7 +2261,6 @@ export const spaceSection7Part2: Unit[] = [
         description: "15 rapid-fire questions covering all of Section 7.",
         icon: "⚡",
         xpReward: 35,
-        levels: 4,
         questions: [
           {
             id: "sp-sec7-u10-L4-SQ1",

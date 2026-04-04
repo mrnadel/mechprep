@@ -71,7 +71,7 @@ export const LessonNode = memo(function LessonNode({
     ? (isDark ? '1.5px solid rgba(255,255,255,0.04)' : '1.5px solid rgba(0,0,0,0.04)')
     : isGolden ? undefined
     : isCurrent ? `2px solid ${theme.color}${isDark ? '40' : '25'}`
-    : (isDark ? '1.5px solid rgba(255,255,255,0.06)' : '1.5px solid rgba(255,255,255,0.9)');
+    : (isDark ? '1.5px solid rgba(255,255,255,0.06)' : '1.5px solid rgba(0,0,0,0.08)');
 
   const titleColor = isLocked
     ? (isDark ? '#64748B' : '#B0B0B0')

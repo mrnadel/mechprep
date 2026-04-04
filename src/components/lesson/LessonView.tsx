@@ -167,6 +167,54 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
     return () => { document.head.removeChild(style); };
   }, [backgroundCss]);
 
+  // Persist background animation timing across lesson transitions
+  const bgRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const bgKey = lessonData?.lesson.background;
+    if (!bgKey || !bgRef.current) return;
+    const storageKey = `lb-bg-start-${bgKey}`;
+    const now = performance.now();
+    const stored = sessionStorage.getItem(storageKey);
+    const startTime = stored ? parseFloat(stored) : now;
+    if (!stored) sessionStorage.setItem(storageKey, String(now));
+    const elapsed = now - startTime;
+    // Advance all animations to the elapsed time so they continue seamlessly
+    const el = bgRef.current;
+    requestAnimationFrame(() => {
+      el.getAnimations({ subtree: true }).forEach((a) => {
+        if (a instanceof CSSAnimation) {
+          a.currentTime = elapsed;
+        }
+      });
+    });
+  }, [lessonData?.lesson.background, backgroundHtml]);
+
+  // Parallax: smoothly animate --bg-step on the container (stable across DOM recreation)
+  const bgStepIndex = adapter ? (adapter.answeredCount ?? 0) : (activeLesson?.currentQuestionIndex ?? 0);
+  const bgStepAnimRef = useRef<number>(0);
+  const bgStepTargetRef = useRef(0);
+  useEffect(() => {
+    const container = bgRef.current;
+    if (!container) return;
+    // Snap to previous target (in case we were mid-animation), then animate to new target
+    const from = bgStepTargetRef.current;
+    const to = bgStepIndex;
+    bgStepTargetRef.current = to;
+    container.style.setProperty('--bg-step', String(from));
+    if (from === to) return;
+    if (bgStepAnimRef.current) cancelAnimationFrame(bgStepAnimRef.current);
+    const duration = 2500;
+    const start = performance.now();
+    function tick(now: number) {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      container!.style.setProperty('--bg-step', String(from + (to - from) * eased));
+      if (t < 1) bgStepAnimRef.current = requestAnimationFrame(tick);
+    }
+    bgStepAnimRef.current = requestAnimationFrame(tick);
+    return () => { if (bgStepAnimRef.current) cancelAnimationFrame(bgStepAnimRef.current); };
+  }, [bgStepIndex]);
+
   const overlayActive = showExitConfirm || showOutOfHearts;
 
   const lessonSessionQuestions = useMemo(() => {
@@ -531,6 +579,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
         {/* Background layer — placed on outer div so gradient fills entire viewport */}
         {hasBackground && (
           <div
+            ref={bgRef}
             style={{
               position: 'absolute',
               inset: 0,

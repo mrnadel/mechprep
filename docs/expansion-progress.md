@@ -6,20 +6,18 @@
 
 ---
 
-## Current Status: PHASE 2 IN PROGRESS (Sprints 1-9 done, Sprint 10 partially done)
+## Current Status: PHASE 2 IN PROGRESS (Sprints 1-10a done, S1 expansions done, S2 in progress)
 
-**Last updated:** 2026-04-01
-**Last completed step:** Sprint 10 Batch A content files written (not yet integrated into meta/loaders)
-**Next step:** Integrate Sprint 10 Batch A files into meta.ts + course-meta.ts, then seed. Then continue Sprint 10 (expand existing 1-unit sections) + Sprints 11-13.
+**Last updated:** 2026-04-04
+**Last completed step:** Sprint 10a fully integrated + seeded. Finance S1, Psychology S1, Space S1 also expanded + seeded. All verified working.
+**Next step:** Expand remaining single-unit sections (Finance S2 next, then S3, S4, S6-S12; Psychology S4, S6-S9, S14; Space S2-S3, S5, S8-S11, S14). Then Sprints 11-13.
 **Deferred to future:** Adaptive placement test, section checkpoints UI
 
 ### What needs to happen next session:
-1. Integrate 12 new section files into meta.ts and course-meta.ts lazy loaders (files exist but aren't wired up yet)
-2. Seed to verify
-3. Continue Sprint 10: expand existing sections that still have only 1 unit each
-4. Sprint 11: Add calculation questions to sections 5+
-5. Sprint 12: Capstone sections (section 15 for each course)
-6. Sprint 13: QA pass and polish
+1. Continue expanding single-unit sections sequentially by course
+2. Sprint 11: Add calculation questions to sections 5+
+3. Sprint 12: Capstone sections (section 15 for each course)
+4. Sprint 13: QA pass and polish
 
 ---
 
@@ -91,36 +89,50 @@
 
 | Sprint | Description | Status |
 |--------|-------------|--------|
-| 1 | Psychology Section 2 (Sensation & Perception) | DONE (9 units, previous session) |
-| 2 | Space Section 4 (Light & Telescopes) | DONE (12 units, previous session) |
-| 3 | Finance Section 13 (Estate Planning) | DONE (11 units, previous session) |
-| 4 | Psychology Section 10 (Developmental) | DONE (11 units, seeded) |
-| 5 | Space Section 12 (Amateur Astronomy) | DONE (11 units, seeded) |
-| 6 | Finance Section 14 (Business) | DONE (11 units, seeded) |
-| 7 | Psychology Section 11 (Mental Health) | DONE (15 units, seeded) |
-| 8 | Psychology Section 12 (Therapy) | DONE (13 units, seeded) |
-| 9 | Space Section 7 (Black Holes) | DONE (10 units, seeded) |
-| 10a | New sections: Psych 3, 5, 13 + Space 6, 13 + Finance 5 | FILES WRITTEN, NOT INTEGRATED |
-| 10b | Deepen existing 1-unit sections | NOT STARTED |
-| 11 | Add calculation questions | NOT STARTED |
-| 12 | Capstone sections (section 15) | NOT STARTED |
+| 1 | Psychology Section 2 (Sensation & Perception) | DONE (9 units) |
+| 2 | Space Section 4 (Light & Telescopes) | DONE (12 units) |
+| 3 | Finance Section 13 (Estate Planning) | DONE (11 units) |
+| 4 | Psychology Section 10 (Developmental) | DONE (11 units) |
+| 5 | Space Section 12 (Amateur Astronomy) | DONE (11 units) |
+| 6 | Finance Section 14 (Business) | DONE (11 units) |
+| 7 | Psychology Section 11 (Mental Health) | DONE (15 units) |
+| 8 | Psychology Section 12 (Therapy) | DONE (13 units) |
+| 9 | Space Section 7 (Black Holes) | DONE (10 units) |
+| 10a | Integrate written files: Psych 3,5,13 + Space 6,13 + Finance 5 | DONE (integrated + seeded) |
+| — | **Sequential expansion (sections 1→15 per course, skipping done)** | |
+| 10b | Finance S1 (What Is Money?) | DONE (8 units, seeded) |
+| 10c | Finance S2 (Spending & Budgeting) | IN PROGRESS |
+| 10d | Finance S3 (Saving & Emergency Planning) | NOT STARTED |
+| 10e | Finance S4 (Banking & Financial Systems) | NOT STARTED |
+| 10f | Finance S6 (Debt Mastery) | NOT STARTED |
+| 10g | Finance S7 (Credit System) | NOT STARTED |
+| 10h | Finance S8 (Investing Fundamentals) | NOT STARTED |
+| 10i | Finance S9 (Advanced Investing) | NOT STARTED |
+| 10j | Finance S10 (Real Estate) | NOT STARTED |
+| 10k | Finance S11 (Insurance & Risk) | NOT STARTED |
+| 10l | Finance S12 (Retirement Planning) | NOT STARTED |
+| 10m | Psychology S1 (Welcome to Your Mind) | DONE (8 units, seeded) |
+| 10n | Psychology S4 (Memory) | NOT STARTED |
+| 10o | Psychology S6 (Cognitive Biases) | NOT STARTED |
+| 10p | Psychology S7 (Emotions & Motivation) | NOT STARTED |
+| 10q | Psychology S8 (Social Psychology) | NOT STARTED |
+| 10r | Psychology S9 (Personality) | NOT STARTED |
+| 10s | Psychology S14 (Research Methods) | NOT STARTED |
+| 10t | Space S1 (Looking Up) | DONE (8 units, seeded) |
+| 10u | Space S2 (The Solar System) | NOT STARTED |
+| 10v | Space S3 (Earth & Moon) | NOT STARTED |
+| 10w | Space S5 (Stars) | NOT STARTED |
+| 10x | Space S8 (Cosmology) | NOT STARTED |
+| 10y | Space S9 (Rockets & Orbital Mechanics) | NOT STARTED |
+| 10z | Space S10 (Space Exploration History) | NOT STARTED |
+| 10aa | Space S11 (Exoplanets & Astrobiology) | NOT STARTED |
+| 10ab | Space S14 (Space Frontiers) | NOT STARTED |
+| 11 | Add calculation questions (all courses) | NOT STARTED |
+| 12 | Capstone sections S15 (all courses) | NOT STARTED |
 | 13 | QA pass and polish | NOT STARTED |
 
-### Sprint 10a: Files written but need integration
-
-These 12 content files exist but are NOT yet wired into meta.ts or course-meta.ts loaders. Next session must integrate them, then seed.
-
-**Psychology (30 new units in 6 files):**
-- `section-3-learning-part1.ts` (psySection3Part1, 5 units) + `section-3-learning-part2.ts` (psySection3Part2, 4 units) → Section 3, sectionIndex: 2
-- `section-5-intelligence-part1.ts` (psySection5Part1, 5 units) + `section-5-intelligence-part2.ts` (psySection5Part2, 5 units) → Section 5, sectionIndex: 4
-- `section-13-applied-part1.ts` (psySection13Part1, 6 units) + `section-13-applied-part2.ts` (psySection13Part2, 5 units) → Section 13, sectionIndex: 12
-
-**Space (20 new units in 4 files):**
-- `section-6-galaxies-part1.ts` (spaceSection6Part1, 5 units) + `section-6-galaxies-part2.ts` (spaceSection6Part2, 5 units) → Section 6, sectionIndex: 5
-- `section-13-tech-part1.ts` (spaceSection13Part1, 5 units) + `section-13-tech-part2.ts` (spaceSection13Part2, 5 units) → Section 13, sectionIndex: 12
-
-**Finance (13 new units in 2 files):**
-- `section-5-taxes-part1.ts` (finSection5Part1, 7 units) + `section-5-taxes-part2.ts` (finSection5Part2, 6 units) → Section 5, sectionIndex: 4
+### Sprint 10a: COMPLETED
+All 12 content files integrated into meta.ts and course-meta.ts loaders. Seeded and verified 2026-04-04.
 
 ### Per-Course Section Status
 
@@ -128,8 +140,8 @@ These 12 content files exist but are NOT yet wired into meta.ts or course-meta.t
 
 | Section | Title | Status | Notes |
 |---------|-------|--------|-------|
-| 1 | What Is Money? | existing (1 unit) | needs deepening |
-| 2 | Spending & Budgeting | existing (1 unit) | needs deepening |
+| 1 | What Is Money? | DONE | 8 units, seeded |
+| 2 | Spending & Budgeting | IN PROGRESS | expanding from 1 unit |
 | 3 | Saving & Emergency Planning | existing (1 unit) | needs deepening |
 | 4 | Banking & Financial Systems | existing (1 unit) | needs deepening |
 | 5 | Taxes | FILES WRITTEN | 13 units, needs meta integration |
@@ -148,7 +160,7 @@ These 12 content files exist but are NOT yet wired into meta.ts or course-meta.t
 
 | Section | Title | Status | Notes |
 |---------|-------|--------|-------|
-| 1 | Welcome to Your Mind | existing (1 unit) | needs deepening |
+| 1 | Welcome to Your Mind | DONE | 8 units, seeded |
 | 2 | Sensation & Perception | DONE | 9 units, seeded |
 | 3 | Learning | FILES WRITTEN | 9 units, needs meta integration |
 | 4 | Memory | existing (1 unit) | needs deepening |
@@ -168,7 +180,7 @@ These 12 content files exist but are NOT yet wired into meta.ts or course-meta.t
 
 | Section | Title | Status | Notes |
 |---------|-------|--------|-------|
-| 1 | Looking Up | existing (1 unit) | needs deepening |
+| 1 | Looking Up | DONE | 8 units, seeded |
 | 2 | The Solar System | existing (1 unit) | needs deepening |
 | 3 | Earth & Moon | existing (1 unit) | needs deepening |
 | 4 | Light & Telescopes | DONE | 12 units, seeded |
@@ -184,17 +196,15 @@ These 12 content files exist but are NOT yet wired into meta.ts or course-meta.t
 | 14 | Space Frontiers | existing (1 unit) | needs deepening |
 | 15 | Mastery & Synthesis (Capstone) | NOT STARTED | |
 
-### Current totals (seeded as of 2026-04-01)
+### Current totals (seeded as of 2026-04-04)
 
 | Course | Units | Lessons | Questions |
 |--------|-------|---------|-----------|
 | ME | 11 | 195 | 2,119 |
-| Personal Finance | 35 | 281 | 2,338 |
-| Psychology | 58 | 315 | 2,607 |
-| Space & Astronomy | 43 | 242 | 2,153 |
-| **Total** | **147** | **1,033** | **9,217** |
-
-After integrating Sprint 10a files: +63 units, est. +315 lessons, est. +3,000 questions.
+| Personal Finance | 56 | 376 | 3,128 |
+| Psychology | 96 | 491 | 4,105 |
+| Space & Astronomy | 71 | 375 | 3,297 |
+| **Total** | **234** | **1,437** | **12,649** |
 
 ---
 

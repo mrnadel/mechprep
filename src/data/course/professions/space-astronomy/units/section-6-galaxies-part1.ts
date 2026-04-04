@@ -18,7 +18,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "What a galaxy is and why galaxies matter in astronomy.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u1-L1-T1",
@@ -109,7 +108,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "How Edwin Hubble organized galaxies by their shape.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u1-L2-T1",
@@ -192,7 +190,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Why elliptical galaxies are full of old stars and low on gas.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u1-L3-T1",
@@ -288,7 +285,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "How spiral arms form and why barred spirals are so common.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u1-L4-T1",
@@ -379,7 +375,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Explore irregular galaxies and practice classifying all types.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u1-L5-T1",
@@ -485,7 +480,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Basic facts about our galaxy: type, size, and star count.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u2-L1-T1",
@@ -578,7 +572,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "The bulge, disk, halo, and spiral arms of our galaxy.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u2-L2-T1",
@@ -668,7 +661,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "The Sun's location in the Milky Way and how we orbit the galactic center.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u2-L3-T1",
@@ -764,7 +756,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Satellite galaxies and the Local Group of galaxies.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u2-L4-T1",
@@ -849,7 +840,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "The challenges and methods of mapping a galaxy while living inside it.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u2-L5-T1",
@@ -940,7 +930,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "What will happen to our galaxy over the next few billion years.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u2-L6-T1",
@@ -1043,7 +1032,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Why galaxies seem to have far more mass than we can see.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u3-L1-T1",
@@ -1141,7 +1129,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "The gravitational role dark matter plays in galaxies and beyond.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u3-L2-T1",
@@ -1228,7 +1215,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "The staggering proportion of dark matter in galaxies and the universe.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u3-L3-T1",
@@ -1321,7 +1307,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "The leading theories about dark matter's identity and the search to detect it.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u3-L4-T1",
@@ -1409,7 +1394,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Two mysterious forces that sound similar but work in opposite ways.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u3-L5-T1",
@@ -1515,7 +1499,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Review galaxy classification and key features of each type.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u4-L1-T1",
@@ -1598,7 +1581,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Review our galaxy's structure, size, and place in the Local Group.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u4-L2-T1",
@@ -1675,7 +1657,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Review dark matter evidence, its role, and how it differs from dark energy.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u4-L3-T1",
@@ -1773,7 +1754,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "Why galaxy collisions are common and how gravity drives them.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u5-L1-T1",
@@ -1862,7 +1842,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "How gravity distorts galaxies during close encounters.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u5-L2-T1",
@@ -1953,7 +1932,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "The difference between equal-sized collisions and a big galaxy eating a small one.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u5-L3-T1",
@@ -2046,7 +2024,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "How galaxy collisions trigger explosive waves of new star formation.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u5-L4-T1",
@@ -2135,7 +2112,6 @@ export const spaceSection6Part1: Unit[] = [
         description: "A tour of the most spectacular colliding galaxy systems astronomers have found.",
         icon: "📝",
         xpReward: 30,
-        levels: 4,
         questions: [
           {
             id: "sp-sec6-u5-L5-T1",

@@ -62,6 +62,9 @@ android/app-*.apk
 android/app-*.aab
 android/.bubblewrap/
 
+# Dev-only debug header images
+/public/images/course/units/
+
 # Playwright
 node_modules/
 /test-results/

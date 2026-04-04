@@ -18,7 +18,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Ordinary distance units break down when space gets involved.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u5-L1-T1",
@@ -117,7 +116,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "The AU: astronomy's yardstick for measuring our solar system.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u5-L2-T1",
@@ -203,7 +201,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "The distance light travels in one year, and why it matters.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u5-L3-T1",
@@ -308,7 +305,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "The distance unit professional astronomers love, built from geometry.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u5-L4-T1",
@@ -402,7 +398,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Compare the three cosmic rulers and know when to use each one.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u5-L5-T1",
@@ -517,7 +512,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Everything you need (and don't need) for your first night under the stars.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u6-L1-T1",
@@ -609,7 +603,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "How light pollution works and where to escape it.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u6-L2-T1",
@@ -701,7 +694,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Start with the Moon, planets, and the brightest stars. Build from there.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u6-L3-T1",
@@ -804,7 +796,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Free phone apps can identify anything in the sky. Here's how to use them.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u6-L4-T1",
@@ -904,7 +895,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "A quick recap of everything you need for a successful night under the stars.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u6-L5-T1",
@@ -1015,7 +1005,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "The sky appears to rotate, but it's really Earth that's spinning.",
         icon: "📝",
         xpReward: 15,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u7-L1-T1",
@@ -1109,7 +1098,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "One star barely moves all night. Here's why it's so special.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u7-L2-T1",
@@ -1209,7 +1197,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Some stars circle the pole all night and never dip below the horizon.",
         icon: "📝",
         xpReward: 20,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u7-L3-T1",
@@ -1310,7 +1297,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Earth's orbit gives us a different view of the universe each season.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u7-L4-T1",
@@ -1409,7 +1395,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "How Earth's tilt affects the Sun's daily arc and the length of your days.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u7-L5-T1",
@@ -1523,7 +1508,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Revisit AU, light-years, parsecs, and cosmic scales from Section 1.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u8-L1-T1",
@@ -1610,7 +1594,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Review practical stargazing skills, sky objects, and observation techniques.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u8-L2-T1",
@@ -1700,7 +1683,6 @@ export const spaceSection1Part2: Unit[] = [
         description: "Review Earth's rotation, celestial poles, circumpolar stars, and seasonal changes.",
         icon: "📝",
         xpReward: 25,
-        levels: 4,
         questions: [
           {
             id: "sp-sec1-u8-L3-T1",
@@ -1789,7 +1771,6 @@ export const spaceSection1Part2: Unit[] = [
         icon: "⚡",
         type: "speed-round",
         xpReward: 30,
-        levels: 4,
         questions: [],
         speedTimeLimit: 60,
         speedQuestions: [

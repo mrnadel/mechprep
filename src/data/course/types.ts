@@ -151,6 +151,8 @@ export interface Unit {
   // Units with the same sectionIndex are grouped under the sectionTitle header on the course map
   sectionIndex?: number;       // 1-15, determines order and grouping
   sectionTitle?: string;       // displayed as a full-width banner between unit groups
+  /** URL to an SVG/image used as the unit header background (replaces CSS gradient pattern) */
+  headerBg?: string;
   lessons: Lesson[];
 }
 
