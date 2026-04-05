@@ -12,7 +12,7 @@ export const finSection2Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec2-u1",
-    title: "Where Your Money Actually Goes",
+    title: "Where Money Goes",
     description: "Most people don't know where their money goes. Track your spending and find out.",
     color: "#10B981",
     icon: "💸",

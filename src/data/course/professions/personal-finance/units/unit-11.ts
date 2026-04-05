@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit11: Unit = {
   id: "pf-u11-insurance",
-  title: "Protect What You've Built",
+  title: "Protect Your Wealth",
   description: "Protect everything you've built, from your health to your identity.",
   color: "#016B05",
   icon: "🛡️",

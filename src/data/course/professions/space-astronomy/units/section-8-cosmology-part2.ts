@@ -12,7 +12,7 @@ export const spaceSection8Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "sp-sec8-u6",
-    title: "The Shape and Fate of the Universe",
+    title: "Fate of the Universe",
     description: "Is the universe flat, curved, or closed? How its shape determines its destiny.",
     color: "#EC4899",
     icon: "🌐",

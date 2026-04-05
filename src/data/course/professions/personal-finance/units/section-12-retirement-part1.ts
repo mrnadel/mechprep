@@ -12,7 +12,7 @@ export const finSection12Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec12-u1",
-    title: "Retirement Math: How Much Do You Need?",
+    title: "Retirement Math",
     description: "Retirement costs more than most people think. Learn the math behind your magic number.",
     color: "#10B981",
     icon: "🧮",

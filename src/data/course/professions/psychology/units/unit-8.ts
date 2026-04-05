@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit8: Unit = {
   id: "psy-u8-behavioral-econ",
-  title: "Why You're Bad with Money",
+  title: "Money & Your Brain",
   description: "Where psychology meets money. Why humans are predictably irrational with cash.",
   color: "#10B981",
   icon: "💰",

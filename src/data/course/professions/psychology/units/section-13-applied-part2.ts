@@ -6,7 +6,7 @@ export const psySection13Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec13-u7',
-    title: 'Hiring Right and Giving Better Feedback',
+    title: 'Workplace Psychology',
     description: 'How psychology improves hiring decisions, performance reviews, and constructive feedback.',
     color: '#8B5CF6',
     icon: '📋',

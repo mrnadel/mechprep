@@ -12,7 +12,7 @@ export const finSection9Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec9-u6",
-    title: "Sector Analysis and Rotation",
+    title: "Sector Rotation",
     description: "Learn how the economy's cycle affects different sectors and how investors rotate between them.",
     color: "#14B8A6",
     icon: "🔄",

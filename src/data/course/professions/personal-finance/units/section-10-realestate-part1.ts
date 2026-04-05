@@ -12,7 +12,7 @@ export const finSection10Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec10-u1",
-    title: "Renting vs. Buying: The Real Math",
+    title: "Renting vs. Buying",
     description: "Owning isn't always better than renting. Learn the numbers behind the biggest financial decision most people make.",
     color: "#10B981",
     icon: "🏠",

@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useCallback, useState, useMemo } from 'react';
-import { flushSync } from 'react-dom';
+import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -14,7 +13,7 @@ import { getUnitTheme, type UnitTheme } from '@/lib/unitThemes';
 import { UpgradeModal } from '@/components/ui/UpgradeModal';
 import { OutOfHeartsModal } from '@/components/ui/OutOfHeartsModal';
 import { LessonNode } from './LessonNode';
-import { UnitHeroHeader, UnitBannerContent, HERO_EXPANDED_HEIGHT, HERO_MORPH_DISTANCE } from './UnitHeroHeader';
+import { UnitHeroHeader, HERO_COMPACT_HEIGHT } from './UnitHeroHeader';
 import { useIsDark } from '@/store/useThemeStore';
 
 type JumpModalType =
@@ -264,17 +263,6 @@ export function CourseMap() {
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
   const [jumpModal, setJumpModal] = useState<JumpModalType | null>(null);
   const [visibleUnitIndex, setVisibleUnitIndex] = useState(0);
-  const heroRef = useRef<HTMLDivElement>(null);
-  const morphValueRef = useRef(HERO_EXPANDED_HEIGHT / HERO_MORPH_DISTANCE); // start hidden
-  const renderedUnitRef = useRef(0); // tracks which unit React has actually rendered
-  const hiddenBannerRef = useRef<HTMLElement | null>(null); // inline banner hidden by floating header
-
-  // Set --mp on mount so the header starts hidden before the first paint.
-  // React doesn't manage --mp (not in style prop) so we set it via callback ref.
-  const heroCallbackRef = useCallback((el: HTMLDivElement | null) => {
-    heroRef.current = el;
-    el?.style.setProperty('--mp', morphValueRef.current.toFixed(3));
-  }, []);
 
 
   const isFreeLocked = useCallback((unitIndex: number) =>
@@ -492,13 +480,11 @@ export function CourseMap() {
     return () => window.removeEventListener('resize', update);
   }, []);
 
-  // Scroll handler: dynamically position header below CourseHeader + DailyGoalBar, and track visible unit
+  // Scroll handler: position header below CourseHeader and track visible unit
   useEffect(() => {
     let lastIndex = 0;
     let lastTop = 0;
-    let mounted = false;
     const handleScroll = () => {
-      // Compute top offset: below the sticky CourseHeader
       const courseHeader = document.querySelector('header.sticky');
       const topOffset = courseHeader?.getBoundingClientRect().bottom ?? 0;
 
@@ -507,85 +493,23 @@ export function CourseMap() {
         setHeaderStyle((prev) => ({ ...prev, top: topOffset }));
       }
 
-      // 2. Track visible unit — switch when the next unit's inline banner
-      //    reaches the header area (divTop + 24 margin ≤ topOffset).
-      const hiddenMp = HERO_EXPANDED_HEIGHT / HERO_MORPH_DISTANCE; // ≈1.508 → fully invisible
-      const threshold = topOffset - 24;
+      // Track visible unit — the last unit whose element top is above the header
       let newIndex = 0;
       for (let i = 0; i < unitElsRef.current.length; i++) {
         const el = unitElsRef.current[i];
         if (!el) continue;
-        if (el.getBoundingClientRect().top <= threshold) {
+        if (el.getBoundingClientRect().top <= topOffset) {
           newIndex = i;
         }
       }
 
       if (newIndex !== lastIndex) {
         lastIndex = newIndex;
-        if (mounted) {
-          // flushSync forces the React render synchronously so that
-          // renderedUnitRef.current updates BEFORE we compute --mp below.
-          // Without this, React batches the state update (passive listener)
-          // and the header flashes at default size for one frame.
-          flushSync(() => setVisibleUnitIndex(newIndex));
-        } else {
-          // On the initial useEffect call React is still committing,
-          // so flushSync is not allowed — use a normal setState instead.
-          setVisibleUnitIndex(newIndex);
-        }
-      }
-
-      // 3. Hero morph — always compute mp for the unit React has RENDERED,
-      //    not newIndex (which may be ahead of the React state).
-      //    This keeps the old header squashing smoothly while React catches up.
-      const mpIndex = renderedUnitRef.current;
-      const visibleEl = unitElsRef.current[mpIndex];
-      if (visibleEl && heroRef.current) {
-        // +24 accounts for the banner's marginTop so the header aligns
-        // with the banner, not the unit element above it.
-        const bannerTop = visibleEl.getBoundingClientRect().top + 24;
-        const scrolled = topOffset - bannerTop;
-        let mp: number = scrolled < 0 ? hiddenMp : Math.min(1, scrolled / HERO_MORPH_DISTANCE);
-
-        // 4. Squash: compress into next banner — bottom of floating header
-        //    pins to the top of the next inline banner, height shrinks to 0.
-        const nextUnitEl = unitElsRef.current[mpIndex + 1];
-        if (nextUnitEl) {
-          const nextBannerTop = nextUnitEl.getBoundingClientRect().top + 24;
-          const availableHeight = nextBannerTop - topOffset;
-          if (availableHeight < HERO_EXPANDED_HEIGHT) {
-            const squashMp = (HERO_EXPANDED_HEIGHT - Math.max(0, availableHeight)) / HERO_MORPH_DISTANCE;
-            mp = Math.max(mp, squashMp);
-          }
-        }
-
-        morphValueRef.current = mp;
-        heroRef.current.style.setProperty('--mp', mp.toFixed(3));
-
-        // 5. Hide the inline banner that the floating header is covering
-        const isHeaderVisible = mp < hiddenMp - 0.01;
-        const bannerEl = visibleEl.querySelector('[data-inline-banner]') as HTMLElement | null;
-        if (bannerEl !== hiddenBannerRef.current) {
-          // Restore the previously hidden banner
-          if (hiddenBannerRef.current) hiddenBannerRef.current.style.visibility = '';
-          hiddenBannerRef.current = null;
-        }
-        if (bannerEl) {
-          if (isHeaderVisible) {
-            bannerEl.style.visibility = 'hidden';
-            hiddenBannerRef.current = bannerEl;
-          } else {
-            bannerEl.style.visibility = '';
-            hiddenBannerRef.current = null;
-          }
-        }
+        setVisibleUnitIndex(newIndex);
       }
     };
 
-    // Run once on mount to set initial top
     handleScroll();
-    mounted = true;
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [courseData.length]);
@@ -608,39 +532,6 @@ export function CourseMap() {
   const floatingAllGolden = floatingUnit && floatingCompleted === floatingUnit.lessons.length &&
     floatingUnit.lessons.every((l) => progress.completedLessons[l.id]?.golden);
 
-  // Sync renderedUnitRef so the scroll handler always computes mp for the
-  // unit React has actually rendered — prevents showing wrong data at wrong mp.
-  const prevRenderedUnit = renderedUnitRef.current;
-  renderedUnitRef.current = visibleUnitIndex;
-
-  // When the rendered unit changes, recompute mp for the NEW unit immediately
-  // (before paint) so the header never flashes at mp=0 / expanded.
-  useLayoutEffect(() => {
-    if (!heroRef.current) return;
-    if (prevRenderedUnit !== visibleUnitIndex) {
-      const courseHeader = document.querySelector('header.sticky');
-      const topOffset = courseHeader?.getBoundingClientRect().bottom ?? 0;
-      const hiddenMp = HERO_EXPANDED_HEIGHT / HERO_MORPH_DISTANCE;
-      const visibleEl = unitElsRef.current[visibleUnitIndex];
-      if (visibleEl) {
-        const bannerTop = visibleEl.getBoundingClientRect().top + 24;
-        const scrolled = topOffset - bannerTop;
-        let mp = scrolled < 0 ? hiddenMp : Math.min(1, scrolled / HERO_MORPH_DISTANCE);
-        // Also check squash against the next unit
-        const nextEl = unitElsRef.current[visibleUnitIndex + 1];
-        if (nextEl) {
-          const nextBannerTop = nextEl.getBoundingClientRect().top + 24;
-          const available = nextBannerTop - topOffset;
-          if (available < HERO_EXPANDED_HEIGHT) {
-            mp = Math.max(mp, (HERO_EXPANDED_HEIGHT - Math.max(0, available)) / HERO_MORPH_DISTANCE);
-          }
-        }
-        morphValueRef.current = mp;
-      }
-    }
-    heroRef.current.style.setProperty('--mp', morphValueRef.current.toFixed(3));
-  });
-
   return (
     <div
       ref={scrollRef}
@@ -659,10 +550,9 @@ export function CourseMap() {
         </div>
       )}
 
-      {/* Morphing unit hero header */}
+      {/* Always-visible floating unit header — updates as you scroll past units */}
       {floatingUnit && (
         <UnitHeroHeader
-          ref={heroCallbackRef}
           unit={floatingUnit}
           unitIndex={visibleUnitIndex}
           displayNumber={getDisplayNumber(visibleUnitIndex)}
@@ -670,7 +560,6 @@ export function CourseMap() {
           totalInUnit={floatingUnit.lessons.length}
           isAllGolden={!!floatingAllGolden}
           theme={floatingTheme}
-          professionId={activeProfession}
           hasSections={hasSections}
           sectionIndex={currentSection.sectionIndex}
           positionStyle={headerStyle}
@@ -678,12 +567,10 @@ export function CourseMap() {
         />
       )}
 
-      {/* No spacer — every unit (including the first) has an inline banner */}
-
       {/* Units container */}
       <div
         className="flex flex-col px-3 sm:px-4 mx-auto"
-        style={{ paddingTop: 8, paddingBottom: 0, gap: 0, maxWidth: 520 }}
+        style={{ paddingTop: HERO_COMPACT_HEIGHT + 14, paddingBottom: 0, gap: 0, maxWidth: 520 }}
       >
         {currentSection.units.map(({ unit, globalIndex: unitIndex }, localIdx) => {
           const theme = getUnitTheme(unitIndex);
@@ -710,41 +597,34 @@ export function CourseMap() {
                 animationDelay: `${Math.min(localIdx * 0.1, 0.5)}s`,
               }}
             >
-              {/* Inline unit hero banner — same component style as floating header at expanded size */}
-              <button
-                onClick={() => router.push('/units')}
-                className="active:scale-[0.99] transition-transform duration-75"
-                data-inline-banner={unitIndex}
+              {/* Inline unit label */}
+              <div
                 style={{
-                  display: 'block',
-                  width: '100%',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  background: isAllGolden ? '#FFB800' : theme.color,
-                  borderRadius: 24,
-                  marginTop: 24,
+                  marginTop: localIdx > 0 ? 24 : 0,
                   marginBottom: 8,
-                  height: HERO_EXPANDED_HEIGHT,
-                  border: 'none',
-                  cursor: 'pointer',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-                  WebkitTapHighlightColor: 'transparent',
+                  paddingLeft: 4,
+                  opacity: isUnitLocked ? 0.45 : 1,
                 }}
-                aria-label={`Unit ${localIdx + 1}: ${unit.title}. Tap to browse.`}
               >
-                <UnitBannerContent
-                  unit={unit}
-                  unitIndex={unitIndex}
-                  displayNumber={localIdx + 1}
-                  completedInUnit={completedInUnit}
-                  totalInUnit={unit.lessons.length}
-                  isAllGolden={isAllGolden}
-                  theme={theme}
-                  professionId={activeProfession}
-                  hasSections={hasSections}
-                  sectionIndex={currentSection.sectionIndex}
-                />
-              </button>
+                <div style={{
+                  fontSize: 10,
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: 1.1,
+                  color: isDark ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.3)',
+                }}>
+                  {hasSections ? `Section ${currentSection.sectionIndex}, Unit ${getDisplayNumber(unitIndex)}` : `Unit ${getDisplayNumber(unitIndex)}`}
+                </div>
+                <div className="truncate" style={{
+                  fontSize: 17,
+                  fontWeight: 800,
+                  color: isAllGolden ? '#FFB800' : (isDark ? '#E2E8F0' : '#1A1A1A'),
+                  lineHeight: 1.3,
+                  marginTop: 2,
+                }}>
+                  {unit.title}
+                </div>
+              </div>
 
               {/* "Jump here" button for placement-test-eligible locked units */}
               {isUnitJumpable(unitIndex) && (

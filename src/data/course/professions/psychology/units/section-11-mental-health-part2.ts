@@ -6,7 +6,7 @@ export const psySection11Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec11-u9',
-    title: 'Review: Mood, Trauma, and Psychotic Disorders',
+    title: 'Mood & Trauma',
     description: 'Reinforce your knowledge of bipolar disorder, PTSD, OCD, and schizophrenia.',
     color: '#6366F1',
     icon: '🔄',

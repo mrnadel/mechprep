@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit5: Unit = {
   id: "psy-u5-social",
-  title: "How Others Change Your Mind",
+  title: "Social Influence",
   description: "How other people change what you think, feel, and do, often without you knowing.",
   color: "#34D399",
   icon: "👥",

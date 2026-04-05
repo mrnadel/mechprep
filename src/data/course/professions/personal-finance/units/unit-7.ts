@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit7: Unit = {
  id: "pf-u7-stocks",
- title: "Understand the Stock Market",
+ title: "The Stock Market",
  description: "Go beyond the basics: read charts, understand valuations, and invest with confidence.",
  color: "#058727",
  icon: "📉",

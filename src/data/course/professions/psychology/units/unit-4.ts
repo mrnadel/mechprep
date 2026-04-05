@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit4: Unit = {
   id: "psy-u4-emotions",
-  title: "Why You Feel What You Feel",
+  title: "Emotions Decoded",
   description: "What emotions are, why they exist, and the surprising science of what drives you.",
   color: "#F59E0B",
   icon: "🔥",

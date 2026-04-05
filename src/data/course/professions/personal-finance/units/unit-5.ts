@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit5: Unit = {
   id: "pf-u5-banking-taxes",
-  title: "Master Your Bank & Taxes",
+  title: "Banks & Taxes",
   description: "Optimize your bank accounts and stop overpaying the government.",
   color: "#099345",
   icon: "\u{1F3E6}",

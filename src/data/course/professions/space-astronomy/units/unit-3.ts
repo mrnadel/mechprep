@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit3: Unit = {
   id: "sp-u3-earth-moon",
-  title: "Seasons, Tides & Eclipses",
+  title: "Seasons & Eclipses",
   description: "Why we have seasons, how the Moon controls our tides, and the magic of eclipses.",
   color: "#3B82F6",
   icon: "🌎",

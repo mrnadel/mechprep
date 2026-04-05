@@ -12,7 +12,7 @@ export const financeSection13Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "pf-s13-u1",
-    title: "Why Everyone Needs an Estate Plan",
+    title: "Estate Planning",
     description: "Estate planning isn't just for the rich. It's how you protect the people you love.",
     color: "#8B5CF6",
     icon: "📜",

@@ -6,7 +6,7 @@ export const psySection10Part1: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec10-u1',
-    title: 'From Conception to First Breath',
+    title: 'Prenatal Development',
     description: 'How a single cell becomes a newborn with remarkable built-in abilities.',
     color: '#F59E0B',
     icon: '👶',

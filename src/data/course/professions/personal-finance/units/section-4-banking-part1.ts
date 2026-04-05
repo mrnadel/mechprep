@@ -12,7 +12,7 @@ export const finSection4Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec4-u1",
-    title: "Checking vs. Savings Deep Dive",
+    title: "Checking vs. Savings",
     description: "Checking and savings accounts serve different purposes. Learn what each does and when to use them.",
     color: "#3B82F6",
     icon: "🏦",

@@ -12,7 +12,7 @@ export const spaceSection6Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "sp-sec6-u6",
-    title: "The Local Group and Galaxy Clusters",
+    title: "Galaxy Clusters",
     description: "Explore our galactic neighborhood and the massive structures galaxies form together.",
     color: "#8B5CF6",
     icon: "🏘️",

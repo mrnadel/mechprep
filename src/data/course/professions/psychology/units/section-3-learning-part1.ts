@@ -6,7 +6,7 @@ export const psySection3Part1: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec3-u1',
-    title: 'Pavlov\'s Dogs and Learned Reactions',
+    title: 'Pavlov\'s Dogs',
     description: 'How your brain learns to connect unrelated things through repeated pairing.',
     color: '#8B5CF6',
     icon: '🐕',

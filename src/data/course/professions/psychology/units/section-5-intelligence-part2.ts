@@ -6,7 +6,7 @@ export const psySection5Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec5-u6',
-    title: 'Does Language Shape Your Thoughts?',
+    title: 'Language & Thought',
     description: 'How the words you speak might change the way you think about the world.',
     color: '#8B5CF6',
     icon: '🗣️',

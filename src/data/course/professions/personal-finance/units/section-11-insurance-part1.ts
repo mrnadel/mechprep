@@ -13,7 +13,7 @@ export const finSection11Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec11-u1",
-    title: "Insurance Principles: How Risk Pooling Works",
+    title: "How Insurance Works",
     description: "Insurance lets thousands of people share financial risk. Learn why it exists and how it protects you.",
     color: "#3B82F6",
     icon: "🛡️",

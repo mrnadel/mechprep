@@ -4,7 +4,7 @@ export const spaceSection13Part1: Unit[] = [
   // ===== UNIT 1: Satellite Design and Orbits =====
   {
     id: 'sp-sec13-u1',
-    title: 'Satellite Design and Orbits',
+    title: 'Satellite Design',
     description: 'Learn how satellites are built, how they stay in orbit, and why different missions need different altitudes.',
     color: '#6366F1',
     icon: '\u{1F6F0}\u{FE0F}',

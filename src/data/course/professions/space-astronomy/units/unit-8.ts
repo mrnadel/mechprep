@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit8: Unit = {
   id: "sp-u8-galaxies",
-  title: "The Biggest and Strangest Objects",
+  title: "Strangest Objects",
   description: "The Milky Way, galaxy collisions, and the most extreme objects in the universe.",
   color: "#6366F1",
   icon: "🌀",

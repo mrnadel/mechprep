@@ -6,7 +6,7 @@ export const psySection1Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec1-u5',
-    title: 'The Brain\'s Messaging System',
+    title: 'Brain Messaging',
     description: 'How billions of tiny cells use electricity and chemicals to create every thought you have.',
     color: '#A78BFA',
     icon: '⚡',

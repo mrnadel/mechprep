@@ -12,7 +12,7 @@ export const finSection8Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec8-u6",
-    title: "Index Funds: Beating 90% of Pros",
+    title: "Index Fund Power",
     description: "You don't need to pick stocks. Index funds let you own the whole market and outperform most professional managers.",
     color: "#14B8A6",
     icon: "🏆",

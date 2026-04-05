@@ -6,7 +6,7 @@ export const psySection7Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec7-u6',
-    title: 'Goal Setting and Achievement',
+    title: 'Goals & Motivation',
     description: 'How setting the right goals, finding flow, and building grit drive success.',
     color: '#EC4899',
     icon: '🎯',

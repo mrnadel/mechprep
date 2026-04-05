@@ -12,7 +12,7 @@ export const finSection1Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec1-u1",
-    title: "Welcome to Your Financial Life",
+    title: "Your Financial Life",
     description: "You already know more about money than you think. Let's build on that.",
     color: "#34D399",
     icon: "👋",

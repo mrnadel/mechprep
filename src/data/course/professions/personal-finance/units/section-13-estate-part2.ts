@@ -12,7 +12,7 @@ export const financeSection13Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "pf-s13-u7",
-    title: "Inheritance and Estate Taxes",
+    title: "Estate Taxes",
     description: "Understand how governments tax wealth transfers and strategies to minimize the bite.",
     color: "#8B5CF6",
     icon: "🏛️",

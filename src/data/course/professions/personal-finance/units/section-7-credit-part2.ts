@@ -12,7 +12,7 @@ export const finSection7Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec7-u6",
-    title: "Credit Reports: Reading and Disputing",
+    title: "Credit Reports",
     description: "Learn to read your credit report line by line and dispute any errors you find.",
     color: "#14B8A6",
     icon: "📋",

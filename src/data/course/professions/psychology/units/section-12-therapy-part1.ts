@@ -6,7 +6,7 @@ export const psySection12Part1: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec12-u1',
-    title: 'From Asylums to Evidence-Based Care',
+    title: 'History of Therapy',
     description: 'How society has treated mental illness across centuries and what drove reform.',
     color: '#8B5CF6',
     icon: '🏥',

@@ -6,7 +6,7 @@ export const spaceSection5Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "sp-sec5-u6",
-    title: "Stellar Evolution: Low-Mass Stars",
+    title: "Stellar Evolution",
     description: "Follow the life cycle of a Sun-like star from main sequence to white dwarf.",
     color: "#14B8A6",
     icon: "🌟",

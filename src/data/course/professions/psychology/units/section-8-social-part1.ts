@@ -6,7 +6,7 @@ export const psySection8Part1: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec8-u1',
-    title: 'How Others Influence You',
+    title: 'Social Influence',
     description: 'Why you change your behavior, opinions, and decisions when other people are around.',
     color: '#3B82F6',
     icon: '👥',

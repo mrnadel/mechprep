@@ -6,7 +6,7 @@ export const psySection13Part1: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec13-u1',
-    title: 'Why Consumers Act Irrationally',
+    title: 'Consumer Psychology',
     description: 'How cognitive biases lead people to make predictably irrational economic decisions.',
     color: '#6366F1',
     icon: '🧠',

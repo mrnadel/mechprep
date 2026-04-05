@@ -6,7 +6,7 @@ export const psySection9Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec9-u6',
-    title: 'Social-Cognitive Approach',
+    title: 'Social-Cognitive View',
     description: 'How learning, thinking, and social context shape personality.',
     color: '#FBBF24',
     icon: '🔄',

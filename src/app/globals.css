@@ -375,6 +375,13 @@
 
 .go-btn-pulse {
   animation: goPulse 2.5s ease-in-out infinite;
+  transition: box-shadow 75ms, transform 75ms;
+}
+
+.group:active .go-btn-pulse {
+  box-shadow: 0 0 0 var(--go-shadow-color) !important;
+  transform: translateY(4px);
+  animation: none;
 }
 
 /* Lesson tile pulse */

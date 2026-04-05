@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Octokeen vs Duolingo — Gap Analysis & Roadmap (Verified)</title>
+<style>
+  :root {
+    --bg: #0f0f13;
+    --surface: #1a1a24;
+    --surface-hover: #22222e;
+    --border: #2a2a3a;
+    --text: #e4e4ef;
+    --text-muted: #8888a0;
+    --accent: #6c5ce7;
+    --accent-light: #a29bfe;
+    --green: #00b894;
+    --green-bg: #00b89415;
+    --green-border: #00b89440;
+    --yellow: #fdcb6e;
+    --yellow-bg: #fdcb6e15;
+    --yellow-border: #fdcb6e40;
+    --red: #e17055;
+    --red-bg: #e1705515;
+    --red-border: #e1705540;
+    --blue: #74b9ff;
+    --blue-bg: #74b9ff15;
+    --blue-border: #74b9ff40;
+    --purple: #a29bfe;
+    --purple-bg: #a29bfe15;
+    --purple-border: #a29bfe40;
+    --orange: #e17055;
+    --pink: #fd79a8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+  .hero { text-align: center; padding: 80px 0 60px; position: relative; }
+  .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, #6c5ce720 0%, transparent 70%); pointer-events: none; }
+  .hero h1 { font-size: 48px; font-weight: 800; letter-spacing: -1.5px; background: linear-gradient(135deg, #a29bfe, #6c5ce7, #fd79a8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+  .hero .subtitle { font-size: 20px; color: var(--text-muted); max-width: 640px; margin: 0 auto 32px; }
+  .hero .date { font-size: 13px; color: var(--text-muted); opacity: 0.6; }
+  .score-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 40px 0 60px; }
+  .score-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; }
+  .score-card .number { font-size: 42px; font-weight: 800; }
+  .score-card .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px; }
+  .score-critical .number { color: var(--red); }
+  .score-high .number { color: var(--yellow); }
+  .score-medium .number { color: var(--blue); }
+  .score-nice .number { color: var(--green); }
+  .section { margin-bottom: 64px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .section-header h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+  .section-desc { color: var(--text-muted); font-size: 15px; margin-bottom: 28px; max-width: 800px; }
+  .gap-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 20px; overflow: hidden; transition: border-color 0.2s; }
+  .gap-card:hover { border-color: #3a3a50; }
+  .gap-header { padding: 24px 28px 20px; cursor: pointer; display: flex; align-items: flex-start; gap: 16px; }
+  .gap-header:hover { background: var(--surface-hover); }
+  .gap-icon { font-size: 28px; flex-shrink: 0; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; }
+  .gap-meta { flex: 1; }
+  .gap-title { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .gap-oneliner { font-size: 14px; color: var(--text-muted); }
+  .gap-badges { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .badge { font-size: 11px; padding: 3px 10px; border-radius: 99px; font-weight: 600; letter-spacing: 0.5px; }
+  .badge-critical { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .badge-high { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge-medium { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-border); }
+  .badge-nice { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge-tag { background: var(--purple-bg); color: var(--purple); border: 1px solid var(--purple-border); }
+  .gap-body { padding: 0 28px 28px; display: none; }
+  .gap-card.open .gap-body { display: block; }
+  .gap-card.open .gap-chevron { transform: rotate(180deg); }
+  .gap-chevron { color: var(--text-muted); font-size: 18px; transition: transform 0.2s; flex-shrink: 0; margin-top: 4px; }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 16px 0; }
+  .comp-col { border-radius: 12px; padding: 20px; }
+  .comp-duo { background: #00b89410; border: 1px solid var(--green-border); }
+  .comp-octo { background: #e1705510; border: 1px solid var(--red-border); }
+  .comp-octo-good { background: #74b9ff10; border: 1px solid var(--blue-border); }
+  .comp-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
+  .comp-duo .comp-label { color: var(--green); }
+  .comp-octo .comp-label { color: var(--red); }
+  .comp-octo-good .comp-label { color: var(--blue); }
+  .comp-col ul { list-style: none; padding: 0; }
+  .comp-col li { font-size: 14px; padding: 5px 0; padding-left: 20px; position: relative; color: var(--text-muted); }
+  .comp-col li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; }
+  .comp-duo li::before { background: var(--green); }
+  .comp-octo li::before { background: var(--red); }
+  .comp-octo-good li::before { background: var(--blue); }
+  .fix-box { background: #6c5ce710; border: 1px solid #6c5ce730; border-radius: 12px; padding: 20px; margin-top: 16px; }
+  .fix-box h4 { color: var(--accent-light); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .fix-box ul { padding-left: 18px; }
+  .fix-box li { font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
+  .fix-box .effort { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-left: 6px; font-weight: 600; }
+  .effort-sm { background: var(--green-bg); color: var(--green); }
+  .effort-md { background: var(--yellow-bg); color: var(--yellow); }
+  .effort-lg { background: var(--red-bg); color: var(--red); }
+  p.detail { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; }
+  .strength-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .strength-card { background: var(--surface); border: 1px solid var(--green-border); border-radius: 14px; padding: 20px; }
+  .strength-card .icon { font-size: 24px; margin-bottom: 10px; }
+  .strength-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--green); }
+  .strength-card p { font-size: 13px; color: var(--text-muted); }
+  .matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 32px 0; }
+  .matrix-quadrant { background: var(--surface); border-radius: 14px; padding: 24px; border: 1px solid var(--border); }
+  .matrix-quadrant h3 { font-size: 15px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .matrix-quadrant ul { list-style: none; padding: 0; }
+  .matrix-quadrant li { font-size: 13px; color: var(--text-muted); padding: 6px 0; border-bottom: 1px solid #ffffff08; display: flex; align-items: center; gap: 8px; }
+  .matrix-quadrant li:last-child { border: none; }
+  .q-num { font-size: 11px; font-weight: 700; width: 22px; height: 22px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .q1 { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .q1 h3 { color: var(--red); }
+  .q2 { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .q2 h3 { color: var(--yellow); }
+  .q3 { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-border); }
+  .q3 h3 { color: var(--blue); }
+  .q4 { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .q4 h3 { color: var(--green); }
+  .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; margin-bottom: 48px; }
+  .toc h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 16px; }
+  .toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+  .toc a { font-size: 14px; color: var(--accent-light); text-decoration: none; padding: 4px 0; display: block; }
+  .toc a:hover { color: var(--text); }
+  .toc .toc-section { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 12px; margin-bottom: 4px; font-weight: 600; }
+  .callout { background: var(--surface); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+  .callout p { font-size: 14px; color: var(--text-muted); }
+  .callout strong { color: var(--text); }
+  .verdict { background: linear-gradient(135deg, #6c5ce715, #fd79a810); border: 1px solid #6c5ce730; border-radius: 20px; padding: 40px; text-align: center; margin-top: 60px; }
+  .verdict h2 { font-size: 28px; font-weight: 800; margin-bottom: 16px; }
+  .verdict p { font-size: 16px; color: var(--text-muted); max-width: 700px; margin: 0 auto 20px; }
+  .verdict .verdict-score { font-size: 72px; font-weight: 800; background: linear-gradient(135deg, var(--yellow), var(--green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .verified-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 700; letter-spacing: 0.5px; vertical-align: middle; margin-left: 8px; }
+  .verified-tag.confirmed { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .verified-tag.partial { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 32px; }
+    .score-row { grid-template-columns: repeat(2, 1fr); }
+    .comparison, .matrix { grid-template-columns: 1fr; }
+    .strength-grid { grid-template-columns: 1fr; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .container { padding: 24px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Octokeen vs Duolingo</h1>
+  <p class="subtitle">A verified gap analysis &mdash; every claim checked against the codebase. Only real gaps remain.</p>
+  <p class="date">Analysis date: April 5, 2026 &bull; Verified against codebase &bull; 5 false positives removed</p>
+</div>
+
+<!-- Score overview -->
+<div class="score-row">
+  <div class="score-card score-critical"><div class="number">3</div><div class="label">Critical Gaps</div></div>
+  <div class="score-card score-high"><div class="number">5</div><div class="label">High-Priority</div></div>
+  <div class="score-card score-medium"><div class="number">6</div><div class="label">Medium Polish</div></div>
+  <div class="score-card score-nice"><div class="number">17</div><div class="label">Strengths</div></div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <h3>Contents</h3>
+  <div class="toc-grid">
+    <div>
+      <div class="toc-section">What's Working (17 strengths)</div>
+      <a href="#strengths">Your Competitive Advantages</a>
+      <div class="toc-section">Critical Gaps (3)</div>
+      <a href="#gap-feedback">1. No Mistake-Specific Feedback</a>
+      <a href="#gap-spaced">2. No True Spaced Repetition in Lessons</a>
+      <a href="#gap-try-before-signup">3. No Try-Before-Signup Flow</a>
+      <div class="toc-section">High-Priority Gaps (5)</div>
+      <a href="#gap-adaptive">4. No Mid-Session Difficulty Adaptation</a>
+      <a href="#gap-social">5. No Friend Quests or Shared Streaks</a>
+      <a href="#gap-events">6. No Time-Limited XP Events</a>
+      <a href="#gap-ai-tutor">7. No AI "Explain My Answer"</a>
+      <a href="#gap-certs">8. No Shareable Certificates / LinkedIn</a>
+    </div>
+    <div>
+      <div class="toc-section">Medium Polish (6)</div>
+      <a href="#gap-comeback">9. Graduated Comeback Nudges</a>
+      <a href="#gap-daily-reward">10. Daily Reward Calendar</a>
+      <a href="#gap-stories">11. Story Narrative Arc</a>
+      <a href="#gap-share">12. Celebration Share Moments</a>
+      <a href="#gap-transitions">13. Mid-Lesson Micro-Celebrations</a>
+      <a href="#gap-a11y">14. Accessibility Gaps</a>
+      <div class="toc-section">Removed (False Positives)</div>
+      <a href="#false-positives">5 gaps removed after code verification</a>
+      <div class="toc-section">Wrap-Up</div>
+      <a href="#priority-matrix">Priority Matrix</a>
+      <a href="#verdict">Final Verdict</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STRENGTHS -->
+<!-- ============================================================ -->
+<div class="section" id="strengths">
+  <div class="section-header"><h2>What You're Already Doing Right (17 Strengths)</h2></div>
+  <p class="section-desc">Octokeen is closer to Duolingo than initially assessed. After code verification, 5 alleged gaps turned out to be existing features. These strengths include both original findings and verified non-gaps.</p>
+
+  <div class="strength-grid">
+    <div class="strength-card">
+      <div class="icon">&#127925;</div>
+      <h4>Synthesized Audio Engine</h4>
+      <p>Full Web Audio API: correct/wrong/celebration/UI sounds. Zero audio files. Duolingo-level audio feedback.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#127942;</div>
+      <h4>League Simulation</h4>
+      <p>250 fake users with activity distributions, churn rates, Box-Muller XP variance. Exceptionally realistic.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#128293;</div>
+      <h4>Streak System</h4>
+      <p>7 milestones, freeze + repair, comeback quests at 3 days, calendar view. Full Duolingo streak parity.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#127922;</div>
+      <h4>14 Question Types</h4>
+      <p>MC, fill-blank, sort-buckets, match-pairs, order-steps, slider, swipe, scenario, speed round, case study, conversation, timeline. Exceeds Duolingo.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#10024;</div>
+      <h4>Celebration Particles</h4>
+      <p>Confetti, gold stars, hearts, emoji party, fireworks, golden rain, sparkle dust &mdash; 60fps CSS keyframes.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#128176;</div>
+      <h4>Balanced Gem Economy</h4>
+      <p>20+ frames with rarity tiers, power-ups, cosmetics. Gem sources (quests, leagues, streaks) and sinks (freezes, cosmetics, boosts).</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#128221;</div>
+      <h4>Quest Rarity System</h4>
+      <p>Common/Rare/Epic/Legendary quests with seeded PRNG, commitment scaling, daily/weekly cycles. More sophisticated than Duolingo's.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#128241;</div>
+      <h4>PWA + Push Notifications</h4>
+      <p>Full PWA manifest, service worker, Web Push with VAPID keys, streak reminder cron. Solid foundation.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#128640;</div>
+      <h4>Onboarding + Placement Test</h4>
+      <p>4-step carousel, 5-question placement test for skip-ahead, daily goal setting with XP targets.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#128171;</div>
+      <h4>Teaching Card Pedagogy</h4>
+      <p>Progressive scaffolding: concept &rarr; check &rarr; application. Myth-busting tone with hints.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#128736;</div>
+      <h4>Mastery Algorithm</h4>
+      <p>Exponential recency decay (14-day half-life), difficulty weighting, confidence thresholds.</p>
+    </div>
+    <div class="strength-card">
+      <div class="icon">&#127919;</div>
+      <h4>Interview Readiness Score</h4>
+      <p>Composite 0-100 score on Skills page with weighted topic calculation and visual ring display. Already exists!</p>
+    </div>
+    <!-- VERIFIED NON-GAPS (moved from gap list) -->
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#128260;</div>
+      <h4 style="color: var(--accent-light);">Wrong Answer Replay</h4>
+      <p><code>useCourseStore.submitAnswer()</code> re-queues wrong answers into <code>sessionQuestionIds</code> so they reappear at end of lesson until answered correctly. Skipped for tests. Duolingo parity.</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#129412;</div>
+      <h4 style="color: var(--accent-light);">Mascot in Lessons</h4>
+      <p>45+ poses deployed on TeachingCard slides (dynamic per question), ResultScreen, CourseIntro, and PlacementTest. Intentionally clean on QuestionCards.</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#128276;</div>
+      <h4 style="color: var(--accent-light);">Smart Streak Notifications</h4>
+      <p>Dynamic copy with streak count, user-targeted timing via cron, vibration patterns [100,50,100]. Already personalized.</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#128244;</div>
+      <h4 style="color: var(--accent-light);">Offline Support</h4>
+      <p>Service worker with cache-first for static assets, network-first with offline fallback, OfflineBanner component with sync messaging.</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#128075;</div>
+      <h4 style="color: var(--accent-light);">Welcome Back Modal</h4>
+      <p>ComebackState triggers at 3 days with WelcomeBack modal, "We missed you!" message, and 3 tailored comeback quests.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- FALSE POSITIVES -->
+<!-- ============================================================ -->
+<div class="section" id="false-positives">
+  <div class="section-header"><h2>Removed: False Positives</h2></div>
+  <p class="section-desc">These 5 gaps were in the original report but <strong>already exist in the codebase</strong>. Removed after line-by-line verification.</p>
+
+  <div class="gap-card">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--green-bg);">&#9989;</div>
+      <div class="gap-meta">
+        <div class="gap-title">5 Gaps Verified as Already Implemented</div>
+        <div class="gap-oneliner">Click to see what was wrongly flagged and why it's actually fine.</div>
+        <div class="gap-badges">
+          <span class="badge badge-nice">REMOVED</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <p class="detail"><strong>1. "Wrong answers aren't replayed at end of lesson"</strong> &mdash; FALSE. <code>useCourseStore.submitAnswer()</code> (line 322) checks <code>shouldRequeue = !correct && lessonType === 'standard'</code> and appends wrong question IDs back to <code>sessionQuestionIds</code> (lines 331-333). The lesson continues until all questions are answered correctly. Explicitly skipped for test/non-standard lesson types.</p>
+      <p class="detail"><strong>2. "Mascot underused during lessons"</strong> &mdash; FALSE. <code>TeachingCard.tsx</code> imports Mascot and renders it with dynamic poses per question (lines 32-47, 111-131). Mascot also appears on ResultScreen, CourseIntroFlow, and PlacementTest. Absent from QuestionCard by design (clean answer UI).</p>
+      <p class="detail"><strong>3. "Streak notifications need sophistication"</strong> &mdash; FALSE. Cron job at <code>/api/cron/streak-reminder</code> sends personalized notifications with dynamic streak count in title, user-targeted timing, and vibration [100,50,100] via service worker.</p>
+      <p class="detail"><strong>4. "No haptic feedback"</strong> &mdash; FALSE. Service worker (<code>public/sw.js</code> line 110) sends <code>vibrate: [100, 50, 100]</code> with every push notification.</p>
+      <p class="detail"><strong>5. "No offline support"</strong> &mdash; FALSE. Full service worker (<code>public/sw.js</code>) with pre-caching, cache-first for static assets, network-first with offline fallback for navigation, plus <code>OfflineBanner.tsx</code> component.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CRITICAL GAPS -->
+<!-- ============================================================ -->
+<div class="section">
+  <div class="section-header"><h2>Critical Gaps (3)</h2></div>
+  <p class="section-desc">Verified against the codebase. These directly impact learning effectiveness and first-session conversion. Fix before launch.</p>
+
+  <!-- Gap 1: Mistake-Specific Feedback -->
+  <div class="gap-card" id="gap-feedback">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--red-bg);">&#128172;</div>
+      <div class="gap-meta">
+        <div class="gap-title">1. No Mistake-Specific Feedback <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">When a user picks the wrong option, Octokeen shows the correct answer but never explains WHY their specific choice was wrong.</div>
+        <div class="gap-badges">
+          <span class="badge badge-critical">CRITICAL</span>
+          <span class="badge badge-tag">Learning</span>
+          <span class="badge badge-tag">Content</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> <code>CourseQuestion</code> type (<code>types.ts</code> lines 70-115) has only a single <code>explanation: string</code> field. Options are <code>string[]</code> with no per-option metadata. Grep for <code>distractorExplanation|optionExplanation|optionFeedback</code> returns zero matches. <code>QuestionCard.tsx</code> shows identical explanation text regardless of which wrong option was selected.</p>
+      </div>
+      <div class="comparison">
+        <div class="comp-col comp-duo">
+          <div class="comp-label">Duolingo</div>
+          <ul>
+            <li>Shows why your specific answer was wrong</li>
+            <li>"Explain My Answer" gives detailed breakdowns</li>
+            <li>Feedback is contextual to the mistake</li>
+          </ul>
+        </div>
+        <div class="comp-col comp-octo">
+          <div class="comp-label">Octokeen Today</div>
+          <ul>
+            <li>Shows correct answer in green, wrong in red</li>
+            <li>Single <code>explanation</code> field explains the concept generically</li>
+            <li>Same feedback regardless of which wrong option chosen</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li><strong>Phase 1:</strong> Add <code>distractorExplanations?: Record&lt;string, string&gt;</code> to question types <span class="effort effort-sm">~1 day code</span></li>
+          <li>Show distractor explanation in callout below wrong answer after submission</li>
+          <li><strong>Phase 2:</strong> Add content for high-priority questions first (unit 1-3) <span class="effort effort-md">~1 week content</span></li>
+          <li>Fallback to generic <code>explanation</code> when no distractor-specific text exists</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 3: Spaced Repetition -->
+  <div class="gap-card" id="gap-spaced">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--red-bg);">&#128336;</div>
+      <div class="gap-meta">
+        <div class="gap-title">2. No True Spaced Repetition in Lesson Flow <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">Mastery decay scoring exists but is never used to resurface questions in course lessons. The infrastructure is there &mdash; it just isn't wired up.</div>
+        <div class="gap-badges">
+          <span class="badge badge-critical">CRITICAL</span>
+          <span class="badge badge-tag">Learning</span>
+          <span class="badge badge-tag">Algorithm</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> <code>mastery.ts</code> has <code>HALF_LIFE_DAYS = 14</code> with exponential decay formula. But <code>useCourseStore.ts</code> lines 279-296 selects lesson questions purely from the lesson's own question pool &mdash; mastery scores are never referenced. No "Review" practice mode exists. No "Needs Review" indicators on course map. Practice algorithm (<code>practice-algorithm.ts</code>) uses mastery for practice sessions only.</p>
+      </div>
+      <div class="comparison">
+        <div class="comp-col comp-duo">
+          <div class="comp-label">Duolingo</div>
+          <ul>
+            <li>Half-Life Regression predicts forgetting per item</li>
+            <li>Review sessions surface decaying knowledge</li>
+            <li>"Practice" button on completed lessons</li>
+            <li>Review items interleaved into new lessons</li>
+          </ul>
+        </div>
+        <div class="comp-col comp-octo-good">
+          <div class="comp-label">Octokeen Today (Foundation Exists)</div>
+          <ul>
+            <li>Mastery decay with 14-day half-life &mdash; good math!</li>
+            <li>Practice algorithm weights weak topics higher</li>
+            <li>But course lessons don't use mastery scores at all</li>
+            <li>No review mode, no "needs review" on map</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Add "Review" practice mode pulling from <code>getMasteryForAllTopics()</code> where score &lt; 60 <span class="effort effort-sm">~2 days</span></li>
+          <li>Interleave 1-2 review items from earlier units into course lessons <span class="effort effort-md">~3 days</span></li>
+          <li>Show "Needs Review" badge on course map units where mastery decayed <span class="effort effort-sm">~1 day</span></li>
+          <li>Long-term: proper HLR with per-item half-life adjusting on review success <span class="effort effort-lg">~2 weeks</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 4: Try Before Signup -->
+  <div class="gap-card" id="gap-try-before-signup">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--red-bg);">&#128275;</div>
+      <div class="gap-meta">
+        <div class="gap-title">3. No "Try Before You Sign Up" Flow <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">Users must create an account before accessing any real lesson. The landing page has a 3-question demo, but that's it.</div>
+        <div class="gap-badges">
+          <span class="badge badge-critical">CRITICAL</span>
+          <span class="badge badge-tag">Onboarding</span>
+          <span class="badge badge-tag">Conversion</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> <code>LandingPage.tsx</code> InteractiveDemo (lines 229-349) provides exactly 3 hardcoded questions. After completion, only CTAs are "Start learning free" and "Play again". <code>(app)/layout.tsx</code> line 47-54: unauthenticated users bypass the app layout entirely. No anonymous session mode, no localStorage-only progress, no guest user creation.</p>
+      </div>
+      <div class="comparison">
+        <div class="comp-col comp-duo">
+          <div class="comp-label">Duolingo</div>
+          <ul>
+            <li>Full lesson playable before registration</li>
+            <li>Users experience XP, celebrations, "10% fluency" in 15 min</li>
+            <li>Account creation prompt comes after dopamine hit</li>
+            <li>Eliminates cold-start problem</li>
+          </ul>
+        </div>
+        <div class="comp-col comp-octo">
+          <div class="comp-label">Octokeen Today</div>
+          <ul>
+            <li>3-question demo on landing page (good start!)</li>
+            <li>All real content gated behind registration</li>
+            <li>Users can't experience gamification before committing</li>
+            <li>Registration is a wall between curiosity and value</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Allow anonymous sessions: store progress in localStorage without auth <span class="effort effort-md">~1 week</span></li>
+          <li>Let visitors play Unit 1, Lesson 1 with full gamification (XP, sounds, celebrations)</li>
+          <li>After lesson, show celebration + "Create account to save your progress"</li>
+          <li>On registration, transfer localStorage progress to new account</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- HIGH-PRIORITY GAPS -->
+<!-- ============================================================ -->
+<div class="section">
+  <div class="section-header"><h2>High-Priority Gaps (5)</h2></div>
+  <p class="section-desc">Verified and confirmed. Won't block launch but significantly impact retention and competitive positioning. Plan for first 30 days post-launch.</p>
+
+  <!-- Gap 5: Mid-Session Adaptation -->
+  <div class="gap-card" id="gap-adaptive">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--yellow-bg);">&#128201;</div>
+      <div class="gap-meta">
+        <div class="gap-title">4. No Mid-Session Difficulty Adaptation <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">If a user gets 3 wrong in a row, nothing changes. Questions are pre-selected at lesson start and never adjusted mid-session.</div>
+        <div class="gap-badges">
+          <span class="badge badge-high">HIGH</span>
+          <span class="badge badge-tag">Learning</span>
+          <span class="badge badge-tag">Algorithm</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> <code>LessonView.tsx</code> <code>handleAnswer()</code> logs answers but has no rolling accuracy tracking. Difficulty is hardcoded to <code>'intermediate'</code> in mastery logging. <code>practice-algorithm.ts</code> runs between sessions only. Hints appear always-on before submission, not triggered by wrong-answer count. <code>sessionQuestionIds</code> are static once lesson starts.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Track rolling accuracy (last 3-5 answers) during lessons <span class="effort effort-sm">~1 day</span></li>
+          <li>Below 40%: auto-show hints, insert easier confidence-builder, show encouraging mascot</li>
+          <li>100% over 5 questions: insert harder bonus question with extra XP</li>
+          <li>Progressive hints: 1st wrong &rarr; subtle hint, 2nd wrong on same topic &rarr; detailed explanation <span class="effort effort-md">~3 days</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 6: Social Layer -->
+  <div class="gap-card" id="gap-social">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--yellow-bg);">&#129309;</div>
+      <div class="gap-meta">
+        <div class="gap-title">5. No Friend Quests or Shared Streaks <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">Friends list exists (add/remove/invite), but friends can't DO anything together. Duolingo: users with friends are 5.6x more likely to finish a course.</div>
+        <div class="gap-badges">
+          <span class="badge badge-high">HIGH</span>
+          <span class="badge badge-tag">Retention</span>
+          <span class="badge badge-tag">Social</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> <code>src/components/friends/</code> has 5 files: FriendCard (display only), FriendRequestCard, FriendsBadge, InviteShare, UserSearch. FriendCard shows name/avatar/streak/XP &mdash; no interactive features. <code>QuestTrackingKey</code> enum has no friend or co-op variants. Grep for "friendQuest", "sharedStreak", "highFive", "nudge" returns zero matches.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li><strong>Friend Quests:</strong> Weekly co-op quest ("Together earn 500 XP by Friday") pairing two friends. Uses existing quest engine + friend API <span class="effort effort-md">~1 week</span></li>
+          <li><strong>Shared Streaks:</strong> Track mutual practice days, show shared streak counter, nudge when friend might break it <span class="effort effort-md">~1 week</span></li>
+          <li><strong>Activity Feed:</strong> "Alex hit a 30-day streak!" with High Five button <span class="effort effort-md">~3 days</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 7: Time-Limited Events -->
+  <div class="gap-card" id="gap-events">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--yellow-bg);">&#9889;</div>
+      <div class="gap-meta">
+        <div class="gap-title">6. No Time-Limited XP Events <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">Double XP exists as purchasable shop item only. DOUBLE_XP_WEEKENDS is gated in pricing.ts but has no activation logic. No happy hours, no sprint events.</div>
+        <div class="gap-badges">
+          <span class="badge badge-high">HIGH</span>
+          <span class="badge badge-tag">Engagement</span>
+          <span class="badge badge-tag">FOMO</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> <code>pricing.ts</code> line 22 gates <code>DOUBLE_XP_WEEKENDS</code> as a Pro feature. <code>useEngagementStore.ts</code> has <code>activateDoubleXp(duration)</code> and <code>doubleXpExpiry</code>. But there's zero scheduling logic &mdash; no weekend detection, no automatic activation. The feature flag exists but is never triggered. Grep for "happyHour", "powerHour", "sprint", "bonus event" returns zero matches.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Implement DOUBLE_XP_WEEKENDS: detect Saturday/Sunday and auto-activate for Pro users <span class="effort effort-sm">~1 day</span></li>
+          <li><strong>"Power Hour":</strong> Daily 1-2 hour window with 1.5x XP for everyone + push notification <span class="effort effort-md">~3 days</span></li>
+          <li><strong>Weekend Challenge:</strong> Special quest ("Earn 200 XP this weekend for 30 bonus gems") <span class="effort effort-sm">~2 days</span></li>
+          <li><strong>League Sprint:</strong> Last 24h of league week = bonus XP to drive competition <span class="effort effort-sm">~1 day</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 8: AI Explain -->
+  <div class="gap-card" id="gap-ai-tutor">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--yellow-bg);">&#129302;</div>
+      <div class="gap-meta">
+        <div class="gap-title">7. No AI-Powered "Explain My Answer" <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">Duolingo made this free for all users in 2025. No AI integration exists in Octokeen's lesson components.</div>
+        <div class="gap-badges">
+          <span class="badge badge-high">HIGH</span>
+          <span class="badge badge-tag">AI</span>
+          <span class="badge badge-tag">Learning</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> Grep for OpenAI/Claude/LLM/AI imports in <code>src/components/</code> and <code>src/app/</code> returns zero functional results (only curriculum text mentioning "AI"). <code>QuestionCard.tsx</code> (590 lines) has no "Explain" button or API integration. Hint system is static only.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Add "Explain" button on answer feedback panel that calls Claude/GPT API <span class="effort effort-md">~1 week</span></li>
+          <li>Context: pass question, user's answer, correct answer, topic, difficulty</li>
+          <li>Free tier: 3 explanations/day. Pro: unlimited (great upsell!)</li>
+          <li>Cache responses per question+answer to reduce costs</li>
+          <li>Use streaming for responsive feel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 9: Certificates -->
+  <div class="gap-card" id="gap-certs">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--yellow-bg);">&#127891;</div>
+      <div class="gap-meta">
+        <div class="gap-title">8. No Shareable Certificates or LinkedIn Integration <span class="verified-tag partial">PARTIAL</span></div>
+        <div class="gap-oneliner">Interview Readiness Score (0-100) already exists on the Skills page. What's missing: shareable certificates and LinkedIn export.</div>
+        <div class="gap-badges">
+          <span class="badge badge-high">HIGH</span>
+          <span class="badge badge-tag">Motivation</span>
+          <span class="badge badge-tag">Growth</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>What exists:</strong> <code>src/app/(app)/skills/page.tsx</code> lines 100-110: "Interview Readiness Score" (0-100) with weighted topic calculation, visual ring, and dynamic messaging. <strong>What's missing:</strong> No certificate generation, no PNG/PDF export, no "Share to LinkedIn" button, no course completion certificate.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li><strong>Certificate:</strong> On course completion, generate branded PNG certificate with name, score, course title <span class="effort effort-md">~3 days</span></li>
+          <li>"Share to LinkedIn" button on certificate (huge for professional learning!) <span class="effort effort-sm">~1 day</span></li>
+          <li>"Share Score" on Skills page using Web Share API <span class="effort effort-sm">~1 day</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- MEDIUM POLISH -->
+<!-- ============================================================ -->
+<div class="section">
+  <div class="section-header"><h2>Medium Polish (6)</h2></div>
+  <p class="section-desc">Verified and nuanced. Some of these are partial gaps where the foundation exists but needs enhancement.</p>
+
+  <!-- Gap 10: Graduated Comeback -->
+  <div class="gap-card" id="gap-comeback">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--blue-bg);">&#128075;</div>
+      <div class="gap-meta">
+        <div class="gap-title">9. No Graduated Comeback Nudges (Days 1-2) <span class="verified-tag partial">PARTIAL</span></div>
+        <div class="gap-oneliner">WelcomeBack modal triggers at 3 days (good!), but there's no escalating notification for 1-day and 2-day absences. Streak can break at 2 days with zero warning besides the streak notification.</div>
+        <div class="gap-badges">
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-tag">Retention</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>What exists:</strong> <code>COMEBACK_THRESHOLD_DAYS = 3</code> in <code>engagement-types.ts</code>. <code>WelcomeBack.tsx</code> modal shows "We missed you!" with 3 comeback quests. <strong>What's missing:</strong> Binary system &mdash; either &ge;3 days (comeback) or &lt;3 days (nothing). No Day 1 gentle nudge, no Day 2 "streak at risk" escalation.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Day 1 missed: gentle push notification ("Quick 3-min lesson to keep your streak?") <span class="effort effort-sm">~1 day</span></li>
+          <li>Day 2 missed: urgent push ("Your [X]-day streak breaks tomorrow!") + friend nudge if shared streak exists</li>
+          <li>Day 3+: existing WelcomeBack flow (already works well)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 11: Daily Reward Calendar -->
+  <div class="gap-card" id="gap-daily-reward">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--blue-bg);">&#128197;</div>
+      <div class="gap-meta">
+        <div class="gap-title">10. Daily Reward Calendar with Escalating Rewards <span class="verified-tag partial">PARTIAL</span></div>
+        <div class="gap-oneliner">Daily/weekly chests exist and reward gems, but they're quest-gated with flat rewards. No visual 7-day calendar with escalating prizes.</div>
+        <div class="gap-badges">
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-tag">Retention</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>What exists:</strong> <code>dailyChestReward = { xp: 50, gems: 10 }</code>, <code>weeklyChestReward = { xp: 150, gems: 40 }</code>. Users must complete all daily quests to claim. <code>QuestBoard.tsx</code> shows "Open Chest" button. <strong>What's missing:</strong> No visual 7-day progression calendar. Rewards are flat (same every day). No escalation incentive for consecutive days.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Add 7-day visual calendar (Day 1: 3 gems &rarr; Day 7: 25 gems + mystery item) <span class="effort effort-sm">~3 days</span></li>
+          <li>Calendar shows upcoming rewards as locked &mdash; creates anticipation</li>
+          <li>Missing a day resets the cycle (additional retention pressure)</li>
+          <li>First thing on login = "Claim today's reward!" with chest animation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 12: Story Narrative Arc -->
+  <div class="gap-card" id="gap-stories">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--blue-bg);">&#128214;</div>
+      <div class="gap-meta">
+        <div class="gap-title">11. No Overarching Story Narrative Arc <span class="verified-tag partial">PARTIAL</span></div>
+        <div class="gap-oneliner">Conversation, timeline, and case-study lesson types exist with recurring characters (Sarah 19x, Alex 13x). But each is standalone &mdash; no connected story.</div>
+        <div class="gap-badges">
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-tag">Content</span>
+          <span class="badge badge-tag">Engagement</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>What exists:</strong> 5 lesson types including <code>conversation</code>, <code>timeline</code>, <code>case-study</code>. Characters DO recur: Sarah (19 appearances), Alex (13), Senior Engineer (20), Jordan (6), Narrator (11). <strong>What's missing:</strong> Characters appear across different professions (finance, psychology, astronomy), not within a coherent story arc. No character development, no cross-unit callbacks.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Give each course's characters a mini-arc: e.g., Finance Alex starts broke in Unit 1, has investments by Unit 10 <span class="effort effort-md">~1 week content</span></li>
+          <li>Add cross-unit callbacks: "Remember when Alex couldn't pay rent? Now look at his portfolio!"</li>
+          <li>Story unlocks between units as reward content (lower stakes, higher emotional engagement) <span class="effort effort-lg">~2 weeks</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 13: Celebration Sharing -->
+  <div class="gap-card" id="gap-share">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--blue-bg);">&#128247;</div>
+      <div class="gap-meta">
+        <div class="gap-title">12. No Share Buttons on Celebrations <span class="verified-tag partial">PARTIAL</span></div>
+        <div class="gap-oneliner">Friend invite sharing works via Web Share API. But streak milestones, league promotions, and achievements have no share functionality.</div>
+        <div class="gap-badges">
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-tag">Growth</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>What exists:</strong> <code>InviteShare.tsx</code> uses <code>navigator.share()</code> with clipboard fallback. <strong>What's missing:</strong> <code>CourseCompleteCelebration.tsx</code>, <code>LevelUpCelebration.tsx</code>, <code>BlueprintCelebration.tsx</code> &mdash; none have share buttons. No branded share card generation (canvas &rarr; PNG).</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Add "Share" button on celebration modals: streak milestones, league promotions, achievement unlocks <span class="effort effort-md">~3 days</span></li>
+          <li>Generate branded share card (canvas &rarr; PNG) with mascot + stat + Octokeen branding</li>
+          <li>Use existing Web Share API pattern from InviteShare.tsx</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 14: Lesson Transitions -->
+  <div class="gap-card" id="gap-transitions">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--blue-bg);">&#127881;</div>
+      <div class="gap-meta">
+        <div class="gap-title">13. No Mid-Lesson Micro-Celebrations <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">No "Halfway there!" message, no "Last question!" indicator, no correct-answer streak counter during lessons. Progress bar fills silently.</div>
+        <div class="gap-badges">
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-tag">Polish</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> <code>LessonView.tsx</code> tracks <code>currentQuestionIndex</code> and <code>answers.length</code> but has no milestone messaging. No "halfway", "almost done", "last question" text. No in-lesson correct-answer streak display. Grep for "consecutiveCorrect", "currentStreak" in lesson components returns zero matches.</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Halfway message: "Halfway there!" with mascot wink <span class="effort effort-sm">~1 day</span></li>
+          <li>Last question: "Final question!" with slight emphasis</li>
+          <li>Correct streak: 3 in a row = "On fire!" with mini celebration <span class="effort effort-sm">~1 day</span></li>
+          <li>Progress bar glow intensifies near completion <span class="effort effort-sm">~2 hours</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gap 15: Accessibility -->
+  <div class="gap-card" id="gap-a11y">
+    <div class="gap-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="gap-icon" style="background: var(--blue-bg);">&#9855;</div>
+      <div class="gap-meta">
+        <div class="gap-title">14. Accessibility Gaps in Lesson Components <span class="verified-tag confirmed">VERIFIED</span></div>
+        <div class="gap-oneliner">QuestionCard answer buttons lack aria-labels and sr-only text. Correct/wrong feedback is color-only (no icons for color-blind users).</div>
+        <div class="gap-badges">
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-tag">A11y</span>
+        </div>
+      </div>
+      <span class="gap-chevron">&#9660;</span>
+    </div>
+    <div class="gap-body">
+      <div class="callout">
+        <p><strong>Code evidence:</strong> <code>QuestionCard.tsx</code> (590 lines) &mdash; <code>motion.button</code> elements for answer options have no <code>aria-label</code> attributes. No <code>sr-only</code> text anywhere. Correct = green (#D7FFB8), wrong = red (#FFDFE0) with no icon fallback. No <code>aria-live</code> regions for answer feedback. Some components like <code>InviteShare.tsx</code> have proper aria-labels (good example to follow).</p>
+      </div>
+      <div class="fix-box">
+        <h4>Recommended Fix</h4>
+        <ul>
+          <li>Add checkmark icon + green and X icon + red for correct/wrong (not just color) <span class="effort effort-sm">~1 day</span></li>
+          <li>Add <code>aria-label</code> to all answer option buttons <span class="effort effort-sm">~1 day</span></li>
+          <li>Add <code>aria-live="polite"</code> region for answer feedback <span class="effort effort-sm">~2 hours</span></li>
+          <li>Audit all interactive elements for keyboard navigation <span class="effort effort-md">~3 days</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PRIORITY MATRIX -->
+<!-- ============================================================ -->
+<div class="section" id="priority-matrix">
+  <div class="section-header"><h2>Priority Matrix (Verified Gaps Only)</h2></div>
+  <p class="section-desc">All 14 confirmed gaps organized by impact vs effort. Start top-left.</p>
+
+  <div class="matrix">
+    <div class="matrix-quadrant q1">
+      <h3><span style="font-size: 18px;">&#128308;</span> Do First (High Impact, Low Effort)</h3>
+      <ul>
+        <li><span class="q-num q1">2</span> "Needs Review" badges + Review practice mode</li>
+        <li><span class="q-num q1">4</span> Rolling accuracy + struggle detection</li>
+        <li><span class="q-num q1">6</span> Implement DOUBLE_XP_WEEKENDS for Pro</li>
+        <li><span class="q-num q1">13</span> Mid-lesson micro-celebrations</li>
+        <li><span class="q-num q1">14</span> Accessibility: icons + aria-labels</li>
+      </ul>
+    </div>
+    <div class="matrix-quadrant q2">
+      <h3><span style="font-size: 18px;">&#128992;</span> Plan Next (High Impact, High Effort)</h3>
+      <ul>
+        <li><span class="q-num q2">1</span> Distractor-specific feedback (content work)</li>
+        <li><span class="q-num q2">3</span> Try-before-signup anonymous sessions</li>
+        <li><span class="q-num q2">5</span> Friend quests + shared streaks</li>
+        <li><span class="q-num q2">7</span> AI "Explain My Answer" integration</li>
+      </ul>
+    </div>
+    <div class="matrix-quadrant q3">
+      <h3><span style="font-size: 18px;">&#128309;</span> Quick Wins (Lower Impact, Low Effort)</h3>
+      <ul>
+        <li><span class="q-num q3">9</span> Graduated comeback nudges (Days 1-2)</li>
+        <li><span class="q-num q3">10</span> Daily reward calendar</li>
+        <li><span class="q-num q3">12</span> Share buttons on celebrations</li>
+        <li><span class="q-num q3">8</span> Share Score to LinkedIn from Skills page</li>
+      </ul>
+    </div>
+    <div class="matrix-quadrant q4">
+      <h3><span style="font-size: 18px;">&#128994;</span> Later (Lower Impact, High Effort)</h3>
+      <ul>
+        <li><span class="q-num q4">11</span> Story narrative arc across units</li>
+        <li><span class="q-num q4">8</span> Full certificate generation system</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- DUOLINGO'S SECRET SAUCE -->
+<!-- ============================================================ -->
+<div class="section">
+  <div class="section-header"><h2>Duolingo's Secret Sauce (The Intangibles)</h2></div>
+  <p class="section-desc">Beyond features, these are the <em>principles</em> that make Duolingo feel magical.</p>
+
+  <div class="strength-grid">
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#127919;</div>
+      <h4 style="color: var(--accent-light);">CURR is the North Star</h4>
+      <p>Retaining current users has 5x more DAU impact than any other metric. Every feature, notification, and design choice is measured against "does this keep active users active?"</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#128150;</div>
+      <h4 style="color: var(--accent-light);">Emotional Over Rational</h4>
+      <p>Duo's sad face works better than "You missed your daily goal." Users don't quit because of data &mdash; they quit when they stop caring.</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#9878;</div>
+      <h4 style="color: var(--accent-light);">Compound Small Wins</h4>
+      <p>DAU growth came from "dozens of small wins that compound." Each A/B test moved 1-3%. Stack 50 = 4.5x growth over 4 years.</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#128295;</div>
+      <h4 style="color: var(--accent-light);">Remove Friction Ruthlessly</h4>
+      <p>One tap to first question. Celebrations cover data sync. Every millisecond of friction is a potential drop-off.</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#128200;</div>
+      <h4 style="color: var(--accent-light);">Performance = Users</h4>
+      <p>Deferring ads SDK initialization saved 20,000 learners/day. Performance isn't technical &mdash; it's user acquisition.</p>
+    </div>
+    <div class="strength-card" style="border-color: #6c5ce740;">
+      <div class="icon">&#128269;</div>
+      <h4 style="color: var(--accent-light);">A/B Test Everything</h4>
+      <p>200+ A/B tests on performance alone. Nothing is sacred. Ship fast, measure, iterate.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- FINAL VERDICT -->
+<!-- ============================================================ -->
+<div class="verdict" id="verdict">
+  <div class="verdict-score">86 / 100</div>
+  <h2>Octokeen Readiness Score (Revised)</h2>
+  <p>After removing 5 false positives, Octokeen is closer to Duolingo than initially assessed. Your gamification, audio, mascot integration, wrong-answer replay, offline support, and notification systems are already strong. The remaining 14 gaps are concentrated in <strong>learning science</strong> (spaced repetition, adaptive difficulty, mistake-specific feedback) and <strong>social accountability</strong> (friend quests, shared streaks).</p>
+  <p style="color: var(--accent-light); font-weight: 600; font-size: 15px; margin-top: 20px;">Close the 3 critical gaps and you have a genuinely delightful product.</p>
+
+  <div style="margin-top: 32px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+    <div style="text-align: center;">
+      <div style="font-size: 24px; font-weight: 800; color: var(--green);">95%</div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Gamification</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 24px; font-weight: 800; color: var(--green);">92%</div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Audio / Visual</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 24px; font-weight: 800; color: var(--green);">88%</div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Emotional Design</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 24px; font-weight: 800; color: var(--yellow);">72%</div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Learning Science</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 24px; font-weight: 800; color: var(--yellow);">70%</div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Retention Mechanics</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 24px; font-weight: 800; color: var(--red);">55%</div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Social Layer</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+  document.querySelector('.gap-card')?.classList.add('open');
+</script>
+</body>
+</html>

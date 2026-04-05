@@ -2,7 +2,7 @@ import type { Unit } from '../../../types';
 
 export const unit6: Unit = {
   id: "sp-u6-exploration",
-  title: "Humanity's Greatest Adventure",
+  title: "Space Exploration",
   description: "From Sputnik to the ISS, Voyager to Mars rovers. The story of exploration.",
   color: "#14B8A6",
   icon: "🛸",

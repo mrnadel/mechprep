@@ -233,10 +233,10 @@ function MachineElementsIllustration({ color, className }: IllustrationProps) {
       {/* Gear teeth (large) */}
       {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => {
         const rad = (angle * Math.PI) / 180;
-        const x1 = 80 + Math.cos(rad) * 33;
-        const y1 = 70 + Math.sin(rad) * 33;
-        const x2 = 80 + Math.cos(rad) * 42;
-        const y2 = 70 + Math.sin(rad) * 42;
+        const x1 = Math.round((80 + Math.cos(rad) * 33) * 100) / 100;
+        const y1 = Math.round((70 + Math.sin(rad) * 33) * 100) / 100;
+        const x2 = Math.round((80 + Math.cos(rad) * 42) * 100) / 100;
+        const y2 = Math.round((70 + Math.sin(rad) * 42) * 100) / 100;
         return (
           <line key={angle} x1={x1} y1={y1} x2={x2} y2={y2} stroke={color} strokeWidth="6" strokeLinecap="round" opacity={0.2} />
         );
@@ -249,10 +249,10 @@ function MachineElementsIllustration({ color, className }: IllustrationProps) {
       {/* Gear teeth (small) */}
       {[0, 60, 120, 180, 240, 300].map((angle) => {
         const rad = (angle * Math.PI) / 180;
-        const x1 = 140 + Math.cos(rad) * 18;
-        const y1 = 55 + Math.sin(rad) * 18;
-        const x2 = 140 + Math.cos(rad) * 25;
-        const y2 = 55 + Math.sin(rad) * 25;
+        const x1 = Math.round((140 + Math.cos(rad) * 18) * 100) / 100;
+        const y1 = Math.round((55 + Math.sin(rad) * 18) * 100) / 100;
+        const x2 = Math.round((140 + Math.cos(rad) * 25) * 100) / 100;
+        const y2 = Math.round((55 + Math.sin(rad) * 25) * 100) / 100;
         return (
           <line key={angle} x1={x1} y1={y1} x2={x2} y2={y2} stroke={color} strokeWidth="5" strokeLinecap="round" opacity={0.15} />
         );
@@ -579,10 +579,10 @@ function PFRetirementIllustration({ color, className }: IllustrationProps) {
       <circle cx="155" cy="30" r="18" fill="#FBBF24" opacity={0.3} />
       {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => {
         const rad = (angle * Math.PI) / 180;
-        const x1 = 155 + Math.cos(rad) * 22;
-        const y1 = 30 + Math.sin(rad) * 22;
-        const x2 = 155 + Math.cos(rad) * 28;
-        const y2 = 30 + Math.sin(rad) * 28;
+        const x1 = Math.round((155 + Math.cos(rad) * 22) * 100) / 100;
+        const y1 = Math.round((30 + Math.sin(rad) * 22) * 100) / 100;
+        const x2 = Math.round((155 + Math.cos(rad) * 28) * 100) / 100;
+        const y2 = Math.round((30 + Math.sin(rad) * 28) * 100) / 100;
         return <line key={angle} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" opacity={0.2} />;
       })}
       {/* Water */}

@@ -244,11 +244,11 @@ export default function SettingsPage() {
 
             {/* Narration */}
             <button onClick={toggleNarration} className={`${divider} ${rowBase} hover:bg-gray-50 dark:hover:bg-surface-700`}>
-              <div className="flex-1">
+              <div className="flex-1 text-left">
                 <span className={rowLabel}>Read questions aloud</span>
                 <p className="text-xs text-gray-400 dark:text-surface-500 mt-0.5">Uses your device&apos;s built-in voice</p>
               </div>
-              <div className={`relative w-11 h-6 rounded-full transition-colors ${narrationEnabled ? 'bg-primary-500' : 'bg-gray-300 dark:bg-surface-600'}`}>
+              <div className={`relative w-11 h-6 rounded-full shrink-0 transition-colors ${narrationEnabled ? 'bg-primary-500' : 'bg-gray-300 dark:bg-surface-600'}`}>
                 <span className={`absolute top-0.5 w-5 h-5 rounded-full bg-white shadow-sm transition-transform ${narrationEnabled ? 'left-[22px]' : 'left-0.5'}`} />
               </div>
             </button>

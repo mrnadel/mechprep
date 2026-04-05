@@ -6,7 +6,7 @@ export const psySection6Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec6-u6',
-    title: 'Sunk Cost and Status Quo Bias',
+    title: 'Sunk Cost Bias',
     description: 'Learn why people throw good money after bad and resist change even when it would help them.',
     color: '#EF4444',
     icon: '💸',

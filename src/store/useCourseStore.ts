@@ -1191,8 +1191,8 @@ export const useCourseStore = create<CourseState>()(
       },
 
       isLessonUnlocked: (unitIndex: number, lessonIndex: number) => {
-        // First lesson is always unlocked
-        if (unitIndex === 0 && lessonIndex === 0) return true;
+        // First lesson of every unit is always unlocked
+        if (lessonIndex === 0) return true;
 
         const { progress, courseData } = get();
 

@@ -12,7 +12,7 @@ export const finSection6Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec6-u6",
-    title: "Car Loans and Smart Buying",
+    title: "Smart Car Buying",
     description: "Avoid dealership tricks and understand the true cost of buying a car.",
     color: "#10B981",
     icon: "🚗",

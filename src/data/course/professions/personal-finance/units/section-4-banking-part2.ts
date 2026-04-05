@@ -12,7 +12,7 @@ export const finSection4Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec4-u7",
-    title: "Banking Safety and Fraud Defense",
+    title: "Banking & Fraud",
     description: "Criminals target bank accounts every day. Learn the most common scams and how to protect your money.",
     color: "#EC4899",
     icon: "🔒",

@@ -4,7 +4,7 @@ export const spaceSection12: Unit[] = [
   // ===== UNIT 1: Planning an Observation Night =====
   {
     id: "sp-sec12-u1",
-    title: "Planning an Observation Night",
+    title: "Observation Night",
     description: "Learn how to pick the best night, location, and targets for a successful stargazing session.",
     color: "#7C3AED",
     icon: "🌙",

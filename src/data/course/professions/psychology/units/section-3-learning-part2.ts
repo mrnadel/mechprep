@@ -6,7 +6,7 @@ export const psySection3Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec3-u6',
-    title: 'Habituation and Sensitization',
+    title: 'Habituation',
     description: 'Why you stop noticing your watch but flinch harder at a sudden noise.',
     color: '#6366F1',
     icon: '🔕',

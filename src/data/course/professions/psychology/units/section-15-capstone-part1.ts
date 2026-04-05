@@ -6,7 +6,7 @@ export const psySection15Part1: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec15-u1',
-    title: 'Advertising and Emotional Manipulation',
+    title: 'Ad Manipulation',
     description: 'How advertisers use psychological principles to shape your decisions.',
     color: '#EF4444',
     icon: '📺',

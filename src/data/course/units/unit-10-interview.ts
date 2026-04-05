@@ -2,7 +2,7 @@ import type { Unit } from '../types';
 
 export const unit10: Unit = {
   id: 'u10-interview',
-  title: 'Interview Problem Solving',
+  title: 'Interview Problems',
   description: 'Estimation problems, failure analysis, design trade-offs, FEA interpretation, and real-world engineering case studies.',
   color: '#14B8A6',
   icon: '\u{1F9E0}',

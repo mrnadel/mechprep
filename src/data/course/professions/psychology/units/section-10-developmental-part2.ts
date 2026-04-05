@@ -6,7 +6,7 @@ export const psySection10Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec10-u7',
-    title: 'Moral Development: Kohlberg and Gilligan',
+    title: 'Moral Development',
     description: 'How our sense of right and wrong develops from childhood through adulthood.',
     color: '#8B5CF6',
     icon: '⚖️',

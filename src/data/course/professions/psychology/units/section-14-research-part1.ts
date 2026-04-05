@@ -6,7 +6,7 @@ export const psySection14Part1: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec14-u1',
-    title: 'Why Science Matters in Psychology',
+    title: 'Research Methods',
     description: 'How the scientific method transforms psychology from opinion into evidence.',
     color: '#3B82F6',
     icon: '🔬',

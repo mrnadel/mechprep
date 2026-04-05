@@ -13,7 +13,7 @@ export const spaceSection13Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "sp-sec13-u6",
-    title: "Space Debris & Orbital Traffic Management",
+    title: "Space Debris",
     description: "Learn why millions of debris fragments threaten active satellites and how agencies track and avoid them.",
     color: "#6366F1",
     icon: "🛰️",

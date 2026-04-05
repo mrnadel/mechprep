@@ -6,7 +6,7 @@ export const psySection6Part1: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec6-u1',
-    title: 'Your Brain Takes Shortcuts',
+    title: 'Mental Shortcuts',
     description: 'Discover why your brain uses mental shortcuts and when they help or hurt your thinking.',
     color: '#F59E0B',
     icon: '🧠',

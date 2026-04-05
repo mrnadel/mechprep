@@ -12,7 +12,7 @@ export const finSection12Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec12-u6",
-    title: "Target-Date and Lifecycle Funds",
+    title: "Target-Date Funds",
     description: "Target-date funds adjust your investments automatically as you approach retirement. Set it and forget it.",
     color: "#14B8A6",
     icon: "📊",

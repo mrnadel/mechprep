@@ -12,7 +12,7 @@ export const financeSection14Business: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "pf-s14-u1",
-    title: "Freelancer and Side Hustle Finances",
+    title: "Side Hustle Money",
     description: "Turn your skills into income without letting taxes and chaos eat your profits.",
     color: "#E67E22",
     icon: "💼",

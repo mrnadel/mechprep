@@ -2,7 +2,7 @@ import type { Unit } from '../types';
 
 export const unit7: Unit = {
   id: 'u7-materials',
-  title: 'Materials & Manufacturing',
+  title: 'Materials & Mfg.',
   description: 'Material properties, phase diagrams, heat treatment, casting, forming, machining, and modern manufacturing processes.',
   color: '#F97316',
   icon: '🏭',

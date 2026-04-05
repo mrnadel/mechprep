@@ -12,7 +12,7 @@ export const finSection11Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec11-u6",
-    title: "Homeowner's and Renter's Insurance",
+    title: "Property Insurance",
     description: "Whether you own or rent, your home and belongings need protection. Learn what each policy covers.",
     color: "#14B8A6",
     icon: "🏠",

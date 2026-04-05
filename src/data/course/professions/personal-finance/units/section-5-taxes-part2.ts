@@ -12,7 +12,7 @@ export const finSection5Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec5-u8",
-    title: "Capital Gains and Investment Taxes",
+    title: "Investment Taxes",
     description: "Learn how profits from investments are taxed and strategies to keep more of your gains.",
     color: "#0891B2",
     icon: "📈",

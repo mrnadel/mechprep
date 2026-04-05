@@ -12,7 +12,7 @@ export const finSection5Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec5-u1",
-    title: "Why We Pay Taxes and Where the Money Goes",
+    title: "Why We Pay Taxes",
     description: "Taxes fund the systems you use every day. Learn why they exist and where the money actually goes.",
     color: "#D97706",
     icon: "🏛️",

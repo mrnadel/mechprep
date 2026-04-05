@@ -6,7 +6,7 @@ export const psySection8Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec8-u6',
-    title: 'Attitudes and Attitude Change',
+    title: 'Attitude Change',
     description: 'What attitudes are, how they form, and why they don\'t always match your behavior.',
     color: '#EC4899',
     icon: '💭',

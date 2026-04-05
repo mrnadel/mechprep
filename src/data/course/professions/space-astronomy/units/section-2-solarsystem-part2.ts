@@ -4,7 +4,7 @@ export const spaceSection2Part2: Unit[] = [
   // ===== UNIT 6: Ice Giants: Uranus and Neptune =====
   {
     id: "sp-sec2-u6",
-    title: "Ice Giants: Uranus and Neptune",
+    title: "The Ice Giants",
     description: "Explore the two most distant planets in the solar system and discover what makes ice giants different from gas giants.",
     color: "#14B8A6",
     icon: "🧊",

@@ -12,7 +12,7 @@ export const finSection3Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec3-u1",
-    title: "Why Saving Feels Impossible",
+    title: "Why Saving Is Hard",
     description: "You're not bad with money. Saving is genuinely hard. Let's fix the system, not the person.",
     color: "#34D399",
     icon: "🤔",

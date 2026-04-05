@@ -12,7 +12,7 @@ export const spaceSection7Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "sp-sec7-u6",
-    title: "The First Black Hole Image",
+    title: "Imaging Black Holes",
     description: "How the Event Horizon Telescope captured the shadow of a black hole for the first time.",
     color: "#F97316",
     icon: "📸",

@@ -12,7 +12,7 @@ export const finSection15Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec15-u1",
-    title: "Negotiating Salary and Raises",
+    title: "Salary Negotiation",
     description: "Learn to advocate for your worth and maximize your lifetime earnings.",
     color: "#10B981",
     icon: "💼",

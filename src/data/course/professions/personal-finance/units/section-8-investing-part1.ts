@@ -12,7 +12,7 @@ export const finSection8Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec8-u1",
-    title: "Why Invest: Inflation Destroys Cash",
+    title: "Why You Must Invest",
     description: "Cash loses value every year. Learn why investing is the only way to protect your purchasing power over time.",
     color: "#10B981",
     icon: "📉",

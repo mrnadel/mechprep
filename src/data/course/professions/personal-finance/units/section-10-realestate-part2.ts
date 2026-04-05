@@ -12,7 +12,7 @@ export const finSection10Part2: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec10-u6",
-    title: "Refinancing: When and How",
+    title: "Refinancing",
     description: "Refinancing replaces your mortgage with a better one. Learn when it saves money and when it doesn't.",
     color: "#14B8A6",
     icon: "🔄",

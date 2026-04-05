@@ -12,7 +12,7 @@ export const finSection9Part1: Unit[] = [
   // ╚═══════════════════════════════════════════════════════════╝
   {
     id: "fin-sec9-u1",
-    title: "How the Stock Market Works",
+    title: "The Stock Market",
     description: "Understand how stocks are traded, who runs the exchanges, and what happens behind the scenes when you press buy.",
     color: "#3B82F6",
     icon: "🏛️",

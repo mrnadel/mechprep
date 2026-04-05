@@ -6,7 +6,7 @@ export const psySection12Part2: Unit[] = [
   // ========================================================================
   {
     id: 'psy-sec12-u8',
-    title: 'Psychopharmacology: How Medications Treat Mental Health',
+    title: 'Psych Medications',
     description: 'How psychiatric medications work in the brain and when they are used.',
     color: '#8B5CF6',
     icon: '💊',
