@@ -40,6 +40,9 @@ export const finSection4Part1: Unit[] = [
             question: "A checking account is designed for everyday spending and bill payments.",
             correctAnswer: true,
             explanation: "Checking accounts are built for frequent deposits and withdrawals, making them ideal for daily money management.",
+            distractorExplanations: {
+              1: 'This statement is actually true — checking accounts are built for frequent deposits and withdrawals, making them ideal for daily money management.',
+            },
           },
           {
             id: "fin-sec4-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Checking accounts are designed for frequent, everyday transactions like bills and purchases.",
+            distractorExplanations: {
+              0: '"Saving money for a vacation next year" is wrong because checking accounts are designed for frequent, everyday transactions like bills and purchases.',
+              1: '"Earning high interest on your balance" is wrong because checking accounts are designed for frequent, everyday transactions like bills and purchases.',
+              3: '"Investing in the stock market" is wrong because checking accounts are designed for frequent, everyday transactions like bills and purchases.',
+            },
           },
           {
             id: "fin-sec4-u1-L1-T2",
@@ -67,6 +75,9 @@ export const finSection4Part1: Unit[] = [
             question: "A debit card pulls money directly from your checking account balance.",
             correctAnswer: true,
             explanation: "When you swipe your debit card, the amount is subtracted from your checking balance immediately or within hours.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when you swipe your debit card, the amount is subtracted from your checking balance immediately or within hours.',
+            },
           },
           {
             id: "fin-sec4-u1-L1-Q4",
@@ -101,6 +112,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Banks can't invest money that flows in and out constantly, so they offer very low interest on checking balances.",
+            distractorExplanations: {
+              0: '"Banks want to punish checking customers" is wrong because banks can\'t invest money that flows in and out constantly, so they offer very low interest on checking balances.',
+              1: '"Interest only exists for business accounts" is wrong because banks can\'t invest money that flows in and out constantly, so they offer very low interest on checking balances.',
+              2: '"The government bans interest on checking" is wrong because banks can\'t invest money that flows in and out constantly, so they offer very low interest on checking balances.',
+            },
           },
           {
             id: "fin-sec4-u1-L1-Q6",
@@ -115,6 +131,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A checking account is the best place for money you need to spend regularly on bills and daily expenses.",
+            distractorExplanations: {
+              1: 'Savings accounts are for holding money long-term, not everyday purchases.',
+              2: 'Retirement accounts are for long-term growth, not daily transactions.',
+              3: '"Keep the cash at home for convenience" is wrong because a checking account is the best place for money you need to spend regularly on bills and daily expenses.',
+            },
           },
         ],
       },
@@ -140,6 +161,9 @@ export const finSection4Part1: Unit[] = [
             question: "Savings accounts pay interest, which means your money grows over time.",
             correctAnswer: true,
             explanation: "Banks pay you interest for keeping money in a savings account because they can lend that money to others.",
+            distractorExplanations: {
+              1: 'This statement is actually true — banks pay you interest for keeping money in a savings account because they can lend that money to others.',
+            },
           },
           {
             id: "fin-sec4-u1-L2-Q2",
@@ -153,6 +177,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Savings accounts earn interest and are protected by deposit insurance, making them safer and more productive than cash.",
+            distractorExplanations: {
+              0: '"It looks more professional" is wrong because savings accounts earn interest and are protected by deposit insurance, making them safer and more productive than cash.',
+              1: '"You can spend it faster" is wrong because savings accounts earn interest and are protected by deposit insurance, making them safer and more productive than cash.',
+              3: '"There are no benefits compared to cash" is wrong because savings accounts earn interest and are protected by deposit insurance, making them safer and more productive than cash.',
+            },
           },
           {
             id: "fin-sec4-u1-L2-T2",
@@ -173,6 +202,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Withdrawal limits reinforce the purpose of savings accounts: holding money you don't need to spend immediately.",
+            distractorExplanations: {
+              1: '"To make customers switch to checking" is wrong because withdrawal limits reinforce the purpose of savings accounts: holding money you don\'t need to spend immediately.',
+              2: '"Banks lose money every time you withdraw" is wrong because withdrawal limits reinforce the purpose of savings accounts: holding money you don\'t need to spend immediately.',
+              3: '"Federal law requires exactly 2 withdrawals per month" is wrong because withdrawal limits reinforce the purpose of savings accounts: holding money you don\'t need to spend immediately.',
+            },
           },
           {
             id: "fin-sec4-u1-L2-Q4",
@@ -211,6 +245,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Moving money you don't need immediately to savings lets it earn interest while staying safe and accessible.",
+            distractorExplanations: {
+              0: '"Withdraw it as cash and hide it at home" is wrong because moving money you don\'t need immediately to savings lets it earn interest while staying safe and accessible.',
+              1: '"Leave it all in checking for easy access" is wrong because moving money you don\'t need immediately to savings lets it earn interest while staying safe and accessible.',
+              2: '"Spend it quickly before it loses value" is wrong because moving money you don\'t need immediately to savings lets it earn interest while staying safe and accessible.',
+            },
           },
         ],
       },
@@ -236,6 +275,9 @@ export const finSection4Part1: Unit[] = [
             question: "Checking accounts offer higher interest rates than savings accounts.",
             correctAnswer: false,
             explanation: "Savings accounts pay higher interest because the money stays put longer. Checking interest is nearly zero.",
+            distractorExplanations: {
+              0: 'This statement is actually false — savings accounts pay higher interest because the money stays put longer. Checking interest is nearly zero.',
+            },
           },
           {
             id: "fin-sec4-u1-L3-Q2",
@@ -249,6 +291,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Checking prioritizes easy access for daily spending. Savings prioritizes growth through higher interest rates.",
+            distractorExplanations: {
+              1: '"Checking is safer but savings is riskier" is wrong because checking prioritizes easy access for daily spending.',
+              2: '"Savings has a debit card but checking does not" is wrong because checking prioritizes easy access for daily spending.',
+              3: '"There\'s no real difference between them" is wrong because checking prioritizes easy access for daily spending.',
+            },
           },
           {
             id: "fin-sec4-u1-L3-T2",
@@ -263,6 +310,9 @@ export const finSection4Part1: Unit[] = [
             question: "Money in a checking account is not protected by government deposit insurance.",
             correctAnswer: false,
             explanation: "Both checking and savings accounts at insured banks are protected by government deposit insurance.",
+            distractorExplanations: {
+              0: 'This statement is actually false — both checking and savings accounts at insured banks are protected by government deposit insurance.',
+            },
           },
           {
             id: "fin-sec4-u1-L3-Q4",
@@ -321,6 +371,9 @@ export const finSection4Part1: Unit[] = [
             question: "You only need either a checking or a savings account, not both.",
             correctAnswer: false,
             explanation: "Most financial experts recommend having both. Checking handles daily spending, savings handles goals and emergencies.",
+            distractorExplanations: {
+              0: 'This statement is actually false — most financial experts recommend having both. Checking handles daily spending, savings handles goals and emergencies.',
+            },
           },
           {
             id: "fin-sec4-u1-L4-Q2",
@@ -334,6 +387,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Keeping 1 to 2 months of expenses in checking covers your bills. The rest should go to savings where it earns more.",
+            distractorExplanations: {
+              0: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              2: '"The bare minimum to avoid closing the account" is wrong because keeping 1 to 2 months of expenses in checking covers your bills.',
+              3: '"Exactly $100 at all times" is wrong because keeping 1 to 2 months of expenses in checking covers your bills.',
+            },
           },
           {
             id: "fin-sec4-u1-L4-T2",
@@ -354,6 +412,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Transferring on payday ensures you save before spending. Waiting until month's end often means nothing is left.",
+            distractorExplanations: {
+              0: '"At the end of the month if anything is left" is wrong because transferring on payday ensures you save before spending.',
+              1: 'This answer is too narrow — it ignores other important factors.',
+              2: '"Once a year during tax season" is wrong because transferring on payday ensures you save before spending.',
+            },
           },
           {
             id: "fin-sec4-u1-L4-Q4",
@@ -376,6 +439,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Priya has $800 of unneeded money in checking each month. Auto-transferring $400 to savings builds a safety net while leaving a buffer.",
+            distractorExplanations: {
+              1: '"Keep everything in checking for maximum flexibility" is wrong because priya has $800 of unneeded money in checking each month.',
+              2: 'Checking accounts are for daily spending, not for earning interest or long-term growth.',
+              3: '"Move all her money to a savings account immediately" is wrong because priya has $800 of unneeded money in checking each month.',
+            },
           },
           {
             id: "fin-sec4-u1-L4-Q6",
@@ -540,6 +608,9 @@ export const finSection4Part1: Unit[] = [
             question: "Banks earn profit by charging borrowers more interest than they pay depositors.",
             correctAnswer: true,
             explanation: "This interest rate spread is the core of how banks make money. They pay depositors less than they charge borrowers.",
+            distractorExplanations: {
+              1: 'This statement is actually true — this interest rate spread is the core of how banks make money. They pay depositors less than they charge borrowers.',
+            },
           },
           {
             id: "fin-sec4-u2-L1-Q2",
@@ -553,6 +624,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The interest rate spread between what banks charge borrowers and pay depositors is their main revenue source.",
+            distractorExplanations: {
+              1: '"By printing new currency for the government" is wrong because the interest rate spread between what banks charge borrowers and pay depositors is their main revenue source.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"By selling your personal data to advertisers" is wrong because the interest rate spread between what banks charge borrowers and pay depositors is their main revenue source.',
+            },
           },
           {
             id: "fin-sec4-u2-L1-T2",
@@ -567,6 +643,9 @@ export const finSection4Part1: Unit[] = [
             question: "Having physical branches makes traditional banks more expensive to operate.",
             correctAnswer: true,
             explanation: "Rent, staffing, and building maintenance cost money, which is partly why traditional banks may charge more fees or offer lower interest.",
+            distractorExplanations: {
+              1: 'This statement is actually true — rent, staffing, and building maintenance cost money, which is partly why traditional banks may charge more fees or offer lower interest.',
+            },
           },
           {
             id: "fin-sec4-u2-L1-Q4",
@@ -589,6 +668,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The bank earns 6% on loans and pays 0.5% on deposits. That 5.5% gap, applied to millions of dollars, generates significant profit.",
+            distractorExplanations: {
+              1: '"Government subsidies for operating branches" is wrong because the bank earns 6% on loans and pays 0.',
+              2: '"Monthly fees collected from every customer" is wrong because the bank earns 6% on loans and pays 0.',
+              3: '"Selling gold stored in the bank vault" is wrong because the bank earns 6% on loans and pays 0.',
+            },
           },
         ],
       },
@@ -614,6 +698,9 @@ export const finSection4Part1: Unit[] = [
             question: "Credit unions are for-profit businesses like traditional banks.",
             correctAnswer: false,
             explanation: "Credit unions are nonprofit cooperatives. They're owned by members, not shareholders seeking profit.",
+            distractorExplanations: {
+              0: 'This statement is actually false — credit unions are nonprofit cooperatives. They\'re owned by members, not shareholders seeking profit.',
+            },
           },
           {
             id: "fin-sec4-u2-L2-Q2",
@@ -627,6 +714,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Every account holder at a credit union is a member-owner with equal voting rights, regardless of balance size.",
+            distractorExplanations: {
+              0: '"A board of wealthy investors" is wrong because every account holder at a credit union is a member-owner with equal voting rights, regardless of balance size.',
+              1: '"The federal government" is wrong because every account holder at a credit union is a member-owner with equal voting rights, regardless of balance size.',
+              3: '"The same corporations that own banks" is wrong because every account holder at a credit union is a member-owner with equal voting rights, regardless of balance size.',
+            },
           },
           {
             id: "fin-sec4-u2-L2-T2",
@@ -647,6 +739,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Credit unions group members by shared bonds like employer, location, industry, or community affiliation.",
+            distractorExplanations: {
+              0: '"Having a minimum net worth of $100,000" is wrong because credit unions group members by shared bonds like employer, location, industry, or community affiliation.',
+              1: '"Owning stock in a major bank" is wrong because credit unions group members by shared bonds like employer, location, industry, or community affiliation.',
+              2: '"Having a perfect credit score" is wrong because credit unions group members by shared bonds like employer, location, industry, or community affiliation.',
+            },
           },
           {
             id: "fin-sec4-u2-L2-Q4",
@@ -702,6 +799,9 @@ export const finSection4Part1: Unit[] = [
             question: "Online banks can offer higher interest rates because they don't pay for physical branches.",
             correctAnswer: true,
             explanation: "No branches means lower operating costs. Online banks pass those savings to customers through better rates.",
+            distractorExplanations: {
+              1: 'This statement is actually true — no branches means lower operating costs. Online banks pass those savings to customers through better rates.',
+            },
           },
           {
             id: "fin-sec4-u2-L3-Q2",
@@ -715,6 +815,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Online banks pass their lower operating costs to customers through better rates and fewer fees.",
+            distractorExplanations: {
+              0: '"They have the most ATMs worldwide" is wrong because online banks pass their lower operating costs to customers through better rates and fewer fees.',
+              1: '"They offer in-person financial advising" is wrong because online banks pass their lower operating costs to customers through better rates and fewer fees.',
+              3: '"They hold your money in physical gold vaults" is wrong because online banks pass their lower operating costs to customers through better rates and fewer fees.',
+            },
           },
           {
             id: "fin-sec4-u2-L3-T2",
@@ -752,6 +857,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Derek's digital-first lifestyle matches online banking perfectly. He doesn't need branches and benefits from higher rates.",
+            distractorExplanations: {
+              0: '"A traditional bank with many local branches" is wrong because derek\'s digital-first lifestyle matches online banking perfectly.',
+              2: '"A credit union that requires in-person visits" is wrong because derek\'s digital-first lifestyle matches online banking perfectly.',
+              3: '"No bank at all, just a safe at home" is wrong because derek\'s digital-first lifestyle matches online banking perfectly.',
+            },
           },
           {
             id: "fin-sec4-u2-L3-Q5",
@@ -759,6 +869,9 @@ export const finSection4Part1: Unit[] = [
             question: "Online-only banks are not covered by government deposit insurance.",
             correctAnswer: false,
             explanation: "Most online banks are FDIC-insured (or equivalent in other countries), just like traditional banks. Always verify before opening an account.",
+            distractorExplanations: {
+              0: 'This statement is actually false — most online banks are FDIC-insured (or equivalent in other countries), just like traditional banks. Always verify before opening an account.',
+            },
           },
           {
             id: "fin-sec4-u2-L3-Q6",
@@ -792,6 +905,9 @@ export const finSection4Part1: Unit[] = [
             question: "One type of banking institution is objectively better than all others.",
             correctAnswer: false,
             explanation: "Each type has strengths and weaknesses. The best choice depends on your individual needs and priorities.",
+            distractorExplanations: {
+              0: 'This statement is actually false — each type has strengths and weaknesses. The best choice depends on your individual needs and priorities.',
+            },
           },
           {
             id: "fin-sec4-u2-L4-Q2",
@@ -821,6 +937,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Using multiple institutions lets you combine the best features of each type based on your needs.",
+            distractorExplanations: {
+              0: '"It\'s required by law in most countries" is wrong because using multiple institutions lets you combine the best features of each type based on your needs.',
+              2: '"Because one bank can\'t hold more than $1,000" is wrong because using multiple institutions lets you combine the best features of each type based on your needs.',
+              3: '"Online banks don\'t offer checking accounts" is wrong because using multiple institutions lets you combine the best features of each type based on your needs.',
+            },
           },
           {
             id: "fin-sec4-u2-L4-Q4",
@@ -835,6 +956,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Keisha gets branch access and advice from a traditional bank while earning top savings rates at an online bank.",
+            distractorExplanations: {
+              0: '"Everything at one traditional bank for simplicity" is wrong because keisha gets branch access and advice from a traditional bank while earning top savings rates at an online bank.',
+              1: '"Everything at one online bank for the best rates" is wrong because keisha gets branch access and advice from a traditional bank while earning top savings rates at an online bank.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec4-u2-L4-Q5",
@@ -1015,6 +1141,9 @@ export const finSection4Part1: Unit[] = [
             question: "Bank fees are a significant source of revenue for banks.",
             correctAnswer: true,
             explanation: "Banks collect billions in fees each year. Knowing about them is the first step to avoiding them.",
+            distractorExplanations: {
+              1: 'This statement is actually true — banks collect billions in fees each year. Knowing about them is the first step to avoiding them.',
+            },
           },
           {
             id: "fin-sec4-u3-L1-Q2",
@@ -1028,6 +1157,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Monthly maintenance fees are one of the most common bank charges. Many banks waive them if you meet certain conditions.",
+            distractorExplanations: {
+              0: '"Account opening celebration fee" is wrong because monthly maintenance fees are one of the most common bank charges.',
+              1: '"Interest earning fee" is wrong because monthly maintenance fees are one of the most common bank charges.',
+              2: '"Deposit acceptance fee" is wrong because monthly maintenance fees are one of the most common bank charges.',
+            },
           },
           {
             id: "fin-sec4-u3-L1-T2",
@@ -1048,6 +1182,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Most banks waive the monthly fee if you keep a minimum balance or have your paycheck directly deposited.",
+            distractorExplanations: {
+              1: '"By visiting the branch every month to request a waiver" is wrong because most banks waive the monthly fee if you keep a minimum balance or have your paycheck directly deposited.',
+              2: '"By calling customer service and complaining" is wrong because most banks waive the monthly fee if you keep a minimum balance or have your paycheck directly deposited.',
+              3: '"You can never avoid monthly fees at any bank" is wrong because most banks waive the monthly fee if you keep a minimum balance or have your paycheck directly deposited.',
+            },
           },
           {
             id: "fin-sec4-u3-L1-Q4",
@@ -1084,6 +1223,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Most banks charge the full monthly fee if your balance drops below the minimum at any point during the statement period.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"The bank will close her account automatically" is wrong because most banks charge the full monthly fee if your balance drops below the minimum at any point during the statement pe...',
+              3: '"She\'ll receive a bonus for being close to the minimum" is wrong because most banks charge the full monthly fee if your balance drops below the minimum at any point during the statement pe...',
+            },
           },
         ],
       },
@@ -1109,6 +1253,9 @@ export const finSection4Part1: Unit[] = [
             question: "An overdraft fee is charged when you spend more than the balance in your checking account.",
             correctAnswer: true,
             explanation: "When a transaction exceeds your balance, the bank may pay it and charge an overdraft fee for the service.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when a transaction exceeds your balance, the bank may pay it and charge an overdraft fee for the service.',
+            },
           },
           {
             id: "fin-sec4-u3-L2-Q2",
@@ -1122,6 +1269,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Most banks charge between $25 and $35 per overdraft transaction, which adds up quickly with multiple charges.",
+            distractorExplanations: {
+              0: 'This amount (1) is too low — the correct calculation gives 25.',
+              1: 'This amount (100) is too high — the correct calculation gives 25.',
+              3: 'This amount (500) is too high — the correct calculation gives 25.',
+            },
           },
           {
             id: "fin-sec4-u3-L2-T2",
@@ -1167,6 +1319,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Coffee ($5) and lunch ($15) fit within the $50 balance. The $60 jacket exceeds the remaining $30, triggering one overdraft fee.",
+            distractorExplanations: {
+              0: '"The bank blocks all 3 purchases" is wrong because coffee ($5) and lunch ($15) fit within the $50 balance.',
+              2: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: '"The bank waives the fee because it\'s his first time" is wrong because coffee ($5) and lunch ($15) fit within the $50 balance.',
+            },
           },
           {
             id: "fin-sec4-u3-L2-Q6",
@@ -1180,6 +1337,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Keeping a buffer above your minimum and setting alerts warns you before your balance gets dangerously low.",
+            distractorExplanations: {
+              0: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              1: '"Switch to a bank that charges higher fees" is wrong because keeping a buffer above your minimum and setting alerts warns you before your balance gets dangerously low.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
         ],
       },
@@ -1205,6 +1367,9 @@ export const finSection4Part1: Unit[] = [
             question: "Using an out-of-network ATM can result in fees from both the ATM owner and your own bank.",
             correctAnswer: true,
             explanation: "You can be charged a surcharge by the ATM owner and a separate fee by your bank for using an out-of-network machine.",
+            distractorExplanations: {
+              1: 'This statement is actually true — you can be charged a surcharge by the ATM owner and a separate fee by your bank for using an out-of-network machine.',
+            },
           },
           {
             id: "fin-sec4-u3-L3-Q2",
@@ -1218,6 +1383,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Using in-network ATMs or getting cash back at a register avoids ATM fees completely.",
+            distractorExplanations: {
+              0: '"Use any ATM but withdraw large amounts less often" is wrong because using in-network ATMs or getting cash back at a register avoids ATM fees completely.',
+              1: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: '"Ask the ATM to waive the fee on screen" is wrong because using in-network ATMs or getting cash back at a register avoids ATM fees completely.',
+            },
           },
           {
             id: "fin-sec4-u3-L3-T2",
@@ -1232,6 +1402,9 @@ export const finSection4Part1: Unit[] = [
             question: "ATM fees of $3 per use are too small to worry about.",
             correctAnswer: false,
             explanation: "At 2 uses per week, $3 ATM fees add up to $312 per year. Small fees matter when they're frequent.",
+            distractorExplanations: {
+              0: 'This statement is actually false — at 2 uses per week, $3 ATM fees add up to $312 per year. Small fees matter when they\'re frequent.',
+            },
           },
           {
             id: "fin-sec4-u3-L3-Q4",
@@ -1245,6 +1418,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$3 times 2 times 52 weeks equals $312 per year. Paper statements cost $60 per year. The ATM fees are by far the most expensive.",
+            distractorExplanations: {
+              0: '"One $25 overdraft fee per year" is wrong because $3 times 2 times 52 weeks equals $312 per year.',
+              2: '"One $30 wire transfer fee per year" is wrong because $3 times 2 times 52 weeks equals $312 per year.',
+              3: '"$5 paper statement fee per month" is wrong because $3 times 2 times 52 weeks equals $312 per year.',
+            },
           },
           {
             id: "fin-sec4-u3-L3-Q5",
@@ -1272,6 +1450,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Maintenance: $10 times 12 = $120. ATM fees: $15 times 12 = $180. Paper statements: $5 times 12 = $60. Total: $360 per year in avoidable fees.",
+            distractorExplanations: {
+              0: 'This amount (120) is too low — the correct calculation gives 360.',
+              1: 'This amount (240) is too low — the correct calculation gives 360.',
+              2: 'This amount (300) is too low — the correct calculation gives 360.',
+            },
             hint: "$10 plus $15 plus $5 equals $30 per month times 12 months.",
           },
         ],
@@ -1298,6 +1481,9 @@ export const finSection4Part1: Unit[] = [
             question: "It's impossible to find a bank account with zero monthly fees.",
             correctAnswer: false,
             explanation: "Many banks, credit unions, and online banks offer completely fee-free checking accounts.",
+            distractorExplanations: {
+              0: 'This statement is actually false — many banks, credit unions, and online banks offer completely fee-free checking accounts.',
+            },
           },
           {
             id: "fin-sec4-u3-L4-Q2",
@@ -1332,6 +1518,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Banks frequently refund fees when customers call and ask, especially for first-time occurrences.",
+            distractorExplanations: {
+              0: '"Accept it because banks can charge whatever they want" is wrong because banks frequently refund fees when customers call and ask, especially for first-time occurrences.',
+              1: '"Close your account immediately in protest" is wrong because banks frequently refund fees when customers call and ask, especially for first-time occurrences.',
+              3: '"Post a negative review online and wait" is wrong because banks frequently refund fees when customers call and ask, especially for first-time occurrences.',
+            },
           },
           {
             id: "fin-sec4-u3-L4-Q4",
@@ -1359,6 +1550,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Raj pays $384 per year in avoidable fees. Switching to a no-fee bank with ATM reimbursement solves both problems at once.",
+            distractorExplanations: {
+              0: '"Stop using ATMs entirely and only use cash from friends" is wrong because raj pays $384 per year in avoidable fees.',
+              2: '"Accept the fees as a normal cost of banking" is wrong because raj pays $384 per year in avoidable fees.',
+              3: '"Withdraw all his money and keep it under his mattress" is wrong because raj pays $384 per year in avoidable fees.',
+            },
           },
           {
             id: "fin-sec4-u3-L4-Q6",
@@ -1435,6 +1631,9 @@ export const finSection4Part1: Unit[] = [
             question: "A checking account is designed for long-term savings goals.",
             correctAnswer: false,
             explanation: "Checking accounts are for daily spending. Savings accounts are for goals and emergencies.",
+            distractorExplanations: {
+              0: 'This statement is actually false — checking accounts are for daily spending. Savings accounts are for goals and emergencies.',
+            },
           },
           {
             id: "fin-sec4-u4-L1-Q2",
@@ -1448,6 +1647,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Credit unions return profits to members through lower fees and better rates because they're nonprofit cooperatives.",
+            distractorExplanations: {
+              0: '"Credit unions are always open 24 hours" is wrong because credit unions return profits to members through lower fees and better rates because they\'re nonprofit cooperatives.',
+              2: '"Credit unions print their own currency" is wrong because credit unions return profits to members through lower fees and better rates because they\'re nonprofit cooperatives.',
+              3: '"Credit unions never require any membership criteria" is wrong because credit unions return profits to members through lower fees and better rates because they\'re nonprofit cooperatives.',
+            },
           },
           {
             id: "fin-sec4-u4-L1-Q3",
@@ -1507,6 +1711,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Li Wei's digital habits match online banking. FDIC insurance means their money is just as safe as at a traditional bank.",
+            distractorExplanations: {
+              0: '"A traditional bank with many branches for safety" is wrong because li Wei\'s digital habits match online banking.',
+              2: '"A credit union that requires in-person visits" is wrong because li Wei\'s digital habits match online banking.',
+              3: '"Keeping all money in a safe at home" is wrong because li Wei\'s digital habits match online banking.',
+            },
           },
         ],
       },
@@ -1539,6 +1748,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$12 times 12 = $144. $5 times 12 = $60. $20 times 12 = $240. Total: $444 per year.",
+            distractorExplanations: {
+              0: 'This amount (204) is too low — the correct calculation gives 444.',
+              1: 'This amount (324) is too low — the correct calculation gives 444.',
+              3: 'This amount (564) is too high — the correct calculation gives 444.',
+            },
           },
           {
             id: "fin-sec4-u4-L2-Q2",
@@ -1552,6 +1766,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Credit unions are insured by NCUA up to $250,000, making them just as safe as FDIC-insured banks regardless of size.",
+            distractorExplanations: {
+              0: '"Credit unions are actually bigger than all banks" is wrong because credit unions are insured by NCUA up to $250,000, making them just as safe as FDIC-insured banks regardless of size.',
+              2: '"Credit unions are part of the federal government" is wrong because credit unions are insured by NCUA up to $250,000, making them just as safe as FDIC-insured banks regardless of size.',
+              3: '"Credit unions can\'t go bankrupt by law" is wrong because credit unions are insured by NCUA up to $250,000, making them just as safe as FDIC-insured banks regardless of size.',
+            },
           },
           {
             id: "fin-sec4-u4-L2-Q3",
@@ -1582,6 +1801,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Marcus covers his bills from checking and starts building savings with what's left. This is the pay-yourself-first approach adapted to his situation.",
+            distractorExplanations: {
+              0: '"Put all $2,000 in savings for maximum interest" is wrong because marcus covers his bills from checking and starts building savings with what\'s left.',
+              2: '"Spend the $2,000 quickly before it disappears" is wrong because marcus covers his bills from checking and starts building savings with what\'s left.',
+              3: '"Keep everything in checking until bills are lower" is wrong because marcus covers his bills from checking and starts building savings with what\'s left.',
+            },
           },
           {
             id: "fin-sec4-u4-L2-Q5",
@@ -1678,6 +1902,9 @@ export const finSection4Part1: Unit[] = [
             question: "Digital wallets store your card information on your phone so you can pay by tapping.",
             correctAnswer: true,
             explanation: "Digital wallets securely store your payment cards and let you tap to pay at compatible terminals.",
+            distractorExplanations: {
+              1: 'This statement is actually true — digital wallets securely store your payment cards and let you tap to pay at compatible terminals.',
+            },
           },
           {
             id: "fin-sec4-u5-L1-Q2",
@@ -1691,6 +1918,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Apple Pay is a digital wallet that stores card information on your phone for contactless payments.",
+            distractorExplanations: {
+              0: '"A leather wallet with card slots" is wrong because apple Pay is a digital wallet that stores card information on your phone for contactless payments.',
+              1: '"A bank vault where cash is stored" is wrong because apple Pay is a digital wallet that stores card information on your phone for contactless payments.',
+              2: '"A checkbook in your purse" is wrong because apple Pay is a digital wallet that stores card information on your phone for contactless payments.',
+            },
           },
           {
             id: "fin-sec4-u5-L1-T2",
@@ -1705,6 +1937,9 @@ export const finSection4Part1: Unit[] = [
             question: "When you use a digital wallet, the merchant receives your actual credit card number.",
             correctAnswer: false,
             explanation: "Digital wallets use tokenization. The merchant only sees a temporary token, not your real card number.",
+            distractorExplanations: {
+              0: 'This statement is actually false — digital wallets use tokenization. The merchant only sees a temporary token, not your real card number.',
+            },
           },
           {
             id: "fin-sec4-u5-L1-Q4",
@@ -1740,6 +1975,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Tokenization means even if a merchant's system is compromised, your real card details remain safe.",
+            distractorExplanations: {
+              1: '"Phones are impossible to hack" is wrong because tokenization means even if a merchant\'s system is compromised, your real card details remain safe.',
+              2: '"Digital wallets don\'t connect to bank accounts" is wrong because tokenization means even if a merchant\'s system is compromised, your real card details remain safe.',
+              3: '"Stores can\'t process digital payments" is wrong because tokenization means even if a merchant\'s system is compromised, your real card details remain safe.',
+            },
           },
         ],
       },
@@ -1765,6 +2005,9 @@ export const finSection4Part1: Unit[] = [
             question: "P2P payment apps let you send money directly to another person using their phone or email.",
             correctAnswer: true,
             explanation: "P2P stands for person to person. These apps connect you directly to the recipient for instant transfers.",
+            distractorExplanations: {
+              1: 'This statement is actually true — p2P stands for person to person. These apps connect you directly to the recipient for instant transfers.',
+            },
           },
           {
             id: "fin-sec4-u5-L2-Q2",
@@ -1778,6 +2021,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Zelle is a P2P payment service that lets you send money directly between bank accounts.",
+            distractorExplanations: {
+              0: '"Microsoft Excel" is wrong because zelle is a P2P payment service that lets you send money directly between bank accounts.',
+              1: '"Netflix" is wrong because zelle is a P2P payment service that lets you send money directly between bank accounts.',
+              3: '"Google Maps" is wrong because zelle is a P2P payment service that lets you send money directly between bank accounts.',
+            },
           },
           {
             id: "fin-sec4-u5-L2-T2",
@@ -1814,6 +2062,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Money in Venmo or Cash App isn't covered by FDIC insurance. Moving it to your insured bank account is safer.",
+            distractorExplanations: {
+              0: '"Venmo charges interest on balances" is wrong because money in Venmo or Cash App isn\'t covered by FDIC insurance.',
+              1: '"Money in Venmo earns less interest than cash" is wrong because money in Venmo or Cash App isn\'t covered by FDIC insurance.',
+              2: '"Venmo deletes balances after 30 days" is wrong because money in Venmo or Cash App isn\'t covered by FDIC insurance.',
+            },
           },
           {
             id: "fin-sec4-u5-L2-Q5",
@@ -1836,6 +2089,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Zelle transfers between same-bank accounts are typically instant, making it the fastest option for this situation.",
+            distractorExplanations: {
+              0: '"Mail personal checks to Jamie\'s address" is wrong because zelle transfers between same-bank accounts are typically instant, making it the fastest option for this situation.',
+              2: '"Set up a joint bank account for shared expenses" is wrong because zelle transfers between same-bank accounts are typically instant, making it the fastest option for this situation.',
+              3: '"Wait until they meet in person to exchange cash" is wrong because zelle transfers between same-bank accounts are typically instant, making it the fastest option for this situation.',
+            },
           },
         ],
       },
@@ -1861,6 +2119,9 @@ export const finSection4Part1: Unit[] = [
             question: "Using the same password for your email and your payment app is a safe practice.",
             correctAnswer: false,
             explanation: "If one account is compromised, a reused password gives hackers access to your financial apps too.",
+            distractorExplanations: {
+              0: 'This statement is actually false — if one account is compromised, a reused password gives hackers access to your financial apps too.',
+            },
           },
           {
             id: "fin-sec4-u5-L3-Q2",
@@ -1874,6 +2135,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Biometric login plus unique passwords is the strongest practical security for payment apps.",
+            distractorExplanations: {
+              1: '"Use a simple password you can remember easily" is wrong because biometric login plus unique passwords is the strongest practical security for payment apps.',
+              2: '"Share your password with a trusted friend as backup" is wrong because biometric login plus unique passwords is the strongest practical security for payment apps.',
+              3: '"Write your password on a sticky note near your phone" is wrong because biometric login plus unique passwords is the strongest practical security for payment apps.',
+            },
           },
           {
             id: "fin-sec4-u5-L3-T2",
@@ -1888,6 +2154,9 @@ export const finSection4Part1: Unit[] = [
             question: "You can easily reverse a Zelle payment if you accidentally send it to the wrong person.",
             correctAnswer: false,
             explanation: "P2P payments are typically instant and irreversible. If the recipient doesn't return the money voluntarily, you may have no recourse.",
+            distractorExplanations: {
+              0: 'This statement is actually false — p2P payments are typically instant and irreversible. If the recipient doesn\'t return the money voluntarily, you may have no recourse.',
+            },
           },
           {
             id: "fin-sec4-u5-L3-Q4",
@@ -1929,6 +2198,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Never click links in unexpected texts. Go directly to the official app to check your account status.",
+            distractorExplanations: {
+              0: '"Click the link and enter his login information immediately" is wrong because never click links in unexpected texts.',
+              2: '"Reply to the text asking for more details" is wrong because never click links in unexpected texts.',
+              3: '"Forward the text to all his contacts as a warning" is wrong because never click links in unexpected texts.',
+            },
           },
         ],
       },
@@ -1954,6 +2228,9 @@ export const finSection4Part1: Unit[] = [
             question: "P2P payment apps are safe for buying items from strangers online.",
             correctAnswer: false,
             explanation: "P2P apps lack buyer protection for purchases. If a stranger takes your money and never ships the item, you likely can't get a refund.",
+            distractorExplanations: {
+              0: 'This statement is actually false — p2P apps lack buyer protection for purchases. If a stranger takes your money and never ships the item, you likely can\'t get a refund.',
+            },
           },
           {
             id: "fin-sec4-u5-L4-Q2",
@@ -1967,6 +2244,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The instant and irreversible nature of P2P payments makes them perfect for scammers who want your money fast with no recourse.",
+            distractorExplanations: {
+              0: '"P2P apps don\'t require identification to use" is wrong because the instant and irreversible nature of P2P payments makes them perfect for scammers who want your money fast with n...',
+              1: '"P2P apps pay scammers a commission" is wrong because the instant and irreversible nature of P2P payments makes them perfect for scammers who want your money fast with n...',
+              2: '"Banks can\'t see P2P transactions" is wrong because the instant and irreversible nature of P2P payments makes them perfect for scammers who want your money fast with n...',
+            },
           },
           {
             id: "fin-sec4-u5-L4-T2",
@@ -2004,6 +2286,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Buying from strangers via Venmo offers no buyer protection. Use platforms like StubHub or PayPal Goods & Services that protect buyers.",
+            distractorExplanations: {
+              0: '"Pay immediately to secure the ticket before it\'s gone" is wrong because buying from strangers via Venmo offers no buyer protection.',
+              2: '"Send half now and half after receiving the ticket" is wrong because buying from strangers via Venmo offers no buyer protection.',
+              3: 'This choice is wrong because buying from strangers via Venmo offers no buyer protection.',
+            },
           },
           {
             id: "fin-sec4-u5-L4-Q5",
@@ -2025,6 +2312,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Banks never ask customers to send money via Zelle or any P2P app. This is a well-known impersonation scam.",
+            distractorExplanations: {
+              0: 'This choice is wrong because banks never ask customers to send money via Zelle or any P2P app.',
+              2: '"This is standard bank procedure during a security breach" is wrong because banks never ask customers to send money via Zelle or any P2P app.',
+              3: '"You should comply quickly to protect your account" is wrong because banks never ask customers to send money via Zelle or any P2P app.',
+            },
           },
         ],
       },
@@ -2177,6 +2469,9 @@ export const finSection4Part1: Unit[] = [
             question: "ACH is the system that handles direct deposit of paychecks.",
             correctAnswer: true,
             explanation: "ACH (Automated Clearing House) processes direct deposits, bill payments, and many bank-to-bank transfers.",
+            distractorExplanations: {
+              1: 'This statement is actually true — ACH (Automated Clearing House) processes direct deposits, bill payments, and many bank-to-bank transfers.',
+            },
           },
           {
             id: "fin-sec4-u6-L1-Q2",
@@ -2205,6 +2500,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Standard ACH processing takes 1 to 3 business days. Same-day ACH is available but may cost extra.",
+            distractorExplanations: {
+              0: '"Instant, just like P2P apps" is wrong because standard ACH processing takes 1 to 3 business days.',
+              2: '"2 to 4 weeks" is wrong because standard ACH processing takes 1 to 3 business days.',
+              3: '"Exactly 30 calendar days" is wrong because standard ACH processing takes 1 to 3 business days.',
+            },
           },
           {
             id: "fin-sec4-u6-L1-Q4",
@@ -2234,6 +2534,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ACH transfers are one of the cheapest ways to move money. Many banks offer them for free.",
+            distractorExplanations: {
+              0: '"They arrive in seconds" is wrong because ACH transfers are one of the cheapest ways to move money.',
+              2: '"They work with cryptocurrency" is wrong because ACH transfers are one of the cheapest ways to move money.',
+              3: '"They don\'t require a bank account" is wrong because ACH transfers are one of the cheapest ways to move money.',
+            },
           },
         ],
       },
@@ -2259,6 +2564,9 @@ export const finSection4Part1: Unit[] = [
             question: "Wire transfers are typically free, just like ACH transfers.",
             correctAnswer: false,
             explanation: "Wire transfers cost $15 to $65 depending on whether they're domestic or international. ACH is usually free.",
+            distractorExplanations: {
+              0: 'This statement is actually false — wire transfers cost $15 to $65 depending on whether they\'re domestic or international. ACH is usually free.',
+            },
           },
           {
             id: "fin-sec4-u6-L2-Q2",
@@ -2272,6 +2580,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Wire transfers make sense for large, time-sensitive amounts like real estate purchases where same-day delivery is critical.",
+            distractorExplanations: {
+              0: '"Splitting a $30 dinner tab with friends" is wrong because wire transfers make sense for large, time-sensitive amounts like real estate purchases where same-day delivery is c...',
+              2: '"Paying your monthly phone bill" is wrong because wire transfers make sense for large, time-sensitive amounts like real estate purchases where same-day delivery is c...',
+              3: '"Buying groceries at the store" is wrong because wire transfers make sense for large, time-sensitive amounts like real estate purchases where same-day delivery is c...',
+            },
           },
           {
             id: "fin-sec4-u6-L2-T2",
@@ -2315,6 +2628,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ACH is free and takes 1 to 3 days. Since Daniela has until Thursday, there's no reason to pay $25 or more for a wire.",
+            distractorExplanations: {
+              0: '"A wire transfer for same-day delivery" is wrong because ACH is free and takes 1 to 3 days.',
+              2: '"Overnight mail with a cashier\'s check" is wrong because ACH is free and takes 1 to 3 days.',
+              3: 'This choice is wrong because ACH is free and takes 1 to 3 days.',
+            },
           },
           {
             id: "fin-sec4-u6-L2-Q6",
@@ -2356,6 +2674,9 @@ export const finSection4Part1: Unit[] = [
             question: "Sending money internationally is usually more expensive than domestic transfers.",
             correctAnswer: true,
             explanation: "International transfers involve currency conversion, intermediary banks, and additional processing, all of which add cost.",
+            distractorExplanations: {
+              1: 'This statement is actually true — international transfers involve currency conversion, intermediary banks, and additional processing, all of which add cost.',
+            },
           },
           {
             id: "fin-sec4-u6-L3-Q2",
@@ -2369,6 +2690,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Multiple layers of fees including currency conversion, intermediary bank charges, and processing costs all add up.",
+            distractorExplanations: {
+              0: '"Domestic banks charge more for international transfers" is wrong because multiple layers of fees including currency conversion, intermediary bank charges, and processing costs all add up.',
+              2: '"International mail costs more for paper statements" is wrong because multiple layers of fees including currency conversion, intermediary bank charges, and processing costs all add up.',
+              3: '"The government taxes all international transfers at 50%" is wrong because multiple layers of fees including currency conversion, intermediary bank charges, and processing costs all add up.',
+            },
           },
           {
             id: "fin-sec4-u6-L3-T2",
@@ -2383,6 +2709,9 @@ export const finSection4Part1: Unit[] = [
             question: "The exchange rate your bank offers is the same as the mid-market rate you see on Google.",
             correctAnswer: false,
             explanation: "Banks add a markup of 1% to 5% above the mid-market rate. This markup is an additional cost hidden in the exchange rate.",
+            distractorExplanations: {
+              0: 'This statement is actually false — banks add a markup of 1% to 5% above the mid-market rate. This markup is an additional cost hidden in the exchange rate.',
+            },
           },
           {
             id: "fin-sec4-u6-L3-Q4",
@@ -2405,6 +2734,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Bank: $45 fee plus $20 markup equals $65. Online service: $5 fee plus $2.50 markup equals $7.50. Savings: about $57.50.",
+            distractorExplanations: {
+              0: '"About $10" is wrong because bank: $45 fee plus $20 markup equals $65.',
+              1: '"About $20" is wrong because bank: $45 fee plus $20 markup equals $65.',
+              2: '"About $40" is wrong because bank: $45 fee plus $20 markup equals $65.',
+            },
           },
           {
             id: "fin-sec4-u6-L3-Q6",
@@ -2443,6 +2777,9 @@ export const finSection4Part1: Unit[] = [
             question: "A transfer service advertising 'no fees' always means the transfer is completely free.",
             correctAnswer: false,
             explanation: "Many 'no fee' services hide their cost in a poor exchange rate markup, making the transfer more expensive overall.",
+            distractorExplanations: {
+              0: 'This statement is actually false — many \'no fee\' services hide their cost in a poor exchange rate markup, making the transfer more expensive overall.',
+            },
           },
           {
             id: "fin-sec4-u6-L4-Q2",
@@ -2456,6 +2793,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The real cost is the difference between what you pay and what your recipient actually receives. This includes fees and exchange rate markups.",
+            distractorExplanations: {
+              0: '"Look only at the advertised transfer fee" is wrong because the real cost is the difference between what you pay and what your recipient actually receives.',
+              2: '"Ask the bank for a discount code" is wrong because the real cost is the difference between what you pay and what your recipient actually receives.',
+              3: '"The cost is always exactly what the website says" is wrong because the real cost is the difference between what you pay and what your recipient actually receives.',
+            },
           },
           {
             id: "fin-sec4-u6-L4-T2",
@@ -2491,6 +2833,11 @@ export const finSection4Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "You sent $1,000 and they received $920 equivalent. The $80 gap is the real cost, hidden in the exchange rate and possible intermediary fees.",
+            distractorExplanations: {
+              0: 'This amount (0) is too low — the correct calculation gives 80.',
+              1: 'This amount (40) is too low — the correct calculation gives 80.',
+              3: 'This amount (920) is too high — the correct calculation gives 80.',
+            },
           },
           {
             id: "fin-sec4-u6-L4-Q5",

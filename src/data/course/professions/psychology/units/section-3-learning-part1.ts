@@ -34,6 +34,9 @@ export const psySection3Part1: Unit[] = [
             question: 'In psychology, learning is defined as a relatively permanent change in behavior due to experience.',
             correctAnswer: true,
             explanation: 'Learning is a lasting behavioral change that results from experience, not temporary states like fatigue or drugs.',
+            distractorExplanations: {
+              1: 'Learning is a lasting behavioral change that results from experience, not temporary states like fatigue or drugs.',
+            },
           },
           {
             id: 'psy-sec3-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Avoiding the stove after a burn is a lasting behavioral change from experience. The others are reflexes.',
+            distractorExplanations: {
+              1: 'A baby sneezing when dust enters its nose is not correct here; avoiding the stove after a burn is a lasting behavioral change from experience.',
+              2: 'An adult blinking when a bright light flashes is not correct here; avoiding the stove after a burn is a lasting behavioral change from experience.',
+              3: 'A puppy yelping when stepped on is not correct here; avoiding the stove after a burn is a lasting behavioral change from experience.',
+            },
           },
           {
             id: 'psy-sec3-u1-L1-T2',
@@ -97,6 +105,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Associative learning is the process of linking events that happen together. It\'s the basis of conditioning.',
+            distractorExplanations: {
+              1: 'Learning by reading a textbook is not correct here; associative learning is the process of linking events that happen together.',
+              2: 'This is too narrow; associative learning is the process of linking events that happen together. It\'s the basis of conditioning.',
+              3: 'Learning that requires a teacher is not correct here; associative learning is the process of linking events that happen together.',
+            },
           },
           {
             id: 'psy-sec3-u1-L1-Q6',
@@ -111,6 +124,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'You\'ve learned to associate the buzz sound with checking your phone. The association transferred to similar sounds.',
+            distractorExplanations: {
+              1: 'A natural reflex you were born with is not correct here; you\'ve learned to associate the buzz sound with checking your phone.',
+              2: 'Physical maturation of the brain is not correct here; you\'ve learned to associate the buzz sound with checking your phone.',
+              3: 'A temporary response to caffeine is not correct here; you\'ve learned to associate the buzz sound with checking your phone.',
+            },
           },
         ],
       },
@@ -136,6 +154,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Pavlov originally set out to study how animals learn.',
             correctAnswer: false,
             explanation: 'Pavlov was studying digestion. He discovered classical conditioning by accident when he noticed dogs salivating before food arrived.',
+            distractorExplanations: {
+              0: 'Pavlov was studying digestion. He discovered classical conditioning by accident when he noticed dogs salivating before food arrived.',
+            },
           },
           {
             id: 'psy-sec3-u1-L2-Q2',
@@ -149,6 +170,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Pavlov noticed dogs began salivating in response to cues associated with food, like footsteps, before seeing or smelling the food itself.',
+            distractorExplanations: {
+              0: 'Dogs could solve puzzles faster with practice is not correct here; pavlov noticed dogs began salivating in response to cues associated with food,.',
+              2: 'Dogs preferred certain colors of food bowls is not correct here; pavlov noticed dogs began salivating in response to cues associated with food,.',
+              3: 'Dogs learned tricks from watching other dogs is not correct here; pavlov noticed dogs began salivating in response to cues associated with food,.',
+            },
           },
           {
             id: 'psy-sec3-u1-L2-T2',
@@ -181,6 +207,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Through repeated pairing, the dogs\' brains formed an association between the bell and food, so the bell alone triggered salivation.',
+            distractorExplanations: {
+              0: 'The bell hurt their ears is not correct here; through repeated pairing, the dogs\' brains formed an association between the bell and food, so the.',
+              1: 'They were hungry from not eating is not correct here; through repeated pairing, the dogs\' brains formed an association between the bell and food,.',
+              3: 'The bell made a food-like smell is not correct here; through repeated pairing, the dogs\' brains formed an association between the bell and food,.',
+            },
           },
           {
             id: 'psy-sec3-u1-L2-T3',
@@ -209,6 +240,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The drill sound (neutral) was paired with pain (naturally triggers fear). Now the drill sound alone triggers anxiety.',
+            distractorExplanations: {
+              0: 'A natural reflex present from birth is not correct here; the drill sound (neutral) was paired with pain (naturally triggers fear).',
+              2: 'Punishment for bad dental hygiene is not correct here; the drill sound (neutral) was paired with pain (naturally triggers fear).',
+              3: 'Observational learning from watching others is not correct here; the drill sound (neutral) was paired with pain (naturally triggers fear).',
+            },
           },
         ],
       },
@@ -234,6 +270,9 @@ export const psySection3Part1: Unit[] = [
             question: 'The unconditioned stimulus (US) naturally triggers a response without any learning.',
             correctAnswer: true,
             explanation: 'The US automatically produces a response. Food naturally causes salivation without any training.',
+            distractorExplanations: {
+              1: 'The US automatically produces a response. Food naturally causes salivation without any training.',
+            },
           },
           {
             id: 'psy-sec3-u1-L3-Q2',
@@ -272,6 +311,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The bell started as neutral but became the conditioned stimulus after being paired with food.',
+            distractorExplanations: {
+              0: 'The food is not correct here; the bell started as neutral but became the conditioned stimulus after being paired with food.',
+              1: 'Salivation to the food is not correct here; the bell started as neutral but became the conditioned stimulus after being paired with food.',
+              3: 'Salivation to the bell is not correct here; the bell started as neutral but became the conditioned stimulus after being paired with food.',
+            },
           },
           {
             id: 'psy-sec3-u1-L3-Q4',
@@ -285,6 +329,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Salivation to food is the UR because it happens naturally, without any learning required.',
+            distractorExplanations: {
+              0: 'Hearing the bell is not correct here; salivation to food is the UR because it happens naturally, without any learning required.',
+              1: 'Salivation triggered by the bell is not correct here; salivation to food is the UR because it happens naturally, without any learning required.',
+              2: 'The food is not correct here; salivation to food is the UR because it happens naturally, without any learning required.',
+            },
           },
           {
             id: 'psy-sec3-u1-L3-T3',
@@ -306,6 +355,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Running to the kitchen in response to the can opener is the learned reaction (CR). The sound is the CS.',
+            distractorExplanations: {
+              0: 'The cat eating food is not correct here; running to the kitchen in response to the can opener is the learned reaction (CR). The sound is the CS.',
+              1: 'The sound of the can opener is not correct here; running to the kitchen in response to the can opener is the learned reaction (CR).',
+              3: 'The cat feeling hungry is not correct here; running to the kitchen in response to the can opener is the learned reaction (CR). The sound is the CS.',
+            },
           },
           {
             id: 'psy-sec3-u1-L3-Q6',
@@ -347,6 +401,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Extinction means the conditioned association is completely erased from the brain.',
             correctAnswer: false,
             explanation: 'Extinction suppresses the response, but the association still exists in the brain. That\'s why spontaneous recovery can happen.',
+            distractorExplanations: {
+              0: 'Extinction suppresses the response, but the association still exists in the brain. That\'s why spontaneous recovery can happen.',
+            },
           },
           {
             id: 'psy-sec3-u1-L4-Q2',
@@ -374,6 +431,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Spontaneous recovery shows the association still exists after extinction. It was inhibited, not eliminated.',
+            distractorExplanations: {
+              0: 'Extinction permanently removes the learned association is not correct here; spontaneous recovery shows the association still exists after.',
+              2: 'Extinction makes the US stronger is not correct here; spontaneous recovery shows the association still exists after extinction.',
+              3: 'Extinction only works on humans, not animals is not correct here; spontaneous recovery shows the association still exists after extinction.',
+            },
           },
           {
             id: 'psy-sec3-u1-L4-Q4',
@@ -407,6 +469,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The brief return of fear after a period of extinction is spontaneous recovery. The old association was suppressed, not erased.',
+            distractorExplanations: {
+              0: 'New conditioning from the large dog is not correct here; the brief return of fear after a period of extinction is spontaneous recovery.',
+              2: 'Generalization to a new species is not correct here; the brief return of fear after a period of extinction is spontaneous recovery.',
+              3: 'The therapy did not work at all is not correct here; the brief return of fear after a period of extinction is spontaneous recovery.',
+            },
           },
           {
             id: 'psy-sec3-u1-L4-Q6',
@@ -420,6 +487,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Exposure therapy presents the feared stimulus (CS) without the bad outcome (US), allowing the fear response to weaken through extinction.',
+            distractorExplanations: {
+              0: 'By pairing the feared stimulus with punishment is not correct here; exposure therapy presents the feared stimulus (CS) without the bad outcome.',
+              1: 'By avoiding the feared stimulus permanently is not correct here; exposure therapy presents the feared stimulus (CS) without the bad outcome (US),.',
+              3: 'By replacing the CS with a different stimulus is not correct here; exposure therapy presents the feared stimulus (CS) without the bad outcome.',
+            },
           },
         ],
       },
@@ -445,6 +517,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Stimulus generalization means responding to stimuli that are similar to the original conditioned stimulus.',
             correctAnswer: true,
             explanation: 'Generalization extends the conditioned response to stimuli that resemble the original CS.',
+            distractorExplanations: {
+              1: 'Generalization extends the conditioned response to stimuli that resemble the original CS.',
+            },
           },
           {
             id: 'psy-sec3-u1-L5-Q2',
@@ -459,6 +534,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Albert\'s fear spread to objects that shared features (white, furry) with the original CS. This is stimulus generalization.',
+            distractorExplanations: {
+              0: 'Stimulus discrimination is not correct here; albert\'s fear spread to objects that shared features (white, furry) with the original CS.',
+              1: 'Extinction of the fear response is not correct here; albert\'s fear spread to objects that shared features (white, furry) with the original CS.',
+              3: 'Spontaneous recovery of an old fear is not correct here; albert\'s fear spread to objects that shared features (white, furry) with the original CS.',
+            },
           },
           {
             id: 'psy-sec3-u1-L5-T2',
@@ -508,6 +588,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Generalization is useful because threats often share features. Responding to similar stimuli can keep you safe.',
+            distractorExplanations: {
+              0: 'It erases unnecessary fears is not correct here; generalization is useful because threats often share features.',
+              2: 'It prevents all emotional responses is not correct here; generalization is useful because threats often share features.',
+              3: 'It makes learning slower but more accurate is not correct here; generalization is useful because threats often share features.',
+            },
           },
           {
             id: 'psy-sec3-u1-L5-Q6',
@@ -566,6 +651,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Operant conditioning is about learning from the consequences of your actions.',
             correctAnswer: true,
             explanation: 'Operant conditioning focuses on how outcomes (rewards and punishments) influence whether behaviors are repeated.',
+            distractorExplanations: {
+              1: 'Operant conditioning focuses on how outcomes (rewards and punishments) influence whether behaviors are repeated.',
+            },
           },
           {
             id: 'psy-sec3-u2-L1-Q2',
@@ -579,6 +667,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Classical conditioning pairs stimuli to create automatic responses. Operant conditioning uses consequences to shape voluntary behavior.',
+            distractorExplanations: {
+              1: 'This is not accurate; classical conditioning pairs stimuli to create automatic responses.',
+              2: 'Operant requires a bell, classical requires food is not correct here; classical conditioning pairs stimuli to create automatic responses.',
+              3: 'Operant is faster, classical takes weeks is not correct here; classical conditioning pairs stimuli to create automatic responses.',
+            },
           },
           {
             id: 'psy-sec3-u2-L1-T2',
@@ -628,6 +721,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The Skinner box (operant chamber) allowed precise measurement of how rewards and punishments influenced behavior.',
+            distractorExplanations: {
+              0: 'Pairing bells with food for dogs is not correct here; the Skinner box (operant chamber) allowed precise measurement of how rewards and.',
+              2: 'Testing IQ in laboratory animals is not correct here; the Skinner box (operant chamber) allowed precise measurement of how rewards and.',
+              3: 'Studying how animals sleep is not correct here; the Skinner box (operant chamber) allowed precise measurement of how rewards and punishments.',
+            },
           },
           {
             id: 'psy-sec3-u2-L1-Q6',
@@ -642,6 +740,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The tantrum led to candy (reward), which increased the tantrum behavior. This is operant conditioning.',
+            distractorExplanations: {
+              0: 'Classical conditioning created by the store environment is not correct here; the tantrum led to candy (reward), which increased the tantrum.',
+              2: 'Stimulus generalization from a different fear is not correct here; the tantrum led to candy (reward), which increased the tantrum behavior.',
+              3: 'Extinction of appropriate behavior is not correct here; the tantrum led to candy (reward), which increased the tantrum behavior.',
+            },
           },
         ],
       },
@@ -667,6 +770,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Negative reinforcement means punishing someone for bad behavior.',
             correctAnswer: false,
             explanation: 'Negative reinforcement removes something unpleasant, which increases behavior. It\'s not punishment. "Negative" means subtraction, not "bad."',
+            distractorExplanations: {
+              0: 'Negative reinforcement removes something unpleasant, which increases behavior. It\'s not punishment. "Negative" means subtraction, not "bad.".',
+            },
           },
           {
             id: 'psy-sec3-u2-L2-Q2',
@@ -680,6 +786,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The good grade was added as a desirable consequence, increasing studying behavior. This is positive reinforcement.',
+            distractorExplanations: {
+              1: 'Negative reinforcement (bad grade was removed) is not correct here; the good grade was added as a desirable consequence, increasing studying.',
+              2: 'Positive punishment (studying was added) is not correct here; the good grade was added as a desirable consequence, increasing studying behavior.',
+              3: 'Negative punishment (free time was removed) is not correct here; the good grade was added as a desirable consequence, increasing studying.',
+            },
           },
           {
             id: 'psy-sec3-u2-L2-T2',
@@ -700,6 +811,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The unpleasant stinging was removed by the sunscreen, increasing the behavior of applying it. This is negative reinforcement.',
+            distractorExplanations: {
+              0: 'Positive reinforcement (sunscreen was added) is not correct here; the unpleasant stinging was removed by the sunscreen, increasing the behavior.',
+              2: 'Positive punishment (stinging was added) is not correct here; the unpleasant stinging was removed by the sunscreen, increasing the behavior of.',
+              3: 'No reinforcement occurred is not correct here; the unpleasant stinging was removed by the sunscreen, increasing the behavior of applying it.',
+            },
           },
           {
             id: 'psy-sec3-u2-L2-Q4',
@@ -754,6 +870,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Whether you add a reward or remove discomfort, the result is the same: the behavior increases.',
+            distractorExplanations: {
+              0: 'Both add something to the environment is not correct here; whether you add a reward or remove discomfort, the result is the same: the behavior.',
+              1: 'Both remove something from the environment is not correct here; whether you add a reward or remove discomfort, the result is the same: the.',
+              3: 'Both are forms of punishment is not correct here; whether you add a reward or remove discomfort, the result is the same: the behavior increases.',
+            },
           },
         ],
       },
@@ -779,6 +900,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Positive punishment adds something unpleasant to decrease a behavior.',
             correctAnswer: true,
             explanation: 'Positive punishment adds an aversive consequence (like a fine or extra chores) to reduce a behavior.',
+            distractorExplanations: {
+              1: 'Positive punishment adds an aversive consequence (like a fine or extra chores) to reduce a behavior.',
+            },
           },
           {
             id: 'psy-sec3-u2-L3-Q2',
@@ -792,6 +916,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Something desirable (car privileges) was removed to decrease the curfew-breaking behavior. This is negative punishment.',
+            distractorExplanations: {
+              0: 'Positive reinforcement is not correct here; something desirable (car privileges) was removed to decrease the curfew-breaking behavior.',
+              1: 'Negative reinforcement is not correct here; something desirable (car privileges) was removed to decrease the curfew-breaking behavior.',
+              2: 'Positive punishment is not correct here; something desirable (car privileges) was removed to decrease the curfew-breaking behavior.',
+            },
           },
           {
             id: 'psy-sec3-u2-L3-T2',
@@ -841,6 +970,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Punishment suppresses behavior but doesn\'t teach the desired alternative. Reinforcement is more effective for long-term change.',
+            distractorExplanations: {
+              0: 'This is too narrow; punishment suppresses behavior but doesn\'t teach the desired alternative. Reinforcement is more effective for long-term change.',
+              2: 'This is too absolute; punishment suppresses behavior but doesn\'t teach the desired alternative.',
+              3: 'This is too narrow; punishment suppresses behavior but doesn\'t teach the desired alternative. Reinforcement is more effective for long-term change.',
+            },
           },
           {
             id: 'psy-sec3-u2-L3-Q6',
@@ -855,6 +989,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The burn (something unpleasant) was added as a consequence, decreasing the touching behavior. This is positive punishment.',
+            distractorExplanations: {
+              0: 'Positive reinforcement (heat was added) is not correct here; the burn (something unpleasant) was added as a consequence, decreasing the touching.',
+              1: 'Negative reinforcement (heat was removed) is not correct here; the burn (something unpleasant) was added as a consequence, decreasing the.',
+              3: 'Negative punishment (comfort was removed) is not correct here; the burn (something unpleasant) was added as a consequence, decreasing the.',
+            },
           },
         ],
       },
@@ -880,6 +1019,9 @@ export const psySection3Part1: Unit[] = [
             question: 'In shaping, you reinforce each small step toward the desired behavior.',
             correctAnswer: true,
             explanation: 'Shaping works by rewarding successive approximations, gradually guiding behavior toward the final goal.',
+            distractorExplanations: {
+              1: 'Shaping works by rewarding successive approximations, gradually guiding behavior toward the final goal.',
+            },
           },
           {
             id: 'psy-sec3-u2-L4-Q2',
@@ -893,6 +1035,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Successive approximations are behaviors that come progressively closer to the desired goal. Each one is reinforced in turn.',
+            distractorExplanations: {
+              0: 'Guesses about what behavior might work is not correct here; successive approximations are behaviors that come progressively closer to the desired.',
+              2: 'Failed attempts that are punished is not correct here; successive approximations are behaviors that come progressively closer to the desired goal.',
+              3: 'Random behaviors that happen by chance is not correct here; successive approximations are behaviors that come progressively closer to the desired.',
+            },
           },
           {
             id: 'psy-sec3-u2-L4-T2',
@@ -926,6 +1073,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The trainer reinforced increasingly close versions of the target behavior (jumping through the hoop). This is shaping.',
+            distractorExplanations: {
+              0: 'Classical conditioning with a neutral stimulus is not correct here; the trainer reinforced increasingly close versions of the target behavior.',
+              2: 'Negative punishment by removing fish is not correct here; the trainer reinforced increasingly close versions of the target behavior (jumping.',
+              3: 'Extinction of unwanted swimming patterns is not correct here; the trainer reinforced increasingly close versions of the target behavior (jumping.',
+            },
           },
           {
             id: 'psy-sec3-u2-L4-T3',
@@ -953,6 +1105,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'If the bar is raised too fast, the learner can\'t earn reinforcement, which may cause the behavior to drop off entirely.',
+            distractorExplanations: {
+              0: 'The animal learns faster from the challenge is not correct here; if the bar is raised too fast, the learner can\'t earn reinforcement, which may.',
+              2: 'The animal switches to classical conditioning is not correct here; if the bar is raised too fast, the learner can\'t earn reinforcement, which may.',
+              3: 'Spontaneous recovery occurs automatically is not correct here; if the bar is raised too fast, the learner can\'t earn reinforcement, which may.',
+            },
           },
         ],
       },
@@ -1003,6 +1160,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Gold stars are added (positive reinforcement) to increase homework. Recess is removed (negative punishment) to decrease disruption.',
+            distractorExplanations: {
+              0: 'Both are positive reinforcement is not correct here; gold stars are added (positive reinforcement) to increase homework.',
+              2: 'Both are negative reinforcement is not correct here; gold stars are added (positive reinforcement) to increase homework.',
+              3: 'This is not accurate; gold stars are added (positive reinforcement) to increase homework.',
+            },
           },
           {
             id: 'psy-sec3-u2-L5-T2',
@@ -1038,6 +1200,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Food is positive reinforcement. It adds something desirable after lever pressing, so the behavior increases.',
+            distractorExplanations: {
+              0: 'The rat will press the lever less often is not correct here; food is positive reinforcement.',
+              2: 'The rat will avoid the lever entirely is not correct here; food is positive reinforcement.',
+              3: 'The rat will develop a fear of the lever is not correct here; food is positive reinforcement.',
+            },
           },
           {
             id: 'psy-sec3-u2-L5-T3',
@@ -1057,6 +1224,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Social media delivers rewards (likes, messages) unpredictably. This variable reinforcement pattern is highly resistant to extinction.',
+            distractorExplanations: {
+              0: 'Classical conditioning from the phone\'s color is not correct here; social media delivers rewards (likes, messages) unpredictably.',
+              2: 'Negative punishment from not checking is not correct here; social media delivers rewards (likes, messages) unpredictably.',
+              3: 'Stimulus generalization from other devices is not correct here; social media delivers rewards (likes, messages) unpredictably.',
+            },
           },
           {
             id: 'psy-sec3-u2-L5-Q6',
@@ -1104,6 +1276,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Continuous reinforcement means rewarding a behavior every single time it occurs.',
             correctAnswer: true,
             explanation: 'Continuous reinforcement provides a reward after every correct response. It\'s best for teaching new behaviors quickly.',
+            distractorExplanations: {
+              1: 'Continuous reinforcement provides a reward after every correct response. It\'s best for teaching new behaviors quickly.',
+            },
           },
           {
             id: 'psy-sec3-u3-L1-Q2',
@@ -1117,6 +1292,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Partial reinforcement makes behaviors more resistant to extinction because the learner is used to not being rewarded every time.',
+            distractorExplanations: {
+              0: 'Continuous reinforcement is not correct here; partial reinforcement makes behaviors more resistant to extinction because the learner is used to.',
+              2: 'Both are equally effective is not correct here; partial reinforcement makes behaviors more resistant to extinction because the learner is used to.',
+              3: 'Neither creates extinction resistance is not correct here; partial reinforcement makes behaviors more resistant to extinction because the learner.',
+            },
           },
           {
             id: 'psy-sec3-u3-L1-T2',
@@ -1167,6 +1347,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Continuously reinforced behaviors extinguish quickly once rewards stop. Switching to partial reinforcement would have made the behavior more durable.',
+            distractorExplanations: {
+              1: 'This is not accurate; continuously reinforced behaviors extinguish quickly once rewards stop.',
+              2: 'The treats acted as punishment instead of reinforcement is not correct here; continuously reinforced behaviors extinguish quickly once rewards.',
+              3: 'The child generalized the behavior to other rooms is not correct here; continuously reinforced behaviors extinguish quickly once rewards stop.',
+            },
           },
           {
             id: 'psy-sec3-u3-L1-Q6',
@@ -1180,6 +1365,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Gambling operates on partial reinforcement. Occasional, unpredictable wins keep the behavior going despite frequent losses.',
+            distractorExplanations: {
+              0: 'Continuous reinforcement from the casino lights is not correct here; gambling operates on partial reinforcement.',
+              1: 'Negative punishment from losing money is not correct here; gambling operates on partial reinforcement.',
+              3: 'Classical conditioning from the sound of coins is not correct here; gambling operates on partial reinforcement.',
+            },
           },
         ],
       },
@@ -1205,6 +1395,9 @@ export const psySection3Part1: Unit[] = [
             question: 'In a fixed ratio schedule, the number of responses needed for reinforcement stays the same.',
             correctAnswer: true,
             explanation: 'Fixed ratio means a consistent, predictable number of responses is required. For example, every 10th lever press earns a reward.',
+            distractorExplanations: {
+              1: 'Fixed ratio means a consistent, predictable number of responses is required. For example, every 10th lever press earns a reward.',
+            },
           },
           {
             id: 'psy-sec3-u3-L2-Q2',
@@ -1218,6 +1411,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The reward comes after a fixed number of responses (50 items). This is a fixed ratio schedule.',
+            distractorExplanations: {
+              0: 'Fixed interval is not correct here; the reward comes after a fixed number of responses (50 items). This is a fixed ratio schedule.',
+              1: 'Variable interval is not correct here; the reward comes after a fixed number of responses (50 items). This is a fixed ratio schedule.',
+              3: 'Variable ratio is not correct here; the reward comes after a fixed number of responses (50 items). This is a fixed ratio schedule.',
+            },
           },
           {
             id: 'psy-sec3-u3-L2-T2',
@@ -1238,6 +1436,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The number of calls between sales varies unpredictably, making this a variable ratio schedule.',
+            distractorExplanations: {
+              0: 'This is too absolute; the number of calls between sales varies unpredictably, making this a variable ratio schedule.',
+              2: 'This is too absolute; the number of calls between sales varies unpredictably, making this a variable ratio schedule.',
+              3: 'This is too absolute; the number of calls between sales varies unpredictably, making this a variable ratio schedule.',
+            },
           },
           {
             id: 'psy-sec3-u3-L2-Q4',
@@ -1265,6 +1468,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'After receiving a reward on a fixed ratio schedule, the learner knows many responses are needed before the next reward, causing a brief pause.',
+            distractorExplanations: {
+              0: 'The learner forgets what to do after getting the reward is not correct here; after receiving a reward on a fixed ratio schedule, the learner.',
+              2: 'The reinforcement causes physical exhaustion is not correct here; after receiving a reward on a fixed ratio schedule, the learner knows many.',
+              3: 'Fixed ratio only works during certain time periods is not correct here; after receiving a reward on a fixed ratio schedule, the learner knows.',
+            },
           },
           {
             id: 'psy-sec3-u3-L2-Q6',
@@ -1306,6 +1514,9 @@ export const psySection3Part1: Unit[] = [
             question: 'In a fixed interval schedule, reinforcement is available after a set amount of time passes.',
             correctAnswer: true,
             explanation: 'Fixed interval schedules make reinforcement available after a predictable time period. The first response after that time is rewarded.',
+            distractorExplanations: {
+              1: 'Fixed interval schedules make reinforcement available after a predictable time period. The first response after that time is rewarded.',
+            },
           },
           {
             id: 'psy-sec3-u3-L3-Q2',
@@ -1319,6 +1530,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A biweekly paycheck comes after a fixed time period, regardless of how much work was done. This is a fixed interval schedule.',
+            distractorExplanations: {
+              0: 'Fixed ratio is not correct here; a biweekly paycheck comes after a fixed time period, regardless of how much work was done.',
+              1: 'Variable ratio is not correct here; a biweekly paycheck comes after a fixed time period, regardless of how much work was done.',
+              3: 'Variable interval is not correct here; a biweekly paycheck comes after a fixed time period, regardless of how much work was done.',
+            },
           },
           {
             id: 'psy-sec3-u3-L3-T2',
@@ -1339,6 +1555,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The exam is a fixed interval reward. Effort is low right after one exam and increases as the next one approaches, creating the classic scallop pattern.',
+            distractorExplanations: {
+              0: 'Variable ratio: studying varies unpredictably is not correct here; the exam is a fixed interval reward.',
+              2: 'This is too absolute; the exam is a fixed interval reward. Effort is low right after one exam and increases as the next one approaches, creating.',
+              3: 'Fixed ratio: they study a set number of pages is not correct here; the exam is a fixed interval reward.',
+            },
           },
           {
             id: 'psy-sec3-u3-L3-Q4',
@@ -1412,6 +1633,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Ratio schedules generally produce higher response rates than interval schedules.',
             correctAnswer: true,
             explanation: 'Because ratio schedules reward based on number of responses, faster responding leads to faster rewards. Interval schedules depend on time, so extra responding doesn\'t help.',
+            distractorExplanations: {
+              1: 'Because ratio schedules reward based on number of responses, faster responding leads to faster rewards. Interval schedules depend on time, so extra responding doesn\'t help.',
+            },
           },
           {
             id: 'psy-sec3-u3-L4-Q2',
@@ -1450,6 +1674,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Variable ratio is most resistant to extinction, followed by fixed ratio. Variable schedules generally outlast fixed ones.',
+            distractorExplanations: {
+              1: 'This is not accurate; variable ratio is most resistant to extinction, followed by fixed ratio. Variable schedules generally outlast fixed ones.',
+              2: 'This is not accurate; variable ratio is most resistant to extinction, followed by fixed ratio. Variable schedules generally outlast fixed ones.',
+              3: 'This is not accurate; variable ratio is most resistant to extinction, followed by fixed ratio. Variable schedules generally outlast fixed ones.',
+            },
           },
           {
             id: 'psy-sec3-u3-L4-Q4',
@@ -1464,6 +1693,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Variable interval creates steady, consistent checking because the reward (important message) could arrive at any time.',
+            distractorExplanations: {
+              0: 'Fixed interval: check once per hour is not correct here; variable interval creates steady, consistent checking because the reward (important.',
+              1: 'This is too absolute; variable interval creates steady, consistent checking because the reward (important message) could arrive at any time.',
+              3: 'This is too absolute; variable interval creates steady, consistent checking because the reward (important message) could arrive at any time.',
+            },
           },
           {
             id: 'psy-sec3-u3-L4-T3',
@@ -1499,6 +1733,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'On ratio schedules, more responses mean more rewards. On interval schedules, responding faster doesn\'t help because time must pass first.',
+            distractorExplanations: {
+              0: 'Ratio schedules use bigger rewards is not correct here; on ratio schedules, more responses mean more rewards.',
+              2: 'Interval schedules only work on animals is not correct here; on ratio schedules, more responses mean more rewards.',
+              3: 'This is too absolute; on ratio schedules, more responses mean more rewards.',
+            },
           },
         ],
       },
@@ -1530,6 +1769,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Random loot drops come after an unpredictable number of actions, making this a variable ratio schedule. It\'s the most engaging schedule.',
+            distractorExplanations: {
+              0: 'This is too absolute; random loot drops come after an unpredictable number of actions, making this a variable ratio schedule.',
+              1: 'This is too absolute; random loot drops come after an unpredictable number of actions, making this a variable ratio schedule.',
+              3: 'This is too absolute; random loot drops come after an unpredictable number of actions, making this a variable ratio schedule.',
+            },
           },
           {
             id: 'psy-sec3-u3-L5-Q2',
@@ -1544,6 +1788,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The reward comes after a fixed number of purchases (8). This is a fixed ratio schedule.',
+            distractorExplanations: {
+              0: 'Variable ratio with unpredictable rewards is not correct here; the reward comes after a fixed number of purchases (8).',
+              2: 'Fixed interval with a time-based reward is not correct here; the reward comes after a fixed number of purchases (8). This is a fixed ratio schedule.',
+              3: 'Variable interval with random free coffees is not correct here; the reward comes after a fixed number of purchases (8).',
+            },
           },
           {
             id: 'psy-sec3-u3-L5-T2',
@@ -1593,6 +1842,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Start with continuous reinforcement for fast learning, then switch to partial reinforcement for durability.',
+            distractorExplanations: {
+              0: 'Only reward yourself randomly from the start is not correct here; start with continuous reinforcement for fast learning, then switch to partial.',
+              2: 'This is too absolute; start with continuous reinforcement for fast learning, then switch to partial reinforcement for durability.',
+              3: 'Use punishment when you skip a workout is not correct here; start with continuous reinforcement for fast learning, then switch to partial.',
+            },
           },
           {
             id: 'psy-sec3-u3-L5-Q6',
@@ -1676,6 +1930,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The fear response spread from one specific dog to all dogs. This is stimulus generalization.',
+            distractorExplanations: {
+              0: 'Stimulus discrimination is not correct here; the fear response spread from one specific dog to all dogs. This is stimulus generalization.',
+              2: 'Extinction is not correct here; the fear response spread from one specific dog to all dogs. This is stimulus generalization.',
+              3: 'Spontaneous recovery is not correct here; the fear response spread from one specific dog to all dogs. This is stimulus generalization.',
+            },
           },
           {
             id: 'psy-sec3-u4-L1-T2',
@@ -1695,6 +1954,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The brief return of an extinguished CR after a rest period is spontaneous recovery.',
+            distractorExplanations: {
+              0: 'New conditioning from a different elevator is not correct here; the brief return of an extinguished CR after a rest period is spontaneous recovery.',
+              1: 'Stimulus generalization to all enclosed spaces is not correct here; the brief return of an extinguished CR after a rest period is spontaneous.',
+              3: 'Proof that the therapy failed completely is not correct here; the brief return of an extinguished CR after a rest period is spontaneous recovery.',
+            },
           },
           {
             id: 'psy-sec3-u4-L1-Q4',
@@ -1779,6 +2043,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Something unpleasant (nagging) was removed, and the behavior (cleaning) increased. This is negative reinforcement.',
+            distractorExplanations: {
+              0: 'Positive reinforcement (nagging was added) is not correct here; something unpleasant (nagging) was removed, and the behavior (cleaning) increased.',
+              2: 'Positive punishment (cleaning was added) is not correct here; something unpleasant (nagging) was removed, and the behavior (cleaning) increased.',
+              3: 'Negative punishment (nagging was removed) is not correct here; something unpleasant (nagging) was removed, and the behavior (cleaning) increased.',
+            },
           },
           {
             id: 'psy-sec3-u4-L2-T2',
@@ -1798,6 +2067,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Classical conditioning creates automatic associations. Operant conditioning shapes voluntary behavior through consequences.',
+            distractorExplanations: {
+              0: 'This is not accurate; classical conditioning creates automatic associations. Operant conditioning shapes voluntary behavior through consequences.',
+              2: 'Classical uses rewards, operant uses only punishment is not correct here; classical conditioning creates automatic associations.',
+              3: 'Classical is faster than operant conditioning is not correct here; classical conditioning creates automatic associations.',
+            },
           },
           {
             id: 'psy-sec3-u4-L2-Q4',
@@ -1838,6 +2112,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Punishment suppresses unwanted behavior but doesn\'t teach the desired alternative. Reinforcement is better for lasting change.',
+            distractorExplanations: {
+              0: 'This is too absolute; punishment suppresses unwanted behavior but doesn\'t teach the desired alternative. Reinforcement is better for lasting change.',
+              1: 'Punishment only works on children is not correct here; punishment suppresses unwanted behavior but doesn\'t teach the desired alternative.',
+              3: 'Punishment is more expensive than reinforcement is not correct here; punishment suppresses unwanted behavior but doesn\'t teach the desired.',
+            },
           },
         ],
       },
@@ -1887,6 +2166,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Variable ratio produces the highest and most consistent response rates because the next reward could come at any moment.',
+            distractorExplanations: {
+              0: 'Fixed ratio is not correct here; variable ratio produces the highest and most consistent response rates because the next reward could come at any.',
+              2: 'Fixed interval is not correct here; variable ratio produces the highest and most consistent response rates because the next reward could come at.',
+              3: 'Variable interval is not correct here; variable ratio produces the highest and most consistent response rates because the next reward could come.',
+            },
           },
           {
             id: 'psy-sec3-u4-L3-T2',
@@ -1907,6 +2191,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The partial reinforcement extinction effect: behaviors maintained on partial schedules are more persistent than continuously reinforced ones.',
+            distractorExplanations: {
+              1: 'Stimulus generalization across machines is not correct here; the partial reinforcement extinction effect: behaviors maintained on partial.',
+              2: 'Negative punishment from the vending machine is not correct here; the partial reinforcement extinction effect: behaviors maintained on partial.',
+              3: 'Classical conditioning from machine sounds is not correct here; the partial reinforcement extinction effect: behaviors maintained on partial.',
+            },
           },
           {
             id: 'psy-sec3-u4-L3-Q4',
@@ -1937,6 +2226,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Fixed interval schedules produce a scallop pattern. Effort drops after reinforcement and increases as the next one approaches.',
+            distractorExplanations: {
+              0: 'Variable ratio: unpredictable exam timing is not correct here; fixed interval schedules produce a scallop pattern.',
+              2: 'Fixed ratio: studying a set number of chapters is not correct here; fixed interval schedules produce a scallop pattern.',
+              3: 'This is too absolute; fixed interval schedules produce a scallop pattern. Effort drops after reinforcement and increases as the next one approaches.',
+            },
           },
           {
             id: 'psy-sec3-u4-L3-Q6',
@@ -1950,6 +2244,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Start with continuous reinforcement to establish the behavior, then switch to partial reinforcement to make it durable.',
+            distractorExplanations: {
+              0: 'Use only punishment for missed workouts is not correct here; start with continuous reinforcement to establish the behavior, then switch to.',
+              2: 'Use only variable interval reinforcement from the start is not correct here; start with continuous reinforcement to establish the behavior, then.',
+              3: 'This is too absolute; start with continuous reinforcement to establish the behavior, then switch to partial reinforcement to make it durable.',
+            },
           },
         ],
       },
@@ -1989,6 +2288,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Observational learning requires direct reinforcement or punishment to work.',
             correctAnswer: false,
             explanation: 'Observational learning does not require direct reinforcement. You learn by watching what happens to others, not by experiencing consequences yourself.',
+            distractorExplanations: {
+              0: 'Observational learning does not require direct reinforcement. You learn by watching what happens to others, not by experiencing consequences yourself.',
+            },
           },
           {
             id: 'psy-sec3-u5-L1-Q2',
@@ -2002,6 +2304,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'In operant conditioning, you learn from your own consequences. In observational learning, you learn from watching others\' experiences.',
+            distractorExplanations: {
+              0: 'Observational learning only works on children is not correct here; in operant conditioning, you learn from your own consequences.',
+              2: 'This is too absolute; in operant conditioning, you learn from your own consequences.',
+              3: 'This is not accurate; in operant conditioning, you learn from your own consequences.',
+            },
           },
           {
             id: 'psy-sec3-u5-L1-T2',
@@ -2051,6 +2358,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Watching videos and imitating the techniques is classic observational learning. No direct reward or punishment is needed.',
+            distractorExplanations: {
+              0: 'This reasoning is flawed; watching videos and imitating the techniques is classic observational learning. No direct reward or punishment is needed.',
+              1: 'This is not accurate; watching videos and imitating the techniques is classic observational learning. No direct reward or punishment is needed.',
+              3: 'This is not accurate; watching videos and imitating the techniques is classic observational learning. No direct reward or punishment is needed.',
+            },
           },
           {
             id: 'psy-sec3-u5-L1-Q6',
@@ -2065,6 +2377,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The new employee learned a behavior by observing others, not through direct consequences. This is observational learning.',
+            distractorExplanations: {
+              0: 'Classical conditioning from the customer interaction is not correct here; the new employee learned a behavior by observing others, not through.',
+              1: 'Negative reinforcement from avoiding conflict is not correct here; the new employee learned a behavior by observing others, not through direct.',
+              3: 'Shaping through successive approximations is not correct here; the new employee learned a behavior by observing others, not through direct.',
+            },
           },
         ],
       },
@@ -2090,6 +2407,9 @@ export const psySection3Part1: Unit[] = [
             question: 'In the Bobo doll study, all children saw the same adult behavior before being left with the doll.',
             correctAnswer: false,
             explanation: 'Children were divided into groups. Some saw aggressive behavior, some saw calm behavior, and a control group saw no model at all.',
+            distractorExplanations: {
+              0: 'Children were divided into groups. Some saw aggressive behavior, some saw calm behavior, and a control group saw no model at all.',
+            },
           },
           {
             id: 'psy-sec3-u5-L2-Q2',
@@ -2103,6 +2423,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Children who saw aggressive behavior imitated it, hitting, kicking, and yelling at the doll in the same ways the model had.',
+            distractorExplanations: {
+              0: 'They played calmly and ignored the doll is not correct here; children who saw aggressive behavior imitated it, hitting, kicking, and yelling at.',
+              1: 'They left the room because they were scared is not correct here; children who saw aggressive behavior imitated it, hitting, kicking, and yelling.',
+              3: 'They showed no difference from the control group is not correct here; children who saw aggressive behavior imitated it, hitting, kicking, and.',
+            },
           },
           {
             id: 'psy-sec3-u5-L2-T2',
@@ -2122,6 +2447,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The study demonstrated that observation alone, without direct reinforcement, is sufficient for learning new behaviors.',
+            distractorExplanations: {
+              0: 'This is not accurate; the study demonstrated that observation alone, without direct reinforcement, is sufficient for learning new behaviors.',
+              2: 'This is not accurate; the study demonstrated that observation alone, without direct reinforcement, is sufficient for learning new behaviors.',
+              3: 'It proved that aggression is entirely genetic is not correct here; the study demonstrated that observation alone, without direct reinforcement,.',
+            },
           },
           {
             id: 'psy-sec3-u5-L2-Q4',
@@ -2163,6 +2493,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The child changed behavior after watching the sibling\'s punishment. This is vicarious punishment, a form of observational learning.',
+            distractorExplanations: {
+              0: 'Direct positive reinforcement for politeness is not correct here; the child changed behavior after watching the sibling\'s punishment.',
+              2: 'Classical conditioning from the parents\' anger is not correct here; the child changed behavior after watching the sibling\'s punishment.',
+              3: 'Extinction of the talking-back behavior is not correct here; the child changed behavior after watching the sibling\'s punishment.',
+            },
           },
         ],
       },
@@ -2207,6 +2542,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The child paid attention and presumably remembers, but can\'t physically perform the cooking tasks. The reproduction step failed.',
+            distractorExplanations: {
+              0: 'Attention (they didn\'t notice the steps) is not correct here; the child paid attention and presumably remembers, but can\'t physically perform the.',
+              1: 'Retention (they forgot the recipe) is not correct here; the child paid attention and presumably remembers, but can\'t physically perform the.',
+              3: 'Motivation (they don\'t want to cook) is not correct here; the child paid attention and presumably remembers, but can\'t physically perform the.',
+            },
           },
           {
             id: 'psy-sec3-u5-L3-T2',
@@ -2227,6 +2567,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The student observed, remembered, and has the ability, but lacks motivation to perform the behavior.',
+            distractorExplanations: {
+              0: 'Attention: they didn\'t watch carefully is not correct here; the student observed, remembered, and has the ability, but lacks motivation to.',
+              1: 'Retention: they forgot the techniques is not correct here; the student observed, remembered, and has the ability, but lacks motivation to perform.',
+              2: 'Reproduction: they lack the skills is not correct here; the student observed, remembered, and has the ability, but lacks motivation to perform.',
+            },
           },
           {
             id: 'psy-sec3-u5-L3-Q4',
@@ -2301,6 +2646,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Observational learning can only produce negative or aggressive behaviors.',
             correctAnswer: false,
             explanation: 'Observational learning produces both prosocial (helpful, kind) and antisocial (aggressive, harmful) behaviors depending on the model.',
+            distractorExplanations: {
+              0: 'Observational learning produces both prosocial (helpful, kind) and antisocial (aggressive, harmful) behaviors depending on the model.',
+            },
           },
           {
             id: 'psy-sec3-u5-L4-Q2',
@@ -2336,6 +2684,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Media characters act as models. Viewers observe behaviors and consequences, which can influence their own actions.',
+            distractorExplanations: {
+              0: 'There is a real effect here; media characters act as models. Viewers observe behaviors and consequences, which can influence their own actions.',
+              2: 'Media only affects children under age 5 is not correct here; media characters act as models.',
+              3: 'Media can only teach prosocial behavior, not antisocial is not correct here; media characters act as models.',
+            },
           },
           {
             id: 'psy-sec3-u5-L4-Q4',
@@ -2350,6 +2703,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The kindness ambassadors serve as prosocial models. Other students observe and imitate their helpful behavior.',
+            distractorExplanations: {
+              0: 'Classical conditioning from the school bell is not correct here; the kindness ambassadors serve as prosocial models.',
+              2: 'Negative reinforcement from avoiding punishment is not correct here; the kindness ambassadors serve as prosocial models.',
+              3: 'Extinction of antisocial behavior is not correct here; the kindness ambassadors serve as prosocial models.',
+            },
           },
           {
             id: 'psy-sec3-u5-L4-T3',
@@ -2369,6 +2727,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Actions are powerful models. Children learn more from what they see adults actually do than from what adults tell them to do.',
+            distractorExplanations: {
+              0: 'Children can\'t understand language until age 7 is not correct here; actions are powerful models.',
+              2: 'This is too absolute; actions are powerful models. Children learn more from what they see adults actually do than from what adults tell them to do.',
+              3: 'This is not accurate; actions are powerful models. Children learn more from what they see adults actually do than from what adults tell them to do.',
+            },
           },
           {
             id: 'psy-sec3-u5-L4-Q6',
@@ -2402,6 +2765,9 @@ export const psySection3Part1: Unit[] = [
             question: 'Most cultural norms are learned through formal classroom instruction.',
             correctAnswer: false,
             explanation: 'Cultural norms are primarily learned through observational learning. You absorb them by watching family, peers, and community members.',
+            distractorExplanations: {
+              0: 'Cultural norms are primarily learned through observational learning. You absorb them by watching family, peers, and community members.',
+            },
           },
           {
             id: 'psy-sec3-u5-L5-Q2',
@@ -2415,6 +2781,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Children learn language primarily by observing and imitating speakers around them. Formal instruction comes much later.',
+            distractorExplanations: {
+              0: 'Through formal grammar lessons from parents is not correct here; children learn language primarily by observing and imitating speakers around.',
+              1: 'This is not accurate; children learn language primarily by observing and imitating speakers around them. Formal instruction comes much later.',
+              3: 'Through classical conditioning of sounds and meanings is not correct here; children learn language primarily by observing and imitating speakers.',
+            },
           },
           {
             id: 'psy-sec3-u5-L5-T2',
@@ -2484,6 +2855,11 @@ export const psySection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Real situations often involve multiple learning types. Watching is observational, the smell association is classical, and the cookie reward is operant.',
+            distractorExplanations: {
+              0: 'This is too narrow; real situations often involve multiple learning types.',
+              1: 'This is too narrow; real situations often involve multiple learning types.',
+              3: 'This is too narrow; real situations often involve multiple learning types.',
+            },
           },
         ],
       },

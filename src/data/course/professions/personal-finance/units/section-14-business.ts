@@ -40,6 +40,9 @@ export const financeSection14Business: Unit[] = [
             question: "A side hustle is only a real business if you quit your day job.",
             correctAnswer: false,
             explanation: "A side hustle is a business regardless of whether it's your primary income. The tax rules apply either way.",
+            distractorExplanations: {
+              0: 'A side hustle is a business regardless of whether it\'s your primary income. The tax rules apply either way.',
+            },
           },
           {
             id: "fin-sec14-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When you're self-employed, no employer withholds taxes or provides benefits. You're responsible for all of it.",
+            distractorExplanations: {
+              0: 'When you\'re self-employed, no employer withholds taxes or provides benefits. You\'re responsible for all of it.',
+              2: 'This reasoning is flawed; when you\'re self-employed, no employer withholds taxes or provides benefits. You\'re responsible for all of it.',
+              3: 'When you\'re self-employed, no employer withholds taxes or provides benefits. You\'re responsible for all of it.',
+            },
           },
           {
             id: "fin-sec14-u1-L1-T2",
@@ -103,6 +111,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without tracking, Jamie will lose receipts and forget deductible expenses. Separating accounts makes tax time much easier.",
+            distractorExplanations: {
+              1: 'Without tracking, Jamie will lose receipts and forget deductible expenses. Separating accounts makes tax time much easier.',
+              2: 'This reasoning is flawed; without tracking, Jamie will lose receipts and forget deductible expenses. Separating accounts makes tax time much easier.',
+              3: 'This reasoning is flawed; without tracking, Jamie will lose receipts and forget deductible expenses. Separating accounts makes tax time much easier.',
+            },
           },
           {
             id: "fin-sec14-u1-L1-Q5",
@@ -155,6 +168,9 @@ export const financeSection14Business: Unit[] = [
             question: "Self-employed workers pay the same total payroll tax rate as traditional employees.",
             correctAnswer: false,
             explanation: "Self-employed workers pay both the employee and employer portions, roughly double what a regular employee sees deducted.",
+            distractorExplanations: {
+              0: 'Self-employed workers pay both the employee and employer portions, roughly double what a regular employee sees deducted.',
+            },
           },
           {
             id: "fin-sec14-u1-L2-Q2",
@@ -192,6 +208,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without an employer withholding taxes, the government requires you to pay as you go. Waiting until year-end can result in penalties.",
+            distractorExplanations: {
+              0: 'Without an employer withholding taxes, the government requires you to pay as you go. Waiting until year-end can result in penalties.',
+              2: 'This reasoning is flawed; without an employer withholding taxes, the government requires you to pay as you go.',
+              3: 'This reasoning is flawed; without an employer withholding taxes, the government requires you to pay as you go.',
+            },
           },
           {
             id: "fin-sec14-u1-L2-Q4",
@@ -206,6 +227,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Missing quarterly estimated payments typically triggers an underpayment penalty. The penalty is interest on what you should have paid each quarter.",
+            distractorExplanations: {
+              0: 'Missing quarterly estimated payments typically triggers an underpayment penalty. The penalty is interest on what you should have paid each quarter.',
+              2: 'This reasoning is flawed; missing quarterly estimated payments typically triggers an underpayment penalty.',
+              3: 'Missing quarterly estimated payments typically triggers an underpayment penalty. The penalty is interest on what you should have paid each quarter.',
+            },
           },
           {
             id: "fin-sec14-u1-L2-Q5",
@@ -253,6 +279,9 @@ export const financeSection14Business: Unit[] = [
             question: "A business deduction means the government pays for your expense.",
             correctAnswer: false,
             explanation: "A deduction reduces your taxable income. You still pay for the expense, but you pay less in taxes because of it.",
+            distractorExplanations: {
+              0: 'A deduction reduces your taxable income. You still pay for the expense, but you pay less in taxes because of it.',
+            },
           },
           {
             id: "fin-sec14-u1-L3-Q2",
@@ -300,6 +329,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An expense passes the test if others in your industry commonly have it (ordinary) and it helps you run your business (necessary).",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; an expense passes the test if others in your industry commonly have it (ordinary) and it helps you run your business.',
+              2: 'This reasoning is flawed; an expense passes the test if others in your industry commonly have it (ordinary) and it helps you run your business.',
+              3: 'This overgeneralizes; an expense passes the test if others in your industry commonly have it (ordinary) and it helps you run your business.',
+            },
           },
           {
             id: "fin-sec14-u1-L3-T3",
@@ -326,6 +360,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The simplified method allows $5 per square foot, up to 300 square feet. That's a maximum of $1,500 per year.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; the simplified method allows $5 per square foot, up to 300 square feet. That\'s a maximum of $1,500 per year.',
+              2: 'This calculation is incorrect; the simplified method allows $5 per square foot, up to 300 square feet. That\'s a maximum of $1,500 per year.',
+              3: 'This calculation is incorrect; the simplified method allows $5 per square foot, up to 300 square feet. That\'s a maximum of $1,500 per year.',
+            },
           },
           {
             id: "fin-sec14-u1-L3-Q6",
@@ -340,6 +379,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The dedicated office is fully deductible. The laptop is only partially deductible since it's used for both business and personal purposes.",
+            distractorExplanations: {
+              1: 'The dedicated office is fully deductible. The laptop is only partially deductible since it\'s used for both business and personal purposes.',
+              2: 'The dedicated office is fully deductible. The laptop is only partially deductible since it\'s used for both business and personal purposes.',
+              3: 'This reasoning is flawed; the dedicated office is fully deductible.',
+            },
           },
         ],
       },
@@ -365,6 +409,9 @@ export const financeSection14Business: Unit[] = [
             question: "An invoice must include a unique invoice number to keep your records organized.",
             correctAnswer: true,
             explanation: "Invoice numbers help you track payments, follow up on late ones, and keep clean records for tax time.",
+            distractorExplanations: {
+              1: 'Invoice numbers help you track payments, follow up on late ones, and keep clean records for tax time.',
+            },
           },
           {
             id: "fin-sec14-u1-L4-Q2",
@@ -414,6 +461,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A professional follow-up with the invoice attached and a late fee notice is the appropriate next step. Escalation comes later if needed.",
+            distractorExplanations: {
+              0: 'A professional follow-up with the invoice attached and a late fee notice is the appropriate next step. Escalation comes later if needed.',
+              2: 'Inaction here would be harmful; a professional follow-up with the invoice attached and a late fee notice is the appropriate next step.',
+              3: 'This reasoning is flawed; a professional follow-up with the invoice attached and a late fee notice is the appropriate next step.',
+            },
           },
           {
             id: "fin-sec14-u1-L4-Q5",
@@ -427,6 +479,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A deposit reduces the risk of doing work and never getting paid. It also helps cover any upfront costs for the project.",
+            distractorExplanations: {
+              0: 'A deposit reduces the risk of doing work and never getting paid. It also helps cover any upfront costs for the project.',
+              2: 'A deposit reduces the risk of doing work and never getting paid. It also helps cover any upfront costs for the project.',
+              3: 'This reasoning is flawed; a deposit reduces the risk of doing work and never getting paid. It also helps cover any upfront costs for the project.',
+            },
           },
           {
             id: "fin-sec14-u1-L4-Q6",
@@ -477,6 +534,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Freelance income fluctuates month to month. A larger buffer covers dry spells without forcing you to take bad clients or bad rates.",
+            distractorExplanations: {
+              0: 'Freelance income fluctuates month to month. A larger buffer covers dry spells without forcing you to take bad clients or bad rates.',
+              2: 'Freelance income fluctuates month to month. A larger buffer covers dry spells without forcing you to take bad clients or bad rates.',
+              3: 'This reasoning is flawed; freelance income fluctuates month to month.',
+            },
           },
           {
             id: "fin-sec14-u1-L5-T2",
@@ -498,6 +560,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Mia works 40 hours but bills only 30, making her effective rate $30/hour. At $4,800/month gross, she's barely covering $6,000 in expenses and taxes. She needs to raise her rate.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; mia works 40 hours but bills only 30, making her effective rate $30/hour.',
+              1: 'There is a real consequence here; mia works 40 hours but bills only 30, making her effective rate $30/hour.',
+              3: 'This reasoning is flawed; mia works 40 hours but bills only 30, making her effective rate $30/hour.',
+            },
           },
           {
             id: "fin-sec14-u1-L5-Q4",
@@ -531,6 +598,9 @@ export const financeSection14Business: Unit[] = [
             question: "Freelancers who don't set up their own retirement accounts can still rely on full government pension benefits.",
             correctAnswer: false,
             explanation: "Government pensions provide a safety net but rarely enough to maintain your lifestyle. Self-funded retirement accounts are essential for freelancers.",
+            distractorExplanations: {
+              0: 'Government pensions provide a safety net but rarely enough to maintain your lifestyle. Self-funded retirement accounts are essential for freelancers.',
+            },
           },
           {
             id: "fin-sec14-u1-L5-Q6",
@@ -544,6 +614,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Non-billable hours are the hidden cost of freelancing. If half your time is non-billable, you need to double your target hourly rate to compensate.",
+            distractorExplanations: {
+              0: 'Non-billable hours are the hidden cost of freelancing. If half your time is non-billable, you need to double your target hourly rate to compensate.',
+              2: 'Non-billable hours are the hidden cost of freelancing. If half your time is non-billable, you need to double your target hourly rate to compensate.',
+              3: 'Non-billable hours are the hidden cost of freelancing. If half your time is non-billable, you need to double your target hourly rate to compensate.',
+            },
           },
         ],
       },
@@ -583,6 +658,9 @@ export const financeSection14Business: Unit[] = [
             question: "You must file special paperwork to become a sole proprietor.",
             correctAnswer: false,
             explanation: "A sole proprietorship exists automatically when you earn self-employment income. No formation documents are required.",
+            distractorExplanations: {
+              0: 'A sole proprietorship exists automatically when you earn self-employment income. No formation documents are required.',
+            },
           },
           {
             id: "fin-sec14-u2-L1-Q2",
@@ -596,6 +674,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "In a sole proprietorship, there's no legal separation between you and the business. If the business owes money or gets sued, your personal assets are on the line.",
+            distractorExplanations: {
+              0: 'In a sole proprietorship, there\'s no legal separation between you and the business.',
+              1: 'In a sole proprietorship, there\'s no legal separation between you and the business.',
+              3: 'In a sole proprietorship, there\'s no legal separation between you and the business.',
+            },
           },
           {
             id: "fin-sec14-u2-L1-T2",
@@ -617,6 +700,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "With unlimited liability, there's no wall between Tom's business and personal assets. Everything he owns could be used to satisfy the judgment.",
+            distractorExplanations: {
+              0: 'With unlimited liability, there\'s no wall between Tom\'s business and personal assets. Everything he owns could be used to satisfy the judgment.',
+              1: 'With unlimited liability, there\'s no wall between Tom\'s business and personal assets. Everything he owns could be used to satisfy the judgment.',
+              3: 'This reasoning is flawed; with unlimited liability, there\'s no wall between Tom\'s business and personal assets.',
+            },
           },
           {
             id: "fin-sec14-u2-L1-Q4",
@@ -670,6 +758,9 @@ export const financeSection14Business: Unit[] = [
             question: "An LLC protects your personal assets from most business lawsuits and debts.",
             correctAnswer: true,
             explanation: "The 'limited liability' in LLC means your personal assets are generally shielded from business obligations, unless you personally guarantee a debt or commit fraud.",
+            distractorExplanations: {
+              1: 'The \'limited liability\' in LLC means your personal assets are generally shielded from business obligations, unless you personally guarantee a debt or commit fraud.',
+            },
           },
           {
             id: "fin-sec14-u2-L2-Q2",
@@ -683,6 +774,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The primary benefit is liability protection. Your personal assets are shielded from business debts and lawsuits.",
+            distractorExplanations: {
+              0: 'The primary benefit is liability protection. Your personal assets are shielded from business debts and lawsuits.',
+              2: 'The primary benefit is liability protection. Your personal assets are shielded from business debts and lawsuits.',
+              3: 'The primary benefit is liability protection. Your personal assets are shielded from business debts and lawsuits.',
+            },
           },
           {
             id: "fin-sec14-u2-L2-T2",
@@ -720,6 +816,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With an LLC, the lawsuit would target the business assets, not Sarah's personal savings, home, or car. The LLC creates a legal barrier.",
+            distractorExplanations: {
+              0: 'With an LLC, the lawsuit would target the business assets, not Sarah\'s personal savings, home, or car. The LLC creates a legal barrier.',
+              2: 'This reasoning is flawed; with an LLC, the lawsuit would target the business assets, not Sarah\'s personal savings, home, or car.',
+              3: 'With an LLC, the lawsuit would target the business assets, not Sarah\'s personal savings, home, or car. The LLC creates a legal barrier.',
+            },
           },
           {
             id: "fin-sec14-u2-L2-Q5",
@@ -759,6 +860,9 @@ export const financeSection14Business: Unit[] = [
             question: "An S-Corp is a completely different business structure from an LLC.",
             correctAnswer: false,
             explanation: "An S-Corp is a tax election, not a legal structure. An LLC can choose to be taxed as an S-Corp while remaining an LLC legally.",
+            distractorExplanations: {
+              0: 'An S-Corp is a tax election, not a legal structure. An LLC can choose to be taxed as an S-Corp while remaining an LLC legally.',
+            },
           },
           {
             id: "fin-sec14-u2-L3-Q2",
@@ -772,6 +876,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You pay self-employment tax only on your salary, not on profit distributions. This can save thousands when profits are high.",
+            distractorExplanations: {
+              0: 'You pay self-employment tax only on your salary, not on profit distributions. This can save thousands when profits are high.',
+              2: 'You pay self-employment tax only on your salary, not on profit distributions. This can save thousands when profits are high.',
+              3: 'This reasoning is flawed; you pay self-employment tax only on your salary, not on profit distributions.',
+            },
           },
           {
             id: "fin-sec14-u2-L3-T2",
@@ -804,6 +913,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A $20,000 salary for someone generating $150,000 in profit would likely fail the reasonable salary test. The IRS can reclassify distributions as wages and charge penalties.",
+            distractorExplanations: {
+              1: 'This calculation is incorrect; a $20,000 salary for someone generating $150,000 in profit would likely fail the reasonable salary test.',
+              2: 'This reasoning is flawed; a $20,000 salary for someone generating $150,000 in profit would likely fail the reasonable salary test.',
+              3: 'This reasoning is flawed; a $20,000 salary for someone generating $150,000 in profit would likely fail the reasonable salary test.',
+            },
           },
           {
             id: "fin-sec14-u2-L3-Q5",
@@ -837,6 +951,9 @@ export const financeSection14Business: Unit[] = [
             question: "In a general partnership, all partners share unlimited personal liability for business debts.",
             correctAnswer: true,
             explanation: "General partners are each personally liable for all business debts, even those created by the other partner.",
+            distractorExplanations: {
+              1: 'General partners are each personally liable for all business debts, even those created by the other partner.',
+            },
           },
           {
             id: "fin-sec14-u2-L4-Q2",
@@ -873,6 +990,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "C-Corp profits are taxed first at the corporate tax rate. When distributed as dividends, shareholders pay tax again on that same income.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; c-Corp profits are taxed first at the corporate tax rate.',
+              2: 'This reasoning is flawed; c-Corp profits are taxed first at the corporate tax rate.',
+              3: 'This reasoning is flawed; c-Corp profits are taxed first at the corporate tax rate.',
+            },
           },
           {
             id: "fin-sec14-u2-L4-Q4",
@@ -900,6 +1022,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "C-Corps can issue different classes of stock, which is what venture capital investors typically require. Most VC-funded startups are Delaware C-Corps.",
+            distractorExplanations: {
+              0: 'C-Corps can issue different classes of stock, which is what venture capital investors typically require.',
+              1: 'C-Corps can issue different classes of stock, which is what venture capital investors typically require.',
+              3: 'C-Corps can issue different classes of stock, which is what venture capital investors typically require.',
+            },
           },
         ],
       },
@@ -952,6 +1079,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At $12,000 with low liability risk, the $300 LLC fee is a significant percentage of her income. A sole proprietorship is appropriate for now.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; at $12,000 with low liability risk, the $300 LLC fee is a significant percentage of her income.',
+              2: 'At $12,000 with low liability risk, the $300 LLC fee is a significant percentage of her income. A sole proprietorship is appropriate for now.',
+              3: 'This reasoning is flawed; at $12,000 with low liability risk, the $300 LLC fee is a significant percentage of her income.',
+            },
           },
           {
             id: "fin-sec14-u2-L5-Q3",
@@ -966,6 +1098,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With $200,000 in profit and a reasonable salary of perhaps $100,000, Raj could save self-employment tax on $100,000 in distributions. That's roughly $15,000 saved per year.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; with $200,000 in profit and a reasonable salary of perhaps $100,000, Raj could save self-employment tax on $100,000 in.',
+              2: 'This reasoning is flawed; with $200,000 in profit and a reasonable salary of perhaps $100,000, Raj could save self-employment tax on $100,000 in.',
+              3: 'This reasoning is flawed; with $200,000 in profit and a reasonable salary of perhaps $100,000, Raj could save self-employment tax on $100,000 in.',
+            },
           },
           {
             id: "fin-sec14-u2-L5-Q4",
@@ -988,6 +1125,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your specific situation determines the right structure. Income, risk, number of owners, and growth plans all factor into the decision.",
+            distractorExplanations: {
+              0: 'Your specific situation determines the right structure. Income, risk, number of owners, and growth plans all factor into the decision.',
+              2: 'Your specific situation determines the right structure. Income, risk, number of owners, and growth plans all factor into the decision.',
+              3: 'This reasoning is flawed; your specific situation determines the right structure.',
+            },
           },
         ],
       },
@@ -1019,6 +1161,9 @@ export const financeSection14Business: Unit[] = [
             question: "Every business needs a separate tax identification number, regardless of structure.",
             correctAnswer: false,
             explanation: "Sole proprietors can use their personal tax ID. LLCs and corporations typically need a separate business tax ID (like an EIN in the US).",
+            distractorExplanations: {
+              0: 'Sole proprietors can use their personal tax ID. LLCs and corporations typically need a separate business tax ID (like an EIN in the US).',
+            },
           },
           {
             id: "fin-sec14-u2-L6-Q2",
@@ -1053,6 +1198,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An operating agreement defines how the LLC is run, how profits are split, and what happens if an owner leaves. It's essential even for single-member LLCs.",
+            distractorExplanations: {
+              0: 'An operating agreement defines how the LLC is run, how profits are split, and what happens if an owner leaves.',
+              2: 'This reasoning is flawed; an operating agreement defines how the LLC is run, how profits are split, and what happens if an owner leaves.',
+              3: 'This reasoning is flawed; an operating agreement defines how the LLC is run, how profits are split, and what happens if an owner leaves.',
+            },
           },
           {
             id: "fin-sec14-u2-L6-Q4",
@@ -1075,6 +1225,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Food businesses require health permits and food service licenses. Home-based businesses may need a home occupation permit from the city or county.",
+            distractorExplanations: {
+              1: 'Food businesses require health permits and food service licenses. Home-based businesses may need a home occupation permit from the city or county.',
+              2: 'This reasoning is flawed; food businesses require health permits and food service licenses.',
+              3: 'This reasoning is flawed; food businesses require health permits and food service licenses.',
+            },
           },
         ],
       },
@@ -1114,6 +1269,9 @@ export const financeSection14Business: Unit[] = [
             question: "Mixing personal and business money in one account can weaken your LLC's liability protection.",
             correctAnswer: true,
             explanation: "Courts can 'pierce the corporate veil' if you don't maintain separation between personal and business finances. A dedicated account is essential.",
+            distractorExplanations: {
+              1: 'Courts can \'pierce the corporate veil\' if you don\'t maintain separation between personal and business finances. A dedicated account is essential.',
+            },
           },
           {
             id: "fin-sec14-u3-L1-Q2",
@@ -1127,6 +1285,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A business bank account comes first. Every dollar of income and expense should flow through this account, not your personal one.",
+            distractorExplanations: {
+              0: 'A business bank account comes first. Every dollar of income and expense should flow through this account, not your personal one.',
+              2: 'A business bank account comes first. Every dollar of income and expense should flow through this account, not your personal one.',
+              3: 'A business bank account comes first. Every dollar of income and expense should flow through this account, not your personal one.',
+            },
           },
           {
             id: "fin-sec14-u3-L1-T2",
@@ -1164,6 +1327,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Personal-to-business transfers should be documented as owner contributions. Without documentation, it weakens the separation that protects your personal assets.",
+            distractorExplanations: {
+              0: 'Personal-to-business transfers should be documented as owner contributions.',
+              2: 'This reasoning is flawed; personal-to-business transfers should be documented as owner contributions.',
+              3: 'Personal-to-business transfers should be documented as owner contributions.',
+            },
           },
           {
             id: "fin-sec14-u3-L1-Q5",
@@ -1197,6 +1365,9 @@ export const financeSection14Business: Unit[] = [
             question: "Bookkeeping and accounting are the same thing.",
             correctAnswer: false,
             explanation: "Bookkeeping is recording transactions. Accounting is analyzing those records to make financial decisions and prepare tax returns. Bookkeeping feeds into accounting.",
+            distractorExplanations: {
+              0: 'Bookkeeping is recording transactions. Accounting is analyzing those records to make financial decisions and prepare tax returns. Bookkeeping feeds into accounting.',
+            },
           },
           {
             id: "fin-sec14-u3-L2-Q2",
@@ -1232,6 +1403,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Under cash-basis accounting, income is recorded when cash is received. You'd record the $3,000 in April, not March.",
+            distractorExplanations: {
+              0: 'Under cash-basis accounting, income is recorded when cash is received. You\'d record the $3,000 in April, not March.',
+              2: 'Under cash-basis accounting, income is recorded when cash is received. You\'d record the $3,000 in April, not March.',
+              3: 'Under cash-basis accounting, income is recorded when cash is received. You\'d record the $3,000 in April, not March.',
+            },
           },
           {
             id: "fin-sec14-u3-L2-Q4",
@@ -1245,6 +1421,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Accrual accounting records revenue when earned and expenses when incurred, regardless of when money actually changes hands.",
+            distractorExplanations: {
+              0: 'Accrual accounting records revenue when earned and expenses when incurred, regardless of when money actually changes hands.',
+              2: 'Accrual accounting records revenue when earned and expenses when incurred, regardless of when money actually changes hands.',
+              3: 'Accrual accounting records revenue when earned and expenses when incurred, regardless of when money actually changes hands.',
+            },
           },
           {
             id: "fin-sec14-u3-L2-Q5",
@@ -1278,6 +1459,9 @@ export const financeSection14Business: Unit[] = [
             question: "You need expensive accounting software to do proper bookkeeping.",
             correctAnswer: false,
             explanation: "Free tools like Wave or a well-organized spreadsheet work fine for small businesses. Paid software adds convenience but isn't required.",
+            distractorExplanations: {
+              0: 'Free tools like Wave or a well-organized spreadsheet work fine for small businesses. Paid software adds convenience but isn\'t required.',
+            },
           },
           {
             id: "fin-sec14-u3-L3-Q2",
@@ -1291,6 +1475,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Bank feeds automatically import transactions, saving hours of manual entry and reducing the chance of missing transactions.",
+            distractorExplanations: {
+              0: 'Bank feeds automatically import transactions, saving hours of manual entry and reducing the chance of missing transactions.',
+              2: 'Bank feeds automatically import transactions, saving hours of manual entry and reducing the chance of missing transactions.',
+              3: 'Bank feeds automatically import transactions, saving hours of manual entry and reducing the chance of missing transactions.',
+            },
           },
           {
             id: "fin-sec14-u3-L3-T2",
@@ -1325,6 +1514,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With only 20 transactions per month, a free tool handles the job well. He can upgrade to paid software as the business grows.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; with only 20 transactions per month, a free tool handles the job well. He can upgrade to paid software as the business grows.',
+              2: 'With only 20 transactions per month, a free tool handles the job well. He can upgrade to paid software as the business grows.',
+              3: 'This reasoning is flawed; with only 20 transactions per month, a free tool handles the job well.',
+            },
           },
           {
             id: "fin-sec14-u3-L3-Q5",
@@ -1366,6 +1560,9 @@ export const financeSection14Business: Unit[] = [
             question: "A photo of a receipt stored on your phone is a valid business record.",
             correctAnswer: true,
             explanation: "Tax authorities accept digital copies of receipts. Just make sure the image is clear and includes the date, vendor, amount, and items purchased.",
+            distractorExplanations: {
+              1: 'Tax authorities accept digital copies of receipts. Just make sure the image is clear and includes the date, vendor, amount, and items purchased.',
+            },
           },
           {
             id: "fin-sec14-u3-L4-Q2",
@@ -1379,6 +1576,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Most tax agencies require records for 3 to 7 years. In the US, the IRS generally has 3 years to audit, but 6 years if income is significantly underreported.",
+            distractorExplanations: {
+              0: 'Most tax agencies require records for 3 to 7 years. In the US, the IRS generally has 3 years to audit, but 6 years if income is significantly.',
+              2: 'Most tax agencies require records for 3 to 7 years. In the US, the IRS generally has 3 years to audit, but 6 years if income is significantly.',
+              3: 'Most tax agencies require records for 3 to 7 years. In the US, the IRS generally has 3 years to audit, but 6 years if income is significantly.',
+            },
             variants: {
               US: "The IRS recommends keeping records for 3 years from the filing date. Keep them 6 years if you underreported income by more than 25%. Keep employment tax records for 4 years.",
               GB: "HMRC requires sole traders to keep records for at least 5 years after the January 31 submission deadline. Companies must keep records for 6 years.",
@@ -1422,6 +1624,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Credit card and bank statements serve as secondary proof. While a receipt is ideal, a credit card statement showing the details can support the deduction.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; credit card and bank statements serve as secondary proof.',
+              2: 'This reasoning is flawed; credit card and bank statements serve as secondary proof.',
+              3: 'Credit card and bank statements serve as secondary proof. While a receipt is ideal, a credit card statement showing the details can support the.',
+            },
           },
           {
             id: "fin-sec14-u3-L4-Q5",
@@ -1455,6 +1662,9 @@ export const financeSection14Business: Unit[] = [
             question: "Bank reconciliation means making sure your bookkeeping records match your bank statement.",
             correctAnswer: true,
             explanation: "Reconciliation catches errors, missed transactions, and unauthorized charges. It's how you ensure your books are accurate.",
+            distractorExplanations: {
+              1: 'Reconciliation catches errors, missed transactions, and unauthorized charges. It\'s how you ensure your books are accurate.',
+            },
           },
           {
             id: "fin-sec14-u3-L5-Q2",
@@ -1468,6 +1678,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Every discrepancy has a cause: a missed transaction, duplicate entry, or bank error. Find it and fix it. Don't just adjust the number.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; every discrepancy has a cause: a missed transaction, duplicate entry, or bank error. Find it and fix it.',
+              2: 'This reasoning is flawed; every discrepancy has a cause: a missed transaction, duplicate entry, or bank error. Find it and fix it.',
+              3: 'Every discrepancy has a cause: a missed transaction, duplicate entry, or bank error. Find it and fix it. Don\'t just adjust the number.',
+            },
           },
           {
             id: "fin-sec14-u3-L5-T2",
@@ -1502,6 +1717,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Unknown charges need immediate investigation. It could be an unauthorized transaction, a forgotten subscription, or a vendor billing error.",
+            distractorExplanations: {
+              0: 'Unknown charges need immediate investigation. It could be an unauthorized transaction, a forgotten subscription, or a vendor billing error.',
+              2: 'Unknown charges need immediate investigation. It could be an unauthorized transaction, a forgotten subscription, or a vendor billing error.',
+              3: 'Unknown charges need immediate investigation. It could be an unauthorized transaction, a forgotten subscription, or a vendor billing error.',
+            },
           },
           {
             id: "fin-sec14-u3-L5-Q5",
@@ -1561,6 +1781,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Employees split payroll taxes 50/50 with their employer. Freelancers pay the full amount, roughly 15.3% in the US.",
+            distractorExplanations: {
+              0: 'Employees split payroll taxes 50/50 with their employer. Freelancers pay the full amount, roughly 15.3% in the US.',
+              2: 'Employees split payroll taxes 50/50 with their employer. Freelancers pay the full amount, roughly 15.3% in the US.',
+              3: 'Employees split payroll taxes 50/50 with their employer. Freelancers pay the full amount, roughly 15.3% in the US.',
+            },
           },
           {
             id: "fin-sec14-u4-L1-Q2",
@@ -1575,6 +1800,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The laptop ($3,000) is fully deductible, internet is 60% deductible ($720), and client meals are deductible ($800). The vacation is personal and not deductible.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; the laptop ($3,000) is fully deductible, internet is 60% deductible ($720), and client meals are deductible ($800).',
+              2: 'This calculation is incorrect; the laptop ($3,000) is fully deductible, internet is 60% deductible ($720), and client meals are deductible ($800).',
+              3: 'This calculation is incorrect; the laptop ($3,000) is fully deductible, internet is 60% deductible ($720), and client meals are deductible ($800).',
+            },
           },
           {
             id: "fin-sec14-u4-L1-Q3",
@@ -1582,6 +1812,9 @@ export const financeSection14Business: Unit[] = [
             question: "Estimated quarterly tax payments are optional for self-employed people.",
             correctAnswer: false,
             explanation: "If you expect to owe a certain amount in taxes, quarterly payments are required. Skipping them results in underpayment penalties.",
+            distractorExplanations: {
+              0: 'If you expect to owe a certain amount in taxes, quarterly payments are required. Skipping them results in underpayment penalties.',
+            },
           },
           {
             id: "fin-sec14-u4-L1-Q4",
@@ -1614,6 +1847,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Freelancers need a larger buffer than employees because income is unpredictable. Losing a client or having a slow month is normal.",
+            distractorExplanations: {
+              0: 'Freelancers need a larger buffer than employees because income is unpredictable. Losing a client or having a slow month is normal.',
+              1: 'Freelancers need a larger buffer than employees because income is unpredictable. Losing a client or having a slow month is normal.',
+              3: 'This reasoning is flawed; freelancers need a larger buffer than employees because income is unpredictable.',
+            },
           },
         ],
       },
@@ -1662,6 +1900,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$130,000 minus $75,000 salary equals $55,000 in distributions that avoid self-employment tax. At 15.3%, that's about $8,415 saved.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $130,000 minus $75,000 salary equals $55,000 in distributions that avoid self-employment tax. At 15.',
+              1: 'This calculation is incorrect; $130,000 minus $75,000 salary equals $55,000 in distributions that avoid self-employment tax. At 15.',
+              3: 'There is a real consequence here; $130,000 minus $75,000 salary equals $55,000 in distributions that avoid self-employment tax. At 15.',
+            },
           },
           {
             id: "fin-sec14-u4-L2-Q3",
@@ -1683,6 +1926,9 @@ export const financeSection14Business: Unit[] = [
             question: "Double taxation means a C-Corporation's profits are taxed at both the corporate and shareholder level.",
             correctAnswer: true,
             explanation: "C-Corp profits are taxed as corporate income. When distributed as dividends, shareholders pay personal income tax on the same money.",
+            distractorExplanations: {
+              1: 'C-Corp profits are taxed as corporate income. When distributed as dividends, shareholders pay personal income tax on the same money.',
+            },
           },
           {
             id: "fin-sec14-u4-L2-Q5",
@@ -1696,6 +1942,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 'reasonable salary' requirement is enforced. Setting it too low to avoid payroll taxes can trigger audits, reclassification, and penalties.",
+            distractorExplanations: {
+              0: 'The \'reasonable salary\' requirement is enforced. Setting it too low to avoid payroll taxes can trigger audits, reclassification, and penalties.',
+              2: 'The \'reasonable salary\' requirement is enforced. Setting it too low to avoid payroll taxes can trigger audits, reclassification, and penalties.',
+              3: 'This reasoning is flawed; the \'reasonable salary\' requirement is enforced.',
+            },
           },
         ],
       },
@@ -1727,6 +1978,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you don't maintain separation, a court can ignore your LLC's liability protection. Keeping accounts separate preserves the legal wall.",
+            distractorExplanations: {
+              0: 'If you don\'t maintain separation, a court can ignore your LLC\'s liability protection. Keeping accounts separate preserves the legal wall.',
+              2: 'This reasoning is flawed; if you don\'t maintain separation, a court can ignore your LLC\'s liability protection.',
+              3: 'If you don\'t maintain separation, a court can ignore your LLC\'s liability protection. Keeping accounts separate preserves the legal wall.',
+            },
           },
           {
             id: "fin-sec14-u4-L3-Q2",
@@ -1741,6 +1997,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cash-basis accounting records income when received. The $5,000 goes in December's books, even though the work was done in November.",
+            distractorExplanations: {
+              0: 'Cash-basis accounting records income when received. The $5,000 goes in December\'s books, even though the work was done in November.',
+              2: 'Cash-basis accounting records income when received. The $5,000 goes in December\'s books, even though the work was done in November.',
+              3: 'Cash-basis accounting records income when received. The $5,000 goes in December\'s books, even though the work was done in November.',
+            },
           },
           {
             id: "fin-sec14-u4-L3-Q3",
@@ -1761,6 +2022,9 @@ export const financeSection14Business: Unit[] = [
             question: "If you lose a receipt, a bank or credit card statement can serve as backup documentation for a deduction.",
             correctAnswer: true,
             explanation: "While receipts are ideal, bank and credit card statements showing the vendor, date, and amount serve as secondary documentation.",
+            distractorExplanations: {
+              1: 'While receipts are ideal, bank and credit card statements showing the vendor, date, and amount serve as secondary documentation.',
+            },
           },
           {
             id: "fin-sec14-u4-L3-Q5",
@@ -1782,6 +2046,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Tax authorities can audit past returns within their statute of limitations, typically 3 to 7 years. Keep records for the full period.",
+            distractorExplanations: {
+              0: 'Tax authorities can audit past returns within their statute of limitations, typically 3 to 7 years. Keep records for the full period.',
+              1: 'Tax authorities can audit past returns within their statute of limitations, typically 3 to 7 years. Keep records for the full period.',
+              3: 'Tax authorities can audit past returns within their statute of limitations, typically 3 to 7 years. Keep records for the full period.',
+            },
           },
         ],
       },
@@ -1821,6 +2090,9 @@ export const financeSection14Business: Unit[] = [
             question: "A business with high revenue is always profitable.",
             correctAnswer: false,
             explanation: "Revenue is income before expenses. A business can have millions in revenue but still lose money if expenses are higher.",
+            distractorExplanations: {
+              0: 'Revenue is income before expenses. A business can have millions in revenue but still lose money if expenses are higher.',
+            },
           },
           {
             id: "fin-sec14-u5-L1-Q2",
@@ -1834,6 +2106,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Revenue is the top line (total sales). Profit is the bottom line (revenue minus all expenses).",
+            distractorExplanations: {
+              0: 'Revenue is the top line (total sales). Profit is the bottom line (revenue minus all expenses).',
+              2: 'This reasoning is flawed; revenue is the top line (total sales). Profit is the bottom line (revenue minus all expenses).',
+              3: 'This reasoning is flawed; revenue is the top line (total sales). Profit is the bottom line (revenue minus all expenses).',
+            },
           },
           {
             id: "fin-sec14-u5-L1-T2",
@@ -1855,6 +2132,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$120,000 revenue minus $40,000 direct costs minus $60,000 overhead minus $10,000 taxes and insurance equals $10,000 net profit.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $120,000 revenue minus $40,000 direct costs minus $60,000 overhead minus $10,000 taxes and insurance equals.',
+              1: 'This calculation is incorrect; $120,000 revenue minus $40,000 direct costs minus $60,000 overhead minus $10,000 taxes and insurance equals.',
+              3: 'This calculation is incorrect; $120,000 revenue minus $40,000 direct costs minus $60,000 overhead minus $10,000 taxes and insurance equals.',
+            },
           },
           {
             id: "fin-sec14-u5-L1-Q4",
@@ -1930,6 +2212,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Business B keeps $0.35 of every dollar vs Business A's $0.08. However, Business A still earns more total profit ($40,000 vs $35,000) due to higher revenue.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; business B keeps $0.35 of every dollar vs Business A\'s $0.08.',
+              2: 'This reasoning is flawed; business B keeps $0.35 of every dollar vs Business A\'s $0.08.',
+              3: 'Business B keeps $0.35 of every dollar vs Business A\'s $0.08. However, Business A still earns more total profit ($40,000 vs $35,000) due to.',
+            },
           },
           {
             id: "fin-sec14-u5-L2-T2",
@@ -1967,6 +2254,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Accepting work at half your rate means your profit per hour drops significantly. Fixed costs stay the same, so overall margin percentage decreases.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; accepting work at half your rate means your profit per hour drops significantly.',
+              2: 'This overgeneralizes; accepting work at half your rate means your profit per hour drops significantly.',
+              3: 'Accepting work at half your rate means your profit per hour drops significantly. Fixed costs stay the same, so overall margin percentage decreases.',
+            },
           },
           {
             id: "fin-sec14-u5-L2-Q5",
@@ -1974,6 +2266,9 @@ export const financeSection14Business: Unit[] = [
             question: "A business with $1 million in revenue is always more profitable than one with $100,000 in revenue.",
             correctAnswer: false,
             explanation: "Profitability depends on margins. A $100,000 business with 40% margins earns $40,000 profit, while a $1 million business with 2% margins earns only $20,000.",
+            distractorExplanations: {
+              0: 'Profitability depends on margins. A $100,000 business with 40% margins earns $40,000 profit, while a $1 million business with 2% margins earns only $20,000.',
+            },
           },
         ],
       },
@@ -1999,6 +2294,9 @@ export const financeSection14Business: Unit[] = [
             question: "A profitable business can still run out of cash and fail.",
             correctAnswer: true,
             explanation: "If revenue is earned but not yet collected, and expenses are due now, the business can't pay its bills. This is a cash flow crisis, even if the books show a profit.",
+            distractorExplanations: {
+              1: 'If revenue is earned but not yet collected, and expenses are due now, the business can\'t pay its bills. This is a cash flow crisis, even if the books show a profit.',
+            },
           },
           {
             id: "fin-sec14-u5-L3-Q2",
@@ -2013,6 +2311,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You're profitable ($30,000 earned vs $7,500 in costs) but you'll run out of cash before clients pay. This timing mismatch is a cash flow problem.",
+            distractorExplanations: {
+              0: 'You\'re profitable ($30,000 earned vs $7,500 in costs) but you\'ll run out of cash before clients pay. This timing mismatch is a cash flow problem.',
+              2: 'You\'re profitable ($30,000 earned vs $7,500 in costs) but you\'ll run out of cash before clients pay. This timing mismatch is a cash flow problem.',
+              3: 'This reasoning is flawed; you\'re profitable ($30,000 earned vs $7,500 in costs) but you\'ll run out of cash before clients pay.',
+            },
           },
           {
             id: "fin-sec14-u5-L3-T2",
@@ -2046,6 +2349,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The delay between completing work and receiving payment is the most common cash flow issue. Invoice promptly and follow up on late payments.",
+            distractorExplanations: {
+              0: 'The delay between completing work and receiving payment is the most common cash flow issue. Invoice promptly and follow up on late payments.',
+              2: 'The delay between completing work and receiving payment is the most common cash flow issue. Invoice promptly and follow up on late payments.',
+              3: 'The delay between completing work and receiving payment is the most common cash flow issue. Invoice promptly and follow up on late payments.',
+            },
           },
           {
             id: "fin-sec14-u5-L3-Q5",
@@ -2079,6 +2387,9 @@ export const financeSection14Business: Unit[] = [
             question: "Being the cheapest option is always the best pricing strategy for a new business.",
             correctAnswer: false,
             explanation: "Competing on price alone leads to a race to the bottom. Better to differentiate on quality, speed, or service and charge what your work is worth.",
+            distractorExplanations: {
+              0: 'Competing on price alone leads to a race to the bottom. Better to differentiate on quality, speed, or service and charge what your work is worth.',
+            },
           },
           {
             id: "fin-sec14-u5-L4-Q2",
@@ -2092,6 +2403,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "New business owners often price based on direct costs alone. Overhead, taxes, and non-billable time must also be covered or you'll lose money.",
+            distractorExplanations: {
+              0: 'New business owners often price based on direct costs alone. Overhead, taxes, and non-billable time must also be covered or you\'ll lose money.',
+              2: 'New business owners often price based on direct costs alone. Overhead, taxes, and non-billable time must also be covered or you\'ll lose money.',
+              3: 'New business owners often price based on direct costs alone. Overhead, taxes, and non-billable time must also be covered or you\'ll lose money.',
+            },
           },
           {
             id: "fin-sec14-u5-L4-T2",
@@ -2113,6 +2429,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "50 extra customers per month at $30 is $1,500/month or $18,000/year in additional revenue for the restaurant. Charging $4,000 to $8,000 is fair value-based pricing.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; 50 extra customers per month at $30 is $1,500/month or $18,000/year in additional revenue for the restaurant.',
+              2: 'This calculation is incorrect; 50 extra customers per month at $30 is $1,500/month or $18,000/year in additional revenue for the restaurant.',
+              3: 'This calculation is incorrect; 50 extra customers per month at $30 is $1,500/month or $18,000/year in additional revenue for the restaurant.',
+            },
           },
           {
             id: "fin-sec14-u5-L4-Q4",
@@ -2163,6 +2484,9 @@ export const financeSection14Business: Unit[] = [
             question: "Break-even is the revenue level where profit equals zero.",
             correctAnswer: true,
             explanation: "At break-even, total revenue exactly equals total costs. Every dollar above that point is profit.",
+            distractorExplanations: {
+              1: 'At break-even, total revenue exactly equals total costs. Every dollar above that point is profit.',
+            },
           },
           {
             id: "fin-sec14-u5-L5-Q2",
@@ -2211,6 +2535,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Break-even is $3,000 / ($50 - $20) = 100 units. Wait: 80 units x $30 contribution = $2,400, minus $3,000 fixed = -$600 loss. Actually, you're below break-even and need 100 units.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; break-even is $3,000 / ($50 - $20) = 100 units.',
+              1: 'Break-even is $3,000 / ($50 - $20) = 100 units. Wait: 80 units x $30 contribution = $2,400, minus $3,000 fixed = -$600 loss.',
+              3: 'This reasoning is flawed; break-even is $3,000 / ($50 - $20) = 100 units.',
+            },
           },
           {
             id: "fin-sec14-u5-L5-Q5",
@@ -2244,6 +2573,9 @@ export const financeSection14Business: Unit[] = [
             question: "Financial forecasting is only useful for large companies with complex operations.",
             correctAnswer: false,
             explanation: "Even solo freelancers benefit from forecasting. Knowing that January is typically slow lets you save extra in December to cover the gap.",
+            distractorExplanations: {
+              0: 'Even solo freelancers benefit from forecasting. Knowing that January is typically slow lets you save extra in December to cover the gap.',
+            },
           },
           {
             id: "fin-sec14-u5-L6-Q2",
@@ -2257,6 +2589,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Historical data is the best starting point. Adjust for things you know are changing: new clients, seasonal patterns, or planned expenses.",
+            distractorExplanations: {
+              0: 'Historical data is the best starting point. Adjust for things you know are changing: new clients, seasonal patterns, or planned expenses.',
+              2: 'This reasoning is flawed; historical data is the best starting point.',
+              3: 'Historical data is the best starting point. Adjust for things you know are changing: new clients, seasonal patterns, or planned expenses.',
+            },
           },
           {
             id: "fin-sec14-u5-L6-T2",
@@ -2278,6 +2615,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Confirmed: $10,000. Pending: $8,000 x 60% = $4,800. Lead: $12,000 x 20% = $2,400. Total weighted forecast: $17,200.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; confirmed: $10,000. Pending: $8,000 x 60% = $4,800. Lead: $12,000 x 20% = $2,400. Total weighted forecast: $17,200.',
+              2: 'This calculation is incorrect; confirmed: $10,000. Pending: $8,000 x 60% = $4,800. Lead: $12,000 x 20% = $2,400. Total weighted forecast: $17,200.',
+              3: 'This calculation is incorrect; confirmed: $10,000. Pending: $8,000 x 60% = $4,800. Lead: $12,000 x 20% = $2,400. Total weighted forecast: $17,200.',
+            },
           },
           {
             id: "fin-sec14-u5-L6-Q4",
@@ -2304,6 +2646,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you budget based on optimistic revenue and it doesn't materialize, you'll overspend and face a cash crisis. Conservative forecasts keep you safe.",
+            distractorExplanations: {
+              0: 'If you budget based on optimistic revenue and it doesn\'t materialize, you\'ll overspend and face a cash crisis. Conservative forecasts keep you safe.',
+              2: 'This overgeneralizes; if you budget based on optimistic revenue and it doesn\'t materialize, you\'ll overspend and face a cash crisis.',
+              3: 'This reasoning is flawed; if you budget based on optimistic revenue and it doesn\'t materialize, you\'ll overspend and face a cash crisis.',
+            },
           },
         ],
       },
@@ -2343,6 +2690,9 @@ export const financeSection14Business: Unit[] = [
             question: "A single-member LLC files a separate corporate tax return.",
             correctAnswer: false,
             explanation: "A single-member LLC is a pass-through entity by default. Profits are reported on the owner's personal tax return, not a separate corporate filing.",
+            distractorExplanations: {
+              0: 'A single-member LLC is a pass-through entity by default. Profits are reported on the owner\'s personal tax return, not a separate corporate filing.',
+            },
           },
           {
             id: "fin-sec14-u6-L1-Q2",
@@ -2380,6 +2730,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Business profit stacks on top of employment income. Sam's $25,000 in business income is mostly taxed at 22% because his job income already filled the 12% bracket.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; business profit stacks on top of employment income.',
+              2: 'This overgeneralizes; business profit stacks on top of employment income.',
+              3: 'This reasoning is flawed; business profit stacks on top of employment income.',
+            },
           },
           {
             id: "fin-sec14-u6-L1-Q4",
@@ -2393,6 +2748,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "C-Corps pay corporate tax on profits. When those profits are distributed as dividends, shareholders pay personal income tax again on the same money.",
+            distractorExplanations: {
+              0: 'C-Corps pay corporate tax on profits. When those profits are distributed as dividends, shareholders pay personal income tax again on the same money.',
+              1: 'C-Corps pay corporate tax on profits. When those profits are distributed as dividends, shareholders pay personal income tax again on the same money.',
+              2: 'C-Corps pay corporate tax on profits. When those profits are distributed as dividends, shareholders pay personal income tax again on the same money.',
+            },
           },
           {
             id: "fin-sec14-u6-L1-Q5",
@@ -2449,6 +2809,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Safe harbor means paying at least what you owed last year (divided by 4). This avoids underpayment penalties even if you end up owing more.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; safe harbor means paying at least what you owed last year (divided by 4).',
+              2: 'This reasoning is flawed; safe harbor means paying at least what you owed last year (divided by 4).',
+              3: 'This reasoning is flawed; safe harbor means paying at least what you owed last year (divided by 4).',
+            },
           },
           {
             id: "fin-sec14-u6-L2-T2",
@@ -2483,6 +2848,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The penalty is calculated as interest on each quarterly amount from the date it was due until paid. First-year freelancers may get a partial exception, but it's not guaranteed.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the penalty is calculated as interest on each quarterly amount from the date it was due until paid.',
+              2: 'The penalty is calculated as interest on each quarterly amount from the date it was due until paid.',
+              3: 'The penalty is calculated as interest on each quarterly amount from the date it was due until paid.',
+            },
           },
           {
             id: "fin-sec14-u6-L2-Q5",
@@ -2522,6 +2892,9 @@ export const financeSection14Business: Unit[] = [
             question: "Sales tax is an expense that comes out of your business profits.",
             correctAnswer: false,
             explanation: "Sales tax is collected from the buyer and passed through to the government. It's not your money, and it's not an expense. You're just the collection agent.",
+            distractorExplanations: {
+              0: 'Sales tax is collected from the buyer and passed through to the government. It\'s not your money, and it\'s not an expense. You\'re just the collection agent.',
+            },
           },
           {
             id: "fin-sec14-u6-L3-Q2",
@@ -2535,6 +2908,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Nexus means you have a sufficient connection (physical presence, employees, or enough sales) to a jurisdiction that it can require you to collect tax.",
+            distractorExplanations: {
+              0: 'Nexus means you have a sufficient connection (physical presence, employees, or enough sales) to a jurisdiction that it can require you to collect.',
+              2: 'Nexus means you have a sufficient connection (physical presence, employees, or enough sales) to a jurisdiction that it can require you to collect.',
+              3: 'Nexus means you have a sufficient connection (physical presence, employees, or enough sales) to a jurisdiction that it can require you to collect.',
+            },
           },
           {
             id: "fin-sec14-u6-L3-T2",
@@ -2556,6 +2934,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "California's economic nexus threshold is $500,000 in sales. At $120,000, you're actually below. But many states have lower thresholds ($100,000), so the principle is correct: selling enough into a state creates nexus.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; california\'s economic nexus threshold is $500,000 in sales. At $120,000, you\'re actually below.',
+              2: 'California\'s economic nexus threshold is $500,000 in sales. At $120,000, you\'re actually below.',
+              3: 'There is a real consequence here; california\'s economic nexus threshold is $500,000 in sales. At $120,000, you\'re actually below.',
+            },
           },
           {
             id: "fin-sec14-u6-L3-Q4",
@@ -2577,6 +2960,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Automated software calculates the correct rate for each customer's location, collects it at checkout, and prepares your filings. Manual tracking across many states is nearly impossible.",
+            distractorExplanations: {
+              0: 'Automated software calculates the correct rate for each customer\'s location, collects it at checkout, and prepares your filings.',
+              2: 'This reasoning is flawed; automated software calculates the correct rate for each customer\'s location, collects it at checkout, and prepares your.',
+              3: 'This overgeneralizes; automated software calculates the correct rate for each customer\'s location, collects it at checkout, and prepares your.',
+            },
           },
         ],
       },
@@ -2608,6 +2996,9 @@ export const financeSection14Business: Unit[] = [
             question: "Self-employed people can deduct their health insurance premiums as a business expense.",
             correctAnswer: true,
             explanation: "In many countries, self-employed health insurance premiums are deductible. This is one of the most valuable deductions available to business owners.",
+            distractorExplanations: {
+              1: 'In many countries, self-employed health insurance premiums are deductible. This is one of the most valuable deductions available to business owners.',
+            },
           },
           {
             id: "fin-sec14-u6-L4-Q2",
@@ -2661,6 +3052,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The standard mileage rate only requires tracking miles driven for business. Use a free app like MileIQ or Stride to log trips automatically.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; the standard mileage rate only requires tracking miles driven for business.',
+              2: 'This reasoning is flawed; the standard mileage rate only requires tracking miles driven for business.',
+              3: 'This reasoning is flawed; the standard mileage rate only requires tracking miles driven for business.',
+            },
           },
           {
             id: "fin-sec14-u6-L4-Q5",
@@ -2700,6 +3096,9 @@ export const financeSection14Business: Unit[] = [
             question: "Employers are responsible for withholding income tax from employee paychecks.",
             correctAnswer: true,
             explanation: "Employers must calculate and withhold federal and state income taxes from each paycheck, then remit those amounts to the tax authority.",
+            distractorExplanations: {
+              1: 'Employers must calculate and withhold federal and state income taxes from each paycheck, then remit those amounts to the tax authority.',
+            },
           },
           {
             id: "fin-sec14-u6-L5-Q2",
@@ -2713,6 +3112,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Payroll tax obligations are among the most strictly enforced. The 'trust fund recovery penalty' can make business owners personally liable, even piercing LLC protection.",
+            distractorExplanations: {
+              0: 'Payroll tax obligations are among the most strictly enforced. The \'trust fund recovery penalty\' can make business owners personally liable, even.',
+              1: 'Payroll tax obligations are among the most strictly enforced. The \'trust fund recovery penalty\' can make business owners personally liable, even.',
+              3: 'This reasoning is flawed; payroll tax obligations are among the most strictly enforced.',
+            },
           },
           {
             id: "fin-sec14-u6-L5-T2",
@@ -2734,6 +3138,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The trust fund recovery penalty makes responsible individuals (owners, officers, bookkeepers) personally liable for 100% of the unpaid amount, plus interest and penalties.",
+            distractorExplanations: {
+              0: 'The trust fund recovery penalty makes responsible individuals (owners, officers, bookkeepers) personally liable for 100% of the unpaid amount,.',
+              1: 'The trust fund recovery penalty makes responsible individuals (owners, officers, bookkeepers) personally liable for 100% of the unpaid amount,.',
+              3: 'The trust fund recovery penalty makes responsible individuals (owners, officers, bookkeepers) personally liable for 100% of the unpaid amount,.',
+            },
           },
           {
             id: "fin-sec14-u6-L5-Q4",
@@ -2781,6 +3190,9 @@ export const financeSection14Business: Unit[] = [
             question: "Buying business equipment on December 30 counts as a deduction for that tax year.",
             correctAnswer: true,
             explanation: "As long as you purchase and place the equipment in service before year-end, you can deduct it in the current tax year using Section 179 or bonus depreciation.",
+            distractorExplanations: {
+              1: 'As long as you purchase and place the equipment in service before year-end, you can deduct it in the current tax year using Section 179 or bonus depreciation.',
+            },
           },
           {
             id: "fin-sec14-u6-L6-Q2",
@@ -2794,6 +3206,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Under cash-basis accounting, income is recognized when received. If you invoice in late December and get paid in January, that income shifts to next year's tax return.",
+            distractorExplanations: {
+              0: 'Under cash-basis accounting, income is recognized when received.',
+              2: 'Under cash-basis accounting, income is recognized when received.',
+              3: 'Under cash-basis accounting, income is recognized when received.',
+            },
           },
           {
             id: "fin-sec14-u6-L6-T2",
@@ -2815,6 +3232,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$100,000 minus $60,000 existing expenses minus $10,000 equipment minus $15,000 SEP IRA equals $15,000 in taxable business income.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $100,000 minus $60,000 existing expenses minus $10,000 equipment minus $15,000 SEP IRA equals $15,000 in taxable.',
+              1: 'This calculation is incorrect; $100,000 minus $60,000 existing expenses minus $10,000 equipment minus $15,000 SEP IRA equals $15,000 in taxable.',
+              3: 'This calculation is incorrect; $100,000 minus $60,000 existing expenses minus $10,000 equipment minus $15,000 SEP IRA equals $15,000 in taxable.',
+            },
           },
           {
             id: "fin-sec14-u6-L6-Q4",
@@ -2881,6 +3303,9 @@ export const financeSection14Business: Unit[] = [
             question: "You can classify any worker as an independent contractor if both parties agree to it.",
             correctAnswer: false,
             explanation: "Classification depends on the actual working relationship, not what you call it. A contract labeling someone a contractor doesn't override the reality of the arrangement.",
+            distractorExplanations: {
+              0: 'Classification depends on the actual working relationship, not what you call it. A contract labeling someone a contractor doesn\'t override the reality of the arrangement.',
+            },
           },
           {
             id: "fin-sec14-u7-L1-Q2",
@@ -2918,6 +3343,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Full-time hours, company equipment, mandatory office presence, and exclusive work for one company all point to an employment relationship regardless of the contract label.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; full-time hours, company equipment, mandatory office presence, and exclusive work for one company all point to an.',
+              1: 'Full-time hours, company equipment, mandatory office presence, and exclusive work for one company all point to an employment relationship.',
+              3: 'This reasoning is flawed; full-time hours, company equipment, mandatory office presence, and exclusive work for one company all point to an.',
+            },
           },
           {
             id: "fin-sec14-u7-L1-Q4",
@@ -2982,6 +3412,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Employers pay their own share of payroll taxes (matching FICA) plus workers' compensation insurance. The employee's personal expenses are not the employer's cost.",
+            distractorExplanations: {
+              0: 'Employers pay their own share of payroll taxes (matching FICA) plus workers\' compensation insurance.',
+              2: 'Employers pay their own share of payroll taxes (matching FICA) plus workers\' compensation insurance.',
+              3: 'Employers pay their own share of payroll taxes (matching FICA) plus workers\' compensation insurance.',
+            },
           },
           {
             id: "fin-sec14-u7-L2-T2",
@@ -3003,6 +3438,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "At $27,000 vs $36,400, the employee is cheaper. But the contractor gives you more flexibility: no long-term commitment, no benefits administration, and easier to scale up or down.",
+            distractorExplanations: {
+              1: 'At $27,000 vs $36,400, the employee is cheaper. But the contractor gives you more flexibility: no long-term commitment, no benefits.',
+              2: 'At $27,000 vs $36,400, the employee is cheaper. But the contractor gives you more flexibility: no long-term commitment, no benefits.',
+              3: 'At $27,000 vs $36,400, the employee is cheaper. But the contractor gives you more flexibility: no long-term commitment, no benefits.',
+            },
           },
           {
             id: "fin-sec14-u7-L2-Q4",
@@ -3071,6 +3511,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The W-4 provides withholding information (filing status, dependents, additional withholding) so the employer calculates the correct tax withholding.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the W-4 provides withholding information (filing status, dependents, additional withholding) so the employer calculates.',
+              2: 'This reasoning is flawed; the W-4 provides withholding information (filing status, dependents, additional withholding) so the employer calculates.',
+              3: 'This reasoning is flawed; the W-4 provides withholding information (filing status, dependents, additional withholding) so the employer calculates.',
+            },
           },
           {
             id: "fin-sec14-u7-L3-T2",
@@ -3085,6 +3530,9 @@ export const financeSection14Business: Unit[] = [
             question: "An employer can choose to pay employees whenever they feel like it, with no set schedule.",
             correctAnswer: false,
             explanation: "Most states require a regular, consistent pay schedule. Some states mandate minimum frequency, like bi-weekly or semi-monthly.",
+            distractorExplanations: {
+              0: 'Most states require a regular, consistent pay schedule. Some states mandate minimum frequency, like bi-weekly or semi-monthly.',
+            },
           },
           {
             id: "fin-sec14-u7-L3-Q4",
@@ -3099,6 +3547,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$4,000 minus $480 minus $160 minus $248 minus $58 minus $200 equals $2,854 net pay. That's what actually hits the employee's bank account.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $4,000 minus $480 minus $160 minus $248 minus $58 minus $200 equals $2,854 net pay.',
+              1: 'This calculation is incorrect; $4,000 minus $480 minus $160 minus $248 minus $58 minus $200 equals $2,854 net pay.',
+              3: 'This calculation is incorrect; $4,000 minus $480 minus $160 minus $248 minus $58 minus $200 equals $2,854 net pay.',
+            },
           },
           {
             id: "fin-sec14-u7-L3-Q5",
@@ -3160,6 +3613,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "In a competitive job market, benefits help small businesses attract talent they might otherwise lose to larger companies with bigger paychecks.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; in a competitive job market, benefits help small businesses attract talent they might otherwise lose to larger.',
+              2: 'In a competitive job market, benefits help small businesses attract talent they might otherwise lose to larger companies with bigger paychecks.',
+              3: 'This reasoning is flawed; in a competitive job market, benefits help small businesses attract talent they might otherwise lose to larger.',
+            },
           },
           {
             id: "fin-sec14-u7-L4-T2",
@@ -3174,6 +3632,9 @@ export const financeSection14Business: Unit[] = [
             question: "Small businesses with fewer than 10 employees are exempt from all employment laws.",
             correctAnswer: false,
             explanation: "Most employment laws apply regardless of size: minimum wage, overtime, anti-discrimination, and safety regulations. Some laws have thresholds (like ACA at 50 employees), but most basics apply to everyone.",
+            distractorExplanations: {
+              0: 'Most employment laws apply regardless of size: minimum wage, overtime, anti-discrimination, and safety regulations. Some laws have thresholds (like ACA at 50 employees), but most basics apply to everyone.',
+            },
           },
           {
             id: "fin-sec14-u7-L4-Q4",
@@ -3188,6 +3649,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Non-exempt employees must receive overtime pay (typically 1.5 times regular rate) for hours worked beyond 40 per week, regardless of whether they're salaried.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; non-exempt employees must receive overtime pay (typically 1.',
+              2: 'This reasoning is flawed; non-exempt employees must receive overtime pay (typically 1.',
+              3: 'This reasoning is flawed; non-exempt employees must receive overtime pay (typically 1.',
+            },
           },
           {
             id: "fin-sec14-u7-L4-Q5",
@@ -3221,6 +3687,9 @@ export const financeSection14Business: Unit[] = [
             question: "You should hire your first employee as soon as you have enough revenue to cover their salary.",
             correctAnswer: false,
             explanation: "Salary is just the start. You also need to cover employer taxes, benefits, training time, and the overhead of managing someone. Revenue should comfortably exceed total employment cost.",
+            distractorExplanations: {
+              0: 'Salary is just the start. You also need to cover employer taxes, benefits, training time, and the overhead of managing someone. Revenue should comfortably exceed total employment cost.',
+            },
           },
           {
             id: "fin-sec14-u7-L5-Q2",
@@ -3235,6 +3704,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$6,000 profit minus $4,500 employee cost leaves only $1,500/month. One slow month could mean you can't make payroll. Wait until revenue is more consistent or higher.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; $6,000 profit minus $4,500 employee cost leaves only $1,500/month. One slow month could mean you can\'t make payroll.',
+              2: 'There is a real consequence here; $6,000 profit minus $4,500 employee cost leaves only $1,500/month.',
+              3: 'This reasoning is flawed; $6,000 profit minus $4,500 employee cost leaves only $1,500/month. One slow month could mean you can\'t make payroll.',
+            },
           },
           {
             id: "fin-sec14-u7-L5-T2",
@@ -3268,6 +3742,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Payroll is a fixed cost that doesn't adjust when revenue drops. Hiring before you have consistent demand can drain savings and force difficult decisions during slow periods.",
+            distractorExplanations: {
+              0: 'Payroll is a fixed cost that doesn\'t adjust when revenue drops.',
+              2: 'Payroll is a fixed cost that doesn\'t adjust when revenue drops.',
+              3: 'Payroll is a fixed cost that doesn\'t adjust when revenue drops.',
+            },
           },
           {
             id: "fin-sec14-u7-L5-Q5",
@@ -3315,6 +3794,9 @@ export const financeSection14Business: Unit[] = [
             question: "An LLC alone provides all the protection a business needs against financial losses.",
             correctAnswer: false,
             explanation: "An LLC protects personal assets from business liabilities, but it doesn't replace insurance. The business itself still needs protection from losses that could drain its accounts.",
+            distractorExplanations: {
+              0: 'An LLC protects personal assets from business liabilities, but it doesn\'t replace insurance. The business itself still needs protection from losses that could drain its accounts.',
+            },
           },
           {
             id: "fin-sec14-u8-L1-Q2",
@@ -3328,6 +3810,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Insurance transfers the financial risk of specific events to the insurer. You pay a predictable premium instead of facing unpredictable, potentially devastating losses.",
+            distractorExplanations: {
+              0: 'Insurance transfers the financial risk of specific events to the insurer.',
+              2: 'This reasoning is flawed; insurance transfers the financial risk of specific events to the insurer.',
+              3: 'Insurance transfers the financial risk of specific events to the insurer.',
+            },
           },
           {
             id: "fin-sec14-u8-L1-T2",
@@ -3363,6 +3850,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "General liability covers injuries to third parties (visitors, clients) on your premises or caused by your business operations.",
+            distractorExplanations: {
+              0: 'General liability covers injuries to third parties (visitors, clients) on your premises or caused by your business operations.',
+              2: 'General liability covers injuries to third parties (visitors, clients) on your premises or caused by your business operations.',
+              3: 'General liability covers injuries to third parties (visitors, clients) on your premises or caused by your business operations.',
+            },
           },
           {
             id: "fin-sec14-u8-L1-Q5",
@@ -3396,6 +3888,9 @@ export const financeSection14Business: Unit[] = [
             question: "Some clients and landlords require businesses to carry general liability insurance before signing contracts.",
             correctAnswer: true,
             explanation: "Many commercial leases and client contracts require proof of insurance. Without it, you may lose opportunities.",
+            distractorExplanations: {
+              1: 'Many commercial leases and client contracts require proof of insurance. Without it, you may lose opportunities.',
+            },
           },
           {
             id: "fin-sec14-u8-L2-Q2",
@@ -3443,6 +3938,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An accountant's professional advice directly affects clients' finances. A tax preparation error could cost a client thousands. E&O insurance protects against such claims.",
+            distractorExplanations: {
+              0: 'An accountant\'s professional advice directly affects clients\' finances. A tax preparation error could cost a client thousands.',
+              2: 'An accountant\'s professional advice directly affects clients\' finances. A tax preparation error could cost a client thousands.',
+              3: 'An accountant\'s professional advice directly affects clients\' finances. A tax preparation error could cost a client thousands.',
+            },
           },
           {
             id: "fin-sec14-u8-L2-Q5",
@@ -3457,6 +3957,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A coding error causing client losses is a professional negligence claim. E&O insurance covers the legal defense and any damages owed.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a coding error causing client losses is a professional negligence claim.',
+              2: 'This reasoning is flawed; a coding error causing client losses is a professional negligence claim.',
+              3: 'A coding error causing client losses is a professional negligence claim. E&O insurance covers the legal defense and any damages owed.',
+            },
           },
         ],
       },
@@ -3482,6 +3987,9 @@ export const financeSection14Business: Unit[] = [
             question: "Your personal homeowner's or renter's insurance automatically covers business equipment used at home.",
             correctAnswer: false,
             explanation: "Most personal policies exclude or severely limit coverage for business property. You need a separate business property policy or a rider on your personal policy.",
+            distractorExplanations: {
+              0: 'Most personal policies exclude or severely limit coverage for business property. You need a separate business property policy or a rider on your personal policy.',
+            },
           },
           {
             id: "fin-sec14-u8-L3-Q2",
@@ -3495,6 +4003,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A BOP combines general liability and property insurance into one policy at a lower cost than buying them separately. It's a popular choice for small businesses.",
+            distractorExplanations: {
+              0: 'A BOP combines general liability and property insurance into one policy at a lower cost than buying them separately.',
+              2: 'A BOP combines general liability and property insurance into one policy at a lower cost than buying them separately.',
+              3: 'A BOP combines general liability and property insurance into one policy at a lower cost than buying them separately.',
+            },
           },
           {
             id: "fin-sec14-u8-L3-T2",
@@ -3516,6 +4029,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Cyber insurance covers data breach response costs: forensic investigation, customer notification, credit monitoring, legal defense, and regulatory fines.",
+            distractorExplanations: {
+              0: 'Cyber insurance covers data breach response costs: forensic investigation, customer notification, credit monitoring, legal defense, and.',
+              1: 'Cyber insurance covers data breach response costs: forensic investigation, customer notification, credit monitoring, legal defense, and.',
+              3: 'Cyber insurance covers data breach response costs: forensic investigation, customer notification, credit monitoring, legal defense, and.',
+            },
           },
           {
             id: "fin-sec14-u8-L3-Q4",
@@ -3565,6 +4083,9 @@ export const financeSection14Business: Unit[] = [
             question: "Verbal agreements are legally binding, so written contracts aren't necessary.",
             correctAnswer: false,
             explanation: "While some verbal agreements can be enforceable, written contracts are far stronger in court. They clearly document what both parties agreed to and prevent 'he said, she said' disputes.",
+            distractorExplanations: {
+              0: 'While some verbal agreements can be enforceable, written contracts are far stronger in court. They clearly document what both parties agreed to and prevent \'he said, she said\' disputes.',
+            },
           },
           {
             id: "fin-sec14-u8-L4-Q2",
@@ -3578,6 +4099,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A limitation of liability clause caps your financial exposure. For example, limiting liability to the amount the client paid for the project protects you from unlimited claims.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a limitation of liability clause caps your financial exposure.',
+              2: 'This reasoning is flawed; a limitation of liability clause caps your financial exposure.',
+              3: 'This reasoning is flawed; a limitation of liability clause caps your financial exposure.',
+            },
           },
           {
             id: "fin-sec14-u8-L4-T2",
@@ -3612,6 +4138,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The contract caps liability at $10,000. Insurance covers legal defense costs. The LLC protects personal assets if damages exceed insurance limits. Multiple layers work together.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; the contract caps liability at $10,000. Insurance covers legal defense costs.',
+              2: 'This reasoning is flawed; the contract caps liability at $10,000. Insurance covers legal defense costs.',
+              3: 'This reasoning is flawed; the contract caps liability at $10,000. Insurance covers legal defense costs.',
+            },
           },
           {
             id: "fin-sec14-u8-L4-Q5",
@@ -3664,6 +4195,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Comparing multiple quotes ensures you get adequate coverage at a competitive price. Look beyond premium cost: check coverage limits, deductibles, and what's excluded.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; comparing multiple quotes ensures you get adequate coverage at a competitive price.',
+              2: 'Comparing multiple quotes ensures you get adequate coverage at a competitive price.',
+              3: 'Inaction here would be harmful; comparing multiple quotes ensures you get adequate coverage at a competitive price.',
+            },
           },
           {
             id: "fin-sec14-u8-L5-T2",
@@ -3678,6 +4214,9 @@ export const financeSection14Business: Unit[] = [
             question: "Once you buy a business insurance policy, you never need to update it.",
             correctAnswer: false,
             explanation: "Businesses evolve. New services, employees, equipment, or higher revenue all change your risk profile. Review and update coverage at least once per year.",
+            distractorExplanations: {
+              0: 'Businesses evolve. New services, employees, equipment, or higher revenue all change your risk profile. Review and update coverage at least once per year.',
+            },
           },
           {
             id: "fin-sec14-u8-L5-Q4",
@@ -3692,6 +4231,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Employees require workers' comp. Customer payment data requires cyber insurance. A new office may need property coverage. And your GL limits may be too low for a growing business.",
+            distractorExplanations: {
+              0: 'Employees require workers\' comp. Customer payment data requires cyber insurance. A new office may need property coverage.',
+              2: 'This reasoning is flawed; employees require workers\' comp. Customer payment data requires cyber insurance.',
+              3: 'This reasoning is flawed; employees require workers\' comp. Customer payment data requires cyber insurance.',
+            },
           },
           {
             id: "fin-sec14-u8-L5-Q5",
@@ -3739,6 +4283,9 @@ export const financeSection14Business: Unit[] = [
             question: "Business credit scores use the same 300 to 850 scale as personal credit scores.",
             correctAnswer: false,
             explanation: "Business credit scores typically range from 0 to 100. Different agencies use different scales, but none use the personal 300 to 850 FICO range.",
+            distractorExplanations: {
+              0: 'Business credit scores typically range from 0 to 100. Different agencies use different scales, but none use the personal 300 to 850 FICO range.',
+            },
           },
           {
             id: "fin-sec14-u9-L1-Q2",
@@ -3752,6 +4299,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You need a formal business identity (registration, tax ID, bank account) before lenders and credit agencies can track your business separately from you.",
+            distractorExplanations: {
+              0: 'You need a formal business identity (registration, tax ID, bank account) before lenders and credit agencies can track your business separately.',
+              2: 'This reasoning is flawed; you need a formal business identity (registration, tax ID, bank account) before lenders and credit agencies can track.',
+              3: 'This reasoning is flawed; you need a formal business identity (registration, tax ID, bank account) before lenders and credit agencies can track.',
+            },
           },
           {
             id: "fin-sec14-u9-L1-T2",
@@ -3787,6 +4339,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Personal credit cards report to personal credit agencies, not business ones. You need accounts in the business's name that report to business credit bureaus.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; personal credit cards report to personal credit agencies, not business ones.',
+              2: 'Personal credit cards report to personal credit agencies, not business ones.',
+              3: 'This reasoning is flawed; personal credit cards report to personal credit agencies, not business ones.',
+            },
           },
           {
             id: "fin-sec14-u9-L1-Q5",
@@ -3840,6 +4397,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lenders want to see that your business can repay. They review financial history, projections, and often require the owner to personally guarantee the loan.",
+            distractorExplanations: {
+              0: 'Lenders want to see that your business can repay. They review financial history, projections, and often require the owner to personally guarantee.',
+              2: 'Lenders want to see that your business can repay. They review financial history, projections, and often require the owner to personally guarantee.',
+              3: 'Lenders want to see that your business can repay. They review financial history, projections, and often require the owner to personally guarantee.',
+            },
           },
           {
             id: "fin-sec14-u9-L2-T2",
@@ -3854,6 +4416,9 @@ export const financeSection14Business: Unit[] = [
             question: "A personal guarantee on a business loan means your personal assets are at risk if the business can't repay.",
             correctAnswer: true,
             explanation: "A personal guarantee bypasses your LLC's liability protection for that specific debt. If the business defaults, the lender can pursue your personal assets.",
+            distractorExplanations: {
+              1: 'A personal guarantee bypasses your LLC\'s liability protection for that specific debt. If the business defaults, the lender can pursue your personal assets.',
+            },
           },
           {
             id: "fin-sec14-u9-L2-Q4",
@@ -3868,6 +4433,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Even though the bank loan has a longer term, the much lower interest rate (8% vs 18% or 22%) results in the lowest total interest paid. Always compare the total cost of borrowing.",
+            distractorExplanations: {
+              1: 'Even though the bank loan has a longer term, the much lower interest rate (8% vs 18% or 22%) results in the lowest total interest paid.',
+              2: 'Even though the bank loan has a longer term, the much lower interest rate (8% vs 18% or 22%) results in the lowest total interest paid.',
+              3: 'This reasoning is flawed; even though the bank loan has a longer term, the much lower interest rate (8% vs 18% or 22%) results in the lowest.',
+            },
           },
           {
             id: "fin-sec14-u9-L2-Q5",
@@ -3907,6 +4477,9 @@ export const financeSection14Business: Unit[] = [
             question: "The SBA directly lends money to small businesses.",
             correctAnswer: false,
             explanation: "The SBA guarantees a portion of loans made by partner lenders (banks and credit unions). The bank issues the loan, and the SBA guarantee reduces the bank's risk.",
+            distractorExplanations: {
+              0: 'The SBA guarantees a portion of loans made by partner lenders (banks and credit unions). The bank issues the loan, and the SBA guarantee reduces the bank\'s risk.',
+            },
           },
           {
             id: "fin-sec14-u9-L3-Q2",
@@ -3920,6 +4493,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Because the SBA guarantees a portion (typically 75% to 85%) of the loan, banks take on less risk and can offer better rates and longer repayment terms.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; because the SBA guarantees a portion (typically 75% to 85%) of the loan, banks take on less risk and can offer better.',
+              2: 'Because the SBA guarantees a portion (typically 75% to 85%) of the loan, banks take on less risk and can offer better rates and longer repayment.',
+              3: 'This reasoning is flawed; because the SBA guarantees a portion (typically 75% to 85%) of the loan, banks take on less risk and can offer better.',
+            },
           },
           {
             id: "fin-sec14-u9-L3-T2",
@@ -3956,6 +4534,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "SBA loans offer great terms but require extensive documentation and can take weeks to months to process. Online lenders are faster but more expensive.",
+            distractorExplanations: {
+              0: 'SBA loans offer great terms but require extensive documentation and can take weeks to months to process.',
+              2: 'SBA loans offer great terms but require extensive documentation and can take weeks to months to process.',
+              3: 'This reasoning is flawed; SBA loans offer great terms but require extensive documentation and can take weeks to months to process.',
+            },
           },
           {
             id: "fin-sec14-u9-L3-Q5",
@@ -4012,6 +4595,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The avalanche method targets the highest interest rate first. Paying off the 22% credit card first saves the most money in total interest.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the avalanche method targets the highest interest rate first.',
+              2: 'This reasoning is flawed; the avalanche method targets the highest interest rate first.',
+              3: 'The avalanche method targets the highest interest rate first. Paying off the 22% credit card first saves the most money in total interest.',
+            },
           },
           {
             id: "fin-sec14-u9-L4-T2",
@@ -4037,6 +4625,9 @@ export const financeSection14Business: Unit[] = [
             question: "Taking on business debt is always a bad decision.",
             correctAnswer: false,
             explanation: "Strategic debt that funds growth can be very beneficial. Borrowing to buy equipment that doubles your output is a smart use of leverage. The key is borrowing for productive purposes with a clear repayment plan.",
+            distractorExplanations: {
+              0: 'Strategic debt that funds growth can be very beneficial. Borrowing to buy equipment that doubles your output is a smart use of leverage. The key is borrowing for productive purposes with a clear repayment plan.',
+            },
           },
           {
             id: "fin-sec14-u9-L4-Q5",
@@ -4070,6 +4661,9 @@ export const financeSection14Business: Unit[] = [
             question: "Bootstrapping a business means funding it entirely with personal savings and business revenue.",
             correctAnswer: true,
             explanation: "Bootstrapping avoids external financing. You reinvest profits back into the business, maintaining full ownership and control.",
+            distractorExplanations: {
+              1: 'Bootstrapping avoids external financing. You reinvest profits back into the business, maintaining full ownership and control.',
+            },
           },
           {
             id: "fin-sec14-u9-L5-Q2",
@@ -4104,6 +4698,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Equity funding makes sense when the capital will dramatically increase the company's value. Giving up 20% ownership is worth it if the investment helps the business grow 10x.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; equity funding makes sense when the capital will dramatically increase the company\'s value.',
+              2: 'Equity funding makes sense when the capital will dramatically increase the company\'s value.',
+              3: 'This reasoning is flawed; equity funding makes sense when the capital will dramatically increase the company\'s value.',
+            },
           },
           {
             id: "fin-sec14-u9-L5-Q4",
@@ -4134,6 +4733,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The trade-off is speed vs ownership. VC money lets you build now but costs 30% equity. Bootstrapping takes 4 years but you keep everything. Neither is universally better.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the trade-off is speed vs ownership. VC money lets you build now but costs 30% equity.',
+              2: 'This overgeneralizes; the trade-off is speed vs ownership. VC money lets you build now but costs 30% equity.',
+              3: 'This reasoning is flawed; the trade-off is speed vs ownership. VC money lets you build now but costs 30% equity.',
+            },
           },
         ],
       },
@@ -4173,6 +4777,9 @@ export const financeSection14Business: Unit[] = [
             question: "A profit and loss statement shows your business's financial position at a single point in time.",
             correctAnswer: false,
             explanation: "The P&L covers a period of time (month, quarter, year). The balance sheet shows a snapshot at a single point in time. Don't confuse them.",
+            distractorExplanations: {
+              0: 'The P&L covers a period of time (month, quarter, year). The balance sheet shows a snapshot at a single point in time. Don\'t confuse them.',
+            },
           },
           {
             id: "fin-sec14-u10-L1-Q2",
@@ -4208,6 +4815,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "$45,000 revenue minus $18,000 COGS = $27,000 gross profit. Minus $22,000 operating expenses minus $1,000 interest = $4,000 net profit.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $45,000 revenue minus $18,000 COGS = $27,000 gross profit.',
+              1: 'This calculation is incorrect; $45,000 revenue minus $18,000 COGS = $27,000 gross profit.',
+              2: 'This calculation is incorrect; $45,000 revenue minus $18,000 COGS = $27,000 gross profit.',
+            },
           },
           {
             id: "fin-sec14-u10-L1-Q4",
@@ -4255,6 +4867,9 @@ export const financeSection14Business: Unit[] = [
             question: "On a balance sheet, assets must always equal liabilities plus equity.",
             correctAnswer: true,
             explanation: "This is the fundamental accounting equation: Assets = Liabilities + Equity. If it doesn't balance, there's an error somewhere in your books.",
+            distractorExplanations: {
+              1: 'This is the fundamental accounting equation: Assets = Liabilities + Equity. If it doesn\'t balance, there\'s an error somewhere in your books.',
+            },
           },
           {
             id: "fin-sec14-u10-L2-Q2",
@@ -4302,6 +4917,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The P&L shows performance over time (this quarter's profit). The balance sheet shows position at a moment (what you own and owe right now).",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; the P&L shows performance over time (this quarter\'s profit).',
+              2: 'The P&L shows performance over time (this quarter\'s profit). The balance sheet shows position at a moment (what you own and owe right now).',
+              3: 'This reasoning is flawed; the P&L shows performance over time (this quarter\'s profit).',
+            },
           },
           {
             id: "fin-sec14-u10-L2-Q5",
@@ -4335,6 +4955,9 @@ export const financeSection14Business: Unit[] = [
             question: "A business showing profit on its P&L always has positive cash flow.",
             correctAnswer: false,
             explanation: "Profit on the P&L doesn't mean cash in the bank. If revenue is recognized but not collected (accrual accounting), you can be profitable but cash-poor.",
+            distractorExplanations: {
+              0: 'Profit on the P&L doesn\'t mean cash in the bank. If revenue is recognized but not collected (accrual accounting), you can be profitable but cash-poor.',
+            },
           },
           {
             id: "fin-sec14-u10-L3-Q2",
@@ -4372,6 +4995,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Positive operating cash flow ($15,000) is healthy. The equipment purchase is funded by a loan, which is normal for growth. The core business is generating cash.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; positive operating cash flow ($15,000) is healthy.',
+              2: 'There is a real consequence here; positive operating cash flow ($15,000) is healthy.',
+              3: 'Positive operating cash flow ($15,000) is healthy. The equipment purchase is funded by a loan, which is normal for growth.',
+            },
           },
           {
             id: "fin-sec14-u10-L3-Q4",
@@ -4458,6 +5086,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Business A's ratio below 1.0 means current liabilities exceed current assets. That's a liquidity risk. Business B at 2.3 has a comfortable cushion.",
+            distractorExplanations: {
+              0: 'Business A\'s ratio below 1.0 means current liabilities exceed current assets. That\'s a liquidity risk. Business B at 2.3 has a comfortable cushion.',
+              2: 'This reasoning is flawed; business A\'s ratio below 1.0 means current liabilities exceed current assets. That\'s a liquidity risk. Business B at 2.',
+              3: 'This reasoning is flawed; business A\'s ratio below 1.0 means current liabilities exceed current assets. That\'s a liquidity risk. Business B at 2.',
+            },
           },
           {
             id: "fin-sec14-u10-L4-Q4",
@@ -4471,6 +5104,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A debt-to-equity of 3.0 means for every $1 of owner equity, the business has $3 of debt. This is highly leveraged and potentially risky.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a debt-to-equity of 3.0 means for every $1 of owner equity, the business has $3 of debt.',
+              2: 'This reasoning is flawed; a debt-to-equity of 3.0 means for every $1 of owner equity, the business has $3 of debt.',
+              3: 'A debt-to-equity of 3.0 means for every $1 of owner equity, the business has $3 of debt. This is highly leveraged and potentially risky.',
+            },
           },
           {
             id: "fin-sec14-u10-L4-Q5",
@@ -4511,6 +5149,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Expenses growing faster than revenue is a red flag. Investigate which expenses jumped and whether they're necessary or can be controlled.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; expenses growing faster than revenue is a red flag.',
+              2: 'This reasoning is flawed; expenses growing faster than revenue is a red flag.',
+              3: 'This reasoning is flawed; expenses growing faster than revenue is a red flag.',
+            },
           },
           {
             id: "fin-sec14-u10-L5-Q2",
@@ -4524,6 +5167,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Monthly review is the sweet spot. It's frequent enough to catch problems early but not so frequent that it becomes overwhelming.",
+            distractorExplanations: {
+              0: 'Monthly review is the sweet spot. It\'s frequent enough to catch problems early but not so frequent that it becomes overwhelming.',
+              2: 'This overgeneralizes; monthly review is the sweet spot. It\'s frequent enough to catch problems early but not so frequent that it becomes.',
+              3: 'Monthly review is the sweet spot. It\'s frequent enough to catch problems early but not so frequent that it becomes overwhelming.',
+            },
           },
           {
             id: "fin-sec14-u10-L5-T2",
@@ -4538,6 +5186,9 @@ export const financeSection14Business: Unit[] = [
             question: "Comparing financial statements across multiple periods is more useful than looking at a single period.",
             correctAnswer: true,
             explanation: "Trends matter more than snapshots. A single period could be an outlier. Multiple periods reveal whether performance is improving, declining, or stable.",
+            distractorExplanations: {
+              1: 'Trends matter more than snapshots. A single period could be an outlier. Multiple periods reveal whether performance is improving, declining, or stable.',
+            },
           },
           {
             id: "fin-sec14-u10-L5-Q4",
@@ -4607,6 +5258,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Receivables growing much faster than revenue means clients are taking longer to pay. This drains cash and explains the dropping current ratio. Tighten payment terms.",
+            distractorExplanations: {
+              0: 'Receivables growing much faster than revenue means clients are taking longer to pay. This drains cash and explains the dropping current ratio.',
+              2: 'Receivables growing much faster than revenue means clients are taking longer to pay. This drains cash and explains the dropping current ratio.',
+              3: 'Inaction here would be harmful; receivables growing much faster than revenue means clients are taking longer to pay.',
+            },
           },
           {
             id: "fin-sec14-u10-L6-T2",
@@ -4621,6 +5277,9 @@ export const financeSection14Business: Unit[] = [
             question: "A business can grow itself into bankruptcy by taking on too many sales without collecting payment fast enough.",
             correctAnswer: true,
             explanation: "This is called 'overtrading.' Growing sales require more inventory, supplies, and staff costs upfront. If payment is delayed, the business runs out of cash despite being profitable.",
+            distractorExplanations: {
+              1: 'This is called \'overtrading.\' Growing sales require more inventory, supplies, and staff costs upfront. If payment is delayed, the business runs out of cash despite being profitable.',
+            },
           },
           {
             id: "fin-sec14-u10-L6-Q4",
@@ -4634,6 +5293,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A current ratio below 1.0 means current liabilities exceed current assets. The business may not be able to pay bills due within the year. This is an urgent liquidity warning.",
+            distractorExplanations: {
+              0: 'A current ratio below 1.0 means current liabilities exceed current assets. The business may not be able to pay bills due within the year.',
+              2: 'A current ratio below 1.0 means current liabilities exceed current assets. The business may not be able to pay bills due within the year.',
+              3: 'A current ratio below 1.0 means current liabilities exceed current assets. The business may not be able to pay bills due within the year.',
+            },
           },
           {
             id: "fin-sec14-u10-L6-Q5",
@@ -4687,6 +5351,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Sole props, LLCs, and S-Corps pass profits to the owner's personal tax return. C-Corps file separate corporate returns.",
+            distractorExplanations: {
+              0: 'Sole props, LLCs, and S-Corps pass profits to the owner\'s personal tax return. C-Corps file separate corporate returns.',
+              2: 'Sole props, LLCs, and S-Corps pass profits to the owner\'s personal tax return. C-Corps file separate corporate returns.',
+              3: 'This overgeneralizes; sole props, LLCs, and S-Corps pass profits to the owner\'s personal tax return. C-Corps file separate corporate returns.',
+            },
           },
           {
             id: "fin-sec14-u11-L1-Q2",
@@ -4701,6 +5370,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Control over hours, location, tools, and methods, plus exclusivity, all indicate employment. The contract label doesn't override the reality.",
+            distractorExplanations: {
+              0: 'Control over hours, location, tools, and methods, plus exclusivity, all indicate employment. The contract label doesn\'t override the reality.',
+              2: 'Control over hours, location, tools, and methods, plus exclusivity, all indicate employment. The contract label doesn\'t override the reality.',
+              3: 'Inaction here would be harmful; control over hours, location, tools, and methods, plus exclusivity, all indicate employment.',
+            },
           },
           {
             id: "fin-sec14-u11-L1-Q3",
@@ -4708,6 +5382,9 @@ export const financeSection14Business: Unit[] = [
             question: "The safe harbor method for quarterly taxes means paying at least 100% of last year's total tax divided into 4 payments.",
             correctAnswer: true,
             explanation: "Safe harbor avoids underpayment penalties even if you owe more at year-end. It's the simplest approach for most self-employed people.",
+            distractorExplanations: {
+              1: 'Safe harbor avoids underpayment penalties even if you owe more at year-end. It\'s the simplest approach for most self-employed people.',
+            },
           },
           {
             id: "fin-sec14-u11-L1-Q4",
@@ -4740,6 +5417,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Taking deductions sooner and pushing income later both reduce current-year taxable income. This is standard, legal tax planning.",
+            distractorExplanations: {
+              0: 'Taking deductions sooner and pushing income later both reduce current-year taxable income. This is standard, legal tax planning.',
+              2: 'Taking deductions sooner and pushing income later both reduce current-year taxable income. This is standard, legal tax planning.',
+              3: 'Taking deductions sooner and pushing income later both reduce current-year taxable income. This is standard, legal tax planning.',
+            },
           },
         ],
       },
@@ -4786,6 +5468,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Multiple layers (entity structure, insurance, contracts) provide comprehensive protection. No single layer is sufficient, but together they cover most risks.",
+            distractorExplanations: {
+              0: 'Multiple layers (entity structure, insurance, contracts) provide comprehensive protection.',
+              2: 'This reasoning is flawed; multiple layers (entity structure, insurance, contracts) provide comprehensive protection.',
+              3: 'This reasoning is flawed; multiple layers (entity structure, insurance, contracts) provide comprehensive protection.',
+            },
           },
           {
             id: "fin-sec14-u11-L2-Q3",
@@ -4793,6 +5480,9 @@ export const financeSection14Business: Unit[] = [
             question: "A personal guarantee on a business loan means your LLC can't protect your personal assets for that specific debt.",
             correctAnswer: true,
             explanation: "When you personally guarantee a loan, you agree to repay it from personal assets if the business can't. This bypasses LLC protection for that obligation.",
+            distractorExplanations: {
+              1: 'When you personally guarantee a loan, you agree to repay it from personal assets if the business can\'t. This bypasses LLC protection for that obligation.',
+            },
           },
           {
             id: "fin-sec14-u11-L2-Q4",
@@ -4822,6 +5512,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A formal business identity (registration, EIN, bank account) is the foundation. Then apply for a DUNS number and open trade accounts that report to business credit bureaus.",
+            distractorExplanations: {
+              0: 'A formal business identity (registration, EIN, bank account) is the foundation.',
+              2: 'This reasoning is flawed; a formal business identity (registration, EIN, bank account) is the foundation.',
+              3: 'A formal business identity (registration, EIN, bank account) is the foundation.',
+            },
           },
           {
             id: "fin-sec14-u11-L2-Q6",
@@ -4862,6 +5557,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Net profit: $200K - $80K - $90K - $5K = $25,000. Equity: $150K assets - $60K liabilities = $90,000. P&L and balance sheet answer different questions.",
+            distractorExplanations: {
+              1: 'Net profit: $200K - $80K - $90K - $5K = $25,000. Equity: $150K assets - $60K liabilities = $90,000.',
+              2: 'Net profit: $200K - $80K - $90K - $5K = $25,000. Equity: $150K assets - $60K liabilities = $90,000.',
+              3: 'Net profit: $200K - $80K - $90K - $5K = $25,000. Equity: $150K assets - $60K liabilities = $90,000.',
+            },
           },
           {
             id: "fin-sec14-u11-L3-Q2",
@@ -4894,6 +5594,9 @@ export const financeSection14Business: Unit[] = [
             question: "A business with positive net profit on its P&L can still run out of cash and fail.",
             correctAnswer: true,
             explanation: "If revenue is earned on paper (accrual) but cash hasn't been collected, the business can be profitable but unable to pay its bills. Cash flow is king.",
+            distractorExplanations: {
+              1: 'If revenue is earned on paper (accrual) but cash hasn\'t been collected, the business can be profitable but unable to pay its bills. Cash flow is king.',
+            },
           },
           {
             id: "fin-sec14-u11-L3-Q5",
@@ -4907,6 +5610,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When receivables grow faster than revenue, collection is slowing down. This creates a cash squeeze and needs immediate attention.",
+            distractorExplanations: {
+              0: 'When receivables grow faster than revenue, collection is slowing down. This creates a cash squeeze and needs immediate attention.',
+              2: 'When receivables grow faster than revenue, collection is slowing down. This creates a cash squeeze and needs immediate attention.',
+              3: 'When receivables grow faster than revenue, collection is slowing down. This creates a cash squeeze and needs immediate attention.',
+            },
           },
           {
             id: "fin-sec14-u11-L3-Q6",
@@ -4947,6 +5655,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "An LLC provides liability protection. S-Corp election saves on self-employment tax at his income level. E&O insurance protects against claims from his consulting advice.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; an LLC provides liability protection. S-Corp election saves on self-employment tax at his income level.',
+              2: 'This reasoning is flawed; an LLC provides liability protection. S-Corp election saves on self-employment tax at his income level.',
+              3: 'This reasoning is flawed; an LLC provides liability protection. S-Corp election saves on self-employment tax at his income level.',
+            },
           },
           {
             id: "fin-sec14-u11-L4-Q2",
@@ -4960,6 +5673,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Profitability is great, but a current ratio below 1.0 and negative operating cash flow mean a cash crisis. Fix collections, tighten terms, and build reserves before it's too late.",
+            distractorExplanations: {
+              0: 'Profitability is great, but a current ratio below 1.0 and negative operating cash flow mean a cash crisis.',
+              2: 'This reasoning is flawed; profitability is great, but a current ratio below 1.0 and negative operating cash flow mean a cash crisis.',
+              3: 'This reasoning is flawed; profitability is great, but a current ratio below 1.0 and negative operating cash flow mean a cash crisis.',
+            },
           },
           {
             id: "fin-sec14-u11-L4-Q3",
@@ -4988,6 +5706,11 @@ export const financeSection14Business: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The SBA loan lets you expand now while keeping 100% ownership. You repay $100,000 plus interest over 5 years, but you own everything. The investor takes 25% of all future value.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the SBA loan lets you expand now while keeping 100% ownership.',
+              2: 'This reasoning is flawed; the SBA loan lets you expand now while keeping 100% ownership.',
+              3: 'This overgeneralizes; the SBA loan lets you expand now while keeping 100% ownership.',
+            },
           },
           {
             id: "fin-sec14-u11-L4-Q5",
@@ -4995,6 +5718,9 @@ export const financeSection14Business: Unit[] = [
             question: "A comprehensive business financial strategy includes entity structure, insurance, contracts, separate banking, bookkeeping, tax planning, and financial statement analysis.",
             correctAnswer: true,
             explanation: "All of these elements work together. Skipping any one creates a vulnerability. The best business owners understand and manage all of them.",
+            distractorExplanations: {
+              1: 'All of these elements work together. Skipping any one creates a vulnerability. The best business owners understand and manage all of them.',
+            },
           },
           {
             id: "fin-sec14-u11-L4-Q6",

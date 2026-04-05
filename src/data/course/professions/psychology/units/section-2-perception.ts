@@ -34,6 +34,9 @@ export const psychologySection2: Unit[] = [
             question: 'Your brain directly touches and senses the outside world.',
             correctAnswer: false,
             explanation: 'Your brain never directly contacts the world. It relies on electrical signals sent by your senses.',
+            distractorExplanations: {
+              0: 'Your brain never directly contacts the world. It relies on electrical signals sent by your senses.',
+            },
           },
           {
             id: 'psy-s2-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Your senses convert physical energy into electrical signals. This process is called transduction.',
+            distractorExplanations: {
+              0: 'Store it as memories is not correct here; your senses convert physical energy into electrical signals. This process is called transduction.',
+              2: 'Send it directly to the brain unchanged is not correct here; your senses convert physical energy into electrical signals.',
+              3: 'Destroy it after processing is not correct here; your senses convert physical energy into electrical signals. This process is called transduction.',
+            },
           },
           {
             id: 'psy-s2-u1-L1-T2',
@@ -83,6 +91,9 @@ export const psychologySection2: Unit[] = [
             question: 'Sensation and perception are the same thing.',
             correctAnswer: false,
             explanation: 'Sensation is raw detection. Perception is interpretation. They work together but are different steps.',
+            distractorExplanations: {
+              0: 'Sensation is raw detection. Perception is interpretation. They work together but are different steps.',
+            },
           },
           {
             id: 'psy-s2-u1-L1-Q6',
@@ -96,6 +107,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Detecting the sound is sensation. Interpreting it as a car backfire is perception.',
+            distractorExplanations: {
+              1: 'Both are sensation because your ears did the work. is not correct here; detecting the sound is sensation.',
+              2: 'Both are perception because your brain processed it. is not correct here; detecting the sound is sensation.',
+              3: 'This is not accurate; detecting the sound is sensation. Interpreting it as a car backfire is perception.',
+            },
           },
         ],
       },
@@ -121,6 +137,9 @@ export const psychologySection2: Unit[] = [
             question: 'The absolute threshold is the smallest amount of energy you can detect 50% of the time.',
             correctAnswer: true,
             explanation: 'Correct. The 50% mark is used because detection at very low levels is not all-or-nothing.',
+            distractorExplanations: {
+              1: 'The 50% mark is used because detection at very low levels is not all-or-nothing.',
+            },
           },
           {
             id: 'psy-s2-u1-L2-Q2',
@@ -134,6 +153,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The absolute threshold is the minimum stimulus you can detect 50% of the time.',
+            distractorExplanations: {
+              0: 'The loudest sound your ears can tolerate is not correct here; the absolute threshold is the minimum stimulus you can detect 50% of the time.',
+              2: 'The average volume of a conversation is not correct here; the absolute threshold is the minimum stimulus you can detect 50% of the time.',
+              3: 'The sound level that causes pain is not correct here; the absolute threshold is the minimum stimulus you can detect 50% of the time.',
+            },
           },
           {
             id: 'psy-s2-u1-L2-T2',
@@ -183,6 +207,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Weber's law says you need a proportional change. 2 kg out of 10 (20%) is much more noticeable than a tiny fraction.",
+            distractorExplanations: {
+              1: 'When 0.01 kg is added is not correct here; weber\'s law says you need a proportional change.',
+              2: 'When the backpack is already 50 kg is not correct here; weber\'s law says you need a proportional change.',
+              3: 'This is too narrow; weber\'s law says you need a proportional change. 2 kg out of 10 (20%) is much more noticeable than a tiny fraction.',
+            },
           },
           {
             id: 'psy-s2-u1-L2-Q6',
@@ -197,6 +226,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Weber's law in action. 10 cents is 10% of $1 but only 2% of $5. Larger proportional changes are easier to detect.",
+            distractorExplanations: {
+              1: 'People care more about vending machines than lattes is not correct here; weber\'s law in action. 10 cents is 10% of $1 but only 2% of $5.',
+              2: 'The coffee shop hides the price increase better is not correct here; weber\'s law in action. 10 cents is 10% of $1 but only 2% of $5.',
+              3: 'Customers at coffee shops are wealthier is not correct here; weber\'s law in action. 10 cents is 10% of $1 but only 2% of $5.',
+            },
           },
         ],
       },
@@ -222,6 +256,9 @@ export const psychologySection2: Unit[] = [
             question: 'Sensory adaptation means your brain stops responding to stimuli that stay the same.',
             correctAnswer: true,
             explanation: 'Your brain prioritizes change over constant input. Unchanging signals fade from awareness.',
+            distractorExplanations: {
+              1: 'Your brain prioritizes change over constant input. Unchanging signals fade from awareness.',
+            },
           },
           {
             id: 'psy-s2-u1-L3-Q2',
@@ -235,6 +272,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Sensory adaptation. Your temperature receptors reduced their firing rate because the cold stimulus stayed constant.',
+            distractorExplanations: {
+              0: 'The water warmed up is not correct here; sensory adaptation. Your temperature receptors reduced their firing rate because the cold stimulus.',
+              1: 'Your body temperature dropped to match is not correct here; sensory adaptation.',
+              3: 'Your pain receptors shut off permanently is not correct here; sensory adaptation.',
+            },
           },
           {
             id: 'psy-s2-u1-L3-T2',
@@ -254,6 +296,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Changes often signal danger or opportunity. Adaptation helps you focus on what is new.',
+            distractorExplanations: {
+              1: 'It makes all senses stronger over time is not correct here; changes often signal danger or opportunity. Adaptation helps you focus on what is new.',
+              2: 'It prevents you from ever feeling pain is not correct here; changes often signal danger or opportunity. Adaptation helps you focus on what is new.',
+              3: 'It increases the absolute threshold permanently is not correct here; changes often signal danger or opportunity.',
+            },
           },
           {
             id: 'psy-s2-u1-L3-Q4',
@@ -275,6 +322,9 @@ export const psychologySection2: Unit[] = [
             question: 'Pain adapts fully, just like your sense of smell.',
             correctAnswer: false,
             explanation: 'Pain only partially adapts. Complete adaptation to pain would be dangerous because pain signals real harm.',
+            distractorExplanations: {
+              0: 'Pain only partially adapts. Complete adaptation to pain would be dangerous because pain signals real harm.',
+            },
           },
           {
             id: 'psy-s2-u1-L3-Q6',
@@ -312,6 +362,9 @@ export const psychologySection2: Unit[] = [
             question: 'The pupil is the colored part of your eye.',
             correctAnswer: false,
             explanation: 'The iris is the colored part. The pupil is the black opening in the center that lets light in.',
+            distractorExplanations: {
+              0: 'The iris is the colored part. The pupil is the black opening in the center that lets light in.',
+            },
           },
           {
             id: 'psy-s2-u1-L4-Q2',
@@ -325,6 +378,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The iris is a muscle that adjusts pupil size. It controls the amount of light reaching the back of the eye.',
+            distractorExplanations: {
+              0: 'Detects color is not correct here; the iris is a muscle that adjusts pupil size. It controls the amount of light reaching the back of the eye.',
+              2: 'Sends signals to the brain is not correct here; the iris is a muscle that adjusts pupil size.',
+              3: 'Focuses the image on the retina is not correct here; the iris is a muscle that adjusts pupil size.',
+            },
           },
           {
             id: 'psy-s2-u1-L4-T2',
@@ -374,6 +432,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'At the optic nerve exit point, there are no photoreceptors. Your brain fills in the missing information.',
+            distractorExplanations: {
+              0: 'The lens blocks part of the image is not correct here; at the optic nerve exit point, there are no photoreceptors.',
+              2: 'The iris creates a shadow is not correct here; at the optic nerve exit point, there are no photoreceptors.',
+              3: 'Rods and cones overlap and cancel out is not correct here; at the optic nerve exit point, there are no photoreceptors.',
+            },
           },
           {
             id: 'psy-s2-u1-L4-Q6',
@@ -412,6 +475,9 @@ export const psychologySection2: Unit[] = [
             question: 'Objects in the world have color built into them.',
             correctAnswer: false,
             explanation: 'Objects reflect certain wavelengths of light. Your brain constructs the experience of color from those wavelengths.',
+            distractorExplanations: {
+              0: 'Objects reflect certain wavelengths of light. Your brain constructs the experience of color from those wavelengths.',
+            },
           },
           {
             id: 'psy-s2-u1-L5-Q2',
@@ -425,6 +491,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Long wavelengths (around 700 nanometers) are perceived as red. Short wavelengths appear blue or violet.',
+            distractorExplanations: {
+              0: 'Short wavelengths is not correct here; long wavelengths (around 700 nanometers) are perceived as red. Short wavelengths appear blue or violet.',
+              1: 'Medium wavelengths is not correct here; long wavelengths (around 700 nanometers) are perceived as red. Short wavelengths appear blue or violet.',
+              3: 'Wavelengths outside the visible range is not correct here; long wavelengths (around 700 nanometers) are perceived as red.',
+            },
           },
           {
             id: 'psy-s2-u1-L5-T2',
@@ -445,6 +516,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Most people have 3 types of cones: red-sensitive, green-sensitive, and blue-sensitive.',
+            distractorExplanations: {
+              0: '1 is not correct here; most people have 3 types of cones: red-sensitive, green-sensitive, and blue-sensitive.',
+              1: '2 is not correct here; most people have 3 types of cones: red-sensitive, green-sensitive, and blue-sensitive.',
+              3: '7 is not correct here; most people have 3 types of cones: red-sensitive, green-sensitive, and blue-sensitive.',
+            },
           },
           {
             id: 'psy-s2-u1-L5-Q4',
@@ -467,6 +543,9 @@ export const psychologySection2: Unit[] = [
             question: 'Color blindness means you see the world in black and white.',
             correctAnswer: false,
             explanation: 'Most color-blind people still see colors. They just have trouble distinguishing certain pairs, like red and green.',
+            distractorExplanations: {
+              0: 'Most color-blind people still see colors. They just have trouble distinguishing certain pairs, like red and green.',
+            },
           },
           {
             id: 'psy-s2-u1-L5-Q6',
@@ -481,6 +560,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Red-green color blindness makes it hard to distinguish red from green. This is the most common form.',
+            distractorExplanations: {
+              1: 'This is too narrow; red-green color blindness makes it hard to distinguish red from green. This is the most common form.',
+              2: 'His rods are damaged is not correct here; red-green color blindness makes it hard to distinguish red from green. This is the most common form.',
+              3: 'He needs glasses for near-sightedness is not correct here; red-green color blindness makes it hard to distinguish red from green.',
+            },
           },
         ],
       },
@@ -520,6 +604,9 @@ export const psychologySection2: Unit[] = [
             question: 'Gestalt psychology says your brain organizes visual input into patterns automatically.',
             correctAnswer: true,
             explanation: 'Gestalt principles describe the rules your brain follows to group visual elements into meaningful wholes.',
+            distractorExplanations: {
+              1: 'Gestalt principles describe the rules your brain follows to group visual elements into meaningful wholes.',
+            },
           },
           {
             id: 'psy-s2-u2-L1-Q2',
@@ -533,6 +620,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Gestalt grouping. Your brain connects the dots and perceives an organized shape rather than 3 separate points.',
+            distractorExplanations: {
+              0: 'Sensory adaptation is not correct here; gestalt grouping. Your brain connects the dots and perceives an organized shape rather than 3 separate.',
+              2: 'Transduction is not correct here; gestalt grouping. Your brain connects the dots and perceives an organized shape rather than 3 separate points.',
+              3: 'Absolute threshold is not correct here; gestalt grouping. Your brain connects the dots and perceives an organized shape rather than 3 separate.',
+            },
           },
           {
             id: 'psy-s2-u2-L1-T2',
@@ -580,6 +672,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Proximity. Objects near each other are perceived as belonging together.',
+            distractorExplanations: {
+              0: 'Similarity is not correct here; proximity. Objects near each other are perceived as belonging together.',
+              1: 'Closure is not correct here; proximity. Objects near each other are perceived as belonging together.',
+              3: 'Continuity is not correct here; proximity. Objects near each other are perceived as belonging together.',
+            },
           },
           {
             id: 'psy-s2-u2-L1-Q6',
@@ -620,6 +717,9 @@ export const psychologySection2: Unit[] = [
             question: 'Your brain separates what you see into a main object (figure) and a background (ground).',
             correctAnswer: true,
             explanation: 'Figure-ground separation is one of the first things your visual system does. It decides what stands out.',
+            distractorExplanations: {
+              1: 'Figure-ground separation is one of the first things your visual system does. It decides what stands out.',
+            },
           },
           {
             id: 'psy-s2-u2-L2-Q2',
@@ -633,6 +733,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Your brain switches between 2 interpretations, but it can only hold one figure-ground assignment at a time.',
+            distractorExplanations: {
+              0: 'Your eyes can only focus on one color is not correct here; your brain switches between 2 interpretations, but it can only hold one figure-ground.',
+              2: 'The illusion only works in dim lighting is not correct here; your brain switches between 2 interpretations, but it can only hold one.',
+              3: 'Your rods and cones conflict with each other is not correct here; your brain switches between 2 interpretations, but it can only hold one.',
+            },
           },
           {
             id: 'psy-s2-u2-L2-T2',
@@ -676,6 +781,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Relative size is a monocular cue. Farther objects project a smaller image on the retina, so your brain reads them as distant.',
+            distractorExplanations: {
+              0: 'Binocular disparity is not correct here; relative size is a monocular cue.',
+              1: 'Convergence is not correct here; relative size is a monocular cue.',
+              3: 'Closure is not correct here; relative size is a monocular cue.',
+            },
           },
           {
             id: 'psy-s2-u2-L2-T3',
@@ -689,6 +799,9 @@ export const psychologySection2: Unit[] = [
             question: 'The surrounding context of an image can change how you perceive it.',
             correctAnswer: true,
             explanation: 'Context is powerful. The same color, shape, or size can look different depending on what surrounds it.',
+            distractorExplanations: {
+              1: 'Context is powerful. The same color, shape, or size can look different depending on what surrounds it.',
+            },
           },
           {
             id: 'psy-s2-u2-L2-Q7',
@@ -703,6 +816,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Relative size is a monocular depth cue. The small figure next to the large building creates a sense of depth on a flat surface.',
+            distractorExplanations: {
+              1: 'Binocular disparity is not correct here; relative size is a monocular depth cue.',
+              2: 'Sensory adaptation is not correct here; relative size is a monocular depth cue.',
+              3: 'The absolute threshold for vision is not correct here; relative size is a monocular depth cue.',
+            },
           },
         ],
       },
@@ -727,6 +845,9 @@ export const psychologySection2: Unit[] = [
             question: 'Perceptual constancy means you see objects as stable even when the sensory input changes.',
             correctAnswer: true,
             explanation: 'Your brain compensates for changing distances, angles, and lighting so objects look consistent.',
+            distractorExplanations: {
+              1: 'Your brain compensates for changing distances, angles, and lighting so objects look consistent.',
+            },
           },
           {
             id: 'psy-s2-u2-L3-Q2',
@@ -740,6 +861,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Size constancy. Your brain uses depth cues to interpret the smaller image as distance, not actual shrinking.',
+            distractorExplanations: {
+              0: 'Your eyes zoom in to keep it the same size is not correct here; size constancy.',
+              2: 'This is not accurate; size constancy. Your brain uses depth cues to interpret the smaller image as distance, not actual shrinking.',
+              3: 'You cannot see objects that are far away is not correct here; size constancy.',
+            },
           },
           {
             id: 'psy-s2-u2-L3-T2',
@@ -787,6 +913,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The Ames room gives false depth cues. Your brain misjudges distance, so it misjudges size.',
+            distractorExplanations: {
+              0: 'A failure of color constancy is not correct here; the Ames room gives false depth cues. Your brain misjudges distance, so it misjudges size.',
+              2: 'A problem with sensory adaptation is not correct here; the Ames room gives false depth cues. Your brain misjudges distance, so it misjudges size.',
+              3: 'A deficiency in rod cells is not correct here; the Ames room gives false depth cues. Your brain misjudges distance, so it misjudges size.',
+            },
           },
           {
             id: 'psy-s2-u2-L3-Q6',
@@ -794,6 +925,9 @@ export const psychologySection2: Unit[] = [
             question: 'Optical illusions happen because your perceptual system always works perfectly.',
             correctAnswer: false,
             explanation: 'Illusions reveal the shortcuts and assumptions your brain makes. Those shortcuts usually work, but they can be fooled.',
+            distractorExplanations: {
+              0: 'Illusions reveal the shortcuts and assumptions your brain makes. Those shortcuts usually work, but they can be fooled.',
+            },
           },
         ],
       },
@@ -819,6 +953,9 @@ export const psychologySection2: Unit[] = [
             question: 'In the Muller-Lyer illusion, the 2 lines are actually different lengths.',
             correctAnswer: false,
             explanation: 'The lines are equal. The arrow tips trick your brain into seeing one as longer than the other.',
+            distractorExplanations: {
+              0: 'The lines are equal. The arrow tips trick your brain into seeing one as longer than the other.',
+            },
           },
           {
             id: 'psy-s2-u2-L4-Q2',
@@ -832,6 +969,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The arrow tips resemble depth cues (like corners of rooms), causing your brain to adjust perceived length.',
+            distractorExplanations: {
+              0: 'Your rods cannot detect line lengths accurately is not correct here; the arrow tips resemble depth cues (like corners of rooms), causing your.',
+              2: 'The lines are actually slightly different is not correct here; the arrow tips resemble depth cues (like corners of rooms), causing your brain to.',
+              3: 'Sensory adaptation makes one line fade is not correct here; the arrow tips resemble depth cues (like corners of rooms), causing your brain to.',
+            },
           },
           {
             id: 'psy-s2-u2-L4-T2',
@@ -851,6 +993,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The converging lines mimic depth perspective. Your brain treats the top line as farther away and therefore "larger" to compensate.',
+            distractorExplanations: {
+              0: 'It absorbs more light from the converging lines is not correct here; the converging lines mimic depth perspective.',
+              2: 'This is not accurate; the converging lines mimic depth perspective.',
+              3: 'The top line is actually drawn slightly longer is not correct here; the converging lines mimic depth perspective.',
+            },
           },
           {
             id: 'psy-s2-u2-L4-Q4',
@@ -872,6 +1019,9 @@ export const psychologySection2: Unit[] = [
             question: 'The moon is physically larger when it is near the horizon.',
             correctAnswer: false,
             explanation: 'The moon stays the same size. Horizon depth cues make your brain perceive it as larger.',
+            distractorExplanations: {
+              0: 'The moon stays the same size. Horizon depth cues make your brain perceive it as larger.',
+            },
           },
           {
             id: 'psy-s2-u2-L4-Q6',
@@ -900,6 +1050,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The converging road lines create a Ponzo-like illusion. The distant person appears larger because of misleading depth cues.',
+            distractorExplanations: {
+              1: 'The Muller-Lyer illusion is not correct here; the converging road lines create a Ponzo-like illusion.',
+              2: 'Sensory adaptation is not correct here; the converging road lines create a Ponzo-like illusion.',
+              3: 'Color constancy failure is not correct here; the converging road lines create a Ponzo-like illusion.',
+            },
           },
         ],
       },
@@ -924,6 +1079,9 @@ export const psychologySection2: Unit[] = [
             question: 'Bottom-up processing starts with raw sensory data from your eyes, ears, and other senses.',
             correctAnswer: true,
             explanation: 'Bottom-up processing is data-driven. It starts with the stimulus and works up to interpretation.',
+            distractorExplanations: {
+              1: 'Bottom-up processing is data-driven. It starts with the stimulus and works up to interpretation.',
+            },
           },
           {
             id: 'psy-s2-u2-L5-Q2',
@@ -937,6 +1095,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Top-down processing. Your expectations ("my cat is usually here") shaped your perception of the ambiguous shape.',
+            distractorExplanations: {
+              0: 'Bottom-up processing is not correct here; top-down processing.',
+              2: 'Sensory adaptation is not correct here; top-down processing. Your expectations ("my cat is usually here") shaped your perception of the ambiguous.',
+              3: 'Transduction is not correct here; top-down processing. Your expectations ("my cat is usually here") shaped your perception of the ambiguous shape.',
+            },
           },
           {
             id: 'psy-s2-u2-L5-T2',
@@ -986,6 +1149,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A perceptual set biases what you notice. Hunger creates a set that makes food-related stimuli stand out.',
+            distractorExplanations: {
+              0: 'Sensory adaptation is not correct here; a perceptual set biases what you notice. Hunger creates a set that makes food-related stimuli stand out.',
+              2: 'The absolute threshold is not correct here; a perceptual set biases what you notice. Hunger creates a set that makes food-related stimuli stand out.',
+              3: 'Binocular depth cues is not correct here; a perceptual set biases what you notice. Hunger creates a set that makes food-related stimuli stand out.',
+            },
           },
           {
             id: 'psy-s2-u2-L5-Q6',
@@ -1038,6 +1206,9 @@ export const psychologySection2: Unit[] = [
             question: 'Sound waves are vibrations that travel through a medium like air.',
             correctAnswer: true,
             explanation: 'Sound needs a medium to travel through. In a vacuum (like space), there is no sound.',
+            distractorExplanations: {
+              1: 'Sound needs a medium to travel through. In a vacuum (like space), there is no sound.',
+            },
           },
           {
             id: 'psy-s2-u3-L1-Q2',
@@ -1051,6 +1222,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Frequency (how many vibrations per second) determines pitch. High frequency means high pitch.',
+            distractorExplanations: {
+              0: 'The amplitude of the wave is not correct here; frequency (how many vibrations per second) determines pitch. High frequency means high pitch.',
+              2: 'The distance from the source is not correct here; frequency (how many vibrations per second) determines pitch. High frequency means high pitch.',
+              3: 'The brightness of the room is not correct here; frequency (how many vibrations per second) determines pitch. High frequency means high pitch.',
+            },
           },
           {
             id: 'psy-s2-u3-L1-T2',
@@ -1092,6 +1268,9 @@ export const psychologySection2: Unit[] = [
             question: 'Damaged hair cells in the cochlea can regenerate over time.',
             correctAnswer: false,
             explanation: 'In humans, cochlear hair cells do not regenerate. Once they are destroyed, the hearing loss is permanent.',
+            distractorExplanations: {
+              0: 'In humans, cochlear hair cells do not regenerate. Once they are destroyed, the hearing loss is permanent.',
+            },
           },
           {
             id: 'psy-s2-u3-L1-Q6',
@@ -1125,6 +1304,9 @@ export const psychologySection2: Unit[] = [
             question: 'Touch is a single sense with one type of receptor.',
             correctAnswer: false,
             explanation: 'Touch includes pressure, vibration, temperature, and pain. Each has different receptor types.',
+            distractorExplanations: {
+              0: 'Touch includes pressure, vibration, temperature, and pain. Each has different receptor types.',
+            },
           },
           {
             id: 'psy-s2-u3-L2-Q2',
@@ -1138,6 +1320,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Fingertips and lips are packed with touch receptors. That is why they are so sensitive to fine detail.',
+            distractorExplanations: {
+              0: 'Your back and shoulders is not correct here; fingertips and lips are packed with touch receptors. That is why they are so sensitive to fine detail.',
+              2: 'Your elbows and knees is not correct here; fingertips and lips are packed with touch receptors. That is why they are so sensitive to fine detail.',
+              3: 'Your stomach and chest is not correct here; fingertips and lips are packed with touch receptors. That is why they are so sensitive to fine detail.',
+            },
           },
           {
             id: 'psy-s2-u3-L2-T2',
@@ -1158,6 +1345,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Sensory adaptation. Your cold receptors adjusted to the ice, so the lukewarm water feels warm by comparison.',
+            distractorExplanations: {
+              0: 'The water actually got warmer is not correct here; sensory adaptation.',
+              2: 'Your hand lost all feeling temporarily is not correct here; sensory adaptation.',
+              3: 'This is too absolute; sensory adaptation. Your cold receptors adjusted to the ice, so the lukewarm water feels warm by comparison.',
+            },
           },
           {
             id: 'psy-s2-u3-L2-Q4',
@@ -1196,6 +1388,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Fingertips have extremely high receptor density, allowing fine spatial discrimination. The back has fewer receptors spread over a larger area.',
+            distractorExplanations: {
+              1: 'The back has no touch receptors is not correct here; fingertips have extremely high receptor density, allowing fine spatial discrimination.',
+              2: 'The patient\'s back has gone numb is not correct here; fingertips have extremely high receptor density, allowing fine spatial discrimination.',
+              3: 'The pins were farther apart on the fingertip is not correct here; fingertips have extremely high receptor density, allowing fine spatial.',
+            },
           },
         ],
       },
@@ -1220,6 +1417,9 @@ export const psychologySection2: Unit[] = [
             question: 'Taste and smell both work by detecting chemical molecules.',
             correctAnswer: true,
             explanation: 'They are called "chemical senses" because both respond to chemical molecules, just in different ways.',
+            distractorExplanations: {
+              1: 'They are called "chemical senses" because both respond to chemical molecules, just in different ways.',
+            },
           },
           {
             id: 'psy-s2-u3-L3-Q2',
@@ -1233,6 +1433,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Humans detect 5 basic tastes: sweet, salty, sour, bitter, and umami (savory).',
+            distractorExplanations: {
+              0: '3 is not correct here; humans detect 5 basic tastes: sweet, salty, sour, bitter, and umami (savory).',
+              1: '4 is not correct here; humans detect 5 basic tastes: sweet, salty, sour, bitter, and umami (savory).',
+              3: '10 is not correct here; humans detect 5 basic tastes: sweet, salty, sour, bitter, and umami (savory).',
+            },
           },
           {
             id: 'psy-s2-u3-L3-T2',
@@ -1275,6 +1480,9 @@ export const psychologySection2: Unit[] = [
             question: 'When you have a stuffy nose, food tastes bland because your taste buds stopped working.',
             correctAnswer: false,
             explanation: 'Your taste buds still work. Food tastes bland because you lost the smell component, which contributes up to 80% of flavor.',
+            distractorExplanations: {
+              0: 'Your taste buds still work. Food tastes bland because you lost the smell component, which contributes up to 80% of flavor.',
+            },
           },
           {
             id: 'psy-s2-u3-L3-Q6',
@@ -1288,6 +1496,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Flavor depends heavily on smell. Without it (and vision), the basic taste and texture of apple and potato are surprisingly similar.',
+            distractorExplanations: {
+              0: 'Apples and potatoes have the same nutrients is not correct here; flavor depends heavily on smell.',
+              2: 'The blindfold blocks taste receptors is not correct here; flavor depends heavily on smell.',
+              3: 'Raw potatoes taste exactly like apples is not correct here; flavor depends heavily on smell.',
+            },
           },
         ],
       },
@@ -1312,6 +1525,9 @@ export const psychologySection2: Unit[] = [
             question: 'Your brain processes each sense completely separately from the others.',
             correctAnswer: false,
             explanation: 'Senses interact constantly. Your brain combines all sensory input to create your unified experience of reality.',
+            distractorExplanations: {
+              0: 'Senses interact constantly. Your brain combines all sensory input to create your unified experience of reality.',
+            },
           },
           {
             id: 'psy-s2-u3-L4-Q2',
@@ -1325,6 +1541,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The McGurk effect demonstrates multisensory integration. Visual lip movements change your auditory perception.',
+            distractorExplanations: {
+              1: 'This is too absolute; the McGurk effect demonstrates multisensory integration. Visual lip movements change your auditory perception.',
+              2: 'The sound was actually "da" is not correct here; the McGurk effect demonstrates multisensory integration.',
+              3: 'This is too narrow; the McGurk effect demonstrates multisensory integration. Visual lip movements change your auditory perception.',
+            },
           },
           {
             id: 'psy-s2-u3-L4-T2',
@@ -1353,6 +1574,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Visual capture. The moving puppet mouth captures your auditory localization, making the voice seem to come from the puppet.',
+            distractorExplanations: {
+              1: 'Sensory adaptation to the ventriloquist\'s voice is not correct here; visual capture.',
+              2: 'The puppet actually produces sound is not correct here; visual capture.',
+              3: 'The audience has a high absolute threshold for hearing is not correct here; visual capture.',
+            },
           },
           {
             id: 'psy-s2-u3-L4-T3',
@@ -1366,6 +1592,9 @@ export const psychologySection2: Unit[] = [
             question: 'Synesthesia is when one sense automatically triggers an experience in another sense.',
             correctAnswer: true,
             explanation: 'Synesthesia is real cross-sensory activation. Hearing a note might reliably produce a specific color experience.',
+            distractorExplanations: {
+              1: 'Synesthesia is real cross-sensory activation. Hearing a note might reliably produce a specific color experience.',
+            },
           },
           {
             id: 'psy-s2-u3-L4-Q6',
@@ -1420,6 +1649,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Transduction is the conversion of physical energy (light, sound, etc.) into nerve signals.',
+            distractorExplanations: {
+              0: 'Perception is not correct here; transduction is the conversion of physical energy (light, sound, etc.) into nerve signals.',
+              1: 'Adaptation is not correct here; transduction is the conversion of physical energy (light, sound, etc.) into nerve signals.',
+              3: 'Constancy is not correct here; transduction is the conversion of physical energy (light, sound, etc.) into nerve signals.',
+            },
           },
           {
             id: 'psy-s2-u4-L1-Q2',
@@ -1427,6 +1661,9 @@ export const psychologySection2: Unit[] = [
             question: 'The absolute threshold is the minimum stimulus you can detect 100% of the time.',
             correctAnswer: false,
             explanation: 'The absolute threshold is the minimum stimulus detected 50% of the time, not 100%.',
+            distractorExplanations: {
+              0: 'The absolute threshold is the minimum stimulus detected 50% of the time, not 100%.',
+            },
           },
           {
             id: 'psy-s2-u4-L1-Q3',
@@ -1462,6 +1699,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Weber\'s law states that the JND is a constant ratio of the original stimulus. Bigger stimuli need bigger changes.',
+            distractorExplanations: {
+              1: 'Speed of nerve signals is not correct here; weber\'s law states that the JND is a constant ratio of the original stimulus.',
+              2: 'Number of receptors in the area is not correct here; weber\'s law states that the JND is a constant ratio of the original stimulus.',
+              3: 'Time since last exposure is not correct here; weber\'s law states that the JND is a constant ratio of the original stimulus.',
+            },
           },
           {
             id: 'psy-s2-u4-L1-Q6',
@@ -1485,6 +1727,9 @@ export const psychologySection2: Unit[] = [
             question: 'Pain fully adapts just like smell and touch.',
             correctAnswer: false,
             explanation: 'Pain only partially adapts. Full adaptation to pain would be dangerous.',
+            distractorExplanations: {
+              0: 'Pain only partially adapts. Full adaptation to pain would be dangerous.',
+            },
           },
           {
             id: 'psy-s2-u4-L1-Q8',
@@ -1499,6 +1744,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The difference threshold (JND) tells you the minimum change needed for people to notice a difference.',
+            distractorExplanations: {
+              1: 'Absolute threshold is not correct here; the difference threshold (JND) tells you the minimum change needed for people to notice a difference.',
+              2: 'Sensory adaptation is not correct here; the difference threshold (JND) tells you the minimum change needed for people to notice a difference.',
+              3: 'Transduction is not correct here; the difference threshold (JND) tells you the minimum change needed for people to notice a difference.',
+            },
           },
           {
             id: 'psy-s2-u4-L1-Q9',
@@ -1512,6 +1762,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cones detect color. You have 3 types sensitive to red, green, and blue wavelengths.',
+            distractorExplanations: {
+              0: 'Rods is not correct here; cones detect color. You have 3 types sensitive to red, green, and blue wavelengths.',
+              2: 'Hair cells is not correct here; cones detect color. You have 3 types sensitive to red, green, and blue wavelengths.',
+              3: 'Thermoreceptors is not correct here; cones detect color. You have 3 types sensitive to red, green, and blue wavelengths.',
+            },
           },
           {
             id: 'psy-s2-u4-L1-Q10',
@@ -1557,6 +1812,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Closure. Your brain fills in missing parts to see complete shapes.',
+            distractorExplanations: {
+              0: 'Proximity is not correct here; closure. Your brain fills in missing parts to see complete shapes.',
+              2: 'Continuity is not correct here; closure. Your brain fills in missing parts to see complete shapes.',
+              3: 'Similarity is not correct here; closure. Your brain fills in missing parts to see complete shapes.',
+            },
           },
           {
             id: 'psy-s2-u4-L2-Q3',
@@ -1564,6 +1824,9 @@ export const psychologySection2: Unit[] = [
             question: 'Binocular depth cues require only one eye to work.',
             correctAnswer: false,
             explanation: 'Binocular means "two eyes." These cues depend on the slight difference between each eye\'s view.',
+            distractorExplanations: {
+              0: 'Binocular means "two eyes." These cues depend on the slight difference between each eye\'s view.',
+            },
           },
           {
             id: 'psy-s2-u4-L2-Q4',
@@ -1607,6 +1870,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Size constancy is a perceptual correction. Your brain uses depth cues to maintain stable size perception.',
+            distractorExplanations: {
+              0: 'Objects physically stay the same size is not correct here; size constancy is a perceptual correction.',
+              2: 'This is too absolute; size constancy is a perceptual correction. Your brain uses depth cues to maintain stable size perception.',
+              3: 'This is not accurate; size constancy is a perceptual correction. Your brain uses depth cues to maintain stable size perception.',
+            },
           },
           {
             id: 'psy-s2-u4-L2-Q7',
@@ -1614,6 +1882,9 @@ export const psychologySection2: Unit[] = [
             question: 'A perceptual set can bias what you notice based on your expectations.',
             correctAnswer: true,
             explanation: 'Perceptual set is a mental predisposition to perceive certain things based on expectations, desires, or context.',
+            distractorExplanations: {
+              1: 'Perceptual set is a mental predisposition to perceive certain things based on expectations, desires, or context.',
+            },
           },
           {
             id: 'psy-s2-u4-L2-Q8',
@@ -1628,6 +1899,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Color constancy. Your brain compensates for changing lighting conditions to keep perceived colors stable.',
+            distractorExplanations: {
+              1: 'Sensory adaptation is not correct here; color constancy. Your brain compensates for changing lighting conditions to keep perceived colors stable.',
+              2: 'Transduction is not correct here; color constancy. Your brain compensates for changing lighting conditions to keep perceived colors stable.',
+              3: 'The absolute threshold is not correct here; color constancy. Your brain compensates for changing lighting conditions to keep perceived colors.',
+            },
           },
           {
             id: 'psy-s2-u4-L2-Q9',
@@ -1641,6 +1917,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The McGurk effect shows that your brain combines visual and auditory information, and vision can override hearing.',
+            distractorExplanations: {
+              0: 'Sensory adaptation is not correct here; the McGurk effect shows that your brain combines visual and auditory information, and vision can override.',
+              2: 'The difference threshold is not correct here; the McGurk effect shows that your brain combines visual and auditory information, and vision can.',
+              3: 'Perceptual constancy is not correct here; the McGurk effect shows that your brain combines visual and auditory information, and vision can.',
+            },
           },
           {
             id: 'psy-s2-u4-L2-Q10',
@@ -1674,6 +1955,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Sensory adaptation. The constant noise stimulus fades from the worker\'s awareness over time.',
+            distractorExplanations: {
+              1: 'The difference threshold is not correct here; sensory adaptation. The constant noise stimulus fades from the worker\'s awareness over time.',
+              2: 'Color constancy is not correct here; sensory adaptation. The constant noise stimulus fades from the worker\'s awareness over time.',
+              3: 'Binocular disparity is not correct here; sensory adaptation. The constant noise stimulus fades from the worker\'s awareness over time.',
+            },
           },
           {
             id: 'psy-s2-u4-L3-Q2',
@@ -1687,6 +1973,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The difference threshold (JND) tells them how small a change can be and still go unnoticed.',
+            distractorExplanations: {
+              0: 'Absolute threshold is not correct here; the difference threshold (JND) tells them how small a change can be and still go unnoticed.',
+              2: 'Sensory adaptation threshold is not correct here; the difference threshold (JND) tells them how small a change can be and still go unnoticed.',
+              3: 'Pain threshold is not correct here; the difference threshold (JND) tells them how small a change can be and still go unnoticed.',
+            },
           },
           {
             id: 'psy-s2-u4-L3-Q3',
@@ -1694,6 +1985,9 @@ export const psychologySection2: Unit[] = [
             question: 'When you look at a photo, your brain uses binocular depth cues to judge distance.',
             correctAnswer: false,
             explanation: 'A photo is flat and viewed at a single distance. Binocular cues are minimal. You rely on monocular cues (relative size, overlap, perspective).',
+            distractorExplanations: {
+              0: 'A photo is flat and viewed at a single distance. Binocular cues are minimal. You rely on monocular cues (relative size, overlap, perspective).',
+            },
           },
           {
             id: 'psy-s2-u4-L3-Q4',
@@ -1717,6 +2011,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Visual dominance. What the tasters saw (red color) biased their perception of taste and aroma.',
+            distractorExplanations: {
+              1: 'The red dye added berry flavor chemicals is not correct here; visual dominance.',
+              2: 'The tasters were not really experts is not correct here; visual dominance.',
+              3: 'Red light changed the wine\'s molecular structure is not correct here; visual dominance.',
+            },
           },
           {
             id: 'psy-s2-u4-L3-Q6',
@@ -1730,6 +2029,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Synesthesia is an automatic, consistent cross-sensory experience. Seeing specific colors for numbers is a common form.',
+            distractorExplanations: {
+              0: 'Color blindness is not correct here; synesthesia is an automatic, consistent cross-sensory experience.',
+              2: 'Sensory adaptation is not correct here; synesthesia is an automatic, consistent cross-sensory experience.',
+              3: 'A perceptual set is not correct here; synesthesia is an automatic, consistent cross-sensory experience.',
+            },
           },
           {
             id: 'psy-s2-u4-L3-Q7',
@@ -1745,6 +2049,9 @@ export const psychologySection2: Unit[] = [
             question: 'Flavor is determined entirely by your taste buds.',
             correctAnswer: false,
             explanation: 'Flavor combines taste, smell, texture, and temperature. Up to 80% of flavor comes from smell.',
+            distractorExplanations: {
+              0: 'Flavor combines taste, smell, texture, and temperature. Up to 80% of flavor comes from smell.',
+            },
           },
           {
             id: 'psy-s2-u4-L3-Q9',
@@ -1814,6 +2121,9 @@ export const psychologySection2: Unit[] = [
             question: 'Pain is simply a direct readout of tissue damage.',
             correctAnswer: false,
             explanation: 'Pain is constructed by your brain. The same injury can feel very different depending on context, emotion, and attention.',
+            distractorExplanations: {
+              0: 'Pain is constructed by your brain. The same injury can feel very different depending on context, emotion, and attention.',
+            },
           },
           {
             id: 'psy-s2-u5-L1-Q2',
@@ -1827,6 +2137,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'During the game, adrenaline and focus suppress pain. Afterward, the brain shifts attention to the injury.',
+            distractorExplanations: {
+              0: 'This is too absolute; during the game, adrenaline and focus suppress pain. Afterward, the brain shifts attention to the injury.',
+              2: 'Only if someone tells them about the injury is not correct here; during the game, adrenaline and focus suppress pain.',
+              3: 'Immediately, but they chose to ignore it consciously is not correct here; during the game, adrenaline and focus suppress pain.',
+            },
           },
           {
             id: 'psy-s2-u5-L1-T2',
@@ -1870,6 +2185,9 @@ export const psychologySection2: Unit[] = [
             question: 'You feel sharp pain and dull aching pain at the exact same moment after an injury.',
             correctAnswer: false,
             explanation: 'Sharp pain arrives first via fast A-delta fibers. Dull pain follows on slower C fibers.',
+            distractorExplanations: {
+              0: 'Sharp pain arrives first via fast A-delta fibers. Dull pain follows on slower C fibers.',
+            },
           },
           {
             id: 'psy-s2-u5-L1-Q6',
@@ -1883,6 +2201,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Gate control theory. Non-painful touch input competes with pain signals at the spinal cord, partially closing the gate.',
+            distractorExplanations: {
+              0: 'Rubbing heals the tissue instantly is not correct here; gate control theory.',
+              2: 'Rubbing numbs the nerve endings permanently is not correct here; gate control theory.',
+              3: 'It is purely a placebo effect with no mechanism is not correct here; gate control theory.',
+            },
           },
         ],
       },
@@ -1907,6 +2230,9 @@ export const psychologySection2: Unit[] = [
             question: 'The placebo effect is purely imaginary and has no physical basis.',
             correctAnswer: false,
             explanation: 'The placebo effect is real. Brain scans show actual endorphin release and measurable changes in neural activity.',
+            distractorExplanations: {
+              0: 'The placebo effect is real. Brain scans show actual endorphin release and measurable changes in neural activity.',
+            },
           },
           {
             id: 'psy-s2-u5-L2-Q2',
@@ -1920,6 +2246,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Endorphins are the brain\'s natural painkillers. Placebo expectations trigger their release.',
+            distractorExplanations: {
+              0: 'Adrenaline is not correct here; endorphins are the brain\'s natural painkillers. Placebo expectations trigger their release.',
+              2: 'Insulin is not correct here; endorphins are the brain\'s natural painkillers. Placebo expectations trigger their release.',
+              3: 'Melatonin is not correct here; endorphins are the brain\'s natural painkillers. Placebo expectations trigger their release.',
+            },
           },
           {
             id: 'psy-s2-u5-L2-T2',
@@ -1940,6 +2271,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Price boosts expectations. Stronger expectations trigger a stronger placebo response in the brain.',
+            distractorExplanations: {
+              0: 'Expensive pills have better inactive ingredients is not correct here; price boosts expectations.',
+              2: 'People metabolize expensive pills faster is not correct here; price boosts expectations.',
+              3: 'This is too absolute; price boosts expectations. Stronger expectations trigger a stronger placebo response in the brain.',
+            },
           },
           {
             id: 'psy-s2-u5-L2-Q4',
@@ -1961,6 +2297,9 @@ export const psychologySection2: Unit[] = [
             question: 'The nocebo effect means negative expectations can make you feel worse.',
             correctAnswer: true,
             explanation: 'Nocebo is the dark side of placebo. Expecting harm can genuinely produce symptoms.',
+            distractorExplanations: {
+              1: 'Nocebo is the dark side of placebo. Expecting harm can genuinely produce symptoms.',
+            },
           },
           {
             id: 'psy-s2-u5-L2-Q6',
@@ -1999,6 +2338,9 @@ export const psychologySection2: Unit[] = [
             question: 'Dopamine is the neurotransmitter directly responsible for the feeling of pleasure.',
             correctAnswer: false,
             explanation: 'Dopamine drives wanting and motivation, not the pleasure feeling itself. Other chemicals (like endorphins and serotonin) contribute to the actual pleasure sensation.',
+            distractorExplanations: {
+              0: 'Dopamine drives wanting and motivation, not the pleasure feeling itself. Other chemicals (like endorphins and serotonin) contribute to the actual pleasure sensation.',
+            },
           },
           {
             id: 'psy-s2-u5-L3-Q2',
@@ -2012,6 +2354,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Dopamine signals "want." It motivates you to pursue things your brain predicts will be rewarding.',
+            distractorExplanations: {
+              0: 'The sensation of physical pain is not correct here; dopamine signals "want.',
+              2: 'Visual perception of color is not correct here; dopamine signals "want." It motivates you to pursue things your brain predicts will be rewarding.',
+              3: 'Auditory processing of music is not correct here; dopamine signals "want." It motivates you to pursue things your brain predicts will be rewarding.',
+            },
           },
           {
             id: 'psy-s2-u5-L3-T2',
@@ -2062,6 +2409,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Hedonic adaptation. The initial joy fades as the new wealth becomes the new normal.',
+            distractorExplanations: {
+              0: 'That money has no value is not correct here; hedonic adaptation. The initial joy fades as the new wealth becomes the new normal.',
+              2: 'That lottery winners were already happy is not correct here; hedonic adaptation. The initial joy fades as the new wealth becomes the new normal.',
+              3: 'A failure of the limbic system is not correct here; hedonic adaptation. The initial joy fades as the new wealth becomes the new normal.',
+            },
           },
           {
             id: 'psy-s2-u5-L3-Q6',
@@ -2076,6 +2428,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Addiction often involves intense wanting (dopamine-driven craving) with diminished liking (reduced pleasure from the substance).',
+            distractorExplanations: {
+              1: 'Their pain gate is permanently closed is not correct here; addiction often involves intense wanting (dopamine-driven craving) with diminished.',
+              2: 'They have lost all taste receptors is not correct here; addiction often involves intense wanting (dopamine-driven craving) with diminished liking.',
+              3: 'Their absolute threshold for the substance has dropped is not correct here; addiction often involves intense wanting (dopamine-driven craving).',
+            },
           },
         ],
       },
@@ -2100,6 +2457,9 @@ export const psychologySection2: Unit[] = [
             question: 'Phantom limb pain is imaginary because the limb no longer exists.',
             correctAnswer: false,
             explanation: 'Phantom limb pain is real pain generated by the brain. The brain\'s body map still represents the missing limb.',
+            distractorExplanations: {
+              0: 'Phantom limb pain is real pain generated by the brain. The brain\'s body map still represents the missing limb.',
+            },
           },
           {
             id: 'psy-s2-u5-L4-Q2',
@@ -2113,6 +2473,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The brain maintains a representation of the whole body. When expected input from a limb is missing, the brain can generate pain.',
+            distractorExplanations: {
+              0: 'Nerve endings at the stump send false signals is not correct here; the brain maintains a representation of the whole body.',
+              2: 'They are imagining the pain for attention is not correct here; the brain maintains a representation of the whole body.',
+              3: 'Pain receptors regenerate after amputation is not correct here; the brain maintains a representation of the whole body.',
+            },
           },
           {
             id: 'psy-s2-u5-L4-T2',
@@ -2154,6 +2519,9 @@ export const psychologySection2: Unit[] = [
             question: 'Psychological treatments cannot reduce physical pain because pain is purely physical.',
             correctAnswer: false,
             explanation: 'Pain has both physical and psychological components. Treatments like CBT and mindfulness can measurably reduce pain.',
+            distractorExplanations: {
+              0: 'Pain has both physical and psychological components. Treatments like CBT and mindfulness can measurably reduce pain.',
+            },
           },
           {
             id: 'psy-s2-u5-L4-Q6',
@@ -2167,6 +2535,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT helps patients reframe pain-related thoughts, reducing the brain\'s amplification of pain signals.',
+            distractorExplanations: {
+              0: 'CBT physically repairs damaged tissue is not correct here; CBT helps patients reframe pain-related thoughts, reducing the brain\'s amplification.',
+              2: 'CBT distracts you so the pain receptors die is not correct here; CBT helps patients reframe pain-related thoughts, reducing the brain\'s.',
+              3: 'CBT only works for imaginary pain is not correct here; CBT helps patients reframe pain-related thoughts, reducing the brain\'s amplification of.',
+            },
           },
         ],
       },
@@ -2206,6 +2579,9 @@ export const psychologySection2: Unit[] = [
             question: 'Your brain consciously processes all sensory information it receives.',
             correctAnswer: false,
             explanation: 'Your brain receives far more information than it can process. Attention selects a small fraction for conscious awareness.',
+            distractorExplanations: {
+              0: 'Your brain receives far more information than it can process. Attention selects a small fraction for conscious awareness.',
+            },
           },
           {
             id: 'psy-s2-u6-L1-Q2',
@@ -2219,6 +2595,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Attention selects relevant information for deeper, conscious processing while filtering out the rest.',
+            distractorExplanations: {
+              0: 'To increase the absolute threshold for all senses is not correct here; attention selects relevant information for deeper, conscious processing.',
+              2: 'To convert light into nerve signals is not correct here; attention selects relevant information for deeper, conscious processing while filtering.',
+              3: 'To adapt to constant stimuli is not correct here; attention selects relevant information for deeper, conscious processing while filtering out the.',
+            },
           },
           {
             id: 'psy-s2-u6-L1-T2',
@@ -2246,6 +2627,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Even unattended channels are processed at a basic level. Personally relevant information (like your name) breaks through the filter.',
+            distractorExplanations: {
+              0: 'Your name is louder than other words is not correct here; even unattended channels are processed at a basic level.',
+              2: 'You have superhuman hearing is not correct here; even unattended channels are processed at a basic level.',
+              3: 'The party suddenly went silent is not correct here; even unattended channels are processed at a basic level.',
+            },
           },
           {
             id: 'psy-s2-u6-L1-T3',
@@ -2259,6 +2645,9 @@ export const psychologySection2: Unit[] = [
             question: 'Humans can fully attend to multiple complex tasks at the same time without any performance drop.',
             correctAnswer: false,
             explanation: 'Attention has limited capacity. Dividing it between complex tasks reduces performance on all of them.',
+            distractorExplanations: {
+              0: 'Attention has limited capacity. Dividing it between complex tasks reduces performance on all of them.',
+            },
           },
           {
             id: 'psy-s2-u6-L1-Q6',
@@ -2299,6 +2688,9 @@ export const psychologySection2: Unit[] = [
             question: 'When you "multitask," your brain processes both tasks at the same time.',
             correctAnswer: false,
             explanation: 'Your brain rapidly switches between tasks. Each switch costs time and increases errors.',
+            distractorExplanations: {
+              0: 'Your brain rapidly switches between tasks. Each switch costs time and increases errors.',
+            },
           },
           {
             id: 'psy-s2-u6-L2-Q2',
@@ -2312,6 +2704,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Each switch costs processing time (called switch cost). Both tasks suffer in speed and accuracy.',
+            distractorExplanations: {
+              0: 'It processes both more efficiently is not correct here; each switch costs processing time (called switch cost).',
+              2: 'It gets better at both tasks over time is not correct here; each switch costs processing time (called switch cost).',
+              3: 'This is not accurate; each switch costs processing time (called switch cost). Both tasks suffer in speed and accuracy.',
+            },
           },
           {
             id: 'psy-s2-u6-L2-T2',
@@ -2362,6 +2759,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Automaticity. Extensive practice made the piano playing require minimal conscious attention.',
+            distractorExplanations: {
+              1: 'Their brain is larger than average is not correct here; automaticity. Extensive practice made the piano playing require minimal conscious attention.',
+              2: 'They are not really paying attention to either task is not correct here; automaticity.',
+              3: 'The conversation is too simple to need attention is not correct here; automaticity.',
+            },
           },
           {
             id: 'psy-s2-u6-L2-Q6',
@@ -2376,6 +2778,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Even hands-free calls consume attention. The conversation captured cognitive resources needed to notice the red light.',
+            distractorExplanations: {
+              1: 'The red light was not bright enough to see is not correct here; even hands-free calls consume attention.',
+              2: 'Sensory adaptation made the light invisible is not correct here; even hands-free calls consume attention.',
+              3: 'Hands-free phones block peripheral vision is not correct here; even hands-free calls consume attention.',
+            },
           },
         ],
       },
@@ -2400,6 +2807,9 @@ export const psychologySection2: Unit[] = [
             question: 'Exogenous attention is attention you direct voluntarily.',
             correctAnswer: false,
             explanation: 'Exogenous attention is involuntary, captured by external events. Endogenous attention is the voluntary kind.',
+            distractorExplanations: {
+              0: 'Exogenous attention is involuntary, captured by external events. Endogenous attention is the voluntary kind.',
+            },
           },
           {
             id: 'psy-s2-u6-L3-Q2',
@@ -2438,6 +2848,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The pop-out effect. Features that differ strongly from surroundings are detected instantly via parallel processing.',
+            distractorExplanations: {
+              0: 'Sensory adaptation is not correct here; the pop-out effect. Features that differ strongly from surroundings are detected instantly via parallel.',
+              2: 'Change blindness is not correct here; the pop-out effect. Features that differ strongly from surroundings are detected instantly via parallel.',
+              3: 'The cocktail party effect is not correct here; the pop-out effect.',
+            },
           },
           {
             id: 'psy-s2-u6-L3-Q4',
@@ -2459,6 +2874,9 @@ export const psychologySection2: Unit[] = [
             question: 'People detect angry faces in a crowd faster than happy faces.',
             correctAnswer: true,
             explanation: 'Threat detection is prioritized. Your brain is biased to notice potential dangers quickly.',
+            distractorExplanations: {
+              1: 'Threat detection is prioritized. Your brain is biased to notice potential dangers quickly.',
+            },
           },
           {
             id: 'psy-s2-u6-L3-Q6',
@@ -2472,6 +2890,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Evolution favored brains that detect danger quickly. Missing a threat could be fatal, so the system is biased toward fast threat detection.',
+            distractorExplanations: {
+              0: 'This is too absolute; evolution favored brains that detect danger quickly.',
+              2: 'Happy faces are invisible to the retina is not correct here; evolution favored brains that detect danger quickly.',
+              3: 'This is too absolute; evolution favored brains that detect danger quickly.',
+            },
           },
         ],
       },
@@ -2497,6 +2920,9 @@ export const psychologySection2: Unit[] = [
             question: 'The Stroop effect shows that reading is an automatic process that is hard to suppress.',
             correctAnswer: true,
             explanation: 'Reading is so practiced that it becomes automatic. In the Stroop task, you cannot stop yourself from reading the word.',
+            distractorExplanations: {
+              1: 'Reading is so practiced that it becomes automatic. In the Stroop task, you cannot stop yourself from reading the word.',
+            },
           },
           {
             id: 'psy-s2-u6-L4-Q2',
@@ -2510,6 +2936,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Automatic word reading produces "BLUE" which conflicts with the correct response "red." This conflict slows you down.',
+            distractorExplanations: {
+              0: 'The color red is hard to perceive is not correct here; automatic word reading produces "BLUE" which conflicts with the correct response "red.',
+              2: 'Your cones cannot detect red and blue simultaneously is not correct here; automatic word reading produces "BLUE" which conflicts with the correct.',
+              3: 'The word "BLUE" is too long to read quickly is not correct here; automatic word reading produces "BLUE" which conflicts with the correct response.',
+            },
           },
           {
             id: 'psy-s2-u6-L4-T2',
@@ -2559,6 +2990,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A larger Stroop effect can indicate difficulty with executive control, which is needed to override automatic responses.',
+            distractorExplanations: {
+              0: 'The patient has excellent reading skills is not correct here; a larger Stroop effect can indicate difficulty with executive control, which is.',
+              2: 'The patient has color blindness is not correct here; a larger Stroop effect can indicate difficulty with executive control, which is needed to.',
+              3: 'This is too absolute; a larger Stroop effect can indicate difficulty with executive control, which is needed to override automatic responses.',
+            },
           },
           {
             id: 'psy-s2-u6-L4-Q6',
@@ -2597,6 +3033,9 @@ export const psychologySection2: Unit[] = [
             question: 'Most people can sustain full attention on a single task for hours without decline.',
             correctAnswer: false,
             explanation: 'Sustained attention typically begins to decline after 10 to 15 minutes. Breaks help restore it.',
+            distractorExplanations: {
+              0: 'Sustained attention typically begins to decline after 10 to 15 minutes. Breaks help restore it.',
+            },
           },
           {
             id: 'psy-s2-u6-L5-Q2',
@@ -2610,6 +3049,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Sustained attention naturally declines over time. Short breaks or changes in activity help restore it.',
+            distractorExplanations: {
+              0: 'Increases as they get more interested is not correct here; sustained attention naturally declines over time.',
+              1: 'Stays perfectly stable is not correct here; sustained attention naturally declines over time. Short breaks or changes in activity help restore it.',
+              3: 'Doubles in intensity is not correct here; sustained attention naturally declines over time. Short breaks or changes in activity help restore it.',
+            },
           },
           {
             id: 'psy-s2-u6-L5-T2',
@@ -2661,6 +3105,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The vigilance decrement. Sustained attention on rare events declines predictably, even in motivated people.',
+            distractorExplanations: {
+              1: 'The screener stopped caring about their job is not correct here; the vigilance decrement.',
+              2: 'The test images became harder is not correct here; the vigilance decrement.',
+              3: 'The X-ray machine degraded over time is not correct here; the vigilance decrement.',
+            },
           },
           {
             id: 'psy-s2-u6-L5-Q6',
@@ -2674,6 +3123,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Short breaks restore sustained attention more effectively than pushing through. Even brief pauses help.',
+            distractorExplanations: {
+              0: 'Try harder to concentrate without breaks is not correct here; short breaks restore sustained attention more effectively than pushing through.',
+              2: 'Drink caffeine continuously is not correct here; short breaks restore sustained attention more effectively than pushing through.',
+              3: 'Complete the entire task before sleeping is not correct here; short breaks restore sustained attention more effectively than pushing through.',
+            },
           },
         ],
       },
@@ -2713,6 +3167,9 @@ export const psychologySection2: Unit[] = [
             question: 'Inattentional blindness happens because the object is too small or dim to detect.',
             correctAnswer: false,
             explanation: 'The object is fully visible. The failure is attentional, not sensory. You do not see it because you are not attending to it.',
+            distractorExplanations: {
+              0: 'The object is fully visible. The failure is attentional, not sensory. You do not see it because you are not attending to it.',
+            },
           },
           {
             id: 'psy-s2-u7-L1-Q2',
@@ -2726,6 +3183,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Focused attention on the counting task left no resources for noticing the unexpected gorilla.',
+            distractorExplanations: {
+              0: 'The gorilla was too fast to see is not correct here; focused attention on the counting task left no resources for noticing the unexpected gorilla.',
+              2: 'The gorilla was transparent is not correct here; focused attention on the counting task left no resources for noticing the unexpected gorilla.',
+              3: 'The video was too dark is not correct here; focused attention on the counting task left no resources for noticing the unexpected gorilla.',
+            },
           },
           {
             id: 'psy-s2-u7-L1-T2',
@@ -2754,6 +3216,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'When looking for cars, the brain may fail to register a cyclist even when the eyes are pointed right at them. This is inattentional blindness.',
+            distractorExplanations: {
+              1: 'The cyclist was invisible is not correct here; when looking for cars, the brain may fail to register a cyclist even when the eyes are pointed.',
+              2: 'The driver lied about looking is not correct here; when looking for cars, the brain may fail to register a cyclist even when the eyes are pointed.',
+              3: 'The cyclist appeared after the driver looked is not correct here; when looking for cars, the brain may fail to register a cyclist even when the.',
+            },
           },
           {
             id: 'psy-s2-u7-L1-T3',
@@ -2767,6 +3234,9 @@ export const psychologySection2: Unit[] = [
             question: 'You are more likely to notice unexpected objects than expected ones.',
             correctAnswer: false,
             explanation: 'You are more likely to notice what you expect. Unexpected objects are often missed, which is the basis of inattentional blindness.',
+            distractorExplanations: {
+              0: 'You are more likely to notice what you expect. Unexpected objects are often missed, which is the basis of inattentional blindness.',
+            },
           },
           {
             id: 'psy-s2-u7-L1-Q6',
@@ -2780,6 +3250,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Top-down processing means expectations shape what you perceive. Inattentional blindness occurs when unexpected stimuli fall outside those expectations.',
+            distractorExplanations: {
+              1: 'Weber\'s law is not correct here; top-down processing means expectations shape what you perceive.',
+              2: 'The blind spot in the retina is not correct here; top-down processing means expectations shape what you perceive.',
+              3: 'Sensory adaptation is not correct here; top-down processing means expectations shape what you perceive.',
+            },
           },
         ],
       },
@@ -2804,6 +3279,9 @@ export const psychologySection2: Unit[] = [
             question: 'Change blindness only happens with very small, subtle changes.',
             correctAnswer: false,
             explanation: 'Change blindness can occur with large, obvious changes. In one study, people failed to notice when the person they were talking to was replaced by a different person.',
+            distractorExplanations: {
+              0: 'Change blindness can occur with large, obvious changes. In one study, people failed to notice when the person they were talking to was replaced by a different person.',
+            },
           },
           {
             id: 'psy-s2-u7-L2-Q2',
@@ -2817,6 +3295,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Fewer than 50% noticed the person change. The brief disruption (the door passing) masked the change.',
+            distractorExplanations: {
+              0: 'Nearly 100% is not correct here; fewer than 50% noticed the person change. The brief disruption (the door passing) masked the change.',
+              1: 'About 75% is not correct here; fewer than 50% noticed the person change. The brief disruption (the door passing) masked the change.',
+              2: 'About 50% is not correct here; fewer than 50% noticed the person change. The brief disruption (the door passing) masked the change.',
+            },
           },
           {
             id: 'psy-s2-u7-L2-T2',
@@ -2858,6 +3341,9 @@ export const psychologySection2: Unit[] = [
             question: 'Most people accurately predict how much they would notice in change blindness experiments.',
             correctAnswer: false,
             explanation: 'People consistently overestimate their ability to detect changes. We trust our perception more than we should.',
+            distractorExplanations: {
+              0: 'People consistently overestimate their ability to detect changes. We trust our perception more than we should.',
+            },
           },
           {
             id: 'psy-s2-u7-L2-Q6',
@@ -2872,6 +3358,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The camera cut acts as a disruption. Without a continuous view, the brain does not compare shirt color across shots.',
+            distractorExplanations: {
+              1: 'Inattentional blindness is not correct here; the camera cut acts as a disruption.',
+              2: 'Sensory adaptation to the shirt color is not correct here; the camera cut acts as a disruption.',
+              3: 'Color constancy correcting the change is not correct here; the camera cut acts as a disruption.',
+            },
           },
         ],
       },
@@ -2896,6 +3387,9 @@ export const psychologySection2: Unit[] = [
             question: 'You see the entire visual scene in sharp detail at all times.',
             correctAnswer: false,
             explanation: 'Only the fovea (center of gaze) provides sharp detail. The rest is a blurry summary your brain fills in.',
+            distractorExplanations: {
+              0: 'Only the fovea (center of gaze) provides sharp detail. The rest is a blurry summary your brain fills in.',
+            },
           },
           {
             id: 'psy-s2-u7-L3-Q2',
@@ -2909,6 +3403,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The fovea provides sharp vision across only about 2 degrees. Everything else is lower resolution.',
+            distractorExplanations: {
+              1: 'About 45 degrees is not correct here; the fovea provides sharp vision across only about 2 degrees. Everything else is lower resolution.',
+              2: 'About 90 degrees is not correct here; the fovea provides sharp vision across only about 2 degrees. Everything else is lower resolution.',
+              3: 'The entire 180 degrees is not correct here; the fovea provides sharp vision across only about 2 degrees. Everything else is lower resolution.',
+            },
           },
           {
             id: 'psy-s2-u7-L3-T2',
@@ -2958,6 +3457,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The on-demand nature of eye movements creates the illusion. Detail is always available when you look, so it feels constant.',
+            distractorExplanations: {
+              0: 'This is not accurate; the on-demand nature of eye movements creates the illusion. Detail is always available when you look, so it feels constant.',
+              2: 'This is not accurate; the on-demand nature of eye movements creates the illusion. Detail is always available when you look, so it feels constant.',
+              3: 'The blind spot covers less than 0.01% of your vision is not correct here; the on-demand nature of eye movements creates the illusion.',
+            },
           },
           {
             id: 'psy-s2-u7-L3-Q6',
@@ -2996,6 +3500,9 @@ export const psychologySection2: Unit[] = [
             question: 'Hands-free phone calls are completely safe while driving because your eyes stay on the road.',
             correctAnswer: false,
             explanation: 'Hands-free calls still consume attentional resources. Your eyes may be on the road, but your attention is not fully there.',
+            distractorExplanations: {
+              0: 'Hands-free calls still consume attentional resources. Your eyes may be on the road, but your attention is not fully there.',
+            },
           },
           {
             id: 'psy-s2-u7-L4-Q2',
@@ -3009,6 +3516,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The conversation captures cognitive resources. Visual information enters the eyes but is not fully processed.',
+            distractorExplanations: {
+              0: 'The phone emits radiation that affects vision is not correct here; the conversation captures cognitive resources.',
+              2: 'They make drivers close their eyes is not correct here; the conversation captures cognitive resources.',
+              3: 'They only become dangerous above 100 km/h is not correct here; the conversation captures cognitive resources.',
+            },
           },
           {
             id: 'psy-s2-u7-L4-T2',
@@ -3050,6 +3562,9 @@ export const psychologySection2: Unit[] = [
             question: 'Learning about inattentional blindness completely eliminates the effect.',
             correctAnswer: false,
             explanation: 'Awareness helps you make better choices (like putting your phone away), but it does not eliminate the underlying perceptual limitation.',
+            distractorExplanations: {
+              0: 'Awareness helps you make better choices (like putting your phone away), but it does not eliminate the underlying perceptual limitation.',
+            },
           },
           {
             id: 'psy-s2-u7-L4-Q6',
@@ -3064,6 +3579,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Stress, limited attention, and expectations can create confident but inaccurate memories. The witness genuinely believes they saw correctly.',
+            distractorExplanations: {
+              1: 'The witness has a vision problem is not correct here; stress, limited attention, and expectations can create confident but inaccurate memories.',
+              2: 'The DNA evidence must be wrong is not correct here; stress, limited attention, and expectations can create confident but inaccurate memories.',
+              3: 'Sensory adaptation made the real criminal\'s face fade is not correct here; stress, limited attention, and expectations can create confident but.',
+            },
           },
           {
             id: 'psy-s2-u7-L4-Q7',
@@ -3119,6 +3639,9 @@ export const psychologySection2: Unit[] = [
             question: 'Proprioception tells you the position of your body parts without needing to look at them.',
             correctAnswer: true,
             explanation: 'Proprioceptors in your muscles, tendons, and joints constantly report your body\'s position to your brain.',
+            distractorExplanations: {
+              1: 'Proprioceptors in your muscles, tendons, and joints constantly report your body\'s position to your brain.',
+            },
           },
           {
             id: 'psy-s2-u8-L1-Q2',
@@ -3132,6 +3655,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Proprioceptors are found throughout your muscles, tendons, and joints. They send constant position updates to your brain.',
+            distractorExplanations: {
+              0: 'This is too narrow; proprioceptors are found throughout your muscles, tendons, and joints. They send constant position updates to your brain.',
+              2: 'This is too narrow; proprioceptors are found throughout your muscles, tendons, and joints. They send constant position updates to your brain.',
+              3: 'In your taste buds is not correct here; proprioceptors are found throughout your muscles, tendons, and joints.',
+            },
           },
           {
             id: 'psy-s2-u8-L1-T2',
@@ -3179,6 +3707,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The sensory conflict between vestibular (motion) and visual (stable) input triggers nausea.',
+            distractorExplanations: {
+              1: 'The book emits chemicals that trigger nausea is not correct here; the sensory conflict between vestibular (motion) and visual (stable) input.',
+              2: 'Reading depletes all attentional resources is not correct here; the sensory conflict between vestibular (motion) and visual (stable) input.',
+              3: 'Car seats pressure the vestibular system is not correct here; the sensory conflict between vestibular (motion) and visual (stable) input triggers.',
+            },
           },
           {
             id: 'psy-s2-u8-L1-Q6',
@@ -3186,6 +3719,9 @@ export const psychologySection2: Unit[] = [
             question: 'Looking out the window while in a moving vehicle can reduce motion sickness.',
             correctAnswer: true,
             explanation: 'Looking out the window aligns your visual input with your vestibular input. Both detect motion, reducing the conflict.',
+            distractorExplanations: {
+              1: 'Looking out the window aligns your visual input with your vestibular input. Both detect motion, reducing the conflict.',
+            },
           },
         ],
       },
@@ -3210,6 +3746,9 @@ export const psychologySection2: Unit[] = [
             question: 'Every body part gets equal space in the brain\'s body map.',
             correctAnswer: false,
             explanation: 'Sensitive areas like fingers and lips get disproportionately more brain space than less sensitive areas like the back.',
+            distractorExplanations: {
+              0: 'Sensitive areas like fingers and lips get disproportionately more brain space than less sensitive areas like the back.',
+            },
           },
           {
             id: 'psy-s2-u8-L2-Q2',
@@ -3223,6 +3762,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Hands, fingers, and lips are extremely sensitive and dexterous. They need more brain processing power.',
+            distractorExplanations: {
+              0: 'Back and shoulders is not correct here; hands, fingers, and lips are extremely sensitive and dexterous. They need more brain processing power.',
+              2: 'Legs and feet equally is not correct here; hands, fingers, and lips are extremely sensitive and dexterous. They need more brain processing power.',
+              3: 'Every part is equal is not correct here; hands, fingers, and lips are extremely sensitive and dexterous. They need more brain processing power.',
+            },
           },
           {
             id: 'psy-s2-u8-L2-T2',
@@ -3273,6 +3817,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Neuroplasticity. Intensive, repeated use of the fingers caused the brain to allocate more processing space to them.',
+            distractorExplanations: {
+              0: 'They were born with a larger finger area in the brain is not correct here; neuroplasticity.',
+              2: 'Their fingers physically grew larger from playing is not correct here; neuroplasticity.',
+              3: 'The brain map does not actually change is not correct here; neuroplasticity.',
+            },
           },
           {
             id: 'psy-s2-u8-L2-Q6',
@@ -3287,6 +3836,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'After amputation, the brain\'s body map reorganizes. Neighboring areas (like the face) can take over the unused cortical space.',
+            distractorExplanations: {
+              1: 'Phantom limb pain caused by nerve damage is not correct here; after amputation, the brain\'s body map reorganizes.',
+              2: 'The patient is imagining the sensation is not correct here; after amputation, the brain\'s body map reorganizes.',
+              3: 'Sensory adaptation to the missing hand is not correct here; after amputation, the brain\'s body map reorganizes.',
+            },
           },
         ],
       },
@@ -3311,6 +3865,9 @@ export const psychologySection2: Unit[] = [
             question: 'In the rubber hand illusion, people feel like the rubber hand is their own hand.',
             correctAnswer: true,
             explanation: 'The synchronous touch on the rubber and real hand fools the brain into incorporating the rubber hand into its body map.',
+            distractorExplanations: {
+              1: 'The synchronous touch on the rubber and real hand fools the brain into incorporating the rubber hand into its body map.',
+            },
           },
           {
             id: 'psy-s2-u8-L3-Q2',
@@ -3324,6 +3881,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Seeing the rubber hand being stroked at the same time as feeling your hidden hand being stroked creates a multisensory match that fools the brain.',
+            distractorExplanations: {
+              0: 'The rubber hand looks identical to the real one is not correct here; seeing the rubber hand being stroked at the same time as feeling your hidden.',
+              2: 'The real hand loses all sensation is not correct here; seeing the rubber hand being stroked at the same time as feeling your hidden hand being.',
+              3: 'The rubber hand emits a scent like real skin is not correct here; seeing the rubber hand being stroked at the same time as feeling your hidden.',
+            },
           },
           {
             id: 'psy-s2-u8-L3-T2',
@@ -3371,6 +3933,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'If prosthetic users feel ownership of their artificial limb, they use it more naturally and effectively.',
+            distractorExplanations: {
+              0: 'It could not. It is only a party trick. is not correct here; if prosthetic users feel ownership of their artificial limb, they use it more.',
+              2: 'It could replace surgery for broken bones is not correct here; if prosthetic users feel ownership of their artificial limb, they use it more.',
+              3: 'It could cure all forms of chronic pain is not correct here; if prosthetic users feel ownership of their artificial limb, they use it more.',
+            },
           },
           {
             id: 'psy-s2-u8-L3-Q6',
@@ -3378,6 +3945,9 @@ export const psychologySection2: Unit[] = [
             question: 'The rubber hand illusion only works if the rubber hand looks exactly like the person\'s real hand.',
             correctAnswer: false,
             explanation: 'The illusion works even with hands of different sizes and skin tones. Synchronized multisensory input is the key factor, not visual similarity.',
+            distractorExplanations: {
+              0: 'The illusion works even with hands of different sizes and skin tones. Synchronized multisensory input is the key factor, not visual similarity.',
+            },
           },
         ],
       },
@@ -3402,6 +3972,9 @@ export const psychologySection2: Unit[] = [
             question: 'Interoception is the sense of your internal body states like hunger, thirst, and heartbeat.',
             correctAnswer: true,
             explanation: 'Interoception monitors your body\'s internal condition and sends that information to your brain.',
+            distractorExplanations: {
+              1: 'Interoception monitors your body\'s internal condition and sends that information to your brain.',
+            },
           },
           {
             id: 'psy-s2-u8-L4-Q2',
@@ -3415,6 +3988,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Feeling your heartbeat is interoception. It is sensing your internal body state, not external stimuli.',
+            distractorExplanations: {
+              0: 'Seeing a red light is not correct here; feeling your heartbeat is interoception. It is sensing your internal body state, not external stimuli.',
+              1: 'Hearing a loud siren is not correct here; feeling your heartbeat is interoception. It is sensing your internal body state, not external stimuli.',
+              3: 'Smelling coffee in the morning is not correct here; feeling your heartbeat is interoception.',
+            },
           },
           {
             id: 'psy-s2-u8-L4-T2',
@@ -3465,6 +4043,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Better interoceptive accuracy correlates with stronger emotional experience and better emotion recognition in others.',
+            distractorExplanations: {
+              0: 'Have worse emotional awareness is not correct here; better interoceptive accuracy correlates with stronger emotional experience and better.',
+              2: 'Have slower reaction times is not correct here; better interoceptive accuracy correlates with stronger emotional experience and better emotion.',
+              3: 'Be less empathetic is not correct here; better interoceptive accuracy correlates with stronger emotional experience and better emotion.',
+            },
           },
           {
             id: 'psy-s2-u8-L4-Q6',
@@ -3479,6 +4062,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Interoception detects the physical changes. Your brain then labels those bodily sensations as the emotion "nervousness."',
+            distractorExplanations: {
+              1: 'Your taste buds triggered the anxiety is not correct here; interoception detects the physical changes.',
+              2: 'Sensory adaptation to the interview room is not correct here; interoception detects the physical changes.',
+              3: 'The Stroop effect caused confusion is not correct here; interoception detects the physical changes.',
+            },
           },
         ],
       },
@@ -3503,6 +4091,9 @@ export const psychologySection2: Unit[] = [
             question: 'Your sense of self comes from integrating multiple body senses together.',
             correctAnswer: true,
             explanation: 'Proprioception, interoception, vision, touch, and the vestibular system all contribute to your unified sense of self.',
+            distractorExplanations: {
+              1: 'Proprioception, interoception, vision, touch, and the vestibular system all contribute to your unified sense of self.',
+            },
           },
           {
             id: 'psy-s2-u8-L5-Q2',
@@ -3516,6 +4107,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'VR creates a conflict between visual information and proprioceptive/vestibular information, which can disrupt body ownership.',
+            distractorExplanations: {
+              0: 'Only taste and smell is not correct here; VR creates a conflict between visual information and proprioceptive/vestibular information, which can.',
+              2: 'Only the vestibular system is not correct here; VR creates a conflict between visual information and proprioceptive/vestibular information, which.',
+              3: 'Only interoception is not correct here; VR creates a conflict between visual information and proprioceptive/vestibular information, which can.',
+            },
           },
           {
             id: 'psy-s2-u8-L5-T2',
@@ -3580,6 +4176,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Your conscious experience is a brain construction, not a direct readout of reality. It is shaped by sensation, perception, attention, expectations, and body awareness.',
+            distractorExplanations: {
+              0: 'This is not accurate; your conscious experience is a brain construction, not a direct readout of reality.',
+              2: 'Only vision matters for perception is not correct here; your conscious experience is a brain construction, not a direct readout of reality.',
+              3: 'Your brain passively records everything it receives is not correct here; your conscious experience is a brain construction, not a direct readout.',
+            },
           },
           {
             id: 'psy-s2-u8-L5-Q7',
@@ -3594,6 +4195,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Embodied cognition. The physical sensation of heaviness leaked into abstract judgments about the candidate.',
+            distractorExplanations: {
+              1: 'Sensory adaptation to the clipboard is not correct here; embodied cognition.',
+              2: 'Inattentional blindness is not correct here; embodied cognition.',
+              3: 'The absolute threshold for weight is not correct here; embodied cognition.',
+            },
           },
         ],
       },
@@ -3632,6 +4238,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Transduction is the conversion of physical energy to nerve signals. In the eye, rods and cones do this.',
+            distractorExplanations: {
+              0: 'The pupil dilates is not correct here; transduction is the conversion of physical energy to nerve signals. In the eye, rods and cones do this.',
+              1: 'The iris changes color is not correct here; transduction is the conversion of physical energy to nerve signals. In the eye, rods and cones do this.',
+              3: 'The lens flattens for distance vision is not correct here; transduction is the conversion of physical energy to nerve signals.',
+            },
           },
           {
             id: 'psy-s2-u9-L1-Q2',
@@ -3639,6 +4250,9 @@ export const psychologySection2: Unit[] = [
             question: 'Weber\'s law states that the JND is a fixed amount, regardless of stimulus size.',
             correctAnswer: false,
             explanation: 'Weber\'s law says the JND is a constant proportion of the original stimulus, not a fixed amount.',
+            distractorExplanations: {
+              0: 'Weber\'s law says the JND is a constant proportion of the original stimulus, not a fixed amount.',
+            },
           },
           {
             id: 'psy-s2-u9-L1-Q3',
@@ -3670,6 +4284,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Weber\'s law. The same 5% increase is below the JND for habitual caffeine users (high baseline) but above it for decaf drinkers (low baseline).',
+            distractorExplanations: {
+              1: 'This is not accurate; weber\'s law. The same 5% increase is below the JND for habitual caffeine users (high baseline) but above it for decaf.',
+              2: 'Decaf drinkers have more taste buds is not correct here; weber\'s law.',
+              3: 'The coffee company made an error in labeling is not correct here; weber\'s law.',
+            },
           },
           {
             id: 'psy-s2-u9-L1-Q6',
@@ -3683,6 +4302,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The direct olfactory-limbic connection is why a whiff of perfume can instantly transport you to a vivid childhood memory.',
+            distractorExplanations: {
+              0: 'This is too absolute; the direct olfactory-limbic connection is why a whiff of perfume can instantly transport you to a vivid childhood memory.',
+              2: 'Why you cannot smell while eating is not correct here; the direct olfactory-limbic connection is why a whiff of perfume can instantly transport.',
+              3: 'Why smell is your weakest sense is not correct here; the direct olfactory-limbic connection is why a whiff of perfume can instantly transport you.',
+            },
           },
           {
             id: 'psy-s2-u9-L1-Q7',
@@ -3706,6 +4330,9 @@ export const psychologySection2: Unit[] = [
             question: 'Pain fully adapts with time, just like your sense of smell.',
             correctAnswer: false,
             explanation: 'Pain only partially adapts. Complete adaptation to pain would be dangerous.',
+            distractorExplanations: {
+              0: 'Pain only partially adapts. Complete adaptation to pain would be dangerous.',
+            },
           },
           {
             id: 'psy-s2-u9-L1-Q9',
@@ -3719,6 +4346,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The 5 basic tastes are sweet, salty, sour, bitter, and umami (savory). Spicy is a pain sensation, not a taste.',
+            distractorExplanations: {
+              0: 'Sweet, salty, spicy, sour, bitter is not correct here; the 5 basic tastes are sweet, salty, sour, bitter, and umami (savory).',
+              2: 'Sweet, salty, sour, fatty, smoky is not correct here; the 5 basic tastes are sweet, salty, sour, bitter, and umami (savory).',
+              3: 'Sweet, salty, sour, bitter, creamy is not correct here; the 5 basic tastes are sweet, salty, sour, bitter, and umami (savory).',
+            },
           },
           {
             id: 'psy-s2-u9-L1-Q10',
@@ -3765,6 +4397,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Both illusions use misleading depth or perspective cues to make equal-length lines appear different.',
+            distractorExplanations: {
+              0: 'Sensory adaptation is not correct here; both illusions use misleading depth or perspective cues to make equal-length lines appear different.',
+              2: 'Color blindness is not correct here; both illusions use misleading depth or perspective cues to make equal-length lines appear different.',
+              3: 'The vestibular system is not correct here; both illusions use misleading depth or perspective cues to make equal-length lines appear different.',
+            },
           },
           {
             id: 'psy-s2-u9-L2-Q3',
@@ -3772,6 +4409,9 @@ export const psychologySection2: Unit[] = [
             question: 'Bottom-up processing is driven by your expectations and prior knowledge.',
             correctAnswer: false,
             explanation: 'Bottom-up processing is driven by raw sensory data. Top-down processing uses expectations and knowledge.',
+            distractorExplanations: {
+              0: 'Bottom-up processing is driven by raw sensory data. Top-down processing uses expectations and knowledge.',
+            },
           },
           {
             id: 'psy-s2-u9-L2-Q4',
@@ -3800,6 +4440,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Inattentional blindness applies to all senses. Deep focus on one task can block awareness of other fully detectable stimuli.',
+            distractorExplanations: {
+              1: 'You temporarily went deaf is not correct here; inattentional blindness applies to all senses.',
+              2: 'Your roommate whispered is not correct here; inattentional blindness applies to all senses.',
+              3: 'Sensory adaptation to your roommate\'s voice is not correct here; inattentional blindness applies to all senses.',
+            },
           },
           {
             id: 'psy-s2-u9-L2-Q6',
@@ -3829,6 +4474,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Reading the word (automatic) conflicts with naming the ink color (controlled), causing delays and errors.',
+            distractorExplanations: {
+              0: 'Vision and hearing is not correct here; reading the word (automatic) conflicts with naming the ink color (controlled), causing delays and errors.',
+              2: 'Sensation and adaptation is not correct here; reading the word (automatic) conflicts with naming the ink color (controlled), causing delays and.',
+              3: 'The vestibular and proprioceptive systems is not correct here; reading the word (automatic) conflicts with naming the ink color (controlled),.',
+            },
           },
           {
             id: 'psy-s2-u9-L2-Q8',
@@ -3836,6 +4486,9 @@ export const psychologySection2: Unit[] = [
             question: 'Sustained attention naturally declines after about 10 to 15 minutes.',
             correctAnswer: true,
             explanation: 'Attention naturally fades over time. Short breaks help restore it.',
+            distractorExplanations: {
+              1: 'Attention naturally fades over time. Short breaks help restore it.',
+            },
           },
           {
             id: 'psy-s2-u9-L2-Q9',
@@ -3857,6 +4510,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Mind-wandering is a normal brain state. It helps with creativity and planning but hurts focus-dependent tasks.',
+            distractorExplanations: {
+              0: 'This is too absolute; mind-wandering is a normal brain state. It helps with creativity and planning but hurts focus-dependent tasks.',
+              2: 'A sign of brain damage is not correct here; mind-wandering is a normal brain state.',
+              3: 'This is too absolute; mind-wandering is a normal brain state. It helps with creativity and planning but hurts focus-dependent tasks.',
+            },
           },
         ],
       },
@@ -3881,6 +4539,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Gate control theory says the spinal cord has a "gate" that non-painful input can close, reducing pain signals.',
+            distractorExplanations: {
+              0: 'Vision processes color is not correct here; gate control theory says the spinal cord has a "gate" that non-painful input can close, reducing pain.',
+              2: 'The ear amplifies sound is not correct here; gate control theory says the spinal cord has a "gate" that non-painful input can close, reducing.',
+              3: 'Proprioception detects limb position is not correct here; gate control theory says the spinal cord has a "gate" that non-painful input can close,.',
+            },
           },
           {
             id: 'psy-s2-u9-L3-Q2',
@@ -3888,6 +4551,9 @@ export const psychologySection2: Unit[] = [
             question: 'Dopamine directly creates the feeling of pleasure.',
             correctAnswer: false,
             explanation: 'Dopamine creates wanting (motivation to seek), not liking (pleasure). Other chemicals contribute to the pleasure feeling.',
+            distractorExplanations: {
+              0: 'Dopamine creates wanting (motivation to seek), not liking (pleasure). Other chemicals contribute to the pleasure feeling.',
+            },
           },
           {
             id: 'psy-s2-u9-L3-Q3',
@@ -3924,6 +4590,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The brain\'s body map reorganized. The cheek representation expanded into the cortical area that previously served the hand.',
+            distractorExplanations: {
+              1: 'The arm is regenerating is not correct here; the brain\'s body map reorganized.',
+              2: 'Sensory adaptation to the missing limb is not correct here; the brain\'s body map reorganized.',
+              3: 'The placebo effect created a phantom sensation is not correct here; the brain\'s body map reorganized.',
+            },
           },
           {
             id: 'psy-s2-u9-L3-Q6',
@@ -3953,6 +4624,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The illusion shows that body ownership is actively constructed from coordinated visual, tactile, and proprioceptive input.',
+            distractorExplanations: {
+              0: 'Your eyes cannot distinguish real from fake hands is not correct here; the illusion shows that body ownership is actively constructed from.',
+              2: 'Proprioception is unreliable and should be ignored is not correct here; the illusion shows that body ownership is actively constructed from.',
+              3: 'Rubber hands have the same nerve endings as real hands is not correct here; the illusion shows that body ownership is actively constructed from.',
+            },
           },
           {
             id: 'psy-s2-u9-L3-Q8',
@@ -3960,6 +4636,9 @@ export const psychologySection2: Unit[] = [
             question: 'Embodied cognition means your physical body state can influence your thinking and decisions.',
             correctAnswer: true,
             explanation: 'Research shows that physical experiences (warmth, heaviness, posture) subtly influence abstract judgments and decisions.',
+            distractorExplanations: {
+              1: 'Research shows that physical experiences (warmth, heaviness, posture) subtly influence abstract judgments and decisions.',
+            },
           },
           {
             id: 'psy-s2-u9-L3-Q9',
@@ -3973,6 +4652,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Your entire conscious experience is a brain construction. It is shaped by what your senses detect, what you expect, what you attend to, and what your body is doing.',
+            distractorExplanations: {
+              0: 'Your senses give you a perfect copy of reality is not correct here; your entire conscious experience is a brain construction.',
+              1: 'Only vision matters for understanding the world is not correct here; your entire conscious experience is a brain construction.',
+              3: 'This is not accurate; your entire conscious experience is a brain construction.',
+            },
           },
           {
             id: 'psy-s2-u9-L3-Q10',
@@ -4012,6 +4696,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Vigilance naturally declines over hours (vigilance decrement). Even when looking at the right camera, attention was depleted (inattentional blindness).',
+            distractorExplanations: {
+              1: 'Sensory adaptation and color constancy is not correct here; vigilance naturally declines over hours (vigilance decrement).',
+              2: 'The Stroop effect and change blindness is not correct here; vigilance naturally declines over hours (vigilance decrement).',
+              3: 'Weber\'s law and the absolute threshold is not correct here; vigilance naturally declines over hours (vigilance decrement).',
+            },
           },
           {
             id: 'psy-s2-u9-L4-Q2',
@@ -4025,6 +4714,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Flavor is multisensory. Strong fruit flavors (taste + smell) can mask the broccoli taste when blended.',
+            distractorExplanations: {
+              1: 'The broccoli lost all nutritional value when blended is not correct here; flavor is multisensory.',
+              2: 'Children cannot taste vegetables is not correct here; flavor is multisensory.',
+              3: 'Color constancy made the broccoli invisible is not correct here; flavor is multisensory.',
+            },
           },
           {
             id: 'psy-s2-u9-L4-Q3',
@@ -4032,6 +4726,9 @@ export const psychologySection2: Unit[] = [
             question: 'A person with central sensitization feels pain from a light touch that would not normally be painful.',
             correctAnswer: true,
             explanation: 'Central sensitization amplifies pain processing. Normally harmless stimuli can trigger pain when the system is sensitized.',
+            distractorExplanations: {
+              1: 'Central sensitization amplifies pain processing. Normally harmless stimuli can trigger pain when the system is sensitized.',
+            },
           },
           {
             id: 'psy-s2-u9-L4-Q4',
@@ -4083,6 +4780,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Embodied cognition: physical warmth influenced an abstract social judgment.',
+            distractorExplanations: {
+              1: 'The Stroop effect is not correct here; embodied cognition: physical warmth influenced an abstract social judgment.',
+              2: 'Change blindness is not correct here; embodied cognition: physical warmth influenced an abstract social judgment.',
+              3: 'The absolute threshold is not correct here; embodied cognition: physical warmth influenced an abstract social judgment.',
+            },
           },
           {
             id: 'psy-s2-u9-L4-Q8',
@@ -4090,6 +4792,9 @@ export const psychologySection2: Unit[] = [
             question: 'You see the full visual scene in sharp detail at all times.',
             correctAnswer: false,
             explanation: 'Only a tiny area (about 2 degrees, the fovea) provides sharp detail. The rest is a blurry summary your brain fills in.',
+            distractorExplanations: {
+              0: 'Only a tiny area (about 2 degrees, the fovea) provides sharp detail. The rest is a blurry summary your brain fills in.',
+            },
           },
           {
             id: 'psy-s2-u9-L4-Q9',
@@ -4104,6 +4809,11 @@ export const psychologySection2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Top-down processing. Expectations about price shaped the actual sensory experience of tasting the wine.',
+            distractorExplanations: {
+              1: 'The glasses changed the wine\'s flavor is not correct here; top-down processing.',
+              2: 'Sensory adaptation made the cheap wine taste worse is not correct here; top-down processing.',
+              3: 'The tasters had defective taste buds is not correct here; top-down processing.',
+            },
           },
           {
             id: 'psy-s2-u9-L4-Q10',

@@ -9,7 +9,7 @@ import { useLessonColors } from '@/lib/lessonColors';
 
 interface ScenarioCardProps {
   question: CourseQuestion;
-  onAnswer: (correct: boolean) => void;
+  onAnswer: (correct: boolean, selectedOriginalIndex?: number) => void;
   onSelectionChange: (hasSelection: boolean) => void;
   answered: boolean;
   unitColor: string;
@@ -50,8 +50,9 @@ const ScenarioCard = forwardRef<QuestionCardHandle, ScenarioCardProps>(
     const handleCheck = useCallback(() => {
       if (answered || !hasSelection) return;
       const correct = selectedIndex !== null && shuffledIndices[selectedIndex] === correctIndex;
+      const originalIdx = selectedIndex !== null ? shuffledIndices[selectedIndex] : undefined;
       setLocalCorrect(correct);
-      onAnswer(correct);
+      onAnswer(correct, originalIdx);
     }, [answered, hasSelection, selectedIndex, shuffledIndices, correctIndex, onAnswer]);
 
     useImperativeHandle(ref, () => ({

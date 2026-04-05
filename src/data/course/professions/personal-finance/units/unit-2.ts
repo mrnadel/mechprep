@@ -43,6 +43,9 @@ export const unit2: Unit = {
           question: "The human brain is naturally wired to prioritize spending over saving.",
           correctAnswer: true,
           explanation: "Yes! Our brains evolved for immediate reward, so spending feels good and saving feels like punishment. Understanding this is the first step to beating it.",
+          distractorExplanations: {
+            1: 'Evolution wired our brains for immediate reward, making spending feel natural and saving feel like sacrifice.',
+          },
         },
         {
           id: "pf-u2-L1-T2",
@@ -63,6 +66,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Present bias means today's reward feels bigger than tomorrow's, even when tomorrow's is objectively better. It's why we eat cake instead of going to the gym.",
+          distractorExplanations: {
+            1: 'Preferring saving over spending is the opposite of present bias — most people struggle with the reverse.',
+            2: 'Believing the future will be worse is pessimism, not present bias.',
+            3: 'Present bias is a psychological tendency, not a bank fee.',
+          },
         },
         {
           id: "pf-u2-L1-Q3",
@@ -109,6 +117,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Willpower fails. Motivation fades. Automation doesn't. Set it up once, and saving happens whether you feel like it or not.",
+          distractorExplanations: {
+            1: 'Promises and willpower fade quickly — most people fail to save consistently using motivation alone.',
+            2: 'Checking your account daily creates awareness but does not make saving happen automatically.',
+            3: 'Saving only in low-spending months is inconsistent and leads to little actual savings.',
+          },
         },
         {
           id: "pf-u2-L1-Q7",
@@ -116,6 +129,9 @@ export const unit2: Unit = {
           question: "If you struggle to save money, it means you're bad with finances.",
           correctAnswer: false,
           explanation: "Not at all. It means you're human, because it's hardwired biology, not a personal failing. The difference between savers and non-savers is usually systems, not willpower.",
+          distractorExplanations: {
+            0: 'Struggling to save is a universal human experience driven by biology, not a personal financial failing.',
+          },
         },
       ],
     },
@@ -141,6 +157,9 @@ export const unit2: Unit = {
           question: "Having even 500 in savings can protect you from going into debt over a small emergency.",
           correctAnswer: true,
           explanation: "Exactly! A flat tire, ER copay, or phone repair costs less than 500. Without savings, those go on a credit card and cost you even more in interest.",
+          distractorExplanations: {
+            1: 'Even 500 handles most common emergencies like car repairs and medical copays, preventing costly credit card debt.',
+          },
         },
         {
           id: "pf-u2-L2-Q1",
@@ -154,6 +173,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "The Federal Reserve found that 39% of Americans would need to borrow or sell something to cover a 400 surprise expense. Having even 500 saved puts you ahead of millions.",
+          distractorExplanations: {
+            1: '5% is far too low — the actual figure is about 39% according to the Federal Reserve.',
+            2: '75% is too high — while many struggle, the actual figure is about 39%.',
+            3: '10% underestimates the problem — nearly four in ten Americans lack this basic safety net.',
+          },
         },
         {
           id: "pf-u2-L2-T2",
@@ -191,6 +215,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "This is exactly what the 500 is for. You pay the repair, drive to work Monday, and start rebuilding your fund. Without it, you'd be stuck with a broken car AND credit card debt.",
+          distractorExplanations: {
+            1: '500 easily covers a 350 repair — you still have 150 left to start rebuilding.',
+            2: 'Ignoring a car repair you need for work would create a bigger problem than spending from savings.',
+            3: 'You do not need a loan when you already have savings that cover the cost.',
+          },
         },
         {
           id: "pf-u2-L2-Q6",
@@ -207,6 +236,9 @@ export const unit2: Unit = {
           question: "You should wait until you can save 10,000 before starting an emergency fund.",
           correctAnswer: false,
           explanation: "No! Start with 500. Then 1,000. Then build up. Waiting for a perfect big number means you'll never start. 500 today beats 10,000 'someday.'",
+          distractorExplanations: {
+            0: 'Waiting for a perfect large number means you will likely never start — begin with 500 and build up.',
+          },
         },
         {
           id: "pf-u2-L2-Q8",
@@ -220,6 +252,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Your first 500 is a shield against debt. It catches the common emergencies (car, medical, phone) before they land on a credit card and cost you double.",
+          distractorExplanations: {
+            1: 'Growing it fast is not the purpose — the 500 is meant to prevent emergency debt.',
+            2: 'Emergency savings are for emergencies, not vacations — those need a separate sinking fund.',
+            3: 'Credit card rewards have nothing to do with having an emergency fund.',
+          },
         },
       ],
     },
@@ -251,6 +288,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "3-6 months gives you enough runway to find a new job, recover from an illness, or handle a major surprise without going into debt.",
+          distractorExplanations: {
+            1: 'One week of expenses is far too little to cover most emergencies like job loss.',
+            2: '12-24 months is overly conservative and ties up too much money that could be invested.',
+            3: 'One month is not enough runway to find a new job or recover from a major setback.',
+          },
         },
         {
           id: "pf-u2-L3-Q2",
@@ -297,6 +339,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "2,500 × 3 months = 7,500. That's your target. Save 300/month and you'll hit it in 25 months. Save 500/month and you're there in 15.",
+          distractorExplanations: {
+            1: '2,500 is only one month of expenses, not the three months recommended.',
+            2: '15,000 would be a 6-month fund, not 3 months.',
+            3: '5,000 is only 2 months of 2,500 expenses, falling short of the 3-month target.',
+          },
         },
         {
           id: "pf-u2-L3-T3",
@@ -311,6 +358,9 @@ export const unit2: Unit = {
           question: "You should put your emergency fund somewhere risky to get better returns.",
           correctAnswer: false,
           explanation: "An emergency fund must be safe and accessible. Keep it in a savings account where you can reach it instantly, not somewhere that could lose value.",
+          distractorExplanations: {
+            0: 'Emergency funds must prioritize safety and accessibility over returns — risky investments can lose value when you need the money most.',
+          },
         },
         {
           id: "pf-u2-L3-Q7",
@@ -333,6 +383,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "After using your emergency fund, your #1 priority is refilling it. Pause other savings goals if needed. A depleted emergency fund means you're exposed to the next surprise.",
+          distractorExplanations: {
+            1: 'Stopping after one use leaves you unprotected for the next emergency.',
+            2: 'Stocks are too volatile for emergency money — you need safe, accessible savings.',
+            3: 'Giving up on emergency funds after one use leaves you vulnerable to the next surprise.',
+          },
         },
       ],
     },
@@ -482,6 +537,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "5,000 x 0.01% = 0.50. That's just 50 cents per year, which shows how little traditional savings accounts pay.",
+          distractorExplanations: {
+            1: '50 would require a 1% interest rate, which is 100 times what most big banks pay.',
+            2: '500 would require a 10% return, far higher than any savings account offers.',
+            3: '5 would require a 0.1% rate, still 10 times the typical big bank rate.',
+          },
         },
         {
           id: "pf-u2-L4-Q2",
@@ -489,6 +549,9 @@ export const unit2: Unit = {
           question: "High-yield savings accounts are riskier than regular savings accounts.",
           correctAnswer: false,
           explanation: "Not quite. Both are FDIC-insured up to 250,000, so your money is equally safe. The difference is that online banks have lower costs, so they can pay you more interest.",
+          distractorExplanations: {
+            0: 'Both account types carry identical FDIC insurance, so high-yield accounts are equally safe.',
+          },
         },
         {
           id: "pf-u2-L4-T2",
@@ -533,6 +596,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "No branches = no rent, no tellers, no marble floors. Online banks pass those savings directly to you through higher interest rates. Same safety, better returns.",
+          distractorExplanations: {
+            1: 'Online banks are FDIC-insured and equally safe as traditional banks.',
+            2: 'Having fewer customers is not the reason — it is the lack of expensive physical branches.',
+            3: 'Reputable HYSAs do not charge hidden fees; their advantage comes from lower operating costs.',
+          },
         },
         {
           id: "pf-u2-L4-Q6",
@@ -549,6 +617,9 @@ export const unit2: Unit = {
           question: "Opening a high-yield savings account at a different bank means closing your regular bank account.",
           correctAnswer: false,
           explanation: "Not at all! Most people keep their checking account at their regular bank for daily spending and open a HYSA at an online bank just for savings. Two banks, two jobs, works perfectly.",
+          distractorExplanations: {
+            0: 'You can have accounts at multiple banks simultaneously — opening a HYSA does not require closing other accounts.',
+          },
         },
         {
           id: "pf-u2-L4-Q8",
@@ -562,6 +633,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "8,000 × 5% = 400/year vs 8,000 × 0.01% = 0.80/year. That's an extra 399.20 for just switching where your money sits. Free money.",
+          distractorExplanations: {
+            1: '40 would be 0.5% interest, much lower than the 5% a HYSA offers.',
+            2: '4,000 would mean a 50% return, which no savings account provides.',
+            3: '4 would be only 0.05% interest, barely better than a regular savings account.',
+          },
         },
       ],
     },
@@ -593,6 +669,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Automation removes the human element, the part that makes excuses, forgets, and procrastinates. Money moves before you can talk yourself out of it.",
+          distractorExplanations: {
+            1: 'Automated savings do not earn more interest — the benefit is consistency, not higher rates.',
+            2: 'Banks do not give discounts for setting up auto-transfers.',
+            3: 'Automated savings do not provide a tax break — the benefit is removing the need for willpower.',
+          },
         },
         {
           id: "pf-u2-L5-T2",
@@ -646,6 +727,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "3,000 - 200 - 100 = 2,700 for everything else. Your spending naturally adjusts to this amount, and you save 300/month on autopilot.",
+          distractorExplanations: {
+            1: '3,000 ignores the 300 in auto-transfers, so you do not actually have the full amount to spend.',
+            2: '2,800 only accounts for one of the two transfers, not both.',
+            3: '2,500 subtracts too much — 200 + 100 = 300, leaving 2,700.',
+          },
         },
         {
           id: "pf-u2-L5-Q6",
@@ -653,6 +739,9 @@ export const unit2: Unit = {
           question: "Direct deposit splitting (sending your paycheck to multiple accounts) is a form of automated saving.",
           correctAnswer: true,
           explanation: "Yes! Many employers let you split your direct deposit across accounts. 80% to checking, 20% to savings. The money is saved before it even hits your spending account.",
+          distractorExplanations: {
+            1: 'Splitting your direct deposit into multiple accounts is a classic form of automation that removes the need for manual transfers.',
+          },
         },
         {
           id: "pf-u2-L5-Q7",
@@ -666,6 +755,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Set up the automation once, then forget about it. Your savings grow in the background without you lifting a finger. That's the power of systems over willpower.",
+          distractorExplanations: {
+            1: 'Forgetting about finances completely is irresponsible — you still need periodic check-ins.',
+            2: 'Checking goals daily is obsessive and unnecessary when automation handles the saving.',
+            3: 'Saving only when motivated is inconsistent and leads to minimal actual savings.',
+          },
         },
         {
           id: "pf-u2-L5-Q8",
@@ -706,6 +800,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "A sinking fund is just planned saving for a known future expense. Divide the total by the months you have and save a little each month.",
+          distractorExplanations: {
+            1: 'A sinking fund is about planned saving, not losing money when prices drop.',
+            2: 'A sinking fund is not an emergency fund going negative — it is a proactive savings strategy.',
+            3: 'A sinking fund is not a penalty; it is a deliberate way to prepare for future expenses.',
+          },
         },
         {
           id: "pf-u2-L6-Q2",
@@ -752,6 +851,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Sinking funds = planned and predictable (vacation, gifts, car maintenance). Emergency fund = unplanned and unpredictable (job loss, accidents, medical emergencies). Different money for different purposes.",
+          distractorExplanations: {
+            1: 'Sinking funds and emergency funds serve very different purposes and are not the same thing.',
+            2: 'Sinking funds are for planned expenses, not emergencies.',
+            3: 'Emergency funds are for unexpected crises, not planned vacations.',
+          },
         },
         {
           id: "pf-u2-L6-Q6",
@@ -759,6 +863,9 @@ export const unit2: Unit = {
           question: "Christmas, birthdays, and annual insurance renewals are 'unexpected' expenses.",
           correctAnswer: false,
           explanation: "They happen at the same time every year! They are 100% predictable. The only surprise is that people are still surprised by them. Set up sinking funds and they'll never catch you off guard.",
+          distractorExplanations: {
+            0: 'Christmas falls on December 25th every year and birthdays never change — these are completely predictable expenses.',
+          },
         },
         {
           id: "pf-u2-L6-Q7",
@@ -781,6 +888,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "100 + 50 + 40 = 190/month across all sinking funds. That's 2,280/year of planned expenses covered without a single credit card swipe.",
+          distractorExplanations: {
+            1: '100 is only the vacation fund — it ignores gifts and car repairs.',
+            2: '290 adds 100 too much; the correct total is 100 + 50 + 40 = 190.',
+            3: '50 is only the gifts fund and ignores the other two.',
+          },
         },
       ],
     },
@@ -812,6 +924,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "1+2+3+...+30 = 465. The math: (30 × 31) ÷ 2 = 465. Nearly 500 from a challenge that starts with saving just one dollar.",
+          distractorExplanations: {
+            1: '30 is just the amount saved on the last day, not the total.',
+            2: '300 would be the total if you saved 10/day, but amounts increase from 1 to 30.',
+            3: '900 would require saving 30/day every day, but the challenge starts at just 1.',
+          },
         },
         {
           id: "pf-u2-L7-Q2",
@@ -819,6 +936,9 @@ export const unit2: Unit = {
           question: "The 30-day savings challenge requires you to save the same amount every day.",
           correctAnswer: false,
           explanation: "Not quite. The amount increases by 1 each day: Day 1 = 1, Day 2 = 2, up to Day 30 = 30. The gradual increase is what makes it manageable.",
+          distractorExplanations: {
+            0: 'The challenge increases by 1 each day — day 1 is 1, day 2 is 2, up to day 30 at 30.',
+          },
         },
         {
           id: "pf-u2-L7-T2",
@@ -872,6 +992,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Vague goals fail. Specific daily actions succeed. A challenge tells you exactly what to do each day and shows you how far you've come. That's the difference between motivation and action.",
+          distractorExplanations: {
+            1: 'The total amount saved is the same 465 either way — the advantage is structure and visibility.',
+            2: 'Challenges do not require eliminating all wants, they just give daily saving targets.',
+            3: 'Challenges do not lock your money — they work by providing clear daily actions and motivation.',
+          },
         },
         {
           id: "pf-u2-L7-Q7",
@@ -879,6 +1004,9 @@ export const unit2: Unit = {
           question: "After completing a 30-day savings challenge, you should stop saving.",
           correctAnswer: false,
           explanation: "The challenge is a starter, not the finish line. Use the momentum to set up automatic savings and make the habit permanent.",
+          distractorExplanations: {
+            0: 'The challenge builds the habit — use that momentum to set up permanent automated savings.',
+          },
         },
         {
           id: "pf-u2-L7-Q8",
@@ -892,6 +1020,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "465 × 2 = 930. Two months, 930 saved, and a rock-solid savings habit built. That's nearly a full starter emergency fund.",
+          distractorExplanations: {
+            1: '465 is just one challenge — two back-to-back doubles the total to 930.',
+            2: '60 would be just 2 days at the maximum amount, nowhere near the full total.',
+            3: '500 is close to one challenge total but not two.',
+          },
         },
       ],
     },
@@ -923,6 +1056,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Lifestyle inflation is when you upgrade your spending to match your new income: bigger apartment, fancier car, more dining out. The raise vanishes because your lifestyle absorbed it all.",
+          distractorExplanations: {
+            1: 'Normal price inflation is a different concept — lifestyle inflation is about your spending choices rising with income.',
+            2: 'Spending less as you earn more is the opposite of lifestyle inflation.',
+            3: 'Lifestyle inflation is a behavioral pattern, not a budgeting strategy.',
+          },
         },
         {
           id: "pf-u2-L8-Q2",
@@ -930,6 +1068,9 @@ export const unit2: Unit = {
           question: "Earning more money automatically means you'll save more.",
           correctAnswer: false,
           explanation: "Not quite. Without intentional choices, spending expands to fill whatever you earn. Studies show that high earners often save the same percentage (or less) as moderate earners.",
+          distractorExplanations: {
+            0: 'Without deliberate effort, spending naturally expands to consume any income increase.',
+          },
         },
         {
           id: "pf-u2-L8-T2",
@@ -976,6 +1117,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "50% of 600 = 300 to savings. The other 300 is yours to enjoy guilt-free. In one year, you've banked 3,600 extra while still upgrading your lifestyle.",
+          distractorExplanations: {
+            1: 'Saving the entire 600 leaves nothing for enjoyment and is unsustainable long-term.',
+            2: '100 is only about 17% of the raise, well below the recommended 50%.',
+            3: 'Saving nothing from a raise means lifestyle inflation consumes all of it.',
+          },
         },
         {
           id: "pf-u2-L8-Q7",
@@ -983,6 +1129,9 @@ export const unit2: Unit = {
           question: "If you save 50% of each raise over a 20-year career, the total could easily exceed 100,000.",
           correctAnswer: true,
           explanation: "Absolutely. If you average just 2,000/year in raises and save half, that's 1,000/year saved. Over 20 years with compound interest at 7%, that grows to roughly 40,000+. With larger or more frequent raises, breaking 100K is very realistic.",
+          distractorExplanations: {
+            1: 'With compound interest over 20 years, saving half of each raise can easily exceed 100,000.',
+          },
         },
         {
           id: "pf-u2-L8-Q8",
@@ -996,6 +1145,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Person A saved 16,000/year × 10 years = 160,000+ in a HYSA earning interest. Person B has 0 saved and is one emergency away from debt. Same income, vastly different outcomes.",
+          distractorExplanations: {
+            1: 'Same income does not mean same wealth — savings rate determines wealth, not income level.',
+            2: 'Enjoying life more does not build financial security; Person B has zero savings after 10 years.',
+            3: 'We have enough information: 20% savings over 10 years with compound interest clearly builds more wealth.',
+          },
         },
       ],
     },
@@ -1021,6 +1175,9 @@ export const unit2: Unit = {
           question: "People tend to spend windfall money more carefully than their regular paycheck.",
           correctAnswer: false,
           explanation: "The opposite! People blow through windfalls much faster because the brain categorizes it as 'bonus money' rather than 'earned money.' This mental accounting trick is why most tax refunds disappear within weeks.",
+          distractorExplanations: {
+            0: 'People actually spend windfall money much faster because the brain treats it as "free money" rather than earned income.',
+          },
         },
         {
           id: "pf-u2-L9-T2",
@@ -1041,6 +1198,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "50% of 2,000 = 1,000 to your top financial priority. That alone could build half an emergency fund or wipe out a credit card balance.",
+          distractorExplanations: {
+            1: 'Putting the entire 2,000 toward one goal leaves nothing for shorter-term goals or fun.',
+            2: '600 is 30%, which is the amount for shorter-term goals, not the #1 priority.',
+            3: '400 is 20%, which is the fun money portion, not the primary financial goal.',
+          },
         },
         {
           id: "pf-u2-L9-Q3",
@@ -1080,6 +1242,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Mental accounting means your brain treats 'found money' differently than earned money. A 100 bill found on the street feels more spendable than 100 from your paycheck, but they're the same 100.",
+          distractorExplanations: {
+            1: 'Tracking expenses in your head is just mental math, not the behavioral bias called mental accounting.',
+            2: 'Calculating net worth mentally is arithmetic, not the psychological bias of treating money differently by source.',
+            3: 'Separating money into accounts is a practical strategy, not the cognitive bias of mental accounting.',
+          },
         },
         {
           id: "pf-u2-L9-Q7",
@@ -1087,6 +1254,9 @@ export const unit2: Unit = {
           question: "Using 20% of a windfall for something fun is irresponsible.",
           correctAnswer: false,
           explanation: "Not at all! Enjoying part of your windfall is healthy and sustainable. If you force yourself to save 100% of every windfall, you'll eventually rebel and blow an entire one. The 20% fun portion keeps you balanced and motivated.",
+          distractorExplanations: {
+            0: 'Spending 20% of a windfall on fun is healthy and sustainable — it prevents the burnout that leads to blowing entire windfalls.',
+          },
         },
         {
           id: "pf-u2-L9-Q8",
@@ -1100,6 +1270,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "A tax refund is your money being returned because you overpaid through your paycheck deductions all year. Adjusting your W-4 means more in each paycheck and less in the refund.",
+          distractorExplanations: {
+            1: 'The government is not giving you extra money — it is returning money you overpaid in taxes.',
+            2: 'A large refund actually means you gave the government an interest-free loan all year.',
+            3: 'Refund amounts change based on your income, deductions, and withholding — they are not guaranteed to repeat.',
+          },
         },
       ],
     },
@@ -1216,6 +1391,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Present bias is the evolutionary wiring that makes 'now' feel more important than 'later.' It affects everyone, regardless of intelligence, upbringing, or location.",
+          distractorExplanations: {
+            1: 'Lack of financial education is a factor but not the primary brain mechanism that resists saving.',
+            2: 'People at all income levels struggle with saving — it is not just about earning enough.',
+            3: 'Banking complexity is not the core reason; the brain itself prioritizes immediate gratification.',
+          },
         },
         {
           id: "pf-u2-L10-Q2",
@@ -1249,6 +1429,9 @@ export const unit2: Unit = {
           question: "A person earning 40,000/year who saves 15% will be wealthier long-term than someone earning 100,000 who saves 0%.",
           correctAnswer: true,
           explanation: "Absolutely. 40,000 x 15% = 6,000/year saved. Over 20 years with compound interest, that's 200,000+. The 100K earner with 0% saved has nothing. Income doesn't build wealth, savings rate does.",
+          distractorExplanations: {
+            1: 'Saving 15% of 40,000 for 20 years with compound interest easily outpaces saving 0% of 100,000.',
+          },
         },
         {
           id: "pf-u2-L10-Q6",
@@ -1262,6 +1445,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Monthly: 350 × 12 = 4,200. Windfall 50%: 2,400 × 50% = 1,200. Total: 4,200 + 1,200 = 5,400 saved this year. Plus interest from the HYSA. Powerful combination.",
+          distractorExplanations: {
+            1: '4,200 only counts monthly savings and misses the 50% windfall contribution.',
+            2: '2,400 is the full windfall amount, not the portion you save, and it ignores monthly savings.',
+            3: '350 is just one month of savings, ignoring the other 11 months and the windfall.',
+          },
         },
         {
           id: "pf-u2-L10-Q7",
@@ -1284,6 +1472,11 @@ export const unit2: Unit = {
           ],
           correctIndex: 0,
           explanation: "Automation is the master key. It beats willpower, present bias, lifestyle inflation, and forgetfulness. Set it up once, and your savings grow on autopilot forever. That's the #1 takeaway.",
+          distractorExplanations: {
+            1: 'Motivation-based saving is inconsistent — automation works regardless of how you feel.',
+            2: 'Waiting for higher income means missing years of savings and compound growth.',
+            3: 'A checking account earns virtually no interest and keeps savings too accessible for spending.',
+          },
         },
         {
           id: "pf-u2-L10-Q9",
@@ -1291,6 +1484,9 @@ export const unit2: Unit = {
           question: "Completing this unit means you'll never struggle with saving again.",
           correctAnswer: false,
           explanation: "Knowledge helps, but saving is an ongoing practice. The difference now is you have the tools (automation, sinking funds, the 50% rule) to handle temptations and setbacks.",
+          distractorExplanations: {
+            0: 'Knowledge is powerful but saving requires ongoing practice and discipline — tools help but challenges will still arise.',
+          },
         },
       ],
     },
@@ -1480,6 +1676,11 @@ export const unit2: Unit = {
             options: ["Money stolen from your account", "Spending you don't consciously track or notice", "Automatic bill payments", "Government tax deductions"],
             correctIndex: 1,
             explanation: "Phantom spending is money that leaves your account through small, unconscious purchases. It adds up fast because you never made a deliberate choice to spend it.",
+            distractorExplanations: {
+              0: 'Stolen money is fraud, not phantom spending — phantom spending is your own untracked purchases.',
+              2: 'Automatic bill payments are deliberate and expected, not the "invisible" untracked spending.',
+              3: 'Tax deductions are mandatory and come from your paycheck, not from unconscious spending choices.',
+            },
           },
         },
         {
@@ -1491,6 +1692,9 @@ export const unit2: Unit = {
             question: "Automating savings transfers on payday is an example of the 'pay yourself first' strategy.",
             correctAnswer: true,
             explanation: "Exactly! By saving before you have a chance to spend, you remove willpower from the equation. The money is gone before you miss it.",
+            distractorExplanations: {
+              1: 'Auto-transferring savings on payday is the textbook definition of paying yourself first.',
+            },
           },
         },
         {
@@ -1504,6 +1708,11 @@ export const unit2: Unit = {
             options: ["Pay from emergency fund, this is what it's for", "Put it on the credit card to keep savings intact", "Take out a personal loan at 8% interest", "Buy a new car instead"],
             correctIndex: 0,
             explanation: "This is EXACTLY what an emergency fund is for. Paying $3,200 from savings avoids interest charges entirely. They'll still have $1,810 left and can rebuild quickly with their $835/month savings habit.",
+            distractorExplanations: {
+              1: 'Using a 22% APR credit card costs hundreds extra in interest when you already have the cash.',
+              2: 'An 8% personal loan still costs more than paying cash from savings you already have.',
+              3: 'Buying a new car for a transmission repair is massively more expensive than the $3,200 fix.',
+            },
           },
         },
         {

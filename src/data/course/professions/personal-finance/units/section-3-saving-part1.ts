@@ -40,6 +40,9 @@ export const finSection3Part1: Unit[] = [
             question: "Most Americans can easily cover an unexpected $400 expense from savings.",
             correctAnswer: false,
             explanation: "Surveys consistently show that over half of Americans would struggle with a $400 emergency expense.",
+            distractorExplanations: {
+              0: 'This statement is actually false — surveys consistently show that over half of Americans would struggle with a $400 emergency expense.',
+            },
           },
           {
             id: "fin-sec3-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Costs keep going up and spending is easier than ever. The system works against saving, not people's intentions.",
+            distractorExplanations: {
+              0: '"They don\'t care about their future" is wrong because costs keep going up and spending is easier than ever.',
+              2: '"Banks make it impossible to save" is wrong because costs keep going up and spending is easier than ever.',
+              3: '"Savings accounts don\'t exist anymore" is wrong because costs keep going up and spending is easier than ever.',
+            },
           },
           {
             id: "fin-sec3-u1-L1-T2",
@@ -67,6 +75,9 @@ export const finSection3Part1: Unit[] = [
             question: "Present bias means your brain naturally prefers rewards now over bigger rewards later.",
             correctAnswer: true,
             explanation: "Present bias is a well-documented psychological tendency. Knowing about it helps you work around it.",
+            distractorExplanations: {
+              1: 'This statement is actually true — present bias is a well-documented psychological tendency. Knowing about it helps you work around it.',
+            },
           },
           {
             id: "fin-sec3-u1-L1-Q4",
@@ -95,6 +106,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Automation removes the daily decision. You save without thinking about it or fighting the urge to spend.",
+            distractorExplanations: {
+              0: '"They earn higher interest rates" is wrong because automation removes the daily decision.',
+              2: '"They are required by law in most states" is wrong because automation removes the daily decision.',
+              3: '"They charge fees if you don\'t save enough" is wrong because automation removes the daily decision.',
+            },
           },
           {
             id: "fin-sec3-u1-L1-Q6",
@@ -109,6 +125,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Saving 'whatever's left' rarely works. Moving money automatically on payday means it's saved before you can spend it.",
+            distractorExplanations: {
+              0: '"Try harder to resist spending urges" is wrong because saving \'whatever\'s left\' rarely works.',
+              2: '"Keep more cash at home in a jar" is wrong because saving \'whatever\'s left\' rarely works.',
+              3: 'Good money habits matter at every income level; waiting wastes time.',
+            },
           },
         ],
       },
@@ -134,6 +155,9 @@ export const finSection3Part1: Unit[] = [
             question: "You need a raise or second job before you can start saving money.",
             correctAnswer: false,
             explanation: "Most people can find savings in their current spending by cutting waste and reducing unnecessary costs.",
+            distractorExplanations: {
+              0: 'This statement is actually false — most people can find savings in their current spending by cutting waste and reducing unnecessary costs.',
+            },
           },
           {
             id: "fin-sec3-u1-L2-Q2",
@@ -170,6 +194,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$10 per week times 52 weeks equals $520. Small weekly amounts create meaningful yearly totals.",
+            distractorExplanations: {
+              0: 'This amount (120) is too low — the correct calculation gives 520.',
+              2: 'This amount (1,000) is too high — the correct calculation gives 520.',
+              3: 'This amount (365) is too low — the correct calculation gives 520.',
+            },
           },
           {
             id: "fin-sec3-u1-L2-Q4",
@@ -192,6 +221,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Consistency creates the habit. You can increase the amount and optimize later.",
+            distractorExplanations: {
+              0: '"Saving at least $500 per month" is wrong because consistency creates the habit.',
+              1: '"Picking the best savings account" is wrong because consistency creates the habit.',
+              3: '"Getting the highest interest rate possible" is wrong because consistency creates the habit.',
+            },
           },
           {
             id: "fin-sec3-u1-L2-T3",
@@ -221,6 +255,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Derek has $300 left after bills, but variable spending eats it. Trimming $900 in variable costs is the realistic path.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"He should skip paying his electric bill" is wrong because derek has $300 left after bills, but variable spending eats it.',
+              3: 'Borrowing creates debt and interest costs, making the situation worse.',
+            },
           },
         ],
       },
@@ -246,6 +285,9 @@ export const finSection3Part1: Unit[] = [
             question: "Pay yourself first means saving money before spending on anything else.",
             correctAnswer: true,
             explanation: "When savings comes first, you adjust your spending to fit what's left instead of hoping for leftovers.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when savings comes first, you adjust your spending to fit what\'s left instead of hoping for leftovers.',
+            },
           },
           {
             id: "fin-sec3-u1-L3-Q2",
@@ -259,6 +301,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When saving happens first, it's guaranteed. Saving 'what's left' usually means nothing is left.",
+            distractorExplanations: {
+              0: '"It earns double interest rates" is wrong because when saving happens first, it\'s guaranteed.',
+              2: '"It\'s a legal requirement for bank accounts" is wrong because when saving happens first, it\'s guaranteed.',
+              3: 'Income tax is mandatory and benefits society, but it does not directly build your personal wealth.',
+            },
           },
           {
             id: "fin-sec3-u1-L3-T2",
@@ -279,6 +326,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "10% of $2,500 is $250. That's $3,000 per year from one simple habit.",
+            distractorExplanations: {
+              0: 'This amount (100) is too low — the correct calculation gives 250.',
+              1: 'This amount (200) is too low — the correct calculation gives 250.',
+              3: 'This amount (500) is too high — the correct calculation gives 250.',
+            },
           },
           {
             id: "fin-sec3-u1-L3-Q4",
@@ -321,6 +373,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "10% of $3,200 is $320. Her spending will naturally adjust to $2,880, and she'll build savings every month.",
+            distractorExplanations: {
+              0: '"She\'ll go into debt because she can\'t afford it" is wrong because 10% of $3,200 is $320.',
+              2: '"She\'ll need to cancel all her bills first" is wrong because 10% of $3,200 is $320.',
+              3: '"She won\'t notice any difference in her finances" is wrong because 10% of $3,200 is $320.',
+            },
           },
         ],
       },
@@ -346,6 +403,9 @@ export const finSection3Part1: Unit[] = [
             question: "Automatic savings transfers require you to approve each transfer manually.",
             correctAnswer: false,
             explanation: "Automatic transfers happen on their own. You set the amount and schedule once, and the bank handles the rest.",
+            distractorExplanations: {
+              0: 'This statement is actually false — automatic transfers happen on their own. You set the amount and schedule once, and the bank handles the rest.',
+            },
           },
           {
             id: "fin-sec3-u1-L4-Q2",
@@ -359,6 +419,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Scheduling transfers on payday means savings happen before you have a chance to spend the money.",
+            distractorExplanations: {
+              0: '"At the end of the month after all spending" is wrong because scheduling transfers on payday means savings happen before you have a chance to spend the money.',
+              2: '"The 15th of every month regardless of pay date" is wrong because scheduling transfers on payday means savings happen before you have a chance to spend the money.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec3-u1-L4-T2",
@@ -373,6 +438,9 @@ export const finSection3Part1: Unit[] = [
             question: "Keeping your savings in the same account as your spending money makes it easier to save.",
             correctAnswer: false,
             explanation: "When savings sit in your checking account, they get spent. A separate account creates a helpful barrier.",
+            distractorExplanations: {
+              0: 'This statement is actually false — when savings sit in your checking account, they get spent. A separate account creates a helpful barrier.',
+            },
           },
           {
             id: "fin-sec3-u1-L4-Q4",
@@ -402,6 +470,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Willpower fades. Automation doesn't. The transfer happens whether you feel motivated or not.",
+            distractorExplanations: {
+              0: '"Automatic saving earns more interest" is wrong because willpower fades.',
+              2: '"Banks pay you extra for using auto-transfer" is wrong because willpower fades.',
+              3: '"Manual saving isn\'t allowed by most banks" is wrong because willpower fades.',
+            },
           },
           {
             id: "fin-sec3-u1-L4-T3",
@@ -423,6 +496,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Starting too big causes problems. A smaller amount that fits his budget will build the habit without overdrafts.",
+            distractorExplanations: {
+              0: '"Cancel the auto-transfer and give up on saving" is wrong because starting too big causes problems.',
+              2: '"Switch to saving only in months he has extra money" is wrong because starting too big causes problems.',
+              3: 'Borrowing creates debt and interest costs, making the situation worse.',
+            },
           },
         ],
       },
@@ -574,6 +652,9 @@ export const finSection3Part1: Unit[] = [
             question: "Having even $500 in savings can prevent you from going into debt over a small emergency.",
             correctAnswer: true,
             explanation: "$500 covers most minor emergencies like car repairs, medical copays, and home fixes without needing credit.",
+            distractorExplanations: {
+              1: 'This statement is actually true — $500 covers most minor emergencies like car repairs, medical copays, and home fixes without needing credit.',
+            },
           },
           {
             id: "fin-sec3-u2-L1-Q2",
@@ -587,6 +668,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without savings, emergencies become debt. Credit card interest makes the problem worse over time.",
+            distractorExplanations: {
+              0: '"They pay cash and move on easily" is wrong because without savings, emergencies become debt.',
+              2: '"The repair shop waives the fee" is wrong because without savings, emergencies become debt.',
+              3: '"Their car insurance always covers repairs" is wrong because without savings, emergencies become debt.',
+            },
           },
           {
             id: "fin-sec3-u2-L1-T2",
@@ -601,6 +687,9 @@ export const finSection3Part1: Unit[] = [
             question: "The psychological benefit of having savings is just as important as the financial benefit.",
             correctAnswer: true,
             explanation: "Reduced stress, better sleep, and feeling in control are real benefits that come with even a small savings cushion.",
+            distractorExplanations: {
+              1: 'This statement is actually true — reduced stress, better sleep, and feeling in control are real benefits that come with even a small savings cushion.',
+            },
           },
           {
             id: "fin-sec3-u2-L1-Q4",
@@ -623,6 +712,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A reachable goal builds the saving habit. After hitting $500, you'll have momentum to keep going.",
+            distractorExplanations: {
+              0: '"$500 is the legal minimum for a savings account" is wrong because a reachable goal builds the saving habit.',
+              2: '"Banks charge fees on accounts over $500" is wrong because a reachable goal builds the saving habit.',
+              3: '"$5,000 is too much money for anyone to need" is wrong because a reachable goal builds the saving habit.',
+            },
           },
           {
             id: "fin-sec3-u2-L1-T3",
@@ -644,6 +738,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A $500 goal is reachable and motivating. Giant goals can feel impossible and prevent people from starting.",
+            distractorExplanations: {
+              1: '"Save $10,000 before spending anything on wants" is wrong because a $500 goal is reachable and motivating.',
+              2: '"Skip saving and focus on investing instead" is wrong because a $500 goal is reachable and motivating.',
+              3: '"Wait until she gets a better job to start saving" is wrong because a $500 goal is reachable and motivating.',
+            },
           },
         ],
       },
@@ -669,6 +768,9 @@ export const finSection3Part1: Unit[] = [
             question: "Selling unused items around your home is a quick way to boost your initial savings.",
             correctAnswer: true,
             explanation: "Decluttering earns money and frees up space. It's a fast win toward your first $500.",
+            distractorExplanations: {
+              1: 'This statement is actually true — decluttering earns money and frees up space. It\'s a fast win toward your first $500.',
+            },
           },
           {
             id: "fin-sec3-u2-L2-Q2",
@@ -682,6 +784,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Multiple strategies at once speed things up. Selling items plus cutting costs plus auto-saving attacks the goal from three directions.",
+            distractorExplanations: {
+              0: '"Saving $1 per day for 2 years" is wrong because multiple strategies at once speed things up.',
+              2: '"Waiting for a tax refund to save all at once" is wrong because multiple strategies at once speed things up.',
+              3: 'Mia also buys things (spending) and earns income, not just saving.',
+            },
           },
           {
             id: "fin-sec3-u2-L2-T2",
@@ -696,6 +803,9 @@ export const finSection3Part1: Unit[] = [
             question: "A no-spend challenge means you don't spend any money at all for one week.",
             correctAnswer: false,
             explanation: "You still pay bills and buy essentials. A no-spend challenge targets one discretionary category like dining out or shopping.",
+            distractorExplanations: {
+              0: 'This statement is actually false — you still pay bills and buy essentials. A no-spend challenge targets one discretionary category like dining out or shopping.',
+            },
           },
           {
             id: "fin-sec3-u2-L2-Q4",
@@ -738,6 +848,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$100 per month for 3 months is $300. Selling $200 in items closes the gap. Multiple strategies combined hit the target.",
+            distractorExplanations: {
+              1: '"Put all $2,400 into savings for one month" is wrong because $100 per month for 3 months is $300.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"Wait for a bonus or tax refund instead" is wrong because $100 per month for 3 months is $300.',
+            },
           },
           {
             id: "fin-sec3-u2-L2-Q7",
@@ -751,6 +866,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Seeing progress activates your brain's reward system. You feel good about each step forward.",
+            distractorExplanations: {
+              0: '"It increases the interest rate on your account" is wrong because seeing progress activates your brain\'s reward system.',
+              2: '"Banks require visual tracking for savings accounts" is wrong because seeing progress activates your brain\'s reward system.',
+              3: '"It prevents you from withdrawing the money" is wrong because seeing progress activates your brain\'s reward system.',
+            },
           },
         ],
       },
@@ -776,6 +896,9 @@ export const finSection3Part1: Unit[] = [
             question: "The best way to cut spending is to eliminate the expenses that bring you the least happiness.",
             correctAnswer: true,
             explanation: "Cutting low-joy expenses saves money without reducing your quality of life.",
+            distractorExplanations: {
+              1: 'This statement is actually true — cutting low-joy expenses saves money without reducing your quality of life.',
+            },
           },
           {
             id: "fin-sec3-u2-L3-Q2",
@@ -789,6 +912,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Targeting low-joy expenses means you save without feeling deprived. That's what makes it last.",
+            distractorExplanations: {
+              0: '"Eliminate all fun spending for 6 months" is wrong because targeting low-joy expenses means you save without feeling deprived.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"Cancel your phone plan entirely" is wrong because targeting low-joy expenses means you save without feeling deprived.',
+            },
           },
           {
             id: "fin-sec3-u2-L3-T2",
@@ -834,6 +962,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$60 minus $15 equals $45 saved per month. $45 times 12 months equals $540 per year.",
+            distractorExplanations: {
+              1: 'This amount (180) is too low — the correct calculation gives 540.',
+              2: 'This amount (720) is too high — the correct calculation gives 540.',
+              3: 'This amount (45) is too low — the correct calculation gives 540.',
+            },
           },
           {
             id: "fin-sec3-u2-L3-T3",
@@ -863,6 +996,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Cutting dining by $100 and the underused gym at $60 saves $160. He keeps his coffee and streaming.",
+            distractorExplanations: {
+              1: '"Cancel everything and cook all meals at home" is wrong because cutting dining by $100 and the underused gym at $60 saves $160.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"Keep everything the same and try to earn $150 more" is wrong because cutting dining by $100 and the underused gym at $60 saves $160.',
+            },
           },
         ],
       },
@@ -931,6 +1069,9 @@ export const finSection3Part1: Unit[] = [
             question: "Financial emergencies are rare and only happen to unlucky people.",
             correctAnswer: false,
             explanation: "Nearly everyone faces unexpected expenses. They're a normal part of life, not bad luck.",
+            distractorExplanations: {
+              0: 'This statement is actually false — nearly everyone faces unexpected expenses. They\'re a normal part of life, not bad luck.',
+            },
           },
           {
             id: "fin-sec3-u3-L1-Q2",
@@ -944,6 +1085,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Emergencies are unexpected, necessary expenses. Sales, parties, and games are not emergencies.",
+            distractorExplanations: {
+              0: '"A sale on a jacket you\'ve been wanting" is wrong because emergencies are unexpected, necessary expenses.',
+              2: '"A friend\'s birthday party next week" is wrong because emergencies are unexpected, necessary expenses.',
+              3: '"A new video game release" is wrong because emergencies are unexpected, necessary expenses.',
+            },
           },
           {
             id: "fin-sec3-u3-L1-T2",
@@ -958,6 +1104,9 @@ export const finSection3Part1: Unit[] = [
             question: "Paying for emergencies with credit cards often costs more than the emergency itself.",
             correctAnswer: true,
             explanation: "Credit card interest at 20% or higher turns a $500 emergency into $600 or more over time.",
+            distractorExplanations: {
+              1: 'This statement is actually true — credit card interest at 20% or higher turns a $500 emergency into $600 or more over time.',
+            },
           },
           {
             id: "fin-sec3-u3-L1-Q4",
@@ -1009,6 +1158,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Credit card minimums at 22% interest make the $700 repair cost much more over time. That's why emergency funds exist.",
+            distractorExplanations: {
+              0: 'Borrowing creates debt and interest costs, making the situation worse.',
+              1: '"Pay cash from an emergency fund" is wrong because credit card minimums at 22% interest make the $700 repair cost much more over time.',
+              3: '"Ask the shop for a payment plan" is wrong because credit card minimums at 22% interest make the $700 repair cost much more over time.',
+            },
           },
         ],
       },
@@ -1034,6 +1188,9 @@ export const finSection3Part1: Unit[] = [
             question: "An emergency fund should cover 3 to 6 months of essential living expenses.",
             correctAnswer: true,
             explanation: "This range gives you enough time to find a new job or recover from a major expense.",
+            distractorExplanations: {
+              1: 'This statement is actually true — this range gives you enough time to find a new job or recover from a major expense.',
+            },
           },
           {
             id: "fin-sec3-u3-L2-Q2",
@@ -1047,6 +1204,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$2,000 times 3 months equals $6,000. That's your minimum target.",
+            distractorExplanations: {
+              0: 'This amount (2,000) is too low — the correct calculation gives 6,000.',
+              1: 'This amount (4,000) is too low — the correct calculation gives 6,000.',
+              3: 'This amount (12,000) is too high — the correct calculation gives 6,000.',
+            },
           },
           {
             id: "fin-sec3-u3-L2-T2",
@@ -1083,6 +1245,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your emergency fund covers the essentials you need to survive, not your full lifestyle spending.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec3-u3-L2-Q5",
@@ -1125,6 +1292,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "As a freelancer with irregular income, Mia needs 6+ months. That's $1,800 times 6, which equals $10,800.",
+            distractorExplanations: {
+              0: 'This amount (1,800) is too low — the correct calculation gives 10,800.',
+              1: 'This amount (5,400) is too low — the correct calculation gives 10,800.',
+              3: 'This amount (500) is too low — the correct calculation gives 10,800.',
+            },
           },
         ],
       },
@@ -1150,6 +1322,9 @@ export const finSection3Part1: Unit[] = [
             question: "The best place for an emergency fund is in your everyday checking account.",
             correctAnswer: false,
             explanation: "Checking accounts are too accessible. You'll accidentally spend it. A separate savings account creates a healthy barrier.",
+            distractorExplanations: {
+              0: 'This statement is actually false — checking accounts are too accessible. You\'ll accidentally spend it. A separate savings account creates a healthy barrier.',
+            },
           },
           {
             id: "fin-sec3-u3-L3-Q2",
@@ -1163,6 +1338,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stocks can lose value at any time. If the market drops when you have an emergency, you might get back less than you saved.",
+            distractorExplanations: {
+              0: '"Stocks always lose money" is wrong because stocks can lose value at any time.',
+              2: '"You can\'t buy stocks with a savings account" is wrong because stocks can lose value at any time.',
+              3: '"Stocks don\'t accept emergency fund deposits" is wrong because stocks can lose value at any time.',
+            },
           },
           {
             id: "fin-sec3-u3-L3-T2",
@@ -1177,6 +1357,9 @@ export const finSection3Part1: Unit[] = [
             question: "A high-yield savings account earns significantly more interest than a regular savings account.",
             correctAnswer: true,
             explanation: "Regular savings accounts might pay 0.01% interest. High-yield accounts can pay 4% to 5%, which is a huge difference.",
+            distractorExplanations: {
+              1: 'This statement is actually true — regular savings accounts might pay 0.01% interest. High-yield accounts can pay 4% to 5%, which is a huge difference.',
+            },
           },
           {
             id: "fin-sec3-u3-L3-Q4",
@@ -1222,6 +1405,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The FDIC insures up to $250,000 per depositor per bank. Your emergency fund is fully protected.",
+            distractorExplanations: {
+              0: 'This amount (100,000) is too low — the correct calculation gives 250,000.',
+              2: 'This amount (500,000) is too high — the correct calculation gives 250,000.',
+              3: 'This amount (1,000,000) is too high — the correct calculation gives 250,000.',
+            },
           },
           {
             id: "fin-sec3-u3-L3-Q7",
@@ -1236,6 +1424,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A HYSA is just as safe but earns much more. At 4.5%, his $8,000 earns $360 per year instead of $0.80.",
+            distractorExplanations: {
+              0: '"Keep it where it is since moving money is risky" is wrong because a HYSA is just as safe but earns much more.',
+              2: '"Invest it all in stocks for higher returns" is wrong because a HYSA is just as safe but earns much more.',
+              3: '"Put it in a 5-year CD for the best interest rate" is wrong because a HYSA is just as safe but earns much more.',
+            },
           },
         ],
       },
@@ -1261,6 +1454,9 @@ export const finSection3Part1: Unit[] = [
             question: "You need to save your entire emergency fund before you start anything else.",
             correctAnswer: false,
             explanation: "Build it gradually alongside your other financial goals. Slow and steady progress is perfectly fine.",
+            distractorExplanations: {
+              0: 'This statement is actually false — build it gradually alongside your other financial goals. Slow and steady progress is perfectly fine.',
+            },
           },
           {
             id: "fin-sec3-u3-L4-Q2",
@@ -1274,6 +1470,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$1,800 divided by $150 per month equals 12 months. One year of steady saving gets you there.",
+            distractorExplanations: {
+              0: 'This amount (6) is too low — the correct calculation gives 12.',
+              2: 'This amount (18) is too high — the correct calculation gives 12.',
+              3: 'This amount (24) is too high — the correct calculation gives 12.',
+            },
           },
           {
             id: "fin-sec3-u3-L4-T2",
@@ -1294,6 +1495,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 50/50 split lets you enjoy the windfall while making real progress on your emergency fund.",
+            distractorExplanations: {
+              0: '"Spend it all on something fun you deserve" is wrong because a 50/50 split lets you enjoy the windfall while making real progress on your emergency fund.',
+              2: '"Invest it all in cryptocurrency" is wrong because a 50/50 split lets you enjoy the windfall while making real progress on your emergency fund.',
+              3: '"Use it to buy lottery tickets" is wrong because a 50/50 split lets you enjoy the windfall while making real progress on your emergency fund.',
+            },
           },
           {
             id: "fin-sec3-u3-L4-Q4",
@@ -1329,6 +1535,9 @@ export const finSection3Part1: Unit[] = [
             question: "Using your emergency fund for a real emergency means you failed at saving.",
             correctAnswer: false,
             explanation: "Using it for a real emergency is a success. It means the fund did its job. Just rebuild it afterward.",
+            distractorExplanations: {
+              0: 'This statement is actually false — using it for a real emergency is a success. It means the fund did its job. Just rebuild it afterward.',
+            },
           },
           {
             id: "fin-sec3-u3-L4-Q7",
@@ -1343,6 +1552,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Noor's fund worked perfectly. She avoided debt. Now she simply restarts her contributions to rebuild.",
+            distractorExplanations: {
+              0: '"Feel bad about spending her savings and give up" is wrong because noor\'s fund worked perfectly.',
+              2: '"Move the remaining $1,500 to a checking account" is wrong because noor\'s fund worked perfectly.',
+              3: '"Stop contributing until she gets a raise" is wrong because noor\'s fund worked perfectly.',
+            },
           },
         ],
       },
@@ -1494,6 +1708,9 @@ export const finSection3Part1: Unit[] = [
             question: "Pay yourself first means saving before spending on anything else.",
             correctAnswer: true,
             explanation: "Moving money to savings on payday guarantees saving happens every month.",
+            distractorExplanations: {
+              1: 'This statement is actually true — moving money to savings on payday guarantees saving happens every month.',
+            },
           },
           {
             id: "fin-sec3-u4-L1-Q2",
@@ -1507,6 +1724,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Financial experts recommend 3 to 6 months of essential expenses to handle job loss or major emergencies.",
+            distractorExplanations: {
+              0: 'This amount (1) is too low — the correct calculation gives 3.',
+              1: 'This amount (1) is too low — the correct calculation gives 3.',
+              3: 'This amount (12) is too high — the correct calculation gives 3.',
+            },
           },
           {
             id: "fin-sec3-u4-L1-Q3",
@@ -1544,6 +1766,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "High-yield accounts can earn 4% to 5% while regular accounts earn 0.01%. Both are FDIC-insured.",
+            distractorExplanations: {
+              0: '"It has no withdrawal limits" is wrong because high-yield accounts can earn 4% to 5% while regular accounts earn 0.',
+              2: '"It\'s the only FDIC-insured option" is wrong because high-yield accounts can earn 4% to 5% while regular accounts earn 0.',
+              3: '"It allows stock market investing" is wrong because high-yield accounts can earn 4% to 5% while regular accounts earn 0.',
+            },
           },
           {
             id: "fin-sec3-u4-L1-Q6",
@@ -1574,6 +1801,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 15% drop turned $5,000 into $4,250. If an emergency hits now, they have less than they saved.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"They should have used cryptocurrency instead" is wrong because a 15% drop turned $5,000 into $4,250.',
+              3: '"Emergency funds should only be in cash at home" is wrong because a 15% drop turned $5,000 into $4,250.',
+            },
           },
         ],
       },
@@ -1606,6 +1838,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With $2,000 already saved and 22% interest eating away at debt, attacking the credit card balance saves the most money.",
+            distractorExplanations: {
+              0: '"Add it all to the emergency fund to reach $3,500" is wrong because with $2,000 already saved and 22% interest eating away at debt, attacking the credit card balance saves the most money.',
+              2: '"Split it: $500 to emergency fund, $1,000 to debt" is wrong because with $2,000 already saved and 22% interest eating away at debt, attacking the credit card balance saves the most money.',
+              3: '"Spend it as a reward for working hard" is wrong because with $2,000 already saved and 22% interest eating away at debt, attacking the credit card balance saves the most money.',
+            },
           },
           {
             id: "fin-sec3-u4-L2-Q2",
@@ -1620,6 +1857,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Financial education can save thousands over a lifetime. One $80 shift is less valuable than lasting knowledge.",
+            distractorExplanations: {
+              0: '"Skip the seminar since the $80 gets her closer to her goal" is wrong because financial education can save thousands over a lifetime.',
+              2: '"Do both by attending the seminar on her phone during work" is wrong because financial education can save thousands over a lifetime.',
+              3: '"Skip both and relax at home instead" is wrong because financial education can save thousands over a lifetime.',
+            },
           },
           {
             id: "fin-sec3-u4-L2-Q3",
@@ -1633,6 +1875,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Car repairs are exactly what emergency funds are for. Pay cash, avoid credit card interest, and rebuild.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"Put it on a credit card to protect your fund" is wrong because car repairs are exactly what emergency funds are for.',
+              3: 'Waiting risks missing the dispute window and lets fraud continue.',
+            },
           },
           {
             id: "fin-sec3-u4-L2-Q4",
@@ -1640,6 +1887,9 @@ export const finSection3Part1: Unit[] = [
             question: "It's smart to use your emergency fund for a limited-time sale on a TV you want.",
             correctAnswer: false,
             explanation: "Sales are not emergencies. Emergency funds are for unexpected, necessary expenses only.",
+            distractorExplanations: {
+              0: 'This statement is actually false — sales are not emergencies. Emergency funds are for unexpected, necessary expenses only.',
+            },
           },
           {
             id: "fin-sec3-u4-L2-T2",
@@ -1674,6 +1924,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With a $500 starter fund in place, Marcus should attack the 20% interest debt. No investment reliably beats 20% returns.",
+            distractorExplanations: {
+              0: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              2: '"Half to the emergency fund and half to investing" is wrong because with a $500 starter fund in place, Marcus should attack the 20% interest debt.',
+              3: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+            },
           },
           {
             id: "fin-sec3-u4-L2-Q7",
@@ -1687,6 +1942,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Once your foundation is solid, start working toward bigger goals like retirement, a house, or other investments.",
+            distractorExplanations: {
+              0: '"Stop saving entirely since you\'re safe now" is wrong because once your foundation is solid, start working toward bigger goals like retirement, a house, or other investments.',
+              2: '"Increase your lifestyle spending to match your income" is wrong because once your foundation is solid, start working toward bigger goals like retirement, a house, or other investments.',
+              3: '"Close your savings account since you don\'t need it" is wrong because once your foundation is solid, start working toward bigger goals like retirement, a house, or other investments.',
+            },
           },
         ],
       },
@@ -1755,6 +2015,9 @@ export const finSection3Part1: Unit[] = [
             question: "All savings accounts pay the same interest rate.",
             correctAnswer: false,
             explanation: "Interest rates vary widely. Online banks typically offer much higher rates than traditional brick-and-mortar banks.",
+            distractorExplanations: {
+              0: 'This statement is actually false — interest rates vary widely. Online banks typically offer much higher rates than traditional brick-and-mortar banks.',
+            },
           },
           {
             id: "fin-sec3-u5-L1-Q2",
@@ -1768,6 +2031,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$5,000 times 0.0001 equals $0.50. That's less than the cost of a pack of gum.",
+            distractorExplanations: {
+              1: 'This amount (5) is too high — the correct calculation gives 0.5.',
+              2: 'This amount (50) is too high — the correct calculation gives 0.5.',
+              3: 'This amount (500) is too high — the correct calculation gives 0.5.',
+            },
           },
           {
             id: "fin-sec3-u5-L1-T2",
@@ -1782,6 +2050,9 @@ export const finSection3Part1: Unit[] = [
             question: "Online banks can offer higher rates because they don't pay for physical branch locations.",
             correctAnswer: true,
             explanation: "Lower overhead costs allow online banks to share more profit with depositors through higher interest rates.",
+            distractorExplanations: {
+              1: 'This statement is actually true — lower overhead costs allow online banks to share more profit with depositors through higher interest rates.',
+            },
           },
           {
             id: "fin-sec3-u5-L1-Q4",
@@ -1795,6 +2066,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$5,000 times 0.045 equals $225 per year. Compare that to the $0.50 from a regular account.",
+            distractorExplanations: {
+              0: 'This amount (22.5) is too low — the correct calculation gives 225.',
+              1: 'This amount (45) is too low — the correct calculation gives 225.',
+              3: 'This amount (450) is too high — the correct calculation gives 225.',
+            },
           },
           {
             id: "fin-sec3-u5-L1-Q5",
@@ -1825,6 +2101,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "FDIC insurance protects up to $250,000 at both online and traditional banks. His money is equally safe.",
+            distractorExplanations: {
+              0: '"Online banks are not regulated and could lose his money" is wrong because FDIC insurance protects up to $250,000 at both online and traditional banks.',
+              2: '"He needs to close his checking account to open a HYSA" is wrong because FDIC insurance protects up to $250,000 at both online and traditional banks.',
+              3: 'This choice is wrong because FDIC insurance protects up to $250,000 at both online and traditional banks.',
+            },
           },
         ],
       },
@@ -1858,6 +2139,9 @@ export const finSection3Part1: Unit[] = [
             question: "APY accounts for the effect of compound interest in your earnings.",
             correctAnswer: true,
             explanation: "Unlike simple interest rate, APY includes the compounding effect, giving you the true picture of your return.",
+            distractorExplanations: {
+              1: 'This statement is actually true — unlike simple interest rate, APY includes the compounding effect, giving you the true picture of your return.',
+            },
           },
           {
             id: "fin-sec3-u5-L2-T2",
@@ -1878,6 +2162,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Compound interest pays you interest on the total balance, including previously earned interest.",
+            distractorExplanations: {
+              0: '"You earn interest only on your original deposit" is wrong because compound interest pays you interest on the total balance, including previously earned interest.',
+              2: '"The bank charges you interest on your savings" is wrong because compound interest pays you interest on the total balance, including previously earned interest.',
+              3: '"Your interest rate doubles every year" is wrong because compound interest pays you interest on the total balance, including previously earned interest.',
+            },
           },
           {
             id: "fin-sec3-u5-L2-Q4",
@@ -1904,6 +2193,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "More frequent compounding means your earned interest starts earning its own interest sooner.",
+            distractorExplanations: {
+              1: '"Account B because annual compounding is simpler" is wrong because more frequent compounding means your earned interest starts earning its own interest sooner.',
+              2: '"They earn exactly the same amount" is wrong because more frequent compounding means your earned interest starts earning its own interest sooner.',
+              3: '"Neither, because 4% is the same everywhere" is wrong because more frequent compounding means your earned interest starts earning its own interest sooner.',
+            },
           },
           {
             id: "fin-sec3-u5-L2-T3",
@@ -1925,6 +2219,11 @@ export const finSection3Part1: Unit[] = [
             question: "How much more does Ana earn compared to Ben over 5 years?",
             correctIndex: 2,
             explanation: "Ana earns roughly $1,200 in interest over 5 years. Ben earns about $12.50. The difference is massive.",
+            distractorExplanations: {
+              0: '"About $25 more" is wrong because ana earns roughly $1,200 in interest over 5 years.',
+              1: '"About $250 more" is wrong because ana earns roughly $1,200 in interest over 5 years.',
+              3: '"About $5,000 more" is wrong because ana earns roughly $1,200 in interest over 5 years.',
+            },
           },
         ],
       },
@@ -1950,6 +2249,9 @@ export const finSection3Part1: Unit[] = [
             question: "A CD lets you withdraw money anytime without penalty.",
             correctAnswer: false,
             explanation: "CDs have early withdrawal penalties. You agree to keep the money deposited for the full term.",
+            distractorExplanations: {
+              0: 'This statement is actually false — CDs have early withdrawal penalties. You agree to keep the money deposited for the full term.',
+            },
           },
           {
             id: "fin-sec3-u5-L3-Q2",
@@ -1963,6 +2265,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "CDs usually pay higher rates than savings accounts because you commit to leaving the money untouched.",
+            distractorExplanations: {
+              0: '"You can access the money anytime" is wrong because CDs usually pay higher rates than savings accounts because you commit to leaving the money untouched.',
+              2: '"There are never any fees" is wrong because CDs usually pay higher rates than savings accounts because you commit to leaving the money untouched.',
+              3: '"It\'s not insured by the FDIC" is wrong because CDs usually pay higher rates than savings accounts because you commit to leaving the money untouched.',
+            },
           },
           {
             id: "fin-sec3-u5-L3-T2",
@@ -1977,6 +2284,9 @@ export const finSection3Part1: Unit[] = [
             question: "Longer-term CDs generally offer higher interest rates than shorter-term CDs.",
             correctAnswer: true,
             explanation: "Banks reward you with higher rates for committing your money for longer periods.",
+            distractorExplanations: {
+              1: 'This statement is actually true — banks reward you with higher rates for committing your money for longer periods.',
+            },
           },
           {
             id: "fin-sec3-u5-L3-Q4",
@@ -2006,6 +2316,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you might need the money early, the withdrawal penalty makes a CD costly. Use a HYSA instead.",
+            distractorExplanations: {
+              0: '"When you want a guaranteed return" is wrong because if you might need the money early, the withdrawal penalty makes a CD costly.',
+              2: '"When you want to earn more than a regular savings account" is wrong because if you might need the money early, the withdrawal penalty makes a CD costly.',
+              3: '"When interest rates are high" is wrong because if you might need the money early, the withdrawal penalty makes a CD costly.',
+            },
           },
           {
             id: "fin-sec3-u5-L3-T3",
@@ -2035,6 +2350,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A CD ladder gives her some money maturing each year while earning higher rates than a HYSA.",
+            distractorExplanations: {
+              0: '"Put all $9,000 in the 3-year CD for the best rate" is wrong because a CD ladder gives her some money maturing each year while earning higher rates than a HYSA.',
+              1: '"Put all $9,000 in the HYSA for full flexibility" is wrong because a CD ladder gives her some money maturing each year while earning higher rates than a HYSA.',
+              3: '"Keep the $9,000 in her checking account" is wrong because a CD ladder gives her some money maturing each year while earning higher rates than a HYSA.',
+            },
           },
         ],
       },
@@ -2069,6 +2389,9 @@ export const finSection3Part1: Unit[] = [
             question: "A money market account combines features of savings and checking accounts.",
             correctAnswer: true,
             explanation: "Money market accounts earn higher interest than regular savings and may offer check-writing or debit card access.",
+            distractorExplanations: {
+              1: 'This statement is actually true — money market accounts earn higher interest than regular savings and may offer check-writing or debit card access.',
+            },
           },
           {
             id: "fin-sec3-u5-L4-Q3",
@@ -2082,6 +2405,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Emergency funds need to be accessible and safe. A HYSA provides both while earning competitive interest.",
+            distractorExplanations: {
+              0: '"5-year CD for the highest rate" is wrong because emergency funds need to be accessible and safe.',
+              1: '"Regular savings at your local bank branch" is wrong because emergency funds need to be accessible and safe.',
+              3: '"Stock market index fund for growth" is wrong because emergency funds need to be accessible and safe.',
+            },
           },
           {
             id: "fin-sec3-u5-L4-T2",
@@ -2119,6 +2447,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Match the tool to the timeline. HYSA for immediate access needs. CD for the 2-year car goal. HYSA for the vacation next year.",
+            distractorExplanations: {
+              0: '"Put all $15,000 in a single HYSA" is wrong because match the tool to the timeline.',
+              2: '"Put all $15,000 in a 5-year CD for the best rate" is wrong because match the tool to the timeline.',
+              3: '"Keep all $15,000 in his checking account for easy access" is wrong because match the tool to the timeline.',
+            },
           },
           {
             id: "fin-sec3-u5-L4-Q6",
@@ -2132,6 +2465,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "All four account types at FDIC-member banks are insured up to $250,000 per depositor.",
+            distractorExplanations: {
+              0: '"They all pay the same interest rate" is wrong because all four account types at FDIC-member banks are insured up to $250,000 per depositor.',
+              2: '"They all lock your money for a set period" is wrong because all four account types at FDIC-member banks are insured up to $250,000 per depositor.',
+              3: '"They all require a minimum deposit of $1,000" is wrong because all four account types at FDIC-member banks are insured up to $250,000 per depositor.',
+            },
           },
           {
             id: "fin-sec3-u5-L4-T3",
@@ -2146,6 +2484,9 @@ export const finSection3Part1: Unit[] = [
             question: "An account with high interest but monthly fees can earn you less than a no-fee account with a lower rate.",
             correctAnswer: true,
             explanation: "Fees reduce your real return. A 4% account with $10/month in fees on a $1,000 balance earns less than a 3% fee-free account.",
+            distractorExplanations: {
+              1: 'This statement is actually true — fees reduce your real return. A 4% account with $10/month in fees on a $1,000 balance earns less than a 3% fee-free account.',
+            },
           },
         ],
       },
@@ -2297,6 +2638,9 @@ export const finSection3Part1: Unit[] = [
             question: "People who automate their savings consistently save more than those who transfer manually.",
             correctAnswer: true,
             explanation: "Automation removes the chance to skip a month. Manual savers often intend to save but forget or talk themselves out of it.",
+            distractorExplanations: {
+              1: 'This statement is actually true — automation removes the chance to skip a month. Manual savers often intend to save but forget or talk themselves out of it.',
+            },
           },
           {
             id: "fin-sec3-u6-L1-Q2",
@@ -2310,6 +2654,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Decision fatigue is real. By evening, you've made hundreds of choices and willpower is depleted.",
+            distractorExplanations: {
+              0: '"Willpower gets stronger over time with practice" is wrong because decision fatigue is real.',
+              2: '"Willpower only works for spending, not saving" is wrong because decision fatigue is real.',
+              3: '"Willpower is not a real concept" is wrong because decision fatigue is real.',
+            },
           },
           {
             id: "fin-sec3-u6-L1-T2",
@@ -2339,6 +2688,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without automation, life gets in the way. Manual savers frequently skip months or save less than planned.",
+            distractorExplanations: {
+              0: '"Jordan\'s bank account doesn\'t support saving" is wrong because without automation, life gets in the way.',
+              2: '"Alex earns a higher salary than Jordan" is wrong because without automation, life gets in the way.',
+              3: '"Auto-transfers earn double the interest rate" is wrong because without automation, life gets in the way.',
+            },
           },
           {
             id: "fin-sec3-u6-L1-T3",
@@ -2368,6 +2722,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Low friction for saving and high friction for spending stacks the odds in your favor.",
+            distractorExplanations: {
+              0: '"Make saving hard and spending easy" is wrong because low friction for saving and high friction for spending stacks the odds in your favor.',
+              2: '"Remove all friction from every financial action" is wrong because low friction for saving and high friction for spending stacks the odds in your favor.',
+              3: '"Add friction to saving so it feels more rewarding" is wrong because low friction for saving and high friction for spending stacks the odds in your favor.',
+            },
           },
         ],
       },
@@ -2393,6 +2752,9 @@ export const finSection3Part1: Unit[] = [
             question: "The best time to schedule automatic savings is the day after payday.",
             correctAnswer: false,
             explanation: "Schedule it on payday itself. The sooner the money moves, the less chance you'll spend it.",
+            distractorExplanations: {
+              0: 'This statement is actually false — schedule it on payday itself. The sooner the money moves, the less chance you\'ll spend it.',
+            },
           },
           {
             id: "fin-sec3-u6-L2-Q2",
@@ -2427,6 +2789,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When savings go directly to a separate account, you never see the money or feel tempted to spend it.",
+            distractorExplanations: {
+              0: '"It earns higher interest rates automatically" is wrong because when savings go directly to a separate account, you never see the money or feel tempted to spend it.',
+              2: '"It\'s required by federal employment law" is wrong because when savings go directly to a separate account, you never see the money or feel tempted to spend it.',
+              3: '"Banks charge less for direct deposit accounts" is wrong because when savings go directly to a separate account, you never see the money or feel tempted to spend it.',
+            },
           },
           {
             id: "fin-sec3-u6-L2-Q4",
@@ -2434,6 +2801,9 @@ export const finSection3Part1: Unit[] = [
             question: "Most employers allow employees to split direct deposit between two bank accounts.",
             correctAnswer: true,
             explanation: "Most payroll systems support splitting your deposit. You just need to provide a second account number.",
+            distractorExplanations: {
+              1: 'This statement is actually true — most payroll systems support splitting your deposit. You just need to provide a second account number.',
+            },
           },
           {
             id: "fin-sec3-u6-L2-T3",
@@ -2463,6 +2833,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Two smaller transfers aligned with each paycheck reduce the risk of overdraft and spread the savings evenly.",
+            distractorExplanations: {
+              0: '"One $200 transfer on the first payday of the month" is wrong because two smaller transfers aligned with each paycheck reduce the risk of overdraft and spread the savings evenly.',
+              2: '"One $200 transfer at the end of the month" is wrong because two smaller transfers aligned with each paycheck reduce the risk of overdraft and spread the savings evenly.',
+              3: '"No transfer, just move money when she remembers" is wrong because two smaller transfers aligned with each paycheck reduce the risk of overdraft and spread the savings evenly.',
+            },
           },
         ],
       },
@@ -2488,6 +2863,9 @@ export const finSection3Part1: Unit[] = [
             question: "Round-up savings apps automatically save the spare change from every purchase.",
             correctAnswer: true,
             explanation: "When you spend $4.50, the app rounds to $5 and puts $0.50 into savings. It happens automatically.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when you spend $4.50, the app rounds to $5 and puts $0.50 into savings. It happens automatically.',
+            },
           },
           {
             id: "fin-sec3-u6-L3-Q2",
@@ -2501,6 +2879,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "60 purchases times $0.50 average round-up equals $30 per month. That's $360 per year from spare change.",
+            distractorExplanations: {
+              0: 'This amount (10) is too low — the correct calculation gives 30.',
+              1: 'This amount (15) is too low — the correct calculation gives 30.',
+              3: 'This amount (60) is too high — the correct calculation gives 30.',
+            },
           },
           {
             id: "fin-sec3-u6-L3-T2",
@@ -2515,6 +2898,9 @@ export const finSection3Part1: Unit[] = [
             question: "Round-up apps should replace your main automatic savings transfer.",
             correctAnswer: false,
             explanation: "Round-ups are a bonus on top of your main savings. They're too small and unpredictable to be your only saving method.",
+            distractorExplanations: {
+              0: 'This statement is actually false — round-ups are a bonus on top of your main savings. They\'re too small and unpredictable to be your only saving method.',
+            },
           },
           {
             id: "fin-sec3-u6-L3-Q4",
@@ -2544,6 +2930,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Some apps charge $3 to $5 per month. If your round-ups only save $10, fees eat a big chunk.",
+            distractorExplanations: {
+              0: '"Whether it requires a $10,000 minimum deposit" is wrong because some apps charge $3 to $5 per month.',
+              2: '"Whether it replaces your bank account entirely" is wrong because some apps charge $3 to $5 per month.',
+              3: '"Whether it\'s endorsed by a financial celebrity" is wrong because some apps charge $3 to $5 per month.',
+            },
           },
           {
             id: "fin-sec3-u6-L3-T3",
@@ -2565,6 +2956,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$150 times 2 paychecks equals $300 plus $35 in round-ups minus $3 fee equals $332 per month.",
+            distractorExplanations: {
+              0: 'This amount (150) is too low — the correct calculation gives 332.',
+              1: 'This amount (300) is too low — the correct calculation gives 332.',
+              3: 'This amount (335) is too high — the correct calculation gives 332.',
+            },
           },
         ],
       },
@@ -2590,6 +2986,9 @@ export const finSection3Part1: Unit[] = [
             question: "Keeping all savings in one account makes it easy to track progress toward multiple goals.",
             correctAnswer: false,
             explanation: "A single account hides how much belongs to each goal. You might accidentally spend your emergency fund on a vacation.",
+            distractorExplanations: {
+              0: 'This statement is actually false — a single account hides how much belongs to each goal. You might accidentally spend your emergency fund on a vacation.',
+            },
           },
           {
             id: "fin-sec3-u6-L4-Q2",
@@ -2603,6 +3002,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Separate buckets let you track each goal independently. You know exactly where you stand on every target.",
+            distractorExplanations: {
+              0: '"Each bucket earns a different interest rate" is wrong because separate buckets let you track each goal independently.',
+              2: '"Banks pay you extra for having multiple accounts" is wrong because separate buckets let you track each goal independently.',
+              3: '"It reduces the taxes you pay on interest" is wrong because separate buckets let you track each goal independently.',
+            },
           },
           {
             id: "fin-sec3-u6-L4-T2",
@@ -2617,6 +3021,9 @@ export const finSection3Part1: Unit[] = [
             question: "You need to open a completely separate bank account for each savings goal.",
             correctAnswer: false,
             explanation: "Many banks offer sub-accounts or buckets within one account. You get separation without the hassle of multiple accounts.",
+            distractorExplanations: {
+              0: 'This statement is actually false — many banks offer sub-accounts or buckets within one account. You get separation without the hassle of multiple accounts.',
+            },
           },
           {
             id: "fin-sec3-u6-L4-Q4",
@@ -2655,6 +3062,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The emergency fund is the highest priority. Extra money should go there until it's fully funded.",
+            distractorExplanations: {
+              1: '"Split it evenly across all 3 buckets" is wrong because the emergency fund is the highest priority.',
+              2: '"Keep it in checking for unexpected expenses" is wrong because the emergency fund is the highest priority.',
+              3: '"Spend it since she\'s already saving plenty" is wrong because the emergency fund is the highest priority.',
+            },
           },
           {
             id: "fin-sec3-u6-L4-Q7",
@@ -2668,6 +3080,11 @@ export const finSection3Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When a goal is met, redirect the auto-transfer to your next priority. The saving habit continues.",
+            distractorExplanations: {
+              0: '"Stop saving entirely until you need a new goal" is wrong because when a goal is met, redirect the auto-transfer to your next priority.',
+              2: '"Withdraw the money and spend it immediately" is wrong because when a goal is met, redirect the auto-transfer to your next priority.',
+              3: '"Close the savings account completely" is wrong because when a goal is met, redirect the auto-transfer to your next priority.',
+            },
           },
         ],
       },

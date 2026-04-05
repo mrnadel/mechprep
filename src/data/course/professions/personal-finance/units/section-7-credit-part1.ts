@@ -40,6 +40,7 @@ export const finSection7Part1: Unit[] = [
             question: "A credit score tells lenders how likely you are to repay borrowed money.",
             correctAnswer: true,
             explanation: "That's the core purpose. It's a quick way for lenders to measure your financial reliability.",
+            distractorExplanations: { 1: 'A credit score is specifically designed to predict repayment likelihood, which is its core purpose.' },
           },
           {
             id: "fin-sec7-u1-L1-Q2",
@@ -53,6 +54,11 @@ export const finSection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A credit score distills your borrowing history into a single number that lenders use to assess risk.",
+            distractorExplanations: {
+              1: 'The total amount you owe is your debt balance, not your credit score.',
+              2: 'Income divided by age is not how any credit metric is calculated.',
+              3: 'A tax ID is a government identifier unrelated to creditworthiness.',
+            },
           },
           {
             id: "fin-sec7-u1-L1-T2",
@@ -66,6 +72,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "People with higher credit scores usually get lower interest rates on loans.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Lenders consistently offer lower rates to borrowers with higher scores because they represent less default risk.' },
             explanation: "Lenders reward lower risk with better rates. A strong score saves real money over time.",
           },
           {
@@ -109,6 +116,11 @@ export const finSection7Part1: Unit[] = [
               "To determine the size of your apartment",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Identity verification for taxes uses tax IDs, not credit scores.',
+              2: 'Utility bills are calculated based on usage, not credit scores.',
+              3: 'Apartment size is determined by floor plans and availability, not a tenant\'s credit.',
+            },
             explanation: "Landlords use credit scores to estimate whether a tenant will reliably make rent payments.",
           },
         ],
@@ -134,6 +146,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Credit bureaus are companies that collect data about your borrowing history.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Credit bureaus exist specifically to gather and maintain borrowing and payment data on consumers.' },
             explanation: "Bureaus gather payment records, account balances, and public records to build your credit report.",
           },
           {
@@ -167,6 +180,11 @@ export const finSection7Part1: Unit[] = [
               "BankRate Score",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'VantageScore is used by some lenders but FICO dominates with about 90% market share.',
+              2: 'Equifax is a credit bureau that collects data, not a scoring model.',
+              3: 'BankRate is a financial media company, not a credit scoring model.',
+            },
             explanation: "FICO scores are used by roughly 90% of top lenders when making credit decisions.",
           },
           {
@@ -194,6 +212,11 @@ export const finSection7Part1: Unit[] = [
               "Only one bureau is accurate",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'All three major bureaus use the same 300-to-850 scale for FICO scores.',
+              1: 'Bureaus use systematic data collection, not random assignment.',
+              3: 'All three bureaus can be accurate; differences come from varying data, not accuracy issues.',
+            },
             explanation: "Lenders choose which bureaus to report to. If one bureau is missing an account, your score there may differ.",
           },
           {
@@ -231,6 +254,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "A FICO score of 300 is the lowest possible score.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The FICO scale officially ranges from 300 to 850, with 300 being the absolute minimum.' },
             explanation: "FICO scores range from 300 (worst) to 850 (best). Very few people actually hit either extreme.",
           },
           {
@@ -260,6 +284,11 @@ export const finSection7Part1: Unit[] = [
               "800 to 850",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: '580 to 669 is the fair range, one tier below good.',
+              2: '740 to 799 is the very good range, one tier above good.',
+              3: '800 to 850 is the exceptional range, the highest tier.',
+            },
             explanation: "FICO considers 670 to 739 as good. This tier qualifies you for most mainstream credit products.",
           },
           {
@@ -274,6 +303,11 @@ export const finSection7Part1: Unit[] = [
               "She'll automatically qualify for any loan amount",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'A 580 score is in the fair range and would not qualify for the lowest available rates.',
+              2: 'Credit scores are always checked during the mortgage application process.',
+              3: 'A fair credit score does not guarantee automatic approval for any loan amount.',
+            },
             explanation: "A 580 score falls in the fair range. Most mortgage lenders either decline or charge much higher interest at this level.",
           },
           {
@@ -293,6 +327,11 @@ export const finSection7Part1: Unit[] = [
               "Poor",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Good is 670 to 739; a 760 score exceeds that range.',
+              1: 'Fair is 580 to 669; a 760 score is far above that range.',
+              3: 'Poor is 300 to 579; a 760 score is nowhere near that range.',
+            },
             explanation: "A 760 score is in the very good range (740 to 799). This tier qualifies for top-tier interest rates.",
           },
           {
@@ -334,6 +373,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "A 2% difference in mortgage rate can cost over $100,000 in extra payments on a 30-year loan.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'On a $250,000 loan over 30 years, even a small rate difference compounds into tens of thousands of dollars.' },
             explanation: "Even a small rate difference compounds dramatically over decades. Good credit earns you the lower rate.",
           },
           {
@@ -347,6 +387,11 @@ export const finSection7Part1: Unit[] = [
               "The premium on your car insurance",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Car loan interest rates are directly influenced by your credit score.',
+              2: 'Landlords commonly check credit scores as part of the rental application process.',
+              3: 'Many insurance companies use credit-based scores to set premium rates.',
+            },
             explanation: "Grocery prices are the same for everyone. But loan rates, rental approvals, and insurance premiums can all be influenced by your credit score.",
           },
           {
@@ -367,6 +412,11 @@ export const finSection7Part1: Unit[] = [
               "Ignore the requirement and apply anyway without mentioning it",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Lying on applications is fraud and can result in eviction or legal consequences.',
+              2: 'Most landlords require credit checks regardless of payment method.',
+              3: 'Ignoring the requirement will likely result in a denial without any negotiation.',
+            },
             explanation: "Some landlords accept a larger deposit or co-signer when scores fall slightly below their cutoff. Being upfront and proactive often works.",
           },
           {
@@ -400,6 +450,11 @@ export const finSection7Part1: Unit[] = [
               "Every January 1st",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Scores update continuously throughout the year as new data arrives, not just on birthdays.',
+              1: 'Scores update whenever any creditor reports new data, not only during loan applications.',
+              3: 'There is no annual reset date; scores change whenever new information is reported.',
+            },
             explanation: "Scores are recalculated each time a lender or creditor sends new data to the bureaus. This can happen monthly.",
           },
           {
@@ -564,6 +619,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Payment history makes up the largest portion of your FICO score.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'At 35%, payment history outweighs all other FICO factors including amounts owed at 30%.' },
             explanation: "At 35%, payment history is the single most important factor. Paying on time is the best thing you can do for your score.",
           },
           {
@@ -577,6 +633,11 @@ export const finSection7Part1: Unit[] = [
               "35%",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: '10% is the weight for new credit or credit mix, not payment history.',
+              1: '15% is the weight for length of credit history.',
+              2: '30% is the weight for amounts owed, the second largest factor.',
+            },
             explanation: "Payment history accounts for 35% of your FICO score, the largest single factor.",
           },
           {
@@ -604,6 +665,11 @@ export const finSection7Part1: Unit[] = [
               "Paying only when you get a reminder notice",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Paying once a year means missing 11 monthly on-time payment opportunities.',
+              2: 'Paying double every other month still results in missed months that count as late.',
+              3: 'Waiting for a reminder means you are already past due, which damages your score.',
+            },
             explanation: "Consistent on-time payments, even just the minimum, are what matter most. Missed months hurt more than extra payments help.",
           },
           {
@@ -618,6 +684,11 @@ export const finSection7Part1: Unit[] = [
               "Ignore it because the damage is already done",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Waiting until next month means the payment crosses the 30-day threshold and gets reported as late.',
+              2: 'Closing the account does not eliminate the late payment and removes available credit.',
+              3: 'The damage is not yet done at 25 days; paying now prevents a negative mark on her report.',
+            },
             explanation: "Payments aren't reported late until they're 30+ days past due. Paying now prevents a negative mark on her credit report.",
           },
           {
@@ -631,6 +702,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "A late payment from 6 years ago hurts your score as much as one from last month.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'FICO weighs recent activity more heavily, so an older late payment has much less impact than a recent one.' },
             explanation: "Recent activity counts more. A 6-year-old late payment has far less impact than a recent one.",
           },
         ],
@@ -655,6 +727,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Amounts owed is the second largest factor in your FICO score.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'At 30%, amounts owed is second only to payment history (35%) in the FICO formula.' },
             explanation: "At 30%, amounts owed is second only to payment history (35%) in FICO's formula.",
           },
           {
@@ -668,6 +741,11 @@ export const finSection7Part1: Unit[] = [
               "The number of months you've had credit",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'The number of cards you own is not a ratio; utilization measures balance relative to limit.',
+              2: 'The interest rate on your card is a cost metric, not a usage metric.',
+              3: 'Months of credit history relates to length of history, not amounts owed.',
+            },
             explanation: "Credit utilization is your balance divided by your credit limit, expressed as a percentage.",
           },
           {
@@ -688,6 +766,11 @@ export const finSection7Part1: Unit[] = [
               "50%",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: '20% would mean a $1,000 balance on a $5,000 limit.',
+              1: '25% would mean a $1,250 balance on a $5,000 limit.',
+              3: '50% would mean a $2,500 balance on a $5,000 limit.',
+            },
             explanation: "$2,000 divided by $5,000 equals 40%. This is above the recommended 30% threshold.",
           },
           {
@@ -731,6 +814,11 @@ export const finSection7Part1: Unit[] = [
               "90% to 100%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Zero utilization shows no recent credit activity, which gives lenders no evidence of responsible use.',
+              2: '50% to 60% utilization is considered high and would hurt your score.',
+              3: '90% to 100% signals maxed-out credit and severely damages your score.',
+            },
             explanation: "Very low utilization (1% to 9%) shows you use credit responsibly without relying too heavily on it.",
           },
         ],
@@ -755,6 +843,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Having credit accounts open for many years helps your score.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Length of credit history is 15% of your FICO score, and longer histories demonstrate more experience.' },
             explanation: "A longer credit history shows lenders you have experience managing credit over time.",
           },
           {
@@ -768,6 +857,11 @@ export const finSection7Part1: Unit[] = [
               "5 cards all opened this year",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'One card opened last month provides almost no credit history.',
+              1: 'Three cards opened recently all have short histories and lower the average age.',
+              3: 'Five new cards drastically reduce average account age, hurting this factor.',
+            },
             explanation: "A 10-year-old account demonstrates a long track record. Opening many new accounts shortens your average age.",
           },
           {
@@ -788,6 +882,11 @@ export const finSection7Part1: Unit[] = [
               "He should apply for 4 more to get even better rewards",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Opening many cards quickly generates multiple hard inquiries and lowers average account age.',
+              2: 'Each credit application triggers a hard inquiry that can lower your score by several points.',
+              3: 'More applications would compound the damage from hard inquiries even further.',
+            },
             explanation: "Multiple hard inquiries in a short window signal risk to lenders and can drop his score significantly.",
           },
           {
@@ -851,6 +950,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Having perfect payment history guarantees a score above 750.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Payment history is only 35% of your score; high utilization, short history, or many new accounts can still drag it down.' },
             explanation: "Payment history is important but it's only 35%. High utilization, short history, or too many new accounts can still pull your score down.",
           },
           {
@@ -865,6 +965,11 @@ export const finSection7Part1: Unit[] = [
               "New credit inquiries",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Sam always pays on time, so payment history is not the problem.',
+              2: 'Eight years of credit history is solid and would help, not hurt, the score.',
+              3: 'Sam has no new applications, so new credit inquiries are not an issue.',
+            },
             explanation: "Sam's utilization is 85%, which is extremely high. That's likely the biggest drag on an otherwise solid profile.",
           },
           {
@@ -899,6 +1004,11 @@ export const finSection7Part1: Unit[] = [
               "Check your score daily and dispute everything",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Opening 5 new accounts creates hard inquiries and lowers average age, both hurting your score.',
+              2: 'Closing old accounts shortens credit history and applying for new ones adds hard inquiries.',
+              3: 'Checking your score does not change it, and disputing accurate information will not help.',
+            },
             explanation: "Payment history (35%) and amounts owed (30%) are the biggest factors. Improving both has the fastest impact.",
           },
           {
@@ -913,6 +1023,11 @@ export const finSection7Part1: Unit[] = [
               "Apply for a personal loan to show more credit types",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Opening new cards adds hard inquiries, lowers average age, and does not fix utilization.',
+              2: 'Closing the oldest card shortens credit history, which would further hurt her score.',
+              3: 'A personal loan adds an inquiry and more debt without addressing the core issues.',
+            },
             explanation: "Reducing high utilization and preventing future late payments address the 2 biggest score factors.",
           },
           {
@@ -926,6 +1041,11 @@ export const finSection7Part1: Unit[] = [
               "The bank will report you to collections",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Most cards do not charge a cancellation fee for closing an account.',
+              2: 'Reward points policies vary by issuer; many allow redemption before or after closing.',
+              3: 'Closing a card does not trigger a collections report if the balance is paid off.',
+            },
             explanation: "Closing your oldest card reduces your average account age, which hurts the length of history factor (15% of your score).",
           },
         ],
@@ -994,6 +1114,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Credit utilization is calculated by dividing your balance by your credit limit.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The utilization formula is specifically balance divided by credit limit, expressed as a percentage.' },
             explanation: "Balance divided by limit gives you a decimal. Multiply by 100 to get the percentage.",
           },
           {
@@ -1007,6 +1128,11 @@ export const finSection7Part1: Unit[] = [
               "60%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: '15% would require a $900 balance on a $6,000 limit.',
+              2: '40% would require a $2,400 balance on a $6,000 limit.',
+              3: '60% would require a $3,600 balance on a $6,000 limit.',
+            },
             explanation: "$1,500 divided by $6,000 equals 0.25, or 25% utilization.",
           },
           {
@@ -1026,6 +1152,11 @@ export const finSection7Part1: Unit[] = [
               "85%",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: '8% utilization is excellent and signals very responsible credit use.',
+              1: '22% is within the healthy range and would not concern lenders.',
+              2: '45% is above ideal but far less alarming than 85% utilization.',
+            },
             explanation: "85% utilization signals heavy reliance on credit. The higher the ratio, the more risk lenders perceive.",
           },
           {
@@ -1047,6 +1178,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Past high utilization continues to hurt your score even after you pay it down.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Utilization is a snapshot with no memory; once you lower your balance, only the new lower ratio is scored.' },
             explanation: "Utilization is a snapshot. Once you lower your balance, your score reflects the new, lower ratio.",
           },
           {
@@ -1060,6 +1192,11 @@ export const finSection7Part1: Unit[] = [
               "100%",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: '25% would mean owing only $1,000 of a $4,000 limit.',
+              1: '50% would mean owing $2,000 of a $4,000 limit.',
+              2: '75% would mean owing $3,000 of a $4,000 limit.',
+            },
             explanation: "$4,000 divided by $4,000 is 100%. Your card is completely maxed out.",
           },
         ],
@@ -1084,6 +1221,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "FICO only looks at your total utilization across all cards combined.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'FICO checks both per-card and overall utilization, so one maxed card hurts even if others are empty.' },
             explanation: "FICO checks both per-card utilization and total utilization. One maxed card can hurt you even if others are empty.",
           },
           {
@@ -1098,6 +1236,11 @@ export const finSection7Part1: Unit[] = [
               "50%",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: '20% does not match the math; $1,500 total balance divided by $5,000 total limit is 30%.',
+              1: '25% would require a $1,250 balance, not $1,500.',
+              3: '50% would require a $2,500 balance on $5,000 total limit.',
+            },
             explanation: "Total balance ($1,500) divided by total limit ($5,000) equals 30%.",
           },
           {
@@ -1118,6 +1261,11 @@ export const finSection7Part1: Unit[] = [
               "Three cards each at 40%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'One card at 60% has damaging per-card utilization even if overall is moderate.',
+              2: 'One card at 90% severely hurts per-card utilization regardless of other empty cards.',
+              3: 'Three cards each at 40% means every card exceeds the 30% threshold.',
+            },
             explanation: "Two cards at 15% each keeps both per-card and overall utilization in the healthy range.",
           },
           {
@@ -1140,6 +1288,11 @@ export const finSection7Part1: Unit[] = [
               "80%",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: '40% would mean $6,000 total balance on $15,000, not $8,000.',
+              2: '67% does not match; $8,000 divided by $15,000 is approximately 53%.',
+              3: '80% is the per-card utilization of the first card, not the overall ratio.',
+            },
             explanation: "$8,000 total balance divided by $15,000 total limit equals about 53%. Still risky, and the first card is at 80% individually.",
           },
           {
@@ -1153,6 +1306,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Getting a higher credit limit can lower your utilization without changing your spending.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'A higher limit increases the denominator in the utilization formula, lowering the percentage with the same balance.' },
             explanation: "A higher limit increases the denominator in the utilization formula. Same balance, bigger limit, lower percentage.",
           },
         ],
@@ -1177,6 +1331,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "The optimal credit utilization for the highest scores is between 1% and 9%.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Research consistently shows top scorers maintain utilization in the 1% to 9% range.' },
             explanation: "Top scorers consistently maintain very low utilization. This signals responsible, minimal credit usage.",
           },
           {
@@ -1190,6 +1345,11 @@ export const finSection7Part1: Unit[] = [
               "Banks charge a fee for unused credit",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Having 0% utilization is completely legal; the issue is lack of demonstrated credit use.',
+              2: 'Bureaus can calculate a score with 0% utilization, but it signals inactivity.',
+              3: 'Banks do not charge fees for unused credit on most consumer credit cards.',
+            },
             explanation: "Lenders want to see you actively manage credit. Zero usage gives them no recent evidence of responsible behavior.",
           },
           {
@@ -1224,6 +1384,11 @@ export const finSection7Part1: Unit[] = [
               "Request a credit limit decrease to look responsible",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Letting the full $4,200 report means 42% utilization, well above the optimal range.',
+              2: 'Maxing out the card would report 100% utilization, severely damaging her score.',
+              3: 'Decreasing her credit limit would increase her utilization percentage, not lower it.',
+            },
             explanation: "Paying down to $500 before the statement reports gives her 5% utilization, which is in the optimal range.",
           },
           {
@@ -1253,6 +1418,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "If you had 80% utilization last month but 5% this month, only 5% affects your current score.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Utilization has no memory and only the most recently reported balance is used in score calculations.' },
             explanation: "Utilization has no memory. Only the most recently reported balance matters for your score.",
           },
         ],
@@ -1278,6 +1444,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "The balance reported to credit bureaus is based on your statement date, not your due date.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The statement closing date determines the balance snapshot sent to bureaus, not the payment due date.' },
             explanation: "Whatever balance exists on your statement closing date is what gets sent to the bureaus.",
           },
           {
@@ -1291,6 +1458,11 @@ export const finSection7Part1: Unit[] = [
               "Exactly one year after opening the card",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Paying on the due date is too late because the balance was already reported on the statement date.',
+              1: 'Paying after the due date incurs a late fee and damages payment history.',
+              3: 'The card opening anniversary has no connection to when balances are reported.',
+            },
             explanation: "Paying before the statement closes means a smaller balance appears on your report. The due date is too late for utilization purposes.",
           },
           {
@@ -1311,6 +1483,11 @@ export const finSection7Part1: Unit[] = [
               "Stop using the card for a month",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Paying on the 5th means the full $2,000 balance was already reported on the 15th.',
+              2: 'Switching to minimum payments would cause interest charges and higher reported balances.',
+              3: 'Stopping card use entirely means 0% utilization, which is not optimal either.',
+            },
             explanation: "Paying most of the balance before the 15th means only $500 (10%) gets reported instead of $2,000 (40%).",
           },
           {
@@ -1343,6 +1520,11 @@ export const finSection7Part1: Unit[] = [
               "The bank rewards early payments with bonus points",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Interest charges are avoided by paying in full by the due date, not specifically by early payment.',
+              2: 'Making multiple payments in a month is fine, but it does not count as extra on-time payments.',
+              3: 'Banks do not give bonus rewards for early payments; the benefit is a lower reported balance.',
+            },
             explanation: "Lower reported balance means lower utilization ratio. The bureaus only see what's there on the statement date.",
           },
           {
@@ -1502,6 +1684,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "FICO scores range from 100 to 900.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'FICO scores actually range from 300 to 850, not 100 to 900.' },
             explanation: "FICO scores range from 300 to 850. A score of 670 or above is considered good.",
           },
           {
@@ -1515,6 +1698,11 @@ export const finSection7Part1: Unit[] = [
               "Payment history (35%)",
             ],
             correctIndex: 3,
+            distractorExplanations: {
+              0: 'Credit mix at 10% is one of the smallest factors, not the greatest.',
+              1: 'Length of history at 15% is a mid-weight factor.',
+              2: 'Amounts owed at 30% is the second largest, but payment history at 35% is the biggest.',
+            },
             explanation: "Payment history at 35% is the single biggest factor. Paying on time is the most important credit habit.",
           },
           {
@@ -1573,6 +1761,11 @@ export const finSection7Part1: Unit[] = [
               "Not enough types of credit",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Chen has 12 years of credit history, which is strong and not the problem.',
+              1: 'Chen has no recent applications, so new credit inquiries are not dragging down the score.',
+              3: 'Chen has 3 different account types, which is adequate credit mix.',
+            },
             explanation: "The 2 biggest factors, payment history and amounts owed, are both poor. That explains the low score despite strong history and mix.",
           },
         ],
@@ -1604,6 +1797,11 @@ export const finSection7Part1: Unit[] = [
               "Wait until after the mortgage to worry about her score",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Opening new cards would add hard inquiries and lower average account age before a mortgage.',
+              2: 'Closing the oldest card shortens credit history and reduces available credit.',
+              3: 'Waiting until after the mortgage means getting a worse rate or being denied.',
+            },
             explanation: "Reducing utilization and preventing more late payments addresses the 2 biggest score factors in the time she has.",
           },
           {
@@ -1617,6 +1815,11 @@ export const finSection7Part1: Unit[] = [
               "Yes, but only if he immediately uses the extra credit",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Higher limits do not automatically lead to more debt if spending habits stay the same.',
+              2: 'Many banks offer limit increases without a hard inquiry when the customer requests or is offered one.',
+              3: 'Using the extra credit immediately would raise utilization, which defeats the purpose.',
+            },
             explanation: "A higher limit with the same spending lowers utilization. Many banks offer increases without a hard inquiry.",
           },
           {
@@ -1649,6 +1852,11 @@ export const finSection7Part1: Unit[] = [
               "690, 695, 688",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'Scores of 718, 722, and 715 are very close and reflect normal variation between bureaus.',
+              1: 'Scores of 680, 685, and 678 show small differences that are typical across bureaus.',
+              3: 'Scores of 690, 695, and 688 are closely grouped and suggest consistent data.',
+            },
             explanation: "Small differences between bureaus are normal. A 130-point gap suggests one bureau has incorrect negative information.",
           },
           {
@@ -1665,6 +1873,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Paying your full credit card balance every month means utilization is always 0%.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Your balance is reported on the statement date, so charges during the cycle appear even if you pay in full by the due date.' },
             explanation: "Your balance is reported on the statement date, not the due date. You may have charges on the statement even if you pay in full every month.",
           },
         ],
@@ -1733,6 +1942,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "A secured credit card requires a cash deposit upfront.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Secured cards specifically require a cash deposit that serves as collateral and sets the credit limit.' },
             explanation: "The deposit reduces the bank's risk, which is why they approve people with no credit history.",
           },
           {
@@ -1746,6 +1956,11 @@ export const finSection7Part1: Unit[] = [
               "The bank's current interest rate",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Income level may affect approval but the credit limit on a secured card is set by the deposit amount.',
+              2: 'With no existing credit score, the deposit amount is what determines the limit.',
+              3: 'The bank\'s current interest rate affects borrowing costs, not the secured card limit.',
+            },
             explanation: "Your deposit usually equals your credit limit. A $300 deposit gives you a $300 limit.",
           },
           {
@@ -1759,6 +1974,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Credit bureaus can tell the difference between secured and unsecured credit cards.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Most secured cards report identically to unsecured cards, so bureaus do not distinguish between them.' },
             explanation: "Most secured cards report as regular credit cards. Bureaus track your payment behavior the same way regardless.",
           },
           {
@@ -1780,6 +1996,11 @@ export const finSection7Part1: Unit[] = [
               "It's donated to a credit bureau",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The deposit is refundable and not a processing fee; it is returned when the account is closed in good standing.',
+              1: 'Security deposits do not convert into reward points; they are cash returned to you.',
+              3: 'Deposits are returned to the cardholder, not donated to any organization.',
+            },
             explanation: "If you've paid your balance and close the account in good standing, the bank returns your full deposit.",
           },
           {
@@ -1823,6 +2044,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "Being added as an authorized user can help build your credit history.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'The primary cardholder\'s account history gets added to your credit report, helping establish your track record.' },
             explanation: "The primary cardholder's account history often gets added to your credit report, giving you an instant track record.",
           },
           {
@@ -1836,6 +2058,11 @@ export const finSection7Part1: Unit[] = [
               "The credit bureau",
             ],
             correctIndex: 2,
+            distractorExplanations: {
+              0: 'The authorized user is not legally responsible for paying the bill.',
+              1: 'Responsibility is not split equally; the primary cardholder bears full legal obligation.',
+              3: 'Credit bureaus track data but have no role in bill payments.',
+            },
             explanation: "The primary cardholder is legally responsible for all charges. The authorized user can spend but isn't required to pay.",
           },
           {
@@ -1857,6 +2084,11 @@ export const finSection7Part1: Unit[] = [
               "Both of them, to double the benefit",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Age similarity is irrelevant; the friend\'s poor credit habits would hurt Jamal\'s score.',
+              2: 'Authorized user accounts do appear on credit reports and can build credit.',
+              3: 'Adding accounts with poor history would hurt Jamal rather than provide double benefit.',
+            },
             explanation: "His mom's long, positive history would strengthen Jamal's credit profile. His friend's poor habits could hurt him.",
           },
           {
@@ -1886,6 +2118,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "You must actively use the credit card to benefit from being an authorized user.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Just being listed on the account is enough; the account history reports to your file regardless of card use.' },
             explanation: "Just being listed on the account is enough. The account's history reports to your credit file regardless of whether you use the card.",
           },
           {
@@ -1899,6 +2132,11 @@ export const finSection7Part1: Unit[] = [
               "Your identity gets permanently linked to theirs",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Authorized users are not typically charged separate annual fees.',
+              2: 'Most authorized user accounts do appear on credit reports at all three bureaus.',
+              3: 'Your identity does not become permanently linked; you can be removed from the account.',
+            },
             explanation: "If the primary cardholder starts missing payments or running up balances, those negatives can appear on your report too.",
           },
         ],
@@ -1924,6 +2162,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "With a credit-builder loan, you receive the money after you finish making payments.",
             correctAnswer: true,
+            distractorExplanations: { 1: 'Credit-builder loans hold the funds in a savings account until all payments are completed, by design.' },
             explanation: "The money is held in an account until you've completed all payments. It's designed to build credit, not provide immediate funds.",
           },
           {
@@ -1937,6 +2176,11 @@ export const finSection7Part1: Unit[] = [
               "It doesn't require any monthly payments",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Getting money upfront is how a regular loan works, not a credit-builder loan.',
+              2: 'Credit-builder loans do charge interest, though the rates are typically low.',
+              3: 'Monthly payments are required; that payment history is the whole point of the product.',
+            },
             explanation: "A regular loan gives you money first. A credit-builder loan holds the funds until all payments are made.",
           },
           {
@@ -1984,6 +2228,11 @@ export const finSection7Part1: Unit[] = [
               "Avoiding any interaction with credit bureaus",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Credit-builder loans do not provide money upfront; funds are released after all payments.',
+              2: 'Earning interest on the deposit is minimal; the real benefit is credit history building.',
+              3: 'The loan specifically reports to credit bureaus, which is its entire purpose.',
+            },
             explanation: "The entire purpose is to create positive payment history that gets reported to the bureaus.",
           },
           {
@@ -1998,6 +2247,11 @@ export const finSection7Part1: Unit[] = [
               "Put all $500 in a savings account and wait",
             ],
             correctIndex: 0,
+            distractorExplanations: {
+              1: 'Applying for 5 regular cards generates multiple hard inquiries and likely rejections with no history.',
+              2: 'Lending money to a friend does not get reported to credit bureaus and builds no credit.',
+              3: 'A savings account alone does not build credit; you need active credit accounts.',
+            },
             explanation: "A secured card (revolving) plus a credit-builder loan (installment) builds 2 types of credit and diversifies her mix immediately.",
           },
         ],
@@ -2037,6 +2291,7 @@ export const finSection7Part1: Unit[] = [
             type: "true-false",
             question: "You need to carry a balance on your credit card to build credit.",
             correctAnswer: false,
+            distractorExplanations: { 0: 'Paying in full every month still generates on-time payment history and builds credit without paying interest.' },
             explanation: "Paying your full balance every month still builds credit and avoids interest charges. You never need to pay interest to build your score.",
           },
           {
@@ -2056,6 +2311,11 @@ export const finSection7Part1: Unit[] = [
               "10 or more years",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'One to two weeks is far too short; scoring models need months of payment data.',
+              2: 'Three to five years is how long it takes to build a solid history, not just a scoreable file.',
+              3: 'Ten or more years is far longer than needed to generate an initial credit score.',
+            },
             explanation: "Most scoring models need at least 6 months of credit activity to generate your first score.",
           },
           {
@@ -2086,6 +2346,11 @@ export const finSection7Part1: Unit[] = [
               "Stop using credit entirely to lock in the score",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Applying for 5 cards creates multiple hard inquiries and lowers average account age.',
+              2: 'Closing the secured card removes his only credit history and would hurt his score.',
+              3: 'Stopping credit use entirely provides no new positive data and stalls progress.',
+            },
             explanation: "Adding installment credit improves his credit mix factor. His secured card history is working well, so he should keep it open.",
           },
           {
@@ -2105,6 +2370,11 @@ export const finSection7Part1: Unit[] = [
               "They explain that building credit takes months",
             ],
             correctIndex: 1,
+            distractorExplanations: {
+              0: 'Suggesting free report checks is legitimate advice, not a scam indicator.',
+              2: 'Recommending a secured credit card is standard advice from legitimate credit counselors.',
+              3: 'Explaining that building credit takes months is honest and accurate guidance.',
+            },
             explanation: "Promises of instant dramatic improvement are a hallmark of scams. Legitimate credit building is gradual.",
           },
         ],

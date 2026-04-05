@@ -1,0 +1,222 @@
+[
+  {
+    "id": "htw-L7-Q1",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "Water expands ~9% when freezing, generating hoop stress exceeding yield",
+      "Ice contracts as it forms and pulls the pipe apart in tension",
+      "Copper becomes brittle at low temperatures and shatters on contact",
+      "Thermal contraction of the pipe wall crushes the ice then rebounds"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 25
+  },
+  {
+    "id": "htw-L7-Q2",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "PEX has a higher elastic modulus than copper, resisting deformation",
+      "PEX has high elongation at break, so it stretches with expanding ice",
+      "PEX has higher thermal conductivity, keeping the water from freezing",
+      "PEX is galvanically inert and therefore immune to internal pressure"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 44
+  },
+  {
+    "id": "htw-L7-Q3",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "Axial vibration repeatedly stretches the bolt beyond its yield strength",
+      "Transverse vibration causes thread slip, walking the nut off (Junker effect)",
+      "The bolt head corrodes under vibration, losing its friction grip surface",
+      "Resonant vibration generates enough heat to melt the thread lubricant"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 62
+  },
+  {
+    "id": "htw-L7-Q4",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "It increases the bolt\\",
+      "It fills the thread gap and cures to prevent the slip causing loosening",
+      "It acts as a lubricant so the bolt can be torqued to a higher value",
+      "It thermally insulates the bolt from vibration-induced energy input"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 81
+  },
+  {
+    "id": "htw-L7-Q5",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "Creep rupture from sustained high temperature during riding",
+      "Brittle fracture caused by a single sudden impact overload",
+      "Fatigue failure from cyclic loading, with cracks at stress risers",
+      "Stress-corrosion cracking from road salt and moisture exposure"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 99
+  },
+  {
+    "id": "htw-L7-Q6",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "The maximum static tensile load the link can carry before yielding",
+      "The stress amplitude below which the material can endure infinite cycles",
+      "The number of cycles required to initiate a crack at any stress level",
+      "The temperature at which the material\\"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 118
+  },
+  {
+    "id": "htw-L7-Q7",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "Reduced tread depth from accelerated abrasion against the road surface",
+      "Excessive sidewall flexing causes cyclic stress, fatigue, and heat buildup",
+      "Lower pressure reduces the tire\\",
+      "The bead unseats from the rim due to reduced centripetal holding force"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 136
+  },
+  {
+    "id": "htw-L7-Q8",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "40 psi — pressure rises proportionally with absolute temperature (Gay-Lussac)",
+      "35 psi — the rubber sidewall expands to keep pressure constant",
+      "70 psi — pressure doubles because the temperature doubled from 20 to 60",
+      "30 psi — heat softens the rubber compound, allowing pressure to drop"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 155
+  },
+  {
+    "id": "htw-L7-Q9",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "Uniform oxidation of both metals at equal rates in the seawater",
+      "Galvanic corrosion — aluminum is anodic to steel and corrodes first",
+      "Crevice corrosion caused by stagnant seawater under the bolt head",
+      "Hydrogen embrittlement of the aluminum bracket from absorbed gas"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 173
+  },
+  {
+    "id": "htw-L7-Q10",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "The steel rusts immediately because the protective barrier is gone",
+      "Zinc acts as a sacrificial anode, corroding to cathodically protect the steel",
+      "The scratch fills with zinc oxide, which is harder than the original coat",
+      "Nothing happens — zinc and steel have the same electrode potential"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 191
+  },
+  {
+    "id": "htw-L7-Q11",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "Higher tensile strength than ordinary soda-lime glass",
+      "A much lower thermal expansion coefficient (α), so σ = EαΔT is smaller",
+      "Higher thermal conductivity, preventing any temperature gradient",
+      "Pyrex is a polymer, not a glass, so it flexes instead of cracking"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 209
+  },
+  {
+    "id": "htw-L7-Q12",
+    "type": "multiple-choice",
+    "question": "",
+    "options": [
+      "The center is reinforced by the phone\\",
+      "Edge flaws act as stress concentrators; cracks propagate per Griffith\\",
+      "The screen is thicker at the center due to the display layer stack",
+      "Corner impacts generate higher temperatures that melt the screen adhesive"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "",
+    "explanationLine": 228
+  },
+  {
+    "id": "htw-L7-Q13",
+    "type": "true-false",
+    "question": "",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "",
+    "explanationLine": 240
+  },
+  {
+    "id": "htw-L7-Q14",
+    "type": "true-false",
+    "question": "",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "",
+    "explanationLine": 252
+  },
+  {
+    "id": "htw-L7-Q15",
+    "type": "true-false",
+    "question": "",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "",
+    "explanationLine": 264
+  },
+  {
+    "id": "htw-L7-Q16",
+    "type": "true-false",
+    "question": "",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "",
+    "explanationLine": 276
+  }
+]

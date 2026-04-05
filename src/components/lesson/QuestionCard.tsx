@@ -50,7 +50,7 @@ export interface QuestionCardHandle {
 
 interface QuestionCardProps {
   question: CourseQuestion;
-  onAnswer: (correct: boolean) => void;
+  onAnswer: (correct: boolean, selectedOriginalIndex?: number) => void;
   onSelectionChange: (hasSelection: boolean) => void;
   answered: boolean;
   unitColor: string;
@@ -146,9 +146,17 @@ const QuestionCard = forwardRef<QuestionCardHandle, QuestionCardProps>(
         }
       }
 
+      // Compute original (pre-shuffle) index for distractor tracking
+      let originalIndex: number | undefined;
+      if (question.type === 'multiple-choice' && selectedIndex !== null) {
+        originalIndex = shuffledIndices[selectedIndex];
+      } else if (question.type === 'true-false' && selectedBool !== null) {
+        originalIndex = selectedBool ? 0 : 1; // true=0, false=1
+      }
+
       setLocalCorrect(correct);
       playSound(correct ? 'correct' : 'wrong');
-      onAnswer(correct);
+      onAnswer(correct, originalIndex);
     }, [answered, hasSelection, question, selectedIndex, selectedBool, filledBlanks, shuffledIndices, onAnswer]);
 
     const handleWordTap = useCallback((word: string) => {

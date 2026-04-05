@@ -40,6 +40,9 @@ export const finSection1Part2: Unit[] = [
             question: "Banks are a safe place to keep your money because deposits are insured.",
             correctAnswer: true,
             explanation: "Government insurance protects your deposits. Your money is safer in a bank than under your mattress.",
+            distractorExplanations: {
+              1: 'This statement is actually true — government insurance protects your deposits. Your money is safer in a bank than under your mattress.',
+            },
           },
           {
             id: "fin-sec1-u5-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Banks keep your money safe, and you can access it anytime through ATMs, apps, or branches.",
+            distractorExplanations: {
+              1: 'Banks are for security and convenience, not hiding money.',
+              2: 'Cash does not expire; physical currency remains valid.',
+              3: 'Modern employers pay in standard currency.',
+            },
           },
           {
             id: "fin-sec1-u5-L1-T2",
@@ -98,6 +106,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Most employers pay electronically. Opening a bank account is free or low-cost at most banks.",
+            distractorExplanations: {
+              0: 'Cash-only pay limits your options and can create security risks.',
+              2: 'Using someone else\'s account violates bank terms and creates legal problems.',
+              3: 'Most bank accounts can be opened with little or no minimum deposit.',
+            },
           },
           {
             id: "fin-sec1-u5-L1-T3",
@@ -118,6 +131,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "500 + 200 - 100 = 600. Deposits add, withdrawals subtract.",
+            distractorExplanations: {
+              0: 'This amount (800) is too high — the correct calculation gives 600.',
+              1: 'This amount (400) is too low — the correct calculation gives 600.',
+              2: 'This amount (300) is too low — the correct calculation gives 600.',
+            },
           },
         ],
       },
@@ -143,6 +161,9 @@ export const finSection1Part2: Unit[] = [
             question: "A checking account is designed for everyday spending like bills and groceries.",
             correctAnswer: true,
             explanation: "Checking accounts are built for frequent transactions. That's their whole purpose.",
+            distractorExplanations: {
+              1: 'This statement is actually true — checking accounts are built for frequent transactions. That\'s their whole purpose.',
+            },
           },
           {
             id: "fin-sec1-u5-L2-Q2",
@@ -177,6 +198,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Banks use your savings to make loans to others. Interest is your small share of that activity.",
+            distractorExplanations: {
+              0: 'Banks pay interest as a business practice, not by force.',
+              1: 'Interest is a financial incentive for depositing, not an apology.',
+              3: 'Interest accrues automatically regardless of branch visits.',
+            },
           },
           {
             id: "fin-sec1-u5-L2-Q4",
@@ -215,6 +241,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Sam has about 200 left over each month. Moving even part of that to savings starts building a cushion.",
+            distractorExplanations: {
+              0: 'Keeping all money in checking means missing out on interest from savings.',
+              1: 'Mia also buys things (spending) and earns income, not just saving.',
+              2: 'Waiting for a large balance delays building the saving habit.',
+            },
           },
         ],
       },
@@ -240,6 +271,9 @@ export const finSection1Part2: Unit[] = [
             question: "A bank statement shows a record of money going in and out of your account.",
             correctAnswer: true,
             explanation: "Exactly. Statements track every transaction so you can see where your money went.",
+            distractorExplanations: {
+              1: 'This statement is actually true — exactly. Statements track every transaction so you can see where your money went.',
+            },
           },
           {
             id: "fin-sec1-u5-L3-Q2",
@@ -253,6 +287,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Statements usually cover one month. You can request older ones if you need them.",
+            distractorExplanations: {
+              0: 'Statements cover a specific period, usually one month.',
+              2: 'Statements include all transactions — both money in and money out.',
+              3: 'All transactions appear regardless of amount.',
+            },
           },
           {
             id: "fin-sec1-u5-L3-T2",
@@ -300,6 +339,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "1,000 + 500 - 300 = 1,200. Credits add, debits subtract.",
+            distractorExplanations: {
+              0: 'This amount (800) is too low — the correct calculation gives 1,200.',
+              1: 'This amount (1,500) is too high — the correct calculation gives 1,200.',
+              3: 'This amount (200) is too low — the correct calculation gives 1,200.',
+            },
           },
           {
             id: "fin-sec1-u5-L3-T3",
@@ -321,6 +365,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Unknown charges could be errors or fraud. Contact your bank quickly. They can investigate and reverse unauthorized charges.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              1: 'One unknown charge does not require closing the account; contact the bank first.',
+              3: 'Waiting risks missing the dispute window and lets fraud continue.',
+            },
           },
         ],
       },
@@ -346,6 +395,9 @@ export const finSection1Part2: Unit[] = [
             question: "All bank accounts are completely free with no fees ever.",
             correctAnswer: false,
             explanation: "Many accounts have fees, but you can often avoid them by meeting certain conditions like minimum balances or direct deposit.",
+            distractorExplanations: {
+              0: 'This statement is actually false — many accounts have fees, but you can often avoid them by meeting certain conditions like minimum balances or direct deposit.',
+            },
           },
           {
             id: "fin-sec1-u5-L4-Q2",
@@ -359,6 +411,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you spend more than what's in your account, the bank may cover it but charge you a fee. This is called an overdraft.",
+            distractorExplanations: {
+              0: 'Account opening is typically free; overdraft fees are for overspending.',
+              2: 'An overdraft is a penalty, not a reward.',
+              3: 'Check-ordering fees are separate from overdraft fees.',
+            },
           },
           {
             id: "fin-sec1-u5-L4-T2",
@@ -404,6 +461,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "50 - 3 - 2.50 = 44.50. Using another bank's ATM can hit you with two fees at once.",
+            distractorExplanations: {
+              0: 'This amount (47) is too high — the correct calculation gives 44.5.',
+              1: 'This amount (50) is too high — the correct calculation gives 44.5.',
+              2: 'This amount (45) is too high — the correct calculation gives 44.5.',
+            },
           },
           {
             id: "fin-sec1-u5-L4-Q6",
@@ -417,6 +479,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Most banks waive monthly fees if you maintain a minimum balance or have regular direct deposits.",
+            distractorExplanations: {
+              0: 'Avoiding the bank entirely means missing out on safety and convenience.',
+              1: 'Frequently opening accounts solves nothing and creates complexity.',
+              3: 'Emptying your account removes your financial safety net.',
+            },
           },
         ],
       },
@@ -442,6 +509,9 @@ export const finSection1Part2: Unit[] = [
             question: "A credit union is a member-owned alternative to a traditional bank.",
             correctAnswer: true,
             explanation: "Credit unions are nonprofit and owned by their members. They often offer lower fees and better interest rates.",
+            distractorExplanations: {
+              1: 'This statement is actually true — credit unions are nonprofit and owned by their members. They often offer lower fees and better interest rates.',
+            },
           },
           {
             id: "fin-sec1-u5-L5-Q2",
@@ -478,6 +548,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without the cost of buildings and in-person staff, online banks pass savings to customers through better rates.",
+            distractorExplanations: {
+              0: 'Online banks often have millions of customers; savings come from no physical branches.',
+              2: 'Online banks carry the same deposit insurance as traditional banks.',
+              3: 'Online banks operate 24/7 through their apps and websites.',
+            },
           },
           {
             id: "fin-sec1-u5-L5-Q4",
@@ -506,6 +581,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The key question is whether Taylor needs physical branches. If not, the online bank saves 144/year in fees and earns more interest.",
+            distractorExplanations: {
+              0: 'A bank\'s logo has no impact on fees, rates, or service quality.',
+              1: 'Proximity to unrelated places is irrelevant when choosing a bank.',
+              2: 'Employee count does not determine which bank serves you better.',
+            },
           },
           {
             id: "fin-sec1-u5-L5-T3",
@@ -565,6 +645,9 @@ export const finSection1Part2: Unit[] = [
             question: "A debit card takes money directly from your bank account when you make a purchase.",
             correctAnswer: true,
             explanation: "Debit cards pull from your checking balance immediately. No borrowing involved.",
+            distractorExplanations: {
+              1: 'This statement is actually true — debit cards pull from your checking balance immediately. No borrowing involved.',
+            },
           },
           {
             id: "fin-sec1-u6-L1-Q2",
@@ -578,6 +661,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Credit cards are short-term loans. You get a bill each month and must pay it back.",
+            distractorExplanations: {
+              1: '"The money comes out of your savings instantly" is wrong because credit cards are short-term loans.',
+              2: '"The store gives you a discount" is wrong because credit cards are short-term loans.',
+              3: 'Credit card charges appear on your monthly statement, not annually.',
+            },
           },
           {
             id: "fin-sec1-u6-L1-T2",
@@ -623,6 +711,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Debit cards can only spend what's in your checking account. With only 200, a 300 purchase will be declined or trigger an overdraft fee.",
+            distractorExplanations: {
+              0: 'Banks do not give away money to cover purchases.',
+              1: 'You cannot spend more than your checking balance without overdrafting.',
+              3: 'Savings does not automatically cover debit shortfalls unless overdraft protection is linked.',
+            },
           },
           {
             id: "fin-sec1-u6-L1-Q6",
@@ -636,6 +729,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Paying in full each month means you never pay interest. The credit card becomes a convenient tool, not an expensive trap.",
+            distractorExplanations: {
+              0: 'Minimum payments keep you in debt longer and cost much more in interest.',
+              1: 'Ignoring credit card bills leads to late fees, higher interest, and credit damage.',
+              2: 'There is no reason to limit credit card use by purchase size.',
+            },
           },
         ],
       },
@@ -661,6 +759,9 @@ export const finSection1Part2: Unit[] = [
             question: "Payment apps connect to your bank account or card to move money.",
             correctAnswer: true,
             explanation: "These apps don't create new money. They use your existing bank account or card to process payments.",
+            distractorExplanations: {
+              1: 'This statement is actually true — these apps don\'t create new money. They use your existing bank account or card to process payments.',
+            },
           },
           {
             id: "fin-sec1-u6-L2-Q2",
@@ -674,6 +775,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Digital wallets store your payment information securely on your phone so you can tap to pay or send money.",
+            distractorExplanations: {
+              1: 'A digital wallet is software on your phone, not a physical device.',
+              2: 'A digital wallet stores card info; it is not a separate bank account.',
+              3: 'Stock trading platforms differ from digital payment wallets.',
+            },
           },
           {
             id: "fin-sec1-u6-L2-T2",
@@ -724,6 +830,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Half of 40 is 20. Payment apps make splitting costs quick and easy.",
+            distractorExplanations: {
+              1: 'This amount (40) is too high — the correct calculation gives 20.',
+              2: 'This amount (10) is too low — the correct calculation gives 20.',
+              3: 'This amount (30) is too high — the correct calculation gives 20.',
+            },
           },
           {
             id: "fin-sec1-u6-L2-Q6",
@@ -737,6 +848,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Mistakes are hard to reverse. Always verify you're sending the right amount to the right person.",
+            distractorExplanations: {
+              1: 'Test payments are unnecessary; simply verify recipient and amount before sending.',
+              2: 'Bank permission is not required for person-to-person payments.',
+              3: 'Reinstalling an app adds no security to transactions.',
+            },
           },
         ],
       },
@@ -762,6 +878,9 @@ export const finSection1Part2: Unit[] = [
             question: "Two-factor authentication adds an extra layer of security to your bank account.",
             correctAnswer: true,
             explanation: "With two-factor authentication, a thief would need both your password and your phone. That's much harder to steal.",
+            distractorExplanations: {
+              1: 'This statement is actually true — with two-factor authentication, a thief would need both your password and your phone. That\'s much harder to steal.',
+            },
           },
           {
             id: "fin-sec1-u6-L3-Q2",
@@ -775,6 +894,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Long, random combinations are hardest to guess. Short or personal passwords are easy targets.",
+            distractorExplanations: {
+              0: 'Personal dates with sequential numbers are easily guessable.',
+              1: '"Password" is one of the most commonly guessed passwords.',
+              2: 'Pet names are often public on social media and easily guessed.',
+            },
           },
           {
             id: "fin-sec1-u6-L3-T2",
@@ -820,6 +944,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This is likely phishing. Always go directly to your bank's official app or website. Never click links in unexpected messages.",
+            distractorExplanations: {
+              0: 'Clicking links in suspicious messages is exactly how phishing scams succeed.',
+              2: 'Sharing account details with unknown senders is a major security risk.',
+              3: 'Forwarding phishing messages can spread the scam further.',
+            },
           },
           {
             id: "fin-sec1-u6-L3-Q6",
@@ -833,6 +962,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Real bank alerts direct you to the official app or website. They never ask for passwords or use high-pressure threats.",
+            distractorExplanations: {
+              0: 'Real banks never request passwords via email.',
+              1: 'High-pressure urgency is a classic scam tactic.',
+              3: 'Gift card offers in security alerts are a telltale sign of a scam.',
+            },
           },
         ],
       },
@@ -858,6 +992,9 @@ export const finSection1Part2: Unit[] = [
             question: "Cryptocurrency is digital money that isn't controlled by a government or bank.",
             correctAnswer: true,
             explanation: "That's the core idea. Crypto runs on technology called blockchain instead of being managed by central authorities.",
+            distractorExplanations: {
+              1: 'This statement is actually true — that\'s the core idea. Crypto runs on technology called blockchain instead of being managed by central authorities.',
+            },
           },
           {
             id: "fin-sec1-u6-L4-Q2",
@@ -871,6 +1008,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Bitcoin launched in 2009 and started the cryptocurrency movement.",
+            distractorExplanations: {
+              1: '"Dollar" is wrong because bitcoin launched in 2009 and started the cryptocurrency movement.',
+              2: '"Euro" is wrong because bitcoin launched in 2009 and started the cryptocurrency movement.',
+              3: '"Gold" is wrong because bitcoin launched in 2009 and started the cryptocurrency movement.',
+            },
           },
           {
             id: "fin-sec1-u6-L4-T2",
@@ -915,6 +1057,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Crypto prices swing wildly, and if you lose access to your wallet, there's no bank to help you recover it.",
+            distractorExplanations: {
+              0: 'Cryptocurrency is legal in most countries, though regulations vary.',
+              1: 'Bank savings rates are typically lower than potential investment returns.',
+              2: 'Cryptocurrency can be used across many platforms worldwide.',
+            },
           },
           {
             id: "fin-sec1-u6-L4-T3",
@@ -936,6 +1083,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Emergency funds should never be gambled. If Noor wants to try crypto later, she should only use money she can afford to lose completely.",
+            distractorExplanations: {
+              0: 'Gambling your entire emergency fund on volatile assets is reckless.',
+              2: 'Borrowing to invest in volatile assets amplifies potential losses.',
+              3: 'Closing a bank account eliminates your financial safety net entirely.',
+            },
           },
         ],
       },
@@ -975,6 +1127,9 @@ export const finSection1Part2: Unit[] = [
             question: "The four things you can do with money are earn, save, spend, and invest.",
             correctAnswer: true,
             explanation: "That's the complete list. Every financial action falls into one of these four buckets.",
+            distractorExplanations: {
+              1: 'This statement is actually true — that\'s the complete list. Every financial action falls into one of these four buckets.',
+            },
           },
           {
             id: "fin-sec1-u7-L1-Q2",
@@ -1008,6 +1163,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without income, there's nothing to manage. Earning is always step one.",
+            distractorExplanations: {
+              1: '"Banks require proof of income to open an account" is wrong because without income, there\'s nothing to manage.',
+              2: 'Mia is doing more than just earning; she also plans to spend and save.',
+              3: '"Investing automatically creates earnings" is wrong because without income, there\'s nothing to manage.',
+            },
           },
           {
             id: "fin-sec1-u7-L1-Q4",
@@ -1071,6 +1231,9 @@ export const finSection1Part2: Unit[] = [
             question: "The goal with money is to save 100% and never spend anything.",
             correctAnswer: false,
             explanation: "You need to spend on housing, food, and other essentials. The goal is to save some while still living your life.",
+            distractorExplanations: {
+              0: 'This statement is actually false — you need to spend on housing, food, and other essentials. The goal is to save some while still living your life.',
+            },
           },
           {
             id: "fin-sec1-u7-L2-Q2",
@@ -1084,6 +1247,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "10% of 2,000 is 200. That's a solid starting amount for savings.",
+            distractorExplanations: {
+              0: 'This amount (20) is too low — the correct calculation gives 200.',
+              2: 'This amount (2,000) is too high — the correct calculation gives 200.',
+              3: 'This amount (100) is too low — the correct calculation gives 200.',
+            },
           },
           {
             id: "fin-sec1-u7-L2-T2",
@@ -1121,6 +1289,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Needs come first (1,100). From the remaining 400, save some and set aside smaller amounts toward the console over a few months.",
+            distractorExplanations: {
+              0: 'Rushing into financial decisions without a plan often leads to worse outcomes.',
+              1: '"Skip paying rent this month to buy the console and save 200" is wrong because needs come first (1,100).',
+              2: 'Borrowing creates debt and interest costs, making the situation worse.',
+            },
           },
           {
             id: "fin-sec1-u7-L2-Q5",
@@ -1142,6 +1315,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Balance means saving for the future while also enjoying the present. Neither extreme works long-term.",
+            distractorExplanations: {
+              0: 'Covering needs alone is not enough; saving for the future matters too.',
+              2: 'Saving 100% of discretionary money is unrealistic and unsustainable.',
+              3: 'Giving away all discretionary money leaves nothing for your own goals.',
+            },
           },
         ],
       },
@@ -1167,6 +1345,9 @@ export const finSection1Part2: Unit[] = [
             question: "Investing means putting money into something that can grow in value over time.",
             correctAnswer: true,
             explanation: "That's the core idea. You give up access to money now in hopes of having more later.",
+            distractorExplanations: {
+              1: 'This statement is actually true — that\'s the core idea. You give up access to money now in hopes of having more later.',
+            },
           },
           {
             id: "fin-sec1-u7-L3-Q2",
@@ -1180,6 +1361,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Savings accounts protect your money with little risk. Investments aim for growth but carry more risk.",
+            distractorExplanations: {
+              0: 'Both saving and investing are for everyone, regardless of income.',
+              1: 'Over the long term, investments typically outperform savings accounts.',
+              3: 'These are different concepts with distinct purposes.',
+            },
           },
           {
             id: "fin-sec1-u7-L3-T2",
@@ -1246,6 +1432,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Always keep an emergency fund in savings first. Invest only money you won't need for years. Balance safety and growth.",
+            distractorExplanations: {
+              0: 'Rushing into financial decisions without a plan often leads to worse outcomes.',
+              1: '"Put everything under the mattress instead" is wrong because always keep an emergency fund in savings first.',
+              2: '"Spend the 5,000 before it loses value" is wrong because always keep an emergency fund in savings first.',
+            },
           },
         ],
       },
@@ -1285,6 +1476,9 @@ export const finSection1Part2: Unit[] = [
             question: "You should invest money before building an emergency savings fund.",
             correctAnswer: false,
             explanation: "Safety first. Build your emergency fund before investing. Investments can lose value, but emergencies don't wait.",
+            distractorExplanations: {
+              0: 'This statement is actually false — safety first. Build your emergency fund before investing. Investments can lose value, but emergencies don\'t wait.',
+            },
           },
           {
             id: "fin-sec1-u7-L4-T2",
@@ -1306,6 +1500,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With no savings, Yuki's first priority is an emergency fund. From her 1,200 after needs, saving even 200-300/month would build a cushion quickly.",
+            distractorExplanations: {
+              1: 'Investing everything without savings exposes you to unnecessary risk.',
+              2: '"Spending all 1,200 on things she enjoys" is wrong because with no savings, Yuki\'s first priority is an emergency fund.',
+              3: 'Improving money management does not require more income.',
+            },
           },
           {
             id: "fin-sec1-u7-L4-Q4",
@@ -1335,6 +1534,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Balance is the key. No single strategy works alone. A good system covers all four stages of the money lifecycle.",
+            distractorExplanations: {
+              1: '"Spending as little as possible on everything" is wrong because balance is the key.',
+              2: 'Investing everything leaves no buffer for emergencies or daily needs.',
+              3: 'Income level alone does not make a good money system.',
+            },
           },
           {
             id: "fin-sec1-u7-L4-T3",
@@ -1395,6 +1599,9 @@ export const finSection1Part2: Unit[] = [
             question: "Income is money you earn, and expenses are money you spend.",
             correctAnswer: true,
             explanation: "Income comes in, expenses go out. The gap between them determines whether you save or go into debt.",
+            distractorExplanations: {
+              1: 'This statement is actually true — income comes in, expenses go out. The gap between them determines whether you save or go into debt.',
+            },
           },
           {
             id: "fin-sec1-u8-L1-Q2",
@@ -1416,6 +1623,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Checking accounts are designed for frequent transactions like paying bills and buying groceries.",
+            distractorExplanations: {
+              0: 'Savings accounts are for holding money long-term, not everyday purchases.',
+              2: 'Investment accounts involve market risk and are not meant for basic everyday banking.',
+              3: 'Retirement accounts are for long-term growth, not daily transactions.',
+            },
           },
           {
             id: "fin-sec1-u8-L1-T2",
@@ -1437,6 +1649,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without savings, any unexpected expense becomes a crisis. Dana has 100/month left, which could build an emergency fund over time.",
+            distractorExplanations: {
+              0: 'Even small amounts add up; the real issue is having no emergency fund.',
+              1: 'All cars eventually need repairs; unexpected costs are a normal part of ownership.',
+              3: 'Transportation choice is not the issue; the lack of savings is.',
+            },
           },
           {
             id: "fin-sec1-u8-L1-Q5",
@@ -1466,6 +1683,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Banks lend out deposited money. Interest is your small share of the profit they earn from those loans.",
+            distractorExplanations: {
+              0: 'This choice is wrong because banks lend out deposited money.',
+              1: '"Because you asked nicely when opening the account" is wrong because banks lend out deposited money.',
+              2: '"Because savings accounts have higher fees" is wrong because banks lend out deposited money.',
+            },
           },
         ],
       },
@@ -1505,6 +1727,9 @@ export const finSection1Part2: Unit[] = [
             question: "If you don't pay your credit card bill in full, you'll be charged interest.",
             correctAnswer: true,
             explanation: "Interest is the cost of borrowing. Paying in full every month avoids this charge entirely.",
+            distractorExplanations: {
+              1: 'This statement is actually true — interest is the cost of borrowing. Paying in full every month avoids this charge entirely.',
+            },
           },
           {
             id: "fin-sec1-u8-L2-Q3",
@@ -1518,6 +1743,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Always go to the official app or website. Never click links in suspicious messages. Your real bank won't ask for passwords by text.",
+            distractorExplanations: {
+              0: 'Clicking links in suspicious messages is exactly how phishing scams succeed.',
+              2: 'Sharing account details with unknown senders is a major security risk.',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec1-u8-L2-T2",
@@ -1562,6 +1792,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Public Wi-Fi can be intercepted. Using mobile data is safer for banking. If you must use public Wi-Fi, use a VPN.",
+            distractorExplanations: {
+              0: 'Public Wi-Fi can be intercepted, exposing your banking credentials.',
+              1: 'Only you should access your own bank account; never involve strangers.',
+              3: 'Mobile banking apps work perfectly fine on phones.',
+            },
           },
         ],
       },
@@ -1606,6 +1841,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Savings are safe and protected. Investments carry risk but can grow your money significantly over time.",
+            distractorExplanations: {
+              0: 'Both saving and investing are important at every age.',
+              2: 'These are different concepts with distinct purposes.',
+              3: 'Investments carry risk of loss; savings accounts are protected.',
+            },
           },
           {
             id: "fin-sec1-u8-L3-Q3",
@@ -1613,6 +1853,9 @@ export const finSection1Part2: Unit[] = [
             question: "You should invest your emergency fund in stocks for higher returns.",
             correctAnswer: false,
             explanation: "Never invest emergency money. Stocks can lose value. Your emergency fund needs to be available and safe at all times.",
+            distractorExplanations: {
+              0: 'This statement is actually false — never invest emergency money. Stocks can lose value. Your emergency fund needs to be available and safe at all times.',
+            },
           },
           {
             id: "fin-sec1-u8-L3-T2",
@@ -1650,6 +1893,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Without savings, Amir has no safety net. Building an emergency fund comes before investing. Stocks can wait.",
+            distractorExplanations: {
+              0: '"Invest all 1,800 in stocks right away" is wrong because without savings, Amir has no safety net.',
+              1: '"Spend the extra on things he wants first" is wrong because without savings, Amir has no safety net.',
+              2: 'Quitting over a fixable payroll error is a drastic overreaction.',
+            },
           },
           {
             id: "fin-sec1-u8-L3-Q6",
@@ -1689,6 +1937,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Money is a medium of exchange. It can be physical or digital, but its purpose is always the same: trading value for value.",
+            distractorExplanations: {
+              1: '"Paper and coins the government prints" is wrong because money is a medium of exchange.',
+              2: '"Numbers in a bank computer" is wrong because money is a medium of exchange.',
+              3: '"Whatever you have in your wallet" is wrong because money is a medium of exchange.',
+            },
           },
           {
             id: "fin-sec1-u8-L4-Q2",
@@ -1717,6 +1970,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Step 1: a bank account for safety. Step 2: direct deposit for convenience. Step 3: saving even a small amount to build a habit.",
+            distractorExplanations: {
+              0: 'Those are advanced or risky moves; basic banking and saving come first.',
+              1: 'Delaying financial setup wastes time when good habits matter most.',
+              3: 'Good money habits matter at every income level; waiting wastes time.',
+            },
           },
           {
             id: "fin-sec1-u8-L4-T2",
@@ -1765,6 +2023,11 @@ export const finSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A plan beats a big paycheck. People with modest incomes and good habits do better than high earners with no plan. You now have the foundation to build that plan.",
+            distractorExplanations: {
+              0: 'Good money management is about habits, not income level.',
+              2: 'Basic money management is accessible to everyone.',
+              3: 'Savings accounts provide safety, liquidity, and interest.',
+            },
           },
           {
             id: "fin-sec1-u8-L4-Q7",

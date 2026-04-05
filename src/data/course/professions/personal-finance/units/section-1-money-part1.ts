@@ -40,6 +40,9 @@ export const finSection1Part1: Unit[] = [
             question: "Understanding how money works can help you make better daily choices.",
             correctAnswer: true,
             explanation: "When you understand money, you can plan ahead, avoid costly mistakes, and reach your goals faster.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when you understand money, you can plan ahead, avoid costly mistakes, and reach your goals faster.',
+            },
           },
           {
             id: "fin-sec1-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Money is a tool for buying goods and services like food, housing, transportation, and healthcare.",
+            distractorExplanations: {
+              1: 'Money cannot control natural phenomena.',
+              2: 'Time travel is not something money can buy.',
+              3: 'Money does not grant supernatural abilities.',
+            },
           },
           {
             id: "fin-sec1-u1-L1-T2",
@@ -67,6 +75,9 @@ export const finSection1Part1: Unit[] = [
             question: "You need advanced math skills to manage your personal finances.",
             correctAnswer: false,
             explanation: "Basic math like adding and subtracting is enough for most personal finance decisions.",
+            distractorExplanations: {
+              0: 'This statement is actually false — basic math like adding and subtracting is enough for most personal finance decisions.',
+            },
           },
           {
             id: "fin-sec1-u1-L1-Q4",
@@ -112,6 +123,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Every financial action boils down to earning, spending, or saving. Everything else is a variation of these 3.",
+            distractorExplanations: {
+              1: 'These are ways to mishandle money, not manage it.',
+              2: 'Printing or copying money is counterfeiting and illegal.',
+              3: 'Physically handling money is not the same as using it productively.',
+            },
           },
           {
             id: "fin-sec1-u1-L1-Q7",
@@ -126,6 +142,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mia earned (paycheck), is spending (headphones and phone bill), and is saving (setting money aside). All 3 categories in action.",
+            distractorExplanations: {
+              0: 'Mia earns (paycheck) and saves (setting aside), so it is not just spending.',
+              2: 'Mia also buys things (spending) and earns income, not just saving.',
+              3: 'Mia is doing more than just earning; she also plans to spend and save.',
+            },
           },
         ],
       },
@@ -151,6 +172,9 @@ export const finSection1Part1: Unit[] = [
             question: "Food and shelter are examples of needs.",
             correctAnswer: true,
             explanation: "You can't survive without food, and you need shelter to stay safe and healthy.",
+            distractorExplanations: {
+              1: 'This statement is actually true — you can\'t survive without food, and you need shelter to stay safe and healthy.',
+            },
           },
           {
             id: "fin-sec1-u1-L2-Q2",
@@ -164,6 +188,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A winter coat in cold weather is a need because it protects your health. The others are wants.",
+            distractorExplanations: {
+              1: '"A designer handbag" is wrong because a winter coat in cold weather is a need because it protects your health.',
+              2: '"A video game console" is wrong because a winter coat in cold weather is a need because it protects your health.',
+              3: '"Concert tickets" is wrong because a winter coat in cold weather is a need because it protects your health.',
+            },
           },
           {
             id: "fin-sec1-u1-L2-T2",
@@ -200,6 +229,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Knowing the difference helps you cover essentials first and then enjoy wants with whatever is left over.",
+            distractorExplanations: {
+              0: 'The point is to prioritize, not to cut all enjoyment from your life.',
+              1: 'Cutting all enjoyment is not sustainable long-term.',
+              2: 'Separating needs from wants is a personal financial skill, not a social one.',
+            },
           },
           {
             id: "fin-sec1-u1-L2-T3",
@@ -221,6 +255,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without public transit and with a long commute, Jake needs a car to earn a living. Context makes it a need.",
+            distractorExplanations: {
+              0: '"Want, because cars are luxury items" is wrong because without public transit and with a long commute, Jake needs a car to earn a living.',
+              1: '"Want, because he could just walk" is wrong because without public transit and with a long commute, Jake needs a car to earn a living.',
+              3: '"Need, because everyone should own a car" is wrong because without public transit and with a long commute, Jake needs a car to earn a living.',
+            },
           },
           {
             id: "fin-sec1-u1-L2-Q6",
@@ -254,6 +293,9 @@ export const finSection1Part1: Unit[] = [
             question: "The way your family talked about money can affect how you think about it today.",
             correctAnswer: true,
             explanation: "Our early experiences with money shape our habits and attitudes as adults.",
+            distractorExplanations: {
+              1: 'This statement is actually true — our early experiences with money shape our habits and attitudes as adults.',
+            },
           },
           {
             id: "fin-sec1-u1-L3-Q2",
@@ -267,6 +309,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your money story is the collection of beliefs, habits, and emotions you've developed around money throughout your life.",
+            distractorExplanations: {
+              0: 'A money story is your personal beliefs about money, not fiction.',
+              2: 'A money story is psychological — your beliefs and feelings about money.',
+              3: 'A money story refers to your relationship with money, not a published book.',
+            },
           },
           {
             id: "fin-sec1-u1-L3-T2",
@@ -303,6 +350,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Awareness comes first. Once you understand your current habits and beliefs, you can start changing the ones that don't serve you.",
+            distractorExplanations: {
+              1: 'The goal is prioritization, not eliminating all enjoyment.',
+              2: 'Awareness and small steps build financial confidence, not large sums.',
+              3: 'Daily stock prices are irrelevant to basic personal finance.',
+            },
           },
           {
             id: "fin-sec1-u1-L3-T3",
@@ -317,6 +369,9 @@ export const finSection1Part1: Unit[] = [
             question: "Your financial habits are fixed and can't be changed once you're an adult.",
             correctAnswer: false,
             explanation: "Habits can be changed at any age. Learning new financial skills rewires how you think about and handle money.",
+            distractorExplanations: {
+              0: 'This statement is actually false — habits can be changed at any age. Learning new financial skills rewires how you think about and handle money.',
+            },
           },
           {
             id: "fin-sec1-u1-L3-Q6",
@@ -331,6 +386,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Acknowledging anxiety and building knowledge is the healthiest path. Avoidance only makes money stress worse.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"Give all her money to someone else to manage" is wrong because acknowledging anxiety and building knowledge is the healthiest path.',
+              3: '"Stop checking her bank account entirely" is wrong because acknowledging anxiety and building knowledge is the healthiest path.',
+            },
           },
           {
             id: "fin-sec1-u1-L3-Q7",
@@ -364,6 +424,9 @@ export const finSection1Part1: Unit[] = [
             question: "Having a specific money goal can help you spend more wisely.",
             correctAnswer: true,
             explanation: "When you have a goal, you're more likely to think twice before unnecessary spending.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when you have a goal, you\'re more likely to think twice before unnecessary spending.',
+            },
           },
           {
             id: "fin-sec1-u1-L4-Q2",
@@ -377,6 +440,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A good goal is specific (what), measurable ($500), and has a deadline (by December).",
+            distractorExplanations: {
+              0: 'This is vague and unmeasurable, not an actionable financial goal.',
+              1: 'This lacks a specific amount and deadline, making it hard to follow.',
+              2: 'Thinking more is not a measurable action or a specific goal.',
+            },
           },
           {
             id: "fin-sec1-u1-L4-T2",
@@ -443,6 +511,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Writing down the goal with a specific amount ($800), timeline (8 months at $100/month), and tracking makes it actionable.",
+            distractorExplanations: {
+              0: 'Using credit impulsively for non-essentials is a path to debt.',
+              2: 'Waiting for a lump sum is slower than saving incrementally each month.',
+              3: 'Relying on memory instead of a written plan usually fails.',
+            },
           },
           {
             id: "fin-sec1-u1-L4-Q7",
@@ -456,6 +529,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Good goals need a specific number and a target date. 'Save $1,500 for a trip by June' is much better.",
+            distractorExplanations: {
+              1: 'Politeness has nothing to do with setting a financial goal.',
+              2: 'A goal needs a target amount and deadline, not an account number.',
+              3: 'You don\'t need professional permission to set a personal savings goal.',
+            },
           },
         ],
       },
@@ -495,6 +573,9 @@ export const finSection1Part1: Unit[] = [
             question: "Barter means trading goods directly for other goods without using money.",
             correctAnswer: true,
             explanation: "Barter is the direct exchange of goods or services without a medium like money.",
+            distractorExplanations: {
+              1: 'This statement is actually true — barter is the direct exchange of goods or services without a medium like money.',
+            },
           },
           {
             id: "fin-sec1-u2-L1-Q2",
@@ -508,6 +589,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "This is called the 'double coincidence of wants.' If you have fish but the baker doesn't want fish, you're stuck.",
+            distractorExplanations: {
+              0: '"Goods are too heavy to carry" is wrong because this is called the \'double coincidence of wants.',
+              1: 'Barter is legal; money simply made trading more efficient.',
+              2: 'Animals were actually among the earliest items traded.',
+            },
           },
           {
             id: "fin-sec1-u2-L1-T2",
@@ -537,6 +623,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Anna trades eggs to the blacksmith for scissors, then trades scissors to the barber for a haircut. Money would let her skip all this.",
+            distractorExplanations: {
+              0: 'A trade chain is possible: eggs to blacksmith, scissors to barber.',
+              1: 'This chain is overcomplicated; only two trades are needed.',
+              2: 'The barber does not want eggs, so a direct trade will not work.',
+            },
           },
           {
             id: "fin-sec1-u2-L1-T3",
@@ -551,6 +642,9 @@ export const finSection1Part1: Unit[] = [
             question: "Shells and salt were once used as forms of money.",
             correctAnswer: true,
             explanation: "Many different items served as early money as long as a community agreed they had value.",
+            distractorExplanations: {
+              1: 'This statement is actually true — many different items served as early money as long as a community agreed they had value.',
+            },
           },
           {
             id: "fin-sec1-u2-L1-Q6",
@@ -564,6 +658,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Money works because people collectively agree it has value. That agreement is more important than the material itself.",
+            distractorExplanations: {
+              0: 'Early money included shells, salt, and beads — not just metal.',
+              2: 'Organized governments did not exist when shells and salt were first used as money.',
+              3: 'Edibility was not required; shared agreement on value was what mattered.',
+            },
           },
         ],
       },
@@ -589,6 +688,9 @@ export const finSection1Part1: Unit[] = [
             question: "One of money's jobs is to act as a medium of exchange.",
             correctAnswer: true,
             explanation: "A medium of exchange means money is accepted as payment for goods and services.",
+            distractorExplanations: {
+              1: 'This statement is actually true — a medium of exchange means money is accepted as payment for goods and services.',
+            },
           },
           {
             id: "fin-sec1-u2-L2-Q2",
@@ -618,6 +720,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Modern money is fiat currency. Its value comes from government backing and public trust, not from the material it's made of.",
+            distractorExplanations: {
+              0: 'The raw paper and ink cost only a few cents to produce.',
+              1: 'Modern currency is fiat money — it is not backed by gold.',
+              2: 'Printing a bill costs a few cents, not its face value.',
+            },
           },
           {
             id: "fin-sec1-u2-L2-Q4",
@@ -646,6 +753,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Money only works when people trust it. If that trust disappears, the money becomes worthless paper.",
+            distractorExplanations: {
+              1: 'Money only works when people actively trust and accept it.',
+              2: 'Printing more money when trust collapses causes hyperinflation.',
+              3: 'Loss of trust in currency makes everyone poorer, not richer.',
+            },
           },
           {
             id: "fin-sec1-u2-L2-Q6",
@@ -660,6 +772,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "When there's way too much of something, each unit becomes less valuable. This same idea applies to real money when too much is printed.",
+            distractorExplanations: {
+              0: 'Oversupply decreases value, just like printing too much money causes inflation.',
+              1: 'When supply floods a market, each unit loses value.',
+              3: 'People would find alternative currencies rather than stop eating.',
+            },
           },
         ],
       },
@@ -685,6 +802,9 @@ export const finSection1Part1: Unit[] = [
             question: "Most money in the world today exists as digital records, not physical cash.",
             correctAnswer: true,
             explanation: "Only about 8% of the world's money exists as physical cash. The rest is digital.",
+            distractorExplanations: {
+              1: 'This statement is actually true — only about 8% of the world\'s money exists as physical cash. The rest is digital.',
+            },
           },
           {
             id: "fin-sec1-u2-L3-Q2",
@@ -721,6 +841,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A debit card pulls money straight from your checking account. The money leaves right away.",
+            distractorExplanations: {
+              0: 'Borrowing creates debt and interest costs, making the situation worse.',
+              1: 'Stores receive payment, not give loans.',
+              2: 'Debit transactions are processed immediately.',
+            },
           },
           {
             id: "fin-sec1-u2-L3-Q4",
@@ -744,6 +869,9 @@ export const finSection1Part1: Unit[] = [
             question: "A dollar paid with a debit card is worth less than a dollar paid in cash.",
             correctAnswer: false,
             explanation: "A dollar is a dollar regardless of how you pay. The payment method doesn't change the value.",
+            distractorExplanations: {
+              0: 'This statement is actually false — a dollar is a dollar regardless of how you pay. The payment method doesn\'t change the value.',
+            },
           },
           {
             id: "fin-sec1-u2-L3-Q6",
@@ -758,6 +886,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "After spending $30, Tara has $20 left. A $25 purchase would likely be declined because there isn't enough money in her account.",
+            distractorExplanations: {
+              0: '"She gets the lunch for free" is wrong because after spending $30, Tara has $20 left.',
+              1: '"Her debit card automatically becomes a credit card" is wrong because after spending $30, Tara has $20 left.',
+              2: '"The bank covers it as a courtesy" is wrong because after spending $30, Tara has $20 left.',
+            },
           },
           {
             id: "fin-sec1-u2-L3-Q7",
@@ -771,6 +904,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A credit card lends you the bank's money. You must repay it, usually with interest if you don't pay in full each month.",
+            distractorExplanations: {
+              0: '"Cash" is wrong because a credit card lends you the bank\'s money.',
+              1: 'Debit uses your own money; this question is about borrowing.',
+              2: '"Payment app linked to your bank" is wrong because a credit card lends you the bank\'s money.',
+            },
           },
         ],
       },
@@ -796,6 +934,9 @@ export const finSection1Part1: Unit[] = [
             question: "Banks keep your money safe and let you access it when you need it.",
             correctAnswer: true,
             explanation: "Safety and access are 2 of the main reasons people use banks.",
+            distractorExplanations: {
+              1: 'This statement is actually true — safety and access are 2 of the main reasons people use banks.',
+            },
           },
           {
             id: "fin-sec1-u2-L4-Q2",
@@ -809,6 +950,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Banks lend out a portion of deposits. That's how they make money. They pay you interest for the privilege of using yours.",
+            distractorExplanations: {
+              1: '"Locks it in a vault and never touches it" is wrong because banks lend out a portion of deposits.',
+              2: '"Sends it to the government immediately" is wrong because banks lend out a portion of deposits.',
+              3: '"Converts it to gold bars" is wrong because banks lend out a portion of deposits.',
+            },
           },
           {
             id: "fin-sec1-u2-L4-T2",
@@ -861,6 +1007,9 @@ export const finSection1Part1: Unit[] = [
             question: "If your bank goes out of business, all your money is automatically lost forever.",
             correctAnswer: false,
             explanation: "Most countries have deposit insurance that protects your money up to a certain limit if a bank fails.",
+            distractorExplanations: {
+              0: 'This statement is actually false — most countries have deposit insurance that protects your money up to a certain limit if a bank fails.',
+            },
           },
           {
             id: "fin-sec1-u2-L4-Q6",
@@ -875,6 +1024,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Banks provide security and deposit insurance. Cash at home can be lost, stolen, or destroyed with no protection.",
+            distractorExplanations: {
+              0: '"Banks pay him millions in interest" is wrong because banks provide security and deposit insurance.',
+              1: '"Cash at home is safe from everything" is wrong because banks provide security and deposit insurance.',
+              3: '"Banks never charge any fees" is wrong because banks provide security and deposit insurance.',
+            },
           },
           {
             id: "fin-sec1-u2-L4-Q7",
@@ -888,6 +1042,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Savings accounts typically pay interest because the bank uses that money for longer-term lending. Checking accounts usually pay little or no interest.",
+            distractorExplanations: {
+              0: 'Savings accounts do earn interest — that is one of their benefits.',
+              1: 'Checking accounts typically pay little or no interest.',
+              2: 'Checking accounts are for daily spending, not for earning interest or long-term growth.',
+            },
           },
         ],
       },
@@ -927,6 +1086,9 @@ export const finSection1Part1: Unit[] = [
             question: "A traditional job is the only way to earn money.",
             correctAnswer: false,
             explanation: "People earn through jobs, freelancing, selling goods, tips, business ownership, and more.",
+            distractorExplanations: {
+              0: 'This statement is actually false — people earn through jobs, freelancing, selling goods, tips, business ownership, and more.',
+            },
           },
           {
             id: "fin-sec1-u3-L1-Q2",
@@ -963,6 +1125,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hourly pay means each hour of work equals a set dollar amount. More hours means more pay.",
+            distractorExplanations: {
+              0: '"You get the same amount no matter how many hours you work" is wrong because hourly pay means each hour of work equals a set dollar amount.',
+              2: '"You only get paid at the end of the year" is wrong because hourly pay means each hour of work equals a set dollar amount.',
+              3: 'Pay rates are set by contract, not daily mood.',
+            },
           },
           {
             id: "fin-sec1-u3-L1-Q4",
@@ -1001,6 +1168,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hourly: 30 x $12 = $360. Commission: 3% of $2,000 = $60. Total: $360 + $60 = $420.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: just hourly pay does not correctly account for all components.',
+              2: 'This uses the wrong formula: just commission does not correctly account for all components.',
+              3: 'This uses the wrong formula: flat rate does not correctly account for all components.',
+            },
           },
         ],
       },
@@ -1026,6 +1198,9 @@ export const finSection1Part1: Unit[] = [
             question: "Gross pay is the amount of money you earn before any deductions.",
             correctAnswer: true,
             explanation: "Gross pay is your total earnings before taxes and other deductions are removed.",
+            distractorExplanations: {
+              1: 'This statement is actually true — gross pay is your total earnings before taxes and other deductions are removed.',
+            },
           },
           {
             id: "fin-sec1-u3-L2-Q2",
@@ -1039,6 +1214,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The total before deductions is your gross pay. After deductions, it becomes net pay (take-home pay).",
+            distractorExplanations: {
+              0: 'Net pay is after deductions; the question asks about the total before anything is removed.',
+              1: 'Take-home pay is after deductions, not the pre-deduction total.',
+              3: 'Disposable income is the amount left after taxes, which is a different concept.',
+            },
           },
           {
             id: "fin-sec1-u3-L2-T2",
@@ -1068,6 +1248,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$3,500 minus $700 (taxes) minus $200 (insurance) minus $150 (retirement) = $2,450 net pay.",
+            distractorExplanations: {
+              0: 'This amount (3,500) is too high — the correct calculation gives 2,450.',
+              1: 'This amount (2,800) is too high — the correct calculation gives 2,450.',
+              3: 'This amount (2,650) is too high — the correct calculation gives 2,450.',
+            },
           },
           {
             id: "fin-sec1-u3-L2-T3",
@@ -1098,6 +1283,9 @@ export const finSection1Part1: Unit[] = [
             question: "Net pay is always less than gross pay.",
             correctAnswer: true,
             explanation: "Deductions always reduce your gross pay, so net pay is always the smaller number.",
+            distractorExplanations: {
+              1: 'This statement is actually true — deductions always reduce your gross pay, so net pay is always the smaller number.',
+            },
           },
           {
             id: "fin-sec1-u3-L2-Q7",
@@ -1111,6 +1299,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Retirement contributions are money saved for your future. They reduce today's paycheck but grow over time for you.",
+            distractorExplanations: {
+              0: 'Parking fees are a personal expense, not a paycheck deduction that benefits your future.',
+              2: 'Income tax is mandatory and benefits society, but it does not directly build your personal wealth.',
+              3: 'Union dues support workplace representation, but they don\'t grow into retirement savings.',
+            },
           },
         ],
       },
@@ -1136,6 +1329,9 @@ export const finSection1Part1: Unit[] = [
             question: "A pay stub shows how much was deducted from your paycheck.",
             correctAnswer: true,
             explanation: "Pay stubs break down every deduction between gross pay and net pay.",
+            distractorExplanations: {
+              1: 'This statement is actually true — pay stubs break down every deduction between gross pay and net pay.',
+            },
           },
           {
             id: "fin-sec1-u3-L3-Q2",
@@ -1169,6 +1365,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "YTD means year-to-date. It's the running total from January 1 through the current pay period.",
+            distractorExplanations: {
+              0: 'YTD stands for year-to-date, not yesterday\'s total deposit.',
+              1: 'YTD means year-to-date, which includes all earnings and deductions since January 1.',
+              2: 'YTD stands for year-to-date, tracking cumulative figures for the year.',
+            },
           },
           {
             id: "fin-sec1-u3-L3-Q4",
@@ -1198,6 +1399,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Payroll errors are common. Aisha should report the discrepancy to get her missing 5 hours of pay.",
+            distractorExplanations: {
+              0: 'Payroll systems are run by humans who can and do make errors.',
+              1: 'Quitting over a fixable payroll error is a drastic overreaction.',
+              3: '"Work less next week to even it out" is wrong because payroll errors are common.',
+            },
           },
           {
             id: "fin-sec1-u3-L3-Q6",
@@ -1211,6 +1417,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Reviewing your stub catches mistakes. Even small errors add up over time if not corrected.",
+            distractorExplanations: {
+              1: 'Memorizing codes is unnecessary; just verify the numbers are correct.',
+              2: '"To compare your salary with coworkers" is wrong because reviewing your stub catches mistakes.',
+              3: 'Pay stubs serve your own verification, not impressing anyone.',
+            },
           },
           {
             id: "fin-sec1-u3-L3-Q7",
@@ -1252,6 +1463,9 @@ export const finSection1Part1: Unit[] = [
             question: "Overtime pay is typically higher than your regular hourly rate.",
             correctAnswer: true,
             explanation: "Overtime usually pays 1.5 times your regular rate, though the exact rules vary by location.",
+            distractorExplanations: {
+              1: 'This statement is actually true — overtime usually pays 1.5 times your regular rate, though the exact rules vary by location.',
+            },
           },
           {
             id: "fin-sec1-u3-L4-Q2",
@@ -1265,6 +1479,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "$20 x 1.5 = $30/hour. Overtime at 'time and a half' means your regular rate plus half.",
+            distractorExplanations: {
+              0: 'This amount (20) is too low — the correct calculation gives 30.',
+              1: 'This amount (25) is too low — the correct calculation gives 30.',
+              2: 'This amount (40) is too high — the correct calculation gives 30.',
+            },
           },
           {
             id: "fin-sec1-u3-L4-T2",
@@ -1302,6 +1521,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Regular: 40 x $16 = $640. Overtime: 8 x ($16 x 1.5) = 8 x $24 = $192. Total: $640 + $192 = $832.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: 40 x $16 does not correctly account for all components.',
+              1: 'This uses the wrong formula: 48 x $16 does not correctly account for all components.',
+              3: 'This uses the wrong formula: 48 x $20 does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec1-u3-L4-T3",
@@ -1331,6 +1555,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A raise permanently increases your pay rate. Bonuses and overtime are temporary boosts.",
+            distractorExplanations: {
+              0: 'A bonus is a one-time payment; it does not permanently change your pay rate.',
+              1: 'Overtime is temporary extra pay; it does not permanently increase your rate.',
+              2: 'A gift card is a one-time perk, not a lasting change in compensation.',
+            },
           },
           {
             id: "fin-sec1-u3-L4-Q7",
@@ -1364,6 +1593,9 @@ export const finSection1Part1: Unit[] = [
             question: "It's normal for your first paycheck to feel smaller than you expected.",
             correctAnswer: true,
             explanation: "Most people are surprised by how much deductions reduce their pay. Knowing your net pay in advance helps you plan.",
+            distractorExplanations: {
+              1: 'This statement is actually true — most people are surprised by how much deductions reduce their pay. Knowing your net pay in advance helps you plan.',
+            },
           },
           {
             id: "fin-sec1-u3-L5-Q2",
@@ -1398,6 +1630,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$48,000 divided by 12 months = $4,000 gross pay per monthly paycheck.",
+            distractorExplanations: {
+              0: 'This amount (2,000) is too low — the correct calculation gives 4,000.',
+              1: 'This amount (1,846) is too low — the correct calculation gives 4,000.',
+              3: 'This amount (48,000) is too high — the correct calculation gives 4,000.',
+            },
           },
           {
             id: "fin-sec1-u3-L5-Q4",
@@ -1412,6 +1649,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$36,000 / 26 pay periods = $1,384.62 gross. After $345 in deductions, he takes home about $1,040. Two checks per month gives roughly $2,080, not $3,000.",
+            distractorExplanations: {
+              0: 'The math is correct for biweekly pay (annual salary ÷ 26 periods).',
+              2: 'The salary is unchanged; biweekly splitting creates smaller individual checks.',
+              3: 'Deductions are typically 20-30% of gross, not over 50%.',
+            },
           },
           {
             id: "fin-sec1-u3-L5-T3",
@@ -1426,6 +1668,9 @@ export const finSection1Part1: Unit[] = [
             question: "You should base your monthly budget on your gross pay.",
             correctAnswer: false,
             explanation: "Always budget using net pay. That's the actual amount available to spend and save.",
+            distractorExplanations: {
+              0: 'This statement is actually false — always budget using net pay. That\'s the actual amount available to spend and save.',
+            },
           },
           {
             id: "fin-sec1-u3-L5-Q6",
@@ -1439,6 +1684,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Budget with your net pay of $40,000. That's the money you actually have to work with.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: gross pay does not correctly account for all components.',
+              1: 'This uses the wrong formula: split the difference does not correctly account for all components.',
+              2: 'This uses the wrong formula: add a buffer does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec1-u3-L5-Q7",
@@ -1492,6 +1742,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Every money decision is about earning, spending, or saving. These are the 3 pillars of personal finance.",
+            distractorExplanations: {
+              1: '"Print it, hide it, and burn it" is wrong because every money decision is about earning, spending, or saving.',
+              2: 'Borrowing creates debt and interest costs, making the situation worse.',
+              3: '"Count it, fold it, and share it" is wrong because every money decision is about earning, spending, or saving.',
+            },
           },
           {
             id: "fin-sec1-u4-L1-Q2",
@@ -1529,6 +1784,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "For Alex, a smartphone is a need because his job and essential tasks depend on it. Context determines the answer.",
+            distractorExplanations: {
+              0: 'Context determines whether something is a need or want; there is a right answer here.',
+              1: 'Whether a phone is a need depends on your specific circumstances.',
+              2: 'Smartphones are real items that can be needs or wants based on context.',
+            },
           },
           {
             id: "fin-sec1-u4-L1-Q4",
@@ -1553,6 +1813,9 @@ export const finSection1Part1: Unit[] = [
             question: "Fiat money has value because the paper it's printed on is rare and precious.",
             correctAnswer: false,
             explanation: "Fiat money has value because the government backs it and people agree to accept it, not because of the paper itself.",
+            distractorExplanations: {
+              0: 'This statement is actually false — fiat money has value because the government backs it and people agree to accept it, not because of the paper itself.',
+            },
           },
           {
             id: "fin-sec1-u4-L1-Q7",
@@ -1566,6 +1829,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The 'double coincidence of wants' makes barter impractical. Money solved this by being universally accepted.",
+            distractorExplanations: {
+              1: '"Governments don\'t allow it" is wrong because the \'double coincidence of wants\' makes barter impractical.',
+              2: 'There are no time restrictions on bartering.',
+              3: '"Animals can\'t be traded" is wrong because the \'double coincidence of wants\' makes barter impractical.',
+            },
           },
         ],
       },
@@ -1606,6 +1874,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gross pay is the total before anything is removed. Net pay is what remains after taxes and other deductions.",
+            distractorExplanations: {
+              1: 'Both gross and net apply to the same pay period; the difference is deductions.',
+              2: 'These are different concepts with distinct purposes.',
+              3: 'Net pay is always smaller than gross pay because deductions reduce it.',
+            },
           },
           {
             id: "fin-sec1-u4-L2-T2",
@@ -1627,6 +1900,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Regular: 40 x $20 = $800. Overtime: 4 x ($20 x 1.5) = 4 x $30 = $120. Total: $800 + $120 = $920.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: 40 x $20 does not correctly account for all components.',
+              1: 'This uses the wrong formula: 44 x $20 does not correctly account for all components.',
+              3: 'This uses the wrong formula: 44 x $30 does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec1-u4-L2-Q4",
@@ -1658,6 +1936,9 @@ export const finSection1Part1: Unit[] = [
             question: "A raise is a one-time payment, while a bonus permanently increases your pay rate.",
             correctAnswer: false,
             explanation: "It's the opposite. A raise permanently increases your pay rate. A bonus is a one-time payment.",
+            distractorExplanations: {
+              0: 'This statement is actually false — it\'s the opposite. A raise permanently increases your pay rate. A bonus is a one-time payment.',
+            },
           },
           {
             id: "fin-sec1-u4-L2-Q7",
@@ -1671,6 +1952,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Payroll mistakes happen. Checking your stub ensures you're paid what you earned.",
+            distractorExplanations: {
+              0: 'Pay stubs are private; their purpose is to verify your own accuracy.',
+              2: '"To memorize your employer\'s address" is wrong because payroll mistakes happen.',
+              3: 'Banks do not require you to review your stub; it benefits you personally.',
+            },
           },
         ],
       },
@@ -1703,6 +1989,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Always budget with net pay ($2,100). That's what actually lands in her bank account each month.",
+            distractorExplanations: {
+              1: 'This uses the wrong formula: gross pay does not correctly account for all components.',
+              2: 'Budgeting above your actual income leads to overspending you cannot cover.',
+              3: 'An hourly rate is a building block of pay, not a monthly budget figure.',
+            },
           },
           {
             id: "fin-sec1-u4-L3-Q2",
@@ -1717,6 +2008,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A balanced approach covers both goals. Save a portion first, then see what's left for the shoes.",
+            distractorExplanations: {
+              0: 'Delaying savings to buy wants first undermines long-term security.',
+              1: 'Cutting all enjoyment is not sustainable long-term.',
+              3: 'Borrowing money for a want when you could save up creates unnecessary debt.',
+            },
           },
           {
             id: "fin-sec1-u4-L3-T2",
@@ -1737,6 +2033,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$8 x 5 days x 52 weeks = $2,080 per year. Small daily costs become big annual numbers.",
+            distractorExplanations: {
+              0: '"About $400" is wrong because $8 x 5 days x 52 weeks = $2,080 per year.',
+              1: '"About $1,000" is wrong because $8 x 5 days x 52 weeks = $2,080 per year.',
+              3: '"About $5,000" is wrong because $8 x 5 days x 52 weeks = $2,080 per year.',
+            },
           },
           {
             id: "fin-sec1-u4-L3-Q4",
@@ -1764,6 +2065,11 @@ export const finSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Nina should speak up. Those 5 missing hours are $110 before taxes. Payroll errors are common and employers expect corrections.",
+            distractorExplanations: {
+              0: 'Staying silent about pay errors costs you real money.',
+              1: 'Quitting over a fixable payroll error is a drastic overreaction.',
+              3: 'Working less does not recover missing pay; report the discrepancy.',
+            },
           },
           {
             id: "fin-sec1-u4-L3-T3",
@@ -1778,6 +2084,9 @@ export const finSection1Part1: Unit[] = [
             question: "Understanding gross pay, net pay, and deductions is only useful for accountants.",
             correctAnswer: false,
             explanation: "Everyone who earns money benefits from understanding their paycheck. It's a core life skill, not just an accounting skill.",
+            distractorExplanations: {
+              0: 'This statement is actually false — everyone who earns money benefits from understanding their paycheck. It\'s a core life skill, not just an accounting skill.',
+            },
           },
           {
             id: "fin-sec1-u4-L3-Q7",

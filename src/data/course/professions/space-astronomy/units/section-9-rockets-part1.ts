@@ -39,6 +39,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "In space, a moving object will keep moving forever unless a force stops it.",
             correctAnswer: true,
             explanation: "With no air resistance or friction in space, objects in motion stay in motion indefinitely.",
+            distractorExplanations: {
+              1: 'This is true because Newton\'s first law guarantees that without external forces like friction, objects in motion continue moving indefinitely.',
+            },
           },
           {
             id: "sp-sec9-u1-L1-Q2",
@@ -52,6 +55,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Inertia is the property of matter that resists changes in motion. More massive objects have more inertia.",
+            distractorExplanations: {
+              0: 'Gravity is a force that pulls objects together, not the property that resists changes in motion.',
+              2: 'Friction is a force that opposes motion, not the tendency of objects to resist changes in their state.',
+              3: 'Momentum is the product of mass and velocity, not the resistance to changes in motion.',
+            },
           },
           {
             id: "sp-sec9-u1-L1-T2",
@@ -65,6 +73,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "A spacecraft needs to keep its engines running to maintain speed in space.",
             correctAnswer: false,
             explanation: "In space, no friction slows you down. Once moving, a spacecraft coasts without using fuel.",
+            distractorExplanations: {
+              0: 'In the vacuum of space there is no friction to slow a spacecraft, so engines are not needed to maintain speed.',
+            },
           },
           {
             id: "sp-sec9-u1-L1-Q4",
@@ -93,6 +104,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The ISS and astronauts are in free fall together. They're falling around Earth, creating the sensation of weightlessness.",
+            distractorExplanations: {
+              0: 'Gravity very much exists in orbit; the ISS experiences about 90% of surface gravity but is in free fall.',
+              1: 'The ISS has no special mechanism to create weightlessness; the effect comes from continuous free fall.',
+              3: 'The ISS does not spin to cancel gravity; it orbits Earth in free fall along with everything inside it.',
+            },
           },
           {
             id: "sp-sec9-u1-L1-Q6",
@@ -126,6 +142,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Doubling the force on an object doubles its acceleration.",
             correctAnswer: true,
             explanation: "From F = ma, if you double F and keep mass the same, acceleration doubles.",
+            distractorExplanations: {
+              1: 'This is true because F = ma directly shows that doubling force with constant mass doubles acceleration.',
+            },
           },
           {
             id: "sp-sec9-u1-L2-Q2",
@@ -139,6 +158,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "As fuel burns, mass decreases. With the same force and less mass, F = ma means acceleration increases.",
+            distractorExplanations: {
+              0: 'Constant thrust with decreasing mass means acceleration increases, not stays the same.',
+              1: 'Acceleration increases as mass decreases because F = ma means less mass yields more acceleration for the same force.',
+              3: 'The rocket continues moving as long as thrust is applied; losing fuel mass does not stop it.',
+            },
           },
           {
             id: "sp-sec9-u1-L2-T2",
@@ -175,6 +199,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Same force, half the mass means double the acceleration. Lighter Rocket B accelerates faster.",
+            distractorExplanations: {
+              0: 'Heavier objects accelerate less with the same force, so Rocket A would be slower, not faster.',
+              1: 'With the same force and different masses, the lighter rocket accelerates more, so they are not equal.',
+              3: 'Both rockets can move without gravity; thrust creates acceleration regardless of gravitational environment.',
+            },
           },
           {
             id: "sp-sec9-u1-L2-T3",
@@ -188,6 +217,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "An astronaut's mass changes when they travel from Earth to the Moon.",
             correctAnswer: false,
             explanation: "Mass stays the same everywhere. Only weight changes because the Moon's gravity is weaker than Earth's.",
+            distractorExplanations: {
+              1: 'Mass stays the same regardless of gravitational environment; only weight changes between Earth and the Moon.',
+            },
           },
           {
             id: "sp-sec9-u1-L2-Q7",
@@ -202,6 +234,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Removing mass is the simplest way to increase acceleration with the same engine. Less mass means more acceleration from F = ma.",
+            distractorExplanations: {
+              1: 'Adding more fuel tanks increases mass, which would decrease acceleration rather than increase it.',
+              2: 'A gravity assist requires precise orbital mechanics and cannot simply be aimed at the Sun from the launch pad.',
+              3: 'Atmospheric pressure has negligible impact on rocket acceleration compared to reducing onboard mass.',
+            },
           },
         ],
       },
@@ -225,6 +262,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "A rocket works by pushing exhaust gas in one direction and moving in the opposite direction.",
             correctAnswer: true,
             explanation: "This is Newton's third law in action. The exhaust goes backward, and the rocket goes forward.",
+            distractorExplanations: {
+              1: 'This is true because Newton\'s third law states the exhaust pushes backward and the rocket is pushed forward with equal force.',
+            },
           },
           {
             id: "sp-sec9-u1-L3-Q2",
@@ -238,6 +278,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The escaping air is the action. The balloon moving in the opposite direction is the reaction. Just like a rocket.",
+            distractorExplanations: {
+              0: 'Air in the room plays no role; the balloon moves because escaping air creates a reaction force in the opposite direction.',
+              2: 'Gravity pulls the balloon down uniformly; the erratic motion is caused by the escaping air jet, not gravity.',
+              3: 'Static electricity does not cause balloons to fly around; the thrust comes from air escaping the opening.',
+            },
           },
           {
             id: "sp-sec9-u1-L3-T2",
@@ -252,6 +297,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Rockets can't work in the vacuum of space because there's nothing to push against.",
             correctAnswer: false,
             explanation: "Rockets push against their own exhaust, not the surrounding air. They work in vacuum just fine.",
+            distractorExplanations: {
+              0: 'Rockets push against their own exhaust gas, not surrounding air, so they work perfectly in a vacuum.',
+            },
           },
           {
             id: "sp-sec9-u1-L3-Q4",
@@ -288,6 +336,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Action and reaction forces are always equal. The rocket gets 1,000 N of thrust, the same force as the exhaust.",
+            distractorExplanations: {
+              0: 'Action and reaction forces are always equal, so 500 N would violate Newton\'s third law.',
+              2: 'The reaction force is exactly equal to the action force, not double; 2,000 N would violate Newton\'s third law.',
+              3: 'The thrust force is always equal to the exhaust force regardless of the rocket\'s mass; mass only affects acceleration.',
+            },
           },
           {
             id: "sp-sec9-u1-L3-Q7",
@@ -555,6 +608,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Thrust is the forward force produced by a rocket engine.",
             correctAnswer: true,
             explanation: "Thrust pushes the rocket forward (or upward at launch) by expelling exhaust gas in the opposite direction.",
+            distractorExplanations: {
+              1: 'This is true because thrust is defined as the forward force created by expelling exhaust in the opposite direction.',
+            },
           },
           {
             id: "sp-sec9-u2-L1-Q2",
@@ -568,6 +624,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "To lift off, a rocket's thrust must be greater than its weight. Weight is the downward force of gravity.",
+            distractorExplanations: {
+              0: 'Air resistance opposes motion but is not what thrust must overcome for liftoff; gravity is the primary force.',
+              1: 'The launch pad does not exert a force the rocket must overcome; it is Earth\'s gravitational pull on the rocket.',
+              3: 'Earth\'s rotation actually helps rockets launched eastward and is not a force that must be overcome for liftoff.',
+            },
           },
           {
             id: "sp-sec9-u2-L1-T2",
@@ -581,6 +642,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "A rocket with a thrust-to-weight ratio of 0.8 can lift off the ground.",
             correctAnswer: false,
             explanation: "The ratio must be above 1.0 for liftoff. At 0.8, gravity is stronger than thrust.",
+            distractorExplanations: {
+              0: 'A ratio of 0.8 means gravity is stronger than thrust, so the rocket cannot lift off the ground.',
+            },
           },
           {
             id: "sp-sec9-u2-L1-Q4",
@@ -602,6 +666,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "35 divided by 28 equals 1.25. This is above 1, so the Saturn V could lift off.",
+            distractorExplanations: {
+              0: '35 / 28 = 1.25, not 0.8; a ratio below 1 would mean the rocket could not lift off.',
+              1: '35 / 28 = 1.25, not 1.0; a ratio of exactly 1 would mean thrust just equals weight with no upward acceleration.',
+              3: '35 / 28 = 1.25, not 3.5; dividing correctly gives 1.25.',
+            },
           },
           {
             id: "sp-sec9-u2-L1-T3",
@@ -621,6 +690,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Higher exhaust velocity means each kilogram of fuel produces more thrust. That's engine efficiency.",
+            distractorExplanations: {
+              0: 'Paint color has no meaningful effect on rocket thrust or engine performance.',
+              1: 'Launching from higher altitude slightly reduces air resistance but does not directly increase thrust.',
+              3: 'Fewer engines would decrease total thrust, not increase it.',
+            },
           },
         ],
       },
@@ -644,6 +718,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "The payload is the cargo a rocket carries into space.",
             correctAnswer: true,
             explanation: "The payload can be satellites, astronauts, space probes, or supplies. It sits at the top of the rocket.",
+            distractorExplanations: {
+              1: 'This is true because the payload is the cargo delivered to space, sitting at the top of the rocket.',
+            },
           },
           {
             id: "sp-sec9-u2-L2-Q2",
@@ -673,6 +750,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Rockets are mostly fuel. The propellant makes up 85-90% of the total mass at liftoff.",
+            distractorExplanations: {
+              0: '25% fuel would be far too little propellant to reach orbit given the enormous energy requirements.',
+              1: '50% fuel is still insufficient; the tyranny of the rocket equation demands much more propellant.',
+              2: '70% is closer but still underestimates the typical 85-90% fuel fraction needed to reach orbit.',
+            },
           },
           {
             id: "sp-sec9-u2-L2-Q4",
@@ -709,6 +791,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The converging-diverging nozzle shape accelerates hot gas from subsonic to supersonic speeds, creating maximum thrust.",
+            distractorExplanations: {
+              0: 'Noise reduction is not the purpose of the nozzle shape; it is designed to maximize exhaust velocity.',
+              2: 'While nozzles do need cooling, the bell shape is specifically for accelerating exhaust gas, not for cooling.',
+              3: 'Nozzles do not filter exhaust; their converging-diverging shape accelerates gas to supersonic speeds for maximum thrust.',
+            },
           },
           {
             id: "sp-sec9-u2-L2-Q7",
@@ -740,6 +827,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Staging helps rockets by discarding empty fuel tanks during flight.",
             correctAnswer: true,
             explanation: "Dropping empty stages reduces mass, making the remaining rocket easier to accelerate.",
+            distractorExplanations: {
+              1: 'This is true because discarding empty fuel tanks reduces dead weight, allowing remaining fuel to be used more efficiently.',
+            },
           },
           {
             id: "sp-sec9-u2-L3-Q2",
@@ -753,6 +843,12 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A single-stage rocket carries all its empty structure to orbit. That dead weight wastes fuel and limits payload capacity.",
+            distractorExplanations: {
+              0: 'Carrying empty tanks wastes fuel on dead weight, which is the main inefficiency of single-stage designs.',
+              1: 'Single-stage rockets can use multiple fuel types; the limitation is carrying empty structure to orbit.',
+              2: 'Engine size is not the issue; the problem is carrying empty fuel tanks all the way to orbit.',
+              3: 'Single-stage rockets can fly above the atmosphere, but they are less efficient due to carrying dead weight.',
+            },
           },
           {
             id: "sp-sec9-u2-L3-T2",
@@ -789,6 +885,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Saturn V had 3 stages: S-IC (first), S-II (second), and S-IVB (third). Each one fell away when its job was done.",
+            distractorExplanations: {
+              0: 'Saturn V was far too complex for a single stage; one stage could not carry enough fuel for a Moon mission.',
+              1: 'Two stages would not have provided enough delta-v for the complex Earth-orbit-to-Moon trajectory.',
+              3: 'Five stages would add unnecessary complexity and weight; three was the optimal design choice.',
+            },
           },
           {
             id: "sp-sec9-u2-L3-T3",
@@ -818,6 +919,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "High orbits need more velocity change. Two stages drop empty tanks, making the rocket lighter and able to reach higher orbits.",
+            distractorExplanations: {
+              1: 'Even though the satellite is light, a high orbit requires significant delta-v that benefits from staging efficiency.',
+              2: 'Five stages would add excessive complexity with diminishing returns; two stages is more practical.',
+              3: 'Simply adding fuel without staging means carrying heavy empty tanks, which wastes propellant.',
+            },
           },
         ],
       },
@@ -1077,6 +1183,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "A satellite in orbit is continuously falling toward Earth.",
             correctAnswer: true,
             explanation: "Gravity constantly pulls the satellite toward Earth. Its sideways speed keeps it falling around the planet instead of into it.",
+            distractorExplanations: {
+              1: 'This is true because gravity continuously pulls the satellite toward Earth while its sideways speed keeps it from hitting the surface.',
+            },
           },
           {
             id: "sp-sec9-u3-L1-Q2",
@@ -1090,6 +1199,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The ISS travels at about 28,000 km/h sideways. At that speed, it falls around Earth's curve instead of crashing.",
+            distractorExplanations: {
+              0: 'Gravity reaches far into space; at ISS altitude (400 km), gravity is still about 90% of surface strength.',
+              1: 'The ISS only fires engines occasionally for small adjustments; it maintains orbit through its sideways velocity.',
+              3: 'There is virtually no atmosphere at ISS altitude to provide any support.',
+            },
           },
           {
             id: "sp-sec9-u3-L1-T2",
@@ -1117,6 +1231,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gravity provides the inward pull, and the satellite's sideways speed prevents it from falling straight down.",
+            distractorExplanations: {
+              0: 'Engine thrust is not needed to maintain an orbit; satellites coast without engines once in orbit.',
+              2: 'Magnetic fields and solar wind have negligible effects on satellite orbits compared to gravity.',
+              3: 'Fuel and computers help reach orbit but do not maintain it; gravity and velocity do.',
+            },
           },
           {
             id: "sp-sec9-u3-L1-T3",
@@ -1130,6 +1249,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Satellites in higher orbits move faster than satellites in lower orbits.",
             correctAnswer: false,
             explanation: "Higher orbits have weaker gravity, so satellites move slower. The ISS at 400 km goes faster than a GPS satellite at 20,200 km.",
+            distractorExplanations: {
+              0: 'Higher orbits have weaker gravity and longer paths, so satellites there move slower, not faster.',
+            },
           },
           {
             id: "sp-sec9-u3-L1-Q6",
@@ -1161,6 +1283,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Low Earth orbit (LEO) is between 200 and 2,000 km altitude.",
             correctAnswer: true,
             explanation: "LEO is the closest useful orbit. The ISS, Hubble, and many satellites operate here.",
+            distractorExplanations: {
+              1: 'This is true because LEO is defined as the orbital region from 200 to 2,000 km altitude above Earth.',
+            },
           },
           {
             id: "sp-sec9-u3-L2-Q2",
@@ -1190,6 +1315,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A geostationary satellite orbits once every 24 hours, matching Earth's rotation. It appears stationary from the ground.",
+            distractorExplanations: {
+              0: 'All orbiting satellites are technically in free fall and require no fuel to stay in orbit.',
+              2: 'Geostationary satellites are actually the slowest orbital satellites; LEO satellites move much faster.',
+              3: 'GEO at 35,786 km is far from Earth, not close; LEO satellites are the closest.',
+            },
           },
           {
             id: "sp-sec9-u3-L2-Q4",
@@ -1226,6 +1356,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A polar satellite flies north to south while Earth rotates east to west. Over time, it covers every part of Earth's surface.",
+            distractorExplanations: {
+              0: 'Being closer to the Sun has no relevance to Earth observation; orbit type matters for surface coverage.',
+              2: 'Polar orbits are not inherently faster; their advantage is covering all latitudes as Earth rotates beneath.',
+              3: 'No orbit can see in the dark without special instruments; polar orbits are useful for their complete surface coverage.',
+            },
           },
         ],
       },
@@ -1249,6 +1384,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "All orbits are perfect circles.",
             correctAnswer: false,
             explanation: "Orbits are ellipses. Some are nearly circular, but they're never perfectly round.",
+            distractorExplanations: {
+              0: 'Kepler proved that orbits are ellipses, not perfect circles, even if some are nearly circular.',
+            },
           },
           {
             id: "sp-sec9-u3-L3-Q2",
@@ -1276,6 +1414,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Planets speed up as they get closer to the Sun and slow down as they move farther away. Equal areas in equal times.",
+            distractorExplanations: {
+              0: 'Planets move slowest at their farthest point from the Sun, not fastest, due to conservation of angular momentum.',
+              2: 'Orbital speed varies continuously; it is never constant throughout an elliptical orbit.',
+              3: 'There is no special speed at the midpoint; speed increases smoothly as the planet approaches the Sun.',
+            },
           },
           {
             id: "sp-sec9-u3-L3-Q4",
@@ -1283,6 +1426,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Earth moves faster in its orbit during January (perihelion) than in July (aphelion).",
             correctAnswer: true,
             explanation: "Earth is closest to the Sun in January. Kepler's second law says it moves faster at that point.",
+            distractorExplanations: {
+              1: 'This is true because Earth\'s closest approach to the Sun occurs in early January, and Kepler\'s law says planets move faster when closer.',
+            },
           },
           {
             id: "sp-sec9-u3-L3-T3",
@@ -1303,6 +1449,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The period squared equals distance cubed. So 2 cubed is 8, and the square root of 8 is about 2.83. The period is roughly 2.8 times longer.",
+            distractorExplanations: {
+              0: 'Twice the distance does not mean twice the period; Kepler\'s third law involves a cube-square relationship.',
+              1: 'Four times as long would apply if the period scaled with the square of distance, but it scales with the 1.5 power.',
+              3: 'Half as long would mean closer planets orbit slower, which is the opposite of what Kepler\'s law states.',
+            },
           },
           {
             id: "sp-sec9-u3-L3-Q6",
@@ -1595,6 +1746,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The third law explains thrust: the rocket pushes exhaust backward, and the exhaust pushes the rocket forward.",
+            distractorExplanations: {
+              0: 'The first law explains coasting in space, not the mechanism of thrust generation.',
+              1: 'The second law relates force, mass, and acceleration but does not explain how thrust is created.',
+              3: 'The law of gravitation describes attraction between masses, not the action-reaction principle behind thrust.',
+            },
           },
           {
             id: "sp-sec9-u4-L1-Q2",
@@ -1602,6 +1758,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "A rocket needs air to push against in order to generate thrust.",
             correctAnswer: false,
             explanation: "Rockets push against their own exhaust. They work perfectly in vacuum.",
+            distractorExplanations: {
+              0: 'Rockets push against their own exhaust, not surrounding air, so they generate thrust perfectly in vacuum.',
+            },
           },
           {
             id: "sp-sec9-u4-L1-Q3",
@@ -1632,6 +1791,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Less mass with the same force means more acceleration. F = ma tells us this directly.",
+            distractorExplanations: {
+              0: 'With decreasing mass and constant force, F = ma shows acceleration must increase, not stay the same.',
+              1: 'Acceleration increases as fuel burns because less mass is being pushed by the same thrust.',
+              3: 'Acceleration direction remains the same as thrust direction; it does not reverse.',
+            },
           },
           {
             id: "sp-sec9-u4-L1-Q6",
@@ -1655,6 +1819,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "At 0.95, the rocket can't lift off. Removing mass raises the thrust-to-weight ratio above 1.0.",
+            distractorExplanations: {
+              1: 'A ratio of 0.95 means gravity exceeds thrust, so launching would fail regardless of how close it seems.',
+              2: 'Adding fuel increases total weight along with potential thrust, and the ratio may not improve sufficiently.',
+              3: 'Wind provides negligible force compared to rocket thrust and cannot compensate for insufficient thrust-to-weight ratio.',
+            },
           },
           {
             id: "sp-sec9-u4-L1-T2",
@@ -1698,6 +1867,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Staging sheds dead weight. Without it, you'd carry empty fuel tanks all the way to orbit, wasting fuel.",
+            distractorExplanations: {
+              0: 'While staging can improve aerodynamics slightly, its primary purpose is shedding empty mass.',
+              2: 'Payload protection is handled by the fairing, not by staging.',
+              3: 'Staging does not create more engine power; it removes dead weight so existing power is used more efficiently.',
+            },
           },
           {
             id: "sp-sec9-u4-L2-Q2",
@@ -1705,6 +1879,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "A satellite in geostationary orbit takes 24 hours to circle Earth.",
             correctAnswer: true,
             explanation: "GEO satellites orbit once every 24 hours, matching Earth's rotation. That's why they appear stationary.",
+            distractorExplanations: {
+              1: 'This is true because GEO satellites orbit at exactly 35,786 km where the orbital period matches Earth\'s 24-hour rotation.',
+            },
           },
           {
             id: "sp-sec9-u4-L2-Q3",
@@ -1735,6 +1912,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Kepler's second law: a planet sweeps equal areas in equal times, so it moves fastest at its closest approach.",
+            distractorExplanations: {
+              0: 'The midpoint has no special significance for orbital speed; speed varies continuously based on distance from the Sun.',
+              1: 'Planets move slowest at their farthest point from the Sun, the opposite of what this option states.',
+              2: 'Circular orbits have constant speed, but Kepler\'s second law applies to elliptical orbits where speed varies with distance.',
+            },
           },
           {
             id: "sp-sec9-u4-L2-T2",
@@ -1763,6 +1945,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without staging, the rocket would carry massive empty tanks. The extra weight would prevent reaching orbital velocity.",
+            distractorExplanations: {
+              0: 'Without staging, the extra dead weight would slow the rocket; it would not reach the Moon faster.',
+              1: 'Carrying empty tanks is the opposite of efficient; staging eliminates that dead weight.',
+              3: 'The massive weight of empty tanks would prevent the rocket from reaching orbital velocity.',
+            },
           },
         ],
       },
@@ -1904,6 +2091,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Orbital velocity for low Earth orbit is about 28,000 km/h.",
             correctAnswer: true,
             explanation: "At about 28,000 km/h, a spacecraft balances gravity with its sideways speed, maintaining a stable orbit.",
+            distractorExplanations: {
+              1: 'This is true because at approximately 28,000 km/h, a spacecraft achieves the balance between gravity and sideways velocity needed for LEO.',
+            },
           },
           {
             id: "sp-sec9-u5-L1-Q2",
@@ -1917,6 +2107,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth's escape velocity is about 11.2 km/s or 40,000 km/h. This is about 40% faster than orbital velocity.",
+            distractorExplanations: {
+              1: '8 km/s (28,000 km/h) is orbital velocity for LEO, not escape velocity; you would remain in orbit, not escape.',
+              2: '3 km/s is far too slow to escape Earth\'s gravity; it would not even achieve a stable orbit.',
+              3: '30 km/s greatly exceeds Earth\'s escape velocity; that speed would send you far beyond Earth rapidly.',
+            },
           },
           {
             id: "sp-sec9-u5-L1-T2",
@@ -1931,6 +2126,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "A spacecraft in orbit around Earth has reached escape velocity.",
             correctAnswer: false,
             explanation: "Orbital velocity is slower than escape velocity. The spacecraft is still bound by Earth's gravity, just falling around it.",
+            distractorExplanations: {
+              0: 'Orbital velocity is about 7.8 km/s, which is less than the 11.2 km/s escape velocity, so the craft is still gravitationally bound.',
+            },
           },
           {
             id: "sp-sec9-u5-L1-Q4",
@@ -1952,6 +2150,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "To leave Earth's gravitational influence and travel to Mars, a spacecraft must reach escape velocity.",
+            distractorExplanations: {
+              0: 'Orbital velocity keeps you circling Earth; to travel to Mars, you must break free of Earth\'s gravity entirely.',
+              2: 'Half of orbital velocity is far too slow even to maintain orbit, let alone reach another planet.',
+              3: 'The speed of light is neither necessary nor achievable with current technology for interplanetary travel.',
+            },
           },
           {
             id: "sp-sec9-u5-L1-T3",
@@ -2001,6 +2204,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Delta-v measures the total velocity change a spacecraft can achieve.",
             correctAnswer: true,
             explanation: "Delta-v is the sum of all speed changes a rocket can make. It determines what missions are possible.",
+            distractorExplanations: {
+              1: 'This is true because delta-v represents the total capacity for speed changes, which determines what destinations and maneuvers are possible.',
+            },
           },
           {
             id: "sp-sec9-u5-L2-Q2",
@@ -2014,6 +2220,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Like money, delta-v is limited. Every maneuver costs some, and when you run out, you can't do anything more.",
+            distractorExplanations: {
+              0: 'While producing delta-v does cost money, the analogy refers to budgeting velocity changes like spending currency.',
+              2: 'Delta-v is measured in meters per second, not dollars; it is a physics quantity, not a monetary one.',
+              3: 'Space agencies do not trade delta-v between missions; each mission has its own independent fuel budget.',
+            },
           },
           {
             id: "sp-sec9-u5-L2-T2",
@@ -2042,6 +2253,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Delta-v depends on how much fuel you carry (mass ratio) and how fast the exhaust exits (exhaust velocity).",
+            distractorExplanations: {
+              0: 'The size of the launch pad has no effect on how much velocity change a rocket can achieve.',
+              2: 'Paint color has zero impact on rocket performance or available delta-v.',
+              3: 'Rocket spin rate does not determine total velocity change; only fuel and exhaust velocity matter.',
+            },
           },
           {
             id: "sp-sec9-u5-L2-Q5",
@@ -2064,6 +2280,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Adding 1 kg of payload to a rocket requires exactly 1 kg more fuel.",
             correctAnswer: false,
             explanation: "It requires much more. You need fuel to lift the payload, plus fuel to lift that extra fuel. The effect multiplies.",
+            distractorExplanations: {
+              0: 'Due to the rocket equation, each extra kilogram of payload requires many more kilograms of fuel because fuel must also lift itself.',
+            },
           },
           {
             id: "sp-sec9-u5-L2-Q7",
@@ -2078,6 +2297,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Saving 30 kg of structure weight means you need less fuel to carry it. That saved delta-v can be used for mission maneuvers.",
+            distractorExplanations: {
+              1: 'Communication is important, but adding 50 kg worsens the already tight delta-v budget by increasing total mass.',
+              2: 'Adding more fuel also adds mass, which partly cancels the benefit due to the tyranny of the rocket equation.',
+              3: 'Delta-v depends directly on mass ratio, so reducing mass absolutely does increase available delta-v.',
+            },
           },
           {
             id: "sp-sec9-u5-L2-Q8",
@@ -2112,6 +2336,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "Rockets fly straight up all the way to orbit.",
             correctAnswer: false,
             explanation: "Rockets go up initially to escape the thick atmosphere, then turn sideways to build the horizontal speed needed for orbit.",
+            distractorExplanations: {
+              0: 'Rockets must tilt sideways during ascent to build the horizontal speed required for orbit.',
+            },
           },
           {
             id: "sp-sec9-u5-L3-Q2",
@@ -2125,6 +2352,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Orbit requires massive horizontal speed (about 28,000 km/h). The rocket tilts to convert upward momentum into sideways velocity.",
+            distractorExplanations: {
+              0: 'The Sun\'s radiation has no bearing on rocket trajectory; the tilt is to build horizontal orbital velocity.',
+              2: 'Payload stress reduction is managed by throttling, not by the gravity turn maneuver.',
+              3: 'The tilt is a carefully planned maneuver called a gravity turn, not an uncontrolled fall.',
+            },
           },
           {
             id: "sp-sec9-u5-L3-T2",
@@ -2161,6 +2393,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At Max Q, the combination of speed and air density creates peak stress. Throttling down reduces forces on the rocket structure.",
+            distractorExplanations: {
+              0: 'Fuel savings are secondary; the primary reason for throttling at Max Q is to protect the rocket from structural failure.',
+              2: 'Passenger comfort is not the driving concern; structural integrity of the vehicle is the critical factor.',
+              3: 'Stage separation occurs much later in flight, not during the Max Q throttle-down period.',
+            },
           },
           {
             id: "sp-sec9-u5-L3-T3",
@@ -2174,6 +2411,9 @@ export const spaceSection9Part1: Unit[] = [
             question: "A spacecraft needs a circularization burn to achieve a stable circular orbit.",
             correctAnswer: true,
             explanation: "Without circularizing, the spacecraft's orbit would be elliptical, potentially dipping back into the atmosphere.",
+            distractorExplanations: {
+              1: 'This is true because without circularization, the orbit would be elliptical and could dip back into the atmosphere.',
+            },
           },
           {
             id: "sp-sec9-u5-L3-Q7",
@@ -2187,6 +2427,11 @@ export const spaceSection9Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without sufficient horizontal velocity, gravity pulls the spacecraft back down. Altitude alone isn't enough for orbit.",
+            distractorExplanations: {
+              0: 'Without enough horizontal speed, a spacecraft cannot maintain any orbit, slow or otherwise; it will fall back.',
+              2: 'Insufficient speed means the craft is still gravitationally bound and will fall toward Earth, not escape.',
+              3: 'Hovering in place is not possible in orbit; objects must move at orbital velocity or fall.',
+            },
           },
         ],
       },

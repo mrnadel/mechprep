@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "u4-L1-Q0a",
+    "type": "true-false",
+    "question": "You need exactly 2 independent properties to fully define the state of a simple compressible substance.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The state postulate says 2 independent intensive properties fix the state of a simple compressible substance.",
+    "explanationLine": 31
+  },
+  {
+    "id": "u4-L1-Q1",
+    "type": "multiple-choice",
+    "question": "A system is described as \"closed, rigid, and insulated.\" What constraints does this impose?",
+    "options": [
+      "No mass or energy crosses the boundary at all",
+      "Mass is fixed, pressure and temperature are constant",
+      "Mass is fixed, volume is constant, no heat transfer",
+      "Mass is fixed, volume is constant, entropy is constant"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "\"Closed\" means no mass crosses the boundary. \"Rigid\" means constant volume. \"Insulated\" means no heat transfer (Q = 0).",
+    "explanationLine": 46
+  },
+  {
+    "id": "u4-L1-Q0b",
+    "type": "multiple-choice",
+    "question": "Which of these does NOT change when you split a system in half?",
+    "options": [
+      "Total mass",
+      "Total volume",
+      "Temperature",
+      "Total internal energy"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Temperature is intensive. It stays the same regardless of how much material you have.",
+    "explanationLine": 67
+  },
+  {
+    "id": "u4-L1-Q7",
+    "type": "multiple-choice",
+    "question": "Which of the following is an intensive property?",
+    "options": [
+      "Temperature",
+      "Total volume",
+      "Total internal energy",
+      "Mass"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Intensive properties are independent of the size (mass) of the system. Temperature, pressure, density, and specific volume are intensive.",
+    "explanationLine": 82
+  },
+  {
+    "id": "u4-L1-Q18",
+    "type": "true-false",
+    "question": "Specific volume and density are inversely related: v = 1/rho.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Specific volume v (m3/kg) is volume per unit mass, while density rho (kg/m3) is mass per unit volume. They are reciprocals.",
+    "explanationLine": 101
+  },
+  {
+    "id": "u4-L1-Q19",
+    "type": "multiple-choice",
+    "question": "A pressure gauge reads 350 kPa and atmospheric pressure is 101 kPa. What is the absolute pressure?",
+    "options": [
+      "101 kPa",
+      "350 kPa",
+      "249 kPa",
+      "451 kPa"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "P_abs = P_gauge + P_atm = 350 + 101 = 451 kPa. Gauges read zero at atmospheric pressure.",
+    "explanationLine": 126
+  },
+  {
+    "id": "u4-L1-Q22",
+    "type": "true-false",
+    "question": "The Gibbs phase rule for a non-reacting system is F = C - P + 2, where C is the number of components and P is the number of phases.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The Gibbs phase rule determines how many independent intensive properties are needed to fix the state. For pure water (C=1) in two phases (P=2): F = 1.",
+    "explanationLine": 135
+  },
+  {
+    "id": "u4-L1b-Q0a",
+    "type": "multiple-choice",
+    "question": "Above the critical point, a substance is called a:",
+    "options": [
+      "Supercritical fluid",
+      "Superheated vapor",
+      "Compressed liquid",
+      "Saturated mixture"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Above both the critical temperature and pressure, there are no distinct liquid or vapor phases. The substance is a supercritical fluid.",
+    "explanationLine": 167
+  },
+  {
+    "id": "u4-L1-Q5",
+    "type": "multiple-choice",
+    "question": "At the critical point of a substance:",
+    "options": [
+      "Liquid and vapor phases become indistinguishable",
+      "The substance exists only as a solid phase",
+      "Pressure is at its minimum for phase change",
+      "Enthalpy of vaporization reaches its maximum"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "At the critical point, the properties of the liquid and vapor phases converge. Above it, the substance is a supercritical fluid.",
+    "explanationLine": 182
+  },
+  {
+    "id": "u4-L1-Q9",
+    "type": "true-false",
+    "question": "Pressure and temperature are independent properties in the two-phase (wet) region of a pure substance.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "In the two-phase region, P and T are linked by the saturation curve. You need a second property like quality (x) to fix the state.",
+    "explanationLine": 191
+  },
+  {
+    "id": "u4-L1-Q8",
+    "type": "multiple-choice",
+    "question": "Wet steam at 100 kPa has quality x = 0.85. What does this mean physically?",
+    "options": [
+      "The steam has lost 85% of its enthalpy of vaporization",
+      "85% of the total volume is occupied by vapor",
+      "The temperature is 85% of the saturation temperature",
+      "85% of mass is saturated vapor, 15% is saturated liquid"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Quality (x) is the mass fraction of vapor in a two-phase mixture: x = m_vapor / m_total.",
+    "explanationLine": 206
+  },
+  {
+    "id": "u4-L1-Q14",
+    "type": "multiple-choice",
+    "question": "On a T-v diagram, what does the horizontal line under the saturation dome represent?",
+    "options": [
+      "Constant-pressure, constant-temperature boiling",
+      "Isothermal compression of an ideal gas",
+      "Isentropic expansion through a nozzle",
+      "Constant-volume heating from liquid to superheated vapor"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Under the dome, temperature and pressure are locked together. The horizontal line represents phase change at constant T and P.",
+    "explanationLine": 221
+  },
+  {
+    "id": "u4-L1-Q17",
+    "type": "multiple-choice",
+    "question": "Which correctly describes the triple point of a substance?",
+    "options": [
+      "The highest temperature at which a liquid can exist",
+      "The unique T and P where all three phases coexist",
+      "The point of direct solid-to-vapor transition only",
+      "The average of the melting and boiling points"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The triple point is a unique, invariant point where solid, liquid, and vapor all coexist. For water: 0.01C, 0.611 kPa.",
+    "explanationLine": 246
+  },
+  {
+    "id": "u4-L1-Q27",
+    "type": "true-false",
+    "question": "A supercritical fluid has distinct liquid and vapor phases that can be identified by their different densities.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Above the critical point, there is no phase boundary. The substance exists as a single supercritical fluid phase.",
+    "explanationLine": 255
+  },
+  {
+    "id": "u4-L1-Q21",
+    "type": "multiple-choice",
+    "question": "What is subcooled (compressed) liquid?",
+    "options": [
+      "A liquid that is above the critical pressure",
+      "A liquid at exactly the saturation temperature",
+      "A liquid below T_sat at its given pressure",
+      "A liquid containing dissolved gases"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "A subcooled liquid exists at a temperature below T_sat at its pressure. Its properties are very close to saturated liquid at the same temperature.",
+    "explanationLine": 270
+  },
+  {
+    "id": "u4-L1-Q28",
+    "type": "multiple-choice",
+    "question": "In property tables, what does the subscript \"f\" represent (as in v_f, h_f)?",
+    "options": [
+      "Frozen (solid) state",
+      "Final state of a process",
+      "Saturated liquid",
+      "Reference state"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "\"f\" stands for saturated liquid (from German \"flussig\"), \"g\" for saturated vapor, and \"fg\" for the difference.",
+    "explanationLine": 285
+  },
+  {
+    "id": "u4-L1-Q3",
+    "type": "true-false",
+    "question": "For an ideal gas, the internal energy depends only on temperature, not on pressure or volume.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "For an ideal gas, u = u(T) only. No intermolecular forces means energy depends only on molecular kinetic energy (temperature).",
+    "explanationLine": 322
+  },
+  {
+    "id": "u4-L1-Q4",
+    "type": "multiple-choice",
+    "question": "Why is cp always greater than cv for any gas?",
+    "options": [
+      "At constant pressure, heat dissipates to surroundings faster",
+      "At constant pressure, the gas must also do expansion work",
+      "At constant volume, energy is stored as intermolecular potential",
+      "At constant pressure, molecular speeds increase due to lower density"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "At constant volume, all heat raises internal energy. At constant pressure, extra energy is needed for expansion work.",
+    "explanationLine": 336
+  },
+  {
+    "id": "u4-L1-Q12",
+    "type": "true-false",
+    "question": "The specific heat ratio for air is approximately 1.4 because air behaves as a diatomic ideal gas.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "For a diatomic gas with 5 active degrees of freedom: cv = (5/2)R and cp = (7/2)R, so gamma = 7/5 = 1.4.",
+    "explanationLine": 352
+  },
+  {
+    "id": "u4-L1-Q16",
+    "type": "multiple-choice",
+    "question": "Ideal gas at 300 K occupies 2 m3. If heated to 600 K at constant pressure, what is the new volume?",
+    "options": [
+      "6 m3",
+      "2 m3",
+      "4 m3",
+      "1 m3"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Charles\\",
+    "explanationLine": 367
+  },
+  {
+    "id": "u4-L1-Q20",
+    "type": "multiple-choice",
+    "question": "When using PV = mRT, the R value must be:",
+    "options": [
+      "R = R_universal / M, which differs for each gas",
+      "The universal gas constant always",
+      "The Boltzmann constant",
+      "Any value since the equation adjusts"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The specific gas constant R = R_u/M depends on molar mass M. For air: R = 0.287 kJ/(kg K).",
+    "explanationLine": 382
+  },
+  {
+    "id": "u4-L1-Q10",
+    "type": "multiple-choice",
+    "question": "In the van der Waals equation, what do \"a\" and \"b\" represent?",
+    "options": [
+      "\"a\" for gas constant correction, \"b\" for compressibility",
+      "\"a\" for kinetic energy, \"b\" for potential energy",
+      "\"a\" for temperature correction, \"b\" for pressure correction",
+      "\"a\" for intermolecular attraction, \"b\" for molecular volume"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The van der Waals equation (P + a/v2)(v - b) = RT corrects for attraction (a) and molecular volume (b).",
+    "explanationLine": 412
+  },
+  {
+    "id": "u4-L1-Q13",
+    "type": "multiple-choice",
+    "question": "What is the compressibility factor Z, and what does Z < 1 indicate?",
+    "options": [
+      "Z = T_actual/T_critical; Z < 1 means below critical T",
+      "Z = cv/cp; Z < 1 means fewer degrees of freedom",
+      "Z = P_actual/P_ideal; Z < 1 means lower pressure",
+      "Z = Pv/(RT); Z < 1 means intermolecular attraction dominates"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Z = Pv/(RT). Z = 1 is ideal. Z < 1 means attraction pulls molecules closer, reducing volume below ideal.",
+    "explanationLine": 427
+  },
+  {
+    "id": "u4-L1-Q30",
+    "type": "multiple-choice",
+    "question": "What is the principle of corresponding states?",
+    "options": [
+      "All gases share the same critical point properties",
+      "All gases at the same reduced T and P have similar Z",
+      "Gases at equal reduced conditions have identical structures",
+      "Reduced properties eliminate the need for equations of state"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "This principle lets a single generalized chart work for any gas using reduced pressure and temperature.",
+    "explanationLine": 442
+  },
+  {
+    "id": "u4-L2-Q0a",
+    "type": "true-false",
+    "question": "Energy can be created or destroyed in a thermodynamic process.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The first law says energy is conserved. It can only be converted from one form to another.",
+    "explanationLine": 468
+  },
+  {
+    "id": "u4-L2-Q7",
+    "type": "multiple-choice",
+    "question": "What is the difference between a closed and an open system?",
+    "options": [
+      "A closed system exchanges energy but not mass",
+      "A closed system has no interactions at all",
+      "A closed system is always rigid",
+      "The terms are interchangeable"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A closed system (control mass) has a fixed amount of mass. No mass crosses the boundary, but energy can.",
+    "explanationLine": 493
+  },
+  {
+    "id": "u4-L2-Q1",
+    "type": "multiple-choice",
+    "question": "A heat engine claims 600 kJ of work from 500 kJ of heat per cycle. What is wrong?",
+    "options": [
+      "Nothing: the extra energy comes from internal energy",
+      "It violates the second law only",
+      "It violates the first law: W_net cannot exceed Q_in in a cycle",
+      "It violates the zeroth law"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "In a cycle, delta U = 0, so Q_net = W_net. You can\\",
+    "explanationLine": 525
+  },
+  {
+    "id": "u4-L2-Q12",
+    "type": "true-false",
+    "question": "Boundary work for a constant-volume process is always zero.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "W = integral of P dV. If dV = 0, then W = 0 regardless of pressure changes.",
+    "explanationLine": 533
+  },
+  {
+    "id": "u4-L2-Q21",
+    "type": "true-false",
+    "question": "Work done by a gas during expansion depends on the process path, not just the initial and final states.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Work (W = integral of P dV) is a path function. Different paths between the same endpoints give different work values.",
+    "explanationLine": 552
+  },
+  {
+    "id": "u4-L2-Q5",
+    "type": "multiple-choice",
+    "question": "Insulated rigid tank: 2 kg of air (cv = 0.718) at 300 K. Paddle wheel does 100 kJ. Final T?",
+    "options": [
+      "350.0 K",
+      "439.2 K",
+      "300.0 K",
+      "369.6 K"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Q=0, W_boundary=0. delta U = +100 kJ (work done ON gas). delta T = 100/(2 x 0.718) = 69.6 K. T2 = 369.6 K.",
+    "explanationLine": 567
+  },
+  {
+    "id": "u4-L2-Q9",
+    "type": "true-false",
+    "question": "In a steady-state open system, the total energy and mass within the control volume stay constant over time.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Steady-state means dm/dt = 0 and dE/dt = 0. Whatever flows in must flow out.",
+    "explanationLine": 593
+  },
+  {
+    "id": "u4-L2-Q2",
+    "type": "multiple-choice",
+    "question": "Why is KE change neglected for a turbine but is the primary term for a nozzle?",
+    "options": [
+      "Turbines operate at low speeds so KE is always zero",
+      "A turbine extracts energy as shaft work with modest velocity changes",
+      "Fluid density changes through a turbine differently",
+      "Turbines have long flow paths that dissipate KE as friction"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "In a turbine, shaft work dominates and velocity changes are small. In a nozzle, all enthalpy drop converts to KE.",
+    "explanationLine": 608
+  },
+  {
+    "id": "u4-L2-Q3",
+    "type": "true-false",
+    "question": "A throttling valve is modeled as isenthalpic (h_in = h_out) because it has no work, negligible heat transfer, and small KE change.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Apply the SFEE with w_s = 0, q = 0, and negligible KE: h1 = h2.",
+    "explanationLine": 617
+  },
+  {
+    "id": "u4-L2-Q11",
+    "type": "multiple-choice",
+    "question": "Mixing chamber: 2 kg/s at 20C + 3 kg/s at 80C. Outlet T with no heat loss?",
+    "options": [
+      "50C",
+      "56C",
+      "60C",
+      "44C"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Energy balance: 2(20) + 3(80) = 5(T_out). T_out = 280/5 = 56C.",
+    "explanationLine": 632
+  },
+  {
+    "id": "u4-L2-Q10",
+    "type": "multiple-choice",
+    "question": "Turbine: inlet 50 m/s, outlet 200 m/s, enthalpy drop 1000 kJ/kg. Can we neglect KE?",
+    "options": [
+      "No: KE is always significant in turbomachinery",
+      "Yes: delta KE is about 19 kJ/kg vs. 1000 kJ/kg",
+      "Only if the fluid is incompressible",
+      "No: 200 m/s exit makes KE dominant"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "delta KE = (200^2 - 50^2)/(2 x 1000) = 18.75 kJ/kg. Under 2% of enthalpy drop.",
+    "explanationLine": 657
+  },
+  {
+    "id": "u4-L2-Q14",
+    "type": "multiple-choice",
+    "question": "What is the back-work ratio (BWR)?",
+    "options": [
+      "w_turbine / w_compressor: the inverse",
+      "w_compressor / w_turbine: fraction of turbine work fed back",
+      "Heat rejected / heat added",
+      "Isentropic efficiency of compression"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "BWR = compressor work / turbine work. Rankine: 1-3%. Brayton: 40-80%.",
+    "explanationLine": 672
+  },
+  {
+    "id": "u4-L2-Q23",
+    "type": "multiple-choice",
+    "question": "What is flow work?",
+    "options": [
+      "Work to push fluid across the control volume boundary",
+      "Kinetic energy of the flowing fluid",
+      "Friction loss in the piping",
+      "Shaft work to maintain steady flow"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Flow work = Pv per unit mass. That\\",
+    "explanationLine": 687
+  },
+  {
+    "id": "u4-L2-Q17",
+    "type": "multiple-choice",
+    "question": "A turbine has isentropic efficiency of 85%. What does this mean?",
+    "options": [
+      "Exit temperature is 85% of inlet temperature",
+      "It converts 85% of heat input to work",
+      "85% of steam passes through without losses",
+      "Actual work output is 85% of ideal isentropic output"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "eta_t = w_actual / w_isentropic = (h1 - h2a)/(h1 - h2s).",
+    "explanationLine": 702
+  },
+  {
+    "id": "u4-L2-Q26",
+    "type": "true-false",
+    "question": "In a steady-state adiabatic nozzle, exit velocity depends only on the enthalpy drop.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "With w_s=0, q=0, small inlet velocity: V2 = sqrt(2(h1-h2)). All enthalpy drop becomes KE.",
+    "explanationLine": 711
+  },
+  {
+    "id": "u4-L2c-Q0a",
+    "type": "multiple-choice",
+    "question": "If volume stays constant during a process, the boundary work is:",
+    "options": [
+      "P x delta V",
+      "Zero",
+      "nRT ln(V2/V1)",
+      "Depends on pressure"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "W = integral of P dV. If dV = 0, the integral is zero.",
+    "explanationLine": 743
+  },
+  {
+    "id": "u4-L2-Q4",
+    "type": "multiple-choice",
+    "question": "A compressor has polytropic exponent n = 1.25 (gamma = 1.4). What does this tell you?",
+    "options": [
+      "The compressor loses 25% of energy to friction",
+      "The process lies between isothermal and isentropic compression",
+      "The gas has fewer degrees of freedom than expected",
+      "The compression violates the second law"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Since 1 < n < gamma, the process falls between isothermal (n=1) and isentropic (n=gamma). Real compressors are in this range.",
+    "explanationLine": 782
+  },
+  {
+    "id": "u4-L2-Q16",
+    "type": "multiple-choice",
+    "question": "Isothermal compression of ideal gas. Work done ON the gas is:",
+    "options": [
+      "P(V2 - V1) for constant pressure",
+      "nRT ln(V1/V2), positive since V1 > V2",
+      "ncv delta T = 0 since T is constant",
+      "nRT(1/V2 - 1/V1)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For isothermal ideal gas: W_by = nRT ln(V2/V1). Work ON gas = nRT ln(V1/V2), positive for compression.",
+    "explanationLine": 797
+  },
+  {
+    "id": "u4-L2-Q18",
+    "type": "true-false",
+    "question": "In adiabatic free expansion of an ideal gas, both temperature and internal energy stay unchanged.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Free expansion into vacuum: Q=0, W=0 (no external pressure). First law: delta U = 0. For ideal gas, T stays constant.",
+    "explanationLine": 806
+  },
+  {
+    "id": "u4-L2-Q25",
+    "type": "multiple-choice",
+    "question": "Ideal gas in insulated rigid tank, membrane ruptures into equal-sized vacuum. What happens?",
+    "options": [
+      "T rises, P stays the same",
+      "T halves, P drops to one quarter",
+      "T stays constant, P halves as V doubles",
+      "T and P both stay unchanged"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Free expansion: Q=0, W=0, delta U=0, T=const. From PV=mRT with doubled V: P halves.",
+    "explanationLine": 821
+  },
+  {
+    "id": "u4-L2-Q22",
+    "type": "multiple-choice",
+    "question": "Compressor: T1=300K, T2s=579K, T2a=620K. Isentropic efficiency?",
+    "options": [
+      "87.2%: (579-300)/(620-300)",
+      "93.4%: T2a/T2s",
+      "106.2%: (620-300)/(579-300)",
+      "48.4%: T1/T2a"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Compressor eta = w_ideal/w_actual = (T2s - T1)/(T2a - T1) = 279/320 = 87.2%.",
+    "explanationLine": 843
+  },
+  {
+    "id": "u4-L2-Q19",
+    "type": "multiple-choice",
+    "question": "Pump work for water (v_f = 0.00101 m3/kg) from 10 kPa to 10 MPa?",
+    "options": [
+      "About 1000 kJ/kg",
+      "About 100 kJ/kg",
+      "About 10.1 kJ/kg",
+      "About 0.1 kJ/kg"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "w_pump = v(P2-P1) = 0.00101 x (10000-10) = 10.1 kJ/kg. Pumping liquid is cheap.",
+    "explanationLine": 858
+  },
+  {
+    "id": "u4-L3-Q0a",
+    "type": "true-false",
+    "question": "Heat spontaneously flows from hot to cold objects, never the reverse.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "This is the Clausius statement of the second law. Reversing heat flow requires work (like a refrigerator).",
+    "explanationLine": 884
+  },
+  {
+    "id": "u4-L3-Q1",
+    "type": "multiple-choice",
+    "question": "The Kelvin-Planck statement says:",
+    "options": [
+      "No heat engine can convert all heat input to work in a cycle",
+      "No device can transfer heat from cold to hot spontaneously",
+      "Entropy of an isolated system always decreases",
+      "All reversible engines have the same efficiency"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "You can\\",
+    "explanationLine": 899
+  },
+  {
+    "id": "u4-L3-Q2",
+    "type": "multiple-choice",
+    "question": "Engine receives 1000 kJ from hot source, rejects 600 kJ. Thermal efficiency?",
+    "options": [
+      "37.5%",
+      "60%",
+      "167%",
+      "40%"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "eta = W_net/Q_in = (1000-600)/1000 = 40%.",
+    "explanationLine": 914
+  },
+  {
+    "id": "u4-L3-Q3",
+    "type": "true-false",
+    "question": "A reversible process generates zero entropy.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Reversible processes are ideal: no friction, no heat transfer across finite temperature differences. S_gen = 0.",
+    "explanationLine": 933
+  },
+  {
+    "id": "u4-L3-Q0b",
+    "type": "multiple-choice",
+    "question": "Carnot efficiency between 300 K and 600 K?",
+    "options": [
+      "67%",
+      "100%",
+      "33%",
+      "50%"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "eta = 1 - T_cold/T_hot = 1 - 300/600 = 50%.",
+    "explanationLine": 954
+  },
+  {
+    "id": "u4-L3-Q4",
+    "type": "multiple-choice",
+    "question": "How can you increase Carnot efficiency?",
+    "options": [
+      "Use a gas with higher gamma",
+      "Increase mass flow rate",
+      "Raise T_hot or lower T_cold",
+      "Increase the pressure ratio"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "eta = 1 - T_cold/T_hot. Increase T_hot or decrease T_cold.",
+    "explanationLine": 969
+  },
+  {
+    "id": "u4-L3-Q5",
+    "type": "multiple-choice",
+    "question": "An inventor claims 50% efficiency between 500 K and 300 K. Possible?",
+    "options": [
+      "No: efficiency can never exceed 25%",
+      "Yes: 50% is below the Carnot limit",
+      "Yes: real engines can exceed Carnot",
+      "No: Carnot limit is 1 - 300/500 = 40%"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Carnot = 40%. Claiming 50% violates the second law.",
+    "explanationLine": 984
+  },
+  {
+    "id": "u4-L3b-Q0a",
+    "type": "true-false",
+    "question": "For an isentropic process, the entropy change is zero.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Isentropic = constant entropy. This happens when a process is both adiabatic and reversible.",
+    "explanationLine": 1020
+  },
+  {
+    "id": "u4-L3-Q7",
+    "type": "multiple-choice",
+    "question": "On a T-s diagram, the area under a reversible process curve represents:",
+    "options": [
+      "Heat transfer",
+      "Work done",
+      "Entropy generation",
+      "Internal energy change"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Q_rev = integral of T ds. The area under the curve on T-s equals the heat transfer.",
+    "explanationLine": 1035
+  },
+  {
+    "id": "u4-L3-Q8",
+    "type": "multiple-choice",
+    "question": "Which process has zero heat transfer on a T-s diagram?",
+    "options": [
+      "A diagonal line going up-right",
+      "A horizontal line (isothermal)",
+      "A vertical line (isentropic)",
+      "Any curved path"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "A vertical line means ds = 0 (isentropic). Zero area under a vertical line means Q = 0.",
+    "explanationLine": 1050
+  },
+  {
+    "id": "u4-L3-Q9",
+    "type": "true-false",
+    "question": "Entropy is a state function: its change depends only on initial and final states.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Unlike heat and work, entropy is a property. delta S = S2 - S1 regardless of the path.",
+    "explanationLine": 1069
+  },
+  {
+    "id": "u4-L3-Q10",
+    "type": "multiple-choice",
+    "question": "Steam expanding isentropically in a turbine from state 1 to 2:",
+    "options": [
+      "s1 < s2 because expansion generates entropy",
+      "s1 > s2 because turbine removes entropy",
+      "s1 = s2, find h2 from steam tables at s2 and P2",
+      "Entropy change depends on turbine design"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Isentropic: s1 = s2. With s2 and P2, you have two properties to fix state 2.",
+    "explanationLine": 1084
+  },
+  {
+    "id": "u4-L3-Q13",
+    "type": "multiple-choice",
+    "question": "Ideal gas entropy change from (T1,P1) to (T2,P2):",
+    "options": [
+      "ds = cv ln(T2/T1) - R ln(P2/P1)",
+      "ds = cp ln(T2/T1) - R ln(P2/P1)",
+      "ds = cp ln(P2/P1) - R ln(T2/T1)",
+      "ds = R ln(T2/T1) + cp ln(P2/P1)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "From the T ds relation and ideal gas law: ds = cp ln(T2/T1) - R ln(P2/P1).",
+    "explanationLine": 1099
+  },
+  {
+    "id": "u4-L3-Q11",
+    "type": "multiple-choice",
+    "question": "Heat exchanger: hot fluid 500K to 400K, cold fluid 300K to 350K. Reversible?",
+    "options": [
+      "Yes: both reach similar temperatures",
+      "Yes: total heat is conserved",
+      "No: finite temperature difference always generates entropy",
+      "No: but only because of pipe friction"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Heat transfer across a finite temperature difference is always irreversible. S_gen > 0.",
+    "explanationLine": 1114
+  },
+  {
+    "id": "u4-L3-Q12",
+    "type": "true-false",
+    "question": "Intercooling between compression stages reduces total compressor work.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Intercooling moves the process closer to isothermal, which needs less work than isentropic compression.",
+    "explanationLine": 1123
+  },
+  {
+    "id": "u4-L3-Q14",
+    "type": "multiple-choice",
+    "question": "Water heated from 20C to 80C at constant pressure. System entropy:",
+    "options": [
+      "Decreases, because water becomes more organized",
+      "Increases, because heat is added",
+      "Stays the same at constant pressure",
+      "Is undefined for liquids"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Adding heat increases system entropy. delta s = integral dQ/T > 0 when Q > 0.",
+    "explanationLine": 1138
+  },
+  {
+    "id": "u4-L3c-Q0a",
+    "type": "true-false",
+    "question": "Irreversibilities destroy the useful work potential (exergy) of a system.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Every irreversibility generates entropy and reduces useful work output.",
+    "explanationLine": 1164
+  },
+  {
+    "id": "u4-L3-Q16",
+    "type": "multiple-choice",
+    "question": "Which is NOT a source of irreversibility?",
+    "options": [
+      "Friction between moving parts",
+      "Quasi-static compression",
+      "Rapid unrestrained expansion",
+      "Heat transfer across large delta T"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Quasi-static (very slow) processes approach reversibility. The others are classic irreversibilities.",
+    "explanationLine": 1203
+  },
+  {
+    "id": "u4-L3-Q17",
+    "type": "multiple-choice",
+    "question": "Hot block (500K) + cold block (300K) reach 400K. Did entropy increase?",
+    "options": [
+      "No: the average temperature didn\\",
+      "No: total energy is conserved so entropy is too",
+      "Yes: heat transfer across finite delta T always generates entropy",
+      "Depends on the material"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Entropy gained by the cold block exceeds entropy lost by the hot block. Net S_gen > 0.",
+    "explanationLine": 1218
+  },
+  {
+    "id": "u4-L3-Q18",
+    "type": "true-false",
+    "question": "A decrease in entropy of a system is impossible.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "A system\\",
+    "explanationLine": 1227
+  },
+  {
+    "id": "u4-L3-Q19",
+    "type": "multiple-choice",
+    "question": "A perpetual motion machine of the second kind (PMM2) is:",
+    "options": [
+      "A device that converts heat entirely into work in a cycle",
+      "A frictionless machine that runs forever",
+      "A device that creates energy from nothing",
+      "A device that transfers heat cold to hot with no input"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "PMM2 violates the Kelvin-Planck statement. 100% heat-to-work conversion in a cycle is impossible.",
+    "explanationLine": 1242
+  },
+  {
+    "id": "u4-L3-Q20",
+    "type": "multiple-choice",
+    "question": "Why is isentropic efficiency of real devices always less than 100%?",
+    "options": [
+      "Temperature measurements are imperfect",
+      "The working fluid is never truly ideal",
+      "Friction, heat losses, and other irreversibilities",
+      "The second law limits it to the Carnot value"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Friction, turbulence, heat loss, and non-equilibrium processes all generate entropy and reduce efficiency.",
+    "explanationLine": 1267
+  },
+  {
+    "id": "u4-L3-Q30",
+    "type": "multiple-choice",
+    "question": "An engine operating between a single reservoir and producing net work is:",
+    "options": [
+      "A perpetual motion machine of the second kind",
+      "A Carnot engine at max efficiency",
+      "Possible if the reservoir is large enough",
+      "A reversible heat pump in reverse"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Violates Kelvin-Planck. You need at least two reservoirs for a heat engine cycle.",
+    "explanationLine": 1282
+  },
+  {
+    "id": "u4-L4-Q0a",
+    "type": "multiple-choice",
+    "question": "The 4 components of a basic Rankine cycle are:",
+    "options": [
+      "Evaporator, compressor, condenser, valve",
+      "Compressor, combustor, turbine, exhaust",
+      "Pump, boiler, turbine, condenser",
+      "Intake, compression, combustion, exhaust"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Rankine: pump compresses liquid, boiler adds heat, turbine produces work, condenser rejects heat.",
+    "explanationLine": 1314
+  },
+  {
+    "id": "u4-L4-Q1",
+    "type": "multiple-choice",
+    "question": "Why does the Rankine cycle have such a low back-work ratio (1-3%)?",
+    "options": [
+      "Pumping liquid needs much less work than compressing gas",
+      "The boiler provides most of the energy",
+      "Steam turbines are more efficient than gas turbines",
+      "The condenser recovers most pump work"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Liquid is nearly incompressible, so pump work (v delta P) is tiny compared to turbine output.",
+    "explanationLine": 1329
+  },
+  {
+    "id": "u4-L4-Q2",
+    "type": "multiple-choice",
+    "question": "How does reheating improve the Rankine cycle?",
+    "options": [
+      "It eliminates the condenser",
+      "It raises average T of heat addition and improves exit steam quality",
+      "It replaces the pump",
+      "It reduces boiler pressure"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Reheat: partially expand, reheat in boiler, expand again. Higher average T and better exit quality.",
+    "explanationLine": 1358
+  },
+  {
+    "id": "u4-L4-Q3",
+    "type": "true-false",
+    "question": "Regeneration in Rankine uses extracted steam to preheat feedwater before the boiler.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Feedwater heaters use extracted turbine steam to warm the compressed liquid, raising average T of heat addition.",
+    "explanationLine": 1367
+  },
+  {
+    "id": "u4-L4-Q4",
+    "type": "multiple-choice",
+    "question": "Why must turbine exit quality stay above about 90%?",
+    "options": [
+      "Condenser can\\",
+      "Wet steam can\\",
+      "Liquid droplets erode the turbine blades",
+      "Low quality means the cycle reversed"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Water droplets in high-speed steam hit blades like tiny bullets, causing erosion over time.",
+    "explanationLine": 1392
+  },
+  {
+    "id": "u4-L4-Q5",
+    "type": "multiple-choice",
+    "question": "Ideal Rankine: Q_in=2500, Q_out=1800 kJ/kg. Thermal efficiency?",
+    "options": [
+      "50%",
+      "72%",
+      "38.9%",
+      "28%"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "eta = 1 - Q_out/Q_in = 1 - 1800/2500 = 28%.",
+    "explanationLine": 1407
+  },
+  {
+    "id": "u4-L4-Q6",
+    "type": "true-false",
+    "question": "In a supercritical Rankine cycle, there is no distinct boiling process.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Above the critical point, no phase boundary exists. The fluid smoothly transitions from liquid-like to vapor-like.",
+    "explanationLine": 1423
+  },
+  {
+    "id": "u4-L4b-Q0a",
+    "type": "multiple-choice",
+    "question": "In the ideal Otto cycle, combustion is modeled as:",
+    "options": [
+      "Constant-pressure heat addition",
+      "Constant-volume heat addition",
+      "Isothermal heat addition",
+      "Isentropic heat addition"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "In gasoline engines, fuel burns fast with the piston nearly stationary. Modeled as constant-V heat addition.",
+    "explanationLine": 1454
+  },
+  {
+    "id": "u4-L4-Q7",
+    "type": "multiple-choice",
+    "question": "Ideal Otto efficiency with r=8, gamma=1.4?",
+    "options": [
+      "62.5%",
+      "44.4%",
+      "56.5%",
+      "50.0%"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "eta = 1 - 1/8^0.4 = 1 - 1/2.297 = 56.5%.",
+    "explanationLine": 1469
+  },
+  {
+    "id": "u4-L4-Q8",
+    "type": "multiple-choice",
+    "question": "At the same compression ratio, which has higher efficiency?",
+    "options": [
+      "Depends on working fluid",
+      "Diesel: it uses higher pressures",
+      "Equal at the same r",
+      "Otto: constant-V heat addition is more efficient"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "At the same r, Otto > Diesel. But real Diesel engines use higher r, so their actual efficiency is often higher.",
+    "explanationLine": 1501
+  },
+  {
+    "id": "u4-L4-Q9",
+    "type": "true-false",
+    "question": "The Brayton cycle (gas turbine) has a much higher BWR than the Rankine cycle.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Brayton BWR: 40-80% (compressing gas is expensive). Rankine BWR: 1-3% (pumping liquid is cheap).",
+    "explanationLine": 1510
+  },
+  {
+    "id": "u4-L4-Q10",
+    "type": "multiple-choice",
+    "question": "How does increasing pressure ratio affect ideal Brayton efficiency?",
+    "options": [
+      "Efficiency decreases: more compressor work",
+      "Efficiency increases: eta = 1 - 1/r_p^((gamma-1)/gamma)",
+      "No effect: depends only on temperature ratio",
+      "Increases then decreases"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Ideal Brayton efficiency depends only on pressure ratio. Higher r_p = higher efficiency.",
+    "explanationLine": 1525
+  },
+  {
+    "id": "u4-L4-Q12",
+    "type": "true-false",
+    "question": "In the ideal Brayton cycle, thermal efficiency depends only on pressure ratio, not on T_max.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "eta = 1 - 1/r_p^((gamma-1)/gamma). T_max affects specific work output but not ideal efficiency.",
+    "explanationLine": 1534
+  },
+  {
+    "id": "u4-L4-Q13",
+    "type": "multiple-choice",
+    "question": "Main advantage of a combined Brayton-Rankine cycle?",
+    "options": [
+      "Captures gas turbine exhaust heat to run a steam cycle",
+      "Eliminates the condenser",
+      "Uses a single working fluid",
+      "Operates at lower temperatures"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Combined cycles reach 60%+ efficiency by using hot exhaust as the Rankine heat source.",
+    "explanationLine": 1549
+  },
+  {
+    "id": "u4-L4-Q11",
+    "type": "multiple-choice",
+    "question": "What is the dual cycle?",
+    "options": [
+      "A cycle with two turbines",
+      "Two Carnot cycles in series",
+      "Part constant-V and part constant-P heat addition, modeling real engines",
+      "Otto followed by Rankine"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The dual cycle combines Otto and Diesel features for a more realistic engine model.",
+    "explanationLine": 1564
+  },
+  {
+    "id": "u4-L4c-Q0a",
+    "type": "true-false",
+    "question": "Real power cycles always have lower efficiency than their ideal counterparts.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Friction, heat losses, and non-ideal components reduce real cycle efficiency below the ideal.",
+    "explanationLine": 1589
+  },
+  {
+    "id": "u4-L4-Q14",
+    "type": "multiple-choice",
+    "question": "Mean effective pressure (MEP) is:",
+    "options": [
+      "Max pressure / compression ratio",
+      "W_net / displacement volume",
+      "Average of all pressures in cycle",
+      "Pressure at peak piston speed"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "MEP = W_net/(V_max - V_min). Useful for comparing engines of different sizes.",
+    "explanationLine": 1604
+  },
+  {
+    "id": "u4-L4-Q16",
+    "type": "multiple-choice",
+    "question": "Brayton regeneration works by:",
+    "options": [
+      "Compressing in multiple stages",
+      "Using hot exhaust to preheat air before combustion",
+      "Reheating between turbine stages",
+      "Cooling between compressor stages"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A regenerator transfers heat from hot exhaust to compressed air, reducing fuel consumption.",
+    "explanationLine": 1639
+  },
+  {
+    "id": "u4-L4-Q18",
+    "type": "true-false",
+    "question": "The Ericsson cycle with perfect regeneration achieves Carnot efficiency.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Both Ericsson and Stirling cycles match Carnot when operated reversibly with perfect regeneration.",
+    "explanationLine": 1648
+  },
+  {
+    "id": "u4-L4-Q19",
+    "type": "multiple-choice",
+    "question": "Combined cycle: gas turbine 38% efficient, steam captures 30% of rejected heat. Overall?",
+    "options": [
+      "About 68%",
+      "About 56.6%",
+      "About 38%",
+      "About 50%"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Rejected: 62%. Steam captures 30% of 62% = 18.6%. Total: 38% + 18.6% = 56.6%.",
+    "explanationLine": 1663
+  },
+  {
+    "id": "u4-L4-Q20",
+    "type": "multiple-choice",
+    "question": "Why can\\",
+    "options": [
+      "Friction increases linearly with r",
+      "Higher r reduces displacement volume",
+      "Ideal gas model breaks down",
+      "Engine knock limits compression ratio for gasoline"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Gasoline auto-ignites at high r, causing knock. Diesel avoids this by injecting fuel after compression.",
+    "explanationLine": 1678
+  },
+  {
+    "id": "u4-L4-Q21",
+    "type": "true-false",
+    "question": "Increasing turbine inlet temperature is the most effective way to improve Brayton specific work output.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Higher T3 increases both efficiency and specific work. Material limits cap T3 at about 1500-1700C.",
+    "explanationLine": 1687
+  },
+  {
+    "id": "u4-L5-Q0a",
+    "type": "true-false",
+    "question": "The COP of a refrigerator can be greater than 1.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "COP = Q_cold / W. Since you\\",
+    "explanationLine": 1713
+  },
+  {
+    "id": "u4-L5-Q1",
+    "type": "multiple-choice",
+    "question": "The 4 components of a basic vapor-compression refrigeration cycle:",
+    "options": [
+      "Compressor, condenser, expansion valve, evaporator",
+      "Pump, boiler, turbine, condenser",
+      "Compressor, combustor, turbine, nozzle",
+      "Compressor, regenerator, turbine, cooler"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Compressor raises pressure, condenser rejects heat, valve drops pressure, evaporator absorbs heat.",
+    "explanationLine": 1728
+  },
+  {
+    "id": "u4-L5-Q2",
+    "type": "multiple-choice",
+    "question": "Why use an expansion valve instead of a turbine in most refrigeration?",
+    "options": [
+      "Expansion must be isentropic",
+      "Turbines cannot handle two-phase flow",
+      "Recovered work would be tiny and not worth the complexity",
+      "Valves are more efficient than turbines"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "A turbine could recover some work, but it\\",
+    "explanationLine": 1757
+  },
+  {
+    "id": "u4-L5-Q0b",
+    "type": "multiple-choice",
+    "question": "If COP_R = 3, then COP_HP for the same cycle is:",
+    "options": [],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "COP_HP = COP_R + 1 = 3 + 1 = 4.",
+    "explanationLine": 1773
+  },
+  {
+    "id": "u4-L5-Q3",
+    "type": "true-false",
+    "question": "A heat pump with COP=4 delivers 4 kW of heating for every 1 kW of electricity.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "COP_HP = Q_hot/W. Q_hot = 4 x 1 = 4 kW.",
+    "explanationLine": 1782
+  },
+  {
+    "id": "u4-L5-Q4",
+    "type": "multiple-choice",
+    "question": "Carnot COP of a refrigerator between -10C and 35C?",
+    "options": [],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "COP = T_cold/(T_hot - T_cold) = 263/(308-263) = 263/45 = 5.84.",
+    "explanationLine": 1802
+  },
+  {
+    "id": "u4-L5-Q5",
+    "type": "multiple-choice",
+    "question": "Why does lowering evaporator temperature reduce COP?",
+    "options": [
+      "Condenser becomes less effective",
+      "Refrigerant absorbs less heat",
+      "Refrigerant freezes",
+      "Compressor must bridge a larger pressure difference"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Lower evaporator T = lower P = bigger pressure ratio = more compressor work for less cooling.",
+    "explanationLine": 1817
+  },
+  {
+    "id": "u4-L5b-Q0a",
+    "type": "multiple-choice",
+    "question": "Why were CFC refrigerants like R-12 banned?",
+    "options": [
+      "Too expensive to produce",
+      "They destroy the ozone layer",
+      "Very low COP",
+      "Freeze at operating temperatures"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "CFCs release chlorine in the stratosphere, destroying ozone. The Montreal Protocol phased them out.",
+    "explanationLine": 1848
+  },
+  {
+    "id": "u4-L5-Q7",
+    "type": "multiple-choice",
+    "question": "Why is subcooling before the expansion valve beneficial?",
+    "options": [
+      "More heat absorption in evaporator by reducing flash gas",
+      "Reduces condenser pressure",
+      "Makes the valve more efficient",
+      "Prevents evaporator frost"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Subcooling reduces vapor formed during throttling. More liquid enters the evaporator, absorbing more heat.",
+    "explanationLine": 1873
+  },
+  {
+    "id": "u4-L5-Q8",
+    "type": "multiple-choice",
+    "question": "Main advantage of cascade refrigeration?",
+    "options": [
+      "COP above Carnot limit",
+      "Uses only natural refrigerants",
+      "Eliminates the compressor",
+      "Achieves very low temperatures with two refrigerant loops"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Cascade uses two loops in series, each handling a smaller temperature range. Better for ultra-low temperatures.",
+    "explanationLine": 1898
+  },
+  {
+    "id": "u4-L5-Q9",
+    "type": "true-false",
+    "question": "Absorption refrigeration replaces the compressor with a heat-driven absorber-generator pair.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Absorption cycles use heat (gas, solar, waste) instead of mechanical work. Ammonia-water and LiBr-water are most common.",
+    "explanationLine": 1907
+  },
+  {
+    "id": "u4-L5-Q10",
+    "type": "multiple-choice",
+    "question": "What happens if the condenser is dirty and partially blocked?",
+    "options": [
+      "Head pressure rises, COP drops, energy consumption increases",
+      "Head pressure drops, COP improves",
+      "Evaporator T rises, improving capacity",
+      "No change: expansion valve compensates"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Dirty condenser can\\",
+    "explanationLine": 1922
+  },
+  {
+    "id": "u4-L5-Q11",
+    "type": "multiple-choice",
+    "question": "What does a suction line accumulator do?",
+    "options": [
+      "Reduces pressure pulsations",
+      "Stores excess charge during low load",
+      "Catches liquid refrigerant before it reaches the compressor",
+      "Subcools liquid before the valve"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The accumulator traps any liquid that didn\\",
+    "explanationLine": 1937
+  },
+  {
+    "id": "u4-L5-Q12",
+    "type": "true-false",
+    "question": "A thermoelectric (Peltier) cooler uses refrigerant and a compressor.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Peltier devices use the thermoelectric effect. Electric current pumps heat across a junction. No refrigerant, no moving parts.",
+    "explanationLine": 1946
+  },
+  {
+    "id": "u4-L5c-Q0a",
+    "type": "multiple-choice",
+    "question": "1 ton of refrigeration equals:",
+    "options": [],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "One ton = cooling to freeze 2000 lb of ice per day = 3.517 kW (12,000 BTU/hr).",
+    "explanationLine": 1972
+  },
+  {
+    "id": "u4-L5-Q13",
+    "type": "multiple-choice",
+    "question": "During a heat pump defrost cycle:",
+    "options": [
+      "The compressor shuts off, fan melts ice",
+      "An electric heater warms the indoor coil",
+      "The cycle temporarily reverses to melt outdoor coil ice",
+      "Warm refrigerant bypasses the outdoor coil"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Reversing valve switches the cycle so the outdoor coil becomes a condenser temporarily, melting frost.",
+    "explanationLine": 1987
+  },
+  {
+    "id": "u4-L5-Q14",
+    "type": "multiple-choice",
+    "question": "Why does a heat pump become less effective as outdoor T drops?",
+    "options": [
+      "Indoor thermostat limits capacity",
+      "Refrigerant freezes in outdoor coil",
+      "Larger temperature lift requires more compressor work",
+      "Only because defrost runs more often"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Lower outdoor T = lower evaporator P = bigger pressure ratio = more work per unit of heat. COP drops.",
+    "explanationLine": 2002
+  },
+  {
+    "id": "u4-L5-Q16",
+    "type": "multiple-choice",
+    "question": "Inverter (variable-speed) compressors improve efficiency by:",
+    "options": [
+      "Eliminating the expansion valve",
+      "Running at max speed always",
+      "Matching speed to actual load, avoiding on-off cycling",
+      "Reducing refrigerant charge"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Inverter compressors ramp up/down to match demand. Less energy waste, steadier temperatures.",
+    "explanationLine": 2037
+  },
+  {
+    "id": "u4-L5-Q18",
+    "type": "true-false",
+    "question": "An oversized AC is worse than a properly sized one because it short-cycles and fails to dehumidify.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Oversized units cool quickly but shut off before removing enough moisture. Cold and clammy.",
+    "explanationLine": 2046
+  },
+  {
+    "id": "u4-L5-Q19",
+    "type": "multiple-choice",
+    "question": "What happens when a system is overcharged with refrigerant?",
+    "options": [
+      "No change: valve regulates flow",
+      "Evaporator T drops, improving cooling",
+      "Compressor runs more efficiently",
+      "Excess liquid in condenser raises head pressure, reduces efficiency"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Overcharging floods the condenser, reducing heat rejection area. Pressure rises, COP drops.",
+    "explanationLine": 2061
+  },
+  {
+    "id": "u4-L5-Q20",
+    "type": "multiple-choice",
+    "question": "Geothermal heat pumps have higher COP than air-source because:",
+    "options": [
+      "They have larger compressors",
+      "They use a more efficient refrigerant",
+      "Ground temperature is more stable than air temperature",
+      "They operate at higher pressures"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Ground stays 10-15C year-round. In winter, much warmer than air, giving a smaller temperature lift.",
+    "explanationLine": 2076
+  }
+]

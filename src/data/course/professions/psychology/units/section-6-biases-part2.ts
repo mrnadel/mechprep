@@ -34,6 +34,9 @@ export const psySection6Part2: Unit[] = [
             question: 'A sunk cost is money or effort already spent that can\'t be recovered.',
             correctAnswer: true,
             explanation: 'Sunk costs are past investments. They\'re gone regardless of what you do next.',
+            distractorExplanations: {
+              1: 'A sunk cost is by definition irrecoverable; money or effort already spent cannot be gotten back.',
+            },
           },
           {
             id: 'psy-sec6-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Rational decisions look forward, not backward. Past spending is irrelevant to future value.',
+            distractorExplanations: {
+              0: 'Past spending is irrelevant to future value; focusing on it is the sunk cost fallacy.',
+              1: 'Time already invested is also a sunk cost and should not drive future decisions.',
+              3: 'What other people think is social pressure, not rational economic analysis.',
+            },
           },
           {
             id: 'psy-sec6-u6-L1-T2',
@@ -67,6 +75,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The $100 is gone either way. Going sick in a blizzard just adds more misery to the loss.',
+            distractorExplanations: {
+              0: 'Going because you already spent $100 is the sunk cost fallacy in action.',
+              2: 'The money is already gone whether you go or not; attending sick just adds misery.',
+              3: 'Selling is an option but is not presented as the best rational choice in this scenario.',
+            },
           },
           {
             id: 'psy-sec6-u6-L1-Q4',
@@ -95,6 +108,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Billions in sunk costs kept the project alive long past the point of reason.',
+            distractorExplanations: {
+              0: 'The Concorde was funded despite rational analysis showing it would never be profitable.',
+              2: 'The Concorde was actually one of the most expensive aircraft programs in history.',
+              3: 'The project continued far too long precisely because of sunk cost thinking, not early cancellation.',
+            },
           },
           {
             id: 'psy-sec6-u6-L1-Q6',
@@ -135,6 +153,9 @@ export const psySection6Part2: Unit[] = [
             question: 'The more you invest in a failing project, the easier it becomes to quit.',
             correctAnswer: false,
             explanation: 'It actually gets harder. Each additional investment raises the stakes, making quitting feel like an even bigger loss.',
+            distractorExplanations: {
+              1: 'Each additional investment raises the psychological stakes, making it progressively harder to walk away.',
+            },
           },
           {
             id: 'psy-sec6-u6-L2-Q2',
@@ -148,6 +169,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Escalation of commitment predicts doubling down on failing investments to justify past spending.',
+            distractorExplanations: {
+              0: 'Escalation of commitment predicts the opposite: doubling down rather than cutting losses.',
+              2: 'Asking customers is a rational step, but the bias predicts skipping rational evaluation.',
+              3: 'Rationally evaluating future potential is what people should do, but the bias prevents it.',
+            },
           },
           {
             id: 'psy-sec6-u6-L2-T2',
@@ -187,6 +213,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This question forces you to evaluate the project\'s future value, ignoring past spending.',
+            distractorExplanations: {
+              0: 'Asking how much you have spent keeps you focused on sunk costs rather than future value.',
+              2: 'What others think introduces social pressure, not rational analysis.',
+              3: 'Asking how much more to spend still frames the decision around the sunk cost.',
+            },
           },
           {
             id: 'psy-sec6-u6-L2-T3',
@@ -207,6 +238,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The 3 years are gone regardless. Staying in a hated career just adds more unhappy years.',
+            distractorExplanations: {
+              1: 'Staying to avoid wasting 3 years is the sunk cost fallacy; those years are gone regardless.',
+              2: 'Taking a break without changing course does not address the fundamental dissatisfaction.',
+              3: 'Delegating a major life decision to others avoids personal responsibility and sunk cost analysis.',
+            },
           },
           {
             id: 'psy-sec6-u6-L2-Q6',
@@ -245,6 +281,9 @@ export const psySection6Part2: Unit[] = [
             question: 'Status quo bias means people prefer things to stay as they are.',
             correctAnswer: true,
             explanation: 'People tend to favor the current situation over change, even when change would improve things.',
+            distractorExplanations: {
+              1: 'Status quo bias is exactly this preference for the current state, even when better alternatives exist.',
+            },
           },
           {
             id: 'psy-sec6-u6-L3-Q2',
@@ -258,6 +297,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Staying with an inferior option because change requires effort is classic status quo bias.',
+            distractorExplanations: {
+              0: 'Switching banks to get a better rate shows openness to change, not status quo bias.',
+              2: 'Comparing all options is rational analysis, not a bias.',
+              3: 'Trying new restaurants every week shows novelty-seeking, the opposite of status quo bias.',
+            },
           },
           {
             id: 'psy-sec6-u6-L3-T2',
@@ -302,6 +346,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Preferring the familiar despite a clearly better alternative is status quo bias.',
+            distractorExplanations: {
+              1: 'Anchoring bias involves initial numbers setting a reference point, not resistance to changing software.',
+              2: 'Confirmation bias would involve seeking positive reviews of the old software, not simply refusing to switch.',
+              3: 'The availability heuristic involves overestimating frequency of recalled events, not software preferences.',
+            },
           },
           {
             id: 'psy-sec6-u6-L3-T3',
@@ -321,6 +370,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The effort barrier is real. Staying requires no energy. Switching requires research, learning, and adjustment.',
+            distractorExplanations: {
+              0: 'Change is not always risky; sometimes staying the same carries greater risk.',
+              1: 'The current option is often not the best; the bias just makes it feel that way.',
+              3: 'Status quo bias shows people resist novelty; they do not naturally seek out the newest options.',
+            },
           },
         ],
       },
@@ -345,6 +399,9 @@ export const psySection6Part2: Unit[] = [
             question: 'Switching the default for organ donation from opt-in to opt-out dramatically increases donation rates.',
             correctAnswer: true,
             explanation: 'Countries with opt-out defaults have donation rates around 85%, compared to 15% for opt-in countries.',
+            distractorExplanations: {
+              1: 'Research consistently shows opt-out defaults raise organ donation rates from about 15% to about 85%.',
+            },
           },
           {
             id: 'psy-sec6-u6-L4-Q2',
@@ -358,6 +415,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Defaults are easy (no action needed) and feel like a recommendation from whoever set them.',
+            distractorExplanations: {
+              0: 'Defaults are not always the best option; they are simply the pre-selected one.',
+              2: 'Most people accept defaults without careful evaluation, which is the whole point.',
+              3: 'No law requires accepting defaults; people simply tend not to change them.',
+            },
           },
           {
             id: 'psy-sec6-u6-L4-T2',
@@ -406,6 +468,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Switching to an opt-out default would likely raise participation from 30% to 80% or more.',
+            distractorExplanations: {
+              0: 'Emails are easily ignored and have low effectiveness compared to changing the default.',
+              2: 'Bonuses help but are far less effective than switching to an opt-out default.',
+              3: 'Requiring meetings adds friction, which would likely reduce participation rather than increase it.',
+            },
           },
           {
             id: 'psy-sec6-u6-L4-T3',
@@ -571,6 +638,9 @@ export const psySection6Part2: Unit[] = [
             question: 'In-group bias only applies to large, meaningful groups like nationality or religion.',
             correctAnswer: false,
             explanation: 'In-group bias appears even with trivially assigned groups, like which team you were randomly placed on.',
+            distractorExplanations: {
+              0: 'In-group bias appears even with randomly assigned, trivial groups, not just meaningful ones.',
+            },
           },
           {
             id: 'psy-sec6-u7-L1-Q2',
@@ -584,6 +654,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Even arbitrary group membership triggers favoritism. The bias is deeply automatic.',
+            distractorExplanations: {
+              0: 'The minimal group experiments found the opposite: people did not treat all equally.',
+              2: 'Participants did not favor the other group; they favored their own.',
+              3: 'Group assignment had a strong effect, even when the assignment was completely random.',
+            },
           },
           {
             id: 'psy-sec6-u7-L1-T2',
@@ -628,6 +703,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Shared group membership (same school) triggers automatic favoritism.',
+            distractorExplanations: {
+              1: 'Anchoring bias involves numbers influencing estimates, not school affiliation influencing hiring.',
+              2: 'The availability heuristic involves ease of recall, not shared group membership.',
+              3: 'The framing effect involves how information is presented, not group-based favoritism.',
+            },
           },
           {
             id: 'psy-sec6-u7-L1-T3',
@@ -648,6 +728,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Blind reviews prevent group membership from influencing evaluation.',
+            distractorExplanations: {
+              0: 'Hiring only from your alma mater is the definition of in-group bias, not a solution.',
+              2: 'Asking about group membership could increase rather than decrease bias.',
+              3: 'Gut feeling is where biases like in-group favoritism thrive.',
+            },
           },
         ],
       },
@@ -672,6 +757,9 @@ export const psySection6Part2: Unit[] = [
             question: 'The halo effect means that attractive people are actually smarter than average.',
             correctAnswer: false,
             explanation: 'Attractive people are perceived as smarter, but attractiveness doesn\'t predict intelligence.',
+            distractorExplanations: {
+              0: 'The halo effect creates a perception of intelligence; attractiveness does not actually predict smarter performance.',
+            },
           },
           {
             id: 'psy-sec6-u7-L2-Q2',
@@ -685,6 +773,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Good appearance and manners create a "halo" that inflates perceived academic ability.',
+            distractorExplanations: {
+              0: 'Appearance and manners do not accurately measure intelligence.',
+              2: 'Anchoring bias involves initial numbers, not appearance influencing grades.',
+              3: 'This is about appearance creating a positive impression, not seeking confirming evidence about reputation.',
+            },
           },
           {
             id: 'psy-sec6-u7-L2-T2',
@@ -725,6 +818,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Arriving late created a negative "horn" that spread to unrelated evaluations.',
+            distractorExplanations: {
+              1: 'The halo effect creates positive impressions; being late would create a negative one.',
+              2: 'Anchoring involves numbers, not a negative impression from tardiness.',
+              3: 'Status quo bias involves preferring the current state, not negatively judging a late candidate.',
+            },
           },
           {
             id: 'psy-sec6-u7-L2-T3',
@@ -744,6 +842,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The celebrity\'s "halo" of attractiveness and likability transfers to the product they endorse.',
+            distractorExplanations: {
+              0: 'Celebrities rarely have genuine expertise in every product they endorse.',
+              2: 'Research shows celebrity endorsements significantly influence consumer decisions.',
+              3: 'The halo effect from celebrity endorsements works across all product categories, not just beauty.',
+            },
           },
           {
             id: 'psy-sec6-u7-L2-Q6',
@@ -776,6 +879,9 @@ export const psySection6Part2: Unit[] = [
             question: 'The fundamental attribution error means we tend to overemphasize situational factors when judging others.',
             correctAnswer: false,
             explanation: 'We do the opposite: we overemphasize personal character when judging others and overemphasize situations when explaining our own behavior.',
+            distractorExplanations: {
+              0: 'The fundamental attribution error is the opposite: we overemphasize personal character, not situational factors, when judging others.',
+            },
           },
           {
             id: 'psy-sec6-u7-L3-Q2',
@@ -789,6 +895,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The error makes you attribute their grumpiness to their personality rather than their circumstances.',
+            distractorExplanations: {
+              0: 'Considering their bad day would be giving situational context, which the attribution error makes us skip.',
+              2: 'Wondering what happened to them shows empathy that the attribution error typically overrides.',
+              3: 'Blaming the workplace is a situational explanation, which we tend not to give others.',
+            },
           },
           {
             id: 'psy-sec6-u7-L3-T2',
@@ -834,6 +945,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The error predicts you\'d blame their character while excusing your own miss with situational context.',
+            distractorExplanations: {
+              1: 'The attribution error predicts unequal treatment, not equal consideration.',
+              2: 'We typically blame the situation for our own behavior but character for others.',
+              3: 'We rarely blame our own character; we are much more generous with self-explanations.',
+            },
           },
           {
             id: 'psy-sec6-u7-L3-T3',
@@ -853,6 +969,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Considering the situation before judging character creates fairer, more accurate judgments.',
+            distractorExplanations: {
+              0: 'Assuming everyone has bad character is overly pessimistic and not a solution.',
+              2: 'Never judging anyone is impractical; the goal is fairer, more accurate judgments.',
+              3: 'Blaming situations for everything, including crimes, goes too far in the other direction.',
+            },
           },
         ],
       },
@@ -877,6 +998,9 @@ export const psySection6Part2: Unit[] = [
             question: 'Stereotypes function as a type of cognitive shortcut.',
             correctAnswer: true,
             explanation: 'Like other heuristics, stereotypes save mental effort by using group assumptions instead of individual evaluation.',
+            distractorExplanations: {
+              1: 'Stereotypes are indeed a type of heuristic: group-level generalizations used as mental shortcuts.',
+            },
           },
           {
             id: 'psy-sec6-u7-L4-Q2',
@@ -890,6 +1014,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Stereotypes are energy-saving shortcuts. The brain categorizes to reduce processing load.',
+            distractorExplanations: {
+              0: 'The brain uses stereotypes automatically, not as a deliberate attempt to be unfair.',
+              2: 'Stereotypes are generalizations that are often inaccurate for specific individuals.',
+              3: 'Individuals can be evaluated; the brain just defaults to group shortcuts to save effort.',
+            },
           },
           {
             id: 'psy-sec6-u7-L4-T2',
@@ -910,6 +1039,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Implicit biases work below awareness, influencing behavior even when you consciously reject the stereotype.',
+            distractorExplanations: {
+              0: 'Implicit biases affect everyone, including people with egalitarian beliefs.',
+              2: 'Implicit biases are difficult to detect precisely because they operate unconsciously.',
+              3: 'Implicit biases influence snap judgments in everyday interactions, not just major decisions.',
+            },
           },
           {
             id: 'psy-sec6-u7-L4-Q4',
@@ -957,6 +1091,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Activating the stereotype created anxiety that impaired performance, despite equal ability.',
+            distractorExplanations: {
+              1: 'Both groups had equal math ability; the difference was caused by stereotype activation.',
+              2: 'The instructions contained a stereotype, not math hints.',
+              3: 'The consistent group-level effect rules out random chance as an explanation.',
+            },
           },
         ],
       },
@@ -1096,6 +1235,9 @@ export const psySection6Part2: Unit[] = [
             question: 'Decision fatigue means your decisions get worse after making many in a row.',
             correctAnswer: true,
             explanation: 'Each decision depletes mental energy, leading to poorer choices later.',
+            distractorExplanations: {
+              1: 'Decision fatigue is well-documented: each successive decision depletes mental resources, leading to poorer choices.',
+            },
           },
           {
             id: 'psy-sec6-u8-L1-Q2',
@@ -1109,6 +1251,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'As the day progressed, fatigued judges defaulted to the safer, easier decision: deny parole.',
+            distractorExplanations: {
+              0: 'Offense severity was not correlated with time of day in the study.',
+              2: 'The judges were not biased against afternoon applicants; they were mentally depleted.',
+              3: 'Case scheduling was not based on difficulty; fatigue drove the pattern.',
+            },
           },
           {
             id: 'psy-sec6-u8-L1-T2',
@@ -1144,6 +1291,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Reducing trivial decisions preserves mental energy for the ones that matter.',
+            distractorExplanations: {
+              0: 'Jobs was a billionaire; affordability was not the reason.',
+              2: 'Jobs cared about design and aesthetics deeply; the uniform was a deliberate strategy.',
+              3: 'Apple had no such dress code; this was a personal decision to conserve mental energy.',
+            },
           },
           {
             id: 'psy-sec6-u8-L1-T3',
@@ -1196,6 +1348,9 @@ export const psySection6Part2: Unit[] = [
             question: 'In the jam study, more options led to more purchases.',
             correctAnswer: false,
             explanation: 'Fewer options (6 vs. 24) led to 10 times more purchases. Too many choices overwhelm people.',
+            distractorExplanations: {
+              0: 'The jam study showed the opposite: offering 24 options led to only 3% buying, versus 30% with 6 options.',
+            },
           },
           {
             id: 'psy-sec6-u8-L2-Q2',
@@ -1209,6 +1364,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'More options mean more comparisons and more worry about picking the wrong one.',
+            distractorExplanations: {
+              0: 'People do want some choice, just not an overwhelming number of options.',
+              2: 'The jam study showed that more options led to worse decisions and less satisfaction.',
+              3: 'Most people find extensive comparison stressful, not enjoyable.',
+            },
           },
           {
             id: 'psy-sec6-u8-L2-T2',
@@ -1230,6 +1390,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Fewer, well-curated options reduce choice paralysis and increase satisfaction.',
+            distractorExplanations: {
+              1: 'Adding more items would worsen the choice paralysis that is already causing problems.',
+              2: 'Removing descriptions would make choosing harder, not easier.',
+              3: 'Pressuring customers to choose quickly creates stress without solving the underlying overload.',
+            },
           },
           {
             id: 'psy-sec6-u8-L2-Q4',
@@ -1276,6 +1441,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The jam study showed that reducing options from 24 to 6 dramatically increased purchase rates.',
+            distractorExplanations: {
+              0: 'The jam study proved the opposite: too many options decreased both purchases and satisfaction.',
+              2: 'Jam was the study material, not a finding about grocery popularity.',
+              3: 'The study showed that the number of options, not price, was the key variable.',
+            },
           },
         ],
       },
@@ -1300,6 +1470,9 @@ export const psySection6Part2: Unit[] = [
             question: 'Maximizers tend to be happier with their choices than satisficers.',
             correctAnswer: false,
             explanation: 'Satisficers are generally happier. Maximizers keep wondering if a better option exists.',
+            distractorExplanations: {
+              0: 'Satisficers are generally happier because they do not agonize over whether a better option exists.',
+            },
           },
           {
             id: 'psy-sec6-u8-L3-Q2',
@@ -1336,6 +1509,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The effort of searching creates lingering doubt that something better might exist.',
+            distractorExplanations: {
+              0: 'Maximizers often find objectively better options; the issue is satisfaction, not quality.',
+              2: 'Satisficers and maximizers have similar taste; the difference is search strategy.',
+              3: 'Maximizers care deeply about quality, which is precisely what drives their exhausting search.',
+            },
           },
           {
             id: 'psy-sec6-u8-L3-Q4',
@@ -1383,6 +1561,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Satisficing with clear criteria would end the paralysis and get you a good laptop immediately.',
+            distractorExplanations: {
+              1: 'Comparing 47 more models is maximizing behavior that has already caused 3 weeks of paralysis.',
+              2: 'Waiting indefinitely is avoidance, not a decision strategy.',
+              3: 'Delegating to 20 friends adds more opinions and complexity rather than resolving the paralysis.',
+            },
           },
         ],
       },
@@ -1526,6 +1709,9 @@ export const psySection6Part2: Unit[] = [
             question: 'Learning about a bias is enough to prevent it from affecting you.',
             correctAnswer: false,
             explanation: 'Biases are automatic (System 1). Knowledge alone doesn\'t override automatic processes.',
+            distractorExplanations: {
+              0: 'Biases run on automatic System 1 processes that knowledge alone cannot override.',
+            },
           },
           {
             id: 'psy-sec6-u9-L1-Q2',
@@ -1539,6 +1725,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'System 1 operates automatically. System 2 knowledge can\'t easily override automatic processes.',
+            distractorExplanations: {
+              0: 'People can understand biases intellectually but still fall victim to them automatically.',
+              2: 'Biases affect everyone, including those who have studied them extensively.',
+              3: 'Knowledge does not make biases stronger; it just fails to eliminate automatic processes.',
+            },
           },
           {
             id: 'psy-sec6-u9-L1-T2',
@@ -1575,6 +1766,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Environmental design and structured processes are more reliable than individual effort.',
+            distractorExplanations: {
+              0: 'Trying harder relies on willpower, which is unreliable against automatic biases.',
+              2: 'Avoiding all decisions is impractical and does not count as debiasing.',
+              3: 'The day of the week has no special relevance to debiasing effectiveness.',
+            },
           },
           {
             id: 'psy-sec6-u9-L1-T3',
@@ -1603,6 +1799,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A devil\'s advocate is a structured process. "I\'ll try harder" relies on unreliable willpower.',
+            distractorExplanations: {
+              1: 'Knowledge without structured processes is insufficient to prevent automatic biases.',
+              2: 'Structured processes are significantly more effective than relying on self-awareness alone.',
+              3: 'Research shows structured debiasing tools make measurable improvements in decision quality.',
+            },
           },
         ],
       },
@@ -1627,6 +1828,9 @@ export const psySection6Part2: Unit[] = [
             question: '"Consider the opposite" works by forcing you to think about disconfirming evidence.',
             correctAnswer: true,
             explanation: 'It counters confirmation bias by making you deliberately seek and consider evidence against your view.',
+            distractorExplanations: {
+              1: 'This technique works precisely by forcing you to seek and consider evidence that contradicts your view.',
+            },
           },
           {
             id: 'psy-sec6-u9-L2-Q2',
@@ -1640,6 +1844,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Confirmation bias makes you seek supporting evidence. "Consider the opposite" forces you to seek disconfirming evidence.',
+            distractorExplanations: {
+              0: 'Anchoring bias involves initial numbers, not seeking confirming evidence.',
+              2: 'The endowment effect involves overvaluing owned items, not selective evidence seeking.',
+              3: 'Decision fatigue is about depleted mental energy, not biased evidence seeking.',
+            },
           },
           {
             id: 'psy-sec6-u9-L2-T2',
@@ -1688,6 +1897,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Unanimous enthusiasm without criticism is a sign of groupthink. A devil\'s advocate introduces needed skepticism.',
+            distractorExplanations: {
+              1: 'Unanimous enthusiasm without criticism is a classic sign of groupthink, not a green light.',
+              2: 'Voting confirms agreement but does not challenge the idea or surface hidden weaknesses.',
+              3: 'Canceling the project is an overreaction; the goal is to stress-test the idea, not kill it.',
+            },
           },
           {
             id: 'psy-sec6-u9-L2-T3',
@@ -1707,6 +1921,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Written reasoning creates a record that prevents you from retroactively adjusting your beliefs.',
+            distractorExplanations: {
+              0: 'The goal is not to prove you were right; it is to track how your reasoning evolves.',
+              2: 'Saving time is a minor benefit; the main purpose is preventing retroactive reasoning shifts.',
+              3: 'Impressing others is not the purpose; creating personal accountability for your reasoning is.',
+            },
           },
         ],
       },
@@ -1732,6 +1951,9 @@ export const psySection6Part2: Unit[] = [
             question: 'A pre-mortem is conducted after a project fails.',
             correctAnswer: false,
             explanation: 'A pre-mortem is done before the project starts. You imagine future failure to find risks now.',
+            distractorExplanations: {
+              0: 'A pre-mortem is conducted before the project starts, imagining future failure to identify risks now.',
+            },
           },
           {
             id: 'psy-sec6-u9-L3-Q2',
@@ -1745,6 +1967,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Framing failure as something that already happened triggers explanatory thinking, which is more natural.',
+            distractorExplanations: {
+              1: 'Anxiety is not the mechanism; the technique works by shifting the cognitive framing of failure.',
+              2: 'No technique eliminates all risk; pre-mortems help identify and mitigate risks.',
+              3: 'The technique works because of cognitive reframing, not because failure is enjoyable.',
+            },
           },
           {
             id: 'psy-sec6-u9-L3-T2',
@@ -1778,6 +2005,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Pre-mortems tackle overconfidence about success, underestimating timelines, and uncritical group agreement.',
+            distractorExplanations: {
+              0: 'Pre-mortems address much more than just anchoring bias.',
+              1: 'Pre-mortems go far beyond the availability heuristic to tackle multiple planning biases.',
+              3: 'Sunk cost fallacy is about past investment, not future risk assessment.',
+            },
           },
           {
             id: 'psy-sec6-u9-L3-T3',
@@ -1799,6 +2031,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A pre-mortem would force the team to confront risks their overconfidence is hiding.',
+            distractorExplanations: {
+              1: 'Increasing budget does not address the hidden risks that overconfidence is masking.',
+              2: 'Launching immediately before examining risks is exactly the overconfidence trap.',
+              3: 'External consultants cannot guarantee success; the team needs to confront its own blind spots.',
+            },
           },
           {
             id: 'psy-sec6-u9-L3-Q6',
@@ -1831,6 +2068,9 @@ export const psySection6Part2: Unit[] = [
             question: 'Surgical checklists significantly reduce complications.',
             correctAnswer: true,
             explanation: 'Studies show a roughly 40% reduction in complications when surgical teams use checklists.',
+            distractorExplanations: {
+              1: 'Research demonstrates that surgical checklists reduce complications by approximately 40%.',
+            },
           },
           {
             id: 'psy-sec6-u9-L4-Q2',
@@ -1844,6 +2084,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Checklists ensure critical steps happen regardless of how tired, biased, or distracted you are.',
+            distractorExplanations: {
+              0: 'Checklists may slightly slow things down but their main benefit is reducing errors.',
+              2: 'Checklists reduce but do not permanently eliminate all biases.',
+              3: 'Checklists are effective in many fields beyond surgery, including aviation and business.',
+            },
           },
           {
             id: 'psy-sec6-u9-L4-T2',
@@ -1865,6 +2110,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Structured rubrics reduce in-group bias and halo effects by standardizing evaluation.',
+            distractorExplanations: {
+              1: 'Trusting gut feelings is exactly what allows biases to infiltrate hiring decisions.',
+              2: 'Hiring only from your alma mater is in-group bias, not a debiasing strategy.',
+              3: 'Random hiring would be unfair and ineffective; structured evaluation is the answer.',
+            },
           },
           {
             id: 'psy-sec6-u9-L4-Q4',
@@ -2098,6 +2348,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Pre-mortems ask "imagine this already failed, why?" to surface hidden risks.',
+            distractorExplanations: {
+              0: 'A post-mortem is conducted after a project ends, not before.',
+              2: 'A devil\\u2019s advocate argues against proposals but does not specifically imagine failure scenarios.',
+              3: 'A checklist ensures steps are followed but does not involve imagining project failure.',
+            },
           },
           {
             id: 'psy-sec6-u10-L1-T2',
@@ -2126,6 +2381,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Three biases stack up: news made scams vivid (availability), you resist change (status quo), and fear of loss keeps you stuck (loss aversion).',
+            distractorExplanations: {
+              1: 'Anchoring alone does not explain the combination of news fear, 10-year habit, and risk aversion.',
+              2: 'The framing effect alone does not explain the three distinct bias patterns present.',
+              3: 'Multiple biases are clearly operating in this scenario.',
+            },
           },
           {
             id: 'psy-sec6-u10-L1-Q6',
@@ -2139,6 +2399,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Complete objectivity is impossible. The goal is better decisions through awareness and tools.',
+            distractorExplanations: {
+              0: 'Complete elimination of biases is impossible because they are automatic processes.',
+              2: 'Perfect rationality is unachievable; biases are a fundamental part of human cognition.',
+              3: 'Studying biases is about self-improvement, not proving others are flawed.',
+            },
           },
         ],
       },
@@ -2170,6 +2435,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The $3 million is a sunk cost. Spending $2 million more to "save" it is the classic fallacy.',
+            distractorExplanations: {
+              1: 'Anchoring bias involves initial numbers influencing estimates, not protecting past investments.',
+              2: 'The availability heuristic involves ease of recall, not reluctance to abandon spending.',
+              3: 'The halo effect involves positive trait spillover, not investment decisions.',
+            },
           },
           {
             id: 'psy-sec6-u10-L2-Q2',
@@ -2184,6 +2454,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The beginner overestimates (Dunning-Kruger). The expert accurately sees complexity.',
+            distractorExplanations: {
+              1: 'Three diagnoses do not indicate greater talent than 20 years of seasoned experience.',
+              2: 'The supervisor\'s humility reflects expert calibration, not imposter syndrome.',
+              3: 'The nurse and supervisor show clearly different bias patterns, not equal ones.',
+            },
           },
           {
             id: 'psy-sec6-u10-L2-Q3',
@@ -2198,6 +2473,11 @@ export const psySection6Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'They\'re framing renewal as avoiding a loss (your streak and progress), triggering both loss aversion and sunk cost thinking.',
+            distractorExplanations: {
+              1: 'Anchoring bias involves numbers setting reference points, not streak-based fear messaging.',
+              2: 'In-group bias involves favoring your own group members, not app renewal decisions.',
+              3: 'The halo effect involves positive trait spillover, not loss-framed subscription tactics.',
+            },
           },
           {
             id: 'psy-sec6-u10-L2-Q4',

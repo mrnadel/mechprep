@@ -40,6 +40,9 @@ export const finSection15Part1: Unit[] = [
             question: "Most employers expect candidates to negotiate salary.",
             correctAnswer: true,
             explanation: "Surveys show the majority of hiring managers expect negotiation. Not asking is the only guaranteed way to get nothing extra.",
+            distractorExplanations: {
+              1: 'Surveys show the majority of hiring managers expect negotiation. Not asking is the only guaranteed way to get nothing extra.',
+            },
           },
           {
             id: "fin-sec15-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Future raises are usually percentages of your current salary. A lower starting point compounds into tens of thousands lost over a career.",
+            distractorExplanations: {
+              0: 'Future raises are usually percentages of your current salary. A lower starting point compounds into tens of thousands lost over a career.',
+              2: 'Future raises are usually percentages of your current salary. A lower starting point compounds into tens of thousands lost over a career.',
+              3: 'Future raises are usually percentages of your current salary. A lower starting point compounds into tens of thousands lost over a career.',
+            },
           },
           {
             id: "fin-sec15-u1-L1-T2",
@@ -67,6 +75,9 @@ export const finSection15Part1: Unit[] = [
             question: "Effective negotiation requires an aggressive, adversarial tone.",
             correctAnswer: false,
             explanation: "Collaborative negotiation builds goodwill. Aggressive tactics often backfire and damage the relationship before it starts.",
+            distractorExplanations: {
+              0: 'Collaborative negotiation builds goodwill. Aggressive tactics often backfire and damage the relationship before it starts.',
+            },
           },
           {
             id: "fin-sec15-u1-L1-Q4",
@@ -118,6 +129,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$72,000 + $5,000 bonus + $4,320 match (6% of $72,000) = $81,320. That beats the $75,000 offer by over $6,000.",
+            distractorExplanations: {
+              0: '$72,000 + $5,000 bonus + $4,320 match (6% of $72,000) = $81,320. That beats the $75,000 offer by over $6,000.',
+              2: '$72,000 + $5,000 bonus + $4,320 match (6% of $72,000) = $81,320. That beats the $75,000 offer by over $6,000.',
+              3: 'This overgeneralizes; $72,000 + $5,000 bonus + $4,320 match (6% of $72,000) = $81,320. That beats the $75,000 offer by over $6,000.',
+            },
           },
         ],
       },
@@ -143,6 +159,9 @@ export const finSection15Part1: Unit[] = [
             question: "You should research salary ranges before starting any negotiation.",
             correctAnswer: true,
             explanation: "Data gives you credibility. Walking in with numbers from reliable sources is far more persuasive than saying 'I feel I deserve more.'",
+            distractorExplanations: {
+              1: 'Data gives you credibility. Walking in with numbers from reliable sources is far more persuasive than saying \'I feel I deserve more.\'.',
+            },
           },
           {
             id: "fin-sec15-u1-L2-Q2",
@@ -156,6 +175,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Location, experience, and industry all directly impact market rate. Personal hobbies don't factor into salary data.",
+            distractorExplanations: {
+              0: 'Location, experience, and industry all directly impact market rate. Personal hobbies don\'t factor into salary data.',
+              1: 'Location, experience, and industry all directly impact market rate. Personal hobbies don\'t factor into salary data.',
+              3: 'Location, experience, and industry all directly impact market rate. Personal hobbies don\'t factor into salary data.',
+            },
           },
           {
             id: "fin-sec15-u1-L2-T2",
@@ -170,6 +194,9 @@ export const finSection15Part1: Unit[] = [
             question: "When negotiating salary, you should always give one specific number rather than a range.",
             correctAnswer: false,
             explanation: "A range shows you've done research and gives both sides room to find middle ground.",
+            distractorExplanations: {
+              0: 'A range shows you\'ve done research and gives both sides room to find middle ground.',
+            },
           },
           {
             id: "fin-sec15-u1-L2-Q4",
@@ -205,6 +232,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The overlapping range from multiple sources is the most credible basis. It shows thorough research and lands in a realistic zone.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the overlapping range from multiple sources is the most credible basis.',
+              1: 'This reasoning is flawed; the overlapping range from multiple sources is the most credible basis.',
+              3: 'This reasoning is flawed; the overlapping range from multiple sources is the most credible basis.',
+            },
           },
         ],
       },
@@ -236,6 +268,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The employer's initial offer might exceed what you would have requested. Naming your number first risks leaving money on the table.",
+            distractorExplanations: {
+              0: 'The employer\'s initial offer might exceed what you would have requested. Naming your number first risks leaving money on the table.',
+              2: 'This overgeneralizes; the employer\'s initial offer might exceed what you would have requested.',
+              3: 'The employer\'s initial offer might exceed what you would have requested. Naming your number first risks leaving money on the table.',
+            },
           },
           {
             id: "fin-sec15-u1-L3-Q2",
@@ -243,6 +280,9 @@ export const finSection15Part1: Unit[] = [
             question: "Silence during a negotiation is always a sign of weakness.",
             correctAnswer: false,
             explanation: "Strategic silence after making a request creates space for the other side to respond. It's a powerful tool, not a weakness.",
+            distractorExplanations: {
+              0: 'Strategic silence after making a request creates space for the other side to respond. It\'s a powerful tool, not a weakness.',
+            },
           },
           {
             id: "fin-sec15-u1-L3-T2",
@@ -278,6 +318,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Rosa's response includes gratitude, research-backed numbers, and a collaborative question. This is the ideal negotiation formula.",
+            distractorExplanations: {
+              0: 'Rosa\'s response includes gratitude, research-backed numbers, and a collaborative question. This is the ideal negotiation formula.',
+              2: 'Rosa\'s response includes gratitude, research-backed numbers, and a collaborative question. This is the ideal negotiation formula.',
+              3: 'Rosa\'s response includes gratitude, research-backed numbers, and a collaborative question. This is the ideal negotiation formula.',
+            },
           },
           {
             id: "fin-sec15-u1-L3-Q5",
@@ -291,6 +336,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Even when base salary is fixed, other parts of the package (bonus, PTO, remote work, signing bonus) are often negotiable.",
+            distractorExplanations: {
+              0: 'Even when base salary is fixed, other parts of the package (bonus, PTO, remote work, signing bonus) are often negotiable.',
+              1: 'Even when base salary is fixed, other parts of the package (bonus, PTO, remote work, signing bonus) are often negotiable.',
+              3: 'Even when base salary is fixed, other parts of the package (bonus, PTO, remote work, signing bonus) are often negotiable.',
+            },
           },
           {
             id: "fin-sec15-u1-L3-T3",
@@ -331,6 +381,9 @@ export const finSection15Part1: Unit[] = [
             question: "Most people who accept a counter-offer from their current employer stay long-term.",
             correctAnswer: false,
             explanation: "Research shows the majority of employees who accept counter-offers leave within a year. The original reasons for leaving usually remain.",
+            distractorExplanations: {
+              0: 'Research shows the majority of employees who accept counter-offers leave within a year. The original reasons for leaving usually remain.',
+            },
           },
           {
             id: "fin-sec15-u1-L4-Q2",
@@ -344,6 +397,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you wanted to leave because of culture, growth, or management, more money doesn't fix those issues.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; if you wanted to leave because of culture, growth, or management, more money doesn\'t fix those issues.',
+              2: 'This reasoning is flawed; if you wanted to leave because of culture, growth, or management, more money doesn\'t fix those issues.',
+              3: 'This overgeneralizes; if you wanted to leave because of culture, growth, or management, more money doesn\'t fix those issues.',
+            },
           },
           {
             id: "fin-sec15-u1-L4-T2",
@@ -365,6 +423,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Money doesn't fix a dead-end career path. Jamal should evaluate whether the underlying issues that prompted his job search have actually been addressed.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; money doesn\'t fix a dead-end career path.',
+              2: 'This reasoning is flawed; money doesn\'t fix a dead-end career path.',
+              3: 'This reasoning is flawed; money doesn\'t fix a dead-end career path.',
+            },
           },
           {
             id: "fin-sec15-u1-L4-Q4",
@@ -413,6 +476,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Data-backed requests are taken seriously. Specific research shows professionalism and gives the employer a reason to say yes.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; data-backed requests are taken seriously.',
+              2: 'This reasoning is flawed; data-backed requests are taken seriously.',
+              3: 'This reasoning is flawed; data-backed requests are taken seriously.',
+            },
           },
         ],
       },
@@ -564,6 +632,9 @@ export const finSection15Part1: Unit[] = [
             question: "All couples must combine their bank accounts after getting married.",
             correctAnswer: false,
             explanation: "There's no legal requirement to merge accounts. Many happy couples keep finances partially or fully separate.",
+            distractorExplanations: {
+              0: 'There\'s no legal requirement to merge accounts. Many happy couples keep finances partially or fully separate.',
+            },
           },
           {
             id: "fin-sec15-u2-L1-Q2",
@@ -600,6 +671,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A complete financial picture includes debts, credit history, habits, and shared goals. Partial disclosure leads to surprises.",
+            distractorExplanations: {
+              0: 'A complete financial picture includes debts, credit history, habits, and shared goals. Partial disclosure leads to surprises.',
+              2: 'A complete financial picture includes debts, credit history, habits, and shared goals. Partial disclosure leads to surprises.',
+              3: 'A complete financial picture includes debts, credit history, habits, and shared goals. Partial disclosure leads to surprises.',
+            },
           },
           {
             id: "fin-sec15-u2-L1-Q4",
@@ -628,6 +704,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Proportional contributions (same percentage of income) are fairer when earnings differ significantly. This approach respects both incomes.",
+            distractorExplanations: {
+              0: 'Proportional contributions (same percentage of income) are fairer when earnings differ significantly. This approach respects both incomes.',
+              2: 'This reasoning is flawed; proportional contributions (same percentage of income) are fairer when earnings differ significantly.',
+              3: 'This reasoning is flawed; proportional contributions (same percentage of income) are fairer when earnings differ significantly.',
+            },
           },
           {
             id: "fin-sec15-u2-L1-Q6",
@@ -661,6 +742,9 @@ export const finSection15Part1: Unit[] = [
             question: "Prenuptial agreements only benefit the wealthier spouse.",
             correctAnswer: false,
             explanation: "Prenups protect both sides. They can protect a lower-earning spouse by guaranteeing support or a fair share of assets built during the marriage.",
+            distractorExplanations: {
+              0: 'Prenups protect both sides. They can protect a lower-earning spouse by guaranteeing support or a fair share of assets built during the marriage.',
+            },
           },
           {
             id: "fin-sec15-u2-L2-Q2",
@@ -674,6 +758,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Prenups cover financial matters: property division, debt responsibility, and sometimes spousal support. They can't address child custody or personal behavior.",
+            distractorExplanations: {
+              1: 'Prenups cover financial matters: property division, debt responsibility, and sometimes spousal support.',
+              2: 'Prenups cover financial matters: property division, debt responsibility, and sometimes spousal support.',
+              3: 'Prenups cover financial matters: property division, debt responsibility, and sometimes spousal support.',
+            },
           },
           {
             id: "fin-sec15-u2-L2-T2",
@@ -704,6 +793,9 @@ export const finSection15Part1: Unit[] = [
             question: "A prenup can include child custody arrangements.",
             correctAnswer: false,
             explanation: "Courts decide child custody based on the child's best interest at the time. Prenups can't predetermine custody.",
+            distractorExplanations: {
+              0: 'Courts decide child custody based on the child\'s best interest at the time. Prenups can\'t predetermine custody.',
+            },
           },
           {
             id: "fin-sec15-u2-L2-Q5",
@@ -726,6 +818,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A prenup can protect Miguel's pre-marriage business and ensure Ana isn't liable for business debts. It protects both sides.",
+            distractorExplanations: {
+              0: 'A prenup can protect Miguel\'s pre-marriage business and ensure Ana isn\'t liable for business debts. It protects both sides.',
+              2: 'This reasoning is flawed; a prenup can protect Miguel\'s pre-marriage business and ensure Ana isn\'t liable for business debts.',
+              3: 'A prenup can protect Miguel\'s pre-marriage business and ensure Ana isn\'t liable for business debts. It protects both sides.',
+            },
           },
         ],
       },
@@ -751,6 +848,9 @@ export const finSection15Part1: Unit[] = [
             question: "Financial disagreements in relationships are mainly caused by not earning enough money.",
             correctAnswer: false,
             explanation: "Money fights happen at every income level. They're usually about different values, priorities, and communication styles around spending.",
+            distractorExplanations: {
+              0: 'Money fights happen at every income level. They\'re usually about different values, priorities, and communication styles around spending.',
+            },
           },
           {
             id: "fin-sec15-u2-L3-Q2",
@@ -764,6 +864,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Regular, calm money talks with agreed-upon goals prevent small issues from becoming big fights.",
+            distractorExplanations: {
+              0: 'Regular, calm money talks with agreed-upon goals prevent small issues from becoming big fights.',
+              1: 'Regular, calm money talks with agreed-upon goals prevent small issues from becoming big fights.',
+              3: 'This reasoning is flawed; regular, calm money talks with agreed-upon goals prevent small issues from becoming big fights.',
+            },
           },
           {
             id: "fin-sec15-u2-L3-T2",
@@ -807,6 +912,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Starting with shared goals helps both partners see the bigger picture. Once goals are aligned, spending disagreements get easier to resolve.",
+            distractorExplanations: {
+              0: 'Starting with shared goals helps both partners see the bigger picture. Once goals are aligned, spending disagreements get easier to resolve.',
+              2: 'Starting with shared goals helps both partners see the bigger picture. Once goals are aligned, spending disagreements get easier to resolve.',
+              3: 'Inaction here would be harmful; starting with shared goals helps both partners see the bigger picture.',
+            },
           },
           {
             id: "fin-sec15-u2-L3-Q6",
@@ -845,6 +955,9 @@ export const finSection15Part1: Unit[] = [
             question: "Divorce can affect your retirement savings and investment accounts.",
             correctAnswer: true,
             explanation: "Retirement accounts are often considered marital property and may be split. A QDRO (qualified domestic relations order) is used to divide retirement funds without tax penalties.",
+            distractorExplanations: {
+              1: 'Retirement accounts are often considered marital property and may be split. A QDRO (qualified domestic relations order) is used to divide retirement funds without tax penalties.',
+            },
           },
           {
             id: "fin-sec15-u2-L4-Q2",
@@ -858,6 +971,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Understanding the full financial picture is essential before any decisions. Moving money or closing accounts without legal guidance can create legal problems.",
+            distractorExplanations: {
+              0: 'Understanding the full financial picture is essential before any decisions.',
+              2: 'Understanding the full financial picture is essential before any decisions.',
+              3: 'Understanding the full financial picture is essential before any decisions.',
+            },
           },
           {
             id: "fin-sec15-u2-L4-T2",
@@ -903,6 +1021,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Equity = home value minus mortgage. $400,000 minus $200,000 = $200,000 equity. Each spouse would typically get half: $100,000.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; equity = home value minus mortgage. $400,000 minus $200,000 = $200,000 equity.',
+              1: 'This calculation is incorrect; equity = home value minus mortgage. $400,000 minus $200,000 = $200,000 equity.',
+              3: 'There is a real consequence here; equity = home value minus mortgage. $400,000 minus $200,000 = $200,000 equity.',
+            },
           },
           {
             id: "fin-sec15-u2-L4-T3",
@@ -1074,6 +1197,9 @@ export const finSection15Part1: Unit[] = [
             question: "Humans naturally make rational, logical financial decisions.",
             correctAnswer: false,
             explanation: "Decades of research show that humans are predictably irrational with money. Cognitive biases affect everyone, regardless of intelligence.",
+            distractorExplanations: {
+              0: 'Decades of research show that humans are predictably irrational with money. Cognitive biases affect everyone, regardless of intelligence.',
+            },
           },
           {
             id: "fin-sec15-u3-L1-Q2",
@@ -1087,6 +1213,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Loss aversion means losses hurt roughly twice as much as equivalent gains feel good. This leads to poor decisions like holding losing investments too long.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; loss aversion means losses hurt roughly twice as much as equivalent gains feel good.',
+              2: 'This overgeneralizes; loss aversion means losses hurt roughly twice as much as equivalent gains feel good.',
+              3: 'Loss aversion means losses hurt roughly twice as much as equivalent gains feel good.',
+            },
           },
           {
             id: "fin-sec15-u3-L1-T2",
@@ -1108,6 +1239,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The $1,200 is already spent. Forcing himself to go to a gym he hates doesn't recover that money. Future decisions should be based on future value.",
+            distractorExplanations: {
+              0: 'The $1,200 is already spent. Forcing himself to go to a gym he hates doesn\'t recover that money. Future decisions should be based on future value.',
+              2: 'The $1,200 is already spent. Forcing himself to go to a gym he hates doesn\'t recover that money. Future decisions should be based on future value.',
+              3: 'The $1,200 is already spent. Forcing himself to go to a gym he hates doesn\'t recover that money. Future decisions should be based on future value.',
+            },
           },
           {
             id: "fin-sec15-u3-L1-Q4",
@@ -1143,6 +1279,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The investor can't accept the loss (loss aversion) and clings to the original investment (sunk cost). Both biases reinforce each other.",
+            distractorExplanations: {
+              0: 'The investor can\'t accept the loss (loss aversion) and clings to the original investment (sunk cost). Both biases reinforce each other.',
+              1: 'The investor can\'t accept the loss (loss aversion) and clings to the original investment (sunk cost). Both biases reinforce each other.',
+              3: 'The investor can\'t accept the loss (loss aversion) and clings to the original investment (sunk cost). Both biases reinforce each other.',
+            },
           },
         ],
       },
@@ -1168,6 +1309,9 @@ export const finSection15Part1: Unit[] = [
             question: "Mental accounting means treating money differently based on its source or intended purpose.",
             correctAnswer: true,
             explanation: "Mental accounting is a well-documented bias. We spend 'found money' (refunds, bonuses, gifts) more freely than earned money.",
+            distractorExplanations: {
+              1: 'Mental accounting is a well-documented bias. We spend \'found money\' (refunds, bonuses, gifts) more freely than earned money.',
+            },
           },
           {
             id: "fin-sec15-u3-L2-Q2",
@@ -1182,6 +1326,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Maria mentally categorizes the refund as 'free money' for fun, even though rationally it should go toward her high-interest debt.",
+            distractorExplanations: {
+              0: 'Maria mentally categorizes the refund as \'free money\' for fun, even though rationally it should go toward her high-interest debt.',
+              2: 'Maria mentally categorizes the refund as \'free money\' for fun, even though rationally it should go toward her high-interest debt.',
+              3: 'Maria mentally categorizes the refund as \'free money\' for fun, even though rationally it should go toward her high-interest debt.',
+            },
           },
           {
             id: "fin-sec15-u3-L2-T2",
@@ -1202,6 +1351,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The physical act of handing over cash triggers more pain than tapping a card. Less pain means less hesitation to spend.",
+            distractorExplanations: {
+              0: 'The physical act of handing over cash triggers more pain than tapping a card. Less pain means less hesitation to spend.',
+              1: 'The physical act of handing over cash triggers more pain than tapping a card. Less pain means less hesitation to spend.',
+              3: 'The physical act of handing over cash triggers more pain than tapping a card. Less pain means less hesitation to spend.',
+            },
           },
           {
             id: "fin-sec15-u3-L2-Q4",
@@ -1239,6 +1393,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A dollar is a dollar. Whether it came from a paycheck, refund, or gift, it should be allocated based on your financial priorities.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; a dollar is a dollar. Whether it came from a paycheck, refund, or gift, it should be allocated based on your financial.',
+              2: 'A dollar is a dollar. Whether it came from a paycheck, refund, or gift, it should be allocated based on your financial priorities.',
+              3: 'This reasoning is flawed; a dollar is a dollar. Whether it came from a paycheck, refund, or gift, it should be allocated based on your financial.',
+            },
           },
         ],
       },
@@ -1264,6 +1423,9 @@ export const finSection15Part1: Unit[] = [
             question: "Following the majority of investors is usually the safest investment strategy.",
             correctAnswer: false,
             explanation: "Herd behavior creates bubbles and crashes. By the time the crowd is excited, it's often too late to benefit.",
+            distractorExplanations: {
+              0: 'Herd behavior creates bubbles and crashes. By the time the crowd is excited, it\'s often too late to benefit.',
+            },
           },
           {
             id: "fin-sec15-u3-L3-Q2",
@@ -1277,6 +1439,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Bubbles form when herd buying pushes prices above real value. When reality catches up, prices crash and late buyers lose the most.",
+            distractorExplanations: {
+              0: 'Bubbles form when herd buying pushes prices above real value. When reality catches up, prices crash and late buyers lose the most.',
+              2: 'Bubbles form when herd buying pushes prices above real value. When reality catches up, prices crash and late buyers lose the most.',
+              3: 'Bubbles form when herd buying pushes prices above real value. When reality catches up, prices crash and late buyers lose the most.',
+            },
           },
           {
             id: "fin-sec15-u3-L3-T2",
@@ -1298,6 +1465,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "By the time everyone is excited, the easy gains are usually gone. Sticking with a diversified plan beats chasing trends over the long run.",
+            distractorExplanations: {
+              0: 'By the time everyone is excited, the easy gains are usually gone. Sticking with a diversified plan beats chasing trends over the long run.',
+              1: 'This reasoning is flawed; by the time everyone is excited, the easy gains are usually gone.',
+              3: 'Inaction here would be harmful; by the time everyone is excited, the easy gains are usually gone.',
+            },
           },
           {
             id: "fin-sec15-u3-L3-Q4",
@@ -1333,6 +1505,9 @@ export const finSection15Part1: Unit[] = [
             question: "Dollar-cost averaging helps reduce the impact of herd behavior on your investments.",
             correctAnswer: true,
             explanation: "Investing a fixed amount regularly means you buy more shares when prices are low and fewer when high. It removes emotion from the equation.",
+            distractorExplanations: {
+              1: 'Investing a fixed amount regularly means you buy more shares when prices are low and fewer when high. It removes emotion from the equation.',
+            },
           },
         ],
       },
@@ -1358,6 +1533,9 @@ export const finSection15Part1: Unit[] = [
             question: "Automating investments helps reduce the impact of emotional decision-making.",
             correctAnswer: true,
             explanation: "When investments happen automatically, you don't get a chance to panic-sell or greed-buy. Consistency beats timing.",
+            distractorExplanations: {
+              1: 'When investments happen automatically, you don\'t get a chance to panic-sell or greed-buy. Consistency beats timing.',
+            },
           },
           {
             id: "fin-sec15-u3-L4-Q2",
@@ -1371,6 +1549,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 24 to 48 hour wait before big purchases lets the initial excitement fade. Many impulse purchases seem less appealing after sleeping on it.",
+            distractorExplanations: {
+              0: 'A 24 to 48 hour wait before big purchases lets the initial excitement fade. Many impulse purchases seem less appealing after sleeping on it.',
+              2: 'A 24 to 48 hour wait before big purchases lets the initial excitement fade. Many impulse purchases seem less appealing after sleeping on it.',
+              3: 'A 24 to 48 hour wait before big purchases lets the initial excitement fade. Many impulse purchases seem less appealing after sleeping on it.',
+            },
           },
           {
             id: "fin-sec15-u3-L4-T2",
@@ -1408,6 +1591,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Selling during a panic locks in losses. Kim's pre-set plan exists exactly for moments like this. Following the plan beats following emotions.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; selling during a panic locks in losses. Kim\'s pre-set plan exists exactly for moments like this.',
+              2: 'Selling during a panic locks in losses. Kim\'s pre-set plan exists exactly for moments like this. Following the plan beats following emotions.',
+              3: 'Selling during a panic locks in losses. Kim\'s pre-set plan exists exactly for moments like this. Following the plan beats following emotions.',
+            },
           },
           {
             id: "fin-sec15-u3-L4-Q5",
@@ -1578,6 +1766,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Raises are usually percentages of current salary. A lower starting point means every future raise is also smaller. The gap grows year after year.",
+            distractorExplanations: {
+              0: 'Raises are usually percentages of current salary. A lower starting point means every future raise is also smaller. The gap grows year after year.',
+              2: 'This overgeneralizes; raises are usually percentages of current salary. A lower starting point means every future raise is also smaller.',
+              3: 'Raises are usually percentages of current salary. A lower starting point means every future raise is also smaller. The gap grows year after year.',
+            },
           },
           {
             id: "fin-sec15-u4-L1-Q2",
@@ -1585,6 +1778,9 @@ export const finSection15Part1: Unit[] = [
             question: "Prenuptial agreements can include child custody arrangements.",
             correctAnswer: false,
             explanation: "Prenups cover financial matters only. Child custody is always decided by courts based on the child's best interest at the time.",
+            distractorExplanations: {
+              0: 'Prenups cover financial matters only. Child custody is always decided by courts based on the child\'s best interest at the time.',
+            },
           },
           {
             id: "fin-sec15-u4-L1-Q3",
@@ -1607,6 +1803,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This combines relationship finance (money personalities, shared goals) with budgeting basics (spending categories) from earlier sections.",
+            distractorExplanations: {
+              0: 'This combines relationship finance (money personalities, shared goals) with budgeting basics (spending categories) from earlier sections.',
+              2: 'This reasoning is flawed; this combines relationship finance (money personalities, shared goals) with budgeting basics (spending categories) from.',
+              3: 'This overgeneralizes; this combines relationship finance (money personalities, shared goals) with budgeting basics (spending categories) from.',
+            },
           },
           {
             id: "fin-sec15-u4-L1-Q5",
@@ -1650,6 +1851,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Base salary isn't the only negotiable element. PTO, bonuses, remote work options, and other benefits all have real value.",
+            distractorExplanations: {
+              0: 'Base salary isn\'t the only negotiable element. PTO, bonuses, remote work options, and other benefits all have real value.',
+              1: 'Base salary isn\'t the only negotiable element. PTO, bonuses, remote work options, and other benefits all have real value.',
+              3: 'Base salary isn\'t the only negotiable element. PTO, bonuses, remote work options, and other benefits all have real value.',
+            },
           },
         ],
       },
@@ -1682,6 +1888,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Aisha should use her research to negotiate up. The signing bonus provides immediate help with household debt. This combines negotiation and debt management skills.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; aisha should use her research to negotiate up. The signing bonus provides immediate help with household debt.',
+              2: 'Aisha should use her research to negotiate up. The signing bonus provides immediate help with household debt.',
+              3: 'This reasoning is flawed; aisha should use her research to negotiate up. The signing bonus provides immediate help with household debt.',
+            },
           },
           {
             id: "fin-sec15-u4-L2-Q2",
@@ -1696,6 +1907,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Loss aversion makes the drop painful. His friend's advice is herd behavior. Focusing on today's drop is recency bias. His plan says hold.",
+            distractorExplanations: {
+              0: 'Loss aversion makes the drop painful. His friend\'s advice is herd behavior. Focusing on today\'s drop is recency bias. His plan says hold.',
+              2: 'Loss aversion makes the drop painful. His friend\'s advice is herd behavior. Focusing on today\'s drop is recency bias. His plan says hold.',
+              3: 'Loss aversion makes the drop painful. His friend\'s advice is herd behavior. Focusing on today\'s drop is recency bias. His plan says hold.',
+            },
           },
           {
             id: "fin-sec15-u4-L2-Q3",
@@ -1710,6 +1926,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This combines budgeting, debt payoff strategy, saving goals, and relationship finance. A joint plan that addresses all areas is strongest.",
+            distractorExplanations: {
+              0: 'This combines budgeting, debt payoff strategy, saving goals, and relationship finance. A joint plan that addresses all areas is strongest.',
+              2: 'This reasoning is flawed; this combines budgeting, debt payoff strategy, saving goals, and relationship finance.',
+              3: 'Inaction here would be harmful; this combines budgeting, debt payoff strategy, saving goals, and relationship finance.',
+            },
           },
           {
             id: "fin-sec15-u4-L2-Q4",
@@ -1723,6 +1944,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "High-interest debt costs you more than savings earn. Paying it off first is rational. Then you can allocate the remaining $3,000 to savings and fun.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; high-interest debt costs you more than savings earn. Paying it off first is rational.',
+              1: 'This reasoning is flawed; high-interest debt costs you more than savings earn. Paying it off first is rational.',
+              3: 'High-interest debt costs you more than savings earn. Paying it off first is rational. Then you can allocate the remaining $3,000 to savings and fun.',
+            },
           },
           {
             id: "fin-sec15-u4-L2-Q5",
@@ -1743,6 +1969,9 @@ export const finSection15Part1: Unit[] = [
             question: "A person who automates their savings and investments is more likely to overcome behavioral biases than someone who makes manual decisions each month.",
             correctAnswer: true,
             explanation: "Automation removes the opportunity for emotions to interfere. You can't panic-sell or skip savings if the system handles it automatically.",
+            distractorExplanations: {
+              1: 'Automation removes the opportunity for emotions to interfere. You can\'t panic-sell or skip savings if the system handles it automatically.',
+            },
           },
         ],
       },
@@ -1886,6 +2115,9 @@ export const finSection15Part1: Unit[] = [
             question: "A blockchain is controlled by a single company or government.",
             correctAnswer: false,
             explanation: "Blockchains are decentralized. They're maintained by a network of computers, not a single authority.",
+            distractorExplanations: {
+              0: 'Blockchains are decentralized. They\'re maintained by a network of computers, not a single authority.',
+            },
           },
           {
             id: "fin-sec15-u5-L1-Q2",
@@ -1899,6 +2131,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Blocks are chained together cryptographically. Changing one block would require altering every block after it across thousands of computers simultaneously.",
+            distractorExplanations: {
+              0: 'Blocks are chained together cryptographically. Changing one block would require altering every block after it across thousands of computers.',
+              2: 'This overgeneralizes; blocks are chained together cryptographically.',
+              3: 'Blocks are chained together cryptographically. Changing one block would require altering every block after it across thousands of computers.',
+            },
           },
           {
             id: "fin-sec15-u5-L1-T2",
@@ -1951,6 +2188,9 @@ export const finSection15Part1: Unit[] = [
             question: "Blockchain transactions can be easily reversed like credit card charges.",
             correctAnswer: false,
             explanation: "Once a blockchain transaction is confirmed, it's permanent. There's no 'undo' button. This is a feature for security but a risk if you make an error.",
+            distractorExplanations: {
+              0: 'Once a blockchain transaction is confirmed, it\'s permanent. There\'s no \'undo\' button. This is a feature for security but a risk if you make an error.',
+            },
           },
         ],
       },
@@ -1976,6 +2216,9 @@ export const finSection15Part1: Unit[] = [
             question: "Cryptocurrency is backed by a government or central bank.",
             correctAnswer: false,
             explanation: "Crypto gets its value from supply, demand, and network trust. No government stands behind it, which is both its appeal and its risk.",
+            distractorExplanations: {
+              0: 'Crypto gets its value from supply, demand, and network trust. No government stands behind it, which is both its appeal and its risk.',
+            },
           },
           {
             id: "fin-sec15-u5-L2-Q2",
@@ -1989,6 +2232,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Bitcoin has a fixed supply cap of 21 million coins. Its value comes entirely from what people are willing to pay for it.",
+            distractorExplanations: {
+              0: 'Bitcoin has a fixed supply cap of 21 million coins. Its value comes entirely from what people are willing to pay for it.',
+              2: 'Bitcoin has a fixed supply cap of 21 million coins. Its value comes entirely from what people are willing to pay for it.',
+              3: 'Bitcoin has a fixed supply cap of 21 million coins. Its value comes entirely from what people are willing to pay for it.',
+            },
           },
           {
             id: "fin-sec15-u5-L2-T2",
@@ -2018,6 +2266,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This combines emergency fund principles (keep it safe and liquid) with behavioral finance (FOMO and herd behavior). Emergency funds don't belong in crypto.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; this combines emergency fund principles (keep it safe and liquid) with behavioral finance (FOMO and herd behavior).',
+              2: 'This reasoning is flawed; this combines emergency fund principles (keep it safe and liquid) with behavioral finance (FOMO and herd behavior).',
+              3: 'Inaction here would be harmful; this combines emergency fund principles (keep it safe and liquid) with behavioral finance (FOMO and herd.',
+            },
           },
           {
             id: "fin-sec15-u5-L2-Q5",
@@ -2047,6 +2300,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Most advisors suggest keeping crypto to a small percentage because of its extreme volatility. It should be money you can afford to lose entirely.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; most advisors suggest keeping crypto to a small percentage because of its extreme volatility.',
+              2: 'This calculation is incorrect; most advisors suggest keeping crypto to a small percentage because of its extreme volatility.',
+              3: 'This calculation is incorrect; most advisors suggest keeping crypto to a small percentage because of its extreme volatility.',
+            },
           },
         ],
       },
@@ -2072,6 +2330,9 @@ export const finSection15Part1: Unit[] = [
             question: "All blockchain tokens are cryptocurrency used as money.",
             correctAnswer: false,
             explanation: "Tokens can represent many things: currency, ownership, access rights, or voting power. Cryptocurrency is just one type of token.",
+            distractorExplanations: {
+              0: 'Tokens can represent many things: currency, ownership, access rights, or voting power. Cryptocurrency is just one type of token.',
+            },
           },
           {
             id: "fin-sec15-u5-L3-Q2",
@@ -2085,6 +2346,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "NFT stands for Non-Fungible Token. 'Non-fungible' means unique and not interchangeable, unlike regular currency where one dollar equals any other dollar.",
+            distractorExplanations: {
+              0: 'NFT stands for Non-Fungible Token. \'Non-fungible\' means unique and not interchangeable, unlike regular currency where one dollar equals any other.',
+              2: 'NFT stands for Non-Fungible Token. \'Non-fungible\' means unique and not interchangeable, unlike regular currency where one dollar equals any other.',
+              3: 'NFT stands for Non-Fungible Token. \'Non-fungible\' means unique and not interchangeable, unlike regular currency where one dollar equals any other.',
+            },
           },
           {
             id: "fin-sec15-u5-L3-T2",
@@ -2106,6 +2372,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The sunk cost fallacy (I already spent $10,000) and loss aversion (I can't accept this loss) are both driving the decision to hold a declining asset.",
+            distractorExplanations: {
+              0: 'The sunk cost fallacy (I already spent $10,000) and loss aversion (I can\'t accept this loss) are both driving the decision to hold a declining.',
+              2: 'The sunk cost fallacy (I already spent $10,000) and loss aversion (I can\'t accept this loss) are both driving the decision to hold a declining.',
+              3: 'The sunk cost fallacy (I already spent $10,000) and loss aversion (I can\'t accept this loss) are both driving the decision to hold a declining.',
+            },
           },
           {
             id: "fin-sec15-u5-L3-Q4",
@@ -2135,6 +2406,9 @@ export const finSection15Part1: Unit[] = [
             question: "Buying an NFT of a piece of art automatically gives you the copyright to that art.",
             correctAnswer: false,
             explanation: "Owning an NFT typically means you own the token, not the copyright. The artist usually retains intellectual property rights unless explicitly transferred.",
+            distractorExplanations: {
+              0: 'Owning an NFT typically means you own the token, not the copyright. The artist usually retains intellectual property rights unless explicitly transferred.',
+            },
           },
         ],
       },
@@ -2160,6 +2434,9 @@ export const finSection15Part1: Unit[] = [
             question: "Cryptocurrency held on an exchange is typically insured the same way bank deposits are.",
             correctAnswer: false,
             explanation: "Bank deposits are insured by government programs (like FDIC). Crypto on an exchange has no such protection. If the exchange fails, your money may be gone.",
+            distractorExplanations: {
+              0: 'Bank deposits are insured by government programs (like FDIC). Crypto on an exchange has no such protection. If the exchange fails, your money may be gone.',
+            },
           },
           {
             id: "fin-sec15-u5-L4-Q2",
@@ -2173,6 +2450,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Bitcoin has dropped 50% to 80% from its highs multiple times. This extreme volatility makes it unsuitable for money you need in the short term.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; bitcoin has dropped 50% to 80% from its highs multiple times.',
+              1: 'Bitcoin has dropped 50% to 80% from its highs multiple times. This extreme volatility makes it unsuitable for money you need in the short term.',
+              3: 'Bitcoin has dropped 50% to 80% from its highs multiple times. This extreme volatility makes it unsuitable for money you need in the short term.',
+            },
           },
           {
             id: "fin-sec15-u5-L4-T2",
@@ -2210,6 +2492,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This combines multiple earlier lessons: emergency funds come first, then high-interest debt payoff, then diversified investing. Putting 60% in one volatile asset ignores all three.",
+            distractorExplanations: {
+              0: 'This combines multiple earlier lessons: emergency funds come first, then high-interest debt payoff, then diversified investing.',
+              2: 'This reasoning is flawed; this combines multiple earlier lessons: emergency funds come first, then high-interest debt payoff, then diversified.',
+              3: 'This overgeneralizes; this combines multiple earlier lessons: emergency funds come first, then high-interest debt payoff, then diversified.',
+            },
           },
           {
             id: "fin-sec15-u5-L4-Q5",
@@ -2382,6 +2669,9 @@ export const finSection15Part1: Unit[] = [
             question: "A recession is defined as a significant decline in economic activity lasting more than a few months.",
             correctAnswer: true,
             explanation: "Recessions involve falling GDP, rising unemployment, and declining business activity. They typically last several months to over a year.",
+            distractorExplanations: {
+              1: 'Recessions involve falling GDP, rising unemployment, and declining business activity. They typically last several months to over a year.',
+            },
           },
           {
             id: "fin-sec15-u6-L1-Q2",
@@ -2395,6 +2685,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Recessions bring job losses, reduced business spending, and lower consumer confidence. Stock prices usually fall, though not always immediately.",
+            distractorExplanations: {
+              0: 'Recessions bring job losses, reduced business spending, and lower consumer confidence. Stock prices usually fall, though not always immediately.',
+              2: 'This overgeneralizes; recessions bring job losses, reduced business spending, and lower consumer confidence.',
+              3: 'This overgeneralizes; recessions bring job losses, reduced business spending, and lower consumer confidence.',
+            },
           },
           {
             id: "fin-sec15-u6-L1-T2",
@@ -2416,6 +2711,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Maya's foundation (emergency fund + no high-interest debt + diversification) protects her. Her friend is vulnerable on all three fronts.",
+            distractorExplanations: {
+              0: 'Maya\'s foundation (emergency fund + no high-interest debt + diversification) protects her. Her friend is vulnerable on all three fronts.',
+              1: 'This reasoning is flawed; maya\'s foundation (emergency fund + no high-interest debt + diversification) protects her.',
+              3: 'This overgeneralizes; maya\'s foundation (emergency fund + no high-interest debt + diversification) protects her.',
+            },
           },
           {
             id: "fin-sec15-u6-L1-Q4",
@@ -2453,6 +2753,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Buying during downturns means you're purchasing at lower prices. When the market recovers, those shares are worth more. This is 'buying on sale.'",
+            distractorExplanations: {
+              0: 'This overgeneralizes; buying during downturns means you\'re purchasing at lower prices. When the market recovers, those shares are worth more.',
+              2: 'Buying during downturns means you\'re purchasing at lower prices. When the market recovers, those shares are worth more. This is \'buying on sale.\'.',
+              3: 'Buying during downturns means you\'re purchasing at lower prices. When the market recovers, those shares are worth more. This is \'buying on sale.\'.',
+            },
           },
         ],
       },
@@ -2478,6 +2783,9 @@ export const finSection15Part1: Unit[] = [
             question: "Inflation means prices rise over time and each dollar buys less.",
             correctAnswer: true,
             explanation: "Inflation is the gradual increase in prices. A dollar today won't buy as much in 10 years.",
+            distractorExplanations: {
+              1: 'Inflation is the gradual increase in prices. A dollar today won\'t buy as much in 10 years.',
+            },
           },
           {
             id: "fin-sec15-u6-L2-Q2",
@@ -2491,6 +2799,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Stocks have historically returned 7% to 10% annually, well above the 2% to 3% average inflation rate. Cash and checking accounts lose value to inflation.",
+            distractorExplanations: {
+              0: 'Stocks have historically returned 7% to 10% annually, well above the 2% to 3% average inflation rate.',
+              1: 'Stocks have historically returned 7% to 10% annually, well above the 2% to 3% average inflation rate.',
+              3: 'Stocks have historically returned 7% to 10% annually, well above the 2% to 3% average inflation rate.',
+            },
           },
           {
             id: "fin-sec15-u6-L2-T2",
@@ -2528,6 +2841,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Carlos earned 1% but lost 4% to inflation. His real return is negative 3%. He has more dollars but they buy less. This is why investing matters.",
+            distractorExplanations: {
+              0: 'Carlos earned 1% but lost 4% to inflation. His real return is negative 3%. He has more dollars but they buy less. This is why investing matters.',
+              2: 'This reasoning is flawed; carlos earned 1% but lost 4% to inflation. His real return is negative 3%. He has more dollars but they buy less.',
+              3: 'This overgeneralizes; carlos earned 1% but lost 4% to inflation. His real return is negative 3%. He has more dollars but they buy less.',
+            },
           },
           {
             id: "fin-sec15-u6-L2-Q5",
@@ -2575,6 +2893,9 @@ export const finSection15Part1: Unit[] = [
             question: "People who stayed invested during a recession typically benefit most during the recovery.",
             correctAnswer: true,
             explanation: "The biggest market gains often happen in the first months of a recovery. Investors who sold during the downturn miss these gains.",
+            distractorExplanations: {
+              1: 'The biggest market gains often happen in the first months of a recovery. Investors who sold during the downturn miss these gains.',
+            },
           },
           {
             id: "fin-sec15-u6-L3-Q2",
@@ -2588,6 +2909,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Markets are forward-looking. By the time recovery is obvious to everyone, prices have already risen significantly. Staying invested through the cycle works best.",
+            distractorExplanations: {
+              0: 'Markets are forward-looking. By the time recovery is obvious to everyone, prices have already risen significantly.',
+              2: 'Markets are forward-looking. By the time recovery is obvious to everyone, prices have already risen significantly.',
+              3: 'Markets are forward-looking. By the time recovery is obvious to everyone, prices have already risen significantly.',
+            },
           },
           {
             id: "fin-sec15-u6-L3-T2",
@@ -2622,6 +2948,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A 2-month emergency fund leaves Leo vulnerable if another setback occurs. Restoring financial safety comes before discretionary spending.",
+            distractorExplanations: {
+              0: 'A 2-month emergency fund leaves Leo vulnerable if another setback occurs. Restoring financial safety comes before discretionary spending.',
+              1: 'This reasoning is flawed; a 2-month emergency fund leaves Leo vulnerable if another setback occurs.',
+              3: 'This reasoning is flawed; a 2-month emergency fund leaves Leo vulnerable if another setback occurs.',
+            },
           },
           {
             id: "fin-sec15-u6-L3-Q5",
@@ -2637,6 +2968,9 @@ export const finSection15Part1: Unit[] = [
             question: "Missing the 10 best trading days over a 20-year period can cut your total returns in half.",
             correctAnswer: true,
             explanation: "Research shows that most of the market's best days happen near the worst days. Staying invested through cycles is more effective than trying to time the market.",
+            distractorExplanations: {
+              1: 'Research shows that most of the market\'s best days happen near the worst days. Staying invested through cycles is more effective than trying to time the market.',
+            },
           },
         ],
       },
@@ -2668,6 +3002,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Salary negotiation connects to economic cycles. During expansion, companies have bigger budgets and fear losing talent. Your leverage is highest when the economy is strong.",
+            distractorExplanations: {
+              0: 'Salary negotiation connects to economic cycles. During expansion, companies have bigger budgets and fear losing talent.',
+              1: 'Salary negotiation connects to economic cycles. During expansion, companies have bigger budgets and fear losing talent.',
+              3: 'Inaction here would be harmful; salary negotiation connects to economic cycles.',
+            },
           },
           {
             id: "fin-sec15-u6-L4-Q2",
@@ -2719,6 +3058,11 @@ export const finSection15Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Refinancing during low-rate periods reduces total interest paid. This combines mortgage knowledge with economic cycle awareness.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; refinancing during low-rate periods reduces total interest paid.',
+              2: 'This reasoning is flawed; refinancing during low-rate periods reduces total interest paid.',
+              3: 'Refinancing during low-rate periods reduces total interest paid. This combines mortgage knowledge with economic cycle awareness.',
+            },
           },
           {
             id: "fin-sec15-u6-L4-Q5",

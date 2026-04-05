@@ -34,6 +34,9 @@ export const psySection1Part2: Unit[] = [
             question: 'A neuron is a cell that carries information using electrical signals.',
             correctAnswer: true,
             explanation: 'Neurons are specialized cells that transmit information through electrical impulses.',
+            distractorExplanations: {
+              1: 'Neurons are specialized cells that transmit information through electrical impulses.',
+            },
           },
           {
             id: 'psy-sec1-u5-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The human brain has roughly 86 billion neurons, each capable of connecting to thousands of others.',
+            distractorExplanations: {
+              1: '86 million is not correct here; the human brain has roughly 86 billion neurons, each capable of connecting to thousands of others.',
+              2: '86 thousand is not correct here; the human brain has roughly 86 billion neurons, each capable of connecting to thousands of others.',
+              3: '86 trillion is not correct here; the human brain has roughly 86 billion neurons, each capable of connecting to thousands of others.',
+            },
           },
           {
             id: 'psy-sec1-u5-L1-T2',
@@ -104,6 +112,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A reflex uses all 3 types: sensory neurons detect heat, interneurons relay the signal, and motor neurons pull your hand away.',
+            distractorExplanations: {
+              0: 'Only sensory neurons, because you felt the heat is not correct here; a reflex uses all 3 types: sensory neurons detect heat, interneurons relay.',
+              1: 'Only motor neurons, because your hand moved is not correct here; a reflex uses all 3 types: sensory neurons detect heat, interneurons relay the.',
+              3: 'No neurons are involved in reflexes is not correct here; a reflex uses all 3 types: sensory neurons detect heat, interneurons relay the signal,.',
+            },
           },
         ],
       },
@@ -129,6 +142,9 @@ export const psySection1Part2: Unit[] = [
             question: 'An action potential is an electrical impulse that travels down a neuron\'s axon.',
             correctAnswer: true,
             explanation: 'The action potential is the electrical signal that neurons use to send messages along the axon.',
+            distractorExplanations: {
+              1: 'The action potential is the electrical signal that neurons use to send messages along the axon.',
+            },
           },
           {
             id: 'psy-sec1-u5-L2-Q2',
@@ -142,6 +158,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A neuron either fires at full strength or not at all. There is no "half fire."',
+            distractorExplanations: {
+              1: 'This is not accurate; a neuron either fires at full strength or not at all. There is no "half fire.".',
+              2: 'This is too absolute; a neuron either fires at full strength or not at all. There is no "half fire.".',
+              3: 'Neurons can only fire once and then stop working is not correct here; a neuron either fires at full strength or not at all.',
+            },
           },
           {
             id: 'psy-sec1-u5-L2-T2',
@@ -185,6 +206,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Damaged myelin slows or disrupts signals. Diseases like multiple sclerosis involve myelin breakdown.',
+            distractorExplanations: {
+              0: 'The neuron would fire more powerfully is not correct here; damaged myelin slows or disrupts signals.',
+              1: 'There is a real effect here; damaged myelin slows or disrupts signals. Diseases like multiple sclerosis involve myelin breakdown.',
+              2: 'The neuron would grow new dendrites is not correct here; damaged myelin slows or disrupts signals.',
+            },
           },
           {
             id: 'psy-sec1-u5-L2-T3',
@@ -204,6 +230,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Intensity is coded by how frequently neurons fire, not by the strength of each individual signal.',
+            distractorExplanations: {
+              0: 'Louder sounds activate bigger neurons is not correct here; intensity is coded by how frequently neurons fire, not by the strength of each.',
+              1: 'This is too narrow; intensity is coded by how frequently neurons fire, not by the strength of each individual signal.',
+              2: 'Different neurons handle different volumes is not correct here; intensity is coded by how frequently neurons fire, not by the strength of each.',
+            },
           },
         ],
       },
@@ -229,6 +260,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Neurons are physically connected to each other with no gap between them.',
             correctAnswer: false,
             explanation: 'Neurons are separated by a tiny gap called the synapse. Chemicals carry the message across this gap.',
+            distractorExplanations: {
+              0: 'Neurons are separated by a tiny gap called the synapse. Chemicals carry the message across this gap.',
+            },
           },
           {
             id: 'psy-sec1-u5-L3-Q2',
@@ -269,6 +303,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Neurotransmitters are chemicals released at the synapse that carry signals between neurons.',
+            distractorExplanations: {
+              1: 'Hormones is not correct here; neurotransmitters are chemicals released at the synapse that carry signals between neurons.',
+              2: 'Red blood cells is not correct here; neurotransmitters are chemicals released at the synapse that carry signals between neurons.',
+              3: 'Myelin molecules is not correct here; neurotransmitters are chemicals released at the synapse that carry signals between neurons.',
+            },
           },
           {
             id: 'psy-sec1-u5-L3-T3',
@@ -288,6 +327,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Reuptake is the process where the sending neuron reabsorbs unused neurotransmitters, clearing the synapse.',
+            distractorExplanations: {
+              1: 'The next neuron sending a signal backward is not correct here; reuptake is the process where the sending neuron reabsorbs unused.',
+              2: 'The creation of new neurotransmitters from scratch is not correct here; reuptake is the process where the sending neuron reabsorbs unused.',
+              3: 'This is not accurate; reuptake is the process where the sending neuron reabsorbs unused neurotransmitters, clearing the synapse.',
+            },
           },
           {
             id: 'psy-sec1-u5-L3-Q6',
@@ -302,6 +346,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'When reuptake is blocked, neurotransmitters remain active in the synapse longer, increasing their effect on the receiving neuron.',
+            distractorExplanations: {
+              0: 'Blocking reuptake destroys the neurotransmitter faster is not correct here; when reuptake is blocked, neurotransmitters remain active in the.',
+              1: 'Blocking reuptake stops all neural communication is not correct here; when reuptake is blocked, neurotransmitters remain active in the synapse.',
+              2: 'This is not accurate; when reuptake is blocked, neurotransmitters remain active in the synapse longer, increasing their effect on the receiving.',
+            },
           },
         ],
       },
@@ -327,6 +376,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Serotonin helps regulate mood and sleep.',
             correctAnswer: true,
             explanation: 'Serotonin is a key neurotransmitter for mood regulation, sleep, and appetite.',
+            distractorExplanations: {
+              1: 'Serotonin is a key neurotransmitter for mood regulation, sleep, and appetite.',
+            },
           },
           {
             id: 'psy-sec1-u5-L4-Q2',
@@ -371,6 +423,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The brain needs both to maintain balance. Without inhibition, neurons would fire out of control, which can cause seizures.',
+            distractorExplanations: {
+              1: 'This is not accurate; the brain needs both to maintain balance. Without inhibition, neurons would fire out of control, which can cause seizures.',
+              2: 'Only children need inhibitory neurotransmitters is not correct here; the brain needs both to maintain balance.',
+              3: 'Inhibitory neurotransmitters are a sign of brain damage is not correct here; the brain needs both to maintain balance.',
+            },
           },
           {
             id: 'psy-sec1-u5-L4-T3',
@@ -390,6 +447,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Low serotonin levels are linked to depression. Many antidepressant medications work by increasing serotonin availability.',
+            distractorExplanations: {
+              0: 'Improved memory is not correct here; low serotonin levels are linked to depression.',
+              1: 'Better vision is not correct here; low serotonin levels are linked to depression.',
+              2: 'Enhanced athletic performance is not correct here; low serotonin levels are linked to depression.',
+            },
           },
           {
             id: 'psy-sec1-u5-L4-Q6',
@@ -404,6 +466,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'This describes an SSRI (selective serotonin reuptake inhibitor), which keeps serotonin active longer to help regulate mood.',
+            distractorExplanations: {
+              0: 'Dopamine, to increase motivation is not correct here; this describes an SSRI (selective serotonin reuptake inhibitor), which keeps serotonin.',
+              1: 'Glutamate, to boost memory is not correct here; this describes an SSRI (selective serotonin reuptake inhibitor), which keeps serotonin active.',
+              2: 'GABA, to reduce anxiety is not correct here; this describes an SSRI (selective serotonin reuptake inhibitor), which keeps serotonin active longer.',
+            },
           },
         ],
       },
@@ -429,6 +496,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Repeatedly activating the same neurons strengthens the connections between them.',
             correctAnswer: true,
             explanation: 'Hebb\'s rule states that neurons that fire together wire together, forming stronger connections through repetition.',
+            distractorExplanations: {
+              1: 'Hebb\'s rule states that neurons that fire together wire together, forming stronger connections through repetition.',
+            },
           },
           {
             id: 'psy-sec1-u5-L5-Q2',
@@ -456,6 +526,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Neuroplasticity occurs throughout the entire lifespan, not just in childhood.',
+            distractorExplanations: {
+              0: 'This is too narrow; neuroplasticity occurs throughout the entire lifespan, not just in childhood.',
+              1: 'Neuroplasticity stops completely at age 25 is not correct here; neuroplasticity occurs throughout the entire lifespan, not just in childhood.',
+              3: 'This is too narrow; neuroplasticity occurs throughout the entire lifespan, not just in childhood.',
+            },
           },
           {
             id: 'psy-sec1-u5-L5-Q4',
@@ -491,6 +566,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Unused connections weaken and can be eliminated through pruning, which helps the brain stay efficient.',
+            distractorExplanations: {
+              0: 'They stay the same strength forever is not correct here; unused connections weaken and can be eliminated through pruning, which helps the brain.',
+              1: 'They get stronger automatically over time is not correct here; unused connections weaken and can be eliminated through pruning, which helps the.',
+              3: 'They transfer to a different brain region is not correct here; unused connections weaken and can be eliminated through pruning, which helps the.',
+            },
           },
           {
             id: 'psy-sec1-u5-L5-Q6',
@@ -505,6 +585,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Neuroplasticity allows undamaged brain areas to compensate for lost function. Repeated practice through therapy strengthens these new pathways.',
+            distractorExplanations: {
+              0: 'The damaged neurons repaired themselves completely is not correct here; neuroplasticity allows undamaged brain areas to compensate for lost.',
+              1: 'The stroke did not actually damage any neurons is not correct here; neuroplasticity allows undamaged brain areas to compensate for lost function.',
+              2: 'She was pretending to be impaired before is not correct here; neuroplasticity allows undamaged brain areas to compensate for lost function.',
+            },
           },
         ],
       },
@@ -544,6 +629,9 @@ export const psySection1Part2: Unit[] = [
             question: 'The two hemispheres of the brain are connected by the corpus callosum.',
             correctAnswer: true,
             explanation: 'The corpus callosum is a thick band of nerve fibers that allows the left and right hemispheres to communicate.',
+            distractorExplanations: {
+              1: 'The corpus callosum is a thick band of nerve fibers that allows the left and right hemispheres to communicate.',
+            },
           },
           {
             id: 'psy-sec1-u6-L1-Q2',
@@ -571,6 +659,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The left hemisphere is typically more involved in language, but the right hemisphere still contributes to understanding tone and context.',
+            distractorExplanations: {
+              0: 'This is too narrow; the left hemisphere is typically more involved in language, but the right hemisphere still contributes to understanding tone.',
+              1: 'Neither hemisphere handles language is not correct here; the left hemisphere is typically more involved in language, but the right hemisphere.',
+              3: 'Both hemispheres equally at all times is not correct here; the left hemisphere is typically more involved in language, but the right hemisphere.',
+            },
           },
           {
             id: 'psy-sec1-u6-L1-Q4',
@@ -599,6 +692,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Due to contralateral control, the left hemisphere controls the right side of the body, so left-hemisphere damage affects the right side.',
+            distractorExplanations: {
+              1: 'The left side of the body is not correct here; due to contralateral control, the left hemisphere controls the right side of the body, so.',
+              2: 'Both sides equally is not correct here; due to contralateral control, the left hemisphere controls the right side of the body, so left-hemisphere.',
+              3: 'This is too narrow; due to contralateral control, the left hemisphere controls the right side of the body, so left-hemisphere damage affects the.',
+            },
           },
           {
             id: 'psy-sec1-u6-L1-Q6',
@@ -613,6 +711,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The left hemisphere is specialized for language and controls the right side of the body, so both symptoms are consistent with left-hemisphere damage.',
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the left hemisphere is specialized for language and controls the right side of the body, so both symptoms are.',
+              1: 'Right-arm weakness proves left-brain people are logical is not correct here; the left hemisphere is specialized for language and controls the.',
+              2: 'The speech problems must be from a separate injury is not correct here; the left hemisphere is specialized for language and controls the right.',
+            },
           },
         ],
       },
@@ -638,6 +741,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Split-brain experiments involved patients whose corpus callosum had been cut.',
             correctAnswer: true,
             explanation: 'The corpus callosum was surgically severed to treat severe epilepsy, which allowed researchers to study each hemisphere independently.',
+            distractorExplanations: {
+              1: 'The corpus callosum was surgically severed to treat severe epilepsy, which allowed researchers to study each hemisphere independently.',
+            },
           },
           {
             id: 'psy-sec1-u6-L2-Q2',
@@ -651,6 +757,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The surgery was performed to prevent seizures from spreading between hemispheres in severe epilepsy cases.',
+            distractorExplanations: {
+              1: 'To improve memory is not correct here; the surgery was performed to prevent seizures from spreading between hemispheres in severe epilepsy cases.',
+              2: 'To increase creativity is not correct here; the surgery was performed to prevent seizures from spreading between hemispheres in severe epilepsy.',
+              3: 'To study psychology is not correct here; the surgery was performed to prevent seizures from spreading between hemispheres in severe epilepsy cases.',
+            },
           },
           {
             id: 'psy-sec1-u6-L2-T2',
@@ -670,6 +781,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Without the corpus callosum, the right hemisphere could see the object but could not send that information to the language areas in the left hemisphere.',
+            distractorExplanations: {
+              0: 'The right hemisphere is blind is not correct here; without the corpus callosum, the right hemisphere could see the object but could not send that.',
+              1: 'This is not accurate; without the corpus callosum, the right hemisphere could see the object but could not send that information to the language.',
+              2: 'The patient was not paying attention is not correct here; without the corpus callosum, the right hemisphere could see the object but could not.',
+            },
           },
           {
             id: 'psy-sec1-u6-L2-Q4',
@@ -696,6 +812,9 @@ export const psySection1Part2: Unit[] = [
             question: 'In a healthy brain, the two hemispheres work together seamlessly for most tasks.',
             correctAnswer: true,
             explanation: 'The corpus callosum transfers information so rapidly that both hemispheres function as an integrated whole.',
+            distractorExplanations: {
+              1: 'The corpus callosum transfers information so rapidly that both hemispheres function as an integrated whole.',
+            },
           },
           {
             id: 'psy-sec1-u6-L2-Q6',
@@ -710,6 +829,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The right hemisphere processed the image and directed the left hand to draw it, but speech is controlled by the left hemisphere, which did not receive the visual information.',
+            distractorExplanations: {
+              0: 'The patient is lying about seeing nothing is not correct here; the right hemisphere processed the image and directed the left hand to draw it,.',
+              2: 'This is not accurate; the right hemisphere processed the image and directed the left hand to draw it, but speech is controlled by the left.',
+              3: 'The right hemisphere is better at lying than the left is not correct here; the right hemisphere processed the image and directed the left hand to.',
+            },
           },
         ],
       },
@@ -735,6 +859,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Brain imaging studies confirm that people are either "left-brained" or "right-brained."',
             correctAnswer: false,
             explanation: 'Large-scale brain imaging studies have found no evidence that people are dominated by one hemisphere. Both sides are always active.',
+            distractorExplanations: {
+              0: 'Large-scale brain imaging studies have found no evidence that people are dominated by one hemisphere. Both sides are always active.',
+            },
           },
           {
             id: 'psy-sec1-u6-L3-Q2',
@@ -748,6 +875,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research consistently shows both hemispheres are active in nearly every task. There is no such thing as a "left-brained" or "right-brained" person.',
+            distractorExplanations: {
+              1: '65% of people are left-brain dominant is not correct here; research consistently shows both hemispheres are active in nearly every task.',
+              2: 'Creative people clearly use the right hemisphere more is not correct here; research consistently shows both hemispheres are active in nearly.',
+              3: 'Logical people clearly use the left hemisphere more is not correct here; research consistently shows both hemispheres are active in nearly every.',
+            },
           },
           {
             id: 'psy-sec1-u6-L3-T2',
@@ -783,6 +915,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The myth can become a self-fulfilling prophecy, leading people to avoid developing skills they believe they are "not wired for."',
+            distractorExplanations: {
+              0: 'It causes brain damage over time is not correct here; the myth can become a self-fulfilling prophecy, leading people to avoid developing skills.',
+              1: 'It only affects children, not adults is not correct here; the myth can become a self-fulfilling prophecy, leading people to avoid developing.',
+              2: 'This is too absolute; the myth can become a self-fulfilling prophecy, leading people to avoid developing skills they believe they are "not wired.',
+            },
           },
           {
             id: 'psy-sec1-u6-L3-T3',
@@ -811,6 +948,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The "brain type" idea is a myth. Both hemispheres contribute to both math and art. Skill development comes from practice, not hemisphere dominance.',
+            distractorExplanations: {
+              0: 'This is not accurate; the "brain type" idea is a myth. Both hemispheres contribute to both math and art.',
+              2: 'You should take a brain dominance test to confirm is not correct here; the "brain type" idea is a myth.',
+              3: 'You are right, left-brained people cannot do art either is not correct here; the "brain type" idea is a myth.',
+            },
           },
         ],
       },
@@ -835,6 +977,9 @@ export const psySection1Part2: Unit[] = [
             question: 'The main difference between hemispheres is processing style, not personality type.',
             correctAnswer: true,
             explanation: 'The hemispheres differ in how they approach information (detail vs. big picture), not in what type of person you are.',
+            distractorExplanations: {
+              1: 'The hemispheres differ in how they approach information (detail vs. big picture), not in what type of person you are.',
+            },
           },
           {
             id: 'psy-sec1-u6-L4-Q2',
@@ -848,6 +993,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The left hemisphere tends to process details and sequential information, while the right tends to process holistic, spatial information.',
+            distractorExplanations: {
+              0: 'Left handles all thinking, right handles all emotions is not correct here; the left hemisphere tends to process details and sequential.',
+              2: 'Left is for men, right is for women is not correct here; the left hemisphere tends to process details and sequential information, while the right.',
+              3: 'They do not differ at all is not correct here; the left hemisphere tends to process details and sequential information, while the right tends to.',
+            },
           },
           {
             id: 'psy-sec1-u6-L4-T2',
@@ -883,6 +1033,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The left hemisphere handles the mechanics of reading, while the right hemisphere interprets emotional nuances like sarcasm.',
+            distractorExplanations: {
+              1: 'Sarcasm does not exist in the brain is not correct here; the left hemisphere handles the mechanics of reading, while the right hemisphere.',
+              2: 'The patient has lost all language ability is not correct here; the left hemisphere handles the mechanics of reading, while the right hemisphere.',
+              3: 'This is not accurate; the left hemisphere handles the mechanics of reading, while the right hemisphere interprets emotional nuances like sarcasm.',
+            },
           },
           {
             id: 'psy-sec1-u6-L4-T3',
@@ -911,6 +1066,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Both math and creative writing require both hemispheres. Being good at multiple things is normal, not a sign of special brain wiring.',
+            distractorExplanations: {
+              0: 'This is not accurate; both math and creative writing require both hemispheres.',
+              1: 'This is not accurate; both math and creative writing require both hemispheres.',
+              2: 'This is not accurate; both math and creative writing require both hemispheres.',
+            },
           },
         ],
       },
@@ -936,6 +1096,9 @@ export const psySection1Part2: Unit[] = [
             question: 'All left-handed people have language in the right hemisphere.',
             correctAnswer: false,
             explanation: 'Left-handed people show more variation in language lateralization. Many still have language primarily in the left hemisphere.',
+            distractorExplanations: {
+              0: 'Left-handed people show more variation in language lateralization. Many still have language primarily in the left hemisphere.',
+            },
           },
           {
             id: 'psy-sec1-u6-L5-Q2',
@@ -949,6 +1112,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Roughly 90% of the world\'s population is right-handed, a ratio that has been consistent across cultures and throughout history.',
+            distractorExplanations: {
+              0: 'About 50% is not correct here; roughly 90% of the world\'s population is right-handed, a ratio that has been consistent across cultures and.',
+              1: 'About 70% is not correct here; roughly 90% of the world\'s population is right-handed, a ratio that has been consistent across cultures and.',
+              3: 'About 99% is not correct here; roughly 90% of the world\'s population is right-handed, a ratio that has been consistent across cultures and.',
+            },
           },
           {
             id: 'psy-sec1-u6-L5-T2',
@@ -968,6 +1136,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Less lateralization means both hemispheres share language duties more equally, rather than one side dominating.',
+            distractorExplanations: {
+              0: 'They cannot speak at all is not correct here; less lateralization means both hemispheres share language duties more equally, rather than one side.',
+              1: 'Their corpus callosum is larger than average is not correct here; less lateralization means both hemispheres share language duties more equally,.',
+              2: 'This is too narrow; less lateralization means both hemispheres share language duties more equally, rather than one side dominating.',
+            },
           },
           {
             id: 'psy-sec1-u6-L5-Q4',
@@ -1003,6 +1176,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Hemispheric specialization is real, but both sides collaborate on all complex tasks. No one is purely "left-brained" or "right-brained."',
+            distractorExplanations: {
+              0: 'People are either left-brained or right-brained is not correct here; hemispheric specialization is real, but both sides collaborate on all.',
+              2: 'There is a real effect here; hemispheric specialization is real, but both sides collaborate on all complex tasks.',
+              3: 'Only left-handed people have brain lateralization is not correct here; hemispheric specialization is real, but both sides collaborate on all.',
+            },
           },
           {
             id: 'psy-sec1-u6-L5-Q6',
@@ -1017,6 +1195,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Brain imaging studies have repeatedly shown that hemisphere dominance "types" do not exist. Such quizzes have no scientific validity.',
+            distractorExplanations: {
+              0: 'This reasoning is flawed; brain imaging studies have repeatedly shown that hemisphere dominance "types" do not exist.',
+              1: 'This is not accurate; brain imaging studies have repeatedly shown that hemisphere dominance "types" do not exist.',
+              3: 'It is only accurate for right-handed people is not correct here; brain imaging studies have repeatedly shown that hemisphere dominance "types" do.',
+            },
           },
         ],
       },
@@ -1056,6 +1239,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Consciousness is your awareness of yourself and your surroundings.',
             correctAnswer: true,
             explanation: 'Consciousness is the state of being aware of your own existence, thoughts, and environment.',
+            distractorExplanations: {
+              1: 'Consciousness is the state of being aware of your own existence, thoughts, and environment.',
+            },
           },
           {
             id: 'psy-sec1-u7-L1-Q2',
@@ -1069,6 +1255,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Deliberate thinking is a conscious process. Automatic body functions like heartbeat and breathing happen without conscious awareness.',
+            distractorExplanations: {
+              0: 'Your heart beating while you sleep is not correct here; deliberate thinking is a conscious process.',
+              1: 'Your lungs breathing automatically is not correct here; deliberate thinking is a conscious process.',
+              3: 'Your immune system fighting a cold is not correct here; deliberate thinking is a conscious process.',
+            },
           },
           {
             id: 'psy-sec1-u7-L1-T2',
@@ -1101,6 +1292,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Consciousness is a spectrum, with many gradations between full alertness and complete unconsciousness.',
+            distractorExplanations: {
+              1: 'This is too absolute; consciousness is a spectrum, with many gradations between full alertness and complete unconsciousness.',
+              2: 'Because consciousness only exists during waking hours is not correct here; consciousness is a spectrum, with many gradations between full.',
+              3: 'Because animals cannot be conscious is not correct here; consciousness is a spectrum, with many gradations between full alertness and complete.',
+            },
           },
           {
             id: 'psy-sec1-u7-L1-T3',
@@ -1129,6 +1325,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'We can identify which brain regions are active, but why activity in those regions feels like something remains unexplained.',
+            distractorExplanations: {
+              0: 'The scientist needs better equipment is not correct here; we can identify which brain regions are active, but why activity in those regions feels.',
+              1: 'The experience of red is identical across all people is not correct here; we can identify which brain regions are active, but why activity in.',
+              2: 'Color is not processed by the brain is not correct here; we can identify which brain regions are active, but why activity in those regions feels.',
+            },
           },
         ],
       },
@@ -1154,6 +1355,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Most of your brain\'s processing happens unconsciously.',
             correctAnswer: true,
             explanation: 'The vast majority of brain activity occurs below conscious awareness, from body regulation to perception.',
+            distractorExplanations: {
+              1: 'The vast majority of brain activity occurs below conscious awareness, from body regulation to perception.',
+            },
           },
           {
             id: 'psy-sec1-u7-L2-Q2',
@@ -1212,6 +1416,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Today\'s researchers see the unconscious as handling automatic processes, pattern recognition, and implicit learning, not primarily as a vault of repressed desires.',
+            distractorExplanations: {
+              0: 'Modern psychology agrees with all of Freud\'s claims is not correct here; today\'s researchers see the unconscious as handling automatic processes,.',
+              1: 'This is not accurate; today\'s researchers see the unconscious as handling automatic processes, pattern recognition, and implicit learning, not.',
+              3: 'Modern psychology says the unconscious does not exist is not correct here; today\'s researchers see the unconscious as handling automatic.',
+            },
           },
           {
             id: 'psy-sec1-u7-L2-Q6',
@@ -1226,6 +1435,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Well-practiced tasks can be handled by unconscious, automatic processing, freeing your conscious mind to think about other things.',
+            distractorExplanations: {
+              0: 'You fell asleep while driving is not correct here; well-practiced tasks can be handled by unconscious, automatic processing, freeing your.',
+              1: 'This is a sign of a medical problem is not correct here; well-practiced tasks can be handled by unconscious, automatic processing, freeing your.',
+              2: 'Your conscious mind was fully engaged the whole time is not correct here; well-practiced tasks can be handled by unconscious, automatic.',
+            },
           },
         ],
       },
@@ -1250,6 +1464,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Automatic processing requires conscious effort and attention.',
             correctAnswer: false,
             explanation: 'Automatic processing happens without conscious effort. It is controlled processing that requires deliberate attention.',
+            distractorExplanations: {
+              0: 'Automatic processing happens without conscious effort. It is controlled processing that requires deliberate attention.',
+            },
           },
           {
             id: 'psy-sec1-u7-L3-Q2',
@@ -1286,6 +1503,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Repeated practice transforms controlled processes into automatic ones. This is a fundamental principle of skill learning.',
+            distractorExplanations: {
+              1: 'It stays controlled forever is not correct here; repeated practice transforms controlled processes into automatic ones.',
+              2: 'It moves to a different part of the brain entirely is not correct here; repeated practice transforms controlled processes into automatic ones.',
+              3: 'It stops working and must be relearned is not correct here; repeated practice transforms controlled processes into automatic ones.',
+            },
           },
           {
             id: 'psy-sec1-u7-L3-Q4',
@@ -1313,6 +1535,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The Stroop effect occurs because reading is automatic for literate adults. The automatic reading response interferes with the deliberate task of naming the ink color.',
+            distractorExplanations: {
+              0: 'Your eyes cannot see the color correctly is not correct here; the Stroop effect occurs because reading is automatic for literate adults.',
+              1: 'This is too absolute; the Stroop effect occurs because reading is automatic for literate adults.',
+              2: 'The brain processes color before words is not correct here; the Stroop effect occurs because reading is automatic for literate adults.',
+            },
           },
           {
             id: 'psy-sec1-u7-L3-Q6',
@@ -1327,6 +1554,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'With repeated practice, the task became automatic, requiring less conscious attention. This freed mental resources for listening to a podcast simultaneously.',
+            distractorExplanations: {
+              0: 'The task became easier because the data changed is not correct here; with repeated practice, the task became automatic, requiring less conscious.',
+              1: 'The employee is now rushing and making more errors is not correct here; with repeated practice, the task became automatic, requiring less.',
+              3: 'This is not accurate; with repeated practice, the task became automatic, requiring less conscious attention.',
+            },
           },
         ],
       },
@@ -1352,6 +1584,9 @@ export const psySection1Part2: Unit[] = [
             question: 'During REM sleep, the brain is nearly as active as during waking hours.',
             correctAnswer: true,
             explanation: 'Brain scans show intense activity during REM sleep, similar to waking brain activity. This is when most vivid dreaming occurs.',
+            distractorExplanations: {
+              1: 'Brain scans show intense activity during REM sleep, similar to waking brain activity. This is when most vivid dreaming occurs.',
+            },
           },
           {
             id: 'psy-sec1-u7-L4-Q2',
@@ -1365,6 +1600,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Each sleep cycle lasts roughly 90 minutes and includes light sleep, deep sleep, and REM stages.',
+            distractorExplanations: {
+              1: 'About 15 minutes is not correct here; each sleep cycle lasts roughly 90 minutes and includes light sleep, deep sleep, and REM stages.',
+              2: 'About 4 hours is not correct here; each sleep cycle lasts roughly 90 minutes and includes light sleep, deep sleep, and REM stages.',
+              3: 'About 8 hours is not correct here; each sleep cycle lasts roughly 90 minutes and includes light sleep, deep sleep, and REM stages.',
+            },
           },
           {
             id: 'psy-sec1-u7-L4-T2',
@@ -1393,6 +1633,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Sleep helps consolidate recently learned information. Studying before sleep takes advantage of this natural memory-strengthening process.',
+            distractorExplanations: {
+              0: 'Your eyes work better at night is not correct here; sleep helps consolidate recently learned information.',
+              1: 'This is too absolute; sleep helps consolidate recently learned information.',
+              2: 'The brain shuts down and stops processing information is not correct here; sleep helps consolidate recently learned information.',
+            },
           },
           {
             id: 'psy-sec1-u7-L4-T3',
@@ -1429,6 +1674,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'This describes a flow state: an altered state of consciousness characterized by deep absorption, loss of time awareness, and effortless performance.',
+            distractorExplanations: {
+              0: 'She had a medical episode and should see a doctor is not correct here; this describes a flow state: an altered state of consciousness.',
+              1: 'This is not accurate; this describes a flow state: an altered state of consciousness characterized by deep absorption, loss of time awareness,.',
+              2: 'She fell asleep briefly on stage is not correct here; this describes a flow state: an altered state of consciousness characterized by deep.',
+            },
           },
         ],
       },
@@ -1454,6 +1704,9 @@ export const psySection1Part2: Unit[] = [
             question: 'The human brain can consciously attend to all incoming sensory information simultaneously.',
             correctAnswer: false,
             explanation: 'Attention is limited. You can only consciously process a small fraction of the sensory information your brain receives.',
+            distractorExplanations: {
+              0: 'Attention is limited. You can only consciously process a small fraction of the sensory information your brain receives.',
+            },
           },
           {
             id: 'psy-sec1-u7-L5-Q2',
@@ -1467,6 +1720,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Selective attention is the ability to focus on specific information while filtering out distractions.',
+            distractorExplanations: {
+              1: 'The ability to pay attention to everything at once is not correct here; selective attention is the ability to focus on specific information while.',
+              2: 'A condition where you cannot pay attention at all is not correct here; selective attention is the ability to focus on specific information while.',
+              3: 'Paying equal attention to all senses simultaneously is not correct here; selective attention is the ability to focus on specific information.',
+            },
           },
           {
             id: 'psy-sec1-u7-L5-T2',
@@ -1494,6 +1752,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Your unconscious mind scans unattended information and can bring important items (like your name) to conscious awareness.',
+            distractorExplanations: {
+              0: 'This is not accurate; your unconscious mind scans unattended information and can bring important items (like your name) to conscious awareness.',
+              1: 'This is not accurate; your unconscious mind scans unattended information and can bring important items (like your name) to conscious awareness.',
+              2: 'This is not accurate; your unconscious mind scans unattended information and can bring important items (like your name) to conscious awareness.',
+            },
           },
           {
             id: 'psy-sec1-u7-L5-T3',
@@ -1513,6 +1776,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'True multitasking on attention-demanding tasks is not possible. The brain switches rapidly between tasks, with a performance cost each time.',
+            distractorExplanations: {
+              0: 'This is not accurate; true multitasking on attention-demanding tasks is not possible.',
+              1: 'Multitasking makes both tasks easier is not correct here; true multitasking on attention-demanding tasks is not possible.',
+              2: 'This is not accurate; true multitasking on attention-demanding tasks is not possible.',
+            },
           },
           {
             id: 'psy-sec1-u7-L5-Q6',
@@ -1527,6 +1795,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Divided attention reduces performance even when we are unaware of the cost. We often overestimate our ability to multitask effectively.',
+            distractorExplanations: {
+              0: 'Texting helps some students learn better is not correct here; divided attention reduces performance even when we are unaware of the cost.',
+              1: 'The test was unfair to students who text is not correct here; divided attention reduces performance even when we are unaware of the cost.',
+              2: 'This is not accurate; divided attention reduces performance even when we are unaware of the cost.',
+            },
           },
         ],
       },
@@ -1617,6 +1890,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Blocking reuptake prevents the sending neuron from reabsorbing serotonin, so it stays active in the synapse longer.',
+            distractorExplanations: {
+              1: 'Less serotonin is available in the synapse is not correct here; blocking reuptake prevents the sending neuron from reabsorbing serotonin, so it.',
+              2: 'The neuron stops producing serotonin entirely is not correct here; blocking reuptake prevents the sending neuron from reabsorbing serotonin, so.',
+              3: 'Dopamine levels increase instead is not correct here; blocking reuptake prevents the sending neuron from reabsorbing serotonin, so it stays.',
+            },
           },
           {
             id: 'psy-sec1-u8-L1-Q5',
@@ -1639,6 +1917,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Neuroplasticity enables undamaged brain regions to rewire and compensate for lost functions.',
+            distractorExplanations: {
+              0: 'The all-or-nothing principle is not correct here; neuroplasticity enables undamaged brain regions to rewire and compensate for lost functions.',
+              1: 'Contralateral control is not correct here; neuroplasticity enables undamaged brain regions to rewire and compensate for lost functions.',
+              2: 'The Stroop effect is not correct here; neuroplasticity enables undamaged brain regions to rewire and compensate for lost functions.',
+            },
           },
         ],
       },
@@ -1663,6 +1946,9 @@ export const psySection1Part2: Unit[] = [
             question: 'Brain imaging studies confirm that some people are strongly left-brained while others are strongly right-brained.',
             correctAnswer: false,
             explanation: 'No brain imaging study has found evidence for brain dominance types. Both hemispheres are always active.',
+            distractorExplanations: {
+              0: 'No brain imaging study has found evidence for brain dominance types. Both hemispheres are always active.',
+            },
           },
           {
             id: 'psy-sec1-u8-L2-Q2',
@@ -1676,6 +1962,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The corpus callosum is the thick band of nerve fibers that allows communication between the left and right hemispheres.',
+            distractorExplanations: {
+              1: 'The brain stem is not correct here; the corpus callosum is the thick band of nerve fibers that allows communication between the left and right.',
+              2: 'The spinal cord is not correct here; the corpus callosum is the thick band of nerve fibers that allows communication between the left and right.',
+              3: 'The frontal lobe is not correct here; the corpus callosum is the thick band of nerve fibers that allows communication between the left and right.',
+            },
           },
           {
             id: 'psy-sec1-u8-L2-Q3',
@@ -1712,6 +2003,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Left visual field sends info to the right hemisphere. The right hemisphere recognized the apple and controlled the left hand, but speech centers in the left hemisphere received no information.',
+            distractorExplanations: {
+              1: 'The patient is confused about what an apple is is not correct here; left visual field sends info to the right hemisphere.',
+              2: 'This is not accurate; left visual field sends info to the right hemisphere.',
+              3: 'This is not accurate; left visual field sends info to the right hemisphere.',
+            },
           },
           {
             id: 'psy-sec1-u8-L2-Q5',
@@ -1733,6 +2029,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Brain dominance types are a myth not supported by neuroscience research. Online quizzes claiming to identify your brain type have no scientific basis.',
+            distractorExplanations: {
+              1: 'This is not accurate; brain dominance types are a myth not supported by neuroscience research.',
+              2: 'This is not accurate; brain dominance types are a myth not supported by neuroscience research.',
+              3: 'Only MRI scans can determine your brain type is not correct here; brain dominance types are a myth not supported by neuroscience research.',
+            },
           },
         ],
       },
@@ -1785,6 +2086,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The Stroop effect shows that reading is so automatic it interferes with the controlled task of naming an ink color.',
+            distractorExplanations: {
+              1: 'That reading is a controlled process requiring effort is not correct here; the Stroop effect shows that reading is so automatic it interferes.',
+              2: 'That people are better at reading than naming colors is not correct here; the Stroop effect shows that reading is so automatic it interferes with.',
+              3: 'That color blindness affects word reading is not correct here; the Stroop effect shows that reading is so automatic it interferes with the.',
+            },
           },
           {
             id: 'psy-sec1-u8-L3-T2',
@@ -1798,6 +2104,9 @@ export const psySection1Part2: Unit[] = [
             question: 'When people multitask, their brain processes both tasks simultaneously with no performance cost.',
             correctAnswer: false,
             explanation: 'The brain rapidly switches between tasks, and each switch costs time and accuracy. True simultaneous processing of complex tasks is not possible.',
+            distractorExplanations: {
+              0: 'The brain rapidly switches between tasks, and each switch costs time and accuracy. True simultaneous processing of complex tasks is not possible.',
+            },
           },
           {
             id: 'psy-sec1-u8-L3-Q5',
@@ -1828,6 +2137,11 @@ export const psySection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'During sleep, the brain consolidates recently learned information into long-term memory, giving the sleep group an advantage.',
+            distractorExplanations: {
+              0: 'The cocktail party effect helps during sleep is not correct here; during sleep, the brain consolidates recently learned information into.',
+              1: 'Studying before sleep is dangerous for brain health is not correct here; during sleep, the brain consolidates recently learned information into.',
+              2: 'This is too absolute; during sleep, the brain consolidates recently learned information into long-term memory, giving the sleep group an advantage.',
+            },
           },
         ],
       },

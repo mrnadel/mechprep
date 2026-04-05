@@ -1,0 +1,442 @@
+[
+  {
+    "id": "htw-L3-Q1",
+    "type": "multiple-choice",
+    "question": "A door hinge allows the door to rotate about a fixed axis. In structural analysis, what type of support does a hinge pin represent?",
+    "options": [
+      "Fixed support — constrains both translation and rotation",
+      "Pin joint — constrains translation but allows free rotation",
+      "Roller support — constrains translation in one direction only",
+      "Moment connection — transmits bending moment across the joint"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A hinge pin constrains translational movement (the door cannot slide off its frame) but allows rotation about the pin axis. This is the classic pin/hinge support used in statics: it provides two reaction force components but zero moment reaction.",
+    "explanationLine": 23
+  },
+  {
+    "id": "htw-L3-Q2",
+    "type": "multiple-choice",
+    "question": "A hydraulic door closer exerts a closing torque of 8 N·m. If the door handle is 0.9 m from the hinge, what minimum force must you apply at the handle to hold the door open?",
+    "options": [
+      "About 4.5 N",
+      "About 7.2 N",
+      "About 8.9 N",
+      "About 12.0 N"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Torque = Force × distance. To balance 8 N·m at 0.9 m: F = 8 / 0.9 ≈ 8.9 N. This is a direct application of moment equilibrium about the hinge axis — the same principle used to size actuators and select motors.",
+    "explanationLine": 62
+  },
+  {
+    "id": "htw-L3-Q3",
+    "type": "multiple-choice",
+    "question": "A toilet flushes using a siphon. What primarily drives the water over the siphon crest and into the drain?",
+    "options": [
+      "Gravity pulling the taller drain-side water column creates a pressure difference",
+      "A mechanical pump mechanism built into the toilet base below the bowl",
+      "Water pressure from the supply line pushing water through the bowl",
+      "Capillary action drawing water upward through the narrow siphon tube"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Once the siphon is primed (water rises over the crest), the taller water column on the drain side creates a lower pressure at the crest than atmospheric pressure on the bowl side. Atmospheric pressure then pushes bowl water up and over. This is the same principle used in siphon-based flow measurement and priming of pumps.",
+    "explanationLine": 107
+  },
+  {
+    "id": "htw-L3-Q4",
+    "type": "true-false",
+    "question": "A toilet fill valve uses a float mechanism that acts as a feedback control system: the rising water level lifts the float, which closes the valve to stop filling — analogous to a proportional controller.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The float-valve is a classic negative feedback loop. The controlled variable (water level) is sensed by the float, which mechanically adjusts the valve opening. As level rises, the valve progressively closes. This proportional control concept appears in pressure regulators, thermostats, and governor mechanisms throughout engineering.",
+    "explanationLine": 115
+  },
+  {
+    "id": "htw-L3-Q5",
+    "type": "multiple-choice",
+    "question": "In a split air conditioning system, the indoor unit contains the evaporator and the outdoor unit contains the condenser. Why does the indoor unit cool the room?",
+    "options": [
+      "The compressor in the indoor unit generates cold air directly by expansion",
+      "Refrigerant evaporates at low pressure in the indoor coil, absorbing room heat",
+      "The outdoor condenser pumps pre-cooled air through ducts to the indoor unit",
+      "An electric Peltier cooling element in the indoor unit removes thermal energy"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The refrigerant enters the evaporator as a low-pressure liquid. It absorbs latent heat from room air to evaporate, cooling the air blown over the coil. This phase-change heat absorption is the core of the vapor-compression refrigeration cycle used in virtually all residential and commercial HVAC systems.",
+    "explanationLine": 181
+  },
+  {
+    "id": "htw-L3-Q7",
+    "type": "multiple-choice",
+    "question": "A home thermostat turns the AC compressor on when temperature exceeds the setpoint and off when it drops below. What type of control action is this?",
+    "options": [
+      "Proportional (P) control with variable output",
+      "On-off (bang-bang) control with fixed output",
+      "PID control with derivative damping term",
+      "Open-loop feedforward control without sensing"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A basic thermostat is an on-off (bang-bang) controller: the output is either fully on or fully off based on a threshold. This produces a characteristic oscillation around the setpoint. More advanced HVAC systems use PID or proportional control for smoother temperature regulation.",
+    "explanationLine": 204
+  },
+  {
+    "id": "htw-L3-Q8",
+    "type": "true-false",
+    "question": "A standard household light switch uses a snap-action (over-center) mechanism with a spring to ensure rapid contact transition, which minimizes electrical arcing.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The snap-action mechanism stores elastic energy in a spring that rapidly flips the contacts past the unstable equilibrium point. This fast transition minimizes the time contacts spend partially separated — when arcing and contact erosion are worst. This bistable mechanism concept appears in circuit breakers, relay contacts, and MEMS switches.",
+    "explanationLine": 214
+  },
+  {
+    "id": "htw-L3-Q9",
+    "type": "multiple-choice",
+    "question": "In a snap-action light switch, the mechanism has two stable positions (on and off) with an unstable equilibrium between them. What is this type of mechanism called?",
+    "options": [
+      "Monostable (single-rest) mechanism",
+      "Bistable (over-center) mechanism",
+      "Astable (free-running) oscillator",
+      "Critically damped linear mechanism"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A bistable mechanism has two stable equilibrium positions separated by an energy barrier (unstable equilibrium). The spring must be pushed past the over-center point, after which stored energy snaps it to the other stable state. This concept is fundamental in mechanism design, from toggle clamps to digital memory elements.",
+    "explanationLine": 228
+  },
+  {
+    "id": "htw-L3-Q10",
+    "type": "multiple-choice",
+    "question": "During the spin cycle, a washing machine removes water from clothes by spinning the drum at high speed. What force drives the water out through the drum perforations?",
+    "options": [
+      "Gravitational force pulling the water downward through the perforations",
+      "Centrifugal effect — water\\",
+      "Vacuum suction created at the drum center drawing water inward then out",
+      "Electromagnetic force from the motor field repelling the water molecules"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "In the rotating reference frame, the centrifugal effect pushes water radially outward through the drum holes. In the inertial frame, the water\\",
+    "explanationLine": 294
+  },
+  {
+    "id": "htw-L3-Q12",
+    "type": "true-false",
+    "question": "An unbalanced load in a spinning washing machine drum can cause dangerous resonance if the spin-up speed passes through the drum\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "As the drum accelerates, it passes through a range of frequencies. If an unbalanced mass is present and the rotational frequency matches the system\\",
+    "explanationLine": 312
+  },
+  {
+    "id": "htw-L3-Q13",
+    "type": "multiple-choice",
+    "question": "A living room floor is designed to carry furniture and occupants. In structural engineering, how is this type of loading best classified?",
+    "options": [
+      "A concentrated point load applied at the center of the floor span",
+      "A uniformly distributed load (UDL) spread over the floor area",
+      "A moment couple applied at the floor edges by the walls",
+      "An axial compressive load transmitted along the floor joists"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Building codes model floor loads as uniformly distributed loads (UDL), typically specified in kPa or psf. For residential floors, this is usually about 1.9 kPa (40 psf). Structural engineers use this UDL to calculate bending moments and deflections in beams and joists — the same beam analysis used in machine frame design.",
+    "explanationLine": 327
+  },
+  {
+    "id": "htw-L3-Q14",
+    "type": "multiple-choice",
+    "question": "Building codes limit floor deflection to L/360 (span/360) under live load. Why is this deflection limit important even though the floor is still structurally safe?",
+    "options": [
+      "Deflection beyond L/360 causes immediate structural collapse of the floor",
+      "Excessive deflection causes cracking in finishes, visible sagging, and discomfort",
+      "L/360 is the yield point deflection for all standard structural steel beams",
+      "Deflection limits exist only for aesthetic reasons with no functional significance"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The L/360 limit is a serviceability criterion, not a strength criterion. Excessive deflection can crack plaster and tile, cause doors to jam, make floors feel bouncy, and create visible sagging. Serviceability limits are equally important in machine design — shaft deflection limits prevent gear misalignment and bearing damage.",
+    "explanationLine": 341
+  },
+  {
+    "id": "htw-L3-Q16",
+    "type": "multiple-choice",
+    "question": "Window glass expands when heated by sunlight. If the glass is rigidly constrained in the frame with no expansion gap, what type of stress develops?",
+    "options": [
+      "Shear stress from differential heating across the thickness",
+      "Compressive stress — the glass wants to expand but cannot",
+      "Tensile stress pulling the glass away from the frame",
+      "Torsional stress twisting the pane about its center"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "When thermal expansion is constrained, the material develops thermal stress: σ = E·α·ΔT. Since the glass wants to expand but cannot, the constraint produces compressive stress. If non-uniform heating occurs (e.g., partial shading), tensile stresses at the boundary can cause thermal fracture. This is why expansion joints are critical in bridges, piping, and large structures.",
+    "explanationLine": 367
+  },
+  {
+    "id": "htw-L3-Q17",
+    "type": "true-false",
+    "question": "The U-value of a window measures its insulating ability: a lower U-value means better insulation and less heat loss.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "U-value (overall heat transfer coefficient, W/m²·K) represents total heat flow per unit area per degree of temperature difference. Lower U-value = less heat transfer = better insulation. This is the reciprocal of total thermal resistance (R-value). Engineers use U-values to calculate building heat loads and select HVAC equipment — the same thermal resistance network analysis used in electronics cooling.",
+    "explanationLine": 375
+  },
+  {
+    "id": "htw-L3-Q19",
+    "type": "multiple-choice",
+    "question": "An air conditioner with COP = 4 is cooling a room. For every 1 kW of electrical power consumed by the compressor, how much total heat is rejected by the outdoor condenser?",
+    "options": [
+      "3 kW",
+      "4 kW",
+      "5 kW",
+      "8 kW"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "By energy conservation: Q_hot = Q_cold + W. With COP_cooling = Q_cold/W = 4, then Q_cold = 4 kW. Therefore Q_hot = 4 + 1 = 5 kW. The condenser must reject both the heat absorbed from the room AND the work input. This is why outdoor units blow hot air — they expel more heat than the indoor unit removes.",
+    "explanationLine": 400
+  },
+  {
+    "id": "htw-L3-Q20",
+    "type": "multiple-choice",
+    "question": "A siphon cannot lift water higher than approximately 10.3 m at sea level. What fundamental principle explains this height limit?",
+    "options": [
+      "The viscosity of water increases significantly at greater heights",
+      "Atmospheric pressure can only support a 10.3 m water column against vacuum",
+      "Surface tension breaks down above 10.3 m of water column height",
+      "The pipe diameter becomes too restrictive relative to the flow rate"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Atmospheric pressure (101.3 kPa) equals the hydrostatic pressure of a 10.3 m water column (ρgh). Above this height, the absolute pressure at the siphon crest would need to go negative, which is physically impossible — the water column breaks and the siphon fails. This same limit applies to suction pumps, which is why deep wells require submersible pumps rather than surface suction pumps.",
+    "explanationLine": 416
+  },
+  {
+    "id": "htw-L4-Q1",
+    "type": "multiple-choice",
+    "question": "A bolt requires 60 N·m of torque to loosen. You have a wrench that is 0.3 m long but cannot generate enough force. Adding a \"cheater pipe\" extends the handle to 0.6 m. By what factor does the required hand force decrease?",
+    "options": [
+      "The required force is cut in half",
+      "The required force is reduced to one-third",
+      "The required force stays the same — only speed changes",
+      "The required force is reduced to one-quarter"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Torque = Force × lever arm. Doubling the lever arm from 0.3 m to 0.6 m halves the required force: F = 60/0.6 = 100 N instead of 60/0.3 = 200 N. This is the fundamental principle behind all lever-based mechanical advantage. However, using cheater pipes can exceed the wrench\\",
+    "explanationLine": 470
+  },
+  {
+    "id": "htw-L4-Q2",
+    "type": "true-false",
+    "question": "When tightening a bolt with a torque wrench, the applied torque directly equals the clamping force times the bolt diameter — friction plays a negligible role.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Friction is NOT negligible. Typically, about 90% of the applied torque is consumed by friction (under the bolt head and in the threads), and only about 10% actually generates clamping force (bolt stretch). This is why the torque-tension relationship T = K·F·d includes a friction-dependent \"nut factor\" K, and why lubricated vs. dry bolts produce vastly different clamping forces at the same torque.",
+    "explanationLine": 478
+  },
+  {
+    "id": "htw-L4-Q3",
+    "type": "multiple-choice",
+    "question": "A drill bit cutting through metal experiences a resisting torque. If you reduce the drill\\",
+    "options": [
+      "Torque decreases proportionally with the speed reduction",
+      "Torque remains unchanged regardless of the RPM setting",
+      "Torque increases, since power equals torque times speed",
+      "Torque becomes zero because the bit stalls at low RPM"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Power = Torque × angular velocity (P = τω). At constant power, reducing ω increases τ proportionally. This is why drills have low-speed/high-torque settings for large holes or hard materials and high-speed/low-torque settings for small holes in soft materials. The same P = τω relationship governs gearbox design in vehicles and industrial machinery.",
+    "explanationLine": 493
+  },
+  {
+    "id": "htw-L4-Q5",
+    "type": "multiple-choice",
+    "question": "A hydraulic jack has a small piston of area 5 cm² and a large piston of area 50 cm². If you apply 100 N of force to the small piston, what force does the large piston exert?",
+    "options": [
+      "100 N — force is conserved in hydraulic systems",
+      "500 N",
+      "1,000 N",
+      "5,000 N"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Pascal\\",
+    "explanationLine": 556
+  },
+  {
+    "id": "htw-L4-Q6",
+    "type": "multiple-choice",
+    "question": "Hydraulic systems use oil rather than air as the working fluid. What property of oil is most critical for a hydraulic jack to function properly?",
+    "options": [
+      "Oil has a lower viscosity than air, reducing friction losses",
+      "Oil is nearly incompressible, transmitting pressure without loss",
+      "Oil is lighter than water, reducing the weight of the system",
+      "Oil has higher thermal conductivity, preventing overheating"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Hydraulic systems rely on fluid incompressibility. When you push the small piston, the fluid volume displaced must go somewhere immediately — it pushes the large piston. If the fluid were compressible (like air in pneumatic systems), energy would be wasted compressing the fluid before the output piston moves. This is why hydraulic systems provide rigid, precise force transmission for presses, excavators, and aircraft controls.",
+    "explanationLine": 570
+  },
+  {
+    "id": "htw-L4-Q7",
+    "type": "true-false",
+    "question": "A hydraulic jack with a 20:1 area ratio can lift 20 times the input force, but the small piston must be pumped through 20 times the distance that the large piston rises.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Conservation of energy requires that Work_in = Work_out (ignoring friction). Since W = F × d, if force is multiplied by 20, distance is divided by 20. You pump many short strokes to raise a heavy load a small distance. This work conservation principle applies to all simple machines — mechanical advantage in force always comes at the cost of distance.",
+    "explanationLine": 578
+  },
+  {
+    "id": "htw-L4-Q8",
+    "type": "multiple-choice",
+    "question": "A C-clamp uses a screw thread to generate clamping force. If the screw has a pitch of 2 mm and you apply a force of 20 N at a handle radius of 80 mm, what approximate clamping force is generated (ignoring friction)?",
+    "options": [
+      "About 500 N",
+      "About 2,500 N",
+      "About 5,000 N",
+      "About 10,000 N"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The screw converts rotational input to linear clamping force. Ideal mechanical advantage = 2π × r / pitch = 2π × 80 / 2 = 251. Clamping force = 20 N × 251 ≈ 5,027 N. In practice, thread friction reduces this by roughly half, but the screw mechanism still provides enormous mechanical advantage. This is why bolted joints can generate such high clamping forces with modest hand effort.",
+    "explanationLine": 593
+  },
+  {
+    "id": "htw-L4-Q10",
+    "type": "multiple-choice",
+    "question": "Standard pliers have the fulcrum (pivot) between the effort (handles) and the load (jaws). What class of lever is this?",
+    "options": [
+      "First-class lever — fulcrum between effort and load",
+      "Second-class lever — load between fulcrum and effort",
+      "Third-class lever — effort between fulcrum and load",
+      "It is not a lever system; it operates on hydraulic principles"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Pliers and scissors are first-class levers: the pivot (fulcrum) sits between your hand force (effort) and the gripping/cutting force (load). Mechanical advantage = distance from fulcrum to handle / distance from fulcrum to jaw tip. Longer handles or a fulcrum closer to the jaws increases the gripping force — the same trade-off in all lever mechanisms.",
+    "explanationLine": 662
+  },
+  {
+    "id": "htw-L4-Q11",
+    "type": "multiple-choice",
+    "question": "A pair of pliers has handles 20 cm long and jaws 5 cm long (both measured from the pivot). If you squeeze the handles with 40 N, what approximate gripping force do the jaws exert?",
+    "options": [
+      "40 N",
+      "80 N",
+      "160 N",
+      "200 N"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Mechanical advantage = handle length / jaw length = 20/5 = 4. Gripping force = 40 N × 4 = 160 N. This moment balance about the pivot (40 × 20 = F × 5) is pure statics. The same analysis determines the grip force in robotic end-effectors, toggle clamps, and crimping tools.",
+    "explanationLine": 676
+  },
+  {
+    "id": "htw-L4-Q12",
+    "type": "true-false",
+    "question": "Tweezers are a third-class lever because the effort (your finger force) is applied between the fulcrum (the joined end) and the load (the tip), meaning they always have a mechanical advantage less than 1.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "In tweezers, the fulcrum is at the joined/bent end, your fingers apply force in the middle, and the tips grip the object. Since the effort arm is shorter than the load arm, MA < 1 — you must squeeze harder than the gripping force. The trade-off is increased precision and range of motion at the tips, which is why third-class levers are used where control matters more than force (e.g., human forearm, fishing rod).",
+    "explanationLine": 684
+  },
+  {
+    "id": "htw-L4-Q13",
+    "type": "multiple-choice",
+    "question": "A tape measure retracts automatically because of a coiled spring inside. As you pull the tape out further, the retraction force:",
+    "options": [
+      "Stays constant — it uses a constant-force spring",
+      "Increases linearly — like a standard Hookean spring",
+      "Decreases because the spring unwinds and loses tension",
+      "Fluctuates randomly depending on tape curvature"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Most tape measures use a constant-force spring (also called a Negator spring). Unlike a Hookean spring (F = kx), a constant-force spring provides nearly uniform force regardless of extension. It achieves this through its geometry — a tightly wound strip that naturally wants to remain coiled. This constant-force characteristic is also used in counterbalance mechanisms, window blinds, and cable retractors.",
+    "explanationLine": 699
+  },
+  {
+    "id": "htw-L4-Q15",
+    "type": "multiple-choice",
+    "question": "A screwdriver with a larger-diameter handle is easier to turn than one with a thin handle, even when driving the same screw. Why?",
+    "options": [
+      "The larger handle weighs more, providing greater rotational inertia",
+      "A larger diameter gives a longer moment arm, increasing torque",
+      "The larger handle reduces friction within the screw threads",
+      "The larger handle increases the rotational speed of the screw"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Torque = Force × radius. A larger handle radius means more torque is transmitted to the screw for the same grip force. This is why stubby screwdrivers (short but fat handles) and T-handle drivers exist — they maximize the moment arm. The same principle explains why steering wheels, valve handwheels, and capstan mechanisms use large diameters.",
+    "explanationLine": 723
+  },
+  {
+    "id": "htw-L4-Q16",
+    "type": "multiple-choice",
+    "question": "A wood screw with a finer thread pitch (smaller distance between threads) compared to a coarse-pitch screw of the same diameter will:",
+    "options": [
+      "Require less torque to drive and generate less holding force",
+      "Advance faster per turn but provide lower axial holding force",
+      "Advance less per turn but generate higher axial force per torque",
+      "Have identical mechanical advantage since the diameter is the same"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "A finer pitch means less linear advance per revolution, which increases the mechanical advantage (MA = 2πr / pitch). For the same input torque, a finer thread generates more axial (clamping) force. The trade-off: more turns are needed to drive the screw to the same depth. This is directly analogous to gear ratios — lower \"gear\" means more force but slower motion.",
+    "explanationLine": 737
+  },
+  {
+    "id": "htw-L4-Q17",
+    "type": "true-false",
+    "question": "A screw with a very steep lead angle (like an ACME power screw) can back-drive under load, meaning the load can push the screw out without any applied torque. This makes it unsuitable for applications like a car jack without a braking mechanism.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "When the lead angle exceeds the friction angle, the thread is no longer self-locking. The load force component along the thread helix overcomes friction and drives the screw backward. Ball screws (used in CNC machines) are intentionally non-self-locking for efficiency, but they require servo brakes to hold position. Standard V-thread fasteners have low lead angles and are self-locking by design.",
+    "explanationLine": 746
+  },
+  {
+    "id": "htw-L4-Q18",
+    "type": "multiple-choice",
+    "question": "A spirit level (bubble level) works because the bubble inside the curved vial always moves to the highest point. What principle governs the bubble\\",
+    "options": [
+      "Surface tension pulls the bubble toward the center of the curved vial",
+      "Buoyancy — the less-dense air bubble floats to the highest point",
+      "Magnetic forces in the liquid align the bubble with Earth\\",
+      "Atmospheric pressure pushes the bubble toward the low-pressure zone"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The bubble (air) is less dense than the liquid (typically ethanol-based). By Archimedes\\",
+    "explanationLine": 761
+  },
+  {
+    "id": "htw-L4-Q20",
+    "type": "multiple-choice",
+    "question": "You are using a spirit level inside an elevator that is accelerating upward. How does the accelerating reference frame affect the level\\",
+    "options": [
+      "The bubble becomes unstable and oscillates randomly in the vial",
+      "The level reads correctly — vertical acceleration doesn\\",
+      "The bubble shifts to one end, giving a false tilt reading",
+      "The bubble shrinks under increased effective pressure in the vial"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Uniform upward acceleration effectively increases the apparent gravitational acceleration (g_eff = g + a), but does not change what \"horizontal\" means. The bubble still seeks the highest point, and a level surface remains level. However, if the elevator accelerates laterally (e.g., turning in a vehicle), the apparent gravity vector tilts, and the level gives a false reading. This distinction between translational and directional acceleration is crucial in inertial navigation and accelerometer design.",
+    "explanationLine": 784
+  }
+]

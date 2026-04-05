@@ -40,6 +40,9 @@ export const finSection15Part2: Unit[] = [
             question: "Exchange rates only matter if you travel internationally.",
             correctAnswer: false,
             explanation: "Exchange rates affect import prices, international investments, and the cost of goods made overseas. They touch your finances even if you stay home.",
+            distractorExplanations: {
+              0: 'Exchange rates affect import prices, international investments, and the cost of goods made overseas. They touch your finances even if you stay home.',
+            },
           },
           {
             id: "fin-sec15-u7-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A stronger dollar means each dollar converts to more euros. Your purchasing power abroad increases.",
+            distractorExplanations: {
+              0: 'A stronger dollar means each dollar converts to more euros. Your purchasing power abroad increases.',
+              2: 'A stronger dollar means each dollar converts to more euros. Your purchasing power abroad increases.',
+              3: 'A stronger dollar means each dollar converts to more euros. Your purchasing power abroad increases.',
+            },
           },
           {
             id: "fin-sec15-u7-L1-T2",
@@ -74,6 +82,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 8% gain in euros is wiped out by the 10% currency loss. Your total return in home currency is approximately negative 2%. Currency risk is real.",
+            distractorExplanations: {
+              0: 'The 8% gain in euros is wiped out by the 10% currency loss. Your total return in home currency is approximately negative 2%. Currency risk is real.',
+              2: 'This reasoning is flawed; the 8% gain in euros is wiped out by the 10% currency loss.',
+              3: 'This overgeneralizes; the 8% gain in euros is wiped out by the 10% currency loss. Your total return in home currency is approximately negative 2%.',
+            },
           },
           {
             id: "fin-sec15-u7-L1-Q4",
@@ -103,6 +116,9 @@ export const finSection15Part2: Unit[] = [
             question: "Airport currency exchange booths typically offer the best exchange rates.",
             correctAnswer: false,
             explanation: "Airport exchanges usually charge the highest fees and offer the worst rates. Banks, credit unions, and using a no-foreign-fee credit card are almost always cheaper.",
+            distractorExplanations: {
+              0: 'Airport exchanges usually charge the highest fees and offer the worst rates. Banks, credit unions, and using a no-foreign-fee credit card are almost always cheaper.',
+            },
           },
         ],
       },
@@ -128,6 +144,9 @@ export const finSection15Part2: Unit[] = [
             question: "Investing only in your home country provides full diversification.",
             correctAnswer: false,
             explanation: "No single country represents the entire global economy. International investments reduce concentration risk and capture growth in other regions.",
+            distractorExplanations: {
+              0: 'No single country represents the entire global economy. International investments reduce concentration risk and capture growth in other regions.',
+            },
           },
           {
             id: "fin-sec15-u7-L2-Q2",
@@ -141,6 +160,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Economic cycles vary by region. When your home market struggles, other markets may be thriving. Diversification captures these opportunities.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; economic cycles vary by region. When your home market struggles, other markets may be thriving.',
+              2: 'Economic cycles vary by region. When your home market struggles, other markets may be thriving. Diversification captures these opportunities.',
+              3: 'This overgeneralizes; economic cycles vary by region. When your home market struggles, other markets may be thriving.',
+            },
           },
           {
             id: "fin-sec15-u7-L2-T2",
@@ -186,6 +210,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Market leadership rotates. Countries that performed best last decade often underperform the next. Diversification smooths returns over time.",
+            distractorExplanations: {
+              0: 'Market leadership rotates. Countries that performed best last decade often underperform the next. Diversification smooths returns over time.',
+              2: 'Market leadership rotates. Countries that performed best last decade often underperform the next. Diversification smooths returns over time.',
+              3: 'This overgeneralizes; market leadership rotates. Countries that performed best last decade often underperform the next.',
+            },
           },
           {
             id: "fin-sec15-u7-L2-Q6",
@@ -225,6 +254,9 @@ export const finSection15Part2: Unit[] = [
             question: "Geopolitical events like wars and trade disputes can significantly affect stock markets.",
             correctAnswer: true,
             explanation: "Major geopolitical events create uncertainty. Markets dislike uncertainty, which causes volatility. The impact can be short-term or lasting depending on the event.",
+            distractorExplanations: {
+              1: 'Major geopolitical events create uncertainty. Markets dislike uncertainty, which causes volatility. The impact can be short-term or lasting depending on the event.',
+            },
           },
           {
             id: "fin-sec15-u7-L3-Q2",
@@ -238,6 +270,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "No country is risk-free. Diversifying across geographies, asset types, and currencies reduces your exposure to any single political event.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; no country is risk-free. Diversifying across geographies, asset types, and currencies reduces your exposure to any.',
+              1: 'No country is risk-free. Diversifying across geographies, asset types, and currencies reduces your exposure to any single political event.',
+              3: 'No country is risk-free. Diversifying across geographies, asset types, and currencies reduces your exposure to any single political event.',
+            },
           },
           {
             id: "fin-sec15-u7-L3-T2",
@@ -275,6 +312,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Geopolitical events cause short-term volatility but rarely destroy long-term returns. Staying diversified and disciplined is the proven approach.",
+            distractorExplanations: {
+              0: 'Geopolitical events cause short-term volatility but rarely destroy long-term returns. Staying diversified and disciplined is the proven approach.',
+              2: 'Geopolitical events cause short-term volatility but rarely destroy long-term returns. Staying diversified and disciplined is the proven approach.',
+              3: 'This reasoning is flawed; geopolitical events cause short-term volatility but rarely destroy long-term returns.',
+            },
           },
           {
             id: "fin-sec15-u7-L3-Q5",
@@ -290,6 +332,9 @@ export const finSection15Part2: Unit[] = [
             question: "Historically, markets have recovered from every major geopolitical crisis.",
             correctAnswer: true,
             explanation: "World wars, oil crises, pandemics, and financial crises have all caused temporary market declines, but markets have always recovered. Time in the market beats timing the market.",
+            distractorExplanations: {
+              1: 'World wars, oil crises, pandemics, and financial crises have all caused temporary market declines, but markets have always recovered. Time in the market beats timing the market.',
+            },
           },
         ],
       },
@@ -321,6 +366,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "20% to 40% gives meaningful diversification without overexposing you to currency risk and unfamiliar markets.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; 20% to 40% gives meaningful diversification without overexposing you to currency risk and unfamiliar markets.',
+              2: 'This calculation is incorrect; 20% to 40% gives meaningful diversification without overexposing you to currency risk and unfamiliar markets.',
+              3: 'This calculation is incorrect; 20% to 40% gives meaningful diversification without overexposing you to currency risk and unfamiliar markets.',
+            },
           },
           {
             id: "fin-sec15-u7-L4-Q2",
@@ -328,6 +378,9 @@ export const finSection15Part2: Unit[] = [
             question: "A mix of developed and emerging market funds provides broader diversification than either alone.",
             correctAnswer: true,
             explanation: "Developed markets offer stability while emerging markets offer growth potential. Combining both captures opportunities across the global economy.",
+            distractorExplanations: {
+              1: 'Developed markets offer stability while emerging markets offer growth potential. Combining both captures opportunities across the global economy.',
+            },
           },
           {
             id: "fin-sec15-u7-L4-T2",
@@ -362,6 +415,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Rebalancing means selling some winners (international) and buying more of the laggard (domestic). This maintains her risk level and enforces 'buy low, sell high.'",
+            distractorExplanations: {
+              0: 'Rebalancing means selling some winners (international) and buying more of the laggard (domestic).',
+              1: 'Rebalancing means selling some winners (international) and buying more of the laggard (domestic).',
+              3: 'This reasoning is flawed; rebalancing means selling some winners (international) and buying more of the laggard (domestic).',
+            },
           },
           {
             id: "fin-sec15-u7-L4-Q5",
@@ -535,6 +593,9 @@ export const finSection15Part2: Unit[] = [
             question: "Passive income requires zero effort after initial setup.",
             correctAnswer: false,
             explanation: "Most 'passive' income still needs some maintenance. Rental properties need management, investments need monitoring, and digital products need updates. It's less effort, not zero effort.",
+            distractorExplanations: {
+              0: 'Most \'passive\' income still needs some maintenance. Rental properties need management, investments need monitoring, and digital products need updates. It\'s less effort, not zero effort.',
+            },
           },
           {
             id: "fin-sec15-u8-L1-Q2",
@@ -571,6 +632,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Just like diversifying investments reduces portfolio risk, diversifying income reduces career and financial risk.",
+            distractorExplanations: {
+              0: 'Just like diversifying investments reduces portfolio risk, diversifying income reduces career and financial risk.',
+              2: 'Just like diversifying investments reduces portfolio risk, diversifying income reduces career and financial risk.',
+              3: 'Just like diversifying investments reduces portfolio risk, diversifying income reduces career and financial risk.',
+            },
           },
           {
             id: "fin-sec15-u8-L1-Q4",
@@ -593,6 +659,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "While $18,000 doesn't replace $80,000, it covers basic expenses and reduces pressure during a job search. Combined with an emergency fund, she has a strong safety net.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; while $18,000 doesn\'t replace $80,000, it covers basic expenses and reduces pressure during a job search.',
+              2: 'This reasoning is flawed; while $18,000 doesn\'t replace $80,000, it covers basic expenses and reduces pressure during a job search.',
+              3: 'This reasoning is flawed; while $18,000 doesn\'t replace $80,000, it covers basic expenses and reduces pressure during a job search.',
+            },
           },
           {
             id: "fin-sec15-u8-L1-Q6",
@@ -632,6 +703,9 @@ export const finSection15Part2: Unit[] = [
             question: "Side hustle income is taxable just like regular employment income.",
             correctAnswer: true,
             explanation: "All income is taxable. Remember from earlier sections: set aside 25% to 30% for taxes, and you may need to make quarterly estimated payments.",
+            distractorExplanations: {
+              1: 'All income is taxable. Remember from earlier sections: set aside 25% to 30% for taxes, and you may need to make quarterly estimated payments.',
+            },
           },
           {
             id: "fin-sec15-u8-L2-Q2",
@@ -645,6 +719,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A separate bank account keeps business and personal finances organized. This was covered in earlier sections on self-employment and will make tax time much easier.",
+            distractorExplanations: {
+              0: 'A separate bank account keeps business and personal finances organized.',
+              2: 'A separate bank account keeps business and personal finances organized.',
+              3: 'A separate bank account keeps business and personal finances organized.',
+            },
           },
           {
             id: "fin-sec15-u8-L2-T2",
@@ -680,6 +759,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This connects back to self-employment finance and tax basics. Mixing accounts and ignoring quarterly taxes are the two most common freelancer mistakes.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; this connects back to self-employment finance and tax basics.',
+              2: 'This reasoning is flawed; this connects back to self-employment finance and tax basics.',
+              3: 'This reasoning is flawed; this connects back to self-employment finance and tax basics.',
+            },
           },
           {
             id: "fin-sec15-u8-L2-Q5",
@@ -695,6 +779,9 @@ export const finSection15Part2: Unit[] = [
             question: "A side hustle that earns less than $1,000/year doesn't need to be reported on your taxes.",
             correctAnswer: false,
             explanation: "All income must be reported regardless of amount. There's no minimum threshold for reporting self-employment income on your taxes.",
+            distractorExplanations: {
+              0: 'All income must be reported regardless of amount. There\'s no minimum threshold for reporting self-employment income on your taxes.',
+            },
           },
         ],
       },
@@ -720,6 +807,9 @@ export const finSection15Part2: Unit[] = [
             question: "Rental income from property requires no ongoing management or effort.",
             correctAnswer: false,
             explanation: "Landlords handle tenant screening, maintenance, repairs, vacancies, and legal compliance. You can hire a manager, but that costs money.",
+            distractorExplanations: {
+              0: 'Landlords handle tenant screening, maintenance, repairs, vacancies, and legal compliance. You can hire a manager, but that costs money.',
+            },
           },
           {
             id: "fin-sec15-u8-L3-Q2",
@@ -733,6 +823,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 1% rule is a quick screening tool. A $200,000 property should generate at least $2,000/month in rent. It's not perfect but helps filter obviously bad deals.",
+            distractorExplanations: {
+              0: 'The 1% rule is a quick screening tool. A $200,000 property should generate at least $2,000/month in rent.',
+              2: 'The 1% rule is a quick screening tool. A $200,000 property should generate at least $2,000/month in rent.',
+              3: 'The 1% rule is a quick screening tool. A $200,000 property should generate at least $2,000/month in rent.',
+            },
           },
           {
             id: "fin-sec15-u8-L3-T2",
@@ -754,6 +849,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$2,000 rent minus $1,400 minus $200 minus $150 minus $100 = $150/month cash flow. It's positive but thin. Any unexpected expense could wipe out profits.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $2,000 rent minus $1,400 minus $200 minus $150 minus $100 = $150/month cash flow. It\'s positive but thin.',
+              1: 'This calculation is incorrect; $2,000 rent minus $1,400 minus $200 minus $150 minus $100 = $150/month cash flow. It\'s positive but thin.',
+              3: 'There is a real consequence here; $2,000 rent minus $1,400 minus $200 minus $150 minus $100 = $150/month cash flow. It\'s positive but thin.',
+            },
           },
           {
             id: "fin-sec15-u8-L3-Q4",
@@ -816,6 +916,9 @@ export const finSection15Part2: Unit[] = [
             question: "Digital products have near-zero marginal cost for each additional sale.",
             correctAnswer: true,
             explanation: "Once created, a digital product can be sold unlimited times without significant additional cost. This is what makes digital products so attractive as passive income.",
+            distractorExplanations: {
+              1: 'Once created, a digital product can be sold unlimited times without significant additional cost. This is what makes digital products so attractive as passive income.',
+            },
           },
           {
             id: "fin-sec15-u8-L4-Q2",
@@ -829,6 +932,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Creating the product is only half the work. Marketing it and reaching customers is the harder part for most creators.",
+            distractorExplanations: {
+              0: 'Creating the product is only half the work. Marketing it and reaching customers is the harder part for most creators.',
+              2: 'Creating the product is only half the work. Marketing it and reaching customers is the harder part for most creators.',
+              3: 'This reasoning is flawed; creating the product is only half the work. Marketing it and reaching customers is the harder part for most creators.',
+            },
           },
           {
             id: "fin-sec15-u8-L4-T2",
@@ -880,6 +988,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$20 times 500 = $10,000. Divided by 40 hours of creation = $250/hour. And the product keeps selling in year 2, 3, and beyond without additional work.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $20 times 500 = $10,000. Divided by 40 hours of creation = $250/hour.',
+              2: 'There is a real consequence here; $20 times 500 = $10,000. Divided by 40 hours of creation = $250/hour.',
+              3: '$20 times 500 = $10,000. Divided by 40 hours of creation = $250/hour.',
+            },
           },
           {
             id: "fin-sec15-u8-L4-Q6",
@@ -1031,6 +1144,9 @@ export const finSection15Part2: Unit[] = [
             question: "Your FI number depends on your annual expenses, not your income.",
             correctAnswer: true,
             explanation: "FI is about expenses, not income. Someone earning $200,000 who spends $100,000 has the same FI number as someone earning $100,000 who spends $100,000.",
+            distractorExplanations: {
+              1: 'FI is about expenses, not income. Someone earning $200,000 who spends $100,000 has the same FI number as someone earning $100,000 who spends $100,000.',
+            },
           },
           {
             id: "fin-sec15-u9-L1-Q2",
@@ -1044,6 +1160,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$50,000 times 25 = $1,250,000. At a 4% withdrawal rate, $1,250,000 generates $50,000/year.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $50,000 times 25 = $1,250,000. At a 4% withdrawal rate, $1,250,000 generates $50,000/year.',
+              1: 'This calculation is incorrect; $50,000 times 25 = $1,250,000. At a 4% withdrawal rate, $1,250,000 generates $50,000/year.',
+              3: 'This calculation is incorrect; $50,000 times 25 = $1,250,000. At a 4% withdrawal rate, $1,250,000 generates $50,000/year.',
+            },
           },
           {
             id: "fin-sec15-u9-L1-T2",
@@ -1073,6 +1194,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Emma: $40,000 times 25 = $1,000,000. Jack: $80,000 times 25 = $2,000,000. Lower expenses mean a lower FI number AND faster saving. Emma wins both ways.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; emma: $40,000 times 25 = $1,000,000. Jack: $80,000 times 25 = $2,000,000.',
+              2: 'This reasoning is flawed; emma: $40,000 times 25 = $1,000,000. Jack: $80,000 times 25 = $2,000,000.',
+              3: 'Emma: $40,000 times 25 = $1,000,000. Jack: $80,000 times 25 = $2,000,000. Lower expenses mean a lower FI number AND faster saving.',
+            },
           },
           {
             id: "fin-sec15-u9-L1-Q5",
@@ -1100,6 +1226,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Reducing expenses has a double effect: your FI number drops AND you save more each year. It's the most powerful lever.",
+            distractorExplanations: {
+              0: 'Reducing expenses has a double effect: your FI number drops AND you save more each year. It\'s the most powerful lever.',
+              2: 'Reducing expenses has a double effect: your FI number drops AND you save more each year. It\'s the most powerful lever.',
+              3: 'Reducing expenses has a double effect: your FI number drops AND you save more each year. It\'s the most powerful lever.',
+            },
           },
         ],
       },
@@ -1125,6 +1256,9 @@ export const finSection15Part2: Unit[] = [
             question: "A person saving 50% of their income will reach FI in roughly 17 years, regardless of income level.",
             correctAnswer: true,
             explanation: "The math works at any income level. 50% savings rate means you live on half your income and save half. In 17 years, investments replace your living expenses.",
+            distractorExplanations: {
+              1: 'The math works at any income level. 50% savings rate means you live on half your income and save half. In 17 years, investments replace your living expenses.',
+            },
           },
           {
             id: "fin-sec15-u9-L2-Q2",
@@ -1138,6 +1272,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A higher savings rate attacks both sides: it lowers your FI number (lower expenses) and increases how much you save each year. It's the most efficient path.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a higher savings rate attacks both sides: it lowers your FI number (lower expenses) and increases how much you save.',
+              2: 'This overgeneralizes; a higher savings rate attacks both sides: it lowers your FI number (lower expenses) and increases how much you save each.',
+              3: 'This reasoning is flawed; a higher savings rate attacks both sides: it lowers your FI number (lower expenses) and increases how much you save.',
+            },
           },
           {
             id: "fin-sec15-u9-L2-T2",
@@ -1159,6 +1298,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Before: $1,200/$6,000 = 20%. After: $1,700/$6,500 = about 26%. Saving raises instead of spending them is the fastest way to boost your savings rate.",
+            distractorExplanations: {
+              0: 'Before: $1,200/$6,000 = 20%. After: $1,700/$6,500 = about 26%. Saving raises instead of spending them is the fastest way to boost your savings rate.',
+              2: 'Before: $1,200/$6,000 = 20%. After: $1,700/$6,500 = about 26%. Saving raises instead of spending them is the fastest way to boost your savings rate.',
+              3: 'Before: $1,200/$6,000 = 20%. After: $1,700/$6,500 = about 26%. Saving raises instead of spending them is the fastest way to boost your savings rate.',
+            },
           },
           {
             id: "fin-sec15-u9-L2-Q4",
@@ -1220,6 +1364,9 @@ export const finSection15Part2: Unit[] = [
             question: "Complex investment strategies are required to achieve financial independence.",
             correctAnswer: false,
             explanation: "A simple portfolio of 2 to 3 low-cost index funds (domestic stocks, international stocks, bonds) is all most people need. Complexity adds fees and risk without better results.",
+            distractorExplanations: {
+              0: 'A simple portfolio of 2 to 3 low-cost index funds (domestic stocks, international stocks, bonds) is all most people need. Complexity adds fees and risk without better results.',
+            },
           },
           {
             id: "fin-sec15-u9-L3-Q2",
@@ -1233,6 +1380,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Over a 30-year FI journey, a 1% fee difference on $500,000 can cost over $300,000 in lost growth. Fees are the only return killer you can fully control.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; over a 30-year FI journey, a 1% fee difference on $500,000 can cost over $300,000 in lost growth.',
+              2: 'Over a 30-year FI journey, a 1% fee difference on $500,000 can cost over $300,000 in lost growth.',
+              3: 'This overgeneralizes; over a 30-year FI journey, a 1% fee difference on $500,000 can cost over $300,000 in lost growth.',
+            },
           },
           {
             id: "fin-sec15-u9-L3-T2",
@@ -1283,6 +1435,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Taylor already knows how to invest (max 401k, max IRA). A simple index fund portfolio at 0.05% versus 1.2% means tens of thousands saved over her FI journey.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; taylor already knows how to invest (max 401k, max IRA). A simple index fund portfolio at 0.05% versus 1.',
+              2: 'This calculation is incorrect; taylor already knows how to invest (max 401k, max IRA). A simple index fund portfolio at 0.05% versus 1.',
+              3: 'This reasoning is flawed; taylor already knows how to invest (max 401k, max IRA). A simple index fund portfolio at 0.05% versus 1.',
+            },
           },
           {
             id: "fin-sec15-u9-L3-Q6",
@@ -1316,6 +1473,9 @@ export const finSection15Part2: Unit[] = [
             question: "Financial independence requires you to stop working entirely.",
             correctAnswer: false,
             explanation: "FI means work is a choice, not a necessity. Many financially independent people continue working on meaningful projects.",
+            distractorExplanations: {
+              0: 'FI means work is a choice, not a necessity. Many financially independent people continue working on meaningful projects.',
+            },
           },
           {
             id: "fin-sec15-u9-L4-Q2",
@@ -1329,6 +1489,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Coast FI means your investments will grow to your FI number by retirement age without adding more money. You still work, but only to cover current living expenses.",
+            distractorExplanations: {
+              0: 'Coast FI means your investments will grow to your FI number by retirement age without adding more money.',
+              2: 'Coast FI means your investments will grow to your FI number by retirement age without adding more money.',
+              3: 'This reasoning is flawed; coast FI means your investments will grow to your FI number by retirement age without adding more money.',
+            },
           },
           {
             id: "fin-sec15-u9-L4-T2",
@@ -1380,6 +1545,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "FI gives Jake maximum flexibility. He can redesign his work life around what fulfills him rather than what pays the bills.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; FI gives Jake maximum flexibility. He can redesign his work life around what fulfills him rather than what pays the bills.',
+              2: 'This reasoning is flawed; FI gives Jake maximum flexibility. He can redesign his work life around what fulfills him rather than what pays the bills.',
+              3: 'This reasoning is flawed; FI gives Jake maximum flexibility. He can redesign his work life around what fulfills him rather than what pays the bills.',
+            },
           },
           {
             id: "fin-sec15-u9-L4-Q6",
@@ -1545,6 +1715,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "20% to 40% provides meaningful diversification without overexposing you to currency risk and unfamiliar markets.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; 20% to 40% provides meaningful diversification without overexposing you to currency risk and unfamiliar markets.',
+              2: 'This calculation is incorrect; 20% to 40% provides meaningful diversification without overexposing you to currency risk and unfamiliar markets.',
+              3: '20% to 40% provides meaningful diversification without overexposing you to currency risk and unfamiliar markets.',
+            },
           },
           {
             id: "fin-sec15-u10-L1-Q2",
@@ -1552,6 +1727,9 @@ export const finSection15Part2: Unit[] = [
             question: "A strong home currency makes foreign investments worth more when converted back.",
             correctAnswer: false,
             explanation: "A strong home currency means foreign investments convert to fewer home-currency dollars. It makes foreign returns look worse.",
+            distractorExplanations: {
+              0: 'A strong home currency means foreign investments convert to fewer home-currency dollars. It makes foreign returns look worse.',
+            },
           },
           {
             id: "fin-sec15-u10-L1-Q3",
@@ -1574,6 +1752,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This combines international investing (diversification), income streams (side hustle), and FI planning (savings rate). All three accelerate the journey.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; this combines international investing (diversification), income streams (side hustle), and FI planning (savings rate).',
+              2: 'This reasoning is flawed; this combines international investing (diversification), income streams (side hustle), and FI planning (savings rate).',
+              3: 'This reasoning is flawed; this combines international investing (diversification), income streams (side hustle), and FI planning (savings rate).',
+            },
           },
           {
             id: "fin-sec15-u10-L1-Q5",
@@ -1636,6 +1819,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Total income: $95,000. Spending: $55,000. Savings: $40,000. Rate: 42% (up from 31%). FI number stays $1,375,000 but she saves $40,000/year instead of $25,000.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; total income: $95,000. Spending: $55,000. Savings: $40,000. Rate: 42% (up from 31%).',
+              2: 'Total income: $95,000. Spending: $55,000. Savings: $40,000. Rate: 42% (up from 31%).',
+              3: 'Total income: $95,000. Spending: $55,000. Savings: $40,000. Rate: 42% (up from 31%).',
+            },
           },
           {
             id: "fin-sec15-u10-L2-Q2",
@@ -1650,6 +1838,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With 20 years until retirement, a fully funded emergency fund, and no debt, Omar should stay the course. He's buying at lower prices. This combines recession strategy, behavioral finance, and long-term investing.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; with 20 years until retirement, a fully funded emergency fund, and no debt, Omar should stay the course.',
+              2: 'This reasoning is flawed; with 20 years until retirement, a fully funded emergency fund, and no debt, Omar should stay the course.',
+              3: 'This reasoning is flawed; with 20 years until retirement, a fully funded emergency fund, and no debt, Omar should stay the course.',
+            },
           },
           {
             id: "fin-sec15-u10-L2-Q3",
@@ -1664,6 +1857,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Tax-advantaged accounts come first (free tax benefits). Then rental income adds a passive stream. This combines investing, real estate, tax, and income stream strategies.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; tax-advantaged accounts come first (free tax benefits). Then rental income adds a passive stream.',
+              1: 'This reasoning is flawed; tax-advantaged accounts come first (free tax benefits). Then rental income adds a passive stream.',
+              3: 'This reasoning is flawed; tax-advantaged accounts come first (free tax benefits). Then rental income adds a passive stream.',
+            },
           },
           {
             id: "fin-sec15-u10-L2-Q4",
@@ -1677,6 +1875,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Double benefit: lower expenses = lower FI number. Higher savings = more invested each year. Both effects compound, dramatically shortening the timeline.",
+            distractorExplanations: {
+              0: 'Double benefit: lower expenses = lower FI number. Higher savings = more invested each year.',
+              2: 'This reasoning is flawed; double benefit: lower expenses = lower FI number. Higher savings = more invested each year.',
+              3: 'This reasoning is flawed; double benefit: lower expenses = lower FI number. Higher savings = more invested each year.',
+            },
           },
           {
             id: "fin-sec15-u10-L2-Q5",
@@ -1698,6 +1901,9 @@ export const finSection15Part2: Unit[] = [
             question: "A person with multiple income streams, international diversification, and a high savings rate is better positioned for financial independence than someone relying on one income and one market.",
             correctAnswer: true,
             explanation: "Multiple streams reduce income risk. International diversification reduces market risk. High savings rate accelerates the timeline. All three working together is the strongest FI strategy.",
+            distractorExplanations: {
+              1: 'Multiple streams reduce income risk. International diversification reduces market risk. High savings rate accelerates the timeline. All three working together is the strongest FI strategy.',
+            },
           },
         ],
       },
@@ -1841,6 +2047,9 @@ export const finSection15Part2: Unit[] = [
             question: "A complete financial plan only needs to cover investing.",
             correctAnswer: false,
             explanation: "A complete plan covers budgeting, emergency savings, debt management, insurance, investing, taxes, retirement, and estate planning. Investing is just one piece.",
+            distractorExplanations: {
+              0: 'A complete plan covers budgeting, emergency savings, debt management, insurance, investing, taxes, retirement, and estate planning. Investing is just one piece.',
+            },
           },
           {
             id: "fin-sec15-u11-L1-Q2",
@@ -1913,6 +2122,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your budget determines spending. Income minus spending equals savings. Your savings rate determines how fast your investments grow. It's all connected.",
+            distractorExplanations: {
+              0: 'Your budget determines spending. Income minus spending equals savings. Your savings rate determines how fast your investments grow.',
+              2: 'Your budget determines spending. Income minus spending equals savings. Your savings rate determines how fast your investments grow.',
+              3: 'Your budget determines spending. Income minus spending equals savings. Your savings rate determines how fast your investments grow.',
+            },
           },
         ],
       },
@@ -1938,6 +2152,9 @@ export const finSection15Part2: Unit[] = [
             question: "You should try to accomplish all financial goals simultaneously.",
             correctAnswer: false,
             explanation: "Spreading money too thin across many goals means none get funded fast enough. Prioritize by urgency and impact, then tackle goals in sequence.",
+            distractorExplanations: {
+              0: 'Spreading money too thin across many goals means none get funded fast enough. Prioritize by urgency and impact, then tackle goals in sequence.',
+            },
           },
           {
             id: "fin-sec15-u11-L2-Q2",
@@ -1989,6 +2206,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The employer match is free money (don't leave it). A small emergency fund prevents new debt. Then attack the 20% interest. This combines retirement, savings, and debt strategies.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the employer match is free money (don\'t leave it). A small emergency fund prevents new debt.',
+              2: 'This reasoning is flawed; the employer match is free money (don\'t leave it). A small emergency fund prevents new debt.',
+              3: 'The employer match is free money (don\'t leave it). A small emergency fund prevents new debt. Then attack the 20% interest.',
+            },
           },
           {
             id: "fin-sec15-u11-L2-Q5",
@@ -2010,6 +2232,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "An employer match is free money with an instant 50% to 100% return. Even high-interest debt at 20% can't match that. Always capture the full match.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; an employer match is free money with an instant 50% to 100% return. Even high-interest debt at 20% can\'t match that.',
+              2: 'This reasoning is flawed; an employer match is free money with an instant 50% to 100% return. Even high-interest debt at 20% can\'t match that.',
+              3: 'This reasoning is flawed; an employer match is free money with an instant 50% to 100% return. Even high-interest debt at 20% can\'t match that.',
+            },
           },
         ],
       },
@@ -2035,6 +2262,9 @@ export const finSection15Part2: Unit[] = [
             question: "A useful financial plan should be short enough to reference regularly.",
             correctAnswer: true,
             explanation: "Long, complex plans get forgotten. A one-page plan with clear actions is more likely to be followed consistently.",
+            distractorExplanations: {
+              1: 'Long, complex plans get forgotten. A one-page plan with clear actions is more likely to be followed consistently.',
+            },
           },
           {
             id: "fin-sec15-u11-L3-Q2",
@@ -2086,6 +2316,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Capture free money (employer match), then build a safety net, then attack debt. You can only save $7,000/year total ($45,000 minus $38,000), so $7,000/month isn't possible.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; capture free money (employer match), then build a safety net, then attack debt.',
+              2: 'This reasoning is flawed; capture free money (employer match), then build a safety net, then attack debt.',
+              3: 'This reasoning is flawed; capture free money (employer match), then build a safety net, then attack debt.',
+            },
           },
           {
             id: "fin-sec15-u11-L3-Q5",
@@ -2133,6 +2368,9 @@ export const finSection15Part2: Unit[] = [
             question: "Once you create a financial plan, it never needs to be updated.",
             correctAnswer: false,
             explanation: "Financial plans need annual reviews at minimum. Life changes (marriage, children, job changes) require immediate plan updates.",
+            distractorExplanations: {
+              0: 'Financial plans need annual reviews at minimum. Life changes (marriage, children, job changes) require immediate plan updates.',
+            },
           },
           {
             id: "fin-sec15-u11-L4-Q2",
@@ -2192,6 +2430,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The beneficiary issue is most urgent because if Jen dies, her ex-spouse gets the insurance payout instead of her intended beneficiary. This can't be fixed retroactively.",
+            distractorExplanations: {
+              0: 'The beneficiary issue is most urgent because if Jen dies, her ex-spouse gets the insurance payout instead of her intended beneficiary.',
+              1: 'The beneficiary issue is most urgent because if Jen dies, her ex-spouse gets the insurance payout instead of her intended beneficiary.',
+              3: 'This overgeneralizes; the beneficiary issue is most urgent because if Jen dies, her ex-spouse gets the insurance payout instead of her intended.',
+            },
           },
           {
             id: "fin-sec15-u11-L4-Q6",
@@ -2205,6 +2448,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Life changes constantly. The review ensures your financial plan reflects your current reality, not last year's situation.",
+            distractorExplanations: {
+              0: 'Life changes constantly. The review ensures your financial plan reflects your current reality, not last year\'s situation.',
+              2: 'Life changes constantly. The review ensures your financial plan reflects your current reality, not last year\'s situation.',
+              3: 'Life changes constantly. The review ensures your financial plan reflects your current reality, not last year\'s situation.',
+            },
           },
         ],
       },
@@ -2364,6 +2612,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 5% match is a 100% instant return (employer doubles his money). Then the 19% credit card debt is the most expensive cost. This optimizes both the gain (match) and the drain (debt interest).",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the 5% match is a 100% instant return (employer doubles his money).',
+              2: 'This reasoning is flawed; the 5% match is a 100% instant return (employer doubles his money).',
+              3: 'This reasoning is flawed; the 5% match is a 100% instant return (employer doubles his money).',
+            },
           },
           {
             id: "fin-sec15-u12-L1-Q2",
@@ -2378,6 +2631,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Her emergency fund is full. The student loan rate is low (4.5%), so there's no urgency. Splitting between retirement (tax advantage), debt reduction, and reward is balanced. This combats mental accounting bias too.",
+            distractorExplanations: {
+              0: 'Her emergency fund is full. The student loan rate is low (4.5%), so there\'s no urgency.',
+              2: 'This overgeneralizes; her emergency fund is full. The student loan rate is low (4.5%), so there\'s no urgency.',
+              3: 'This reasoning is flawed; her emergency fund is full. The student loan rate is low (4.5%), so there\'s no urgency.',
+            },
           },
           {
             id: "fin-sec15-u12-L1-T2",
@@ -2414,6 +2672,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Three priorities compete: free money (match), safety (emergency fund), and expensive debt (20%). The optimal split captures the match (instant 100% return), builds some safety, and chips away at the debt.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; three priorities compete: free money (match), safety (emergency fund), and expensive debt (20%).',
+              2: 'This calculation is incorrect; three priorities compete: free money (match), safety (emergency fund), and expensive debt (20%).',
+              3: 'This calculation is incorrect; three priorities compete: free money (match), safety (emergency fund), and expensive debt (20%).',
+            },
           },
           {
             id: "fin-sec15-u12-L1-Q5",
@@ -2468,6 +2731,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without a will, a court decides who raises his kids and gets his assets. His $250,000 life insurance might not even go to the right person without proper beneficiary designations. This is the most urgent gap.",
+            distractorExplanations: {
+              0: 'Without a will, a court decides who raises his kids and gets his assets.',
+              1: 'Without a will, a court decides who raises his kids and gets his assets.',
+              3: 'Without a will, a court decides who raises his kids and gets his assets.',
+            },
           },
           {
             id: "fin-sec15-u12-L2-Q2",
@@ -2496,6 +2764,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$300,000 at 7% for 15 years grows to about $827,000. $25,000/year at 7% for 15 years adds about $628,000. Total: approximately $1,455,000. She's actually ahead of target.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; $300,000 at 7% for 15 years grows to about $827,000. $25,000/year at 7% for 15 years adds about $628,000.',
+              2: 'This reasoning is flawed; $300,000 at 7% for 15 years grows to about $827,000. $25,000/year at 7% for 15 years adds about $628,000.',
+              3: 'This reasoning is flawed; $300,000 at 7% for 15 years grows to about $827,000. $25,000/year at 7% for 15 years adds about $628,000.',
+            },
           },
           {
             id: "fin-sec15-u12-L2-T2",
@@ -2510,6 +2783,9 @@ export const finSection15Part2: Unit[] = [
             question: "If your will says your assets go to your sister, but your 401(k) beneficiary still lists your ex-spouse, your ex-spouse gets the 401(k).",
             correctAnswer: true,
             explanation: "Beneficiary designations on retirement accounts and life insurance override the will. Always update beneficiaries after divorce, marriage, or other major life changes.",
+            distractorExplanations: {
+              1: 'Beneficiary designations on retirement accounts and life insurance override the will. Always update beneficiaries after divorce, marriage, or other major life changes.',
+            },
           },
           {
             id: "fin-sec15-u12-L2-Q5",
@@ -2566,6 +2842,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At 6.0%, total payments are about $755,000. At 7.5%, about $880,000. That's about $125,000 more because of a lower credit score. Credit management from Section 7 directly impacts real estate from Section 10.",
+            distractorExplanations: {
+              0: 'At 6.0%, total payments are about $755,000. At 7.5%, about $880,000. That\'s about $125,000 more because of a lower credit score.',
+              1: 'At 6.0%, total payments are about $755,000. At 7.5%, about $880,000. That\'s about $125,000 more because of a lower credit score.',
+              3: 'At 6.0%, total payments are about $755,000. At 7.5%, about $880,000. That\'s about $125,000 more because of a lower credit score.',
+            },
           },
           {
             id: "fin-sec15-u12-L3-Q2",
@@ -2579,6 +2860,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If your mortgage interest, property taxes, and other deductions total less than the standard deduction, itemizing doesn't help. Tax basics from Section 5 apply directly to homeownership.",
+            distractorExplanations: {
+              0: 'If your mortgage interest, property taxes, and other deductions total less than the standard deduction, itemizing doesn\'t help.',
+              2: 'This overgeneralizes; if your mortgage interest, property taxes, and other deductions total less than the standard deduction, itemizing doesn\'t.',
+              3: 'If your mortgage interest, property taxes, and other deductions total less than the standard deduction, itemizing doesn\'t help.',
+            },
           },
           {
             id: "fin-sec15-u12-L3-T2",
@@ -2628,6 +2914,11 @@ export const finSection15Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The emergency fund exists for exactly this. But Lee should also add a home maintenance budget (1% to 2% of home value/year) going forward. This combines emergency fund, budgeting, and homeownership knowledge.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the emergency fund exists for exactly this.',
+              2: 'The emergency fund exists for exactly this. But Lee should also add a home maintenance budget (1% to 2% of home value/year) going forward.',
+              3: 'The emergency fund exists for exactly this. But Lee should also add a home maintenance budget (1% to 2% of home value/year) going forward.',
+            },
           },
           {
             id: "fin-sec15-u12-L3-Q6",

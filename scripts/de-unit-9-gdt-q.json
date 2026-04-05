@@ -1,0 +1,1427 @@
+[
+  {
+    "id": "u9-L1-Q10",
+    "type": "true-false",
+    "question": "A transition fit can result in either a small clearance or a small interference between mating parts, depending on the actual?",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "A transition fit is defined by overlapping tolerance zones of the hole and shaft.",
+    "explanationLine": 34
+  },
+  {
+    "id": "u9-L1-Q4",
+    "type": "multiple-choice",
+    "question": "A dimension is specified as 50 +0.05/-0.10 mm. What is the tolerance, and is it bilateral or unilateral?",
+    "options": [
+      "Tolerance = 0.05 mm, unilateral",
+      "Tolerance = 0.10 mm, unilateral",
+      "Tolerance = 0.15 mm, bilateral",
+      "Tolerance = 0.15 mm, unilateral"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Total tolerance = upper deviation minus lower deviation = +0.05 minus (-0.10) = 0.15 mm.",
+    "explanationLine": 49
+  },
+  {
+    "id": "u9-L1-Q14",
+    "type": "multiple-choice",
+    "question": "A designer specifies dia 30 +0.021/+0.000 mm for a bore. What type of tolerancing is this?",
+    "options": [
+      "Bilateral symmetric tolerancing",
+      "Bilateral asymmetric tolerancing",
+      "Unilateral tolerancing",
+      "Limit dimensioning"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Both deviations are on the same side of nominal (zero and positive), making this unilateral tolerancing. The bore ranges from 30.000 to 30.021 mm.",
+    "explanationLine": 71
+  },
+  {
+    "id": "u9-L1-Q3",
+    "type": "multiple-choice",
+    "question": "A drawing specifies dia 50 +0.000/-0.050 mm for a bore and dia 50 +0.025/+0.050 mm for the mating shaft. What type of fit is this?",
+    "options": [
+      "Clearance fit",
+      "Interference fit",
+      "Transition fit",
+      "Tolerances are invalid"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Maximum shaft = 50.050, minimum shaft = 50.025. Maximum hole = 50.000, minimum hole = 49.950. Even the smallest shaft (50.025) exceeds the largest hole (50.000), so interference is guaranteed.",
+    "explanationLine": 122
+  },
+  {
+    "id": "u9-L1-Q1",
+    "type": "multiple-choice",
+    "question": "Why use an interference fit for the inner ring on a rotating shaft, but a clearance fit for the outer ring in the housing?",
+    "options": [
+      "It is arbitrary, both rings could use the same fit type",
+      "The rotating ring must have an interference fit to prevent creep",
+      "The inner ring needs interference for thermal expansion only",
+      "Clearance on the outer ring is only for thermal expansion"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The ring that rotates relative to the load direction must have an interference fit to prevent \"creep,\" which is gradual rotation of the ring relative to its seat due to cyclic loading.",
+    "explanationLine": 137
+  },
+  {
+    "id": "u9-L1-Q7",
+    "type": "multiple-choice",
+    "question": "In the ISO hole-basis system, what does the designation H7/g6 represent?",
+    "options": [
+      "Transition fit where H and g are surface finishes",
+      "A hole of 7 mm mating with a shaft of 6 mm size",
+      "An interference fit with 7 mm hole and 6 mm shaft",
+      "Hole with H deviation and IT7, mating with g6 shaft"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "In the ISO system, uppercase letters denote hole deviations and lowercase letters denote shaft deviations. \"H\" means the hole has a zero lower deviation (hole starts at nominal).",
+    "explanationLine": 172
+  },
+  {
+    "id": "u9-L1-Q9",
+    "type": "multiple-choice",
+    "question": "A shaft is specified as dia 25 h6. What are the upper and lower deviations of this shaft?",
+    "options": [
+      "Upper deviation = +0.013 mm, lower deviation = 0.000 mm",
+      "Upper deviation = 0.000 mm, lower deviation = -0.013 mm",
+      "Upper deviation = +0.013 mm, lower deviation = -0.013 mm",
+      "Upper deviation = +0.006 mm, lower deviation = -0.006 mm"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The fundamental deviation \"h\" for a shaft means the upper deviation is zero. The shaft at its largest equals the nominal size. The tolerance zone extends below nominal.",
+    "explanationLine": 197
+  },
+  {
+    "id": "u9-L1-Q8",
+    "type": "multiple-choice",
+    "question": "Difference between the hole-basis and shaft-basis fit systems, and when would you prefer the shaft-basis system?",
+    "options": [
+      "There is no real difference, both produce the same results",
+      "In a hole-basis system the hole tolerance zone is fixed (H) and the fit is varied by changing the shaft letter",
+      "Hole-basis is for metric and shaft-basis is for imperial systems",
+      "Shaft-basis always produces tighter fits than hole-basis"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The hole-basis system is most common because it is generally harder (more expensive) to adjust hole size than shaft size.",
+    "explanationLine": 219
+  },
+  {
+    "id": "u9-L1-Q12",
+    "type": "multiple-choice",
+    "question": "What is the relationship between tolerance grade number (IT number) and the magnitude of the tolerance?",
+    "options": [
+      "Higher IT numbers indicate tighter tolerances",
+      "Higher IT numbers mean wider (looser) tolerances",
+      "IT numbers refer to surface finish, not tolerance",
+      "All IT grades have the same magnitude"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ISO tolerance grades range from IT01 (tightest, used for gauge blocks) through IT18 (loosest, rough castings/forgings).",
+    "explanationLine": 243
+  },
+  {
+    "id": "u9-L1-Q13",
+    "type": "true-false",
+    "question": "In the ISO system, for a given IT grade, the tolerance value is constant regardless of the nominal diameter.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The tolerance value increases with nominal diameter. For example, IT7 tolerance for dia 6-10 mm is 0.015 mm, but for dia 100-120 mm it is 0.035 mm.",
+    "explanationLine": 252
+  },
+  {
+    "id": "u9-L1-Q19",
+    "type": "multiple-choice",
+    "question": "Why is the H7/H6 hole tolerance more commonly used than custom fundamental deviations (e.g., G7, K7)?",
+    "options": [
+      "Non-H holes are not permitted under ASME standards",
+      "H-type holes are always more precise than other letter deviations",
+      "H-type holes have zero lower deviation and match standard tooling",
+      "H holes are only used in metric systems"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Standard reamers, boring bars, and broaches are manufactured to produce H-type holes (zero lower deviation = hole at nominal minimum). Using H holes means off-the-shelf tooling can be used.",
+    "explanationLine": 267
+  },
+  {
+    "id": "u9-L1-Q29",
+    "type": "multiple-choice",
+    "question": "The pin must be easy to push in by hand but have negligible clearance. Which fit is most appropriate?",
+    "options": [
+      "H7/s6, heavy press fit",
+      "H7/h6, sliding fit with very small clearance",
+      "H11/c11, extra-loose running fit",
+      "H7/p6, light press fit requiring an arbor press"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "H7/h6 is a precision sliding fit (also called a \"push fit\") that allows hand insertion with very little clearance.",
+    "explanationLine": 302
+  },
+  {
+    "id": "u9-L1-Q11",
+    "type": "multiple-choice",
+    "question": "You need to select a fit for a gear hub on a keyed shaft. Which fit type is most appropriate?",
+    "options": [
+      "H7/d9, loose running clearance fit",
+      "H7/s6, heavy interference press fit",
+      "H7/k6, transition fit providing accurate centering",
+      "H11/c11, extra-loose clearance fit"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "H7/k6 is a locational transition fit ideal for components that need precise centering on a shaft but must be removable.",
+    "explanationLine": 317
+  },
+  {
+    "id": "u9-L1-Q5",
+    "type": "multiple-choice",
+    "question": "A drawing has an IT6 tolerance on a rough cast surface that gets no machining. Why is this a problem?",
+    "options": [
+      "IT6 is too loose for a cast surface",
+      "IT6 requires precision machining and cannot be achieved by casting",
+      "The tolerance grade does not matter for cast surfaces",
+      "Modern casting processes can easily achieve IT6"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ISO tolerance grades reflect manufacturing process capability. Sand casting typically achieves IT11 to IT16, investment casting IT7 to IT9, die casting IT8 to IT10.",
+    "explanationLine": 332
+  },
+  {
+    "id": "u9-L1-Q26",
+    "type": "multiple-choice",
+    "question": "A drawing callout shows dia 20 +/-0.05 with a note \"INTERPRET PER ASME Y14.5-2018.\" Under Rule #1, what does this imply?",
+    "options": [
+      "Any form is acceptable if two-point measurement is OK",
+      "At MMC the feature must have perfect form per Rule #1",
+      "Form control requires a separate GD&T callout always",
+      "Rule #1 only applies to angles, not to diameters"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ASME Y14.5 Rule #1 (the Envelope Principle) states that the surface of a regular feature of size at MMC must not extend beyond the envelope of perfect form at MMC.",
+    "explanationLine": 362
+  },
+  {
+    "id": "u9-L1-Q27",
+    "type": "true-false",
+    "question": "The ISO default for regular features of size is the Envelope Principle (perfect form at MMC), the same as ASME Y14.5 Rule #1.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "This is a key difference. ASME Y14.5 applies the Envelope Principle (Rule #1) by default. ISO uses the Independence Principle, where form and size are independent unless explicitly linked.",
+    "explanationLine": 371
+  },
+  {
+    "id": "u9-L1-Q22",
+    "type": "multiple-choice",
+    "question": "The fit is H7/p6 (light interference) at 20 C. What happens to the fit at higher operating temperature?",
+    "options": [
+      "Nothing changes, fit is unaffected since both parts are steel",
+      "The shaft expands more than the housing, tightening the fit",
+      "The fit loosens as both parts expand equally",
+      "Temperature effects are negligible for all interference fits"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Differential thermal expansion is critical for interference fits. If the shaft heats up more, it expands and the fit tightens.",
+    "explanationLine": 386
+  },
+  {
+    "id": "u9-L1-Q21",
+    "type": "true-false",
+    "question": "When specifying tolerances, the designer should always use the tightest tolerance achievable by the manufacturing process.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Over-tolerancing dramatically increases manufacturing cost, inspection time, and scrap rate without improving product function.",
+    "explanationLine": 395
+  },
+  {
+    "id": "u9-L2-Q10",
+    "type": "true-false",
+    "question": "Form tolerances require datum references in the feature control frame.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Form tolerances are self-referencing. They control the shape of a feature relative to itself, not to any external datum.",
+    "explanationLine": 424
+  },
+  {
+    "id": "u9-L2-Q7",
+    "type": "multiple-choice",
+    "question": "List the five categories of geometric tolerances defined in ASME Y14.5.",
+    "options": [
+      "Size, position, form, finish, and material",
+      "Form, orientation, location, profile, and runout",
+      "Flatness, roundness, straightness, parallelism, and position",
+      "Primary, secondary, tertiary, quaternary, and quinary"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ASME Y14.5 defines five categories: Form, Orientation, Location, Profile, and Runout.",
+    "explanationLine": 439
+  },
+  {
+    "id": "u9-L2-Q8",
+    "type": "multiple-choice",
+    "question": "What is the difference between circularity and cylindricity?",
+    "options": [
+      "They are the same tolerance applied in different units",
+      "Circularity controls roundness of individual cross-sections (2D), while cylindricity controls the entire 3D surface",
+      "Circularity applies to internal features and cylindricity to external",
+      "Cylindricity is always tighter than circularity"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Circularity (roundness) applies to individual cross-sections. Cylindricity controls the full 3D surface. Cylindricity is more comprehensive.",
+    "explanationLine": 471
+  },
+  {
+    "id": "u9-L2-Q2",
+    "type": "multiple-choice",
+    "question": "What is wrong with applying a flatness callout to a cylindrical bore?",
+    "options": [
+      "Nothing, flatness can apply to any surface",
+      "Flatness only applies to planar surfaces, use cylindricity instead",
+      "They should use straightness instead of flatness",
+      "The issue is that flatness needs a datum reference"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Flatness is a form tolerance that applies only to nominally flat (planar) surfaces. For cylindrical bores, use cylindricity.",
+    "explanationLine": 495
+  },
+  {
+    "id": "u9-L2-Q1",
+    "type": "multiple-choice",
+    "question": "Why is position tolerance almost always applied at MMC rather than RFS for clearance-hole bolt patterns?",
+    "options": [
+      "MMC is simply the default, no functional reason",
+      "At MMC holes are smallest and shafts largest, giving the tightest fit condition, and bonus tolerance helps when parts depart from MMC",
+      "RFS is actually preferred but MMC is cheaper to inspect",
+      "MMC only applies to shafts, not holes"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The functional requirement for a bolt pattern is that the bolts pass through the holes. At MMC (smallest holes, largest bolts) the fit is tightest. Bonus tolerance as features depart from MMC matches the physics.",
+    "explanationLine": 510
+  },
+  {
+    "id": "u9-L2-Q9",
+    "type": "multiple-choice",
+    "question": "The hole has a size tolerance of dia 10.0-10.5 with position tolerance dia 0.25 at MMC. What is the total positional tolerance when the hole is produced at dia 10.3?",
+    "options": [
+      "dia 0.25, the tolerance is fixed",
+      "dia 0.55, stated tolerance (0.25) plus departure from MMC (0.30)",
+      "dia 0.30, only the bonus tolerance applies",
+      "dia 0.50, twice the stated tolerance"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "With the MMC modifier, bonus tolerance = actual size minus MMC size. The hole MMC is dia 10.0 (smallest hole). At dia 10.3: bonus = 10.3 minus 10.0 = 0.30. Total = 0.25 + 0.30 = 0.55.",
+    "explanationLine": 525
+  },
+  {
+    "id": "u9-L2-Q19",
+    "type": "multiple-choice",
+    "question": "A designer applies a parallelism tolerance of 0.02 to a surface. Must the surface also be flat within 0.02?",
+    "options": [
+      "No, parallelism and flatness are independent controls",
+      "Yes, orientation tolerances inherently control form",
+      "Only if a separate flatness callout is also applied",
+      "Parallelism does not apply to surfaces, only axes"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Orientation tolerances inherently refine form. If a surface must lie between two parallel planes 0.02 apart, it cannot have flatness error greater than 0.02.",
+    "explanationLine": 560
+  },
+  {
+    "id": "u9-L2-Q12",
+    "type": "multiple-choice",
+    "question": "A perpendicularity tolerance of 0.05 is applied to a flat surface relative to datum A. What is the shape of the tolerance zone?",
+    "options": [
+      "A cylinder of dia 0.05 around the surface normal axis",
+      "Two planes 0.05 apart, perpendicular to datum A",
+      "A single plane exactly 0.05 away from datum A",
+      "A square zone of 0.05 x 0.05 around the feature"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "When perpendicularity is applied to a surface (not preceded by a diameter symbol), the tolerance zone is two parallel planes 0.05 mm apart, oriented exactly 90 degrees to datum A.",
+    "explanationLine": 575
+  },
+  {
+    "id": "u9-L2-Q20",
+    "type": "true-false",
+    "question": "Position tolerance in ASME Y14.5 always requires at least one datum reference in the feature control frame.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Position tolerance defines where a feature is located relative to other features. This inherently requires a reference frame (datums).",
+    "explanationLine": 583
+  },
+  {
+    "id": "u9-L2-Q13",
+    "type": "multiple-choice",
+    "question": "What is the \"virtual condition\" of an external feature (shaft) specified at dia 20.0 +/- 0.1 with perpendicularity of dia 0.05 at MMC?",
+    "options": [
+      "dia 20.00, the nominal size",
+      "dia 20.15, MMC size (20.1) plus geometric tol (0.05)",
+      "dia 20.10, just the MMC size",
+      "dia 20.05, nominal plus geometric tolerance"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Virtual condition is the worst-case boundary. For an external feature at MMC: VC = MMC size + geometric tolerance = 20.1 + 0.05 = 20.15.",
+    "explanationLine": 614
+  },
+  {
+    "id": "u9-L2-Q5",
+    "type": "multiple-choice",
+    "question": "When should the LMC (Least Material Condition) modifier be used instead of MMC?",
+    "options": [
+      "When maximizing assembly clearance is the primary concern",
+      "When controlling minimum wall thickness between features",
+      "When reducing manufacturing cost is the main goal",
+      "When the feature is a shaft rather than a hole"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "LMC is used when the critical concern is minimum wall thickness or minimum remaining material, for example a hole close to an edge.",
+    "explanationLine": 629
+  },
+  {
+    "id": "u9-L2-Q25",
+    "type": "multiple-choice",
+    "question": "A surface has both a flatness tolerance of 0.01 and a parallelism tolerance of 0.05 to datum A. Is this a valid callout?",
+    "options": [
+      "Yes, the flatness refines the form within the larger parallelism zone",
+      "No, flatness must always be larger than parallelism",
+      "No, you cannot apply both flatness and parallelism to the same surface",
+      "Yes, but the flatness overrides parallelism, making the 0.05 meaningless"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "This is valid and common. The parallelism tolerance (0.05) defines the overall orientation zone. The flatness tolerance (0.01) refines the form within that zone, requiring the surface to be flatter than the parallelism alone would demand.",
+    "explanationLine": 652
+  },
+  {
+    "id": "u9-L2-Q11",
+    "type": "multiple-choice",
+    "question": "What is the difference between circular runout and total runout?",
+    "options": [
+      "Circular runout applies to round features and total runout to flat features",
+      "Circular runout measures individual cross-sections as the part rotates; total runout checks the entire surface at once",
+      "Total runout is always twice the circular runout value",
+      "They are measured with different instruments but control the same thing"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Circular runout (single arrow symbol) controls the full indicator movement at each individual cross-section. Total runout (double arrow) controls the entire surface simultaneously.",
+    "explanationLine": 687
+  },
+  {
+    "id": "u9-L2-Q3",
+    "type": "multiple-choice",
+    "question": "When would you specify a profile of a surface tolerance instead of combining individual form and orientation tolerances?",
+    "options": [
+      "Profile tolerance is only for aesthetic surfaces",
+      "When controlling shape, orientation, and location of a complex surface with one callout",
+      "Profile is always preferred over any other geometric tolerance",
+      "Only when the surface is flat"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Profile of a surface is the most versatile GD&T tolerance. It controls form, orientation, size, and location simultaneously relative to datums.",
+    "explanationLine": 701
+  },
+  {
+    "id": "u9-L2-Q29",
+    "type": "true-false",
+    "question": "Profile of a line and profile of a surface are functionally identical.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Profile of a line controls at individual cross-sections independently (2D slices). Profile of a surface controls the entire 3D surface at once. Similar to circularity vs. cylindricity.",
+    "explanationLine": 709
+  },
+  {
+    "id": "u9-L2-Q22",
+    "type": "multiple-choice",
+    "question": "In a composite position tolerance (two rows), what does the lower segment control?",
+    "options": [
+      "Same as upper segment but with a tighter tolerance",
+      "Feature-to-feature relationship (FRTZF) within the pattern",
+      "Lower segment applies only to the smallest hole",
+      "The lower segment overrides the upper segment entirely"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Composite position has two levels: the upper segment (PLTZF) locates the entire pattern relative to datums. The lower segment (FRTZF) controls feature-to-feature spacing within the pattern with a tighter tolerance.",
+    "explanationLine": 724
+  },
+  {
+    "id": "u9-L2-Q15",
+    "type": "multiple-choice",
+    "question": "What is the key difference between concentricity and position (at RFS) for controlling coaxiality?",
+    "options": [
+      "They produce identical results and are fully interchangeable",
+      "Concentricity controls the derived median line; position controls the axis directly",
+      "Position is less accurate than concentricity",
+      "Concentricity can use material condition modifiers but position cannot"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Concentricity requires establishing the derived median line, which requires many measurement points and complex calculations. Position at RFS is simpler and almost always preferred.",
+    "explanationLine": 738
+  },
+  {
+    "id": "u9-L2-Q24",
+    "type": "multiple-choice",
+    "question": "What is the projected tolerance zone, and when is it used?",
+    "options": [
+      "Zone extending beyond the feature into mating part space",
+      "A tolerance zone applied only in projected 2D views",
+      "Zone projected onto datum plane for measurement ease",
+      "An enlarged tolerance zone used for prototype parts"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A projected tolerance zone extends from the feature surface into the mating part space for a specified height. It controls where the bolt (not just the hole) ends up.",
+    "explanationLine": 759
+  },
+  {
+    "id": "u9-L2-Q4",
+    "type": "multiple-choice",
+    "question": "Parts are passing CMM inspection for position tolerance but consistently failing during assembly. What is most likely wrong?",
+    "options": [
+      "The parts are defective, the CMM results must be incorrect",
+      "The CMM datum setup does not replicate actual assembly datum contacts",
+      "Position tolerance is not relevant to assembly",
+      "The CMM is measuring in metric but assembly uses imperial"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "This is one of the most common GD&T problems. If the CMM datum setup does not match how the part actually sits in the assembly, the measurement results are misleading.",
+    "explanationLine": 773
+  },
+  {
+    "id": "u9-L2-Q28",
+    "type": "multiple-choice",
+    "question": "What is the \"zero tolerance at MMC\" concept?",
+    "options": [
+      "It means no tolerance is applied",
+      "The stated geometric tolerance is zero; all tolerance comes from bonus as features depart from MMC",
+      "The feature must be exactly at MMC with zero size variation",
+      "Zero tolerance at MMC is not a valid concept"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "With zero positional tolerance at MMC, the feature has no positional tolerance at its MMC size. As it departs from MMC, all geometric tolerance comes from the bonus. This can increase yield by making tolerance proportional to material condition.",
+    "explanationLine": 787
+  },
+  {
+    "id": "u9-L2-Q14",
+    "type": "true-false",
+    "question": "Straightness applied to the axis of a cylindrical feature allows the feature to violate Rule #1.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "This is one of the important exceptions to Rule #1. Axis straightness with a diameter symbol creates a cylindrical tolerance zone for the axis, allowing the part to bow beyond the MMC envelope.",
+    "explanationLine": 795
+  },
+  {
+    "id": "u9-L3-Q9",
+    "type": "true-false",
+    "question": "A datum feature and a datum are the same thing.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "A datum feature is the actual physical feature on the part (e.g., a machined surface). A datum is the theoretically perfect geometric element (plane, axis, center point) derived from it.",
+    "explanationLine": 824
+  },
+  {
+    "id": "u9-L3-Q7",
+    "type": "multiple-choice",
+    "question": "How many degrees of freedom does a primary datum plane constrain, and which DOFs are they?",
+    "options": [
+      "1 DOF, only the translation normal to the plane",
+      "2 DOF, the two translations within the plane",
+      "3 DOF, one translation (normal) and two rotations (tilt)",
+      "6 DOF, all degrees of freedom at once"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "A primary datum plane constrains 3 DOF using a minimum of 3 contact points: 1 translation (normal to the surface) and 2 rotations (tilting in two directions).",
+    "explanationLine": 854
+  },
+  {
+    "id": "u9-L3-Q1",
+    "type": "multiple-choice",
+    "question": "How do you explain the significance of datum precedence (A, B, C order)?",
+    "options": [
+      "It does not matter, datum letters are just labels",
+      "Datum precedence determines which surface is constrained first",
+      "The order only matters for CMM programming",
+      "Primary datum must always be the largest surface"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The primary datum constrains 3 DOF and is contacted first. The secondary constrains 2 more DOF, and the tertiary constrains the last 1.",
+    "explanationLine": 869
+  },
+  {
+    "id": "u9-L3-Q2",
+    "type": "multiple-choice",
+    "question": "When selecting datum features for a machined part, which principle should guide the selection?",
+    "options": [
+      "Always select the smallest features as datums",
+      "Select functional surfaces that represent how the part mounts in assembly",
+      "Always use three mutually perpendicular flat surfaces only",
+      "Select features with the tightest tolerances as datums"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Datum selection should follow the functional principle: datums should represent the surfaces that locate and constrain the part in its assembly.",
+    "explanationLine": 892
+  },
+  {
+    "id": "u9-L3-Q19",
+    "type": "true-false",
+    "question": "The order in which datums appear in the feature control frame (left to right) defines their precedence.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "In the feature control frame, datum references are read left to right with decreasing precedence. The first datum compartment (leftmost) is primary.",
+    "explanationLine": 900
+  },
+  {
+    "id": "u9-L3-Q10",
+    "type": "multiple-choice",
+    "question": "What is a datum simulator, and why is it important?",
+    "options": [
+      "A computer program that calculates datums from CMM data",
+      "Physical equipment (surface plate, gauge pin, chuck) that embodies the theoretical datums",
+      "A software tool for designing datum reference frames in CAD",
+      "An alternate name for the datum feature itself"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Datum simulators are the physical embodiment of the theoretical datums. A surface plate simulates a datum plane. An expanding mandrel simulates a datum axis.",
+    "explanationLine": 923
+  },
+  {
+    "id": "u9-L3-Q3",
+    "type": "multiple-choice",
+    "question": "The part rocks on the CMM granite surface plate. What is the problem, and what GD&T tool solves it?",
+    "options": [
+      "The CMM granite is not flat enough",
+      "The rough cast surface is unreliable as a full-surface datum; use datum targets",
+      "The part needs to be ground flat before inspection",
+      "Apply a flatness tolerance to datum A"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Datum targets specify discrete contact locations. They are essential for cast, forged, or sheet metal parts where the entire surface is rough or warped.",
+    "explanationLine": 958
+  },
+  {
+    "id": "u9-L3-Q4",
+    "type": "multiple-choice",
+    "question": "A cylindrical feature is used as both the primary and secondary datum. The flat face is primary (A), the bore is secondary (B). What does the bore constrain?",
+    "options": [
+      "3 DOF (one translation plus two rotations)",
+      "2 DOF (two translations perpendicular to bore axis)",
+      "1 DOF (rotation about the bore axis only)",
+      "4 DOF (all but axial translation and rotation)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "When a cylindrical bore is the secondary datum (after a planar primary datum constrains 3 DOF), the bore constrains 2 additional DOF: two translations perpendicular to the bore axis.",
+    "explanationLine": 981
+  },
+  {
+    "id": "u9-L3-Q17",
+    "type": "multiple-choice",
+    "question": "What is the physical implication of MMC on datum B (a bore)?",
+    "options": [
+      "Datum axis established at the MMC size of the bore",
+      "Datum simulator is a fixed pin at virtual condition; when bore departs from MMC, it can shift",
+      "Tolerance only applies when the bore is at MMC size",
+      "Bore must be produced at exactly MMC to be a datum"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "When a datum feature of size is referenced at MMC, the datum simulator is fixed at the datum\\",
+    "explanationLine": 995
+  },
+  {
+    "id": "u9-L3-Q14",
+    "type": "multiple-choice",
+    "question": "A part has two coaxial bores that together serve as a single datum axis. How is this indicated on the drawing?",
+    "options": [
+      "Assign different datum letters to each bore (A and B)",
+      "Assign the same datum letter to both bores (A-A) for a shared axis",
+      "Only use one bore as the datum and ignore the other",
+      "Use a datum target on each bore for independent references"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "When two or more features together establish a single datum, they are designated as a common datum using the same letter (A-A notation).",
+    "explanationLine": 1025
+  },
+  {
+    "id": "u9-L3-Q20",
+    "type": "multiple-choice",
+    "question": "What is the difference between a datum axis established from a bore at RFS vs. MMC?",
+    "options": [
+      "There is no difference",
+      "At RFS, the datum simulator expands to fit the actual bore (no shift). At MMC, it is fixed (shift allowed).",
+      "RFS gives larger datum shift than MMC",
+      "MMC requires a different bore than RFS"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "At RFS, the datum simulator is variable-size (e.g., expanding mandrel) that conforms to the actual bore, producing a unique datum axis with no play. At MMC, the simulator is fixed, allowing datum shift.",
+    "explanationLine": 1039
+  },
+  {
+    "id": "u9-L3-Q25",
+    "type": "true-false",
+    "question": "A datum feature with a flatness tolerance of 0.1 mm establishes a datum plane that also has 0.1 mm of form error.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The datum feature (the real surface) may have up to 0.1 mm of flatness error. But the datum (the theoretical plane) derived from it is always a perfect, infinite plane.",
+    "explanationLine": 1047
+  },
+  {
+    "id": "u9-L3-Q30",
+    "type": "true-false",
+    "question": "When a feature control frame references only one datum, the measurement is fully constrained in all 6 degrees of freedom.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "A single planar datum constrains only 3 DOF. The remaining 3 DOF are unconstrained. This is sometimes sufficient (e.g., for flatness or perpendicularity).",
+    "explanationLine": 1055
+  },
+  {
+    "id": "u9-L3-Q5",
+    "type": "multiple-choice",
+    "question": "Manufacturing fixture uses different locating surfaces than the drawing datums. Why does this cause failures?",
+    "options": [
+      "The machinist should just adjust the CNC offsets",
+      "Fixture locating surfaces must simulate the drawing\\",
+      "Drawing datums are just for inspection, manufacturing can use whatever works",
+      "The inspector should re-datum to match the machining fixture"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The manufacturing fixture should replicate the datum reference frame as closely as possible. A mismatch means parts are made to one coordinate system and measured to another.",
+    "explanationLine": 1089
+  },
+  {
+    "id": "u9-L3-Q26",
+    "type": "multiple-choice",
+    "question": "What datums would typically be specified for a circular flange with a central bore and 4 bolt holes?",
+    "options": [
+      "Only the flange face",
+      "Flange face primary (A), bore secondary (B), one hole clocks tertiary (C)",
+      "Two of the four holes serve as datums A and B",
+      "Outer diameter of the flange as the only datum"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For a circular bolt pattern on a flange: A = face (sits on mating surface), B = bore (centers the part), C = one bolt hole (clocks the rotational orientation).",
+    "explanationLine": 1103
+  },
+  {
+    "id": "u9-L3-Q23",
+    "type": "multiple-choice",
+    "question": "A part has a conical (tapered) feature designated as a datum. How does a cone establish a datum?",
+    "options": [
+      "A cone cannot be used as a datum feature",
+      "A cone establishes both a datum axis and a datum point (5 DOF)",
+      "A cone only establishes a datum plane at its base",
+      "A cone establishes two perpendicular datum planes"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A conical datum feature is unique because it simultaneously establishes a datum axis and a datum point. It constrains 5 DOF, leaving only rotation about the axis.",
+    "explanationLine": 1126
+  },
+  {
+    "id": "u9-L3-Q13",
+    "type": "true-false",
+    "question": "Datum features should always have tighter tolerances than the features they control.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "While datum features should be repeatable and stable, there is no absolute rule requiring them to have tighter tolerances. Repeatability matters most.",
+    "explanationLine": 1134
+  },
+  {
+    "id": "u9-L3-Q24",
+    "type": "multiple-choice",
+    "question": "What is the \"simultaneous requirement\" for datum features in ASME Y14.5?",
+    "options": [
+      "All datums must be manufactured at the same time",
+      "Tolerances sharing the same DRF and modifier are linked and evaluated together",
+      "Three datums must be measured simultaneously on CMM",
+      "Datum features must all have the same tolerance"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The simultaneous requirement means feature control frames with the same datum references and material condition modifiers are evaluated as one combined pattern.",
+    "explanationLine": 1155
+  },
+  {
+    "id": "u9-L3-Q27",
+    "type": "multiple-choice",
+    "question": "What happens if the primary datum feature has poor form (significant waviness) and no datum targets are specified?",
+    "options": [
+      "The datum plane follows the wavy surface",
+      "The part rocks on the simulator, contacting different high points each time, giving non-repeatable measurements",
+      "CMM software automatically corrects for poor form",
+      "Poor form on datum feature has no effect"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "When a full-surface primary datum has significant form error and no datum targets are specified, the part can rock on the datum simulator, producing non-repeatable measurements.",
+    "explanationLine": 1169
+  },
+  {
+    "id": "u9-L3-Q29",
+    "type": "multiple-choice",
+    "question": "A complex assembly uses a pattern of holes as a datum feature. How is the datum established?",
+    "options": [
+      "One hole is arbitrarily selected as the datum",
+      "The datum is established from the best-fit of all the holes in the pattern",
+      "Each hole establishes a separate datum axis",
+      "A pattern cannot serve as a datum"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ASME Y14.5 allows patterns of features to serve as datum features. The datum is established from the best-fit alignment of all the features in the pattern.",
+    "explanationLine": 1183
+  },
+  {
+    "id": "u9-L3-Q18",
+    "type": "multiple-choice",
+    "question": "How should datums be specified for a flexible sheet metal part to ensure repeatable measurement?",
+    "options": [
+      "Use standard full-surface datums",
+      "Use datum targets with clamping that replicates the assembly condition",
+      "Sheet metal parts do not need datum references",
+      "Use only one datum point to minimize deformation"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Flexible parts require special datum treatment per ASME Y14.5. The drawing should specify whether the part is inspected in the free state or restrained state, with datum targets and clamps replicating assembly.",
+    "explanationLine": 1197
+  },
+  {
+    "id": "u9-L4-Q3",
+    "type": "true-false",
+    "question": "In a 1D tolerance chain, if a dimension contributes positively to the gap, it is called an \"increasing\" contributor.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "In 1D chain analysis, each dimension is classified as either an \"increasing\" contributor (gap increases as dimension increases) or a \"decreasing\" contributor.",
+    "explanationLine": 1225
+  },
+  {
+    "id": "u9-L4-Q1",
+    "type": "multiple-choice",
+    "question": "Three parts A (20 +/-0.1), B (15 +/-0.1), and C (25 +/-0.1) are stacked with 2 walls (+/-0.1 each). Using worst-case analysis, what is the total stack-up tolerance?",
+    "options": [
+      "+/-0.22 mm",
+      "+/-0.50 mm",
+      "+/-0.10 mm",
+      "+/-1.00 mm"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Worst-case stack-up simply adds all tolerances: total = +/-(0.1 + 0.1 + 0.1 + 0.1 + 0.1) = +/-0.50 mm.",
+    "explanationLine": 1240
+  },
+  {
+    "id": "u9-L4-Q7",
+    "type": "multiple-choice",
+    "question": "In a tolerance stack-up, what is the first step before performing any calculations?",
+    "options": [
+      "Select analysis method (worst-case or RSS)",
+      "Identify the critical assembly gap or clearance, then trace the dimension chain",
+      "Assign tolerances to all contributing dimensions",
+      "Build a prototype and measure it"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The first step is to define the assembly requirement (what gap must be controlled) and trace the complete dimension chain from one side to the other.",
+    "explanationLine": 1270
+  },
+  {
+    "id": "u9-L4-Q25",
+    "type": "multiple-choice",
+    "question": "How do you determine whether a dimension is a \"positive\" or \"negative\" contributor?",
+    "options": [
+      "Positive dimensions are always the larger ones",
+      "Trace a continuous path: dimensions in the direction of the gap are positive, opposite are negative",
+      "All dimensions from the first part are positive",
+      "Positive and negative assignment is arbitrary"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The sign convention follows from the dimension loop: start at one surface defining the gap, trace through each contributing dimension to the other surface. Direction determines sign.",
+    "explanationLine": 1292
+  },
+  {
+    "id": "u9-L4-Q2",
+    "type": "multiple-choice",
+    "question": "When would you insist on worst-case analysis even though RSS gives a smaller (cheaper) tolerance?",
+    "options": [
+      "Always use RSS, worst-case is obsolete",
+      "When production volumes are very high",
+      "When the consequence of failure is severe (safety-critical, medical devices)",
+      "Only when the customer specifically requests it"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "RSS assumes normal distributions and statistical independence, predicting ~99.73% success. For safety-critical applications, even a 0.27% failure rate is unacceptable.",
+    "explanationLine": 1306
+  },
+  {
+    "id": "u9-L4-Q8",
+    "type": "multiple-choice",
+    "question": "Part A is 25 +/-0.1, Part B is 30 +/-0.15, Housing is 56 +/-t. The gap must be at least 0.5 mm. Using worst-case, what is the max allowable housing tolerance t?",
+    "options": [
+      "+/-0.10 mm",
+      "+/-0.50 mm",
+      "+/-0.15 mm",
+      "+/-0.25 mm"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Nominal gap = 56.0 - 25.0 - 30.0 = 1.0 mm. Min gap = 1.0 - (0.1 + 0.15 + t) >= 0.5. So t <= 0.25 mm.",
+    "explanationLine": 1320
+  },
+  {
+    "id": "u9-L4-Q10",
+    "type": "true-false",
+    "question": "RSS tolerance analysis assumes that all individual dimension variations follow a normal distribution and are statistically independent.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The standard RSS method assumes: each dimension follows a normal distribution, and the dimensions are statistically independent (no correlation between them).",
+    "explanationLine": 1348
+  },
+  {
+    "id": "u9-L4-Q11",
+    "type": "multiple-choice",
+    "question": "Using RSS, calculate the total stack-up tolerance for a chain of 4 dimensions: +/-0.1, +/-0.2, +/-0.1, +/-0.15 mm.",
+    "options": [
+      "+/-0.55 mm (worst-case)",
+      "+/-0.28 mm",
+      "+/-0.14 mm",
+      "+/-0.40 mm"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "RSS = sqrt(0.01 + 0.04 + 0.01 + 0.0225) = sqrt(0.0825) = +/-0.287, approx +/-0.28 mm. Compare to worst-case: +/-0.55 mm.",
+    "explanationLine": 1362
+  },
+  {
+    "id": "u9-L4-Q9",
+    "type": "multiple-choice",
+    "question": "What is Monte Carlo simulation in tolerance analysis, and when is it preferred over RSS?",
+    "options": [
+      "A manufacturing method that uses random sampling",
+      "A computational method that generates thousands of random assemblies based on statistical distributions",
+      "A casino-based method that randomly accepts or rejects parts",
+      "A simplified version of worst-case analysis"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Monte Carlo simulation randomly samples each dimension from its statistical distribution, calculates the assembly result, and repeats thousands of times. It is preferred when distributions are non-normal or dimensions are correlated.",
+    "explanationLine": 1385
+  },
+  {
+    "id": "u9-L4-Q13",
+    "type": "multiple-choice",
+    "question": "What is the Cpk (process capability index), and how does it relate to tolerance analysis?",
+    "options": [
+      "Cpk is the tolerance divided by the part size",
+      "Cpk measures how well a manufacturing process is centered within its tolerance band",
+      "Cpk is only relevant to quality control, not to design",
+      "Cpk must always equal exactly 1.0 for a capable process"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Cpk = min[(USL minus mean)/(3 sigma), (mean minus LSL)/(3 sigma)]. It captures both the spread and centering of the process within the tolerance band.",
+    "explanationLine": 1415
+  },
+  {
+    "id": "u9-L4-Q18",
+    "type": "multiple-choice",
+    "question": "What is the \"modified RSS\" or \"RSS with safety factor\" method?",
+    "options": [
+      "RSS applied only to the largest tolerances",
+      "An RSS calculation multiplied by a correction factor (typically 1.2 to 1.5) to account for non-ideal conditions",
+      "RSS applied only to the smallest tolerances",
+      "A method that uses RSS for some dimensions and worst-case for others"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Modified RSS multiplies the standard RSS result by a safety factor (k = 1.2 to 1.5) to account for non-normal distributions, process shifts, and other real-world deviations.",
+    "explanationLine": 1429
+  },
+  {
+    "id": "u9-L4-Q26",
+    "type": "multiple-choice",
+    "question": "As the number of contributors increases, what happens to the benefit of RSS vs worst-case?",
+    "options": [
+      "The benefit is constant regardless of count",
+      "As contributors increase, RSS grows as sqrt(n) while WCA grows as n, so the savings increase dramatically",
+      "RSS is better only for chains with fewer than 3 contributors",
+      "More contributors always favor worst-case"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For n equal tolerances (+/-t each): WCA = n x t, RSS = sqrt(n) x t. The RSS/WCA ratio = 1/sqrt(n). For n = 4, RSS is 50% of WCA. For n = 25, RSS is only 20% of WCA.",
+    "explanationLine": 1443
+  },
+  {
+    "id": "u9-L4-Q27",
+    "type": "true-false",
+    "question": "RSS tolerance analysis is appropriate for assemblies consisting of only 2-3 parts with 2-3 contributing dimensions.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "RSS is based on the central limit theorem, which works best with many independent contributors. With only 2-3 contributors, the statistical assumptions are weak.",
+    "explanationLine": 1451
+  },
+  {
+    "id": "u9-L4-Q5",
+    "type": "multiple-choice",
+    "question": "When allocating tolerances to multiple dimensions in a stack-up, what approach optimizes cost?",
+    "options": [
+      "Assign equal tolerance to every dimension",
+      "Assign tighter tolerances to dimensions that are easier/cheaper to control",
+      "Always use the tightest tolerance possible everywhere",
+      "Use only RSS analysis and ignore worst-case"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Cost-optimized tolerance allocation assigns tighter tolerances to dimensions that are inexpensive to control (e.g., turned diameters, features in the same CNC setup).",
+    "explanationLine": 1485
+  },
+  {
+    "id": "u9-L4-Q16",
+    "type": "multiple-choice",
+    "question": "What is \"selective assembly,\" and when is it used?",
+    "options": [
+      "Selecting the best-looking parts for assembly",
+      "Measuring each part and sorting into size groups, then pairing complementary groups for tighter fits",
+      "Randomly selecting parts and hoping they fit",
+      "Assembling parts in a specific sequence"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Selective assembly measures each part and classifies it into groups based on actual size. Large shafts are paired with large holes, small with small, achieving tighter fits without tighter tolerances.",
+    "explanationLine": 1508
+  },
+  {
+    "id": "u9-L4-Q20",
+    "type": "multiple-choice",
+    "question": "How does geometric tolerance factor into a tolerance stack-up analysis?",
+    "options": [
+      "Geometric tolerances are never included in stack-ups",
+      "Geometric tolerances contribute additional variation and must be included as contributors",
+      "Geometric tolerances reduce the stack-up total",
+      "They are only included in RSS, not worst-case"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Geometric tolerances are critical stack-up contributors that are often overlooked. Position, perpendicularity, and flatness all add variation to the assembly.",
+    "explanationLine": 1538
+  },
+  {
+    "id": "u9-L4-Q19",
+    "type": "multiple-choice",
+    "question": "In a 2D tolerance analysis, what additional complexity arises compared to 1D?",
+    "options": [
+      "There is no additional complexity",
+      "Angular dimensions create nonlinear contributions (sine/cosine effects)",
+      "2D analysis can only be done with Monte Carlo",
+      "The tolerances are doubled in 2D"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "In 2D stack-ups, dimensions at angles to the stack direction contribute through trigonometric functions. A 1-degree angular tolerance can have very different linear effects at different distances from the pivot.",
+    "explanationLine": 1552
+  },
+  {
+    "id": "u9-L4-Q22",
+    "type": "multiple-choice",
+    "question": "What is the advantage of designing an assembly with an adjustable feature?",
+    "options": [
+      "It eliminates the need for any tolerances",
+      "The adjustable feature absorbs the accumulated variation at assembly time",
+      "Adjustable features are always cheaper than tightening tolerances",
+      "It makes the assembly easier to disassemble"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "An adjustable feature (shim, spacer, set screw, adjustable cam) absorbs the cumulative variation from the tolerance chain at one location. This can dramatically simplify the stack-up.",
+    "explanationLine": 1566
+  },
+  {
+    "id": "u9-L4-Q23",
+    "type": "true-false",
+    "question": "In a worst-case stack-up, the probability that all dimensions are at their worst limits is very high for typical production.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The probability that all dimensions are simultaneously at their worst limits is extremely low. It decreases exponentially with the number of dimensions. That is why RSS is often more realistic.",
+    "explanationLine": 1574
+  },
+  {
+    "id": "u9-L4-Q30",
+    "type": "multiple-choice",
+    "question": "What is the \"virtual condition boundary\" approach to tolerance stack-up?",
+    "options": [
+      "It is a 3D CAD visualization method",
+      "Instead of stacking dimensional and geometric tolerances separately, combine each feature into its virtual condition boundary first, then stack those",
+      "It ignores geometric tolerances entirely",
+      "It is only applicable to position tolerances"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The virtual condition approach converts each feature into its worst-case boundary (VC = MMC size +/- geometric tolerance) and uses that single boundary in the stack-up. This simplifies the analysis.",
+    "explanationLine": 1588
+  },
+  {
+    "id": "u9-L5-Q21",
+    "type": "true-false",
+    "question": "When specifying surface roughness on a drawing, the roughness value always represents the maximum allowable roughness.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Per ISO 1302 and ASME Y14.36M, the surface roughness value on a drawing is an upper limit by default. The actual surface must have roughness equal to or less than (smoother than) the specified value.",
+    "explanationLine": 1616
+  },
+  {
+    "id": "u9-L5-Q1",
+    "type": "multiple-choice",
+    "question": "A sealing surface meets the Ra spec but still leaks. What might Ra be missing?",
+    "options": [
+      "Ra is the only relevant parameter",
+      "Ra averages out the profile and can hide deep scratches or isolated peaks that create leak paths",
+      "The surface is too smooth, increase Ra",
+      "Ra was measured in the wrong direction"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Ra is a statistical average that can mask extreme features. One deep scratch can cause a leak even though the average roughness looks fine. Use Rz or Rmax for sealing surfaces.",
+    "explanationLine": 1631
+  },
+  {
+    "id": "u9-L5-Q2",
+    "type": "multiple-choice",
+    "question": "Which surface roughness parameter is preferred for sealing surfaces?",
+    "options": [
+      "Ra (arithmetic average)",
+      "Rz (average maximum height)",
+      "Rq (root mean square)",
+      "Rsk (skewness)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Rz is preferred for sealing surfaces because it captures the extreme peak-to-valley deviations that affect seal contact and leakage paths.",
+    "explanationLine": 1652
+  },
+  {
+    "id": "u9-L5-Q4",
+    "type": "multiple-choice",
+    "question": "The surface lay symbol perpendicular on a drawing indicates that the surface texture pattern runs:",
+    "options": [
+      "Parallel to the surface boundary line",
+      "Perpendicular to the surface boundary line",
+      "Multi-directional (no dominant direction)",
+      "Circular relative to the center of the surface"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The lay symbol perpendicular indicates the predominant surface pattern runs perpendicular to the boundary line (the edge of the surface as viewed on the drawing).",
+    "explanationLine": 1675
+  },
+  {
+    "id": "u9-L5-Q9",
+    "type": "true-false",
+    "question": "A surface with Ra 0.4 is always functionally better than a surface with Ra 0.8.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Ra alone does not determine functional performance. A surface with Ra 0.4 might have unfavorable skewness, lay, or waviness that makes it worse for a specific application.",
+    "explanationLine": 1683
+  },
+  {
+    "id": "u9-L5-Q22",
+    "type": "multiple-choice",
+    "question": "What is the relationship between surface roughness and fatigue life?",
+    "options": [
+      "Surface roughness has no effect on fatigue life",
+      "Rougher surfaces have lower fatigue life because valleys act as stress concentrators",
+      "Smoother surfaces always have shorter fatigue life",
+      "Fatigue life depends only on material, not surface condition"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Surface roughness directly affects fatigue life. Valleys and scratches act as micro-notch stress concentrators that initiate fatigue cracks.",
+    "explanationLine": 1697
+  },
+  {
+    "id": "u9-L5-Q14",
+    "type": "multiple-choice",
+    "question": "What are the typical surface roughness values (Ra) achievable by common manufacturing processes?",
+    "options": [
+      "All machining processes achieve the same roughness",
+      "Lapping: 0.025-0.1, Grinding: 0.1-1.6, Turning: 0.4-6.3, Sand casting: 12.5-25 (all in micrometers)",
+      "Every process can achieve any roughness with the right parameters",
+      "Surface roughness depends only on the cutting tool"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Each manufacturing process has a characteristic roughness range determined by the physics of material removal.",
+    "explanationLine": 1711
+  },
+  {
+    "id": "u9-L5-Q16",
+    "type": "true-false",
+    "question": "A surface profilometer measures the same characteristics as a CMM. They are interchangeable for GD&T inspection.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "A profilometer measures micro-geometry (roughness) with a 2-5 micrometer tip. A CMM measures macro-geometry (GD&T features) with a 1-4 mm tip. Different scales, different purposes.",
+    "explanationLine": 1739
+  },
+  {
+    "id": "u9-L5-Q11",
+    "type": "multiple-choice",
+    "question": "What is a CMM and what are its main advantages for GD&T inspection?",
+    "options": [
+      "A hand tool for measuring surface roughness",
+      "A precision 3D measurement system that probes discrete points to verify geometric tolerances",
+      "A visual inspection camera system",
+      "A machine that measures only linear dimensions"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A CMM uses a precision probe on a 3-axis motion system to capture X, Y, Z coordinates. It can verify flatness, position, concentricity, and all other GD&T requirements from a single setup.",
+    "explanationLine": 1753
+  },
+  {
+    "id": "u9-L5-Q12",
+    "type": "multiple-choice",
+    "question": "What is measurement uncertainty, and why must it be considered?",
+    "options": [
+      "The operator\\",
+      "The quantified range within which the true value is expected to lie, affecting accept/reject decisions near tolerance limits",
+      "It is eliminated by using digital readouts",
+      "It only applies to manual measurements"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Measurement uncertainty is inherent in every measurement. Near tolerance limits, the uncertainty zone creates ambiguity in accept/reject decisions.",
+    "explanationLine": 1783
+  },
+  {
+    "id": "u9-L5-Q5",
+    "type": "multiple-choice",
+    "question": "A micrometer has 0.002 mm resolution. According to the 10:1 gauge maker\\",
+    "options": [
+      "+/-0.005 mm",
+      "+/-0.010 mm",
+      "+/-0.020 mm",
+      "+/-0.050 mm"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The 10:1 rule says measurement uncertainty should be at most 1/10 of the tolerance. With 0.002 mm resolution, the tightest tolerance is 0.002 x 10 = 0.020 mm.",
+    "explanationLine": 1797
+  },
+  {
+    "id": "u9-L5-Q18",
+    "type": "multiple-choice",
+    "question": "What is gauge R&R, and what is an acceptable result?",
+    "options": [
+      "A test to verify gauges are calibrated",
+      "A study that quantifies measurement variation from the gauge (repeatability) and operators (reproducibility). Less than 10% is acceptable.",
+      "A method to repair damaged gauges",
+      "A comparison between two different gauge brands"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Gauge R&R decomposes total measurement variation into repeatability (same person, same gauge) and reproducibility (different people). Less than 10% = acceptable, 10-30% = marginal, over 30% = unacceptable.",
+    "explanationLine": 1811
+  },
+  {
+    "id": "u9-L5-Q3",
+    "type": "multiple-choice",
+    "question": "A CMM measures flatness of a 200 mm surface using only 9 points. A colleague says this may not be reliable. Are they right?",
+    "options": [
+      "Wrong, 9 points is sufficient",
+      "Right, 9 points on a large surface may miss deviations between probed locations",
+      "Point count does not matter",
+      "They are right, but only for very small surfaces"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "CMM measurements are only as good as the sampling strategy. With 9 points on a 200 mm surface, the average spacing is ~67 mm. Local deviations between points will be missed.",
+    "explanationLine": 1825
+  },
+  {
+    "id": "u9-L5-Q26",
+    "type": "multiple-choice",
+    "question": "What is a \"go/no-go gauge\" and what is its advantage for production inspection?",
+    "options": [
+      "A gauge that measures dimensions to high precision",
+      "A fixed-size gauge that checks only whether a feature is within tolerance (pass/fail), enabling fast 100% inspection",
+      "A gauge that measures both roughness and dimensions",
+      "A type of CMM program"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Go/no-go gauges are fixed-limit gauges that verify a feature is within tolerance without measuring the actual value. They are fast, simple, and ideal for high-volume production.",
+    "explanationLine": 1839
+  },
+  {
+    "id": "u9-L5-Q28",
+    "type": "true-false",
+    "question": "Gauge blocks (Johansson blocks) can be combined by wringing to create custom lengths with accuracy better than 0.1 micrometers.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Gauge blocks are precision ground and lapped metal blocks with faces so flat and smooth that they adhere by \"wringing.\" Combinations can achieve sub-0.1 micrometer accuracy.",
+    "explanationLine": 1847
+  },
+  {
+    "id": "u9-L5-Q27",
+    "type": "multiple-choice",
+    "question": "A surface finish symbol on a drawing has a circle in the V-notch. What does this indicate?",
+    "options": [
+      "The surface must be machined to specification",
+      "The surface must remain as-manufactured (no material removal allowed)",
+      "The surface requires EDM processing",
+      "Roughness applies only to first article"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Per ISO 1302, the circle in the V-notch indicates that no material removal is allowed. The surface must be obtained as-manufactured (cast, forged, etc.).",
+    "explanationLine": 1881
+  },
+  {
+    "id": "u9-L5-Q20",
+    "type": "multiple-choice",
+    "question": "What is an optical comparator (profile projector)?",
+    "options": [
+      "A device that compares two parts side by side",
+      "An instrument that projects a magnified shadow (silhouette) of a part onto a screen for measuring 2D profiles",
+      "A camera that takes photos for visual inspection",
+      "A precision scale for comparing part weights"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "An optical comparator magnifies the part shadow (typically 10x to 100x) onto a screen. The operator overlays a template or uses digital crosshairs to measure features.",
+    "explanationLine": 1895
+  },
+  {
+    "id": "u9-L5-Q6",
+    "type": "multiple-choice",
+    "question": "You discover Ra 0.2 on a legacy drawing for a non-sealing, non-bearing surface. What should you do?",
+    "options": [
+      "Just change it to Ra 3.2 and notify manufacturing",
+      "Leave it as-is to avoid any risk",
+      "Investigate the design intent by reviewing assembly context and service history before changing",
+      "Ask manufacturing to ignore it"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Tight tolerances on legacy drawings may exist for a reason not obvious from the drawing alone (past failure, customer requirement, coating adhesion). Always investigate before changing.",
+    "explanationLine": 1909
+  },
+  {
+    "id": "u9-L5-Q8",
+    "type": "multiple-choice",
+    "question": "What is the \"cutoff length\" in surface roughness measurement?",
+    "options": [
+      "The maximum length of the surface that can be measured",
+      "The filter wavelength that separates roughness (short wavelength) from waviness (long wavelength)",
+      "The distance between the probe tip and the surface",
+      "The minimum feature size the probe can detect"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The cutoff length is a high-pass filter that separates short-wavelength roughness from long-wavelength waviness. Standard values are 0.08, 0.25, 0.8, 2.5, and 8 mm.",
+    "explanationLine": 1923
+  },
+  {
+    "id": "u9-L5-Q24",
+    "type": "multiple-choice",
+    "question": "What is Abbe\\",
+    "options": [
+      "Measurements should always be taken at 20 C",
+      "The measurement axis should be collinear with the dimension being measured to avoid cosine error",
+      "Digital instruments are more accurate than analog ones",
+      "Two measurements should always be averaged"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Abbe\\",
+    "explanationLine": 1944
+  },
+  {
+    "id": "u9-L5-Q23",
+    "type": "multiple-choice",
+    "question": "A manufacturing process changes from turning to grinding for the same surface. Both achieve the specified Ra. Should any additional checks be done?",
+    "options": [
+      "No, if Ra is met, the surfaces are equivalent",
+      "Yes, verify residual stress (grinding can cause tensile stress and thermal damage)",
+      "Only verify dimensional tolerance, not surface properties",
+      "Grinding is always superior, no additional checks needed"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Changing the manufacturing process changes far more than just Ra. Grinding can induce tensile residual stress, thermal damage, and microstructural changes that affect fatigue life and performance.",
+    "explanationLine": 1958
+  },
+  {
+    "id": "u9-L5-Q30",
+    "type": "multiple-choice",
+    "question": "What is the \"Bearing Area Curve\" (Abbott-Firestone curve)?",
+    "options": [
+      "It only applies to bearing surfaces",
+      "It plots the percentage of the surface in contact at successive depth levels, showing how the surface will wear in and support load",
+      "It is only used in research, not in industry",
+      "It is the same as the Rz measurement plotted differently"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The Abbott-Firestone curve is generated by slicing the surface profile at successively deeper levels and plotting the material ratio at each depth. It predicts wear-in, oil retention, and load-bearing behavior.",
+    "explanationLine": 1990
+  }
+]

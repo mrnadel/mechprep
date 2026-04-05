@@ -40,6 +40,9 @@ export const finSection3Part2: Unit[] = [
             question: "A sinking fund is for saving toward a specific, known expense.",
             correctAnswer: true,
             explanation: "Unlike an emergency fund for surprises, a sinking fund targets a goal you can plan for in advance.",
+            distractorExplanations: {
+              1: 'This statement is actually true — unlike an emergency fund for surprises, a sinking fund targets a goal you can plan for in advance.',
+            },
           },
           {
             id: "fin-sec3-u7-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Emergency funds handle surprises. Sinking funds prepare for expenses you know are coming.",
+            distractorExplanations: {
+              0: 'These are different concepts with distinct purposes.',
+              2: '"A sinking fund earns higher interest rates" is wrong because emergency funds handle surprises.',
+              3: '"An emergency fund is for fun purchases" is wrong because emergency funds handle surprises.',
+            },
           },
           {
             id: "fin-sec3-u7-L1-T2",
@@ -114,6 +122,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$1,200 divided by 6 months is $200 per month. A sinking fund makes the bill painless and avoids credit card interest.",
+            distractorExplanations: {
+              0: '"A bigger emergency fund to cover insurance bills" is wrong because $1,200 divided by 6 months is $200 per month.',
+              2: '"A credit card with a higher limit for insurance" is wrong because $1,200 divided by 6 months is $200 per month.',
+              3: '"A loan from her bank to cover the premium" is wrong because $1,200 divided by 6 months is $200 per month.',
+            },
           },
         ],
       },
@@ -139,6 +152,9 @@ export const finSection3Part2: Unit[] = [
             question: "A sinking fund needs a specific goal amount and a deadline to work properly.",
             correctAnswer: true,
             explanation: "Without a target amount and date, you can't calculate how much to save each month.",
+            distractorExplanations: {
+              1: 'This statement is actually true — without a target amount and date, you can\'t calculate how much to save each month.',
+            },
           },
           {
             id: "fin-sec3-u7-L2-Q2",
@@ -172,6 +188,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "3 to 5 funds keeps your savings focused and manageable. Too many dilutes your progress.",
+            distractorExplanations: {
+              0: 'This answer is too narrow — it ignores other important factors.',
+              2: '"As many as possible for every expense" is wrong because 3 to 5 funds keeps your savings focused and manageable.',
+              3: '"10 or more for maximum coverage" is wrong because 3 to 5 funds keeps your savings focused and manageable.',
+            },
           },
           {
             id: "fin-sec3-u7-L2-Q4",
@@ -186,6 +207,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Focus on the most urgent and important goals first. Resume the others when the top priorities are funded.",
+            distractorExplanations: {
+              0: '"Split $300 equally across all 7 goals" is wrong because focus on the most urgent and important goals first.',
+              2: '"Save only for the car since it\'s the most expensive" is wrong because focus on the most urgent and important goals first.',
+              3: '"Wait until he earns more to start any sinking funds" is wrong because focus on the most urgent and important goals first.',
+            },
           },
           {
             id: "fin-sec3-u7-L2-Q5",
@@ -214,6 +240,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When funds are mixed, you might spend your emergency money on a vacation or vice versa. Separation creates clarity.",
+            distractorExplanations: {
+              0: '"They earn different interest rates" is wrong because when funds are mixed, you might spend your emergency money on a vacation or vice versa.',
+              2: '"Emergency funds don\'t allow additional deposits" is wrong because when funds are mixed, you might spend your emergency money on a vacation or vice versa.',
+              3: '"Sinking funds require different bank accounts" is wrong because when funds are mixed, you might spend your emergency money on a vacation or vice versa.',
+            },
           },
         ],
       },
@@ -245,6 +276,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$900 divided by 6 months equals $150 per month. Straightforward division.",
+            distractorExplanations: {
+              0: 'This amount (100) is too low — the correct calculation gives 150.',
+              2: 'This amount (180) is too high — the correct calculation gives 150.',
+              3: 'This amount (225) is too high — the correct calculation gives 150.',
+            },
           },
           {
             id: "fin-sec3-u7-L3-Q2",
@@ -252,6 +288,9 @@ export const finSection3Part2: Unit[] = [
             question: "If you start saving later, each monthly contribution needs to be larger.",
             correctAnswer: true,
             explanation: "Less time means fewer months to spread the cost, so each contribution is bigger.",
+            distractorExplanations: {
+              1: 'This statement is actually true — less time means fewer months to spread the cost, so each contribution is bigger.',
+            },
           },
           {
             id: "fin-sec3-u7-L3-T2",
@@ -272,6 +311,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Adjusting the plan keeps you moving forward. Quitting means starting over later from zero.",
+            distractorExplanations: {
+              0: '"Cancel the sinking fund entirely" is wrong because adjusting the plan keeps you moving forward.',
+              1: 'Borrowing creates debt and interest costs, making the situation worse.',
+              3: '"Use your emergency fund to make up the difference" is wrong because adjusting the plan keeps you moving forward.',
+            },
           },
           {
             id: "fin-sec3-u7-L3-Q4",
@@ -313,6 +357,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Extending the vacation deadline drops the monthly cost. She keeps all three funds running within her budget.",
+            distractorExplanations: {
+              0: '"Cancel all three funds and start over" is wrong because extending the vacation deadline drops the monthly cost.',
+              2: 'Borrowing creates debt and interest costs, making the situation worse.',
+              3: '"Stop saving for car repairs since her car is running fine" is wrong because extending the vacation deadline drops the monthly cost.',
+            },
           },
         ],
       },
@@ -381,6 +430,9 @@ export const finSection3Part2: Unit[] = [
             question: "Lifestyle inflation means your spending increases every time your income increases.",
             correctAnswer: true,
             explanation: "When spending rises to match income, you stay in the same financial position despite earning more.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when spending rises to match income, you stay in the same financial position despite earning more.',
+            },
           },
           {
             id: "fin-sec3-u8-L1-Q2",
@@ -394,6 +446,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lifestyle inflation is a spending choice, not economic inflation. It's upgrading wants because you can afford to.",
+            distractorExplanations: {
+              0: '"Actual price increases on essential goods" is wrong because lifestyle inflation is a spending choice, not economic inflation.',
+              2: '"Saving too much money each month" is wrong because lifestyle inflation is a spending choice, not economic inflation.',
+              3: '"Inflation in the national economy" is wrong because lifestyle inflation is a spending choice, not economic inflation.',
+            },
           },
           {
             id: "fin-sec3-u8-L1-T2",
@@ -416,6 +473,9 @@ export const finSection3Part2: Unit[] = [
             question: "People who earn $100,000 per year always have more savings than people who earn $50,000.",
             correctAnswer: false,
             explanation: "Many high earners have little savings because their spending grew with their income. Savings depends on the gap, not the income.",
+            distractorExplanations: {
+              0: 'This statement is actually false — many high earners have little savings because their spending grew with their income. Savings depends on the gap, not the income.',
+            },
           },
           {
             id: "fin-sec3-u8-L1-T3",
@@ -437,6 +497,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Jordan kept the gap wide and invested $50,000. Alex let lifestyle inflation eat his entire raise.",
+            distractorExplanations: {
+              0: '"Alex, because he enjoys a higher quality of life" is wrong because jordan kept the gap wide and invested $50,000.',
+              1: '"They\'re equal since they earn the same" is wrong because jordan kept the gap wide and invested $50,000.',
+              3: '"Neither, since $10,000 per year doesn\'t make a difference" is wrong because jordan kept the gap wide and invested $50,000.',
+            },
           },
           {
             id: "fin-sec3-u8-L1-Q6",
@@ -450,6 +515,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Wealth comes from the gap between earning and spending. A big income with big spending builds nothing.",
+            distractorExplanations: {
+              0: '"Your total income over your career" is wrong because wealth comes from the gap between earning and spending.',
+              2: '"The neighborhood you live in" is wrong because wealth comes from the gap between earning and spending.',
+              3: '"The type of bank account you use" is wrong because wealth comes from the gap between earning and spending.',
+            },
           },
         ],
       },
@@ -475,6 +545,9 @@ export const finSection3Part2: Unit[] = [
             question: "Most people save a significant portion of each raise they receive.",
             correctAnswer: false,
             explanation: "Research shows most people spend their raises almost immediately through small lifestyle upgrades.",
+            distractorExplanations: {
+              0: 'This statement is actually false — research shows most people spend their raises almost immediately through small lifestyle upgrades.',
+            },
           },
           {
             id: "fin-sec3-u8-L2-Q2",
@@ -488,6 +561,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Raises disappear through many small upgrades. Each one seems minor, but together they absorb the entire raise.",
+            distractorExplanations: {
+              0: '"One single large purchase" is wrong because raises disappear through many small upgrades.',
+              2: '"Emergency fund contributions" is wrong because raises disappear through many small upgrades.',
+              3: '"Investment accounts" is wrong because raises disappear through many small upgrades.',
+            },
           },
           {
             id: "fin-sec3-u8-L2-T2",
@@ -525,6 +603,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$250 plus $80 plus $20 equals $350 in new monthly costs. Only $50 of the $400 raise remains.",
+            distractorExplanations: {
+              0: '"Her employer didn\'t actually pay her the raise" is wrong because $250 plus $80 plus $20 equals $350 in new monthly costs.',
+              2: '"Inflation in the economy cancelled out her raise" is wrong because $250 plus $80 plus $20 equals $350 in new monthly costs.',
+              3: '"She\'s saving the rest without realizing it" is wrong because $250 plus $80 plus $20 equals $350 in new monthly costs.',
+            },
           },
           {
             id: "fin-sec3-u8-L2-T3",
@@ -545,6 +628,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Increasing savings the moment a raise hits prevents lifestyle inflation from absorbing the money first.",
+            distractorExplanations: {
+              0: '"At the end of the year during tax season" is wrong because increasing savings the moment a raise hits prevents lifestyle inflation from absorbing the money first.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"After you\'ve upgraded your lifestyle" is wrong because increasing savings the moment a raise hits prevents lifestyle inflation from absorbing the money first.',
+            },
           },
           {
             id: "fin-sec3-u8-L2-Q6",
@@ -578,6 +666,9 @@ export const finSection3Part2: Unit[] = [
             question: "The 50% raise rule means you save half of every raise and can spend the other half.",
             correctAnswer: true,
             explanation: "It's a balanced approach. You enjoy the reward of earning more while building your financial future.",
+            distractorExplanations: {
+              1: 'This statement is actually true — it\'s a balanced approach. You enjoy the reward of earning more while building your financial future.',
+            },
           },
           {
             id: "fin-sec3-u8-L3-Q2",
@@ -591,6 +682,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Half of $500 is $250 per month to savings. You still get $250 per month in extra spending money.",
+            distractorExplanations: {
+              0: 'This amount (100) is too low — the correct calculation gives 250.',
+              1: 'This amount (200) is too low — the correct calculation gives 250.',
+              3: 'This amount (500) is too high — the correct calculation gives 250.',
+            },
           },
           {
             id: "fin-sec3-u8-L3-T2",
@@ -612,6 +708,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$350 plus $200 (half the raise) equals $550 saved per month. $550 divided by $3,900 is about 14%.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"50% because that\'s the rule" is wrong because $350 plus $200 (half the raise) equals $550 saved per month.',
+              3: '"About 5% because the raise lowered his rate" is wrong because $350 plus $200 (half the raise) equals $550 saved per month.',
+            },
           },
           {
             id: "fin-sec3-u8-L3-Q4",
@@ -619,6 +720,9 @@ export const finSection3Part2: Unit[] = [
             question: "Over multiple raises, the 50% rule gradually increases your savings rate each time.",
             correctAnswer: true,
             explanation: "Each raise adds to savings while spending grows more slowly. Your savings rate climbs with every raise.",
+            distractorExplanations: {
+              1: 'This statement is actually true — each raise adds to savings while spending grows more slowly. Your savings rate climbs with every raise.',
+            },
           },
           {
             id: "fin-sec3-u8-L3-Q5",
@@ -648,6 +752,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Once you start spending the extra money, it feels impossible to cut back. Save it before your lifestyle adjusts.",
+            distractorExplanations: {
+              0: '"Banks require you to update within 24 hours" is wrong because once you start spending the extra money, it feels impossible to cut back.',
+              2: '"The interest rate is higher if you save immediately" is wrong because once you start spending the extra money, it feels impossible to cut back.',
+              3: '"Your employer won\'t give future raises if you don\'t save" is wrong because once you start spending the extra money, it feels impossible to cut back.',
+            },
           },
         ],
       },
@@ -673,6 +782,9 @@ export const finSection3Part2: Unit[] = [
             question: "Living on last year's income means all new earnings go to savings or investments.",
             correctAnswer: true,
             explanation: "This strategy keeps your lifestyle fixed while your savings grow with each raise.",
+            distractorExplanations: {
+              1: 'This statement is actually true — this strategy keeps your lifestyle fixed while your savings grow with each raise.',
+            },
           },
           {
             id: "fin-sec3-u8-L4-Q2",
@@ -686,6 +798,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Redirecting the raise to savings before it hits your spending account is the simplest prevention method.",
+            distractorExplanations: {
+              1: '"Track every purchase for a year after each raise" is wrong because redirecting the raise to savings before it hits your spending account is the simplest prevention method.',
+              2: '"Ask your employer to delay the raise by 6 months" is wrong because redirecting the raise to savings before it hits your spending account is the simplest prevention method.',
+              3: '"Cancel all subscriptions permanently" is wrong because redirecting the raise to savings before it hits your spending account is the simplest prevention method.',
+            },
           },
           {
             id: "fin-sec3-u8-L4-T2",
@@ -731,6 +848,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$400 plus $250 plus $100 equals $750 in new spending. Only $50 of the $800 raise goes to savings.",
+            distractorExplanations: {
+              0: '"Savings increase by $800 per month" is wrong because $400 plus $250 plus $100 equals $750 in new spending.',
+              2: '"Savings stay the same as before the raise" is wrong because $400 plus $250 plus $100 equals $750 in new spending.',
+              3: '"Savings decrease because she\'s spending more" is wrong because $400 plus $250 plus $100 equals $750 in new spending.',
+            },
           },
           {
             id: "fin-sec3-u8-L4-T3",
@@ -751,6 +873,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Social influence is powerful. You naturally match the habits of people around you.",
+            distractorExplanations: {
+              0: '"They have zero impact on your decisions" is wrong because social influence is powerful.',
+              2: '"They only matter if you share bank accounts" is wrong because social influence is powerful.',
+              3: '"They only affect you if you earn the same amount" is wrong because social influence is powerful.',
+            },
           },
         ],
       },
@@ -902,6 +1029,9 @@ export const finSection3Part2: Unit[] = [
             question: "A tax refund is a type of windfall because it arrives outside your regular paycheck.",
             correctAnswer: true,
             explanation: "Even though tax refunds happen annually, they're extra money beyond your normal monthly income. They count as windfalls.",
+            distractorExplanations: {
+              1: 'This statement is actually true — even though tax refunds happen annually, they\'re extra money beyond your normal monthly income. They count as windfalls.',
+            },
           },
           {
             id: "fin-sec3-u9-L1-Q2",
@@ -938,6 +1068,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Windfalls feel like 'extra' money, which lowers your mental guard against spending. This is called mental accounting.",
+            distractorExplanations: {
+              0: '"Windfalls expire if you don\'t spend them fast" is wrong because windfalls feel like \'extra\' money, which lowers your mental guard against spending.',
+              2: '"Banks charge fees on windfall deposits" is wrong because windfalls feel like \'extra\' money, which lowers your mental guard against spending.',
+              3: '"Financial advisors recommend spending windfalls" is wrong because windfalls feel like \'extra\' money, which lowers your mental guard against spending.',
+            },
           },
           {
             id: "fin-sec3-u9-L1-Q4",
@@ -967,6 +1102,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With only $200 in emergency savings, putting $600 toward the fund and enjoying $600 would balance fun and safety.",
+            distractorExplanations: {
+              0: '"Exactly what he did, since tax refunds are free money" is wrong because with only $200 in emergency savings, putting $600 toward the fund and enjoying $600 would balance fun and safety.',
+              2: '"Invest all $1,200 in cryptocurrency for quick gains" is wrong because with only $200 in emergency savings, putting $600 toward the fund and enjoying $600 would balance fun and safety.',
+              3: '"Give the entire refund away to charity" is wrong because with only $200 in emergency savings, putting $600 toward the fund and enjoying $600 would balance fun and safety.',
+            },
           },
           {
             id: "fin-sec3-u9-L1-Q6",
@@ -980,6 +1120,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Treating a windfall like regular income means you'll make a thoughtful plan instead of an impulsive one.",
+            distractorExplanations: {
+              0: '"Spend it fast before you lose it" is wrong because treating a windfall like regular income means you\'ll make a thoughtful plan instead of an impulsive one.',
+              2: '"Feel guilty about receiving it and save every penny" is wrong because treating a windfall like regular income means you\'ll make a thoughtful plan instead of an impulsive one.',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
         ],
       },
@@ -1005,6 +1150,9 @@ export const finSection3Part2: Unit[] = [
             question: "You should plan how to use a windfall before spending any of it.",
             correctAnswer: true,
             explanation: "Planning first prevents impulse spending. Once you have a plan, you can enjoy the fun portion guilt-free.",
+            distractorExplanations: {
+              1: 'This statement is actually true — planning first prevents impulse spending. Once you have a plan, you can enjoy the fun portion guilt-free.',
+            },
           },
           {
             id: "fin-sec3-u9-L2-Q2",
@@ -1018,6 +1166,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "50% of $2,000 is $1,000 toward savings or debt. $600 goes to wants. $400 goes to fun.",
+            distractorExplanations: {
+              0: 'This amount (400) is too low — the correct calculation gives 1,000.',
+              1: 'This amount (600) is too low — the correct calculation gives 1,000.',
+              3: 'This amount (2,000) is too high — the correct calculation gives 1,000.',
+            },
           },
           {
             id: "fin-sec3-u9-L2-T2",
@@ -1061,6 +1214,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Kill the 20% debt first ($1,000). Boost the emergency fund ($1,200 gets it to $2,000). The laptop ($800) uses the rest.",
+            distractorExplanations: {
+              0: 'This choice is wrong because kill the 20% debt first ($1,000).',
+              2: '"Save all $3,000 in the emergency fund" is wrong because kill the 20% debt first ($1,000).',
+              3: '"Spend all $3,000 on the laptop and other fun purchases" is wrong because kill the 20% debt first ($1,000).',
+            },
           },
           {
             id: "fin-sec3-u9-L2-T3",
@@ -1081,6 +1239,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A guilt-free fun portion keeps you motivated to direct the majority toward goals. Balance prevents burnout.",
+            distractorExplanations: {
+              0: '"Banks require you to spend part of every deposit" is wrong because a guilt-free fun portion keeps you motivated to direct the majority toward goals.',
+              2: '"Fun spending earns cash-back rewards" is wrong because a guilt-free fun portion keeps you motivated to direct the majority toward goals.',
+              3: '"Financial advisors mandate a minimum spending level" is wrong because a guilt-free fun portion keeps you motivated to direct the majority toward goals.',
+            },
           },
         ],
       },
@@ -1106,6 +1269,9 @@ export const finSection3Part2: Unit[] = [
             question: "A tax refund means the government is giving you extra money.",
             correctAnswer: false,
             explanation: "A refund is your own overpaid taxes coming back. You gave the government a free loan all year.",
+            distractorExplanations: {
+              0: 'This statement is actually false — a refund is your own overpaid taxes coming back. You gave the government a free loan all year.',
+            },
           },
           {
             id: "fin-sec3-u9-L3-Q2",
@@ -1119,6 +1285,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Adjusting your W-4 reduces withholding so you get more in each paycheck instead of a big refund once per year.",
+            distractorExplanations: {
+              0: '"File your taxes late to keep the money longer" is wrong because adjusting your W-4 reduces withholding so you get more in each paycheck instead of a big refund once per year.',
+              2: '"Open a second checking account" is wrong because adjusting your W-4 reduces withholding so you get more in each paycheck instead of a big refund once per year.',
+              3: '"Stop paying taxes entirely" is wrong because adjusting your W-4 reduces withholding so you get more in each paycheck instead of a big refund once per year.',
+            },
           },
           {
             id: "fin-sec3-u9-L3-T2",
@@ -1133,6 +1304,9 @@ export const finSection3Part2: Unit[] = [
             question: "Planning how to use a work bonus before you receive it leads to better financial decisions.",
             correctAnswer: true,
             explanation: "Pre-planning removes the temptation of impulse spending when the money hits your account.",
+            distractorExplanations: {
+              1: 'This statement is actually true — pre-planning removes the temptation of impulse spending when the money hits your account.',
+            },
           },
           {
             id: "fin-sec3-u9-L3-Q4",
@@ -1163,6 +1337,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$200 per month toward debt eliminates $3,000 in about 15 months with interest. Steady payments beat one annual lump sum.",
+            distractorExplanations: {
+              0: '"It couldn\'t. A big refund check is always better" is wrong because $200 per month toward debt eliminates $3,000 in about 15 months with interest.',
+              2: 'Ignoring financial problems allows them to grow and cost you more.',
+              3: '"The extra $200 would be lost to taxes" is wrong because $200 per month toward debt eliminates $3,000 in about 15 months with interest.',
+            },
           },
           {
             id: "fin-sec3-u9-L3-T3",
@@ -1335,6 +1514,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$5,000 divided by $200 per month equals 25 months. Just over 2 years of consistent saving.",
+            distractorExplanations: {
+              0: 'This amount (15) is too low — the correct calculation gives 25.',
+              1: 'This amount (20) is too low — the correct calculation gives 25.',
+              3: 'This amount (30) is too high — the correct calculation gives 25.',
+            },
           },
           {
             id: "fin-sec3-u10-L1-Q2",
@@ -1342,6 +1526,9 @@ export const finSection3Part2: Unit[] = [
             question: "Increasing your monthly savings by even $50 can significantly shorten your timeline.",
             correctAnswer: true,
             explanation: "At $200 per month, $5,000 takes 25 months. At $250, it takes 20 months. That extra $50 saves 5 months.",
+            distractorExplanations: {
+              1: 'This statement is actually true — at $200 per month, $5,000 takes 25 months. At $250, it takes 20 months. That extra $50 saves 5 months.',
+            },
           },
           {
             id: "fin-sec3-u10-L1-T2",
@@ -1390,6 +1577,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$1,500 saved plus $900 windfall equals $2,400. She needs $2,100 more. $2,100 divided by $300 is 7 months.",
+            distractorExplanations: {
+              0: 'This amount (10) is too high — the correct calculation gives 7.',
+              2: 'This amount (5) is too low — the correct calculation gives 7.',
+              3: 'This amount (3) is too low — the correct calculation gives 7.',
+            },
           },
         ],
       },
@@ -1421,6 +1613,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$2,000 times 0.04 equals $80 in simple interest for one year.",
+            distractorExplanations: {
+              0: 'This amount (40) is too low — the correct calculation gives 80.',
+              1: 'This amount (60) is too low — the correct calculation gives 80.',
+              3: 'This amount (100) is too high — the correct calculation gives 80.',
+            },
           },
           {
             id: "fin-sec3-u10-L2-Q2",
@@ -1428,6 +1625,9 @@ export const finSection3Part2: Unit[] = [
             question: "Simple interest is calculated only on the original deposit, not on earned interest.",
             correctAnswer: true,
             explanation: "That's the key difference from compound interest. Simple interest ignores previously earned interest.",
+            distractorExplanations: {
+              1: 'This statement is actually true — that\'s the key difference from compound interest. Simple interest ignores previously earned interest.',
+            },
           },
           {
             id: "fin-sec3-u10-L2-T2",
@@ -1467,6 +1667,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$3,000 times 0.05 times 3 years equals $450. Simple interest grows in a straight line.",
+            distractorExplanations: {
+              0: 'This amount (150) is too low — the correct calculation gives 450.',
+              1: 'This amount (300) is too low — the correct calculation gives 450.',
+              3: 'This amount (600) is too high — the correct calculation gives 450.',
+            },
           },
           {
             id: "fin-sec3-u10-L2-T3",
@@ -1488,6 +1693,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Compound interest earns interest on interest. Over 10 years, the compounding effect creates a significant gap.",
+            distractorExplanations: {
+              0: '"They earn the same because the rate is identical" is wrong because compound interest earns interest on interest.',
+              1: '"Investment A earns more due to simpler calculations" is wrong because compound interest earns interest on interest.',
+              3: '"Investment A earns more over short periods only" is wrong because compound interest earns interest on interest.',
+            },
           },
         ],
       },
@@ -1513,6 +1723,9 @@ export const finSection3Part2: Unit[] = [
             question: "With compound interest, you earn more money each year even without adding new deposits.",
             correctAnswer: true,
             explanation: "As your balance grows from earned interest, each year's interest calculation uses a larger number.",
+            distractorExplanations: {
+              1: 'This statement is actually true — as your balance grows from earned interest, each year\'s interest calculation uses a larger number.',
+            },
           },
           {
             id: "fin-sec3-u10-L3-Q2",
@@ -1526,6 +1739,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Year 2 interest is calculated on $10,500 (original plus year 1 interest). 5% of $10,500 is $525.",
+            distractorExplanations: {
+              0: 'This amount (500) is too low — the correct calculation gives 525.',
+              2: 'This amount (550) is too high — the correct calculation gives 525.',
+              3: 'This amount (1,000) is too high — the correct calculation gives 525.',
+            },
           },
           {
             id: "fin-sec3-u10-L3-T2",
@@ -1546,6 +1764,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The extra 10 years give compound interest time to build on itself. Late years produce far more growth than early years.",
+            distractorExplanations: {
+              0: '"You deposit 10 extra years of contributions" is wrong because the extra 10 years give compound interest time to build on itself.',
+              2: '"Interest rates are always higher for younger savers" is wrong because the extra 10 years give compound interest time to build on itself.',
+              3: '"Banks give bonus rates for long-term accounts" is wrong because the extra 10 years give compound interest time to build on itself.',
+            },
           },
           {
             id: "fin-sec3-u10-L3-Q4",
@@ -1591,6 +1814,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Maria's $150 per month for 40 years beats Sofia's $300 for 30 years. Time in the market matters more than the monthly amount.",
+            distractorExplanations: {
+              0: '"Sofia, because she saves twice as much per month" is wrong because maria\'s $150 per month for 40 years beats Sofia\'s $300 for 30 years.',
+              1: '"They\'ll have the same since Sofia contributes double" is wrong because maria\'s $150 per month for 40 years beats Sofia\'s $300 for 30 years.',
+              3: '"Neither, because $150 per month isn\'t enough to matter" is wrong because maria\'s $150 per month for 40 years beats Sofia\'s $300 for 30 years.',
+            },
           },
         ],
       },
@@ -1622,6 +1850,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "72 divided by 8 equals 9 years. Your money doubles roughly every 9 years at 8%.",
+            distractorExplanations: {
+              0: 'This amount (6) is too low — the correct calculation gives 9.',
+              1: 'This amount (8) is too low — the correct calculation gives 9.',
+              3: 'This amount (12) is too high — the correct calculation gives 9.',
+            },
           },
           {
             id: "fin-sec3-u10-L4-Q2",
@@ -1629,6 +1862,9 @@ export const finSection3Part2: Unit[] = [
             question: "The Rule of 72 gives you an exact calculation of doubling time.",
             correctAnswer: false,
             explanation: "It's an approximation, not an exact calculation. But it's close enough for quick mental math.",
+            distractorExplanations: {
+              0: 'This statement is actually false — it\'s an approximation, not an exact calculation. But it\'s close enough for quick mental math.',
+            },
           },
           {
             id: "fin-sec3-u10-L4-T2",
@@ -1649,6 +1885,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "72 divided by 24 equals 3 years. A $1,000 balance becomes $2,000 in just 3 years if unpaid.",
+            distractorExplanations: {
+              0: 'This amount (2) is too low — the correct calculation gives 3.',
+              2: 'This amount (6) is too high — the correct calculation gives 3.',
+              3: 'This amount (12) is too high — the correct calculation gives 3.',
+            },
           },
           {
             id: "fin-sec3-u10-L4-Q4",
@@ -1687,6 +1928,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "HYSA: 72/4.5 is about 16 years. Index fund: 72/9 is 8 years. The index fund doubles 8 years sooner.",
+            distractorExplanations: {
+              0: '"Same time for both" is wrong because HYSA: 72/4.',
+              1: 'This amount (4) is too low — the correct calculation gives 8.',
+              3: 'This amount (16) is too high — the correct calculation gives 8.',
+            },
           },
         ],
       },
@@ -1770,6 +2016,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "3 to 6 months of essential expenses provides enough buffer for job loss or major emergencies.",
+            distractorExplanations: {
+              0: 'This amount (500) is too high — the correct calculation gives 3.',
+              1: 'This amount (1) is too low — the correct calculation gives 3.',
+              3: 'This amount (1) is too low — the correct calculation gives 3.',
+            },
           },
           {
             id: "fin-sec3-u11-L1-Q3",
@@ -1808,6 +2059,9 @@ export const finSection3Part2: Unit[] = [
             question: "The 50% raise rule means saving half of every raise and spending the other half.",
             correctAnswer: true,
             explanation: "This balanced approach prevents lifestyle inflation while still rewarding you for earning more.",
+            distractorExplanations: {
+              1: 'This statement is actually true — this balanced approach prevents lifestyle inflation while still rewarding you for earning more.',
+            },
           },
           {
             id: "fin-sec3-u11-L1-Q6",
@@ -1821,6 +2075,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "72 divided by 6 equals 12 years. This mental shortcut works for any interest rate.",
+            distractorExplanations: {
+              0: 'This amount (6) is too low — the correct calculation gives 12.',
+              1: 'This amount (8) is too low — the correct calculation gives 12.',
+              3: 'This amount (18) is too high — the correct calculation gives 12.',
+            },
           },
           {
             id: "fin-sec3-u11-L1-Q7",
@@ -1835,6 +2094,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Using a credit card for emergencies means paying interest on top of the expense. An emergency fund costs nothing to use.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"Credit card limits never cover real emergencies" is wrong because using a credit card for emergencies means paying interest on top of the expense.',
+              3: '"Credit cards are illegal to use for emergencies" is wrong because using a credit card for emergencies means paying interest on top of the expense.',
+            },
           },
         ],
       },
@@ -1867,6 +2131,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Kill the 19% debt first ($800). Boost the emergency fund ($800 gets it to $2,600). Enjoy $400 guilt-free.",
+            distractorExplanations: {
+              0: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              2: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: '"Split equally: $667 to each of the three goals" is wrong because kill the 19% debt first ($800).',
+            },
           },
           {
             id: "fin-sec3-u11-L2-Q2",
@@ -1881,6 +2150,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Car repair is an emergency. The emergency fund exists for exactly this. Raiding the sinking fund confuses their purposes.",
+            distractorExplanations: {
+              0: '"The vacation sinking fund, since the car is more urgent" is wrong because car repair is an emergency.',
+              2: '"His credit card, to protect both funds" is wrong because car repair is an emergency.',
+              3: '"Neither, and wait until he saves more money" is wrong because car repair is an emergency.',
+            },
           },
           {
             id: "fin-sec3-u11-L2-Q3",
@@ -1894,6 +2168,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Visible spending doesn't show invisible debt. Many people with flashy lifestyles have no savings.",
+            distractorExplanations: {
+              0: '"You should match their spending to maintain social status" is wrong because visible spending doesn\'t show invisible debt.',
+              2: '"Luxury purchases are always a wise investment" is wrong because visible spending doesn\'t show invisible debt.',
+              3: 'This choice is wrong because visible spending doesn\'t show invisible debt.',
+            },
           },
           {
             id: "fin-sec3-u11-L2-Q4",
@@ -1929,6 +2208,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "From $0 and debt to $2,000 saved and debt-free is massive progress. Compare to your starting point, not to others.",
+            distractorExplanations: {
+              0: '"She should feel bad because $2,000 isn\'t enough" is wrong because from $0 and debt to $2,000 saved and debt-free is massive progress.',
+              2: '"She needs to catch up to her friend immediately" is wrong because from $0 and debt to $2,000 saved and debt-free is massive progress.',
+              3: '"$2,000 is enough and she should stop saving" is wrong because from $0 and debt to $2,000 saved and debt-free is massive progress.',
+            },
           },
           {
             id: "fin-sec3-u11-L2-Q6",
@@ -1936,6 +2220,9 @@ export const finSection3Part2: Unit[] = [
             question: "It's fine to adjust your savings plan when life circumstances change.",
             correctAnswer: true,
             explanation: "Life isn't static. Adjusting your plan to match reality is smart, not weak. Flexibility keeps you saving.",
+            distractorExplanations: {
+              1: 'This statement is actually true — life isn\'t static. Adjusting your plan to match reality is smart, not weak. Flexibility keeps you saving.',
+            },
           },
           {
             id: "fin-sec3-u11-L2-Q7",
@@ -1949,6 +2236,11 @@ export const finSection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Consistency beats everything. Regular saving, automated transfers, and steady progress add up to real wealth.",
+            distractorExplanations: {
+              0: '"Having a perfect budget that never changes" is wrong because consistency beats everything.',
+              1: '"Earning the highest possible salary" is wrong because consistency beats everything.',
+              3: '"Getting lucky with a large inheritance" is wrong because consistency beats everything.',
+            },
           },
         ],
       },

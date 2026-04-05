@@ -34,6 +34,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Emotions involve changes in your body, thoughts, and behavior simultaneously.',
             correctAnswer: true,
             explanation: 'Emotions are multi-component responses that affect physiology, cognition, and behavior at the same time.',
+            distractorExplanations: {
+              1: 'Emotions are well-established as multi-component responses involving body, thoughts, and behavior together.',
+            },
           },
           {
             id: 'psy-sec7-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Emotions are short-lived responses that combine physical sensations, thoughts, and behavioral urges.',
+            distractorExplanations: {
+              1: 'Emotions are brief reactions, not permanent traits you are born with.',
+              2: 'Emotions are short-lived, lasting seconds to minutes, not weeks.',
+              3: 'Emotions involve thoughts and behavior alongside physical changes, not just reflexes.',
+            },
           },
           {
             id: 'psy-sec7-u1-L1-T2',
@@ -90,6 +98,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The brain\'s emotional circuits can trigger responses in milliseconds, before slower conscious thought catches up.',
+            distractorExplanations: {
+              1: 'Emotions involve both conscious and unconscious processing; they are not purely unconscious.',
+              2: 'Conscious thought does not cause emotions to disappear; it helps you understand and regulate them.',
+              3: 'Emotions are real physiological events, not retrospective fabrications.',
+            },
           },
           {
             id: 'psy-sec7-u1-L1-Q6',
@@ -104,6 +117,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Sweating and rapid breathing are automatic body changes, which represent the physiological arousal component.',
+            distractorExplanations: {
+              1: 'Behavioral expression involves outward actions like running or screaming, not internal body changes.',
+              2: 'Subjective experience is your conscious feeling, not automatic physical responses like sweating.',
+              3: 'Social display rules govern how you show emotions to others, not involuntary body reactions.',
+            },
           },
         ],
       },
@@ -129,6 +147,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Paul Ekman found that basic emotions like fear and happiness are recognized across all cultures.',
             correctAnswer: true,
             explanation: 'Ekman\'s cross-cultural research showed that facial expressions for basic emotions are universally recognized.',
+            distractorExplanations: {
+              1: 'Ekman\'s cross-cultural research confirmed that basic emotions are recognized universally across cultures.',
+            },
           },
           {
             id: 'psy-sec7-u1-L2-Q2',
@@ -142,6 +163,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Ekman originally identified 6 basic emotions: happiness, sadness, fear, anger, surprise, and disgust.',
+            distractorExplanations: {
+              0: 'Three is too few; Ekman identified more basic emotions than just three.',
+              2: 'Ten is too many; Ekman\'s original list included exactly six basic emotions.',
+              3: 'Fifteen far exceeds the number Ekman identified as universally recognized basic emotions.',
+            },
           },
           {
             id: 'psy-sec7-u1-L2-T2',
@@ -192,6 +218,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Self-conscious emotions like guilt and shame require the ability to evaluate yourself against social standards.',
+            distractorExplanations: {
+              0: 'Self-conscious emotions occur during waking life; being awake is not what makes them special.',
+              2: 'Self-conscious means requiring self-awareness, not physical self-consciousness about appearance.',
+              3: 'Guilt and shame are real emotions with measurable psychological and physiological effects.',
+            },
           },
           {
             id: 'psy-sec7-u1-L2-Q6',
@@ -206,6 +237,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Basic emotions appear early. Self-conscious emotions like embarrassment develop later as self-awareness grows.',
+            distractorExplanations: {
+              1: 'Even very young children experience basic emotions like sadness and anger.',
+              2: 'Two-year-olds lack the self-awareness needed for embarrassment; they are not suppressing it.',
+              3: 'Self-conscious emotions develop later; toddlers do not yet have the full range.',
+            },
           },
         ],
       },
@@ -231,6 +267,9 @@ export const psySection7Part1: Unit[] = [
             question: 'A mood lasts longer than an emotion and often has no clear trigger.',
             correctAnswer: true,
             explanation: 'Moods can last hours or days and often lack a specific cause, unlike emotions which are brief and triggered by events.',
+            distractorExplanations: {
+              1: 'Moods are defined by their longer duration and often unclear triggers, distinguishing them from brief emotions.',
+            },
           },
           {
             id: 'psy-sec7-u1-L3-Q2',
@@ -259,6 +298,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A feeling is what happens when you become consciously aware of an emotion. Emotions can occur without conscious recognition.',
+            distractorExplanations: {
+              1: 'Emotions are typically briefer than feelings; the key distinction is that feelings involve conscious awareness.',
+              2: 'Feelings occur throughout life, not only in children.',
+              3: 'Both emotions and feelings can be positive or negative; neither is exclusively one valence.',
+            },
           },
           {
             id: 'psy-sec7-u1-L3-Q4',
@@ -296,6 +340,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A negative mood acts as a filter, making neutral or mildly annoying events feel more upsetting.',
+            distractorExplanations: {
+              1: 'Disgust is a basic emotion triggered by specific stimuli, not an ongoing irritable state.',
+              2: 'A feeling without an emotion is not possible; feelings arise from emotions, not independently.',
+              3: 'The snap at a coworker was an emotional response influenced by mood, not a reflex.',
+            },
           },
           {
             id: 'psy-sec7-u1-L3-Q6',
@@ -329,6 +378,9 @@ export const psySection7Part1: Unit[] = [
             question: 'The emotion of disgust evolved to help humans avoid harmful substances like spoiled food.',
             correctAnswer: true,
             explanation: 'Disgust originally evolved to protect against ingesting toxins and pathogens.',
+            distractorExplanations: {
+              1: 'Disgust evolved precisely to protect against harmful substances; this is well-supported by evolutionary research.',
+            },
           },
           {
             id: 'psy-sec7-u1-L4-Q2',
@@ -357,6 +409,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Damasio found that emotions are essential for decision-making. Without them, even simple choices become nearly impossible.',
+            distractorExplanations: {
+              0: 'Patients with emotional damage became less emotional, not extremely emotional.',
+              2: 'These patients retained their ability to think and speak; only decision-making was impaired.',
+              3: 'Without emotions, decision-making got worse, not faster or better.',
+            },
           },
           {
             id: 'psy-sec7-u1-L4-Q4',
@@ -385,6 +442,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Social emotions like guilt and empathy motivate us to repair relationships and cooperate with others.',
+            distractorExplanations: {
+              0: 'Social emotions enhance rather than weaken clear thinking by guiding cooperative behavior.',
+              2: 'Social emotions serve essential functions for relationship maintenance despite causing some distress.',
+              3: 'Social emotions evolved to promote cooperation, not to cause self-punishment.',
+            },
           },
           {
             id: 'psy-sec7-u1-L4-Q6',
@@ -399,6 +461,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Guilt is a social emotion that motivates you to repair accidental harm and maintain social harmony.',
+            distractorExplanations: {
+              1: 'There was no physical danger in this scenario; the emotion is social guilt, not fear.',
+              2: 'Disgust involves aversion to contamination or offense, not a minor accidental bump.',
+              3: 'No anger is described here; the scenario involves an accident followed by social repair.',
+            },
           },
         ],
       },
@@ -538,6 +605,9 @@ export const psySection7Part1: Unit[] = [
             question: 'According to James-Lange theory, you feel afraid because your body is already responding to a threat.',
             correctAnswer: true,
             explanation: 'James-Lange says the body responds first (racing heart, tense muscles), then you interpret those signals as fear.',
+            distractorExplanations: {
+              1: 'James-Lange theory explicitly states that body responses come first and the brain interprets them as emotions.',
+            },
           },
           {
             id: 'psy-sec7-u2-L1-Q2',
@@ -551,6 +621,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'James-Lange says the stimulus triggers a body response, and the brain interprets that response as an emotion.',
+            distractorExplanations: {
+              1: 'James-Lange says emotion follows the body reaction, not the other way around.',
+              2: 'You cannot feel fear before encountering the bear; the stimulus comes first.',
+              3: 'You must perceive the bear before your body can react; the body does not react to nothing.',
+            },
           },
           {
             id: 'psy-sec7-u2-L1-T2',
@@ -570,6 +645,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'If different emotions all produced the same body reaction, the brain couldn\'t distinguish fear from anger based on body signals alone.',
+            distractorExplanations: {
+              0: 'If all emotions felt the same, you could not distinguish fear from anger through body signals alone.',
+              1: 'James-Lange says the body reacts first and the brain interprets, not that the brain directly controls all reactions.',
+              3: 'Emotions happen during waking life in response to events, not only during sleep.',
+            },
           },
           {
             id: 'psy-sec7-u2-L1-Q4',
@@ -620,6 +700,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'James-Lange says you noticed the body changes first, then your brain interpreted them as nervousness.',
+            distractorExplanations: {
+              1: 'James-Lange says body reactions precede emotional awareness, not the reverse.',
+              2: 'Cannon-Bard predicts simultaneous occurrence, not one before the other.',
+              3: 'The body sensations were real, not imagined after labeling the emotion.',
+            },
           },
         ],
       },
@@ -644,6 +729,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Cannon-Bard theory says body reactions and emotions happen at the same time.',
             correctAnswer: true,
             explanation: 'Cannon-Bard proposes simultaneous processing: the body reacts and you feel the emotion at the same time.',
+            distractorExplanations: {
+              1: 'Cannon-Bard explicitly proposes that physiological responses and emotional experiences occur simultaneously.',
+            },
           },
           {
             id: 'psy-sec7-u2-L2-Q2',
@@ -657,6 +745,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cannon-Bard identified the thalamus as the relay station that simultaneously triggers body responses and emotional experience.',
+            distractorExplanations: {
+              0: 'The hippocampus handles memory, not the relay of emotional signals.',
+              2: 'The cerebellum coordinates movement, not emotional processing.',
+              3: 'The brain stem handles basic life functions, not the simultaneous relay Cannon-Bard describes.',
+            },
           },
           {
             id: 'psy-sec7-u2-L2-T2',
@@ -707,6 +800,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Cannon-Bard predicts that the emotional feeling and body reaction happen at the same instant.',
+            distractorExplanations: {
+              0: 'Seeing a snake then body reacts then fear is the James-Lange sequence, not Cannon-Bard.',
+              1: 'Feeling afraid before the body reacts does not match any major theory of emotion.',
+              3: 'Deciding to feel afraid and then looking for causes is not how any emotion theory works.',
+            },
           },
           {
             id: 'psy-sec7-u2-L2-Q6',
@@ -721,6 +819,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Simultaneous body response and emotional experience is exactly what Cannon-Bard predicts.',
+            distractorExplanations: {
+              1: 'James-Lange predicts the body responds first with a delay before emotion, not simultaneous occurrence.',
+              2: 'Simultaneous emotion and body response is possible and is exactly what Cannon-Bard predicts.',
+              3: 'The two theories make opposite predictions; they do not predict the same outcome.',
+            },
           },
         ],
       },
@@ -745,6 +848,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Schachter-Singer theory says you need both physical arousal and a cognitive label to experience an emotion.',
             correctAnswer: true,
             explanation: 'Two-factor theory requires 2 things: bodily arousal and a cognitive interpretation of why you are aroused.',
+            distractorExplanations: {
+              1: 'Two-factor theory explicitly requires both physical arousal and a cognitive label for emotional experience.',
+            },
           },
           {
             id: 'psy-sec7-u2-L3-Q2',
@@ -773,6 +879,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Uninformed participants had unexplained arousal and used the social context (a happy or angry confederate) to label their emotional state.',
+            distractorExplanations: {
+              1: 'Uninformed participants did experience emotions; they adopted the mood around them.',
+              2: 'Participants showed different emotions depending on context, not universal anger.',
+              3: 'Epinephrine is a stimulant that causes arousal, not sleep.',
+            },
           },
           {
             id: 'psy-sec7-u2-L3-Q4',
@@ -807,6 +918,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Your exercise-induced arousal was mislabeled as excitement about seeing your friend. That\'s misattribution of arousal.',
+            distractorExplanations: {
+              1: 'Cannon-Bard does not address mislabeling of arousal from one source as another emotion.',
+              2: 'James-Lange says body response comes first but does not specifically explain mislabeling across sources.',
+              3: 'Classical conditioning involves learned associations from repeated pairings, not one-time arousal transfer.',
+            },
           },
           {
             id: 'psy-sec7-u2-L3-Q6',
@@ -820,6 +936,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The men misattributed their fear-based arousal from the scary bridge to romantic attraction toward the interviewer.',
+            distractorExplanations: {
+              0: 'The interviewer was the same person in both conditions; objective attractiveness was identical.',
+              2: 'The scary bridge created fear and arousal, not calm and confidence.',
+              3: 'The men were unaware of the arousal transfer; they were not performing for the interviewer.',
+            },
           },
         ],
       },
@@ -845,6 +966,9 @@ export const psySection7Part1: Unit[] = [
             question: 'According to Lazarus, the same event can trigger different emotions depending on how you interpret it.',
             correctAnswer: true,
             explanation: 'Cognitive appraisal theory says your interpretation of the event, not the event itself, determines your emotional response.',
+            distractorExplanations: {
+              1: 'Lazarus explicitly argued that your cognitive interpretation of an event determines which emotion you feel.',
+            },
           },
           {
             id: 'psy-sec7-u2-L4-Q2',
@@ -858,6 +982,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cognitive appraisal is your mental assessment of whether a situation is relevant, threatening, or beneficial to you.',
+            distractorExplanations: {
+              1: 'A brain scan is a measurement tool, not a psychological concept about emotional interpretation.',
+              2: 'Processing speed is about cognition in general, not emotional interpretation of personal significance.',
+              3: 'Emotional intelligence tests measure emotional skills, not the appraisal process itself.',
+            },
           },
           {
             id: 'psy-sec7-u2-L4-T2',
@@ -887,6 +1016,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Their primary appraisals differ. One expected a C (relief), the other expected an A (devastation). Same event, different interpretations.',
+            distractorExplanations: {
+              1: 'People vary in emotional intensity, but the different reactions here are best explained by different appraisals.',
+              2: 'Both students received the same grade from the same teacher; grading fairness is not the issue.',
+              3: 'Body awareness is about interoception, not about how expectations shape emotional responses to grades.',
+            },
           },
           {
             id: 'psy-sec7-u2-L4-T3',
@@ -915,6 +1049,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Reframing how you interpret a situation (stress to excitement) is cognitive reappraisal from Lazarus\'s theory.',
+            distractorExplanations: {
+              0: 'Misattribution involves mislabeling arousal from one source as another; reframing stress as excitement is deliberate reappraisal.',
+              2: 'James-Lange involves body reactions causing emotions, not deliberate reinterpretation of situations.',
+              3: 'Classical conditioning involves learned associations, not conscious reframing of how you view a situation.',
+            },
           },
         ],
       },
@@ -1058,6 +1197,9 @@ export const psySection7Part1: Unit[] = [
             question: 'The amygdala plays a key role in detecting threats and triggering fear.',
             correctAnswer: true,
             explanation: 'The amygdala is the brain\'s primary threat detection center, essential for fear processing.',
+            distractorExplanations: {
+              1: 'The amygdala is well-established as the brain\'s primary threat detection and fear processing center.',
+            },
           },
           {
             id: 'psy-sec7-u3-L1-Q2',
@@ -1085,6 +1227,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The low road bypasses the cortex for speed. You react instantly, even if the signal is rough and imprecise.',
+            distractorExplanations: {
+              1: 'The low road is fast because it skips regions, not because it sends signals through every one.',
+              2: 'The low road operates during waking life whenever threats are detected, not only during sleep.',
+              3: 'The low road is fast but imprecise; the high road is slower but more accurate.',
+            },
           },
           {
             id: 'psy-sec7-u3-L1-Q4',
@@ -1122,6 +1269,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Patient S.M.\'s case demonstrates that the amygdala is critical for the experience and recognition of fear.',
+            distractorExplanations: {
+              1: 'The patient\'s fearlessness is due to brain damage, not to fear being entirely a learned behavior.',
+              2: 'The amygdala processes fear faster than the cortex; the cortex alone is insufficient.',
+              3: 'The patient showed consistent fearlessness across many situations, ruling out pretending.',
+            },
           },
           {
             id: 'psy-sec7-u3-L1-Q6',
@@ -1135,6 +1287,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The low road caused an instant fear response. Then the high road (via the cortex) assessed the object more carefully.',
+            distractorExplanations: {
+              1: 'The high road is slower and more accurate; it corrected the initial low-road false alarm.',
+              2: 'The high road ultimately identified the object as harmless, contradicting the low road\'s alarm.',
+              3: 'The instant jump reaction clearly involved the brain\'s rapid threat-detection pathway.',
+            },
           },
         ],
       },
@@ -1159,6 +1316,9 @@ export const psySection7Part1: Unit[] = [
             question: 'The prefrontal cortex helps regulate emotional responses by evaluating whether they are appropriate.',
             correctAnswer: true,
             explanation: 'The PFC acts as an executive controller for emotions, moderating the intensity of amygdala-driven responses.',
+            distractorExplanations: {
+              1: 'The PFC is well-established as a key regulator of emotional responses, evaluating their appropriateness.',
+            },
           },
           {
             id: 'psy-sec7-u3-L2-Q2',
@@ -1172,6 +1332,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The PFC isn\'t fully developed until the mid-20s, which is why teenagers often have more intense and harder-to-control emotional responses.',
+            distractorExplanations: {
+              1: 'Emotions do not disappear; they are simply harder to regulate with an underdeveloped PFC.',
+              2: 'The amygdala works just fine in teenagers; the issue is insufficient PFC regulation.',
+              3: 'Teenagers feel fear normally; their issue is controlling emotional responses, not lacking fear.',
+            },
           },
           {
             id: 'psy-sec7-u3-L2-T2',
@@ -1216,6 +1381,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Teenagers have a fully active amygdala but an underdeveloped PFC, leading to impulsive emotional reactions.',
+            distractorExplanations: {
+              1: 'The hippocampus stores memories; it does not cause impulsive text responses.',
+              2: 'The thalamus relays sensory information; it does not block messages from reaching the cortex.',
+              3: 'The cerebellum coordinates movement; it was not involved in the emotional text exchange.',
+            },
           },
           {
             id: 'psy-sec7-u3-L2-Q6',
@@ -1229,6 +1399,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A strong PFC-amygdala connection allows you to regulate your initial emotional impulse and respond thoughtfully.',
+            distractorExplanations: {
+              1: 'Negative emotions cannot be permanently eliminated; they serve important survival functions.',
+              2: 'Feeling no emotions at all would impair decision-making, as Damasio\'s research showed.',
+              3: 'The PFC regulates emotions thoughtfully; it does not speed up reactions beyond the amygdala.',
+            },
           },
         ],
       },
@@ -1253,6 +1428,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Serotonin is a neurotransmitter that helps regulate mood stability.',
             correctAnswer: true,
             explanation: 'Serotonin plays a major role in mood regulation. Low serotonin is linked to depression.',
+            distractorExplanations: {
+              1: 'Serotonin\'s role in mood regulation is well-established; low levels are linked to depression.',
+            },
           },
           {
             id: 'psy-sec7-u3-L3-Q2',
@@ -1282,6 +1460,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Dopamine is the "wanting" chemical. It fuels anticipation, motivation, and the drive to seek rewards.',
+            distractorExplanations: {
+              1: 'Deep relaxation and sleep involve GABA and melatonin, not dopamine.',
+              2: 'Sadness and grief involve reduced dopamine, serotonin changes, and other systems.',
+              3: 'Fear and panic are primarily driven by the amygdala and norepinephrine, not dopamine.',
+            },
           },
           {
             id: 'psy-sec7-u3-L3-Q4',
@@ -1326,6 +1509,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Loss of excitement and motivation suggests reduced dopamine activity, since dopamine drives anticipation and wanting.',
+            distractorExplanations: {
+              1: 'Excessive serotonin can cause emotional blunting, but the specific loss of excitement points to dopamine.',
+              2: 'Increased endorphins would cause pain relief and euphoria, not emotional flatness.',
+              3: 'All psychiatric medications work through neurotransmitter systems; the question is which one.',
+            },
           },
         ],
       },
@@ -1350,6 +1538,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Emotion regulation involves a network of brain regions working together, not just one area.',
             correctAnswer: true,
             explanation: 'Multiple brain regions (PFC, amygdala, hippocampus, insula) collaborate to regulate emotions.',
+            distractorExplanations: {
+              1: 'Emotion regulation involves a distributed network of brain regions; no single area works alone.',
+            },
           },
           {
             id: 'psy-sec7-u3-L4-Q2',
@@ -1363,6 +1554,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'During reappraisal, the PFC actively dampens amygdala activation, reducing the intensity of the emotional response.',
+            distractorExplanations: {
+              1: 'The amygdala does not shut down the PFC; during reappraisal the PFC actually dampens amygdala activity.',
+              2: 'The hippocampus stores memories but does not delete them during emotional regulation.',
+              3: 'The thalamus continues relaying sensory input during emotional regulation; it does not block signals.',
+            },
           },
           {
             id: 'psy-sec7-u3-L4-T2',
@@ -1412,6 +1608,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Chronic stress reduces PFC function and increases amygdala reactivity, making it harder to regulate emotional responses.',
+            distractorExplanations: {
+              1: 'Personality disorders are distinct clinical conditions, not simply the result of work stress.',
+              2: 'The hippocampus does not erase positive memories; stress affects PFC-amygdala balance.',
+              3: 'The thalamus continues normal sensory relay; snapping at employees involves PFC-amygdala dysfunction.',
+            },
           },
           {
             id: 'psy-sec7-u3-L4-Q6',
@@ -1582,6 +1783,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Ekman\'s 6 basic emotions are happiness, sadness, fear, anger, surprise, and disgust. Jealousy is a complex emotion.',
+            distractorExplanations: {
+              1: 'Fear is one of Ekman\'s basic emotions; jealousy, not fear, is excluded from the list.',
+              2: 'Disgust is one of Ekman\'s basic emotions and belongs on the list.',
+              3: 'Surprise is one of Ekman\'s basic emotions and belongs on the list.',
+            },
           },
           {
             id: 'psy-sec7-u4-L1-Q3',
@@ -1620,6 +1826,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Same event, different emotions. Lazarus\'s theory explains this: your appraisal of the situation determines the emotion.',
+            distractorExplanations: {
+              0: 'James-Lange focuses on body reactions causing emotions, not on different interpretations of the same event.',
+              1: 'Cannon-Bard predicts simultaneous body-emotion responses but does not explain why different emotions arise from the same event.',
+              3: 'Schachter-Singer involves labeling arousal, but the key here is that different appraisals produced different emotions.',
+            },
           },
           {
             id: 'psy-sec7-u4-L1-Q6',
@@ -1627,6 +1838,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Cognitive reappraisal involves changing your emotional response by changing your interpretation of a situation.',
             correctAnswer: true,
             explanation: 'Reappraisal means reinterpreting a situation to shift your emotional response, a key concept from Lazarus.',
+            distractorExplanations: {
+              1: 'Cognitive reappraisal is exactly this: changing your interpretation to shift your emotional response.',
+            },
           },
           {
             id: 'psy-sec7-u4-L1-Q7',
@@ -1640,6 +1854,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Damasio showed that emotions are essential for decision-making, not just for feeling.',
+            distractorExplanations: {
+              1: 'Emotional brain damage impairs decision-making; it does not increase intelligence.',
+              2: 'Emotional brain damage does not erase all memories; the hippocampus handles memory storage.',
+              3: 'Physical reflexes are controlled by the spinal cord and brain stem, not emotional brain areas.',
+            },
           },
         ],
       },
@@ -1680,6 +1899,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The amygdala\'s low road triggered an instant defensive response. The cortex then assessed the situation more carefully via the high road.',
+            distractorExplanations: {
+              1: 'The PFC regulates emotions deliberately; it does not cause instant ducking responses.',
+              2: 'The hippocampus stores memories but does not delete them; it provides context for emotional responses.',
+              3: 'Dopamine drives motivation, not startle responses to sudden loud sounds.',
+            },
           },
           {
             id: 'psy-sec7-u4-L2-Q3',
@@ -1693,6 +1917,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Prolonged stress weakens PFC function and strengthens amygdala reactivity, making emotional regulation harder.',
+            distractorExplanations: {
+              1: 'Chronic stress does the opposite: it shrinks the PFC and makes the amygdala more reactive.',
+              2: 'Chronic stress has measurable, well-documented effects on brain structure.',
+              3: 'Chronic stress affects the PFC and amygdala, not the cerebellum or motor cortex.',
+            },
           },
           {
             id: 'psy-sec7-u4-L2-Q4',
@@ -1728,6 +1957,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Reduced motivation and excitement suggest dopamine is being dampened, even though anxiety is reduced.',
+            distractorExplanations: {
+              1: 'Serotonin affects mood stability, but loss of excitement and motivation specifically points to dopamine.',
+              2: 'Endorphin overproduction would cause euphoria, not emotional flatness and lack of motivation.',
+              3: 'The hippocampus produces memories, not motivational drive; this is a neurotransmitter issue.',
+            },
           },
           {
             id: 'psy-sec7-u4-L2-Q7',
@@ -1735,6 +1969,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Patient S.M., who had bilateral amygdala damage, could not experience or recognize fear.',
             correctAnswer: true,
             explanation: 'S.M.\'s case demonstrated that the amygdala is essential for both experiencing and recognizing fear.',
+            distractorExplanations: {
+              1: 'Patient S.M. is a well-documented case demonstrating the amygdala\'s essential role in fear processing.',
+            },
           },
         ],
       },
@@ -1878,6 +2115,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Intrinsic motivation means doing something because it is personally enjoyable or meaningful.',
             correctAnswer: true,
             explanation: 'Intrinsic motivation comes from within. You do it for the activity itself, not for an external reward.',
+            distractorExplanations: {
+              1: 'Intrinsic motivation is defined by doing things for personal enjoyment or meaning, not external rewards.',
+            },
           },
           {
             id: 'psy-sec7-u5-L1-Q2',
@@ -1913,6 +2153,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'When you add external rewards to an already enjoyable activity, the person may lose their internal motivation for it.',
+            distractorExplanations: {
+              1: 'The overjustification effect is about motivation decreasing, not skills getting worse from practice.',
+              2: 'Excessive praise can help performance; the overjustification effect specifically involves tangible external rewards.',
+              3: 'The overjustification effect predicts the opposite: internal motivation decreases when pay is added.',
+            },
           },
           {
             id: 'psy-sec7-u5-L1-Q4',
@@ -1942,6 +2187,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The external reward shifted her motivation from internal enjoyment to external payment. When payment stopped, motivation dropped below its original level.',
+            distractorExplanations: {
+              1: 'She loved reading before the program, demonstrating clear intrinsic motivation.',
+              2: 'Book difficulty was not mentioned; the payment program caused the motivational shift.',
+              3: 'Her extrinsic motivation ended when payment stopped, causing her to read even less than before.',
+            },
           },
           {
             id: 'psy-sec7-u5-L1-Q6',
@@ -1955,6 +2205,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Extrinsic motivation works best as a kickstarter for new habits, not as a replacement for intrinsic interest.',
+            distractorExplanations: {
+              1: 'Adding external rewards to something already deeply enjoyed risks the overjustification effect.',
+              2: 'Extrinsic motivation cannot permanently replace intrinsic motivation; that would undermine long-term engagement.',
+              3: 'If an activity is already highly rewarding, adding external rewards risks reducing that natural enjoyment.',
+            },
           },
         ],
       },
@@ -1979,6 +2234,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Drive theory says behavior is motivated by the need to reduce internal tension from unmet biological needs.',
             correctAnswer: true,
             explanation: 'Drive theory proposes that biological needs create drives (tension), and behavior aims to reduce that tension.',
+            distractorExplanations: {
+              1: 'Drive theory explicitly proposes that biological needs create tension that motivates behavior to reduce it.',
+            },
           },
           {
             id: 'psy-sec7-u5-L2-Q2',
@@ -2023,6 +2281,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Drive theory can\'t explain behaviors like skydiving or watching horror films, where people seek more arousal, not less.',
+            distractorExplanations: {
+              1: 'Drive theory has recognized limitations; it cannot explain all human motivation.',
+              2: 'Primary drives like hunger and thirst clearly do motivate behavior.',
+              3: 'Homeostasis is a well-established biological process essential for survival.',
+            },
           },
           {
             id: 'psy-sec7-u5-L2-T3',
@@ -2042,6 +2305,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Arousal theory explains thrill-seeking: when arousal is too low, people seek exciting experiences to reach their optimal level.',
+            distractorExplanations: {
+              1: 'Drive reduction is about decreasing tension, not seeking more stimulation.',
+              2: 'There is no biological need for speed; thrill-seeking is about optimal arousal levels.',
+              3: 'Homeostasis maintains internal balance; it does not require adrenaline for its own sake.',
+            },
           },
           {
             id: 'psy-sec7-u5-L2-Q6',
@@ -2056,6 +2324,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'With no biological need to satisfy, your restlessness came from too-low arousal. You sought stimulation to reach your optimal level.',
+            distractorExplanations: {
+              1: 'No primary biological drive was mentioned; the restlessness is about arousal level, not hunger or thirst.',
+              2: 'Overjustification involves external rewards reducing intrinsic motivation, not restlessness from boredom.',
+              3: 'Body temperature was not mentioned; the scenario describes social stimulation seeking.',
+            },
           },
         ],
       },
@@ -2080,6 +2353,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Maslow argued that basic survival needs must be satisfied before higher-level needs become important.',
             correctAnswer: true,
             explanation: 'Maslow\'s hierarchy says you focus on food and safety before worrying about self-esteem or personal growth.',
+            distractorExplanations: {
+              1: 'Maslow\'s hierarchy explicitly proposes that basic survival needs take priority over higher-level needs.',
+            },
           },
           {
             id: 'psy-sec7-u5-L3-Q2',
@@ -2137,6 +2413,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Research shows people can pursue belonging, esteem, or self-actualization even when basic needs aren\'t fully satisfied.',
+            distractorExplanations: {
+              1: 'Basic survival needs are fundamental human requirements; research universally confirms their importance.',
+              2: 'Maslow believed self-actualization is achievable, just rare; he did not consider it impossible.',
+              3: 'While cultural emphasis varies, the hierarchy has been studied and applied across many cultures.',
+            },
           },
           {
             id: 'psy-sec7-u5-L3-Q6',
@@ -2151,6 +2432,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'This challenges Maslow\'s strict order. She prioritizes a higher need (creative expression) over a basic one (food).',
+            distractorExplanations: {
+              1: 'She is clearly thinking about and pursuing art, which is a higher-level need.',
+              2: 'No one can be fully self-actualized while basic physiological needs like food go unmet.',
+              3: 'Her safety needs are not the focus; she is prioritizing creative expression over food.',
+            },
           },
         ],
       },
@@ -2175,6 +2461,9 @@ export const psySection7Part1: Unit[] = [
             question: 'Self-determination theory identifies autonomy, competence, and relatedness as core psychological needs.',
             correctAnswer: true,
             explanation: 'SDT says these 3 needs are essential for intrinsic motivation and psychological well-being.',
+            distractorExplanations: {
+              1: 'SDT identifies exactly these three core psychological needs as essential for intrinsic motivation.',
+            },
           },
           {
             id: 'psy-sec7-u5-L4-Q2',
@@ -2204,6 +2493,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Feeling controlled undermines autonomy, which reduces intrinsic motivation according to SDT.',
+            distractorExplanations: {
+              1: 'Feeling forced typically reduces performance rather than improving it.',
+              2: 'Feeling controlled undermines autonomy, which can reduce competence motivation over time.',
+              3: 'Being forced to do something does not fulfill relatedness needs; it may damage social connections.',
+            },
           },
           {
             id: 'psy-sec7-u5-L4-Q4',
@@ -2240,6 +2534,11 @@ export const psySection7Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'She has competence (skilled) and relatedness (great coworkers) but lacks autonomy because her manager micromanages.',
+            distractorExplanations: {
+              1: 'She is described as skilled, so competence is not the issue.',
+              2: 'She has great coworkers, so relatedness is satisfied.',
+              3: 'The scenario describes specific unmet needs, not full satisfaction.',
+            },
           },
           {
             id: 'psy-sec7-u5-L4-Q6',

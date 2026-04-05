@@ -40,6 +40,9 @@ export const finSection11Part2: Unit[] = [
             question: "Homeowner's insurance covers the structure, your belongings, liability, and temporary living expenses.",
             correctAnswer: true,
             explanation: "These 4 categories make up standard homeowner's coverage.",
+            distractorExplanations: {
+              1: 'These 4 categories make up standard homeowner\'s coverage.',
+            },
           },
           {
             id: "fin-sec11-u6-L1-Q2",
@@ -63,6 +66,9 @@ export const finSection11Part2: Unit[] = [
             question: "Standard homeowner's insurance covers flood damage.",
             correctAnswer: false,
             explanation: "Floods are excluded from standard policies. You must buy a separate flood insurance policy.",
+            distractorExplanations: {
+              0: 'Floods are excluded from standard policies. You must buy a separate flood insurance policy.',
+            },
           },
           {
             id: "fin-sec11-u6-L1-Q4",
@@ -92,6 +98,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If a covered event makes your home uninhabitable, loss of use pays for temporary housing and living expenses.",
+            distractorExplanations: {
+              0: 'If a covered event makes your home uninhabitable, loss of use pays for temporary housing and living expenses.',
+              2: 'If a covered event makes your home uninhabitable, loss of use pays for temporary housing and living expenses.',
+              3: 'If a covered event makes your home uninhabitable, loss of use pays for temporary housing and living expenses.',
+            },
           },
           {
             id: "fin-sec11-u6-L1-Q6",
@@ -125,6 +136,9 @@ export const finSection11Part2: Unit[] = [
             question: "Your landlord's insurance policy covers your personal belongings.",
             correctAnswer: false,
             explanation: "The landlord's policy covers the building structure only. Your belongings are your responsibility.",
+            distractorExplanations: {
+              0: 'The landlord\'s policy covers the building structure only. Your belongings are your responsibility.',
+            },
           },
           {
             id: "fin-sec11-u6-L2-Q2",
@@ -138,6 +152,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Renter's insurance is one of the cheapest types of insurance, usually $15 to $30 per month.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; renter\'s insurance is one of the cheapest types of insurance, usually $15 to $30 per month.',
+              1: 'This calculation is incorrect; renter\'s insurance is one of the cheapest types of insurance, usually $15 to $30 per month.',
+              3: 'This calculation is incorrect; renter\'s insurance is one of the cheapest types of insurance, usually $15 to $30 per month.',
+            },
           },
           {
             id: "fin-sec11-u6-L2-T2",
@@ -183,6 +202,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without renter's insurance, Ava is responsible for replacing all $6,500 worth of belongings herself.",
+            distractorExplanations: {
+              0: 'Without renter\'s insurance, Ava is responsible for replacing all $6,500 worth of belongings herself.',
+              2: 'This reasoning is flawed; without renter\'s insurance, Ava is responsible for replacing all $6,500 worth of belongings herself.',
+              3: 'Without renter\'s insurance, Ava is responsible for replacing all $6,500 worth of belongings herself.',
+            },
           },
           {
             id: "fin-sec11-u6-L2-Q6",
@@ -196,6 +220,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Like homeowner's insurance, renter's policies typically exclude flood damage. You'd need separate coverage.",
+            distractorExplanations: {
+              0: 'Like homeowner\'s insurance, renter\'s policies typically exclude flood damage. You\'d need separate coverage.',
+              1: 'Like homeowner\'s insurance, renter\'s policies typically exclude flood damage. You\'d need separate coverage.',
+              3: 'Like homeowner\'s insurance, renter\'s policies typically exclude flood damage. You\'d need separate coverage.',
+            },
           },
         ],
       },
@@ -221,6 +250,9 @@ export const finSection11Part2: Unit[] = [
             question: "Actual cash value accounts for depreciation, so it pays less than replacement cost.",
             correctAnswer: true,
             explanation: "ACV subtracts depreciation. A 5-year-old TV might get you a fraction of what a new one costs.",
+            distractorExplanations: {
+              1: 'ACV subtracts depreciation. A 5-year-old TV might get you a fraction of what a new one costs.',
+            },
           },
           {
             id: "fin-sec11-u6-L3-Q2",
@@ -234,6 +266,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ACV subtracts depreciation for 3 years of use. You'd get less than replacement cost.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; ACV subtracts depreciation for 3 years of use. You\'d get less than replacement cost.',
+              2: 'This calculation is incorrect; ACV subtracts depreciation for 3 years of use. You\'d get less than replacement cost.',
+              3: 'There is a real consequence here; ACV subtracts depreciation for 3 years of use. You\'d get less than replacement cost.',
+            },
           },
           {
             id: "fin-sec11-u6-L3-T2",
@@ -248,6 +285,9 @@ export const finSection11Part2: Unit[] = [
             question: "Replacement cost coverage costs the same as actual cash value coverage.",
             correctAnswer: false,
             explanation: "Replacement cost premiums are higher because the insurer pays more per claim.",
+            distractorExplanations: {
+              0: 'Replacement cost premiums are higher because the insurer pays more per claim.',
+            },
           },
           {
             id: "fin-sec11-u6-L3-Q4",
@@ -271,6 +311,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ACV pays the depreciated value ($250). Replacement cost pays what a new equivalent costs today ($700).",
+            distractorExplanations: {
+              0: 'ACV pays the depreciated value ($250). Replacement cost pays what a new equivalent costs today ($700).',
+              2: 'This reasoning is flawed; ACV pays the depreciated value ($250). Replacement cost pays what a new equivalent costs today ($700).',
+              3: 'ACV pays the depreciated value ($250). Replacement cost pays what a new equivalent costs today ($700).',
+            },
           },
           {
             id: "fin-sec11-u6-L3-Q6",
@@ -304,6 +349,9 @@ export const finSection11Part2: Unit[] = [
             question: "Liability coverage in your homeowner's policy pays for injuries to guests on your property.",
             correctAnswer: true,
             explanation: "If a guest trips on your stairs or slips on your walkway, your liability coverage covers their medical costs.",
+            distractorExplanations: {
+              1: 'If a guest trips on your stairs or slips on your walkway, your liability coverage covers their medical costs.',
+            },
           },
           {
             id: "fin-sec11-u6-L4-Q2",
@@ -317,6 +365,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Most policies start at $100,000 in liability coverage. Experts recommend at least $300,000 to $500,000.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; most policies start at $100,000 in liability coverage. Experts recommend at least $300,000 to $500,000.',
+              1: 'This calculation is incorrect; most policies start at $100,000 in liability coverage. Experts recommend at least $300,000 to $500,000.',
+              3: 'This calculation is incorrect; most policies start at $100,000 in liability coverage. Experts recommend at least $300,000 to $500,000.',
+            },
           },
           {
             id: "fin-sec11-u6-L4-T2",
@@ -361,6 +414,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Medical and legal costs from a serious injury can reach hundreds of thousands. Higher limits protect your assets.",
+            distractorExplanations: {
+              0: 'Medical and legal costs from a serious injury can reach hundreds of thousands. Higher limits protect your assets.',
+              2: 'Medical and legal costs from a serious injury can reach hundreds of thousands. Higher limits protect your assets.',
+              3: 'Medical and legal costs from a serious injury can reach hundreds of thousands. Higher limits protect your assets.',
+            },
           },
           {
             id: "fin-sec11-u6-L4-Q6",
@@ -375,6 +433,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Medical payments covers the immediate bill. If the driver sues for pain and suffering, your liability coverage protects you.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; medical payments covers the immediate bill.',
+              2: 'This reasoning is flawed; medical payments covers the immediate bill.',
+              3: 'This reasoning is flawed; medical payments covers the immediate bill.',
+            },
           },
         ],
       },
@@ -443,6 +506,9 @@ export const finSection11Part2: Unit[] = [
             question: "Life insurance pays a lump sum to your beneficiaries after your death.",
             correctAnswer: true,
             explanation: "The death benefit goes to the people you name. They use it to replace the income they lost.",
+            distractorExplanations: {
+              1: 'The death benefit goes to the people you name. They use it to replace the income they lost.',
+            },
           },
           {
             id: "fin-sec11-u7-L1-Q2",
@@ -456,6 +522,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A parent with dependents and debts has the most people relying on their income. Life insurance protects them.",
+            distractorExplanations: {
+              0: 'A parent with dependents and debts has the most people relying on their income. Life insurance protects them.',
+              1: 'A parent with dependents and debts has the most people relying on their income. Life insurance protects them.',
+              3: 'A parent with dependents and debts has the most people relying on their income. Life insurance protects them.',
+            },
           },
           {
             id: "fin-sec11-u7-L1-T2",
@@ -470,6 +541,9 @@ export const finSection11Part2: Unit[] = [
             question: "Life insurance death benefits are usually subject to income tax.",
             correctAnswer: false,
             explanation: "Death benefits are generally received tax-free by beneficiaries in most countries.",
+            distractorExplanations: {
+              0: 'Death benefits are generally received tax-free by beneficiaries in most countries.',
+            },
           },
           {
             id: "fin-sec11-u7-L1-Q4",
@@ -500,6 +574,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A good policy covers ongoing living costs, debts, and major future expenses. Funeral costs are just one small part.",
+            distractorExplanations: {
+              0: 'A good policy covers ongoing living costs, debts, and major future expenses. Funeral costs are just one small part.',
+              2: 'A good policy covers ongoing living costs, debts, and major future expenses. Funeral costs are just one small part.',
+              3: 'A good policy covers ongoing living costs, debts, and major future expenses. Funeral costs are just one small part.',
+            },
           },
         ],
       },
@@ -525,6 +604,9 @@ export const finSection11Part2: Unit[] = [
             question: "Term life insurance lasts for your entire life.",
             correctAnswer: false,
             explanation: "Term life covers a specific period, like 20 or 30 years. It expires at the end of the term.",
+            distractorExplanations: {
+              0: 'Term life covers a specific period, like 20 or 30 years. It expires at the end of the term.',
+            },
           },
           {
             id: "fin-sec11-u7-L2-Q2",
@@ -538,6 +620,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you survive the term, the policy expires. You paid for protection during those years, which is the value.",
+            distractorExplanations: {
+              0: 'If you survive the term, the policy expires. You paid for protection during those years, which is the value.',
+              2: 'If you survive the term, the policy expires. You paid for protection during those years, which is the value.',
+              3: 'If you survive the term, the policy expires. You paid for protection during those years, which is the value.',
+            },
           },
           {
             id: "fin-sec11-u7-L2-T2",
@@ -552,6 +639,9 @@ export const finSection11Part2: Unit[] = [
             question: "Term life insurance is more expensive than whole life insurance.",
             correctAnswer: false,
             explanation: "Term life is significantly cheaper. It's pure protection with no investment component.",
+            distractorExplanations: {
+              0: 'Term life is significantly cheaper. It\'s pure protection with no investment component.',
+            },
           },
           {
             id: "fin-sec11-u7-L2-Q4",
@@ -574,6 +664,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A 30-year term covers both goals: her child will be 33 and the mortgage will be paid off.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; a 30-year term covers both goals: her child will be 33 and the mortgage will be paid off.',
+              1: 'This calculation is incorrect; a 30-year term covers both goals: her child will be 33 and the mortgage will be paid off.',
+              3: 'A 30-year term covers both goals: her child will be 33 and the mortgage will be paid off.',
+            },
           },
           {
             id: "fin-sec11-u7-L2-Q6",
@@ -587,6 +682,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Term life provides maximum coverage at minimum cost during the years your family needs protection most.",
+            distractorExplanations: {
+              0: 'Term life provides maximum coverage at minimum cost during the years your family needs protection most.',
+              2: 'Term life provides maximum coverage at minimum cost during the years your family needs protection most.',
+              3: 'Term life provides maximum coverage at minimum cost during the years your family needs protection most.',
+            },
           },
         ],
       },
@@ -612,6 +712,9 @@ export const finSection11Part2: Unit[] = [
             question: "Whole life insurance has a cash value component that grows over time.",
             correctAnswer: true,
             explanation: "Part of your premium goes into a cash value account. It grows tax-deferred over the life of the policy.",
+            distractorExplanations: {
+              1: 'Part of your premium goes into a cash value account. It grows tax-deferred over the life of the policy.',
+            },
           },
           {
             id: "fin-sec11-u7-L3-Q2",
@@ -625,6 +728,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Whole life costs more because coverage never ends and part of each premium builds cash value.",
+            distractorExplanations: {
+              0: 'Whole life costs more because coverage never ends and part of each premium builds cash value.',
+              1: 'Whole life costs more because coverage never ends and part of each premium builds cash value.',
+              3: 'Whole life costs more because coverage never ends and part of each premium builds cash value.',
+            },
           },
           {
             id: "fin-sec11-u7-L3-T2",
@@ -639,6 +747,9 @@ export const finSection11Part2: Unit[] = [
             question: "The cash value in a whole life policy grows quickly in the first few years.",
             correctAnswer: false,
             explanation: "Early premiums mostly cover fees and insurance costs. Cash value growth is slow for the first decade.",
+            distractorExplanations: {
+              0: 'Early premiums mostly cover fees and insurance costs. Cash value growth is slow for the first decade.',
+            },
           },
           {
             id: "fin-sec11-u7-L3-Q4",
@@ -677,6 +788,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "'Buy term and invest the difference' is a popular strategy. Index fund returns historically outpace whole life cash value growth.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; \'Buy term and invest the difference\' is a popular strategy.',
+              2: 'This reasoning is flawed; \'Buy term and invest the difference\' is a popular strategy.',
+              3: '\'Buy term and invest the difference\' is a popular strategy. Index fund returns historically outpace whole life cash value growth.',
+            },
           },
         ],
       },
@@ -702,6 +818,9 @@ export const finSection11Part2: Unit[] = [
             question: "A common starting point for life insurance is 10 to 12 times your annual income.",
             correctAnswer: true,
             explanation: "This rule of thumb gives you a quick estimate, but you should adjust based on your specific situation.",
+            distractorExplanations: {
+              1: 'This rule of thumb gives you a quick estimate, but you should adjust based on your specific situation.',
+            },
           },
           {
             id: "fin-sec11-u7-L4-Q2",
@@ -715,6 +834,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$75,000 times 10 equals $750,000. This replaces roughly a decade of income for the family.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $75,000 times 10 equals $750,000. This replaces roughly a decade of income for the family.',
+              1: 'This calculation is incorrect; $75,000 times 10 equals $750,000. This replaces roughly a decade of income for the family.',
+              3: 'This calculation is incorrect; $75,000 times 10 equals $750,000. This replaces roughly a decade of income for the family.',
+            },
           },
           {
             id: "fin-sec11-u7-L4-T2",
@@ -753,6 +877,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "D=$20K + I=$500K + M=$200K + E=$100K = $820,000. DIME adds up all 4 categories to find the total coverage needed.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; d=$20K + I=$500K + M=$200K + E=$100K = $820,000. DIME adds up all 4 categories to find the total coverage needed.',
+              1: 'This calculation is incorrect; d=$20K + I=$500K + M=$200K + E=$100K = $820,000. DIME adds up all 4 categories to find the total coverage needed.',
+              2: 'This calculation is incorrect; d=$20K + I=$500K + M=$200K + E=$100K = $820,000. DIME adds up all 4 categories to find the total coverage needed.',
+            },
           },
           {
             id: "fin-sec11-u7-L4-Q6",
@@ -912,6 +1041,9 @@ export const finSection11Part2: Unit[] = [
             question: "Disability insurance replaces part of your income if you can't work due to illness or injury.",
             correctAnswer: true,
             explanation: "It typically replaces 50% to 70% of your pre-disability income.",
+            distractorExplanations: {
+              1: 'It typically replaces 50% to 70% of your pre-disability income.',
+            },
           },
           {
             id: "fin-sec11-u8-L1-Q2",
@@ -925,6 +1057,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Policies typically replace 50% to 70%. It's less than full pay to motivate a return to work.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; policies typically replace 50% to 70%. It\'s less than full pay to motivate a return to work.',
+              2: 'This calculation is incorrect; policies typically replace 50% to 70%. It\'s less than full pay to motivate a return to work.',
+              3: 'This calculation is incorrect; policies typically replace 50% to 70%. It\'s less than full pay to motivate a return to work.',
+            },
           },
           {
             id: "fin-sec11-u8-L1-T2",
@@ -979,6 +1116,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Kai has no dependents (so life insurance is less urgent) but relies entirely on her income. Disability insurance is her top priority.",
+            distractorExplanations: {
+              0: 'Kai has no dependents (so life insurance is less urgent) but relies entirely on her income. Disability insurance is her top priority.',
+              2: 'Kai has no dependents (so life insurance is less urgent) but relies entirely on her income. Disability insurance is her top priority.',
+              3: 'Kai has no dependents (so life insurance is less urgent) but relies entirely on her income. Disability insurance is her top priority.',
+            },
           },
         ],
       },
@@ -1004,6 +1146,9 @@ export const finSection11Part2: Unit[] = [
             question: "An umbrella policy provides extra liability coverage beyond your auto and home policy limits.",
             correctAnswer: true,
             explanation: "It sits on top of existing policies and kicks in when their limits are exhausted.",
+            distractorExplanations: {
+              1: 'It sits on top of existing policies and kicks in when their limits are exhausted.',
+            },
           },
           {
             id: "fin-sec11-u8-L2-Q2",
@@ -1017,6 +1162,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Umbrella policies are surprisingly affordable. $1 million in extra coverage typically costs $150 to $300 per year.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; umbrella policies are surprisingly affordable. $1 million in extra coverage typically costs $150 to $300 per year.',
+              2: 'This calculation is incorrect; umbrella policies are surprisingly affordable. $1 million in extra coverage typically costs $150 to $300 per year.',
+              3: 'This calculation is incorrect; umbrella policies are surprisingly affordable. $1 million in extra coverage typically costs $150 to $300 per year.',
+            },
           },
           {
             id: "fin-sec11-u8-L2-T2",
@@ -1031,6 +1181,9 @@ export const finSection11Part2: Unit[] = [
             question: "An umbrella policy can cover lawsuits that standard auto and home policies exclude.",
             correctAnswer: true,
             explanation: "Umbrella coverage is broader than standard liability. It fills gaps left by other policies.",
+            distractorExplanations: {
+              1: 'Umbrella coverage is broader than standard liability. It fills gaps left by other policies.',
+            },
           },
           {
             id: "fin-sec11-u8-L2-Q4",
@@ -1061,6 +1214,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Their assets ($600K) exceed their liability limits ($300K). An umbrella protects the gap and costs only $150 to $300/year.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; their assets ($600K) exceed their liability limits ($300K).',
+              2: 'There is a real consequence here; their assets ($600K) exceed their liability limits ($300K).',
+              3: 'Their assets ($600K) exceed their liability limits ($300K). An umbrella protects the gap and costs only $150 to $300/year.',
+            },
           },
         ],
       },
@@ -1086,6 +1244,9 @@ export const finSection11Part2: Unit[] = [
             question: "About 1 in 4 workers will experience a disability before reaching retirement age.",
             correctAnswer: true,
             explanation: "Disability is more common than most people think. 1 in 4 workers will be disabled at some point during their career.",
+            distractorExplanations: {
+              1: 'Disability is more common than most people think. 1 in 4 workers will be disabled at some point during their career.',
+            },
           },
           {
             id: "fin-sec11-u8-L3-Q2",
@@ -1099,6 +1260,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A retired person isn't earning income from work. Disability insurance protects earned income, which they no longer have.",
+            distractorExplanations: {
+              0: 'A retired person isn\'t earning income from work. Disability insurance protects earned income, which they no longer have.',
+              2: 'A retired person isn\'t earning income from work. Disability insurance protects earned income, which they no longer have.',
+              3: 'This reasoning is flawed; a retired person isn\'t earning income from work. Disability insurance protects earned income, which they no longer have.',
+            },
           },
           {
             id: "fin-sec11-u8-L3-T2",
@@ -1153,6 +1319,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Nadia's biggest financial asset is her income. Without dependents, disability insurance matters more than life or umbrella coverage.",
+            distractorExplanations: {
+              0: 'Nadia\'s biggest financial asset is her income. Without dependents, disability insurance matters more than life or umbrella coverage.',
+              1: 'Nadia\'s biggest financial asset is her income. Without dependents, disability insurance matters more than life or umbrella coverage.',
+              3: 'Nadia\'s biggest financial asset is her income. Without dependents, disability insurance matters more than life or umbrella coverage.',
+            },
           },
         ],
       },
@@ -1221,6 +1392,9 @@ export const finSection11Part2: Unit[] = [
             question: "Prices for the same insurance coverage can vary 20% to 40% between companies.",
             correctAnswer: true,
             explanation: "Each insurer uses different formulas to price risk. Shopping around reveals these differences.",
+            distractorExplanations: {
+              1: 'Each insurer uses different formulas to price risk. Shopping around reveals these differences.',
+            },
           },
           {
             id: "fin-sec11-u9-L1-Q2",
@@ -1234,6 +1408,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A cheaper quote might have less coverage. Compare apples to apples: same limits, same deductibles, same coverage types.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; a cheaper quote might have less coverage. Compare apples to apples: same limits, same deductibles, same coverage types.',
+              2: 'A cheaper quote might have less coverage. Compare apples to apples: same limits, same deductibles, same coverage types.',
+              3: 'A cheaper quote might have less coverage. Compare apples to apples: same limits, same deductibles, same coverage types.',
+            },
           },
           {
             id: "fin-sec11-u9-L1-T2",
@@ -1248,6 +1427,9 @@ export const finSection11Part2: Unit[] = [
             question: "The cheapest insurance quote is always the best choice.",
             correctAnswer: false,
             explanation: "Price matters, but claim payment history and financial stability matter more. A cheap insurer that won't pay claims is worthless.",
+            distractorExplanations: {
+              0: 'Price matters, but claim payment history and financial stability matter more. A cheap insurer that won\'t pay claims is worthless.',
+            },
           },
           {
             id: "fin-sec11-u9-L1-Q4",
@@ -1277,6 +1459,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Re-shopping every 1 to 2 years or after life changes (marriage, home purchase, new car) ensures you're getting competitive rates.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; re-shopping every 1 to 2 years or after life changes (marriage, home purchase, new car) ensures you\'re getting competitive.',
+              2: 'Re-shopping every 1 to 2 years or after life changes (marriage, home purchase, new car) ensures you\'re getting competitive rates.',
+              3: 'Re-shopping every 1 to 2 years or after life changes (marriage, home purchase, new car) ensures you\'re getting competitive rates.',
+            },
           },
         ],
       },
@@ -1302,6 +1489,9 @@ export const finSection11Part2: Unit[] = [
             question: "The declarations page summarizes your coverage limits, deductibles, and premium.",
             correctAnswer: true,
             explanation: "The declarations page is your policy snapshot. It shows everything at a glance.",
+            distractorExplanations: {
+              1: 'The declarations page is your policy snapshot. It shows everything at a glance.',
+            },
           },
           {
             id: "fin-sec11-u9-L2-Q2",
@@ -1325,6 +1515,9 @@ export const finSection11Part2: Unit[] = [
             question: "The exclusions section lists what your insurance will NOT cover.",
             correctAnswer: true,
             explanation: "Exclusions are the most important section to read. They define the boundaries of your protection.",
+            distractorExplanations: {
+              1: 'Exclusions are the most important section to read. They define the boundaries of your protection.',
+            },
           },
           {
             id: "fin-sec11-u9-L2-Q4",
@@ -1338,6 +1531,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The declarations page tells you what you have. The exclusions tell you what you don't. Together, they give you the full picture fast.",
+            distractorExplanations: {
+              0: 'The declarations page tells you what you have. The exclusions tell you what you don\'t. Together, they give you the full picture fast.',
+              2: 'The declarations page tells you what you have. The exclusions tell you what you don\'t. Together, they give you the full picture fast.',
+              3: 'The declarations page tells you what you have. The exclusions tell you what you don\'t. Together, they give you the full picture fast.',
+            },
           },
           {
             id: "fin-sec11-u9-L2-Q5",
@@ -1360,6 +1558,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Flood exclusions are common in standard policies. Reading exclusions before a loss would have revealed the gap.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; flood exclusions are common in standard policies. Reading exclusions before a loss would have revealed the gap.',
+              2: 'This overgeneralizes; flood exclusions are common in standard policies. Reading exclusions before a loss would have revealed the gap.',
+              3: 'This reasoning is flawed; flood exclusions are common in standard policies. Reading exclusions before a loss would have revealed the gap.',
+            },
           },
         ],
       },
@@ -1385,6 +1588,9 @@ export const finSection11Part2: Unit[] = [
             question: "A coverage gap is when you think you're protected but your policy doesn't actually cover the risk.",
             correctAnswer: true,
             explanation: "Gaps are dangerous because you don't know they exist until you file a claim and get denied.",
+            distractorExplanations: {
+              1: 'Gaps are dangerous because you don\'t know they exist until you file a claim and get denied.',
+            },
           },
           {
             id: "fin-sec11-u9-L3-Q2",
@@ -1398,6 +1604,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Unread exclusions and outdated limits are the top causes. Life changes outpace policy updates.",
+            distractorExplanations: {
+              0: 'Unread exclusions and outdated limits are the top causes. Life changes outpace policy updates.',
+              2: 'Unread exclusions and outdated limits are the top causes. Life changes outpace policy updates.',
+              3: 'Unread exclusions and outdated limits are the top causes. Life changes outpace policy updates.',
+            },
           },
           {
             id: "fin-sec11-u9-L3-T2",
@@ -1450,6 +1661,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A lapsed policy means no coverage. You're responsible for all costs and may face fines or license suspension.",
+            distractorExplanations: {
+              0: 'A lapsed policy means no coverage. You\'re responsible for all costs and may face fines or license suspension.',
+              1: 'A lapsed policy means no coverage. You\'re responsible for all costs and may face fines or license suspension.',
+              3: 'This reasoning is flawed; a lapsed policy means no coverage. You\'re responsible for all costs and may face fines or license suspension.',
+            },
           },
         ],
       },
@@ -1475,6 +1691,9 @@ export const finSection11Part2: Unit[] = [
             question: "It's possible to pay for more insurance coverage than you actually need.",
             correctAnswer: true,
             explanation: "Over-insurance wastes money on premiums that provide little real financial protection.",
+            distractorExplanations: {
+              1: 'Over-insurance wastes money on premiums that provide little real financial protection.',
+            },
           },
           {
             id: "fin-sec11-u9-L4-Q2",
@@ -1488,6 +1707,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If collision coverage costs $500/year and your car is worth $2,000, the maximum payout after a $500 deductible is only $1,500. The math doesn't work.",
+            distractorExplanations: {
+              0: 'If collision coverage costs $500/year and your car is worth $2,000, the maximum payout after a $500 deductible is only $1,500.',
+              2: 'This overgeneralizes; if collision coverage costs $500/year and your car is worth $2,000, the maximum payout after a $500 deductible is only.',
+              3: 'If collision coverage costs $500/year and your car is worth $2,000, the maximum payout after a $500 deductible is only $1,500.',
+            },
           },
           {
             id: "fin-sec11-u9-L4-T2",
@@ -1502,6 +1726,9 @@ export const finSection11Part2: Unit[] = [
             question: "Self-insuring means paying for small, affordable losses yourself instead of buying insurance for them.",
             correctAnswer: true,
             explanation: "Self-insuring small risks saves premium money. Reserve insurance for losses you couldn't handle alone.",
+            distractorExplanations: {
+              1: 'Self-insuring small risks saves premium money. Reserve insurance for losses you couldn\'t handle alone.',
+            },
           },
           {
             id: "fin-sec11-u9-L4-Q4",
@@ -1532,6 +1759,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The car's max payout is $2,500 after deductible, but he pays $1,200/year. The TV warranty costs half the TV's value. Both are over-insurance.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; the car\'s max payout is $2,500 after deductible, but he pays $1,200/year.',
+              2: 'There is a real consequence here; the car\'s max payout is $2,500 after deductible, but he pays $1,200/year.',
+              3: 'The car\'s max payout is $2,500 after deductible, but he pays $1,200/year. The TV warranty costs half the TV\'s value. Both are over-insurance.',
+            },
           },
           {
             id: "fin-sec11-u9-L4-Q6",
@@ -1697,6 +1929,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Insurance transfers catastrophic financial risk from individuals to a pool. That's its core purpose.",
+            distractorExplanations: {
+              0: 'Insurance transfers catastrophic financial risk from individuals to a pool. That\'s its core purpose.',
+              2: 'This overgeneralizes; insurance transfers catastrophic financial risk from individuals to a pool. That\'s its core purpose.',
+              3: 'Insurance transfers catastrophic financial risk from individuals to a pool. That\'s its core purpose.',
+            },
           },
           {
             id: "fin-sec11-u10-L1-Q2",
@@ -1704,6 +1941,9 @@ export const finSection11Part2: Unit[] = [
             question: "A deductible is the amount you pay before insurance starts covering costs.",
             correctAnswer: true,
             explanation: "The deductible is your share of the risk. After you meet it, the insurer takes over.",
+            distractorExplanations: {
+              1: 'The deductible is your share of the risk. After you meet it, the insurer takes over.',
+            },
           },
           {
             id: "fin-sec11-u10-L1-Q3",
@@ -1758,6 +1998,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With kids and a mortgage, term life insurance is the most critical missing coverage. It replaces income if a parent dies.",
+            distractorExplanations: {
+              0: 'With kids and a mortgage, term life insurance is the most critical missing coverage. It replaces income if a parent dies.',
+              2: 'With kids and a mortgage, term life insurance is the most critical missing coverage. It replaces income if a parent dies.',
+              3: 'With kids and a mortgage, term life insurance is the most critical missing coverage. It replaces income if a parent dies.',
+            },
           },
         ],
       },
@@ -1783,6 +2028,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Emily needs the full suite: health, auto, homeowner's (she owns), term life (kids depend on her income), and disability (protects her earning power).",
+            distractorExplanations: {
+              0: 'Emily needs the full suite: health, auto, homeowner\'s (she owns), term life (kids depend on her income), and disability (protects her earning.',
+              2: 'This reasoning is flawed; emily needs the full suite: health, auto, homeowner\'s (she owns), term life (kids depend on her income), and disability.',
+              3: 'Emily needs the full suite: health, auto, homeowner\'s (she owns), term life (kids depend on her income), and disability (protects her earning.',
+            },
           },
           {
             id: "fin-sec11-u10-L2-Q2",
@@ -1796,6 +2046,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Plan A total is $5,200. Plan B total is $6,400. With significant medical bills, the lower deductible wins.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; plan A total is $5,200. Plan B total is $6,400. With significant medical bills, the lower deductible wins.',
+              2: 'Plan A total is $5,200. Plan B total is $6,400. With significant medical bills, the lower deductible wins.',
+              3: 'This reasoning is flawed; plan A total is $5,200. Plan B total is $6,400. With significant medical bills, the lower deductible wins.',
+            },
           },
           {
             id: "fin-sec11-u10-L2-Q3",
@@ -1803,6 +2058,9 @@ export const finSection11Part2: Unit[] = [
             question: "Term life insurance is more expensive than whole life for the same death benefit.",
             correctAnswer: false,
             explanation: "Term life costs 5 to 15 times less than whole life. It's pure protection without the cash value component.",
+            distractorExplanations: {
+              0: 'Term life costs 5 to 15 times less than whole life. It\'s pure protection without the cash value component.',
+            },
           },
           {
             id: "fin-sec11-u10-L2-Q4",
@@ -1849,6 +2107,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Replacement cost gives you enough to buy a new equivalent. ACV subtracts depreciation and pays less.",
+            distractorExplanations: {
+              0: 'Replacement cost gives you enough to buy a new equivalent. ACV subtracts depreciation and pays less.',
+              2: 'Replacement cost gives you enough to buy a new equivalent. ACV subtracts depreciation and pays less.',
+              3: 'This overgeneralizes; replacement cost gives you enough to buy a new equivalent. ACV subtracts depreciation and pays less.',
+            },
           },
           {
             id: "fin-sec11-u10-L2-Q8",
@@ -1863,6 +2126,11 @@ export const finSection11Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With $550,000 in assets and only $50,000 in bodily injury coverage, Rob faces personal liability for $250,000+. Higher limits and an umbrella would have protected him.",
+            distractorExplanations: {
+              0: 'With $550,000 in assets and only $50,000 in bodily injury coverage, Rob faces personal liability for $250,000+.',
+              2: 'With $550,000 in assets and only $50,000 in bodily injury coverage, Rob faces personal liability for $250,000+.',
+              3: 'With $550,000 in assets and only $50,000 in bodily injury coverage, Rob faces personal liability for $250,000+.',
+            },
           },
         ],
       },

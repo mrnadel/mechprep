@@ -41,6 +41,9 @@ export const finSection11Part1: Unit[] = [
             question: "Insurance replaces a large, unpredictable loss with a smaller, regular payment.",
             correctAnswer: true,
             explanation: "That's the core idea. You pay premiums so you don't face a financial disaster alone.",
+            distractorExplanations: {
+              1: 'You pay premiums so you don\'t face a financial disaster alone.',
+            },
           },
           {
             id: "fin-sec11-u1-L1-Q2",
@@ -54,6 +57,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The premium is the recurring amount you pay to keep your coverage active.",
+            distractorExplanations: {
+              0: 'The premium is the recurring amount you pay to keep your coverage active.',
+              2: 'The premium is the recurring amount you pay to keep your coverage active.',
+              3: 'The premium is the recurring amount you pay to keep your coverage active.',
+            },
           },
           {
             id: "fin-sec11-u1-L1-T2",
@@ -68,6 +76,9 @@ export const finSection11Part1: Unit[] = [
             question: "Insurance is designed to cover routine, everyday expenses.",
             correctAnswer: false,
             explanation: "Insurance covers unexpected, high-cost events. Routine costs are your responsibility.",
+            distractorExplanations: {
+              0: 'Insurance covers unexpected, high-cost events. Routine costs are your responsibility.',
+            },
           },
           {
             id: "fin-sec11-u1-L1-Q4",
@@ -98,6 +109,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A tree falling on your house is unexpected and costly. That's exactly what insurance is for.",
+            distractorExplanations: {
+              0: 'A tree falling on your house is unexpected and costly. That\'s exactly what insurance is for.',
+              2: 'A tree falling on your house is unexpected and costly. That\'s exactly what insurance is for.',
+              3: 'A tree falling on your house is unexpected and costly. That\'s exactly what insurance is for.',
+            },
           },
         ],
       },
@@ -123,6 +139,9 @@ export const finSection11Part1: Unit[] = [
             question: "Risk pooling means spreading financial losses across a large group of people.",
             correctAnswer: true,
             explanation: "That's exactly how insurance pools work. The group shares the cost so no one person bears it all.",
+            distractorExplanations: {
+              1: 'How insurance pools work. The group shares the cost so no one person bears it all.',
+            },
           },
           {
             id: "fin-sec11-u1-L2-Q2",
@@ -136,6 +155,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "10,000 times $200 equals $2,000,000. 50 times $30,000 equals $1,500,000. The pool has $500,000 left over.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; 10,000 times $200 equals $2,000,000. 50 times $30,000 equals $1,500,000. The pool has $500,000 left over.',
+              2: '10,000 times $200 equals $2,000,000. 50 times $30,000 equals $1,500,000. The pool has $500,000 left over.',
+              3: 'There is a real consequence here; 10,000 times $200 equals $2,000,000. 50 times $30,000 equals $1,500,000. The pool has $500,000 left over.',
+            },
           },
           {
             id: "fin-sec11-u1-L2-T2",
@@ -180,6 +204,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "When claims exceed expectations, insurers raise premiums to keep the pool financially healthy.",
+            distractorExplanations: {
+              0: 'When claims exceed expectations, insurers raise premiums to keep the pool financially healthy.',
+              1: 'When claims exceed expectations, insurers raise premiums to keep the pool financially healthy.',
+              3: 'When claims exceed expectations, insurers raise premiums to keep the pool financially healthy.',
+            },
           },
           {
             id: "fin-sec11-u1-L2-Q6",
@@ -194,6 +223,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A pool works best when risks are spread across different situations. If everyone faces the same threat, one event can bankrupt the pool.",
+            distractorExplanations: {
+              0: 'A pool works best when risks are spread across different situations. If everyone faces the same threat, one event can bankrupt the pool.',
+              2: 'A pool works best when risks are spread across different situations. If everyone faces the same threat, one event can bankrupt the pool.',
+              3: 'A pool works best when risks are spread across different situations. If everyone faces the same threat, one event can bankrupt the pool.',
+            },
           },
         ],
       },
@@ -219,6 +253,9 @@ export const finSection11Part1: Unit[] = [
             question: "Everyone pays the same premium for the same type of insurance.",
             correctAnswer: false,
             explanation: "Premiums vary by individual risk factors like age, health, location, and history.",
+            distractorExplanations: {
+              0: 'Premiums vary by individual risk factors like age, health, location, and history.',
+            },
           },
           {
             id: "fin-sec11-u1-L3-Q2",
@@ -232,6 +269,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Young, new drivers are statistically more likely to have accidents. Insurers charge them higher premiums.",
+            distractorExplanations: {
+              0: 'Young, new drivers are statistically more likely to have accidents. Insurers charge them higher premiums.',
+              1: 'Young, new drivers are statistically more likely to have accidents. Insurers charge them higher premiums.',
+              3: 'Young, new drivers are statistically more likely to have accidents. Insurers charge them higher premiums.',
+            },
           },
           {
             id: "fin-sec11-u1-L3-T2",
@@ -246,6 +288,9 @@ export const finSection11Part1: Unit[] = [
             question: "Choosing a higher deductible will lower your monthly premium.",
             correctAnswer: true,
             explanation: "You agree to pay more out of pocket, so the insurer charges you less each month.",
+            distractorExplanations: {
+              1: 'You agree to pay more out of pocket, so the insurer charges you less each month.',
+            },
           },
           {
             id: "fin-sec11-u1-L3-Q4",
@@ -267,6 +312,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You pay the first $500 (your deductible). The insurer covers the remaining $2,500.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; you pay the first $500 (your deductible). The insurer covers the remaining $2,500.',
+              2: 'This calculation is incorrect; you pay the first $500 (your deductible). The insurer covers the remaining $2,500.',
+              3: 'This calculation is incorrect; you pay the first $500 (your deductible). The insurer covers the remaining $2,500.',
+            },
           },
           {
             id: "fin-sec11-u1-L3-Q6",
@@ -300,6 +350,9 @@ export const finSection11Part1: Unit[] = [
             question: "Health, auto, home, life, and disability are the 5 core insurance types.",
             correctAnswer: true,
             explanation: "These 5 cover the major financial risks most people face throughout their lives.",
+            distractorExplanations: {
+              1: 'These 5 cover the major financial risks most people face throughout their lives.',
+            },
           },
           {
             id: "fin-sec11-u1-L4-Q2",
@@ -345,6 +398,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Disability insurance pays a portion of your salary when you can't work due to illness or injury.",
+            distractorExplanations: {
+              0: 'Disability insurance pays a portion of your salary when you can\'t work due to illness or injury.',
+              1: 'Disability insurance pays a portion of your salary when you can\'t work due to illness or injury.',
+              3: 'Disability insurance pays a portion of your salary when you can\'t work due to illness or injury.',
+            },
           },
           {
             id: "fin-sec11-u1-L4-Q5",
@@ -359,6 +417,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mia drives daily and has no auto insurance. That's both illegal in most places and a huge financial risk.",
+            distractorExplanations: {
+              0: 'Mia drives daily and has no auto insurance. That\'s both illegal in most places and a huge financial risk.',
+              2: 'Mia drives daily and has no auto insurance. That\'s both illegal in most places and a huge financial risk.',
+              3: 'Mia drives daily and has no auto insurance. That\'s both illegal in most places and a huge financial risk.',
+            },
           },
           {
             id: "fin-sec11-u1-L4-Q6",
@@ -518,6 +581,9 @@ export const finSection11Part1: Unit[] = [
             question: "An HMO plan typically has lower premiums than a PPO plan.",
             correctAnswer: true,
             explanation: "HMOs keep costs down by limiting you to a network of doctors and requiring referrals to see specialists.",
+            distractorExplanations: {
+              1: 'HMOs keep costs down by limiting you to a network of doctors and requiring referrals to see specialists.',
+            },
           },
           {
             id: "fin-sec11-u2-L1-Q2",
@@ -541,6 +607,9 @@ export const finSection11Part1: Unit[] = [
             question: "You can open a Health Savings Account with any type of health plan.",
             correctAnswer: false,
             explanation: "HSAs are only available to people enrolled in a high-deductible health plan (HDHP).",
+            distractorExplanations: {
+              0: 'HSAs are only available to people enrolled in a high-deductible health plan (HDHP).',
+            },
           },
           {
             id: "fin-sec11-u2-L1-Q4",
@@ -554,6 +623,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "PPO plans let you see any doctor, including out-of-network providers, at a higher cost.",
+            distractorExplanations: {
+              0: 'PPO plans let you see any doctor, including out-of-network providers, at a higher cost.',
+              2: 'PPO plans let you see any doctor, including out-of-network providers, at a higher cost.',
+              3: 'PPO plans let you see any doctor, including out-of-network providers, at a higher cost.',
+            },
           },
           {
             id: "fin-sec11-u2-L1-Q5",
@@ -576,6 +650,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Jordan is low-risk and wants savings. An HDHP with an HSA gives the lowest premiums and a tax-advantaged savings tool.",
+            distractorExplanations: {
+              0: 'Jordan is low-risk and wants savings. An HDHP with an HSA gives the lowest premiums and a tax-advantaged savings tool.',
+              1: 'Jordan is low-risk and wants savings. An HDHP with an HSA gives the lowest premiums and a tax-advantaged savings tool.',
+              3: 'Jordan is low-risk and wants savings. An HDHP with an HSA gives the lowest premiums and a tax-advantaged savings tool.',
+            },
           },
         ],
       },
@@ -601,6 +680,9 @@ export const finSection11Part1: Unit[] = [
             question: "In-network doctors have negotiated lower rates with your insurance company.",
             correctAnswer: true,
             explanation: "That's why in-network visits cost you less. The insurer and doctor agreed on discounted rates.",
+            distractorExplanations: {
+              1: 'In-network visits cost you less. The insurer and doctor agreed on discounted rates.',
+            },
           },
           {
             id: "fin-sec11-u2-L2-Q2",
@@ -614,6 +696,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "HMO plans generally don't cover out-of-network care, except for emergencies. You'd pay the entire bill.",
+            distractorExplanations: {
+              0: 'HMO plans generally don\'t cover out-of-network care, except for emergencies. You\'d pay the entire bill.',
+              1: 'HMO plans generally don\'t cover out-of-network care, except for emergencies. You\'d pay the entire bill.',
+              3: 'HMO plans generally don\'t cover out-of-network care, except for emergencies. You\'d pay the entire bill.',
+            },
           },
           {
             id: "fin-sec11-u2-L2-T2",
@@ -658,6 +745,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "HMOs rarely cover out-of-network care. You'd likely pay the entire bill yourself.",
+            distractorExplanations: {
+              0: 'HMOs rarely cover out-of-network care. You\'d likely pay the entire bill yourself.',
+              1: 'HMOs rarely cover out-of-network care. You\'d likely pay the entire bill yourself.',
+              2: 'HMOs rarely cover out-of-network care. You\'d likely pay the entire bill yourself.',
+            },
           },
         ],
       },
@@ -683,6 +775,9 @@ export const finSection11Part1: Unit[] = [
             question: "Your insurance card shows your member ID and plan type.",
             correctAnswer: true,
             explanation: "These are the two most important pieces of information on your card.",
+            distractorExplanations: {
+              1: 'These are the two most important pieces of information on your card.',
+            },
           },
           {
             id: "fin-sec11-u2-L3-Q2",
@@ -712,6 +807,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Call the number on your insurer's website. They'll send a replacement card quickly.",
+            distractorExplanations: {
+              0: 'Inaction here would be harmful; call the number on your insurer\'s website. They\'ll send a replacement card quickly.',
+              2: 'Call the number on your insurer\'s website. They\'ll send a replacement card quickly.',
+              3: 'Call the number on your insurer\'s website. They\'ll send a replacement card quickly.',
+            },
           },
           {
             id: "fin-sec11-u2-L3-Q4",
@@ -727,6 +827,9 @@ export const finSection11Part1: Unit[] = [
             question: "The group number on your insurance card connects you to your employer's specific plan.",
             correctAnswer: true,
             explanation: "The group number identifies the plan your employer has purchased. It links you to the correct coverage.",
+            distractorExplanations: {
+              1: 'The group number identifies the plan your employer has purchased. It links you to the correct coverage.',
+            },
           },
           {
             id: "fin-sec11-u2-L3-Q6",
@@ -760,6 +863,9 @@ export const finSection11Part1: Unit[] = [
             question: "The cheapest monthly premium always means the cheapest plan overall.",
             correctAnswer: false,
             explanation: "Low premiums often come with high deductibles. Total yearly cost matters more than monthly premium alone.",
+            distractorExplanations: {
+              0: 'Low premiums often come with high deductibles. Total yearly cost matters more than monthly premium alone.',
+            },
           },
           {
             id: "fin-sec11-u2-L4-Q2",
@@ -773,6 +879,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Total cost estimation accounts for every expense, giving you the most accurate comparison.",
+            distractorExplanations: {
+              0: 'Total cost estimation accounts for every expense, giving you the most accurate comparison.',
+              1: 'Total cost estimation accounts for every expense, giving you the most accurate comparison.',
+              3: 'This overgeneralizes; total cost estimation accounts for every expense, giving you the most accurate comparison.',
+            },
           },
           {
             id: "fin-sec11-u2-L4-T2",
@@ -787,6 +898,9 @@ export const finSection11Part1: Unit[] = [
             question: "You should verify your current doctors are in-network before choosing a plan.",
             correctAnswer: true,
             explanation: "Choosing a plan where your doctors are out-of-network could cost you significantly more.",
+            distractorExplanations: {
+              1: 'Choosing a plan where your doctors are out-of-network could cost you significantly more.',
+            },
           },
           {
             id: "fin-sec11-u2-L4-Q4",
@@ -809,6 +923,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With frequent visits, Plan A's lower copays save more than the $50/month premium difference.",
+            distractorExplanations: {
+              0: 'With frequent visits, Plan A\'s lower copays save more than the $50/month premium difference.',
+              2: 'With frequent visits, Plan A\'s lower copays save more than the $50/month premium difference.',
+              3: 'Inaction here would be harmful; with frequent visits, Plan A\'s lower copays save more than the $50/month premium difference.',
+            },
           },
           {
             id: "fin-sec11-u2-L4-Q6",
@@ -885,6 +1004,9 @@ export const finSection11Part1: Unit[] = [
             question: "A deductible is the amount your insurance pays first.",
             correctAnswer: false,
             explanation: "It's the opposite. The deductible is what you pay first before insurance kicks in.",
+            distractorExplanations: {
+              0: 'The deductible is what you pay first before insurance kicks in.',
+            },
           },
           {
             id: "fin-sec11-u3-L1-Q2",
@@ -898,6 +1020,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Your $1,200 bill is less than your $2,000 deductible. You pay the full amount yourself.",
+            distractorExplanations: {
+              1: 'This calculation is incorrect; your $1,200 bill is less than your $2,000 deductible. You pay the full amount yourself.',
+              2: 'This calculation is incorrect; your $1,200 bill is less than your $2,000 deductible. You pay the full amount yourself.',
+              3: 'This calculation is incorrect; your $1,200 bill is less than your $2,000 deductible. You pay the full amount yourself.',
+            },
           },
           {
             id: "fin-sec11-u3-L1-T2",
@@ -912,6 +1039,9 @@ export const finSection11Part1: Unit[] = [
             question: "Preventive care like annual checkups is usually covered even if you haven't met your deductible.",
             correctAnswer: true,
             explanation: "Most plans cover preventive care with no out-of-pocket cost, regardless of your deductible status.",
+            distractorExplanations: {
+              1: 'Most plans cover preventive care with no out-of-pocket cost, regardless of your deductible status.',
+            },
           },
           {
             id: "fin-sec11-u3-L1-Q4",
@@ -949,6 +1079,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Deductibles reset annually. The $1,800 you spent doesn't carry over to the new plan year.",
+            distractorExplanations: {
+              0: 'Deductibles reset annually. The $1,800 you spent doesn\'t carry over to the new plan year.',
+              1: 'This reasoning is flawed; deductibles reset annually. The $1,800 you spent doesn\'t carry over to the new plan year.',
+              3: 'Deductibles reset annually. The $1,800 you spent doesn\'t carry over to the new plan year.',
+            },
           },
         ],
       },
@@ -974,6 +1109,9 @@ export const finSection11Part1: Unit[] = [
             question: "A copay is a fixed dollar amount you pay per doctor visit or prescription.",
             correctAnswer: true,
             explanation: "Copays are flat fees. They don't change based on the total cost of the service.",
+            distractorExplanations: {
+              1: 'Copays are flat fees. They don\'t change based on the total cost of the service.',
+            },
           },
           {
             id: "fin-sec11-u3-L2-Q2",
@@ -987,6 +1125,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "You pay the $30 copay. Your insurer covers the remaining $170.",
+            distractorExplanations: {
+              1: 'This calculation is incorrect; you pay the $30 copay. Your insurer covers the remaining $170.',
+              2: 'This calculation is incorrect; you pay the $30 copay. Your insurer covers the remaining $170.',
+              3: 'This calculation is incorrect; you pay the $30 copay. Your insurer covers the remaining $170.',
+            },
           },
           {
             id: "fin-sec11-u3-L2-T2",
@@ -1001,6 +1144,9 @@ export const finSection11Part1: Unit[] = [
             question: "Coinsurance is a percentage of the bill you pay after meeting your deductible.",
             correctAnswer: true,
             explanation: "Unlike a flat copay, coinsurance is a percentage. Your share depends on the total bill.",
+            distractorExplanations: {
+              1: 'Unlike a flat copay, coinsurance is a percentage. Your share depends on the total bill.',
+            },
           },
           {
             id: "fin-sec11-u3-L2-Q4",
@@ -1023,6 +1169,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "20% of $10,000 is $2,000. Your insurer covers the other $8,000.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; 20% of $10,000 is $2,000. Your insurer covers the other $8,000.',
+              2: 'This calculation is incorrect; 20% of $10,000 is $2,000. Your insurer covers the other $8,000.',
+              3: 'This calculation is incorrect; 20% of $10,000 is $2,000. Your insurer covers the other $8,000.',
+            },
           },
           {
             id: "fin-sec11-u3-L2-Q6",
@@ -1056,6 +1207,9 @@ export const finSection11Part1: Unit[] = [
             question: "Once you hit your out-of-pocket maximum, insurance covers 100% of covered services.",
             correctAnswer: true,
             explanation: "The OOP max is your financial ceiling for the year. After reaching it, you pay nothing more.",
+            distractorExplanations: {
+              1: 'The OOP max is your financial ceiling for the year. After reaching it, you pay nothing more.',
+            },
           },
           {
             id: "fin-sec11-u3-L3-Q2",
@@ -1069,6 +1223,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Deductibles, copays, and coinsurance all count toward your OOP max. Premiums do not.",
+            distractorExplanations: {
+              0: 'Deductibles, copays, and coinsurance all count toward your OOP max. Premiums do not.',
+              1: 'Deductibles, copays, and coinsurance all count toward your OOP max. Premiums do not.',
+              3: 'Deductibles, copays, and coinsurance all count toward your OOP max. Premiums do not.',
+            },
           },
           {
             id: "fin-sec11-u3-L3-T2",
@@ -1083,6 +1242,9 @@ export const finSection11Part1: Unit[] = [
             question: "Monthly premiums count toward your out-of-pocket maximum.",
             correctAnswer: false,
             explanation: "Premiums are separate from out-of-pocket costs. Only deductibles, copays, and coinsurance count.",
+            distractorExplanations: {
+              0: 'Premiums are separate from out-of-pocket costs. Only deductibles, copays, and coinsurance count.',
+            },
           },
           {
             id: "fin-sec11-u3-L3-Q4",
@@ -1105,6 +1267,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lisa needs $500 more to hit her $6,000 max. She pays $500 and insurance covers the remaining $2,500.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; lisa needs $500 more to hit her $6,000 max. She pays $500 and insurance covers the remaining $2,500.',
+              2: 'There is a real consequence here; lisa needs $500 more to hit her $6,000 max. She pays $500 and insurance covers the remaining $2,500.',
+              3: 'This calculation is incorrect; lisa needs $500 more to hit her $6,000 max. She pays $500 and insurance covers the remaining $2,500.',
+            },
           },
           {
             id: "fin-sec11-u3-L3-Q6",
@@ -1138,6 +1305,9 @@ export const finSection11Part1: Unit[] = [
             question: "A person who rarely visits the doctor usually saves money with a high-deductible plan.",
             correctAnswer: true,
             explanation: "Low usage means you benefit more from low premiums than from a low deductible.",
+            distractorExplanations: {
+              1: 'Low usage means you benefit more from low premiums than from a low deductible.',
+            },
           },
           {
             id: "fin-sec11-u3-L4-Q2",
@@ -1151,6 +1321,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$250 times 12 equals $3,000. $400 times 12 equals $4,800. With no medical bills, Plan B saves $1,800.",
+            distractorExplanations: {
+              0: '$250 times 12 equals $3,000. $400 times 12 equals $4,800. With no medical bills, Plan B saves $1,800.',
+              2: '$250 times 12 equals $3,000. $400 times 12 equals $4,800. With no medical bills, Plan B saves $1,800.',
+              3: '$250 times 12 equals $3,000. $400 times 12 equals $4,800. With no medical bills, Plan B saves $1,800.',
+            },
           },
           {
             id: "fin-sec11-u3-L4-T2",
@@ -1165,6 +1340,9 @@ export const finSection11Part1: Unit[] = [
             question: "Someone with a chronic condition usually benefits from a low-deductible plan.",
             correctAnswer: true,
             explanation: "Frequent medical visits mean you'll hit the deductible. A lower deductible reduces your total cost.",
+            distractorExplanations: {
+              1: 'Frequent medical visits mean you\'ll hit the deductible. A lower deductible reduces your total cost.',
+            },
           },
           {
             id: "fin-sec11-u3-L4-Q4",
@@ -1179,6 +1357,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Plan A total: $4,200 premiums + $1,000 deductible + $1,400 coinsurance = $6,600. Plan B total: $2,400 + $3,000 + $1,500 = $6,900. Plan A wins.",
+            distractorExplanations: {
+              0: 'Plan A total: $4,200 premiums + $1,000 deductible + $1,400 coinsurance = $6,600. Plan B total: $2,400 + $3,000 + $1,500 = $6,900. Plan A wins.',
+              2: 'Plan A total: $4,200 premiums + $1,000 deductible + $1,400 coinsurance = $6,600. Plan B total: $2,400 + $3,000 + $1,500 = $6,900. Plan A wins.',
+              3: 'Plan A total: $4,200 premiums + $1,000 deductible + $1,400 coinsurance = $6,600. Plan B total: $2,400 + $3,000 + $1,500 = $6,900. Plan A wins.',
+            },
           },
           {
             id: "fin-sec11-u3-L4-Q5",
@@ -1200,6 +1383,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Only HDHPs qualify for a Health Savings Account. The HSA's triple tax advantage can offset the higher deductible.",
+            distractorExplanations: {
+              0: 'Only HDHPs qualify for a Health Savings Account. The HSA\'s triple tax advantage can offset the higher deductible.',
+              1: 'There is a real consequence here; only HDHPs qualify for a Health Savings Account. The HSA\'s triple tax advantage can offset the higher deductible.',
+              3: 'Only HDHPs qualify for a Health Savings Account. The HSA\'s triple tax advantage can offset the higher deductible.',
+            },
           },
         ],
       },
@@ -1350,6 +1538,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "HMO plans use a gatekeeper model. Your primary care provider must approve specialist visits.",
+            distractorExplanations: {
+              0: 'HMO plans use a gatekeeper model. Your primary care provider must approve specialist visits.',
+              2: 'HMO plans use a gatekeeper model. Your primary care provider must approve specialist visits.',
+              3: 'HMO plans use a gatekeeper model. Your primary care provider must approve specialist visits.',
+            },
           },
           {
             id: "fin-sec11-u4-L1-Q2",
@@ -1357,6 +1550,9 @@ export const finSection11Part1: Unit[] = [
             question: "A Health Savings Account (HSA) can be used with any type of health plan.",
             correctAnswer: false,
             explanation: "HSAs are only available to people enrolled in a high-deductible health plan (HDHP).",
+            distractorExplanations: {
+              0: 'HSAs are only available to people enrolled in a high-deductible health plan (HDHP).',
+            },
           },
           {
             id: "fin-sec11-u4-L1-Q3",
@@ -1394,6 +1590,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You need $100 more to meet the deductible. Then coinsurance applies to the remaining $200.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; you need $100 more to meet the deductible. Then coinsurance applies to the remaining $200.',
+              2: 'There is a real consequence here; you need $100 more to meet the deductible. Then coinsurance applies to the remaining $200.',
+              3: 'This calculation is incorrect; you need $100 more to meet the deductible. Then coinsurance applies to the remaining $200.',
+            },
           },
           {
             id: "fin-sec11-u4-L1-Q6",
@@ -1417,6 +1618,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With monthly specialist visits, verifying the specialist is in-network is critical. Out-of-network costs could be massive.",
+            distractorExplanations: {
+              0: 'With monthly specialist visits, verifying the specialist is in-network is critical. Out-of-network costs could be massive.',
+              2: 'With monthly specialist visits, verifying the specialist is in-network is critical. Out-of-network costs could be massive.',
+              3: 'With monthly specialist visits, verifying the specialist is in-network is critical. Out-of-network costs could be massive.',
+            },
           },
           {
             id: "fin-sec11-u4-L1-Q8",
@@ -1424,6 +1630,9 @@ export const finSection11Part1: Unit[] = [
             question: "Monthly premiums count toward your out-of-pocket maximum.",
             correctAnswer: false,
             explanation: "Premiums are a separate cost. Only deductibles, copays, and coinsurance count toward your OOP max.",
+            distractorExplanations: {
+              0: 'Premiums are a separate cost. Only deductibles, copays, and coinsurance count toward your OOP max.',
+            },
           },
         ],
       },
@@ -1449,6 +1658,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Raj is young and healthy. An HDHP keeps premiums low, and the HSA lets him save tax-free for future medical costs.",
+            distractorExplanations: {
+              0: 'Raj is young and healthy. An HDHP keeps premiums low, and the HSA lets him save tax-free for future medical costs.',
+              1: 'Raj is young and healthy. An HDHP keeps premiums low, and the HSA lets him save tax-free for future medical costs.',
+              3: 'Raj is young and healthy. An HDHP keeps premiums low, and the HSA lets him save tax-free for future medical costs.',
+            },
           },
           {
             id: "fin-sec11-u4-L2-Q2",
@@ -1462,6 +1676,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$180 times 12 equals $2,160. With no medical bills, you never touch the deductible. Lower premium wins.",
+            distractorExplanations: {
+              0: '$180 times 12 equals $2,160. With no medical bills, you never touch the deductible. Lower premium wins.',
+              2: '$180 times 12 equals $2,160. With no medical bills, you never touch the deductible. Lower premium wins.',
+              3: '$180 times 12 equals $2,160. With no medical bills, you never touch the deductible. Lower premium wins.',
+            },
           },
           {
             id: "fin-sec11-u4-L2-Q3",
@@ -1477,6 +1696,9 @@ export const finSection11Part1: Unit[] = [
             question: "An EPO plan requires referrals to see specialists, just like an HMO.",
             correctAnswer: false,
             explanation: "EPO plans restrict you to in-network providers but don't require referrals. That's a key difference from HMOs.",
+            distractorExplanations: {
+              0: 'EPO plans restrict you to in-network providers but don\'t require referrals. That\'s a key difference from HMOs.',
+            },
           },
           {
             id: "fin-sec11-u4-L2-Q5",
@@ -1491,6 +1713,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Choosing by premium alone leads to problems. Total cost comparison and network verification are essential.",
+            distractorExplanations: {
+              0: 'Choosing by premium alone leads to problems. Total cost comparison and network verification are essential.',
+              2: 'This reasoning is flawed; choosing by premium alone leads to problems. Total cost comparison and network verification are essential.',
+              3: 'Choosing by premium alone leads to problems. Total cost comparison and network verification are essential.',
+            },
           },
           {
             id: "fin-sec11-u4-L2-Q6",
@@ -1512,6 +1739,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Premiums are separate from out-of-pocket costs. They never count toward your OOP max.",
+            distractorExplanations: {
+              0: 'Premiums are separate from out-of-pocket costs. They never count toward your OOP max.',
+              1: 'Premiums are separate from out-of-pocket costs. They never count toward your OOP max.',
+              3: 'Premiums are separate from out-of-pocket costs. They never count toward your OOP max.',
+            },
           },
           {
             id: "fin-sec11-u4-L2-Q8",
@@ -1596,6 +1828,9 @@ export const finSection11Part1: Unit[] = [
             question: "Liability insurance covers damage you cause to other people and their property.",
             correctAnswer: true,
             explanation: "Liability pays for the other party's injuries and vehicle damage when you're at fault.",
+            distractorExplanations: {
+              1: 'Liability pays for the other party\'s injuries and vehicle damage when you\'re at fault.',
+            },
           },
           {
             id: "fin-sec11-u5-L1-Q2",
@@ -1609,6 +1844,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Liability only covers the other party. You need separate coverage like collision to protect your own car.",
+            distractorExplanations: {
+              0: 'Liability only covers the other party. You need separate coverage like collision to protect your own car.',
+              1: 'Liability only covers the other party. You need separate coverage like collision to protect your own car.',
+              3: 'Liability only covers the other party. You need separate coverage like collision to protect your own car.',
+            },
           },
           {
             id: "fin-sec11-u5-L1-T2",
@@ -1632,6 +1872,9 @@ export const finSection11Part1: Unit[] = [
             question: "You can legally drive without any insurance in most places.",
             correctAnswer: false,
             explanation: "Most jurisdictions require at least minimum liability coverage. Driving uninsured carries fines and legal penalties.",
+            distractorExplanations: {
+              0: 'Most jurisdictions require at least minimum liability coverage. Driving uninsured carries fines and legal penalties.',
+            },
           },
           {
             id: "fin-sec11-u5-L1-Q5",
@@ -1653,6 +1896,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Driving without insurance is a serious offense in most places. Penalties include fines, license suspension, and even vehicle impoundment.",
+            distractorExplanations: {
+              0: 'Driving without insurance is a serious offense in most places. Penalties include fines, license suspension, and even vehicle impoundment.',
+              2: 'This reasoning is flawed; driving without insurance is a serious offense in most places.',
+              3: 'Driving without insurance is a serious offense in most places. Penalties include fines, license suspension, and even vehicle impoundment.',
+            },
           },
         ],
       },
@@ -1678,6 +1926,9 @@ export const finSection11Part1: Unit[] = [
             question: "In a 50/100/50 policy, the maximum payout for one person's injuries is $50,000.",
             correctAnswer: true,
             explanation: "The first number is the per-person bodily injury limit. $50,000 is the most the insurer pays for any one person.",
+            distractorExplanations: {
+              1: 'The first number is the per-person bodily injury limit. $50,000 is the most the insurer pays for any one person.',
+            },
           },
           {
             id: "fin-sec11-u5-L2-Q2",
@@ -1691,6 +1942,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The second number ($300,000) is the total bodily injury limit per accident, regardless of how many people are hurt.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; the second number ($300,000) is the total bodily injury limit per accident, regardless of how many people are hurt.',
+              1: 'This calculation is incorrect; the second number ($300,000) is the total bodily injury limit per accident, regardless of how many people are hurt.',
+              3: 'This calculation is incorrect; the second number ($300,000) is the total bodily injury limit per accident, regardless of how many people are hurt.',
+            },
           },
           {
             id: "fin-sec11-u5-L2-T2",
@@ -1705,6 +1961,9 @@ export const finSection11Part1: Unit[] = [
             question: "If damages exceed your liability limits, you're personally responsible for the rest.",
             correctAnswer: true,
             explanation: "Your insurer stops at your policy limits. Everything above that comes out of your pocket or assets.",
+            distractorExplanations: {
+              1: 'Your insurer stops at your policy limits. Everything above that comes out of your pocket or assets.',
+            },
           },
           {
             id: "fin-sec11-u5-L2-Q4",
@@ -1719,6 +1978,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "His insurer pays $25,000 for injuries and $25,000 for property. Carlos owes the remaining $55,000 in injuries and $5,000 in property damage.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; his insurer pays $25,000 for injuries and $25,000 for property.',
+              2: 'His insurer pays $25,000 for injuries and $25,000 for property. Carlos owes the remaining $55,000 in injuries and $5,000 in property damage.',
+              3: 'His insurer pays $25,000 for injuries and $25,000 for property. Carlos owes the remaining $55,000 in injuries and $5,000 in property damage.',
+            },
           },
           {
             id: "fin-sec11-u5-L2-Q5",
@@ -1740,6 +2004,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A single serious accident can easily exceed minimum limits, leaving you personally liable for the difference.",
+            distractorExplanations: {
+              0: 'A single serious accident can easily exceed minimum limits, leaving you personally liable for the difference.',
+              2: 'A single serious accident can easily exceed minimum limits, leaving you personally liable for the difference.',
+              3: 'A single serious accident can easily exceed minimum limits, leaving you personally liable for the difference.',
+            },
           },
         ],
       },
@@ -1765,6 +2034,9 @@ export const finSection11Part1: Unit[] = [
             question: "Collision insurance pays to fix your car even if you caused the accident.",
             correctAnswer: true,
             explanation: "That's the purpose of collision coverage. It protects your vehicle regardless of who's at fault.",
+            distractorExplanations: {
+              1: 'Of collision coverage. It protects your vehicle regardless of who\'s at fault.',
+            },
           },
           {
             id: "fin-sec11-u5-L3-Q2",
@@ -1778,6 +2050,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Comprehensive covers non-collision events like hail, theft, fire, and vandalism. Collision covers crashes.",
+            distractorExplanations: {
+              0: 'Comprehensive covers non-collision events like hail, theft, fire, and vandalism. Collision covers crashes.',
+              2: 'Comprehensive covers non-collision events like hail, theft, fire, and vandalism. Collision covers crashes.',
+              3: 'Comprehensive covers non-collision events like hail, theft, fire, and vandalism. Collision covers crashes.',
+            },
           },
           {
             id: "fin-sec11-u5-L3-T2",
@@ -1823,6 +2100,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When coverage costs approach the car's value, the maximum payout after the deductible is small. Dropping it and saving the premiums may be smarter.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; when coverage costs approach the car\'s value, the maximum payout after the deductible is small.',
+              2: 'When coverage costs approach the car\'s value, the maximum payout after the deductible is small. Dropping it and saving the premiums may be smarter.',
+              3: 'There is a real consequence here; when coverage costs approach the car\'s value, the maximum payout after the deductible is small.',
+            },
           },
           {
             id: "fin-sec11-u5-L3-Q6",
@@ -1836,6 +2118,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gap insurance covers the shortfall if your car is totaled and you owe more on the loan than the car is worth.",
+            distractorExplanations: {
+              0: 'Gap insurance covers the shortfall if your car is totaled and you owe more on the loan than the car is worth.',
+              2: 'Gap insurance covers the shortfall if your car is totaled and you owe more on the loan than the car is worth.',
+              3: 'Gap insurance covers the shortfall if your car is totaled and you owe more on the loan than the car is worth.',
+            },
           },
         ],
       },
@@ -1861,6 +2148,9 @@ export const finSection11Part1: Unit[] = [
             question: "Bundling auto and home insurance with the same company can save you 10% to 25%.",
             correctAnswer: true,
             explanation: "Multi-policy discounts are one of the easiest ways to reduce your insurance costs.",
+            distractorExplanations: {
+              1: 'Multi-policy discounts are one of the easiest ways to reduce your insurance costs.',
+            },
           },
           {
             id: "fin-sec11-u5-L4-Q2",
@@ -1874,6 +2164,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A higher deductible means you accept more risk. The insurer charges you less in return.",
+            distractorExplanations: {
+              0: 'A higher deductible means you accept more risk. The insurer charges you less in return.',
+              1: 'A higher deductible means you accept more risk. The insurer charges you less in return.',
+              3: 'A higher deductible means you accept more risk. The insurer charges you less in return.',
+            },
           },
           {
             id: "fin-sec11-u5-L4-T2",
@@ -1905,6 +2200,9 @@ export const finSection11Part1: Unit[] = [
             question: "Shopping around and getting quotes from multiple insurers can save you money.",
             correctAnswer: true,
             explanation: "Rates vary significantly between companies. Comparing at least 3 quotes helps you find the best deal.",
+            distractorExplanations: {
+              1: 'Rates vary significantly between companies. Comparing at least 3 quotes helps you find the best deal.',
+            },
           },
           {
             id: "fin-sec11-u5-L4-Q6",
@@ -1919,6 +2217,11 @@ export const finSection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "After 8 years without shopping around, other insurers may offer significantly lower rates. Loyalty doesn't always equal savings.",
+            distractorExplanations: {
+              0: 'After 8 years without shopping around, other insurers may offer significantly lower rates. Loyalty doesn\'t always equal savings.',
+              1: 'After 8 years without shopping around, other insurers may offer significantly lower rates. Loyalty doesn\'t always equal savings.',
+              3: 'After 8 years without shopping around, other insurers may offer significantly lower rates. Loyalty doesn\'t always equal savings.',
+            },
           },
         ],
       },

@@ -34,6 +34,9 @@ export const psySection7Part2: Unit[] = [
             question: 'SMART goals include being specific, measurable, achievable, relevant, and time-bound.',
             correctAnswer: true,
             explanation: 'SMART is an acronym for the 5 qualities that make goals effective.',
+            distractorExplanations: {
+              1: 'SMART is a well-established framework where goals must be specific, measurable, achievable, relevant, and time-bound.',
+            },
           },
           {
             id: 'psy-sec7-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'It\'s specific (5K), measurable (under 30 minutes), has a deadline (June 1), and is achievable and relevant.',
+            distractorExplanations: {
+              1: 'This is vague with no measurable outcome, specific deadline, or clear criteria for success.',
+              2: 'This lacks any specifics, measurement criteria, or timeline to track progress.',
+              3: 'This is too vague to be actionable; it has no measurable outcome or deadline.',
+            },
           },
           {
             id: 'psy-sec7-u6-L1-T2',
@@ -99,6 +107,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The goal lacks specifics (which grades?), a measure (how much improvement?), and a clear deadline.',
+            distractorExplanations: {
+              1: 'The goal is missing more than just relevance; it also lacks specifics, measurement, and a deadline.',
+              2: 'Achievability is not the only missing element; specifics, measurability, and a deadline are also absent.',
+              3: 'The goal is vague and lacks several SMART elements, so it is not a good goal as-is.',
+            },
           },
           {
             id: 'psy-sec7-u6-L1-Q6',
@@ -132,6 +145,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Flow is a state of complete absorption where time seems to disappear.',
             correctAnswer: true,
             explanation: 'Flow involves deep focus, loss of self-consciousness, and a distorted sense of time.',
+            distractorExplanations: {
+              1: 'Flow is characterized by complete absorption, loss of self-consciousness, and distorted time perception.',
+            },
           },
           {
             id: 'psy-sec7-u6-L2-Q2',
@@ -145,6 +161,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Mihaly Csikszentmihalyi is the founder of flow research and coined the term.',
+            distractorExplanations: {
+              1: 'Maslow is known for the hierarchy of needs, not flow research.',
+              2: 'Ekman is known for basic emotions research, not flow.',
+              3: 'Lazarus is known for cognitive appraisal theory, not flow research.',
+            },
           },
           {
             id: 'psy-sec7-u6-L2-T2',
@@ -194,6 +215,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Flow requires a balance between challenge and skill. Payment and deadlines are not core conditions.',
+            distractorExplanations: {
+              1: 'Easy tasks produce boredom, not flow; challenge must match skill level.',
+              2: 'External payment is irrelevant to flow; it depends on the match between challenge and skill.',
+              3: 'Some pressure can help flow; the key factor is challenge-skill balance, not absence of deadlines.',
+            },
           },
           {
             id: 'psy-sec7-u6-L2-Q6',
@@ -208,6 +234,10 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'When skill greatly exceeds challenge, boredom replaces flow. She needs a more challenging opponent.',
+            distractorExplanations: {
+              1: 'Flow is intrinsically driven; bigger rewards do not create the challenge-skill balance needed.',
+              2: 'Flow occurs in mental activities too, including chess, writing, and coding.',
+            },
           },
         ],
       },
@@ -232,6 +262,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Angela Duckworth found that grit predicts success better than IQ in many situations.',
             correctAnswer: true,
             explanation: 'Duckworth\'s research at West Point and spelling bees showed grit outpredicted talent and intelligence.',
+            distractorExplanations: {
+              1: 'Duckworth\'s research at West Point and in spelling bees consistently showed grit predicts success beyond IQ.',
+            },
           },
           {
             id: 'psy-sec7-u6-L3-Q2',
@@ -276,6 +309,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Growth mindset fuels perseverance because you believe effort leads to improvement. This supports long-term grit.',
+            distractorExplanations: {
+              1: 'They are related but distinct; growth mindset is a belief, while grit is sustained perseverance.',
+              2: 'Growth mindset supports grit but does not replace the need for sustained effort and persistence.',
+              3: 'Grit benefits from a growth mindset; a fixed mindset would undermine persistence after setbacks.',
+            },
           },
           {
             id: 'psy-sec7-u6-L3-T3',
@@ -296,6 +334,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Grit is perseverance toward meaningful long-term goals. Student B sticks with something that serves her purpose. Student A wisely redirected.',
+            distractorExplanations: {
+              1: 'Dropping difficult pursuits is the opposite of grit; grit requires sticking with long-term goals.',
+              2: 'Only one student shows sustained commitment to a meaningful long-term goal.',
+              3: 'Student B demonstrates grit through persistent effort toward a meaningful goal despite difficulty.',
+            },
           },
           {
             id: 'psy-sec7-u6-L3-Q6',
@@ -309,6 +352,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Duckworth found that grit scores predicted which cadets would survive West Point\'s grueling Beast Barracks training.',
+            distractorExplanations: {
+              0: 'Harvard Business School was not the institution studied in Duckworth\'s grit research.',
+              2: 'Stanford Medical School was not the setting for Duckworth\'s famous grit study.',
+              3: 'MIT Engineering Program was not where Duckworth measured grit\'s predictive power.',
+            },
           },
         ],
       },
@@ -333,6 +381,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Research shows procrastination is primarily an emotional regulation problem, not a time management issue.',
             correctAnswer: true,
             explanation: 'People procrastinate to avoid negative emotions associated with the task, not because they can\'t manage time.',
+            distractorExplanations: {
+              1: 'Research shows procrastination is about avoiding negative emotions associated with the task, not poor time management.',
+            },
           },
           {
             id: 'psy-sec7-u6-L4-Q2',
@@ -346,6 +397,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Procrastination is driven by the desire to avoid uncomfortable feelings like anxiety, boredom, or self-doubt.',
+            distractorExplanations: {
+              1: 'People procrastinate regardless of how much free time they have; it is emotion-driven.',
+              2: 'Procrastination affects people of all intelligence levels; it is an emotional regulation issue.',
+              3: 'While some enjoy urgency, the primary driver is avoiding unpleasant emotions, not seeking thrills.',
+            },
           },
           {
             id: 'psy-sec7-u6-L4-T2',
@@ -397,6 +453,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'She avoided the negative emotions of writing by choosing something immediately pleasant. The guilt afterward is the long-term cost.',
+            distractorExplanations: {
+              1: 'She chose social media over the paper, which is mood repair, not a genuine need for rest.',
+              2: 'Skill level was not the issue; she was avoiding the negative emotions associated with starting.',
+              3: 'Spending 3 hours on social media instead of working indicates poor self-regulation, not good management.',
+            },
           },
           {
             id: 'psy-sec7-u6-L4-Q6',
@@ -410,6 +471,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Starting is the hardest part. Once you commit to just 2 minutes, the negative emotions fade and you often keep going.',
+            distractorExplanations: {
+              1: 'The rule is about starting small, not claiming all tasks take only 2 minutes.',
+              2: 'The rule says to start immediately for 2 minutes, not to wait 2 minutes before beginning.',
+              3: 'Procrastination can last much longer than 2 minutes; the rule is about overcoming the start barrier.',
+            },
           },
         ],
       },
@@ -553,6 +619,9 @@ export const psySection7Part2: Unit[] = [
             question: 'A stressor is the event or demand that triggers the stress response.',
             correctAnswer: true,
             explanation: 'Stressors are the external events or internal demands. Stress is the body\'s response to them.',
+            distractorExplanations: {
+              1: 'A stressor is defined as the external event or demand that triggers the body\'s stress response.',
+            },
           },
           {
             id: 'psy-sec7-u7-L1-Q2',
@@ -596,6 +665,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The key difference is your appraisal: eustress feels like a challenge you can handle, distress feels like a threat you can\'t.',
+            distractorExplanations: {
+              1: 'Both eustress and distress involve both body and mind; the difference is perceived manageability.',
+              2: 'Eustress is typically short-term and motivating, but duration is not the key distinction.',
+              3: 'They are distinctly different; eustress is beneficial stress while distress is harmful.',
+            },
           },
           {
             id: 'psy-sec7-u7-L1-T3',
@@ -616,6 +690,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Their different appraisals of the same event created eustress for one and distress for the other.',
+            distractorExplanations: {
+              1: 'Both athletes experienced a stress response; one just interpreted it differently.',
+              2: 'The amygdala functions normally in both; the difference is how they appraised the situation.',
+              3: 'Physical fitness influences stress tolerance but does not completely determine stress reactions.',
+            },
           },
           {
             id: 'psy-sec7-u7-L1-Q6',
@@ -629,6 +708,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Moderate stress (eustress) can enhance performance and motivation. Not all stress is harmful.',
+            distractorExplanations: {
+              1: 'Not all stress is harmful; moderate, manageable stress (eustress) can enhance performance.',
+              2: 'Stress affects both physical and mental health simultaneously.',
+              3: 'Daily hassles are a significant source of cumulative stress, not just major events.',
+            },
           },
           {
             id: 'psy-sec7-u7-L1-Q7',
@@ -664,6 +748,9 @@ export const psySection7Part2: Unit[] = [
             question: 'The fight-or-flight response is controlled by the sympathetic nervous system.',
             correctAnswer: true,
             explanation: 'The sympathetic nervous system triggers the body\'s emergency response, preparing you for action.',
+            distractorExplanations: {
+              1: 'The sympathetic nervous system activates the fight-or-flight response during perceived threats.',
+            },
           },
           {
             id: 'psy-sec7-u7-L2-Q2',
@@ -677,6 +764,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Adrenaline provides a quick energy burst and cortisol sustains the stress response.',
+            distractorExplanations: {
+              1: 'Serotonin regulates mood and melatonin regulates sleep; neither is the primary fight-or-flight hormone.',
+              2: 'Dopamine drives reward and endorphins relieve pain; neither triggers the acute stress response.',
+              3: 'Insulin regulates blood sugar and estrogen is a sex hormone; neither triggers fight-or-flight.',
+            },
           },
           {
             id: 'psy-sec7-u7-L2-T2',
@@ -735,6 +827,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'As the threat passes, the parasympathetic system gradually takes over, restoring calm and normal body function.',
+            distractorExplanations: {
+              1: 'If you are calming down, the sympathetic system is deactivating, not still fully active.',
+              2: 'Both the sympathetic and parasympathetic systems are involved during recovery.',
+              3: 'The central nervous system is always active; it does not shut down during stress recovery.',
+            },
           },
         ],
       },
@@ -759,6 +856,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Acute stress is short-term and can actually improve performance and focus.',
             correctAnswer: true,
             explanation: 'Brief stress responses boost alertness and energy, helping you handle immediate challenges effectively.',
+            distractorExplanations: {
+              1: 'Acute stress is short-term and can sharpen focus and boost performance in the moment.',
+            },
           },
           {
             id: 'psy-sec7-u7-L3-Q2',
@@ -772,6 +872,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Duration is the key difference. Acute stress is short-lived and tied to specific events. Chronic stress persists.',
+            distractorExplanations: {
+              1: 'Acute stress can be helpful; chronic stress is typically harmful. They are not opposites in that way.',
+              2: 'Both acute and chronic stress involve hormones like cortisol and adrenaline.',
+              3: 'Both types of stress affect body and mind simultaneously.',
+            },
           },
           {
             id: 'psy-sec7-u7-L3-T2',
@@ -835,6 +940,9 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Frequent illness, exhaustion, and cognitive difficulty after months of stress indicate the exhaustion stage.',
+            distractorExplanations: {
+              1: 'The resistance stage involves sustained coping, not the initial shock response described.',
+            },
           },
           {
             id: 'psy-sec7-u7-L3-Q7',
@@ -881,6 +989,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Problem-focused coping involves directly addressing the source of stress.',
             correctAnswer: true,
             explanation: 'Problem-focused coping attacks the stressor itself through actions like planning, problem-solving, or seeking information.',
+            distractorExplanations: {
+              1: 'Problem-focused coping addresses the stressor itself through direct action or planning.',
+            },
           },
           {
             id: 'psy-sec7-u7-L4-Q2',
@@ -917,6 +1028,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Emotion-focused coping is most appropriate when the stressor is beyond your control.',
+            distractorExplanations: {
+              1: 'Fixing a flat tire is a problem you can directly solve, making problem-focused coping more appropriate.',
+              2: 'Ignoring an available solution is avoidance, not effective use of emotion-focused coping.',
+              3: 'If problem-focused coping already worked, no additional coping is needed.',
+            },
           },
           {
             id: 'psy-sec7-u7-L4-Q4',
@@ -946,6 +1062,9 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Avoiding the problem and numbing feelings is avoidant coping. It provides short-term relief but makes things worse.',
+            distractorExplanations: {
+              1: 'Watching TV to avoid dealing with the project is avoidance, not healthy emotion-focused coping.',
+            },
           },
           {
             id: 'psy-sec7-u7-L4-Q6',
@@ -1093,6 +1212,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Daniel Goleman argued that emotional intelligence can be as important as IQ for success.',
             correctAnswer: true,
             explanation: 'Goleman\'s research showed that EQ predicts leadership effectiveness, relationship quality, and well-being.',
+            distractorExplanations: {
+              1: 'Goleman\'s research demonstrated that EQ can be as important as or more important than IQ for success.',
+            },
           },
           {
             id: 'psy-sec7-u8-L1-Q2',
@@ -1106,6 +1228,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'EQ is about working with emotions skillfully, not eliminating them.',
+            distractorExplanations: {
+              1: 'EQ involves understanding and using emotions effectively, not suppressing them.',
+              2: 'EQ is separate from IQ and memory; it specifically involves emotional skills.',
+              3: 'EQ includes appropriate emotional expression, not hiding emotions.',
+            },
           },
           {
             id: 'psy-sec7-u8-L1-T2',
@@ -1165,6 +1292,10 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Maria managed her emotional response by pausing and choosing a thoughtful reaction. That\'s the managing branch of EQ.',
+            distractorExplanations: {
+              1: 'Understanding emotions means knowing why emotions exist, but she actively regulated her response.',
+              2: 'Using emotions involves channeling feelings productively, but the scenario shows regulation.',
+            },
           },
         ],
       },
@@ -1190,6 +1321,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Self-awareness is the foundation of emotional intelligence because you must recognize emotions before managing them.',
             correctAnswer: true,
             explanation: 'You can\'t regulate what you don\'t notice. Self-awareness comes first in the EQ skill chain.',
+            distractorExplanations: {
+              1: 'Self-awareness is the foundation because you must recognize emotions before you can manage them.',
+            },
           },
           {
             id: 'psy-sec7-u8-L2-Q2',
@@ -1203,6 +1337,10 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Self-awareness means noticing your emotional states in real time and understanding what caused them.',
+            distractorExplanations: {
+              1: 'Self-awareness involves recognizing all emotions, not just positive ones.',
+              2: 'Ignoring negative emotions is the opposite of self-awareness.',
+            },
           },
           {
             id: 'psy-sec7-u8-L2-T2',
@@ -1262,6 +1400,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Kai demonstrated all three aspects of self-awareness: noticing body signals, naming the emotion, and exploring the cause.',
+            distractorExplanations: {
+              1: 'Suppressing emotions is the opposite of self-awareness; he is actively noticing and exploring them.',
+              2: 'Projection means attributing your feelings to others, which is not what he is doing.',
+              3: 'Avoidant coping means ignoring feelings; he is deliberately engaging with his emotions.',
+            },
           },
         ],
       },
@@ -1286,6 +1429,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Empathy means understanding and sharing another person\'s feelings, while sympathy means feeling sorry for them.',
             correctAnswer: true,
             explanation: 'Empathy involves emotionally connecting with someone\'s experience. Sympathy is acknowledging it from a distance.',
+            distractorExplanations: {
+              1: 'Empathy is about understanding and sharing others\' emotional states, not just your own.',
+            },
           },
           {
             id: 'psy-sec7-u8-L3-Q2',
@@ -1331,6 +1477,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Mirror neurons fire when you act AND when you observe the same action in others, potentially enabling emotional resonance.',
+            distractorExplanations: {
+              1: 'Mirror neurons are brain cells, not reflective surfaces for light.',
+              2: 'Mirror neurons fire during action and observation, not memory storage.',
+              3: 'Mirror neurons support empathy; fatigue may reduce their effectiveness but does not block them.',
+            },
           },
           {
             id: 'psy-sec7-u8-L3-T3',
@@ -1359,6 +1510,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'She first experienced emotional empathy (felt the patient\'s pain) and then compassionate empathy (was moved to comfort them).',
+            distractorExplanations: {
+              1: 'Cognitive empathy is understanding what someone feels; this person also felt and acted on it.',
+              2: 'Sympathy is feeling pity without sharing the emotion; this person shared the feeling and helped.',
+              3: 'The person clearly showed empathy by feeling with the friend and then taking helpful action.',
+            },
           },
         ],
       },
@@ -1383,6 +1539,9 @@ export const psySection7Part2: Unit[] = [
             question: 'People with high emotional intelligence tend to be better at conflict resolution.',
             correctAnswer: true,
             explanation: 'High-EQ individuals can read emotions, manage their own reactions, and find solutions that address everyone\'s needs.',
+            distractorExplanations: {
+              1: 'Research shows high EQ individuals are better at understanding perspectives and managing emotions during conflicts.',
+            },
           },
           {
             id: 'psy-sec7-u8-L4-Q2',
@@ -1396,6 +1555,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Active listening shows empathy and self-management, both key EQ skills that help resolve conflicts.',
+            distractorExplanations: {
+              0: 'Raising your voice escalates conflict and shows poor emotional regulation.',
+              2: 'Walking away without communicating avoids resolution and shows low social skill.',
+              3: 'Winning at all costs damages relationships and ignores others\' emotional needs.',
+            },
           },
           {
             id: 'psy-sec7-u8-L4-T2',
@@ -1460,6 +1624,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Manager C used empathy (acknowledging the feeling) and active listening (inviting more detail). The others dismissed the emotion.',
+            distractorExplanations: {
+              0: 'Telling someone to calm down can feel dismissive and does not demonstrate empathy.',
+              2: 'Keeping perspective is helpful but does not actively invite the person to share their feelings.',
+              3: 'The three managers showed different levels of emotional skill, not equal EQ.',
+            },
           },
         ],
       },
@@ -1602,6 +1771,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Hedonic happiness is based on pleasure, while eudaimonic happiness is based on meaning and purpose.',
             correctAnswer: true,
             explanation: 'Hedonic = pleasure and enjoyment. Eudaimonic = meaning, purpose, and personal growth.',
+            distractorExplanations: {
+              1: 'Hedonic happiness comes from pleasure while eudaimonic happiness comes from meaning and purpose.',
+            },
           },
           {
             id: 'psy-sec7-u9-L1-Q2',
@@ -1638,6 +1810,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Hedonic adaptation means the brain gets used to pleasures. The initial thrill of a new purchase fades as it becomes normal.',
+            distractorExplanations: {
+              1: 'Pleasure is a real form of happiness; it just fades quickly due to hedonic adaptation.',
+              2: 'Both types of happiness activate the brain, through different pathways.',
+              3: 'Hedonic happiness is real and measurable, not imaginary.',
+            },
           },
           {
             id: 'psy-sec7-u9-L1-Q4',
@@ -1666,6 +1843,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The deep satisfaction from meaningful work and contribution is eudaimonic happiness.',
+            distractorExplanations: {
+              1: 'She finds deep satisfaction in meaningful work, not physical pleasure.',
+              2: 'Neither type means no happiness applies; she clearly experiences well-being.',
+              3: 'Hedonic adaptation is about pleasure fading; her satisfaction comes from meaning, not adaptation.',
+            },
           },
           {
             id: 'psy-sec7-u9-L1-Q6',
@@ -1679,6 +1861,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Well-being research consistently shows that a mix of pleasure and purpose produces the greatest life satisfaction.',
+            distractorExplanations: {
+              1: 'Hedonic pleasures alone fade quickly; lasting happiness requires meaning too.',
+              2: 'Purpose without any enjoyment leads to burnout, not optimal happiness.',
+              3: 'Neutrality is not the path to happiness; both positive experiences and meaning contribute.',
+            },
           },
         ],
       },
@@ -1703,6 +1890,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Set point theory suggests that after major life events, happiness tends to return to a baseline level.',
             correctAnswer: true,
             explanation: 'Research shows people adapt to both positive and negative events, returning toward their natural happiness set point.',
+            distractorExplanations: {
+              1: 'Set point theory proposes that happiness returns to a baseline after major events, positive or negative.',
+            },
           },
           {
             id: 'psy-sec7-u9-L2-Q2',
@@ -1716,6 +1906,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Twin studies suggest genetics account for roughly 50% of the variation in baseline happiness levels.',
+            distractorExplanations: {
+              1: 'Income affects happiness only up to a point; it is not the primary determinant of baseline happiness.',
+              2: 'Country of residence matters less than genetics and intentional activities for happiness baseline.',
+              3: 'Social media friend count is a poor predictor of genuine happiness.',
+            },
           },
           {
             id: 'psy-sec7-u9-L2-T2',
@@ -1766,6 +1961,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Research suggests roughly 50% is genetic, 10% is circumstances, and 40% comes from intentional activities and mindset.',
+            distractorExplanations: {
+              0: 'About 10% is attributed to life circumstances, not intentional activities.',
+              2: 'About 90% would leave almost no room for genetics, which research shows accounts for about 50%.',
+              3: 'Intentional activities do account for a meaningful portion, not zero percent.',
+            },
           },
           {
             id: 'psy-sec7-u9-L2-Q6',
@@ -1780,6 +1980,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Hedonic adaptation causes the initial pleasure of a positive change to fade as you adjust to the new normal.',
+            distractorExplanations: {
+              1: 'The initial happiness was real; it faded due to adaptation, not because it was never felt.',
+              2: 'Money can increase happiness temporarily; the issue is that the boost fades over time.',
+              3: 'Genetics influence baseline happiness but do not prevent feeling any happiness from a raise.',
+            },
           },
         ],
       },
@@ -1805,6 +2010,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Research shows that gratitude practices can improve sleep and reduce symptoms of depression.',
             correctAnswer: true,
             explanation: 'Multiple studies confirm that regular gratitude practice produces measurable improvements in sleep quality and mood.',
+            distractorExplanations: {
+              1: 'Multiple studies confirm that regular gratitude practices improve sleep quality and reduce depression symptoms.',
+            },
           },
           {
             id: 'psy-sec7-u9-L3-Q2',
@@ -1818,6 +2026,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The "three good things" journal exercise is one of the most well-studied positive psychology interventions.',
+            distractorExplanations: {
+              1: 'Buying things provides temporary hedonic pleasure, not lasting gratitude.',
+              2: 'Downward comparison is different from genuine gratitude and can foster superiority rather than appreciation.',
+              3: 'Ignoring negative events is avoidance, not gratitude; gratitude acknowledges good alongside challenges.',
+            },
           },
           {
             id: 'psy-sec7-u9-L3-T2',
@@ -1867,6 +2080,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Expressing gratitude creates a positive cycle: the receiver feels valued and the expresser feels connected.',
+            distractorExplanations: {
+              1: 'Receiving gratitude also makes the receiver feel valued and appreciated.',
+              2: 'Gratitude benefits both parties in the interaction, not just the expresser.',
+              3: 'Research shows measurable positive effects of gratitude on relationship quality.',
+            },
           },
           {
             id: 'psy-sec7-u9-L3-Q6',
@@ -1881,6 +2099,10 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Regular gratitude practice shifts attentional habits. Over time, the brain naturally begins to notice more positive events.',
+            distractorExplanations: {
+              1: 'Gratitude practice trains the brain to notice positives; negativity bias is counteracted, not strengthened.',
+              2: 'The journal clearly shifted their attention toward positive events, showing a measurable effect.',
+            },
           },
         ],
       },
@@ -1905,6 +2127,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Martin Seligman founded positive psychology to study human strengths and well-being, not just mental illness.',
             correctAnswer: true,
             explanation: 'Seligman argued psychology should study flourishing and strengths, not only disorders and weaknesses.',
+            distractorExplanations: {
+              1: 'Seligman founded positive psychology to study what makes life worth living, beyond just treating mental illness.',
+            },
           },
           {
             id: 'psy-sec7-u9-L4-Q2',
@@ -1942,6 +2167,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Achievement represents the drive to accomplish goals and feel competent. It\'s the 5th pillar of PERMA.',
+            distractorExplanations: {
+              0: 'A stands for Achievement, not Awareness, in the PERMA model.',
+              2: 'A stands for Achievement, not Acceptance, in Seligman\'s framework.',
+              3: 'A stands for Achievement, not Adaptation, in the PERMA model.',
+            },
           },
           {
             id: 'psy-sec7-u9-L4-T3',
@@ -1978,6 +2208,9 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'He has positive emotions and engagement but lacks the R in PERMA: strong, meaningful relationships.',
+            distractorExplanations: {
+              1: 'He has hobbies (gaming), so engagement is present; meaningful connections are what he lacks.',
+            },
           },
         ],
       },
@@ -2132,6 +2365,12 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Lazarus argued that your cognitive appraisal of a situation determines which emotion you feel.',
+            distractorExplanations: {
+              0: 'James-Lange says body reacts first then emotion follows, not that interpretation determines emotion.',
+              1: 'Cannon-Bard says body and emotion occur simultaneously, not that interpretation creates the emotion.',
+              3: 'Drive theory explains motivation from biological needs, not how interpretation shapes emotions.',
+              4: 'Competence is a concept from self-determination theory, not an emotion theory.',
+            },
           },
           {
             id: 'psy-sec7-u10-L1-Q3',
@@ -2163,6 +2402,9 @@ export const psySection7Part2: Unit[] = [
             question: 'Chronic stress can physically shrink the prefrontal cortex and enlarge the amygdala.',
             correctAnswer: true,
             explanation: 'Prolonged stress causes measurable brain changes that impair emotional regulation.',
+            distractorExplanations: {
+              1: 'Chronic stress physically alters brain structure, shrinking the PFC and enlarging the amygdala.',
+            },
           },
           {
             id: 'psy-sec7-u10-L1-Q6',
@@ -2177,6 +2419,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The external payment shifted her motivation from internal enjoyment to external reward.',
+            distractorExplanations: {
+              1: 'She loved painting before payments began, showing clear intrinsic motivation existed.',
+              2: 'Drive theory involves biological needs; this is about external rewards undermining internal motivation.',
+              3: 'Self-actualization involves reaching full potential, not losing interest in a previously loved activity.',
+            },
           },
           {
             id: 'psy-sec7-u10-L1-Q7',
@@ -2190,6 +2437,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When the situation can\'t be changed (loss, illness), managing your emotional response is the most effective approach.',
+            distractorExplanations: {
+              0: 'Problem-focused coping works best when you can change the situation directly.',
+              2: 'Avoidant coping typically worsens stress over time by not addressing it.',
+              3: 'Some form of coping is needed; doing nothing when facing unchangeable stressors increases distress.',
+            },
           },
         ],
       },
@@ -2221,6 +2473,10 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'She used multiple EQ and emotion regulation skills in sequence: awareness, labeling, reappraisal, and management.',
+            distractorExplanations: {
+              1: 'Fight-or-flight, drive theory, and hedonic adaptation do not explain self-awareness or reappraisal.',
+              2: 'Misattribution involves mislabeling arousal, which is not what is described in this scenario.',
+            },
           },
           {
             id: 'psy-sec7-u10-L2-Q2',
@@ -2234,6 +2490,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Both growth mindset and cognitive reappraisal involve changing how you interpret a negative event.',
+            distractorExplanations: {
+              1: 'Hedonic adaptation is about getting used to pleasure, not about reframing failure productively.',
+              2: 'Fight-or-flight is a stress response, not a learning strategy.',
+              3: 'Set point theory is about happiness baselines returning to normal, not about learning from failure.',
+            },
           },
           {
             id: 'psy-sec7-u10-L2-Q3',
@@ -2257,6 +2518,11 @@ export const psySection7Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'PERMA helps identify which aspects of well-being are lacking. Material stability alone doesn\'t create fulfillment.',
+            distractorExplanations: {
+              1: 'Simply being grateful does not address the structural causes of unhappiness.',
+              2: 'Higher pay helps only temporarily due to hedonic adaptation; PERMA addresses deeper well-being.',
+              3: 'Medication may be appropriate for clinical depression but does not address missing life pillars.',
+            },
           },
           {
             id: 'psy-sec7-u10-L2-Q5',
@@ -2301,6 +2567,9 @@ export const psySection7Part2: Unit[] = [
             question: 'The best leaders tend to score higher on emotional intelligence than on technical skills alone.',
             correctAnswer: true,
             explanation: 'Goleman\'s research consistently shows that EQ is a stronger predictor of leadership effectiveness than IQ or technical expertise.',
+            distractorExplanations: {
+              1: 'Research consistently shows that high EQ is a stronger predictor of leadership success than technical skills alone.',
+            },
           },
         ],
       },

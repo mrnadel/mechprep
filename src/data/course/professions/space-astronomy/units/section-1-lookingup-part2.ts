@@ -33,6 +33,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Astronomers avoid using kilometers for most cosmic distances because the numbers become unmanageably large.",
             correctAnswer: true,
             explanation: "When distances reach trillions of kilometers, the numbers lose all intuitive meaning. Special units make them easier to compare.",
+            distractorExplanations: {
+              1: 'Kilometers are perfectly accurate in space; the problem is the numbers become unmanageably large.',
+            },
           },
           {
             id: "sp-sec1-u5-L1-Q2",
@@ -46,6 +49,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Kilometers work fine for accuracy. The problem is that writing trillions of them is impractical.",
+            distractorExplanations: {
+              1: 'Kilometers are not inaccurate in space; they are just inconveniently large numbers.',
+              2: 'Light does travel distances measurable in km; the issue is the numbers get too large.',
+              3: 'Space distances change constantly as objects orbit; they are not always the same.',
+            },
           },
           {
             id: "sp-sec1-u5-L1-T2",
@@ -59,6 +67,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Astronomers use only one special distance unit for everything in the universe.",
             correctAnswer: false,
             explanation: "They use at least three: AU for our solar system, light-years for nearby stars, and parsecs for galaxies and beyond.",
+            distractorExplanations: {
+              0: 'Astronomers use multiple distance units (AU, light-year, parsec) suited to different scales.',
+            },
           },
           {
             id: "sp-sec1-u5-L1-Q4",
@@ -107,6 +118,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "If light takes 8 minutes to arrive, the Sun is 8 light-minutes from Earth. Distance and light travel time are directly linked.",
+            distractorExplanations: {
+              0: 'The Sun\'s speed of motion is unrelated to the 8-minute light travel time.',
+              1: 'Sunlight is not weaker than starlight; the 8 minutes tells us about distance, not intensity.',
+              2: 'While the Sun is the closest star, the 8-minute fact specifically tells us about the distance in light-minutes.',
+            },
           },
         ],
       },
@@ -131,6 +147,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "One AU is approximately 150 million km.",
             correctAnswer: true,
             explanation: "1 AU equals roughly 150 million km (93 million miles), the average Earth-to-Sun distance.",
+            distractorExplanations: {
+              1: 'One AU is indeed approximately 150 million km, the standard definition of this unit.',
+            },
           },
           {
             id: "sp-sec1-u5-L2-Q2",
@@ -183,6 +202,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "268,000 AU is technically correct, but it's unwieldy. Saying 4.24 light-years is much clearer.",
+            distractorExplanations: {
+              0: 'The number 268,000 is not too small; it\'s actually inconveniently large.',
+              1: 'AU works for any distance technically; the issue is the resulting number is too large to compare easily.',
+              2: 'Stars can be measured in AU; the problem is the numbers become impractically large.',
+            },
           },
           {
             id: "sp-sec1-u5-L2-Q6",
@@ -216,6 +240,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "A light-year is a unit of time.",
             correctAnswer: false,
             explanation: "A light-year measures distance, not time. It's how far light travels in one year.",
+            distractorExplanations: {
+              0: 'Despite having "year" in its name, a light-year measures distance, not time.',
+            },
           },
           {
             id: "sp-sec1-u5-L3-Q2",
@@ -229,6 +256,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Light covers about 9.46 trillion km in one year. That's the definition of a light-year.",
+            distractorExplanations: {
+              1: '150 million km is 1 AU (Earth-Sun distance), far smaller than a light-year.',
+              2: '384,000 km is the Earth-Moon distance, a tiny fraction of a light-year.',
+              3: '1 billion km is less than 1% of a light-year.',
+            },
           },
           {
             id: "sp-sec1-u5-L3-T2",
@@ -249,6 +281,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "At 25 light-years away, the light took 25 years to reach you. You see Vega as it looked 25 years ago.",
+            distractorExplanations: {
+              1: 'Light travels at a finite speed and is not instantaneous over interstellar distances.',
+              2: 'Twenty-five million years would mean the star is 25 million light-years away, not 25.',
+              3: 'The distance directly tells you the light travel time: 25 light-years means 25 years old.',
+            },
           },
           {
             id: "sp-sec1-u5-L3-Q4",
@@ -296,6 +333,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The light traveled for 2 million years to reach us. We see that galaxy as it looked 2 million years ago.",
+            distractorExplanations: {
+              1: 'Two thousand years is far too short; the galaxy is 2 million light-years away, not 2 thousand.',
+              2: 'Two billion years would require a distance of 2 billion light-years, not 2 million.',
+              3: 'Light from 2 million light-years away takes 2 million years to arrive, not just one year.',
+            },
           },
         ],
       },
@@ -320,6 +362,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "One parsec is about 3.26 light-years.",
             correctAnswer: true,
             explanation: "A parsec equals roughly 3.26 light-years, or about 31 trillion km.",
+            distractorExplanations: {
+              1: 'One parsec is indeed about 3.26 light-years; this is the standard conversion.',
+            },
           },
           {
             id: "sp-sec1-u5-L4-Q2",
@@ -347,6 +392,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "As Earth moves from one side of its orbit to the other, nearby stars appear to shift position slightly. That's parallax.",
+            distractorExplanations: {
+              0: 'Stars\' own motion through the galaxy is far too slow to cause measurable parallax shifts over 6 months.',
+              1: 'Light bending around planets is gravitational lensing, not stellar parallax.',
+              2: 'The Moon does not block enough starlight to cause the systematic shift seen in parallax.',
+            },
           },
           {
             id: "sp-sec1-u5-L4-Q4",
@@ -361,6 +411,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A larger parallax shift means the star is closer. Star A shows more apparent movement because it's nearer to us.",
+            distractorExplanations: {
+              1: 'A smaller parallax shift indicates the star is farther away, not closer.',
+              2: 'Different parallax values mean different distances; they are not the same distance.',
+              3: 'Parallax directly reveals distance: larger shift equals closer star.',
+            },
           },
           {
             id: "sp-sec1-u5-L4-T3",
@@ -380,6 +435,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Distance = 1 / parallax. So 1 / 0.5 = 2 parsecs. The formula is beautifully simple.",
+            distractorExplanations: {
+              0: 'You divide 1 by the parallax, not use the parallax value directly; 1/0.5 = 2, not 0.5.',
+              1: 'Five parsecs would require a parallax of 0.2 arcseconds, not 0.5.',
+              2: 'Ten parsecs would require a parallax of 0.1 arcseconds, not 0.5.',
+            },
           },
           {
             id: "sp-sec1-u5-L4-Q6",
@@ -413,6 +473,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "You would use AU to describe the distance to another galaxy.",
             correctAnswer: false,
             explanation: "Galaxies are millions of light-years away. AU is only practical for distances within our solar system.",
+            distractorExplanations: {
+              0: 'AU is designed for solar system scales; galaxy distances require light-years or megaparsecs.',
+            },
           },
           {
             id: "sp-sec1-u5-L5-Q2",
@@ -426,6 +489,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Neptune is about 30 AU from the Sun. That's comfortably within the AU range.",
+            distractorExplanations: {
+              1: 'Light-years are far too large for solar system distances; Neptune is only 30 AU away.',
+              2: 'Parsecs are used for stellar distances, not for planets within our solar system.',
+              3: 'Megaparsecs are used for galaxy-scale distances, vastly oversized for Neptune.',
+            },
           },
           {
             id: "sp-sec1-u5-L5-T2",
@@ -479,6 +547,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Each rung of the ladder extends the range. Parallax works nearby. Other methods, calibrated against parallax, reach further out.",
+            distractorExplanations: {
+              0: 'The cosmic distance ladder is not named after a person; it\'s a metaphor for stacking methods.',
+              1: 'Distances don\'t increase in equal steps; each method covers a different, overlapping range.',
+              2: 'Telescopes come in many shapes but none resemble ladders; the name is a metaphor.',
+            },
           },
           {
             id: "sp-sec1-u5-L5-Q7",
@@ -527,6 +600,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "You need a telescope to start stargazing.",
             correctAnswer: false,
             explanation: "Your unaided eyes can see thousands of stars, 5 planets, meteor showers, and the Milky Way. A telescope is great but not required.",
+            distractorExplanations: {
+              0: 'Your naked eyes are enough to see thousands of stars, planets, and the Milky Way without any telescope.',
+            },
           },
           {
             id: "sp-sec1-u6-L1-Q2",
@@ -540,6 +616,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Your eyes need about 20 minutes to fully adjust to the dark. Without that patience, you'll miss most of the sky.",
+            distractorExplanations: {
+              0: 'An expensive telescope won\'t help if your eyes aren\'t dark-adapted; patience matters more.',
+              1: 'A printed star chart is useful but not the most important thing; dark adaptation is.',
+              2: 'Standard binoculars don\'t have night vision; your eyes\' own adaptation is the key factor.',
+            },
           },
           {
             id: "sp-sec1-u6-L1-T2",
@@ -586,6 +667,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "When you stand or sit still for a long time, your body generates less heat. Night air feels colder than daytime air at the same temperature.",
+            distractorExplanations: {
+              1: 'Space doesn\'t directly make ground-level air colder; you feel cold because you\'re standing still.',
+              2: 'Star temperatures have no effect on your comfort while stargazing on Earth.',
+              3: 'Telescope function has nothing to do with how warm you are dressed.',
+            },
           },
           {
             id: "sp-sec1-u6-L1-Q6",
@@ -618,6 +704,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Light pollution is caused by artificial light scattering in the atmosphere.",
             correctAnswer: true,
             explanation: "Streetlights, signs, and buildings send light upward, where it bounces off particles in the air and brightens the sky.",
+            distractorExplanations: {
+              1: 'Artificial light scattering in the atmosphere is the definition of light pollution; it\'s undeniably real.',
+            },
           },
           {
             id: "sp-sec1-u6-L2-Q2",
@@ -648,6 +737,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Even a short drive to a darker area significantly increases the number of visible stars. You don't need perfect darkness.",
+            distractorExplanations: {
+              0: 'A telescope magnifies objects but can\'t overcome light pollution that hides faint stars.',
+              1: 'A solar eclipse is unrelated to nighttime stargazing and is extremely rare.',
+              2: 'Only looking at bright stars ignores the problem; reducing light pollution reveals far more.',
+            },
           },
           {
             id: "sp-sec1-u6-L2-Q4",
@@ -676,6 +770,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A full Moon washes out fainter stars. A new Moon means the sky is as dark as it gets, perfect for seeing thousands of stars.",
+            distractorExplanations: {
+              0: 'The full Moon\'s brightness washes out faint stars, making it poor for stargazing despite lighting your path.',
+              2: 'The Moon phase significantly affects star visibility; a full Moon hides thousands of stars.',
+              3: 'Clouds block the view entirely; clear skies are essential for stargazing.',
+            },
           },
           {
             id: "sp-sec1-u6-L2-Q6",
@@ -709,6 +808,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Planets tend to shine with a steady light, while stars tend to twinkle.",
             correctAnswer: true,
             explanation: "Stars twinkle because their light passes through turbulent air. Planets appear as tiny disks, so their light is steadier.",
+            distractorExplanations: {
+              1: 'Planets do shine steadily while stars twinkle; this is a reliable way to tell them apart.',
+            },
           },
           {
             id: "sp-sec1-u6-L3-Q2",
@@ -722,6 +824,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Venus and Jupiter are the brightest objects after the Moon. They appear steady and are often visible near the horizon at sunset or sunrise.",
+            distractorExplanations: {
+              1: 'Airplanes have blinking lights and move visibly; a steady, stationary bright light is not an airplane.',
+              2: 'Bright stars like Sirius twinkle; a steady light near the horizon is more likely a planet.',
+              3: 'The ISS moves across the sky in minutes; a stationary bright light is not the ISS.',
+            },
           },
           {
             id: "sp-sec1-u6-L3-T2",
@@ -780,6 +887,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Satellites reflect sunlight and appear as steady dots drifting across the sky over several minutes. Meteors are fast streaks.",
+            distractorExplanations: {
+              0: 'Shooting stars are fast streaks lasting a second, not slow-moving dots.',
+              1: 'Planets don\'t move visibly across the sky in minutes; they appear stationary.',
+              2: 'Stars don\'t move independently; the wind doesn\'t blow stars.',
+            },
           },
           {
             id: "sp-sec1-u6-L3-Q6",
@@ -803,6 +915,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A fast, brief streak of light is a meteor, a small piece of space debris burning up in Earth's atmosphere.",
+            distractorExplanations: {
+              0: 'Satellites move slowly and steadily over minutes, not as a one-second flash.',
+              1: 'Stars don\'t visibly explode in the night sky; a bright flash lasting one second is a meteor.',
+              3: 'Planets don\'t suddenly appear as a streak; they are steady dots that barely move.',
+            },
           },
         ],
       },
@@ -827,6 +944,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Star apps use your phone's sensors to show what's in the sky where you point.",
             correctAnswer: true,
             explanation: "These apps combine GPS (your location), a compass (direction you're facing), and an accelerometer (your phone's tilt) to overlay labels on the sky.",
+            distractorExplanations: {
+              1: 'Star apps do use phone sensors to identify and label objects in the direction you point.',
+            },
           },
           {
             id: "sp-sec1-u6-L4-Q2",
@@ -840,6 +960,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Stellarium is one of the most popular free planetarium apps. It works on phones and computers.",
+            distractorExplanations: {
+              0: 'Weather Channel shows weather forecasts, not star maps or constellation overlays.',
+              1: 'Google Maps is for terrestrial navigation, not for identifying objects in the night sky.',
+              3: 'Spotify is a music streaming app and has nothing to do with astronomy.',
+            },
           },
           {
             id: "sp-sec1-u6-L4-T2",
@@ -867,6 +992,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Your eyes are least sensitive to red light in the dark. A red screen lets you read the app without losing your ability to see faint stars.",
+            distractorExplanations: {
+              1: 'Red light doesn\'t look like stars; it\'s used specifically to preserve night vision.',
+              2: 'Battery drain is not the reason for using red screens; preserving dark adaptation is.',
+              3: 'Mars\'s color is coincidental; red screens are used because they don\'t reset night vision.',
+            },
           },
           {
             id: "sp-sec1-u6-L4-T3",
@@ -895,6 +1025,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Night mode dims the screen and uses red light, so you can check the app without ruining 20 minutes of dark adaptation.",
+            distractorExplanations: {
+              1: 'Closing one eye helps slightly but is much less effective than simply activating night mode.',
+              2: 'Skipping the app means missing an opportunity to learn what you\'re seeing.',
+              3: 'Increasing brightness would destroy your dark adaptation and is the worst option.',
+            },
           },
           {
             id: "sp-sec1-u6-L4-Q7",
@@ -902,6 +1037,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Some star apps can show you where the International Space Station will pass tonight.",
             correctAnswer: true,
             explanation: "Many apps and websites track ISS passes. The station is one of the brightest objects in the sky and easy to spot.",
+            distractorExplanations: {
+              1: 'Many star apps and dedicated websites do track ISS passes with precise timing and location.',
+            },
           },
         ],
       },
@@ -926,6 +1064,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Arriving at sunset gives your eyes enough time to adjust before full darkness.",
             correctAnswer: true,
             explanation: "If you arrive around sunset, the gradual dimming helps your eyes start adapting naturally. By the time it's fully dark, you're ready.",
+            distractorExplanations: {
+              1: 'Arriving at sunset is ideal because your eyes gradually adapt as darkness falls.',
+            },
           },
           {
             id: "sp-sec1-u6-L5-Q2",
@@ -962,6 +1103,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Start big and bright. The Moon and planets are easy anchors. From there, you can branch out to constellations and fainter objects.",
+            distractorExplanations: {
+              0: 'The faintest stars require fully adapted eyes and are a poor starting point for beginners.',
+              1: 'Memorized constellations may not be visible that night due to season or timing.',
+              3: 'Satellites are unpredictable and too specific as a first target; start with bright, obvious objects.',
+            },
           },
           {
             id: "sp-sec1-u6-L5-T3",
@@ -990,6 +1136,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "As Earth orbits the Sun, the nighttime side faces different directions. This reveals different constellations each season.",
+            distractorExplanations: {
+              0: 'Stars do not orbit Earth monthly; they are far too distant to move noticeably.',
+              2: 'Constellations don\'t move through the galaxy in any way relevant to seasonal visibility.',
+              3: 'Light pollution doesn\'t change with seasons in a way that affects which constellations appear.',
+            },
           },
           {
             id: "sp-sec1-u6-L5-Q7",
@@ -1036,6 +1187,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Stars appear to move across the sky because Earth rotates.",
             correctAnswer: true,
             explanation: "Earth spins on its axis once every 24 hours. This rotation makes the entire sky appear to turn from east to west.",
+            distractorExplanations: {
+              1: 'The apparent motion of stars is indeed caused by Earth\'s rotation, not by the stars themselves moving.',
+            },
           },
           {
             id: "sp-sec1-u7-L1-Q2",
@@ -1049,6 +1203,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Earth spins eastward. From our perspective on the surface, this makes the sky appear to rotate from east to west.",
+            distractorExplanations: {
+              0: 'Stars don\'t orbit Earth; the apparent motion is entirely due to Earth\'s rotation.',
+              1: 'The Sun has no mechanism to pull stars across the sky; the motion is from Earth spinning.',
+              3: 'Wind affects the atmosphere, not the apparent position of stars millions of km away.',
+            },
           },
           {
             id: "sp-sec1-u7-L1-T2",
@@ -1091,6 +1250,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Star trails form because Earth spins during the long exposure. Each star traces an arc across the sensor as the planet turns.",
+            distractorExplanations: {
+              1: 'Stars do move through the galaxy but far too slowly to create visible trails in a photo.',
+              2: 'A camera lens can introduce distortions, but star trails are smooth arcs caused by Earth\'s rotation.',
+              3: 'Atmospheric blurring causes twinkling, not the clean curved streaks of star trails.',
+            },
           },
           {
             id: "sp-sec1-u7-L1-Q6",
@@ -1105,6 +1269,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stars rise from the eastern horizon. Over 2 hours, Earth's rotation makes them trace arcs going upward and westward.",
+            distractorExplanations: {
+              0: 'A 2-hour exposure captures significant Earth rotation, so stars won\'t appear as static dots.',
+              2: 'Stars are bright enough to register on a long exposure; the photo won\'t be black.',
+              3: 'Stars trace curved arcs, not vertical lines, because Earth rotates around an axis.',
+            },
           },
         ],
       },
@@ -1129,6 +1298,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "All stars in the sky move the same amount during the night.",
             correctAnswer: false,
             explanation: "Stars near the celestial pole barely move. Stars far from the pole make wide arcs across the sky. It depends on position.",
+            distractorExplanations: {
+              0: 'Stars near the pole move very little while those far from it make large arcs, so movement varies by position.',
+            },
           },
           {
             id: "sp-sec1-u7-L2-Q2",
@@ -1142,6 +1314,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The celestial pole is the imaginary point on the sky directly above Earth's axis. The sky appears to rotate around it.",
+            distractorExplanations: {
+              0: 'The celestial pole is a point on the sky, not a star; the brightest star is Sirius.',
+              1: 'The center of the Milky Way is a different location entirely from the celestial pole.',
+              2: 'The highest point the Sun reaches is called the zenith of the Sun\'s arc, not the celestial pole.',
+            },
           },
           {
             id: "sp-sec1-u7-L2-T2",
@@ -1163,6 +1340,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Polaris is the brightest star in the night sky.",
             correctAnswer: false,
             explanation: "Sirius is the brightest. Polaris is moderately bright but valuable because of its position near the celestial pole, not its brightness.",
+            distractorExplanations: {
+              0: 'Sirius is the brightest star in the night sky, not Polaris; Polaris is valued for its position.',
+            },
           },
           {
             id: "sp-sec1-u7-L2-T3",
@@ -1190,6 +1370,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Polaris marks the north celestial pole. Face it, and you're facing north. This is why it's been used for navigation for centuries.",
+            distractorExplanations: {
+              1: 'Polaris is in the north, so facing it means you face north, not south.',
+              2: 'East is to your right when facing Polaris (north), not the direction you\'re facing.',
+              3: 'West is to your left when facing Polaris (north), not the direction you\'re facing.',
+            },
           },
           {
             id: "sp-sec1-u7-L2-Q7",
@@ -1204,6 +1389,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The tiny dot proves Polaris is nearly at the rotation point. Everything else circles around it because that's the sky's pivot.",
+            distractorExplanations: {
+              0: 'Distance from Earth has nothing to do with why Polaris appears stationary; it\'s about its position near the pole.',
+              2: 'The camera was pointed correctly; the circular arcs prove it was aimed at the celestial pole.',
+              3: 'Polaris is a real star about 433 light-years away, not a satellite.',
+            },
           },
         ],
       },
@@ -1228,6 +1418,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Circumpolar stars are visible all year round from their latitude.",
             correctAnswer: true,
             explanation: "Because they circle the pole without dipping below the horizon, circumpolar stars are always above the horizon at their latitude.",
+            distractorExplanations: {
+              1: 'Circumpolar stars are defined by never setting, so they are indeed visible year-round from their latitude.',
+            },
           },
           {
             id: "sp-sec1-u7-L3-Q2",
@@ -1241,6 +1434,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A star is circumpolar when its circle around the pole is small enough that it stays above the horizon all night.",
+            distractorExplanations: {
+              0: 'Stars don\'t orbit Earth closer or farther; being circumpolar is about angular distance from the celestial pole.',
+              1: 'Brightness has nothing to do with whether a star is circumpolar; it depends on position relative to the pole.',
+              3: 'Circumpolar stars are visible every night, not just during certain months.',
+            },
           },
           {
             id: "sp-sec1-u7-L3-T2",
@@ -1270,6 +1468,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Big Dipper is circumpolar. It doesn't set, but it does rotate around Polaris. By 4 AM, it will have moved to a noticeably different position.",
+            distractorExplanations: {
+              0: 'The Big Dipper is circumpolar from mid-northern latitudes and never sets below the horizon.',
+              1: 'Circumpolar stars still rotate around the pole; they don\'t stay in the exact same spot all night.',
+              3: 'The Big Dipper\'s motion is around the celestial pole, not toward or away from the Moon.',
+            },
           },
           {
             id: "sp-sec1-u7-L3-T3",
@@ -1297,6 +1500,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "At the North Pole, the celestial pole is directly overhead. Every visible star circles it without setting. All visible stars are circumpolar.",
+            distractorExplanations: {
+              0: 'At the North Pole, all visible stars circle overhead without setting, so none of it is non-circumpolar.',
+              1: 'All of the visible sky is circumpolar at the pole, not just about half.',
+              2: 'Brightness is irrelevant; at the North Pole, every visible star is circumpolar regardless of brightness.',
+            },
           },
           {
             id: "sp-sec1-u7-L3-Q7",
@@ -1304,6 +1512,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "At the equator, every visible star eventually rises and sets.",
             correctAnswer: true,
             explanation: "At the equator, both celestial poles sit on the horizon. No star circles tightly enough around either pole to avoid setting.",
+            distractorExplanations: {
+              1: 'At the equator both poles are on the horizon, so no star can avoid setting; every star rises and sets.',
+            },
           },
         ],
       },
@@ -1328,6 +1539,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "The same constellations are visible every night of the year.",
             correctAnswer: false,
             explanation: "Earth's orbit means the nighttime side faces different directions each season, revealing different constellations.",
+            distractorExplanations: {
+              0: 'Different constellations appear each season because Earth\'s orbit shifts our nighttime view.',
+            },
           },
           {
             id: "sp-sec1-u7-L4-Q2",
@@ -1341,6 +1555,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Earth orbits the Sun over 12 months. As it moves, the nighttime side points toward different groups of stars.",
+            distractorExplanations: {
+              1: 'Stars don\'t migrate; they are essentially fixed at cosmic distances.',
+              2: 'While the Sun does block certain constellations, the root cause is Earth\'s changing orbital position.',
+              3: 'Constellations don\'t orbit the Milky Way on a yearly cycle visible to us.',
+            },
           },
           {
             id: "sp-sec1-u7-L4-T2",
@@ -1394,6 +1613,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "4 minutes per night times 30 nights equals about 120 minutes (2 hours). That's enough to notice a visible change in the sky.",
+            distractorExplanations: {
+              0: 'Four minutes is the nightly shift, not the monthly total.',
+              1: 'Thirty minutes would only be about a week\'s worth of shift.',
+              2: 'Twelve hours would take about 6 months to accumulate, not just one month.',
+            },
           },
           {
             id: "sp-sec1-u7-L4-Q7",
@@ -1426,6 +1650,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "The Sun follows the same path across the sky every day of the year.",
             correctAnswer: false,
             explanation: "The Sun's path changes with the seasons. It's higher in summer and lower in winter because of Earth's axial tilt.",
+            distractorExplanations: {
+              0: 'The Sun\'s path varies significantly with the seasons due to Earth\'s 23.5-degree axial tilt.',
+            },
           },
           {
             id: "sp-sec1-u7-L5-Q2",
@@ -1439,6 +1666,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Earth's 23.5-degree tilt means different hemispheres lean toward or away from the Sun as Earth orbits, changing the Sun's apparent height.",
+            distractorExplanations: {
+              0: 'The Sun does not orbit Earth; Earth orbits the Sun, and the Sun\'s apparent path changes due to tilt.',
+              1: 'The Moon has no influence on the Sun\'s position in the sky.',
+              2: 'Earth\'s distance from the Sun barely changes and doesn\'t cause seasons; axial tilt does.',
+            },
           },
           {
             id: "sp-sec1-u7-L5-T2",
@@ -1502,6 +1734,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "December 21 is the winter solstice. At 51 degrees north, the day is very short, roughly 8 hours of daylight. Sunset comes early.",
+            distractorExplanations: {
+              0: 'December 21 is the shortest day at 51 degrees north; the Sun sets early, not late at 10 PM.',
+              2: 'Day length varies dramatically with the seasons; 6 PM is not a fixed sunset time.',
+              3: 'At 51 degrees north, the Sun always rises and sets; it only stays up 24 hours near the poles.',
+            },
           },
         ],
       },
@@ -1544,6 +1781,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "One AU is the average Earth-to-Sun distance, about 150 million km.",
+            distractorExplanations: {
+              1: 'The Earth-Moon distance is only about 384,000 km, far smaller than 1 AU.',
+              2: 'A light-year is much larger than an AU; it\'s the distance light travels in one year.',
+              3: 'Earth\'s orbital diameter would be 2 AU, not 1 AU.',
+            },
           },
           {
             id: "sp-sec1-u8-L1-Q2",
@@ -1551,6 +1793,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "A light-year is a unit of time.",
             correctAnswer: false,
             explanation: "A light-year measures distance: how far light travels in one year (about 9.46 trillion km).",
+            distractorExplanations: {
+              0: 'Despite containing "year" in its name, a light-year is a unit of distance, not time.',
+            },
           },
           {
             id: "sp-sec1-u8-L1-Q3",
@@ -1601,6 +1846,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Saturn is about 9.5 AU from the Sun. For solar system distances, AU is the natural choice.",
+            distractorExplanations: {
+              0: 'Light-years are far too large for solar system distances like Saturn.',
+              1: 'Parsecs are designed for stellar and galactic distances, not planets in our solar system.',
+              3: 'While kilometers work, AU is the standard and more intuitive unit for solar system distances.',
+            },
           },
         ],
       },
@@ -1639,6 +1889,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Venus is the brightest planet. It's so bright it's often mistaken for an aircraft light.",
+            distractorExplanations: {
+              0: 'Mars varies in brightness but is generally much dimmer than Venus.',
+              2: 'Jupiter is the second-brightest planet but doesn\'t match Venus\'s brilliance.',
+              3: 'Saturn is visible but significantly fainter than Venus.',
+            },
           },
           {
             id: "sp-sec1-u8-L2-Q3",
@@ -1646,6 +1901,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "A new Moon night is the worst time for stargazing.",
             correctAnswer: false,
             explanation: "A new Moon means no moonlight to wash out stars. It's the best time for stargazing.",
+            distractorExplanations: {
+              0: 'A new Moon provides the darkest skies, making it the best time for stargazing, not the worst.',
+            },
           },
           {
             id: "sp-sec1-u8-L2-Q4",
@@ -1669,6 +1927,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A very bright, non-twinkling, stationary light near the horizon after sunset is a classic planet sighting. Venus and Jupiter are the most common.",
+            distractorExplanations: {
+              0: 'Satellites move across the sky and don\'t remain stationary near the horizon.',
+              2: 'Polaris is in the north, not low in the western sky after sunset.',
+              3: 'Meteors are fast streaks lasting seconds, not stationary bright objects.',
+            },
           },
           {
             id: "sp-sec1-u8-L2-Q6",
@@ -1690,6 +1953,11 @@ export const spaceSection1Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Satellites appear as steady dots moving across the sky over several minutes. Meteors are fast streaks. Planets and stars don't drift visibly.",
+            distractorExplanations: {
+              0: 'Planets appear stationary during a single viewing session; they don\'t drift across the sky.',
+              1: 'Shooting stars are fast one-second streaks, not slow-moving dots.',
+              3: 'Circumpolar stars move only in slow circles around the pole, not as a drifting dot across the sky.',
+            },
           },
         ],
       },
@@ -1722,6 +1990,9 @@ export const spaceSection1Part2: Unit[] = [
             question: "Polaris appears nearly stationary because it sits close to the north celestial pole.",
             correctAnswer: true,
             explanation: "Polaris is near the point the sky rotates around, so it barely moves while all other stars circle it.",
+            distractorExplanations: {
+              1: 'Polaris does appear nearly stationary because of its proximity to the celestial pole; this is well-established.',
+            },
           },
           {
             id: "sp-sec1-u8-L3-Q3",

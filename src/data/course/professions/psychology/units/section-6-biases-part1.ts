@@ -34,6 +34,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Heuristics are mental shortcuts the brain uses for quick decisions.',
             correctAnswer: true,
             explanation: 'Heuristics are exactly that: fast mental shortcuts that trade accuracy for speed.',
+            distractorExplanations: {
+              1: 'Heuristics are indeed mental shortcuts used for quick decisions, not careful analytical processes.',
+            },
           },
           {
             id: 'psy-sec6-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Heuristics speed up decision-making by simplifying complex problems.',
+            distractorExplanations: {
+              0: 'Heuristics trade accuracy for speed, so they do not guarantee perfect answers.',
+              2: 'Heuristics speed up thinking rather than slowing it down.',
+              3: 'Heuristics actually introduce systematic errors rather than eliminating them.',
+            },
           },
           {
             id: 'psy-sec6-u1-L1-T2',
@@ -76,6 +84,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Using crowd behavior as a shortcut for quality is a common heuristic.',
+            distractorExplanations: {
+              1: 'The person made a quick judgment based on crowd behavior, not by researching online.',
+              2: 'The choice was driven by the crowd signal, not random selection.',
+              3: 'The person chose a coffee shop, so they did not avoid both.',
+            },
           },
           {
             id: 'psy-sec6-u1-L1-T3',
@@ -95,6 +108,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cognitive biases are systematic errors that result from relying on heuristics in situations where they don\'t work well.',
+            distractorExplanations: {
+              1: 'Heuristics continue to operate even when they produce errors; they do not stop working.',
+              2: 'The brain does not automatically correct systematic errors from heuristics.',
+              3: 'Reflexes are involuntary physical responses, not products of heuristic errors.',
+            },
           },
           {
             id: 'psy-sec6-u1-L1-Q6',
@@ -136,6 +154,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Heuristics evolved because speed was often more important than accuracy for survival.',
             correctAnswer: true,
             explanation: 'In dangerous environments, a quick "good enough" decision often beat a slow perfect one.',
+            distractorExplanations: {
+              1: 'Evolutionary pressures favored fast decisions over perfectly accurate ones in dangerous environments.',
+            },
           },
           {
             id: 'psy-sec6-u1-L2-Q2',
@@ -149,6 +170,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The brain consumes huge amounts of energy because it processes vast quantities of information continuously.',
+            distractorExplanations: {
+              0: 'The brain does not move like a muscle; its energy use comes from neural processing.',
+              2: 'Memories are stored as neural connections, not physical objects.',
+              3: 'While the brain generates heat, that is a byproduct, not the reason for its high energy use.',
+            },
           },
           {
             id: 'psy-sec6-u1-L2-T2',
@@ -187,6 +213,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Evolution is slow. Our brains still use shortcuts designed for a very different world.',
+            distractorExplanations: {
+              0: 'Modern brains are roughly the same size as ancient ones; size is not the issue.',
+              2: 'People still use heuristics constantly; they did not stop in 1900.',
+              3: 'Modern problems like financial decisions and social media are often more complex than ancient ones.',
+            },
           },
           {
             id: 'psy-sec6-u1-L2-T3',
@@ -208,6 +239,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Heuristics are valuable tools. The key is knowing when to trust them and when to slow down.',
+            distractorExplanations: {
+              1: 'Analyzing every single decision would be exhausting and impractical.',
+              2: 'Shortcuts do sometimes cause problems, so they are not always perfect.',
+              3: 'When to use shortcuts has nothing to do with the day of the week.',
+            },
           },
           {
             id: 'psy-sec6-u1-L2-Q6',
@@ -215,6 +251,9 @@ export const psySection6Part1: Unit[] = [
             question: 'The goal of studying cognitive biases is to eliminate all mental shortcuts.',
             correctAnswer: false,
             explanation: 'The goal is to recognize when shortcuts might fail, not to eliminate them entirely.',
+            distractorExplanations: {
+              0: 'The goal is to recognize when shortcuts fail, not to eliminate the useful mental tools we rely on daily.',
+            },
           },
         ],
       },
@@ -240,6 +279,9 @@ export const psySection6Part1: Unit[] = [
             question: 'System 1 thinking is fast and automatic.',
             correctAnswer: true,
             explanation: 'System 1 operates quickly and with little conscious effort.',
+            distractorExplanations: {
+              1: 'System 1 is defined by its fast, automatic nature; it is not slow or deliberate.',
+            },
           },
           {
             id: 'psy-sec6-u1-L3-Q2',
@@ -275,6 +317,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The brain defaults to the energy-efficient System 1 and only uses effortful System 2 when necessary.',
+            distractorExplanations: {
+              0: 'System 1 often gives quick good-enough answers but is not always correct.',
+              2: 'System 2 exists in all people; it is activated for deliberate, effortful thinking.',
+              3: 'System 1 is an older, more primitive mode of thinking, not a recent invention.',
+            },
           },
           {
             id: 'psy-sec6-u1-L3-Q4',
@@ -304,6 +351,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When tired, System 2 is depleted and System 1 takes over with quick, effortless decisions.',
+            distractorExplanations: {
+              0: 'System 2 would involve comparing prices and ingredients, which the tired shopper did not do.',
+              2: 'Shopping involves decision-making, which always engages thinking systems.',
+              3: 'One system typically dominates at any given time; they do not operate equally simultaneously.',
+            },
           },
           {
             id: 'psy-sec6-u1-L3-Q6',
@@ -317,6 +369,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'System 2 requires energy and concentration. Fatigue, stress, and distractions all drain it.',
+            distractorExplanations: {
+              0: 'System 2 is not needed for extremely simple tasks, so it would not fail on them.',
+              1: 'Being well-rested and focused is when System 2 works best, not when it fails.',
+              3: 'Using a calculator actually helps System 2 by offloading computation.',
+            },
           },
         ],
       },
@@ -342,6 +399,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Cognitive biases produce random, unpredictable errors.',
             correctAnswer: false,
             explanation: 'Biases are systematic. They produce the same type of error in the same type of situation, making them predictable.',
+            distractorExplanations: {
+              0: 'Cognitive biases produce systematic, predictable errors in the same type of situation, not random ones.',
+            },
           },
           {
             id: 'psy-sec6-u1-L4-Q2',
@@ -355,6 +415,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Because biases follow patterns, we can learn to recognize and correct them.',
+            distractorExplanations: {
+              0: 'Predictable errors are easier to study precisely because they follow patterns.',
+              2: 'Cognitive biases affect everyone regardless of intelligence.',
+              3: 'Predictable errors are still errors; they are not secretly correct answers.',
+            },
           },
           {
             id: 'psy-sec6-u1-L4-T2',
@@ -390,6 +455,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Cognitive biases are universal. Education helps you spot them, but it doesn\'t make you immune.',
+            distractorExplanations: {
+              0: 'Cognitive biases affect all types of decisions, not just emotional ones.',
+              1: 'Education helps you spot biases but does not make you immune to them.',
+              3: 'Cognitive biases are found across all cultures, not only Western ones.',
+            },
           },
           {
             id: 'psy-sec6-u1-L4-T3',
@@ -419,6 +489,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Believing you\'re objective while others are biased is the classic bias blind spot.',
+            distractorExplanations: {
+              1: 'Anchoring bias involves being influenced by initial numbers, which is not what the manager is doing.',
+              2: 'Confirmation bias involves seeking supporting evidence, not claiming personal objectivity.',
+              3: 'The availability heuristic involves overestimating frequency of easily recalled events.',
+            },
           },
         ],
       },
@@ -558,6 +633,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Anchoring bias means the first information you receive has outsized influence on your judgment.',
             correctAnswer: true,
             explanation: 'The "anchor" sets a reference point that pulls all later estimates toward it.',
+            distractorExplanations: {
+              1: 'Anchoring bias is well-documented: the first piece of information disproportionately shapes later judgments.',
+            },
           },
           {
             id: 'psy-sec6-u2-L1-Q2',
@@ -571,6 +649,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The $50,000 anchor makes $30,000 feel like a deal, even if $30,000 is still overpriced.',
+            distractorExplanations: {
+              1: 'Seeing a higher price first makes the lower price feel like a deal, not overpriced.',
+              2: 'The first car creates a reference point that changes how the second car feels.',
+              3: 'Anchoring means the first price sticks in memory and influences judgment of the next.',
+            },
           },
           {
             id: 'psy-sec6-u2-L1-T2',
@@ -590,6 +673,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Even random, irrelevant numbers can anchor your estimates. That\'s what makes this bias so sneaky.',
+            distractorExplanations: {
+              0: 'Research shows anchoring works even with completely irrelevant numbers.',
+              2: 'Anchoring affects people of all mathematical abilities.',
+              3: 'Knowing about anchoring reduces but does not eliminate its effect.',
+            },
           },
           {
             id: 'psy-sec6-u2-L1-Q4',
@@ -618,6 +706,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'By stating a high first number, the candidate anchored the negotiation upward.',
+            distractorExplanations: {
+              1: 'Setting the anchor first is a strength in negotiation, not a weakness.',
+              2: 'Anchoring research shows the first number significantly influences the final outcome.',
+              3: 'Anchoring applies to all types of numerical negotiation, including salaries.',
+            },
           },
           {
             id: 'psy-sec6-u2-L1-Q6',
@@ -625,6 +718,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Knowing about anchoring bias makes you completely immune to it.',
             correctAnswer: false,
             explanation: 'Awareness reduces anchoring\'s effect, but even experts remain somewhat susceptible.',
+            distractorExplanations: {
+              0: 'Even experts who understand anchoring bias are still influenced by anchors, just somewhat less so.',
+            },
           },
         ],
       },
@@ -649,6 +745,9 @@ export const psySection6Part1: Unit[] = [
             question: '"90% fat-free" and "10% fat" convey different facts.',
             correctAnswer: false,
             explanation: 'They describe the same fact. But "90% fat-free" sounds healthier because it\'s framed positively.',
+            distractorExplanations: {
+              0: 'They describe the exact same fact using different framing; the information content is identical.',
+            },
           },
           {
             id: 'psy-sec6-u2-L2-Q2',
@@ -662,6 +761,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Positive framing (survival) makes people more likely to accept a treatment than negative framing (death).',
+            distractorExplanations: {
+              0: 'The negative frame of a 10% chance of death makes people less likely to choose surgery.',
+              2: 'Research consistently shows people respond very differently to gain vs. loss framing.',
+              3: 'Both statements influence decisions because the framing activates different emotional responses.',
+            },
           },
           {
             id: 'psy-sec6-u2-L2-T2',
@@ -698,6 +802,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Loss aversion means we feel losses about twice as strongly as equivalent gains.',
+            distractorExplanations: {
+              0: 'While gain frames are appealing, loss aversion makes loss frames roughly twice as motivating.',
+              2: 'Research consistently shows loss frames have stronger effects than gain frames.',
+              3: 'Both types of frames influence behavior, but loss frames do so more powerfully.',
+            },
           },
           {
             id: 'psy-sec6-u2-L2-T3',
@@ -718,6 +827,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Both headlines use accurate data but frame it to create different emotional responses.',
+            distractorExplanations: {
+              1: 'Both outlets can use accurate data while framing it differently; framing is not lying.',
+              2: 'This involves how the same data is presented, which is framing, not anchoring.',
+              3: 'Both headlines describe the same crime statistics from different angles.',
+            },
           },
           {
             id: 'psy-sec6-u2-L2-Q6',
@@ -751,6 +865,9 @@ export const psySection6Part1: Unit[] = [
             question: 'The pain of losing $50 is roughly equal to the pleasure of gaining $50.',
             correctAnswer: false,
             explanation: 'Loss aversion means the pain of a loss is about twice as strong as the pleasure of an equal gain.',
+            distractorExplanations: {
+              0: 'Loss aversion means the pain of losing $50 is about twice as strong as the pleasure of gaining $50.',
+            },
           },
           {
             id: 'psy-sec6-u2-L3-Q2',
@@ -764,6 +881,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Research consistently shows losses are felt about 2 times more intensely than equivalent gains.',
+            distractorExplanations: {
+              0: 'Decades of research show losses and gains are not felt equally.',
+              2: 'Gains feel weaker than losses, not stronger.',
+              3: 'The typical ratio is about 2:1, not 10:1.',
+            },
           },
           {
             id: 'psy-sec6-u2-L3-T2',
@@ -802,6 +924,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Loss framing is more motivating because losing a bonus hurts more than earning one feels good.',
+            distractorExplanations: {
+              0: 'Gain framing is motivating but research shows it is weaker than loss framing.',
+              2: 'Studies consistently show loss framing produces measurably stronger behavioral effects.',
+              3: 'How a bonus is framed significantly changes employee motivation and performance.',
+            },
           },
           {
             id: 'psy-sec6-u2-L3-T3',
@@ -831,6 +958,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The gap between selling price ($7) and buying price ($3) is the classic endowment effect.',
+            distractorExplanations: {
+              1: 'No initial price was stated, so there was no anchor to set expectations.',
+              2: 'The study did not involve people seeking confirming evidence about mugs.',
+              3: 'The mug was the same physical object for both groups, not described differently.',
+            },
           },
         ],
       },
@@ -855,6 +987,9 @@ export const psySection6Part1: Unit[] = [
             question: 'The "original price" on a sale tag always reflects the item\'s true value.',
             correctAnswer: false,
             explanation: 'The "original price" is often inflated to create an anchor that makes the sale price look like a great deal.',
+            distractorExplanations: {
+              0: 'Retailers often inflate the original price to create an anchor that makes the sale price seem like a great deal.',
+            },
           },
           {
             id: 'psy-sec6-u2-L4-Q2',
@@ -868,6 +1003,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The $200 is an anchor. It exists to make $89 feel like an incredible bargain.',
+            distractorExplanations: {
+              0: 'The was-price rarely reflects actual manufacturing cost; it is a marketing anchor.',
+              2: 'A high original price tag does not prove quality; it just anchors your perception.',
+              3: 'This pricing technique predates modern inflation adjustments and is a deliberate anchoring strategy.',
+            },
           },
           {
             id: 'psy-sec6-u2-L4-T2',
@@ -889,6 +1029,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The medium at $7 makes the large at $7.50 seem like a steal, pushing people toward the most profitable option.',
+            distractorExplanations: {
+              0: 'Some people do buy the small; the decoy is the option designed to make another look better.',
+              2: 'The large is the target, not the decoy; the theater wants you to buy it.',
+              3: 'The pricing gap between medium and large is suspiciously small, which is a classic decoy setup.',
+            },
           },
           {
             id: 'psy-sec6-u2-L4-Q4',
@@ -918,6 +1063,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Knowing an item\'s real value prevents the store\'s anchor from controlling your judgment.',
+            distractorExplanations: {
+              0: 'You cannot shop without seeing prices; the key is having your own reference point.',
+              2: 'Always buying the most expensive option means anchoring traps you at the top.',
+              3: 'Most stores use sale signs; avoiding them entirely is impractical.',
+            },
           },
           {
             id: 'psy-sec6-u2-L4-T3',
@@ -1080,6 +1230,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Confirmation bias means people actively seek information that contradicts their beliefs.',
             correctAnswer: false,
             explanation: 'It\'s the opposite. People seek information that confirms what they already believe.',
+            distractorExplanations: {
+              0: 'Confirmation bias is the opposite: people seek information that confirms, not contradicts, their beliefs.',
+            },
           },
           {
             id: 'psy-sec6-u3-L1-Q2',
@@ -1093,6 +1246,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Seeking positive reviews after a purchase confirms your decision was good. That\'s classic confirmation bias.',
+            distractorExplanations: {
+              1: 'Carefully comparing all options would counteract confirmation bias, not exemplify it.',
+              2: 'Changing your mind based on evidence is rational thinking, not confirmation bias.',
+              3: 'Randomly selecting sources would avoid the selective bias, not demonstrate it.',
+            },
           },
           {
             id: 'psy-sec6-u3-L1-T2',
@@ -1132,6 +1290,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The manager\'s belief filters memory, making the one late day more memorable than 9 on-time days.',
+            distractorExplanations: {
+              1: 'The manager is not actively searching for records; they are remembering selectively.',
+              2: 'Selective interpretation involves reading ambiguous data as supporting your view, not memory distortion.',
+              3: 'The manager\\\'s belief filters their memory, which is a textbook example of confirmation bias.',
+            },
           },
           {
             id: 'psy-sec6-u3-L1-T3',
@@ -1152,6 +1315,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Actively looking for disconfirming evidence is the strongest defense against confirmation bias.',
+            distractorExplanations: {
+              0: 'Trusting your first instinct feeds confirmation bias rather than combating it.',
+              1: 'Avoiding all information is impractical and would not help make better decisions.',
+              3: 'Discussing only with people who agree creates an echo chamber that strengthens the bias.',
+            },
           },
           {
             id: 'psy-sec6-u3-L1-Q6',
@@ -1184,6 +1352,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Social media algorithms tend to show you content that challenges your views.',
             correctAnswer: false,
             explanation: 'Algorithms prioritize engagement, which means showing you content you\'re likely to agree with and react to.',
+            distractorExplanations: {
+              0: 'Social media algorithms prioritize engagement, which means showing you content you already agree with.',
+            },
           },
           {
             id: 'psy-sec6-u3-L2-Q2',
@@ -1197,6 +1368,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Echo chambers remove dissenting views, making your beliefs seem more common and correct than they are.',
+            distractorExplanations: {
+              0: 'Echo chambers limit viewpoints rather than exposing you to many different ones.',
+              2: 'Echo chambers remove critics, so you are not forced to defend your opinions.',
+              3: 'Echo chambers directly amplify confirmation bias by filtering out dissent.',
+            },
           },
           {
             id: 'psy-sec6-u3-L2-T2',
@@ -1241,6 +1417,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Echo chambers create a false sense that your perspective is universal, making you blind to valid alternatives.',
+            distractorExplanations: {
+              0: 'Echo chambers actually restrict information rather than providing too much.',
+              2: 'Echo chambers reinforce your existing views rather than forcing you to change them.',
+              3: 'Echo chambers affect rapid, emotional reactions rather than slowing down thinking.',
+            },
           },
           {
             id: 'psy-sec6-u3-L2-T3',
@@ -1285,6 +1466,9 @@ export const psySection6Part1: Unit[] = [
             question: 'The availability heuristic means we judge frequency by how easily examples come to mind.',
             correctAnswer: true,
             explanation: 'If you can quickly think of examples, your brain assumes it must be common.',
+            distractorExplanations: {
+              1: 'The availability heuristic is precisely about judging how common something is based on how easily examples come to mind.',
+            },
           },
           {
             id: 'psy-sec6-u3-L3-Q2',
@@ -1298,6 +1482,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Dramatic news coverage makes plane crashes easy to recall, so people overestimate the risk.',
+            distractorExplanations: {
+              0: 'Plane crashes are extremely rare; they are far less common than car accidents.',
+              2: 'Most people do not have accurate aviation statistics; they rely on mental impressions.',
+              3: 'Flying is statistically much safer than driving per mile traveled.',
+            },
           },
           {
             id: 'psy-sec6-u3-L3-T2',
@@ -1333,6 +1522,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Shark attacks are dramatic and memorable, so people overestimate their frequency despite their extreme rarity.',
+            distractorExplanations: {
+              0: 'Heart disease is underestimated despite being the leading cause because it lacks dramatic news coverage.',
+              2: 'Cancer is common and affects many families, so it is not typically as overestimated as rare dramatic events.',
+              3: 'Car accidents are common enough that people have a more realistic sense of their frequency.',
+            },
           },
           {
             id: 'psy-sec6-u3-L3-T3',
@@ -1361,6 +1555,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The vivid documentary made crashes highly available, inflating the perceived risk of flying.',
+            distractorExplanations: {
+              1: 'Anchoring involves a specific number influencing estimates, not a documentary creating vivid memories.',
+              2: 'Confirmation bias involves seeking evidence for existing beliefs, not having risk inflated by a film.',
+              3: 'The framing effect involves how the same information is presented, not emotional recall from media.',
+            },
           },
         ],
       },
@@ -1385,6 +1584,9 @@ export const psySection6Part1: Unit[] = [
             question: 'News coverage accurately reflects how common different events are in real life.',
             correctAnswer: false,
             explanation: 'News overrepresents dramatic, unusual events. Common causes of harm get less coverage.',
+            distractorExplanations: {
+              0: 'News overrepresents dramatic, unusual events and underrepresents common ones, distorting perceived frequency.',
+            },
           },
           {
             id: 'psy-sec6-u3-L4-Q2',
@@ -1398,6 +1600,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Dramatic stories stick in memory, making those events seem more common than they are.',
+            distractorExplanations: {
+              0: 'News organizations seek engagement, not deliberate misinformation; the bias is a structural byproduct.',
+              2: 'News specifically covers unusual events, not everyday occurrences.',
+              3: 'Most people consume enough media for the availability effect to influence their risk perception.',
+            },
           },
           {
             id: 'psy-sec6-u3-L4-T2',
@@ -1446,6 +1653,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Comparing media-driven fears to actual statistics helps correct availability bias.',
+            distractorExplanations: {
+              1: 'Kidnapping by strangers is extremely rare; the fear is driven by media coverage, not rational analysis.',
+              2: 'Not all news is fake; the issue is that coverage distorts perceived frequency of events.',
+              3: 'Children benefit from outdoor play; the extremely low risk does not justify total avoidance.',
+            },
           },
           {
             id: 'psy-sec6-u3-L4-T3',
@@ -1465,6 +1677,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Base rates are the actual statistical frequency of events, often very different from media-driven perception.',
+            distractorExplanations: {
+              0: 'An anchor rate is not a real statistical term; anchoring refers to initial reference numbers.',
+              2: 'Frame rate refers to video display speed, not event frequency in a population.',
+              3: 'Default rate is not a standard term for actual event frequency.',
+            },
           },
         ],
       },
@@ -1628,6 +1845,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Loss aversion makes the pain of accepting a loss feel worse than the rational choice to sell.',
+            distractorExplanations: {
+              0: 'Anchoring involves initial numbers influencing estimates, not reluctance to sell stocks.',
+              2: 'Confirmation bias involves seeking supporting evidence, not fear of accepting a loss.',
+              3: 'The availability heuristic involves overestimating frequency, not holding onto losing investments.',
+            },
           },
           {
             id: 'psy-sec6-u4-L1-T2',
@@ -1671,6 +1893,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The bias blind spot is the belief that you\'re more objective than others, which is itself a bias.',
+            distractorExplanations: {
+              0: 'The bias blind spot affects people of all ages, not only children.',
+              2: 'The bias blind spot is a cognitive pattern, not one that causes physical symptoms.',
+              3: 'The bias blind spot operates in individuals, not only in group settings.',
+            },
           },
           {
             id: 'psy-sec6-u4-L1-Q6',
@@ -1685,6 +1912,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The news inflated the risk (availability). The first price anchored you (anchoring). Positive reviews confirmed your choice (confirmation).',
+            distractorExplanations: {
+              1: 'The framing effect alone does not explain the news-driven fear or the post-purchase review seeking.',
+              2: 'Loss aversion alone does not explain the news influence or review-seeking behavior.',
+              3: 'Multiple biases are clearly at work here, not zero.',
+            },
           },
         ],
       },
@@ -1716,6 +1948,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Recent personal experience made the disease easy to recall, inflating the doctor\'s estimate of how common it is.',
+            distractorExplanations: {
+              1: 'No initial number was given that would serve as an anchor.',
+              2: 'The framing effect involves how information is presented, not personal experience inflating estimates.',
+              3: 'The endowment effect involves overvaluing things you own, not overestimating disease frequency.',
+            },
           },
           {
             id: 'psy-sec6-u4-L2-Q2',
@@ -1730,6 +1967,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Selectively sharing supporting evidence and ignoring contradicting evidence is textbook confirmation bias.',
+            distractorExplanations: {
+              0: 'Loss aversion involves fear of losses, not selective sharing of political articles.',
+              1: 'The decoy effect involves pricing strategies, not selective information sharing.',
+              3: 'The halo effect involves one positive trait coloring overall judgment, not selective evidence sharing.',
+            },
           },
           {
             id: 'psy-sec6-u4-L2-Q3',
@@ -1744,6 +1986,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The $5,000 sofa anchors expectations, making $1,800 feel like a reasonable price.',
+            distractorExplanations: {
+              0: 'Confirmation bias involves seeking supporting evidence, not being influenced by displayed prices.',
+              1: 'The availability heuristic involves ease of recall, not price comparison in a store.',
+              3: 'Mean world syndrome involves overestimating danger from news, not furniture pricing.',
+            },
           },
           {
             id: 'psy-sec6-u4-L2-T2',
@@ -1764,6 +2011,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'If changing the presentation changes your decision, a framing effect is at work.',
+            distractorExplanations: {
+              0: 'Who told you is less relevant than how it was framed for detecting framing effects.',
+              2: 'Asking about cost does not reveal whether framing is influencing your judgment.',
+              3: 'Whether friends agree does not help detect if presentation is warping your decision.',
+            },
           },
           {
             id: 'psy-sec6-u4-L2-Q5',
@@ -1936,6 +2188,9 @@ export const psySection6Part1: Unit[] = [
             question: 'The Dunning-Kruger effect says beginners tend to overestimate their ability.',
             correctAnswer: true,
             explanation: 'People with low skill lack the knowledge to see their own gaps, so they overestimate.',
+            distractorExplanations: {
+              1: 'The Dunning-Kruger effect is well-documented: people with low skill consistently overrate their ability.',
+            },
           },
           {
             id: 'psy-sec6-u5-L1-Q2',
@@ -1949,6 +2204,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'You need knowledge to evaluate your own knowledge. Without it, you can\'t see what you\'re missing.',
+            distractorExplanations: {
+              0: 'Dunning-Kruger is about genuine miscalibration, not deliberate deception.',
+              2: 'Beginners do not have more natural talent; they simply cannot see what they are missing.',
+              3: 'Beginners have studied less, not more, which is why they overestimate.',
+            },
           },
           {
             id: 'psy-sec6-u5-L1-T2',
@@ -1968,6 +2228,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Bottom-quartile students estimated their performance was above the 60th percentile.',
+            distractorExplanations: {
+              0: 'The lowest-scoring students did not recognize their poor performance at all.',
+              2: 'All students in the study provided estimates; none refused.',
+              3: 'The lowest scorers were the least accurate in their self-assessment.',
+            },
           },
           {
             id: 'psy-sec6-u5-L1-Q4',
@@ -2013,6 +2278,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A little knowledge creates overconfidence. Accurate diagnosis requires years of training.',
+            distractorExplanations: {
+              1: 'One class is insufficient for accurate mental health diagnosis, which requires years of clinical training.',
+              2: 'One introductory class is nowhere near enough for accurate clinical diagnosis.',
+              3: 'Overconfidence after minimal training is a classic cognitive bias pattern.',
+            },
           },
         ],
       },
@@ -2037,6 +2307,9 @@ export const psySection6Part1: Unit[] = [
             question: 'When people say they\'re "99% sure" about something, they\'re almost always correct.',
             correctAnswer: false,
             explanation: 'Research shows people saying "99% sure" are wrong roughly 40% of the time. We badly misjudge our certainty.',
+            distractorExplanations: {
+              0: 'Research shows people claiming 99% certainty are wrong about 40% of the time, revealing severe overconfidence.',
+            },
           },
           {
             id: 'psy-sec6-u5-L2-Q2',
@@ -2050,6 +2323,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Statistically, most people can\'t be above average. This is a classic example of overconfidence.',
+            distractorExplanations: {
+              0: 'By definition, most people cannot be above average; this is mathematically impossible.',
+              2: 'Driving test difficulty is irrelevant to the self-assessment bias shown here.',
+              3: 'People are the opposite of modest; they consistently overrate their driving ability.',
+            },
           },
           {
             id: 'psy-sec6-u5-L2-T2',
@@ -2089,6 +2367,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The planning fallacy is a form of overconfidence where we underestimate time, costs, and risks of future actions.',
+            distractorExplanations: {
+              0: 'Planning too far ahead is not a recognized cognitive bias.',
+              2: 'Overcomplicating plans is a different issue from systematically underestimating time requirements.',
+              3: 'The planning fallacy is about poor time estimation, not about lack of follow-through.',
+            },
           },
           {
             id: 'psy-sec6-u5-L2-T3',
@@ -2117,6 +2400,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Past data beats optimism. The planning fallacy makes teams consistently underestimate.',
+            distractorExplanations: {
+              1: 'Trusting optimistic confidence over historical data is exactly how the planning fallacy causes problems.',
+              2: 'Splitting the difference still underestimates based on the pattern of past projects.',
+              3: 'Canceling entirely is an overreaction; using past data for realistic planning is the right approach.',
+            },
           },
         ],
       },
@@ -2160,6 +2448,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The "valley of despair" is when learners discover the depth of what they don\'t know.',
+            distractorExplanations: {
+              0: 'At the very start, people have not yet learned enough to feel the confidence drop.',
+              1: 'After learning a little is actually when overconfidence peaks, not when it drops.',
+              3: 'True experts have rebuilt their confidence on a solid foundation of real knowledge.',
+            },
           },
           {
             id: 'psy-sec6-u5-L3-T2',
@@ -2174,6 +2467,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Feeling less confident after learning more is a sign you\'re getting worse.',
             correctAnswer: false,
             explanation: 'It\'s actually a sign of growth. You now see complexity you couldn\'t see before.',
+            distractorExplanations: {
+              0: 'Feeling less confident after learning more is a sign of growth, not decline, because you now see complexity you previously missed.',
+            },
           },
           {
             id: 'psy-sec6-u5-L3-Q4',
@@ -2188,6 +2484,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Recognizing gaps in knowledge while still learning places them in the valley or early slope.',
+            distractorExplanations: {
+              0: 'Someone at the peak of overconfidence would feel supremely confident, not humbled by complexity.',
+              2: 'A complete beginner would not yet know enough to recognize their own knowledge gaps.',
+              3: 'The plateau of sustainability involves confident, calibrated expertise, not feelings of inadequacy.',
+            },
           },
           {
             id: 'psy-sec6-u5-L3-T3',
@@ -2243,6 +2544,9 @@ export const psySection6Part1: Unit[] = [
             question: 'Imposter syndrome involves overestimating your abilities.',
             correctAnswer: false,
             explanation: 'Imposter syndrome is the opposite: underestimating your abilities and feeling like a fraud despite being competent.',
+            distractorExplanations: {
+              0: 'Imposter syndrome involves underestimating your abilities and feeling like a fraud despite genuine competence.',
+            },
           },
           {
             id: 'psy-sec6-u5-L4-Q2',
@@ -2256,6 +2560,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Dunning-Kruger describes overconfident beginners. Imposter syndrome describes under-confident experts.',
+            distractorExplanations: {
+              0: 'They are opposite phenomena, not the same one.',
+              2: 'Imposter syndrome typically affects competent people, not beginners.',
+              3: 'The Dunning-Kruger effect is most pronounced in beginners, not experts.',
+            },
           },
           {
             id: 'psy-sec6-u5-L4-T2',
@@ -2291,6 +2600,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'High achievers are most prone because they set high standards and compare themselves to peers.',
+            distractorExplanations: {
+              0: 'People who are genuinely underqualified typically do not experience imposter syndrome; they may show overconfidence.',
+              2: 'People who avoid new challenges rarely encounter the situations that trigger imposter syndrome.',
+              3: 'Ambition-driven comparison to high standards is what fuels imposter syndrome.',
+            },
           },
           {
             id: 'psy-sec6-u5-L4-T3',
@@ -2331,6 +2645,11 @@ export const psySection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Looking things up is normal for experts. 15 years of experience is evidence of competence, not fraud.',
+            distractorExplanations: {
+              1: 'The feeling of being a fraud cannot be solved by more studying; it requires reframing, not more work.',
+              2: 'Fifteen years of engineering experience is strong evidence of genuine qualification.',
+              3: 'Ignoring the feeling does not address the underlying imposter syndrome pattern.',
+            },
           },
         ],
       },

@@ -1,0 +1,2232 @@
+[
+  {
+    "id": "u2-L1-Q1",
+    "type": "multiple-choice",
+    "question": "An accelerometer reads zero on a moving vehicle. What does this indicate?",
+    "options": [
+      "The vehicle is in free fall, so the accelerometer reads zero in its frame",
+      "The accelerometer is broken, moving objects must register acceleration",
+      "Constant velocity: zero acceleration means speed and direction are unchanging",
+      "Moving straight but speeding up at constant rate (reads as zero)"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Zero acceleration = constant velocity (unchanged speed and direction). Constant-rate speeding up would give nonzero acceleration.",
+    "explanationLine": 37
+  },
+  {
+    "id": "u2-L1-Q1b",
+    "type": "true-false",
+    "question": "Velocity is the first derivative of position with respect to time.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "v = dx/dt. Differentiating position once gives velocity.",
+    "explanationLine": 52
+  },
+  {
+    "id": "u2-L1-Q2",
+    "type": "multiple-choice",
+    "question": "Why can horizontal and vertical projectile components be treated independently, and when does this fail?",
+    "options": [
+      "Orthogonal axes always guarantee independence under all force conditions",
+      "Gravity acts only vertically, so components decouple. Fails when drag couples them",
+      "Only valid for launch angles below 15° from horizontal on flat terrain",
+      "Valid only close to the ground where gravitational acceleration is constant"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Gravity acts only vertically, so ax=0 and ay=-g are independent. Air resistance couples them because drag depends on total velocity magnitude, requiring numerical methods.",
+    "explanationLine": 67
+  },
+  {
+    "id": "u2-L1-Q3",
+    "type": "true-false",
+    "question": "At constant speed on a curve, does acceleration have both normal and tangential components?",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "At constant speed, at = dv/dt = 0. Only normal acceleration an = v²/ρ exists. Both components are present only when speed changes on a curved path.",
+    "explanationLine": 86
+  },
+  {
+    "id": "u2-L1-Q7",
+    "type": "multiple-choice",
+    "question": "Position x(t) = 3t³ - 2t² + 5t. What is the acceleration at t = 2 s?",
+    "options": [
+      "36 m/s²",
+      "32 m/s²",
+      "28 m/s²",
+      "24 m/s²"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "v = 9t² - 4t + 5. a = 18t - 4. At t=2: a = 36-4 = 32 m/s².",
+    "explanationLine": 101
+  },
+  {
+    "id": "u2-L1-Q8",
+    "type": "multiple-choice",
+    "question": "Acceleration a = 0.5t m/s², starting from rest. Velocity at t = 6 s?",
+    "options": [
+      "3 m/s",
+      "9 m/s",
+      "18 m/s",
+      "6 m/s"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "v = ∫a dt = ∫0.5t dt = 0.25t² + C. Since v(0)=0, C=0. At t=6: v = 0.25(36) = 9 m/s. Non-constant acceleration requires integration.",
+    "explanationLine": 116
+  },
+  {
+    "id": "u2-L1-Q9",
+    "type": "true-false",
+    "question": "If velocity is zero at an instant, must acceleration also be zero?",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "No: velocity and acceleration are independent. Example: ball at apex has v=0 but a=-g. Zero velocity just means momentarily at rest.",
+    "explanationLine": 125
+  },
+  {
+    "id": "u2-L1-Q10",
+    "type": "multiple-choice",
+    "question": "Launch at 30 m/s, 60° above horizontal. Maximum height? (g = 9.81 m/s²)",
+    "options": [
+      "45.9 m",
+      "34.4 m",
+      "22.9 m",
+      "68.8 m"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "vy0 = 30sin60° = 25.98 m/s. At max height vy=0: h = vy0²/(2g) = 675/19.62 = 34.4 m. Only the vertical component matters for height.",
+    "explanationLine": 140
+  },
+  {
+    "id": "u2-L1-Q4",
+    "type": "multiple-choice",
+    "question": "A car drives around a circular track at constant speed. The driver says \"I\\",
+    "options": [
+      "Wrong: tangential acceleration exists on any curved path regardless of speed",
+      "Correct: acceleration requires a speed change, confirmed by the speedometer",
+      "Wrong: centripetal acceleration (an = v²/r) changes direction even at constant speed",
+      "Correct: centripetal acceleration is fictitious and not real"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Velocity is a vector. On a curve, direction changes continuously, requiring centripetal acceleration an = v²/r toward the center.",
+    "explanationLine": 172
+  },
+  {
+    "id": "u2-L1-Q5",
+    "type": "multiple-choice",
+    "question": "Boat speed 5 m/s, river width 120 m, current 3 m/s. Headed perpendicular: how far downstream?",
+    "options": [
+      "96 m",
+      "72 m",
+      "40 m",
+      "60 m"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Crossing time = 120/5 = 24 s. Downstream drift = 3 × 24 = 72 m. Perpendicular components are independent: crossing time depends only on the across-river velocity.",
+    "explanationLine": 214
+  },
+  {
+    "id": "u2-L1-Q12",
+    "type": "multiple-choice",
+    "question": "Speed 20 m/s, radius 50 m, tangential acceleration 3 m/s². Total acceleration magnitude?",
+    "options": [
+      "8.00 m/s²",
+      "8.54 m/s²",
+      "11.00 m/s²",
+      "3.00 m/s²"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "an = v²/ρ = 400/50 = 8 m/s². at = 3 m/s². Total: a = √(8²+3²) = √73 = 8.54 m/s². Normal and tangential are perpendicular.",
+    "explanationLine": 229
+  },
+  {
+    "id": "u2-L1-Q14",
+    "type": "multiple-choice",
+    "question": "With air resistance, is the optimal launch angle for maximum range still 45°?",
+    "options": [
+      "Depends only on drag coefficient and mass, not on launch angle",
+      "Greater than 45°: extra height is needed to overcome air drag",
+      "Still exactly 45°: drag reduces range but not the optimal angle",
+      "Less than 45°: lower trajectory reduces flight time and drag losses"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "With air resistance, the optimal angle is less than 45° (typically 30-40° depending on the drag-to-weight ratio).",
+    "explanationLine": 263
+  },
+  {
+    "id": "u2-L1-Q16",
+    "type": "true-false",
+    "question": "For a projectile launched on level ground (no air resistance), the time to reach maximum height equals exactly half the total flight time.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The trajectory is symmetric about the highest point when there is no air resistance and the launch and landing elevations are the same.",
+    "explanationLine": 289
+  },
+  {
+    "id": "u2-L1-Q11",
+    "type": "multiple-choice",
+    "question": "Car A: 60 km/h east. Car B: 80 km/h north. Velocity of B relative to A?",
+    "options": [
+      "100 km/h at 36.9° north of west",
+      "100 km/h, 53.1° north of west",
+      "140 km/h due northwest (sum of magnitudes)",
+      "20 km/h due north (difference of magnitudes)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "v_B/A = v_B - v_A = -60i + 80j km/h. |v| = √(3600+6400) = 100 km/h. θ = arctan(80/60) = 53.1° north of west.",
+    "explanationLine": 331
+  },
+  {
+    "id": "u2-L1-Q15",
+    "type": "multiple-choice",
+    "question": "The position of a particle is given in polar coordinates as r = 2 m (constant) and θ = 3t² rad. What is the magnitude of acceleration at t = 1 s?",
+    "options": [
+      "12 m/s²",
+      "73.0 m/s²",
+      "6 m/s²",
+      "18 m/s²"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "With r = 2 (constant), dr/dt = 0 and d²r/dt² = 0. θ = 3t², so dθ/dt = 6t and d²θ/dt² = 6. At t = 1: ω = 6 rad/s, α = 6 rad/s². a_r = -rω² = -2(36) = -72 m/s². a_θ = rα = 2(6) = 12 m/s². |a| = √(72² + 12²) = √(5328) = 73.0 m/s².",
+    "explanationLine": 346
+  },
+  {
+    "id": "u2-L1-Q17",
+    "type": "multiple-choice",
+    "question": "A particle starts from rest and moves along a straight line with acceleration a = 12 - 6t m/s² (t in seconds). At what time does the particle reach its maximum velocity?",
+    "options": [
+      "1 s",
+      "4 s",
+      "2 s",
+      "6 s"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Maximum velocity occurs when acceleration equals zero (velocity stops increasing and starts decreasing).",
+    "explanationLine": 361
+  },
+  {
+    "id": "u2-L1-Q18",
+    "type": "multiple-choice",
+    "question": "A wheel 0.6 m in diameter rotates at 300 rpm. What is the velocity of a point on the rim?",
+    "options": [
+      "4.71 m/s",
+      "18.85 m/s",
+      "9.42 m/s",
+      "188.5 m/s"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "First convert rpm to rad/s: ω = 300 × 2π/60 = 31.42 rad/s. The radius is r = 0.6/2 = 0.3 m.",
+    "explanationLine": 376
+  },
+  {
+    "id": "u2-L1-Q19",
+    "type": "multiple-choice",
+    "question": "A car traveling at 90 km/h applies brakes and decelerates uniformly to rest in 5 seconds. What is the braking distance?",
+    "options": [
+      "31.25 m",
+      "125 m",
+      "62.5 m",
+      "450 m"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "90 km/h = 25 m/s. Deceleration a = (0 - 25)/5 = -5 m/s². Using s = v₀t + ½at²: s = 25(5) + ½(-5)(25) = 125 - 62.5 = 62.5 m.",
+    "explanationLine": 391
+  },
+  {
+    "id": "u2-L1-Q20",
+    "type": "true-false",
+    "question": "The acceleration due to gravity on Earth is exactly constant regardless of altitude above the surface.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Gravity varies with altitude: g(h) = g₀(R/(R+h))², where R is Earth\\",
+    "explanationLine": 400
+  },
+  {
+    "id": "u2-L1-Q21",
+    "type": "multiple-choice",
+    "question": "A particle undergoes simple harmonic motion with amplitude 0.1 m and frequency 5 Hz. What is the maximum acceleration experienced by the particle?",
+    "options": [
+      "98.7 m/s²",
+      "3.14 m/s²",
+      "49.3 m/s²",
+      "9.87 m/s²"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "For SHM, x = A sin(ωt), so a = -ω²A. Maximum acceleration magnitude = ω²A. Here ω = 2πf = 2π(5) = 31.42 rad/s. Max acceleration = (31.42)²(0.1) = 987.7 × 0.1 = 98.7 m/s² ≈ 10g.",
+    "explanationLine": 415
+  },
+  {
+    "id": "u2-L1-Q22",
+    "type": "multiple-choice",
+    "question": "An engineer uses a position sensor to record x(t) data from a vibration test. To compute velocity, which method is more appropriate: numerical differentiation or curve fitting then analytical differentiation?",
+    "options": [
+      "Numerical differentiation preserves all the raw experimental data points without making any assumptions about the underlying functional form",
+      "Curve fitting then analytical differentiation: numerical differentiation amplifies measurement noise, while fitting smooths data before differentiating",
+      "Either method gives functionally identical results for all practical engineering applications, so the choice is purely one of personal preference",
+      "Numerical differentiation is always the superior method because curve fitting introduces systematic modeling error from the assumed function shape"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Numerical differentiation of raw data amplifies high-frequency noise because small errors in position create large errors in the velocity approximation (Δx/Δt).",
+    "explanationLine": 430
+  },
+  {
+    "id": "u2-L1-Q24",
+    "type": "multiple-choice",
+    "question": "A point on the rim of a rotating disk has a velocity of 10 m/s and a total acceleration of 500 m/s² directed at 30° from the radius. What is the angular acceleration of the disk?",
+    "options": [
+      "50 rad/s²: divide the tangential component by twice the rim radius, using α = a_t/(2r)",
+      "1083 rad/s²: decompose into a_t and a_n, find r from a_n = v²/r, then use α = a_t/r",
+      "500 rad/s²: divide total acceleration by the rim radius without decomposing components",
+      "250 rad/s²: the tangential component alone equals α without dividing by the radius"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The acceleration vector makes 30° from the radial direction.",
+    "explanationLine": 445
+  },
+  {
+    "id": "u2-L1-Q25",
+    "type": "multiple-choice",
+    "question": "The velocity of a particle is given by v = (6t² - 2t + 4) m/s. What is the displacement during the interval from t = 1 s to t = 3 s?",
+    "options": [
+      "46 m",
+      "52 m",
+      "60 m",
+      "38 m"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Displacement = integral from 1 to 3 of v dt = integral of (6t² - 2t + 4) dt = [2t³ - t² + 4t] from 1 to 3 = (54 - 9 + 12) - (2 - 1 + 4) = 57 - 5 = 52 m.",
+    "explanationLine": 460
+  },
+  {
+    "id": "u2-L1-Q26",
+    "type": "true-false",
+    "question": "A particle moving in a circle at increasing speed has an acceleration vector that points exactly toward the center of the circle.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "When speed is increasing, there is both a centripetal (normal) component directed toward the center AND a tangential component directed along the velocity.",
+    "explanationLine": 469
+  },
+  {
+    "id": "u2-L1-Q27",
+    "type": "multiple-choice",
+    "question": "A helicopter pilot drops a package from 200 m altitude while flying horizontally at 50 m/s. How far ahead of the drop point does the package land?",
+    "options": [
+      "500 m",
+      "200 m",
+      "319 m",
+      "160 m"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Time to fall: h = ½gt² → t = sqrt(2h/g) = sqrt(400/9.81) = 6.39 s. Horizontal distance = v_x × t = 50 × 6.39 = 319 m.",
+    "explanationLine": 484
+  },
+  {
+    "id": "u2-L1-Q28",
+    "type": "multiple-choice",
+    "question": "A particle moves along a path where the velocity is given as a function of position: v = sqrt(4s + 16) m/s (s in meters). What is the acceleration when s = 5 m?",
+    "options": [
+      "2 m/s²",
+      "6 m/s²",
+      "4 m/s²",
+      "3 m/s²"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "When v = v(s), use a = v(dv/ds). v = (4s + 16)^(1/2), so dv/ds = ½(4s + 16)^(-1/2) × 4 = 2/(4s + 16)^(1/2).",
+    "explanationLine": 499
+  },
+  {
+    "id": "u2-L1-Q29",
+    "type": "multiple-choice",
+    "question": "Two particles start at the origin. Particle A has velocity v_A = 3i + 4j m/s and Particle B has velocity v_B = -2i + 5j m/s. At what rate is the distance between them increasing at t = 2 s?",
+    "options": [
+      "5.10 m/s",
+      "5.00 m/s",
+      "7.07 m/s",
+      "1.00 m/s"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Relative velocity v_A/B = v_A - v_B = (3-(-2))i + (4-5)j = 5i - 1j m/s.",
+    "explanationLine": 514
+  },
+  {
+    "id": "u2-L1-Q30",
+    "type": "true-false",
+    "question": "The equation v² = v₀² + 2a(s - s₀) is valid only for motion along a straight line with constant acceleration.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "This equation is derived from the constant-acceleration kinematic equations by eliminating time. It requires: (1) constant acceleration, and (2) rectilinear (straight-line) motion.",
+    "explanationLine": 523
+  },
+  {
+    "id": "u2-L2-Q9",
+    "type": "true-false",
+    "question": "Newton\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Newton\\",
+    "explanationLine": 549
+  },
+  {
+    "id": "u2-L2-Q9b",
+    "type": "true-false",
+    "question": "In a free body diagram, you should include forces that the object exerts on other bodies.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "An FBD shows only forces acting ON the isolated object, never forces it exerts on others.",
+    "explanationLine": 564
+  },
+  {
+    "id": "u2-L2-Q1",
+    "type": "multiple-choice",
+    "question": "Compared to pulling horizontally with the same force magnitude, what happens to the friction force?",
+    "options": [
+      "Friction stays exactly the same because the static friction coefficient alone determines the friction force regardless of the pull angle or direction",
+      "Friction increases because the angled pull adds a downward vertical component that presses the crate harder into the floor, raising the normal force",
+      "Friction decreases: the upward component of the pull reduces the normal force, and friction is proportional to normal force",
+      "Friction decreases only because the horizontal component of the pulling force is smaller at the steeper angle, not because of any normal force change"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "When pulling upward at an angle, the rope has an upward vertical component (F sin theta) that partially lifts the crate, reducing the normal force: N = mg - F sin theta.",
+    "explanationLine": 579
+  },
+  {
+    "id": "u2-L2-Q2",
+    "type": "multiple-choice",
+    "question": "In an Atwood machine (two masses on a rope over a pulley), why is the acceleration always less than g, regardless of how different the masses are?",
+    "options": [
+      "Because the frictionless pulley absorbs most of the kinetic energy through internal friction in its bearings, leaving little energy for acceleration",
+      "Because the net driving force is (m2 - m1)g but the total inertia being accelerated is (m1 + m2), the lighter mass resists acceleration of the system",
+      "Because the rope tension forces on each mass nearly cancel the gravitational forces, reducing the net driving force on the system to near zero",
+      "Because gravitational acceleration cannot accelerate any mechanical system containing more than one connected mass at the full rate of free fall"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The key insight comes from Newton\\",
+    "explanationLine": 604
+  },
+  {
+    "id": "u2-L2-Q3",
+    "type": "true-false",
+    "question": "When a car goes over the top of a hill at speed v, the normal force from the road is less than the car\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "At the top of a hill, the car follows a circular path curving downward.",
+    "explanationLine": 613
+  },
+  {
+    "id": "u2-L2-Q8",
+    "type": "multiple-choice",
+    "question": "Two blocks (A = 5 kg, B = 3 kg) are connected by a string and pulled across a frictionless surface by a force F = 40 N applied to block A. What is the tension in the string between the blocks?",
+    "options": [
+      "15 N",
+      "25 N",
+      "24 N",
+      "40 N"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "System acceleration: a = F/(m_A + m_B) = 40/(5+3) = 5 m/s². For block B alone, the only horizontal force is tension T: T = m_B × a = 3 × 5 = 15 N.",
+    "explanationLine": 627
+  },
+  {
+    "id": "u2-L2-Q7",
+    "type": "multiple-choice",
+    "question": "A 10 kg block sits on a 30° incline with static friction coefficient μ_s = 0.4. Is the block in equilibrium?",
+    "options": [
+      "Yes: the friction force exactly equals the gravity component along the incline, and both are always precisely balanced at any angle",
+      "No: mg sin(30°) = 49.05 N exceeds μ_s × mg cos(30°) = 33.95 N, so friction cannot hold it and the block slides",
+      "No: friction forces cannot develop on inclined surfaces, since friction only acts between perfectly horizontal contact surfaces",
+      "Yes: the normal force component alone prevents sliding at any angle, without requiring any tangential friction force contribution"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Gravity component along the incline = mg sin(30°) = 10(9.81)(0.5) = 49.05 N. Maximum static friction = μ_s × N = μ_s × mg cos(30°) = 0.4 × 10(9.81)(0.866) = 33.95 N.",
+    "explanationLine": 642
+  },
+  {
+    "id": "u2-L2-Q5",
+    "type": "multiple-choice",
+    "question": "You feel heavier when an elevator starts going up, and lighter when it starts going down. Using Newton\\",
+    "options": [
+      "The floor\\",
+      "Your actual gravitational weight (mg) physically changes because gravity is effectively stronger inside an accelerating non-inertial reference frame",
+      "The elevator cable pulls upward on the cabin and on you, temporarily increasing your effective inertial mass through the transmitted cable tension",
+      "Air pressure changes within the enclosed elevator shaft create a buoyancy effect that pushes upward on your body during acceleration phases"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Your true weight (mg) never changes. What you feel as \"weight\" is the normal force N from the floor.",
+    "explanationLine": 657
+  },
+  {
+    "id": "u2-L2-Q16",
+    "type": "true-false",
+    "question": "On a banked curve at the ideal speed (no friction needed), the net force on the car is directed horizontally toward the center of the curve.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "At ideal banking speed: N cosθ = mg (vertical balance) and N sinθ = mv²/r (centripetal force). No friction needed.",
+    "explanationLine": 683
+  },
+  {
+    "id": "u2-L2-Q4",
+    "type": "multiple-choice",
+    "question": "A highway exit ramp with radius 80 m is unbanked. The posted speed limit gives a comfortable margin on dry pavement (mu_s = 0.8). After an ice storm reduces friction to mu_s = 0.2, what should you reason about the safe speed?",
+    "options": [
+      "Safe speed is completely unchanged because the car mass cancels out of the centripetal force equation, making friction irrelevant for curved motion",
+      "Safe speed drops by 75% in direct proportion to the friction coefficient reduction, from 25 m/s down to approximately 6.25 m/s on the icy curve",
+      "Safe speed drops by half. Since v = sqrt(mu_s*r*g), cutting mu by 4x (from 0.8 to 0.2) reduces v by sqrt(4) = 2, from about 25 m/s to 12.5 m/s",
+      "Safe speed drops only slightly from 25 m/s to approximately 20 m/s, since the friction coefficient has minimal practical effect on curve negotiation"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "For an unbanked curve, friction alone provides centripetal force: mu_s x mg = mv^2/r. Mass cancels, giving mu_s = v^2/(rg), or v = sqrt(mu_s x r x g).",
+    "explanationLine": 724
+  },
+  {
+    "id": "u2-L2-Q10",
+    "type": "multiple-choice",
+    "question": "A 2000 kg car travels at 30 m/s around a banked curve with radius 150 m and banking angle 20°. If the road is frictionless, at what speed would the car travel the curve without any tendency to slide inward or outward?",
+    "options": [
+      "23.4 m/s: the ideal banking speed where N sin(θ) alone provides centripetal force: v = sqrt(rg tan θ)",
+      "30 m/s: any speed will work on a frictionless banked curve because the banking angle compensates for all centripetal force requirements",
+      "45 m/s: a higher speed is always needed on banked curves because the vehicle must overcome the additional gravitational component along the bank",
+      "15 m/s: the banking angle always reduces the minimum required speed by providing an inward force component from the tilted road surface"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "On a frictionless banked curve, the horizontal component of the normal force provides centripetal force: N sin(θ) = mv²/r, and the vertical component supports weight: N cos(θ) = mg.",
+    "explanationLine": 739
+  },
+  {
+    "id": "u2-L2-Q12",
+    "type": "multiple-choice",
+    "question": "A 0.5 kg ball on a 1 m string swings in a vertical circle. What is the minimum speed at the top of the circle to maintain tension in the string?",
+    "options": [
+      "4.43 m/s: the minimum speed at the top of the loop, calculated using the full weight plus centripetal force requirement",
+      "3.13 m/s: at minimum speed the tension is zero and gravity alone provides centripetal force: mg = mv²/r",
+      "1.57 m/s: the minimum speed is half the gravitational value because the loop radius reduces the effective gravitational pull",
+      "9.81 m/s: the minimum speed at the top equals g times the radius, ensuring that gravitational force provides full centripetal acceleration"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "At the top of the vertical circle, both gravity and tension point toward the center: mg + T = mv²/r.",
+    "explanationLine": 754
+  },
+  {
+    "id": "u2-L2-Q14",
+    "type": "multiple-choice",
+    "question": "A conical pendulum (mass on a string tracing a horizontal circle) has string length L = 0.5 m and makes angle θ = 30° with vertical. What is the period of revolution?",
+    "options": [
+      "0.65 s",
+      "1.31 s",
+      "2.62 s",
+      "1.00 s"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The horizontal component of tension provides centripetal force: T sin θ = mω²r. The vertical component supports weight: T cos θ = mg.",
+    "explanationLine": 769
+  },
+  {
+    "id": "u2-L2-Q22",
+    "type": "multiple-choice",
+    "question": "A washing machine spin cycle rotates clothes at 1200 rpm in a drum of radius 0.25 m. What is the centripetal acceleration in terms of g?",
+    "options": [
+      "50g",
+      "201g",
+      "403g",
+      "1200g"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "ω = 1200 × 2π/60 = 125.7 rad/s. Centripetal acceleration = ω²r = (125.7)²(0.25) = 15800.5 × 0.25 = 3951 m/s².",
+    "explanationLine": 784
+  },
+  {
+    "id": "u2-L2-Q27",
+    "type": "multiple-choice",
+    "question": " design a flat (unbanked) circular test track for cars at 200 km/h. If the tire-road μ_s is 0.9, what is the minimum track radius?",
+    "options": [
+      "500 m",
+      "175 m",
+      "700 m",
+      "350 m"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "v = 200 km/h = 55.56 m/s. For an unbanked curve: μ_s × mg = mv²/r → r = v²/(μ_s × g) = (55.56)²/(0.9 × 9.81) = 3087/8.829 = 349.6 ≈ 350 m.",
+    "explanationLine": 799
+  },
+  {
+    "id": "u2-L2-Q26",
+    "type": "true-false",
+    "question": "A body in equilibrium must have zero velocity.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Equilibrium means the net force is zero and the acceleration is zero. A body can be in equilibrium while moving at constant velocity (dynamic equilibrium).",
+    "explanationLine": 825
+  },
+  {
+    "id": "u2-L2-Q11",
+    "type": "multiple-choice",
+    "question": "In a pulley system where a single rope loops around two pulleys to lift a load, the mechanical advantage is 2 but the rope must be pulled twice the distance. Why is this energy balance important?",
+    "options": [
+      "Friction forces in the pulley bearings actually make this compound system more efficient than pulling the load directly without any pulleys",
+      "The frictionless pulley creates extra mechanical energy by redirecting the applied force through the rope, effectively amplifying the work output",
+      "The mechanical advantage of the two-pulley system means less total work input is needed to lift the weight by the same vertical distance",
+      "Work in equals work out (ideal case): F × 2d = W × d, so half the force but double the distance, energy is conserved, you trade force for distance"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "An ideal pulley system conserves energy. With MA = 2, you need only F = W/2 to lift weight W, but you must pull 2d of rope to raise the load by d.",
+    "explanationLine": 866
+  },
+  {
+    "id": "u2-L2-Q15",
+    "type": "multiple-choice",
+    "question": "A truck accelerates at 3 m/s². A box sits on the truck bed with μ_s = 0.4. Does the box slide relative to the truck?",
+    "options": [
+      "Yes: the box will slide because it has no engine or drive mechanism of its own, so it cannot independently accelerate along with the truck",
+      "No: maximum friction acceleration = μ_s × g = 0.4 × 9.81 = 3.92 m/s², which exceeds the truck\\",
+      "No: the box\\",
+      "Yes: friction always opposes relative motion so it pushes the box backward relative to the truck bed as the truck accelerates forward"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Static friction between the box and truck bed must accelerate the box at 3 m/s². Required friction force = ma = 3m.",
+    "explanationLine": 881
+  },
+  {
+    "id": "u2-L2-Q18",
+    "type": "multiple-choice",
+    "question": "Three blocks (m₁ = 2 kg, m₂ = 3 kg, m₃ = 5 kg) are stacked on a frictionless surface and pushed by a horizontal force F = 50 N applied to m₁. What is the contact force between m₂ and m₃?",
+    "options": [
+      "25 N",
+      "30 N",
+      "15 N",
+      "50 N"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "System acceleration: a = F/(m₁+m₂+m₃) = 50/10 = 5 m/s². The contact force between m₂ and m₃ is the force that accelerates m₃ alone: F₂₃ = m₃ × a = 5 × 5 = 25 N.",
+    "explanationLine": 896
+  },
+  {
+    "id": "u2-L2-Q20",
+    "type": "true-false",
+    "question": "In a tug-of-war, the team that pulls harder on the rope wins because they exert more force on the rope than the opposing team.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "By Newton\\",
+    "explanationLine": 905
+  },
+  {
+    "id": "u2-L2-Q28",
+    "type": "multiple-choice",
+    "question": "In an Atwood machine with m₁ = 4 kg and m₂ = 6 kg (massless, frictionless pulley), what is the tension in the rope?",
+    "options": [
+      "58.9 N",
+      "49.1 N",
+      "39.2 N",
+      "47.1 N"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "System acceleration: a = (m₂ - m₁)g/(m₁ + m₂) = (6-4)(9.81)/(6+4) = 19.62/10 = 1.962 m/s². For m₁ (accelerating up): T - m₁g = m₁a → T = m₁(g+a) = 4(9.81+1.962) = 4(11.772) = 47.09 N.",
+    "explanationLine": 920
+  },
+  {
+    "id": "u2-L2-Q30",
+    "type": "multiple-choice",
+    "question": "A curved road has a superelevation (banking) angle of 8° and a design speed of 100 km/h. If the friction coefficient drops to zero (pure ice), what is the safe curve radius?",
+    "options": [
+      "1098 m",
+      "274 m",
+      "549 m",
+      "785 m"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "v = 100 km/h = 27.78 m/s.",
+    "explanationLine": 935
+  },
+  {
+    "id": "u2-L2-Q17",
+    "type": "multiple-choice",
+    "question": "A spring scale reads 80 N when a person stands on it in a stationary elevator. What does it read when the elevator accelerates downward at 2 m/s²?",
+    "options": [
+      "0 N",
+      "96.3 N",
+      "80.0 N",
+      "63.7 N"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The person\\",
+    "explanationLine": 950
+  },
+  {
+    "id": "u2-L2-Q19",
+    "type": "multiple-choice",
+    "question": "An engineer is designing a centrifuge to produce 500g of centripetal acceleration at the sample radius of 0.15 m. What rotational speed (rpm) is required?",
+    "options": [
+      "543 rpm",
+      "5,437 rpm",
+      "10,874 rpm",
+      "1,726 rpm"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Required centripetal acceleration: a = 500 × 9.81 = 4905 m/s². Using a = ω²r: ω = sqrt(a/r) = sqrt(4905/0.15) = sqrt(32700) = 180.8 rad/s. Converting: rpm = 180.8 × 60/(2π) = 1726 rpm.",
+    "explanationLine": 965
+  },
+  {
+    "id": "u2-L2-Q21",
+    "type": "multiple-choice",
+    "question": "A 60 kg skier descends a 25° slope at constant velocity. What is the coefficient of kinetic friction between the skis and snow?",
+    "options": [
+      "0.577",
+      "0.466",
+      "0.259",
+      "0.900"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "At constant velocity, acceleration = 0, so net force = 0. Along the slope: mg sin θ = μ_k × N = μ_k × mg cos θ.",
+    "explanationLine": 980
+  },
+  {
+    "id": "u2-L2-Q24",
+    "type": "multiple-choice",
+    "question": "A block of mass m hangs from two ropes making angles of 30° and 60° with the horizontal ceiling. Which rope has higher tension?",
+    "options": [
+      "The rope at 60° from horizontal (more vertical, 30° from ceiling) has higher tension because it carries more of the vertical load",
+      "The rope at 30° from horizontal has higher tension because its more horizontal orientation requires a larger force to provide vertical support",
+      "Both ropes must have equal tension because they are both connected to the same weight and gravity distributes the load equally between them",
+      "The tensions depend entirely on the mass of the block and cannot be compared without knowing the weight"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Let T₁ be at 30° from horizontal and T₂ at 60° from horizontal. Horizontal equilibrium: T₁cos30° = T₂cos60°, so T₁(0.866) = T₂(0.5), giving T₁ = 0.577T₂. Since T₂ > T₁, the more vertical rope (60° from horizontal) has higher tension.",
+    "explanationLine": 1005
+  },
+  {
+    "id": "u2-L2-Q25",
+    "type": "multiple-choice",
+    "question": "A package on a conveyor belt accelerates from rest. The belt surface has μ_s = 0.3 and μ_k = 0.2. What is the maximum belt acceleration before the package begins to slip?",
+    "options": [
+      "3.92 m/s²",
+      "1.96 m/s²",
+      "2.94 m/s²",
+      "0.98 m/s²"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The friction force accelerates the package. Maximum static friction: f_max = μ_s × mg.",
+    "explanationLine": 1020
+  },
+  {
+    "id": "u2-L3-Q3",
+    "type": "true-false",
+    "question": "The work-energy theorem states that the net work done on a particle equals its change in kinetic energy, regardless of the type of forces involved.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The work-energy theorem (W_net = ΔKE) is valid for particles. It accounts for all forces: conservative, non-conservative, and constraint forces.",
+    "explanationLine": 1056
+  },
+  {
+    "id": "u2-L3-Q9",
+    "type": "true-false",
+    "question": "A force that is always perpendicular to the velocity of a particle does zero work on that particle.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Work = F · ds = Fv cos θ dt. When F is perpendicular to v, θ = 90° and cos 90° = 0, so dW = 0.",
+    "explanationLine": 1071
+  },
+  {
+    "id": "u2-L3-Q1",
+    "type": "multiple-choice",
+    "question": "When would you prefer to use the work-energy method instead of Newton\\",
+    "options": [
+      "Only when all applied forces are constant in magnitude and act in a single fixed direction throughout the entire path of motion",
+      "When you need to find the instantaneous acceleration at a specific moment in time during a process with varying forces along the path",
+      "When you need to find how long a mechanical process takes to complete, since work-energy directly provides time information",
+      "When you need to relate velocities at two positions without finding acceleration or time, especially when forces vary with position"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The work-energy theorem (W_net = delta KE) is powerful when you care about the relationship between position and velocity without needing to know time or acceleration explicitly.",
+    "explanationLine": 1096
+  },
+  {
+    "id": "u2-L3-Q7",
+    "type": "multiple-choice",
+    "question": "A 1200 kg car traveling at 100 km/h brakes to a stop. How much energy must the brakes absorb?",
+    "options": [
+      "463 kJ",
+      "926 kJ",
+      "231 kJ",
+      "120 kJ"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "v = 100 km/h = 27.78 m/s. KE = ½mv² = ½(1200)(27.78)² = ½(1200)(771.7) = 463,020 J ≈ 463 kJ.",
+    "explanationLine": 1121
+  },
+  {
+    "id": "u2-L3-Q10",
+    "type": "multiple-choice",
+    "question": "A 50 kg box is pushed 10 m across a floor (μ_k = 0.3) by a horizontal 200 N force. What is the net work done on the box?",
+    "options": [
+      "2000 J",
+      "528.5 J",
+      "1471.5 J",
+      "0 J"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Work by applied force: W_F = 200 × 10 = 2000 J. Friction force: f = μ_k × mg = 0.3 × 50 × 9.81 = 147.15 N.",
+    "explanationLine": 1136
+  },
+  {
+    "id": "u2-L3-Q15",
+    "type": "multiple-choice",
+    "question": "A force F = 3x² N (where x is in meters) acts on a particle along the x-axis. How much work does this force do as the particle moves from x = 1 m to x = 4 m?",
+    "options": [
+      "45 J",
+      "48 J",
+      "63 J",
+      "21 J"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "For a variable force, W = integral from x₁ to x₂ of F dx = integral from 1 to 4 of 3x² dx = [x³] from 1 to 4 = 64 - 1 = 63 J.",
+    "explanationLine": 1151
+  },
+  {
+    "id": "u2-L3-Q5",
+    "type": "multiple-choice",
+    "question": "A roller coaster car starts from rest at the top of a 30 m hill and reaches the bottom where it enters a loop. Using energy conservation, why does the car\\",
+    "options": [
+      "Mass cancels from the energy equation only if the track is perfectly smooth and frictionless, any curvature or friction makes mass relevant again",
+      "The mass does significantly affect the final speed, but the track is engineered so that all roller coaster cars have precisely the same total mass",
+      "Heavier cars actually travel faster at the bottom due to their greater momentum carrying them through friction losses, but the difference is small",
+      "In mgh = (1/2)mv^2, mass appears on both sides and cancels. The speed depends only on the height difference, just like free fall"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Setting potential energy equal to kinetic energy: mgh = (1/2)mv^2. Mass m appears on both sides and cancels, giving v = sqrt(2gh).",
+    "explanationLine": 1183
+  },
+  {
+    "id": "u2-L3-Q16",
+    "type": "true-false",
+    "question": "Gravitational potential energy is always positive.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Gravitational PE = mgh, where h is measured relative to an arbitrary reference datum.",
+    "explanationLine": 1199
+  },
+  {
+    "id": "u2-L3-Q2",
+    "type": "multiple-choice",
+    "question": "A spring-loaded mechanism uses a spring compressed 5 mm. The designer wants to double the stored energy. What are the two options, and which is more practical?",
+    "options": [
+      "Double the compression distance to 10 mm, since elastic potential energy scales linearly with displacement, doubling compression doubles energy",
+      "Either increase compression to 5*sqrt(2) = 7.07 mm or double the spring stiffness, increasing compression is usually more practical since it does not require a new spring",
+      "Use two identical springs in parallel: this configuration always exactly doubles the stored energy regardless of the compression amount applied",
+      "Increase compression to 10 mm and simultaneously double the spring stiffness for a combined 2x energy increase through both parameters at once"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Since PE = (1/2)kx^2, energy scales with x^2 (quadratic) and linearly with k. To double energy: either increase x by a factor of sqrt(2) (from 5 mm to 7.07 mm) or double k.",
+    "explanationLine": 1224
+  },
+  {
+    "id": "u2-L3-Q8",
+    "type": "multiple-choice",
+    "question": "A spring with k = 500 N/m is compressed 0.1 m from its natural length. If the spring pushes a 0.2 kg ball, what speed does the ball reach (assuming all energy transfers to the ball)?",
+    "options": [
+      "7.07 m/s",
+      "2.5 m/s",
+      "10 m/s",
+      "5 m/s"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Spring PE = ½kx² = ½(500)(0.1)² = 2.5 J. Setting equal to ball KE: 2.5 = ½(0.2)v² → v² = 25 → v = 5 m/s.",
+    "explanationLine": 1239
+  },
+  {
+    "id": "u2-L3-Q12",
+    "type": "multiple-choice",
+    "question": "A 2 kg block slides down a 5 m long frictionless ramp starting from rest. The ramp height is 3 m. What is the block\\",
+    "options": [
+      "10.85 m/s",
+      "9.90 m/s",
+      "5.42 m/s",
+      "7.67 m/s"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Using energy conservation (frictionless): mgh = ½mv². Mass cancels: v = √(2gh) = √(2 × 9.81 × 3) = √(58.86) = 7.67 m/s.",
+    "explanationLine": 1254
+  },
+  {
+    "id": "u2-L3-Q14",
+    "type": "multiple-choice",
+    "question": "A child on a swing reaches a maximum height of 1.5 m above the lowest point. What is the child\\",
+    "options": [
+      "7.67 m/s",
+      "3.83 m/s",
+      "5.42 m/s",
+      "2.72 m/s"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "At the top of the swing: all KE has been converted to PE (v = 0 at max height). At the bottom: all PE has been converted to KE (h = 0 reference).",
+    "explanationLine": 1269
+  },
+  {
+    "id": "u2-L3-Q24",
+    "type": "multiple-choice",
+    "question": "A 0.5 kg ball is dropped from 10 m height onto a spring (k = 2000 N/m). What is the maximum compression of the spring?",
+    "options": [
+      "0.231 m",
+      "0.156 m",
+      "0.100 m",
+      "0.313 m"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Energy conservation from drop point to maximum compression (where v = 0): mg(h + x) = ½kx², where x is the compression and h = 10 m. So: 0.5(9.81)(10 + x) = ½(2000)x².",
+    "explanationLine": 1284
+  },
+  {
+    "id": "u2-L3-Q28",
+    "type": "multiple-choice",
+    "question": "A 10 kg block slides 8 m down a rough incline (30°, μ_k = 0.25) starting from rest. What is the speed at the bottom?",
+    "options": [
+      "6.27 m/s",
+      "8.86 m/s",
+      "4.43 m/s: the minimum speed at the top of the loop, calculated using the full weight plus centripetal force requirement",
+      "7.67 m/s"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Height dropped: h = 8 sin 30° = 4 m. Using energy conservation with friction: mgh - μ_k(mg cos θ)(d) = ½mv².",
+    "explanationLine": 1299
+  },
+  {
+    "id": "u2-L3-Q20",
+    "type": "true-false",
+    "question": "If the total mechanical energy of a system is conserved, no non-conservative forces (like friction) are doing work on the system.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Conservation of mechanical energy (KE + PE = constant) requires that no non-conservative forces do work.",
+    "explanationLine": 1342
+  },
+  {
+    "id": "u2-L3-Q4",
+    "type": "multiple-choice",
+    "question": "A motor lifts a 500 kg load at a constant velocity of 2 m/s, requiring P = mg*v = 9,810 W of ideal power. The motor is rated at 15 kW. Is the motor adequately sized, and what practical factors should you consider?",
+    "options": [
+      "May be marginal: motor efficiency (~85-95%), startup acceleration loads, and safety factor could push the real requirement above 15 kW",
+      "Significantly oversized at 50% margin: a 10 kW motor is entirely sufficient since the steady-state requirement is only 9.81 kW",
+      "Perfectly sized: the steady-state lifting requirement is only 9.81 kW, leaving adequate headroom within the 15 kW motor rating",
+      "Undersized: standard engineering practice requires doubling the calculated power for safety, giving a minimum 19.62 kW requirement"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The 9,810 W is the ideal steady-state hydraulic/mechanical power.",
+    "explanationLine": 1366
+  },
+  {
+    "id": "u2-L3-Q11",
+    "type": "multiple-choice",
+    "question": "A pump raises water through a height of 20 m at a flow rate of 0.05 m³/s. What power is required? (Water density = 1000 kg/m³)",
+    "options": [
+      "19.62 kW",
+      "4.91 kW",
+      "9.81 kW",
+      "1.00 kW"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Mass flow rate: ṁ = ρQ = 1000 × 0.05 = 50 kg/s. Power = ṁgh = 50 × 9.81 × 20 = 9810 W ≈ 9.81 kW.",
+    "explanationLine": 1381
+  },
+  {
+    "id": "u2-L3-Q19",
+    "type": "multiple-choice",
+    "question": "A car engine produces 120 kW at 4000 rpm. What is the engine torque at this operating point?",
+    "options": [
+      "143 N·m",
+      "573 N·m",
+      "286 N·m",
+      "30 N·m"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "P = τω. ω = 4000 × 2π/60 = 418.9 rad/s. τ = P/ω = 120000/418.9 = 286.5 N·m ≈ 286 N·m. This relationship is key in powertrain design.",
+    "explanationLine": 1396
+  },
+  {
+    "id": "u2-L3-Q25",
+    "type": "multiple-choice",
+    "question": "A 75 kW engine drives a car at constant 120 km/h on a level road. What is the total resistance force (air drag + rolling resistance)?",
+    "options": [
+      "900 N",
+      "625 N",
+      "4500 N",
+      "2250 N"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "At constant velocity on a level road, the engine force equals the total resistance. P = Fv, so F = P/v = 75000/(120/3.6) = 75000/33.33 = 2250 N.",
+    "explanationLine": 1411
+  },
+  {
+    "id": "u2-L3-Q29",
+    "type": "multiple-choice",
+    "question": "The efficiency of a machine is 60%. If the useful output work is 300 J, how much input energy was required?",
+    "options": [
+      "750 J",
+      "180 J",
+      "300 J",
+      "500 J"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Efficiency η = W_out/W_in. So W_in = W_out/η = 300/0.60 = 500 J. The \"lost\" energy (200 J) is converted to heat through friction, air resistance, or other dissipative processes.",
+    "explanationLine": 1426
+  },
+  {
+    "id": "u2-L3-Q30",
+    "type": "true-false",
+    "question": "If a car doubles its speed, the engine must deliver four times the power to overcome the same drag force.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "If the drag force were constant, P = Fv would mean doubling v doubles P.",
+    "explanationLine": 1435
+  },
+  {
+    "id": "u2-L3-Q17",
+    "type": "multiple-choice",
+    "question": "An elevator motor must accelerate a 1000 kg car (including passengers) from rest to 3 m/s while lifting it 5 m. What is the minimum average power if this takes 4 seconds?",
+    "options": [
+      "4.5 kW",
+      "12.3 kW",
+      "9.8 kW",
+      "13.4 kW"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Total energy needed: KE gained = ½mv² = ½(1000)(9) = 4500 J. PE gained = mgh = 1000(9.81)(5) = 49050 J.",
+    "explanationLine": 1450
+  },
+  {
+    "id": "u2-L3-Q18",
+    "type": "multiple-choice",
+    "question": "Two springs in series (both k = 1000 N/m) support a 10 kg mass. What is the total elastic potential energy stored when the system is in static equilibrium?",
+    "options": [
+      "19.24 J",
+      "4.81 J",
+      "9.62 J",
+      "2.41 J"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Springs in series: k_eq = k₁k₂/(k₁+k₂) = 1000×1000/2000 = 500 N/m. Static deflection: x_total = mg/k_eq = 10(9.81)/500 = 0.1962 m. Total PE = ½k_eq × x² = ½(500)(0.1962)² = 9.62 J. Alternatively, each spring deflects 0.0981 m: PE = 2 × ½(1000)(0.0981)² = 9.62 J.",
+    "explanationLine": 1465
+  },
+  {
+    "id": "u2-L3-Q21",
+    "type": "multiple-choice",
+    "question": "A bungee jumper (80 kg) jumps from a 50 m bridge. The bungee cord has natural length 10 m and k = 100 N/m. What is the maximum distance the jumper falls?",
+    "options": [
+      "25 m: the jumper stops at 15 m past the natural length of the cord",
+      "50 m: the jumper falls the full bridge height before the cord stops them",
+      "30 m: the cord stretches only 20 m beyond its natural resting length",
+      "32.7 m: the cord stretches 22.7 m beyond its natural length"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "At maximum extension, velocity = 0, so all PE_gravity converts to PE_spring. Let d = total drop distance, and spring stretch = (d - 10) m. Energy: mgd = ½k(d-10)². Solving 80(9.81)d = 50(d-10)² gives 50d² - 1784.8d + 5000 = 0, so d ≈ 32.7 m.",
+    "explanationLine": 1480
+  },
+  {
+    "id": "u2-L3-Q22",
+    "type": "multiple-choice",
+    "question": "Two identical cars, one traveling at 30 km/h and another at 90 km/h, both brake to a stop. How do their braking distances compare (same braking force)?",
+    "options": [
+      "The faster car needs 6 times the braking distance",
+      "The faster car needs 3 times the braking distance, proportional to speed",
+      "Both cars have the same braking distance if the braking force is identical",
+      "The faster car needs 9 times the braking distance, distance scales with v²"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Using the work-energy theorem: F × d = ½mv². For the same braking force F and mass m: d = mv²/(2F), so d is proportional to v².",
+    "explanationLine": 1495
+  },
+  {
+    "id": "u2-L3-Q26",
+    "type": "true-false",
+    "question": "The work done by the normal force on a block sliding down an inclined plane is zero.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The normal force is always perpendicular to the surface, and the displacement is along the surface.",
+    "explanationLine": 1514
+  },
+  {
+    "id": "u2-L3-Q27",
+    "type": "multiple-choice",
+    "question": "A 500 kg satellite orbits Earth at 300 km altitude. What type of energy (kinetic, potential, or both) changes if the satellite moves to a higher orbit?",
+    "options": [
+      "Only kinetic energy changes. The satellite speeds up when boosted to a higher orbit because additional thrust energy converts directly to velocity",
+      "Only potential energy changes, kinetic energy stays the same because the orbital speed is constant at every point in any circular orbit altitude",
+      "Both change. KE decreases (slower speed at higher orbit) while PE increases (farther from Earth), with the total mechanical energy increasing (less negative)",
+      "Neither KE nor PE changes, total mechanical energy is always conserved in orbital mechanics, so moving between orbits requires zero net work"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "For circular orbits: KE = GMm/(2r) and PE = -GMm/r, so E_total = -GMm/(2r).",
+    "explanationLine": 1529
+  },
+  {
+    "id": "u2-L4-Q3",
+    "type": "true-false",
+    "question": "In an elastic collision, both kinetic energy and momentum are conserved.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "An elastic collision conserves both total momentum and total kinetic energy.",
+    "explanationLine": 1555
+  },
+  {
+    "id": "u2-L4-Q9",
+    "type": "true-false",
+    "question": "In a perfectly inelastic collision, the objects always stick together and move with a common velocity after impact.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "A perfectly inelastic collision (e = 0) is defined as one where the objects have zero relative velocity after impact, meaning they stick together.",
+    "explanationLine": 1570
+  },
+  {
+    "id": "u2-L4-Q1",
+    "type": "multiple-choice",
+    "question": "A car crumple zone is designed to increase the duration of a crash. Using the impulse-momentum theorem, explain why this reduces injury risk",
+    "options": [
+      "Increasing the collision duration reduces the total impulse delivered to the occupant, which directly means less overall momentum change occurs",
+      "Impulse = F_avg x delta_t = delta_p. Since delta_p is fixed (same crash), increasing delta_t proportionally decreases F_avg, lower force means less injury",
+      "Crumple zones physically absorb and dissipate momentum from the vehicle, so the occupant experiences significantly less total momentum change",
+      "Longer duration allows the seatbelt system to share the force over more time, but the peak force on the occupant body remains exactly the same"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The impulse-momentum theorem states: F_avg x delta_t = m x delta_v.",
+    "explanationLine": 1595
+  },
+  {
+    "id": "u2-L4-Q2",
+    "type": "multiple-choice",
+    "question": "A 0.01 kg bullet traveling at 400 m/s embeds in a 2 kg wooden block on a frictionless surface. What is the block\\",
+    "options": [
+      "4.00 m/s",
+      "1.99 m/s",
+      "200.0 m/s",
+      "0.02 m/s"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Conservation of momentum: (0.01)(400) = (0.01 + 2) x v_f. v_f = 4/2.01 = 1.99 m/s.",
+    "explanationLine": 1610
+  },
+  {
+    "id": "u2-L4-Q4",
+    "type": "multiple-choice",
+    "question": "During a collision, momentum is always conserved but kinetic energy may not be. What physically happens to the \"lost\" kinetic energy in a real collision?",
+    "options": [
+      "The lost kinetic energy is transferred entirely to the Earth through the ground reaction force during the collision",
+      "The lost kinetic energy is permanently destroyed, the law of conservation of energy has a specific exception for inelastic collision processes",
+      "The kinetic energy is temporarily stored as elastic potential energy and released later as the deformed objects gradually return to their original shape",
+      "It is converted to permanent deformation of the objects, heat, sound, and vibration, energy is conserved overall, but not as kinetic energy"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Total energy is always conserved (first law of thermodynamics), but kinetic energy alone is not.",
+    "explanationLine": 1625
+  },
+  {
+    "id": "u2-L4-Q5",
+    "type": "multiple-choice",
+    "question": "In a two-car head-on collision, Car A (1500 kg, 20 m/s east) strikes Car B (1000 kg, 15 m/s west). An accident investigator needs to determine the system\\",
+    "options": [
+      "Newton\\",
+      "Conservation of energy: calculate the kinetic energy before and after the collision to directly find the final combined velocity of the masses",
+      "Conservation of momentum: it applies to all collisions regardless of deformation, giving the post-impact velocity of the combined wreckage",
+      "Conservation of momentum only applies to perfectly elastic collisions, so kinetic energy conservation must be used for inelastic collision analysis"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Momentum is conserved in ALL collisions (elastic and inelastic) because internal forces between the objects cancel by Newton\\",
+    "explanationLine": 1639
+  },
+  {
+    "id": "u2-L4-Q7",
+    "type": "multiple-choice",
+    "question": "A 2 kg ball moving at 6 m/s collides head-on with a 4 kg ball at rest. If the collision is perfectly elastic, what are the final velocities?",
+    "options": [
+      "Both balls move at 2 m/s in the original direction",
+      "The 2 kg ball rebounds at -2 m/s and the 4 kg ball moves at 4 m/s",
+      "The 2 kg ball stops and the 4 kg ball moves at 3 m/s",
+      "The 2 kg ball rebounds at -6 m/s and the 4 kg ball remains at rest"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For 1D elastic collisions: v₁f = v₁(m₁-m₂)/(m₁+m₂) = 6(2-4)/(2+4) = 6(-2)/6 = -2 m/s. v₂f = 2m₁v₁/(m₁+m₂) = 2(2)(6)/(6) = 4 m/s.",
+    "explanationLine": 1654
+  },
+  {
+    "id": "u2-L4-Q8",
+    "type": "multiple-choice",
+    "question": "The coefficient of restitution for a collision between a ball and the floor is 0.8. If the ball is dropped from 2 m height, to what height does it bounce?",
+    "options": [
+      "1.96 m",
+      "1.60 m",
+      "0.80 m",
+      "1.28 m"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The coefficient of restitution e relates impact and rebound speeds: v_rebound = e × v_impact. Since v = √(2gh), the rebound height h₂ = e² × h₁ = (0.8)² × 2 = 0.64 × 2 = 1.28 m.",
+    "explanationLine": 1669
+  },
+  {
+    "id": "u2-L4-Q16",
+    "type": "true-false",
+    "question": "During a collision between two objects, the impulse on object A from object B is equal in magnitude but opposite in direction to the impulse on object B from object A.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "By Newton\\",
+    "explanationLine": 1695
+  },
+  {
+    "id": "u2-L4-Q10",
+    "type": "multiple-choice",
+    "question": "A 5 kg object at rest explodes into two pieces: a 2 kg piece and a 3 kg piece. If the 2 kg piece flies off at 15 m/s, what is the speed of the 3 kg piece?",
+    "options": [
+      "7.5 m/s",
+      "15 m/s",
+      "10 m/s",
+      "25 m/s"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Initial momentum = 0 (at rest). By conservation of momentum: 0 = m₁v₁ + m₂v₂ → 0 = 2(15) + 3(v₂) → v₂ = -30/3 = -10 m/s. The 3 kg piece moves at 10 m/s in the opposite direction.",
+    "explanationLine": 1737
+  },
+  {
+    "id": "u2-L4-Q11",
+    "type": "multiple-choice",
+    "question": "A water jet hits a stationary flat plate perpendicularly at 20 m/s with a mass flow rate of 5 kg/s. What force does the jet exert on the plate (assuming the water does not bounce back)?",
+    "options": [
+      "200 N",
+      "100 N",
+      "50 N",
+      "500 N"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Force = rate of momentum change = ṁΔv. The water goes from 20 m/s (approaching) to approximately 0 m/s (velocity component perpendicular to plate). F = ṁv = 5 × 20 = 100 N.",
+    "explanationLine": 1752
+  },
+  {
+    "id": "u2-L4-Q12",
+    "type": "multiple-choice",
+    "question": "A 70 kg hockey player moving at 8 m/s collides with a stationary 90 kg player. They grab each other and slide together. What percentage of kinetic energy is lost?",
+    "options": [
+      "21.9%",
+      "43.8%",
+      "78.1%",
+      "56.3%"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Initial KE = ½(70)(8²) = 2240 J. Final velocity (momentum conservation): v_f = 70(8)/(70+90) = 560/160 = 3.5 m/s. Final KE = ½(160)(3.5²) = 980 J.",
+    "explanationLine": 1767
+  },
+  {
+    "id": "u2-L4-Q14",
+    "type": "multiple-choice",
+    "question": "A ball of mass m moving at velocity v strikes a wall and rebounds with the same speed. What is the impulse exerted by the wall on the ball?",
+    "options": [
+      "2mv, directed away from the wall",
+      "mv, directed away from the wall",
+      "0: the speed did not change",
+      "mv, directed toward the wall"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The ball\\",
+    "explanationLine": 1782
+  },
+  {
+    "id": "u2-L4-Q15",
+    "type": "multiple-choice",
+    "question": "A 1000 kg rocket in space ejects exhaust at 3000 m/s relative to the rocket. To achieve a velocity change of 600 m/s, approximately what fraction of the initial mass must be fuel?",
+    "options": [
+      "About 20%: the fraction equals the ratio Δv/v_e = 600/3000 directly",
+      "About 18%: from the Tsiolkovsky rocket equation Δv = v_e × ln(m₀/m_f)",
+      "About 50%: half the mass must be fuel for any significant velocity change",
+      "About 10%: rockets efficiently convert a small fuel fraction to velocity"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The Tsiolkovsky rocket equation: Δv = v_e × ln(m₀/m_f). 600 = 3000 × ln(m₀/m_f). ln(m₀/m_f) = 0.2. m₀/m_f = e^0.2 = 1.2214. So m_f = m₀/1.2214 = 0.8187 × m₀.",
+    "explanationLine": 1797
+  },
+  {
+    "id": "u2-L4-Q20",
+    "type": "true-false",
+    "question": "Momentum is a scalar quantity, like energy.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Momentum p = mv is a VECTOR quantity. It has both magnitude and direction.",
+    "explanationLine": 1833
+  },
+  {
+    "id": "u2-L4-Q17",
+    "type": "multiple-choice",
+    "question": "A baseball (0.145 kg) is pitched at 40 m/s and hit back at 50 m/s. If the bat-ball contact lasts 1 ms, what is the average force on the ball?",
+    "options": [
+      "13,050 N",
+      "7,250 N",
+      "1,305 N",
+      "725 N"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Taking the pitching direction as positive: v_initial = -40 m/s (incoming), v_final = +50 m/s (hit back). Δv = 50 - (-40) = 90 m/s. Impulse = mΔv = 0.145 × 90 = 13.05 N·s.",
+    "explanationLine": 1874
+  },
+  {
+    "id": "u2-L4-Q18",
+    "type": "multiple-choice",
+    "question": "In a 2D collision, a ball moving at 10 m/s strikes a stationary ball of equal mass at a glancing angle. After the elastic collision, the two balls move at 90° to each other. Why does this 90° result occur?",
+    "options": [
+      "Conservation of both momentum (vector) and kinetic energy (scalar) for equal masses requires the velocity vectors after collision to be perpendicular",
+      "It is a coincidence that only happens at certain specific impact angles determined by the geometry of the collision and table friction conditions",
+      "The 90° separation angle is caused by the tangential friction force between the smooth ball surfaces during their brief moment of physical contact",
+      "All two-dimensional elastic collisions result in a 90° separation angle between the final velocity vectors regardless of the mass ratio involved"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "For equal-mass elastic collisions in 2D: momentum conservation gives v₁ + v₂ = v₀ (vectors), and energy conservation gives v₁² + v₂² = v₀².",
+    "explanationLine": 1889
+  },
+  {
+    "id": "u2-L4-Q19",
+    "type": "multiple-choice",
+    "question": "A sand hopper drops sand vertically onto a conveyor belt moving at 3 m/s at a rate of 20 kg/s. What horizontal force must the belt motor provide to keep the belt at constant speed?",
+    "options": [
+      "120 N",
+      "30 N",
+      "60 N",
+      "90 N"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The sand lands with zero horizontal velocity and must be accelerated to 3 m/s (belt speed).",
+    "explanationLine": 1904
+  },
+  {
+    "id": "u2-L4-Q21",
+    "type": "multiple-choice",
+    "question": "Two objects collide with a coefficient of restitution e = 0.6. Object 1 (3 kg) moves at 8 m/s and Object 2 (5 kg) moves at -4 m/s (head-on). What is the relative velocity of separation?",
+    "options": [
+      "4.8 m/s",
+      "12 m/s",
+      "7.2 m/s",
+      "2.4 m/s"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The coefficient of restitution is defined as e = (relative velocity of separation)/(relative velocity of approach).",
+    "explanationLine": 1919
+  },
+  {
+    "id": "u2-L4-Q22",
+    "type": "multiple-choice",
+    "question": "A firefighter directs a hose with flow rate 0.02 m³/s and nozzle exit velocity 30 m/s at a wall. What thrust force does the firefighter feel from the hose reaction?",
+    "options": [
+      "60 N",
+      "300 N",
+      "1200 N",
+      "600 N"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Mass flow rate ṁ = ρQ = 1000 × 0.02 = 20 kg/s. Thrust F = ṁv = 20 × 30 = 600 N (about 135 lbf).",
+    "explanationLine": 1934
+  },
+  {
+    "id": "u2-L4-Q24",
+    "type": "multiple-choice",
+    "question": "A 50 kg person standing on a 100 kg boat (initially at rest on frictionless water) walks 3 m toward the bow. How far does the boat move in the opposite direction?",
+    "options": [
+      "3 m",
+      "1.5 m",
+      "2 m",
+      "1 m"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "With no external horizontal forces, the center of mass cannot move.",
+    "explanationLine": 1949
+  },
+  {
+    "id": "u2-L4-Q25",
+    "type": "multiple-choice",
+    "question": "In a ballistic pendulum, a bullet embeds in a suspended block which swings upward. Why is momentum conservation used for the collision but energy conservation used for the swing?",
+    "options": [
+      "Momentum conservation is always more accurate and reliable than energy conservation for analyzing any type of collision or impact event in mechanics",
+      "The collision is inelastic (KE not conserved) but very brief (no significant swing), while the swing is frictionless with no collision losses, each method applies where it is valid",
+      "Energy conservation cannot be applied to any part of this two-phase ballistic pendulum problem because energy is lost in both the impact and swing",
+      "Both conservation methods: momentum and energy, could be used interchangeably for either phase of the ballistic pendulum analysis with equal accuracy"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The ballistic pendulum has two distinct phases. Phase 1 (collision, ~1 ms): The bullet embeds in the block.",
+    "explanationLine": 1964
+  },
+  {
+    "id": "u2-L4-Q26",
+    "type": "true-false",
+    "question": "A system can have zero total momentum but nonzero total kinetic energy.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Two objects moving in opposite directions with equal but opposite momenta have zero total momentum, but each has positive kinetic energy (KE = ½mv² is always positive).",
+    "explanationLine": 1973
+  },
+  {
+    "id": "u2-L4-Q27",
+    "type": "multiple-choice",
+    "question": "A 3 kg ball hits a 1 kg ball at rest in a perfectly elastic head-on collision. What fraction of the 3 kg ball\\",
+    "options": [
+      "100%",
+      "50%",
+      "75%",
+      "25%"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "For elastic collisions with m₂ at rest: v₂f = 2m₁v₁/(m₁+m₂) = 2(3)v/(4) = 1.5v. KE₂f = ½(1)(1.5v)² = 1.125v².",
+    "explanationLine": 1988
+  },
+  {
+    "id": "u2-L4-Q28",
+    "type": "multiple-choice",
+    "question": "A force of F(t) = 100(1 - t/0.01) N acts during a 0.01 s impact (triangular pulse starting at 100 N and decreasing linearly to zero). What is the total impulse?",
+    "options": [
+      "0.5 N·s",
+      "1.0 N·s",
+      "0.01 N·s",
+      "100 N·s"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Impulse = ∫F dt from 0 to 0.01 = area under F-t curve. For a triangle with base 0.01 s and height 100 N: J = ½ × base × height = ½ × 0.01 × 100 = 0.5 N·s.",
+    "explanationLine": 2003
+  },
+  {
+    "id": "u2-L4-Q30",
+    "type": "multiple-choice",
+    "question": "A machine gun fires 10 bullets per second, each bullet having mass 0.03 kg and muzzle velocity 800 m/s. What average force must the shooter exert to hold the gun steady?",
+    "options": [
+      "24 N",
+      "240 N",
+      "2400 N",
+      "80 N"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Each bullet carries momentum p = mv = 0.03 × 800 = 24 kg·m/s. Rate of momentum change = 10 bullets/s × 24 kg·m/s = 240 kg·m/s².",
+    "explanationLine": 2028
+  },
+  {
+    "id": "u2-L5-Q3",
+    "type": "true-false",
+    "question": "For a wheel rolling without slipping, the velocity at the contact point with the ground is zero.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "In pure rolling (no slip), the contact point has zero velocity relative to the ground.",
+    "explanationLine": 2054
+  },
+  {
+    "id": "u2-L5-Q9",
+    "type": "true-false",
+    "question": "The mass moment of inertia of a body depends on the axis of rotation chosen.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Moment of inertia I = ∫r² dm, where r is the perpendicular distance from each mass element to the axis. Different axes mean different distances, so I changes.",
+    "explanationLine": 2070
+  },
+  {
+    "id": "u2-L5-Q1",
+    "type": "multiple-choice",
+    "question": "A flywheel designer needs to maximize energy storage for a given mass. How should they distribute the mass, and what formula justifies this?",
+    "options": [
+      "Concentrate mass at the outer rim. I = sum(m*r^2), so mass at larger r contributes quadratically more to I, and KE_rot = (1/2)*I*omega^2",
+      "Distribute the mass uniformly throughout a solid disk, a uniform solid disk produces the maximum moment of inertia for any given total mass value",
+      "Concentrate all the mass at the center hub to minimize centrifugal stress on the spokes, which is the dominant structural failure mode at high speed",
+      "The radial mass distribution does not matter, only the total mass and the angular velocity determine the kinetic energy stored in the flywheel"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Rotational kinetic energy is KE = (1/2)*I*omega^2.",
+    "explanationLine": 2095
+  },
+  {
+    "id": "u2-L5-Q2",
+    "type": "multiple-choice",
+    "question": "A solid sphere and a hollow sphere of the same mass and radius roll down the same incline without slipping. Which reaches the bottom first?",
+    "options": [
+      "The solid sphere: it has a smaller I/(mR^2) ratio, meaning less gravitational PE is \"diverted\" to rotational KE, leaving more for translational speed",
+      "The hollow sphere: its mass concentrated at a larger effective radius gives it more rotational momentum, helping it maintain speed down the incline",
+      "They arrive at the bottom simultaneously: since both spheres have the same mass and radius, their translational motion down the incline is identical",
+      "It depends on the incline angle, steeper inclines favor the solid sphere while shallow inclines favor the hollow sphere"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "When rolling without slipping, gravitational PE converts to BOTH translational and rotational KE: mgh = (1/2)mv^2 + (1/2)I*omega^2.",
+    "explanationLine": 2110
+  },
+  {
+    "id": "u2-L5-Q4",
+    "type": "multiple-choice",
+    "question": "A flywheel spins at 300 rpm and stores about 987 J of rotational kinetic energy. If the speed is doubled to 600 rpm, how much energy does it store?",
+    "options": [
+      "About 1,974 J: the stored kinetic energy doubles when the rotational speed doubles, following a linear relationship with angular velocity",
+      "About 3,948 J. KE = (1/2)*I*omega^2, so doubling omega quadruples the energy",
+      "About 987 J: the stored energy is independent of rotational speed for a given flywheel, depending only on the mass and radius values",
+      "About 5,922 J: the energy triples because both the moment of inertia and the angular velocity effectively change when speed doubles"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Rotational kinetic energy KE = (1/2)*I*omega^2 scales with the SQUARE of angular velocity.",
+    "explanationLine": 2124
+  },
+  {
+    "id": "u2-L5-Q5",
+    "type": "multiple-choice",
+    "question": "A spinning bicycle wheel held by one end of its axle does not fall but instead precesses slowly. A student asks \"Why does spinning faster make it precess slower?",
+    "options": [
+      "Faster spin creates more centrifugal force that pushes the gyroscope mass outward and directly resists the tendency to fall under gravitational torque",
+      "Precession rate Omega = tau/(I*omega): higher spin omega means the angular momentum vector is larger and harder to turn, so the same torque changes its direction more slowly",
+      "Faster spin increases the internal gyroscopic friction within the bearings, which mechanically slows the precession rate through energy dissipation",
+      "The precession rate is actually completely independent of the spin speed. It depends only on the magnitude of the externally applied gravitational torque"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Gyroscopic precession follows from tau = dL/dt. The applied torque (gravity x moment arm) tries to change the angular momentum vector L = I*omega.",
+    "explanationLine": 2139
+  },
+  {
+    "id": "u2-L5-Q7",
+    "type": "multiple-choice",
+    "question": "The moment of inertia of a solid cylinder about its central axis is ½mR². Using the parallel axis theorem, what is the moment of inertia about an axis parallel to the central axis but located at the rim?",
+    "options": [
+      "mR², because the parallel axis transfer completely replaces the centroidal value",
+      "2mR², since the transfer term equals the centroidal moment of inertia itself",
+      "(3/2)mR², combining the centroidal value ½mR² with the transfer term mR²",
+      "(5/2)mR², adding the full diameter squared transfer term to the centroidal value"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The parallel axis theorem states I = I_cm + md², where d is the distance between axes. Here, I_cm = ½mR² and d = R (distance from center to rim).",
+    "explanationLine": 2153
+  },
+  {
+    "id": "u2-L5-Q16",
+    "type": "true-false",
+    "question": "The angular momentum of a system is conserved only when no external forces act on the system.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Angular momentum is conserved when no external TORQUES (not forces) act on the system.",
+    "explanationLine": 2188
+  },
+  {
+    "id": "u2-L5-Q8",
+    "type": "multiple-choice",
+    "question": "A figure skater pulls in her arms during a spin and her angular velocity triples. By what factor did her moment of inertia change?",
+    "options": [
+      "It increased by a factor of 3",
+      "It decreased to 1/9 of the original value",
+      "It decreased to 1/3 of the original value",
+      "It did not change, only angular velocity changed"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Angular momentum L = Iω is conserved (no external torques). If ω triples, then I must decrease to 1/3: I₁ω₁ = I₂ω₂ → I₂ = I₁(ω₁/ω₂) = I₁/3.",
+    "explanationLine": 2230
+  },
+  {
+    "id": "u2-L5-Q10",
+    "type": "multiple-choice",
+    "question": "A uniform rod of mass 4 kg and length 1.2 m is pivoted at one end. What angular acceleration results from a 10 N force applied perpendicular to the rod at the other end?",
+    "options": [
+      "3.13 rad/s²",
+      "2.08 rad/s²",
+      "12.5 rad/s²",
+      "6.25 rad/s²"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Torque about the pivot: τ = F × L = 10 × 1.2 = 12 N·m. Moment of inertia about one end: I = (1/3)mL² = (1/3)(4)(1.44) = 1.92 kg·m².",
+    "explanationLine": 2245
+  },
+  {
+    "id": "u2-L5-Q11",
+    "type": "multiple-choice",
+    "question": "A solid disk (I = ½mR²) and a thin ring (I = mR²) of the same mass and radius roll down an incline. What is the ratio of their translational accelerations?",
+    "options": [
+      "The disk accelerates exactly twice as fast as the ring down the incline because its lower moment of inertia allows more translational acceleration",
+      "They have the same linear acceleration down the incline because both have identical mass and experience the same gravitational force component",
+      "The ring accelerates twice as fast as the disk down the incline because its mass is concentrated at the outer radius for reduced resistance",
+      "The disk\\"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Rolling acceleration a = g sin θ / (1 + I/(mR²)). For the disk: a_disk = g sin θ / (1 + ½) = (2/3)g sin θ. For the ring: a_ring = g sin θ / (1 + 1) = (1/2)g sin θ.",
+    "explanationLine": 2260
+  },
+  {
+    "id": "u2-L5-Q12",
+    "type": "multiple-choice",
+    "question": "A 20 kg solid disk of radius 0.3 m has a rope wrapped around it. A 5 kg mass hangs from the rope. What is the angular acceleration of the disk?",
+    "options": [
+      "21.8 rad/s²",
+      "32.7 rad/s²",
+      "10.9 rad/s²",
+      "65.4 rad/s²"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "For the hanging mass: mg - T = ma → T = m(g-a). For the disk: TR = Iα = ½MR²α, and a = Rα.",
+    "explanationLine": 2275
+  },
+  {
+    "id": "u2-L5-Q14",
+    "type": "multiple-choice",
+    "question": "Two gears mesh together. Gear A has 40 teeth and Gear B has 20 teeth. If Gear A rotates at 100 rpm, what is Gear B\\",
+    "options": [
+      "50 rpm in the opposite direction: the gear ratio reduces speed by the teeth ratio and reverses the rotation direction of the output",
+      "200 rpm in the same direction: the gear ratio inverts the speed but the meshing teeth maintain the same rotational direction",
+      "200 rpm in the opposite direction: the gear ratio inverts speed and reverses rotation direction",
+      "100 rpm in the same direction: the output gear rotates at the same speed as the input because the teeth ratio equals exactly unity"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "For meshing gears: N_A × ω_A = N_B × ω_B (at the contact point, the tangential velocities must match).",
+    "explanationLine": 2290
+  },
+  {
+    "id": "u2-L5-Q15",
+    "type": "multiple-choice",
+    "question": "A 50 kg child sits at the rim of a 200 kg merry-go-round (uniform disk, R = 2 m) spinning at 10 rpm. The child walks to the center. What is the new angular velocity?",
+    "options": [
+      "12 rpm",
+      "20 rpm",
+      "15 rpm",
+      "10 rpm"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Initial I_total = I_disk + I_child = ½(200)(4) + 50(4) = 400 + 200 = 600 kg·m². Final I_total = ½(200)(4) + 50(0) = 400 kg·m² (child at center, r = 0).",
+    "explanationLine": 2305
+  },
+  {
+    "id": "u2-L5-Q20",
+    "type": "true-false",
+    "question": "A hollow cylinder has a larger moment of inertia than a solid cylinder of the same mass and outer radius.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The solid cylinder has I = ½mR², while a thin-walled hollow cylinder has I = mR².",
+    "explanationLine": 2331
+  },
+  {
+    "id": "u2-L5-Q17",
+    "type": "multiple-choice",
+    "question": "A wheel of radius 0.4 m rolling without slipping has a center velocity of 5 m/s. What is the velocity of the topmost point of the wheel relative to the ground?",
+    "options": [
+      "5 m/s",
+      "10 m/s",
+      "0 m/s",
+      "7.07 m/s"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For rolling without slipping, the velocity at any point is the sum of translational velocity (v_cm forward) and rotational velocity (ωR at that point).",
+    "explanationLine": 2372
+  },
+  {
+    "id": "u2-L5-Q18",
+    "type": "multiple-choice",
+    "question": "The perpendicular axis theorem states that for a planar body, I_z = I_x + I_y. This theorem applies to which type of body?",
+    "options": [
+      "Any three-dimensional body regardless of shape: the perpendicular axis theorem applies universally to all rigid bodies in any orientation",
+      "Flat (planar) bodies only: the body must lie in the xy-plane, and z is perpendicular to it",
+      "Only bodies with circular cross-sections: the perpendicular axis theorem requires rotational symmetry to produce valid moment of inertia results",
+      "Only symmetric bodies such as squares and circles, the perpendicular axis theorem requires at least one axis of geometric symmetry to be valid"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The perpendicular axis theorem I_z = I_x + I_y applies ONLY to flat (planar, laminar) bodies where all mass lies in one plane (say the xy-plane).",
+    "explanationLine": 2387
+  },
+  {
+    "id": "u2-L5-Q19",
+    "type": "multiple-choice",
+    "question": "A solid cylinder rolls up an incline without slipping, starting at 4 m/s. How high does it climb before momentarily stopping?",
+    "options": [
+      "0.82 m",
+      "1.22 m",
+      "1.63 m",
+      "0.61 m"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Energy conservation: ½mv² + ½Iω² = mgh. For a solid cylinder I = ½mR², and ω = v/R.",
+    "explanationLine": 2402
+  },
+  {
+    "id": "u2-L5-Q21",
+    "type": "multiple-choice",
+    "question": "A torque of 50 N·m is applied to a flywheel with I = 10 kg·m² initially at rest. How many revolutions does it complete in 4 seconds?",
+    "options": [
+      "3.18 revolutions",
+      "6.37 revolutions",
+      "12.73 revolutions",
+      "1.59 revolutions"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Angular acceleration: α = τ/I = 50/10 = 5 rad/s². Angle: θ = ½αt² = ½(5)(16) = 40 rad.",
+    "explanationLine": 2417
+  },
+  {
+    "id": "u2-L5-Q22",
+    "type": "multiple-choice",
+    "question": "In a car differential, the inner wheel turns slower and the outer wheel turns faster than the driveshaft during a turn. What principle allows this?",
+    "options": [
+      "The inner wheel has more tire-road friction during a turn so it naturally slows down, and the differential simply accommodates this friction difference",
+      "The differential gear splits the input torque equally while allowing different speeds. The speed difference equals twice the turn-induced offset from the average speed",
+      "The outer wheel receives proportionally more torque from the engine through the differential, which actively distributes power based on wheel speed",
+      "Both wheels always rotate at exactly the same angular speed, the apparent speed difference is entirely due to tire deformation and elastic compliance"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A differential uses a set of bevel gears (spider gears) that allow the two output shafts to rotate at different speeds while the input torque is split equally.",
+    "explanationLine": 2432
+  },
+  {
+    "id": "u2-L5-Q24",
+    "type": "multiple-choice",
+    "question": "A student places a spinning gyroscope on a table with its axis horizontal. Instead of tipping over, the axis rotates horizontally. If the gyroscope spin rate is 3000 rpm, I_spin = 0.001 kg·m², and the center of mass is 0.05 m from the support point with mass 0.5 kg, what is the precession rate?",
+    "options": [
+      "3.14 rad/s (about 30 rpm)",
+      "0.78 rad/s (about 7.5 rpm)",
+      "0.156 rad/s (about 1.5 rpm)",
+      "7.85 rad/s (about 75 rpm)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Precession rate Ω = τ/(Iω). Torque from gravity: τ = mgd = 0.5(9.81)(0.05) = 0.2453 N·m. Spin angular velocity: ω = 3000 × 2π/60 = 314.2 rad/s.",
+    "explanationLine": 2447
+  },
+  {
+    "id": "u2-L5-Q25",
+    "type": "multiple-choice",
+    "question": "Why is it easier to balance on a moving bicycle than a stationary one?",
+    "options": [
+      "Spinning wheels have angular momentum, tilting changes L\\",
+      "Forward motion creates aerodynamic pressure that pushes against the bike and rider, keeping the system upright through air resistance",
+      "The rider\\",
+      "Spinning tires grip the road better when moving forward, creating a larger contact friction footprint that resists sideways tipping"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A moving bicycle has spinning wheels with angular momentum L pointing laterally.",
+    "explanationLine": 2462
+  },
+  {
+    "id": "u2-L5-Q26",
+    "type": "true-false",
+    "question": "When a solid ball rolls down an incline without slipping, friction does negative work on the ball.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "For rolling without slipping, the contact point has zero velocity (instantaneously at rest).",
+    "explanationLine": 2471
+  },
+  {
+    "id": "u2-L5-Q27",
+    "type": "multiple-choice",
+    "question": "A turntable (I = 0.5 kg·m²) rotates at 33.3 rpm. A 0.3 kg record (I_record = ½mR² = 0.024 kg·m²) is dropped onto it from rest. What is the final angular velocity?",
+    "options": [
+      "30.0 rpm",
+      "33.3 rpm",
+      "31.8 rpm",
+      "16.7 rpm"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Angular momentum conservation: I₁ω₁ = (I₁ + I₂)ω₂. 0.5(33.3) = (0.5 + 0.024)ω₂. 16.65 = 0.524 × ω₂. ω₂ = 31.8 rpm.",
+    "explanationLine": 2486
+  },
+  {
+    "id": "u2-L5-Q28",
+    "type": "multiple-choice",
+    "question": "A composite body consists of a solid disk (m = 5 kg, R = 0.2 m) with a point mass of 2 kg attached at its rim. What is the total moment of inertia about the disk\\",
+    "options": [
+      "0.10 kg·m²",
+      "0.18 kg·m²",
+      "0.28 kg·m²",
+      "0.08 kg·m²"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "I_total = I_disk + I_point = ½mR² + m_point × R² = ½(5)(0.04) + 2(0.04) = 0.10 + 0.08 = 0.18 kg·m². For composite bodies, moments of inertia add algebraically about the same axis.",
+    "explanationLine": 2501
+  },
+  {
+    "id": "u2-L5-Q29",
+    "type": "multiple-choice",
+    "question": "A thin uniform rod of mass 3 kg and length 0.8 m is pivoted at one end and released from a horizontal position. What is the angular velocity when it reaches the vertical position?",
+    "options": [
+      "8.58 rad/s",
+      "4.29 rad/s",
+      "6.07 rad/s",
+      "3.04 rad/s"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The center of mass falls h = L/2 = 0.4 m. Energy conservation: mgh = ½Iω².",
+    "explanationLine": 2516
+  },
+  {
+    "id": "u2-L6-Q3",
+    "type": "true-false",
+    "question": "At resonance in a lightly damped forced-vibration system, the steady-state response amplitude is limited only by the damping. Without damping, the amplitude would grow without bound.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "When the forcing frequency equals the natural frequency (ω = ωn), the magnification factor becomes 1/(2ζ) for a viscously damped system.",
+    "explanationLine": 2552
+  },
+  {
+    "id": "u2-L6-Q9",
+    "type": "true-false",
+    "question": "A critically damped system (ζ = 1) oscillates exactly once before coming to rest.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "A critically damped system (ζ = 1) does NOT oscillate at all. It returns to equilibrium in the shortest possible time without any oscillation.",
+    "explanationLine": 2568
+  },
+  {
+    "id": "u2-L6-Q1",
+    "type": "multiple-choice",
+    "question": "A machine on its mounting vibrates excessively. You want to lower the natural frequency to avoid resonance. Which approach works?",
+    "options": [
+      "Remove mass from the machine mounting: lighter systems always vibrate at lower amplitudes and are inherently less susceptible to resonance effects",
+      "Increase the spring stiffness of the mounting system, stiffer springs inherently resist vibration better and prevent resonance in all conditions",
+      "Add mass or use softer springs: since omega_n = sqrt(k/m), increasing m or decreasing k both lower the natural frequency",
+      "The natural frequency is an intrinsic property that cannot be changed without completely replacing the machine, its foundation, and all mounting hardware"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The natural frequency omega_n = sqrt(k/m) depends only on stiffness and mass.",
+    "explanationLine": 2593
+  },
+  {
+    "id": "u2-L6-Q2",
+    "type": "multiple-choice",
+    "question": "For a door closer mechanism, would you want underdamped, critically damped, or overdamped behavior?",
+    "options": [
+      "Underdamped: some oscillation is always acceptable and provides faster door closing than other damping levels",
+      "Critically damped: critical damping is universally the best setting for all mechanical door closer systems",
+      "Slightly overdamped: closes smoothly without oscillation, trading speed for no bounce-back at the frame",
+      "Heavily overdamped: maximum damping ensures the door never overshoots regardless of how hard it is pushed open"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The damping ratio choice depends on the application.",
+    "explanationLine": 2608
+  },
+  {
+    "id": "u2-L6-Q4",
+    "type": "multiple-choice",
+    "question": "A machine on soft isolators (r = omega/omega_n = 6.3) transmits only 2.6% of its vibration force to the floor. A technician suggests adding stiff rubber bumpers for \"extra protection.\" Why could this actually make things worse?",
+    "options": [
+      "Adding stiffness to the isolation mounts is always beneficial because making the structure more rigid inherently reduces all vibration amplitudes",
+      "Stiffer supports increase omega_n, which decreases the frequency ratio r. If r drops below sqrt(2), the isolators amplify vibration instead of reducing it",
+      "The rubber bumpers would add damping to the system, and additional damping always reduces the transmitted force at every operating frequency range",
+      "The extra stiffness would overload the machine bearings due to increased constraint forces but would not affect the vibration transmission characteristics"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Vibration isolation works because the frequency ratio r = omega/omega_n is large (here r = 6.3).",
+    "explanationLine": 2623
+  },
+  {
+    "id": "u2-L6-Q5",
+    "type": "multiple-choice",
+    "question": "A rotating shaft balanced at 1500 rpm develops excessive vibration when the speed is increased to 3000 rpm. The operator says \"But we balanced it!\" Why is the vibration so much worse at the higher speed?",
+    "options": [
+      "Unbalance force = m*r*omega^2, so doubling the speed quadruples the force. Also, the higher speed may be closer to a critical speed (resonance)",
+      "The balance weights fell off at the higher speed due to centrifugal force exceeding the attachment strength, removing the compensating counterbalance mass",
+      "Higher speed creates significantly more aerodynamic turbulence around the rotating shaft, inducing additional lateral forces from the turbulent airflow",
+      "The bearing lubricant thins at the higher operating speed due to shear heating, allowing more radial shaft movement within the bearing clearance"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Two compounding effects: (1) Unbalance force F = m*r*omega^2 scales with the SQUARE of speed.",
+    "explanationLine": 2638
+  },
+  {
+    "id": "u2-L6-Q7",
+    "type": "multiple-choice",
+    "question": "A spring-mass system has k = 4000 N/m and m = 10 kg. What is the natural frequency in Hz?",
+    "options": [
+      "3.18 Hz",
+      "20 Hz",
+      "6.37 Hz",
+      "1.59 Hz"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "ω_n = √(k/m) = √(4000/10) = √400 = 20 rad/s. Converting to Hz: f_n = ω_n/(2π) = 20/(2π) = 3.18 Hz.",
+    "explanationLine": 2663
+  },
+  {
+    "id": "u2-L6-Q16",
+    "type": "true-false",
+    "question": "The damped natural frequency ω_d is always less than the undamped natural frequency ω_n.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "ω_d = ω_n√(1-ζ²). Since 0 < ζ < 1 for underdamped systems, √(1-ζ²) < 1, so ω_d < ω_n. For light damping (ζ = 0.1), ω_d = 0.995ω_n (only 0.5% difference).",
+    "explanationLine": 2689
+  },
+  {
+    "id": "u2-L6-Q8",
+    "type": "multiple-choice",
+    "question": "A vibrating system has a damping ratio ζ = 0.1. What is the amplification factor (Q factor) at resonance?",
+    "options": [
+      "5",
+      "10",
+      "0.1",
+      "50"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "At resonance (ω = ω_n), the magnification factor (Q factor) = 1/(2ζ) = 1/(2 × 0.1) = 5.",
+    "explanationLine": 2731
+  },
+  {
+    "id": "u2-L6-Q10",
+    "type": "multiple-choice",
+    "question": "An underdamped system with ζ = 0.05 and ω_n = 50 rad/s undergoes free vibration. Approximately how many cycles does it take for the amplitude to decay to half its initial value?",
+    "options": [
+      "About 1 cycle",
+      "About 10 cycles",
+      "About 22 cycles",
+      "About 2.2 cycles"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The amplitude decays as A(t) = A₀ e^(-ζω_n t). For half amplitude: 0.5 = e^(-ζω_n t), so ζω_n t = ln 2 = 0.693. Time: t = 0.693/(0.05 × 50) = 0.693/2.5 = 0.277 s.",
+    "explanationLine": 2746
+  },
+  {
+    "id": "u2-L6-Q11",
+    "type": "multiple-choice",
+    "question": "The logarithmic decrement δ is measured from a free vibration test as 0.314. What is the damping ratio ζ?",
+    "options": [
+      "0.050",
+      "0.100",
+      "0.314",
+      "0.025"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The logarithmic decrement δ = ln(x_n/x_{n+1}) = 2πζ/√(1-ζ²).",
+    "explanationLine": 2761
+  },
+  {
+    "id": "u2-L6-Q12",
+    "type": "multiple-choice",
+    "question": "A vibration isolator must reduce transmitted force by 80% (transmissibility = 0.2). If the machine operates at 1200 rpm, what is the maximum allowable natural frequency of the isolator mounting?",
+    "options": [
+      "About 300 rpm (5 Hz)",
+      "About 600 rpm (10 Hz)",
+      "About 849 rpm (14.1 Hz)",
+      "About 452 rpm (7.5 Hz)"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "For an undamped isolator, transmissibility T = 1/(r² - 1), where r = ω/ω_n.",
+    "explanationLine": 2776
+  },
+  {
+    "id": "u2-L6-Q14",
+    "type": "multiple-choice",
+    "question": "A 100 kg machine is mounted on springs with total stiffness 40,000 N/m and operates at 600 rpm. Is the machine in the isolation range?",
+    "options": [
+      "No, the machine is operating at resonance. The frequency ratio equals unity and the transmissibility reaches its maximum possible value",
+      "Yes, r = 3.14, transmissibility ≈ 0.11 (89% reduction), well into the isolation range",
+      "Barely within the isolation range: the transmissibility is approximately 0.5 at this frequency ratio, giving only 50% force reduction",
+      "The machine is operating below the isolation frequency range and the vibration force is actually amplified rather than reduced by the mounts"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ω_n = √(k/m) = √(40000/100) = 20 rad/s. Operating frequency: ω = 600 × 2π/60 = 62.83 rad/s.",
+    "explanationLine": 2791
+  },
+  {
+    "id": "u2-L6-Q15",
+    "type": "multiple-choice",
+    "question": "Why does adding damping to a vibration isolator actually INCREASE the transmitted force at high frequency ratios (r >> 1)?",
+    "options": [
+      "High-frequency vibrations generate significant heat in the damper material through viscous dissipation, which progressively increases its dynamic stiffness and degrades isolation quality over time",
+      "Damping effectively reduces the equivalent spring stiffness of the isolation mount at high frequencies, fundamentally changing the isolation characteristics and shifting the crossover point downward",
+      "Damping creates an additional force transmission path, the damper force c*v is in addition to the spring force, and at high frequencies the damper transmits significant force even while the spring force is well isolated",
+      "This statement is incorrect, adding damping to any vibration isolation system always reduces the transmitted force at every excitation frequency without exception across the entire operating range"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The transmissibility with damping is T = √(1 + (2ζr)²)/√((1-r²)² + (2ζr)²).",
+    "explanationLine": 2806
+  },
+  {
+    "id": "u2-L6-Q20",
+    "type": "true-false",
+    "question": "Doubling the mass of a vibrating system while keeping stiffness constant will halve the natural frequency.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "ω_n = √(k/m). Doubling m: ω_n_new = √(k/2m) = ω_n/√2 ≈ 0.707ω_n. The natural frequency decreases by a factor of √2 (about 29.3%), not by half.",
+    "explanationLine": 2832
+  },
+  {
+    "id": "u2-L6-Q17",
+    "type": "multiple-choice",
+    "question": "A car suspension system has a natural frequency of 1 Hz and a damping ratio of 0.3. After hitting a bump, approximately how many cycles of oscillation occur before the motion becomes imperceptible (< 2% of initial amplitude)?",
+    "options": [
+      "About 2 cycles",
+      "About 5 cycles",
+      "About 10 cycles",
+      "About 1 cycle"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Amplitude decays as A(t) = A₀e^(-ζω_n t). For 2% remaining: 0.02 = e^(-0.3 × 2π × 1 × t), so 0.3(2π)t = ln(50) = 3.912, t = 3.912/1.885 = 2.08 s.",
+    "explanationLine": 2873
+  },
+  {
+    "id": "u2-L6-Q18",
+    "type": "multiple-choice",
+    "question": "A simple pendulum has length L = 1 m. What is its natural frequency of small oscillations?",
+    "options": [
+      "0.159 Hz",
+      "3.13 Hz",
+      "1.57 Hz",
+      "0.498 Hz"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "For a simple pendulum: ω_n = √(g/L) = √(9.81/1) = 3.132 rad/s. f_n = ω_n/(2π) = 3.132/6.283 = 0.498 Hz. Period T = 1/f = 2.007 s ≈ 2 s.",
+    "explanationLine": 2888
+  },
+  {
+    "id": "u2-L6-Q19",
+    "type": "multiple-choice",
+    "question": "An undamped absorber (tuned mass damper) is added to a structure to suppress vibration at a specific frequency. What must the absorber\\",
+    "options": [
+      "The excitation (forcing) frequency: the absorber vibrates in antiphase and cancels the force",
+      "The structure\\",
+      "Twice the excitation forcing frequency: the absorber operates at double the forcing frequency to create destructive interference effects",
+      "Half the excitation forcing frequency: the absorber operates at half speed to provide a gradual phase-shifted cancellation of the vibration"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A tuned mass damper (TMD) works by tuning its natural frequency to match the excitation frequency: ω_absorber = ω_forcing.",
+    "explanationLine": 2903
+  },
+  {
+    "id": "u2-L6-Q21",
+    "type": "multiple-choice",
+    "question": "A machine creates a harmonic force of 500 N at 30 Hz. If the machine is mounted on isolators with transmissibility 0.15, what force reaches the foundation?",
+    "options": [
+      "3333 N",
+      "75 N",
+      "150 N",
+      "500 N"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Transmitted force = Transmissibility × Applied force = 0.15 × 500 = 75 N. This is 85% isolation, only 15% of the dynamic force reaches the foundation.",
+    "explanationLine": 2918
+  },
+  {
+    "id": "u2-L6-Q22",
+    "type": "multiple-choice",
+    "question": "Springs in parallel under a machine have what effect compared to a single spring of the same total stiffness?",
+    "options": [
+      "Same natural frequency if the total stiffness is the same, springs in parallel add: k_total = k₁ + k₂, and ω_n depends only on total k and m",
+      "Higher natural frequency because springs arranged in parallel are always stiffer than any equivalent single spring with the same total wire length",
+      "Lower natural frequency because distributing the load across four parallel springs reduces the effective stiffness that each individual spring provides",
+      "A different natural frequency because splitting one spring into four parallel springs changes the effective vibrating mass of the spring-mass system"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "For springs in parallel, k_total = k₁ + k₂ + ...",
+    "explanationLine": 2933
+  },
+  {
+    "id": "u2-L6-Q24",
+    "type": "multiple-choice",
+    "question": "A structure has a measured natural frequency of 5 Hz. An earthquake excites it at 5 Hz for 10 seconds. If ζ = 0.02, approximately how large could the dynamic amplification become during this excitation?",
+    "options": [
+      "Earthquakes cannot cause structural resonance because seismic ground motion is random and non-periodic, unlike the harmonic excitation for resonance",
+      "The amplification factor always reaches exactly 1/(2ζ) immediately at the onset of resonant excitation, with no transient buildup period required",
+      "The amplification can reach close to the steady-state Q = 1/(2ζ) = 25, since 10 seconds is about 50 cycles, enough time for the response to nearly reach steady state",
+      "The dynamic amplification factor is limited to approximately 2.0 regardless of the system damping ratio, because structural nonlinearities cap it"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The steady-state Q = 1/(2 × 0.02) = 25. The response builds up approximately as Q(1 - e^(-ζω_n t)).",
+    "explanationLine": 2948
+  },
+  {
+    "id": "u2-L6-Q25",
+    "type": "multiple-choice",
+    "question": "A rotating machine has an unbalance of 0.001 kg·m. At what speed in rpm would the unbalance force equal 100 N?",
+    "options": [
+      "477 rpm",
+      "1907 rpm",
+      "953 rpm",
+      "3000 rpm"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Unbalance force F = meω² where me = 0.001 kg·m. 100 = 0.001 × ω². ω² = 100,000. ω = 316.2 rad/s. Converting to rpm: N = 316.2 × 60/(2π) = 316.2 × 9.549 = 3020...",
+    "explanationLine": 2963
+  },
+  {
+    "id": "u2-L6-Q26",
+    "type": "true-false",
+    "question": "The phase angle between the forcing function and the steady-state response of a damped SDOF system at resonance is exactly 90 degrees.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The phase angle φ = arctan(2ζr/(1-r²)). At resonance, r = 1: φ = arctan(2ζ/(1-1)) = arctan(∞) = 90°. This is true for ALL values of damping ratio (as long as ζ > 0).",
+    "explanationLine": 2972
+  },
+  {
+    "id": "u2-L6-Q27",
+    "type": "multiple-choice",
+    "question": "A vibration test reveals that a machine mount deflects 2 mm under static load (dead weight). What is the natural frequency of vertical vibration?",
+    "options": [
+      "11.1 Hz",
+      "22.2 Hz",
+      "5.0 Hz",
+      "3.5 Hz"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Static deflection δ_st = mg/k, so k/m = g/δ_st. Therefore ω_n = √(g/δ_st) = √(9.81/0.002) = √4905 = 70.04 rad/s. f_n = 70.04/(2π) = 11.1 Hz.",
+    "explanationLine": 2987
+  },
+  {
+    "id": "u2-L6-Q28",
+    "type": "multiple-choice",
+    "question": "A lightly damped system (ζ = 0.02) operates at r = 0.95 (just below resonance). What is the approximate dynamic magnification factor?",
+    "options": [
+      "About 10: exactly half of the peak resonance value, since the magnification decreases linearly with distance from the resonance frequency ratio",
+      "About 25: the same value as at exact resonance because the magnification factor is constant across the entire frequency range near resonance",
+      "About 1.0: this frequency ratio is far enough from resonance that the dynamic magnification is negligible and the response equals the static value",
+      "About 5.1: using MF = 1/√((1-r²)² + (2ζr)²)"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "MF = 1/√((1-r²)² + (2ζr)²) = 1/√((1-0.9025)² + (2×0.02×0.95)²) = 1/√((0.0975)² + (0.038)²) = 1/√(0.009506 + 0.001444) = 1/√(0.01095) = 1/0.1046 = 9.56.",
+    "explanationLine": 3002
+  },
+  {
+    "id": "u2-L6-Q30",
+    "type": "multiple-choice",
+    "question": "A Frahm absorber (undamped dynamic vibration absorber) eliminates vibration at ONE frequency but creates TWO new resonance frequencies. Why is this a potential concern?",
+    "options": [
+      "The tuned mass absorber eliminates all resonance frequencies from the system response, not just the single targeted forcing frequency designed for",
+      "The two new resonance frequencies cancel each other out through destructive interference, so there is no practical concern about vibration peaks",
+      "The new resonance frequencies only exist in theoretical mathematical models and cannot physically occur in any practical real-world installation",
+      "During startup or shutdown, the machine speed passes through these new resonances, potentially causing dangerous transient vibrations"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Adding a tuned absorber to a SDOF system creates a 2-DOF system with two natural frequencies, one below and one above the original natural frequency.",
+    "explanationLine": 3027
+  }
+]

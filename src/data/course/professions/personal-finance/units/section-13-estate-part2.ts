@@ -47,6 +47,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Estate tax is paid by the estate before heirs receive anything.",
             correctAnswer: true,
             explanation: "Estate tax is deducted from the total estate. What's left after taxes gets distributed to beneficiaries.",
+            distractorExplanations: {
+              1: 'Estate tax is deducted from the total estate. What\'s left after taxes gets distributed to beneficiaries.',
+            },
           },
           {
             id: "pf-s13-u7-L1-Q2",
@@ -60,6 +63,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Inheritance tax is the responsibility of each beneficiary. The amount depends on what they personally receive and their relationship to the deceased.",
+            distractorExplanations: {
+              0: 'Inheritance tax is the responsibility of each beneficiary. The amount depends on what they personally receive and their relationship to the.',
+              1: 'Inheritance tax is the responsibility of each beneficiary. The amount depends on what they personally receive and their relationship to the.',
+              2: 'Inheritance tax is the responsibility of each beneficiary. The amount depends on what they personally receive and their relationship to the.',
+            },
           },
           {
             id: "pf-s13-u7-L1-T2",
@@ -81,6 +89,9 @@ export const financeSection13Part2: Unit[] = [
             question: "In most countries, the majority of estates owe no estate or inheritance tax because of high exemption thresholds.",
             correctAnswer: true,
             explanation: "Exemption thresholds are set high enough that the vast majority of families never owe estate or inheritance tax.",
+            distractorExplanations: {
+              1: 'Exemption thresholds are set high enough that the vast majority of families never owe estate or inheritance tax.',
+            },
           },
           {
             id: "pf-s13-u7-L1-Q4",
@@ -117,6 +128,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Estate taxes aim to prevent massive wealth from passing untaxed through generations. They represent a small fraction of total government revenue.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; estate taxes aim to prevent massive wealth from passing untaxed through generations.',
+              2: 'This overgeneralizes; estate taxes aim to prevent massive wealth from passing untaxed through generations.',
+              3: 'Estate taxes aim to prevent massive wealth from passing untaxed through generations. They represent a small fraction of total government revenue.',
+            },
           },
           {
             id: "pf-s13-u7-L1-Q6",
@@ -131,6 +147,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A $2 million estate is well below the $13.61 million federal exemption. Zero federal estate tax is owed. State taxes may differ, but in most states this estate is also exempt.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a $2 million estate is well below the $13.61 million federal exemption. Zero federal estate tax is owed.',
+              1: 'This reasoning is flawed; a $2 million estate is well below the $13.61 million federal exemption. Zero federal estate tax is owed.',
+              3: 'This reasoning is flawed; a $2 million estate is well below the $13.61 million federal exemption. Zero federal estate tax is owed.',
+            },
           },
         ],
       },
@@ -162,6 +183,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Stepped-up basis means inherited assets have their cost basis reset to fair market value at the date of death.",
             correctAnswer: true,
             explanation: "The 'step up' eliminates unrealized gains from the original owner's holding period.",
+            distractorExplanations: {
+              1: 'The \'step up\' eliminates unrealized gains from the original owner\'s holding period.',
+            },
           },
           {
             id: "pf-s13-u7-L2-Q2",
@@ -175,6 +199,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Your cost basis steps up to $50,000. If you sell immediately, you owe zero capital gains tax. The $45,000 gain during your grandmother's lifetime is never taxed.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; your cost basis steps up to $50,000. If you sell immediately, you owe zero capital gains tax.',
+              1: 'This calculation is incorrect; your cost basis steps up to $50,000. If you sell immediately, you owe zero capital gains tax.',
+              3: 'There is a real consequence here; your cost basis steps up to $50,000. If you sell immediately, you owe zero capital gains tax.',
+            },
           },
           {
             id: "pf-s13-u7-L2-T2",
@@ -189,6 +218,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Selling a highly appreciated asset before death generally triggers more capital gains tax than letting heirs inherit it with stepped-up basis.",
             correctAnswer: true,
             explanation: "The stepped-up basis erases all accumulated gains. Selling before death makes those gains taxable.",
+            distractorExplanations: {
+              1: 'The stepped-up basis erases all accumulated gains. Selling before death makes those gains taxable.',
+            },
           },
           {
             id: "pf-s13-u7-L2-Q4",
@@ -218,6 +250,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "If she inherits it, her basis is $400,000. If he gifts it, her basis is $100,000, meaning $300,000 in taxable gains when she sells.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; if she inherits it, her basis is $400,000.',
+              1: 'This reasoning is flawed; if she inherits it, her basis is $400,000.',
+              2: 'This reasoning is flawed; if she inherits it, her basis is $400,000.',
+            },
           },
           {
             id: "pf-s13-u7-L2-Q6",
@@ -247,6 +284,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Stepped-up basis is most valuable when unrealized gains are largest. $300,000 in erased gains on real estate saves far more in taxes than $500 or $2,000.",
+            distractorExplanations: {
+              0: 'Stepped-up basis is most valuable when unrealized gains are largest.',
+              1: 'Stepped-up basis is most valuable when unrealized gains are largest.',
+              2: 'Stepped-up basis is most valuable when unrealized gains are largest.',
+            },
           },
         ],
       },
@@ -278,6 +320,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Portability allows a surviving spouse to use the deceased spouse's unused estate tax exemption.",
             correctAnswer: true,
             explanation: "Portability effectively doubles the couple's combined exemption. The executor must file the required election.",
+            distractorExplanations: {
+              1: 'Portability effectively doubles the couple\'s combined exemption. The executor must file the required election.',
+            },
           },
           {
             id: "pf-s13-u7-L3-Q2",
@@ -291,6 +336,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Even when no estate tax is owed, Form 706 must be filed to preserve the unused exemption for the surviving spouse.",
+            distractorExplanations: {
+              0: 'Even when no estate tax is owed, Form 706 must be filed to preserve the unused exemption for the surviving spouse.',
+              1: 'Even when no estate tax is owed, Form 706 must be filed to preserve the unused exemption for the surviving spouse.',
+              2: 'Even when no estate tax is owed, Form 706 must be filed to preserve the unused exemption for the surviving spouse.',
+            },
           },
           {
             id: "pf-s13-u7-L3-T2",
@@ -305,6 +355,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Assets placed in an irrevocable trust are removed from your taxable estate.",
             correctAnswer: true,
             explanation: "Once you transfer assets into an irrevocable trust, they're no longer yours for estate tax purposes. You've permanently given up ownership.",
+            distractorExplanations: {
+              1: 'Once you transfer assets into an irrevocable trust, they\'re no longer yours for estate tax purposes. You\'ve permanently given up ownership.',
+            },
           },
           {
             id: "pf-s13-u7-L3-Q4",
@@ -344,6 +397,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The unlimited marital deduction means zero estate tax on transfers to a surviving spouse, regardless of amount. Tax may apply later when the spouse's estate passes to others.",
+            distractorExplanations: {
+              1: 'This calculation is incorrect; the unlimited marital deduction means zero estate tax on transfers to a surviving spouse, regardless of amount.',
+              2: 'This calculation is incorrect; the unlimited marital deduction means zero estate tax on transfers to a surviving spouse, regardless of amount.',
+              3: 'The unlimited marital deduction means zero estate tax on transfers to a surviving spouse, regardless of amount.',
+            },
           },
           {
             id: "pf-s13-u7-L3-Q6",
@@ -358,6 +416,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With portability, Helen's combined exemption is $27.22 million. Her $16 million estate is well below that threshold, so zero federal estate tax is owed.",
+            distractorExplanations: {
+              1: 'This calculation is incorrect; with portability, Helen\'s combined exemption is $27.22 million.',
+              2: 'This calculation is incorrect; with portability, Helen\'s combined exemption is $27.22 million.',
+              3: 'This calculation is incorrect; with portability, Helen\'s combined exemption is $27.22 million.',
+            },
           },
           {
             id: "pf-s13-u7-L3-Q7",
@@ -403,6 +466,9 @@ export const financeSection13Part2: Unit[] = [
             question: "In the US, you can owe state estate tax even if your estate is below the federal exemption threshold.",
             correctAnswer: true,
             explanation: "Several states have much lower thresholds than the federal $13.61 million. An estate of $2 million could owe state tax in Oregon or Massachusetts.",
+            distractorExplanations: {
+              1: 'Several states have much lower thresholds than the federal $13.61 million. An estate of $2 million could owe state tax in Oregon or Massachusetts.',
+            },
           },
           {
             id: "pf-s13-u7-L4-Q2",
@@ -416,6 +482,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Some retirees relocate to states with no estate tax (like Florida or Texas) to avoid state-level estate tax on top of federal rules.",
+            distractorExplanations: {
+              0: 'Some retirees relocate to states with no estate tax (like Florida or Texas) to avoid state-level estate tax on top of federal rules.',
+              1: 'Some retirees relocate to states with no estate tax (like Florida or Texas) to avoid state-level estate tax on top of federal rules.',
+              2: 'This reasoning is flawed; some retirees relocate to states with no estate tax (like Florida or Texas) to avoid state-level estate tax on top of.',
+            },
           },
           {
             id: "pf-s13-u7-L4-T2",
@@ -430,6 +501,9 @@ export const financeSection13Part2: Unit[] = [
             question: "If you own property in two different countries, both countries might try to tax that property at death.",
             correctAnswer: true,
             explanation: "Each country typically taxes assets within its jurisdiction. Tax treaties help avoid double taxation, but gaps exist.",
+            distractorExplanations: {
+              1: 'Each country typically taxes assets within its jurisdiction. Tax treaties help avoid double taxation, but gaps exist.',
+            },
           },
           {
             id: "pf-s13-u7-L4-Q4",
@@ -474,6 +548,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Cross-border estates require specialized advice. The US-France tax treaty addresses double taxation, but proper planning is needed to claim treaty benefits.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; cross-border estates require specialized advice.',
+              1: 'This reasoning is flawed; cross-border estates require specialized advice.',
+              3: 'This reasoning is flawed; cross-border estates require specialized advice.',
+            },
           },
           {
             id: "pf-s13-u7-L4-Q7",
@@ -487,6 +566,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Bilateral tax treaties between countries establish clear rules for which jurisdiction taxes what, preventing the same assets from being taxed twice.",
+            distractorExplanations: {
+              1: 'Bilateral tax treaties between countries establish clear rules for which jurisdiction taxes what, preventing the same assets from being taxed twice.',
+              2: 'Bilateral tax treaties between countries establish clear rules for which jurisdiction taxes what, preventing the same assets from being taxed twice.',
+              3: 'Bilateral tax treaties between countries establish clear rules for which jurisdiction taxes what, preventing the same assets from being taxed twice.',
+            },
           },
         ],
       },
@@ -518,6 +602,9 @@ export const financeSection13Part2: Unit[] = [
             question: "The generation-skipping transfer tax applies when you leave assets directly to grandchildren, skipping your children.",
             correctAnswer: true,
             explanation: "The GST tax targets transfers that skip a generation. It ensures each generation's transfer is subject to potential taxation.",
+            distractorExplanations: {
+              1: 'The GST tax targets transfers that skip a generation. It ensures each generation\'s transfer is subject to potential taxation.',
+            },
           },
           {
             id: "pf-s13-u7-L5-Q2",
@@ -531,6 +618,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without the GST tax, wealthy families could transfer wealth directly to grandchildren, dodging one entire round of estate taxation.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; without the GST tax, wealthy families could transfer wealth directly to grandchildren, dodging one entire round of.',
+              2: 'Without the GST tax, wealthy families could transfer wealth directly to grandchildren, dodging one entire round of estate taxation.',
+              3: 'Without the GST tax, wealthy families could transfer wealth directly to grandchildren, dodging one entire round of estate taxation.',
+            },
           },
           {
             id: "pf-s13-u7-L5-T2",
@@ -545,6 +637,9 @@ export const financeSection13Part2: Unit[] = [
             question: "The GST tax exemption is separate from the estate tax exemption.",
             correctAnswer: true,
             explanation: "You have both an estate tax exemption and a GST exemption. They're independent, giving you two layers of protection for wealth transfers.",
+            distractorExplanations: {
+              1: 'You have both an estate tax exemption and a GST exemption. They\'re independent, giving you two layers of protection for wealth transfers.',
+            },
           },
           {
             id: "pf-s13-u7-L5-Q4",
@@ -567,6 +662,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The first $13.61 million is sheltered by her GST exemption. The remaining $1.39 million is subject to the 40% GST tax.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; the first $13.61 million is sheltered by her GST exemption. The remaining $1.',
+              2: 'This calculation is incorrect; the first $13.61 million is sheltered by her GST exemption. The remaining $1.',
+              3: 'This calculation is incorrect; the first $13.61 million is sheltered by her GST exemption. The remaining $1.',
+            },
           },
           {
             id: "pf-s13-u7-L5-T3",
@@ -600,6 +700,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The GST tax rate is 40%, matching the top federal estate tax rate. Combined with estate tax, the effective rate on unplanned transfers can be devastating.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; the GST tax rate is 40%, matching the top federal estate tax rate.',
+              1: 'This calculation is incorrect; the GST tax rate is 40%, matching the top federal estate tax rate.',
+              3: 'This calculation is incorrect; the GST tax rate is 40%, matching the top federal estate tax rate.',
+            },
           },
         ],
       },
@@ -625,6 +730,9 @@ export const financeSection13Part2: Unit[] = [
             question: "For most estates below the federal exemption, income tax planning matters more than estate tax planning.",
             correctAnswer: true,
             explanation: "If your estate won't owe estate tax, focus on strategies like stepped-up basis and Roth conversions that reduce income taxes for your heirs.",
+            distractorExplanations: {
+              1: 'If your estate won\'t owe estate tax, focus on strategies like stepped-up basis and Roth conversions that reduce income taxes for your heirs.',
+            },
           },
           {
             id: "pf-s13-u7-L6-Q2",
@@ -665,6 +773,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The current high exemption sunsets after 2025. Clients who use the exemption now, through irrevocable trusts, lock in the benefit even after the threshold drops.",
+            distractorExplanations: {
+              0: 'The current high exemption sunsets after 2025. Clients who use the exemption now, through irrevocable trusts, lock in the benefit even after the.',
+              1: 'This reasoning is flawed; the current high exemption sunsets after 2025.',
+              2: 'This reasoning is flawed; the current high exemption sunsets after 2025.',
+            },
           },
           {
             id: "pf-s13-u7-L6-Q4",
@@ -679,6 +792,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "At $18 million, they're safe now but would be $4 million over a reduced $14 million exemption. Transferring assets into irrevocable trusts locks in today's higher exemption.",
+            distractorExplanations: {
+              0: 'At $18 million, they\'re safe now but would be $4 million over a reduced $14 million exemption.',
+              1: 'This reasoning is flawed; at $18 million, they\'re safe now but would be $4 million over a reduced $14 million exemption.',
+              2: 'Inaction here would be harmful; at $18 million, they\'re safe now but would be $4 million over a reduced $14 million exemption.',
+            },
           },
           {
             id: "pf-s13-u7-L6-Q5",
@@ -713,6 +831,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A $12 million estate approaching the exemption sunset has the most to lose from poor planning. The potential tax savings far exceed attorney fees.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a $12 million estate approaching the exemption sunset has the most to lose from poor planning.',
+              2: 'This reasoning is flawed; a $12 million estate approaching the exemption sunset has the most to lose from poor planning.',
+              3: 'A $12 million estate approaching the exemption sunset has the most to lose from poor planning. The potential tax savings far exceed attorney fees.',
+            },
           },
           {
             id: "pf-s13-u7-L6-Q7",
@@ -772,6 +895,9 @@ export const financeSection13Part2: Unit[] = [
             question: "In the US, you can give up to $18,000 per person per year without any gift tax consequences.",
             correctAnswer: true,
             explanation: "The annual exclusion allows tax-free gifts up to $18,000 per recipient. No gift tax return is needed for gifts within this limit.",
+            distractorExplanations: {
+              1: 'The annual exclusion allows tax-free gifts up to $18,000 per recipient. No gift tax return is needed for gifts within this limit.',
+            },
           },
           {
             id: "pf-s13-u8-L1-Q2",
@@ -785,6 +911,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Each spouse can give $18,000 to each recipient. Two donors times 2 recipients equals 4 annual exclusions: $72,000 total.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; each spouse can give $18,000 to each recipient.',
+              1: 'This calculation is incorrect; each spouse can give $18,000 to each recipient.',
+              3: 'This calculation is incorrect; each spouse can give $18,000 to each recipient.',
+            },
           },
           {
             id: "pf-s13-u8-L1-T2",
@@ -799,6 +930,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Giving more than $18,000 to one person means you must immediately pay gift tax on the excess.",
             correctAnswer: false,
             explanation: "You file a gift tax return, but the excess reduces your lifetime exemption. You don't owe actual tax unless you've exhausted the entire $13.61 million exemption.",
+            distractorExplanations: {
+              0: 'You file a gift tax return, but the excess reduces your lifetime exemption. You don\'t owe actual tax unless you\'ve exhausted the entire $13.61 million exemption.',
+            },
           },
           {
             id: "pf-s13-u8-L1-Q4",
@@ -828,6 +962,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Direct payments to educational institutions for tuition are exempt from gift tax with no dollar limit. She can pay the full $80,000 without affecting her annual exclusion or lifetime exemption.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; direct payments to educational institutions for tuition are exempt from gift tax with no dollar limit.',
+              1: 'This reasoning is flawed; direct payments to educational institutions for tuition are exempt from gift tax with no dollar limit.',
+              3: 'This reasoning is flawed; direct payments to educational institutions for tuition are exempt from gift tax with no dollar limit.',
+            },
           },
           {
             id: "pf-s13-u8-L1-Q6",
@@ -869,6 +1008,9 @@ export const financeSection13Part2: Unit[] = [
             question: "A married couple can give $36,000 per year to each recipient by combining their individual annual exclusions.",
             correctAnswer: true,
             explanation: "Each spouse has their own $18,000 exclusion. Combined, they can give $36,000 per person per year without gift tax consequences.",
+            distractorExplanations: {
+              1: 'Each spouse has their own $18,000 exclusion. Combined, they can give $36,000 per person per year without gift tax consequences.',
+            },
           },
           {
             id: "pf-s13-u8-L2-Q2",
@@ -882,6 +1024,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Each spouse gives $18,000 to each of the 4 grandchildren: 2 donors times 4 recipients times $18,000 = $144,000.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; each spouse gives $18,000 to each of the 4 grandchildren: 2 donors times 4 recipients times $18,000 = $144,000.',
+              1: 'This calculation is incorrect; each spouse gives $18,000 to each of the 4 grandchildren: 2 donors times 4 recipients times $18,000 = $144,000.',
+              3: 'This calculation is incorrect; each spouse gives $18,000 to each of the 4 grandchildren: 2 donors times 4 recipients times $18,000 = $144,000.',
+            },
           },
           {
             id: "pf-s13-u8-L2-T2",
@@ -896,6 +1043,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Gifting appreciating assets removes both the current value and all future growth from your taxable estate.",
             correctAnswer: true,
             explanation: "Once the asset leaves your estate, any appreciation belongs to the recipient and is not part of your estate when you die.",
+            distractorExplanations: {
+              1: 'Once the asset leaves your estate, any appreciation belongs to the recipient and is not part of your estate when you die.',
+            },
           },
           {
             id: "pf-s13-u8-L2-Q4",
@@ -910,6 +1060,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Gifting now removes the entire future value ($200,000) from her estate. However, the recipient keeps her low cost basis. For estate tax reduction, the gift now is more powerful.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; gifting now removes the entire future value ($200,000) from her estate. However, the recipient keeps her low cost basis.',
+              2: 'This reasoning is flawed; gifting now removes the entire future value ($200,000) from her estate. However, the recipient keeps her low cost basis.',
+              3: 'Gifting now removes the entire future value ($200,000) from her estate. However, the recipient keeps her low cost basis.',
+            },
           },
           {
             id: "pf-s13-u8-L2-T3",
@@ -944,6 +1099,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gifting high-growth stock removes both the current value and all future appreciation from your estate. Cash gifts move a fixed amount. Tuition payments don't even use the annual exclusion (they could be combined with stock gifts).",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; gifting high-growth stock removes both the current value and all future appreciation from your estate.',
+              2: 'This reasoning is flawed; gifting high-growth stock removes both the current value and all future appreciation from your estate.',
+              3: 'This reasoning is flawed; gifting high-growth stock removes both the current value and all future appreciation from your estate.',
+            },
           },
           {
             id: "pf-s13-u8-L2-Q7",
@@ -989,6 +1149,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Money in a 529 plan grows tax-free and can be withdrawn tax-free for qualified education expenses.",
             correctAnswer: true,
             explanation: "529 plans offer tax-free growth and tax-free withdrawals when used for qualified education costs like tuition, books, and room and board.",
+            distractorExplanations: {
+              1: '529 plans offer tax-free growth and tax-free withdrawals when used for qualified education costs like tuition, books, and room and board.',
+            },
           },
           {
             id: "pf-s13-u8-L3-Q2",
@@ -1002,6 +1165,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Superfunding lets you contribute 5 years of annual exclusions at once ($90,000 per person, or $180,000 for a couple in 2024). You elect on your tax return to spread it over 5 years.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; superfunding lets you contribute 5 years of annual exclusions at once ($90,000 per person, or $180,000 for a couple in.',
+              1: 'This reasoning is flawed; superfunding lets you contribute 5 years of annual exclusions at once ($90,000 per person, or $180,000 for a couple in.',
+              2: 'This reasoning is flawed; superfunding lets you contribute 5 years of annual exclusions at once ($90,000 per person, or $180,000 for a couple in.',
+            },
           },
           {
             id: "pf-s13-u8-L3-T2",
@@ -1016,6 +1184,9 @@ export const financeSection13Part2: Unit[] = [
             question: "After superfunding a 529 plan for a grandchild, you must wait 5 years before making another annual exclusion gift to that same person.",
             correctAnswer: true,
             explanation: "Superfunding uses 5 years of exclusions at once. Making additional gifts to the same person within those 5 years would exceed the annual exclusion.",
+            distractorExplanations: {
+              1: 'Superfunding uses 5 years of exclusions at once. Making additional gifts to the same person within those 5 years would exceed the annual exclusion.',
+            },
           },
           {
             id: "pf-s13-u8-L3-Q4",
@@ -1044,6 +1215,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Up to $35,000 can be rolled from a 529 into the beneficiary's Roth IRA over their lifetime, subject to annual Roth contribution limits and the 15-year account age requirement.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; up to $35,000 can be rolled from a 529 into the beneficiary\'s Roth IRA over their lifetime, subject to annual Roth.',
+              1: 'This calculation is incorrect; up to $35,000 can be rolled from a 529 into the beneficiary\'s Roth IRA over their lifetime, subject to annual Roth.',
+              3: 'This calculation is incorrect; up to $35,000 can be rolled from a 529 into the beneficiary\'s Roth IRA over their lifetime, subject to annual Roth.',
+            },
           },
           {
             id: "pf-s13-u8-L3-Q6",
@@ -1058,6 +1234,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Superfunding puts the full $180,000 to work on day one. With 18 years of tax-free growth, the compounding advantage over gradual annual gifts can be substantial.",
+            distractorExplanations: {
+              1: 'Superfunding puts the full $180,000 to work on day one. With 18 years of tax-free growth, the compounding advantage over gradual annual gifts can.',
+              2: 'Superfunding puts the full $180,000 to work on day one. With 18 years of tax-free growth, the compounding advantage over gradual annual gifts can.',
+              3: 'This reasoning is flawed; superfunding puts the full $180,000 to work on day one.',
+            },
           },
           {
             id: "pf-s13-u8-L3-Q7",
@@ -1105,6 +1286,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Money placed in a UTMA account legally belongs to the child, not the adult custodian.",
             correctAnswer: true,
             explanation: "The gift is irrevocable. The adult manages the account, but the assets belong to the minor from the moment of contribution.",
+            distractorExplanations: {
+              1: 'The gift is irrevocable. The adult manages the account, but the assets belong to the minor from the moment of contribution.',
+            },
           },
           {
             id: "pf-s13-u8-L4-Q2",
@@ -1118,6 +1302,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "UGMA is limited to financial assets like cash and securities. UTMA is broader and can hold real estate, patents, royalties, and other property types.",
+            distractorExplanations: {
+              0: 'UGMA is limited to financial assets like cash and securities. UTMA is broader and can hold real estate, patents, royalties, and other property.',
+              1: 'UGMA is limited to financial assets like cash and securities. UTMA is broader and can hold real estate, patents, royalties, and other property.',
+              2: 'UGMA is limited to financial assets like cash and securities. UTMA is broader and can hold real estate, patents, royalties, and other property.',
+            },
           },
           {
             id: "pf-s13-u8-L4-T2",
@@ -1132,6 +1321,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Once a child reaches the age of majority, they can use custodial account funds for any purpose, not just education.",
             correctAnswer: true,
             explanation: "Unlike 529 plans, custodial accounts have no restrictions on how the money is spent once the child gains control.",
+            distractorExplanations: {
+              1: 'Unlike 529 plans, custodial accounts have no restrictions on how the money is spent once the child gains control.',
+            },
           },
           {
             id: "pf-s13-u8-L4-Q4",
@@ -1168,6 +1360,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The kiddie tax prevents parents from shifting investment income to children to take advantage of their lower tax bracket.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the kiddie tax prevents parents from shifting investment income to children to take advantage of their lower tax bracket.',
+              2: 'The kiddie tax prevents parents from shifting investment income to children to take advantage of their lower tax bracket.',
+              3: 'This reasoning is flawed; the kiddie tax prevents parents from shifting investment income to children to take advantage of their lower tax bracket.',
+            },
           },
           {
             id: "pf-s13-u8-L4-Q6",
@@ -1182,6 +1379,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A 529 plan keeps the money restricted to education expenses and allows Grandma to change the beneficiary if needed. A UTMA would give the grandson full control at 18 with no restrictions.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a 529 plan keeps the money restricted to education expenses and allows Grandma to change the beneficiary if needed.',
+              1: 'This reasoning is flawed; a 529 plan keeps the money restricted to education expenses and allows Grandma to change the beneficiary if needed.',
+              2: 'This reasoning is flawed; a 529 plan keeps the money restricted to education expenses and allows Grandma to change the beneficiary if needed.',
+            },
           },
           {
             id: "pf-s13-u8-L4-Q7",
@@ -1215,6 +1417,9 @@ export const financeSection13Part2: Unit[] = [
             question: "A GRAT allows the grantor to transfer asset appreciation above the IRS hurdle rate to heirs with minimal or no gift tax.",
             correctAnswer: true,
             explanation: "The GRAT technique effectively 'freezes' the estate value at the hurdle rate. All growth above that threshold passes to beneficiaries tax-free.",
+            distractorExplanations: {
+              1: 'The GRAT technique effectively \'freezes\' the estate value at the hurdle rate. All growth above that threshold passes to beneficiaries tax-free.',
+            },
           },
           {
             id: "pf-s13-u8-L5-Q2",
@@ -1228,6 +1433,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "If the grantor dies during the GRAT term, the assets are included back in the estate. This is why GRATs typically use short terms (2 to 3 years) to reduce mortality risk.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; if the grantor dies during the GRAT term, the assets are included back in the estate.',
+              1: 'If the grantor dies during the GRAT term, the assets are included back in the estate.',
+              2: 'This reasoning is flawed; if the grantor dies during the GRAT term, the assets are included back in the estate.',
+            },
           },
           {
             id: "pf-s13-u8-L5-T2",
@@ -1242,6 +1452,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Limited partnership interests can qualify for valuation discounts because they lack control and marketability.",
             correctAnswer: true,
             explanation: "A limited partner can't make management decisions or easily sell their interest. These restrictions justify a lower valuation for gift tax purposes.",
+            distractorExplanations: {
+              1: 'A limited partner can\'t make management decisions or easily sell their interest. These restrictions justify a lower valuation for gift tax purposes.',
+            },
           },
           {
             id: "pf-s13-u8-L5-Q4",
@@ -1275,6 +1488,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The 'defect' is intentional. By making the trust a grantor trust for income tax purposes, the grantor absorbs all income tax, letting assets grow faster for beneficiaries.",
+            distractorExplanations: {
+              0: 'The \'defect\' is intentional. By making the trust a grantor trust for income tax purposes, the grantor absorbs all income tax, letting assets grow.',
+              1: 'The \'defect\' is intentional. By making the trust a grantor trust for income tax purposes, the grantor absorbs all income tax, letting assets grow.',
+              3: 'The \'defect\' is intentional. By making the trust a grantor trust for income tax purposes, the grantor absorbs all income tax, letting assets grow.',
+            },
           },
           {
             id: "pf-s13-u8-L5-Q6",
@@ -1289,6 +1507,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A GRAT works when asset growth exceeds the hurdle rate. If the biotech stock grows 25% per year, the 20% above the 5% hurdle passes to his children with zero additional gift tax.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a GRAT works when asset growth exceeds the hurdle rate.',
+              2: 'This reasoning is flawed; a GRAT works when asset growth exceeds the hurdle rate.',
+              3: 'This reasoning is flawed; a GRAT works when asset growth exceeds the hurdle rate.',
+            },
           },
           {
             id: "pf-s13-u8-L5-Q7",
@@ -1349,6 +1572,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Charitable donations reduce your taxable income if you itemize your deductions.",
             correctAnswer: true,
             explanation: "When you itemize, charitable gifts directly reduce your taxable income. If you take the standard deduction, you generally don't get an additional charitable deduction.",
+            distractorExplanations: {
+              1: 'When you itemize, charitable gifts directly reduce your taxable income. If you take the standard deduction, you generally don\'t get an additional charitable deduction.',
+            },
           },
           {
             id: "pf-s13-u9-L1-Q2",
@@ -1362,6 +1588,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Deductions save you more when your marginal tax rate is higher. At 37%, a $10,000 deduction saves $3,700. At 12%, it saves only $1,200.",
+            distractorExplanations: {
+              0: 'Deductions save you more when your marginal tax rate is higher. At 37%, a $10,000 deduction saves $3,700. At 12%, it saves only $1,200.',
+              2: 'Deductions save you more when your marginal tax rate is higher. At 37%, a $10,000 deduction saves $3,700. At 12%, it saves only $1,200.',
+              3: 'This reasoning is flawed; deductions save you more when your marginal tax rate is higher. At 37%, a $10,000 deduction saves $3,700.',
+            },
           },
           {
             id: "pf-s13-u9-L1-T2",
@@ -1376,6 +1607,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Donating appreciated stock directly to charity avoids capital gains tax on the appreciation.",
             correctAnswer: true,
             explanation: "When you donate appreciated stock, you get a deduction for the full market value and pay zero capital gains tax. It's a double tax benefit.",
+            distractorExplanations: {
+              1: 'When you donate appreciated stock, you get a deduction for the full market value and pay zero capital gains tax. It\'s a double tax benefit.',
+            },
           },
           {
             id: "pf-s13-u9-L1-Q4",
@@ -1390,6 +1624,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Both give a $10,000 deduction. But donating stock directly eliminates the $8,000 capital gain, saving you an additional $1,200 or more in capital gains tax.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; both give a $10,000 deduction. But donating stock directly eliminates the $8,000 capital gain, saving you an additional.',
+              2: 'Both give a $10,000 deduction. But donating stock directly eliminates the $8,000 capital gain, saving you an additional $1,200 or more in capital.',
+              3: 'This reasoning is flawed; both give a $10,000 deduction. But donating stock directly eliminates the $8,000 capital gain, saving you an additional.',
+            },
           },
           {
             id: "pf-s13-u9-L1-T3",
@@ -1418,6 +1657,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The higher standard deduction ($29,200 for married couples in 2024) means many people can't itemize with their normal annual donations. Bunching solves this.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the higher standard deduction ($29,200 for married couples in 2024) means many people can\'t itemize with their normal.',
+              1: 'The higher standard deduction ($29,200 for married couples in 2024) means many people can\'t itemize with their normal annual donations.',
+              2: 'This reasoning is flawed; the higher standard deduction ($29,200 for married couples in 2024) means many people can\'t itemize with their normal.',
+            },
           },
         ],
       },
@@ -1443,6 +1687,9 @@ export const financeSection13Part2: Unit[] = [
             question: "You receive the tax deduction for a DAF contribution in the year you contribute, not when grants are made to charities.",
             correctAnswer: true,
             explanation: "The contribution is immediately tax-deductible. You then take your time deciding which charities to support through grant recommendations.",
+            distractorExplanations: {
+              1: 'The contribution is immediately tax-deductible. You then take your time deciding which charities to support through grant recommendations.',
+            },
           },
           {
             id: "pf-s13-u9-L2-Q2",
@@ -1456,6 +1703,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A DAF lets you separate the tax event (contribution) from the charitable impact (grants). This is perfect for bunching donations in a high-income year.",
+            distractorExplanations: {
+              0: 'A DAF lets you separate the tax event (contribution) from the charitable impact (grants).',
+              2: 'A DAF lets you separate the tax event (contribution) from the charitable impact (grants).',
+              3: 'This reasoning is flawed; a DAF lets you separate the tax event (contribution) from the charitable impact (grants).',
+            },
           },
           {
             id: "pf-s13-u9-L2-T2",
@@ -1470,6 +1722,9 @@ export const financeSection13Part2: Unit[] = [
             question: "You can contribute appreciated stock, real estate, or cryptocurrency to a donor-advised fund.",
             correctAnswer: true,
             explanation: "DAFs accept a wide range of assets. Contributing appreciated assets avoids capital gains tax just like donating directly to charity.",
+            distractorExplanations: {
+              1: 'DAFs accept a wide range of assets. Contributing appreciated assets avoids capital gains tax just like donating directly to charity.',
+            },
           },
           {
             id: "pf-s13-u9-L2-Q4",
@@ -1504,6 +1759,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The disconnect between the tax deduction (immediate) and charitable distribution (no deadline) means money can sit in DAFs indefinitely while the donor has already claimed the tax benefit.",
+            distractorExplanations: {
+              0: 'The disconnect between the tax deduction (immediate) and charitable distribution (no deadline) means money can sit in DAFs indefinitely while the.',
+              1: 'This reasoning is flawed; the disconnect between the tax deduction (immediate) and charitable distribution (no deadline) means money can sit in.',
+              2: 'The disconnect between the tax deduction (immediate) and charitable distribution (no deadline) means money can sit in DAFs indefinitely while the.',
+            },
           },
           {
             id: "pf-s13-u9-L2-Q6",
@@ -1534,6 +1794,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A DAF is perfect here. Kim gets a $100,000 deduction in her high-income year, then takes her time choosing charities. She bunches 5 years of giving for maximum tax benefit.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a DAF is perfect here. Kim gets a $100,000 deduction in her high-income year, then takes her time choosing charities.',
+              2: 'Inaction here would be harmful; a DAF is perfect here. Kim gets a $100,000 deduction in her high-income year, then takes her time choosing.',
+              3: 'Inaction here would be harmful; a DAF is perfect here. Kim gets a $100,000 deduction in her high-income year, then takes her time choosing.',
+            },
           },
         ],
       },
@@ -1559,6 +1824,9 @@ export const financeSection13Part2: Unit[] = [
             question: "A charitable remainder trust pays the donor income first, with the remaining assets going to charity at the end of the trust term.",
             correctAnswer: true,
             explanation: "The donor gets income during their lifetime (or a set term), and the charity receives whatever is left at the end. The tax deduction is based on the present value of the charity's future interest.",
+            distractorExplanations: {
+              1: 'The donor gets income during their lifetime (or a set term), and the charity receives whatever is left at the end. The tax deduction is based on the present value of the charity\'s future interest.',
+            },
           },
           {
             id: "pf-s13-u9-L3-Q2",
@@ -1572,6 +1840,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The deduction is partial, calculated as the present value of what the charity is expected to receive when the trust term ends.",
+            distractorExplanations: {
+              0: 'The deduction is partial, calculated as the present value of what the charity is expected to receive when the trust term ends.',
+              2: 'This reasoning is flawed; the deduction is partial, calculated as the present value of what the charity is expected to receive when the trust.',
+              3: 'The deduction is partial, calculated as the present value of what the charity is expected to receive when the trust term ends.',
+            },
           },
           {
             id: "pf-s13-u9-L3-T2",
@@ -1586,6 +1859,9 @@ export const financeSection13Part2: Unit[] = [
             question: "In a charitable lead trust, the charity receives payments first, and the remaining assets pass to the donor's heirs at the end.",
             correctAnswer: true,
             explanation: "The lead trust flips the order: charity leads (gets income first), family follows (gets the remainder).",
+            distractorExplanations: {
+              1: 'The lead trust flips the order: charity leads (gets income first), family follows (gets the remainder).',
+            },
           },
           {
             id: "pf-s13-u9-L3-Q4",
@@ -1630,6 +1906,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A CRUT gives Professor Chen income for life, avoids capital gains on the appreciated stock, provides a partial charitable deduction, and sends the remainder to her university at death.",
+            distractorExplanations: {
+              0: 'A CRUT gives Professor Chen income for life, avoids capital gains on the appreciated stock, provides a partial charitable deduction, and sends.',
+              2: 'A CRUT gives Professor Chen income for life, avoids capital gains on the appreciated stock, provides a partial charitable deduction, and sends.',
+              3: 'A CRUT gives Professor Chen income for life, avoids capital gains on the appreciated stock, provides a partial charitable deduction, and sends.',
+            },
           },
           {
             id: "pf-s13-u9-L3-Q7",
@@ -1675,6 +1956,9 @@ export const financeSection13Part2: Unit[] = [
             question: "A qualified charitable distribution from an IRA counts toward your required minimum distribution but is not included in taxable income.",
             correctAnswer: true,
             explanation: "This is the magic of QCDs. You satisfy your RMD without increasing your taxable income, which can also reduce Medicare premiums and Social Security taxation.",
+            distractorExplanations: {
+              1: 'This is the magic of QCDs. You satisfy your RMD without increasing your taxable income, which can also reduce Medicare premiums and Social Security taxation.',
+            },
           },
           {
             id: "pf-s13-u9-L4-Q2",
@@ -1688,6 +1972,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "You must be at least 70.5 to make a QCD. This is different from the RMD age of 73, which means you can use QCDs for a few years before RMDs even begin.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; you must be at least 70.5 to make a QCD.',
+              1: 'This calculation is incorrect; you must be at least 70.5 to make a QCD.',
+              3: 'This calculation is incorrect; you must be at least 70.5 to make a QCD.',
+            },
           },
           {
             id: "pf-s13-u9-L4-T2",
@@ -1702,6 +1991,9 @@ export const financeSection13Part2: Unit[] = [
             question: "QCDs benefit retirees even if they don't itemize their deductions.",
             correctAnswer: true,
             explanation: "Unlike charitable deductions that require itemizing, QCDs reduce taxable income regardless. This makes them valuable for the many retirees who take the standard deduction.",
+            distractorExplanations: {
+              1: 'Unlike charitable deductions that require itemizing, QCDs reduce taxable income regardless. This makes them valuable for the many retirees who take the standard deduction.',
+            },
           },
           {
             id: "pf-s13-u9-L4-Q4",
@@ -1739,6 +2031,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A $15,000 QCD satisfies half her RMD without adding to taxable income. She takes the remaining $15,000 as a normal distribution. Since she doesn't itemize, the QCD saves her more than a charitable deduction would.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a $15,000 QCD satisfies half her RMD without adding to taxable income.',
+              2: 'Inaction here would be harmful; a $15,000 QCD satisfies half her RMD without adding to taxable income.',
+              3: 'This reasoning is flawed; a $15,000 QCD satisfies half her RMD without adding to taxable income.',
+            },
           },
           {
             id: "pf-s13-u9-L4-Q6",
@@ -1760,6 +2057,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The $20,000 standard-deduction donor gets zero charitable deduction without QCDs. With QCDs, they exclude $20,000 from taxable income. That's the biggest swing.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the $20,000 standard-deduction donor gets zero charitable deduction without QCDs.',
+              2: 'The $20,000 standard-deduction donor gets zero charitable deduction without QCDs. With QCDs, they exclude $20,000 from taxable income.',
+              3: 'The $20,000 standard-deduction donor gets zero charitable deduction without QCDs. With QCDs, they exclude $20,000 from taxable income.',
+            },
           },
         ],
       },
@@ -1785,6 +2087,9 @@ export const financeSection13Part2: Unit[] = [
             question: "A comprehensive charitable giving plan may use different tools at different life stages.",
             correctAnswer: true,
             explanation: "Younger people might use direct stock donations and DAFs. Retirees switch to QCDs. Estate planning adds charitable bequests and CRTs. The tools evolve with your life.",
+            distractorExplanations: {
+              1: 'Younger people might use direct stock donations and DAFs. Retirees switch to QCDs. Estate planning adds charitable bequests and CRTs. The tools evolve with your life.',
+            },
           },
           {
             id: "pf-s13-u9-L5-Q2",
@@ -1819,6 +2124,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Charitable bequests reduce your taxable estate dollar-for-dollar. A $1 million bequest to charity means $1 million less subject to estate tax.",
+            distractorExplanations: {
+              0: 'Charitable bequests reduce your taxable estate dollar-for-dollar. A $1 million bequest to charity means $1 million less subject to estate tax.',
+              2: 'Charitable bequests reduce your taxable estate dollar-for-dollar. A $1 million bequest to charity means $1 million less subject to estate tax.',
+              3: 'This overgeneralizes; charitable bequests reduce your taxable estate dollar-for-dollar.',
+            },
           },
           {
             id: "pf-s13-u9-L5-Q4",
@@ -1852,6 +2162,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Donating appreciated stock now avoids capital gains and provides a deduction. After 70.5, QCDs from his IRA will satisfy future RMDs without taxable income. This is a two-phase approach that maximizes tax efficiency.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; donating appreciated stock now avoids capital gains and provides a deduction. After 70.',
+              2: 'Inaction here would be harmful; donating appreciated stock now avoids capital gains and provides a deduction. After 70.',
+              3: 'Inaction here would be harmful; donating appreciated stock now avoids capital gains and provides a deduction. After 70.',
+            },
           },
           {
             id: "pf-s13-u9-L5-Q6",
@@ -1881,6 +2196,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The best plan matches your tools to your situation. Tax benefits matter, but so do your charitable goals, cash flow needs, and life stage. Flexibility is key.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; the best plan matches your tools to your situation.',
+              2: 'The best plan matches your tools to your situation. Tax benefits matter, but so do your charitable goals, cash flow needs, and life stage.',
+              3: 'This reasoning is flawed; the best plan matches your tools to your situation.',
+            },
           },
         ],
       },
@@ -1920,6 +2240,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Research shows that many financial habits are already forming by age 7.",
             correctAnswer: true,
             explanation: "A landmark Cambridge study found that children's money habits are largely set by age 7. Early exposure to money concepts is critical.",
+            distractorExplanations: {
+              1: 'A landmark Cambridge study found that children\'s money habits are largely set by age 7. Early exposure to money concepts is critical.',
+            },
           },
           {
             id: "pf-s13-u10-L1-Q2",
@@ -1933,6 +2256,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Preschoolers can understand that different coins have different values and that you exchange money for goods. Abstract concepts like interest come much later.",
+            distractorExplanations: {
+              1: 'Preschoolers can understand that different coins have different values and that you exchange money for goods.',
+              2: 'Preschoolers can understand that different coins have different values and that you exchange money for goods.',
+              3: 'This reasoning is flawed; preschoolers can understand that different coins have different values and that you exchange money for goods.',
+            },
           },
           {
             id: "pf-s13-u10-L1-T2",
@@ -1947,6 +2275,9 @@ export const financeSection13Part2: Unit[] = [
             question: "The 4-jar system teaches children to divide their money into categories before spending.",
             correctAnswer: true,
             explanation: "Save, Spend, Give, and Invest. The physical act of dividing money builds the budgeting habit early.",
+            distractorExplanations: {
+              1: 'Save, Spend, Give, and Invest. The physical act of dividing money builds the budgeting habit early.',
+            },
           },
           {
             id: "pf-s13-u10-L1-Q4",
@@ -1982,6 +2313,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "This is a perfect learning moment. Help her understand what happened (impulse vs. goal), how she feels now, and what she could do differently next time. Don't bail her out or punish her.",
+            distractorExplanations: {
+              0: 'This is a perfect learning moment. Help her understand what happened (impulse vs.',
+              1: 'This is a perfect learning moment. Help her understand what happened (impulse vs.',
+              3: 'This reasoning is flawed; this is a perfect learning moment. Help her understand what happened (impulse vs.',
+            },
           },
           {
             id: "pf-s13-u10-L1-Q6",
@@ -2029,6 +2365,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Most child development experts agree there is only one correct way to structure an allowance.",
             correctAnswer: false,
             explanation: "There's genuine debate among experts. The most important factor is that children get regular practice managing money, regardless of how the allowance is structured.",
+            distractorExplanations: {
+              0: 'There\'s genuine debate among experts. The most important factor is that children get regular practice managing money, regardless of how the allowance is structured.',
+            },
           },
           {
             id: "pf-s13-u10-L2-Q2",
@@ -2065,6 +2404,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At $1 per year of age, a 12-year-old would receive about $12 per week. This is a guideline, not a rule. Adjust based on your family's situation and local costs.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; at $1 per year of age, a 12-year-old would receive about $12 per week. This is a guideline, not a rule.',
+              2: 'This calculation is incorrect; at $1 per year of age, a 12-year-old would receive about $12 per week. This is a guideline, not a rule.',
+              3: 'This calculation is incorrect; at $1 per year of age, a 12-year-old would receive about $12 per week. This is a guideline, not a rule.',
+            },
           },
           {
             id: "pf-s13-u10-L2-Q4",
@@ -2079,6 +2423,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Matching savings teaches the concept of returns on saving (like an employer 401(k) match). It creates a tangible incentive without taking away his autonomy.",
+            distractorExplanations: {
+              0: 'Matching savings teaches the concept of returns on saving (like an employer 401(k) match).',
+              1: 'This reasoning is flawed; matching savings teaches the concept of returns on saving (like an employer 401(k) match).',
+              2: 'This overgeneralizes; matching savings teaches the concept of returns on saving (like an employer 401(k) match).',
+            },
           },
           {
             id: "pf-s13-u10-L2-T3",
@@ -2093,6 +2442,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Encouraging children to earn money through small businesses or services can teach financial skills beyond what an allowance provides.",
             correctAnswer: true,
             explanation: "Entrepreneurial activities teach pricing, customer service, profit margins, and the direct connection between effort and reward.",
+            distractorExplanations: {
+              1: 'Entrepreneurial activities teach pricing, customer service, profit margins, and the direct connection between effort and reward.',
+            },
           },
           {
             id: "pf-s13-u10-L2-Q6",
@@ -2106,6 +2458,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Matching introduces the concept that saving earns rewards. This mirrors employer retirement matching and compound interest, building the savings habit early.",
+            distractorExplanations: {
+              0: 'Matching introduces the concept that saving earns rewards. This mirrors employer retirement matching and compound interest, building the savings.',
+              1: 'This reasoning is flawed; matching introduces the concept that saving earns rewards.',
+              2: 'Matching introduces the concept that saving earns rewards. This mirrors employer retirement matching and compound interest, building the savings.',
+            },
           },
           {
             id: "pf-s13-u10-L2-Q7",
@@ -2145,6 +2502,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Opening a bank account around age 8-10 helps children learn about deposits, balances, and interest.",
             correctAnswer: true,
             explanation: "A real bank account makes money management tangible. Children can watch their balance grow and see interest credited.",
+            distractorExplanations: {
+              1: 'A real bank account makes money management tangible. Children can watch their balance grow and see interest credited.',
+            },
           },
           {
             id: "pf-s13-u10-L3-Q2",
@@ -2158,6 +2518,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Hands-on experience makes abstract concepts concrete. When a child deposits their own money and sees the balance increase, saving becomes real.",
+            distractorExplanations: {
+              1: 'This overgeneralizes; hands-on experience makes abstract concepts concrete.',
+              2: 'This reasoning is flawed; hands-on experience makes abstract concepts concrete.',
+              3: 'This reasoning is flawed; hands-on experience makes abstract concepts concrete.',
+            },
           },
           {
             id: "pf-s13-u10-L3-T2",
@@ -2172,6 +2537,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Showing children their bank statements and interest earned helps make the concept of compound interest tangible.",
             correctAnswer: true,
             explanation: "Children learn visually. Seeing actual dollars added to their account from interest creates a concrete understanding of how money grows.",
+            distractorExplanations: {
+              1: 'Children learn visually. Seeing actual dollars added to their account from interest creates a concrete understanding of how money grows.',
+            },
           },
           {
             id: "pf-s13-u10-L3-Q4",
@@ -2206,6 +2574,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When a child owns Disney stock and visits a Disney park, they connect the experience to their investment. Familiarity makes abstract concepts concrete.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; when a child owns Disney stock and visits a Disney park, they connect the experience to their investment.',
+              2: 'This reasoning is flawed; when a child owns Disney stock and visits a Disney park, they connect the experience to their investment.',
+              3: 'When a child owns Disney stock and visits a Disney park, they connect the experience to their investment.',
+            },
           },
           {
             id: "pf-s13-u10-L3-Q6",
@@ -2220,6 +2593,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Dividing the money teaches multiple concepts at once: saving, investing in something he understands, and responsible spending. His involvement makes it meaningful.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; dividing the money teaches multiple concepts at once: saving, investing in something he understands, and responsible.',
+              1: 'This reasoning is flawed; dividing the money teaches multiple concepts at once: saving, investing in something he understands, and responsible.',
+              3: 'This reasoning is flawed; dividing the money teaches multiple concepts at once: saving, investing in something he understands, and responsible.',
+            },
           },
           {
             id: "pf-s13-u10-L3-Q7",
@@ -2261,6 +2639,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Most teenagers face major financial decisions like credit cards and leases immediately at age 18 with little prior experience.",
             correctAnswer: true,
             explanation: "The gap between 'no financial responsibility' and 'full financial responsibility' often happens overnight at 18. Preparation is essential.",
+            distractorExplanations: {
+              1: 'The gap between \'no financial responsibility\' and \'full financial responsibility\' often happens overnight at 18. Preparation is essential.',
+            },
           },
           {
             id: "pf-s13-u10-L4-Q2",
@@ -2274,6 +2655,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gradually increasing responsibility lets teens make small mistakes with support before they face high-stakes decisions alone.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; gradually increasing responsibility lets teens make small mistakes with support before they face high-stakes decisions.',
+              2: 'This reasoning is flawed; gradually increasing responsibility lets teens make small mistakes with support before they face high-stakes decisions.',
+              3: 'Inaction here would be harmful; gradually increasing responsibility lets teens make small mistakes with support before they face high-stakes.',
+            },
           },
           {
             id: "pf-s13-u10-L4-T2",
@@ -2288,6 +2674,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Giving teenagers a fixed monthly budget for their own discretionary spending teaches natural consequences of overspending.",
             correctAnswer: true,
             explanation: "When the money runs out, the lesson is immediate and personal. No lecture required.",
+            distractorExplanations: {
+              1: 'When the money runs out, the lesson is immediate and personal. No lecture required.',
+            },
           },
           {
             id: "pf-s13-u10-L4-Q4",
@@ -2327,6 +2716,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A Roth IRA started at 16 has 50+ years to compound tax-free. Time is the most powerful investment advantage, and teenagers have the most of it.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a Roth IRA started at 16 has 50+ years to compound tax-free.',
+              1: 'This reasoning is flawed; a Roth IRA started at 16 has 50+ years to compound tax-free.',
+              3: 'This reasoning is flawed; a Roth IRA started at 16 has 50+ years to compound tax-free.',
+            },
           },
           {
             id: "pf-s13-u10-L4-Q6",
@@ -2341,6 +2735,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Splitting between a Roth IRA (long-term tax-free growth) and savings (accessible for college expenses) balances both goals. The Roth contributions can even be withdrawn penalty-free if needed.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; splitting between a Roth IRA (long-term tax-free growth) and savings (accessible for college expenses) balances both.',
+              2: 'This reasoning is flawed; splitting between a Roth IRA (long-term tax-free growth) and savings (accessible for college expenses) balances both.',
+              3: 'This reasoning is flawed; splitting between a Roth IRA (long-term tax-free growth) and savings (accessible for college expenses) balances both.',
+            },
           },
           {
             id: "pf-s13-u10-L4-Q7",
@@ -2380,6 +2779,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Children from families that openly discuss money tend to be more financially responsible as adults.",
             correctAnswer: true,
             explanation: "Research consistently links open family money conversations with better financial outcomes in adulthood.",
+            distractorExplanations: {
+              1: 'Research consistently links open family money conversations with better financial outcomes in adulthood.',
+            },
           },
           {
             id: "pf-s13-u10-L5-Q2",
@@ -2393,6 +2795,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Involving children in real decisions (like choosing between a cheaper hotel and a nicer one) makes trade-offs tangible. They see that choosing one thing means giving up another.",
+            distractorExplanations: {
+              0: 'Involving children in real decisions (like choosing between a cheaper hotel and a nicer one) makes trade-offs tangible.',
+              1: 'This reasoning is flawed; involving children in real decisions (like choosing between a cheaper hotel and a nicer one) makes trade-offs tangible.',
+              3: 'Involving children in real decisions (like choosing between a cheaper hotel and a nicer one) makes trade-offs tangible.',
+            },
           },
           {
             id: "pf-s13-u10-L5-T2",
@@ -2407,6 +2814,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Brief, regular family money meetings help normalize financial conversations and reduce money anxiety.",
             correctAnswer: true,
             explanation: "When money discussions happen regularly and calmly, children learn that finances are a normal part of life, not a source of stress or secrecy.",
+            distractorExplanations: {
+              1: 'When money discussions happen regularly and calmly, children learn that finances are a normal part of life, not a source of stress or secrecy.',
+            },
           },
           {
             id: "pf-s13-u10-L5-Q4",
@@ -2452,6 +2862,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without financial education and values, heirs often lack the skills to preserve and grow inherited wealth. The 80% failure rate by the second generation confirms this risk.",
+            distractorExplanations: {
+              0: 'Without financial education and values, heirs often lack the skills to preserve and grow inherited wealth.',
+              1: 'This reasoning is flawed; without financial education and values, heirs often lack the skills to preserve and grow inherited wealth.',
+              3: 'This reasoning is flawed; without financial education and values, heirs often lack the skills to preserve and grow inherited wealth.',
+            },
           },
           {
             id: "pf-s13-u10-L5-Q7",
@@ -2465,6 +2880,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Trusts, attorneys, and investments all matter, but financial literacy across generations is the primary predictor of whether wealth survives. Prepared heirs beat perfect legal structures every time.",
+            distractorExplanations: {
+              1: 'Trusts, attorneys, and investments all matter, but financial literacy across generations is the primary predictor of whether wealth survives.',
+              2: 'This reasoning is flawed; trusts, attorneys, and investments all matter, but financial literacy across generations is the primary predictor of.',
+              3: 'This reasoning is flawed; trusts, attorneys, and investments all matter, but financial literacy across generations is the primary predictor of.',
+            },
           },
         ],
       },
@@ -2504,6 +2924,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Estate tax is one bill for the whole estate before distribution. Inheritance tax is calculated separately for each recipient.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; estate tax is one bill for the whole estate before distribution.',
+              2: 'This overgeneralizes; estate tax is one bill for the whole estate before distribution. Inheritance tax is calculated separately for each recipient.',
+              3: 'This reasoning is flawed; estate tax is one bill for the whole estate before distribution.',
+            },
           },
           {
             id: "pf-s13-u11-L1-Q2",
@@ -2511,6 +2936,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Stepped-up basis means inherited assets retain the original owner's cost basis.",
             correctAnswer: false,
             explanation: "Stepped-up basis resets the cost basis to fair market value at the date of death, erasing unrealized gains.",
+            distractorExplanations: {
+              0: 'Stepped-up basis resets the cost basis to fair market value at the date of death, erasing unrealized gains.',
+            },
           },
           {
             id: "pf-s13-u11-L1-Q3",
@@ -2525,6 +2953,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Stepped-up basis resets to $250,000 (the fair market value at death). If you sell immediately, you owe zero capital gains tax.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; stepped-up basis resets to $250,000 (the fair market value at death).',
+              1: 'This calculation is incorrect; stepped-up basis resets to $250,000 (the fair market value at death).',
+              3: 'There is a real consequence here; stepped-up basis resets to $250,000 (the fair market value at death).',
+            },
           },
           {
             id: "pf-s13-u11-L1-Q4",
@@ -2546,6 +2979,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The unlimited marital deduction means $0 estate tax on spousal transfers, regardless of amount. Tax may apply when the surviving spouse's estate passes to others.",
+            distractorExplanations: {
+              0: 'The unlimited marital deduction means $0 estate tax on spousal transfers, regardless of amount.',
+              1: 'The unlimited marital deduction means $0 estate tax on spousal transfers, regardless of amount.',
+              3: 'The unlimited marital deduction means $0 estate tax on spousal transfers, regardless of amount.',
+            },
           },
           {
             id: "pf-s13-u11-L1-Q6",
@@ -2590,6 +3028,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At $20 million, they'd be $6 million over a reduced $14 million exemption. Transferring assets now locks in the current higher exemption before the sunset.",
+            distractorExplanations: {
+              0: 'Inaction here would be harmful; at $20 million, they\'d be $6 million over a reduced $14 million exemption.',
+              2: 'This reasoning is flawed; at $20 million, they\'d be $6 million over a reduced $14 million exemption.',
+              3: 'This reasoning is flawed; at $20 million, they\'d be $6 million over a reduced $14 million exemption.',
+            },
           },
           {
             id: "pf-s13-u11-L1-Q9",
@@ -2603,6 +3046,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stepped-up basis is most valuable when unrealized gains are largest. $1.5 million in erased gains saves hundreds of thousands in capital gains tax for heirs.",
+            distractorExplanations: {
+              0: 'Stepped-up basis is most valuable when unrealized gains are largest. $1.',
+              2: 'Stepped-up basis is most valuable when unrealized gains are largest. $1.',
+              3: 'Stepped-up basis is most valuable when unrealized gains are largest. $1.',
+            },
           },
           {
             id: "pf-s13-u11-L1-Q10",
@@ -2616,6 +3064,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "For very large estates, removing assets (including future growth) from the estate can save more in estate tax than the heirs would lose by not getting stepped-up basis.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; for very large estates, removing assets (including future growth) from the estate can save more in estate tax than the.',
+              1: 'This reasoning is flawed; for very large estates, removing assets (including future growth) from the estate can save more in estate tax than the.',
+              2: 'This overgeneralizes; for very large estates, removing assets (including future growth) from the estate can save more in estate tax than the.',
+            },
           },
         ],
       },
@@ -2640,6 +3093,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The 2024 annual gift tax exclusion is $18,000 per donor per recipient. Married couples can give $36,000 per recipient through gift splitting.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; the 2024 annual gift tax exclusion is $18,000 per donor per recipient.',
+              1: 'This calculation is incorrect; the 2024 annual gift tax exclusion is $18,000 per donor per recipient.',
+              3: 'This calculation is incorrect; the 2024 annual gift tax exclusion is $18,000 per donor per recipient.',
+            },
           },
           {
             id: "pf-s13-u11-L2-Q2",
@@ -2647,6 +3105,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Paying someone's tuition directly to the university is subject to the annual gift tax exclusion limit.",
             correctAnswer: false,
             explanation: "Direct payments to educational institutions for tuition are completely exempt from gift tax with no dollar limit. They don't use any of your annual exclusion.",
+            distractorExplanations: {
+              0: 'Direct payments to educational institutions for tuition are completely exempt from gift tax with no dollar limit. They don\'t use any of your annual exclusion.',
+            },
           },
           {
             id: "pf-s13-u11-L2-Q3",
@@ -2661,6 +3122,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Two donors times 6 recipients times $18,000 = $216,000. Each spouse can give $18,000 to each of the 6 recipients.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; two donors times 6 recipients times $18,000 = $216,000. Each spouse can give $18,000 to each of the 6 recipients.',
+              1: 'This calculation is incorrect; two donors times 6 recipients times $18,000 = $216,000. Each spouse can give $18,000 to each of the 6 recipients.',
+              3: 'This calculation is incorrect; two donors times 6 recipients times $18,000 = $216,000. Each spouse can give $18,000 to each of the 6 recipients.',
+            },
           },
           {
             id: "pf-s13-u11-L2-Q4",
@@ -2698,6 +3164,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "GRATs 'freeze' the estate value at the IRS hurdle rate. All growth above that threshold passes to heirs without additional gift or estate tax.",
+            distractorExplanations: {
+              0: 'GRATs \'freeze\' the estate value at the IRS hurdle rate. All growth above that threshold passes to heirs without additional gift or estate tax.',
+              1: 'GRATs \'freeze\' the estate value at the IRS hurdle rate. All growth above that threshold passes to heirs without additional gift or estate tax.',
+              2: 'GRATs \'freeze\' the estate value at the IRS hurdle rate. All growth above that threshold passes to heirs without additional gift or estate tax.',
+            },
           },
           {
             id: "pf-s13-u11-L2-Q7",
@@ -2726,6 +3197,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Superfunding puts the full $90,000 to work immediately, maximizing compounding time. It stays within the annual exclusion by spreading the gift election over 5 years.",
+            distractorExplanations: {
+              0: 'Superfunding puts the full $90,000 to work immediately, maximizing compounding time.',
+              2: 'Superfunding puts the full $90,000 to work immediately, maximizing compounding time.',
+              3: 'This reasoning is flawed; superfunding puts the full $90,000 to work immediately, maximizing compounding time.',
+            },
           },
           {
             id: "pf-s13-u11-L2-Q9",
@@ -2733,6 +3209,9 @@ export const financeSection13Part2: Unit[] = [
             question: "An intentionally defective grantor trust (IDGT) is called 'defective' because it has a legal flaw that must be fixed.",
             correctAnswer: false,
             explanation: "The 'defect' is intentional. The trust is structured so the grantor pays income taxes on trust earnings, allowing assets to grow faster for beneficiaries.",
+            distractorExplanations: {
+              0: 'The \'defect\' is intentional. The trust is structured so the grantor pays income taxes on trust earnings, allowing assets to grow faster for beneficiaries.',
+            },
           },
           {
             id: "pf-s13-u11-L2-Q10",
@@ -2746,6 +3225,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gifting high-growth stock removes both current value and all future appreciation from the estate. Cash gifts only remove a fixed dollar amount. Stock gifts with high growth potential provide the greatest long-term estate reduction.",
+            distractorExplanations: {
+              0: 'Gifting high-growth stock removes both current value and all future appreciation from the estate. Cash gifts only remove a fixed dollar amount.',
+              2: 'This reasoning is flawed; gifting high-growth stock removes both current value and all future appreciation from the estate.',
+              3: 'Gifting high-growth stock removes both current value and all future appreciation from the estate. Cash gifts only remove a fixed dollar amount.',
+            },
           },
         ],
       },
@@ -2770,6 +3254,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Donating appreciated stock provides two benefits: a charitable deduction for the full value, plus avoidance of capital gains tax on the unrealized gain.",
+            distractorExplanations: {
+              1: 'Donating appreciated stock provides two benefits: a charitable deduction for the full value, plus avoidance of capital gains tax on the.',
+              2: 'Donating appreciated stock provides two benefits: a charitable deduction for the full value, plus avoidance of capital gains tax on the.',
+              3: 'Donating appreciated stock provides two benefits: a charitable deduction for the full value, plus avoidance of capital gains tax on the.',
+            },
           },
           {
             id: "pf-s13-u11-L3-Q2",
@@ -2777,6 +3266,9 @@ export const financeSection13Part2: Unit[] = [
             question: "A donor-advised fund provides the tax deduction when grants are recommended to charities, not when the contribution is made.",
             correctAnswer: false,
             explanation: "The deduction is immediate at contribution. You then recommend grants to charities over time with no deadline requirement.",
+            distractorExplanations: {
+              0: 'The deduction is immediate at contribution. You then recommend grants to charities over time with no deadline requirement.',
+            },
           },
           {
             id: "pf-s13-u11-L3-Q3",
@@ -2799,6 +3291,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "QCDs exclude the distribution from taxable income. Since they take the standard deduction, they get no benefit from a charitable deduction. QCDs give them the tax benefit regardless.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; QCDs exclude the distribution from taxable income.',
+              2: 'This reasoning is flawed; QCDs exclude the distribution from taxable income.',
+              3: 'QCDs exclude the distribution from taxable income. Since they take the standard deduction, they get no benefit from a charitable deduction.',
+            },
           },
           {
             id: "pf-s13-u11-L3-Q5",
@@ -2812,6 +3309,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The QCD limit is $105,000 per person per year (2024). It's inflation-adjusted annually.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; the QCD limit is $105,000 per person per year (2024). It\'s inflation-adjusted annually.',
+              1: 'This calculation is incorrect; the QCD limit is $105,000 per person per year (2024). It\'s inflation-adjusted annually.',
+              3: 'This calculation is incorrect; the QCD limit is $105,000 per person per year (2024). It\'s inflation-adjusted annually.',
+            },
           },
           {
             id: "pf-s13-u11-L3-Q6",
@@ -2849,6 +3351,9 @@ export const financeSection13Part2: Unit[] = [
             question: "The main criticism of donor-advised funds is that there is no legal requirement to distribute money to charities within any timeframe.",
             correctAnswer: true,
             explanation: "Donors get an immediate tax deduction but face no legal obligation to ever recommend grants. Money can sit in DAFs indefinitely.",
+            distractorExplanations: {
+              1: 'Donors get an immediate tax deduction but face no legal obligation to ever recommend grants. Money can sit in DAFs indefinitely.',
+            },
           },
           {
             id: "pf-s13-u11-L3-Q9",
@@ -2863,6 +3368,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Donating appreciated stock to a DAF in her high-income year maximizes the deduction value (at her top rate), avoids $200,000 in unrealized gains, and lets her distribute over years.",
+            distractorExplanations: {
+              0: 'Donating appreciated stock to a DAF in her high-income year maximizes the deduction value (at her top rate), avoids $200,000 in unrealized gains,.',
+              2: 'Inaction here would be harmful; donating appreciated stock to a DAF in her high-income year maximizes the deduction value (at her top rate),.',
+              3: 'This reasoning is flawed; donating appreciated stock to a DAF in her high-income year maximizes the deduction value (at her top rate), avoids.',
+            },
           },
           {
             id: "pf-s13-u11-L3-Q10",
@@ -2876,6 +3386,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The best tool depends on your complete financial picture. A QCD is ideal for a retiree but useless for a 30-year-old. A DAF is perfect for a windfall year but overkill for consistent small gifts.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the best tool depends on your complete financial picture. A QCD is ideal for a retiree but useless for a 30-year-old.',
+              1: 'The best tool depends on your complete financial picture. A QCD is ideal for a retiree but useless for a 30-year-old.',
+              3: 'The best tool depends on your complete financial picture. A QCD is ideal for a retiree but useless for a 30-year-old.',
+            },
           },
         ],
       },
@@ -2900,6 +3415,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A Cambridge University study found that children's money habits are largely set by age 7. Early exposure is critical.",
+            distractorExplanations: {
+              0: 'A Cambridge University study found that children\'s money habits are largely set by age 7. Early exposure is critical.',
+              2: 'A Cambridge University study found that children\'s money habits are largely set by age 7. Early exposure is critical.',
+              3: 'A Cambridge University study found that children\'s money habits are largely set by age 7. Early exposure is critical.',
+            },
           },
           {
             id: "pf-s13-u11-L4-Q2",
@@ -2907,6 +3427,9 @@ export const financeSection13Part2: Unit[] = [
             question: "The 4-jar system teaches children to divide money into Save, Spend, Give, and Invest categories.",
             correctAnswer: true,
             explanation: "The 4 jars make abstract budgeting concepts physical and tangible for young children.",
+            distractorExplanations: {
+              1: 'The 4 jars make abstract budgeting concepts physical and tangible for young children.',
+            },
           },
           {
             id: "pf-s13-u11-L4-Q3",
@@ -2929,6 +3452,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Saving for a goal teaches delayed gratification, planning, and the satisfaction of earning something. This is more valuable than the game itself.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; saving for a goal teaches delayed gratification, planning, and the satisfaction of earning something.',
+              1: 'This reasoning is flawed; saving for a goal teaches delayed gratification, planning, and the satisfaction of earning something.',
+              3: 'This reasoning is flawed; saving for a goal teaches delayed gratification, planning, and the satisfaction of earning something.',
+            },
           },
           {
             id: "pf-s13-u11-L4-Q5",
@@ -2958,6 +3486,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Matching introduces the concept that money earns more money when saved. This mirrors employer 401(k) matching and compound interest.",
+            distractorExplanations: {
+              0: 'Matching introduces the concept that money earns more money when saved. This mirrors employer 401(k) matching and compound interest.',
+              1: 'This overgeneralizes; matching introduces the concept that money earns more money when saved.',
+              3: 'Matching introduces the concept that money earns more money when saved. This mirrors employer 401(k) matching and compound interest.',
+            },
           },
           {
             id: "pf-s13-u11-L4-Q7",
@@ -2979,6 +3512,9 @@ export const financeSection13Part2: Unit[] = [
             question: "Open family discussions about money are correlated with better financial outcomes for children as adults.",
             correctAnswer: true,
             explanation: "Research consistently shows that children from families who openly discuss finances are more likely to budget, save, and avoid debt as adults.",
+            distractorExplanations: {
+              1: 'Research consistently shows that children from families who openly discuss finances are more likely to budget, save, and avoid debt as adults.',
+            },
           },
           {
             id: "pf-s13-u11-L4-Q9",
@@ -2993,6 +3529,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A Roth IRA at 16 has 50+ years of tax-free compounding ahead. Involving Emma in the decision teaches investing and long-term thinking simultaneously.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a Roth IRA at 16 has 50+ years of tax-free compounding ahead.',
+              1: 'A Roth IRA at 16 has 50+ years of tax-free compounding ahead. Involving Emma in the decision teaches investing and long-term thinking.',
+              3: 'This reasoning is flawed; a Roth IRA at 16 has 50+ years of tax-free compounding ahead.',
+            },
           },
           {
             id: "pf-s13-u11-L4-Q10",
@@ -3006,6 +3547,11 @@ export const financeSection13Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Prepared heirs are the #1 predictor of successful wealth transfer. Trusts, investments, and tax strategies matter, but without financially literate heirs, 80% of transfers fail by the second generation.",
+            distractorExplanations: {
+              0: 'Prepared heirs are the #1 predictor of successful wealth transfer.',
+              1: 'Prepared heirs are the #1 predictor of successful wealth transfer.',
+              3: 'This reasoning is flawed; prepared heirs are the #1 predictor of successful wealth transfer.',
+            },
           },
         ],
       },

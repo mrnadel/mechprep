@@ -34,6 +34,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Habituation means your response decreases when a harmless stimulus is repeated.',
             correctAnswer: true,
             explanation: 'Habituation is exactly this: your brain learns to ignore stimuli that are repeated and pose no threat.',
+            distractorExplanations: {
+              1: 'Habituation is exactly this: your brain learns to ignore stimuli that are repeated and pose no threat.',
+            },
           },
           {
             id: 'psy-sec3-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Repeated exposure to a harmless stimulus causes habituation. Your brain learned the noise is safe to ignore.',
+            distractorExplanations: {
+              1: 'Your hearing was permanently damaged is not correct here; repeated exposure to a harmless stimulus causes habituation.',
+              2: 'The trains got quieter over time is not correct here; repeated exposure to a harmless stimulus causes habituation.',
+              3: 'You developed a conditioned response is not correct here; repeated exposure to a harmless stimulus causes habituation.',
+            },
           },
           {
             id: 'psy-sec3-u6-L1-T2',
@@ -97,6 +105,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Habituation is a brain-level change. Your sensory organs keep detecting the stimulus, but your brain reduces its response.',
+            distractorExplanations: {
+              0: 'It only affects certain senses, not all of them is not correct here; habituation is a brain-level change.',
+              2: 'It happens gradually over many years is not correct here; habituation is a brain-level change.',
+              3: 'It requires conscious effort to achieve is not correct here; habituation is a brain-level change.',
+            },
           },
           {
             id: 'psy-sec3-u6-L1-Q6',
@@ -111,6 +124,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The slug habituated to the repeated jet but still responded to a novel stimulus, proving its senses work fine.',
+            distractorExplanations: {
+              0: 'The slug\'s nerve endings were damaged by the water jet is not correct here; the slug habituated to the repeated jet but still responded to a.',
+              2: 'The slug learned to associate the jet with food is not correct here; the slug habituated to the repeated jet but still responded to a novel.',
+              3: 'The slug forgot what the water jet was is not correct here; the slug habituated to the repeated jet but still responded to a novel stimulus,.',
+            },
           },
         ],
       },
@@ -136,6 +154,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Dishabituation means a new stimulus restores a previously habituated response.',
             correctAnswer: true,
             explanation: 'Dishabituation is the return of a habituated response after a novel or strong stimulus is introduced.',
+            distractorExplanations: {
+              1: 'Dishabituation is the return of a habituated response after a novel or strong stimulus is introduced.',
+            },
           },
           {
             id: 'psy-sec3-u6-L2-Q2',
@@ -149,6 +170,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The power outage (a novel event) caused you to notice the hum again. This restoration of a habituated response is dishabituation.',
+            distractorExplanations: {
+              0: 'Classical conditioning is not correct here; the power outage (a novel event) caused you to notice the hum again.',
+              2: 'Sensitization is not correct here; the power outage (a novel event) caused you to notice the hum again.',
+              3: 'Operant conditioning is not correct here; the power outage (a novel event) caused you to notice the hum again.',
+            },
           },
           {
             id: 'psy-sec3-u6-L2-T2',
@@ -196,6 +222,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Time away from the stimulus allowed spontaneous recovery. Your habituated response partially reset.',
+            distractorExplanations: {
+              0: 'The dog is barking louder than before is not correct here; time away from the stimulus allowed spontaneous recovery.',
+              2: 'This is not accurate; time away from the stimulus allowed spontaneous recovery. Your habituated response partially reset.',
+              3: 'Your hearing improved while on vacation is not correct here; time away from the stimulus allowed spontaneous recovery.',
+            },
           },
           {
             id: 'psy-sec3-u6-L2-T3',
@@ -216,6 +247,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Some neural learning from the original habituation is preserved, making the second round of habituation quicker.',
+            distractorExplanations: {
+              0: 'The stimulus has become physically weaker is not correct here; some neural learning from the original habituation is preserved, making the second.',
+              2: 'The sensory organs are permanently altered is not correct here; some neural learning from the original habituation is preserved, making the.',
+              3: 'The organism is now afraid of the stimulus is not correct here; some neural learning from the original habituation is preserved, making the.',
+            },
           },
         ],
       },
@@ -241,6 +277,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Sensitization means your response to a stimulus increases after a strong or threatening event.',
             correctAnswer: true,
             explanation: 'Sensitization amplifies your reactions, making you more responsive to stimuli after an intense experience.',
+            distractorExplanations: {
+              1: 'Sensitization amplifies your reactions, making you more responsive to stimuli after an intense experience.',
+            },
           },
           {
             id: 'psy-sec3-u6-L3-Q2',
@@ -254,6 +293,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The intense event (near-miss accident) heightened your reactivity to related stimuli. That\'s sensitization.',
+            distractorExplanations: {
+              0: 'Habituation is not correct here; the intense event (near-miss accident) heightened your reactivity to related stimuli. That\'s sensitization.',
+              1: 'Classical conditioning is not correct here; the intense event (near-miss accident) heightened your reactivity to related stimuli.',
+              3: 'Spontaneous recovery is not correct here; the intense event (near-miss accident) heightened your reactivity to related stimuli.',
+            },
           },
           {
             id: 'psy-sec3-u6-L3-T2',
@@ -304,6 +348,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Mild stimuli tend to produce habituation, while intense or threatening stimuli trigger sensitization. Intensity is the key factor.',
+            distractorExplanations: {
+              0: 'How many times the stimulus has been repeated is not correct here; mild stimuli tend to produce habituation, while intense or threatening stimuli.',
+              2: 'Whether the organism is sleeping or awake is not correct here; mild stimuli tend to produce habituation, while intense or threatening stimuli.',
+              3: 'The age of the organism is not correct here; mild stimuli tend to produce habituation, while intense or threatening stimuli trigger sensitization.',
+            },
           },
           {
             id: 'psy-sec3-u6-L3-Q6',
@@ -318,6 +367,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Intense combat experiences caused sensitization. His nervous system is on heightened alert, amplifying responses to sudden stimuli.',
+            distractorExplanations: {
+              0: 'He habituated to loud sounds during combat is not correct here; intense combat experiences caused sensitization.',
+              2: 'He developed better hearing during deployment is not correct here; intense combat experiences caused sensitization.',
+              3: 'He is pretending to be startled for attention is not correct here; intense combat experiences caused sensitization.',
+            },
           },
         ],
       },
@@ -343,6 +397,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Researchers use habituation to study what babies can perceive and distinguish.',
             correctAnswer: true,
             explanation: 'Since babies can\'t speak, researchers measure looking time. Renewed interest in a new stimulus shows the baby detected a difference.',
+            distractorExplanations: {
+              1: 'Since babies can\'t speak, researchers measure looking time. Renewed interest in a new stimulus shows the baby detected a difference.',
+            },
           },
           {
             id: 'psy-sec3-u6-L4-Q2',
@@ -356,6 +413,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Renewed interest (dishabituation) after the color change shows the baby detected the difference between red and blue.',
+            distractorExplanations: {
+              1: 'The baby prefers circles over other shapes is not correct here; renewed interest (dishabituation) after the color change shows the baby detected.',
+              2: 'The baby\'s vision is fully developed is not correct here; renewed interest (dishabituation) after the color change shows the baby detected the.',
+              3: 'The baby has been classically conditioned to like blue is not correct here; renewed interest (dishabituation) after the color change shows the.',
+            },
           },
           {
             id: 'psy-sec3-u6-L4-T2',
@@ -430,6 +492,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A novel stimulus causes dishabituation. Changing the billboard\'s content resets attention, just like introducing a new stimulus in a lab.',
+            distractorExplanations: {
+              0: 'Make the billboard larger to prevent sensory damage is not correct here; a novel stimulus causes dishabituation.',
+              2: 'Remove the billboard since people can no longer see it is not correct here; a novel stimulus causes dishabituation.',
+              3: 'Wait for spontaneous recovery without making changes is not correct here; a novel stimulus causes dishabituation.',
+            },
           },
         ],
       },
@@ -469,6 +536,9 @@ export const psySection3Part2: Unit[] = [
             question: 'A habit is a behavior that has become automatic through repetition.',
             correctAnswer: true,
             explanation: 'Habits form when a behavior is repeated enough times that it no longer requires conscious decision-making.',
+            distractorExplanations: {
+              1: 'Habits form when a behavior is repeated enough times that it no longer requires conscious decision-making.',
+            },
           },
           {
             id: 'psy-sec3-u7-L1-Q2',
@@ -482,6 +552,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Reaching for your phone without thinking is automatic behavior triggered by a context (waiting). That\'s a habit.',
+            distractorExplanations: {
+              0: 'Deciding what to wear for a job interview is not correct here; reaching for your phone without thinking is automatic behavior triggered by a.',
+              2: 'This is too absolute; reaching for your phone without thinking is automatic behavior triggered by a context (waiting). That\'s a habit.',
+              3: 'Choosing a restaurant for dinner with friends is not correct here; reaching for your phone without thinking is automatic behavior triggered by a.',
+            },
           },
           {
             id: 'psy-sec3-u7-L1-T2',
@@ -509,6 +584,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Habits rely on the basal ganglia, not the hippocampus (memory center). If habit-related brain areas are intact, automatic behaviors can persist even when memory fails.',
+            distractorExplanations: {
+              0: 'This is not accurate; habits rely on the basal ganglia, not the hippocampus (memory center).',
+              1: 'Memory loss only affects emotional memories is not correct here; habits rely on the basal ganglia, not the hippocampus (memory center).',
+              3: 'They are simply pretending to remember is not correct here; habits rely on the basal ganglia, not the hippocampus (memory center).',
+            },
           },
           {
             id: 'psy-sec3-u7-L1-T3',
@@ -530,6 +610,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The familiar cues (getting in the car, driving) triggered the automatic habit sequence. Without active attention, the habit took over.',
+            distractorExplanations: {
+              0: 'She was confused about what day it was is not correct here; the familiar cues (getting in the car, driving) triggered the automatic habit.',
+              2: 'She subconsciously wanted to go to work is not correct here; the familiar cues (getting in the car, driving) triggered the automatic habit.',
+              3: 'She has a poor sense of direction is not correct here; the familiar cues (getting in the car, driving) triggered the automatic habit sequence.',
+            },
           },
         ],
       },
@@ -555,6 +640,9 @@ export const psySection3Part2: Unit[] = [
             question: 'The habit loop has three parts: cue, routine, and reward.',
             correctAnswer: true,
             explanation: 'These three components form the cycle that creates and maintains every habit.',
+            distractorExplanations: {
+              1: 'These three components form the cycle that creates and maintains every habit.',
+            },
           },
           {
             id: 'psy-sec3-u7-L2-Q2',
@@ -628,6 +716,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Craving develops as your brain learns to anticipate the reward. This anticipation drives the urge to perform the routine.',
+            distractorExplanations: {
+              0: 'This is too absolute; craving develops as your brain learns to anticipate the reward. This anticipation drives the urge to perform the routine.',
+              2: 'Habits are controlled by reflexes, not the brain is not correct here; craving develops as your brain learns to anticipate the reward.',
+              3: 'The cue permanently rewires your sensory system is not correct here; craving develops as your brain learns to anticipate the reward.',
+            },
           },
           {
             id: 'psy-sec3-u7-L2-Q6',
@@ -642,6 +735,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The consistent timing suggests a specific cue triggers the loop. Identifying what happens around 3 PM (boredom, energy dip, social break) is key to understanding the habit.',
+            distractorExplanations: {
+              0: 'The reward, because chocolate tastes good is not correct here; the consistent timing suggests a specific cue triggers the loop.',
+              1: 'This reasoning is flawed; the consistent timing suggests a specific cue triggers the loop.',
+              3: 'The craving, because she doesn\'t feel hungry is not correct here; the consistent timing suggests a specific cue triggers the loop.',
+            },
           },
         ],
       },
@@ -667,6 +765,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Habits form because repetition strengthens neural pathways for the cue-routine-reward sequence.',
             correctAnswer: true,
             explanation: 'Repeated practice strengthens the neural connections, making the behavior increasingly automatic.',
+            distractorExplanations: {
+              1: 'Repeated practice strengthens the neural connections, making the behavior increasingly automatic.',
+            },
           },
           {
             id: 'psy-sec3-u7-L3-Q2',
@@ -680,6 +781,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'A 2009 study by Phillippa Lally found the average was 66 days, though individual results ranged from 18 to 254 days.',
+            distractorExplanations: {
+              0: '7 days is not correct here; a 2009 study by Phillippa Lally found the average was 66 days, though individual results ranged from 18 to 254 days.',
+              1: '21 days is not correct here; a 2009 study by Phillippa Lally found the average was 66 days, though individual results ranged from 18 to 254 days.',
+              3: '365 days is not correct here; a 2009 study by Phillippa Lally found the average was 66 days, though individual results ranged from 18 to 254 days.',
+            },
           },
           {
             id: 'psy-sec3-u7-L3-T2',
@@ -707,6 +813,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Consistent context (time, place, cue) is the most reliable way to build a habit. Variability slows habit formation.',
+            distractorExplanations: {
+              0: 'This is not accurate; consistent context (time, place, cue) is the most reliable way to build a habit. Variability slows habit formation.',
+              2: 'This is not accurate; consistent context (time, place, cue) is the most reliable way to build a habit. Variability slows habit formation.',
+              3: 'Read only when someone reminds you to do it is not correct here; consistent context (time, place, cue) is the most reliable way to build a habit.',
+            },
           },
           {
             id: 'psy-sec3-u7-L3-T3',
@@ -743,6 +854,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Habit stacking (linking the vitamin to an existing daily habit like making coffee) creates a reliable cue and builds the habit faster than relying on memory alone.',
+            distractorExplanations: {
+              0: 'Set 5 different alarms throughout the day as reminders is not correct here; habit stacking (linking the vitamin to an existing daily habit like.',
+              2: 'Wait until he gets sick so he\'ll be more motivated is not correct here; habit stacking (linking the vitamin to an existing daily habit like.',
+              3: 'Take all 7 vitamins on Sunday to avoid daily hassle is not correct here; habit stacking (linking the vitamin to an existing daily habit like.',
+            },
           },
         ],
       },
@@ -768,6 +884,9 @@ export const psySection3Part2: Unit[] = [
             question: 'The most effective way to break a habit is to replace the routine, not simply try to stop it.',
             correctAnswer: true,
             explanation: 'Old habit pathways persist. Replacing the routine with a healthier behavior that satisfies the same craving is more effective than willpower alone.',
+            distractorExplanations: {
+              1: 'Old habit pathways persist. Replacing the routine with a healthier behavior that satisfies the same craving is more effective than willpower alone.',
+            },
           },
           {
             id: 'psy-sec3-u7-L4-Q2',
@@ -781,6 +900,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Replacing the routine (nail biting) with a new one (stress ball) that addresses the same cue (anxiety) and provides similar relief is the habit replacement strategy.',
+            distractorExplanations: {
+              0: 'Telling themselves to simply stop biting their nails is not correct here; replacing the routine (nail biting) with a new one (stress ball) that.',
+              2: 'Avoiding all situations that cause anxiety is not correct here; replacing the routine (nail biting) with a new one (stress ball) that addresses.',
+              3: 'Wearing gloves permanently is not correct here; replacing the routine (nail biting) with a new one (stress ball) that addresses the same cue.',
+            },
           },
           {
             id: 'psy-sec3-u7-L4-T2',
@@ -834,6 +958,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Stress impairs the prefrontal cortex, which handles deliberate choices. The brain falls back on automatic basal ganglia routines, which are old habits.',
+            distractorExplanations: {
+              0: 'This is not accurate; stress impairs the prefrontal cortex, which handles deliberate choices.',
+              2: 'This reasoning is flawed; stress impairs the prefrontal cortex, which handles deliberate choices.',
+              3: 'This is not accurate; stress impairs the prefrontal cortex, which handles deliberate choices.',
+            },
           },
           {
             id: 'psy-sec3-u7-L4-Q6',
@@ -848,6 +977,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Stress reactivated the old habit loop. One relapse doesn\'t erase months of progress. Recognizing the trigger and reinforcing the replacement routine is the evidence-based approach.',
+            distractorExplanations: {
+              0: 'Give up, since the relapse proves she can\'t change is not correct here; stress reactivated the old habit loop.',
+              2: 'This is not accurate; stress reactivated the old habit loop. One relapse doesn\'t erase months of progress.',
+              3: 'Remove all food from her house permanently is not correct here; stress reactivated the old habit loop.',
+            },
           },
         ],
       },
@@ -873,6 +1007,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Habits begin as goal-directed behaviors reinforced by rewards.',
             correctAnswer: true,
             explanation: 'Operant conditioning shapes the initial behavior. With enough repetition, it transitions from deliberate to automatic.',
+            distractorExplanations: {
+              1: 'Operant conditioning shapes the initial behavior. With enough repetition, it transitions from deliberate to automatic.',
+            },
           },
           {
             id: 'psy-sec3-u7-L5-Q2',
@@ -886,6 +1023,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Once a behavior becomes habitual, it persists even when the original reward diminishes. The cue alone triggers the routine.',
+            distractorExplanations: {
+              1: 'This is too absolute; once a behavior becomes habitual, it persists even when the original reward diminishes. The cue alone triggers the routine.',
+              2: 'This is not accurate; once a behavior becomes habitual, it persists even when the original reward diminishes. The cue alone triggers the routine.',
+              3: 'Habits can only form around enjoyable activities is not correct here; once a behavior becomes habitual, it persists even when the original reward.',
+            },
           },
           {
             id: 'psy-sec3-u7-L5-T2',
@@ -949,6 +1091,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The app applies all four principles of habit design: obvious cue (notification), easy routine (5 minutes), satisfying reward (celebration and points), and repetition tracking (streak).',
+            distractorExplanations: {
+              0: 'Classical conditioning through fear of missing out is not correct here; the app applies all four principles of habit design: obvious cue.',
+              2: 'Punishment-based operant conditioning is not correct here; the app applies all four principles of habit design: obvious cue (notification), easy.',
+              3: 'Sensitization to exercise stimuli is not correct here; the app applies all four principles of habit design: obvious cue (notification), easy.',
+            },
           },
         ],
       },
@@ -988,6 +1135,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Learning transfer occurs when knowledge from one situation is applied to a new situation.',
             correctAnswer: true,
             explanation: 'Transfer is the ability to use what you learned in one context to handle a different context.',
+            distractorExplanations: {
+              1: 'Transfer is the ability to use what you learned in one context to handle a different context.',
+            },
           },
           {
             id: 'psy-sec3-u8-L1-Q2',
@@ -1001,6 +1151,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Applying knife skills from school to a new kitchen is a clear case of learning transfer across contexts.',
+            distractorExplanations: {
+              0: 'Habituation is not correct here; applying knife skills from school to a new kitchen is a clear case of learning transfer across contexts.',
+              2: 'Sensitization is not correct here; applying knife skills from school to a new kitchen is a clear case of learning transfer across contexts.',
+              3: 'Spontaneous recovery is not correct here; applying knife skills from school to a new kitchen is a clear case of learning transfer across contexts.',
+            },
           },
           {
             id: 'psy-sec3-u8-L1-T2',
@@ -1051,6 +1206,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'French and Italian share vocabulary, grammar structures, and pronunciation patterns, creating strong positive transfer.',
+            distractorExplanations: {
+              0: 'Playing chess and cooking a meal is not correct here; french and Italian share vocabulary, grammar structures, and pronunciation patterns,.',
+              2: 'Swimming and solving algebra problems is not correct here; french and Italian share vocabulary, grammar structures, and pronunciation patterns,.',
+              3: 'Painting and playing basketball is not correct here; french and Italian share vocabulary, grammar structures, and pronunciation patterns,.',
+            },
           },
           {
             id: 'psy-sec3-u8-L1-Q6',
@@ -1065,6 +1225,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Baseball and cricket use similar but different batting techniques. The baseball habit interferes with learning the cricket swing, creating negative transfer.',
+            distractorExplanations: {
+              0: 'Positive transfer helping him succeed immediately is not correct here; baseball and cricket use similar but different batting techniques.',
+              2: 'This reasoning is flawed; baseball and cricket use similar but different batting techniques.',
+              3: 'Spontaneous recovery of a forgotten skill is not correct here; baseball and cricket use similar but different batting techniques.',
+            },
           },
         ],
       },
@@ -1090,6 +1255,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Far transfer, where skills apply to very different situations, happens easily and reliably.',
             correctAnswer: false,
             explanation: 'Far transfer is actually rare and difficult. Near transfer (similar situations) is much more reliable.',
+            distractorExplanations: {
+              0: 'Far transfer is actually rare and difficult. Near transfer (similar situations) is much more reliable.',
+            },
           },
           {
             id: 'psy-sec3-u8-L2-Q2',
@@ -1103,6 +1271,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Driving a sedan and driving an SUV are very similar tasks, making this a clear case of near transfer.',
+            distractorExplanations: {
+              0: 'A surgeon\'s precision helps them paint watercolors is not correct here; driving a sedan and driving an SUV are very similar tasks, making this a.',
+              2: 'Playing chess makes you a better business leader is not correct here; driving a sedan and driving an SUV are very similar tasks, making this a.',
+              3: 'This is not accurate; driving a sedan and driving an SUV are very similar tasks, making this a clear case of near transfer.',
+            },
           },
           {
             id: 'psy-sec3-u8-L2-T2',
@@ -1153,6 +1326,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Varied practice with underlying principles builds flexible knowledge that can transfer to new situations.',
+            distractorExplanations: {
+              0: 'Drilling one specific procedure until it\'s automatic is not correct here; varied practice with underlying principles builds flexible knowledge.',
+              2: 'Memorizing facts without understanding why they matter is not correct here; varied practice with underlying principles builds flexible knowledge.',
+              3: 'This is not accurate; varied practice with underlying principles builds flexible knowledge that can transfer to new situations.',
+            },
           },
           {
             id: 'psy-sec3-u8-L2-Q6',
@@ -1167,6 +1345,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Varied practice forces students to focus on the underlying principle rather than a specific procedure, making transfer to new problems more likely.',
+            distractorExplanations: {
+              0: 'Varied practice builds context-bound knowledge is not correct here; varied practice forces students to focus on the underlying principle rather.',
+              1: 'Single-method practice is better for far transfer is not correct here; varied practice forces students to focus on the underlying principle.',
+              3: 'Both groups should perform equally on novel problems is not correct here; varied practice forces students to focus on the underlying principle.',
+            },
           },
         ],
       },
@@ -1192,6 +1375,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Stimulus generalization means a conditioned response occurs with stimuli similar to the original conditioned stimulus.',
             correctAnswer: true,
             explanation: 'Generalization allows responses to spread to similar stimuli. The more similar the new stimulus, the stronger the response.',
+            distractorExplanations: {
+              1: 'Generalization allows responses to spread to similar stimuli. The more similar the new stimulus, the stronger the response.',
+            },
           },
           {
             id: 'psy-sec3-u8-L3-Q2',
@@ -1205,6 +1391,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The fear response generalized from the specific brown dog to all dogs because they share similar features.',
+            distractorExplanations: {
+              0: 'Discrimination is not correct here; the fear response generalized from the specific brown dog to all dogs because they share similar features.',
+              2: 'Habituation is not correct here; the fear response generalized from the specific brown dog to all dogs because they share similar features.',
+              3: 'Negative reinforcement is not correct here; the fear response generalized from the specific brown dog to all dogs because they share similar.',
+            },
           },
           {
             id: 'psy-sec3-u8-L3-T2',
@@ -1257,6 +1448,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The lever-pressing behavior generalized to a similar but different environment. This is generalization in operant conditioning.',
+            distractorExplanations: {
+              0: 'Stimulus discrimination is not correct here; the lever-pressing behavior generalized to a similar but different environment.',
+              1: 'Negative transfer is not correct here; the lever-pressing behavior generalized to a similar but different environment.',
+              3: 'Classical extinction is not correct here; the lever-pressing behavior generalized to a similar but different environment.',
+            },
           },
           {
             id: 'psy-sec3-u8-L3-Q6',
@@ -1271,6 +1467,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The therapy helped the child discriminate between types of dogs rather than generalizing fear to all dogs.',
+            distractorExplanations: {
+              0: 'The child habituated to all dogs equally is not correct here; the therapy helped the child discriminate between types of dogs rather than.',
+              2: 'The child was sensitized to dogs is not correct here; the therapy helped the child discriminate between types of dogs rather than generalizing.',
+              3: 'This is not accurate; the therapy helped the child discriminate between types of dogs rather than generalizing fear to all dogs.',
+            },
           },
         ],
       },
@@ -1296,6 +1497,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Analogical reasoning involves recognizing shared structure between situations that look different on the surface.',
             correctAnswer: true,
             explanation: 'Analogies connect situations by their deep structure, not their surface features. This enables knowledge to transfer across domains.',
+            distractorExplanations: {
+              1: 'Analogies connect situations by their deep structure, not their surface features. This enables knowledge to transfer across domains.',
+            },
           },
           {
             id: 'psy-sec3-u8-L4-Q2',
@@ -1309,6 +1513,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This is the famous "radiation problem" by Duncker. The doctor recognized the structural analogy (many small forces converging) between the military scenario and the medical one.',
+            distractorExplanations: {
+              0: 'Near transfer between similar medical procedures is not correct here; this is the famous "radiation problem" by Duncker.',
+              2: 'This is not accurate; this is the famous "radiation problem" by Duncker.',
+              3: 'Habituation to the idea of using radiation is not correct here; this is the famous "radiation problem" by Duncker.',
+            },
           },
           {
             id: 'psy-sec3-u8-L4-T2',
@@ -1359,6 +1568,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Comparing multiple examples helps learners extract the underlying principle, which is the key to recognizing analogies in new situations.',
+            distractorExplanations: {
+              0: 'Study one example in great depth is not correct here; comparing multiple examples helps learners extract the underlying principle, which is the.',
+              2: 'Memorize surface features of successful solutions is not correct here; comparing multiple examples helps learners extract the underlying.',
+              3: 'Avoid looking at examples from other domains is not correct here; comparing multiple examples helps learners extract the underlying principle,.',
+            },
           },
           {
             id: 'psy-sec3-u8-L4-Q6',
@@ -1373,6 +1587,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Multiple varied examples help students see that exponential growth is a structural pattern, not just a finance concept. This enables far transfer.',
+            distractorExplanations: {
+              0: 'This is not accurate; multiple varied examples help students see that exponential growth is a structural pattern, not just a finance concept.',
+              2: 'This is not accurate; multiple varied examples help students see that exponential growth is a structural pattern, not just a finance concept.',
+              3: 'Let students pick their single favorite domain to study is not correct here; multiple varied examples help students see that exponential growth.',
+            },
           },
         ],
       },
@@ -1398,6 +1617,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Functional fixedness is the tendency to see objects only in their usual role.',
             correctAnswer: true,
             explanation: 'Functional fixedness limits creative problem solving by preventing you from seeing alternative uses for familiar objects or concepts.',
+            distractorExplanations: {
+              1: 'Functional fixedness limits creative problem solving by preventing you from seeing alternative uses for familiar objects or concepts.',
+            },
           },
           {
             id: 'psy-sec3-u8-L5-Q2',
@@ -1411,6 +1633,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'They see the stapler only as a stapling tool, not as a heavy object that could serve as a hammer. That\'s functional fixedness.',
+            distractorExplanations: {
+              0: 'Negative transfer is not correct here; they see the stapler only as a stapling tool, not as a heavy object that could serve as a hammer.',
+              2: 'Stimulus generalization is not correct here; they see the stapler only as a stapling tool, not as a heavy object that could serve as a hammer.',
+              3: 'Context-bound learning is not correct here; they see the stapler only as a stapling tool, not as a heavy object that could serve as a hammer.',
+            },
           },
           {
             id: 'psy-sec3-u8-L5-T2',
@@ -1463,6 +1690,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Incubation (taking a break) helps break a mental set. Returning with fresh eyes often reveals solutions that repetition alone cannot.',
+            distractorExplanations: {
+              0: 'Keep trying the same approach more intensely is not correct here; incubation (taking a break) helps break a mental set.',
+              2: 'Assume the problem is unsolvable is not correct here; incubation (taking a break) helps break a mental set.',
+              3: 'Ask someone to use the same approach she\'s been using is not correct here; incubation (taking a break) helps break a mental set.',
+            },
           },
           {
             id: 'psy-sec3-u8-L5-Q6',
@@ -1477,6 +1709,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The students tied supply-and-demand knowledge to the grocery context (context-bound) and focused on the topic (groceries) rather than the underlying economic structure (surface-level thinking).',
+            distractorExplanations: {
+              0: 'Functional fixedness and negative transfer is not correct here; the students tied supply-and-demand knowledge to the grocery context.',
+              2: 'Habituation and sensitization is not correct here; the students tied supply-and-demand knowledge to the grocery context (context-bound) and.',
+              3: 'Stimulus discrimination and extinction is not correct here; the students tied supply-and-demand knowledge to the grocery context (context-bound).',
+            },
           },
         ],
       },
@@ -1522,6 +1759,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The bell was originally neutral. After being paired with food, it became the conditioned stimulus that triggered salivation on its own.',
+            distractorExplanations: {
+              0: 'The food that caused salivation is not correct here; the bell was originally neutral.',
+              2: 'The salivation response itself is not correct here; the bell was originally neutral.',
+              3: 'The dog\'s hunger before each trial is not correct here; the bell was originally neutral.',
+            },
           },
           {
             id: 'psy-sec3-u9-L1-Q2',
@@ -1576,6 +1818,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Variable-ratio schedules (like slot machines) produce high, steady response rates because the reward is unpredictable.',
+            distractorExplanations: {
+              0: 'Fixed-ratio schedule is not correct here; variable-ratio schedules (like slot machines) produce high, steady response rates because the reward is.',
+              2: 'Fixed-interval schedule is not correct here; variable-ratio schedules (like slot machines) produce high, steady response rates because the reward.',
+              3: 'Continuous reinforcement is not correct here; variable-ratio schedules (like slot machines) produce high, steady response rates because the.',
+            },
           },
           {
             id: 'psy-sec3-u9-L1-Q5',
@@ -1598,6 +1845,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The wasp sting (UCS) was paired with yellow flowers (CS), creating fear. This fear then generalized to other yellow objects through stimulus generalization.',
+            distractorExplanations: {
+              0: 'Operant conditioning with generalization is not correct here; the wasp sting (UCS) was paired with yellow flowers (CS), creating fear.',
+              2: 'Habituation to the color yellow is not correct here; the wasp sting (UCS) was paired with yellow flowers (CS), creating fear.',
+              3: 'Negative reinforcement of avoidance behavior is not correct here; the wasp sting (UCS) was paired with yellow flowers (CS), creating fear.',
+            },
           },
         ],
       },
@@ -1628,6 +1880,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Children imitated the adult\'s aggression, showing that behavior can be learned through observation without direct reinforcement.',
+            distractorExplanations: {
+              0: 'This reasoning is flawed; children imitated the adult\'s aggression, showing that behavior can be learned through observation without direct.',
+              1: 'Showed no change in behavior is not correct here; children imitated the adult\'s aggression, showing that behavior can be learned through.',
+              3: 'This is too narrow; children imitated the adult\'s aggression, showing that behavior can be learned through observation without direct reinforcement.',
+            },
           },
           {
             id: 'psy-sec3-u9-L2-Q2',
@@ -1635,6 +1892,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Habituation and sensitization are forms of associative learning.',
             correctAnswer: false,
             explanation: 'They are non-associative learning. They involve changes in response to a single stimulus, not associations between two events.',
+            distractorExplanations: {
+              0: 'They are non-associative learning. They involve changes in response to a single stimulus, not associations between two events.',
+            },
           },
           {
             id: 'psy-sec3-u9-L2-T2',
@@ -1692,6 +1952,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Worker A habituates to harmless noise. Worker B\'s previous trauma caused sensitization, making factory noise feel threatening.',
+            distractorExplanations: {
+              0: 'Both are habituating at different speeds is not correct here; worker A habituates to harmless noise.',
+              2: 'This is not accurate; worker A habituates to harmless noise. Worker B\'s previous trauma caused sensitization, making factory noise feel threatening.',
+              3: 'This is not accurate; worker A habituates to harmless noise. Worker B\'s previous trauma caused sensitization, making factory noise feel threatening.',
+            },
           },
         ],
       },
@@ -1722,6 +1987,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The habit loop consists of a cue (trigger), routine (automatic behavior), and reward (payoff that reinforces the loop).',
+            distractorExplanations: {
+              0: 'Stimulus, response, reinforcement is not correct here; the habit loop consists of a cue (trigger), routine (automatic behavior), and reward.',
+              2: 'Attention, retention, reproduction is not correct here; the habit loop consists of a cue (trigger), routine (automatic behavior), and reward.',
+              3: 'Encoding, storage, retrieval is not correct here; the habit loop consists of a cue (trigger), routine (automatic behavior), and reward (payoff.',
+            },
           },
           {
             id: 'psy-sec3-u9-L3-Q2',
@@ -1729,6 +1999,9 @@ export const psySection3Part2: Unit[] = [
             question: 'Old habits can be completely erased from the brain once you stop performing them.',
             correctAnswer: false,
             explanation: 'Old habit neural pathways persist even when the behavior stops. That\'s why relapse is common, especially under stress. The strategy is to replace, not erase.',
+            distractorExplanations: {
+              0: 'Old habit neural pathways persist even when the behavior stops. That\'s why relapse is common, especially under stress. The strategy is to replace, not erase.',
+            },
           },
           {
             id: 'psy-sec3-u9-L3-Q3',
@@ -1775,6 +2048,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Stress impairs the prefrontal cortex (deliberate control) and the brain reverts to basal ganglia-controlled automatic habits.',
+            distractorExplanations: {
+              0: 'Stress permanently destroys new habit pathways is not correct here; stress impairs the prefrontal cortex (deliberate control) and the brain.',
+              2: 'Stress only affects habits formed in childhood is not correct here; stress impairs the prefrontal cortex (deliberate control) and the brain.',
+              3: 'This is not accurate; stress impairs the prefrontal cortex (deliberate control) and the brain reverts to basal ganglia-controlled automatic habits.',
+            },
           },
           {
             id: 'psy-sec3-u9-L3-Q6',
@@ -1789,6 +2067,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The student\'s statistical knowledge was context-bound to height/weight examples. They couldn\'t transfer the underlying principles to a new domain (surveys).',
+            distractorExplanations: {
+              0: 'Sensitization to statistics made the student anxious is not correct here; the student\'s statistical knowledge was context-bound to height/weight.',
+              2: 'This is not accurate; the student\'s statistical knowledge was context-bound to height/weight examples.',
+              3: 'Negative reinforcement reduced the student\'s motivation is not correct here; the student\'s statistical knowledge was context-bound to.',
+            },
           },
         ],
       },
@@ -1836,6 +2119,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The behavior generalized to a similar formal setting (vet) but was discriminated from a different setting (park).',
+            distractorExplanations: {
+              0: 'Habituation and sensitization is not correct here; the behavior generalized to a similar formal setting (vet) but was discriminated from a.',
+              2: 'Positive and negative reinforcement is not correct here; the behavior generalized to a similar formal setting (vet) but was discriminated from a.',
+              3: 'Near and far transfer is not correct here; the behavior generalized to a similar formal setting (vet) but was discriminated from a different.',
+            },
           },
           {
             id: 'psy-sec3-u9-L4-Q3',
@@ -1850,6 +2138,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This scenario contains 4 different learning types from the section: learning by watching, declining novelty response, automatic cue-routine behavior, and heightened caution after a scare.',
+            distractorExplanations: {
+              0: 'Only classical and operant conditioning is not correct here; this scenario contains 4 different learning types from the section: learning by.',
+              2: 'Only habituation and sensitization is not correct here; this scenario contains 4 different learning types from the section: learning by watching,.',
+              3: 'Only observational learning and operant conditioning is not correct here; this scenario contains 4 different learning types from the section:.',
+            },
           },
           {
             id: 'psy-sec3-u9-L4-T2',
@@ -1902,6 +2195,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Varied examples combat context-bound knowledge, analogical thinking enables far transfer, and spaced practice in multiple contexts builds flexible skills.',
+            distractorExplanations: {
+              0: 'This is not accurate; varied examples combat context-bound knowledge, analogical thinking enables far transfer, and spaced practice in multiple.',
+              2: 'This is not accurate; varied examples combat context-bound knowledge, analogical thinking enables far transfer, and spaced practice in multiple.',
+              3: 'This is not accurate; varied examples combat context-bound knowledge, analogical thinking enables far transfer, and spaced practice in multiple.',
+            },
           },
           {
             id: 'psy-sec3-u9-L4-Q7',
@@ -1916,6 +2214,11 @@ export const psySection3Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Single-context training creates context-bound knowledge that passes tests but doesn\'t transfer. Varied practice across settings builds transferable skills, exactly what the research on near/far transfer predicts.',
+            distractorExplanations: {
+              0: 'This is not accurate; single-context training creates context-bound knowledge that passes tests but doesn\'t transfer.',
+              1: 'The second company used punishment-based training is not correct here; single-context training creates context-bound knowledge that passes tests.',
+              3: 'This is not accurate; single-context training creates context-bound knowledge that passes tests but doesn\'t transfer.',
+            },
           },
         ],
       },

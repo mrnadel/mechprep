@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "u8-L1-Q1a",
+    "type": "true-false",
+    "question": "A shaft transmits power by rotating under torque.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. Shafts transmit mechanical power through rotation. Power equals torque times angular velocity (P = T x omega).",
+    "explanationLine": 33
+  },
+  {
+    "id": "u8-L1-Q1",
+    "type": "multiple-choice",
+    "question": "A shaft broke at a keyway. Beach marks radiate from the keyway corner. What failure mode is this?",
+    "options": [
+      "The shaft was overloaded in a single static event",
+      "Fatigue initiated at stress concentration from keyway",
+      "The key was too loose, causing twist and shear",
+      "Corrosion gradually weakened the shaft"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Beach marks are the definitive indicator of fatigue failure. The crack originated at the keyway corner, a classic stress concentration site (Kt = 2.0 to 3.0).",
+    "explanationLine": 47
+  },
+  {
+    "id": "u8-L1-Q2",
+    "type": "multiple-choice",
+    "question": "A shaft transmits 50 kW at 1500 RPM. Distortion energy gives d_min = 38 mm. Why would you select a larger diameter?",
+    "options": [
+      "No adjustment needed, 38 mm is the answer",
+      "Round up to 40 mm for standard sizing",
+      "Double it to 76 mm for safety factor of 2.0",
+      "Only round up to 39 mm, going larger wastes material"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Shaft sizing never stops at the formula result. Account for standard sizes, keyway stress concentration, bearing bore, and deflection limits.",
+    "explanationLine": 61
+  },
+  {
+    "id": "u8-L1-Q24",
+    "type": "true-false",
+    "question": "For a shaft under pure torsion, the maximum shear stress occurs at the center of the shaft cross-section.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "For a solid circular shaft under torsion, shear stress is linear from zero at the center to maximum at the outer surface. tau = Tr/J.",
+    "explanationLine": 76
+  },
+  {
+    "id": "u8-L1-Q7",
+    "type": "multiple-choice",
+    "question": "A 45 mm diameter shaft transmits 30 kW at 720 RPM. What is the maximum shear stress due to torsion alone?",
+    "options": [
+      "11.1 MPa",
+      "22.1 MPa",
+      "33.2 MPa",
+      "44.2 MPa"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "T = P/omega = 30000/(720 x 2pi/60) = 397.9 N*m. J = pi*d^4/32 = 4.026 x 10^-7 m^4. tau = Tc/J = 397.9 x 0.0225 / 4.026e-7 = 22.1 MPa.",
+    "explanationLine": 100
+  },
+  {
+    "id": "u8-L1-Q8",
+    "type": "multiple-choice",
+    "question": "Per the maximum shear stress theory (Tresca), the equivalent shear stress on a shaft under bending M and torque T is:",
+    "options": [
+      "tau_eq = (M + T) / (pi*d^3/16)",
+      "tau_eq = sqrt(M^2 + T^2) * 16/(pi*d^3)",
+      "tau_eq = (M^2 + T^2) / (pi*d^3/32)",
+      "tau_eq = 16/(pi*d^3) * (M + T/2)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For combined bending and torsion on a solid circular shaft, the principal stresses come from the Mohr circle. The equivalent shear stress uses the square root of the sum of squares.",
+    "explanationLine": 114
+  },
+  {
+    "id": "u8-L1-Q3",
+    "type": "true-false",
+    "question": "A shaft operating above its first critical speed will always experience dangerous vibrations and should be avoided.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Supercritical shaft operation is routine in turbomachinery, centrifugal separators, and dental drills. They pass through the critical speed quickly during startup.",
+    "explanationLine": 122
+  },
+  {
+    "id": "u8-L1b-Q1a",
+    "type": "true-false",
+    "question": "A keyway creates a stress concentration on a shaft.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. The sharp corners of a keyway slot raise local stress by a factor of 2 to 3, making it a common fatigue crack initiation site.",
+    "explanationLine": 160
+  },
+  {
+    "id": "u8-L1-Q9",
+    "type": "multiple-choice",
+    "question": "Primary advantage of using an involute spline instead of a single key for torque transmission?",
+    "options": [
+      "Splines are cheaper to manufacture than keyways",
+      "Splines distribute torque uniformly around the circumference",
+      "Splines allow axial sliding on the shaft",
+      "Splines create a permanent, non-removable joint"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A single keyway creates a severe stress concentration and transmits torque through a single contact area. Splines distribute the load around the full circumference.",
+    "explanationLine": 174
+  },
+  {
+    "id": "u8-L1-Q15",
+    "type": "true-false",
+    "question": "A Woodruff key is preferred over a rectangular key when the shaft diameter is large (>100 mm) and the torque is very high.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Woodruff keys are semicircular and preferred for small shafts and light-to-moderate torque. They self-align with tapered hubs but have less shear area than rectangular keys.",
+    "explanationLine": 182
+  },
+  {
+    "id": "u8-L1-Q5",
+    "type": "multiple-choice",
+    "question": "A centrifuge operates at 12,000 RPM but its first critical speed is 8,000 RPM. Is this design safe?",
+    "options": [
+      "Unsafe, operating above critical always causes failure",
+      "Safe, supercritical operation is routine if you pass through quickly",
+      "Only safe if balanced to sub-gram precision",
+      "Safe only below twice the critical speed"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Supercritical operation (above the first critical speed) is completely routine in many high-speed machines.",
+    "explanationLine": 203
+  },
+  {
+    "id": "u8-L1-Q16",
+    "type": "multiple-choice",
+    "question": "How does the Dunkerley formula combine individual critical speeds of a multi-mass shaft?",
+    "options": [
+      "Add all speeds directly",
+      "Average the individual speeds",
+      "Reciprocal sum: 1/omega_c^2 = 1/omega_1^2 + 1/omega_2^2 + ...",
+      "Multiply all speeds together"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The Dunkerley formula estimates the first critical speed by combining individual critical speeds using reciprocal squares. It gives a lower-bound (conservative) estimate.",
+    "explanationLine": 226
+  },
+  {
+    "id": "u8-L1-Q10",
+    "type": "true-false",
+    "question": "A hollow shaft (same OD and material as solid) always has lower critical speed due to less stiffness.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "A hollow shaft is lighter than a solid shaft of the same OD. Its stiffness (I) decreases less than its mass per unit length, so the stiffness-to-mass ratio can actually increase.",
+    "explanationLine": 234
+  },
+  {
+    "id": "u8-L1c-Q1a",
+    "type": "multiple-choice",
+    "question": "Which fatigue criterion is the most conservative?",
+    "options": [],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Soderberg uses yield strength (not ultimate) for the mean stress axis, making it the most conservative choice for ductile materials.",
+    "explanationLine": 281
+  },
+  {
+    "id": "u8-L1-Q4",
+    "type": "multiple-choice",
+    "question": "In ASME shaft code, why is K_b > K_t for the same loading?",
+    "options": [
+      "Bending forces are always larger than torsional forces",
+      "A rotating shaft under fixed bending creates fully reversed stress",
+      "Bending causes axial deflection that damages bearings",
+      "The bending factor is arbitrary from older codes"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A rotating shaft with a fixed bending load sees each surface point cycle from tension to compression each revolution, creating fully reversed stress, which is the most damaging fatigue condition.",
+    "explanationLine": 295
+  },
+  {
+    "id": "u8-L1-Q12",
+    "type": "multiple-choice",
+    "question": "Soderberg criterion compares equivalent stress against which property?",
+    "options": [
+      "Ultimate tensile strength (S_ut)",
+      "Yield strength (S_y)",
+      "Endurance limit (S_e)",
+      "Fracture toughness (K_Ic)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Soderberg draws a line from the endurance limit (alternating axis) to the yield strength (mean axis). Points below the line are considered safe.",
+    "explanationLine": 309
+  },
+  {
+    "id": "u8-L1-Q19",
+    "type": "true-false",
+    "question": "In service, a shaft\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Standard endurance values come from polished, small specimens. Real conditions (surface finish, size, temperature, reliability) reduce the practical endurance limit significantly.",
+    "explanationLine": 324
+  },
+  {
+    "id": "u8-L1-Q27",
+    "type": "multiple-choice",
+    "question": "Using the approximation S_e\\",
+    "options": [
+      "327 MPa",
+      "450 MPa",
+      "655 MPa",
+      "700 MPa"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For steels with S_ut < 1400 MPa: S_e\\",
+    "explanationLine": 348
+  },
+  {
+    "id": "u8-L1-Q18",
+    "type": "multiple-choice",
+    "question": "Using von Mises theory with M = 500 N*m and T = 400 N*m, what is the equivalent bending moment?",
+    "options": [
+      "M_eq = 570 N*m",
+      "M_eq = 583 N*m",
+      "M_eq = 640 N*m",
+      "M_eq = 900 N*m"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "M_eq = sqrt(M^2 + (3/4)*T^2) = sqrt(500^2 + 0.75*400^2) = sqrt(250000 + 120000) = sqrt(370000) = 583 N*m.",
+    "explanationLine": 362
+  },
+  {
+    "id": "u8-L1-Q29",
+    "type": "multiple-choice",
+    "question": "Using the DE-Goodman criterion with sigma_a = 200 MPa and tau_m = 80 MPa, what is the equivalent mean stress?",
+    "options": [
+      "sigma_m\\",
+      "sigma_m\\",
+      "sigma_m\\",
+      "sigma_m\\"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The distortion energy theory converts shear stress to equivalent normal stress by multiplying by sqrt(3). So sigma_m\\",
+    "explanationLine": 376
+  },
+  {
+    "id": "u8-L1-Q11",
+    "type": "multiple-choice",
+    "question": "A shaft shoulder has Kt = 2.5. Which approach is most effective at reducing it?",
+    "options": [
+      "Add a retaining ring groove nearby",
+      "Add a second step keeping the same fillet radii",
+      "Polish the fillet to mirror finish",
+      "Increase fillet radius from 1 mm to 4 mm"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The fillet radius is the dominant factor controlling stress concentration at a shoulder. Increasing it from 1 to 4 mm can drop Kt from 2.5 to 1.5 or less.",
+    "explanationLine": 390
+  },
+  {
+    "id": "u8-L2-Q1a",
+    "type": "true-false",
+    "question": "Ball bearings use rolling elements to reduce friction between a shaft and its housing.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. Ball bearings replace sliding friction with rolling friction by placing balls between inner and outer races.",
+    "explanationLine": 418
+  },
+  {
+    "id": "u8-L2-Q2",
+    "type": "multiple-choice",
+    "question": "When would you choose a deep groove ball bearing over a tapered roller bearing?",
+    "options": [
+      "Use tapered roller in every case",
+      "Use deep groove ball in every case",
+      "Deep groove for high-speed, low-load; tapered roller for heavy loads",
+      "The choice depends only on catalog life calculation"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Deep groove ball bearings excel at high speed and moderate loads. Tapered rollers handle heavy combined radial and axial loads but have more friction.",
+    "explanationLine": 432
+  },
+  {
+    "id": "u8-L2-Q10",
+    "type": "multiple-choice",
+    "question": "A self-aligning ball bearing can accommodate 2 to 3 degrees of misalignment. What makes this possible?",
+    "options": [
+      "Higher load capacity than deep groove bearings",
+      "A spherical (concave) outer raceway that lets the inner ring tilt",
+      "Lower friction than any other bearing type",
+      "It can handle high axial loads in both directions"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Self-aligning ball bearings have a spherical outer raceway that allows the inner ring assembly to tilt 2 to 3 degrees relative to the outer ring.",
+    "explanationLine": 456
+  },
+  {
+    "id": "u8-L2-Q17",
+    "type": "multiple-choice",
+    "question": "Which fit is typically used between a shaft and a bearing inner race?",
+    "options": [
+      "Clearance on shaft, interference in housing",
+      "Interference on shaft, clearance in housing",
+      "Clearance on both",
+      "Interference on both"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "When the shaft rotates, the inner race rotates with it (rotating load on inner race), so it needs an interference fit to prevent creep.",
+    "explanationLine": 477
+  },
+  {
+    "id": "u8-L2-Q13",
+    "type": "true-false",
+    "question": "Needle roller bearings are ideal for applications with large available radial space but limited axial space.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "This is reversed. Needle rollers are thin and long, making them ideal when radial space is limited. They have a very small cross-section compared to standard rollers.",
+    "explanationLine": 485
+  },
+  {
+    "id": "u8-L2-Q11",
+    "type": "multiple-choice",
+    "question": "What is the primary advantage of an angular contact bearing over a deep groove ball bearing?",
+    "options": [
+      "Lower friction for the same load",
+      "Higher combined axial and radial load capacity",
+      "Cheaper to manufacture",
+      "No preload required"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The contact angle (typically 15 to 40 degrees) allows angular contact bearings to support significant axial loads alongside radial loads.",
+    "explanationLine": 509
+  },
+  {
+    "id": "u8-L2-Q5",
+    "type": "multiple-choice",
+    "question": "A bearing inner race shows spalling in a narrow band, but the outer race looks normal. What caused this?",
+    "options": [
+      "Normal fatigue from exceeding rated L10 life",
+      "Contaminated lubricant with abrasive particles",
+      "Misalignment concentrated load on a narrow band",
+      "Electrical discharge damage (fluting)"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The wear pattern is diagnostic. Normal loading distributes contact across most of the raceway width. A narrow band indicates concentrated load from misalignment.",
+    "explanationLine": 523
+  },
+  {
+    "id": "u8-L2b-Q1a",
+    "type": "true-false",
+    "question": "L10 life means 90% of bearings survive to that number of revolutions.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "L10 (pronounced \"L-ten\") life means 10% failure rate, so 90% of bearings in a population will reach this life.",
+    "explanationLine": 551
+  },
+  {
+    "id": "u8-L2-Q1",
+    "type": "multiple-choice",
+    "question": "A ball bearing has C = 25 kN and applied load P = 5 kN. What is L10 in millions of revolutions?",
+    "options": [
+      "25 million revolutions",
+      "125 million revolutions",
+      "625 million revolutions",
+      "3125 million revolutions"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For ball bearings: L10 = (C/P)^p where p = 3. L10 = (25/5)^3 = 5^3 = 125 million revolutions.",
+    "explanationLine": 565
+  },
+  {
+    "id": "u8-L2-Q7",
+    "type": "multiple-choice",
+    "question": "A roller bearing has C = 50 kN and P = 10 kN at 500 RPM. What is L10 in operating hours?",
+    "options": [
+      "4630 hours",
+      "6945 hours",
+      "9260 hours",
+      "13890 hours"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For roller bearings, p = 10/3. L10 = (50/10)^(10/3) = 5^3.333 = 208.3 million revolutions. Hours = 208.3e6 / (500 x 60) = 6945 hours.",
+    "explanationLine": 588
+  },
+  {
+    "id": "u8-L2-Q8",
+    "type": "multiple-choice",
+    "question": "Fr = 4 kN, Fa = 3 kN, X = 0.56, Y = 1.2. What is the equivalent dynamic load P?",
+    "options": [
+      "P = 4.0 kN",
+      "P = 5.0 kN",
+      "P = 5.84 kN",
+      "P = 7.0 kN"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "P = X*Fr + Y*Fa = 0.56 x 4 + 1.2 x 3 = 2.24 + 3.6 = 5.84 kN.",
+    "explanationLine": 609
+  },
+  {
+    "id": "u8-L2-Q14",
+    "type": "multiple-choice",
+    "question": "A bearing application requires 99% reliability instead of 90%. How does this affect bearing life compared to L10?",
+    "options": [
+      "Life increases by 10%",
+      "Life drops to about 21% of L10",
+      "Life drops to about 50% of L10",
+      "No change, L10 already accounts for this"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The reliability adjustment factor a1 for 99% reliability is approximately 0.21. So L1 = 0.21 x L10.",
+    "explanationLine": 623
+  },
+  {
+    "id": "u8-L2-Q9",
+    "type": "true-false",
+    "question": "Grease lubrication is preferred over oil for bearings at very high speeds because grease provides better cooling.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Oil lubrication is preferred for high-speed bearings. Oil can be circulated for cooling and removes heat much better than grease, which stays in place and can overheat.",
+    "explanationLine": 640
+  },
+  {
+    "id": "u8-L2-Q12",
+    "type": "multiple-choice",
+    "question": "ISO VG 68 lubricating oil. What does the 68 represent?",
+    "options": [
+      "Oil density of 68 kg/m^3",
+      "Kinematic viscosity of 68 cSt at 100 C",
+      "Dynamic viscosity of 68 Pa*s at 40 C",
+      "Kinematic viscosity of 68 cSt at 40 C"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "ISO VG (Viscosity Grade) numbers represent kinematic viscosity in centistokes (cSt) at 40 C. VG 68 means approximately 68 cSt at 40 C.",
+    "explanationLine": 654
+  },
+  {
+    "id": "u8-L2c-Q1a",
+    "type": "true-false",
+    "question": "In hydrodynamic lubrication, a full oil film separates the shaft from the bearing surface.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. In the hydrodynamic regime, the shaft drags oil into a converging wedge that builds pressure, completely separating the metal surfaces.",
+    "explanationLine": 682
+  },
+  {
+    "id": "u8-L2-Q3",
+    "type": "true-false",
+    "question": "In hydrodynamic lubrication, load-carrying capacity increases with increasing viscosity and shaft speed.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The Sommerfeld number S = (mu*N*d)/(P*c^2) governs hydrodynamic performance. Higher viscosity and speed both increase the oil film pressure.",
+    "explanationLine": 690
+  },
+  {
+    "id": "u8-L2-Q4",
+    "type": "multiple-choice",
+    "question": "A journal bearing in a pump shows intermittent high temps and metal contact noise only at startup. What is the cause?",
+    "options": [
+      "Bearing clearance too large, causing rattle at all speeds",
+      "At low startup speed, bearing operates in boundary/mixed lubrication",
+      "Lubricant viscosity too high, causing overheat from poor flow",
+      "Shaft misalignment contacts bearing only during startup"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "This is a classic Stribeck curve problem. Hydrodynamic bearings need shaft rotation to drag lubricant into the wedge and build pressure. At startup speeds, the oil film hasn\\",
+    "explanationLine": 704
+  },
+  {
+    "id": "u8-L2c-Q5",
+    "type": "multiple-choice",
+    "question": "What happens to the minimum oil film thickness in a journal bearing if you double the shaft speed?",
+    "options": [
+      "Film thickness stays the same",
+      "Film thickness approximately doubles",
+      "Film thickness increases (but not linearly)",
+      "Film thickness decreases because of heat"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Higher speed increases the Sommerfeld number, which reduces eccentricity and increases film thickness. The relationship is not linear because the Sommerfeld number charts are nonlinear.",
+    "explanationLine": 735
+  },
+  {
+    "id": "u8-L2-Q15",
+    "type": "multiple-choice",
+    "question": "What is the Petroff equation used for?",
+    "options": [
+      "Calculating L10 bearing life",
+      "Estimating friction torque in a lightly loaded journal bearing",
+      "Determining the contact stress in rolling bearings",
+      "Selecting bearing clearance"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The Petroff equation estimates friction torque (and power loss) in a concentric (lightly loaded) journal bearing where the shaft is centered in the bearing.",
+    "explanationLine": 759
+  },
+  {
+    "id": "u8-L2-Q28",
+    "type": "true-false",
+    "question": "A bearing with a higher dynamic load rating C always lasts longer than one with a lower C, regardless of conditions.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Life also depends on the applied load P, lubrication, alignment, contamination, and temperature. A high-C bearing under poor conditions can fail faster than a lower-C bearing in ideal conditions.",
+    "explanationLine": 767
+  },
+  {
+    "id": "u8-L2-Q26",
+    "type": "multiple-choice",
+    "question": "What is the primary purpose of bearing preload in angular contact bearings?",
+    "options": [
+      "To increase the bearing temperature for better lubrication",
+      "To eliminate internal clearance and increase rigidity",
+      "To reduce the dynamic load rating",
+      "To make the bearing self-aligning"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Preload eliminates internal clearance, increases stiffness, and distributes load more evenly among the rolling elements. It\\",
+    "explanationLine": 781
+  },
+  {
+    "id": "u8-L3-Q1a",
+    "type": "true-false",
+    "question": "In a gear pair, power is conserved (minus friction losses).",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. P = T x omega stays constant through the gear mesh. If speed drops, torque increases proportionally.",
+    "explanationLine": 809
+  },
+  {
+    "id": "u8-L3-Q8",
+    "type": "multiple-choice",
+    "question": "A spur gear has a module of 4 mm and 25 teeth. What is the pitch circle diameter?",
+    "options": [
+      "50 mm",
+      "100 mm",
+      "150 mm",
+      "200 mm"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "D = m x Z = 4 x 25 = 100 mm. The module is the ratio of pitch diameter to number of teeth (m = D/Z).",
+    "explanationLine": 823
+  },
+  {
+    "id": "u8-L3-Q1",
+    "type": "multiple-choice",
+    "question": "A 20-tooth pinion drives an 80-tooth gear at 1200 RPM transmitting 10 kW. What is the torque on the gear?",
+    "options": [
+      "79.6 N*m",
+      "159.2 N*m",
+      "318.4 N*m",
+      "636.6 N*m"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Gear ratio = 80/20 = 4. Gear speed = 1200/4 = 300 RPM. Torque on pinion: T_p = P/omega = 10000/125.66 = 79.6 N*m. Gear torque = 79.6 x 4 = 318.4 N*m.",
+    "explanationLine": 837
+  },
+  {
+    "id": "u8-L3-Q5",
+    "type": "multiple-choice",
+    "question": "A 3-stage gearbox has ratios of 3:1, 4:1, and 2:1. If the input is 2400 RPM, what is the output speed?",
+    "options": [
+      "800 RPM",
+      "200 RPM",
+      "400 RPM",
+      "100 RPM"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Overall gear ratio = 3 x 4 x 2 = 24:1. Output speed = 2400/24 = 100 RPM.",
+    "explanationLine": 858
+  },
+  {
+    "id": "u8-L3-Q9",
+    "type": "true-false",
+    "question": "In a standard 20-degree pressure angle spur gear, the minimum number of teeth to avoid undercutting is 17.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Undercutting occurs when the dedendum circle extends below the base circle. For 20-degree pressure angle: Z_min = 2/sin^2(20) = 2/0.117 = 17.1, so 17 teeth minimum.",
+    "explanationLine": 866
+  },
+  {
+    "id": "u8-L3-Q10",
+    "type": "multiple-choice",
+    "question": "In a planetary gear set, sun = 20 teeth, ring = 80 teeth. Sun input at 1000 RPM, ring fixed. Carrier output speed?",
+    "options": [
+      "100 RPM",
+      "200 RPM",
+      "250 RPM",
+      "500 RPM"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Using the Willis equation with the ring fixed (N_R = 0): carrier speed N_C = N_S x Z_S / (Z_S + Z_R) = 1000 x 20 / (20 + 80) = 200 RPM.",
+    "explanationLine": 890
+  },
+  {
+    "id": "u8-L3-Q11",
+    "type": "multiple-choice",
+    "question": "What is the contact ratio in spur gearing, and why must it exceed 1.0?",
+    "options": [
+      "Ratio of tooth contact area to total tooth surface",
+      "Ratio of path of contact length to base pitch, ensures continuous meshing",
+      "Ratio of pinion speed to gear speed",
+      "Percentage of gear face width in contact"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The contact ratio equals the length of the path of contact divided by the base pitch. A value above 1.0 means at least one tooth pair is always in contact for smooth, continuous operation.",
+    "explanationLine": 904
+  },
+  {
+    "id": "u8-L3b-Q1a",
+    "type": "multiple-choice",
+    "question": "Which gear type has the simplest, straight teeth?",
+    "options": [],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Spur gears have straight teeth parallel to the shaft axis. They\\",
+    "explanationLine": 933
+  },
+  {
+    "id": "u8-L3-Q4",
+    "type": "multiple-choice",
+    "question": "When would you prefer helical gears over spur gears?",
+    "options": [
+      "Spur gears are always preferred",
+      "Helical gears are always preferred",
+      "Helical for quieter operation and higher load capacity, spur for simplicity",
+      "The only difference is noise level"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Helical gears engage gradually (smoother, quieter) and share load across more tooth length. But they create axial thrust and cost more to manufacture.",
+    "explanationLine": 947
+  },
+  {
+    "id": "u8-L3-Q3",
+    "type": "true-false",
+    "question": "Self-locking worm gears are inherently less efficient than non-self-locking worm gears.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Self-locking requires high friction (low lead angle), which means more energy is lost to heat. This is a fundamental trade-off: safety vs. efficiency.",
+    "explanationLine": 965
+  },
+  {
+    "id": "u8-L3-Q12",
+    "type": "multiple-choice",
+    "question": "What are the three force components on a helical gear tooth?",
+    "options": [
+      "Only tangential and radial, same as spur",
+      "Tangential, radial, and axial (from the helix angle)",
+      "Tangential, gravitational, and centrifugal",
+      "Tangential, radial, and frictional"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The helix angle creates an additional axial force component that spur gears don\\",
+    "explanationLine": 986
+  },
+  {
+    "id": "u8-L3-Q13",
+    "type": "true-false",
+    "question": "Bevel gears can connect shafts at any angle, not just 90 degrees.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Bevel gears transmit power between intersecting shafts at various angles. 90-degree configurations are most common, but other angles work too.",
+    "explanationLine": 994
+  },
+  {
+    "id": "u8-L3-Q15",
+    "type": "multiple-choice",
+    "question": "A worm gear set has a single-start worm and a 40-tooth worm wheel. What is the gear ratio?",
+    "options": [
+      "10:1",
+      "20:1",
+      "40:1",
+      "80:1"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Worm gear ratio = number of worm wheel teeth / number of worm starts = 40/1 = 40:1. This is why worm gears achieve very high ratios in a compact package.",
+    "explanationLine": 1018
+  },
+  {
+    "id": "u8-L3c-Q1a",
+    "type": "multiple-choice",
+    "question": "AGMA gear design checks two independent failure modes. Which are they?",
+    "options": [
+      "Bending fatigue at root and surface pitting from contact stress",
+      "Tooth shear and bearing overload",
+      "Abrasive wear and corrosion",
+      "Thermal distortion and vibration"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "AGMA requires checking bending stress at the tooth root (Lewis/AGMA method) and contact stress on the tooth flank (Hertzian/AGMA method). Both must be within allowable limits.",
+    "explanationLine": 1061
+  },
+  {
+    "id": "u8-L3-Q7",
+    "type": "multiple-choice",
+    "question": "What does the Lewis form factor depend on?",
+    "options": [
+      "Only material and hardness",
+      "Only module and face width",
+      "Number of teeth, which determines tooth geometry at the root",
+      "Rotational speed and power transmitted"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The Lewis form factor Y depends on number of teeth because the tooth profile geometry (root fillet shape and thickness) changes with tooth count.",
+    "explanationLine": 1075
+  },
+  {
+    "id": "u8-L3-Q2",
+    "type": "multiple-choice",
+    "question": "Spur gear teeth show pitting on the flanks after 2 years. What is the root cause?",
+    "options": [
+      "Teeth are too thin, pitting is from bending stress",
+      "Surface contact fatigue from Hertzian stress exceeding the allowable limit",
+      "Abrasive wear from contaminated oil",
+      "Pitting always occurs during break-in"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Pitting is surface fatigue driven by cyclic Hertzian contact stress. Subsurface cracks initiate at the depth of maximum shear stress and propagate to the surface.",
+    "explanationLine": 1089
+  },
+  {
+    "id": "u8-L3-Q14",
+    "type": "multiple-choice",
+    "question": "In AGMA methodology, the two primary failure modes checked are:",
+    "options": [
+      "Abrasive wear and corrosion",
+      "Tooth shear and bearing overload",
+      "Bending fatigue at root (Lewis/AGMA) and surface pitting (Hertzian/AGMA)",
+      "Thermal distortion and vibration resonance"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "AGMA gear rating requires checking bending stress at the tooth root and contact stress on the flank. Both must be below their respective allowable stresses.",
+    "explanationLine": 1110
+  },
+  {
+    "id": "u8-L3-Q18",
+    "type": "multiple-choice",
+    "question": "Increasing the face width of a gear by 50% affects bending stress and contact stress differently. How?",
+    "options": [
+      "Both decrease by 50%",
+      "Bending decreases by 33%, contact decreases by 18%",
+      "Both decrease by 33%",
+      "Only contact stress changes"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Bending stress is inversely proportional to face width (sigma ~ 1/b, so 1/1.5 = 33% reduction). Contact stress is inversely proportional to sqrt(b) (1/sqrt(1.5) = 18% reduction).",
+    "explanationLine": 1133
+  },
+  {
+    "id": "u8-L3-Q19",
+    "type": "true-false",
+    "question": "Case-hardened gears are stronger in both bending and surface contact than through-hardened gears of the same grade.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Case hardening gives a hard, wear-resistant surface (high contact strength) with a tough core (good bending strength). Through-hardening compromises between surface and core properties.",
+    "explanationLine": 1141
+  },
+  {
+    "id": "u8-L3-Q21",
+    "type": "multiple-choice",
+    "question": "What is the typical efficiency of a single-stage spur gear set?",
+    "options": [
+      "75 to 80%",
+      "85 to 90%",
+      "95 to 99%",
+      "99.5 to 99.9%"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Spur and helical gears are very efficient, typically 95 to 99% per stage. Worm gears are much lower (40 to 90% depending on lead angle).",
+    "explanationLine": 1155
+  },
+  {
+    "id": "u8-L4-Q1a",
+    "type": "true-false",
+    "question": "A bolt creates clamping force by being pre-stretched during tightening.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. When you tighten a bolt, you stretch it slightly. That stretch creates the preload force that clamps the joint members in compression.",
+    "explanationLine": 1193
+  },
+  {
+    "id": "u8-L4-Q3",
+    "type": "true-false",
+    "question": "A bolted joint should always be designed so the bolt is loaded in shear rather than tension.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Properly designed bolted joints usually load the bolt in tension (clamping). The preload creates friction between surfaces that resists shear loads.",
+    "explanationLine": 1210
+  },
+  {
+    "id": "u8-L4-Q1",
+    "type": "multiple-choice",
+    "question": "Bolt stiffness k_b = 400 kN/mm, member stiffness k_c = 1200 kN/mm. External load = 20 kN. How much additional load does the bolt carry?",
+    "options": [
+      "15 kN",
+      "10 kN",
+      "5 kN",
+      "20 kN"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Stiffness ratio C = k_b/(k_b + k_c) = 400/(400 + 1200) = 0.25. Additional bolt load = C x F_ext = 0.25 x 20 = 5 kN. The stiff members absorb most of the external load.",
+    "explanationLine": 1241
+  },
+  {
+    "id": "u8-L4-Q2",
+    "type": "multiple-choice",
+    "question": "A torque wrench was calibrated correctly, but bolt preloads vary by +/-30%. What is the most likely cause?",
+    "options": [
+      "The torque wrench is inaccurate despite calibration",
+      "Friction variation in threads and under the bolt head",
+      "The bolts are different grades",
+      "The flange is warped"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Torque-controlled tightening depends heavily on thread and underhead friction. Only 10 to 15% of applied torque actually stretches the bolt. Friction variation is the main source of preload scatter.",
+    "explanationLine": 1255
+  },
+  {
+    "id": "u8-L4-Q4",
+    "type": "multiple-choice",
+    "question": "An M12 bolt, class 8.8, has a tensile stress area of 84.3 mm^2. What is the maximum recommended preload (75% of proof)?",
+    "options": [
+      "25.3 kN",
+      "37.9 kN",
+      "50.6 kN",
+      "67.4 kN"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Proof strength for 8.8 = 600 MPa. Proof load = 600 x 84.3 = 50,580 N = 50.6 kN. Recommended preload = 0.75 x 50.6 = 37.9 kN.",
+    "explanationLine": 1269
+  },
+  {
+    "id": "u8-L4b-Q1a",
+    "type": "true-false",
+    "question": "In a bolted joint, stiffer clamped members mean the bolt carries a smaller fraction of external load.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. C = k_b/(k_b + k_c). As k_c increases, C decreases, so the bolt carries a smaller fraction of the external tensile load.",
+    "explanationLine": 1307
+  },
+  {
+    "id": "u8-L4-Q7",
+    "type": "multiple-choice",
+    "question": "Preload = 40 kN, stiffness ratio C = 0.25. At what external load does the joint separate?",
+    "options": [
+      "40 kN",
+      "53.3 kN",
+      "80 kN",
+      "160 kN"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Joint separation occurs when F_ext = F_i/(1 - C) = 40/(1 - 0.25) = 40/0.75 = 53.3 kN. At this point, the clamping force drops to zero.",
+    "explanationLine": 1321
+  },
+  {
+    "id": "u8-L4-Q9",
+    "type": "multiple-choice",
+    "question": "Why do bolted joints under cyclic loading benefit from high preload?",
+    "options": [
+      "High preload makes the bolt stronger",
+      "High preload reduces the alternating stress the bolt experiences",
+      "High preload prevents the bolt from rotating",
+      "High preload is only needed for static loads"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "With high preload and stiff members, the bolt sees only a small fraction of the cyclic external load. This keeps the alternating stress low, which is what drives fatigue failure.",
+    "explanationLine": 1335
+  },
+  {
+    "id": "u8-L4-Q10",
+    "type": "true-false",
+    "question": "Adding a gasket to a bolted joint increases the fraction of external load carried by the bolt.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Gaskets are soft, reducing k_c dramatically. This increases C = k_b/(k_b + k_c), so the bolt carries a larger fraction of external load.",
+    "explanationLine": 1350
+  },
+  {
+    "id": "u8-L4-Q5",
+    "type": "multiple-choice",
+    "question": "When is adhesive bonding a better choice than mechanical fastening?",
+    "options": [
+      "Adhesive is always inferior to mechanical fastening",
+      "Design for shear loading, maximize bond area, avoid peel",
+      "Just apply adhesive and clamp, modern adhesives handle everything",
+      "Adhesive cannot join dissimilar metals"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Adhesive joints excel in shear but are weak in peel and cleavage. Maximize bond area, use lap joints, and control surface preparation.",
+    "explanationLine": 1373
+  },
+  {
+    "id": "u8-L4-Q12",
+    "type": "multiple-choice",
+    "question": "A fillet weld connects two plates in a lap joint. The weld fails through which cross-section?",
+    "options": [
+      "Through the weld toe on the base plate",
+      "Through the throat of the weld (45-degree plane)",
+      "Through the root of the weld",
+      "Through the thinner base plate"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Fillet welds fail through the throat, which is the minimum cross-section at 45 degrees through the weld. Throat = 0.707 x leg size.",
+    "explanationLine": 1387
+  },
+  {
+    "id": "u8-L4-Q15",
+    "type": "multiple-choice",
+    "question": "What is the primary purpose of a lock washer?",
+    "options": [
+      "To increase the bolt preload",
+      "To distribute load over a larger area",
+      "To resist loosening from vibration",
+      "To seal the joint against fluids"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Lock washers (split, toothed, or Nordlock) resist bolt loosening from vibration and dynamic loads. They don\\",
+    "explanationLine": 1411
+  },
+  {
+    "id": "u8-L4c-Q1a",
+    "type": "multiple-choice",
+    "question": "Which weld type provides the strongest joint?",
+    "options": [],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A full-penetration butt weld fuses the entire cross-section, making it as strong as the base metal (with proper technique and filler).",
+    "explanationLine": 1440
+  },
+  {
+    "id": "u8-L4-Q20",
+    "type": "multiple-choice",
+    "question": "A fillet weld has a leg size of 8 mm. What is the throat dimension?",
+    "options": [
+      "4 mm",
+      "5.66 mm",
+      "8 mm",
+      "11.3 mm"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Throat = 0.707 x leg = 0.707 x 8 = 5.66 mm. The throat is the shortest distance through the weld cross-section.",
+    "explanationLine": 1454
+  },
+  {
+    "id": "u8-L4-Q21",
+    "type": "true-false",
+    "question": "Welded joints under fatigue loading should avoid sharp notches and undercuts at the weld toe.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The weld toe is a stress concentration site. Sharp notches and undercuts drastically reduce fatigue life. Proper weld profile and toe grinding improve fatigue performance.",
+    "explanationLine": 1462
+  },
+  {
+    "id": "u8-L4-Q22",
+    "type": "multiple-choice",
+    "question": "What welding defect is most dangerous for fatigue life?",
+    "options": [
+      "Slight porosity in the weld interior",
+      "Minor spatter on the base plate surface",
+      "Lack of fusion at the weld root",
+      "Slight discoloration from oxidation"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Lack of fusion creates a crack-like defect at the weld root. Under cyclic loading, this acts as a pre-existing crack and dramatically reduces fatigue life.",
+    "explanationLine": 1493
+  },
+  {
+    "id": "u8-L4-Q24",
+    "type": "true-false",
+    "question": "Riveted joints are still commonly used in new steel building construction because they are stronger than bolted joints.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Rivets have been largely replaced by high-strength bolts in structural steel. Bolts are easier to install, inspect, and can be tightened to precise preloads.",
+    "explanationLine": 1511
+  },
+  {
+    "id": "u8-L4-Q25",
+    "type": "multiple-choice",
+    "question": "What is the main advantage of a double-lap joint over a single-lap joint?",
+    "options": [
+      "Uses less material",
+      "Eliminates the bending moment from eccentric loading",
+      "Easier to manufacture",
+      "Requires fewer fasteners"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A single-lap joint creates a bending moment because the load path is offset. A double-lap joint is symmetric, eliminating this eccentricity.",
+    "explanationLine": 1525
+  },
+  {
+    "id": "u8-L5-Q1a",
+    "type": "true-false",
+    "question": "A stiffer spring (higher k) deflects less under the same load.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. F = k*x, so for a given force F, higher k means smaller deflection x.",
+    "explanationLine": 1562
+  },
+  {
+    "id": "u8-L5-Q1",
+    "type": "multiple-choice",
+    "question": "Which factor has the greatest effect on spring rate?",
+    "options": [
+      "Number of active coils (Na)",
+      "Wire diameter (d)",
+      "Mean coil diameter (D)",
+      "Free length"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Wire diameter appears as d^4 in the spring rate formula, so it has the strongest effect. Doubling d increases k by 16 times.",
+    "explanationLine": 1576
+  },
+  {
+    "id": "u8-L5-Q3",
+    "type": "true-false",
+    "question": "The Wahl factor is always greater than 1.0 because it accounts for curvature effects.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The inner surface of a coil has higher stress due to curvature. The Wahl factor is always > 1.0 to correct for this, typically 1.1 to 1.4.",
+    "explanationLine": 1600
+  },
+  {
+    "id": "u8-L5-Q4",
+    "type": "multiple-choice",
+    "question": "A spring has d = 3 mm, D = 24 mm. What is the spring index C?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "12"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "C = D/d = 24/3 = 8. This is in the practical range of 4 to 12.",
+    "explanationLine": 1624
+  },
+  {
+    "id": "u8-L5-Q5",
+    "type": "multiple-choice",
+    "question": "What happens if the spring index C is too low (e.g., C = 3)?",
+    "options": [
+      "The spring becomes too soft",
+      "The spring is difficult to manufacture and has high residual stress",
+      "The spring rate decreases dramatically",
+      "Nothing, any C value works"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Low C means the coil is wound very tightly. This makes manufacturing difficult, increases residual stresses, and raises the Wahl correction factor significantly.",
+    "explanationLine": 1638
+  },
+  {
+    "id": "u8-L5-Q7",
+    "type": "multiple-choice",
+    "question": "Two identical springs in parallel have a combined spring rate of:",
+    "options": [
+      "k/2",
+      "k",
+      "2k",
+      "k^2"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Springs in parallel add: k_total = k1 + k2 = 2k. Both springs share the load and deflect the same amount.",
+    "explanationLine": 1652
+  },
+  {
+    "id": "u8-L5b-Q1a",
+    "type": "true-false",
+    "question": "Shot peening a spring wire improves its fatigue life.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. Shot peening creates a compressive residual stress layer on the surface, which opposes the tensile stresses that drive fatigue cracks.",
+    "explanationLine": 1690
+  },
+  {
+    "id": "u8-L5-Q9",
+    "type": "true-false",
+    "question": "Spring surge occurs when the operating frequency matches a natural frequency of the spring coils.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Spring surge is resonance. The coils vibrate as a distributed mass-spring system, and if the operating frequency hits a natural frequency, amplitudes spike and can cause failure.",
+    "explanationLine": 1698
+  },
+  {
+    "id": "u8-L5-Q10",
+    "type": "multiple-choice",
+    "question": "A compression spring buckles when its free length exceeds about how many times its mean coil diameter?",
+    "options": [
+      "2 times",
+      "4 times",
+      "8 times",
+      "12 times"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A general guideline is that helical compression springs with free length > 4 x D are susceptible to buckling, especially if the ends are not well-guided.",
+    "explanationLine": 1712
+  },
+  {
+    "id": "u8-L5-Q14",
+    "type": "multiple-choice",
+    "question": "Which seal type is best for a centrifugal pump shaft running at 3600 RPM?",
+    "options": [
+      "O-ring in a groove",
+      "Felt ring seal",
+      "Mechanical (face) seal",
+      "Labyrinth seal"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Mechanical face seals are the standard for centrifugal pumps. Two precision-lapped surfaces maintain a thin fluid film under pressure and high speed.",
+    "explanationLine": 1733
+  },
+  {
+    "id": "u8-L5-Q16",
+    "type": "multiple-choice",
+    "question": "What does the PV limit represent for a seal?",
+    "options": [
+      "Pressure times Volume flow rate",
+      "Pressure times sliding Velocity",
+      "Power times Vibration frequency",
+      "Preload times Viscosity"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "PV = pressure x sliding velocity. It\\",
+    "explanationLine": 1757
+  },
+  {
+    "id": "u8-L5-Q17",
+    "type": "true-false",
+    "question": "An O-ring seal works by being squeezed between surfaces, and the system pressure pushes it harder against the sealing surface.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "O-rings work by initial squeeze (compression) plus pressure energization. As system pressure rises, the O-ring is pushed harder against the groove walls, improving the seal.",
+    "explanationLine": 1765
+  },
+  {
+    "id": "u8-L5-Q20",
+    "type": "multiple-choice",
+    "question": "What is the most common cause of premature lip seal failure?",
+    "options": [
+      "Wrong material selection",
+      "Shaft surface roughness outside specification",
+      "Incorrect lubricant type",
+      "Over-tightening the seal housing"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Lip seals ride on the shaft surface. If it\\",
+    "explanationLine": 1788
+  },
+  {
+    "id": "u8-L5c-Q1a",
+    "type": "multiple-choice",
+    "question": "A spring has 10 total coils with squared and ground ends. How many active coils?",
+    "options": [],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Squared and ground ends have 2 inactive coils (one at each end for flat seating). So Na = N - 2 = 10 - 2 = 8 active coils.",
+    "explanationLine": 1817
+  },
+  {
+    "id": "u8-L5-Q22",
+    "type": "multiple-choice",
+    "question": "Which spring material is best for high-temperature applications (above 250 C)?",
+    "options": [
+      "Music wire (ASTM A228)",
+      "Chrome-vanadium (ASTM A231)",
+      "Inconel X-750",
+      "Stainless steel 302"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Inconel X-750 is a nickel-based superalloy that maintains its spring properties above 250 C. Standard spring steels lose significant strength above 150 to 200 C.",
+    "explanationLine": 1831
+  },
+  {
+    "id": "u8-L5-Q23",
+    "type": "true-false",
+    "question": "Music wire (ASTM A228) has the highest tensile strength of common spring materials.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Music wire has the highest tensile strength among common spring steels, making it the go-to choice for small, high-stress springs at room temperature.",
+    "explanationLine": 1839
+  },
+  {
+    "id": "u8-L5-Q25",
+    "type": "multiple-choice",
+    "question": "A spring in a valve must maintain force over millions of cycles. Which is most critical?",
+    "options": [
+      "Free length tolerance",
+      "Fatigue life at the working stress range",
+      "Spring color coating",
+      "Wire surface finish appearance"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For millions of cycles, fatigue life is the primary concern. The working stress range must be below the endurance limit, and shot peening is typically required.",
+    "explanationLine": 1870
+  },
+  {
+    "id": "u8-L5-Q27",
+    "type": "multiple-choice",
+    "question": "What is the purpose of \"presetting\" (cold setting) a compression spring?",
+    "options": [
+      "To increase the spring rate",
+      "To remove permanent set so the spring won\\",
+      "To improve the surface finish",
+      "To change the wire diameter"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Presetting compresses the spring beyond its intended working deflection. This yields the high-stress areas slightly, so they don\\",
+    "explanationLine": 1894
+  },
+  {
+    "id": "u8-L5-Q29",
+    "type": "true-false",
+    "question": "Extension springs are more prone to fatigue failure than compression springs because of stress concentration at the hooks.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Extension spring hooks create stress concentrations where the wire bends sharply. This makes them more susceptible to fatigue failure than compression springs with flat, ground ends.",
+    "explanationLine": 1902
+  },
+  {
+    "id": "u8-L5-Q30",
+    "type": "multiple-choice",
+    "question": "A mechanical face seal is leaking excessively. The seal faces show deep grooves. Most likely cause?",
+    "options": [
+      "Normal wear from long service life",
+      "Abrasive particles in the sealed fluid",
+      "Incorrect spring tension",
+      "Thermal expansion of the seal housing"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Deep grooves on mechanical seal faces are caused by abrasive particles (sand, dirt, scale) in the fluid. Clean fluid or add filtration upstream of the seal.",
+    "explanationLine": 1916
+  }
+]

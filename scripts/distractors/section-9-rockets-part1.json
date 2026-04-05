@@ -1,0 +1,284 @@
+{
+  "sp-sec9-u1-L1-Q1": {
+    "1": "This is true because Newton's first law guarantees that without external forces like friction, objects in motion continue moving indefinitely."
+  },
+  "sp-sec9-u1-L1-Q2": {
+    "0": "Gravity is a force that pulls objects together, not the property that resists changes in motion.",
+    "2": "Friction is a force that opposes motion, not the tendency of objects to resist changes in their state.",
+    "3": "Momentum is the product of mass and velocity, not the resistance to changes in motion."
+  },
+  "sp-sec9-u1-L1-Q3": {
+    "0": "In the vacuum of space there is no friction to slow a spacecraft, so engines are not needed to maintain speed."
+  },
+  "sp-sec9-u1-L1-Q5": {
+    "0": "Gravity very much exists in orbit; the ISS experiences about 90% of surface gravity but is in free fall.",
+    "1": "The ISS has no special mechanism to create weightlessness; the effect comes from continuous free fall.",
+    "3": "The ISS does not spin to cancel gravity; it orbits Earth in free fall along with everything inside it."
+  },
+  "sp-sec9-u1-L2-Q1": {
+    "1": "This is true because F = ma directly shows that doubling force with constant mass doubles acceleration."
+  },
+  "sp-sec9-u1-L2-Q2": {
+    "0": "Constant thrust with decreasing mass means acceleration increases, not stays the same.",
+    "1": "Acceleration increases as mass decreases because F = ma means less mass yields more acceleration for the same force.",
+    "3": "The rocket continues moving as long as thrust is applied; losing fuel mass does not stop it."
+  },
+  "sp-sec9-u1-L2-Q5": {
+    "0": "Heavier objects accelerate less with the same force, so Rocket A would be slower, not faster.",
+    "1": "With the same force and different masses, the lighter rocket accelerates more, so they are not equal.",
+    "3": "Both rockets can move without gravity; thrust creates acceleration regardless of gravitational environment."
+  },
+  "sp-sec9-u1-L2-Q6": {
+    "1": "Mass stays the same regardless of gravitational environment; only weight changes between Earth and the Moon."
+  },
+  "sp-sec9-u1-L2-Q7": {
+    "1": "Adding more fuel tanks increases mass, which would decrease acceleration rather than increase it.",
+    "2": "A gravity assist requires precise orbital mechanics and cannot simply be aimed at the Sun from the launch pad.",
+    "3": "Atmospheric pressure has negligible impact on rocket acceleration compared to reducing onboard mass."
+  },
+  "sp-sec9-u1-L3-Q1": {
+    "1": "This is true because Newton's third law states the exhaust pushes backward and the rocket is pushed forward with equal force."
+  },
+  "sp-sec9-u1-L3-Q2": {
+    "0": "Air in the room plays no role; the balloon moves because escaping air creates a reaction force in the opposite direction.",
+    "2": "Gravity pulls the balloon down uniformly; the erratic motion is caused by the escaping air jet, not gravity.",
+    "3": "Static electricity does not cause balloons to fly around; the thrust comes from air escaping the opening."
+  },
+  "sp-sec9-u1-L3-Q3": {
+    "0": "Rockets push against their own exhaust gas, not surrounding air, so they work perfectly in a vacuum."
+  },
+  "sp-sec9-u1-L3-Q6": {
+    "0": "Action and reaction forces are always equal, so 500 N would violate Newton's third law.",
+    "2": "The reaction force is exactly equal to the action force, not double; 2,000 N would violate Newton's third law.",
+    "3": "The thrust force is always equal to the exhaust force regardless of the rocket's mass; mass only affects acceleration."
+  },
+  "sp-sec9-u2-L1-Q1": {
+    "1": "This is true because thrust is defined as the forward force created by expelling exhaust in the opposite direction."
+  },
+  "sp-sec9-u2-L1-Q2": {
+    "0": "Air resistance opposes motion but is not what thrust must overcome for liftoff; gravity is the primary force.",
+    "1": "The launch pad does not exert a force the rocket must overcome; it is Earth's gravitational pull on the rocket.",
+    "3": "Earth's rotation actually helps rockets launched eastward and is not a force that must be overcome for liftoff."
+  },
+  "sp-sec9-u2-L1-Q3": {
+    "0": "A ratio of 0.8 means gravity is stronger than thrust, so the rocket cannot lift off the ground."
+  },
+  "sp-sec9-u2-L1-Q5": {
+    "0": "35 / 28 = 1.25, not 0.8; a ratio below 1 would mean the rocket could not lift off.",
+    "1": "35 / 28 = 1.25, not 1.0; a ratio of exactly 1 would mean thrust just equals weight with no upward acceleration.",
+    "3": "35 / 28 = 1.25, not 3.5; dividing correctly gives 1.25."
+  },
+  "sp-sec9-u2-L1-Q6": {
+    "0": "Paint color has no meaningful effect on rocket thrust or engine performance.",
+    "1": "Launching from higher altitude slightly reduces air resistance but does not directly increase thrust.",
+    "3": "Fewer engines would decrease total thrust, not increase it."
+  },
+  "sp-sec9-u2-L2-Q1": {
+    "1": "This is true because the payload is the cargo delivered to space, sitting at the top of the rocket."
+  },
+  "sp-sec9-u2-L2-Q3": {
+    "0": "25% fuel would be far too little propellant to reach orbit given the enormous energy requirements.",
+    "1": "50% fuel is still insufficient; the tyranny of the rocket equation demands much more propellant.",
+    "2": "70% is closer but still underestimates the typical 85-90% fuel fraction needed to reach orbit."
+  },
+  "sp-sec9-u2-L2-Q6": {
+    "0": "Noise reduction is not the purpose of the nozzle shape; it is designed to maximize exhaust velocity.",
+    "2": "While nozzles do need cooling, the bell shape is specifically for accelerating exhaust gas, not for cooling.",
+    "3": "Nozzles do not filter exhaust; their converging-diverging shape accelerates gas to supersonic speeds for maximum thrust."
+  },
+  "sp-sec9-u2-L3-Q1": {
+    "1": "This is true because discarding empty fuel tanks reduces dead weight, allowing remaining fuel to be used more efficiently."
+  },
+  "sp-sec9-u2-L3-Q2": {
+    "0": "Carrying empty tanks wastes fuel on dead weight, which is the main inefficiency of single-stage designs.",
+    "1": "Single-stage rockets can use multiple fuel types; the limitation is carrying empty structure to orbit.",
+    "2": "Engine size is not the issue; the problem is carrying empty fuel tanks all the way to orbit.",
+    "3": "Single-stage rockets can fly above the atmosphere, but they are less efficient due to carrying dead weight."
+  },
+  "sp-sec9-u2-L3-Q5": {
+    "0": "Saturn V was far too complex for a single stage; one stage could not carry enough fuel for a Moon mission.",
+    "1": "Two stages would not have provided enough delta-v for the complex Earth-orbit-to-Moon trajectory.",
+    "3": "Five stages would add unnecessary complexity and weight; three was the optimal design choice."
+  },
+  "sp-sec9-u2-L3-Q7": {
+    "1": "Even though the satellite is light, a high orbit requires significant delta-v that benefits from staging efficiency.",
+    "2": "Five stages would add excessive complexity with diminishing returns; two stages is more practical.",
+    "3": "Simply adding fuel without staging means carrying heavy empty tanks, which wastes propellant."
+  },
+  "sp-sec9-u3-L1-Q1": {
+    "1": "This is true because gravity continuously pulls the satellite toward Earth while its sideways speed keeps it from hitting the surface."
+  },
+  "sp-sec9-u3-L1-Q2": {
+    "0": "Gravity reaches far into space; at ISS altitude (400 km), gravity is still about 90% of surface strength.",
+    "1": "The ISS only fires engines occasionally for small adjustments; it maintains orbit through its sideways velocity.",
+    "3": "There is virtually no atmosphere at ISS altitude to provide any support."
+  },
+  "sp-sec9-u3-L1-Q4": {
+    "0": "Engine thrust is not needed to maintain an orbit; satellites coast without engines once in orbit.",
+    "2": "Magnetic fields and solar wind have negligible effects on satellite orbits compared to gravity.",
+    "3": "Fuel and computers help reach orbit but do not maintain it; gravity and velocity do."
+  },
+  "sp-sec9-u3-L1-Q5": {
+    "0": "Higher orbits have weaker gravity and longer paths, so satellites there move slower, not faster."
+  },
+  "sp-sec9-u3-L2-Q1": {
+    "1": "This is true because LEO is defined as the orbital region from 200 to 2,000 km altitude above Earth."
+  },
+  "sp-sec9-u3-L2-Q3": {
+    "0": "All orbiting satellites are technically in free fall and require no fuel to stay in orbit.",
+    "2": "Geostationary satellites are actually the slowest orbital satellites; LEO satellites move much faster.",
+    "3": "GEO at 35,786 km is far from Earth, not close; LEO satellites are the closest."
+  },
+  "sp-sec9-u3-L2-Q6": {
+    "0": "Being closer to the Sun has no relevance to Earth observation; orbit type matters for surface coverage.",
+    "2": "Polar orbits are not inherently faster; their advantage is covering all latitudes as Earth rotates beneath.",
+    "3": "No orbit can see in the dark without special instruments; polar orbits are useful for their complete surface coverage."
+  },
+  "sp-sec9-u3-L3-Q1": {
+    "0": "Kepler proved that orbits are ellipses, not perfect circles, even if some are nearly circular."
+  },
+  "sp-sec9-u3-L3-Q3": {
+    "0": "Planets move slowest at their farthest point from the Sun, not fastest, due to conservation of angular momentum.",
+    "2": "Orbital speed varies continuously; it is never constant throughout an elliptical orbit.",
+    "3": "There is no special speed at the midpoint; speed increases smoothly as the planet approaches the Sun."
+  },
+  "sp-sec9-u3-L3-Q4": {
+    "1": "This is true because Earth's closest approach to the Sun occurs in early January, and Kepler's law says planets move faster when closer."
+  },
+  "sp-sec9-u3-L3-Q5": {
+    "0": "Twice the distance does not mean twice the period; Kepler's third law involves a cube-square relationship.",
+    "1": "Four times as long would apply if the period scaled with the square of distance, but it scales with the 1.5 power.",
+    "3": "Half as long would mean closer planets orbit slower, which is the opposite of what Kepler's law states."
+  },
+  "sp-sec9-u4-L1-Q1": {
+    "0": "The first law explains coasting in space, not the mechanism of thrust generation.",
+    "1": "The second law relates force, mass, and acceleration but does not explain how thrust is created.",
+    "3": "The law of gravitation describes attraction between masses, not the action-reaction principle behind thrust."
+  },
+  "sp-sec9-u4-L1-Q2": {
+    "0": "Rockets push against their own exhaust, not surrounding air, so they generate thrust perfectly in vacuum."
+  },
+  "sp-sec9-u4-L1-Q5": {
+    "0": "With decreasing mass and constant force, F = ma shows acceleration must increase, not stay the same.",
+    "1": "Acceleration increases as fuel burns because less mass is being pushed by the same thrust.",
+    "3": "Acceleration direction remains the same as thrust direction; it does not reverse."
+  },
+  "sp-sec9-u4-L1-Q7": {
+    "1": "A ratio of 0.95 means gravity exceeds thrust, so launching would fail regardless of how close it seems.",
+    "2": "Adding fuel increases total weight along with potential thrust, and the ratio may not improve sufficiently.",
+    "3": "Wind provides negligible force compared to rocket thrust and cannot compensate for insufficient thrust-to-weight ratio."
+  },
+  "sp-sec9-u4-L2-Q1": {
+    "0": "While staging can improve aerodynamics slightly, its primary purpose is shedding empty mass.",
+    "2": "Payload protection is handled by the fairing, not by staging.",
+    "3": "Staging does not create more engine power; it removes dead weight so existing power is used more efficiently."
+  },
+  "sp-sec9-u4-L2-Q2": {
+    "1": "This is true because GEO satellites orbit at exactly 35,786 km where the orbital period matches Earth's 24-hour rotation."
+  },
+  "sp-sec9-u4-L2-Q5": {
+    "0": "The midpoint has no special significance for orbital speed; speed varies continuously based on distance from the Sun.",
+    "1": "Planets move slowest at their farthest point from the Sun, the opposite of what this option states.",
+    "2": "Circular orbits have constant speed, but Kepler's second law applies to elliptical orbits where speed varies with distance."
+  },
+  "sp-sec9-u4-L2-Q7": {
+    "0": "Without staging, the extra dead weight would slow the rocket; it would not reach the Moon faster.",
+    "1": "Carrying empty tanks is the opposite of efficient; staging eliminates that dead weight.",
+    "3": "The massive weight of empty tanks would prevent the rocket from reaching orbital velocity."
+  },
+  "sp-sec9-u5-L1-Q1": {
+    "1": "This is true because at approximately 28,000 km/h, a spacecraft achieves the balance between gravity and sideways velocity needed for LEO."
+  },
+  "sp-sec9-u5-L1-Q2": {
+    "1": "8 km/s (28,000 km/h) is orbital velocity for LEO, not escape velocity; you would remain in orbit, not escape.",
+    "2": "3 km/s is far too slow to escape Earth's gravity; it would not even achieve a stable orbit.",
+    "3": "30 km/s greatly exceeds Earth's escape velocity; that speed would send you far beyond Earth rapidly."
+  },
+  "sp-sec9-u5-L1-Q3": {
+    "0": "Orbital velocity is about 7.8 km/s, which is less than the 11.2 km/s escape velocity, so the craft is still gravitationally bound."
+  },
+  "sp-sec9-u5-L1-Q5": {
+    "0": "Orbital velocity keeps you circling Earth; to travel to Mars, you must break free of Earth's gravity entirely.",
+    "2": "Half of orbital velocity is far too slow even to maintain orbit, let alone reach another planet.",
+    "3": "The speed of light is neither necessary nor achievable with current technology for interplanetary travel."
+  },
+  "sp-sec9-u5-L2-Q1": {
+    "1": "This is true because delta-v represents the total capacity for speed changes, which determines what destinations and maneuvers are possible."
+  },
+  "sp-sec9-u5-L2-Q2": {
+    "0": "While producing delta-v does cost money, the analogy refers to budgeting velocity changes like spending currency.",
+    "2": "Delta-v is measured in meters per second, not dollars; it is a physics quantity, not a monetary one.",
+    "3": "Space agencies do not trade delta-v between missions; each mission has its own independent fuel budget."
+  },
+  "sp-sec9-u5-L2-Q4": {
+    "0": "The size of the launch pad has no effect on how much velocity change a rocket can achieve.",
+    "2": "Paint color has zero impact on rocket performance or available delta-v.",
+    "3": "Rocket spin rate does not determine total velocity change; only fuel and exhaust velocity matter."
+  },
+  "sp-sec9-u5-L2-Q6": {
+    "0": "Due to the rocket equation, each extra kilogram of payload requires many more kilograms of fuel because fuel must also lift itself."
+  },
+  "sp-sec9-u5-L2-Q7": {
+    "1": "Communication is important, but adding 50 kg worsens the already tight delta-v budget by increasing total mass.",
+    "2": "Adding more fuel also adds mass, which partly cancels the benefit due to the tyranny of the rocket equation.",
+    "3": "Delta-v depends directly on mass ratio, so reducing mass absolutely does increase available delta-v."
+  },
+  "sp-sec9-u5-L3-Q1": {
+    "0": "Rockets must tilt sideways during ascent to build the horizontal speed required for orbit."
+  },
+  "sp-sec9-u5-L3-Q2": {
+    "0": "The Sun's radiation has no bearing on rocket trajectory; the tilt is to build horizontal orbital velocity.",
+    "2": "Payload stress reduction is managed by throttling, not by the gravity turn maneuver.",
+    "3": "The tilt is a carefully planned maneuver called a gravity turn, not an uncontrolled fall."
+  },
+  "sp-sec9-u5-L3-Q5": {
+    "0": "Fuel savings are secondary; the primary reason for throttling at Max Q is to protect the rocket from structural failure.",
+    "2": "Passenger comfort is not the driving concern; structural integrity of the vehicle is the critical factor.",
+    "3": "Stage separation occurs much later in flight, not during the Max Q throttle-down period."
+  },
+  "sp-sec9-u5-L3-Q6": {
+    "1": "This is true because without circularization, the orbit would be elliptical and could dip back into the atmosphere."
+  },
+  "sp-sec9-u5-L3-Q7": {
+    "0": "Without enough horizontal speed, a spacecraft cannot maintain any orbit, slow or otherwise; it will fall back.",
+    "2": "Insufficient speed means the craft is still gravitationally bound and will fall toward Earth, not escape.",
+    "3": "Hovering in place is not possible in orbit; objects must move at orbital velocity or fall."
+  },
+  "sp-sec9-u6-L1-Q1": {
+    "1": "This is true because a prograde burn adds kinetic energy, raising the spacecraft to a higher orbit."
+  },
+  "sp-sec9-u6-L1-Q2": {
+    "0": "A forward burn adds energy and raises the orbit; it does not lower it.",
+    "2": "The orbit does not instantly become circular; it first becomes elliptical with a higher opposite side.",
+    "3": "A forward burn always changes the orbit by adding energy; orbital mechanics demands a response to any velocity change."
+  },
+  "sp-sec9-u6-L1-Q5": {
+    "0": "A retrograde burn removes energy and lowers the orbit, not raises it."
+  },
+  "sp-sec9-u6-L1-Q6": {
+    "0": "Burning at perigee raises the opposite side (apogee); it does not lower the perigee itself.",
+    "2": "A prograde burn at perigee makes the orbit more elliptical by raising apogee, not more circular.",
+    "3": "Any velocity change in orbit has an immediate effect on the trajectory; there is no delay to the next orbit."
+  },
+  "sp-sec9-u6-L1-Q7": {
+    "1": "Slowing down would lower the orbit, moving the satellite farther from the target altitude.",
+    "2": "Radial burns are inefficient for altitude changes; prograde burns are the standard method.",
+    "3": "Gravity alone will not raise a satellite; an active engine burn is required to change orbits."
+  },
+  "sp-sec9-u6-L2-Q1": {
+    "1": "This is true because a Hohmann transfer uses one burn to enter the transfer ellipse and one burn to circularize at the target orbit."
+  },
+  "sp-sec9-u6-L2-Q3": {
+    "0": "Hohmann transfers use the minimum fuel of any two-impulse transfer; they are the most fuel-efficient option.",
+    "2": "Hohmann transfers work between any two circular orbits, not just LEO.",
+    "3": "A Hohmann transfer requires exactly 2 burns, not 4."
+  },
+  "sp-sec9-u6-L2-Q5": {
+    "1": "This is true because the spacecraft follows the transfer ellipse without any thrust during the coasting phase."
+  },
+  "sp-sec9-u6-L2-Q6": {
+    "0": "Flying straight up wastes delta-v fighting gravity and is not how orbital transfers work.",
+    "2": "Spiraling uses low-thrust engines over many orbits, which is slower and uses more total delta-v than a Hohmann transfer.",
+    "3": "Gravity pulls satellites downward; it cannot push them to a higher orbit without an engine burn."
+  }
+}

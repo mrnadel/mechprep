@@ -40,6 +40,9 @@ export const finSection2Part2: Unit[] = [
             question: "In a zero-based budget, your income minus all planned spending equals zero.",
             correctAnswer: true,
             explanation: "That's the core idea. Every dollar is assigned somewhere, so the math always hits zero.",
+            distractorExplanations: {
+              1: 'This statement is actually true — that\'s the core idea. Every dollar is assigned somewhere, so the math always hits zero.',
+            },
           },
           {
             id: "fin-sec2-u6-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Zero-based means you plan for every dollar until there's nothing left unassigned.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              1: '"You start each month with zero savings" is wrong because zero-based means you plan for every dollar until there\'s nothing left unassigned.',
+              3: '"You keep zero credit cards" is wrong because zero-based means you plan for every dollar until there\'s nothing left unassigned.',
+            },
           },
           {
             id: "fin-sec2-u6-L1-T2",
@@ -67,6 +75,9 @@ export const finSection2Part2: Unit[] = [
             question: "Zero-based budgeting means you can't have a category for fun or entertainment.",
             correctAnswer: false,
             explanation: "You can budget for anything, including fun. The point is that every dollar is planned, not that fun is banned.",
+            distractorExplanations: {
+              0: 'This statement is actually false — you can budget for anything, including fun. The point is that every dollar is planned, not that fun is banned.',
+            },
           },
           {
             id: "fin-sec2-u6-L1-Q4",
@@ -89,6 +100,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Every dollar needs a job. She should assign that $300 to savings, debt payoff, or another goal.",
+            distractorExplanations: {
+              0: '"Leave the $300 unassigned for flexibility" is wrong because every dollar needs a job.',
+              2: '"Reduce her income on paper to match" is wrong because every dollar needs a job.',
+              3: '"Spend the $300 immediately so it\'s gone" is wrong because every dollar needs a job.',
+            },
           },
           {
             id: "fin-sec2-u6-L1-T3",
@@ -109,6 +125,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Zero means every dollar is accounted for. Your bank account still has money, it's just all spoken for.",
+            distractorExplanations: {
+              0: '"You have no money left in the bank" is wrong because zero means every dollar is accounted for.',
+              1: '"You\'re spending too much on wants" is wrong because zero means every dollar is accounted for.',
+              3: '"You need to earn more income" is wrong because zero means every dollar is accounted for.',
+            },
           },
         ],
       },
@@ -134,6 +155,9 @@ export const finSection2Part2: Unit[] = [
             question: "The first step in building a zero-based budget is listing all your income sources.",
             correctAnswer: true,
             explanation: "You need to know your total before you can divide it up. Income first, then categories.",
+            distractorExplanations: {
+              1: 'This statement is actually true — you need to know your total before you can divide it up. Income first, then categories.',
+            },
           },
           {
             id: "fin-sec2-u6-L2-Q2",
@@ -183,6 +207,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Assign the remaining $200 to savings, debt, or another goal so every dollar has a purpose.",
+            distractorExplanations: {
+              0: '"Leave the extra $200 unplanned" is wrong because assign the remaining $200 to savings, debt, or another goal so every dollar has a purpose.',
+              2: '"Reduce your income to $2,800" is wrong because assign the remaining $200 to savings, debt, or another goal so every dollar has a purpose.',
+              3: '"Remove a category to make it balance" is wrong because assign the remaining $200 to savings, debt, or another goal so every dollar has a purpose.',
+            },
           },
           {
             id: "fin-sec2-u6-L2-Q5",
@@ -197,6 +226,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When expenses exceed income, you need to trim categories until the budget balances to zero.",
+            distractorExplanations: {
+              0: 'Borrowing creates debt and interest costs, making the situation worse.',
+              2: 'Ignoring financial problems allows them to grow and cost you more.',
+              3: '"Skip budgeting this month and try again later" is wrong because when expenses exceed income, you need to trim categories until the budget balances to zero.',
+            },
           },
           {
             id: "fin-sec2-u6-L2-T3",
@@ -217,6 +251,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Each month has different expenses, so you create a fresh zero-based budget before each month begins.",
+            distractorExplanations: {
+              0: '"Once a year during tax season" is wrong because each month has different expenses, so you create a fresh zero-based budget before each month begins.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+            },
           },
         ],
       },
@@ -242,6 +281,9 @@ export const finSection2Part2: Unit[] = [
             question: "People with irregular income should budget based on their highest-earning month.",
             correctAnswer: false,
             explanation: "Budget based on your lowest expected month. Using the highest sets you up for shortfalls in lean months.",
+            distractorExplanations: {
+              0: 'This statement is actually false — budget based on your lowest expected month. Using the highest sets you up for shortfalls in lean months.',
+            },
           },
           {
             id: "fin-sec2-u6-L3-Q2",
@@ -255,6 +297,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Use the lowest month as your baseline. This ensures you can cover essentials even in slow months.",
+            distractorExplanations: {
+              0: 'This amount (4,500) is too high — the correct calculation gives 2,000.',
+              1: 'This amount (3,000) is too high — the correct calculation gives 2,000.',
+              3: 'This amount (12,000) is too high — the correct calculation gives 2,000.',
+            },
           },
           {
             id: "fin-sec2-u6-L3-T2",
@@ -298,6 +345,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Budgeting the lower amount and banking extra from good months creates a buffer for lean months.",
+            distractorExplanations: {
+              0: '"Budget $5,000 since that\'s what she just earned" is wrong because budgeting the lower amount and banking extra from good months creates a buffer for lean months.',
+              2: 'Hoping passively does not solve financial problems; active steps are needed.',
+              3: '"Skip budgeting until her income stabilizes" is wrong because budgeting the lower amount and banking extra from good months creates a buffer for lean months.',
+            },
           },
           {
             id: "fin-sec2-u6-L3-T3",
@@ -318,6 +370,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A buffer account turns unpredictable income into a steady monthly 'paycheck' you give yourself.",
+            distractorExplanations: {
+              0: '"To invest in stocks during high-income months" is wrong because a buffer account turns unpredictable income into a steady monthly \'paycheck\' you give yourself.',
+              2: '"To hide extra money from the tax authorities" is wrong because a buffer account turns unpredictable income into a steady monthly \'paycheck\' you give yourself.',
+              3: '"To collect interest on unused emergency funds" is wrong because a buffer account turns unpredictable income into a steady monthly \'paycheck\' you give yourself.',
+            },
           },
         ],
       },
@@ -343,6 +400,9 @@ export const finSection2Part2: Unit[] = [
             question: "The 50/30/20 rule assigns every dollar to a specific category like zero-based budgeting does.",
             correctAnswer: false,
             explanation: "The 50/30/20 rule uses broad percentage buckets. Zero-based budgeting assigns every individual dollar.",
+            distractorExplanations: {
+              0: 'This statement is actually false — the 50/30/20 rule uses broad percentage buckets. Zero-based budgeting assigns every individual dollar.',
+            },
           },
           {
             id: "fin-sec2-u6-L4-Q2",
@@ -382,6 +442,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Zero-based budgeting rewards people who enjoy tracking details and want maximum control.",
+            distractorExplanations: {
+              1: '"Someone who wants the simplest possible system" is wrong because zero-based budgeting rewards people who enjoy tracking details and want maximum control.',
+              2: '"Someone who hates looking at numbers" is wrong because zero-based budgeting rewards people who enjoy tracking details and want maximum control.',
+              3: '"Someone with a very high income" is wrong because zero-based budgeting rewards people who enjoy tracking details and want maximum control.',
+            },
           },
           {
             id: "fin-sec2-u6-L4-Q4",
@@ -412,6 +477,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "For beginners, the 50/30/20 rule provides a simple framework. She can add more detail later.",
+            distractorExplanations: {
+              0: '"Zero-based budgeting for maximum control from day one" is wrong because for beginners, the 50/30/20 rule provides a simple framework.',
+              1: '"No budgeting method until she has more experience" is wrong because for beginners, the 50/30/20 rule provides a simple framework.',
+              3: '"A random mix of both methods at the same time" is wrong because for beginners, the 50/30/20 rule provides a simple framework.',
+            },
           },
           {
             id: "fin-sec2-u6-L4-Q6",
@@ -425,6 +495,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The hybrid approach uses percentage buckets as guardrails and zero-based detail within each bucket.",
+            distractorExplanations: {
+              0: '"Alternate between them every other month" is wrong because the hybrid approach uses percentage buckets as guardrails and zero-based detail within each bucket.',
+              2: '"Use zero-based on weekdays and 50/30/20 on weekends" is wrong because the hybrid approach uses percentage buckets as guardrails and zero-based detail within each bucket.',
+              3: '"Pick one and never change methods" is wrong because the hybrid approach uses percentage buckets as guardrails and zero-based detail within each bucket.',
+            },
           },
         ],
       },
@@ -576,6 +651,9 @@ export const finSection2Part2: Unit[] = [
             question: "In the cash envelope system, you stop spending in a category when its envelope is empty.",
             correctAnswer: true,
             explanation: "That's the rule. An empty envelope means you've reached your limit for that category.",
+            distractorExplanations: {
+              1: 'This statement is actually true — that\'s the rule. An empty envelope means you\'ve reached your limit for that category.',
+            },
           },
           {
             id: "fin-sec2-u7-L1-Q2",
@@ -589,6 +667,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Handing over cash creates a stronger emotional response than swiping a card. This 'pain of paying' helps control spending.",
+            distractorExplanations: {
+              0: '"Cash earns interest inside the envelope" is wrong because handing over cash creates a stronger emotional response than swiping a card.',
+              2: '"Banks charge fees for using debit cards" is wrong because handing over cash creates a stronger emotional response than swiping a card.',
+              3: '"Paper envelopes are cheaper than budgeting apps" is wrong because handing over cash creates a stronger emotional response than swiping a card.',
+            },
           },
           {
             id: "fin-sec2-u7-L1-T2",
@@ -624,6 +707,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Cooking at home uses the groceries budget and keeps her social. Borrowing between envelopes weakens the system.",
+            distractorExplanations: {
+              0: '"Take money from the groceries envelope for dinner" is wrong because cooking at home uses the groceries budget and keeps her social.',
+              1: '"Skip dinner since the dining out envelope is empty" is wrong because cooking at home uses the groceries budget and keeps her social.',
+              3: 'Borrowing creates debt and interest costs, making the situation worse.',
+            },
           },
           {
             id: "fin-sec2-u7-L1-Q5",
@@ -680,6 +768,9 @@ export const finSection2Part2: Unit[] = [
             question: "Digital budgeting apps can automatically categorize your spending like virtual envelopes.",
             correctAnswer: true,
             explanation: "Most apps sync with your bank and sort transactions into categories, acting like digital envelopes.",
+            distractorExplanations: {
+              1: 'This statement is actually true — most apps sync with your bank and sort transactions into categories, acting like digital envelopes.',
+            },
           },
           {
             id: "fin-sec2-u7-L2-Q2",
@@ -693,6 +784,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Apps track card purchases, online shopping, and subscriptions that cash envelopes can't cover.",
+            distractorExplanations: {
+              0: '"Apps guarantee you\'ll never overspend" is wrong because apps track card purchases, online shopping, and subscriptions that cash envelopes can\'t cover.',
+              2: '"Apps earn interest on your money" is wrong because apps track card purchases, online shopping, and subscriptions that cash envelopes can\'t cover.',
+              3: '"Apps eliminate the need for a budget plan" is wrong because apps track card purchases, online shopping, and subscriptions that cash envelopes can\'t cover.',
+            },
           },
           {
             id: "fin-sec2-u7-L2-T2",
@@ -741,6 +837,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Since Raj uses a card for most purchases, an app that syncs with his bank will track spending with minimal effort.",
+            distractorExplanations: {
+              0: '"A physical cash envelope system" is wrong because since Raj uses a card for most purchases, an app that syncs with his bank will track spending with minimal effort.',
+              1: '"A paper spreadsheet he updates weekly" is wrong because since Raj uses a card for most purchases, an app that syncs with his bank will track spending with minimal effort.',
+              3: '"A notebook where he writes down every purchase" is wrong because since Raj uses a card for most purchases, an app that syncs with his bank will track spending with minimal effort.',
+            },
           },
           {
             id: "fin-sec2-u7-L2-T3",
@@ -761,6 +862,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Prove the habit first with a free app. If you stick with it and need more features, then upgrading makes sense.",
+            distractorExplanations: {
+              0: '"Immediately, because free apps never work" is wrong because prove the habit first with a free app.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"Never, because all budgeting apps do the same thing" is wrong because prove the habit first with a free app.',
+            },
           },
         ],
       },
@@ -786,6 +892,9 @@ export const finSection2Part2: Unit[] = [
             question: "There is one universally best budgeting method that works for everyone.",
             correctAnswer: false,
             explanation: "Different methods suit different personalities. The best method is the one you'll actually stick with.",
+            distractorExplanations: {
+              0: 'This statement is actually false — different methods suit different personalities. The best method is the one you\'ll actually stick with.',
+            },
           },
           {
             id: "fin-sec2-u7-L3-Q2",
@@ -825,6 +934,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Consistency beats perfection. A simple method you follow is better than a complex one you abandon.",
+            distractorExplanations: {
+              0: '"How complex it sounds" is wrong because consistency beats perfection.',
+              1: '"What financial experts recommend" is wrong because consistency beats perfection.',
+              3: '"How many categories it includes" is wrong because consistency beats perfection.',
+            },
           },
           {
             id: "fin-sec2-u7-L3-Q4",
@@ -855,6 +969,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "If a method is too detailed to maintain, switching to something simpler is smarter than quitting entirely.",
+            distractorExplanations: {
+              0: '"Keep trying zero-based until she masters it" is wrong because if a method is too detailed to maintain, switching to something simpler is smarter than quitting entirely.',
+              1: 'Ignoring financial problems allows them to grow and cost you more.',
+              3: '"Hire a financial advisor to budget for her" is wrong because if a method is too detailed to maintain, switching to something simpler is smarter than quitting entirely.',
+            },
           },
           {
             id: "fin-sec2-u7-L3-T3",
@@ -875,6 +994,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "About 30 days gives you enough time to build a habit and see if the method fits your lifestyle.",
+            distractorExplanations: {
+              0: '"1 to 2 days" is wrong because about 30 days gives you enough time to build a habit and see if the method fits your lifestyle.',
+              2: '"At least 1 year" is wrong because about 30 days gives you enough time to build a habit and see if the method fits your lifestyle.',
+              3: '"Until you\'ve saved $1,000" is wrong because about 30 days gives you enough time to build a habit and see if the method fits your lifestyle.',
+            },
           },
         ],
       },
@@ -1018,6 +1142,9 @@ export const finSection2Part2: Unit[] = [
             question: "A spending journal only needs to track large purchases over $50.",
             correctAnswer: false,
             explanation: "You should track every purchase, no matter how small. Small purchases add up quickly and are often the biggest surprises.",
+            distractorExplanations: {
+              0: 'This statement is actually false — you should track every purchase, no matter how small. Small purchases add up quickly and are often the biggest surprises.',
+            },
           },
           {
             id: "fin-sec2-u8-L1-Q2",
@@ -1031,6 +1158,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Small, forgettable purchases are often the biggest surprise. That daily coffee or snack adds up fast.",
+            distractorExplanations: {
+              0: '"They realize they earn more than they thought" is wrong because small, forgettable purchases are often the biggest surprise.',
+              2: '"They find errors in their bank statements" is wrong because small, forgettable purchases are often the biggest surprise.',
+              3: '"They see that their rent is too high" is wrong because small, forgettable purchases are often the biggest surprise.',
+            },
           },
           {
             id: "fin-sec2-u8-L1-T2",
@@ -1059,6 +1191,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "One full week captures weekday and weekend patterns. A month is even better for a complete picture.",
+            distractorExplanations: {
+              0: '"Just 1 day is enough" is wrong because one full week captures weekday and weekend patterns.',
+              2: '"Exactly 1 year to cover all seasons" is wrong because one full week captures weekday and weekend patterns.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec2-u8-L1-Q5",
@@ -1073,6 +1210,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Now that Kenji sees the pattern, he can create a category and set a limit. Awareness leads to better choices.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              1: '"Stop eating and shopping entirely" is wrong because now that Kenji sees the pattern, he can create a category and set a limit.',
+              3: '"Switch to a different tracking method immediately" is wrong because now that Kenji sees the pattern, he can create a category and set a limit.',
+            },
           },
           {
             id: "fin-sec2-u8-L1-T3",
@@ -1087,6 +1229,9 @@ export const finSection2Part2: Unit[] = [
             question: "You need to keep a spending journal forever to stay on budget.",
             correctAnswer: false,
             explanation: "A spending journal is a diagnostic tool. Use it occasionally to check your habits, not as a permanent tracking system.",
+            distractorExplanations: {
+              0: 'This statement is actually false — a spending journal is a diagnostic tool. Use it occasionally to check your habits, not as a permanent tracking system.',
+            },
           },
         ],
       },
@@ -1112,6 +1257,9 @@ export const finSection2Part2: Unit[] = [
             question: "Categorizing spending helps you see patterns you'd miss looking at individual transactions.",
             correctAnswer: true,
             explanation: "Individual transactions are hard to see patterns in. Categories show you where the big money really goes.",
+            distractorExplanations: {
+              1: 'This statement is actually true — individual transactions are hard to see patterns in. Categories show you where the big money really goes.',
+            },
           },
           {
             id: "fin-sec2-u8-L2-Q2",
@@ -1167,6 +1315,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Separating groceries from dining out shows you where you can cut back. They're very different spending behaviors.",
+            distractorExplanations: {
+              0: '"Both under \'food\' as one category" is wrong because separating groceries from dining out shows you where you can cut back.',
+              2: '"Under \'entertainment\' since eating is enjoyable" is wrong because separating groceries from dining out shows you where you can cut back.',
+              3: '"Under \'needs\' without any sub-categories" is wrong because separating groceries from dining out shows you where you can cut back.',
+            },
           },
           {
             id: "fin-sec2-u8-L2-Q5",
@@ -1189,6 +1342,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Starting with broad categories keeps it manageable. 5 to 7 categories capture the big picture without overwhelm.",
+            distractorExplanations: {
+              0: '"Create a separate category for every single merchant" is wrong because starting with broad categories keeps it manageable.',
+              2: '"Give up on categories and just track the total amount" is wrong because starting with broad categories keeps it manageable.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
         ],
       },
@@ -1214,6 +1372,9 @@ export const finSection2Part2: Unit[] = [
             question: "A weekly spending check-in should take about 10 minutes.",
             correctAnswer: true,
             explanation: "It's a quick review, not a deep dive. Just compare spending to your plan and note anything surprising.",
+            distractorExplanations: {
+              1: 'This statement is actually true — it\'s a quick review, not a deep dive. Just compare spending to your plan and note anything surprising.',
+            },
           },
           {
             id: "fin-sec2-u8-L3-Q2",
@@ -1227,6 +1388,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Weekly check-ins let you course-correct mid-month instead of discovering overspending when it's too late.",
+            distractorExplanations: {
+              0: '"To feel guilty about every purchase" is wrong because weekly check-ins let you course-correct mid-month instead of discovering overspending when it\'s too late.',
+              2: '"To calculate your exact net worth" is wrong because weekly check-ins let you course-correct mid-month instead of discovering overspending when it\'s too late.',
+              3: '"To cancel all subscriptions weekly" is wrong because weekly check-ins let you course-correct mid-month instead of discovering overspending when it\'s too late.',
+            },
           },
           {
             id: "fin-sec2-u8-L3-T2",
@@ -1269,6 +1435,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Shifting money from a consistently under-budget category to an over-budget one makes the plan realistic.",
+            distractorExplanations: {
+              0: '"Keep the same budget and try harder to eat at home" is wrong because shifting money from a consistently under-budget category to an over-budget one makes the plan realistic.',
+              2: '"Eliminate the dining out category entirely" is wrong because shifting money from a consistently under-budget category to an over-budget one makes the plan realistic.',
+              3: '"Stop doing monthly reviews since they\'re depressing" is wrong because shifting money from a consistently under-budget category to an over-budget one makes the plan realistic.',
+            },
           },
           {
             id: "fin-sec2-u8-L3-T3",
@@ -1289,6 +1460,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "2 to 3 months reveals whether something is a pattern or just a one-off. Patterns deserve a budget adjustment.",
+            distractorExplanations: {
+              0: '"Just 1 bad month is enough to overhaul everything" is wrong because 2 to 3 months reveals whether something is a pattern or just a one-off.',
+              2: '"At least 12 months of data" is wrong because 2 to 3 months reveals whether something is a pattern or just a one-off.',
+              3: '"You should never change your budget once it\'s set" is wrong because 2 to 3 months reveals whether something is a pattern or just a one-off.',
+            },
           },
         ],
       },
@@ -1314,6 +1490,9 @@ export const finSection2Part2: Unit[] = [
             question: "Most banks offer free text or email alerts for every transaction.",
             correctAnswer: true,
             explanation: "Transaction alerts are free at most banks. They help you stay aware of spending as it happens.",
+            distractorExplanations: {
+              1: 'This statement is actually true — transaction alerts are free at most banks. They help you stay aware of spending as it happens.',
+            },
           },
           {
             id: "fin-sec2-u8-L4-Q2",
@@ -1327,6 +1506,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Real-time alerts let you spot fraud or unauthorized charges right away, plus they keep spending top of mind.",
+            distractorExplanations: {
+              0: '"They help you earn rewards points faster" is wrong because real-time alerts let you spot fraud or unauthorized charges right away, plus they keep spending top of mind.',
+              2: '"They lower your bank fees automatically" is wrong because real-time alerts let you spot fraud or unauthorized charges right away, plus they keep spending top of mind.',
+              3: '"They replace the need for any budget" is wrong because real-time alerts let you spot fraud or unauthorized charges right away, plus they keep spending top of mind.',
+            },
           },
           {
             id: "fin-sec2-u8-L4-T2",
@@ -1372,6 +1556,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A syncing app pulls data from all accounts into one dashboard. It's the easiest way to see everything together.",
+            distractorExplanations: {
+              0: '"Check each account\'s app separately every day" is wrong because a syncing app pulls data from all accounts into one dashboard.',
+              2: '"Consolidate everything into one bank account" is wrong because a syncing app pulls data from all accounts into one dashboard.',
+              3: '"Hire a bookkeeper to track his spending" is wrong because a syncing app pulls data from all accounts into one dashboard.',
+            },
           },
           {
             id: "fin-sec2-u8-L4-T3",
@@ -1392,6 +1581,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Apps do their best, but a restaurant might get tagged as 'groceries' or a gas station snack as 'transportation.' Quick reviews fix this.",
+            distractorExplanations: {
+              0: '"Apps intentionally miscategorize to frustrate you" is wrong because apps do their best, but a restaurant might get tagged as \'groceries\' or a gas station snack as \'transportation.',
+              2: '"Weekly reviews increase your credit score" is wrong because apps do their best, but a restaurant might get tagged as \'groceries\' or a gas station snack as \'transportation.',
+              3: '"Banks require you to verify every transaction manually" is wrong because apps do their best, but a restaurant might get tagged as \'groceries\' or a gas station snack as \'transportation.',
+            },
           },
         ],
       },
@@ -1543,6 +1737,9 @@ export const finSection2Part2: Unit[] = [
             question: "Shopping can trigger a dopamine release in the brain similar to social media likes.",
             correctAnswer: true,
             explanation: "Both shopping and social media likes activate the brain's reward system through dopamine.",
+            distractorExplanations: {
+              1: 'This statement is actually true — both shopping and social media likes activate the brain\'s reward system through dopamine.',
+            },
           },
           {
             id: "fin-sec2-u9-L1-Q2",
@@ -1556,6 +1753,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Dopamine creates a quick burst of pleasure that fades. This is why you can feel 'meh' about something you were thrilled to buy.",
+            distractorExplanations: {
+              0: '"The product quality drops after the first day" is wrong because dopamine creates a quick burst of pleasure that fades.',
+              2: '"Your friends stop being impressed right away" is wrong because dopamine creates a quick burst of pleasure that fades.',
+              3: '"You realize you bought the wrong brand" is wrong because dopamine creates a quick burst of pleasure that fades.',
+            },
           },
           {
             id: "fin-sec2-u9-L1-T2",
@@ -1601,6 +1803,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you didn't need a jacket before seeing the sale, the 'deal' is a pressure tactic. Wait 24 hours and the urge usually passes.",
+            distractorExplanations: {
+              0: 'Rushing into financial decisions without a plan often leads to worse outcomes.',
+              2: '"Buy it but plan to return it if you change your mind" is wrong because if you didn\'t need a jacket before seeing the sale, the \'deal\' is a pressure tactic.',
+              3: '"Share the deal with friends first to validate the purchase" is wrong because if you didn\'t need a jacket before seeing the sale, the \'deal\' is a pressure tactic.',
+            },
           },
           {
             id: "fin-sec2-u9-L1-T3",
@@ -1621,6 +1828,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Checking your emotional state before buying separates intentional purchases from impulse spending.",
+            distractorExplanations: {
+              0: '"Can I afford the monthly payment plan?" is wrong because checking your emotional state before buying separates intentional purchases from impulse spending.',
+              1: '"Did my friend buy this too?" is wrong because checking your emotional state before buying separates intentional purchases from impulse spending.',
+              3: '"Is it available in a different color?" is wrong because checking your emotional state before buying separates intentional purchases from impulse spending.',
+            },
           },
         ],
       },
@@ -1646,6 +1858,9 @@ export const finSection2Part2: Unit[] = [
             question: "The 24-hour rule means waiting one day before making an unplanned purchase.",
             correctAnswer: true,
             explanation: "Waiting 24 hours lets the dopamine rush fade so you can make a rational decision.",
+            distractorExplanations: {
+              1: 'This statement is actually true — waiting 24 hours lets the dopamine rush fade so you can make a rational decision.',
+            },
           },
           {
             id: "fin-sec2-u9-L2-Q2",
@@ -1659,6 +1874,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The emotional rush to buy fades quickly. After 24 hours, you can evaluate the purchase calmly.",
+            distractorExplanations: {
+              0: '"Prices always drop the next day" is wrong because the emotional rush to buy fades quickly.',
+              2: '"Stores close after 24 hours" is wrong because the emotional rush to buy fades quickly.',
+              3: '"Your bank blocks purchases during that period" is wrong because the emotional rush to buy fades quickly.',
+            },
           },
           {
             id: "fin-sec2-u9-L2-T2",
@@ -1707,6 +1927,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cutting off the trigger (emails) and adding friction (removing payment info) addresses the root cause.",
+            distractorExplanations: {
+              0: '"Buy a cheaper pair of shoes instead" is wrong because cutting off the trigger (emails) and adding friction (removing payment info) addresses the root cause.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"Set up a separate email just for shopping deals" is wrong because cutting off the trigger (emails) and adding friction (removing payment info) addresses the root cause.',
+            },
           },
           {
             id: "fin-sec2-u9-L2-T3",
@@ -1727,6 +1952,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Most impulse desires fade within days. A want list proves which items you truly want versus which were just a momentary urge.",
+            distractorExplanations: {
+              0: '"You find better deals by waiting" is wrong because most impulse desires fade within days.',
+              2: '"You can negotiate lower prices" is wrong because most impulse desires fade within days.',
+              3: '"You earn more rewards points" is wrong because most impulse desires fade within days.',
+            },
           },
         ],
       },
@@ -1752,6 +1982,9 @@ export const finSection2Part2: Unit[] = [
             question: "Social media creates pressure to spend by showing other people's highlights without their financial reality.",
             correctAnswer: true,
             explanation: "Social media shows the vacations, not the credit card debt. This creates unrealistic spending comparisons.",
+            distractorExplanations: {
+              1: 'This statement is actually true — social media shows the vacations, not the credit card debt. This creates unrealistic spending comparisons.',
+            },
           },
           {
             id: "fin-sec2-u9-L3-Q2",
@@ -1765,6 +1998,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lifestyle inflation is when raises and bonuses get absorbed by fancier spending instead of savings.",
+            distractorExplanations: {
+              0: '"When the cost of living rises due to economic factors" is wrong because lifestyle inflation is when raises and bonuses get absorbed by fancier spending instead of savings.',
+              2: '"When luxury brands raise their prices annually" is wrong because lifestyle inflation is when raises and bonuses get absorbed by fancier spending instead of savings.',
+              3: '"When moving to an expensive city for a new job" is wrong because lifestyle inflation is when raises and bonuses get absorbed by fancier spending instead of savings.',
+            },
           },
           {
             id: "fin-sec2-u9-L3-T2",
@@ -1810,6 +2048,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Being honest about your budget is the healthy choice. Real friends won't judge you for managing your money.",
+            distractorExplanations: {
+              0: '"Go anyway and put it on a credit card" is wrong because being honest about your budget is the healthy choice.',
+              1: '"Go but skip eating and drinks to save money" is wrong because being honest about your budget is the healthy choice.',
+              3: '"Pretend to be sick so no one knows you can\'t afford it" is wrong because being honest about your budget is the healthy choice.',
+            },
           },
           {
             id: "fin-sec2-u9-L3-T3",
@@ -1830,6 +2073,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Saving at least half the raise first means you enjoy some increase while still building wealth.",
+            distractorExplanations: {
+              0: '"Avoid telling anyone about the raise" is wrong because saving at least half the raise first means you enjoy some increase while still building wealth.',
+              2: '"Spend the full raise amount to reward yourself" is wrong because saving at least half the raise first means you enjoy some increase while still building wealth.',
+              3: 'Waiting risks missing the dispute window and lets fraud continue.',
+            },
           },
         ],
       },
@@ -1855,6 +2103,9 @@ export const finSection2Part2: Unit[] = [
             question: "Mindful spending means spending as little money as possible on everything.",
             correctAnswer: false,
             explanation: "Mindful spending is about alignment with your values, not minimizing all spending. Spend generously on what matters to you.",
+            distractorExplanations: {
+              0: 'This statement is actually false — mindful spending is about alignment with your values, not minimizing all spending. Spend generously on what matters to you.',
+            },
           },
           {
             id: "fin-sec2-u9-L4-Q2",
@@ -1868,6 +2119,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mindful spending matches your money to your values. Spend freely on what matters, cut on what doesn't.",
+            distractorExplanations: {
+              0: '"Tracking every penny in a spreadsheet" is wrong because mindful spending matches your money to your values.',
+              2: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: '"Avoiding all non-essential purchases" is wrong because mindful spending matches your money to your values.',
+            },
           },
           {
             id: "fin-sec2-u9-L4-T2",
@@ -1913,6 +2169,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Moving money from a low-value category to a high-value goal is mindful spending in action.",
+            distractorExplanations: {
+              0: '"Keep buying clothes but look for cheaper brands" is wrong because moving money from a low-value category to a high-value goal is mindful spending in action.',
+              2: '"Cancel the trip idea since it\'s too expensive" is wrong because moving money from a low-value category to a high-value goal is mindful spending in action.',
+              3: '"Stop buying clothes entirely and donate her wardrobe" is wrong because moving money from a low-value category to a high-value goal is mindful spending in action.',
+            },
           },
           {
             id: "fin-sec2-u9-L4-T3",
@@ -1933,6 +2194,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Every dollar saved from a low-value category can be spent generously on something that truly makes you happy.",
+            distractorExplanations: {
+              0: '"You earn rewards points from the savings" is wrong because every dollar saved from a low-value category can be spent generously on something that truly makes you happy.',
+              2: '"Your credit score improves automatically" is wrong because every dollar saved from a low-value category can be spent generously on something that truly makes you happy.',
+              3: '"Banks offer discounts when you spend less overall" is wrong because every dollar saved from a low-value category can be spent generously on something that truly makes you happy.',
+            },
           },
         ],
       },
@@ -2084,6 +2350,9 @@ export const finSection2Part2: Unit[] = [
             question: "A budget is effective even without any spending tracking to verify it.",
             correctAnswer: false,
             explanation: "A budget without tracking is just a wish list. You need tracking to see if your plan matches reality.",
+            distractorExplanations: {
+              0: 'This statement is actually false — a budget without tracking is just a wish list. You need tracking to see if your plan matches reality.',
+            },
           },
           {
             id: "fin-sec2-u10-L1-Q2",
@@ -2123,6 +2392,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Plan (budget) plus mirror (tracking) plus self-awareness (psychology) creates a complete system.",
+            distractorExplanations: {
+              1: '"Multiple credit cards with high limits" is wrong because plan (budget) plus mirror (tracking) plus self-awareness (psychology) creates a complete system.',
+              2: '"A savings account with no spending plan" is wrong because plan (budget) plus mirror (tracking) plus self-awareness (psychology) creates a complete system.',
+              3: '"A strict cash-only lifestyle with no flexibility" is wrong because plan (budget) plus mirror (tracking) plus self-awareness (psychology) creates a complete system.',
+            },
           },
           {
             id: "fin-sec2-u10-L1-Q4",
@@ -2161,6 +2435,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Taylor has the tools but isn't using them fully. Regular reviews and self-awareness would close the gap.",
+            distractorExplanations: {
+              0: '"A better budgeting app with more features" is wrong because taylor has the tools but isn\'t using them fully.',
+              2: '"A higher income to cover the gap" is wrong because taylor has the tools but isn\'t using them fully.',
+              3: '"A financial advisor to manage her money" is wrong because taylor has the tools but isn\'t using them fully.',
+            },
           },
         ],
       },
@@ -2193,6 +2472,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Zero-based budgeting would reveal exactly where every dollar goes and help Kim find room for savings within her current income.",
+            distractorExplanations: {
+              1: '"Get a second job to increase income" is wrong because zero-based budgeting would reveal exactly where every dollar goes and help Kim find room for savings within her cur...',
+              2: '"Stop paying rent and move in with family" is wrong because zero-based budgeting would reveal exactly where every dollar goes and help Kim find room for savings within her cur...',
+              3: '"Cancel her phone plan to free up cash" is wrong because zero-based budgeting would reveal exactly where every dollar goes and help Kim find room for savings within her cur...',
+            },
           },
           {
             id: "fin-sec2-u10-L2-Q2",
@@ -2207,6 +2491,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With income below fixed expenses, Javier must prioritize essentials and pause non-essential spending immediately.",
+            distractorExplanations: {
+              0: 'Hoping passively does not solve financial problems; active steps are needed.',
+              2: '"Take on credit card debt to cover the shortfall" is wrong because with income below fixed expenses, Javier must prioritize essentials and pause non-essential spending immediately.',
+              3: '"Reduce his rent by breaking his lease" is wrong because with income below fixed expenses, Javier must prioritize essentials and pause non-essential spending immediately.',
+            },
           },
           {
             id: "fin-sec2-u10-L2-T2",
@@ -2228,6 +2517,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Sophie needs a healthy money boundary (psychology) plus a cheaper alternative (budgeting). Isolation isn't sustainable.",
+            distractorExplanations: {
+              0: '"Get a higher credit limit so she doesn\'t max out" is wrong because sophie needs a healthy money boundary (psychology) plus a cheaper alternative (budgeting).',
+              2: '"Stop socializing entirely until the debt is paid off" is wrong because sophie needs a healthy money boundary (psychology) plus a cheaper alternative (budgeting).',
+              3: '"Switch to cash-only for everything including bills" is wrong because sophie needs a healthy money boundary (psychology) plus a cheaper alternative (budgeting).',
+            },
           },
           {
             id: "fin-sec2-u10-L2-Q4",
@@ -2241,6 +2535,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Broad categories satisfy the simplicity lover while sub-categories satisfy the detail lover. Both stay engaged.",
+            distractorExplanations: {
+              0: '"The detail person does all the budgeting alone" is wrong because broad categories satisfy the simplicity lover while sub-categories satisfy the detail lover.',
+              1: '"They abandon budgeting since they can\'t agree" is wrong because broad categories satisfy the simplicity lover while sub-categories satisfy the detail lover.',
+              3: '"Alternate methods every other month" is wrong because broad categories satisfy the simplicity lover while sub-categories satisfy the detail lover.',
+            },
           },
           {
             id: "fin-sec2-u10-L2-Q5",
@@ -2255,6 +2554,11 @@ export const finSection2Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "This is classic lifestyle inflation. Saving half the $700 raise ($350) would build wealth without feeling deprived.",
+            distractorExplanations: {
+              0: '"She needs an even bigger raise to start saving" is wrong because this is classic lifestyle inflation.',
+              2: '"She should freeze all spending for a full month" is wrong because this is classic lifestyle inflation.',
+              3: 'This choice is wrong because this is classic lifestyle inflation.',
+            },
           },
           {
             id: "fin-sec2-u10-L2-Q6",

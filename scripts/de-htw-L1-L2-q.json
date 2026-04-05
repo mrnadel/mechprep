@@ -1,0 +1,442 @@
+[
+  {
+    "id": "htw-L1-Q1",
+    "type": "multiple-choice",
+    "question": "A pressure cooker cooks food faster primarily because:",
+    "options": [
+      "Increased pressure raises the boiling point of water",
+      "The sealed pot traps more heat radiation inside",
+      "Steam molecules move faster at higher pressure",
+      "The thick walls conduct heat more efficiently"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "By sealing the pot, steam pressure builds above atmospheric. Per the Clausius-Clapeyron relation, higher pressure raises the saturation temperature, so water boils at ~120\\u00B0C instead of 100\\u00B0C \\u2014 cooking food faster.",
+    "explanationLine": 23
+  },
+  {
+    "id": "htw-L1-Q3",
+    "type": "multiple-choice",
+    "question": "A cylindrical pressure cooker wall is under internal pressure. The hoop (circumferential) stress in the wall is:",
+    "options": [
+      "Equal to the axial stress",
+      "Twice the axial stress",
+      "Half the axial stress",
+      "Three times the axial stress"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For a thin-walled pressure vessel, hoop stress = pR/t and axial stress = pR/(2t). The hoop stress is exactly twice the axial stress, which is why pressure vessels tend to split along their length (longitudinal seam) rather than around their circumference.",
+    "explanationLine": 46
+  },
+  {
+    "id": "htw-L1-Q4",
+    "type": "true-false",
+    "question": "The safety valve on a pressure cooker is a dead-weight relief valve \\u2014 it lifts when internal pressure exceeds the force of a calibrated weight divided by the valve seat area.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "A dead-weight relief valve opens when pressure \\u00D7 seat area > weight force. This is a simple, reliable design: P_set = W/A. No springs or electronics needed \\u2014 gravity and Newton\\",
+    "explanationLine": 54
+  },
+  {
+    "id": "htw-L1-Q5",
+    "type": "multiple-choice",
+    "question": "In a household refrigerator, the evaporator is located:",
+    "options": [
+      "Behind the refrigerator near the floor",
+      "Inside the fridge/freezer compartment",
+      "On top of the compressor",
+      "Inside the condenser coils"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The evaporator is inside the compartment where refrigerant absorbs heat by evaporating at low pressure. The condenser is on the back/bottom exterior, where it rejects heat to the kitchen. Heat flows from food \\u2192 evaporator \\u2192 compressor \\u2192 condenser \\u2192 kitchen air.",
+    "explanationLine": 70
+  },
+  {
+    "id": "htw-L1-Q6",
+    "type": "multiple-choice",
+    "question": "A refrigerator has a COP of 4. This means:",
+    "options": [
+      "It converts 4 kW of electricity into 4 kW of cooling output",
+      "For every 1 kW of work input, it removes 4 kW of heat",
+      "It operates at 400% of the theoretical Carnot limit",
+      "It rejects 4 times more heat than it absorbs from inside"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "COP (Coefficient of Performance) = Q_cold / W_in. A COP of 4 means 1 kW of compressor work moves 4 kW of heat out of the fridge. Note COP > 1 is normal for refrigeration \\u2014 it\\",
+    "explanationLine": 84
+  },
+  {
+    "id": "htw-L1-Q8",
+    "type": "true-false",
+    "question": "In a refrigerator\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The compressor takes in low-pressure superheated vapor (to avoid liquid slugging) and compresses it to high-pressure superheated vapor. The condenser then cools and condenses it into a subcooled liquid, ensuring no vapor bubbles reach the expansion valve.",
+    "explanationLine": 101
+  },
+  {
+    "id": "htw-L1-Q9",
+    "type": "multiple-choice",
+    "question": "A kitchen faucet aerator mixes air into the water stream. From a fluid mechanics perspective, this works primarily by:",
+    "options": [
+      "Increasing the water pressure inside the faucet body to force air in",
+      "Using venturi-effect pressure drop to entrain surrounding air",
+      "Heating the water to reduce its viscosity and add volume",
+      "Creating turbulence that increases the overall flow rate"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The aerator\\",
+    "explanationLine": 117
+  },
+  {
+    "id": "htw-L1-Q10",
+    "type": "multiple-choice",
+    "question": "Municipal water pressure is typically 40-60 psi at the tap. If you partially close the faucet valve, the flow rate decreases because:",
+    "options": [
+      "The water temperature drops, increasing viscosity and slowing flow",
+      "The valve increases flow resistance, creating a larger pressure drop",
+      "The pipe diameter upstream of the valve physically shrinks",
+      "The supply pressure from the main decreases automatically"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A valve acts as a variable-resistance element. Partially closing it reduces the flow area, increasing the local pressure drop across the valve. With a fixed supply pressure, more pressure is \"used up\" across the valve restriction, leaving less to drive flow \\u2014 so flow rate decreases.",
+    "explanationLine": 131
+  },
+  {
+    "id": "htw-L1-Q12",
+    "type": "multiple-choice",
+    "question": "A sharp kitchen knife cuts more easily than a dull one because:",
+    "options": [
+      "The sharp knife is made of a harder grade of steel",
+      "The thin edge concentrates force over a tiny area, creating high stress",
+      "The sharp blade has a significantly lower friction coefficient",
+      "The sharp edge vibrates at a frequency that breaks molecular bonds"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Stress = Force / Area. A sharp knife edge might be only 0.01 mm wide, concentrating your hand force over a minuscule area. This creates enormous contact stress \\u2014 easily exceeding the food\\",
+    "explanationLine": 156
+  },
+  {
+    "id": "htw-L1-Q13",
+    "type": "true-false",
+    "question": "Ceramic kitchen knives are harder than steel knives but more brittle \\u2014 they hold an edge longer but can shatter if dropped on a hard floor.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Ceramic blades (typically zirconia, ZrO\\u2082) have Vickers hardness around 1200 HV vs. ~600 HV for good steel. But ceramics have near-zero ductility \\u2014 they cannot undergo plastic deformation. This means excellent edge retention but catastrophic brittle fracture under impact or bending loads.",
+    "explanationLine": 164
+  },
+  {
+    "id": "htw-L1-Q14",
+    "type": "multiple-choice",
+    "question": "A knife blade is essentially a wedge. When you push a knife down into food, the wedge converts vertical force into:",
+    "options": [
+      "Axial tension pulling the blade lengthwise",
+      "Lateral forces that push the food apart",
+      "Torsional shear along the cutting edge",
+      "Bending moments across the blade width"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A wedge is an inclined plane that converts axial input force into perpendicular lateral forces. The smaller the wedge angle, the greater the mechanical advantage \\u2014 which is why thin knife blades separate material more easily with less downward force.",
+    "explanationLine": 178
+  },
+  {
+    "id": "htw-L1-Q15",
+    "type": "multiple-choice",
+    "question": "A microwave oven heats food primarily through:",
+    "options": [
+      "Infrared radiation absorbed by the food surface layers",
+      "Convection currents of hot air circulating inside the cavity",
+      "Dielectric heating \\u2014 polar water molecules oscillate in the EM field",
+      "Conduction from the heated magnetron walls into the food"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Microwaves (~2.45 GHz) cause polar molecules (mainly water) to rotate and align with the oscillating electric field billions of times per second. This molecular friction converts electromagnetic energy into thermal energy throughout the food\\",
+    "explanationLine": 194
+  },
+  {
+    "id": "htw-L1-Q16",
+    "type": "true-false",
+    "question": "Microwave ovens can produce hot spots and cold spots in food because the standing electromagnetic waves inside the cavity create nodes (zero amplitude) and antinodes (maximum amplitude).",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The microwave cavity dimensions create standing wave patterns with fixed nodes and antinodes. Food at antinodes gets intense heating; food at nodes gets almost none. This is why microwaves have turntables \\u2014 rotating the food averages out the uneven field pattern.",
+    "explanationLine": 202
+  },
+  {
+    "id": "htw-L1-Q18",
+    "type": "multiple-choice",
+    "question": "Copper-bottomed pots heat food more evenly than plain stainless steel pots because:",
+    "options": [
+      "Copper has a higher melting point, allowing hotter cooking temperatures",
+      "Copper has much higher thermal conductivity, spreading heat laterally across the base",
+      "Copper is lighter, allowing faster heat absorption from the burner",
+      "Copper has higher specific heat capacity, storing more thermal energy"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Copper\\",
+    "explanationLine": 227
+  },
+  {
+    "id": "htw-L1-Q19",
+    "type": "multiple-choice",
+    "question": "When boiling water in a pot, the primary heat transfer mechanism within the water itself is:",
+    "options": [
+      "Conduction between adjacent water molecules throughout the pot",
+      "Radiation emitted from the hot inner walls of the pot",
+      "Natural convection \\u2014 buoyancy-driven circulation of water",
+      "Forced convection from a built-in impeller in the pot"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The pot base heats the bottom water layer, which expands and becomes less dense. Buoyancy causes it to rise while cooler, denser water sinks \\u2014 creating natural convection currents. This circulation distributes heat far faster than conduction alone through the still liquid.",
+    "explanationLine": 241
+  },
+  {
+    "id": "htw-L1-Q20",
+    "type": "multiple-choice",
+    "question": "Fourier\\",
+    "options": [
+      "Double, because more material conducts more heat",
+      "Stay the same, because the temperature difference hasn\\",
+      "Halve, because the temperature gradient dT/dx is cut in half",
+      "Quadruple, because resistance scales with thickness squared"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Fourier\\",
+    "explanationLine": 255
+  },
+  {
+    "id": "htw-L2-Q1",
+    "type": "multiple-choice",
+    "question": "The four strokes of a gasoline engine follow the Otto cycle. Which stroke performs useful work?",
+    "options": [
+      "Intake stroke (piston moves down, air-fuel drawn in)",
+      "Compression stroke (piston moves up, mixture compressed)",
+      "Power stroke (combustion gases expand, pushing piston down)",
+      "Exhaust stroke (piston pushes burnt gases out)"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Only the power (expansion) stroke produces net positive work on the piston. The other three strokes are \"overhead\" \\u2014 intake and exhaust require small pumping work, and compression requires significant work input. The power stroke must produce enough work to cover all three plus deliver useful output.",
+    "explanationLine": 281
+  },
+  {
+    "id": "htw-L2-Q2",
+    "type": "multiple-choice",
+    "question": "The thermal efficiency of an ideal Otto cycle depends primarily on:",
+    "options": [
+      "The fuel type and octane rating",
+      "The compression ratio",
+      "The engine displacement in liters",
+      "The number of cylinders"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For an ideal Otto cycle, thermal efficiency \\u03B7 = 1 - (1/r^(\\u03B3-1)), where r is the compression ratio and \\u03B3 is the specific heat ratio. Higher compression ratio = higher efficiency. This is a pure thermodynamic result \\u2014 it doesn\\",
+    "explanationLine": 295
+  },
+  {
+    "id": "htw-L2-Q3",
+    "type": "true-false",
+    "question": "Diesel engines are more thermally efficient than gasoline engines primarily because they operate at higher compression ratios.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Diesel engines compress only air (no fuel to pre-ignite), allowing compression ratios of 15-22:1 vs. 8-12:1 for gasoline. Since Otto cycle efficiency increases with compression ratio (\\u03B7 = 1 - 1/r^(\\u03B3-1)), diesel engines achieve higher thermal efficiency \\u2014 typically 35-45% vs. 25-35% for gasoline.",
+    "explanationLine": 303
+  },
+  {
+    "id": "htw-L2-Q5",
+    "type": "multiple-choice",
+    "question": "A car suspension consists of a spring and a shock absorber (damper) in parallel. The damper\\",
+    "options": [
+      "Support the static weight of the car on each corner",
+      "Increase the natural frequency of the suspension system",
+      "Dissipate vibrational energy as heat to prevent bouncing",
+      "Reduce the effective spring rate to improve ride comfort"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The spring supports the car\\",
+    "explanationLine": 328
+  },
+  {
+    "id": "htw-L2-Q6",
+    "type": "multiple-choice",
+    "question": "A car suspension is designed to be underdamped. What does this mean in vibration terms?",
+    "options": [
+      "The system returns to equilibrium without any oscillation or overshoot",
+      "The system oscillates with gradually decreasing amplitude before settling",
+      "The system oscillates with constant amplitude indefinitely (no decay)",
+      "The system returns to equilibrium as fast as possible with no oscillation"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "An underdamped system (damping ratio \\u03B6 < 1) oscillates with exponentially decaying amplitude. This gives the best ride comfort \\u2014 it absorbs bumps quickly but allows a small amount of controlled oscillation. Overdamped (\\u03B6 > 1) feels harsh; critically damped (\\u03B6 = 1) is fastest without oscillation but too stiff for comfort.",
+    "explanationLine": 342
+  },
+  {
+    "id": "htw-L2-Q8",
+    "type": "multiple-choice",
+    "question": "When you press the brake pedal and the car decelerates from 100 km/h to 0, the kinetic energy of the car is:",
+    "options": [
+      "Destroyed according to Newton\\",
+      "Converted to heat in the pads and rotors via friction",
+      "Stored in the brake fluid as recoverable pressure energy",
+      "Returned to the engine crankshaft as regenerative EMF"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "By conservation of energy, the car\\",
+    "explanationLine": 367
+  },
+  {
+    "id": "htw-L2-Q9",
+    "type": "true-false",
+    "question": "Disc brakes are preferred over drum brakes for front axles because disc brakes dissipate heat more effectively \\u2014 the rotor is exposed to airflow on both sides.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Disc brakes have an exposed rotor swept by ambient air on both faces, giving excellent convective heat dissipation. Drum brakes enclose the friction surfaces inside a drum, trapping heat. Since front brakes handle 60-70% of braking force (due to weight transfer), they need superior cooling \\u2014 hence disc brakes up front.",
+    "explanationLine": 375
+  },
+  {
+    "id": "htw-L2-Q10",
+    "type": "multiple-choice",
+    "question": "Braking force between the tire and road depends on the friction equation F = \\u03BCN. During hard braking with weight transfer to the front, the front brakes can generate more stopping force because:",
+    "options": [
+      "Front brake pads have a higher friction coefficient material",
+      "Normal force N on the front tires increases due to weight transfer",
+      "The front wheels spin faster than the rear wheels during braking",
+      "The front tires have a larger contact patch area by design"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "During deceleration, the car\\",
+    "explanationLine": 389
+  },
+  {
+    "id": "htw-L2-Q11",
+    "type": "multiple-choice",
+    "question": "In first gear, a transmission provides high torque but low speed at the wheels. This is because:",
+    "options": [
+      "The engine produces more power when operating in first gear",
+      "A small engine gear drives a large output gear, multiplying torque at the cost of speed",
+      "The clutch slips more in first gear, adding torque through friction",
+      "First gear bypasses the differential for direct power transfer"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "In first gear, a small engine gear meshes with a large output gear. The gear ratio (N_driven/N_driver > 1) multiplies engine torque by the ratio but divides speed by the same ratio. Power is conserved (P = T\\u03C9), so you trade speed for torque \\u2014 essential for accelerating from a stop.",
+    "explanationLine": 405
+  },
+  {
+    "id": "htw-L2-Q13",
+    "type": "true-false",
+    "question": "An automatic transmission\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "A torque converter uses three elements: impeller (pump), turbine, and stator. At low speed ratios, the stator redirects fluid exiting the turbine back into the impeller at a favorable angle, multiplying torque by up to 2-3x. At cruise speed, the torque converter locks up for direct mechanical coupling and efficiency.",
+    "explanationLine": 422
+  },
+  {
+    "id": "htw-L2-Q14",
+    "type": "multiple-choice",
+    "question": "The contact patch (tire footprint) is the area where the tire touches the road. For a tire supporting 4000 N of load inflated to 200 kPa, the approximate contact patch area is:",
+    "options": [
+      "20 cm\\u00B2 — about the area of a large coin",
+      "200 cm\\u00B2 — about the area of a postcard",
+      "2000 cm\\u00B2 — about the area of a newspaper",
+      "2 cm\\u00B2 — about the area of a fingertip"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The contact patch area approximately equals the load divided by inflation pressure: A = F/P = 4000 N / 200,000 Pa = 0.02 m\\u00B2 = 200 cm\\u00B2. This is roughly the size of a postcard \\u2014 a surprisingly small area connecting a 1500 kg car to the road. All acceleration, braking, and turning forces pass through these four patches.",
+    "explanationLine": 438
+  },
+  {
+    "id": "htw-L2-Q15",
+    "type": "multiple-choice",
+    "question": "Hydroplaning occurs when a car drives through standing water and the tires lose contact with the road. From a fluid mechanics perspective, this happens because:",
+    "options": [
+      "Water lubricates the rubber, reducing the friction coefficient to zero",
+      "A water wedge builds faster than the tread can drain it, lifting the tire",
+      "Water increases tire temperature via friction, causing the rubber to soften",
+      "Water freezes under contact pressure, creating a thin ice layer on the road"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "At high speed, the tire cannot displace water fast enough through its tread grooves. Hydrodynamic pressure builds in the water wedge ahead of the contact patch, eventually exceeding the tire\\",
+    "explanationLine": 452
+  },
+  {
+    "id": "htw-L2-Q17",
+    "type": "multiple-choice",
+    "question": "Power steering reduces the effort needed to turn the wheel. In a hydraulic power steering system, the assist comes from:",
+    "options": [
+      "An electric motor directly turning the steering column shaft",
+      "Pressurized hydraulic fluid acting on a piston in the rack, amplifying input",
+      "A planetary gear reducer placed between the steering wheel and the rack",
+      "Reduced friction from ceramic bearings in the steering knuckle joints"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Hydraulic power steering uses an engine-driven pump to pressurize fluid. When you turn the wheel, a rotary valve directs pressurized fluid to one side of a piston in the rack housing, adding hydraulic force to your steering effort. Pascal\\",
+    "explanationLine": 477
+  },
+  {
+    "id": "htw-L2-Q18",
+    "type": "multiple-choice",
+    "question": "Ackermann steering geometry ensures that during a turn:",
+    "options": [
+      "Both front wheels turn at exactly the same steering angle",
+      "The inner wheel turns more than the outer, sharing a common turn center",
+      "The rear wheels also turn slightly to reduce the turning radius",
+      "The steering gear ratio changes automatically with vehicle speed"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "In a turn, the inner wheel traces a tighter arc than the outer wheel. If both turned at the same angle, the inner tire would scrub (slip sideways). Ackermann geometry angles the steering arms so the inner wheel turns more, ensuring all four wheels rotate about a common instantaneous center \\u2014 eliminating tire scrub.",
+    "explanationLine": 491
+  },
+  {
+    "id": "htw-L2-Q19",
+    "type": "multiple-choice",
+    "question": "An exhaust manifold experiences significant thermal expansion because exhaust gases can reach 700-900\\u00B0C. Engineers accommodate this expansion by:",
+    "options": [
+      "Making the manifold from a special alloy with zero thermal expansion",
+      "Using flexible joints or bellows sections that absorb dimensional changes",
+      "Cooling the manifold to room temperature before it exits the engine bay",
+      "Bolting the manifold rigidly at every point to prevent any movement"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Thermal expansion (\\u0394L = \\u03B1 \\u00B7 L \\u00B7 \\u0394T) is unavoidable. A 0.5 m steel manifold heating by 700\\u00B0C expands about 4 mm. Rigid mounting would create enormous thermal stresses leading to cracking. Flexible joints and bellows sections allow the manifold to expand freely, preventing thermally-induced fatigue failure.",
+    "explanationLine": 507
+  },
+  {
+    "id": "htw-L2-Q20",
+    "type": "true-false",
+    "question": "Excessive exhaust backpressure reduces engine performance because it increases the pumping work the engine must do during the exhaust stroke, leaving less net work available at the crankshaft.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "During the exhaust stroke, the piston pushes burnt gases out against the exhaust system\\",
+    "explanationLine": 515
+  }
+]

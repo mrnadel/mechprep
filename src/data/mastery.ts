@@ -9,6 +9,8 @@ export interface AnswerEvent {
   correct: boolean;
   source: 'practice' | 'course';
   answeredAt: string;
+  /** Original option index the user selected (for distractor analytics). */
+  selectedIndex?: number;
 }
 
 interface MasteryScore {

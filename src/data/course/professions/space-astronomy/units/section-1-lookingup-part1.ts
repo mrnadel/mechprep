@@ -34,6 +34,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Earth is a planet that orbits a star called the Sun.",
             correctAnswer: true,
             explanation: "Earth is the third planet from the Sun, completing one orbit every 365.25 days.",
+            distractorExplanations: {
+              1: 'Earth clearly orbits the Sun, as confirmed by centuries of astronomical observation and space missions.',
+            },
           },
           {
             id: "sp-sec1-u1-L1-Q2",
@@ -47,6 +50,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Sun is a star. It produces its own light and heat through nuclear reactions in its core.",
+            distractorExplanations: {
+              1: 'The Sun is not a planet and is not made of fire; it generates energy through nuclear fusion.',
+              2: 'Moons reflect light rather than produce it, and the Sun generates its own light.',
+              3: 'Comets are small icy bodies that orbit the Sun; the Sun is a star, not a comet.',
+            },
           },
           {
             id: "sp-sec1-u1-L1-T2",
@@ -89,6 +97,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Under perfect conditions, the human eye can see roughly 2,500 stars. Light pollution reduces that number dramatically in cities.",
+            distractorExplanations: {
+              0: 'Fifty stars is far too few; even moderately light-polluted skies show more than that.',
+              1: 'One million stars is far beyond what the unaided eye can resolve; most are too faint to see.',
+              2: 'Four hundred billion is the estimated number of stars in the Milky Way, not the number visible to the naked eye.',
+            },
           },
           {
             id: "sp-sec1-u1-L1-Q6",
@@ -123,6 +136,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Every bright dot in the night sky is a star.",
             correctAnswer: false,
             explanation: "Some bright dots are planets, satellites, or even the International Space Station. Stars are the most common, but not the only option.",
+            distractorExplanations: {
+              0: 'Planets, satellites, and meteors also appear as bright dots, so not every light is a star.',
+            },
           },
           {
             id: "sp-sec1-u1-L2-Q2",
@@ -136,6 +152,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Stars generate light through nuclear fusion in their cores. Planets only shine by reflecting light from their parent star.",
+            distractorExplanations: {
+              1: 'Stars do not orbit planets; planets orbit stars.',
+              2: 'Stars come in many colors including red, yellow, and white, not just blue.',
+              3: 'Stars are generally much larger than planets, not smaller.',
+            },
           },
           {
             id: "sp-sec1-u1-L2-T2",
@@ -178,6 +199,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Moon has no light of its own. Its glow is sunlight bouncing off its surface toward us.",
+            distractorExplanations: {
+              0: 'The Moon has no internal energy source to produce its own light.',
+              1: 'The Moon does not absorb and re-emit starlight; it reflects sunlight.',
+              3: 'While Earth does reflect some light onto the Moon (Earthshine), the Moon\'s primary brightness comes from reflecting sunlight.',
+            },
           },
           {
             id: "sp-sec1-u1-L2-Q6",
@@ -192,6 +218,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Planets appear as steady lights because they're close enough to appear as tiny discs. Stars twinkle because their pinpoint light gets bent by our atmosphere.",
+            distractorExplanations: {
+              0: 'Meteors are fast streaks across the sky, not steady bright objects.',
+              2: 'Distant galaxies are far too faint to appear as a single bright dot to the naked eye.',
+              3: 'The North Star is not the brightest star in the sky, and its lack of twinkling wouldn\'t distinguish it from other stars at a glance.',
+            },
           },
         ],
       },
@@ -217,6 +248,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Light pollution makes it harder to see stars at night.",
             correctAnswer: true,
             explanation: "Artificial light from cities scatters in the atmosphere and washes out the fainter stars, reducing what you can see.",
+            distractorExplanations: {
+              1: 'Light pollution is one of the biggest obstacles to stargazing, washing out all but the brightest stars.',
+            },
           },
           {
             id: "sp-sec1-u1-L3-Q2",
@@ -230,6 +264,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Heavy light pollution reduces visible stars from about 2,500 (dark sky) to just a few dozen in large cities.",
+            distractorExplanations: {
+              0: 'About 2,500 is the number visible under dark skies, not in a light-polluted city.',
+              1: 'One hundred thousand far exceeds what the naked eye can see even under perfect conditions.',
+              3: 'Even in the worst light pollution you can still see a handful of the brightest stars and planets.',
+            },
           },
           {
             id: "sp-sec1-u1-L3-T2",
@@ -249,6 +288,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Getting away from artificial light is the single most effective way to see more of the night sky. No equipment needed.",
+            distractorExplanations: {
+              0: 'An expensive telescope helps magnify objects but won\'t overcome light pollution blocking faint stars.',
+              1: 'Special star events are rare and not needed to see more stars on any clear night.',
+              2: 'Binoculars in the city still face light pollution, which is the main barrier to seeing more stars.',
+            },
           },
           {
             id: "sp-sec1-u1-L3-Q4",
@@ -285,6 +329,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Red light has the least effect on your dark-adapted eyes. White or blue light resets your night vision, and you'd have to wait another 20 to 30 minutes to readapt.",
+            distractorExplanations: {
+              0: 'Red light is actually dimmer and harder to see by, which is precisely why it doesn\'t disrupt night vision.',
+              1: 'Red light has no special effect on insects; its value is preserving dark adaptation.',
+              2: 'Red light doesn\'t change how stars appear; it simply avoids resetting your eyes\' sensitivity.',
+            },
           },
         ],
       },
@@ -310,6 +359,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Regular units like kilometers work fine for measuring distances between stars.",
             correctAnswer: false,
             explanation: "The numbers get absurdly large. The nearest star is about 40 trillion km away. Astronomers use special units like light-years instead.",
+            distractorExplanations: {
+              0: 'Interstellar distances in kilometers produce numbers in the trillions, making them impractical to work with.',
+            },
           },
           {
             id: "sp-sec1-u1-L4-Q2",
@@ -323,6 +375,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At marble-Earth scale, the Sun would be a beach ball about 150 meters away. Even our own solar system is enormous.",
+            distractorExplanations: {
+              0: 'Even at marble scale the Sun would be far away, not right next to Earth.',
+              1: 'The other side of your city is too far for this scale model; 150 meters is the correct distance.',
+              3: 'The other side of the planet would represent a much greater distance than the Earth-Sun gap at this scale.',
+            },
           },
           {
             id: "sp-sec1-u1-L4-T2",
@@ -350,6 +407,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "At 4.2 light-years away, light from Proxima Centauri takes 4.2 years to reach Earth. You see it as it was 4.2 years ago.",
+            distractorExplanations: {
+              0: 'Light-years measure distance, not how long a star will last before burning out.',
+              1: 'Light-years have nothing to do with brightness; they describe how far away something is.',
+              2: 'A light-year is not about relative motion; it describes the distance light covers in a year.',
+            },
           },
           {
             id: "sp-sec1-u1-L4-T3",
@@ -378,6 +440,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Light from a star 100 light-years away takes 100 years to reach Earth. You're seeing that star as it looked a century ago.",
+            distractorExplanations: {
+              1: 'Light does not arrive instantly; it travels at a finite speed of about 300,000 km per second.',
+              2: 'You don\'t need a telescope to see the star, but its light still takes 100 years to arrive regardless of equipment.',
+              3: 'Light-years measure distance, not brightness, so this answer confuses the units.',
+            },
           },
         ],
       },
@@ -415,6 +482,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Stars twinkle because of Earth's atmosphere bending their light.",
             correctAnswer: true,
             explanation: "Twinkling (scintillation) happens when atmospheric layers at different temperatures refract the starlight. Stars themselves shine steadily.",
+            distractorExplanations: {
+              1: 'Stars do twinkle from Earth\'s surface precisely because our atmosphere bends their light unpredictably.',
+            },
           },
           {
             id: "sp-sec1-u2-L1-Q2",
@@ -442,6 +512,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Blue stars have higher surface temperatures than red stars. Color is a direct indicator of temperature.",
+            distractorExplanations: {
+              1: 'Blue stars can actually be much larger than red stars; color indicates temperature, not size.',
+              2: 'Star color reflects temperature, not age; young and old stars can be either color.',
+              3: 'Blue stars are hotter than red stars, not cooler; the color-temperature relationship is the opposite.',
+            },
           },
           {
             id: "sp-sec1-u2-L1-Q4",
@@ -469,6 +544,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Apparent brightness depends on both distance and actual luminosity. You can't determine one without knowing the other.",
+            distractorExplanations: {
+              1: 'A star appearing brighter doesn\'t guarantee it\'s larger; a small nearby star can outshine a distant giant.',
+              2: 'Brightness alone doesn\'t prove a star is closer; it could simply be more luminous.',
+              3: 'Star B could be closer but less luminous, so you can\'t conclude it\'s definitely farther away.',
+            },
           },
           {
             id: "sp-sec1-u2-L1-Q6",
@@ -502,6 +582,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Planets appear to twinkle just like stars do.",
             correctAnswer: false,
             explanation: "Planets are close enough to appear as tiny discs, not pinpoints. Their light is steady, while stars twinkle.",
+            distractorExplanations: {
+              0: 'Planets shine with a steady light because they appear as tiny discs, unlike the pinpoint light of stars that twinkles.',
+            },
           },
           {
             id: "sp-sec1-u2-L2-Q2",
@@ -515,6 +598,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Planets are close enough to show a small disc of light. The atmosphere can't scramble that larger image the way it scrambles a star's pinpoint.",
+            distractorExplanations: {
+              0: 'Planets don\'t produce their own light; they reflect sunlight, but that\'s not why they don\'t twinkle.',
+              2: 'Stars are also outside our atmosphere yet still twinkle, so being outside the atmosphere isn\'t the reason.',
+              3: 'Planets don\'t move fast enough across the sky in real time to affect twinkling.',
+            },
           },
           {
             id: "sp-sec1-u2-L2-T2",
@@ -534,6 +622,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Venus is the brightest planet as seen from Earth. It's so bright it's often mistaken for an airplane.",
+            distractorExplanations: {
+              0: 'Mars can be bright but is typically much dimmer than Venus due to its smaller size and greater distance.',
+              1: 'Jupiter is the second-brightest planet but still not as bright as Venus in the night sky.',
+              2: 'Saturn is visible but significantly fainter than Venus, Jupiter, and often Mars.',
+            },
           },
           {
             id: "sp-sec1-u2-L2-Q4",
@@ -571,6 +664,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Planets gradually change position against the background stars over days and weeks. This 'wandering' is how ancient people first identified them.",
+            distractorExplanations: {
+              0: 'Planets do not stay in exactly the same spot; they visibly shift position over days and weeks.',
+              1: 'Planets don\'t disappear randomly; their movement is gradual and predictable along the ecliptic.',
+              3: 'Planets don\'t move in a perfect circle each night; their motion is a slow drift against the star background.',
+            },
           },
         ],
       },
@@ -594,6 +692,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Satellites blink on and off like airplane lights.",
             correctAnswer: false,
             explanation: "Satellites appear as steady dots of light moving smoothly across the sky. Airplanes have blinking navigation lights, which is how you tell them apart.",
+            distractorExplanations: {
+              0: 'Satellites reflect sunlight steadily and do not have blinking navigation lights like airplanes.',
+            },
           },
           {
             id: "sp-sec1-u2-L3-Q2",
@@ -607,6 +708,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Satellites move in a smooth, steady line and don't blink. Airplanes have flashing lights and may change direction.",
+            distractorExplanations: {
+              0: 'Satellites are not always red; they appear as white dots reflecting sunlight.',
+              1: 'Satellites are not always brighter than airplanes; many are quite dim.',
+              2: 'Satellites can appear anywhere in the sky, not just near the Moon.',
+            },
           },
           {
             id: "sp-sec1-u2-L3-T2",
@@ -635,6 +741,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The ISS has huge solar panels that reflect sunlight. You see it when it's in sunlight while your location is in darkness.",
+            distractorExplanations: {
+              0: 'The ISS does not have headlights aimed at Earth; its visibility comes from reflected sunlight.',
+              1: 'The ISS does not broadcast visible laser beams; it shines by reflecting sunlight off its panels.',
+              3: 'The ISS uses electric propulsion only occasionally for reboosts, and its engines don\'t produce visible light.',
+            },
           },
           {
             id: "sp-sec1-u2-L3-T3",
@@ -655,6 +766,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Satellites vanish mid-pass when they enter Earth's shadow. No sunlight to reflect means no visible light.",
+            distractorExplanations: {
+              0: 'Satellites don\'t crash that frequently; a sudden disappearance is simply the satellite entering Earth\'s shadow.',
+              2: 'Satellites move at a consistent speed and don\'t suddenly accelerate beyond what your eyes can track.',
+              3: 'The Moon is tiny compared to the sky, and a satellite vanishing mid-sky is almost never due to passing behind it.',
+            },
           },
           {
             id: "sp-sec1-u2-L3-Q6",
@@ -687,6 +803,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "If a bright object in the sky doesn't twinkle and doesn't move, it's likely a planet.",
             correctAnswer: true,
             explanation: "Planets shine with a steady light (no twinkle) and appear stationary during a single night of observation, just like stars but without the flicker.",
+            distractorExplanations: {
+              1: 'A bright, steady, stationary object is characteristic of a planet; saying false ignores a key identification rule.',
+            },
           },
           {
             id: "sp-sec1-u2-L4-Q2",
@@ -724,6 +843,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A bright, steady, non-moving object near the Sun's path after sunset is almost certainly Venus or another bright planet. Venus is often called the 'evening star.'",
+            distractorExplanations: {
+              1: 'Red giant stars are not typically the brightest objects low on the western horizon right after sunset.',
+              2: 'Satellites move steadily across the sky and don\'t remain stationary for 10 minutes.',
+              3: 'Airplanes have blinking lights and would move noticeably during 10 minutes of observation.',
+            },
           },
           {
             id: "sp-sec1-u2-L4-Q5",
@@ -737,6 +861,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Steady, non-blinking motion in a straight line is classic satellite behavior. The fade-out happens when it enters Earth's shadow.",
+            distractorExplanations: {
+              1: 'Planets don\'t move visibly across the sky in minutes; they appear stationary during a single viewing session.',
+              2: 'Meteors last only a second or two as bright streaks, not 4 minutes of steady motion.',
+              3: 'Stars don\'t move independently across the sky; the whole sky rotates together very slowly.',
+            },
           },
           {
             id: "sp-sec1-u2-L4-T3",
@@ -757,6 +886,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Nothing in the sky both twinkles and moves in a straight line. Stars twinkle but don't move. Satellites move but don't twinkle. This combination doesn't match any known object.",
+            distractorExplanations: {
+              1: 'A steady light moving in a straight line describes a satellite, which is a real combination.',
+              2: 'A blinking light that changes direction describes an airplane, which is perfectly possible.',
+              3: 'A twinkling light that stays in place is exactly what a star does, so this is not impossible.',
+            },
           },
         ],
       },
@@ -781,6 +915,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "A full moon night is the best time for stargazing.",
             correctAnswer: false,
             explanation: "A full moon is very bright and washes out fainter stars. New moon nights are best because the sky is darkest.",
+            distractorExplanations: {
+              0: 'A full moon floods the sky with light, hiding faint stars and the Milky Way, making it the worst phase for stargazing.',
+            },
           },
           {
             id: "sp-sec1-u2-L5-Q2",
@@ -808,6 +945,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Start with bright, easy targets. As your eyes adapt, you'll gradually see fainter objects.",
+            distractorExplanations: {
+              0: 'Faint stars near the horizon are the hardest to see and a poor starting point for beginners.',
+              1: 'Distant galaxies are far too faint for beginners and require telescopes or very dark skies.',
+              3: 'Meteor showers are unpredictable and don\'t appear on demand, so they\'re not a reliable starting point.',
+            },
           },
           {
             id: "sp-sec1-u2-L5-Q4",
@@ -822,6 +964,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Downtown locations have heavy light pollution. Even on a perfect clear, moonless night, city lights will hide most stars. A dark location farther from the city center would be much better.",
+            distractorExplanations: {
+              0: 'A new moon actually provides the darkest skies, which is ideal for stargazing.',
+              2: 'Rooftop height is not a problem; the issue is surrounding city light pollution.',
+              3: 'Clear skies are excellent for stargazing; the problem here is the downtown location.',
+            },
           },
           {
             id: "sp-sec1-u2-L5-T3",
@@ -850,6 +997,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A dark sky makes more difference than any piece of equipment. Under truly dark skies, the naked eye reveals an incredible amount.",
+            distractorExplanations: {
+              0: 'A telescope helps but is useless under light-polluted skies; dark skies matter far more.',
+              1: 'Star-finding apps are helpful tools but don\'t improve the actual visibility of stars in the sky.',
+              2: 'Experienced companions can teach you, but the sky conditions matter most for what you\'ll actually see.',
+            },
           },
         ],
       },
@@ -887,6 +1039,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "The stars in a constellation are actually close together in space.",
             correctAnswer: false,
             explanation: "Stars in a constellation only appear close from Earth's perspective. They're usually at very different distances from us, sometimes hundreds of light-years apart.",
+            distractorExplanations: {
+              0: 'Constellation stars only appear grouped from Earth; they are typically at vastly different distances from us.',
+            },
           },
           {
             id: "sp-sec1-u3-L1-Q2",
@@ -900,6 +1055,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The International Astronomical Union recognizes 88 constellations that together cover the entire sky.",
+            distractorExplanations: {
+              0: 'Twelve is the number of zodiac constellations, not the total count of all recognized constellations.',
+              2: 'Forty-eight was Ptolemy\'s original list from ancient times; the modern count is 88.',
+              3: 'Two hundred is far too many; the IAU recognizes exactly 88 constellations.',
+            },
           },
           {
             id: "sp-sec1-u3-L1-T2",
@@ -920,6 +1080,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Constellation stars appear close only from our viewpoint. Betelgeuse in Orion is about 700 light-years away, while Rigel is about 860 light-years away. They're not neighbors at all.",
+            distractorExplanations: {
+              0: 'Constellation stars are not real clusters; they just appear grouped from our perspective on Earth.',
+              1: 'There is no evidence that constellation stars are close but moving apart; they were never close to begin with.',
+              2: 'Stars in a constellation do not orbit each other; they are at completely different distances in space.',
+            },
           },
           {
             id: "sp-sec1-u3-L1-Q4",
@@ -947,6 +1112,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Constellations define areas of the sky. An object 'in Leo' is simply in that direction as seen from Earth, regardless of its actual distance.",
+            distractorExplanations: {
+              0: 'A galaxy described as "in Leo" isn\'t physically inside the constellation\'s stars; it\'s simply in that direction from Earth.',
+              1: 'Constellations are named after mythological figures and animals, not their discoverers.',
+              2: 'Being "in Leo" refers to sky position, not the shape of the object.',
+            },
           },
           {
             id: "sp-sec1-u3-L1-Q6",
@@ -980,6 +1150,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Orion's Belt is a line of three stars.",
             correctAnswer: true,
             explanation: "Three roughly evenly spaced stars in a straight line form Orion's Belt. It's one of the most distinctive features in the night sky.",
+            distractorExplanations: {
+              1: 'Orion\'s Belt is indeed a line of three stars, making it one of the easiest patterns to recognize in the sky.',
+            },
           },
           {
             id: "sp-sec1-u3-L2-Q2",
@@ -1008,6 +1181,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The two 'pointer stars' at the end of the Big Dipper's cup aim toward Polaris. Follow that line about 5 times the distance between those two stars.",
+            distractorExplanations: {
+              0: 'The brightest star in the Big Dipper is not Polaris; Polaris is a separate star in Ursa Minor.',
+              1: 'Looking below the handle won\'t lead to Polaris; you need to follow the pointer stars at the cup\'s end.',
+              3: 'Polaris is not the star closest to the horizon; its height depends on your latitude.',
+            },
           },
           {
             id: "sp-sec1-u3-L2-Q4",
@@ -1035,6 +1213,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Southern Cross points toward the south celestial pole, making it the Southern Hemisphere's key navigation constellation.",
+            distractorExplanations: {
+              1: 'The Big Dipper is a Northern Hemisphere constellation and is not visible from most southern latitudes.',
+              2: 'Orion is visible from both hemispheres but doesn\'t specifically point toward the south celestial pole.',
+              3: 'Cassiopeia is a Northern Hemisphere circumpolar constellation, not useful for finding south.',
+            },
           },
           {
             id: "sp-sec1-u3-L2-Q6",
@@ -1049,6 +1232,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Orion is visible in winter from the Northern Hemisphere and is one of the easiest constellations to identify thanks to the obvious belt of three stars.",
+            distractorExplanations: {
+              0: 'The Southern Cross is not visible from the Northern Hemisphere, so it can\'t be recommended for someone there.',
+              1: 'Scorpius is a summer constellation and is not visible on a winter evening in the Northern Hemisphere.',
+              3: 'Ursa Minor is harder to find than Orion because its stars are much fainter and less distinctive.',
+            },
           },
         ],
       },
@@ -1073,6 +1261,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "The celestial sphere is a real physical structure surrounding Earth.",
             correctAnswer: false,
             explanation: "The celestial sphere is an imaginary model. It helps astronomers describe positions in the sky, but no actual sphere exists.",
+            distractorExplanations: {
+              0: 'The celestial sphere is purely a conceptual tool for mapping the sky, not a physical structure.',
+            },
           },
           {
             id: "sp-sec1-u3-L3-Q2",
@@ -1086,6 +1277,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The celestial sphere is a coordinate system. It lets astronomers say exactly where an object is in the sky, like latitude and longitude on Earth.",
+            distractorExplanations: {
+              0: 'The celestial sphere doesn\'t contain stars; it\'s an imaginary reference frame for describing positions.',
+              1: 'The celestial sphere has no physical role in preventing anything; it\'s a conceptual model.',
+              2: 'The celestial sphere doesn\'t create a boundary; it\'s a coordinate system for mapping sky positions.',
+            },
           },
           {
             id: "sp-sec1-u3-L3-T2",
@@ -1143,6 +1339,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Earth's rotation makes the sky appear to turn. Stars seem to rise in the east and set in the west, just like the Sun.",
+            distractorExplanations: {
+              0: 'Stars do not orbit Earth; the apparent motion is caused by Earth spinning on its axis.',
+              1: 'The Moon\'s gravity affects tides but does not push stars across the sky.',
+              3: 'Stars are not pulled by the Sun from east to west; their apparent motion is due to Earth\'s rotation.',
+            },
           },
           {
             id: "sp-sec1-u3-L3-Q6",
@@ -1157,6 +1358,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Long-exposure photos show star trails. Earth's rotation during the exposure makes every star trace a circular arc around the celestial pole.",
+            distractorExplanations: {
+              0: 'Stars do not orbit Polaris; the circular trails are caused by Earth\'s rotation during the exposure.',
+              2: 'Camera shake would produce random blurs, not the neat concentric circles seen in star trail photos.',
+              3: 'Stars are not moving toward Polaris; they appear to circle around the celestial pole due to Earth\'s spin.',
+            },
           },
         ],
       },
@@ -1180,6 +1386,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Polaris indicates the direction north in the Northern Hemisphere.",
             correctAnswer: true,
             explanation: "Polaris sits very close to the north celestial pole. If you face Polaris, you're facing almost exactly north.",
+            distractorExplanations: {
+              1: 'Polaris is nearly aligned with the north celestial pole and reliably indicates north in the Northern Hemisphere.',
+            },
           },
           {
             id: "sp-sec1-u3-L4-Q2",
@@ -1193,6 +1402,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Face Polaris for north. South is behind you. East is to your right and west is to your left.",
+            distractorExplanations: {
+              1: 'If you face Polaris, north is ahead of you, not behind you.',
+              2: 'Knowing north from Polaris automatically gives you all four cardinal directions.',
+              3: 'There is no magnetic pull you can feel; navigation by Polaris is visual.',
+            },
           },
           {
             id: "sp-sec1-u3-L4-T2",
@@ -1213,6 +1427,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The altitude of Polaris in degrees equals your latitude in the Northern Hemisphere. 40 degrees above the horizon means you're at roughly 40 degrees north latitude.",
+            distractorExplanations: {
+              0: 'Ten degrees north would mean Polaris is only 10 degrees above the horizon, not 40.',
+              1: 'Polaris is only visible from the Northern Hemisphere, so 40 degrees south is impossible.',
+              3: 'At 80 degrees north, Polaris would appear 80 degrees above the horizon, not 40.',
+            },
           },
           {
             id: "sp-sec1-u3-L4-Q4",
@@ -1241,6 +1460,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A rising star means you're looking toward the east. Stars rise in the east due to Earth's rotation.",
+            distractorExplanations: {
+              1: 'Facing south, stars would arc sideways (right to left in the Northern Hemisphere), not rise.',
+              2: 'Facing north, stars would circle horizontally around Polaris, not rise upward.',
+              3: 'Facing west, stars would be descending toward the horizon, not rising.',
+            },
           },
           {
             id: "sp-sec1-u3-L4-Q6",
@@ -1273,6 +1497,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "The same constellations are visible every night of the year.",
             correctAnswer: false,
             explanation: "Earth's orbit changes which part of the sky faces away from the Sun at night. Some constellations are seasonal.",
+            distractorExplanations: {
+              0: 'Earth\'s orbit around the Sun means different constellations face us at night in different months.',
+            },
           },
           {
             id: "sp-sec1-u3-L5-Q2",
@@ -1286,6 +1513,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "As Earth moves around the Sun, our nighttime view faces different parts of space. Constellations behind the Sun are invisible because the Sun outshines them during the day.",
+            distractorExplanations: {
+              0: 'Stars don\'t migrate; they appear to shift because Earth moves around the Sun, changing our viewpoint.',
+              1: 'Constellations don\'t change their own brightness; they disappear because the Sun blocks our view of them.',
+              2: 'While the Sun does block certain constellations, the fundamental cause is Earth\'s changing orbital position.',
+            },
           },
           {
             id: "sp-sec1-u3-L5-T2",
@@ -1329,6 +1561,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your zodiac constellation is behind the Sun during your birthday month, meaning it rises and sets with the Sun and is washed out by daylight.",
+            distractorExplanations: {
+              0: 'Zodiac constellations don\'t disappear for years; they\'re only hidden for about a month when the Sun is in front of them.',
+              2: 'Zodiac constellations are not too faint; they\'re hidden because the Sun outshines them during the day.',
+              3: 'All zodiac constellations exist and are visible at other times of year, just not during your birth month.',
+            },
           },
           {
             id: "sp-sec1-u3-L5-Q6",
@@ -1382,6 +1619,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A light-year is a unit of distance, not time. It's about 9.46 trillion km.",
+            distractorExplanations: {
+              0: 'This describes light travel time, not what a light-year measures; a light-year is a distance unit.',
+              2: 'A light-year has nothing to do with brightness; it measures distance.',
+              3: 'A light-year is not a measure of age; it tells you how far light travels in one year.',
+            },
           },
           {
             id: "sp-sec1-u4-L1-Q3",
@@ -1406,6 +1648,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "The Moon produces its own light.",
             correctAnswer: false,
             explanation: "The Moon shines by reflecting sunlight. It has no internal light source.",
+            distractorExplanations: {
+              0: 'The Moon has no internal energy source for light production; it only reflects sunlight.',
+            },
           },
           {
             id: "sp-sec1-u4-L1-Q6",
@@ -1429,6 +1674,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Bright, steady, non-moving, and near the western horizon after sunset is classic Venus behavior. Venus is often called the 'evening star.'",
+            distractorExplanations: {
+              0: 'Satellites move across the sky and don\'t stay in one spot for 10 minutes.',
+              1: 'Distant galaxies are far too faint to appear as a single bright object to the naked eye.',
+              3: 'Meteors are brief streaks lasting seconds and cannot hover in place.',
+            },
           },
           {
             id: "sp-sec1-u4-L1-Q8",
@@ -1442,6 +1692,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Red light has the least impact on your dark-adapted eyes. White light resets your night vision, requiring another 20 to 30 minutes to readapt.",
+            distractorExplanations: {
+              0: 'Red light does not attract owls; its purpose is to preserve the astronomer\'s night vision.',
+              1: 'Red light has no effect on how bright stars appear; it simply avoids disrupting dark adaptation.',
+              3: 'Battery power is not the reason; red light is chosen because it doesn\'t reset night vision.',
+            },
           },
           {
             id: "sp-sec1-u4-L1-Q9",
@@ -1455,6 +1710,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Under ideal dark-sky conditions, the human eye can see roughly 2,500 stars at any one time.",
+            distractorExplanations: {
+              1: 'Five hundred is closer to what you might see from a suburban area, not a truly dark site.',
+              2: 'About 50 is more typical of a heavily light-polluted city, not a dark sky.',
+              3: 'One million is far beyond what the naked eye can see; most stars are too faint.',
+            },
           },
           {
             id: "sp-sec1-u4-L1-Q10",
@@ -1468,6 +1728,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The ISS reflects sunlight off its large solar panels. You see it when it's sunlit while your location is in Earth's shadow.",
+            distractorExplanations: {
+              0: 'The ISS has no headlights; it\'s visible because sunlight reflects off its solar panels.',
+              1: 'The ISS doesn\'t emit visible radio waves; its brightness comes from reflected sunlight.',
+              2: 'The ISS maintains orbit with periodic reboosts, but its engines don\'t produce a visible glow.',
+            },
           },
         ],
       },
@@ -1485,6 +1750,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "Stars in a constellation are always close together in space.",
             correctAnswer: false,
             explanation: "Stars in a constellation only appear close from Earth's viewpoint. They can be at vastly different distances from us.",
+            distractorExplanations: {
+              0: 'Constellation stars are at vastly different distances and only appear grouped from our viewpoint on Earth.',
+            },
           },
           {
             id: "sp-sec1-u4-L2-Q2",
@@ -1506,6 +1774,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The two stars at the end of the Big Dipper's cup point toward Polaris, the North Star.",
+            distractorExplanations: {
+              0: 'Betelgeuse is in Orion, not along the line traced by the Big Dipper\'s pointer stars.',
+              2: 'Rigel is a star in Orion and has no connection to the Big Dipper\'s pointer stars.',
+              3: 'Sirius is the brightest star in the sky but is found by extending Orion\'s Belt, not the Big Dipper.',
+            },
           },
           {
             id: "sp-sec1-u4-L2-Q4",
@@ -1529,6 +1802,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Orion is best seen in winter (Northern Hemisphere). In July, it's behind the Sun and lost in daylight. They'll need to wait until late autumn or winter.",
+            distractorExplanations: {
+              0: 'Constellations don\'t move to other galaxies; Orion is just behind the Sun during summer months.',
+              2: 'Orion is visible from both hemispheres, but in July it\'s hidden behind the Sun regardless of location.',
+              3: 'Dark adaptation wouldn\'t help because Orion is simply not above the horizon at night in July.',
+            },
           },
           {
             id: "sp-sec1-u4-L2-Q6",
@@ -1550,6 +1828,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Earth's rotation makes the entire sky appear to rotate. Stars rise in the east and set in the west.",
+            distractorExplanations: {
+              0: 'Stars do not orbit Earth; it is Earth that rotates, creating the appearance of movement.',
+              1: 'The Moon\'s gravity causes tides but does not push stars across the sky.',
+              2: 'The Sun does not pull stars from east to west; the apparent motion comes from Earth spinning.',
+            },
           },
           {
             id: "sp-sec1-u4-L2-Q8",
@@ -1566,6 +1849,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "If Polaris is 35 degrees above the horizon, you're at approximately 35 degrees north latitude.",
             correctAnswer: true,
             explanation: "The altitude of Polaris above the horizon closely matches your latitude in the Northern Hemisphere.",
+            distractorExplanations: {
+              1: 'The altitude of Polaris directly corresponds to your latitude, so 35 degrees above the horizon does mean approximately 35 degrees north.',
+            },
           },
           {
             id: "sp-sec1-u4-L2-Q10",
@@ -1579,6 +1865,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Sun is 'in' your zodiac constellation during your birthday month, meaning it rises and sets with the Sun and is hidden in the daylight.",
+            distractorExplanations: {
+              0: 'Zodiac constellations are visible annually; they don\'t appear only once every 12 years.',
+              1: 'Zodiac constellations are not too faint to see; they\'re hidden because the Sun is in front of them.',
+              3: 'All zodiac constellations exist and are well-documented; the claim that they don\'t exist is false.',
+            },
           },
         ],
       },
@@ -1603,6 +1894,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Steady, smooth motion followed by a sudden disappearance is classic satellite behavior. It vanished when it entered Earth's shadow.",
+            distractorExplanations: {
+              0: 'Stars don\'t burn out in seconds; a dying star takes thousands to millions of years to fade.',
+              2: 'Airplanes have blinking lights and wouldn\'t appear as a steady dot moving in a straight line.',
+              3: 'Planets don\'t move visibly across the sky in minutes; they appear stationary during a single session.',
+            },
           },
           {
             id: "sp-sec1-u4-L3-Q2",
@@ -1632,6 +1928,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Light from 50 light-years away takes 50 years to reach you. You're seeing that star as it was 50 years ago.",
+            distractorExplanations: {
+              0: 'Light travels at a finite speed and does not arrive instantly from any distance.',
+              1: 'Fifty million years is far too much; 50 light-years means the light is 50 years old.',
+              2: 'The age of the light depends on distance, not the star\'s size.',
+            },
           },
           {
             id: "sp-sec1-u4-L3-Q5",
@@ -1664,6 +1965,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Polaris marks north. If Maria turns her back to Polaris, she's facing south.",
+            distractorExplanations: {
+              0: 'Facing Polaris means facing north; turning her back to it means she faces south, not north.',
+              2: 'East would be to her right if she faced north, but with her back to Polaris she faces south.',
+              3: 'West would be to her left if she faced north, but with her back to Polaris she faces south.',
+            },
           },
           {
             id: "sp-sec1-u4-L3-Q8",
@@ -1677,6 +1983,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Saturn is visible as a dot to the naked eye, but its rings require at least binoculars or a small telescope to resolve.",
+            distractorExplanations: {
+              1: 'The Milky Way band is visible to the naked eye under dark skies as a faint glowing stripe.',
+              2: 'Venus is one of the brightest objects in the sky and easily visible without any equipment.',
+              3: 'Meteor showers produce streaks of light that are clearly visible to the naked eye.',
+            },
           },
           {
             id: "sp-sec1-u4-L3-Q9",
@@ -1684,6 +1995,9 @@ export const spaceSection1Part1: Unit[] = [
             question: "The celestial sphere is an imaginary model used to describe positions in the sky.",
             correctAnswer: true,
             explanation: "The celestial sphere is a conceptual tool, not a physical object. It helps astronomers communicate sky positions precisely.",
+            distractorExplanations: {
+              1: 'The celestial sphere is indeed an imaginary model; denying this contradicts how astronomers define it.',
+            },
           },
           {
             id: "sp-sec1-u4-L3-Q10",
@@ -1697,6 +2011,11 @@ export const spaceSection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Star color reflects surface temperature. Blue-white stars are the hottest, while red stars are the coolest.",
+            distractorExplanations: {
+              0: 'Red indicates the coolest star temperatures, not the hottest.',
+              2: 'Yellow is a mid-range temperature like our Sun, not the hottest.',
+              3: 'Orange stars are cooler than yellow ones and far cooler than blue-white stars.',
+            },
           },
         ],
       },

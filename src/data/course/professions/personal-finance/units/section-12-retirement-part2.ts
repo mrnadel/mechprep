@@ -40,6 +40,9 @@ export const finSection12Part2: Unit[] = [
             question: "A target-date fund automatically holds a mix of stocks and bonds.",
             correctAnswer: true,
             explanation: "Target-date funds contain a diversified portfolio that's managed for you. You just choose the retirement year.",
+            distractorExplanations: {
+              1: 'Target-date funds contain a diversified portfolio that\'s managed for you. You just choose the retirement year.',
+            },
           },
           {
             id: "fin-sec12-u6-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The year in the fund name should match when you plan to retire. A 2055 fund is designed for someone retiring around 2055.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the year in the fund name should match when you plan to retire. A 2055 fund is designed for someone retiring around 2055.',
+              2: 'This overgeneralizes; the year in the fund name should match when you plan to retire. A 2055 fund is designed for someone retiring around 2055.',
+              3: 'The year in the fund name should match when you plan to retire. A 2055 fund is designed for someone retiring around 2055.',
+            },
           },
           {
             id: "fin-sec12-u6-L1-T2",
@@ -67,6 +75,9 @@ export const finSection12Part2: Unit[] = [
             question: "Target-date funds keep the same stock and bond mix for the entire time you hold them.",
             correctAnswer: false,
             explanation: "Target-date funds gradually shift from stocks to bonds as you get closer to retirement.",
+            distractorExplanations: {
+              0: 'Target-date funds gradually shift from stocks to bonds as you get closer to retirement.',
+            },
           },
           {
             id: "fin-sec12-u6-L1-Q4",
@@ -111,6 +122,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Target-date funds are designed for simplicity. They're a solid all-in-one option for anyone who doesn't want to actively manage investments.",
+            distractorExplanations: {
+              0: 'Target-date funds are designed for simplicity. They\'re a solid all-in-one option for anyone who doesn\'t want to actively manage investments.',
+              2: 'Target-date funds are designed for simplicity. They\'re a solid all-in-one option for anyone who doesn\'t want to actively manage investments.',
+              3: 'This reasoning is flawed; target-date funds are designed for simplicity.',
+            },
           },
         ],
       },
@@ -136,6 +152,9 @@ export const finSection12Part2: Unit[] = [
             question: "A glide path describes how a target-date fund shifts its stock-to-bond ratio over time.",
             correctAnswer: true,
             explanation: "The glide path maps out the gradual transition from growth-focused (stocks) to stability-focused (bonds).",
+            distractorExplanations: {
+              1: 'The glide path maps out the gradual transition from growth-focused (stocks) to stability-focused (bonds).',
+            },
           },
           {
             id: "fin-sec12-u6-L2-Q2",
@@ -178,6 +197,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Retirement can last 30 years. Keeping some stocks provides growth to outpace inflation during a long retirement.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; retirement can last 30 years. Keeping some stocks provides growth to outpace inflation during a long retirement.',
+              1: 'Retirement can last 30 years. Keeping some stocks provides growth to outpace inflation during a long retirement.',
+              3: 'This reasoning is flawed; retirement can last 30 years. Keeping some stocks provides growth to outpace inflation during a long retirement.',
+            },
           },
           {
             id: "fin-sec12-u6-L2-Q5",
@@ -207,6 +231,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Fund A's 90% stock allocation means more of its value is exposed to the crash. The higher stock percentage means more short-term risk.",
+            distractorExplanations: {
+              1: 'This overgeneralizes; fund A\'s 90% stock allocation means more of its value is exposed to the crash.',
+              2: 'Fund A\'s 90% stock allocation means more of its value is exposed to the crash. The higher stock percentage means more short-term risk.',
+              3: 'This reasoning is flawed; fund A\'s 90% stock allocation means more of its value is exposed to the crash.',
+            },
           },
         ],
       },
@@ -232,6 +261,9 @@ export const finSection12Part2: Unit[] = [
             question: "Target-date funds handle rebalancing automatically.",
             correctAnswer: true,
             explanation: "The fund rebalances on a schedule, keeping your allocation in line with the glide path without any action from you.",
+            distractorExplanations: {
+              1: 'The fund rebalances on a schedule, keeping your allocation in line with the glide path without any action from you.',
+            },
           },
           {
             id: "fin-sec12-u6-L3-Q2",
@@ -268,6 +300,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Fees are charged annually on your total balance. Over 30+ years, even 0.5% extra eats into your growth significantly.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; fees are charged annually on your total balance. Over 30+ years, even 0.5% extra eats into your growth significantly.',
+              1: 'Fees are charged annually on your total balance. Over 30+ years, even 0.5% extra eats into your growth significantly.',
+              3: 'This reasoning is flawed; fees are charged annually on your total balance. Over 30+ years, even 0.5% extra eats into your growth significantly.',
+            },
           },
           {
             id: "fin-sec12-u6-L3-Q4",
@@ -298,6 +335,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Raj's pension acts like a bond. With guaranteed income covering 60% of expenses, he can afford more stock exposure in his investments.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; raj\'s pension acts like a bond. With guaranteed income covering 60% of expenses, he can afford more stock exposure in his.',
+              2: 'Raj\'s pension acts like a bond. With guaranteed income covering 60% of expenses, he can afford more stock exposure in his investments.',
+              3: 'This reasoning is flawed; raj\'s pension acts like a bond. With guaranteed income covering 60% of expenses, he can afford more stock exposure in.',
+            },
           },
           {
             id: "fin-sec12-u6-L3-Q6",
@@ -380,6 +422,9 @@ export const finSection12Part2: Unit[] = [
             question: "You need about 10 years of work to qualify for Social Security retirement benefits.",
             correctAnswer: true,
             explanation: "You earn up to 4 credits per year. 40 credits (about 10 years) makes you eligible for retirement benefits.",
+            distractorExplanations: {
+              1: 'You earn up to 4 credits per year. 40 credits (about 10 years) makes you eligible for retirement benefits.',
+            },
           },
           {
             id: "fin-sec12-u7-L1-Q2",
@@ -393,6 +438,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Both employees and employers pay Social Security payroll taxes. These fund current retirees' benefits.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; both employees and employers pay Social Security payroll taxes. These fund current retirees\' benefits.',
+              2: 'This reasoning is flawed; both employees and employers pay Social Security payroll taxes. These fund current retirees\' benefits.',
+              3: 'This reasoning is flawed; both employees and employers pay Social Security payroll taxes. These fund current retirees\' benefits.',
+            },
           },
           {
             id: "fin-sec12-u7-L1-T2",
@@ -407,6 +457,9 @@ export const finSection12Part2: Unit[] = [
             question: "Social Security benefits are calculated using your highest 35 years of earnings.",
             correctAnswer: true,
             explanation: "The formula uses your top 35 earning years. Working longer can replace low-earning early years with higher-earning later years.",
+            distractorExplanations: {
+              1: 'The formula uses your top 35 earning years. Working longer can replace low-earning early years with higher-earning later years.',
+            },
           },
           {
             id: "fin-sec12-u7-L1-Q4",
@@ -444,6 +497,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Social Security replaces roughly 40% of pre-retirement income for average earners. You need savings to cover the rest.",
+            distractorExplanations: {
+              0: 'Social Security replaces roughly 40% of pre-retirement income for average earners. You need savings to cover the rest.',
+              2: 'Social Security replaces roughly 40% of pre-retirement income for average earners. You need savings to cover the rest.',
+              3: 'Social Security replaces roughly 40% of pre-retirement income for average earners. You need savings to cover the rest.',
+            },
           },
         ],
       },
@@ -469,6 +527,9 @@ export const finSection12Part2: Unit[] = [
             question: "Claiming Social Security at 62 gives you the same monthly amount as claiming at 70.",
             correctAnswer: false,
             explanation: "Claiming at 62 can reduce your benefit by 25% to 30% compared to full retirement age. Waiting to 70 increases it by about 24% above full retirement age.",
+            distractorExplanations: {
+              0: 'Claiming at 62 can reduce your benefit by 25% to 30% compared to full retirement age. Waiting to 70 increases it by about 24% above full retirement age.',
+            },
           },
           {
             id: "fin-sec12-u7-L2-Q2",
@@ -482,6 +543,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Delayed retirement credits add about 8% per year to your benefit for each year you wait past full retirement age, up to age 70.",
+            distractorExplanations: {
+              0: 'Delayed retirement credits add about 8% per year to your benefit for each year you wait past full retirement age, up to age 70.',
+              1: 'Delayed retirement credits add about 8% per year to your benefit for each year you wait past full retirement age, up to age 70.',
+              3: 'Delayed retirement credits add about 8% per year to your benefit for each year you wait past full retirement age, up to age 70.',
+            },
           },
           {
             id: "fin-sec12-u7-L2-T2",
@@ -503,6 +569,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$2,000 minus 30% equals $1,400/month. This reduced amount is permanent for the rest of her life.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $2,000 minus 30% equals $1,400/month. This reduced amount is permanent for the rest of her life.',
+              2: 'This calculation is incorrect; $2,000 minus 30% equals $1,400/month. This reduced amount is permanent for the rest of her life.',
+              3: 'This calculation is incorrect; $2,000 minus 30% equals $1,400/month. This reduced amount is permanent for the rest of her life.',
+            },
           },
           {
             id: "fin-sec12-u7-L2-Q4",
@@ -539,6 +610,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you live past the break-even age (typically 78 to 80), the higher monthly payments from delaying add up to more total money.",
+            distractorExplanations: {
+              0: 'If you live past the break-even age (typically 78 to 80), the higher monthly payments from delaying add up to more total money.',
+              2: 'If you live past the break-even age (typically 78 to 80), the higher monthly payments from delaying add up to more total money.',
+              3: 'If you live past the break-even age (typically 78 to 80), the higher monthly payments from delaying add up to more total money.',
+            },
           },
           {
             id: "fin-sec12-u7-L2-Q6",
@@ -588,6 +664,9 @@ export const finSection12Part2: Unit[] = [
             question: "Full retirement age is the same for everyone regardless of when they were born.",
             correctAnswer: false,
             explanation: "FRA depends on birth year. It ranges from 65 for those born before 1938 to 67 for those born in 1960 or later.",
+            distractorExplanations: {
+              0: 'FRA depends on birth year. It ranges from 65 for those born before 1938 to 67 for those born in 1960 or later.',
+            },
           },
           {
             id: "fin-sec12-u7-L3-Q2",
@@ -601,6 +680,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "For anyone born in 1960 or later, the full retirement age is 67.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; for anyone born in 1960 or later, the full retirement age is 67.',
+              1: 'This calculation is incorrect; for anyone born in 1960 or later, the full retirement age is 67.',
+              3: 'This calculation is incorrect; for anyone born in 1960 or later, the full retirement age is 67.',
+            },
           },
           {
             id: "fin-sec12-u7-L3-T2",
@@ -615,6 +699,9 @@ export const finSection12Part2: Unit[] = [
             question: "If you claim Social Security before FRA and keep working, your benefits may be reduced.",
             correctAnswer: true,
             explanation: "The earnings test reduces benefits if you earn above the annual limit while receiving Social Security before FRA.",
+            distractorExplanations: {
+              1: 'The earnings test reduces benefits if you earn above the annual limit while receiving Social Security before FRA.',
+            },
           },
           {
             id: "fin-sec12-u7-L3-Q4",
@@ -637,6 +724,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Benefits above the earnings threshold are temporarily reduced. They're recalculated and adjusted upward when Dave reaches FRA.",
+            distractorExplanations: {
+              0: 'Benefits above the earnings threshold are temporarily reduced. They\'re recalculated and adjusted upward when Dave reaches FRA.',
+              2: 'This reasoning is flawed; benefits above the earnings threshold are temporarily reduced.',
+              3: 'This reasoning is flawed; benefits above the earnings threshold are temporarily reduced.',
+            },
           },
           {
             id: "fin-sec12-u7-L3-T3",
@@ -657,6 +749,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cost-of-living adjustments (COLAs) increase your benefit each year to keep pace with rising prices.",
+            distractorExplanations: {
+              0: 'Cost-of-living adjustments (COLAs) increase your benefit each year to keep pace with rising prices.',
+              2: 'This reasoning is flawed; cost-of-living adjustments (COLAs) increase your benefit each year to keep pace with rising prices.',
+              3: 'This reasoning is flawed; cost-of-living adjustments (COLAs) increase your benefit each year to keep pace with rising prices.',
+            },
           },
         ],
       },
@@ -682,6 +779,9 @@ export const finSection12Part2: Unit[] = [
             question: "A spouse can receive up to 50% of the higher earner's Social Security benefit.",
             correctAnswer: true,
             explanation: "The spousal benefit is up to 50% of the higher earner's full retirement age benefit amount.",
+            distractorExplanations: {
+              1: 'The spousal benefit is up to 50% of the higher earner\'s full retirement age benefit amount.',
+            },
           },
           {
             id: "fin-sec12-u7-L4-Q2",
@@ -695,6 +795,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If the marriage lasted 10+ years and the ex-spouse is unmarried, they can claim spousal benefits without affecting the other person's benefit.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; if the marriage lasted 10+ years and the ex-spouse is unmarried, they can claim spousal benefits without affecting the.',
+              2: 'If the marriage lasted 10+ years and the ex-spouse is unmarried, they can claim spousal benefits without affecting the other person\'s benefit.',
+              3: 'This reasoning is flawed; if the marriage lasted 10+ years and the ex-spouse is unmarried, they can claim spousal benefits without affecting the.',
+            },
           },
           {
             id: "fin-sec12-u7-L4-T2",
@@ -709,6 +814,9 @@ export const finSection12Part2: Unit[] = [
             question: "A surviving spouse can receive 100% of the deceased spouse's Social Security benefit.",
             correctAnswer: true,
             explanation: "The survivor steps up to the higher benefit. This makes the higher earner's claiming decision even more important.",
+            distractorExplanations: {
+              1: 'The survivor steps up to the higher benefit. This makes the higher earner\'s claiming decision even more important.',
+            },
           },
           {
             id: "fin-sec12-u7-L4-Q4",
@@ -732,6 +840,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "As a survivor, Sue steps up to Mark's $2,400/month since it's higher than her own $800. She doesn't get both.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; as a survivor, Sue steps up to Mark\'s $2,400/month since it\'s higher than her own $800. She doesn\'t get both.',
+              1: 'This calculation is incorrect; as a survivor, Sue steps up to Mark\'s $2,400/month since it\'s higher than her own $800. She doesn\'t get both.',
+              3: 'This calculation is incorrect; as a survivor, Sue steps up to Mark\'s $2,400/month since it\'s higher than her own $800. She doesn\'t get both.',
+            },
           },
           {
             id: "fin-sec12-u7-L4-T3",
@@ -898,6 +1011,9 @@ export const finSection12Part2: Unit[] = [
             question: "The 4% rule says you can withdraw 4% of your initial portfolio each year, adjusted for inflation.",
             correctAnswer: true,
             explanation: "You withdraw 4% in year one, then increase the dollar amount by inflation each year after that.",
+            distractorExplanations: {
+              1: 'You withdraw 4% in year one, then increase the dollar amount by inflation each year after that.',
+            },
           },
           {
             id: "fin-sec12-u8-L1-Q2",
@@ -911,6 +1027,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "4% of $1,000,000 is $40,000. In year two, you'd increase that amount by the inflation rate.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; 4% of $1,000,000 is $40,000. In year two, you\'d increase that amount by the inflation rate.',
+              2: 'This calculation is incorrect; 4% of $1,000,000 is $40,000. In year two, you\'d increase that amount by the inflation rate.',
+              3: 'This calculation is incorrect; 4% of $1,000,000 is $40,000. In year two, you\'d increase that amount by the inflation rate.',
+            },
           },
           {
             id: "fin-sec12-u8-L1-T2",
@@ -925,6 +1046,9 @@ export const finSection12Part2: Unit[] = [
             question: "The 25x rule and the 4% rule are mathematically related.",
             correctAnswer: true,
             explanation: "1 divided by 25 equals 0.04, or 4%. They're the same concept expressed differently.",
+            distractorExplanations: {
+              1: '1 divided by 25 equals 0.04, or 4%. They\'re the same concept expressed differently.',
+            },
           },
           {
             id: "fin-sec12-u8-L1-Q4",
@@ -973,6 +1097,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A lower withdrawal rate increases the chance your money lasts through a longer retirement period.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a lower withdrawal rate increases the chance your money lasts through a longer retirement period.',
+              2: 'A lower withdrawal rate increases the chance your money lasts through a longer retirement period.',
+              3: 'This reasoning is flawed; a lower withdrawal rate increases the chance your money lasts through a longer retirement period.',
+            },
           },
         ],
       },
@@ -998,6 +1127,9 @@ export const finSection12Part2: Unit[] = [
             question: "The order you withdraw from different accounts affects how much tax you pay.",
             correctAnswer: true,
             explanation: "Withdrawals from taxable, tax-deferred, and tax-free accounts are taxed differently. The sequence matters.",
+            distractorExplanations: {
+              1: 'Withdrawals from taxable, tax-deferred, and tax-free accounts are taxed differently. The sequence matters.',
+            },
           },
           {
             id: "fin-sec12-u8-L2-Q2",
@@ -1030,6 +1162,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "By withdrawing traditional IRA money up to a low bracket ceiling, you pay minimal tax. Any additional needs come from tax-free Roth.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; by withdrawing traditional IRA money up to a low bracket ceiling, you pay minimal tax.',
+              2: 'This reasoning is flawed; by withdrawing traditional IRA money up to a low bracket ceiling, you pay minimal tax.',
+              3: 'This reasoning is flawed; by withdrawing traditional IRA money up to a low bracket ceiling, you pay minimal tax.',
+            },
           },
           {
             id: "fin-sec12-u8-L2-Q4",
@@ -1060,6 +1197,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Filling the 12% bracket with traditional money keeps taxes low. The remaining $5,275 from Roth is completely tax-free.",
+            distractorExplanations: {
+              0: 'Filling the 12% bracket with traditional money keeps taxes low. The remaining $5,275 from Roth is completely tax-free.',
+              1: 'Filling the 12% bracket with traditional money keeps taxes low. The remaining $5,275 from Roth is completely tax-free.',
+              3: 'Filling the 12% bracket with traditional money keeps taxes low. The remaining $5,275 from Roth is completely tax-free.',
+            },
           },
           {
             id: "fin-sec12-u8-L2-T3",
@@ -1100,6 +1242,9 @@ export const finSection12Part2: Unit[] = [
             question: "A market crash in the first year of retirement is more damaging than one in year 20.",
             correctAnswer: true,
             explanation: "Early losses drain a larger portfolio while you're making withdrawals. By year 20, withdrawals have already reduced the balance and earlier growth has helped.",
+            distractorExplanations: {
+              1: 'Early losses drain a larger portfolio while you\'re making withdrawals. By year 20, withdrawals have already reduced the balance and earlier growth has helped.',
+            },
           },
           {
             id: "fin-sec12-u8-L3-Q2",
@@ -1113,6 +1258,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Even if average returns are fine over 30 years, bad returns in the early years can devastate a portfolio that's being drawn down.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; even if average returns are fine over 30 years, bad returns in the early years can devastate a portfolio that\'s being.',
+              2: 'This reasoning is flawed; even if average returns are fine over 30 years, bad returns in the early years can devastate a portfolio that\'s being.',
+              3: 'This reasoning is flawed; even if average returns are fine over 30 years, bad returns in the early years can devastate a portfolio that\'s being.',
+            },
           },
           {
             id: "fin-sec12-u8-L3-T2",
@@ -1134,6 +1284,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Retiree A withdraws from a depleted portfolio early on, compounding the damage. The same average return produces very different outcomes based on timing.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; retiree A withdraws from a depleted portfolio early on, compounding the damage.',
+              2: 'This reasoning is flawed; retiree A withdraws from a depleted portfolio early on, compounding the damage.',
+              3: 'This reasoning is flawed; retiree A withdraws from a depleted portfolio early on, compounding the damage.',
+            },
           },
           {
             id: "fin-sec12-u8-L3-Q4",
@@ -1178,6 +1333,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Flexibility to reduce spending and a cash buffer to avoid selling at lows are the best protections against bad early returns.",
+            distractorExplanations: {
+              0: 'Flexibility to reduce spending and a cash buffer to avoid selling at lows are the best protections against bad early returns.',
+              2: 'This reasoning is flawed; flexibility to reduce spending and a cash buffer to avoid selling at lows are the best protections against bad early.',
+              3: 'Flexibility to reduce spending and a cash buffer to avoid selling at lows are the best protections against bad early returns.',
+            },
           },
         ],
       },
@@ -1203,6 +1363,9 @@ export const finSection12Part2: Unit[] = [
             question: "The bucket strategy separates retirement money by time horizon.",
             correctAnswer: true,
             explanation: "Each bucket matches a different timeframe: immediate needs (cash), near-term (bonds), and long-term growth (stocks).",
+            distractorExplanations: {
+              1: 'Each bucket matches a different timeframe: immediate needs (cash), near-term (bonds), and long-term growth (stocks).',
+            },
           },
           {
             id: "fin-sec12-u8-L4-Q2",
@@ -1232,6 +1395,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Knowing your near-term spending is in safe assets gives you the confidence to leave stocks alone during downturns.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; knowing your near-term spending is in safe assets gives you the confidence to leave stocks alone during downturns.',
+              1: 'Knowing your near-term spending is in safe assets gives you the confidence to leave stocks alone during downturns.',
+              3: 'This reasoning is flawed; knowing your near-term spending is in safe assets gives you the confidence to leave stocks alone during downturns.',
+            },
           },
           {
             id: "fin-sec12-u8-L4-Q4",
@@ -1266,6 +1434,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Fran has 2 years of cash in Bucket 1. She spends from there while stocks recover, avoiding selling at a 25% loss.",
+            distractorExplanations: {
+              0: 'Fran has 2 years of cash in Bucket 1. She spends from there while stocks recover, avoiding selling at a 25% loss.',
+              2: 'This reasoning is flawed; fran has 2 years of cash in Bucket 1. She spends from there while stocks recover, avoiding selling at a 25% loss.',
+              3: 'Fran has 2 years of cash in Bucket 1. She spends from there while stocks recover, avoiding selling at a 25% loss.',
+            },
           },
           {
             id: "fin-sec12-u8-L4-Q6",
@@ -1342,6 +1515,9 @@ export const finSection12Part2: Unit[] = [
             question: "FIRE stands for Financial Independence, Retire Early.",
             correctAnswer: true,
             explanation: "FIRE is a movement focused on saving aggressively to achieve financial independence and the option to retire early.",
+            distractorExplanations: {
+              1: 'FIRE is a movement focused on saving aggressively to achieve financial independence and the option to retire early.',
+            },
           },
           {
             id: "fin-sec12-u9-L1-Q2",
@@ -1355,6 +1531,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "FIRE is about the gap between income and spending. Save a large percentage and invest it for growth.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; FIRE is about the gap between income and spending. Save a large percentage and invest it for growth.',
+              2: 'This reasoning is flawed; FIRE is about the gap between income and spending. Save a large percentage and invest it for growth.',
+              3: 'This reasoning is flawed; FIRE is about the gap between income and spending. Save a large percentage and invest it for growth.',
+            },
           },
           {
             id: "fin-sec12-u9-L1-T2",
@@ -1369,6 +1550,9 @@ export const finSection12Part2: Unit[] = [
             question: "Under FIRE principles, lowering your expenses reduces your retirement target.",
             correctAnswer: true,
             explanation: "Every dollar you cut from annual spending reduces your needed savings by $25 (using the 25x rule).",
+            distractorExplanations: {
+              1: 'Every dollar you cut from annual spending reduces your needed savings by $25 (using the 25x rule).',
+            },
           },
           {
             id: "fin-sec12-u9-L1-Q4",
@@ -1406,6 +1590,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "FIRE provides the freedom to choose. Most people continue being productive but on their own terms.",
+            distractorExplanations: {
+              0: 'FIRE provides the freedom to choose. Most people continue being productive but on their own terms.',
+              1: 'This reasoning is flawed; FIRE provides the freedom to choose. Most people continue being productive but on their own terms.',
+              3: 'FIRE provides the freedom to choose. Most people continue being productive but on their own terms.',
+            },
           },
         ],
       },
@@ -1431,6 +1620,9 @@ export const finSection12Part2: Unit[] = [
             question: "A 50% savings rate can lead to financial independence in about 17 years.",
             correctAnswer: true,
             explanation: "At 50% savings with average market returns, you accumulate 25 times your expenses in roughly 17 years.",
+            distractorExplanations: {
+              1: 'At 50% savings with average market returns, you accumulate 25 times your expenses in roughly 17 years.',
+            },
           },
           {
             id: "fin-sec12-u9-L2-Q2",
@@ -1464,6 +1656,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Saving 60% means you live on 40% of income and need only 25x that 40% to be financially independent. Both sides shrink the timeline.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; saving 60% means you live on 40% of income and need only 25x that 40% to be financially independent.',
+              2: 'This reasoning is flawed; saving 60% means you live on 40% of income and need only 25x that 40% to be financially independent.',
+              3: 'This reasoning is flawed; saving 60% means you live on 40% of income and need only 25x that 40% to be financially independent.',
+            },
           },
           {
             id: "fin-sec12-u9-L2-Q4",
@@ -1478,6 +1675,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Person A: 25 times $64,000 = $1,600,000. Person B: 25 times $40,000 = $1,000,000. Person B has a lower target AND saves more per year.",
+            distractorExplanations: {
+              0: 'Person A: 25 times $64,000 = $1,600,000. Person B: 25 times $40,000 = $1,000,000. Person B has a lower target AND saves more per year.',
+              2: 'This reasoning is flawed; person A: 25 times $64,000 = $1,600,000. Person B: 25 times $40,000 = $1,000,000.',
+              3: 'Person A: 25 times $64,000 = $1,600,000. Person B: 25 times $40,000 = $1,000,000. Person B has a lower target AND saves more per year.',
+            },
           },
           {
             id: "fin-sec12-u9-L2-Q5",
@@ -1517,6 +1719,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lifestyle inflation means spending more as you earn more. Avoiding it is key to maintaining a high savings rate as income grows.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; lifestyle inflation means spending more as you earn more.',
+              2: 'This reasoning is flawed; lifestyle inflation means spending more as you earn more.',
+              3: 'Lifestyle inflation means spending more as you earn more. Avoiding it is key to maintaining a high savings rate as income grows.',
+            },
           },
         ],
       },
@@ -1542,6 +1749,9 @@ export const finSection12Part2: Unit[] = [
             question: "Lean FIRE means retiring on a very low annual budget.",
             correctAnswer: true,
             explanation: "Lean FIRE typically means living on less than $40,000/year. It requires frugality but allows earlier retirement.",
+            distractorExplanations: {
+              1: 'Lean FIRE typically means living on less than $40,000/year. It requires frugality but allows earlier retirement.',
+            },
           },
           {
             id: "fin-sec12-u9-L3-Q2",
@@ -1587,6 +1797,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Coast FIRE means you've saved enough that compounding alone will grow your portfolio to your target by retirement age, even if you stop contributing.",
+            distractorExplanations: {
+              0: 'Coast FIRE means you\'ve saved enough that compounding alone will grow your portfolio to your target by retirement age, even if you stop.',
+              2: 'Coast FIRE means you\'ve saved enough that compounding alone will grow your portfolio to your target by retirement age, even if you stop.',
+              3: 'Coast FIRE means you\'ve saved enough that compounding alone will grow your portfolio to your target by retirement age, even if you stop.',
+            },
           },
           {
             id: "fin-sec12-u9-L3-T3",
@@ -1614,6 +1829,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$600/month is $7,200/year in healthcare. Her real expenses are $37,200, making her 25x target $930,000 instead of $750,000.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; $600/month is $7,200/year in healthcare.',
+              2: 'This reasoning is flawed; $600/month is $7,200/year in healthcare.',
+              3: '$600/month is $7,200/year in healthcare. Her real expenses are $37,200, making her 25x target $930,000 instead of $750,000.',
+            },
           },
           {
             id: "fin-sec12-u9-L3-Q6",
@@ -1647,6 +1867,9 @@ export const finSection12Part2: Unit[] = [
             question: "Withdrawing from traditional retirement accounts before age 59.5 normally incurs a 10% penalty.",
             correctAnswer: true,
             explanation: "The 10% early withdrawal penalty is designed to discourage using retirement savings before retirement age.",
+            distractorExplanations: {
+              1: 'The 10% early withdrawal penalty is designed to discourage using retirement savings before retirement age.',
+            },
           },
           {
             id: "fin-sec12-u9-L4-Q2",
@@ -1660,6 +1883,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The ladder lets early retirees withdraw from pre-tax accounts without the 10% penalty by converting to Roth and waiting 5 years.",
+            distractorExplanations: {
+              0: 'The ladder lets early retirees withdraw from pre-tax accounts without the 10% penalty by converting to Roth and waiting 5 years.',
+              2: 'This reasoning is flawed; the ladder lets early retirees withdraw from pre-tax accounts without the 10% penalty by converting to Roth and waiting.',
+              3: 'This reasoning is flawed; the ladder lets early retirees withdraw from pre-tax accounts without the 10% penalty by converting to Roth and waiting.',
+            },
           },
           {
             id: "fin-sec12-u9-L4-T2",
@@ -1709,6 +1937,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Sam spends from his taxable account for 5 years ($150,000 covers $30,000 times 5). After 5 years, his first Roth conversion of $30,000 becomes accessible penalty-free.",
+            distractorExplanations: {
+              0: 'Sam spends from his taxable account for 5 years ($150,000 covers $30,000 times 5).',
+              2: 'Sam spends from his taxable account for 5 years ($150,000 covers $30,000 times 5).',
+              3: 'Sam spends from his taxable account for 5 years ($150,000 covers $30,000 times 5).',
+            },
           },
           {
             id: "fin-sec12-u9-L4-Q6",
@@ -1722,6 +1955,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Each year's conversion is a rung. After 5 years, the first rung is ready. Each subsequent year, another rung becomes available.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; each year\'s conversion is a rung. After 5 years, the first rung is ready.',
+              2: 'Each year\'s conversion is a rung. After 5 years, the first rung is ready. Each subsequent year, another rung becomes available.',
+              3: 'This reasoning is flawed; each year\'s conversion is a rung. After 5 years, the first rung is ready.',
+            },
           },
         ],
       },
@@ -1873,6 +2111,9 @@ export const finSection12Part2: Unit[] = [
             question: "The 25x rule and the 4% rule are mathematically equivalent ways to estimate retirement savings needs.",
             correctAnswer: true,
             explanation: "25 times annual expenses equals the portfolio needed to withdraw 4% per year. They're the same calculation from different angles.",
+            distractorExplanations: {
+              1: '25 times annual expenses equals the portfolio needed to withdraw 4% per year. They\'re the same calculation from different angles.',
+            },
           },
           {
             id: "fin-sec12-u10-L1-Q2",
@@ -1939,6 +2180,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "25x and 4% are mathematically inverse. Need $40,000/year? 25 times $40,000 = $1,000,000. And 4% of $1,000,000 = $40,000.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; 25x and 4% are mathematically inverse. Need $40,000/year? 25 times $40,000 = $1,000,000. And 4% of $1,000,000 = $40,000.',
+              2: '25x and 4% are mathematically inverse. Need $40,000/year? 25 times $40,000 = $1,000,000. And 4% of $1,000,000 = $40,000.',
+              3: 'This reasoning is flawed; 25x and 4% are mathematically inverse. Need $40,000/year? 25 times $40,000 = $1,000,000. And 4% of $1,000,000 = $40,000.',
+            },
           },
         ],
       },
@@ -1971,6 +2217,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Get the full 4% match first ($2,800/year free money). Then use Roth while she's in a lower bracket. This maximizes both free money and tax-free growth.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; get the full 4% match first ($2,800/year free money). Then use Roth while she\'s in a lower bracket.',
+              2: 'This reasoning is flawed; get the full 4% match first ($2,800/year free money). Then use Roth while she\'s in a lower bracket.',
+              3: 'Inaction here would be harmful; get the full 4% match first ($2,800/year free money). Then use Roth while she\'s in a lower bracket.',
+            },
           },
           {
             id: "fin-sec12-u10-L2-Q2",
@@ -1985,6 +2236,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Tom's Roth can cover the gap for 2 years. Waiting until 67 gives him the full $2,200/month for life instead of a permanently reduced benefit.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; tom\'s Roth can cover the gap for 2 years.',
+              2: 'This reasoning is flawed; tom\'s Roth can cover the gap for 2 years.',
+              3: 'This overgeneralizes; tom\'s Roth can cover the gap for 2 years.',
+            },
           },
           {
             id: "fin-sec12-u10-L2-T2",
@@ -2005,6 +2261,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The higher earner's delay increases both their benefit (8% per year) and the survivor benefit for the other spouse.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the higher earner\'s delay increases both their benefit (8% per year) and the survivor benefit for the other spouse.',
+              2: 'This overgeneralizes; the higher earner\'s delay increases both their benefit (8% per year) and the survivor benefit for the other spouse.',
+              3: 'This overgeneralizes; the higher earner\'s delay increases both their benefit (8% per year) and the survivor benefit for the other spouse.',
+            },
           },
           {
             id: "fin-sec12-u10-L2-Q4",
@@ -2035,6 +2296,11 @@ export const finSection12Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Elena has 2 years of cash plus 5 years of bonds. She can wait for stocks to recover without selling at a loss. The bucket strategy is working as designed.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; elena has 2 years of cash plus 5 years of bonds. She can wait for stocks to recover without selling at a loss.',
+              2: 'Elena has 2 years of cash plus 5 years of bonds. She can wait for stocks to recover without selling at a loss.',
+              3: 'Elena has 2 years of cash plus 5 years of bonds. She can wait for stocks to recover without selling at a loss.',
+            },
           },
           {
             id: "fin-sec12-u10-L2-T3",

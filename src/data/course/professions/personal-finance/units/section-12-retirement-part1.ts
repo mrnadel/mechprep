@@ -40,6 +40,9 @@ export const finSection12Part1: Unit[] = [
             question: "Most people need to fund 30 or more years of living expenses in retirement.",
             correctAnswer: true,
             explanation: "With increasing life expectancy, a 30-year retirement is common. Some people live even longer.",
+            distractorExplanations: {
+              1: 'With increasing life expectancy, a 30-year retirement is common. Some people live even longer.',
+            },
           },
           {
             id: "fin-sec12-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without a salary, your savings must cover all your expenses for potentially 30 or more years.",
+            distractorExplanations: {
+              0: 'Without a salary, your savings must cover all your expenses for potentially 30 or more years.',
+              2: 'Without a salary, your savings must cover all your expenses for potentially 30 or more years.',
+              3: 'Without a salary, your savings must cover all your expenses for potentially 30 or more years.',
+            },
           },
           {
             id: "fin-sec12-u1-L1-T2",
@@ -67,6 +75,9 @@ export const finSection12Part1: Unit[] = [
             question: "Healthcare costs tend to decrease as people get older.",
             correctAnswer: false,
             explanation: "Healthcare costs generally increase with age. This is one of the biggest expenses in retirement.",
+            distractorExplanations: {
+              0: 'Healthcare costs generally increase with age. This is one of the biggest expenses in retirement.',
+            },
           },
           {
             id: "fin-sec12-u1-L1-Q4",
@@ -112,6 +123,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Alex invests $144,000 total over 40 years. Jordan invests $180,000 over 25 years. But Alex's extra 15 years of compounding produces a much larger total.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; alex invests $144,000 total over 40 years. Jordan invests $180,000 over 25 years.',
+              2: 'Alex invests $144,000 total over 40 years. Jordan invests $180,000 over 25 years.',
+              3: 'Alex invests $144,000 total over 40 years. Jordan invests $180,000 over 25 years.',
+            },
           },
         ],
       },
@@ -137,6 +153,9 @@ export const finSection12Part1: Unit[] = [
             question: "The 25x rule means you need 25 times your annual expenses saved for retirement.",
             correctAnswer: true,
             explanation: "Multiply your yearly spending by 25. That's your target retirement savings number.",
+            distractorExplanations: {
+              1: 'Multiply your yearly spending by 25. That\'s your target retirement savings number.',
+            },
           },
           {
             id: "fin-sec12-u1-L2-Q2",
@@ -150,6 +169,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "$50,000 times 25 equals $1,250,000. That's the target savings amount.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $50,000 times 25 equals $1,250,000. That\'s the target savings amount.',
+              1: 'This calculation is incorrect; $50,000 times 25 equals $1,250,000. That\'s the target savings amount.',
+              2: 'This calculation is incorrect; $50,000 times 25 equals $1,250,000. That\'s the target savings amount.',
+            },
           },
           {
             id: "fin-sec12-u1-L2-T2",
@@ -179,6 +203,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$100/month is $1,200/year. Under the 25x rule, $1,200 times 25 equals $30,000 less you need to save.",
+            distractorExplanations: {
+              0: '$100/month is $1,200/year. Under the 25x rule, $1,200 times 25 equals $30,000 less you need to save.',
+              2: '$100/month is $1,200/year. Under the 25x rule, $1,200 times 25 equals $30,000 less you need to save.',
+              3: '$100/month is $1,200/year. Under the 25x rule, $1,200 times 25 equals $30,000 less you need to save.',
+            },
           },
           {
             id: "fin-sec12-u1-L2-Q5",
@@ -224,6 +253,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$48,000 minus $18,000 in Social Security equals $30,000 she needs from savings. Her 25x target would be $750,000, not $1,200,000.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $48,000 minus $18,000 in Social Security equals $30,000 she needs from savings.',
+              2: 'This calculation is incorrect; $48,000 minus $18,000 in Social Security equals $30,000 she needs from savings.',
+              3: 'This calculation is incorrect; $48,000 minus $18,000 in Social Security equals $30,000 she needs from savings.',
+            },
           },
         ],
       },
@@ -249,6 +283,9 @@ export const finSection12Part1: Unit[] = [
             question: "At 3% inflation, prices roughly double every 24 years.",
             correctAnswer: true,
             explanation: "Using the rule of 72, divide 72 by the inflation rate. 72 divided by 3 equals 24 years for prices to double.",
+            distractorExplanations: {
+              1: 'Using the rule of 72, divide 72 by the inflation rate. 72 divided by 3 equals 24 years for prices to double.',
+            },
           },
           {
             id: "fin-sec12-u1-L3-Q2",
@@ -262,6 +299,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Real return is your nominal return minus inflation. It shows how much your purchasing power actually grew.",
+            distractorExplanations: {
+              0: 'Real return is your nominal return minus inflation. It shows how much your purchasing power actually grew.',
+              2: 'This overgeneralizes; real return is your nominal return minus inflation. It shows how much your purchasing power actually grew.',
+              3: 'Real return is your nominal return minus inflation. It shows how much your purchasing power actually grew.',
+            },
           },
           {
             id: "fin-sec12-u1-L3-T2",
@@ -306,6 +348,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Savings accounts earn less than inflation. Your money is safe but loses purchasing power every year.",
+            distractorExplanations: {
+              0: 'Savings accounts earn less than inflation. Your money is safe but loses purchasing power every year.',
+              2: 'Savings accounts earn less than inflation. Your money is safe but loses purchasing power every year.',
+              3: 'This reasoning is flawed; savings accounts earn less than inflation. Your money is safe but loses purchasing power every year.',
+            },
           },
           {
             id: "fin-sec12-u1-L3-T3",
@@ -327,6 +374,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At 1% growth and 3% inflation, Jeff's money loses about 2% of purchasing power each year. Over 30 years, that's a massive loss.",
+            distractorExplanations: {
+              0: 'At 1% growth and 3% inflation, Jeff\'s money loses about 2% of purchasing power each year. Over 30 years, that\'s a massive loss.',
+              1: 'At 1% growth and 3% inflation, Jeff\'s money loses about 2% of purchasing power each year. Over 30 years, that\'s a massive loss.',
+              3: 'At 1% growth and 3% inflation, Jeff\'s money loses about 2% of purchasing power each year. Over 30 years, that\'s a massive loss.',
+            },
           },
         ],
       },
@@ -352,6 +404,9 @@ export const finSection12Part1: Unit[] = [
             question: "Your retirement number depends only on how much you earn today.",
             correctAnswer: false,
             explanation: "It depends on your spending, your expected retirement income, and how long you'll be retired. Earnings help you save, but spending determines how much you need.",
+            distractorExplanations: {
+              0: 'It depends on your spending, your expected retirement income, and how long you\'ll be retired. Earnings help you save, but spending determines how much you need.',
+            },
           },
           {
             id: "fin-sec12-u1-L4-Q2",
@@ -385,6 +440,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Most planners use 70% to 80% because some work-related expenses disappear in retirement.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; most planners use 70% to 80% because some work-related expenses disappear in retirement.',
+              1: 'This calculation is incorrect; most planners use 70% to 80% because some work-related expenses disappear in retirement.',
+              3: 'This calculation is incorrect; most planners use 70% to 80% because some work-related expenses disappear in retirement.',
+            },
           },
           {
             id: "fin-sec12-u1-L4-Q4",
@@ -408,6 +468,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "80% of $80,000 is $64,000 needed. Minus $20,000 from Social Security equals $44,000/year from savings.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; 80% of $80,000 is $64,000 needed. Minus $20,000 from Social Security equals $44,000/year from savings.',
+              2: 'This calculation is incorrect; 80% of $80,000 is $64,000 needed. Minus $20,000 from Social Security equals $44,000/year from savings.',
+              3: 'This calculation is incorrect; 80% of $80,000 is $64,000 needed. Minus $20,000 from Social Security equals $44,000/year from savings.',
+            },
           },
           {
             id: "fin-sec12-u1-L4-T3",
@@ -591,6 +656,9 @@ export const finSection12Part1: Unit[] = [
             question: "A 401(k) is a retirement account offered through your employer.",
             correctAnswer: true,
             explanation: "The 401(k) is a workplace retirement plan. You typically can't open one on your own without an employer.",
+            distractorExplanations: {
+              1: 'The 401(k) is a workplace retirement plan. You typically can\'t open one on your own without an employer.',
+            },
           },
           {
             id: "fin-sec12-u2-L1-Q2",
@@ -604,6 +672,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Traditional 401(k) contributions are pre-tax. You pay taxes only when you withdraw the money in retirement.",
+            distractorExplanations: {
+              0: 'Traditional 401(k) contributions are pre-tax. You pay taxes only when you withdraw the money in retirement.',
+              2: 'This overgeneralizes; traditional 401(k) contributions are pre-tax. You pay taxes only when you withdraw the money in retirement.',
+              3: 'This reasoning is flawed; traditional 401(k) contributions are pre-tax. You pay taxes only when you withdraw the money in retirement.',
+            },
           },
           {
             id: "fin-sec12-u2-L1-T2",
@@ -618,6 +691,9 @@ export const finSection12Part1: Unit[] = [
             question: "401(k) contributions are deducted automatically from your paycheck.",
             correctAnswer: true,
             explanation: "Automatic payroll deductions make saving easy. You never see the money so you're less tempted to spend it.",
+            distractorExplanations: {
+              1: 'Automatic payroll deductions make saving easy. You never see the money so you\'re less tempted to spend it.',
+            },
           },
           {
             id: "fin-sec12-u2-L1-Q4",
@@ -655,6 +731,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Early withdrawals face a 10% penalty on top of regular income taxes. This makes early withdrawal very expensive.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; early withdrawals face a 10% penalty on top of regular income taxes. This makes early withdrawal very expensive.',
+              1: 'This calculation is incorrect; early withdrawals face a 10% penalty on top of regular income taxes. This makes early withdrawal very expensive.',
+              3: 'This calculation is incorrect; early withdrawals face a 10% penalty on top of regular income taxes. This makes early withdrawal very expensive.',
+            },
           },
         ],
       },
@@ -680,6 +761,9 @@ export const finSection12Part1: Unit[] = [
             question: "There is a maximum amount you can contribute to a 401(k) each year.",
             correctAnswer: true,
             explanation: "The IRS sets annual contribution limits. They adjust periodically for inflation.",
+            distractorExplanations: {
+              1: 'The IRS sets annual contribution limits. They adjust periodically for inflation.',
+            },
           },
           {
             id: "fin-sec12-u2-L2-Q2",
@@ -693,6 +777,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Contribution limits prevent high earners from sheltering unlimited income in tax-advantaged accounts.",
+            distractorExplanations: {
+              1: 'Contribution limits prevent high earners from sheltering unlimited income in tax-advantaged accounts.',
+              2: 'This reasoning is flawed; contribution limits prevent high earners from sheltering unlimited income in tax-advantaged accounts.',
+              3: 'This reasoning is flawed; contribution limits prevent high earners from sheltering unlimited income in tax-advantaged accounts.',
+            },
           },
           {
             id: "fin-sec12-u2-L2-T2",
@@ -707,6 +796,9 @@ export const finSection12Part1: Unit[] = [
             question: "Workers over 50 can contribute more than the standard 401(k) limit.",
             correctAnswer: true,
             explanation: "Catch-up contributions let older workers put in extra money to boost their retirement savings.",
+            distractorExplanations: {
+              1: 'Catch-up contributions let older workers put in extra money to boost their retirement savings.',
+            },
           },
           {
             id: "fin-sec12-u2-L2-Q4",
@@ -751,6 +843,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Traditional: tax break now, pay later. Roth: pay taxes now, withdraw tax-free later.",
+            distractorExplanations: {
+              0: 'Traditional: tax break now, pay later. Roth: pay taxes now, withdraw tax-free later.',
+              1: 'This reasoning is flawed; traditional: tax break now, pay later. Roth: pay taxes now, withdraw tax-free later.',
+              3: 'Traditional: tax break now, pay later. Roth: pay taxes now, withdraw tax-free later.',
+            },
           },
         ],
       },
@@ -776,6 +873,9 @@ export const finSection12Part1: Unit[] = [
             question: "Your own 401(k) contributions are always 100% yours, regardless of vesting.",
             correctAnswer: true,
             explanation: "Vesting only applies to employer contributions. Every dollar you put in belongs to you immediately.",
+            distractorExplanations: {
+              1: 'Vesting only applies to employer contributions. Every dollar you put in belongs to you immediately.',
+            },
           },
           {
             id: "fin-sec12-u2-L3-Q2",
@@ -789,6 +889,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Vesting determines how much of your employer's contributions you get to keep if you leave the company.",
+            distractorExplanations: {
+              0: 'Vesting determines how much of your employer\'s contributions you get to keep if you leave the company.',
+              2: 'This reasoning is flawed; vesting determines how much of your employer\'s contributions you get to keep if you leave the company.',
+              3: 'Vesting determines how much of your employer\'s contributions you get to keep if you leave the company.',
+            },
           },
           {
             id: "fin-sec12-u2-L3-T2",
@@ -819,6 +924,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At 25% per year for 2 years, Priya is 50% vested. 50% of $8,000 is $4,000.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; at 25% per year for 2 years, Priya is 50% vested. 50% of $8,000 is $4,000.',
+              2: 'This calculation is incorrect; at 25% per year for 2 years, Priya is 50% vested. 50% of $8,000 is $4,000.',
+              3: 'This calculation is incorrect; at 25% per year for 2 years, Priya is 50% vested. 50% of $8,000 is $4,000.',
+            },
           },
           {
             id: "fin-sec12-u2-L3-Q5",
@@ -852,6 +962,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Waiting a few months to vest can mean keeping thousands of dollars in employer contributions.",
+            distractorExplanations: {
+              0: 'Waiting a few months to vest can mean keeping thousands of dollars in employer contributions.',
+              2: 'Waiting a few months to vest can mean keeping thousands of dollars in employer contributions.',
+              3: 'Waiting a few months to vest can mean keeping thousands of dollars in employer contributions.',
+            },
           },
         ],
       },
@@ -877,6 +992,9 @@ export const finSection12Part1: Unit[] = [
             question: "A 401(k) loan lets you borrow up to 50% of your vested balance.",
             correctAnswer: true,
             explanation: "The typical limit is 50% of your vested balance or $50,000, whichever is lower.",
+            distractorExplanations: {
+              1: 'The typical limit is 50% of your vested balance or $50,000, whichever is lower.',
+            },
           },
           {
             id: "fin-sec12-u2-L4-Q2",
@@ -890,6 +1008,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "You pay interest to yourself. The interest goes back into your own 401(k) account.",
+            distractorExplanations: {
+              0: 'You pay interest to yourself. The interest goes back into your own 401(k) account.',
+              1: 'You pay interest to yourself. The interest goes back into your own 401(k) account.',
+              3: 'You pay interest to yourself. The interest goes back into your own 401(k) account.',
+            },
           },
           {
             id: "fin-sec12-u2-L4-T2",
@@ -942,6 +1065,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The unpaid balance is treated as a withdrawal. Derek owes income taxes plus a 10% early withdrawal penalty since he's under 59 and a half.",
+            distractorExplanations: {
+              0: 'The unpaid balance is treated as a withdrawal. Derek owes income taxes plus a 10% early withdrawal penalty since he\'s under 59 and a half.',
+              1: 'The unpaid balance is treated as a withdrawal. Derek owes income taxes plus a 10% early withdrawal penalty since he\'s under 59 and a half.',
+              3: 'This reasoning is flawed; the unpaid balance is treated as a withdrawal.',
+            },
           },
           {
             id: "fin-sec12-u2-L4-Q6",
@@ -955,6 +1083,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You repay the loan with money that's already been taxed. Then you pay taxes again when you withdraw in retirement. That interest gets taxed twice.",
+            distractorExplanations: {
+              0: 'You repay the loan with money that\'s already been taxed. Then you pay taxes again when you withdraw in retirement. That interest gets taxed twice.',
+              2: 'You repay the loan with money that\'s already been taxed. Then you pay taxes again when you withdraw in retirement. That interest gets taxed twice.',
+              3: 'This reasoning is flawed; you repay the loan with money that\'s already been taxed. Then you pay taxes again when you withdraw in retirement.',
+            },
           },
         ],
       },
@@ -1023,6 +1156,9 @@ export const finSection12Part1: Unit[] = [
             question: "A traditional IRA gives you a tax deduction when you contribute.",
             correctAnswer: true,
             explanation: "Traditional IRA contributions may be tax-deductible, lowering your taxable income in the year you contribute.",
+            distractorExplanations: {
+              1: 'Traditional IRA contributions may be tax-deductible, lowering your taxable income in the year you contribute.',
+            },
           },
           {
             id: "fin-sec12-u3-L1-Q2",
@@ -1036,6 +1172,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Traditional IRA money is taxed as regular income when you withdraw it in retirement.",
+            distractorExplanations: {
+              0: 'Traditional IRA money is taxed as regular income when you withdraw it in retirement.',
+              1: 'Traditional IRA money is taxed as regular income when you withdraw it in retirement.',
+              3: 'This overgeneralizes; traditional IRA money is taxed as regular income when you withdraw it in retirement.',
+            },
           },
           {
             id: "fin-sec12-u3-L1-T2",
@@ -1074,6 +1215,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$5,000 times 22% equals $1,100 in tax savings. The deduction reduces her taxable income to $55,000.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; $5,000 times 22% equals $1,100 in tax savings. The deduction reduces her taxable income to $55,000.',
+              2: 'This calculation is incorrect; $5,000 times 22% equals $1,100 in tax savings. The deduction reduces her taxable income to $55,000.',
+              3: 'This calculation is incorrect; $5,000 times 22% equals $1,100 in tax savings. The deduction reduces her taxable income to $55,000.',
+            },
           },
           {
             id: "fin-sec12-u3-L1-T3",
@@ -1094,6 +1240,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A traditional IRA saves you money when your current tax rate is higher than your expected retirement tax rate.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a traditional IRA saves you money when your current tax rate is higher than your expected retirement tax rate.',
+              2: 'This overgeneralizes; a traditional IRA saves you money when your current tax rate is higher than your expected retirement tax rate.',
+              3: 'A traditional IRA saves you money when your current tax rate is higher than your expected retirement tax rate.',
+            },
           },
         ],
       },
@@ -1119,6 +1270,9 @@ export const finSection12Part1: Unit[] = [
             question: "Roth IRA withdrawals in retirement are completely tax-free.",
             correctAnswer: true,
             explanation: "Because you already paid taxes on the contributions, both the original money and all growth come out tax-free.",
+            distractorExplanations: {
+              1: 'Because you already paid taxes on the contributions, both the original money and all growth come out tax-free.',
+            },
           },
           {
             id: "fin-sec12-u3-L2-Q2",
@@ -1132,6 +1286,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "You contribute money you've already paid income tax on. In return, everything comes out tax-free later.",
+            distractorExplanations: {
+              0: 'You contribute money you\'ve already paid income tax on. In return, everything comes out tax-free later.',
+              1: 'You contribute money you\'ve already paid income tax on. In return, everything comes out tax-free later.',
+              3: 'You contribute money you\'ve already paid income tax on. In return, everything comes out tax-free later.',
+            },
           },
           {
             id: "fin-sec12-u3-L2-T2",
@@ -1146,6 +1305,9 @@ export const finSection12Part1: Unit[] = [
             question: "Roth IRAs have required minimum distributions starting at age 73.",
             correctAnswer: false,
             explanation: "Roth IRAs have no RMDs for the original owner. This is a major advantage over traditional IRAs.",
+            distractorExplanations: {
+              0: 'Roth IRAs have no RMDs for the original owner. This is a major advantage over traditional IRAs.',
+            },
           },
           {
             id: "fin-sec12-u3-L2-Q4",
@@ -1182,6 +1344,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your contributions (not earnings) can be pulled out anytime. You already paid taxes on them.",
+            distractorExplanations: {
+              0: 'There is a real consequence here; your contributions (not earnings) can be pulled out anytime. You already paid taxes on them.',
+              2: 'Your contributions (not earnings) can be pulled out anytime. You already paid taxes on them.',
+              3: 'Your contributions (not earnings) can be pulled out anytime. You already paid taxes on them.',
+            },
           },
           {
             id: "fin-sec12-u3-L2-Q6",
@@ -1215,6 +1382,9 @@ export const finSection12Part1: Unit[] = [
             question: "If you expect your tax rate to be higher in retirement, a Roth IRA is usually the better choice.",
             correctAnswer: true,
             explanation: "With Roth, you pay the lower rate now and avoid the higher rate later. That's a net win.",
+            distractorExplanations: {
+              1: 'With Roth, you pay the lower rate now and avoid the higher rate later. That\'s a net win.',
+            },
           },
           {
             id: "fin-sec12-u3-L3-Q2",
@@ -1229,6 +1399,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Kim pays 12% tax on her contributions now. If she used traditional, she'd pay 22% on withdrawals. Roth saves her 10% on every dollar.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; kim pays 12% tax on her contributions now. If she used traditional, she\'d pay 22% on withdrawals.',
+              2: 'This reasoning is flawed; kim pays 12% tax on her contributions now. If she used traditional, she\'d pay 22% on withdrawals.',
+              3: 'This reasoning is flawed; kim pays 12% tax on her contributions now. If she used traditional, she\'d pay 22% on withdrawals.',
+            },
           },
           {
             id: "fin-sec12-u3-L3-T2",
@@ -1243,6 +1418,9 @@ export const finSection12Part1: Unit[] = [
             question: "You can contribute to both a traditional IRA and a Roth IRA in the same year.",
             correctAnswer: true,
             explanation: "You can split contributions between both, but the total can't exceed the annual IRA limit.",
+            distractorExplanations: {
+              1: 'You can split contributions between both, but the total can\'t exceed the annual IRA limit.',
+            },
           },
           {
             id: "fin-sec12-u3-L3-Q4",
@@ -1265,6 +1443,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Tax diversification means having both pre-tax (traditional) and after-tax (Roth) accounts so you can manage taxes flexibly in retirement.",
+            distractorExplanations: {
+              0: 'Tax diversification means having both pre-tax (traditional) and after-tax (Roth) accounts so you can manage taxes flexibly in retirement.',
+              2: 'Tax diversification means having both pre-tax (traditional) and after-tax (Roth) accounts so you can manage taxes flexibly in retirement.',
+              3: 'Tax diversification means having both pre-tax (traditional) and after-tax (Roth) accounts so you can manage taxes flexibly in retirement.',
+            },
           },
           {
             id: "fin-sec12-u3-L3-T3",
@@ -1310,6 +1493,9 @@ export const finSection12Part1: Unit[] = [
             question: "Anyone can contribute to a Roth IRA regardless of their income.",
             correctAnswer: false,
             explanation: "Roth IRAs have income limits. High earners above the threshold can't contribute directly.",
+            distractorExplanations: {
+              0: 'Roth IRAs have income limits. High earners above the threshold can\'t contribute directly.',
+            },
           },
           {
             id: "fin-sec12-u3-L4-Q2",
@@ -1323,6 +1509,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "There's a phase-out range where your allowed contribution shrinks. Above the top of the range, you can't contribute at all.",
+            distractorExplanations: {
+              0: 'There\'s a phase-out range where your allowed contribution shrinks. Above the top of the range, you can\'t contribute at all.',
+              2: 'There\'s a phase-out range where your allowed contribution shrinks. Above the top of the range, you can\'t contribute at all.',
+              3: 'There\'s a phase-out range where your allowed contribution shrinks. Above the top of the range, you can\'t contribute at all.',
+            },
           },
           {
             id: "fin-sec12-u3-L4-T2",
@@ -1337,6 +1528,9 @@ export const finSection12Part1: Unit[] = [
             question: "A backdoor Roth conversion lets high earners get money into a Roth IRA indirectly.",
             correctAnswer: true,
             explanation: "By contributing to a traditional IRA and converting, high earners bypass the income limit.",
+            distractorExplanations: {
+              1: 'By contributing to a traditional IRA and converting, high earners bypass the income limit.',
+            },
           },
           {
             id: "fin-sec12-u3-L4-Q4",
@@ -1379,6 +1573,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The backdoor Roth conversion is the legal, standard approach for high earners who want Roth access.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the backdoor Roth conversion is the legal, standard approach for high earners who want Roth access.',
+              2: 'Inaction here would be harmful; the backdoor Roth conversion is the legal, standard approach for high earners who want Roth access.',
+              3: 'This reasoning is flawed; the backdoor Roth conversion is the legal, standard approach for high earners who want Roth access.',
+            },
           },
           {
             id: "fin-sec12-u3-L4-Q7",
@@ -1392,6 +1591,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Having a workplace retirement plan means your traditional IRA deduction phases out above certain income levels.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; having a workplace retirement plan means your traditional IRA deduction phases out above certain income levels.',
+              2: 'Having a workplace retirement plan means your traditional IRA deduction phases out above certain income levels.',
+              3: 'Having a workplace retirement plan means your traditional IRA deduction phases out above certain income levels.',
+            },
           },
         ],
       },
@@ -1543,6 +1747,9 @@ export const finSection12Part1: Unit[] = [
             question: "A 401(k) and an IRA are opened through the same process.",
             correctAnswer: false,
             explanation: "A 401(k) is offered by your employer. An IRA is opened individually at a brokerage or bank.",
+            distractorExplanations: {
+              0: 'A 401(k) is offered by your employer. An IRA is opened individually at a brokerage or bank.',
+            },
           },
           {
             id: "fin-sec12-u4-L1-Q2",
@@ -1602,6 +1809,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "6% of $60,000 is $3,600/year ($300/month). Her employer adds $1,800 free. That's a 50% instant return she can't get elsewhere.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; 6% of $60,000 is $3,600/year ($300/month). Her employer adds $1,800 free.',
+              2: 'This reasoning is flawed; 6% of $60,000 is $3,600/year ($300/month). Her employer adds $1,800 free.',
+              3: 'Inaction here would be harmful; 6% of $60,000 is $3,600/year ($300/month). Her employer adds $1,800 free.',
+            },
           },
           {
             id: "fin-sec12-u4-L1-T3",
@@ -1622,6 +1834,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Rolling over keeps your money growing tax-advantaged. Cashing out triggers taxes and penalties.",
+            distractorExplanations: {
+              0: 'Rolling over keeps your money growing tax-advantaged. Cashing out triggers taxes and penalties.',
+              1: 'Rolling over keeps your money growing tax-advantaged. Cashing out triggers taxes and penalties.',
+              3: 'Rolling over keeps your money growing tax-advantaged. Cashing out triggers taxes and penalties.',
+            },
           },
         ],
       },
@@ -1654,6 +1871,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Get the full 3% match first ($112.50/month = $1,350/year, matched dollar for dollar). Put the remaining $287.50/month into a Roth IRA.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; get the full 3% match first ($112.50/month = $1,350/year, matched dollar for dollar). Put the remaining $287.',
+              2: 'This overgeneralizes; get the full 3% match first ($112.50/month = $1,350/year, matched dollar for dollar). Put the remaining $287.',
+              3: 'Get the full 3% match first ($112.50/month = $1,350/year, matched dollar for dollar). Put the remaining $287.50/month into a Roth IRA.',
+            },
           },
           {
             id: "fin-sec12-u4-L2-Q2",
@@ -1668,6 +1890,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "At 52, Anna can use catch-up contributions to maximize her tax-advantaged savings. Time is limited, so aggressive saving now is critical.",
+            distractorExplanations: {
+              1: 'At 52, Anna can use catch-up contributions to maximize her tax-advantaged savings. Time is limited, so aggressive saving now is critical.',
+              2: 'This reasoning is flawed; at 52, Anna can use catch-up contributions to maximize her tax-advantaged savings.',
+              3: 'Inaction here would be harmful; at 52, Anna can use catch-up contributions to maximize her tax-advantaged savings.',
+            },
           },
           {
             id: "fin-sec12-u4-L2-T2",
@@ -1688,6 +1915,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Indirect rollovers have 20% withheld for taxes. Lee must deposit the full $30,000 (including replacing the withheld amount) into an IRA within 60 days to avoid penalties.",
+            distractorExplanations: {
+              0: 'Indirect rollovers have 20% withheld for taxes. Lee must deposit the full $30,000 (including replacing the withheld amount) into an IRA within 60.',
+              2: 'This reasoning is flawed; indirect rollovers have 20% withheld for taxes.',
+              3: 'Indirect rollovers have 20% withheld for taxes. Lee must deposit the full $30,000 (including replacing the withheld amount) into an IRA within 60.',
+            },
           },
           {
             id: "fin-sec12-u4-L2-Q4",
@@ -1726,6 +1958,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Converting $150,000 adds it to her taxable income. At 24%, that's $36,000 in extra taxes. Many people convert in smaller amounts over several years.",
+            distractorExplanations: {
+              1: 'Converting $150,000 adds it to her taxable income. At 24%, that\'s $36,000 in extra taxes. Many people convert in smaller amounts over several years.',
+              2: 'Converting $150,000 adds it to her taxable income. At 24%, that\'s $36,000 in extra taxes. Many people convert in smaller amounts over several years.',
+              3: 'This reasoning is flawed; converting $150,000 adds it to her taxable income. At 24%, that\'s $36,000 in extra taxes.',
+            },
           },
           {
             id: "fin-sec12-u4-L2-T3",
@@ -1746,6 +1983,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Large one-time conversions push you into higher brackets. Spreading the conversion keeps taxes manageable.",
+            distractorExplanations: {
+              0: 'Large one-time conversions push you into higher brackets. Spreading the conversion keeps taxes manageable.',
+              2: 'This reasoning is flawed; large one-time conversions push you into higher brackets. Spreading the conversion keeps taxes manageable.',
+              3: 'This reasoning is flawed; large one-time conversions push you into higher brackets. Spreading the conversion keeps taxes manageable.',
+            },
           },
         ],
       },
@@ -1814,6 +2056,9 @@ export const finSection12Part1: Unit[] = [
             question: "An employer match means your company adds money to your 401(k) based on your contributions.",
             correctAnswer: true,
             explanation: "Your employer contributes money alongside yours. It's part of your total compensation.",
+            distractorExplanations: {
+              1: 'Your employer contributes money alongside yours. It\'s part of your total compensation.',
+            },
           },
           {
             id: "fin-sec12-u5-L1-Q2",
@@ -1827,6 +2072,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The match is use-it-or-lose-it. If you don't contribute enough, the extra employer money simply doesn't get added.",
+            distractorExplanations: {
+              0: 'The match is use-it-or-lose-it. If you don\'t contribute enough, the extra employer money simply doesn\'t get added.',
+              2: 'The match is use-it-or-lose-it. If you don\'t contribute enough, the extra employer money simply doesn\'t get added.',
+              3: 'This reasoning is flawed; the match is use-it-or-lose-it. If you don\'t contribute enough, the extra employer money simply doesn\'t get added.',
+            },
           },
           {
             id: "fin-sec12-u5-L1-T2",
@@ -1841,6 +2091,9 @@ export const finSection12Part1: Unit[] = [
             question: "The employer match is part of your total compensation package.",
             correctAnswer: true,
             explanation: "Match money is a benefit your employer pays. Not claiming it is like declining part of your salary.",
+            distractorExplanations: {
+              1: 'Match money is a benefit your employer pays. Not claiming it is like declining part of your salary.',
+            },
           },
           {
             id: "fin-sec12-u5-L1-Q4",
@@ -1878,6 +2131,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If your employer matches dollar-for-dollar, you instantly double your money. No other investment does that.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; if your employer matches dollar-for-dollar, you instantly double your money. No other investment does that.',
+              2: 'This overgeneralizes; if your employer matches dollar-for-dollar, you instantly double your money. No other investment does that.',
+              3: 'This overgeneralizes; if your employer matches dollar-for-dollar, you instantly double your money. No other investment does that.',
+            },
           },
         ],
       },
@@ -1903,6 +2161,9 @@ export const finSection12Part1: Unit[] = [
             question: "A 3% employer match on a $50,000 salary adds $1,500/year to your retirement.",
             correctAnswer: true,
             explanation: "3% of $50,000 is $1,500/year in free employer contributions.",
+            distractorExplanations: {
+              1: '3% of $50,000 is $1,500/year in free employer contributions.',
+            },
           },
           {
             id: "fin-sec12-u5-L2-Q2",
@@ -1916,6 +2177,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "6% of $80,000 is $4,800 in your contributions. At 50% match, the employer adds $2,400.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; 6% of $80,000 is $4,800 in your contributions. At 50% match, the employer adds $2,400.',
+              2: 'This calculation is incorrect; 6% of $80,000 is $4,800 in your contributions. At 50% match, the employer adds $2,400.',
+              3: 'This calculation is incorrect; 6% of $80,000 is $4,800 in your contributions. At 50% match, the employer adds $2,400.',
+            },
           },
           {
             id: "fin-sec12-u5-L2-T2",
@@ -1937,6 +2203,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Worker A gets $1,000/year more in match money. At 7% for 25 years, that extra $1,000/year grows to about $63,000 more.",
+            distractorExplanations: {
+              0: 'Worker A gets $1,000/year more in match money. At 7% for 25 years, that extra $1,000/year grows to about $63,000 more.',
+              2: 'Worker A gets $1,000/year more in match money. At 7% for 25 years, that extra $1,000/year grows to about $63,000 more.',
+              3: 'Worker A gets $1,000/year more in match money. At 7% for 25 years, that extra $1,000/year grows to about $63,000 more.',
+            },
           },
           {
             id: "fin-sec12-u5-L2-Q4",
@@ -1989,6 +2260,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you leave before full vesting, you forfeit the unvested portion of your employer's match.",
+            distractorExplanations: {
+              0: 'If you leave before full vesting, you forfeit the unvested portion of your employer\'s match.',
+              2: 'This reasoning is flawed; if you leave before full vesting, you forfeit the unvested portion of your employer\'s match.',
+              3: 'This reasoning is flawed; if you leave before full vesting, you forfeit the unvested portion of your employer\'s match.',
+            },
           },
         ],
       },
@@ -2014,6 +2290,9 @@ export const finSection12Part1: Unit[] = [
             question: "All employers use the same matching formula for their 401(k) plans.",
             correctAnswer: false,
             explanation: "Match formulas vary widely. Some match dollar-for-dollar, others match 50 cents per dollar, and some have tiered structures.",
+            distractorExplanations: {
+              0: 'Match formulas vary widely. Some match dollar-for-dollar, others match 50 cents per dollar, and some have tiered structures.',
+            },
           },
           {
             id: "fin-sec12-u5-L3-Q2",
@@ -2044,6 +2323,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You already get the 100% match on 3% ($2,100). By contributing the next 3%, you get a 50% match: $70,000 times 3% times 50% = $1,050 more.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; you already get the 100% match on 3% ($2,100).',
+              2: 'This calculation is incorrect; you already get the 100% match on 3% ($2,100).',
+              3: 'This calculation is incorrect; you already get the 100% match on 3% ($2,100).',
+            },
           },
           {
             id: "fin-sec12-u5-L3-Q4",
@@ -2057,6 +2341,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "You contribute 6% ($3,000). The employer matches 50% of that ($1,500). You need to contribute $3,000 to get the full $1,500 match.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; you contribute 6% ($3,000). The employer matches 50% of that ($1,500).',
+              2: 'This reasoning is flawed; you contribute 6% ($3,000). The employer matches 50% of that ($1,500).',
+              3: 'This overgeneralizes; you contribute 6% ($3,000). The employer matches 50% of that ($1,500).',
+            },
           },
           {
             id: "fin-sec12-u5-L3-Q5",
@@ -2093,6 +2382,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If your employer matches per paycheck and you max out early, you get no match on paychecks where you contribute nothing.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; if your employer matches per paycheck and you max out early, you get no match on paychecks where you contribute nothing.',
+              2: 'This reasoning is flawed; if your employer matches per paycheck and you max out early, you get no match on paychecks where you contribute nothing.',
+              3: 'This reasoning is flawed; if your employer matches per paycheck and you max out early, you get no match on paychecks where you contribute nothing.',
+            },
           },
         ],
       },
@@ -2118,6 +2412,9 @@ export const finSection12Part1: Unit[] = [
             question: "Increasing your 401(k) contribution by 1% every 6 months is a good strategy to reach the full match.",
             correctAnswer: true,
             explanation: "Gradual increases are painless. Your spending adjusts naturally to the slightly smaller paycheck.",
+            distractorExplanations: {
+              1: 'Gradual increases are painless. Your spending adjusts naturally to the slightly smaller paycheck.',
+            },
           },
           {
             id: "fin-sec12-u5-L4-Q2",
@@ -2131,6 +2428,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At minimum, contribute enough to capture the full employer match. Anything less means leaving free money behind.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; at minimum, contribute enough to capture the full employer match. Anything less means leaving free money behind.',
+              2: 'At minimum, contribute enough to capture the full employer match. Anything less means leaving free money behind.',
+              3: 'This overgeneralizes; at minimum, contribute enough to capture the full employer match. Anything less means leaving free money behind.',
+            },
           },
           {
             id: "fin-sec12-u5-L4-T2",
@@ -2173,6 +2475,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Going from 2% to 4% costs Wei about $91/month pre-tax (around $70 after tax savings). She gains $1,100/year in free match money. That's a massive return on a small sacrifice.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; going from 2% to 4% costs Wei about $91/month pre-tax (around $70 after tax savings).',
+              2: 'Inaction here would be harmful; going from 2% to 4% costs Wei about $91/month pre-tax (around $70 after tax savings).',
+              3: 'This reasoning is flawed; going from 2% to 4% costs Wei about $91/month pre-tax (around $70 after tax savings).',
+            },
           },
           {
             id: "fin-sec12-u5-L4-T3",
@@ -2193,6 +2500,11 @@ export const finSection12Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Directing part of a raise to savings means your lifestyle doesn't change but your retirement grows faster.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; directing part of a raise to savings means your lifestyle doesn\'t change but your retirement grows faster.',
+              2: 'This reasoning is flawed; directing part of a raise to savings means your lifestyle doesn\'t change but your retirement grows faster.',
+              3: 'This reasoning is flawed; directing part of a raise to savings means your lifestyle doesn\'t change but your retirement grows faster.',
+            },
           },
         ],
       },

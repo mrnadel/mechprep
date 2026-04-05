@@ -40,6 +40,7 @@ export const finSection6Part1: Unit[] = [
             question: "A mortgage is considered better debt than credit card debt because it builds equity.",
             correctAnswer: true,
             explanation: "Mortgages build ownership in a home, which typically appreciates. Credit card debt usually funds consumption.",
+            distractorExplanations: { 1: 'Mortgages do build equity in appreciating assets, making them generally better than high-interest credit card debt.' },
           },
           {
             id: "fin-sec6-u1-L1-Q2",
@@ -53,6 +54,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Credit cards often charge 15% to 25% interest, making purchases much more expensive over time.",
+            distractorExplanations: {
+              0: 'Credit cards are legal worldwide; legality has nothing to do with why the debt is considered bad.',
+              2: 'Credit cards can be used for purchases of any size, not just small items.',
+              3: 'Banks do not automatically close credit card accounts after one year.',
+            },
           },
           {
             id: "fin-sec6-u1-L1-T2",
@@ -66,6 +72,7 @@ export const finSection6Part1: Unit[] = [
             question: "A business loan used to start a profitable company is an example of good debt.",
             correctAnswer: true,
             explanation: "If the business earns more than the loan costs in interest, the debt helped create value.",
+            distractorExplanations: { 1: 'A profitable business generates returns that exceed the loan cost, which is the definition of good debt.' },
           },
           {
             id: "fin-sec6-u1-L1-Q4",
@@ -103,6 +110,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The key question is whether what you bought with the debt grows in value or earns you money.",
+            distractorExplanations: {
+              0: 'Payment size alone does not determine whether debt is good or bad.',
+              1: 'Approval speed reflects bank processes, not the quality of the debt.',
+              3: 'A fixed rate threshold ignores context; a 6% loan on a depreciating asset can still be bad debt.',
+            },
           },
           {
             id: "fin-sec6-u1-L1-Q7",
@@ -117,6 +129,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The items depreciate quickly while high interest piles up. This is a clear example of bad debt.",
+            distractorExplanations: {
+              0: 'Usefulness does not make debt good if the items lose value while interest accumulates.',
+              1: 'Bank approval does not make a purchase a wise financial decision.',
+              3: 'The dollar amount is not the issue; the rapid depreciation plus high interest makes it bad debt.',
+            },
           },
         ],
       },
@@ -142,6 +159,7 @@ export const finSection6Part1: Unit[] = [
             question: "You should evaluate whether you can comfortably afford payments before taking on debt.",
             correctAnswer: true,
             explanation: "Affordable payments are essential. Debt you can't pay leads to late fees, credit damage, and stress.",
+            distractorExplanations: { 1: 'Unaffordable payments lead to missed payments, late fees, and credit damage, so evaluating affordability is essential.' },
           },
           {
             id: "fin-sec6-u1-L2-Q2",
@@ -168,6 +186,7 @@ export const finSection6Part1: Unit[] = [
             question: "A high interest rate on a loan is a signal that the lender considers it risky.",
             correctAnswer: true,
             explanation: "Lenders charge more interest when they see higher risk. That higher cost is a warning sign for you too.",
+            distractorExplanations: { 1: 'Lenders price risk into interest rates, so higher rates genuinely reflect higher perceived risk.' },
           },
           {
             id: "fin-sec6-u1-L2-Q4",
@@ -190,6 +209,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Some debts don't fit neatly into good or bad. A necessary car that enables income can be a reasonable use of debt.",
+            distractorExplanations: {
+              0: 'Affordability alone does not make debt good; the purpose and value matter too.',
+              1: 'Not all car loans are bad; a necessary vehicle enabling income can be a reasonable use of debt.',
+              3: 'While cars do lose value, a car needed for work provides an income return that offsets depreciation.',
+            },
           },
           {
             id: "fin-sec6-u1-L2-T3",
@@ -209,6 +233,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The core test: does the benefit you gain outweigh the total cost of borrowing?",
+            distractorExplanations: {
+              0: 'Friends\' opinions are irrelevant to the financial math of whether debt creates value.',
+              2: 'Getting approved only means the lender thinks you can repay, not that the debt is wise.',
+              3: 'The lowest monthly payment often means a longer term with more total interest.',
+            },
           },
           {
             id: "fin-sec6-u1-L2-Q7",
@@ -223,6 +252,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The $12,000 raise far exceeds the $8,000 loan plus interest. This is a smart investment in earning power.",
+            distractorExplanations: {
+              0: 'Education debt that leads to higher earnings is a classic example of good debt.',
+              2: 'The dollar amount matters less than the return on investment, which here is strongly positive.',
+              3: 'A low rate helps, but the real reason is the return exceeds the cost.',
+            },
           },
         ],
       },
@@ -262,6 +296,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When rental income (10%) exceeds the loan cost (6%), the landlord profits from using leverage.",
+            distractorExplanations: {
+              0: 'Loan size alone does not make debt bad; what matters is whether returns exceed the cost.',
+              2: 'Many real estate investors earn 10% or more through rental income and appreciation.',
+              3: 'This is a calculated investment with measurable returns, not a gamble.',
+            },
           },
           {
             id: "fin-sec6-u1-L3-T2",
@@ -275,6 +314,7 @@ export const finSection6Part1: Unit[] = [
             question: "Leverage can increase your losses, not just your gains.",
             correctAnswer: true,
             explanation: "If the asset drops in value, you lose money but still owe the full loan. That's the risk of leverage.",
+            distractorExplanations: { 1: 'Leverage amplifies both gains and losses because you still owe the full debt even if the asset drops in value.' },
           },
           {
             id: "fin-sec6-u1-L3-Q4",
@@ -288,6 +328,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "When the investment loses value, leverage means you lose your money and still owe the bank.",
+            distractorExplanations: {
+              0: 'A home doubling in value is leverage working well, not going wrong.',
+              1: 'A student loan for a high-paying career is strategic debt with a positive return.',
+              3: 'A business loan that leads to profit is successful leverage.',
+            },
           },
           {
             id: "fin-sec6-u1-L3-Q5",
@@ -317,6 +362,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Smart debt creates more value than it costs. If it doesn't, you're better off waiting until you can pay cash.",
+            distractorExplanations: {
+              0: 'Borrowing the maximum approved amount ignores whether the debt creates enough value to justify the cost.',
+              2: 'A salary-based limit is arbitrary and does not account for the return on the borrowed money.',
+              3: 'Longer terms increase total interest paid and do not make debt smarter.',
+            },
           },
           {
             id: "fin-sec6-u1-L3-Q7",
@@ -331,6 +381,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$3,000 return on $15,000 is a 20% return. The 8% interest costs $1,200 per year. The return exceeds the cost, so this could work. But the projected $3,000 is only a projection.",
+            distractorExplanations: {
+              0: 'Not every business justifies debt; the projected return must exceed the borrowing cost.',
+              2: 'Whether 8% is low depends on the return; the return here exceeds the cost, but 8% alone is not the reason.',
+              3: 'The dollar amount is less important than whether the investment generates a return above the interest cost.',
+            },
           },
         ],
       },
@@ -356,6 +411,7 @@ export const finSection6Part1: Unit[] = [
             question: "Making only minimum payments on credit cards is a warning sign of debt trouble.",
             correctAnswer: true,
             explanation: "Minimum payments mostly cover interest. If that's all you can pay, debt is growing instead of shrinking.",
+            distractorExplanations: { 1: 'Minimum payments barely cover interest, so the balance hardly shrinks, which is a clear warning sign.' },
           },
           {
             id: "fin-sec6-u1-L4-Q2",
@@ -369,6 +425,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Borrowing to pay off other debts means you're sinking deeper. It's a cycle that gets worse without intervention.",
+            distractorExplanations: {
+              0: 'Having one card with a low balance is normal and responsible credit use.',
+              1: 'Paying your full balance monthly is the best credit card habit, not a warning sign.',
+              3: 'Setting up autopay is a smart financial habit that prevents missed payments.',
+            },
           },
           {
             id: "fin-sec6-u1-L4-T2",
@@ -425,6 +486,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The first step is always to stop adding new debt and get a clear picture of what you owe.",
+            distractorExplanations: {
+              0: 'Opening a new card adds more debt capacity, which worsens the problem.',
+              1: 'Ignoring debt problems allows interest to compound and the situation to deteriorate.',
+              3: 'Taking a loan to invest in stocks adds risk on top of existing debt trouble.',
+            },
           },
           {
             id: "fin-sec6-u1-L4-Q7",
@@ -439,6 +505,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Opening new cards to pay old ones deepens the spiral. A credit counselor can help create a real payoff plan.",
+            distractorExplanations: {
+              0: 'Using a new card to pay old ones only delays the problem while adding more debt.',
+              2: 'Balance transfers without a payoff plan just move debt around without solving it.',
+              3: 'Closing old cards and using only the new one does not reduce the total debt owed.',
+            },
           },
         ],
       },
@@ -590,6 +661,7 @@ export const finSection6Part1: Unit[] = [
             question: "Simple interest is calculated only on the original amount borrowed.",
             correctAnswer: true,
             explanation: "Simple interest uses only the principal (the original loan) to calculate charges.",
+            distractorExplanations: { 1: 'Simple interest by definition uses only the principal for calculations, not accumulated interest.' },
           },
           {
             id: "fin-sec6-u2-L1-Q2",
@@ -603,6 +675,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Compound interest charges interest on interest. This creates a snowball effect that grows your debt faster.",
+            distractorExplanations: {
+              0: 'Compound interest does not necessarily use a higher base rate; the compounding mechanism is what accelerates growth.',
+              2: 'Compound interest growth comes from interest-on-interest, not from added fees.',
+              3: 'The frequency of calculation varies, but compound interest is faster because it charges interest on prior interest.',
+            },
           },
           {
             id: "fin-sec6-u2-L1-T2",
@@ -639,6 +716,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Year 1: $1,000 + $100 = $1,100. Year 2: $1,100 + $110 = $1,210. The extra $10 comes from interest on interest.",
+            distractorExplanations: {
+              0: '$1,100 is only the amount after year 1; year 2 adds interest on the new $1,100 balance.',
+              1: '$1,200 would be the result of simple interest, not compound.',
+              3: '$1,300 overstates the amount; 10% compound on $1,000 for 2 years yields $1,210.',
+            },
           },
           {
             id: "fin-sec6-u2-L1-T3",
@@ -652,6 +734,7 @@ export const finSection6Part1: Unit[] = [
             question: "Compound interest helps savers but hurts borrowers.",
             correctAnswer: true,
             explanation: "The same math that grows savings also grows debts. It helps whichever side you're on.",
+            distractorExplanations: { 1: 'Compound interest grows both savings and debts; it benefits the side that earns it and costs the side that owes it.' },
           },
           {
             id: "fin-sec6-u2-L1-Q7",
@@ -677,6 +760,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Loan A: $5,000 + $2,000 = $7,000. Loan B: about $7,347. Compound interest costs $347 more because interest earns interest.",
+            distractorExplanations: {
+              0: 'Simple interest is actually less expensive because it does not charge interest on interest.',
+              1: 'At the same rate, compound interest always costs more than simple interest over time.',
+              3: 'The math is deterministic; the lender does not change which type costs more.',
+            },
           },
         ],
       },
@@ -702,6 +790,7 @@ export const finSection6Part1: Unit[] = [
             question: "Most credit cards compound interest on a daily basis.",
             correctAnswer: true,
             explanation: "Daily compounding is standard for credit cards. This makes them more expensive than loans that compound monthly.",
+            distractorExplanations: { 1: 'Daily compounding is the industry standard for credit cards, making them more expensive than monthly-compounding loans.' },
           },
           {
             id: "fin-sec6-u2-L2-Q2",
@@ -715,6 +804,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "More compounding cycles means interest gets added to the balance more frequently, creating faster growth.",
+            distractorExplanations: {
+              0: 'Daily and monthly compounding can use the same annual rate; the difference is how often interest is added.',
+              2: 'Banks do not charge extra fees for daily calculations; the cost comes from more frequent compounding.',
+              3: 'There is no government discount for monthly compounding; the math simply compounds less often.',
+            },
           },
           {
             id: "fin-sec6-u2-L2-T2",
@@ -742,6 +836,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Carrying a balance means interest starts accruing on all new purchases immediately. The grace period is gone.",
+            distractorExplanations: {
+              0: 'Purchase size does not affect the grace period; carrying a balance is what eliminates it.',
+              2: 'Transaction frequency has no effect on the grace period.',
+              3: 'Card age does not determine grace period eligibility.',
+            },
           },
           {
             id: "fin-sec6-u2-L2-Q5",
@@ -764,6 +863,7 @@ export const finSection6Part1: Unit[] = [
             question: "Credit card interest is typically calculated on your average daily balance for the month.",
             correctAnswer: true,
             explanation: "The average daily balance method tracks what you owe each day and uses the average to compute interest.",
+            distractorExplanations: { 1: 'The average daily balance method is the standard way credit card issuers calculate monthly interest charges.' },
           },
           {
             id: "fin-sec6-u2-L2-Q7",
@@ -778,6 +878,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Since Chris is carrying a balance, he's lost his grace period. Interest applies to everything, old and new.",
+            distractorExplanations: {
+              0: 'The grace period only applies when you carry no balance; Chris already has an unpaid balance.',
+              1: 'Interest applies to the entire balance, not just new purchases, once the grace period is lost.',
+              3: 'Both old and new charges accrue interest when you carry a balance from the prior month.',
+            },
           },
         ],
       },
@@ -803,6 +908,7 @@ export const finSection6Part1: Unit[] = [
             question: "Most of a minimum credit card payment goes toward reducing the actual debt.",
             correctAnswer: false,
             explanation: "Most of the minimum payment covers interest charges. Very little reduces the principal balance.",
+            distractorExplanations: { 0: 'Most of the minimum payment covers interest charges, with very little reducing the principal balance.' },
           },
           {
             id: "fin-sec6-u2-L3-Q2",
@@ -816,6 +922,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "About $83 of the $100 goes to interest. Only $17 chips away at the actual balance you owe.",
+            distractorExplanations: {
+              0: 'The full $100 does not reduce debt because about $83 goes to interest first.',
+              1: '$75 overstates principal reduction; monthly interest on $5,000 at 20% consumes most of the payment.',
+              2: '$50 is still too high; at 20% APR on $5,000, roughly $83 goes to interest each month.',
+            },
           },
           {
             id: "fin-sec6-u2-L3-T2",
@@ -829,6 +940,7 @@ export const finSection6Part1: Unit[] = [
             question: "Paying only minimums on a $5,000 credit card balance could take over 25 years to pay off.",
             correctAnswer: true,
             explanation: "When most of each payment goes to interest, the balance shrinks very slowly.",
+            distractorExplanations: { 1: 'Minimum payments barely exceed interest charges, so the balance shrinks extremely slowly over decades.' },
           },
           {
             id: "fin-sec6-u2-L3-Q4",
@@ -842,6 +954,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Doubling payments dramatically cuts payoff time and total interest. Even small extra payments help a lot.",
+            distractorExplanations: {
+              0: 'Doubling payments cuts payoff time dramatically but not exactly in half due to how interest compounds.',
+              2: 'Higher payments reduce the principal faster, which reduces the interest charged each month.',
+              3: 'Banks do not penalize you for paying more than the minimum; extra payments are always accepted.',
+            },
           },
           {
             id: "fin-sec6-u2-L3-Q5",
@@ -894,6 +1011,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Paying 22% interest costs far more than 1% savings earns. Putting the extra $100 toward the card saves the most money.",
+            distractorExplanations: {
+              0: 'Saving at 1% while owing 22% loses money because the interest cost far exceeds savings earnings.',
+              2: 'Stock market returns are uncertain, but 22% credit card interest is a guaranteed cost.',
+              3: 'A vacation fund earns nothing while 22% interest compounds daily on the debt.',
+            },
           },
         ],
       },
@@ -919,6 +1041,7 @@ export const finSection6Part1: Unit[] = [
             question: "Delaying debt repayment always costs you more in total interest.",
             correctAnswer: true,
             explanation: "The longer you wait, the more interest compounds. Every delay means a higher total cost.",
+            distractorExplanations: { 1: 'Every day a balance remains, interest compounds on it, so delay always increases total interest paid.' },
           },
           {
             id: "fin-sec6-u2-L4-Q2",
@@ -932,6 +1055,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Compound interest grows your balance daily. The longer the balance sits, the more interest piles on.",
+            distractorExplanations: {
+              0: 'Banks typically do not increase your rate just because you wait; the existing rate compounds on its own.',
+              2: 'Forgetting the amount does not change what you owe; compounding interest is the real cost of delay.',
+              3: 'Late fees are separate from compound interest; the question is about the cost of delay, not late penalties.',
+            },
           },
           {
             id: "fin-sec6-u2-L4-T2",
@@ -945,6 +1073,7 @@ export const finSection6Part1: Unit[] = [
             question: "It's more urgent to pay off a 22% credit card than a 3% car loan.",
             correctAnswer: true,
             explanation: "Higher interest rates cost more per day. Focus extra payments where the rate is highest.",
+            distractorExplanations: { 1: 'Higher interest rates cost more per day, so paying off the 22% card first saves far more money.' },
           },
           {
             id: "fin-sec6-u2-L4-Q4",
@@ -982,6 +1111,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Paying off 21% debt is like earning a guaranteed 21% return. No savings account comes close.",
+            distractorExplanations: {
+              0: 'A 1% savings return is dwarfed by the 21% cost of credit card debt.',
+              2: 'A 4% car loan costs far less than a 21% credit card; pay the expensive debt first.',
+              3: 'A vacation fund earns no return while high-interest debt accumulates daily.',
+            },
           },
           {
             id: "fin-sec6-u2-L4-Q7",
@@ -1007,6 +1141,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 24% interest costs 12 times more than the 2% savings earns. Paying off the card is a guaranteed 24% return.",
+            distractorExplanations: {
+              0: 'Keeping savings at 2% while paying 24% interest is a guaranteed net loss of 22% per year.',
+              2: 'Splitting the money reduces the benefit; the full $1,000 toward the card eliminates the 24% cost entirely.',
+              3: 'Stock returns are uncertain and cannot reliably beat a guaranteed 24% interest cost.',
+            },
           },
         ],
       },
@@ -1075,6 +1214,7 @@ export const finSection6Part1: Unit[] = [
             question: "A credit card purchase is essentially a short-term loan from the bank.",
             correctAnswer: true,
             explanation: "The bank pays the merchant on your behalf. You then owe the bank for that amount.",
+            distractorExplanations: { 1: 'The bank pays the merchant on your behalf and you repay the bank, which is the definition of a short-term loan.' },
           },
           {
             id: "fin-sec6-u3-L1-Q2",
@@ -1088,6 +1228,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A billing cycle is typically about 30 days. Purchases during this window appear on one statement.",
+            distractorExplanations: {
+              0: 'Card delivery time is not related to the billing cycle.',
+              2: 'Card expiration is measured in years and is unrelated to billing cycles.',
+              3: 'The application-to-approval timeline is separate from the billing cycle.',
+            },
           },
           {
             id: "fin-sec6-u3-L1-T2",
@@ -1115,6 +1260,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Using under 30% of your limit (called utilization) helps maintain a healthy credit score.",
+            distractorExplanations: {
+              0: 'Under 10% is excellent but not the standard recommendation; 30% is the commonly cited threshold.',
+              2: '50% utilization is considered high and can negatively impact your credit score.',
+              3: '75% utilization signals heavy reliance on credit and significantly hurts your score.',
+            },
           },
           {
             id: "fin-sec6-u3-L1-Q5",
@@ -1141,6 +1291,7 @@ export const finSection6Part1: Unit[] = [
             question: "You should pay the statement balance in full to avoid interest charges.",
             correctAnswer: true,
             explanation: "Paying the statement balance by the due date keeps you in the grace period with zero interest.",
+            distractorExplanations: { 1: 'Paying the full statement balance by the due date keeps you within the grace period and avoids all interest.' },
           },
           {
             id: "fin-sec6-u3-L1-Q7",
@@ -1155,6 +1306,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Paying the $800 statement balance in full avoids interest. The new $400 in purchases will appear on next month's statement.",
+            distractorExplanations: {
+              0: 'Paying only the $25 minimum triggers interest on the entire unpaid balance.',
+              2: 'Paying the full $1,200 current balance is unnecessary; the $800 statement balance avoids interest.',
+              3: '$1,000 is an arbitrary amount that does not correspond to any billing threshold.',
+            },
           },
         ],
       },
@@ -1180,6 +1336,7 @@ export const finSection6Part1: Unit[] = [
             question: "APR stands for annual percentage rate.",
             correctAnswer: true,
             explanation: "APR tells you the yearly cost of carrying a balance on your card.",
+            distractorExplanations: { 1: 'APR is the universally accepted abbreviation for annual percentage rate in consumer lending.' },
           },
           {
             id: "fin-sec6-u3-L2-Q2",
@@ -1193,6 +1350,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Divide the APR by 12 months: 24% / 12 = 2% per month. This is a rough estimate.",
+            distractorExplanations: {
+              0: '24% is the annual rate, not the monthly rate.',
+              1: '12% would mean a 144% annual rate, which is far too high.',
+              3: '0.24% is the approximate daily rate, not the monthly rate.',
+            },
           },
           {
             id: "fin-sec6-u3-L2-T2",
@@ -1206,6 +1368,7 @@ export const finSection6Part1: Unit[] = [
             question: "Cash advances on credit cards usually have a higher APR than regular purchases.",
             correctAnswer: true,
             explanation: "Cash advances typically carry the highest rate and start accruing interest immediately with no grace period.",
+            distractorExplanations: { 1: 'Cash advances carry the highest APR tier and begin accruing interest immediately with no grace period.' },
           },
           {
             id: "fin-sec6-u3-L2-Q4",
@@ -1228,6 +1391,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Late or missed payments can trigger the penalty APR, which is usually 29% or higher.",
+            distractorExplanations: {
+              0: 'Using the card overseas does not trigger a penalty APR, though foreign transaction fees may apply.',
+              1: 'Large purchases do not trigger a penalty rate; only payment delinquency does.',
+              3: 'Reaching your credit limit may trigger an over-limit fee but not a penalty APR.',
+            },
           },
           {
             id: "fin-sec6-u3-L2-T3",
@@ -1256,6 +1424,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$250 x 15 months = $3,750. She'll still owe $250 when the rate jumps. She should pay a bit more each month.",
+            distractorExplanations: {
+              0: 'Intro 0% offers always expire; the promotional period has a fixed end date.',
+              2: 'Making only minimum payments means the balance will still be large when the rate jumps.',
+              3: 'Transferring more debt does not help; the goal is to eliminate the balance before the rate increases.',
+            },
           },
         ],
       },
@@ -1281,6 +1454,7 @@ export const finSection6Part1: Unit[] = [
             question: "Credit card rewards are only worth it if you pay your balance in full each month.",
             correctAnswer: true,
             explanation: "Interest charges on a carried balance will far exceed any rewards earned.",
+            distractorExplanations: { 1: 'Interest charges on a carried balance far exceed any rewards earned, making the rewards worthless.' },
           },
           {
             id: "fin-sec6-u3-L3-Q2",
@@ -1294,6 +1468,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "20% interest minus 2% rewards = 18% net cost. Carrying a balance wipes out any reward benefit.",
+            distractorExplanations: {
+              0: 'You do not come out ahead because 20% interest far exceeds the 2% reward.',
+              1: 'You do not break even; the 18% gap between interest and rewards is a significant net loss.',
+              3: 'Rewards do not cancel out interest; they are a tiny fraction of the cost.',
+            },
           },
           {
             id: "fin-sec6-u3-L3-T2",
@@ -1307,6 +1486,7 @@ export const finSection6Part1: Unit[] = [
             question: "A rewards card with a $200 annual fee is only worth it if your rewards exceed $200 per year.",
             correctAnswer: true,
             explanation: "If your rewards don't cover the annual fee, you'd save more with a no-fee card.",
+            distractorExplanations: { 1: 'If rewards do not cover the annual fee, a no-fee card would save you more money overall.' },
           },
           {
             id: "fin-sec6-u3-L3-Q4",
@@ -1329,6 +1509,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Full payment means no interest. No annual fee means pure profit from rewards.",
+            distractorExplanations: {
+              0: 'Carrying a $3,000 balance means paying hundreds in interest, wiping out any rewards.',
+              2: 'Making only minimum payments means most money goes to interest, not earning rewards.',
+              3: 'Using the card once a year earns almost no rewards, making it pointless.',
+            },
           },
           {
             id: "fin-sec6-u3-L3-T3",
@@ -1357,6 +1542,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$48,000 x 3% = $1,440 in rewards minus $150 fee = $1,290 net benefit. The card easily pays for itself.",
+            distractorExplanations: {
+              0: 'Annual fees can be worth paying when rewards significantly exceed the fee amount.',
+              2: '3% on all purchases is actually an above-average reward rate that generates substantial returns.',
+              3: 'Carrying a balance would add interest that erases the reward benefit; paying in full is what makes it work.',
+            },
           },
         ],
       },
@@ -1382,6 +1572,7 @@ export const finSection6Part1: Unit[] = [
             question: "Setting up autopay for your full balance helps prevent missed payments and interest charges.",
             correctAnswer: true,
             explanation: "Autopay for the full statement balance ensures you never miss a payment or trigger interest.",
+            distractorExplanations: { 1: 'Autopay for the full statement balance guarantees on-time payment and zero interest charges.' },
           },
           {
             id: "fin-sec6-u3-L4-Q2",
@@ -1414,6 +1605,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Under 30% of $10,000 is under $3,000. This is the recommended maximum utilization.",
+            distractorExplanations: {
+              0: 'Under $1,000 is excellent utilization but not the threshold for the standard good range.',
+              2: '$5,000 is 50% utilization, which is considered high and can hurt your credit score.',
+              3: '$7,500 is 75% utilization, which significantly damages your credit score.',
+            },
           },
           {
             id: "fin-sec6-u3-L4-Q4",
@@ -1436,6 +1632,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cash advances charge the highest rate and start accruing interest immediately. Plus there's usually a fee.",
+            distractorExplanations: {
+              0: 'Cash advances are real transactions that appear on your statement and affect your balance.',
+              2: 'Cash advances do not permanently lower your credit limit; the amount is added to your balance.',
+              3: 'Cash advances do not require a separate application; they use your existing credit line.',
+            },
           },
           {
             id: "fin-sec6-u3-L4-T3",
@@ -1449,6 +1650,7 @@ export const finSection6Part1: Unit[] = [
             question: "Using a credit card because you can't afford something is a warning sign of financial trouble.",
             correctAnswer: true,
             explanation: "Cards should be a payment method, not a funding source. If you can't pay cash for it, you can't afford it.",
+            distractorExplanations: { 1: 'Relying on credit for things you cannot pay cash for indicates spending beyond your means.' },
           },
           {
             id: "fin-sec6-u3-L4-Q7",
@@ -1463,6 +1665,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Even though Avery pays in full, 84% utilization hurts the credit score. A limit increase would lower the ratio.",
+            distractorExplanations: {
+              0: 'Even though the balance is paid in full, the 84% utilization reported to credit bureaus still hurts the score.',
+              2: 'Opening 5 new cards creates multiple hard inquiries and does not solve the utilization issue responsibly.',
+              3: 'Stopping card use entirely misses the benefits of rewards and credit-building.',
+            },
           },
         ],
       },
@@ -1613,6 +1820,7 @@ export const finSection6Part1: Unit[] = [
             question: "A mortgage is generally considered good debt because it builds equity in an appreciating asset.",
             correctAnswer: true,
             explanation: "Homes typically appreciate over time, and each payment builds your ownership stake.",
+            distractorExplanations: { 1: 'Homes typically appreciate over time and each mortgage payment increases your ownership stake.' },
           },
           {
             id: "fin-sec6-u4-L1-Q2",
@@ -1626,6 +1834,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Compound interest grows your balance faster because interest earns more interest.",
+            distractorExplanations: {
+              0: 'Compound interest does not require a higher annual rate to be more expensive than simple interest.',
+              2: 'Less frequent calculation would actually reduce cost; compound interest is costly because it adds interest to the balance.',
+              3: 'Bank fees are separate from interest calculations and do not explain the difference.',
+            },
           },
           {
             id: "fin-sec6-u4-L1-Q3",
@@ -1671,6 +1884,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Borrowing to pay off other debts means you're sinking deeper into a debt spiral.",
+            distractorExplanations: {
+              0: 'Having one credit card is perfectly normal and not a sign of trouble.',
+              1: 'Paying your balance in full monthly is the healthiest credit card habit.',
+              3: 'Using autopay is a responsible financial practice that prevents missed payments.',
+            },
           },
           {
             id: "fin-sec6-u4-L1-Q7",
@@ -1685,6 +1903,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 20% credit card costs the most. Pay that off first, then redirect the payments to the car loan.",
+            distractorExplanations: {
+              0: 'Splitting evenly ignores that the 20% card costs four times more in interest than the 5% car loan.',
+              2: 'Saving at low interest while paying 20% on credit card debt is a guaranteed net loss.',
+              3: 'The car loan at 5% is much cheaper than the 20% credit card and should be paid off second.',
+            },
           },
         ],
       },
@@ -1716,6 +1939,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The credit card at 23% is far more expensive. Pay minimums on the 5% student loans and attack the card aggressively.",
+            distractorExplanations: {
+              0: 'Splitting equally ignores the massive interest rate difference between 5% and 23%.',
+              2: 'Paying more toward the 5% loan while the 23% card compounds costs far more in total interest.',
+              3: 'Ignoring both debts allows interest to compound unchecked, worsening the situation.',
+            },
           },
           {
             id: "fin-sec6-u4-L2-Q2",
@@ -1729,6 +1957,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Mortgages on homes are classic good debt. The home builds equity and typically appreciates over time.",
+            distractorExplanations: {
+              0: 'The dollar amount alone does not determine whether debt is good or bad; the asset type matters.',
+              2: 'A 30-year term is standard for mortgages and does not make the debt bad.',
+              3: 'Bank approval does not make debt good; the appreciating asset and equity building do.',
+            },
           },
           {
             id: "fin-sec6-u4-L2-Q3",
@@ -1757,6 +1990,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Spending 93% of income on debt leaves almost nothing for living expenses. This is a crisis-level situation.",
+            distractorExplanations: {
+              0: 'Spending 93% of income on debt leaves almost nothing for basic living expenses.',
+              2: 'Taking on more debt when already overwhelmed deepens the crisis.',
+              3: 'This extreme debt-to-income ratio is far from normal and signals a financial emergency.',
+            },
           },
           {
             id: "fin-sec6-u4-L2-Q5",
@@ -1785,6 +2023,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When 0% expires, 24% on $10,000 is devastating. Use savings to eliminate most of the balance before the rate jumps.",
+            distractorExplanations: {
+              0: 'Intro 0% rates are never extended automatically; the promotional period has a firm end date.',
+              2: 'Minimum payments will leave most of the $10,000 balance subject to 24% interest when the rate jumps.',
+              3: 'Repeatedly transferring balances is unsustainable and new cards may not offer 0% terms.',
+            },
           },
           {
             id: "fin-sec6-u4-L2-Q7",
@@ -1792,6 +2035,7 @@ export const finSection6Part1: Unit[] = [
             question: "It's always better to have zero debt than any debt at all.",
             correctAnswer: false,
             explanation: "Strategic debt like a low-interest mortgage or education loan can build wealth. The goal is to avoid high-cost, unproductive debt.",
+            distractorExplanations: { 0: 'Strategic low-interest debt like mortgages or education loans can build wealth and should not be avoided entirely.' },
           },
         ],
       },
@@ -1861,6 +2105,7 @@ export const finSection6Part1: Unit[] = [
             question: "Federal student loans generally offer more borrower protections than private loans.",
             correctAnswer: true,
             explanation: "Federal loans come with income-driven repayment, deferment options, and potential forgiveness. Private loans typically don't.",
+            distractorExplanations: { 1: 'Federal loans include income-driven repayment, deferment, and forgiveness options that private loans typically lack.' },
           },
           {
             id: "fin-sec6-u5-L1-Q2",
@@ -1874,6 +2119,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Income-driven repayment adjusts your payment to what you can afford. Private loans rarely offer this.",
+            distractorExplanations: {
+              0: 'Federal loans do charge interest; they just offer more flexible repayment options.',
+              2: 'Federal loans must be repaid unless specifically forgiven through qualifying programs.',
+              3: 'Federal loans have annual and lifetime borrowing limits set by law.',
+            },
           },
           {
             id: "fin-sec6-u5-L1-T2",
@@ -1910,6 +2160,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Federal loans typically have lower rates, fixed terms, and safety nets like deferment and forgiveness.",
+            distractorExplanations: {
+              0: 'Federal loans actually have lower borrowing limits than many private lenders.',
+              1: 'Private loans are not illegal for students under 21, though a co-signer may be required.',
+              3: 'Private loans can be used for tuition and other education expenses.',
+            },
           },
           {
             id: "fin-sec6-u5-L1-T3",
@@ -1923,6 +2178,7 @@ export const finSection6Part1: Unit[] = [
             question: "It's generally better to take private loans before federal loans.",
             correctAnswer: false,
             explanation: "Federal loans should always come first due to better rates, protections, and repayment flexibility.",
+            distractorExplanations: { 0: 'Federal loans should always come first due to lower rates, fixed terms, and borrower protections like forgiveness.' },
           },
           {
             id: "fin-sec6-u5-L1-Q7",
@@ -1957,6 +2213,7 @@ export const finSection6Part1: Unit[] = [
             question: "The standard 10-year repayment plan results in less total interest paid than income-driven plans.",
             correctAnswer: true,
             explanation: "Shorter repayment means less time for interest to accumulate, so you pay less overall.",
+            distractorExplanations: { 1: 'Shorter repayment periods mean less time for interest to accumulate, so the standard plan costs less overall.' },
           },
           {
             id: "fin-sec6-u5-L2-Q2",
@@ -1970,6 +2227,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Income-driven plans cap payments at a percentage of your income, making them manageable even on a low salary.",
+            distractorExplanations: {
+              0: 'Income-driven plans do not eliminate interest; they adjust payment amounts to be affordable.',
+              2: 'Income-driven plans usually cost more in total because the repayment period is longer.',
+              3: 'You cannot skip payments; income-driven plans adjust the amount, not the obligation to pay.',
+            },
           },
           {
             id: "fin-sec6-u5-L2-T2",
@@ -1998,6 +2260,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Stretching payments over 25 years means 15 extra years of interest accumulation.",
+            distractorExplanations: {
+              0: 'The standard 10-year plan has the shortest term and therefore the least total interest.',
+              1: 'Graduated plans are still 10 years, so they cost less than extended 25-year plans.',
+              3: 'An income-driven 10-year plan costs less than a 25-year extended plan due to the shorter term.',
+            },
           },
           {
             id: "fin-sec6-u5-L2-Q5",
@@ -2025,6 +2292,7 @@ export const finSection6Part1: Unit[] = [
             question: "Federal student loan borrowers can switch repayment plans for free.",
             correctAnswer: true,
             explanation: "There's no fee to change plans. This flexibility is a major advantage of federal loans.",
+            distractorExplanations: { 1: 'There is no fee to change federal loan repayment plans, giving borrowers valuable flexibility.' },
           },
           {
             id: "fin-sec6-u5-L2-Q7",
@@ -2039,6 +2307,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "15% of gross income on loan payments is very tight. Income-driven now keeps Jamie afloat, then standard later saves interest.",
+            distractorExplanations: {
+              0: 'The standard plan saves interest but 15% of gross income on loans is unmanageable on a $28,000 salary.',
+              2: 'An extended 25-year plan adds 15 years of interest and is not the best option when income may rise.',
+              3: 'Stopping payments causes default, credit damage, and potential wage garnishment.',
+            },
           },
         ],
       },
@@ -2065,6 +2338,7 @@ export const finSection6Part1: Unit[] = [
             question: "Loan forgiveness programs can cancel your remaining student loan balance after a set number of payments.",
             correctAnswer: true,
             explanation: "Forgiveness means the government absorbs the remaining balance. You don't pay it back.",
+            distractorExplanations: { 1: 'Federal forgiveness programs do cancel remaining balances after qualifying payments are completed.' },
           },
           {
             id: "fin-sec6-u5-L3-Q2",
@@ -2078,6 +2352,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Public service loan forgiveness is designed for government and nonprofit workers.",
+            distractorExplanations: {
+              0: 'Private companies do not qualify for PSLF unless they are 501(c)(3) nonprofits.',
+              1: 'Tech startups are typically for-profit and do not qualify for PSLF.',
+              3: 'Salary level is irrelevant; PSLF eligibility depends on employer type, not pay.',
+            },
           },
           {
             id: "fin-sec6-u5-L3-T2",
@@ -2091,6 +2370,7 @@ export const finSection6Part1: Unit[] = [
             question: "Income-driven repayment plans forgive any remaining balance after 20 to 25 years.",
             correctAnswer: true,
             explanation: "After 20 to 25 years of qualifying payments, the remaining balance is cancelled under income-driven plans.",
+            distractorExplanations: { 1: 'Income-driven plans are designed to forgive remaining balances after 20 to 25 years of qualifying payments.' },
           },
           {
             id: "fin-sec6-u5-L3-Q4",
@@ -2104,6 +2384,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "120 on-time, qualifying monthly payments while working full-time for an eligible employer.",
+            distractorExplanations: {
+              0: '60 payments is only 5 years, which is too short for PSLF qualification.',
+              2: '180 payments is 15 years, which is longer than the required 10 years for PSLF.',
+              3: '240 payments is 20 years, which applies to income-driven forgiveness, not PSLF.',
+            },
           },
           {
             id: "fin-sec6-u5-L3-Q5",
@@ -2141,6 +2426,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Public school teachers work for a government employer. Casey needs 7 more years of qualifying payments for forgiveness.",
+            distractorExplanations: {
+              0: 'Public school teachers work for a government employer and do qualify for PSLF.',
+              2: 'There is no maximum balance limit for PSLF; any federal loan amount can be forgiven.',
+              3: 'Switching to private loans would eliminate PSLF eligibility entirely.',
+            },
           },
         ],
       },
@@ -2166,6 +2456,7 @@ export const finSection6Part1: Unit[] = [
             question: "Refinancing student loans can lower your interest rate.",
             correctAnswer: true,
             explanation: "If your credit has improved since you first borrowed, you may qualify for a lower rate through refinancing.",
+            distractorExplanations: { 1: 'Refinancing replaces your current loan with a new one at a potentially lower rate if your creditworthiness has improved.' },
           },
           {
             id: "fin-sec6-u5-L4-Q2",
@@ -2179,6 +2470,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Refinancing federal loans into private loans means giving up deferment, income-driven plans, and forgiveness options.",
+            distractorExplanations: {
+              0: 'Refinancing typically locks in a lower rate, so the rate going up is unlikely with a fixed-rate refinance.',
+              2: 'You do not have to pay the full balance immediately; refinancing creates a new repayment schedule.',
+              3: 'Refinancing causes a temporary credit inquiry but does not permanently damage your score.',
+            },
           },
           {
             id: "fin-sec6-u5-L4-T2",
@@ -2207,6 +2503,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lenders want to know you can repay. Strong credit and stable income get you the best refinance rates.",
+            distractorExplanations: {
+              0: 'High school GPA is irrelevant to refinance applications.',
+              2: 'The university attended may be a minor factor but is far less important than credit score and income.',
+              3: 'How much you have already paid matters less than your current ability to repay the new loan.',
+            },
           },
           {
             id: "fin-sec6-u5-L4-Q5",
@@ -2230,6 +2531,7 @@ export const finSection6Part1: Unit[] = [
             question: "Checking refinance rates with multiple lenders within 2 weeks counts as a single credit inquiry.",
             correctAnswer: true,
             explanation: "Credit bureaus treat rate shopping within a short window as one inquiry so it doesn't hurt your score.",
+            distractorExplanations: { 1: 'Credit bureaus group rate-shopping inquiries within a short window into one inquiry to encourage comparison shopping.' },
           },
           {
             id: "fin-sec6-u5-L4-Q7",
@@ -2244,6 +2546,11 @@ export const finSection6Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With high income, good credit, and no need for forgiveness, a 2.3% rate reduction saves thousands in interest.",
+            distractorExplanations: {
+              1: 'Blanket rules against refinancing federal loans ignore situations where protections are unnecessary.',
+              2: 'Refinancing only half the balance reduces savings; the full balance benefits from the lower rate.',
+              3: 'A 2.3% rate reduction on $40,000 saves thousands in interest over the life of the loan.',
+            },
           },
         ],
       },

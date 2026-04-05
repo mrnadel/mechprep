@@ -34,6 +34,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Human memory works like a video recording that plays back exactly what happened.',
             correctAnswer: false,
             explanation: 'Memory is reconstructive, not reproductive. Your brain rebuilds memories each time, which introduces potential errors.',
+            distractorExplanations: {
+              0: 'Memory is reconstructive, not reproductive. Your brain rebuilds memories each time, which introduces potential errors.',
+            },
           },
           {
             id: 'psy-sec4-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Both true and false memories are reconstructed using the same brain processes, so they feel equally real.',
+            distractorExplanations: {
+              0: 'This reasoning is flawed; both true and false memories are reconstructed using the same brain processes, so they feel equally real.',
+              2: 'Because people with false memories have brain damage is not correct here; both true and false memories are reconstructed using the same brain.',
+              3: 'Because false memories only happen during dreams is not correct here; both true and false memories are reconstructed using the same brain.',
+            },
           },
           {
             id: 'psy-sec4-u6-L1-T2',
@@ -74,6 +82,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Each recall is a reconstruction. Details can shift, merge with other memories, or be influenced by new information.',
+            distractorExplanations: {
+              0: 'An exact copy is retrieved from storage is not correct here; each recall is a reconstruction.',
+              1: 'The memory gets stronger and more accurate is not correct here; each recall is a reconstruction.',
+              3: 'The memory moves from long-term to short-term storage is not correct here; each recall is a reconstruction.',
+            },
           },
           {
             id: 'psy-sec4-u6-L1-T3',
@@ -94,6 +107,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Each retelling is a reconstruction. Over time, imagined or suggested details can become part of the "memory."',
+            distractorExplanations: {
+              0: 'Carlos is lying on purpose is not correct here; each retelling is a reconstruction.',
+              1: 'His sister has amnesia for that trip is not correct here; each retelling is a reconstruction.',
+              3: 'This is too absolute; each retelling is a reconstruction. Over time, imagined or suggested details can become part of the "memory.".',
+            },
           },
           {
             id: 'psy-sec4-u6-L1-Q6',
@@ -134,6 +152,9 @@ export const psySection4Part2: Unit[] = [
             question: 'The misinformation effect shows that post-event information can alter memories.',
             correctAnswer: true,
             explanation: 'Loftus demonstrated that misleading questions or new information can change how people remember an event.',
+            distractorExplanations: {
+              1: 'Loftus demonstrated that misleading questions or new information can change how people remember an event.',
+            },
           },
           {
             id: 'psy-sec4-u6-L2-Q2',
@@ -147,6 +168,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The word "smashed" led to higher speed estimates and false memories of broken glass.',
+            distractorExplanations: {
+              0: 'Report lower speeds than the "hit" group is not correct here; the word "smashed" led to higher speed estimates and false memories of broken glass.',
+              1: 'Forget the accident entirely is not correct here; the word "smashed" led to higher speed estimates and false memories of broken glass.',
+              3: 'This is too absolute; the word "smashed" led to higher speed estimates and false memories of broken glass.',
+            },
           },
           {
             id: 'psy-sec4-u6-L2-T2',
@@ -167,6 +193,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This question assumes a red car and a stop sign, leading the witness toward a specific answer.',
+            distractorExplanations: {
+              0: 'What did you see at the intersection? is not correct here; this question assumes a red car and a stop sign, leading the witness toward a specific.',
+              2: 'Can you describe what happened? is not correct here; this question assumes a red car and a stop sign, leading the witness toward a specific answer.',
+              3: 'How would you rate your memory of the event? is not correct here; this question assumes a red car and a stop sign, leading the witness toward a.',
+            },
           },
           {
             id: 'psy-sec4-u6-L2-Q4',
@@ -196,6 +227,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The officer\'s misleading mention of "blue" became incorporated into the witness\'s memory of the event.',
+            distractorExplanations: {
+              0: 'Decay: the witness forgot the color over time is not correct here; the officer\'s misleading mention of "blue" became incorporated into the.',
+              2: 'Proactive interference from a previous accident is not correct here; the officer\'s misleading mention of "blue" became incorporated into the.',
+              3: 'The witness has color blindness is not correct here; the officer\'s misleading mention of "blue" became incorporated into the witness\'s memory of.',
+            },
           },
           {
             id: 'psy-sec4-u6-L2-Q6',
@@ -228,6 +264,9 @@ export const psySection4Part2: Unit[] = [
             question: 'A very confident eyewitness is usually accurate.',
             correctAnswer: false,
             explanation: 'Research shows that eyewitness confidence is a poor predictor of accuracy. Confident witnesses can be completely wrong.',
+            distractorExplanations: {
+              0: 'Research shows that eyewitness confidence is a poor predictor of accuracy. Confident witnesses can be completely wrong.',
+            },
           },
           {
             id: 'psy-sec4-u6-L3-Q2',
@@ -241,6 +280,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'When a weapon is present, attention narrows to it, reducing memory for other details like the perpetrator\'s face.',
+            distractorExplanations: {
+              0: 'Witnesses remember weapons more accurately than faces is not correct here; when a weapon is present, attention narrows to it, reducing memory for.',
+              2: 'Weapons improve memory by increasing adrenaline is not correct here; when a weapon is present, attention narrows to it, reducing memory for other.',
+              3: 'People who carry weapons have better memories is not correct here; when a weapon is present, attention narrows to it, reducing memory for other.',
+            },
           },
           {
             id: 'psy-sec4-u6-L3-T2',
@@ -261,6 +305,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Greater exposure to your own racial group gives you more practice distinguishing those faces.',
+            distractorExplanations: {
+              0: 'Some races have more similar-looking faces is not correct here; greater exposure to your own racial group gives you more practice distinguishing.',
+              1: 'People pay less attention to other races due to bias is not correct here; greater exposure to your own racial group gives you more practice.',
+              3: 'Memory for faces is entirely genetic is not correct here; greater exposure to your own racial group gives you more practice distinguishing those.',
+            },
           },
           {
             id: 'psy-sec4-u6-L3-Q4',
@@ -305,6 +354,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Confidence doesn\'t guarantee accuracy. A "blind" lineup (where the administrator doesn\'t know the suspect) reduces influence.',
+            distractorExplanations: {
+              0: 'This reasoning is flawed; confidence doesn\'t guarantee accuracy.',
+              2: 'This is not accurate; confidence doesn\'t guarantee accuracy. A "blind" lineup (where the administrator doesn\'t know the suspect) reduces influence.',
+              3: 'Dismiss the witness because all eyewitnesses are wrong is not correct here; confidence doesn\'t guarantee accuracy.',
+            },
           },
         ],
       },
@@ -329,6 +383,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Researchers have successfully implanted false memories of childhood events that never occurred.',
             correctAnswer: true,
             explanation: 'The "lost in the mall" study and similar research show that entire false memories can be created with suggestion.',
+            distractorExplanations: {
+              1: 'The "lost in the mall" study and similar research show that entire false memories can be created with suggestion.',
+            },
           },
           {
             id: 'psy-sec4-u6-L4-Q2',
@@ -342,6 +399,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'About 25% of participants developed detailed false memories of being lost as a child, complete with emotional detail.',
+            distractorExplanations: {
+              0: 'Less than 1% is not correct here; about 25% of participants developed detailed false memories of being lost as a child, complete with emotional.',
+              1: 'About 5% is not correct here; about 25% of participants developed detailed false memories of being lost as a child, complete with emotional detail.',
+              3: 'About 75% is not correct here; about 25% of participants developed detailed false memories of being lost as a child, complete with emotional detail.',
+            },
           },
           {
             id: 'psy-sec4-u6-L4-T2',
@@ -378,6 +440,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Suggestive techniques in therapy can create convincing false memories of events that never happened.',
+            distractorExplanations: {
+              0: 'This is too absolute; suggestive techniques in therapy can create convincing false memories of events that never happened.',
+              1: 'It uses brain scans that are 100% reliable is not correct here; suggestive techniques in therapy can create convincing false memories of events.',
+              3: 'It only works on children is not correct here; suggestive techniques in therapy can create convincing false memories of events that never happened.',
+            },
           },
           {
             id: 'psy-sec4-u6-L4-T3',
@@ -406,6 +473,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Repeated suggestion and imagination can implant false memories. This approach is considered unethical by most memory researchers.',
+            distractorExplanations: {
+              0: 'The therapist successfully recovered real memories is not correct here; repeated suggestion and imagination can implant false memories.',
+              1: 'This is too absolute; repeated suggestion and imagination can implant false memories.',
+              3: 'This approach is considered best practice in therapy is not correct here; repeated suggestion and imagination can implant false memories.',
+            },
           },
         ],
       },
@@ -549,6 +621,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Studying the same material in several short sessions over time is more effective than one long session.',
             correctAnswer: true,
             explanation: 'The spacing effect consistently shows that distributed practice beats massed practice (cramming) for long-term retention.',
+            distractorExplanations: {
+              1: 'The spacing effect consistently shows that distributed practice beats massed practice (cramming) for long-term retention.',
+            },
           },
           {
             id: 'psy-sec4-u7-L1-Q2',
@@ -562,6 +637,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The spacing effect means distributed practice produces stronger and more durable memories than massed practice.',
+            distractorExplanations: {
+              0: 'Learning works better in spacious rooms is not correct here; the spacing effect means distributed practice produces stronger and more durable.',
+              2: 'This is not accurate; the spacing effect means distributed practice produces stronger and more durable memories than massed practice.',
+              3: 'This is not accurate; the spacing effect means distributed practice produces stronger and more durable memories than massed practice.',
+            },
           },
           {
             id: 'psy-sec4-u7-L1-T2',
@@ -612,6 +692,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Despite equal study time, spacing over 4 days creates stronger memory traces than cramming in one session.',
+            distractorExplanations: {
+              0: 'Student A, because cramming is more focused is not correct here; despite equal study time, spacing over 4 days creates stronger memory traces.',
+              1: 'They will remember the same amount is not correct here; despite equal study time, spacing over 4 days creates stronger memory traces than.',
+              3: 'This reasoning is flawed; despite equal study time, spacing over 4 days creates stronger memory traces than cramming in one session.',
+            },
           },
           {
             id: 'psy-sec4-u7-L1-Q6',
@@ -625,6 +710,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cramming creates a false sense of mastery. The material feels familiar in the moment, but long-term retention is poor.',
+            distractorExplanations: {
+              0: 'Because it actually is the best strategy is not correct here; cramming creates a false sense of mastery.',
+              2: 'Because teachers recommend it is not correct here; cramming creates a false sense of mastery.',
+              3: 'Because sleep deprivation improves memory is not correct here; cramming creates a false sense of mastery.',
+            },
           },
         ],
       },
@@ -649,6 +739,9 @@ export const psySection4Part2: Unit[] = [
             question: 'The method of loci involves placing items to remember at locations along a familiar mental route.',
             correctAnswer: true,
             explanation: 'You visualize items at specific locations in a place you know well, then mentally revisit those locations to recall them.',
+            distractorExplanations: {
+              1: 'You visualize items at specific locations in a place you know well, then mentally revisit those locations to recall them.',
+            },
           },
           {
             id: 'psy-sec4-u7-L2-Q2',
@@ -662,6 +755,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The method of loci uses vivid imagery and spatial memory, which create strong, multi-sensory encoding.',
+            distractorExplanations: {
+              0: 'It uses maintenance rehearsal is not correct here; the method of loci uses vivid imagery and spatial memory, which create strong, multi-sensory.',
+              2: 'It relies on rereading information many times is not correct here; the method of loci uses vivid imagery and spatial memory, which create strong,.',
+              3: 'It focuses on the sound of words is not correct here; the method of loci uses vivid imagery and spatial memory, which create strong,.',
+            },
           },
           {
             id: 'psy-sec4-u7-L2-T2',
@@ -695,6 +793,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Most memory champions report using memory palaces (method of loci) as their primary technique.',
+            distractorExplanations: {
+              0: 'Maintenance rehearsal is not correct here; most memory champions report using memory palaces (method of loci) as their primary technique.',
+              1: 'Rereading strategies is not correct here; most memory champions report using memory palaces (method of loci) as their primary technique.',
+              3: 'Pure natural talent without any technique is not correct here; most memory champions report using memory palaces (method of loci) as their.',
+            },
           },
           {
             id: 'psy-sec4-u7-L2-T3',
@@ -723,6 +826,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The method of loci would let her anchor each item to a familiar location, making recall much easier.',
+            distractorExplanations: {
+              0: 'Read the list over and over until it sticks is not correct here; the method of loci would let her anchor each item to a familiar location, making.',
+              1: 'Write each item 20 times on paper is not correct here; the method of loci would let her anchor each item to a familiar location, making recall.',
+              3: 'This is not accurate; the method of loci would let her anchor each item to a familiar location, making recall much easier.',
+            },
           },
         ],
       },
@@ -747,6 +855,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Mnemonics work by adding meaningful structure to information that would otherwise be hard to remember.',
             correctAnswer: true,
             explanation: 'Mnemonics give random-seeming information a pattern, making it easier to encode and retrieve.',
+            distractorExplanations: {
+              1: 'Mnemonics give random-seeming information a pattern, making it easier to encode and retrieve.',
+            },
           },
           {
             id: 'psy-sec4-u7-L3-Q2',
@@ -760,6 +871,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'HOMES (Huron, Ontario, Michigan, Erie, Superior) is an acronym that organizes the lake names into a memorable word.',
+            distractorExplanations: {
+              0: 'Imagining items at locations in your house is not correct here; HOMES (Huron, Ontario, Michigan, Erie, Superior) is an acronym that organizes the.',
+              1: 'Repeating a phone number over and over is not correct here; HOMES (Huron, Ontario, Michigan, Erie, Superior) is an acronym that organizes the.',
+              3: 'Studying in the same room where the test will be is not correct here; HOMES (Huron, Ontario, Michigan, Erie, Superior) is an acronym that.',
+            },
           },
           {
             id: 'psy-sec4-u7-L3-T2',
@@ -790,6 +906,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'He linked the foreign word to a similar-sounding phrase ("pool bell") and created a vivid image. That\'s the keyword method.',
+            distractorExplanations: {
+              0: 'The method of loci is not correct here; he linked the foreign word to a similar-sounding phrase ("pool bell") and created a vivid image.',
+              1: 'An acronym is not correct here; he linked the foreign word to a similar-sounding phrase ("pool bell") and created a vivid image.',
+              3: 'Maintenance rehearsal is not correct here; he linked the foreign word to a similar-sounding phrase ("pool bell") and created a vivid image.',
+            },
           },
           {
             id: 'psy-sec4-u7-L3-T3',
@@ -844,6 +965,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Testing yourself on material is more effective for memory than rereading it.',
             correctAnswer: true,
             explanation: 'Research consistently shows that retrieval practice (testing) produces stronger long-term memory than passive review.',
+            distractorExplanations: {
+              1: 'Research consistently shows that retrieval practice (testing) produces stronger long-term memory than passive review.',
+            },
           },
           {
             id: 'psy-sec4-u7-L4-Q2',
@@ -857,6 +981,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The act of retrieval itself strengthens the memory. The harder the retrieval, the stronger the benefit.',
+            distractorExplanations: {
+              0: 'This is too absolute; the act of retrieval itself strengthens the memory. The harder the retrieval, the stronger the benefit.',
+              2: 'Tests force you to read faster is not correct here; the act of retrieval itself strengthens the memory.',
+              3: 'Writing answers uses more ink, which helps memory is not correct here; the act of retrieval itself strengthens the memory.',
+            },
           },
           {
             id: 'psy-sec4-u7-L4-T2',
@@ -877,6 +1006,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Desirable difficulty means that appropriate challenge during study leads to better long-term retention.',
+            distractorExplanations: {
+              0: 'Making study material harder to read with small fonts is not correct here; desirable difficulty means that appropriate challenge during study.',
+              2: 'Studying material that is too advanced for your level is not correct here; desirable difficulty means that appropriate challenge during study.',
+              3: 'Adding more information to make tasks harder is not correct here; desirable difficulty means that appropriate challenge during study leads to.',
+            },
           },
           {
             id: 'psy-sec4-u7-L4-Q4',
@@ -921,6 +1055,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Self-testing forces retrieval, which strengthens memory far more than rereading or summarizing.',
+            distractorExplanations: {
+              0: 'Student A, because rereading covers all the material is not correct here; self-testing forces retrieval, which strengthens memory far more than.',
+              1: 'Student B, because mind maps are visual is not correct here; self-testing forces retrieval, which strengthens memory far more than rereading or.',
+              3: 'This is too absolute; self-testing forces retrieval, which strengthens memory far more than rereading or summarizing.',
+            },
           },
         ],
       },
@@ -1060,6 +1199,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Most people have clear memories from before age 2.',
             correctAnswer: false,
             explanation: 'Childhood amnesia means we can\'t form lasting episodic memories before about age 3, due to an immature hippocampus.',
+            distractorExplanations: {
+              0: 'Childhood amnesia means we can\'t form lasting episodic memories before about age 3, due to an immature hippocampus.',
+            },
           },
           {
             id: 'psy-sec4-u8-L1-Q2',
@@ -1073,6 +1215,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The hippocampus is critical for forming episodic memories and isn\'t fully developed until around age 3.',
+            distractorExplanations: {
+              0: 'The cerebellum is not correct here; the hippocampus is critical for forming episodic memories and isn\'t fully developed until around age 3.',
+              1: 'The brain stem is not correct here; the hippocampus is critical for forming episodic memories and isn\'t fully developed until around age 3.',
+              3: 'The occipital lobe is not correct here; the hippocampus is critical for forming episodic memories and isn\'t fully developed until around age 3.',
+            },
           },
           {
             id: 'psy-sec4-u8-L1-T2',
@@ -1100,6 +1247,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Implicit memory systems develop earlier than explicit ones. Babies can learn habits and preferences even without episodic memory.',
+            distractorExplanations: {
+              0: 'Write about their experiences is not correct here; implicit memory systems develop earlier than explicit ones.',
+              2: 'Store detailed verbal memories is not correct here; implicit memory systems develop earlier than explicit ones.',
+              3: 'Recall specific dates and times is not correct here; implicit memory systems develop earlier than explicit ones.',
+            },
           },
           {
             id: 'psy-sec4-u8-L1-T3',
@@ -1120,6 +1272,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Repeated exposure to the video provided details that her brain constructed into what feels like a genuine memory.',
+            distractorExplanations: {
+              0: 'This is not accurate; repeated exposure to the video provided details that her brain constructed into what feels like a genuine memory.',
+              2: 'This is not accurate; repeated exposure to the video provided details that her brain constructed into what feels like a genuine memory.',
+              3: 'She is making it up on purpose is not correct here; repeated exposure to the video provided details that her brain constructed into what feels.',
+            },
           },
           {
             id: 'psy-sec4-u8-L1-Q6',
@@ -1160,6 +1317,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Working memory and processing speed are typically strongest in a person\'s 20s.',
             correctAnswer: true,
             explanation: 'Processing speed and working memory capacity tend to peak in young adulthood, typically in the 20s.',
+            distractorExplanations: {
+              1: 'Processing speed and working memory capacity tend to peak in young adulthood, typically in the 20s.',
+            },
           },
           {
             id: 'psy-sec4-u8-L2-Q2',
@@ -1173,6 +1333,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'People recall a disproportionate number of memories from their teens and early 20s, likely because of many novel, identity-forming experiences.',
+            distractorExplanations: {
+              0: 'A brain structure that stores old memories is not correct here; people recall a disproportionate number of memories from their teens and early.',
+              1: 'A surge in memory ability at age 50 is not correct here; people recall a disproportionate number of memories from their teens and early 20s,.',
+              3: 'A temporary memory loss during middle age is not correct here; people recall a disproportionate number of memories from their teens and early.',
+            },
           },
           {
             id: 'psy-sec4-u8-L2-T2',
@@ -1223,6 +1388,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The concentration of novel, meaningful "firsts" during this period leads to deeper encoding and stronger memories.',
+            distractorExplanations: {
+              0: 'The brain grows new neurons only during adolescence is not correct here; the concentration of novel, meaningful "firsts" during this period leads.',
+              1: 'Hormones permanently enhance memory during puberty is not correct here; the concentration of novel, meaningful "firsts" during this period leads.',
+              3: 'School forces them to memorize more material is not correct here; the concentration of novel, meaningful "firsts" during this period leads to.',
+            },
           },
           {
             id: 'psy-sec4-u8-L2-Q6',
@@ -1237,6 +1407,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Semantic knowledge stays strong with age, but speed and working memory capacity decline. Both can coexist.',
+            distractorExplanations: {
+              0: 'She has early-stage dementia is not correct here; semantic knowledge stays strong with age, but speed and working memory capacity decline.',
+              2: 'This is too absolute; semantic knowledge stays strong with age, but speed and working memory capacity decline. Both can coexist.',
+              3: 'Her students are more motivated is not correct here; semantic knowledge stays strong with age, but speed and working memory capacity decline.',
+            },
           },
         ],
       },
@@ -1261,6 +1436,9 @@ export const psySection4Part2: Unit[] = [
             question: 'All types of memory decline equally with normal aging.',
             correctAnswer: false,
             explanation: 'Episodic and working memory decline with age, but semantic and procedural memory are relatively preserved.',
+            distractorExplanations: {
+              0: 'Episodic and working memory decline with age, but semantic and procedural memory are relatively preserved.',
+            },
           },
           {
             id: 'psy-sec4-u8-L3-Q2',
@@ -1306,6 +1484,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Regular physical exercise has the strongest evidence for protecting cognitive function and memory in aging.',
+            distractorExplanations: {
+              0: 'Playing brain training games on your phone is not correct here; regular physical exercise has the strongest evidence for protecting cognitive.',
+              2: 'Taking memory supplements is not correct here; regular physical exercise has the strongest evidence for protecting cognitive function and memory.',
+              3: 'Avoiding all forms of stress is not correct here; regular physical exercise has the strongest evidence for protecting cognitive function and.',
+            },
           },
           {
             id: 'psy-sec4-u8-L3-T3',
@@ -1334,6 +1517,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Minor retrieval slowdowns that don\'t impair daily functioning are characteristic of normal aging, not dementia.',
+            distractorExplanations: {
+              0: 'This is not accurate; minor retrieval slowdowns that don\'t impair daily functioning are characteristic of normal aging, not dementia.',
+              2: 'She should stop driving immediately is not correct here; minor retrieval slowdowns that don\'t impair daily functioning are characteristic of.',
+              3: 'She has retrograde amnesia from a brain injury is not correct here; minor retrieval slowdowns that don\'t impair daily functioning are.',
+            },
           },
         ],
       },
@@ -1477,6 +1665,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Flashbulb memories are always perfectly accurate.',
             correctAnswer: false,
             explanation: 'Flashbulb memories feel vivid and confident, but research shows they contain errors just like other memories. Vividness doesn\'t equal accuracy.',
+            distractorExplanations: {
+              0: 'Flashbulb memories feel vivid and confident, but research shows they contain errors just like other memories. Vividness doesn\'t equal accuracy.',
+            },
           },
           {
             id: 'psy-sec4-u9-L1-Q2',
@@ -1490,6 +1681,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Flashbulb memories form around events that are surprising, emotionally intense, or personally significant.',
+            distractorExplanations: {
+              0: 'Any random event throughout the day is not correct here; flashbulb memories form around events that are surprising, emotionally intense, or.',
+              2: 'Studying the same material repeatedly is not correct here; flashbulb memories form around events that are surprising, emotionally intense, or.',
+              3: 'Using a camera flash while learning is not correct here; flashbulb memories form around events that are surprising, emotionally intense, or.',
+            },
           },
           {
             id: 'psy-sec4-u9-L1-T2',
@@ -1517,6 +1713,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'People\'s flashbulb memories changed over time, but their confidence in the accuracy stayed high. This shows vividness doesn\'t guarantee accuracy.',
+            distractorExplanations: {
+              0: 'Aware that their memories had changed is not correct here; people\'s flashbulb memories changed over time, but their confidence in the accuracy.',
+              2: 'Less confident as time passed is not correct here; people\'s flashbulb memories changed over time, but their confidence in the accuracy stayed.',
+              3: 'Unable to recall the event at all is not correct here; people\'s flashbulb memories changed over time, but their confidence in the accuracy stayed.',
+            },
           },
           {
             id: 'psy-sec4-u9-L1-T3',
@@ -1553,6 +1754,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Both have vivid flashbulb memories of the same event, but their reconstructions differ. High confidence doesn\'t mean high accuracy.',
+            distractorExplanations: {
+              0: 'One of them wasn\'t actually there is not correct here; both have vivid flashbulb memories of the same event, but their reconstructions differ.',
+              2: 'They\'re thinking of different puppies is not correct here; both have vivid flashbulb memories of the same event, but their reconstructions differ.',
+              3: 'One sibling has a memory disorder is not correct here; both have vivid flashbulb memories of the same event, but their reconstructions differ.',
+            },
           },
         ],
       },
@@ -1577,6 +1783,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Traumatic memories are always stored in a clear, organized timeline.',
             correctAnswer: false,
             explanation: 'Extreme stress can disrupt the hippocampus, leading to fragmented memories that lack a coherent narrative structure.',
+            distractorExplanations: {
+              0: 'Extreme stress can disrupt the hippocampus, leading to fragmented memories that lack a coherent narrative structure.',
+            },
           },
           {
             id: 'psy-sec4-u9-L2-Q2',
@@ -1590,6 +1799,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'High stress hormones impair hippocampal encoding (narrative structure) while boosting amygdala encoding (emotional intensity).',
+            distractorExplanations: {
+              0: 'The person wasn\'t paying attention is not correct here; high stress hormones impair hippocampal encoding (narrative structure) while boosting.',
+              2: 'This is not accurate; high stress hormones impair hippocampal encoding (narrative structure) while boosting amygdala encoding (emotional intensity).',
+              3: 'This is not accurate; high stress hormones impair hippocampal encoding (narrative structure) while boosting amygdala encoding (emotional intensity).',
+            },
           },
           {
             id: 'psy-sec4-u9-L2-T2',
@@ -1619,6 +1833,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The car sound acts as a trigger, activating a fragmented traumatic memory and causing an involuntary flashback.',
+            distractorExplanations: {
+              0: 'Retroactive interference is not correct here; the car sound acts as a trigger, activating a fragmented traumatic memory and causing an.',
+              2: 'Normal memory retrieval is not correct here; the car sound acts as a trigger, activating a fragmented traumatic memory and causing an involuntary.',
+              3: 'The testing effect is not correct here; the car sound acts as a trigger, activating a fragmented traumatic memory and causing an involuntary.',
+            },
           },
           {
             id: 'psy-sec4-u9-L2-T3',
@@ -1673,6 +1892,9 @@ export const psySection4Part2: Unit[] = [
             question: 'Prospective memory involves remembering to carry out intended actions in the future.',
             correctAnswer: true,
             explanation: 'Prospective memory is forward-looking: it\'s about remembering to do things at the right time.',
+            distractorExplanations: {
+              1: 'Prospective memory is forward-looking: it\'s about remembering to do things at the right time.',
+            },
           },
           {
             id: 'psy-sec4-u9-L3-Q2',
@@ -1686,6 +1908,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Remembering to do something in the future (pick up milk) is prospective memory.',
+            distractorExplanations: {
+              0: 'Remembering your childhood phone number is not correct here; remembering to do something in the future (pick up milk) is prospective memory.',
+              1: 'Recalling what you ate for dinner last night is not correct here; remembering to do something in the future (pick up milk) is prospective memory.',
+              3: 'Knowing that the Earth orbits the Sun is not correct here; remembering to do something in the future (pick up milk) is prospective memory.',
+            },
           },
           {
             id: 'psy-sec4-u9-L3-T2',
@@ -1736,6 +1963,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Placing objects where you\'ll see them creates event-based cues that trigger the intended action.',
+            distractorExplanations: {
+              0: 'It strengthens your long-term memory is not correct here; placing objects where you\'ll see them creates event-based cues that trigger the.',
+              2: 'It uses maintenance rehearsal is not correct here; placing objects where you\'ll see them creates event-based cues that trigger the intended action.',
+              3: 'It improves your working memory capacity is not correct here; placing objects where you\'ll see them creates event-based cues that trigger the.',
+            },
           },
           {
             id: 'psy-sec4-u9-L3-Q6',
@@ -1750,6 +1982,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Ben\'s autopilot driving bypassed the pharmacy cue, so the event-based prospective memory wasn\'t triggered.',
+            distractorExplanations: {
+              0: 'Time-based: he forgot the specific time is not correct here; ben\'s autopilot driving bypassed the pharmacy cue, so the event-based prospective.',
+              2: 'Retrograde amnesia: he forgot his entire drive is not correct here; ben\'s autopilot driving bypassed the pharmacy cue, so the event-based.',
+              3: 'Semantic memory failure: he forgot what a pharmacy is is not correct here; ben\'s autopilot driving bypassed the pharmacy cue, so the event-based.',
+            },
           },
         ],
       },
@@ -1774,6 +2011,9 @@ export const psySection4Part2: Unit[] = [
             question: 'People tend to encode less information when they know it\'s available online.',
             correctAnswer: true,
             explanation: 'The Google effect means people are less likely to remember facts they believe they can easily search for later.',
+            distractorExplanations: {
+              1: 'The Google effect means people are less likely to remember facts they believe they can easily search for later.',
+            },
           },
           {
             id: 'psy-sec4-u9-L4-Q2',
@@ -1787,6 +2027,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Knowing information is searchable reduces the effort to encode it. You remember where to find it instead of the fact itself.',
+            distractorExplanations: {
+              0: 'Google makes people smarter by providing answers is not correct here; knowing information is searchable reduces the effort to encode it.',
+              2: 'Using Google improves long-term memory is not correct here; knowing information is searchable reduces the effort to encode it.',
+              3: 'Google records and stores your memories for you is not correct here; knowing information is searchable reduces the effort to encode it.',
+            },
           },
           {
             id: 'psy-sec4-u9-L4-T2',
@@ -1823,6 +2068,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Research shows that photographing can reduce memory for the lived experience, a phenomenon called the "photo-taking impairment effect."',
+            distractorExplanations: {
+              0: 'This is too absolute; research shows that photographing can reduce memory for the lived experience, a phenomenon called the "photo-taking.',
+              1: 'There is a real effect here; research shows that photographing can reduce memory for the lived experience, a phenomenon called the "photo-taking.',
+              3: 'It prevents all memory formation during the event is not correct here; research shows that photographing can reduce memory for the lived.',
+            },
           },
           {
             id: 'psy-sec4-u9-L4-T3',
@@ -1851,6 +2101,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Filming divides attention (reducing encoding) and creates an external record (reducing motivation to encode). Both contribute.',
+            distractorExplanations: {
+              0: 'The Google effect: they know they have a recording is not correct here; filming divides attention (reducing encoding) and creates an external.',
+              1: 'Retroactive interference from the phone is not correct here; filming divides attention (reducing encoding) and creates an external record.',
+              2: 'This reasoning is flawed; filming divides attention (reducing encoding) and creates an external record (reducing motivation to encode).',
+            },
           },
         ],
       },
@@ -2004,6 +2259,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Combining the spacing effect with the testing effect produces the most durable long-term memories.',
+            distractorExplanations: {
+              0: 'Rereading and highlighting is not correct here; combining the spacing effect with the testing effect produces the most durable long-term memories.',
+              1: 'Cramming the night before is not correct here; combining the spacing effect with the testing effect produces the most durable long-term memories.',
+              3: 'Copying notes in a new notebook is not correct here; combining the spacing effect with the testing effect produces the most durable long-term.',
+            },
           },
           {
             id: 'psy-sec4-u10-L1-Q3',
@@ -2047,6 +2307,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Research consistently shows that eyewitness confidence is a poor predictor of accuracy.',
+            distractorExplanations: {
+              0: 'Accept it as definitive proof is not correct here; research consistently shows that eyewitness confidence is a poor predictor of accuracy.',
+              2: 'Dismiss it entirely because all eyewitnesses are wrong is not correct here; research consistently shows that eyewitness confidence is a poor.',
+              3: 'Use it only if the witness is a police officer is not correct here; research consistently shows that eyewitness confidence is a poor predictor of.',
+            },
           },
           {
             id: 'psy-sec4-u10-L1-Q6',
@@ -2061,6 +2326,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This classic pattern shows that episodic memory (word lists) declines with age while semantic memory (knowledge) is preserved.',
+            distractorExplanations: {
+              0: 'The elderly adults have dementia is not correct here; this classic pattern shows that episodic memory (word lists) declines with age while.',
+              2: 'The young adults didn\'t study the word list is not correct here; this classic pattern shows that episodic memory (word lists) declines with age.',
+              3: 'The elderly adults cheated on the knowledge questions is not correct here; this classic pattern shows that episodic memory (word lists) declines.',
+            },
           },
         ],
       },
@@ -2092,6 +2362,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'TV divided her attention (weak encoding), and the different environment (quiet vs TV) reduced retrieval cues.',
+            distractorExplanations: {
+              1: 'The Google effect and the testing effect is not correct here; TV divided her attention (weak encoding), and the different environment (quiet vs.',
+              2: 'Proactive interference and childhood amnesia is not correct here; TV divided her attention (weak encoding), and the different environment (quiet.',
+              3: 'Flashbulb memory and the reminiscence bump is not correct here; TV divided her attention (weak encoding), and the different environment (quiet vs.',
+            },
           },
           {
             id: 'psy-sec4-u10-L2-Q2',
@@ -2105,6 +2380,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'She\'s combining 4 powerful strategies: spacing, testing, elaboration, and self-reference. This is optimal.',
+            distractorExplanations: {
+              0: 'Only the spacing effect is not correct here; she\'s combining 4 powerful strategies: spacing, testing, elaboration, and self-reference.',
+              1: 'Only the testing effect is not correct here; she\'s combining 4 powerful strategies: spacing, testing, elaboration, and self-reference.',
+              3: 'Only maintenance rehearsal is not correct here; she\'s combining 4 powerful strategies: spacing, testing, elaboration, and self-reference.',
+            },
           },
           {
             id: 'psy-sec4-u10-L2-Q3',
@@ -2138,6 +2418,11 @@ export const psySection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Spacing over 2 weeks with mnemonics and self-testing uses multiple evidence-based strategies for maximum retention.',
+            distractorExplanations: {
+              0: 'Great plan. Cramming is the most efficient approach. is not correct here; spacing over 2 weeks with mnemonics and self-testing uses multiple.',
+              1: 'Use the method of loci and study all 30 in one session. is not correct here; spacing over 2 weeks with mnemonics and self-testing uses multiple.',
+              3: 'Read the medication list as many times as possible. is not correct here; spacing over 2 weeks with mnemonics and self-testing uses multiple.',
+            },
           },
           {
             id: 'psy-sec4-u10-L2-Q5',

@@ -34,6 +34,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Psychologists rely on a single criterion to define abnormal behavior.',
             correctAnswer: false,
             explanation: 'Multiple criteria are used together: deviance, distress, dysfunction, and danger. No single factor is sufficient.',
+            distractorExplanations: {
+              0: 'Psychologists use multiple criteria together (the 4 Ds), not a single one, because no single factor reliably identifies abnormality.',
+            },
           },
           {
             id: 'psy-sec11-u1-L1-Q2',
@@ -61,6 +64,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'What counts as "abnormal" varies across cultures, time periods, and social contexts.',
+            distractorExplanations: {
+              0: 'Culture profoundly influences how abnormality is defined and which behaviors are considered pathological.',
+              2: 'Many non-Western cultures have valid frameworks for understanding mental health that differ from Western definitions.',
+              3: 'Cultural context matters for people of all ages, not just children.',
+            },
           },
           {
             id: 'psy-sec11-u1-L1-Q4',
@@ -96,6 +104,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Person-first language ("a person with/living with...") separates the individual from the diagnosis.',
+            distractorExplanations: {
+              1: 'Labeling someone as "a depressive individual" defines the person by their diagnosis rather than recognizing them as a person first.',
+              2: 'Calling someone "a depressed person" still leads with the condition rather than the individual.',
+              3: 'Describing "someone who is depressive" uses the condition as the primary descriptor rather than acknowledging the person first.',
+            },
           },
         ],
       },
@@ -121,6 +134,9 @@ export const psySection11Part1: Unit[] = [
             question: 'The DSM is published by the American Psychiatric Association.',
             correctAnswer: true,
             explanation: 'The APA publishes and updates the DSM, currently in its 5th edition (text revision).',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u1-L2-Q2',
@@ -134,6 +150,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The DSM provides standardized diagnostic criteria so clinicians can reliably identify and communicate about disorders.',
+            distractorExplanations: {
+              0: 'The DSM provides diagnostic criteria but does not prescribe specific medications for disorders.',
+              2: 'The DSM catalogs mental disorders, not every possible human behavior.',
+              3: 'The DSM is a clinical tool for trained professionals, not a self-diagnosis replacement for therapy.',
+            },
           },
           {
             id: 'psy-sec11-u1-L2-T2',
@@ -169,6 +190,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Scientific evidence and shifting societal understanding led to its removal, showing the DSM reflects both science and culture.',
+            distractorExplanations: {
+              0: 'Its original inclusion reflected prevailing cultural attitudes, not an accident.',
+              2: 'The APA continued publishing the DSM after 1973 and still publishes it today.',
+              3: 'Homosexuality was removed entirely as a disorder, not relocated to another manual.',
+            },
           },
           {
             id: 'psy-sec11-u1-L2-T3',
@@ -228,6 +254,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Most mental health diagnoses are made through interviews, observations, and criteria matching, not brain scans.',
+            distractorExplanations: {
+              0: 'Clinical interviews are a standard part of the diagnostic process.',
+              1: 'Comparing symptoms to DSM criteria is a core diagnostic step.',
+              2: 'Reviewing medical and family history is a standard diagnostic practice.',
+            },
           },
           {
             id: 'psy-sec11-u1-L3-T2',
@@ -256,6 +287,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Comorbidity is the norm, not the exception. Anxiety and depression are among the most common co-occurring disorders.',
+            distractorExplanations: {
+              0: 'The DSM explicitly allows and expects multiple diagnoses when criteria for more than one disorder are met.',
+              2: 'Experiencing symptoms of two disorders simultaneously is well-documented and does not indicate exaggeration.',
+              3: 'The DSM allows clinicians to assign as many diagnoses as are supported by the evidence.',
+            },
           },
           {
             id: 'psy-sec11-u1-L3-T3',
@@ -304,6 +340,9 @@ export const psySection11Part1: Unit[] = [
             question: 'The biopsychosocial model attributes mental illness to a single cause.',
             correctAnswer: false,
             explanation: 'It considers the interaction of biological, psychological, and social factors together.',
+            distractorExplanations: {
+              0: 'The biopsychosocial model explicitly considers multiple interacting causes, not a single one.',
+            },
           },
           {
             id: 'psy-sec11-u1-L4-Q2',
@@ -339,6 +378,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The diathesis-stress model requires both a predisposition and a triggering stressor.',
+            distractorExplanations: {
+              0: 'Genetic vulnerability alone is not sufficient; environmental stress is also needed to trigger a disorder.',
+              1: 'Stress alone does not always cause mental illness; a predisposition is also required.',
+              3: 'The diathesis-stress model identifies a clear, predictable pattern of vulnerability plus stressor.',
+            },
           },
           {
             id: 'psy-sec11-u1-L4-Q4',
@@ -353,6 +397,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The biopsychosocial model best accounts for why similar genetics and similar stressors produce different outcomes. Psychological and social differences also matter.',
+            distractorExplanations: {
+              1: 'The diathesis-stress model focuses on vulnerability meeting a trigger, but here both siblings had similar stressors with different outcomes, pointing to broader interacting factors.',
+              2: 'The medical model overlooks psychological and social factors that also contribute to depression.',
+              3: 'The moral model is outdated and falsely attributes mental illness to personal weakness.',
+            },
           },
           {
             id: 'psy-sec11-u1-L4-Q5',
@@ -398,6 +447,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'About 20% of adults experience a mental disorder each year. Mental illness is far more common than many people realize.',
+            distractorExplanations: {
+              0: '1 in 100 greatly underestimates the prevalence; the actual rate is about 1 in 5.',
+              1: '1 in 50 is still much lower than the actual prevalence of about 1 in 5 adults per year.',
+              2: '1 in 20 underestimates prevalence; approximately 20% (1 in 5) of adults are affected annually.',
+            },
           },
           {
             id: 'psy-sec11-u1-L5-Q2',
@@ -405,6 +459,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Nearly half of all people will meet criteria for a mental disorder at some point in their life.',
             correctAnswer: true,
             explanation: 'Lifetime prevalence estimates are close to 50%, making mental illness a near-universal human experience.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u1-L5-T2',
@@ -455,6 +512,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Recognizing persistent symptoms, suggesting professional help, and offering support demonstrate strong mental health literacy.',
+            distractorExplanations: {
+              0: 'Dismissing persistent symptoms as normal minimizes the person\'s experience and discourages help-seeking.',
+              2: 'While sleep and exercise help, persistent symptoms lasting weeks suggest a clinical condition that warrants professional evaluation.',
+              3: 'Telling someone to stop overthinking dismisses the reality of their symptoms and delays needed help.',
+            },
           },
         ],
       },
@@ -494,6 +556,9 @@ export const psySection11Part1: Unit[] = [
             question: 'All anxiety is harmful and indicates a mental disorder.',
             correctAnswer: false,
             explanation: 'Normal anxiety is adaptive. It only becomes a disorder when it is excessive, persistent, and impairs functioning.',
+            distractorExplanations: {
+              0: 'Normal anxiety is adaptive and helpful; it only becomes harmful when excessive, persistent, and impairing.',
+            },
           },
           {
             id: 'psy-sec11-u2-L1-Q2',
@@ -529,6 +594,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Anxiety disorders affect roughly 30% of people at some point in their lives, making them the most prevalent category.',
+            distractorExplanations: {
+              0: 'Mood disorders like depression are very common but are the second most prevalent category after anxiety disorders.',
+              2: 'Personality disorders affect a smaller percentage of the population than anxiety disorders.',
+              3: 'Psychotic disorders like schizophrenia affect roughly 1% of the population, far less than anxiety disorders.',
+            },
           },
           {
             id: 'psy-sec11-u2-L1-Q4',
@@ -551,6 +621,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Persistent, wide-ranging worry lasting 6+ months that impairs sleep and daily life meets criteria for an anxiety disorder.',
+            distractorExplanations: {
+              0: 'Temporary worry that resolves after exam week is a normal stress response, not an anxiety disorder.',
+              2: 'Brief nervousness before a specific event is a normal adaptive response.',
+              3: 'Worry that appears only around deadlines and then passes is a typical stress response.',
+            },
           },
         ],
       },
@@ -576,6 +651,9 @@ export const psySection11Part1: Unit[] = [
             question: 'GAD involves excessive worry about one specific thing.',
             correctAnswer: false,
             explanation: 'GAD involves worry about many different topics. That broad, shifting focus is what makes it "generalized."',
+            distractorExplanations: {
+              0: 'GAD involves worry about many different topics, which is what makes it "generalized" rather than focused.',
+            },
           },
           {
             id: 'psy-sec11-u2-L2-Q2',
@@ -589,6 +667,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The DSM requires excessive worry on most days for at least 6 months for a GAD diagnosis.',
+            distractorExplanations: {
+              0: 'Two weeks is the duration criterion for major depressive disorder, not GAD.',
+              1: 'One month is too short; GAD requires at least 6 months of excessive worry.',
+              3: 'One year exceeds the minimum requirement; 6 months is the threshold for GAD diagnosis.',
+            },
           },
           {
             id: 'psy-sec11-u2-L2-T2',
@@ -622,6 +705,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'GAD is characterized by chronic, broad, uncontrollable worry. The other options describe panic disorder, phobia, and OCD.',
+            distractorExplanations: {
+              0: 'Sudden surges of intense fear describe panic disorder, not GAD.',
+              2: 'Extreme fear of one specific object or situation describes a specific phobia, not GAD.',
+              3: 'Repetitive checking of locks and appliances describes OCD compulsions, not GAD.',
+            },
           },
           {
             id: 'psy-sec11-u2-L2-Q5',
@@ -636,6 +724,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Duration over 6 months with physical symptoms like tension and insomnia are key diagnostic criteria for GAD.',
+            distractorExplanations: {
+              1: 'Age alone is not a diagnostic criterion for GAD.',
+              2: 'Ruling out physical causes is important but not the strongest diagnostic indicator.',
+              3: 'Irritability is one possible symptom but does not alone support a GAD diagnosis.',
+            },
           },
         ],
       },
@@ -661,6 +754,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Panic attacks typically peak within minutes.',
             correctAnswer: true,
             explanation: 'Panic attacks surge rapidly, usually reaching peak intensity within about 10 minutes.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u2-L3-Q2',
@@ -674,6 +770,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Racing heart, chest pain, and shortness of breath closely resemble cardiac symptoms, causing many first-time sufferers to seek emergency care.',
+            distractorExplanations: {
+              0: 'Most panic attacks resolve on their own and do not require medical treatment.',
+              2: 'Panic attacks can occur unexpectedly in any situation, including safe ones.',
+              3: 'Emergency rooms treat many conditions but do not specialize in panic disorder.',
+            },
           },
           {
             id: 'psy-sec11-u2-L3-T2',
@@ -723,6 +824,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Agoraphobia involves fear and avoidance of situations where escape or help seems difficult. It\'s broader than just "fear of open spaces."',
+            distractorExplanations: {
+              0: 'Fear of spiders is a specific phobia (arachnophobia), not agoraphobia.',
+              2: 'Agoraphobia involves more than just open spaces; it includes any situation where escape seems difficult.',
+              3: 'Fear of social embarrassment describes social anxiety disorder, not agoraphobia.',
+            },
           },
           {
             id: 'psy-sec11-u2-L3-Q6',
@@ -737,6 +843,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Recurrent unexpected panic attacks followed by widespread avoidance of public places strongly suggest panic disorder with agoraphobia.',
+            distractorExplanations: {
+              0: 'Avoiding multiple locations after recurrent attacks goes beyond normal caution.',
+              1: 'Social anxiety involves fear of judgment, not fear triggered by panic attacks in various locations.',
+              3: 'The avoidance extends to multiple settings, not just transportation, suggesting a broader pattern.',
+            },
           },
         ],
       },
@@ -762,6 +873,9 @@ export const psySection11Part1: Unit[] = [
             question: 'A specific phobia involves fear that is proportional to the actual danger.',
             correctAnswer: false,
             explanation: 'Phobias are defined by fear that is out of proportion to the real threat posed by the object or situation.',
+            distractorExplanations: {
+              0: 'Phobias involve fear that is out of proportion to actual danger, not proportional to it.',
+            },
           },
           {
             id: 'psy-sec11-u2-L4-Q2',
@@ -795,6 +909,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A direct negative experience (bite) paired with the stimulus (dog) is classical conditioning. The dog becomes a conditioned stimulus for fear.',
+            distractorExplanations: {
+              0: 'Operant conditioning involves consequences shaping behavior, not a direct pairing of stimulus and fear response.',
+              2: 'Observational learning involves watching others, but this child was directly bitten.',
+              3: 'Information transfer involves being told about danger, not experiencing it firsthand.',
+            },
           },
           {
             id: 'psy-sec11-u2-L4-Q4',
@@ -808,6 +927,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Preparedness theory suggests evolution made us faster to learn fears of threats that endangered our ancestors.',
+            distractorExplanations: {
+              0: 'Biological preparedness does not mean phobias are entirely genetic; it means evolution primes us to learn certain fears faster.',
+              2: 'Anyone can develop phobias regardless of specific genes; preparedness affects the ease of learning, not the capacity.',
+              3: 'Phobias arise from learning experiences and evolutionary predispositions, not brain damage.',
+            },
           },
           {
             id: 'psy-sec11-u2-L4-Q5',
@@ -840,6 +964,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Social anxiety disorder is the same as being shy.',
             correctAnswer: false,
             explanation: 'Shyness is a personality trait. Social anxiety disorder involves intense fear and avoidance that significantly impairs daily functioning.',
+            distractorExplanations: {
+              0: 'Shyness is a normal personality trait, while social anxiety disorder involves disabling fear and avoidance.',
+            },
           },
           {
             id: 'psy-sec11-u2-L5-Q2',
@@ -853,6 +980,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Social anxiety centers on fear of negative evaluation by others, whether in performance or social interaction situations.',
+            distractorExplanations: {
+              0: 'Fear of crowds and open spaces describes agoraphobia, not social anxiety disorder.',
+              2: 'Fear of having a panic attack describes panic disorder, not social anxiety.',
+              3: 'Fear of a specific object like spiders is a specific phobia, not social anxiety disorder.',
+            },
           },
           {
             id: 'psy-sec11-u2-L5-T2',
@@ -887,6 +1019,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Persistent avoidance of feared social situations that impairs work functioning is a hallmark of social anxiety disorder.',
+            distractorExplanations: {
+              0: 'Feeling nervous but presenting successfully is a normal response, not a disorder.',
+              2: 'Preparing extra notes is a healthy coping strategy, not evidence of a disorder.',
+              3: 'Seeking tips from colleagues is adaptive behavior, not avoidance.',
+            },
           },
           {
             id: 'psy-sec11-u2-L5-Q5',
@@ -935,6 +1072,9 @@ export const psySection11Part1: Unit[] = [
             question: 'In anxiety disorders, the amygdala tends to be underactive.',
             correctAnswer: false,
             explanation: 'The amygdala is typically overactive in anxiety disorders, firing alarm signals even when there is no real threat.',
+            distractorExplanations: {
+              0: 'In anxiety disorders the amygdala is overactive, not underactive, causing excessive alarm responses.',
+            },
           },
           {
             id: 'psy-sec11-u2-L6-T2',
@@ -969,6 +1109,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'SSRIs increase available serotonin in the brain, which helps reduce anxiety symptoms over time.',
+            distractorExplanations: {
+              0: 'SSRIs primarily affect serotonin reuptake, not GABA levels directly.',
+              2: 'SSRIs do not block all stress hormones; they specifically target serotonin reuptake.',
+              3: 'SSRIs modulate brain chemistry over time but do not permanently suppress the amygdala.',
+            },
           },
           {
             id: 'psy-sec11-u2-L6-T3',
@@ -988,6 +1133,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'About 30-40% of anxiety risk is genetic. The rest comes from environmental and psychological factors.',
+            distractorExplanations: {
+              0: 'If anxiety were 100% genetic, identical twins would always share the disorder, which they do not.',
+              1: 'Twin studies clearly show a significant genetic component to anxiety disorders.',
+              3: 'Anyone can develop anxiety disorders regardless of twin status.',
+            },
           },
           {
             id: 'psy-sec11-u2-L6-Q6',
@@ -1002,6 +1152,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This illustrates the diathesis-stress model: shared genetic vulnerability plus different life stressors leads to different outcomes.',
+            distractorExplanations: {
+              0: 'Identical twins share the same genes, so genetic differences cannot explain the divergent outcomes.',
+              2: 'Twin studies show GAD does have a genetic component of 30-40%.',
+              3: 'There is no evidence the unaffected twin is suppressing symptoms; different life experiences are the more parsimonious explanation.',
+            },
           },
         ],
       },
@@ -1041,6 +1196,9 @@ export const psySection11Part1: Unit[] = [
             question: 'To be diagnosed with major depressive disorder, symptoms must last at least 2 weeks.',
             correctAnswer: true,
             explanation: 'The DSM requires a minimum of 2 weeks of persistent symptoms for an MDD diagnosis.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u3-L1-Q2',
@@ -1084,6 +1242,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'At least one of these 2 core symptoms must be present: depressed mood or anhedonia (loss of interest/pleasure).',
+            distractorExplanations: {
+              0: 'Anxiety and panic attacks are features of anxiety disorders, not the core criteria for depression.',
+              2: 'Insomnia and weight loss are associated symptoms but are not the 2 required core criteria.',
+              3: 'Fatigue and difficulty concentrating are supporting symptoms but not the core diagnostic pair.',
+            },
           },
           {
             id: 'psy-sec11-u3-L1-Q5',
@@ -1098,6 +1261,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Loss of interest and pleasure (anhedonia) is a hallmark of depression. Recognizing it and suggesting professional help shows good mental health literacy.',
+            distractorExplanations: {
+              0: 'Dismissing the experience as boredom ignores the clinical significance of persistent anhedonia.',
+              2: 'Normalizing weeks of inability to enjoy anything minimizes a potentially serious condition.',
+              3: 'Suggesting exercise alone for persistent anhedonia overlooks the need for professional assessment.',
+            },
           },
         ],
       },
@@ -1123,6 +1291,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Depression is caused entirely by low serotonin levels.',
             correctAnswer: false,
             explanation: 'While serotonin plays a role, depression involves multiple neurotransmitters, genetics, brain structure, and life experiences. The "chemical imbalance" view is oversimplified.',
+            distractorExplanations: {
+              0: 'Depression involves multiple factors including genetics, brain structure, and life experiences, not just serotonin.',
+            },
           },
           {
             id: 'psy-sec11-u3-L2-Q2',
@@ -1156,6 +1327,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Depression is roughly 40% heritable, meaning genetics play a significant but not dominant role.',
+            distractorExplanations: {
+              0: '5% greatly underestimates the genetic contribution, which twin studies place around 40%.',
+              2: '90% overstates heritability; environmental factors account for roughly 60% of depression risk.',
+              3: 'Twin studies provide strong evidence that genetics do play a role in depression.',
+            },
           },
           {
             id: 'psy-sec11-u3-L2-Q4',
@@ -1184,6 +1360,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Prolonged cortisol exposure from chronic stress can shrink the hippocampus and impair the prefrontal cortex, contributing to depression.',
+            distractorExplanations: {
+              0: 'Chronic stress has well-documented effects on brain structure and function.',
+              2: 'Stress affects both physical and mental health through shared biological pathways like the cortisol system.',
+              3: 'A single stressful event does not always cause depression; chronic stress is typically the concern.',
+            },
           },
           {
             id: 'psy-sec11-u3-L2-Q6',
@@ -1198,6 +1379,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Elevated cortisol from chronic stress is toxic to hippocampal neurons over time, which may contribute to depression.',
+            distractorExplanations: {
+              1: 'Small hippocampal size is associated with depression but does not invariably cause it.',
+              2: 'Hippocampal damage from cortisol is a gradual process, not an instant destruction of neurons.',
+              3: 'Brain imaging studies consistently show structural differences associated with depression.',
+            },
           },
         ],
       },
@@ -1222,6 +1408,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Beck\'s cognitive triad involves negative thoughts about the self, the world, and the future.',
             correctAnswer: true,
             explanation: 'The triad of negative views about self, world, and future is central to Beck\'s cognitive theory of depression.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u3-L3-Q2',
@@ -1264,6 +1453,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A pessimistic explanatory style (permanent, pervasive, personal) increases vulnerability to depression.',
+            distractorExplanations: {
+              0: 'An optimistic style attributes failures to temporary, specific, and external causes, not permanent and personal ones.',
+              2: 'A realistic style involves accurate assessment, not the distorted permanent/pervasive/personal pattern described.',
+              3: 'An external style attributes problems to outside factors, but this person attributes failures internally ("it\'s all my fault").',
+            },
           },
           {
             id: 'psy-sec11-u3-L3-T3',
@@ -1283,6 +1477,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Rumination means going over the same negative thoughts repeatedly. It prolongs depression rather than resolving it.',
+            distractorExplanations: {
+              0: 'Active problem-solving moves toward solutions, while rumination circles without resolution.',
+              2: 'Avoidance is a different maladaptive strategy; rumination is the opposite, involving excessive focus on problems.',
+              3: 'Talking through problems with a therapist is a constructive coping method, not rumination.',
+            },
           },
           {
             id: 'psy-sec11-u3-L3-Q6',
@@ -1297,6 +1496,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Permanent/pervasive/personal attributions (pessimistic style) combined with repetitive negative thinking (rumination) are powerful risk factors for depression.',
+            distractorExplanations: {
+              0: 'Statements like "I\'m stupid" and "everything I try fails" are cognitive distortions, not rational self-assessments.',
+              2: 'Replaying negative thoughts for weeks without action is a harmful pattern, not a healthy coping strategy.',
+              3: 'Brief disappointment is normal, but weeks of self-blame and inaction suggest clinical significance beyond simple disappointment.',
+            },
           },
         ],
       },
@@ -1321,6 +1525,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Everyone who experiences a major life stressor will develop depression.',
             correctAnswer: false,
             explanation: 'Life stressors increase risk, but protective factors like social support and coping skills can buffer against depression.',
+            distractorExplanations: {
+              0: 'Not everyone who faces major stressors develops depression; protective factors buffer the impact.',
+            },
           },
           {
             id: 'psy-sec11-u3-L4-Q2',
@@ -1357,6 +1564,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Poverty creates chronic stress and reduces access to protective resources, increasing depression risk at a population level.',
+            distractorExplanations: {
+              0: 'Poverty does not create a genetic predisposition; it creates chronic environmental stress.',
+              2: 'The relationship is bidirectional; poverty both contributes to and is worsened by depression.',
+              3: 'Extensive research shows a strong relationship between poverty and elevated depression rates.',
+            },
           },
           {
             id: 'psy-sec11-u3-L4-Q4',
@@ -1378,6 +1590,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The biopsychosocial model recognizes that depression has biological, psychological, and social contributors, not a single cause.',
+            distractorExplanations: {
+              0: 'Brain chemistry is only one contributor; the biopsychosocial model includes psychological and social factors too.',
+              1: 'Negative thinking contributes but does not fully explain depression without considering biology and social context.',
+              3: 'Stressful life events increase risk but cannot explain depression without considering biological and psychological factors.',
+            },
           },
         ],
       },
@@ -1408,6 +1625,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Dysthymia is chronic (2+ years) with milder symptoms that allow functioning but prevent thriving.',
+            distractorExplanations: {
+              0: 'Persistent depressive disorder is milder than MDD, not more severe.',
+              2: 'Persistent depressive disorder involves depressed mood and psychological symptoms, not only physical ones.',
+              3: 'Depressed mood is the defining feature of persistent depressive disorder.',
+            },
           },
           {
             id: 'psy-sec11-u3-L5-Q2',
@@ -1415,6 +1637,9 @@ export const psySection11Part1: Unit[] = [
             question: '"Double depression" means having persistent depressive disorder and major depressive episodes at the same time.',
             correctAnswer: true,
             explanation: 'Double depression occurs when a person with chronic low-grade depression (dysthymia) also experiences major depressive episodes.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u3-L5-T2',
@@ -1449,6 +1674,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Light therapy (using a bright light box) compensates for reduced daylight and is a first-line treatment for SAD.',
+            distractorExplanations: {
+              0: 'Exposure therapy treats phobias and anxiety disorders, not seasonal affective disorder.',
+              2: 'ECT is used for severe, treatment-resistant depression, not specifically for seasonal patterns.',
+              3: 'Psychodynamic therapy is not a targeted treatment for the light-deprivation mechanism of SAD.',
+            },
           },
           {
             id: 'psy-sec11-u3-L5-Q5',
@@ -1463,6 +1693,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Chronic low-grade depression lasting 3+ years with periodic severe episodes describes double depression.',
+            distractorExplanations: {
+              0: 'MDD alone does not explain the chronic 3-year baseline of mild symptoms.',
+              1: 'SAD follows a seasonal pattern, while this person has chronic symptoms year-round with periodic worsening.',
+              3: 'Three years of persistent low mood with functional impairment goes well beyond normal fluctuations.',
+            },
           },
           {
             id: 'psy-sec11-u3-L5-Q6',
@@ -1504,6 +1739,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Women are diagnosed with depression about twice as often as men.',
             correctAnswer: true,
             explanation: 'This gender gap is consistent across cultures, though the reasons are complex and multifaceted.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u3-L6-Q2',
@@ -1517,6 +1755,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Men may express depression differently (anger, substance use, risk-taking), and these symptoms may not be identified as depression.',
+            distractorExplanations: {
+              0: 'Men can and do experience depression; it affects all genders.',
+              2: 'The DSM applies equally to all genders and does not exclude men.',
+              3: 'Men are less likely to seek treatment immediately, which contributes to underdiagnosis.',
+            },
           },
           {
             id: 'psy-sec11-u3-L6-T2',
@@ -1566,6 +1809,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Adolescent depression frequently appears as irritability, declining grades, and pulling away from friends rather than classic sadness.',
+            distractorExplanations: {
+              0: 'Teens experience depression at significant rates, especially during adolescence.',
+              2: 'Adolescent depression often persists and predicts adult depression if untreated.',
+              3: 'MDD can be diagnosed in children and adolescents, not only adults.',
+            },
           },
           {
             id: 'psy-sec11-u3-L6-Q6',
@@ -1580,6 +1828,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Unexplained physical symptoms in the context of cultural norms around emotional expression may indicate somatized depression.',
+            distractorExplanations: {
+              0: 'Unexplained physical symptoms in the absence of medical findings suggest a genuine condition, not malingering.',
+              1: 'When no medical cause is found, psychological factors should be considered rather than dismissed.',
+              3: 'A mental health evaluation is more appropriate than physical therapy alone for medically unexplained symptoms.',
+            },
           },
         ],
       },
@@ -1638,6 +1891,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The biopsychosocial model is the most comprehensive modern framework for understanding mental illness.',
+            distractorExplanations: {
+              0: 'The medical model focuses narrowly on biological factors, not the full interaction of biology, psychology, and social context.',
+              1: 'The moral model is an outdated framework that blames individuals for mental illness.',
+              3: 'The behavioral model focuses only on learned behaviors, not the full biopsychosocial picture.',
+            },
           },
           {
             id: 'psy-sec11-u4-L1-Q3',
@@ -1653,6 +1911,9 @@ export const psySection11Part1: Unit[] = [
             question: 'The DSM is used identically in every country worldwide.',
             correctAnswer: false,
             explanation: 'The DSM is primarily used in North America. Many countries use the WHO\'s ICD system instead or alongside the DSM.',
+            distractorExplanations: {
+              0: 'The DSM is primarily used in North America; many countries use the WHO\'s ICD system instead.',
+            },
           },
           {
             id: 'psy-sec11-u4-L1-Q5',
@@ -1683,6 +1944,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The diathesis-stress model explains how underlying vulnerability is activated by life stressors.',
+            distractorExplanations: {
+              0: 'The medical model alone cannot explain why the disorder appeared only after the stressor.',
+              2: 'The moral model falsely attributes mental illness to personal moral failings.',
+              3: 'The clear sequence of vulnerability plus stressor suggests a predictable pattern, not random chance.',
+            },
           },
         ],
       },
@@ -1728,6 +1994,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Recurrent unexpected panic attacks, persistent worry about future attacks, and avoidance of locations point to panic disorder with agoraphobia.',
+            distractorExplanations: {
+              0: 'GAD involves chronic broad worry, not the sudden panic attacks and location avoidance described here.',
+              2: 'Social anxiety centers on fear of judgment, not unexpected physical panic attacks.',
+              3: 'A specific phobia of grocery stores would not explain attacks in other locations.',
+            },
           },
           {
             id: 'psy-sec11-u4-L2-Q3',
@@ -1741,6 +2012,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The amygdala is the brain\'s threat detection center. Overactivity in the amygdala is linked to anxiety disorders.',
+            distractorExplanations: {
+              0: 'The hippocampus is involved in memory formation, not the primary fear response.',
+              1: 'The cerebellum coordinates movement and balance, not fear responses.',
+              3: 'Broca\'s area is involved in speech production, not fear processing.',
+            },
           },
           {
             id: 'psy-sec11-u4-L2-Q4',
@@ -1772,6 +2048,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Anxiety disorders are the most common category of mental disorders worldwide.',
             correctAnswer: true,
             explanation: 'About 30% of adults will experience an anxiety disorder at some point in their lives.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
         ],
       },
@@ -1816,6 +2095,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'At least one of these 2 must be present: persistent depressed mood or anhedonia (loss of interest/pleasure).',
+            distractorExplanations: {
+              0: 'Insomnia and fatigue are supporting symptoms of MDD but not the required core diagnostic pair.',
+              2: 'Weight changes and guilt are associated symptoms but not the two core criteria.',
+              3: 'Difficulty concentrating and restlessness are supporting symptoms, not the core diagnostic pair.',
+            },
           },
           {
             id: 'psy-sec11-u4-L3-Q3',
@@ -1854,6 +2138,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'This is a textbook biopsychosocial explanation: genetics + cognitive style + life stressors converged to trigger depression.',
+            distractorExplanations: {
+              0: 'Genetics alone cannot explain depression when psychological and social factors are also present.',
+              1: 'Job loss alone is insufficient to explain depression without considering genetic vulnerability and cognitive style.',
+              3: 'Depression is not a choice; it results from interacting biological, psychological, and social factors.',
+            },
           },
           {
             id: 'psy-sec11-u4-L3-Q6',
@@ -1861,6 +2150,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Women are diagnosed with depression about twice as often as men.',
             correctAnswer: true,
             explanation: 'This gender gap is consistent across cultures, though men may be underdiagnosed due to different symptom expression.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
         ],
       },
@@ -1900,6 +2192,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Bipolar disorder is the same as having frequent mood swings throughout the day.',
             correctAnswer: false,
             explanation: 'Bipolar episodes last days to weeks. Rapid daily mood shifts are not the same as bipolar disorder.',
+            distractorExplanations: {
+              0: 'Bipolar episodes last days to weeks, not hours, making them fundamentally different from everyday mood shifts.',
+            },
           },
           {
             id: 'psy-sec11-u5-L1-Q2',
@@ -1913,6 +2208,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The presence of manic or hypomanic episodes is what sets bipolar disorder apart from unipolar depression.',
+            distractorExplanations: {
+              0: 'Bipolar disorder includes both depressive and manic/hypomanic episodes, not depression alone.',
+              2: 'Severity comparisons are not the distinguishing factor; the presence of mania is.',
+              3: 'They are distinct disorders with different symptom patterns and treatments.',
+            },
           },
           {
             id: 'psy-sec11-u5-L1-T2',
@@ -1957,6 +2257,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Dramatically reduced sleep, excessive spending, grandiose plans, and pressured speech lasting over a week are hallmarks of mania.',
+            distractorExplanations: {
+              0: 'The extreme decrease in sleep, impulsive spending, and pressured speech go far beyond normal enthusiasm.',
+              1: 'Sleeping only 3 hours, maxing out credit cards, and incomprehensible rapid speech are not hallmarks of a productive week.',
+              3: 'The described symptoms are manic (elevated energy, impulsivity), not depressive (sadness, fatigue).',
+            },
           },
         ],
       },
@@ -1981,6 +2286,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Bipolar II is simply a milder form of Bipolar I.',
             correctAnswer: false,
             explanation: 'Bipolar II has hypomanic (milder high) episodes, but the depressive episodes can be equally severe. It\'s a different pattern, not a lesser disorder.',
+            distractorExplanations: {
+              0: 'Bipolar II has different features (hypomania vs full mania), and its depressive episodes can be equally severe.',
+            },
           },
           {
             id: 'psy-sec11-u5-L2-Q2',
@@ -2015,6 +2323,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Hypomania often feels good, so patients report only the depressive episodes. Without asking about elevated mood periods, clinicians may miss the bipolar pattern.',
+            distractorExplanations: {
+              0: 'They are distinct disorders with different episode types and treatment approaches.',
+              2: 'Bipolar II prominently features severe depressive episodes alongside hypomania.',
+              3: 'Bipolar II is a well-established diagnosis recognized by clinicians worldwide.',
+            },
           },
           {
             id: 'psy-sec11-u5-L2-Q4',
@@ -2037,6 +2350,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Depressive episodes plus hypomanic episodes (less severe than mania, no hospitalization needed) indicate Bipolar II.',
+            distractorExplanations: {
+              0: 'The hypomanic periods indicate more than unipolar depression.',
+              1: 'Bipolar I requires full manic episodes, but this person\'s elevated periods were less severe and did not require hospitalization.',
+              3: 'GAD involves chronic worry, not alternating mood episodes.',
+            },
           },
         ],
       },
@@ -2067,6 +2385,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Bipolar disorder has one of the highest heritability rates of any mental disorder, around 80-85%.',
+            distractorExplanations: {
+              0: '10-15% drastically underestimates bipolar disorder\'s heritability, which is among the highest of any mental disorder.',
+              1: '30-40% is the heritability rate for depression; bipolar disorder is substantially higher at 80-85%.',
+              3: 'No psychiatric condition is 100% heritable; environmental factors always play some role.',
+            },
           },
           {
             id: 'psy-sec11-u5-L3-Q2',
@@ -2074,6 +2397,9 @@ export const psySection11Part1: Unit[] = [
             question: 'A single gene has been identified as the cause of bipolar disorder.',
             correctAnswer: false,
             explanation: 'Bipolar disorder is polygenic, meaning many genes each contribute small effects. No single "bipolar gene" exists.',
+            distractorExplanations: {
+              0: 'Bipolar disorder is polygenic, with many genes contributing small effects rather than one causative gene.',
+            },
           },
           {
             id: 'psy-sec11-u5-L3-T2',
@@ -2116,6 +2442,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Many people experience depressive episodes first. Without a history of mania or hypomania, clinicians may initially diagnose MDD.',
+            distractorExplanations: {
+              0: 'Bipolar symptoms can closely resemble depression, anxiety, and other conditions, especially early on.',
+              2: 'Many clinicians initially miss bipolar disorder because depressive episodes often present first.',
+              3: 'Bipolar disorder shares symptoms with depression, anxiety, and other conditions, creating diagnostic overlap.',
+            },
           },
         ],
       },
@@ -2140,6 +2471,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Bipolar disorder can be cured permanently with a single course of medication.',
             correctAnswer: false,
             explanation: 'Bipolar disorder is a chronic condition that requires ongoing management. Stopping medication frequently leads to relapse.',
+            distractorExplanations: {
+              0: 'Bipolar disorder is a chronic condition requiring ongoing management, not a one-time cure.',
+            },
           },
           {
             id: 'psy-sec11-u5-L4-Q2',
@@ -2153,6 +2487,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'People often stop medication when they feel stable, or due to side effects. This is the most common trigger for relapse.',
+            distractorExplanations: {
+              0: 'Diet has minimal direct effect on bipolar relapse compared to medication adherence.',
+              2: 'Television watching is not a recognized cause of bipolar relapse.',
+              3: 'While stress contributes, stopping medication is the single most common relapse trigger.',
+            },
           },
           {
             id: 'psy-sec11-u5-L4-T2',
@@ -2190,6 +2529,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Stability while on medication does not mean the condition is gone. Stopping lithium without medical guidance is a leading cause of bipolar relapse.',
+            distractorExplanations: {
+              0: 'Feeling stable on medication does not mean the condition is cured; it means the medication is working.',
+              2: 'Doubling medication without medical guidance is dangerous and not appropriate advice.',
+              3: 'Medication is a cornerstone of bipolar treatment and is necessary for most people with the disorder.',
+            },
           },
           {
             id: 'psy-sec11-u5-L4-Q5',
@@ -2233,6 +2577,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Cyclothymia has chronic but sub-threshold mood swings. Neither the highs nor lows meet full diagnostic criteria.',
+            distractorExplanations: {
+              0: 'Cyclothymia specifically involves sub-threshold mood shifts that do not reach full manic criteria.',
+              2: 'Cyclothymia requires at least 2 years of symptoms, far longer than a few weeks.',
+              3: 'Cyclothymia and bipolar disorders differ in the severity and duration of mood episodes.',
+            },
           },
           {
             id: 'psy-sec11-u5-L5-Q2',
@@ -2276,6 +2625,9 @@ export const psySection11Part1: Unit[] = [
             question: 'People with bipolar disorder are more likely to be victims of violence than perpetrators.',
             correctAnswer: true,
             explanation: 'Research consistently shows that people with mental disorders, including bipolar, are far more likely to experience violence than commit it.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u5-L5-Q5',
@@ -2290,6 +2642,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Correcting misuse of diagnostic terms helps reduce stigma and promotes accurate understanding of mental health conditions.',
+            distractorExplanations: {
+              0: 'Agreeing with a casual misuse of the term reinforces stigma and misinformation.',
+              2: 'Normalizing a clinical diagnosis trivializes the experiences of those who actually have bipolar disorder.',
+              3: 'There is no evidence the coworker has a disorder; the comment reflects casual misuse of a clinical term.',
+            },
           },
         ],
       },
@@ -2329,6 +2686,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Whether an event is traumatic depends only on how severe the event is, not on the person\'s response.',
             correctAnswer: false,
             explanation: 'Trauma is defined by the individual\'s response. The same event can be traumatic for one person and not another.',
+            distractorExplanations: {
+              0: 'Trauma is defined by the individual\'s subjective response, not solely by the objective severity of the event.',
+            },
           },
           {
             id: 'psy-sec11-u6-L1-Q2',
@@ -2342,6 +2702,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Trauma can result from many types of overwhelming events, not just combat. It can occur at any age.',
+            distractorExplanations: {
+              0: 'Trauma can result from many experiences beyond combat, including accidents, abuse, and natural disasters.',
+              2: 'Psychological trauma can occur without physical injury, such as witnessing violence or experiencing abuse.',
+              3: 'Traumatic events can happen at any age, not only during childhood.',
+            },
           },
           {
             id: 'psy-sec11-u6-L1-T2',
@@ -2386,6 +2751,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'PTSD development depends on many factors beyond the event itself, including prior experiences, genetics, and social support.',
+            distractorExplanations: {
+              0: 'Fear intensity does not determine PTSD development; many other factors play a role.',
+              1: 'PTSD is not about emotional weakness; it reflects how the brain processes overwhelming experiences.',
+              3: 'Only a minority of people who experience trauma develop PTSD, so it is not an inevitable outcome.',
+            },
           },
         ],
       },
@@ -2425,6 +2795,9 @@ export const psySection11Part1: Unit[] = [
             question: 'For a PTSD diagnosis, symptoms must persist for at least 1 month after the traumatic event.',
             correctAnswer: true,
             explanation: 'The DSM requires symptoms to last more than 1 month. Symptoms in the first month may be diagnosed as acute stress disorder.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u6-L2-T2',
@@ -2444,6 +2817,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Flashbacks involve involuntary, vivid re-experiencing with sensory details. The brain reacts as if the trauma is currently happening.',
+            distractorExplanations: {
+              0: 'Flashbacks are involuntary and cannot be controlled, unlike deliberate recall.',
+              2: 'Flashbacks can occur while awake, not just during sleep; nighttime re-experiencing is classified as nightmares.',
+              3: 'Flashbacks are linked to actual traumatic experiences, not to imagination.',
+            },
           },
           {
             id: 'psy-sec11-u6-L2-Q4',
@@ -2482,6 +2860,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'An exaggerated startle response to a loud, sudden noise is a classic example of hyperarousal. The nervous system remains on high alert.',
+            distractorExplanations: {
+              0: 'A startle response to a sudden noise is not a flashback, which involves re-experiencing the traumatic event.',
+              1: 'Avoidance involves steering clear of trauma reminders, not an exaggerated physical reaction to noise.',
+              2: 'Negative mood changes involve persistent negative beliefs and emotions, not a physical startle reflex.',
+            },
           },
         ],
       },
@@ -2526,6 +2909,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A disrupted hippocampus fails to tag the memory as "past," so the brain treats it as a current experience.',
+            distractorExplanations: {
+              0: 'People with PTSD do not deliberately choose to relive their trauma; the re-experiencing is involuntary.',
+              2: 'Most memories are experienced as past events; the present-tense quality of trauma memories is abnormal.',
+              3: 'The prefrontal cortex is actually underactive in PTSD, reducing its ability to regulate the amygdala.',
+            },
           },
           {
             id: 'psy-sec11-u6-L3-T2',
@@ -2548,6 +2936,9 @@ export const psySection11Part1: Unit[] = [
             question: 'In PTSD, the amygdala is typically underactive compared to normal.',
             correctAnswer: false,
             explanation: 'The amygdala is overactive in PTSD, constantly sounding the alarm even when there is no real threat.',
+            distractorExplanations: {
+              0: 'In PTSD the amygdala is overactive, not underactive, creating exaggerated threat responses.',
+            },
           },
           {
             id: 'psy-sec11-u6-L3-Q5',
@@ -2562,6 +2953,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'A sensory trigger (smell) activates the hyperactive amygdala. The impaired hippocampus fails to signal "this is a past event," creating a flashback.',
+            distractorExplanations: {
+              0: 'The hippocampus fails to properly file the memory, which is why flashbacks occur.',
+              2: 'The prefrontal cortex is typically underactive in PTSD, not overactive.',
+              3: 'A sensory cue triggering a full fear response and flashback is characteristic of PTSD, not normal recall.',
+            },
           },
         ],
       },
@@ -2586,6 +2982,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Complex PTSD results from a single traumatic event.',
             correctAnswer: false,
             explanation: 'Complex PTSD develops from prolonged, repeated trauma, often in relationships where the person cannot escape (such as childhood abuse).',
+            distractorExplanations: {
+              0: 'Complex PTSD results from prolonged, repeated trauma, not a single incident.',
+            },
           },
           {
             id: 'psy-sec11-u6-L4-Q2',
@@ -2622,6 +3021,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The ACE study showed a dose-response relationship: more childhood adversity equals greater risk for a wide range of adult health problems.',
+            distractorExplanations: {
+              0: 'The ACE study demonstrated a strong dose-response relationship between childhood adversity and adult health.',
+              2: 'Emotional abuse, neglect, and household dysfunction also significantly affect adult health outcomes.',
+              3: 'ACEs create lasting effects that persist into adulthood, affecting health across the lifespan.',
+            },
           },
           {
             id: 'psy-sec11-u6-L4-Q4',
@@ -2682,6 +3086,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Avoiding trauma reminders is the best long-term strategy for managing PTSD.',
             correctAnswer: false,
             explanation: 'Avoidance provides short-term relief but maintains PTSD in the long run. Effective treatments involve safely confronting trauma memories.',
+            distractorExplanations: {
+              0: 'Avoidance provides short-term relief but maintains PTSD long-term by preventing trauma processing.',
+            },
           },
           {
             id: 'psy-sec11-u6-L5-T2',
@@ -2702,6 +3109,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Avoidance prevents the brain from processing the trauma. Effective therapies help the brain properly file the memory as "past."',
+            distractorExplanations: {
+              0: 'Avoidance does provide short-term relief, which is why people continue using it despite long-term harm.',
+              2: 'Avoidance maintains the disorder by preventing the brain from processing the trauma memory.',
+              3: 'The DSM lists avoidance as a symptom of PTSD, not as a recovery pathway.',
+            },
           },
           {
             id: 'psy-sec11-u6-L5-Q4',
@@ -2732,6 +3144,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CPT is specifically designed to identify and challenge distorted beliefs that developed after trauma, like self-blame and danger overgeneralization.',
+            distractorExplanations: {
+              0: 'Distorted beliefs can be changed through therapy; medication alone does not address thought patterns.',
+              2: 'Avoiding all discussion of trauma prevents the processing needed for recovery.',
+              3: 'Relaxation techniques alone do not address the distorted trauma-related beliefs that maintain PTSD.',
+            },
           },
           {
             id: 'psy-sec11-u6-L5-Q6',
@@ -2764,6 +3181,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Trauma-informed care asks "what happened to you?" rather than "what\'s wrong with you?"',
             correctAnswer: true,
             explanation: 'This reframing acknowledges that behavior often makes sense in the context of a person\'s trauma history.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u6-L6-Q2',
@@ -2777,6 +3197,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Safety and avoiding re-traumatization are foundational. Trauma-informed care applies to all settings, not just therapy.',
+            distractorExplanations: {
+              0: 'Forcing immediate trauma confrontation can re-traumatize the person, violating trauma-informed principles.',
+              2: 'Ignoring trauma history prevents understanding the root causes of a person\'s difficulties.',
+              3: 'Trauma-informed care applies to all settings and all people, not just those with a formal PTSD diagnosis.',
+            },
           },
           {
             id: 'psy-sec11-u6-L6-T2',
@@ -2822,6 +3247,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Trauma-informed care recognizes behavior in context, prioritizes safety, and connects people with appropriate support.',
+            distractorExplanations: {
+              0: 'Punitive responses ignore the underlying trauma and can worsen the student\'s condition.',
+              2: 'Ignoring behavior fails to provide the support the student needs and misses an opportunity for intervention.',
+              3: 'Publicly discussing a student\'s home situation violates privacy and could cause further harm.',
+            },
           },
           {
             id: 'psy-sec11-u6-L6-Q6',
@@ -2829,6 +3259,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Post-traumatic growth means that the person no longer suffers from the effects of trauma.',
             correctAnswer: false,
             explanation: 'Growth and suffering can coexist. A person can experience personal growth while still dealing with the impact of trauma.',
+            distractorExplanations: {
+              0: 'Post-traumatic growth and ongoing suffering can coexist; growth does not eliminate the effects of trauma.',
+            },
           },
         ],
       },
@@ -2868,6 +3301,9 @@ export const psySection11Part1: Unit[] = [
             question: 'OCD is simply a preference for neatness and organization.',
             correctAnswer: false,
             explanation: 'OCD involves distressing intrusive thoughts and time-consuming rituals. It is a serious anxiety-driven disorder, not a personality quirk.',
+            distractorExplanations: {
+              0: 'OCD involves distressing intrusive thoughts and compulsive rituals, not mere preferences for tidiness.',
+            },
           },
           {
             id: 'psy-sec11-u7-L1-Q2',
@@ -2914,6 +3350,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Compulsions provide short-term relief that teaches the brain it needs the ritual to cope. This strengthens the obsession-compulsion cycle.',
+            distractorExplanations: {
+              0: 'Compulsions provide only temporary relief and never permanently eliminate the underlying obsession.',
+              2: 'Compulsions do reduce anxiety temporarily, which is precisely why they become reinforced.',
+              3: 'Compulsions are repetitive patterns that persist and escalate over time.',
+            },
           },
           {
             id: 'psy-sec11-u7-L1-Q5',
@@ -2928,6 +3369,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Excessive, repetitive checking driven by persistent intrusive thoughts despite knowing the door is locked is characteristic of OCD.',
+            distractorExplanations: {
+              0: 'Checking once and leaving is a normal, proportionate response to security concerns.',
+              2: 'Extra caution with valuables is a rational, one-time precaution, not a compulsion.',
+              3: 'Asking a neighbor for help during vacation is a practical precaution, not an anxiety-driven compulsion.',
+            },
           },
         ],
       },
@@ -2967,6 +3413,9 @@ export const psySection11Part1: Unit[] = [
             question: 'People with harm-related OCD are at high risk of actually harming others.',
             correctAnswer: false,
             explanation: 'People with harm OCD are tormented by these thoughts precisely because they find them horrifying. They are not at elevated risk of acting on them.',
+            distractorExplanations: {
+              0: 'People with harm-related OCD are horrified by their thoughts and are not at elevated risk of acting on them.',
+            },
           },
           {
             id: 'psy-sec11-u7-L2-T2',
@@ -3002,6 +3451,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Clinically significant OCD typically consumes at least 1 hour per day and/or causes significant distress or impairment.',
+            distractorExplanations: {
+              0: 'Less than 5 minutes of compulsive behavior would not typically meet the threshold for clinical significance.',
+              1: 'About 15 minutes is below the typical clinical threshold of at least 1 hour per day.',
+              3: 'Exactly 8 hours is not a diagnostic criterion; the threshold is at least 1 hour or significant impairment.',
+            },
           },
           {
             id: 'psy-sec11-u7-L2-Q5',
@@ -3034,6 +3488,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Exposure and Response Prevention (ERP) involves performing compulsions more frequently.',
             correctAnswer: false,
             explanation: 'ERP involves deliberately resisting compulsions while facing obsession triggers. The goal is to break the cycle, not reinforce it.',
+            distractorExplanations: {
+              0: 'ERP involves resisting compulsions while facing triggers, not performing compulsions more frequently.',
+            },
           },
           {
             id: 'psy-sec11-u7-L3-Q2',
@@ -3067,6 +3524,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'OCD appears to require greater serotonin enhancement than depression, which is why higher SSRI doses are typically needed.',
+            distractorExplanations: {
+              0: 'OCD is strongly linked to serotonin dysfunction, which is why SSRIs are effective.',
+              2: 'Higher doses are prescribed because OCD requires more serotonin modulation, not because lower doses are dangerous.',
+              3: 'SSRIs are a first-line pharmacological treatment for OCD and are commonly prescribed.',
+            },
           },
           {
             id: 'psy-sec11-u7-L3-Q4',
@@ -3089,6 +3551,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'In ERP, the person faces the trigger (exposure) and resists washing (response prevention), learning that anxiety fades without the ritual.',
+            distractorExplanations: {
+              0: 'Performing the compulsion immediately reinforces the OCD cycle rather than breaking it.',
+              2: 'Simply telling someone their fear is irrational does not teach the brain to tolerate anxiety naturally.',
+              3: 'Avoiding the trigger entirely prevents the learning that anxiety can decrease without the ritual.',
+            },
           },
         ],
       },
@@ -3113,6 +3580,9 @@ export const psySection11Part1: Unit[] = [
             question: 'In BDD, the perceived physical flaws are usually obvious to others.',
             correctAnswer: false,
             explanation: 'The perceived defects in BDD are typically not noticeable or only slight to others. The preoccupation is disproportionate to any actual flaw.',
+            distractorExplanations: {
+              0: 'In BDD, the perceived flaws are typically minimal or not noticeable to others.',
+            },
           },
           {
             id: 'psy-sec11-u7-L4-Q2',
@@ -3126,6 +3596,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'BDD features obsessive preoccupation (with appearance) and compulsive behaviors (mirror-checking, reassurance-seeking), mirroring the OCD pattern.',
+            distractorExplanations: {
+              0: 'Body weight concerns are more associated with eating disorders, not BDD\'s OCD-like pattern.',
+              2: 'BDD can occur independently of OCD; they share a pattern but are separate diagnoses.',
+              3: 'The DSM groups BDD with OCD-related disorders due to shared obsessive-compulsive features, not because all appearance concerns are grouped together.',
+            },
           },
           {
             id: 'psy-sec11-u7-L4-T2',
@@ -3171,6 +3646,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Hours of distressing mirror-checking over a perceived flaw that others can\'t see, with functional impairment, suggests BDD. Professional help is needed.',
+            distractorExplanations: {
+              0: 'Telling someone to stop checking dismisses their distress without addressing the underlying condition.',
+              1: 'Suggesting cosmetic surgery reinforces the false belief that appearance is the problem rather than the distorted perception.',
+              3: 'Normalizing the experience minimizes the severity of spending hours in distress over a flaw others cannot see.',
+            },
           },
         ],
       },
@@ -3195,6 +3675,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Hoarding disorder is caused by laziness.',
             correctAnswer: false,
             explanation: 'Hoarding is a recognized mental disorder involving difficulty making decisions about possessions, emotional attachment to items, and distress about discarding them.',
+            distractorExplanations: {
+              0: 'Hoarding disorder is a recognized mental condition, not a result of laziness.',
+            },
           },
           {
             id: 'psy-sec11-u7-L5-Q2',
@@ -3208,6 +3691,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The combination of inability to discard and resulting clutter that makes spaces unusable defines hoarding disorder.',
+            distractorExplanations: {
+              0: 'Collecting valuable items purposefully is different from the inability to discard that defines hoarding.',
+              2: 'Occasional messiness is normal and does not render living spaces unusable.',
+              3: 'Owning many items in an organized way is not the same as the disabling clutter seen in hoarding.',
+            },
           },
           {
             id: 'psy-sec11-u7-L5-T2',
@@ -3244,6 +3732,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Forced clearing causes trauma and does not address the cognitive and emotional factors driving the hoarding. Reaccumulation is common.',
+            distractorExplanations: {
+              0: 'Forced clearing almost never solves the problem because the person typically reaccumulates.',
+              2: 'Forced clearing is not the recommended treatment; gradual, voluntary sorting with therapeutic support is.',
+              3: 'Forced clearing causes severe distress and usually leads to reaccumulation.',
+            },
           },
           {
             id: 'psy-sec11-u7-L5-Q5',
@@ -3291,6 +3784,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Psychosis is a specific diagnosis, not a symptom.',
             correctAnswer: false,
             explanation: 'Psychosis is a symptom that can appear in multiple disorders, not a diagnosis itself.',
+            distractorExplanations: {
+              0: 'Psychosis is a symptom (loss of contact with reality) that can appear across multiple disorders, not a diagnosis itself.',
+            },
           },
           {
             id: 'psy-sec11-u8-L1-Q2',
@@ -3324,6 +3820,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Auditory hallucinations, particularly hearing voices, are the most common type in schizophrenia.',
+            distractorExplanations: {
+              0: 'Visual hallucinations are more common in other conditions; auditory hallucinations dominate in schizophrenia.',
+              2: 'Olfactory hallucinations are rare in schizophrenia compared to auditory ones.',
+              3: 'Tactile hallucinations occur but are much less common than auditory hallucinations in schizophrenia.',
+            },
           },
           {
             id: 'psy-sec11-u8-L1-Q4',
@@ -3362,6 +3863,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Hearing a voice others cannot hear is an auditory hallucination (a perceptual symptom). Insight does not rule out psychosis.',
+            distractorExplanations: {
+              0: 'A delusion is a false belief, while hearing a voice is a perceptual experience (hallucination), not a belief.',
+              2: 'Hearing a commentary voice that others cannot hear goes beyond normal internal dialogue.',
+              3: 'Retaining insight does not rule out psychosis; some people with hallucinations know the experience is unusual.',
+            },
           },
         ],
       },
@@ -3387,6 +3893,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Schizophrenia involves having multiple personalities.',
             correctAnswer: false,
             explanation: 'Schizophrenia involves psychosis (hallucinations, delusions). Multiple identities are a feature of dissociative identity disorder, a completely different condition.',
+            distractorExplanations: {
+              0: 'Schizophrenia involves psychotic symptoms like hallucinations and delusions, not multiple personalities.',
+            },
           },
           {
             id: 'psy-sec11-u8-L2-Q2',
@@ -3400,6 +3909,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The "split" in schizophrenia refers to a disconnection from reality, not multiple personalities.',
+            distractorExplanations: {
+              0: 'Multiple personalities are a feature of dissociative identity disorder, not schizophrenia.',
+              1: 'Mood state splitting describes bipolar disorder, not the meaning of "schizophrenia."',
+              3: 'The name refers to a split from reality, not a physical split between brain hemispheres.',
+            },
           },
           {
             id: 'psy-sec11-u8-L2-T2',
@@ -3443,6 +3957,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Antipsychotics primarily target positive symptoms. Negative symptoms (flat affect, avolition, social withdrawal) persist and significantly impair quality of life.',
+            distractorExplanations: {
+              0: 'Negative symptoms are often less dramatic than positive symptoms but more persistently impairing.',
+              2: 'Positive symptoms can be very serious and distressing, but they respond better to medication.',
+              3: 'Negative symptoms primarily impair social and daily functioning, not just physical health.',
+            },
           },
           {
             id: 'psy-sec11-u8-L2-Q6',
@@ -3457,6 +3976,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Flat affect, reduced speech (alogia), social withdrawal, and lack of motivation (avolition) are classic negative symptoms of schizophrenia.',
+            distractorExplanations: {
+              0: 'Positive symptoms involve additions like hallucinations, not the reductions described here.',
+              2: 'While medications can have side effects, the described symptoms are core negative features of schizophrenia.',
+              3: 'Flat affect, alogia, avolition, and social withdrawal are well-established negative symptoms of schizophrenia.',
+            },
           },
         ],
       },
@@ -3487,6 +4011,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'About 48% concordance in identical twins shows strong genetic influence, but the fact it\'s not 100% proves environment also matters.',
+            distractorExplanations: {
+              0: '5% greatly underestimates the concordance rate for identical twins.',
+              2: '75% overestimates the concordance rate, which is approximately 48%.',
+              3: '100% concordance would mean schizophrenia is entirely genetic, but environmental factors clearly play a role.',
+            },
           },
           {
             id: 'psy-sec11-u8-L3-Q2',
@@ -3494,6 +4023,9 @@ export const psySection11Part1: Unit[] = [
             question: 'If schizophrenia were entirely genetic, identical twins would always both have it.',
             correctAnswer: true,
             explanation: 'Since identical twins share 100% of their DNA but concordance is only about 48%, environmental factors must also contribute.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u8-L3-T2',
@@ -3542,6 +4074,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Enlarged ventricles and reduced gray matter volume, particularly in the prefrontal and temporal regions, are consistent findings.',
+            distractorExplanations: {
+              0: 'People with schizophrenia typically have larger, not smaller, ventricles.',
+              2: 'An abnormally large cerebellum is not a characteristic finding in schizophrenia.',
+              3: 'Many studies have documented structural brain differences in schizophrenia.',
+            },
           },
           {
             id: 'psy-sec11-u8-L3-Q6',
@@ -3556,6 +4093,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'All siblings shared genetic risk, but only the one exposed to significant environmental stressors developed the disorder. This is the diathesis-stress model in action.',
+            distractorExplanations: {
+              0: 'If genetics alone were the cause, all siblings with the same genes should develop the disorder.',
+              1: 'Cannabis use is one risk factor but does not alone cause schizophrenia without genetic vulnerability.',
+              3: 'The clear pattern of genetic risk plus environmental stressors points to an identifiable causal model.',
+            },
           },
         ],
       },
@@ -3580,6 +4122,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Antipsychotic medications effectively eliminate both positive and negative symptoms.',
             correctAnswer: false,
             explanation: 'Antipsychotics primarily reduce positive symptoms (hallucinations, delusions). Negative symptoms are much harder to treat with medication.',
+            distractorExplanations: {
+              0: 'Antipsychotics primarily target positive symptoms; negative symptoms are much harder to treat pharmacologically.',
+            },
           },
           {
             id: 'psy-sec11-u8-L4-Q2',
@@ -3630,6 +4175,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'CBT for psychosis (CBTp) helps people examine and cope with hallucinations and delusions through cognitive techniques.',
+            distractorExplanations: {
+              0: 'CBTp is a psychotherapy, not a medication.',
+              2: 'CBTp is a form of talk therapy, not a neuroimaging technique.',
+              3: 'CBTp is an evidence-based psychological therapy, not a housing arrangement.',
+            },
           },
           {
             id: 'psy-sec11-u8-L4-Q5',
@@ -3652,6 +4202,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Integrated treatment combining medication with psychosocial interventions produces the best outcomes, especially after a first episode.',
+            distractorExplanations: {
+              0: 'Medication alone without psychosocial support produces worse outcomes than integrated treatment.',
+              1: 'For schizophrenia, therapy alone without medication is generally insufficient to manage psychotic symptoms.',
+              3: 'Permanent hospitalization is not the standard of care; community-based integrated treatment produces better outcomes.',
+            },
           },
         ],
       },
@@ -3676,6 +4231,9 @@ export const psySection11Part1: Unit[] = [
             question: 'People with schizophrenia are more likely to be violent than the general population.',
             correctAnswer: false,
             explanation: 'People with schizophrenia are more likely to be victims of violence. The vast majority are not violent, and the violence stereotype is driven by media distortion.',
+            distractorExplanations: {
+              0: 'People with schizophrenia are more likely to be victims of violence than perpetrators.',
+            },
           },
           {
             id: 'psy-sec11-u8-L5-Q2',
@@ -3689,6 +4247,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Movies, news, and TV disproportionately depict people with schizophrenia as violent, creating and reinforcing public fear.',
+            distractorExplanations: {
+              0: 'Scientific research generally counters stigma by providing accurate data about schizophrenia.',
+              2: 'Accurate educational content reduces stigma rather than creating it.',
+              3: 'Mental health professionals work to reduce stigma, not perpetuate it.',
+            },
           },
           {
             id: 'psy-sec11-u8-L5-T2',
@@ -3734,6 +4297,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Correcting the violence myth with facts and pointing out media distortion is the most effective way to challenge schizophrenia stigma.',
+            distractorExplanations: {
+              0: 'Encouraging avoidance reinforces the harmful stereotype that people with schizophrenia are dangerous.',
+              2: 'Ignoring and hoping they move away perpetuates exclusion and stigma.',
+              3: 'Denying the existence of schizophrenia is factually incorrect and unhelpful.',
+            },
           },
           {
             id: 'psy-sec11-u8-L5-Q6',
@@ -3741,6 +4309,9 @@ export const psySection11Part1: Unit[] = [
             question: 'With integrated treatment, many people with schizophrenia can live fulfilling, independent lives.',
             correctAnswer: true,
             explanation: 'The outdated view that schizophrenia always leads to poor outcomes is wrong. With modern treatment, many people achieve significant recovery.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
         ],
       },
@@ -3779,6 +4350,9 @@ export const psySection11Part1: Unit[] = [
             question: 'Schizoaffective disorder involves psychotic symptoms combined with a major mood episode.',
             correctAnswer: true,
             explanation: 'Schizoaffective disorder is essentially the overlap of psychotic symptoms with depressive or manic episodes.',
+            distractorExplanations: {
+              1: 'undefined',
+            },
           },
           {
             id: 'psy-sec11-u8-L6-T2',
@@ -3799,6 +4373,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Schizophrenia and other psychotic disorders most commonly emerge in late adolescence and early adulthood.',
+            distractorExplanations: {
+              0: 'Psychotic episodes in early childhood are extremely rare; onset typically occurs in late adolescence to early adulthood.',
+              2: 'While late-onset psychosis can occur, the most common age of first episode is 18-25.',
+              3: 'First psychotic episodes most commonly occur decades earlier than age 65.',
+            },
           },
           {
             id: 'psy-sec11-u8-L6-Q4',
@@ -3833,6 +4412,11 @@ export const psySection11Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Early intervention is critical in first-episode psychosis. The shorter the duration of untreated psychosis, the better the outcome.',
+            distractorExplanations: {
+              0: 'Waiting 6 months delays critical early intervention that improves long-term outcomes.',
+              1: 'Psychosis is a brain-based condition that cannot be resolved through willpower alone.',
+              3: 'Avoiding the student reinforces stigma and delays the help they need.',
+            },
           },
         ],
       },

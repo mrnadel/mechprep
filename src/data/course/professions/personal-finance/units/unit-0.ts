@@ -29,6 +29,9 @@ export const unit0: Unit = {
           question: "Money is something you use to buy things.",
           correctAnswer: true,
           explanation: "That's it! Money is what you exchange for goods and services.",
+          distractorExplanations: {
+            1: 'Money is indeed used for purchases — that is its primary everyday function.',
+          },
         },
         {
           id: "pf-u0-L1-Q2",
@@ -42,6 +45,11 @@ export const unit0: Unit = {
           ],
           correctIndex: 0,
           explanation: "Most people earn money by working. Your employer pays you for your time and skills.",
+          distractorExplanations: {
+            1: 'Government benefits help some people but are not the primary income source for most.',
+            2: 'Bank interest earns very small amounts and is not how most people get their income.',
+            3: 'Family support is occasional, not a reliable main source of income for most adults.',
+          },
         },
         {
           id: "pf-u0-L1-T2",
@@ -86,6 +94,11 @@ export const unit0: Unit = {
           ],
           correctIndex: 0,
           explanation: "3,000 - 2,800 = 200 left over. That's money you could save.",
+          distractorExplanations: {
+            1: 'You only go into debt when you spend more than you earn, not when you have a surplus.',
+            2: 'Breaking even means income equals expenses exactly, but here you have 200 extra.',
+            3: 'You are not losing money because your income exceeds your expenses.',
+          },
         },
         {
           id: "pf-u0-L1-Q7",
@@ -93,6 +106,9 @@ export const unit0: Unit = {
           question: "If you spend more than you earn, you'll eventually run out of money.",
           correctAnswer: true,
           explanation: "Yes. Spending more than you earn leads to debt. The goal is to always keep expenses below income.",
+          distractorExplanations: {
+            1: 'Consistently spending more than you earn depletes savings and creates debt over time.',
+          },
         },
       ],
     },
@@ -118,6 +134,9 @@ export const unit0: Unit = {
           question: "A bank account is a safe place to keep your money.",
           correctAnswer: true,
           explanation: "Yes! Banks are insured by the government. Your money is protected even if the bank has problems.",
+          distractorExplanations: {
+            1: 'Banks are government-insured, making them one of the safest places to store money.',
+          },
         },
         {
           id: "pf-u0-L2-Q2",
@@ -131,6 +150,11 @@ export const unit0: Unit = {
           ],
           correctIndex: 0,
           explanation: "Your balance is simply how much money you currently have in your account.",
+          distractorExplanations: {
+            1: 'Bank charges are called fees, not your balance.',
+            2: 'The bank\'s profit margin is the bank\'s business metric, unrelated to your account balance.',
+            3: 'Money you owe the bank would be a loan or overdraft, not your balance.',
+          },
         },
         {
           id: "pf-u0-L2-T2",
@@ -153,6 +177,9 @@ export const unit0: Unit = {
           question: "A debit card uses money that's already in your bank account.",
           correctAnswer: true,
           explanation: "Yes! A debit card takes money directly from your checking account. No borrowing involved.",
+          distractorExplanations: {
+            1: 'Debit cards pull directly from your checking account, unlike credit cards which borrow money.',
+          },
         },
         {
           id: "pf-u0-L2-Q5",
@@ -175,6 +202,11 @@ export const unit0: Unit = {
           ],
           correctIndex: 0,
           explanation: "500 + 1,000 = 1,500 total across both accounts.",
+          distractorExplanations: {
+            1: 'That only counts your checking account and ignores your savings.',
+            2: 'That only counts your savings account and ignores your checking.',
+            3: 'There is no reason the total would be 2,000 since 500 + 1,000 = 1,500.',
+          },
         },
       ],
     },
@@ -199,6 +231,9 @@ export const unit0: Unit = {
           question: "Saving money means you put some aside instead of spending it.",
           correctAnswer: true,
           explanation: "That's all it is! Saving is just not spending some of your money.",
+          distractorExplanations: {
+            1: 'Saving is exactly this — setting aside money instead of spending it all.',
+          },
         },
         {
           id: "pf-u0-L3-Q2",
@@ -212,6 +247,11 @@ export const unit0: Unit = {
           ],
           correctIndex: 0,
           explanation: "100 × 12 months = 1,200. Small amounts add up when you're consistent.",
+          distractorExplanations: {
+            1: 'That would be just one month of saving, not a full year.',
+            2: 'You save 100/month, not 2,000/month, so 2,000 is too high.',
+            3: 'Saving 100/month for 12 months gives you 1,200, not zero.',
+          },
         },
         {
           id: "pf-u0-L3-T2",
@@ -248,6 +288,11 @@ export const unit0: Unit = {
           ],
           correctIndex: 0,
           explanation: "Start small and be consistent. Even 20 per paycheck builds up over time.",
+          distractorExplanations: {
+            1: 'Waiting for a high-paying job means years of missed saving opportunities.',
+            2: 'Relying on "extra money" means you may never save because there rarely feels like enough.',
+            3: 'Putting all money into savings and spending nothing is unrealistic and unsustainable.',
+          },
         },
         {
           id: "pf-u0-L3-Q6",
@@ -255,6 +300,9 @@ export const unit0: Unit = {
           question: "You need to earn a lot of money before you can start saving.",
           correctAnswer: false,
           explanation: "Anyone can save, at any income level. The amount doesn't matter at first. The habit does.",
+          distractorExplanations: {
+            0: 'You can start saving small amounts at any income level — the habit matters more than the amount.',
+          },
         },
       ],
     },

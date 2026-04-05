@@ -108,6 +108,8 @@ export interface CourseQuestion {
   correctZoneId?: string;
   // Common
   explanation: string;
+  /** Per-wrong-option explanation keyed by original option index. Shown when user picks that distractor. */
+  distractorExplanations?: Record<number, string>;
   hint?: string;
   diagram?: string;
   // Localized content variants (keyed by ISO 3166-1 alpha-2 country code)
@@ -194,7 +196,7 @@ export interface ActiveLesson {
   unitIndex: number;
   lessonIndex: number;
   currentQuestionIndex: number;
-  answers: { questionId: string; correct: boolean }[];
+  answers: { questionId: string; correct: boolean; selectedIndex?: number }[];
   startTime: number;
   sessionQuestionIds: string[];
   isGolden: boolean;

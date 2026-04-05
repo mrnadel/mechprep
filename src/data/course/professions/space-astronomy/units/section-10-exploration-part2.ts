@@ -40,6 +40,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "Voyager 1 and Voyager 2 both launched in 1977.",
             correctAnswer: true,
             explanation: "Both probes launched in 1977, taking advantage of a rare planetary alignment that occurs only once every 175 years.",
+            distractorExplanations: {
+              1: 'Both Voyager 1 and Voyager 2 launched in 1977, about two weeks apart, to take advantage of a rare planetary alignment.',
+            },
           },
           {
             id: "sp-sec10-u6-L1-Q2",
@@ -53,6 +56,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gravity assists use a planet's gravity to speed up and redirect a spacecraft. This let the Voyagers visit multiple planets without carrying extra fuel.",
+            distractorExplanations: {
+              0: 'Carrying enough fuel for multiple planetary stops would be impossibly heavy; gravity assists provided free velocity changes.',
+              2: 'Remote steering cannot provide the massive speed changes needed to reach each planet; gravity assists supplied the energy.',
+              3: 'Both Voyagers visited multiple planets: Voyager 2 flew past Jupiter, Saturn, Uranus, and Neptune.',
+            },
           },
           {
             id: "sp-sec10-u6-L1-T2",
@@ -94,6 +102,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Radioisotope thermoelectric generators (RTGs) convert heat from decaying plutonium into electricity. Solar panels wouldn't work so far from the Sun.",
+            distractorExplanations: {
+              0: 'Solar panels cannot generate enough power at the outer planets where sunlight is extremely dim.',
+              1: 'Chemical batteries would have been depleted decades ago; the Voyagers have operated for over 45 years.',
+              3: 'Nuclear fusion reactors do not exist in portable form; the Voyagers use radioisotope thermoelectric generators (RTGs).',
+            },
           },
           {
             id: "sp-sec10-u6-L1-Q6",
@@ -101,6 +114,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "Voyager 1 entered interstellar space in 2012.",
             correctAnswer: true,
             explanation: "NASA confirmed in 2013 that Voyager 1 crossed the boundary of the Sun's influence (the heliopause) in August 2012.",
+            distractorExplanations: {
+              1: 'Voyager 1 crossed the heliopause into interstellar space in August 2012, confirmed by plasma density measurements.',
+            },
           },
           {
             id: "sp-sec10-u6-L1-Q7",
@@ -135,6 +151,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "Sojourner was the first rover to drive on Mars.",
             correctAnswer: true,
             explanation: "Sojourner landed in 1997 as part of the Mars Pathfinder mission. It was the size of a microwave oven and operated for about 3 months.",
+            distractorExplanations: {
+              1: 'Sojourner landed as part of Mars Pathfinder in 1997, becoming the first wheeled vehicle to drive on Mars.',
+            },
           },
           {
             id: "sp-sec10-u6-L2-Q2",
@@ -148,6 +167,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Opportunity was designed for 90 days but lasted over 14 years, driving more than 45 km across Mars before a dust storm ended its mission in 2018.",
+            distractorExplanations: {
+              0: 'Sojourner operated for about 83 days, exceeding its 7-day design life but not matching Opportunity\'s 15-year record.',
+              2: 'Curiosity has operated well beyond its 2-year primary mission but was not the rover famous for exceeding 90 days.',
+              3: 'Perseverance is still active but was not the rover that set the record for vastly exceeding a 90-day planned mission.',
+            },
           },
           {
             id: "sp-sec10-u6-L2-T2",
@@ -193,6 +217,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "Ingenuity was the first aircraft to fly on another planet.",
             correctAnswer: true,
             explanation: "Ingenuity made its first flight on Mars on April 19, 2021. It proved that powered flight is possible in Mars's thin atmosphere.",
+            distractorExplanations: {
+              1: 'Ingenuity demonstrated powered, controlled flight on Mars in April 2021, a first for any extraterrestrial body.',
+            },
           },
           {
             id: "sp-sec10-u6-L2-Q7",
@@ -206,6 +233,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Ingenuity rode to Mars attached to the belly of the Perseverance rover, which landed in February 2021.",
+            distractorExplanations: {
+              0: 'Curiosity launched in 2011 and did not carry a helicopter; Ingenuity rode with Perseverance in 2021.',
+              1: 'Spirit operated from 2004 to 2010 and predated the Ingenuity helicopter by over a decade.',
+              3: 'Opportunity operated from 2004 to 2018 and was not designed to carry a helicopter.',
+            },
           },
         ],
       },
@@ -229,6 +261,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "Cassini orbited Saturn for over 10 years.",
             correctAnswer: true,
             explanation: "Cassini arrived at Saturn in 2004 and operated until 2017, spending 13 years studying the ringed planet and its moons.",
+            distractorExplanations: {
+              1: 'Cassini orbited Saturn from 2004 to 2017, spending 13 years studying the planet, its rings, and moons.',
+            },
           },
           {
             id: "sp-sec10-u6-L3-Q2",
@@ -242,6 +277,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cassini flew through geysers of water ice erupting from Enceladus's south pole. This revealed a liquid ocean under the moon's icy surface.",
+            distractorExplanations: {
+              0: 'Enceladus is an icy moon with no volcanic lava; the eruptions consist of water ice particles and vapor.',
+              2: 'Methane clouds are found on Titan, not Enceladus; Enceladus has water ice geysers.',
+              3: 'Dust storms occur on Mars; Enceladus shoots jets of water ice from its subsurface ocean.',
+            },
           },
           {
             id: "sp-sec10-u6-L3-T2",
@@ -285,6 +325,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cassini was running low on fuel. NASA chose to destroy it rather than risk an uncontrolled crash into Enceladus or Titan, which might harbor life.",
+            distractorExplanations: {
+              0: 'While Cassini did sample Saturn\'s atmosphere during its final plunge, the primary reason was planetary protection.',
+              2: 'Cassini\'s destruction was deliberate and planned, not accidental due to fuel depletion.',
+              3: 'Dramatic footage was a side benefit; the real reason was preventing biological contamination of potentially habitable moons.',
+            },
           },
           {
             id: "sp-sec10-u6-L3-Q6",
@@ -292,6 +337,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "New Horizons launched in 2006 and reached Pluto in 2015.",
             correctAnswer: true,
             explanation: "Even traveling at over 58,000 km/h, it took New Horizons about 9.5 years to reach Pluto, showing just how far away the dwarf planet is.",
+            distractorExplanations: {
+              1: 'New Horizons launched in January 2006 and flew past Pluto in July 2015 after a 9.5-year journey.',
+            },
           },
           {
             id: "sp-sec10-u6-L3-Q7",
@@ -559,6 +607,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "NASA was founded in 1958.",
             correctAnswer: true,
             explanation: "The National Aeronautics and Space Administration was created in 1958 to coordinate America's space program.",
+            distractorExplanations: {
+              1: 'NASA was established on July 29, 1958 in response to the Soviet Union\'s Sputnik launch.',
+            },
           },
           {
             id: "sp-sec10-u7-L1-Q2",
@@ -572,6 +623,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Sputnik's launch in 1957 shocked the US. NASA was created the following year to organize the American response.",
+            distractorExplanations: {
+              0: 'The Moon landing occurred in 1969, over a decade after NASA was founded.',
+              2: 'The Challenger disaster occurred in 1986, nearly 30 years after NASA was created.',
+              3: 'WWII ended in 1945; NASA was not created until 1958 in direct response to the Soviet Sputnik launch.',
+            },
           },
           {
             id: "sp-sec10-u7-L1-T2",
@@ -609,6 +665,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "NASA now uses commercial companies like SpaceX for crew launches.",
             correctAnswer: true,
             explanation: "Since 2020, SpaceX's Crew Dragon has been flying NASA astronauts to the ISS under the commercial crew program.",
+            distractorExplanations: {
+              1: 'NASA\'s Commercial Crew Program enabled SpaceX\'s Crew Dragon to begin carrying astronauts to the ISS in 2020.',
+            },
           },
           {
             id: "sp-sec10-u7-L1-Q6",
@@ -622,6 +681,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "NASA stands for National Aeronautics and Space Administration. It handles both aviation research and space exploration.",
+            distractorExplanations: {
+              0: 'The correct word is Aeronautics, not Air; the full name is National Aeronautics and Space Administration.',
+              2: 'NASA is not limited to North America; it is a national agency of the United States government.',
+              3: 'The correct name uses Aeronautics and Space Administration, not Aerospace and Science Authority.',
+            },
           },
         ],
       },
@@ -645,6 +709,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "ESA is a single country's space agency.",
             correctAnswer: false,
             explanation: "ESA is a multinational organization with 22 member countries pooling resources for space missions that no single European nation could afford alone.",
+            distractorExplanations: {
+              0: 'ESA is a cooperative organization of 22 European member states, not a single country\'s agency.',
+            },
           },
           {
             id: "sp-sec10-u7-L2-Q2",
@@ -658,6 +725,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ESA's Rosetta mission deployed the Philae lander onto Comet 67P in 2014. It was the first spacecraft to land on a comet.",
+            distractorExplanations: {
+              0: 'Galileo was a NASA mission to Jupiter, not an ESA comet mission.',
+              2: 'Cassini was a NASA-ESA joint mission to Saturn, not a comet lander.',
+              3: 'Voyager was a NASA mission to the outer planets; ESA\'s Rosetta was the comet mission.',
+            },
           },
           {
             id: "sp-sec10-u7-L2-T2",
@@ -695,6 +767,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "ESA has 22 member states that contribute funding and expertise to shared space programs.",
+            distractorExplanations: {
+              0: 'Five members is far too few; ESA has grown to 22 member countries across Europe.',
+              1: 'Twelve underestimates ESA\'s membership; it currently has 22 member states.',
+              3: 'Fifty overstates ESA\'s membership; it has 22 member countries, not the entire European continent.',
+            },
           },
           {
             id: "sp-sec10-u7-L2-T3",
@@ -733,6 +810,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "India's Mars Orbiter Mission cost more than $1 billion.",
             correctAnswer: false,
             explanation: "ISRO's Mars Orbiter Mission cost about $74 million, making it the cheapest Mars mission ever. It proved that low-cost deep space exploration is possible.",
+            distractorExplanations: {
+              0: 'India\'s Mars Orbiter Mission (Mangalyaan) cost approximately $74 million, a fraction of $1 billion.',
+            },
           },
           {
             id: "sp-sec10-u7-L3-Q2",
@@ -746,6 +826,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "ISRO reached Mars orbit on its very first attempt and for a fraction of what other agencies spent. No other country had done that before.",
+            distractorExplanations: {
+              0: 'Many missions had visited Mars before; ISRO\'s achievement was succeeding on its very first attempt at remarkably low cost.',
+              2: 'Mangalyaan was an orbiter mission, not a rover landing; it studied Mars from orbit.',
+              3: 'Mangalyaan was an uncrewed orbiter; no Mars mission has been crewed to date.',
+            },
           },
           {
             id: "sp-sec10-u7-L3-T2",
@@ -774,6 +859,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Yang Liwei became China's first astronaut (taikonaut) aboard Shenzhou 5 in 2003.",
+            distractorExplanations: {
+              0: '1998 is too early; China\'s first crewed mission, Shenzhou 5, launched in October 2003.',
+              2: '2010 is seven years too late; Yang Liwei became the first Chinese astronaut in 2003.',
+              3: '2019 is sixteen years too late; China joined the human spaceflight club in 2003.',
+            },
           },
           {
             id: "sp-sec10-u7-L3-T3",
@@ -796,6 +886,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "China landed the first rover on the far side of the Moon.",
             correctAnswer: true,
             explanation: "China's Chang'e 4 mission landed on the Moon's far side in January 2019. No other country had achieved this.",
+            distractorExplanations: {
+              1: 'China\'s Chang\'e 4 mission landed on the far side of the Moon in January 2019, a historic first.',
+            },
           },
           {
             id: "sp-sec10-u7-L3-Q7",
@@ -1064,6 +1157,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "SpaceX's Falcon 9 boosters are designed to land and be reused.",
             correctAnswer: true,
             explanation: "SpaceX routinely lands and reflies Falcon 9 first stages. Some boosters have flown over 20 times.",
+            distractorExplanations: {
+              1: 'Falcon 9 first stages are routinely landed and reflown, with some boosters completing over 20 flights.',
+            },
           },
           {
             id: "sp-sec10-u8-L1-Q2",
@@ -1077,6 +1173,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Elon Musk founded SpaceX in 2002 with the goal of making space travel affordable and eventually reaching Mars.",
+            distractorExplanations: {
+              0: '1998 is too early; SpaceX was founded by Elon Musk in 2002.',
+              2: '2008 is the year Falcon 1 reached orbit, not when SpaceX was founded.',
+              3: '2012 is when Dragon first visited the ISS; SpaceX was founded a decade earlier in 2002.',
+            },
           },
           {
             id: "sp-sec10-u8-L1-T2",
@@ -1104,6 +1205,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Falcon 9 first stage reignites its engines, flips around, and lands vertically either on a ground pad or an ocean drone ship.",
+            distractorExplanations: {
+              0: 'Falcon 9 boosters do not burn up; they are designed to survive reentry and land for reuse.',
+              1: 'Unlike expendable rockets, Falcon 9 boosters do not fall into the ocean; they perform powered landings.',
+              3: 'Falcon 9 uses propulsive landing, not parachutes; it fires its engine to decelerate and land vertically.',
+            },
           },
           {
             id: "sp-sec10-u8-L1-T3",
@@ -1117,6 +1223,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "SpaceX's Crew Dragon was the first commercial spacecraft to carry astronauts to the ISS.",
             correctAnswer: true,
             explanation: "Crew Dragon's Demo-2 mission in May 2020 launched NASA astronauts Bob Behnken and Doug Hurley to the ISS.",
+            distractorExplanations: {
+              1: 'SpaceX Crew Dragon first carried astronauts to the ISS in May 2020, becoming the first commercial crewed spacecraft.',
+            },
           },
           {
             id: "sp-sec10-u8-L1-Q6",
@@ -1148,6 +1257,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "Blue Origin was founded by Jeff Bezos.",
             correctAnswer: true,
             explanation: "Jeff Bezos founded Blue Origin in 2000. Its motto is 'Gradatim Ferociter,' meaning 'step by step, ferociously.'",
+            distractorExplanations: {
+              1: 'Jeff Bezos founded Blue Origin in 2000, funding it largely through his Amazon fortune.',
+            },
           },
           {
             id: "sp-sec10-u8-L2-Q2",
@@ -1161,6 +1273,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "New Shepard carries passengers to the edge of space for a few minutes of weightlessness before returning. It's a suborbital flight, not orbital.",
+            distractorExplanations: {
+              0: 'New Shepard is suborbital and cannot reach orbit; orbital launches are planned for the larger New Glenn rocket.',
+              1: 'New Shepard does not carry ISS cargo; it provides brief suborbital flights above the Karman line.',
+              3: 'New Shepard is a suborbital vehicle; Moon missions would require Blue Origin\'s much larger New Glenn rocket.',
+            },
           },
           {
             id: "sp-sec10-u8-L2-T2",
@@ -1205,6 +1322,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Competition pushes companies to innovate and cut costs. This benefits everyone, including government agencies that can buy launches more cheaply.",
+            distractorExplanations: {
+              0: 'Commercial spaceflight supplements space agencies, not replaces them; agencies still lead deep space exploration.',
+              2: 'Safety depends on implementation, not ownership; both public and private operators must meet rigorous standards.',
+              3: 'Commercial spaceflight benefits everyone through lower costs, more launches, and faster technology development.',
+            },
           },
           {
             id: "sp-sec10-u8-L2-Q6",
@@ -1472,6 +1594,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "Artemis 1 carried astronauts around the Moon in 2022.",
             correctAnswer: false,
             explanation: "Artemis 1 was uncrewed. It tested the SLS rocket and Orion capsule by flying around the Moon and back without astronauts aboard.",
+            distractorExplanations: {
+              0: 'Artemis 1 was an uncrewed test flight in 2022; the first crewed Artemis mission is planned for later.',
+            },
           },
           {
             id: "sp-sec10-u9-L1-Q2",
@@ -1485,6 +1610,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The south pole has permanently shadowed craters that may contain water ice. This resource could support long-term lunar presence.",
+            distractorExplanations: {
+              0: 'Returning to the exact Apollo 11 site would not provide new scientific value; the south pole has water ice.',
+              1: 'The equator was where Apollo landed; Artemis targets the south pole for its unique resources.',
+              2: 'The far side is being explored by China; Artemis focuses on the south pole for potential water ice.',
+            },
           },
           {
             id: "sp-sec10-u9-L1-T2",
@@ -1522,6 +1652,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "Gateway will be a space station orbiting the Moon.",
             correctAnswer: true,
             explanation: "Gateway will serve as a staging point in lunar orbit where crews can dock, transfer to landers, and conduct research.",
+            distractorExplanations: {
+              1: 'Gateway is planned as a small space station in lunar orbit to support Artemis Moon missions.',
+            },
           },
           {
             id: "sp-sec10-u9-L1-Q6",
@@ -1535,6 +1668,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Permanently shadowed craters at the south pole may contain water ice. Water can be used for drinking, oxygen, and rocket fuel.",
+            distractorExplanations: {
+              0: 'The south pole has rough terrain with craters, not smooth landing areas.',
+              1: 'The south pole actually has areas of permanent shadow, not maximum sunlight.',
+              3: 'Distance from Earth is essentially the same for all points on the Moon\'s surface.',
+            },
           },
         ],
       },
@@ -1558,6 +1696,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "China completed its Tiangong space station in 2022.",
             correctAnswer: true,
             explanation: "The final module, Mengtian, docked in October 2022, completing the T-shaped station with 3 main modules.",
+            distractorExplanations: {
+              1: 'China completed the Tiangong space station with the Mengtian module in October 2022.',
+            },
           },
           {
             id: "sp-sec10-u9-L2-Q2",
@@ -1571,6 +1712,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "US law (the Wolf Amendment) prohibits NASA from cooperating with China. So China developed its own space station independently.",
+            distractorExplanations: {
+              0: 'China was never invited to join the ISS; US law (the Wolf Amendment) prohibited NASA cooperation with China.',
+              1: 'Tiangong is smaller than the ISS; the motivation was exclusion from the ISS partnership, not size.',
+              3: 'China was well aware of the ISS; the exclusion was a deliberate US policy decision.',
+            },
           },
           {
             id: "sp-sec10-u9-L2-T2",
@@ -1613,6 +1759,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Unlike the 1960s, today's space activities involve many nations and private companies. Both the US and China have international partners.",
+            distractorExplanations: {
+              0: 'Both the US and China are actively involved, making it a multi-party competition.',
+              1: 'The US and China compete rather than cooperate on most space activities.',
+              3: 'The competition extends well beyond satellites to include Moon landing, space stations, and Mars exploration.',
+            },
           },
           {
             id: "sp-sec10-u9-L2-Q6",
@@ -1620,6 +1771,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "China aims to land astronauts on the Moon by around 2030.",
             correctAnswer: true,
             explanation: "China has announced plans for crewed Moon landings by approximately 2030. They're developing a new heavy-lift rocket and lunar lander for this goal.",
+            distractorExplanations: {
+              1: 'China has publicly announced plans to land astronauts on the Moon by approximately 2030.',
+            },
           },
         ],
       },
@@ -1643,6 +1797,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "SpaceX's Starship is designed with Mars missions in mind.",
             correctAnswer: true,
             explanation: "Elon Musk founded SpaceX with the long-term goal of making life multi-planetary. Starship is designed to carry large crews and cargo to Mars.",
+            distractorExplanations: {
+              1: 'Starship is designed as a fully reusable vehicle capable of carrying crew and cargo to Mars.',
+            },
           },
           {
             id: "sp-sec10-u9-L3-Q2",
@@ -1656,6 +1813,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "With current rocket technology, a trip to Mars takes about 6 to 9 months depending on the orbital alignment of Earth and Mars.",
+            distractorExplanations: {
+              0: 'Two weeks is far too short; the minimum energy transfer to Mars takes 6-9 months.',
+              1: 'Three months is possible with advanced propulsion but a standard Hohmann transfer takes 6-9 months.',
+              3: 'Five years is far too long; even with inefficient trajectories, Mars trips take under a year.',
+            },
           },
           {
             id: "sp-sec10-u9-L3-T2",
@@ -1699,6 +1861,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Moon is only 3 days away, so problems can be managed. It's the perfect place to test habitats, spacesuits, and life support systems needed for Mars.",
+            distractorExplanations: {
+              0: 'Mars is the ultimate goal; the Moon serves as a proving ground for Mars-bound technologies.',
+              2: 'Mars missions have not been cancelled; NASA\'s long-term plan includes both Moon and Mars exploration.',
+              3: 'The Moon is targeted for technology testing, not because of superior landing sites.',
+            },
           },
           {
             id: "sp-sec10-u9-L3-Q6",
@@ -2006,6 +2173,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Twelve astronauts walked on the Moon across 6 Apollo missions between 1969 and 1972.",
+            distractorExplanations: {
+              0: 'Two people walked on the Moon during Apollo 11 alone; six more missions landed additional astronauts.',
+              1: 'Six is the number of successful Moon landings, not the number of individual moonwalkers.',
+              3: 'Twenty-four is the total number of astronauts who flew to the Moon, but only 12 walked on its surface.',
+            },
           },
           {
             id: "sp-sec10-u10-L1-Q5",
@@ -2021,6 +2193,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "The Space Shuttle program flew missions for 30 years.",
             correctAnswer: true,
             explanation: "The shuttle flew from 1981 to 2011, completing 135 missions over 30 years.",
+            distractorExplanations: {
+              1: 'The Space Shuttle operated from 1981 to 2011, spanning 30 years and 135 missions.',
+            },
           },
         ],
       },
@@ -2059,6 +2234,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "China's CNSA landed Chang'e 4 on the Moon's far side in January 2019, a world first.",
+            distractorExplanations: {
+              0: 'NASA has not landed a rover on the far side; China\'s CNSA achieved this first with Chang\'e 4.',
+              1: 'ESA has not landed a rover on the Moon\'s far side; this was a Chinese achievement.',
+              3: 'ISRO has focused on lunar orbiters and south pole missions, not far-side landings.',
+            },
           },
           {
             id: "sp-sec10-u10-L2-Q3",
@@ -2083,6 +2263,9 @@ export const spaceSection10Part2: Unit[] = [
             question: "ISRO's Mars mission was the cheapest in history at about $74 million.",
             correctAnswer: true,
             explanation: "India's Mars Orbiter Mission cost about $74 million and succeeded on its first attempt, proving low-cost deep space exploration is possible.",
+            distractorExplanations: {
+              1: 'ISRO\'s Mars Orbiter Mission cost approximately $74 million, making it the cheapest Mars mission in history.',
+            },
           },
           {
             id: "sp-sec10-u10-L2-Q6",
@@ -2096,6 +2279,11 @@ export const spaceSection10Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Solar panels wouldn't work so far from the Sun. RTGs convert heat from decaying plutonium into electricity for decades.",
+            distractorExplanations: {
+              0: 'Solar panels are useless at the Voyagers\' distance where sunlight is essentially nonexistent.',
+              1: 'Hydrogen fuel cells would have been exhausted decades ago during the 45+ year mission.',
+              3: 'Rechargeable batteries cannot last decades in deep space; RTGs provide steady power from plutonium decay.',
+            },
           },
           {
             id: "sp-sec10-u10-L2-Q7",

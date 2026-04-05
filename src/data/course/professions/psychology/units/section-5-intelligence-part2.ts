@@ -34,6 +34,9 @@ export const psySection5Part2: Unit[] = [
             question: 'The Sapir-Whorf hypothesis says language has no effect on thinking.',
             correctAnswer: false,
             explanation: 'Sapir-Whorf says the opposite: language shapes or even determines thought.',
+            distractorExplanations: {
+              0: 'Sapir-Whorf says the opposite: language shapes or even determines thought.',
+            },
           },
           {
             id: 'psy-sec5-u6-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The strong version (linguistic determinism) claims language determines the boundaries of thought.',
+            distractorExplanations: {
+              1: 'Language slightly influences perception is not correct here; the strong version (linguistic determinism) claims language determines the.',
+              2: 'Thought determines language structure is not correct here; the strong version (linguistic determinism) claims language determines the boundaries.',
+              3: 'Language and thought are unrelated is not correct here; the strong version (linguistic determinism) claims language determines the boundaries of.',
+            },
           },
           {
             id: 'psy-sec5-u6-L1-T2',
@@ -82,6 +90,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Research supports the weak version. Language influences thought, but people can still think beyond what their language provides.',
+            distractorExplanations: {
+              0: 'The strong version (linguistic determinism) is not correct here; research supports the weak version.',
+              1: 'Both versions are equally supported is not correct here; research supports the weak version.',
+              2: 'Neither version has any evidence is not correct here; research supports the weak version.',
+            },
           },
           {
             id: 'psy-sec5-u6-L1-T3',
@@ -103,6 +116,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'This supports weak linguistic relativity: language shapes cognitive abilities without making thought impossible.',
+            distractorExplanations: {
+              1: 'People without number words cannot think at all is not correct here; this supports weak linguistic relativity: language shapes cognitive.',
+              2: 'There is a real effect here; this supports weak linguistic relativity: language shapes cognitive abilities without making thought impossible.',
+              3: 'This is too absolute; this supports weak linguistic relativity: language shapes cognitive abilities without making thought impossible.',
+            },
           },
           {
             id: 'psy-sec5-u6-L1-Q6',
@@ -136,6 +154,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Russian speakers can distinguish light blue from dark blue faster than English speakers.',
             correctAnswer: true,
             explanation: 'Having separate words (goluboy vs. siniy) sharpens the perceptual boundary between those shades.',
+            distractorExplanations: {
+              1: 'Having separate words (goluboy vs. siniy) sharpens the perceptual boundary between those shades.',
+            },
           },
           {
             id: 'psy-sec5-u6-L2-Q2',
@@ -149,6 +170,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Language creates categorical boundaries that speed up perceptual discrimination. It does not change the eye itself.',
+            distractorExplanations: {
+              1: 'People without color words are colorblind is not correct here; language creates categorical boundaries that speed up perceptual discrimination.',
+              2: 'Language changes the physical structure of the eye is not correct here; language creates categorical boundaries that speed up perceptual.',
+              3: 'Color perception is entirely genetic is not correct here; language creates categorical boundaries that speed up perceptual discrimination.',
+            },
           },
           {
             id: 'psy-sec5-u6-L2-T2',
@@ -187,6 +213,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'They arrange time from east to west, matching the sun\'s path. Their spatial language shapes how they think about time.',
+            distractorExplanations: {
+              0: 'Left to right, like English speakers is not correct here; they arrange time from east to west, matching the sun\'s path.',
+              1: 'Right to left, like Hebrew speakers is not correct here; they arrange time from east to west, matching the sun\'s path.',
+              3: 'Randomly, with no consistent pattern is not correct here; they arrange time from east to west, matching the sun\'s path.',
+            },
           },
           {
             id: 'psy-sec5-u6-L2-T3',
@@ -208,6 +239,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'This supports linguistic relativity. The metaphors built into each language shape how speakers mentally represent time.',
+            distractorExplanations: {
+              1: 'This is not accurate; this supports linguistic relativity. The metaphors built into each language shape how speakers mentally represent time.',
+              2: 'English is better suited for discussing time is not correct here; this supports linguistic relativity.',
+              3: 'This is too absolute; this supports linguistic relativity. The metaphors built into each language shape how speakers mentally represent time.',
+            },
           },
           {
             id: 'psy-sec5-u6-L2-Q6',
@@ -241,6 +277,9 @@ export const psySection5Part2: Unit[] = [
             question: 'When bilingual people speak one language, the other language shuts down completely.',
             correctAnswer: false,
             explanation: 'Both languages activate at once. The brain actively suppresses the one not in use.',
+            distractorExplanations: {
+              0: 'Both languages activate at once. The brain actively suppresses the one not in use.',
+            },
           },
           {
             id: 'psy-sec5-u6-L3-Q2',
@@ -254,6 +293,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The constant need to manage two active language systems builds stronger attention and task-switching skills.',
+            distractorExplanations: {
+              0: 'Bilingual people read more books is not correct here; the constant need to manage two active language systems builds stronger attention and.',
+              2: 'Speaking two languages doubles vocabulary size is not correct here; the constant need to manage two active language systems builds stronger.',
+              3: 'Bilingual people have larger brains at birth is not correct here; the constant need to manage two active language systems builds stronger.',
+            },
           },
           {
             id: 'psy-sec5-u6-L3-T2',
@@ -289,6 +333,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Switching between languages requires executive function to suppress one language and activate the other.',
+            distractorExplanations: {
+              0: 'Long-term memory consolidation is not correct here; switching between languages requires executive function to suppress one language and activate.',
+              1: 'Classical conditioning is not correct here; switching between languages requires executive function to suppress one language and activate the other.',
+              3: 'Implicit memory retrieval is not correct here; switching between languages requires executive function to suppress one language and activate the.',
+            },
           },
           {
             id: 'psy-sec5-u6-L3-T3',
@@ -318,6 +367,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Cultural frame-shifting means each language activates different cultural norms and self-presentations.',
+            distractorExplanations: {
+              1: 'Maria has a split personality disorder is not correct here; cultural frame-shifting means each language activates different cultural norms and.',
+              2: 'English is inherently more assertive than Korean is not correct here; cultural frame-shifting means each language activates different cultural.',
+              3: 'Language has no connection to identity is not correct here; cultural frame-shifting means each language activates different cultural norms and.',
+            },
           },
         ],
       },
@@ -343,6 +397,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Preverbal infants show evidence of thinking before they learn any language.',
             correctAnswer: true,
             explanation: 'Infants demonstrate expectations about object permanence and basic physics, proving thought exists before language.',
+            distractorExplanations: {
+              1: 'Infants demonstrate expectations about object permanence and basic physics, proving thought exists before language.',
+            },
           },
           {
             id: 'psy-sec5-u6-L4-Q2',
@@ -356,6 +413,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Preverbal infant cognition contradicts linguistic determinism: thought exists before and beyond language.',
+            distractorExplanations: {
+              0: 'It supports the strong version completely is not correct here; preverbal infant cognition contradicts linguistic determinism: thought exists.',
+              2: 'There is a real effect here; preverbal infant cognition contradicts linguistic determinism: thought exists before and beyond language.',
+              3: 'It confirms that babies cannot think is not correct here; preverbal infant cognition contradicts linguistic determinism: thought exists before.',
+            },
           },
           {
             id: 'psy-sec5-u6-L4-T2',
@@ -375,6 +437,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Rotation time scales with angle, showing the mind manipulates images in a way that mirrors physical rotation.',
+            distractorExplanations: {
+              0: 'People cannot think in images is not correct here; rotation time scales with angle, showing the mind manipulates images in a way that mirrors.',
+              1: 'Language is needed to rotate objects mentally is not correct here; rotation time scales with angle, showing the mind manipulates images in a way.',
+              3: 'This is too narrow; rotation time scales with angle, showing the mind manipulates images in a way that mirrors physical rotation.',
+            },
           },
           {
             id: 'psy-sec5-u6-L4-Q4',
@@ -415,6 +482,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This shows cognition develops independently of formal language, supporting the view that language enhances rather than creates thought.',
+            distractorExplanations: {
+              0: 'Thought requires language to function is not correct here; this shows cognition develops independently of formal language, supporting the view.',
+              2: 'Deaf children cannot form concepts is not correct here; this shows cognition develops independently of formal language, supporting the view that.',
+              3: 'Gestures are not a form of communication is not correct here; this shows cognition develops independently of formal language, supporting the view.',
+            },
           },
           {
             id: 'psy-sec5-u6-L4-Q6',
@@ -448,6 +520,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Changing a single verb in a question can alter what people remember about an event.',
             correctAnswer: true,
             explanation: 'Loftus showed that "smashed" vs. "contacted" changed speed estimates and created false memories of broken glass.',
+            distractorExplanations: {
+              1: 'Loftus showed that "smashed" vs. "contacted" changed speed estimates and created false memories of broken glass.',
+            },
           },
           {
             id: 'psy-sec5-u6-L5-Q2',
@@ -461,6 +536,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The word "smashed" activated a mental schema of serious accidents, which inserted details like broken glass into the memory.',
+            distractorExplanations: {
+              1: 'There actually was broken glass in the video is not correct here; the word "smashed" activated a mental schema of serious accidents, which.',
+              2: 'Participants were trying to please the researcher is not correct here; the word "smashed" activated a mental schema of serious accidents, which.',
+              3: 'There is a real effect here; the word "smashed" activated a mental schema of serious accidents, which inserted details like broken glass into the.',
+            },
           },
           {
             id: 'psy-sec5-u6-L5-T2',
@@ -481,6 +561,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Word choice activates different schemas. "Flood" and "aliens" trigger threat-related associations that "arrive" and "immigrants" do not.',
+            distractorExplanations: {
+              0: 'Classical conditioning from repeated exposure is not correct here; word choice activates different schemas.',
+              2: 'The first headline contains more factual information is not correct here; word choice activates different schemas.',
+              3: 'Readers only respond to the length of headlines is not correct here; word choice activates different schemas.',
+            },
           },
           {
             id: 'psy-sec5-u6-L5-Q4',
@@ -517,6 +602,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The framing effect: identical information presented positively creates more favorable judgments than negative framing.',
+            distractorExplanations: {
+              0: 'They describe different products is not correct here; the framing effect: identical information presented positively creates more favorable.',
+              2: 'Percentages confuse people is not correct here; the framing effect: identical information presented positively creates more favorable judgments.',
+              3: 'Lean meat is actually healthier than fatty meat is not correct here; the framing effect: identical information presented positively creates more.',
+            },
           },
           {
             id: 'psy-sec5-u6-L5-Q6',
@@ -564,6 +654,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Children in all cultures pass through the same stages of language development in the same order.',
             correctAnswer: true,
             explanation: 'The sequence of cooing, babbling, one-word, two-word, and telegraphic speech is universal across languages.',
+            distractorExplanations: {
+              1: 'The sequence of cooing, babbling, one-word, two-word, and telegraphic speech is universal across languages.',
+            },
           },
           {
             id: 'psy-sec5-u7-L1-Q2',
@@ -597,6 +690,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Babbling starts universal but narrows as the brain tunes into the specific sounds of the surrounding language.',
+            distractorExplanations: {
+              0: 'It stops entirely is not correct here; babbling starts universal but narrows as the brain tunes into the specific sounds of the surrounding.',
+              2: 'It expands to include all human language sounds is not correct here; babbling starts universal but narrows as the brain tunes into the specific.',
+              3: 'It becomes identical to adult speech is not correct here; babbling starts universal but narrows as the brain tunes into the specific sounds of.',
+            },
           },
           {
             id: 'psy-sec5-u7-L1-Q4',
@@ -626,6 +724,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The vocabulary explosion typically begins around 18 months, with rapid word learning.',
+            distractorExplanations: {
+              0: 'The babbling stage is not correct here; the vocabulary explosion typically begins around 18 months, with rapid word learning.',
+              2: 'Telegraphic speech is not correct here; the vocabulary explosion typically begins around 18 months, with rapid word learning.',
+              3: 'Metalinguistic awareness is not correct here; the vocabulary explosion typically begins around 18 months, with rapid word learning.',
+            },
           },
           {
             id: 'psy-sec5-u7-L1-Q6',
@@ -639,6 +742,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'By age 6, children typically know around 13,000 words thanks to the rapid learning rate that begins at 18 months.',
+            distractorExplanations: {
+              0: 'About 500 words is not correct here; by age 6, children typically know around 13,000 words thanks to the rapid learning rate that begins at 18.',
+              1: 'About 2,000 words is not correct here; by age 6, children typically know around 13,000 words thanks to the rapid learning rate that begins at 18.',
+              3: 'About 50,000 words is not correct here; by age 6, children typically know around 13,000 words thanks to the rapid learning rate that begins at 18.',
+            },
           },
         ],
       },
@@ -664,6 +772,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Chomsky believed children learn language entirely through imitation and reinforcement.',
             correctAnswer: false,
             explanation: 'Chomsky argued the opposite: language ability is largely innate. He proposed a built-in language acquisition device (LAD).',
+            distractorExplanations: {
+              0: 'Chomsky argued the opposite: language ability is largely innate. He proposed a built-in language acquisition device (LAD).',
+            },
           },
           {
             id: 'psy-sec5-u7-L2-Q2',
@@ -710,6 +821,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Children say things like "I goed to the store," applying rules they were never taught. This creativity cannot be explained by reinforcement alone.',
+            distractorExplanations: {
+              0: 'This is not accurate; children say things like "I goed to the store," applying rules they were never taught.',
+              2: 'Reinforcement works for language but not grammar is not correct here; children say things like "I goed to the store," applying rules they were.',
+              3: 'This is too absolute; children say things like "I goed to the store," applying rules they were never taught.',
+            },
           },
           {
             id: 'psy-sec5-u7-L2-T3',
@@ -747,6 +863,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Overgeneralization (applying "ed" and "s" rules to irregular words) shows children internalize grammar rules, not just imitate what they hear.',
+            distractorExplanations: {
+              0: 'Operant conditioning of grammar is not correct here; overgeneralization (applying "ed" and "s" rules to irregular words) shows children.',
+              2: 'Telegraphic speech patterns is not correct here; overgeneralization (applying "ed" and "s" rules to irregular words) shows children internalize.',
+              3: 'A language delay requiring therapy is not correct here; overgeneralization (applying "ed" and "s" rules to irregular words) shows children.',
+            },
           },
         ],
       },
@@ -772,6 +893,9 @@ export const psySection5Part2: Unit[] = [
             question: 'The critical period for language acquisition extends roughly from birth to puberty.',
             correctAnswer: true,
             explanation: 'Lenneberg proposed that the brain\'s peak language-learning window closes around puberty.',
+            distractorExplanations: {
+              1: 'Lenneberg proposed that the brain\'s peak language-learning window closes around puberty.',
+            },
           },
           {
             id: 'psy-sec5-u7-L3-Q2',
@@ -785,6 +909,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'During the critical period, the brain\'s neural plasticity makes it highly receptive to language input.',
+            distractorExplanations: {
+              0: 'Children have more motivation to communicate is not correct here; during the critical period, the brain\'s neural plasticity makes it highly.',
+              1: 'Adults already know one language, which blocks learning is not correct here; during the critical period, the brain\'s neural plasticity makes it.',
+              3: 'Children have better hearing than adults is not correct here; during the critical period, the brain\'s neural plasticity makes it highly receptive.',
+            },
           },
           {
             id: 'psy-sec5-u7-L3-T2',
@@ -804,6 +933,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Genie\'s inability to develop full grammar despite years of therapy supports the critical period hypothesis.',
+            distractorExplanations: {
+              0: 'Language can be learned at any age with enough practice is not correct here; genie\'s inability to develop full grammar despite years of therapy.',
+              2: 'This is not accurate; genie\'s inability to develop full grammar despite years of therapy supports the critical period hypothesis.',
+              3: 'This is not accurate; genie\'s inability to develop full grammar despite years of therapy supports the critical period hypothesis.',
+            },
           },
           {
             id: 'psy-sec5-u7-L3-Q4',
@@ -833,6 +967,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The critical period for language applies equally to signed and spoken languages. Early exposure leads to native-level fluency.',
+            distractorExplanations: {
+              0: 'Sign language is harder than spoken language is not correct here; the critical period for language applies equally to signed and spoken languages.',
+              2: 'Late learners are less intelligent is not correct here; the critical period for language applies equally to signed and spoken languages.',
+              3: 'There is a real effect here; the critical period for language applies equally to signed and spoken languages.',
+            },
           },
           {
             id: 'psy-sec5-u7-L3-Q6',
@@ -874,6 +1013,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Infant-directed speech (baby talk) helps babies learn language faster.',
             correctAnswer: true,
             explanation: 'The exaggerated sounds and rhythm of baby talk help infants separate words and learn vowel categories.',
+            distractorExplanations: {
+              1: 'The exaggerated sounds and rhythm of baby talk help infants separate words and learn vowel categories.',
+            },
           },
           {
             id: 'psy-sec5-u7-L4-Q2',
@@ -887,6 +1029,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The exaggerated acoustic features help infants parse speech sounds and identify word boundaries.',
+            distractorExplanations: {
+              0: 'It uses complex grammar that challenges the baby is not correct here; the exaggerated acoustic features help infants parse speech sounds and.',
+              2: 'It avoids all emotional expression is not correct here; the exaggerated acoustic features help infants parse speech sounds and identify word.',
+              3: 'This is too narrow; the exaggerated acoustic features help infants parse speech sounds and identify word boundaries.',
+            },
           },
           {
             id: 'psy-sec5-u7-L4-T2',
@@ -906,6 +1053,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'While the word gap exists, the quality of conversational interaction (turn-taking, responsiveness) predicts outcomes better than sheer volume.',
+            distractorExplanations: {
+              0: 'The word gap does not exist is not correct here; while the word gap exists, the quality of conversational interaction (turn-taking,.',
+              2: 'This is too narrow; while the word gap exists, the quality of conversational interaction (turn-taking, responsiveness) predicts outcomes better.',
+              3: 'This is not accurate; while the word gap exists, the quality of conversational interaction (turn-taking, responsiveness) predicts outcomes better.',
+            },
           },
           {
             id: 'psy-sec5-u7-L4-Q4',
@@ -946,6 +1098,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Conversational turns, not passive word exposure, predict brain development in language areas.',
+            distractorExplanations: {
+              0: 'Educational TV provides more total words is not correct here; conversational turns, not passive word exposure, predict brain development in.',
+              2: 'Both approaches are equally effective is not correct here; conversational turns, not passive word exposure, predict brain development in language.',
+              3: 'Neither approach matters before age 3 is not correct here; conversational turns, not passive word exposure, predict brain development in language.',
+            },
           },
           {
             id: 'psy-sec5-u7-L4-Q6',
@@ -979,6 +1136,9 @@ export const psySection5Part2: Unit[] = [
             question: 'All children who are late talkers at age 2 will have permanent language problems.',
             correctAnswer: false,
             explanation: 'Many late talkers catch up by age 3-4. Persistent delays may indicate DLD, but late talking alone is not a diagnosis.',
+            distractorExplanations: {
+              0: 'Many late talkers catch up by age 3-4. Persistent delays may indicate DLD, but late talking alone is not a diagnosis.',
+            },
           },
           {
             id: 'psy-sec5-u7-L5-Q2',
@@ -992,6 +1152,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'DLD affects about 7% of children, making it more common than many people realize.',
+            distractorExplanations: {
+              0: 'Less than 1% is not correct here; DLD affects about 7% of children, making it more common than many people realize.',
+              2: 'About 25% is not correct here; DLD affects about 7% of children, making it more common than many people realize.',
+              3: 'Over 50% is not correct here; DLD affects about 7% of children, making it more common than many people realize.',
+            },
           },
           {
             id: 'psy-sec5-u7-L5-T2',
@@ -1012,6 +1177,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Early evaluation is always wise. Even if many late talkers catch up, early intervention (when needed) takes advantage of peak brain plasticity.',
+            distractorExplanations: {
+              0: 'Wait until the child is 5 to see if he catches up is not correct here; early evaluation is always wise.',
+              2: 'This is too absolute; early evaluation is always wise. Even if many late talkers catch up, early intervention (when needed) takes advantage of.',
+              3: 'This is not accurate; early evaluation is always wise. Even if many late talkers catch up, early intervention (when needed) takes advantage of.',
+            },
           },
           {
             id: 'psy-sec5-u7-L5-Q4',
@@ -1042,6 +1212,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Research shows that bilingual children experience permanent language delays compared to monolingual children.',
             correctAnswer: false,
             explanation: 'Bilingual children reach milestones on time. Their total vocabulary across both languages is comparable to monolingual peers.',
+            distractorExplanations: {
+              0: 'Bilingual children reach milestones on time. Their total vocabulary across both languages is comparable to monolingual peers.',
+            },
           },
           {
             id: 'psy-sec5-u7-L5-Q6',
@@ -1055,6 +1228,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Bilingual children distribute vocabulary across languages. Counting only one language underestimates their total word knowledge.',
+            distractorExplanations: {
+              0: 'Bilingual children know fewer words overall is not correct here; bilingual children distribute vocabulary across languages.',
+              1: 'Each language only develops halfway is not correct here; bilingual children distribute vocabulary across languages.',
+              3: 'This is too absolute; bilingual children distribute vocabulary across languages.',
+            },
           },
         ],
       },
@@ -1094,6 +1272,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Consciousness refers to your subjective, inner experience of the world.',
             correctAnswer: true,
             explanation: 'Consciousness is the first-person experience of thoughts, sensations, and awareness.',
+            distractorExplanations: {
+              1: 'Consciousness is the first-person experience of thoughts, sensations, and awareness.',
+            },
           },
           {
             id: 'psy-sec5-u8-L1-Q2',
@@ -1121,6 +1302,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The hard problem asks why and how brain activity gives rise to the felt quality of experience.',
+            distractorExplanations: {
+              0: 'Figuring out which brain region controls movement is not correct here; the hard problem asks why and how brain activity gives rise to the felt.',
+              2: 'Measuring reaction time accurately is not correct here; the hard problem asks why and how brain activity gives rise to the felt quality of.',
+              3: 'Understanding how neurons transmit signals is not correct here; the hard problem asks why and how brain activity gives rise to the felt quality.',
+            },
           },
           {
             id: 'psy-sec5-u8-L1-Q4',
@@ -1134,6 +1320,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'David Chalmers introduced this term in 1995 to distinguish the problem of subjective experience from easier problems in neuroscience.',
+            distractorExplanations: {
+              0: 'Sigmund Freud is not correct here; david Chalmers introduced this term in 1995 to distinguish the problem of subjective experience from easier.',
+              1: 'B.F. Skinner is not correct here; david Chalmers introduced this term in 1995 to distinguish the problem of subjective experience from easier.',
+              3: 'William James is not correct here; david Chalmers introduced this term in 1995 to distinguish the problem of subjective experience from easier.',
+            },
           },
           {
             id: 'psy-sec5-u8-L1-T3',
@@ -1169,6 +1360,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Even in sleep, the brain monitors the environment and selectively responds to personally important stimuli.',
+            distractorExplanations: {
+              0: 'Sleep eliminates all consciousness is not correct here; even in sleep, the brain monitors the environment and selectively responds to personally.',
+              2: 'This is not accurate; even in sleep, the brain monitors the environment and selectively responds to personally important stimuli.',
+              3: 'The person was not really sleeping is not correct here; even in sleep, the brain monitors the environment and selectively responds to personally.',
+            },
           },
         ],
       },
@@ -1194,6 +1390,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Global workspace theory says consciousness occurs when information is broadcast widely across the brain.',
             correctAnswer: true,
             explanation: 'In this theory, conscious awareness arises when information enters a shared workspace accessible to multiple brain systems.',
+            distractorExplanations: {
+              1: 'In this theory, conscious awareness arises when information enters a shared workspace accessible to multiple brain systems.',
+            },
           },
           {
             id: 'psy-sec5-u8-L2-Q2',
@@ -1207,6 +1406,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The workspace is not a single location but a functional network that makes information available to many brain systems at once.',
+            distractorExplanations: {
+              0: 'A specific brain region called the consciousness center is not correct here; the workspace is not a single location but a functional network that.',
+              2: 'The hippocampus and its memory circuits is not correct here; the workspace is not a single location but a functional network that makes.',
+              3: 'The spinal cord\'s relay system is not correct here; the workspace is not a single location but a functional network that makes information.',
+            },
           },
           {
             id: 'psy-sec5-u8-L2-T2',
@@ -1261,6 +1465,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The moment of realization is a higher-order thought: becoming aware of your own state of inattention.',
+            distractorExplanations: {
+              0: 'IIT, because phi suddenly increased is not correct here; the moment of realization is a higher-order thought: becoming aware of your own state of.',
+              2: 'This reasoning is flawed; the moment of realization is a higher-order thought: becoming aware of your own state of inattention.',
+              3: 'This reasoning is flawed; the moment of realization is a higher-order thought: becoming aware of your own state of inattention.',
+            },
           },
           {
             id: 'psy-sec5-u8-L2-Q6',
@@ -1274,6 +1483,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'A thermostat\'s parts are not integrated in a complex way. IIT says consciousness requires high integration of differentiated information.',
+            distractorExplanations: {
+              1: 'It is too small to have any brain activity is not correct here; a thermostat\'s parts are not integrated in a complex way.',
+              2: 'It does not use electricity is not correct here; a thermostat\'s parts are not integrated in a complex way.',
+              3: 'It was not designed by a conscious being is not correct here; a thermostat\'s parts are not integrated in a complex way.',
+            },
           },
         ],
       },
@@ -1299,6 +1513,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Most of the brain\'s information processing happens outside of conscious awareness.',
             correctAnswer: true,
             explanation: 'Consciousness is a small fraction of total brain activity. The vast majority of processing occurs unconsciously.',
+            distractorExplanations: {
+              1: 'Consciousness is a small fraction of total brain activity. The vast majority of processing occurs unconsciously.',
+            },
           },
           {
             id: 'psy-sec5-u8-L3-Q2',
@@ -1312,6 +1529,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Balance is maintained by automatic unconscious systems. The other tasks require significant conscious effort.',
+            distractorExplanations: {
+              0: 'Solving a complex math problem step by step is not correct here; balance is maintained by automatic unconscious systems.',
+              1: 'Writing a persuasive essay is not correct here; balance is maintained by automatic unconscious systems.',
+              3: 'Deciding which college to attend is not correct here; balance is maintained by automatic unconscious systems.',
+            },
           },
           {
             id: 'psy-sec5-u8-L3-T2',
@@ -1332,6 +1554,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This is John Bargh\'s famous priming study. The age-related words unconsciously activated elderly stereotypes, which influenced behavior.',
+            distractorExplanations: {
+              0: 'Classical conditioning is not correct here; this is John Bargh\'s famous priming study.',
+              2: 'Conscious imitation of elderly people is not correct here; this is John Bargh\'s famous priming study.',
+              3: 'The placebo effect is not correct here; this is John Bargh\'s famous priming study.',
+            },
           },
           {
             id: 'psy-sec5-u8-L3-Q4',
@@ -1360,6 +1587,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Blindsight demonstrates that perception and consciousness can be separated. The brain sees, but the person does not experience seeing.',
+            distractorExplanations: {
+              0: 'This is too absolute; blindsight demonstrates that perception and consciousness can be separated.',
+              2: 'Blindsight patients are pretending to be blind is not correct here; blindsight demonstrates that perception and consciousness can be separated.',
+              3: 'Damage to the visual cortex improves vision is not correct here; blindsight demonstrates that perception and consciousness can be separated.',
+            },
           },
           {
             id: 'psy-sec5-u8-L3-Q6',
@@ -1401,6 +1633,9 @@ export const psySection5Part2: Unit[] = [
             question: 'In the invisible gorilla experiment, about 50% of participants missed the gorilla entirely.',
             correctAnswer: true,
             explanation: 'When focused on counting basketball passes, roughly half the viewers completely missed a gorilla walking across the screen.',
+            distractorExplanations: {
+              1: 'When focused on counting basketball passes, roughly half the viewers completely missed a gorilla walking across the screen.',
+            },
           },
           {
             id: 'psy-sec5-u8-L4-Q2',
@@ -1428,6 +1663,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Inattentional blindness is about missing something that\'s there. Change blindness is about missing a difference between two states.',
+            distractorExplanations: {
+              1: 'Change blindness only happens in laboratories is not correct here; inattentional blindness is about missing something that\'s there.',
+              2: 'Inattentional blindness is caused by eye damage is not correct here; inattentional blindness is about missing something that\'s there.',
+              3: 'They are identical phenomena with different names is not correct here; inattentional blindness is about missing something that\'s there.',
+            },
           },
           {
             id: 'psy-sec5-u8-L4-Q4',
@@ -1442,6 +1682,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Your attention was captured by your phone, making you effectively blind to your environment, including a familiar face.',
+            distractorExplanations: {
+              0: 'Change blindness due to visual scene disruption is not correct here; your attention was captured by your phone, making you effectively blind to.',
+              2: 'Blindsight from visual cortex damage is not correct here; your attention was captured by your phone, making you effectively blind to your.',
+              3: 'Prosopagnosia (face blindness) is not correct here; your attention was captured by your phone, making you effectively blind to your environment,.',
+            },
           },
           {
             id: 'psy-sec5-u8-L4-T3',
@@ -1481,6 +1726,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Even when you\'re not consciously attending to something, your brain monitors it and alerts you when something personally relevant appears.',
+            distractorExplanations: {
+              0: 'Unattended information is not processed at all is not correct here; even when you\'re not consciously attending to something, your brain monitors.',
+              2: 'This is not accurate; even when you\'re not consciously attending to something, your brain monitors it and alerts you when something personally.',
+              3: 'Background noise has no cognitive effects is not correct here; even when you\'re not consciously attending to something, your brain monitors it.',
+            },
           },
         ],
       },
@@ -1506,6 +1756,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Libet\'s experiments found that brain activity for a decision begins before the person is consciously aware of deciding.',
             correctAnswer: true,
             explanation: 'The readiness potential precedes conscious awareness by about 500 milliseconds.',
+            distractorExplanations: {
+              1: 'The readiness potential precedes conscious awareness by about 500 milliseconds.',
+            },
           },
           {
             id: 'psy-sec5-u8-L5-Q2',
@@ -1519,6 +1772,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The finding that brain activity precedes conscious awareness challenges the traditional view that conscious intention starts an action.',
+            distractorExplanations: {
+              0: 'The idea that the brain uses electricity is not correct here; the finding that brain activity precedes conscious awareness challenges the.',
+              2: 'The idea that neurons communicate chemically is not correct here; the finding that brain activity precedes conscious awareness challenges the.',
+              3: 'The idea that sleep restores the brain is not correct here; the finding that brain activity precedes conscious awareness challenges the.',
+            },
           },
           {
             id: 'psy-sec5-u8-L5-T2',
@@ -1547,6 +1805,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The urge arose unconsciously, but your conscious awareness allowed you to veto the action. This is "free won\'t" in everyday life.',
+            distractorExplanations: {
+              1: 'Inattentional blindness: missing the meeting content is not correct here; the urge arose unconsciously, but your conscious awareness allowed you.',
+              2: 'Priming: your phone unconsciously activated a schema is not correct here; the urge arose unconsciously, but your conscious awareness allowed you.',
+              3: 'This is not accurate; the urge arose unconsciously, but your conscious awareness allowed you to veto the action.',
+            },
           },
           {
             id: 'psy-sec5-u8-L5-T3',
@@ -1567,6 +1830,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The left hemisphere acts as an "interpreter," generating plausible explanations even when it has no access to the real cause.',
+            distractorExplanations: {
+              0: 'This is too absolute; the left hemisphere acts as an "interpreter," generating plausible explanations even when it has no access to the real cause.',
+              2: 'Split-brain surgery eliminates consciousness is not correct here; the left hemisphere acts as an "interpreter," generating plausible explanations.',
+              3: 'Confabulation only happens in people with brain damage is not correct here; the left hemisphere acts as an "interpreter," generating plausible.',
+            },
           },
           {
             id: 'psy-sec5-u8-L5-Q6',
@@ -1622,6 +1890,9 @@ export const psySection5Part2: Unit[] = [
             question: 'A full sleep cycle takes roughly 90 minutes.',
             correctAnswer: true,
             explanation: 'Each cycle through N1, N2, N3, and REM lasts about 90 minutes, repeating 4-6 times per night.',
+            distractorExplanations: {
+              1: 'Each cycle through N1, N2, N3, and REM lasts about 90 minutes, repeating 4-6 times per night.',
+            },
           },
           {
             id: 'psy-sec5-u9-L1-Q2',
@@ -1673,6 +1944,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Deep slow-wave sleep (N3) is when the body releases growth hormone and performs physical restoration.',
+            distractorExplanations: {
+              0: 'N3 is when dreams make you tired is not correct here; deep slow-wave sleep (N3) is when the body releases growth hormone and performs physical.',
+              2: 'This is too absolute; deep slow-wave sleep (N3) is when the body releases growth hormone and performs physical restoration.',
+              3: 'N3 is responsible for all memory formation is not correct here; deep slow-wave sleep (N3) is when the body releases growth hormone and performs.',
+            },
           },
           {
             id: 'psy-sec5-u9-L1-T3',
@@ -1694,6 +1970,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'REM sleep is concentrated later in the night. Cutting sleep short primarily cuts REM, impairing emotional processing.',
+            distractorExplanations: {
+              0: 'She got too much deep sleep is not correct here; REM sleep is concentrated later in the night.',
+              2: 'Sleep deprivation only affects the body, not emotions is not correct here; REM sleep is concentrated later in the night.',
+              3: 'This is too absolute; REM sleep is concentrated later in the night. Cutting sleep short primarily cuts REM, impairing emotional processing.',
+            },
           },
           {
             id: 'psy-sec5-u9-L1-Q6',
@@ -1727,6 +2008,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Freud\'s dream theory is strongly supported by modern scientific evidence.',
             correctAnswer: false,
             explanation: 'Freud\'s theory was influential but lacks empirical support. Modern neuroscience favors biological and cognitive explanations.',
+            distractorExplanations: {
+              0: 'Freud\'s theory was influential but lacks empirical support. Modern neuroscience favors biological and cognitive explanations.',
+            },
           },
           {
             id: 'psy-sec5-u9-L2-Q2',
@@ -1754,6 +2038,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Random brainstem activation creates disjointed input, and the cortex does its best to create a coherent narrative from chaotic signals.',
+            distractorExplanations: {
+              0: 'They are coded messages from the unconscious is not correct here; random brainstem activation creates disjointed input, and the cortex does its.',
+              2: 'Dreams are memories playing back in reverse is not correct here; random brainstem activation creates disjointed input, and the cortex does its.',
+              3: 'The visual cortex shuts down during REM is not correct here; random brainstem activation creates disjointed input, and the cortex does its best.',
+            },
           },
           {
             id: 'psy-sec5-u9-L2-Q4',
@@ -1794,6 +2083,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Dreaming about studied material is consistent with the memory consolidation theory: sleep replays and strengthens learned information.',
+            distractorExplanations: {
+              0: 'Freud\'s wish fulfillment theory is not correct here; dreaming about studied material is consistent with the memory consolidation theory: sleep.',
+              1: 'Activation-synthesis hypothesis is not correct here; dreaming about studied material is consistent with the memory consolidation theory: sleep.',
+              3: 'Threat simulation theory is not correct here; dreaming about studied material is consistent with the memory consolidation theory: sleep replays.',
+            },
           },
           {
             id: 'psy-sec5-u9-L2-Q6',
@@ -1807,6 +2101,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Threat simulation theory predicts that dreams disproportionately feature dangerous scenarios as evolutionary rehearsal.',
+            distractorExplanations: {
+              0: 'Dreams are mostly pleasant and wish-fulfilling is not correct here; threat simulation theory predicts that dreams disproportionately feature.',
+              2: 'This is too absolute; threat simulation theory predicts that dreams disproportionately feature dangerous scenarios as evolutionary rehearsal.',
+              3: 'Dreams only occur during N3 deep sleep is not correct here; threat simulation theory predicts that dreams disproportionately feature dangerous.',
+            },
           },
         ],
       },
@@ -1832,6 +2131,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Meditation decreases activity in the default mode network, which is responsible for mind-wandering.',
             correctAnswer: true,
             explanation: 'The default mode network is active during mind-wandering and self-referential thought. Meditation reduces its activity.',
+            distractorExplanations: {
+              1: 'The default mode network is active during mind-wandering and self-referential thought. Meditation reduces its activity.',
+            },
           },
           {
             id: 'psy-sec5-u9-L3-Q2',
@@ -1845,6 +2147,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The prefrontal cortex, which controls attention and executive function, becomes more active during focused meditation.',
+            distractorExplanations: {
+              0: 'The amygdala (fear center) is not correct here; the prefrontal cortex, which controls attention and executive function, becomes more active.',
+              2: 'The cerebellum (motor coordination) is not correct here; the prefrontal cortex, which controls attention and executive function, becomes more.',
+              3: 'The hippocampus (memory formation) is not correct here; the prefrontal cortex, which controls attention and executive function, becomes more.',
+            },
           },
           {
             id: 'psy-sec5-u9-L3-T2',
@@ -1895,6 +2202,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Concentrative meditation narrows attention to one object. Mindfulness broadens awareness to observe all experiences without judgment.',
+            distractorExplanations: {
+              1: 'Mindfulness requires a mantra. Concentrative does not. is not correct here; concentrative meditation narrows attention to one object.',
+              2: 'Concentrative is Eastern. Mindfulness is Western. is not correct here; concentrative meditation narrows attention to one object.',
+              3: 'They are identical practices with different names. is not correct here; concentrative meditation narrows attention to one object.',
+            },
           },
           {
             id: 'psy-sec5-u9-L3-Q6',
@@ -1909,6 +2221,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Open monitoring of thoughts without judgment or fixation is the hallmark of mindfulness meditation.',
+            distractorExplanations: {
+              0: 'Concentrative meditation focused on a mantra is not correct here; open monitoring of thoughts without judgment or fixation is the hallmark of.',
+              2: 'Hypnosis with guided suggestions is not correct here; open monitoring of thoughts without judgment or fixation is the hallmark of mindfulness.',
+              3: 'Lucid dreaming practice is not correct here; open monitoring of thoughts without judgment or fixation is the hallmark of mindfulness meditation.',
+            },
           },
         ],
       },
@@ -1934,6 +2251,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Hypnosis produces measurable changes in brain activity.',
             correctAnswer: true,
             explanation: 'Brain imaging confirms that hypnosis alters neural activity patterns, particularly in attention and conflict-monitoring regions.',
+            distractorExplanations: {
+              1: 'Brain imaging confirms that hypnosis alters neural activity patterns, particularly in attention and conflict-monitoring regions.',
+            },
           },
           {
             id: 'psy-sec5-u9-L4-Q2',
@@ -1947,6 +2267,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Hypnosis involves focused attention and increased responsiveness to suggestion. The person remains aware and cannot be forced to act against their will.',
+            distractorExplanations: {
+              0: 'A form of deep sleep is not correct here; hypnosis involves focused attention and increased responsiveness to suggestion.',
+              1: 'Complete mind control by the hypnotist is not correct here; hypnosis involves focused attention and increased responsiveness to suggestion.',
+              3: 'An unconscious blackout period is not correct here; hypnosis involves focused attention and increased responsiveness to suggestion.',
+            },
           },
           {
             id: 'psy-sec5-u9-L4-T2',
@@ -1982,6 +2307,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Because hypnosis increases suggestibility, people may "remember" events that were actually suggested by the hypnotist, creating false memories.',
+            distractorExplanations: {
+              0: 'Hypnotized people cannot speak is not correct here; because hypnosis increases suggestibility, people may "remember" events that were actually.',
+              2: 'Hypnosis erases all memories permanently is not correct here; because hypnosis increases suggestibility, people may "remember" events that were.',
+              3: 'This is too narrow; because hypnosis increases suggestibility, people may "remember" events that were actually suggested by the hypnotist,.',
+            },
           },
           {
             id: 'psy-sec5-u9-L4-T3',
@@ -2022,6 +2352,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The hidden observer phenomenon supports dissociation theory: one stream of consciousness follows the suggestion while another monitors reality.',
+            distractorExplanations: {
+              0: 'Social-cognitive theory: the patient is role-playing is not correct here; the hidden observer phenomenon supports dissociation theory: one stream.',
+              2: 'The patient is faking hypnosis entirely is not correct here; the hidden observer phenomenon supports dissociation theory: one stream of.',
+              3: 'Hypnosis eliminates all pain processing in the brain is not correct here; the hidden observer phenomenon supports dissociation theory: one stream.',
+            },
           },
         ],
       },
@@ -2047,6 +2382,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Psychoactive drugs alter consciousness by changing neurotransmitter activity in the brain.',
             correctAnswer: true,
             explanation: 'All psychoactive substances work by modifying how neurotransmitters are produced, released, received, or broken down.',
+            distractorExplanations: {
+              1: 'All psychoactive substances work by modifying how neurotransmitters are produced, released, received, or broken down.',
+            },
           },
           {
             id: 'psy-sec5-u9-L5-Q2',
@@ -2090,6 +2428,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Caffeine is an adenosine antagonist. It blocks the receptors that normally accumulate sleepiness signals throughout the day.',
+            distractorExplanations: {
+              0: 'It increases dopamine production directly is not correct here; caffeine is an adenosine antagonist.',
+              2: 'It stimulates the amygdala\'s fear response is not correct here; caffeine is an adenosine antagonist.',
+              3: 'It replaces serotonin in the brain is not correct here; caffeine is an adenosine antagonist.',
+            },
           },
           {
             id: 'psy-sec5-u9-L5-T3',
@@ -2130,6 +2473,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Needing higher doses is tolerance. Experiencing unpleasant symptoms when stopping is withdrawal from physical dependence. Both are predictable neurological adaptations.',
+            distractorExplanations: {
+              0: 'She is imagining the symptoms is not correct here; needing higher doses is tolerance.',
+              2: 'The medication expired and stopped working is not correct here; needing higher doses is tolerance.',
+              3: 'Opioids do not cause physical dependence is not correct here; needing higher doses is tolerance.',
+            },
           },
         ],
       },
@@ -2175,6 +2523,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Algorithms are step-by-step procedures that guarantee a solution. Heuristics are mental shortcuts that are faster but can lead to errors.',
+            distractorExplanations: {
+              0: 'This is not accurate; algorithms are step-by-step procedures that guarantee a solution.',
+              2: 'Both terms mean the same thing. is not correct here; algorithms are step-by-step procedures that guarantee a solution.',
+              3: 'This is not accurate; algorithms are step-by-step procedures that guarantee a solution.',
+            },
           },
           {
             id: 'psy-sec5-u10-L1-Q2',
@@ -2197,6 +2550,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Gardner proposed that interpersonal intelligence (understanding others) is a distinct form of intelligence separate from traditional IQ measures.',
+            distractorExplanations: {
+              0: 'This reasoning is flawed; gardner proposed that interpersonal intelligence (understanding others) is a distinct form of intelligence separate.',
+              2: 'This is not accurate; gardner proposed that interpersonal intelligence (understanding others) is a distinct form of intelligence separate from.',
+              3: 'The Flynn effect on rising test scores is not correct here; gardner proposed that interpersonal intelligence (understanding others) is a distinct.',
+            },
           },
           {
             id: 'psy-sec5-u10-L1-T2',
@@ -2235,6 +2593,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The Flynn effect is the well-documented rise in average IQ scores across generations, likely due to improved nutrition, education, and environmental complexity.',
+            distractorExplanations: {
+              0: 'IQ scores have been declining worldwide is not correct here; the Flynn effect is the well-documented rise in average IQ scores across.',
+              2: 'Intelligence is determined entirely by genetics is not correct here; the Flynn effect is the well-documented rise in average IQ scores across.',
+              3: 'IQ tests are no longer used in psychology is not correct here; the Flynn effect is the well-documented rise in average IQ scores across.',
+            },
           },
           {
             id: 'psy-sec5-u10-L1-Q6',
@@ -2281,6 +2644,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Linguistic labels create categorical boundaries that speed up perceptual discrimination between similar stimuli.',
+            distractorExplanations: {
+              0: 'Russian speakers have better eyesight is not correct here; linguistic labels create categorical boundaries that speed up perceptual.',
+              2: 'English speakers are colorblind to blue shades is not correct here; linguistic labels create categorical boundaries that speed up perceptual.',
+              3: 'Russian has more vowels, which improves vision is not correct here; linguistic labels create categorical boundaries that speed up perceptual.',
+            },
           },
           {
             id: 'psy-sec5-u10-L2-Q2',
@@ -2288,6 +2656,9 @@ export const psySection5Part2: Unit[] = [
             question: 'Bilingualism causes permanent language delays in children.',
             correctAnswer: false,
             explanation: 'Research consistently shows bilingual children reach milestones on time. Total vocabulary across both languages matches monolingual peers.',
+            distractorExplanations: {
+              0: 'Research consistently shows bilingual children reach milestones on time. Total vocabulary across both languages matches monolingual peers.',
+            },
           },
           {
             id: 'psy-sec5-u10-L2-Q3',
@@ -2302,6 +2673,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Overgeneralization shows children apply grammar rules creatively, not just imitate. This supports Chomsky\'s view of innate language capacity.',
+            distractorExplanations: {
+              0: 'Telegraphic speech is not correct here; overgeneralization shows children apply grammar rules creatively, not just imitate.',
+              2: 'A sign of developmental language disorder is not correct here; overgeneralization shows children apply grammar rules creatively, not just imitate.',
+              3: 'This is not accurate; overgeneralization shows children apply grammar rules creatively, not just imitate.',
+            },
           },
           {
             id: 'psy-sec5-u10-L2-T2',
@@ -2398,6 +2774,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The readiness potential precedes conscious awareness by about 500 ms, challenging the idea that consciousness initiates actions.',
+            distractorExplanations: {
+              0: 'The person consciously decides to move is not correct here; the readiness potential precedes conscious awareness by about 500 ms, challenging the.',
+              2: 'The finger actually moves is not correct here; the readiness potential precedes conscious awareness by about 500 ms, challenging the idea that.',
+              3: 'The person reports their decision is not correct here; the readiness potential precedes conscious awareness by about 500 ms, challenging the idea.',
+            },
           },
           {
             id: 'psy-sec5-u10-L3-Q3',
@@ -2412,6 +2793,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The cocktail party effect shows that the brain monitors unattended information and flags personally important stimuli like your name.',
+            distractorExplanations: {
+              0: 'Change blindness is not correct here; the cocktail party effect shows that the brain monitors unattended information and flags personally.',
+              1: 'Inattentional blindness is not correct here; the cocktail party effect shows that the brain monitors unattended information and flags personally.',
+              3: 'Blindsight is not correct here; the cocktail party effect shows that the brain monitors unattended information and flags personally important.',
+            },
           },
           {
             id: 'psy-sec5-u10-L3-T2',
@@ -2455,6 +2841,11 @@ export const psySection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Because hypnosis increases suggestibility, people may "remember" events that were actually suggested to them, producing false memories.',
+            distractorExplanations: {
+              0: 'Hypnosis erases memories permanently is not correct here; because hypnosis increases suggestibility, people may "remember" events that were.',
+              2: 'The hippocampus shuts down during hypnosis is not correct here; because hypnosis increases suggestibility, people may "remember" events that were.',
+              3: 'Hypnotized people cannot speak is not correct here; because hypnosis increases suggestibility, people may "remember" events that were actually.',
+            },
           },
         ],
       },

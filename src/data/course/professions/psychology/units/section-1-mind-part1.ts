@@ -34,6 +34,9 @@ export const psySection1Part1: Unit[] = [
             question: 'Psychology is the scientific study of the mind and behavior.',
             correctAnswer: true,
             explanation: 'Psychology studies both what happens in your mind (thoughts, feelings) and what you do (behavior).',
+            distractorExplanations: {
+              1: 'Psychology is indeed a science that studies mind and behavior, so saying this is false would be incorrect.',
+            },
           },
           {
             id: 'psy-sec1-u1-L1-Q2',
@@ -47,6 +50,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Psychology relies on the scientific method: forming hypotheses, collecting data, and testing ideas.',
+            distractorExplanations: {
+              0: 'Being invented by a famous person does not make something scientific; the method matters, not the inventor.',
+              1: 'Many professionals besides doctors use psychology, and who practices it does not define it as a science.',
+              3: 'Brain scanners are just one tool; psychology was a science long before scanners existed.',
+            },
           },
           {
             id: 'psy-sec1-u1-L1-T2',
@@ -66,6 +74,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Common-sense sayings often give opposite advice. Psychology tests these claims with evidence to find the truth.',
+            distractorExplanations: {
+              0: 'Common sense is not always wrong; the problem is it gives contradictory advice on the same topic.',
+              2: 'Anyone can observe and reason about behavior; science provides systematic methods, not exclusive access.',
+              3: 'Human behavior follows patterns and is influenced by predictable factors, so it is not completely random.',
+            },
           },
           {
             id: 'psy-sec1-u1-L1-Q4',
@@ -111,6 +124,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'A psychologist would gather data first (surveys, experiments) before drawing conclusions or making changes.',
+            distractorExplanations: {
+              0: 'Firing employees without understanding the cause is reactive and ignores the scientific approach of investigating first.',
+              1: 'Horoscopes are not evidence-based and have no scientific support for predicting workplace behavior.',
+              2: 'Assuming laziness is a premature conclusion that skips the data-collection step psychologists rely on.',
+            },
           },
         ],
       },
@@ -136,6 +154,9 @@ export const psySection1Part1: Unit[] = [
             question: 'Psychology only focuses on treating mental illness.',
             correctAnswer: false,
             explanation: 'Mental health is just one branch. Psychology also covers learning, memory, decision-making, social behavior, child development, and much more.',
+            distractorExplanations: {
+              0: 'Psychology covers far more than mental illness, including memory, learning, social influence, and development.',
+            },
           },
           {
             id: 'psy-sec1-u1-L2-Q2',
@@ -174,6 +195,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Developmental psychology studies how people grow and change across the lifespan, including how children develop social skills.',
+            distractorExplanations: {
+              1: 'Treating depression with medication falls under clinical psychology and psychiatry, not developmental psychology.',
+              2: 'Advertising and persuasion belong to social or consumer psychology, not developmental psychology.',
+              3: 'Courtroom fairness is the domain of forensic psychology, not developmental psychology.',
+            },
           },
           {
             id: 'psy-sec1-u1-L2-Q4',
@@ -187,6 +213,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Social psychology examines how people influence each other, including how emotional stories affect giving behavior.',
+            distractorExplanations: {
+              0: 'Developmental psychology focuses on how people change across the lifespan, not how stories influence donations.',
+              1: 'Clinical psychology deals with mental health treatment, not how framing affects charitable giving.',
+              2: 'Neuroscience studies brain structures and processes, not the social dynamics of persuasion and generosity.',
+            },
           },
           {
             id: 'psy-sec1-u1-L2-Q5',
@@ -223,6 +254,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'This involves studying decision-making and attention, which are cognitive psychology topics applied to user experience design.',
+            distractorExplanations: {
+              0: 'Clinical psychology focuses on diagnosing and treating mental health disorders, not user interface design.',
+              2: 'Developmental psychology studies growth across the lifespan, not how button placement affects shopping decisions.',
+              3: 'Forensic psychology applies to legal and criminal contexts, not e-commerce user experience.',
+            },
           },
         ],
       },
@@ -276,6 +312,9 @@ export const psySection1Part1: Unit[] = [
             question: 'If two things increase at the same time, one must be causing the other.',
             correctAnswer: false,
             explanation: 'Correlation (things happening together) does not prove causation (one causing the other). A third factor might explain both.',
+            distractorExplanations: {
+              0: 'Two things increasing together only shows correlation; a hidden third variable could be driving both.',
+            },
           },
           {
             id: 'psy-sec1-u1-L3-Q4',
@@ -290,6 +329,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The study shows a correlation, not causation. Families who provide breakfast may also provide other advantages that boost grades.',
+            distractorExplanations: {
+              0: 'The headline wrongly assumes causation from a correlation; the study only shows the two things happen together.',
+              1: 'Studies on children can be highly reliable when well-designed; the age of participants does not make research invalid.',
+              3: 'The study did find a connection (correlation) between breakfast and grades; the issue is whether it is causal.',
+            },
           },
           {
             id: 'psy-sec1-u1-L3-Q5',
@@ -303,6 +347,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Replication checks whether a result is consistent and trustworthy, not just a one-time coincidence.',
+            distractorExplanations: {
+              1: 'Replication is about verifying results, not about increasing publication speed.',
+              2: 'There is no law requiring studies to be repeated; replication is a scientific best practice, not a legal requirement.',
+              3: 'Replication is about scientific rigor and reliability, not personal distrust between researchers.',
+            },
           },
           {
             id: 'psy-sec1-u1-L3-T3',
@@ -341,6 +390,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Only experiments can show cause and effect because they control all other variables while changing just one.',
+            distractorExplanations: {
+              1: 'Observation can reveal patterns but cannot control variables, so it cannot prove causation.',
+              2: 'Surveys collect self-reported data and show correlations, but they do not manipulate variables to prove cause and effect.',
+              3: 'Expert interviews provide opinions and knowledge but do not test causal relationships through controlled conditions.',
+            },
           },
         ],
       },
@@ -484,6 +538,9 @@ export const psySection1Part1: Unit[] = [
             question: 'Psychology has been a separate science for thousands of years.',
             correctAnswer: false,
             explanation: 'Psychology only became a formal science in 1879 when Wundt opened the first psychology laboratory.',
+            distractorExplanations: {
+              0: 'Psychology as a separate science is less than 150 years old; before 1879, these questions belonged to philosophy.',
+            },
           },
           {
             id: 'psy-sec1-u2-L1-Q2',
@@ -497,6 +554,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Wilhelm Wundt established the first psychology lab in Leipzig, Germany in 1879, marking psychology\'s birth as a science.',
+            distractorExplanations: {
+              0: 'Freud developed psychoanalysis but did not open the first experimental psychology laboratory.',
+              1: 'William James pioneered functionalism in the US but did not establish the first formal psychology lab.',
+              2: 'Pavlov studied classical conditioning in dogs but was a physiologist, not the founder of the first psychology lab.',
+            },
           },
           {
             id: 'psy-sec1-u2-L1-T2',
@@ -524,6 +586,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Philosophy explored questions about the mind for centuries before psychology emerged as a separate, experimental science.',
+            distractorExplanations: {
+              0: 'Psychology labs did not exist before 1879; the first one was opened by Wundt that year.',
+              2: 'Brain surgery existed historically but did not systematically study how the mind works in a scientific way.',
+              3: 'Computer science did not exist until the 20th century, long after philosophy had been studying the mind.',
+            },
           },
           {
             id: 'psy-sec1-u2-L1-T3',
@@ -560,6 +627,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Functionalism focused on the purpose and function of mental processes, especially how they help us adapt and survive.',
+            distractorExplanations: {
+              0: 'Identifying the smallest units of thought was the goal of structuralism, not functionalism.',
+              1: 'Dream interpretation was central to Freud\'s psychoanalysis, not functionalism.',
+              3: 'Processing speed is a modern cognitive psychology question, not the core concern of functionalism.',
+            },
           },
         ],
       },
@@ -585,6 +657,9 @@ export const psySection1Part1: Unit[] = [
             question: 'Freud believed that most of our mental life is hidden from conscious awareness.',
             correctAnswer: true,
             explanation: 'Freud\'s iceberg model proposed that unconscious thoughts, desires, and memories make up the largest part of the mind.',
+            distractorExplanations: {
+              1: 'Freud\'s core theory was precisely that most mental activity is unconscious, so denying this would be incorrect.',
+            },
           },
           {
             id: 'psy-sec1-u2-L2-Q2',
@@ -598,6 +673,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The hidden portion of the iceberg represents the unconscious, which Freud believed holds the majority of our thoughts, desires, and memories.',
+            distractorExplanations: {
+              0: 'The conscious mind is the small visible tip of the iceberg in Freud\'s model, not the large hidden part.',
+              2: 'The brain stem is a physical brain structure, not a concept in Freud\'s psychological iceberg model.',
+              3: 'The five senses are not part of Freud\'s iceberg metaphor, which describes levels of mental awareness.',
+            },
           },
           {
             id: 'psy-sec1-u2-L2-T2',
@@ -625,6 +705,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'While many of Freud\'s specific theories have been challenged, his core idea that unconscious processes shape behavior is widely accepted.',
+            distractorExplanations: {
+              0: 'Many of Freud\'s specific theories have been disproven or lack scientific support, so not all were correct.',
+              1: 'Brain scanning technology was developed by physicists and engineers in the late 20th century, not by Freud.',
+              2: 'Neuron structure was discovered by Santiago Ramon y Cajal, not Freud.',
+            },
           },
           {
             id: 'psy-sec1-u2-L2-T3',
@@ -645,6 +730,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Freud\'s legacy is nuanced. Many details were wrong, but the concept that unconscious processes influence us remains a cornerstone of psychology.',
+            distractorExplanations: {
+              0: 'Freud\'s idea that unconscious processes influence behavior is still widely accepted and was a major contribution.',
+              1: 'Many of Freud\'s specific claims about dreams, childhood fixations, and personality lack scientific support.',
+              3: 'Freud studied far more than dreams, including unconscious motivation, personality structure, and defense mechanisms.',
+            },
           },
           {
             id: 'psy-sec1-u2-L2-Q6',
@@ -658,6 +748,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Freud often based theories on individual case studies rather than testable experiments, making many claims hard to verify or disprove.',
+            distractorExplanations: {
+              0: 'The criticism is about testability, not quantity; publishing many studies would actually be a strength.',
+              2: 'Freud rarely used controlled experiments; his reliance on subjective case studies is the actual criticism.',
+              3: 'Brain imaging did not exist during Freud\'s time, so he could not have used it at all.',
+            },
           },
         ],
       },
@@ -683,6 +778,9 @@ export const psySection1Part1: Unit[] = [
             question: 'Behaviorists believed psychology should focus on observable actions, not inner thoughts.',
             correctAnswer: true,
             explanation: 'Behaviorism rejected the study of unobservable mental processes and focused only on measurable behavior.',
+            distractorExplanations: {
+              1: 'Behaviorists explicitly rejected studying inner thoughts and focused solely on observable, measurable behavior.',
+            },
           },
           {
             id: 'psy-sec1-u2-L3-Q2',
@@ -696,6 +794,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Behaviorists like Skinner believed that behavior is shaped by its consequences: rewards strengthen behaviors, and punishments weaken them.',
+            distractorExplanations: {
+              1: 'Brain scans are a modern research tool, not a mechanism of learning according to any psychological theory.',
+              2: 'Unconscious desires are a Freudian concept that behaviorists specifically rejected as unscientific.',
+              3: 'Dream analysis is a psychoanalytic technique; behaviorists dismissed it as unobservable and untestable.',
+            },
           },
           {
             id: 'psy-sec1-u2-L3-T2',
@@ -715,6 +818,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'Humanists believed behaviorism reduced people to stimulus-response machines and missed what makes us uniquely human: choice, creativity, and growth.',
+            distractorExplanations: {
+              1: 'Behaviorism actually rejected Freud\'s ideas about the unconscious, so relying on Freud was not the issue.',
+              2: 'The criticism was about ignoring human agency and potential, not about using too many surveys.',
+              3: 'Brain scans did not exist during the behaviorist era, so they could not have been overused.',
+            },
           },
           {
             id: 'psy-sec1-u2-L3-Q4',
@@ -775,6 +883,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Studying memory, recall, and mental processing through experiments is the hallmark of cognitive psychology.',
+            distractorExplanations: {
+              0: 'Behaviorism avoids studying internal mental processes like memory and only focuses on observable actions.',
+              1: 'Psychoanalysis explores unconscious conflicts through talk therapy, not controlled memory experiments.',
+              2: 'Humanism focuses on personal growth and self-actualization, not experimental studies of memory recall.',
+            },
           },
         ],
       },
@@ -800,6 +913,9 @@ export const psySection1Part1: Unit[] = [
             question: 'fMRI technology allows researchers to see which parts of the brain are active during a task.',
             correctAnswer: true,
             explanation: 'fMRI tracks blood flow in the brain. More active areas receive more blood, which the scanner detects.',
+            distractorExplanations: {
+              1: 'fMRI does indeed track brain activity by measuring blood flow changes, making this statement true.',
+            },
           },
           {
             id: 'psy-sec1-u2-L4-Q2',
@@ -813,6 +929,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Functional magnetic resonance imaging (fMRI) uses magnetic fields to detect brain activity by measuring blood flow changes.',
+            distractorExplanations: {
+              0: 'This is a made-up term; fMRI stands for functional magnetic resonance imaging.',
+              2: 'This is a made-up term; the "f" stands for "functional," not "frontal."',
+              3: 'This is a made-up term; fMRI measures brain blood flow, not mental response speed.',
+            },
           },
           {
             id: 'psy-sec1-u2-L4-T2',
@@ -832,6 +953,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Modern psychology is integrative. Researchers draw from cognitive, biological, social, and other perspectives rather than committing to just one.',
+            distractorExplanations: {
+              0: 'Earlier schools each used one perspective; modern psychology\'s strength is combining multiple approaches.',
+              2: 'Modern psychology actively studies the brain using imaging technology like fMRI and EEG.',
+              3: 'Structuralism was abandoned over a century ago; modern psychology integrates many newer approaches.',
+            },
           },
           {
             id: 'psy-sec1-u2-L4-Q4',
@@ -882,6 +1008,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'This researcher combines brain imaging (biological), thought surveys (cognitive), and heart rate (physiological), showing the integrative approach of modern psychology.',
+            distractorExplanations: {
+              0: 'Brain scanning is biological, but the thought surveys and heart rate tracking add cognitive and physiological dimensions.',
+              1: 'Thought surveys are cognitive, but the brain scans and heart rate monitoring go beyond cognition alone.',
+              3: 'Behaviorism avoids studying internal thoughts and brain activity, which are central to this research.',
+            },
           },
         ],
       },
@@ -1025,6 +1156,9 @@ export const psySection1Part1: Unit[] = [
             question: 'The brain uses about 20% of the body\'s energy.',
             correctAnswer: true,
             explanation: 'Despite being only 2% of body weight, the brain consumes about 20% of the body\'s energy to power its billions of neurons.',
+            distractorExplanations: {
+              1: 'The brain does consume roughly 20% of the body\'s energy, making this a well-established scientific fact.',
+            },
           },
           {
             id: 'psy-sec1-u3-L1-Q2',
@@ -1038,6 +1172,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The human brain contains roughly 86 billion neurons, each connected to thousands of others.',
+            distractorExplanations: {
+              0: '86 million is a thousand times too low; the brain has roughly 86 billion neurons.',
+              1: '86 thousand is millions of times too low to account for the brain\'s complexity.',
+              3: '86 trillion is a thousand times too high; the brain has about 86 billion neurons.',
+            },
           },
           {
             id: 'psy-sec1-u3-L1-T2',
@@ -1052,6 +1191,9 @@ export const psySection1Part1: Unit[] = [
             question: 'Humans only use 10% of their brain.',
             correctAnswer: false,
             explanation: 'Brain imaging shows all brain regions are active. The 10% myth has no scientific support.',
+            distractorExplanations: {
+              0: 'Brain imaging has thoroughly debunked the 10% myth; all brain regions are active at various times.',
+            },
           },
           {
             id: 'psy-sec1-u3-L1-Q4',
@@ -1065,6 +1207,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'fMRI and other imaging tools show that virtually all brain regions are active during different tasks. Damage to any area causes deficits.',
+            distractorExplanations: {
+              0: 'Subjective feelings of intelligence are not scientific evidence for brain usage levels.',
+              1: 'Brain size is unrelated to the percentage of the brain that is active during tasks.',
+              2: 'This claim is false; both humans and animals use all of their brain regions.',
+            },
           },
           {
             id: 'psy-sec1-u3-L1-T3',
@@ -1104,6 +1251,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The 10% myth has been thoroughly debunked. Brain scans show every region serves a purpose and is active at various times.',
+            distractorExplanations: {
+              0: 'Scientists are not trying to "unlock" unused brain regions because all regions are already active.',
+              1: 'The figure is not 5% either; the entire premise of unused brain capacity is a myth.',
+              2: 'Intelligence does not depend on using a larger percentage of the brain; everyone uses all of it.',
+            },
           },
         ],
       },
@@ -1129,6 +1281,9 @@ export const psySection1Part1: Unit[] = [
             question: 'The brain stem controls automatic functions like breathing and heart rate.',
             correctAnswer: true,
             explanation: 'The brain stem manages vital functions that happen without conscious effort.',
+            distractorExplanations: {
+              1: 'The brain stem does control breathing, heart rate, and other automatic survival functions.',
+            },
           },
           {
             id: 'psy-sec1-u3-L2-Q2',
@@ -1142,6 +1297,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The brain stem sits at the base of the brain and connects upward to the cerebrum and downward to the spinal cord.',
+            distractorExplanations: {
+              0: 'The top of the brain is occupied by the cerebrum; the brain stem is at the bottom.',
+              2: 'The area behind the eyes is part of the frontal lobes, not the brain stem.',
+              3: 'The brain stem is a separate structure below the cerebrum, not contained within it.',
+            },
           },
           {
             id: 'psy-sec1-u3-L2-T2',
@@ -1192,6 +1352,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Difficulty with balance and coordination points to cerebellum damage. Breathing (brain stem) and thinking (cerebrum) are still intact.',
+            distractorExplanations: {
+              0: 'Brain stem damage would disrupt breathing and heart rate, which are still functioning normally here.',
+              1: 'Cerebrum damage would impair thinking, personality, or senses, but the patient thinks clearly.',
+              3: 'Spinal cord damage would cause paralysis or loss of sensation, not just coordination problems.',
+            },
           },
           {
             id: 'psy-sec1-u3-L2-Q6',
@@ -1205,6 +1370,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The brain stem controls breathing, heart rate, and other functions essential for staying alive. Cerebellum damage causes movement problems but is not immediately life-threatening.',
+            distractorExplanations: {
+              0: 'Size does not determine danger; the brain stem is actually smaller but controls vital survival functions.',
+              1: 'The cerebellum is important for movement and coordination, but its damage is less immediately life-threatening.',
+              2: 'Thinking is handled by the cerebrum, not the brain stem; the brain stem manages automatic survival functions.',
+            },
           },
         ],
       },
@@ -1230,6 +1400,9 @@ export const psySection1Part1: Unit[] = [
             question: 'The cerebral cortex is the wrinkled outer surface of the cerebrum.',
             correctAnswer: true,
             explanation: 'The cerebral cortex is the thin, wrinkled outer layer of the cerebrum where most higher-level thinking happens.',
+            distractorExplanations: {
+              1: 'The cerebral cortex is indeed the wrinkled outer layer of the cerebrum, responsible for higher-level thinking.',
+            },
           },
           {
             id: 'psy-sec1-u3-L3-Q2',
@@ -1243,6 +1416,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The folds and wrinkles (called gyri and sulci) pack more surface area into the skull, allowing for more neural connections.',
+            distractorExplanations: {
+              0: 'The wrinkles are not damage; they are a normal feature that develops before birth to increase processing capacity.',
+              2: 'Smooth brains (lissencephaly) actually indicate a serious developmental disorder with reduced cognitive function.',
+              3: 'The wrinkles serve to increase surface area, not to protect against physical injury.',
+            },
           },
           {
             id: 'psy-sec1-u3-L3-T2',
@@ -1281,6 +1459,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Reading involves your occipital lobe (seeing the text), temporal lobe (understanding language), and frontal lobe (comprehending meaning). The lobes cooperate.',
+            distractorExplanations: {
+              0: 'The frontal lobe helps with comprehension, but reading also requires visual processing and language areas in other lobes.',
+              1: 'The occipital lobe processes the visual input, but understanding what you read requires temporal and frontal lobes too.',
+              2: 'The temporal lobe handles language processing, but seeing the text and understanding meaning involve other lobes as well.',
+            },
           },
           {
             id: 'psy-sec1-u3-L3-T3',
@@ -1309,6 +1492,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Personality changes and loss of planning ability point to frontal lobe damage. Her senses (occipital, temporal, parietal) are intact.',
+            distractorExplanations: {
+              0: 'Occipital lobe damage would impair vision, but the patient can see normally.',
+              1: 'Temporal lobe damage would impair hearing or memory, but those functions are intact here.',
+              3: 'Parietal lobe damage would impair touch and spatial awareness, which are still working normally.',
+            },
           },
           {
             id: 'psy-sec1-u3-L3-Q7',
@@ -1322,6 +1510,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'The frontal lobe is the last brain region to fully mature, completing development around age 25. This is why teenagers often struggle with impulse control.',
+            distractorExplanations: {
+              1: 'At 18 the frontal lobe is still developing; it continues maturing for several more years.',
+              2: 'At 12 the frontal lobe is far from mature, which is why preteens have limited impulse control.',
+              3: 'By age 40 the frontal lobe has been fully developed for about 15 years already.',
+            },
           },
         ],
       },
@@ -1347,6 +1540,9 @@ export const psySection1Part1: Unit[] = [
             question: 'The left hemisphere of the brain controls the right side of the body.',
             correctAnswer: true,
             explanation: 'Each hemisphere controls the opposite (contralateral) side of the body. Left brain controls the right side, and right brain controls the left.',
+            distractorExplanations: {
+              1: 'Contralateral control is well established; the left hemisphere does control the right side of the body.',
+            },
           },
           {
             id: 'psy-sec1-u3-L4-Q2',
@@ -1368,6 +1564,9 @@ export const psySection1Part1: Unit[] = [
             question: 'Some people are purely "left-brained" (logical) and others are purely "right-brained" (creative).',
             correctAnswer: false,
             explanation: 'Brain imaging studies show that people use both hemispheres for virtually all tasks. The left-brain/right-brain personality type is a myth.',
+            distractorExplanations: {
+              0: 'Brain imaging consistently shows both hemispheres are active during all tasks, debunking this personality myth.',
+            },
           },
           {
             id: 'psy-sec1-u3-L4-Q4',
@@ -1381,6 +1580,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Imaging reveals that both hemispheres are active during virtually every task. Some mild specialization exists, but both sides always contribute.',
+            distractorExplanations: {
+              0: 'Creativity involves both hemispheres; no one uses only the right side for creative tasks.',
+              2: 'The hemispheres constantly communicate through the corpus callosum, a thick bundle of nerve fibers.',
+              3: 'Logic and reasoning involve both hemispheres working together, not just the left side.',
+            },
           },
           {
             id: 'psy-sec1-u3-L4-Q5',
@@ -1417,6 +1621,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The idea of being dominated by one hemisphere is a myth. Brain imaging consistently shows both sides are active during creative and logical tasks.',
+            distractorExplanations: {
+              0: 'Avoiding math based on a debunked personality quiz would unnecessarily limit your potential.',
+              2: 'Brain scans actually disprove this claim by showing both hemispheres are always active together.',
+              3: 'You cannot "switch" hemispheres because both are already active during every type of thinking.',
+            },
           },
           {
             id: 'psy-sec1-u3-L4-Q7',
@@ -1430,6 +1639,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'The corpus callosum is the communication bridge between hemispheres. Damage to it disrupts coordination between the two sides, causing split-brain effects.',
+            distractorExplanations: {
+              0: 'The corpus callosum is critical; without it, the hemispheres lose the ability to share information.',
+              1: 'Disconnecting the hemispheres does not boost creativity; it causes coordination problems between the two sides.',
+              2: 'Both hemispheres continue working individually, but they cannot coordinate because the connection is severed.',
+            },
           },
         ],
       },
@@ -1579,6 +1793,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'Psychology is the scientific study of both the mind (thoughts, feelings) and behavior (actions).',
+            distractorExplanations: {
+              0: 'Mental illness and therapy are just one branch (clinical psychology); the field is much broader.',
+              2: 'The brain and nervous system are studied by neuroscience; psychology also covers thoughts, feelings, and social behavior.',
+              3: 'Philosophy was the precursor to psychology, but psychology uses the scientific method rather than reasoning alone.',
+            },
           },
           {
             id: 'psy-sec1-u4-L1-Q2',
@@ -1632,6 +1851,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: 'Only a controlled experiment can show causation. She needs to randomly assign groups (music vs. no music) and compare results.',
+            distractorExplanations: {
+              0: 'A survey about music preferences would only reveal opinions, not whether music actually causes better test scores.',
+              1: 'Observation shows what naturally happens but cannot prove that music is the cause of any differences.',
+              2: 'A correlation study shows whether two things are related but cannot prove one causes the other.',
+            },
           },
           {
             id: 'psy-sec1-u4-L1-Q5',
@@ -1645,6 +1869,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: 'fMRI and other imaging tools show that all brain regions are active at various times. Damage to any area causes measurable problems.',
+            distractorExplanations: {
+              1: 'The brain can be precisely measured with modern imaging technology; its size is not an obstacle.',
+              2: 'Scientists have studied this extensively; brain imaging conclusively shows all regions are used.',
+              3: 'The 10% claim is false for all ages; both children and adults use their entire brains.',
+            },
           },
           {
             id: 'psy-sec1-u4-L1-Q6',
@@ -1711,6 +1940,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'The occipital lobe at the back of the brain processes vision. Damage there can cause blindness even when the eyes are healthy.',
+            distractorExplanations: {
+              0: 'The frontal lobe is at the front of the brain and controls planning and personality, not vision.',
+              1: 'The temporal lobe handles hearing and memory; damage there would not cause blindness.',
+              3: 'The brain stem controls breathing and heart rate, and is not primarily responsible for visual processing.',
+            },
           },
           {
             id: 'psy-sec1-u4-L2-Q3',
@@ -1738,6 +1972,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: 'Listening (temporal), understanding humor (frontal), and laughing (motor areas) all require different brain regions working together.',
+            distractorExplanations: {
+              0: 'The temporal lobe handles hearing, but understanding humor and producing laughter involve other brain regions too.',
+              1: 'The frontal lobe helps with comprehension, but listening and laughing involve temporal and motor areas as well.',
+              3: 'The cerebellum coordinates movement, but understanding jokes requires cortical areas like the frontal and temporal lobes.',
+            },
           },
           {
             id: 'psy-sec1-u4-L2-Q5',
@@ -1751,6 +1990,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The frontal lobe, which controls self-control and planning, is the last brain area to fully mature (around age 25).',
+            distractorExplanations: {
+              0: 'Brain size does not explain impulsivity; the issue is that the frontal lobe is still maturing in teenagers.',
+              2: 'The cerebellum coordinates movement, not impulse control; the frontal lobe is the relevant structure here.',
+              3: 'Hemisphere dominance is a myth; impulsivity in teens is caused by incomplete frontal lobe development.',
+            },
           },
           {
             id: 'psy-sec1-u4-L2-Q6',
@@ -1781,6 +2025,11 @@ export const psySection1Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: 'The cerebellum is responsible for coordinating smooth, practiced movements like riding a bike.',
+            distractorExplanations: {
+              0: 'The occipital lobe processes vision, not the motor coordination needed for riding a bicycle.',
+              2: 'The brain stem handles automatic survival functions like breathing, not learned motor skills.',
+              3: 'The temporal lobe processes hearing and memory, not the balance and coordination required for cycling.',
+            },
           },
         ],
       },

@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "u6-L1-Q0a",
+    "type": "true-false",
+    "question": "Water and air are both classified as fluids.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. Any substance that flows and deforms continuously under shear stress is a fluid, whether liquid or gas.",
+    "explanationLine": 33
+  },
+  {
+    "id": "u6-L1-Q1",
+    "type": "multiple-choice",
+    "question": "Pressure at a point in a static fluid depends on the shape of the container. Is this correct?",
+    "options": [
+      "Incorrect, pressure depends only on depth, not shape",
+      "Correct, wider containers produce more fluid weight",
+      "Incorrect, pressure is constant throughout any static fluid",
+      "Correct, container shape affects the velocity profile"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "This is the hydrostatic paradox. Pressure at a point depends only on depth below the surface: P = P_atm + rho*g*h.",
+    "explanationLine": 48
+  },
+  {
+    "id": "u6-L1-Q2",
+    "type": "multiple-choice",
+    "question": "A dam gate pivots at bottom. Force is applied at the centroid. Why is this unsafe?",
+    "options": [
+      "Centroid calculation is correct for the force location",
+      "The resultant force acts at the centroid of the gate area",
+      "Hydrostatic force acts at the TOP of the gate surface",
+      "Resultant force acts at the center of pressure, not centroid"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Hydrostatic pressure increases with depth, so the resultant force acts below the centroid at the center of pressure.",
+    "explanationLine": 63
+  },
+  {
+    "id": "u6-L1-Q3",
+    "type": "multiple-choice",
+    "question": "What distinguishes a Newtonian fluid from a non-Newtonian fluid?",
+    "options": [
+      "Linear relationship between shear stress and strain rate",
+      "Newtonian fluids are always low-viscosity like water",
+      "Newtonian fluids are defined by obeying gravity laws",
+      "The distinction is purely academic with no real use"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Newton\\",
+    "explanationLine": 78
+  },
+  {
+    "id": "u6-L1-Q0b",
+    "type": "multiple-choice",
+    "question": "As you go deeper in a swimming pool, the water pressure:",
+    "options": [
+      "Increases",
+      "Decreases",
+      "Stays the same",
+      "Depends on pool shape"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Pressure increases linearly with depth: P = rho*g*h. The deeper you go, the more fluid weight above you.",
+    "explanationLine": 99
+  },
+  {
+    "id": "u6-L1-Q4",
+    "type": "multiple-choice",
+    "question": "What is wrong with this reasoning?",
+    "options": [
+      "The 100x force multiplication only works for static loading",
+      "The energy difference is supplied by pressurized hydraulic fluid",
+      "Force is multiplied but displacement is divided by the same ratio",
+      "Conservation of energy does not apply to mechanical systems"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Pascal\\",
+    "explanationLine": 114
+  },
+  {
+    "id": "u6-L1-Q5",
+    "type": "multiple-choice",
+    "question": "Which of the following statements about surface tension is correct?",
+    "options": [
+      "Surface tension increases with temperature for most liquids",
+      "Capillary rise is inversely proportional to tube diameter",
+      "Surface tension has units of N/m2, same as pressure",
+      "Surface tension effects vanish as length scale decreases"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Capillary rise h = 4*sigma*cos(theta)/(rho*g*d), inversely proportional to tube diameter d.",
+    "explanationLine": 129
+  },
+  {
+    "id": "u6-L1b-Q0a",
+    "type": "true-false",
+    "question": "A steel ship floats because it displaces a volume of water that weighs more than the ship itself.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Exactly. The hollow hull displaces enough water so the buoyant force equals the ship\\",
+    "explanationLine": 176
+  },
+  {
+    "id": "u6-L1-Q8",
+    "type": "multiple-choice",
+    "question": "If the local atmospheric pressure is 95 kPa (at elevation), what is the absolute pressure at 350 kPa gauge?",
+    "options": [
+      "445 kPa absolute",
+      "350 kPa absolute",
+      "255 kPa absolute",
+      "350 kPa, gauge and absolute are equivalent"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "P_absolute = P_gauge + P_atmospheric = 350 + 95 = 445 kPa. Gauge pressure uses atmospheric as its zero.",
+    "explanationLine": 191
+  },
+  {
+    "id": "u6-L1-Q9",
+    "type": "true-false",
+    "question": "The buoyant force on a fully submerged object depends on the object\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Buoyant force depends only on the fluid\\",
+    "explanationLine": 200
+  },
+  {
+    "id": "u6-L1-Q10",
+    "type": "multiple-choice",
+    "question": "What is the resultant hydrostatic force on the gate? (rho_water = 1000 kg/m3)",
+    "options": [
+      "F = 0.5 * rho*g * h2 * w = 235.4 kN",
+      "F = rho*g * h * A = 1000 * 9.81 * 4 * 12 = 470.9 kN",
+      "F = rho*g * y_c * A = 1000 * 9.81 * 2 * 12 = 235.4 kN",
+      "F = rho*g * h * w = 1000 * 9.81 * 4 * 3 = 117.7 kN"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The resultant hydrostatic force on a plane surface is F = rho*g * y_c * A, where y_c is the depth to the centroid.",
+    "explanationLine": 215
+  },
+  {
+    "id": "u6-L1b-Q0b",
+    "type": "multiple-choice",
+    "question": "In a U-tube manometer, the heavier fluid column is pushed down on the:",
+    "options": [
+      "Both sides equally",
+      "Low-pressure side",
+      "High-pressure side",
+      "It doesn\\"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Higher pressure pushes the manometer fluid down on that side, causing it to rise on the opposite side.",
+    "explanationLine": 236
+  },
+  {
+    "id": "u6-L1-Q11",
+    "type": "multiple-choice",
+    "question": "What is the bulk modulus of a fluid, and why does it matter in hydraulic systems?",
+    "options": [
+      "Bulk modulus measures a fluid\\",
+      "Bulk modulus measures resistance to shear deformation",
+      "Bulk modulus is the ratio of surface tension to viscosity",
+      "Bulk modulus only matters for gases"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Bulk modulus K measures how much pressure is needed to compress a fluid by a given fraction. Water has K of about 2.2 GPa.",
+    "explanationLine": 251
+  },
+  {
+    "id": "u6-L1-Q12",
+    "type": "true-false",
+    "question": "In a differential manometer, if both legs contain the same fluid and no manometer fluid is used, the manometer cannot measure a pressure difference.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "A manometer needs a fluid of different density to create a measurable height difference. Same fluid on both sides means no height change.",
+    "explanationLine": 260
+  },
+  {
+    "id": "u6-L1-Q13",
+    "type": "multiple-choice",
+    "question": "At 300 m below the ocean surface (seawater rho = 1025 kg/m3), what is the gauge pressure on the hull?",
+    "options": [
+      "About 302 kPa (approximately 3 atmospheres)",
+      "About 3.02 MPa (approximately 30 atmospheres)",
+      "About 30.2 MPa (approximately 300 atmospheres)",
+      "About 101.3 kPa (one atmosphere at any depth)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "P_gauge = rho*g*h = 1025 * 9.81 * 300 = 3,016,575 Pa, which is about 3.02 MPa or 30 atm.",
+    "explanationLine": 274
+  },
+  {
+    "id": "u6-L1c-Q0a",
+    "type": "true-false",
+    "question": "A floating boat is stable when its metacenter is above its center of gravity.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Correct. When M is above G, any tilt creates a righting moment that pushes the boat back upright.",
+    "explanationLine": 312
+  },
+  {
+    "id": "u6-L1-Q16",
+    "type": "multiple-choice",
+    "question": "What is the primary advantage of an inclined manometer over a vertical one?",
+    "options": [
+      "It removes the need for a different-density fluid",
+      "It allows measurement of higher pressures",
+      "It eliminates parallax error in the reading",
+      "It amplifies the reading for a given pressure difference"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "An inclined tube magnifies the fluid travel distance: delta_L = delta_h/sin(theta), making small pressure differences easier to read.",
+    "explanationLine": 336
+  },
+  {
+    "id": "u6-L1-Q17",
+    "type": "multiple-choice",
+    "question": "A floating object is displaced slightly and released. Under what condition will it be stable?",
+    "options": [
+      "When the center of buoyancy is above the center of gravity",
+      "When the metacenter is above the center of gravity",
+      "When the center of gravity is located at the waterline",
+      "When the metacentric height is zero"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Floating stability depends on the metacentric height GM = BM - BG. Positive GM means stable.",
+    "explanationLine": 351
+  },
+  {
+    "id": "u6-L1c-Q0b",
+    "type": "multiple-choice",
+    "question": "Cavitation occurs when local pressure drops below the fluid\\",
+    "options": [
+      "Vapor pressure",
+      "Atmospheric pressure",
+      "Gauge pressure",
+      "Bulk modulus"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Cavitation starts when the local pressure falls below the fluid\\",
+    "explanationLine": 372
+  },
+  {
+    "id": "u6-L1-Q18",
+    "type": "true-false",
+    "question": "A Bingham plastic fluid behaves as a rigid body until a minimum yield stress is exceeded, after which it flows like a Newtonian fluid.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Bingham plastics have the equation tau = tau_y + mu_p*(du/dy). Below the yield stress, no flow occurs.",
+    "explanationLine": 380
+  },
+  {
+    "id": "u6-L1-Q19",
+    "type": "multiple-choice",
+    "question": "What is the specific gravity (SG) of a fluid?",
+    "options": [
+      "SG is the ratio of fluid density to air density",
+      "SG is the ratio of dynamic viscosity to kinematic viscosity",
+      "SG is the ratio of fluid density to water density, dimensionless",
+      "SG is identical to density but in different units"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Specific gravity SG = rho_fluid/rho_water. It\\",
+    "explanationLine": 394
+  },
+  {
+    "id": "u6-L1-Q24",
+    "type": "multiple-choice",
+    "question": "What is the vapor pressure of a liquid, and why is it critical in fluid system design?",
+    "options": [
+      "Pressure exerted by vapors above a liquid surface",
+      "Maximum pressure a fluid can withstand before failing",
+      "Pressure at which a liquid boils at a given temperature",
+      "Vapor pressure is relevant only for gas-phase systems"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Vapor pressure is the pressure at which liquid and vapor coexist. If local pressure drops below this, the fluid boils and cavitation occurs.",
+    "explanationLine": 409
+  },
+  {
+    "id": "u6-L2-Q0a",
+    "type": "multiple-choice",
+    "question": "When water flows through a pipe that narrows, its velocity:",
+    "options": [
+      "Increases",
+      "Decreases",
+      "Stays the same",
+      "Depends on pipe material"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Continuity requires A1*V1 = A2*V2. Smaller area means higher velocity.",
+    "explanationLine": 466
+  },
+  {
+    "id": "u6-L2-Q1",
+    "type": "multiple-choice",
+    "question": "An engineer used Bernoulli for a rough pipe and got wrong results. What is the likely error?",
+    "options": [
+      "The pipe diameter was likely measured incorrectly",
+      "Bernoulli only works for gases, not for liquid flow",
+      "Bernoulli assumes inviscid flow, which fails in rough pipes",
+      "Bernoulli does not apply to horizontal pipe systems"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Bernoulli assumes steady, incompressible, inviscid flow. Rough pipes have significant friction losses that Bernoulli ignores.",
+    "explanationLine": 481
+  },
+  {
+    "id": "u6-L2-Q2",
+    "type": "true-false",
+    "question": "A pitot tube can accurately measure air velocity in a ventilation duct regardless of whether the flow is laminar or turbulent.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "A pitot tube measures velocity at a single point. In turbulent flow, the velocity profile is flatter, but you still need to account for the profile shape to get average velocity.",
+    "explanationLine": 490
+  },
+  {
+    "id": "u6-L2-Q0b",
+    "type": "true-false",
+    "question": "Bernoulli\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "No. Bernoulli assumes inviscid (frictionless) flow. For friction losses, use the full energy equation.",
+    "explanationLine": 505
+  },
+  {
+    "id": "u6-L2-Q3",
+    "type": "multiple-choice",
+    "question": "Pitot-static tube: P_stag = 101.8 kPa, P_static = 101.3 kPa, rho = 1.2 kg/m3. Air velocity?",
+    "options": [
+      "40.8 m/s",
+      "20.4 m/s",
+      "28.9 m/s",
+      "14.4 m/s"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "V = sqrt(2*(P_stag - P_static)/rho) = sqrt(2 * 500 / 1.2) = sqrt(833) = 28.9 m/s.",
+    "explanationLine": 519
+  },
+  {
+    "id": "u6-L2-Q4",
+    "type": "multiple-choice",
+    "question": "The HGL drops below the pipe centerline at a high point. What does this indicate?",
+    "options": [
+      "Total energy of the flow has increased via a pump",
+      "Flow has reached sonic velocity at that point",
+      "The flow has become turbulent at that section",
+      "Static pressure at that point is below atmospheric"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The HGL represents P/(rho*g) + z. When HGL is below the pipe, pressure head is negative gauge (below atmospheric).",
+    "explanationLine": 533
+  },
+  {
+    "id": "u6-L2-Q11",
+    "type": "multiple-choice",
+    "question": "What is the continuity equation for steady flow?",
+    "options": [
+      "rho1*V1 = rho2*V2, density times velocity is constant",
+      "P1*A1 = P2*A2, pressure times area is constant",
+      "rho1*A1*V1 = rho2*A2*V2; if incompressible: A1*V1 = A2*V2",
+      "The continuity equation is a momentum conservation law"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Continuity (mass conservation) and Bernoulli (energy conservation) are complementary. You almost always use them together.",
+    "explanationLine": 557
+  },
+  {
+    "id": "u6-L2b-Q0a",
+    "type": "multiple-choice",
+    "question": "The EGL is always _____ the HGL by exactly the velocity head.",
+    "options": [
+      "Below",
+      "Above",
+      "Equal to",
+      "It varies"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "EGL = HGL + V2/(2g). The velocity head is always positive, so the EGL is always above the HGL.",
+    "explanationLine": 591
+  },
+  {
+    "id": "u6-L2-Q5",
+    "type": "multiple-choice",
+    "question": "A siphon over a hill stops working. What is the fluid mechanics explanation?",
+    "options": [
+      "The pipe diameter is too large on the hill section",
+      "Water moves faster uphill, reducing flow",
+      "The HGL drops below the pipe elevation at the hilltop",
+      "Thermal expansion at the hilltop reduces flow"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "As the pipe rises, elevation z increases. If the HGL drops below the pipe, local pressure goes below atmospheric, and the siphon breaks.",
+    "explanationLine": 605
+  },
+  {
+    "id": "u6-L2-Q7",
+    "type": "multiple-choice",
+    "question": "Venturi meter: pressure drop is 40 kPa between inlet and throat. What is the theoretical flow rate of water?",
+    "options": [
+      "Q = A2*sqrt(2*deltaP/rho), about 0.070 m3/s, no area ratio needed",
+      "Apply continuity + Bernoulli: Q is about 0.027 m3/s",
+      "Q = A1*sqrt(2*deltaP/rho), about 0.281 m3/s, use inlet area",
+      "Cannot determine Q without pipe length and friction"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Combining Bernoulli and continuity gives V2 = sqrt(2*deltaP / (rho*(1 - (d2/d1)4))). Then Q = A2*V2.",
+    "explanationLine": 628
+  },
+  {
+    "id": "u6-L2b-Q0b",
+    "type": "true-false",
+    "question": "Torricelli\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. This comes directly from Bernoulli between the free surface and the exit hole, assuming the tank is large.",
+    "explanationLine": 643
+  },
+  {
+    "id": "u6-L2-Q8",
+    "type": "multiple-choice",
+    "question": "Why does a venturi meter have a higher discharge coefficient (Cd of 0.98) than an orifice plate (Cd of 0.61)?",
+    "options": [
+      "Orifice plates have higher surface roughness than venturis",
+      "The venturi meter is larger, giving more room for flow",
+      "The venturi\\",
+      "Venturi meters use a different pressure tap technique"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The gradual convergence and divergence of a venturi keeps the flow attached, minimizing energy losses and flow separation.",
+    "explanationLine": 657
+  },
+  {
+    "id": "u6-L2-Q10",
+    "type": "multiple-choice",
+    "question": "A large open tank drains through a small hole 3 m below the water surface. Exit velocity?",
+    "options": [
+      "V = sqrt(2*g*h) = sqrt(2 * 9.81 * 3) = 7.67 m/s",
+      "V = sqrt(g*h) = sqrt(9.81 * 3) = 5.42 m/s",
+      "V = 2*g*h = 58.86 m/s",
+      "V = sqrt(2*g*h/rho): velocity depends on fluid density"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Torricelli\\",
+    "explanationLine": 671
+  },
+  {
+    "id": "u6-L2-Q13",
+    "type": "multiple-choice",
+    "question": "In the Bernoulli equation, what does the term 0.5*rho*v2 represent?",
+    "options": [
+      "Dynamic pressure (kinetic energy per unit volume)",
+      "Static pressure (potential energy per unit volume)",
+      "Hydrostatic pressure due to elevation",
+      "Total pressure at that point"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The term 0.5*rho*v2 is the dynamic pressure, representing the kinetic energy per unit volume of the flowing fluid.",
+    "explanationLine": 695
+  },
+  {
+    "id": "u6-L2c-Q0a",
+    "type": "true-false",
+    "question": "The full energy equation adds pump head and friction loss terms to Bernoulli\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Correct. The energy equation is Bernoulli plus h_pump (energy added) minus h_loss (energy lost to friction).",
+    "explanationLine": 723
+  },
+  {
+    "id": "u6-L2-Q14",
+    "type": "multiple-choice",
+    "question": "What is the coefficient of velocity (Cv) for an orifice, and how does it differ from the discharge coefficient (Cd)?",
+    "options": [
+      "Cv applies to venturi meters while Cd applies to orifice plates",
+      "Cv and Cd are always equal for well-designed orifices",
+      "Cv corrects for velocity loss; Cd = Cv * Cc includes area contraction too",
+      "Cv is always 1.0 for sharp-edged orifices"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Cv accounts for velocity being less than ideal, while Cc accounts for the vena contracta (area contraction). Cd = Cv * Cc combines both effects.",
+    "explanationLine": 737
+  },
+  {
+    "id": "u6-L2-Q15",
+    "type": "multiple-choice",
+    "question": "The energy equation adds what two terms compared to basic Bernoulli?",
+    "options": [
+      "Turbulence intensity and roughness factors",
+      "Temperature and viscosity terms",
+      "Pump head (h_pump) and friction head loss (h_loss)",
+      "Momentum flux and angular velocity terms"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The general energy equation adds h_pump (energy input from pumps) and h_loss (energy lost to friction, fittings, etc.).",
+    "explanationLine": 751
+  },
+  {
+    "id": "u6-L2c-Q0b",
+    "type": "multiple-choice",
+    "question": "A discharge coefficient of 0.61 means the actual flow is about:",
+    "options": [
+      "61% more than the theoretical flow",
+      "61% of the theoretical (ideal) flow",
+      "39% of the theoretical flow",
+      "100% of theoretical with 61% efficiency"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Cd = Q_actual/Q_theoretical. A Cd of 0.61 means only 61% of the ideal Bernoulli flow actually passes through.",
+    "explanationLine": 772
+  },
+  {
+    "id": "u6-L2-Q17",
+    "type": "multiple-choice",
+    "question": "An engineer needs to account for a pump adding 25 m of head to a piping system. Which equation should they use?",
+    "options": [
+      "Darcy-Weisbach with pump friction factor",
+      "Bernoulli with P increased by 25 m equivalent",
+      "Continuity equation with modified velocity",
+      "Full energy equation with h_pump = 25 m added"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The full energy equation is the correct tool when pumps add energy to the system.",
+    "explanationLine": 795
+  },
+  {
+    "id": "u6-L2-Q19",
+    "type": "multiple-choice",
+    "question": "Why does the \"equal transit time\" theory incorrectly explain airplane lift?",
+    "options": [
+      "Bernoulli doesn\\",
+      "The equal transit time theory is correct",
+      "Lift has nothing to do with airflow patterns",
+      "Air over the top actually moves faster, not at equal transit time"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "There\\",
+    "explanationLine": 824
+  },
+  {
+    "id": "u6-L3-Q0a",
+    "type": "multiple-choice",
+    "question": "Flow in a pipe with Reynolds number of 1500 is:",
+    "options": [
+      "Turbulent",
+      "Laminar",
+      "Supersonic",
+      "Impossible to determine"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Re < 2300 means laminar flow. The fluid moves in smooth, orderly layers.",
+    "explanationLine": 858
+  },
+  {
+    "id": "u6-L3-Q1",
+    "type": "multiple-choice",
+    "question": "For fully developed laminar flow in a pipe, what is the friction factor?",
+    "options": [
+      "f = 128*mu*L/(rho*g*D4*pi)",
+      "f = 0.316/Re^0.25 (Blasius)",
+      "f = 64/Re",
+      "f is always 0.02 for smooth pipes"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "In laminar flow, the friction factor is exactly f = 64/Re, derived analytically from the Hagen-Poiseuille solution.",
+    "explanationLine": 872
+  },
+  {
+    "id": "u6-L3-Q2",
+    "type": "multiple-choice",
+    "question": "A pipe carries water at 2 m/s, D = 50 mm, nu = 1e-6 m2/s. What is the Reynolds number?",
+    "options": [
+      "Re = 1000 (laminar)",
+      "Re = 100,000 (turbulent)",
+      "Re = 10,000 (transitional)",
+      "Re = 1,000,000 (highly turbulent)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Re = V*D/nu = 2 * 0.05 / 1e-6 = 100,000. This is well above 4000, so fully turbulent.",
+    "explanationLine": 886
+  },
+  {
+    "id": "u6-L3-Q0b",
+    "type": "true-false",
+    "question": "Doubling the length of a pipe doubles the friction head loss.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. The Darcy-Weisbach equation has L in the numerator: h_f = f*(L/D)*(v2/(2g)). Double L means double h_f.",
+    "explanationLine": 901
+  },
+  {
+    "id": "u6-L3-Q3",
+    "type": "multiple-choice",
+    "question": "On the Moody chart, what happens to the friction factor as Reynolds number increases in fully rough turbulent flow?",
+    "options": [
+      "Friction factor increases linearly with Re",
+      "Friction factor continues to decrease with Re",
+      "Friction factor becomes independent of Re",
+      "The Moody chart doesn\\"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "In the \"fully rough\" zone on the Moody chart, friction factor depends only on relative roughness (epsilon/D), not Re.",
+    "explanationLine": 915
+  },
+  {
+    "id": "u6-L3-Q4",
+    "type": "multiple-choice",
+    "question": "What happens to friction head loss if you halve the pipe diameter while keeping flow rate constant?",
+    "options": [
+      "Head loss is cut in half",
+      "Head loss doubles",
+      "Head loss increases by 4 times",
+      "Head loss increases by about 32 times"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Halving D quadruples velocity (Q = AV). Then h_f proportional to V2/D means (4V)2/(D/2) = 32 times more loss.",
+    "explanationLine": 929
+  },
+  {
+    "id": "u6-L3b-Q0a",
+    "type": "true-false",
+    "question": "Minor losses from fittings and valves can sometimes exceed the major (friction) losses in a piping system.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "In short systems with many fittings, the \"minor\" losses often dominate. The name is misleading.",
+    "explanationLine": 976
+  },
+  {
+    "id": "u6-L3-Q7",
+    "type": "multiple-choice",
+    "question": "An abrupt expansion from a small pipe to a large pipe causes a head loss. How is it calculated?",
+    "options": [
+      "h_loss = f*(L_eq/D)*(V2/(2g)) using equivalent length",
+      "h_loss = K * V2/(2g) where K = 0.5 for all expansions",
+      "Expansion losses are zero because pressure recovers fully",
+      "h_loss = (V1 - V2)2 / (2g), the Borda-Carnot equation"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "A sudden expansion creates turbulent eddies. The Borda-Carnot equation h_loss = (V1 - V2)2/(2g) quantifies this energy dissipation.",
+    "explanationLine": 990
+  },
+  {
+    "id": "u6-L3-Q8",
+    "type": "multiple-choice",
+    "question": "In a parallel pipe network, what is always true?",
+    "options": [
+      "Velocity in each branch is equal",
+      "Flow rate through each branch is equal",
+      "Head loss across each parallel branch is equal",
+      "Friction factor in each branch is equal"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "In parallel pipes, each branch connects the same two nodes, so the head loss must be the same. Flow splits according to each branch\\",
+    "explanationLine": 1004
+  },
+  {
+    "id": "u6-L3-Q9",
+    "type": "true-false",
+    "question": "The equivalent length method converts minor losses into an equivalent length of straight pipe for simpler calculation.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The equivalent length L_eq = K*D/f converts a minor loss coefficient K into meters of straight pipe that would cause the same loss.",
+    "explanationLine": 1012
+  },
+  {
+    "id": "u6-L3b-Q0b",
+    "type": "multiple-choice",
+    "question": "In pipes connected in series, what stays constant?",
+    "options": [
+      "Head loss",
+      "Flow rate",
+      "Velocity",
+      "Pressure"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "In series pipes, the same fluid flows through each section, so Q is constant. Head losses add up, and velocity changes with diameter.",
+    "explanationLine": 1033
+  },
+  {
+    "id": "u6-L3-Q10",
+    "type": "multiple-choice",
+    "question": "The Colebrook equation is implicit in f. What does this mean practically?",
+    "options": [
+      "You need experimental data for every specific pipe",
+      "f can be calculated directly in one step",
+      "The equation is only valid for laminar flow",
+      "You must iterate or use the Moody chart to find f"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The Colebrook equation has f on both sides, so you can\\",
+    "explanationLine": 1047
+  },
+  {
+    "id": "u6-L3-Q12",
+    "type": "multiple-choice",
+    "question": "What is the Hazen-Williams equation, and when is it used instead of Darcy-Weisbach?",
+    "options": [
+      "An equation for gas pipeline design only",
+      "A theoretical equation for all fluids that is more accurate than Darcy",
+      "An empirical formula for water pipe design; simpler but limited to water",
+      "A replacement for the Moody chart in turbulent flow"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Hazen-Williams is simpler to use (no Moody chart needed) but only works for water near room temperature in turbulent flow. Darcy-Weisbach works for any fluid.",
+    "explanationLine": 1071
+  },
+  {
+    "id": "u6-L3c-Q0a",
+    "type": "multiple-choice",
+    "question": "In fully developed laminar pipe flow, the maximum velocity at the center is:",
+    "options": [
+      "1.2 times the average velocity",
+      "Equal to the average velocity",
+      "Half the average velocity",
+      "Twice the average velocity"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The parabolic profile in laminar flow has V_max = 2*V_avg. In turbulent flow, it\\",
+    "explanationLine": 1105
+  },
+  {
+    "id": "u6-L3-Q13",
+    "type": "multiple-choice",
+    "question": "What is the entrance length for fully developed flow, and why does it matter?",
+    "options": [
+      "The distance for the boundary layer to reach the center; flow isn\\",
+      "The length of pipe needed for the flow to reach maximum velocity",
+      "The distance from the pump to the first fitting",
+      "Entrance length is only relevant for laminar flow"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Near a pipe entrance, the velocity profile is still developing. The entrance length is about 0.05*Re*D for laminar and 10-60D for turbulent.",
+    "explanationLine": 1119
+  },
+  {
+    "id": "u6-L3-Q14",
+    "type": "true-false",
+    "question": "Water hammer occurs when a valve is closed suddenly, causing a pressure wave to travel through the pipe.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Sudden valve closure converts kinetic energy of the moving fluid into a pressure pulse that travels at the speed of sound in the fluid.",
+    "explanationLine": 1127
+  },
+  {
+    "id": "u6-L3c-Q0b",
+    "type": "true-false",
+    "question": "Using a larger pipe diameter always saves money in the long run because it reduces pumping costs.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Not always. Larger pipes cost more to buy and install. The economic optimum balances pipe cost vs. pumping cost.",
+    "explanationLine": 1142
+  },
+  {
+    "id": "u6-L3-Q15",
+    "type": "multiple-choice",
+    "question": "What is the difference between absolute and relative pipe roughness?",
+    "options": [
+      "Absolute roughness (epsilon) is in mm; relative roughness is epsilon/D",
+      "They are identical but measured in different unit systems",
+      "Absolute roughness applies to new pipes; relative to corroded",
+      "Relative roughness is always larger than absolute roughness"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Absolute roughness epsilon is a physical height of surface bumps. Relative roughness epsilon/D scales it to the pipe size, which is what the Moody chart uses.",
+    "explanationLine": 1156
+  },
+  {
+    "id": "u6-L3-Q18",
+    "type": "multiple-choice",
+    "question": "For a galvanized steel pipe (epsilon = 0.15 mm, D = 100 mm), what is the relative roughness?",
+    "options": [
+      "0.015",
+      "0.0015",
+      "0.15",
+      "15"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Relative roughness = epsilon/D = 0.15/100 = 0.0015. This is the value you use on the Moody chart.",
+    "explanationLine": 1193
+  },
+  {
+    "id": "u6-L4-Q0a",
+    "type": "multiple-choice",
+    "question": "A water supply system that needs high flow at moderate pressure would typically use a:",
+    "options": [
+      "Peristaltic pump",
+      "Positive displacement pump",
+      "Jet pump",
+      "Centrifugal pump"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Centrifugal pumps excel at high flow, moderate pressure. They\\",
+    "explanationLine": 1227
+  },
+  {
+    "id": "u6-L4-Q1",
+    "type": "multiple-choice",
+    "question": "Why would you choose a positive displacement pump over a centrifugal pump?",
+    "options": [
+      "PD pumps are always more efficient than centrifugal",
+      "For high flow rates at low pressure",
+      "For high-viscosity fluids or when precise flow control is needed",
+      "Centrifugal pumps cannot handle liquids, only gases"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "PD pumps maintain flow rate regardless of viscosity and provide precise, repeatable volumes. Centrifugal pump performance degrades badly with viscous fluids.",
+    "explanationLine": 1241
+  },
+  {
+    "id": "u6-L4-Q2",
+    "type": "multiple-choice",
+    "question": "What is pump \"head\" and why is it measured in meters instead of pascals?",
+    "options": [
+      "Pump head and pressure are identical concepts",
+      "Head is the maximum height a pump can physically reach",
+      "Head in meters is only used in Europe; US engineers use PSI",
+      "Head is energy per unit weight of fluid, and meters work for any fluid density"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Head (H = P/(rho*g)) is energy per unit weight. Using meters makes pump curves valid for any fluid density.",
+    "explanationLine": 1255
+  },
+  {
+    "id": "u6-L4-Q0b",
+    "type": "true-false",
+    "question": "Pumping hot water requires more NPSH margin than pumping cold water.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Hot water has higher vapor pressure, so the available NPSH is reduced. You need more margin to prevent cavitation.",
+    "explanationLine": 1270
+  },
+  {
+    "id": "u6-L4-Q3",
+    "type": "true-false",
+    "question": "Cavitation in a pump always occurs at the pump discharge (high-pressure side).",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Cavitation occurs at the pump inlet (suction side) where pressure is lowest. That\\",
+    "explanationLine": 1278
+  },
+  {
+    "id": "u6-L4-Q4",
+    "type": "multiple-choice",
+    "question": "NPSH_available must be _____ NPSH_required to prevent cavitation.",
+    "options": [
+      "Greater than",
+      "Less than",
+      "Equal to",
+      "Unrelated to"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "NPSH_available (determined by your system) must exceed NPSH_required (from the pump manufacturer) to prevent cavitation.",
+    "explanationLine": 1292
+  },
+  {
+    "id": "u6-L4b-Q0a",
+    "type": "multiple-choice",
+    "question": "The operating point of a pump is where:",
+    "options": [
+      "The pump speed equals the motor speed",
+      "The pump efficiency is at its maximum",
+      "The pump curve crosses the system curve",
+      "Flow rate equals zero (shut-off head)"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The operating point is the intersection of the pump curve (what the pump can deliver) and the system curve (what the system demands).",
+    "explanationLine": 1345
+  },
+  {
+    "id": "u6-L4-Q7",
+    "type": "multiple-choice",
+    "question": "Using the affinity laws: if pump speed doubles, what happens to flow rate, head, and power?",
+    "options": [
+      "Flow quadruples, head doubles, power goes up 8x",
+      "All three double proportionally",
+      "Flow doubles, head quadruples, power goes up 8x",
+      "Only flow rate changes; head and power stay the same"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Affinity laws: Q proportional to N, H proportional to N2, P proportional to N3. Double speed means 2x flow, 4x head, 8x power.",
+    "explanationLine": 1359
+  },
+  {
+    "id": "u6-L4-Q8",
+    "type": "multiple-choice",
+    "question": "Two identical pumps in parallel vs. in series. What changes?",
+    "options": [
+      "There is no difference between parallel and series pumps",
+      "Parallel: doubles head. Series: doubles flow",
+      "Both configurations double the total power output equally",
+      "Parallel: doubles flow at same head. Series: doubles head at same flow"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Parallel pumps share the flow demand (double Q). Series pumps stack their heads (double H). The actual operating point shifts depend on the system curve.",
+    "explanationLine": 1373
+  },
+  {
+    "id": "u6-L4-Q9",
+    "type": "true-false",
+    "question": "Specific speed is a dimensionless number that helps engineers select the right type of pump for an application.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Specific speed Ns = N*sqrt(Q)/H^(3/4) characterizes pump geometry. Low Ns = radial/centrifugal, medium = mixed flow, high = axial.",
+    "explanationLine": 1381
+  },
+  {
+    "id": "u6-L4b-Q0b",
+    "type": "multiple-choice",
+    "question": "Closing a valve partway in a piping system will:",
+    "options": [
+      "Increase flow rate by adding energy",
+      "Reduce flow rate by steepening the system curve",
+      "Have no effect on pump operation",
+      "Reduce pump head"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Throttling adds resistance, making the system curve steeper. The operating point shifts left on the pump curve (lower flow).",
+    "explanationLine": 1402
+  },
+  {
+    "id": "u6-L4-Q10",
+    "type": "multiple-choice",
+    "question": "Why is a variable-speed drive (VFD) more efficient than throttle-valve flow control?",
+    "options": [
+      "VFDs only save energy at high flow rates",
+      "A VFD eliminates all friction losses in the system",
+      "Throttle valves increase pump efficiency at low flow",
+      "A VFD reduces pump speed, cutting power cubically (affinity laws)"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Power is proportional to speed cubed. Reducing speed by 20% cuts power by about 50%. Throttling wastes energy as heat across the valve.",
+    "explanationLine": 1416
+  },
+  {
+    "id": "u6-L4-Q12",
+    "type": "multiple-choice",
+    "question": "A pump operates far to the right of its BEP on the pump curve. What problems can occur?",
+    "options": [
+      "Cavitation, overheating, and premature bearing failure",
+      "The pump becomes more efficient at higher flow rates",
+      "The pump automatically adjusts to match the system",
+      "Operating right of BEP only affects noise levels"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Operating far from BEP causes internal recirculation, cavitation risk, increased vibration, and higher bearing loads. Always size pumps to operate near BEP.",
+    "explanationLine": 1440
+  },
+  {
+    "id": "u6-L4c-Q0a",
+    "type": "true-false",
+    "question": "Hydraulic power output equals rho*g*Q*H.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. P_hydraulic = rho*g*Q*H gives the useful power delivered to the fluid in watts.",
+    "explanationLine": 1468
+  },
+  {
+    "id": "u6-L4-Q13",
+    "type": "multiple-choice",
+    "question": "A pump delivers 0.05 m3/s at 20 m head with 75% efficiency. What shaft power is needed?",
+    "options": [
+      "P = rho*g*Q*H*eta = 7.4 kW",
+      "P = rho*g*Q*H = 9.81 kW",
+      "P = Q*H = 1.0 kW",
+      "P = rho*g*Q*H/eta = 1000*9.81*0.05*20/0.75 = 13.1 kW"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Shaft power = hydraulic power / efficiency. P = rho*g*Q*H/eta = 1000*9.81*0.05*20/0.75 = 13.1 kW.",
+    "explanationLine": 1482
+  },
+  {
+    "id": "u6-L4-Q14",
+    "type": "true-false",
+    "question": "A turbine converts fluid energy into mechanical shaft work, which is the opposite of a pump.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Pumps add energy to fluid; turbines extract energy from fluid. They\\",
+    "explanationLine": 1490
+  },
+  {
+    "id": "u6-L4-Q15",
+    "type": "multiple-choice",
+    "question": "What causes pump surging in a centrifugal pump?",
+    "options": [
+      "Running the pump above its maximum rated speed",
+      "Operating on the unstable left side of the pump curve",
+      "Using a pipe diameter larger than the pump discharge",
+      "Pump surging only occurs in positive displacement pumps"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "If the pump curve has a dip on the left side, operating there creates an unstable condition where flow oscillates between two points.",
+    "explanationLine": 1504
+  },
+  {
+    "id": "u6-L4c-Q0b",
+    "type": "multiple-choice",
+    "question": "A centrifugal pump must be \"primed\" before starting because:",
+    "options": [
+      "The impeller will spin backwards without liquid",
+      "The motor needs liquid cooling to operate",
+      "It can\\",
+      "Priming is only needed for PD pumps"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Centrifugal pumps spin fluid that\\",
+    "explanationLine": 1525
+  },
+  {
+    "id": "u6-L4-Q16",
+    "type": "multiple-choice",
+    "question": "How do you increase NPSH_available in a system?",
+    "options": [
+      "Increase pump speed to pull harder on the suction side",
+      "Raise the reservoir level or shorten the suction pipe",
+      "Add a valve on the suction line for flow regulation",
+      "Use a larger impeller to increase suction"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "NPSH_a = P_atm/(rho*g) + z_s - h_f_suction - P_vapor/(rho*g). Raising the source or reducing suction losses increases NPSH_a.",
+    "explanationLine": 1539
+  },
+  {
+    "id": "u6-L4-Q18",
+    "type": "multiple-choice",
+    "question": "In a Pelton wheel turbine, what form of energy drives the runner?",
+    "options": [
+      "Kinetic energy of high-velocity water jets",
+      "Pressure energy acting on submerged blades",
+      "Both kinetic and pressure energy equally",
+      "Gravitational potential energy directly"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Pelton wheels are impulse turbines. All the pressure energy is converted to kinetic energy in the nozzle before hitting the buckets.",
+    "explanationLine": 1568
+  },
+  {
+    "id": "u6-L5-Q0a",
+    "type": "multiple-choice",
+    "question": "Dimensional analysis helps by:",
+    "options": [
+      "Eliminating the need for experiments entirely",
+      "Reducing the number of variables by forming dimensionless groups",
+      "Converting all units to SI automatically",
+      "Making all equations linear"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "By grouping n variables into n-k dimensionless groups, you drastically reduce the experimental and analytical effort.",
+    "explanationLine": 1602
+  },
+  {
+    "id": "u6-L5-Q1",
+    "type": "multiple-choice",
+    "question": "If a problem has 7 variables and 3 fundamental dimensions (M, L, T), how many Pi groups form?",
+    "options": [
+      "10 dimensionless groups",
+      "7 dimensionless groups",
+      "3 dimensionless groups",
+      "4 dimensionless groups"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Buckingham Pi: number of Pi groups = n - k = 7 - 3 = 4.",
+    "explanationLine": 1616
+  },
+  {
+    "id": "u6-L5-Q2",
+    "type": "multiple-choice",
+    "question": "What does \"dimensional homogeneity\" mean for an equation?",
+    "options": [
+      "The equation must be dimensionless",
+      "All variables must use SI units",
+      "Every term must have the same dimensions",
+      "Only applies to fluid mechanics equations"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "A physically valid equation must have matching dimensions on both sides. You can\\",
+    "explanationLine": 1630
+  },
+  {
+    "id": "u6-L5-Q0b",
+    "type": "multiple-choice",
+    "question": "The Reynolds number compares:",
+    "options": [
+      "Gravity forces to viscous forces",
+      "Inertia forces to viscous forces",
+      "Flow speed to sound speed",
+      "Pressure forces to inertia forces"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Re = rho*v*L/mu. Large Re means inertia dominates (turbulent). Small Re means viscosity dominates (laminar).",
+    "explanationLine": 1651
+  },
+  {
+    "id": "u6-L5-Q3",
+    "type": "multiple-choice",
+    "question": "The Froude number Fr = v/sqrt(g*L) is most important for:",
+    "options": [
+      "Compressible gas dynamics",
+      "Pipe flow friction calculations",
+      "Free-surface flows and wave phenomena",
+      "Heat transfer in fluids"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The Froude number compares inertia to gravity. It governs wave patterns, ship resistance, and open-channel flows.",
+    "explanationLine": 1665
+  },
+  {
+    "id": "u6-L5-Q5",
+    "type": "true-false",
+    "question": "The Buckingham Pi theorem guarantees that the resulting dimensionless groups are unique.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The choice of repeating variables affects which Pi groups you get. Different valid choices give different (but equivalent) sets of groups.",
+    "explanationLine": 1683
+  },
+  {
+    "id": "u6-L5b-Q0a",
+    "type": "multiple-choice",
+    "question": "For a 1:10 scale ship model, which dimensionless number should be matched first?",
+    "options": [
+      "Reynolds number (viscous drag dominates)",
+      "Froude number (wave drag dominates)",
+      "Mach number (compressibility matters)",
+      "Euler number (pressure matters most)"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Ship resistance is dominated by wave-making drag at cruising speeds, so Froude number similarity is the primary requirement.",
+    "explanationLine": 1726
+  },
+  {
+    "id": "u6-L5-Q7",
+    "type": "multiple-choice",
+    "question": "Why can\\",
+    "options": [
+      "Re and Fr are always equal, so matching one matches both",
+      "Matching both requires changing fluid properties to impossible values",
+      "It\\",
+      "Re doesn\\"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "For a 1:10 model matching Fr, you\\",
+    "explanationLine": 1740
+  },
+  {
+    "id": "u6-L5-Q8",
+    "type": "multiple-choice",
+    "question": "A wind tunnel tests a 1:5 scale car model. To match Re, the wind speed in the tunnel must be:",
+    "options": [
+      "5 times the real car speed (if same fluid)",
+      "1/5 of the real car speed",
+      "The same as the real car speed",
+      "25 times the real car speed"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Re = V*L/nu. With L_model = L/5 and same fluid (same nu), you need V_model = 5*V_real to keep Re constant.",
+    "explanationLine": 1754
+  },
+  {
+    "id": "u6-L5b-Q0b",
+    "type": "true-false",
+    "question": "In practice, it\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Matching all dimensionless numbers simultaneously usually requires impossible fluid properties. Engineers match the dominant one and correct for the rest.",
+    "explanationLine": 1769
+  },
+  {
+    "id": "u6-L5-Q9",
+    "type": "multiple-choice",
+    "question": "Geometric similarity means the model and prototype have the same:",
+    "options": [
+      "Material",
+      "Size (1:1 scale)",
+      "Shape (all length ratios are equal)",
+      "Surface roughness in absolute terms"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Geometric similarity means every dimension is scaled by the same factor. The shape is identical; only the size differs.",
+    "explanationLine": 1783
+  },
+  {
+    "id": "u6-L5-Q11",
+    "type": "multiple-choice",
+    "question": "What is the Weber number, and when is it important?",
+    "options": [
+      "We = P/(0.5*rho*V2); important for pressure drag",
+      "We = V/sqrt(g*L); important for ship wave resistance",
+      "We = V*L/nu; important for pipe flow transition",
+      "We = rho*V2*L/sigma; important when surface tension matters (droplets, thin films)"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The Weber number compares inertia to surface tension. It\\",
+    "explanationLine": 1807
+  },
+  {
+    "id": "u6-L5-Q12",
+    "type": "multiple-choice",
+    "question": "A 1:20 scale model of a river dam is tested in a lab. If the flow velocity in the model is 0.5 m/s, what is the predicted prototype velocity? (matching Fr)",
+    "options": [
+      "V_proto = 0.5 / 20 = 0.025 m/s",
+      "V_proto = 0.5 * 20 = 10 m/s",
+      "V_proto = 0.5 * sqrt(20) = 2.24 m/s",
+      "V_proto = 0.5 m/s (same velocity)"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Froude similarity: V_proto/V_model = sqrt(L_proto/L_model) = sqrt(20) = 4.47. So V_proto = 0.5 * 4.47 = 2.24 m/s.",
+    "explanationLine": 1821
+  },
+  {
+    "id": "u6-L5c-Q0a",
+    "type": "true-false",
+    "question": "The drag coefficient Cd is a dimensionless number.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Yes. Cd = F_D/(0.5*rho*V2*A). Force divided by (pressure * area) is dimensionless.",
+    "explanationLine": 1849
+  },
+  {
+    "id": "u6-L5-Q13",
+    "type": "multiple-choice",
+    "question": "Why does a golf ball have dimples?",
+    "options": [
+      "Dimples reduce surface area, lowering friction drag",
+      "Dimples increase the ball\\",
+      "Dimples trigger turbulent boundary layer, reducing pressure drag",
+      "Dimples are purely aesthetic with no aerodynamic effect"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The dimples trip the boundary layer to turbulent, which stays attached longer, reducing the wake and overall drag. This is the same physics as the drag crisis on a smooth sphere.",
+    "explanationLine": 1863
+  },
+  {
+    "id": "u6-L5-Q14",
+    "type": "multiple-choice",
+    "question": "The power required to mix a fluid in a tank depends on impeller diameter D, speed N, fluid density rho, and viscosity mu. How many Pi groups?",
+    "options": [
+      "1 group",
+      "3 groups",
+      "5 groups",
+      "2 groups (5 variables, 3 dimensions)"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "n = 5 variables (P, D, N, rho, mu), k = 3 dimensions (M, L, T). Pi groups = 5 - 3 = 2. These are typically the power number and the impeller Reynolds number.",
+    "explanationLine": 1877
+  },
+  {
+    "id": "u6-L5c-Q0b",
+    "type": "multiple-choice",
+    "question": "The Moody chart is an example of dimensional analysis because it plots:",
+    "options": [
+      "Flow rate vs pipe diameter",
+      "Pressure drop vs pipe length",
+      "Dimensionless friction factor vs Reynolds number and relative roughness",
+      "Velocity vs Reynolds number"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The Moody chart uses three dimensionless quantities (f, Re, epsilon/D), which is why it works for any fluid, any pipe size, and any speed.",
+    "explanationLine": 1898
+  },
+  {
+    "id": "u6-L5-Q15",
+    "type": "multiple-choice",
+    "question": "Dimensional analysis tells us that Cd for a sphere depends on Re. Can it predict the exact shape of the Cd vs Re curve?",
+    "options": [
+      "The relationship is always linear",
+      "Yes, the Buckingham Pi theorem gives the complete function",
+      "Only for laminar flow where theory gives exact solutions",
+      "No, you need experiments or CFD to find the actual relationship"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Dimensional analysis identifies WHICH groups matter (Cd = f(Re)), but not the FORM of f. You still need experiments or computation for the actual curve.",
+    "explanationLine": 1912
+  },
+  {
+    "id": "u6-L5-Q30",
+    "type": "multiple-choice",
+    "question": "What causes the \"drag crisis\" on a smooth sphere, and how does it relate to dimensional analysis?",
+    "options": [
+      "The sphere deforms at high velocity, becoming more streamlined",
+      "Boundary layer transitions from laminar to turbulent at a critical Re",
+      "Compressibility effects cause drag to drop",
+      "The drag crisis is a measurement artifact"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Dimensional analysis says Cd = f(Re) for a smooth sphere, but can\\",
+    "explanationLine": 1942
+  },
+  {
+    "id": "u6-L5-Q17",
+    "type": "multiple-choice",
+    "question": "The Strouhal number St = f*L/V governs:",
+    "options": [
+      "Wave speed in open channels",
+      "Friction factor in turbulent pipe flow",
+      "Vortex shedding frequency behind bluff bodies",
+      "Heat transfer rate from a surface"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "The Strouhal number relates vortex shedding frequency to flow speed and body size. For a cylinder, St is about 0.2 over a wide range of Re.",
+    "explanationLine": 1956
+  }
+]

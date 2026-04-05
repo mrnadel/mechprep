@@ -92,6 +92,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const [hasSelection, setHasSelection] = useState(false);
   const [isCalcOpen, setIsCalcOpen] = useState(false);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
+  const [lastSelectedIndex, setLastSelectedIndex] = useState<number | undefined>(undefined);
   const [xpGain, setXpGain] = useState(0);
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
   const questionRef = useRef<QuestionCardHandle>(null);
@@ -372,7 +373,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   }, [currentQuestion]);
 
   const handleAnswer = useCallback(
-    (correct: boolean) => {
+    (correct: boolean, selectedOriginalIndex?: number) => {
       if (!currentQuestion) return;
       if (adapter) {
         adapter.submitAnswer(currentQuestion.id, correct);
@@ -386,10 +387,12 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
             difficulty: 'intermediate',
             correct,
             source: 'course',
+            selectedIndex: selectedOriginalIndex,
           });
         }
       }
       setLastAnswerCorrect(correct);
+      setLastSelectedIndex(selectedOriginalIndex);
       if (correct) {
         setXpGain((prev) => prev + (isDoubleXp ? 20 : 10));
       } else if (!adapter?.noHearts) {
@@ -410,6 +413,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
 
   const handleContinue = useCallback(() => {
     setLastAnswerCorrect(null);
+    setLastSelectedIndex(undefined);
     setHasSelection(false);
     if (isLastQuestion) {
       adapter ? adapter.complete() : _completeLesson();
@@ -569,10 +573,17 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const { speak: narrateText, stop: stopNarration } = useNarration();
   useEffect(() => {
     if (!displayQuestion) return;
-    // Build the text to narrate: question text + hint if present
-    let text = displayQuestion.question || '';
-    if (displayQuestion.hint) text += '. ' + displayQuestion.hint;
-    narrateText(text);
+    const parts: string[] = [];
+    if (displayQuestion.question) parts.push(displayQuestion.question);
+    if (displayQuestion.type === 'teaching') {
+      // Teaching cards show everything at once
+      if (displayQuestion.explanation) parts.push(displayQuestion.explanation);
+      if (displayQuestion.hint) parts.push(displayQuestion.hint);
+    } else {
+      // Regular questions: only narrate hint (visible helper text), not explanation (post-answer)
+      if (displayQuestion.hint) parts.push(displayQuestion.hint);
+    }
+    narrateText(parts.join('. '));
     return () => stopNarration();
   }, [displayQuestion?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -1143,8 +1154,29 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   Answer: <GlossaryText text={getCorrectAnswerDisplay()} />
                 </p>
               )}
+              {/* Distractor-specific explanation (why their choice was wrong) */}
+              {!lastAnswerCorrect && lastSelectedIndex !== undefined && displayQuestion.distractorExplanations?.[lastSelectedIndex] && (
+                <motion.p
+                  initial={{ opacity: 0, y: 4 }}
+                  animate={{ opacity: 0.85, y: 0 }}
+                  transition={{ delay: 0.15, duration: 0.25 }}
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 600,
+                    color: '#EA2B2B',
+                    margin: '6px 0 0',
+                    lineHeight: 1.4,
+                  }}
+                >
+                  <GlossaryText text={displayQuestion.distractorExplanations[lastSelectedIndex]} />
+                </motion.p>
+              )}
+              {/* General explanation (why the correct answer is right) */}
               {displayQuestion.explanation && (
-                <p
+                <motion.p
+                  initial={!lastAnswerCorrect && displayQuestion.distractorExplanations?.[lastSelectedIndex!] ? { opacity: 0, y: 4 } : undefined}
+                  animate={{ opacity: 0.75, y: 0 }}
+                  transition={!lastAnswerCorrect && displayQuestion.distractorExplanations?.[lastSelectedIndex!] ? { delay: 0.35, duration: 0.25 } : undefined}
                   style={{
                     fontSize: 13,
                     fontWeight: 600,
@@ -1155,7 +1187,7 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
                   }}
                 >
                   <GlossaryText text={(userCountry && displayQuestion.variants?.[userCountry]) || displayQuestion.explanation} />
-                </p>
+                </motion.p>
               )}
               <FlagButton contentType={flagContentType} contentId={displayQuestion.id} hasGraphic={!!displayQuestion.diagram} />
             </div>

@@ -1,0 +1,265 @@
+{
+  "psy-sec7-u1-L1-Q1": { "1": "Emotions are well-established as multi-component responses involving body, thoughts, and behavior together." },
+  "psy-sec7-u1-L1-Q2": {
+    "1": "Emotions are brief reactions, not permanent traits you are born with.",
+    "2": "Emotions are short-lived, lasting seconds to minutes, not weeks.",
+    "3": "Emotions involve thoughts and behavior alongside physical changes, not just reflexes."
+  },
+  "psy-sec7-u1-L1-Q5": {
+    "1": "Emotions involve both conscious and unconscious processing; they are not purely unconscious.",
+    "2": "Conscious thought does not cause emotions to disappear; it helps you understand and regulate them.",
+    "3": "Emotions are real physiological events, not retrospective fabrications."
+  },
+  "psy-sec7-u1-L1-Q6": {
+    "1": "Behavioral expression involves outward actions like running or screaming, not internal body changes.",
+    "2": "Subjective experience is your conscious feeling, not automatic physical responses like sweating.",
+    "3": "Social display rules govern how you show emotions to others, not involuntary body reactions."
+  },
+  "psy-sec7-u1-L2-Q1": { "1": "Ekman's cross-cultural research confirmed that basic emotions are recognized universally across cultures." },
+  "psy-sec7-u1-L2-Q2": {
+    "0": "Three is too few; Ekman identified more basic emotions than just three.",
+    "2": "Ten is too many; Ekman's original list included exactly six basic emotions.",
+    "3": "Fifteen far exceeds the number Ekman identified as universally recognized basic emotions."
+  },
+  "psy-sec7-u1-L2-Q5": {
+    "0": "Self-conscious emotions occur during waking life; being awake is not what makes them special.",
+    "2": "Self-conscious means requiring self-awareness, not physical self-consciousness about appearance.",
+    "3": "Guilt and shame are real emotions with measurable psychological and physiological effects."
+  },
+  "psy-sec7-u1-L2-Q6": {
+    "1": "Even very young children experience basic emotions like sadness and anger.",
+    "2": "Two-year-olds lack the self-awareness needed for embarrassment; they are not suppressing it.",
+    "3": "Self-conscious emotions develop later; toddlers do not yet have the full range."
+  },
+  "psy-sec7-u1-L3-Q1": { "1": "Moods are defined by their longer duration and often unclear triggers, distinguishing them from brief emotions." },
+  "psy-sec7-u1-L3-Q3": {
+    "1": "Emotions are typically briefer than feelings; the key distinction is that feelings involve conscious awareness.",
+    "2": "Feelings occur throughout life, not only in children.",
+    "3": "Both emotions and feelings can be positive or negative; neither is exclusively one valence."
+  },
+  "psy-sec7-u1-L3-Q5": {
+    "1": "Disgust is a basic emotion triggered by specific stimuli, not an ongoing irritable state.",
+    "2": "A feeling without an emotion is not possible; feelings arise from emotions, not independently.",
+    "3": "The snap at a coworker was an emotional response influenced by mood, not a reflex."
+  },
+  "psy-sec7-u1-L4-Q1": { "1": "Disgust evolved precisely to protect against harmful substances; this is well-supported by evolutionary research." },
+  "psy-sec7-u1-L4-Q3": {
+    "0": "Patients with emotional damage became less emotional, not extremely emotional.",
+    "2": "These patients retained their ability to think and speak; only decision-making was impaired.",
+    "3": "Without emotions, decision-making got worse, not faster or better."
+  },
+  "psy-sec7-u1-L4-Q5": {
+    "0": "Social emotions enhance rather than weaken clear thinking by guiding cooperative behavior.",
+    "2": "Social emotions serve essential functions for relationship maintenance despite causing some distress.",
+    "3": "Social emotions evolved to promote cooperation, not to cause self-punishment."
+  },
+  "psy-sec7-u1-L4-Q6": {
+    "1": "There was no physical danger in this scenario; the emotion is social guilt, not fear.",
+    "2": "Disgust involves aversion to contamination or offense, not a minor accidental bump.",
+    "3": "No anger is described here; the scenario involves an accident followed by social repair."
+  },
+  "psy-sec7-u2-L1-Q1": { "1": "James-Lange theory explicitly states that body responses come first and the brain interprets them as emotions." },
+  "psy-sec7-u2-L1-Q2": {
+    "1": "James-Lange says emotion follows the body reaction, not the other way around.",
+    "2": "You cannot feel fear before encountering the bear; the stimulus comes first.",
+    "3": "You must perceive the bear before your body can react; the body does not react to nothing."
+  },
+  "psy-sec7-u2-L1-Q3": {
+    "0": "If all emotions felt the same, you could not distinguish fear from anger through body signals alone.",
+    "1": "James-Lange says the body reacts first and the brain interprets, not that the brain directly controls all reactions.",
+    "3": "Emotions happen during waking life in response to events, not only during sleep."
+  },
+  "psy-sec7-u2-L1-Q6": {
+    "1": "James-Lange says body reactions precede emotional awareness, not the reverse.",
+    "2": "Cannon-Bard predicts simultaneous occurrence, not one before the other.",
+    "3": "The body sensations were real, not imagined after labeling the emotion."
+  },
+  "psy-sec7-u2-L2-Q1": { "1": "Cannon-Bard explicitly proposes that physiological responses and emotional experiences occur simultaneously." },
+  "psy-sec7-u2-L2-Q2": {
+    "0": "The hippocampus handles memory, not the relay of emotional signals.",
+    "2": "The cerebellum coordinates movement, not emotional processing.",
+    "3": "The brain stem handles basic life functions, not the simultaneous relay Cannon-Bard describes."
+  },
+  "psy-sec7-u2-L2-Q5": {
+    "0": "Seeing a snake then body reacts then fear is the James-Lange sequence, not Cannon-Bard.",
+    "1": "Feeling afraid before the body reacts does not match any major theory of emotion.",
+    "3": "Deciding to feel afraid and then looking for causes is not how any emotion theory works."
+  },
+  "psy-sec7-u2-L2-Q6": {
+    "1": "James-Lange predicts the body responds first with a delay before emotion, not simultaneous occurrence.",
+    "2": "Simultaneous emotion and body response is possible and is exactly what Cannon-Bard predicts.",
+    "3": "The two theories make opposite predictions; they do not predict the same outcome."
+  },
+  "psy-sec7-u2-L3-Q1": { "1": "Two-factor theory explicitly requires both physical arousal and a cognitive label for emotional experience." },
+  "psy-sec7-u2-L3-Q3": {
+    "1": "Uninformed participants did experience emotions; they adopted the mood around them.",
+    "2": "Participants showed different emotions depending on context, not universal anger.",
+    "3": "Epinephrine is a stimulant that causes arousal, not sleep."
+  },
+  "psy-sec7-u2-L3-Q5": {
+    "1": "Cannon-Bard does not address mislabeling of arousal from one source as another emotion.",
+    "2": "James-Lange says body response comes first but does not specifically explain mislabeling across sources.",
+    "3": "Classical conditioning involves learned associations from repeated pairings, not one-time arousal transfer."
+  },
+  "psy-sec7-u2-L3-Q6": {
+    "0": "The interviewer was the same person in both conditions; objective attractiveness was identical.",
+    "2": "The scary bridge created fear and arousal, not calm and confidence.",
+    "3": "The men were unaware of the arousal transfer; they were not performing for the interviewer."
+  },
+  "psy-sec7-u2-L4-Q1": { "1": "Lazarus explicitly argued that your cognitive interpretation of an event determines which emotion you feel." },
+  "psy-sec7-u2-L4-Q2": {
+    "1": "A brain scan is a measurement tool, not a psychological concept about emotional interpretation.",
+    "2": "Processing speed is about cognition in general, not emotional interpretation of personal significance.",
+    "3": "Emotional intelligence tests measure emotional skills, not the appraisal process itself."
+  },
+  "psy-sec7-u2-L4-Q4": {
+    "1": "People vary in emotional intensity, but the different reactions here are best explained by different appraisals.",
+    "2": "Both students received the same grade from the same teacher; grading fairness is not the issue.",
+    "3": "Body awareness is about interoception, not about how expectations shape emotional responses to grades."
+  },
+  "psy-sec7-u2-L4-Q6": {
+    "0": "Misattribution involves mislabeling arousal from one source as another; reframing stress as excitement is deliberate reappraisal.",
+    "2": "James-Lange involves body reactions causing emotions, not deliberate reinterpretation of situations.",
+    "3": "Classical conditioning involves learned associations, not conscious reframing of how you view a situation."
+  },
+  "psy-sec7-u3-L1-Q1": { "1": "The amygdala is well-established as the brain's primary threat detection and fear processing center." },
+  "psy-sec7-u3-L1-Q3": {
+    "1": "The low road is fast because it skips regions, not because it sends signals through every one.",
+    "2": "The low road operates during waking life whenever threats are detected, not only during sleep.",
+    "3": "The low road is fast but imprecise; the high road is slower but more accurate."
+  },
+  "psy-sec7-u3-L1-Q5": {
+    "1": "The patient's fearlessness is due to brain damage, not to fear being entirely a learned behavior.",
+    "2": "The amygdala processes fear faster than the cortex; the cortex alone is insufficient.",
+    "3": "The patient showed consistent fearlessness across many situations, ruling out pretending."
+  },
+  "psy-sec7-u3-L1-Q6": {
+    "1": "The high road is slower and more accurate; it corrected the initial low-road false alarm.",
+    "2": "The high road ultimately identified the object as harmless, contradicting the low road's alarm.",
+    "3": "The instant jump reaction clearly involved the brain's rapid threat-detection pathway."
+  },
+  "psy-sec7-u3-L2-Q1": { "1": "The PFC is well-established as a key regulator of emotional responses, evaluating their appropriateness." },
+  "psy-sec7-u3-L2-Q2": {
+    "1": "Emotions do not disappear; they are simply harder to regulate with an underdeveloped PFC.",
+    "2": "The amygdala works just fine in teenagers; the issue is insufficient PFC regulation.",
+    "3": "Teenagers feel fear normally; their issue is controlling emotional responses, not lacking fear."
+  },
+  "psy-sec7-u3-L2-Q5": {
+    "1": "The hippocampus stores memories; it does not cause impulsive text responses.",
+    "2": "The thalamus relays sensory information; it does not block messages from reaching the cortex.",
+    "3": "The cerebellum coordinates movement; it was not involved in the emotional text exchange."
+  },
+  "psy-sec7-u3-L2-Q6": {
+    "1": "Negative emotions cannot be permanently eliminated; they serve important survival functions.",
+    "2": "Feeling no emotions at all would impair decision-making, as Damasio's research showed.",
+    "3": "The PFC regulates emotions thoughtfully; it does not speed up reactions beyond the amygdala."
+  },
+  "psy-sec7-u3-L3-Q1": { "1": "Serotonin's role in mood regulation is well-established; low levels are linked to depression." },
+  "psy-sec7-u3-L3-Q3": {
+    "1": "Deep relaxation and sleep involve GABA and melatonin, not dopamine.",
+    "2": "Sadness and grief involve reduced dopamine, serotonin changes, and other systems.",
+    "3": "Fear and panic are primarily driven by the amygdala and norepinephrine, not dopamine."
+  },
+  "psy-sec7-u3-L3-Q6": {
+    "1": "Excessive serotonin can cause emotional blunting, but the specific loss of excitement points to dopamine.",
+    "2": "Increased endorphins would cause pain relief and euphoria, not emotional flatness.",
+    "3": "All psychiatric medications work through neurotransmitter systems; the question is which one."
+  },
+  "psy-sec7-u3-L4-Q1": { "1": "Emotion regulation involves a distributed network of brain regions; no single area works alone." },
+  "psy-sec7-u3-L4-Q2": {
+    "1": "The amygdala does not shut down the PFC; during reappraisal the PFC actually dampens amygdala activity.",
+    "2": "The hippocampus stores memories but does not delete them during emotional regulation.",
+    "3": "The thalamus continues relaying sensory input during emotional regulation; it does not block signals."
+  },
+  "psy-sec7-u3-L4-Q5": {
+    "1": "Personality disorders are distinct clinical conditions, not simply the result of work stress.",
+    "2": "The hippocampus does not erase positive memories; stress affects PFC-amygdala balance.",
+    "3": "The thalamus continues normal sensory relay; snapping at employees involves PFC-amygdala dysfunction."
+  },
+  "psy-sec7-u4-L1-Q2": {
+    "1": "Fear is one of Ekman's basic emotions; jealousy, not fear, is excluded from the list.",
+    "2": "Disgust is one of Ekman's basic emotions and belongs on the list.",
+    "3": "Surprise is one of Ekman's basic emotions and belongs on the list."
+  },
+  "psy-sec7-u4-L1-Q5": {
+    "0": "James-Lange focuses on body reactions causing emotions, not on different interpretations of the same event.",
+    "1": "Cannon-Bard predicts simultaneous body-emotion responses but does not explain why different emotions arise from the same event.",
+    "3": "Schachter-Singer involves labeling arousal, but the key here is that different appraisals produced different emotions."
+  },
+  "psy-sec7-u4-L1-Q6": { "1": "Cognitive reappraisal is exactly this: changing your interpretation to shift your emotional response." },
+  "psy-sec7-u4-L1-Q7": {
+    "1": "Emotional brain damage impairs decision-making; it does not increase intelligence.",
+    "2": "Emotional brain damage does not erase all memories; the hippocampus handles memory storage.",
+    "3": "Physical reflexes are controlled by the spinal cord and brain stem, not emotional brain areas."
+  },
+  "psy-sec7-u4-L2-Q2": {
+    "1": "The PFC regulates emotions deliberately; it does not cause instant ducking responses.",
+    "2": "The hippocampus stores memories but does not delete them; it provides context for emotional responses.",
+    "3": "Dopamine drives motivation, not startle responses to sudden loud sounds."
+  },
+  "psy-sec7-u4-L2-Q3": {
+    "1": "Chronic stress does the opposite: it shrinks the PFC and makes the amygdala more reactive.",
+    "2": "Chronic stress has measurable, well-documented effects on brain structure.",
+    "3": "Chronic stress affects the PFC and amygdala, not the cerebellum or motor cortex."
+  },
+  "psy-sec7-u4-L2-Q6": {
+    "1": "Serotonin affects mood stability, but loss of excitement and motivation specifically points to dopamine.",
+    "2": "Endorphin overproduction would cause euphoria, not emotional flatness and lack of motivation.",
+    "3": "The hippocampus produces memories, not motivational drive; this is a neurotransmitter issue."
+  },
+  "psy-sec7-u4-L2-Q7": { "1": "Patient S.M. is a well-documented case demonstrating the amygdala's essential role in fear processing." },
+  "psy-sec7-u5-L1-Q1": { "1": "Intrinsic motivation is defined by doing things for personal enjoyment or meaning, not external rewards." },
+  "psy-sec7-u5-L1-Q3": {
+    "1": "The overjustification effect is about motivation decreasing, not skills getting worse from practice.",
+    "2": "Excessive praise can help performance; the overjustification effect specifically involves tangible external rewards.",
+    "3": "The overjustification effect predicts the opposite: internal motivation decreases when pay is added."
+  },
+  "psy-sec7-u5-L1-Q5": {
+    "1": "She loved reading before the program, demonstrating clear intrinsic motivation.",
+    "2": "Book difficulty was not mentioned; the payment program caused the motivational shift.",
+    "3": "Her extrinsic motivation ended when payment stopped, causing her to read even less than before."
+  },
+  "psy-sec7-u5-L1-Q6": {
+    "1": "Adding external rewards to something already deeply enjoyed risks the overjustification effect.",
+    "2": "Extrinsic motivation cannot permanently replace intrinsic motivation; that would undermine long-term engagement.",
+    "3": "If an activity is already highly rewarding, adding external rewards risks reducing that natural enjoyment."
+  },
+  "psy-sec7-u5-L2-Q1": { "1": "Drive theory explicitly proposes that biological needs create tension that motivates behavior to reduce it." },
+  "psy-sec7-u5-L2-Q4": {
+    "1": "Drive theory has recognized limitations; it cannot explain all human motivation.",
+    "2": "Primary drives like hunger and thirst clearly do motivate behavior.",
+    "3": "Homeostasis is a well-established biological process essential for survival."
+  },
+  "psy-sec7-u5-L2-Q5": {
+    "1": "Drive reduction is about decreasing tension, not seeking more stimulation.",
+    "2": "There is no biological need for speed; thrill-seeking is about optimal arousal levels.",
+    "3": "Homeostasis maintains internal balance; it does not require adrenaline for its own sake."
+  },
+  "psy-sec7-u5-L2-Q6": {
+    "1": "No primary biological drive was mentioned; the restlessness is about arousal level, not hunger or thirst.",
+    "2": "Overjustification involves external rewards reducing intrinsic motivation, not restlessness from boredom.",
+    "3": "Body temperature was not mentioned; the scenario describes social stimulation seeking."
+  },
+  "psy-sec7-u5-L3-Q1": { "1": "Maslow's hierarchy explicitly proposes that basic survival needs take priority over higher-level needs." },
+  "psy-sec7-u5-L3-Q5": {
+    "1": "Basic survival needs are fundamental human requirements; research universally confirms their importance.",
+    "2": "Maslow believed self-actualization is achievable, just rare; he did not consider it impossible.",
+    "3": "While cultural emphasis varies, the hierarchy has been studied and applied across many cultures."
+  },
+  "psy-sec7-u5-L3-Q6": {
+    "1": "She is clearly thinking about and pursuing art, which is a higher-level need.",
+    "2": "No one can be fully self-actualized while basic physiological needs like food go unmet.",
+    "3": "Her safety needs are not the focus; she is prioritizing creative expression over food."
+  },
+  "psy-sec7-u5-L4-Q1": { "1": "SDT identifies exactly these three core psychological needs as essential for intrinsic motivation." },
+  "psy-sec7-u5-L4-Q3": {
+    "1": "Feeling forced typically reduces performance rather than improving it.",
+    "2": "Feeling controlled undermines autonomy, which can reduce competence motivation over time.",
+    "3": "Being forced to do something does not fulfill relatedness needs; it may damage social connections."
+  },
+  "psy-sec7-u5-L4-Q5": {
+    "1": "She is described as skilled, so competence is not the issue.",
+    "2": "She has great coworkers, so relatedness is satisfied.",
+    "3": "The scenario describes specific unmet needs, not full satisfaction."
+  }
+}

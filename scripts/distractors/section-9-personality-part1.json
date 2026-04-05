@@ -1,0 +1,305 @@
+{
+  "psy-sec9-u1-L1-Q1": {
+    "1": "Personality captures what stays stable about a person across different situations and over time."
+  },
+  "psy-sec9-u1-L1-Q2": {
+    "0": "This is incorrect because personality is defined by consistent patterns, not temporary moods or single traits like intelligenc",
+    "2": "This is incorrect because personality is defined by consistent patterns, not temporary moods or single traits like intelligenc",
+    "3": "This is incorrect because personality is defined by consistent patterns, not temporary moods or single traits like intelligenc"
+  },
+  "psy-sec9-u1-L1-Q3": {
+    "0": "Mood is temporary and situational. Personality is the stable, lasting pattern underneath."
+  },
+  "psy-sec9-u1-L1-Q6": {
+    "0": "This is incorrect because an inborn, consistent emotional style visible from early childhood fits the definition of temperamen",
+    "1": "This is incorrect because an inborn, consistent emotional style visible from early childhood fits the definition of temperamen",
+    "3": "This is incorrect because an inborn, consistent emotional style visible from early childhood fits the definition of temperamen"
+  },
+  "psy-sec9-u1-L2-Q1": {
+    "0": "Genetics play a role, but environment, culture, and experiences also shape personality."
+  },
+  "psy-sec9-u1-L2-Q2": {
+    "0": "This uses the absolute \"always\" which is rarely true in psychology; the reality is more nuanced.",
+    "1": "This is incorrect because identical twins share many traits but aren't perfectly matched, showing both genetics and environmen",
+    "3": "This uses the absolute \"only\" which is rarely true in psychology; the reality is more nuanced."
+  },
+  "psy-sec9-u1-L2-Q3": {
+    "0": "This is incorrect because studies consistently find that personality traits are about 40 to 60 percent heritable.",
+    "2": "This is incorrect because studies consistently find that personality traits are about 40 to 60 percent heritable.",
+    "3": "This is incorrect because studies consistently find that personality traits are about 40 to 60 percent heritable."
+  },
+  "psy-sec9-u1-L2-Q6": {
+    "0": "This is incorrect because since identical twins share 100 percent of their genes, the difference comes from non-shared environ",
+    "1": "This uses the absolute \"all\" which is rarely true in psychology; the reality is more nuanced.",
+    "3": "This is incorrect because since identical twins share 100 percent of their genes, the difference comes from non-shared environ"
+  },
+  "psy-sec9-u1-L3-Q1": {
+    "0": "Personality becomes more stable around age 30, but it can still shift gradually with life experiences."
+  },
+  "psy-sec9-u1-L3-Q2": {
+    "0": "This is incorrect because people tend to become more agreeable and cooperative as they get older.",
+    "2": "This is incorrect because people tend to become more agreeable and cooperative as they get older.",
+    "3": "This is incorrect because people tend to become more agreeable and cooperative as they get older."
+  },
+  "psy-sec9-u1-L3-Q3": {
+    "1": "Life transitions often bring gradual personality changes, especially in responsibility and emotional stability."
+  },
+  "psy-sec9-u1-L3-Q4": {
+    "0": "This uses the absolute \"completely\" which is rarely true in psychology; the reality is more nuanced.",
+    "1": "This uses the absolute \"every\" which is rarely true in psychology; the reality is more nuanced.",
+    "3": "This uses the absolute \"entirely\" which is rarely true in psychology; the reality is more nuanced."
+  },
+  "psy-sec9-u1-L4-Q1": {
+    "0": "Psychologists use structured tools like questionnaires, projective tests, and observations to measure personality."
+  },
+  "psy-sec9-u1-L4-Q2": {
+    "0": "This is incorrect because self-report questionnaires are the most widely used personality assessment tool.",
+    "2": "This is incorrect because self-report questionnaires are the most widely used personality assessment tool.",
+    "3": "This is incorrect because self-report questionnaires are the most widely used personality assessment tool."
+  },
+  "psy-sec9-u1-L4-Q5": {
+    "1": "A test can give consistent results (reliable) but still measure the wrong thing (not valid)."
+  },
+  "psy-sec9-u1-L4-Q6": {
+    "0": "This is incorrect because if scores change each time with no real change in the person, the test lacks reliability.",
+    "2": "This is incorrect because if scores change each time with no real change in the person, the test lacks reliability.",
+    "3": "This is incorrect because if scores change each time with no real change in the person, the test lacks reliability."
+  },
+  "psy-sec9-u2-L1-Q1": {
+    "1": "The id seeks immediate gratification without considering consequences or morality."
+  },
+  "psy-sec9-u2-L1-Q4": {
+    "0": "This is incorrect because according to Freud, conflict between the id and superego that the ego can't resolve creates anxiety.",
+    "2": "This is incorrect because according to Freud, conflict between the id and superego that the ego can't resolve creates anxiety.",
+    "3": "This is incorrect because according to Freud, conflict between the id and superego that the ego can't resolve creates anxiety."
+  },
+  "psy-sec9-u2-L1-Q5": {
+    "1": "This is incorrect because the impulsive \"eat it all\" is the id. The moral judgment is the superego.",
+    "2": "This is incorrect because the impulsive \"eat it all\" is the id. The moral judgment is the superego.",
+    "3": "This is incorrect because the impulsive \"eat it all\" is the id. The moral judgment is the superego."
+  },
+  "psy-sec9-u2-L1-Q6": {
+    "0": "This is incorrect because freud believed most mental processes are unconscious. The id is entirely below awareness.",
+    "1": "This is incorrect because freud believed most mental processes are unconscious. The id is entirely below awareness.",
+    "3": "This is incorrect because freud believed most mental processes are unconscious. The id is entirely below awareness."
+  },
+  "psy-sec9-u2-L2-Q1": {
+    "0": "Defense mechanisms operate unconsciously. People usually don\\'t realize they\\'re using them."
+  },
+  "psy-sec9-u2-L2-Q2": {
+    "0": "This is incorrect because defense mechanisms protect the ego by distorting or denying reality to reduce anxiety.",
+    "2": "This is incorrect because defense mechanisms protect the ego by distorting or denying reality to reduce anxiety.",
+    "3": "This is incorrect because defense mechanisms protect the ego by distorting or denying reality to reduce anxiety."
+  },
+  "psy-sec9-u2-L2-Q4": {
+    "0": "This is incorrect because creating a logical-sounding excuse to avoid the pain of rejection is rationalization.",
+    "1": "This is incorrect because creating a logical-sounding excuse to avoid the pain of rejection is rationalization.",
+    "3": "This is incorrect because creating a logical-sounding excuse to avoid the pain of rejection is rationalization."
+  },
+  "psy-sec9-u2-L3-Q1": {
+    "1": "Freud placed enormous importance on early childhood experiences in shaping personality."
+  },
+  "psy-sec9-u2-L3-Q4": {
+    "0": "This is incorrect because oral fixation involves behaviors focused on the mouth, like smoking, overeating, or nail biting.",
+    "2": "This is incorrect because oral fixation involves behaviors focused on the mouth, like smoking, overeating, or nail biting.",
+    "3": "This is incorrect because oral fixation involves behaviors focused on the mouth, like smoking, overeating, or nail biting."
+  },
+  "psy-sec9-u2-L3-Q5": {
+    "0": "This is incorrect because the main critique is that psychosexual stages aren't falsifiable.",
+    "2": "This is incorrect because the main critique is that psychosexual stages aren't falsifiable.",
+    "3": "This is incorrect because the main critique is that psychosexual stages aren't falsifiable."
+  },
+  "psy-sec9-u2-L3-Q6": {
+    "0": "This is incorrect because freud linked excessive orderliness and control to anal fixation, where toilet training conflicts wer",
+    "2": "This is incorrect because freud linked excessive orderliness and control to anal fixation, where toilet training conflicts wer",
+    "3": "This is incorrect because freud linked excessive orderliness and control to anal fixation, where toilet training conflicts wer"
+  },
+  "psy-sec9-u2-L4-Q1": {
+    "0": "Neo-Freudians kept the concept of the unconscious but shifted focus away from sexual drives."
+  },
+  "psy-sec9-u2-L4-Q2": {
+    "0": "This is incorrect because adler believed the drive to overcome feelings of inferiority was the main motivator of personality.",
+    "2": "This is incorrect because adler believed the drive to overcome feelings of inferiority was the main motivator of personality.",
+    "3": "This is incorrect because adler believed the drive to overcome feelings of inferiority was the main motivator of personality."
+  },
+  "psy-sec9-u2-L4-Q5": {
+    "0": "This uses the absolute \"entirely\" which is rarely true in psychology; the reality is more nuanced.",
+    "2": "This uses the absolute \"all\" which is rarely true in psychology; the reality is more nuanced.",
+    "3": "This is incorrect because horney pushed back against Freud's biological determinism, emphasizing culture and society."
+  },
+  "psy-sec9-u3-L1-Q1": {
+    "1": "OCEAN stands for Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism."
+  },
+  "psy-sec9-u3-L1-Q3": {
+    "0": "Each trait is a continuous spectrum. Most people score somewhere in the middle."
+  },
+  "psy-sec9-u3-L1-Q4": {
+    "0": "This is incorrect because the Big Five has been validated across cultures, languages, and decades of research.",
+    "2": "This is incorrect because the Big Five has been validated across cultures, languages, and decades of research.",
+    "3": "This uses the absolute \"only\" which is rarely true in psychology; the reality is more nuanced."
+  },
+  "psy-sec9-u3-L1-Q5": {
+    "0": "This is incorrect because the lexical hypothesis led researchers to analyze dictionary words and discover they clustered into ",
+    "2": "This is incorrect because the lexical hypothesis led researchers to analyze dictionary words and discover they clustered into ",
+    "3": "This is incorrect because the lexical hypothesis led researchers to analyze dictionary words and discover they clustered into "
+  },
+  "psy-sec9-u3-L2-Q1": {
+    "1": "Openness involves curiosity, imagination, and a willingness to explore new experiences."
+  },
+  "psy-sec9-u3-L2-Q2": {
+    "0": "This is incorrect because preferring routine and disliking novelty is characteristic of low openness.",
+    "1": "This is incorrect because preferring routine and disliking novelty is characteristic of low openness.",
+    "3": "This is incorrect because preferring routine and disliking novelty is characteristic of low openness."
+  },
+  "psy-sec9-u3-L2-Q3": {
+    "1": "Research consistently shows conscientious people perform better at work across many different jobs."
+  },
+  "psy-sec9-u3-L2-Q6": {
+    "0": "This is incorrect because extreme organization, planning, and reliability are hallmarks of high conscientiousness.",
+    "1": "This is incorrect because extreme organization, planning, and reliability are hallmarks of high conscientiousness.",
+    "3": "This is incorrect because extreme organization, planning, and reliability are hallmarks of high conscientiousness."
+  },
+  "psy-sec9-u3-L3-Q1": {
+    "0": "Introversion isn\\'t about disliking people. It\\'s about preferring less stimulation and needing alone time to recharge."
+  },
+  "psy-sec9-u3-L3-Q2": {
+    "0": "This is incorrect because the core difference is about social energy.",
+    "1": "This is incorrect because the core difference is about social energy.",
+    "3": "This is incorrect because the core difference is about social energy."
+  },
+  "psy-sec9-u3-L3-Q3": {
+    "0": "Low agreeableness means someone is more competitive and skeptical."
+  },
+  "psy-sec9-u3-L3-Q5": {
+    "0": "This is incorrect because being skeptical and competitive can be useful in negotiations where trust needs to be verified.",
+    "2": "This is incorrect because being skeptical and competitive can be useful in negotiations where trust needs to be verified.",
+    "3": "This is incorrect because being skeptical and competitive can be useful in negotiations where trust needs to be verified."
+  },
+  "psy-sec9-u3-L3-Q6": {
+    "1": "This is incorrect because thriving socially indicates high extraversion. Being warm and helpful indicates high agreeableness.",
+    "2": "This is incorrect because thriving socially indicates high extraversion. Being warm and helpful indicates high agreeableness.",
+    "3": "This is incorrect because thriving socially indicates high extraversion. Being warm and helpful indicates high agreeableness."
+  },
+  "psy-sec9-u3-L4-Q1": {
+    "0": "Neuroticism is a normal personality trait, not a disorder. Everyone falls somewhere on the spectrum."
+  },
+  "psy-sec9-u3-L4-Q2": {
+    "0": "This is incorrect because high neuroticism means stronger emotional reactions to stressors, including worry and anxiety.",
+    "2": "This is incorrect because high neuroticism means stronger emotional reactions to stressors, including worry and anxiety.",
+    "3": "This uses the absolute \"never\" which is rarely true in psychology; the reality is more nuanced."
+  },
+  "psy-sec9-u3-L4-Q3": {
+    "1": "While often seen negatively, high neuroticism can enhance vigilance and empathy."
+  },
+  "psy-sec9-u3-L4-Q6": {
+    "1": "This is incorrect because worrying a lot is high neuroticism.",
+    "2": "This is incorrect because worrying a lot is high neuroticism.",
+    "3": "This is incorrect because worrying a lot is high neuroticism."
+  },
+  "psy-sec9-u4-L1-Q1": {
+    "1": "Freud emphasized hidden motives, while the Big Five model measures observable patterns."
+  },
+  "psy-sec9-u4-L1-Q4": {
+    "0": "This is incorrect because the Big Five has the strongest empirical support across cultures and decades of research.",
+    "2": "This is incorrect because the Big Five has the strongest empirical support across cultures and decades of research.",
+    "3": "This is incorrect because the Big Five has the strongest empirical support across cultures and decades of research."
+  },
+  "psy-sec9-u4-L1-Q6": {
+    "0": "This is incorrect because traits describe behavior patterns, while psychodynamic theory offers insight into underlying motives.",
+    "2": "This uses the absolute \"all\" which is rarely true in psychology; the reality is more nuanced.",
+    "3": "This is incorrect because traits describe behavior patterns, while psychodynamic theory offers insight into underlying motives."
+  },
+  "psy-sec9-u4-L1-Q7": {
+    "0": "This is incorrect because standardized self-report questionnaires that measure personality dimensions are a trait approach too",
+    "2": "This is incorrect because standardized self-report questionnaires that measure personality dimensions are a trait approach too",
+    "3": "This is incorrect because standardized self-report questionnaires that measure personality dimensions are a trait approach too"
+  },
+  "psy-sec9-u4-L2-Q1": {
+    "0": "This is incorrect because freud would interpret extreme generosity after neglect as reaction formation: doing the opposite of ",
+    "2": "This is incorrect because freud would interpret extreme generosity after neglect as reaction formation: doing the opposite of ",
+    "3": "This is incorrect because freud would interpret extreme generosity after neglect as reaction formation: doing the opposite of "
+  },
+  "psy-sec9-u4-L2-Q2": {
+    "0": "This is incorrect because a trait psychologist would describe Sam as high in extraversion (social energy) and possibly high in",
+    "2": "This is incorrect because a trait psychologist would describe Sam as high in extraversion (social energy) and possibly high in",
+    "3": "This is incorrect because a trait psychologist would describe Sam as high in extraversion (social energy) and possibly high in"
+  },
+  "psy-sec9-u4-L2-Q3": {
+    "0": "This is incorrect because each theory has strengths in different areas.",
+    "2": "This uses the absolute \"only\" which is rarely true in psychology; the reality is more nuanced.",
+    "3": "This is incorrect because each theory has strengths in different areas."
+  },
+  "psy-sec9-u4-L2-Q5": {
+    "0": "This is incorrect because adler focused on feelings of inferiority and the drive to overcome them.",
+    "2": "This is incorrect because adler focused on feelings of inferiority and the drive to overcome them.",
+    "3": "This is incorrect because adler focused on feelings of inferiority and the drive to overcome them."
+  },
+  "psy-sec9-u5-L1-Q1": {
+    "1": "When your self-concept doesn\\'t match your ideal, Rogers said this creates anxiety and unhappiness."
+  },
+  "psy-sec9-u5-L1-Q3": {
+    "0": "This uses the absolute \"only\" which is rarely true in psychology; the reality is more nuanced.",
+    "2": "This is incorrect because unconditional positive regard means valuing someone as a person regardless of their specific behavio",
+    "3": "This is incorrect because unconditional positive regard means valuing someone as a person regardless of their specific behavio"
+  },
+  "psy-sec9-u5-L1-Q4": {
+    "0": "This is incorrect because this response separates the person's worth from their performance.",
+    "2": "This is incorrect because this response separates the person's worth from their performance.",
+    "3": "This is incorrect because this response separates the person's worth from their performance."
+  },
+  "psy-sec9-u5-L1-Q5": {
+    "0": "This is incorrect because conditions of worth cause people to suppress their true selves to meet others' expectations.",
+    "2": "This is incorrect because conditions of worth cause people to suppress their true selves to meet others' expectations.",
+    "3": "This is incorrect because conditions of worth cause people to suppress their true selves to meet others' expectations."
+  },
+  "psy-sec9-u5-L2-Q1": {
+    "1": "Maslow\\'s hierarchy suggests basic needs like food and safety must be met before pursuing growth needs."
+  },
+  "psy-sec9-u5-L2-Q4": {
+    "0": "This is incorrect because when basic needs are satisfied, people naturally turn toward growth, creativity, and reaching their ",
+    "2": "This is incorrect because when basic needs are satisfied, people naturally turn toward growth, creativity, and reaching their ",
+    "3": "This is incorrect because when basic needs are satisfied, people naturally turn toward growth, creativity, and reaching their "
+  },
+  "psy-sec9-u5-L2-Q5": {
+    "0": "People can and do pursue higher needs before lower ones are fully satisfied. The hierarchy is flexible."
+  },
+  "psy-sec9-u5-L2-Q6": {
+    "0": "This is incorrect because pursuing creative expression and pushing personal boundaries reflects self-actualization.",
+    "1": "This is incorrect because pursuing creative expression and pushing personal boundaries reflects self-actualization.",
+    "2": "This is incorrect because pursuing creative expression and pushing personal boundaries reflects self-actualization."
+  },
+  "psy-sec9-u5-L3-Q1": {
+    "0": "Self-actualization is about reaching your personal potential, not about wealth or fame."
+  },
+  "psy-sec9-u5-L3-Q2": {
+    "0": "This is incorrect because self-actualized people accept themselves and others with their flaws.",
+    "2": "This uses the absolute \"all\" which is rarely true in psychology; the reality is more nuanced.",
+    "3": "This uses the absolute \"every\" which is rarely true in psychology; the reality is more nuanced."
+  },
+  "psy-sec9-u5-L3-Q5": {
+    "1": "Self-actualization is a continual journey of growth, not a finish line you cross."
+  },
+  "psy-sec9-u5-L3-Q6": {
+    "0": "This is incorrect because working for meaning and fulfillment rather than external rewards is characteristic of self-actualiza",
+    "1": "This uses the absolute \"all\" which is rarely true in psychology; the reality is more nuanced.",
+    "3": "This is incorrect because working for meaning and fulfillment rather than external rewards is characteristic of self-actualiza"
+  },
+  "psy-sec9-u5-L4-Q1": {
+    "1": "Rogers believed the fully functioning person is guided by their inner experience rather than external expectations."
+  },
+  "psy-sec9-u5-L4-Q2": {
+    "0": "This is incorrect because rogers believed unconditional positive regard allows people to develop authentically without hiding ",
+    "2": "This uses the absolute \"all\" which is rarely true in psychology; the reality is more nuanced.",
+    "3": "This is incorrect because rogers believed unconditional positive regard allows people to develop authentically without hiding "
+  },
+  "psy-sec9-u5-L4-Q5": {
+    "0": "This is incorrect because concepts like self-actualization and the fully functioning person are inspiring but difficult to mea",
+    "2": "This is incorrect because concepts like self-actualization and the fully functioning person are inspiring but difficult to mea",
+    "3": "This is incorrect because concepts like self-actualization and the fully functioning person are inspiring but difficult to mea"
+  },
+  "psy-sec9-u5-L4-Q6": {
+    "0": "This is incorrect because trusting the client's inner resources and providing supportive conditions is a hallmark of humanisti",
+    "1": "This is incorrect because trusting the client's inner resources and providing supportive conditions is a hallmark of humanisti",
+    "3": "This is incorrect because trusting the client's inner resources and providing supportive conditions is a hallmark of humanisti"
+  }
+}

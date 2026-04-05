@@ -40,6 +40,9 @@ export const finSection4Part2: Unit[] = [
             question: "Scammers often create a false sense of urgency to prevent you from thinking clearly.",
             correctAnswer: true,
             explanation: "Urgency is the scammer's most effective tool. Real banks give you time to verify and respond.",
+            distractorExplanations: {
+              1: 'This statement is actually true — urgency is the scammer\'s most effective tool. Real banks give you time to verify and respond.',
+            },
           },
           {
             id: "fin-sec4-u7-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Whether it's phishing, impersonation, or fake prizes, the emotional manipulation is the common thread.",
+            distractorExplanations: {
+              0: '"They offer free financial education" is wrong because whether it\'s phishing, impersonation, or fake prizes, the emotional manipulation is the common thread.',
+              1: '"They only happen at ATMs late at night" is wrong because whether it\'s phishing, impersonation, or fake prizes, the emotional manipulation is the common thread.',
+              3: '"They always involve small amounts under $10" is wrong because whether it\'s phishing, impersonation, or fake prizes, the emotional manipulation is the common thread.',
+            },
           },
           {
             id: "fin-sec4-u7-L1-T2",
@@ -98,6 +106,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Never provide information to an incoming caller. Hang up and call your bank directly using the official number.",
+            distractorExplanations: {
+              0: 'This choice is wrong because never provide information to an incoming caller.',
+              1: '"Ask them to hold while you look up your account number" is wrong because never provide information to an incoming caller.',
+              3: 'This choice is wrong because never provide information to an incoming caller.',
+            },
           },
         ],
       },
@@ -123,6 +136,9 @@ export const finSection4Part2: Unit[] = [
             question: "Using the same password for your bank and your social media account is fine as long as it's a strong password.",
             correctAnswer: false,
             explanation: "If your social media is hacked, the attacker now has your bank password too. Every financial account needs a unique password.",
+            distractorExplanations: {
+              0: 'This statement is actually false — if your social media is hacked, the attacker now has your bank password too. Every financial account needs a unique password.',
+            },
           },
           {
             id: "fin-sec4-u7-L2-Q2",
@@ -136,6 +152,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Password managers create strong unique passwords and store them securely so you only need to remember one master password.",
+            distractorExplanations: {
+              0: '"Write them all on a sticky note near your computer" is wrong because password managers create strong unique passwords and store them securely so you only need to remember one master pa...',
+              1: '"Use your birthday with different numbers at the end" is wrong because password managers create strong unique passwords and store them securely so you only need to remember one master pa...',
+              2: '"Memorize a complex formula and apply it to each site" is wrong because password managers create strong unique passwords and store them securely so you only need to remember one master pa...',
+            },
           },
           {
             id: "fin-sec4-u7-L2-T2",
@@ -150,6 +171,9 @@ export const finSection4Part2: Unit[] = [
             question: "Two-factor authentication makes your account harder to hack even if someone learns your password.",
             correctAnswer: true,
             explanation: "2FA adds a second barrier. Without access to your phone or authentication app, a stolen password alone isn't enough.",
+            distractorExplanations: {
+              1: 'This statement is actually true — 2FA adds a second barrier. Without access to your phone or authentication app, a stolen password alone isn\'t enough.',
+            },
           },
           {
             id: "fin-sec4-u7-L2-Q4",
@@ -191,6 +215,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Because Lisa reused passwords, all her accounts are now at risk. She needs to change every password and add 2FA immediately.",
+            distractorExplanations: {
+              0: 'This answer is too narrow — it ignores other important factors.',
+              1: '"Delete her email account to prevent further damage" is wrong because because Lisa reused passwords, all her accounts are now at risk.',
+              3: '"Wait to see if any unauthorized charges appear first" is wrong because because Lisa reused passwords, all her accounts are now at risk.',
+            },
           },
         ],
       },
@@ -216,6 +245,9 @@ export const finSection4Part2: Unit[] = [
             question: "If you notice suspicious activity on your account, you should wait a few days to see if it resolves.",
             correctAnswer: false,
             explanation: "Waiting gives criminals more time to steal your money. Act within the first hour for the best chance of recovery.",
+            distractorExplanations: {
+              0: 'This statement is actually false — waiting gives criminals more time to steal your money. Act within the first hour for the best chance of recovery.',
+            },
           },
           {
             id: "fin-sec4-u7-L3-Q2",
@@ -250,6 +282,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Consumer protection laws tie your liability to how quickly you report. Faster reporting means less financial risk for you.",
+            distractorExplanations: {
+              0: '"Banks only investigate fraud during business hours" is wrong because consumer protection laws tie your liability to how quickly you report.',
+              2: '"Banks charge a late reporting fee" is wrong because consumer protection laws tie your liability to how quickly you report.',
+              3: '"Police won\'t accept reports after 24 hours" is wrong because consumer protection laws tie your liability to how quickly you report.',
+            },
           },
           {
             id: "fin-sec4-u7-L3-Q4",
@@ -272,6 +309,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Contact the bank immediately and freeze the card. This stops further unauthorized charges while the bank investigates.",
+            distractorExplanations: {
+              0: '"Wait to see if the charges are reversed automatically" is wrong because contact the bank immediately and freeze the card.',
+              1: '"Call the store to ask about the purchases" is wrong because contact the bank immediately and freeze the card.',
+              3: '"Post about it on social media to warn friends" is wrong because contact the bank immediately and freeze the card.',
+            },
           },
           {
             id: "fin-sec4-u7-L3-Q6",
@@ -311,6 +353,9 @@ export const finSection4Part2: Unit[] = [
             question: "Identity theft only affects your bank account, not other areas of your finances.",
             correctAnswer: false,
             explanation: "Criminals can use your identity to open credit cards, take out loans, file taxes, and even commit crimes in your name.",
+            distractorExplanations: {
+              0: 'This statement is actually false — criminals can use your identity to open credit cards, take out loans, file taxes, and even commit crimes in your name.',
+            },
           },
           {
             id: "fin-sec4-u7-L4-Q2",
@@ -324,6 +369,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Social Security numbers and dates of birth are the keys to opening accounts, filing taxes, and applying for credit in your name.",
+            distractorExplanations: {
+              1: '"Your favorite color and pet\'s name" is wrong because social Security numbers and dates of birth are the keys to opening accounts, filing taxes, and applying for credit ...',
+              2: '"Your shoe size and clothing preferences" is wrong because social Security numbers and dates of birth are the keys to opening accounts, filing taxes, and applying for credit ...',
+              3: '"Your library card number" is wrong because social Security numbers and dates of birth are the keys to opening accounts, filing taxes, and applying for credit ...',
+            },
           },
           {
             id: "fin-sec4-u7-L4-T2",
@@ -344,6 +394,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A credit freeze blocks new credit applications. Your existing accounts continue to work normally.",
+            distractorExplanations: {
+              0: '"Closes all your existing credit cards" is wrong because a credit freeze blocks new credit applications.',
+              1: '"Stops you from using your debit card" is wrong because a credit freeze blocks new credit applications.',
+              2: '"Deletes your credit score permanently" is wrong because a credit freeze blocks new credit applications.',
+            },
           },
           {
             id: "fin-sec4-u7-L4-Q4",
@@ -388,6 +443,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Unauthorized accounts on your credit report are a clear sign of identity theft. Freezing credit and filing alerts should happen immediately.",
+            distractorExplanations: {
+              0: '"A bank error. He should wait for the bank to fix it." is wrong because unauthorized accounts on your credit report are a clear sign of identity theft.',
+              1: 'This choice is wrong because unauthorized accounts on your credit report are a clear sign of identity theft.',
+              2: 'This choice is wrong because unauthorized accounts on your credit report are a clear sign of identity theft.',
+            },
           },
         ],
       },
@@ -539,6 +599,9 @@ export const finSection4Part2: Unit[] = [
             question: "FDIC insurance protects your deposits if your bank goes out of business.",
             correctAnswer: true,
             explanation: "If an FDIC-insured bank fails, the FDIC steps in to make sure depositors get their insured money back.",
+            distractorExplanations: {
+              1: 'This statement is actually true — if an FDIC-insured bank fails, the FDIC steps in to make sure depositors get their insured money back.',
+            },
           },
           {
             id: "fin-sec4-u8-L1-Q2",
@@ -583,6 +646,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "FDIC insures deposit accounts only. Stocks and other investments can lose value and are not protected by FDIC.",
+            distractorExplanations: {
+              0: '"A checking account with $500" is wrong because FDIC insures deposit accounts only.',
+              1: '"A savings account with $10,000" is wrong because FDIC insures deposit accounts only.',
+              3: '"A 12-month certificate of deposit" is wrong because FDIC insures deposit accounts only.',
+            },
           },
           {
             id: "fin-sec4-u8-L1-Q5",
@@ -611,6 +679,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Only the $20,000 in savings is FDIC insured. The $15,000 in stocks is an investment and not covered by deposit insurance.",
+            distractorExplanations: {
+              0: 'This amount (35,000) is too high — the correct calculation gives 20,000.',
+              1: 'This amount (15,000) is too low — the correct calculation gives 20,000.',
+              3: 'This amount (0) is too low — the correct calculation gives 20,000.',
+            },
           },
         ],
       },
@@ -636,6 +709,9 @@ export const finSection4Part2: Unit[] = [
             question: "Credit union deposits are not insured because credit unions are nonprofit.",
             correctAnswer: false,
             explanation: "Credit union deposits are insured by NCUA, providing the same level of protection as FDIC offers bank customers.",
+            distractorExplanations: {
+              0: 'This statement is actually false — credit union deposits are insured by NCUA, providing the same level of protection as FDIC offers bank customers.',
+            },
           },
           {
             id: "fin-sec4-u8-L2-Q2",
@@ -649,6 +725,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "NCUA is the government agency that insures deposits at federally insured credit unions, just as FDIC insures bank deposits.",
+            distractorExplanations: {
+              0: '"A private credit card company" is wrong because NCUA is the government agency that insures deposits at federally insured credit unions, just as FDIC insures bank d...',
+              1: '"A stock market regulatory body" is wrong because NCUA is the government agency that insures deposits at federally insured credit unions, just as FDIC insures bank d...',
+              2: '"A bank lobbying organization" is wrong because NCUA is the government agency that insures deposits at federally insured credit unions, just as FDIC insures bank d...',
+            },
           },
           {
             id: "fin-sec4-u8-L2-T2",
@@ -685,6 +766,9 @@ export const finSection4Part2: Unit[] = [
             question: "FDIC provides more deposit protection than NCUA.",
             correctAnswer: false,
             explanation: "FDIC and NCUA offer identical coverage limits. Your deposits are equally protected at insured banks and credit unions.",
+            distractorExplanations: {
+              0: 'This statement is actually false — FDIC and NCUA offer identical coverage limits. Your deposits are equally protected at insured banks and credit unions.',
+            },
           },
           {
             id: "fin-sec4-u8-L2-Q6",
@@ -699,6 +783,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Size doesn't determine safety. Both FDIC and NCUA insure deposits up to the same limit, regardless of the institution's size.",
+            distractorExplanations: {
+              1: '"Bigger banks are always safer than small credit unions" is wrong because size doesn\'t determine safety.',
+              2: '"Credit unions can\'t fail because they\'re nonprofit" is wrong because size doesn\'t determine safety.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
         ],
       },
@@ -724,6 +813,9 @@ export const finSection4Part2: Unit[] = [
             question: "FDIC insurance covers up to $250,000 per depositor at each insured bank.",
             correctAnswer: true,
             explanation: "The standard FDIC coverage is $250,000 per depositor, per insured bank, per ownership category.",
+            distractorExplanations: {
+              1: 'This statement is actually true — the standard FDIC coverage is $250,000 per depositor, per insured bank, per ownership category.',
+            },
           },
           {
             id: "fin-sec4-u8-L3-Q2",
@@ -737,6 +829,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "FDIC insures up to $250,000 per depositor per bank. The remaining $50,000 exceeds the limit and is not insured.",
+            distractorExplanations: {
+              0: 'This amount (300,000) is too high — the correct calculation gives 250,000.',
+              2: 'This amount (150,000) is too low — the correct calculation gives 250,000.',
+              3: 'This amount (0) is too low — the correct calculation gives 250,000.',
+            },
           },
           {
             id: "fin-sec4-u8-L3-T2",
@@ -757,6 +854,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$250,000 at each of 2 different insured banks gives full coverage for the entire $500,000.",
+            distractorExplanations: {
+              0: '"Put it all in one bank and request extended coverage" is wrong because $250,000 at each of 2 different insured banks gives full coverage for the entire $500,000.',
+              1: '"Convert it to stocks, which have unlimited insurance" is wrong because $250,000 at each of 2 different insured banks gives full coverage for the entire $500,000.',
+              3: '"Ask the FDIC for a special exemption" is wrong because $250,000 at each of 2 different insured banks gives full coverage for the entire $500,000.',
+            },
           },
           {
             id: "fin-sec4-u8-L3-Q4",
@@ -779,6 +881,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The joint account is insured up to $250,000 per co-owner ($500,000 total). Each individual account is insured separately up to $250,000. All accounts are fully covered.",
+            distractorExplanations: {
+              0: '"No, because the total exceeds $250,000 at one bank" is wrong because the joint account is insured up to $250,000 per co-owner ($500,000 total).',
+              2: '"No, because married couples are limited to $250,000 total" is wrong because the joint account is insured up to $250,000 per co-owner ($500,000 total).',
+              3: 'This choice is wrong because the joint account is insured up to $250,000 per co-owner ($500,000 total).',
+            },
           },
           {
             id: "fin-sec4-u8-L3-Q6",
@@ -863,6 +970,9 @@ export const finSection4Part2: Unit[] = [
             question: "Interest is the cost a borrower pays to use someone else's money.",
             correctAnswer: true,
             explanation: "Interest is the price of borrowing. Lenders earn it, borrowers pay it.",
+            distractorExplanations: {
+              1: 'This statement is actually true — interest is the price of borrowing. Lenders earn it, borrowers pay it.',
+            },
           },
           {
             id: "fin-sec4-u9-L1-Q2",
@@ -876,6 +986,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Banks lend your deposits to borrowers. The interest they pay you is your reward for letting them use your money.",
+            distractorExplanations: {
+              0: '"Opening an account with them" is wrong because banks lend your deposits to borrowers.',
+              1: '"Being a loyal customer for many years" is wrong because banks lend your deposits to borrowers.',
+              2: '"Keeping your balance below a certain amount" is wrong because banks lend your deposits to borrowers.',
+            },
           },
           {
             id: "fin-sec4-u9-L1-T2",
@@ -890,6 +1005,9 @@ export const finSection4Part2: Unit[] = [
             question: "A higher interest rate is always better for consumers.",
             correctAnswer: false,
             explanation: "Higher rates are great for savings but expensive for loans. It depends on whether you're saving or borrowing.",
+            distractorExplanations: {
+              0: 'This statement is actually false — higher rates are great for savings but expensive for loans. It depends on whether you\'re saving or borrowing.',
+            },
           },
           {
             id: "fin-sec4-u9-L1-Q4",
@@ -928,6 +1046,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Bank A: $10,000 times 0.5% = $50. Bank B: $10,000 times 4.5% = $450. Difference: $400 more at Bank B.",
+            distractorExplanations: {
+              0: 'This amount (40) is too low — the correct calculation gives 400.',
+              1: 'This amount (100) is too low — the correct calculation gives 400.',
+              3: 'This amount (4,500) is too high — the correct calculation gives 400.',
+            },
           },
         ],
       },
@@ -953,6 +1076,9 @@ export const finSection4Part2: Unit[] = [
             question: "Banks set their interest rates independently without any influence from the central bank.",
             correctAnswer: false,
             explanation: "Banks use the central bank's rate as a baseline. When the central bank changes rates, commercial banks adjust theirs accordingly.",
+            distractorExplanations: {
+              0: 'This statement is actually false — banks use the central bank\'s rate as a baseline. When the central bank changes rates, commercial banks adjust theirs accordingly.',
+            },
           },
           {
             id: "fin-sec4-u9-L2-Q2",
@@ -966,6 +1092,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "When the central bank raises rates, banks can earn more on loans, so they also tend to increase what they pay on deposits.",
+            distractorExplanations: {
+              0: '"Savings rates usually decrease" is wrong because when the central bank raises rates, banks can earn more on loans, so they also tend to increase what they pay on de...',
+              1: '"Savings rates stay exactly the same" is wrong because when the central bank raises rates, banks can earn more on loans, so they also tend to increase what they pay on de...',
+              3: '"Banks stop offering savings accounts" is wrong because when the central bank raises rates, banks can earn more on loans, so they also tend to increase what they pay on de...',
+            },
           },
           {
             id: "fin-sec4-u9-L2-T2",
@@ -1000,6 +1131,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Banks charge more to offset the higher statistical risk that the borrower won't repay the loan.",
+            distractorExplanations: {
+              0: '"Banks are punishing them for past mistakes" is wrong because banks charge more to offset the higher statistical risk that the borrower won\'t repay the loan.',
+              1: '"The government requires banks to charge more" is wrong because banks charge more to offset the higher statistical risk that the borrower won\'t repay the loan.',
+              3: 'Borrowing creates debt and interest costs, making the situation worse.',
+            },
           },
           {
             id: "fin-sec4-u9-L2-Q5",
@@ -1022,6 +1158,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The 200-point credit score difference signals much higher risk for Person B, so the bank charges more to compensate.",
+            distractorExplanations: {
+              0: '"Person B\'s car is more expensive" is wrong because the 200-point credit score difference signals much higher risk for Person B, so the bank charges more to compensate.',
+              1: '"Person A has more money in the bank" is wrong because the 200-point credit score difference signals much higher risk for Person B, so the bank charges more to compensate.',
+              3: '"Person A has been a customer longer" is wrong because the 200-point credit score difference signals much higher risk for Person B, so the bank charges more to compensate.',
+            },
           },
         ],
       },
@@ -1047,6 +1188,9 @@ export const finSection4Part2: Unit[] = [
             question: "APR stands for Annual Percentage Rate and represents the yearly cost of a loan.",
             correctAnswer: true,
             explanation: "APR includes the interest rate plus certain fees, giving you the true annual cost of borrowing.",
+            distractorExplanations: {
+              1: 'This statement is actually true — APR includes the interest rate plus certain fees, giving you the true annual cost of borrowing.',
+            },
           },
           {
             id: "fin-sec4-u9-L3-Q2",
@@ -1060,6 +1204,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "APR factors in fees and costs beyond the base interest rate, making it a better comparison tool between different loan offers.",
+            distractorExplanations: {
+              1: '"APR is always lower than the interest rate" is wrong because APR factors in fees and costs beyond the base interest rate, making it a better comparison tool between different l...',
+              2: '"APR is set by the government and can\'t change" is wrong because APR factors in fees and costs beyond the base interest rate, making it a better comparison tool between different l...',
+              3: '"APR applies only to savings accounts" is wrong because APR factors in fees and costs beyond the base interest rate, making it a better comparison tool between different l...',
+            },
           },
           {
             id: "fin-sec4-u9-L3-T2",
@@ -1119,6 +1268,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "APY already includes the effect of compounding. Comparing APY directly tells you Bank A at 4.0% beats Bank B at 3.98%.",
+            distractorExplanations: {
+              1: '"Bank B because daily compounding is more frequent" is wrong because APY already includes the effect of compounding.',
+              2: '"They\'re exactly the same after compounding" is wrong because APY already includes the effect of compounding.',
+              3: '"Bank B because the interest rate sounds higher" is wrong because APY already includes the effect of compounding.',
+            },
           },
         ],
       },
@@ -1144,6 +1298,9 @@ export const finSection4Part2: Unit[] = [
             question: "A fixed-rate mortgage payment stays the same even if market interest rates increase.",
             correctAnswer: true,
             explanation: "Fixed rates are locked in. Market changes don't affect your rate or payment amount.",
+            distractorExplanations: {
+              1: 'This statement is actually true — fixed rates are locked in. Market changes don\'t affect your rate or payment amount.',
+            },
           },
           {
             id: "fin-sec4-u9-L4-Q2",
@@ -1157,6 +1314,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Locking in a fixed rate before rates rise protects you from paying more. If rates drop, you could refinance later.",
+            distractorExplanations: {
+              0: '"When interest rates are expected to decrease" is wrong because locking in a fixed rate before rates rise protects you from paying more.',
+              1: '"Fixed rates are never advantageous" is wrong because locking in a fixed rate before rates rise protects you from paying more.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec4-u9-L4-T2",
@@ -1202,6 +1364,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Over 25 years, variable rates could rise well above 6.5%. Since Marcus values predictability, the fixed rate eliminates payment uncertainty.",
+            distractorExplanations: {
+              1: '"Variable rate because 5.5% is lower than 6.5%" is wrong because over 25 years, variable rates could rise well above 6.',
+              2: '"Variable rate because rates always go down over time" is wrong because over 25 years, variable rates could rise well above 6.',
+              3: '"Neither, he should rent instead of buying" is wrong because over 25 years, variable rates could rise well above 6.',
+            },
           },
           {
             id: "fin-sec4-u9-L4-Q6",
@@ -1368,6 +1535,9 @@ export const finSection4Part2: Unit[] = [
             question: "The Federal Reserve is a commercial bank where consumers can open checking accounts.",
             correctAnswer: false,
             explanation: "The Fed is a central bank that oversees the banking system. It works with banks, not directly with consumers.",
+            distractorExplanations: {
+              0: 'This statement is actually false — the Fed is a central bank that oversees the banking system. It works with banks, not directly with consumers.',
+            },
           },
           {
             id: "fin-sec4-u10-L1-Q2",
@@ -1381,6 +1551,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The Fed's dual mandate is price stability (controlling inflation) and maximum employment (supporting job growth).",
+            distractorExplanations: {
+              1: '"Maximizing bank profits and minimizing taxes" is wrong because the Fed\'s dual mandate is price stability (controlling inflation) and maximum employment (supporting job growth).',
+              2: '"Printing money and collecting taxes" is wrong because the Fed\'s dual mandate is price stability (controlling inflation) and maximum employment (supporting job growth).',
+              3: '"Regulating the stock market and insuring deposits" is wrong because the Fed\'s dual mandate is price stability (controlling inflation) and maximum employment (supporting job growth).',
+            },
           },
           {
             id: "fin-sec4-u10-L1-T2",
@@ -1418,6 +1593,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Fed uses interest rates and money supply tools to influence economic conditions, not direct control over prices or employment.",
+            distractorExplanations: {
+              0: '"By setting prices for consumer goods directly" is wrong because the Fed uses interest rates and money supply tools to influence economic conditions, not direct control over prices...',
+              1: '"By hiring and firing workers across all industries" is wrong because the Fed uses interest rates and money supply tools to influence economic conditions, not direct control over prices...',
+              3: '"By approving every loan application in the country" is wrong because the Fed uses interest rates and money supply tools to influence economic conditions, not direct control over prices...',
+            },
           },
         ],
       },
@@ -1443,6 +1623,9 @@ export const finSection4Part2: Unit[] = [
             question: "The federal funds rate is the rate banks charge each other for overnight loans.",
             correctAnswer: true,
             explanation: "Banks borrow from each other overnight to maintain required reserves. The rate they charge is the federal funds rate.",
+            distractorExplanations: {
+              1: 'This statement is actually true — banks borrow from each other overnight to maintain required reserves. The rate they charge is the federal funds rate.',
+            },
           },
           {
             id: "fin-sec4-u10-L2-Q2",
@@ -1456,6 +1639,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The fed funds rate is the foundation. Banks add their markup for loans and reduce it for savings, but all rates move with it.",
+            distractorExplanations: {
+              0: '"The Fed directly sets every bank\'s rates" is wrong because the fed funds rate is the foundation.',
+              1: '"It only affects bank employees, not customers" is wrong because the fed funds rate is the foundation.',
+              2: '"The fed funds rate and consumer rates are unrelated" is wrong because the fed funds rate is the foundation.',
+            },
           },
           {
             id: "fin-sec4-u10-L2-T2",
@@ -1498,6 +1686,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Variable-rate credit card rates will rise. Savings rates may increase. Fixed-rate mortgages are locked in and won't change.",
+            distractorExplanations: {
+              0: 'This answer is too narrow — it ignores other important factors.',
+              1: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: '"None of them because Fed rate changes only affect banks" is wrong because variable-rate credit card rates will rise.',
+            },
           },
           {
             id: "fin-sec4-u10-L2-Q6",
@@ -1537,6 +1730,9 @@ export const finSection4Part2: Unit[] = [
             question: "When the Fed raises interest rates, mortgage payments on new loans increase.",
             correctAnswer: true,
             explanation: "Higher fed funds rates push mortgage rates up, increasing monthly payments on new home loans.",
+            distractorExplanations: {
+              1: 'This statement is actually true — higher fed funds rates push mortgage rates up, increasing monthly payments on new home loans.',
+            },
           },
           {
             id: "fin-sec4-u10-L3-Q2",
@@ -1550,6 +1746,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Fed raises rates to cool spending and borrowing when the economy is growing too fast and prices are rising too quickly.",
+            distractorExplanations: {
+              0: '"To make banks richer and consumers poorer" is wrong because the Fed raises rates to cool spending and borrowing when the economy is growing too fast and prices are rising too ...',
+              1: '"To increase government tax revenue" is wrong because the Fed raises rates to cool spending and borrowing when the economy is growing too fast and prices are rising too ...',
+              3: 'Borrowing creates debt and interest costs, making the situation worse.',
+            },
           },
           {
             id: "fin-sec4-u10-L3-T2",
@@ -1587,6 +1788,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Rate hikes are mixed. Your savings earn more now, but when you buy the house, your mortgage rate and monthly payment will be higher.",
+            distractorExplanations: {
+              0: '"They only help: your savings earn more interest" is wrong because rate hikes are mixed.',
+              1: '"They only hurt: mortgages will cost more" is wrong because rate hikes are mixed.',
+              3: '"No effect: Fed rate changes don\'t affect consumers" is wrong because rate hikes are mixed.',
+            },
           },
           {
             id: "fin-sec4-u10-L3-Q5",
@@ -1608,6 +1814,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "When the fed funds rate drops near zero, banks lower savings rates because they can't earn much on the money you deposit.",
+            distractorExplanations: {
+              1: '"Savings rates increase because banks want more deposits" is wrong because when the fed funds rate drops near zero, banks lower savings rates because they can\'t earn much on the money you de...',
+              2: '"Savings rates stay the same because they\'re independent" is wrong because when the fed funds rate drops near zero, banks lower savings rates because they can\'t earn much on the money you de...',
+              3: '"Banks start charging you to hold your savings" is wrong because when the fed funds rate drops near zero, banks lower savings rates because they can\'t earn much on the money you de...',
+            },
           },
         ],
       },
@@ -1633,6 +1844,9 @@ export const finSection4Part2: Unit[] = [
             question: "If your savings account earns 2% but inflation is 4%, your money is effectively losing value.",
             correctAnswer: true,
             explanation: "When inflation exceeds your interest earnings, your purchasing power decreases even though your balance grows.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when inflation exceeds your interest earnings, your purchasing power decreases even though your balance grows.',
+            },
           },
           {
             id: "fin-sec4-u10-L4-Q2",
@@ -1646,6 +1860,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The Fed raises rates to make borrowing expensive, which reduces spending, which slows down price increases (inflation).",
+            distractorExplanations: {
+              0: '"They\'re completely unrelated" is wrong because the Fed raises rates to make borrowing expensive, which reduces spending, which slows down price increases (inflation).',
+              1: '"Higher inflation forces the Fed to lower rates" is wrong because the Fed raises rates to make borrowing expensive, which reduces spending, which slows down price increases (inflation).',
+              2: '"The Fed causes inflation by raising rates" is wrong because the Fed raises rates to make borrowing expensive, which reduces spending, which slows down price increases (inflation).',
+            },
           },
           {
             id: "fin-sec4-u10-L4-T2",
@@ -1675,6 +1894,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Real return equals interest minus inflation. Bank A: 5% minus 4% = 1%. Bank B: 3% minus 4% = -1% (losing purchasing power).",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"Bank A: 9%, Bank B: 7% (add inflation)" is wrong because real return equals interest minus inflation.',
+              3: '"Bank A: 4%, Bank B: 4% (inflation replaces the rate)" is wrong because real return equals interest minus inflation.',
+            },
           },
           {
             id: "fin-sec4-u10-L4-Q5",
@@ -1793,6 +2017,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Splitting between checking (for access) and high-yield savings (for growth) optimizes both convenience and earnings.",
+            distractorExplanations: {
+              0: '"One checking account at a traditional bank with no savings" is wrong because splitting between checking (for access) and high-yield savings (for growth) optimizes both convenience and earnings.',
+              1: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: '"One savings account and no checking account" is wrong because splitting between checking (for access) and high-yield savings (for growth) optimizes both convenience and earnings.',
+            },
           },
           {
             id: "fin-sec4-u11-L1-Q3",
@@ -1851,6 +2080,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The foundation is checking for daily use with direct deposit, plus savings with automatic transfers. Build from there.",
+            distractorExplanations: {
+              1: '"A brokerage account for stock trading" is wrong because the foundation is checking for daily use with direct deposit, plus savings with automatic transfers.',
+              2: '"Three credit cards at different banks" is wrong because the foundation is checking for daily use with direct deposit, plus savings with automatic transfers.',
+              3: '"A wire transfer account for international investing" is wrong because the foundation is checking for daily use with direct deposit, plus savings with automatic transfers.',
+            },
           },
         ],
       },
@@ -1883,6 +2117,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Direct deposit into checking covers expenses. High-yield savings grows your existing $5,000 plus adds $500 monthly from the $1,000 surplus.",
+            distractorExplanations: {
+              0: '"Put everything in one checking account for simplicity" is wrong because direct deposit into checking covers expenses.',
+              1: 'This choice is wrong because direct deposit into checking covers expenses.',
+              2: '"Open 5 different savings accounts to spread risk" is wrong because direct deposit into checking covers expenses.',
+            },
           },
           {
             id: "fin-sec4-u11-L2-Q2",
@@ -1897,6 +2136,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Variable credit card rate rises. Fixed car loan stays the same. Savings rate typically increases. The rate hike is mixed for your finances.",
+            distractorExplanations: {
+              0: 'This answer is too narrow — it ignores other important factors.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: 'This choice is wrong because variable credit card rate rises.',
+            },
           },
           {
             id: "fin-sec4-u11-L2-Q3",
@@ -1910,6 +2154,11 @@ export const finSection4Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "ACH is free and takes 1 to 3 days. Since there's no urgency, paying $25 or more for a wire is unnecessary.",
+            distractorExplanations: {
+              1: '"A domestic wire transfer for reliability" is wrong because ACH is free and takes 1 to 3 days.',
+              2: '"Overnight mail with a cashier\'s check" is wrong because ACH is free and takes 1 to 3 days.',
+              3: '"Western Union for instant delivery" is wrong because ACH is free and takes 1 to 3 days.',
+            },
           },
           {
             id: "fin-sec4-u11-L2-Q4",

@@ -1,0 +1,442 @@
+[
+  {
+    "id": "htw-L5-Q1",
+    "type": "multiple-choice",
+    "question": "A bicycle has a 48-tooth chainring and a 16-tooth rear cog. What is the gear ratio, and what does it mean physically?",
+    "options": [
+      "3:1 — the rear wheel turns 3 times per pedal revolution",
+      "1:3 — the rear wheel turns once every 3 pedal revolutions",
+      "3:1 — the pedal force is tripled at the rear wheel contact",
+      "48:16 — the chain moves 48 links per single pedal revolution"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Gear ratio = chainring teeth / cog teeth = 48/16 = 3. Each pedal revolution turns the rear wheel 3 times. This trades pedal force for wheel speed — you push harder but go faster.",
+    "explanationLine": 23
+  },
+  {
+    "id": "htw-L5-Q2",
+    "type": "multiple-choice",
+    "question": "Why are bicycle spokes installed with pretension (tightened before any load is applied)?",
+    "options": [
+      "Under load, spokes lose tension but never go slack — a slack spoke would buckle",
+      "Pretension strengthens each spoke by work-hardening the wire material",
+      "It prevents the rim from expanding outward due to centrifugal force at speed",
+      "Pretension is only cosmetic — it keeps the wheel round for visual appeal"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Spokes can only carry tension (they are thin wires that buckle in compression). Pretension ensures that when the rider\\",
+    "explanationLine": 38
+  },
+  {
+    "id": "htw-L5-Q3",
+    "type": "true-false",
+    "question": "On a bicycle, shifting to a smaller rear cog (fewer teeth) makes pedaling easier because the gear ratio decreases.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "A smaller rear cog increases the gear ratio (chainring/cog), meaning the wheel turns more per pedal revolution. This makes pedaling harder, not easier — it is a higher gear for faster speeds. Shifting to a larger rear cog decreases the ratio and makes pedaling easier (lower gear).",
+    "explanationLine": 47
+  },
+  {
+    "id": "htw-L5-Q5",
+    "type": "multiple-choice",
+    "question": "The \"sweet spot\" of a tennis racket is the point where hitting feels effortless with minimal vibration in the handle. What engineering principle explains this?",
+    "options": [
+      "The sweet spot is at a vibration node — no impulse reaches the hand",
+      "The sweet spot is where the frame is thickest and most rigid",
+      "The sweet spot is where string density is highest for max force",
+      "The sweet spot is psychological — all points transmit equal vibration"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A racket vibrates in modes like a beam. The sweet spot coincides with a vibration node — a point that remains stationary during oscillation. Hitting at the node excites minimal handle vibration, reducing sting and energy loss. This is the same principle as nodes on a vibrating string.",
+    "explanationLine": 71
+  },
+  {
+    "id": "htw-L5-Q6",
+    "type": "multiple-choice",
+    "question": "Modern tennis rackets use carbon fiber composites instead of wood. What is the primary engineering advantage?",
+    "options": [
+      "Much higher specific stiffness — stiffer yet lighter frame",
+      "Carbon fiber is cheaper than wood for mass production",
+      "Carbon fiber eliminates all vibration during impact",
+      "Wood cannot be shaped into a racket frame geometry"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Carbon fiber composites have an extremely high modulus-to-density ratio (specific stiffness). This lets designers make frames that are both lighter and stiffer than wood, improving swing speed and energy transfer. The anisotropic layup can also be tailored to control flex in specific directions.",
+    "explanationLine": 86
+  },
+  {
+    "id": "htw-L5-Q7",
+    "type": "multiple-choice",
+    "question": "A roller coaster car reaches the top of a vertical loop. What is the minimum condition for the car to maintain contact with the track at the top?",
+    "options": [
+      "Centripetal acceleration must be at least g, i.e. v²/r ≥ g at the top",
+      "The car must have enough kinetic energy to overcome air resistance",
+      "The track must push the car outward, away from center, at the top",
+      "The car\\"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "At the top of the loop, both gravity and the normal force point toward the center. The minimum case is when the normal force equals zero: mg = mv²/r, so v² = gr. If v is less than sqrt(gr), the car loses contact. This is why roller coaster loops are often clothoid (teardrop) shaped — the smaller radius at the top requires less speed.",
+    "explanationLine": 101
+  },
+  {
+    "id": "htw-L5-Q8",
+    "type": "true-false",
+    "question": "On a frictionless roller coaster, a car that starts from rest at height h will always reach the same maximum speed at the bottom, regardless of the track shape.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Conservation of energy: mgh = ½mv². The speed at the bottom depends only on the height difference, not the path taken (assuming no friction or drag). This is a direct consequence of gravity being a conservative force. The track shape affects the time to reach the bottom, but not the final speed.",
+    "explanationLine": 110
+  },
+  {
+    "id": "htw-L5-Q9",
+    "type": "multiple-choice",
+    "question": "When a skateboarder rides through a curved half-pipe, they feel \"heavier\" at the bottom of the curve. Why?",
+    "options": [
+      "Normal force must provide both centripetal acceleration and support weight, exceeding mg",
+      "Gravity increases at the bottom of curved surfaces due to geometric effects",
+      "The skateboard deck compresses, adding a spring force on top of rider weight",
+      "Air pressure is measurably higher at the bottom of the enclosed half-pipe"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "At the bottom of a curve, the net upward force must equal the centripetal force: N - mg = mv²/r, so N = m(g + v²/r). The normal force exceeds the rider\\",
+    "explanationLine": 124
+  },
+  {
+    "id": "htw-L5-Q10",
+    "type": "multiple-choice",
+    "question": "A diving board is a classic example of what type of structural element, and where does maximum bending stress occur?",
+    "options": [
+      "A cantilever beam — max bending stress at the fixed support end",
+      "A simply supported beam — max stress at the center of the span",
+      "A column under compression — max stress at mid-height buckling",
+      "A truss member — stress is distributed uniformly along its length"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A diving board is fixed at one end and free at the other — a cantilever. The bending moment is greatest at the fixed support (M = F × L for a point load at the tip). This is why diving boards are thicker/reinforced at the base and taper toward the free end.",
+    "explanationLine": 139
+  },
+  {
+    "id": "htw-L5-Q12",
+    "type": "multiple-choice",
+    "question": "Bicycle and football helmets use crushable foam liners to protect the head during impact. What is the engineering principle behind this?",
+    "options": [
+      "The foam increases stopping time, reducing peak force (impulse-momentum theorem)",
+      "The foam reflects impact energy back outward like a compressed spring",
+      "The foam is stronger than skull bone, so it absorbs the entire force",
+      "The foam prevents the helmet shell from cracking by distributing stress"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The impulse-momentum theorem states F·Δt = mΔv. For a given change in momentum (fixed mΔv), increasing the stopping time Δt (by foam crushing) reduces the peak force F on the head. The foam absorbs energy through irreversible plastic deformation — it crushes and does not bounce back, which is why helmets must be replaced after an impact.",
+    "explanationLine": 164
+  },
+  {
+    "id": "htw-L5-Q13",
+    "type": "true-false",
+    "question": "A helmet foam liner should be highly elastic (like a rubber ball) so it can be reused after each impact.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Helmet foam (typically EPS — expanded polystyrene) is designed to deform plastically and crush permanently. This irreversible deformation absorbs maximum energy during the impact. An elastic material would bounce back, returning energy and increasing the rebound force on the head. This is why helmets must be replaced after a crash — the foam is already crushed and cannot protect again.",
+    "explanationLine": 173
+  },
+  {
+    "id": "htw-L5-Q14",
+    "type": "multiple-choice",
+    "question": "Competitive swimmers shave their bodies and wear smooth suits to reduce drag. Which type of drag are they primarily targeting?",
+    "options": [
+      "Skin friction drag — reducing roughness lowers the shear stress on the body",
+      "Wave drag — shaving prevents the body from creating surface waves",
+      "Induced drag — smooth skin reduces the trailing vortices behind the swimmer",
+      "Compressibility drag — smooth surfaces reduce shock wave formation in water"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "At swimming speeds, skin friction (viscous shear stress at the surface) is a significant portion of total drag. A smoother surface reduces the friction coefficient and delays boundary layer transition from laminar to turbulent. Pressure drag (form drag) from body shape is also important but is addressed through streamlining technique, not shaving.",
+    "explanationLine": 188
+  },
+  {
+    "id": "htw-L5-Q16",
+    "type": "multiple-choice",
+    "question": "Golf club heads have evolved from small steel blocks to large hollow titanium drivers. What engineering property does a larger head improve?",
+    "options": [
+      "Higher moment of inertia, making the club more forgiving on off-center hits",
+      "A larger face increases air resistance, slowing the swing for better control",
+      "Titanium is heavier than steel, so the larger head generates more impact force",
+      "The larger head stores more elastic energy due to titanium\\"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A larger club head has a higher moment of inertia (MOI) about its center of gravity. When you hit off-center, the club twists less (angular acceleration = torque/MOI), resulting in less distance and accuracy loss. Titanium\\",
+    "explanationLine": 213
+  },
+  {
+    "id": "htw-L5-Q17",
+    "type": "multiple-choice",
+    "question": "The coefficient of restitution (COR) for a golf ball striking a club face is regulated to a maximum of 0.83. What does COR physically represent?",
+    "options": [
+      "The ratio of separation speed to approach speed — it measures kinetic energy conservation",
+      "The ratio of ball weight to club head weight at the point of impact",
+      "The friction coefficient between the ball cover and the club face surface",
+      "The percentage of the ball volume that deforms plastically during impact"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "COR = (v_separation) / (v_approach). A COR of 1.0 means a perfectly elastic collision (no energy loss); 0 means perfectly inelastic (objects stick together). At 0.83, about 31% of kinetic energy is lost to deformation, heat, and sound. Higher COR means the ball leaves faster for a given swing speed.",
+    "explanationLine": 228
+  },
+  {
+    "id": "htw-L5-Q18",
+    "type": "true-false",
+    "question": "In a golf swing, doubling the club head speed at impact will exactly double the ball\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The collision equation v_ball = v_club × (1 + COR) / (1 + m_ball/m_club) is linear in v_club when COR and masses are constant — so at first glance, doubling speed should double ball speed. However, in reality COR decreases at higher impact speeds because the ball and face undergo greater deformation, dissipating more energy. This speed-dependent COR makes the actual relationship nonlinear, so doubling club speed produces less than double the ball speed.",
+    "explanationLine": 236
+  },
+  {
+    "id": "htw-L5-Q20",
+    "type": "multiple-choice",
+    "question": "A rowing team wants to maximize boat speed. The drag force on the hull is proportional to v². If they double their combined power output, by what factor does the steady-state speed increase?",
+    "options": [
+      "2^(1/3) ≈ 1.26 — because power = drag × velocity = Cv³",
+      "2 — double power means double speed at steady state",
+      "√2 ≈ 1.41 — because drag force scales with v²",
+      "4 — because power is proportional to v⁴ for boats"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "At steady state, Power = Drag × Velocity. If drag = Cv², then P = Cv³. So v = (P/C)^(1/3). Doubling P gives v_new = (2P/C)^(1/3) = 2^(1/3) × v_old ≈ 1.26v. This cube-root relationship explains why enormous power increases yield modest speed gains in water sports.",
+    "explanationLine": 260
+  },
+  {
+    "id": "htw-L6-Q1",
+    "type": "multiple-choice",
+    "question": "Most elevators use a counterweight that equals the cab weight plus about 40% of the maximum passenger load. Why not 50%?",
+    "options": [
+      "Elevators run empty more often than full — 40% balances the average load for minimum motor power",
+      "50% would make the system perfectly balanced and the motor would have nothing to do",
+      "40% is a building code safety regulation with no engineering justification behind it",
+      "The extra 10% of counterweight mass is reserved to account for cable weight"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "If the counterweight balanced 50% of max load, it would be perfect only when the cab is exactly half full. Since elevators run empty or lightly loaded far more often than fully loaded, 40% minimizes the average imbalance. This reduces average motor power, energy consumption, and wear. The motor only needs to handle the difference between cab+passengers and counterweight.",
+    "explanationLine": 287
+  },
+  {
+    "id": "htw-L6-Q2",
+    "type": "multiple-choice",
+    "question": "An elevator cable supports a 2000 kg cab with a 1500 kg counterweight. When the cab accelerates upward at 1.5 m/s², what is the net force the motor must provide?",
+    "options": [
+      "(2000−1500)×g + (2000+1500)×1.5 = 10,155 N — gravity imbalance plus total inertia",
+      "2000 × 9.81 = 19,620 N — the full weight of the cab without counterweight",
+      "(2000 − 1500) × 9.81 = 4,905 N — only the net gravitational weight difference",
+      "2000 × 1.5 = 3,000 N — only the acceleration force acting on the cab"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The motor must overcome: (1) the net gravitational imbalance = (m_cab − m_cw) × g = 500 × 9.81 = 4905 N, plus (2) the inertia of both masses (cab going up + counterweight going down, both accelerating) = (m_cab + m_cw) × a = 3500 × 1.5 = 5250 N. Total ≈ 10,155 N. Both masses are connected by the cable, so the motor must accelerate both.",
+    "explanationLine": 302
+  },
+  {
+    "id": "htw-L6-Q3",
+    "type": "true-false",
+    "question": "Elevator safety brakes work by gripping the guide rails when the cable tension drops to zero (cable breaks), using a centrifugal governor that detects overspeed.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Elisha Otis invented this in 1852. A centrifugal governor spins faster as the cab accelerates downward. When speed exceeds a threshold, the governor triggers wedge-shaped brakes that grip the guide rails, bringing the cab to a stop. The system is fail-safe — it activates when something goes wrong (loss of tension or overspeed), not when something is applied.",
+    "explanationLine": 311
+  },
+  {
+    "id": "htw-L6-Q5",
+    "type": "multiple-choice",
+    "question": "In a simple truss bridge, how do the top chord and bottom chord members carry loads?",
+    "options": [
+      "Top chord in compression, bottom chord in tension — how a truss resists bending",
+      "Both chords carry compression; diagonal web members carry all the tension",
+      "Top chord in tension, bottom chord in compression — the truss hangs from above",
+      "All truss members carry identical forces regardless of their position"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A truss resists bending by separating compression and tension into discrete members. Under downward loads, the top chord shortens (compression) and the bottom chord lengthens (tension), just like the top and bottom fibers of a solid beam. Diagonal and vertical members carry the shear forces as alternating tension and compression.",
+    "explanationLine": 335
+  },
+  {
+    "id": "htw-L6-Q6",
+    "type": "multiple-choice",
+    "question": "Why can an arch bridge span farther than a simple beam bridge of the same material and cross-section?",
+    "options": [
+      "The arch converts bending into compression along its curve, and most materials are stronger in compression",
+      "The arch shape is more aerodynamic, which significantly reduces the wind loading on the structure",
+      "An arch bridge uses less total material than a beam bridge of the same span length",
+      "The arch geometry prevents thermal expansion from causing structural damage to the deck"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "An arch transfers loads primarily as compression along its curved axis, minimizing bending moments. Stone and concrete are very strong in compression but weak in tension, making the arch ideal for these materials. A beam of the same material would develop tension on its bottom face, limiting its span before the material fails in tension.",
+    "explanationLine": 350
+  },
+  {
+    "id": "htw-L6-Q7",
+    "type": "true-false",
+    "question": "In a suspension bridge, the main cables are in tension and the towers are in compression.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The deck load is transferred through vertical suspender cables to the main cables, which are in pure tension (a flexible cable can only pull). The main cables pull inward on the towers, which resist as vertical compression members transferring the load down to the foundations. This arrangement allows very long spans because tension members (cables) can be extremely efficient.",
+    "explanationLine": 358
+  },
+  {
+    "id": "htw-L6-Q8",
+    "type": "multiple-choice",
+    "question": "A water tower provides water pressure to a town. If the water surface is 40 m above a house\\",
+    "options": [
+      "About 392 kPa (57 psi) — from P = ρgh with the given values",
+      "About 40 kPa — pressure numerically equals the height in kPa",
+      "About 4000 kPa — from the modified formula P = ρg²h",
+      "It depends on the pipe diameter, not the elevation height"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Hydrostatic pressure P = ρgh = 1000 × 9.81 × 40 = 392,400 Pa ≈ 392 kPa ≈ 57 psi. This is the \"head\" concept — height of fluid creates pressure at the bottom. Water towers use gravity to provide consistent pressure without pumps, as long as the water level is maintained. Pipe diameter affects flow rate, not static pressure.",
+    "explanationLine": 373
+  },
+  {
+    "id": "htw-L6-Q10",
+    "type": "multiple-choice",
+    "question": "An HVAC engineer must choose between a 30 cm and a 20 cm diameter round duct for the same airflow. How does the pressure drop compare?",
+    "options": [
+      "The smaller duct has roughly (30/20)⁵ ≈ 7.6× more pressure drop — it scales as 1/D⁵",
+      "The smaller duct has 50% more pressure drop — proportional to the diameter ratio",
+      "Both ducts have the same pressure drop since the delivered airflow is identical",
+      "The larger duct has higher pressure drop because air moves slower and lingers longer"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "For fully developed turbulent flow in a pipe, the Darcy-Weisbach equation gives ΔP ∝ Q²/(D⁵) at constant flow rate Q. Reducing diameter from 30 to 20 cm increases ΔP by (30/20)⁵ = (1.5)⁵ ≈ 7.6×. This is why duct sizing is critical in HVAC — slightly undersized ducts cause enormous pressure drop increases, demanding larger, more expensive fans.",
+    "explanationLine": 398
+  },
+  {
+    "id": "htw-L6-Q11",
+    "type": "multiple-choice",
+    "question": "In HVAC duct design, the Reynolds number is used to determine whether the airflow is laminar or turbulent. For typical duct conditions (Re > 4000), what does this mean for the friction factor?",
+    "options": [
+      "It depends on both Reynolds number and relative wall roughness (Moody chart)",
+      "It is constant at 0.02 for all turbulent flows regardless of conditions",
+      "It equals 64/Re, the same formula used for laminar flow calculations",
+      "It is zero for turbulent flow because mixing eliminates wall shear stress"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "In turbulent flow, the Colebrook equation (or Moody chart) determines the friction factor, which depends on both Re and the relative roughness (ε/D) of the duct surface. For laminar flow (Re < 2300), f = 64/Re regardless of roughness. This distinction matters for HVAC design — galvanized steel, flexible duct, and fiberglass-lined duct all have different roughness values.",
+    "explanationLine": 413
+  },
+  {
+    "id": "htw-L6-Q12",
+    "type": "multiple-choice",
+    "question": "A mobile crane must not tip over when lifting a load. What is the stability criterion based on moments about the tipping edge?",
+    "options": [
+      "The restoring moment from crane weight must exceed the overturning moment from the load",
+      "The crane must always be heavier than the load it is lifting at any radius",
+      "The boom angle must always exceed 45 degrees to prevent forward tipping",
+      "The load must be centered directly over the crane\\"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Stability is a moment balance about the tipping edge (front axle or outrigger). The crane\\",
+    "explanationLine": 428
+  },
+  {
+    "id": "htw-L6-Q13",
+    "type": "true-false",
+    "question": "A crane\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The overturning moment = load × horizontal distance from the tipping point. As the boom extends or lowers (increasing horizontal reach), the same load creates a larger overturning moment. This is why every crane has a load chart: capacity decreases as radius increases. A crane rated at 50 tonnes at 10 m might only lift 15 tonnes at 30 m.",
+    "explanationLine": 437
+  },
+  {
+    "id": "htw-L6-Q15",
+    "type": "multiple-choice",
+    "question": "Hydrostatic pressure on a dam increases linearly with depth. What is the shape of the pressure distribution, and where does the resultant force act?",
+    "options": [
+      "Triangular — zero at surface, maximum at base. Resultant acts at H/3 from the base.",
+      "Uniform — equal pressure at all depths. Resultant acts at mid-height of the dam.",
+      "Parabolic — maximum at mid-depth. Resultant acts at H/2 from the base of the dam.",
+      "Triangular — maximum at surface. Resultant acts at 2H/3 from the base of the dam."
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Pressure P = ρgh increases linearly from zero at the surface to ρgH at the base, forming a triangle. The resultant of a triangular distribution acts at the centroid: 1/3 from the base (or 2/3 from the surface). For a dam of height H and width w, the total force = ½ρgH² × w, acting at H/3 from the bottom.",
+    "explanationLine": 461
+  },
+  {
+    "id": "htw-L6-Q16",
+    "type": "multiple-choice",
+    "question": "Why are gravity dams built with a much thicker base than top?",
+    "options": [
+      "Hydrostatic pressure is greatest at the base, requiring more mass to resist overturning and sliding",
+      "The thick base is purely for architectural appearance and construction tradition",
+      "Water pressure is uniform with depth, but the base must support the dam\\",
+      "The thick base only prevents water from seeping and flowing under the dam foundation"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Hydrostatic pressure increases linearly with depth (P = ρgh), so the base experiences the highest lateral force. The dam must resist both overturning (moment about the toe) and sliding. A wide, heavy base increases the restoring moment and the friction force (f = μN = μ × weight), providing stability. The triangular cross-section efficiently places mass where it is most needed.",
+    "explanationLine": 475
+  },
+  {
+    "id": "htw-L6-Q17",
+    "type": "true-false",
+    "question": "The total hydrostatic force on a dam doubles when the water depth doubles.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The total hydrostatic force on a vertical surface = ½ρgH²w (per unit width). Since force scales with H², doubling the depth quadruples the total force. This square relationship is why dam design becomes dramatically more challenging as reservoir depth increases — a dam holding back 100 m of water faces four times the force of one holding 50 m.",
+    "explanationLine": 484
+  },
+  {
+    "id": "htw-L6-Q18",
+    "type": "multiple-choice",
+    "question": "An escalator carries 30 passengers (average 75 kg each) up a vertical rise of 10 m. The belt moves at 0.5 m/s along the incline at 30°. What minimum motor power is needed, ignoring friction and efficiency losses?",
+    "options": [
+      "About 5.5 kW — P = total weight × vertical velocity component",
+      "About 110 kW — must also account for the mass of the stair steps",
+      "About 1.1 kW — only the horizontal velocity component matters",
+      "About 11 kW — P equals total weight times full belt speed"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Power = rate of potential energy gain = total mass × g × vertical velocity. The vertical component of belt speed = 0.5 × sin(30°) = 0.25 m/s. So P = 30 × 75 × 9.81 × 0.25 ≈ 5,520 W ≈ 5.5 kW. The actual motor must be larger to account for friction, step chain weight, and efficiency (typically 3-5× the theoretical minimum).",
+    "explanationLine": 499
+  },
+  {
+    "id": "htw-L6-Q20",
+    "type": "multiple-choice",
+    "question": "An elevator motor is rated at 15 kW with 85% efficiency. What is the maximum useful power delivered to move the cab?",
+    "options": [
+      "12.75 kW — useful output = rated input power times efficiency",
+      "17.65 kW — divide by efficiency because the motor compensates for loss",
+      "15 kW — efficiency does not reduce the mechanical output power",
+      "12.75 kW at startup only; at steady state the output reaches 15 kW"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Motor efficiency η = P_output / P_input. If the motor consumes 15 kW (electrical input) at 85% efficiency, the useful mechanical output = 15 × 0.85 = 12.75 kW. The remaining 2.25 kW is lost as heat. This is why real systems always require motors rated higher than the theoretical load — you must account for efficiency losses in the motor, gearbox, and drivetrain.",
+    "explanationLine": 523
+  }
+]

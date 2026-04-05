@@ -1,0 +1,887 @@
+[
+  {
+    "id": "u10-L1-NEW-E1",
+    "type": "true-false",
+    "question": "In a Fermi estimation, getting within an order of magnitude (factor of 10) of the real answer is considered a good result.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Fermi estimates aim for the right power of 10, not the exact number.",
+    "explanationLine": 29
+  },
+  {
+    "id": "u10-L1-Q1",
+    "type": "multiple-choice",
+    "question": "Estimate the power needed to keep a car at highway speed. What approach should you take?",
+    "options": [
+      "Look up the engine horsepower from the car\\",
+      "Guess \"about 100 kW\" since that is a typical engine rating",
+      "Break the problem into contributors (aerodynamic drag, rolling resistance",
+      "Calculate only aerodynamic drag since it dominates at highway speed . "
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Interviewers want to see structured decomposition, not a single formula.",
+    "explanationLine": 44
+  },
+  {
+    "id": "u10-L1-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What does \"order of magnitude\" mean?",
+    "options": [
+      "A factor of 10",
+      "A factor of 2",
+      "An exact answer",
+      "A factor of 100"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "An order of magnitude is a factor of 10. If the real answer is 5,000, being within an order of magnitude means your answer is between 500 and 50,000.",
+    "explanationLine": 85
+  },
+  {
+    "id": "u10-L1-Q2",
+    "type": "multiple-choice",
+    "question": "If you double the beam\\",
+    "options": [
+      "2x (halves)",
+      "4x (quarters)",
+      "8x (one-eighth)",
+      "16x (one-sixteenth)"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Deflection is inversely proportional to the moment of inertia I. For a rectangular beam, I = bh^3/12. Doubling h increases I by 2^3 = 8 times.",
+    "explanationLine": 100
+  },
+  {
+    "id": "u10-L1b-NEW-E1",
+    "type": "true-false",
+    "question": "The density of water is approximately 1,000 kg/m3.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Water density at standard conditions is 1,000 kg/m3. This is one of the most important anchor values.",
+    "explanationLine": 125
+  },
+  {
+    "id": "u10-L1b-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What is the approximate yield strength of common structural steel?",
+    "options": [
+      "2,500 MPa",
+      "25 MPa",
+      "250 MPa",
+      "25,000 MPa"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "A36/S275 structural steel yields at about 250 MPa (36 ksi). This is a critical anchor value.",
+    "explanationLine": 166
+  },
+  {
+    "id": "u10-L1-Q3",
+    "type": "true-false",
+    "question": "For a quick sanity check: the yield strength of common structural steel (A36/S275) is approximately 250 MPa, mild steel\\",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "These are essential \"anchor values\" every mechanical engineer should know: A36 steel yield ~ 250 MPa (36 ksi), E_steel ~ 200 GPa (29 Msi), gamma_water ~ 9.81 kN/m^3 ~ 10 kN/m^3.",
+    "explanationLine": 175
+  },
+  {
+    "id": "u10-L1c-NEW-E1",
+    "type": "true-false",
+    "question": "Pump power scales with the cube of speed: doubling RPM increases power by 8x.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The pump affinity laws: Q scales with N, H with N^2, and P with N^3.",
+    "explanationLine": 200
+  },
+  {
+    "id": "u10-L1-Q4",
+    "type": "multiple-choice",
+    "question": "Will this steel shelf bracket vibrate noticeably?",
+    "options": [
+      "Only the weight of the load on the shelf matters. heavier loads always",
+      "Compare the excitation frequency to the bracket\\",
+      "Vibration only matters for rotating equipment. a shelf bracket cannot vibrate",
+      "Just make the bracket thicker. that always eliminates vibration regardless"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The key engineering judgment: vibration is a concern when the excitation frequency is near the natural frequency (resonance).",
+    "explanationLine": 216
+  },
+  {
+    "id": "u10-L1-Q5",
+    "type": "multiple-choice",
+    "question": "An interviewer asks: \"How many ball bearings fit inside this room?\" What is the best estimation approach?",
+    "options": [
+      "Room volume / sphere volume, with a packing fraction (~64%)",
+      "Room volume / sphere volume exactly, with no packing adjustment",
+      "Count bearings along each edge and multiply the three numbers",
+      "Estimate it as \"millions\" without performing any calculation"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Room volume = L x W x H. Sphere volume = (4/3)*pi*r^3. Naive count = room volume / sphere volume.",
+    "explanationLine": 232
+  },
+  {
+    "id": "u10-L1c-NEW-E2",
+    "type": "multiple-choice",
+    "question": "If beam deflection scales as L^3, what happens when you triple the span?",
+    "options": [
+      "Deflection increases 3x",
+      "Deflection increases 9x",
+      "Deflection increases 27x",
+      "Deflection stays the same"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "L^3 scaling: 3^3 = 27. Tripling the span increases deflection by 27 times.",
+    "explanationLine": 268
+  },
+  {
+    "id": "u10-L1-Q6",
+    "type": "multiple-choice",
+    "question": "The motor is about the size of a coffee can. Is this plausible?",
+    "options": [
+      "Yes. modern motors are very powerful for their size at any rating",
+      "No. a motor that size typically produces only 1-10 N*m continuously",
+      "It depends entirely on the voltage. higher voltage means any torque",
+      "Cannot be determined without knowing the exact motor model and brand"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Engineering sanity-checking means having calibrated intuition for physical quantities. A coffee-can-sized motor (NEMA 34 / ~90 mm frame) typically produces 1-5 N*m continuously, maybe 10-15 N*m peak.",
+    "explanationLine": 283
+  },
+  {
+    "id": "u10-L2-NEW-E1",
+    "type": "true-false",
+    "question": "Beach marks on a fracture surface indicate that the part failed by fatigue, not sudden overload.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Beach marks are concentric arcs radiating from the crack origin, a hallmark of fatigue.",
+    "explanationLine": 308
+  },
+  {
+    "id": "u10-L2-Q1",
+    "type": "multiple-choice",
+    "question": "A rotating shaft fracture surface shows a smooth, flat region with beach marks covering 80% of the cross-section, and a rough,?",
+    "options": [
+      "Stress corrosion cracking. beach marks indicate cyclic environment",
+      "Sudden overload failure. the part was undersized for the applied load",
+      "Hydrogen embrittlement. the smooth region is the embrittled zone",
+      "Fatigue failure under relatively low stress with gradual crack growth"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Beach marks (macroscopic concentric arcs radiating from the crack origin) are the hallmark of fatigue failure.",
+    "explanationLine": 324
+  },
+  {
+    "id": "u10-L2-NEW-E2",
+    "type": "multiple-choice",
+    "question": "Which failure mode is caused by repeated loading and unloading over many cycles?",
+    "options": [
+      "Overload",
+      "Fatigue",
+      "Creep",
+      "Erosion"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Fatigue is caused by cyclic loading. Cracks grow slowly until final fracture.",
+    "explanationLine": 365
+  },
+  {
+    "id": "u10-L2-Q2",
+    "type": "multiple-choice",
+    "question": "What is the most likely failure mechanism?",
+    "options": [
+      "General corrosion. switch to a thicker pipe wall for longer life",
+      "Fatigue cracking from pressure cycles. reduce operating pressure",
+      "Stress corrosion cracking. susceptible material, stress, and environment",
+      "Erosion-corrosion from high flow velocity. reduce the flow rate"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Stress corrosion cracking requires three simultaneous conditions.",
+    "explanationLine": 380
+  },
+  {
+    "id": "u10-L2b-NEW-E1",
+    "type": "true-false",
+    "question": "The \"5 Whys\" technique involves asking \"why?\" repeatedly to dig past symptoms and find the root cause.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Developed at Toyota, the 5 Whys peels back layers of symptoms until you reach the true root cause.",
+    "explanationLine": 405
+  },
+  {
+    "id": "u10-L2b-NEW-E2",
+    "type": "multiple-choice",
+    "question": "In a fishbone diagram, what do the \"bones\" represent?",
+    "options": [
+      "Customer complaints",
+      "Steps in the manufacturing process",
+      "Different product versions",
+      "Potential causes grouped by category"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Fishbone (Ishikawa) diagrams organize potential causes into categories like Man, Machine, Method, Material.",
+    "explanationLine": 441
+  },
+  {
+    "id": "u10-L2-Q3",
+    "type": "true-false",
+    "question": "In the 8D (Eight Disciplines) problem-solving methodology, the first step is to implement a permanent corrective action.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "The 8D methodology follows a structured sequence: D1 (form a team), D2 (describe the problem), D3 (implement interim containment action .",
+    "explanationLine": 450
+  },
+  {
+    "id": "u10-L2c-NEW-E1",
+    "type": "true-false",
+    "question": "Galvanic corrosion requires two dissimilar metals and an electrolyte (conductive liquid) to occur.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Without an electrolyte to carry ions, galvanic corrosion can\\",
+    "explanationLine": 475
+  },
+  {
+    "id": "u10-L2-Q4",
+    "type": "multiple-choice",
+    "question": "Walk me through how you would approach debugging a product that fails intermittently in the field but works fine in the lab.",
+    "options": [
+      "The field failures are user error. provide better training documentation",
+      "Replicate field conditions in the lab: temperature, humidity, vibration, duty",
+      "Increase the safety factor by 50% and ship an updated design immediately",
+      "Add more sensors to the product and wait for more field data before acting"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Intermittent field failures that cannot be reproduced in the lab almost always stem from environmental or usage differences. A structured approach: Gather field data .",
+    "explanationLine": 491
+  },
+  {
+    "id": "u10-L2-Q5",
+    "type": "multiple-choice",
+    "question": "In a fishbone (Ishikawa) diagram for manufacturing defect analysis, which of the following is NOT one of the standard \"6M\" categories?",
+    "options": [
+      "Man (People)",
+      "Machine",
+      "Method",
+      "Marketing"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "The 6M categories in a fishbone diagram are.",
+    "explanationLine": 506
+  },
+  {
+    "id": "u10-L2c-NEW-E2",
+    "type": "multiple-choice",
+    "question": "Stress corrosion cracking requires three simultaneous conditions. Which is NOT one of them?",
+    "options": [
+      "High rotational speed",
+      "A susceptible material",
+      "Tensile stress",
+      "A corrosive environment"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "SCC needs: susceptible material + tensile stress + corrosive environment. Speed is not a factor.",
+    "explanationLine": 547
+  },
+  {
+    "id": "u10-L3-NEW-E1",
+    "type": "true-false",
+    "question": "When an interviewer asks \"which material is best?\" the right first response is to ask what the constraints and priorities are.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Material selection always depends on context. Asking about constraints shows engineering maturity.",
+    "explanationLine": 582
+  },
+  {
+    "id": "u10-L3-Q1",
+    "type": "multiple-choice",
+    "question": "Steel has E = 200 GPa and density 7850 kg/m^3. Which is better for a bending beam?",
+    "options": [
+      "Steel. it has 3x the stiffness of aluminum, so less material is needed",
+      "Aluminum. it is lighter and stiffness does not matter for beams",
+      "For a beam in bending, the material index is E^(1/2)/rho",
+      "They are identical because E/rho is the same for both metals"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "For minimum-weight design, the correct material index depends on the loading mode. Tension/compression: E/rho (steel and aluminum are nearly equal at ~25.5).",
+    "explanationLine": 597
+  },
+  {
+    "id": "u10-L3-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What does a material index help you do?",
+    "options": [
+      "Find the material\\",
+      "Calculate exact stress values",
+      "Determine the manufacturing process",
+      "Rank materials for a specific loading scenario"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Material indices like E/rho or sigma_y/rho rank materials for specific loading modes (tension, bending, etc.).",
+    "explanationLine": 638
+  },
+  {
+    "id": "u10-L3-Q2",
+    "type": "multiple-choice",
+    "question": "A Pugh matrix is used for concept selection. What is its key advantage over other decision methods?",
+    "options": [
+      "It provides exact numerical optimization of design parameters",
+      "It enables systematic comparison of multiple design concepts against weighted",
+      "It eliminates the need for engineering judgment in design selection",
+      "It automatically generates the optimal design solution. though this factor"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "The Pugh matrix compares design concepts against a reference (datum) design using criteria scored as better (+), same (S), or worse (-).",
+    "explanationLine": 653
+  },
+  {
+    "id": "u10-L3b-NEW-E1",
+    "type": "true-false",
+    "question": "Design for Manufacturing (DFM) aims to make individual parts easier and cheaper to produce.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "DFM simplifies each part. DFA reduces the total number of parts. Both lower cost.",
+    "explanationLine": 678
+  },
+  {
+    "id": "u10-L3b-NEW-E2",
+    "type": "multiple-choice",
+    "question": "Which approach typically reduces manufacturing cost the most?",
+    "options": [
+      "Using exotic materials",
+      "Relaxing non-critical tolerances",
+      "Adding more inspection steps",
+      "Making parts thicker"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Relaxing tolerances on non-critical features is often the single biggest cost saver.",
+    "explanationLine": 719
+  },
+  {
+    "id": "u10-L3-Q3",
+    "type": "true-false",
+    "question": "Design for Assembly (DFA) primarily focuses on reducing the total number of parts in a product, while Design for Manufacturing?",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "DFA aims to minimize part count by asking three questions for each part: Does it move relative to adjacent parts? Does it need to be different material?",
+    "explanationLine": 728
+  },
+  {
+    "id": "u10-L3c-NEW-E1",
+    "type": "true-false",
+    "question": "A Pugh matrix compares design alternatives against a reference (datum) design using simple better/same/worse ratings.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The Pugh matrix is a quick concept screening tool that doesn\\",
+    "explanationLine": 753
+  },
+  {
+    "id": "u10-L3-Q4",
+    "type": "multiple-choice",
+    "question": "Walk me through your approach.\" Which response demonstrates the best engineering thinking?",
+    "options": [
+      "Systematically analyze material cost, tolerance relaxation on non-critical",
+      "Reduce all tolerances by 30% to decrease machining time proportionally . ",
+      "Use cheaper material. this is always the biggest cost driver",
+      "Switch to 3D printing. additive manufacturing is always cheaper than machining"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "A systematic approach considers all cost drivers.",
+    "explanationLine": 769
+  },
+  {
+    "id": "u10-L3-Q5",
+    "type": "multiple-choice",
+    "question": "How do you approach material and process selection among sheet metal, die casting, and injection-molded plastic?",
+    "options": [
+      "Always choose the cheapest material. injection-molded plastic is the obvious",
+      "Always choose the strongest material. die cast aluminum guarantees structural",
+      "Evaluate each option against functional requirements, then compare unit cost",
+      "Pick whatever the previous product version used. changing materials is too"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Material and process selection is always context-dependent.",
+    "explanationLine": 785
+  },
+  {
+    "id": "u10-L3c-NEW-E2",
+    "type": "multiple-choice",
+    "question": "In a weighted decision matrix, what happens if you give all criteria equal weight?",
+    "options": [
+      "Costs are automatically minimized",
+      "The matrix becomes more accurate",
+      "Unimportant factors influence the result as much as critical ones",
+      "All designs score the same"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Equal weighting treats color preference the same as structural integrity. Weight critical criteria higher.",
+    "explanationLine": 821
+  },
+  {
+    "id": "u10-L4-NEW-E1",
+    "type": "true-false",
+    "question": "In FEA, using a finer (denser) mesh generally improves accuracy but increases computation time.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "More elements means better approximation of the geometry and stress field, but solving takes longer.",
+    "explanationLine": 856
+  },
+  {
+    "id": "u10-L4-Q1",
+    "type": "multiple-choice",
+    "question": "In an FEA stress analysis, you observe that the maximum stress at a sharp re-entrant corner keeps increasing as you refine the?",
+    "options": [
+      "The stress is extremely high and increasing. the part will definitely fail",
+      "The model has diverged and all results are invalid. start over with different",
+      "The sharp corner creates a stress singularity where theoretical elastic stress",
+      "Just use the stress from the coarsest mesh. that is the most conservative"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Sharp re-entrant corners create stress singularities where the theoretical elastic stress is mathematically infinite.",
+    "explanationLine": 871
+  },
+  {
+    "id": "u10-L4-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What is a \"mesh\" in FEA?",
+    "options": [
+      "The solver algorithm",
+      "The loading conditions applied to the model",
+      "The material property database",
+      "The network of elements that divide the geometry"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "A mesh is the collection of nodes and elements that discretize the continuous geometry.",
+    "explanationLine": 912
+  },
+  {
+    "id": "u10-L4-Q2",
+    "type": "multiple-choice",
+    "question": "Which approach is most appropriate for structural-level analysis where you need stress distribution in the joined parts?",
+    "options": [
+      "Model every thread of every bolt with fine mesh for maximum accuracy,",
+      "Use beam elements or rigid connectors with appropriate preload, connected",
+      "Ignore the bolts entirely and model the joint as a continuous body, across",
+      "Apply a fixed boundary condition at all bolt hole locations, based"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Modeling individual bolt threads is computationally expensive and unnecessary for structural analysis.",
+    "explanationLine": 927
+  },
+  {
+    "id": "u10-L4b-NEW-E1",
+    "type": "true-false",
+    "question": "Fixing all 6 degrees of freedom at a support creates a fully fixed (encastre) boundary condition.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Fixing all translations and rotations at a node models a perfectly rigid wall mount.",
+    "explanationLine": 952
+  },
+  {
+    "id": "u10-L4b-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What does \"mesh convergence\" mean in FEA?",
+    "options": [
+      "The model matches the CAD geometry exactly",
+      "The solver finishes running",
+      "All elements have the same size",
+      "Results stop changing significantly as you refine the mesh"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "Convergence means your results are mesh-independent. Further refinement won\\",
+    "explanationLine": 988
+  },
+  {
+    "id": "u10-L4-Q3",
+    "type": "true-false",
+    "question": "A mesh convergence study is performed by progressively refining the mesh and checking that the key result stabilizes to within?",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Mesh convergence ensures that results are independent of mesh density. The process: run the analysis with an initial mesh, refine (globally or locally), re-run, and compare key results.",
+    "explanationLine": 997
+  },
+  {
+    "id": "u10-L4c-NEW-E1",
+    "type": "true-false",
+    "question": "A stress singularity in FEA means the stress at a sharp corner approaches infinity as the mesh is refined.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "This is a mathematical artifact of the model, not a real physical stress. Real corners have small radii.",
+    "explanationLine": 1022
+  },
+  {
+    "id": "u10-L4-Q4",
+    "type": "multiple-choice",
+    "question": "They conclude the bracket will fail. Is their conclusion correct?",
+    "options": [
+      "First check WHERE the 350 MPa occurs: if at a singularity the value is",
+      "Yes. stress exceeds yield, so the bracket will definitely break",
+      "No. von Mises stress is not relevant for aluminum, use maximum principal stress",
+      "Yes. any FEA stress above yield means immediate failure in all cases"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The correct response requires engineering judgment. Key checks: (1) Location. is the peak at a singularity? If so, the number is meaningless.",
+    "explanationLine": 1038
+  },
+  {
+    "id": "u10-L4-Q5",
+    "type": "multiple-choice",
+    "question": "They sum to 450 N, but the total applied load is 500 N. What does this indicate?",
+    "options": [
+      "The analysis is correct. a 10% imbalance is normal and acceptable, when",
+      "This is expected due to stress stiffening effects in the material model",
+      "The missing 50 N was absorbed by material damping in the analysis, without",
+      "There is a force equilibrium error indicating a problem with the model such"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "In a static analysis, reaction forces must balance applied forces (Newton\\",
+    "explanationLine": 1054
+  },
+  {
+    "id": "u10-L4c-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What should you do if FEA stress results disagree significantly with a hand calculation?",
+    "options": [
+      "Add more elements until FEA matches",
+      "Trust the FEA because computers are more accurate",
+      "Check the model for errors in BCs, loads, or material properties",
+      "Ignore the hand calculation"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Disagreement between FEA and hand calcs usually means a modeling error. Always investigate.",
+    "explanationLine": 1095
+  },
+  {
+    "id": "u10-L5-NEW-E1",
+    "type": "true-false",
+    "question": "In a case study interview, demonstrating a structured approach is more important than getting the exact right answer.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Interviewers evaluate your thought process and communication, not just the final answer.",
+    "explanationLine": 1130
+  },
+  {
+    "id": "u10-L5-Q1",
+    "type": "multiple-choice",
+    "question": "The leak occurs at the O-ring seal interface. What should be your first investigation step?",
+    "options": [
+      "Redesign the O-ring groove to a different standard size. an approximation",
+      "Switch to a more expensive seal material for better compression. not",
+      "Measure the O-ring groove dimensions and surface finish on failed vs.",
+      "Increase the clamping force on all assemblies by 50% across the board"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Before changing the design, gather data to identify the root cause. Measure groove dimensions (width, depth, diameter), surface finish (Ra), and inspect O-rings on failed parts.",
+    "explanationLine": 1145
+  },
+  {
+    "id": "u10-L5-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What should you do first when given a case study problem in an interview?",
+    "options": [
+      "Start calculating immediately",
+      "Clarify the problem and state your assumptions",
+      "Ask for the correct answer",
+      "Look up the solution online"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Always start by understanding and framing the problem. Then state assumptions before diving into analysis.",
+    "explanationLine": 1181
+  },
+  {
+    "id": "u10-L5-Q2",
+    "type": "multiple-choice",
+    "question": "The part is for a consumer product with dynamic loads. What is your recommendation?",
+    "options": [
+      "Approve it. a safety factor above 1.0 means it will not yield under load",
+      "Reject it. a safety factor of 1.1 is dangerously low for a dynamically loaded",
+      "Approve it but add a warning label for the end user",
+      "Reject it and recommend switching to steel regardless of weight impact, valid"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "A safety factor of 1.1 against yield under dynamic loading is unacceptable for a consumer product.",
+    "explanationLine": 1196
+  },
+  {
+    "id": "u10-L5b-NEW-E1",
+    "type": "true-false",
+    "question": "A product that passes all lab tests is guaranteed to never fail in the field.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Lab tests can\\",
+    "explanationLine": 1221
+  },
+  {
+    "id": "u10-L5b-NEW-E2",
+    "type": "multiple-choice",
+    "question": "An intermittent field failure that can\\",
+    "options": [
+      "Environmental or usage differences between lab and field",
+      "A software bug in the test equipment",
+      "The lab technician making errors",
+      "The part being too strong for lab loads"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "Unreproducible failures usually stem from conditions present in the field but absent in the lab.",
+    "explanationLine": 1262
+  },
+  {
+    "id": "u10-L5-Q3",
+    "type": "true-false",
+    "question": "When troubleshooting a vibration problem on a rotating machine, increasing the support structure stiffness will always reduce?",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Increasing stiffness changes the natural frequency, which could move it closer to or further from the excitation frequency. If the operating speed is below the current natural frequency,.",
+    "explanationLine": 1271
+  },
+  {
+    "id": "u10-L5c-NEW-E1",
+    "type": "true-false",
+    "question": "A good engineer only needs to understand their own discipline to solve real-world problems.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": false,
+    "explanation": "Real problems cross disciplines. Thermal, structural, fluid, and electrical effects often interact.",
+    "explanationLine": 1296
+  },
+  {
+    "id": "u10-L5-Q4",
+    "type": "multiple-choice",
+    "question": "No leak is visible. What is the most likely diagnosis?",
+    "options": [
+      "Progressive impeller erosion/corrosion reduced performance until the pump",
+      "The motor has reversed direction due to a wiring fault. check phase rotation",
+      "Air in the suction line from day one has gradually accumulated",
+      "The discharge valve was closed during startup and never opened"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The gradual degradation over months followed by complete failure is characteristic of progressive impeller damage.",
+    "explanationLine": 1312
+  },
+  {
+    "id": "u10-L5-Q5",
+    "type": "multiple-choice",
+    "question": "Which response format best demonstrates engineering judgment?",
+    "options": [
+      "Pick the cheapest option and explain only the cost savings",
+      "Present a structured comparison addressing mechanical requirements,",
+      "Pick the strongest option and explain only the safety benefits",
+      "Ask the interviewer which one they prefer before committing"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "Engineering material selection requires balancing multiple factors: mechanical requirements, environmental compatibility, manufacturability, cost, and availability.",
+    "explanationLine": 1328
+  },
+  {
+    "id": "u10-L5c-NEW-E2",
+    "type": "multiple-choice",
+    "question": "When proposing a design change, what should you always consider?",
+    "options": [
+      "Whether the change looks better aesthetically",
+      "Only the stress in the changed part",
+      "How the change affects other parts of the system",
+      "Only the manufacturing cost"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Systems thinking means considering ripple effects: weight, cost, assembly, thermal, maintenance impacts.",
+    "explanationLine": 1369
+  },
+  {
+    "id": "u10-L6-NEW-E1",
+    "type": "true-false",
+    "question": "ISO 9001 is the international standard for quality management systems.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "ISO 9001 defines requirements for a quality management system. It\\",
+    "explanationLine": 1404
+  },
+  {
+    "id": "u10-L6-Q1",
+    "type": "multiple-choice",
+    "question": "Which standard should they certify to?",
+    "options": [
+      "ISO 45001. Occupational Health and Safety Management",
+      "ISO 14001. Environmental Management Systems, in all loading orientations",
+      "AS9100. Quality Management Systems for Aviation, Space, and Defense",
+      "IATF 16949. Automotive Quality Management Systems"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "AS9100 (current revision AS9100D, based on ISO 9001:2015) adds aerospace-specific requirements including.",
+    "explanationLine": 1420
+  },
+  {
+    "id": "u10-L6-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What is the ASME Boiler and Pressure Vessel Code (BPVC) primarily used for?",
+    "options": [
+      "Electrical wiring standards",
+      "Safe design and construction of pressure equipment",
+      "Software quality assurance",
+      "Environmental regulations"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ASME BPVC is the primary standard for pressure vessel and boiler design safety in the US.",
+    "explanationLine": 1461
+  },
+  {
+    "id": "u10-L6-Q2",
+    "type": "multiple-choice",
+    "question": "Which ASME code section governs unfired pressure vessels?",
+    "options": [
+      "ASME B31.1. power piping code with wall thickness formulas, based",
+      "ASME BPVC Section VIII. using design by rule (Division 1) or design",
+      "ASME BPVC Section III. nuclear component design rules, valid only",
+      "ASME Y14.5. dimensioning and tolerancing standard, based on simplified"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ASME BPVC Section VIII covers unfired pressure vessels. Division 1 uses \"design by rule\" with established formulas (e.g., t = PR/(SE - 0.6P) for cylindrical shells).",
+    "explanationLine": 1476
+  },
+  {
+    "id": "u10-L6b-NEW-E1",
+    "type": "true-false",
+    "question": "FMEA stands for Failure Mode and Effects Analysis.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "FMEA systematically identifies potential failure modes, their effects, and their causes to prioritize risks.",
+    "explanationLine": 1501
+  },
+  {
+    "id": "u10-L6b-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What is the purpose of an Engineering Change Order (ECO)?",
+    "options": [
+      "To order new engineering tools",
+      "To formally document and control design modifications",
+      "To schedule employee training",
+      "To calculate project budgets"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": null,
+    "explanation": "ECOs ensure that design changes are reviewed, approved, and communicated to all affected teams.",
+    "explanationLine": 1537
+  },
+  {
+    "id": "u10-L6-Q3",
+    "type": "multiple-choice",
+    "question": "An American colleague reviews it. What is the key difference they must be aware of?",
+    "options": [
+      "There is no difference. ISO and ASME use identical projection methods",
+      "First-angle projection only shows two views while third-angle always shows three",
+      "ISO uses metric units and ASME uses imperial. the projection method",
+      "In first-angle projection (ISO default), views are placed on the opposite side"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": null,
+    "explanation": "In first-angle projection (Europe/Asia per ISO 128), the right side view appears to the LEFT of the front view. In third-angle projection (US/Canada per ASME Y14.3), the right side view appears.",
+    "explanationLine": 1553
+  },
+  {
+    "id": "u10-L6c-NEW-E1",
+    "type": "true-false",
+    "question": "A Gantt chart is a visual tool that shows project tasks plotted against time.",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "Gantt charts show task durations, dependencies, and milestones on a timeline.",
+    "explanationLine": 1578
+  },
+  {
+    "id": "u10-L6-Q4",
+    "type": "true-false",
+    "question": "In the engineering change process, an ECR must be approved and converted into an ECO before any design changes are implemented?",
+    "options": [],
+    "correctIndex": -1,
+    "correctAnswer": true,
+    "explanation": "The ECR/ECO process is required by most quality standards (ISO 9001, AS9100). An ECR documents the proposed change, justification, and impact assessment.",
+    "explanationLine": 1587
+  },
+  {
+    "id": "u10-L6-Q5",
+    "type": "multiple-choice",
+    "question": "Another says the high Severity demands action. Who is right?",
+    "options": [
+      "The first engineer. low Occurrence means acceptable risk regardless of Severity",
+      "Neither. just calculate RPN (9x2x8=144) and only act if it exceeds 200",
+      "The second engineer. modern FMEA practice (AIAG-VDA) prioritizes Severity",
+      "Both are wrong. only Detection rating matters since it is what the company"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": null,
+    "explanation": "Modern FMEA methodology (AIAG-VDA 2019) moved away from RPN precisely because it can mask high-severity risks.",
+    "explanationLine": 1602
+  },
+  {
+    "id": "u10-L6c-NEW-E2",
+    "type": "multiple-choice",
+    "question": "What does the \"critical path\" in project management represent?",
+    "options": [
+      "The longest sequence of dependent tasks that determines project duration",
+      "The most expensive tasks in the project",
+      "Tasks that require the most engineers",
+      "The path with the most safety risks"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": null,
+    "explanation": "The critical path determines the minimum project duration. Delays on any critical-path task delay the whole project.",
+    "explanationLine": 1643
+  }
+]

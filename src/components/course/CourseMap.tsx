@@ -263,7 +263,7 @@ export function CourseMap() {
   const [showOutOfHearts, setShowOutOfHearts] = useState(false);
   const [jumpModal, setJumpModal] = useState<JumpModalType | null>(null);
   const [visibleUnitIndex, setVisibleUnitIndex] = useState(0);
-
+  const floatingRef = useRef<HTMLDivElement>(null);
 
   const isFreeLocked = useCallback((unitIndex: number) =>
     !isGuest && !isProUser && !isUnitUnlocked(LIMITS.free.unlockedUnits, unitIndex), [isGuest, isProUser]);
@@ -514,6 +514,86 @@ export function CourseMap() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [courseData.length]);
 
+  // Hinged-sign pendulum physics for the floating header
+  useEffect(() => {
+    const el = floatingRef.current;
+    if (!el) return;
+
+    let prevY = window.scrollY;
+    let angVel = 0;
+    let angle = 0;
+    let noise = 0;           // subtle wind wobble
+    let noiseVel = 0;
+    let rafId = 0;
+    let ticking = false;
+    let scrolling = false;
+    let scrollTimer = 0;
+
+    const STIFFNESS = 0.15;   // snappier spring
+    const DAMPING = 0.90;     // settles faster
+    const MAX_ANGLE = 18;
+    const SCROLL_FACTOR = 0.25;
+
+    // Wind noise params
+    const NOISE_STRENGTH = 0.6;
+    const NOISE_DAMPING = 0.94;
+    const NOISE_STIFFNESS = 0.05;
+
+    const tick = () => {
+      // Main pendulum spring
+      angVel += -angle * STIFFNESS;
+      angVel *= DAMPING;
+      angle += angVel;
+      angle = Math.max(-MAX_ANGLE, Math.min(MAX_ANGLE, angle));
+
+      // Wind noise — random micro-gusts while scrolling
+      if (scrolling) {
+        noiseVel += (Math.random() - 0.5) * NOISE_STRENGTH;
+      }
+      noiseVel += -noise * NOISE_STIFFNESS;
+      noiseVel *= NOISE_DAMPING;
+      noise += noiseVel;
+
+      const total = angle + noise;
+
+      if (Math.abs(total) < 0.08 && Math.abs(angVel) < 0.08 && Math.abs(noiseVel) < 0.05 && !scrolling) {
+        angle = 0;
+        angVel = 0;
+        noise = 0;
+        noiseVel = 0;
+        el.style.transform = '';
+        ticking = false;
+        return;
+      }
+
+      el.style.transform = `perspective(600px) rotateX(${total.toFixed(2)}deg)`;
+      rafId = requestAnimationFrame(tick);
+    };
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      const delta = y - prevY;
+      prevY = y;
+      scrolling = true;
+      clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(() => { scrolling = false; }, 120);
+
+      angVel += Math.max(-4, Math.min(4, delta * SCROLL_FACTOR));
+
+      if (!ticking) {
+        ticking = true;
+        rafId = requestAnimationFrame(tick);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      clearTimeout(scrollTimer);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
+
   // Compute 1-based display number (per-section) for a global unit index
   const getDisplayNumber = useCallback((globalIndex: number) => {
     for (const section of sections) {
@@ -553,6 +633,7 @@ export function CourseMap() {
       {/* Always-visible floating unit header — updates as you scroll past units */}
       {floatingUnit && (
         <UnitHeroHeader
+          ref={floatingRef}
           unit={floatingUnit}
           unitIndex={visibleUnitIndex}
           displayNumber={getDisplayNumber(visibleUnitIndex)}

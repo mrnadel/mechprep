@@ -40,6 +40,9 @@ export const finSection5Part2: Unit[] = [
             question: "A capital gain occurs when you sell an investment for more than you paid for it.",
             correctAnswer: true,
             explanation: "The difference between your purchase price (cost basis) and sale price is your capital gain.",
+            distractorExplanations: {
+              1: 'This statement is actually true — the difference between your purchase price (cost basis) and sale price is your capital gain.',
+            },
           },
           {
             id: "fin-sec5-u8-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Your capital gain is $500: the sale price ($1,500) minus your cost basis ($1,000).",
+            distractorExplanations: {
+              0: 'This amount (1,000) is too high — the correct calculation gives 500.',
+              1: 'This amount (2,500) is too high — the correct calculation gives 500.',
+              3: 'This amount (1,500) is too high — the correct calculation gives 500.',
+            },
           },
           {
             id: "fin-sec5-u8-L1-T2",
@@ -82,6 +90,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Her basis is $2,010 ($2,000 + $10 commission). Her net proceeds are $2,990 ($3,000 minus $10 commission). Gain = $2,990 minus $2,010 = $980.",
+            distractorExplanations: {
+              1: 'This amount (1,000) is too high — the correct calculation gives 980.',
+              2: 'This amount (3,000) is too high — the correct calculation gives 980.',
+              3: 'This amount (2,000) is too high — the correct calculation gives 980.',
+            },
           },
           {
             id: "fin-sec5-u8-L1-T3",
@@ -109,6 +122,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Capital losses offset capital gains directly. $5,000 minus $3,000 = $2,000 in net taxable gains.",
+            distractorExplanations: {
+              0: 'This amount (8,000) is too high — the correct calculation gives 2,000.',
+              1: 'This amount (5,000) is too high — the correct calculation gives 2,000.',
+              2: 'This amount (3,000) is too high — the correct calculation gives 2,000.',
+            },
           },
           {
             id: "fin-sec5-u8-L1-Q6",
@@ -150,6 +168,9 @@ export const finSection5Part2: Unit[] = [
             question: "Short-term capital gains are taxed at the same rate as your regular income.",
             correctAnswer: true,
             explanation: "Short-term gains (held 1 year or less) are added to your ordinary income and taxed at your marginal rate.",
+            distractorExplanations: {
+              1: 'This statement is actually true — short-term gains (held 1 year or less) are added to your ordinary income and taxed at your marginal rate.',
+            },
           },
           {
             id: "fin-sec5-u8-L2-Q2",
@@ -163,6 +184,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "You must hold for more than one year. Selling on March 1, 2025 would be exactly one year, which is still short-term. March 2 is the first qualifying date.",
+            distractorExplanations: {
+              0: '"January 1, 2025" is wrong because you must hold for more than one year.',
+              1: '"December 31, 2024" is wrong because you must hold for more than one year.',
+              2: '"March 1, 2025" is wrong because you must hold for more than one year.',
+            },
           },
           {
             id: "fin-sec5-u8-L2-T2",
@@ -221,6 +247,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Waiting just one more month saves James $720 in taxes ($1,920 vs $1,200). If the stock price is stable, patience pays off.",
+            distractorExplanations: {
+              0: '"Sell half now and half later to split the difference" is wrong because waiting just one more month saves James $720 in taxes ($1,920 vs $1,200).',
+              2: '"Donate the stock to avoid all taxes" is wrong because waiting just one more month saves James $720 in taxes ($1,920 vs $1,200).',
+              3: '"Sell now and pay $1,920 in short-term tax" is wrong because waiting just one more month saves James $720 in taxes ($1,920 vs $1,200).',
+            },
           },
           {
             id: "fin-sec5-u8-L2-Q6",
@@ -234,6 +265,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The long-term vs short-term rate difference is usually the biggest factor. It can cut your tax rate nearly in half on gains.",
+            distractorExplanations: {
+              1: '"Keeping detailed records of your cost basis" is wrong because the long-term vs short-term rate difference is usually the biggest factor.',
+              2: '"Selling investments in small batches" is wrong because the long-term vs short-term rate difference is usually the biggest factor.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
         ],
       },
@@ -266,6 +302,9 @@ export const finSection5Part2: Unit[] = [
             question: "Qualified dividends are taxed at lower rates than ordinary dividends.",
             correctAnswer: true,
             explanation: "Qualified dividends get the same favorable rates as long-term capital gains: 0%, 15%, or 20%.",
+            distractorExplanations: {
+              1: 'This statement is actually true — qualified dividends get the same favorable rates as long-term capital gains: 0%, 15%, or 20%.',
+            },
           },
           {
             id: "fin-sec5-u8-L3-Q2",
@@ -309,6 +348,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Qualified dividends are taxed at 0%, 15%, or 20%. All other options are taxed at regular income rates, which can be much higher.",
+            distractorExplanations: {
+              0: '"Interest from a certificate of deposit" is wrong because qualified dividends are taxed at 0%, 15%, or 20%.',
+              1: '"Ordinary dividends from a REIT" is wrong because qualified dividends are taxed at 0%, 15%, or 20%.',
+              2: '"Interest from a savings account" is wrong because qualified dividends are taxed at 0%, 15%, or 20%.',
+            },
           },
           {
             id: "fin-sec5-u8-L3-Q4",
@@ -342,6 +386,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "After 32% tax, the corporate bond yields 3.4% (5% x 0.68). The municipal bond yields 3.5% tax-free. The muni wins by 0.1%.",
+            distractorExplanations: {
+              1: '"The corporate bond, because 5% is higher than 3.5%" is wrong because after 32% tax, the corporate bond yields 3.',
+              2: '"They\'re exactly the same after tax" is wrong because after 32% tax, the corporate bond yields 3.',
+              3: '"Neither, he should buy stocks instead" is wrong because after 32% tax, the corporate bond yields 3.',
+            },
           },
         ],
       },
@@ -367,6 +416,9 @@ export const finSection5Part2: Unit[] = [
             question: "Tax-loss harvesting involves selling investments at a loss to offset taxable gains.",
             correctAnswer: true,
             explanation: "By realizing losses strategically, you reduce the gains the government can tax.",
+            distractorExplanations: {
+              1: 'This statement is actually true — by realizing losses strategically, you reduce the gains the government can tax.',
+            },
           },
           {
             id: "fin-sec5-u8-L4-Q2",
@@ -380,6 +432,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "$10,000 in gains minus $4,000 in harvested losses = $6,000 in net taxable gains.",
+            distractorExplanations: {
+              0: 'This amount (10,000) is too high — the correct calculation gives 6,000.',
+              1: 'This amount (14,000) is too high — the correct calculation gives 6,000.',
+              2: 'This amount (4,000) is too low — the correct calculation gives 6,000.',
+            },
           },
           {
             id: "fin-sec5-u8-L4-T2",
@@ -401,6 +458,9 @@ export const finSection5Part2: Unit[] = [
             question: "You can sell a stock at a loss and buy the exact same stock back the next day without any tax consequences.",
             correctAnswer: false,
             explanation: "The wash sale rule disallows the loss if you repurchase the same or substantially identical security within 30 days.",
+            distractorExplanations: {
+              0: 'This statement is actually false — the wash sale rule disallows the loss if you repurchase the same or substantially identical security within 30 days.',
+            },
           },
           {
             id: "fin-sec5-u8-L4-Q4",
@@ -439,6 +499,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The $6,000 in losses offset her $6,000 in gains. The remaining $3,000 can be deducted against ordinary income (the annual limit). Any excess beyond $3,000 carries forward.",
+            distractorExplanations: {
+              0: '"She must pay tax on the $3,000 difference" is wrong because the $6,000 in losses offset her $6,000 in gains.',
+              2: '"She can apply all $9,000 against future gains" is wrong because the $6,000 in losses offset her $6,000 in gains.',
+              3: '"The extra losses are wasted and disappear" is wrong because the $6,000 in losses offset her $6,000 in gains.',
+            },
           },
         ],
       },
@@ -471,6 +536,9 @@ export const finSection5Part2: Unit[] = [
             question: "Investments inside a tax-advantaged account grow without being taxed each year on dividends or gains.",
             correctAnswer: true,
             explanation: "That's the key benefit. In a regular brokerage account, you owe tax annually on dividends and realized gains. Tax-advantaged accounts defer or eliminate that tax.",
+            distractorExplanations: {
+              1: 'This statement is actually true — that\'s the key benefit. In a regular brokerage account, you owe tax annually on dividends and realized gains. Tax-advantaged accounts defer or eliminate that tax.',
+            },
           },
           {
             id: "fin-sec5-u8-L5-Q2",
@@ -507,6 +575,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The HSA is the only account with triple tax benefits: deductible contributions, tax-free growth, and tax-free withdrawals for medical costs.",
+            distractorExplanations: {
+              0: '"Traditional IRA" is wrong because the HSA is the only account with triple tax benefits: deductible contributions, tax-free growth, and tax-free withd...',
+              2: '"Roth IRA" is wrong because the HSA is the only account with triple tax benefits: deductible contributions, tax-free growth, and tax-free withd...',
+              3: '"Standard brokerage account" is wrong because the HSA is the only account with triple tax benefits: deductible contributions, tax-free growth, and tax-free withd...',
+            },
           },
           {
             id: "fin-sec5-u8-L5-Q4",
@@ -545,6 +618,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Decades of tax-free compounding in accounts like Roth IRAs and HSAs typically saves far more than any single-year harvesting or rate strategy.",
+            distractorExplanations: {
+              1: '"Harvesting losses in a taxable brokerage account" is wrong because decades of tax-free compounding in accounts like Roth IRAs and HSAs typically saves far more than any single-year h...',
+              2: '"Holding investments for over one year" is wrong because decades of tax-free compounding in accounts like Roth IRAs and HSAs typically saves far more than any single-year h...',
+              3: '"Choosing municipal bonds over corporate bonds" is wrong because decades of tax-free compounding in accounts like Roth IRAs and HSAs typically saves far more than any single-year h...',
+            },
           },
         ],
       },
@@ -591,6 +669,9 @@ export const finSection5Part2: Unit[] = [
             question: "Self-employed individuals pay approximately 15.3% in self-employment tax on their net income.",
             correctAnswer: true,
             explanation: "The 15.3% covers both halves of Social Security and Medicare that an employer would normally split with you.",
+            distractorExplanations: {
+              1: 'This statement is actually true — the 15.3% covers both halves of Social Security and Medicare that an employer would normally split with you.',
+            },
           },
           {
             id: "fin-sec5-u9-L1-Q2",
@@ -622,6 +703,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "You can deduct the employer-equivalent half ($4,590) from your adjusted gross income, reducing your income tax.",
+            distractorExplanations: {
+              0: 'This amount (9,180) is too high — the correct calculation gives 4,590.',
+              1: 'This amount (3,000) is too low — the correct calculation gives 4,590.',
+              2: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec5-u9-L1-Q4",
@@ -652,6 +738,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Alex now pays both halves. His employer's former share was 7.65% of $70,000 = $5,355. He'll get to deduct half, but the cash outlay is still higher.",
+            distractorExplanations: {
+              1: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"About $10,710 more, double the old rate" is wrong because alex now pays both halves.',
+              3: '"About $2,000 more for self-employment forms" is wrong because alex now pays both halves.',
+            },
           },
         ],
       },
@@ -684,6 +775,9 @@ export const finSection5Part2: Unit[] = [
             question: "Freelancers can wait until April 15 to pay all their taxes for the year without any penalty.",
             correctAnswer: false,
             explanation: "Waiting until the filing deadline triggers underpayment penalties and interest. You must make quarterly estimated payments throughout the year.",
+            distractorExplanations: {
+              0: 'This statement is actually false — waiting until the filing deadline triggers underpayment penalties and interest. You must make quarterly estimated payments throughout the year.',
+            },
           },
           {
             id: "fin-sec5-u9-L2-Q2",
@@ -717,6 +811,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Paying 100% of last year's tax ($12,000 / 4 = $3,000/quarter) protects you from underpayment penalties regardless of this year's income.",
+            distractorExplanations: {
+              1: 'This uses the wrong formula: with a buffer does not correctly account for all components.',
+              2: 'This uses the wrong formula: just the penalty threshold does not correctly account for all components.',
+              3: 'This uses the wrong formula: 90% of last year does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec5-u9-L2-Q4",
@@ -750,6 +849,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Filing on time doesn't excuse not making quarterly payments. Tamika owes the full tax plus penalties and interest on the underpaid amounts.",
+            distractorExplanations: {
+              0: '"The IRS waives penalties for first-time freelancers" is wrong because filing on time doesn\'t excuse not making quarterly payments.',
+              1: '"No penalty since she filed on time" is wrong because filing on time doesn\'t excuse not making quarterly payments.',
+              3: 'This choice is wrong because filing on time doesn\'t excuse not making quarterly payments.',
+            },
           },
         ],
       },
@@ -775,6 +879,9 @@ export const finSection5Part2: Unit[] = [
             question: "A legitimate business expense reduces both your income tax and self-employment tax.",
             correctAnswer: true,
             explanation: "Business deductions lower your net self-employment income, which is the number used to calculate both taxes.",
+            distractorExplanations: {
+              1: 'This statement is actually true — business deductions lower your net self-employment income, which is the number used to calculate both taxes.',
+            },
           },
           {
             id: "fin-sec5-u9-L3-Q2",
@@ -818,6 +925,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "200 sq ft x $5 = $1,000. The simplified method caps at 300 sq ft ($1,500 max).",
+            distractorExplanations: {
+              0: 'This amount (2,000) is too high — the correct calculation gives 1,000.',
+              2: 'This amount (1,500) is too high — the correct calculation gives 1,000.',
+              3: 'This amount (500) is too low — the correct calculation gives 1,000.',
+            },
           },
           {
             id: "fin-sec5-u9-L3-Q4",
@@ -857,6 +969,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Business mileage, software, and equipment are legitimate deductions. A family vacation isn't deductible just because you checked email.",
+            distractorExplanations: {
+              0: 'This answer is too narrow — it ignores other important factors.',
+              2: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
         ],
       },
@@ -882,6 +999,9 @@ export const finSection5Part2: Unit[] = [
             question: "A sole proprietor pays self-employment tax on all net business income.",
             correctAnswer: true,
             explanation: "As a sole proprietor, your entire net profit is subject to the 15.3% self-employment tax.",
+            distractorExplanations: {
+              1: 'This statement is actually true — as a sole proprietor, your entire net profit is subject to the 15.3% self-employment tax.',
+            },
           },
           {
             id: "fin-sec5-u9-L4-Q2",
@@ -895,6 +1015,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "You pay yourself a reasonable salary (subject to payroll tax) and take the rest as distributions, which avoid the 15.3% self-employment tax.",
+            distractorExplanations: {
+              0: '"It converts all income to long-term capital gains" is wrong because you pay yourself a reasonable salary (subject to payroll tax) and take the rest as distributions, which avoid the 15.',
+              1: '"It eliminates all payroll taxes entirely" is wrong because you pay yourself a reasonable salary (subject to payroll tax) and take the rest as distributions, which avoid the 15.',
+              3: '"It moves your income to a lower tax bracket automatically" is wrong because you pay yourself a reasonable salary (subject to payroll tax) and take the rest as distributions, which avoid the 15.',
+            },
           },
           {
             id: "fin-sec5-u9-L4-T2",
@@ -916,6 +1041,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "As a sole proprietor, the full $120,000 is subject to SE tax. With the S-Corp, only the $70,000 salary has payroll tax. The $50,000 in distributions avoids the 15.3%, saving about $7,650.",
+            distractorExplanations: {
+              1: 'This calculation uses the wrong formula — as a sole proprietor, the full $120,000 is subject to SE tax. With the S-Corp, only the $70,000 salary has payroll tax. The $50,000 in distributions avoids the 15.3%, saving about $7,650.',
+              2: 'Ignoring financial problems allows them to grow and cost you more.',
+              3: 'This calculation uses the wrong formula — as a sole proprietor, the full $120,000 is subject to SE tax. With the S-Corp, only the $70,000 salary has payroll tax. The $50,000 in distributions avoids the 15.3%, saving about $7,650.',
+            },
           },
           {
             id: "fin-sec5-u9-L4-Q4",
@@ -973,6 +1103,9 @@ export const finSection5Part2: Unit[] = [
             question: "Self-employed individuals are audited at higher rates than W-2 employees.",
             correctAnswer: true,
             explanation: "The IRS audits self-employed returns more often because deductions are self-reported and harder to verify automatically.",
+            distractorExplanations: {
+              1: 'This statement is actually true — the IRS audits self-employed returns more often because deductions are self-reported and harder to verify automatically.',
+            },
           },
           {
             id: "fin-sec5-u9-L5-Q2",
@@ -986,6 +1119,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The IRS generally has 3 years to audit a return, but 6 years if income is underreported by 25% or more. Keeping records for 7 years covers most situations.",
+            distractorExplanations: {
+              0: '"1 year after filing" is wrong because the IRS generally has 3 years to audit a return, but 6 years if income is underreported by 25% or more.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"6 months after the tax deadline" is wrong because the IRS generally has 3 years to audit a return, but 6 years if income is underreported by 25% or more.',
+            },
           },
           {
             id: "fin-sec5-u9-L5-T2",
@@ -1050,6 +1188,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without separate accounts, mileage logs, or receipts, Lisa can't substantiate her $8,000 in claimed deductions. The IRS can disallow them entirely.",
+            distractorExplanations: {
+              0: '"The IRS doesn\'t allow photography as a business" is wrong because without separate accounts, mileage logs, or receipts, Lisa can\'t substantiate her $8,000 in claimed deductions.',
+              1: '"She should have filed as an LLC instead" is wrong because without separate accounts, mileage logs, or receipts, Lisa can\'t substantiate her $8,000 in claimed deductions.',
+              3: '"She filed her return too early in the year" is wrong because without separate accounts, mileage logs, or receipts, Lisa can\'t substantiate her $8,000 in claimed deductions.',
+            },
           },
         ],
       },
@@ -1089,6 +1232,9 @@ export const finSection5Part2: Unit[] = [
             question: "A $1,000 tax credit is worth more than a $1,000 tax deduction for someone in the 22% bracket.",
             correctAnswer: true,
             explanation: "The credit saves $1,000 directly. The deduction only saves $220 (22% of $1,000).",
+            distractorExplanations: {
+              1: 'This statement is actually true — the credit saves $1,000 directly. The deduction only saves $220 (22% of $1,000).',
+            },
           },
           {
             id: "fin-sec5-u10-L1-Q2",
@@ -1120,6 +1266,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Rachel's itemized deductions total $12,000, which is less than the $14,600 standard deduction. She saves more with the standard deduction.",
+            distractorExplanations: {
+              0: '"She should claim both standard and itemized" is wrong because rachel\'s itemized deductions total $12,000, which is less than the $14,600 standard deduction.',
+              2: '"Itemize, because $12,000 in deductions is higher" is wrong because rachel\'s itemized deductions total $12,000, which is less than the $14,600 standard deduction.',
+              3: '"It doesn\'t matter, the result is the same" is wrong because rachel\'s itemized deductions total $12,000, which is less than the $14,600 standard deduction.',
+            },
           },
           {
             id: "fin-sec5-u10-L1-Q4",
@@ -1147,6 +1298,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "First you subtract deductions to get taxable income. Then calculate tax owed. Then apply credits. Finally, compare what you owe to what you've already paid.",
+            distractorExplanations: {
+              1: '"Calculate your tax owed" is wrong because first you subtract deductions to get taxable income.',
+              2: '"Apply any credits to reduce your tax bill" is wrong because first you subtract deductions to get taxable income.',
+              3: '"Determine if you owe or get a refund" is wrong because first you subtract deductions to get taxable income.',
+            },
           },
           {
             id: "fin-sec5-u10-L1-Q6",
@@ -1179,6 +1335,9 @@ export const finSection5Part2: Unit[] = [
             question: "An investment held for exactly 12 months qualifies for long-term capital gains rates.",
             correctAnswer: false,
             explanation: "You must hold for more than one year. Exactly 12 months is still short-term. One day more makes the difference.",
+            distractorExplanations: {
+              0: 'This statement is actually false — you must hold for more than one year. Exactly 12 months is still short-term. One day more makes the difference.',
+            },
           },
           {
             id: "fin-sec5-u10-L2-Q2",
@@ -1226,6 +1385,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "$8,000 gains minus $5,000 losses = $3,000 net gains. At 15%, she owes $450. Without harvesting, she'd owe $1,200.",
+            distractorExplanations: {
+              0: 'This amount (0) is too low — the correct calculation gives 450.',
+              1: 'This amount (750) is too high — the correct calculation gives 450.',
+              2: 'This amount (1,200) is too high — the correct calculation gives 450.',
+            },
           },
           {
             id: "fin-sec5-u10-L2-Q5",
@@ -1239,6 +1403,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Roth IRA contributions are made after-tax, but qualified withdrawals of both contributions and earnings are completely tax-free.",
+            distractorExplanations: {
+              1: '"Contributions are tax-deductible each year" is wrong because roth IRA contributions are made after-tax, but qualified withdrawals of both contributions and earnings are complet...',
+              2: '"Losses inside a Roth can offset gains outside it" is wrong because roth IRA contributions are made after-tax, but qualified withdrawals of both contributions and earnings are complet...',
+              3: '"The government matches your contributions" is wrong because roth IRA contributions are made after-tax, but qualified withdrawals of both contributions and earnings are complet...',
+            },
           },
           {
             id: "fin-sec5-u10-L2-Q6",
@@ -1288,6 +1457,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The S-Corp lets you pay yourself a reasonable salary (subject to payroll tax) and take the rest as distributions that avoid the 15.3% self-employment tax.",
+            distractorExplanations: {
+              0: '"It doubles the standard deduction" is wrong because the S-Corp lets you pay yourself a reasonable salary (subject to payroll tax) and take the rest as distributions th...',
+              1: '"It eliminates all taxes on business income" is wrong because the S-Corp lets you pay yourself a reasonable salary (subject to payroll tax) and take the rest as distributions th...',
+              2: '"It converts all income to long-term capital gains" is wrong because the S-Corp lets you pay yourself a reasonable salary (subject to payroll tax) and take the rest as distributions th...',
+            },
           },
           {
             id: "fin-sec5-u10-L3-T2",
@@ -1301,6 +1475,9 @@ export const finSection5Part2: Unit[] = [
             question: "The safe harbor rule requires freelancers to pay at least 100% of last year's total tax in quarterly installments to avoid penalties.",
             correctAnswer: true,
             explanation: "Match last year's total tax divided by 4, and you're protected from underpayment penalties regardless of this year's income.",
+            distractorExplanations: {
+              1: 'This statement is actually true — match last year\'s total tax divided by 4, and you\'re protected from underpayment penalties regardless of this year\'s income.',
+            },
           },
           {
             id: "fin-sec5-u10-L3-Q4",
@@ -1315,6 +1492,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Coworking: $3,600. Development: $1,200. Mileage: 5,000 x $0.67 = $3,350. Total: $8,150 in deductions against her $90,000 income.",
+            distractorExplanations: {
+              0: 'This amount (4,800) is too low — the correct calculation gives 8,150.',
+              1: 'This amount (3,350) is too low — the correct calculation gives 8,150.',
+              3: 'This amount (3,600) is too low — the correct calculation gives 8,150.',
+            },
           },
           {
             id: "fin-sec5-u10-L3-Q5",
@@ -1377,6 +1559,9 @@ export const finSection5Part2: Unit[] = [
             question: "Choosing the wrong filing status can significantly increase your tax bill.",
             correctAnswer: true,
             explanation: "Filing status determines your standard deduction, tax brackets, and eligibility for credits. Choosing incorrectly can cost hundreds or thousands.",
+            distractorExplanations: {
+              1: 'This statement is actually true — filing status determines your standard deduction, tax brackets, and eligibility for credits. Choosing incorrectly can cost hundreds or thousands.',
+            },
           },
           {
             id: "fin-sec5-u11-L1-Q2",
@@ -1413,6 +1598,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "All income is taxable whether or not you receive a 1099. The $600 threshold is when the payer must issue a form, not when you owe tax.",
+            distractorExplanations: {
+              0: 'This answer is too narrow — it ignores other important factors.',
+              1: 'This answer is too narrow — it ignores other important factors.',
+              3: '"No, you only report income with a 1099" is wrong because all income is taxable whether or not you receive a 1099.',
+            },
           },
           {
             id: "fin-sec5-u11-L1-Q4",
@@ -1446,6 +1636,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The IRS matched Kevin's return against the 1099 filed by his photography clients. The unreported $8,000 triggered an automatic notice with taxes, penalties, and interest.",
+            distractorExplanations: {
+              0: '"He filed too early in the year" is wrong because the IRS matched Kevin\'s return against the 1099 filed by his photography clients.',
+              1: '"His employer reported incorrect wages" is wrong because the IRS matched Kevin\'s return against the 1099 filed by his photography clients.',
+              2: '"His W-2 income was too high for his bracket" is wrong because the IRS matched Kevin\'s return against the 1099 filed by his photography clients.',
+            },
           },
           {
             id: "fin-sec5-u11-L1-Q6",
@@ -1482,6 +1677,9 @@ export const finSection5Part2: Unit[] = [
             question: "Making a lot of money automatically triggers an audit.",
             correctAnswer: false,
             explanation: "High income increases audit odds, but the real triggers are unusual deductions relative to income, mismatched documents, and specific red flag patterns.",
+            distractorExplanations: {
+              0: 'This statement is actually false — high income increases audit odds, but the real triggers are unusual deductions relative to income, mismatched documents, and specific red flag patterns.',
+            },
           },
           {
             id: "fin-sec5-u11-L2-Q2",
@@ -1495,6 +1693,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The IRS compares your deductions to norms for your income level. Deductions that are disproportionately large raise red flags.",
+            distractorExplanations: {
+              1: '"Filing your return on time" is wrong because the IRS compares your deductions to norms for your income level.',
+              2: '"Having exactly one W-2" is wrong because the IRS compares your deductions to norms for your income level.',
+              3: '"Taking the standard deduction" is wrong because the IRS compares your deductions to norms for your income level.',
+            },
           },
           {
             id: "fin-sec5-u11-L2-T2",
@@ -1540,6 +1743,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "This return has at least 3 red flags: a 95% deduction rate, all round numbers (suggesting estimates, not actual records), and very low net income from a business.",
+            distractorExplanations: {
+              0: '"One: the low profit margin" is wrong because this return has at least 3 red flags: a 95% deduction rate, all round numbers (suggesting estimates, not actual rec...',
+              1: '"Two: low profit and round numbers" is wrong because this return has at least 3 red flags: a 95% deduction rate, all round numbers (suggesting estimates, not actual rec...',
+              3: '"Zero, because all amounts are below the audit threshold" is wrong because this return has at least 3 red flags: a 95% deduction rate, all round numbers (suggesting estimates, not actual rec...',
+            },
           },
           {
             id: "fin-sec5-u11-L2-Q6",
@@ -1576,6 +1784,9 @@ export const finSection5Part2: Unit[] = [
             question: "Making an honest math error on your tax return can result in criminal fraud charges.",
             correctAnswer: false,
             explanation: "Honest mistakes lead to corrections, penalties, and interest, not criminal charges. Fraud requires willful intent to deceive.",
+            distractorExplanations: {
+              0: 'This statement is actually false — honest mistakes lead to corrections, penalties, and interest, not criminal charges. Fraud requires willful intent to deceive.',
+            },
           },
           {
             id: "fin-sec5-u11-L3-Q2",
@@ -1626,6 +1837,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Filing an amended return voluntarily shows good faith and typically results in lower penalties than waiting for the IRS to catch it.",
+            distractorExplanations: {
+              0: '"Wait until you\'re audited to explain" is wrong because filing an amended return voluntarily shows good faith and typically results in lower penalties than waiting for the...',
+              2: 'Hoping passively does not solve financial problems; active steps are needed.',
+              3: '"Report double the income next year to make up for it" is wrong because filing an amended return voluntarily shows good faith and typically results in lower penalties than waiting for the...',
+            },
           },
           {
             id: "fin-sec5-u11-L3-Q5",
@@ -1640,6 +1856,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Taxpayer A's honest mistake gets the 20% negligence penalty ($880). Taxpayer B's intentional fraud triggers a 75% penalty ($3,300) and potential criminal prosecution.",
+            distractorExplanations: {
+              1: '"Both pay the same 20% negligence penalty ($880)" is wrong because taxpayer A\'s honest mistake gets the 20% negligence penalty ($880).',
+              2: '"Neither pays a penalty since they both owe back taxes" is wrong because taxpayer A\'s honest mistake gets the 20% negligence penalty ($880).',
+              3: '"A is forgiven entirely, B pays 50% ($2,200)" is wrong because taxpayer A\'s honest mistake gets the 20% negligence penalty ($880).',
+            },
           },
           {
             id: "fin-sec5-u11-L3-Q6",
@@ -1673,6 +1894,9 @@ export const finSection5Part2: Unit[] = [
             question: "Most IRS audits are conducted by mail, not in person.",
             correctAnswer: true,
             explanation: "Correspondence audits are the most common type. They focus on specific items and usually require mailing documentation to support your claims.",
+            distractorExplanations: {
+              1: 'This statement is actually true — correspondence audits are the most common type. They focus on specific items and usually require mailing documentation to support your claims.',
+            },
           },
           {
             id: "fin-sec5-u11-L4-Q2",
@@ -1686,6 +1910,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Respond with documentation by the deadline. Most correspondence audits are resolved simply by providing receipts or records that support your claim.",
+            distractorExplanations: {
+              0: '"Immediately hire an expensive tax attorney" is wrong because respond with documentation by the deadline.',
+              1: 'This choice is wrong because respond with documentation by the deadline.',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec5-u11-L4-T2",
@@ -1736,6 +1965,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Jamal has exactly what the IRS wants: proof of a dedicated space (photos), actual expenses (utility bills), and a reasonable calculation (150/1,500 = 10%). He's well prepared.",
+            distractorExplanations: {
+              0: '"No, home office deductions are always disallowed" is wrong because jamal has exactly what the IRS wants: proof of a dedicated space (photos), actual expenses (utility bills), and a r...',
+              2: '"No, because $1,500 seems too high for a home office" is wrong because jamal has exactly what the IRS wants: proof of a dedicated space (photos), actual expenses (utility bills), and a r...',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec5-u11-L4-Q6",
@@ -1769,6 +2003,9 @@ export const finSection5Part2: Unit[] = [
             question: "The IRS may call you and demand immediate payment by gift card or wire transfer.",
             correctAnswer: false,
             explanation: "The IRS initiates contact by mail, not phone. They never demand gift cards, wire transfers, or cryptocurrency. That's always a scam.",
+            distractorExplanations: {
+              0: 'This statement is actually false — the IRS initiates contact by mail, not phone. They never demand gift cards, wire transfers, or cryptocurrency. That\'s always a scam.',
+            },
           },
           {
             id: "fin-sec5-u11-L5-Q2",
@@ -1805,6 +2042,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "This is a classic sign of tax identity theft. Someone used your SSN to file a fraudulent return, usually to steal your refund.",
+            distractorExplanations: {
+              0: '"The IRS made a processing error" is wrong because this is a classic sign of tax identity theft.',
+              1: '"Your employer filed on your behalf" is wrong because this is a classic sign of tax identity theft.',
+              3: '"You accidentally filed twice" is wrong because this is a classic sign of tax identity theft.',
+            },
           },
           {
             id: "fin-sec5-u11-L5-Q4",
@@ -1846,6 +2088,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "This is a textbook IRS impersonation scam. The real IRS contacts you by mail, never demands immediate payment, and never threatens arrest over the phone. Hang up and report it.",
+            distractorExplanations: {
+              0: '"Pay immediately to avoid arrest" is wrong because this is a textbook IRS impersonation scam.',
+              1: '"Give them her bank account info to set up a payment plan" is wrong because this is a textbook IRS impersonation scam.',
+              3: '"Call back the number they left to negotiate a lower amount" is wrong because this is a textbook IRS impersonation scam.',
+            },
           },
         ],
       },
@@ -1885,6 +2132,9 @@ export const finSection5Part2: Unit[] = [
             question: "Tax planning means making strategic financial decisions throughout the year to reduce your tax bill.",
             correctAnswer: true,
             explanation: "Planning is proactive. It's about timing income, maximizing deductions, and using tax-advantaged accounts before the year ends.",
+            distractorExplanations: {
+              1: 'This statement is actually true — planning is proactive. It\'s about timing income, maximizing deductions, and using tax-advantaged accounts before the year ends.',
+            },
           },
           {
             id: "fin-sec5-u12-L1-Q2",
@@ -1898,6 +2148,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The best tax planning starts at the beginning of the year (or earlier). Waiting until filing season means most opportunities have already passed.",
+            distractorExplanations: {
+              0: '"After you\'ve filed your return" is wrong because the best tax planning starts at the beginning of the year (or earlier).',
+              1: '"April 14, the day before the filing deadline" is wrong because the best tax planning starts at the beginning of the year (or earlier).',
+              2: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec5-u12-L1-T2",
@@ -1949,6 +2204,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Person A reduced taxable income by about $29,150 ($23,000 + $4,150 + $2,000). At a 24% rate, that's roughly $7,000 in tax savings through planning alone.",
+            distractorExplanations: {
+              0: '"The same amount, since they earn the same" is wrong because person A reduced taxable income by about $29,150 ($23,000 + $4,150 + $2,000).',
+              1: '"About $29,000 less" is wrong because person A reduced taxable income by about $29,150 ($23,000 + $4,150 + $2,000).',
+              3: '"About $200 less" is wrong because person A reduced taxable income by about $29,150 ($23,000 + $4,150 + $2,000).',
+            },
           },
           {
             id: "fin-sec5-u12-L1-Q6",
@@ -1982,6 +2242,9 @@ export const finSection5Part2: Unit[] = [
             question: "Bunching charitable donations into one year instead of spreading them out can increase your total tax savings.",
             correctAnswer: true,
             explanation: "If spreading donations means you never exceed the standard deduction, you get no extra benefit. Bunching them into one year can push you past the standard deduction threshold.",
+            distractorExplanations: {
+              1: 'This statement is actually true — if spreading donations means you never exceed the standard deduction, you get no extra benefit. Bunching them into one year can push you past the standard deduction threshold.',
+            },
           },
           {
             id: "fin-sec5-u12-L2-Q2",
@@ -1996,6 +2259,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Bunching: Year 1 itemized = $18,000 + Year 2 standard = $14,600 = $32,600. Spreading: $14,600 + $14,600 = $29,200. Difference: $3,400 in extra deductions.",
+            distractorExplanations: {
+              0: 'This amount (10,000) is too high — the correct calculation gives 3,400.',
+              1: 'This amount (0) is too low — the correct calculation gives 3,400.',
+              3: 'This amount (5,000) is too high — the correct calculation gives 3,400.',
+            },
           },
           {
             id: "fin-sec5-u12-L2-T2",
@@ -2016,6 +2284,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Shifting $10,000 from a 32% year to a 12% year saves $2,000 in tax. Timing income around bracket changes is one of the most powerful planning tools.",
+            distractorExplanations: {
+              0: '"Stop working early to reduce this year\'s income" is wrong because shifting $10,000 from a 32% year to a 12% year saves $2,000 in tax.',
+              2: 'This choice is wrong because shifting $10,000 from a 32% year to a 12% year saves $2,000 in tax.',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec5-u12-L2-Q4",
@@ -2048,6 +2321,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Moving income across bracket boundaries creates the biggest savings. An extension delays filing, not the tax owed.",
+            distractorExplanations: {
+              1: '"Accelerating one month of expenses into December" is wrong because moving income across bracket boundaries creates the biggest savings.',
+              2: '"Splitting a bonus payment across two paychecks" is wrong because moving income across bracket boundaries creates the biggest savings.',
+              3: '"Filing an extension to delay your return" is wrong because moving income across bracket boundaries creates the biggest savings.',
+            },
           },
         ],
       },
@@ -2073,6 +2351,9 @@ export const finSection5Part2: Unit[] = [
             question: "Asset location means choosing which account type to hold each type of investment in.",
             correctAnswer: true,
             explanation: "Asset location optimizes your after-tax returns by sheltering tax-heavy investments in the right accounts.",
+            distractorExplanations: {
+              1: 'This statement is actually true — asset location optimizes your after-tax returns by sheltering tax-heavy investments in the right accounts.',
+            },
           },
           {
             id: "fin-sec5-u12-L3-Q2",
@@ -2109,6 +2390,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Bond interest is taxed at ordinary income rates (up to 37%). Sheltering it in an IRA or 401(k) defers or eliminates that annual tax hit.",
+            distractorExplanations: {
+              0: '"Tax-sheltered accounts pay higher bond yields" is wrong because bond interest is taxed at ordinary income rates (up to 37%).',
+              1: '"Bonds aren\'t allowed in taxable brokerage accounts" is wrong because bond interest is taxed at ordinary income rates (up to 37%).',
+              2: '"Bonds lose value faster in taxable accounts" is wrong because bond interest is taxed at ordinary income rates (up to 37%).',
+            },
           },
           {
             id: "fin-sec5-u12-L3-Q4",
@@ -2148,6 +2434,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Bonds generate fully taxable interest, so they belong in the IRA where growth is tax-deferred. The stock index fund is tax-efficient and suitable for the taxable account.",
+            distractorExplanations: {
+              0: '"Split each fund 50/50 across both accounts" is wrong because bonds generate fully taxable interest, so they belong in the IRA where growth is tax-deferred.',
+              1: '"It doesn\'t matter, the total return is the same" is wrong because bonds generate fully taxable interest, so they belong in the IRA where growth is tax-deferred.',
+              2: '"Bonds in the taxable account, stocks in the IRA" is wrong because bonds generate fully taxable interest, so they belong in the IRA where growth is tax-deferred.',
+            },
           },
         ],
       },
@@ -2173,6 +2464,9 @@ export const finSection5Part2: Unit[] = [
             question: "You must pay income tax on the amount you convert from a traditional IRA to a Roth IRA.",
             correctAnswer: true,
             explanation: "Traditional IRA money was contributed pre-tax. Converting to Roth means paying the deferred tax now in exchange for tax-free growth and withdrawals later.",
+            distractorExplanations: {
+              1: 'This statement is actually true — traditional IRA money was contributed pre-tax. Converting to Roth means paying the deferred tax now in exchange for tax-free growth and withdrawals later.',
+            },
           },
           {
             id: "fin-sec5-u12-L4-Q2",
@@ -2186,6 +2480,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Converting during a low-income year means you pay less tax on the conversion. The money then grows and is withdrawn tax-free at whatever rate applies later.",
+            distractorExplanations: {
+              0: '"On your last day of work before retirement" is wrong because converting during a low-income year means you pay less tax on the conversion.',
+              1: 'This answer is too narrow — it ignores other important factors.',
+              2: '"When you\'re in the highest tax bracket of your career" is wrong because converting during a low-income year means you pay less tax on the conversion.',
+            },
           },
           {
             id: "fin-sec5-u12-L4-T2",
@@ -2232,6 +2531,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Converting $40,000 to $50,000/year keeps Miguel in the 12% bracket. Converting all at once would push him into much higher brackets. Waiting until RMDs forces conversions at potentially higher rates.",
+            distractorExplanations: {
+              0: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              1: '"Convert the entire $500,000 at once at age 50" is wrong because converting $40,000 to $50,000/year keeps Miguel in the 12% bracket.',
+              3: '"Wait until age 72 when required minimum distributions start" is wrong because converting $40,000 to $50,000/year keeps Miguel in the 12% bracket.',
+            },
           },
           {
             id: "fin-sec5-u12-L4-Q6",
@@ -2279,6 +2583,9 @@ export const finSection5Part2: Unit[] = [
             question: "Tax planning is only useful for high-income earners.",
             correctAnswer: false,
             explanation: "Tax planning benefits everyone. Even someone earning $40,000 can save hundreds to thousands through retirement contributions, the right filing status, and claiming all eligible credits.",
+            distractorExplanations: {
+              0: 'This statement is actually false — tax planning benefits everyone. Even someone earning $40,000 can save hundreds to thousands through retirement contributions, the right filing status, and claiming all eligible credits.',
+            },
           },
           {
             id: "fin-sec5-u12-L5-T2",
@@ -2341,6 +2648,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Harvesting $3,000 in losses offsets gains, saving about $450 at 15%. The $6,000 donation plus other deductions may push you past the standard deduction. Both moves save money before year-end.",
+            distractorExplanations: {
+              0: '"Carry everything to next year for simplicity" is wrong because harvesting $3,000 in losses offsets gains, saving about $450 at 15%.',
+              1: '"Sell the winning investments to pay for the donation" is wrong because harvesting $3,000 in losses offsets gains, saving about $450 at 15%.',
+              2: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
         ],
       },
@@ -2385,6 +2697,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Progressive marginal brackets tax each portion of income at increasing rates. Only the income within each bracket is taxed at that bracket's rate.",
+            distractorExplanations: {
+              0: '"Flat tax" is wrong because progressive marginal brackets tax each portion of income at increasing rates.',
+              1: '"Regressive tax" is wrong because progressive marginal brackets tax each portion of income at increasing rates.',
+              3: '"Proportional tax" is wrong because progressive marginal brackets tax each portion of income at increasing rates.',
+            },
           },
           {
             id: "fin-sec5-u13-L1-Q2",
@@ -2434,6 +2751,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Emma's itemized deductions total $13,000, which is less than the $14,600 standard deduction. She should take the standard deduction.",
+            distractorExplanations: {
+              0: '"It depends on her filing status, which we don\'t know" is wrong because emma\'s itemized deductions total $13,000, which is less than the $14,600 standard deduction.',
+              1: '"She should claim both for maximum savings" is wrong because emma\'s itemized deductions total $13,000, which is less than the $14,600 standard deduction.',
+              3: '"Itemize, because $13,000 sounds like a lot" is wrong because emma\'s itemized deductions total $13,000, which is less than the $14,600 standard deduction.',
+            },
           },
           {
             id: "fin-sec5-u13-L1-Q6",
@@ -2441,6 +2763,9 @@ export const finSection5Part2: Unit[] = [
             question: "The standard deduction is the same amount regardless of your filing status.",
             correctAnswer: false,
             explanation: "Filing status determines the standard deduction amount. For 2024: $14,600 for single, $29,200 for married filing jointly, $21,900 for head of household.",
+            distractorExplanations: {
+              0: 'This statement is actually false — filing status determines the standard deduction amount. For 2024: $14,600 for single, $29,200 for married filing jointly, $21,900 for head of household.',
+            },
           },
         ],
       },
@@ -2496,6 +2821,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Tax-loss harvesting is the deliberate sale of losing positions to create losses that offset capital gains and reduce your tax bill.",
+            distractorExplanations: {
+              0: '"Roth conversion" is wrong because tax-loss harvesting is the deliberate sale of losing positions to create losses that offset capital gains and reduc...',
+              2: '"Asset location" is wrong because tax-loss harvesting is the deliberate sale of losing positions to create losses that offset capital gains and reduc...',
+              3: '"Income deferral" is wrong because tax-loss harvesting is the deliberate sale of losing positions to create losses that offset capital gains and reduc...',
+            },
           },
           {
             id: "fin-sec5-u13-L2-Q4",
@@ -2503,6 +2833,9 @@ export const finSection5Part2: Unit[] = [
             question: "A freelancer who pays 100% of last year's total tax in quarterly installments is protected from underpayment penalties.",
             correctAnswer: true,
             explanation: "That's the safe harbor rule. Match last year's total tax in quarterly payments and you avoid penalties regardless of this year's income.",
+            distractorExplanations: {
+              1: 'This statement is actually true — that\'s the safe harbor rule. Match last year\'s total tax in quarterly payments and you avoid penalties regardless of this year\'s income.',
+            },
           },
           {
             id: "fin-sec5-u13-L2-Q5",
@@ -2517,6 +2850,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Bonds generate taxable interest ($2,500/year at 24% = $600 in annual tax). Moving them to the IRA shelters that income. The stock index fund is tax-efficient and works better in the taxable account.",
+            distractorExplanations: {
+              0: '"He should sell everything and buy only Roth-held assets" is wrong because bonds generate taxable interest ($2,500/year at 24% = $600 in annual tax).',
+              2: '"Both should be in the taxable account for easier access" is wrong because bonds generate taxable interest ($2,500/year at 24% = $600 in annual tax).',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec5-u13-L2-Q6",
@@ -2555,6 +2893,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Converting during a low-income year means paying a lower tax rate on the conversion. The money then grows and is withdrawn tax-free.",
+            distractorExplanations: {
+              0: '"On December 31 of any year" is wrong because converting during a low-income year means paying a lower tax rate on the conversion.',
+              1: 'This answer is too narrow — it ignores other important factors.',
+              2: '"During your highest-income year" is wrong because converting during a low-income year means paying a lower tax rate on the conversion.',
+            },
           },
           {
             id: "fin-sec5-u13-L3-Q2",
@@ -2622,6 +2965,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Decades of tax-free or tax-deferred compounding in 401(k)s, IRAs, and HSAs creates the largest lifetime tax savings by far. The others are important but smaller in impact.",
+            distractorExplanations: {
+              1: '"Filing your return on time every year" is wrong because decades of tax-free or tax-deferred compounding in 401(k)s, IRAs, and HSAs creates the largest lifetime tax savings...',
+              2: '"Using the correct filing status" is wrong because decades of tax-free or tax-deferred compounding in 401(k)s, IRAs, and HSAs creates the largest lifetime tax savings...',
+              3: '"Keeping detailed records of all expenses" is wrong because decades of tax-free or tax-deferred compounding in 401(k)s, IRAs, and HSAs creates the largest lifetime tax savings...',
+            },
           },
         ],
       },
@@ -2654,6 +3002,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$23,000 + $4,150 = $27,150 in tax-deductible contributions. At 22%: $27,150 x 0.22 = $5,973 in income tax savings.",
+            distractorExplanations: {
+              1: '"About $2,000" is wrong because $23,000 + $4,150 = $27,150 in tax-deductible contributions.',
+              2: '"About $10,000" is wrong because $23,000 + $4,150 = $27,150 in tax-deductible contributions.',
+              3: '"About $27,150" is wrong because $23,000 + $4,150 = $27,150 in tax-deductible contributions.',
+            },
           },
           {
             id: "fin-sec5-u13-L4-Q2",
@@ -2678,6 +3031,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$2,000 in losses x 15% rate = $300 in tax savings. Even at the lower long-term rate, every harvested dollar saves money.",
+            distractorExplanations: {
+              0: 'This answer is too narrow — it ignores other important factors.',
+              1: '"No, because long-term gains are already at a low rate" is wrong because $2,000 in losses x 15% rate = $300 in tax savings.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec5-u13-L4-Q4",
@@ -2722,6 +3080,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Roth conversions at lower rates in retirement, proper asset location (bonds in tax-sheltered accounts), and loss harvesting in the taxable account combine all the strategies from this section.",
+            distractorExplanations: {
+              0: 'This choice is wrong because roth conversions at lower rates in retirement, proper asset location (bonds in tax-sheltered accounts), and loss ha...',
+              1: 'This choice is wrong because roth conversions at lower rates in retirement, proper asset location (bonds in tax-sheltered accounts), and loss ha...',
+              2: 'This choice is wrong because roth conversions at lower rates in retirement, proper asset location (bonds in tax-sheltered accounts), and loss ha...',
+            },
           },
           {
             id: "fin-sec5-u13-L4-Q7",
@@ -2743,6 +3106,11 @@ export const finSection5Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Consistent contributions to tax-advantaged accounts compound tax-free for decades. Combined with annual strategy reviews, this habit creates the largest lifetime savings by far.",
+            distractorExplanations: {
+              0: '"Keeping all receipts in a shoebox" is wrong because consistent contributions to tax-advantaged accounts compound tax-free for decades.',
+              1: '"Hiring the most expensive tax accountant you can find" is wrong because consistent contributions to tax-advantaged accounts compound tax-free for decades.',
+              3: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+            },
           },
         ],
       },

@@ -40,6 +40,9 @@ export const finSection2Part1: Unit[] = [
             question: "Most people accurately know how much they spend each month.",
             correctAnswer: false,
             explanation: "Research shows most people underestimate their spending. Tracking helps close that gap.",
+            distractorExplanations: {
+              0: 'This statement is actually false — research shows most people underestimate their spending. Tracking helps close that gap.',
+            },
           },
           {
             id: "fin-sec2-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "You can't improve what you don't measure. Tracking comes before cutting.",
+            distractorExplanations: {
+              0: '"Cutting all fun purchases immediately" is wrong because you can\'t improve what you don\'t measure.',
+              2: '"Earning more money at work" is wrong because you can\'t improve what you don\'t measure.',
+              3: '"Closing all your bank accounts" is wrong because you can\'t improve what you don\'t measure.',
+            },
           },
           {
             id: "fin-sec2-u1-L1-T2",
@@ -67,6 +75,9 @@ export const finSection2Part1: Unit[] = [
             question: "Grouping spending into categories helps you see where most of your money goes.",
             correctAnswer: true,
             explanation: "Categories reveal patterns. You might discover food costs more than you expected.",
+            distractorExplanations: {
+              1: 'This statement is actually true — categories reveal patterns. You might discover food costs more than you expected.',
+            },
           },
           {
             id: "fin-sec2-u1-L1-Q4",
@@ -112,6 +123,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Consistency matters more than the tool. A notebook you use daily beats an app you ignore.",
+            distractorExplanations: {
+              0: '"The most expensive budgeting app" is wrong because consistency matters more than the tool.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"Memorizing every purchase in your head" is wrong because consistency matters more than the tool.',
+            },
           },
           {
             id: "fin-sec2-u1-L1-Q7",
@@ -126,6 +142,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Categorizing transactions turns a confusing list into clear spending patterns.",
+            distractorExplanations: {
+              1: '"Delete the bank app to reduce stress" is wrong because categorizing transactions turns a confusing list into clear spending patterns.',
+              2: 'Ignoring financial problems allows them to grow and cost you more.',
+              3: '"Cancel every subscription immediately" is wrong because categorizing transactions turns a confusing list into clear spending patterns.',
+            },
           },
         ],
       },
@@ -151,6 +172,9 @@ export const finSection2Part1: Unit[] = [
             question: "Rent is a fixed expense because it costs the same each month.",
             correctAnswer: true,
             explanation: "Rent is one of the most common fixed expenses. It doesn't change from month to month.",
+            distractorExplanations: {
+              1: 'This statement is actually true — rent is one of the most common fixed expenses. It doesn\'t change from month to month.',
+            },
           },
           {
             id: "fin-sec2-u1-L2-Q2",
@@ -164,6 +188,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Car insurance premiums are the same each month. Groceries, dining, and gifts vary.",
+            distractorExplanations: {
+              0: '"Grocery shopping" is wrong because car insurance premiums are the same each month.',
+              2: '"Weekend dining out" is wrong because car insurance premiums are the same each month.',
+              3: '"Holiday gift shopping" is wrong because car insurance premiums are the same each month.',
+            },
           },
           {
             id: "fin-sec2-u1-L2-T2",
@@ -178,6 +207,9 @@ export const finSection2Part1: Unit[] = [
             question: "Your grocery bill is a variable expense because the amount changes each month.",
             correctAnswer: true,
             explanation: "You buy different items and quantities each month, so grocery spending varies.",
+            distractorExplanations: {
+              1: 'This statement is actually true — you buy different items and quantities each month, so grocery spending varies.',
+            },
           },
           {
             id: "fin-sec2-u1-L2-Q4",
@@ -222,6 +254,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Variable expenses are the easiest to adjust. Fixed costs usually require renegotiating contracts.",
+            distractorExplanations: {
+              1: '"Your rent or mortgage payment" is wrong because variable expenses are the easiest to adjust.',
+              2: '"Your car loan or insurance premium" is wrong because variable expenses are the easiest to adjust.',
+              3: '"Your phone contract" is wrong because variable expenses are the easiest to adjust.',
+            },
           },
           {
             id: "fin-sec2-u1-L2-Q7",
@@ -236,6 +273,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Variable expenses are flexible. Priya can cook more at home or skip entertainment this month.",
+            distractorExplanations: {
+              1: '"Her rent, which is her largest fixed cost" is wrong because variable expenses are flexible.',
+              2: '"Her car insurance premium" is wrong because variable expenses are flexible.',
+              3: 'Borrowing creates debt and interest costs, making the situation worse.',
+            },
           },
         ],
       },
@@ -261,6 +303,9 @@ export const finSection2Part1: Unit[] = [
             question: "Most people can name every subscription they're paying for without checking.",
             correctAnswer: false,
             explanation: "Studies show people underestimate their subscription spending. Forgotten subscriptions are extremely common.",
+            distractorExplanations: {
+              0: 'This statement is actually false — studies show people underestimate their subscription spending. Forgotten subscriptions are extremely common.',
+            },
           },
           {
             id: "fin-sec2-u1-L3-Q2",
@@ -274,6 +319,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$15 times 12 months equals $180 per year for a service you're not even using.",
+            distractorExplanations: {
+              1: 'This amount (15) is too low — the correct calculation gives 180.',
+              2: 'This amount (150) is too low — the correct calculation gives 180.',
+              3: 'This amount (120) is too low — the correct calculation gives 180.',
+            },
           },
           {
             id: "fin-sec2-u1-L3-Q3",
@@ -301,6 +351,9 @@ export const finSection2Part1: Unit[] = [
             question: "Free trials automatically end without charging you when the trial period is over.",
             correctAnswer: false,
             explanation: "Most free trials auto-convert to a paid plan. You have to cancel before the trial ends.",
+            distractorExplanations: {
+              0: 'This statement is actually false — most free trials auto-convert to a paid plan. You have to cancel before the trial ends.',
+            },
           },
           {
             id: "fin-sec2-u1-L3-Q5",
@@ -315,6 +368,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$12 plus $10 plus $8 equals $30/month. That's $360 per year for apps he isn't using.",
+            distractorExplanations: {
+              0: 'This amount (120) is too low — the correct calculation gives 360.',
+              2: 'This amount (30) is too low — the correct calculation gives 360.',
+              3: 'This amount (240) is too low — the correct calculation gives 360.',
+            },
           },
           {
             id: "fin-sec2-u1-L3-T3",
@@ -335,6 +393,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Annual plans save money only if you'll actually use the service all year.",
+            distractorExplanations: {
+              1: '"As soon as any free trial starts" is wrong because annual plans save money only if you\'ll actually use the service all year.',
+              2: '"When you want to save money on services you rarely use" is wrong because annual plans save money only if you\'ll actually use the service all year.',
+              3: '"Whenever a company offers a discount on annual plans" is wrong because annual plans save money only if you\'ll actually use the service all year.',
+            },
           },
           {
             id: "fin-sec2-u1-L3-Q7",
@@ -375,6 +438,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$5 times 365 days equals $1,825. Small daily habits create large annual costs.",
+            distractorExplanations: {
+              0: 'This amount (1,500) is too low — the correct calculation gives 1,825.',
+              2: 'This amount (500) is too low — the correct calculation gives 1,825.',
+              3: 'This amount (600) is too low — the correct calculation gives 1,825.',
+            },
           },
           {
             id: "fin-sec2-u1-L4-Q2",
@@ -382,6 +450,9 @@ export const finSection2Part1: Unit[] = [
             question: "Spending leaks are large, obvious expenses that are easy to notice.",
             correctAnswer: false,
             explanation: "Spending leaks are small, frequent purchases that feel harmless but add up over time.",
+            distractorExplanations: {
+              0: 'This statement is actually false — spending leaks are small, frequent purchases that feel harmless but add up over time.',
+            },
           },
           {
             id: "fin-sec2-u1-L4-T2",
@@ -418,6 +489,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "3 times per week times $15 equals $45 per week. That's about $180 per month.",
+            distractorExplanations: {
+              0: 'This amount (60) is too low — the correct calculation gives 180.',
+              1: 'This amount (120) is too low — the correct calculation gives 180.',
+              3: 'This amount (45) is too low — the correct calculation gives 180.',
+            },
           },
           {
             id: "fin-sec2-u1-L4-Q5",
@@ -447,6 +523,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Snacks: $4 times 22 workdays is $88. Rides: $12 times 12 is $144. Amazon: $8 times 8 is $64. Total is about $296, closest to $292.",
+            distractorExplanations: {
+              0: 'This amount (80) is too low — the correct calculation gives 292.',
+              1: 'This amount (180) is too low — the correct calculation gives 292.',
+              3: 'This amount (400) is too high — the correct calculation gives 292.',
+            },
             hint: "Calculate each leak separately, then add them together.",
           },
           {
@@ -461,6 +542,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cutting frequency is sustainable. Going cold turkey often leads to giving up entirely.",
+            distractorExplanations: {
+              0: '"Eliminate every small purchase immediately" is wrong because cutting frequency is sustainable.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"Stop checking your bank account" is wrong because cutting frequency is sustainable.',
+            },
           },
         ],
       },
@@ -612,6 +698,9 @@ export const finSection2Part1: Unit[] = [
             question: "A need is something required for your survival or basic daily functioning.",
             correctAnswer: true,
             explanation: "Needs are non-negotiable. Without them, your health, safety, or ability to earn income is at risk.",
+            distractorExplanations: {
+              1: 'This statement is actually true — needs are non-negotiable. Without them, your health, safety, or ability to earn income is at risk.',
+            },
           },
           {
             id: "fin-sec2-u2-L1-Q2",
@@ -625,6 +714,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Groceries are a need because food is essential for survival. The others are wants.",
+            distractorExplanations: {
+              0: '"A new pair of designer shoes" is wrong because groceries are a need because food is essential for survival.',
+              2: '"A streaming service subscription" is wrong because groceries are a need because food is essential for survival.',
+              3: '"Dinner at a fancy restaurant" is wrong because groceries are a need because food is essential for survival.',
+            },
           },
           {
             id: "fin-sec2-u2-L1-T2",
@@ -639,6 +733,9 @@ export const finSection2Part1: Unit[] = [
             question: "Spending money on wants is always a bad financial decision.",
             correctAnswer: false,
             explanation: "Wants aren't bad. They make life enjoyable. The key is spending on them intentionally, not mindlessly.",
+            distractorExplanations: {
+              0: 'This statement is actually false — wants aren\'t bad. They make life enjoyable. The key is spending on them intentionally, not mindlessly.',
+            },
           },
           {
             id: "fin-sec2-u2-L1-Q4",
@@ -684,6 +781,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Rosa's laptop directly affects her ability to earn income. In her situation, replacing it is a need.",
+            distractorExplanations: {
+              1: '"A want, because laptops are always luxury items" is wrong because rosa\'s laptop directly affects her ability to earn income.',
+              2: '"A want, because she could use her phone instead" is wrong because rosa\'s laptop directly affects her ability to earn income.',
+              3: '"A need, because everyone should have a new laptop" is wrong because rosa\'s laptop directly affects her ability to earn income.',
+            },
           },
           {
             id: "fin-sec2-u2-L1-Q7",
@@ -697,6 +799,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Context determines category. A car is a need in rural areas but often a want in cities with good transit.",
+            distractorExplanations: {
+              0: '"How much money they earn per year" is wrong because context determines category.',
+              2: '"Whether the item is on sale or full price" is wrong because context determines category.',
+              3: '"How old they are when they buy it" is wrong because context determines category.',
+            },
           },
         ],
       },
@@ -722,6 +829,9 @@ export const finSection2Part1: Unit[] = [
             question: "Internet service is always a want because it's not required for physical survival.",
             correctAnswer: false,
             explanation: "For remote workers and students, internet is essential for earning income or completing schoolwork. Context matters.",
+            distractorExplanations: {
+              0: 'This statement is actually false — for remote workers and students, internet is essential for earning income or completing schoolwork. Context matters.',
+            },
           },
           {
             id: "fin-sec2-u2-L2-Q2",
@@ -735,6 +845,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A working phone is a need. Upgrading to the newest expensive model each year is a want.",
+            distractorExplanations: {
+              0: '"A basic phone plan with calls and data" is wrong because a working phone is a need.',
+              1: '"The phone itself" is wrong because a working phone is a need.',
+              3: '"Having a phone number for employers to reach you" is wrong because a working phone is a need.',
+            },
           },
           {
             id: "fin-sec2-u2-L2-T2",
@@ -756,6 +871,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With no transit and 25 miles to essentials, reliable transportation is a genuine need for Kai.",
+            distractorExplanations: {
+              1: '"A want, because cars are always optional luxury items" is wrong because with no transit and 25 miles to essentials, reliable transportation is a genuine need for Kai.',
+              2: '"A want, because Kai should walk 25 miles instead" is wrong because with no transit and 25 miles to essentials, reliable transportation is a genuine need for Kai.',
+              3: '"A need, because everyone needs a car regardless of location" is wrong because with no transit and 25 miles to essentials, reliable transportation is a genuine need for Kai.',
+            },
           },
           {
             id: "fin-sec2-u2-L2-Q4",
@@ -802,6 +922,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Comparing the minimum version to what you're buying reveals how much of the cost is a need versus a want.",
+            distractorExplanations: {
+              0: '"Is this item popular right now?" is wrong because comparing the minimum version to what you\'re buying reveals how much of the cost is a need versus a want.',
+              2: '"Can I find a coupon or discount code?" is wrong because comparing the minimum version to what you\'re buying reveals how much of the cost is a need versus a want.',
+              3: '"Do my friends have this item too?" is wrong because comparing the minimum version to what you\'re buying reveals how much of the cost is a need versus a want.',
+            },
           },
         ],
       },
@@ -827,6 +952,9 @@ export const finSection2Part1: Unit[] = [
             question: "Feeling pressure to buy something because your friends have it means it's a need.",
             correctAnswer: false,
             explanation: "Social pressure creates urgency, but it doesn't make something essential. It's still a want.",
+            distractorExplanations: {
+              0: 'This statement is actually false — social pressure creates urgency, but it doesn\'t make something essential. It\'s still a want.',
+            },
           },
           {
             id: "fin-sec2-u2-L3-Q2",
@@ -840,6 +968,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Lifestyle creep happens when raises and promotions lead to higher spending instead of more saving.",
+            distractorExplanations: {
+              1: '"When your expenses decrease over time" is wrong because lifestyle creep happens when raises and promotions lead to higher spending instead of more saving.',
+              2: '"When you move to a cheaper neighborhood" is wrong because lifestyle creep happens when raises and promotions lead to higher spending instead of more saving.',
+              3: '"When you start cooking more meals at home" is wrong because lifestyle creep happens when raises and promotions lead to higher spending instead of more saving.',
+            },
           },
           {
             id: "fin-sec2-u2-L3-T2",
@@ -854,6 +987,9 @@ export const finSection2Part1: Unit[] = [
             question: "Emotional spending typically leads to purchases you feel good about long-term.",
             correctAnswer: false,
             explanation: "Emotional purchases usually feel great in the moment but lead to buyer's remorse afterward.",
+            distractorExplanations: {
+              0: 'This statement is actually false — emotional purchases usually feel great in the moment but lead to buyer\'s remorse afterward.',
+            },
           },
           {
             id: "fin-sec2-u2-L3-Q4",
@@ -881,6 +1017,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Closing the tab and waiting removes the emotional trigger. If Dani still wants the items tomorrow, they can decide with a clear head.",
+            distractorExplanations: {
+              1: '"Buy everything now to feel better" is wrong because closing the tab and waiting removes the emotional trigger.',
+              2: '"Buy half the items as a compromise" is wrong because closing the tab and waiting removes the emotional trigger.',
+              3: '"Add more items since they\'re already shopping" is wrong because closing the tab and waiting removes the emotional trigger.',
+            },
           },
           {
             id: "fin-sec2-u2-L3-T3",
@@ -909,6 +1050,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Saving half of every raise lets you enjoy some of the increase while still building wealth.",
+            distractorExplanations: {
+              1: '"Immediately upgrade your apartment to match your new salary" is wrong because saving half of every raise lets you enjoy some of the increase while still building wealth.',
+              2: '"Buy a new car to celebrate the promotion" is wrong because saving half of every raise lets you enjoy some of the increase while still building wealth.',
+              3: '"Increase your dining budget to match your coworkers" is wrong because saving half of every raise lets you enjoy some of the increase while still building wealth.',
+            },
           },
         ],
       },
@@ -934,6 +1080,9 @@ export const finSection2Part1: Unit[] = [
             question: "Good budgeting means eliminating all spending on wants.",
             correctAnswer: false,
             explanation: "Good budgeting means spending on wants intentionally, not eliminating them entirely.",
+            distractorExplanations: {
+              0: 'This statement is actually false — good budgeting means spending on wants intentionally, not eliminating them entirely.',
+            },
           },
           {
             id: "fin-sec2-u2-L4-Q2",
@@ -947,6 +1096,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Intentional spending means you chose it on purpose. Mindless spending happens on autopilot without thought.",
+            distractorExplanations: {
+              0: 'This choice is wrong because intentional spending means you chose it on purpose.',
+              2: '"There\'s no difference between the two approaches" is wrong because intentional spending means you chose it on purpose.',
+              3: '"Mindless spending is cheaper than intentional spending" is wrong because intentional spending means you chose it on purpose.',
+            },
           },
           {
             id: "fin-sec2-u2-L4-T2",
@@ -961,6 +1115,9 @@ export const finSection2Part1: Unit[] = [
             question: "A fun money budget means you set aside a specific amount for guilt-free spending.",
             correctAnswer: true,
             explanation: "Fun money is a set amount you can spend on anything you want without feeling guilty about it.",
+            distractorExplanations: {
+              1: 'This statement is actually true — fun money is a set amount you can spend on anything you want without feeling guilty about it.',
+            },
           },
           {
             id: "fin-sec2-u2-L4-Q4",
@@ -984,6 +1141,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Cutting the want she doesn't use frees up money for the ones she actually enjoys.",
+            distractorExplanations: {
+              1: '"The coffee shops, since coffee is a luxury" is wrong because cutting the want she doesn\'t use frees up money for the ones she actually enjoys.',
+              2: '"The hiking gear, since outdoor activities are free" is wrong because cutting the want she doesn\'t use frees up money for the ones she actually enjoys.',
+              3: '"She should cut all 3 to save the maximum amount" is wrong because cutting the want she doesn\'t use frees up money for the ones she actually enjoys.',
+            },
           },
           {
             id: "fin-sec2-u2-L4-T3",
@@ -1017,6 +1179,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Anticipation is a real source of happiness. Looking forward to something adds joy before you even buy it.",
+            distractorExplanations: {
+              0: '"Planned treats cost less money than impulse purchases" is wrong because anticipation is a real source of happiness.',
+              2: '"Impulse buys are always low quality items" is wrong because anticipation is a real source of happiness.',
+              3: '"Planned treats come with a money-back guarantee" is wrong because anticipation is a real source of happiness.',
+            },
           },
         ],
       },
@@ -1085,6 +1252,9 @@ export const finSection2Part1: Unit[] = [
             question: "Net pay is the amount you actually receive in your bank account.",
             correctAnswer: true,
             explanation: "Net pay is your take-home pay after all taxes and deductions have been removed.",
+            distractorExplanations: {
+              1: 'This statement is actually true — net pay is your take-home pay after all taxes and deductions have been removed.',
+            },
           },
           {
             id: "fin-sec2-u3-L1-Q2",
@@ -1098,6 +1268,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Gross pay is before deductions, so it's always larger. Net pay is what's left after deductions.",
+            distractorExplanations: {
+              0: 'Net pay is after deductions; the question asks about the total before anything is removed.',
+              1: 'Take-home pay is after deductions, not the pre-deduction total.',
+              3: '"They\'re always the same amount" is wrong because gross pay is before deductions, so it\'s always larger.',
+            },
           },
           {
             id: "fin-sec2-u3-L1-T2",
@@ -1118,6 +1293,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$4,000 times 0.70 equals $2,800. The remaining $1,200 goes to taxes and other deductions.",
+            distractorExplanations: {
+              1: 'This amount (4,000) is too high — the correct calculation gives 2,800.',
+              2: 'This amount (3,200) is too high — the correct calculation gives 2,800.',
+              3: 'This amount (1,200) is too low — the correct calculation gives 2,800.',
+            },
           },
           {
             id: "fin-sec2-u3-L1-Q4",
@@ -1156,6 +1336,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$60,000 divided by 12 is $5,000 gross per month. After deductions, Tyler will take home about $3,500. His plan overspends by $1,500 per month.",
+            distractorExplanations: {
+              1: '"He should be spending more than $5,000 per month" is wrong because $60,000 divided by 12 is $5,000 gross per month.',
+              2: 'Ignoring financial problems allows them to grow and cost you more.',
+              3: '"He should negotiate a higher salary first" is wrong because $60,000 divided by 12 is $5,000 gross per month.',
+            },
           },
           {
             id: "fin-sec2-u3-L1-Q7",
@@ -1163,6 +1348,9 @@ export const finSection2Part1: Unit[] = [
             question: "You should base your monthly budget on your gross pay to give yourself the most spending room.",
             correctAnswer: false,
             explanation: "Always budget from net pay. Budgeting from gross leads to spending money you don't actually have.",
+            distractorExplanations: {
+              0: 'This statement is actually false — always budget from net pay. Budgeting from gross leads to spending money you don\'t actually have.',
+            },
           },
         ],
       },
@@ -1188,6 +1376,9 @@ export const finSection2Part1: Unit[] = [
             question: "Income tax is typically the largest deduction from your paycheck.",
             correctAnswer: true,
             explanation: "Federal and state income taxes combined usually make up the biggest chunk of paycheck deductions.",
+            distractorExplanations: {
+              1: 'This statement is actually true — federal and state income taxes combined usually make up the biggest chunk of paycheck deductions.',
+            },
           },
           {
             id: "fin-sec2-u3-L2-Q2",
@@ -1201,6 +1392,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Income tax rates depend on how much you earn and your state or country's tax rates.",
+            distractorExplanations: {
+              0: '"Your age and hair color" is wrong because income tax rates depend on how much you earn and your state or country\'s tax rates.',
+              2: '"The day of the week you get paid" is wrong because income tax rates depend on how much you earn and your state or country\'s tax rates.',
+              3: '"How long you\'ve been at the company" is wrong because income tax rates depend on how much you earn and your state or country\'s tax rates.',
+            },
           },
           {
             id: "fin-sec2-u3-L2-T2",
@@ -1215,6 +1411,9 @@ export const finSection2Part1: Unit[] = [
             question: "Payroll taxes for retirement and healthcare programs are optional in most countries.",
             correctAnswer: false,
             explanation: "These deductions are mandatory. They're required by law in most countries that have them.",
+            distractorExplanations: {
+              0: 'This statement is actually false — these deductions are mandatory. They\'re required by law in most countries that have them.',
+            },
           },
           {
             id: "fin-sec2-u3-L2-Q4",
@@ -1259,6 +1458,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Employers often subsidize insurance costs, making it cheaper than buying coverage independently.",
+            distractorExplanations: {
+              1: '"More deductions always mean a bigger tax refund" is wrong because employers often subsidize insurance costs, making it cheaper than buying coverage independently.',
+              2: 'This choice is wrong because employers often subsidize insurance costs, making it cheaper than buying coverage independently.',
+              3: '"Larger deductions increase your gross pay" is wrong because employers often subsidize insurance costs, making it cheaper than buying coverage independently.',
+            },
           },
           {
             id: "fin-sec2-u3-L2-Q7",
@@ -1273,6 +1477,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$540 plus $180 plus $344 plus $200 plus $225 equals $1,489 in total deductions. $4,500 minus $1,489 equals $3,011 net pay.",
+            distractorExplanations: {
+              1: 'This amount (4,500) is too high — the correct calculation gives 3,011.',
+              2: 'This amount (3,500) is too high — the correct calculation gives 3,011.',
+              3: 'This amount (2,800) is too low — the correct calculation gives 3,011.',
+            },
           },
         ],
       },
@@ -1298,6 +1507,9 @@ export const finSection2Part1: Unit[] = [
             question: "YTD on a pay stub stands for year-to-date.",
             correctAnswer: true,
             explanation: "Year-to-date shows your cumulative earnings and deductions from January 1 through the current pay period.",
+            distractorExplanations: {
+              1: 'This statement is actually true — year-to-date shows your cumulative earnings and deductions from January 1 through the current pay period.',
+            },
           },
           {
             id: "fin-sec2-u3-L3-Q2",
@@ -1311,6 +1523,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "YTD tracks running totals from January 1 through your most recent pay period.",
+            distractorExplanations: {
+              1: '"Your projected earnings for next year" is wrong because YTD tracks running totals from January 1 through your most recent pay period.',
+              2: '"Your daily average earnings this month" is wrong because YTD tracks running totals from January 1 through your most recent pay period.',
+              3: '"Your employer\'s yearly budget for salaries" is wrong because YTD tracks running totals from January 1 through your most recent pay period.',
+            },
           },
           {
             id: "fin-sec2-u3-L3-T2",
@@ -1369,6 +1586,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Maya is missing 8 hours, which is $160 of pay. She should bring it up immediately with her own records as proof.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: 'Quitting over a fixable payroll error is a drastic overreaction.',
+              3: '"Wait until the end of the year to bring it up" is wrong because maya is missing 8 hours, which is $160 of pay.',
+            },
           },
           {
             id: "fin-sec2-u3-L3-Q7",
@@ -1382,6 +1604,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Reviewing every pay period lets you catch errors before they become bigger problems.",
+            distractorExplanations: {
+              0: 'This answer is too narrow — it ignores other important factors.',
+              1: '"Once a year during tax season" is wrong because reviewing every pay period lets you catch errors before they become bigger problems.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
         ],
       },
@@ -1407,6 +1634,9 @@ export const finSection2Part1: Unit[] = [
             question: "Hourly employees earn the same paycheck regardless of how many hours they work.",
             correctAnswer: false,
             explanation: "Hourly pay is directly tied to hours worked. More hours means a bigger paycheck.",
+            distractorExplanations: {
+              0: 'This statement is actually false — hourly pay is directly tied to hours worked. More hours means a bigger paycheck.',
+            },
           },
           {
             id: "fin-sec2-u3-L4-Q2",
@@ -1420,6 +1650,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$18 times 40 hours equals $720 gross pay for the week.",
+            distractorExplanations: {
+              0: 'This amount (640) is too low — the correct calculation gives 720.',
+              2: 'This amount (800) is too high — the correct calculation gives 720.',
+              3: 'This amount (900) is too high — the correct calculation gives 720.',
+            },
           },
           {
             id: "fin-sec2-u3-L4-T2",
@@ -1434,6 +1669,9 @@ export const finSection2Part1: Unit[] = [
             question: "A salaried employee earning $60,000 per year receives the same paycheck every pay period.",
             correctAnswer: true,
             explanation: "Salary provides a consistent paycheck regardless of hours worked each period.",
+            distractorExplanations: {
+              1: 'This statement is actually true — salary provides a consistent paycheck regardless of hours worked each period.',
+            },
           },
           {
             id: "fin-sec2-u3-L4-Q4",
@@ -1479,6 +1717,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$22 times 2,080 hours equals $45,760, which is $1,760 more than the $44,000 salary.",
+            distractorExplanations: {
+              1: '"The $44,000 salary pays more" is wrong because $22 times 2,080 hours equals $45,760, which is $1,760 more than the $44,000 salary.',
+              2: '"They pay exactly the same amount" is wrong because $22 times 2,080 hours equals $45,760, which is $1,760 more than the $44,000 salary.',
+              3: '"You can\'t compare hourly and salary pay" is wrong because $22 times 2,080 hours equals $45,760, which is $1,760 more than the $44,000 salary.',
+            },
           },
           {
             id: "fin-sec2-u3-L4-Q7",
@@ -1493,6 +1736,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The best choice depends on priorities. Alex values predictability and benefits, which align with the salary position.",
+            distractorExplanations: {
+              0: '"Job A, because $25/hour always earns more" is wrong because the best choice depends on priorities.',
+              2: '"Neither, Alex should keep looking for a better offer" is wrong because the best choice depends on priorities.',
+              3: '"Job A, because overtime makes hourly always better" is wrong because the best choice depends on priorities.',
+            },
           },
         ],
       },
@@ -1644,6 +1892,9 @@ export const finSection2Part1: Unit[] = [
             question: "Fixed expenses are the easiest category to cut when you need to save money quickly.",
             correctAnswer: false,
             explanation: "Variable expenses are easier to cut quickly. Fixed expenses like rent require renegotiating contracts.",
+            distractorExplanations: {
+              0: 'This statement is actually false — variable expenses are easier to cut quickly. Fixed expenses like rent require renegotiating contracts.',
+            },
           },
           {
             id: "fin-sec2-u4-L1-Q2",
@@ -1657,6 +1908,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Bank statements show every recurring charge, including ones you've forgotten about.",
+            distractorExplanations: {
+              0: '"Try to remember them from memory" is wrong because bank statements show every recurring charge, including ones you\'ve forgotten about.',
+              1: '"Ask friends what services they use" is wrong because bank statements show every recurring charge, including ones you\'ve forgotten about.',
+              3: '"Wait for companies to send you reminders" is wrong because bank statements show every recurring charge, including ones you\'ve forgotten about.',
+            },
           },
           {
             id: "fin-sec2-u4-L1-Q3",
@@ -1710,6 +1966,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "You can only spend money you actually have. Net pay is the real amount available for bills, saving, and spending.",
+            distractorExplanations: {
+              0: 'Net pay is always smaller than gross pay because deductions reduce it.',
+              1: 'Gross pay is the amount before deductions and overstates what you actually receive.',
+              3: 'Gross pay is the amount before deductions and overstates what you actually receive.',
+            },
           },
           {
             id: "fin-sec2-u4-L1-Q7",
@@ -1724,6 +1985,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Chen budgeted from gross pay ($4,000/month) instead of net pay ($3,100/month). He'll overspend by $900 per month.",
+            distractorExplanations: {
+              1: '"He\'ll have $900 extra to save each month" is wrong because chen budgeted from gross pay ($4,000/month) instead of net pay ($3,100/month).',
+              2: '"His budget will work perfectly" is wrong because chen budgeted from gross pay ($4,000/month) instead of net pay ($3,100/month).',
+              3: '"He\'ll earn more over time to close the gap" is wrong because chen budgeted from gross pay ($4,000/month) instead of net pay ($3,100/month).',
+            },
           },
           {
             id: "fin-sec2-u4-L1-Q8",
@@ -1770,6 +2036,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$80 per month times 12 months equals $960 per year. Canceling unused subscriptions is one of the easiest wins.",
+            distractorExplanations: {
+              0: 'This amount (240) is too low — the correct calculation gives 960.',
+              2: 'This amount (80) is too low — the correct calculation gives 960.',
+              3: 'This amount (480) is too low — the correct calculation gives 960.',
+            },
           },
           {
             id: "fin-sec2-u4-L2-Q2",
@@ -1784,6 +2055,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The raise added about $290 per month after taxes. But Miguel added $650 per month in new expenses. He's now worse off than before the raise.",
+            distractorExplanations: {
+              0: '"He wisely invested his raise in better living conditions" is wrong because the raise added about $290 per month after taxes.',
+              2: '"He\'s saving the extra money for retirement" is wrong because the raise added about $290 per month after taxes.',
+              3: '"His raise will show up in his emergency fund" is wrong because the raise added about $290 per month after taxes.',
+            },
           },
           {
             id: "fin-sec2-u4-L2-Q3",
@@ -1797,6 +2073,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "For a remote worker, internet is essential for earning income. Context determines whether something is a need or want.",
+            distractorExplanations: {
+              0: '"Yes, internet is always a want" is wrong because for a remote worker, internet is essential for earning income.',
+              2: '"Yes, because you could always go to a library" is wrong because for a remote worker, internet is essential for earning income.',
+              3: '"No, internet is always a need for everyone" is wrong because for a remote worker, internet is essential for earning income.',
+            },
           },
           {
             id: "fin-sec2-u4-L2-T2",
@@ -1811,6 +2092,9 @@ export const finSection2Part1: Unit[] = [
             question: "Reducing your daily spending by just $5 saves over $1,800 per year.",
             correctAnswer: true,
             explanation: "$5 times 365 days equals $1,825 per year. Small daily savings create meaningful annual results.",
+            distractorExplanations: {
+              1: 'This statement is actually true — $5 times 365 days equals $1,825 per year. Small daily savings create meaningful annual results.',
+            },
           },
           {
             id: "fin-sec2-u4-L2-Q5",
@@ -1825,6 +2109,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "$62,000 divided by 26 biweekly pay periods equals $2,384.62 gross per paycheck.",
+            distractorExplanations: {
+              1: 'This amount (2,583.33) is too high — the correct calculation gives 2,384.62.',
+              2: 'This amount (5,166.67) is too high — the correct calculation gives 2,384.62.',
+              3: 'This amount (1,192.31) is too low — the correct calculation gives 2,384.62.',
+            },
           },
           {
             id: "fin-sec2-u4-L2-Q6",
@@ -1855,6 +2144,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "40 regular hours at $20 equals $800. 5 overtime hours at $30 equals $150. Total gross is $950.",
+            distractorExplanations: {
+              0: 'This amount (800) is too low — the correct calculation gives 950.',
+              1: 'This amount (900) is too low — the correct calculation gives 950.',
+              3: 'This amount (1,050) is too high — the correct calculation gives 950.',
+            },
           },
           {
             id: "fin-sec2-u4-L2-Q8",
@@ -1868,6 +2162,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Sustainable spending changes target leaks while preserving intentional treats that bring real joy.",
+            distractorExplanations: {
+              0: 'The point is to prioritize, not to cut all enjoyment from your life.',
+              2: '"Stop checking your bank account to avoid stress" is wrong because sustainable spending changes target leaks while preserving intentional treats that bring real joy.',
+              3: 'Borrowing creates debt and interest costs, making the situation worse.',
+            },
           },
         ],
       },
@@ -1936,6 +2235,9 @@ export const finSection2Part1: Unit[] = [
             question: "The 50/30/20 budget divides your net pay into needs, wants, and savings.",
             correctAnswer: true,
             explanation: "50% goes to needs, 30% to wants, and 20% to savings and debt payoff.",
+            distractorExplanations: {
+              1: 'This statement is actually true — 50% goes to needs, 30% to wants, and 20% to savings and debt payoff.',
+            },
           },
           {
             id: "fin-sec2-u5-L1-Q2",
@@ -1949,6 +2251,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Needs get 50%, the largest share. Wants get 30%, and savings/debt gets 20%.",
+            distractorExplanations: {
+              0: '"Wants" is wrong because needs get 50%, the largest share.',
+              1: '"Savings and debt" is wrong because needs get 50%, the largest share.',
+              3: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+            },
           },
           {
             id: "fin-sec2-u5-L1-T2",
@@ -2009,6 +2316,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Three categories are much easier to manage than tracking dozens of specific spending lines.",
+            distractorExplanations: {
+              0: '"It requires tracking every single purchase" is wrong because three categories are much easier to manage than tracking dozens of specific spending lines.',
+              2: '"It eliminates all spending on wants" is wrong because three categories are much easier to manage than tracking dozens of specific spending lines.',
+              3: '"It only works for high-income earners" is wrong because three categories are much easier to manage than tracking dozens of specific spending lines.',
+            },
           },
           {
             id: "fin-sec2-u5-L1-Q7",
@@ -2023,6 +2335,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$3,000 times 30% equals $900 per month for wants like entertainment, dining, and non-essential shopping.",
+            distractorExplanations: {
+              0: 'This amount (600) is too low — the correct calculation gives 900.',
+              1: 'This amount (1,500) is too high — the correct calculation gives 900.',
+              3: 'This amount (1,200) is too high — the correct calculation gives 900.',
+            },
           },
         ],
       },
@@ -2048,6 +2365,9 @@ export const finSection2Part1: Unit[] = [
             question: "The 50/30/20 budget should be based on your gross pay, not your net pay.",
             correctAnswer: false,
             explanation: "Always use net pay. Gross pay includes money taken for taxes and deductions that you never see.",
+            distractorExplanations: {
+              0: 'This statement is actually false — always use net pay. Gross pay includes money taken for taxes and deductions that you never see.',
+            },
           },
           {
             id: "fin-sec2-u5-L2-Q2",
@@ -2061,6 +2381,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$1,800 times 2 equals $3,600 as your baseline monthly budget. Use 2 paychecks per month for budgeting.",
+            distractorExplanations: {
+              0: 'This amount (1,800) is too low — the correct calculation gives 3,600.',
+              2: 'This amount (4,680) is too high — the correct calculation gives 3,600.',
+              3: 'This amount (2,400) is too low — the correct calculation gives 3,600.',
+            },
           },
           {
             id: "fin-sec2-u5-L2-T2",
@@ -2081,6 +2406,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$3,500 times 0.50 equals $1,750 for needs like rent, groceries, and insurance.",
+            distractorExplanations: {
+              0: 'This amount (700) is too low — the correct calculation gives 1,750.',
+              1: 'This amount (1,050) is too low — the correct calculation gives 1,750.',
+              3: 'This amount (2,450) is too high — the correct calculation gives 1,750.',
+            },
           },
           {
             id: "fin-sec2-u5-L2-Q4",
@@ -2109,6 +2439,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Needs: $1,400 rent plus $350 car plus $400 groceries plus $200 insurance equals $2,350. The 50% target is $2,100. He's $250 over.",
+            distractorExplanations: {
+              0: 'This choice is wrong because needs: $1,400 rent plus $350 car plus $400 groceries plus $200 insurance equals $2,350.',
+              2: '"Yes, his needs total $1,400, which is well under the limit" is wrong because needs: $1,400 rent plus $350 car plus $400 groceries plus $200 insurance equals $2,350.',
+              3: '"No, his needs total $3,250, which is way over the limit" is wrong because needs: $1,400 rent plus $350 car plus $400 groceries plus $200 insurance equals $2,350.',
+            },
           },
           {
             id: "fin-sec2-u5-L2-T3",
@@ -2123,6 +2458,9 @@ export const finSection2Part1: Unit[] = [
             question: "You should immediately cut all spending to match the 50/30/20 ratios on day one.",
             correctAnswer: false,
             explanation: "Gradual adjustments are more sustainable. Shifting 5% per month is realistic and achievable.",
+            distractorExplanations: {
+              0: 'This statement is actually false — gradual adjustments are more sustainable. Shifting 5% per month is realistic and achievable.',
+            },
           },
           {
             id: "fin-sec2-u5-L2-Q7",
@@ -2136,6 +2474,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$2,600 times 0.20 equals $520 per month toward savings and debt repayment.",
+            distractorExplanations: {
+              0: 'This amount (780) is too high — the correct calculation gives 520.',
+              1: 'This amount (260) is too low — the correct calculation gives 520.',
+              3: 'This amount (1,300) is too high — the correct calculation gives 520.',
+            },
           },
         ],
       },
@@ -2161,6 +2504,9 @@ export const finSection2Part1: Unit[] = [
             question: "The 50/30/20 budget works perfectly for everyone regardless of income or location.",
             correctAnswer: false,
             explanation: "High housing costs, low income, or large debts can make the standard ratios unrealistic.",
+            distractorExplanations: {
+              0: 'This statement is actually false — high housing costs, low income, or large debts can make the standard ratios unrealistic.',
+            },
           },
           {
             id: "fin-sec2-u5-L3-Q2",
@@ -2174,6 +2520,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Housing is usually the largest need. In expensive areas, rent alone can consume most of the 50% allocation.",
+            distractorExplanations: {
+              0: '"Spending too much on entertainment" is wrong because housing is usually the largest need.',
+              2: '"Having too many savings accounts" is wrong because housing is usually the largest need.',
+              3: '"Earning too much money at your job" is wrong because housing is usually the largest need.',
+            },
           },
           {
             id: "fin-sec2-u5-L3-T2",
@@ -2188,6 +2539,9 @@ export const finSection2Part1: Unit[] = [
             question: "If you can only save 5% of your income, it's not worth bothering with a budget.",
             correctAnswer: false,
             explanation: "Every dollar saved matters. 5% is a real starting point that grows as your income increases.",
+            distractorExplanations: {
+              0: 'This statement is actually false — every dollar saved matters. 5% is a real starting point that grows as your income increases.',
+            },
           },
           {
             id: "fin-sec2-u5-L3-Q4",
@@ -2202,6 +2556,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$1,900 divided by $2,200 equals about 86%. Nadia's needs far exceed the 50% target.",
+            distractorExplanations: {
+              0: 'This amount (50) is too low — the correct calculation gives 86.',
+              1: 'This amount (68) is too low — the correct calculation gives 86.',
+              3: 'This amount (75) is too low — the correct calculation gives 86.',
+            },
           },
           {
             id: "fin-sec2-u5-L3-Q5",
@@ -2238,6 +2597,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Wants are the most flexible category. Temporarily cutting wants to pay off debt faster is a smart strategy.",
+            distractorExplanations: {
+              0: '"Needs, by skipping essential expenses" is wrong because wants are the most flexible category.',
+              2: '"Savings, by stopping all saving entirely" is wrong because wants are the most flexible category.',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec2-u5-L3-Q7",
@@ -2259,6 +2623,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 3-bucket structure works even when the percentages need adjusting. The framework is more important than the exact numbers.",
+            distractorExplanations: {
+              0: '"Give up on budgeting entirely" is wrong because the 3-bucket structure works even when the percentages need adjusting.',
+              2: '"Move to a cheaper city immediately" is wrong because the 3-bucket structure works even when the percentages need adjusting.',
+              3: '"Take on more debt to cover the gap" is wrong because the 3-bucket structure works even when the percentages need adjusting.',
+            },
           },
         ],
       },
@@ -2284,6 +2653,9 @@ export const finSection2Part1: Unit[] = [
             question: "You must follow exactly 50/30/20 for the budget to work.",
             correctAnswer: false,
             explanation: "The exact percentages can be adjusted. The important part is dividing income into needs, wants, and savings.",
+            distractorExplanations: {
+              0: 'This statement is actually false — the exact percentages can be adjusted. The important part is dividing income into needs, wants, and savings.',
+            },
           },
           {
             id: "fin-sec2-u5-L4-Q2",
@@ -2297,6 +2669,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "60/20/20 gives 10% more to needs, which helps cover high housing costs. Wants shrink from 30% to 20%.",
+            distractorExplanations: {
+              0: 'This amount (40) is too low — the correct calculation gives 60.',
+              2: 'This amount (30) is too low — the correct calculation gives 60.',
+              3: 'This amount (50) is too low — the correct calculation gives 60.',
+            },
           },
           {
             id: "fin-sec2-u5-L4-T2",
@@ -2327,6 +2704,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "70/20/10 matches Chris's reality: 70% needs ($1,400), 20% wants ($400), and 10% savings ($200).",
+            distractorExplanations: {
+              0: 'This amount (50) is too low — the correct calculation gives 70.',
+              2: 'This amount (40) is too low — the correct calculation gives 70.',
+              3: 'This amount (30) is too low — the correct calculation gives 70.',
+            },
           },
           {
             id: "fin-sec2-u5-L4-Q5",
@@ -2369,6 +2751,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Your situation evolves. A raise, a move, or paying off debt means your ideal ratio changes too.",
+            distractorExplanations: {
+              0: '"Budget ratios expire and become invalid after 6 months" is wrong because your situation evolves.',
+              2: '"Banks require you to update your budget biannually" is wrong because your situation evolves.',
+              3: '"The 50/30/20 percentages change each year" is wrong because your situation evolves.',
+            },
           },
           {
             id: "fin-sec2-u5-L4-Q8",
@@ -2383,6 +2770,11 @@ export const finSection2Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "With the car paid off, Dana's needs drop. She can shift toward 50/30/20 by adding to both savings and wants.",
+            distractorExplanations: {
+              1: '"Increase all spending categories equally" is wrong because with the car paid off, Dana\'s needs drop.',
+              2: '"Take on new debt to replace the car payment" is wrong because with the car paid off, Dana\'s needs drop.',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
         ],
       },

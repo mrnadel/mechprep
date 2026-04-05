@@ -40,6 +40,9 @@ export const finSection5Part1: Unit[] = [
             question: "Taxes fund public services like roads, schools, and emergency services.",
             correctAnswer: true,
             explanation: "Taxes are the primary way governments pay for shared infrastructure and services.",
+            distractorExplanations: {
+              1: 'This statement is actually true — taxes are the primary way governments pay for shared infrastructure and services.',
+            },
           },
           {
             id: "fin-sec5-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Taxes exist to fund services the government provides to everyone, from roads to national defense.",
+            distractorExplanations: {
+              1: '"To punish people who earn too much" is wrong because taxes exist to fund services the government provides to everyone, from roads to national defense.',
+              2: '"To reduce the total amount of money in circulation" is wrong because taxes exist to fund services the government provides to everyone, from roads to national defense.',
+              3: '"To make banking more difficult" is wrong because taxes exist to fund services the government provides to everyone, from roads to national defense.',
+            },
           },
           {
             id: "fin-sec5-u1-L1-T2",
@@ -110,6 +118,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "While rates and structures vary, every country collects taxes to fund government operations and public services.",
+            distractorExplanations: {
+              0: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              1: '"Sales tax is always exactly 10%" is wrong because while rates and structures vary, every country collects taxes to fund government operations and public services.',
+              3: 'This answer is too narrow — it ignores other important factors.',
+            },
           },
           {
             id: "fin-sec5-u1-L1-Q6",
@@ -155,6 +168,9 @@ export const finSection5Part1: Unit[] = [
             question: "Most government budgets spend the largest share on military defense.",
             correctAnswer: false,
             explanation: "In most developed countries, social programs (pensions, healthcare) take the largest share of the budget, not defense.",
+            distractorExplanations: {
+              0: 'This statement is actually false — in most developed countries, social programs (pensions, healthcare) take the largest share of the budget, not defense.',
+            },
           },
           {
             id: "fin-sec5-u1-L2-Q2",
@@ -168,6 +184,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Healthcare and social security (pensions, disability) are the two largest spending categories in most developed nations.",
+            distractorExplanations: {
+              0: '"Space exploration and foreign aid" is wrong because healthcare and social security (pensions, disability) are the two largest spending categories in most developed nat...',
+              1: '"Government employee salaries only" is wrong because healthcare and social security (pensions, disability) are the two largest spending categories in most developed nat...',
+              2: '"Arts funding and national parks" is wrong because healthcare and social security (pensions, disability) are the two largest spending categories in most developed nat...',
+            },
           },
           {
             id: "fin-sec5-u1-L2-T2",
@@ -216,6 +237,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Local taxes fund local infrastructure. The tradeoff is paying more now for improved services that benefit the community.",
+            distractorExplanations: {
+              1: '"Property values always drop when taxes go up" is wrong because local taxes fund local infrastructure.',
+              2: '"The federal government should pay for schools instead" is wrong because local taxes fund local infrastructure.',
+              3: '"Private schools would be cheaper for everyone" is wrong because local taxes fund local infrastructure.',
+            },
           },
           {
             id: "fin-sec5-u1-L2-Q6",
@@ -229,6 +255,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Governments borrow by selling bonds. The interest payments on those bonds are a significant part of annual budgets.",
+            distractorExplanations: {
+              1: '"Banks charge fees for holding government savings accounts" is wrong because governments borrow by selling bonds.',
+              2: '"Interest payments are donations to other countries" is wrong because governments borrow by selling bonds.',
+              3: '"The central bank fines the government each year" is wrong because governments borrow by selling bonds.',
+            },
           },
         ],
       },
@@ -254,6 +285,9 @@ export const finSection5Part1: Unit[] = [
             question: "A flat tax charges the same percentage rate to everyone regardless of income.",
             correctAnswer: true,
             explanation: "A flat tax applies one rate to all. If it's 15%, both a $30,000 earner and a $300,000 earner pay 15%.",
+            distractorExplanations: {
+              1: 'This statement is actually true — a flat tax applies one rate to all. If it\'s 15%, both a $30,000 earner and a $300,000 earner pay 15%.',
+            },
           },
           {
             id: "fin-sec5-u1-L3-Q2",
@@ -300,6 +334,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Person A pays $1,400 in sales tax (5.6% of income). Person B pays $4,200 (2.1% of income). The lower earner loses a bigger share.",
+            distractorExplanations: {
+              1: '"Person A pays more total sales tax than Person B" is wrong because person A pays $1,400 in sales tax (5.',
+              2: '"Person B is exempt from sales tax on some purchases" is wrong because person A pays $1,400 in sales tax (5.',
+              3: '"Sales tax rates decrease as you spend more" is wrong because person A pays $1,400 in sales tax (5.',
+            },
           },
           {
             id: "fin-sec5-u1-L3-Q5",
@@ -313,6 +352,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Most developed countries use a progressive income tax system where higher income is taxed at higher rates.",
+            distractorExplanations: {
+              0: '"Regressive, so wealthier citizens pay lower rates" is wrong because most developed countries use a progressive income tax system where higher income is taxed at higher rates.',
+              1: '"Flat, with one rate that applies to all income" is wrong because most developed countries use a progressive income tax system where higher income is taxed at higher rates.',
+              3: '"Random, with rates assigned by lottery" is wrong because most developed countries use a progressive income tax system where higher income is taxed at higher rates.',
+            },
           },
           {
             id: "fin-sec5-u1-L3-T3",
@@ -327,6 +371,9 @@ export const finSection5Part1: Unit[] = [
             question: "In a progressive tax system, moving into a higher tax bracket means all of your income is taxed at the higher rate.",
             correctAnswer: false,
             explanation: "Only the income above the bracket threshold is taxed at the higher rate. Your lower income is still taxed at the lower rates.",
+            distractorExplanations: {
+              0: 'This statement is actually false — only the income above the bracket threshold is taxed at the higher rate. Your lower income is still taxed at the lower rates.',
+            },
           },
           {
             id: "fin-sec5-u1-L3-Q7",
@@ -366,6 +413,9 @@ export const finSection5Part1: Unit[] = [
             question: "Payroll taxes only come out of the employee's paycheck. The employer pays nothing.",
             correctAnswer: false,
             explanation: "Employers typically match or pay additional payroll taxes on top of what's deducted from your check.",
+            distractorExplanations: {
+              0: 'This statement is actually false — employers typically match or pay additional payroll taxes on top of what\'s deducted from your check.',
+            },
           },
           {
             id: "fin-sec5-u1-L4-Q2",
@@ -379,6 +429,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Payroll taxes are earmarked for specific social programs like retirement pensions, disability, and healthcare.",
+            distractorExplanations: {
+              0: '"Military defense and foreign aid" is wrong because payroll taxes are earmarked for specific social programs like retirement pensions, disability, and healthcare.',
+              1: '"Government employee bonuses" is wrong because payroll taxes are earmarked for specific social programs like retirement pensions, disability, and healthcare.',
+              2: '"Highway construction and bridge repairs" is wrong because payroll taxes are earmarked for specific social programs like retirement pensions, disability, and healthcare.',
+            },
           },
           {
             id: "fin-sec5-u1-L4-T2",
@@ -419,6 +474,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The gap between gross and net pay is caused by income tax withholding, payroll taxes, and possibly benefits deductions.",
+            distractorExplanations: {
+              0: '"Her employer made a payroll error" is wrong because the gap between gross and net pay is caused by income tax withholding, payroll taxes, and possibly benefits deductions.',
+              1: '"She\'s being charged a new-employee training fee" is wrong because the gap between gross and net pay is caused by income tax withholding, payroll taxes, and possibly benefits deductions.',
+              3: '"The remaining amount will arrive in a separate payment" is wrong because the gap between gross and net pay is caused by income tax withholding, payroll taxes, and possibly benefits deductions.',
+            },
           },
           {
             id: "fin-sec5-u1-L4-Q6",
@@ -457,6 +517,9 @@ export const finSection5Part1: Unit[] = [
             question: "Earning more money can result in you taking home less money overall due to a higher tax bracket.",
             correctAnswer: false,
             explanation: "In a progressive system, only the additional income is taxed at the higher rate. Your total take-home always increases when you earn more.",
+            distractorExplanations: {
+              0: 'This statement is actually false — in a progressive system, only the additional income is taxed at the higher rate. Your total take-home always increases when you earn more.',
+            },
           },
           {
             id: "fin-sec5-u1-L5-Q2",
@@ -493,6 +556,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A refund means you overpaid through withholding. The government is returning the excess.",
+            distractorExplanations: {
+              1: '"The government is rewarding you for paying on time" is wrong because a refund means you overpaid through withholding.',
+              2: '"You found loopholes that reduced your tax bill" is wrong because a refund means you overpaid through withholding.',
+              3: '"Your income was lower than expected" is wrong because a refund means you overpaid through withholding.',
+            },
           },
           {
             id: "fin-sec5-u1-L5-Q4",
@@ -507,6 +575,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Progressive taxation means only the income above the bracket threshold is taxed at the higher rate. Omar will always take home more by earning more.",
+            distractorExplanations: {
+              0: 'This choice is wrong because progressive taxation means only the income above the bracket threshold is taxed at the higher rate.',
+              1: 'This choice is wrong because progressive taxation means only the income above the bracket threshold is taxed at the higher rate.',
+              2: 'This choice is wrong because progressive taxation means only the income above the bracket threshold is taxed at the higher rate.',
+            },
           },
           {
             id: "fin-sec5-u1-L5-T3",
@@ -538,6 +611,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Owing or receiving close to $0 means your money stayed in your pocket all year where it could work for you. Over-withholding gives the government an interest-free loan.",
+            distractorExplanations: {
+              0: '"Withhold as much as possible for a big refund each April" is wrong because owing or receiving close to $0 means your money stayed in your pocket all year where it could work for you.',
+              1: 'Ignoring financial problems allows them to grow and cost you more.',
+              3: '"Let your employer decide without reviewing it" is wrong because owing or receiving close to $0 means your money stayed in your pocket all year where it could work for you.',
+            },
           },
         ],
       },
@@ -583,6 +661,9 @@ export const finSection5Part1: Unit[] = [
             question: "In a marginal tax system, each dollar you earn is taxed at the same rate.",
             correctAnswer: false,
             explanation: "Different portions of your income are taxed at different rates. Each bracket has its own rate.",
+            distractorExplanations: {
+              0: 'This statement is actually false — different portions of your income are taxed at different rates. Each bracket has its own rate.',
+            },
           },
           {
             id: "fin-sec5-u2-L1-Q2",
@@ -596,6 +677,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "10% on the first $10,000 = $1,000. 20% on the remaining $20,000 = $4,000. Total = $5,000.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: 10% of $30,000 does not correctly account for all components.',
+              1: 'This uses the wrong formula: 20% of $30,000 does not correctly account for all components.',
+              3: 'This uses the wrong formula: average of the two rates does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec5-u2-L1-T2",
@@ -636,6 +722,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Only income above the 24% bracket threshold is taxed at 24%. Everything below stays at the lower marginal rates.",
+            distractorExplanations: {
+              1: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: '"Bonuses aren\'t taxed at all, so the bracket doesn\'t matter." is wrong because only income above the 24% bracket threshold is taxed at 24%.',
+              3: '"The 24% rate only applies if you earn over $200,000." is wrong because only income above the 24% bracket threshold is taxed at 24%.',
+            },
           },
         ],
       },
@@ -707,6 +798,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At a 22% marginal rate, each additional dollar is taxed at 22%. So $5,000 x 22% = $1,100 goes to income tax.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: 10% of the raise does not correctly account for all components.',
+              1: 'This uses the wrong formula: 37% of the raise does not correctly account for all components.',
+              3: 'This uses the wrong formula: the entire raise does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec5-u2-L2-Q5",
@@ -728,6 +824,9 @@ export const finSection5Part1: Unit[] = [
             question: "Your effective tax rate is always lower than your marginal tax rate (unless you're in the lowest bracket).",
             correctAnswer: true,
             explanation: "Because lower brackets are taxed at lower rates, the blended average (effective rate) is always below the top bracket rate you reach.",
+            distractorExplanations: {
+              1: 'This statement is actually true — because lower brackets are taxed at lower rates, the blended average (effective rate) is always below the top bracket rate you reach.',
+            },
           },
         ],
       },
@@ -759,6 +858,9 @@ export const finSection5Part1: Unit[] = [
             question: "Your filing status can affect which tax brackets apply to your income.",
             correctAnswer: true,
             explanation: "Different filing statuses have different bracket thresholds. Married couples filing jointly typically have wider brackets than single filers.",
+            distractorExplanations: {
+              1: 'This statement is actually true — different filing statuses have different bracket thresholds. Married couples filing jointly typically have wider brackets than single filers.',
+            },
           },
           {
             id: "fin-sec5-u2-L3-Q2",
@@ -772,6 +874,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Joint filers get wider bracket thresholds. More income stays in lower brackets, reducing the overall tax bill.",
+            distractorExplanations: {
+              0: '"Married couples are exempt from payroll taxes" is wrong because joint filers get wider bracket thresholds.',
+              1: 'This answer is too narrow — it ignores other important factors.',
+              2: '"The government gives married couples a 50% discount" is wrong because joint filers get wider bracket thresholds.',
+            },
           },
           {
             id: "fin-sec5-u2-L3-T2",
@@ -815,6 +922,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "As an unmarried parent supporting a dependent, Mia likely qualifies for Head of Household, which offers wider brackets and a larger standard deduction.",
+            distractorExplanations: {
+              1: '"Married Filing Jointly, since she has a dependent" is wrong because as an unmarried parent supporting a dependent, Mia likely qualifies for Head of Household, which offers wider brack...',
+              2: '"Married Filing Separately to split her income" is wrong because as an unmarried parent supporting a dependent, Mia likely qualifies for Head of Household, which offers wider brack...',
+              3: '"She should skip filing entirely since she has a child" is wrong because as an unmarried parent supporting a dependent, Mia likely qualifies for Head of Household, which offers wider brack...',
+            },
           },
           {
             id: "fin-sec5-u2-L3-Q5",
@@ -839,6 +951,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Your filing status is determined by your situation on the last day of the tax year. Getting married on December 31 means you file as married for the entire year.",
+            distractorExplanations: {
+              0: '"The date you submit your tax return" is wrong because your filing status is determined by your situation on the last day of the tax year.',
+              1: '"Your birthday each year" is wrong because your filing status is determined by your situation on the last day of the tax year.',
+              3: '"The first day of the calendar year" is wrong because your filing status is determined by your situation on the last day of the tax year.',
+            },
           },
         ],
       },
@@ -864,6 +981,9 @@ export const finSection5Part1: Unit[] = [
             question: "Your taxable income is the same as your gross income.",
             correctAnswer: false,
             explanation: "Taxable income is always lower than gross income because deductions and exemptions reduce the amount that's actually taxed.",
+            distractorExplanations: {
+              0: 'This statement is actually false — taxable income is always lower than gross income because deductions and exemptions reduce the amount that\'s actually taxed.',
+            },
           },
           {
             id: "fin-sec5-u2-L4-Q2",
@@ -923,6 +1043,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Many tax benefits phase out above certain AGI thresholds. A lower AGI can unlock additional deductions and credits.",
+            distractorExplanations: {
+              0: '"It determines your Social Security benefits" is wrong because many tax benefits phase out above certain AGI thresholds.',
+              1: '"Banks use it instead of credit scores for loans" is wrong because many tax benefits phase out above certain AGI thresholds.',
+              2: '"It sets your hourly wage for the next year" is wrong because many tax benefits phase out above certain AGI thresholds.',
+            },
           },
           {
             id: "fin-sec5-u2-L4-Q6",
@@ -937,6 +1062,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The IRA contribution reduces AGI to $84,000. The standard deduction reduces it further to $69,400. That's the amount tax brackets apply to.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: IRA and deduction don\'t count does not correctly account for all components.',
+              1: 'This uses the wrong formula: $90,000 - $14,600 only does not correctly account for all components.',
+              3: 'This uses the wrong formula: $90,000 - $6,000 only does not correctly account for all components.',
+            },
           },
         ],
       },
@@ -962,6 +1092,9 @@ export const finSection5Part1: Unit[] = [
             question: "Only money earned from a traditional job counts as taxable income.",
             correctAnswer: false,
             explanation: "Freelance income, investment gains, rental income, tips, bonuses, and many other sources are also taxable.",
+            distractorExplanations: {
+              0: 'This statement is actually false — freelance income, investment gains, rental income, tips, bonuses, and many other sources are also taxable.',
+            },
           },
           {
             id: "fin-sec5-u2-L5-Q2",
@@ -998,6 +1131,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Long-term capital gains (assets held over 1 year) are taxed at preferential rates, typically lower than ordinary income tax rates.",
+            distractorExplanations: {
+              0: '"Overtime pay from your employer" is wrong because long-term capital gains (assets held over 1 year) are taxed at preferential rates, typically lower than ordinary in...',
+              1: '"Tips earned at a restaurant" is wrong because long-term capital gains (assets held over 1 year) are taxed at preferential rates, typically lower than ordinary in...',
+              3: '"Freelance project payments" is wrong because long-term capital gains (assets held over 1 year) are taxed at preferential rates, typically lower than ordinary in...',
+            },
           },
           {
             id: "fin-sec5-u2-L5-Q4",
@@ -1026,6 +1164,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Salary ($55,000) + freelance ($3,000) + interest ($200) = $58,200 in gross income. The gift is below the annual exclusion and isn't taxable to Alex.",
+            distractorExplanations: {
+              1: 'This uses the wrong formula: everything added together does not correctly account for all components.',
+              2: 'This uses the wrong formula: only his job salary does not correctly account for all components.',
+              3: 'This uses the wrong formula: salary + gift only does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec5-u2-L5-Q6",
@@ -1073,6 +1216,9 @@ export const finSection5Part1: Unit[] = [
             question: "If you get a filing extension, you also get extra time to pay any taxes owed.",
             correctAnswer: false,
             explanation: "An extension gives you more time to file paperwork, but estimated taxes owed are still due by the original deadline. You'll pay interest on late payments.",
+            distractorExplanations: {
+              0: 'This statement is actually false — an extension gives you more time to file paperwork, but estimated taxes owed are still due by the original deadline. You\'ll pay interest on late payments.',
+            },
           },
           {
             id: "fin-sec5-u2-L6-Q2",
@@ -1086,6 +1232,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Late filing triggers a failure-to-file penalty, usually a percentage of unpaid taxes for each month the return is late.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              1: '"The government files your return automatically" is wrong because late filing triggers a failure-to-file penalty, usually a percentage of unpaid taxes for each month the return is late.',
+              2: '"Your employer pays the penalty on your behalf" is wrong because late filing triggers a failure-to-file penalty, usually a percentage of unpaid taxes for each month the return is late.',
+            },
           },
           {
             id: "fin-sec5-u2-L6-T2",
@@ -1106,6 +1257,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Filing the extension avoids the failure-to-file penalty. Paying the estimate by the deadline minimizes interest charges.",
+            distractorExplanations: {
+              1: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: 'This choice is wrong because filing the extension avoids the failure-to-file penalty.',
+              3: '"Send a partial return with only your W-2 information" is wrong because filing the extension avoids the failure-to-file penalty.',
+            },
           },
           {
             id: "fin-sec5-u2-L6-Q4",
@@ -1137,6 +1293,9 @@ export const finSection5Part1: Unit[] = [
             question: "The failure-to-file penalty is typically more severe than the failure-to-pay penalty.",
             correctAnswer: true,
             explanation: "The filing penalty is usually much steeper than the payment penalty. If you can't pay in full, file anyway to avoid the larger penalty.",
+            distractorExplanations: {
+              1: 'This statement is actually true — the filing penalty is usually much steeper than the payment penalty. If you can\'t pay in full, file anyway to avoid the larger penalty.',
+            },
           },
         ],
       },
@@ -1182,6 +1341,9 @@ export const finSection5Part1: Unit[] = [
             question: "Employers are required to send employees a year-end tax form summarizing wages and withholding.",
             correctAnswer: true,
             explanation: "In most countries, employers must provide a summary form (W-2, P60, T4, etc.) so employees can file their tax returns accurately.",
+            distractorExplanations: {
+              1: 'This statement is actually true — in most countries, employers must provide a summary form (W-2, P60, T4, etc.) so employees can file their tax returns accurately.',
+            },
           },
           {
             id: "fin-sec5-u3-L1-Q2",
@@ -1195,6 +1357,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The W-2 (and equivalents) shows what you earned and what was already sent to the government on your behalf.",
+            distractorExplanations: {
+              0: '"Your credit score and bank account balance" is wrong because the W-2 (and equivalents) shows what you earned and what was already sent to the government on your behalf.',
+              1: '"A list of all purchases you made during the year" is wrong because the W-2 (and equivalents) shows what you earned and what was already sent to the government on your behalf.',
+              3: '"Your employer\'s profit and loss statement" is wrong because the W-2 (and equivalents) shows what you earned and what was already sent to the government on your behalf.',
+            },
           },
           {
             id: "fin-sec5-u3-L1-T2",
@@ -1216,6 +1383,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Both employers sent copies to the tax authority. The mismatch will trigger a notice and potentially penalties.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              1: '"He\'ll get a larger refund for underreporting income" is wrong because both employers sent copies to the tax authority.',
+              2: '"His current employer will fix the error automatically" is wrong because both employers sent copies to the tax authority.',
+            },
           },
           {
             id: "fin-sec5-u3-L1-Q4",
@@ -1250,6 +1422,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Each employer sends a separate W-2. You need all of them to accurately report your total income.",
+            distractorExplanations: {
+              1: '"1 combined form from all employers" is wrong because each employer sends a separate W-2.',
+              2: 'This answer is too narrow — it ignores other important factors.',
+              3: '"None, since changing jobs cancels withholding" is wrong because each employer sends a separate W-2.',
+            },
           },
         ],
       },
@@ -1281,6 +1458,9 @@ export const finSection5Part1: Unit[] = [
             question: "Taxes are automatically withheld from 1099 income just like they are from W-2 wages.",
             correctAnswer: false,
             explanation: "Most 1099 income has no automatic withholding. You're responsible for paying taxes on it yourself, often through quarterly estimated payments.",
+            distractorExplanations: {
+              0: 'This statement is actually false — most 1099 income has no automatic withholding. You\'re responsible for paying taxes on it yourself, often through quarterly estimated payments.',
+            },
           },
           {
             id: "fin-sec5-u3-L2-Q2",
@@ -1317,6 +1497,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Without automatic withholding, the tax system expects you to pay estimated taxes quarterly. Waiting until April can trigger underpayment penalties.",
+            distractorExplanations: {
+              0: '"Quarterly payments earn interest from the government" is wrong because without automatic withholding, the tax system expects you to pay estimated taxes quarterly.',
+              1: '"Quarterly payments reduce your tax bracket" is wrong because without automatic withholding, the tax system expects you to pay estimated taxes quarterly.',
+              2: '"The tax authority only accepts payments 4 times per year" is wrong because without automatic withholding, the tax system expects you to pay estimated taxes quarterly.',
+            },
           },
           {
             id: "fin-sec5-u3-L2-Q4",
@@ -1331,6 +1516,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "All freelance income is taxable regardless of whether she receives a 1099. She must report it and pay income tax plus self-employment tax on it.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              1: '"Wait for a 1099 from each client before deciding" is wrong because all freelance income is taxable regardless of whether she receives a 1099.',
+              3: '"Freelance income under $10,000 is tax-free" is wrong because all freelance income is taxable regardless of whether she receives a 1099.',
+            },
           },
           {
             id: "fin-sec5-u3-L2-Q5",
@@ -1347,6 +1537,9 @@ export const finSection5Part1: Unit[] = [
             question: "You only need to report income if you receive an official tax form for it.",
             correctAnswer: false,
             explanation: "All income is taxable whether or not you receive a form. If you earn below the 1099 reporting threshold, you still must report the income on your return.",
+            distractorExplanations: {
+              0: 'This statement is actually false — all income is taxable whether or not you receive a form. If you earn below the 1099 reporting threshold, you still must report the income on your return.',
+            },
           },
         ],
       },
@@ -1378,6 +1571,9 @@ export const finSection5Part1: Unit[] = [
             question: "Once you fill out a W-4 at a new job, you can never change it.",
             correctAnswer: false,
             explanation: "You can update your W-4 at any time. Life changes like marriage, having children, or getting a second job should prompt an update.",
+            distractorExplanations: {
+              0: 'This statement is actually false — you can update your W-4 at any time. Life changes like marriage, having children, or getting a second job should prompt an update.',
+            },
           },
           {
             id: "fin-sec5-u3-L3-Q2",
@@ -1391,6 +1587,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The W-4 is an instruction to your employer. It determines the withholding amount from each paycheck.",
+            distractorExplanations: {
+              1: '"To report your annual income to the tax authority" is wrong because the W-4 is an instruction to your employer.',
+              2: '"To open a retirement account through your employer" is wrong because the W-4 is an instruction to your employer.',
+              3: '"To calculate your final tax bill at year end" is wrong because the W-4 is an instruction to your employer.',
+            },
           },
           {
             id: "fin-sec5-u3-L3-T2",
@@ -1428,6 +1629,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "With two incomes and an outdated W-4, Derek may not be withholding enough. He could face an unexpected tax bill.",
+            distractorExplanations: {
+              0: 'This choice is wrong because with two incomes and an outdated W-4, Derek may not be withholding enough.',
+              1: 'This choice is wrong because with two incomes and an outdated W-4, Derek may not be withholding enough.',
+              2: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec5-u3-L3-Q5",
@@ -1454,6 +1660,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Claiming more dependents reduces withholding. If the reduction is too large, you'll owe taxes (and possibly penalties) when you file.",
+            distractorExplanations: {
+              0: '"You\'ll go to jail for tax fraud" is wrong because claiming more dependents reduces withholding.',
+              1: '"Your employer will fire you for inaccurate paperwork" is wrong because claiming more dependents reduces withholding.',
+              3: '"The tax authority will automatically correct it mid-year" is wrong because claiming more dependents reduces withholding.',
+            },
           },
         ],
       },
@@ -1479,6 +1690,9 @@ export const finSection5Part1: Unit[] = [
             question: "A pay stub shows only your net pay and nothing else.",
             correctAnswer: false,
             explanation: "Your pay stub shows gross pay, each individual deduction, and your resulting net pay. It's the full breakdown.",
+            distractorExplanations: {
+              0: 'This statement is actually false — your pay stub shows gross pay, each individual deduction, and your resulting net pay. It\'s the full breakdown.',
+            },
           },
           {
             id: "fin-sec5-u3-L4-Q2",
@@ -1547,6 +1761,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Pre-tax retirement contributions and other pre-tax benefits reduce your W-2 Box 1 wages. YTD gross pay doesn't subtract these.",
+            distractorExplanations: {
+              1: '"Her employer made a math error on the W-2" is wrong because pre-tax retirement contributions and other pre-tax benefits reduce your W-2 Box 1 wages.',
+              2: '"Taxes are subtracted from the W-2 but not the pay stub" is wrong because pre-tax retirement contributions and other pre-tax benefits reduce your W-2 Box 1 wages.',
+              3: '"The W-2 only counts the last 10 months of the year" is wrong because pre-tax retirement contributions and other pre-tax benefits reduce your W-2 Box 1 wages.',
+            },
           },
         ],
       },
@@ -1572,6 +1791,9 @@ export const finSection5Part1: Unit[] = [
             question: "You should wait until you have all tax forms before filing your return.",
             correctAnswer: true,
             explanation: "Filing with incomplete information leads to errors, amended returns, or notices from the tax authority. Wait for all W-2s and 1099s.",
+            distractorExplanations: {
+              1: 'This statement is actually true — filing with incomplete information leads to errors, amended returns, or notices from the tax authority. Wait for all W-2s and 1099s.',
+            },
           },
           {
             id: "fin-sec5-u3-L5-Q2",
@@ -1617,6 +1839,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "E-filing is faster, more accurate, and gets refunds quicker. Most tax authorities encourage or require it.",
+            distractorExplanations: {
+              0: '"Paper forms mailed to the tax authority" is wrong because e-filing is faster, more accurate, and gets refunds quicker.',
+              1: 'This choice is wrong because e-filing is faster, more accurate, and gets refunds quicker.',
+              3: '"Having your employer file on your behalf" is wrong because e-filing is faster, more accurate, and gets refunds quicker.',
+            },
           },
           {
             id: "fin-sec5-u3-L5-T3",
@@ -1644,6 +1871,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The tax authority cross-referenced the 1099 with her return. She should verify the amount and pay the tax owed plus any interest.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              1: '"Contact her employer to fix the W-2" is wrong because the tax authority cross-referenced the 1099 with her return.',
+              2: '"Close her savings account to prevent future issues" is wrong because the tax authority cross-referenced the 1099 with her return.',
+            },
           },
           {
             id: "fin-sec5-u3-L5-Q6",
@@ -1657,6 +1889,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Year-round organization means tax time is just assembling documents you already have. No scrambling, no missing forms, no errors.",
+            distractorExplanations: {
+              0: '"File as early as possible, even before all forms arrive" is wrong because year-round organization means tax time is just assembling documents you already have.',
+              1: '"Wait until the deadline and rush through the return" is wrong because year-round organization means tax time is just assembling documents you already have.',
+              3: '"Let the tax authority calculate everything for you" is wrong because year-round organization means tax time is just assembling documents you already have.',
+            },
           },
         ],
       },
@@ -1702,6 +1939,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Regressive taxes (like sales tax) take a bigger share of income from those who earn less.",
+            distractorExplanations: {
+              1: '"Progressive" is wrong because regressive taxes (like sales tax) take a bigger share of income from those who earn less.',
+              2: '"Flat" is wrong because regressive taxes (like sales tax) take a bigger share of income from those who earn less.',
+              3: '"Marginal" is wrong because regressive taxes (like sales tax) take a bigger share of income from those who earn less.',
+            },
           },
           {
             id: "fin-sec5-u4-L1-Q2",
@@ -1728,6 +1970,9 @@ export const finSection5Part1: Unit[] = [
             question: "Moving into a higher tax bracket means your entire income is taxed at the higher rate.",
             correctAnswer: false,
             explanation: "Only the portion of income in the new bracket is taxed at the higher rate. Income in lower brackets keeps its lower rate.",
+            distractorExplanations: {
+              0: 'This statement is actually false — only the portion of income in the new bracket is taxed at the higher rate. Income in lower brackets keeps its lower rate.',
+            },
           },
           {
             id: "fin-sec5-u4-L1-Q5",
@@ -1742,6 +1987,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "$40 is 0.04% of $100,000 but 0.13% of $30,000. The same flat dollar amount is proportionally heavier for lower earners.",
+            distractorExplanations: {
+              0: 'Income tax is mandatory and benefits society, but it does not directly build your personal wealth.',
+              1: '"Sales tax is progressive, not regressive" is wrong because $40 is 0.',
+              2: '"Person A gets a sales tax exemption" is wrong because $40 is 0.',
+            },
           },
           {
             id: "fin-sec5-u4-L1-Q6",
@@ -1803,6 +2053,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The W-4 tells your employer how to calculate your paycheck withholding based on your personal situation.",
+            distractorExplanations: {
+              0: '"To report your income at year end" is wrong because the W-4 tells your employer how to calculate your paycheck withholding based on your personal situation.',
+              1: '"To claim a tax refund after filing" is wrong because the W-4 tells your employer how to calculate your paycheck withholding based on your personal situation.',
+              3: '"To register a new business with the tax authority" is wrong because the W-4 tells your employer how to calculate your paycheck withholding based on your personal situation.',
+            },
           },
           {
             id: "fin-sec5-u4-L2-Q3",
@@ -1810,6 +2065,9 @@ export const finSection5Part1: Unit[] = [
             question: "A filing extension gives you extra time to pay taxes owed, not just extra time to file paperwork.",
             correctAnswer: false,
             explanation: "An extension only extends the filing deadline. Any taxes owed are still due by the original deadline, and interest accrues on late payments.",
+            distractorExplanations: {
+              0: 'This statement is actually false — an extension only extends the filing deadline. Any taxes owed are still due by the original deadline, and interest accrues on late payments.',
+            },
           },
           {
             id: "fin-sec5-u4-L2-Q4",
@@ -1824,6 +2082,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The $7,200 withheld covers only his W-2 wages. He'll owe income tax plus self-employment tax on the $12,000 in freelance income.",
+            distractorExplanations: {
+              1: 'This choice is wrong because the $7,200 withheld covers only his W-2 wages.',
+              2: '"The freelance income is tax-free since it\'s under $15,000" is wrong because the $7,200 withheld covers only his W-2 wages.',
+              3: 'This choice is wrong because the $7,200 withheld covers only his W-2 wages.',
+            },
           },
           {
             id: "fin-sec5-u4-L2-Q5",
@@ -1880,6 +2143,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Gross: $75,000. AGI: $75,000 - $6,500 = $68,500. Taxable: $68,500 - $14,600 = $53,900. Closest to $54,900 accounting for rounding.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: $72,000 + $3,000 does not correctly account for all components.',
+              1: 'This uses the wrong formula: $75,000 - $14,600 deduction only does not correctly account for all components.',
+              2: 'This uses the wrong formula: $72,000 - $9,100 withholding - $14,000 does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec5-u4-L3-Q2",
@@ -1904,6 +2172,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without employer withholding, freelancers must make quarterly estimated payments to avoid underpayment penalties.",
+            distractorExplanations: {
+              1: '"Wait until April to pay all taxes at once" is wrong because without employer withholding, freelancers must make quarterly estimated payments to avoid underpayment penalties.',
+              2: '"Claim the income is tax-free since no W-2 was issued" is wrong because without employer withholding, freelancers must make quarterly estimated payments to avoid underpayment penalties.',
+              3: '"Ask clients to start withholding taxes from payments" is wrong because without employer withholding, freelancers must make quarterly estimated payments to avoid underpayment penalties.',
+            },
           },
           {
             id: "fin-sec5-u4-L3-Q4",
@@ -1917,6 +2190,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Pre-tax contributions lower AGI, accurate withholding avoids surprises, and timely filing with all forms prevents penalties.",
+            distractorExplanations: {
+              0: '"Max out W-4 withholding for the biggest possible refund" is wrong because pre-tax contributions lower AGI, accurate withholding avoids surprises, and timely filing with all forms prevents p...',
+              1: '"Avoid filing until the last possible day to delay payment" is wrong because pre-tax contributions lower AGI, accurate withholding avoids surprises, and timely filing with all forms prevents p...',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec5-u4-L3-Q5",
@@ -1940,6 +2218,9 @@ export const finSection5Part1: Unit[] = [
             question: "Understanding tax basics can help you make better decisions about retirement contributions, job offers, and side income.",
             correctAnswer: true,
             explanation: "Tax knowledge directly affects financial decisions. Knowing how brackets work helps you evaluate raises. Understanding deductions helps you plan contributions.",
+            distractorExplanations: {
+              1: 'This statement is actually true — tax knowledge directly affects financial decisions. Knowing how brackets work helps you evaluate raises. Understanding deductions helps you plan contributions.',
+            },
           },
         ],
       },
@@ -1979,6 +2260,9 @@ export const finSection5Part1: Unit[] = [
             question: "A $1,000 deduction means you pay $1,000 less in taxes.",
             correctAnswer: false,
             explanation: "A deduction reduces taxable income, not the tax itself. A $1,000 deduction saves you $1,000 multiplied by your marginal rate.",
+            distractorExplanations: {
+              0: 'This statement is actually false — a deduction reduces taxable income, not the tax itself. A $1,000 deduction saves you $1,000 multiplied by your marginal rate.',
+            },
           },
           {
             id: "fin-sec5-u5-L1-Q2",
@@ -2032,6 +2316,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A $1,000 deduction saves 10% ($100) for someone in the 10% bracket, but 37% ($370) for someone in the 37% bracket.",
+            distractorExplanations: {
+              0: '"Higher earners qualify for additional deductions" is wrong because a $1,000 deduction saves 10% ($100) for someone in the 10% bracket, but 37% ($370) for someone in the 37% bracket.',
+              1: 'This choice is wrong because a $1,000 deduction saves 10% ($100) for someone in the 10% bracket, but 37% ($370) for someone in the 37% bracket.',
+              2: '"Lower earners don\'t qualify for any deductions" is wrong because a $1,000 deduction saves 10% ($100) for someone in the 10% bracket, but 37% ($370) for someone in the 37% bracket.',
+            },
           },
           {
             id: "fin-sec5-u5-L1-Q5",
@@ -2046,6 +2335,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Chen: $2,000 x 24% = $480 saved. Kai: $2,000 x 12% = $240 saved. Higher bracket = more savings from the same deduction.",
+            distractorExplanations: {
+              1: '"Both save $2,000 because it\'s the same donation" is wrong because chen: $2,000 x 24% = $480 saved.',
+              2: '"Chen saves $240 and Kai saves $480" is wrong because chen: $2,000 x 24% = $480 saved.',
+              3: '"Neither saves anything because donations aren\'t deductible" is wrong because chen: $2,000 x 24% = $480 saved.',
+            },
           },
         ],
       },
@@ -2071,6 +2365,9 @@ export const finSection5Part1: Unit[] = [
             question: "A $1,000 tax credit reduces your tax bill by exactly $1,000.",
             correctAnswer: true,
             explanation: "Credits are dollar-for-dollar. A $1,000 credit = $1,000 off your tax bill. No marginal rate math needed.",
+            distractorExplanations: {
+              1: 'This statement is actually true — credits are dollar-for-dollar. A $1,000 credit = $1,000 off your tax bill. No marginal rate math needed.',
+            },
           },
           {
             id: "fin-sec5-u5-L2-Q2",
@@ -2084,6 +2381,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "$5,000 - $2,000 credit = $3,000 owed. The credit comes straight off your tax bill.",
+            distractorExplanations: {
+              0: 'This uses the wrong formula: credits don\'t change the amount owed does not correctly account for all components.',
+              1: 'This uses the wrong formula: credits are added to your bill does not correctly account for all components.',
+              2: 'This uses the wrong formula: credit multiplied by your bracket rate does not correctly account for all components.',
+            },
           },
           {
             id: "fin-sec5-u5-L2-T2",
@@ -2119,6 +2421,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The $1,200 non-refundable credit reduces her $800 bill to $0 (saving $800). The $500 refundable credit only saves $500. The non-refundable credit saves more here, even though she loses $400 of unused credit.",
+            distractorExplanations: {
+              0: '"The $1,200 non-refundable credit (it\'s a larger amount)" is wrong because the $1,200 non-refundable credit reduces her $800 bill to $0 (saving $800).',
+              1: 'This choice is wrong because the $1,200 non-refundable credit reduces her $800 bill to $0 (saving $800).',
+              2: '"Both give the same result since she owes taxes" is wrong because the $1,200 non-refundable credit reduces her $800 bill to $0 (saving $800).',
+            },
           },
           {
             id: "fin-sec5-u5-L2-Q5",
@@ -2169,6 +2476,9 @@ export const finSection5Part1: Unit[] = [
             question: "A $2,000 tax credit is always worth more than a $2,000 tax deduction.",
             correctAnswer: true,
             explanation: "The credit saves $2,000 directly. The deduction saves $2,000 x your marginal rate, which is always less than $2,000 (since rates are below 100%).",
+            distractorExplanations: {
+              1: 'This statement is actually true — the credit saves $2,000 directly. The deduction saves $2,000 x your marginal rate, which is always less than $2,000 (since rates are below 100%).',
+            },
           },
           {
             id: "fin-sec5-u5-L3-Q2",
@@ -2215,6 +2525,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Deduction saves $660. Credit saves $700. The smaller-sounding credit is actually worth $40 more in real tax savings.",
+            distractorExplanations: {
+              0: '"The $3,000 deduction (saves $3,000 x 22% = $660)" is wrong because deduction saves $660.',
+              1: '"They save the same amount" is wrong because deduction saves $660.',
+              3: '"The deduction, because $3,000 is bigger than $700" is wrong because deduction saves $660.',
+            },
           },
           {
             id: "fin-sec5-u5-L3-Q5",
@@ -2244,6 +2559,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "At a 10% rate, a $1,000 deduction saves only $100. A $1,000 refundable credit saves the full $1,000 and can even generate a refund if the credit exceeds taxes owed.",
+            distractorExplanations: {
+              1: 'Income tax is mandatory and benefits society, but it does not directly build your personal wealth.',
+              2: '"Refundable credits are worth more at lower brackets" is wrong because at a 10% rate, a $1,000 deduction saves only $100.',
+              3: '"The tax authority gives double credits to low earners" is wrong because at a 10% rate, a $1,000 deduction saves only $100.',
+            },
           },
         ],
       },
@@ -2275,6 +2595,9 @@ export const finSection5Part1: Unit[] = [
             question: "Tax credits for children and education can be worth thousands of dollars per year.",
             correctAnswer: true,
             explanation: "Family and education credits are some of the most valuable tax benefits available. They can dramatically reduce a family's tax bill.",
+            distractorExplanations: {
+              1: 'This statement is actually true — family and education credits are some of the most valuable tax benefits available. They can dramatically reduce a family\'s tax bill.',
+            },
           },
           {
             id: "fin-sec5-u5-L4-Q2",
@@ -2288,6 +2611,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Income limits (phase-outs) ensure credits go to taxpayers who benefit most, concentrating the government's spending on those with greater need.",
+            distractorExplanations: {
+              1: '"To punish higher earners for making more money" is wrong because income limits (phase-outs) ensure credits go to taxpayers who benefit most, concentrating the government\'s spending...',
+              2: '"Because higher earners pay no taxes" is wrong because income limits (phase-outs) ensure credits go to taxpayers who benefit most, concentrating the government\'s spending...',
+              3: '"Income limits are only for deductions, not credits" is wrong because income limits (phase-outs) ensure credits go to taxpayers who benefit most, concentrating the government\'s spending...',
+            },
           },
           {
             id: "fin-sec5-u5-L4-T2",
@@ -2329,6 +2657,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "With 2 children and education costs, they likely qualify for child and education credits. At $85,000, they may also qualify for earned income credit depending on the country.",
+            distractorExplanations: {
+              0: '"Child tax credit and education credit only" is wrong because with 2 children and education costs, they likely qualify for child and education credits.',
+              1: 'This choice is wrong because with 2 children and education costs, they likely qualify for child and education credits.',
+              2: '"Energy credits only, since they own a home" is wrong because with 2 children and education costs, they likely qualify for child and education credits.',
+            },
           },
           {
             id: "fin-sec5-u5-L4-Q5",
@@ -2353,6 +2686,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Credit rules, amounts, and income thresholds change every year. Proactively researching ensures you don't miss valuable benefits.",
+            distractorExplanations: {
+              0: '"Assume you don\'t qualify and don\'t bother checking" is wrong because credit rules, amounts, and income thresholds change every year.',
+              1: 'This answer is too narrow — it ignores other important factors.',
+              3: '"Wait until you hear about credits from friends or family" is wrong because credit rules, amounts, and income thresholds change every year.',
+            },
           },
         ],
       },
@@ -2378,6 +2716,9 @@ export const finSection5Part1: Unit[] = [
             question: "You can claim both deductions and credits on the same tax return.",
             correctAnswer: true,
             explanation: "Deductions and credits work at different stages of the tax calculation. Most taxpayers use both.",
+            distractorExplanations: {
+              1: 'This statement is actually true — deductions and credits work at different stages of the tax calculation. Most taxpayers use both.',
+            },
           },
           {
             id: "fin-sec5-u5-L5-Q2",
@@ -2410,6 +2751,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The IRA deduction lowers her AGI below the credit threshold. She saves on the deduction AND unlocks a credit she wouldn't have gotten at $82,000 AGI.",
+            distractorExplanations: {
+              1: '"She avoids all taxes on the $6,000" is wrong because the IRA deduction lowers her AGI below the credit threshold.',
+              2: '"The IRA contribution counts as a tax credit" is wrong because the IRA deduction lowers her AGI below the credit threshold.',
+              3: '"Her employer matches the contribution tax-free" is wrong because the IRA deduction lowers her AGI below the credit threshold.',
+            },
           },
           {
             id: "fin-sec5-u5-L5-Q4",
@@ -2436,6 +2782,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "You should take whichever deduction is larger. If the standard deduction ($14,600 for single filers in 2024) exceeds your itemized deductions, take the standard.",
+            distractorExplanations: {
+              0: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              1: '"Split the $8,000 across two tax years" is wrong because you should take whichever deduction is larger.',
+              3: '"Convert the deductions into credits" is wrong because you should take whichever deduction is larger.',
+            },
           },
           {
             id: "fin-sec5-u5-L5-T3",
@@ -2456,6 +2807,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Pre-tax contributions lower AGI, the better deduction option minimizes taxable income, and credits reduce the final bill. This three-layer approach is optimal.",
+            distractorExplanations: {
+              1: '"Skip deductions entirely and rely only on credits" is wrong because pre-tax contributions lower AGI, the better deduction option minimizes taxable income, and credits reduce the final...',
+              2: '"Itemize deductions every year regardless of the total" is wrong because pre-tax contributions lower AGI, the better deduction option minimizes taxable income, and credits reduce the final...',
+              3: '"Avoid retirement contributions to keep your paycheck higher" is wrong because pre-tax contributions lower AGI, the better deduction option minimizes taxable income, and credits reduce the final...',
+            },
           },
         ],
       },
@@ -2501,6 +2857,9 @@ export const finSection5Part1: Unit[] = [
             question: "You need receipts and documentation to claim the standard deduction.",
             correctAnswer: false,
             explanation: "The standard deduction is a flat amount. No receipts, no itemizing, no extra work. Just check the box on your return.",
+            distractorExplanations: {
+              0: 'This statement is actually false — the standard deduction is a flat amount. No receipts, no itemizing, no extra work. Just check the box on your return.',
+            },
           },
           {
             id: "fin-sec5-u6-L1-Q2",
@@ -2514,6 +2873,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The standard deduction is high enough that most people's itemizable expenses don't exceed it. Taking the standard deduction is simpler and saves more.",
+            distractorExplanations: {
+              0: '"Itemizing is illegal for most people" is wrong because the standard deduction is high enough that most people\'s itemizable expenses don\'t exceed it.',
+              2: '"You get penalized for itemizing" is wrong because the standard deduction is high enough that most people\'s itemizable expenses don\'t exceed it.',
+              3: '"The standard deduction is $100,000 for everyone" is wrong because the standard deduction is high enough that most people\'s itemizable expenses don\'t exceed it.',
+            },
           },
           {
             id: "fin-sec5-u6-L1-T2",
@@ -2562,6 +2926,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lisa's itemizable expenses ($500) are far below the $14,600 standard deduction. The standard deduction saves her significantly more.",
+            distractorExplanations: {
+              0: '"Itemize to claim the $500 charitable deduction" is wrong because lisa\'s itemizable expenses ($500) are far below the $14,600 standard deduction.',
+              2: '"File without any deduction to keep her taxes simple" is wrong because lisa\'s itemizable expenses ($500) are far below the $14,600 standard deduction.',
+              3: '"Split between standard and itemized deductions" is wrong because lisa\'s itemizable expenses ($500) are far below the $14,600 standard deduction.',
+            },
           },
         ],
       },
@@ -2587,6 +2956,9 @@ export const finSection5Part1: Unit[] = [
             question: "You should itemize deductions when your total deductible expenses exceed the standard deduction amount.",
             correctAnswer: true,
             explanation: "The rule is simple: whichever is larger (standard or itemized) gives you the bigger tax savings. Choose accordingly.",
+            distractorExplanations: {
+              1: 'This statement is actually true — the rule is simple: whichever is larger (standard or itemized) gives you the bigger tax savings. Choose accordingly.',
+            },
           },
           {
             id: "fin-sec5-u6-L2-Q2",
@@ -2600,6 +2972,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With $20,000 in deductible expenses, itemizing exceeds the ~$14,600 standard deduction. Mortgage interest and state taxes are the top reasons to itemize.",
+            distractorExplanations: {
+              0: '"A renter with $2,000 in charitable donations" is wrong because with $20,000 in deductible expenses, itemizing exceeds the ~$14,600 standard deduction.',
+              2: '"A college student with no income" is wrong because with $20,000 in deductible expenses, itemizing exceeds the ~$14,600 standard deduction.',
+              3: '"Someone who uses the standard deduction form" is wrong because with $20,000 in deductible expenses, itemizing exceeds the ~$14,600 standard deduction.',
+            },
           },
           {
             id: "fin-sec5-u6-L2-T2",
@@ -2652,6 +3029,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$29,200 standard deduction > $27,500 itemized. Even close calls go to whichever number is bigger. Standard deduction wins here.",
+            distractorExplanations: {
+              0: '"Itemize, since $27,500 is a lot of expenses" is wrong because $29,200 standard deduction > $27,500 itemized.',
+              2: '"Split the difference and claim $28,000" is wrong because $29,200 standard deduction > $27,500 itemized.',
+              3: '"They can\'t claim any deduction as a married couple" is wrong because $29,200 standard deduction > $27,500 itemized.',
+            },
           },
           {
             id: "fin-sec5-u6-L2-Q6",
@@ -2685,6 +3067,9 @@ export const finSection5Part1: Unit[] = [
             question: "Bunching means concentrating deductible expenses in one year to exceed the standard deduction threshold.",
             correctAnswer: true,
             explanation: "By timing flexible expenses, you can itemize one year (when expenses are high) and take the standard deduction the next (when expenses are low).",
+            distractorExplanations: {
+              1: 'This statement is actually true — by timing flexible expenses, you can itemize one year (when expenses are high) and take the standard deduction the next (when expenses are low).',
+            },
           },
           {
             id: "fin-sec5-u6-L3-Q2",
@@ -2699,6 +3084,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Year 1: $10,000 + $12,000 = $22,000 itemized (saving $7,400 more than standard). Year 2: Standard deduction at $14,600. Total 2-year deduction: $36,600 vs $29,200 without bunching.",
+            distractorExplanations: {
+              1: '"Stop donating to charity entirely" is wrong because year 1: $10,000 + $12,000 = $22,000 itemized (saving $7,400 more than standard).',
+              2: '"Spread her donations more evenly across 4 years" is wrong because year 1: $10,000 + $12,000 = $22,000 itemized (saving $7,400 more than standard).',
+              3: 'This choice is wrong because year 1: $10,000 + $12,000 = $22,000 itemized (saving $7,400 more than standard).',
+            },
           },
           {
             id: "fin-sec5-u6-L3-T2",
@@ -2738,6 +3128,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Charitable donations are the most flexible. You choose when and how much to give, making them ideal for bunching into a single tax year.",
+            distractorExplanations: {
+              0: '"Mortgage interest (fixed monthly payments)" is wrong because charitable donations are the most flexible.',
+              2: 'Income tax is mandatory and benefits society, but it does not directly build your personal wealth.',
+              3: '"Medical emergencies (unpredictable)" is wrong because charitable donations are the most flexible.',
+            },
           },
           {
             id: "fin-sec5-u6-L3-Q6",
@@ -2751,6 +3146,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Bunching helps most when you're near the standard deduction threshold. It pushes you over in one year while still getting the standard deduction the other year.",
+            distractorExplanations: {
+              0: 'This choice is wrong because bunching helps most when you\'re near the standard deduction threshold.',
+              2: '"Someone with zero deductible expenses" is wrong because bunching helps most when you\'re near the standard deduction threshold.',
+              3: '"Someone who only earns investment income" is wrong because bunching helps most when you\'re near the standard deduction threshold.',
+            },
           },
         ],
       },
@@ -2776,6 +3176,9 @@ export const finSection5Part1: Unit[] = [
             question: "Above-the-line deductions are available to all taxpayers, even those who take the standard deduction.",
             correctAnswer: true,
             explanation: "Above-the-line deductions reduce AGI regardless of whether you itemize. They work on top of (in addition to) your standard or itemized deduction.",
+            distractorExplanations: {
+              1: 'This statement is actually true — above-the-line deductions reduce AGI regardless of whether you itemize. They work on top of (in addition to) your standard or itemized deduction.',
+            },
           },
           {
             id: "fin-sec5-u6-L4-Q2",
@@ -2812,6 +3215,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lowering AGI has cascading benefits: it can unlock credits, increase other deductions, and reduce insurance premiums. Below-the-line deductions only reduce taxable income.",
+            distractorExplanations: {
+              0: '"They reduce your tax rate automatically" is wrong because lowering AGI has cascading benefits: it can unlock credits, increase other deductions, and reduce insurance premiums.',
+              2: '"The government gives a bonus for above-the-line deductions" is wrong because lowering AGI has cascading benefits: it can unlock credits, increase other deductions, and reduce insurance premiums.',
+              3: '"Below-the-line deductions are limited to $1,000" is wrong because lowering AGI has cascading benefits: it can unlock credits, increase other deductions, and reduce insurance premiums.',
+            },
           },
           {
             id: "fin-sec5-u6-L4-Q4",
@@ -2826,6 +3234,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The traditional IRA contribution is above-the-line, lowering Paul's AGI below the $80,000 threshold. This unlocks the education credit in addition to the deduction itself.",
+            distractorExplanations: {
+              0: '"The Roth IRA has better investment returns" is wrong because the traditional IRA contribution is above-the-line, lowering Paul\'s AGI below the $80,000 threshold.',
+              2: '"Both have the same tax effect" is wrong because the traditional IRA contribution is above-the-line, lowering Paul\'s AGI below the $80,000 threshold.',
+              3: '"The traditional IRA avoids all taxes permanently" is wrong because the traditional IRA contribution is above-the-line, lowering Paul\'s AGI below the $80,000 threshold.',
+            },
           },
           {
             id: "fin-sec5-u6-L4-Q5",
@@ -2872,6 +3285,9 @@ export const finSection5Part1: Unit[] = [
             question: "You must make the same choice (standard or itemized) every year.",
             correctAnswer: false,
             explanation: "You can switch between standard and itemized deductions each year. Choose whichever is larger for that particular year.",
+            distractorExplanations: {
+              0: 'This statement is actually false — you can switch between standard and itemized deductions each year. Choose whichever is larger for that particular year.',
+            },
           },
           {
             id: "fin-sec5-u6-L5-Q2",
@@ -2886,6 +3302,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$31,000 itemized > $29,200 standard. Itemizing saves $1,800 more in deductions, which at 22% saves about $396 in taxes.",
+            distractorExplanations: {
+              0: '"Take the standard deduction since it\'s simpler" is wrong because $31,000 itemized > $29,200 standard.',
+              2: '"Claim both the standard and itemized deductions" is wrong because $31,000 itemized > $29,200 standard.',
+              3: '"Skip deductions entirely this year" is wrong because $31,000 itemized > $29,200 standard.',
+            },
           },
           {
             id: "fin-sec5-u6-L5-T2",
@@ -2947,6 +3368,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The correct answer changes based on your situation each year. Calculate both and pick whichever gives the bigger number. Tax software does this comparison automatically.",
+            distractorExplanations: {
+              0: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              1: 'Absolute statements are rarely true in personal finance — there are almost always exceptions.',
+              3: '"Alternate between standard and itemized every other year" is wrong because the correct answer changes based on your situation each year.',
+            },
           },
         ],
       },
@@ -2986,6 +3412,9 @@ export const finSection5Part1: Unit[] = [
             question: "Tax-advantaged accounts are illegal tax shelters.",
             correctAnswer: false,
             explanation: "Tax-advantaged accounts are legal tools created by the government specifically to encourage saving for retirement, healthcare, and education.",
+            distractorExplanations: {
+              0: 'This statement is actually false — tax-advantaged accounts are legal tools created by the government specifically to encourage saving for retirement, healthcare, and education.',
+            },
           },
           {
             id: "fin-sec5-u7-L1-Q2",
@@ -2999,6 +3428,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Tax-deferred means you don't pay taxes on contributions or growth now. You pay taxes later when you withdraw the money, ideally in retirement when your rate may be lower.",
+            distractorExplanations: {
+              0: '"You never pay taxes on the money" is wrong because tax-deferred means you don\'t pay taxes on contributions or growth now.',
+              1: '"You pay taxes now and again when you withdraw" is wrong because tax-deferred means you don\'t pay taxes on contributions or growth now.',
+              3: '"Taxes are reduced by 50% permanently" is wrong because tax-deferred means you don\'t pay taxes on contributions or growth now.',
+            },
           },
           {
             id: "fin-sec5-u7-L1-T2",
@@ -3050,6 +3484,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At a low 12% rate now, Mei pays little tax on Roth contributions. Decades of growth will be withdrawn completely tax-free, saving her from potentially higher future rates.",
+            distractorExplanations: {
+              0: 'This choice is wrong because at a low 12% rate now, Mei pays little tax on Roth contributions.',
+              2: '"Neither, since both have the same long-term result" is wrong because at a low 12% rate now, Mei pays little tax on Roth contributions.',
+              3: '"A regular savings account with no tax advantages" is wrong because at a low 12% rate now, Mei pays little tax on Roth contributions.',
+            },
           },
         ],
       },
@@ -3081,6 +3520,9 @@ export const finSection5Part1: Unit[] = [
             question: "An employer match on your retirement contributions is essentially free money.",
             correctAnswer: true,
             explanation: "When your employer matches your contribution, they add extra money to your account at no cost to you. Not taking the match is like declining part of your salary.",
+            distractorExplanations: {
+              1: 'This statement is actually true — when your employer matches your contribution, they add extra money to your account at no cost to you. Not taking the match is like declining part of your salary.',
+            },
           },
           {
             id: "fin-sec5-u7-L2-Q2",
@@ -3123,6 +3565,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Early withdrawals face income tax plus a 10% penalty. The money is meant for retirement, and the penalty discourages early access.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              2: 'Income tax is mandatory and benefits society, but it does not directly build your personal wealth.',
+              3: '"Your employer takes back their matching contributions" is wrong because early withdrawals face income tax plus a 10% penalty.',
+            },
           },
           {
             id: "fin-sec5-u7-L2-Q5",
@@ -3150,6 +3597,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "At minimum, contribute enough to capture the full employer match. Anything less means you're leaving free money on the table.",
+            distractorExplanations: {
+              0: 'Ignoring financial problems allows them to grow and cost you more.',
+              1: '"1% of salary as a starting point" is wrong because at minimum, contribute enough to capture the full employer match.',
+              3: '"The maximum allowed ($23,000) regardless of your budget" is wrong because at minimum, contribute enough to capture the full employer match.',
+            },
           },
         ],
       },
@@ -3181,6 +3633,9 @@ export const finSection5Part1: Unit[] = [
             question: "You can only have an IRA if you don't have an employer retirement plan.",
             correctAnswer: false,
             explanation: "You can have both. However, the tax deductibility of traditional IRA contributions may be limited if you also have an employer plan and earn above certain thresholds.",
+            distractorExplanations: {
+              0: 'This statement is actually false — you can have both. However, the tax deductibility of traditional IRA contributions may be limited if you also have an employer plan and earn above certain thresholds.',
+            },
           },
           {
             id: "fin-sec5-u7-L3-Q2",
@@ -3229,6 +3684,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Nina's in a relatively low bracket now. Paying 22% tax on contributions now and getting tax-free withdrawals later (when she'd be in a higher bracket) favors the Roth.",
+            distractorExplanations: {
+              0: '"Traditional IRA, since she can deduct contributions now" is wrong because nina\'s in a relatively low bracket now.',
+              2: 'This choice is wrong because nina\'s in a relatively low bracket now.',
+              3: '"She should wait until age 50 to start contributing" is wrong because nina\'s in a relatively low bracket now.',
+            },
           },
           {
             id: "fin-sec5-u7-L3-Q5",
@@ -3242,6 +3702,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Excess contributions are penalized 6% per year until removed. Track your contributions carefully and withdraw any excess before the tax deadline.",
+            distractorExplanations: {
+              0: '"The extra contributions earn bonus interest" is wrong because excess contributions are penalized 6% per year until removed.',
+              2: '"The brokerage automatically returns the excess" is wrong because excess contributions are penalized 6% per year until removed.',
+              3: 'Ignoring financial problems allows them to grow and cost you more.',
+            },
           },
           {
             id: "fin-sec5-u7-L3-Q6",
@@ -3281,6 +3746,9 @@ export const finSection5Part1: Unit[] = [
             question: "An HSA offers tax-deductible contributions, tax-free growth, and tax-free withdrawals for medical expenses.",
             correctAnswer: true,
             explanation: "This triple tax advantage makes HSAs the most tax-efficient account available. No income tax at any stage when used for qualified medical expenses.",
+            distractorExplanations: {
+              1: 'This statement is actually true — this triple tax advantage makes HSAs the most tax-efficient account available. No income tax at any stage when used for qualified medical expenses.',
+            },
           },
           {
             id: "fin-sec5-u7-L4-Q2",
@@ -3294,6 +3762,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "No other account combines pre-tax contributions, tax-free growth, and tax-free withdrawals. After age 65, non-medical withdrawals are simply taxed as income (like a traditional IRA), making it versatile.",
+            distractorExplanations: {
+              0: '"It has the highest contribution limits of any account" is wrong because no other account combines pre-tax contributions, tax-free growth, and tax-free withdrawals.',
+              2: 'This choice is wrong because no other account combines pre-tax contributions, tax-free growth, and tax-free withdrawals.',
+              3: '"Employers are required to match HSA contributions" is wrong because no other account combines pre-tax contributions, tax-free growth, and tax-free withdrawals.',
+            },
           },
           {
             id: "fin-sec5-u7-L4-T2",
@@ -3323,6 +3796,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Josh can reimburse himself tax-free for any qualified medical expense he paid out of pocket, no matter how long ago. The remaining funds keep growing tax-free.",
+            distractorExplanations: {
+              0: 'Income tax is mandatory and benefits society, but it does not directly build your personal wealth.',
+              2: '"Close the account and roll it into a 401(k)" is wrong because josh can reimburse himself tax-free for any qualified medical expense he paid out of pocket, no matter how long ago.',
+              3: '"He can\'t withdraw because HSA funds expire after 10 years" is wrong because josh can reimburse himself tax-free for any qualified medical expense he paid out of pocket, no matter how long ago.',
+            },
           },
           {
             id: "fin-sec5-u7-L4-Q5",
@@ -3379,6 +3857,9 @@ export const finSection5Part1: Unit[] = [
             question: "Tax-advantaged account contribution limits are the same every year and never change.",
             correctAnswer: false,
             explanation: "Limits are adjusted for inflation and can change annually. Checking the current year's limits ensures you contribute the right amount.",
+            distractorExplanations: {
+              0: 'This statement is actually false — limits are adjusted for inflation and can change annually. Checking the current year\'s limits ensures you contribute the right amount.',
+            },
           },
           {
             id: "fin-sec5-u7-L5-Q2",
@@ -3413,6 +3894,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Catch-up contributions let people over 50 add extra money to retirement accounts, helping them save more as they approach retirement.",
+            distractorExplanations: {
+              0: '"Contributions the government makes to your account" is wrong because catch-up contributions let people over 50 add extra money to retirement accounts, helping them save more as they ap...',
+              2: '"Penalties for contributing too little in earlier years" is wrong because catch-up contributions let people over 50 add extra money to retirement accounts, helping them save more as they ap...',
+              3: '"Employer contributions that match your salary" is wrong because catch-up contributions let people over 50 add extra money to retirement accounts, helping them save more as they ap...',
+            },
           },
           {
             id: "fin-sec5-u7-L5-Q4",
@@ -3438,6 +3924,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "First capture the $2,100 match ($4,200 at 6%). Then use the remaining $5,800 for a Roth IRA (tax-free growth at her low bracket). Total invested: $12,100 including the match.",
+            distractorExplanations: {
+              0: '"Put all $10,000 in a Roth IRA" is wrong because first capture the $2,100 match ($4,200 at 6%).',
+              2: 'This choice is wrong because first capture the $2,100 match ($4,200 at 6%).',
+              3: '"Save it in a high-yield savings account instead" is wrong because first capture the $2,100 match ($4,200 at 6%).',
+            },
           },
           {
             id: "fin-sec5-u7-L5-Q6",
@@ -3445,6 +3936,9 @@ export const finSection5Part1: Unit[] = [
             question: "If you exceed your contribution limit, you may face penalties on the excess amount.",
             correctAnswer: true,
             explanation: "Over-contributions typically trigger a 6% annual penalty until the excess is removed. Track your contributions to avoid this.",
+            distractorExplanations: {
+              1: 'This statement is actually true — over-contributions typically trigger a 6% annual penalty until the excess is removed. Track your contributions to avoid this.',
+            },
           },
         ],
       },
@@ -3470,6 +3964,9 @@ export const finSection5Part1: Unit[] = [
             question: "You should only use one type of tax-advantaged account to keep things simple.",
             correctAnswer: false,
             explanation: "Using multiple account types (traditional, Roth, HSA) creates tax diversification. This gives you flexibility to manage your tax bill in retirement.",
+            distractorExplanations: {
+              0: 'This statement is actually false — using multiple account types (traditional, Roth, HSA) creates tax diversification. This gives you flexibility to manage your tax bill in retirement.',
+            },
           },
           {
             id: "fin-sec5-u7-L6-Q2",
@@ -3505,6 +4002,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Capture the match first (free money). Max HSA second (triple tax advantage). Use remaining for Roth (tax-free growth at a moderate bracket).",
+            distractorExplanations: {
+              0: '"Put all $15,000 in the Roth IRA" is wrong because capture the match first (free money).',
+              2: '"Max the 401(k) at $15,000 and skip everything else" is wrong because capture the match first (free money).',
+              3: '"Put $15,000 in a savings account until he decides" is wrong because capture the match first (free money).',
+            },
           },
           {
             id: "fin-sec5-u7-L6-Q4",
@@ -3545,6 +4047,11 @@ export const finSection5Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Tax-advantaged accounts reduce or eliminate taxes on growth, letting more of your money compound over time. This is the single biggest legal tax advantage available to most people.",
+            distractorExplanations: {
+              0: 'This choice is wrong because tax-advantaged accounts reduce or eliminate taxes on growth, letting more of your money compound over time.',
+              2: '"They completely eliminate all taxes on your income" is wrong because tax-advantaged accounts reduce or eliminate taxes on growth, letting more of your money compound over time.',
+              3: '"They\'re too complicated for most people to use effectively" is wrong because tax-advantaged accounts reduce or eliminate taxes on growth, letting more of your money compound over time.',
+            },
           },
         ],
       },

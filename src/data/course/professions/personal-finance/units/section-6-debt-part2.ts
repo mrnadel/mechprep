@@ -40,6 +40,7 @@ export const finSection6Part2: Unit[] = [
             question: "A lower monthly car payment always means a better deal.",
             correctAnswer: false,
             explanation: "A lower monthly payment can mean a longer loan term, which costs more in total interest.",
+            distractorExplanations: { 0: 'Lower monthly payments often come from longer loan terms, which cost more in total interest.' },
           },
           {
             id: "fin-sec6-u6-L1-Q2",
@@ -53,6 +54,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Stretching a loan from 4 years to 7 years lowers the monthly payment but adds years of interest charges.",
+            distractorExplanations: {
+              0: 'Reducing the car\'s price would be a genuine discount, not a dealer trick.',
+              2: 'Lowering the rate to 0% is rare and would be a real benefit, not a deceptive tactic.',
+              3: 'Dealers do not waive all fees and taxes; those are typically non-negotiable costs.',
+            },
           },
           {
             id: "fin-sec6-u6-L1-T2",
@@ -66,6 +72,7 @@ export const finSection6Part2: Unit[] = [
             question: "Dealers may shift numbers between trade-in value and purchase price to confuse buyers.",
             correctAnswer: true,
             explanation: "They might offer a great trade-in value but raise the purchase price. The net deal stays the same or gets worse.",
+            distractorExplanations: { 1: 'Dealers commonly use the four-square technique to shift numbers between categories and obscure the real deal.' },
           },
           {
             id: "fin-sec6-u6-L1-Q4",
@@ -88,6 +95,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The out-the-door price includes the car, taxes, fees, and everything else. That's the real number that matters.",
+            distractorExplanations: {
+              0: 'Employee discounts are not available to regular customers.',
+              2: 'MSRP is the starting point, not the final cost; it excludes taxes, fees, and dealer markups.',
+              3: 'Color options have nothing to do with the financial terms of the deal.',
+            },
           },
           {
             id: "fin-sec6-u6-L1-T3",
@@ -117,6 +129,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "$5,400 over fair market value means Reese is overpaying. The low monthly payment hides the inflated total cost.",
+            distractorExplanations: {
+              0: 'Affordability of the monthly payment does not justify paying $5,400 above the car\'s fair market value.',
+              2: 'A longer term would lower payments further but increase total cost even more.',
+              3: 'Buying now and hoping to refinance later does not fix the inflated purchase price.',
+            },
           },
         ],
       },
@@ -141,6 +158,7 @@ export const finSection6Part2: Unit[] = [
             question: "A shorter car loan results in less total interest paid.",
             correctAnswer: true,
             explanation: "Fewer years means less time for interest to accumulate, even though monthly payments are higher.",
+            distractorExplanations: { 1: 'Fewer years of payments means less time for interest to accumulate, even though monthly payments are higher.' },
           },
           {
             id: "fin-sec6-u6-L2-Q2",
@@ -154,6 +172,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$5,600 minus $3,150 = $2,450 saved by choosing the 4-year loan over the 7-year loan.",
+            distractorExplanations: {
+              0: '$1,000 is too low; the difference is $5,600 minus $3,150 which equals $2,450.',
+              1: '$1,750 understates the savings; the actual math shows $2,450.',
+              3: '$3,200 overstates the savings; the correct calculation is $2,450.',
+            },
           },
           {
             id: "fin-sec6-u6-L2-T2",
@@ -190,6 +213,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cars lose value fast. With long loans, the car's value can drop below what you owe, putting you 'underwater.'",
+            distractorExplanations: {
+              0: 'Banks do offer loans longer than 60 months; the issue is not availability but risk.',
+              2: 'Cars do not stop running after 5 years; they depreciate in value while the loan remains.',
+              3: 'Insurance companies cover cars regardless of loan length.',
+            },
           },
           {
             id: "fin-sec6-u6-L2-T3",
@@ -203,6 +231,7 @@ export const finSection6Part2: Unit[] = [
             question: "Being underwater on a car loan means you owe more than the car is currently worth.",
             correctAnswer: true,
             explanation: "When your loan balance exceeds the car's value, you're in a negative equity position.",
+            distractorExplanations: { 1: 'Owing more than the car\'s value is the precise definition of being underwater or in negative equity.' },
           },
           {
             id: "fin-sec6-u6-L2-Q7",
@@ -217,6 +246,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Option A: borrow $16,000 at 5% for 4 years. Option B: borrow $20,000 at 7% for 7 years. Option A saves thousands in interest.",
+            distractorExplanations: {
+              0: 'No money upfront means borrowing more at a higher rate for longer, costing thousands extra.',
+              1: 'The total costs are very different; Option A saves thousands due to lower principal, rate, and shorter term.',
+              3: 'A lower monthly payment with Option B hides the much higher total cost over 7 years.',
+            },
           },
         ],
       },
@@ -242,6 +276,7 @@ export const finSection6Part2: Unit[] = [
             question: "A new car typically loses about 20% of its value in the first year.",
             correctAnswer: true,
             explanation: "Depreciation is steepest in year one. Someone else already absorbed that loss if you buy a 1-year-old car.",
+            distractorExplanations: { 1: 'Depreciation data consistently shows new cars lose approximately 20% of their value in year one.' },
           },
           {
             id: "fin-sec6-u6-L3-Q2",
@@ -255,6 +290,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$30,000 x 50% = $15,000. The owner lost $15,000 in depreciation over 5 years.",
+            distractorExplanations: {
+              0: '$20,000 would represent only a 33% loss, not the stated 50%.',
+              1: '$18,000 represents a 40% loss, not the stated 50%.',
+              3: '$10,000 would represent a 67% loss, more than the stated 50%.',
+            },
           },
           {
             id: "fin-sec6-u6-L3-T2",
@@ -268,6 +308,7 @@ export const finSection6Part2: Unit[] = [
             question: "Buying a 2-year-old car lets someone else absorb the biggest depreciation loss.",
             correctAnswer: true,
             explanation: "The steepest value drop happens in years 1 and 2. A lightly used car is a much better deal per dollar.",
+            distractorExplanations: { 1: 'The steepest depreciation happens in years one and two, so a used-car buyer avoids that value drop.' },
           },
           {
             id: "fin-sec6-u6-L3-Q4",
@@ -290,6 +331,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Buying lightly used and keeping the car for many years minimizes both depreciation loss and total cost.",
+            distractorExplanations: {
+              0: 'Buying new every 3 years maximizes depreciation losses and is the most expensive strategy.',
+              2: 'Leasing means paying for depreciation with no ownership; it is the costliest long-term option.',
+              3: 'Trading in every year maximizes depreciation loss and transaction costs.',
+            },
           },
           {
             id: "fin-sec6-u6-L3-T3",
@@ -329,6 +375,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The CPO car saves $9,000, still has a warranty, and the biggest depreciation already happened. It's the smart financial choice.",
+            distractorExplanations: {
+              0: 'A car that has never been driven does not justify $9,000 more when the CPO has a warranty.',
+              2: 'Waiting for a deal on a new car still costs more than the CPO option available now.',
+              3: 'The cheapest car may not be reliable; the CPO balances cost savings with warranty protection.',
+            },
           },
         ],
       },
@@ -354,6 +405,7 @@ export const finSection6Part2: Unit[] = [
             question: "The total cost of owning a car is much higher than the purchase price alone.",
             correctAnswer: true,
             explanation: "Insurance, fuel, maintenance, and depreciation can add thousands per year beyond the car payment.",
+            distractorExplanations: { 1: 'Insurance, fuel, maintenance, and depreciation add thousands per year beyond the car payment.' },
           },
           {
             id: "fin-sec6-u6-L4-Q2",
@@ -367,6 +419,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Depreciation is the value your car loses over time. It's often the single largest cost of ownership.",
+            distractorExplanations: {
+              0: 'Car washes are a trivial expense compared to depreciation.',
+              2: 'Air fresheners cost a few dollars and are negligible.',
+              3: 'Parking meters are a minor occasional expense, not a major ownership cost.',
+            },
           },
           {
             id: "fin-sec6-u6-L4-T2",
@@ -395,6 +452,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Add insurance ($100-250), gas ($100-200), and maintenance ($50-100) to the car payment for the true monthly cost.",
+            distractorExplanations: {
+              0: 'The payment alone does not cover insurance, fuel, or maintenance.',
+              1: '$500 to $600 accounts for insurance but ignores fuel and maintenance costs.',
+              3: '$400 plus $50 for gas ignores insurance and maintenance, which are significant costs.',
+            },
           },
           {
             id: "fin-sec6-u6-L4-Q5",
@@ -438,6 +500,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Car A saves $1,200 per year on insurance and about $700 on fuel. In 3 years, those savings exceed Car A's higher purchase price.",
+            distractorExplanations: {
+              0: 'The lower purchase price is offset by $1,200 more per year in insurance and $700 more in fuel.',
+              2: 'The running costs differ significantly; Car A saves about $1,900 per year in insurance and fuel.',
+              3: 'The $4,000 upfront savings is erased within 3 years by Car B\'s higher insurance and fuel costs.',
+            },
           },
         ],
       },
@@ -589,6 +656,7 @@ export const finSection6Part2: Unit[] = [
             question: "With a mortgage, the home serves as collateral for the loan.",
             correctAnswer: true,
             explanation: "If you default on payments, the lender can foreclose and take the property to recover their money.",
+            distractorExplanations: { 1: 'The home is legally pledged as collateral, and the lender can foreclose if payments are not made.' },
           },
           {
             id: "fin-sec6-u7-L1-Q2",
@@ -602,6 +670,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "15-year and 30-year mortgages are the standard options. The 30-year is the most popular.",
+            distractorExplanations: {
+              0: '5 and 10 year terms exist but are not the most common mortgage lengths.',
+              1: '10 and 20 year terms are available but far less popular than 15 and 30 year options.',
+              3: '20 and 40 year terms are uncommon; 15 and 30 years are the industry standard.',
+            },
           },
           {
             id: "fin-sec6-u7-L1-T2",
@@ -638,6 +711,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Foreclosure is the process where the lender seizes the home to recover the unpaid loan.",
+            distractorExplanations: {
+              0: 'Mortgages are not optional; failing to pay has severe legal consequences.',
+              1: 'A small late fee is only the beginning; continued non-payment leads to foreclosure.',
+              3: 'Missing payments severely damages your credit score rather than improving it.',
+            },
           },
           {
             id: "fin-sec6-u7-L1-T3",
@@ -652,6 +730,7 @@ export const finSection6Part2: Unit[] = [
             question: "A larger down payment results in a smaller mortgage loan.",
             correctAnswer: true,
             explanation: "More money upfront means less to borrow. This also reduces total interest paid over the life of the loan.",
+            distractorExplanations: { 1: 'More money paid upfront directly reduces the loan amount and the total interest paid over time.' },
           },
           {
             id: "fin-sec6-u7-L1-Q7",
@@ -666,6 +745,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "20% of $250,000 is $50,000 down. Kim borrows $250,000 minus $50,000 = $200,000.",
+            distractorExplanations: {
+              0: '$250,000 ignores the 20% down payment that reduces the loan amount.',
+              1: '$225,000 assumes only a 10% down payment instead of the stated 20%.',
+              3: '$175,000 would require a 30% down payment, more than the stated 20%.',
+            },
           },
         ],
       },
@@ -690,6 +774,7 @@ export const finSection6Part2: Unit[] = [
             question: "A fixed-rate mortgage keeps the same interest rate for the life of the loan.",
             correctAnswer: true,
             explanation: "Fixed means fixed. Your rate and payment stay the same whether market rates go up or down.",
+            distractorExplanations: { 1: 'Fixed-rate mortgages lock in the rate at origination, providing payment stability for the entire term.' },
           },
           {
             id: "fin-sec6-u7-L2-Q2",
@@ -703,6 +788,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Knowing your payment won't change provides stability and makes long-term budgeting simple.",
+            distractorExplanations: {
+              0: 'Fixed-rate mortgages do not always have the lowest rate; ARMs often start lower.',
+              2: 'Banks offer multiple mortgage types including ARMs and government-backed loans.',
+              3: 'Fixed-rate mortgages still require a down payment.',
+            },
           },
           {
             id: "fin-sec6-u7-L2-T2",
@@ -739,6 +829,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If you'll sell before the rate adjusts, you benefit from the lower initial rate without the risk.",
+            distractorExplanations: {
+              0: 'Living in the home for 30 years means facing decades of potential rate increases with an ARM.',
+              2: 'Nobody wants the highest possible rate; ARMs offer lower initial rates.',
+              3: 'Bad credit does not make ARMs a better choice; it typically means higher rates regardless of type.',
+            },
           },
           {
             id: "fin-sec6-u7-L2-T3",
@@ -753,6 +848,7 @@ export const finSection6Part2: Unit[] = [
             question: "Government-backed mortgages can offer lower down payment requirements than conventional loans.",
             correctAnswer: true,
             explanation: "Government programs reduce barriers to homeownership by offering lower down payments and more flexible credit standards.",
+            distractorExplanations: { 1: 'Government programs like FHA and VA loans are specifically designed to reduce down payment barriers.' },
           },
           {
             id: "fin-sec6-u7-L2-Q7",
@@ -787,6 +883,7 @@ export const finSection6Part2: Unit[] = [
             question: "Your credit score affects the interest rate you receive on a mortgage.",
             correctAnswer: true,
             explanation: "Higher credit scores get lower rates. A 1% rate difference on a 30-year mortgage can cost tens of thousands.",
+            distractorExplanations: { 1: 'Higher credit scores qualify for lower rates, and a 1% difference on a mortgage can cost tens of thousands over time.' },
           },
           {
             id: "fin-sec6-u7-L3-Q2",
@@ -800,6 +897,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Scores of 750 and above are considered excellent and qualify for the lowest available rates.",
+            distractorExplanations: {
+              0: '500 to 600 is considered poor credit and may not even qualify for a mortgage.',
+              1: '600 to 700 is fair to good but does not get the best available rates.',
+              2: '700 to 750 is good but not the top tier; 750 and above gets the lowest rates.',
+            },
           },
           {
             id: "fin-sec6-u7-L3-T2",
@@ -827,6 +929,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "43% of $6,000 = $2,580 total debt. Minus $1,500 existing = $1,080 maximum for the mortgage payment.",
+            distractorExplanations: {
+              0: '$1,000 is too conservative; 43% of $6,000 minus $1,500 leaves about $1,080.',
+              2: '$2,500 would put total debt at $4,000, or 67% DTI, which far exceeds the 43% limit.',
+              3: '$4,000 in mortgage alone would be 67% of income, which no lender would approve.',
+            },
           },
           {
             id: "fin-sec6-u7-L3-Q5",
@@ -854,6 +961,7 @@ export const finSection6Part2: Unit[] = [
             question: "Private mortgage insurance (PMI) is required when your down payment is less than 20%.",
             correctAnswer: true,
             explanation: "PMI protects the lender against default. You can have it removed once you reach 20% equity.",
+            distractorExplanations: { 1: 'PMI is standard when equity is below 20% and protects the lender against borrower default.' },
           },
           {
             id: "fin-sec6-u7-L3-Q7",
@@ -868,6 +976,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "780 credit score is excellent. DTI with the mortgage would be about 35%. And 20% down avoids PMI. Jordan is a strong applicant.",
+            distractorExplanations: {
+              0: 'The price being $300,000 does not determine rate eligibility; income, credit, and DTI do.',
+              1: 'Mortgage rates are based on objective criteria like credit score and DTI, not the lender\'s mood.',
+              3: '$7,000 per month is sufficient to support a $300,000 mortgage within healthy DTI limits.',
+            },
           },
         ],
       },
@@ -892,6 +1005,7 @@ export const finSection6Part2: Unit[] = [
             question: "In the early years of a mortgage, most of your payment goes toward interest.",
             correctAnswer: true,
             explanation: "Amortization schedules are front-loaded with interest. Principal reduction accelerates over time.",
+            distractorExplanations: { 1: 'Amortization schedules are front-loaded with interest, and principal reduction accelerates over time.' },
           },
           {
             id: "fin-sec6-u7-L4-Q2",
@@ -905,6 +1019,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "About $1,000 goes to interest and only $199 reduces the principal. This ratio gradually shifts over the loan's life.",
+            distractorExplanations: {
+              0: '$599 assumes an even split, but early payments are heavily weighted toward interest.',
+              1: '$400 overstates the principal portion; monthly interest on $200,000 at 6% is about $1,000.',
+              3: '$1,000 is approximately the interest portion, not the principal reduction.',
+            },
           },
           {
             id: "fin-sec6-u7-L4-T2",
@@ -946,6 +1065,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Every extra dollar toward principal saves you interest on that dollar for all remaining years of the loan.",
+            distractorExplanations: {
+              0: 'Banks do not give discounts for early payments; the savings come from reduced interest.',
+              2: 'The interest rate does not change when you pay early; the principal reduction stops future interest on that amount.',
+              3: 'Banks do not extend your loan term as a reward; extra payments shorten the loan.',
+            },
           },
           {
             id: "fin-sec6-u7-L4-T3",
@@ -960,6 +1084,7 @@ export const finSection6Part2: Unit[] = [
             question: "On a 30-year mortgage, total interest paid can exceed the original loan amount.",
             correctAnswer: true,
             explanation: "At moderate to high rates over 30 years, interest can be larger than the principal itself.",
+            distractorExplanations: { 1: 'At moderate to high rates over 30 years, total interest can indeed exceed the principal borrowed.' },
           },
           {
             id: "fin-sec6-u7-L4-Q7",
@@ -985,6 +1110,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$231,000 minus $104,000 = $127,000 saved. The 15-year costs $489 more per month but saves a fortune in interest.",
+            distractorExplanations: {
+              0: '$50,000 significantly understates the savings; the difference is $231,000 minus $104,000.',
+              1: '$95,000 is closer but still below the actual $127,000 difference.',
+              3: 'The two options cost very different amounts in total interest; they are not the same.',
+            },
           },
         ],
       },
@@ -1053,6 +1183,7 @@ export const finSection6Part2: Unit[] = [
             question: "The snowball method pays off the smallest balance first.",
             correctAnswer: true,
             explanation: "Smallest balance first creates quick wins that build momentum and motivation to keep going.",
+            distractorExplanations: { 1: 'The snowball method specifically targets the smallest balance to create quick wins and build motivation.' },
           },
           {
             id: "fin-sec6-u8-L1-Q2",
@@ -1066,6 +1197,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The snowball method is about psychology. Quick wins create a sense of progress that keeps you going.",
+            distractorExplanations: {
+              0: 'Small debts do not necessarily have the highest rates; the snowball method ignores rates.',
+              2: 'Banks do not require any particular payoff order; this is a personal strategy choice.',
+              3: 'Small debts are not inherently more dangerous; the method is about psychological motivation.',
+            },
           },
           {
             id: "fin-sec6-u8-L1-T2",
@@ -1079,6 +1215,7 @@ export const finSection6Part2: Unit[] = [
             question: "In the snowball method, when one debt is paid off, its payment is added to the next debt's payment.",
             correctAnswer: true,
             explanation: "Rolling payments forward is what creates the snowball effect. Each paid debt accelerates the next payoff.",
+            distractorExplanations: { 1: 'Rolling payments forward is the core mechanism of the snowball method that accelerates each subsequent payoff.' },
           },
           {
             id: "fin-sec6-u8-L1-Q4",
@@ -1106,6 +1243,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Snowball targets the smallest balance first. The $500 card will be eliminated fastest, freeing up its payment.",
+            distractorExplanations: {
+              0: 'The $8,000 car note is the largest balance and would be targeted last in the snowball method.',
+              1: 'The $2,000 loan is the middle balance; snowball targets the smallest first.',
+              3: 'Splitting evenly defeats the purpose of the snowball method, which focuses all extra on one debt.',
+            },
           },
           {
             id: "fin-sec6-u8-L1-T3",
@@ -1134,6 +1276,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Two debts eliminated in 6 months is great progress. The motivation Jamie feels is exactly what makes snowball effective.",
+            distractorExplanations: {
+              0: 'Paying off 2 of 5 debts in 6 months is strong progress for the snowball method.',
+              2: 'The method is clearly working since Jamie feels motivated and is making progress.',
+              3: 'Jamie\'s success comes from a structured method, not luck.',
+            },
           },
         ],
       },
@@ -1158,6 +1305,7 @@ export const finSection6Part2: Unit[] = [
             question: "The avalanche method pays off the highest interest rate debt first.",
             correctAnswer: true,
             explanation: "Targeting the highest rate eliminates the most expensive debt first, saving the most money overall.",
+            distractorExplanations: { 1: 'The avalanche method prioritizes the highest interest rate to minimize total interest paid.' },
           },
           {
             id: "fin-sec6-u8-L2-Q2",
@@ -1171,6 +1319,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "By killing the highest-rate debt first, you stop the most expensive interest from compounding.",
+            distractorExplanations: {
+              0: 'There is no special bank program; the savings come from the mathematical order of payoff.',
+              2: 'Avalanche does not require higher payments; it simply directs extra payments to the highest rate.',
+              3: 'Avalanche does not pay all debts simultaneously; it focuses extra payments on one debt at a time.',
+            },
           },
           {
             id: "fin-sec6-u8-L2-T2",
@@ -1185,6 +1338,7 @@ export const finSection6Part2: Unit[] = [
             question: "The avalanche method can be harder to stick with because the first payoff may take longer.",
             correctAnswer: true,
             explanation: "If the highest-rate debt is large, it takes time. Without early wins, motivation can fade.",
+            distractorExplanations: { 1: 'If the highest-rate debt has a large balance, it takes time to eliminate, which can reduce motivation.' },
           },
           {
             id: "fin-sec6-u8-L2-Q4",
@@ -1207,6 +1361,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Avalanche targets the highest rate. The $8,000 at 24% costs the most in daily interest, so it gets priority.",
+            distractorExplanations: {
+              0: 'The $500 at 15% has a lower rate than the $8,000 at 24% and would not be the avalanche priority.',
+              1: 'The $2,000 at 10% has the lowest rate and would be targeted last by avalanche.',
+              3: 'Splitting evenly defeats the purpose of the avalanche method, which focuses on the highest rate.',
+            },
           },
           {
             id: "fin-sec6-u8-L2-T3",
@@ -1235,6 +1394,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "When rates are similar, the interest savings from avalanche are small. The snowball's quick wins match Morgan's personality better.",
+            distractorExplanations: {
+              0: 'Avalanche saves the most only when rate differences are large; with similar rates the savings are small.',
+              2: 'Paying minimums and saving the rest allows expensive debt to compound unnecessarily.',
+              3: 'Ignoring debts allows interest to compound and the situation to worsen.',
+            },
           },
         ],
       },
@@ -1259,6 +1423,7 @@ export const finSection6Part2: Unit[] = [
             question: "Both snowball and avalanche methods will eventually pay off all debts completely.",
             correctAnswer: true,
             explanation: "Both methods eliminate all debt. They just tackle them in different orders and cost different amounts in interest.",
+            distractorExplanations: { 1: 'Both methods systematically eliminate all debts; they only differ in the order of payoff and total interest cost.' },
           },
           {
             id: "fin-sec6-u8-L3-Q2",
@@ -1273,6 +1438,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The avalanche saves $800 because it stops the 22% interest on the $3,000 balance sooner.",
+            distractorExplanations: {
+              0: '$200 understates the difference; the scenario states avalanche saves $800.',
+              1: '$500 is less than the stated $800 savings from avalanche.',
+              3: 'They do not cost the same because the different payoff orders result in different total interest.',
+            },
           },
           {
             id: "fin-sec6-u8-L3-T2",
@@ -1292,6 +1462,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Big rate differences mean the avalanche's priority on high rates saves much more money.",
+            distractorExplanations: {
+              0: 'When all debts have the same rate, the payoff order does not matter and savings are zero.',
+              2: 'With only one debt there is no ordering decision, so neither method has an advantage.',
+              3: 'When the smallest debt has the highest rate, both methods agree on the same first target.',
+            },
           },
           {
             id: "fin-sec6-u8-L3-Q4",
@@ -1314,6 +1489,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "When the smallest balance has the highest rate, both methods say the same thing: pay it first.",
+            distractorExplanations: {
+              0: 'When the smallest balance has the highest rate, both methods produce the same result.',
+              1: 'Both methods work in this situation and both would pay this debt first.',
+              3: 'Ignoring any debt allows interest to compound and should never be the strategy.',
+            },
           },
           {
             id: "fin-sec6-u8-L3-T3",
@@ -1327,6 +1507,7 @@ export const finSection6Part2: Unit[] = [
             question: "You can combine the snowball and avalanche methods into a hybrid approach.",
             correctAnswer: true,
             explanation: "Many people start with a quick snowball win for motivation, then switch to avalanche for the savings.",
+            distractorExplanations: { 1: 'Many people successfully start with a snowball quick win and then switch to avalanche for the remaining debts.' },
           },
           {
             id: "fin-sec6-u8-L3-Q7",
@@ -1352,6 +1533,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The $300 is a fast win for $300. Then avalanche the high-rate debts. Pat gets motivation plus savings.",
+            distractorExplanations: {
+              0: 'Straight avalanche skips the easy $300 win that would boost Pat\'s motivation.',
+              2: 'Straight snowball ignores that the $1,500 at 24% is more expensive than the $4,000 at 19%.',
+              3: 'Paying minimums and saving extra cash allows high-interest debt to compound unnecessarily.',
+            },
           },
         ],
       },
@@ -1376,6 +1562,7 @@ export const finSection6Part2: Unit[] = [
             question: "Debt consolidation combines multiple debts into a single loan with one monthly payment.",
             correctAnswer: true,
             explanation: "Consolidation simplifies your finances and can lower your total interest if the new rate is lower.",
+            distractorExplanations: { 1: 'Consolidation merges multiple debts into one new loan, simplifying payments and potentially lowering the rate.' },
           },
           {
             id: "fin-sec6-u8-L4-Q2",
@@ -1389,6 +1576,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Consolidation only saves money if the new rate is lower than what you were paying before.",
+            distractorExplanations: {
+              0: 'Consolidating at a higher rate than your current debts would actually cost you more.',
+              2: 'There is no minimum debt amount required for consolidation to make sense.',
+              3: 'A bank suggesting consolidation does not automatically mean it saves you money.',
+            },
           },
           {
             id: "fin-sec6-u8-L4-T2",
@@ -1403,6 +1595,7 @@ export const finSection6Part2: Unit[] = [
             question: "Balance transfer cards offer 0% interest permanently.",
             correctAnswer: false,
             explanation: "The 0% rate is promotional and expires after 12 to 18 months. After that, normal rates apply.",
+            distractorExplanations: { 0: 'The 0% rate is always promotional and expires after 12 to 18 months, after which normal rates apply.' },
           },
           {
             id: "fin-sec6-u8-L4-Q4",
@@ -1425,6 +1618,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "After consolidation clears your cards, the temptation to use them again is the #1 reason people end up with even more debt.",
+            distractorExplanations: {
+              0: 'Consolidation may cause a temporary dip but does not permanently damage your credit score.',
+              2: 'A personal consolidation loan is reported as a personal loan, not a mortgage.',
+              3: 'You can still get loans after consolidation; it does not permanently disqualify you.',
+            },
           },
           {
             id: "fin-sec6-u8-L4-T3",
@@ -1453,6 +1651,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cutting the rate from 22% to 10% saves thousands. But Chen must not run up the credit cards again.",
+            distractorExplanations: {
+              0: 'There is no threshold where consolidation becomes unavailable; $12,000 is a reasonable amount.',
+              2: 'Personal loans at 10% are significantly cheaper than credit cards at 22%.',
+              3: 'Maxing out the credit cards again would double the debt and defeat the purpose of consolidating.',
+            },
           },
         ],
       },
@@ -1604,6 +1807,7 @@ export const finSection6Part2: Unit[] = [
             question: "DTI ratio is calculated by dividing monthly debt payments by gross monthly income.",
             correctAnswer: true,
             explanation: "Gross income means before taxes. Include all recurring debt payments: mortgage, car, student loans, credit cards.",
+            distractorExplanations: { 1: 'The DTI formula is monthly debt payments divided by gross monthly income, expressed as a percentage.' },
           },
           {
             id: "fin-sec6-u9-L1-Q2",
@@ -1617,6 +1821,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$1,500 divided by $5,000 = 0.30, or 30%. Nearly a third of your income goes to debt.",
+            distractorExplanations: {
+              0: '15% would mean only $750 in debt payments on $5,000 income.',
+              1: '25% would mean $1,250 in debt payments, not $1,500.',
+              3: '35% would mean $1,750 in debt payments, more than the stated $1,500.',
+            },
           },
           {
             id: "fin-sec6-u9-L1-T2",
@@ -1630,6 +1839,7 @@ export const finSection6Part2: Unit[] = [
             question: "A DTI ratio over 43% makes it very difficult to get approved for new loans.",
             correctAnswer: true,
             explanation: "Most lenders see 43% as the maximum acceptable DTI. Above that, you're considered too risky.",
+            distractorExplanations: { 1: 'Most lenders use 43% as the maximum acceptable DTI threshold for loan approval.' },
           },
           {
             id: "fin-sec6-u9-L1-Q4",
@@ -1687,6 +1897,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without the car: ($1,200 + $200) / $6,000 = $1,400 / $6,000 = 23.3%. Paying off the car dropped DTI by 7 points.",
+            distractorExplanations: {
+              0: '30% was the DTI before paying off the car loan; removing $400 changes the calculation.',
+              1: '27% does not match the math: ($1,200 + $200) / $6,000 = 23.3%.',
+              3: '20% would require even lower debt payments than $1,400 on $6,000 income.',
+            },
           },
         ],
       },
@@ -1711,6 +1926,7 @@ export const finSection6Part2: Unit[] = [
             question: "Lenders check your DTI to see if you can handle additional debt payments.",
             correctAnswer: true,
             explanation: "DTI tells lenders how much of your income is already spoken for by existing debts.",
+            distractorExplanations: { 1: 'DTI directly measures how much income is already committed to debt, indicating capacity for more.' },
           },
           {
             id: "fin-sec6-u9-L2-Q2",
@@ -1724,6 +1940,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A 25% DTI shows plenty of room for a mortgage payment. Even a lower credit score is offset by strong DTI.",
+            distractorExplanations: {
+              0: 'A 50% DTI is far above the 43% threshold, making approval very unlikely despite a good credit score.',
+              2: 'A 60% DTI is dangerously high and would be rejected regardless of an excellent credit score.',
+              3: 'A 45% DTI exceeds the standard maximum of 43%, making approval difficult.',
+            },
           },
           {
             id: "fin-sec6-u9-L2-T2",
@@ -1752,6 +1973,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "$8,000 x 28% = $2,240. This includes mortgage, taxes, and insurance combined.",
+            distractorExplanations: {
+              0: '$1,600 is only 20% of $8,000, below the 28% guideline.',
+              1: '$2,000 is 25% of $8,000, below the 28% guideline.',
+              3: '$2,800 is 35% of $8,000, which exceeds the 28% front-end guideline.',
+            },
           },
           {
             id: "fin-sec6-u9-L2-Q5",
@@ -1778,6 +2004,7 @@ export const finSection6Part2: Unit[] = [
             question: "A lower DTI can help you get a lower interest rate on a loan.",
             correctAnswer: true,
             explanation: "Less risky borrowers get rewarded with better rates. Every percentage point saved adds up over time.",
+            distractorExplanations: { 1: 'Lenders reward lower-risk borrowers with better rates, and lower DTI signals less financial strain.' },
           },
           {
             id: "fin-sec6-u9-L2-Q7",
@@ -1792,6 +2019,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Waiting 4 months drops DTI by 5 points. At 40%, Alex is much more likely to be approved and get a better rate.",
+            distractorExplanations: {
+              0: 'Applying at 45% DTI is very likely to result in rejection or unfavorable terms.',
+              2: 'Taking on more debt increases DTI and makes approval less likely, not more.',
+              3: 'Quitting a job eliminates income, making mortgage approval impossible.',
+            },
           },
         ],
       },
@@ -1817,6 +2049,7 @@ export const finSection6Part2: Unit[] = [
             question: "Bankruptcy can legally eliminate debts you can't pay.",
             correctAnswer: true,
             explanation: "Bankruptcy laws exist to give people a fresh start when debt becomes truly unmanageable.",
+            distractorExplanations: { 1: 'Bankruptcy laws provide a legal mechanism to discharge or restructure debts that are truly unmanageable.' },
           },
           {
             id: "fin-sec6-u9-L3-Q2",
@@ -1830,6 +2063,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Bankruptcy remains visible on your credit report for 7 to 10 years, making it harder to borrow.",
+            distractorExplanations: {
+              0: '1 to 2 years is far too short; bankruptcy has long-lasting credit consequences.',
+              1: '3 to 5 years understates the duration; it remains on record longer.',
+              3: 'Bankruptcy does not stay on your credit report forever; it is removed after 7 to 10 years.',
+            },
           },
           {
             id: "fin-sec6-u9-L3-T2",
@@ -1859,6 +2097,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Student loans and recent tax debts are very difficult to discharge in bankruptcy. Most other unsecured debts can be eliminated.",
+            distractorExplanations: {
+              0: 'Credit card debt can generally be discharged through bankruptcy.',
+              1: 'Medical bills are typically dischargeable in bankruptcy.',
+              3: 'Personal loans can generally be eliminated through bankruptcy.',
+            },
           },
           {
             id: "fin-sec6-u9-L3-Q5",
@@ -1901,6 +2144,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "With debt 3 times annual income, no assets, and exhausted alternatives, bankruptcy may be the right path forward.",
+            distractorExplanations: {
+              0: 'Lee has already tried negotiating and credit counseling; continuing the same approach is not productive.',
+              2: 'Bankruptcy exists as a legal option precisely for situations like this where debt is unmanageable.',
+              3: 'Student loan forgiveness is a separate program unrelated to medical debt bankruptcy.',
+            },
           },
         ],
       },
@@ -1968,6 +2216,7 @@ export const finSection6Part2: Unit[] = [
             question: "A mortgage is generally considered good debt because homes typically appreciate in value.",
             correctAnswer: true,
             explanation: "Homes tend to grow in value over time, and each payment builds your equity stake.",
+            distractorExplanations: { 1: 'Homes tend to appreciate over time, and mortgage payments build equity, making it a wealth-building form of debt.' },
           },
           {
             id: "fin-sec6-u10-L1-Q2",
@@ -1981,6 +2230,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Snowball prioritizes balance size for motivation. Avalanche prioritizes interest rate for savings.",
+            distractorExplanations: {
+              0: 'Snowball typically costs more in interest because it ignores rates.',
+              1: 'Avalanche targets the highest rate, not the smallest balance.',
+              3: 'They are different methods with different ordering criteria and different total costs.',
+            },
           },
           {
             id: "fin-sec6-u10-L1-Q3",
@@ -2026,6 +2280,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Cash advances have the highest rates, no grace period, and additional fees. They're the most expensive borrowing option.",
+            distractorExplanations: {
+              0: 'A mortgage at 6% is one of the least expensive borrowing options.',
+              2: 'A student loan at 5% is a relatively low-cost borrowing option.',
+              3: 'A car loan at 4% is a relatively affordable borrowing option.',
+            },
           },
           {
             id: "fin-sec6-u10-L1-Q7",
@@ -2070,6 +2329,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The 24% credit card is the most expensive debt by far. Eliminate it first, then redirect to the next priority.",
+            distractorExplanations: {
+              0: 'The mortgage at 4% is the cheapest debt and should be a low priority for extra payments.',
+              2: 'Extra payments on student loans at 5% would not save as much as eliminating the 24% card.',
+              3: 'Splitting equally ignores the massive rate difference, costing more in total interest.',
+            },
           },
           {
             id: "fin-sec6-u10-L2-Q2",
@@ -2083,6 +2347,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "At 35% DTI before a mortgage, adding housing costs would push DTI well over 43%. Jordan needs to pay down existing debt first.",
+            distractorExplanations: {
+              0: 'At 35% DTI before adding a mortgage, Jordan cannot handle the additional housing payment.',
+              2: 'A longer mortgage does not change DTI; it is calculated from monthly payments, which are still added.',
+              3: 'Reducing income would worsen the ability to pay and is counterproductive.',
+            },
           },
           {
             id: "fin-sec6-u10-L2-Q3",
@@ -2112,6 +2381,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Used: $18,000 + about $1,900 interest = $19,900 total. New: $26,000 + about $2,400 interest = $28,400. The used car saves $8,500.",
+            distractorExplanations: {
+              0: 'The lower rate on the new car does not offset the $8,000 higher purchase price.',
+              2: 'A 1-year-old car is nearly as reliable as new and does not justify $8,000 more.',
+              3: 'Walking is impractical as a car replacement and does not address the financial comparison.',
+            },
           },
           {
             id: "fin-sec6-u10-L2-Q5",
@@ -2134,6 +2408,11 @@ export const finSection6Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Spending less than you earn is the foundation of financial health. Everything else builds on that.",
+            distractorExplanations: {
+              0: 'Credit cards are useful tools when used responsibly; avoiding them entirely is not necessary.',
+              2: 'A high credit score helps with borrowing terms but does not prevent overspending.',
+              3: 'Owning a home is a financial goal, not a habit that prevents debt trouble.',
+            },
           },
           {
             id: "fin-sec6-u10-L2-Q7",
@@ -2141,6 +2420,7 @@ export const finSection6Part2: Unit[] = [
             question: "Strategic use of low-interest debt can help build long-term wealth.",
             correctAnswer: true,
             explanation: "Mortgages, education loans, and business loans can create value that exceeds their cost when used wisely.",
+            distractorExplanations: { 1: 'Mortgages, education loans, and business loans can create value exceeding their cost when used wisely.' },
           },
         ],
       },

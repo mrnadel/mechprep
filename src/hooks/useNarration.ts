@@ -53,7 +53,26 @@ export function useNarration() {
   const enabled = useNarrationStore((s) => s.enabled);
   const voiceName = useNarrationStore((s) => s.voiceName);
   const rate = useNarrationStore((s) => s.rate);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const resolvedVoiceRef = useRef<SpeechSynthesisVoice | null>(null);
+  const voiceKeyRef = useRef<string | null>(null);
+
+  // Resolve voice once and cache it. Re-resolve only if voiceName preference changes.
+  useEffect(() => {
+    const resolve = () => {
+      const voice = pickBestVoice(voiceName);
+      if (voice) {
+        resolvedVoiceRef.current = voice;
+        voiceKeyRef.current = voiceName;
+      }
+    };
+
+    resolve();
+    // Voices may load asynchronously — listen for them once
+    if (!resolvedVoiceRef.current) {
+      speechSynthesis.addEventListener('voiceschanged', resolve, { once: true });
+      return () => speechSynthesis.removeEventListener('voiceschanged', resolve);
+    }
+  }, [voiceName]);
 
   // Cancel on unmount or when disabled
   useEffect(() => {
@@ -66,21 +85,18 @@ export function useNarration() {
   const speak = useCallback(
     (text: string) => {
       if (!enabled || !text) return;
-      // Cancel any in-progress speech
       speechSynthesis.cancel();
 
       const cleaned = cleanTextForSpeech(text);
       if (!cleaned) return;
 
       const utterance = new SpeechSynthesisUtterance(cleaned);
-      const voice = pickBestVoice(voiceName);
-      if (voice) utterance.voice = voice;
+      if (resolvedVoiceRef.current) utterance.voice = resolvedVoiceRef.current;
       utterance.rate = rate;
       utterance.pitch = 1;
-      utteranceRef.current = utterance;
       speechSynthesis.speak(utterance);
     },
-    [enabled, voiceName, rate],
+    [enabled, rate],
   );
 
   const stop = useCallback(() => {

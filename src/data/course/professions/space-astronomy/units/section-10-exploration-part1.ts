@@ -40,6 +40,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Sputnik 1 was the first artificial satellite to orbit Earth.",
             correctAnswer: true,
             explanation: "The Soviet Union launched Sputnik 1 on October 4, 1957. It orbited Earth for about 3 months.",
+            distractorExplanations: {
+              1: 'Sputnik 1 was indeed the first artificial satellite, launched by the Soviet Union on October 4, 1957.',
+            },
           },
           {
             id: "sp-sec10-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Soviet Union launched Sputnik 1 in 1957, beating the United States into space.",
+            distractorExplanations: {
+              0: 'The United States launched Explorer 1 in 1958, several months after the Soviet Union\'s Sputnik 1.',
+              2: 'The United Kingdom did not have an independent orbital launch capability during the early Space Race.',
+              3: 'While Germany developed V-2 rockets in WWII, it was the Soviet Union that launched the first satellite.',
+            },
           },
           {
             id: "sp-sec10-u1-L1-T2",
@@ -80,6 +88,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Sputnik 1 launched on October 4, 1957, marking the start of the Space Age.",
+            distractorExplanations: {
+              0: '1955 is too early; the technology to reach orbit was not ready until late 1957.',
+              1: '1961 was the year of the first human spaceflight, not Sputnik\'s launch.',
+              3: '1963 is six years too late; Sputnik launched in October 1957.',
+            },
           },
           {
             id: "sp-sec10-u1-L1-T3",
@@ -94,6 +107,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Sputnik 1 carried scientific instruments to study cosmic rays.",
             correctAnswer: false,
             explanation: "Sputnik 1 was very simple. It only carried a radio transmitter that sent beeping signals back to Earth.",
+            distractorExplanations: {
+              0: 'Sputnik 1 carried only a radio transmitter; it had no scientific instruments beyond its beacon signal.',
+            },
           },
           {
             id: "sp-sec10-u1-L1-Q6",
@@ -126,6 +142,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Explorer 1 was launched before Sputnik 1.",
             correctAnswer: false,
             explanation: "Sputnik 1 launched in October 1957. Explorer 1 followed about 4 months later in January 1958.",
+            distractorExplanations: {
+              0: 'Explorer 1 launched on January 31, 1958, nearly four months after Sputnik 1 in October 1957.',
+            },
           },
           {
             id: "sp-sec10-u1-L2-Q2",
@@ -139,6 +158,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Explorer 1's Geiger counter detected bands of charged particles trapped by Earth's magnetic field, now called the Van Allen belts.",
+            distractorExplanations: {
+              0: 'Water on the Moon was not confirmed until decades later by orbital missions and the LCROSS impact.',
+              2: 'Near-Earth asteroid detection came much later with dedicated survey programs, not Explorer 1.',
+              3: 'Radio signals from Jupiter were detected by ground-based radio telescopes, not by Explorer 1.',
+            },
           },
           {
             id: "sp-sec10-u1-L2-T2",
@@ -176,6 +200,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "James Van Allen designed the cosmic ray detector on Explorer 1 that discovered the radiation belts named after him.",
+            distractorExplanations: {
+              0: 'Wernher von Braun designed the Juno rocket that launched Explorer 1, but James Van Allen built the instruments.',
+              1: 'Robert Goddard pioneered liquid-fuel rocketry but died in 1945, before Explorer 1.',
+              3: 'Sergei Korolev was the Soviet chief rocket designer who led the Sputnik program, not Explorer 1.',
+            },
           },
           {
             id: "sp-sec10-u1-L2-Q6",
@@ -183,6 +212,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "The Van Allen belts are zones where Earth's magnetic field traps charged particles from the Sun.",
             correctAnswer: true,
             explanation: "Earth's magnetic field captures high-energy particles from the solar wind. They become trapped in two donut-shaped regions called the Van Allen belts.",
+            distractorExplanations: {
+              1: 'This is true because Earth\'s magnetic field captures energetic charged particles from the solar wind, forming the Van Allen belts.',
+            },
           },
         ],
       },
@@ -206,6 +238,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Yuri Gagarin was the first human to travel to space.",
             correctAnswer: true,
             explanation: "Gagarin's Vostok 1 flight on April 12, 1961 made him the first person to reach space and orbit Earth.",
+            distractorExplanations: {
+              1: 'Yuri Gagarin orbited Earth on April 12, 1961 aboard Vostok 1, making him the first human in space.',
+            },
           },
           {
             id: "sp-sec10-u1-L3-Q2",
@@ -219,6 +254,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Gagarin completed one full orbit of Earth in 108 minutes. The entire flight was fully automated.",
+            distractorExplanations: {
+              0: '15 minutes was approximately the duration of Alan Shepard\'s suborbital flight, not Gagarin\'s orbital mission.',
+              2: '5 hours is too long; Gagarin completed one orbit in 108 minutes and returned immediately.',
+              3: '24 hours would be a full day in orbit; Gagarin\'s mission lasted only one orbit at 108 minutes.',
+            },
           },
           {
             id: "sp-sec10-u1-L3-T2",
@@ -239,6 +279,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Nobody knew if a person could think and act clearly in weightlessness. So the first flight was fully automated as a safety measure.",
+            distractorExplanations: {
+              0: 'The spacecraft was relatively simple; the concern was about human cognitive function in weightlessness.',
+              1: 'Gagarin was a trained military pilot; the issue was uncertainty about human performance in space.',
+              3: 'Manual controls existed as backup; ground control was used because of concerns about spaceflight\'s effects on the human body.',
+            },
           },
           {
             id: "sp-sec10-u1-L3-Q4",
@@ -260,6 +305,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Gagarin landed inside the Vostok 1 capsule when he returned to Earth.",
             correctAnswer: false,
             explanation: "Gagarin actually ejected from the capsule at high altitude and parachuted to the ground separately.",
+            distractorExplanations: {
+              0: 'Gagarin ejected from the capsule at about 7 km altitude and parachuted down separately.',
+            },
           },
           {
             id: "sp-sec10-u1-L3-Q6",
@@ -527,6 +575,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "President Kennedy set the goal of reaching the Moon by the end of the 1960s.",
             correctAnswer: true,
             explanation: "JFK challenged the nation in 1961 to land a man on the Moon and return him safely 'before this decade is out.'",
+            distractorExplanations: {
+              1: 'President Kennedy delivered his famous Moon speech in 1961, setting the deadline for the end of the decade.',
+            },
           },
           {
             id: "sp-sec10-u2-L1-Q2",
@@ -540,6 +591,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The Soviets led in every space milestone so far. JFK picked a goal so ambitious that the US could overtake them by achieving it first.",
+            distractorExplanations: {
+              0: 'No one had proven reaching the Moon was easy; it was chosen precisely because it was difficult.',
+              2: 'Lunar mining was not a motivation in the 1960s; the goal was Cold War technological supremacy.',
+              3: 'NASA was actually given the Moon goal by the president; it was not a simple mission request.',
+            },
           },
           {
             id: "sp-sec10-u2-L1-T2",
@@ -567,6 +623,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Over 400,000 engineers, scientists, and workers across thousands of companies contributed to Apollo.",
+            distractorExplanations: {
+              0: '5,000 is far too few; the Apollo program was one of the largest engineering efforts in history.',
+              1: '50,000 underestimates the massive workforce; about 400,000 people contributed across government and industry.',
+              3: '2 million overstates the number; approximately 400,000 people worked on Apollo at its peak.',
+            },
           },
           {
             id: "sp-sec10-u2-L1-T3",
@@ -614,6 +675,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Neil Armstrong was the first person to walk on the Moon.",
             correctAnswer: true,
             explanation: "Armstrong stepped onto the lunar surface on July 20, 1969, followed by Buzz Aldrin about 20 minutes later.",
+            distractorExplanations: {
+              1: 'Neil Armstrong was indeed the first person on the Moon, stepping out of the Lunar Module Eagle on July 20, 1969.',
+            },
           },
           {
             id: "sp-sec10-u2-L2-Q2",
@@ -627,6 +691,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Michael Collins piloted the command module Columbia in lunar orbit while Armstrong and Aldrin walked on the surface below.",
+            distractorExplanations: {
+              0: 'Buzz Aldrin walked on the Moon\'s surface with Armstrong; Michael Collins remained in lunar orbit.',
+              2: 'John Glenn was the first American to orbit Earth in 1962 and was not part of Apollo 11.',
+              3: 'Pete Conrad commanded Apollo 12, the second Moon landing, not Apollo 11.',
+            },
           },
           {
             id: "sp-sec10-u2-L2-T2",
@@ -646,6 +715,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The computer was guiding the lander toward a field of large boulders. Armstrong flew past it manually to find a safe spot.",
+            distractorExplanations: {
+              1: 'Armstrong took manual control out of necessity, not personal glory, because the landing site was dangerous.',
+              2: 'Mission control did not order the switch; Armstrong made the decision based on what he saw through the window.',
+              3: 'The landing gear functioned normally; the issue was the computer guiding the lander toward a boulder field.',
+            },
           },
           {
             id: "sp-sec10-u2-L2-Q4",
@@ -676,6 +750,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Apollo 11 astronauts brought back about 21 kg of Moon rocks.",
             correctAnswer: true,
             explanation: "The lunar samples from Apollo 11 were studied for decades and helped scientists understand the Moon's geology and origin.",
+            distractorExplanations: {
+              1: 'Apollo 11 brought back approximately 21 kilograms of lunar samples, which were extensively studied on Earth.',
+            },
           },
           {
             id: "sp-sec10-u2-L2-Q7",
@@ -689,6 +766,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "An estimated 600 million people worldwide watched the Moon landing live, making it one of the most-watched events in history.",
+            distractorExplanations: {
+              0: '1 million vastly underestimates the global audience; the Moon landing was the most-watched broadcast in history at that time.',
+              1: '50 million is too low; an estimated 600 million people worldwide watched the live broadcast.',
+              3: '3 billion exceeds the world population at the time (about 3.6 billion), with only 600 million having TV access for the event.',
+            },
           },
         ],
       },
@@ -712,6 +794,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Apollo 13 successfully landed on the Moon despite its explosion.",
             correctAnswer: false,
             explanation: "Apollo 13 never landed on the Moon. The explosion forced the crew to abort the landing and focus on getting home alive.",
+            distractorExplanations: {
+              0: 'Apollo 13 never landed on the Moon; the crew used the lunar module as a lifeboat to return safely to Earth.',
+            },
           },
           {
             id: "sp-sec10-u2-L3-Q2",
@@ -725,6 +810,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An oxygen tank in the service module exploded, damaging the spacecraft and cutting off power and life support in the command module.",
+            distractorExplanations: {
+              0: 'No meteor struck Apollo 13; an internal oxygen tank explosion caused the emergency.',
+              2: 'The heat shield was intact; the crisis was caused by an oxygen tank rupture in the service module.',
+              3: 'There was no fuel leak; an electrical short ignited insulation in an oxygen tank, causing it to explode.',
+            },
           },
           {
             id: "sp-sec10-u2-L3-T2",
@@ -767,6 +857,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Twelve astronauts walked on the Moon across 6 successful Apollo landing missions (Apollo 11, 12, 14, 15, 16, and 17).",
+            distractorExplanations: {
+              0: 'Only 2 astronauts walked on the Moon during Apollo 11, but 6 successful missions landed 12 astronauts total.',
+              1: '6 is the number of successful landings, but each landing had 2 moonwalkers, totaling 12.',
+              3: '24 overstates the number; only 12 astronauts walked on the Moon across 6 Apollo missions.',
+            },
           },
           {
             id: "sp-sec10-u2-L3-Q6",
@@ -774,6 +869,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Apollo 17 was the last crewed Moon mission.",
             correctAnswer: true,
             explanation: "Apollo 17 in December 1972 was the last time humans visited the Moon. No one has returned since.",
+            distractorExplanations: {
+              1: 'Apollo 17 in December 1972 was indeed the last crewed Moon mission, with no humans returning since.',
+            },
           },
           {
             id: "sp-sec10-u2-L3-Q7",
@@ -1042,6 +1140,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "The Space Shuttle was designed to be reusable.",
             correctAnswer: true,
             explanation: "Reusability was the shuttle's key selling point. The orbiter and solid rocket boosters could be used again after each mission.",
+            distractorExplanations: {
+              1: 'The Space Shuttle was designed with reusable components including the orbiter and solid rocket boosters.',
+            },
           },
           {
             id: "sp-sec10-u3-L1-Q2",
@@ -1055,6 +1156,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The shuttle glided back to Earth without engines and landed on a runway, making it the first spacecraft to land like a plane.",
+            distractorExplanations: {
+              0: 'Ocean splashdowns were used by earlier capsules like Mercury, Gemini, and Apollo, but not the shuttle.',
+              1: 'The shuttle was a glider with wings that landed unpowered on a runway, not by parachute.',
+              3: 'The shuttle had no ability to hover; it was an unpowered glider during its approach and landing.',
+            },
           },
           {
             id: "sp-sec10-u3-L1-T2",
@@ -1084,6 +1190,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The external tank burned up in the atmosphere after separation. The boosters were recovered from the ocean and the orbiter landed on a runway.",
+            distractorExplanations: {
+              0: 'The solid rocket boosters were recovered from the ocean and refurbished for reuse.',
+              1: 'The orbiter flew multiple missions and was the shuttle\'s main reusable component.',
+              3: 'The main engines (RS-25s) were part of the orbiter and were reused with each flight.',
+            },
           },
           {
             id: "sp-sec10-u3-L1-T3",
@@ -1105,6 +1216,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "The Space Shuttle program flew over 100 missions.",
             correctAnswer: true,
             explanation: "The shuttle flew 135 missions from 1981 to 2011, spanning 30 years of operations.",
+            distractorExplanations: {
+              1: 'The Space Shuttle program completed 135 missions between 1981 and 2011.',
+            },
           },
         ],
       },
@@ -1128,6 +1242,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "The shuttle could carry large satellites in its payload bay.",
             correctAnswer: true,
             explanation: "The shuttle's 18-meter cargo bay could deploy, retrieve, and even repair satellites in orbit.",
+            distractorExplanations: {
+              1: 'The shuttle\'s payload bay was 18 meters long and could carry satellites, station modules, and other large hardware.',
+            },
           },
           {
             id: "sp-sec10-u3-L2-Q2",
@@ -1141,6 +1258,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The shuttle deployed the Hubble Space Telescope in 1990. Shuttle crews also visited Hubble 5 times for repairs and upgrades.",
+            distractorExplanations: {
+              0: 'JWST was launched in 2021 on an Ariane 5 rocket, not by the Space Shuttle.',
+              2: 'Chandra was launched by the shuttle in 1999, but Hubble in 1990 is the most famous shuttle-deployed telescope.',
+              3: 'Spitzer was launched on a Delta II rocket in 2003, not by the Space Shuttle.',
+            },
           },
           {
             id: "sp-sec10-u3-L2-T2",
@@ -1183,6 +1305,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Sally Ride flew on Challenger in June 1983. Mae Jemison was the first African American woman in space, flying in 1992.",
+            distractorExplanations: {
+              0: 'Mae Jemison was the first African American woman in space in 1992, not the first American woman.',
+              1: 'Christa McAuliffe was a teacher selected for the shuttle but died in the Challenger disaster before reaching space.',
+              3: 'Peggy Whitson held the record for most time in space by an American woman, but Sally Ride flew first in 1983.',
+            },
           },
           {
             id: "sp-sec10-u3-L2-Q6",
@@ -1196,6 +1323,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The shuttle typically carried 5 to 7 crew members, far more than any previous spacecraft.",
+            distractorExplanations: {
+              0: 'Two crew members is far too few; the shuttle required at minimum a commander and pilot plus mission specialists.',
+              1: 'Three crew members is below the typical shuttle complement of 5-7 astronauts.',
+              3: 'Up to 12 exceeds the shuttle\'s capacity; it was designed for a maximum of 7 crew members.',
+            },
           },
         ],
       },
@@ -1219,6 +1351,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "The Challenger disaster was caused by a failed O-ring seal.",
             correctAnswer: true,
             explanation: "Cold temperatures made a rubber O-ring in the solid rocket booster stiff and brittle. Hot gas leaked through and destroyed the vehicle.",
+            distractorExplanations: {
+              1: 'The Challenger disaster was caused by an O-ring failure in the right solid rocket booster due to cold launch conditions.',
+            },
           },
           {
             id: "sp-sec10-u3-L3-Q2",
@@ -1232,6 +1367,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Challenger was lost on January 28, 1986, during the launch of STS-51-L.",
+            distractorExplanations: {
+              0: '1981 was the year of the shuttle\'s first flight; the Challenger disaster occurred in 1986.',
+              2: '1996 is a decade too late; the Challenger disaster happened on January 28, 1986.',
+              3: '2003 was the year of the Columbia disaster, not the Challenger disaster.',
+            },
           },
           {
             id: "sp-sec10-u3-L3-T2",
@@ -1251,6 +1391,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A piece of insulating foam fell from the external tank and hit Columbia's left wing. This allowed hot gases to enter during reentry.",
+            distractorExplanations: {
+              0: 'The engines functioned normally during Columbia\'s launch; the fatal damage was from foam striking the wing.',
+              1: 'Columbia\'s computers worked correctly; the problem was physical damage to the thermal protection system.',
+              3: 'The shuttle did not use parachutes for landing; Columbia broke apart during reentry due to heat entering through the damaged wing.',
+            },
           },
           {
             id: "sp-sec10-u3-L3-Q4",
@@ -1274,6 +1419,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "NASA continued shuttle flights immediately after each disaster.",
             correctAnswer: false,
             explanation: "Shuttle flights were grounded for about 2.5 years after Challenger and over 2 years after Columbia while safety investigations took place.",
+            distractorExplanations: {
+              0: 'After both disasters, NASA grounded the shuttle fleet for years while investigating and implementing safety changes.',
+            },
           },
           {
             id: "sp-sec10-u3-L3-Q6",
@@ -1571,6 +1719,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Explorer 1's Geiger counter detected zones of trapped radiation around Earth, now called the Van Allen belts.",
+            distractorExplanations: {
+              1: 'Water on the Moon was not confirmed until decades after Explorer 1\'s 1958 mission.',
+              2: 'The cosmic microwave background was discovered in 1965 by Penzias and Wilson, not by Explorer 1.',
+              3: 'Radio emissions from Jupiter were detected by ground radio telescopes, not by Explorer 1\'s instruments.',
+            },
           },
           {
             id: "sp-sec10-u4-L1-Q4",
@@ -1578,6 +1731,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Yuri Gagarin completed 3 orbits of Earth on his first flight.",
             correctAnswer: false,
             explanation: "Gagarin completed exactly one orbit in 108 minutes aboard Vostok 1.",
+            distractorExplanations: {
+              0: 'Gagarin completed exactly one orbit of Earth during his 108-minute Vostok 1 flight.',
+            },
           },
           {
             id: "sp-sec10-u4-L1-Q5",
@@ -1600,6 +1756,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Space Race was driven by Cold War competition. Both sides wanted to prove their technology and ideology were superior.",
+            distractorExplanations: {
+              0: 'Scientific curiosity played a role, but the primary driver was geopolitical competition between the US and USSR.',
+              1: 'The search for alien life was not a motivating factor in the Space Race of the 1950s-60s.',
+              3: 'Commercial satellite business developed later; the Space Race was driven by Cold War rivalry.',
+            },
           },
         ],
       },
@@ -1629,6 +1790,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Six missions successfully landed: Apollo 11, 12, 14, 15, 16, and 17. Apollo 13 had to abort.",
+            distractorExplanations: {
+              0: 'One landing was Apollo 11, but there were 5 more successful landings through Apollo 17.',
+              1: 'Three underestimates; Apollo missions 11, 12, 14, 15, 16, and 17 all successfully landed on the Moon.',
+              3: 'Nine overstates the count; only 6 of the 7 attempted Apollo landings succeeded (Apollo 13 was aborted).',
+            },
           },
           {
             id: "sp-sec10-u4-L2-Q2",
@@ -1636,6 +1802,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "The Space Shuttle could travel to the Moon.",
             correctAnswer: false,
             explanation: "The shuttle was designed for low Earth orbit only. It couldn't travel to the Moon.",
+            distractorExplanations: {
+              0: 'The Space Shuttle operated only in low Earth orbit and lacked the capability to reach the Moon.',
+            },
           },
           {
             id: "sp-sec10-u4-L2-Q3",
@@ -1667,6 +1836,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Columbia made the first shuttle flight on April 12, 1981.",
+            distractorExplanations: {
+              0: 'Challenger was the second shuttle orbiter to fly, not the first.',
+              2: 'Discovery was the third shuttle orbiter to enter service, flying first in 1984.',
+              3: 'Endeavour was built as a replacement for Challenger and first flew in 1992.',
+            },
           },
           {
             id: "sp-sec10-u4-L2-Q6",
@@ -1825,6 +1999,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Skylab was the first American space station.",
             correctAnswer: true,
             explanation: "Skylab launched on May 14, 1973 and was crewed by three separate crews before being abandoned in 1974.",
+            distractorExplanations: {
+              1: 'Skylab launched in 1973 and was the first US space station, predating the ISS by decades.',
+            },
           },
           {
             id: "sp-sec10-u5-L1-Q2",
@@ -1838,6 +2015,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "NASA repurposed a Saturn V third stage into a habitable workshop. It was a clever way to use leftover Apollo hardware.",
+            distractorExplanations: {
+              0: 'Skylab was not built from scratch; it was converted from an existing Saturn V S-IVB upper stage.',
+              2: 'The Space Shuttle first flew in 1981, eight years after Skylab launched; it could not have assembled it.',
+              3: 'Skylab was an American station built and launched by the US, not donated by the Soviet Union.',
+            },
           },
           {
             id: "sp-sec10-u5-L1-T2",
@@ -1865,6 +2047,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without a way to reboost it, Skylab's orbit decayed. It reentered the atmosphere in 1979, scattering debris over Australia.",
+            distractorExplanations: {
+              0: 'There was no shuttle available in 1979 to boost Skylab\'s orbit; it reentered the atmosphere uncontrolled.',
+              1: 'The shuttle did not fly until 1981 and could not have towed Skylab to the ISS, which didn\'t exist until 1998.',
+              3: 'Skylab\'s orbit decayed and it reentered Earth\'s atmosphere in 1979, breaking apart over Australia.',
+            },
           },
           {
             id: "sp-sec10-u5-L1-T3",
@@ -1878,6 +2065,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Skylab's longest crew stayed aboard for about 84 days.",
             correctAnswer: true,
             explanation: "The third and final Skylab crew set a US spaceflight duration record of 84 days in 1974.",
+            distractorExplanations: {
+              1: 'Skylab\'s third and final crew stayed aboard for 84 days, setting a US spaceflight duration record at the time.',
+            },
           },
           {
             id: "sp-sec10-u5-L1-Q6",
@@ -1910,6 +2100,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Mir was the first modular space station.",
             correctAnswer: true,
             explanation: "Mir pioneered the modular approach, with new sections launched and attached over time. The ISS later used the same concept.",
+            distractorExplanations: {
+              1: 'Mir was indeed the first space station assembled from multiple modules launched separately and connected in orbit.',
+            },
           },
           {
             id: "sp-sec10-u5-L2-Q2",
@@ -1923,6 +2116,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Mir operated from 1986 to 2001, spending 15 years in orbit before being deorbited into the Pacific Ocean.",
+            distractorExplanations: {
+              0: 'Three years is far too short; Mir operated from 1986 to 2001, a total of 15 years.',
+              1: 'Eight years underestimates Mir\'s impressive 15-year operational life.',
+              3: '25 years overstates Mir\'s lifespan; it was deorbited in 2001 after 15 years.',
+            },
           },
           {
             id: "sp-sec10-u5-L2-T2",
@@ -1951,6 +2149,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Russia intentionally deorbited Mir in March 2001. It broke apart during reentry, with debris falling into the South Pacific.",
+            distractorExplanations: {
+              0: 'Mir was not preserved in orbit; its orbit decayed and it was intentionally deorbited.',
+              1: 'Boosting Mir higher was not feasible; the aging station was deliberately deorbited for safety.',
+              3: 'The shuttle could not tow Mir; it was far too large, and it was intentionally deorbited into the Pacific Ocean.',
+            },
           },
           {
             id: "sp-sec10-u5-L2-T3",
@@ -1964,6 +2167,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "Mir experienced both a fire and a collision during its operational life.",
             correctAnswer: true,
             explanation: "A fire broke out in 1997 and a Progress cargo ship collided with the Spektr module the same year. Both emergencies were managed without losing the station.",
+            distractorExplanations: {
+              1: 'Mir experienced both an onboard fire in 1997 and a collision with a Progress cargo ship, yet continued operating.',
+            },
           },
           {
             id: "sp-sec10-u5-L2-Q6",
@@ -1997,6 +2203,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "The ISS was built by a single country.",
             correctAnswer: false,
             explanation: "Sixteen countries collaborated on the ISS, including the US, Russia, Japan, Canada, and 11 European nations.",
+            distractorExplanations: {
+              0: 'The ISS is a partnership of 15 nations including the US, Russia, Europe, Japan, and Canada.',
+            },
           },
           {
             id: "sp-sec10-u5-L3-Q2",
@@ -2010,6 +2219,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The first ISS module, Zarya, launched in November 1998. Assembly continued with shuttle and Soyuz missions for over a decade.",
+            distractorExplanations: {
+              0: '1986 is when Mir launched; ISS assembly began much later with the Zarya module in 1998.',
+              1: '1993 is when the ISS partnership was formally agreed, but actual assembly in orbit started in 1998.',
+              3: '2005 is too late; the first ISS module launched in 1998 and the station was partially operational by 2000.',
+            },
           },
           {
             id: "sp-sec10-u5-L3-T2",
@@ -2037,6 +2251,11 @@ export const spaceSection10Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The ISS spans about 109 meters across its solar arrays, roughly the size of an American football field.",
+            distractorExplanations: {
+              0: 'The ISS is far larger than a car; its pressurized volume alone exceeds a six-bedroom house.',
+              1: 'While the pressurized space is house-sized, the full structure with solar panels spans a football field.',
+              3: 'A city block vastly overstates the ISS size; its end-to-end span is about 109 meters.',
+            },
           },
           {
             id: "sp-sec10-u5-L3-T3",
@@ -2050,6 +2269,9 @@ export const spaceSection10Part1: Unit[] = [
             question: "The ISS has been continuously occupied since the year 2000.",
             correctAnswer: true,
             explanation: "The first long-duration crew arrived in November 2000. The ISS has been continuously crewed ever since.",
+            distractorExplanations: {
+              1: 'The ISS has been continuously inhabited since November 2, 2000, the longest continuous human presence in space.',
+            },
           },
           {
             id: "sp-sec10-u5-L3-Q6",

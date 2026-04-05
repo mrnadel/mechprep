@@ -38,6 +38,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "1 × 30 days = about 30. That's enough for a nice dinner out.",
+          distractorExplanations: {
+            1: '5 would only be 5 days of saving, not a full month.',
+            2: '100 would require saving over 3 dollars a day, not 1.',
+            3: '1 is just one day of saving, not a whole month.',
+          },
         },
         {
           id: "pf-u1-L0-Q2",
@@ -45,6 +50,9 @@ export const unit1: Unit = {
           question: "Small daily purchases don't really affect your finances.",
           correctAnswer: false,
           explanation: "They absolutely do. A few dollars every day adds up to hundreds per month.",
+          distractorExplanations: {
+            0: 'Small daily purchases absolutely affect finances — a few dollars daily becomes hundreds monthly.',
+          },
         },
         {
           id: "pf-u1-L0-T2",
@@ -66,6 +74,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "2 × 20 workdays = 40/month. Doesn't seem like much per day, but it adds up.",
+          distractorExplanations: {
+            1: '2 is just one day of spending, not a full month.',
+            2: '20 would be 10 workdays, but there are 20 workdays in a month.',
+            3: '100 would require spending 5/day, not 2.',
+          },
         },
         {
           id: "pf-u1-L0-Q4",
@@ -98,6 +111,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "5 × 30 = 150. That's real money from just skipping one daily snack.",
+          distractorExplanations: {
+            1: '5 is just one day of saving, not a full month.',
+            2: '50 would be only 10 days of saving at 5/day.',
+            3: '500 would require saving about 17/day, not 5.',
+          },
         },
         {
           id: "pf-u1-L0-Q7",
@@ -106,6 +124,9 @@ export const unit1: Unit = {
           question: "If a daily habit costs 10/day, that's over 300/month.",
           correctAnswer: true,
           explanation: "10 × 30 = 300/month. Now imagine what that looks like over a whole year...",
+          distractorExplanations: {
+            1: '10/day times 30 days equals 300, which is indeed over 300/month.',
+          },
           hint: "That's exactly what the next lesson is about.",
         },
       ],
@@ -133,6 +154,9 @@ export const unit1: Unit = {
           question: "A cup of coffee from a cafe costs about 5 dollars.",
           correctAnswer: true,
           explanation: "Yep, about 5 on average. Seems small, right? Keep going.",
+          distractorExplanations: {
+            1: 'A typical cafe coffee does cost around 5 dollars on average.',
+          },
         },
         {
           id: "pf-u1-L4-Q2",
@@ -147,6 +171,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 2,
           explanation: "5 × 365 = 1,825 per year. That's a vacation. From coffee.",
+          distractorExplanations: {
+            0: '500 would only be 100 days of coffee, not a full year.',
+            1: '1,000 is too low — 5 times 365 days is 1,825.',
+            3: '3,000 would require spending over 8/day, not 5.',
+          },
         },
         {
           id: "pf-u1-L4-T2",
@@ -180,6 +209,9 @@ export const unit1: Unit = {
           question: "A 3 daily habit costs over 1,000 per year.",
           correctAnswer: true,
           explanation: "3 × 365 = 1,095 per year. Even 'just 3 bucks' adds up to four figures.",
+          distractorExplanations: {
+            1: '3 times 365 equals 1,095, which is indeed over 1,000 per year.',
+          },
         },
         {
           id: "pf-u1-L4-T3",
@@ -203,6 +235,9 @@ export const unit1: Unit = {
           question: "The Latte Factor means you should never spend money on small pleasures.",
           correctAnswer: false,
           explanation: "Not at all. It means you should know the real yearly cost, then decide which ones are worth it.",
+          distractorExplanations: {
+            0: 'The Latte Factor is about awareness, not about eliminating all small pleasures.',
+          },
         },
         {
           id: "pf-u1-L4-Q8",
@@ -217,6 +252,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "6 × 250 = 1,500 per year. That's a vacation or a new laptop.",
+          distractorExplanations: {
+            1: '600 would only be 100 workdays, but there are about 250 workdays in a year.',
+            2: '72 is only 12 days of lunches, far less than a full year.',
+            3: '3,000 would require spending 12/day, not 6.',
+          },
         },
       ],
     },
@@ -243,6 +283,9 @@ export const unit1: Unit = {
           question: "Most people know exactly where all their money goes each month.",
           correctAnswer: false,
           explanation: "Most people can't account for 30-40% of their spending. It disappears into small purchases they don't track.",
+          distractorExplanations: {
+            0: 'Most people cannot account for 30-40% of their spending because small purchases go untracked.',
+          },
         },
         {
           id: "pf-u1-L2-T2",
@@ -290,6 +333,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "13 + 10 + 15 + 8 = 46/month × 12 = 552/year. Small amounts become big money.",
+          distractorExplanations: {
+            1: '46 is just one month of subscriptions, not a full year.',
+            2: '460 is close but incorrect — 46 times 12 equals 552.',
+            3: '276 would be only 6 months of subscriptions, not 12.',
+          },
         },
         {
           id: "pf-u1-L2-Q5",
@@ -297,6 +345,9 @@ export const unit1: Unit = {
           question: "A subscription you never use still costs you money.",
           correctAnswer: true,
           explanation: "That gym membership you haven't used in 3 months? Still charging your card every month.",
+          distractorExplanations: {
+            1: 'Unused subscriptions still auto-charge your card every billing cycle regardless of usage.',
+          },
         },
         {
           id: "pf-u1-L2-Q6",
@@ -320,6 +371,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "Memory is unreliable. Tracking every expense for one month gives you the real picture.",
+          distractorExplanations: {
+            1: 'Memory is unreliable for spending — people routinely forget small purchases.',
+            2: 'Only tracking big purchases misses the small ones that often add up to more.',
+            3: 'Your friends\' spending habits are irrelevant to understanding your own finances.',
+          },
         },
       ],
     },
@@ -463,6 +519,9 @@ export const unit1: Unit = {
           question: "Your employer pays you a salary for the work you do.",
           correctAnswer: true,
           explanation: "Yes! You work, you get paid. But the amount in your bank isn't the full story.",
+          distractorExplanations: {
+            1: 'Employers do pay salaries for work performed — that is the basic employment relationship.',
+          },
         },
         {
           id: "pf-u1-L1-T2",
@@ -485,6 +544,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 1,
           explanation: "Tax money pays for public services: roads, hospitals, schools, and emergency services.",
+          distractorExplanations: {
+            0: 'Your employer\'s profit comes from the business, not from your tax payments.',
+            2: 'Taxes go to government services, not into your personal savings account.',
+            3: 'Rent and groceries are personal expenses you pay yourself, not what taxes fund.',
+          },
         },
         {
           id: "pf-u1-L1-Q3",
@@ -524,6 +588,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 2,
           explanation: "The 800 went to taxes and deductions like insurance or pension.",
+          distractorExplanations: {
+            0: 'Bank fees are separate charges and would not account for 800 missing from your paycheck.',
+            1: 'Employers do not hold deposits from your salary — the gap is from taxes and deductions.',
+            3: 'Retirement contributions may be part of deductions, but taxes are the main reason for the gap.',
+          },
         },
         {
           id: "pf-u1-L1-Q6",
@@ -569,6 +638,9 @@ export const unit1: Unit = {
           question: "A phone is a need, but the newest model is a want.",
           correctAnswer: true,
           explanation: "You need a phone for work and emergencies. But a 200 phone does the same job as a 1,200 one. The upgrade is the want.",
+          distractorExplanations: {
+            1: 'A basic phone is a genuine need, but the premium newest model is the want part.',
+          },
         },
         {
           id: "pf-u1-L3-T2",
@@ -590,6 +662,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "Transportation to work is a need. A reliable car covers it. The luxury upgrade is the want layered on top.",
+          distractorExplanations: {
+            1: 'A BMW is not inherently safer than a reliable used car — the luxury brand is the want.',
+            2: 'Walking may not be feasible for most commutes, so basic transportation is a real need.',
+            3: 'There is a clear difference: a reliable used car meets the need while a BMW adds luxury.',
+          },
         },
         {
           id: "pf-u1-L3-Q4",
@@ -620,6 +697,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "A designer genuinely needs a capable computer. Whether they need the 3,000 model or a 1,200 one that does the job is where want creeps in.",
+          distractorExplanations: {
+            1: 'A freelance designer genuinely needs a laptop for their work — it is not purely a want.',
+            2: 'Just because someone says they need it does not mean every price point is justified.',
+            3: 'Desktops and laptops are both valid work tools — the device type does not determine need.',
+          },
         },
         {
           id: "pf-u1-L3-Q6",
@@ -636,6 +718,9 @@ export const unit1: Unit = {
           question: "Wants are bad and you should never spend money on them.",
           correctAnswer: false,
           explanation: "Wants make life enjoyable! The goal isn't to cut them. It's to know the difference so you spend intentionally.",
+          distractorExplanations: {
+            0: 'Wants are not bad — the goal is intentional spending, not eliminating all enjoyment.',
+          },
         },
       ],
     },
@@ -661,6 +746,9 @@ export const unit1: Unit = {
           question: "A budget means you can never spend money on fun things.",
           correctAnswer: false,
           explanation: "A budget makes sure you CAN spend on fun, guilt-free, because the important stuff is already covered.",
+          distractorExplanations: {
+            0: 'A good budget includes money for fun — the 50/30/20 rule allocates 30% specifically for wants.',
+          },
         },
         {
           id: "pf-u1-L5-T2",
@@ -692,6 +780,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "30% of 4,000 = 1,200 for wants. That's your guilt-free fun money.",
+          distractorExplanations: {
+            1: '2,000 is 50% of your pay — that is the needs portion, not wants.',
+            2: '800 is 20% of your pay — that is the savings portion, not wants.',
+            3: '400 is only 10% of your pay, less than the 30% allocated to wants.',
+          },
         },
         {
           id: "pf-u1-L5-Q4",
@@ -722,6 +815,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "When savings happen automatically, the money is gone before you see it. You can't spend what's not there.",
+          distractorExplanations: {
+            1: 'Banks do not give higher interest rates just for setting up auto-transfers.',
+            2: 'Manual savings requires willpower each time, which makes it less reliable than automation.',
+            3: 'It absolutely matters — automation consistently outperforms relying on manual discipline.',
+          },
         },
         {
           id: "pf-u1-L5-Q6",
@@ -729,6 +827,9 @@ export const unit1: Unit = {
           question: "The 50/30/20 rule uses your gross pay (before taxes) as the starting number.",
           correctAnswer: false,
           explanation: "It uses your net pay (take-home pay). You can't budget money you never received.",
+          distractorExplanations: {
+            0: 'The 50/30/20 rule uses net (take-home) pay, not gross pay, since you cannot budget money taken for taxes.',
+          },
         },
         {
           id: "pf-u1-L5-Q7",
@@ -743,6 +844,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "3,000 - 1,800 - 1,000 = 200 left. That's only 7% instead of 20%. Your wants spending is eating into savings.",
+          distractorExplanations: {
+            1: '600 would be the ideal 20%, but with 2,800 in spending, only 200 remains.',
+            2: 'You do have 200 left, not zero — 3,000 minus 2,800 in expenses leaves 200.',
+            3: '1,200 would require spending only 1,800 total, but you spent 2,800.',
+          },
         },
       ],
     },
@@ -862,6 +968,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "Pay yourself first means saving is your first 'expense'. Move money to savings the moment you get paid.",
+          distractorExplanations: {
+            1: 'Buying yourself something nice is spending, the opposite of paying yourself first.',
+            2: 'Paying bills first then saving is the old approach — it leaves nothing for savings.',
+            3: 'Asking for a raise is about income, not about the saving-first habit.',
+          },
         },
         {
           id: "pf-u1-L6-Q2",
@@ -869,6 +980,9 @@ export const unit1: Unit = {
           question: "Most people who say 'I'll save whatever's left at the end of the month' end up saving nothing.",
           correctAnswer: true,
           explanation: "Expenses expand to fill available money. If saving is last, it gets nothing. Saving first forces spending to adjust.",
+          distractorExplanations: {
+            1: 'Expenses naturally expand to fill available money, so saving "whatever is left" usually means saving nothing.',
+          },
         },
         {
           id: "pf-u1-L6-T2",
@@ -899,6 +1013,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "500 is the perfect starter goal. Save 50/month for 10 months and you're there.",
+          distractorExplanations: {
+            1: '5,000 is a great long-term goal but too ambitious as a first target — start with 500.',
+            2: 'One month of income is a bigger goal better suited after you have your initial 500.',
+            3: 'Saving "whatever is left" means you have no target, so you will likely save nothing.',
+          },
         },
         {
           id: "pf-u1-L6-T3",
@@ -923,6 +1042,9 @@ export const unit1: Unit = {
           question: "Automating your savings on payday is more effective than manually transferring money each month.",
           correctAnswer: true,
           explanation: "Automation removes the temptation to skip saving. When it happens before you see the money, you adjust your spending naturally.",
+          distractorExplanations: {
+            1: 'Manual transfers rely on willpower, which fades — automation is consistently more effective.',
+          },
         },
         {
           id: "pf-u1-L6-Q7",
@@ -937,6 +1059,11 @@ export const unit1: Unit = {
           ],
           correctIndex: 0,
           explanation: "50 × 12 = 600. A solid emergency fund from a tiny monthly habit. You just finished Unit 1!",
+          distractorExplanations: {
+            1: '50 is just one month of saving, not a full year.',
+            2: '500 is 10 months — close but not a full year of 50/month.',
+            3: '1,200 would require saving 100/month, not 50.',
+          },
         },
       ],
     },

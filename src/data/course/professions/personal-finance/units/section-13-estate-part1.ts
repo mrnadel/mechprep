@@ -40,6 +40,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Estate planning is only necessary for wealthy individuals.",
             correctAnswer: false,
             explanation: "Anyone with assets, dependents, or preferences about their care needs an estate plan.",
+            distractorExplanations: {
+              0: 'Anyone with assets, dependents, or preferences about their care needs an estate plan.',
+            },
           },
           {
             id: "pf-s13-u1-L1-Q2",
@@ -53,6 +56,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "An estate plan covers asset distribution and decision-making authority if you're incapacitated or pass away.",
+            distractorExplanations: {
+              1: 'An estate plan covers asset distribution and decision-making authority if you\'re incapacitated or pass away.',
+              2: 'An estate plan covers asset distribution and decision-making authority if you\'re incapacitated or pass away.',
+              3: 'An estate plan covers asset distribution and decision-making authority if you\'re incapacitated or pass away.',
+            },
           },
           {
             id: "pf-s13-u1-L1-T2",
@@ -67,6 +75,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A person's estate includes their bank accounts, car, and personal belongings.",
             correctAnswer: true,
             explanation: "Your estate is the total of everything you own at the time of your death.",
+            distractorExplanations: {
+              1: 'Your estate is the total of everything you own at the time of your death.',
+            },
           },
           {
             id: "pf-s13-u1-L1-Q4",
@@ -119,6 +130,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Unmarried partners typically have no inheritance rights under intestacy. Assets usually go to parents or siblings instead.",
+            distractorExplanations: {
+              0: 'Unmarried partners typically have no inheritance rights under intestacy. Assets usually go to parents or siblings instead.',
+              1: 'Unmarried partners typically have no inheritance rights under intestacy. Assets usually go to parents or siblings instead.',
+              3: 'Unmarried partners typically have no inheritance rights under intestacy. Assets usually go to parents or siblings instead.',
+            },
           },
           {
             id: "pf-s13-u1-L1-Q7",
@@ -132,6 +148,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Life is unpredictable. An estate plan ensures your wishes are followed regardless of when something happens.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; life is unpredictable. An estate plan ensures your wishes are followed regardless of when something happens.',
+              2: 'This reasoning is flawed; life is unpredictable. An estate plan ensures your wishes are followed regardless of when something happens.',
+              3: 'This reasoning is flawed; life is unpredictable. An estate plan ensures your wishes are followed regardless of when something happens.',
+            },
           },
         ],
       },
@@ -157,6 +178,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A complete estate plan typically includes a will, power of attorney, and healthcare directive.",
             correctAnswer: true,
             explanation: "These 3 are essential. A trust is the 4th document, optional but very useful for many people.",
+            distractorExplanations: {
+              1: 'These 3 are essential. A trust is the 4th document, optional but very useful for many people.',
+            },
           },
           {
             id: "pf-s13-u1-L2-Q2",
@@ -191,6 +215,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A will is activated only after death. Other documents handle situations while you're still alive.",
+            distractorExplanations: {
+              0: 'A will is activated only after death. Other documents handle situations while you\'re still alive.',
+              1: 'A will is activated only after death. Other documents handle situations while you\'re still alive.',
+              2: 'A will is activated only after death. Other documents handle situations while you\'re still alive.',
+            },
           },
           {
             id: "pf-s13-u1-L2-Q4",
@@ -205,6 +234,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Without a power of attorney and healthcare directive, the family may need a court-appointed guardian. That process is slow and expensive.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; without a power of attorney and healthcare directive, the family may need a court-appointed guardian.',
+              1: 'Without a power of attorney and healthcare directive, the family may need a court-appointed guardian. That process is slow and expensive.',
+              2: 'Without a power of attorney and healthcare directive, the family may need a court-appointed guardian. That process is slow and expensive.',
+            },
           },
           {
             id: "pf-s13-u1-L2-T3",
@@ -219,6 +253,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A 401(k) always passes according to your will, regardless of the beneficiary form.",
             correctAnswer: false,
             explanation: "Beneficiary designations on retirement accounts override your will. The form on file with the account wins.",
+            distractorExplanations: {
+              0: 'Beneficiary designations on retirement accounts override your will. The form on file with the account wins.',
+            },
           },
           {
             id: "pf-s13-u1-L2-Q6",
@@ -245,6 +282,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Life insurance, retirement accounts, and POD/TOD accounts pass by beneficiary form. Physical property without a title designation passes through the will.",
+            distractorExplanations: {
+              1: 'Life insurance, retirement accounts, and POD/TOD accounts pass by beneficiary form.',
+              2: 'Life insurance, retirement accounts, and POD/TOD accounts pass by beneficiary form.',
+              3: 'Life insurance, retirement accounts, and POD/TOD accounts pass by beneficiary form.',
+            },
           },
         ],
       },
@@ -277,6 +319,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Probate is a private, quick process handled outside of court.",
             correctAnswer: false,
             explanation: "Probate is a public court process. It's typically slow and can be expensive.",
+            distractorExplanations: {
+              0: 'Probate is a public court process. It\'s typically slow and can be expensive.',
+            },
           },
           {
             id: "pf-s13-u1-L3-Q2",
@@ -290,6 +335,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Probate ensures the will is legitimate and that assets are distributed according to its terms or intestacy law.",
+            distractorExplanations: {
+              0: 'Probate ensures the will is legitimate and that assets are distributed according to its terms or intestacy law.',
+              1: 'Probate ensures the will is legitimate and that assets are distributed according to its terms or intestacy law.',
+              3: 'Probate ensures the will is legitimate and that assets are distributed according to its terms or intestacy law.',
+            },
           },
           {
             id: "pf-s13-u1-L3-T2",
@@ -348,6 +398,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A will goes through probate. It doesn't bypass it. Trusts, POD accounts, and joint tenancy all avoid the probate process.",
+            distractorExplanations: {
+              0: 'A will goes through probate. It doesn\'t bypass it. Trusts, POD accounts, and joint tenancy all avoid the probate process.',
+              2: 'This reasoning is flawed; a will goes through probate. It doesn\'t bypass it. Trusts, POD accounts, and joint tenancy all avoid the probate process.',
+              3: 'This reasoning is flawed; a will goes through probate. It doesn\'t bypass it. Trusts, POD accounts, and joint tenancy all avoid the probate process.',
+            },
           },
           {
             id: "pf-s13-u1-L3-Q6",
@@ -362,6 +417,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The home is titled only in Elena's name, so it goes through probate. The retirement account passes by beneficiary form. The joint account passes to the surviving spouse automatically.",
+            distractorExplanations: {
+              0: 'The home is titled only in Elena\'s name, so it goes through probate. The retirement account passes by beneficiary form.',
+              2: 'The home is titled only in Elena\'s name, so it goes through probate. The retirement account passes by beneficiary form.',
+              3: 'This overgeneralizes; the home is titled only in Elena\'s name, so it goes through probate. The retirement account passes by beneficiary form.',
+            },
           },
         ],
       },
@@ -387,6 +447,9 @@ export const financeSection13Part1: Unit[] = [
             question: "You don't need an estate plan until you're at least 50 years old.",
             correctAnswer: false,
             explanation: "Any adult with assets, dependents, or preferences about their care should have an estate plan. Age doesn't determine need.",
+            distractorExplanations: {
+              0: 'Any adult with assets, dependents, or preferences about their care should have an estate plan. Age doesn\'t determine need.',
+            },
           },
           {
             id: "pf-s13-u1-L4-Q2",
@@ -423,6 +486,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Without a plan, disagreements are common. Court-supervised distribution is slow, expensive, and stressful for everyone.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; without a plan, disagreements are common. Court-supervised distribution is slow, expensive, and stressful for everyone.',
+              1: 'Without a plan, disagreements are common. Court-supervised distribution is slow, expensive, and stressful for everyone.',
+              2: 'Without a plan, disagreements are common. Court-supervised distribution is slow, expensive, and stressful for everyone.',
+            },
           },
           {
             id: "pf-s13-u1-L4-Q4",
@@ -464,6 +532,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Tax savings and asset protection matter, but the core purpose is ensuring your wishes, not a court's generic rules, control what happens.",
+            distractorExplanations: {
+              1: 'Tax savings and asset protection matter, but the core purpose is ensuring your wishes, not a court\'s generic rules, control what happens.',
+              2: 'Tax savings and asset protection matter, but the core purpose is ensuring your wishes, not a court\'s generic rules, control what happens.',
+              3: 'Tax savings and asset protection matter, but the core purpose is ensuring your wishes, not a court\'s generic rules, control what happens.',
+            },
           },
           {
             id: "pf-s13-u1-L4-Q7",
@@ -478,6 +551,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Beneficiary designations override everything. If Tom's ex is still on the form, she gets the $500,000 regardless of what the will says or what Tom intended.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; beneficiary designations override everything.',
+              1: 'This reasoning is flawed; beneficiary designations override everything.',
+              3: 'Beneficiary designations override everything. If Tom\'s ex is still on the form, she gets the $500,000 regardless of what the will says or what.',
+            },
           },
         ],
       },
@@ -503,6 +581,9 @@ export const financeSection13Part1: Unit[] = [
             question: "The first step in estate planning is creating a list of all your assets and accounts.",
             correctAnswer: true,
             explanation: "You can't plan for what you don't know you have. The asset inventory comes first.",
+            distractorExplanations: {
+              1: 'You can\'t plan for what you don\'t know you have. The asset inventory comes first.',
+            },
           },
           {
             id: "pf-s13-u1-L5-Q2",
@@ -516,6 +597,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A thorough inventory includes everything: accounts, property, policies, debts, and digital assets like email and social media.",
+            distractorExplanations: {
+              0: 'A thorough inventory includes everything: accounts, property, policies, debts, and digital assets like email and social media.',
+              1: 'A thorough inventory includes everything: accounts, property, policies, debts, and digital assets like email and social media.',
+              3: 'A thorough inventory includes everything: accounts, property, policies, debts, and digital assets like email and social media.',
+            },
           },
           {
             id: "pf-s13-u1-L5-T2",
@@ -573,6 +659,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A safe deposit box only you can access creates a catch-22. Your executor can't get the will without probate, but probate needs the will.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a safe deposit box only you can access creates a catch-22.',
+              2: 'A safe deposit box only you can access creates a catch-22. Your executor can\'t get the will without probate, but probate needs the will.',
+              3: 'This reasoning is flawed; a safe deposit box only you can access creates a catch-22.',
+            },
           },
           {
             id: "pf-s13-u1-L5-Q6",
@@ -595,6 +686,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Priya's life has changed dramatically. She needs to update her inventory, name guardians for her children, update beneficiaries, and revise all documents.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; priya\'s life has changed dramatically.',
+              1: 'This reasoning is flawed; priya\'s life has changed dramatically.',
+              2: 'Inaction here would be harmful; priya\'s life has changed dramatically.',
+            },
           },
         ],
       },
@@ -641,6 +737,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A will lets you name who should care for your minor children.",
             correctAnswer: true,
             explanation: "Naming a guardian for minor children is one of the most important functions of a will.",
+            distractorExplanations: {
+              1: 'Naming a guardian for minor children is one of the most important functions of a will.',
+            },
           },
           {
             id: "pf-s13-u2-L1-Q2",
@@ -654,6 +753,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without a named guardian, a judge decides. The court tries to find a suitable relative, but the choice may not match your preference.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; without a named guardian, a judge decides.',
+              2: 'Without a named guardian, a judge decides. The court tries to find a suitable relative, but the choice may not match your preference.',
+              3: 'This reasoning is flawed; without a named guardian, a judge decides.',
+            },
           },
           {
             id: "pf-s13-u2-L1-T2",
@@ -717,6 +821,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Beneficiary designations on life insurance always override the will. Kevin's brother gets the insurance money regardless of what the will says.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; beneficiary designations on life insurance always override the will.',
+              2: 'Beneficiary designations on life insurance always override the will. Kevin\'s brother gets the insurance money regardless of what the will says.',
+              3: 'Beneficiary designations on life insurance always override the will. Kevin\'s brother gets the insurance money regardless of what the will says.',
+            },
           },
         ],
       },
@@ -742,6 +851,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A simple will distributes all assets directly to named beneficiaries.",
             correctAnswer: true,
             explanation: "A simple will is the most basic type. It gives assets outright to the people you name, with no trust or conditions attached.",
+            distractorExplanations: {
+              1: 'A simple will is the most basic type. It gives assets outright to the people you name, with no trust or conditions attached.',
+            },
           },
           {
             id: "pf-s13-u2-L2-Q2",
@@ -755,6 +867,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A pour-over will acts as a safety net. Any assets not already in your trust get 'poured over' into it at death.",
+            distractorExplanations: {
+              0: 'A pour-over will acts as a safety net. Any assets not already in your trust get \'poured over\' into it at death.',
+              1: 'This reasoning is flawed; a pour-over will acts as a safety net. Any assets not already in your trust get \'poured over\' into it at death.',
+              2: 'A pour-over will acts as a safety net. Any assets not already in your trust get \'poured over\' into it at death.',
+            },
           },
           {
             id: "pf-s13-u2-L2-T2",
@@ -776,6 +893,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A holographic will is one that's entirely handwritten by the testator.",
             correctAnswer: true,
             explanation: "Holographic means handwritten. These wills typically don't require witnesses, but they're easier to contest in court.",
+            distractorExplanations: {
+              1: 'Holographic means handwritten. These wills typically don\'t require witnesses, but they\'re easier to contest in court.',
+            },
           },
           {
             id: "pf-s13-u2-L2-Q4",
@@ -820,6 +940,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "That's exactly what a pour-over will does. It catches any assets missed by the trust and funnels them in. The car may still go through probate first, but it ends up in the trust.",
+            distractorExplanations: {
+              0: 'What a pour-over will does. It catches any assets missed by the trust and funnels them in.',
+              2: 'This reasoning is flawed; what a pour-over will does. It catches any assets missed by the trust and funnels them in.',
+              3: 'What a pour-over will does. It catches any assets missed by the trust and funnels them in.',
+            },
           },
           {
             id: "pf-s13-u2-L2-Q7",
@@ -833,6 +958,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without witnesses, it's harder to prove the will is authentic and wasn't written under duress. Courts see more challenges to holographic wills.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; without witnesses, it\'s harder to prove the will is authentic and wasn\'t written under duress.',
+              1: 'Without witnesses, it\'s harder to prove the will is authentic and wasn\'t written under duress. Courts see more challenges to holographic wills.',
+              3: 'Without witnesses, it\'s harder to prove the will is authentic and wasn\'t written under duress. Courts see more challenges to holographic wills.',
+            },
           },
         ],
       },
@@ -858,6 +988,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A will needs at least 2 witnesses to be valid in most jurisdictions.",
             correctAnswer: true,
             explanation: "Two witnesses who watch you sign and then sign themselves is the standard in most places.",
+            distractorExplanations: {
+              1: 'Two witnesses who watch you sign and then sign themselves is the standard in most places.',
+            },
           },
           {
             id: "pf-s13-u2-L3-Q2",
@@ -892,6 +1025,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Many jurisdictions have 'interested witness' rules. A beneficiary who witnesses the will could have their gift voided or reduced.",
+            distractorExplanations: {
+              0: 'Many jurisdictions have \'interested witness\' rules. A beneficiary who witnesses the will could have their gift voided or reduced.',
+              1: 'Many jurisdictions have \'interested witness\' rules. A beneficiary who witnesses the will could have their gift voided or reduced.',
+              2: 'Many jurisdictions have \'interested witness\' rules. A beneficiary who witnesses the will could have their gift voided or reduced.',
+            },
           },
           {
             id: "pf-s13-u2-L3-Q4",
@@ -914,6 +1052,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A self-proving affidavit allows the will to skip probate entirely.",
             correctAnswer: false,
             explanation: "It doesn't skip probate. It streamlines it by eliminating the need for witnesses to appear in court. The will still goes through probate.",
+            distractorExplanations: {
+              0: 'It doesn\'t skip probate. It streamlines it by eliminating the need for witnesses to appear in court. The will still goes through probate.',
+            },
           },
           {
             id: "pf-s13-u2-L3-Q6",
@@ -927,6 +1068,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Signing without witnesses is the most common way wills are invalidated. A typed will is fine, middle names are optional, and you don't need to list every item.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; signing without witnesses is the most common way wills are invalidated.',
+              1: 'Signing without witnesses is the most common way wills are invalidated.',
+              3: 'This overgeneralizes; signing without witnesses is the most common way wills are invalidated.',
+            },
           },
           {
             id: "pf-s13-u2-L3-Q7",
@@ -941,6 +1087,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Having a beneficiary serve as a witness is the key issue. His daughter's inheritance could be challenged or voided in many jurisdictions.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; having a beneficiary serve as a witness is the key issue.',
+              2: 'This reasoning is flawed; having a beneficiary serve as a witness is the key issue.',
+              3: 'This reasoning is flawed; having a beneficiary serve as a witness is the key issue.',
+            },
           },
         ],
       },
@@ -966,6 +1117,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Once you sign a will, it can never be changed.",
             correctAnswer: false,
             explanation: "You can change your will anytime you have testamentary capacity. Use a codicil for small changes or draft an entirely new will.",
+            distractorExplanations: {
+              0: 'You can change your will anytime you have testamentary capacity. Use a codicil for small changes or draft an entirely new will.',
+            },
           },
           {
             id: "pf-s13-u2-L4-Q2",
@@ -1008,6 +1162,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Without a clear revocation clause, two conflicting wills create confusion and potential litigation. Always include a statement revoking all prior wills.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; without a clear revocation clause, two conflicting wills create confusion and potential litigation.',
+              2: 'This reasoning is flawed; without a clear revocation clause, two conflicting wills create confusion and potential litigation.',
+              3: 'This reasoning is flawed; without a clear revocation clause, two conflicting wills create confusion and potential litigation.',
+            },
           },
           {
             id: "pf-s13-u2-L4-T3",
@@ -1029,6 +1188,9 @@ export const financeSection13Part1: Unit[] = [
             question: "In many jurisdictions, getting divorced automatically removes your ex-spouse from your will.",
             correctAnswer: true,
             explanation: "Many places automatically revoke provisions for an ex-spouse upon divorce. But you should still update your will to be safe.",
+            distractorExplanations: {
+              1: 'Many places automatically revoke provisions for an ex-spouse upon divorce. But you should still update your will to be safe.',
+            },
           },
           {
             id: "pf-s13-u2-L4-Q6",
@@ -1042,6 +1204,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Multiple codicils attached to an old will can create confusion and increase the chance of conflicting instructions. A fresh will is cleaner.",
+            distractorExplanations: {
+              1: 'Multiple codicils attached to an old will can create confusion and increase the chance of conflicting instructions. A fresh will is cleaner.',
+              2: 'This reasoning is flawed; multiple codicils attached to an old will can create confusion and increase the chance of conflicting instructions.',
+              3: 'This reasoning is flawed; multiple codicils attached to an old will can create confusion and increase the chance of conflicting instructions.',
+            },
           },
           {
             id: "pf-s13-u2-L4-Q7",
@@ -1055,6 +1222,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Starting with a revocation clause ensures there's no confusion about which document is current. This is standard legal practice.",
+            distractorExplanations: {
+              0: 'Starting with a revocation clause ensures there\'s no confusion about which document is current. This is standard legal practice.',
+              1: 'Starting with a revocation clause ensures there\'s no confusion about which document is current. This is standard legal practice.',
+              3: 'Starting with a revocation clause ensures there\'s no confusion about which document is current. This is standard legal practice.',
+            },
           },
         ],
       },
@@ -1080,6 +1252,9 @@ export const financeSection13Part1: Unit[] = [
             question: "An executor's duties include paying the deceased's outstanding debts before distributing assets.",
             correctAnswer: true,
             explanation: "Debts and taxes must be paid from the estate before beneficiaries receive anything.",
+            distractorExplanations: {
+              1: 'Debts and taxes must be paid from the estate before beneficiaries receive anything.',
+            },
           },
           {
             id: "pf-s13-u2-L5-Q2",
@@ -1114,6 +1289,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An organized, nearby, responsible adult is ideal. Distance, advanced age, and inexperience all create complications.",
+            distractorExplanations: {
+              0: 'An organized, nearby, responsible adult is ideal. Distance, advanced age, and inexperience all create complications.',
+              2: 'An organized, nearby, responsible adult is ideal. Distance, advanced age, and inexperience all create complications.',
+              3: 'This reasoning is flawed; an organized, nearby, responsible adult is ideal. Distance, advanced age, and inexperience all create complications.',
+            },
           },
           {
             id: "pf-s13-u2-L5-Q4",
@@ -1127,6 +1307,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The court appoints a personal representative or administrator. This person may not be someone you'd have chosen.",
+            distractorExplanations: {
+              0: 'The court appoints a personal representative or administrator. This person may not be someone you\'d have chosen.',
+              1: 'This reasoning is flawed; the court appoints a personal representative or administrator. This person may not be someone you\'d have chosen.',
+              2: 'The court appoints a personal representative or administrator. This person may not be someone you\'d have chosen.',
+            },
           },
           {
             id: "pf-s13-u2-L5-T3",
@@ -1172,6 +1357,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "A co-executor or professional provides oversight and reduces the risk of self-dealing. Conflicts of interest should be anticipated in the planning stage.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a co-executor or professional provides oversight and reduces the risk of self-dealing.',
+              1: 'This reasoning is flawed; a co-executor or professional provides oversight and reduces the risk of self-dealing.',
+              2: 'This reasoning is flawed; a co-executor or professional provides oversight and reduces the risk of self-dealing.',
+            },
           },
         ],
       },
@@ -1211,6 +1401,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A trust holds assets on behalf of a beneficiary, managed by a trustee.",
             correctAnswer: true,
             explanation: "That's the core structure: grantor creates, trustee manages, beneficiary receives.",
+            distractorExplanations: {
+              1: 'Structure: grantor creates, trustee manages, beneficiary receives.',
+            },
           },
           {
             id: "pf-s13-u3-L1-Q2",
@@ -1245,6 +1438,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Probate applies to assets in your individual name. Trust assets belong to the trust entity, so they pass outside of probate.",
+            distractorExplanations: {
+              1: 'Probate applies to assets in your individual name. Trust assets belong to the trust entity, so they pass outside of probate.',
+              2: 'Probate applies to assets in your individual name. Trust assets belong to the trust entity, so they pass outside of probate.',
+              3: 'Probate applies to assets in your individual name. Trust assets belong to the trust entity, so they pass outside of probate.',
+            },
           },
           {
             id: "pf-s13-u3-L1-Q4",
@@ -1281,6 +1479,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A trust can release funds in stages, like 1/3 at age 25, 1/3 at 30, and 1/3 at 35. This protects immature beneficiaries from themselves.",
+            distractorExplanations: {
+              0: 'A trust can release funds in stages, like 1/3 at age 25, 1/3 at 30, and 1/3 at 35. This protects immature beneficiaries from themselves.',
+              1: 'A trust can release funds in stages, like 1/3 at age 25, 1/3 at 30, and 1/3 at 35. This protects immature beneficiaries from themselves.',
+              3: 'This reasoning is flawed; a trust can release funds in stages, like 1/3 at age 25, 1/3 at 30, and 1/3 at 35.',
+            },
           },
           {
             id: "pf-s13-u3-L1-Q6",
@@ -1294,6 +1497,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Trusts offer conditional distributions: you control the timing and terms. Wills give assets outright once probate is complete.",
+            distractorExplanations: {
+              0: 'Trusts offer conditional distributions: you control the timing and terms. Wills give assets outright once probate is complete.',
+              2: 'This overgeneralizes; trusts offer conditional distributions: you control the timing and terms. Wills give assets outright once probate is complete.',
+              3: 'Trusts offer conditional distributions: you control the timing and terms. Wills give assets outright once probate is complete.',
+            },
           },
         ],
       },
@@ -1319,6 +1527,9 @@ export const financeSection13Part1: Unit[] = [
             question: "The grantor of a revocable trust can change or cancel it at any time.",
             correctAnswer: true,
             explanation: "That's what 'revocable' means. You retain full control to modify, amend, or dissolve the trust during your lifetime.",
+            distractorExplanations: {
+              1: '\'revocable\' means. You retain full control to modify, amend, or dissolve the trust during your lifetime.',
+            },
           },
           {
             id: "pf-s13-u3-L2-Q2",
@@ -1332,6 +1543,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Typically, you serve as your own trustee. You manage the assets just like you always have. A successor trustee takes over if you become incapacitated or pass away.",
+            distractorExplanations: {
+              0: 'Typically, you serve as your own trustee. You manage the assets just like you always have.',
+              2: 'Typically, you serve as your own trustee. You manage the assets just like you always have.',
+              3: 'Typically, you serve as your own trustee. You manage the assets just like you always have.',
+            },
           },
           {
             id: "pf-s13-u3-L2-T2",
@@ -1346,6 +1562,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Simply signing a trust document is enough to protect your assets from probate.",
             correctAnswer: false,
             explanation: "You must also fund the trust by retitling assets into it. An empty trust has nothing to manage or distribute.",
+            distractorExplanations: {
+              0: 'You must also fund the trust by retitling assets into it. An empty trust has nothing to manage or distribute.',
+            },
           },
           {
             id: "pf-s13-u3-L2-Q4",
@@ -1382,6 +1601,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Since you can revoke the trust and take the assets back, courts view them as still belonging to you. Creditors can reach them.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; since you can revoke the trust and take the assets back, courts view them as still belonging to you.',
+              1: 'Since you can revoke the trust and take the assets back, courts view them as still belonging to you. Creditors can reach them.',
+              2: 'This reasoning is flawed; since you can revoke the trust and take the assets back, courts view them as still belonging to you.',
+            },
           },
           {
             id: "pf-s13-u3-L2-Q6",
@@ -1404,6 +1628,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The successor trustee steps in when the grantor is incapacitated. She can manage assets and pay bills according to the trust terms, but she can't change the trust or benefit herself.",
+            distractorExplanations: {
+              1: 'The successor trustee steps in when the grantor is incapacitated.',
+              2: 'This reasoning is flawed; the successor trustee steps in when the grantor is incapacitated.',
+              3: 'The successor trustee steps in when the grantor is incapacitated.',
+            },
           },
         ],
       },
@@ -1429,6 +1658,9 @@ export const financeSection13Part1: Unit[] = [
             question: "The grantor of an irrevocable trust can freely take back the assets at any time.",
             correctAnswer: false,
             explanation: "That's the key difference from revocable trusts. Once assets are in an irrevocable trust, you've given up ownership and control.",
+            distractorExplanations: {
+              0: 'That\'s the key difference from revocable trusts. Once assets are in an irrevocable trust, you\'ve given up ownership and control.',
+            },
           },
           {
             id: "pf-s13-u3-L3-Q2",
@@ -1442,6 +1674,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The trade-off is deliberate. By giving up ownership, the assets are no longer in your estate for tax purposes and are protected from your personal creditors.",
+            distractorExplanations: {
+              0: 'The trade-off is deliberate. By giving up ownership, the assets are no longer in your estate for tax purposes and are protected from your.',
+              1: 'The trade-off is deliberate. By giving up ownership, the assets are no longer in your estate for tax purposes and are protected from your.',
+              3: 'This reasoning is flawed; the trade-off is deliberate. By giving up ownership, the assets are no longer in your estate for tax purposes and are.',
+            },
           },
           {
             id: "pf-s13-u3-L3-T2",
@@ -1463,6 +1700,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Assets in an irrevocable trust are generally excluded from the grantor's taxable estate.",
             correctAnswer: true,
             explanation: "Since you no longer own or control the assets, they're not counted in your estate for tax purposes.",
+            distractorExplanations: {
+              1: 'Since you no longer own or control the assets, they\'re not counted in your estate for tax purposes.',
+            },
           },
           {
             id: "pf-s13-u3-L3-Q4",
@@ -1499,6 +1739,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Decanting lets a trustee pour assets from an old trust into a new one with modified terms. It's available in many, but not all, jurisdictions.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; decanting lets a trustee pour assets from an old trust into a new one with modified terms.',
+              1: 'This reasoning is flawed; decanting lets a trustee pour assets from an old trust into a new one with modified terms.',
+              3: 'Decanting lets a trustee pour assets from an old trust into a new one with modified terms. It\'s available in many, but not all, jurisdictions.',
+            },
           },
           {
             id: "pf-s13-u3-L3-Q6",
@@ -1513,6 +1758,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "An irrevocable trust removes assets from her taxable estate. A revocable trust wouldn't reduce taxes. A testamentary trust activates after death, when taxes are already calculated.",
+            distractorExplanations: {
+              0: 'An irrevocable trust removes assets from her taxable estate. A revocable trust wouldn\'t reduce taxes.',
+              2: 'This reasoning is flawed; an irrevocable trust removes assets from her taxable estate. A revocable trust wouldn\'t reduce taxes.',
+              3: 'An irrevocable trust removes assets from her taxable estate. A revocable trust wouldn\'t reduce taxes.',
+            },
           },
         ],
       },
@@ -1538,6 +1788,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A special needs trust lets a disabled person receive an inheritance without losing government benefits.",
             correctAnswer: true,
             explanation: "The trust provides supplemental support (extra comfort, travel, entertainment) without counting as income that could disqualify them from Medicaid or similar programs.",
+            distractorExplanations: {
+              1: 'The trust provides supplemental support (extra comfort, travel, entertainment) without counting as income that could disqualify them from Medicaid or similar programs.',
+            },
           },
           {
             id: "pf-s13-u3-L4-Q2",
@@ -1551,6 +1804,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Government benefits like Medicaid have asset limits. A direct inheritance can push a person over those limits and disqualify them from the benefits they need.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; government benefits like Medicaid have asset limits.',
+              1: 'This reasoning is flawed; government benefits like Medicaid have asset limits.',
+              2: 'This reasoning is flawed; government benefits like Medicaid have asset limits.',
+            },
           },
           {
             id: "pf-s13-u3-L4-T2",
@@ -1586,6 +1844,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A spendthrift trust prevents the beneficiary from pledging trust assets to creditors. The trustee controls when and how much the son receives.",
+            distractorExplanations: {
+              1: 'A spendthrift trust prevents the beneficiary from pledging trust assets to creditors. The trustee controls when and how much the son receives.',
+              2: 'A spendthrift trust prevents the beneficiary from pledging trust assets to creditors. The trustee controls when and how much the son receives.',
+              3: 'This reasoning is flawed; a spendthrift trust prevents the beneficiary from pledging trust assets to creditors.',
+            },
           },
           {
             id: "pf-s13-u3-L4-T3",
@@ -1630,6 +1893,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The trust provides extras like vacations, hobbies, and personal items while keeping the person eligible for Medicaid and other government programs.",
+            distractorExplanations: {
+              1: 'The trust provides extras like vacations, hobbies, and personal items while keeping the person eligible for Medicaid and other government programs.',
+              2: 'This reasoning is flawed; the trust provides extras like vacations, hobbies, and personal items while keeping the person eligible for Medicaid.',
+              3: 'This reasoning is flawed; the trust provides extras like vacations, hobbies, and personal items while keeping the person eligible for Medicaid.',
+            },
           },
         ],
       },
@@ -1655,6 +1923,9 @@ export const financeSection13Part1: Unit[] = [
             question: "If you have a trust, you don't need a will at all.",
             correctAnswer: false,
             explanation: "You still need a pour-over will to catch any assets not transferred into the trust. The will and trust work together.",
+            distractorExplanations: {
+              0: 'You still need a pour-over will to catch any assets not transferred into the trust. The will and trust work together.',
+            },
           },
           {
             id: "pf-s13-u3-L5-Q2",
@@ -1691,6 +1962,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Spending $3,000 now to potentially save $15,000 to $35,000 in probate costs is a strong financial case for a trust.",
+            distractorExplanations: {
+              0: 'This overgeneralizes; spending $3,000 now to potentially save $15,000 to $35,000 in probate costs is a strong financial case for a trust.',
+              1: 'This reasoning is flawed; spending $3,000 now to potentially save $15,000 to $35,000 in probate costs is a strong financial case for a trust.',
+              2: 'This reasoning is flawed; spending $3,000 now to potentially save $15,000 to $35,000 in probate costs is a strong financial case for a trust.',
+            },
           },
           {
             id: "pf-s13-u3-L5-Q4",
@@ -1733,6 +2009,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Guardian designation is done in a will, not a trust. The other 3 are genuine trust benefits.",
+            distractorExplanations: {
+              0: 'Guardian designation is done in a will, not a trust. The other 3 are genuine trust benefits.',
+              2: 'This reasoning is flawed; guardian designation is done in a will, not a trust. The other 3 are genuine trust benefits.',
+              3: 'Guardian designation is done in a will, not a trust. The other 3 are genuine trust benefits.',
+            },
           },
           {
             id: "pf-s13-u3-L5-Q7",
@@ -1747,6 +2028,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Lisa's situation is straightforward. A simple will and up-to-date beneficiary designations on her 401(k) cover her needs. She can add a trust later if her situation becomes more complex.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; lisa\'s situation is straightforward.',
+              1: 'This reasoning is flawed; lisa\'s situation is straightforward.',
+              3: 'This reasoning is flawed; lisa\'s situation is straightforward.',
+            },
           },
         ],
       },
@@ -1772,6 +2058,9 @@ export const financeSection13Part1: Unit[] = [
             question: "An unfunded trust still protects your assets from probate.",
             correctAnswer: false,
             explanation: "If assets aren't retitled into the trust, they're not in the trust. They'll go through probate just like any other asset in your name.",
+            distractorExplanations: {
+              0: 'If assets aren\'t retitled into the trust, they\'re not in the trust. They\'ll go through probate just like any other asset in your name.',
+            },
           },
           {
             id: "pf-s13-u3-L6-Q2",
@@ -1822,6 +2111,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Transferring a 401(k) out of your name is treated as a distribution. You'd owe income tax on the full amount. Name the trust as beneficiary instead.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; transferring a 401(k) out of your name is treated as a distribution. You\'d owe income tax on the full amount.',
+              1: 'Transferring a 401(k) out of your name is treated as a distribution. You\'d owe income tax on the full amount. Name the trust as beneficiary instead.',
+              2: 'This reasoning is flawed; transferring a 401(k) out of your name is treated as a distribution. You\'d owe income tax on the full amount.',
+            },
           },
           {
             id: "pf-s13-u3-L6-T3",
@@ -1864,6 +2158,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Assets not in the trust are subject to probate. A pour-over will catches them and funnels them into the trust, but they still go through probate first. George should retitle them now.",
+            distractorExplanations: {
+              0: 'Assets not in the trust are subject to probate. A pour-over will catches them and funnels them into the trust, but they still go through probate.',
+              1: 'This reasoning is flawed; assets not in the trust are subject to probate.',
+              3: 'Assets not in the trust are subject to probate. A pour-over will catches them and funnels them into the trust, but they still go through probate.',
+            },
           },
         ],
       },
@@ -1902,6 +2201,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Intestate means dying without a valid will. The court applies default distribution rules.",
+            distractorExplanations: {
+              1: 'Intestate means dying without a valid will. The court applies default distribution rules.',
+              2: 'Intestate means dying without a valid will. The court applies default distribution rules.',
+              3: 'Intestate means dying without a valid will. The court applies default distribution rules.',
+            },
           },
           {
             id: "pf-s13-u4-L1-Q2",
@@ -1909,6 +2213,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Probate is a private, informal process that happens outside of court.",
             correctAnswer: false,
             explanation: "Probate is a public court process. It involves court supervision, filing fees, and public records.",
+            distractorExplanations: {
+              0: 'Probate is a public court process. It involves court supervision, filing fees, and public records.',
+            },
           },
           {
             id: "pf-s13-u4-L1-Q3",
@@ -1930,6 +2237,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Wills go through probate regardless of how detailed they are. Trusts, POD accounts, and joint tenancy bypass probate.",
+            distractorExplanations: {
+              0: 'Wills go through probate regardless of how detailed they are. Trusts, POD accounts, and joint tenancy bypass probate.',
+              2: 'This reasoning is flawed; wills go through probate regardless of how detailed they are. Trusts, POD accounts, and joint tenancy bypass probate.',
+              3: 'This reasoning is flawed; wills go through probate regardless of how detailed they are. Trusts, POD accounts, and joint tenancy bypass probate.',
+            },
           },
           {
             id: "pf-s13-u4-L1-Q5",
@@ -1944,6 +2256,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Unmarried partners have no default inheritance rights. Without a will, Nina's assets go to her closest blood relatives, not her partner.",
+            distractorExplanations: {
+              1: 'Unmarried partners have no default inheritance rights. Without a will, Nina\'s assets go to her closest blood relatives, not her partner.',
+              2: 'This reasoning is flawed; unmarried partners have no default inheritance rights.',
+              3: 'Unmarried partners have no default inheritance rights. Without a will, Nina\'s assets go to her closest blood relatives, not her partner.',
+            },
           },
           {
             id: "pf-s13-u4-L1-Q6",
@@ -1981,6 +2298,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Beneficiary designations on a life insurance policy override whatever your will says.",
             correctAnswer: true,
             explanation: "Life insurance, retirement accounts, and POD accounts pass by beneficiary form. The will has no authority over them.",
+            distractorExplanations: {
+              1: 'Life insurance, retirement accounts, and POD accounts pass by beneficiary form. The will has no authority over them.',
+            },
           },
           {
             id: "pf-s13-u4-L1-Q9",
@@ -1994,6 +2314,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Review after marriage, divorce, births, deaths, major financial changes, and at regular intervals of 3 to 5 years.",
+            distractorExplanations: {
+              0: 'Review after marriage, divorce, births, deaths, major financial changes, and at regular intervals of 3 to 5 years.',
+              1: 'This overgeneralizes; review after marriage, divorce, births, deaths, major financial changes, and at regular intervals of 3 to 5 years.',
+              3: 'Review after marriage, divorce, births, deaths, major financial changes, and at regular intervals of 3 to 5 years.',
+            },
           },
           {
             id: "pf-s13-u4-L1-Q10",
@@ -2007,6 +2332,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Young adults rarely have estate tax concerns. Their priority is protecting dependents and ensuring the right people inherit.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; young adults rarely have estate tax concerns.',
+              2: 'Young adults rarely have estate tax concerns. Their priority is protecting dependents and ensuring the right people inherit.',
+              3: 'Young adults rarely have estate tax concerns. Their priority is protecting dependents and ensuring the right people inherit.',
+            },
           },
         ],
       },
@@ -2039,6 +2369,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A holographic will is always invalid because it has no witnesses.",
             correctAnswer: false,
             explanation: "Holographic wills are valid in some jurisdictions. They're riskier because they're easier to contest, but not automatically invalid everywhere.",
+            distractorExplanations: {
+              0: 'Holographic wills are valid in some jurisdictions. They\'re riskier because they\'re easier to contest, but not automatically invalid everywhere.',
+            },
           },
           {
             id: "pf-s13-u4-L2-Q3",
@@ -2052,6 +2385,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Beneficiaries who serve as witnesses may lose their inheritance. Use disinterested parties as witnesses.",
+            distractorExplanations: {
+              0: 'Beneficiaries who serve as witnesses may lose their inheritance. Use disinterested parties as witnesses.',
+              1: 'Beneficiaries who serve as witnesses may lose their inheritance. Use disinterested parties as witnesses.',
+              2: 'Beneficiaries who serve as witnesses may lose their inheritance. Use disinterested parties as witnesses.',
+            },
           },
           {
             id: "pf-s13-u4-L2-Q4",
@@ -2074,6 +2412,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "In most jurisdictions with auto-revocation, only the ex-spouse provisions are removed. The rest of the will stands. Maria should still update it explicitly.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; in most jurisdictions with auto-revocation, only the ex-spouse provisions are removed. The rest of the will stands.',
+              1: 'This reasoning is flawed; in most jurisdictions with auto-revocation, only the ex-spouse provisions are removed. The rest of the will stands.',
+              2: 'This reasoning is flawed; in most jurisdictions with auto-revocation, only the ex-spouse provisions are removed. The rest of the will stands.',
+            },
           },
           {
             id: "pf-s13-u4-L2-Q6",
@@ -2101,6 +2444,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Testamentary capacity means the person is of sound mind: they know what they own, who their natural heirs are, and what the document does.",
+            distractorExplanations: {
+              1: 'Testamentary capacity means the person is of sound mind: they know what they own, who their natural heirs are, and what the document does.',
+              2: 'Testamentary capacity means the person is of sound mind: they know what they own, who their natural heirs are, and what the document does.',
+              3: 'Testamentary capacity means the person is of sound mind: they know what they own, who their natural heirs are, and what the document does.',
+            },
           },
           {
             id: "pf-s13-u4-L2-Q8",
@@ -2108,6 +2456,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A self-proving affidavit eliminates the need for probate entirely.",
             correctAnswer: false,
             explanation: "It streamlines probate by removing the need for witnesses to testify. The will still goes through the probate process.",
+            distractorExplanations: {
+              0: 'It streamlines probate by removing the need for witnesses to testify. The will still goes through the probate process.',
+            },
           },
           {
             id: "pf-s13-u4-L2-Q9",
@@ -2137,6 +2488,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Executors are entitled to reasonable compensation, typically 2% to 5% of the estate value, depending on the jurisdiction and complexity.",
+            distractorExplanations: {
+              0: 'This calculation is incorrect; executors are entitled to reasonable compensation, typically 2% to 5% of the estate value, depending on the.',
+              1: 'This calculation is incorrect; executors are entitled to reasonable compensation, typically 2% to 5% of the estate value, depending on the.',
+              3: 'This calculation is incorrect; executors are entitled to reasonable compensation, typically 2% to 5% of the estate value, depending on the.',
+            },
           },
         ],
       },
@@ -2191,6 +2547,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Moving a retirement account out of your name is treated as a taxable withdrawal. Name the trust as beneficiary instead.",
+            distractorExplanations: {
+              0: 'Moving a retirement account out of your name is treated as a taxable withdrawal. Name the trust as beneficiary instead.',
+              2: 'Moving a retirement account out of your name is treated as a taxable withdrawal. Name the trust as beneficiary instead.',
+              3: 'Moving a retirement account out of your name is treated as a taxable withdrawal. Name the trust as beneficiary instead.',
+            },
           },
           {
             id: "pf-s13-u4-L3-Q4",
@@ -2198,6 +2559,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A revocable living trust provides protection from the grantor's personal creditors.",
             correctAnswer: false,
             explanation: "Since you can revoke the trust and reclaim assets, courts treat them as still belonging to you. Only irrevocable trusts offer creditor protection.",
+            distractorExplanations: {
+              0: 'Since you can revoke the trust and reclaim assets, courts treat them as still belonging to you. Only irrevocable trusts offer creditor protection.',
+            },
           },
           {
             id: "pf-s13-u4-L3-Q5",
@@ -2212,6 +2576,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Assets not titled in the trust's name go through probate. Paul needs to retitle the rental property and savings account into the trust.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; assets not titled in the trust\'s name go through probate.',
+              2: 'This reasoning is flawed; assets not titled in the trust\'s name go through probate.',
+              3: 'There is a real consequence here; assets not titled in the trust\'s name go through probate.',
+            },
           },
           {
             id: "pf-s13-u4-L3-Q6",
@@ -2233,6 +2602,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Decanting allows modification of irrevocable trusts by transferring assets into a newly created trust with different terms.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; decanting allows modification of irrevocable trusts by transferring assets into a newly created trust with different.',
+              1: 'Decanting allows modification of irrevocable trusts by transferring assets into a newly created trust with different terms.',
+              2: 'Decanting allows modification of irrevocable trusts by transferring assets into a newly created trust with different terms.',
+            },
           },
           {
             id: "pf-s13-u4-L3-Q8",
@@ -2256,6 +2630,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Even with a funded trust, you should still have a pour-over will as a backup.",
             correctAnswer: true,
             explanation: "A pour-over will catches any assets you forgot to put in the trust and directs them there.",
+            distractorExplanations: {
+              1: 'A pour-over will catches any assets you forgot to put in the trust and directs them there.',
+            },
           },
           {
             id: "pf-s13-u4-L3-Q10",
@@ -2269,6 +2646,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Irrevocable trusts are most valuable for high-net-worth individuals facing significant estate tax. The $15 million estate exceeds exemption thresholds in many jurisdictions.",
+            distractorExplanations: {
+              1: 'Irrevocable trusts are most valuable for high-net-worth individuals facing significant estate tax.',
+              2: 'This reasoning is flawed; irrevocable trusts are most valuable for high-net-worth individuals facing significant estate tax.',
+              3: 'This reasoning is flawed; irrevocable trusts are most valuable for high-net-worth individuals facing significant estate tax.',
+            },
           },
         ],
       },
@@ -2315,6 +2697,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Without a power of attorney, your spouse can automatically manage all your finances if you're incapacitated.",
             correctAnswer: false,
             explanation: "Spouses can't automatically access individually titled accounts or make all financial decisions. A POA gives them explicit legal authority.",
+            distractorExplanations: {
+              0: 'Spouses can\'t automatically access individually titled accounts or make all financial decisions. A POA gives them explicit legal authority.',
+            },
           },
           {
             id: "pf-s13-u5-L1-Q2",
@@ -2328,6 +2713,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A financial POA covers bill payments, account management, tax filing, and other financial decisions during your incapacity.",
+            distractorExplanations: {
+              0: 'A financial POA covers bill payments, account management, tax filing, and other financial decisions during your incapacity.',
+              1: 'A financial POA covers bill payments, account management, tax filing, and other financial decisions during your incapacity.',
+              3: 'A financial POA covers bill payments, account management, tax filing, and other financial decisions during your incapacity.',
+            },
           },
           {
             id: "pf-s13-u5-L1-T2",
@@ -2393,6 +2783,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "That's exactly what a durable POA is for. Clara's son can immediately pay bills, manage accounts, and handle her financial affairs.",
+            distractorExplanations: {
+              0: 'What a durable POA is for. Clara\'s son can immediately pay bills, manage accounts, and handle her financial affairs.',
+              1: 'What a durable POA is for. Clara\'s son can immediately pay bills, manage accounts, and handle her financial affairs.',
+              3: 'What a durable POA is for. Clara\'s son can immediately pay bills, manage accounts, and handle her financial affairs.',
+            },
           },
           {
             id: "pf-s13-u5-L1-Q7",
@@ -2406,6 +2801,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A POA ends when the principal revokes it, the principal dies, or a court invalidates it. Death of the principal always terminates the POA.",
+            distractorExplanations: {
+              0: 'A POA ends when the principal revokes it, the principal dies, or a court invalidates it. Death of the principal always terminates the POA.',
+              2: 'A POA ends when the principal revokes it, the principal dies, or a court invalidates it. Death of the principal always terminates the POA.',
+              3: 'A POA ends when the principal revokes it, the principal dies, or a court invalidates it. Death of the principal always terminates the POA.',
+            },
           },
         ],
       },
@@ -2438,6 +2838,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A healthcare directive only applies when you're unable to communicate your own medical wishes.",
             correctAnswer: true,
             explanation: "While you're conscious and competent, you make your own decisions. The directive kicks in only when you can't speak for yourself.",
+            distractorExplanations: {
+              1: 'While you\'re conscious and competent, you make your own decisions. The directive kicks in only when you can\'t speak for yourself.',
+            },
           },
           {
             id: "pf-s13-u5-L2-Q2",
@@ -2472,6 +2875,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "The living will says what you want. The healthcare proxy says who decides when situations arise that the living will doesn't cover.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the living will says what you want. The healthcare proxy says who decides when situations arise that the living will.',
+              1: 'The living will says what you want. The healthcare proxy says who decides when situations arise that the living will doesn\'t cover.',
+              2: 'The living will says what you want. The healthcare proxy says who decides when situations arise that the living will doesn\'t cover.',
+            },
           },
           {
             id: "pf-s13-u5-L2-Q4",
@@ -2514,6 +2922,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Jake's wife, as the named healthcare proxy, has legal authority. The living will documents Jake's wishes, and his proxy follows them.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; jake\'s wife, as the named healthcare proxy, has legal authority.',
+              2: 'This reasoning is flawed; jake\'s wife, as the named healthcare proxy, has legal authority.',
+              3: 'This overgeneralizes; jake\'s wife, as the named healthcare proxy, has legal authority.',
+            },
           },
           {
             id: "pf-s13-u5-L2-Q7",
@@ -2527,6 +2940,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A living will can't anticipate every scenario. Your proxy uses your stated values to handle situations you didn't predict.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; a living will can\'t anticipate every scenario. Your proxy uses your stated values to handle situations you didn\'t predict.',
+              2: 'This reasoning is flawed; a living will can\'t anticipate every scenario. Your proxy uses your stated values to handle situations you didn\'t predict.',
+              3: 'This reasoning is flawed; a living will can\'t anticipate every scenario. Your proxy uses your stated values to handle situations you didn\'t predict.',
+            },
           },
         ],
       },
@@ -2552,6 +2970,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Your financial POA agent and healthcare proxy must be the same person.",
             correctAnswer: false,
             explanation: "They can be the same person, but they don't have to be. Choose the best person for each role independently.",
+            distractorExplanations: {
+              0: 'They can be the same person, but they don\'t have to be. Choose the best person for each role independently.',
+            },
           },
           {
             id: "pf-s13-u5-L3-Q2",
@@ -2588,6 +3009,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "If your only named agent is unavailable, the court must appoint someone. An alternate avoids that delay and keeps control in your hands.",
+            distractorExplanations: {
+              0: 'If your only named agent is unavailable, the court must appoint someone. An alternate avoids that delay and keeps control in your hands.',
+              1: 'This reasoning is flawed; if your only named agent is unavailable, the court must appoint someone.',
+              2: 'If your only named agent is unavailable, the court must appoint someone. An alternate avoids that delay and keeps control in your hands.',
+            },
           },
           {
             id: "pf-s13-u5-L3-Q4",
@@ -2601,6 +3027,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The best proxy knows your values AND can handle emotional pressure. Proximity to a hospital or medical knowledge isn't as important as understanding what you'd want.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the best proxy knows your values AND can handle emotional pressure.',
+              2: 'This reasoning is flawed; the best proxy knows your values AND can handle emotional pressure.',
+              3: 'This reasoning is flawed; the best proxy knows your values AND can handle emotional pressure.',
+            },
           },
           {
             id: "pf-s13-u5-L3-T3",
@@ -2636,6 +3067,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Without alternates, and with the primary agent incapacitated, a court must step in. This is exactly why naming backup agents is critical.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; without alternates, and with the primary agent incapacitated, a court must step in.',
+              1: 'This reasoning is flawed; without alternates, and with the primary agent incapacitated, a court must step in.',
+              3: 'Without alternates, and with the primary agent incapacitated, a court must step in. This is exactly why naming backup agents is critical.',
+            },
           },
           {
             id: "pf-s13-u5-L3-Q7",
@@ -2676,6 +3112,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Your healthcare proxy can automatically access all your medical records without additional authorization.",
             correctAnswer: false,
             explanation: "Privacy laws often require a separate authorization for record access. Being named as proxy may not be enough.",
+            distractorExplanations: {
+              0: 'Privacy laws often require a separate authorization for record access. Being named as proxy may not be enough.',
+            },
           },
           {
             id: "pf-s13-u5-L4-Q2",
@@ -2689,6 +3128,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Without proper authorization, healthcare providers can legally refuse to share patient information, even with a named proxy.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; without proper authorization, healthcare providers can legally refuse to share patient information, even with a named.',
+              1: 'Without proper authorization, healthcare providers can legally refuse to share patient information, even with a named proxy.',
+              2: 'Without proper authorization, healthcare providers can legally refuse to share patient information, even with a named proxy.',
+            },
           },
           {
             id: "pf-s13-u5-L4-T2",
@@ -2723,6 +3167,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Having a HIPAA authorization on file, or one attached to the proxy document, would have given Mike's wife immediate access to his medical information.",
+            distractorExplanations: {
+              0: 'Having a HIPAA authorization on file, or one attached to the proxy document, would have given Mike\'s wife immediate access to his medical.',
+              1: 'Having a HIPAA authorization on file, or one attached to the proxy document, would have given Mike\'s wife immediate access to his medical.',
+              3: 'This reasoning is flawed; having a HIPAA authorization on file, or one attached to the proxy document, would have given Mike\'s wife immediate.',
+            },
           },
           {
             id: "pf-s13-u5-L4-T3",
@@ -2764,6 +3213,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A wallet card with contact information and document locations is a practical, portable solution that first responders can find quickly.",
+            distractorExplanations: {
+              1: 'A wallet card with contact information and document locations is a practical, portable solution that first responders can find quickly.',
+              2: 'A wallet card with contact information and document locations is a practical, portable solution that first responders can find quickly.',
+              3: 'A wallet card with contact information and document locations is a practical, portable solution that first responders can find quickly.',
+            },
           },
         ],
       },
@@ -2789,6 +3243,9 @@ export const financeSection13Part1: Unit[] = [
             question: "POA abuse is rare and only happens with strangers, not family members.",
             correctAnswer: false,
             explanation: "Family members are the most common perpetrators of POA abuse. Familiarity and access create opportunity.",
+            distractorExplanations: {
+              0: 'Family members are the most common perpetrators of POA abuse. Familiarity and access create opportunity.',
+            },
           },
           {
             id: "pf-s13-u5-L5-Q2",
@@ -2837,6 +3294,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Multiple red flags are present: isolation, visible neglect, unexplained wealth in the agent's hands. Adult protective services investigates potential exploitation.",
+            distractorExplanations: {
+              0: 'Inaction here would be harmful; multiple red flags are present: isolation, visible neglect, unexplained wealth in the agent\'s hands.',
+              2: 'This reasoning is flawed; multiple red flags are present: isolation, visible neglect, unexplained wealth in the agent\'s hands.',
+              3: 'This reasoning is flawed; multiple red flags are present: isolation, visible neglect, unexplained wealth in the agent\'s hands.',
+            },
           },
           {
             id: "pf-s13-u5-L5-T3",
@@ -2878,6 +3340,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Courts have the authority to revoke a POA, remove an abusive agent, and appoint a guardian to protect the incapacitated person.",
+            distractorExplanations: {
+              1: 'This overgeneralizes; courts have the authority to revoke a POA, remove an abusive agent, and appoint a guardian to protect the incapacitated.',
+              2: 'This reasoning is flawed; courts have the authority to revoke a POA, remove an abusive agent, and appoint a guardian to protect the incapacitated.',
+              3: 'This reasoning is flawed; courts have the authority to revoke a POA, remove an abusive agent, and appoint a guardian to protect the incapacitated.',
+            },
           },
           {
             id: "pf-s13-u5-L5-Q8",
@@ -2933,6 +3400,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Your will has the final say over who inherits your 401(k).",
             correctAnswer: false,
             explanation: "The beneficiary designation on the 401(k) account overrides the will. The form on file always wins.",
+            distractorExplanations: {
+              0: 'The beneficiary designation on the 401(k) account overrides the will. The form on file always wins.',
+            },
           },
           {
             id: "pf-s13-u6-L1-Q2",
@@ -2946,6 +3416,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "401(k)s, IRAs, life insurance, and accounts with TOD/POD designations pass by beneficiary form. Physical property passes by will.",
+            distractorExplanations: {
+              0: '401(k)s, IRAs, life insurance, and accounts with TOD/POD designations pass by beneficiary form. Physical property passes by will.',
+              1: '401(k)s, IRAs, life insurance, and accounts with TOD/POD designations pass by beneficiary form. Physical property passes by will.',
+              3: '401(k)s, IRAs, life insurance, and accounts with TOD/POD designations pass by beneficiary form. Physical property passes by will.',
+            },
           },
           {
             id: "pf-s13-u6-L1-T2",
@@ -2967,6 +3442,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "The beneficiary form controls. David's ex-wife gets the 401(k). His new wife would need to go to court and may still lose.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; the beneficiary form controls. David\'s ex-wife gets the 401(k). His new wife would need to go to court and may still lose.',
+              2: 'The beneficiary form controls. David\'s ex-wife gets the 401(k). His new wife would need to go to court and may still lose.',
+              3: 'The beneficiary form controls. David\'s ex-wife gets the 401(k). His new wife would need to go to court and may still lose.',
+            },
           },
           {
             id: "pf-s13-u6-L1-Q4",
@@ -3011,6 +3491,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Life events change your intentions. An annual review catches any forms that need updating. It's quick and prevents major problems.",
+            distractorExplanations: {
+              0: 'Life events change your intentions. An annual review catches any forms that need updating. It\'s quick and prevents major problems.',
+              1: 'Life events change your intentions. An annual review catches any forms that need updating. It\'s quick and prevents major problems.',
+              2: 'Life events change your intentions. An annual review catches any forms that need updating. It\'s quick and prevents major problems.',
+            },
           },
         ],
       },
@@ -3036,6 +3521,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A contingent beneficiary inherits only if the primary beneficiary can't receive the assets.",
             correctAnswer: true,
             explanation: "Contingent means backup. They only inherit if the primary beneficiary has died or is otherwise unable to receive the assets.",
+            distractorExplanations: {
+              1: 'Contingent means backup. They only inherit if the primary beneficiary has died or is otherwise unable to receive the assets.',
+            },
           },
           {
             id: "pf-s13-u6-L2-Q2",
@@ -3065,6 +3553,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Per stirpes means Alex's share (1/3) flows to his children. Beth and Chris each keep their 1/3. Alex's kids split Alex's 1/3 equally.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; per stirpes means Alex\'s share (1/3) flows to his children. Beth and Chris each keep their 1/3.',
+              1: 'This overgeneralizes; per stirpes means Alex\'s share (1/3) flows to his children. Beth and Chris each keep their 1/3.',
+              2: 'Per stirpes means Alex\'s share (1/3) flows to his children. Beth and Chris each keep their 1/3. Alex\'s kids split Alex\'s 1/3 equally.',
+            },
           },
           {
             id: "pf-s13-u6-L2-Q4",
@@ -3099,6 +3592,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Without a contingent, the assets typically go to your estate and through probate, or the institution applies its default rules. Neither may match your wishes.",
+            distractorExplanations: {
+              1: 'Without a contingent, the assets typically go to your estate and through probate, or the institution applies its default rules.',
+              2: 'Without a contingent, the assets typically go to your estate and through probate, or the institution applies its default rules.',
+              3: 'Without a contingent, the assets typically go to your estate and through probate, or the institution applies its default rules.',
+            },
           },
           {
             id: "pf-s13-u6-L2-Q6",
@@ -3106,6 +3604,9 @@ export const financeSection13Part1: Unit[] = [
             question: "When naming multiple beneficiaries, the percentage allocations must add up to exactly 100%.",
             correctAnswer: true,
             explanation: "If percentages don't total 100%, the form may be rejected or the institution will apply its own distribution rules.",
+            distractorExplanations: {
+              1: 'If percentages don\'t total 100%, the form may be rejected or the institution will apply its own distribution rules.',
+            },
           },
           {
             id: "pf-s13-u6-L2-Q7",
@@ -3120,6 +3621,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "With no surviving beneficiary and no contingent, the proceeds typically go to Tom's estate and through probate. A contingent beneficiary would have prevented this.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; with no surviving beneficiary and no contingent, the proceeds typically go to Tom\'s estate and through probate.',
+              1: 'This reasoning is flawed; with no surviving beneficiary and no contingent, the proceeds typically go to Tom\'s estate and through probate.',
+              3: 'This reasoning is flawed; with no surviving beneficiary and no contingent, the proceeds typically go to Tom\'s estate and through probate.',
+            },
           },
         ],
       },
@@ -3145,6 +3651,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Naming 'my estate' as the beneficiary of a life insurance policy is a smart strategy.",
             correctAnswer: false,
             explanation: "It forces the insurance proceeds through probate: slow, public, and expensive. Name specific people or a trust instead.",
+            distractorExplanations: {
+              0: 'It forces the insurance proceeds through probate: slow, public, and expensive. Name specific people or a trust instead.',
+            },
           },
           {
             id: "pf-s13-u6-L3-Q2",
@@ -3158,6 +3667,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Assets that go through your estate are subject to probate, creditor claims, and public disclosure. Direct beneficiary designations avoid all of this.",
+            distractorExplanations: {
+              0: 'Assets that go through your estate are subject to probate, creditor claims, and public disclosure.',
+              2: 'Assets that go through your estate are subject to probate, creditor claims, and public disclosure.',
+              3: 'This overgeneralizes; assets that go through your estate are subject to probate, creditor claims, and public disclosure.',
+            },
           },
           {
             id: "pf-s13-u6-L3-T2",
@@ -3179,6 +3693,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A minor can't legally manage $500,000. The court appoints a custodian, and at 18 the child gets everything. A trust would have allowed Sarah to set terms for gradual distribution.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; a minor can\'t legally manage $500,000. The court appoints a custodian, and at 18 the child gets everything.',
+              2: 'A minor can\'t legally manage $500,000. The court appoints a custodian, and at 18 the child gets everything.',
+              3: 'A minor can\'t legally manage $500,000. The court appoints a custodian, and at 18 the child gets everything.',
+            },
           },
           {
             id: "pf-s13-u6-L3-Q4",
@@ -3236,6 +3755,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Outdated forms that send retirement accounts or insurance proceeds to an ex-spouse can redirect hundreds of thousands of dollars to the wrong person.",
+            distractorExplanations: {
+              0: 'Outdated forms that send retirement accounts or insurance proceeds to an ex-spouse can redirect hundreds of thousands of dollars to the wrong.',
+              1: 'Outdated forms that send retirement accounts or insurance proceeds to an ex-spouse can redirect hundreds of thousands of dollars to the wrong.',
+              2: 'Outdated forms that send retirement accounts or insurance proceeds to an ex-spouse can redirect hundreds of thousands of dollars to the wrong.',
+            },
           },
           {
             id: "pf-s13-u6-L3-Q8",
@@ -3249,6 +3773,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Contact the institution to check what's on file and submit a new form if needed. Don't assume the will covers it.",
+            distractorExplanations: {
+              1: 'This reasoning is flawed; contact the institution to check what\'s on file and submit a new form if needed. Don\'t assume the will covers it.',
+              2: 'This reasoning is flawed; contact the institution to check what\'s on file and submit a new form if needed. Don\'t assume the will covers it.',
+              3: 'Contact the institution to check what\'s on file and submit a new form if needed. Don\'t assume the will covers it.',
+            },
           },
         ],
       },
@@ -3281,6 +3810,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A spouse can typically roll an inherited retirement account into their own account and defer taxes.",
             correctAnswer: true,
             explanation: "A spousal rollover lets the surviving spouse treat the inherited account as their own, deferring taxes until they make withdrawals.",
+            distractorExplanations: {
+              1: 'A spousal rollover lets the surviving spouse treat the inherited account as their own, deferring taxes until they make withdrawals.',
+            },
           },
           {
             id: "pf-s13-u6-L4-Q2",
@@ -3294,6 +3826,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The SECURE Act requires most non-spouse beneficiaries to empty an inherited IRA within 10 years. This accelerates the tax hit.",
+            distractorExplanations: {
+              0: 'The SECURE Act requires most non-spouse beneficiaries to empty an inherited IRA within 10 years. This accelerates the tax hit.',
+              1: 'This calculation is incorrect; the SECURE Act requires most non-spouse beneficiaries to empty an inherited IRA within 10 years.',
+              3: 'There is a real consequence here; the SECURE Act requires most non-spouse beneficiaries to empty an inherited IRA within 10 years.',
+            },
           },
           {
             id: "pf-s13-u6-L4-T2",
@@ -3331,6 +3868,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The IRA to charity avoids all income tax. The brokerage to children gets a stepped-up cost basis, minimizing capital gains tax. This saves the family potentially hundreds of thousands in taxes.",
+            distractorExplanations: {
+              0: 'The IRA to charity avoids all income tax. The brokerage to children gets a stepped-up cost basis, minimizing capital gains tax.',
+              1: 'The IRA to charity avoids all income tax. The brokerage to children gets a stepped-up cost basis, minimizing capital gains tax.',
+              3: 'Inaction here would be harmful; the IRA to charity avoids all income tax.',
+            },
           },
           {
             id: "pf-s13-u6-L4-T3",
@@ -3345,6 +3887,9 @@ export const financeSection13Part1: Unit[] = [
             question: "Roth IRA beneficiaries owe income tax on their withdrawals.",
             correctAnswer: false,
             explanation: "Roth withdrawals are tax-free for beneficiaries. The original owner already paid taxes on the contributions.",
+            distractorExplanations: {
+              0: 'Roth withdrawals are tax-free for beneficiaries. The original owner already paid taxes on the contributions.',
+            },
           },
           {
             id: "pf-s13-u6-L4-Q6",
@@ -3392,6 +3937,9 @@ export const financeSection13Part1: Unit[] = [
             question: "A beneficiary audit means reviewing every account that has a beneficiary designation on file.",
             correctAnswer: true,
             explanation: "The audit covers all accounts with beneficiary forms: retirement, insurance, annuities, and POD/TOD accounts.",
+            distractorExplanations: {
+              1: 'The audit covers all accounts with beneficiary forms: retirement, insurance, annuities, and POD/TOD accounts.',
+            },
           },
           {
             id: "pf-s13-u6-L5-Q2",
@@ -3426,6 +3974,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "If your will says 'everything to my kids' but your 401(k) still names your ex-spouse, the ex gets the 401(k). Coordination prevents these costly conflicts.",
+            distractorExplanations: {
+              0: 'If your will says \'everything to my kids\' but your 401(k) still names your ex-spouse, the ex gets the 401(k).',
+              2: 'This reasoning is flawed; if your will says \'everything to my kids\' but your 401(k) still names your ex-spouse, the ex gets the 401(k).',
+              3: 'This reasoning is flawed; if your will says \'everything to my kids\' but your 401(k) still names your ex-spouse, the ex gets the 401(k).',
+            },
           },
           {
             id: "pf-s13-u6-L5-Q4",
@@ -3468,6 +4021,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "All 3 are serious problems. The 401(k) goes to the wrong person, the insurance has a deceased beneficiary, and the IRA has no beneficiary at all. Fix all 3 immediately.",
+            distractorExplanations: {
+              0: 'This reasoning is flawed; all 3 are serious problems. The 401(k) goes to the wrong person, the insurance has a deceased beneficiary, and the IRA.',
+              1: 'This reasoning is flawed; all 3 are serious problems. The 401(k) goes to the wrong person, the insurance has a deceased beneficiary, and the IRA.',
+              2: 'All 3 are serious problems. The 401(k) goes to the wrong person, the insurance has a deceased beneficiary, and the IRA has no beneficiary at all.',
+            },
           },
           {
             id: "pf-s13-u6-L5-Q7",
@@ -3497,6 +4055,11 @@ export const financeSection13Part1: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "The audit isn't a one-time event. Ongoing annual reviews and life-event triggers keep your designations current and aligned with your wishes.",
+            distractorExplanations: {
+              1: 'The audit isn\'t a one-time event. Ongoing annual reviews and life-event triggers keep your designations current and aligned with your wishes.',
+              2: 'This overgeneralizes; the audit isn\'t a one-time event. Ongoing annual reviews and life-event triggers keep your designations current and aligned.',
+              3: 'This reasoning is flawed; the audit isn\'t a one-time event. Ongoing annual reviews and life-event triggers keep your designations current and.',
+            },
           },
         ],
       },

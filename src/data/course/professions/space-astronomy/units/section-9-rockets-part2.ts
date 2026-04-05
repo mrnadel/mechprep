@@ -39,6 +39,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "To move to a higher orbit, a spacecraft must fire its engines to speed up.",
             correctAnswer: true,
             explanation: "Firing engines forward (prograde burn) adds energy, raising the orbit to a higher altitude.",
+            distractorExplanations: {
+              1: 'This is true because a prograde burn adds orbital energy, which is exactly how spacecraft move to higher orbits.',
+            },
           },
           {
             id: "sp-sec9-u6-L1-Q2",
@@ -52,6 +55,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A forward burn at one point raises the orbit on the opposite side. This creates an elliptical orbit, not an instant circular one.",
+            distractorExplanations: {
+              0: 'A forward burn adds energy and raises the orbit; it does not cause a drop to a lower orbit.',
+              2: 'The orbit first becomes elliptical, not immediately circular; circularization requires a second burn.',
+              3: 'Any velocity change in orbit immediately alters the trajectory; orbital mechanics always responds to burns.',
+            },
           },
           {
             id: "sp-sec9-u6-L1-T2",
@@ -82,6 +90,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "A retrograde burn makes a spacecraft move to a higher orbit.",
             correctAnswer: false,
             explanation: "Retrograde burns slow the spacecraft down, removing energy and lowering the orbit.",
+            distractorExplanations: {
+              0: 'A retrograde burn removes orbital energy, which lowers the orbit rather than raising it.',
+            },
           },
           {
             id: "sp-sec9-u6-L1-T3",
@@ -101,6 +112,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Burning at the low point (perigee) raises the high point (apogee). The orbit on the opposite side gets higher.",
+            distractorExplanations: {
+              0: 'Burning at perigee raises the opposite side (apogee); the perigee itself stays essentially unchanged.',
+              2: 'A prograde burn at perigee raises apogee, making the orbit more elliptical, not more circular.',
+              3: 'Orbital changes take effect immediately along the trajectory; there is no delay until the next orbit.',
+            },
           },
           {
             id: "sp-sec9-u6-L1-Q7",
@@ -115,6 +131,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "A prograde burn at 400 km raises the opposite side to 500 km, creating an elliptical transfer orbit.",
+            distractorExplanations: {
+              1: 'A retrograde burn would lower the orbit further from the 500 km target, not raise it.',
+              2: 'Radial burns are very inefficient for changing altitude; prograde burns are the standard method.',
+              3: 'Gravity alone cannot raise a satellite\'s orbit; an active engine burn is required.',
+            },
           },
         ],
       },
@@ -138,6 +159,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "A Hohmann transfer requires exactly 2 engine burns.",
             correctAnswer: true,
             explanation: "Burn 1 enters the transfer ellipse. Burn 2 circularizes at the target orbit. Two burns total.",
+            distractorExplanations: {
+              1: 'This is true because a Hohmann transfer consists of exactly two burns: one to enter the transfer ellipse and one to circularize.',
+            },
           },
           {
             id: "sp-sec9-u6-L2-Q2",
@@ -166,6 +190,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Hohmann transfers are fuel-efficient but slow. A transfer to Mars takes about 9 months using this method.",
+            distractorExplanations: {
+              0: 'Hohmann transfers use the minimum fuel possible for a two-burn orbit change; they are the most efficient option.',
+              2: 'Hohmann transfers work between any two circular orbits at any altitude, not just LEO.',
+              3: 'Only 2 burns are required in a Hohmann transfer, not 4.',
+            },
           },
           {
             id: "sp-sec9-u6-L2-Q4",
@@ -181,6 +210,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "During the coasting phase of a Hohmann transfer, the spacecraft's engines are off.",
             correctAnswer: true,
             explanation: "The spacecraft coasts along the transfer ellipse without using fuel. Only the 2 burns require engine firing.",
+            distractorExplanations: {
+              1: 'This is true because the spacecraft coasts along the elliptical transfer path using no fuel between the two burns.',
+            },
           },
           {
             id: "sp-sec9-u6-L2-T3",
@@ -200,6 +232,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "A Hohmann transfer uses 2 burns: one at LEO to enter a transfer orbit, and one at GEO altitude to circularize.",
+            distractorExplanations: {
+              0: 'Flying straight up wastes enormous delta-v fighting gravity directly and is not how orbital transfers work.',
+              2: 'Low-thrust spiral transfers take much longer and use more total delta-v than the efficient Hohmann method.',
+              3: 'Earth\'s gravity only pulls satellites downward; a rocket burn is required to raise an orbit.',
+            },
           },
           {
             id: "sp-sec9-u6-L2-Q7",
@@ -243,6 +280,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "To catch a spacecraft ahead of you in the same orbit, you should speed up.",
             correctAnswer: false,
             explanation: "Speeding up raises your orbit, which makes you go slower overall. To catch up, you actually drop to a lower, faster orbit first.",
+            distractorExplanations: {
+              0: 'Speeding up raises your orbit and makes you move slower overall, causing you to fall further behind.',
+            },
           },
           {
             id: "sp-sec9-u6-L3-Q2",
@@ -256,6 +296,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Lower orbits are faster. By briefly dropping lower, you gain speed and close the gap. Then you return to the target orbit.",
+            distractorExplanations: {
+              0: 'A prograde burn would raise the orbit and slow you overall, making it harder to catch up.',
+              2: 'Orbital mechanics prevents natural slowing; without a maneuver, the gap remains constant forever.',
+              3: 'Lateral thrusters cannot change orbital altitude effectively; phasing requires altitude changes.',
+            },
           },
           {
             id: "sp-sec9-u6-L3-T2",
@@ -292,6 +337,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Neil Armstrong and David Scott aboard Gemini 8 performed the first docking with an Agena target vehicle in March 1966.",
+            distractorExplanations: {
+              0: 'Apollo 11 in 1969 performed lunar orbit rendezvous and docking, but Gemini 8 docked three years earlier.',
+              2: 'The Space Shuttle first flew in 1981, fifteen years after Gemini 8 achieved the first docking.',
+              3: 'The Soyuz-Apollo docking was in 1975, nine years after Gemini 8\'s first docking.',
+            },
           },
           {
             id: "sp-sec9-u6-L3-T3",
@@ -305,6 +355,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "SpaceX Dragon spacecraft use autonomous docking to connect with the ISS.",
             correctAnswer: true,
             explanation: "Modern Dragon spacecraft dock automatically with the ISS using sensors and computers. Earlier versions were grabbed by the station's robotic arm.",
+            distractorExplanations: {
+              1: 'This is true because modern Dragon capsules use autonomous systems with sensors and computers to dock with the ISS without human intervention.',
+            },
           },
           {
             id: "sp-sec9-u6-L3-Q7",
@@ -573,6 +626,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "Once ignited, a solid rocket motor can be shut off and restarted.",
             correctAnswer: false,
             explanation: "Solid fuel burns until it's gone. There's no way to stop and restart a solid motor once it's lit.",
+            distractorExplanations: {
+              0: 'Solid rocket motors cannot be shut off or restarted because the fuel burns continuously until fully consumed.',
+            },
           },
           {
             id: "sp-sec9-u7-L1-Q2",
@@ -586,6 +642,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Liquid engines can be controlled precisely: throttle up, throttle down, shut off, and restart. That flexibility is their biggest advantage.",
+            distractorExplanations: {
+              0: 'Liquid fuel is not necessarily cheaper; its advantage is precise controllability including throttle and restart.',
+              2: 'Liquid fuel does not inherently burn hotter; the key advantage is the ability to control, stop, and restart the engine.',
+              3: 'Both solid and liquid fuels need an oxidizer to burn; liquid fuel\'s advantage is throttle control.',
+            },
           },
           {
             id: "sp-sec9-u7-L1-T2",
@@ -637,6 +698,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Solid boosters provide massive thrust cheaply. Liquid engines provide the precise control needed for orbit insertion.",
+            distractorExplanations: {
+              0: 'Solid boosters are actually heavier per unit of performance; their advantage is simplicity and high thrust.',
+              2: 'Liquid fuel works perfectly in the atmosphere and is used for first-stage engines during launch.',
+              3: 'Speed is not a meaningful comparison between fuel types; solid boosters provide high thrust, not speed.',
+            },
           },
         ],
       },
@@ -660,6 +726,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "RP-1 rocket fuel is a refined form of kerosene.",
             correctAnswer: true,
             explanation: "RP-1 (Rocket Propellant 1) is highly refined kerosene. It's one of the most common rocket fuels.",
+            distractorExplanations: {
+              1: 'This is true because RP-1 is a highly purified form of kerosene specifically refined for rocket engines.',
+            },
           },
           {
             id: "sp-sec9-u7-L2-Q2",
@@ -673,6 +742,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "RP-1 is liquid at room temperature, cheap to produce, and dense, which keeps tank sizes small.",
+            distractorExplanations: {
+              0: 'Liquid hydrogen produces more thrust per kilogram of fuel (higher Isp), not RP-1.',
+              2: 'RP-1 is actually one of the densest rocket fuels; its advantage is density and ease of handling, not light weight.',
+              3: 'All chemical rocket fuels need an oxidizer (typically liquid oxygen) to combust.',
+            },
           },
           {
             id: "sp-sec9-u7-L2-T2",
@@ -716,6 +790,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Mars has CO2 and water ice. These can be processed into methane and oxygen, potentially allowing fuel production on Mars.",
+            distractorExplanations: {
+              0: 'Cost is not the primary reason for choosing methane for Mars; the key is that it can be produced from Martian resources.',
+              1: 'Mars gravity has nothing to do with fuel choice; methane is chosen because it can be manufactured from local CO2 and water ice.',
+              3: 'While methane does burn cleanly, the primary reason for Mars missions is in-situ resource utilization, not cleanliness.',
+            },
           },
           {
             id: "sp-sec9-u7-L2-Q6",
@@ -739,6 +818,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "For frequent, low-cost LEO launches, RP-1 is the best choice. It's affordable, easy to handle, and proven reliable.",
+            distractorExplanations: {
+              1: 'Liquid hydrogen has the best Isp but is expensive to store cryogenically, conflicting with the low-cost requirement.',
+              2: 'Solid fuel cannot be throttled or restarted, limiting its usefulness for precise orbit insertion.',
+              3: 'Being newest does not make methane the best choice for frequent LEO flights; RP-1 is cheaper and proven.',
+            },
           },
         ],
       },
@@ -762,6 +846,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "Specific impulse (Isp) is measured in seconds.",
             correctAnswer: true,
             explanation: "Isp tells you how many seconds one kilogram of fuel can produce one kilogram of thrust. Higher is better.",
+            distractorExplanations: {
+              1: 'This is true because Isp is defined as the number of seconds one kilogram of fuel can produce one kilogram-force of thrust.',
+            },
           },
           {
             id: "sp-sec9-u7-L3-Q2",
@@ -775,6 +862,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Higher Isp means better fuel efficiency. 450 seconds is better than 350 seconds but worse than 500 or 460.",
+            distractorExplanations: {
+              0: 'An engine with Isp of 500 seconds is more efficient than one with 450 seconds, not less.',
+              2: 'An engine with Isp of 460 seconds is slightly more efficient than 450 seconds.',
+              3: 'An engine with Isp of 1,000 seconds would be far more efficient than 450 seconds.',
+            },
           },
           {
             id: "sp-sec9-u7-L3-T2",
@@ -810,6 +902,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Higher Isp means better fuel efficiency. Same thrust, less fuel consumed per second.",
+            distractorExplanations: {
+              0: 'Lower Isp means worse fuel efficiency, so that engine would use more fuel, not less.',
+              1: 'Different Isp values mean different fuel consumption rates, so they cannot use the same amount.',
+              3: 'Isp directly measures fuel efficiency; it is not solely dependent on fuel type but also on engine design.',
+            },
           },
           {
             id: "sp-sec9-u7-L3-T3",
@@ -832,6 +929,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "Ion engines have very high Isp (thousands of seconds) but very low thrust.",
             correctAnswer: true,
             explanation: "Ion engines achieve Isp of 3,000+ seconds but produce tiny thrust. They're great for long, slow missions in deep space.",
+            distractorExplanations: {
+              1: 'This is true because ion engines accelerate ions electrically to achieve very high exhaust velocities with minimal propellant but generate only millinewtons of thrust.',
+            },
           },
           {
             id: "sp-sec9-u7-L3-Q8",
@@ -1102,6 +1202,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "Traditional rockets before SpaceX were designed to fly only once.",
             correctAnswer: true,
             explanation: "Expendable rockets were the standard for over 50 years. Each launch required building an entirely new vehicle.",
+            distractorExplanations: {
+              1: 'This is true because expendable rockets were the standard for decades, with each launch requiring a completely new vehicle.',
+            },
           },
           {
             id: "sp-sec9-u8-L1-Q2",
@@ -1115,6 +1218,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 3,
             explanation: "Landing a booster requires extra fuel, heat shielding, and landing legs. For decades, engineers considered this too challenging and heavy.",
+            distractorExplanations: {
+              0: 'Reusability technology concepts existed, but surviving reentry and propulsive landing was the engineering challenge.',
+              1: 'Building new rockets every time is extremely expensive; the barrier was the engineering difficulty of landing and reuse.',
+              2: 'Rocket structures can withstand reuse; the challenge was the extra mass for landing hardware and fuel.',
+            },
           },
           {
             id: "sp-sec9-u8-L1-T2",
@@ -1128,6 +1236,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "The Space Shuttle proved that reusability always saves money.",
             correctAnswer: false,
             explanation: "The Shuttle's refurbishment costs were enormous. Reusability only saves money if turnaround is fast and cheap.",
+            distractorExplanations: {
+              0: 'The Space Shuttle actually proved the opposite: reusability only saves money when refurbishment is fast and cheap.',
+            },
           },
           {
             id: "sp-sec9-u8-L1-Q4",
@@ -1149,6 +1260,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A rocket that costs $50 million to build but flies 10 times effectively costs $5 million per flight for the hardware.",
+            distractorExplanations: {
+              0: 'Reusable rockets do not fly faster; the benefit is spreading the manufacturing cost across multiple flights.',
+              1: 'Reusability actually requires reserving some fuel for landing, so fuel per launch does not decrease.',
+              3: 'Reusable rockets sacrifice some payload capacity for landing hardware; they do not carry more.',
+            },
           },
           {
             id: "sp-sec9-u8-L1-T3",
@@ -1187,6 +1303,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "After separating, a Falcon 9 booster flips around and fires engines to return to the landing zone.",
             correctAnswer: true,
             explanation: "The boostback burn reverses the booster's direction, sending it back toward the landing site.",
+            distractorExplanations: {
+              1: 'This is true because the boostback burn flips and redirects the booster back toward the landing zone after stage separation.',
+            },
           },
           {
             id: "sp-sec9-u8-L2-Q2",
@@ -1215,6 +1334,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Grid fins act as aerodynamic control surfaces, steering the booster to a precise landing spot.",
+            distractorExplanations: {
+              0: 'Grid fins are aerodynamic surfaces and do not generate thrust; only engines produce thrust.',
+              1: 'Grid fins steer the booster through the atmosphere but do not shield anything from heat.',
+              3: 'Landing legs are a separate system; grid fins control atmospheric flight path, not leg deployment.',
+            },
           },
           {
             id: "sp-sec9-u8-L2-Q4",
@@ -1236,6 +1360,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "High-energy missions use more fuel for the payload, leaving less for the boostback. Landing downrange on a ship saves that fuel.",
+            distractorExplanations: {
+              0: 'Sea landings are not inherently cheaper; the reason is insufficient fuel for the boostback to return to land.',
+              2: 'Community safety is a consideration but not the primary reason for drone ship landings.',
+              3: 'Drone ships are stationary during landing; they do not move to catch boosters.',
+            },
           },
           {
             id: "sp-sec9-u8-L2-T3",
@@ -1249,6 +1378,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "A Falcon 9 booster can hover in the air during landing.",
             correctAnswer: false,
             explanation: "Even at minimum throttle, the engine produces more thrust than the near-empty booster's weight. It can't hover. It must nail the timing.",
+            distractorExplanations: {
+              0: 'Even at minimum throttle, the single Merlin engine produces more thrust than the nearly empty booster weighs, making hovering impossible.',
+            },
           },
           {
             id: "sp-sec9-u8-L2-Q7",
@@ -1517,6 +1649,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "A spacecraft can launch to Mars at any time of year.",
             correctAnswer: false,
             explanation: "Mars launch windows open roughly every 26 months when Earth and Mars are positioned for an efficient Hohmann transfer.",
+            distractorExplanations: {
+              0: 'Launching to Mars at arbitrary times would waste enormous fuel because the planets would not be aligned for efficient transfer.',
+            },
           },
           {
             id: "sp-sec9-u9-L1-Q2",
@@ -1530,6 +1665,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Earth and Mars align for efficient transfers roughly every 26 months. Miss the window, and you wait over 2 years.",
+            distractorExplanations: {
+              0: 'Every 6 months is too frequent; Mars and Earth take about 26 months to realign for an efficient transfer.',
+              1: 'Every 12 months is too frequent; the synodic period of Earth and Mars is approximately 26 months.',
+              3: 'Every 5 years is too infrequent; Mars launch windows actually occur about every 26 months.',
+            },
           },
           {
             id: "sp-sec9-u9-L1-T2",
@@ -1572,6 +1712,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A Hohmann transfer to Mars follows half an elliptical orbit around the Sun, taking 7-9 months.",
+            distractorExplanations: {
+              0: 'Two weeks is far too short for a trip covering hundreds of millions of kilometers via a transfer orbit.',
+              1: 'Two months is too short; the Hohmann transfer ellipse to Mars takes 7-9 months to traverse.',
+              3: 'Three years is too long for a Hohmann transfer; faster trajectories exist, and the standard one takes 7-9 months.',
+            },
           },
           {
             id: "sp-sec9-u9-L1-Q6",
@@ -1579,6 +1724,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "A spacecraft traveling to Mars flies in a straight line from Earth to Mars.",
             correctAnswer: false,
             explanation: "The spacecraft follows a curved path, an elliptical arc around the Sun. Straight lines don't work in orbital mechanics.",
+            distractorExplanations: {
+              0: 'Straight-line paths are impossible in orbital mechanics; spacecraft must follow curved trajectories governed by gravity.',
+            },
           },
           {
             id: "sp-sec9-u9-L1-Q7",
@@ -1614,6 +1762,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "A gravity assist can change a spacecraft's speed without using any fuel.",
             correctAnswer: true,
             explanation: "The spacecraft borrows energy from the planet's orbital motion. The planet slows down by a tiny, unmeasurable amount.",
+            distractorExplanations: {
+              1: 'This is true because the spacecraft borrows kinetic energy from the planet\'s orbital motion, requiring no onboard fuel.',
+            },
           },
           {
             id: "sp-sec9-u9-L2-Q2",
@@ -1627,6 +1778,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The spacecraft steals a tiny amount of the planet's orbital energy. The planet barely notices because it's so massive.",
+            distractorExplanations: {
+              0: 'The spacecraft\'s engines are not involved in a gravity assist; the speed change comes entirely from gravitational interaction.',
+              1: 'Solar wind is far too weak to significantly alter a spacecraft\'s trajectory.',
+              3: 'Planetary magnetic fields have negligible effect on spacecraft trajectories compared to gravitational interaction.',
+            },
           },
           {
             id: "sp-sec9-u9-L2-T2",
@@ -1654,6 +1810,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Jupiter, Saturn, Uranus, and Neptune align for sequential gravity assists only once every 175 years.",
+            distractorExplanations: {
+              0: 'Ten years is far too frequent; this specific alignment of four outer planets is extremely rare.',
+              1: 'Fifty years is still too frequent for the four-planet Grand Tour alignment that Voyager exploited.',
+              3: 'One thousand years is too rare; the alignment specifically occurs every 175 years.',
+            },
           },
           {
             id: "sp-sec9-u9-L2-T3",
@@ -1667,6 +1828,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "Gravity assists can only speed up a spacecraft, not slow it down.",
             correctAnswer: false,
             explanation: "Approaching from the opposite direction can slow a spacecraft. This is useful for entering orbit around a destination planet.",
+            distractorExplanations: {
+              0: 'Gravity assists can both speed up and slow down spacecraft depending on the approach direction relative to the planet\'s motion.',
+            },
           },
           {
             id: "sp-sec9-u9-L2-Q6",
@@ -1707,6 +1871,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "Deep space probes use GPS for navigation.",
             correctAnswer: false,
             explanation: "GPS satellites orbit Earth at about 20,200 km. Deep space probes are millions of kilometers away. They use Earth-based radio tracking instead.",
+            distractorExplanations: {
+              0: 'GPS satellites orbit at 20,200 km and only cover Earth; they cannot reach probes millions of kilometers away.',
+            },
           },
           {
             id: "sp-sec9-u9-L3-Q2",
@@ -1720,6 +1887,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "NASA's Deep Space Network (DSN) has 3 antenna complexes around the world. They track every deep space mission.",
+            distractorExplanations: {
+              0: 'No network of satellites orbits other planets for this purpose; tracking is done from Earth-based antennas.',
+              2: 'Laser ranging is used for the Moon but not routinely for deep space probes; radio is the standard.',
+              3: 'Star cameras help with orientation but cannot determine precise position; DSN radio tracking does that.',
+            },
           },
           {
             id: "sp-sec9-u9-L3-T2",
@@ -1763,6 +1935,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "A round trip signal to Mars takes 8-48 minutes. By the time you see a cliff, the rover has already driven off it. Rovers must navigate somewhat autonomously.",
+            distractorExplanations: {
+              0: 'Mars rovers do have steering; the issue is the signal delay makes real-time control impossible.',
+              1: 'Mars is not too far for radio signals to reach; signals do arrive, just with a significant delay.',
+              3: 'DSN antennas are fully bidirectional; they both send commands and receive data.',
+            },
           },
           {
             id: "sp-sec9-u9-L3-Q6",
@@ -1770,6 +1947,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "The Voyager probes, now in interstellar space, still communicate with the Deep Space Network.",
             correctAnswer: true,
             explanation: "Voyager 1 and 2 are over 20 billion km away. Their faint radio signals still reach DSN's 70-meter antennas, though the signal takes over 20 hours one way.",
+            distractorExplanations: {
+              1: 'This is true because both Voyager probes maintain contact with Earth via NASA\'s DSN 70-meter antennas despite being over 20 billion km away.',
+            },
           },
           {
             id: "sp-sec9-u9-L3-Q7",
@@ -2043,6 +2223,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The third law: rocket pushes exhaust backward, exhaust pushes rocket forward. No air needed.",
+            distractorExplanations: {
+              0: 'The first law explains coasting in space, not the mechanism by which exhaust creates thrust.',
+              1: 'The second law relates force, mass, and acceleration but does not explain action-reaction thrust generation.',
+              3: 'The law of gravitation describes gravitational attraction, not the principle behind rocket propulsion.',
+            },
           },
           {
             id: "sp-sec9-u10-L1-Q2",
@@ -2050,6 +2235,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "Staging helps rockets by dropping empty fuel tanks to reduce mass.",
             correctAnswer: true,
             explanation: "Shedding dead weight lets the remaining fuel work more efficiently. That's why almost all orbital rockets use staging.",
+            distractorExplanations: {
+              1: 'This is true because discarding empty fuel tanks reduces dead weight, allowing remaining fuel to accelerate the lighter rocket more efficiently.',
+            },
           },
           {
             id: "sp-sec9-u10-L1-Q3",
@@ -2080,6 +2268,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "Thrust must exceed weight (ratio above 1.0) for the rocket to rise from the pad.",
+            distractorExplanations: {
+              0: 'A ratio of 0.5 means thrust is only half the weight, so the rocket cannot overcome gravity.',
+              1: 'A ratio of 0.8 means gravity still exceeds thrust, keeping the rocket on the pad.',
+              3: 'While a ratio of 2.0 would work, the minimum required for liftoff is exactly 1.0.',
+            },
           },
           {
             id: "sp-sec9-u10-L1-Q6",
@@ -2103,6 +2296,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Newton's first law (inertia) explains why the spacecraft keeps moving at constant velocity with no forces acting on it.",
+            distractorExplanations: {
+              1: 'Newton\'s second law says no force means zero acceleration, but the first law specifically describes constant motion without force.',
+              2: 'The third law involves paired forces; once engines are off, there is no ongoing action-reaction pair.',
+              3: 'Kepler\'s first law describes orbital shapes; this scenario describes straight-line motion in deep space.',
+            },
           },
           {
             id: "sp-sec9-u10-L1-T2",
@@ -2146,6 +2344,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 1,
             explanation: "Two burns: one to enter the transfer ellipse, one to circularize at the destination orbit.",
+            distractorExplanations: {
+              0: 'One burn would only raise one side of the orbit, creating an ellipse rather than reaching a new circular orbit.',
+              2: 'Three burns are not needed for a standard Hohmann transfer; only two are required.',
+              3: 'Four burns would be excessive; the standard Hohmann transfer is optimized at exactly two burns.',
+            },
           },
           {
             id: "sp-sec9-u10-L2-Q2",
@@ -2153,6 +2356,9 @@ export const spaceSection9Part2: Unit[] = [
             question: "To catch a spacecraft ahead of you in the same orbit, you should speed up.",
             correctAnswer: false,
             explanation: "Speeding up raises your orbit, making you slower overall. Drop to a lower orbit first to catch up.",
+            distractorExplanations: {
+              0: 'Speeding up raises your orbit and paradoxically makes you move slower overall, causing you to fall further behind.',
+            },
           },
           {
             id: "sp-sec9-u10-L2-Q3",
@@ -2183,6 +2389,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 2,
             explanation: "The Shuttle needed months of expensive refurbishment. Falcon 9 boosters need minimal work and fly again quickly.",
+            distractorExplanations: {
+              0: 'Fuel type affects costs somewhat, but the key difference is turnaround time and refurbishment effort between flights.',
+              1: 'Rocket size is not the primary factor; the Shuttle was large and reusable but very expensive per flight.',
+              3: 'SpaceX does carry astronauts on Crew Dragon; reusability savings apply regardless of payload type.',
+            },
           },
           {
             id: "sp-sec9-u10-L2-Q6",
@@ -2206,6 +2417,11 @@ export const spaceSection9Part2: Unit[] = [
             ],
             correctIndex: 0,
             explanation: "Methane balances good performance with the ability to produce fuel on Mars from CO2 and water ice.",
+            distractorExplanations: {
+              1: 'RP-1 cannot be manufactured on Mars, which disqualifies it for a mission requiring Mars-based refueling.',
+              2: 'Liquid hydrogen has the highest Isp but cannot be easily produced or stored on Mars.',
+              3: 'Solid fuel cannot be throttled, restarted, or manufactured on Mars from local resources.',
+            },
           },
           {
             id: "sp-sec9-u10-L2-T2",
