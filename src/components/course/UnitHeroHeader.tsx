@@ -118,7 +118,7 @@ export function UnitBannerContent({
       >
         <div style={{ flex: 1, minWidth: 0, textAlign: 'left' }}>
           <div style={{ fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: 1.2, color: 'rgba(255,255,255,0.6)' }}>
-            {hasSections ? `Section ${(sectionIndex ?? 0) + 1}, Unit ${unitNum}` : `Unit ${unitNum}`}
+            {hasSections ? `Section ${sectionIndex ?? 1}, Unit ${unitNum}` : `Unit ${unitNum}`}
           </div>
           <div className="truncate" style={{ fontSize: sz(22, 17), fontWeight: 800, color: '#FFFFFF', lineHeight: 1.25 }}>
             {unit.title}

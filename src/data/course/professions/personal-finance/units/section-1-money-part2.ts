@@ -16,7 +16,7 @@ export const finSection1Part2: Unit[] = [
     description: "How banks keep your money safe, what checking and savings accounts do, and how to read your balance.",
     color: "#34D399",
     icon: "🏦",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       // ===== LESSON 1: Why Use a Bank? =====
@@ -541,7 +541,7 @@ export const finSection1Part2: Unit[] = [
     description: "How debit cards, credit cards, payment apps, and cryptocurrency fit into everyday money.",
     color: "#34D399",
     icon: "💳",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       // ===== LESSON 1: Debit Cards vs Credit Cards =====
@@ -951,7 +951,7 @@ export const finSection1Part2: Unit[] = [
     description: "The four things you can do with every dollar and how they work together.",
     color: "#34D399",
     icon: "🔄",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       // ===== LESSON 1: The Four Stages of Money =====
@@ -1371,7 +1371,7 @@ export const finSection1Part2: Unit[] = [
     description: "Test everything you've learned about money, banks, digital payments, and the money lifecycle.",
     color: "#34D399",
     icon: "🏁",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       // ===== LESSON 1: Review: Money Basics =====

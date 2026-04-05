@@ -10,7 +10,7 @@ export const psySection1Part1: Unit[] = [
     description: 'Discover what psychologists actually study and why it matters for your everyday life.',
     color: '#A78BFA',
     icon: '🧠',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       // ===== LESSON 1: More Than Mind Reading =====
@@ -460,7 +460,7 @@ export const psySection1Part1: Unit[] = [
     description: 'How psychology evolved from philosophy to brain scanners in just 150 years.',
     color: '#818CF8',
     icon: '📜',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       // ===== LESSON 1: The Birth of Psychology =====
@@ -1001,7 +1001,7 @@ export const psySection1Part1: Unit[] = [
     description: 'Explore the major parts of your brain and what each one does.',
     color: '#C084FC',
     icon: '🧬',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       // ===== LESSON 1: Meet Your Brain =====
@@ -1549,7 +1549,7 @@ export const psySection1Part1: Unit[] = [
     description: 'Pull together everything you\'ve learned about psychology, its history, and the brain.',
     color: '#7C3AED',
     icon: '🎯',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       // ===== LESSON 1: Foundations Review =====

@@ -3,8 +3,7 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCourseStore } from '@/store/useCourseStore';
-import { getUnitTheme } from '@/lib/unitThemes';
-import { useLessonColors } from '@/lib/lessonColors';
+import { useLessonColors, LESSON_ACCENT } from '@/lib/lessonColors';
 import { useBackHandler } from '@/hooks/useBackHandler';
 import { useScrollLock } from '@/hooks/useScrollLock';
 import LessonProgressBar from './LessonProgressBar';
@@ -128,11 +127,6 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   }, [adapter, activeLesson, courseData]);
 
   const currentSectionIndex = lessonData?.unit?.sectionIndex;
-
-  const lessonTheme = useMemo(() => {
-    if (adapter || !activeLesson) return getUnitTheme(0);
-    return getUnitTheme(activeLesson.unitIndex);
-  }, [adapter, activeLesson]);
 
   // === LESSON BACKGROUND ===
   const [backgroundHtml, setBackgroundHtml] = useState<string | null>(null);
@@ -276,8 +270,8 @@ export default function LessonView({ adapter }: { adapter?: SessionAdapter } = {
   const totalQuestions = adapter ? adapter.totalQuestions : lessonUniqueTotal;
   const isCurrentAnswered = adapter ? adapter.isCurrentAnswered : lessonIsCurrentAnswered;
   const isLastQuestion = adapter ? adapter.isLastQuestion : lessonIsLastQuestion;
-  const unitColor = adapter ? adapter.unitColor : lessonTheme.color;
-  const theme = adapter ? adapter.theme : lessonTheme;
+  const unitColor = LESSON_ACCENT.color;
+  const theme = LESSON_ACCENT;
   const isGolden = adapter ? adapter.isGolden : (activeLesson?.isGolden ?? false);
   const flagContentType = adapter ? adapter.flagContentType : 'lesson-question';
   const exitLabel = adapter ? adapter.exitLabel : 'Close lesson';

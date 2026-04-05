@@ -9,7 +9,7 @@ export const spaceSection1Part2: Unit[] = [
     description: "Learn the three distance units astronomers use: AU, light-year, and parsec.",
     color: "#818CF8",
     icon: "📏",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       // --- Lesson 1: The Problem with Miles ---
@@ -503,7 +503,7 @@ export const spaceSection1Part2: Unit[] = [
     description: "A practical, hands-on guide to seeing the night sky tonight, no equipment required.",
     color: "#818CF8",
     icon: "🔭",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       // --- Lesson 1: Getting Ready ---
@@ -1012,7 +1012,7 @@ export const spaceSection1Part2: Unit[] = [
     description: "Understand why the sky seems to spin and how Earth's rotation creates the show.",
     color: "#818CF8",
     icon: "🌍",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       // --- Lesson 1: Earth Spins, Stars Don't ---
@@ -1515,7 +1515,7 @@ export const spaceSection1Part2: Unit[] = [
     description: "Test everything you've learned in Section 1, from constellations to cosmic distances to sky motion.",
     color: "#818CF8",
     icon: "🏁",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       // --- Lesson 1: Distances and Scales Review ---

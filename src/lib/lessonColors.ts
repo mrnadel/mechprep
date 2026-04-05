@@ -1,4 +1,13 @@
+import type { UnitTheme } from './unitThemes';
 import { useIsDark } from '@/store/useThemeStore';
+
+/** Fixed accent theme for lessons/questions — not tied to any unit. */
+export const LESSON_ACCENT: UnitTheme = {
+  bg: '#EBF3FF',
+  color: '#3B82F6',
+  dark: '#1E5BB8',
+  mid: '#2D6FD7',
+};
 
 /** Shared dark-mode-aware color palette for lesson/quiz components. */
 export function useLessonColors() {

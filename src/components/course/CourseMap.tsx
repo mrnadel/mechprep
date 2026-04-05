@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useLayoutEffect, useRef, useCallback, useState, useMemo } from 'react';
+import { flushSync } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -495,6 +496,7 @@ export function CourseMap() {
   useEffect(() => {
     let lastIndex = 0;
     let lastTop = 0;
+    let mounted = false;
     const handleScroll = () => {
       // Compute top offset: below the sticky CourseHeader
       const courseHeader = document.querySelector('header.sticky');
@@ -520,7 +522,17 @@ export function CourseMap() {
 
       if (newIndex !== lastIndex) {
         lastIndex = newIndex;
-        setVisibleUnitIndex(newIndex);
+        if (mounted) {
+          // flushSync forces the React render synchronously so that
+          // renderedUnitRef.current updates BEFORE we compute --mp below.
+          // Without this, React batches the state update (passive listener)
+          // and the header flashes at default size for one frame.
+          flushSync(() => setVisibleUnitIndex(newIndex));
+        } else {
+          // On the initial useEffect call React is still committing,
+          // so flushSync is not allowed — use a normal setState instead.
+          setVisibleUnitIndex(newIndex);
+        }
       }
 
       // 3. Hero morph — always compute mp for the unit React has RENDERED,
@@ -572,6 +584,7 @@ export function CourseMap() {
 
     // Run once on mount to set initial top
     handleScroll();
+    mounted = true;
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -597,11 +610,35 @@ export function CourseMap() {
 
   // Sync renderedUnitRef so the scroll handler always computes mp for the
   // unit React has actually rendered — prevents showing wrong data at wrong mp.
+  const prevRenderedUnit = renderedUnitRef.current;
   renderedUnitRef.current = visibleUnitIndex;
 
-  // Restore --mp after React re-renders to avoid 1-frame flash
+  // When the rendered unit changes, recompute mp for the NEW unit immediately
+  // (before paint) so the header never flashes at mp=0 / expanded.
   useLayoutEffect(() => {
-    heroRef.current?.style.setProperty('--mp', morphValueRef.current.toFixed(3));
+    if (!heroRef.current) return;
+    if (prevRenderedUnit !== visibleUnitIndex) {
+      const courseHeader = document.querySelector('header.sticky');
+      const topOffset = courseHeader?.getBoundingClientRect().bottom ?? 0;
+      const hiddenMp = HERO_EXPANDED_HEIGHT / HERO_MORPH_DISTANCE;
+      const visibleEl = unitElsRef.current[visibleUnitIndex];
+      if (visibleEl) {
+        const bannerTop = visibleEl.getBoundingClientRect().top + 24;
+        const scrolled = topOffset - bannerTop;
+        let mp = scrolled < 0 ? hiddenMp : Math.min(1, scrolled / HERO_MORPH_DISTANCE);
+        // Also check squash against the next unit
+        const nextEl = unitElsRef.current[visibleUnitIndex + 1];
+        if (nextEl) {
+          const nextBannerTop = nextEl.getBoundingClientRect().top + 24;
+          const available = nextBannerTop - topOffset;
+          if (available < HERO_EXPANDED_HEIGHT) {
+            mp = Math.max(mp, (HERO_EXPANDED_HEIGHT - Math.max(0, available)) / HERO_MORPH_DISTANCE);
+          }
+        }
+        morphValueRef.current = mp;
+      }
+    }
+    heroRef.current.style.setProperty('--mp', morphValueRef.current.toFixed(3));
   });
 
   return (

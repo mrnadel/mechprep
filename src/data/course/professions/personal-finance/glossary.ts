@@ -1,14 +1,14 @@
 import type { GlossaryEntry } from '../../types';
 
 export const financeGlossary: GlossaryEntry[] = [
-  // ── Section 0: Welcome to Money (pf-u0-welcome) ──
-  { term: 'income', definition: 'Money you receive from working, investments, or other sources.', sectionIndex: 0 },
-  { term: 'expense', definition: 'Money you spend on things like rent, food, transportation, and entertainment.', sectionIndex: 0 },
-  { term: 'bank balance', definition: 'The amount of money currently in your bank account at any given time.', sectionIndex: 0 },
-  { term: 'checking account', definition: 'A bank account designed for everyday spending and bill payments, typically offering a debit card and no interest.', sectionIndex: 0, relatedTerms: ['savings account', 'debit card'] },
-  { term: 'savings account', definition: 'A bank account designed for storing money you want to keep, typically earning some interest and not meant for daily spending.', sectionIndex: 0, relatedTerms: ['checking account', 'high-yield savings account'] },
-  { term: 'debit card', definition: 'A card that takes money directly from your checking account when you make a purchase, with no borrowing involved.', sectionIndex: 0, relatedTerms: ['checking account', 'credit card'] },
-  { term: 'emergency fund', definition: 'Money set aside to cover 3 to 6 months of essential expenses for unexpected situations like job loss or medical emergencies.', sectionIndex: 0, relatedTerms: ['savings account', 'sinking fund'] },
+  // ── Section 1: Welcome to Money (pf-u0-welcome) ──
+  { term: 'income', definition: 'Money you receive from working, investments, or other sources.', sectionIndex: 1 },
+  { term: 'expense', definition: 'Money you spend on things like rent, food, transportation, and entertainment.', sectionIndex: 1 },
+  { term: 'bank balance', definition: 'The amount of money currently in your bank account at any given time.', sectionIndex: 1 },
+  { term: 'checking account', definition: 'A bank account designed for everyday spending and bill payments, typically offering a debit card and no interest.', sectionIndex: 1, relatedTerms: ['savings account', 'debit card'] },
+  { term: 'savings account', definition: 'A bank account designed for storing money you want to keep, typically earning some interest and not meant for daily spending.', sectionIndex: 1, relatedTerms: ['checking account', 'high-yield savings account'] },
+  { term: 'debit card', definition: 'A card that takes money directly from your checking account when you make a purchase, with no borrowing involved.', sectionIndex: 1, relatedTerms: ['checking account', 'credit card'] },
+  { term: 'emergency fund', definition: 'Money set aside to cover 3 to 6 months of essential expenses for unexpected situations like job loss or medical emergencies.', sectionIndex: 1, relatedTerms: ['savings account', 'sinking fund'] },
 
   // ── Section 1: Your Money Right Now (pf-u1-your-money) ──
   { term: 'latte factor', definition: 'The concept that small daily purchases, like a $5 coffee, add up to surprisingly large amounts over a year when multiplied by 365.', sectionIndex: 1 },

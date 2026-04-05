@@ -9,7 +9,7 @@ export const psychologyCourseMeta: Unit[] = [
     description: 'Discover what psychologists actually study and why it matters for your everyday life.',
     color: '#A78BFA',
     icon: '🧠',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       { id: 'psy-sec1-u1-L1', title: 'More Than Mind Reading', description: 'What psychology really is and why most people get it wrong.', icon: '📝', xpReward: 15, questions: [] },
@@ -25,7 +25,7 @@ export const psychologyCourseMeta: Unit[] = [
     description: 'How psychology evolved from philosophy to brain scanners in just 150 years.',
     color: '#818CF8',
     icon: '📜',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       { id: 'psy-sec1-u2-L1', title: 'The Birth of Psychology', description: 'How psychology split from philosophy and became its own science.', icon: '📝', xpReward: 15, questions: [] },
@@ -42,7 +42,7 @@ export const psychologyCourseMeta: Unit[] = [
     description: 'Explore the major parts of your brain and what each one does.',
     color: '#C084FC',
     icon: '🧬',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       { id: 'psy-sec1-u3-L1', title: 'Meet Your Brain', description: 'The basics of what lives inside your skull and why it matters.', icon: '📝', xpReward: 15, questions: [] },
@@ -59,7 +59,7 @@ export const psychologyCourseMeta: Unit[] = [
     description: 'Pull together everything you\'ve learned about psychology, its history, and the brain.',
     color: '#7C3AED',
     icon: '🎯',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       { id: 'psy-sec1-u4-L1', title: 'Psychology Foundations Review', description: 'Test your knowledge of what psychology is and how it works.', icon: '📝', xpReward: 20, questions: [] },
@@ -74,7 +74,7 @@ export const psychologyCourseMeta: Unit[] = [
     description: 'How billions of tiny cells use electricity and chemicals to create every thought you have.',
     color: '#A78BFA',
     icon: '⚡',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       { id: 'psy-sec1-u5-L1', title: 'What Is a Neuron?', description: 'The basic building block of your brain and nervous system.', icon: '📝', xpReward: 15, questions: [] },
@@ -91,7 +91,7 @@ export const psychologyCourseMeta: Unit[] = [
     description: 'Why the popular idea that people are "left-brained" or "right-brained" is wrong.',
     color: '#A78BFA',
     icon: '🧩',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       { id: 'psy-sec1-u6-L1', title: 'The Two Hemispheres', description: 'Your brain has two halves, and they do have some specializations.', icon: '📝', xpReward: 15, questions: [] },
@@ -108,7 +108,7 @@ export const psychologyCourseMeta: Unit[] = [
     description: 'Most of what your brain does happens without you knowing it.',
     color: '#A78BFA',
     icon: '🌊',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       { id: 'psy-sec1-u7-L1', title: 'What Is Consciousness?', description: 'The experience of being aware of yourself and your surroundings.', icon: '📝', xpReward: 15, questions: [] },
@@ -125,7 +125,7 @@ export const psychologyCourseMeta: Unit[] = [
     description: 'Test your knowledge of neurons, hemispheres, consciousness, and everything from Section 1.',
     color: '#A78BFA',
     icon: '🏆',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       { id: 'psy-sec1-u8-L1', title: 'Neurons and Brain Communication Review', description: 'Revisit how neurons fire, connect, and communicate using chemicals.', icon: '📝', xpReward: 20, questions: [] },

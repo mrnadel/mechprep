@@ -10,7 +10,7 @@ export const psySection1Part2: Unit[] = [
     description: 'How billions of tiny cells use electricity and chemicals to create every thought you have.',
     color: '#A78BFA',
     icon: '⚡',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       // ===== LESSON 1: What Is a Neuron? =====
@@ -520,7 +520,7 @@ export const psySection1Part2: Unit[] = [
     description: 'Why the popular idea that people are "left-brained" or "right-brained" is wrong.',
     color: '#A78BFA',
     icon: '🧩',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       // ===== LESSON 1: The Two Hemispheres =====
@@ -1032,7 +1032,7 @@ export const psySection1Part2: Unit[] = [
     description: 'Most of what your brain does happens without you knowing it.',
     color: '#A78BFA',
     icon: '🌊',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       // ===== LESSON 1: What Is Consciousness? =====
@@ -1542,7 +1542,7 @@ export const psySection1Part2: Unit[] = [
     description: 'Test your knowledge of neurons, hemispheres, consciousness, and everything from Section 1.',
     color: '#A78BFA',
     icon: '🏆',
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: 'Welcome to Your Mind',
     lessons: [
       // ===== LESSON 1: Neurons and Brain Communication Review =====

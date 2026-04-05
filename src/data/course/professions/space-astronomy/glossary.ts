@@ -1,22 +1,22 @@
 import type { GlossaryEntry } from '../../types';
 
 export const spaceGlossary: GlossaryEntry[] = [
-  // ── Section 0: Look Up! (sp-u1-night-sky) ──
-  { term: 'astronomy', definition: 'The scientific study of celestial objects, space, and the universe as a whole.', sectionIndex: 0 },
-  { term: 'star', definition: 'A massive ball of hot gas that produces light and heat through nuclear fusion in its core.', sectionIndex: 0, relatedTerms: ['nuclear fusion', 'planet'] },
-  { term: 'planet', definition: 'A large body that orbits a star, does not produce its own light, and has cleared its orbital neighborhood of other debris.', sectionIndex: 0, relatedTerms: ['star', 'exoplanet', 'dwarf planet'] },
-  { term: 'satellite', definition: 'Any object that orbits another object, including natural satellites (moons) and artificial ones (spacecraft).', sectionIndex: 0 },
-  { term: 'constellation', definition: 'A pattern of stars in the night sky that humans have grouped and named, such as Orion or Ursa Major.', sectionIndex: 0 },
-  { term: 'light-year', definition: 'The distance light travels in one year, about 9.46 trillion kilometers, used to measure vast cosmic distances.', sectionIndex: 0, relatedTerms: ['parsec'] },
-  { term: 'solar system', definition: 'The Sun and everything bound to it by gravity, including 8 planets, dwarf planets, moons, asteroids, and comets.', sectionIndex: 0, relatedTerms: ['Milky Way'] },
-  { term: 'galaxy', definition: 'A massive collection of stars, gas, dust, and dark matter held together by gravity, containing billions of stars.', sectionIndex: 0, relatedTerms: ['Milky Way', 'Andromeda'] },
-  { term: 'Milky Way', definition: 'Our home galaxy, a barred spiral containing 200 to 400 billion stars with our solar system located in the Orion Arm.', sectionIndex: 0, relatedTerms: ['galaxy'] },
-  { term: 'observable universe', definition: 'The portion of the entire universe whose light has had time to reach us since the Big Bang, containing trillions of galaxies.', sectionIndex: 0 },
-  { term: 'Local Group', definition: 'The cluster of about 80 galaxies that includes the Milky Way and Andromeda, bound together by gravity.', sectionIndex: 0 },
-  { term: 'scintillation', definition: 'The twinkling of stars caused by Earth\'s turbulent atmosphere bending starlight as it passes through layers of air at different temperatures.', sectionIndex: 0 },
-  { term: 'nuclear fusion', definition: 'The process of combining lighter atomic nuclei into heavier ones, releasing enormous energy, which is what powers stars.', sectionIndex: 0, relatedTerms: ['star'] },
-  { term: 'ISS (International Space Station)', definition: 'A football-field-sized laboratory orbiting Earth at 17,500 mph, continuously crewed since 2000 as a collaboration between 15 nations.', sectionIndex: 0 },
-  { term: 'light pollution', definition: 'Excess artificial light from cities that washes out the night sky and reduces the number of stars visible to the naked eye.', sectionIndex: 0 },
+  // ── Section 1: Look Up! (sp-u1-night-sky) ──
+  { term: 'astronomy', definition: 'The scientific study of celestial objects, space, and the universe as a whole.', sectionIndex: 1 },
+  { term: 'star', definition: 'A massive ball of hot gas that produces light and heat through nuclear fusion in its core.', sectionIndex: 1, relatedTerms: ['nuclear fusion', 'planet'] },
+  { term: 'planet', definition: 'A large body that orbits a star, does not produce its own light, and has cleared its orbital neighborhood of other debris.', sectionIndex: 1, relatedTerms: ['star', 'exoplanet', 'dwarf planet'] },
+  { term: 'satellite', definition: 'Any object that orbits another object, including natural satellites (moons) and artificial ones (spacecraft).', sectionIndex: 1 },
+  { term: 'constellation', definition: 'A pattern of stars in the night sky that humans have grouped and named, such as Orion or Ursa Major.', sectionIndex: 1 },
+  { term: 'light-year', definition: 'The distance light travels in one year, about 9.46 trillion kilometers, used to measure vast cosmic distances.', sectionIndex: 1, relatedTerms: ['parsec'] },
+  { term: 'solar system', definition: 'The Sun and everything bound to it by gravity, including 8 planets, dwarf planets, moons, asteroids, and comets.', sectionIndex: 1, relatedTerms: ['Milky Way'] },
+  { term: 'galaxy', definition: 'A massive collection of stars, gas, dust, and dark matter held together by gravity, containing billions of stars.', sectionIndex: 1, relatedTerms: ['Milky Way', 'Andromeda'] },
+  { term: 'Milky Way', definition: 'Our home galaxy, a barred spiral containing 200 to 400 billion stars with our solar system located in the Orion Arm.', sectionIndex: 1, relatedTerms: ['galaxy'] },
+  { term: 'observable universe', definition: 'The portion of the entire universe whose light has had time to reach us since the Big Bang, containing trillions of galaxies.', sectionIndex: 1 },
+  { term: 'Local Group', definition: 'The cluster of about 80 galaxies that includes the Milky Way and Andromeda, bound together by gravity.', sectionIndex: 1 },
+  { term: 'scintillation', definition: 'The twinkling of stars caused by Earth\'s turbulent atmosphere bending starlight as it passes through layers of air at different temperatures.', sectionIndex: 1 },
+  { term: 'nuclear fusion', definition: 'The process of combining lighter atomic nuclei into heavier ones, releasing enormous energy, which is what powers stars.', sectionIndex: 1, relatedTerms: ['star'] },
+  { term: 'ISS (International Space Station)', definition: 'A football-field-sized laboratory orbiting Earth at 17,500 mph, continuously crewed since 2000 as a collaboration between 15 nations.', sectionIndex: 1 },
+  { term: 'light pollution', definition: 'Excess artificial light from cities that washes out the night sky and reduces the number of stars visible to the naked eye.', sectionIndex: 1 },
 
   // ── Section 1: Our Solar System (sp-u2-solar-system) ──
   { term: 'the Sun', definition: 'A medium-sized star at the center of our solar system that contains 99.86% of the system\'s mass and produces energy through hydrogen fusion.', sectionIndex: 1, relatedTerms: ['nuclear fusion', 'solar flare'] },

@@ -9,7 +9,7 @@ export const spaceCourseMeta: Unit[] = [
     description: "Discover where you are in space and why the night sky is one of the greatest shows on Earth.",
     color: "#818CF8",
     icon: "🌌",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       { id: "sp-sec1-u1-L1", title: "You Are Here", description: "Your address in the universe, from your street to the edge of the observable cosmos.", icon: "📝", xpReward: 15, questions: [] },
@@ -25,7 +25,7 @@ export const spaceCourseMeta: Unit[] = [
     description: "Learn to tell the difference between stars, planets, and human-made satellites without any equipment.",
     color: "#A78BFA",
     icon: "⭐",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       { id: "sp-sec1-u2-L1", title: "How Stars Behave in the Sky", description: "Why stars twinkle, why they come in different colors, and how to spot the brightest ones.", icon: "📝", xpReward: 15, questions: [] },
@@ -42,7 +42,7 @@ export const spaceCourseMeta: Unit[] = [
     description: "Learn the star patterns that ancient cultures named and the imaginary sphere astronomers use to map the sky.",
     color: "#6366F1",
     icon: "✨",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       { id: "sp-sec1-u3-L1", title: "What Are Constellations", description: "The patterns humans drew in the stars and why they still matter today.", icon: "📝", xpReward: 15, questions: [] },
@@ -59,7 +59,7 @@ export const spaceCourseMeta: Unit[] = [
     description: "Test your knowledge of the night sky, sky objects, constellations, and celestial navigation from Units 1 through 3.",
     color: "#7C3AED",
     icon: "🔄",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       { id: "sp-sec1-u4-L1", title: "Universe and Sky Objects Review", description: "Review cosmic scales, stars, planets, satellites, and meteors.", icon: "📝", xpReward: 20, questions: [] },
@@ -74,7 +74,7 @@ export const spaceCourseMeta: Unit[] = [
     description: "Learn the three distance units astronomers use: AU, light-year, and parsec.",
     color: "#818CF8",
     icon: "📏",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       { id: "sp-sec1-u5-L1", title: "Why Miles Fall Short", description: "Ordinary distance units break down when space gets involved.", icon: "📝", xpReward: 15, questions: [] },
@@ -91,7 +91,7 @@ export const spaceCourseMeta: Unit[] = [
     description: "A practical, hands-on guide to seeing the night sky tonight, no equipment required.",
     color: "#818CF8",
     icon: "🔭",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       { id: "sp-sec1-u6-L1", title: "Getting Ready to Stargaze", description: "What you need, what to wear, and when to go for the best sky views.", icon: "📝", xpReward: 15, questions: [] },
@@ -108,7 +108,7 @@ export const spaceCourseMeta: Unit[] = [
     description: "Understand why the sky seems to spin and how Earth's rotation creates the show.",
     color: "#818CF8",
     icon: "🌍",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       { id: "sp-sec1-u7-L1", title: "Earth Spins, the Stars Stay Put", description: "Why it looks like the sky rotates when really it is Earth that spins.", icon: "📝", xpReward: 15, questions: [] },
@@ -125,7 +125,7 @@ export const spaceCourseMeta: Unit[] = [
     description: "Test everything you've learned in Section 1, from constellations to cosmic distances to sky motion.",
     color: "#818CF8",
     icon: "🏁",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       { id: "sp-sec1-u8-L1", title: "Distances and Scales Review", description: "Revisit AU, light-years, parsecs, and cosmic scales from Section 1.", icon: "📝", xpReward: 25, questions: [] },

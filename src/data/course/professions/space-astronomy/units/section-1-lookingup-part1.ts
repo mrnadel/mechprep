@@ -9,7 +9,7 @@ export const spaceSection1Part1: Unit[] = [
     description: "Discover where you are in space and why the night sky is one of the greatest shows on Earth.",
     color: "#818CF8",
     icon: "🌌",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       // --- Lesson 1: You are here ---
@@ -391,7 +391,7 @@ export const spaceSection1Part1: Unit[] = [
     description: "Learn to tell the difference between stars, planets, and human-made satellites without any equipment.",
     color: "#A78BFA",
     icon: "⭐",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       // --- Lesson 1: How stars behave ---
@@ -863,7 +863,7 @@ export const spaceSection1Part1: Unit[] = [
     description: "Learn the star patterns that ancient cultures named and the imaginary sphere astronomers use to map the sky.",
     color: "#6366F1",
     icon: "✨",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       // --- Lesson 1: What are constellations ---
@@ -1351,7 +1351,7 @@ export const spaceSection1Part1: Unit[] = [
     description: "Test your knowledge of the night sky, sky objects, constellations, and celestial navigation from Units 1 through 3.",
     color: "#7C3AED",
     icon: "🔄",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "Looking Up",
     lessons: [
       // --- Lesson 1: Universe and sky objects review ---

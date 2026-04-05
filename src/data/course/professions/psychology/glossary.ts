@@ -1,24 +1,24 @@
 import type { GlossaryEntry } from '../../types';
 
 export const psychologyGlossary: GlossaryEntry[] = [
-  // ── Section 0: Your Amazing Brain (psy-u1-brain) ──
-  { term: 'psychology', definition: 'The scientific study of how the mind works, including why people think, feel, and behave the way they do.', sectionIndex: 0 },
-  { term: 'brain', definition: 'The roughly 1.4-kilogram organ that controls all thoughts, emotions, and movements, using about 20% of the body\'s energy.', sectionIndex: 0 },
-  { term: 'cerebrum', definition: 'The largest part of the brain, responsible for conscious thinking, decision-making, and voluntary actions.', sectionIndex: 0, relatedTerms: ['cerebellum', 'brain stem'] },
-  { term: 'cerebellum', definition: 'The brain region at the back of the skull that manages balance, coordination, and fine motor movements.', sectionIndex: 0, relatedTerms: ['cerebrum', 'brain stem'] },
-  { term: 'brain stem', definition: 'The lower part of the brain that controls automatic functions like breathing, heartbeat, and body temperature.', sectionIndex: 0, relatedTerms: ['cerebrum', 'cerebellum'] },
-  { term: 'frontal lobe', definition: 'The brain region behind your forehead responsible for planning, decision-making, personality, and impulse control.', sectionIndex: 0, relatedTerms: ['prefrontal cortex'] },
-  { term: 'prefrontal cortex', definition: 'The front-most portion of the frontal lobe that handles complex planning, social behavior, and self-control.', sectionIndex: 0, relatedTerms: ['frontal lobe'] },
-  { term: 'neuron', definition: 'A nerve cell that sends and receives electrical and chemical signals, forming the basic building block of the brain.', sectionIndex: 0, relatedTerms: ['synapse', 'neurotransmitter', 'axon', 'dendrite'] },
-  { term: 'synapse', definition: 'The tiny gap between two neurons where chemical messengers carry signals from one nerve cell to the next.', sectionIndex: 0, relatedTerms: ['neuron', 'neurotransmitter'] },
-  { term: 'neurotransmitter', definition: 'A chemical messenger that carries signals across the synapse from one neuron to another.', sectionIndex: 0, relatedTerms: ['synapse', 'dopamine', 'serotonin'] },
-  { term: 'axon', definition: 'The long tail-like extension of a neuron that carries electrical impulses away from the cell body toward the synapse.', sectionIndex: 0, relatedTerms: ['neuron', 'dendrite'] },
-  { term: 'dendrite', definition: 'The branching extensions of a neuron that receive incoming signals from other neurons.', sectionIndex: 0, relatedTerms: ['neuron', 'axon'] },
-  { term: 'neuroplasticity', definition: 'The brain\'s ability to reorganize and strengthen neural connections through repeated practice and learning.', sectionIndex: 0 },
-  { term: 'hemisphere', definition: 'One of the two halves of the cerebrum (left and right) that work together on most tasks despite popular myths about dominance.', sectionIndex: 0 },
-  { term: 'attention', definition: 'The brain\'s ability to selectively focus on certain information while filtering out the rest.', sectionIndex: 0 },
-  { term: 'conscious mind', definition: 'The part of mental activity you are currently aware of, including your thoughts, perceptions, and deliberate decisions.', sectionIndex: 0, relatedTerms: ['unconscious mind'] },
-  { term: 'unconscious mind', definition: 'Mental processes that happen outside your awareness, including automatic habits, implicit memories, and instinctive reactions.', sectionIndex: 0, relatedTerms: ['conscious mind'] },
+  // ── Section 1: Your Amazing Brain (psy-u1-brain) ──
+  { term: 'psychology', definition: 'The scientific study of how the mind works, including why people think, feel, and behave the way they do.', sectionIndex: 1 },
+  { term: 'brain', definition: 'The roughly 1.4-kilogram organ that controls all thoughts, emotions, and movements, using about 20% of the body\'s energy.', sectionIndex: 1 },
+  { term: 'cerebrum', definition: 'The largest part of the brain, responsible for conscious thinking, decision-making, and voluntary actions.', sectionIndex: 1, relatedTerms: ['cerebellum', 'brain stem'] },
+  { term: 'cerebellum', definition: 'The brain region at the back of the skull that manages balance, coordination, and fine motor movements.', sectionIndex: 1, relatedTerms: ['cerebrum', 'brain stem'] },
+  { term: 'brain stem', definition: 'The lower part of the brain that controls automatic functions like breathing, heartbeat, and body temperature.', sectionIndex: 1, relatedTerms: ['cerebrum', 'cerebellum'] },
+  { term: 'frontal lobe', definition: 'The brain region behind your forehead responsible for planning, decision-making, personality, and impulse control.', sectionIndex: 1, relatedTerms: ['prefrontal cortex'] },
+  { term: 'prefrontal cortex', definition: 'The front-most portion of the frontal lobe that handles complex planning, social behavior, and self-control.', sectionIndex: 1, relatedTerms: ['frontal lobe'] },
+  { term: 'neuron', definition: 'A nerve cell that sends and receives electrical and chemical signals, forming the basic building block of the brain.', sectionIndex: 1, relatedTerms: ['synapse', 'neurotransmitter', 'axon', 'dendrite'] },
+  { term: 'synapse', definition: 'The tiny gap between two neurons where chemical messengers carry signals from one nerve cell to the next.', sectionIndex: 1, relatedTerms: ['neuron', 'neurotransmitter'] },
+  { term: 'neurotransmitter', definition: 'A chemical messenger that carries signals across the synapse from one neuron to another.', sectionIndex: 1, relatedTerms: ['synapse', 'dopamine', 'serotonin'] },
+  { term: 'axon', definition: 'The long tail-like extension of a neuron that carries electrical impulses away from the cell body toward the synapse.', sectionIndex: 1, relatedTerms: ['neuron', 'dendrite'] },
+  { term: 'dendrite', definition: 'The branching extensions of a neuron that receive incoming signals from other neurons.', sectionIndex: 1, relatedTerms: ['neuron', 'axon'] },
+  { term: 'neuroplasticity', definition: 'The brain\'s ability to reorganize and strengthen neural connections through repeated practice and learning.', sectionIndex: 1 },
+  { term: 'hemisphere', definition: 'One of the two halves of the cerebrum (left and right) that work together on most tasks despite popular myths about dominance.', sectionIndex: 1 },
+  { term: 'attention', definition: 'The brain\'s ability to selectively focus on certain information while filtering out the rest.', sectionIndex: 1 },
+  { term: 'conscious mind', definition: 'The part of mental activity you are currently aware of, including your thoughts, perceptions, and deliberate decisions.', sectionIndex: 1, relatedTerms: ['unconscious mind'] },
+  { term: 'unconscious mind', definition: 'Mental processes that happen outside your awareness, including automatic habits, implicit memories, and instinctive reactions.', sectionIndex: 1, relatedTerms: ['conscious mind'] },
 
   // ── Section 1: Thinking Traps (psy-u2-biases) ──
   { term: 'cognitive bias', definition: 'A systematic error in thinking caused by the brain\'s tendency to take mental shortcuts, leading to predictable mistakes in judgment.', sectionIndex: 1, relatedTerms: ['heuristic'] },

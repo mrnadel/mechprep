@@ -16,7 +16,7 @@ export const finSection1Part1: Unit[] = [
     description: "You already know more about money than you think. Let's build on that.",
     color: "#34D399",
     icon: "👋",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       // ===== LESSON 1: Why Money Matters =====
@@ -471,7 +471,7 @@ export const finSection1Part1: Unit[] = [
     description: "Where money comes from, where it goes, and why we don't just trade chickens anymore.",
     color: "#60A5FA",
     icon: "💰",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       // ===== LESSON 1: Before Money Existed =====
@@ -903,7 +903,7 @@ export const finSection1Part1: Unit[] = [
     description: "How you get paid, what the numbers on your paycheck mean, and why your take-home is less than you expect.",
     color: "#FBBF24",
     icon: "💼",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       // ===== LESSON 1: How People Earn Money =====
@@ -1462,7 +1462,7 @@ export const finSection1Part1: Unit[] = [
     description: "Test everything you've learned about money, earning, and getting paid.",
     color: "#F472B6",
     icon: "🎯",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       // ===== LESSON 1: Money Concepts Review =====

@@ -9,7 +9,7 @@ export const financeCourseMeta: Unit[] = [
     description: "You already know more about money than you think. Let's build on that.",
     color: "#34D399",
     icon: "👋",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       { id: "fin-sec1-u1-L1", title: "Why Money Matters", description: "Money touches every part of your life. Here's why understanding it matters.", icon: "📝", xpReward: 15, questions: [] },
@@ -25,7 +25,7 @@ export const financeCourseMeta: Unit[] = [
     description: "Where money comes from, where it goes, and why we don't just trade chickens anymore.",
     color: "#60A5FA",
     icon: "💰",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       { id: "fin-sec1-u2-L1", title: "Before Money Existed", description: "How people traded before money was invented, and why that system broke down.", icon: "📝", xpReward: 15, questions: [] },
@@ -41,7 +41,7 @@ export const financeCourseMeta: Unit[] = [
     description: "How you get paid, what the numbers on your paycheck mean, and why your take-home is less than you expect.",
     color: "#FBBF24",
     icon: "💼",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       { id: "fin-sec1-u3-L1", title: "How People Earn Money", description: "The main ways people get paid and what each one looks like.", icon: "📝", xpReward: 15, questions: [] },
@@ -58,7 +58,7 @@ export const financeCourseMeta: Unit[] = [
     description: "Test everything you've learned about money, earning, and getting paid.",
     color: "#F472B6",
     icon: "🎯",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       { id: "fin-sec1-u4-L1", title: "Money Concepts Review", description: "Revisit the big ideas: what money is, needs vs. wants, and your money story.", icon: "📝", xpReward: 20, questions: [] },
@@ -73,7 +73,7 @@ export const financeCourseMeta: Unit[] = [
     description: "How banks keep your money safe, what checking and savings accounts do, and how to read your balance.",
     color: "#34D399",
     icon: "🏦",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       { id: "fin-sec1-u5-L1", title: "Why Use a Bank?", description: "Why keeping your money in a bank is safer than stuffing it in a drawer.", icon: "📝", xpReward: 15, questions: [] },
@@ -90,7 +90,7 @@ export const financeCourseMeta: Unit[] = [
     description: "How debit cards, credit cards, payment apps, and cryptocurrency fit into everyday money.",
     color: "#34D399",
     icon: "💳",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       { id: "fin-sec1-u6-L1", title: "Debit Cards vs Credit Cards", description: "One uses your money. The other borrows money. Knowing the difference matters.", icon: "📝", xpReward: 15, questions: [] },
@@ -106,7 +106,7 @@ export const financeCourseMeta: Unit[] = [
     description: "The four things you can do with every dollar and how they work together.",
     color: "#34D399",
     icon: "🔄",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       { id: "fin-sec1-u7-L1", title: "The Four Stages of Money", description: "Every dollar follows the same path: earn it, save some, spend some, invest some.", icon: "📝", xpReward: 15, questions: [] },
@@ -122,7 +122,7 @@ export const financeCourseMeta: Unit[] = [
     description: "Test everything you've learned about money, banks, digital payments, and the money lifecycle.",
     color: "#34D399",
     icon: "🏁",
-    sectionIndex: 0,
+    sectionIndex: 1,
     sectionTitle: "What Is Money?",
     lessons: [
       { id: "fin-sec1-u8-L1", title: "Review: Money Basics", description: "A quick review of income, expenses, saving, and bank accounts.", icon: "📝", xpReward: 20, questions: [] },
